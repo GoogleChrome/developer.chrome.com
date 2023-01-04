@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: Getting started with Progressive Web Apps 
+title: Getting started with Progressive Web Apps
 description: >
     Learn how to get started building Progressive Web Apps
 authors:
@@ -24,7 +24,7 @@ Aaron Gustafson likened [progressive enhancement](http://alistapart.com/article/
 
 Think of the candy shell as where many Progressive Web App features can live. They are experiences that combine the best of the web and the best of apps. They are useful to users from the very first visit in a browser tab, no install required.
 
-As the user builds a relationship with these apps through repeat use, they make the candy shell even sweeter - loading very fast on slow network connections (thanks to [service worker](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers)), sending relevant [Push Notifications](https://developers.google.com/web/fundamentals/push-notifications) and having a first-class icon on the user's home screen that can load them as fullscreen app experiences. They can also take advantage of smart [web app install banners](https://developers.google.com/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android).
+As the user builds a relationship with these apps through repeat use, they make the candy shell even sweeter - loading very fast on slow network connections (thanks to [service worker](https://developer.mozilla.org/docs/Web/API/Service_Worker_API)), sending relevant [Push Notifications](https://developers.google.com/web/fundamentals/push-notifications) and having a first-class icon on the user's home screen that can load them as fullscreen app experiences. They can also take advantage of smart [web app install banners](https://developers.google.com/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android).
 
 <figure>
 {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/aQcPOElf4Pdj9bV0Yw01.jpg", alt="Web app install banners for engagement, launch from the user's home screen, splash screen in Chrome for Android, works offline with service worker", width="800", height="490" %}
@@ -79,7 +79,11 @@ For diving deeper into Progressive Web Apps, read Alex Russell's original [blog 
 The Manifest for Web applications is a simple JSON file that gives you, the developer, the ability to control how your app appears to the user in the areas that they would expect to see apps (for example the device home screen), direct what the user can launch and more importantly how they can launch it
 {% endAside %}
 
-The manifest enables your web app to have a more native-like presence on the user's home screen. It allows the app to be launched in full-screen mode (without a URL bar being present), provides control over the screen orientation and in recent versions of Chrome on Android supports defining a [Splash Screen](https://developers.google.com//web/updates/2015/10/splashscreen) and [theme color](https://developers.google.com//web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android) for the address bar. It is also used to define a set of icons by size and density used for the aforementioned Splash screen and home screen icon.
+The manifest enables your web app to have a more native-like presence on the user's home screen. It allows the app to be
+launched in full-screen mode (without a URL bar being present), provides control over the screen orientation and in recent
+versions of Chrome on Android supports defining a [Splash Screen](https://web.dev/add-manifest/#splash-screen) and
+[theme color](/blog/support-for-theme-color-in-chrome-39-for-android) for the address bar. It is also used to define a set of
+icons by size and density used for the aforementioned Splash screen and home screen icon.
 
 <figure>
 {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/b1KM9bX2L8kjVwkUAMpH.jpg", alt="Add to home screen, launch from home screen and full-screen app-like experiences.", width="800", height="569" %}
@@ -92,7 +96,7 @@ In my personal projects, I rely on [realfavicongenerator](http://realfavicongene
 
 Chromium-based browsers (Chrome, Opera etc.) [support](https://www.chromestatus.com/feature/6488656873259008) web app manifests today with Firefox actively developing support and Edge listing them as [under consideration](https://dev.windows.com/microsoft-edge/platform/status/webapplicationmanifest). WebKit/Safari have not yet posted public signals about their intents to implement the feature just yet.
 
-For more details, read [Installable Web Apps with the Web App Manifest in Chrome for Android](https://developers.google.com/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android) on Web Fundamentals.
+For more details, read [Installable Web Apps with the Web App Manifest in Chrome for Android](https://web.dev/customize-install) on Web Fundamentals.
 
 ### "Add to Home Screen" banner
 

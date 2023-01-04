@@ -383,7 +383,7 @@ involved in the [standardization effort].
 [applicable only]: https://github.com/WICG/picture-in-picture/issues/116
 [feature support]: #feature-support
 [feature policy]: /blog/feature-policy
-[video enters fullscreen]: https://developer.mozilla.org/en-US/docs/Web/API/Document/fullscreenchange_event
+[video enters fullscreen]: https://developer.mozilla.org/docs/Web/API/Document/fullscreenchange_event
 [media session sample]: https://googlechrome.github.io/samples/media-session/video.html
 [throttling and debouncing]: https://css-tricks.com/debouncing-throttling-explained-examples/
 [user may have turned it off]: https://support.google.com/youtube/answer/7552722

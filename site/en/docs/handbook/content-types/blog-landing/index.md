@@ -1,7 +1,7 @@
 ---
 title: Blog landing - given a collection this page generates a paginated list of blog cards.
 description:
-permalink: '{{locale}}/content-types/blog-landing/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html'
+permalink: '{{locale}}/docs/handbook/content-types/blog-landing/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html'
 layout: layouts/blog-landing.njk
 type: landing
 override:blogPosts:

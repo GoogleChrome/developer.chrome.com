@@ -169,7 +169,7 @@ section](#proposals).
 
 {% Details %} {% DetailsSummary %}
 
-### Raise and track feature issues 
+### Raise and track feature issues
 
 **_As implementation continues, issues with the feature behavior can be raised
 in the Chromium issue tracker._**
@@ -723,7 +723,7 @@ _The HTTP cache previously provided a single point where it was possible for one
 site to determine if its resources had been loading another—effectively leaking
 cross-site information. Partitioning the cache ensures that activity is
 restricted to a single site. [Learn more about HTTP Cache
-Partitioning](https://developers.google.com/web/updates/2020/10/http-cache-partitioning)._
+Partitioning](/blog/http-cache-partitioning/)._
 
 **_Last updated 2022/02: HTTP cache partitioning has fully shipped_**
 

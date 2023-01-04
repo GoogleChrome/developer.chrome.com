@@ -606,11 +606,6 @@ If you'd prefer an approach that feels more like `console.log()`, the [User Timi
 arbitrarily mark up certain phases of your app lifecycle, in order to track how long each of those
 phases takes.
 
-## A special thank you from Tony {: #thanks }
-
-Tony's fans love how fast the site feels now, and Tony is very thankful for your help. Click
-**Receive Gift** below to receive a special gift from Tony.
-
 ## Summary {: #summary }
 
 - Whenever you set out to optimize a site's load performance, always start with an audit. The audit

@@ -42,7 +42,7 @@ The sections below are organized based on the categories that Lighthouse reports
 See [The anatomy of a frame](https://aerotwist.com/blog/the-anatomy-of-a-frame/)
 for an overview of how Chromium renders web pages.
 
-See [Do less main thread work](https://developers.google.com/web/tools/chrome-devtools/speed/get-started#main)
+See [Do less main thread work](/docs/devtools/lighthouse/#main)
 to learn how to use Chrome DevTools to investigate exactly what your main thread is doing
 as the page loads.
 
@@ -79,6 +79,6 @@ as the page loads.
 
 ## Resources
 
-- [Source code for **Minimize main thread work** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/mainthread-work-breakdown.js)
+- [Source code for **Minimize main thread work** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/mainthread-work-breakdown.js)
 - [Main thread (MDN)](https://developer.mozilla.org/docs/Glossary/Main_thread)
 - [Inside look at modern web browser (part 3)](/blog/inside-browser-part3/)

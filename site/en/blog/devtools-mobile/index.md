@@ -22,7 +22,7 @@ Until now, while remote debugging you've had to shift your eyes back and forth b
 - Scroll the page by flinging it with your pointer or just sliding on your laptop trackpad.
 
 
-The [full documentation on screencasting](https://developers.google.com/chrome-developer-tools/docs/remote-debugging) captures all this and more, like sending a pinch zoom gesture. [Chrome on Android Beta](https://play.google.com/store/apps/details?id=com.chrome.beta) (m32) required.
+The [full documentation on screencasting](/docs/devtools/remote-debugging/) captures all this and more, like sending a pinch zoom gesture. [Chrome on Android Beta](https://play.google.com/store/apps/details?id=com.chrome.beta) (m32) required.
 
 ## Easy Remote Debugging
 
@@ -34,7 +34,7 @@ Now, we're happy to announce you can forget all that. **Chrome can now natively 
 {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/qOcqomBEapYcCUn4F1GI.png", alt="Discover USB connected devices.", width="800", height="415" %}
 </figure>
 
-This works great in all platforms, including Chrome OS, though do note that on Windows, you'll need to first [install proper USB drivers](http://developer.android.com/tools/extras/oem-usb.html) to talk to the device. If you've never tried it before you'll also need to enable USB debugging on the device and confirm you're using Chrome for Android Beta. [Read the full docs.](https://developers.google.com/chrome-developer-tools/docs/remote-debugging) ;)
+This works great in all platforms, including Chrome OS, though do note that on Windows, you'll need to first [install proper USB drivers](http://developer.android.com/tools/extras/oem-usb.html) to talk to the device. If you've never tried it before you'll also need to enable USB debugging on the device and confirm you're using Chrome for Android Beta. [Read the full docs.](/docs/devtools/remote-debugging/).
 
 {% Aside 'gotchas' %}
 Chrome will now keep your screen from going to sleep while you're remote debugging. Good for debugging but keep a watch on your device!
@@ -94,7 +94,7 @@ The emulation presets let you select a phone or tablet and get the correct scree
 {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/lMRjHu2GQHx2bg7EumGk.png", alt="Device presets", width="568", height="419" %}
 </figure>
 
-Hop over to devtools.chrome.com for the [full docs on Mobile Emulation with DevTools](https://developers.google.com/chrome-developer-tools/docs/mobile-emulation)
+Hop over to devtools.chrome.com for the [full docs on Mobile Emulation with DevTools](/docs/devtools/device-mode)
 
 ## Demo
 To get the full demo of **all these features in action**, check out my 23 minute talk from Chrome Dev Summit on the DevTools for mobile:

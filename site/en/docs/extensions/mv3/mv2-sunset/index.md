@@ -5,7 +5,7 @@ subhead: 'Understand when Manifest V2 will stop working for extensions'
 description: 'Details of the Manifest V2 phase-out and end of life.'
 layout: 'layouts/doc-post.njk'
 date: 2021-09-23
-updated: 2022-12-09
+updated: 2022-12-13
 ---
 
 {% Aside %}
@@ -37,10 +37,13 @@ Check this page for any updates and for more specific dates as these milestones 
     </td>
   </tr>
   <tr align="left" valign="top">
-    <td><strong>January&nbsp;17, 2022</strong>
+    <td><strong>January&nbsp;17,&nbsp;2022</strong>
     </td>
-    <td><ul>
-      <li>Existing Manifest V2 extensions can no longer be changed from "Private" to "Public" or "Unlisted"</li></ul>
+    <td>
+      <ul>
+        <li>Existing Manifest V2 extensions can no longer be changed from "Private" to "Public" or "Unlisted".</li>
+        <li>Chrome Web Store stops accepting new Manifest V2 extensions with visibility set to "Public" or "Unlisted".</li>
+      </ul>
     </td>
     <td><i>no change</i>
     </td>
@@ -49,7 +52,7 @@ Check this page for any updates and for more specific dates as these milestones 
     <td><strong>June&nbsp;2022</strong>
     </td>
     <td><ul>
-      <li>Chrome Web Store stops accepting new Manifest V2 extensions with visibility set to "Public" or "Unlisted"</li>
+      <li>Chrome Web Store stops accepting new Manifest V2 extensions with visibility set to "Private".</li>
       </ul>
     </td>
     <td><i>no change</i>

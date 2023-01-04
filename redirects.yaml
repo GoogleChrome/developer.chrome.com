@@ -191,6 +191,12 @@ redirects:
 
 # DevTools redirects
 
+- from: /docs/devtools/device-mode/geolocation/
+  to: /docs/devtools/sensors/#geolocation
+
+- from: /docs/devtools/device-mode/orientation/
+  to: /docs/devtools/sensors/#orientation
+
 - from: /docs/devtools/css/overrides/
   to: /docs/devtools/css/issues/
 
@@ -594,6 +600,9 @@ redirects:
 
 - from: /tags/deprecations/
   to: /tags/deprecations-removals/
+
+- from: /tags/extensions/
+  to: /tags/extensions-news/
 
 # DO NOT REMOVE. This seems pointless but we rewrite "." to "_" inside our server's code, so if the
 # URL is fine for all but incorrect syntax, we'll fix it up.

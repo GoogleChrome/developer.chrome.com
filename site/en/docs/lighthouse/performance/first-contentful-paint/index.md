@@ -87,7 +87,7 @@ for more on collecting real-user metrics.
 
 ## Resources
 
-- [Source code for **First Contentful Paint** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/first-contentful-paint.js)
+- [Source code for **First Contentful Paint** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/metrics/first-contentful-paint.js)
 - [FCP Metric Guide](https://web.dev/fcp/)
 - [Lighthouse Scoring Guide](/docs/lighthouse/performance/performance-scoring/)
 - [Paint Timing specification](https://w3c.github.io/paint-timing)

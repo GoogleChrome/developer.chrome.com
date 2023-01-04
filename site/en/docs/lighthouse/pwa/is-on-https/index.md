@@ -50,7 +50,7 @@ Chrome DevTools Security panel to learn how to debug these situations:
 
 ## Resources
 
-- [Source code for **Does not use HTTPS** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/is-on-https.js)
+- [Source code for **Does not use HTTPS** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/is-on-https.js)
 - [Why You Should Always Use HTTPS](https://web.dev/why-https-matters/)
 - [Enabling HTTPS on Your Servers](https://web.dev/enabling-https-on-your-servers/)
 - [Understand Security Issues With Chrome DevTools](/docs/devtools/security/)

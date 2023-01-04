@@ -63,4 +63,4 @@ also want to use a build process to do this minification up front if possible.
 
 ## Resources
 
-- [Source code for **Minify JavaScript** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/byte-efficiency/unminified-javascript.js)
+- [Source code for **Minify JavaScript** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/byte-efficiency/unminified-javascript.js)

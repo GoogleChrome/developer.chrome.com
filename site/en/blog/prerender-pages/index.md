@@ -343,6 +343,10 @@ Be aware that some prerendering may be taking place due to the address bar prere
 
 Remember to also look at pages which have no prerenders, as that could indicate these pages are not eligible for prerendering, even from the address bar. That may mean you are not benefiting from this performance enhancement. The Chrome team is looking to add extra tooling to test for Prerender eligibility perhaps [similar to the bfcache testing tool](https://web.dev/bfcache/#test-to-ensure-your-pages-are-cacheable), and also potentially add an API to expose why a prerender failed.
 
+## Impact on extensions
+
+See the dedicated post on [Chrome Extensions: Extending API to support Instant Navigation](/blog/extension-instantnav/) which details some additional considerations extension authors may need to think about for prerendered pages.
+
 ## Feedback
 
 Prerendering is in active development by the Chrome team, and there are plenty of plans to expand the scope of what has been made available in the Chrome 108 release. We welcome any feedback on [the GitHub repo](https://github.com/WICG/nav-speculation/issues) or via [our issue tracker](https://bugs.chromium.org/p/chromium/issues/list), and look forward to hearing and sharing case studies of this exciting new API.
@@ -352,6 +356,7 @@ Prerendering is in active development by the Chrome team, and there are plenty o
 - [Introducing NoState Prefetch](/blog/nostate-prefetch/)
 - [Speculation Rules API](https://github.com/jeremyroman/alternate-loading-modes/blob/main/triggers.md#speculation-rules)
 - [The Navigational speculation GitHub repo](https://github.com/WICG/nav-speculation/)
+- [Chrome Extensions: Extending API to support Instant Navigation](/blog/extension-instantnav/)
 
 ## Acknowledgements
 

@@ -175,7 +175,7 @@ Overflow][46] using the `[google-chrome]` and `[android]` tags.
 [22]: https://developer.mozilla.org/docs/CSS/length
 [23]: https://developer.mozilla.org/docs/Web/CSS/@supports
 [24]: http://www.html5rocks.com/en/tutorials/webcomponents/customelements/#fouc
-[25]: https://developers.google.com/web/fundamentals/web-components/customelements
+[25]: https://web.dev/custom-elements-v1/
 [26]: https://developer.mozilla.org/docs/HTML/Element/iframe
 [27]: http://www.html5rocks.com/tutorials/webcomponents/shadowdom/
 [28]: https://developer.mozilla.org/docs/HTML/Element/track

@@ -1165,7 +1165,7 @@ Code Readability Requirements:
 [api-tabs-query]: /docs/extensions/reference/tabs/#method-query
 [api-tabs-sendmessage]: /docs/extensions/reference/tabs/#method-sendMessage
 [api-tabs]: /docs/extensions/reference/tabs
-[blog-lie-fi]: https://developers.google.com/web/fundamentals/performance/poor-connectivity#lie-fi
+[blog-lie-fi]: https://web.dev/performance-poor-connectivity/#lie-fi
 [dev-support]: https://support.google.com/chrome_webstore/contact/one_stop_support
 [docs-dpp-api-use]: /docs/webstore/program-policies/api-use/
 [docs-dpp-bullying]: /docs/webstore/program-policies/hate-and-violence/

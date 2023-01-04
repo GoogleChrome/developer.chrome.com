@@ -75,6 +75,6 @@ according to the manifest's `theme_color`.
 
 ## Resources
 
-- [Source code for **Does not set a theme color for the address bar** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/themed-omnibox.js)
+- [Source code for **Does not set a theme color for the address bar** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/themed-omnibox.js)
 - [Add a web app manifest](https://web.dev/add-manifest/)
 - [Support for `theme-color` in Chrome 39 for Android](/blog/support-for-theme-color-in-chrome-39-for-android/)
