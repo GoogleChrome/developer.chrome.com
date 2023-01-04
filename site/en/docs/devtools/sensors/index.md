@@ -85,6 +85,7 @@ The [Idle Detection API](/articles/idle-detection/) lets you detect inactive use
 To emulate idle states:
 
 1. [Open the **Sensors** tab](#open-sensors). For this tutorial, you can try it on this [demo page](https://idle-detection.glitch.me/).
+
 1. Enable the checkbox next to *Ephemeral* and, in the prompt, grant the demo page the idle detection permission. Then, reload the page.
 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/1ymZFoBUlCOuksgUirQj.png", alt="Granting the idle detection permission on a demo page.", width="800", height="440" %}

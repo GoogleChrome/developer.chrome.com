@@ -25,7 +25,7 @@
  */
 const debug = false;
 
-const {doRedirect} = require('./env');
+const {doRedirect} = require('../../env');
 const readdirp = require('readdirp');
 const path = require('path');
 
