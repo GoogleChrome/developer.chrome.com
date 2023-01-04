@@ -337,11 +337,10 @@ the steps in [Viewing Warnings](#view_warnings).
 
 ## Update permissions {: #update_permissions }
 
-Updating an extension with additional permissions with warnings may temporarily disable it. The user will have to
+When an extension is updated to include a new  permission that [triggers a warning][section-warnings] it may temporarily disable it. The user will have to
 re-enable it after agreeing to any new warnings.
 
-If the extension is updated automatically it will be disabled until the user agrees to the new
-permissions.
+
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/usZSh31pGiJxhhuKmM8B.png",
        alt="Extension has been disabled", height="398", width="297" %}
