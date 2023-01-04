@@ -191,6 +191,12 @@ redirects:
 
 # DevTools redirects
 
+- from: /docs/devtools/device-mode/geolocation/
+  to: /docs/devtools/sensors/#geolocation
+
+- from: /docs/devtools/device-mode/orientation/
+  to: /docs/devtools/sensors/#orientation
+
 - from: /docs/devtools/css/overrides/
   to: /docs/devtools/css/issues/
 
