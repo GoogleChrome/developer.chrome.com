@@ -1,0 +1,27 @@
+
+article .tag-pill {
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.3333333333;
+    padding: 8px 32px 8px 15px !important;
+    position: relative;
+    border-radius: 18px;
+}
+
+article button {
+    background-color: transparent;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    display: inline-block;
+}
+
+article svg {
+height: 16px;
+width: 16px;
+}
+
+article .enhanced-select li[selected] {
+background: transparent;
+color: var(--color-text);
+}

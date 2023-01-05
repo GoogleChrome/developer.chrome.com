@@ -12,6 +12,10 @@ alt: Blowfish swarm swimming in the ocean.
 
 {% extends "layouts/base.njk" %}
 
+{% block css %}
+{% InlineCss '/css/styleguide-main.css' %}
+{% endblock %}
+
 {% block title_bar %}
   {% set sharingEnabled = true %}
   {% include 'partials/breadcrumbs.njk' %}
@@ -37,35 +41,34 @@ alt: Blowfish swarm swimming in the ocean.
           {% include 'partials/post-headline.njk' %}
         </div>
         <div class="home-container width-full center-margin pad-400">
-          <p>
-            This showcase of
-            <a href="/blog/fugu-status/">Project Fugu APIs</a>
-            is sourced by community submissions. You can propose missing apps by submitting them via this
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLScNd1rClbmFWh6FcMmjUNrwg9RLz8Jk4BkHz_-EOpmkVd_-9g/viewform"
-              rel="noopener"
-              target="_blank"
-              >form</a
-            >. Submissions are reviewed on a regular basis and the site will be updated accordingly.
-          </p>
-
           <form class="search-apis pad-top-400">
-            <label>Filter used APIs: <input class="search-apis" list="available-apis" type="search" /></label
-            ><button class="search-apis" type="reset">Clear</button>
+            <p>
+              <label for="example-enhanced-select">Enhanced multi select</label>
+              <enhanced-select label="API" fixedLabel>
+                <select name="example-enhanced-select">
+                  {% for availableAPI in fuguApis.availableApis %}
+                    <option value="{{ availableAPI }}">{{ availableAPI }}</option>
+                  {% endfor %}
+                </select>
+              </enhanced-select>
+              <button class="search-apis" type="reset">Clear</button>
+            </p>
           </form>
-
-          <div class="cluster flow-space-200 gap-top-300 gap-bottom-300">
-            <datalist id="available-apis">
-              {% for availableAPI in fuguApis.availableApis %}
-                <option style="display: block;" class="tag-pill surface decoration-none hairline color-secondary-text type--label weight-regular rounded-lg" tabindex="0" value="{{ availableAPI }}">{{ availableAPI }}</option>
-              {% endfor %}
-            </datalist>
-          </div>
 
           <form class="search-apps pad-top-400">
-            <label>Search apps: <input class="search-apps" list="available-apps" type="search" /></label
+            <label>Search apps and APIs: <input class="search-apps" list="available-apps" /></label
             ><button class="search-apps" type="reset">Clear</button>
           </form>
+
+          {% from 'macros/icon.njk' import icon with context %}
+          {% for availableAPI in fuguApis.availableApis %}
+            <span class="aside--success tag-pill" hidden>
+              {{ availableAPI }}
+              <button class="button" aria-label="{{ 'i18n.common.close' | i18n(locale) }}">
+                {{ icon('close') }}
+              </button>
+            </span>
+          {% endfor %}
 
           <div class="project-grid pad-top-400">
             {% for item in fuguApis.fuguItems %}
@@ -74,8 +77,14 @@ alt: Blowfish swarm swimming in the ocean.
                 {% set name = api.name | replace(" ", "-") %}
                 {% set apis = apis + " " + name %}
               {% endfor %}
+                
+              {% set searchApis = "" %}
+              {% for api in item.usedAPIs %}
+                {% set searchApis = searchApis + " " + api.name %}
+              {% endfor %}
+
               {% set apis = apis | trim | lower | replace("(", "") | replace(")", "") %}
-              <article id="{{ item.screenshot | replace(".webp", "") }}" data-name="{{ (item.title | lower) + " " + (item.appURL | lower) }}" data-used-apis="{{ apis }}" class="blog-card rounded-lg pad-300 md:pad-400 width-full">
+              <article id="{{ item.screenshot | replace(".webp", "") }}" data-name="{{ (item.title | lower) + " " + (searchApis | lower) + " " + (item.appURL | lower) }}" data-used-apis="{{ apis }}" class="blog-card rounded-lg pad-300 md:pad-400 width-full">
                 <h2 class="type--h5">
                   <a class="surface display-inline-flex color-text" href="{{ item.appURL }}">
                     {{ item.title }}
@@ -124,15 +133,22 @@ alt: Blowfish swarm swimming in the ocean.
     </div>
   </div>
 
+  {% block scripts %}
+    <script type="module" src="{{ helpers.hashForProd('/js/styleguide.js') }}"></script>
+  {% endblock %}
+
   <script>
     const EMBED_URL = 'https://developer.chrome.com/fugu-showcase/';
     const articles = document.querySelectorAll('article[data-used-apis]');
     const options = document.querySelectorAll('option');
-    const button = document.querySelector('button[type="reset"].search-apis');
-    const input = document.querySelector('input.search-apis');
     const form = document.querySelector('form.search-apis');
-    const searchButton = document.querySelector('button.search-apps');
-    const searchInput = document.querySelector('input.search-apps');
+
+    const resetApiButton = document.querySelector('button[type="reset"].search-apis');
+    const searchByApiInput = document.querySelector('.search-apis');
+
+    const resetAppNameButton = document.querySelector('button[type="reset"].search-apps');
+    const searchByAppNameInput = document.querySelector('input.search-apps');
+
     const shareButtons = document.querySelectorAll('.share');
     const container = document.querySelector('.home-container');
     const anchors = document.querySelectorAll('a.heading-link');
@@ -140,6 +156,98 @@ alt: Blowfish swarm swimming in the ocean.
       return string.toLowerCase().replace(/[^a-z0-9]/gi, '-').replace(/-+/g, '-').replace(/-*$/g, '');
     };
     const availableAPIs = Array.from(document.querySelectorAll('datalist > option')).map(availableAPI => slugify(availableAPI.value));
+
+    let filterValue = [];
+
+    function displayShowcase(search, filValue) {
+      if (!search.length && !filValue.length) {
+        articles.forEach((article) => {
+          article.style.display = 'block';
+        });
+      } else {
+        articles.forEach((article) => {
+          article.style.display = 'none';
+        });
+      }
+
+      const filter = filValue.join(" ");
+      const matchingFilterArticles = container.querySelectorAll(`article[data-used-apis*="${filter}"]`);
+      const matchingSearchArticles = container.querySelectorAll(`article[data-name*="${search}"]`);
+
+      matchingFilterArticles.forEach((article) => {
+        if (matchingSearchArticles.length > 0) {
+          matchingSearchArticles.forEach((searchArticle) => {
+            if (article === searchArticle) {
+              searchArticle.style.display = 'block';
+            }
+          });
+        } else {
+          article.style.display = 'block';
+        }
+      });
+     
+    }
+    searchByAppNameInput.addEventListener('input', (e) => {
+      articles.forEach((article) => {
+        article.style.display = 'none';
+      });
+
+      const value = e.target.value.toLowerCase();
+      displayShowcase(value, filterValue)
+    });
+
+    searchByApiInput.addEventListener('click', (e) => {
+      const selections = document.querySelectorAll('li.button[selected]');
+      const filterPills = document.querySelectorAll("span.tag-pill");
+
+      const selectedOptions = []
+      selections.forEach((option) => {
+        return selectedOptions.push(option.textContent.trim())
+      })
+      filterPills.forEach((pill) => {
+        if (selectedOptions.includes(pill.textContent.trim())) {
+          const value = pill.textContent.trim().toLowerCase().split(' ').join("-");
+
+          if (!filterValue.includes(value)) {
+            filterValue.push(value);
+            const searchValue = searchByAppNameInput.value?.toLowerCase() || '';
+            displayShowcase(searchValue, filterValue)
+          }
+
+          pill.removeAttribute('hidden');
+          pill.setAttribute('show', true);
+        }
+      })
+    });
+
+    const closeButtonPills = document.querySelectorAll("span.tag-pill button")
+    closeButtonPills.forEach(button => {
+      button.addEventListener('click', () => {
+        button.parentNode.setAttribute('hidden', true);
+        button.parentNode.removeAttribute('show', true);
+
+        const enhancedSelect = document.querySelectorAll(".enhanced-select__options li");
+        enhancedSelect.forEach(option => {
+          if (option.textContent.trim() === button.parentNode.textContent.trim()) {
+            option.removeAttribute('selected');
+          }
+        });
+
+        const value = button.parentNode.textContent.trim().toLowerCase().split(' ').join("-");
+        filterValue = filterValue.filter(v => v !== value)
+        
+        const searchValue = searchByAppNameInput.value?.toLowerCase() || '';
+        displayShowcase(searchValue, filterValue)
+      });
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'f' && e.metaKey) {
+        e.preventDefault();
+        searchByAppNameInput.focus();
+      }
+    });
+
     if ('clipboard' in navigator && 'writeText' in navigator.clipboard) {
       anchors.forEach((anchor) => {
         anchor.addEventListener('click', async (e) => {
@@ -163,105 +271,7 @@ alt: Blowfish swarm swimming in the ocean.
         });
       });
     }
-    const clearURL = () => {
-      const url = new URL(location.href);
-      url.searchParams.delete('api');
-      url.hash = '';
-      window.history.pushState({}, '', url);
-    };
-    searchInput.addEventListener('input', (e) => {
-      if (!e.target.value) {
-        input.dispatchEvent(new Event('input'));
-        return;
-      }
-      input.value = '';
-      clearURL();
-      articles.forEach((article) => {
-        article.style.display = 'none';
-      });
-      const value = e.target.value.toLowerCase();
-      const matchingArticles = container.querySelectorAll(`article[data-name*="${value}"]`);
-      matchingArticles.forEach((article) => {
-        article.style.display = 'block';
-      });
-    });
-    searchButton.addEventListener('click', (e) => {
-      clearURL();
-      searchInput.value = '';
-      searchInput.dispatchEvent(new Event('input'));
-    });
-    button.addEventListener('click', () => {
-      clearURL();
-      input.value = '';
-      input.dispatchEvent(new Event('input'));
-    });
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-    });
-    options.forEach((option) => {
-      option.addEventListener('click', (e) => {
-        clearURL();
-        input.value = option.value;
-        input.dispatchEvent(new Event('input'));
-      });
-      option.addEventListener('keypress', (e) => {
-        e.preventDefault();
-        if (e.key !== 'Enter' && e.key !== ' ') {
-          return;
-        }
-        clearURL();
-        input.value = option.value;
-        input.dispatchEvent(new Event('input'));
-      });
-    });
-    input.addEventListener('input', () => {
-      const value = slugify(input.value);
-      const url = new URL(window.location);
-      searchInput.value = '';
-      clearURL();
-      if (value && availableAPIs.includes(value)) {
-        url.searchParams.set('api', value);
-        url.hash = '';
-        window.history.pushState({}, '', url);
-        articles.forEach(article => {
-          article.style.display = 'none';
-          if (article.dataset.usedApis.split(' ').includes(value)) {
-            article.style.display = 'block';
-          }
-        });
-      } else {
-        articles.forEach(article => {
-          article.style.display = 'block';
-        });
-        url.searchParams.delete('api');
-        window.history.pushState({}, '', url);
-      }
-    });
-    const getOptionValue = (api) => {
-      for (const option of options) {
-        if (slugify(option.value) === api) {
-          return option.value;
-          break;
-        }
-      }
-    };
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'f' && e.metaKey) {
-        e.preventDefault();
-        searchInput.focus();
-      }
-    });
-    window.addEventListener('load', () => {
-      const url = new URL(window.location);
-      const api = url.searchParams.get('api');
-      if (api && availableAPIs.includes(api)) {
-        input.value = getOptionValue(api);
-      } else {
-        url.searchParams.delete('api');
-        window.history.pushState({}, '', url);
-      }
-      input.dispatchEvent(new Event('input'));
-    });
+
     if ('share' in navigator && 'canShare' in navigator) {
       shareButtons.forEach((button) => {
         button.style.display = 'block';
@@ -288,3 +298,4 @@ alt: Blowfish swarm swimming in the ocean.
     }
   </script>
 {% endblock %}
+
