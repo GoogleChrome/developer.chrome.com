@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Manage events with service workers"
 date: 2012-09-17
-updated: 2022-11-18
+updated: 2023-01-05
 description: How to respond to browser triggers (events) from a Chrome Extension service worker.
 ---
 
@@ -41,7 +41,7 @@ field. This field uses the `"service_worker"` key, which specifies a single Java
   "name": "Awesome Test Extension",
   ...
   "background": {
-    "service_worker": "service-worker.js"
+    "service_worker": "background.js"
   },
   ...
 }
@@ -99,8 +99,9 @@ chrome.bookmarks.onCreated.addListener(() => {
 ```
 {% endCompare %}
 
-If you put the same listener somewhere else, for example, inside the `installed` listener, it may
-not be called when it is needed because it may not even be initialized yet.
+If you put the same listener somewhere else, for example, inside the `installed` listener, 
+the event will be dropped because the nested listener will not be registered when the browser 
+attempts to dispatch it.
 
 {% Compare 'worse' %}
 ```js
