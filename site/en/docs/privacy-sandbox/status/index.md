@@ -34,9 +34,9 @@ See [Status](/docs/privacy-sandbox/attribution-reporting/#status).
 - [Attribution Reporting (Conversion Measurement)](/docs/privacy-sandbox/attribution-reporting)
 - [Introduction to Attribution Reporting (Conversion Measurement)](/docs/privacy-sandbox/attribution-reporting-introduction)
 - [API technical explainers](https://github.com/WICG/conversion-measurement-api/)
-- (⚠️ obsolete) [A more private way to measure ad conversions](https://web.dev/conversion-measurement/): 
+- (⚠️ obsolete) [A more private way to measure ad conversions](https://web.dev/conversion-measurement/):
   overview of the first iteration of this API for web developers
-- (⚠️ obsolete) [A more private way to measure ad conversions - Video](https://www.youtube.com/watch?v=jcDfOoWwZcM): 
+- (⚠️ obsolete) [A more private way to measure ad conversions - Video](https://www.youtube.com/watch?v=jcDfOoWwZcM):
   demo of the first iteration of this
   API (clicks only)
 - (⚠️ obsolete) [Using the Event Conversion Measurement API](https://web.dev/using-conversion-measurement/): how to experiment with the first
@@ -54,7 +54,7 @@ See [Status](/docs/privacy-sandbox/attribution-reporting/#status).
 - [GitHub](https://github.com/WICG/trust-token-api): see
   [issues](https://github.com/WICG/trust-token-api/issues) for API questions and
   discussion.
-- [Chrome DevTools integration](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token).
+- [Chrome DevTools integration](/blog/new-in-devtools-89/#trust-token).
 - Find out more: [Getting started with Trust Tokens](https://web.dev/trust-tokens/)
 
 ## First-Party Sets
@@ -81,8 +81,8 @@ See [Status](/docs/privacy-sandbox/attribution-reporting/#status).
 
 Now replaced by the Topics API.
 
-- Initial [origin trial](https://web.dev/origin-trials) now closed. 
-  See [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/MmijXrmwrJs) 
+- Initial [origin trial](https://web.dev/origin-trials) now closed.
+  See [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/MmijXrmwrJs)
   for updates.
 - [Demo](https://floc.glitch.me/) of initial version (origin trial now closed).
 - [Blink status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=floc).
@@ -102,7 +102,7 @@ Descendant of [TURTLEDOVE](https://github.com/WICG/turtledove).
 - [Blink status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=fledge).
 - [API proposal](https://github.com/WICG/turtledove/blob/main/FLEDGE.md) is under
   discussion with [WICG](https://www.w3.org/community/wicg/) and interest groups.
-- [GitHub](https://github.com/WICG/turtledove/blob/main/FLEDGE.md): see 
+- [GitHub](https://github.com/WICG/turtledove/blob/main/FLEDGE.md): see
   [TURTLEDOVE issues](https://github.com/WICG/turtledove/issues) for API questions and discussion.
 
 ## Topics
@@ -112,9 +112,9 @@ Replaces FLoC.
 - [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/oTwd6VwCwqs).
 - [Intent to Prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/59uTw_dxM3M/m/vF9lF9BVAgAJ).
 - [Blink status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=\"topics api\").
-- [API proposal](https://github.com/jkarlin/topics) is under discussion with 
+- [API proposal](https://github.com/jkarlin/topics) is under discussion with
   [WICG](https://www.w3.org/community/wicg/) and interest groups.
-- [GitHub](https://github.com/jkarlin/topics/blob/main/README.md): see 
+- [GitHub](https://github.com/jkarlin/topics/blob/main/README.md): see
   [Topics API issues](https://github.com/jkarlin/topics/issues) for API questions and discussion.
 
 <br>

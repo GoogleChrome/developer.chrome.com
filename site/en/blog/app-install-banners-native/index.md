@@ -12,7 +12,7 @@ The native app install prompt gives you the ability to let users quickly and
 seamlessly install your native app on their device directly from the app store,
 without leaving the browser, and without showing an annoying interstitial.
 
-## What are the criteria? 
+## What are the criteria?
 
 In order to show the native app install prompt to the user, your site must
 meet the following criteria:
@@ -69,7 +69,7 @@ browser about your preferred native application. Each object must include
 a `platform` property and an `id` property. Where the `platform` is `play`
 and the `id` is your Play Store app ID.
 
-## Show the install prompt 
+## Show the install prompt
 
 In order to show the install dialog, you need to:
 
@@ -159,10 +159,10 @@ the next page navigation.
 
 ## Special considerations for when using content security policy
 
-If your site has a restrictive [Content Security Policy](https://developers.google.com/web/fundamentals/security/csp/),
+If your site has a restrictive [Content Security Policy](https://web.dev/csp/),
 make sure to add `*.googleusercontent.com` to the `img-src` directive so Chrome
 can download the icon associated with your app from the Play Store.
 
 In some cases `*.googleusercontent.com` maybe more verbose than desired. It's
-possible to narrow this down by [remote debugging](https://developers.google.com/web/tools/chrome-devtools/remote-debugging/)
+possible to narrow this down by [remote debugging](/docs/devtools/remote-debugging/)
 an Android device to determine the URL of the app icon.

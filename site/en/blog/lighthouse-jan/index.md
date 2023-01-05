@@ -33,7 +33,7 @@ tags:
 ---
 
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) is an
+[Lighthouse](/docs/lighthouse/overview/) is an
 [open-source](https://github.com/GoogleChrome/lighthouse), automated tool for
 improving the quality of your web apps. You can install it as a
 [Chrome Extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk)

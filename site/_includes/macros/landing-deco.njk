@@ -12,11 +12,11 @@
           %}</span>
           {% endif %}
           <span>
-            {{ title }}
+            {{ title | md | safe }}
           </span>
         </h2>
         <p class="gap-top-300 gap-bottom-600 md-only">
-          {{ desc }}
+          {{ desc | md | safe }}
         </p>
       </div>
       {% if imgSrc %}

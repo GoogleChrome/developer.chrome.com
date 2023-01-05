@@ -8,7 +8,7 @@ updated: 2019-05-28
 ---
 
 In February, we introduced the [`<model-viewer>` web
-component](https://developers.google.com/web/updates/2019/02/model-viewer),
+component](https://web.dev/model-viewer),
 which lets you declaratively add a 3D model to a web page, while hosting the
 model on your own site. One thing it didn't support  was augmented reality. That
 is, you could not render the component's source image on top of a device's

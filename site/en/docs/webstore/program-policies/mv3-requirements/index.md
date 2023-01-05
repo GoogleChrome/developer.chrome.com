@@ -24,4 +24,4 @@ date: 2022-11-01
 
 1. If our reviewers are unable to determine the full functionality of your extension during the review process, we may reject your submission or remove it from the store.
 
-[eval]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval
+[eval]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/eval

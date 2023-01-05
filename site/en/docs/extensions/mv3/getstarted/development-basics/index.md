@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: 'Development basics'
+seoTitle: 'Chrome Extension development basics'
 subhead: 'Learn the basics of Chrome extension development.'
 description: 'What to expect during the development of a Chrome extension.'
 date: 2022-10-04
@@ -211,7 +212,7 @@ manifest.json file in the extension's **root directory**. The following is a str
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/hjccQNanPjTDpIajkhPU.png", alt="The contents of an extension folder: manifest.json, background.js, scripts folder, popup folder, and images folder.", width="700", height="468" %}
 
-## Using Typescript {: #types }
+## Using TypeScript {: #types }
 
 If you are developing using a [code editor][mdn-ide] such as VSCode or Atom, you can use the npm
 package [chrome-types][npm-chrome-types] to take advantage of auto-completion for the [Chrome
@@ -220,7 +221,7 @@ changes.
 
 {% Aside  'gotchas' %}
 
-Upgrade this npm package frequently to work with the latest Chromium version.
+Update this npm package frequently to work with the latest Chromium version.
 
 {% endAside %}
 

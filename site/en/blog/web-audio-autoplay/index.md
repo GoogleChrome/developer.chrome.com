@@ -197,8 +197,8 @@ We always put our users first but we also don’t want to let down the web devel
 [more detailed examples]: https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#example_scenarios
 [extends that right to the given iframe]: https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#iframe
 [these example sites can be viewed here]: https://docs.google.com/spreadsheets/d/1JDyGFK44q3DfnOFXMsubNeC2MI-pE5rwfERomDi2lJg/view
-[audiocontext]: https://developer.mozilla.org/en-US/docs/Web/API/AudioContext
-[audionodes]: https://developer.mozilla.org/en-US/docs/Web/API/AudioNode
-[audioscheduledsourcenode]: https://developer.mozilla.org/en-US/docs/Web/API/AudioScheduledSourceNode
+[audiocontext]: https://developer.mozilla.org/docs/Web/API/AudioContext
+[audionodes]: https://developer.mozilla.org/docs/Web/API/AudioNode
+[audioscheduledsourcenode]: https://developer.mozilla.org/docs/Web/API/AudioScheduledSourceNode
 [decision making process and the design rationale]: https://sites.google.com/a/chromium.org/dev/audio-video/autoplay/autoplay-policy-design-rationale
 [how the pre-seeded site list works]: https://sites.google.com/a/chromium.org/dev/audio-video/autoplay/autoplay-pre-seeding-in-chrome

@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manage events with service workers"
+seoTitle: "Chrome Extensions: Manage events with service workers"
 date: 2012-09-17
 updated: 2018-05-01
 description: How to respond to browser triggers (events) from a Chrome Extension service worker.
@@ -149,7 +150,7 @@ the desired reaction inside of the listener event.
 chrome.runtime.onMessage.addListener((message, callback) => {
   const tabId = getForegroundTabId();
   if (message.data === "setAlarm") {
-    chrome.alarms.create({delayInMinutes: 5})
+    chrome.alarms.create({delayInMinutes: 5});
   } else if (message.data === "runLogic") {
     chrome.scripting.executeScript({file: 'logic.js', tabId});
   } else if (message.data === "changeColor") {
@@ -182,6 +183,6 @@ Unlike [event pages in Manifest V2][event-page-unload], extension service worker
 
 [doc-sw-migration]: /docs/extensions/mv3/migrating_to_service_workers
 [event-page-unload]: https://developer.chrome.com/docs/extensions/mv2/background_pages/
-[mdn-beforeunload]: https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event
-[mdn-unload]: https://developer.mozilla.org/en-US/docs/Web/API/Window/unload_event
+[mdn-beforeunload]: https://developer.mozilla.org/docs/Web/API/Window/beforeunload_event
+[mdn-unload]: https://developer.mozilla.org/docs/Web/API/Window/unload_event
 [sw-module]: https://web.dev/es-modules-in-sw/

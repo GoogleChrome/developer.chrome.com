@@ -20,10 +20,10 @@
             </div>
           </div>
         {% endif %}
-        {{ title }}
+        {{ title | md | safe }}
       </h1>
       <p class="gap-top-300">
-        {{ text }}
+        {{ text | md | safe }}
       </p>
       {% if actionText %}
         <a href="{{ actionLink }}" class="material-button button-filled button-round display-inline-flex color-bg bg-{{color}}-medium gap-top-400">

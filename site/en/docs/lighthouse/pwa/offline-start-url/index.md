@@ -19,7 +19,7 @@ This causes problems for users who have installed the app to their devices.
 
 ## How the Lighthouse `start_url` audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+[Lighthouse](/docs/lighthouse/overview/)
 flags web apps whose start URL doesn't respond with a 200 when offline:
 
 <figure>
