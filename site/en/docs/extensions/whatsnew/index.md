@@ -19,6 +19,7 @@ and related policy or other changes.
 ### Chrome 110: Change in service worker idle timeout {: #m110-sw-idle }
 
 January 5, 2023
+
 Previously, an extension service worker would frequently shut down at the five minute mark. We've changed this behavior to more closely resemble service worker lifetime's on the web. An extension service worker will be shut down after either thirty seconds of inactivity or if a single activity takes longer than 5 minutes to process. Watch this space for a blogpost with details about extension service worker lifetimes.
 
 ### Post: Pausing Manifest V2 phase-out
