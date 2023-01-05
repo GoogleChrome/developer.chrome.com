@@ -59,6 +59,7 @@
   <div class="measure-1280 width-full center-margin pad-left-400 pad-right-400">
     <div class="blog-grid">
       {% for item in paged.pagination.items %}
+        {% if not item.noindex %}
         {% set post = {
           data: {
             thumbnail: item.thumbnail,
@@ -72,6 +73,7 @@
           url: item.url
         } %}
         {{ blogCard(post) }}
+        {% endif %}
       {% endfor %}
     </div>
     {% include 'partials/pagination.njk' %}

@@ -1,5 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
+noindex: true
 title: A sample docs post used for visual testing.
 subhead: >
   A catchy subhead used for demonstration purposes. It is a bit wordy to test what

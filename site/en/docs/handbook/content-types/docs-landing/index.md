@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: >-
   Docs landing - this page type pulls the requested urls from `_data/docs/projects`
   and, while maintaining the groups, provides large icon based links through to them.
