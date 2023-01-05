@@ -1463,8 +1463,8 @@ This is often what I use when progressively enhancing colors to high definition:
 
 ```css
 :root {
-  --neon-red: red;
-  --neon-blue: blue;
+  --neon-red: rgb(100% 0 0);
+  --neon-blue: rgb(0 0 100%);
 }
 
 /* is the display HD? */
