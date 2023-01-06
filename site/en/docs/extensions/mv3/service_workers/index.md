@@ -29,7 +29,7 @@ loaded.
 
 {% endAside %}
 
-Extension service workers stay dormant until an event they are listening for fires. At which point, they execute the appropriate event litener, then unload.
+Extension service workers stay dormant until an event they are listening for fires. At which point, they execute the appropriate event listener, idle, then unload.
 
 ## Register the service worker {: #manifest }
 
