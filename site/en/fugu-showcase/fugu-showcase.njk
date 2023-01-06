@@ -61,7 +61,7 @@ alt: Blowfish swarm swimming in the ocean.
           <div class="pills pad-top-400"> 
             {% from 'macros/icon.njk' import icon with context %}
             {% for availableAPI in fuguApis.availableApis %}
-              <span class="aside--success tag-pill" hidden>
+              <span class="tag-pill" hidden>
                 {{ availableAPI }}
                 <button class="button" aria-label="{{ 'i18n.common.close' | i18n(locale) }}">
                   {{ icon('close') }}
@@ -243,4 +243,3 @@ alt: Blowfish swarm swimming in the ocean.
     });
   </script>
 {% endblock %}
-

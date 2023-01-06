@@ -1,66 +1,74 @@
-.fugu-container .tag-pill {
+.fugu-container {
+  .tag-pill {
+    border-radius: 18px;
     font-weight: 500;
-    font-size: 0.875rem;
-    line-height: 1.3333333333;
     padding: 8px 32px 8px 15px !important;
     position: relative;
-    border-radius: 18px;
+
+    button {
+      background-color: transparent;
+      display: inline-block;
+      position: absolute;
+      right: 5px;
+      top: 2px;
+    }
+
+    svg {
+      height: 16px;
+      width: 16px;
+    }
+  }
+
+  .enhanced-select li[selected] {
+    background: transparent;
+    color: var(--color-text);
+  }
 }
 
 .fugu-container button {
-    background-color: transparent;
-    position: absolute;
-    right: 5px;
-    top: 5px;
-    display: inline-block;
-}
-
-.fugu-container svg {
-    height: 16px;
-    width: 16px;
-}
-
-.fugu-container .enhanced-select li[selected] {
-    background: transparent;
-    color: var(--color-text);
+  background-color: transparent;
+  display: inline-block;
+  position: absolute;
+  right: 5px;
+  top: 5px;
 }
 
 .project-grid {
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 28rem));
-    justify-content: space-between;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 28rem));
+  justify-content: space-between;
 
-    .blog-card {
-        max-width: 100%;
-        min-width: 360px;
-    }
+  .blog-card {
+    max-width: 100%;
+    min-width: 360px;
+  }
 }
 
 .search-apps-apis {
-    border-bottom: 1px solid var(--color-hairline);
-    padding-bottom: 40px;
+  border-bottom: 1px solid var(--color-hairline);
+  padding-bottom: 40px;
 
-    svg.icon {
-        position: absolute;
-        width: 24px !important;
-        height: 24px !important;
-        top: 10px;
-        left: 15px;
+  .icon {
+    height: 24px !important;
+    left: 15px;
+    position: absolute;
+    top: 10px;
+    width: 24px !important;
+  }
+
+  .search-input {
+    margin-right: 20px;
+    position: relative;
+  }
+
+  .enhanced-select__wrapper {
+    border: 0;
+
+    span {
+      color: get-color('blue-700');
     }
 
-    .search-input {
-        position: relative;
-        margin-right: 20px;
+    path {
+      fill: get-color('blue-700');
     }
-
-    .enhanced-select__wrapper {
-        border: none;
-
-        label > span {
-            color: get-color('blue-700');
-        }
-
-        label svg > path {
-            fill: get-color('blue-700');
-        }
-    }
+  }
 }
