@@ -120,9 +120,9 @@ Extensions can remove listeners from their background scripts by calling `remove
 ## Filter events {: #filters }
 
 Use APIs that support [event filters][8] to restrict listeners to specific use cases. If an
-extension is listening for the [`tabs.onUpdated`][9] event, try using the
-[`webNavigation.onCompleted`][10] event with filters instead, as the `onUpdated` event does not support
-filters.
+extension is listening for the [`tabs.onUpdated`][9] event to detect when a user navigates
+to a specific website, try using the [`webNavigation.onCompleted`][10] event with filters
+instead, as the `tabs.onUpdated` event does not support filters.
 
 ```js
 const filter = {
