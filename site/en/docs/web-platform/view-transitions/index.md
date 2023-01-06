@@ -429,7 +429,7 @@ However, if the side-bar is only on the new page, the `::view-transition-old(sid
 
 In the demo above, the side-bar transitions differently depending on whether it's entering, exiting, or present in both states. It enters by sliding from the right and fading in, it exits by sliding to the right and fading out, and it stays in place when it's present in both states.
 
-To create specific entry and exit transitions, you can use the `:only-child` pseudo-class to target the old/new pseudo-element when it's the only child in the image-pair:
+To create specific entry and exit transitions, you can use the [`:only-child` pseudo-class](https://developer.mozilla.org/docs/Web/CSS/:only-child) to target the old/new pseudo-element when it's the only child in the image-pair:
 
 <!-- prettier-ignore -->
 ```css
@@ -447,6 +447,10 @@ To create specific entry and exit transitions, you can use the `:only-child` pse
 ```
 
 In this case, there's no specific transition for when the side-bar is present in both states, since the default is perfect.
+
+{% Aside %}
+Support for `:only-child` on transition pseudo-elements was added in Chrome 111.
+{% endAside %}
 
 ## Async DOM updates, and waiting for content
 
