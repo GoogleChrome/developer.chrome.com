@@ -264,12 +264,18 @@ perspective on the activities:
 - When you want to view the activities in the order in which they occurred during the recording, use
   [the **Event Log** tab][14].
 
-{% Aside %}
+Each tabular view in the **Performance** panel shows links for activities such as functions calls.
+To help you debug, DevTools finds the corresponding function declarations in source files.
+Additionally, if the appropriate [sourcemaps](/blog/sourcemaps/) are present and enabled, DevTools automatically finds the original files.
 
-**Note:** The next three sections all refer to the same demo. You can run the demo yourself at
+Click a link to open a source file in the **Sources** panel.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4SQI9D4uvwrBOqhfKnmB.png", alt="Link to a source file in the Event Log tab.", width="800", height="669" %}
+
+{% Aside %}
+**Note**:The next three sections all refer to the same demo. You can run the demo yourself at
 [Activity Tabs Demo][15] and see the source at
 [GoogleChrome/devtools-samples/perf/activitytabs.html][16].
-
 {% endAside %}
 
 #### Root activities {: #root-activities }
