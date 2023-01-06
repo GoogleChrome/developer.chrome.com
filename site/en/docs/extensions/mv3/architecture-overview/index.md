@@ -20,7 +20,7 @@ If you are not familiar with Chrome extension development, we recommend first re
 
 ### The manifest {: #manifest }
 
-The manifest is the configuration file of a Chrome extension. It is a required JSON file that must be located at the root of the project. It provides the browser with a blueprint of the extension, with important information such as:
+The manifest is the configuration file of a Chrome extension. It is a required JSON file that must be located at the [root of the project][dev-basics-structure]. It provides the browser with a blueprint of the extension, with important information such as:
 
 - The name of the extension, a description of what it does, the current version number, and what icons to use.
 - The [Chrome API][api-ref] keys and [permissions][doc-perms] that the extension needs.
@@ -96,6 +96,7 @@ Now that you have completed the [Getting Started guides][doc-gs] and understand 
 [cs-isolated]: /docs/extensions/mv3/content_scripts/#isolated_world
 [cws]: https://chrome.google.com/webstore/
 [cws-mv3-req]: /docs/webstore/program-policies/mv3-requirements/
+[dev-basics-structure]: /docs/extensions/mv3/getstarted/development-basics/#structure
 [doc-content-scripts]: /docs/extensions/mv3/content_scripts
 [doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics
 [doc-dev-guide]: /docs/extensions/mv3/devguide
