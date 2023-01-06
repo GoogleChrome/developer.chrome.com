@@ -19,7 +19,8 @@ Examples include:
 - A content script or other extension [sends a message][1].
 
 Once it has been loaded, an extension service worker generally runs as long as it is
-performing an action such as calling a Chrome API or issuing a network request.
+actively receiving events. The browser will stop the service worker once it idles for
+a short period (30 seconds).
 
 {% Aside %}
 
