@@ -87,7 +87,7 @@
     "striptags": "^3.1.1",
     "typedoc": "^0.22.7",
     "typescript": "^4.4.4",
-    "unfurl.js": "^5.7.0",
+    "unfurl.js": "^6.1.0",
     "unistore": "^3.5.2",
     "uslug": "^1.0.4",
     "web-vitals": "^3.0.4",
