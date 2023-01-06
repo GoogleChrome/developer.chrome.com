@@ -1,0 +1,74 @@
+.fugu-container {
+  .tag-pill {
+    border-radius: 18px;
+    font-weight: 500;
+    padding: 8px 32px 8px 15px !important;
+    position: relative;
+
+    button {
+      background-color: transparent;
+      display: inline-block;
+      position: absolute;
+      right: 5px;
+      top: 2px;
+    }
+
+    svg {
+      height: 16px;
+      width: 16px;
+    }
+  }
+
+  .enhanced-select li[selected] {
+    background: transparent;
+    color: var(--color-text);
+  }
+}
+
+.fugu-container button {
+  background-color: transparent;
+  display: inline-block;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.project-grid {
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 28rem));
+  justify-content: space-between;
+
+  .blog-card {
+    max-width: 100%;
+    min-width: 360px;
+  }
+}
+
+.search-apps-apis {
+  border-bottom: 1px solid var(--color-hairline);
+  padding-bottom: 40px;
+
+  .icon {
+    height: 24px !important;
+    left: 15px;
+    position: absolute;
+    top: 10px;
+    width: 24px !important;
+  }
+
+  .search-input {
+    margin-right: 20px;
+    position: relative;
+  }
+
+  .enhanced-select__wrapper {
+    border: 0;
+
+    span {
+      color: get-color('blue-700');
+    }
+
+    path {
+      fill: get-color('blue-700');
+    }
+  }
+}

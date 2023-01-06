@@ -1,0 +1,245 @@
+---
+title: 'Project Fugu API Showcase'
+subhead: >
+  The Project Fugu API Showcase is a collection of apps that make use of APIs that were conceived in
+  the context of Project Fugu.
+description: >
+  The Project Fugu API Showcase is a collection of apps that make use of APIs that were conceived in
+  the context of Project Fugu.
+hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/8FZcBmFowbDKWxpkOytx.jpg
+alt: Blowfish swarm swimming in the ocean.
+---
+
+{% extends "layouts/base.njk" %}
+{% from 'macros/icon.njk' import icon with context %}
+
+{% block css %}
+{% InlineCss '/css/styleguide-main.css' %}
+{% endblock %}
+
+{% block title_bar %}
+  {% set sharingEnabled = true %}
+  {% include 'partials/breadcrumbs.njk' %}
+{% endblock %}
+
+{% block content %}
+  {% if hero %}
+    <div class="display-flex justify-content-center lg:pad-left-400 lg:pad-right-400">
+      {% Img
+        class="hero-image object-fit-cover",
+        src=hero,
+        alt=alt,
+        width="960",
+        height="480",
+        sizes="(min-width: 960px) 960px, 100vw"
+      %}
+    </div>
+  {% endif %}
+  <div class="display-flex gap-top-300 lg:gap-top-400">
+    <div class="display-flex justify-content-center width-full">
+      <article class="width-full pad-left-400 pad-right-400">
+        <div class="fugu-container width-full center-margin pad-400">
+          <form class="search-apps-apis pad-top-400">
+            <div class="display-flex align-items-center">
+              <p class="search-input">
+                {{ icon('search', {hidden: false}) }}
+                <input class="search-apps search-box__input" list="available-apps" placeholder="Search apps and APIs" aria-label="Search apps and APIs" />
+              </p>
+              <p>
+                <label for="example-enhanced-select">FILTER BY: </label>
+                <enhanced-select class="search-apis" label="API" fixedLabel>
+                  <select name="example-enhanced-select">
+                    {% for availableAPI in fuguApis.availableApis %}
+                      <option value="{{ availableAPI }}">{{ availableAPI }}</option>
+                    {% endfor %}
+                  </select>
+                </enhanced-select>
+              </p>
+            </div>
+          </form>
+
+          <div class="pills pad-top-400"> 
+            {% from 'macros/icon.njk' import icon with context %}
+            {% for availableAPI in fuguApis.availableApis %}
+              <span class="tag-pill" hidden>
+                {{ availableAPI }}
+                <button class="button" aria-label="{{ 'i18n.common.close' | i18n(locale) }}">
+                  {{ icon('close') }}
+                </button>
+              </span>
+            {% endfor %}
+          </div>
+
+          <div class="project-grid pad-top-400">
+            {% for item in fuguApis.fuguItems %}
+              {% set apis = "" %}
+              {% for api in item.usedAPIs %}
+                {% set name = api.name | replace(" ", '-') %}
+                {% set apis = apis + " " + name %}
+              {% endfor %}
+                
+              {% set searchApis = "" %}
+              {% for api in item.usedAPIs %}
+                {% set searchApis = searchApis + " " + api.name %}
+              {% endfor %}
+
+              {% set apis = apis | trim | lower | replace("(", "") | replace(")", "") %}
+              <article id="{{ item.screenshot | replace(".webp", "") }}" data-name="{{ (item.title | lower) + " " + (searchApis | lower) + " " + (item.appURL | lower) }}" data-used-apis="{{ apis }}" class="blog-card rounded-lg pad-300 md:pad-400 width-full">
+                <h2 class="type--h5">
+                  <a class="surface display-inline-flex color-text" href="{{ item.appURL }}">
+                    {{ item.title }}
+                  </a>
+                </h2>
+                <div class="gap-top-400 blog-card__thumbnail">
+                  <figure>
+                    <a href="{{ item.appURL }}" rel="noopener" target="_blank">
+                      <picture
+                        ><source media="(prefers-color-scheme: dark)" srcset="{{ item.screenshot | replace(".webp", "-dark.webp") }}" />
+                        <source media="(prefers-color-scheme: light)" srcset="{{ item.screenshot }}" />
+                        <img class="hairline" alt="{{ 'Screenshot of ' + item.title }}" height="800" src="{{ item.screenshot }}" width="1280"
+                          loading="lazy" /></picture>
+                    </a>
+                    <figcaption class="type--caption gap-top-200">{{ item.description }}</figcaption>
+                  </figure>
+                </div>
+                <div>
+                  <a class="material-button button-filled button-round display-inline-flex color-bg bg-primary gap-top-400" href="{{ item.appURL }}" rel="noopener" target="_blank">Launch app</a>
+                  {% if item.isElectronApp %}
+                    (Electron.js)
+                  {% endif %}
+                  {% if item.sourceURL %}
+                    <a class="material-button button-filled button-round display-inline-flex color-bg bg-primary gap-top-400" href="{{ item.sourceURL }}" rel="noopener" target="_blank">Source code</a>
+                  {% endif %}
+                </div>
+                <div class="gap-top-400">
+                  <h3 class="type--h6 gap-top-300">Used APIs:</h3>
+                  <div class="cluster flow-space-200 gap-top-300">
+                    <div>
+                      {% for api in item.usedAPIs %}
+                        <a class="tag-pill surface decoration-none hairline color-secondary-text type--label weight-regular rounded-lg" href="{{ api.url }}" rel="noopener" target="_blank">{{ api.name }}</a>
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
+              </article>
+            {% endfor %}
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  {% block scripts %}
+    <script type="module" src="{{ helpers.hashForProd('/js/styleguide.js') }}"></script>
+  {% endblock %}
+
+  <script>
+    const EMBED_URL = 'https://developer.chrome.com/fugu-showcase/';
+    const articles = document.querySelectorAll('article[data-used-apis]');
+    const searchByApiInput = document.querySelector('.search-apis');
+    const searchByAppNameInput = document.querySelector('input.search-apps');
+    const container = document.querySelector('.fugu-container');
+    const slugify = (string) => {
+      return string.toLowerCase().replace(/[^a-z0-9]/gi, '-').replace(/-+/g, '-').replace(/-*$/g, '');
+    };
+    const availableAPIs = Array.from(document.querySelectorAll('datalist > option')).map(availableAPI => slugify(availableAPI.value));
+    let filterValue = [];
+
+    function displayShowcase(search, filValue) {
+      if (!search.length && !filValue.length) {
+        articles.forEach((article) => {
+          article.style.display = 'block';
+        });
+      } else {
+        articles.forEach((article) => {
+          article.style.display = 'none';
+        });
+      }
+
+      const filter = filValue.join(' ');
+      const matchingFilterArticles = container.querySelectorAll(`article[data-used-apis*="${filter}"]`);
+      const matchingSearchArticles = container.querySelectorAll(`article[data-name*="${search}"]`);
+
+      matchingSearchArticles.forEach((article) => {
+        if (!matchingFilterArticles.length) article.style.display = 'block';
+        else {
+          matchingFilterArticles.forEach((filterArticle) => {
+            if (article === filterArticle) {
+              filterArticle.style.display = 'block';
+            }
+          });
+        }
+      });
+      
+      matchingFilterArticles.forEach((article) => {
+        if (!matchingSearchArticles.length) article.style.display = 'block';
+        else {
+          matchingSearchArticles.forEach((searchArticle) => {
+            if (article === searchArticle) {
+              searchArticle.style.display = 'block';
+            }
+          });
+        }
+      });
+    }
+
+    searchByAppNameInput.addEventListener('input', (e) => {
+      articles.forEach((article) => {
+        article.style.display = 'none';
+      });
+
+      const value = e.target.value.toLowerCase();
+      displayShowcase(value, filterValue)
+    });
+
+    searchByApiInput.addEventListener('click', (e) => {
+      const selections = document.querySelectorAll('li.button[selected]');
+      const filterPills = document.querySelectorAll('span.tag-pill');
+
+      const selectedOptions = []
+      selections.forEach((option) => {
+        return selectedOptions.push(option.textContent.trim())
+      })
+      filterPills.forEach((pill) => {
+        if (selectedOptions.includes(pill.textContent.trim())) {
+          const value = pill.textContent.trim().toLowerCase().split(' ').join('-');
+
+          if (!filterValue.includes(value)) {
+            filterValue.push(value);
+            const searchValue = searchByAppNameInput.value?.toLowerCase();
+            displayShowcase(searchValue, filterValue)
+          }
+
+          pill.removeAttribute('hidden');
+        }
+      })
+    });
+
+    const closeButtonPills = document.querySelectorAll('span.tag-pill button')
+    closeButtonPills.forEach(button => {
+      button.addEventListener('click', () => {
+        button.parentNode.setAttribute('hidden', true);
+
+        const enhancedSelect = document.querySelectorAll('.enhanced-select__options li');
+        enhancedSelect.forEach(option => {
+          if (option.textContent.trim() === button.parentNode.textContent.trim()) {
+            option.removeAttribute('selected');
+          }
+        });
+
+        const value = button.parentNode.textContent.trim().toLowerCase().split(' ').join('-');
+        filterValue = filterValue.filter(v => v !== value)
+        
+        const searchValue = searchByAppNameInput.value?.toLowerCase();
+        displayShowcase(searchValue, filterValue)
+      });
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'f' && e.metaKey) {
+        e.preventDefault();
+        searchByAppNameInput.focus();
+      }
+    });
+  </script>
+{% endblock %}
