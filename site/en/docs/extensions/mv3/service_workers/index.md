@@ -80,8 +80,10 @@ Structure extension service workers around events the extension depends on. Defi
 events allows the service wroker to lie dormant until those events are fired and prevents the
 extension from missing important triggers.
 
-Listeners must be registered at the start of your extension service worker. Notice that in this
-example the listener for creating bookmarks is at the top level of the script.
+Make sure your event handlers are registered in global scope by not nesting them in functions.
+This ensures that they are registered synchronously on initial script execution, which Chrome
+needs in order to dispatch events to the listener right after the service worker starts up.
+Notice that in this example the listener for creating bookmarks is at the top level of the script.
 
 {% Compare 'better' %}
 ```js/9-11
