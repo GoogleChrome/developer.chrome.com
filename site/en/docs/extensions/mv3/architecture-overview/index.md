@@ -40,7 +40,7 @@ See [Handling events in the extension service worker][doc-sw] for more details.
 
 Extensions use content scripts to inject code into host pages. They allow the extension to interact with and modify pages in the browser. For example, they can insert a new element on the page, change the style of a website, modify the [DOM][mdn-dom] elements, etc. 
 
-Content Scripts share access to the same DOM tree as the host page but run in a separate JavaScript environment (the extension's [isolated world](/docs/extensions/mv3/content_scripts/#isolated_world)). They also have access to a limited number of [Chrome APIs][api-ref]. See [Understanding content scripts][doc-content-scripts] for more details.
+Content Scripts share access to the same DOM tree as the host page but run in a separate JavaScript environment (the extension's [isolated world][cs-isolated]). They also have access to a limited number of [Chrome APIs][api-ref]. See [Understanding content scripts][doc-content-scripts] for more details.
 
 ### Extension HTML pages {: #html-files }
 
@@ -56,7 +56,7 @@ Other extension HTML pages include [Chrome override pages][doc-override], [sandb
 
 ### Other assets {: #assets }
 
-An extension can include many types of resources, such as images and fonts, but only the [extension icons][manifest-icons] are required for extensions hosted in the [Chrome Web Store][cws]. Also, [Chrome Web Store policy](/docs/webstore/program-policies/mv3-requirements/) requires that extensions include all code that the extension executes in the extension's package.
+An extension can include many types of resources, such as images and fonts, but only the [extension icons][manifest-icons] are required for extensions hosted in the [Chrome Web Store][cws]. Also, [Chrome Web Store policy][cws-mv3-req] requires that extensions include all code that the extension executes in the extension's package.
 
 ## How they work together {: #interact }
 
@@ -93,7 +93,9 @@ Now that you have completed the [Getting Started guides][doc-gs] and understand 
 
 [api-ref]: /docs/extensions/reference
 [api-storage]: /docs/extensions/reference/storage
+[cs-isolated]: /docs/extensions/mv3/content_scripts/#isolated_world
 [cws]: https://chrome.google.com/webstore/
+[cws-mv3-req]: /docs/webstore/program-policies/mv3-requirements/
 [doc-content-scripts]: /docs/extensions/mv3/content_scripts
 [doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics
 [doc-dev-guide]: /docs/extensions/mv3/devguide
