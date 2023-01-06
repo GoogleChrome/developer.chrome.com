@@ -111,7 +111,11 @@ async function run() {
       throw new Error(`${error.code}: ${error.message}`);
     }
 
-    const values = json.values;
+    const unavailableServices = ['https://setu-upi-over-nfc.herokuapp.com/how-it-works/', 'https://editor.construct.net/', 'https://www.tiktok.com/'];
+    let values = json.values;
+    values = values.filter(value => {
+      return !unavailableServices.includes(value[1])
+    });
     const data = values.map(row => {
       return {
         timestamp: new Date(row[0]),
@@ -147,6 +151,7 @@ async function run() {
               '';
           })
           .catch(err => {
+            console.log('=== catch =====catch')
             console.warn(err);
             item.meta = {};
             item.title = new URL(item.appURL).hostname;
@@ -155,8 +160,11 @@ async function run() {
       })
     );
 
+    console.log('done Promiss')
     const targetFile = path.join(__dirname, '../data/fugu-showcase.json');
+    console.log('start-writing-file')
     await fs.writeFile(targetFile, JSON.stringify(data, null, 2));
+    console.log('createScreenshots')
     createScreenshots(data);
   } catch (error) {
     console.error(error);
