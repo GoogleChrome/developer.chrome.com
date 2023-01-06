@@ -10,7 +10,7 @@ Just as extensions allow users to customize the Chrome browser, the options page
 
 ## Locating the options page {: #view_page }
 
-Users can access the options page via [direct link][section-link-options] or by right-clicking the extension icon in the toolbar and then selecting options. Additionally, a user can navigate to the Extensions page at `chrome://extensions`, locate the desired extension, click on **Details**, and then select the options link.
+Users can access the options page via [direct link][section-link-options] or by right-clicking the extension icon in the toolbar and then selecting options. Additionally, a user can navigate to the Extensions page at `chrome://extensions`, locate the desired extension, click **Details**, and then select the options link.
 
 {% Columns %}
 
@@ -18,7 +18,7 @@ Users can access the options page via [direct link][section-link-options] or by 
 
 <figure>
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/Mz7GV76tFkzxRlb7Pq6e.png", 
-alt="Options page link in the UI", width="800", height="299" %}
+alt="Options page link in the user interface", width="800", height="299" %}
   <figcaption>
     Link to the Options page.
   </figcaption>

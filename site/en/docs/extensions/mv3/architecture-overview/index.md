@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Architecture overview"
 date: 2012-09-18
-updated: 2022-12-16
+updated: 2023-01-09
 description: A high-level explanation of the architecture of Chrome Extensions.
 subhead: A high-level explanation of the structure of a Chrome Extension.
 anchorRedirects:
@@ -12,7 +12,7 @@ anchorRedirects:
 
 ## Overview {: #overview }
 
-A Chrome extension is composed of different parts. This page describes the structure of an extension, the role each part plays and how they work together. It does not describe the code-level details of how to write an extension.
+A Chrome extension is composed of different parts. This page describes the structure of an extension, the role each part plays, and how they work together. It does not describe the code-level details of how to write an extension.
 
 If you are not familiar with Chrome extension development, we recommend first reading [Extensions 101][doc-ext-101] and [Development Basics][doc-dev-basics].
 
@@ -28,9 +28,9 @@ The manifest is the configuration file of a Chrome extension. It is a required J
 
 The [Manifest keys][doc-manifest] article contains the complete list of default and optional keys. For copy-paste-ready code samples, check out the [Manifest examples][doc-manifest-examples].
 
-### The service worker {: #background_script }
+### The extension service worker {: #background_script }
 
-A service worker is an event-based script that the browser runs in the background. It is often used to process data, coordinate tasks in different parts of an extension, and as an extension's event manager. For example, the service worker can listen for and react to events when the extension is first installed, a new tab is created, a new bookmark is added, the extension toolbar icon is clicked, etc.
+An extension service worker is an event-based script that the browser runs in the background. It is often used to process data, coordinate tasks in different parts of an extension, and as an extension's event manager. For example, the service worker can listen for and react to events when the extension is first installed, a new tab is created, a new bookmark is added, the extension toolbar icon is clicked, etc.
 
 A service worker can access all the [Extension APIs][api-ref], but as a type of [Worker][mdn-worker] it can't use the typical DOM APIs that a document's global Window object provides. It also runs in its own environment, so it cannot directly modify a web page's content.
 
@@ -70,7 +70,7 @@ See [Message passing][doc-messages] for more details.
 
 ### Storing data {: #data }
 
-Chrome provides extensions with a specialized [Storage API][api-storage] available to all extension
+Chrome provides extensions with a specialized [Storage API][api-storage], available to all extension
 components. It includes four separate storage areas for specific use cases and an event listener
 that tracks whenever data is updated. For example, when you save changes in the popup, the extension
 service worker can respond with specified logic.
@@ -80,7 +80,7 @@ See [Storage API][api-storage] for usage and code samples.
 ### Referencing extension resources {: #ref-files }
 
 Extension HTML pages can use the same tags as a regular HTML page to add an extension asset. Content
-Scripts can also access extension resources, such as images and fonts, but require some extra steps
+scripts can also access extension resources, such as images and fonts, but require extra steps
 which are described in [Accessing extension files in Content Scripts][doc-ref].
 
 ## Take the next step {: #next-steps }
@@ -88,7 +88,7 @@ which are described in [Accessing extension files in Content Scripts][doc-ref].
 Now that you have completed the [Getting Started guides][doc-gs] and understand the structure of a Chrome extension, you are ready to dive deeper with the following resources:
 
 - Learn about the [UI elements][doc-ui] you can use in a Chrome extension.
-- Browse through a complete list of [Chrome extension capabilities][doc-dev-guide].
+- Browse a complete list of [Chrome extension capabilities][doc-dev-guide].
 - Discover best practices for building [secure extensions][doc-secure] that respect [user privacy][doc-privacy]. 
 
 [api-ref]: /docs/extensions/reference
