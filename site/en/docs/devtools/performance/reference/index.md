@@ -5,7 +5,7 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2017-05-08
-#updated: YYYY-MM-DD
+updated: 2023-01-09
 description: "A reference on all the ways to record and analyze performance in Chrome DevTools."
 tags:
   - performance
@@ -242,7 +242,7 @@ A `click` event caused a function call in `script_foot_closure.js` on line 53. B
 `Function Call` you see that an anonymous function was called. That anonymous function then called
 `Me()`, which then called `Se()`, and so on.
 
-DevTools assigns scripts random colors. In Figure 16, function calls from one script are colored
+DevTools assigns scripts random colors. In the example above, function calls from one script are colored
 light green. Calls from another script are colored beige. The darker yellow represents scripting
 activity, and the purple event represents rendering activity. These darker yellow and purple events
 are consistent across all recordings.
@@ -297,7 +297,7 @@ The **Call Tree** tab only displays activities during the selected portion of th
 
 In the example above, the top-level of items in the **Activity** column, such as `Event`, `Paint`, and
 `Composite Layers` are root activities. The nesting represents the call stack. For example, in
-Figure 17, `Event` caused `Function Call`, which caused `button.addEventListener`, which caused `b`,
+the example above, `Event` caused `Function Call`, which caused `button.addEventListener`, which caused `b`,
 and so on.
 
 **Self Time** represents the time directly spent in that activity. **Total Time** represents the
@@ -347,7 +347,7 @@ The **Event Log** tab only displays activities during the selected portion of th
 {% Img src="image/admin/ErnVsmtVYqnc9awGTY5n.png", alt="The Event Log tab.", width="800", height="826" %}
 
 The **Start Time** column represents the point at which that activity started, relative to the start
-of the recording. For example, the start time of `1573.0 ms` for the selected item in Figure 19
+of the recording. For example, the start time of `1573.0 ms` for the selected item in the example above
 means that activity started 1573 ms after the recording started.
 
 The **Self Time** column represents the time spent directly in that activity.
@@ -451,16 +451,16 @@ Requests are color-coded as follows:
 - JS: Yellow
 - Images: Green
 
-Click on a request to view more information about it in the **Summary** tab. For example, in Figure
-23 the **Summary** tab is displaying more information about the blue request that's selected in the
+Click on a request to view more information about it in the **Summary** tab. In the example above,
+the **Summary** tab is displaying more information about the blue request that's selected in the
 **Network** section.
 
 A darker-blue square in the top-left of a request means it's a higher-priority request. A
-lighter-blue square means lower-priority. For example, in Figure 23 the blue, selected request is
+lighter-blue square means lower-priority. In the example above, the selected request is
 higher-priority, and the green one above it is lower-priority.
 
-In Figure 24, the request for `www.google.com` is represented by a line on the left, a bar in the
-middle with a dark portion and a light portion, and a line on the right. Figure 25 shows the
+In the example above, the request for `www.google.com` is represented by a line on the left, a bar in the
+middle with a dark portion and a light portion, and a line on the right. The screenshot below shows the
 corresponding representation of the same request in the **Timing** tab of the **Network** panel.
 Here's how these two representations map to each other:
 
