@@ -79,7 +79,7 @@ Structure extension service workers around events the extension depends on. Defi
 events allows the service wroker to lie dormant until those events are fired and prevents the
 extension from missing important triggers.
 
-Listeners must be registered at the start of your extension service worker. Notice that this
+Listeners must be registered at the start of your extension service worker. Notice that in this
 example the listener for creating bookmarks is at the top level of the script.
 
 {% Compare 'better' %}
