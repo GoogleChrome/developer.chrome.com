@@ -99,7 +99,7 @@ chrome.bookmarks.onCreated.addListener(() => {
 ```
 {% endCompare %}
 
-If you put the same listener somewhere else, for example, inside the `installed` listener, 
+If you register the same listener asynchronously (for example, inside a `runtime.onInstalled` listener), 
 the event will be dropped because the nested listener will not be registered when the browser 
 attempts to dispatch it.
 
