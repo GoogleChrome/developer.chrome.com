@@ -449,7 +449,7 @@ To create specific entry and exit transitions, you can use the [`:only-child` ps
 In this case, there's no specific transition for when the side-bar is present in both states, since the default is perfect.
 
 {% Aside %}
-Support for `:only-child` on transition pseudo-elements was added in Chrome 111.
+Support for `:only-child` on transition pseudo-elements was added in Chrome 110.
 {% endAside %}
 
 ## Async DOM updates, and waiting for content
