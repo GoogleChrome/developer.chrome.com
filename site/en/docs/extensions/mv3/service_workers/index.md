@@ -115,7 +115,15 @@ chrome.runtime.onInstalled.addListener(() => {
 ```
 {% endCompare %}
 
-Extensions can remove listeners from their background scripts by calling `removeListener()`. 
+Extensions can remove listeners from their background scripts by calling `removeListener()`. If all
+listeners for an event are removed, Chrome will no longer load the extension's background script for
+that event.
+
+```js
+chrome.runtime.onMessage.addListener((message, sender, reply) => {
+  chrome.runtime.onMessage.removeListener(event);
+});
+```
 
 ## Filter events {: #filters }
 
