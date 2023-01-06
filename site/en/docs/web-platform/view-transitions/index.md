@@ -405,48 +405,48 @@ Look at this example:
   <figcaption>Entering and exiting sidebar. <a href="https://simple-set-demos.glitch.me/enter-exit-sidebar/">Minimal demo</a>. <a href="https://glitch.com/edit/#!/simple-set-demos?path=enter-exit-sidebar%2Fstyles.css%3A1%3A0">Source</a>.</figcaption>
 </figure>
 
-The side-bar is part of the transition:
+The sidebar is part of the transition:
 
 ```css
-.side-bar {
-  view-transition-name: side-bar;
+.sidebar {
+  view-transition-name: sidebar;
   contain: layout;
 }
 ```
 
-But, unlike the header in the previous example, the side-bar doesn't appear on all pages. If both states have the side-bar, the transition pseudo-elements look like this:
+But, unlike the header in the previous example, the sidebar doesn't appear on all pages. If both states have the sidebar, the transition pseudo-elements look like this:
 
 ```diff
 ::view-transition
 ├─ …other transition groups…
-└─ ::view-transition-group(side-bar)
-   └─ ::view-transition-image-pair(side-bar)
-      ├─ ::view-transition-old(side-bar)
-      └─ ::view-transition-new(side-bar)
+└─ ::view-transition-group(sidebar)
+   └─ ::view-transition-image-pair(sidebar)
+      ├─ ::view-transition-old(sidebar)
+      └─ ::view-transition-new(sidebar)
 ```
 
-However, if the side-bar is only on the new page, the `::view-transition-old(side-bar)` pseudo-element won't be there. Since there's no 'old' image for the side-bar, the image-pair will only have a `::view-transition-new(side-bar)`. Similarly, if the side-bar is only on the old page, the image-pair will only have a `::view-transition-old(side-bar)`.
+However, if the sidebar is only on the new page, the `::view-transition-old(sidebar)` pseudo-element won't be there. Since there's no 'old' image for the sidebar, the image-pair will only have a `::view-transition-new(sidebar)`. Similarly, if the sidebar is only on the old page, the image-pair will only have a `::view-transition-old(sidebar)`.
 
-In the demo above, the side-bar transitions differently depending on whether it's entering, exiting, or present in both states. It enters by sliding from the right and fading in, it exits by sliding to the right and fading out, and it stays in place when it's present in both states.
+In the demo above, the sidebar transitions differently depending on whether it's entering, exiting, or present in both states. It enters by sliding from the right and fading in, it exits by sliding to the right and fading out, and it stays in place when it's present in both states.
 
 To create specific entry and exit transitions, you can use the [`:only-child` pseudo-class](https://developer.mozilla.org/docs/Web/CSS/:only-child) to target the old/new pseudo-element when it's the only child in the image-pair:
 
 <!-- prettier-ignore -->
 ```css
 /* Entry transition */
-::view-transition-new(side-bar):only-child {
+::view-transition-new(sidebar):only-child {
   animation: 300ms cubic-bezier(0, 0, 0.2, 1) both fade-in,
     300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
 }
 
 /* Exit transition */
-::view-transition-old(side-bar):only-child {
+::view-transition-old(sidebar):only-child {
   animation: 150ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
     300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-right;
 }
 ```
 
-In this case, there's no specific transition for when the side-bar is present in both states, since the default is perfect.
+In this case, there's no specific transition for when the sidebar is present in both states, since the default is perfect.
 
 {% Aside %}
 Support for `:only-child` on transition pseudo-elements was added in Chrome 110.
