@@ -5,7 +5,7 @@ authors:
   - sofiayem
   - jecelynyeen
 date: 2022-06-21
-#updated: YYYY-MM-DD
+updated: 2023-01-09
 description: "A comprehensive reference of Chrome DevTools Recorder panel features."
 tags:
   - test
