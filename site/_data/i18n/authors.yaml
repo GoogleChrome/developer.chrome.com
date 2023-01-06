@@ -1282,3 +1282,9 @@ mstensho:
     en: Morten Stenshorne
   description:
     en: Morten is a layout engineer on the Blink team at Google.
+example:
+  title:
+    en: Example author
+  description:
+    en: Used for testing purposes, no real author.
+  
