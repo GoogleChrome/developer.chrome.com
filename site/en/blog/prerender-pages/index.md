@@ -7,7 +7,7 @@ description: |
 authors:
  - tunetheweb
 date: 2022-12-02
-#updated: 2022-12-02
+updated: 2023-01-06
 hero: image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/eohdiqaZlxnWen7TT66M.jpg
 alt: City road at dusk with a long exposure of car lights giving impression of speed
 tags:
@@ -226,7 +226,7 @@ As Speculation Rules use a `<script>` element, even though they only contain JSO
 
 Prerender is usually a positive experience for users as it allows fast page rendering—often instant. This benefits both the user, and the site owner, since prerendered pages allow a better user experience that may be difficult to achieve otherwise.
 
-However, there may be instances when you do not wish prerendering of pages to happen, for example when pages change state—either based on the initial request, or based on JavaScript executing on the page.
+However, there may be instances when you [do not wish prerendering of pages to happen](https://docs.google.com/document/d/1_9XkDUKMGf2f3tDt1gvQQjfliNLpGyFf36BB1-NUZ98/edit), for example when pages change state—either based on the initial request, or based on JavaScript executing on the page.
 
 ### Enabling and disabling prerender in Chrome
 
