@@ -81,8 +81,8 @@ events allows the service wroker to lie dormant until those events are fired and
 extension from missing important triggers.
 
 Make sure your event handlers are registered in global scope by not nesting them in functions.
-This ensures that they are registered synchronously on initial script execution. This is needed
-for Chrome to dispatch events to the listener right after the service worker starts up.
+This ensures that they are registered synchronously on initial script execution and that
+Chrome dispatches events to the listener right after the service worker starts up.
 Notice that in this example the listener for creating bookmarks is at the top level of the script.
 
 {% Compare 'better' %}
