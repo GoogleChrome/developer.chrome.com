@@ -50,7 +50,7 @@ An extension can have different HTML pages depending on the design. All extensio
 : Many extensions use a popup to provide functionality, such as displaying a list of tabs, or additional information regarding the current tab. Users can easily find it by clicking on the extension toolbar icon. When the user navigates away it will automatically close.
 
 [The options page][doc-options]
-: The options page provides a way for users to customize an extension; such as choosing which sites the extension will run on. Users can access the options page in several ways as described in [Finding the options page][doc-options-view].
+: The options page provides a way for users to customize an extension, such as choosing which sites the extension will run on. Users can access the options page in several ways as described in [Finding the options page][doc-options-view].
 
 Other extension HTML pages include [Chrome override pages][doc-override], [sandbox pages][doc-sandbox] or any custom page included for a specific purpose like onboarding the user.
 
