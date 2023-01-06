@@ -17,7 +17,6 @@ Examples include:
 - The extension is first installed or updated to a new version.
 - An extension event is dispatched.
 - A content script or other extension [sends a message.][1]
-- Another view in the extension, such as a popup, calls [`runtime.getBackgroundPage()`][2].
 
 Once it has been loaded, an extension service worker generally runs as long as it is
 performing an action such as calling a Chrome API or issuing a network request.
