@@ -83,7 +83,7 @@ Listeners must be registered at the start of your extension service worker. Noti
 example the listener for creating bookmarks is at the top level of the script.
 
 {% Compare 'better' %}
-```js/8-10
+```js/9-11
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
     "id": "sampleContextMenu",
