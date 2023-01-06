@@ -1,5 +1,4 @@
 ---
-noindex: true
 title: Blog landing - given a collection this page generates a paginated list of blog cards.
 description:
 permalink: '{{locale}}/docs/handbook/content-types/blog-landing/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html'

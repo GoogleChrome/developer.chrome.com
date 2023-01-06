@@ -1,5 +1,4 @@
 ---
-noindex: true
 title: Content types
 layout: 'layouts/doc-post.njk'
 date: 2022-12-13
