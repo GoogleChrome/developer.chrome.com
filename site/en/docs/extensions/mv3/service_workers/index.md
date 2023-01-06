@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Manage events with service workers"
 date: 2012-09-17
-updated: 2023-01-05
+updated: 2023-01-06
 description: How to respond to browser triggers (events) from a Chrome Extension service worker.
 ---
 
@@ -107,7 +107,7 @@ attempts to dispatch it.
 ```js
 chrome.runtime.onInstalled.addListener(() => {
   // ERROR! Events must be registered synchronously from the start of
-  // the page.
+  // the service worker.
   chrome.bookmarks.onCreated.addListener(() => {
     // do something
   });
