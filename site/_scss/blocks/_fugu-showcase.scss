@@ -1,6 +1,6 @@
 .fugu-showcase {
   .hero-card {
-    background-color: #E2F7FA;
+    background-color: #e2f7fa;
   }
 
   .pills-container {
@@ -8,12 +8,12 @@
   }
 
   .tag-pill {
-    font-size: 0.875rem;
     border-radius: 18px;
+    color: get-color('blue-700');
+    font-size: 0.875rem;
     font-weight: 500;
     padding: 5px 38px 5px 15px;
     position: relative;
-    color: get-color('blue-700');
 
     button {  
       background-color: transparent;
@@ -24,9 +24,9 @@
     }
 
     .icon {
+      fill: get-color('blue-700');
       height: 18px;
       width: 18px;
-      fill: get-color('blue-700');
     }
   }
 
@@ -40,7 +40,7 @@
   grid-template-columns: repeat(auto-fill, minmax(20rem, 28rem));
   justify-content: space-between;
 
-  .fugu_card {
+  .fugu-card {
     max-width: 100%;
     min-width: 360px;
 
@@ -50,9 +50,9 @@
     }
 
     .tag-pill {
+      color: var(--color-secondary-text);
       font-size: 0.75rem;
       padding: 2px 12px;
-      color: var(--color-secondary-text);
     }
 
     img {
@@ -61,21 +61,21 @@
   }
 }
 
-.fugu_card .card-intro {
+.fugu-card .card-intro {
   border-bottom: 1px solid var(--color-hairline);
   width: 100%;
 
   a {
     align-items: center;
-    margin-right: 30px;
     font-size: 0.875rem;
+    margin-right: 30px;
     text-decoration: none;
+  }
 
-    svg {
-      margin-right: 8px;
-      width: 24px;
-      height: 24px;
-    }
+  svg {
+    height: 24px;
+    margin-right: 8px;
+    width: 24px;
   }
 }
 
@@ -97,9 +97,9 @@
   }
 
   .search-box__input {
-    width: 400px;
-    padding-left: 55px;
     color: var(--color-secondary-text);
+    padding-left: 55px;
+    width: 400px;
   }
 
   .search-api-container {
@@ -108,8 +108,8 @@
     }
 
     .label {
-      font-weight: 500;
       color: get-color('grey-700');
+      font-weight: 500;
     }
 
     span {

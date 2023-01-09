@@ -75,7 +75,7 @@ alt: Blowfish swarm swimming in the ocean.
           {% endfor %}
 
           {% set apis = apis | trim | lower | replace("(", "") | replace(")", "") %}
-          <article id="{{ item.title | slug }}" data-name="{{ (item.title | lower) + " " + (searchApis | lower) + " " + (item.appURL | lower) }}" data-used-apis="{{ apis }}" class="blog-card fugu_card rounded-lg pad-300 md:pad-400 width-full">
+          <article id="{{ item.title | slug }}" data-name="{{ (item.title | lower) + " " + (searchApis | lower) + " " + (item.appURL | lower) }}" data-used-apis="{{ apis }}" class="blog-card fugu-card rounded-lg pad-300 md:pad-400 width-full">
             <div class="thumbnail">
               <a href="{{ item.appURL }}" rel="noopener" target="_blank">
                 {% Img
