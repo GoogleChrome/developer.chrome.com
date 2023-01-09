@@ -4,7 +4,7 @@ subhead: >
   The Project Fugu API Showcase is a collection of apps that make use of APIs that were conceived in the context of Project Fugu.
 description: >
   The Project Fugu API Showcase is a collection of apps that make use of APIs that were conceived in the context of Project Fugu.
-hero: image/SZHNhsfjU9RbCestTGZU6N7JEWs1/JqwMsWVrfQmwEaEBUZcL.png
+hero: image/SZHNhsfjU9RbCestTGZU6N7JEWs1/qLEjuD3WSdADRSY0sFUc.png
 alt: Blowfish swarm swimming in the ocean.
 ---
 
@@ -12,13 +12,9 @@ alt: Blowfish swarm swimming in the ocean.
 {% from 'macros/icon.njk' import icon with context %}
 {% from 'macros/cards/hero-card.njk' import heroCard with context %}
 
-{% block css %}
-{% InlineCss '/css/styleguide-main.css' %}
-{% endblock %}
-
 {% block content %}
   <div class="fugu-showcase">
-  <div class="width-full pad-400">
+  <div class="width-full pad-400 fugu-showcase__hero">
     {% if hero %}
       {{ heroCard(
         "Project Fugu API Showcase",
@@ -34,14 +30,14 @@ alt: Blowfish swarm swimming in the ocean.
 
   <div class="display-flex justify-content-center width-full">
     <div class="width-full fugu-container pad-left-400 pad-right-400">
-      <form class="search-apps-apis pad-top-300">
-        <div class="display-flex align-items-center">
+      <form class="search-apps-apis lg:pad-top-300 pad-top-200">
+        <div class="md:display-flex align-items-center">
           <p class="search-app-container">
             {{ icon('search', {hidden: false}) }}
             <input class="search-apps search-box__input" list="available-apps" placeholder="Search apps and APIs" aria-label="Search apps and APIs" />
           </p>
           <p class="search-api-container">
-            <label class="label" for="example-enhanced-select">FILTER BY: </label>
+            <label class="label" for="example-enhanced-select">{{ 'i18n.filter_sheet.filter_by' | i18n(locale) }}</label>
             <enhanced-select class="search-apis" label="API" fixedLabel>
               <select name="example-enhanced-select">
                 {% for availableAPI in fuguShowcase.availableApis %}
@@ -64,7 +60,7 @@ alt: Blowfish swarm swimming in the ocean.
         {% endfor %}
       </div>
 
-      <div class="project-grid fugu-container pad-top-400">
+      <div class="project-grid fugu-container lg:pad-top-400 pad-top-200">
         {% for item in fuguShowcase.fuguItems %}
           {% set apis = "" %}
           {% set searchApis = "" %}
@@ -93,13 +89,13 @@ alt: Blowfish swarm swimming in the ocean.
                 {% if item.isElectronApp %}
                   <a class="display-flex align-center color-primary" href="{{ item.appURL }}" rel="noopener" target="_blank">
                     {{ icon('external-link') }}
-                    Launch app
+                    {{ 'i18n.common.launch_app' | i18n(locale) }}
                   </a>
                 {% endif %}
                 {% if item.sourceURL %}
                   <a class="display-flex align-center color-primary" href="{{ item.sourceURL }}" rel="noopener" target="_blank">
                     {{ icon('code') }}
-                    Source code
+                    {{ 'i18n.common.source_code' | i18n(locale) }}
                   </a>
                 {% endif %}
               </div>
@@ -126,10 +122,6 @@ alt: Blowfish swarm swimming in the ocean.
     </article>
   </div>
   </div>
-
-  {% block scripts %}
-    <script type="module" src="{{ helpers.hashForProd('/js/styleguide.js') }}"></script>
-  {% endblock %}
 
   <script>
     const articles = document.querySelectorAll('article[data-used-apis]');

@@ -197,6 +197,12 @@ website:
 featured:
   en: Featured
 
+launch_app:
+  en: 'Launch app'
+
+source_code:
+  en: 'Source code'
+
 improve_article:
   en: 'Improve article'
   zh: '改进文章'

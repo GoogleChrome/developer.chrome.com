@@ -1,8 +1,7 @@
-.fugu-showcase {
-  .hero-card {
-    background-color: #e2f7fa;
-  }
+/* stylelint-disable max-nesting-depth*/
+/* stylelint-disable order/order*/
 
+.fugu-showcase {
   .pills-container {
     gap: 12px;
   }
@@ -36,13 +35,81 @@
   }
 }
 
+.fugu-showcase__hero {
+  .hero-card__inner {
+    align-items: center;
+    max-width: 100%;
+    padding: 40px 40px 20px;
+    text-align: center;
+  }
+
+  .hero-card {
+    background-color: #e2f7fa;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  img {
+    display: none;
+  }
+
+  @include media-query('md') {
+    .hero-card__inner {
+      padding: 80px 80px 70px;
+      text-align: center;
+    }
+
+    .hero-card__inner {
+      display: block;
+
+      > div:first-child {
+        width: 100%;
+      }
+    }
+  }
+
+  @include media-query('lg') {
+    .hero-card__inner {
+      display: grid;
+      overflow: hidden;
+      padding: 20px 60px;
+      text-align: left;
+
+      > div:first-child {
+        width: 420px;
+      }
+    }
+    
+    img {
+      display: block;
+      min-width: 780px;
+    }
+  }
+}
+
 .project-grid {
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 28rem));
-  justify-content: space-between;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  justify-content: space-evenly;
+  
+  @include media-query('md') {
+    gap: 1rem;
+    grid-template-columns: 2fr 2fr;
+  }
+  
+  @include media-query('lg') {
+    grid-template-columns: repeat(auto-fill, 28rem);
+  }
 
   .fugu-card {
-    max-width: 100%;
-    min-width: 360px;
+    margin: 0 auto;
+    min-width: 300px;
+    width: 100%;
+
+    @include media-query('lg') {
+      max-width: 100%;
+      min-width: 360px;
+    }
 
     h3 {
       font-size: 20px;
@@ -92,14 +159,23 @@
   }
 
   .search-app-container {
-    margin-right: 40px;
+    margin: 0 0 10px;
     position: relative;
+
+    @include media-query('md') {
+      margin: 0 40px 0 0;
+    }
   }
 
   .search-box__input {
     color: var(--color-secondary-text);
+    display: block;
     padding-left: 55px;
-    width: 400px;
+    width: 325px;
+
+    @include media-query('lg') {
+      width: 400px;
+    }
   }
 
   .search-api-container {
