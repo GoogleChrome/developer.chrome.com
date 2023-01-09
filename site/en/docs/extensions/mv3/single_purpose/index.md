@@ -199,7 +199,7 @@ button, however, cannot introduce any additional functionality or content. If an
 purpose is a narrow subject matter or focus area, then the functionality and content of the browser
 action button must likewise fall within that narrow purpose.
 
-## 19) Why does Chrome display  a confirmation prompt for some extensions?
+## 19) Why does Chrome display a confirmation prompt for some extensions?
 
 Chrome makes it easy for users to retain agency over their preferred search settings. Modifying
 search settings should be a purpose on its own, and when bundled with other functionalities, users
