@@ -17,6 +17,7 @@ alt: Blowfish swarm swimming in the ocean.
 {% endblock %}
 
 {% block content %}
+  <div class="fugu-showcase">
   <div class="width-full pad-400">
     {% if hero %}
       {{ heroCard(
@@ -33,14 +34,14 @@ alt: Blowfish swarm swimming in the ocean.
 
   <div class="display-flex justify-content-center width-full">
     <div class="width-full fugu-container pad-left-400 pad-right-400">
-      <form class="search-apps-apis pad-top-400">
+      <form class="search-apps-apis pad-top-300">
         <div class="display-flex align-items-center">
-          <p class="search-input">
+          <p class="search-app-container">
             {{ icon('search', {hidden: false}) }}
             <input class="search-apps search-box__input" list="available-apps" placeholder="Search apps and APIs" aria-label="Search apps and APIs" />
           </p>
-          <p>
-            <label for="example-enhanced-select">FILTER BY: </label>
+          <p class="search-api-container">
+            <label class="label" for="example-enhanced-select">FILTER BY: </label>
             <enhanced-select class="search-apis" label="API" fixedLabel>
               <select name="example-enhanced-select">
                 {% for availableAPI in fuguShowcase.availableApis %}
@@ -52,9 +53,9 @@ alt: Blowfish swarm swimming in the ocean.
         </div>
       </form>
 
-      <div class="pills-container pad-top-400"> 
+      <div class="pills-container display-flex justify-content-start pad-top-400"> 
         {% for availableAPI in fuguShowcase.availableApis %}
-          <span class="tag-pill" hidden>
+          <span class="tag-pill hairline" hidden>
             {{ availableAPI }}
             <button class="button" aria-label="{{ 'i18n.common.close' | i18n(locale) }}">
               {{ icon('close') }}
@@ -63,22 +64,19 @@ alt: Blowfish swarm swimming in the ocean.
         {% endfor %}
       </div>
 
-      <div class="project-grid pad-top-400">
+      <div class="project-grid fugu-container pad-top-400">
         {% for item in fuguShowcase.fuguItems %}
           {% set apis = "" %}
-          {% for api in item.usedAPIs %}
-            {% set name = api.name | replace(" ", '-') %}
-            {% set apis = apis + " " + name %}
-          {% endfor %}
-            
           {% set searchApis = "" %}
+
           {% for api in item.usedAPIs %}
+            {% set apis = apis + " " + api.name | replace(" ", '-') %}
             {% set searchApis = searchApis + " " + api.name %}
           {% endfor %}
 
           {% set apis = apis | trim | lower | replace("(", "") | replace(")", "") %}
-          <article id="{{ item.screenshot | replace(".webp", "") }}" data-name="{{ (item.title | lower) + " " + (searchApis | lower) + " " + (item.appURL | lower) }}" data-used-apis="{{ apis }}" class="blog-card rounded-lg pad-300 md:pad-400 width-full">
-            <div class="gap-top-400 blog-card__thumbnail">
+          <article id="{{ item.title | slug }}" data-name="{{ (item.title | lower) + " " + (searchApis | lower) + " " + (item.appURL | lower) }}" data-used-apis="{{ apis }}" class="blog-card fugu_card rounded-lg pad-300 md:pad-400 width-full">
+            <div class="thumbnail">
               <a href="{{ item.appURL }}" rel="noopener" target="_blank">
                 {% Img
                   src="image/SZHNhsfjU9RbCestTGZU6N7JEWs1/rihrk2y6yg8hLvmxipjz.png",
@@ -89,27 +87,35 @@ alt: Blowfish swarm swimming in the ocean.
                 %}
               </a>
             </div>
-            <div>
-              <a class="material-button button-filled button-round display-inline-flex color-bg bg-primary gap-top-400" href="{{ item.appURL }}" rel="noopener" target="_blank">Launch app</a>
-              {% if item.isElectronApp %}
-                (Electron.js)
-              {% endif %}
-              {% if item.sourceURL %}
-                <a class="material-button button-filled button-round display-inline-flex color-bg bg-primary gap-top-400" href="{{ item.sourceURL }}" rel="noopener" target="_blank">Source code</a>
-              {% endif %}
-            </div>
-            <div class="gap-top-400">            
-              <h2 class="type--h5">
+
+            {% if item.isElectronApp or item.sourceURL %}
+              <div class="card-intro display-inline-flex pad-top-300 pad-bottom-300">
+                {% if item.isElectronApp %}
+                  <a class="display-flex align-center color-primary" href="{{ item.appURL }}" rel="noopener" target="_blank">
+                    {{ icon('external-link') }}
+                    Launch app
+                  </a>
+                {% endif %}
+                {% if item.sourceURL %}
+                  <a class="display-flex align-center color-primary" href="{{ item.sourceURL }}" rel="noopener" target="_blank">
+                    {{ icon('code') }}
+                    Source code
+                  </a>
+                {% endif %}
+              </div>
+            {% endif %}
+
+            <div class="gap-top-300">            
+              <h3>
                 <a class="surface display-inline-flex color-text" href="{{ item.appURL }}">
                   {{ item.title }}
                 </a>
-              </h2>
+              </h3>
               <p class="type--caption gap-top-200">{{ item.description }}</p>
-              <h3 class="type--h6 gap-top-300">Used APIs:</h3>
               <div class="cluster flow-space-200 gap-top-300">
                 <div>
                   {% for api in item.usedAPIs %}
-                    <a class="tag-pill surface decoration-none hairline color-secondary-text type--label weight-regular rounded-lg" href="{{ api.url }}" rel="noopener" target="_blank">{{ api.name }}</a>
+                    <a class="tag-pill surface hairline color-secondary-text" href="{{ api.url }}" rel="noopener" target="_blank">{{ api.name }}</a>
                   {% endfor %}
                 </div>
               </div>
@@ -118,6 +124,7 @@ alt: Blowfish swarm swimming in the ocean.
         {% endfor %}
       </div>
     </article>
+  </div>
   </div>
 
   {% block scripts %}
