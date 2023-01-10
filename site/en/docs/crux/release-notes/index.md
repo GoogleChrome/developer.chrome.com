@@ -45,7 +45,7 @@ In the list below, we've curated some release notes for each monthly dataset. Su
 
 ## 202212
 
-[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/0TDE_VCWTE)
+[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/T0TDE_VCWTE)
 
 Publication date
  : January 10, 2023
