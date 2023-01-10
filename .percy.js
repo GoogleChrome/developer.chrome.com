@@ -4,6 +4,7 @@ const SNAPSHOTS = [
   '/en/docs/handbook/content-types/docs-landing/index.html',
   '/en/docs/handbook/content-types/doc-post/index.html',
   '/en/docs/handbook/content-types/landing/index.html',
+  '/en/meet-the-team/index.html',
 ];
 
 module.exports = {
@@ -33,6 +34,12 @@ module.exports = {
     exclude: [
       // Prevent percy to snapshot all index.html files in ./dist dir
       ({ name }) => !SNAPSHOTS.includes(name)
+    ],
+    options: [
+      {
+        include: '/en/meet-the-team/index.html',
+        waitForTimeout: 5000
+      }
     ]
   }
 }
