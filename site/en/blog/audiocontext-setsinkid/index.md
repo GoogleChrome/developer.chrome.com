@@ -12,7 +12,7 @@ tags:
   - chrome-110
 ---
 
-Until now, setting the destination audio output device was only possible for `&lt;video&gt;` and `&lt;audio&gt;` with `HTMLMediaElement.setSinkId()`. In [Web Audio], AudioContext used the default device, leaving the user to change the system audio output device manually.
+Until now, setting the destination audio output device was only possible for `<video>` and `<audio>` with `HTMLMediaElement.setSinkId()`. In [Web Audio], AudioContext used the default device, leaving the user to change the system audio output device manually.
  
 From Chrome 110, you can use `AudioContext.setSinkId()` to programmatically direct the audio output in Web Audio to any permitted device. 
 
