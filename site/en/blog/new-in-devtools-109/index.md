@@ -73,7 +73,7 @@ Chromium issue: [1167965](https://crbug.com/1167965), [1172535](https://crbug.co
 
 ## Improved JavaScript debugging {: #debugging }
 
-These are some JavScript debugging improving in this release:
+These are some JavaScript debugging improvements in this release:
 
 - `new.target` is a meta-property that lets you detect whether a function or constructor was called using the new operator. You can now log `new.target` in the **Console** to check its value during debugging. Previously, it would return errors when you entered `new.target`.
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hKOEn03BZN2IUmWJ1Hho.png", alt="Show before and after comparison of new.target evaluation debugging.", width="800", height="499" %}
