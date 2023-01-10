@@ -26,7 +26,7 @@ For a non-technical introduction, see the [Topics overview on privacysandbox.com
 
 **January 9, 2023**
 
-Topics testing in Chrome is still at an early stage—focused on validating the technical stability
+Topics testing in Chrome is still at an early stage, focused on validating the technical stability
 and core functionality of the API. However, we are encouraged to see some early testers exploring
 aspects of the business logic behind Topics and sharing their insights publicly. For example,
 [Xandr](https://medium.com/xandr-tech/on-the-topic-of-topics-298f95e39269) looked at how the Topics
