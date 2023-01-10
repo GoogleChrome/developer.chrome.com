@@ -1,5 +1,5 @@
 ---
-title: "Privacy Sandbox para a Web: Expandindo testes em 2023"
+title: "Privacy Sandbox para a web: Expandindo testes em 2023"
 description: >
   Testar leva tempo. E testar bem pode levar muito tempo. Parecido com alguém aprendendo a cozinhar uma receita nova, um hobby novo ou apenas estudando para uma prova, sucesso está frequentemente relacionado com preparação e avaliações rigorosas.
 layout: 'layouts/blog-post.njk'
