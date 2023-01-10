@@ -23,6 +23,7 @@ const devConfig = {
     'site/_js/100.js',
     'site/_js/events.js',
     'site/_js/styleguide.js',
+    'site/_js/fugu-showcase.js',
   ],
   output: {
     dir: 'dist/js',
@@ -54,6 +55,7 @@ const productionConfig = {
     'site/_js/100.js',
     'site/_js/events.js',
     'site/_js/styleguide.js',
+    'site/_js/fugu-showcase.js',
   ],
   output: {
     dir: 'dist/js',
