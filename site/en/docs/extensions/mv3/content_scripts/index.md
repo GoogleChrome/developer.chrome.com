@@ -13,15 +13,7 @@ changes to them, and pass information to their parent extension.
 
 ## Understand content script capabilities {: #capabilities }
 
-Content scripts can access Chrome APIs used by their parent extension by exchanging [messages][2]
-with the extension. They can also access the URL of an extension's file with
-`chrome.runtime.getURL()` and use the result the same as other URLs.
-
-```js/1
-// Code for displaying EXTENSION_DIR/images/myimage.png:
-var imgURL = chrome.runtime.getURL("images/myimage.png");
-document.getElementById("someImage").src = imgURL;
-```
+Content scripts can access Chrome APIs used by their parent extension by exchanging [messages][2]. They can [access extension files][section-files] after declaring them as web-accessible resources.  
 
 Additionally, content scripts can access the following chrome APIs directly:
 
@@ -664,6 +656,49 @@ inspected by the content script and then posted to the extension process. In thi
 establishes a line of communication to the extension process. The reverse is possible through
 similar means.
 
+## Accessing extension files {: #files }
+ 
+To access an extension file from a content script, you can call
+[`chrome.runtime.getURL()`][api-get-url] to get the _absolute URL_ of your extension asset as shown in the following example (`content.js`):
+ 
+```js
+let image = chrome.runtime.getURL("images/my_image.png")
+```
+ 
+To use fonts or images in a CSS file, you can use [`@@extension_id`][i18n-extid] to construct a URL as shown in the following example (`content.css`):
+ 
+```css
+body {
+ background-image:url('chrome-extension://__MSG_@@extension_id__/background.png');
+}
+ 
+@font-face {
+ font-family: 'Stint Ultra Expanded';
+ font-style: normal;
+ font-weight: 400;
+ src: url('chrome-extension://__MSG_@@extension_id__/fonts/Stint Ultra Expanded.woff') format('woff');
+}
+```
+ 
+All assets must be declared as [Web Accessible Resources][manifest-war] in the `manifest.json` file:
+ 
+```json
+{
+ ...
+ "web_accessible_resources": [
+   {
+     "resources": [ "images/*.png" ],
+     "matches": [ "https://example.com/*" ]
+   },
+   {
+     "resources": [ "fonts/*.woff" ],
+     "matches": [ "https://example.com/*" ]
+   }
+ ],
+ ...
+}
+```
+
 ## Stay secure {: #security }
 
 While isolated worlds provide a layer of protection, using content scripts can create
@@ -743,3 +778,7 @@ window.setTimeout(() => animate(elmt_id), 200);
 [33]: /docs/extensions/reference/permissions
 
 [ref-error]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError
+[api-get-url]: /docs/extensions/reference/runtime#method-getURL
+[manifest-war]: /docs/extensions/mv3/manifest/web_accessible_resources/
+[section-files]: #files
+[i18n-extid]: /docs/extensions/reference/i18n/#overview-predefined
