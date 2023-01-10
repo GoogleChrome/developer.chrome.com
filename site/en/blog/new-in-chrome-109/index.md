@@ -2,7 +2,7 @@
 title: New in Chrome 109
 description: >
   Chrome 109 is rolling out now. The Origin Private File System API is now available for Android, there is a set of new properties in CSS, you can easily add math notations in your HTML with the support for MathML core, and there’s plenty more.
-
+hero: 'image/SeARmcA1EicLXagFnVOe0ou9cqK2/BTHxmVVBDdz82KtUiJ8A.png'
 layout: 'layouts/blog-post.njk'
 date: 2023-01-10
 authors:
