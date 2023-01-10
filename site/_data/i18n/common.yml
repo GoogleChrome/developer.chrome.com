@@ -203,6 +203,9 @@ launch_app:
 source_code:
   en: 'Source code'
 
+load_more:
+  en: 'Load more'
+
 improve_article:
   en: 'Improve article'
   zh: '改进文章'

@@ -61,6 +61,8 @@ alt: Blowfish swarm swimming in the ocean.
       </div>
 
       <div class="project-grid fugu-container lg:pad-top-400 pad-top-200">
+
+        {% set show = 9 %}
         {% for item in fuguItems %}
           {% set apis = "" %}
           {% set searchApis = "" %}
@@ -119,7 +121,27 @@ alt: Blowfish swarm swimming in the ocean.
           </article>
         {% endfor %}
       </div>
+
+      {% if fuguItems.length > show %}
+        <button id="load-more-showcase"
+          class="load-more__button justify-content-center gap-top-600 type--small display-inline-flex"
+          aria-controls="more-showcase"
+        >
+          {{ 'i18n.common.load_more' | i18n(locale) }}
+          {{ icon('arrow-forward', {hidden: true}) }}
+        </button>
+      {% endif %}
+
+      <p id="loading-error" class="color-red-medium gap-top-100 display-none">
+        {{ 'i18n.events.load_more_error' | i18n(locale) }}
+        <a href="https://github.com/GoogleChrome/developer.chrome.com/issues/new?labels=bug&template=bug_report.md"
+          class="color-red-medium">{{ 'i18n.events.load_more_error_link' | i18n(locale) }}</a>.
+      </p>
     </article>
   </div>
   </div>
+{% endblock %}
+
+{% block scripts %}
+  <script type="module" src="{{ helpers.hashForProd('/js/fugu-showcase.js') }}"></script>
 {% endblock %}

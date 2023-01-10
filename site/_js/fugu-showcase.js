@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 
+import './web-components/enhanced-select';
+
 let filterValue = [];
 
 /**

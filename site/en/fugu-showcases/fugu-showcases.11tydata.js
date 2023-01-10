@@ -18,7 +18,7 @@ const fs = require('fs');
 const path = require('path');
 
 module.exports = async () => {
-  const fuguFile = path.join(__dirname, '/fuguShowcase.json');
+  const fuguFile = path.join(__dirname, '../../_data/fuguShowcase.json');
   const fuguItems = /** @type {FuguProject[]} */ (
     JSON.parse(fs.readFileSync(fuguFile, 'utf-8'))
   );

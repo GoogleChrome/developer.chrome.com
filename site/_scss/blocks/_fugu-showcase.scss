@@ -1,6 +1,13 @@
 /* stylelint-disable max-nesting-depth*/
 /* stylelint-disable order/order*/
 
+.fugu-container {
+  .load-more__button {
+    margin-left: 80px;
+    padding: 10px 20px;
+  }
+}
+
 .fugu-showcase {
   .pills-container {
     gap: 12px;
