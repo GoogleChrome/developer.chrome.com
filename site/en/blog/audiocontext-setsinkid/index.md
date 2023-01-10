@@ -48,7 +48,7 @@ const deviceId = audioOutputs[0].deviceId;
 await audioContext.setSinkId(deviceId);
 ```
 
-Note that you can also pass the `deviceId` as a `sinkId` parameter when creating an AudioContext.
+Note that you can also pass the `deviceId` as a `sinkId` parameter when creating an `AudioContext`.
 
 ```js
 const audioContext = new AudioContext({ sinkId: deviceId });
