@@ -18,9 +18,18 @@ If you are not familiar with Chrome extension development, we recommend first re
 
 ## The structure of a Chrome extension {: #arch }
 
+The following sections describe the files that compose a Chrome extension. Here's an example of a Chrome Extension file structure:
+
+<figure>
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/Txq5CxeXjQz7i4wmP8zO.png", alt="An example of a Chrome Extension directory structure", width="400", height="1189" %}
+  <figcaption>
+  An example of a Chrome extension file structure
+  </figcaption>
+</figure>
+
 ### The manifest {: #manifest }
 
-The manifest is the configuration file of a Chrome extension. It is a required JSON file that must be located at the [root of the project][dev-basics-structure]. It provides the browser with a blueprint of the extension, with important information such as:
+The manifest (`manifest.json`) is the configuration file of a Chrome extension. It is a required JSON file that must be located at the [root of the project][dev-basics-structure]. It provides the browser with a blueprint of the extension, with important information such as:
 
 - The name of the extension, a description of what it does, the current version number, and what icons to use.
 - The [Chrome API][api-ref] keys and [permissions][doc-perms] that the extension needs.
@@ -30,7 +39,7 @@ The [Manifest keys][doc-manifest] article contains the complete list of default 
 
 ### The extension service worker {: #background_script }
 
-An extension service worker is an event-based script that the browser runs in the background. It is often used to process data, coordinate tasks in different parts of an extension, and as an extension's event manager. For example, the service worker can listen for and react to events when the extension is first installed, a new tab is created, a new bookmark is added, the extension toolbar icon is clicked, etc.
+An extension service worker (`service-worker.js`) is an event-based script that the browser runs in the background. It is often used to process data, coordinate tasks in different parts of an extension, and as an extension's event manager. For example, the service worker can listen for and react to events when the extension is first installed, a new tab is created, a new bookmark is added, the extension toolbar icon is clicked, etc.
 
 A service worker can access all the [Extension APIs][api-ref], but as a type of [Worker][mdn-worker] it can't use the DOM APIs that a document's global Window object provides. It also runs in its own environment, so it cannot directly modify a web page's content.
 
@@ -38,7 +47,11 @@ See [Handling events in the extension service worker][doc-sw] for more details.
 
 ### Content scripts {: #content-scripts }
 
-Extensions use content scripts to inject code into host pages. They allow the extension to interact with and modify pages in the browser. For example, they can insert a new element on the page, change the style of a website, modify the [DOM][mdn-dom] elements, etc. 
+Extensions use content scripts (`content-script.js`) to inject code into host pages. They allow the extension to interact with and modify pages in the browser. For example, they can insert a new element on the page, change the style of a website, modify the [DOM][mdn-dom] elements, etc. 
+
+{% Aside 'key-term' %}
+*Host pages* are the websites that a content script interacts with. An extension can choose which websites a content script should run on by specifying [match patterns][doc-match].
+{% endAside %}
 
 Content Scripts share access to the same DOM tree as the host page but run in a separate JavaScript environment (the extension's [isolated world][cs-isolated]). They also have access to a limited number of [Chrome APIs][api-ref]. See [Understanding content scripts][doc-content-scripts] for more details.
 
@@ -47,10 +60,10 @@ Content Scripts share access to the same DOM tree as the host page but run in a 
 An extension can have different HTML pages depending on the design. All extension HTML files can use the [Chrome APIs][api-ref], but cannot include inline Javascript; they must point to a JavaScript file. The two most common HTML pages are:
 
 [The popup][doc-popup]
-: Many extensions use a popup to provide functionality, such as displaying a list of tabs, or additional information regarding the current tab. Users can easily find it by clicking on the extension toolbar icon. When the user navigates away it will automatically close.
+: Many extensions use a popup (`popup.html`) to provide functionality, such as displaying a list of tabs, or additional information regarding the current tab. Users can easily find it by clicking on the extension toolbar icon. When the user navigates away it will automatically close.
 
 [The options page][doc-options]
-: The options page provides a way for users to customize an extension, such as choosing which sites the extension will run on. Users can access the options page in several ways as described in [Finding the options page][doc-options-view].
+: The options page (`options.html`) provides a way for users to customize an extension, such as choosing which sites the extension will run on. Users can access the options page in several ways as described in [Finding the options page][doc-options-view].
 
 Other extension HTML pages include [Chrome override pages][doc-override], [sandbox pages][doc-sandbox] or any custom page included for a specific purpose like onboarding the user.
 
@@ -102,6 +115,7 @@ Now that you have completed the [Getting Started guides][doc-gs] and understand 
 [doc-dev-guide]: /docs/extensions/mv3/devguide
 [doc-ext-101]: /docs/extensions/mv3/getstarted/extensions-101
 [doc-manifest-examples]: /docs/extensions/mv3/manifest#manifest-examples
+[doc-match]: /docs/extensions/mv3/match_patterns/
 [doc-manifest]: /docs/extensions/mv3/manifest
 [doc-messages]: /docs/extensions/mv3/messaging
 [doc-options-view]: /docs/extensions/mv3/options#view_page
