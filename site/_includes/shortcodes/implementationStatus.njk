@@ -1,0 +1,33 @@
+{%- from 'macros/icon.njk' import icon with context -%}
+<div class="impl-status">
+  <h2 class="impl-status__name">{{- implementationStatus.name -}}</h2>
+  <p>{{ implementationStatus.motivation }}</p>
+  <ol>
+    {%- for stepName, step in implementationStatus -%}
+    <li>
+      <div class="impl-status__icon">
+        {%- set statusIcon = '' -%}
+        {%- if step.statusKey == 'in-progress' -%}
+        {%- set statusIcon = icon('repeat', {hidden: true})|safe -%}
+        {%- elseif step.statusKey == 'completed' -%}
+        {%- set statusIcon = icon('tick', {hidden: true})|safe -%}
+        {%- else -%}
+        {%- set statusIcon = icon('hourglass', {hidden: true})|safe -%}
+        {%- endif -%}
+        {{- statusIcon|safe -}}
+      </div>
+      <div class="impl-status__label">
+        {{- step.label -}}
+      </div>
+      <div class="impl-status__status">
+        {%- if step.url -%}
+        <a href="{{ step.url }}">{{- step.status -}}</a>
+        {%- else -%}
+        {{- step.status -}}
+        {%- endif -%}
+      </div>
+    </li>
+    {%- endfor -%}
+  </ol>
+  <pre>{{ implementationStatus }}</pre>
+</div>
