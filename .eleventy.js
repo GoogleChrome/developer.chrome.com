@@ -149,10 +149,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPairedShortcode('Aside', Aside);
   eleventyConfig.addPairedShortcode('Label', Label);
   eleventyConfig.addShortcode('LanguageList', LanguageList);
-  eleventyConfig.addShortcode('BrowserCompat', new BrowserCompat().configure({
-    eleventyConfig,
-    templatePath: path.join(__dirname, 'site/_includes/shortcodes/browserCompat.njk')
-  }));
+  eleventyConfig.addShortcode('BrowserCompat', BrowserCompat);
   eleventyConfig.addNunjucksAsyncShortcode('Partial', Partial);
 
   // Empty shortcodes. They are added for backward compatibility with web.dev.
