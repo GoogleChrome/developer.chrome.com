@@ -19,7 +19,7 @@ tags:
 Here's what you need to know:
 
 * The Origin Private File System API is [now available](#opfs) for Android.
-* There is a set of [new properties] in CSS(#css-updates).
+* There is a set of [new properties in CSS](#css-updates).
 * You can easily add math notations in your HTML with the [support for MathML Core](#math-ml-core).
 * And there’s plenty [more](#more).
 
@@ -37,7 +37,7 @@ With the File System Access API on OPFS, sites can access their per-origin, priv
 
 Check out [this article](/articles/file-system-access/) to learn how to implement smooth file system access across platforms.
 
-## New in CSS. {: #css }
+## New in CSS. {: #css-updates }
 
 Now a few new CSS features, starting with a new length unit: `lh`.
 
@@ -47,7 +47,7 @@ Also the CSS Working Group added a new value of `auto` for the descriptors: `fon
 
 To provide better control over web typography, the [`hyphenate-limit-chars`](https://developer.mozilla.org/docs/Web/CSS/hyphenate-limit-chars#:~:text=The%20hyphenate%2Dlimit%2Dchars%20CSS,control%20over%20hyphenation%20in%20text.) property specifies the minimum number of characters in a hyphenated word.
 
-## MathML Core support. {: #sync-filehandle }
+## MathML Core support. {: #math-ml-core }
 
 If you ever tried to add math formulas to your web page in a styleable and accessible way you’ll be happy to hear that [MathML Core](https://www.w3.org/TR/mathml-core/) is now supported in Chrome.
 
