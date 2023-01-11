@@ -4,6 +4,7 @@ title: SQLite Wasm in the browser backed by the Origin Private File System
 subhead: >
   Use SQLite to handle all your storage needs performantly on the web.
 date: 2023-01-11
+updated: 2023-01-11
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/l5kRHOrUI9mQmwOTJKr7.jpg
 alt: Library symbolizing a database.
 authors:
@@ -223,8 +224,11 @@ self
 
 ### Demo
 
-See the above code in action in the embedded demo. Be sure to check out the
+See the above code in action in the [demo](https://sqlite-wasm-opfs.glitch.me/).
+Be sure to check out the
 [source code](https://glitch.com/edit/#!/sqlite-wasm-opfs?path=index.js%3A1%3A0) on Glitch.
+Note how the embedded version below does not use the OPFS backend, but when you open the demo
+in a [separate tab](https://sqlite-wasm-opfs.glitch.me/) it does.
 
 {% Glitch {
   id: 'sqlite-wasm-opfs'
@@ -242,6 +246,7 @@ After installing the extension, open the Chrome DevTools, select the **OPFS Expl
 you're then ready to inspect what SQLite Wasm writes to the Origin Private File System.
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/vIjB6Gnl879OySnYuueJ.png", alt="OPFS Explorer Chrome extension showing the Origin Private File System structure of the demo app.", width="800", height="416" %}
+
 If you click on any of the files in the OPFS Explorer window in DevTools, you can save it to the
 local disk. You can then use an app like [SQLite Viewer](https://sqliteviewer.app/) to inspect the
 database, so you can assure yourself that SQLite Wasm actually works as promised.
