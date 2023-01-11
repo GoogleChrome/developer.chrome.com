@@ -98,11 +98,11 @@ This example is a `www.google.com` 32px favicon URL that includes a random exten
 chrome-extension://eghkbfdcoeikaepkldh/_favicon/?pageUrl=https%3A%2F%2Fwww.google.com&size=32
 ```
 
-### Extension examples {: #example }
+## Extension examples {: #example }
 
 There are two favicon examples in the [chrome-extension-samples][gh-samples] repository:
 
-- [Favicon API][gh-favicon-api] example in a popup. 
+- [Favicon popup][gh-favicon-api] example. 
 - [Favicon content script][gh-favicon-cs] example. 
 
 [doc-cs]: /docs/extensions/mv3/content_scripts/
