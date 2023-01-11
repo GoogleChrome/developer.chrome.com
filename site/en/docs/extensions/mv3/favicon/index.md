@@ -45,6 +45,12 @@ First, you must request the `"favicon"` permission in the [manifest][doc-manifes
 }
 ```
 
+{% Aside 'caution' %}
+
+The `"favicon"` permission [triggers a warning][doc-perms-warn] unless other similar permissions are already requested, such as `"tabs"` or host permission. 
+
+{% endAside %}
+
 In addition, when fetching favicons in [content scripts][doc-cs], the `"_favicon/*"` folder must be declared as a [web accessible resource][doc-war]. For example:
 
 ```json/10-16
@@ -101,9 +107,11 @@ There are two favicon examples in the [chrome-extension-samples][gh-samples] rep
 
 [doc-cs]: /docs/extensions/mv3/content_scripts/
 [doc-manifest]: /docs/extensions/mv3/manifest/
+[doc-perms-warn]: /docs/extensions/mv3/permission_warnings/#permissions_with_warnings
 [doc-war]: /docs/extensions/mv3/manifest/web_accessible_resources/
 [gh-favicon-api]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/favicon
 [gh-favicon-cs]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/example/favicon-cs
 [gh-samples]: https://github.com/GoogleChrome/chrome-extensions-samples/
 [mdn-favicon]: https://developer.mozilla.org/docs/Glossary/Favicon
 [runtime-geturl]: /docs/extensions/reference/runtime/#method-getURL
+
