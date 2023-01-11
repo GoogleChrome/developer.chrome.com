@@ -47,7 +47,7 @@ Also the CSS Working Group added a new value of `auto` for the descriptors: `fon
 
 To provide better control over web typography, the [`hyphenate-limit-chars`](https://developer.mozilla.org/docs/Web/CSS/hyphenate-limit-chars#:~:text=The%20hyphenate%2Dlimit%2Dchars%20CSS,control%20over%20hyphenation%20in%20text.) property specifies the minimum number of characters in a hyphenated word.
 
-## MathML Core support. {: #sync-filehandle }
+## MathML Core support. {: #math-ml-core }
 
 If you ever tried to add math formulas to your web page in a styleable and accessible way you’ll be happy to hear that [MathML Core](https://www.w3.org/TR/mathml-core/) is now supported in Chrome.
 
