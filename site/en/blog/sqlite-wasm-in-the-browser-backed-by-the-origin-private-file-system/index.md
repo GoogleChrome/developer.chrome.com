@@ -35,7 +35,7 @@ the user's device, making it easy to integrate into applications.
 There are a number of unofficial SQLite versions based on Web Assembly (Wasm), allowing it to be
 used in web browsers, for example, [sql.js](https://github.com/sql-js/sql.js). The
 [sqlite3 WASM/JS subproject](https://sqlite.org/wasm/doc/tip/about.md) is the first effort that is
-"officially" associated with the [SQLite project](https://sqlite.org/) makingWasm builds of the
+officially associated with the [SQLite project](https://sqlite.org/) making Wasm builds of the
 library established members of the family of supported SQLite deliverables. The concrete goals of
 this project include:
 
@@ -69,8 +69,8 @@ in-place and exclusive write access to a file's content. This change, along with
 consistently read unflushed modifications and the availability of a synchronous variant on dedicated
 workers, significantly improves performance and unblocks new use cases.
 
-As you can imagine, the last point of the project's goals, _Support for persistent client-side
-storage using available JavaScript APIs_ specifically, comes with strict performance requirements
+As you can imagine, the last point of the project's goals, Support for persistent client-side
+storage using available JavaScript APIs, comes with strict performance requirements
 regarding persisting data to the database file. This is where the Origin Private File System, and,
 more specifically, the
 [`createSyncAccessHandle()`](https://developer.mozilla.org/docs/Web/API/FileSystemFileHandle/createSyncAccessHandle)
@@ -84,7 +84,7 @@ Origin Private File System so the main thread can't be blocked.
 
 ### Setting the required headers
 
-{% Aside 'warning' %} Setting these headers is a _required_ step for the Origin Private File System
+{% Aside 'warning' %} Setting these headers is a required step for the Origin Private File System
 persistence backend to work. {% endAside %}
 
 Among other files, the downloaded SQLite Wasm archive contains the `sqlite3.js` and `sqlite3.wasm`
