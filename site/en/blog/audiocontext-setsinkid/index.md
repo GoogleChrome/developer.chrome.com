@@ -5,7 +5,7 @@ description: >
  Learn how to programmatically change the audio output destination in Web Audio.
 authors:
   - beaufortfrancois
-date: 2023-01-10
+date: 2023-01-11
 hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/efSfADIno61NxsMaBOTx.jpg
 alt: A photo of several wires in audio mixers.
 tags:
