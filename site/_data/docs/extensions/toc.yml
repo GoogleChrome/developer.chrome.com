@@ -55,7 +55,7 @@
   sections:
     - url: /docs/extensions/mv3/settings_override
     - url: /docs/extensions/mv3/devtools
-    - url: /docs/extensions/mv3/https://github.com/GoogleChrome/developer.chrome.com/pull/4308
+    - url: /docs/extensions/mv3/favicon
     - url: /docs/extensions/mv3/tut_oauth
     - url: /docs/extensions/mv3/override
     - url: /docs/extensions/mv3/richNotifications
