@@ -55,7 +55,7 @@ and improve
 
 Some frameworks like Preact
 [ship with tools](https://github.com/developit/preact-render-to-string)
-that address server-side rendering. If your framework has a prendering
+that address server-side rendering. If your framework has a prerendering
 solution, please stick with that. There's no reason to bring another tool
 (headless Chrome and Puppeteer) into the mix.
 

@@ -250,7 +250,7 @@ The `document.prerendering` API will return `true` while the page is prerenderin
 
 Once a prerendered document is activated, `PerformanceNavigationTiming`'s `activationStart` will also be set to a non-zero time representing the time between when the prerender was started and the document was actually activated.
 
-You can have a function to check for _prendering_ and _prerendered_ pages like the following:
+You can have a function to check for _prerendering_ and _prerendered_ pages like the following:
 
 ```js
 function pagePrerendered() {
