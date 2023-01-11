@@ -19,7 +19,7 @@ tags:
 Here's what you need to know:
 
 * The Origin Private File System API is [now available](#opfs) for Android.
-* There is a set of [new properties] in CSS(#css-updates).
+* There is a set of [new properties in CSS](#css-updates).
 * You can easily add math notations in your HTML with the [support for MathML Core](#math-ml-core).
 * And there’s plenty [more](#more).
 
