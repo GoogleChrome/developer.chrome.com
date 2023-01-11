@@ -58,7 +58,7 @@ const audioContext = new AudioContext({ sinkId: deviceId });
 
 You can now specify a "silent output device" in Web Audio to minimize the power consumption. This time, instead of a string value, pass `{ type: "none" }` to `AudioContext.setSinkId()`.
 
-Note that the audio clock accessible through `audioContext.currentTime` will still advance to render the audio graph. The main goal of this muted AudioContext is to inspect the audio graph without producing audible sound. The primary use case would be analyzing microphone input without making sounds.
+Note that the audio clock accessible through `audioContext.currentTime` will still advance to render the audio graph. The main goal of this muted AudioContext is to render the audio graph without producing audible sound. The primary use case would be analyzing microphone input without making sounds.
 
 ```js
 // Silent Web Audio output.
