@@ -37,7 +37,7 @@ With the File System Access API on OPFS, sites can access their per-origin, priv
 
 Check out [this article](/articles/file-system-access/) to learn how to implement smooth file system access across platforms.
 
-## New in CSS. {: #css }
+## New in CSS. {: #css-updates }
 
 Now a few new CSS features, starting with a new length unit: `lh`.
 
