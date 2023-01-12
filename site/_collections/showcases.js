@@ -14,20 +14,17 @@
  * limitations under the License.
  */
 
-declare global {
-  export interface FuguProject {
-    timestamp: string,
-    appURL: string,
-    sourceURL: string,
-    usedAPIs: FuguAPI[],
-    screenshot?: string,
-  }
+/**
+ * @fileoverview Collection of authors associated with posts they've written.
+ */
+const memoize = require('../_js/utils/memoize');
+const showcasesItems = require('../_data/fuguShowcase.json');
 
-  export interface FuguAPI {
-    name: string,
-    url: string,
-  }
-}
+/**
+ * @returns {FuguShowcase[]}
+ */
+const fuguShowcase = memoize(() => {
+  return showcasesItems;
+});
 
-// empty export to keep file a module
-export {};
+module.exports = {fuguShowcase};

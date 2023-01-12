@@ -60,6 +60,7 @@ const tagsCollection = require('./site/_collections/tags');
 const directoryCollection = require('./site/_collections/directory');
 const extensionsReferenceCollection = require('./site/_collections/reference');
 const { pastEvents, currentEvents, eventTags } = require('./site/_collections/events');
+const { fuguShowcase } = require('./site/_collections/showcases');
 
 // Create a helpful environment flags
 const isProduction = process.env.NODE_ENV === 'production';
@@ -110,6 +111,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addCollection('currentEvents', currentEvents);
   eleventyConfig.addCollection('pastEvents', pastEvents);
   eleventyConfig.addCollection('eventTags', eventTags);
+  eleventyConfig.addCollection('fuguShowcase', fuguShowcase);
 
   // Add filters
   eleventyConfig.addFilter('absolute', absolute);

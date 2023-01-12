@@ -15,76 +15,115 @@
  */
 
 import './web-components/enhanced-select';
+import {loadMore} from './misc/load-more';
+import memoize from './utils/memoize';
 
-let filterValue = [];
-
-/**
- * @param {string} searchText
- * @param {string[]} selectedValue
- */
-function displayShowcase(searchText, selectedValue) {
-  const articles = /** @type {NodeListOf<HTMLElement>} */ (
-    document.querySelectorAll('.fugu-card[data-used-apis]')
-  );
-
-  if (!searchText.length && !selectedValue.length) {
-    articles.forEach(article => {
-      article.style.display = 'block';
-    });
-  } else {
-    articles.forEach(article => {
-      article.style.display = 'none';
-    });
-  }
-
-  const filter = selectedValue.join(' ');
-  const container = document.querySelector('.fugu-container');
-  const matchingFilterArticles = /** @type {NodeListOf<HTMLElement>} */ (
-    container?.querySelectorAll(`article[data-used-apis*="${filter}"]`)
-  );
-
-  const matchingSearchArticles = /** @type {NodeListOf<HTMLElement>} */ (
-    container?.querySelectorAll(`article[data-name*="${searchText}"]`)
-  );
-
-  matchingSearchArticles?.forEach(article => {
-    if (!matchingFilterArticles?.length) article.style.display = 'block';
-    else {
-      matchingFilterArticles.forEach(filterArticle => {
-        if (article === filterArticle) {
-          filterArticle.style.display = 'block';
-        }
-      });
-    }
-  });
-
-  matchingFilterArticles?.forEach(article => {
-    if (!matchingSearchArticles?.length) article.style.display = 'block';
-    else {
-      matchingSearchArticles.forEach(searchArticle => {
-        if (article === searchArticle) {
-          searchArticle.style.display = 'block';
-        }
-      });
-    }
-  });
-}
-
+let filteredValue = [];
 const searchByAppNameElement = /** @type {HTMLElement} */ (
   document.querySelector('input.search-apps')
 );
 
-searchByAppNameElement.addEventListener('input', e => {
-  const articles = /** @type {NodeListOf<HTMLElement>} */ (
-    document.querySelectorAll('.fugu-card[data-used-apis]')
-  );
+getShowcaseItems();
 
-  articles.forEach(article => {
-    article.style.display = 'none';
+async function filterShowcaseItems() {
+  const response = await fetch('/showcase.json');
+
+  if (response.status !== 200) {
+    throw new Error('Unable to fetch /showcase.json');
+  }
+
+  const fuguItems = await response.json();
+  fuguItems.map(item => {
+    const api = item.usedAPIs;
+    const usedAPIs = api.map(api => {
+      return api.name.replace(/\s+/g, '-').toLowerCase();
+    });
+
+    const searchText = /** @type {HTMLInputElement} */ (
+      searchByAppNameElement
+    ).value?.toLowerCase();
+
+    let isShow = !filteredValue.length && !searchText.length ? true : false;
+    if (searchText.length > 0 && !filteredValue.length) {
+      if (item.title.match(searchText) !== null) {
+        isShow = true;
+      }
+    } else if (searchText.length > 0 && filteredValue.length > 0) {
+      if (item.title.match(searchText) !== null) {
+        filteredValue.forEach(selected => {
+          if (usedAPIs.includes(selected)) {
+            isShow = true;
+          }
+        });
+      }
+    } else {
+      filteredValue.forEach(selected => {
+        if (usedAPIs.includes(selected)) {
+          isShow = true;
+        }
+      });
+    }
+
+    return (item.isShow = isShow);
   });
 
-  const value = /** @type {HTMLInputElement} */ (e.target).value.toLowerCase();
-  displayShowcase(value, filterValue);
+  return {
+    items: fuguItems.filter(item => item.isShow === true),
+  };
+}
+
+async function getShowcaseItems() {
+  const getMemoizedShowcase = memoize(filterShowcaseItems);
+  const {items} = await getMemoizedShowcase();
+  const htmlItems = items.map(item => {
+    return item.html;
+  });
+
+  const loadMoreButton = document.getElementById('load-more-showcase');
+  const container = document.querySelector('.fugu-showcase-container');
+  // @ts-ignore
+  container.innerHTML = htmlItems.slice(0, 9).join('');
+
+  const showcase = {
+    loadMore: loadMoreButton,
+    container: container,
+    fetchItems: async (skip, take) => {
+      return items.slice(skip, take + skip).map(showcase => showcase.html);
+    },
+  };
+
+  if (!showcase.loadMore) return;
+  if (items.length > 9) {
+    loadMoreButton?.removeAttribute('hidden');
+  } else {
+    loadMoreButton?.setAttribute('hidden', 'true');
+  }
+  const skip = showcase.container?.querySelectorAll('.fugu-card').length;
+  const params = {
+    skip,
+    take: 9,
+  };
+  const onError = () => {
+    document.getElementById('loading-error')?.classList.remove('display-none');
+  };
+
+  // @ts-ignore
+  loadMore(
+    showcase.loadMore,
+    // @ts-ignore
+    showcase.container,
+    showcase.fetchItems,
+    onError,
+    params
+  );
+}
+
+searchByAppNameElement.addEventListener('input', () => {
+  const searchText = /** @type {HTMLInputElement} */ (
+    searchByAppNameElement
+  ).value?.toLowerCase();
+  if (!searchText.length) return;
+  getShowcaseItems();
 });
 
 const searchByApiElement = /** @type {HTMLElement} */ (
@@ -107,13 +146,10 @@ searchByApiElement.addEventListener('click', () => {
         .split(' ')
         .join('-');
 
-      if (!filterValue.includes(value)) {
-        filterValue.push(value);
-        const searchValue = /** @type {HTMLInputElement} */ (
-          searchByAppNameElement
-        ).value?.toLowerCase();
-
-        displayShowcase(searchValue, filterValue);
+      if (!filteredValue.includes(value)) {
+        filteredValue.push(value);
+        // displayShowcase();
+        getShowcaseItems();
       }
 
       pill.removeAttribute('hidden');
@@ -152,13 +188,9 @@ closeButtonPills.forEach(button => {
       .split(' ')
       .join('-');
 
-    filterValue = filterValue.filter(v => v !== value);
+    filteredValue = filteredValue.filter(v => v !== value);
 
-    const searchValue = /** @type {HTMLInputElement} */ (
-      searchByAppNameElement
-    ).value.toLowerCase();
-
-    displayShowcase(searchValue, filterValue);
+    getShowcaseItems();
   });
 });
 
