@@ -42,7 +42,7 @@ acknowledgedly also have weaknesses like the lack of a strong query language. Pe
 web for a reason.
 
 {% Aside 'success' %} Our intention is to empower developers to create their own solutions for structured
-storage and we were therefore working with the [SQLite](https://www.sqlite.org/index.html) team to
+storage. We've worked with the [SQLite](https://www.sqlite.org/index.html) team to
 create a SQLite implementation over WebAssembly. This
 [solution is now ready](/blog/sqlite-wasm-in-the-browser-backed-by-the-origin-private-file-system/)
 and it even outperforms Web SQL in many cases.
