@@ -24,7 +24,7 @@ and use tools such as [Lighthouse](/docs/lighthouse/) and
 (e.g. see [Chrome User Experience Report](/docs/crux/))
 to diagnose and improve user experiences.
 
-## Speed is now used as a ranking factor for mobile searcheshttps://web.dev/user-centric-performance-metrics/
+## Speed is now used as a ranking factor for mobile searches
 
 Users want to find answers to their questions quickly and
 [data](https://www.thinkwithgoogle.com/marketing-resources/data-measurement/mobile-page-speed-new-industry-benchmarks/)
