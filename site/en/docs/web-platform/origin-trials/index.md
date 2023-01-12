@@ -145,7 +145,7 @@ browser when the API is unavailable. This is by design. If Chrome were to avoid 
 mandatory total-breakage period, that would bias toward avoiding breakages in the API surface. Such
 breakages are often needed to improve the API. The final shipping API might be worse for it.
 
-In some circumstances, if there was clear evidence that developers engaged with the origin trial and
+In some circumstances, if there is clear evidence that developers engaged with the origin trial and
 that their concerns were taken into account in the final API design and implementation, this
 breakage period may be skipped [upon request](https://sites.google.com/a/chromium.org/dev/blink/launching-features#sites-canvas-main-content:~:text=If%20you%20wish%20to%20skip%20the,Ship%20imply%20approval%20of%20the%20request.).
 

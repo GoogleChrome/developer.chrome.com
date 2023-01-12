@@ -579,8 +579,8 @@ When you register for a trial, don't select _Third-party matching_ just because 
 trial feature from an iframe!
 
 A [third-party token](/docs/web-platform/third-party-origin-trials/#register-for-a-third-party-origin-trial)
-will only activate a trial feature if it's provided in an external JavaScript file included via a
-`<script>` element: a third-party token won't work in a meta tag, inline script or HTTP header.
+only activates a trial feature if it's provided in an external JavaScript file, included via a
+`<script>` element. A third-party token won't work when provided in a meta tag, inline script or HTTP header.
 
 {% endAside %}
 
