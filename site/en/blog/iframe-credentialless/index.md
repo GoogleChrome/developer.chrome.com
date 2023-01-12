@@ -57,11 +57,11 @@ You can check out the [demo of an iframe credentialless](https://iframe-credenti
 -  Webkit Request for position: [No signal](https://lists.webkit.org/pipermail/webkit-dev/2022-April/032205.html)
 -  [W3C TAG](https://www.w3.org/2001/tag/) Request for position: [satisfied](https://github.com/w3ctag/design-reviews/issues/639)
 
-**Is an <iframe> nested inside an <iframe credentialless> credentialless?**
+**Is an `<iframe>` nested inside an `<iframe credentialless>` credentialless?**
 
 Yes. It is inherited. Once an iframe is credentialless, that applies to all iframes in the whole subtree even without a `credentialless` attribute.
 
-**Are pop-ups created from <iframe credentialless> credentialless too?**
+**Are pop-ups created from `<iframe credentialless>` credentialless too?**
 
 Pop-ups are opened as if `noopener` was set. They are created from a new regular top-level context and are not anonymous. They can't communicate with the credentialless iframe.
 
