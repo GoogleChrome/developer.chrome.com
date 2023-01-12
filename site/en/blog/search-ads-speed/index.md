@@ -35,19 +35,18 @@ too.
 
 If you're a developer working on a site, now is a good time to evaluate your
 performance using our [speed tools](https://web.dev/speed-tools/). Think about how
-[performance](/web/fundamentals/performance/rail) affects the user experience
-of your pages and consider measuring a variety of real-world [user-centric performance metrics](/web/updates/2017/06/user-centric-performance-metrics).
+[performance](https://web.dev/rail/) affects the user experience
+of your pages and consider measuring a variety of real-world [user-centric performance metrics](https://web.dev/user-centric-performance-metrics/).
 
-Are you shipping [too much JavaScript](/web/fundamentals/performance/optimizing-content-efficiency/javascript-startup-optimization/)?
-[Too many images](/web/fundamentals/performance/optimizing-content-efficiency/image-optimization)?
-Images and JavaScript are the [most significant contributors](https://paulcalvano.com/index.php/2018/07/02/impact-of-page-weight-on-load-time/)
+Are you shipping [too much JavaScript](https://web.dev/performance-optimizing-content-efficiency/)?
+Too many images? Images and JavaScript are the [most significant contributors](https://paulcalvano.com/index.php/2018/07/02/impact-of-page-weight-on-load-time/)
 to the page weight that affect page load time based on data from [HTTP Archive](https://httparchive.org/) and the [Chrome User Experience Report](/docs/crux/) - our public dataset for key
 UX metrics as experienced by Chrome users under real-world conditions.
 
 To evaluate performance, check:
 
-- [PageSpeed Insights](https://web.dev/whats-new-pagespeed-insights/), an online tool that shows
-  speed [field data](https://web.dev/speed-tools/#field_data) for
+- [PageSpeed Insights](https://pagespeed.web.dev/), an online tool that shows
+  speed [field data](https://web.dev/speed-tools/#field-data) for
   your site, alongside suggestions for common optimizations to improve it.
 - [Lighthouse](/docs/lighthouse/), [a lab tool](https://web.dev/speed-tools/#lab_data) providing
   personalized advice on how to improve your website across performance,
@@ -95,6 +94,7 @@ hands-on overview.
 
 Looking for tools and tips on which tools and metrics to use, or how to
 evaluate and make a business case for performance? Check out our
-[How to Think about Speed Tools](/https://web.dev/speed-tools/)
+
+[How to Think about Speed Tools](https://web.dev/speed-tools/)
 guide for a hands-on overview. Or, if you're looking for a fast-by-default
 framework for you pages, take a look at [AMP](https://www.ampproject.org/).
