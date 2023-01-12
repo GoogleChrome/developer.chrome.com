@@ -45,7 +45,7 @@ web for a reason.
 storage. We've worked with the [SQLite](https://www.sqlite.org/index.html) team to
 create a SQLite implementation over WebAssembly. This
 [solution is now ready](/blog/sqlite-wasm-in-the-browser-backed-by-the-origin-private-file-system/)
-and it even outperforms Web SQL in many cases.
+and outperforms Web SQL in many cases.
 {% endAside %}
 
 ## Web SQL deprecation and removal steps
