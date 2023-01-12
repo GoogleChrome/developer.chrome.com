@@ -72,8 +72,14 @@ Enable IDNA 2008 in Non-Transitional Mode for URL processing, aligning Chrome's 
 
 Add a [`launch_handler`](/docs/web-platform/launch-handler/) web app manifest member that enables web apps to customize their launch behavior across all types of app launch triggers. For example, the following will cause all launches of the Example app to focus an existing app window and navigate it (if it exists) instead of always launching a new app window. 
 
-```
-{ "name": "Example app", "start_url": "/index.html", "launch_handler": { "client_mode": "navigate-existing" } } 
+```js
+{ 
+    "name": "Example app", 
+    "start_url": "/index.html", 
+    "launch_handler": {
+        "client_mode": "navigate-existing" 
+    } 
+} 
 ```
 
 ### web-share permission policy
