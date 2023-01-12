@@ -9,8 +9,8 @@ alt: Blowfish swarm swimming in the ocean.
 ---
 
 {% extends "layouts/base.njk" %}
-{% from 'macros/icon.njk' import icon with context %}
 {% from 'macros/cards/hero-card.njk' import heroCard with context %}
+{% from 'macros/icon.njk' import icon with context %}
 
 {% block content %}
   <div class="fugu-showcase">
@@ -60,7 +60,9 @@ alt: Blowfish swarm swimming in the ocean.
         {% endfor %}
       </div>
 
-      <div class="project-grid fugu-showcase-container lg:pad-top-400 pad-top-200" total-items="{{ fuguItems.length }}"></div>
+      <div class="project-grid fugu-showcase-container lg:pad-top-400 pad-top-200" 
+        total-items="{{ fuguItems.length }}">
+      </div>
 
       <button id="load-more-showcase"
         class="load-more__button justify-content-center gap-top-600 type--small display-inline-flex"
@@ -81,5 +83,5 @@ alt: Blowfish swarm swimming in the ocean.
 {% endblock %}
 
 {% block scripts %}
-  <script type="module" src="{{ helpers.hashForProd('/js/fugu-showcase.js') }}"></script>
+  <script type="module" src="{{ helpers.hashForProd('/js/showcases.js') }}"></script>
 {% endblock %}

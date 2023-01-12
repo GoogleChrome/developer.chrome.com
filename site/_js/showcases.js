@@ -23,9 +23,13 @@ const searchByAppNameElement = /** @type {HTMLElement} */ (
   document.querySelector('input.search-apps')
 );
 
-getShowcaseItems();
+const searchByApiElement = /** @type {HTMLElement} */ (
+  document.querySelector('.search-apis')
+);
 
-async function filterShowcaseItems() {
+renderShowcaseItems();
+
+async function getShowcaseItems() {
   const response = await fetch('/showcase.json');
 
   if (response.status !== 200) {
@@ -33,35 +37,45 @@ async function filterShowcaseItems() {
   }
 
   const fuguItems = await response.json();
+
+  const searchText = /** @type {HTMLInputElement} */ (
+    searchByAppNameElement
+  ).value?.toLowerCase();
+
+  const isSearchText = !!searchText.length;
+  const isFiltered = !!filteredValue.length;
+
   fuguItems.map(item => {
-    const api = item.usedAPIs;
-    const usedAPIs = api.map(api => {
+    const apis = item.usedAPIs;
+    const usedAPIs = apis.map(api => {
       return api.name.replace(/\s+/g, '-').toLowerCase();
     });
+    const apisList = apis.map(api => {
+      return api.name.toLowerCase();
+    });
 
-    const searchText = /** @type {HTMLInputElement} */ (
-      searchByAppNameElement
-    ).value?.toLowerCase();
+    const space = ' ';
+    const uniqueAPIsList = [...new Set(apisList.join(space).split(space))];
+    const uniqueAPIsStr = uniqueAPIsList.join(space);
+    const isSearchAPIsMatched = uniqueAPIsStr.match(searchText) !== null;
+    const isSearchNameMatched =
+      item.title.toLowerCase().match(searchText) !== null;
 
-    let isShow = !filteredValue.length && !searchText.length ? true : false;
-    if (searchText.length > 0 && !filteredValue.length) {
-      if (item.title.match(searchText) !== null) {
-        isShow = true;
-      }
-    } else if (searchText.length > 0 && filteredValue.length > 0) {
-      if (item.title.match(searchText) !== null) {
+    const isSearchValueMatched = isSearchNameMatched || isSearchAPIsMatched;
+    let isShow = !isSearchText && !isFiltered ? true : false;
+
+    if (isSearchText && isFiltered) {
+      if (isSearchValueMatched) {
         filteredValue.forEach(selected => {
-          if (usedAPIs.includes(selected)) {
-            isShow = true;
-          }
+          isShow = usedAPIs.includes(selected) ? true : false;
         });
       }
-    } else {
+    } else if (!isSearchText && isFiltered) {
       filteredValue.forEach(selected => {
-        if (usedAPIs.includes(selected)) {
-          isShow = true;
-        }
+        isShow = usedAPIs.includes(selected) ? true : false;
       });
+    } else {
+      isShow = isSearchValueMatched ? true : false;
     }
 
     return (item.isShow = isShow);
@@ -72,16 +86,16 @@ async function filterShowcaseItems() {
   };
 }
 
-async function getShowcaseItems() {
-  const getMemoizedShowcase = memoize(filterShowcaseItems);
+async function renderShowcaseItems() {
+  const getMemoizedShowcase = memoize(getShowcaseItems);
   const {items} = await getMemoizedShowcase();
-  const htmlItems = items.map(item => {
-    return item.html;
-  });
-
   const loadMoreButton = document.getElementById('load-more-showcase');
-  const container = document.querySelector('.fugu-showcase-container');
-  // @ts-ignore
+  const container = /** @type {HTMLElement} */ document.querySelector(
+    '.fugu-showcase-container'
+  );
+  const htmlItems = items.map(item => item.html);
+
+  if (!container) return;
   container.innerHTML = htmlItems.slice(0, 9).join('');
 
   const showcase = {
@@ -93,21 +107,23 @@ async function getShowcaseItems() {
   };
 
   if (!showcase.loadMore) return;
-  if (items.length > 9) {
+
+  const itemsPerPage = 9;
+  if (items.length > itemsPerPage) {
     loadMoreButton?.removeAttribute('hidden');
   } else {
     loadMoreButton?.setAttribute('hidden', 'true');
   }
-  const skip = showcase.container?.querySelectorAll('.fugu-card').length;
-  const params = {
-    skip,
-    take: 9,
-  };
+
+  const skip = showcase.container.querySelectorAll('.fugu-card').length;
   const onError = () => {
     document.getElementById('loading-error')?.classList.remove('display-none');
   };
+  const params = {
+    skip,
+    take: itemsPerPage,
+  };
 
-  // @ts-ignore
   loadMore(
     showcase.loadMore,
     // @ts-ignore
@@ -119,16 +135,8 @@ async function getShowcaseItems() {
 }
 
 searchByAppNameElement.addEventListener('input', () => {
-  const searchText = /** @type {HTMLInputElement} */ (
-    searchByAppNameElement
-  ).value?.toLowerCase();
-  if (!searchText.length) return;
-  getShowcaseItems();
+  renderShowcaseItems();
 });
-
-const searchByApiElement = /** @type {HTMLElement} */ (
-  document.querySelector('.search-apis')
-);
 
 searchByApiElement.addEventListener('click', () => {
   const selections = document.querySelectorAll('li.button[selected]');
@@ -148,8 +156,7 @@ searchByApiElement.addEventListener('click', () => {
 
       if (!filteredValue.includes(value)) {
         filteredValue.push(value);
-        // displayShowcase();
-        getShowcaseItems();
+        renderShowcaseItems();
       }
 
       pill.removeAttribute('hidden');
@@ -189,8 +196,7 @@ closeButtonPills.forEach(button => {
       .join('-');
 
     filteredValue = filteredValue.filter(v => v !== value);
-
-    getShowcaseItems();
+    renderShowcaseItems();
   });
 });
 
