@@ -9,6 +9,8 @@ subhead: >
 date: 2023-01-12
 authors:
   - arthursonzogni
+hero: image/udVScdcCFAdRjZwFdLk2jWAFQyr1/unmhfaD1hmGZfa8DF04f.jpg
+alt: A photo of a person sitting on a bench.  
 tags:
   - privacy
   - security
