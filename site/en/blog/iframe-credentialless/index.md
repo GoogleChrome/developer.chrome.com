@@ -24,11 +24,11 @@ It was previously available as an origin trial from version 106 to 108, and know
 
 Some web APIs increase the risk of side-channel attacks such as [Spectre](https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)). To mitigate that risk, browsers offer an opt-in-based isolated environment called [cross-origin isolation](https://web.dev/coop-coep/), which requires deploying COEP. [Cross-origin isolation](https://web.dev/coop-coep/) allows websites to use privileged features including `[SharedArrayBuffer](https://developer.chrome.com/blog/enabling-shared-array-buffer/)`, `[performance.measureUserAgentSpecificMemory()](https://web.dev/monitor-total-page-memory-usage/)`, and [high-precision timers with better resolution](/blog/cross-origin-isolated-hr-timers/).
 
-To enable cross-origin isolation, websites must send the following two HTTP headers:  
+To enable cross-origin isolation, websites must send the following HTTP headers:  
 `Cross-Origin-Embedder-Policy: require-corp`  
 `Cross-Origin-Opener-Policy: same-origin`
 
-[COEP:credentialless](/blog/coep-credentialless-origin-trial/) can also be used as an alternative to require-corp. See [documentation](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) for further details.
+[COEP:credentialless](/blog/coep-credentialless-origin-trial/) can also be used as an alternative to `require-corp`. See [documentation](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) for further details.
 
 ## Challenges with enabling COEP
 
@@ -47,7 +47,7 @@ Iframes credentialless are not subject to COEP embedding rules. They are still s
 
 ## Demo
 
-You can check out an iframe credentialless on: [https://iframe-credentialless.glitch.me/](https://iframe-credentialless.glitch.me/)
+You can check out the [demo of an iframe credentialless](https://iframe-credentialless.glitch.me/).
 
 ## FAQ
 
@@ -75,5 +75,5 @@ Pop-ups are opened as if `noopener` was set. They are created from a new regular
 -  [Why you need "cross-origin isolated" for powerful features](https://web.dev/why-coop-coep/)
 -  [A guide to enable cross-origin isolation](https://web.dev/cross-origin-isolation-guide/)
 -  [SharedArrayBuffer updates in Android Chrome 88 and Desktop Chrome 92](/blog/enabling-shared-array-buffer/)
--  [Load cross-origin resources without CORP headers using `COEP: credentialless](/blog/coep-credentialless-origin-trial/)`
+-  [Load cross-origin resources without CORP headers using `COEP: credentialless`](/blog/coep-credentialless-origin-trial/)
 -  [IFrame credentialless - Web security | MDN](https://developer.mozilla.org/docs/Web/Security/IFrame_credentialless)
