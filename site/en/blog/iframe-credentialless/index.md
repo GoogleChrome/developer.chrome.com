@@ -39,7 +39,7 @@ While cross-origin isolation brings webpages better security and the ability to 
 We're introducing iframe credentialless to help embed third-party iframes that don't set COEP. By adding the `credentialless` attribute to the `<iframe>` element, the iframe is loaded from a different, ephemeral storage partition and it isn't subject to COEP restrictions anymore. 
 
 Example:  
-`<iframe **credentialless** src="https://example.com">`
+`<iframe credentialless src="https://example.com">`
 
 Iframe is created in [a new ephemeral context](https://developer.mozilla.org/docs/Web/Security/IFrame_credentialless#the_solution_%E2%80%94_iframe_credentialless) and doesn't have access to any of the cookies associated with the top level website, because it starts from an empty cookie jar. Likewise, storage APIs such as [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage), [CacheStorage](https://developer.mozilla.org/docs/Web/API/CacheStorage), [IndexedDB](https://developer.mozilla.org/docs/Web/API/IndexedDB_API), and so on, are loading and storing data in the new ephemeral partition. The partition is scoped to the current top-level document and origin of the iframe. Storage will be cleared once the top-level document is unloaded.
 
