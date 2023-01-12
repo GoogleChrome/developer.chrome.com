@@ -1,10 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: First-Party Sets integration guide
-description: >
-  First-Party Sets can allow related domain names that are owned and operated by
-  the same entity to be treated as first-party in situations where first party and
-  third party are otherwise treated differently. 
+title: "First-Party Sets: integration guide"
 date: 2023-01-12
 thumbnail: 'image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/JL7L7S2qKI53pTWACfcv.jpg'
 alt: A diagram showing First-Party Sets. One set contains domains example.com,
