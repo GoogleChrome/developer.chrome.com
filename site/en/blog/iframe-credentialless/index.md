@@ -55,7 +55,7 @@ Credentialless iframes are not subject to COEP embedding rules. They are still s
 
 ## Demo
 
-You can check out the [demo of an iframe credentialless](https://iframe-credentialless.glitch.me/).
+You can check out a [demo of a credentialless iframe](https://iframe-credentialless.glitch.me/).
 
 ## FAQ
 
