@@ -3,8 +3,6 @@ layout: 'layouts/doc-post.njk'
 title: Ensure the page can be restored from the back/forward cache
 description: How to use Lighthouse to test if a page can be restored from the back/forward cache.
 date: 2023-01-12
-authors:
-  - asraine
 tags:
   - performance
 ---
