@@ -41,7 +41,7 @@ While cross-origin isolation brings webpages better security and the ability to 
 
 ## Iframe credentialless to the rescue
 
-We're introducing `<iframe credentialless>` to help embed third-party iframes that don't set COEP. By adding the `credentialless` attribute to the `<iframe>` element, the iframe is loaded from a different, ephemeral storage partition and it isn't subject to COEP restrictions anymore. 
+We're introducing `<iframe credentialless>` to help embed third-party iframes that don't set COEP. By adding the `credentialless` attribute to the `<iframe>` element, the iframe is loaded from a different, empty context. In particular, it is loaded without cookies. This allows for removing the COEP restriction.
 
 Example:  
 
