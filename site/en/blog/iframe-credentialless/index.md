@@ -1,12 +1,17 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: Iframe credentialless: Easily embed iframes in COEP environments
-subhead: Iframe credentialless is implemented in Chrome 110. It provides developers a way to load documents in third-party iframes using a new and ephemeral context. In return, they are no longer subject to the COEP embedding rules.
+title: "Iframe credentialless: Easily embed iframes in COEP environments"
+description: >
+  Iframe credentialless is implemented in Chrome 110.  It provides developers a way to load documents in third-party iframes using a new and ephemeral context. In return, they are no longer subject to the COEP embedding rules. 
+  Developers using COEP can now embed third party iframes that do not use COEP themselves.
+subhead: >
+  Developers using COEP can now embed third party iframes that do not use COEP themselves.
 date: 2023-01-12
 authors:
   - arthursonzogni
-description: >
-  Iframe credentialless is implemented in Chrome 110. It provides developers a way to load documents in third-party iframes using a new and ephemeral context. In return, they are no longer subject to the COEP embedding rules. Developers using COEP can now embed third party iframes that do not use COEP itself.
+tags:
+  - privacy
+  - security
 ---
 
 Iframe credentialless is enabled by default from Chrome version 110. It solves the most common complaint developers working with [Cross-Origin-Embedder-Policy (COEP)](https://web.dev/security-headers/#coep) have: embedding third-party iframes that do not set COEP.
@@ -46,21 +51,21 @@ You can check out an iframe credentialless on: [https://iframe-credentialless.gl
 
 ## FAQ
 
-### Will this feature be adopted by other browsers?
+**Will this feature be adopted by other browsers?**
 
 -  Mozilla Request for position: [Pending](https://github.com/mozilla/standards-positions/issues/628)
 -  Webkit Request for position: [No signal](https://lists.webkit.org/pipermail/webkit-dev/2022-April/032205.html)
 -  [W3C TAG](https://www.w3.org/2001/tag/) Request for position: [satisfied](https://github.com/w3ctag/design-reviews/issues/639)
 
-### Is an <iframe> nested inside an <iframe credentialless> credentialless?
+**Is an <iframe> nested inside an <iframe credentialless> credentialless?**
 
 Yes. It is inherited. Once an iframe is credentialless, that applies to all iframes in the whole subtree even without a `credentialless` attribute.
 
-### Are pop-ups created from <iframe credentialless> credentialless too?
+**Are pop-ups created from <iframe credentialless> credentialless too?**
 
 Pop-ups are opened as if `noopener` was set. They are created from a new regular top-level context and are not anonymous. They can't communicate with the credentialless iframe.
 
-### How to detect the document has been embedded in a credentialless iframe?
+**How to detect the document has been embedded in a credentialless iframe?**
 
 `window.credentialless` is true inside a credentialless iframe and false otherwise. Its value is `undefined` in a web browser not supporting iframe credentialless.
 
