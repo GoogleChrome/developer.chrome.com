@@ -26,9 +26,12 @@ It was previously available as an origin trial from version 106 to 108, and know
 
 Some web APIs increase the risk of side-channel attacks such as [Spectre](https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)). To mitigate that risk, browsers offer an opt-in-based isolated environment called [cross-origin isolation](https://web.dev/coop-coep/), which requires deploying COEP. [Cross-origin isolation](https://web.dev/coop-coep/) allows websites to use privileged features including [`SharedArrayBuffer`](/blog/enabling-shared-array-buffer/), [`performance.measureUserAgentSpecificMemory()`](https://web.dev/monitor-total-page-memory-usage/), and [high-precision timers with better resolution](/blog/cross-origin-isolated-hr-timers/).
 
-To enable cross-origin isolation, websites must send the following HTTP headers:  
-`Cross-Origin-Embedder-Policy: require-corp`  
-`Cross-Origin-Opener-Policy: same-origin`
+To enable cross-origin isolation, websites must send the following HTTP headers: 
+ 
+```http
+Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Opener-Policy: same-origin
+```
 
 [COEP:credentialless](/blog/coep-credentialless-origin-trial/) can also be used as an alternative to `require-corp`. See [documentation](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) for further details.
 
@@ -41,7 +44,10 @@ While cross-origin isolation brings webpages better security and the ability to 
 We're introducing iframe credentialless to help embed third-party iframes that don't set COEP. By adding the `credentialless` attribute to the `<iframe>` element, the iframe is loaded from a different, ephemeral storage partition and it isn't subject to COEP restrictions anymore. 
 
 Example:  
-`<iframe credentialless src="https://example.com">`
+
+```html
+<iframe credentialless src="https://example.com">
+```
 
 Iframe is created in [a new ephemeral context](https://developer.mozilla.org/docs/Web/Security/IFrame_credentialless#the_solution_%E2%80%94_iframe_credentialless) and doesn't have access to any of the cookies associated with the top level website, because it starts from an empty cookie jar. Likewise, storage APIs such as [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage), [CacheStorage](https://developer.mozilla.org/docs/Web/API/CacheStorage), [IndexedDB](https://developer.mozilla.org/docs/Web/API/IndexedDB_API), and so on, are loading and storing data in the new ephemeral partition. The partition is scoped to the current top-level document and origin of the iframe. Storage will be cleared once the top-level document is unloaded.
 
@@ -53,21 +59,21 @@ You can check out the [demo of an iframe credentialless](https://iframe-credenti
 
 ## FAQ
 
-**Will this feature be adopted by other browsers?**
+### Will this feature be adopted by other browsers?
 
 -  Mozilla Request for position: [Pending](https://github.com/mozilla/standards-positions/issues/628)
 -  Webkit Request for position: [No signal](https://lists.webkit.org/pipermail/webkit-dev/2022-April/032205.html)
 -  [W3C TAG](https://www.w3.org/2001/tag/) Request for position: [satisfied](https://github.com/w3ctag/design-reviews/issues/639)
 
-**Is an `<iframe>` nested inside an `<iframe credentialless>` credentialless?**
+### Is an `<iframe>` nested inside an `<iframe credentialless>` credentialless?
 
 Yes. It is inherited. Once an iframe is credentialless, that applies to all iframes in the whole subtree even without a `credentialless` attribute.
 
-**Are pop-ups created from `<iframe credentialless>` credentialless too?**
+### Are pop-ups created from `<iframe credentialless>` credentialless as well?
 
 Pop-ups are opened as if `noopener` was set. They are created from a new regular top-level context and are not anonymous. They can't communicate with the credentialless iframe.
 
-**How to detect the document has been embedded in a credentialless iframe?**
+### How to detect the document has been embedded in a credentialless iframe?
 
 `window.credentialless` is true inside a credentialless iframe and false otherwise. Its value is `undefined` in a web browser not supporting iframe credentialless.
 
