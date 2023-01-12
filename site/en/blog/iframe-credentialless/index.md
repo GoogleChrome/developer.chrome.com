@@ -24,7 +24,7 @@ It was previously available as an origin trial from version 106 to 108, and know
 
 ## Why we need COEP
 
-Some web APIs increase the risk of side-channel attacks such as [Spectre](https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)). To mitigate that risk, browsers offer an opt-in-based isolated environment called [cross-origin isolation](https://web.dev/coop-coep/), which requires deploying COEP. [Cross-origin isolation](https://web.dev/coop-coep/) allows websites to use privileged features including `[SharedArrayBuffer](https://developer.chrome.com/blog/enabling-shared-array-buffer/)`, `[performance.measureUserAgentSpecificMemory()](https://web.dev/monitor-total-page-memory-usage/)`, and [high-precision timers with better resolution](/blog/cross-origin-isolated-hr-timers/).
+Some web APIs increase the risk of side-channel attacks such as [Spectre](https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)). To mitigate that risk, browsers offer an opt-in-based isolated environment called [cross-origin isolation](https://web.dev/coop-coep/), which requires deploying COEP. [Cross-origin isolation](https://web.dev/coop-coep/) allows websites to use privileged features including [`SharedArrayBuffer`](/blog/enabling-shared-array-buffer/), [`performance.measureUserAgentSpecificMemory()`](https://web.dev/monitor-total-page-memory-usage/), and [high-precision timers with better resolution](/blog/cross-origin-isolated-hr-timers/).
 
 To enable cross-origin isolation, websites must send the following HTTP headers:  
 `Cross-Origin-Embedder-Policy: require-corp`  
