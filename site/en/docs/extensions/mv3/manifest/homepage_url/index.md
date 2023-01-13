@@ -11,7 +11,7 @@ An optional Manifest key containing a String for a valid homepage URL. Developer
  ```json
 {
   // ...
-  "homepage_url": "https://validURL.com,",
+  "homepage_url": "https://example.com,",
   // ...
 }
 ```
