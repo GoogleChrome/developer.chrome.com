@@ -334,7 +334,7 @@ chrome.webRequest.onBeforeRequest.addListener(
 );
 ```
 
-As this function uses a blocking event handler, it requires the "webRequest" as well as the
+As this function uses a blocking event handler, it requires the `"webRequest"` as well as the
 `"webRequestBlocking"` permission in the manifest file.
 
 The following example achieves the same goal in a more efficient way because requests that are not
