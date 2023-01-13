@@ -111,17 +111,7 @@ Examples of sites that can use this API include:
 
 ## Current status {: #status }
 
-<div>
-
-| Step                                       | Status                       |
-| ------------------------------------------ | ---------------------------- |
-| 1. Create explainer                        | [Complete][explainer]        |
-| 2. Create initial draft of specification   | [In progress][spec]          |
-| 3. Gather feedback & iterate on design     | [In progress](#feedback)     |
-| 4. Origin trial                            | [Complete][ot]               |
-| 5. Launch                                  | Not started                  |
-
-</div>
+{% ImplementationStatus '5189728691290112', '1977080236415647745' %}
 
 ## How to use the WebSocketStream API {: #use }
 

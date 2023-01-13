@@ -51,17 +51,7 @@ Playground][babylon].
 
 ## Current status {: #status }
 
-<div>
-
-| Step                                     | Status                   |
-| ---------------------------------------- | ------------------------ |
-| 1. Create explainer                      | [Complete][explainer]    |
-| 2. Create initial draft of specification | [In progress][spec]      |
-| 3. Gather feedback & iterate on design   | [In progress](#feedback) |
-| 4. **Origin trial**                      | **[In progress][ot]**    |
-| 5. Launch                                | Not started              |
-
-</div>
+{% ImplementationStatus '6213121689518080', '118219490218475521' %}
 
 ## How to use WebGPU {: #use }
 

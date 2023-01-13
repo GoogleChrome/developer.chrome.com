@@ -34,3 +34,5 @@ external/local-build-flag
 # Files used during CI
 gulp-tasks/stageGitHub/tmp/**/*
 !gulp-tasks/stageGitHub/tmp/.gitkeep
+# Local Netlify folder
+.netlify

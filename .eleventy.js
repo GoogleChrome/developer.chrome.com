@@ -39,6 +39,7 @@ const includeRaw = require('./site/_shortcodes/includeRaw');
 const {LanguageList} = require('./site/_shortcodes/LanguageList');
 const {Partial} = require('./site/_shortcodes/Partial');
 const {BrowserCompat} = require('webdev-infra/shortcodes/BrowserCompat');
+const {ImplementationStatus} = require('webdev-infra/shortcodes/ImplementationStatus');
 
 // Transforms
 const {domTransformer} = require('./site/_transforms/dom-transformer-pool');
@@ -151,6 +152,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addShortcode('LanguageList', LanguageList);
   eleventyConfig.addShortcode('BrowserCompat', BrowserCompat);
   eleventyConfig.addNunjucksAsyncShortcode('Partial', Partial);
+  eleventyConfig.addNunjucksAsyncShortcode('ImplementationStatus', ImplementationStatus);
 
   // Empty shortcodes. They are added for backward compatibility with web.dev.
   // They will not render any html, but will prevent the build from failing.

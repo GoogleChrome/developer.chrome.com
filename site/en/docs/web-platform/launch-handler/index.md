@@ -18,17 +18,7 @@ the File Handing API, this also enqueues a `LaunchParams` object in the launched
 
 ## Current status
 
-<div class="table-wrapper scrollbar">
-
-| Step                                     | Status                   |
-| ---------------------------------------- | ------------------------ |
-| 1. Create explainer                      | [Complete][explainer]    |
-| 2. Create initial draft of specification | Not started              |
-| 3. Gather feedback & iterate on design   | [In progress](#feedback) |
-| 4. **Origin trial**                      | [**Started**][ot]        |
-| 5. Launch                                | Not started              |
-
-</div>
+{% ImplementationStatus '5722383233056768', '2978005253598740481' %}
 
 ### Try out the Launch Handler API
 

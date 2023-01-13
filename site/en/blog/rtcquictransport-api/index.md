@@ -248,40 +248,7 @@ against the QUIC handshake.
 
 ## Current status {: #status }
 
-<table>
-    <thead>
-        <tr>
-            <th>Step</th>
-            <th>Status</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1. Create explainer</td>
-            <td><a href="https://docs.google.com/document/d/12oNEcgjAjQERMvATCVCWpoTxNU47NRUzxCK5g0FysTk/edit">Complete</a></td>
-        </tr>
-        <tr>
-            <td>**2a. RTCQuicTransport Specification **</td>
-            <td><a href="https://github.com/w3c/p2p-webtransport">**In Progress**</a></td>
-        </tr>
-        <tr>
-            <td>**2b. RTCIceTransport Specification **</td>
-            <td><a href="https://github.com/w3c/webrtc-ice">**In Progress**</a></td>
-        </tr>
-        <tr>
-            <td><strong>**3. Gather feedback & iterate on design**</strong></td>
-            <td><a href="/rtcquictransport-api#feedback">**In Progress**</a></td>
-        </tr>
-        <tr>
-            <td>4. Origin trial</td>
-            <td>Starts in Chrome 73!</td>
-        </tr>
-        <tr>
-            <td>5. Launch</td>
-            <td>Not started</td>
-        </tr>
-    </tbody>
-</table>
+{% ImplementationStatus '6311472179183616' %}
 
 ## Helpful Links {: #helpful }
 

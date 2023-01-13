@@ -108,17 +108,17 @@ of use cases for all three features.
 
 ## Current status {: #status }
 
-<div>
+### Face Detection API
 
-| Step                                       | Status                                                                                                                                                                                                       |
-| ------------------------------------------ |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1. Create explainer                        | [Complete][explainer]                                                                                                                                                                                        |
-| 2. Create initial draft of specification   | [In Progress][spec]                                                                                                                                                                                          |
-| **3. Gather feedback & iterate on design** | [**In progress**](#feedback)                                                                                                                                                                                 |
-| 4. Origin trial                            | [Complete](/origintrials/#/view_trial/-2341871806232657919/)                                                                                                                                                 |
-| **5. Launch**                              | Barcode detection **Complete**<br>Face Detection [In Progress](https://www.chromestatus.com/feature/5678216012365824)<br>Text Detection [In Progress](https://www.chromestatus.com/feature/5644087665360896) |
+{% ImplementationStatus '5678216012365824' %}
 
-</div>
+### Text Detection API
+
+{% ImplementationStatus '5644087665360896' %}
+
+### Barcode Detection API
+
+{% ImplementationStatus '4757990523535360', '-2341871806232657919' %}
 
 ## How to use the Shape Detection API {: #use }
 

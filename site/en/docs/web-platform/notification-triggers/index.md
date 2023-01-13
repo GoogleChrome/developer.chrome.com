@@ -68,15 +68,7 @@ stream is about to begin.
 Time zone conversion sites can use time-based notification triggers to let their users schedule
 alarms for telephone conferences or video calls.
 
-## Current status {: #status }
-
-| Step                                          | Status                       |
-| --------------------------------------------- | ---------------------------- |
-| 1. Create explainer                           | [Complete][explainer]        |
-| 2. Create initial draft of specification      | Not started                  |
-| 3. **Gather feedback and iterate on design.** | **[In progress](#feedback)** |
-| 4. Origin trial                               | Complete                     |
-| 5. Launch                                     | Not started                  |
+{% ImplementationStatus '5133150283890688', '6883752030435803137' %}
 
 ## How to use notification triggers {: #use }
 

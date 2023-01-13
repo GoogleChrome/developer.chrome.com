@@ -26,36 +26,7 @@ easier to:
 
 ## Current status {: #status }
 
-<table>
-<thead>
-    <tr>
-    <th>Step</th>
-    <th>Status</th>
-    </tr>
-</thead>
-<tbody>
-    <tr>
-    <td>1. Create explainer</td>
-    <td><a href="https://wicg.github.io/cookie-store/explainer.html">Complete</a></td>
-    </tr>
-    <tr>
-    <td>2. Create initial draft of specification</td>
-    <td><a href="https://wicg.github.io/cookie-store/">Complete</a></td>
-    </tr>
-    <tr>
-    <td><strong>**3. Gather feedback & iterate on spec**</strong></td>
-    <td><a href="https://developers.google.com/web/updates/2018/09/asynchronous-access-to-http-cookies#feedback">**In progress**</a></td>
-    </tr>
-    <tr>
-    <td>4. Origin trial</td>
-    <td><a href="https://developers.google.com/web/updates/2018/09/asynchronous-access-to-http-cookies#origin-trial">Paused</a></td>
-    </tr>
-    <tr>
-    <td>5. Launch</td>
-    <td>Not started</td>
-    </tr>
-</tbody>
-</table>
+{% ImplementationStatus '5658847691669504' %}
 
 ## How do I use the async cookie store? {: #how-do-i-use }
 

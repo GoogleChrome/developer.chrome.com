@@ -35,17 +35,7 @@ Examples of sites that may use this API include:
 
 ## Current status {: #status }
 
-<div>
-
-| Step                                     | Status                   |
-| ---------------------------------------- | ------------------------ |
-| 1. Create explainer                      | [Complete][explainer]    |
-| 2. Create initial draft of specification | [Complete][specification]|
-| 3. Gather feedback & iterate on design   | [In progress](#feedback) |
-| 4. Origin trial                          | Completed                |
-| 5. **Launch**                            | **Chromium 94**            |
-
-</div>
+{% ImplementationStatus '4590256452009984' %}
 
 ## How to use the Idle Detection API {: #use }
 

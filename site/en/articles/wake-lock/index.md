@@ -71,17 +71,7 @@ Read more in the 🍰&nbsp;[Betty Crocker case study](https://web.dev/betty-croc
 
 ## Current status {: #status }
 
-<div>
-
-| Step                                       | Status                       |
-| ------------------------------------------ | ---------------------------- |
-| 1. Create explainer                        | N/A                          |
-| 2. Create initial draft of specification   | [Complete][spec-ed]          |
-| 3. Gather feedback and iterate design      | [Complete](#feedback)        |
-| 4. Origin trial                            | Complete                     |
-| **5. Launch**                              | **Complete**                 |
-
-</div>
+{% ImplementationStatus '4636879949398016' %}
 
 {% Aside %}
 Big thanks to the folks at Intel, specifically Mrunal Kapade and Raphael Kubo

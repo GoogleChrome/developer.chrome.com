@@ -37,17 +37,7 @@ of hardware devices.
 
 ## API status
 
-<div>
-
-| Step                                     | Status                                                                       |
-| ---------------------------------------- | ---------------------------------------------------------------------------- |
-| 1. Create explainer                      | [Complete](https://github.com/oyiptong/compute-pressure/blob/main/README.md) |
-| 2. Create initial draft of specification | [In Progress](https://github.com/WICG/compute-pressure/)                     |
-| 3. Gather feedback and iterate on design   | In progress                                                                  |
-| 4. Origin trial                          | Complete                                                                     |
-| 5. Launch                                | Not started                                                                  |
-
-</div>
+{% ImplementationStatus '5597608644968448' %}
 
 ## API Availability
 

@@ -63,17 +63,7 @@ communication between the website and the device that it is controlling.
 
 ## Current status {: #status }
 
-<div>
-
-| Step                                         | Status                       |
-| -------------------------------------------- | ---------------------------- |
-| 1. Create explainer                          | [Complete][explainer]        |
-| 2. Create initial draft of specification     | [Complete][spec]             |
-| 3. Gather feedback & iterate on design       | [Complete](#feedback)        |
-| 4. Origin trial                              | [Complete][ot]               |
-| **5. Launch**                                | **Complete**                 |
-
-</div>
+{% ImplementationStatus '6577673212002304', '2992641952387694593' %}
 
 ## Using the Web Serial API {: #use }
 
