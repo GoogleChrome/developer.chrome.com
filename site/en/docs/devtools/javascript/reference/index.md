@@ -25,7 +25,7 @@ To learn how to set breakpoints, see [Pause Your Code With Breakpoints][2].
 
 ### Check values when paused {: #inline-eval }
 
-While the execution is paused, the debugger evaluates all variables, constants, and objects up to a breakpoint and shows their current values inline next to the corresponding declarations.
+While the execution is paused, the debugger evaluates all variables, constants, and objects within the current function up to a breakpoint. The debugger shows the current values inline next to the corresponding declarations.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/mUySGJfdYgR3URwClr67.png", alt="Inline evaluations displayed next to declarations.", width="800", height="363" %}
 
