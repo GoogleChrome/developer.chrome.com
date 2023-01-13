@@ -191,6 +191,15 @@ redirects:
 
 # DevTools redirects
 
+- from: /docs/devtools/evaluate-performance/
+  to: /docs/devtools/performance/
+
+- from: /docs/devtools/evaluate-performance/reference/
+  to: /docs/devtools/performance/reference/
+
+- from: /docs/devtools/evaluate-performance/performance-reference/
+  to: /docs/devtools/performance/timeline-reference/
+
 - from: /docs/devtools/device-mode/geolocation/
   to: /docs/devtools/sensors/#geolocation
 
