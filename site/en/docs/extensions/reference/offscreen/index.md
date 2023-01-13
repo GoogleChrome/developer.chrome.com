@@ -3,7 +3,7 @@ api: offscreen
 ---
 
 ## Manifest
-You must declare the "offscreen" permission in the [extension manifest][1] to use the input.ime API. For example:
+You must declare the "offscreen" permission in the [extension manifest][1] to use the Offscreen API. For example:
 
 ```json
 {
