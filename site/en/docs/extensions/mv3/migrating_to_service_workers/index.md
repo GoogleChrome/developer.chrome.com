@@ -261,8 +261,8 @@ For extensions that need to unobtrusively utilize APIs that require DOM access w
 // for Manifest V3 service workers
 chrome.offscreen.createDocument({
   url: chrome.runtime.getURL('offscreen.html'),
-  reasons: ['TESTING'],
-  justification: 'ignored',
+  reasons: ['CLIPBOARD'],
+  justification: 'testing the offscreen API',
 });
 ```
 
