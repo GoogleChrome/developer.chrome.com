@@ -66,7 +66,11 @@ Prefetching fetches the main resource for a future navigation, keeping it in mem
 
 ### Use Non-Transitional IDNA Processing in URLs
 
-Enable IDNA 2008 in Non-Transitional Mode for URL processing, aligning Chrome's behavior with Firefox and Safari. Chrome currently uses IDNA 2008 in Transitional Mode in URL processing. The main difference between Transitional and Non-Transitional Mode is the handling of four characters known as deviation characters: ÃŸ (LATIN SMALL LETTER SHARP S), Ï‚ (GREEK SMALL LETTER FINAL SIGMA), ZWJ (Zero width joiner) and ZWNJ (Zero width non-joiner). In Transitional mode, deviation characters are handled the same as IDNA2003: ÃŸ is mapped to ss, Ï‚ is mapped to Ïƒ, and ZWJ and ZWNJ are deleted. In Non-Transitional mode, domains containing these characters are allowed in domain names without mapping, and thus can resolve to different IP addresses. For example, typing `faÃŸ.de` in Chrome and Firefox opens different sites today. Enabling Non-Transitional IDNA in Chrome will allow deviation characters in domain names. Firefox and Safari already made this change in 2016 and continue to use Non-Transitional URL processing.
+Chrome currently uses IDNA 2008 in Transitional Mode in URL processing. The main difference between Transitional and Non-Transitional Mode is the handling of four characters known as deviation characters: `ß` (LATIN SMALL LETTER SHARP S), `ς` (GREEK SMALL LETTER FINAL SIGMA), `ZWJ` (Zero width joiner) and `ZWNJ` (Zero width non-joiner).
+
+In Transitional mode, deviation characters are handled the same as IDNA2003: `ß` is mapped to `ss`, `ς` is mapped to `σ`, and `ZWJ` and `ZWNJ` are deleted. In Non-Transitional mode, domains containing these characters are allowed in domain names without mapping, and thus can resolve to different IP addresses. For example, typing `"faß.de"` in Chrome and Firefox opens different sites today.
+
+Enabling Non-Transitional IDNA in Chrome will allow deviation characters in domain names. Firefox and Safari already made this change in 2016 and continue to use Non-Transitional URL processing.
 
 ### Web app launch handler
 
