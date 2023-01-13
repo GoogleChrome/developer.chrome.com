@@ -259,12 +259,11 @@ For extensions that need to unobtrusively utilize APIs that require DOM access w
 ```js
 // background.js
 // for Manifest V3 service workers
-chrome.offscreen.createDocument(
-        {
-          url: chrome.runtime.getURL('offscreen.html'),
-          reasons: ['TESTING'],
-          justification: 'ignored',
-        });
+chrome.offscreen.createDocument({
+  url: chrome.runtime.getURL('offscreen.html'),
+  reasons: ['TESTING'],
+  justification: 'ignored',
+});
 ```
 
 [2]: https://developers.google.com/web/fundamentals/primers/service-workers/
