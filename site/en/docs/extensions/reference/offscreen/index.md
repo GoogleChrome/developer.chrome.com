@@ -25,12 +25,11 @@ Pages loaded as offscreen documents are handled differently from other types of 
 The following methods create and close an offscreen document. Only a single Document can be open at a time. 
 
 ```js
-     chrome.offscreen.createDocument(
-            {
-              url: chrome.runtime.getURL('off_screen.html'),
-              reasons: ['CLIPBOARD'],
-              justification: 'ignored',
-            });
+chrome.offscreen.createDocument({
+  url: chrome.runtime.getURL('off_screen.html'),
+  reasons: ['CLIPBOARD'],
+  justification: 'ignored',
+});
 
 chrome.offscreen.closeDocument()
 ```
