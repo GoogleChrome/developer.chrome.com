@@ -5,7 +5,7 @@ authors:
   - jecelynyeen
   - sofiayem
 date: 2021-11-02
-updated: 2022-11-29
+updated: 2023-01-09
 description: "Record, replay, measure user flows, and edit their steps with the Recorder panel."
 tags:
   - test
@@ -164,21 +164,22 @@ The **selector** is editable too.  For example, if you want to select *Mocha* in
 
 ### Add and remove steps {: #add-and-remove-steps }
 
-There are options to add and remove steps too. This is useful if you want to add an extra step or remove an accidentally added step. Instead of re-recording the user flow, you can just edit it. Click on the **3-dot** kebab menu next to the step to open the menu. 
+There are options to add and remove steps too. This is useful if you want to add an extra step or remove an accidentally added step. Instead of re-recording the user flow, you can just edit it:
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/rs8gfXvOFh0Jrnw3F15j.png", alt="DevTools UI for coffee cart, including the menu for the Scroll event expanded to reveal three options: Add step before, add step after, and remove step.", width="800", height="663" %}
+1. Right-click the step you want to edit or click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N7wEDmtW9lnrSxPRupMa.svg", alt="Three-dot menu.", width="24", height="24" %} three-dot icon next to it. 
 
-1. For example, the *Scroll* event after the *Mocha* step is not necessary. You can select **Remove step** to remove it.
-2. Say you want to **wait until the 9 coffees** display on the page before performing any steps.
-3. In the *Mocha* step menu, select **Add step before**.
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/jEOHv9iiVfqMQvKRbueR.png", alt="A new step named Assert Element was added and can now be edited.", width="800", height="663" %} 
-5. In *Assert Element*, edit the new step with the following details:
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/V0sAMnmcK2cheOc26e1y.png", alt="The drop-down menu of a step with options to remove and add a steps before or after.", width="800", height="863" %}
+
+1. You can select **Remove step** to remove it. For example, the *Scroll* event after the *Mocha* step is not necessary.
+1. Say, you want to **wait until the 9 coffees** display on the page before performing any steps. In the *Mocha* step menu, select **Add step before**.
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/jEOHv9iiVfqMQvKRbueR.png", alt="A new step named Assert Element was added and can now be edited.", width="800", height="663" %}
+1. In *Assert Element*, edit the new step with the following details:
     - type: **waitForElement**
     - selector #1: **.cup**
     - operator: **==** (click **add operator** button)
     - count: **9** (click **add count** button)
    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/zeK91O21jvc5OD9HuovR.png", alt="The new step for coffee checkout has been updated with the aforementioned details.", width="800", height="663" %}
-6. {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Replay.", width="20", height="20" %}[Replay](#replay) the flow now to see the changes.
+1. {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Replay.", width="20", height="20" %}[Replay](#replay) the flow now to see the changes.
 
 ## Next steps {: #next }
 
