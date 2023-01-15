@@ -118,7 +118,7 @@ An extension to speculation rules syntax that lets the browser obtain URLs for s
 
 Deprecation trial to retain legacy behavior of the `X-Requested-Header` on Android WebView. This header is currently set with the package name of the embedding app as the value, but this behavior will be removed in a slow roll-out. During the deprecation this trial will allow site owners to continue to receive the header while migrating away from using it. 
 
-More information about this deprecation will follow in a separate blog post. 
+More information about this deprecation will follow in a separate blog post. [Register for the X-Requested-With deprecation trial here](/origintrials/#/view_trial/1390486384950640641).
 
 ## Deprecations and removals
 
