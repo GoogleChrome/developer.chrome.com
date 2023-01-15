@@ -45,7 +45,7 @@ const translation = {
     zh: 'DevTools 新功能（Chrome {{version}}）',
   },
   thankful: {
-    es: '*Gracias  por la traducción [Miguel Ángel](https://midu.dev) y por la revisión [Carlos Caballero](https://carloscaballero.io).*',
+    es: '*Gracias por la traducción [Miguel Ángel](https://midu.dev) y por la revisión [Carlos Caballero](https://carloscaballero.io).*',
     ja: '*翻訳者の [technohippy](https://github.com/technohippy) さん、レビュアーの [yoichiro](https://github.com/yoichiro) さん、 [lacolaco](https://github.com/lacolaco) さん、 [yoshiko-pg](https://github.com/yoshiko-pg) さんに感謝いたします。*',
     ko: '*이 게시글의 번역에는 [최원영](https://www.linkedin.com/in/toruchoi)님이 참여하셨으며, [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님과 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다.*',
     pt: '*Tradução realizada por [Alvaro Camillo Neto](https://www.linkedin.com/in/alvarocamillont/) . Revisão por [Lucas Santos](https://lsantos.dev).*',
@@ -207,12 +207,19 @@ export async function createWndtOutline(version, langs) {
     });
 
     if (lang !== 'en') {
-      langOutput = `<!-- ${langOutput} -->`;
+      langOutput = `{# ${langOutput} #}`;
     }
 
     const outlineFileName = nunjucks.renderString(outlineDest, {lang});
-    const contentHolder = '{{content}}';
-    const out = nunjucks.render(outlineFileName, {
+    let outlineFileContent = await readFile(outlineFileName, 'utf-8');
+
+    const contentHolder = '{# $content #}';
+    outlineFileContent = outlineFileContent.replace(
+      contentHolder,
+      '{{ content }}'
+    );
+
+    const out = nunjucks.renderString(outlineFileContent, {
       content: contentHolder + '\n\n' + langOutput,
     });
 
