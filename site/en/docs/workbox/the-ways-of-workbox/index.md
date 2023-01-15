@@ -69,7 +69,7 @@ To start using the CLI, run the wizard with `npx workbox wizard`. The wizard wil
 
 ```js
 // A config for `generateSW`
-export default {
+module.exports = {
   globDirectory: 'dist/',
   globPatterns: [
     '**/*.{css,woff2,png,svg,jpg,js}'
