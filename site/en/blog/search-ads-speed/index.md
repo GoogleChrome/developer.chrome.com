@@ -21,7 +21,7 @@ and developers pay attention to
 [user-centric performance metrics](https://web.dev/user-centric-performance-metrics/)
 and use tools such as [Lighthouse](/docs/lighthouse/) and
 [PageSpeed Insights](https://web.dev/whats-new-pagespeed-insights/), and real-world field data
-(e.g. see [Chrome User Experience Report](/docs/crux/about/))
+(e.g. see [Chrome User Experience Report](/docs/crux/))
 to diagnose and improve user experiences.
 
 ## Speed is now used as a ranking factor for mobile searches
@@ -88,12 +88,13 @@ Looking for tools and tips on which tools and metrics to use, or how to
 evaluate and make a business case for performance? Check out our ["How to Think about Speed Tools"](https://web.dev/speed-tools/) guide for a
 hands-on overview.
 
-<a href="/performance-speed-tools/">
+<a href="/https://web.dev/speed-tools/">
 {% Img src="image/C47gYyWYVMMhDmtYSLOWazuyePF2/x79VpgagKcAAlHH5avMU.jpeg", alt="Speed Tools infographic", width="800", height="399" %}
 </a>
 
 Looking for tools and tips on which tools and metrics to use, or how to
 evaluate and make a business case for performance? Check out our
+
 [How to Think about Speed Tools](https://web.dev/speed-tools/)
 guide for a hands-on overview. Or, if you're looking for a fast-by-default
 framework for you pages, take a look at [AMP](https://www.ampproject.org/).
