@@ -4,7 +4,7 @@ Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no"
 
 {# $content #}
 
-{# ### Chrome 109 {: #chrome109 }
+# ### Chrome 109 {: #chrome109 }
 
 * [Gravador: opção "copiar como" para etapas, reprodução na página, no menu de contexto da etapa](/pt/blog/new-in-devtools-109/#recorder)
 * [Mostra os nomes das funções reais nas gravações da performance](/pt/blog/new-in-devtools-109/#performance)
@@ -13,7 +13,6 @@ Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no"
 * [Outros destaques](/pt/blog/new-in-devtools-109/#misc)
 * [[Experimental] UX aprimorado no gerenciamento de breakpoints](/pt/blog/new-in-devtools-109/#breakpoint-redesign)
 * [[Experimental] Formatação automática (pretty print) no mesmo painel](/pt/blog/new-in-devtools-109/#pretty-print)
- #}
 
 ### Chrome 108 {: #chrome108 }
 
