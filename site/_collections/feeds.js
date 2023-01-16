@@ -62,10 +62,18 @@ module.exports = collection => {
   /** @type {EleventyCollectionItem[]} */
   const blog = [];
 
+  /** @type {EleventyCollectionItem[]} */
+  const articles = [];
+
   for (const post of posts) {
     // If post is a blog post, push it into blog array.
     if (post.data.type === 'blogPost' && blog.length < MAX_POSTS) {
       blog.push(post);
+    }
+
+    // If post is a article post, push it into article array.
+    if (post.data.type === 'article' && articles.length < MAX_POSTS) {
+      articles.push(post);
     }
 
     const postTags = tagsForData(post.data);
@@ -91,6 +99,12 @@ module.exports = collection => {
   // tagged feeds of the same name.
   /** @type {FeedsCollection} */
   const specialFeeds = {
+    articles: {
+      items: articles,
+      permalink: '/feeds/articles.xml',
+      title: i18n('i18n.common.articles'),
+      url: '/articles',
+    },
     blog: {
       items: blog,
       permalink: '/feeds/blog.xml',
