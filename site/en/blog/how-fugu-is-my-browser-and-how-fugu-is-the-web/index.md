@@ -58,17 +58,17 @@ likewise tongue-in-cheek name, aptly called
 When you install this extension from the Chrome Web Store and browse the web, you will notice that
 the Fugu fish counter on some sites displays a badge with the detected Project Fugu APIs. For
 example, if you browse to [Excalidraw](https://excalidraw.com/), the counter jumps to 9, since
-Excalidraw uses nine detectable Project Fugu APIs, namely
+Excalidraw uses nine detectable Project Fugu APIs. These are:
 
 1. [CacheStorage](https://developer.mozilla.org/docs/Web/API/CacheStorage)
 1. [Service Worker](https://developer.mozilla.org/docs/Web/API/Service_Worker_API)
 1. [Web Share](https://web.dev/web-share/)
 1. [Async Clipboard](https://web.dev/async-clipboard/)
 1. [Async Clipboard (Images)](https://web.dev/async-clipboard/)
-1. [File System Access](https://web.dev/file-system-access/)
-1. [Web Share Target](https://web.dev/web-share-target/)
-1. [Web Share Target (Files)](https://web.dev/web-share-target/)
-1. [File Handling](https://web.dev/file-handling/)
+1. [File System Access](/articles/file-system-access/)
+1. [Web Share Target](/articles/web-share-target/)
+1. [Web Share Target (Files)](/articles/web-share-target/)
+1. [File Handling](/articles/file-handling/)
 
 <figure>
   {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/nqW8WRlqQap8cY7sFxRw.png", alt="The extension 'How Fugu is the Web' invoked on the site https://excalidraw.com/.", width="800", height="676" %}
