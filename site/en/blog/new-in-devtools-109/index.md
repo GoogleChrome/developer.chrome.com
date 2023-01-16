@@ -122,7 +122,7 @@ This experimental UX redesign brings structure to the **Breakpoints** pane and a
 
 These are some highlights:
 
-- Both pause options are in the **Breakpoints** pane and labeled with text to make it more self-explanatory.
+- Both pause options are in the **Breakpoints** pane. They have explicit text labels that make the options self-explanatory.
 - Breakpoints are grouped by file, ordered by line/column number, and collapsible.**
 - New options to remove and edit breakpoint when hovering over a breakpoint or file name in the **Breakpoint** pane.
 
