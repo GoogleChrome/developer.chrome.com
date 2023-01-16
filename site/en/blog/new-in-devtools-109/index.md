@@ -124,7 +124,7 @@ These are some highlights:
 
 - Both pause options are in the **Breakpoints** pane. They have explicit text labels that make the options self-explanatory.
 - Breakpoints are grouped by file, ordered by line or column number. You can collapse and expand them.**
-- New options to remove and edit breakpoint when hovering over a breakpoint or file name in the **Breakpoint** pane.
+- New options to remove and edit a breakpoint when hovering over the breakpoint or a file name in the **Breakpoint** pane.
 
 Read the full changes in our [RFC (closed)](https://github.com/ChromeDevTools/rfcs/discussions/3) and leave your feedback [here](https://crbug.com/1394686).
 
@@ -140,9 +140,9 @@ Chromium issues: [1346231](https://crbug.com/1346231), [1324904](https://crbug.c
 To enable the experiment, check **Automatically pretty print in the Sources panel** under **Settings** > **Experiments**.
 {% endAside %}
 
-The **Sources** panel now automatically pretty print minified source files in-place. You can click on the **pretty print button `{ }` to underdo it.
+The **Sources** panel now automatically pretty-prints minified source files in place. You can click the **pretty print** button `{ }` to undo it.
 
-Previously, the **Sources** panel shows minified content by default. Developers need to click on the pretty print button manually to format the content. On top of that, the pretty printed content is not displayed in the same file, but in another `::formatted` tab.
+Previously, the **Sources** panel showed minified content by default. You had to click the pretty print button manually to format the content. On top of that, the pretty-printed content wasn't displayed in the same file, but in another `::formatted` tab.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/twp21SJIisjYpnCWRbWi.png", alt="Show a minified file before and after automatic in-place pretty print.", width="800", height="501" %}
 
