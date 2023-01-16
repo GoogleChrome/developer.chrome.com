@@ -9,7 +9,8 @@
 
     {% include 'partials/meta.njk' %}
     {% block feed %}
-      <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feeds/blog.xml">
+      <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - {{ 'i18n.common.blog' | i18n(locale) }}" href="{{ site.url }}/feeds/blog.xml">
+      <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - {{ 'i18n.common.articles' | i18n(locale) }}" href="{{ site.url }}/feeds/articles.xml">
     {% endblock %}
 
     <link rel="preload" as="font" crossorigin href="/fonts/google-sans-v2003/regular/latin.woff2">
