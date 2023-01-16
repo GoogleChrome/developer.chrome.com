@@ -85,7 +85,7 @@ chrome.runtime.onInstalled.addListener(() => {
 The first event our service worker will listen for is
 [`runtime.onInstalled()`][runtime-oninstalled]. This method allows the extension to set an initial
 state or complete some tasks on installation. Extensions can use the [Storage API][api-storage] and
-[IndexedDB][mdn-indexeddb] to store the application state. In this case, though, since we're only handling two states, we will use the the _action's badge_ text itself to track whether the extension is 'ON' or 'OFF'.
+[IndexedDB][mdn-indexeddb] to store the application state. In this case, though, since we're only handling two states, we will use the _action's badge_ text itself to track whether the extension is 'ON' or 'OFF'.
 
 {% Aside 'key-term' %}
 
