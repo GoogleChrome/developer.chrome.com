@@ -1,7 +1,9 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: "How Fugu is my browser?" and "How Fugu is the web?"
-subhead: 'A browser testing site and a browser extension focused on the web's capabilities.'
+title: '"How Fugu is my browser?" and "How Fugu is the web?"'
+subhead: >
+  To answer these questions, check out a browser testing site and a browser extension, both focused
+  on the web's capabilities.
 date: 2023-01-16
 # updated: 2023-01-16
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/8FZcBmFowbDKWxpkOytx.jpg
@@ -16,10 +18,9 @@ tags:
 
 Many developers and executives alike don't realize how capable the modern web has become.
 Double-clicking an image file so it opens in an associated PWA, making modifications, saving the
-changes back to the file, and then copying the image contents over into another app, or sharing it
-to an email client, is a flow that wasn't possible on the web until recently. But APIs developed in
-the context of [Project Fugu](/blog/fugu-status/) 🐡 such as
-[File Handling](/articles/file-handling/),
+changes back to the file, and then copying the image contents over into another app or sharing it to
+an email client, is a flow that wasn't possible on the web until recently. But APIs developed in the
+context of [Project Fugu](/capabilities/) 🐡 such as [File Handling](/articles/file-handling/),
 [File System Access](/articles/file-system-access/),
 [Async Clipboard](https://web.dev/async-clipboard/), and [Web Share](https://web.dev/web-share/)
 have made this flow possible.
@@ -27,9 +28,9 @@ have made this flow possible.
 With this in mind, I have developed a test application with the tongue-in-cheek name
 [How Fugu is my browser?](https://howfuguismybrowser.dev/) that you can take for a spin to see what
 Project Fugu APIs your browser of choice supports. Since not all features are exposed on all
-platforms—for example, the [Contact Picker API](/articles/contact-picker/) is currently only
-exposed on mobile—it's technically impossible to reach a score of 100% if you test on desktop (and
-vice versa), so regard it as more like a playful competition than absolute science. For each tested
+platforms—for example, the [Contact Picker API](/articles/contact-picker/) is currently only exposed
+on mobile—it's technically impossible to reach a score of 100% if you test on desktop (and vice
+versa), so regard it as more like a playful competition than absolute science. For each tested
 feature, there's a link to the relevant documentation so you can learn more about the feature. Where
 feature detection is possible, there is also a note on whether the feature is supported by your
 browser or not, and finally
@@ -51,8 +52,8 @@ screenshot, and then share it manually on your online social network of choice.
 
 Knowing how Fugu your browser is is only half of the equation. Equally interesting is knowing how
 Fugu the web is. To find an answer to this question, I have developed a browser extension with a
-likewise tongue-in-cheek
-name—[How Fugu is the web?](https://chrome.google.com/webstore/detail/how-fugu-is-the-web/apcghpabklkjjgpfoplnglnjghonjhdl).
+likewise tongue-in-cheek name, aptly called
+[How Fugu is the web?](https://chrome.google.com/webstore/detail/how-fugu-is-the-web/apcghpabklkjjgpfoplnglnjghonjhdl).
 
 When you install this extension from the Chrome Web Store and browse the web, you will notice that
 the Fugu fish counter on some sites displays a badge with the detected Project Fugu APIs. For
@@ -61,16 +62,13 @@ Excalidraw uses nine detectable Project Fugu APIs, namely
 
 1. [CacheStorage](https://developer.mozilla.org/docs/Web/API/CacheStorage)
 1. [Service Worker](https://developer.mozilla.org/docs/Web/API/Service_Worker_API)
-1. [Web Share](https://web.dev/web-share/), [Async Clipboard](https://web.dev/async-clipboard/)
+1. [Web Share](https://web.dev/web-share/)
+1. [Async Clipboard](https://web.dev/async-clipboard/)
 1. [Async Clipboard (Images)](https://web.dev/async-clipboard/)
 1. [File System Access](https://web.dev/file-system-access/)
 1. [Web Share Target](https://web.dev/web-share-target/)
 1. [Web Share Target (Files)](https://web.dev/web-share-target/)
 1. [File Handling](https://web.dev/file-handling/)
-
-Again, you can see if your browser supports the
-feature and click through to documentation by clicking on **Details**, and also directly check out
-the relevant source code snippet by clicking on the source code link in the bullet list.
 
 <figure>
   {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/nqW8WRlqQap8cY7sFxRw.png", alt="The extension 'How Fugu is the Web' invoked on the site https://excalidraw.com/.", width="800", height="676" %}
@@ -78,6 +76,11 @@ the relevant source code snippet by clicking on the source code link in the bull
     Have you ever wondered: "<a href="https://chrome.google.com/webstore/detail/how-fugu-is-the-web/apcghpabklkjjgpfoplnglnjghonjhdl">How Fugu is the web?</a>"
   </figcaption>
 </figure>
+
+As before, you can **Share** the results directly if your browser supports the Web Share API, or
+manually if not. To see if your browser supports a feature, read the relevant documentation by
+clicking on **Details**. You can also directly check out the relevant source code snippet by
+clicking on the source code link in the bullet list.
 
 ## Conclusions
 
@@ -95,10 +98,11 @@ some cases now a web application can fill in. An example of such is [Wooting](ht
 [WebHID API](https://web.dev/hid/).
 
 Similarly, running [How Fugu is my browser?](https://howfuguismybrowser.dev/) on each new version of
-your browser of choice is very satisfying, since with almost every new browser release, the progress
-bar moves up a little when your browser has gained a new capability or two.
+your browser of choice (or just any other browser or embedded WebView) is very satisfying, since
+with almost every new browser release, the progress bar moves up a little when your browser has
+gained a new capability or two.
 
 Building for the web is more viable than ever, and new features keep being added to the platform at
-an amazing pace. The web is not your only choice for building your app, but I hope with this article
-I have convinced you to give the [capable web](/blog/fugu-showcase/) a
-second look if you have not considered it so far.
+an amazing pace. The web is not your only choice for building an app, but I hope with this testing
+site and the browser extension I have convinced you to give the [capable web](/blog/fugu-showcase/)
+a second look if you have not considered it so far.
