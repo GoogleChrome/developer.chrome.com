@@ -25,12 +25,10 @@ context of [Project Fugu](/capabilities/) 🐡 such as [File Handling](/articles
 [Async Clipboard](https://web.dev/async-clipboard/), and [Web Share](https://web.dev/web-share/)
 have made this flow possible.
 
-With this in mind, I have developed a test application with the tongue-in-cheek name
-[How Fugu is my browser?](https://howfuguismybrowser.dev/) that you can take for a spin to see what
-Project Fugu APIs your browser of choice supports. Since not all features are exposed on all
+To learn what is possible, check out the application [How Fugu is my browser?](https://howfuguismybrowser.dev/) and see what Project Fugu APIs your browser of choice supports. Not all features are exposed on all
 platforms—for example, the [Contact Picker API](/articles/contact-picker/) is currently only exposed
-on mobile—it's technically impossible to reach a score of 100% if you test on desktop (and vice
-versa), so regard it as more like a playful competition than absolute science. For each tested
+on mobile—therefore it's technically impossible to reach a score of 100% if you test on desktop (and vice
+versa). Therefore, regard this test as a playful competition rather than absolute science. For each tested
 feature, there's a link to the relevant documentation so you can learn more about the feature. Where
 feature detection is possible, there is also a note on whether the feature is supported by your
 browser or not, and finally
@@ -42,20 +40,17 @@ If your browser supports the Web Share API, you can share how Fugu your browser 
 screenshot, and then share it manually on your online social network of choice.
 
 <figure>
-  {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/8z3ZhxPAq5NxfXEss1XS.png", alt="Screenshot of the site https://howfuguismybrowser.dev/.", width="800", height="649" %}
+  {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/8z3ZhxPAq5NxfXEss1XS.png", alt="The site at https://howfuguismybrowser.dev/.", width="800", height="649" %}
   <figcaption>
     Have you ever wondered: "<a href="https://howfuguismybrowser.dev/">How Fugu is my browser?</a>"
   </figcaption>
 </figure>
 
-## How Fugu is the Web?
+## How Fugu is the web?
 
-Knowing how Fugu your browser is is only half of the equation. Equally interesting is knowing how
-Fugu the web is. To find an answer to this question, I have developed a browser extension with a
-likewise tongue-in-cheek name, aptly called
-[How Fugu is the web?](https://chrome.google.com/webstore/detail/how-fugu-is-the-web/apcghpabklkjjgpfoplnglnjghonjhdl).
+The companion browser extension named [How Fugu is the web?](https://chrome.google.com/webstore/detail/how-fugu-is-the-web/apcghpabklkjjgpfoplnglnjghonjhdl) will help you to find out which Fugu APIs are used by the sites you are visiting.
 
-When you install this extension from the Chrome Web Store and browse the web, you will notice that
+Install this extension from the Chrome Web Store and browse the web, then notice how
 the Fugu fish counter on some sites displays a badge with the detected Project Fugu APIs. For
 example, if you browse to [Excalidraw](https://excalidraw.com/), the counter jumps to 9, since
 Excalidraw uses nine detectable Project Fugu APIs. These are:
@@ -98,7 +93,7 @@ some cases now a web application can fill in. An example of such is [Wooting](ht
 [WebHID API](https://web.dev/hid/).
 
 Similarly, running [How Fugu is my browser?](https://howfuguismybrowser.dev/) on each new version of
-your browser of choice (or just any other browser or embedded WebView) is very satisfying, since
+your browser of choice (or just any other browser or embedded WebView) is very satisfying. With
 with almost every new browser release, the progress bar moves up a little when your browser has
 gained a new capability or two.
 
