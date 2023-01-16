@@ -55,7 +55,7 @@ and improve
 
 Some frameworks like Preact
 [ship with tools](https://github.com/developit/preact-render-to-string)
-that address server-side rendering. If your framework has a prendering
+that address server-side rendering. If your framework has a prerendering
 solution, please stick with that. There's no reason to bring another tool
 (headless Chrome and Puppeteer) into the mix.
 
@@ -294,7 +294,7 @@ What about performance numbers? On one of my
 ([code](https://github.com/ebidel/devwebfeed/blob/master/server.mjs)), headless
 Chrome takes about 1s to render the page on the server. Once the page is cached,
 DevTools **3G Slow emulation** puts
-[FCP](/web/fundamentals/performance/user-centric-performance-metrics) at
+[FCP](https://web.dev/user-centric-performance-metrics/) at
 **8.37s faster** than the client-side version.
 
 <table>

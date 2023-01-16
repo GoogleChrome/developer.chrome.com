@@ -21,8 +21,8 @@ The [Private Aggregation API]( /docs/privacy-sandbox/private-aggregation) enable
 
 Before reading this article, it will be helpful to familiarize yourself with key terms and concepts. Each of these terms will be described in-depth within this article.
 
-*   An [_aggregation key_](#aggregation-key) (also known as a bucket) is a predetermined collection of data points. For example, you may want to collect a bucket of location data where the browser reports the country name. An aggregation key may contain more than one dimension (for example, country and ID of your content widget).
-*   An [_aggregatable value_](#aggregatable-value) is an individual data point collected into an aggregation key. In the example where the key is `country`, the value may be `Morocco`.
+*   An [_aggregation key_](#aggregation-key) (also known as a bucket) is a predetermined collection of data points. For example, you may want to collect a bucket of location data where the browser reports the country name. An aggregation key may contain more than one dimension (for example, country and ID of your content widget). 
+*   An [_aggregatable value_](#aggregatable-value) is an individual data point collected into an aggregation key. If you want to measure how many users from France have seen your content, then `France` is a dimension in the aggregation key, and the `viewCount` of `1` is the aggregatable value.
 *   _Aggregatable reports_ are generated and encrypted within a browser. For the Private Aggregation API, this contains data about a single event.
 *   The [_aggregation service_](/docs/privacy-sandbox/aggregation-service) processes data from aggregatable reports to create a summary report.
 *   A _summary report_ is the final output of the aggregation service, and contains noisy aggregated user data and detailed conversion data.

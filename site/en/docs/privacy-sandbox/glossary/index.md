@@ -19,7 +19,7 @@ if something is missing!
 
 ## Ad auction (FLEDGE)
 
-In FLEDGE, an ad auction is run by a seller (ikely to be an [SSP](#SSP) or maybe the publisher itself), in JavaScript code in the browser on the
+In FLEDGE, an ad auction is run by a seller (ikely to be an [SSP](#ssp) or maybe the publisher itself), in JavaScript code in the browser on the
 user's device, to sell ad space on a site that displays ads.
 
 {: #creative}
@@ -380,7 +380,7 @@ includes aggregated user data and detailed conversion data.
 
 Summary reports were formerly known as aggregate reports.
 
-## Supply-side platform, Sell-side platform {: #SSP}
+## Supply-side platform, Sell-side platform {: #ssp}
 
 An adtech service used to automate selling ad inventory. SSPs allow publishers
 to offer their inventory (empty rectangles where ads will go) to multiple ad

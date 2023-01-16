@@ -1287,4 +1287,8 @@ example:
     en: Example author
   description:
     en: Used for testing purposes, no real author.
-  
+sarino:
+  title:
+    en: Sarino Grasso
+  description:
+    en: Sarino is a web ecosystem consultant at Google.

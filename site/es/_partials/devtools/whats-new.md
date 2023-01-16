@@ -4,14 +4,18 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 
 {# $content #}
 
-{# ### Chrome 108 {: #chrome108 }
+{# ### Chrome 109 {: #chrome109 }
 
-* [Hints for inactive CSS properties](/es/blog/new-in-devtools-108/#css-hint)
-* [Auto-detect XPath and text selectors in the Recorder panel](/es/blog/new-in-devtools-108/#recorder)
-* [Step through comma-separated expressions](/es/blog/new-in-devtools-108/#debugging)
-* [Improved Ignore list setting](/es/blog/new-in-devtools-108/#ignore-list)
-* [Miscellaneous highlights](/es/blog/new-in-devtools-108/#misc)
+* [Recorder: Copy as options for steps, in-page replay, step’s context menu](/es/blog/new-in-devtools-109/#recorder)
+* [Show actual function names in performance’s recordings](/es/blog/new-in-devtools-109/#performance)
+* [New keyboard shortcuts in the Console & Sources panel](/es/blog/new-in-devtools-109/#keyboard-shortcuts)
+* [Improved JavaScript debugging](/es/blog/new-in-devtools-109/#debugging)
+* [Miscellaneous highlights](/es/blog/new-in-devtools-109/#misc)
+* [[Experimental] Enhanced UX in managing breakpoints](/es/blog/new-in-devtools-109/#breakpoint-redesign)
+* [[Experimental] Automatic in-place pretty print](/es/blog/new-in-devtools-109/#pretty-print)
  #}
+
+
 
 ### Chrome 108 {: #chrome108 }
 
@@ -165,7 +169,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 ### Chrome 96 {: #chrome96 }
 
 * [Función de vista previa: Nuevo panel de Descripción General de CSS](/es/blog/new-in-devtools-96/#css-overview)
-{# * [Restored and improved CSS length edit and copy experince](/es/blog/new-in-devtools-966/#length) #}
+
 * [Emule la función multimedia CSS de contraste](/es/blog/new-in-devtools-96/#prefers-contrast)
 * [Emula la función de tema oscuro automático de Chrome](/es/blog/new-in-devtools-96/#auto-dark-mode)
 * [Copiar declaraciones como JavaScript en el panel Estilos](/es/blog/new-in-devtools-96/#copy-as-js)

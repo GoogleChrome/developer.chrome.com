@@ -4,11 +4,9 @@ api: webRequest
 
 ## Manifest
 
-You must declare the "webRequest" permission in the [extension manifest][1] to use the web request
+You must declare the `"webRequest"` permission in the [extension manifest][1] to use the web request
 API, along with the necessary [host permissions][2]. To intercept a sub-resource request, the
-extension needs to have access to both the requested URL and its initiator. If you want to use the
-web request API in a blocking fashion, you need to request the "webRequestBlocking" permission in
-addition. For example:
+extension needs to have access to both the requested URL and its initiator. For example:
 
 ```json
 {
@@ -21,6 +19,13 @@ addition. For example:
   ...
 }
 ```
+
+If you are building policy-installed extensions for enterprises, and want to use the web request API
+in a blocking fashion, you need to request the `"webRequestBlocking"` permission.
+
+As of Chrome 108, you can asynchronously supply credentials for [`onAuthRequired`
+events](#event-onAuthRequired) if you use the `"webRequest"` and `"webRequestAuthProvider"`
+permissions.
 
 ## Life cycle of requests
 
@@ -329,8 +334,8 @@ chrome.webRequest.onBeforeRequest.addListener(
 );
 ```
 
-As this function uses a blocking event handler, it requires the "webRequest" as well as the
-"webRequestBlocking" permission in the manifest file.
+As this function uses a blocking event handler, it requires the `"webRequest"` as well as the
+`"webRequestBlocking"` permission in the manifest file.
 
 The following example achieves the same goal in a more efficient way because requests that are not
 targeted to `www.evil.com` do not need to be passed to the extension:

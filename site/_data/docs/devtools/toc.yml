@@ -54,9 +54,9 @@
     - url: /docs/devtools/resources/
 - title: i18n.docs.devtools.performance
   sections:
-    - url: /docs/devtools/evaluate-performance/
-    - url: /docs/devtools/evaluate-performance/reference/
-    - url: /docs/devtools/evaluate-performance/performance-reference/
+    - url: /docs/devtools/performance/
+    - url: /docs/devtools/performance/reference/
+    - url: /docs/devtools/performance/timeline-reference/
 - url: /docs/devtools/performance-insights/
 - title: i18n.docs.devtools.memory
   sections:

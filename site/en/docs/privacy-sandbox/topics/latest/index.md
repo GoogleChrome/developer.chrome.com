@@ -5,7 +5,7 @@ subhead: >
  Updates and enhancements to the design and implementation of the API.
 description: >
  Updates and enhancements to the design and implementation of the API.
-date: 2022-11-04
+date: 2023-01-09
 authors:
  - leeronisrael
  - joeytrotz
@@ -21,6 +21,25 @@ For technical resources, see the developer guides:
 For a non-technical introduction, see the [Topics overview on privacysandbox.com](https://privacysandbox.com/intl/en_us/proposals/topics/).
 
 {% endAside %}
+
+## Insights from early Topics testers
+
+**January 9, 2023**
+
+Topics testing in Chrome is still at an early stage, focused on validating the technical stability
+and core functionality of the API. However, we are encouraged to see some early testers exploring
+aspects of the business logic behind Topics and sharing their insights publicly. For example,
+[Xandr](https://medium.com/xandr-tech/on-the-topic-of-topics-298f95e39269) looked at how the Topics
+classifier compares to Xandr's own method of categorizing websites, and Criteo evaluated the ability
+of Topics, as a standalone signal, to predict users' future interaction with advertiser websites. 
+While isolated analysis won't meaningfully predict the real-world performance of the Privacy Sandbox
+technologies, it can prompt constructive dialog and surface areas for improvement. As more holistic
+utility testing becomes possible in 2023, we look forward to deeper industry engagement to optimize
+Topics and develop best practices for its use in digital advertising products. If you are testing
+Topics we encourage you to share your plans and insights on the 
+[Topics API Tester List](https://github.com/patcg-individual-drafts/topics/blob/main/topics-tester-list.md).   
+
+— Posted by Leeron Israel, Privacy Sandbox Product Manager for the Topics API.
 
 ## Ecosystem feedback on Topics for Q3 2022
 
