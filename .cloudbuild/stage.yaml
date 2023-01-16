@@ -39,5 +39,5 @@ options:
 
 availableSecrets:
   secretManager:
-    - versionName: projects/dcc-staging/secrets/GITHUB_TOKEN/versions/1
+    - versionName: projects/dcc-staging/secrets/GITHUB_TOKEN/versions/2
       env: 'GITHUB_TOKEN'
