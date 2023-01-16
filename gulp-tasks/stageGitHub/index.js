@@ -7,5 +7,5 @@ module.exports = {
   determineDeploymentType,
   awaitGoogleCloudBuild,
   buildAnnouncementComment,
-  cleanUpGoogleCloud
+  cleanUpGoogleCloud,
 };
