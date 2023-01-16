@@ -118,7 +118,7 @@ To enable the experiment, check **Enable re-designed Breakpoint Sidebar Pane in 
 
 The current **Breakpoints** pane provides little visual aid in overseeing all breakpoints. On top of that, frequently used actions are hidden behind the context menu.
 
-This experimental UX redesign aims at bringing structure into the **Breakpoints** pane and allow developers to have quick access to commonly used features, in particular editing and removing breakpoints.
+This experimental UX redesign brings structure to the **Breakpoints** pane and allows developers to have quick access to commonly used features such as editing and removing breakpoints.
 
 These are some highlights:
 
