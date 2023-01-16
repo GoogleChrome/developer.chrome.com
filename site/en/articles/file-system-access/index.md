@@ -7,7 +7,7 @@ authors:
   - thomassteiner
 description: The File System Access API enables developers to build powerful web apps that interact with files on the user's local device, such as IDEs, photo and video editors, text editors, and more. After a user grants a web app access, this API allows them to read or save changes directly to files and folders on the user's device.
 date: 2019-08-20
-updated: 2022-12-05
+updated: 2023-01-12
 tags:
   - capabilities
   - file-system
@@ -643,7 +643,7 @@ write to the file.
 
 To help protect users and their data, the browser may limit the user's ability to save to certain
 folders, for example, core operating system folders like Windows, the macOS Library folders, etc.
-When this happens, the browser shows a modal prompt and ask the user to choose a different
+When this happens, the browser shows a prompt and ask the user to choose a different
 folder.
 
 ### Modifying an existing file or directory
@@ -653,7 +653,7 @@ A web app cannot modify a file on disk without getting explicit permission from 
 #### Permission prompt
 
 If a person wants to save changes to a file that they previously granted read access to, the browser
-shows a modal permission prompt, requesting permission for the site to write changes to disk.
+shows a permission prompt, requesting permission for the site to write changes to disk.
 The permission request can only be triggered by a user gesture, for example, by clicking a Save
 button.
 

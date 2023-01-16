@@ -11,6 +11,8 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 * [New keyboard shortcuts in the Console & Sources panel](/blog/new-in-devtools-109/#keyboard-shortcuts)
 * [Improved JavaScript debugging](/blog/new-in-devtools-109/#debugging)
 * [Miscellaneous highlights](/blog/new-in-devtools-109/#misc)
+* [[Experimental] Enhanced UX in managing breakpoints](/blog/new-in-devtools-109/#breakpoint-redesign)
+* [[Experimental] Automatic in-place pretty print](/blog/new-in-devtools-109/#pretty-print)
 
 
 ### Chrome 108 {: #chrome108 }
