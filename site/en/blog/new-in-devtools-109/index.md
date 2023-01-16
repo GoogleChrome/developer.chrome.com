@@ -123,7 +123,7 @@ This experimental UX redesign brings structure to the **Breakpoints** pane and a
 These are some highlights:
 
 - Both pause options are in the **Breakpoints** pane. They have explicit text labels that make the options self-explanatory.
-- Breakpoints are grouped by file, ordered by line/column number, and collapsible.**
+- Breakpoints are grouped by file, ordered by line or column number. You can collapse and expand them.**
 - New options to remove and edit breakpoint when hovering over a breakpoint or file name in the **Breakpoint** pane.
 
 Read the full changes in our [RFC (closed)](https://github.com/ChromeDevTools/rfcs/discussions/3) and leave your feedback [here](https://crbug.com/1394686).
