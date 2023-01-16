@@ -41,6 +41,12 @@ const PROJECT_ID = 'dcc-staging';
  */
 const FALLBACK_DIRECTORY = 'main/';
 
+/**
+ * The version name of the default App Engine version, which should
+ * never be cleaned up (but also can't and would )
+ */
+const FALLBACK_VERSION = 'main';
+
 const storage = new Storage();
 const versionsClient = new VersionsClient();
 
@@ -50,6 +56,7 @@ const versionsClient = new VersionsClient();
  * @returns {Promise<Array<number>>} [4124, 4125, 4126] for example
  */
 async function getDeployedPullRequestsFromStorage() {
+  // eslint-disable-next-line no-unused-vars
   const [files, nextQuery, apiResponse] = await storage
     .bucket(BUCKET_NAME)
     .getFiles({autoPaginate: false, delimiter: '/', prefix: ''});
@@ -116,11 +123,18 @@ async function getAppEngineVersions() {
   const [apiResponse] = await versionsClient.listVersions({
     parent: `apps/${PROJECT_ID}/services/default`,
   });
+
   // IDs for AppEngine versions are in the format of pr-{number}-app.
   // To be comparable to the raw PR numbers they need to be cleaned up
-  return apiResponse.map(item =>
-    parseInt(item.id.replace('pr-', '').replace('-app', ''))
-  );
+  const prNumbers = [];
+  for (const version of apiResponse) {
+    if (version.id === FALLBACK_VERSION) {
+      continue;
+    }
+    prNumbers.push(parseInt(version.id.replace('pr-', '').replace('-app', '')));
+  }
+
+  return prNumbers;
 }
 
 /**
@@ -139,7 +153,6 @@ async function cleanUpAppEngineVersions(appEngineVersions, staleDeployments) {
       name: `apps/${PROJECT_ID}/services/default/versions/pr-${prNumber}-app`,
     });
     await operation.promise();
-    return;
   }
 }
 
@@ -160,7 +173,7 @@ async function cleanUpGoogleCloud() {
     return;
   }
 
-  // await cleanUpCloudStorage(staleDeployments);
+  await cleanUpCloudStorage(staleDeployments);
   const appEngineVersions = await getAppEngineVersions();
   // There is a posibility that there are only static deployments
   // and no instances except the default one, then we can exit early
