@@ -1,12 +1,13 @@
 ---
 layout: 'layouts/blog-post.njk'
 title: "How Fugu is my browser?" and "How Fugu is the web?"
-subhead: >
-  A browser testing site and a browser extension focused on the web's capabilities
+subhead: 'A browser testing site and a browser extension focused on the web's capabilities.'
 date: 2023-01-16
 # updated: 2023-01-16
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/8FZcBmFowbDKWxpkOytx.jpg
 alt: Blowfish swarm swimming in the ocean.
+authors:
+  - thomassteiner
 tags:
   - capabilities
 ---
