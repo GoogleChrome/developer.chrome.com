@@ -15,7 +15,7 @@ Being in a sandbox has two implications:
 
 1.  A sandboxed page will not have access to extension APIs, or direct access to
     non-sandboxed pages (it may communicate with them via `postMessage()`).
-2.  A sandboxed page is not subject to the [Content Security Policy (CSP)][2] used by the rest of
+2.  A sandboxed page is not subject to the [Content Security Policy (CSP)][doc-csp] used by the rest of
     the extension (it has its own separate CSP value). This means that, for example, it can
     use inline script and `eval`.
 
