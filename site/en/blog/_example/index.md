@@ -51,6 +51,11 @@ hero: 'image/BrQidfK9jaQyIHwdw91aVpkPiib2/EnMzOm0mBytBA3AzlCG6.png'
 # Required if there is a hero or social image
 alt: >
   An alternative text description of your hero or social image.
+
+# Optional
+# Image sharing on social media should be at least 828 x 416
+# https://developer.chrome.com/docs/handbook/how-to/add-media/
+# imagesharing: 'image/BrQidfK9jaQyIHwdw91aVpkPiib2/EnMzOm0mBytBA3AzlCG6.png'
 ---
 
 A few rules:
