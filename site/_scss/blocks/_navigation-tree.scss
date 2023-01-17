@@ -59,3 +59,7 @@ navigation-tree {
 .navigation-tree__nested > .navigation-tree__nested > .navigation-tree__link {
   padding-left: 3rem;
 }
+
+.navigation-tree__nested > .navigation-tree__nested > .navigation-tree__nested > .navigation-tree__link {
+  padding-left: 4.5rem;
+}
