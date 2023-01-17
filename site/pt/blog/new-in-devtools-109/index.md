@@ -182,7 +182,7 @@ Issues relacionadas: [1346231](https://crbug.com/1346231), [1324904](https://crb
 
 {% Aside %}
 <!-- To enable the experiment, check **Automatically pretty print in the Sources panel** under **Settings** > **Experiments**. -->
-Para ativar o experimento, marque **Formatar impressão automaticamente no painel Fontes** em **Configurações** > **Experimentos**.
+Para ativar o experimento, marque **Automatically pretty print in the Sources** em **Configurações** > **Experimentos**.
 {% endAside %}
 
 <!-- The **Sources** panel now automatically pretty print minified source files in-place. You can click on the **pretty print button `{ }` to underdo it. -->
