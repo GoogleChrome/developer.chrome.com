@@ -191,7 +191,7 @@ O painel **Sources** agora mostra automaticamente arquivos de origem reduzidos n
 <!-- Previously, the **Sources** panel shows minified content by default. Developers need to click on the pretty print button manually to format the content. On top of that, the pretty printed content is not displayed in the same file, but in another `::formatted` tab. -->
 Anteriormente, o painel **Sources** mostrava conteúdo minificado por padrão. Devs precisam clicar no botão de formatação manualmente para formatar o conteúdo. Além disso, o conteúdo formatado não é exibido no mesmo arquivo, mas em outra guia `::formatted`.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/twp21SJIisjYpnCWRbWi.png", alt="Mostre um arquivo reduzido antes e depois da impressão bonita automática no local.", width="800", height="501" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/twp21SJIisjYpnCWRbWi.png", alt="Mostra um arquivo minificado antes e depois da formatação automática na mesma aba.", width="800", height="501" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/0c96e7f4cdaf2009e5223553cabb606099f85569 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/6ea8fee1935d3c56dfea1edaa752af09579fffcc #}
