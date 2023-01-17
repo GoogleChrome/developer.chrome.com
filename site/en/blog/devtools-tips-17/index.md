@@ -13,7 +13,6 @@ alt: >
 tags:
   - devtools
   - devtools-tips
-imagesharing: 'image/BrQidfK9jaQyIHwdw91aVpkPiib2/EnMzOm0mBytBA3AzlCG6.png'
 ---
 
 [Project Fugu](/blog/fugu-showcase/) is a cross-company effort that lets web apps do anything mobile apps can.
