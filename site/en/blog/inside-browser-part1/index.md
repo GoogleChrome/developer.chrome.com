@@ -114,7 +114,7 @@ A process can be described as an application’s executing program. A thread is 
 inside of process and executes any part of its process's program. 
 
 When you start an application, a process is created. The program might create thread(s) to help it 
-do work, but that's optional. The Operating System gives the process a "slab" of memory to work 
+do work, but that's optional.When a process is created it will have minimum one thread associated with the process called **main thread**. The Operating System gives the process a "slab" of memory to work 
 with and all application state is kept in that private memory space. When you close the 
 application, the process also goes away and the Operating System frees up the memory.
 
