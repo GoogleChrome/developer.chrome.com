@@ -95,7 +95,7 @@ document.body.appendChild(img);
 This example is a `www.google.com` 32px favicon URL that includes a random extension ID:
 
 ```text
-chrome-extension://eghkbfdcoeikaepkldh/_favicon/?pageUrl=https%3A%2F%2Fwww.google.com&size=32
+chrome-extension://eghkbfdcoeikaepkldhfgphlaiojonpc/_favicon/?pageUrl=https%3A%2F%2Fwww.google.com&size=32
 ```
 
 ## Extension examples {: #example }
