@@ -14,6 +14,14 @@ tags:
   - security
 ---
 
+{% Aside %}
+Anonymous iframe has been renamed to iframe credentialless. It is enabled by default starting from Chrome version 110.
+You can see the [announcement](/blog/iframe-credentialless) for further details.
+ 
+`<iframe anonymous></iframe>` is renamed `<iframe credentialless></iframe>`.
+`window.isAnonymouslyFramed` is renamed `window.credentialless`.
+{% endAside %}
+
 ## Why we need COEP
 
 Some web APIs increase the risk of side-channel attacks such as
