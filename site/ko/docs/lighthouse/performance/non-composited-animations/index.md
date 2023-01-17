@@ -27,12 +27,12 @@ HTML, CSS 및 JavaScript를 픽셀로 변환하기 위한 브라우저의 알고
 
 ## 애니메이션이 합성되었는지 확인하는 방법
 
-[합성 전용 속성 유지 및 레이어 수 관리](https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count) 및 [고성능 애니메이션](https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/)을 참조하세요.
+[합성 전용 속성 유지 및 레이어 수 관리](https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count) 및 [고성능 애니메이션](https://web.dev/animations-guide/)을 참조하세요.
 
 ## 리소스
 
 - [*합성되지 않은 애니메이션 방지* 감사를 위한 소스 코드](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/non-composited-animations.js)
 - [합성 전용 속성 유지 및  레이어 수 관리](https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count)
-- [고성능 애니메이션](https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/)
+- [고성능 애니메이션](https://web.dev/animations-guide/)
 - [페인트 복잡성을 단순화하고 페인트 영역 줄이기](https://developers.google.com/web/fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas)
 - [최신 웹 브라우저 내부 살펴보기(3부)](https://developers.google.com/web/updates/2018/09/inside-browser-part3)
