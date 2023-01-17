@@ -6,16 +6,14 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 
 {# ### Chrome 109 {: #chrome109 }
 
-* [Recorder: Copy as options for steps, in-page replay, step’s context menu](/es/blog/new-in-devtools-109/#recorder)
-* [Show actual function names in performance’s recordings](/es/blog/new-in-devtools-109/#performance)
-* [New keyboard shortcuts in the Console & Sources panel](/es/blog/new-in-devtools-109/#keyboard-shortcuts)
-* [Improved JavaScript debugging](/es/blog/new-in-devtools-109/#debugging)
-* [Miscellaneous highlights](/es/blog/new-in-devtools-109/#misc)
-* [[Experimental] Enhanced UX in managing breakpoints](/es/blog/new-in-devtools-109/#breakpoint-redesign)
-* [[Experimental] Automatic in-place pretty print](/es/blog/new-in-devtools-109/#pretty-print)
+* [Recorder: Copia como opciones para los pasos, reproducción en la página, menú contextual del paso](/es/blog/new-in-devtools-109/#recorder)
+* [Muestra los nombres reales de las funciones en las grabaciones de rendimiento](/es/blog/new-in-devtools-109/#performance)
+* [Nuevos atajos de teclado en el panel Consola y Fuentes](/es/blog/new-in-devtools-109/#keyboard-shortcuts)
+* [Mejoras en la depuración de JavaScript {: #debugging](/es/blog/new-in-devtools-109/#debugging)
+* [Otros aspectos destacados](/es/blog/new-in-devtools-109/#misc)
+* [[Experimental] Mejorada la UX para la gestión de puntos de interrupción](/es/blog/new-in-devtools-109/#breakpoint-redesign)
+* [[Experimental] Formatea automáticamente el código para una mejor lectura](/es/blog/new-in-devtools-109/#pretty-print)
  #}
-
-
 
 ### Chrome 108 {: #chrome108 }
 
