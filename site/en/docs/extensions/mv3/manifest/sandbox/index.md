@@ -51,11 +51,10 @@ used by sandboxed pages (e.g. stylesheets or JavaScript source files) do not nee
 
 ["Using eval in Chrome Extensions. Safely."][4] goes into more detail about implementing a
 sandboxing workflow that enables the use of libraries that would otherwise have issues executing under
-extension's [default Content Security Policy][5].
+extension's [default Content Security Policy][doc-csp].
 
 [1]: /docs/apps/webview_tag
-[2]: /docs/extensions/mv3/contentSecurityPolicy
 [3]: https://html.spec.whatwg.org/multipage/iframe-embed-object.html#attr-iframe-sandbox
 [4]: /docs/extensions/mv3/sandboxingEval
-[5]: /docs/extensions/mv3/contentSecurityPolicy
 [6]: /docs/extensions/mv3/tabs#manifest_version
+[doc-csp]: /docs/extensions/mv3/manifest/content_security_policy/
