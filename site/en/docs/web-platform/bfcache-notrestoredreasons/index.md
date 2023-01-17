@@ -65,7 +65,7 @@ function returnNRR() {
 
 The `PerformanceNavigationTiming.notRestoredReasons` property returns an object with the following structure, which represents the blocked state of the top-level frame:
 
-```json
+```js
 {
   blocked: true,
   children: [],
@@ -106,13 +106,13 @@ When a page has same-origin frames embedded, the returned `notRestoredReasons` v
 
 For example:
 
-```json
+```js
 {
   blocked: false,
   children: [
-    { url:"a.com", src: "b.a.com", id: "b", name: "b", blocked: false, reasons: [], children: [] },
-    { url:"a.com", src: "c.a.com", id: "c", name: "c", blocked: true, reasons: [ "BroadcastChannel" ], children: [] },
-    { url:"a.com", src: "d.a.com", id: "d", name: "d", blocked: false, reasons: [], children: [] }
+    { url: "a.com", src: "b.a.com", id: "b", name: "b", blocked: false, reasons: [], children: [] },
+    { url: "a.com", src: "c.a.com", id: "c", name: "c", blocked: true, reasons: [ "BroadcastChannel" ], children: [] },
+    { url: "a.com", src: "d.a.com", id: "d", name: "d", blocked: false, reasons: [], children: [] }
   ],
   id: "",
   name: "",
@@ -128,7 +128,7 @@ When a page has cross-origin frames embedded, we limit the amount of information
 
 For example: 
 
-```json
+```js
 {
   blocked: false,
   children: [
@@ -145,7 +145,7 @@ For example:
 
 If multiple cross-origin frames have blocking reasons, we randomly select one cross-origin iframe and report whether it blocked BFCache or not. For the rest of the frames, we report `null` for the `blocked` value. This is to stop bad actors from inferring information about user state on sites they don't control by embedding multiple third-party frames into a page and then comparing the blocking information from each.
 
-```json
+```js
 {
   blocked: false,
   children: [
