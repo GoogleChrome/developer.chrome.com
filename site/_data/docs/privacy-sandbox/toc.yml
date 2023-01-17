@@ -59,7 +59,14 @@
     - title: i18n.docs.privacy-sandbox.ondevice-auctions
       sections:
         - url: /docs/privacy-sandbox/fledge
-        - url: /docs/privacy-sandbox/fledge-api
+        - title: i18n.docs.privacy-sandbox.fledge-api
+          sections:
+            - url: /docs/privacy-sandbox/fledge-api/ad-auction
+            - url: /docs/privacy-sandbox/fledge-api/interest-groups
+            - url: /docs/privacy-sandbox/fledge-api/latency
+            - url: /docs/privacy-sandbox/fledge-api/opt-out
+            - url: /docs/privacy-sandbox/fledge-api/reports
+            - url: /docs/privacy-sandbox/fledge-api/troubleshoot
         - url: /docs/privacy-sandbox/fledge-experiment
         - url: /docs/privacy-sandbox/fledge-api/latency
     - url: /docs/privacy-sandbox/maximize-ad-relevance
