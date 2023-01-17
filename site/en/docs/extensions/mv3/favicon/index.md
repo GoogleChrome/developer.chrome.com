@@ -77,7 +77,7 @@ In addition, when fetching favicons in [content scripts][doc-cs], the `"_favicon
 
 ### Step 2: Construct the URL {: #url }
 
-The following function uses [`runtime.getURL()`][runtime-geturl] to create a fully-qualified URL pointing to the `"/_favicon/"` folder. Then it returns a new query string with the URL and size of the favicon. Finally, the extension appends the image to the body. 
+The following function uses [`runtime.getURL()`][runtime-geturl] to create a fully-qualified URL pointing to the `"/_favicon/"` folder. Then it returns a new string representing the URL with several query parameters. Finally, the extension appends the image to the body. 
 
 ```js
 function faviconURL(u) {
