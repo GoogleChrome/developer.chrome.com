@@ -10,7 +10,7 @@ authors:
   - chrisdavidmills
 ---
 
-The notRestoredReasons API adds a `notRestoredReason` property to the [`PerformanceNavigationTiming`](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming) class, which reports information on whether frames present in the document were blocked from using the [BFCache](https://developers.google.com/web/updates/2018/07/page-lifecycle-api#back-forward-cache) on navigation, and why. Developers can use this information to identify pages that need updates to make them BFCache-compatible, thereby improving site performance.
+The notRestoredReasons API adds a `notRestoredReason` property to the [`PerformanceNavigationTiming`](https://developer.mozilla.org/docs/Web/API/PerformanceNavigationTiming) class, which reports information on whether frames present in the document were blocked from using the [BFCache](https://developers.google.com/web/updates/2018/07/page-lifecycle-api#back-forward-cache) on navigation, and why. Developers can use this information to identify pages that need updates to make them BFCache-compatible, thereby improving site performance.
 
 ## Current status
 
@@ -30,14 +30,14 @@ The notRestoredReasons API adds a `notRestoredReason` property to the [`Performa
 
 Starting in Chromium 109, the BFCache notRestoredReasons API is available as an [origin trial](/docs/web-platform/origin-trials/) in Chromium. The feature's release is estimated for Chrome 111, which will hit Chrome stable in March 2023.
 
-Until then, you can try out the BFCache notRestoredReasons API by [registering for the origin trial](ot) and using it in your experiments. See [Take part in an origin trial](https://developer.chrome.com/docs/web-platform/origin-trials/#take-part-in-an-origin-trial) for instructions on how to use your token once you are registered.
+Until then, you can try out the BFCache notRestoredReasons API by [registering for the origin trial](ot) and using it in your experiments. See [Take part in an origin trial](/docs/web-platform/origin-trials/#take-part-in-an-origin-trial) for instructions on how to use your token once you are registered.
 
 ## Concepts and usage
 
 Modern browsers provide an optimization feature for history navigation called the [back/forward cache](https://developers.google.com/web/updates/2018/07/page-lifecycle-api#back-forward-cache) (BFCache). This enables an instant loading experience when users go back to a page they have already visited. Pages 
 can be blocked from entering the BFCache or get evicted while in BFCache for different reasons, some required by a specification and some specific to browser implementations.
  
-Previously there was no way for developers to find out why their pages were blocked from using the BFCache. To enable this, the [`PerformanceNavigationTiming`](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming) class has been extended to include a `notRestoredReasons` property. This returns an object containing information on all frames present in the document:
+Previously there was no way for developers to find out why their pages were blocked from using the BFCache. To enable this, the [`PerformanceNavigationTiming`](https://developer.mozilla.org/docs/Web/API/PerformanceNavigationTiming) class has been extended to include a `notRestoredReasons` property. This returns an object containing information on all frames present in the document:
  
  * Details such as frame `id` and `name`, to help identify them in the HTML.
  * Whether they were blocked from using the BFCache.
@@ -47,7 +47,7 @@ Previously there was no way for developers to find out why their pages were bloc
 
 ## Examples
 
-A [`PerformanceNavigationTiming`](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming) instance can be obtained from features such as [`Performance.getEntriesByType()`](https://developer.mozilla.org/en-US/docs/Web/API/Performance/getEntriesByType) and [`PerformanceObserver`](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver).
+A [`PerformanceNavigationTiming`](https://developer.mozilla.org/docs/Web/API/PerformanceNavigationTiming) instance can be obtained from features such as [`Performance.getEntriesByType()`](https://developer.mozilla.org/docs/Web/API/Performance/getEntriesByType) and [`PerformanceObserver`](https://developer.mozilla.org/docs/Web/API/PerformanceObserver).
 
 
 For example, you could invoke the following function to return all `PerformanceNavigationTiming` objects currently present in the performance timeline and log their `notRestoredReasons`:
@@ -171,8 +171,8 @@ There are a few major categories of reason that are worth calling out:
 
 * Circumstantial: this refers to blocking reasons not directly related to the developer's page code. For example a related component crashed, something went wrong with the loading process, the page is in a temporary state that can't be cached, BFCache disabled due to insufficient memory, or a service worker did something to the page that disqualifies it from being cached. 
 * Extensions: there are a few different reason messages related to extensions. Generally we combine quite a few different reasons into the "Extensions" reason. We are intentionally vague about extension-related blocking reasons because we don't want to give away too much information about what extensions the user have installed, which ones are active on the page, what they are doing, etc.
-* PageSupportNeeded: The developer's code is using a web platform feature that is otherwise not BFCache blocking, but it is currently in a state that is BFCache blocking. For example, the page currently has a [BroadcastChannel](https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel) with registered listeners, or an open [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) connection.
-* SupportPending: The developer's code is using a web platform feature that disqualifies the page from the BFCache, for exaple the [Web Serial API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API), [Web Authentication API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API), [File System Access API](https://developer.mozilla.org/en-US/docs/Web/API/File_System_Access_API), or [Media Session API](https://developer.mozilla.org/en-US/docs/Web/API/Media_Session_API). This category is also used to report the presence of a tool outside the page iteself that is blocking BFCaching, such as a screenreader or the Chrome password manager.
+* PageSupportNeeded: The developer's code is using a web platform feature that is otherwise not BFCache blocking, but it is currently in a state that is BFCache blocking. For example, the page currently has a [BroadcastChannel](https://developer.mozilla.org/docs/Web/API/BroadcastChannel) with registered listeners, or an open [IndexedDB](https://developer.mozilla.org/docs/Web/API/IndexedDB_API) connection.
+* SupportPending: The developer's code is using a web platform feature that disqualifies the page from the BFCache, for exaple the [Web Serial API](https://developer.mozilla.org/docs/Web/API/Web_Serial_API), [Web Authentication API](https://developer.mozilla.org/docs/Web/API/Web_Authentication_API), [File System Access API](https://developer.mozilla.org/docs/Web/API/File_System_Access_API), or [Media Session API](https://developer.mozilla.org/docs/Web/API/Media_Session_API). This category is also used to report the presence of a tool outside the page iteself that is blocking BFCaching, such as a screenreader or the Chrome password manager.
 
 ## Feedback {: #feedback }
 
