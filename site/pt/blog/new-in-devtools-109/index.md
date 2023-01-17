@@ -109,7 +109,7 @@ Estas são algumas melhorias de depuração de JavaScript nesta versão:
 - Visualização inline corrigida para variável sombreada. Anteriormente, o valor de exibição estava incorreto.
    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XHL8pnBxhZ65ni7zYV0Q.png", alt="Mostrar antes e depois da visualização em linha de comparação para a variável sombreada.", width="800", height="519" %} 
 <!-- - Deobfuscate variable names in `Generator` and `async` functions in the **Scope** pane in the **Sources** panel. -->
-- Desofuscação de nomes de variáveis nas funções `Generator` e `async` no painel **Scope** no painel **Sources**.
+- Desofuscação de nomes de variáveis nas funções `Generator` e `async` no painel **Escopo** no painel **Fontes**.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/8bec401b1934ca55f9d742ee68f72cca4de47931 #}
 {# https://chromium.googlesource.com/v8/v8/+/b2892b5f24b7b97ad930356a9376b8a9b2a1d360 #}
