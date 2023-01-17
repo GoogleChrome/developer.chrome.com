@@ -83,7 +83,7 @@ Encima de eso, DevTools ahora acepta <kbd>Arrow Right</kbd> para autocompletar s
 Chromium issue: [1167965](https://crbug.com/1167965), [1172535](https://crbug.com/1172535),  [1371585](https://crbug.com/1371585). [1369503](https://crbug.com/1369503)
 
 <!-- ## Improved JavaScript debugging {: #debugging } -->
-## Mejoras en la depuración de JavaScript {: #debugging }
+## Mejoras en la depuración de JavaScript {: #debugging }
 
 <!-- These are some JavaScript debugging improvements in this release: -->
 En esta versión, se han realizado algunas mejoras en la depuración de JavaScript:
@@ -133,9 +133,8 @@ Estos son algunos arreglos destacados en esta versión:
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/c0cdc185928246ca5b7e320763f8c942c8a1d2db  #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/55382b27eff3539c8aba42ea501eb8de4f7ba57c #}
 
-
 <!-- ## [Experimental] Enhanced UX in managing breakpoints -->
-## [Experimental] Mejorada la UX para la gestión de puntos de interrupción
+## [Experimental] Mejorada la UX para la gestión de puntos de interrupción
 
 {% Aside %}
 <!-- To enable the experiment, check **Enable re-designed Breakpoint Sidebar Pane in the Sources Panel** under **Settings** > **Experiments**. -->
