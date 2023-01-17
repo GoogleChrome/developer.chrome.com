@@ -150,7 +150,7 @@ Estas são algumas correções dignas de nota nesta versão:
 
 {% Aside %}
 <!-- To enable the experiment, check **Enable re-designed Breakpoint Sidebar Pane in the Sources Panel** under **Settings** > **Experiments**. -->
-Para habilitar o experimento, marque **Ativar painel da barra lateral de breakpoints reprojetado no painel de fontes** em **Configurações** > **Experimentos**.
+Para habilitar o experimento, marque **Enable re-designed Breakpoint Sidebar Pane in the Sources Panel** em **Configurações** > **Experimentos**.
 {% endAside %}
 
 <!-- The current **Breakpoints** pane provides little visual aid in overseeing all breakpoints. On top of that, frequently used actions are hidden behind the context menu. -->
@@ -186,10 +186,10 @@ Para ativar o experimento, marque **Automatically pretty print in the Sources** 
 {% endAside %}
 
 <!-- The **Sources** panel now automatically pretty print minified source files in-place. You can click on the **pretty print button `{ }` to underdo it. -->
-O painel **Sources** agora mostra automaticamente arquivos de origem reduzidos no próprio painel. Você pode clicar no botão **pretty print** `{ }` para fazer isso.
+O painel **Fontes** agora mostra automaticamente arquivos de origem reduzidos no próprio painel. Você pode clicar no botão **pretty print** `{ }` para fazer isso.
 
 <!-- Previously, the **Sources** panel shows minified content by default. Developers need to click on the pretty print button manually to format the content. On top of that, the pretty printed content is not displayed in the same file, but in another `::formatted` tab. -->
-Anteriormente, o painel **Sources** mostrava conteúdo minificado por padrão. Devs precisam clicar no botão de formatação manualmente para formatar o conteúdo. Além disso, o conteúdo formatado não é exibido no mesmo arquivo, mas em outra guia `::formatted`.
+Anteriormente, o painel **Fontes** mostrava conteúdo minificado por padrão. Devs precisam clicar no botão de formatação manualmente para formatar o conteúdo. Além disso, o conteúdo formatado não é exibido no mesmo arquivo, mas em outra guia `::formatted`.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/twp21SJIisjYpnCWRbWi.png", alt="Mostra um arquivo minificado antes e depois da formatação automática na mesma aba.", width="800", height="501" %}
 
