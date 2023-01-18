@@ -131,7 +131,7 @@ See [Publish in the Chrome Web Store][doc-cws-publish] to learn how to distribut
 {% Details %} 
 {% DetailsSummary %}
 
-** What if I only want to distribute the extension within my organization?**
+**What if I only want to distribute the extension within my organization?**
 
 {% endDetailsSummary %}
 
