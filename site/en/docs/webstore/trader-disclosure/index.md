@@ -2,6 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Trader/Non-Trader developer identification"
 date: 2022-05-26
+updated: 2023-01-19
 description:  "Developer’s requirement to disclose their trader/non-trader status."
 subhead:  "Developer’s requirement to disclose their trader/non-trader status."
 ---
