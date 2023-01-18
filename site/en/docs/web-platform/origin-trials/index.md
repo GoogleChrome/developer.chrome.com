@@ -138,17 +138,7 @@ registration and provide a new token, for each origin enrolled in the trial.
 You can provide multiple tokens if necessary: Chrome will ignore invalid or expired tokens.
 
 {% Aside %}
-
-Usually if an API lands unchanged after a successful origin trial, there is a
-short period between the end of the origin trial and the date the implementation ships in the
-browser when the API is unavailable. This is by design. If Chrome were to avoid the
-mandatory total-breakage period, that would bias toward avoiding breakages in the API surface. Such
-breakages are often needed to improve the API. The final shipping API might be worse for it.
-
-In some circumstances, if there is clear evidence that developers engaged with the origin trial and
-that their concerns were taken into account in the final API design and implementation, this
-breakage period may be skipped [upon request](https://sites.google.com/a/chromium.org/dev/blink/launching-features#sites-canvas-main-content:~:text=If%20you%20wish%20to%20skip%20the,Ship%20imply%20approval%20of%20the%20request.).
-
+The requirement for a [breaking period](https://docs.google.com/document/d/1oSlxRwsc8vTUGDGAPU6CaJ8dXRdvCdxvZJGxDp9IC3M/edit#heading=h.r5cdr0aazfpm) was [removed in April 2022](https://www.chromium.org/blink/launching-features/#step-5-optional-origin-trial).
 {% endAside %}
 
 
