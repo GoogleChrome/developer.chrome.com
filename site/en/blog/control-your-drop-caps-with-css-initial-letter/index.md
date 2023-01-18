@@ -5,7 +5,7 @@ description: "Say \"Goodbye\" to interesting workarounds to style your drop caps
 authors:
   - jheyy
 hero: "image/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/lfhUhRIzBKWiCKZvMlkK.jpg"
-alt: "Photo of a book opened out on a surface where one of the pages is using a drop cap style"
+alt: "Photo of a book opened out on a surface where one of the pages is using a drop cap style."
 tags:
   - css
   - html
