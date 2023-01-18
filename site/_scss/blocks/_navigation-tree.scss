@@ -52,14 +52,15 @@ navigation-tree {
 // We target the links instead of the .nav__nested
 // element because we want the hover and active
 // styles to reach all the way to the left edge.
-.navigation-tree__nested > .navigation-tree__link {
+
+.navigation-tree__depth-1 > .navigation-tree__link {
   padding-left: 1.5rem;
 }
 
-.navigation-tree__nested > .navigation-tree__nested > .navigation-tree__link {
+.navigation-tree__depth-2 > .navigation-tree__link {
   padding-left: 3rem;
 }
 
-.navigation-tree__nested > .navigation-tree__nested > .navigation-tree__nested > .navigation-tree__link {
+.navigation-tree__depth-3 > .navigation-tree__link {
   padding-left: 4.5rem;
 }
