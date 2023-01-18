@@ -4,15 +4,15 @@ title: "Fetching favicons"
 seoTitle: "Fetching with favicons in Chrome extensions"
 date: 2023-01-11
 # updated: 2023-02-14
-description: How to get a websites' favicon in a Chrome extension.
+description: How to get a website's favicon in a Chrome extension.
 ---
 
 ## Overview {: #overview }
 
 A [favicon][mdn-favicon] (short for "favorite icon") is a small icon that is displayed in the browser's address bar. Favicons are typically used to identify and differentiate websites.
-This article describes how to retrieve a website’s favicon in a Manifest version 3 extension.
+This article describes how to retrieve a website’s favicon in a Manifest V3 extension.
 
-## Accessing a websites' favicon {: #how-to } 
+## Accessing a website's favicon {: #how-to } 
 
 To retrieve the favicon of a website, you need to construct the following URL:
 
@@ -31,7 +31,7 @@ chrome-extension://EXTENSION_ID/_favicon/?pageUrl=EXAMPLE_URL&size=FAV_SIZE
 
 The following steps describe how to construct this URL in a Chrome extension:  
 
-### Step 1: Update the manifest {: #manifest }
+### Step 1: update the manifest {: #manifest }
 
 First, you must request the `"favicon"` permission in the [manifest][doc-manifest].
 
@@ -75,9 +75,9 @@ In addition, when fetching favicons in [content scripts][doc-cs], the `"_favicon
 }
 ```
 
-### Step 2: Construct the URL {: #url }
+### Step 2: construct the URL {: #url }
 
-The following function uses [`runtime.getURL()`][runtime-geturl] to create a fully-qualified URL pointing to the `"/_favicon/"` folder. Then it returns a new string representing the URL with several query parameters. Finally, the extension appends the image to the body. 
+The following function uses [`runtime.getURL()`][runtime-geturl] to create a fully-qualified URL pointing to the `"_favicon/"` folder. Then it returns a new string representing the URL with several query parameters. Finally, the extension appends the image to the body. 
 
 ```js
 function faviconURL(u) {
