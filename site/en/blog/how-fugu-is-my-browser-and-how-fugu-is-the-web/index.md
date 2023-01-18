@@ -101,7 +101,7 @@ some cases now a web application can fill in. An example of such is [Wooting](ht
 [WebHID API](/articles/hid/).
 
 Similarly, running [How Fugu is my browser?](https://howfuguismybrowser.dev/) on each new version of
-your browser of choice (or just any other browser or embedded WebView) is very satisfying, since
+your browser of choice (or just any other browser or embedded WebView) is very satisfying. With
 with almost every new browser release, the progress bar moves up a little when your browser has
 gained a new capability or two.
 
