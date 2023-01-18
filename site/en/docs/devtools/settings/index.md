@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Settings reference"
 authors:
   - sofiayem
-date: 2023-01-04
+date: 2023-01-18
 #updated: YYYY-MM-DD
 description: "A comprehensive reference of all DevTools settings."
 ---
@@ -27,7 +27,7 @@ To open **Settings**:
    - <kbd>F1</kbd> on Windows or Linux
    - <kbd>Fn</kbd> + <kbd>F1</kbd> on Mac
 
-The **Settings** panel has a list of tabs explained in detail in the sections below.
+The **Settings** panel has a list of tabs explained in detail in the next sections.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bEjoxfvtBIHKXqb4lvnN.png", alt="The Settings panel.", width="800", height="450" %}
 
@@ -35,7 +35,7 @@ The **Settings** panel has a list of tabs explained in detail in the sections be
 
 The **Preferences** tab lists both general customization options and panel-specific ones.
 
-To set preferences, open {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [Settings][1] > **Preferences** and scroll down to one of the sections described below.
+To set preferences, open {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [Settings][1] > **Preferences** and scroll down to one of the sections described next.
 
 ### Appearance
 
@@ -48,7 +48,7 @@ To set preferences, open {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY
 <fieldset>
    <legend>Themes:</legend>
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/m0URI9jodUrMxioYEZ11.gif", alt="Changing DevTools theme from system preference to dark to light.", width="350", height="350", style="float:right;", class="screenshot" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/m0URI9jodUrMxioYEZ11.gif", alt="Changing DevTools theme from system preference to dark to light.", width="400", height="400", style="float:right;", class="screenshot" %}
 
 - System preference
 - Light
@@ -68,7 +68,7 @@ Affects **Elements** > **Styles** and sister tabs, and the **Sources** > **Debug
 <fieldset>
    <legend>Panel layout:</legend>
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/RO1dKsa37xhMhqCKRD6j.gif", alt="Changing the Element's panel layout from horizontal to vertical.", width="350", height="350", style="float:right;", class="screenshot" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/RO1dKsa37xhMhqCKRD6j.gif", alt="Changing the Element's panel layout from horizontal to vertical.", width="400", height="400", style="float:right;", class="screenshot" %}
 
 - horizontal
 - vertical
@@ -82,6 +82,8 @@ Affects **Elements** > **Styles** and sister tabs, and the **Sources** > **Debug
 {% DetailsSummary %}
 **Color format** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} sets the format of CSS color values in **Elements** > **Styles**.
 {% endDetailsSummary %}
+
+DevTools automatically converts any valid color value to the chosen format.
 
 <fieldset>
    <legend>Color format:</legend>
@@ -123,7 +125,7 @@ To apply this setting, reload DevTools.
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/YrWD91prdAFdWvEOOwyw.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
 
-This example shows how to switch between four main tabs using the corresponding keyboard shortcuts.
+This example shows how to switch between the tabs using the corresponding keyboard shortcuts.
 {% endDetails %}
 
 {% Details %}
@@ -205,7 +207,7 @@ This setting makes {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTm
 Requires to reload DevTools.
 
 {% Aside 'gotchas' %}
-This setting overrides {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} **Default indentation**. In the video below, the default indentation is set to eight spaces, while the detected indentation in the file is two spaces.
+This setting overrides {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} **Default indentation**. In the following video, the default indentation is set to eight spaces, while the detected indentation in the file is two spaces.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} **Show whitespace characters: All** lets you to see whitespace characters as dots (`...`) and tabs as lines (`—`).
 {% endAside %}
