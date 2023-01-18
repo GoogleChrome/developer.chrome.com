@@ -188,8 +188,11 @@ declarations][header-cs-static], but the content script object is registered wit
 methods in the [`chrome.scripting` namespace](/docs/extensions/reference/scripting/) rather than in
 [manifest.json][doc-manifest]. In addition to
 [registering][api-register-cs] content scripts, the Scripting API also allows extension developers
-to [get a list of][api-get-registered-cs], [update][api-update-cs], and [remove][api-remove-cs]
-content script registrations.
+to:
+
+- [Get a list of][api-get-registered-cs] registered content scripts.
+- [Update][api-update-cs] the list of registered content scripts.
+- [Remove][api-unregister-cs] registered content scripts.
 
 Like static declarations, dynamic declarations can include JavaScript files, CSS files, or both.
 
@@ -255,8 +258,6 @@ Below we'll look at different versions of an activeTab-based extension.
 ```
 
 Content scripts can be injected as files…
-
-{% Label %}content-script.js:{% endLabel %}
 
 ```js
 //// content-script.js ////
