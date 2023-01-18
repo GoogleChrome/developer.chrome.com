@@ -90,7 +90,7 @@ async function Playlist(playlistId) {
             <div class="playlist-video--content">
               <a href="https://www.youtube.com/watch?v=${video.snippet.resourceId.videoId}" target="_blank">
               <div class="playlist-video__thumbnail">
-                <img src="${video.snippet.thumbnails.medium.url}" height="114" width="204" alt="Thumbnail">
+                <img src="${video.snippet.thumbnails.medium.url}" height="114" width="204" alt="Thumbnail" class="rounded-lg">
               </div>
               </a>
 
@@ -124,7 +124,7 @@ async function Playlist(playlistId) {
       <div class="playlist-details rounded-lg">
       <div class="playlist-details-inner rounded-lg">
         <div class="playlist-thumbnail">
-          <img src="${playlistThumb}" height="158" width="316" alt="Thumbnail for ${playlistName}">
+          <img src="${playlistThumb}" height="158" width="316" alt="Thumbnail for ${playlistName}" class="rounded-lg">
         </div>
 
         <h2 class="type--h3-card gap-top-400">
