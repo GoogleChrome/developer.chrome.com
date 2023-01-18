@@ -53,7 +53,7 @@ screenshot, and then share it manually on your online social network of choice.
   </figcaption>
 </figure>
 
-## How Fugu is the Web?
+## How Fugu is the web?
 
 The companion browser extension named
 [How Fugu is the web?](https://chrome.google.com/webstore/detail/how-fugu-is-the-web/apcghpabklkjjgpfoplnglnjghonjhdl)
