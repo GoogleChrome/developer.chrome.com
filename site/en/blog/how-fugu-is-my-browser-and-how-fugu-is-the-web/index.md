@@ -4,7 +4,7 @@ title: 'Discovering the capable web'
 subhead: >
   What advanced web capabilities does your browser support? And what are the web apps that make use
   of these capabilities? To answer these questions, check out a browser testing site and a browser
-  extension that I have built.
+  extension.
 date: 2023-01-18
 # updated: 2023-01-18
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/8FZcBmFowbDKWxpkOytx.jpg
