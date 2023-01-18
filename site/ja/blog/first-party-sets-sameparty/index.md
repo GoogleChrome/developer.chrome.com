@@ -4,8 +4,8 @@ title: "[OUTDATED] First-Party Sets と SameParty 属性"
 description: |2
 
   First-Party Sets では、ファーストパーティとサードパーティが別の物として処理される場合に、同一のエンティティが所有して運営している関連ドメイン名をファースト パーティとして扱えるようにすることができます。
-date: '2021-08-26'
-updated: '2022-11-30'
+date: 2021-08-26
+updated: 2022-11-30
 thumbnail: image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/JL7L7S2qKI53pTWACfcv.jpg
 alt: First-Party Sets を示す図。1 つのセットには example.com、example.rs、および example.co.uk ドメインが、もう 1 つのセットには brandx.site、fly-brandx.site、および drive-brandx.site ドメインが含まれている。
 tags:
