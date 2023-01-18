@@ -3,11 +3,7 @@ api: debugger
 has_warning: This permission <a href="/docs/extensions/mv3/permission_warnings/#permissions_with_warnings">triggers a warning</a>.
 ---
 
-## Notes
-
-As of today, attaching to the tab by means of the debugger API and using embedded Chrome DevTools
-with that tab are mutually exclusive. If user invokes Chrome DevTools while extension is attached to
-the tab, debugging session is terminated. Extension can re-establish it later.
+## Note
 
 For security reasons, the `chrome.debugger` API does not provide access to all Chrome DevTools
 Protocol Domains. The available domains are: [Audits][1], [DOM][2], [Emulation][3], [Fetch][4],

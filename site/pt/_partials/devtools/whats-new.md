@@ -4,6 +4,17 @@ Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no"
 
 {# $content #}
 
+{# ### Chrome 109 {: #chrome109 }
+
+* [Recorder: Copy as options for steps, in-page replay, step’s context menu](/pt/blog/new-in-devtools-109/#recorder)
+* [Show actual function names in performance’s recordings](/pt/blog/new-in-devtools-109/#performance)
+* [New keyboard shortcuts in the Console & Sources panel](/pt/blog/new-in-devtools-109/#keyboard-shortcuts)
+* [Improved JavaScript debugging](/pt/blog/new-in-devtools-109/#debugging)
+* [Miscellaneous highlights](/pt/blog/new-in-devtools-109/#misc)
+* [[Experimental] Enhanced UX in managing breakpoints](/pt/blog/new-in-devtools-109/#breakpoint-redesign)
+* [[Experimental] Automatic in-place pretty print](/pt/blog/new-in-devtools-109/#pretty-print)
+ #}
+
 ### Chrome 108 {: #chrome108 }
 
 * [Hints para propriedades CSS inativas](/pt/blog/new-in-devtools-108/#css-hint)
