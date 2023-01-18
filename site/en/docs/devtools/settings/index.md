@@ -166,6 +166,7 @@ This example shows how to search for text in an extension source file.
 {% endDetailsSummary %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/eQ2BduTutmhTREwULIqY.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+This example shows how, with this option enabled, the **Sources** panel selects files in the navigation tree as you switch between tabs.
 {% endDetails %}
 
 {% Details %}
@@ -196,6 +197,7 @@ This setting makes {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTm
 {% endAside %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/sKSYoqCLFlVCXTVEMYln.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+This example first shows inserted Tab characters, and then when you enable this option and reload DevTools, the Tab key moves focus.
 {% endDetails %}
 
 {% Details %}
@@ -213,6 +215,7 @@ This setting overrides {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgN
 {% endAside %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/8ygLiSj7HNZUMo6dzvcL.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+This example first shows the default indentation of eight spaces, then when you enable this option, it overrides the default indentation to that of the source file.
 {% endDetails %}
 
 {% Details %}
@@ -222,6 +225,7 @@ This setting overrides {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgN
 {% endDetailsSummary %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/Z4KyM0L8km8dvZ8dXbNW.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+This example first doesn't shows any suggestions, then when you enable this option, it shows suggestions for command completion.
 {% endDetails %}
 
 {% Details %}
@@ -242,6 +246,7 @@ This setting overrides {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgN
 Requires to reload DevTools.
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/kHPWexKmutMWp3LcUq70.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+This example shows how to fold code blocks when you enable this option.
 {% endDetails %}
 
 {% Details %}
@@ -283,6 +288,7 @@ Requires to reload DevTools. Options do the following:
 {% endDetailsSummary %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/glzqVP8HXvfLtazD7SAb.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+This example fisrt shows the **Sources** panel out of focus when paused at a breakpoint, then when you enable this option, DevTools opens the **Editor** in the **Sources** panel and shows you the line of code with the breakpoint.
 {% endDetails %}
 
 {% Details %}
@@ -307,6 +313,7 @@ Requires to reload DevTools. Options do the following:
 {% endDetailsSummary %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/xYbfk6alu2SelsyENVa3.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+This example shows you how to scroll past the end of file when you enable this option.
 {% endDetails %}
 
 {% Details %}
@@ -350,6 +357,8 @@ If left disabled, DevTools logs to the **Console** messages similar to the follo
 - Tab character
 
 </fieldset>
+
+This example shows you how to set the default indentation to eight spaces first and then to a Tab character.
 {% endDetails %}
 
 ### Elements
@@ -390,6 +399,7 @@ This section lists options that customize the **Elements** panel.
 {% endDetailsSummary %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/DZSVQcWURpAEpBKzhfk9.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+This example shows how DOM nodes aren't selected in the DOM tree, then when you enable this option, the **Elements** panel selects the nodes on hover.
 {% endDetails %}
 
 {% Details %}
@@ -418,6 +428,7 @@ This section lists options that customize the **Network** panel. Most of the opt
 {% endDetailsSummary %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/JrR2GlPhEO8LgHd3X9mS.mp4", autoplay=false, controls="true", muted="true", class="screenshot"%}
+This example first shows the requests log refreshed on page reload, then saved when you enable this option.
 {% endDetails %}
 
 {% Details %}
@@ -471,18 +482,20 @@ This section lists options that customize the **Network** panel. Most of the opt
 {% Details %}
 
 {% DetailsSummary %}
-**Flamechart mouse wheel action** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} assigns scroll or zoom action to your mouse wheel when you navigate the flamechart.
+**Flamechart mouse wheel action** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} assigns scroll or zoom action to your mouse wheel when you navigate the flame chart.
 {% endDetailsSummary %}
 
 <fieldset>
-   <legend>Flamechart mouse wheel action:</legend>
+   <legend>Flame chart mouse wheel action:</legend>
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/m2ILo76N2nDtuwfBk9RK.gif", alt="Changing mouse wheel action from scrolls to zoom for the flamechart.", width="500", height="350", style="float:right;", class="screenshot" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/m2ILo76N2nDtuwfBk9RK.gif", alt="Changing mouse wheel action from scrolls to zoom for the flame chart.", width="500", height="350", style="float:right;", class="screenshot" %}
 
 - Scroll
 - Zoom
 
 </fieldset>
+
+This example shows both scroll and zoom mouse wheel actions on a flame chart in the **Performance** panel.
 {% endDetails %}
 
 ### Console
@@ -496,9 +509,8 @@ This section lists options that customize the **Console**. Most of the options a
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Hide network messages** hides network messages in the **Console**.
 {% endDetailsSummary %}
 
-You can find the same option in [Console > Settings](/docs/devtools/console/reference/#network).
-
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/aisMEFeYdzs84s9ZKO5M.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+This example shows how you can hide network messages with this option both in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="22", height="22" %} **Settings** and in [Console Settings](/docs/devtools/console/reference/#settings)
 {% endDetails %}
 
 {% Details %}
@@ -506,9 +518,8 @@ You can find the same option in [Console > Settings](/docs/devtools/console/refe
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Selected context only** makes the **Console** show only the selected context on a page with inline frames.
 {% endDetailsSummary %}
 
-You can find the same option in [Console > Settings](/docs/devtools/console/reference/#filtercontext).
-
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/cbBhLBD0NUJsfx5nEjCv.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+This example shows how to enable this option both in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="22", height="22" %} **Settings** and in [Console > Settings](/docs/devtools/console/reference/#filtercontext) and select the context in the **Console**.
 {% endDetails %}
 
 {% Details %}
@@ -516,9 +527,8 @@ You can find the same option in [Console > Settings](/docs/devtools/console/refe
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Log XMLHttpRequests** makes the **Console** log XHR and fetch requests.
 {% endDetailsSummary %}
 
-You can find the same option in [Console > Settings](/docs/devtools/console/reference/#xhr).
-
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/pyFzAk9i8WB8Dbu9wIaV.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+This example shows how to enable this option both in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="22", height="22" %} **Settings** and [Console > Settings](/docs/devtools/console/reference/#xhr) and log the `XHR finished loading` messages to the **Console**.
 {% endDetails %}
 
 {% Details %}
@@ -551,7 +561,7 @@ You can find the same option in [Console > Settings](/docs/devtools/console/refe
 
 {% Details %}
 {% DetailsSummary %}
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show CORS errors in console** makes the **Console** show [CORS errors](https://developer.mozilla.org/docs/Web/HTTP/CORS/Errors).
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show CORS errors in console** makes the **Console** show the [CORS errors](https://developer.mozilla.org/docs/Web/HTTP/CORS/Errors) it logged.
 {% endDetailsSummary %}
 
 You can find the same option in [Console > Settings](/docs/devtools/console/reference/#cors-errors).
@@ -567,6 +577,7 @@ You can find the same option in [Console > Settings](/docs/devtools/console/refe
 You can find the same option in [Console > Settings](/docs/devtools/console/reference/#eagereval).
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/M54pZmDvnWxKWvDqEuRz.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+This example shows various output previews.
 {% endDetails %}
 
 {% Details %}
@@ -577,16 +588,17 @@ You can find the same option in [Console > Settings](/docs/devtools/console/refe
 You can find the same option in [Console > Settings](/docs/devtools/console/reference/#trigger-user-activation).
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/Wfwxdk8XSvqR665dVEAr.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+This example shows how to enable this option both in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="22", height="22" %} **Settings** and [Console > Settings](/docs/devtools/console/reference/#trigger-user-activation).
 {% endDetails %}
 
 {% Details %}
 {% DetailsSummary %}
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Preserve log upon navigation** makes the **Console** save logs across page loads.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Preserve log upon navigation** makes the **Console** log a `Navigated to` message upon every navigation and save logs across all pages.
 {% endDetailsSummary %}
 
 You can find the same option in [Console > Settings](/docs/devtools/console/reference/#persist).
 
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/0qxdteXV5kjZNIXnX49Y.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/wXm8EGHa1UpmT4x8hj90.png", alt="The Console shows 'Navigated to' messages and saves logs across different pages.", width="800", height="361" %}
 {% endDetails %}
 
 {% Details %}
@@ -621,7 +633,7 @@ When JavaScript is disabled, Chrome shows the corresponding {% Img src="image/NJ
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Disable async stack traces** hides the "full story" of the async operation in the **Call Stack**.
 {% endDetailsSummary %}
 
-By default, the **Debugger** tries to trace async operations if it's supported by the framework you're using.
+By default, the **Debugger** tries to trace async operations if the framework you're using supports such tracing.
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/d2TM68V7nOeJWYMmvaSW.png", alt="The async operation in the Call Stack.", width="800", height="575" %}
 For more information, see [View async stack traces](/docs/devtools/console/reference/#async-stack-traces).
 {% endDetails %}
@@ -632,18 +644,20 @@ This section lists options that have global effects in DevTools.
 
 {% Details %}
 {% DetailsSummary %}
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Auto-open DevTools for popups** makes DevTools open for all links open a new tab. That is, all links with `target=_blank`.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Auto-open DevTools for popups** opens DevTools when you click links that open new tabs. That is, all links with `target=_blank`.
 {% endDetailsSummary %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/c7LuWSe2cqFDjAVFKE0S.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+This example first shows how to click on a link and open a new tab *without* DevTools, then when you enable this option, a new tab *with* DevTools.
 {% endDetails %}
 
 {% Details %}
 {% DetailsSummary %}
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Search as you type**](/docs/devtools/dom/#search) makes DevTools "jump" to the first search result as you type your search query. If disabled, DevTools takes you to the result only when you hit <kbd>Enter</kbd>.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Search as you type**](/docs/devtools/dom/#search) makes DevTools "jump" to the first search result as you type your search query. If disabled, DevTools takes you to the result only when you press <kbd>Enter</kbd>.
 {% endDetailsSummary %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/QjpVziHLucolDVylOsG2.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+This example first shows how DevTools "jumps" as you type, then when you enable this option, DevTools takes you to the first result when you press <kbd>Enter</kbd>.
 {% endDetails %}
 
 ### Sync
@@ -654,7 +668,7 @@ To use this setting, first [enable Chrome Sync](https://support.google.com/chrom
 
 ## Workspace
 
-[**Workspaces**](/docs/devtools/workspaces/) enable you to save changes that you make within DevTools to source code that's stored on your computer.
+[**Workspaces**](/docs/devtools/workspaces/) let you to save changes that you make within DevTools to source code that's stored on your computer.
 
 {% Aside 'gotchas' %}
 DevTools automatically maps your local sources to network resources using source maps. This way, you can make changes to sources in DevTools and immediately see the effect on the website you host locally and view in Chrome.
