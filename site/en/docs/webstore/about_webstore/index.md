@@ -21,8 +21,8 @@ build Chrome-specific features into it.
 
 ## How do I start?
 
--  Learn more about [Chrome Extension development][getstarted]
--  Publish your first extension by following the steps in [Publish in the Chrome Web Store][cws-publish].
+- Learn more about [Chrome Extension development][getstarted]
+- Publish your first extension by following the steps in [Publish in the Chrome Web Store][cws-publish].
 - For additional help, check the [Chrome Web Store FAQs][cws-faq]
 
 [cws-faq]: /docs/webstore/faq/
