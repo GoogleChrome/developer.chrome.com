@@ -241,7 +241,7 @@ request:
 ## Diagnosing the cause of an intervention
 
 Ad content is just web content, so make use of tools like
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) to audit the overall performance of your
+[Lighthouse](/docs/lighthouse/overview/) to audit the overall performance of your
 content. The resulting audits provide inline guidance on improvements. You can
 also refer to the [web.dev/fast](https://web.dev/fast/) collection.
 
@@ -274,7 +274,7 @@ checked to get consistent results over repeated loads.
 
 The transferred value at the bottom of the page will show you the amount
 transferred for the entire page. Consider using the
-[Filter](https://developers.google.com/web/tools/chrome-devtools/network/reference#filter) input at the top
+[Filter](/docs/devtools/network/reference/#filter) input at the top
 to restrict the requests just to the ones related to the ad.
 
 If you find the initial request for the ad, for example, the source for the
@@ -307,7 +307,7 @@ number of repeated requests that incrementally go over the limit.
 
 The **Performance** panel in DevTools will help diagnose CPU usage issues. The
 first step is to open up the
-[Capture Settings menu](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference#settings).
+[Capture Settings menu](/docs/devtools/evaluate-performance/reference/#cpu-throttle).
 Use the **CPU** dropdown to slow down the CPU as much as possible. The
 interventions for CPU are far more likely to trigger on lower-powered devices
 than high-end development machines.
@@ -322,7 +322,7 @@ than high-end development machines.
 Next, click the **Record** button to begin recording activity. You may want to
 experiment with when and how long you record for, as a long trace can take quite
 a while to load. Once the recording is loaded you can use the top timeline to
-[select a portion of the recording](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference#select).
+[select a portion of the recording](/docs/devtools/evaluate-performance/reference/#select).
 Focus on areas on the graph in solid yellow, purple, or green that represent
 scripting, rendering, and painting.
 
@@ -334,10 +334,10 @@ scripting, rendering, and painting.
 </figure>
 
 Explore the
-[Bottom-Up](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference#bottom-up),
-[Call Tree](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference#call-tree),
+[Bottom-Up](/docs/devtools/evaluate-performance/reference/#bottom-up),
+[Call Tree](/docs/devtools/evaluate-performance/reference/#call-tree),
 and
-[Event Log](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference#event-log)
+[Event Log](/docs/devtools/evaluate-performance/reference/#event-log)
 tabs at the bottom. Sorting those columns by **Self Time** and **Total Time**
 can help identify bottlenecks in the code.
 

@@ -101,6 +101,6 @@ Our team regularly monitors those tags and does our best to help.
 [cwv]: https://web.dev/vitals/
 [offline-fallback]: https://web.dev/offline-fallback-page/
 [so]: https://stackoverflow.com/
-[workbox]: https://developers.google.com/web/tools/workbox
+[workbox]: /docs/workbox
 [so-pwa]: https://stackoverflow.com/questions/tagged/progressive-web-apps
 [so-sw]: https://stackoverflow.com/questions/tagged/service-worker

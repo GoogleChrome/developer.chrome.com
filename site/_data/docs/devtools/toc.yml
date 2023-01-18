@@ -16,14 +16,19 @@
 - url: /docs/devtools/device-mode/
 - title: i18n.docs.devtools.elements
   sections:
-    - url: /docs/devtools/dom/
-    - url: /docs/devtools/dom/properties
-    - url: /docs/devtools/css/
-    - url: /docs/devtools/css/grid/
-    - url: /docs/devtools/css/flexbox/
-    - url: /docs/devtools/css/container-queries/
-    - url: /docs/devtools/css/reference/
-    - url: /docs/devtools/elements/badges/
+    - title: i18n.docs.devtools.dom
+      sections:
+        - url: /docs/devtools/dom/
+        - url: /docs/devtools/dom/properties
+        - url: /docs/devtools/elements/badges/
+    - title: i18n.docs.devtools.css
+      sections:
+        - url: /docs/devtools/css/
+        - url: /docs/devtools/css/issues/
+        - url: /docs/devtools/css/grid/
+        - url: /docs/devtools/css/flexbox/
+        - url: /docs/devtools/css/container-queries/
+        - url: /docs/devtools/css/reference/
 - title: i18n.docs.devtools.console
   sections:
     - url: /docs/devtools/console/
@@ -49,9 +54,9 @@
     - url: /docs/devtools/resources/
 - title: i18n.docs.devtools.performance
   sections:
-    - url: /docs/devtools/evaluate-performance/
-    - url: /docs/devtools/evaluate-performance/reference/
-    - url: /docs/devtools/evaluate-performance/performance-reference/
+    - url: /docs/devtools/performance/
+    - url: /docs/devtools/performance/reference/
+    - url: /docs/devtools/performance/timeline-reference/
 - url: /docs/devtools/performance-insights/
 - title: i18n.docs.devtools.memory
   sections:
@@ -92,10 +97,7 @@
     - url: /docs/devtools/rendering/apply-effects
 - url: /docs/devtools/security/
 - url: /docs/devtools/search
-- title: i18n.docs.devtools.sensors
-  sections:
-    - url: /docs/devtools/device-mode/geolocation/
-    - url: /docs/devtools/device-mode/orientation/
+- url: /docs/devtools/sensors/
 - url: /docs/devtools/webauthn/
 - title: i18n.docs.devtools.remotedebug
   sections:

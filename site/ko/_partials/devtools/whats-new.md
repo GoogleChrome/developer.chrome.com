@@ -2,16 +2,27 @@
 
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 영어 버전을 참고하여 관련 기능의 전체 목록을 볼 수 있습니다. 아래 콘텐츠들은 한국어로 번역된 콘텐츠들입니다.
 
-<!-- $content -->
+{# $content #}
 
-<!-- ### Chrome 108 {: #chrome108 }
+{# ### Chrome 109 {: #chrome109 }
 
-* [Hints for inactive CSS properties](/ko/blog/new-in-devtools-108/#css-hint)
-* [Auto-detect XPath and text selectors in the Recorder panel](/ko/blog/new-in-devtools-108/#recorder)
-* [Step through comma-separated expressions](/ko/blog/new-in-devtools-108/#debugging)
-* [Improved Ignore list setting](/ko/blog/new-in-devtools-108/#ignore-list)
-* [Miscellaneous highlights](/ko/blog/new-in-devtools-108/#misc)
- -->
+* [Recorder: Copy as options for steps, in-page replay, step’s context menu](/ko/blog/new-in-devtools-109/#recorder)
+* [Show actual function names in performance’s recordings](/ko/blog/new-in-devtools-109/#performance)
+* [New keyboard shortcuts in the Console & Sources panel](/ko/blog/new-in-devtools-109/#keyboard-shortcuts)
+* [Improved JavaScript debugging](/ko/blog/new-in-devtools-109/#debugging)
+* [Miscellaneous highlights](/ko/blog/new-in-devtools-109/#misc)
+* [[Experimental] Enhanced UX in managing breakpoints](/ko/blog/new-in-devtools-109/#breakpoint-redesign)
+* [[Experimental] Automatic in-place pretty print](/ko/blog/new-in-devtools-109/#pretty-print)
+ #}
+
+### Chrome 108 {: #chrome108 }
+
+* [비활성화된 CSS 프로퍼티에 대한 힌트](/ko/blog/new-in-devtools-108/#css-hint)
+* [Recoder 패널에서의 XPath 와 텍스트 셀렉터의 자동 인식](/ko/blog/new-in-devtools-108/#recorder)
+* [쉼표로 구분된 표현식을 통한 진행](/ko/blog/new-in-devtools-108/#debugging)
+* [개선된 무시 목록 설정](/ko/blog/new-in-devtools-108/#ignore-list)
+* [기타 하이라이트](/ko/blog/new-in-devtools-108/#misc)
+
 
 ### Chrome 107 {: #chrome107 }
 

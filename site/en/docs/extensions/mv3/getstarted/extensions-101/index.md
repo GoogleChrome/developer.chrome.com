@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: 'Extensions 101'
+seoTitle: 'Chrome Extensions 101'
 subhead: 'Explore basic concepts of Chrome extension development.'
 description: 'Explore basic concepts of Chrome extension development.'
 date: 2022-10-04
@@ -85,7 +86,7 @@ Extensions" example and familiarize yourself with the extension development work
 ## Designing your extension features {: #quality }
 
 When you start designing your extension and choosing which features to support, make sure it
-fulfills a [single purpose][doc-policy-sp] that is narrowly defined and easy to understand.
+fulfills a [single purpose][doc-single-purpose] that is narrowly defined and easy to understand.
 This will allow your extension to be distributed through the Chrome Web Store.
 
 {% Details %} {% DetailsSummary %}
@@ -112,7 +113,7 @@ See [Extension quality guidelines][doc-single-purpose] for additional details.
 ## Distributing your extension {: #distribution }
 
 You can set up a developer account with the [Chrome Web Store][chrome-web-store] to host and
-distribute your extension. Bare in mind that extensions must adhere to the [developer program
+distribute your extension. Bear in mind that extensions must adhere to the [developer program
 policies][doc-cws-policy]. 
 
 See [Publish in the Chrome Web Store][doc-cws-publish] to learn how to distribute your extension.
@@ -146,7 +147,6 @@ extension and Chrome Web store documentation:
 [doc-ext-pages]: /docs/extensions/mv3/architecture-overview/#html-files
 [doc-manifest]: /docs/extensions/mv3/manifest/
 [doc-options]: /docs/extensions/mv3/options/
-[doc-policy-sp]: /docs/webstore/program-policies/#single-purpose
 [doc-popup]: /docs/extensions/mv3/user_interface/#popup
 [doc-reference]: /docs/extensions/reference/
 [doc-service-worker]: /docs/extensions/mv3/service_workers/

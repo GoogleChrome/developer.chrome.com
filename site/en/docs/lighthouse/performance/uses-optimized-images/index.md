@@ -40,7 +40,7 @@ Another approach is to run your images through an optimizer
 that you install onto your computer and run as a GUI.
 For example,
 with [ImageOptim](https://imageoptim.com/mac) you drag and drop images into its UI,
-and then it automatically compresses the images without compromising quality noticeably.
+and then it automatically compresses the images without noticeably compromising quality.
 If you're running a small site and can handle manually optimizing all images,
 this option is probably good enough.
 
@@ -78,4 +78,4 @@ your images while retaining quality.
 
 ## Resources
 
-- [Source code for **Efficiently encode images** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/byte-efficiency/uses-optimized-images.js)
+- [Source code for **Efficiently encode images** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/byte-efficiency/uses-optimized-images.js)

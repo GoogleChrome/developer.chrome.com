@@ -2,7 +2,18 @@
 
 A list of everything that has been covered in the [What's New In DevTools](/tags/new-in-devtools/) series.
 
-<!-- $content -->
+{# $content #}
+
+### Chrome 109 {: #chrome109 }
+
+* [Recorder: Copy as options for steps, in-page replay, step’s context menu](/blog/new-in-devtools-109/#recorder)
+* [Show actual function names in performance’s recordings](/blog/new-in-devtools-109/#performance)
+* [New keyboard shortcuts in the Console & Sources panel](/blog/new-in-devtools-109/#keyboard-shortcuts)
+* [Improved JavaScript debugging](/blog/new-in-devtools-109/#debugging)
+* [Miscellaneous highlights](/blog/new-in-devtools-109/#misc)
+* [[Experimental] Enhanced UX in managing breakpoints](/blog/new-in-devtools-109/#breakpoint-redesign)
+* [[Experimental] Automatic in-place pretty print](/blog/new-in-devtools-109/#pretty-print)
+
 
 ### Chrome 108 {: #chrome108 }
 
@@ -44,6 +55,7 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 * [Support mouse over event in the Recorder panel](/blog/new-in-devtools-105/#recorder-hover)
 * [Largest Contentful Paint (LCP) in the Performance insights panel](/blog/new-in-devtools-105/#lcp)
 * [Identify flashes of text (FOIT, FOUT) as potential root causes for layout shifts](/blog/new-in-devtools-105/#foit-fout)
+* [Protocol handlers in the Manifest pane](/blog/new-in-devtools-105/#manifest)
 * [Top layer badge in the Elements panel](/blog/new-in-devtools-105/#top-layer)
 * [Attach Wasm debugging information at runtime](/blog/new-in-devtools-105/#wasm)
 * [Support live edit during debugging](/blog/new-in-devtools-105/#live-edit)

@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: 'Reading time'
+seoTitle: 'Chrome Extensions Tutorial: Reading time'
 description: 'Learn how to insert an element on each page.'
 subhead: 'Create your first extension that inserts a new element on the page.'
 date: 2022-10-04
@@ -48,7 +49,7 @@ extension. Create a `manifest.json` file in the _root_ of the project and add th
   "manifest_version": 3,
   "name": "Reading time",
   "version": "1.0",
-  "description": "Add the reading time to Chrome Extension documentation articles",
+  "description": "Add the reading time to Chrome Extension documentation articles"
 }
 ```
 

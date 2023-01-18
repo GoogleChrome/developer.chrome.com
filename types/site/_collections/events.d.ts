@@ -16,15 +16,35 @@
 
 declare global {
   export interface EventsCollectionItem {
-    summary: String,
-    date: String,
-    image: String,
-    externalUrl: String,
-    sessions: {}[],
-    location: String,
-    id: String,
-    title: String,
+    summary: string,
+    date: string,
+    image: string,
+    externalUrl: string,
+    sessions: EventsSessionCollectionItem[],
+    location: string,
+    id: string,
+    title: string,
     isPastEvent: boolean
+  }
+
+  export interface EventSessionCollectionItem {
+    title:string,
+    description:string,
+    type:string,
+    topics:string[],
+    slidesUrl:string,
+    videoUrl:string,
+    image?:string,
+    speaker?:EventPersonCollectionItem,
+    participants?:EventPersonCollectionItem[]
+  }
+
+  export interface EventPersonCollectionItem {
+    image: string,
+    twitter: string|undefined,
+    linkedin: string|undefined,
+    title: string,
+    handle: string
   }
 }
 

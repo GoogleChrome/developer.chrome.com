@@ -25,7 +25,7 @@ You should use `generateSW` if:
 
 On the other hand, you should _not_ use `generateSW` if:
 
-- You want to use other service worker features (such as [Web Push](https://developers.google.com/web/fundamentals/push-notifications)).
+- You want to use other service worker features (such as [Web Push](https://web.dev/push-notifications-overview/)).
 - You need additional flexibility to import additional scripts or use specific Workbox modules to fine-tune your service worker to your application's needs.
 
 ### When to use `injectManifest`

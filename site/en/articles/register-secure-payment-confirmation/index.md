@@ -23,7 +23,7 @@ to implement SPC registration. The user experience is further explained in the
 
 ## How does Secure Payment Confirmation registration work?
 
-SPC is built as an extension to the WebAuthn standard. 
+SPC is built as an extension to the WebAuthn standard.
 
 As of April 2022, SPC only supports User Verifying Platform Authenticators
 (UVPA) on desktop. This means the customer needs to be on a desktop or laptop
@@ -158,7 +158,7 @@ Example registration code:
 const options = {
   challenge: new Uint8Array([21...]),
   rp: {
-    id: "rp.example", 
+    id: "rp.example",
     name: "Fancy Bank",
   },
   user: {
@@ -180,7 +180,7 @@ const options = {
   }],
   authenticatorSelection: {
     userVerification: "required",
-    residentKey: "required",
+    residentKey: "preferred",
     authenticatorAttachment: "platform",
   },
   timeout: 360000,  // 6 minutes
@@ -226,8 +226,8 @@ indirectly, from within an iframe.
 
 <figure class="screenshot">
 {% Img
-   src="image/VbsHyyQopiec0718rMq2kTE1hke2/J0oIPcNBfDwVSxMh2dA5.svg", 
-   alt="Workflow of registration on a merchant website during payment.", 
+   src="image/VbsHyyQopiec0718rMq2kTE1hke2/J0oIPcNBfDwVSxMh2dA5.svg",
+   alt="Workflow of registration on a merchant website during payment.",
    width="800", height="462"
 %}
 </figure>
@@ -244,7 +244,7 @@ There are two approaches for the merchant to allow registration:
    ```html
    <iframe name="iframe" allow="payment https://spc-rp.glitch.me"></iframe>
    ```
-   
+
    Make sure the `allow` attribute contains `payment` and the RP origin that invokes WebAuthn registration.
 
 2. The parent frame document (served from the merchant domain) is sent with a `Permissions-Policy` HTTP header:

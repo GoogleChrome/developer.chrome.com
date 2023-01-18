@@ -11,12 +11,14 @@ description:
   service worker caches."
 tags:
   - progressive-web-apps
+anchorRedirects:
+  add-to-homescreen: /docs/devtools/progressive-web-apps/#trigger-installation
 ---
 
 Use the **Application** panel to inspect, modify, and debug web app manifests, service workers, and
 service worker caches.
 
-[Progressive Web Apps (PWAs)][1] are modern, high quality applications built using web technology. 
+[Progressive Web Apps (PWAs)][1] are modern, high quality applications built using web technology.
 PWAs offer similar capabilities to iOS, Android, and desktop apps. They are:
 
 - Reliable even in unstable network conditions.
@@ -212,23 +214,23 @@ Related Guides:
 
 [1]: https://web.dev/progressive-web-apps
 [2]: #other
-[3]: https://developers.google.com/web/fundamentals/web-app-manifest
-[4]: https://developers.google.com/web/fundamentals/app-install-banners
+[3]: https://web.dev/add-manifest/
+[4]: https://web.dev/customize-install/
 [5]: https://events.google.com/io2016/
 [6]: /docs/devtools/remote-debugging/
-[7]: https://developers.google.com/web/fundamentals/primers/service-worker
-[8]: https://developers.google.com/web/fundamentals/push-notifications
+[7]: /docs/workbox/service-worker-overview/
+[8]: https://web.dev/push-notifications-overview/
 [9]: /docs/devtools/command-menu/
-[10]: https://developers.google.com/web/fundamentals/push-notifications/how-push-works
+[10]: https://web.dev/push-notifications-how-push-works/
 [11]: #clear-storage
 [12]: https://developer.mozilla.org/docs/Web/API/Cache
 [13]: https://developers.google.com/web/fundamentals/glossary#opaque-response
 [14]: https://developers.google.com/web/fundamentals/glossary#CDN
 [15]: https://fetch.spec.whatwg.org/#http-cors-protocol
-[16]: https://developers.google.com/web/updates/2017/08/estimating-available-storage-space
+[16]: /blog/estimating-available-storage-space/
 [17]: https://bugs.chromium.org/p/chromium/issues/detail?id=796060#c17
 [18]: https://stackoverflow.com/q/39109789/385997
-[19]: https://developers.google.com/web/tools/workbox/guides/storage-quota#beware_of_opaque_responses
+[19]: /docs/workbox/understanding-storage-quota/#beware-of-opaque-responses
 [20]: /docs/devtools/storage/localstorage/#clear
 [21]: /docs/devtools/resources/
 [22]: /docs/devtools/storage/localstorage/

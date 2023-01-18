@@ -22,7 +22,7 @@ date: 2022-06-23
 
 # Optional
 # Include an updated date when you update your post
-updated: 2022-11-08
+updated: 2022-11-10
 
 # Optional
 # How to add a new author
@@ -205,7 +205,7 @@ Use CrUX on BigQuery for analysis across any dimension: origins, countries, date
 
 ### CrUX Dashboard {: #tool-crux-dash}
 
-The [CrUX Dashboard](https://web.dev/chrome-ux-report-data-studio-dashboard/) is a Data Studio dashboard that allows you to query and render CrUX data into an interactive dashboard, as well as exporting PDF reports.
+The [CrUX Dashboard](/docs/crux/dashboard) is a Looker Studio dashboard that allows you to query and render CrUX data into an interactive dashboard, as well as exporting PDF reports.
 
 The dashboard provides visualization of all CrUX metrics in monthly trends, with data available back to 2017. Data can be split by form factor to compare mobile / tablet / desktop performance and performance goals are available to create red-amber-green visualizations. Effective connection type can be shown as a distribution.
 

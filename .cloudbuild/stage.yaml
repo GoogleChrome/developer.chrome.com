@@ -1,0 +1,43 @@
+timeout: 2700s # set build timeout to 45 mins
+steps:
+  - name: node:18
+    entrypoint: npm
+    args: ['ci']
+
+  - name: node:18
+    entrypoint: npm
+    args: ['run', 'production']
+    env:
+      - 'NODE_OPTIONS="--max_old_space_size=8192"'
+
+  - name: node:18
+    entrypoint: npm
+    env:
+      - 'BRANCH_NAME=$BRANCH_NAME'
+      - 'PR_NUMBER=$_PR_NUMBER'
+    secretEnv: ['GITHUB_TOKEN']
+    args: ['run', 'stage:github', 'determineDeploymentType']
+
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: bash
+    args:
+      - '-c'
+      # Copy, /en/ to root of /dist, to be able to serve English from /
+      # without further redirects, remove the leftovers and upload everything
+      # to Cloud Storage, remove afterwards to not include it in the instance image
+      - |
+        cp -rf dist/en/* dist/ &&
+        rm -rf dist/en &&
+        gsutil -q -m cp -r dist gs://static-dcc-staging/pr-$_PR_NUMBER
+        rm -rf dist
+
+        if [ $(cat gulp-tasks/stageGitHub/tmp/deploymentType.txt) = "app" ]; then
+          gcloud app deploy --version pr-$_PR_NUMBER-app --no-promote --project dcc-staging
+        fi
+options:
+  machineType: 'E2_HIGHCPU_32'
+
+availableSecrets:
+  secretManager:
+    - versionName: projects/dcc-staging/secrets/GITHUB_TOKEN/versions/1
+      env: 'GITHUB_TOKEN'

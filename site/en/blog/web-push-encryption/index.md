@@ -9,7 +9,7 @@ date: 2016-03-13
 updated: 2017-10-06
 ---
 
-Prior to Chrome 50, [push messages](https://developers.google.com/web/updates/2015/03/push-notifications-on-the-open-web)
+Prior to Chrome 50, [push messages](/blog/push-notifications-on-the-open-web)
 could not contain any payload data. When the ['push' event](https://developer.mozilla.org/docs/Web/API/PushEvent)
 fired in your service worker, all you knew was that the server was trying to
 tell you something, but not what it might be. You then had to make a follow up
@@ -37,7 +37,7 @@ in transit.
 ## Client-side changes
 
 If you have already
-[implemented push notifications without payloads](https://developers.google.com/web/fundamentals/push-notifications)
+[implemented push notifications without payloads](https://web.dev/notifications/)
 then there are only two small changes that you need to make on the client-side.
 
 This first is that when you send the subscription information to your backend
@@ -399,7 +399,7 @@ encryption you can paste them into the verifier and check that you are on the
 right track.
 
 {% Aside %}
-Be sure to check out the full documentation including best practices for using [Web Push Notifications](https://developers.google.com/web/fundamentals/push-notifications)
+Be sure to check out the full documentation including best practices for using [Web Push Notifications](https://web.dev/notifications)
 {% endAside %}
 
 

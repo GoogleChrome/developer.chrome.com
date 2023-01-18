@@ -1,8 +1,9 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Message passing"
+seoTitle: "Chrome Extensions Message passing"
 date: 2012-09-18
-updated: 2021-06-01
+updated: 2022-11-11
 description: How to pass messages between extensions and content scripts.
 ---
 
@@ -14,37 +15,40 @@ order to display a page action icon for that page.
 Communication between extensions and their content scripts works by using message passing. Either
 side can listen for messages sent from the other end, and respond on the same channel. A message can
 contain any valid JSON object (null, boolean, number, string, array, or object). There is a simple
-API for [one-time requests][1] and a more complex API that allows you to have [long-lived
-connections][2] for exchanging multiple messages with a shared context. It is also possible to send
-a message to another extension if you know its ID, which is covered in the [cross-extension
+API for [one-time requests][1] and a more complex API for [long-lived
+connections][2] to exchange multiple messages within shared context. It is also possible to send
+a message to another extension if you know its ID. That is covered in the [cross-extension
 messages][3] section.
 
 ## Simple one-time requests {: #simple }
 
 If you only need to send a single message to another part of your extension (and optionally get a
-response back), you should use the simplified [runtime.sendMessage][4] or [tabs.sendMessage][5].
-This lets you send a one-time JSON-serializable message from a content script to extension, or vice
-versa, respectively. An optional callback parameter allows you to handle the response from the other
-side, if there is one.
+response back), use the simplified [runtime.sendMessage()][4] or [tabs.sendMessage()][5].
+This lets you send a one-time JSON-serializable message from a content script to the extension, or vice
+versa. To handle the response, use the returned Promise. (For backward compatibility, you can still
+pass a callback as the last argument.)
 
 Sending a request from a content script looks like this:
 
 ```js
-chrome.runtime.sendMessage({greeting: "hello"}, function(response) {
-  console.log(response.farewell);
-});
+(async () => {
+  const response = await chrome.runtime.sendMessage({greeting: "hello"});
+  // do something with response here, not outside the function
+  console.log(response);
+})();
 ```
 
-Sending a request from the extension to a content script looks very similar, except that you need to
+Sending a request from the extension to a content script is similar, except that you need to
 specify which tab to send it to. This example demonstrates sending a message to the content script
 in the selected tab.
 
 ```js
-chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-  chrome.tabs.sendMessage(tabs[0].id, {greeting: "hello"}, function(response) {
-    console.log(response.farewell);
-  });
-});
+(async () => {
+  const [tab] = await chrome.tabs.query({active: true, lastFocusedWindow: true});
+  const response = await chrome.tabs.sendMessage(tab.id, {greeting: "hello"});
+  // do something with response here, not outside the function
+  console.log(response);
+})();
 ```
 
 On the receiving end, you need to set up an [runtime.onMessage][6] event listener to handle the
@@ -62,24 +66,32 @@ chrome.runtime.onMessage.addListener(
 );
 ```
 
-In the above example, `sendResponse` was called synchronously. If you want to asynchronously use
-`sendResponse`, add `return true;` to the `onMessage` event handler.
+In the above example, `sendResponse()` was called synchronously. If you want to asynchronously use
+`sendResponse()`, add `return true;` to the `onMessage` event handler.
 
-<div class="aside aside--note"><b>Note:</b> If multiple pages are listening for onMessage events, only the first to call sendResponse() for a particular event will succeed in sending the response. All other responses to that event will be ignored.</div>
+{% Aside %}
+If multiple pages are listening for `onMessage` events, only the first to call `sendResponse()` for
+a particular event will succeed in sending the response. All other responses to that event will be
+ignored.
+{% endAside %}
 
-<div class="aside aside--note"><b>Note:</b> The <code>sendResponse</code> callback is only valid if used synchronously, or if the event handler returns <code>true</code> to indicate that it will respond asynchronously. The <code>sendMessage</code> function's callback will be invoked automatically if no handlers return true or if the <code>sendResponse</code> callback is garbage-collected.</div>
+For new extensions you should prefer promises over callbacks. If you're using callbacks, the
+`sendResponse()` callback is only valid if used synchronously, or if the event handler returns
+`true` to indicate that it will respond asynchronously. The `sendMessage()` function's callback
+will be invoked automatically if no handlers return true or if the `sendResponse()` callback is
+garbage-collected.
 
 ## Long-lived connections {: #connect }
 
 Sometimes it's useful to have a conversation that lasts longer than a single request and response.
-In this case, you can open a long-lived channel from your content script to an extension page, or
-vice versa, using [runtime.connect][7] or [tabs.connect][8], respectively. The channel can
+In this case, you can open a long-lived channel from your content script to an extension page or
+vice versa using [runtime.connect][7] or [tabs.connect][8], respectively. The channel can
 optionally have a name, allowing you to distinguish between different types of connections.
 
-One use case might be an automatic form fill extension. The content script could open a channel to
+One use case might be an automatic form filling extension. The content script could open a channel to
 the extension page for a particular login, and send a message to the extension for each input
 element on the page to request the form data to fill in. The shared connection allows the extension
-to keep shared state linking the several messages coming from the content script.
+to keep shared state linking the messages coming from the content script.
 
 When establishing a connection, each end is given a [runtime.Port][9] object which is used for
 sending and receiving messages through that connection.
@@ -97,13 +109,13 @@ port.onMessage.addListener(function(msg) {
 });
 ```
 
-Sending a request from the extension to a content script looks very similar, except that you need to
+Sending a request from the extension to a content script is similar, except that you need to
 specify which tab to connect to. Simply replace the call to connect in the above example with
-[tabs.connect][10].
+[tabs.connect()][10].
 
-In order to handle incoming connections, you need to set up a [runtime.onConnect][11] event
+To handle incoming connections, you need to set up a [runtime.onConnect()][11] event
 listener. This looks the same from a content script or an extension page. When another part of your
-extension calls "connect()", this event is fired, along with the [runtime.Port][12] object you can
+extension calls `connect()`, this event is fired, along with the [runtime.Port][12] object you can
 use to send and receive messages through the connection. Here's what it looks like to respond to
 incoming connections:
 
@@ -125,25 +137,25 @@ chrome.runtime.onConnect.addListener(function(port) {
 
 Ports are designed as a two-way communication method between different parts of the extension, where
 a (top-level) frame is viewed as the smallest part.
-Upon calling [tabs.connect][13], [runtime.connect][14] or [runtime.connectNative][15], a [Port][16]
+Upon calling [tabs.connect()][13], [runtime.connect()][14] or [runtime.connectNative()][15], a [Port][16]
 is created. This port can immediately be used for sending messages to the other end via
-[postMessage][17].
+[postMessage()][17].
 
-If there are multiple frames in a tab, calling [tabs.connect][18] results in multiple invocations of
-the [runtime.onConnect][19] event (once for each frame in the tab). Similarly, if
-[runtime.connect][20] is used, then the onConnect event may be fired multiple times (once for every
-frame in the extension process).
+If there are multiple frames in a tab, calling [tabs.connect()][18] results in multiple invocations of
+the [runtime.onConnect][19] event, once for each frame in the tab. Similarly, if
+[runtime.connect()][20] is called, then the onConnect event may be fired multiple times, once for every
+frame in the extension process.
 
 You may want to find out when a connection is closed, for example if you are maintaining separate
-state for each open port. For this you can listen to the [runtime.Port.onDisconnect][21] event. This
+state for each open port. For this listen to the [runtime.Port.onDisconnect][21] event. This
 event is fired when there are no valid ports at the other side of the channel. This happens in the
 following situations:
 
 - There are no listeners for [runtime.onConnect][22] at the other end.
 - The tab containing the port is unloaded (e.g. if the tab is navigated).
-- The frame from where `connect` was called has unloaded.
+- The frame where `connect()` was called has unloaded.
 - All frames that received the port (via [runtime.onConnect][23]) have unloaded.
-- [runtime.Port.disconnect][24] is called by _the other end_. Note that if a `connect` call results
+- [runtime.Port.disconnect()][24] is called by _the other end_. Note that if a `connect()` call results
   in multiple ports at the receiver's end, and `disconnect()` is called on any of these ports, then
   the `onDisconnect` event is only fired at the port of the sender, and not at the other ports.
 
@@ -202,9 +214,9 @@ port.postMessage(...);
 
 ## Sending messages from web pages {: #external-webpage }
 
-Similar to [cross-extension messaging][27], your extension can receive and respond to
-messages from regular web pages. To use this feature, you must first specify in your manifest.json
-which websites you want to communicate with. For example:
+As with [cross-extension messaging][27], your extension can receive and respond to
+messages from regular web pages. To use this feature, you must first specify in your `manifest.json`
+which websites you want to communicate with using [`"externally_connectable"`][43]. For example:
 
 ```json
 "externally_connectable": {
@@ -212,10 +224,10 @@ which websites you want to communicate with. For example:
 }
 ```
 
-This will expose the messaging API to any page which matches the URL patterns you specify. The URL
-pattern must contain at least a [second-level domain][28] - that is, hostname patterns like "\*",
+This exposes the messaging API to any page that matches the URL patterns you specify. The URL
+pattern must contain at least a [second-level domain][28]; that is, hostname patterns such as "\*",
 "\*.com", "\*.co.uk", and "\*.appspot.com" are prohibited. From the web page, use the
-[runtime.sendMessage][29] or [runtime.connect][30] APIs to send a message to a specific app or
+[runtime.sendMessage()][29] or [runtime.connect()][30] APIs to send a message to a specific app or
 extension. For example:
 
 ```js
@@ -344,3 +356,4 @@ directory.
 [40]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/messaging
 [41]: /docs/apps/nativeMessaging/#examples
 [42]: /docs/extensions/mv3/samples
+[43]: /docs/extensions/mv3/manifest/externally_connectable

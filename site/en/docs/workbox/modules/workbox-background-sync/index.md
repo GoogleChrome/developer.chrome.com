@@ -27,7 +27,7 @@ BackgroundSync.
 
 Browsers that support the BackgroundSync API will automatically replay failed
 requests on your behalf at an
-[interval managed by the browser](https://developers.google.com/web/updates/2015/12/background-sync#how_to_request_a_background_sync),
+[interval managed by the browser](/blog/background-sync/#how-to-request-a-background-sync),
 likely using exponential backoff between replay attempts. In browsers that
 don't natively support the BackgroundSync API, Workbox Background Sync will
 automatically attempt a replay whenever your service worker starts up.

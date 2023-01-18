@@ -2,7 +2,18 @@
 
 Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para uma lista completa dos recursos lançados. Abaixo estão alguns conteúdos que foram traduzidos para o português.
 
-<!-- $content -->
+{# $content #}
+
+{# ### Chrome 109 {: #chrome109 }
+
+* [Recorder: Copy as options for steps, in-page replay, step’s context menu](/pt/blog/new-in-devtools-109/#recorder)
+* [Show actual function names in performance’s recordings](/pt/blog/new-in-devtools-109/#performance)
+* [New keyboard shortcuts in the Console & Sources panel](/pt/blog/new-in-devtools-109/#keyboard-shortcuts)
+* [Improved JavaScript debugging](/pt/blog/new-in-devtools-109/#debugging)
+* [Miscellaneous highlights](/pt/blog/new-in-devtools-109/#misc)
+* [[Experimental] Enhanced UX in managing breakpoints](/pt/blog/new-in-devtools-109/#breakpoint-redesign)
+* [[Experimental] Automatic in-place pretty print](/pt/blog/new-in-devtools-109/#pretty-print)
+ #}
 
 ### Chrome 108 {: #chrome108 }
 
@@ -44,6 +55,7 @@ Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no"
 * [Suporte ao evento do mouse over no painel do Recorder](/pt/blog/new-in-devtools-105/#recorder-hover)
 * [Largest Contentful Paint (LCP) no painel de insights de desempenho](/pt/blog/new-in-devtools-105/#lcp)
 * [Identificação de flashes de texto (FOIT, FOUT) como possíveis causas-raiz para mudanças de layout](/pt/blog/new-in-devtools-105/#foit-fout)
+* [Handlers de protocolo no painel Manifesto](/pt/blog/new-in-devtools-105/#manifest)
 * [Selo da camada superior no painel Elementos](/pt/blog/new-in-devtools-105/#top-layer)
 * [Anexar informações de depuração do Wasm em tempo de execução](/pt/blog/new-in-devtools-105/#wasm)
 * [Suporta edição ao vivo durante a depuração](/pt/blog/new-in-devtools-105/#live-edit)

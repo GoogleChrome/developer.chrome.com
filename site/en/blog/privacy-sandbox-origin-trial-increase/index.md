@@ -10,6 +10,7 @@ subhead: >
   Chrome Stable users.
 layout: 'layouts/blog-post.njk'
 date: 2022-10-24
+updated: 2023-01-05
 authors:
   - cilvento
 hero: 'image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/7Hid7vSdQtp0RNThvO5J.png'
@@ -18,6 +19,11 @@ alt: >
 tags:
   - privacy
 ---
+
+{% Aside %}
+**See updated guidance for the [Relevance and measurement unified origin
+trial](/docs/privacy-sandbox/unified-origin-trial/).**
+{% endAside %}
 
 This week, no sooner than October 26, we will begin increasing the Privacy
 Sandbox Relevance and Measurement origin trial population towards 5% of Chrome

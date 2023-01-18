@@ -4,11 +4,9 @@ api: webRequest
 
 ## Manifest
 
-You must declare the "webRequest" permission in the [extension manifest][1] to use the web request
+You must declare the `"webRequest"` permission in the [extension manifest][1] to use the web request
 API, along with the necessary [host permissions][2]. To intercept a sub-resource request, the
-extension needs to have access to both the requested URL and its initiator. If you want to use the
-web request API in a blocking fashion, you need to request the "webRequestBlocking" permission in
-addition. For example:
+extension needs to have access to both the requested URL and its initiator. For example:
 
 ```json
 {
@@ -21,6 +19,13 @@ addition. For example:
   ...
 }
 ```
+
+If you are building policy-installed extensions for enterprises, and want to use the web request API
+in a blocking fashion, you need to request the `"webRequestBlocking"` permission.
+
+As of Chrome 108, you can asynchronously supply credentials for [`onAuthRequired`
+events](#event-onAuthRequired) if you use the `"webRequest"` and `"webRequestAuthProvider"`
+permissions.
 
 ## Life cycle of requests
 
@@ -192,6 +197,15 @@ Redirects are **not supported** for WebSocket requests.
 Starting from Chrome 72, an extension will be able to intercept a request only if it has host
 permissions to both the requested URL and the request initiator.
 
+Starting from Chrome 96, the webRequest API supports intercepting the WebTransport over HTTP/3
+handshake request. Since the handshake is done by means of an HTTP CONNECT request, its flow fits
+into HTTP-oriented webRequest model. Note that:
+
+- Once the session is established, extensions cannot observe or intervene in the session via the
+  webRequest API.
+- Modifying HTTP request headers in `onBeforeSendHeaders` is ignored.
+- Redirects and authentications are **not supported** in WebTransport over HTTP/3.
+
 ## Concepts
 
 As the following sections explain, events in the web request API use request IDs, and you can
@@ -320,8 +334,8 @@ chrome.webRequest.onBeforeRequest.addListener(
 );
 ```
 
-As this function uses a blocking event handler, it requires the "webRequest" as well as the
-"webRequestBlocking" permission in the manifest file.
+As this function uses a blocking event handler, it requires the `"webRequest"` as well as the
+`"webRequestBlocking"` permission in the manifest file.
 
 The following example achieves the same goal in a more efficient way because requests that are not
 targeted to `www.evil.com` do not need to be passed to the extension:

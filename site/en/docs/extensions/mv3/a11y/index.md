@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Accessibility (a11y)"
+seoTitle: "Chrome Extensions accessibility (a11y)"
 date: 2012-09-17
 updated: 2018-07-30
 description: How to make your Chrome Extension accessible.

@@ -6,7 +6,7 @@ subhead: >
 description: >
   A web platform API that allows users to login to websites with their federated accounts in a manner compatible with improvements to browser privacy.
 date: 2022-04-25
-updated: 2022-11-08
+updated: 2022-11-28
 authors:
   - agektmr
 ---
@@ -783,15 +783,19 @@ the following properties:
 
 The browser handles sign-up and sign-in use cases differently depending on the
 existence of `approved_clients` in the response from [the accounts list
-endpoint](#accounts-list-endpoint). The browser will only display [the RP's
-privacy policy and terms of service](#client-metadata-endpoint) in the dialog if
-`approved_clients` isn't provided or does not include the RP's `clientId` and
-the user hasn't previously signed up for the RP in this browser.
+endpoint](#accounts-list-endpoint). The browser will not display a disclosure
+text **"To continue with ...."** if the user has already signed up to the RP.
+
+The sign-up state is determined based on whether the following conditions are
+fulfilled or not:
+
+* If `approved_clients` includes the RP's `clientId`.
+* If the browser remembers that the user has already signed up to the RP.
 
 <figure class="float-right screenshot" style="max-width:300px">
 {% Video
    src="video/YLflGBAPWecgtKJLqCJHSzHqe2J2/Qx48SEGIEqi5OtPE9ogn.mp4",
-   width="280", autoplay="true"
+   width="280", autoplay="true", loop="true"
 %}
   <figcaption>A user signs into an RP using FedCM</figcaption>
 </figure>

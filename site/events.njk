@@ -2,4 +2,16 @@
 disable_algolia: true
 permalink: "/events.json"
 ---
-{{ collections.currentEvents.concat(collections.pastEvents) | dump(2) | safe }}
+[
+  {% for event in collections.currentEvents.concat(collections.pastEvents)  %}
+    {% set html %}
+      {% include 'partials/event-card.njk' %}
+    {% endset %}
+    {
+      "id": {{event.id|dump|safe}},
+      "html": {{ html|minifyHtml|dump|safe}},
+      "date": {{ event.date|dump|safe }},
+      "isPastEvent": {{ event.isPastEvent|dump|safe }}
+    } {% if loop.last === false %},{% endif %}
+  {% endfor %}
+]

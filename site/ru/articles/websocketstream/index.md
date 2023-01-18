@@ -1,4 +1,5 @@
 ---
+layout: 'layouts/blog-post.njk'
 title: 'WebSocketStream: интеграция потоков с WebSocket API'
 subhead: 'Как с помощью обратной реакции не дать приложению утонуть в сообщениях WebSocket и не переполнить данными сервер WebSocket.'
 authors:

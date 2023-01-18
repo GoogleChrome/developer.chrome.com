@@ -5,7 +5,7 @@ authors:
   - sofiayem
   - jecelynyeen
 date: 2022-06-21
-#updated: YYYY-MM-DD
+updated: 2023-01-09
 description: "A comprehensive reference of Chrome DevTools Recorder panel features."
 tags:
   - test
@@ -193,18 +193,37 @@ To manually add a step:
 1. Try replaying the recording again. With the added hover step, the **Recorder** successfully replays the flow.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/P8YGHbff2vGgCKOkEth6.png", alt="Replay success.", width="800", height="567" %}
 
+### Copy steps {: #copy-steps }
+
+Instead of [exporting the entire user flow](/docs/devtools/recorder/reference/#export-flows), you can copy a single step to the clipboard:
+
+1. Right-click the step you want to copy or click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N7wEDmtW9lnrSxPRupMa.svg", alt="Three-dot menu.", width="24", height="24" %} three-dot icon next to it.
+1. In the drop-down menu, select one of the **Copy as ...** options.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/sCSd3cpON80i6n5M3Rir.png", alt="Selecting a copy option from the drop-down menu.", width="800", height="577" %}
+
+You can copy steps in various formats: JSON, [Puppeteer](https://pptr.dev/), [@puppeteer/replay](https://github.com/puppeteer/replay), and those provided by [extensions](#recorder-extension).
+
 ### Remove steps {: #remove-steps }
 
-To remove an accidentally recorded step, select **Remove step** from the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Three-dot button.", width="22", height="22" %} three-dot menu next to the step.
+To remove an accidentally recorded step, right-click the step or click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N7wEDmtW9lnrSxPRupMa.svg", alt="Three-dot menu.", width="24", height="24" %} three-dot icon next to it and select **Remove step**.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/QOPYGEUDal764qxj8YBB.png", alt="Remove a step.", width="800", height="601" %}
 
+Additionally, the **Recorder** automatically adds two separate steps to the start of every recording:
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/8szraTN0ibqAAeNDVGTs.png", alt="A recording with the set viewport and navigation steps.", width="800", height="562" %}
+
+- **Set viewport**. Lets you control the viewport's dimensions, scaling, and [other properties](#step-properties).
+- **Navigate**. Sets the URL and automatically refreshes the page for every replay.
+
+To perform in-page automation without reloading the page, remove the navigation step as described above. 
 
 ### Configure steps {: #configure-steps }
 
 To configure a step:
 
-1. Specify its type: `click`, `doubleClick`, (input) `change`, `keyUp`, `keyDown`, `scroll`, `close`, `navigate` (to a page), `waitForElement`, or `waitForExpression`.
+1. Specify its type: `click`, `doubleClick`, `hover`, (input) `change`, `keyUp`, `keyDown`, `scroll`, `close`, `navigate` (to a page), `waitForElement`, `waitForExpression`, or `setViewport`.
    
    Other properties depend on the `type` value.
 
@@ -244,13 +263,13 @@ Type-specific properties are:
     </thead>
     <tbody>
         <tr>
-            <td><code>click</code>, <code>doubleClick</code></td>
-            <td><code>offsetX</code>, <code>offsetY</code></td>
+            <td><code>click</code><br><code>doubleClick</code></td>
+            <td><code>offsetX</code><br><code>offsetY</code></td>
             <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
             <td>Relative to the top-left of the element content box, in pixels</td>
         </tr>
         <tr>
-            <td><code>click</code>, <code>doubleClick</code></td>
+            <td><code>click</code><br><code>doubleClick</code></td>
             <td><code>button</code></td>
             <td></td>
             <td>Pointer button: primary | auxiliary | second | back | forward</td>
@@ -262,14 +281,14 @@ Type-specific properties are:
             <td>Final value</td>
         </tr>
         <tr>
-            <td><code>keyDown</code>, <code>keyUp</code></td>
+            <td><code>keyDown</code><br><code>keyUp</code></td>
             <td><code>key</code></td>
             <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
             <td>Key name</td>
         </tr>
         <tr>
             <td><code>scroll</code></td>
-            <td><code>x</code>, <code>y</code></td>
+            <td><code>x</code><br><code>y</code></td>
             <td></td>
             <td>Absolute scroll x and y positions in pixels, default 0</td>
         </tr>
@@ -296,6 +315,24 @@ Type-specific properties are:
             <td><code>expression</code></td>
             <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
             <td>JavaScript expression that resolves to true</td>
+        </tr>
+        <tr>
+            <td><code>setViewport</code></td>
+            <td><code>width</code><br><code>height</code></td>
+            <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
+            <td>Width and height of the viewport in pixels</td>
+        </tr>
+        <tr>
+            <td><code>setViewport</code></td>
+            <td><code>deviceScaleFactor</code></td>
+            <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
+            <td>Similar to Device Pixel Ratio (DPR), default 1</td>
+        </tr>
+        <tr>
+            <td><code>setViewport</code></td>
+            <td><code>isMobile</code><br><code>hasTouch</code><br><code>isLandscape</code></td>
+            <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
+            <td>Boolean flags that specify whether to: <li>Take the meta tag into account</li><li>Support touch events</li><li>Display in landscape mode</li></td>
         </tr>
     </tbody>
 </table>
@@ -349,26 +386,36 @@ To remove a timeout overwrite on a step, click the **Delete**{% Img src="image/N
 
 ## Understand selectors {: #selector }
 
-During recording, the **Recorder** automatically detects two types of selectors for most of the steps: ARIA and CSS.
+When you start a new recording, you can configure the following:
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/cFxRgfDJpKoznYtlYj2S.png", alt="Configuring a new recording.", width="800", height="546" %}
+
+- In the **Selector attribute** textbox, enter a [custom test attribute](#customize-selector). The **Recorder** will use this attribute to detect selectors instead of a list of [common test attributes](common-test-selector).
+- In the **Selector types to record** set of checkboxes, choose the types of selectors to detect automatically:
+
+  - {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **CSS**. Syntactic selectors.
+  - {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **ARIA**. Semantic selectors.
+  - {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Text**. Selectors with the shortest unique text if available.
+  - {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **XPath**. Selectors that use [XML Path Language](https://developer.mozilla.org/docs/Web/XPath).
 
 {% Aside %}
-For more information on ARIA selectors, see [Syntactic vs. semantic selectors](/blog/puppetaria/#syntactic-vs-semantic-selectors).
+For more information, see [Syntactic vs. semantic selectors](/blog/puppetaria/#syntactic-vs-semantic-selectors) and [Selector priority](#selector-priority).
 {% endAside %}
 
-For simple webpages, `id` attributes and CSS `class` attributes are sufficient for the **Recorder** to detect the selectors. However, that might not always be the case, because:
-
-- Your webpages may use dynamic classes or ID's that change
-- Your selectors may break from development changes to CSS styles or JS behavior
-
 ### Common test selectors {: common-test-selector}
+
+For simple webpages, `id` attributes and CSS `class` attributes are sufficient for the **Recorder** to detect the selectors. However, that might not always be the case because:
+
+- Your webpages may use dynamic classes or IDs that change.
+- Your selectors may break because of code or framework changes.
 
 For example, the CSS `class` values might be auto-generated for applications developed with modern JavaScript frameworks (for example, [React](https://reactjs.org/), [Angular](https://angular.io/), [Vue](https://vuejs.org/)) and CSS frameworks.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ZtK52PaMMzKWiiAcsQfH.png", alt="Auto-generated CSS classes with randomized names.", width="800", height="654" %}
 
-In these cases, you can use `data-*` attributes to create more resilient tests. There are already some common `data-*` selectors that people use for automation. The **Recorder** supports them as well. 
+In these cases, you can use `data-*` attributes to create more resilient tests. There are already some common `data-*` selectors that developers use for automation. The **Recorder** supports them as well. 
 
-If you have the following common test selectors defined, the **Recorder** automatically detects and uses them first:
+If you have the following common test selectors defined on your website, the **Recorder** automatically detects and uses them first:
 
 - `data-testid`
 - `data-test`
@@ -388,7 +435,7 @@ Record a click on "Cappuccino", expand the corresponding step in the recording, 
 
 ### Customize the recording's selector {: #customize-selector }
 
-You can customize the selector of a recording if the above doesn't work for you.
+You can customize the selector of a recording if the common test selectors don't work for you.
 
 For example, this [demo page](https://jec.fyi/demo/recorder) uses the `data-automate` attribute as the selector. [Start a new recording](/docs/devtools/recorder/reference/#record) and enter the `data-automate` as the selector attribute.
 
@@ -400,16 +447,25 @@ Fill in an email address and observe the selector value (`[data-automate=email-a
 
 ### Selector priority {: #selector-priority }
 
-In addition to the ARIA selector, the **Recorder** looks for the best CSS selector it can find by the following attributes and in the following order:
-1. Your custom selector attribute if you specified it at the start of the recording.
-1. ARIA selector if found.
-1. The most common attributes used for testing: {: #selectors }
-   - `data-testid`
-   - `data-test`
-   - `data-qa`
-   - `data-cy`
-   - `data-test-id`
-   - `data-qa-id`
-   - `data-testing`
-1. ID attributes, for example, `<div id="some_ID">`.
-1. Regular CSS selectors.
+The **Recorder** looks for selectors in the following order depending on if you specified a custom CSS selector attribute:
+
+- If specified:
+  1. CSS selector with your custom CSS attribute.
+  1. XPath selector.
+  1. ARIA selector if found.
+  1. A selector with the shortest unique text if found.
+- If not specified:
+  1. ARIA selector if found.
+  1. One of CSS selectors with the following priority:
+     1. The most common attributes used for testing: {: #selectors }
+         - `data-testid`
+         - `data-test`
+         - `data-qa`
+         - `data-cy`
+         - `data-test-id`
+         - `data-qa-id`
+         - `data-testing`
+     1. ID attributes, for example, `<div id="some_ID">`.
+     1. Regular CSS selectors.
+  1. XPath selector.
+  1. A selector with the shortest unique text if found.

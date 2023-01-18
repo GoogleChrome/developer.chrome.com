@@ -1,10 +1,13 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: 'Welcome'
+seoTitle: 'Chrome Extensions getting started guides '
 subhead: 'Welcome to the Getting Started Guides.'
-description: 'Welcome to the Getting Started Guides.'
+description: 'Overview of all Chrome Extensions getting started guides.'
 date: 2022-10-04
 # updated: 2022-06-13
+anchorRedirects:
+  unpacked: /docs/extensions/mv3/getstarted/development-basics/#load-unpacked
 ---
 
 Welcome to the Getting Started Guides! The purpose of this page is to describe each article and how to share your feedback.

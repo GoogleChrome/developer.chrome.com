@@ -1,4 +1,5 @@
 const yaml = require('js-yaml');
+const path = require('path');
 
 // Filters
 const {
@@ -12,18 +13,18 @@ const {i18n} = require('./site/_filters/i18n');
 const {githubLink} = require('./site/_filters/github-link');
 const {namespaceToPath} = require('./site/_filters/namespace');
 const mdFilters = require('./site/_filters/md');
-const {minifyJs} = require('./site/_filters/minify-js');
 const {slugify} = require('./site/_filters/slugify');
 const {toc} = require('./site/_filters/toc');
 const {updateSvgForInclude} = require('webdev-infra/filters/svg');
+const {minifyHtml} = require('webdev-infra/filters/minifyHtml');
 
 // Shortcodes
 const {Blockquote} = require('webdev-infra/shortcodes/Blockquote');
+const {InlineCss} = require('webdev-infra/shortcodes/InlineCss');
 const {Codepen} = require('webdev-infra/shortcodes/Codepen');
 const {Details} = require('./site/_shortcodes/Details');
 const {DetailsSummary} = require('./site/_shortcodes/DetailsSummary');
 const {Empty} = require('./site/_shortcodes/Empty');
-const {EventCard} = require('./site/_shortcodes/EventCard');
 const {IFrame} = require('./site/_shortcodes/IFrame');
 const {Glitch} = require('./site/_shortcodes/Glitch');
 const {Hreflang} = require('./site/_shortcodes/Hreflang');
@@ -40,8 +41,8 @@ const {Partial} = require('./site/_shortcodes/Partial');
 
 // Transforms
 const {domTransformer} = require('./site/_transforms/dom-transformer-pool');
-const {purifyCss} = require('./site/_transforms/purify-css-pool');
-const {minifyHtml} = require('./site/_transforms/minify-html');
+const {InlineCssTransform} = require('webdev-infra/transforms/inlineCss');
+const {MinifyHtmlTransform} = require('webdev-infra/transforms/minifyHtml');
 
 // Plugins
 const md = require('./site/_plugins/markdown');
@@ -58,7 +59,7 @@ const feedsCollection = require('./site/_collections/feeds');
 const tagsCollection = require('./site/_collections/tags');
 const directoryCollection = require('./site/_collections/directory');
 const extensionsReferenceCollection = require('./site/_collections/reference');
-const { pastEvents, currentEvents } = require('./site/_collections/events');
+const { pastEvents, currentEvents, eventTags } = require('./site/_collections/events');
 
 // Create a helpful environment flags
 const isProduction = process.env.NODE_ENV === 'production';
@@ -108,6 +109,7 @@ module.exports = eleventyConfig => {
   });
   eleventyConfig.addCollection('currentEvents', currentEvents);
   eleventyConfig.addCollection('pastEvents', pastEvents);
+  eleventyConfig.addCollection('eventTags', eventTags);
 
   // Add filters
   eleventyConfig.addFilter('absolute', absolute);
@@ -120,13 +122,14 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('md', mdFilters.render);
   eleventyConfig.addFilter('mdInline', mdFilters.renderInline);
   eleventyConfig.addFilter('namespaceToPath', namespaceToPath);
-  eleventyConfig.addNunjucksAsyncFilter('minifyJs', minifyJs);
   eleventyConfig.addFilter('updateSvgForInclude', updateSvgForInclude);
   eleventyConfig.addFilter('slugify', slugify);
   eleventyConfig.addFilter('toc', toc);
   eleventyConfig.addFilter('typeof', x => typeof x);
+  eleventyConfig.addNunjucksAsyncFilter('minifyHtml', minifyHtml);
 
   // Add shortcodes
+  eleventyConfig.addShortcode('InlineCss', InlineCss);
   eleventyConfig.addShortcode('Codepen', Codepen);
   eleventyConfig.addShortcode('IFrame', IFrame);
   eleventyConfig.addShortcode('Glitch', Glitch);
@@ -142,7 +145,6 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPairedShortcode('Column', Column);
   eleventyConfig.addPairedShortcode('Compare', Compare);
   eleventyConfig.addPairedShortcode('CompareCaption', CompareCaption);
-  eleventyConfig.addShortcode('EventCard', EventCard);
   eleventyConfig.addPairedShortcode('Aside', Aside);
   eleventyConfig.addPairedShortcode('Label', Label);
   eleventyConfig.addShortcode('LanguageList', LanguageList);
@@ -164,8 +166,20 @@ module.exports = eleventyConfig => {
   // These transforms should _always_ go last because they look at the final
   // HTML for the page and inline CSS / minify.
   if (isProduction) {
-    eleventyConfig.addTransform('purifyCss', purifyCss);
-    eleventyConfig.addTransform('minifyHtml', minifyHtml);
+    eleventyConfig.addTransform('inlineCss', (new InlineCssTransform()).configure({
+      cssBasePath: path.join(__dirname, 'dist'),
+      jsPaths: [
+        // split forces forward slashes on Windows which are necessary
+        // for fast-glob.
+        path.join(__dirname, 'dist/js/**/*.js').split(path.sep).join('/')
+      ],
+      pool: true,
+      insert: (content, result) => {
+        return content.replace('</head>', `<style>${result}</style></head>`)
+      }
+    }));
+
+    eleventyConfig.addTransform('minifyHtml', (new MinifyHtmlTransform()).configure({}));
   }
 
   return {

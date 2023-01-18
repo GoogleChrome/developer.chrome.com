@@ -19,7 +19,7 @@ if something is missing!
 
 ## Ad auction (FLEDGE)
 
-In FLEDGE, an ad auction is run by a seller (ikely to be an [SSP](#SSP) or maybe the publisher itself), in JavaScript code in the browser on the
+In FLEDGE, an ad auction is run by a seller (ikely to be an [SSP](#ssp) or maybe the publisher itself), in JavaScript code in the browser on the
 user's device, to sell ad space on a site that displays ads.
 
 {: #creative}
@@ -129,15 +129,13 @@ site. See [First-party cookie](#first-party-cookie) and
 
 An entity responsible for key management and aggregatable report accounting. The coordinator maintains a list of hashes of approved aggregation service configurations and configures access to decryption keys.
 
-## Differential privacy  {: #differential-privacy }
+## Data management platform (DMP) {: #dmp }
 
-Techniques to allow sharing of information about a dataset to reveal patterns
-of behaviour without revealing private information about individuals or whether
-they belong to the dataset.
+A software used to collect and manage data relevant for advertisers. These
+platforms help advertisers and publishers identify audience segments, which can
+then be used for campaign targeting.
 
-## Domain
-
-See [Top-Level Domain](#tld) and [eTLD](#etld).
+Learn more about [DMPs](https://en.wikipedia.org/wiki/Data_management_platform).
 
 ## Demand-side platform (DSP) {: #dsp }
 
@@ -147,6 +145,16 @@ across a range of publisher sites. Publishers put their
 [ad inventory](#ad-inventory) up for sale through marketplaces called ad
 exchanges, and DSPs decide programmatically which available ad impression makes
 most sense for an advertiser to buy.
+
+## Differential privacy {: #differential-privacy }
+
+Techniques to allow sharing of information about a dataset to reveal patterns
+of behaviour without revealing private information about individuals or whether
+they belong to the dataset.
+
+## Domain
+
+See [Top-Level Domain](#tld) and [eTLD](#etld).
 
 ## eTLD, eTLD+1 {: #etld }
 
@@ -372,7 +380,7 @@ includes aggregated user data and detailed conversion data.
 
 Summary reports were formerly known as aggregate reports.
 
-## Supply-side platform, Sell-side platform {: #SSP}
+## Supply-side platform, Sell-side platform {: #ssp}
 
 An adtech service used to automate selling ad inventory. SSPs allow publishers
 to offer their inventory (empty rectangles where ads will go) to multiple ad

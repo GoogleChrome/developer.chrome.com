@@ -1,6 +1,7 @@
 ---
-layout: "layouts/doc-post.njk"
 title: "Extensions quality guidelines FAQ"
+layout: "layouts/doc-post.njk"
+seoTitle: "Chrome Extensions quality guidelines FAQ"
 date: 2014-05-09
 updated: 2021-07-22
 description: Frequently asked questions about the single purpose policy.
@@ -198,7 +199,16 @@ button, however, cannot introduce any additional functionality or content. If an
 purpose is a narrow subject matter or focus area, then the functionality and content of the browser
 action button must likewise fall within that narrow purpose.
 
-{# section #nineteen has been removed #}
+## 19) Why does Chrome display a confirmation prompt for some extensions? {: #nineteen }
+
+Chrome makes it easy for users to retain agency over their preferred search settings. Modifying
+search settings should be a purpose on its own, and when bundled with other functionalities, users
+may experience an unpleasant surprise. For these reasons, search extensions that stretch their
+functionality beyond a clear single purpose will trigger a confirmation dialog. Search extensions
+that are limited to the single purpose of overriding search settings will not trigger a confirmation
+dialog. 
+
+{# A former section #nineteen has been removed #}
 
 ## Appendix: Examples of extensions that comply with the quality guidelines {: #appendix }
 

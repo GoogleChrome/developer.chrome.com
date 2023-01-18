@@ -21,10 +21,10 @@ sessions:
       and what is just around the corner. She'll also dive into plenty of information about browser
       support to help you adopt new things with confidence.
     topics:
-      - Web UI and CSS
-    time: null
+      - CSS
+      - Web UI
     type: speaker
-    slidesUrl: null
+    slidesUrl: https://noti.st/rachelandrew/nN3xO8/now-and-next-in-responsive-design
     videoUrl: null
   - speaker: addyosmani
     title: >-
@@ -41,7 +41,6 @@ sessions:
     topics:
       - Project Aurora
       - Performance
-    time: null
     type: speaker
     slidesUrl: null
     videoUrl: null
