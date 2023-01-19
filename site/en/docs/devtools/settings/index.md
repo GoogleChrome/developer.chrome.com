@@ -288,7 +288,7 @@ Requires to reload DevTools. Options do the following:
 {% endDetailsSummary %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/glzqVP8HXvfLtazD7SAb.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
-This example fisrt shows the **Sources** panel out of focus when paused at a breakpoint, then when you enable this option, DevTools opens the **Editor** in the **Sources** panel and shows you the line of code with the breakpoint.
+This example first shows the **Sources** panel out of focus when paused at a breakpoint, then when you enable this option, DevTools opens the **Editor** in the **Sources** panel and shows you the line of code with the breakpoint.
 {% endDetails %}
 
 {% Details %}
@@ -608,6 +608,23 @@ You can find the same option in [Console > Settings](/docs/devtools/console/refe
 {% endDetails %}
 
 ### Extension
+
+{% Details %}
+
+{% DetailsSummary %}
+**Link handling** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} sets an option to open files with when you click a link to a source file, for example, in the **Elements** > **Styles** pane.
+{% endDetailsSummary %}
+
+<fieldset>
+   <legend>Link handling:</legend>
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ZcYMyo861JIU4bFw1Wlc.png", alt="Choosing an option to open links with.", width="800", height="395", style="float:right;" %}
+
+- Auto. Opens files in the **Sources** panel by default.
+- Arbitrary option that can be added by a DevTools extension.
+
+</fieldset>
+{% endDetails %}
 
 ### Persistence
 
