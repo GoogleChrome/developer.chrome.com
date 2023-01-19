@@ -34,7 +34,7 @@ Non-trader
 his trade, business, craft or profession in relation to contracts on this marketplace.
 
 If you are a non-trader, the consumer will be informed that consumer rights stemming from consumer
-protection laws may not apply to any contracts between you and the consumer.  Please note that it is
+protection laws do not apply to any contracts between you and the consumer.  Please note that it is
 the developer’s responsibility to accurately self-declare their trader/non-trader status.
 
 ## For more information on the EU New Deal 
