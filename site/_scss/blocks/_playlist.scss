@@ -1,7 +1,8 @@
 .playlist {
   display: flex;
   flex-wrap: wrap;
-  overflow: hidden;
+  max-height: px-to-rem(700px);
+  overflow: auto;
   padding: px-to-rem(32px) 0 px-to-rem(32px) px-to-rem(32px);
 
   @media screen and (max-width: 960px) {
@@ -166,7 +167,7 @@
       border-left: 5px dotted get-color('red-300');
       content: '';
       display: block;
-      height: 300px;
+      height: 145px;
       left: px-to-rem(13px);
       position: absolute;
       width: 4px;
