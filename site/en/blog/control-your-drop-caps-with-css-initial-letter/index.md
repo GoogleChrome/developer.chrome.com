@@ -16,7 +16,7 @@ The art of styling drop caps has been around for hundreds, if not thousands of y
 The CSS `initial-letter` property will make things much easier.
 
 ## Browser support
-Where can you try `initial-letter`? It's available in Safari and from Chrome 110. There is an [open issue](https://bugzilla.mozilla.org/show_bug.cgi?id=1223880) for it to be implemented in Firefox.
+Where can you try `initial-letter`? It's available in Safari and from Chrome 110. In Safari, the property needs the `-webkit-` prefix. There is an [open issue](https://bugzilla.mozilla.org/show_bug.cgi?id=1223880) for it to be implemented in Firefox.
 
 {% Aside %}
 There is also an open Chromium issue detailing the related properties `initial-letter-align` and `initial-letter-wrap` that are still to be implemented as per the CSSWG spec.
