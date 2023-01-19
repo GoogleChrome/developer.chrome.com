@@ -224,11 +224,10 @@ The Topics API lifecycle: [view a larger version](https://wd.imgix.net/image/80m
 
 {% Aside %}
 
-The Topics API proposal is at the
-[initial discussion phase](/docs/privacy-sandbox/cds21-update/#discussion)
-to gather and act on feedback from the ecosystem.
-
-The API design is not final and the details below will change as discussions progress.
+The Topics API proposal is in the
+[discussion phase](/docs/privacy-sandbox/proposal-lifecycle/#discussion)
+to gather and act on feedback from the ecosystem. The API design is not final
+and the details below will change as discussions progress.
 
 {% endAside %}
 
@@ -259,8 +258,7 @@ The Topics explainer proposes that each topic object in the array returned by
 {% Aside %}
 
 The design of the Topics API is currently under discussion as an
-[explainer](https://github.com/jkarlin/topics), which is only the first step in the
-standardization process. The API is not finalized.
+[explainer](https://github.com/patcg-individual-drafts/topics). The API is not finalized.
 
 The parameters described in this article, and details of the API (such as taxonomy size, the
 number of topics calculated per week and the number of topics returned per call) are subject to
