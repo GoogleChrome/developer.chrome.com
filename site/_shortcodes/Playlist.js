@@ -34,8 +34,6 @@ async function Playlist(playlistId) {
   )
     .then(res => res.json())
     .then(playlistResult => {
-      console.log('Playlist Info');
-
       if (playlistResult.items.length > 0) {
         channelId = playlistResult.items[0].snippet.channelId;
         playlistName = playlistResult.items[0].snippet.title;
@@ -81,7 +79,7 @@ async function Playlist(playlistId) {
     })
     .then(res => res.json())
     .then(videosResult => {
-      playlistFirstVideo = videosResult.items[0].snippet.resourceId.videoId
+      playlistFirstVideo = videosResult.items[0].snippet.resourceId.videoId;
       videosResult.items.forEach(video => {
         playlistHtml =
           playlistHtml +
@@ -171,9 +169,19 @@ async function Playlist(playlistId) {
           <p class="playlist-channel__name">${channelName}</p>
 
           <div class="playlist-channel__subscribe">
-            <a href=" https://www.youtube.com/channel/${channelId}?sub_confirmation=1" target="_blank" class="material-button button-filled button-round display-inline-flex color-bg bg-red-medium">Subscribe</a>
+            <a href="https://www.youtube.com/channel/${channelId}?sub_confirmation=1" target="_blank" class="material-button button-filled button-round display-inline-flex color-bg bg-red-medium">Subscribe</a>
           </div>
         </div>
+        ${
+          videoTotal >= 4
+            ? `<div class="playlist-decorations">
+          <div class="decoration__small rounded-full"></div>
+          <div class="decoration__logo rounded-full"></div>
+          <div class="decoration__large rounded-full"></div>
+        </div>`
+            : ''
+        }
+        
       </div>
       </div>
 
