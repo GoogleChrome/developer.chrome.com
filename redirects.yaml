@@ -39,6 +39,9 @@ redirects:
 - from: /docs/extensions/mv3/background_pages
   to: /docs/extensions/mv3/service_workers
 
+- from: /docs/extensions/mv3/overview
+  to: /docs/extensions/mv3/architecture-overview
+
 - from: /blog/fedcm-origin-trial
   to: /docs/privacy-sandbox/fedcm
 
@@ -190,6 +193,15 @@ redirects:
   to: /docs/apps/about_apps
 
 # DevTools redirects
+
+- from: /docs/devtools/evaluate-performance/
+  to: /docs/devtools/performance/
+
+- from: /docs/devtools/evaluate-performance/reference/
+  to: /docs/devtools/performance/reference/
+
+- from: /docs/devtools/evaluate-performance/performance-reference/
+  to: /docs/devtools/performance/timeline-reference/
 
 - from: /docs/devtools/device-mode/geolocation/
   to: /docs/devtools/sensors/#geolocation

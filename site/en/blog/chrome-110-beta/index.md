@@ -66,7 +66,7 @@ Prefetching fetches the main resource for a future navigation, keeping it in mem
 
 ### Use Non-Transitional IDNA Processing in URLs
 
-Enable IDNA 2008 in Non-Transitional Mode for URL processing, aligning Chrome's behavior with Firefox and Safari. Chrome currently uses IDNA 2008 in Transitional Mode in URL processing. The main difference between Transitional and Non-Transitional Mode is the handling of four characters known as deviation characters: ÃŸ (LATIN SMALL LETTER SHARP S), Ï‚ (GREEK SMALL LETTER FINAL SIGMA), ZWJ (Zero width joiner) and ZWNJ (Zero width non-joiner). In Transitional mode, deviation characters are handled the same as IDNA2003: ÃŸ is mapped to ss, Ï‚ is mapped to Ïƒ, and ZWJ and ZWNJ are deleted. In Non-Transitional mode, domains containing these characters are allowed in domain names without mapping, and thus can resolve to different IP addresses. For example, typing `faÃŸ.de` in Chrome and Firefox opens different sites today. Enabling Non-Transitional IDNA in Chrome will allow deviation characters in domain names. Firefox and Safari already made this change in 2016 and continue to use Non-Transitional URL processing.
+Enable IDNA 2008 in Non-Transitional Mode for URL processing, aligning Chrome's behavior with Firefox and Safari. Chrome currently uses IDNA 2008 in Transitional Mode in URL processing. The main difference between Transitional and Non-Transitional Mode is the handling of four characters known as deviation characters: ß (LATIN SMALL LETTER SHARP S), ς (GREEK SMALL LETTER FINAL SIGMA), ZWJ (Zero width joiner) and ZWNJ (Zero width non-joiner). In Transitional mode, deviation characters are handled the same as IDNA2003: ß is mapped to ss, ς is mapped to σ, and ZWJ and ZWNJ are deleted. In Non-Transitional mode, domains containing these characters are allowed in domain names without mapping, and thus can resolve to different IP addresses. For example, typing `faß.de` in Chrome and Firefox opens different sites today. Enabling Non-Transitional IDNA in Chrome will allow deviation characters in domain names. Firefox and Safari already made this change in 2016 and continue to use Non-Transitional URL processing.
 
 ### Web app launch handler
 
@@ -118,7 +118,7 @@ An extension to speculation rules syntax that lets the browser obtain URLs for s
 
 Deprecation trial to retain legacy behavior of the `X-Requested-Header` on Android WebView. This header is currently set with the package name of the embedding app as the value, but this behavior will be removed in a slow roll-out. During the deprecation this trial will allow site owners to continue to receive the header while migrating away from using it. 
 
-More information about this deprecation will follow in a separate blog post. 
+More information about this deprecation will follow in a separate blog post. [Register for the X-Requested-With deprecation trial here](/origintrials/#/view_trial/1390486384950640641).
 
 ## Deprecations and removals
 

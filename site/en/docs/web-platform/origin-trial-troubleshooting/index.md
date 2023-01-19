@@ -10,7 +10,7 @@ description: >
 authors:
   - samdutton
 date: 2021-08-11
-updated: 2022-08-31
+updated: 2023-01-05
 hero: image/80mq7dk16vVEg8BBhsVe42n6zn82/b52LlVcFfbFtxgfT0BoF.jpg
 alt: Test tubes in a metal rack, one containing clear green liquid.
 tags:
@@ -71,7 +71,7 @@ To troubleshoot an origin trial, work through each of the issues below using the
   <br>
   <input class="w-checkbox" type="checkbox" id="check-token-third-script">
   <label for="check-token-third-script" class="w-ml--l"><a href="#token-third-script">Third-party 
-token is provided via an external script, not a meta tag or inline script</a></label>
+token is provided via an external script, not a meta tag, HTTP header or inline script</a></label>
   <br>
   <input class="w-checkbox" type="checkbox" id="check-token-method">
   <label for="check-token-method" class="w-ml--l"><a href="#token-method">Origin trial feature access 
@@ -120,6 +120,7 @@ The demos below show each of the ways to provide an origin trial token and acces
 * [ot-header.glitch.me](https://ot-header.glitch.me): token in an `Origin-Trial` response header
 * [ot-3p.glitch.me](https://ot-3p.glitch.me): token injected by a third-party script
 * [ot-iframe.glitch.me](https://ot-iframe.glitch.me): origin trial feature accessed in an iframe
+* [ot-iframe-3p.glitch.me](https://ot-iframe-3p.glitch.me): cross-origin iframe examples
 
 
 ## Use Chrome DevTools to check tokens
@@ -224,7 +225,8 @@ requested from an expected origin.<br>
 [Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token_validator.cc;l=178)
 
 * **WrongOrigin**: The request origin does not match the origin specified in the token. This can
-include the scheme, hostname, or port.<br>
+include the scheme, hostname, or port. This status will also be displayed if a [third-party token](#token-third-script)
+is provided in an HTTP header, meta tag, or inline script, rather than from an external JavaScript file.<br>
 [Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token.cc;drc=610603f89f0dd4da794848e4f8670a179efbcf38;l=262)
 
 * **WrongVersion**: Wrong token version: only token version 2 and 3 are currently supported.<br>
@@ -408,7 +410,7 @@ function addTrialToken(tokenContents) {
 }
 ```
 
-### Third-party token is provided via an external script, not a meta tag or inline script {: #token-third-script}
+### Third-party token is provided via an external script, not a meta tag, HTTP header or inline script {: #token-third-script}
 
 Third-party tokens are validated against the origin of the script that injected them, but inline
 scripts and `<meta>` tags in static markup do not have an origin (i.e. a source URL). 
@@ -421,7 +423,7 @@ an origin registered for the trial.
 You can see a demo of this at [ot-iframe-3p.glitch.me](https://ot-iframe-3p.glitch.me).  
 
 {% Aside %}
-If need be, you can [provide multiple tokens](/blog/origintrials#multiple) on the same page, 
+If need be, you can [provide multiple tokens](/docs/web-platform/origin-trials/#multiple) on the same page,
 for the same origin trial or for different trials.
 {% endAside %}
 
@@ -563,12 +565,24 @@ Check that the origin trial is [enabled for the Chrome versions accessing your s
 
 ### Iframes provide their own tokens {: #iframe}
 
-To enable an origin trial feature, an iframe must provide a token valid for its origin. Iframes 
-don't inherit access to features enabled for pages that contain them.
+To allow access to an origin trial feature, an iframe must provide a token in a meta tag, an HTTP
+header, or [programmatically](#programmatic). Iframes don't inherit access to features enabled for
+pages that contain them.
 
-A demo showing access to an origin trial feature in an iframe is available at 
-[ot-iframe.glitch.me](https://ot-iframe.glitch.me).
+[ot-iframe.glitch.me](https://ot-iframe.glitch.me) demonstrates access to an origin trial feature
+from an iframe. [ot-iframe-3p.glitch.me](https://ot-iframe-3p.glitch.me) provides multiple
+cross-origin iframe examples.
 
+{% Aside 'caution' %}
+
+When you register for a trial, don't select _Third-party matching_ just because you plan to access a
+trial feature from an iframe!
+
+A [third-party token](/docs/web-platform/third-party-origin-trials/#register-for-a-third-party-origin-trial)
+only activates a trial feature if it's provided in an external JavaScript file, included via a
+`<script>` element. A third-party token won't work when provided in a meta tag, inline script or HTTP header.
+
+{% endAside %}
 
 ### Permissions policies are correctly configured {: #permissions-policies}
 
@@ -604,20 +618,21 @@ is run before code that attempts to access the trial feature.
 
 ## Origin trial demos
 
--  [Token in a meta tag](https://ot-meta.glitch.me)
--  [Token in a header](https://ot-header.glitch.me)
--  [Feature accessed in an iframe](https://ot-iframe.glitch.me)
--  [Token injected by third-party script](https://ot-3p.glitch.me)
+* [Token in a meta tag](https://ot-meta.glitch.me)
+* [Token in a header](https://ot-header.glitch.me)
+* [Feature accessed in an iframe](https://ot-iframe.glitch.me)
+* [Token injected by third-party script](https://ot-3p.glitch.me)
+* [ot-iframe-3p.glitch.me](https://ot-iframe-3p.glitch.me): cross-origin iframe examples
 
 
 ## Find out more
 
--  [Get started with Chrome's origin trials](/docs/web-platform/origin-trials/)
--  [Third-party origin trials](/docs/web-platform/third-party-origin-trials/)
--  [Origin trials guide for web developers](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
--  [Origin trial explainer](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/explainer.md)
--  [Running an origin trial](https://www.chromium.org/blink/origin-trials/running-an-origin-trial)
--  [Process for launching new features in Chromium](https://www.chromium.org/blink/launching-features)
--  [Intent to explain: Demystifying the Blink shipping process](https://www.youtube.com/watch?time_continue=291&v=y3EZx_b-7tk)
--  [Use Origin Trials in Microsoft Edge](https://docs.microsoft.com/en-us/microsoft-edge/origin-trials/)
--  [Origin trials for Firefox](https://wiki.mozilla.org/Origin_Trials)
+* [Get started with Chrome's origin trials](/docs/web-platform/origin-trials/)
+* [Third-party origin trials](/docs/web-platform/third-party-origin-trials/)
+* [Origin trials guide for web developers](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
+* [Origin trial explainer](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/explainer.md)
+* [Running an origin trial](https://www.chromium.org/blink/origin-trials/running-an-origin-trial)
+* [Process for launching new features in Chromium](https://www.chromium.org/blink/launching-features)
+* [Intent to explain: Demystifying the Blink shipping process](https://www.youtube.com/watch?time_continue=291&v=y3EZx_b-7tk)
+* [Use Origin Trials in Microsoft Edge](https://docs.microsoft.com/en-us/microsoft-edge/origin-trials/)
+* [Origin trials for Firefox](https://wiki.mozilla.org/Origin_Trials)

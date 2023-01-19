@@ -38,7 +38,7 @@ See the [Page Redder][2] sample extension:
   "name": "Page Redder",
   "version": "2.0",
   "permissions": [
-    "activeTab"
+    "activeTab",
     "scripting"
   ],
   "background": {

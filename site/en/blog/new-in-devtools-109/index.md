@@ -62,7 +62,7 @@ On Windows and Linux, <kbd>Control</kbd> + <kbd>Page up</kbd> or <kbd>down</kbd>
 
 Moreover, you can navigate the autocomplete suggestions with <kbd>Ctrl</kbd> + <kbd>N</kbd> and <kbd>Ctrl + P</kbd> on MacOS, similar to [Emacs](https://www.gnu.org/software/emacs/). For example, you can type `window.` in the `Console` and use these shortcuts to navigate.
 
-On top of that, DevTools now accepts only <kbd>Arrow Right</kbd> autocompletion at the end of line. For example, an autocomplete dialog shows when you are editing something in the middle of the code. When you press the <kbd>Arrow Right</kbd> key, most likely, you want to set the cursor to the next position instead of autocomplete. This UX change better aligns with your authoring workflow.
+On top of that, DevTools now accepts <kbd>Arrow Right</kbd> for autocompletion only at the end of line. For example, an autocomplete dialog shows when you are editing something in the middle of the code. When you press the <kbd>Arrow Right</kbd> key, most likely, you want to set the cursor to the next position instead of autocomplete. This UX change better aligns with your authoring workflow.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/686acb9789020a511405a53a13ad754a7e928c99 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/09c3ceaa1605b29d1074d0cf310958bdb823149d #}
@@ -108,6 +108,49 @@ These are some noteworthy fixes in this release:
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/b42002b898216e97acf94627d5d3d745a1ba1252 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/c0cdc185928246ca5b7e320763f8c942c8a1d2db  #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/55382b27eff3539c8aba42ea501eb8de4f7ba57c #}
+
+
+## [Experimental] Enhanced UX in managing breakpoints {: #breakpoint-redesign }
+
+{% Aside %}
+To enable the experiment, check **Enable re-designed Breakpoint Sidebar Pane in the Sources Panel** under **Settings** > **Experiments**.
+{% endAside %}
+
+The current **Breakpoints** pane provides little visual aid in overseeing all breakpoints. On top of that, frequently used actions are hidden behind the context menu.
+
+This experimental UX redesign brings structure to the **Breakpoints** pane and allows developers to have quick access to commonly used features such as editing and removing breakpoints.
+
+These are some highlights:
+
+- Both pause options are in the **Breakpoints** pane. They have explicit text labels that make the options self-explanatory.
+- Breakpoints are grouped by file, ordered by line or column number. You can collapse and expand them.**
+- New options to remove and edit a breakpoint when hovering over the breakpoint or a file name in the **Breakpoint** pane.
+
+Read the full changes in our [RFC (closed)](https://github.com/ChromeDevTools/rfcs/discussions/3) and leave your feedback [here](https://crbug.com/1394686).
+
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ytfyl8qK5rkHQRTS3sXf.png", alt="Show Breakpoint pane before and after the redesign.", width="800", height="684" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/f2140378e0bb1687b263c226de01b741487ff324 #}
+Chromium issues: [1346231](https://crbug.com/1346231), [1324904](https://crbug.com/1324904) 
+
+
+## [Experimental] Automatic in-place pretty print {: #pretty-print }
+
+{% Aside %}
+To enable the experiment, check **Automatically pretty print in the Sources panel** under **Settings** > **Experiments**.
+{% endAside %}
+
+The **Sources** panel now automatically pretty-prints minified source files in place. You can click the **pretty print** button `{ }` to undo it.
+
+Previously, the **Sources** panel showed minified content by default. You had to click the pretty print button manually to format the content. On top of that, the pretty-printed content wasn't displayed in the same file, but in another `::formatted` tab.
+
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/twp21SJIisjYpnCWRbWi.png", alt="Show a minified file before and after automatic in-place pretty print.", width="800", height="501" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/0c96e7f4cdaf2009e5223553cabb606099f85569 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/6ea8fee1935d3c56dfea1edaa752af09579fffcc #}
+
+Chromium issue: [1164184](https://crbug.com/1164184)
+
 
 
 <!-- $contentEnd -->
