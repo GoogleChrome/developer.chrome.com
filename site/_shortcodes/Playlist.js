@@ -16,6 +16,7 @@ async function Playlist(playlistId) {
   let channelName = '';
   let channelThumb = '';
   let playlistName = '';
+  let playlistFirstVideo = '';
   let playlistThumb = '';
   let playlistUpdated = '';
   let playlistHtml = '';
@@ -80,6 +81,7 @@ async function Playlist(playlistId) {
     })
     .then(res => res.json())
     .then(videosResult => {
+      playlistFirstVideo = videosResult.items[0].snippet.resourceId.videoId
       videosResult.items.forEach(video => {
         playlistHtml =
           playlistHtml +
@@ -125,6 +127,9 @@ async function Playlist(playlistId) {
       <div class="playlist-details-inner rounded-lg">
         <div class="playlist-thumbnail">
           <img src="${playlistThumb}" height="158" width="316" alt="Thumbnail for ${playlistName}" class="rounded-lg">
+          <div class="playlist-play-all">
+            <a href='https://www.youtube.com/watch?v=${playlistFirstVideo}&list=${playlistId}' target="_blank">PLAY ALL</a>
+          </div>
         </div>
 
         <h2 class="type--h3-card gap-top-400">
