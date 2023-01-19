@@ -9,7 +9,7 @@ alt: "Photo of a book opened out on a surface where one of the pages is using a 
 tags:
   - css
   - html
-date: 2023-01-18
+date: 2023-01-19
 ---
 The art of styling drop caps has been around for hundreds, if not thousands of years. Its use in print styles to signify the start of a new section or chapter can be seen through history. But, it's always been problematic to style in the digital age. There hasn't been a "clean" solution to styling them.
 
