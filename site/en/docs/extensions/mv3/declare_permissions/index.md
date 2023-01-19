@@ -118,11 +118,11 @@ The following table lists the currently available permissions:
     </tr>
     <tr id="declarativeNetRequest">
       <td><code>"declarativeNetRequest"</code></td>
-      <td>Gives your extension access to the <a href="/docs/extensions/reference/declarativeNetRequest/">chrome.declarativeNetRequest</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/declarativeNetRequest/">chrome.declarativeNetRequest</a> API. Some operations may require host permissions to perform.</td>
     </tr>
     <tr id="declarativeNetRequestWithHostAccess">
       <td><code>"declarativeNetRequestWithHostAccess"</code></td>
-      <td>Gives your extension access to the <a href="/docs/extensions/reference/declarativeNetRequest/">chrome.declarativeNetRequest</a> API, but requires host permissions to the request URL and initiator to act on a request. Some operations may require host permissions to perform.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/declarativeNetRequest/">chrome.declarativeNetRequest</a> API, but requires host permissions to the request URL and initiator to act on a request.</td>
     </tr>
     <tr id="declarativeNetRequestFeedback">
       <td><code>"declarativeNetRequestFeedback"</code></td>
