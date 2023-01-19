@@ -125,7 +125,7 @@ To apply this setting, reload DevTools.
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/YrWD91prdAFdWvEOOwyw.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
 
-This example shows how to switch between the tabs using the corresponding keyboard shortcuts.
+This video shows how to switch between the tabs using the corresponding keyboard shortcuts.
 {% endDetails %}
 
 {% Details %}
@@ -156,7 +156,7 @@ This example shows how to switch between the tabs using the corresponding keyboa
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/Zta4SxypaPFjcv91biaq.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
 
-This example shows how to search for text in an extension source file.
+This video shows how to search for text in an extension source file.
 {% endDetails %}
 
 {% Details %}
@@ -166,7 +166,7 @@ This example shows how to search for text in an extension source file.
 {% endDetailsSummary %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/eQ2BduTutmhTREwULIqY.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
-This example shows how, with this option enabled, the **Sources** panel selects files in the navigation tree as you switch between tabs.
+This video shows how, with this option enabled, the **Sources** panel selects files in the navigation tree as you switch between tabs.
 {% endDetails %}
 
 {% Details %}
@@ -197,7 +197,7 @@ This setting makes {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTm
 {% endAside %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/sKSYoqCLFlVCXTVEMYln.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
-This example first shows inserted Tab characters, and then when you enable this option and reload DevTools, the Tab key moves focus.
+This video first shows Tab characters inserted with the Tab key. Then when you enable this option and reload DevTools, the Tab key moves focus.
 {% endDetails %}
 
 {% Details %}
@@ -215,7 +215,7 @@ This setting overrides {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgN
 {% endAside %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/8ygLiSj7HNZUMo6dzvcL.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
-This example first shows the default indentation of eight spaces, then when you enable this option, it overrides the default indentation to that of the source file.
+This video first shows the default indentation of eight spaces. Then when you enable this option, it overrides the default indentation to that of the source file.
 {% endDetails %}
 
 {% Details %}
@@ -225,7 +225,7 @@ This example first shows the default indentation of eight spaces, then when you 
 {% endDetailsSummary %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/Z4KyM0L8km8dvZ8dXbNW.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
-This example first doesn't shows any suggestions, then when you enable this option, it shows suggestions for command completion.
+This video first doesn't show any suggestions. Then when you enable this option, the **Editor** shows suggestions for command completion.
 {% endDetails %}
 
 {% Details %}
@@ -246,7 +246,7 @@ This example first doesn't shows any suggestions, then when you enable this opti
 Requires to reload DevTools.
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/kHPWexKmutMWp3LcUq70.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
-This example shows how to fold code blocks when you enable this option.
+This video shows how to fold code blocks when you enable this option.
 {% endDetails %}
 
 {% Details %}
@@ -288,7 +288,7 @@ Requires to reload DevTools. Options do the following:
 {% endDetailsSummary %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/glzqVP8HXvfLtazD7SAb.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
-This example first shows the **Sources** panel out of focus when paused at a breakpoint, then when you enable this option, DevTools opens the **Editor** in the **Sources** panel and shows you the line of code with the breakpoint.
+This video first shows the **Sources** panel out of focus when paused at a breakpoint. Then when you enable this option, DevTools opens the **Editor** in the **Sources** panel and shows you the line of code with the breakpoint.
 {% endDetails %}
 
 {% Details %}
@@ -313,7 +313,7 @@ This example first shows the **Sources** panel out of focus when paused at a bre
 {% endDetailsSummary %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/xYbfk6alu2SelsyENVa3.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
-This example shows you how to scroll past the end of file when you enable this option.
+This video shows you how to scroll past the end of file when you enable this option.
 {% endDetails %}
 
 {% Details %}
@@ -358,7 +358,7 @@ If left disabled, DevTools logs to the **Console** messages similar to the follo
 
 </fieldset>
 
-This example shows you how to set the default indentation to eight spaces first and then to a Tab character.
+This example shows how to set the default indentation to eight spaces first and then to a Tab character.
 {% endDetails %}
 
 ### Elements
@@ -399,7 +399,7 @@ This section lists options that customize the **Elements** panel.
 {% endDetailsSummary %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/DZSVQcWURpAEpBKzhfk9.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
-This example shows how DOM nodes aren't selected in the DOM tree, then when you enable this option, the **Elements** panel selects the nodes on hover.
+This video first shows that DOM nodes aren't selected in the DOM tree. Then when you enable this option, the **Elements** panel selects the nodes on hover.
 {% endDetails %}
 
 {% Details %}
@@ -428,7 +428,7 @@ This section lists options that customize the **Network** panel. Most of the opt
 {% endDetailsSummary %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/JrR2GlPhEO8LgHd3X9mS.mp4", autoplay=false, controls="true", muted="true", class="screenshot"%}
-This example first shows the requests log refreshed on page reload, then saved when you enable this option.
+This video first shows the requests log refreshed on page reload, then persisted when you enable this option.
 {% endDetails %}
 
 {% Details %}
@@ -510,7 +510,7 @@ This section lists options that customize the **Console**. Most of the options a
 {% endDetailsSummary %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/aisMEFeYdzs84s9ZKO5M.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
-This example shows how you can hide network messages with this option both in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="22", height="22" %} **Settings** and in [Console Settings](/docs/devtools/console/reference/#settings)
+This video shows how to hide network messages with this option both in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="22", height="22" %} **Settings** and in [Console Settings](/docs/devtools/console/reference/#settings)
 {% endDetails %}
 
 {% Details %}
@@ -519,7 +519,7 @@ This example shows how you can hide network messages with this option both in {%
 {% endDetailsSummary %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/cbBhLBD0NUJsfx5nEjCv.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
-This example shows how to enable this option both in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="22", height="22" %} **Settings** and in [Console > Settings](/docs/devtools/console/reference/#filtercontext) and select the context in the **Console**.
+This video shows how to enable this option both in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="22", height="22" %} **Settings** and in [Console > Settings](/docs/devtools/console/reference/#filtercontext) and select the context in the **Console**.
 {% endDetails %}
 
 {% Details %}
@@ -528,7 +528,7 @@ This example shows how to enable this option both in {% Img src="image/NJdAV9UgK
 {% endDetailsSummary %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/pyFzAk9i8WB8Dbu9wIaV.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
-This example shows how to enable this option both in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="22", height="22" %} **Settings** and [Console > Settings](/docs/devtools/console/reference/#xhr) and log the `XHR finished loading` messages to the **Console**.
+This video shows how to enable this option both in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="22", height="22" %} **Settings** and [Console > Settings](/docs/devtools/console/reference/#xhr) and log the `XHR finished loading` messages to the **Console**.
 {% endDetails %}
 
 {% Details %}
@@ -577,7 +577,7 @@ You can find the same option in [Console > Settings](/docs/devtools/console/refe
 You can find the same option in [Console > Settings](/docs/devtools/console/reference/#eagereval).
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/M54pZmDvnWxKWvDqEuRz.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
-This example shows various output previews.
+This video shows various output previews.
 {% endDetails %}
 
 {% Details %}
@@ -588,7 +588,7 @@ This example shows various output previews.
 You can find the same option in [Console > Settings](/docs/devtools/console/reference/#trigger-user-activation).
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/Wfwxdk8XSvqR665dVEAr.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
-This example shows how to enable this option both in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="22", height="22" %} **Settings** and [Console > Settings](/docs/devtools/console/reference/#trigger-user-activation).
+This video shows how to enable this option both in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="22", height="22" %} **Settings** and [Console > Settings](/docs/devtools/console/reference/#trigger-user-activation).
 {% endDetails %}
 
 {% Details %}
@@ -665,7 +665,7 @@ This section lists options that have global effects in DevTools.
 {% endDetailsSummary %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/c7LuWSe2cqFDjAVFKE0S.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
-This example first shows how to click on a link and open a new tab *without* DevTools, then when you enable this option, a new tab *with* DevTools.
+This video first shows how to click on a link and open a new tab *without* DevTools. Then when you enable this option, a new tab opens *with* DevTools.
 {% endDetails %}
 
 {% Details %}
@@ -674,7 +674,7 @@ This example first shows how to click on a link and open a new tab *without* Dev
 {% endDetailsSummary %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/QjpVziHLucolDVylOsG2.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
-This example first shows how DevTools "jumps" as you type, then when you enable this option, DevTools takes you to the first result when you press <kbd>Enter</kbd>.
+This video first shows how DevTools "jumps" as you type a search query. Then when you enable this option, DevTools takes you to the first result when you press <kbd>Enter</kbd>.
 {% endDetails %}
 
 ### Sync
