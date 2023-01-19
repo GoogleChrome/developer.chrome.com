@@ -36,7 +36,14 @@ function Compare(content, type, labelOverride) {
 
   let label;
   if (labelOverride) {
-    label = i18n(`i18n.common.compare_${labelOverride}`, locale);
+    // Someone might pass in an available compare_* subkey, but can also
+    // provide a free form string. Try to i18n the subkey first, and
+    // if that doesn't exist, use the free form string.
+    try {
+      label = i18n(`i18n.common.compare_${labelOverride}`, locale);
+    } catch (e) {
+      label = labelOverride;
+    }
   } else {
     label = i18n(`i18n.common.compare_${type}`, locale);
   }
@@ -49,7 +56,7 @@ function Compare(content, type, labelOverride) {
   return `<div class="compare pad-left-300" data-type="${type}">
 
 <p class="compare__label pad-bottom-200">
-  ${label}
+  Rambazamba: ${label}
 </p>
 
 ${content}
