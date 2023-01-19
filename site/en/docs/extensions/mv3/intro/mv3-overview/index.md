@@ -33,7 +33,7 @@ webbiness.
 
 This article summarizes the features and major changes introduced by Manifest V3. For
 help migrating Manifest V2 extensions to Manifest V3, or to better understand the
-architectural impact of these changes, see also the [Manifest V3 migration
+architectural effect of these changes, see also the [Manifest V3 migration
 guide](/docs/extensions/mv3/intro/mv3-migration/).
 
 Manifest V3 is available beginning with Chrome
@@ -60,7 +60,7 @@ Each of these changes is summarized in the sections below.
 
 ## Major features {: #major-features }
 
-This section introduces the most important and impactful features of Manifest V3.
+This section introduces the most important and influential features of Manifest V3.
 
 
 ### Service workers {: #service-workers }
