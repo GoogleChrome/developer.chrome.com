@@ -29,8 +29,7 @@ An extension can replace any one of the following pages:
 
 Incognito windows are treated specially. New Tab pages cannot be overridden in incognito windows.
 Other override pages work in incognito windows as long as the [incognito][1] manifest property is
-set to "spanning" (which is the default value). See [Saving data and incognito mode][2] in the
-Overview for more details on how you should treat incognito windows.
+set to "spanning" (which is the default value). See [Saving data and incognito mode][2] in Protect User Privacy for more details on how you should treat incognito windows.
 
 The following screenshots show the default New Tab page and then a custom New Tab page.
 
@@ -84,6 +83,6 @@ For an effective override page, follow these guidelines:
 See the [override samples][4].
 
 [1]: /docs/extensions/mv3/manifest/incognito
-[2]: /docs/extensions/mv3/overview#incognito
-[3]: /docs/extensions/mv3/tabs
+[2]: /docs/extensions/mv3/user_privacy#data-incognito
+[3]: /docs/extensions/mv3/manifest/
 [4]: /docs/extensions/mv3/samples#search:chrome_url_overrides
