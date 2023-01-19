@@ -1,24 +1,26 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: "Element: popoverhide event"
-description: Fired on the popover when it is dismissed.
-subhead: Fired on the popover when it is dismissed.
+title: "Element: beforetoggle event"
+description: Fired on the popover when it is toggled.
+subhead: Fired on the popover when it is toggled.
 authors:
   - chrisdavidmills
   - jheyy
 date: 2022-10-19
-updated: 2022-11-10
+updated: 2023-01-19
 ---
 
-The `popoverhide` event of the [`Element`](https://developer.mozilla.org/docs/Web/API/Element) interface fires on a [popover](/docs/web-platform/popover-api/) element when it is dismissed.
+The `beforetoggle` event of the [`Element`](https://developer.mozilla.org/docs/Web/API/Element) interface fires on a [popover](/docs/web-platform/popover-api/) element when it is shown.
 
 ## Syntax
 
 Use the event name in methods like [`addEventListener()`](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener), or set the equivalent event handler property.
 
+It exposes two properties, `currentState` and `newState`. These can have the value `open` or `closed` and can be used to determine whether a popover is being shown or hidden.
+
 ```js
-addEventListener("popoverhide", (event) => {});
-onpopuphide = (event) => {};
+addEventListener("beforetoggle", (event) => {});
+onbeforetoggle = (event) => {};
 ```
 
 ## Example
@@ -28,13 +30,13 @@ const popover = document.getElementById('my-popover');
 const popoverToggleBtn = document.getElementById('my-popover-btn');
 
 // Event listener version
-popover.addEventListener('popoverhide', () => {
-  popoverToggleBtn.textContent = 'Show popover';
+popover.addEventListener('beforetoggle', (event) => {
+  if (event.newState === 'open') popoverToggleBtn.textContent = 'Dismiss popover';
 })
 
 // Event handler property version
-popover.onpopoverhide = () => {
-  popoverToggleBtn.textContent = 'Show popover';
+popover.onbeforetoggle = (event)Ï => {
+  if (event.newState === 'open') popoverToggleBtn.textContent = 'Dismiss popover';
 }
 ```
 

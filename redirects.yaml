@@ -529,6 +529,12 @@ redirects:
 - from: /docs/web-platform/popup-api/popuphidetarget-attribute/
   to: /docs/web-platform/popover-api/popoverhidetarget-attribute/
 
+- from: /docs/web-platform/popover-api/popoverhide-event/
+  to: /docs/web-platform/popover-api/beforetoggle-event/
+
+- from: /docs/web-platform/popover-api/popovershow-event/
+  to: /docs/web-platform/popover-api/beforetoggle-event/
+
 - from: /docs/web-platform/popup-api/popuphidetarget-property/
   to: /docs/web-platform/popover-api/popoverhidetarget-property/
 

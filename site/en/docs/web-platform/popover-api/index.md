@@ -44,7 +44,7 @@ The [`popover`](/docs/web-platform/popover-api/popover-attribute) attribute can 
 You can show and dismiss popovers in two different ways:
 
 * Declaratively, using HTML attributes. Add the [`popovertoggletarget`](/docs/web-platform/popover-api/popovertoggletarget-attribute), [`popovershowtarget`](/docs/web-platform/popover-api/popovershowtarget-attribute), or [`popoverhidetarget`](/docs/web-platform/popover-api/popoverhidetarget-attribute) to an `<input>` or `<button>` element to turn it into a popover trigger element. In each case, the attribute value must be the `id` of the popover, to associate the two.
-* Programmatically, using JavaScript. The [`showPopover()`](/docs/web-platform/popover-api/showpopover-method) and [`hidePopover()`](/docs/web-platform/popover-api/hidepopover-method) methods are used to show and dismiss popovers, respectively, and the [`popovershow`](/docs/web-platform/popover-api/popovershow-event) and [`popoverhide`](/docs/web-platform/popover-api/popoverhide-event) events can be used to react to popovers being shown or hidden.
+* Programmatically, using JavaScript. The [`showPopover()`](/docs/web-platform/popover-api/showpopover-method) and [`hidePopover()`](/docs/web-platform/popover-api/hidepopover-method) methods are used to show and dismiss popovers, respectively. The [`beforetoggle`](/docs/web-platform/popover-api/beforetoggle-event) event can be used to react to popovers being shown or hidden.
 
 The Popover API also comes with a couple of handy CSS features, a [`::backdrop`](/docs/web-platform/popover-api/backdrop-pseudo-element) pseudo-element to style the document behind the popover when it is shown (for example, you might want to blur or fade the page while showing popovers), and an [`:open`](/docs/web-platform/popover-api/open-pseudo-class) pseudo-class to style the popover only when it is open.
 
@@ -79,11 +79,8 @@ Properties:
 [`popover`](/docs/web-platform/popover-api/popover-property)
 : Turns an element into a popover. DOM definition of the HTML [`popover`](/docs/web-platform/popover-api/popover-attribute) attribute.
 
-`onpopovershow`
-: Event handler property for the [`popovershow`](/docs/web-platform/popover-api/popovershow-event) event, fired on the popover when it is shown.
-
-`onpopoverhide`
-: Event handler property for the [`popoverhide`](/docs/web-platform/popover-api/popoverhide-event) event, fired on the popover when it is dismissed.
+`onbeforetoggle`
+: Event handler property for the [`beforetoggle`](/docs/web-platform/popover-api/beforetoggle-event) event, fired on the popover when it is toggled.
 
 Instance methods:
 
@@ -95,11 +92,8 @@ Instance methods:
 
 Events:
 
-[`popovershow`](/docs/web-platform/popover-api/popovershow-event)
-: Fired on the popover when it is shown.
-
-[`popoverhide`](/docs/web-platform/popover-api/popoverhide-event)
-: Fired on the popover when it is dismissed.
+[`beforetoggle`](/docs/web-platform/popover-api/beforetoggle-event)
+: Fired on the popover when it is toggled.
 
 ### Extensions to `HTMLButtonElement` and `HTMLInputElement`
 
@@ -172,12 +166,8 @@ Use JavaScript to programmatically show and hide popovers:
 Use event listeners to respond to popovers being shown and hidden. The following example switches the `textContent` of the popover trigger button so that it makes sense when the popover is in its shown and hidden states:
 
 ```js
-  popover.addEventListener('popovershow', () => {
-    popoverToggleBtn.textContent = 'Dismiss popover';
-  })
-
-  popover.addEventListener('popoverhide', () => {
-    popoverToggleBtn.textContent = 'Show popover';
+  popover.addEventListener('beforetoggle', (event) => {
+    popoverToggleBtn.textContent = `${event.newState === 'open' ? 'Dismiss' : 'Show'} popover`
   })
 ```
 
