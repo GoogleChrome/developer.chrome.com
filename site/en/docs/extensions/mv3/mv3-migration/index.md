@@ -555,7 +555,7 @@ cases without requiring host permissions, and without needing to read the actual
   makes it more performant than the webRequest API, where each network request is evaluated in
   JavaScript in the extension process.
 - Because the requests are not intercepted by the extension process, declarativeNetRequest removes
-  the need for extensions to have a background page; resulting in less memory consumption.
+  the need for extensions to have a service worker; resulting in less memory consumption.
 - Unlike the webRequest API, blocking or upgrading requests using the declarativeNetRequest API
   requires no host permissions when used with the `declarativeNetRequest` permission.
 - The declarativeNetRequest API provides better privacy to users because extensions can't actually
