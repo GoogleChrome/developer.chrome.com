@@ -178,9 +178,11 @@ Now that you have created and configured your web app, you are ready to build yo
 
 Begin by creating a directory and the following starter files:
 
-**manifest.json**
+### manifest.json
 
 Create a file called `manifest.json` and include the following code:
+
+{% Label %}manifest.json:{% endLabel %}
 
 ```json
 {
@@ -199,9 +201,11 @@ Create a file called `manifest.json` and include the following code:
 }
 ```
 
-**popup.html**
+### popup.html
 
 Create a file called `popup.html` and include the following code:
+
+{% Label %}popup.html:{% endLabel %}
 
 ```html
 <!DOCTYPE html>
@@ -230,9 +234,11 @@ Create a file called `popup.html` and include the following code:
 
 Replace `https://payments-with-firebase-example.web.app/` with your web app's url.
 
-**popup.js**
+### popup.js
 
 Create a file called `popup.js` and include the following code:
+
+{% Label %}popup.js:{% endLabel %}
 
 ```js
 const authState = document.getElementById("auth-state");
