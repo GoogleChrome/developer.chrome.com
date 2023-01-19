@@ -10,7 +10,7 @@ tags:
   - css
   - html
 date: 2022-09-13
-last_updated: 2022-12-01
+last_updated: 2022-01-19
 ---
 
 {% Aside 'caution' %}
@@ -447,7 +447,11 @@ A third type of popover using `popover=hint` was previously implemented for use 
 
 ## JavaScript API
 
-When you need more control over your popovers, you can approach things with JavaScript. You get both a `showPopover` and `hidePopover` method. You also have `popovershow` and `popoverhide` events to listen for:
+When you need more control over your popovers, you can approach things with JavaScript. You get both a `showPopover` and `hidePopover` method. You also have a `beforetoggle`event to listen for. This event has `newState` and `currentState` properties that can be either `open` or `closed`:
+
+{% Aside 'caution' %}
+The Popover API previously exposed `popovershow` and `popoverhide` events. The Open UI initiative resolved to change this to a single `beforetoggle` event that exposes the popover state on [November 17, 2022](https://github.com/openui/open-ui/issues/607).
+{% endAside %}
 
 Show a popover
 ```js
@@ -461,27 +465,35 @@ popoverElement.hidePopover()
 Listen for a popover being shown:
 
 ```js
-popoverElement.addEventListener('popovershow', doSomethingWhenPopoverShows)
+popoverElement.addEventListener('beforetoggle', event => {
+  if (event.newState === 'open') doSomethingWhenPopoverShows()
+})
 ```
 Listen for a popover being shown and cancel it being shown:
 
 ```js
-popoverElement.addEventListener('popovershow',event => {
-  event.preventDefault();
-  console.warn(‘We blocked a popover from being shown’);
+popoverElement.addEventListener('beforetoggle', event => {
+  if (event.newState === 'open') {
+    event.preventDefault();
+    console.warn(‘We blocked a popover from being shown’);
+  }
 })
 ```
 Listen for a popover being hidden:
 
 ```js
-popoverElement.addEventListener('popoverhide', doSomethingWhenPopoverHides)
+popoverElement.addEventListener('beforetoggle', event => {
+  if (event.newState === 'closed') doSomethingWhenPopoverHides() 
+})
 ```
 You can't cancel a popover being hidden:
 
 ```js
-popoverElement.addEventListener('popoverhide',event => {
-  event.preventDefault();
-  console.warn("You aren't allowed to cancel the hiding of a popover");
+popoverElement.addEventListener('beforetoggle',event => {
+  if (event.newState === 'closed') {
+    event.preventDefault();
+    console.warn("You aren't allowed to cancel the hiding of a popover");
+  }
 })
 ```
 Check whether a popover is in the top layer:
@@ -641,19 +653,7 @@ This demo shows how a nested navigation menu could work.
 
 - Use `[popover=auto]` as it allows nested popovers.
 - Use `autofocus` on the first link of each dropdown in order to keyboard navigate.
-- This is a perfect candidate for the CSS Anchoring API. But, for this demo you can use a small amount of JavaScript to update the positions using custom properties.
-
-```js
-const ANCHOR = (anchor, anchored) => () => {
-  const { top, bottom, left, right } = anchor.getBoundingClientRect();
-  anchored.style.setProperty("--top", top);
-  anchored.style.setProperty("--right", right);
-  anchored.style.setProperty("--bottom", bottom);
-  anchored.style.setProperty("--left", left);
-};
-
-PRODUCTS_MENU.addEventListener("popovershow", ANCHOR(PRODUCT_TARGET, PRODUCTS_MENU));
-````
+- This is a perfect candidate for the CSS Anchoring API.
 
 Remember, because this demo uses `autofocus`, it will need to be opened in "[full screen view](https://codepen.io/web-dot-dev/full/WNJNVBr)" for keyboard navigation.
 
@@ -678,7 +678,7 @@ This demo shows how you might pop media up.
 
 - Uses `[popover=auto]` for light dismiss.
 - JavaScript listens for the video's `play` event and pops the video up.
-- The popovers `popoverhide` event pauses the video.
+- The popovers `beforetoggle` event pauses the video based on `newState`.
 
 {% Codepen {
     user: 'web-dot-dev',
@@ -927,6 +927,10 @@ This demo shows how you could use popover to implement a floating action button 
     src: "video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/aHLaTobx48u08uA5NU4E.mp4"
   }
 %}
+
+{% Aside 'caution' %}
+The Open UI initiative resolved to change to remove a `defaultopen` attribute from the Popover API on [November 10, 2022](https://github.com/openui/open-ui/issues/631). This provided the ability to have a popover shown by default. The intention is to bring this back in future versions of the API.
+{% endAside %}
 
 ## That's it!
 
