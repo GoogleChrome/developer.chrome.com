@@ -56,7 +56,7 @@ function Compare(content, type, labelOverride) {
   return `<div class="compare pad-left-300" data-type="${type}">
 
 <p class="compare__label pad-bottom-200">
-  Rambazamba: ${label}
+  ${label}
 </p>
 
 ${content}
