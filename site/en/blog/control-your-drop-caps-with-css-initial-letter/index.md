@@ -13,7 +13,7 @@ date: 2023-01-19
 ---
 The art of styling drop caps has been around for hundreds, if not thousands of years. Its use in print styles to signify the start of a new section or chapter can be seen through history. But, it's always been problematic to style in the digital age. There hasn't been a "clean" solution to styling them.
 
-The CSS `initial-letter` property will make things much easier.
+The [CSS `initial-letter` property](https://drafts.csswg.org/css-inline-3/#sizing-drop-initials) will make things much easier.
 
 ## Browser support
 Where can you try `initial-letter`? It's available in Safari and from Chrome 110. In Safari, the property needs the `-webkit-` prefix. There is an [open issue](https://bugzilla.mozilla.org/show_bug.cgi?id=1223880) for it to be implemented in Firefox.
