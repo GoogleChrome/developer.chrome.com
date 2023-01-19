@@ -21,6 +21,9 @@ Pages loaded as offscreen documents are handled differently from other types of 
 * Offscreen documents cannot be focused.
 * Offscreen documents cannot have their `opener` property set using the [`chrome.windows` API](docs/extensions/reference/windows/) method `windows.setSelfAsOpener`.
 
+## Reasons
+Reasons, listed [below](/docs/extensions/reference/offscreen/#type-Reason), are set upon  document creation to determine the document's lifespan. Currently, the AUDIO_PLAYBACK reason has specialized lifetime enforcement (CreateAudioLifetimeEnforcer). All others use generic idle detection   (CreateEmptyEnforcer).
+
 ## Examples
 The following methods create and close an offscreen document. Only a single Document can be open at a time. 
 
@@ -28,7 +31,7 @@ The following methods create and close an offscreen document. Only a single Docu
 chrome.offscreen.createDocument({
   url: chrome.runtime.getURL('off_screen.html'),
   reasons: ['CLIPBOARD'],
-  justification: 'ignored',
+  justification: 'reason for needing the document',
 });
 
 chrome.offscreen.closeDocument()
