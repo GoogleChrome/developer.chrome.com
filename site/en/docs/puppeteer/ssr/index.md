@@ -774,7 +774,7 @@ In practice, I've found universal JS difficult to pull off. A personal story...
 I recently started
 [a project](https://github.com/ebidel/devwebfeed/blob/master/server.mjs)
 and wanted to give [lit-html](https://github.com/Polymer/lit-html) a try. Lit
-is a great little library that lets you write [HTML &lt;template>s](https://www.html5rocks.com/en/tutorials/webcomponents/template/)
+is a great little library that lets you write [HTML 5 templates](https://developer.mozilla.org/docs/Web/HTML/Element/template)
 using JS template literals, then efficiently render those templates to
 DOM. The problem is that its core feature (using the `<template>` element)
 doesn't work outside of the browser. That means it won't work in a Node server.
