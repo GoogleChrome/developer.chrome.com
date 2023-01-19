@@ -26,6 +26,40 @@
 
     .playlist-thumbnail {
       position: relative;
+    }    
+  }
+
+  .playlist-decorations {
+    height: px-to-rem(90px);
+    margin: px-to-rem(44px) px-to-rem(32px) 0;
+    position: relative;
+
+    .decoration__small {
+      background-color: #fad2cf;
+      bottom: px-to-rem(10px);
+      height: px-to-rem(45px);
+      left: 0;
+      position: absolute;
+      width: px-to-rem(45px);
+    }
+
+    .decoration__logo {
+      background-color: var(--color-red-medium);
+      bottom: px-to-rem(5px);
+      height: px-to-rem(100px);
+      left: calc(50% - (100px/2));
+      position: absolute;
+      width: px-to-rem(100px);
+    } 
+
+    .decoration__large {
+      background-color: #fad2cf;
+      bottom: 0;
+      height: px-to-rem(70px);
+      position: absolute;
+      right: 0;
+      width: px-to-rem(70px);
+      z-index: -1;
     }
   }
 
