@@ -21,6 +21,28 @@
       background-color: var(--color-red-lightest);
       padding: px-to-rem(24px);
     }
+    .playlist-thumbnail{
+      position:relative
+    }
+
+    .playlist-play-all{
+      position: absolute;
+      background-color: var(--color-text);
+      opacity:0.9;
+      text-align: center;
+      width:100%;
+      border-radius: 0 0 0.75rem 0.75rem;
+      bottom:0;
+    }
+
+    .playlist-play-all a{
+      display:inline-block;
+      text-decoration: none;
+      color:var(--color-bg);
+      font-size: px-to-rem(14px);
+      width:100%;
+      padding: 0.3rem 0;
+    }
   }
 
   .playlist-action__link {
