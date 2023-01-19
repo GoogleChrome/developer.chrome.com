@@ -6,7 +6,8 @@ updated:
 description: Reference documentation for the declarativeNetRequest property of manifest.json.
 ---
 
-An optional Manifest key enabling the use of the [declarativeNetRequest API](/docs/extensions/reference/declarativeNetRequest/). Using `declarativeNetRequest`, you can block or modify network requests by specifying declarative rules. This lets extensions modify network requests without intercepting them and viewing their content, providing more privacy. The manifest key accepts a dictionary with a single key called `"rule_resources"`, containing a list of static ruleset dictionaries. The "declarativeNetRequest" permission must be added, with "declarativeNetRequestFeedback" available as an additional permission for debugging. A list of specified  "host_permissions" URLs are also required.
+An optional manifest key and permission enabling the use of the [declarativeNetRequest API](/docs/extensions/reference/declarativeNetRequest/). Using `declarativeNetRequest`, you can block or modify network requests by specifying declarative rules. This lets extensions modify network requests without intercepting them and viewing their content, providing more privacy. Runtime modification of declarativeNetRequest rules can be done with only the permission requested, without the need for the full manifest key.
+The manifest key accepts a dictionary with a single key called `"rule_resources"`, containing a list of static ruleset dictionaries. The "declarativeNetRequest" permission must be added, with "declarativeNetRequestFeedback" available as an additional permission for debugging. A list of specified  "host_permissions" URLs are also required.
 
 ```json
 {
