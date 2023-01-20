@@ -4,7 +4,7 @@ title: 'Attribution Reporting'
 subhead: An API to measure when an ad click or view leads to a conversion, such as a purchase on an advertiser site.
 description: An API to measure when an ad click or view leads to a conversion, such as a purchase on an advertiser site.
 date: 2021-05-18
-updated: 2022-12-15
+updated: 2023-01-20
 authors:
   - maudn
   - samdutton
@@ -109,7 +109,7 @@ If you're interested in experimenting with the API, head over to
     <td>Aggregatable reports for clicks and views<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md">Explainer</a></td>
     <td>Available in Chrome for origin trial.</td>
     </tr>
-    <td>Conversion journey: app-to-web<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/app_to_web.md">web explainer</a> and <a href="https://developer.android.com/design-for-safety/privacy-sandbox/attribution-app-to-web">Android explainer</a></td>
+    <td>Conversion journey: app-to-web<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/app_to_web.md">Web explainer</a> and <a href="https://developer.android.com/design-for-safety/privacy-sandbox/attribution-app-to-web">Android explainer</a></td>
     <td>Expected in Chrome and Android for origin trial in Q2 2023.</td>
     </tr>
     <tr>
