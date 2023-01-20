@@ -94,7 +94,7 @@ En esta versión, se han realizado algunas mejoras en la depuración de JavaScri
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hKOEn03BZN2IUmWJ1Hho.png", alt="Muestra la comparación del antes y el después de evaluar new.target mientras depuraba.", width="800", height="499" %}
 
 <!-- - A `WeakRef` object lets you hold a weak reference to another object, without preventing that object from getting garbage-collected. DevTools now shows an inline preview for the value and evaluates the weak reference directly in the console during debugging. Previously, you had to explicitly call “deref” on them to resolve it. -->
-- Un objeto `WeakRef` le permite mantener una referencia débil a otro objeto, sin impedir que ese objeto se recolecte como basura. DevTools ahora muestra una vista previa en línea para el valor y evalúa la referencia débil directamente en la consola durante la depuración. Anteriormente, debía llamar explícitamente a "deref" en ellos para resolverlo.
+- Un objeto `WeakRef` te permite mantener una referencia débil a otro objeto, sin impedir que ese objeto se recolecte como basura. DevTools ahora muestra una vista previa en línea para el valor y evalúa la referencia débil directamente en la consola durante la depuración. Anteriormente, debía sllamar explícitamente a "deref" en ellos para resolverlo.
    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/M7DP4bI7pA07oY7M21wF.png", alt="Muestra una comparación del antes y el después de evaluar WeakRef durante la depuración.", width="800", height="453" %}
 <!-- - Fixed inline preview for shadowed variable. Previously, the display value was incorrect.  -->
 - Corregida la vista previa en línea para la variable *shadowed*. Anteriormente, el valor de visualización era incorrecto.
