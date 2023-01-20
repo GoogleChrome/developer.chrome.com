@@ -94,17 +94,17 @@ Usefulness for different types of stakeholders</td>
       <td>Concerns that the Privacy Sandbox technologies favor larger developers and that niche (smaller) sites contribute more than generic (larger) sites.</td>
       <td>Our response is unchanged from Q3:<br>
 <br>
-<em>"Google has committed to the CMA to design and implement the Privacy Sandbox proposals in a way that does not distort competition by self-preferencing Google's own business, and to take into account impact on competition in digital advertising and on publishers and advertisers, regardless of their size. We continue to work closely with the CMA to ensure that our work complies with these commitments.</em><br>
+"Google has committed to the CMA to design and implement the Privacy Sandbox proposals in a way that does not distort competition by self-preferencing Google's own business, and to take into account impact on competition in digital advertising and on publishers and advertisers, regardless of their size. We continue to work closely with the CMA to ensure that our work complies with these commitments.<br>
 <br>
-<em>As testing of the Privacy Sandbox progresses, one of the key questions we will assess is how the new technologies perform for different types of stakeholders. Feedback is critical in this respect, especially specific and actionable feedback that can help us further improve the technical designs.</em><br>
+As testing of the Privacy Sandbox progresses, one of the key questions we will assess is how the new technologies perform for different types of stakeholders. Feedback is critical in this respect, especially specific and actionable feedback that can help us further improve the technical designs.<br>
 <br>
-<em>We have worked with the CMA to develop our approach to quantitative testing, and are supportive of the CMA publishing a note on experiment design to provide more information to market participants and an opportunity to comment on the proposed approaches."</em></td>
+We have worked with the CMA to develop our approach to quantitative testing, and are supportive of the CMA publishing a note on experiment design to provide more information to market participants and an opportunity to comment on the proposed approaches."</td>
     </tr>
     <tr>
       <td>(Also reported in Q3) <br>
 Documentation requests</td>
       <td>Requests for more resources detailing how to manage testing, analysis, and implementation.</td>
-      <td>Q4 Update:<br>
+      <td><em>Q4 Update:</em><br>
 <br>
  We appreciate that developers have found our current material helpful, and continue to be committed to providing more material so developers can understand how the new technologies can work for them. Over the past quarter, we added a "News & Updates" section to <a href="http://privacysandbox.com">privacysandbox.com</a> and published an extensive review of how the Privacy Sandbox can help drive ad relevance in the future.<br>
 <br>
@@ -154,7 +154,7 @@ Impact on first-party signals</td>
       <td>Topics signal may be highly valuable and as a result devalues other first-party interest-based signals.</td>
       <td>Our response is unchanged from Q3:<br>
 <br>
-<em>"We believe interest-based advertising is an important use case for the web, and Topics is designed to support that use case. As described [in our Q3 report], other ecosystem stakeholders have expressed concerns that Topics may not be useful enough to provide value. In all cases, improvements to the taxonomy are an ongoing effort, and we expect the taxonomy to evolve with ecosystem testing and input."</em></td>
+"We believe interest-based advertising is an important use case for the web, and Topics is designed to support that use case. As described [in our Q3 report], other ecosystem stakeholders have expressed concerns that Topics may not be useful enough to provide value. In all cases, improvements to the taxonomy are an ongoing effort, and we expect the taxonomy to evolve with ecosystem testing and input."</td>
     </tr>
     <tr>
       <td>Updating Taxonomy</td>
@@ -166,7 +166,7 @@ Impact on first-party signals</td>
 (Also reported in Q3)<br>
 Topics taxonomy not granular enough</td>
       <td>Topics classifier performing poorly in regional domains.</td>
-      <td>Q4 Update:<br>
+      <td><em>Q4 Update:</em><br>
 <br>
 Improvement to the taxonomy is an ongoing effort. We are actively<a href="https://github.com/patcg-individual-drafts/topics/issues/3"> seeking feedback</a> on the taxonomy that would be most useful for the ecosystem. Based on the feedback we have received, one possibility under consideration is to expand the Topics override list, which our analysis shows will increase global coverage and improve accuracy.</td>
     </tr>
@@ -385,7 +385,7 @@ We are planning to share integration guides with more details on how FLEDGE will
     <tr>
       <td>(Also reported in Q3) Cross-domain conversions	</td>
       <td>How to track the conversions that are cross domain, such as with 2 or more destinations?</td>
-      <td>Q4 Update:<br>
+      <td><em>Q4 Update:</em><br>
 <br>
 We have <a href="https://github.com/WICG/attribution-reporting-api/issues/590">published a proposal</a> to remove the landing page destination restriction which enables cross domain conversations to be tracked. This proposal has been implemented.</td>
     </tr>
@@ -393,7 +393,7 @@ We have <a href="https://github.com/WICG/attribution-reporting-api/issues/590">p
       <td>(Also reported in Q3)<br>
 Expiry setting in conversion report	</td>
       <td>Request to support report filter / expiry for less than 24 hours.</td>
-      <td>Q4 Update:<br>
+      <td><em>Q4 Update:</em><br>
 <br>
 We have shared this <a href="https://github.com/WICG/attribution-reporting-api/pull/577">pull request </a>which will decouple expiry and reporting windows to mitigate the trade off of reporting delay vs conversion expiry. This is now launched in M110.</td>
     </tr>
@@ -480,7 +480,7 @@ While those anti-fingerprinting measures will not be included in quantitative te
       <td>(Also reported in Q2) <br>
 Performance</td>
       <td>Concerns about the latency of getting hints via Critical-CH (on the first page load).</td>
-      <td>Q4 Update:<br>
+      <td><em>Q4 Update:</em><br>
 <br>
 We are currently scoping performance investigations into our 2023 roadmap.</td>
     </tr>
@@ -545,7 +545,7 @@ We are also exploring building new privacy-preserving capabilities into IP Prote
       <td>(Also reported in Q3)<br>
 Geolocation use cases</td>
       <td>IP Protection may prevent legitimate geolocation use cases from working in the future, such as content personalisation based on geolocation.	</td>
-      <td>Q4 Update:<br>
+      <td><em>Q4 Update:</em><br>
 <br>
 We are working with stakeholders to ensure that Chrome continues to support legitimate use-cases for IP addresses. We are seeking ecosystem feedback on IP Geolocation granularity <a href="https://github.com/spanicker/ip-blindness/issues/20">here</a>.</td>
     </tr>
@@ -589,7 +589,7 @@ We will share additional details on the proposal when it becomes more finalized.
     <tr>
       <td>(Also reported in Q3) Domain limit</td>
       <td>Request to expand the number of associated domains.</td>
-      <td>Q4 Update:<br>
+      <td><em>Q4 Update:</em><br>
 <br>
 We have released FPS for local testing, including a mock set submission process on GitHub and a flag to test rSA and rSAFor locally. We have also hosted 2 office hours for FPS to continue to address questions around use cases for the associated subset. We encourage developers to test out FPS functionality to provide feedback on how the domain limit for the associated subset would impact the usability of FPS for their use cases. <br>
 <br>
@@ -617,7 +617,7 @@ As explained in the submission guidelines, any set change management will be fol
       <td>Concern that FPS is not consistent with the CMA commitments' provisions regarding "Applicable Data Protection Legislation," on the basis that GDPR does not impose a limit on the number of sites in a set while FPS envisages a limit of 3.	</td>
       <td>Our response is unchanged from Q3: <br>
 <br>
-<em>"Google is continuing to commit to the CMA to design and implement the Privacy Sandbox proposals in a way that does not distort competition by self-preferencing Google's own business, and to take into account impact on competition in digital advertising, publishers and advertisers as well as impact on privacy outcomes and compliance with data protection principles as set out in the Applicable Data Protection Legislation. The concern expressed does not disclose any incompatibility with GDPR. We continue to work closely with the CMA to ensure that our work complies with these commitments."</em></td>
+"Google is continuing to commit to the CMA to design and implement the Privacy Sandbox proposals in a way that does not distort competition by self-preferencing Google's own business, and to take into account impact on competition in digital advertising, publishers and advertisers as well as impact on privacy outcomes and compliance with data protection principles as set out in the Applicable Data Protection Legislation. The concern expressed does not disclose any incompatibility with GDPR. We continue to work closely with the CMA to ensure that our work complies with these commitments."</td>
     </tr>
   </tbody>
 </table>
@@ -686,7 +686,7 @@ We are foreseeing DSP and Measurement solution providers to be the main integrat
     <tr>
       <td>(Also reported in Q3) Partitioned requirement</td>
       <td>Add explicit behavior requirement for "Partitioned" attribute on First-Party cookies.</td>
-      <td>Q4 Update: <br>
+      <td><em>Q4 Update:</em><br>
 <br>
 After <a href="https://github.com/privacycg/CHIPS/issues/51">discussions</a> on GitHub and PrivacyCG calls, the behavior that we have aligned on is that Partitioned cookies set on first-party cookies will use a partition key of (A,A) where "A" is the top-level site. We will document this behavior on the explainer and specification.</td>
     </tr>
