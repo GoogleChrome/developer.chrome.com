@@ -172,7 +172,7 @@ Para habilitar el experimento, marque **Automatically pretty print in the Source
 {% endAside %}
 
 <!-- The **Sources** panel now automatically pretty print minified source files in-place. You can click on the **pretty print button `{ }` to underdo it. -->
-El panel **Sources** ahora formatea automáticamente los archivos de código minificado en el mismo lugar. Puede hacer clic en el botón *pretty print* `{ }` para deshacerlo.
+El panel **Sources** ahora formatea automáticamente los archivos de código minificado en el mismo lugar. Puedes hacer clic en el botón *pretty print* `{ }` para deshacerlo.
 <!-- Previously, the **Sources** panel shows minified content by default. Developers need to click on the pretty print button manually to format the content. On top of that, the pretty printed content is not displayed in the same file, but in another `::formatted` tab. -->
 Anteriormente, el panel **Sources** mostraba el contenido minificado de forma predeterminada. Los desarrolladores debían hacer clic en el botón *pretty print* manualmente para formatear el contenido. Además, el contenido formateado no se mostraba en el mismo archivo, sino en otra pestaña `::formatted`.
 
