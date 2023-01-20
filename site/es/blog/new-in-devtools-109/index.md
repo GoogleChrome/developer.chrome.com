@@ -89,7 +89,7 @@ Chromium issue: [1167965](https://crbug.com/1167965), [1172535](https://crbug.co
 En esta versión, se han realizado algunas mejoras en la depuración de JavaScript:
 
 <!-- - `new.target` is a meta-property that lets you detect whether a function or constructor was called using the new operator. You can now log `new.target` in the **Console** to check its value during debugging. Previously, it would return errors when you entered `new.target`. -->
-- `new.target` es una meta-propiedad que le permite detectar si una función o constructor ha sido llamada usando el operador new. Ahora puede registrar `new.target` en la **Consola** para verificar su valor durante la depuración. Anteriormente, devolvería errores cuando ingresaba `new.target`.
+- `new.target` es una meta-propiedad que te permite detectar si una función o constructor ha sido llamada usando el operador new. Ahora puedes registrar `new.target` en la **Consola** para verificar su valor durante la depuración. Anteriormente, devolvería errores cuando ingresaba `new.target`.
 
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hKOEn03BZN2IUmWJ1Hho.png", alt="Muestra la comparación del antes y el después de evaluar new.target mientras depuraba.", width="800", height="499" %}
 
