@@ -910,7 +910,7 @@ async function switchView(data) {
 
   animateFromMiddle(transition);
 
-  await transition.domUpdated;
+  await transition.updateCallbackDone;
 }
 
 async function animateFromMiddle(transition) {
@@ -935,9 +935,13 @@ async function animateFromMiddle(transition) {
 
 {% endCompare %}
 
-This example uses `transition.domUpdated` to wait for the DOM update, and to reject if it fails. `switchView` no longer rejects if the transition fails, it resolves when the DOM update completes, and rejects if it fails.
+This example uses `transition.updateCallbackDone` to wait for the DOM update, and to reject if it fails. `switchView` no longer rejects if the transition fails, it resolves when the DOM update completes, and rejects if it fails.
 
-If you want `switchView` to resolve when the new view has 'settled', as in, any animated transition has completed or skipped to the end, replace `transition.domUpdated` with `transition.finished`.
+If you want `switchView` to resolve when the new view has 'settled', as in, any animated transition has completed or skipped to the end, replace `transition.updateCallbackDone` with `transition.finished`.
+
+{% Aside %}
+`updateCallbackDone` was previously `domUpdated`. It was renamed in Chrome 111.
+{% endAside %}
 
 ## Not a polyfill, but… {:#not-a-polyfill}
 
@@ -952,12 +956,13 @@ function transitionHelper({
   updateDOM,
 }) {
   if (skipTransition || !document.startViewTransition) {
-    const domUpdated = Promise.resolve(updateDOM()).then(() => undefined);
+    const updateCallbackDone = Promise.resolve(updateDOM()).then(() => {});
 
     return {
       ready: Promise.reject(Error('View transitions unsupported')),
-      domUpdated,
-      finished: domUpdated,
+      updateCallbackDone,
+      finished: updateCallbackDone,
+      skipTransition: () => {},
     };
   }
 
@@ -998,38 +1003,42 @@ You can also pass `true` to `skipTransition` if you don't want an animation, eve
 
 ## API reference {:#api-reference}
 
-`const viewTransition = document.startViewTransition(domUpdateCallback)`
+`const viewTransition = document.startViewTransition(updateCallback)`
 : Start a new `ViewTransition`.
 
-    `domUpdateCallback` is called once the current state of the document is captured.
+    `updateCallback` is called once the current state of the document is captured.
 
-    Then, when the promise returned by `domUpdateCallback` fulfills, the transition begins in the next frame. If the promise returned by `domUpdateCallback` rejects, the transition is abandoned.
+    Then, when the promise returned by `updateCallback` fulfills, the transition begins in the next frame. If the promise returned by `updateCallback` rejects, the transition is abandoned.
 
 Instance members of `ViewTransition`:
 
-`viewTransition.domUpdated`
-: A promise that fulfills when the promise returned by `domUpdateCallback` fulfills, or rejects when it rejects.
+`viewTransition.updateCallbackDone`
+: A promise that fulfills when the promise returned by `updateCallback` fulfills, or rejects when it rejects.
 
-    The View Transition API wraps a DOM change and creates a transition. However, sometimes you don't care about the success/failure of the transition animation, you just want to know if and when the DOM change happens. `domUpdated` is for that use-case.
+    The View Transition API wraps a DOM change and creates a transition. However, sometimes you don't care about the success/failure of the transition animation, you just want to know if and when the DOM change happens. `updateCallbackDone` is for that use-case.
+
+    {% Aside %}
+    `updateCallbackDone` was previously `domUpdated`. It was renamed in Chrome 111.
+    {% endAside %}
 
 `viewTransition.ready`
 : A promise that fulfills once the pseudo-elements for the transition are created, and the animation is about to start.
 
-    It rejects if the transition cannot begin. This can be due to misconfiguration, such as duplicate `view-transition-name`s, or if `domUpdateCallback` returns a rejected promise.
+    It rejects if the transition cannot begin. This can be due to misconfiguration, such as duplicate `view-transition-name`s, or if `updateCallback` returns a rejected promise.
 
     This is useful for [animating the transition pseudo-elements with JavaScript](#animating-with-javascript).
 
 `viewTransition.finished`
 : A promise that fulfills once the end state is fully visible and interactive to the user.
 
-    It only rejects if `domUpdateCallback` returns a rejected promise, as this indicates the end state wasn't created.
+    It only rejects if `updateCallback` returns a rejected promise, as this indicates the end state wasn't created.
 
     Otherwise, if a transition fails to begin, or is skipped during the transition, the end state is still reached, so `finished` fulfills.
 
 `viewTransition.skipTransition()`
 : Skip the animation part of the transition.
 
-    This won't skip calling `domUpdateCallback`, as the DOM change is separate to the transition.
+    This won't skip calling `updateCallback`, as the DOM change is separate to the transition.
 
 ## Default style and transition reference
 
