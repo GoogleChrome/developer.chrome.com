@@ -145,7 +145,7 @@ Para habilitar el experimento, marque **Enable re-designed Breakpoint Sidebar Pa
 Los paneles actuales de **Breakpoints** proporcionan poca ayuda visual para supervisar todos los puntos de interrupción. Además, las acciones más utilizadas están ocultas detrás del menú contextual.
 
 <!-- This experimental UX redesign aims at bringing structure into the **Breakpoints** pane and allow developers to have quick access to commonly used features, in particular editing and removing breakpoints. -->
-Este rediseño de la UX experimental tiene como objetivo dar estructura al panel **Breakpoints** y permitir a los desarrolladores tener un acceso rápido a las funciones más utilizadas, en particular la edición y eliminación de puntos de interrupción.
+Este rediseño experimental de la UX  tiene como objetivo dar estructura al panel **Breakpoints** y permitir a los desarrolladores tener un acceso rápido a las funciones más utilizadas, en particular la edición y eliminación de puntos de interrupción.
 <!-- These are some highlights: -->
 Estos son algunos puntos destacados:
 <!-- - Both pause options are in the **Breakpoints** pane and labeled with text to make it more self-explanatory. -->
