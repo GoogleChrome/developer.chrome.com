@@ -29,7 +29,7 @@ Abre un flujo de usuario existente en el **Recorder**. Anteriormente, cuando rep
 Con las últimas actualizaciones, el **Recorder** muestra el paso de navegación por separado. ¡Puedes hacer clic derecho y eliminarlo para realizar una reproducción en la página!
 
 <!-- Apart from that, you can right-click a step and copy it to the clipboard in the **Recorder* panel instead of exporting the whole user flow. It works with [extensions](https://goo.gle/recorder-extension) too. For example, try to copy a step as a [Nightwatch Test](https://bit.ly/nightwatch-recorder) script. With this feature, you can update any existing script with ease. -->
-Además de esto, puede hacer clic derecho en un paso y copiarlo al portapapeles en el panel **Recorder** en lugar de exportar todo el flujo de usuario. También funciona con [extensiones](https://goo.gle/recorder-extension). Por ejemplo, intente copiar un paso como un script de [Nightwatch Test](https://bit.ly/nightwatch-recorder). Con esta función, puede actualizar cualquier script existente con facilidad.
+Además de esto, puedes hacer clic derecho en un paso y copiarlo al portapapeles en el panel **Recorder** en lugar de exportar todo el flujo de usuario. También funciona con [extensiones](https://goo.gle/recorder-extension). Por ejemplo, intenta copiar un paso como un script de [Nightwatch Test](https://bit.ly/nightwatch-recorder). Con esta función, puedes actualizar cualquier script existente con facilidad.
 
 <!-- Previously, you could access the step menu only through the 3-dot button. You can now right-click anywhere on the step to access the menu. -->
 Anteriormente, solo podía acceder al menú de pasos a través del botón de 3 puntos. Ahora puede hacer clic derecho en cualquier parte del paso para acceder al menú.
