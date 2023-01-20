@@ -95,7 +95,7 @@ async function Playlist(playlistId) {
               </a>
 
               <div class="playlist-video__details">
-              <a href="https://www.youtube.com/watch?v=${video.snippet.resourceId.videoId}" target="_blank">
+              <a href="https://www.youtube.com/watch?v=${video.snippet.resourceId.videoId}" class="no-visited" target="_blank">
                 <h4 class="playlist-video__title">${video.snippet.title}</h4>
                 </a>
                 <p>${video.snippet.channelTitle}</p>
@@ -126,12 +126,12 @@ async function Playlist(playlistId) {
         <div class="playlist-thumbnail">
           <img src="${playlistThumb}" height="158" width="316" alt="Thumbnail for ${playlistName}" class="rounded-lg">
           <div class="playlist-play-all">
-            <a href='https://www.youtube.com/watch?v=${playlistFirstVideo}&list=${playlistId}' target="_blank">PLAY ALL</a>
+            <a href='https://www.youtube.com/watch?v=${playlistFirstVideo}&list=${playlistId}' target="_blank" class="no-visited">PLAY ALL</a>
           </div>
         </div>
 
         <h2 class="type--h3-card gap-top-400">
-          <a class="color-red-darkest surface display-inline-flex" href="https://www.youtube.com/playlist?list=${playlistId}"  target="_blank">
+          <a class="color-red-darkest surface display-inline-flex no-visited" href="https://www.youtube.com/playlist?list=${playlistId}"  target="_blank">
             ${playlistName}
           </a>
         </h2>
