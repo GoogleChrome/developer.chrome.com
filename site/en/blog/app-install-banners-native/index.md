@@ -98,7 +98,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
 ### Notify the user your app can be installed
 
 The best way to notify the user your app can be installed is by adding a button
-or other element to your user interface. **Don't show a full page [interstitial](https://support.google.com/webdesigner/answer/7334234?hl=en-GB)
+or other element to your user interface. **Don't show a full page [interstitial](https://support.google.com/webdesigner/answer/7334234)
 or other elements that may be annoying or distracting.**
 
 ```js
