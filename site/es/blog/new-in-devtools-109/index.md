@@ -66,7 +66,7 @@ Chromium issues: [1364601](https://crbug.com/1364601), [1364601](https://crbug.c
 <!-- You can switch between tabs in the **Sources** panel using: -->
 <!-- On MacOS, <kbd>Function</kbd> + <kbd>Command</kbd> + <kbd>Arrow up</kbd> and <kbd>down</kbd> -->
 <!-- On Windows and Linux, <kbd>Control</kbd> + <kbd>Page up</kbd> or <kbd>down</kbd> -->
-Ahora puede cambiar entre pestañas en el panel **Fuentes** usando:
+Ahora puedes cambiar entre pestañas en el panel **Fuentes** usando:
 En MacOS, <kbd>Function</kbd> + <kbd>Command</kbd> + <kbd>Arrow Up</kbd> y <kbd>Down</kbd>
 En Windows y Linux, <kbd>Control</kbd> + <kbd>Page up</kbd> o <kbd>Down</kbd>
 
