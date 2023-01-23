@@ -252,8 +252,8 @@ Just for fun, let's add a shortcut to make it easier to enable or disable focus 
   "commands": {
     "_execute_action": {
       "suggested_key": {
-        "default": "Ctrl+Q",
-        "mac": "Command+Q"
+        "default": "Ctrl+B",
+        "mac": "Command+B"
       }
     }
   }
@@ -284,7 +284,7 @@ First, open any of the following pages:
 - [Publish in the Chrome Web Store][cws-publish]
 - [Scripting API][api-scripting]
 
-Then, click on the extension action. If you set up a keyboard shortcut (link), you can test it by pressing `Ctrl + Q` or `Cmd + Q`.
+Then, click on the extension action. If you set up a keyboard shortcut (link), you can test it by pressing `Ctrl + B` or `Cmd + B`.
 
 It should go from this:
 
