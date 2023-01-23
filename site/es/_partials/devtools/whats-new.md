@@ -15,6 +15,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 * [[Experimental] Formatea automáticamente el código para una mejor lectura](/es/blog/new-in-devtools-109/#pretty-print)
  #}
 
+
 ### Chrome 108 {: #chrome108 }
 
 * [Sugerencias para las propiedades CSS inactivas](/es/blog/new-in-devtools-108/#css-hint)
