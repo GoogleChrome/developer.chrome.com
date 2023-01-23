@@ -29,4 +29,4 @@ See also [Short Name](short-name).
 
 [api-i18n]: /docs/extensions/i18n
 [cws]: https://chrome.google.com/webstore
-[short-name]: short-name
+[short-name]: /docs/extensions/mv3/manifest/short_name/
