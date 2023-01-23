@@ -2,8 +2,7 @@
 layout: 'layouts/blog-post.njk'
 title: "O que há de novo no DevTools (Chrome 109)"
 authors:
-  - khaosdoctor
-  - alvarocamillont
+  - jecelynyeen
 date: 2023-01-15
 description: 'Opções de cópia de uma etapa no gravador, nomes reais das funções nas gravações de performance e muito mais.'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Me4Bc5gTnsFtKLNWviUy.png'
