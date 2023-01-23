@@ -25,12 +25,7 @@ async function Playlist(playlistId) {
     Playlist Information
   */
   await fetch(
-    'https://youtube.googleapis.com/youtube/v3/playlists?part=' +
-      part +
-      '&id=' +
-      playlistId +
-      '&key=' +
-      apiKey
+    `https://youtube.googleapis.com/youtube/v3/playlists?part=${part}&id=${playlistId}&key=${apiKey}`
   )
     .then(res => res.json())
     .then(playlistResult => {
@@ -52,12 +47,7 @@ async function Playlist(playlistId) {
 
       // Next Call: Query Channel Information
       return fetch(
-        'https://youtube.googleapis.com/youtube/v3/channels?part=' +
-          part +
-          '&id=' +
-          channelId +
-          '&key=' +
-          apiKey
+        `https://youtube.googleapis.com/youtube/v3/channels?part=${part}&id=${channelId}&key=${apiKey}`
       );
     })
     .then(res => res.json())
@@ -67,14 +57,7 @@ async function Playlist(playlistId) {
 
       // Next Call: Query Channel Information
       return fetch(
-        'https://youtube.googleapis.com/youtube/v3/playlistItems?part=' +
-          part +
-          '&playlistId=' +
-          playlistId +
-          '&maxResults = ' +
-          maxResults +
-          '&key=' +
-          apiKey
+        `https://youtube.googleapis.com/youtube/v3/playlistItems?part=${part}&playlistId=${playlistId}&maxResults${maxResults}&key=${apiKey}`
       );
     })
     .then(res => res.json())
