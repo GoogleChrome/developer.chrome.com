@@ -39,7 +39,7 @@ Create a file called `manifest.json` and include the following code.
 {
   "manifest_version": 3,
   "name": "Focus Mode",
-  "description": "Enable reading mode on Chrome's official Extensions and Chrome Web Store documentation.",
+  "description": "Enable focus mode on Chrome's official Extensions and Chrome Web Store documentation.",
   "version": "1.0",
   "icons": {
     "16": "images/icon-16.png",
@@ -252,8 +252,8 @@ Just for fun, let's add a shortcut to make it easier to enable or disable focus 
   "commands": {
     "_execute_action": {
       "suggested_key": {
-        "default": "Ctrl+U",
-        "mac": "Command+U"
+        "default": "Ctrl+Q",
+        "mac": "Command+Q"
       }
     }
   }
@@ -284,7 +284,7 @@ First, open any of the following pages:
 - [Publish in the Chrome Web Store][cws-publish]
 - [Scripting API][api-scripting]
 
-Then, click on the extension action. If you set up a keyboard shortcut (link), you can test it by pressing `Ctrl + U` or `Cmd + U`.
+Then, click on the extension action. If you set up a keyboard shortcut (link), you can test it by pressing `Ctrl + Q` or `Cmd + Q`.
 
 It should go from this:
 
