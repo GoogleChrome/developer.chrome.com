@@ -71,7 +71,7 @@ The `scrollend` event does not fire when:
 A reason this event took so long to come to the web platform was due to the many
 small details that needed specification details. One of the most complex areas
 was articulating the `scrollend` details for the [Visual
-Viewport](https://developer.mozilla.org/en-US/docs/Web/API/Visual_Viewport_API)
+Viewport](https://developer.mozilla.org/docs/Web/API/Visual_Viewport_API)
 versus the document. Consider a webpage that you zoom in on. You can scroll
 around when in this zoomed state, and it's not necessarily scrolling the
 document. Rest assured that even this visual viewport user driven scroll
