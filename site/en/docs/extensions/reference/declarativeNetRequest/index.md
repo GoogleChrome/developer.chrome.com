@@ -204,7 +204,7 @@ is determined based on the priority of each rule and the operations specified.
 - If a rule has removed a header, then lower priority rules cannot further modify the header.
 
 ### Interaction with cached pages
-When rules are applied to browsers with pages in the service worker's cached storage, the browser may ignore the set rule for those specific pages until the cached storage is cleared. This is because cached storage is intended to be persistent, and many features like offline use do not expect the cache to be cleared without also clearing the service worker's registration as well. For cases when extensions utilizing declarativeNetRequest must be enabled and disabled repeatedly, the [chrome.browsingData](/docs/extensions/reference/browsingData/) API may be used to clear the cache to guarantee proper functionality.
+When rules are applied to browsers with pages in the service worker's cached storage, the browser may ignore the set rule for those specific pages until the cached storage is cleared. This is because cached storage is intended to be persistent, and many features like offline use do not expect the cache to be cleared without also clearing a service worker's registration as well. For cases when extensions utilizing declarativeNetRequest must be enabled and disabled repeatedly, the [chrome.browsingData](/docs/extensions/reference/browsingData/) API may be used to clear the cache to guarantee proper functionality.
 
 
 
