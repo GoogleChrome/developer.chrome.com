@@ -297,12 +297,13 @@ the steps in [Viewing Warnings](#view_warnings).
     </tr>
     <tr id="sessionshistory">
       <td><code>"sessions"</code> and <code>"history"</code></td>
-      <td>Grants the extension access to the <a href="/docs/extensions/reference/sessions">chrome.sessions</a> API.</td>
+      <td>Grants the extension access to the <a href="/docs/extensions/reference/sessions">chrome.sessions</a> API and <a href="/docs/extensions/reference/history">chrome.history</a> API.</td>
       <td><strong>Read and change your browsing history on all your signed-in devices</strong></td>
     </tr>
     <tr id="sessionstabs">
       <td><code>"sessions"</code> and <code>"tabs"</code></td>
-      <td>Grants the extension access to the <a href="/docs/extensions/reference/sessions">chrome.sessions</a> API.</td>
+      <td>Grants the extension access to the <a href="/docs/extensions/reference/sessions">chrome.sessions</a> API and privileged fields of the <a
+          href="/extensions/tabs#type-Tab"><code>Tab</code></a> objects.</td>
       <td><strong>Read your browsing history on all your signed-in devices</strong></td>
     </tr>
     <tr id="system.storage">
