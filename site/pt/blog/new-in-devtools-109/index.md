@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: "O que há de novo no DevTools (Chrome 109)"
+title: 'O que há de novo no DevTools (Chrome 109)'
 authors:
   - jecelynyeen
 date: 2023-01-15
