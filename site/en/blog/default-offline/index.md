@@ -27,7 +27,7 @@ If the app doesn’t implement a custom offline experience, when the user is off
 
 Visit this [glitch](https://glitch.com/~default-offline-count) to see the previous example in action.
 
-The option to create your own custom offline page is still available, you can follow this video to serve your custom page, using Workbox, with a single line of code.
+The option to create your own custom offline page is still available. The following video demonstrates how to serve your custom page, using Workbox, with a single line of code.
 
 {% YouTube id='M7gQg9JojGE' %}
 
