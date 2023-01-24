@@ -37,6 +37,8 @@ The **Preferences** tab lists both general customization options and panel-speci
 
 To set preferences, open {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [Settings][1] > **Preferences** and scroll down to one of the sections described next.
 
+To restore default preferences, scroll down to the end of the **Preferences** tab and click **Restore defaults and reload**.
+
 ### Appearance
 
 {% Details %}
@@ -601,12 +603,6 @@ You can find the same option in [Console > Settings](/docs/devtools/console/refe
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/wXm8EGHa1UpmT4x8hj90.png", alt="The Console shows 'Navigated to' messages and saves logs across different pages.", width="800", height="361" %}
 {% endDetails %}
 
-{% Details %}
-{% DetailsSummary %}
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable custom formatters**
-{% endDetailsSummary %}
-{% endDetails %}
-
 ### Extension
 
 {% Details %}
@@ -628,7 +624,13 @@ You can find the same option in [Console > Settings](/docs/devtools/console/refe
 
 ### Persistence
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable local overrides** makes DevTools persist changes you make to sources across page loads. For more information, see [Local Overrides](/docs/devtools/workspaces/#overrides).
+{% Details %}
+{% DetailsSummary %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable local overrides** makes DevTools persist changes you make to sources across page loads.
+{% endDetailsSummary %}
+
+For more information, see [Local Overrides](/docs/devtools/workspaces/#overrides).
+{% endDetails %}
 
 ### Debugger {: #debugger }
 
@@ -679,9 +681,13 @@ This video first shows how DevTools "jumps" as you type a search query. Then whe
 
 ### Sync
 
+{% Details %}
+{% DetailsSummary %}
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable settings sync** allows you to sync DevTools settings across multiple devices.
+{% endDetailsSummary %}
 
 To use this setting, first [enable Chrome Sync](https://support.google.com/chrome/answer/185277). For more information, see [Sync settings](/docs/devtools/customize/#sync).
+{% endDetails %}
 
 ## Workspace
 
