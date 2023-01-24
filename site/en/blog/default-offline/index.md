@@ -20,7 +20,7 @@ The idea was to incentivize developers to provide their users at least a notice 
 
 Now developers won’t need to do anything to get a default offline page. From Chrome 109 on Android, the browser will automatically generate a page that lets the user know when they are offline.
 
-If the app doesn’t implement a custom offline experience, when the user is offline, the default offline page uses the app’s icon and simple ‘You are offline’ message. Like the example below.
+If the app doesn’t implement a custom offline experience, when the user is offline, the default offline page uses the app’s icon and simple **You are offline** message. Like the example below.
 
 
 {% Img src="image/SeARmcA1EicLXagFnVOe0ou9cqK2/uhTEeFoAp98gTxlA5kr7.png", alt="The default offline page for an example web app, where the logo is a pink circle and two plus signs, and it includes the message 'you are offline'", width="400", height="866" %}
