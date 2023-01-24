@@ -78,7 +78,7 @@ Here you can provide your developer profile information, configure management se
 | **Trusted tester accounts** | (Optional) A comma-separated list of individuals' email addresses to make your extension available to them for testing. |
 
 {% Aside 'important' %}
-The Trusted tester accounts field does *not* support using group email addresses such as those used for posting to Google groups or other forums. If you need to test with a group, do so using the item level visibility setting. Click **Items** in the menu at left. Scroll to **Visibility**. Then select **Private** and **Only truested testers from the current publisher settings**.
+The Trusted tester accounts field does *not* support using group email addresses such as those used for posting to Google groups or other forums. If you need to test with a group, do so using the item level visibility setting. Click **Items** in the menu at left. Scroll to **Visibility**. Then select **Private** and **Only trusted testers from the current publisher settings**.
 {% endAside %}
 
 
