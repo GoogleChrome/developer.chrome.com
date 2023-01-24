@@ -20,6 +20,7 @@ Pages loaded as offscreen documents are handled differently from other types of 
 * Offscreen document's URL must be a static HTML file bundled with the extension.
 * Offscreen documents cannot be focused.
 * Offscreen documents cannot have their `opener` property set using the [`chrome.windows` API](docs/extensions/reference/windows/) method `windows.setSelfAsOpener()`.
+* An extension can only have one offscreen document open at a time. If the extension is running in split mode with an active incognito profile, both the normal and incognito profiles can each have one offscreen document. 
 
 ## Reasons
 Reasons, listed [below](/docs/extensions/reference/offscreen/#type-Reason), are set upon document creation to determine the document's lifespan. Currently, the `AUDIO_PLAYBACK` reason has specialized lifetime enforcement (`CreateAudioLifetimeEnforcer`). All others use generic idle detection (`CreateEmptyEnforcer`).
