@@ -1,0 +1,18 @@
+---
+title: JSConf Chile
+summary: >-
+  This is the first Chilean edition of JSConf, with two days of international speakers, community, learning and connections.
+image:
+location: Chile
+date: 2023-02-03
+externalUrl: https://jsconf.cl/
+sessions:
+  - speaker: Jake Archibald
+    title:
+    description: >-
+    topics:
+    time: TBC
+    type: participant
+    slidesUrl: null
+    videoUrl: null
+---
