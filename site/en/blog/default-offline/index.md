@@ -25,7 +25,7 @@ If the app doesn’t implement a custom offline experience, when the user is off
 
 {% Img src="image/SeARmcA1EicLXagFnVOe0ou9cqK2/uhTEeFoAp98gTxlA5kr7.png", alt="The default offline page for an example web app, where the logo is a pink circle and two plus signs, and it includes the message 'you are offline'.", width="400", height="866" %}
 
-Visit this [glitch](https://glitch.com/~default-offline-count) to see the example above in action.
+Visit this [glitch](https://glitch.com/~default-offline-count) to see the previous example in action.
 
 The option to create your own custom offline page is still available, you can follow this video to serve your custom page, using Workbox, with a single line of code.
 
