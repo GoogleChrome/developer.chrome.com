@@ -1,5 +1,5 @@
 ---
-title: Basic Offline Page for Web Apps on Chrome Android
+title: Basic offline page for web apps on Chrome Android
 description: >
   For installed web apps on Android that do not have their own offline experience,  starting on Chrome 109, the browser will automatically generate a default page to indicate that the app is currently offline.
 layout: 'layouts/blog-post.njk'
