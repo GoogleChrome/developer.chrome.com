@@ -10,7 +10,7 @@ alt: >
   Mobile phone
 authors:
   - mustaqahmed
-  - jpmedley
+  - joemedley
 ---
 
 To prevent malicious scripts from abusing sensitive APIs like popups,
