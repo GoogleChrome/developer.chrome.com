@@ -3,7 +3,7 @@ title: Basic offline page for web apps on Chrome Android
 description: >
   From Chrome 109, the browser will automatically generate a default page to indicate that the app is currently offline when an installed web app on Android does not have its own offline experience.
 layout: 'layouts/blog-post.njk'
-date: 2023-01-19
+date: 2023-01-24
 authors:
   - ajara
 hero: 'image/SeARmcA1EicLXagFnVOe0ou9cqK2/yLlcnEsQXWUZrBYExA6k.jpg'
