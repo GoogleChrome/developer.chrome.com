@@ -131,10 +131,12 @@ else {
 
 That's a healthy start to progressively enhancing your `scrollend` event when it
 is available. You could also try a
-[polyfill](https://github.com/argyleink/scrollyfills) I made:
+[polyfill](https://github.com/argyleink/scrollyfills)
+([NPM](https://www.npmjs.com/package/scrollyfills)) I made that does the best
+the browser can:
 
 ```js
-import {scrollend} from "https://argyleink.github.io/scrollyfills/dist/scrollyfills.modern.js"
+import {scrollend} from "scrollyfills"
 
 // then use scrollend as if it's existed this whole time
 document.onscrollend = callback
