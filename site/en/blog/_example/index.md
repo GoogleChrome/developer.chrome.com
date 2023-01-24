@@ -55,7 +55,7 @@ alt: >
 # Optional
 # Image sharing on social media should be at least 828 x 416
 # https://developer.chrome.com/docs/handbook/how-to/add-media/
-# sharingimage: 'image/BrQidfK9jaQyIHwdw91aVpkPiib2/EnMzOm0mBytBA3AzlCG6.png'
+# sharingImage: 'image/BrQidfK9jaQyIHwdw91aVpkPiib2/EnMzOm0mBytBA3AzlCG6.png'
 ---
 
 A few rules:
