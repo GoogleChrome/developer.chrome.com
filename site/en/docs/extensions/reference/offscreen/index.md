@@ -17,7 +17,7 @@ You must declare the `"offscreen"` permission in the [extension manifest][1] to 
 ```
 Pages loaded as offscreen documents are handled differently from other types of extension pages. The extension's permissions carry over to offscreen documents, but extension API access is heavily limited. Currently, an offscreen document can only use the `chrome.runtime` APIs to send and receive messages; all other extension APIs are not exposed. Other notable differences between offscreen documents and normal pages are as follows:
 
-* Offscreen document's URL must be a static HTML file bundled with the extension.
+* An offscreen document's URL must be a static HTML file bundled with the extension.
 * Offscreen documents cannot be focused.
 * Offscreen documents cannot have their `opener` property set using the [`chrome.windows` API](docs/extensions/reference/windows/) method `windows.setSelfAsOpener()`.
 * An extension can only have one offscreen document open at a time. If the extension is running in split mode with an active incognito profile, both the normal and incognito profiles can each have one offscreen document. 
