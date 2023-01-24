@@ -254,7 +254,7 @@ Operations with a Web Worker][18].
 
 ### Offscreen Documents
 
-For extensions that need to unobtrusively use APIs that require DOM access without visually opening up a new window or tab, developers can now use the [offscreen API](/docs/extensions/reference/offscreen/). This API allows developers to open and close undisplayed documents packaged with the extension for DOM-related tasks without disrupting the user experience. Offscreen documents do not share APIs with the extension's service worker, and function as fully functional web pages for the extension to interact with.
+For extensions that need to unobtrusively use APIs that require DOM access without visually opening up a new window or tab, developers can now use the [Offscreen API](/docs/extensions/reference/offscreen/). This API allows developers to open and close undisplayed documents packaged with the extension for DOM-related tasks without disrupting the user experience. Offscreen documents do not share APIs with the extension's service worker, and function as fully functional web pages for the extension to interact with.
 
 ```js
 // background.js
