@@ -87,7 +87,7 @@ Chromium issues: [1364601](https://crbug.com/1364601), [1364601](https://crbug.c
 <!-- You can switch between tabs in the **Sources** panel using: -->
 <!-- On MacOS, <kbd>Function</kbd> + <kbd>Command</kbd> + <kbd>Arrow up</kbd> and <kbd>down</kbd> -->
 <!-- On Windows and Linux, <kbd>Control</kbd> + <kbd>Page up</kbd> or <kbd>down</kbd> -->
-**ソース**パネル内で次のようにしてタブを切り替えることができます:
+**Sources**パネル内で次のようにしてタブを切り替えることができます:
 MacOS では、<kbd>Function</kbd> + <kbd>Command</kbd> + <kbd>上下カーソルキー</kbd>。
 Windows と Linux では、<kbd>Control</kbd> + <kbd>Page up</kbd>または<kbd>Page down</kbd>。
 
