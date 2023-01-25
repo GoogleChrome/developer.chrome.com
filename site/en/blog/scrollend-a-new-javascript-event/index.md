@@ -5,7 +5,7 @@ description: >
   Delete your timeout functions and shake off their bugs, here's the event you really need: scrollend.
 subhead: >
   Delete your timeout functions and shake off their bugs, here's the event you really need: scrollend.
-date: 2023-01-23
+date: 2023-01-25
 authors:
   - argyle
 tags:
