@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: Offscreen Documents in Manifest v3
+title: Offscreen Documents in Manifest V3
 description: >
   Introducing the Offscreen Documents API for Chrome extension development.
 authors:
