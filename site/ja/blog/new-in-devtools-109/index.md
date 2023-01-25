@@ -120,7 +120,7 @@ Chromium issue: [1167965](https://crbug.com/1167965), [1172535](https://crbug.co
 
 - `new.target` はメタプロパティで、このプロパティを使用すると関数やコンストラクタが new 演算子を使用して呼び出されたものかどうかを確認できます。 **Console** で `new.target` をログ出力してデバッグ中にその値を確認できるようになりました。これまでは、`new.target` を入力するとエラーになっていました。
    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hKOEn03BZN2IUmWJ1Hho.png", alt="Show before and after comparison of new.target evaluation debugging.", width="800", height="499" %}
-- `WeakRef` オブジェクトを使用すると、別のオブジェクトがガーベジコレクタに回収されることを妨げないように、そのオブジェクトの弱参照を保持できます。 evTools はその値をインラインプレビューし、デバッグ中にコンソール内で直接弱参照を評価できるようになりました。これまでは、明示的に `deref` を呼び出して解決する必要がありました。
+- `WeakRef` オブジェクトを使用すると、別のオブジェクトがガーベジコレクタに回収されることを妨げないように、そのオブジェクトの弱参照を保持できます。 DevTools はその値をインラインプレビューし、デバッグ中にコンソール内で直接弱参照を評価できるようになりました。これまでは、明示的に `deref` を呼び出して解決する必要がありました。
    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/M7DP4bI7pA07oY7M21wF.png", alt="Show before and after comparison of WeakRef evaluation during debugging.", width="800", height="453" %} 
 - シャドウされた変数のインラインプレビューが修正されました。これまでは、表示される値が間違っていました。
    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XHL8pnBxhZ65ni7zYV0Q.png", alt="Show before and after comparison inline preview for shadowed variable.", width="800", height="519" %} 
