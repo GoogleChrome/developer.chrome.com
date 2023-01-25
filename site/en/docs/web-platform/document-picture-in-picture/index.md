@@ -5,7 +5,7 @@ description: >
  Display arbitrary HTML content in an always-on-top window.
 authors:
   - beaufortfrancois
-date: 2023-01-19
+date: 2023-01-25
 hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/l8xW8V85N60e4dmwUwmE.jpg
 alt: Person holding outdoor lounge chairs.
 tags:
@@ -50,7 +50,7 @@ To experiment with the Document Picture-in-Picture API locally, without an origi
 
 ### Register for the origin trial
 
-Starting in Chrome 111, the Document Picture-in-Picture API is available as an [origin trial](/docs/web-platform/origin-trials/). It is expected to end in Chrome 115 (June&nbsp;21, 2023). [Register here][ot].
+Starting in Chrome 111, the Document Picture-in-Picture API is available as an [origin trial](/docs/web-platform/origin-trials/). It is expected to end in Chrome 115 (September&nbsp;8, 2023). [Register here][ot].
 
 ## Use cases
 
@@ -284,7 +284,7 @@ Hero image by [Jakob Owens].
 [picture-in-picture api for `<video>`]: /blog/watch-video-using-picture-in-picture/
 [`window.open()`]: https://developer.mozilla.org/docs/Web/API/Window/open
 [explainer]: https://github.com/WICG/document-picture-in-picture/blob/main/README.md
-[ot]: /origintrials/#/view_trial/TODO
+[ot]: /origintrials/#/view_trial/1885882343961395201
 [captions]: https://bugs.chromium.org/p/chromium/issues/detail?id=854935
 [canvas hacks]: /blog/watch-video-using-picture-in-picture/#show-canvas-element-in-picture-in-picture-window
 [`append()`]: https://developer.mozilla.org/docs/Web/API/Element/append
