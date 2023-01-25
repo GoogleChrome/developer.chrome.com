@@ -25,7 +25,7 @@ Further reasons can be added over time as developers share their feedback and us
 
 
 ### Into the future
-For implementation ease, the first version of this API only supports a single page per-extension, per-profile at a time.  In future versions, we may relax this to support multiple pages. Currently, if the extension is running in split mode with an active incognito profile, both the normal and incognito profiles can each have one offscreen document. A single offscreen document instance in each of the on-the-record and incognito profiles.
+For implementation ease, the first version of this API only supports a single page per-extension, per-profile at a time.  In future versions, we may relax this to support multiple pages. Currently, if the extension is running in split mode with an active incognito profile, both the normal and incognito profiles can each have one offscreen document. 
 It is also planned to give the extension worker DOM functionality at a later point. You can “future-proof” your extensions by pairing functions that use the offscreen API with an equivalent commented function in the service worker for swapping at a later date. 
 
 ```js
