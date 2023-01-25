@@ -19,7 +19,7 @@ The page will have a lifetime mechanism similar to event pages in Manifest V2, i
 Offscreen documents are designed to fill gaps from APIs that are only accessible to DOM APIs; because of this, extension APIs don't need to be exposed directly in this context. To reduce the likelihood of extensions using these as a "background page replacement", only the chrome.runtime messaging APIs will be exposed to the offscreen document.  (Developers may also use web messaging by claiming the offscreen document as a [Client](https://developer.mozilla.org/en-US/docs/Web/API/Client) via their service worker.)
 Because some use cases - in particular, site scraping - require access to cross-origin frames, we allow these documents to embed cross-origin frames following the same rules that extension pages have today. In offscreen documents, content scripts specified by the extension are able to run in these frames in order to scrape any necessary content, as they would for any normal web page. 
 
-### Reasons, and requiring a purpose
+## Reasons, and requiring a purpose
 Creating an offscreen document requires stated reasons and further justification. These reasons are listed in the API reference documentation, and handle the document’s lifetime in different ways. For example, a document opened for audio playback currently has different rules applied to its lifetime than a document opened for clipboard management. You can also add further detail on the offscreen document’s purpose in the justification, which is a developer-written string, and not a parameter with effects on the document. 
 Further reasons may be added to the API over time as developers share their feedback and use cases.
 
