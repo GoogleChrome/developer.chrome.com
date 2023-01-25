@@ -9,7 +9,7 @@ date: 20203-01-25
 
 ---
 
-To replace functionality in the transition from background pages to extension service workers, developers can now use the [chrome.offscreen](/docs/extensions/reference/offscreen/) API and manifest permission. Requesting this permission allows for the creation of off-screen documents to use DOM APIs without obtrusively opening new windows or tabs that interrupt the user experience. The chrome.offscreen API documentation is now available in chrome extensions. 
+To replace functionality in the transition from background pages to extension service workers, developers can now use the [`chrome.offscreen`](/docs/extensions/reference/offscreen/) API and manifest permission. Requesting this permission allows for the creation of off-screen documents to use DOM APIs without obtrusively opening new windows or tabs that interrupt the user experience. The `chrome.offscreen` API documentation is now available in chrome extensions. 
 
 In Chromium, Manifest V3 extensions are service worker-based, but service workers do not provide support for the same APIs and mechanisms that full document-based pages (which include background and event pages) do. Additionally, using content scripts to access DOM APIs on web pages leaves the extension at the mercy of different content security policies on a page-to-page basis. To help solve this, we're introducing Offscreen Documents to support DOM-related features and APIs by allowing Manifest V3 extensions to open minimal, scoped, and relatively un-permissioned offscreen documents at runtime through a dedicated API. 
 
