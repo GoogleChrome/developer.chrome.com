@@ -178,10 +178,6 @@ Now that you have created and configured your web app, you are ready to build yo
 
 Begin by creating a directory and the following starter files:
 
-### manifest.json
-
-Create a file called `manifest.json` and include the following code:
-
 {% Label %}manifest.json:{% endLabel %}
 
 ```json
@@ -200,10 +196,6 @@ Create a file called `manifest.json` and include the following code:
   "permissions": ["storage"],
 }
 ```
-
-### popup.html
-
-Create a file called `popup.html` and include the following code:
 
 {% Label %}popup.html:{% endLabel %}
 
@@ -232,11 +224,7 @@ Create a file called `popup.html` and include the following code:
 </html>
 ```
 
-Replace `https://payments-with-firebase-example.web.app/` with your web app's url.
-
-### popup.js
-
-Create a file called `popup.js` and include the following code:
+Replace `https://payments-with-firebase-example.web.app/` with your web app's URL.
 
 {% Label %}popup.js:{% endLabel %}
 
@@ -249,7 +237,7 @@ const signInButton = document.getElementById("sign-in");
 const signOutButton = document.getElementById("sign-out");
 ```
 
-{% include 'partials/extensions/reusing-prod-extension-id.md' %}
+{% Partial 'extensions/reusing-prod-extension-id.md' %}
 
 ## Add Firebase to your extension {: #fb-ext}
 
@@ -335,8 +323,9 @@ Replace the placeholders with the value of each key from your Firebase applicati
 If the user data is saved in [storage][api-storage], the popup will display their email, paid
 status, and a sign-out button. Otherwise, the UI will show the sign in form.
 
+{% Label %}popup.js:{% endLabel %}
+
 ``` js
-// popup.js
 ...
 
 // Check if user is already logged in when popup opens
@@ -374,7 +363,6 @@ The popup will use the [messages][docs-messages] API to tell the background scri
 the user in or sign them out.
 
 ```js
-//popup.js
 ...
 
 // Send login data to the background script
@@ -397,8 +385,9 @@ signOutButton.addEventListener("click", async () => {
 The background will then call [`signInWithEmailAndPassword()`][firebase-auth-email-password] to sign
 the user in or [`signOut()`][firebase-auth-signout] to log them out.
 
+{% Label %}background.js:{% endLabel %}
+
 ``` js
-// background.js
 ...
 
 // Listen for messages sent by the popup
@@ -423,9 +412,10 @@ chrome.runtime.onMessage.addListener((message) => {
 The observer [onAuthStateChanged()][firebase-onauthstatechanged] is triggered on sign-in or
 sign-out. If the user is signed in, the background script will check if payment status is saved in
 storage. Otherwise, it will query the Firebase Firestore and save the data to storage. 
- 
+
+{% Label %}background.js:{% endLabel %}
+
 ```js
-// background.js
 ...
 
 onAuthStateChanged(auth, async (user) => {
@@ -463,9 +453,9 @@ If the user is signed out, then the user data is removed from storage.
 When any values in storage change, you can use `chrome.storage.onChanged` to listen for changes and
 update the popup UI.
 
-```js
-// popup.js
+{% Label %}popup.js:{% endLabel %}
 
+```js
 ...
 
 chrome.storage.onChanged.addListener((changes) => {
@@ -541,7 +531,7 @@ Extensions](https://firebase.google.com/docs/extensions):
 [firebase-stripe-github-webapp]: https://github.com/firebase/functions-samples/tree/main/stripe
 [firebase-stripe-web-app]: https://cloud-functions-stripe-sample.web.app/
 [firebase-ui]: https://firebase.google.com/docs/auth/web/firebaseui
-[load-locally]: /docs/extensions/mv3/getstarted/#unpacked
+[load-locally]: /docs/extensions/mv3/getstarted/development-basics/#load-unpacked
 [payments-firebase-usecase]: https://firebase.google.com/docs/use-cases/payments
 [section-add-stripe-keys]: #add-your-stripe-test-api-keys
 [stripe-api-keys]: https://dashboard.stripe.com/account/apikeys
