@@ -58,7 +58,7 @@ Once you've registered for the trial, update your HTTP response headers with the
         -  It's not possible to delegate to all third-party domains via `*` in the meta tag.
 1. Load your website in Chrome 100 (or later) and continue receiving the full User-Agent string.
 
-Note: a third-party embed is able to register and opt in to the trial without requiring the top-level site to delegate permission via Permissions Policy or `<meta http-equiv="delegate-ch">`. The [standard advice for third-party origin trials](/en/docs/web-platform/third-party-origin-trials/) applies.
+Note: a third-party embed can register and opt in to the trial without requiring the top-level site to delegate permission via Permissions Policy or `<meta http-equiv="delegate-ch">`. The [standard advice for third-party origin trials](/docs/web-platform/third-party-origin-trials/) applies.
 
 ### Demo
 
