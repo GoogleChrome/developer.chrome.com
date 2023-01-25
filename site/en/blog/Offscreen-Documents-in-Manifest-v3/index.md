@@ -51,6 +51,6 @@ Additionally, as DOM functionality and APIs are added to the service worker, the
 ### Conclusion
 Offscreen Documents allow extensions that require DOM or window interaction access that cannot be achieved in service workers currently. It also provides a flexible approach, where new use cases can be added and future-solved use cases can be removed.
 Extensions should leverage the proposed offscreen document API for specific use cases, and the primary background context of the extension should remain the service worker specified in the manifest.  The offscreen document should not be used as the place to store primary extension logic, and thus has limited API access.
-The lifetime of an offscreen document is independent of the service worker that created it.  Service worker lifetime considerations and use cases related to service worker lifetime in extensions will be covered in a separate blog post.
+The lifetime of an offscreen document is independent of the service worker that created it. Service worker lifetime considerations and use cases related to service worker lifetime in extensions will be covered in a separate blog post.
 The reasons to use offscreen documents will fluctuate over time as features and APIs are added to the service worker itself. We are eager to hear developer feedback as this unfolds.
 
