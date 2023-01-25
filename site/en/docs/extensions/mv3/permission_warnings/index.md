@@ -16,9 +16,9 @@ anchorRedirects:
 
 ## Overview {: overview }
 
-Chrome extensions can do a wide variety of things, such as adding new features to websites or modifying the appearance of websites. To do all of these things, however, extensions often need to request certain permissions. Some permissions are considered to be relatively harmless and do not require a warning to be granted. Other permissions trigger a warning which displays a message that appears when an extension is installed. 
-
-This article describes ways to protect extensions and their users by limiting permissions, implementing optional permissions and using the activeTab. It also includes a table with a list of all the permission warnings and how to check what warnings the user will see when installing your extension.
+Chrome extensions enhance the user's browser experience. To do this extensions often need to request certain permissions. Some permissions are harmless and do not display a warning. Other permissions trigger a warning that users have to allow.
+  
+This article describes permission best practices, a complete list of permission warnings, and how to check which warnings your extension triggers.
 
 ## Best practices {: #best-practices }
 
