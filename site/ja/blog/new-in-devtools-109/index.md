@@ -70,7 +70,7 @@ Chromium issues: [1322313](https://crbug.com/1322313), [1351649](https://crbug.c
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ywER8cdQUNYrdAaBJTKT.png", alt="ミニファイ前と後のファイル", width="800", height="392" %}
 
 <!-- Previously, when you recorded a trace in the **Performance** panel, the trace only showed you the minified function names. This made it harder to debug.  -->
-これまでは、**パフォーマンス**パネルでトレースを記録すると、トレースにはミニファイされた関数名だけが表示され、デバッグが難しくなっていました。
+これまでは、**Performance**パネルでトレースを記録すると、トレースにはミニファイされた関数名だけが表示され、デバッグが難しくなっていました。
 
 <!-- With the latest changes, DevTools now reads the source map and shows the actual function names and source location.  -->
 最新の変更で、DevToolsはソースマップを読み取り、実際の関数名とソース内の位置を表示するようになりました。
