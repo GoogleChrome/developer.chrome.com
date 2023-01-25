@@ -23,6 +23,12 @@ Each `index.md` file starts with YAML front matter. See
 
 Articles and blog posts share the same template and are identical other than location at the moment.
 
+### Outdated banner 
+
+The outdated banner indicates this blog post is outdated and no longer accurate.
+
+Paste new material URL into the `newMaterialURL` field in your YAML frontmatter.
+
 ### Hero images
 
 Hero images should be at least 1920 x 960. Use JPG unless you have a specific
