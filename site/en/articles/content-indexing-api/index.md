@@ -11,7 +11,6 @@ tags:
   - capabilities
   - service-worker
   - chrome-80
-  - index
   - caching
 hero: image/admin/tuIkBEm2DdHBYy62dDac.jpg
 alt: Index cards in a filing cabinet.
