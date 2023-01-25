@@ -82,7 +82,7 @@ Chromium issues: [1364601](https://crbug.com/1364601), [1364601](https://crbug.c
 
 
 <!-- ## New keyboard shortcuts in the Console & Sources panel {: #keyboard-shortcuts } -->
-## コンソールとソースパネルでの新しいキーボードショートカット {: #keyboard-shortcuts }
+## ConsoleとSourcesパネルでの新しいキーボードショートカット {: #keyboard-shortcuts }
 
 <!-- You can switch between tabs in the **Sources** panel using: -->
 <!-- On MacOS, <kbd>Function</kbd> + <kbd>Command</kbd> + <kbd>Arrow up</kbd> and <kbd>down</kbd> -->
