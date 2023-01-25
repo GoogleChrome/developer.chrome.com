@@ -41,7 +41,7 @@ tags:
 最新バージョンでは、**Recorder**はそのナビゲーションステップを独立して表示します。右クリックして削除すると、ページ内リプレイを実行できます！
 
 <!-- Apart from that, you can right-click a step and copy it to the clipboard in the **Recorder* panel instead of exporting the whole user flow. It works with [extensions](https://goo.gle/recorder-extension) too. For example, try to copy a step as a [Nightwatch Test](https://bit.ly/nightwatch-recorder) script. With this feature, you can update any existing script with ease. -->
-その他、ユーザーフロー全体をエクスポートする代わりに、**レコーダー**パネルでステップを右クリックしてクリップボードにコピーできます。この機能は[拡張機能](https://goo.gle/recorder-extension)とも組み合わせて利用できます。例えば、ステップを[Nightwatch Test](https://bit.ly/nightwatch-recorder)スクリプトとしてコピーしてみてください。この機能を使用すると、既存のスクリプトを簡単に更新できます。
+その他、ユーザーフロー全体をエクスポートする代わりに、**Recorder**パネルでステップを右クリックしてクリップボードにコピーできます。この機能は[拡張機能](https://goo.gle/recorder-extension)とも組み合わせて利用できます。例えば、ステップを[Nightwatch Test](https://bit.ly/nightwatch-recorder)スクリプトとしてコピーしてみてください。この機能を使用すると、既存のスクリプトを簡単に更新できます。
 
 <!-- Previously, you could access the step menu only through the 3-dot button. You can now right-click anywhere on the step to access the menu. -->
 これまで、ステップメニューにアクセスする手段は3ドットボタンしかありませんでしたが、ステップの好きな場所を右クリックすることでそのメニューにアクセスできるようになりました。
