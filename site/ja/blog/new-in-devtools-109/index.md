@@ -32,7 +32,7 @@ tags:
 <!-- 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/uCqjrGj716ZbDJ4N37dl.png", alt="New copy options in the Recorder panel.", width="800", height="615" %}
 -->
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/uCqjrGj716ZbDJ4N37dl.png", alt=" Recorder パネルの新しいコピーオプション", width="800", height="615" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/uCqjrGj716ZbDJ4N37dl.png", alt="Recorder パネルの新しいコピーオプション", width="800", height="615" %}
 
 <!-- Open an existing user flow in the **Recorder**. Previously, when you replayed the user flow, DevTools would always start the replay by navigating to or reloading the page. -->
 **レコーダー**内で既存のユーザーフローを開いてください。これまでは、ユーザーフローをリプレイすると、DevToolsは常にそのページを開くか、リロードするところからリプレイを開始していました。
