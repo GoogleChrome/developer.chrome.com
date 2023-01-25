@@ -8,7 +8,7 @@
 
 * [Recorder: ステップごとのCopy asオプション、ページ内リプレイ、ステップのコンテキストメニュー](/ja/blog/new-in-devtools-109/#recorder)
 * [パフォーマンスの記録の中で実際の関数名を表示](/ja/blog/new-in-devtools-109/#performance)
-* [コンソールとソースパネルでの新しいキーボードショートカット](/ja/blog/new-in-devtools-109/#keyboard-shortcuts)
+* [ConsoleとSourcesパネルでの新しいキーボードショートカット](/ja/blog/new-in-devtools-109/#keyboard-shortcuts)
 * [JavaScript デバッグの改善](/ja/blog/new-in-devtools-109/#debugging)
 * [その他のハイライト](/ja/blog/new-in-devtools-109/#misc)
 * [[実験的] ブレークポイント管理の UX 改善](/ja/blog/new-in-devtools-109/#breakpoint-redesign)
