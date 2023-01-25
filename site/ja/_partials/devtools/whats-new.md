@@ -6,7 +6,7 @@
 
 {# ### Chrome 109 {: #chrome109 }
 
-* [レコーダー: ステップごとのCopy asオプション、ページ内リプレイ、ステップのコンテキストメニュー](/ja/blog/new-in-devtools-109/#recorder)
+* [Recorder: ステップごとのCopy asオプション、ページ内リプレイ、ステップのコンテキストメニュー](/ja/blog/new-in-devtools-109/#recorder)
 * [パフォーマンスの記録の中で実際の関数名を表示](/ja/blog/new-in-devtools-109/#performance)
 * [コンソールとソースパネルでの新しいキーボードショートカット](/ja/blog/new-in-devtools-109/#keyboard-shortcuts)
 * [JavaScript デバッグの改善](/ja/blog/new-in-devtools-109/#debugging)
