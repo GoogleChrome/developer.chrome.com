@@ -5,7 +5,7 @@ description: >
   Introducing the Offscreen Documents API for Chrome extension development.
 authors:
   - Ian Stanion
-date: 20203-01-25
+date: 2023-01-25
 
 ---
 
