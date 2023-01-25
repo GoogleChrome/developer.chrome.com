@@ -54,7 +54,7 @@ Chromium issues: [1322313](https://crbug.com/1322313), [1351649](https://crbug.c
 ## パフォーマンスの記録の中で実際の関数名を表示 {: #performance }
 
 <!-- The **Performance** panel now shows the actual function names and their sources in the trace if there’s a sourcemap. -->
-ソースマップが存在すれば、**パフォーマンス**パネルのトレース内で実際の関数名とそのソースが表示されるようになりました。
+ソースマップが存在すれば、**Performance**パネルのトレース内で実際の関数名とそのソースが表示されるようになりました。
 
 <!--
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/9pHMVM1ARXrlyLoTziVA.png", alt="Show before and after comparison of function names display in the Performance panel.", width="800", height="509" %}
