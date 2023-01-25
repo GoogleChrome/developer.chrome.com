@@ -23,6 +23,12 @@ Posts support markdown syntax with some additional features and shortcodes.
 Each `index.md` file starts with YAML Front Matter. See
 `site/en/blog/_example/` for documentation of all supported metadata.
 
+### Outdated banner 
+
+The outdated banner indicates this blog post is outdated and no longer accurate.
+
+Paste new material URL into the `newMaterialURL` field in your YAML frontmatter.
+
 ### Hero images
 
 Hero images should be at least 1920 x 960. Use jpg unless you have a specific

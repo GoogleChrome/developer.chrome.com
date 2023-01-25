@@ -25,7 +25,7 @@ Articles and blog posts share the same template and are identical other than loc
 
 ### Outdated banner 
 
-The outdated banner indicates this blog post is outdated and no longer accurate.
+The outdated banner indicates this article is outdated and no longer accurate.
 
 Paste new material URL into the `newMaterialURL` field in your YAML frontmatter.
 
