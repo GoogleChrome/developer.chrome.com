@@ -20,7 +20,7 @@ Offscreen documents are designed to fill gaps from APIs that are only accessible
 Because some use cases - in particular, site scraping - require access to cross-origin frames, we allow these documents to embed cross-origin frames following the same rules that extension pages have today. In offscreen documents, content scripts specified by the extension are able to run in these frames in order to scrape any necessary content, as they would for any normal web page. 
 
 ### Reasons, and requiring a purpose
-Creating an offscreen document will require a stated reason and further justification. These reasons are listed in the API reference documentation, and handle the document’s lifetime in different ways. For example, a document opened for audio playback currently has different rules applied to its lifetime than a document opened for clipboard management. You can also add further detail on the offscreen document’s purpose in the justification, which is a developer written string, and not a parameter with effects on the document. 
+Creating an offscreen document requires stated reasons and further justification. These reasons are listed in the API reference documentation, and handle the document’s lifetime in different ways. For example, a document opened for audio playback currently has different rules applied to its lifetime than a document opened for clipboard management. You can also add further detail on the offscreen document’s purpose in the justification, which is a developer-written string, and not a parameter with effects on the document. 
 Further reasons can be added over time as developers share their feedback and use cases.
 
 
