@@ -43,9 +43,13 @@
     }
   } 
 
+  .playlist-meta {
+    padding-bottom: 1.5rem;
+  }
+
   .playlist-decorations {
     height: px-to-rem(90px);
-    margin: px-to-rem(44px) px-to-rem(32px) 0;
+    margin: px-to-rem(62px) px-to-rem(22px) px-to-rem(14px);
     position: relative;
 
     @include media-query('md-max') {
