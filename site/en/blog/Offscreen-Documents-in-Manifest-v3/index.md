@@ -9,7 +9,7 @@ date: 2023-01-25
 tags:
   - extensions-news
   - chrome109
-hero: 6AZNJBRnkpQUWTKPzig99lQY8jT2/Is4XDKDq5gYFfBMbhGBK.jpg
+hero: image/6AZNJBRnkpQUWTKPzig99lQY8jT2/Is4XDKDq5gYFfBMbhGBK.jpg
 alt: >
   A picture of laptop with the screen off.
 ---
