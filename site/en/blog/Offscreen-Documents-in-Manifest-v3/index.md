@@ -9,7 +9,9 @@ date: 2023-01-25
 tags:
   - extensions-news
   - chrome109
-
+hero: 6AZNJBRnkpQUWTKPzig99lQY8jT2/Is4XDKDq5gYFfBMbhGBK.jpg
+alt: >
+  A picture of laptop with the screen off.
 ---
 
 To replace functionality in the transition from background pages to extension service workers, developers can use the [`chrome.offscreen`](/docs/extensions/reference/offscreen/) API and manifest permission starting in Chrome 109. Requesting this permission allows for the creation of off-screen documents to use DOM APIs without obtrusively opening new windows or tabs that interrupt the user experience. The `chrome.offscreen` API documentation is now available in chrome extensions. 
@@ -57,3 +59,5 @@ Extensions should employ the proposed offscreen document API for specific use ca
 The lifetime of an offscreen document is independent of the service worker that created it. Service worker lifetime considerations and use cases related to service worker lifetime in extensions will be covered in a separate blog post.
 The reasons to use offscreen documents will fluctuate over time as features and APIs are added to the service worker itself. We are eager to hear developer feedback as this unfolds.
 
+Photo by <a href="https://unsplash.com/@karishea?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kari Shea</a> on <a href="https://unsplash.com/wallpapers/desktop/laptop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
