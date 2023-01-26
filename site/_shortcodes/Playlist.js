@@ -196,9 +196,7 @@ function getChannelHtml(
           </div>
           ${videoTotal >= 4
             ? `<div class="playlist-decorations">
-          <div class="decoration__small rounded-full"></div>
-          <div class="decoration__logo rounded-full"><img src="https://wd.imgix.net/image/T4FyVKpzu4WKF1kBNvXepbi08t52/mnB7qJh1Z1LAoPoqJ9B1.png" alt="YouTube logo decoration" /></div>
-          <div class="decoration__large rounded-full"></div>
+          <img src="https://wd.imgix.net/image/T4FyVKpzu4WKF1kBNvXepbi08t52/3IgLIoZypldJWF5SSLR5.svg" alt="YouTube logo decoration" />
         </div>`
             : ''}
         </div>
