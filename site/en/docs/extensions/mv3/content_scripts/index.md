@@ -237,15 +237,19 @@ Below we'll look at different versions of an activeTab-based extension.
 
 {% Label %}manifest.json:{% endLabel %}
 
-```json/3-5
+```json/4
 {
   "name": "My extension",
   ...
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "scripting"
   ],
   "background": {
     "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Action Button"
   }
 }
 ```
