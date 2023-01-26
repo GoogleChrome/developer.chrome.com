@@ -351,8 +351,8 @@ The content script will be injected into a page if both of the following are tru
 Because the `matches` property is required, `exclude_matches`, `include_globs`, and `exclude_globs`
 can only be used to limit which pages will be affected.
 
-The following extension injects the content script into **https://www.nytimes.com/health**
-but not into **https://www.nytimes.com/business** .
+The following extension injects the content script into **https://www.nytimes.com/ health**
+but not into **https://www.nytimes.com/ business** .
 
 ```json/5-6
 {
