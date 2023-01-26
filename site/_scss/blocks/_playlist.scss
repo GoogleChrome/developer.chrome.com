@@ -1,9 +1,7 @@
 .playlist {
   display: flex;
   flex-wrap: wrap;
-  max-height: px-to-rem(700px);
-  overflow: auto;
-  padding: px-to-rem(32px) 0 px-to-rem(32px) px-to-rem(32px);
+  padding: 0;
 
   @include media-query('md-max') {
     max-height: unset;
@@ -12,9 +10,8 @@
 
   .playlist-details {
     flex-basis: px-to-rem(365px);
-    margin-bottom: px-to-rem(32px);
     min-width: px-to-rem(365px);
-    padding-right: px-to-rem(40px);
+    padding: 1rem 2.5rem 1rem 1rem;
 
     @include media-query('md-max') {
       margin-bottom: 0;
@@ -48,8 +45,12 @@
   }
 
   .playlist-decorations {
-    height: px-to-rem(90px);
-    margin: px-to-rem(62px) px-to-rem(22px) px-to-rem(14px);
+    align-items: center;
+    display: flex;
+    height: 12rem;
+    justify-content: center;
+    margin-top: 2.5rem;
+    padding: 1rem;
     position: relative;
 
     @include media-query('md-max') {
@@ -114,6 +115,7 @@
     border-top: 1px solid get-color('grey-400');
     display: flex;
     justify-content: space-between;
+    max-height: px-to-rem(56px);
     padding-top: px-to-rem(24px);
   }
 
@@ -137,6 +139,8 @@
 
   .playlist-videos {
     flex-basis: calc(100% - #{px-to-rem(365px)});
+    max-height: 43rem;
+    overflow: auto;
 
     @include media-query('md-max') {
       flex-basis: 100%;
@@ -149,7 +153,7 @@
 .playlist-video {
   display: flex;
   padding-bottom: px-to-rem(32px);
-  padding-right: px-to-rem(32px);
+  padding-right: 1rem;
   position: relative;
 
   @include media-query('md-max') {
@@ -160,6 +164,7 @@
 
   &:first-child {
     border-top: unset;
+    padding-top: 1rem;
   }
 
   &:hover::after {
