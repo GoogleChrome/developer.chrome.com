@@ -27,7 +27,7 @@ Each `index.md` file starts with YAML Front Matter. See
 
 The outdated banner indicates this blog post is outdated and no longer accurate.
 
-Paste new material URL into the `newMaterialURL` field in your YAML frontmatter.
+Paste new material URL into the `new_material` field in your YAML frontmatter.
 
 ### Hero images
 

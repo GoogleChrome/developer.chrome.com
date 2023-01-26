@@ -23,7 +23,7 @@ updated: 2021-01-28
 
 # Optional
 # Include a new material URL when this content is outdated and no longer accurate
-newMaterialURL: https://developer.chrome.com/docs/handbook/how-to/add-a-blog-post/
+new_material: /docs/handbook/how-to/add-a-blog-post/
 
 # Optional
 # How to add a new author

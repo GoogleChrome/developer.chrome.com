@@ -1,3 +1,4 @@
 <div class="post-banner">
-  This content is outdated and no longer accurate. <a href={{ newMaterialURL }}>New material available</a>.
+  {% set material_url = helpers.findByUrl(collections.all, new_material, locale) %}
+  This content is outdated and no longer accurate. {% if material_url %}<a href={{ material_url.url }}>New material available</a>.{% endif %}
 </div>

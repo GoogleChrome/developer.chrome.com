@@ -27,7 +27,7 @@ Articles and blog posts share the same template and are identical other than loc
 
 The outdated banner indicates this article is outdated and no longer accurate.
 
-Paste new material URL into the `newMaterialURL` field in your YAML frontmatter.
+Paste new material URL into the `new_material` field in your YAML frontmatter.
 
 ### Hero images
 
