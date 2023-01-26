@@ -17,7 +17,7 @@ tags:
 
 Progressive Web Apps (PWA) are apps built and enhanced with modern APIs to deliver enhanced capabilities, reliability, and installability while reaching anyone, anywhere, on any device, all with a single codebase.
 
-Watch the video to learn how to debug them with Chrome DevTools.
+Watch the video to learn how to debug these apps with Chrome DevTools.
 
 {% YouTube id='fGU39PukAlA' %}
 
