@@ -54,7 +54,6 @@ future of WebXR and remove the maintenance burden of WebVR, as well as reaffirm
 that Chrome is committed to WebXR as the future for building immersive web-based
 experiences. Removal is expected in Chrome 79.
 
-[Intent to Remove]() &#124;
 [Chrome Platform Status](https://www.chromestatus.com/feature/4532810371039232) &#124;
 [Chromium Bug](https://www.chromestatus.com/feature/4532810371039232)
 

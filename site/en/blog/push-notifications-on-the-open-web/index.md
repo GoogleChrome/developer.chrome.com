@@ -222,7 +222,7 @@ Browser they use FCM. We'll discuss how this would work in other browsers later 
 
 #### Create a new Firebase Developer Project
 
-To start off with you need to create a new project on [https://console.firebase.google.com/]()
+To start off with you need to create a new project on [https://console.firebase.google.com/](https://console.firebase.google.com/)
 by clicking on the 'Create New Project'.
 
 ![New Firebase Project Screenshot](https://developers.google.com/web/updates/images/2015/03/push/new-project.png)

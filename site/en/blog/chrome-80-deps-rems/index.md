@@ -39,7 +39,7 @@ Visit ChromeStatus.com for lists of
 and <a href="https://www.chromestatus.com/features#browsers.chrome.status:%22Removed%22">previous removals</a>.  
 {% endAside %}
 
-## Disallow Synchronous XMLHTTPRequest() in Page Dismissal
+## Disallow Synchronous XMLHTTPRequest&#40;) in Page Dismissal
 
 Chrome now disallows synchronous calls to `XMLHTTPRequest()` during page
 dismissal when the page is being navigated away from or is closed by the user.

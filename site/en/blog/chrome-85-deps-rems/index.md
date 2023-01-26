@@ -70,7 +70,6 @@ cross-site usage reduces this risk.
 
 ## -webkit-box quirks from -webkit-line-clamp
 
-[Intent to Remove]() &#124;
 [Chrome Platform Status](https://www.chromestatus.com/feature/5680142707851264) &#124;
 [Chromium Bug](https://crbug.com/305376)
 

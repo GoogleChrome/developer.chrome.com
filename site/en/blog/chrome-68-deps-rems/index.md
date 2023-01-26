@@ -24,9 +24,7 @@ trend in JavaScript APIs of moving away from factory functions and toward
 constructors. The closely-related `document.createTouchList()` method [is
 expected to be removed in Chrome 69](https://www.chromestatus.com/feature/5185332291043328).
 
-[Intent to Remove]() &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/feature/5668612064935936) &#124;
-[Chromium Bug]()
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5668612064935936) 
 
 ### Remove Document.selectedStylesheetSet and Document.preferredStylesheetSet
 

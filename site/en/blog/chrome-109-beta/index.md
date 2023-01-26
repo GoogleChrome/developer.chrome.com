@@ -91,7 +91,7 @@ The NotRestoredReason API will report the list of reasons why a page is not serv
 
 The feature sends a CORS preflight request ahead of any private network requests for subresources, asking for explicit permission from the target server. A private network request is any request from a public website to a private IP address or localhost, or from a private website (for example, an intranet) to localhost. Sending a preflight request mitigates the risk of cross-site request forgery attacks against private network devices such as routers, which are often not prepared to defend against this threat.
 
-[Register for the Private Network Access preflight requests for subresources origin trial]().
+[Register for the Private Network Access preflight requests for subresources origin trial](/origintrials/#/view_trial/4081387162304512001).
 
 ## Deprecations and removals
 

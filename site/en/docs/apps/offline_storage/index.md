@@ -214,7 +214,7 @@ This section documents the methods of the Quota Management API.
 
 The following are `webkitStorageInfo` constants, which indicate the type of storage.
 
-<table><thead><tr><th scope="col" width="111">Constant</th><th scope="col" width="53">Value</th><th scope="col" width="690">Description</th></tr></thead><tbody><tr><td><a href=""><code>TEMPORARY</code></a></td><td>0</td><td>Temporary storage.</td></tr><tr><td><a href=""><code>PERSISTENT</code></a></td><td>1</td><td>Persistent storage.</td></tr></tbody></table>
+<table><thead><tr><th scope="col" width="111">Constant</th><th scope="col" width="53">Value</th><th scope="col" width="690">Description</th></tr></thead><tbody><tr><td><code>TEMPORARY</code></a></td><td>0</td><td>Temporary storage.</td></tr><tr><td><code>PERSISTENT</code></a></td><td>1</td><td>Persistent storage.</td></tr></tbody></table>
 
 ### Method overview {: #method_overview }
 
