@@ -5,7 +5,7 @@ description: >
  Display arbitrary HTML content in an always-on-top window.
 authors:
   - beaufortfrancois
-date: 2023-01-25
+date: 2023-01-26
 hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/l8xW8V85N60e4dmwUwmE.jpg
 alt: Person holding outdoor lounge chairs.
 tags:
@@ -79,10 +79,6 @@ It is common for users to leave the browser tab during a video conferencing sess
   `initialAspectRatio`
   : Sets the initial aspect ratio of the Picture-in-Picture window.
 
-  `lockAspectRatio`
-  : When `true`, the Picture-in-Picture window aspect ratio will remain constant.
-    The default value is `false`.
-
   `copyStyleSheets`
   : When `true`, the CSS style sheets of the originated window are copied and applied to the Picture-in-Picture window. This is a one-time copy.
     The default value is `false`.
@@ -123,19 +119,16 @@ pipButton.addEventListener('click', async () => {
 
 ### Set an aspect ratio for the Picture-in-Picture window
 
-To set an aspect ratio, pass options as a dictionary to `documentPictureInPicture.requestWindow()`:
-- `initialAspectRatio`: Sets the desired Picture-in-Picture window aspect ratio.
-- `lockAspectRatio`: If set to `true`, the Picture-in-Picture window aspect ratio will remain constant.
+To set an aspect ratio, set the `initialAspectRatio` option of `documentPictureInPicture.requestWindow()` to the desired Picture-in-Picture window aspect ratio.
 
 ```js
 pipButton.addEventListener("click", async () => {
   const player = document.querySelector("#player");
 
   // Open a Picture-in-Picture window whose aspect ratio is
-  // the same as the player's and locked.
+  // the same as the player's.
   const pipWindow = await documentPictureInPicture.requestWindow({
     initialAspectRatio: player.clientWidth / player.clientHeight,
-    lockAspectRatio: true,
   });
 
   // Move the player to the Picture-in-Picture window.
