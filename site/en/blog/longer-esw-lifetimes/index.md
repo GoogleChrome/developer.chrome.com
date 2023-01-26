@@ -11,7 +11,7 @@ joemedley
 tags:
   - extensions-news
   - chrome110
-hero: sQ51XsLqKMgSQMCZjIN0B7hlBO02/iND6W98T4Ve3pWoj4Xq5.jpeg
+hero: image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/iND6W98T4Ve3pWoj4Xq5.jpeg
 alt: >
   A picture of an hourglass.
 ---
