@@ -4,7 +4,7 @@ title: >
 description: >
   Debug Progressive Web Apps with DevTools.
 layout: 'layouts/blog-post.njk'
-date: 2022-12-05
+date: 2023-01-26
 authors:
   - sofiayem
 hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/OEqDXbxeEqiGeZnKxr60.png'
@@ -19,12 +19,20 @@ Progressive Web Apps (PWA) are apps built and enhanced with modern APIs to deliv
 
 Watch the video to learn how to debug them with Chrome DevTools.
 
-<!-- {% YouTube id='' %} --> 
+{% YouTube id='fGU39PukAlA' %}
 
 With DevTools, you can:
 
-- Inspect your app's manifest that makes it installable.
-- Test service workers that act as proxies between your app and the network.
+- Inspect your app's manifest file that makes your app installable. For example:
+  - Check icons for different platforms.
+  - Catch errors.
+  - Configure a richer installation UI with description and screenshots.
+- Test service workers that act as proxies between your app and the network. For example:
+  - Check worker registration.
+  - Check worker versioning and activity.
+  - Update worker version on reload.
+  - Debug network connectivity by emulating offline mode or bypassing workers.
+  - Test network messages.
 
 To learn more, see:
 
