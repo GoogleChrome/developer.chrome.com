@@ -23,13 +23,13 @@ This article describes permission best practices, a complete list of permission 
 ## Best practices {: #best-practices }
 
 Permission warnings exist to describe the capabilities granted by an API, but
-some warnings can be harder to understand than others. Users are more likely to install an extension designed with the following best practices.
+some warnings can be harder to understand than others. Users are more likely to install an extension that follows best practices.
 
 Limit permissions to support core functionality
-: Extensions are required to fulfill a [single purpose](www.tba.com). Choose the minimum permissions needed for the extension's core functionality and any additional features under optional permissions. This also allows your extension to comply with the [Use of permissions][cws-perms] policy. 
+: Extensions are required to fulfill a [single purpose](www.tba.com). Choose the minimum permissions needed for the extension's main functionality. This also allows your extension to comply with the [Use of permissions][cws-perms] policy. 
 
 Offer additional features under optional permissions
-: Placing permissions with warnings as optional allows developers to provide an improved onboarding experience by explaining why a particular permission is needed. It also allows users to further customize their experience. See [Permissions API][api-optional-perms] for steps on how to implement optional permissions. 
+: Declaring optional permissions improves the user onboarding experience by explaining why a particular permission is needed. It also allows users to further customize their experience. See [Permissions API][api-optional-perms] for instructions on implementing optional permissions. 
 
 Prefer the `"activeTab"` permission
 : This permission does **_not_** display a permission warning. It grants temporary host permission to the site the user is on. For more details, see [Understanding the activeTab permission][doc-activetab].
