@@ -4,17 +4,17 @@ title: "DevTools 의 새로운 기능 (Chrome 109)"
 authors:
   - jecelynyeen
 date: 2023-01-15
-description: 'Copy step as script in the Recorder, actual function names in performance’s recordings, and more.'
+description: 'Recorder내의 단계, Performance Recording의 실제 함수명, 그리고 그 이상을 복사할 수 있습니다.'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fmfV4TpjIZ8BNFnOpjdb.png'
 alt: ''
 tags:
   - new-in-devtools
   - devtools
   - chrome-109
-draft: true
 ---
+<!-- Will add reviewers here once the translation is reviewed -->
+*이 게시글의 번역에는 [Steven H. Yang](https://www.linkedin.com/in/syang0624/)님이 참여하셨습니다.*
 
-*이 게시글의 번역에는 [최원영](https://www.linkedin.com/in/toruchoi)님이 참여하셨으며, [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님과 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다.*
 
 {% Partial 'devtools/banner.md' %}
 
@@ -28,7 +28,7 @@ draft: true
 
 <!-- ## Recorder: Copy as options for steps, in-page replay, step’s context menu {: #recorder } -->
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/uCqjrGj716ZbDJ4N37dl.png", alt="New copy options in the Recorder panel.", width="800", height="615" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/uCqjrGj716ZbDJ4N37dl.png", alt="Recorder 패널 안의 새로운 복사 옵션.", width="800", height="615" %}
 
 <!-- Open an existing user flow in the **Recorder**. Previously, when you replayed the user flow, DevTools would always start the replay by navigating to or reloading the page. -->
 
@@ -45,11 +45,11 @@ Chromium issues: [1322313](https://crbug.com/1322313), [1351649](https://crbug.c
 
 <!-- The **Performance** panel now shows the actual function names and their sources in the trace if there’s a sourcemap. -->
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/9pHMVM1ARXrlyLoTziVA.png", alt="Show before and after comparison of function names display in the Performance panel.", width="800", height="509" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/9pHMVM1ARXrlyLoTziVA.png", alt="Performance 패널에서 함수명 전후비교의 표시.", width="800", height="509" %}
 
 <!-- In this example, a source file is minified during production. For example, the `sayHi` function is minified as `n`, and the `takeABreak` function is minified as `o` in this [demo](https://clinquant-mousse-2f2396.netlify.app/). -->
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ywER8cdQUNYrdAaBJTKT.png", alt="Show files before and after minfication.", width="800", height="392" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ywER8cdQUNYrdAaBJTKT.png", alt="축소화 전/후 파일 비교.", width="800", height="392" %}
 
 <!-- Previously, when you recorded a trace in the **Performance** panel, the trace only showed you the minified function names. This made it harder to debug.  -->
 
@@ -83,11 +83,11 @@ Chromium issue: [1167965](https://crbug.com/1167965), [1172535](https://crbug.co
 <!-- These are some JavaScript debugging improvements in this release: -->
 
 <!-- - `new.target` is a meta-property that lets you detect whether a function or constructor was called using the new operator. You can now log `new.target` in the **Console** to check its value during debugging. Previously, it would return errors when you entered `new.target`. -->
-   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hKOEn03BZN2IUmWJ1Hho.png", alt="Show before and after comparison of new.target evaluation debugging.", width="800", height="499" %}
+   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hKOEn03BZN2IUmWJ1Hho.png", alt="new.target 평가 디버깅의 전후비교.", width="800", height="499" %}
 <!-- - A `WeakRef` object lets you hold a weak reference to another object, without preventing that object from getting garbage-collected. DevTools now shows an inline preview for the value and evaluates the weak reference directly in the console during debugging. Previously, you had to explicitly call “deref” on them to resolve it. -->
-   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/M7DP4bI7pA07oY7M21wF.png", alt="Show before and after comparison of WeakRef evaluation during debugging.", width="800", height="453" %} 
+   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/M7DP4bI7pA07oY7M21wF.png", alt="WeakRef 평가 디버깅의 전후비교.", width="800", height="453" %} 
 <!-- - Fixed inline preview for shadowed variable. Previously, the display value was incorrect.  -->
-   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XHL8pnBxhZ65ni7zYV0Q.png", alt="Show before and after comparison inline preview for shadowed variable.", width="800", height="519" %} 
+   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XHL8pnBxhZ65ni7zYV0Q.png", alt="Shadowed variable의 Inline 미리보기에 대한 전후비교.", width="800", height="519" %} 
 <!-- - Deobfuscate variable names in `Generator` and `async` functions in the **Scope** pane in the **Sources** panel. -->
 
 
@@ -135,7 +135,7 @@ Chromium issues: [1267690](https://crbug.com/1267690), [1246863](https://crbug.c
 
 <!-- Read the full changes in our [RFC (closed)](https://github.com/ChromeDevTools/rfcs/discussions/3) and leave your feedback [here](https://crbug.com/1394686). -->
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ytfyl8qK5rkHQRTS3sXf.png", alt="Show Breakpoint pane before and after the redesign.", width="800", height="684" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ytfyl8qK5rkHQRTS3sXf.png", alt="디자인 수정 후 절단점에 대한 전후비교.", width="800", height="684" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f2140378e0bb1687b263c226de01b741487ff324 #}
 Chromium issues: [1346231](https://crbug.com/1346231), [1324904](https://crbug.com/1324904) 
@@ -151,7 +151,7 @@ Chromium issues: [1346231](https://crbug.com/1346231), [1324904](https://crbug.c
 
 <!-- Previously, the **Sources** panel shows minified content by default. Developers need to click on the pretty print button manually to format the content. On top of that, the pretty printed content is not displayed in the same file, but in another `::formatted` tab. -->
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/twp21SJIisjYpnCWRbWi.png", alt="Show a minified file before and after automatic in-place pretty print.", width="800", height="501" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/twp21SJIisjYpnCWRbWi.png", alt="축소된 파일을 알맞은 위치에 미관적으로 자동 프린트 전후비교.", width="800", height="501" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/0c96e7f4cdaf2009e5223553cabb606099f85569 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/6ea8fee1935d3c56dfea1edaa752af09579fffcc #}
