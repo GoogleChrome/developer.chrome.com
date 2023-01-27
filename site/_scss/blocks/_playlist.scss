@@ -149,8 +149,8 @@
 
 .playlist-video {
   display: flex;
-  padding-bottom: px-to-rem(32px);
   padding-right: 1rem;
+  padding-top: 2rem;
   position: relative;
 
   @include media-query('lg-max') {
@@ -162,6 +162,10 @@
   &:first-child {
     border-top: unset;
     padding-top: 1rem;
+  }
+
+  &:last-child .playlist-video--content {
+    border-bottom: unset;
   }
 
   &:hover::after {
@@ -208,14 +212,14 @@
 
 .playlist-video--content {
   align-items: center;
-  border-top: 1px solid get-color('grey-300');
+  border-bottom: 1px solid get-color('grey-300');
   display: flex;
   flex-basis: 100%;
-  padding-top: px-to-rem(32px);
+  padding-bottom: 2rem;
   position: relative;
 
   @include media-query('lg-max') {
-    border-top: unset;
+    border-bottom: unset;
     padding-bottom: px-to-rem(16px);
     padding-right: px-to-rem(110px);
     padding-top: 1rem;
@@ -249,7 +253,7 @@
   }
 
   &::after {
-    border-left: 5px dotted get-color('red-300');
+    border-left: 5px dotted #fde9e6;
     content: '';
     display: block;
     height: 145px;
