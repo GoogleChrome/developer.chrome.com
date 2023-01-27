@@ -7,7 +7,7 @@ description: >
   Allow developers to opt-in a cookie to "partitioned" storage, with a separate cookie jar per top-level site.
   Partitioned cookies can be set by a third-party service, but only read within the context of the top-level site where they were initially set.
 date: 2022-02-15
-updated: 2023-01-26
+updated: 2023-01-27
 authors:
   - mihajlija
 tags:
