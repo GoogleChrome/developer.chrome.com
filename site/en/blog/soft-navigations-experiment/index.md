@@ -98,7 +98,7 @@ This can be used to finalize full-life page metrics for the previous navigation.
 
 As soft navigations can only be seen after they have occurred, some metrics will need to be finalized upon this event, and then reported for the previous URL, as the current URL will now reflect the updated URL for the new page.
 
-The `navigationID` attribute of the appropriate `PerformanceEntry` can be used to tie the event back to the correct URL. This can be looked up with the [`PerformanceEntry API`](https://developer.mozilla.org/docs/Web/API/PerformanceEntry):
+The `navigationID` attribute of the appropriate `PerformanceEntry` can be used to tie the event back to the correct URL. This can be looked up with the [`PerformanceEntry` API](https://developer.mozilla.org/docs/Web/API/PerformanceEntry):
 
 ```js
 pageUrl =
