@@ -79,6 +79,12 @@ It is common for users to leave the browser tab during a video conferencing sess
   `initialAspectRatio`
   : Sets the initial aspect ratio of the Picture-in-Picture window.
 
+  `width`
+  : Sets the initial width of the Picture-in-Picture window.
+
+  `height`
+  : Sets the initial height of the Picture-in-Picture window.
+
   `copyStyleSheets`
   : When `true`, the CSS style sheets of the originated window are copied and applied to the Picture-in-Picture window. This is a one-time copy.
     The default value is `false`.
@@ -117,7 +123,7 @@ pipButton.addEventListener('click', async () => {
 });
 ```
 
-### Set an aspect ratio for the Picture-in-Picture window
+### Set the size of the Picture-in-Picture window
 
 To set an aspect ratio, set the `initialAspectRatio` option of `documentPictureInPicture.requestWindow()` to the desired Picture-in-Picture window aspect ratio.
 
@@ -133,6 +139,16 @@ pipButton.addEventListener("click", async () => {
 
   // Move the player to the Picture-in-Picture window.
   pipWindow.document.body.append(player);
+});
+```
+
+The `width` and `height` options can also be used to set the desired Picture-in-Picture window size. Chrome may clamp those options values if they are too large or too small to fit a user-friendly window size.
+
+```js
+// Set player's width and height as the Picture-in-Picture window size.
+const pipWindow = await documentPictureInPicture.requestWindow({
+  width: player.clientWidth,
+  height: player.clientHeight,
 });
 ```
 
@@ -263,6 +279,7 @@ Developer feedback is really important at this stage, so please [file issues on 
 ## Useful links
 
 - [Public explainer][explainer]
+- [WICG specification][spec]
 - [Chromium tracking bug][cr-bug]
 - [ChromeStatus.com entry][cr-status]
 - Blink Component: [`Blink>Media>PictureInPicture`][blink-component]
