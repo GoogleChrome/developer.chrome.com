@@ -48,7 +48,7 @@ shortcode snippet, it should look like this:
 
 `'image/BrQidfK9jaQyIHwdw91aVpkPiib2/EnMzOm0mBytBA3AzlCG6.png'`
 
-Paste that into the `sharingImage` field in your YAML frontmatter.
+Paste that into the `sharing_image` field in your YAML frontmatter.
 
 ## Components
 
