@@ -16,7 +16,7 @@ tags:
  - chrome-110
 ---
 
-Since its launch, the [Core Web Vitals initiative](https://web.dev/vitals/) has sought to measure the actual user experience of a website, rather than technical details behind how a website is created or loaded. The three Core Web Vitals metrics were created as [user-centric metrics](https://web.dev/user-centric-performance-metrics/)—an evolution over existing technical metrics such as[`DOMContentLoaded`](https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event) or [`load`](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event) that measured timings that were often unrelated to how users perceived the performance of the page. Because of this, the technology used to build the site should not impact the scoring providing the site performs well.
+Since its launch, the [Core Web Vitals initiative](https://web.dev/vitals/) has sought to measure the actual user experience of a website, rather than technical details behind how a website is created or loaded. The three Core Web Vitals metrics were created as [user-centric metrics](https://web.dev/user-centric-performance-metrics/)—an evolution over existing technical metrics such as[`DOMContentLoaded`](https://developer.mozilla.org/docs/Web/API/Document/DOMContentLoaded_event) or [`load`](https://developer.mozilla.org/docs/Web/API/Window/load_event) that measured timings that were often unrelated to how users perceived the performance of the page. Because of this, the technology used to build the site should not impact the scoring providing the site performs well.
 
 The reality is always a little trickier than the ideal, and the popular Single Page Application architecture has [never been fully supported by the Core Web Vitals metrics](https://web.dev/vitals-spa-faq/). Rather than loading distinct, individual web pages as the user navigates about the site, these web applications use so-called “soft navigations”, where the page content is instead changed by JavaScript. In these applications, the illusion of a traditional webpage architecture is maintained by altering the URL and pushing previous URLs in the browser’s history to allow the back and forward buttons to work as the user would expect.
 
@@ -40,7 +40,7 @@ Once the soft navigation heuristics are enabled (more on this in the next sectio
 
 - A `soft-navigation` [`PerformanceTiming`](https://developer.mozilla.org/docs/Web/API/PerformanceTiming) event will be emitted after each soft navigation is detected, with a corresponding `soft-navigation` entry.
 - The performance API will provide access to a `soft-navigation` event timing entry, as emitted by the above `PerformanceTiming` event.
-- The [First Paint](https://developer.mozilla.org/en-US/docs/Glossary/First_paint), [First Contentful Paint (FCP), Largest Contentful Paint (LCP)](https://web.dev/fcp/) metrics will be reset, and re-emitted on the next appropriate occurrences of these.
+- The [First Paint](https://developer.mozilla.org/docs/Glossary/First_paint), [First Contentful Paint (FCP), Largest Contentful Paint (LCP)](https://web.dev/fcp/) metrics will be reset, and re-emitted on the next appropriate occurrences of these.
 - The [First Input Delay (FID)](https://web.dev/fcp/) will be reset, and re-emitted on the first input (note: this is not yet implemented).
 - A `navigationId` attribute will be added to each of performance timings (`first-paint`, `first-contentful-paint`, `largest-contentful-paint`, `first-input-delay`, `event`, `layout-shift`) corresponding to the navigation entry the event was related to, allowing [Cumulative Layout Shift (CLS)](https://web.dev/cls/) and [Interaction to Next Paint (INP)](https://web.dev/inp/) to be calculated.
 
@@ -50,7 +50,7 @@ These changes will allow the Core Web Vitals—and some of the associated diagno
 
 Enabling any experimental feature changes the way that Chrome works and may cause unintended consequences. The following are some of the changes that sites owners need to consider:
 
-- FP, FCP, LCP, and FID events may be re-emitted for soft navigations. If sites have not “finalized” these metrics and take these later values, they may see larger than expected values for these metrics. For example, a page measuring LCP—but which has not been coded to finalize the LCP after an interaction—may get another LCP event for a later soft navigation, and incorrectly report this back for the original page. The [Chrome User Experience Report (CrUX)](https://developer.chrome.com/docs/crux/) will ignore these values and only report as it currently does, but this may affect any Real User Measurement (RUM) monitoring on your site. Check with your RUM provider if you have any concerns if this will impact those measurements.
+- FP, FCP, LCP, and FID events may be re-emitted for soft navigations. If sites have not “finalized” these metrics and take these later values, they may see larger than expected values for these metrics. For example, a page measuring LCP—but which has not been coded to finalize the LCP after an interaction—may get another LCP event for a later soft navigation, and incorrectly report this back for the original page. The [Chrome User Experience Report (CrUX)](/docs/crux/) will ignore these values and only report as it currently does, but this may affect any Real User Measurement (RUM) monitoring on your site. Check with your RUM provider if you have any concerns if this will impact those measurements.
 - The new (and optional) `navigationID` attribute on your performance entries may need to be considered in your application code using these entries.
 - Only Chromium-based browsers will support this new mode. While many of the newer metrics are only available in Chromium-based browsers, some (FCP, FID) are available in the other browsers, and not everyone may have upgraded to the latest version of Chromium-based browsers. So be aware that some users may not report soft-navigation metrics.
 - As an experimental new feature that is not enabled by default, sites should test this functionality to ensure there are not any other unintended side-effects.
@@ -63,7 +63,7 @@ Soft navigations are not enabled by default in Chrome, but are available for exp
 
 For developers, this can be enabled by turning on the _Experimental Web Platform features_ flag at `chrome://flags/#enable-experimental-web-platform-features` or by using the `--enable-experimental-web-platform-features` command line argument when launching Chrome.
 
-For a website that wishes to enable this for all their visitors to see the impact, there is an origin trial running from Chrome 110 to Chrome 112 which can be enabled by signing up for the trial and including a meta element with the origin trial token in the HTML or HTTP header. See the [Get started with origin trials](https://developer.chrome.com/docs/web-platform/origin-trials/) post for more information.
+For a website that wishes to enable this for all their visitors to see the impact, there is an origin trial running from Chrome 110 to Chrome 112 which can be enabled by signing up for the trial and including a meta element with the origin trial token in the HTML or HTTP header. See the [Get started with origin trials](/docs/web-platform/origin-trials/) post for more information.
 
 Site owners can choose to include the origin trial on their pages for all, or for just a subset of users. Be aware of the [implications section](#what-are-the-implications-of-enabling-soft-navigations-in-chrome) above as to how this changes how your metrics may be reported, especially if enabling this origin trial for a large proportion of your users. Note that CrUX will continue to report the metrics in the existing manner regardless of this soft navigation setting so is not impacted by those implications. It should also be noted that origin trials are also limited to enabling experimental features on a maximum of 0.5% of all Chrome page loads as a median over 14 days, but this should only be an issue for very large sites.
 
@@ -79,7 +79,7 @@ Timings will still be returned in respect of the original “hard” navigation 
 
 ### Reporting soft navigations
 
-Once the soft navigations experiment is enabled, the metrics will be reporting via the [`PerformanceObserver`](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver) API as usual, but with an additional `navigationId` added to each metric, corresponding to the navigation entry the metric was emitted for.
+Once the soft navigations experiment is enabled, the metrics will be reporting via the [`PerformanceObserver`](https://developer.mozilla.org/docs/Web/API/PerformanceObserver) API as usual, but with an additional `navigationId` added to each metric, corresponding to the navigation entry the metric was emitted for.
 
 {% Aside 'note' %}
 Note: [FID is not currently reported](https://bugs.chromium.org/p/chromium/issues/detail?id=1407656) for soft navigations.
@@ -98,7 +98,7 @@ This can be used to finalize full-life page metrics for the previous navigation.
 
 As soft navigations can only be seen after they have occurred, some metrics will need to be finalized upon this event, and then reported for the previous URL, as the current URL will now reflect the updated URL for the new page.
 
-The `navigationID` attribute of the appropriate `PerformanceEntry` can be used to tie the event back to the correct URL. This can be looked up with the [`PerformanceEntry API`](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry):
+The `navigationID` attribute of the appropriate `PerformanceEntry` can be used to tie the event back to the correct URL. This can be looked up with the [`PerformanceEntry API`](https://developer.mozilla.org/docs/Web/API/PerformanceEntry):
 
 ```js
 pageUrl =
@@ -180,15 +180,15 @@ onCLS(doSoftNavProcessing, {reportSoftNavs: true});
 onINP(doSoftNavProcessing, {reportSoftNavs: true});
 ```
 
-Ensure the metrics are reported against the correct URL [as noted above](#reporting-the-metrics-against-the-correct-url).
+Ensure the metrics are reported against the correct URL [as noted above](#reporting-the-metrics-against-the-appropriate-url).
 
 The `web-vitals` library currently reports the following metrics for soft navigations:
 
 <table>
   <thead>
     <tr>
-      <td>Metric</td>
-      <td>Details</td>
+      <th>Metric</th>
+      <th>Details</th>
     </tr>
   </thead>
   <tbody>
