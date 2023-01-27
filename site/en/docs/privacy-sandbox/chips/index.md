@@ -140,7 +140,7 @@ key={("https", "retail.example"),
 
 The current First-Party Sets design relies on Storage Access API and does not integrate with CHIPS partitioning.
 
-If you have a use case that relies on integration of CHIPS and FPS you can (provide examples and feedback on the GitHub issue)[https://github.com/WICG/first-party-sets/issues/94].
+If you have a use case that relies on a shared cookie partition across sites within a FPS you can [provide examples and feedback on the GitHub issue](https://github.com/WICG/first-party-sets/issues/94).
 
 ### Security design
 
