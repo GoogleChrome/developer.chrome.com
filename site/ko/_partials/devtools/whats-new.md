@@ -6,13 +6,13 @@
 
 {# ### Chrome 109 {: #chrome109 }
 
-* [Recorder: Copy as options for steps, in-page replay, step’s context menu](/ko/blog/new-in-devtools-109/#recorder)
-* [Show actual function names in performance’s recordings](/ko/blog/new-in-devtools-109/#performance)
-* [New keyboard shortcuts in the Console & Sources panel](/ko/blog/new-in-devtools-109/#keyboard-shortcuts)
-* [Improved JavaScript debugging](/ko/blog/new-in-devtools-109/#debugging)
-* [Miscellaneous highlights](/ko/blog/new-in-devtools-109/#misc)
-* [[Experimental] Enhanced UX in managing breakpoints](/ko/blog/new-in-devtools-109/#breakpoint-redesign)
-* [[Experimental] Automatic in-place pretty print](/ko/blog/new-in-devtools-109/#pretty-print)
+* [Recorder: 단계별 옵션, 페이지내 반복재생, 단계의 내용 메뉴](/ko/blog/new-in-devtools-109/#recorder)
+* [퍼포먼스 Recording의 실제 함수명 표현](/ko/blog/new-in-devtools-109/#performance)
+* [콘솔 & 소스 패널의 새로운 단축키](/ko/blog/new-in-devtools-109/#keyboard-shortcuts)
+* [향상된 JavaScript 디버깅](/ko/blog/new-in-devtools-109/#debugging)
+* [기타 하이라이트](/ko/blog/new-in-devtools-109/#misc)
+* [[실험 기능] UX가 향상된 절단점 관리](/ko/blog/new-in-devtools-109/#breakpoint-redesign)
+* [[실험 기능] 자동적인 알맞은 위치에 출력](/ko/blog/new-in-devtools-109/#pretty-print)
  #}
 
 ### Chrome 108 {: #chrome108 }
