@@ -41,6 +41,7 @@ to learn how to add images and videos to your docs.
 
 ### Outdated banner 
 
-The outdated banner indicates this document is outdated and no longer accurate.
+The outdated banner indicates this article is outdated and no longer accurate.
 
-Paste new material URL into the `new_material` field in your YAML frontmatter.
+Set `isOutdated` field in your YAML frontmatter.
+If new material is available, paste an available content URL into the `new_available_content_url` field in your YAML frontmatter.

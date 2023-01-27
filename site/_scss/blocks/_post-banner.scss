@@ -2,7 +2,7 @@
   --link-color: var(--color-red-darkest);
   --link-visited-color: var(--color-red-darkest);
   --link-rgb-background: var(--rgb-red-darkest);
-  background-color: get-color('red-50');
+  background-color: var(color-red-solidLighter);
   border-radius: 6px;
   color: var(--color-red-darkest);
   margin-bottom: 30px;

@@ -22,8 +22,12 @@ date: 2021-01-27
 updated: 2021-01-28
 
 # Optional
+# Indicate this content is outdated and no longer accurate
+isOutdated: true
+
+# Optional
 # Include a new material URL when this content is outdated and no longer accurate
-new_material: /docs/handbook/how-to/add-a-blog-post/
+new_available_content_url: /docs/handbook/how-to/add-a-blog-post/
 
 # Optional
 # How to add a new author
