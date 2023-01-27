@@ -1,11 +1,10 @@
 .playlist {
   display: flex;
   flex-wrap: wrap;
-  padding: 0;
+  overflow: hidden;
 
-  @include media-query('md-max') {
+  @include media-query('lg-max') {
     max-height: unset;
-    padding: 0;
   }
 
   .playlist-details {
@@ -13,10 +12,15 @@
     min-width: px-to-rem(365px);
     padding: 1rem 2.5rem 1rem 1rem;
 
-    @include media-query('md-max') {
+    @include media-query('lg-max') {
       margin-bottom: 0;
       min-width: 100%;
-      padding-right: 0;
+      padding: 0;
+    }
+
+    @media (min-width:800px) and (max-width: 991px) {
+      min-width: unset;
+      padding: 1rem 2.5rem 1rem 1rem;
     }
   }
 
@@ -24,8 +28,12 @@
     background-color: var(--color-red-lighter);
     padding: px-to-rem(24px);
 
-    @include media-query('md-max') {
+    @include media-query('lg-max') {
       border-radius: unset;
+    }
+
+    @media (min-width:800px) and (max-width: 991px) {
+      border-radius: 0.75rem;
     }
   }
 
@@ -35,7 +43,7 @@
   }
 
   .playlist-thumbnail img {
-    @include media-query('md-max') {
+    @include media-query('lg-max') {
       width: 100%;
     }
   } 
@@ -54,7 +62,7 @@
     padding: 1rem;
     position: relative;
 
-    @include media-query('md-max') {
+    @media (max-width:800px) {
       display: none;
     }
   }
@@ -92,6 +100,11 @@
     padding-top: px-to-rem(24px);
   }
 
+  .playlist-channel__details {
+    align-items: space-between;
+    display: flex;
+  }
+
   .playlist-channel__icon {
     flex-basis: 56px;
     margin-right: px-to-rem(8px);
@@ -115,11 +128,15 @@
     max-height: 39rem;
     overflow: scroll;
 
-    @include media-query('md-max') {
+    @include media-query('lg-max') {
       flex-basis: 100%;
       overflow: hidden;
     }
 
+    @media (min-width:800px) and (max-width: 991px) {
+      flex-basis: calc(100% - #{px-to-rem(377px)});
+      overflow: auto;
+    }
   }
 }
 
@@ -129,7 +146,7 @@
   padding-right: 1rem;
   position: relative;
 
-  @include media-query('md-max') {
+  @include media-query('lg-max') {
     border-top: 1px solid #dadce0;
     margin: 0 1rem;
     padding: px-to-rem(16px) 0;
@@ -151,7 +168,7 @@
     width: calc(100% - #{px-to-rem(14px)});
     z-index: -1;
 
-    @include media-query('md-max') {
+    @include media-query('lg-max') {
       left: -1rem;
       top: 0;
       width: calc(100% + 2rem);
@@ -175,7 +192,7 @@
     border-top: unset;
     padding-top: 0;
 
-    @include media-query('md-max') {
+    @include media-query('lg-max') {
       padding-top: 1rem;
     }
   }
@@ -190,7 +207,7 @@
   padding-top: px-to-rem(32px);
   position: relative;
 
-  @include media-query('md-max') {
+  @include media-query('lg-max') {
     border-top: unset;
     padding-bottom: px-to-rem(16px);
     padding-right: px-to-rem(110px);
@@ -214,7 +231,7 @@
   position: relative;
   text-align: center;
 
-  @include media-query('md-max') {
+  @include media-query('lg-max') {
     font-size: px-to-rem(14px);
     height: px-to-rem(22px);
     line-height: px-to-rem(22px);
@@ -235,7 +252,7 @@
   }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 991px) {
   .playlist-video__number::after {
     display: none;
   }
@@ -246,12 +263,13 @@
   margin-right: px-to-rem(24px);
   min-width: 204px;
 
-  @include media-query('md-max') {
+  @include media-query('lg-max') {
     border-radius: px-to-rem(10px);
     height: auto;
     margin-right: 0;
     min-width: px-to-rem(100px);
     overflow: hidden;
+    padding-left: 0.5rem;
     position: absolute;
     right: px-to-rem(16px);
     top: px-to-rem(16px);
@@ -272,7 +290,7 @@
 
 .playlist-video__detail p {
   
-  @include media-query('md-max') {
+  @include media-query('lg-max') {
     font-size: px-to-rem(14px);
     line-height: 1.5;
   }
@@ -283,7 +301,7 @@
   position: absolute;
   right: 0;
 
-  @include media-query('md-max') {
+  @include media-query('lg-max') {
     right: -1.4rem;
   }
 }
@@ -293,7 +311,7 @@
   line-height: px-to-rem(24px);
   margin-right: 2rem;
   
-  @include media-query('md-max') {
+  @include media-query('lg-max') {
     margin-bottom: px-to-rem(6px);
   }
 }

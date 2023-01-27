@@ -174,17 +174,18 @@ function getChannelHtml(
           </p>
 
           <div class="playlist-channel">
-            <div class="playlist-channel__icon">
-              <img
-                src="${channelThumb}"
-                alt="Channel icon"
-                height="56"
-                width="56"
-              />
+            <div class="playlist-channel__details">
+              <div class="playlist-channel__icon">
+                <img
+                  src="${channelThumb}"
+                  alt="Channel icon"
+                  height="56"
+                  width="56"
+                />
+              </div>
+
+              <p class="playlist-channel__name">${channelName}</p>
             </div>
-
-            <p class="playlist-channel__name">${channelName}</p>
-
             <div class="playlist-channel__subscribe">
               <a
                 href="https://www.youtube.com/channel/${channelId}?sub_confirmation=1"
