@@ -27,7 +27,7 @@ Each `index.md` file starts with YAML Front Matter. See
 
 The outdated banner indicates this article is outdated and no longer accurate.
 
-Set `isOutdated` field in your YAML frontmatter.
+Set `is_outdated` field in your YAML frontmatter.
 If new material is available, paste an available content URL into the `new_available_content_url` field in your YAML frontmatter.
 
 ### Hero images

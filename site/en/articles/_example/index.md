@@ -23,7 +23,7 @@ updated: 2021-01-28
 
 # Optional
 # Indicate this content is outdated and no longer accurate
-isOutdated: true
+is_outdated: true
 
 # Optional
 # Include a new material URL when this content is outdated and no longer accurate
