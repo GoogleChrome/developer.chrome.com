@@ -158,7 +158,7 @@ function getChannelHtml(
             </div>
           </div>
 
-          <h2 class="type--h3-card gap-top-400">
+          <h2 class="playlist-name type--h3-card gap-top-400">
             <a
               class="color-red-darkest surface display-inline-flex no-visited"
               href="https://www.youtube.com/playlist?list=${playlistId}"
