@@ -41,6 +41,7 @@
   } 
 
   .playlist-meta {
+    color: var(--color-secondary-text);
     padding-bottom: 1.5rem;
   }
 
@@ -258,12 +259,19 @@
   }
 }
 
-.playlist-video__details a {
-  color: var(--color-text);
-  text-decoration: none;
+.playlist-video__details {
+  a {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  p {
+    color: var(--color-secondary-text);
+  }
 }
 
 .playlist-video__detail p {
+  
   @include media-query('md-max') {
     font-size: px-to-rem(14px);
     line-height: 1.5;
@@ -282,10 +290,11 @@
 
 .playlist-video__title {
   font-weight: 500;
-  line-height: 1rem;
+  line-height: px-to-rem(24px);
   margin-right: 2rem;
   
   @include media-query('md-max') {
     margin-bottom: px-to-rem(6px);
   }
 }
+
