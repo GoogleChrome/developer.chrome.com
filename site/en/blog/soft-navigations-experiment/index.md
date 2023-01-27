@@ -106,7 +106,7 @@ pageUrl =
   || performance.getEntriesByType('navigation')[0]?.name
 ```
 
-Here we are subtracting `2` as the first soft navigation is `2` and `getEntriesByType` returns an array, which like all JavaScript arrays, is 0-indexed.
+Here we are subtracting `2` as the first soft navigation is `2` and `getEntriesByType` returns an array, which like all JavaScript arrays, is zero-indexed.
 
 {% Aside 'warning' %}
 
