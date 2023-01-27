@@ -40,9 +40,9 @@ The Picture-in-Picture window in the Document Picture-in-Picture API is similar 
 
 </div>
 
-## Try out the API
+## Try out the API on desktop
 
-During the trial phase you can test the API by one of two methods.
+During the trial phase you can test the API on desktop by one of two methods.
 
 ### Local testing
 
