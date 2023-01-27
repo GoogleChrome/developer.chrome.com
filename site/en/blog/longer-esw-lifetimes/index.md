@@ -22,7 +22,7 @@ This article describes how these behaviors have changed.
 
 ## Background
 
-Extension service workers mostly behave like web service workers, but in addition to [service worker events](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope#events), extension service workers can also listen to extension events. While normal service worker events extend the service worker's lifetime, before the release of 110 only a few extension platform events kept an extension service worker alive.
+Extension service workers mostly behave like web service workers, but in addition to [service worker events](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope#events), extension service workers can also listen to extension events. While normal service worker events extend the service worker's lifetime, before the release of 110 only a few extension platform events kept an extension service worker alive.
 
 Normally, Chromium terminates a service worker after one of the following conditions is met:
 
