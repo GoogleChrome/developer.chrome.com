@@ -136,9 +136,9 @@ key={("https", "retail.example"),
 
 #### First-Party Sets and cookie partitioning
 
-[First-Party Sets](/blog/first-party-sets-testing-instructions) is a web platform mechanism for developers to declare relationships among sites, so that browsers can use this information to enable limited cross-site cookie access for specific, user-facing purposes. Chrome will use these declared relationships to decide when to allow or deny a site access to their cookies when in a third-party context.
+[First-Party Sets (FPS)](/blog/first-party-sets-testing-instructions) is a web platform mechanism for developers to declare relationships among sites, so that browsers can use this information to enable limited cross-site cookie access for specific, user-facing purposes. Chrome will use these declared relationships to decide when to allow or deny a site access to their cookies when in a third-party context.
 
-First-Party Sets design relies on Storage Access API and does not integrate with CHIPS partitioning.
+The current First-Party Sets design relies on Storage Access API and does not integrate with CHIPS partitioning.
 
 If you have a use case that relies on integration of CHIPS and FPS you can (provide examples and feedback on the GitHub issue)[https://github.com/WICG/first-party-sets/issues/94].
 
