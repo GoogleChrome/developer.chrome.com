@@ -1,16 +1,16 @@
 ---
 title: 'Privacy Sandbox para la web: Ampliando las pruebas en el 2023'
 description: Hacer pruebas lleva tiempo. Estamos adoptando un enfoque deliberado para probar el Privacy Sandbox para la web. Las APIs están disponibles para pruebas funcionales a través de las pruebas de origen y preparan el escenario para la ampliación de pruebas en el 2023—incluidos los experimentos de extremo a extremo con tráfico real—con un enfoque en la comprensión de resultados del ecosistema, y el impacto en el mundo real mientras nos alejamos de las cookies de terceros.
-layout: layouts/blog-post.njk
+layout: diseños/blog-post.njk
 date: '2022-11-10'
 authors:
   - joeytrotz
-hero: image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/7Hid7vSdQtp0RNThvO5J.png
+hero: imagen/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/7Hid7vSdQtp0RNThvO5J.png
 alt: |2
 
   Privacy Sandbox logo
 tags:
-  - privacy
+  - privacidad
 ---
 
 Hacer pruebas lleva tiempo. Y las pruebas bien hechas pueden llevar mucho tiempo. Al igual que alguien que aprende a cocinar una nueva receta, adquiere un nuevo pasatiempo o simplemente estudia para su próximo examen, el éxito a menudo se reduce a la preparación y realización de pruebas rigurosas.
