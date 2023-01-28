@@ -7,7 +7,7 @@ authors:
   - chrisdavidmills
   - jheyy
 date: 2022-10-19
-updated: 2022-11-10
+updated: 2023-01-25
 ---
 
 The **`::backdrop`** [CSS](https://developer.mozilla.org/docs/Web/CSS) [pseudo-element](https://developer.mozilla.org/docs/Web/CSS/Pseudo-elements) sits behind an open [popover](/docs/web-platform/popover-api/) in the stacking order, but in front of the rest of the document, and spans the entire width and height of the viewport. It allows the rest of the content to be styled while the popover is open—for example you might want to blur or darken it.
@@ -42,4 +42,4 @@ p[popover]::backdrop {
 * [The Popover API](/docs/web-platform/popover-api/)
 * [Pop-ups: They're making a resurgence!](/blog/pop-ups-theyre-making-a-resurgence/), by Jhey Tompkins
 * [Chrome Platform Status: The Popover API](https://chromestatus.com/feature/5463833265045504) 
-* [Open UI: Popover API Explainer](https://open-ui.org/components/popup.research.explainer)
+* [Open UI: Popover API Explainer](https://open-ui.org/components/popover.research.explainer)

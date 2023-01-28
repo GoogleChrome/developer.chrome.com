@@ -217,6 +217,15 @@ chrome69:
 
 chrome70:
   en: Chrome 70
+  
+chrome109:
+  en: Chrome 109
+  
+chrome110:
+  en: Chrome 110
+
+chrome110:
+  en: Chrome 110
 
 beta:
   en: Beta
@@ -263,3 +272,57 @@ webauthn:
 
 passkeys:
   en: Passkeys
+
+monitoring:
+  en: Monitoring
+
+web-app-manifest:
+  en: Web app manifest
+
+cors:
+  en: CORS
+
+video:
+  en: Video
+
+idle-detection:
+  en: Idle detection
+
+backpressure:
+  en: Backpressure
+
+websocket:
+  en: Web Socket
+
+websocketstream:
+  en: WebSocketStream
+
+service-worker:
+  en: Service Worker
+
+caching:
+  en: Caching
+
+feedback:
+  en: Feedback
+
+api:
+  en: API
+
+notification-triggers:
+  en: Notification triggers
+
+contacts:
+  en: Contacts
+
+shape-detection:
+  en: Shape detection
+
+wake-lock:
+  en: Wake Lock
+
+notifications:
+  en: Notifications
+
+sensors:
+  en: Sensors

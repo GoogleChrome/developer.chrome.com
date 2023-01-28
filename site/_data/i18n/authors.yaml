@@ -1106,17 +1106,17 @@ greenido:
   title:
     en: Ido Green
   description:
-    en: ''
+    en: 'Senior technology leader and entrepreneur at heart'
 christianliebel:
   title:
     en: Christian Liebel
   description:
-    en: ''
+    en: 'Consultant, Thinktecture AG'
 jonathangarbee:
   title:
     en: Jonathan Garbee
   description:
-    en: ''
+    en: 'Front-end engineer with a passion for usability and accessibility'
 noraoneill:
   title:
     en: "Nora O'Neill"
@@ -1286,4 +1286,9 @@ sarino:
   title:
     en: Sarino Grasso
   description:
-    en: Sarino is a web ecosystem consultant at Google.
+    en: Sarino is a Web Ecosystem Consultant at Google
+ianstanion:
+  title:
+    en: Ian Stanion
+  description:
+    en: 'Ian is a technical content developer at Google.'

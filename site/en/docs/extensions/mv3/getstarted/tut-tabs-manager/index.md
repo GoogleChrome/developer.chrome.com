@@ -108,7 +108,7 @@ A popup is similar to a web page with one exception: it can't run inline JavaScr
 
 {% Aside %}
 
-💡 **TIP**: You can use [top level await][mdn-top-level] by adding `type="module”` to the script
+💡 **TIP**: You can use [top level await][mdn-top-level] by adding `type="module"` to the script
 tag.
 
 {% endAside %}
@@ -153,7 +153,7 @@ Many methods in the Tabs API can be used without requesting any permission. Howe
 
 Narrow [host permissions][doc-match] allow us to protect user privacy by granting elevated permission to **specific sites**. This will grant access to the `title`, and `URL` properties, as well as additional capabilities. Add the highlighted code to the `manifest.json` file:
 
-```json/2-3
+```json/2-4
 {
   ...
   "host_permissions": [
