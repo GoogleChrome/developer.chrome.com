@@ -172,6 +172,7 @@ chrome.action.onClicked.addListener(async (tab) => {
       tabId: tab.id,
       text: nextState,
     });
+    }});
 ...
 ```
 
