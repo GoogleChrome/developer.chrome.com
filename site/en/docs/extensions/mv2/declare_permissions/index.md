@@ -228,6 +228,10 @@ The following table lists the currently available permissions:
       <td><code>"notifications"</code></td>
       <td>Gives your extension access to the <a href="/docs/extensions/reference/notifications/">chrome.notifications</a> API.</td>
     </tr>
+    <tr id="offscreen">
+      <td><code>"offscreen"</code></td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/offscreen/">chrome.offscreen</a> API.</td>
+    </tr>
     <tr id="pageCapture">
       <td><code>"pageCapture"</code></td>
       <td>Gives your extension access to the <a href="/docs/extensions/reference/pageCapture/">chrome.pageCapture</a> API.</td>
