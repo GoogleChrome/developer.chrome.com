@@ -32,25 +32,25 @@ We have come up with the following definition of a _soft navigation_:
 - The navigation results in a visible URL change to the user, and a history change.
 - The navigation results in a DOM change.
 
-For some sites, these heuristics may lead to false positives (that users would not really consider a "navigation" to have happened) or false negatives (where the user does consider a “navigation” to have happened despite not missing the above criteria). We welcome feedback at [the soft navigation specification repository](https://github.com/WICG/soft-navigations/issues) on the heuristics.
+For some sites, these heuristics may lead to false positives (that users would not really consider a "navigation" to have happened) or false negatives (where the user does consider a “navigation” to have happened despite not meeting the above criteria). We welcome feedback at [the soft navigation specification repository](https://github.com/WICG/soft-navigations/issues) on the heuristics.
 
 ### How does Chrome implement soft navigations?
 
 Once the soft navigation heuristics are enabled (more on this in the next section), Chrome will change the way it reports some performance metrics:
 
-- A `soft-navigation` [`PerformanceTiming`](https://developer.mozilla.org/docs/Web/API/PerformanceTiming) event will be emitted after each soft navigation is detected, with a corresponding `soft-navigation` entry.
-- The performance API will provide access to a `soft-navigation` event timing entry, as emitted by the above `PerformanceTiming` event.
+- A `soft-navigation` [`PerformanceTiming`](https://developer.mozilla.org/docs/Web/API/PerformanceTiming) event will be emitted after each soft navigation is detected.
+- The performance API will provide access to a `soft-navigation` timing entry, as emitted by the above `PerformanceTiming` event.
 - The [First Paint (FP)](https://developer.mozilla.org/docs/Glossary/First_paint), [First Contentful Paint (FCP)](https://web.dev/fcp/), [Largest Contentful Paint (LCP)](https://web.dev/lcp/) metrics will be reset, and re-emitted on the next appropriate occurrences of these.
 - The [First Input Delay (FID)](https://web.dev/fcp/) will be reset, and re-emitted on the first input (note: this is not yet implemented).
-- A `navigationId` attribute will be added to each of performance timings (`first-paint`, `first-contentful-paint`, `largest-contentful-paint`, `first-input-delay`, `event`, `layout-shift`) corresponding to the navigation entry the event was related to, allowing [Cumulative Layout Shift (CLS)](https://web.dev/cls/) and [Interaction to Next Paint (INP)](https://web.dev/inp/) to be calculated.
+- A `navigationId` attribute will be added to each of performance timings (`first-paint`, `first-contentful-paint`, `largest-contentful-paint`, `first-input-delay`, `event`, `layout-shift`) corresponding to the navigation entry the event was related to, allowing [Cumulative Layout Shift (CLS)](https://web.dev/cls/) and [Interaction to Next Paint (INP)](https://web.dev/inp/) to be calculated. _Note: this is [subject to change](#reporting-the-metrics-against-the-appropriate-url)._
 
 These changes will allow the Core Web Vitals—and some of the associated diagnostic metrics—to be measured per page navigation, though there are some nuances that need to be considered.
 
 ### What are the implications of enabling soft navigations in Chrome?
 
-Enabling any experimental feature changes the way that Chrome works and may cause unintended consequences. The following are some of the changes that sites owners need to consider:
+The following are some of the changes that sites owners need to consider after enabling this feature:
 
-- FP, FCP, LCP, and FID events may be re-emitted for soft navigations. If sites have not “finalized” these metrics and take these later values, they may see larger than expected values for these metrics. For example, a page measuring LCP—but which has not been coded to finalize the LCP after an interaction—may get another LCP event for a later soft navigation, and incorrectly report this back for the original page. The [Chrome User Experience Report (CrUX)](/docs/crux/) will ignore these values and only report as it currently does, but this may affect any Real User Measurement (RUM) monitoring on your site. Check with your RUM provider if you have any concerns if this will impact those measurements.
+- Additional FP, FCP, LCP, and FID events may be re-emitted for soft navigations. The [Chrome User Experience Report (CrUX)](/docs/crux/) will ignore these additional values, but this may affect any Real User Measurement (RUM) monitoring on your site. Check with your RUM provider if you have any concerns if this will impact those measurements. See [the section below on measuring Core Web Vitals for soft navigations](#how-can-i-measure-core-web-vitals-per-soft-navigation).
 - The new (and optional) `navigationID` attribute on your performance entries may need to be considered in your application code using these entries.
 - Only Chromium-based browsers will support this new mode. While many of the newer metrics are only available in Chromium-based browsers, some (FCP, FID) are available in the other browsers, and not everyone may have upgraded to the latest version of Chromium-based browsers. So be aware that some users may not report soft-navigation metrics.
 - As an experimental new feature that is not enabled by default, sites should test this functionality to ensure there are not any other unintended side-effects.
@@ -160,9 +160,12 @@ The easiest way to take account of all the above nuances, is to use the [`web-vi
 
 ```js
 import {
+  onTTFB,
+  onFCP,
+  onLCP,
   onCLS,
   onFID,
-  onLCP,
+  onINP,
 } from 'https://unpkg.com/web-vitals@soft-navs/dist/web-vitals.js?module';
 
 onTTFB(doTraditionalProcessing);
@@ -176,7 +179,7 @@ onTTFB(doSoftNavProcessing, {reportSoftNavs: true});
 onFCP(doSoftNavProcessing, {reportSoftNavs: true});
 onLCP(doSoftNavProcessing, {reportSoftNavs: true});
 onCLS(doSoftNavProcessing, {reportSoftNavs: true});
-//onFID(doSoftNavProcessing, {reportSoftNavs: true});
+onFID(doSoftNavProcessing, {reportSoftNavs: true});
 onINP(doSoftNavProcessing, {reportSoftNavs: true});
 ```
 
@@ -198,11 +201,11 @@ The `web-vitals` library currently reports the following metrics for soft naviga
     </tr>
     <tr>
       <td>FCP</td>
-      <td>The time of the next contentful paint, relevant to the soft navigation start time. Existing paints present from the previous navigation are not considered. Therefore, the FCP will be >= 0.</td>
+      <td>The time of the next contentful paint, relative to the soft navigation start time. Existing paints present from the previous navigation are not considered. Therefore, the FCP will be >= 0.</td>
     </tr>
     <tr>
       <td>LCP</td>
-      <td>The time of the next largest contentful paint, relevant to the soft navigation start time. Existing paints present from the previous navigation are not considered. Therefore, the LCP will be >= 0. As usual, this will be reported upon an interaction, or when the page is backgrounded, as only then can the LCP be finalized.</td>
+      <td>The time of the next largest contentful paint, relative to the soft navigation start time. Existing paints present from the previous navigation are not considered. Therefore, the LCP will be >= 0. As usual, this will be reported upon an interaction, or when the page is backgrounded, as only then can the LCP be finalized.</td>
     </tr>
     <tr>
       <td>CLS</td>
@@ -210,7 +213,7 @@ The `web-vitals` library currently reports the following metrics for soft naviga
     </tr>
     <tr>
       <td>FID</td>
-      <td>FID is not currently reported by the <code>web-vitals</code> library.</td>
+      <td>Currently only the first FID for the page is reported by the <code>web-vitals</code> library.</td>
     </tr>
     <tr>
       <td>INP</td>
