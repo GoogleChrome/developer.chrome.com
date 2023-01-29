@@ -362,13 +362,15 @@ of topics observed for the caller.
 
 ### Use headers to access and observe topics {: #headers}
 
-Topics can be accessed from the request headers of a `fetch()` or `XHR` request. 
-
-Topics that were provided in a request header can be marked as observed in a response header. 
-The browser will then use these for calculating topics of interest for a user.
+Rather than use the Topics JavaScript API from an iframe, topics can be accessed and marked as 
+observed by using request and response headers:
+* Topics can be accessed from the `Sec-Browsing-Topics` header of a `fetch()` or `XHR` request. 
+* Topics that were provided in a request header can be marked as observed by setting a 
+`Observe-Browsing-Topics: ?1` header on the response to the request. The browser will then use those 
+topics (that were included in the request header) for calculating topics of interest for a user.
 
 Using request and response headers to access topics and mark them as observed can be much more performant 
-than using the JavaScript API from an iframe. For example, the header approach could be used when a `fetch()` 
+than using the JavaScript API from an iframe. For example, the header mechanism could be used when a `fetch()` 
 request is made to an ad server. No iframe required!
 
 #### Demo
