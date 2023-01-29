@@ -381,7 +381,7 @@ request and response headers to access topics and mark them as observed.
 Instead of using `document.browsingTopics()` from an iframe to view topics for a user, API callers 
 can access observed topics from the `Sec-Browsing-Topics` request header of a 
 [`fetch()`](https://developer.mozilla.org/docs/Web/API/fetch) request that includes `{browsingTopics: true}` 
-in its `options` parameter—or from the same header of an [`XHR`](https://developer.mozilla.org/en-US/docs/Glossary/XHR_(XMLHttpRequest)) 
+in its `options` parameter—or from the same header of an [`XHR`](https://developer.mozilla.org/docs/Glossary/XHR_(XMLHttpRequest)) 
 request that sets `deprecatedBrowsingTopics` attribute to `true`. 
 
 For example:
