@@ -5,7 +5,7 @@ description: >
   Extension service workers can now stay alive as long as they're receiving events. This increases the reliability of extension services workers, but has a pitfall you should avoid. 
 subhead: >
   Extension service workers can now stay alive as long as they're receiving events. This increases the reliability of extension services workers, but has a pitfall you should avoid.
-date: 2023-01-27
+date: 2023-01-25
 authors:
   - joemedley
 tags:
