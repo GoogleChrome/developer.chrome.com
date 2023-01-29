@@ -22,7 +22,7 @@ The reality is always a little trickier than the ideal, and the popular Single P
 
 Many JavaScript frameworks use this model, but each in a different way. Since this is outside of what the browser traditionally understands as a “page”, measuring this has always been difficult: where is the line to be drawn between an interaction on the _current_ page, versus considering this as a _new_ page?
 
-The Chrome team has been been considering this challenge for some time now, and is looking to standardize a definition of what is a “soft-navigation”, and how the Core Web Vitals can be measured for this—in a similar way that websites implemented in the traditional multi-page architecture (MPA) is currently measured. While still in early stages, the team is now ready to make our work so far more widely available through the use of an origin trial to allow sites that wish to trial this to provide feedback on the approach so far.
+The Chrome team has been been considering this challenge for some time now, and is looking to standardize a definition of what is a “soft-navigation”, and how the Core Web Vitals can be measured for this—in a similar way that websites implemented in the traditional multi-page architecture (MPA) is currently measured. While still in early stages, the team is now ready to make what has already been implemented more widely available through the use of an origin trial. This will allow sites that wish to trial this to provide feedback on the approach so far.
 
 ## What is a soft navigation?
 
@@ -109,9 +109,7 @@ pageUrl =
 Here we are subtracting `2` as the first soft navigation is `2` and `getEntriesByType` returns an array, which like all JavaScript arrays, is zero-indexed.
 
 {% Aside 'warning' %}
-
-There are discussions to instead [if there are better ways to link event entries to the navigation entries](https://github.com/WICG/soft-navigations/issues/12), so this may change.
-
+There are discussions on [whether there are better ways to link event entries to the navigation entries](https://github.com/WICG/soft-navigations/issues/12), so this may change.
 {% endAside %}
 
 This `pageUrl` should be used to report the metrics against the correct URL, rather than the current URL that they may have used in the past.
