@@ -5,7 +5,7 @@ layout: layouts/blog-post.njk
 date: 2022-11-10
 authors:
   - joeytrotz
-hero: imagen/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/7Hid7vSdQtp0RNThvO5J.png
+hero: image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/7Hid7vSdQtp0RNThvO5J.png
 alt: Logotipo del Privacy Sandbox
 tags:
   - privacy
