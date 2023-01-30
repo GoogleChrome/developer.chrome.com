@@ -52,10 +52,10 @@ launching from home screen, and what the app looks like on launch.
 Once you've got your manifest set up, you can use the **Manifest** pane of the **Application** panel
 to inspect it.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/whsOfT3UtuAXpAbxt9kX.png", alt="The Manifest pane.", width="800", height="486" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/t2qbshH5F1g24IcsNbZz.png", alt="The Manifest pane.", width="800", height="562" %}
 
 - To look at the manifest source, click the link below **App Manifest** label
-  (`https://airhorner.com/manifest.json` in the screenshot above).
+  (`manifest.webmanifest` in the screenshot above).
 - The **Identity** and **Presentation** sections just display fields from the manifest source in a
   more user-friendly way.
 - The **Protocol Handlers** section lets you to test the URL protocol handler registration of your PWA with a click of a button.
@@ -106,7 +106,7 @@ DevTools via [remote debugging][6]. To trigger the installation on the connected
 
 ### Inspect screenshots for a richer installation UI {: #screenshot }
 
-When you add a description and a set of screenshots to your manifest file, your app gets a richer installation dialog.
+When you add a description and a set of [screenshots to your manifest file](https://web.dev/add-manifest/#screenshots), your app gets a richer installation dialog.
 
 To inspect the screenshots, scroll to the bottom of the **Manifest** pane.
 
