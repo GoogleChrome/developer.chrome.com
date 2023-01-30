@@ -21,7 +21,7 @@ and marks it as active.
       </div>
       <span class="section-title">{{ item.title | i18n }}</span>
     </button>
-    <div class="navigation-tree__nested" depth={{tocDepth}}>
+    <div class="navigation-tree__nested" data-depth={{tocDepth}}>
       {{ navigationTreeSectionsInternal(item.sections, (tocDepth + 1)) }}
     </div>
   {% elif item.url %}
