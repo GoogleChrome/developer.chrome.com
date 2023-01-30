@@ -301,10 +301,6 @@ The following table lists the currently available permissions:
       <td><code>"sessions"</code></td>
       <td>Gives access to the <a href="/docs/extensions/reference/sessions/">chrome.sessions</a> API.</td>
     </tr>
-    <tr id="signedInDevices">
-      <td><code>"signedInDevices"</code></td>
-      <td>Gives access to the <a href="/docs/extensions/reference/signedInDevices/">chrome.signedInDevices</a> API.</td>
-    </tr>
     <tr id="storage">
       <td><code>"storage"</code></td>
       <td>Gives access to the <a href="/docs/extensions/reference/storage/">chrome.storage</a> API.</td>
