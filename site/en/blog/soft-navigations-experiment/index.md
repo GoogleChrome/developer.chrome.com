@@ -85,11 +85,11 @@ Once the soft navigations experiment is enabled, the metrics will be reporting v
 Note: [FID is not currently reported](https://bugs.chromium.org/p/chromium/issues/detail?id=1407656) for soft navigations.
 {% endAside %}
 
-You can use a `PerformanceObserver` to observe soft navigations. Below is an example code snippet that logs soft navigation entries to the console:
+You can use a `PerformanceObserver` to observe soft navigations. Below is an example code snippet that logs soft navigation entries to the console—including previous soft navigations on this page via the `buffered` option:
 
 ```js
 const observer = new PerformanceObserver(console.log);
-observer.observe({ entryTypes: ["soft-navigation"] });
+observer.observe({ type: "soft-navigation", buffered: true });
 ```
 
 This can be used to finalize full-life page metrics for the previous navigation.
@@ -221,7 +221,7 @@ The `web-vitals` library currently reports the following metrics for soft naviga
 </table>
 
 {% Aside 'warning' %}
-The `web-vitals` implementation is under active development and is subject to change with new changes being published to that branch. At present, it does not support FID, as that requires [more underlying work in Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1407656) or polyfilling FID-based on events.
+The `web-vitals` implementation is under active development and is subject to change with new changes being published to that branch. At present, it does not support FID on soft navigations, as that requires [more underlying work in Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1407656) or polyfilling FID-based on events.
 
 Those using the `web-vitals` JavaScript library should be aware of this if looking to use this library on production sites, and should take a local copy and test that version, and monitor the branch for changes.
 {% endAside %}
