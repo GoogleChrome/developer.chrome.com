@@ -7,7 +7,7 @@ updated: 2023-01-28
 description: An overview of the valid values for the permissions property in manifest.json.
 ---
 
-To use most [Chrome APIs][apis-ref], your extension must declare its intent in the permissions fields
+To use most [Chrome APIs][api-ref], your extension must declare its intent in the permissions fields
 of the [manifest][doc-manifest]. Extensions can request four categories of permissions, specified using the
 respective keys in the manifest:
 
