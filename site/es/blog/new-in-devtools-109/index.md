@@ -18,7 +18,7 @@ tags:
 {% Partial 'devtools/banner.md' %}
 
 <!-- ## Recorder: Copy as options for steps, in-page replay, step’s context menu {: #recorder } -->
-## Recorder: Copia como opciones para los pasos, reproducción en la página, menú contextual del paso {: #recorder } 
+## Recorder: Copia como opciones para los pasos, reproducción en la página, menú contextual del paso {: #recorder }
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/uCqjrGj716ZbDJ4N37dl.png", alt="Nuevas opciones de copia en el panel Recorder", width="800", height="615" %}
 
