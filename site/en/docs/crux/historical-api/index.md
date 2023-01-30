@@ -3,26 +3,26 @@
 layout: 'layouts/doc-post.njk'
 
 # Required
-title: CrUX API
+title: CrUX Historical API
 
 # Required
 # This appears in the ToC of the project landing page at
 # /docs/[project-name]/. It also appears in the <meta description> used in
 # Google Search.
 description: >
-  Learn how to construct requests to and parse responses from the CrUX API.
+  Learn how to construct requests to and parse responses from the CrUX Historical API.
 
 # Optional
 # This appears below the title and is an optional teaser
 subhead: >
-  The CrUX API gives low-latency access to aggregated real-user experience data at page and origin granularity.
+  The CrUX Historical API gives low-latency access to aggregated real-user experience data at page and origin granularity.
 
 # Required
-date: 2022-06-23
+date: 2023-02-07
 
 # Optional
 # Include an updated date when you update your post
-updated: 2022-11-01
+# updated: 2023-02-07
 
 # Optional
 # How to add a new author
@@ -40,11 +40,15 @@ tags:
 
 ## Common use case
 
-The CrUX API allows for the querying of user experience metrics for a specific URI like "Get metrics for the `https://example.com` origin."
+The CrUX Historical API allows for the querying of historical user experience metrics for a specific URI like "Get the historical time series metrics for the `https://example.com` origin."
+
+The Histrical API follows the same structure as the daily [CrUX API](../api/) except values are given in an array, and keys are labelled with plural names (for example, `histogramTimeseries` instead of `histogram`, or `p75s` instead of `p75`).
 
 ## CrUX API Key
 
-Using the CrUX API requires a Google Cloud API key. You can create one in the [Credentials](https://console.developers.google.com/apis/credentials) page and provision it for `Chrome UX Report API` usage.
+Like the daily API, using the CrUX Historical API requires a Google Cloud API key. The same key can be used for the daily and historical API.
+
+You can create one in the [Credentials](https://console.developers.google.com/apis/credentials) page and provision it for `Chrome UX Report API` usage.
 
 After you have an API key, your application can append the query parameter `key=[YOUR_API_KEY]` to all request URLs.
 
@@ -88,53 +92,47 @@ If the identifier is set to URL with the value of `http://www.example.com/foo.ht
 
 ### Dimensions
 
-Dimensions identify a specific group of data that a record is being aggregated against, for example a form factor of `PHONE` indicates that the record contains information about loads that took place on a mobile device. Each dimension will have a certain number of values, and implicitly the lack of specifying that dimension will mean that the dimension is aggregated over all values. For example, specifying no form factor indicates that record contains information about loads that took place on any form factor.
+Dimensions identify a specific group of data that a record is being aggregated against, for example a form factor of `PHONE` indicates that the record contains information about loads that took place on a mobile device.
 
-#### Form Factor
-
-The device class that the end-user used to navigate to the page. This is a general class of device split into `PHONE`, `TABLET`, and `DESKTOP`.
-
-#### Effective Connection Type
-
-[Effective Connection Type](/docs/crux/methodology/#ect-dimension) is the estimated connection quality of the device when navigating to the page. This is a general class split into `offline`, `slow-2G`, `2G`, `3G` and `4G`.
+As the CrUX Historical API uses the same dimensions, you can reference [the as the daily CrUX API dimensions documentation](../crux/api/#dimensions) for more details.
 
 ### Metric
 
-Metrics are expressed in a histogram, which represents the percent of users that experienced a metric with that value proportionally to all.
+Metrics are expressed in a histogram array, which represents the percent of users that experienced a metric with that value proportionally to all.
 
 A simple three bin histogram for an example metric looks like this:
 
 ```json
 {
-  "histogram": [
+  "histogramTimeseries": [
     {
       "start": 0,
-      "end": 1000,
-      "density": 0.38179
+      "end": 2500,
+      "densities": [0.9190, 0.9203, 0.9194, 0.9195, 0.9183, 0.9187]
     },
     {
-      "start": 1000,
-      "end": 3000,
-      "density": 0.49905
+      "start": 2500,
+      "end": 4000,
+      "densities": [0.0521, 0.0513, 0.0518, 0.0518, 0.0526, 0.0527]
     },
     {
-      "start": 3000,
-      "density": 0.11916
+      "start": 4000,
+      "densities": [0.0288, 0.0282, 0.0286, 0.0285, 0.0290, 0.0285]
     }
   ],
 }
 ```
 
-This data indicates that 38.2% of users experience the example metric value between 0ms and 1,000ms. The units of the metric are not contained in this histogram, in this case we will assume milliseconds.
+This data indicates that 91.2% of users experience the example metric value between 0ms and 2,500ms for the first collection period in the history, followed by 92.0%, 91.9%, and so on. The units of the metric are not contained in this histogram, in this case we will assume milliseconds.
 
-Additionally, 49.9% of users experience the example metric value between 1,000ms and 3,000ms, and 11.9% of users experience a value greater than 3,000ms.
+Additionally, 5.2% of users experience the example metric value between 2,500ms and 4,000ms in the first collection period in the history, and 2.8% of users experience a value greater than 4,000ms in the first collection period in the history.
 
 Metrics will also contain percentiles that can be useful for additional analysis.
 
 ```json
 {
-  "percentiles": {
-    "p75": 2063
+  "percentilesTimeseries": {
+    "p75s": [1362, 1352, 1344, 1356, 1366, 1377]
   },
 }
 ```
@@ -147,120 +145,48 @@ Note: The values for each percentile are synthetically derived, it does not impl
 
 #### Metric value types
 
-<div class="responsive-table">
-<table class="with-heading-tint width-full fixed-table">
-<thead>
-<tr>
-<th>CrUX API Metric Name</th>
-<th>Data Type</th>
-<th>Metric Units</th>
-<th>web.dev Docs</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>first_contentful_paint</code></td>
-<td>int</td>
-<td>milliseconds</td>
-<td><a href="https://web.dev/fcp/">fcp</a></td>
-</tr>
-<tr>
-<td><code>largest_contentful_paint</code></td>
-<td>int</td>
-<td>milliseconds</td>
-<td><a href="https://web.dev/lcp/">lcp</a></td>
-</tr>
-<tr>
-<td><code>cumulative_layout_shift</code></td>
-<td>double encoded as string</td>
-<td>unitless</td>
-<td><a href="https://web.dev/cls/">cls</a></td>
-</tr>
-<tr>
-<td><code>first_input_delay</code></td>
-<td>int</td>
-<td>milliseconds</td>
-<td><a href="https://web.dev/fid/">fid</a></td>
-</tr>
-<tr>
-<td><code>experimental_time_to_first_byte</code></td>
-<td>int</td>
-<td>milliseconds</td>
-<td><a href="https://web.dev/ttfb/">ttfb</a></td>
-</tr>
-<tr>
-<td><code>experimental_interaction_to_next_paint</code></td>
-<td>int</td>
-<td>milliseconds</td>
-<td><a href="https://web.dev/inp/">inp</a></td>
-</tr>
-</tbody>
-</table></div>
+As the CrUX Historical API uses the same metric value types, you can reference [the as the daily CrUX API dimensions documentation](../api/#metric-value-types) for more details.
 
-#### BigQuery metric name mapping
+### Collection Periods
 
-<div class="responsive-table">
-<table class="with-heading-tint width-full fixed-table">
-<thead>
-<tr>
-<th>CrUX API Metric Name</th>
-<th>BigQuery Metric Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>first_contentful_paint</code></td>
-<td><code>first_contentful_paint</code></td>
-</tr>
-<tr>
-<td><code>largest_contentful_paint</code></td>
-<td><code>largest_contentful_paint</code></td>
-</tr>
-<tr>
-<td><code>cumulative_layout_shift</code></td>
-<td><code>layout_instability.cumulative_layout_shift</code></td>
-</tr>
-<tr>
-<td><code>first_input_delay</code></td>
-<td><code>first_input.delay</code></td>
-</tr>
-<tr>
-<td><code>experimental_time_to_first_byte</code></td>
-<td><code>experimental.time_to_first_byte</code></td>
-</tr>
-<tr>
-<td><code>experimental_interaction_to_next_paint</code></td>
-<td><code>experimental.interaction_to_next_paint</code></td>
-</tr>
-</tbody>
-</table></div>
-
-### Collection Period
-
-As of October 2022, the CrUX API contains a `collectionPeriod` object with `firstDate` and `endDate` fields representing the beginning and end dates of the aggregation window. An example is provided below:
+The CrUX Historical API contains a `collectionPeriods` object with an array of `firstDate` and `endDate` fields representing the beginning and end dates of each aggregation window. An example is provided below:
 
 ```json
-    "collectionPeriod": {
-      "firstDate": {
-        "year": 2022,
-        "month": 9,
-        "day": 12
-      },
-      "lastDate": {
-        "year": 2022,
-        "month": 10,
-        "day": 9
+    "collectionPeriods": [{
+        "firstDate": { "year": 2022, "month": 7, "day": 10 },
+        "lastDate": { "year": 2022, "month": 8, "day": 6 }
+      }, {
+        "firstDate": { "year": 2022, "month": 7, "day": 17 },
+        "lastDate": { "year": 2022, "month": 8, "day": 13 }
+      }, {
+        "firstDate": { "year": 2022, "month": 7, "day": 24 },
+        "lastDate": { "year": 2022, "month": 8, "day": 20 }
+      }, {
+        "firstDate": { "year": 2022, "month": 7, "day": 31 },
+        "lastDate": { "year": 2022, "month": 8, "day": 27 }
+      }, {
+        "firstDate": { "year": 2022, "month": 8, "day": 7 },
+        "lastDate": { "year": 2022, "month": 9, "day": 3 }
+      }, {
+        "firstDate": { "year": 2022, "month": 8, "day": 14 },
+        "lastDate": { "year": 2022, "month": 9, "day": 10 }
       }
-    }
+    ]
 ```
 
-This allows better understanding of the data and whether it's been updated yet for that day or is returning the same data as yesterday.
+These collection periods are in ascending order and represent the date span of each of the data points in the other sections of the response.
 
-Note that the CrUX API is approximately two days behind today's date since it waits for completed data for the day, and there is some processing time involved before it is available in the API. The timezone used is Pacific Standard Time (PST) with no changes for daylight savings.
+The Historical API is updated each Monday and contains data up until the previous Saturday (as per the standard 2-day lag). It contains the previous 25-weeks worth of data—one collection period per week.
+
+As each collection period contains the previous 28-days aggregated data, and the collection periods are per week, this means the collection periods will overlap. They are similar to a moving average of data, with three weeks worth of data being included in each subsequent period, and one week being different.
 
 ## Example queries
 
-Queries are submitted as JSON objects via a POST request to `https://chromeuxreport.googleapis.com/v1/records:queryRecord?key=[YOUR_API_KEY]"` with query data as a JSON object in the POST body, e.g.
+Queries are submitted as JSON objects via a POST request to `https://chromeuxreport.googleapis.com/v1/records:queryHistoryRecord?key=[YOUR_API_KEY]"` with query data as a JSON object in the POST body.
+
+Note the use of `queryHistoryRecord` replacing the `queryRecord` of the daily CrUX API.
+
+An example body is shown below:
 
 
 ```json
@@ -277,7 +203,7 @@ Queries are submitted as JSON objects via a POST request to `https://chromeuxrep
 For example, this can be called from `curl` with the following command line (replacing `API_KEY` with your key):
 
 ```bash
-curl -s --request POST 'https://chromeuxreport.googleapis.com/v1/records:queryRecord?key=API_KEY' \
+curl -s --request POST 'https://chromeuxreport.googleapis.com/v1/records:queryHistoricalRecord?key=API_KEY' \
     --header 'Accept: application/json' \
     --header 'Content-Type: application/json' \
     --data '{"formFactor":"PHONE","origin":"https://www.example.com","metrics":["largest_contentful_paint", "experimental_time_to_first_byte"]}'
@@ -311,7 +237,7 @@ If the `metrics` property is not set then all available metrics will be returned
 
 If no `formFactor` value is provided then the values will be aggregated across all form factors.
 
-See [Using the Chrome UX Report API on web.dev](https://web.dev/chrome-ux-report-api/) for more example queries.
+See [Historical web performance data via the CrUX API](https://TODO) for more example queries.
 
 ## Data pipeline
 
@@ -321,24 +247,26 @@ The CrUX dataset is processed through a pipeline to consolidate, aggregate and f
 
 The data in the Chrome UX Report is a 28-day rolling average of aggregated metrics. This means that the data presented in the Chrome UX Report at any given time is actually data for the past 28 days aggregated together.
 
-This is similar to how the [CrUX dataset on BigQuery](../bigquery/) aggregates monthly reports.
+The Historical API contains a number of collection periods, each spanning these 28 days. As each collection period contains the previous 28-days aggregated data, and the collection periods are per week, this means the collection periods will overlap. They are similar to a moving average of data, with three weeks worth of data being included in each subsequent period, and one week being different.
 
-### Daily updates
+### Weekly updates
 
-Data is updated daily around 04:00 UTC. There is no service level agreement for update times; it is run on a best-effort basis every day.
+The Historical API is updated each Monday around 04:00 UTC and contains data up until the previous Saturday (as per the standard 2-day lag). It contains the previous 25 weeks (approximately 6 months) worth of data, one collection period per week.
+
+There is no service level agreement for update times; it is run on a best-effort basis every day.
 
 {% Aside 'caution' %}
-Data will not differ within the same day after it has been updated around 04:00 UTC, repeated calls will yield the same results.
+Data will not differ within the same week after it has been updated each Monday around 04:00 UTC, repeated calls will yield the same results.
 {% endAside %}
 
 ## Schema
 
-There is a single endpoint for the CrUX API which accepts `POST` HTTP requests. The API returns a `record` which contains one or more `metrics` corresponding to performance data about the requested origin or page.
+There is a single endpoint for the CrUX Historical API which accepts `POST` HTTP requests. The API returns a `record` which contains one or more `metrics` corresponding to performance data about the requested origin or page.
 
 ### HTTP request
 
 ```http
-POST https://chromeuxreport.googleapis.com/v1/records:queryRecord
+POST https://chromeuxreport.googleapis.com/v1/records:queryHistoryRecord
 ```
 
 The URL uses [gRPC Transcoding](https://google.aip.dev/127) syntax.
@@ -418,7 +346,7 @@ For example, to request the desktop largest contentful paint values for the Chro
 
 ```json
 {
-  "url": "https://developer.chrome.com/docs/",
+  "origin": "https://web.dev/",
   "formFactor": "DESKTOP",
   "metrics": [
     "largest_contentful_paint"
@@ -454,44 +382,53 @@ For example, the response to the request body in the above request could be:
 {
   "record": {
     "key": {
-      "formFactor": "DESKTOP",
-      "url": "https://developer.chrome.com/docs/"
+      "origin": "https://web.dev"
     },
     "metrics": {
       "largest_contentful_paint": {
-        "histogram": [
-          {
-            "start": 0,
-            "end": 2500,
-            "density": 0.98148451581189577
-          },
-          {
-            "start": 2500,
-            "end": 4000,
-            "density": 0.010814353596591841
-          },
-          {
-            "start": 4000,
-            "density": 0.0077011305915124116
+        "histogramTimeseries": [{
+            "start": 0, "end": 2500, "densities": [
+              0.9190, 0.9203, 0.9194, 0.9195, 0.9183, 0.9187, ...
+            ]
+          }, {
+            "start": 2500, "end": 4000, "densities": [
+              0.0521, 0.0513, 0.0518, 0.0518, 0.0526, 0.0527, ...
+            ]
+          },  {
+            "start": 4000, "densities": [
+              0.0288, 0.0282, 0.0286, 0.0285, 0.0290, 0.0285, ...
+            ]
           }
         ],
-        "percentiles": {
-          "p75": 651
+        "percentilesTimeseries": {
+          "p75s": [
+            1362, 1352, 1344, 1356, 1366, 1377, ...
+          ]
         }
       }
     },
-    "collectionPeriod": {
-      "firstDate": {
-        "year": 2022,
-        "month": 9,
-        "day": 12
-      },
-      "lastDate": {
-        "year": 2022,
-        "month": 10,
-        "day": 9
+    "collectionPeriods": [{
+        "firstDate": { "year": 2022, "month": 7, "day": 10 },
+        "lastDate": { "year": 2022, "month": 8, "day": 6 }
+      }, {
+        "firstDate": { "year": 2022, "month": 7, "day": 17 },
+        "lastDate": { "year": 2022, "month": 8, "day": 13 }
+      }, {
+        "firstDate": { "year": 2022, "month": 7, "day": 24 },
+        "lastDate": { "year": 2022, "month": 8, "day": 20 }
+      }, {
+        "firstDate": { "year": 2022, "month": 7, "day": 31 },
+        "lastDate": { "year": 2022, "month": 8, "day": 27 }
+      }, {
+        "firstDate": { "year": 2022, "month": 8, "day": 7 },
+        "lastDate": { "year": 2022, "month": 9, "day": 3 }
+      }, {
+        "firstDate": { "year": 2022, "month": 8, "day": 14 },
+        "lastDate": { "year": 2022, "month": 9, "day": 10 }
+      }, {
+        ...
       }
-    }
+    ]
   }
 }
 ```
@@ -563,12 +500,12 @@ A `metric` is a set of user experience data for a single web performance metric,
 
 ```json
 {
-  "histogram": [
+  "histogramTimeseries": [
     {
       object (Bin)
     }
   ],
-  "percentiles": {
+  "percentilesTimeseries": {
     object (Percentiles)
   }
 }
@@ -586,14 +523,14 @@ A `metric` is a set of user experience data for a single web performance metric,
   </thead>
   <tbody>
     <tr>
-      <td><code translate="no" dir="ltr">histogram[]</code></td>
+      <td><code translate="no" dir="ltr">histogramTimeseries[]</code></td>
       <td>
         <p><strong><code class="apitype" translate="no" dir="ltr">object (<a href="#api-response-bin">Bin</a>)</code></strong></p>
-        <p>The histogram of user experiences for a metric. The histogram will have at least one bin and the densities of all bins will add up to ~1.</p>
+        <p>The timeseries histogram of user experiences for a metric. The timeseries histogram will have at least one bin and the densities of all bins will add up to ~1.</p>
       </td>
     </tr>
     <tr>
-      <td><code translate="no" dir="ltr">percentiles</code></td>
+      <td><code translate="no" dir="ltr">percentilesTimeseries</code></td>
       <td>
         <p><strong><code class="apitype" translate="no" dir="ltr">object (<a href="#api-response-percentiles">Percentiles</a>)</code></strong></p>
         <p>Common useful percentiles of the Metric. The value type for the percentiles will be the same as the value types given for the Histogram bins.</p>
@@ -612,7 +549,7 @@ A bin's start and end values are given in the value type of the metric it repres
 {
   "start": value,
   "end": value,
-  "density": number
+  "densities": [number, number, number...etc.]
 }
 ```
 
@@ -642,10 +579,10 @@ A bin's start and end values are given in the value type of the metric it repres
       </td>
     </tr>
     <tr>
-      <td><code translate="no" dir="ltr">density</code></td>
+      <td><code translate="no" dir="ltr">densities</code></td>
       <td>
-        <p><strong><code class="apitype" translate="no" dir="ltr">number</code></strong></p>
-        <p>The proportion of users that experienced this bin's value for the given metric.</p>
+        <p><strong><code class="apitype" translate="no" dir="ltr">array[number]</code></strong></p>
+        <p>A timeseries of the proportion of users that experienced this bin's value for the given metric.</p>
       </td>
     </tr>
   </tbody>
@@ -673,10 +610,10 @@ A bin's start and end values are given in the value type of the metric it repres
   </thead>
   <tbody>
     <tr id="Percentiles.FIELDS.p75">
-      <td><code translate="no" dir="ltr">p75</code></td>
+      <td><code translate="no" dir="ltr">p75s</code></td>
       <td>
-        <p><strong><code class="apitype" translate="no" dir="ltr">value (<a href="https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.Value">Value</a> format)</code></strong></p>
-        <p>75% of users experienced the given metric at or below this value.</p>
+        <p><strong><code class="apitype" translate="no" dir="ltr">array[value] (<a href="https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.Value">Value</a> format)</code></strong></p>
+        <p>Timeseries of the values that 75% of users experienced the given metric at or below this value.</p>
       </td>
     </tr>
   </tbody>
