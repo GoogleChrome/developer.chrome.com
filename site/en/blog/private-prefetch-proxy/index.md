@@ -83,7 +83,7 @@ From past experiments, we know that this feature typically results in less than 
 }]
 ```
 
-The `fraction` field gives you control over the prefetch traffic by specifying how much Private Prefetch Proxy should let through. The value is a float between 0.0 (no prefetch at all) and 1.0 (100% of the prefetch requests get through).
+The `fraction` field is a float between 0.0 (no prefetch at all) and 1.0 (100% of the prefetch requests get through).
 
 It is also possible to disable this completely with the following configuration:
 
