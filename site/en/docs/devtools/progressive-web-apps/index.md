@@ -61,6 +61,8 @@ to inspect it.
 - The **Protocol Handlers** section lets you to test the URL protocol handler registration of your PWA with a click of a button.
   To learn more, see [Test URL protocol handler registration](#test-protocol-handler).
 - The [**Icons** section](#icons) displays every icon that you've specified and lets you check their masks.
+- The [Shortcut #N](#shortcuts) set of sections displays information on all your shortcut objects.
+- The [Screenshot #N](#screenshot) set of section displays the screenshots for a richer installation UI of your app.
 
 In addition, if DevTools encounters an error, such as an icon that cannot be loaded, the **Manifest** pane displays an **Installability** section describing the error.
 
@@ -104,11 +106,23 @@ mobile, too.
 If you want to test out the genuine mobile experience, you can connect a real mobile device to
 DevTools via [remote debugging][6]. To trigger the installation on the connected mobile device, open the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Three-dot menu.", width="22", height="22" %} three-dot menu and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YwNSnnzuZ3dJwtVhcC4I.svg", alt="Install app.", width="24", height="24" %} **Install app**.
 
+### Inspect shortcuts {: #shortcut }
+
+[App shortcuts](https://web.dev/app-shortcuts/) let you to provide quick access to a handful of common actions that users need frequently.
+
+To inspect the shortcuts you defined in your [manifest file](https://web.dev/app-shortcuts/#define-app-shortcuts-in-the-web-app-manifest), scroll to the **Shortcut #N** sections of the **Manifest** pane.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/q3uzqiM5Psp7ggEAn3Y0.png", alt="Shortcut section in the Manifest pane.", width="800", height="452" %}
+
+{% Aside %}
+**Note**: This screenshot is taken from this [demo page](https://rowsie.app/). Inspect it for more examples.
+{% endAside%}
+
 ### Inspect screenshots for a richer installation UI {: #screenshot }
 
 When you add a description and a set of [screenshots to your manifest file](https://web.dev/add-manifest/#screenshots), your app gets a richer installation dialog.
 
-To inspect the screenshots, scroll to the bottom of the **Manifest** pane.
+To inspect the screenshots, scroll to the **Screenshot #N** sections of the **Manifest** pane.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/F6Z7McDxhXmSJZxqT1Yx.png", alt="The installation dialog and screenshots in the Manifest pane.", width="800", height="523" %}
 
