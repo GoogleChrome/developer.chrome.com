@@ -74,7 +74,7 @@ So, with that in mind, here is what we recommend:
 
 ### Traffic control {: #traffic }
 
-From past experiments, we know that this feature typically results in less than 2% extra requests for main resources (for example HTML documents). That said, if you are the cautious kind, you can use the traffic advice's fraction field to control how much Private Prefetch Proxy should let through. You can start with a small fraction such as 0.3 (that is, 30%), and gradually increase it to 1.0 (that is, 100%) by adding the following JSON to in an `/.well-known/traffic-advice` file, which needs to be served with `application/trafficadvice+json` MIME type:
+From past experiments, we know that this feature typically results in less than 2% extra requests for main resources (for example HTML documents). That said, if you are the cautious kind, you can use the traffic advice's fraction field to control how much traffic the Private Prefetch Proxy should let through. You can start with a small fraction such as 0.3 (that is, 30%), and gradually increase it to 1.0 (that is, 100%) by adding the following JSON to a `/.well-known/traffic-advice` file, which needs to be served with the `application/trafficadvice+json` MIME type:
 
 ```json
 [{
