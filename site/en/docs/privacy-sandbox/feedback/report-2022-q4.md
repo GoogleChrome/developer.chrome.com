@@ -186,7 +186,7 @@ To explain, the Topics API classification has two relevant components: (1) An ov
     <tr>
       <td>HTTP header retrieval</td>
       <td>Concern that there is not enough information regarding the HTTP header retrieval of topics</td>
-      <td>Work is in progress for headers and fetch(). We also have information available<a href="/docs/privacy-sandbox/topics/#use-a-header-to-access-topics"> here</a>. We have also<a href="https://github.com/GoogleChrome/developer.chrome.com/pull/4280"> added skipObservation information</a> to the explainer.</td>
+      <td>Work is in progress for headers and fetch(). We also have information available <a href="/docs/privacy-sandbox/topics/#use-a-header-to-access-topics">here</a>. We have also <a href="https://github.com/GoogleChrome/developer.chrome.com/pull/4280">added skipObservation information</a> to the explainer.</td>
     </tr>
     <tr>
       <td>Topics only aims to help advertisers, not users</td>
@@ -244,7 +244,7 @@ The W3C Technical Architecture Group has recently published its <a href="https:/
     <tr>
       <td>Not enough participants testing FLEDGE</td>
       <td>Request to encourage more companies to test FLEDGE, for example by improving the API's functionality and discouraging privacy-intrusive alternatives like fingerprinting</td>
-      <td>The Privacy Sandbox is proceeding in stages, in close partnership with the guidance of the CMA and ICO, and functional FLEDGE testing has demonstrated necessary stability and capability. Google continues to encourage the ecosystem to test the Sandbox APIs, recently publishing its "<a href="/docs/privacy-sandbox/maximize-ad-relevance/">Maximize Ad Relevanc</a>e</u>" documentation to showcase how FLEDGE and other APIs can help support critical use cases for the ad industry after third-party cookie deprecation. <br>
+      <td>The Privacy Sandbox is proceeding in stages, in close partnership with the guidance of the CMA and ICO, and functional FLEDGE testing has demonstrated necessary stability and capability. Google continues to encourage the ecosystem to test the Sandbox APIs, recently publishing its "<a href="/docs/privacy-sandbox/maximize-ad-relevance/">Maximize Ad Relevance</a>" documentation to showcase how FLEDGE and other APIs can help support critical use cases for the ad industry after third-party cookie deprecation. <br>
 <br>
 Other parts of the Privacy Sandbox already support mitigations to cover tracking (see UA-CH, IP Protection, and Bounce Tracking Mitigations) and will continue to improve over time. Google's goal is not to make FLEDGE the only viable targeting solution, but instead remains committed to working in partnership with industry and regulators to drive the best privacy-preserving ad technologies in the Chrome browser.</td>
     </tr>
@@ -315,7 +315,7 @@ We are planning to share integration guides with more details on how FLEDGE will
     <tr>
       <td>Visibility of bidding logic</td>
       <td>Concern that DSP bidding logic will be exposed in JavaScript</td>
-      <td>With the current design bidding logic JavaScript can be accessed by others, but we welcome<a href="https://github.com/WICG/turtledove/issues"> more feedback</a> as to why this could be a source of concern for DSPs.</td>
+      <td>With the current design bidding logic JavaScript can be accessed by others, but we welcome <a href="https://github.com/WICG/turtledove/issues">more feedback</a> as to why this could be a source of concern for DSPs.</td>
     </tr>
     <tr>
       <td>prebid.js</td>
@@ -433,7 +433,7 @@ We have shared this <a href="https://github.com/WICG/attribution-reporting-api/p
     <tr>
       <td>Reporting on mobile</td>
       <td>Will the report still be sent when Chrome is running in the background on mobile?</td>
-      <td>At the moment, even on mobile, the report will not be sent when Chrome is in the background. This is likely to change when the API integrates with Android Privacy Sandbox. See<a href="https://github.com/WICG/attribution-reporting-api/issues/579"> here</a>. Note that Android Privacy Sandbox is not part of the Commitments accepted by the CMA. </td>
+      <td>At the moment, even on mobile, the report will not be sent when Chrome is in the background. This is likely to change when the API integrates with Android Privacy Sandbox. See <a href="https://github.com/WICG/attribution-reporting-api/issues/579">here</a>. Note that Android Privacy Sandbox is not part of the Commitments accepted by the CMA. </td>
     </tr>
     <tr>
       <td>Data availability</td>
