@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Declare permissions"
 seoTitle: "Chrome Extensions Declare permissions"
 date: 2012-10-08
-updated: 2023-01-28
+updated: 2023-01-31
 description: An overview of the valid values for the permissions property in manifest.json.
 ---
 
