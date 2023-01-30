@@ -94,7 +94,7 @@ It is also possible to disable this completely with the following configuration:
 }]
 ```
 
-The `/.well-known/traffic-advice` file is not be checked for every private prefetch proxy request and will be cached as per the usual HTTP cache semantics. For more flexibility—for example, a sudden peak of heavy access—you may want to temporarily reject prefetch requests (`Sec-Purpose: prefetch;anonymous-client-ip`) with a 503 status code, and by setting the `Cache-Control: no-store` header on the response. You may also add the [`Retry-After`](https://tools.ietf.org/html/rfc7231#section-6.6.4) header to tell Chrome how long to wait before retrying prefetch requests.
+The `/.well-known/traffic-advice` file is fetched by the proxy, not the client, and cached at the proxy per the usual HTTP cache semantics. For more flexibility—for example, a sudden peak of heavy access—you may want to temporarily reject prefetch requests (`Sec-Purpose: prefetch;anonymous-client-ip`) with a 503 status code, and by setting the `Cache-Control: no-store` header on the response. You may also add the [`Retry-After`](https://tools.ietf.org/html/rfc7231#section-6.6.4) header to tell Chrome how long to wait before retrying prefetch requests.
 
 ## For referrer website owners {: #referrers }
 
