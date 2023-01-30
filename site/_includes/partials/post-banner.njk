@@ -4,6 +4,6 @@
       {% set material_url = helpers.findByUrl(collections.all, new_available_content_url, locale) %}
     {% endif %}
 
-    This content is outdated and no longer accurate. {% if material_url %}<a href={{ material_url.url }}>New material available</a>.{% endif %}
+    {{ 'i18n.common.outdated_banner.content' | i18n(locale) }} {% if material_url %}<a href={{ material_url.url }}>{{ 'i18n.common.outdated_banner.new_material' | i18n(locale) }}</a>.{% endif %}
   </div>
 </div>
