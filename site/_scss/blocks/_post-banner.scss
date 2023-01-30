@@ -1,13 +1,17 @@
 .post-banner {
-  --link-color: var(--color-red-darkest);
-  --link-visited-color: var(--color-red-darkest);
-  --link-rgb-background: var(--rgb-red-darkest);
-  background-color: var(color-red-solidLighter);
+  background-color: white;
   border-radius: 6px;
-  color: var(--color-red-darkest);
   margin-bottom: 30px;
-  padding: get-size(400);
   position: sticky;
   top: 24px;
   z-index: 9;
+
+  > div {
+    --link-color: var(--color-red-darkest);
+    --link-visited-color: var(--color-red-darkest);
+    --link-rgb-background: var(--rgb-red-darkest);
+    background-color: var(--color-red-lightest);
+    color: var(--color-red-darkest);
+    padding: get-size(400);
+  }
 }
