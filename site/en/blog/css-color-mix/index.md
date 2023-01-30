@@ -5,7 +5,7 @@ description: >
   Mix colors, in any of the supported color spaces, right from your CSS.
 subhead: >
   Mix colors, in any of the supported color spaces, right from your CSS.
-date: 2023-01-27
+date: 2023-01-30
 authors:
   - argyle
 tags:
