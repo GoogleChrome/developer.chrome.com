@@ -329,6 +329,9 @@ The following table lists the currently available permissions:
         many circumstances your extension will not need to declare the <code>"tabs"</code> permission to make use of
         these APIs.</td>
     </tr>
+    <tr id="offscreen">
+      <td><code>"offscreen"</code></td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/offscreen/"><code>chrome.offscreen</code></a> API, allowing developers to create off-screen documents to use DOM APIs without obtrusively opening new windows or tabs that interrupt the user experience. Offscreen documents do not have the same API access as the rest of the extension, but have access to the [`chrome.runtime`](/docs/extensions/reference/runtime/) messaging API to communicate with the service worker. 
     <tr id="topSites">
       <td><code>"topSites"</code></td>
       <td>Gives your extension access to the <a href="/docs/extensions/reference/topSites/">chrome.topSites</a> API.</td>

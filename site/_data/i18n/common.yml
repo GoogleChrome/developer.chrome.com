@@ -247,3 +247,9 @@ bug_report:
     en: about reporting a bug.
   report_cta:
     en: Report a bug.
+
+checkbox_group:
+  reset: 
+    en: Reset
+  select_all:
+    en: Select all

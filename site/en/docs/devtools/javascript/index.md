@@ -176,8 +176,8 @@ code that you want to pause on, use a line-of-code breakpoint:
     executed.
 3.  Click **Resume script execution**
     {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/lk63wTlzwXWuRIdSsKP4.png", alt="Resume Script Execution", width="26", height="20" %}. The
-    script continues executing until it reaches line 32. On lines 29, 30, and 31, DevTools prints
-    out the values of `addend1`, `addend2`, and `sum` to the right of each line's semi-colon.
+    script continues executing until it reaches line 32. On lines 29, 30, and 31, DevTools [shows
+    the values](/docs/devtools/javascript/reference/#inline-eval) of `addend1`, `addend2`, and `sum` inline next to their declarations.
 
 {% Img src="image/admin/99Omb7ALyJB7MfYpuqXp.png", alt="DevTools pauses on the line-of-code breakpoint on line 32.", width="800", height="571" %}
 
