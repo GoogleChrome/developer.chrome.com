@@ -134,10 +134,10 @@ color-mix(in xyz, blue, white);
 
 <figure>
   {% Img
-    src="image/vS06HQ1YTsbMKSFTIPl2iogUQP73/LGmJf3fecJ7jeeRPQJx1.png",
+    src="image/vS06HQ1YTsbMKSFTIPl2iogUQP73/aWCQ92ujrmxmaEqM5N2J.png",
     alt="7 color spaces (srgb, linear-srgb, lch, oklch, lab, oklab, xyz) each shown having different results. Many are pink or purple, few are actually still blue.",
     width="800",
-    height="647"
+    height="449"
   %}
 
   <figcaption><a href="https://codepen.io/web-dot-dev/pen/eYjKMVV">Try the demo</a></figcaption>
