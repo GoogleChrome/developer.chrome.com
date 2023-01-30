@@ -198,14 +198,14 @@ To see information on all service workers, click **See all registrations** at th
 The **Cache Storage** pane provides a read-only list of resources that have been cached using the
 (service worker) [Cache API][12].
 
-{% Img src="image/admin/KLqhHBwpNPFGTiv1kUTR.png", alt="service worker cache pane", width="800", height="421" %}
+{% Img src="image/admin/KLqhHBwpNPFGTiv1kUTR.png", alt="Service worker cache pane.", width="800", height="421" %}
 
 Note that the first time you open a cache and add a resource to it, DevTools might not detect the
 change. Reload the page and you should see the cache.
 
 If you've got two or more caches open, you'll see them listed below the **Cache Storage** drop-down.
 
-{% Img src="image/admin/mK84c0i8pMq3hPTXCNpv.png", alt="multiple service worker caches", width="800", height="206" %}
+{% Img src="image/admin/mK84c0i8pMq3hPTXCNpv.png", alt="Multiple service worker caches.", width="800", height="206" %}
 
 ## Quota usage {: #opaque-responses }
 
