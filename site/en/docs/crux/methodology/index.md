@@ -22,7 +22,7 @@ date: 2022-06-23
 
 # Optional
 # Include an updated date when you update your post
-updated: 2022-11-10
+updated: 2023-02-07
 
 # Optional
 # How to add a new author
@@ -137,7 +137,7 @@ The CrUX dataset is made available through a variety of tools maintained by Goog
 <td>Monthly <a href="#footnote-1"><sup>1</sup></a></td>
 <td>All metrics</td>
 <td>All dimensions</td>
-<td>Since 2017 <a href="#footnote-3"><sup>3</sup></a></td>
+<td>Since 2017 <a href="#footnote-5"><sup>5</sup></a></td>
 <td>Origin</td>
 </tr>
 <tr>
@@ -145,7 +145,7 @@ The CrUX dataset is made available through a variety of tools maintained by Goog
 <td>Monthly <a href="#footnote-1"><sup>1</sup></a></td>
 <td>All metrics</td>
 <td>No country dimension</td>
-<td>Since 2017 <a href="#footnote-3"><sup>3</sup></a></td>
+<td>Since 2017 <a href="#footnote-5"><sup>5</sup></a></td>
 <td>Origin</td>
 </tr>
 <tr>
@@ -154,6 +154,14 @@ The CrUX dataset is made available through a variety of tools maintained by Goog
 <td>Subset of key metrics  <a href="#footnote-4"><sup>4</sup></a></td>
 <td>No country dimension</td>
 <td>No</td>
+<td>Origin &amp; Page</td>
+</tr>
+<tr>
+<td><a href="#tool-crux-historical-api">CrUX Historial API</a></td>
+<td>Weekly <a href="#footnote-3"><sup>3</sup></a></td>
+<td>Subset of key metrics  <a href="#footnote-4"><sup>4</sup></a></td>
+<td>No country dimension</td>
+<td>Previous 25 weeks</td>
 <td>Origin &amp; Page</td>
 </tr>
 <tr>
@@ -178,7 +186,7 @@ The CrUX dataset is made available through a variety of tools maintained by Goog
 <td>Core web vitals</td>
 <td>No dimensions</td>
 <td>Three months</td>
-<td>Page Group <a href="#footnote-5"><sup>5</sup></a></td>
+<td>Page Group <a href="#footnote-6"><sup>6</sup></a></td>
 </tr>
 </tbody>
 </table></div>
@@ -186,9 +194,10 @@ The CrUX dataset is made available through a variety of tools maintained by Goog
 <p>
 <a id="footnote-1"><sup>1</sup></a> Monthly data is released on the second Tuesday after each monthly collection period. The last 28 days of each month period are included.<br>
 <a id="footnote-2"><sup>2</sup></a> 28-day rolling average data is updated daily, based on the aggregated data from the previous 28 days.<br>
-<a id="footnote-3"><sup>3</sup></a> Not all metrics are available in all monthly tables, see the <a href="/docs/crux/release-notes">release notes</a> for details.<br>
+<a id="footnote-3"><sup>3</sup></a> Weekly historical data is released every Monday, containing the previous 25-week collection periods. Each period covers a 28-day period from Sunday to Saturday.<br>
 <a id="footnote-4"><sup>4</sup></a> The web vital metrics are available in all tools.<br>
-<a id="footnote-5"><sup>5</sup></a> Search Console <a href="https://support.google.com/webmasters/answer/9205520#page_groups">groups URLs</a> that provide similar experiences, Core Web Vitals data are shown aggregated by these page groups.
+<a id="footnote-5"><sup>5</sup></a> Not all metrics are available in all monthly tables, see the <a href="/docs/crux/release-notes">release notes</a> for details.<br>
+<a id="footnote-6"><sup>6</sup></a> Search Console <a href="https://support.google.com/webmasters/answer/9205520#page_groups">groups URLs</a> that provide similar experiences, Core Web Vitals data are shown aggregated by these page groups.
 </p>
 
 The following sections briefly summarize each tool and how the data can be used.
@@ -215,11 +224,19 @@ The CrUX Dashboard does not support the country dimension, so all global data is
 
 The [CrUX API](/docs/crux/api/) provides programmatic access to CrUX data by page or origin, and can be further filtered by form factor, effective connection type and metrics.
 
-The API provides [Web Vitals](https://web.dev/vitals/) metrics both by origin and at page-level and the data is updated daily. The only values provided for metrics are calculated from the previous 28 days as a rolling window, no historical data is available via the API.
+The API provides [Web Vitals](https://web.dev/vitals/) metrics both by origin and at page-level and the data is updated daily. The only values provided for metrics are calculated from the previous 28 days as a rolling window. Historical data is available via [a separate API](#tool-crux-historical-api).
 
 The CrUX API returns more quickly than the [PageSpeed Insights API](#tool-psi-api) but does not include the additional [Lighthouse data](https://developers.google.com/search/blog/2018/11/pagespeed-insights-now-powered-by) provided by PageSpeed Insights.
 
-[Read more in the API documentation](/crux/docs/api/).
+[Read more in the API documentation](/docs/crux/api/).
+
+### CrUX Historical API {: #tool-crux-historical-api}
+
+The [CrUX Historical API](/docs/crux/historical-api/) provides programmatic access to CrUX historical data by page or origin, and can be further filtered by form factor, effective connection type and metrics.
+
+The API provides [Web Vitals](https://web.dev/vitals/) metrics both by origin and at page-level and the data is updated weekly. The only values provided for metrics are calculated from the past 25 weekly collection periods of 28 days as a rolling window.
+
+[Read more in the Hisorical API documentation](/docs/crux/historical-api/).
 
 ### PageSpeed Insights {: #tool-psi}
 

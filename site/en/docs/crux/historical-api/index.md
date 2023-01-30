@@ -94,7 +94,7 @@ If the identifier is set to URL with the value of `http://www.example.com/foo.ht
 
 Dimensions identify a specific group of data that a record is being aggregated against, for example a form factor of `PHONE` indicates that the record contains information about loads that took place on a mobile device.
 
-As the CrUX Historical API uses the same dimensions, you can reference [the as the daily CrUX API dimensions documentation](../crux/api/#dimensions) for more details.
+As the CrUX Historical API uses the same dimensions, you can reference [the daily CrUX API dimensions documentation](../api/#dimensions) for more details.
 
 ### Metric
 
@@ -145,7 +145,7 @@ Note: The values for each percentile are synthetically derived, it does not impl
 
 #### Metric value types
 
-As the CrUX Historical API uses the same metric value types, you can reference [the as the daily CrUX API dimensions documentation](../api/#metric-value-types) for more details.
+As the CrUX Historical API uses the same metric value types, you can reference [the daily CrUX API metric value types documentation](../api/#metric-value-types) for more details.
 
 ### Collection Periods
 
@@ -187,7 +187,6 @@ Queries are submitted as JSON objects via a POST request to `https://chromeuxrep
 Note the use of `queryHistoryRecord` replacing the `queryRecord` of the daily CrUX API.
 
 An example body is shown below:
-
 
 ```json
 {
@@ -273,74 +272,7 @@ The URL uses [gRPC Transcoding](https://google.aip.dev/127) syntax.
 
 ### Request body
 
-The request body should contain data with the following structure:
-
-```json
-{
-  "effectiveConnectionType": string,
-  "formFactor": enum (FormFactor),
-  "metrics": [
-    string
-  ],
-
-  // Union field url_pattern can be only one of the following:
-  "origin": string,
-  "url": string
-  // End of list of possible types for union field url_pattern.
-}
-```
-
-<table class="width-full with-heading-tint">
-  <colgroup>
-    <col width="25%">
-    <col>
-  </colgroup>
-  <thead>
-    <tr>
-      <th colspan="2">Fields</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code translate="no" dir="ltr">effectiveConnectionType</code></td>
-      <td>
-        <p><strong><code class="apitype" translate="no" dir="ltr">string</code></strong></p>
-        <p>The effective connection type is a query dimension that specifies the effective network class that the record's data should belong to. This field uses the values ["offline", "slow-2G", "2G", "3G", "4G"] as specified in: <a href="https://wicg.github.io/netinfo/#effective-connection-types">https://wicg.github.io/netinfo/#effective-connection-types</a></p><p>Note: If no effective connection type is specified, then a special record with aggregated data over all effective connection types will be returned.</p>
-      </td>
-    </tr>
-    <tr>
-      <td><code translate="no" dir="ltr">formFactor</code></td>
-      <td>
-        <p><strong><code class="apitype" translate="no" dir="ltr">enum (<a href="#form-factor">FormFactor</a></code>)</code></strong></p>
-        <p>The form factor is a query dimension that specifies the device class that the record's data should belong to.</p><p>Note: If no form factor is specified, then a special record with aggregated data over all form factors will be returned.</p>
-      </td>
-    </tr>
-    <tr>
-      <td><code translate="no" dir="ltr">metrics[]</code></td>
-      <td>
-        <p><strong><code class="apitype" translate="no" dir="ltr">string</code></strong></p>
-        <p>The metrics that should be included in the response. If none are specified then any metrics found will be returned.</p><p>Allowed values: ["first_contentful_paint", "first_input_delay", "largest_contentful_paint", "cumulative_layout_shift", "experimental_time_to_first_byte", "experimental_interaction_to_next_paint"]</p>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2">Union field <code translate="no" dir="ltr">url_<wbr>pattern</code>. The url pattern is the main identifier for a record lookup. It can be one of multiple types of values. <code translate="no" dir="ltr">url_<wbr>pattern</code> can be only one of the following:</td>
-    </tr>
-    <tr>
-      <td><code translate="no" dir="ltr">origin</code></td>
-      <td>
-        <p><strong><code class="apitype" translate="no" dir="ltr">string</code></strong></p>
-        <p>The url pattern "origin" refers to a url pattern that is the origin of a website.</p><p>Examples: "https://example.com", "https://cloud.google.com"</p>
-      </td>
-    </tr>
-    <tr>
-      <td><code translate="no" dir="ltr">url</code></td>
-      <td>
-        <p><strong><code class="apitype" translate="no" dir="ltr">string</code></strong></p>
-        <p>The url pattern "url" refers to a url pattern that is any arbitrary url.</p><p>Examples: "https://example.com/",  "https://cloud.google.com/why-google-cloud/"</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+As the CrUX Historical API uses the same request bodies, you can reference [the daily CrUX API request body documentation](../api/#request-body) for more details.
 
 For example, to request the desktop largest contentful paint values for the Chrome developer documentation homepage:
 
