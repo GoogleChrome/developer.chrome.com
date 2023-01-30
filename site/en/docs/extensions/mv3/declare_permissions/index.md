@@ -48,12 +48,12 @@ Here's an example of the permissions part of a manifest file:
   "unlimitedStorage"
 ],
 "host_permissions": [
-  "http://www.blogger.com/",
-  "http://*.google.com/"
+  "https://www.blogger.com/",
+  "https://*.google.com/"
 ],
 "optional_host_permissions": [
-  "http://www.blogger.com/",
-  "http://*.google.com/"
+  "https://*/*",
+  "http://*/*"
 ],
 ```
 
