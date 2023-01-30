@@ -92,7 +92,7 @@ a considered Chrome response.
       <td>(Also reported in Q3)<br>
 <br>
 Usefulness for different types of stakeholders</td>
-      <td>Concerns that the Privacy Sandbox technologies favor larger developers and that niche (smaller) sites contribute more than generic (larger) sites.</td>
+      <td>Concerns that the Privacy Sandbox technologies favor larger developers and that niche (smaller) sites contribute more than generic (larger) sites</td>
       <td>Our response is unchanged from Q3:<br>
 <br>
 <em>"Google has committed to the CMA to design and implement the Privacy Sandbox proposals in a way that does not distort competition by self-preferencing Google's own business, and to take into account impact on competition in digital advertising and on publishers and advertisers, regardless of their size. We continue to work closely with the CMA to ensure that our work complies with these commitments.</em><br>
@@ -104,7 +104,7 @@ Usefulness for different types of stakeholders</td>
     <tr>
       <td>(Also reported in Q3) <br>
 Documentation requests</td>
-      <td>Requests for more resources detailing how to manage testing, analysis, and implementation.</td>
+      <td>Requests for more resources detailing how to manage testing, analysis, and implementation</td>
       <td>Q4 Update:<br>
 <br>
 We appreciate that developers have found our current material helpful, and continue to be committed to providing more material so developers can understand how the new technologies can work for them. Over the past quarter, we added a "News & Updates" section to <a href="http://privacysandbox.com">privacysandbox.com</a> and published an extensive review of how the Privacy Sandbox can help drive ad relevance in the future.<br>
@@ -145,7 +145,7 @@ For clarity, Google has committed to apply the Privacy Sandbox technologies in t
   <tbody>
     <tr>
       <td>Impact on Google search ranking</td>
-      <td>Enquiry on whether a website's Topics API support will be used as a potential signal for Google Search results ranking.</td>
+      <td>Enquiry on whether a website's Topics API support will be used as a potential signal for Google Search results ranking</td>
       <td>Some websites may choose to opt-out of the Topics API. The Privacy Sandbox team has not coordinated or requested from the Search organization that they use page ranking as an incentive for websites to adopt the Topics API. Google has confirmed to the CMA that Google Search will not use a site's decision to opt-out from the Topics API as a ranking signal.</td>
     </tr>
     <tr>
@@ -173,20 +173,19 @@ Impact on first-party signals</td>
     </tr>
     <tr>
       <td>Topics regional classifier performance </td>
-      <td>Topics classifier performing poorly in regional domains.</td>
+      <td>Topics classifier performing poorly in regional domains</td>
       <td>Improvement to the classifier is an ongoing effort. Based on the feedback we have received, one possibility under consideration is to expand the Topics override list, which our analysis shows will increase global coverage and improve accuracy.<br>
 <br>
 To explain, the Topics API classification has two relevant components: (1) An override list containing the top 10k sites and their topics, and (2) an on-device ML model that classifies hostnames into topics. By expanding the override list (1), we can improve performance of classification for those regions in which the classifier may be performing poorly.</td>
     </tr>
     <tr>
       <td>One week epoch</td>
-      <td>The one week epoch<br>
- is too long for users looking to make shorter term decisions.</td>
+      <td>The one week epoch is too long for users looking to make shorter term decisions.</td>
       <td>We are actively looking at what the suitable length of epoch should be and we welcome<a href="http://github.com/patcg-individual-drafts/topics/issues/119"> further feedback</a> on what would be a better epoch for the ecosystem.</td>
     </tr>
     <tr>
       <td>HTTP header retrieval</td>
-      <td>Concern that there is not enough information regarding the HTTP header retrieval of topics.</td>
+      <td>Concern that there is not enough information regarding the HTTP header retrieval of topics</td>
       <td>Work is in progress for headers and fetch(). We also have information available<a href="/docs/privacy-sandbox/topics/#use-a-header-to-access-topics"> here</a>. We have also<a href="https://github.com/GoogleChrome/developer.chrome.com/pull/4280"> added skipObservation information</a> to the explainer.</td>
     </tr>
     <tr>
@@ -200,12 +199,12 @@ The W3C Technical Architecture Group has recently published its <a href="https:/
     </tr>
     <tr>
       <td>Data leakage</td>
-      <td>Concern that Topics may be leaked to other sites without permission.</td>
+      <td>Concern that Topics may be leaked to other sites without permission</td>
       <td>The design of the Topics API makes it quite unlikely that data from a single publisher (and even a smaller group of publishers) can be leaked in any way. Publisher websites are also in full control over the Topics API and they can prohibit access to this API via permission policy.</td>
     </tr>
     <tr>
       <td>Lack of advertisers for testing</td>
-      <td>Publishers are concerned that they currently are unable to demonstrate the value of Topics to advertisers</td>
+      <td>Publishers are concerned that they currently are unable to demonstrate the value of Topics to advertisers.</td>
       <td>In the second half of 2023, we plan to have all the ads related APIs available for integration testing and enable ecosystem analysis of the value of Topics for advertisers. Testing and publication of the results will be supervised by the CMA, which will review the data, analysis and methodology. The ecosystem is encouraged to share feedback with Google and the CMA.</td>
     </tr>
     <tr>
@@ -251,7 +250,7 @@ Other parts of the Privacy Sandbox already support mitigations to cover tracking
     </tr>
     <tr>
       <td>Machine learning use cases</td>
-      <td>More guidance on how machine learning use cases to train auction bidding algorithms will be supported in FLEDGE and Attribution Reporting.</td>
+      <td>More guidance on how machine learning use cases to train auction bidding algorithms will be supported in FLEDGE and Attribution Reporting</td>
       <td>We recognize the need to help testers find the most useful ways of applying the Privacy Sandbox technologies. We have begun to publish guidance specifically related to the use of the various aspects of the Privacy Sandbox APIs as inputs to machine learning. The most recent piece, "<a href="/docs/privacy-sandbox/maximize-ad-relevance/">Maximize Ad Relevance</a>", discusses how the ads industry can leverage these signals for machine learning, and we plan to continue publishing such guidance going forward.</td>
     </tr>
     <tr>
@@ -310,7 +309,7 @@ We are planning to share integration guides with more details on how FLEDGE will
     </tr>
     <tr>
       <td>Supporting multiple SSPs</td>
-      <td>How will multiple SSPs be supported in FLEDGE</td>
+      <td>How will multiple SSPs be supported in FLEDGE?</td>
       <td>FLEDGE supports multi-seller auctions as noted in this <a href="https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md#multi-sellerssp-auctions">proposal</a>.</td>
     </tr>
     <tr>
@@ -320,12 +319,12 @@ We are planning to share integration guides with more details on how FLEDGE will
     </tr>
     <tr>
       <td>prebid.js</td>
-      <td>What is the timeline in supporting prebid.js in FLEDGE</td>
+      <td>What is the timeline in supporting prebid.js in FLEDGE?</td>
       <td>Only versions 7.14 and later of Prebid.js support the FLEDGE module. Any publishers interested in testing must add the FLEDGE module and upgrade their Prebid instance.</td>
     </tr>
     <tr>
       <td>User defined functions in FLEDGE</td>
-      <td>How will user defined functions (UDF) be supported in FLEDGE? These are functions that can be programmed by end users to extend the functionality of the API </td>
+      <td>How will user defined functions (UDF) be supported in FLEDGE? These are functions that can be programmed by end users to extend the functionality of the API.</td>
       <td>Explainer available <a href="https://github.com/privacysandbox/fledge-docs/blob/main/key_value_service_trust_model.md#support-for-user-defined-functions-udfs">here</a>. This is still being fleshed out so we welcome <a href="https://github.com/WICG/turtledove/issues">additional feedback</a> on use cases.</td>
     </tr>
     <tr>
@@ -388,12 +387,12 @@ The constraint exists to prevent certain exploits by attackers, as explained <a 
     </tr>
     <tr>
       <td>Measuring conversion lift</td>
-      <td>How to measure conversion lift with AB testing on the same domain.</td>
+      <td>How to measure conversion lift with AB testing on the same domain</td>
       <td>Websites can measure conversion lift with A/B testing on the same domain through attribution reporting. They can encode their A/B parameters as keys using the aggregate API and then receive summary reports for the conversion values by those key buckets. </td>
     </tr>
     <tr>
       <td>(Also reported in Q3) Cross-domain conversions	</td>
-      <td>How to track the conversions that are cross domain, such as with 2 or more destinations?</td>
+      <td>How to track the conversions that are cross domain, such as with 2 or more destinations</td>
       <td>Q4 Update:<br>
 <br>
 We have <a href="https://github.com/WICG/attribution-reporting-api/issues/590">published a proposal</a> to remove the landing page destination restriction which enables cross domain conversations to be tracked. This proposal has been implemented.</td>
@@ -401,14 +400,14 @@ We have <a href="https://github.com/WICG/attribution-reporting-api/issues/590">p
     <tr>
       <td>(Also reported in Q3)<br>
 Expiry setting in conversion report	</td>
-      <td>Request to support report filter / expiry for less than 24 hours.</td>
+      <td>Request to support report filter / expiry for less than 24 hours</td>
       <td>Q4 Update:<br>
 <br>
 We have shared this <a href="https://github.com/WICG/attribution-reporting-api/pull/577">pull request </a>which will decouple expiry and reporting windows to mitigate the trade off of reporting delay vs conversion expiry. This is now launched in M110.</td>
     </tr>
     <tr>
       <td>Fraud and Abuse</td>
-      <td>Requests from advertisers and marketers to be able to slice and aggregate data based on publisher sites where their ads are served, which would also give more insight into potential fraudulent ad practices.</td>
+      <td>Requests from advertisers and marketers to be able to slice and aggregate data based on publisher sites where their ads are served, which would also give more insight into potential fraudulent ad practices</td>
       <td>This feedback is actively being discussed <a href="https://github.com/WICG/attribution-reporting-api/issues/583">here </a>and we welcome additional inputs.</td>
     </tr>
     <tr>
@@ -418,12 +417,12 @@ We have shared this <a href="https://github.com/WICG/attribution-reporting-api/p
     </tr>
     <tr>
       <td>Same reporting origin requirement</td>
-      <td>Request to remove requirement for source registration origin to be the same as the conversion registration origin.</td>
+      <td>Request to remove requirement for source registration origin to be the same as the conversion registration origin</td>
       <td>We propose using HTTP redirects to delegate registration to solve this use-case. We welcome <a href="https://github.com/WICG/attribution-reporting-api/issues">any additional feedback</a> on the new guidance. </td>
     </tr>
     <tr>
       <td>Conversion tracking</td>
-      <td>Need to differentiate whether the conversion happened before/after certain hours set by the advertiser.</td>
+      <td>Need to differentiate whether the conversion happened before/after certain hours set by the advertiser</td>
       <td>Attribution Reporting API supports setting an expiry window and priority for source attribution. By using both, it will technically be possible to attribute a conversion that happened within X days window separately from a conversion that happened after X.</td>
     </tr>
     <tr>
@@ -466,7 +465,7 @@ Second, on the difference between larger and smaller sites, Google recognizes th
     </tr>
     <tr>
       <td>Delay User-Agent Reduction until web ecosystem is more ready</td>
-      <td>Request to delay User-Agent Reduction rollout until Structured User Agents (SUA) is deployed.</td>
+      <td>Request to delay User-Agent Reduction rollout until Structured User Agents (SUA) is deployed</td>
       <td>The Google Ads team proposed the<a href="https://github.com/google/ads-privacy/tree/master/experiments/structured-ua"> Structured User-Agent addition</a> (see <a href="https://github.com/google/ads-privacy/blob/master/experiments/structured-ua/openrtb.md">specification</a>) to OpenRTB in October 2021 and it was incorporated in the 2.6 spec update released in April 2022.<br>
 <br>
 We have some evidence that SUA is deployed and available today, as demonstrated by the <a href="https://www.scientiamobile.com/using-structured-user-agent-from-real-time-bidding-for-device-detection/">Scientia Mobile blog post</a> demonstrating how to use UA-CH and the WURFL API to create a SUA.</td>
@@ -489,7 +488,7 @@ We have some evidence that SUA is deployed and available today, as demonstrated 
   <tbody>
     <tr>
       <td>Test UA-CH with other anti-covert tracking techniques</td>
-      <td>Guidance on how to test all Privacy Sandbox APIs and fingerprinting techniques proposed together in a holistic approach. </td>
+      <td>Guidance on how to test all Privacy Sandbox APIs and fingerprinting techniques proposed together in a holistic approach</td>
       <td>Our testing plan was designed in order to reflect the asynchronous timelines for developing some of the anti-fingerprinting measures as opposed to the rest of the Sandbox Proposals. It addresses the reality that some anti-fingerprinting measures (i.e. Privacy Budget, IP Protection and Bounce Tracking Mitigations) will be fully-developed and ready for launch to General Availability only after third-party cookie deprecation. <br>
 <br>
 While those anti-fingerprinting measures will not be included in quantitative tests, they will be subject to qualitative assessment based on the facts available at the time of Standstill.</td>
@@ -497,7 +496,7 @@ While those anti-fingerprinting measures will not be included in quantitative te
     <tr>
       <td>(Also reported in Q2) <br>
 Performance</td>
-      <td>Concerns about the latency of getting hints via Critical-CH (on the first page load).</td>
+      <td>Concerns about the latency of getting hints via Critical-CH (on the first page load)</td>
       <td>See dedicated UA-CH section below</td>
     </tr>
     <tr>
@@ -516,7 +515,7 @@ Google has proactively engaged with more than 100 site operators to obtain feedb
     </tr>
     <tr>
       <td>Chrome Platform Status</td>
-      <td>Requested that the <a href="https://chromestatus.com/feature/5995832180473856">chromestatus page</a> for UA-CH be updated.</td>
+      <td>Requested that the <a href="https://chromestatus.com/feature/5995832180473856">chromestatus page</a> for UA-CH be updated</td>
       <td>The chromestatus entry was updated on December 19 to "Mixed signals".</td>
     </tr>
   </tbody>
@@ -586,7 +585,7 @@ We are working with stakeholders to ensure that Chrome continues to support legi
   <tbody>
     <tr>
       <td>Clearer documentation</td>
-      <td>More examples so stakeholders can anticipate how things may be limited once Privacy Budget is implemented.</td>
+      <td>More examples so stakeholders can anticipate how things may be limited once Privacy Budget is implemented</td>
       <td>The <a href="https://github.com/mikewest/privacy-budget">Privacy Budget proposal</a> is still under active discussion and has not been implemented by any browsers. The earliest date of scaled availability represents the earliest date when Privacy Budget could be enforced. This will not happen before the removal of third-party cookies in 2024. We do not have any additional documentation to share at the moment.<br>
 <br>
 We will share additional details on the proposal when it becomes more finalized. In the meantime, we welcome stakeholders to <a href="https://github.com/mikewest/privacy-budget/issues">share any feedback</a> that would help in the development of the proposal.</td>
@@ -609,7 +608,7 @@ We will share additional details on the proposal when it becomes more finalized.
   <tbody>
     <tr>
       <td>(Also reported in Q3) Domain limit</td>
-      <td>Request to expand the number of associated domains.</td>
+      <td>Request to expand the number of associated domains</td>
       <td>Q4 Update:<br>
 <br>
 We have released FPS for local testing, including a mock set submission process on GitHub and a flag to test rSA and rSAFor locally. We have also hosted two open meetings for developers on FPS to continue to address questions around use cases for the associated subset. We encourage developers to test out FPS functionality to provide feedback on how the domain limit for the associated subset would impact the usability of FPS for their use cases. <br>
@@ -617,7 +616,7 @@ We have released FPS for local testing, including a mock set submission process 
 We have clarified in WICG calls that Chrome is committed to providing a usable solution that considers users' privacy interests as well. In that vein, we would <a href="https://github.com/WICG/first-party-sets/issues">appreciate feedback from the community</a> on specific use cases that may be impacted by the domain limit, so that the team can consider ways to address these use cases while continuing to protect user privacy.</td>
     </tr>
     <tr>
-      <td>Request for more details about the abuse mitigation measures.</td>
+      <td>Request for more details about the abuse mitigation measures</td>
       <td>What happens if a domain is added to a set they did not consent to?</td>
       <td>We have published submission guidelines for First-Party Sets<a href="https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md"> here</a> on December 2, 2022.<br>
 <br>
@@ -625,7 +624,7 @@ As explained in the submission guidelines, any set change management will be fol
     </tr>
     <tr>
       <td>Abuse mitigation</td>
-      <td>Concern that First-Party Set formations can be exploited.</td>
+      <td>Concern that First-Party Set formations can be exploited</td>
       <td>We are looking at ways to expand technical checks for subset types and are actively seeking additional input from the community <a href="https://github.com/WICG/first-party-sets/issues/95">here</a>.</td>
     </tr>
     <tr>
@@ -635,7 +634,7 @@ As explained in the submission guidelines, any set change management will be fol
     </tr>
     <tr>
       <td>(Also reported in Q3) Policy</td>
-      <td>Concern that FPS is not consistent with the CMA Commitments regarding "Applicable Data Protection Legislation," on the basis that GDPR does not impose a limit on the number of sites in a set while FPS envisages a limit of 3.	</td>
+      <td>Concern that FPS is not consistent with the CMA Commitments regarding "Applicable Data Protection Legislation," on the basis that GDPR does not impose a limit on the number of sites in a set while FPS envisages a limit of 3</td>
       <td>Our response is unchanged from Q3: <br>
 <br>
 <em>"Google is continuing to commit to the CMA to design and implement the Privacy Sandbox proposals in a way that does not distort competition by self-preferencing Google's own business, and to take into account impact on competition in digital advertising, publishers and advertisers as well as impact on privacy outcomes and compliance with data protection principles as set out in the Applicable Data Protection Legislation. The concern expressed does not disclose any incompatibility with GDPR. We continue to work closely with the CMA to ensure that our work complies with these commitments."</em></td>
@@ -704,7 +703,7 @@ Since this alternative was raised, Chrome has updated the <a href="https://githu
   <tbody>
     <tr>
       <td>Shared Storage for Ad Tech</td>
-      <td>Uncertainty surrounding the use of shared storage for Ad Tech use cases.</td>
+      <td>Uncertainty surrounding the use of shared storage for Ad Tech use cases</td>
       <td>Shared Storage and Private Aggregation API can be used for different kinds of measurement purposes that need cross-site storage measurement. Some examples are listed <a href="/docs/privacy-sandbox/shared-storage/#who-is-this-for">here</a>. <br>
 <br>
 We are foreseeing DSP and Measurement solution providers to be the main integrator for ads use cases.</td>
@@ -751,12 +750,12 @@ After <a href="https://github.com/privacycg/CHIPS/issues/51">discussions</a> on 
   <tbody>
     <tr>
       <td>IdP requires knowledge of RP to allow a session</td>
-      <td>Issue when a user is trying to log into the Feide IdP from two different RPs.</td>
+      <td>Issue when a user is trying to log into the Feide IdP from two different RPs</td>
       <td>We are discussing potential solutions to this issue<a href="https://github.com/fedidcg/FedCM/issues/377"> here</a>.</td>
     </tr>
     <tr>
       <td>Interoperability</td>
-      <td>Concerns regarding the impact of FedCM on the relationship between users and websites they log into using FedCM, and "interoperability" among websites.</td>
+      <td>Concerns regarding the impact of FedCM on the relationship between users and the websites they log into using FedCM, and "interoperability" among websites</td>
       <td>FedCM aims to continue supporting federated-identity services that currently rely on third-party cookies once third-party cookies are removed from Chrome. We expect that FedCM will be just one option available to such services; identity providers (IdPs) and relying parties (RPs) are free to use other technologies that may better suit their needs.<br>
 <br>
 It appears that concerns regarding the user-RP relationship and "interoperability" owe to a misunderstanding of the FedCM proposal. FedCM leaves it to IdPs to decide what information to share with an RP, and in what form, once the user has chosen to sign in to that RP's site. FedCM does not require IdPs to "create a unique pseudonymous identifier for each [RP] with whom the user authenticates." Rather, FedCM is open for each IdP to choose whether to share the user's actual identifier, a per-site version of that identifier, or some other version of this information. <br>
@@ -793,7 +792,7 @@ FedCM also already provides for user choice with respect to identity. For exampl
     </tr>
     <tr>
       <td>Server-side verification</td>
-      <td>Questions on whether Private State Tokens can be verified server side?</td>
+      <td>Questions on whether Private State Tokens can be verified server side</td>
       <td>Tokens are redeemed against the issuer, and then the issuer creates a redemption record that could contain the token itself or some signed value derived from the token, servers can use that redemption record to verify the authenticity of the token, and we expect different issuer ecosystems will come up with different standards for how to interpret their redemption records.</td>
     </tr>
   </tbody>
