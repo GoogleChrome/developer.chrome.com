@@ -364,6 +364,7 @@ of topics observed for the caller.
 
 Rather than use the Topics JavaScript API from an iframe, topics can be accessed and marked as 
 observed by using request and response headers:
+
 * Topics can be accessed from the `Sec-Browsing-Topics` header of a `fetch()` or `XHR` request. 
 * Topics that were provided in a request header can be marked as observed by setting a 
 `Observe-Browsing-Topics: ?1` header on the response to the request. The browser will then use those 
