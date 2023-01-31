@@ -85,7 +85,7 @@ of](https://lea.verou.me/2020/04/lch-colors-in-css-what-why-and-how/#:~:text=mos
 new color spaces provide unique tools and methods for managing and creating
 color systems. For example, before now we had HSL and its "lightness" channel,
 which was the best web developers had. Now in CSS, we have LCH's ["perceptual
-lightness](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance#light_and_luminance)."
+lightness](https://developer.mozilla.org/docs/Web/Accessibility/Understanding_Colors_and_Luminance#light_and_luminance)."
 
 <figure>
   {% Img
@@ -302,7 +302,7 @@ The following Codepen shows all the new and old color syntaxes together:
 Since the 2000s, you have been able to use the following for any CSS properties
 that accept a color as a value: hexadecimal (hex numbers), `rgb()`, `rgba()`, by
 name like `hotpink`, or with keywords like
-[`currentColor`](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#currentcolor_keyword).
+[`currentColor`](https://developer.mozilla.org/docs/Web/CSS/color_value#currentcolor_keyword).
 Around 2010, depending on your browser, CSS could use
 [`hsl()`](https://caniuse.com/mdn-css_types_color_hsl) colors. Then in 2017,
 [hex with alpha](https://caniuse.com/css-rrggbbaa) appeared. Last, only
