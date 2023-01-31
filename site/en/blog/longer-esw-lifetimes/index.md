@@ -6,6 +6,7 @@ description: >
 subhead: >
   Extension service workers can now stay alive as long as they're receiving events. This increases the reliability of extension services workers, but has a pitfall you should avoid.
 date: 2023-01-27
+updated: 2023-01-31
 authors:
   - joemedley
 tags:
@@ -35,9 +36,9 @@ Unfortunately, this behavior did not apply to extension events. Extension events
 
 ## What's changed
 
-As of Chrome 110, all events reset the lidle timer and the idle timeout will not occur if there are pending events. In other words, assuming there are no unexpected interruptions, extension service workers will now stay alive as long as they are actively processing events.
+As of Chrome 110, all events reset the lidle timer and the idle timeout will not occur if there are pending events. In other words, assuming there are no unexpected interruptions, extension service workers will now stay alive as long as they are actively processing events. However, if there are no events for five minutes the service worker will still terminate.
 
-While this change removes the five minute limit on extension service worker lifetimes, you are still strongly encouraged to design your extensions to be event-based and guard against unexpected termination. Not only should you refrain from keeping your extensions alive indefinitely (which we consider an anti-pattern), you should test your extensions to ensure that they're not doing this unintentionally.
+Because the service worker will still terminate after five minutes if there are no events, you are still strongly encouraged to design your extensions to be event-based and guard against unexpected termination. Not only should you refrain from keeping your extensions alive indefinitely (which we consider an anti-pattern), you should test your extensions to ensure that they're not doing this unintentionally.
 
 In a future release, we may change how specific events are processed to prevent keeping service workers alive indefinitely, but without shutting down long-running work. In the meantime, make sure your extensions yield when possible and prepare for termination by persisting extension states. 
 
