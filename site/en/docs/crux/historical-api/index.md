@@ -483,7 +483,7 @@ A `metric` is a set of user experience data for a single web performance metric,
       <td>
         <p><strong><code class="apitype" translate="no" dir="ltr">object (<a href="#api-response-bin">Bin</a>)</code></strong></p>
         <p>The timeseries histogram of user experiences for a metric. The timeseries histogram will have at least one bin and the densities of all bins will add up to ~1.</p>
-        <p>Missing values for that particular Collection Period will be marked as <code>null</code>.</p>
+        <p>Missing values for that particular Collection Period will be marked as <code>"NaN"</code>.</p>
       </td>
     </tr>
     <tr>
@@ -491,7 +491,7 @@ A `metric` is a set of user experience data for a single web performance metric,
       <td>
         <p><strong><code class="apitype" translate="no" dir="ltr">object (<a href="#api-response-percentiles">Percentiles</a>)</code></strong></p>
         <p>Common useful percentiles of the Metric. The value type for the percentiles will be the same as the value types given for the Histogram bins.</p>
-        <p>Missing values for that particular Collection Period will be marked as <code>"NaN"</code>.</p>
+        <p>Missing values for that particular Collection Period will be marked as <code>null</code>.</p>
       </td>
     </tr>
   </tbody>
