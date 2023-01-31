@@ -5,7 +5,7 @@ description: >
   CSS Color 4 brings wide gamut color tools and capabilities to the web: more colors, manipulation functions, and better gradients.
 subhead: >
   CSS Color 4 brings wide gamut color tools and capabilities to the web: more colors, manipulation functions, and better gradients.
-date: 2023-01-10
+date: 2023-02-01
 authors:
   - argyle
 tags:
@@ -15,27 +15,47 @@ alt: >
   A moment from The Wizard of Oz movie and half of it is in black and white and the other half is in color.
 ---
 
-For over 25 years, `sRGB` (standard red green blue) has been the only color
-gamut for CSS gradients and colors, with color space offerings within it like
-`rgb()`, `hsl` and hex. It is the most common color gamut capability amongst
-displays; a *lowest* common denominator.
+For [over 25 years](https://www.w3.org/Graphics/Color/sRGB.html), `sRGB`
+(standard red green blue) has been the only color
+[gamut](#what-is-a-color-gamut) for CSS gradients and colors, with color space
+offerings within it like `rgb()`, `hsl()` and hex. It is the most common color
+gamut capability amongst displays; a common denominator. We've grown [very
+accustomed to specifying colors within this
+gamut](https://almanac.httparchive.org/en/2022/css#colors).
 
-As displays become more capable of showing colors, CSS needs a way to access and
-specify colors from within these display capabilities or else it will be stuck
-in the 90s color ranges forever or forced to never match the wide gamut
-offerings found in images and video.
+<figure>
+  {% Img
+    src="image/vS06HQ1YTsbMKSFTIPl2iogUQP73/pweXqTmjCptfI3VrgaJO.png",
+    alt="The most popular color formats by percent of occurrences.",
+    width="800",
+    height="869"
+  %}
+
+  <figcaption>
+    <a href="https://almanac.httparchive.org/en/2022/css#colors">
+      https://almanac.httparchive.org/en/2022/css#colors
+    </a>
+  </figcaption>
+</figure>
+
+As displays become more capable of showing a wide range of colors, CSS needs a
+way to specify colors from within these wider ranges. The current color formats
+have no language for wide color ranges.
+
+If CSS never updated, it would be stuck in the 90s color ranges forever, forced
+never to match the wide gamut offerings found in images and video.
 [Trapped](https://www.youtube.com/watch?v=_z3Gpk5dbCk), only showing [30% of the
 colors the human eye can
-see](https://en.wikipedia.org/wiki/Wide-gamut_RGB_color_space), when modern
-alternatives offer 70% or more. We can now thank [Color Level
-4](https://www.w3.org/TR/css-color-4) for helping us escape this trap.
+see](https://en.wikipedia.org/wiki/Wide-gamut_RGB_color_space). Thank CSS [Color
+Level 4](https://www.w3.org/TR/css-color-4) for helping us escape this trap;
+written primarily by [Lea Verou](https://lea.verou.me) and [Chris
+Liley](https://svgees.us).
 
-Shipped in Chrome 110 is support for [CSS Color
-4](https://www.w3.org/TR/css-color-4/) gamuts and color spaces, joining Safari
-which has support for `display-p3` since 2016. CSS can now support HD (high
-definition) displays, specifying colors from HD gamuts and offering more color
-spaces which have specializations. This guide will explain how you can start to
-take advantage of this new world of color.
+From Chrome 111 is support for [CSS Color 4](https://www.w3.org/TR/css-color-4/)
+gamuts and color spaces, joining Safari who's had support for `display-p3` since
+2016. CSS can now support HD (high definition) displays, specifying colors from
+HD gamuts while also offering color spaces with specializations. This guide will
+explain how you can start to take advantage of this new world of color.
 
 <figure>
   {% Video
@@ -53,21 +73,21 @@ take advantage of this new world of color.
   </figcaption>
 </figure>
 
-In addition to more colors, [the most vivid colors the display is
+In supporting browsers, there's 50% more colors to pick from! You thought 16
+million colors sounded like a lot, wait until you see how many colors some of
+these new spaces can show. Also, think about all those gradients that
+[banded](#less-banding-thanks-to-16-bit-color) because there wasn't enough
+bit-depth, that's resolved too.
+
+**In addition** to more colors, [arguably the most vivid colors the display is
 capable
 of](https://lea.verou.me/2020/04/lch-colors-in-css-what-why-and-how/#:~:text=most%20vivid%20colors%20the%20screen%20can%20display),
-additional color spaces provide new tools and methods for managing and creating
-color systems. HSL has a "lightness" channel, which was the best web developers
-had in CSS, until LCH's "perceptual lightness."
-
-In the following example, `50%` lightness in HSL is compared to `50%` in LCH,
-across a series of hues. The gray next to each color swatch is the perceived
-lightness as defined in LCH. Notice how HSL is wildly inconsistent while LCH remains
-constant. This makes HSL a poor color space for doing contrast calculations or
-building dynamic color systems.
+new color spaces provide unique tools and methods for managing and creating
+color systems. For example, before now we had HSL and its "lightness" channel,
+which was the best web developers had. Now in CSS, we have LCH's ["perceptual
+lightness](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance#light_and_luminance)."
 
 <figure>
-
   {% Img
     src="image/vS06HQ1YTsbMKSFTIPl2iogUQP73/Z0sWXWnZBjyfIXEpIeJz.png",
     alt="Two tables of color are side by side. The first table shows an HSL
@@ -85,11 +105,12 @@ building dynamic color systems.
   </figcaption>
 </figure>
 
-In supporting browsers, there's 50% more colors to pick from! You thought 16
-million colors sounded like a lot, wait until you see how many colors some of
-these new spaces can show. Also, think about all those gradients that
-[banded](https://www.willgibbons.com/color-banding/) because there weren't
-enough colors in between your request, that's pacified too.
+Furthermore, gradients and mixing get some upgrades: color space support, hue
+interpolation options, and less banding. The following image shows some of the
+mixing upgrades. The top two color mixes are in sRGB. The bottom two color mixes
+are in display p3. Display p3 has more vivid color and the mixes result in
+complete black and white in the middle. Where sRGB looks a bit desaturated and
+the mixes in the middle aren't complete black or white results.
 
 <figure>
   {% Img
@@ -115,14 +136,14 @@ enable and support web developers to manage color.
 
 ## Overview
 
-The current problem with color and the web, is that the displays most folks have
-in their pockets, laps or mounted on walls are wide gamut, high definition color
-ready. CSS on the other hand, is not high definition ready, until now. The color
-capability of displays grew faster than CSS, now CSS is here to catch up.
+The problem with color and the web is that CSS is not high definition ready,
+while the displays most folks have in their pockets, laps or mounted on walls
+are wide gamut, high definition color ready. The color capability of displays
+grew faster than CSS, now CSS is here to catch up.
 
 There's much more than just "more colors" too. By the end of this article you'll
-be able to specify more colors, enhance gradients, pick the color space and
-color gamut for a task they excel at.
+be able to specify more colors, enhance gradients, and pick the best color
+spaces and color gamuts for each task.
 
 ### What is a color gamut?
 
@@ -144,8 +165,8 @@ vente coffee cup versus a grande; a name for the size can help people
 communicate. Learning these color gamut names helps you communicate and quickly
 understand a range of colors.
 
-This article will introduce you to 7 new gamuts, all with wider range than sRGB
-and each with its own quarks and features to assist you in a color task:
+This article will introduce you to seven new gamuts, all with wider range than
+sRGB, and describe their different features to help you choose which to use:
 
 - [sRGB](#srgb)
 - [RGB 98](#a98-rgb)
@@ -159,15 +180,43 @@ and each with its own quarks and features to assist you in a color task:
 Maybe you know which of these gamuts your laptop or TV offers?
 {% endAside %}
 
+### Human visual gamut
+
+Color gamuts are often compared against the human visual gamut; the entirety of
+color we believe the human eye can see. HVS is often portrayed with a
+[chromaticity diagram](https://en.wikipedia.org/wiki/Chromaticity), like this:
+
+<figure>
+  {% Img
+    src="image/vS06HQ1YTsbMKSFTIPl2iogUQP73/98CgP4ILYvc0vOVyw2bp.png",
+    alt="todo",
+    width="800",
+    height="804"
+  %}
+
+  <figcaption>
+    Source: <a href="https://en.wikipedia.org/wiki/Chromaticity">Wikipedia</a>
+  </figcaption>
+</figure>
+
+The outermost shape is what we can see as humans, and the inner triangle is the
+`rgb()` functions range, aka the sRGB color space.
+
+As you saw triangles above, comparing gamut sizes, so will you find triangles
+below. This is the industry's way of communicating about color gamuts and
+comparing them.
+
 ### What is a color space?
 
 Color spaces are arrangements of a gamut, establishing a shape and a method of
-accessing colors. Usually these are 3D shapes, like cubes or cylinders. This
-color arrangement determines which colors are next to each other and how
-accessing and interpolating colors will work.
+accessing colors. Many are simple 3D shapes like cubes or cylinders. This color
+arrangement determines which colors are next to each other, and how accessing
+and interpolating colors will work.
 
-RGB is a cube and colors are accessed by specifying 3 coordinates. HSL is a
-cylinder and colors are accessed via a hue angle and 2 coordinates.
+RGB is like a rectangular color space, where colors are accessed by specifying
+coordinates on 3 axes. HSL is a [cylindrical color
+space](https://en.wikipedia.org/wiki/Color_model#Cylindrical-coordinate_color_models),
+where colors are accessed with a hue angle and coordinates on 2 axes
 
 <figure>
   {% Img
@@ -182,8 +231,8 @@ cylinder and colors are accessed via a hue angle and 2 coordinates.
   </figcaption>
 </figure>
 
-The level 4 specification introduces 12 new color spaces for looking up colors
-from the 7 new gamuts shared previously:
+The [level 4](https://www.w3.org/TR/css-color-4/) specification introduces 12
+new color spaces for looking up colors from the 7 new gamuts shared previously:
 
 - [sRGB Linear](#linear-srgb)
 - [LCH](#lch)
@@ -212,13 +261,16 @@ Consider a color gamut as a total of particles and a color space as a bottle
 made to hold that range of particles.
 
 Here's an interactive visual of what I mean. Point, drag and zoom around in this
-demo of an RGB cube filled with color particles.
+demo of color spaces filled with color particles. Then change the color space,
+or color model as they call it in this demo, to see a visualization of other
+spaces.
 
-{% Codepen { user: 'web-dot-dev', id: 'gOjrLwm' } %}
+{% Codepen { user: 'meodai', id: 'zdgXJj' } %}
 
-Use color gamuts to talk about a range of colors, like low/narrow range gamut vs
-high/wide range gamut. Use color spaces to talk about arrangements of color,
-syntax used to grab a color, manipulate color and interpolate through color.
+- Use **color gamuts** to talk about a range of colors, like low range or narrow
+  gamut versus high range or wide gamut.
+- Use **color spaces** to talk about arrangements of color, syntax used to specify a
+  color, manipulate color and interpolate through color.
 
 <figure>
   {% Img
@@ -247,48 +299,44 @@ The following Codepen shows all the new and old color syntaxes together:
 
 ### A review of the classic color spaces
 
-Since the 2000's, CSS has been able to ask for color with hexadecimal (hex) and
-`rgb()`. Around 2010, depending on your browser, CSS could ask for color in
-[`hsl()`](https://caniuse.com/mdn-css_types_color_hsl). Then in 2017, [hex with
-alpha](https://caniuse.com/css-rrggbbaa) appeared. Last, only recently,
-[`hwb()`](https://caniuse.com/mdn-css_types_color_hwb) started getting support
-in browsers. **All of these color spaces reference color within the same gamut,
-sRGB.**
+Since the 2000s, you have been able to use the following for any CSS properties
+that accept a color as a value: hexadecimal (hex numbers), `rgb()`, `rgba()`, by
+name like `hotpink`, or with keywords like
+[`currentColor`](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#currentcolor_keyword).
+Around 2010, depending on your browser, CSS could use
+[`hsl()`](https://caniuse.com/mdn-css_types_color_hsl) colors. Then in 2017,
+[hex with alpha](https://caniuse.com/css-rrggbbaa) appeared. Last, only
+recently, [`hwb()`](https://caniuse.com/mdn-css_types_color_hwb) started getting
+support in browsers.
+
+**All of these classic color spaces reference color within the same gamut, sRGB.**
 
 #### HEX
 
-{% Aside %}
-Colors are in the `sRGB Gamut`; 35.9% of the visible spectrum.
-{% endAside %}
-
-<!-- {% BrowserCompat 'css.types.color.rgb_hexadecimal_notation' %} -->
+{% BrowserCompat 'css.types.color.rgb_hexadecimal_notation' %}
 
 The hex colorspace specifies R, G, B and A with
-[hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal). The following code
-examples show all the ways this syntax can specify red, green and blue plus
+[hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal) numbers. The following
+code examples show all the ways this syntax can specify red, green and blue plus
 opacity.
 
 ```css
 .valid-css-hex-colors {
   /* classic */
   --3-digits: #49b;
-  --6-digits: #4095bf;
+  --6-digits: #4499bb;
 
   /* hex with opacity */
   --4-digits-opaque: #f9bf;
-  --8-digits-opaque: #4095bfff;
+  --8-digits-opaque: #ff99bbff;
   --4-digits-with-opacity: #49b8;
-  --8-digits-with-opacity: #4095bf80;
+  --8-digits-with-opacity: #4499bb88;
 }
 ```
 
 #### RGB
 
-{% Aside %}
-Colors are in the `sRGB Gamut`; 35.9% of the visible spectrum.
-{% endAside %}
-
-<!-- {% BrowserCompat 'css.types.color.rgb' %} -->
+{% BrowserCompat 'css.types.color.rgb' %}
 
 The RGB color space features direct access to the red, green and blue channels.
 It allows specifying an amount between 0 and 255 or as a percentage 0 to 100.
@@ -317,22 +365,16 @@ forward, commas are no longer required.
 
 #### HSL
 
-{% Aside %}
-Colors are in the `sRGB Gamut`; 35.9% of the visible spectrum.
-{% endAside %}
-
-<!-- {% BrowserCompat 'css.types.color.hsl' %} -->
+{% BrowserCompat 'css.types.color.hsl' %}
 
 One of the first color spaces to orient itself towards human language and
 communication, HSL (hue saturation and lightness) offers all the colors in the
 sRGB gamut while not requiring your brain to know how red, green and blue
-interact. Like RGB, it also originally required commas in the syntax, but moving
+interact. Like RGB, it also originally had commas in the syntax, but moving
 forward, commas are no longer required.
 
 ```css
 .valid-css-hsl-colors {
-
-
   --classic: hsl(200deg, 50%, 50%);
   --modern: hsl(200 50% 50%);
 
@@ -350,11 +392,7 @@ forward, commas are no longer required.
 
 #### HWB
 
-{% Aside %}
-Colors are in the `sRGB Gamut`; 35.9% of the visible spectrum.
-{% endAside %}
-
-<!-- {% BrowserCompat 'css.types.color.hwb' %} -->
+{% BrowserCompat 'css.types.color.hwb' %}
 
 Another sRGB gamut color space oriented at how humans describe color is HWB
 (hue, whiteness, blackness). Authors can choose a hue and mix in white or black
@@ -376,10 +414,9 @@ to find their desired color.
 
 ### Meet the new web color spaces
 
-Except for `sRGB` and `sRGB-linear`, the following color spaces offer access to
-larger gamuts than sRGB. The display-p3 color space offers almost twice as many
-colors as RGB while Rec2020 offers almost twice as many as display-p3. **That's a
-lot of colors!**
+The following color spaces offer access to larger gamuts than sRGB. The
+display-p3 color space offers almost twice as many colors as RGB, while Rec2020
+offers almost twice as many as display-p3. **That's a lot of colors!**
 
 {% Img
   src="image/vS06HQ1YTsbMKSFTIPl2iogUQP73/BsVdm6fsHO8B0mBgkHQF.png",
@@ -391,26 +428,24 @@ lot of colors!**
 
 #### The `color()` function
 
-{% Aside %}
-Colors can be in the `sRGB Gamut`, `Display P3 Gamut`, `Rec2020 Gamut`; Up to 77.6% of the visible spectrum.
-{% endAside %}
+{% BrowserCompat 'css.types.color.color' %}
 
-<!-- {% BrowserCompat 'css.types.color.color' %} -->
-
-Consider this function a [higher order
-function](https://en.wikipedia.org/wiki/Higher-order_function) for any color
-spaces that specify colors with R, G and B channels; **exclusively a function
-for RGB**.
+The new
 [`color()`](https://developer.mozilla.org/docs/Web/CSS/color_value/color)
-takes a color space parameter first, then a series of channel values for RGB and
-optionally some alpha.
+function can be used for any color space that specifies colors with R, G and B
+channels. `color()` takes a color space parameter first, then a series of
+channel values for RGB and optionally some alpha.
+
+You'll find many of the new color spaces use this function because having
+specialized functions like `rgb`, `srgb`, `hsl`, `hwb`, etc, was growing to a
+long list, easier to have the colorspace be a parameter.
 
 **Pros**
 - A normalized space for accessing color spaces that use RGB channels.
 - Can scale up to any wide gamut RGB based color space.
 
 **Cons**
-- Only useful for RGB color spaces.
+- Doesn't work with HSL, HWB, LCH, okLCH, or okLAB
 
 ```css
 .valid-css-color-function-colors {
@@ -424,11 +459,10 @@ optionally some alpha.
 }
 ```
 
-#### sRGB
+{% Aside %} Colors can be in the `sRGB Gamut`, `Display P3 Gamut`, or `Rec2020
+Gamut`; Up to 77.6% of the visible spectrum. {% endAside %}
 
-{% Aside %}
-Colors are in the `sRGB Gamut`; 35.9% of the visible spectrum.
-{% endAside %}
+#### sRGB via color()
 
 {% Img
   src="image/vS06HQ1YTsbMKSFTIPl2iogUQP73/NHdpkEy65TGd5G0dAljh.png",
@@ -447,8 +481,9 @@ decimals between 0 and 1, used exactly like 0% to 100%.
 
 **Cons**
 
-- Not perceptually linear
-- Gradients often go through a dead zone (to be covered later in this article).
+- Not perceptually linear (like [`lch()`](#lch) is)
+- No wide gamut colors.
+- Gradients often go through a [dead zone](#specifying-more-gradient-stops-to-avoid-the-dead-zone).
 
 ```css
 .valid-css-srgb-colors {
@@ -464,11 +499,7 @@ decimals between 0 and 1, used exactly like 0% to 100%.
 }
 ```
 
-#### Linear sRGB
-
-{% Aside %}
-Colors are in the `sRGB Gamut`; 35.9% of the visible spectrum.
-{% endAside %}
+#### Linear sRGB via color()
 
 {% Img
   src="image/vS06HQ1YTsbMKSFTIPl2iogUQP73/NHdpkEy65TGd5G0dAljh.png",
@@ -502,29 +533,36 @@ This linear alternative to RGB offers predictable channel intensity.
 }
 ```
 
+[Gradients](#gradients-in-different-color-spaces) are discussed in detail later,
+but quickly it's meaningful to see a `srgb` and `linear-srgb` black to white
+gradient to illustrate their differences:
+
+{% Img
+  src="image/vS06HQ1YTsbMKSFTIPl2iogUQP73/PvIHdmmtnO9qoYmRrXKP.png",
+  alt="Two horizontal gradients shown in two rows for easy comparison. The sRGB gradient is smooth, as we've seen for many years. The sRGB-linear gradient though is very dark in the first 5% and very light at the last 10%, making the middle very light gray for a long time.",
+  width="800",
+  height="146"
+%}
+
 #### LCH
 
-{% Aside %}
-Colors are in the `CIE Gamut`; 100% of the visible spectrum.
-{% endAside %}
-
-<!-- {% BrowserCompat 'css.types.color.lch' %} -->
+{% BrowserCompat 'css.types.color.lch' %}
 
 The first space of this post to introduce syntax for accessing colors outside
 the RGB gamut! It is also the first to make it very easy to create out of gamut
-color. This is because any CIE space color is capable of representing the entire
-human visible color spectrum, while a display likely is not capable.
+color for a display. This is because **any CIE space colors (lch, oklch, lab,
+oklab) are capable of representing the entire human visible color spectrum**.
 
 [This colorspace is modeled after human
 vision](https://en.wikipedia.org/wiki/CIE_1931_chromaticity_diagram) and offers
-syntax to specify any of those colors. The LCH channels are lightness, chroma
-and hue. Hue being an angle, like in HSL and HWB. Lightness is a value between 0
-and 100, but not like HSL's lightness, it's a special human centric lightness
-called perceptually linear. Chroma is like an amount of color; can range from 0
-to 230 but is also technically unbounded.
+syntax to specify any of those colors and more. The LCH channels are lightness,
+chroma and hue. Hue being an angle, like in HSL and HWB. Lightness is a value
+between 0 and 100, but not like HSL's lightness, it's a special, “perceptually
+linear”, human-centric lightness. Chroma is similar to saturation; can range
+from 0 to 230 but is also technically unbounded.
 
 **Pros**
-- Predictable color manipulation thanks to being perceptually linear, mostly (see okLCH).
+- Predictable color manipulation thanks to being perceptually linear, mostly (see [oklch](#oklch)).
 - Uses familiar channels.
 - Often has vibrant gradients.
 
@@ -554,17 +592,13 @@ exceed a display's gamut. Be careful with high chroma `C` values.
 
 #### LAB
 
-{% Aside %}
-Colors are in the `CIE Gamut`; 100% of the visible spectrum.
-{% endAside %}
-
-<!-- {% BrowserCompat 'css.types.color.lab' %} -->
+{% BrowserCompat 'css.types.color.lab' %}
 
 Another color space made to access the CIE gamut, again with a perceptually
-linear lightness (L) feature. The A and B in LAB represent the unique colors of
-human vision: red, green, blue and yellow. When A is given a positive value it
-adds red, and adds green when it's below 0. When B is given a positive number it
-adds yellow, where negative values are toward blue.
+linear lightness (L) dimension. The A and B in LAB represent the unique axes of
+human color vision: red-green, and blue-yellow. When A is given a positive value
+it adds red, and adds green when it's below 0. When B is given a positive number
+it adds yellow, where negative values are toward blue.
 
 **Pros**
 - Perceptually consistent gradients.
@@ -590,16 +624,13 @@ adds yellow, where negative values are toward blue.
 
 #### OKLCH
 
-{% Aside %}
-Colors are in the `CIE Gamut`; 100% of the visible spectrum.
-{% endAside %}
+{% BrowserCompat 'css.types.color.oklch' %}
 
-<!-- {% BrowserCompat 'css.types.color.oklch' %} -->
+This color space is [corrective](https://bottosson.github.io/posts/oklab/) to
+LCH. And like LCH, (L) continues to represent perceptually linear lightness, C
+for chroma and the H for hue.
 
-This color space, like `oklab`, is corrective to LCH and LAB's [rough
-edges](https://bottosson.github.io/posts/oklab/). The (L) continues to represent
-perceptually linear lightness, while the C is for chroma and the H is for hue
-which accepts an angle. This space feels fairly familiar if you've worked with
+This space feels familiar if you've worked with
 HSL or LCH. Pick an angle on the color wheel for H, choose a lightness or
 darkness amount by adjusting L, but then we have chroma instead of saturation.
 They're fairly identical except that adjustments to lightness and chroma tend to
@@ -611,7 +642,7 @@ outside of a target gamut.
 - Perceptually linear lightness.
 - Uses familiar channels.
 - High dynamic range.
-- Has a modern color picker - by Evil Martians.
+- Has a modern [color picker](https://oklch.evilmartians.io) - by Evil Martians.
 
 **Cons**
 - Easy to go out of gamut.
@@ -635,19 +666,14 @@ outside of a target gamut.
 
 #### OKLAB
 
-{% Aside %}
-Colors are in the `CIE Gamut`; 100% of the visible spectrum.
-{% endAside %}
+{% BrowserCompat 'css.types.color.oklab' %}
 
-<!-- {% BrowserCompat 'css.types.color.oklab' %} -->
-
-[New since 2020](https://bottosson.github.io/posts/oklab/), `oklab` is a
-corrective colorspace modeled after LAB but without adjustments for areas where
-it was performing poorly. It's claimed as a space optimized for image processing
-quality, which for us in CSS means gradients and color function manipulation
-quality.
+This space is [corrective](https://bottosson.github.io/posts/oklab/) to LAB.
+It's claimed as a space optimized for image processing quality also, which for
+us in CSS means gradients and color function manipulation quality.
 
 **Pros**
+- **Default space for animations and interpolations.**
 - Perceptually linear lightness.
 - No hue shift like LAB.
 - Perceptually consistent gradients.
@@ -672,11 +698,7 @@ quality.
 
 #### Display P3
 
-{% Aside %}
-Colors are in the `Display P3 Gamut`; 45.5% of the visible spectrum.
-{% endAside %}
-
-<!-- {% BrowserCompat 'css.types.color.color' %} -->
+{% BrowserCompat 'css.types.color.color' %}
 
 {% Img
   src="image/vS06HQ1YTsbMKSFTIPl2iogUQP73/IbvUXdmGexli8BzWT6BQ.png",
@@ -685,6 +707,10 @@ Colors are in the `Display P3 Gamut`; 45.5% of the visible spectrum.
   width="800",
   height="648"
 %}
+
+{% Aside %}
+Colors are in the `Display P3 Gamut`; 45.5% of the visible spectrum.
+{% endAside %}
 
 The display P3 gamut and color space have become popular since Apple supported
 them since 2015 on their iMac. Apple also supported display-p3 [in web pages via
@@ -695,10 +721,10 @@ space to begin working within as you move styles to a higher dynamic range.
 **Pros**
 - Great support, considered the baseline for HDR displays.
 - 50% more colors than sRGB.
-- Safari makes a great color picker.
+- DevTools offer a great color picker.
 
 **Cons**
-- Will eventually be replaced by Rec2020 and CIE spaces.
+- Will eventually be surpassed by Rec2020 and CIE spaces.
 
 ```css
 .valid-css-display-p3-colors {
@@ -716,11 +742,7 @@ space to begin working within as you move styles to a higher dynamic range.
 
 #### Rec2020
 
-{% Aside %}
-Colors are in the `Rec2020 Gamut`; 77.6% of the visible spectrum.
-{% endAside %}
-
-<!-- {% BrowserCompat 'css.types.color.color' %} -->
+{% BrowserCompat 'css.types.color.color' %}
 
 {% Img
   src="image/vS06HQ1YTsbMKSFTIPl2iogUQP73/gPrHRZsrH3CALon2PjhF.png",
@@ -730,16 +752,20 @@ Colors are in the `Rec2020 Gamut`; 77.6% of the visible spectrum.
   height="648"
 %}
 
+{% Aside %}
+Colors are in the `Rec2020 Gamut`; 77.6% of the visible spectrum.
+{% endAside %}
+
 Rec2020 is part of the movement to UHDTV (ultra-high-definition television),
 providing a wide range of colors for use in 4k and 8k media. Rec2020 is another
-RGB based gamut, larger than display-p3, but not nearly as common for someone to
-own for personal use.
+RGB based gamut, larger than display-p3, but not nearly as common amongst
+consumers as Display P3.
 
 **Pros**
 - Ultra HD colors.
 
 **Cons**
-- Not as common among households (yet).
+- Not as common among consumers (yet).
 - Not commonly found in handhelds or tablets.
 
 ```css
@@ -758,11 +784,7 @@ own for personal use.
 
 #### A98 RGB
 
-{% Aside %}
-Colors are in the `RGB 98 Gamut`; 52.1% of the visible spectrum.
-{% endAside %}
-
-<!-- {% BrowserCompat 'css.types.color.color' %} -->
+{% BrowserCompat 'css.types.color.color' %}
 
 {% Img
   src="image/vS06HQ1YTsbMKSFTIPl2iogUQP73/9z2v7IsWm5KsPwm0xsZf.png",
@@ -772,6 +794,10 @@ Colors are in the `RGB 98 Gamut`; 52.1% of the visible spectrum.
   height="648"
 %}
 
+{% Aside %}
+Colors are in the `RGB 98 Gamut`; 52.1% of the visible spectrum.
+{% endAside %}
+
 Short for Adobe 1998 RGB, A98 RGB was created by Adobe to feature most of the
 colors achievable from CMYK printers. It offers more colors than sRGB, notably
 in the cyan and green hues.
@@ -780,8 +806,8 @@ in the cyan and green hues.
 - Larger than the sRGB and Display P3 color spaces.
 
 **Cons**
-- Not a common space worked within by web designers.
-- Not many folks porting palettes from CMYK.
+- Not a common space worked within by digital designers.
+- Not many folks are porting palettes from CMYK.
 
 ```css
 .valid-css-a98-rgb-colors {
@@ -799,11 +825,7 @@ in the cyan and green hues.
 
 #### ProPhoto RGB
 
-{% Aside %}
-Colors are in the `ProPhoto Gamut`; 90% of the visible spectrum.
-{% endAside %}
-
-<!-- {% BrowserCompat 'css.types.color.color' %} -->
+{% BrowserCompat 'css.types.color.color' %}
 
 {% Img
   src="image/vS06HQ1YTsbMKSFTIPl2iogUQP73/y5WlpdsjCVAjFgep3cT1.png",
@@ -813,19 +835,24 @@ Colors are in the `ProPhoto Gamut`; 90% of the visible spectrum.
   height="648"
 %}
 
+{% Aside %}
+Colors are in the `ProPhoto Gamut`; 90% of the visible spectrum.
+{% endAside %}
+
 Created by Kodak, this wide gamut space uniquely offers ultra wide range primary
-colors and features minimal hue shifts when changing lightness. It also claims
-to cover 100% of [real-world surface
+colors and features minimal [hue shifts](#gradients-in-different-color-spaces)
+when changing lightness. It also claims to cover 100% of [real-world surface
 colors](https://en.wikipedia.org/wiki/Munsell_color_system) as documented by
-Michael Pointer in
-1980.
+Michael Pointer in 1980.
 
 **Pros**
 - Minimal hue shifts when changing lightness.
 - Vibrant primary colors.
 
 **Cons**
-- Around 13% of its colors offered are imaginary, meaning they're not within the human visible spectrum.
+- Around 13% of its colors offered are
+  [imaginary](https://en.wikipedia.org/wiki/Imaginary_color), meaning they're
+  not within the human visible spectrum.
 
 ```css
 .valid-css-prophoto-rgb-colors {
@@ -843,26 +870,34 @@ Michael Pointer in
 
 #### XYZ, XYZ-d50, XYZ-d65
 
+{% BrowserCompat 'css.types.color.color' %}
+
 {% Aside %}
 Colors are in the `HVS Gamut`; 100% of the human visible spectrum (HVS).
 {% endAside %}
 
-<!-- {% BrowserCompat 'css.types.color.color' %} -->
-
-The CIE XYZ color space encompasses all color sensations that are visible to a
-person with average eyesight. This is why it is used as a standard reference for
-other color spaces. Y is luminance, X and Z are possible chromas within the
-given Y luminance.
+The CIE XYZ color space encompasses all colors that are visible to a person with
+average eyesight. This is why it is used as a standard reference for other color
+spaces. Y is luminance, X and Z are possible chromas within the given Y
+luminance.
 
 The difference between d50 and d65 is the white point, where d50 uses the d50
 white points and d65 uses the d65 white point.
+
+{% Aside 'key-term' %}
+**White point** is an attribute of a color space, it's where
+true white exists within the space. For electronic screens, D65 is the most
+common white point, and it's short for 6500 kelvin. It's important in color
+conversion that white points match so color temperature (warmness or coolness)
+aren't affected.
+{% endAside %}
 
 **Pros**
 - Linear-light access has handy use cases.
 - Great for physical color mixing.
 
 **Cons**
-- Not perceptually uniform.
+- Not perceptually linear like lch, oklch, lab and oklab are.
 
 ```css
 .valid-css-xyz-colors {
@@ -908,7 +943,7 @@ white points and d65 uses the d65 white point.
 
 #### Custom color spaces
 
-<!-- {% BrowserCompat 'css.at-rules.color-profile' %} -->
+{% BrowserCompat 'css.at-rules.color-profile' %}
 
 [The CSS Color 5 specification](https://www.w3.org/TR/css-color-5) also has a
 path for teaching the browser a [custom color
@@ -939,7 +974,7 @@ ending color, where the browser is expected to interpolate between them.
 Interpolate in this case means to generate a series of in-between colors to
 create a smooth transition instead of an instant one.
 
-With a gradient, the interpolation is a series of colors along a size. With
+With a gradient, the interpolation is a series of colors along a shape. With
 animation it's a series of colors over time.
 
 ```css
@@ -970,30 +1005,68 @@ options for interpolation. Transitioning a color `in hsl` from blue to white
 results in something very different from sRGB.
 
 ```css
-.new-gradient-feature {
+.classic-gradient-in-srgb {
+  background: linear-gradient(to right, blue, white);
+}
+
+.new-gradient-in-hsl {
   background: linear-gradient(in hsl to right, blue, white);
 }
 ```
 
 {% Codepen { user: 'web-dot-dev', id: 'YzjqNVe' } %}
 
+{% Details %}
+{% DetailsSummary %}
+Can't see the Codepen demo?
+{% endDetailsSummary %}
+
+{% Img
+  src="image/vS06HQ1YTsbMKSFTIPl2iogUQP73/7aRb6MxvTDoPAhRgdti4.png",
+  alt="sRGB gradient shown above an HSL gradient.",
+  width="800",
+  height="353"
+%}
+
+{% endDetails %}
+
 Then what happens if you transition from a color in one space to a color in a
 completely different space:
 
 ```css
 .gradient {
+  /* oklab will be the common space */
   background: linear-gradient(to right, lch(29.6 131 301), hsl(330 100% 50%));
+}
+
+.lch {
+  /* lch is specified */
+  background: linear-gradient(in lch to right, lch(29.6 131 301), hsl(330 100% 50%));
 }
 ```
 
 {% Codepen { user: 'web-dot-dev', id: 'jOpqymg' } %}
 
+{% Details %}
+{% DetailsSummary %}
+Can't see the Codepen demo?
+{% endDetailsSummary %}
+
+{% Img
+  src="image/vS06HQ1YTsbMKSFTIPl2iogUQP73/e4SQjXRDA6etavCPe2fN.png",
+  alt="okLAB gradient shown above an LCH gradient.",
+  width="800",
+  height="348"
+%}
+
+{% endDetails %}
+
 Luckily for you, the [Color 4](https://www.w3.org/TR/css-color-4/#interpolation)
 specification has instructions for the browsers on how to handle these cross
-color space interpolations. In the above case, browsers should look at the first
-color's color space for the gradient's color space. This is called the [host
-syntax](https://www.w3.org/TR/css-color-4/#host-syntax), the first color becomes
-the host and its syntax determines the space.
+color space interpolations. In the above case for `.gradient`, browsers should
+look at the first color's color space for the gradient's color space. This is
+called the [host syntax](https://www.w3.org/TR/css-color-4/#host-syntax), the
+first color becomes the host and its syntax determines the space.
 
 ##### Less banding thanks to 16-bit color
 
