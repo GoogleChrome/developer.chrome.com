@@ -1063,21 +1063,30 @@ Can't see the Codepen demo?
 
 Luckily for you, the [Color 4](https://www.w3.org/TR/css-color-4/#interpolation)
 specification has instructions for the browsers on how to handle these cross
-color space interpolations. In the above case for `.gradient`, browsers should
-look at the first color's color space for the gradient's color space. This is
-called the [host syntax](https://www.w3.org/TR/css-color-4/#host-syntax), the
-first color becomes the host and its syntax determines the space.
+color space interpolations. In the above case for `.gradient`, browsers will
+notice the differentiating color spaces and use the default color space `oklab`.
+You may think the browser would use lch as the color space, since that's the
+first color, but it doesn't and that's why I show a second comparison gradient
+`.lch`. The `.lch` gradfient is a gradient from the lch color space.
 
 ##### Less banding thanks to 16-bit color
 
-Until now in Chrome, all colors were saved in 8-bit memory, but in order to
-support HD color these needed to be upgraded to 16-bit. This increases the
-amount of color information that can be stored, which has a nice side effect of
-meaning there's more colors for the browser to use in a gradient.
+Before this color work, all colors were saved in **one 32-bit integer** to
+represent all four channels; red, green, blue and alpha. This is 8-bits per
+channel and 2^ 24 possible colors (ignoring alpha). 2 ^ 24 = 16,777,216,
+"millions of colors."
 
-Gradient banding is when there aren't enough colors to create the illusion of a
-gradient, where "strips" of color become visible. Banding is heavily mitigated
-with the upgrade to more color information now available to the browser engine.
+After this color work, **four 16-bit floating point values**, each channel has
+its own float instead of being lumped together. This is 64-bits of data total,
+resulting in many more than millions of colors.
+
+This work is required to support HD color. This increases the amount of color
+information that can be stored, which has a nice side effect of meaning there's
+more colors for the browser to use in a gradient.
+
+Gradient banding is when there aren't enough colors to create a smooth gradient
+and "strips" of color become visible. Banding is heavily mitigated with the
+upgrade to higher resolution color.
 
 <figure>
   {% Img
@@ -1101,7 +1110,7 @@ where there are two points in an HSL color cylinder. A gradient acquires its
 color steps by traveling along the line between the two points.
 
 ```css
-linear-gradient(#94E99C, #E06242)
+linear-gradient(to right, #94e99c, #e06242)
 ```
 
 <figure>
@@ -1130,7 +1139,8 @@ the mock demonstration showed.
 The middle area of the gradient has lost its vibrance though. This is because
 the most vibrant colors are at the edge of the color space shape, not in the
 center where the interpolation traveled near. This is commonly referred to as
-the "dead zone." There are a few ways to fix or work around this.
+the "[dead zone](#specifying-more-gradient-stops-to-avoid-the-dead-zone)." There
+are a few ways to fix or work around this.
 
 ##### Specifying more gradient stops to avoid the dead zone
 
@@ -1191,7 +1201,7 @@ The gradient will by default take the
 you specify for it to take the
 [`longer`](https://www.w3.org/TR/css-color-4/#hue-longer) route. Hue
 interpolation options direct the angle rotation, like telling someone to turn
-left instead of right:
+left instead of right (heh, Zoolander):
 
 {% Img
   src="image/vS06HQ1YTsbMKSFTIPl2iogUQP73/V0JdsZ7r3nOUiUlytR5K.png",
@@ -1247,15 +1257,33 @@ different; consider this as four new tricks just went into your color toolbelt.
 #### Gradients in different color spaces
 
 Each color space, given its unique shape and color arrangement, will result in a
-different gradient!
+different gradient. Look at the examples below, especially at "blue to white."
+Look at how each color space handles that differently. Notice how many go purple
+in the middle, that's called a "hue shift" during interpolation.
 
 {% Codepen { user: 'web-dot-dev', id: 'JjBXEQL' } %}
 
+{% Details %}
+{% DetailsSummary %}
+Can't see the Codepen demo?
+{% endDetailsSummary %}
+
+{% Img
+  src="image/vS06HQ1YTsbMKSFTIPl2iogUQP73/BPT6axkakdhpfIAhHdqH.png",
+  alt="Screenshot of the blue to white gradient set.",
+  width="800",
+  height="371"
+%}
+
+Image shown is only 1 of many examples from the Codepen. It's worth trying
+Canary or Safari Tech Preview to see these for yourself.
+
+{% endDetails %}
+
 Some gradients in these spaces will be more vibrant than others or travel less
-through [dead
-zones](https://docs.google.com/document/d/1pMnudZk0NYDKiXnd81Mr_wq5td_EyBge2MYGfZGArDQ/edit?pli=1#heading=h.7026o5wx1px3).
+through [dead zones](#specifying-more-gradient-stops-to-avoid-the-dead-zone).
 Spaces like `lab` pack colors together in a way optimized for saturation, as
-opposed to spaces optimized for humans to write color in like `hwb()`.
+opposed to spaces optimized for humans to write color in like [`hwb()`](#hwb).
 
 ```css
 .hwb {
@@ -1269,10 +1297,10 @@ opposed to spaces optimized for humans to write color in like `hwb()`.
 {% Codepen { user: 'web-dot-dev', id: 'bGjpgXN' } %}
 
 The above demo, while subtle in the results, does show more consistent
-interpolation with LAB. The syntax of LAB isn't simple to read though, there's
-negative numbers that are very unfamiliar when coming from RGB or HSL. Good
-news, we can use HWB for a familiar syntax but ask for the gradient to be
-interpolated entirely within another color space, like OKLAB.
+interpolation with lab. The syntax of lab isn't simple to read though, there's
+negative numbers that are very unfamiliar when coming from rgb or hsl. Good
+news, we can use hwb for a familiar syntax but ask for the gradient to be
+interpolated entirely within another color space, like oklab.
 
 ```css
 .hwb {
@@ -1285,10 +1313,24 @@ interpolated entirely within another color space, like OKLAB.
 
 {% Codepen { user: 'web-dot-dev', id: 'rNrejXw' } %}
 
-This example uses the same colors in HWB but specifies the color space for
-interpolation to either HWB or OKLAB. HWB is a great colorspace for high
+{% Details %}
+{% DetailsSummary %}
+Can't see the Codepen demo?
+{% endDetailsSummary %}
+
+{% Img
+  src="image/vS06HQ1YTsbMKSFTIPl2iogUQP73/qITTXXZiNV2BFNwvqQTF.png",
+  alt="Two vibrant gradients stacked to help see a comparison. The hwb gradient is slightly more vibrant.",
+  width="800",
+  height="360"
+%}
+
+{% endDetails %}
+
+This example uses the same colors in hwb but specifies the color space for
+interpolation to either hwb or oklab. `hwb` is a great colorspace for high
 vibrance but possible dead zones or bright spots (see the cyan hot spot in the
-top example). OKLAB is great for perceptually linear gradients that stay
+top example). oklab is great for perceptually linear gradients that stay
 saturated. This feature is a lot of fun as you can try on a few different color
 spaces to see which gradient you like best.
 
@@ -1298,7 +1340,21 @@ to white is different in each color space!
 
 {% Codepen { user: 'web-dot-dev', id: 'JjBXEQL' } %}
 
-### Gamut mapping vs gamut clamping
+{% Details %}
+{% DetailsSummary %}
+Can't see the Codepen demo?
+{% endDetailsSummary %}
+
+{% Img
+  src="image/vS06HQ1YTsbMKSFTIPl2iogUQP73/NwwHyul0DeV52gMWkVkE.png",
+  alt="Each color space showing how it interpolates from black to white, each with a different result.",
+  width="800",
+  height="384"
+%}
+
+{% endDetails %}
+
+### Gamut clamping
 
 There exist scenarios where a color may ask for something outside of a gamut.
 Consider the following color:
@@ -1308,37 +1364,10 @@ rgb(300 255 255)
 ```
 
 The maximum for a color channel in the `rgb` color space is `255`, but here
-`300` was specified for red. What happens?
+`300` was specified for red. What happens? Gamut clamping.
 
-In this case, gamut clamping will occur. Clamping is when extra information is
-simply removed. `300` will become `255` internally to the color engine. The
-color has been clamped within its space.
-
-The example there was easy to understand I hope, extra information that was
-impossible to represent was just removed. But, consider this color:
-
-```css
-lch(50% 500 200deg)
-```
-
-This is asking for a 50% light blue that's super saturated at `500`, the chroma
-is double or triple what may be considered normal. In LCH this is ok, the chroma
-is unbounded, and this color very well may exist in Rec2020 or larger color
-spaces. If the color was clamped though, there's a likely chance that the hue
-would shift and there'd be actual fidelity loss to the color. This is where
-gamut mapping comes in.
-
-Gamut mapping doesn't remove the extra color information with a delete button,
-it adjusts the color to fit into a color space, attempting to maintain as much
-of the original intent of the color as possible. Almost like the color is
-squished into the space instead of cutoff (gamut clamping).
-
-The [CSS Color 4](https://www.w3.org/TR/css-color-4/#gamut-mapping)
-specification outlines how gamut mapping and clipping should occur. If you're
-interested in this topic, that specification holds many great details for you to
-study. For now, assume the browsers will align on behavior so your colors are
-mapped the same everywhere, and you can trust there's interoperability and
-consistency.
+Clamping is when extra information is simply removed. `300` will become `255`
+internally to the color engine. The color has now been clamped within its space.
 
 ### Choosing a color space
 
@@ -1347,16 +1376,19 @@ overwhelmed and want to know which "one" to choose. From my studies and
 experience, I don't see one color space as the single one for all my tasks. Each
 has moments when they produce the desired outcome.
 
-If there was one best space, then there wouldn't be so many new spaces being
-introduced.
+**If there was one best space, then there wouldn't be so many new spaces being
+introduced.**
 
 However, I can say that the CIE spaces—`lab`, `oklab`, `lch` and `oklch`—are my
 starting places. If the outcome of them isn't what I'm looking for, then I'll go
-test other spaces.
+test other spaces. For mixing colors and creating gradients, I agree with the
+default spec choice of `oklab`. For color systems and overall UI colors, I like
+`oklch`.
 
 Here are a couple articles where folks have shared their updated color
 strategies given these new color spaces and features. For example, Andrey Sitnik
-has gone all in on OKLCH, maybe they'll convince you to do the same:
+has gone all in on `oklch`, maybe they'll convince you to do the same:
+
 
 1. [OKLCH in CSS: why we moved from RGB and
    HSL](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl) by
@@ -1364,6 +1396,8 @@ has gone all in on OKLCH, maybe they'll convince you to do the same:
 1. [Color
    Formats](https://www.joshwcomeau.com/css/color-formats/#picking-the-right-color-format)
    by [Josh W. Comeau](https://www.joshwcomeau.com/)
+1. [OK, OKLCH](https://chriscoyier.net/2023/01/22/ok-oklch-%f0%9f%91%91/) by
+   [Chris Coyier](https://twitter.com/chriscoyier)
 
 ## Migrating to HD CSS color
 
@@ -1397,10 +1431,13 @@ cons:
 **Graceful degradation**
 - Pros
   - The simplest route.
-  - The browser will gamut map or clamp to sRGB if not a wide gamut display, therefore the responsibility is on the browser.
+  - The browser will gamut map or clamp to sRGB if not a wide gamut display,
+    therefore the responsibility is on the browser.
 - Cons
   - The browser may gamut clamp or gamut map to a color you don't love.
-  - The browser may not understand the color request and fail entirely. However this can be mitigated by specifying the color twice, letting the cascade fallback to the previous color it does understand.
+  - The browser may not understand the color request and fail entirely. However
+    this can be mitigated by specifying the color twice, letting the cascade
+    fallback to the previous color it does understand.
 
 **Progressive enhancement**
 - Pros
@@ -1429,7 +1466,7 @@ The least specific support inquiry is the
 [`dynamic-range`](https://developer.mozilla.org/docs/Web/CSS/@media/dynamic-range)
 media query:
 
-<!-- {% BrowserCompat 'css.at-rules.media.dynamic-range' %} -->
+{% BrowserCompat 'css.at-rules.media.dynamic-range' %}
 
 ```css
 @media (dynamic-range: high) {
@@ -1441,7 +1478,7 @@ Approximate, or more, support can be inquired with the
 [`color-gamut`](https://developer.mozilla.org/docs/Web/CSS/@media/color-gamut)
 media query:
 
-<!-- {% BrowserCompat 'css.at-rules.media.color-gamut' %} -->
+{% BrowserCompat 'css.at-rules.media.color-gamut' %}
 
 ```css
 @media (color-gamut: srgb) {
@@ -1467,7 +1504,7 @@ For JavaScript, the
 [`window.matchMedia()`](https://developer.mozilla.org/docs/Web/API/Window/matchMedia)
 function can be called and passed a media query for evaluation.
 
-<!-- {% BrowserCompat 'api.Window.matchMedia' %} -->
+{% BrowserCompat 'api.Window.matchMedia' %}
 
 ```js
 const hasHighDynamicRange = window
@@ -1495,7 +1532,7 @@ of color spaces to work with.
 Individual color space support can be inquired using an
 [`@supports`](https://developer.mozilla.org/docs/Web/CSS/@supports) query:
 
-<!-- {% BrowserCompat 'css.at-rules.supports' %} -->
+{% BrowserCompat 'css.at-rules.supports' %}
 
 ```css
 @supports (background: rgb(0 0 0)) {
@@ -1520,7 +1557,7 @@ For JavaScript, the
 function can be called and passed a property and value pair to see if the
 browser understands.
 
-<!-- {% BrowserCompat 'api.CSS.supports' %} -->
+{% BrowserCompat 'api.CSS.supports' %}
 
 ```js
 CSS.supports('background: rgb(0 0 0)')
@@ -1553,13 +1590,74 @@ This is often what I use when progressively enhancing colors to high definition:
 }
 ```
 
+### Debugging color with Chrome DevTools
+
+Chrome DevTools is updated and equipped with new tools to help developers
+create, convert and debug HD color.
+
+#### Updated color picker
+
+The color picker now supports all the new color spaces. Allowing authors to
+interact with channel values just as they would have.
+
+{% Img
+  src="image/vS06HQ1YTsbMKSFTIPl2iogUQP73/lh6eKhje44rLm7URDMOY.png",
+  alt="DevTools showing display-p3 color support.",
+  width="800",
+  height="549"
+%}
+
+#### Gamut boundaries
+
+A gamut boundary line has also been added, drawing a line between srgb and
+display-p3 gamuts. Making it clear which gamut the selected color is within.
+
+{% Img
+  src="image/vS06HQ1YTsbMKSFTIPl2iogUQP73/cjcNsmixiDf1FxBjUAsM.png",
+  alt="DevTools showing a gamut line in the color picker.",
+  width="800",
+  height="532"
+%}
+
+This helps authors visually differentiate between HD colors and non-HD colors.
+It's especially helpful when working with the `color()` function and the new
+color spaces because they're capable of producing both non-HD and HD colors. If
+you want to check which gamut your color is in, pop up the color picker and see!
+
+#### Converting colors
+
+DevTools has been able to convert colors between supported formats like hsl,
+hwb, rgb and hex for many years. `shift + click` on a square color swatch in the
+Styles pane to perform this conversion. The new color tools don't just cycle
+through conversions, they yield a popup where authors can see and pick the
+conversion they want.
+
+{% Video
+  src="video/vS06HQ1YTsbMKSFTIPl2iogUQP73/wsWrvMTPYM0a5tmNdzlQ.mp4",
+  controls="true",
+  loop="true",
+  muted="true"
+%}
+
+When converting, it's important to know if the conversion was clipped to fit the
+space. DevTools now have a warning icon to the converted color that alerts you
+to this clipping.
+
+{% Img
+  src="image/vS06HQ1YTsbMKSFTIPl2iogUQP73/gKaBwo9xmgtONghzOdZr.png",
+  alt="DevTools informing your conversion about gamut clipping with a warning icon next to the color.",
+  width="800",
+  height="204"
+%}
+
 ## Conclusion
 
-Color spaces on the web are in early days but I believe we'll see an increase in
-usage from designers and developers over time. Knowing which color space to
-build a design system on, for example, is a strong tool to be in a creator
-toolbelt. Each color space offers a unique feature and reason it was added to
-the CSS specification, and it is ok to start small with these and add as needed.
+Non-sRGB color spaces on the web are in their early days but I believe we'll see
+an increase in usage from designers and developers over time. Knowing which
+color space to build a design system on, for example, is a strong tool to be in
+a creators toolbelt. Each color space offers unique features and a reason it was
+added to the CSS specification, and it is ok to start small with these and add
+as needed.
 
 Enjoy playing with these new color toys! More vibrance, consistent manipulations
 and interpolations and overall deliver a more colorful experience to your users.
