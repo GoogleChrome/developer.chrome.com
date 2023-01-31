@@ -17,21 +17,21 @@ tags:
 
 [Blockbench](https://www.blockbench.net/) is a free, modern model editor for low-poly models with pixel art textures. If you have ever played [Minecraft](https://www.minecraft.net/), chances are you have seen assets that were created with Blockbench, for example the goat, which was added to Minecraft as part of the Caves and Cliffs Update, Part 1. The GPL version 3 licensed Blockbench code is [open source](https://github.com/JannisX11/blockbench) and maintained by a friendly community of developers.
 
-{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/3NK0qVqDGnG7hTpaZpUS.png", alt="ALT_TEXT_HERE", width="800", height="426" %}
+{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/3NK0qVqDGnG7hTpaZpUS.png", alt="Minecraft sheep designed with Blockbench.", width="800", height="426" %}
 
 To try Blockbench, launch the app by navigating to [web.blockbench.net](https://web.blockbench.net/). As a PWA, you can install it to your desktop and launch it in a standalone window. If you are new to 3D modeling, you can start with one of the many [open source `.bbmodel` examples](https://github.com/search?q=path%3A*.bbmodel&type=code) you can find on GitHub (login required). For example, try the train model that you can see in the following screenshot.
 
-{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/hE98H7sZPBvB8iTwnLlm.png", alt="ALT_TEXT_HERE", width="800", height="557" %}
+{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/hE98H7sZPBvB8iTwnLlm.png", alt="Editing a train model in Blockbench.", width="800", height="557" %}
 
 ## The EyeDropper API
 
 Among many other features, Blockbench offers a paint feature, so if you ever wanted to tag a train, now you can. Please don't do this in the real world. You can see that for my tagging, I used a bright orange.
 
-{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/aECYxTYC8RZHglK31nFz.png", alt="ALT_TEXT_HERE", width="800", height="595" %}
+{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/aECYxTYC8RZHglK31nFz.png", alt="The tag 'Tom was here' and a peace sign written on the train model.", width="800", height="595" %}
 
 This is actually an orange that I have extracted directly from the [macOS Ventura wallpaper](https://9to5mac.com/2022/10/05/macos-13-ventura-wallpaper-download-it-right-here/) through the [EyeDropper API](https://developer.mozilla.org/docs/Web/API/EyeDropper_API). As you can see in the following screenshot, the eye dropper (the orange circle left of the app window) can reach outside of the application straight into my desktop, or any other app that I may have open.
 
-{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/YqL7rf4OUgnlROPugFuy.png", alt="ALT_TEXT_HERE", width="800", height="426" %}
+{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/YqL7rf4OUgnlROPugFuy.png", alt="Color picker shown reaching out of the Blockbench app and picking a color from the desktop background image.", width="800", height="426" %}
 
 With Blockbench being open source, you can learn how the developers have implemented the API. The code in question is in [`JannisX11/blockbench/blob/master/js/texturing/color.js`](https://github.com/JannisX11/blockbench/blob/35ced3b3d094ffbf3f2b9548e82bc31c27e0cd05/js/texturing/color.js#L1034-L1049). Blockbench is also available as an Electron.js app. You can see from the comment, it has special case handling for an [issue in Electron](https://github.com/electron/electron/issues/27980), where the color picker can't pick color outside of the window. With the web API, which you can see in the highlighted part of the code snippet, this is not an issue. Using the API is straightforward. Instantiate a new [`EyeDropper`](https://developer.mozilla.org/docs/Web/API/EyeDropper) instance and call its [`open()`](https://developer.mozilla.org/docs/Web/API/EyeDropper/open) method. This method resolves with an `sRGBHex` string representing the selected color, in [hexadecimal sRGB format](https://developer.mozilla.org/docs/Web/CSS/hex-color).
 
