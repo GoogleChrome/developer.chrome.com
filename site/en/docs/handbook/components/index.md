@@ -744,7 +744,7 @@ Use `web-tabs` component to display information in a form of horizontal tabs.
 Attribute `title` becomes the title of the corresponding tab panel.
 
 ````html
-<web-tabs>
+<web-tabs data-unresolved>
   <web-tab title="Tab 1 (html)">
     <p>I'm content of Tab 1</p>
   </web-tab>
@@ -772,7 +772,7 @@ const hello = 'world';
 </web-tabs>
 ````
 
-<web-tabs>
+<web-tabs data-unresolved>
   <web-tab title="Tab 1 (html)">
     <p>I'm content of Tab 1</p>
   </web-tab>

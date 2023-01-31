@@ -10,7 +10,7 @@
   {{ icon('video', {id: 'videoIcon', hidden:true}) }}
 </div>
 
-<web-tabs class="events-list">
+<web-tabs class="events-list" data-unresolved>
   <web-tab title="{{ 'i18n.events.upcoming_events' | i18n(locale) }}">
     <div id="upcoming-events"
          class="display-grid grid-cols-1 grid-gap-400"

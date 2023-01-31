@@ -4,7 +4,7 @@ api: storage
 
 ## Overview {: #overview }
 
-The Storage API provides an extension-specific way to persist user data and state. It's similar to the web platform's storage APIs ([IndexedDB][mdn-indexeddb], and [localStorage][mdn-localstorage]), but was designed to meet the storage needs of extensions. The following are a few key features: 
+The Storage API provides an extension-specific way to persist user data and state. It's similar to the web platform's storage APIs ([IndexedDB][mdn-indexeddb], and [localStorage][mdn-localstorage]), but was designed to meet the storage needs of extensions. The following are a few key features:
 
 - All extension contexts, including the extension service worker and content scripts have access to the Storage API.
 - The JSON serializable values are stored as object properties.
@@ -28,13 +28,13 @@ Even though extensions can access [`Window.localStorage`][mdn-localstorage] in s
 
 ### Storage areas
 
-The Storage API is divided into the following four buckets ("storage areas"): 
+The Storage API is divided into the following four buckets ("storage areas"):
 
 [`storage.local`][prop-local]
 : Data is stored locally, which is cleared when the extension is removed. The quota limitation is approx 5 MB, but can be increased by requesting the `"unlimitedStorage"` permission. Consider using it to store larger amounts of data.
 
 [`storage.sync`][prop-sync]
-: If syncing is enabled, the data is synced to any Chrome browser that the user is logged into. If disabled, it behaves like `storage.local`. When the browser is offline, Chrome stores the data locally and resumes syncing when it's back online. The quota limitation is 100 KB approx, 8 KB per item. Consider using it to preserve user settings across synced browsers. 
+: If syncing is enabled, the data is synced to any Chrome browser that the user is logged into. If disabled, it behaves like `storage.local`. When the browser is offline, Chrome stores the data locally and resumes syncing when it's back online. The quota limitation is 100 KB approx, 8 KB per item. Consider using it to preserve user settings across synced browsers.
 
 
 {% Aside 'warning' %}
@@ -70,7 +70,7 @@ To use the storage API, declare the `"storage"` permission in the extension
 The following samples demonstrate the `local`, `sync`, and
 `session` storage areas:
 
-<web-tabs>
+<web-tabs data-unresolved>
   <web-tab title="storage.local">
 
   ```js

@@ -112,7 +112,7 @@ To compare waterfalls, expand the **Waterfall Opacity** section and drag the sli
 
 If the SXG prefetch is successful, you will see that the "with SXG" waterfall doesn't include a row for the HTML, and the fetches for subresources start sooner. For example, compare "Before" and "After" here:
 
-<web-tabs>
+<web-tabs data-unresolved>
   <web-tab title=Before>
     {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/LwbWyWbcX3oHnM8lSwDA.png", alt="Network waterfall without SXG prefetch; first row is HTML fetch which takes 1050ms", width="800", height="327" %}
   </web-tab>
@@ -268,7 +268,7 @@ We plan to make this tradeoff easier to manage in the future, by adding a cache 
 
 One time, I saw LCP *increase* when using a prefetched SXG. I ran [WebPageTest](https://www.webpagetest.org/), comparing median results without and with SXG prefetch. Clicking on **After** below:
 
-<web-tabs>
+<web-tabs data-unresolved>
   <web-tab title=Before>
     {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/EoR1qbmGb9bK8l7OmD7x.png",
            alt="Network waterfall without SXG prefetch; LCP is 2 seconds",
@@ -289,7 +289,7 @@ I dug deeper and discovered the reason for the difference in layout is that the 
 
 Now, clicking on "After", I saw that the prefetched LCP **drops to 1.3s**:
 
-<web-tabs>
+<web-tabs data-unresolved>
   <web-tab title=Before>
     {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/EoR1qbmGb9bK8l7OmD7x.png",
            alt="Network waterfall without SXG prefetch; LCP is 2 seconds",

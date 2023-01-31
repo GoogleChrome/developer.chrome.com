@@ -214,7 +214,7 @@ Step 5: Observe success debug reports {: #success-reports-examples}
 
 A success debug report is identical to an attribution report, and contains both the source-side and the trigger-side debug keys.
 
-<web-tabs>
+<web-tabs data-unresolved>
   <web-tab title="Example event-level success debug report">
 
 ```json

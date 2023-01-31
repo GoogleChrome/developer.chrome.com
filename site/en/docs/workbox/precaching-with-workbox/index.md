@@ -42,7 +42,7 @@ Unlike `generateSW`, `injectManifest` won't automatically bundle the Workbox run
 
 Click on each of the tabs below to compare the usage of the `generateSW` and `injectManifest` methods:
 
-<web-tabs>
+<web-tabs data-unresolved>
   <web-tab title="generateSW">
 
 

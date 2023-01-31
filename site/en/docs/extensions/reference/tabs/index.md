@@ -45,7 +45,7 @@ The "activeTab" permission
 
 The following are examples of how to declare each permission in the [manifest][doc-manifest]:
 
-<web-tabs>
+<web-tabs data-unresolved>
   <web-tab title="Tabs permission">
 
   ```json
@@ -121,7 +121,7 @@ This example demonstrates how an extension's service worker can retrieve the act
 currently-focused window (or most recently-focused window, if no Chrome windows are focused). This
 can usually be thought of as the user's current tab.
 
-<web-tabs>
+<web-tabs data-unresolved>
   <web-tab title="Manifest V3 (promise)">
 
   ```js
@@ -156,7 +156,7 @@ can usually be thought of as the user's current tab.
 
 This example shows how an extension can toggle the muted state for a given tab.
 
-<web-tabs>
+<web-tabs data-unresolved>
   <web-tab  title="Manifest V3 (promise)">
 
   ```js
@@ -190,7 +190,7 @@ This example shows how to move a tab while a drag may or may not be in progress.
 uses `chrome.tabs.move`, you can use the same waiting pattern for other calls that modify tabs while
 a drag is in progress.
 
-<web-tabs>
+<web-tabs data-unresolved>
   <web-tab  title="Manifest V3 (promise)">
 
   ```js
