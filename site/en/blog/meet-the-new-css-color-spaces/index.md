@@ -10,7 +10,7 @@ authors:
   - argyle
 tags:
   - css
-hero: image/vS06HQ1YTsbMKSFTIPl2iogUQP73/lUKgvbcTc1Lg3xNUdCpq.png
+hero: image/vS06HQ1YTsbMKSFTIPl2iogUQP73/1EFisnQsVHucCNJdjQvy.png
 alt: >
   A moment from The Wizard of Oz movie and half of it is in black and white and the other half is in color.
 ---
