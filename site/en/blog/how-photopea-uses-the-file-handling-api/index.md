@@ -3,10 +3,10 @@ layout: 'layouts/blog-post.njk'
 title: 'How the image editing app Photopea uses the File Handling API to let users open files from their file explorer'
 subhead: >
   The File Handling API allows web applications to register themselves as a file handler for file formats the application can support. Learn how the image editing application Photopea makes use of this API.
-date: 2023-01-16
-# updated: 2023-01-16
-hero:
-alt:
+date: 2023-01-31
+# updated: 2023-01-31
+hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/IRV9bhPXJnRUXrFWfYE5.png
+alt: Photopea logo pattern
 authors:
   - thomassteiner
   - ivankutskir
@@ -17,7 +17,7 @@ tags:
 
 [Photopea](https://www.photopea.com/) is a free online image editor developed by [Ivan Kutskir](https://blog.ivank.net/). Ivan started working on the app in 2012, and maintains a [blog](https://blog.photopea.com/) sharing the major features he adds to Photopea. Photopea can work with PSD (Adobe Photoshop), XCF (GIMP), Sketch (Sketch App), XD (Adobe XD), and CDR (CorelDRAW) formats.
 
-{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/m3t2Hh7UCspDdSm7tWIp.png", alt="ALT_TEXT_HERE", width="800", height="450" %}
+{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/m3t2Hh7UCspDdSm7tWIp.png", alt="The Photopea app.", width="800", height="450" %}
 
 ## File handling in Photopea
 
@@ -79,7 +79,7 @@ After installation, Photopea registers itself as a file handler with the operati
 }
 ```
 
-{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/zY7DwqqJLZuLNAKem6dd.png", alt="ALT_TEXT_HERE", width="800", height="808" %}
+{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/zY7DwqqJLZuLNAKem6dd.png", alt="The macOS Finder with the user right-clicking a file and then choosing 'Open with' Photopea.", width="800", height="808" %}
 
 ### The imperative part of the File Handling API
 
