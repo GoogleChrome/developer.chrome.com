@@ -42,7 +42,7 @@ tags:
 
 The CrUX Historical API allows for the querying of historical user experience metrics for a specific URI like "Get the historical time series metrics for the `https://example.com` origin."
 
-The Hostrical API follows the same structure as the daily [CrUX API](../api/) except values are given in an array, and keys are labelled with plural names (for example, `histogramTimeseries` instead of `histogram`, or `p75s` instead of `p75`).
+The Historical API follows the same structure as the daily [CrUX API](../api/) except values are given in an array, and keys are labelled with plural names (for example, `histogramTimeseries` instead of `histogram`, or `p75s` instead of `p75`).
 
 ## CrUX API Key
 
@@ -94,7 +94,7 @@ If the identifier is set to URL with the value of `http://www.example.com/foo.ht
 
 Dimensions identify a specific group of data that a record is being aggregated against. For example, a form factor of `PHONE` indicates that the record contains information about loads that took place on a mobile device.
 
-The historical API is only available aggregated by form factor dimension. This is a general class of device split into `PHONE`, `TABLET`, `DESKTOP`, or `NULL` when the data is insufficient to segregate by device class.
+The historical API is only available aggregated by form factor dimension. This is a general class of device split into `PHONE`, `TABLET`, and `DESKTOP`.
 
 {% Aside %}
 Unlike the daily API, the CrUX Historical API does not have data aggregated against Effective Connection Type (ECT).
