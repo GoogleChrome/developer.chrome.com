@@ -111,16 +111,16 @@ export class WebTabs extends BaseElement {
   }
 
   render() {
-    if (!this.hasAttribute('data-unresolved')) {
-      return [Array.from(this.children)];
+    if (this.hasAttribute('data-unresolved')) {
+      this._tabPanels = Array.from(this.children);
+      const tabs = this._formatTabs();
+      return html`
+        <div role="tablist">${tabs}</div>
+        ${this._tabPanels}
+      `;
     }
 
-    this._tabPanels = Array.from(this.children);
-    const tabs = this._formatTabs();
-    return html`
-      <div role="tablist">${tabs}</div>
-      ${this._tabPanels}
-    `;
+    return [Array.from(this.children)];
   }
 }
 
