@@ -17,6 +17,9 @@
   "capabilities": {
     "title": "i18n.tags.capabilities"
   },
+  "case-study": {
+    "title": "i18n.tags.case-study"
+  },
   "chrome": {
     "title": "i18n.tags.chrome"
   },
