@@ -35,15 +35,5 @@ module.exports = {
       // Prevent percy to snapshot all index.html files in ./dist dir
       ({ name }) => !SNAPSHOTS.includes(name)
     ],
-    options: [
-      {
-        include: '/en/docs/handbook/content-types/meet-the-team/index.html',
-        // The DOM is passed to percy after javascript runs. It then
-        // runs a second time on the modified DOM within their infra
-        // resulting in issues with, for example, the web-tabs component
-        // which is used on this page.
-        enableJavaScript: false
-      }
-    ]
   }
 }
