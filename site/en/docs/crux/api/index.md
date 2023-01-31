@@ -92,7 +92,7 @@ Dimensions identify a specific group of data that a record is being aggregated a
 
 #### Form Factor
 
-The device class that the end-user used to navigate to the page. This is a general class of device split into `PHONE`, `TABLET`, and `DESKTOP`.
+The device class that the end-user used to navigate to the page. This is a general class of device split into `PHONE`, `TABLET`, `DESKTOP`, or `NULL` when the data is insufficient to segregate by device class.
 
 #### Effective Connection Type
 

@@ -42,7 +42,7 @@ tags:
 
 The CrUX Historical API allows for the querying of historical user experience metrics for a specific URI like "Get the historical time series metrics for the `https://example.com` origin."
 
-The Histrical API follows the same structure as the daily [CrUX API](../api/) except values are given in an array, and keys are labelled with plural names (for example, `histogramTimeseries` instead of `histogram`, or `p75s` instead of `p75`).
+The Hostrical API follows the same structure as the daily [CrUX API](../api/) except values are given in an array, and keys are labelled with plural names (for example, `histogramTimeseries` instead of `histogram`, or `p75s` instead of `p75`).
 
 ## CrUX API Key
 
@@ -92,9 +92,13 @@ If the identifier is set to URL with the value of `http://www.example.com/foo.ht
 
 ### Dimensions
 
-Dimensions identify a specific group of data that a record is being aggregated against, for example a form factor of `PHONE` indicates that the record contains information about loads that took place on a mobile device.
+Dimensions identify a specific group of data that a record is being aggregated against. For example, a form factor of `PHONE` indicates that the record contains information about loads that took place on a mobile device.
 
-As the CrUX Historical API uses the same dimensions, you can reference [the daily CrUX API dimensions documentation](../api/#dimensions) for more details.
+The historical API is only available aggregated by form factor dimension. This is a general class of device split into `PHONE`, `TABLET`, `DESKTOP`, or `NULL` when the data is insufficient to segregate by device class.
+
+{% Aside %}
+Unlike the daily API, the CrUX Historical API does not have data aggregated against Effective Connection Type (ECT).
+{% endAside %}
 
 ### Metric
 
@@ -146,6 +150,34 @@ Note: The values for each percentile are synthetically derived, it does not impl
 #### Metric value types
 
 As the CrUX Historical API uses the same metric value types, you can reference [the daily CrUX API metric value types documentation](../api/#metric-value-types) for more details.
+
+#### Metric eligibility
+
+Based on the [eligibility criteria](../methodology/#eligibility) an origin or URL may only be eligible for some of the collection periods covered by the CrUX Historical API. In these cases the historical API will return `"NaN"` for the `histogramTimeseries` densities and `null` for the `percentilesTimeseries` for the collection periods which have no eligible data. For example, if the second period did not have any eligible data, this would show as:
+
+```json
+{
+  "histogramTimeseries": [
+    {
+      "start": 0,
+      "end": 2500,
+      "densities": [0.9190, "NaN", 0.9194, 0.9195, 0.9183, 0.9187]
+    },
+    {
+      "start": 2500,
+      "end": 4000,
+      "densities": [0.0521, "NaN", 0.0518, 0.0518, 0.0526, 0.0527]
+    },
+    {
+      "start": 4000,
+      "densities": [0.0288, "NaN", 0.0286, 0.0285, 0.0290, 0.0285]
+    }
+  ],
+  "percentilesTimeseries": {
+    "p75s": [1362, null, 1344, 1356, 1366, 1377]
+  },
+}
+```
 
 ### Collection Periods
 
@@ -371,7 +403,6 @@ For example, the response to the request body in the above request could be:
 
 ```json
 {
-  "effectiveConnectionType": string,
   "formFactor": enum (FormFactor),
 
   // Union field url_pattern can be only one of the following:
@@ -397,13 +428,6 @@ For example, the response to the request body in the above request could be:
       <td>
         <p><strong><code class="apitype" translate="no" dir="ltr">enum (<a href="#form-factor">FormFactor</a>)</code></strong></p>
         <p>The form factor is the device class that all users used to access the site for this record.</p><p>If the form factor is unspecified, then aggregated data over all form factors will be returned.</p>
-      </td>
-    </tr>
-    <tr>
-      <td><code translate="no" dir="ltr">effectiveConnectionType</code></td>
-      <td>
-        <p><strong><code class="apitype" translate="no" dir="ltr">string</code></strong></p>
-        <p>The effective connection type is the general connection class that all users experienced for this record. This field uses the values ["offline", "slow-2G", "2G", "3G", "4G"] as specified in: <a href="https://wicg.github.io/netinfo/#effective-connection-types">https://wicg.github.io/netinfo/#effective-connection-types</a></p><p>If the effective connection type is unspecified, then aggregated data over all effective connection types will be returned.</p>
       </td>
     </tr>
     <tr>
@@ -459,6 +483,7 @@ A `metric` is a set of user experience data for a single web performance metric,
       <td>
         <p><strong><code class="apitype" translate="no" dir="ltr">object (<a href="#api-response-bin">Bin</a>)</code></strong></p>
         <p>The timeseries histogram of user experiences for a metric. The timeseries histogram will have at least one bin and the densities of all bins will add up to ~1.</p>
+        <p>Missing values for that particular Collection Period will be marked as <code>null</code>.</p>
       </td>
     </tr>
     <tr>
@@ -466,6 +491,7 @@ A `metric` is a set of user experience data for a single web performance metric,
       <td>
         <p><strong><code class="apitype" translate="no" dir="ltr">object (<a href="#api-response-percentiles">Percentiles</a>)</code></strong></p>
         <p>Common useful percentiles of the Metric. The value type for the percentiles will be the same as the value types given for the Histogram bins.</p>
+        <p>Missing values for that particular Collection Period will be marked as <code>"NaN"</code>.</p>
       </td>
     </tr>
   </tbody>
