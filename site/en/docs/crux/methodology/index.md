@@ -157,7 +157,7 @@ The CrUX dataset is made available through a variety of tools maintained by Goog
 <td>Origin &amp; Page</td>
 </tr>
 <tr>
-<td><a href="#tool-crux-historical-api">CrUX Historial API</a></td>
+<td><a href="#tool-crux-history-api">CrUX History API</a></td>
 <td>Weekly <a href="#footnote-3"><sup>3</sup></a></td>
 <td>Subset of key metrics  <a href="#footnote-4"><sup>4</sup></a></td>
 <td>No country dimension</td>

@@ -127,6 +127,8 @@ A simple three bin histogram for an example metric looks like this:
 }
 ```
 
+The data points are presented in the order of the [collection period](#collection-periods) dates also returned by the API, with the first point being the earliest period, and the final point being the most recent collection period.
+
 This data indicates that 91.90% of users experience the example metric value between 0ms and 2,500ms for the first collection period in the history, followed by 92.03%, 91.94%, and so on. The units of the metric are not contained in this histogram, in this case we will assume milliseconds.
 
 Additionally, 5.21% of users experience the example metric value between 2,500ms and 4,000ms in the first collection period in the history, and 2.88% of users experience a value greater than 4,000ms in the first collection period in the history.

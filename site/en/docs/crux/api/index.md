@@ -235,7 +235,7 @@ Note: The values for each percentile are synthetically derived, it does not impl
 </tbody>
 </table></div>
 
-### Collection Period
+### Collection period
 
 As of October 2022, the CrUX API contains a `collectionPeriod` object with `firstDate` and `endDate` fields representing the beginning and end dates of the aggregation window. An example is provided below:
 
