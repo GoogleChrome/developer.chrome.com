@@ -79,7 +79,7 @@ The `PerformanceNavigationTiming.notRestoredReasons` property returns an object 
 The properties are as follows:
 
 `blocked`
-: A boolean value specifying whether the navigated page is blocked from using the BFCache (`true`) or not (`false`).
+: A boolean value specifying whether the navigated page is blocked from using the bfcache (`true`) or not (`false`).
 
 `childen`
 : An array of objects representing the blocked state of any frames embedded in the top-level frame. Each object has the same structure as the parent object — this way, any number of levels of embedded frames can be represented inside the object recursively. If the frame has no children, the array will be empty.
