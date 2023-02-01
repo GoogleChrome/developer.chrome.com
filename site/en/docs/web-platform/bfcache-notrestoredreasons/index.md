@@ -39,8 +39,8 @@ Modern browsers provide an optimization feature for history navigation called th
 Previously, there was no way for developers to find out why their pages were blocked from using the bfcache in the field tough there was a [test in Chrome dev tools](https://web.dev/bfcache/#test-to-ensure-your-pages-are-cacheable). To enable monitoring in the field, the [`PerformanceNavigationTiming`](https://developer.mozilla.org/docs/Web/API/PerformanceNavigationTiming) class has been extended to include a `notRestoredReasons` property. This returns an object containing information on all frames present in the document:
  
  * Details such as frame `id` and `name`, to help identify them in the HTML.
- * Whether they were blocked from using the BFCache.
- * Reasons why they were blocked from using the BFCache.
+ * Whether they were blocked from using the bfcache.
+ * Reasons why they were blocked from using the bfcache.
  
  This allows developers to take action to make those pages BFCache-compatible, thereby improving site performance.
 
