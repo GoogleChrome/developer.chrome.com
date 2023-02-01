@@ -8,7 +8,7 @@ alt: >
   Screenshot of the CrUX Dashboard
 description: Looker Studio 是一款功能强大的数据可视化工具，可让您使用大数据源构建仪表板，如 Chrome UX Report。您可以在本文中了解如何创建自定义 CrUX Dashboard 来跟踪源中用户的体验。
 date: 2020-06-22
-updated: 2022-07-18
+updated: 2023-02-01
 tags:
   - performance
   - crux

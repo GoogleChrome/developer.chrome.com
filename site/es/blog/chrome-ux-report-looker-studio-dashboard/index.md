@@ -12,7 +12,7 @@ description: |
   guía, aprenda a crear su propio panel CrUX personalizado para rastrear la
   experiencia de usuario de un origen.
 date: 2020-06-22
-updated: 2022-07-18
+updated: 2023-02-01
 tags:
   - performance
   - crux
