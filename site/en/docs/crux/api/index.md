@@ -67,7 +67,7 @@ Identifiers specify what records should be looked up. In CrUX these identifiers 
 When the identifier is an origin all data present for all pages in that origin are aggregated together. For example, say the `http://www.example.com` origin had pages as laid out by this sitemap:
 
 ```text
-http://www.example.com
+http://www.example.com/
 http://www.example.com/foo.html
 http://www.example.com/bar.html
 ```
@@ -79,7 +79,7 @@ This would mean that when querying the Chrome UX Report with the origin set to `
 When the identifier is a URL, only data for that specific URL will be returned. Looking again to the `http://www.example.com` origin sitemap:
 
 ```text
-http://www.example.com
+http://www.example.com/
 http://www.example.com/foo.html
 http://www.example.com/bar.html
 ```
@@ -125,9 +125,9 @@ A simple three bin histogram for an example metric looks like this:
 }
 ```
 
-This data indicates that 38.2% of users experience the example metric value between 0ms and 1,000ms. The units of the metric are not contained in this histogram, in this case we will assume milliseconds.
+This data indicates that 38.179% of users experience the example metric value between 0ms and 1,000ms. The units of the metric are not contained in this histogram, in this case we will assume milliseconds.
 
-Additionally, 49.9% of users experience the example metric value between 1,000ms and 3,000ms, and 11.9% of users experience a value greater than 3,000ms.
+Additionally, 49.905% of users experience the example metric value between 1,000ms and 3,000ms, and 11.916% of users experience a value greater than 3,000ms.
 
 Metrics will also contain percentiles that can be useful for additional analysis.
 

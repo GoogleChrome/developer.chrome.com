@@ -268,7 +268,7 @@ If the `metrics` property is not set then all available metrics will be returned
 
 If no `formFactor` value is provided then the values will be aggregated across all form factors.
 
-See [History web performance data via the CrUX API](https://TODO) for more example queries.
+See [History web performance data via the CrUX API](/blog/chrome-ux-report-history-api) for more example queries.
 
 ## Data pipeline
 
