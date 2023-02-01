@@ -275,7 +275,6 @@ A number of APIs now support promises in Manifest V3.
 - [`chrome.processes`](/docs/extensions/reference/processes)
 - [`chrome.search`](/docs/extensions/reference/search)
 - [`chrome.sessions`](/docs/extensions/reference/sessions)
-- [`chrome.signedInDevices`](/docs/extensions/reference/signedInDevices)
 - [`chrome.topSites`](/docs/extensions/reference/topSites)
 
 Also, APIs that use the [`ChromeSetting`](/docs/extensions/reference/types/#type-ChromeSetting)
