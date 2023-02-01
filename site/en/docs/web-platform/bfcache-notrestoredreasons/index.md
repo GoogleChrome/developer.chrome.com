@@ -28,9 +28,9 @@ The `notRestoredReasons` API adds a `notRestoredReasons` property to the [`Perfo
 
 ### Try out the bfcache notRestoredReasons API
 
-Starting in Chromium 109, the BFCache notRestoredReasons API is available as an [origin trial](/docs/web-platform/origin-trials/) in Chromium. The feature's release is estimated for Chrome 111, which will hit Chrome stable in March 2023.
+Starting in Chromium 109, the bfcache `notRestoredReasons` API is available as an [origin trial](/docs/web-platform/origin-trials/) in Chromium. The feature's release is estimated for Chrome 111, which will hit Chrome stable in March 2023.
 
-Until then, you can try out the BFCache notRestoredReasons API by [registering for the origin trial](ot) and using it in your experiments. See [Take part in an origin trial](/docs/web-platform/origin-trials/#take-part-in-an-origin-trial) for instructions on how to use your token once you are registered.
+Until then, you can try out the bfcache `notRestoredReasons` API by [registering for the origin trial](ot) and using it in your experiments. See [Take part in an origin trial](/docs/web-platform/origin-trials/#take-part-in-an-origin-trial) for instructions on how to use your token once you are registered.
 
 ## Concepts and usage
 
