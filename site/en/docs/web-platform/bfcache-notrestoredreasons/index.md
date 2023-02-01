@@ -70,7 +70,7 @@ The `PerformanceNavigationTiming.notRestoredReasons` property returns an object 
   children: [],
   id: "",
   name: "",
-  reasons: [ "Internal Error" ],
+  reasons: [ "Internal Error", "Unload handler" ],
   src: "",
   url: "a.com"
 }
