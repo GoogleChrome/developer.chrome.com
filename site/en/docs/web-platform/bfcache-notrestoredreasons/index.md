@@ -143,7 +143,7 @@ For example:
 }
 ```
 
-If multiple cross-origin frames have blocking reasons, we randomly select one cross-origin iframe and report whether it blocked BFCache or not. For the rest of the frames, we report `null` for the `blocked` value. This is to stop bad actors from inferring information about user state on sites they don't control by embedding multiple third-party frames into a page and then comparing the blocking information from each.
+If multiple cross-origin frames have blocking reasons, we randomly select one cross-origin iframe and report whether it blocked bfcache or not. For the rest of the frames, we report `null` for the `blocked` value. This is to stop bad actors from inferring information about user state on sites they don't control by embedding multiple third-party frames into a page and then comparing the blocking information from each.
 
 ```js
 {
