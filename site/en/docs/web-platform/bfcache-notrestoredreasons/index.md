@@ -183,7 +183,7 @@ The Chromium team wants to hear about your experiences with the bfcache `notRest
 
 Is there something about the API that does not work like you expected? Or are there missing methods
 or properties that you need to implement your idea? Have a question or comment on the security
-model? File a spec issue on the corresponding [GitHub repo][feedback], or add your thoughts to an
+model? File a spec issue on the corresponding [GitHub repo][[feedback](https://github.com/rubberyuzu/bfcache-not-retored-reason/issues)], or add your thoughts to an
 existing issue.
 
 ### Report a problem with the implementation
