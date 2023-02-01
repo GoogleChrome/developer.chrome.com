@@ -122,9 +122,9 @@ For example:
 }
 ```
 
-### Reporting BFCache blocking in cross-origin frames
+### Reporting bfcache blocking in cross-origin frames
 
-When a page has cross-origin frames embedded, we limit the amount of information shared about them to avoid leaking cross-origin information. We only include information that the outer page already knows, and whether the cross-origin subtree blocked BFCache or not. We don't include any blocking reasons, or information about lower levels of the subtree (even if some sub-levels are same-origin).
+When a page has cross-origin frames embedded, we limit the amount of information shared about them to avoid leaking cross-origin information. We only include information that the outer page already knows, and whether the cross-origin subtree blocked bfcache or not. We don't include any blocking reasons, or information about lower levels of the subtree (even if some sub-levels are same-origin).
 
 For example: 
 
