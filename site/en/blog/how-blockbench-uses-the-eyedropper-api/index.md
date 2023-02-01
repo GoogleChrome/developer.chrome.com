@@ -15,7 +15,7 @@ tags:
   - case-study
 ---
 
-[Blockbench](https://www.blockbench.net/) is a free, modern model editor for low-poly models with pixel art textures. If you have ever played [Minecraft](https://www.minecraft.net/), chances are you have seen assets that were created with Blockbench, for example the goat, which was added to Minecraft as part of the Caves and Cliffs Update, Part 1. The GPL version 3 licensed Blockbench code is [open source](https://github.com/JannisX11/blockbench) and maintained by a friendly community of developers.
+[Blockbench](https://www.blockbench.net/) is a free, modern model editor for low-poly models with pixel art textures. If you have ever played [Minecraft](https://www.minecraft.net/), chances are you have seen assets that were created with Blockbench, for example the goat, which was added to Minecraft as part of the Caves and Cliffs Update, Part 1. The GPL version 3 licensed Blockbench code is [open source on GitHub](https://github.com/JannisX11/blockbench).
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/3NK0qVqDGnG7hTpaZpUS.png", alt="Minecraft sheep designed with Blockbench.", width="800", height="426" %}
 
