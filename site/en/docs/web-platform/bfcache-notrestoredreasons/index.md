@@ -42,7 +42,7 @@ Previously, there was no way for developers to find out why their pages were blo
  * Whether they were blocked from using the bfcache.
  * Reasons why they were blocked from using the bfcache.
  
- This allows developers to take action to make those pages BFCache-compatible, thereby improving site performance.
+ This allows developers to take action to make those pages bfcache-compatible, thereby improving site performance.
 
 ## Examples
 
