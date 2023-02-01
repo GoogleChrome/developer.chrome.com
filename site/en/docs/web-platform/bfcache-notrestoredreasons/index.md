@@ -10,7 +10,7 @@ authors:
   - chrisdavidmills
 ---
 
-The notRestoredReasons API adds a `notRestoredReason` property to the [`PerformanceNavigationTiming`](https://developer.mozilla.org/docs/Web/API/PerformanceNavigationTiming) class, which reports information on whether frames present in the document were blocked from using the [BFCache](https://developers.google.com/web/updates/2018/07/page-lifecycle-api#back-forward-cache) on navigation, and why. Developers can use this information to identify pages that need updates to make them BFCache-compatible, thereby improving site performance.
+The `notRestoredReasons` API adds a `notRestoredReasons` property to the [`PerformanceNavigationTiming`](https://developer.mozilla.org/docs/Web/API/PerformanceNavigationTiming) class, which reports information on whether frames present in the document were blocked from using the [bfcache](https://web.dev/bfcache/) on navigation, and why. Developers can use this information to identify pages that need updates to make them bfcache-compatible, thereby improving site performance.
 
 ## Current status
 
