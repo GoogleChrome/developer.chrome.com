@@ -178,7 +178,7 @@ There are a few major categories of reason that are worth calling out:
 
 ## Feedback {: #feedback }
 
-The Chromium team wants to hear about your experiences with the BFCache notRestoredReasons API.
+The Chromium team wants to hear about your experiences with the bfcache `notRestoredReasons` API.
 
 ### Tell us about the API design
 
