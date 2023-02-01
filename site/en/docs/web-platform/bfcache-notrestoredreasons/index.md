@@ -26,7 +26,7 @@ The `notRestoredReasons` property, added to the [`PerformanceNavigationTiming`](
 
 </div>
 
-### Try out the bfcache notRestoredReasons API
+### Try out the bfcache `notRestoredReasons` API
 
 Starting in Chromium 109, the bfcache `notRestoredReasons` API is available as an [origin trial](/docs/web-platform/origin-trials/) in Chromium. The feature's release is estimated for Chrome 111, which will hit Chrome stable in March 2023.
 
