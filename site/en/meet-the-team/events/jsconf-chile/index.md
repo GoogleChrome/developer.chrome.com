@@ -16,9 +16,10 @@ sessions:
       - kosamari
       - jeremywagner
     description: >-
-      Google community meet up  https://jsconf.cl/events/meet-and-drink with talks by Jeremy,
-      Jake and Una. During the conference days we'll have a web development help desk
-      where developers can come and ask our team members questions or provide feedback.
+      Google community meet up with talks by Jeremy, Jake and Una.
+      During the conference days we'll have a web development help
+      desk where developers can come and ask our team members
+      questions or provide feedback.
     topics: []
     type: participant
     slidesUrl: null
