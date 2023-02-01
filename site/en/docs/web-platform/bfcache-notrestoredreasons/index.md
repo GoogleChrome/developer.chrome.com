@@ -4,13 +4,13 @@ title: Back/forward cache notRestoredReasons API
 description: >
   Report information on whether frames present in the document were blocked from using the back/forward cache on navigation.
 subhead: >
-  Find which navigations were blocked from using the bfcache, and why
-date: 2023-01-17
+  Find which navigations were blocked from using the bfcache, and why.
+date: 2023-02-01
 authors:
   - chrisdavidmills
 ---
 
-The `notRestoredReasons` API adds a `notRestoredReasons` property to the [`PerformanceNavigationTiming`](https://developer.mozilla.org/docs/Web/API/PerformanceNavigationTiming) class, which reports information on whether frames present in the document were blocked from using the [bfcache](https://web.dev/bfcache/) on navigation, and why. Developers can use this information to identify pages that need updates to make them bfcache-compatible, thereby improving site performance.
+The `notRestoredReasons` property, added to the [`PerformanceNavigationTiming`](https://developer.mozilla.org/docs/Web/API/PerformanceNavigationTiming) class, reports information on whether frames present in the document were blocked from using the [bfcache](https://web.dev/bfcache/) on navigation, and why. Developers can use this information to identify pages that need updates to make them bfcache-compatible, thereby improving site performance.
 
 ## Current status
 
@@ -36,7 +36,7 @@ Until then, you can try out the bfcache `notRestoredReasons` API by [registering
 
 Modern browsers provide an optimization feature for history navigation called the [back/forward cache](https://web.dev/bfcache/) (bfcache). This enables an instant loading experience when users go back to a page they have already visited. Pages can be blocked from entering the bfcache or get evicted while in bfcache for different reasons, some required by a specification and some specific to browser implementations.
  
-Previously, there was no way for developers to find out why their pages were blocked from using the bfcache in the field tough there was a [test in Chrome dev tools](https://web.dev/bfcache/#test-to-ensure-your-pages-are-cacheable). To enable monitoring in the field, the [`PerformanceNavigationTiming`](https://developer.mozilla.org/docs/Web/API/PerformanceNavigationTiming) class has been extended to include a `notRestoredReasons` property. This returns an object containing information on all frames present in the document:
+Previously, there was no way for developers to find out why their pages were blocked from using the bfcache in the field, though there was a [test in Chrome dev tools](https://web.dev/bfcache/#test-to-ensure-your-pages-are-cacheable). To enable monitoring in the field, the [`PerformanceNavigationTiming`](https://developer.mozilla.org/docs/Web/API/PerformanceNavigationTiming) class has been extended to include a `notRestoredReasons` property. This returns an object containing related information on all frames present in the document:
  
  * Details such as frame `id` and `name`, to help identify them in the HTML.
  * Whether they were blocked from using the bfcache.
@@ -123,7 +123,7 @@ For example:
 
 ### Reporting bfcache blocking in cross-origin frames
 
-When a page has cross-origin frames embedded, we limit the amount of information shared about them to avoid leaking cross-origin information. We only include information that the outer page already knows, and whether the cross-origin subtree blocked bfcache or not. We don't include any blocking reasons, or information about lower levels of the subtree (even if some sub-levels are same-origin).
+When a page has cross-origin frames embedded, we limit the amount of information shared about them to avoid leaking cross-origin information. We only include information that the outer page already knows, and whether the cross-origin subtree blocked bfcache or not. We don't include any blocking reasons or information about lower levels of the subtree (even if some sub-levels are same-origin).
 
 For example: 
 
@@ -132,7 +132,8 @@ For example:
   blocked: false,
   children: [
     { url: "a.com", src: "c.a.com", id: "c", name: "c", blocked: true, reasons: [ "ScreenReader" ], children: [] },
-    { url: "", src: "b.com", id: "d", name: "d", blocked: true, reasons: [], children: [] } /* cross-origin frame */
+    /* cross-origin frame */
+    { url: "", src: "b.com", id: "d", name: "d", blocked: true, reasons: [], children: [] }
   ],
   id: "",
   name: "",
@@ -148,6 +149,7 @@ If multiple cross-origin frames have blocking reasons, we randomly select one cr
 {
   blocked: false,
   children: [
+    /* cross-origin frames */
     {url: "", src: "b.com", id: "b", name: "b", blocked: null, reasons: [], children: []},
     {url: "", src: "c.com", id: "c", name: "c", blocked: true, reasons: [], children: []},
     {url: "", src: "d.com", id: "d", name: "d", blocked: null, reasons: [], children: []}
@@ -168,11 +170,11 @@ As we said earlier, there are many different reasons why blocking could occur. W
 
 There are a few major categories of reason that are worth calling out:
 
-* `Circumstantial`: this refers to blocking reasons not directly related to the developer's page code. For example a related component crashed, something went wrong with the loading process, the page is in a temporary state that can't be cached, bfcache disabled due to insufficient memory, or a service worker did something to the page that disqualifies it from being cached. 
-* `Extensions`: there are a few different reason messages related to extensions. Generally we combine quite a few different reasons into the "Extensions" reason. We are intentionally vague about extension-related blocking reasons because we don't want to give away too much information about what extensions the user have installed, which ones are active on the page, what they are doing, etc.
-* `PageSupportNeeded`: The developer's code is using a web platform feature that is otherwise not BFCache blocking, but it is currently in a state that is bfcache blocking. For example, the page currently has a [BroadcastChannel](https://developer.mozilla.org/docs/Web/API/BroadcastChannel) with registered listeners, or an open [IndexedDB](https://developer.mozilla.org/docs/Web/API/IndexedDB_API) connection.
-* `Unload Handler`: The page has registered an unload handler, which currently [prevents the bfcache being used in some browsers](https://web.dev/bfcache/#never-use-the-unload-event).
-* `MainResourceHasCacheControlNoStore`: The page is using `Cache-Control: no-store`, which currently [prevents the bfcache being used in some browsers](https://web.dev/bfcache/#minimize-use-of-cache-control-no-store).
+* `Circumstantial`: This refers to blocking reasons not directly related to the developer's page code. For example a related component crashed, something went wrong with the loading process, the page is in a temporary state that can't be cached, bfcache disabled due to insufficient memory, or a service worker did something to the page that disqualifies it from being cached. 
+* `Extensions`: There are a few different reason messages related to extensions. Generally we combine quite a few different reasons into the "Extensions" reason. We are intentionally vague about extension-related blocking reasons because we don't want to give away too much information about what extensions the user have installed, which ones are active on the page, what they are doing, etc.
+* `PageSupportNeeded`: The developer's code is using a web platform feature that is otherwise not bfcache blocking, but it is currently in a state that is bfcache blocking. For example, the page currently has a [BroadcastChannel](https://developer.mozilla.org/docs/Web/API/BroadcastChannel) with registered listeners, or an open [IndexedDB](https://developer.mozilla.org/docs/Web/API/IndexedDB_API) connection.
+* `Unload Handler`: The page has registered an [`unload` handler](https://developer.mozilla.org/docs/Web/API/Window/unload_event), which currently [prevents the bfcache being used in some browsers](https://web.dev/bfcache/#never-use-the-unload-event).
+* `MainResourceHasCacheControlNoStore`: The page is using [`Cache-Control: no-store`](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cache-Control), which currently [prevents the bfcache being used in some browsers](https://web.dev/bfcache/#minimize-use-of-cache-control-no-store).
 * `SupportPending`: The developer's code is using a web platform feature that disqualifies the page from the bfcache, for example the [Web Serial API](https://developer.mozilla.org/docs/Web/API/Web_Serial_API), [Web Authentication API](https://developer.mozilla.org/docs/Web/API/Web_Authentication_API), [File System Access API](https://developer.mozilla.org/docs/Web/API/File_System_Access_API), or [Media Session API](https://developer.mozilla.org/docs/Web/API/Media_Session_API). This category is also used to report the presence of a tool outside the page itself that is blocking the bfcache, such as a screenreader or the Chrome password manager.
 
 ## Feedback {: #feedback }
@@ -190,7 +192,7 @@ existing issue.
 
 Did you find a bug with Chromium's implementation? Or is the implementation different from the spec?
 File a bug at [new.crbug.com](https://new.crbug.com). Be sure to include as much detail as you can,
-simple instructions for reproducing, and enter `UI>Browser>Navigation>BFCache` in the **Components** box.
+simple instructions for reproducing, and specify the component as `UI > Browser > Navigation > bfcache`.
 [Glitch](https://glitch.com/) works great for sharing quick and easy repros.
 
 ### Show support for the API
@@ -204,6 +206,7 @@ let us know where and how you are using it.
 
 ## Helpful links {: #helpful }
 
+- [Back/forward cache](https://web.dev/bfcache/)
 - [Public explainer][explainer]
 - [Chromium tracking bug][cr-bug]
 - [ChromeStatus.com entry][cr-status]
