@@ -40,7 +40,7 @@ The demo sends a 32MB `ArrayBuffer` to a worker and back using `postMessage()`. 
 {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/nTPx6E9oUZLLnG5OLRzP.jpg", alt="Structured cloning vs transferable objects comparison chart", width="577", height="318" %}
 </figure>
 
-On a MacBook Pro/10.6.8/2.53 GHz/Intel Core 2 Duo, FF was the fastest using structured cloning. On average, it took 302ms to send the 32MB `ArrayBuffer` to a worker and post it back to the main thread (RRT - Round Trip Time). Comparing that with transferables, the same test took 6.6ms. That is a huge perf boost!
+On a MacBook Pro/10.6.8/2.53 GHz/Intel Core 2 Duo, FF was the fastest using structured cloning. On average, it took 302ms to send the 32MB `ArrayBuffer` to a worker and post it back to the main thread (RTT - Round Trip Time). Comparing that with transferables, the same test took 6.6ms. That is a huge perf boost!
 
 Having these kinds of speeds allows massive WebGL textures/meshes to be seamlessly passed between a Worker and main app.
 
