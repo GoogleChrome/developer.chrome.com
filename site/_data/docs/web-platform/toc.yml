@@ -23,6 +23,7 @@
     - url: /docs/web-platform/webgpu
     - url: /docs/web-platform/popup-api
     - url: /docs/web-platform/bfcache-notrestoredreasons
+    - url: /blog/soft-navigations-experiment/
 
 - title: i18n.docs.web-platform.developer-trials
   sections:
