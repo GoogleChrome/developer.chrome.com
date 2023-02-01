@@ -23,6 +23,12 @@ autoplay:
 capabilities:
   en: Capabilities
 
+case-study:
+  en: Case study
+
+fugu-case-study:
+  en: Fugu case study
+
 # DevTools-related tags
 css:
   en: CSS
@@ -217,10 +223,10 @@ chrome69:
 
 chrome70:
   en: Chrome 70
-  
+
 chrome109:
   en: Chrome 109
-  
+
 chrome110:
   en: Chrome 110
 
