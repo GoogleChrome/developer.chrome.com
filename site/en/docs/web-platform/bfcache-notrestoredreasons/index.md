@@ -99,7 +99,7 @@ The properties are as follows:
 `url`
 : A string representing the URL of the navigated page.
 
-### Reporting BFCache blocking in same-origin frames
+### Reporting bfcache blocking in same-origin frames
 
 When a page has same-origin frames embedded, the returned `notRestoredReasons` value will contain an object inside the `children` property representing the blocked state of each embedded frame.
 
