@@ -97,12 +97,12 @@ for (let localFont of localFonts) {
       face = "500";
     } else if (subfamily.includes("semibold")) {
       face = "600";
-    } else if (subfamily.includes("bold")) {
-      face = "700";
     } else if (subfamily.includes("extrabold")) {
       face = "800";
     } else if (subfamily.includes("ultrabold")) {
       face = "900";
+    } else if (subfamily.includes("bold")) {
+      face = "700";
     }
 
     if (subfamily.includes("italic")) {
