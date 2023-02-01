@@ -4,7 +4,7 @@ title: >
 description: >
   Debug Progressive Web Apps with DevTools.
 layout: 'layouts/blog-post.njk'
-date: 2023-01-26
+date: 2023-01-30
 authors:
   - sofiayem
 hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/OEqDXbxeEqiGeZnKxr60.png'
