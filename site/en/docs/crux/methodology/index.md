@@ -224,7 +224,7 @@ The CrUX Dashboard does not support the country dimension, so all global data is
 
 The [CrUX API](/docs/crux/api/) provides programmatic access to CrUX data by page or origin, and can be further filtered by form factor, effective connection type and metrics.
 
-The API provides [Web Vitals](https://web.dev/vitals/) metrics both by origin and at page-level and the data is updated daily. The only values provided for metrics are calculated from the previous 28 days as a rolling window. Historical data is available via [a separate API](#tool-crux-historical-api).
+The API provides [Web Vitals](https://web.dev/vitals/) metrics both by origin and at page-level and the data is updated daily. The only values provided for metrics are calculated from the previous 28 days as a rolling window. Historical data is available via the separate [History API](#tool-crux-history-api).
 
 The CrUX API returns more quickly than the [PageSpeed Insights API](#tool-psi-api) but does not include the additional [Lighthouse data](https://developers.google.com/search/blog/2018/11/pagespeed-insights-now-powered-by) provided by PageSpeed Insights.
 
@@ -236,7 +236,7 @@ The [CrUX Historical API](/docs/crux/historical-api/) provides programmatic acce
 
 The API provides [Web Vitals](https://web.dev/vitals/) metrics both by origin and at page-level and the data is updated weekly. The only values provided for metrics are calculated from the past 25 weekly collection periods of 28 days as a rolling window.
 
-[Read more in the Hisorical API documentation](/docs/crux/historical-api/).
+[Read more in the History API documentation](/docs/crux/history-api/).
 
 ### PageSpeed Insights {: #tool-psi}
 

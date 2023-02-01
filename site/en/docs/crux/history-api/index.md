@@ -10,12 +10,12 @@ title: CrUX History API
 # /docs/[project-name]/. It also appears in the <meta description> used in
 # Google Search.
 description: >
-  Learn how to construct requests to and parse responses from the CrUX History API.
+  Learn how to query the previous six months of historical CrUX trends using the CrUX History API.
 
 # Optional
 # This appears below the title and is an optional teaser
 subhead: >
-  The CrUX History API gives low-latency access to aggregated real-user experience data at page and origin granularity.
+  The CrUX History API gives low-latency access to six months of historical real-user experience data at page and origin granularity.
 
 # Required
 date: 2023-02-07
@@ -40,7 +40,7 @@ tags:
 
 ## Common use case
 
-The CrUX History API allows for the querying of a historty user experience metrics for a specific URI like "Get the history of time series metrics for the `https://example.com` origin."
+The CrUX History API allows for the querying of historical user experience metrics for a specific URI like "Get the historical UX trends for the `https://example.com` origin."
 
 The History API follows the same structure as the daily [CrUX API](../api/) except values are given in an array, and keys are labelled with plural names (for example, `histogramTimeseries` instead of `histogram`, or `p75s` instead of `p75`).
 
@@ -71,7 +71,7 @@ Identifiers specify what records should be looked up. In CrUX these identifiers 
 When the identifier is an origin all data present for all pages in that origin are aggregated together. For example, say the `http://www.example.com` origin had pages as laid out by this sitemap:
 
 ```text
-http://www.example.com
+http://www.example.com/
 http://www.example.com/foo.html
 http://www.example.com/bar.html
 ```
@@ -83,7 +83,7 @@ This would mean that when querying the Chrome UX Report with the origin set to `
 When the identifier is a URL, only data for that specific URL will be returned. Looking again to the `http://www.example.com` origin sitemap:
 
 ```text
-http://www.example.com
+http://www.example.com/
 http://www.example.com/foo.html
 http://www.example.com/bar.html
 ```
@@ -127,9 +127,9 @@ A simple three bin histogram for an example metric looks like this:
 }
 ```
 
-This data indicates that 91.2% of users experience the example metric value between 0ms and 2,500ms for the first collection period in the history, followed by 92.0%, 91.9%, and so on. The units of the metric are not contained in this histogram, in this case we will assume milliseconds.
+This data indicates that 91.90% of users experience the example metric value between 0ms and 2,500ms for the first collection period in the history, followed by 92.03%, 91.94%, and so on. The units of the metric are not contained in this histogram, in this case we will assume milliseconds.
 
-Additionally, 5.2% of users experience the example metric value between 2,500ms and 4,000ms in the first collection period in the history, and 2.8% of users experience a value greater than 4,000ms in the first collection period in the history.
+Additionally, 5.21% of users experience the example metric value between 2,500ms and 4,000ms in the first collection period in the history, and 2.88% of users experience a value greater than 4,000ms in the first collection period in the history.
 
 Metrics will also contain percentiles that can be useful for additional analysis.
 
@@ -179,7 +179,7 @@ Based on the [eligibility criteria](../methodology/#eligibility) an origin or UR
 }
 ```
 
-### Collection Periods
+### Collection periods
 
 The CrUX History API contains a `collectionPeriods` object with an array of `firstDate` and `endDate` fields representing the beginning and end dates of each aggregation window. An example is provided below:
 
@@ -306,7 +306,7 @@ The URL uses [gRPC Transcoding](https://google.aip.dev/127) syntax.
 
 As the CrUX History API uses the same request bodies, you can reference [the daily CrUX API request body documentation](../api/#request-body) for more details.
 
-For example, to request the desktop largest contentful paint values for the Chrome developer documentation homepage:
+For example, to request the desktop Largest Contentful Paint values for the web.dev homepage:
 
 ```json
 {
