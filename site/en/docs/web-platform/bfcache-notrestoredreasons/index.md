@@ -175,7 +175,7 @@ There are a few major categories of reason that are worth calling out:
 * `PageSupportNeeded`: The developer's code is using a web platform feature that is otherwise not bfcache blocking, but it is currently in a state that is bfcache blocking. For example, the page currently has a [BroadcastChannel](https://developer.mozilla.org/docs/Web/API/BroadcastChannel) with registered listeners, or an open [IndexedDB](https://developer.mozilla.org/docs/Web/API/IndexedDB_API) connection. Or the page has registered an [`unload` handler](https://developer.mozilla.org/docs/Web/API/Window/unload_event), which currently [prevents the bfcache being used in some browsers](https://web.dev/bfcache/#never-use-the-unload-event).
 * `SupportPending`: The developer's code is using a web platform feature that disqualifies the page from the bfcache, for example the [Web Serial API](https://developer.mozilla.org/docs/Web/API/Web_Serial_API), [Web Authentication API](https://developer.mozilla.org/docs/Web/API/Web_Authentication_API), [File System Access API](https://developer.mozilla.org/docs/Web/API/File_System_Access_API), or [Media Session API](https://developer.mozilla.org/docs/Web/API/Media_Session_API). Or the page is using [`Cache-Control: no-store`](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cache-Control), which currently [prevents the bfcache being used in some browsers](https://web.dev/bfcache/#minimize-use-of-cache-control-no-store). This category is also used to report the presence of a tool outside the page itself that is blocking the bfcache, such as a screenreader or the Chrome password manager.
 
-## Feedback {: #feedback }
+## Feedback
 
 The Chromium team wants to hear about your experiences with the bfcache `notRestoredReasons` API.
 
