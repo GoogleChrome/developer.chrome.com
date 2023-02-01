@@ -3,19 +3,19 @@
 layout: 'layouts/doc-post.njk'
 
 # Required
-title: CrUX Historical API
+title: CrUX History API
 
 # Required
 # This appears in the ToC of the project landing page at
 # /docs/[project-name]/. It also appears in the <meta description> used in
 # Google Search.
 description: >
-  Learn how to construct requests to and parse responses from the CrUX Historical API.
+  Learn how to construct requests to and parse responses from the CrUX History API.
 
 # Optional
 # This appears below the title and is an optional teaser
 subhead: >
-  The CrUX Historical API gives low-latency access to aggregated real-user experience data at page and origin granularity.
+  The CrUX History API gives low-latency access to aggregated real-user experience data at page and origin granularity.
 
 # Required
 date: 2023-02-07
@@ -40,13 +40,13 @@ tags:
 
 ## Common use case
 
-The CrUX Historical API allows for the querying of historical user experience metrics for a specific URI like "Get the historical time series metrics for the `https://example.com` origin."
+The CrUX History API allows for the querying of a historty user experience metrics for a specific URI like "Get the history of time series metrics for the `https://example.com` origin."
 
-The Historical API follows the same structure as the daily [CrUX API](../api/) except values are given in an array, and keys are labelled with plural names (for example, `histogramTimeseries` instead of `histogram`, or `p75s` instead of `p75`).
+The History API follows the same structure as the daily [CrUX API](../api/) except values are given in an array, and keys are labelled with plural names (for example, `histogramTimeseries` instead of `histogram`, or `p75s` instead of `p75`).
 
 ## CrUX API Key
 
-Like the daily API, using the CrUX Historical API requires a Google Cloud API key. The same key can be used for the daily and historical API.
+Like the daily API, using the CrUX History API requires a Google Cloud API key. The same key can be used for the daily and history API.
 
 You can create one in the [Credentials](https://console.developers.google.com/apis/credentials) page and provision it for `Chrome UX Report API` usage.
 
@@ -94,10 +94,10 @@ If the identifier is set to URL with the value of `http://www.example.com/foo.ht
 
 Dimensions identify a specific group of data that a record is being aggregated against. For example, a form factor of `PHONE` indicates that the record contains information about loads that took place on a mobile device.
 
-The historical API is only available aggregated by form factor dimension. This is a general class of device split into `PHONE`, `TABLET`, and `DESKTOP`.
+The CrUX History API is only available aggregated by form factor dimension. This is a general class of device split into `PHONE`, `TABLET`, and `DESKTOP`.
 
 {% Aside %}
-Unlike the daily API, the CrUX Historical API does not have data aggregated against Effective Connection Type (ECT).
+Unlike the daily API, the CrUX History API does not have data aggregated against Effective Connection Type (ECT).
 {% endAside %}
 
 ### Metric
@@ -149,11 +149,11 @@ Note: The values for each percentile are synthetically derived, it does not impl
 
 #### Metric value types
 
-As the CrUX Historical API uses the same metric value types, you can reference [the daily CrUX API metric value types documentation](../api/#metric-value-types) for more details.
+As the CrUX History API uses the same metric value types, you can reference [the daily CrUX API metric value types documentation](../api/#metric-value-types) for more details.
 
 #### Metric eligibility
 
-Based on the [eligibility criteria](../methodology/#eligibility) an origin or URL may only be eligible for some of the collection periods covered by the CrUX Historical API. In these cases the historical API will return `"NaN"` for the `histogramTimeseries` densities and `null` for the `percentilesTimeseries` for the collection periods which have no eligible data. For example, if the second period did not have any eligible data, this would show as:
+Based on the [eligibility criteria](../methodology/#eligibility) an origin or URL may only be eligible for some of the collection periods covered by the CrUX History API. In these cases the CrUX History API will return `"NaN"` for the `histogramTimeseries` densities and `null` for the `percentilesTimeseries` for the collection periods which have no eligible data. For example, if the second period did not have any eligible data, this would show as:
 
 ```json
 {
@@ -181,7 +181,7 @@ Based on the [eligibility criteria](../methodology/#eligibility) an origin or UR
 
 ### Collection Periods
 
-The CrUX Historical API contains a `collectionPeriods` object with an array of `firstDate` and `endDate` fields representing the beginning and end dates of each aggregation window. An example is provided below:
+The CrUX History API contains a `collectionPeriods` object with an array of `firstDate` and `endDate` fields representing the beginning and end dates of each aggregation window. An example is provided below:
 
 ```json
     "collectionPeriods": [{
@@ -208,7 +208,7 @@ The CrUX Historical API contains a `collectionPeriods` object with an array of `
 
 These collection periods are in ascending order and represent the date span of each of the data points in the other sections of the response.
 
-The Historical API is updated each Monday and contains data up until the previous Saturday (as per the standard 2-day lag). It contains the previous 25-weeks worth of data—one collection period per week.
+The History API is updated each Monday and contains data up until the previous Saturday (as per the standard 2-day lag). It contains the previous 25-weeks worth of data—one collection period per week.
 
 As each collection period contains the previous 28-days aggregated data, and the collection periods are per week, this means the collection periods will overlap. They are similar to a moving average of data, with three weeks worth of data being included in each subsequent period, and one week being different.
 
@@ -234,7 +234,7 @@ An example body is shown below:
 For example, this can be called from `curl` with the following command line (replacing `API_KEY` with your key):
 
 ```bash
-curl -s --request POST 'https://chromeuxreport.googleapis.com/v1/records:queryHistoricalRecord?key=API_KEY' \
+curl -s --request POST 'https://chromeuxreport.googleapis.com/v1/records:queryHistoryRecord?key=API_KEY' \
     --header 'Accept: application/json' \
     --header 'Content-Type: application/json' \
     --data '{"formFactor":"PHONE","origin":"https://www.example.com","metrics":["largest_contentful_paint", "experimental_time_to_first_byte"]}'
@@ -268,7 +268,7 @@ If the `metrics` property is not set then all available metrics will be returned
 
 If no `formFactor` value is provided then the values will be aggregated across all form factors.
 
-See [Historical web performance data via the CrUX API](https://TODO) for more example queries.
+See [History web performance data via the CrUX API](https://TODO) for more example queries.
 
 ## Data pipeline
 
@@ -278,11 +278,11 @@ The CrUX dataset is processed through a pipeline to consolidate, aggregate and f
 
 The data in the Chrome UX Report is a 28-day rolling average of aggregated metrics. This means that the data presented in the Chrome UX Report at any given time is actually data for the past 28 days aggregated together.
 
-The Historical API contains a number of collection periods, each spanning these 28 days. As each collection period contains the previous 28-days aggregated data, and the collection periods are per week, this means the collection periods will overlap. They are similar to a moving average of data, with three weeks worth of data being included in each subsequent period, and one week being different.
+The History API contains a number of collection periods, each spanning these 28 days. As each collection period contains the previous 28-days aggregated data, and the collection periods are per week, this means the collection periods will overlap. They are similar to a moving average of data, with three weeks worth of data being included in each subsequent period, and one week being different.
 
 ### Weekly updates
 
-The Historical API is updated each Monday around 04:00 UTC and contains data up until the previous Saturday (as per the standard 2-day lag). It contains the previous 25 weeks (approximately 6 months) worth of data, one collection period per week.
+The History API is updated each Monday around 04:00 UTC and contains data up until the previous Saturday (as per the standard 2-day lag). It contains the previous 25 weeks (approximately 6 months) worth of data, one collection period per week.
 
 There is no service level agreement for update times; it is run on a best-effort basis every day.
 
@@ -292,7 +292,7 @@ Data will not differ within the same week after it has been updated each Monday 
 
 ## Schema
 
-There is a single endpoint for the CrUX Historical API which accepts `POST` HTTP requests. The API returns a `record` which contains one or more `metrics` corresponding to performance data about the requested origin or page.
+There is a single endpoint for the CrUX History API which accepts `POST` HTTP requests. The API returns a `record` which contains one or more `metrics` corresponding to performance data about the requested origin or page.
 
 ### HTTP request
 
@@ -304,7 +304,7 @@ The URL uses [gRPC Transcoding](https://google.aip.dev/127) syntax.
 
 ### Request body
 
-As the CrUX Historical API uses the same request bodies, you can reference [the daily CrUX API request body documentation](../api/#request-body) for more details.
+As the CrUX History API uses the same request bodies, you can reference [the daily CrUX API request body documentation](../api/#request-body) for more details.
 
 For example, to request the desktop largest contentful paint values for the Chrome developer documentation homepage:
 
