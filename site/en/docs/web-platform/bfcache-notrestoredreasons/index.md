@@ -34,8 +34,7 @@ Until then, you can try out the bfcache `notRestoredReasons` API by [registering
 
 ## Concepts and usage
 
-Modern browsers provide an optimization feature for history navigation called the [back/forward cache](https://developers.google.com/web/updates/2018/07/page-lifecycle-api#back-forward-cache) (BFCache). This enables an instant loading experience when users go back to a page they have already visited. Pages 
-can be blocked from entering the BFCache or get evicted while in BFCache for different reasons, some required by a specification and some specific to browser implementations.
+Modern browsers provide an optimization feature for history navigation called the [back/forward cache](https://web.dev/bfcache/) (bfcache). This enables an instant loading experience when users go back to a page they have already visited. Pages can be blocked from entering the bfcache or get evicted while in bfcache for different reasons, some required by a specification and some specific to browser implementations.
  
 Previously there was no way for developers to find out why their pages were blocked from using the BFCache. To enable this, the [`PerformanceNavigationTiming`](https://developer.mozilla.org/docs/Web/API/PerformanceNavigationTiming) class has been extended to include a `notRestoredReasons` property. This returns an object containing information on all frames present in the document:
  
