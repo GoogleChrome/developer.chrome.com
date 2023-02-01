@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: BFCache notRestoredReasons API
+title: Back/forward cache notRestoredReasons API
 description: >
   Report information on whether frames present in the document were blocked from using the Back/Forward Cache on navigation.
 subhead: >
