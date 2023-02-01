@@ -91,7 +91,7 @@ The properties are as follows:
 : A string representing the `name` attribute value of the frame (for example `<iframe name="bar" src="...">`). If the frame has no `name`, the value will be an empty string.
 
 `reasons`
-: An array of strings each representing a reason why the navigated page was blocked from using the BFCache. There are many different reasons why blocking could occur. See the [Blocking reasons](#blocking-reasons) section below for more details.
+: An array of strings each representing a reason why the navigated page was blocked from using the bfcache. There are many different reasons why blocking could occur. See the [Blocking reasons](#blocking-reasons) section below for more details.
 
 `src`
 : A string representing the path to the frame's source (for example `<iframe src="b.html">`). If the frame has no `src`, the value will be an empty string.
