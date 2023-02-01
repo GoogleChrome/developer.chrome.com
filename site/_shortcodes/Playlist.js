@@ -1,8 +1,8 @@
 const {html} = require('common-tags');
 const fetch = require('node-fetch/lib/index');
-const apiKey = 'AIzaSyAzOX6K8IXsxPwQ0rgW7QgJPndroPOiWfc';
-const maxResults = 50;
-const part = 'snippet';
+const API_KEY = 'AIzaSyAzOX6K8IXsxPwQ0rgW7QgJPndroPOiWfc';
+const MAX_RESULTS = 50;
+const PART = 'snippet';
 
 /** Renders a a YouTube playlist widget
  * @param {string} playlistId is a YouTube playlist id
@@ -25,7 +25,7 @@ async function Playlist(playlistId) {
     Playlist Information
   */
   await fetch(
-    `https://youtube.googleapis.com/youtube/v3/playlists?part=${part}&id=${playlistId}&key=${apiKey}`
+    `https://youtube.googleapis.com/youtube/v3/playlists?part=${PART}&id=${playlistId}&key=${API_KEY}`
   )
     .then(res => res.json())
     .then(playlistResult => {
@@ -47,7 +47,7 @@ async function Playlist(playlistId) {
 
       // Next Call: Query Channel Information
       return fetch(
-        `https://youtube.googleapis.com/youtube/v3/channels?part=${part}&id=${channelId}&key=${apiKey}`
+        `https://youtube.googleapis.com/youtube/v3/channels?part=${PART}&id=${channelId}&key=${API_KEY}`
       );
     })
     .then(res => res.json())
@@ -57,7 +57,7 @@ async function Playlist(playlistId) {
 
       // Next Call: Query Channel Information
       return fetch(
-        `https://youtube.googleapis.com/youtube/v3/playlistItems?part=${part}&playlistId=${playlistId}&maxResults${maxResults}&key=${apiKey}`
+        `https://youtube.googleapis.com/youtube/v3/playlistItems?part=${PART}&playlistId=${playlistId}&MAX_RESULTS${MAX_RESULTS}&key=${API_KEY}`
       );
     })
     .then(res => res.json())
