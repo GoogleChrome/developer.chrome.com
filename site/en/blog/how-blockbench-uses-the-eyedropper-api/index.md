@@ -19,7 +19,7 @@ tags:
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/3NK0qVqDGnG7hTpaZpUS.png", alt="Minecraft sheep designed with Blockbench.", width="800", height="426" %}
 
-To try Blockbench, launch the app by navigating to [web.blockbench.net](https://web.blockbench.net/). As a PWA, you can install it to your desktop and launch it in a standalone window. If you are new to 3D modeling, you can start with one of the many [open source `.bbmodel` examples](https://github.com/search?q=path%3A*.bbmodel&type=code) you can find on GitHub (login required). For example, try the train model that you can see in the following screenshot.
+To try Blockbench, launch the app by navigating to [web.blockbench.net](https://web.blockbench.net/). As a PWA, you can install it to your desktop and launch it in a standalone window. If you are new to 3D modeling, you can start with one of the many open source `.bbmodel` file examples that you can find using GitHub's code search. For example, try the train model that you can see in the following screenshot.
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/hE98H7sZPBvB8iTwnLlm.png", alt="Editing a train model in Blockbench.", width="800", height="557" %}
 
