@@ -18,22 +18,11 @@ tags:
   - crux
 ---
 
-[Looker Studio](https://cloud.google.com/looker-studio) (formerly Data Studio) is a
-powerful data visualization tool that enables you to build dashboards on top of
-big data sources, like the [Chrome UX Report](/docs/crux/)
-(CrUX). In this guide, learn how to create your own custom CrUX Dashboard to
-track an origin's user experience trends.
+[Looker Studio](https://cloud.google.com/looker-studio) (formerly Data Studio) is a powerful data visualization tool that enables you to build dashboards on top of big data sources, like the [Chrome UX Report](/docs/crux/) (CrUX). In this guide, learn how to create your own custom CrUX Dashboard to track an origin's user experience trends.
 
 {% Img src="image/admin/AG2jdUtgsQzrxIUlLFyf.png", alt="CrUX Dashboard", width="800", height="598" %}
 
-The CrUX Dashboard is built with a Looker Studio feature called [Community
-Connectors](https://developers.google.com/datastudio/connector/).
-This connector is a pre-established link between the raw CrUX data on
-[BigQuery](https://console.cloud.google.com/bigquery?p=chrome-ux-report)
-and the visualizations of Looker Studio. It eliminates the need for users of the
-dashboard to write any queries or generate any charts. Everything is built for
-you; all you need is to provide an origin and a custom dashboard will be
-generated for you.
+The CrUX Dashboard is built with a Looker Studio feature called [Community Connectors](https://developers.google.com/datastudio/connector/). This connector is a pre-established link between the raw CrUX data on [BigQuery](https://console.cloud.google.com/bigquery?p=chrome-ux-report) and the visualizations of Looker Studio. It eliminates the need for users of the dashboard to write any queries or generate any charts. Everything is built for you; all you need is to provide an origin and a custom dashboard will be generated for you.
 
 ## Using the default CrUX dashboard
 
