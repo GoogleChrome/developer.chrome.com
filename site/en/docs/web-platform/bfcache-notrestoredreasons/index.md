@@ -196,7 +196,7 @@ simple instructions for reproducing, and enter `UI>Browser>Navigation>BFCache` i
 
 ### Show support for the API
 
-Are you planning to use the BFCache notRestoredReasons API? Your public support helps the Chromium team
+Are you planning to use the bfcache `notRestoredReasons` API? Your public support helps the Chromium team
 prioritize features and shows other browser vendors how critical it is to support them.
 
 Send a tweet to [@ChromiumDev][cr-dev-twitter] using the hashtag
