@@ -309,4 +309,4 @@ Hero image by [Jakob Owens].
 [blink-component]: https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EMedia%3EPictureInPicture
 [tag]: https://github.com/w3ctag/design-reviews/issues/798
 [intent]: https://groups.google.com/a/chromium.org/g/blink-dev/c/Tz1gUh92dXs
-[jakob owens]: https://unsplash.com/fr/photos/TqnpKA_elIU
+[jakob owens]: https://unsplash.com/photos/TqnpKA_elIU
