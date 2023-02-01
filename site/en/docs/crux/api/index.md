@@ -46,7 +46,7 @@ The CrUX API allows for the querying of user experience metrics for a specific U
 
 Using the CrUX API requires a Google Cloud API key. You can create one in the [Credentials](https://console.developers.google.com/apis/credentials) page and provision it for `Chrome UX Report API` usage.
 
-After you have an API key, your application can append the query parameter `key=[YOUR_API_KEY]` to all request URLs.
+After you have an API key, your application can append the query parameter `key=[YOUR_API_KEY]` to all request URLs. See the [Example queries](#example-queries) below.
 
 The API key is safe for embedding in URLs; it doesn't need any encoding.
 
