@@ -24,7 +24,7 @@ When you land a fix in Chromium, that fix is publicly available to anyone that m
 
 {% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/d8CqZbOXm1MJVLiquKNc.png", alt="The stages between a fix being landed and shipped, which are described as the patch gap.", width="800", height="185" %}
 
-Bad actors work quickly to take advantage of that time between the landed CL and users having access to that patch in a stable channel update, reverse engineering the CL to develop an exploit to leverage or sell for use against potential victims. This is called _n-day exploitation_.   
+Bad actors work quickly to take advantage of that time between the landed changelist (CL) and users having access to that patch in a stable channel update, reverse engineering the CL to develop an exploit to leverage or sell for use against potential victims. This is called _n-day exploitation_.   
 While we can't completely remove the potential of n-day exploitation, reducing the time between the fix being landed and that fix shipping in a Stable channel update of Chrome makes life much harder for those bad actors and greatly reduces the potential for n-day exploitation.   
 
 ## How can you help prevent n-day exploitation?
