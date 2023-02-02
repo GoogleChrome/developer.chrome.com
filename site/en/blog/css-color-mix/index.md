@@ -25,7 +25,7 @@ CSS preprocessors or
 channels.
 
 {% Compare 'worse', 'Before with SCSS' %}
-```js
+```css
 .color-mixing-with-sass {
   /* Sass: equally mix red with white */
   --red-white-mix: color.mix(red, white);
@@ -39,7 +39,7 @@ a real way to mix colors in CSS. To get close you need to do math of partial
 color values. Here's a reduced example of how CSS may simulate mixing today:
 
 {% Compare 'worse', 'Before with HSL' %}
-```js
+```css
 .color-mixing-with-vanilla-css-before {
   --lightness: 50%;
   --red: hsl(0 50% var(--lightness));
@@ -57,7 +57,7 @@ ability to mix colors to CSS. Developers can choose which color space they mix
 in and how dominant each color should be in the mix.
 
 {% Compare 'better', 'after' %}
-```js
+```css
 .color-mixing-after {
   /* equally mix red with white */
   --red-white-mix: color-mix(in oklab, red, white);
