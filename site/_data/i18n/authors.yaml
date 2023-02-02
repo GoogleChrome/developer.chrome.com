@@ -238,6 +238,11 @@ johannes:
     en: 'Johannes Henkel'
   description:
     en: 'Software Engineer working on the Chrome User Experience Report at Google.'
+jasmineyan:
+  title:
+    en: 'Jasmine Yan'
+  description:
+    en: 'Software Engineer working on the PageSpeed Insights and Chrome User Experience Report at Google.'
 emilaeklund:
   title:
     en: 'Emil Eklund'

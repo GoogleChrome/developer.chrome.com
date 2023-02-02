@@ -3,8 +3,11 @@ layout: layouts/blog-post.njk
 title: History web performance data via the CrUX API
 description: >
   History web performance data via the CrUX API.
+hero: image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/Xu66s88U5aDaULbgDIz0.jpg
+alt: Trinity College Library, Dublin, Ireland
 authors:
   - johannes
+  - jasmineyan
   - tunetheweb
 date: 2023-02-07
 #updated: 2023-02-07
