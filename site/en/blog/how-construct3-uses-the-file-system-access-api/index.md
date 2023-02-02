@@ -13,6 +13,7 @@ authors:
 tags:
   - capabilities
   - case-study
+  - fugu-case-study
 ---
 
 [Construct 3](https://www.construct.net/en/make-games/free-trial) is a game editor developed by the brothers [Thomas and Ashley Gullen](https://www.starterstory.com/stories/we-created-a-100k-month-no-code-tool-for-video-game-developers). For the present third iteration of their game editor, the two fully _"[bet] on the browser being the new operating system"_ after building for Windows and [NW.js](https://nwjs.io/) before. You can get an impression of some games developed with the editor by exploring its [showcase](https://www.construct.net/en/make-games/showcase) or working through the [guided tour](https://editor.construct.net/?startTour). Thanks to the superpowers of the web, you can also just click through to any of the ["Get inspired" examples](https://www.construct.net/en/make-games/free-trial#:~:text=the%20Guided%20Tour-,Get%20inspired,-OPEN%20AND%20EDIT) and start editing immediately.
