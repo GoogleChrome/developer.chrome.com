@@ -87,7 +87,7 @@
     "unistore": "^3.5.2",
     "uslug": "^1.0.4",
     "web-vitals": "^3.0.4",
-    "webdev-infra": "1.0.42",
+    "webdev-infra": "1.0.43",
     "xss": "^1.0.14"
   },
   "optionalDependencies": {
