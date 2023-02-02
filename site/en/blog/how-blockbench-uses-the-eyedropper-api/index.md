@@ -13,6 +13,7 @@ authors:
 tags:
   - capabilities
   - case-study
+  - fugu-case-study
 ---
 
 [Blockbench](https://www.blockbench.net/) is a free, modern model editor for low-poly models with pixel art textures. If you have ever played [Minecraft](https://www.minecraft.net/), chances are you have seen assets that were created with Blockbench, for example the goat, which was added to Minecraft as part of the Caves and Cliffs Update, Part 1. The GPL version 3 licensed Blockbench code is [open source on GitHub](https://github.com/JannisX11/blockbench).
