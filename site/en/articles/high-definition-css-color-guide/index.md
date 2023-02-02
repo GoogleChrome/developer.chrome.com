@@ -189,7 +189,7 @@ color we believe the human eye can see. HVS is often portrayed with a
 <figure>
   {% Img
     src="image/vS06HQ1YTsbMKSFTIPl2iogUQP73/98CgP4ILYvc0vOVyw2bp.png",
-    alt="todo",
+    alt="A horse shoe shape is filled with a vibrant gradient with a hollow triangle in the middle.",
     width="800",
     height="804"
   %}
