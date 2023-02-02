@@ -104,6 +104,7 @@ parse this data from the User-Agent string.
 [DNS resolution](https://www.cloudflare.com/en-gb/learning/dns/what-is-dns/) via the secure
 context of [HTTPS](https://www.cloudflare.com/en-gb/learning/ssl/what-is-https/).
 * [**IP Protection**](https://github.com/spanicker/ip-blindness): IP Protection proposes to anonymize the user's IP address, to help protect it from being used by third parties identified as potentially using IP addresses for web-wide cross-site tracking.
+* [**Bounce tracking mitigations**](/docs/privacy-sandbox/bounce-tracking-mitigations/): A proposal to reduce or eliminate the ability of bounce tracking to recognize people across contexts.
 * [**Privacy Budget**](https://www.youtube.com/watch?v=0STgfjSA6T8): Explore methods of quantifying
 the amount of information about a user's browser or device that are available to websites, and develop
 practical mechanisms to enable browser-based limits on the information a site can access.
