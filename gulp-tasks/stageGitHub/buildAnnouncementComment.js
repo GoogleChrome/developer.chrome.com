@@ -36,7 +36,7 @@ const ANNOUNCEMENT_PATH = path.join(__dirname, 'tmp', 'announcement.md');
 
 async function buildAnnouncementComment() {
   const prNumber = process.env.PR_NUMBER;
-  const commit = process.env.GITHUB_SHA;
+  const commit = process.env.PR_HEAD_COMMIT_SHA;
 
   if (!prNumber) {
     console.warn(
@@ -58,6 +58,8 @@ async function buildAnnouncementComment() {
 
   const status = check.status;
   const conclusion = check.conclusion;
+
+  console.log(check);
 
   if (status !== 'completed' && conclusion !== 'success') {
     announcement =
