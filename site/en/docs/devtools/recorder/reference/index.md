@@ -80,6 +80,8 @@ For example:
 - [Nightwatch extension](https://chrome.google.com/webstore/detail/nightwatch-chrome-recorde/nhbccjfogdgkahamfohokdhcnemjafjk/) lets you export JSON user flows as [Nightwatch test script](https://github.com/nightwatchjs/nightwatch-recorder-extension). [Nightwatch](https://nightwatchjs.org/) is an end-to-end testing solution for web applications and websites.
 - [Testing Library extension](https://chrome.google.com/webstore/detail/testing-library-recorder/pnobfbfcnoeealajjgnpeodbkkhgiici) lets you export JSON user flows as [Testing Library script](https://github.com/nickmccurdy/testing-library-recorder-extension). [Testing Library](https://testing-library.com/) has simple and complete testing utilities that encourage good testing practices.
 - [WebdriverIO extension](https://chrome.google.com/webstore/detail/webdriverio-chrome-record/pllimkccefnbmghgcikpjkmmcadeddfn) lets you export JSON user flows as [WebdriverIO test script](https://github.com/webdriverio/recorder-extension). [WebdriverIO](https://webdriver.io/) is an end-to-end testing solution for web, mobile and IoT applications and websites.
+- [CodeceptJS extension](https://chrome.google.com/webstore/detail/codeceptjs-chrome-recorde/jgdcobhagdbipacidhfnoaccgjooebam) lets you export JSON user flows as [CodeceptJS test script](https://github.com/PeterNgTr/codeceptjs-recorder-extension). [CodeceptJS](https://codecept.io) is a supercharged
+End 2 End Testing.
 
 ##### Troubleshooting {: #extension-troubleshooting }
 
@@ -117,6 +119,7 @@ Transform JSON user flows to custom scripts:
 
 - [Cypress Chrome Recorder](https://github.com/cypress-io/cypress-chrome-recorder). You can use it to convert user flow JSON files to Cypress test scripts. Watch this [demo](https://youtu.be/4qYs2bMz4GI) to see it in action.
 - [Nightwatch Chrome Recorder](https://github.com/nightwatchjs/nightwatch-chrome-recorder). You can use it to convert user flow JSON files to Nightwatch test scripts. 
+- [CodeceptJS Chrome Recorder](https://github.com/PeterNgTr/codeceptjs-chrome-recorder). You can use it to convert user flow JSON files to CodeceptJS test scripts. 
 
 Replay JSON user flows:
 
