@@ -12,7 +12,7 @@ tags:
   - css
 hero: image/vS06HQ1YTsbMKSFTIPl2iogUQP73/1EFisnQsVHucCNJdjQvy.png
 alt: >
-  A moment from The Wizard of Oz movie and half of it is in black and white and the other half is in color.
+  A overview picture of 18 different color spaces and their 8 to 16 different syntaxes for specifying color.
 ---
 
 CSS color 4 brings a large set of tools and features to CSS for managing and
