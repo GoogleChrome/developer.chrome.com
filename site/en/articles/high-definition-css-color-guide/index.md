@@ -5,7 +5,7 @@ description: >
   CSS Color 4 brings wide gamut color tools and capabilities to the web: more colors, manipulation functions, and better gradients.
 subhead: >
   CSS Color 4 brings wide gamut color tools and capabilities to the web: more colors, manipulation functions, and better gradients.
-date: 2023-02-01
+date: 2023-02-02
 authors:
   - argyle
 tags:
