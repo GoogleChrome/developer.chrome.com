@@ -49,6 +49,7 @@ async function buildAnnouncementComment() {
   let announcement = '';
 
   const check = JSON.parse(await fs.readFile(CHECK_DETAILS_PATH));
+  const deploymentType = await fs.readFile(DEPLOYMENT_TYPE_PATH);
 
   const startedAt = new Date(check.started_at);
   const completedAt = new Date(check.completed_at);
@@ -56,22 +57,18 @@ async function buildAnnouncementComment() {
   const duration =
     Math.abs(startedAt.getTime() - completedAt.getTime()) / 1000 / 60;
 
-  const status = check.status;
   const conclusion = check.conclusion;
 
-  console.log(check);
-
-  if (status !== 'completed' && conclusion !== 'success') {
+  if (conclusion === 'failure') {
     announcement =
-      `Staging build started at ${check.started_at} did not succeed.` +
-      `Status is ${status}, conclusion is ${conclusion} ` +
-      `after ${duration.toFixed(
+      `Staging build (${deploymentType}) for commit ${commit} started at ${check.started_at} ` +
+      `did not succeed and failed after ${duration.toFixed(
         2
-      )} minutes. Please ping engineering for assistance ` +
-      `or [see logs for details](${check.html_url}).`;
+      )} minutes. Please ` +
+      `[see logs for details](${check.html_url}).`;
   } else {
     announcement =
-      `Staging build for commit ${commit} ` +
+      `Staging build (${deploymentType}) for commit ${commit} ` +
       `started at ${check.started_at} completed after ${duration.toFixed(
         2
       )} minutes.`;
