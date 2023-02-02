@@ -980,10 +980,16 @@ animation it's a series of colors over time.
 ```css
 @keyframes bg {
   0%, 100% {
-    background: blue;
+    background: orange;
+  }
+  25% {
+    background: magenta;
   }
   50% {
-    background: white;
+    background: lime;
+  }
+  75% {
+    background: cyan;
   }
 }
 
