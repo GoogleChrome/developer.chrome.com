@@ -185,3 +185,7 @@ But, you certainly can look at the Python code and modify it into something amaz
 Before the introduction of the CrUX History API endpoint, site owners were limited in the historical information they could obtain from CrUX. Monthly, origin-level data was available via Big Query and the CrUX Dashboard, but weekly data was not available and neither was page-level historical data. Site owners could record this data themselves using the daily API, but often the need for this was only discovered after a regression in metrics.
 
 We hope with the introduction of this CrUX History API will allow site owners to have a better understanding of their changing site metrics, and as an investigation tool for when issues arise. We are keen to hear how you are using the new API and welcome feedback at the [Chrome UX Report (Discussions) google group](https://groups.google.com/a/chromium.org/g/chrome-ux-report).
+
+## Acknowledgements
+
+_Hero image by [Dave Herring](https://unsplash.com/@daveherring) on [Unsplash](https://unsplash.com/photos/NqOInJ-ttqM)_
