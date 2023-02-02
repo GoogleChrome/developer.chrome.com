@@ -129,16 +129,15 @@ There are a number of other changes introduced in Manifest V3:
 * [Content security policy (CSP)](/docs/extensions/mv3/intro/mv3-migration#content-security-policy): You now specify separate CSP for different execution contexts in a single object, and certain policies are disallowed.
 * [executeScript() changes](/docs/extensions/mv3/intro/mv3-migration#executing-arbitrary-strings): Extensions can no longer execute arbitrary strings, only script files and functions. This method is also migrating from the Tabs API to the new Scripting API.
 * [A new in-memory StorageArea][storage-session] that can be used to store values in-memory across service worker restarts.
+* [Dynamic content scripts][cs-runtime]: the new [Scripting API][doc-scripting] lets extensions register and unregister content scripts at runtime.
+* [New favicon API][doc-favicon]: this new JavaScript API replaces "chrome://favicons" and gives developers a way to retrieve websites' favicons.
 
-The following features will be added to Manifest V3 soon:
-
-* **Dynamic content scripts:** the new [Scripting API][doc-scripting] lets extensions register and unregister content scripts at runtime.
-* **New favicon API:** this new JavaScript API replaces "chrome://favicons". See [Fetching favicons][doc-favicon] to learn how to retrieve websites' favicon.
-
-Look for announcements of these and other Manifest V3 features as they become available.
+Look for [announcements][whats-new] of new Manifest V3 features as they become available.
 
 [doc-scripting]: /docs/extensions/reference/scripting/
 [storage-session]: /docs/extensions/reference/storage/#property-session
 [mdn-promise]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
 [doc-promises]: /docs/extensions/mv3/promises#compare-to-callback
 [doc-favicon]: /docs/extensions/mv3/favicon/
+[whats-new]: /docs/extensions/whatsnew/
+[cs-runtime]: /docs/extensions/mv3/content_scripts/#run_time
