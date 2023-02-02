@@ -1,28 +1,11 @@
 ---
 layout: 'layouts/doc-post.njk'
-
-# The page title. This appears at the top of the doc and as the page name
-# in Google Search.
 title: Overview of Manifest V3
 seoTitle: Overview of the Chrome Extension Manifest V3
-
-# This appears below the title and is an optional teaser
 subhead: 'Key changes and features of Manifest V3.'
-
-# This appears in the ToC of the project landing page at
-# /docs/[project-name]/. It also appears in the <meta description> used in
-# Google Search.
 description: 'A description of the features and changes introduced by Manifest V3.'
-
-# The publish date
 date: 2020-11-09
-
-# An optional updated date
 updated: 2021-10-03
-
-# A list of authors. These usernames correspond to the keys in the
-# _data/authorsData.json file.
-
 ---
 
 Manifest V3 (Manifest V3) is a major step forward in steering towards our
@@ -132,8 +115,8 @@ can defer this part of your migration until you're ready, or begin using
 promises immediately.
 
 Some scenarios, such as event listeners, will still require callbacks. For
-information on using promises, see [Promises on MDN][3]. For information on
-converting callbacks to promises, see [our own article][4].
+information on using promises, see [Promises on MDN][mdn-promise]. For information on
+converting callbacks to promises, see [our own article][doc-promises].
 
 
 ## Other features {: #other-features }
@@ -145,16 +128,17 @@ There are a number of other changes introduced in Manifest V3:
 * [Web accessible resources](/docs/extensions/mv3/intro/mv3-migration#web-accessible-resources): These resources are now available only to specified sites and extensions.
 * [Content security policy (CSP)](/docs/extensions/mv3/intro/mv3-migration#content-security-policy): You now specify separate CSP for different execution contexts in a single object, and certain policies are disallowed.
 * [executeScript() changes](/docs/extensions/mv3/intro/mv3-migration#executing-arbitrary-strings): Extensions can no longer execute arbitrary strings, only script files and functions. This method is also migrating from the Tabs API to the new Scripting API.
-* [A new in-memory StorageArea][2] that can be used to store values in-memory across service worker restarts.
+* [A new in-memory StorageArea][storage-session] that can be used to store values in-memory across service worker restarts.
 
 The following features will be added to Manifest V3 soon:
 
-* **Dynamic content scripts:** the new [Scripting API][1] lets extensions register and unregister content scripts at runtime.
-* **New favicon API:** this new JavaScript API replaces "chrome://favicons" and gives  developers a way to retrieve websites' favicons.
+* **Dynamic content scripts:** the new [Scripting API][doc-scripting] lets extensions register and unregister content scripts at runtime.
+* **New favicon API:** this new JavaScript API replaces "chrome://favicons". See [Fetching favicons][doc-favicon] to learn how to retrieve websites' favicon.
 
 Look for announcements of these and other Manifest V3 features as they become available.
 
-[1]: /docs/extensions/reference/scripting/
-[2]: /docs/extensions/reference/storage/#property-session
-[3]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
-[4]: /docs/extensions/mv3/promises#compare-to-callback
+[doc-scripting]: /docs/extensions/reference/scripting/
+[storage-session]: /docs/extensions/reference/storage/#property-session
+[mdn-promise]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
+[doc-promises]: /docs/extensions/mv3/promises#compare-to-callback
+[doc-favicon]: /docs/extensions/mv3/favicon/
