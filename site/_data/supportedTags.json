@@ -50,6 +50,9 @@
   "file-system": {
     "title": "i18n.tags.file-system"
   },
+  "fugu-case-study": {
+    "title": "i18n.tags.fugu-case-study"
+  },
   "games": {
     "title": "i18n.tags.games"
   },
