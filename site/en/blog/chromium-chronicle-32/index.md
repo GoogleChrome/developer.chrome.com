@@ -31,7 +31,9 @@ While we can't completely remove the potential of n-day exploitation, reducing t
 
 Mind the patch gap and do the following things.
 
-### Update security bugs to Status=Fixed as soon as you have landed the CL with the security fix. 
+### Update security bugs to Status=Fixed quickly
+
+As soon as you have landed the CL with the security fix, update it to `Status=Fixed`. 
 
 This allows the Sheriffbot automation to [update the bug](https://bugs.chromium.org/p/chromium/issues/detail?id=1369882#c19) with the appropriate merge request labels based on security severity and impact. 
 
