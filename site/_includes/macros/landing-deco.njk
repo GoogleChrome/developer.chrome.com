@@ -1,4 +1,4 @@
-{% macro landingDeco(title, desc, color, imgSrc, imgAlt, imgWidth, imgHeight, smallImgSrc) %}
+{% macro landingDeco(title, desc, color, imgSrc, imgAlt, imgWidth, imgHeight, smallImgSrc, learnMore) %}
   <div class="landing-deco pad-300 md:pad-500 masonry:pad-500 width-full bg-{{color}}-lightest">
     <div class="landing-deco__inner">
       <div>
@@ -18,6 +18,9 @@
         <p class="gap-top-300 gap-bottom-600 md-only">
           {{ desc | md | safe }}
         </p>
+        {% if learnMore %}
+          <a class="landing-deco__learn-more color-{{color}}-medium" href="{{learnMore}}">Learn more</a>
+        {% endif %}
       </div>
       {% if imgSrc %}
         <div class="display-flex justify-content-center align-content-center gap-top-600 masonry:gap-top-600 md-only">

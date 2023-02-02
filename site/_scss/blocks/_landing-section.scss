@@ -41,6 +41,13 @@
       display: flex;
       gap: 0.8em;
     }
+
+    .landing-deco__learn-more {
+      display: inline-block;
+      font-size: px-to-rem(14px);
+      padding: 1rem 0;
+      text-decoration: unset;
+    }
   }
 
   &__links {
