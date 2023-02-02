@@ -5,7 +5,7 @@ description: >
   News of an origin trial from Chrome that enables arbitrary HTML content in an always-on-top window.
 authors:
   - beaufortfrancois
-date: 2023-01-26
+date: 2023-02-02
 hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/lofWr2Afx8wx94iMIEyg.jpg
 alt: Person holding a photo of a boat.
 tags:

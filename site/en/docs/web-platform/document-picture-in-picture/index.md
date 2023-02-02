@@ -5,7 +5,7 @@ description: >
  Display arbitrary HTML content in an always-on-top window.
 authors:
   - beaufortfrancois
-date: 2023-01-26
+date: 2023-02-02
 hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/l8xW8V85N60e4dmwUwmE.jpg
 alt: Person holding outdoor lounge chairs.
 tags:
