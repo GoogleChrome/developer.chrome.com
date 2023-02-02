@@ -147,7 +147,7 @@ An extension can add or remove rules dynamically using the [updateDynamicRules][
 
 ## Updating enabled rulesets
 
-An extension can update the set of enabled static rulesets using the [updateEnabledRulesets][14] API
+An extension can update the set of enabled static rulesets using the [updateEnabledRulesets()][14]
 method.
 
 - The number of static rulesets which are enabled at one time must not exceed
