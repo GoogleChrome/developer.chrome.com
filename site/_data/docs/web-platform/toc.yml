@@ -19,6 +19,7 @@
 
 - title: i18n.docs.web-platform.origin-trials
   sections:
+    - url: /docs/web-platform/document-picture-in-picture
     - url: /docs/web-platform/launch-handler
     - url: /docs/web-platform/webgpu
     - url: /docs/web-platform/popup-api
