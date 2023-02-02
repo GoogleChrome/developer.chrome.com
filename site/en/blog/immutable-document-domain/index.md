@@ -226,7 +226,7 @@ even after it becomes immutable by default.
 Optionally, your admin can configure `OriginAgentClusterDefaultEnabled` policy
 to `false` to make `document.domain` settable by default on Chrome instances
 across your organization. To learn more, read [Chrome Enterprise Policy List &
-Management | Documentation](https://chromeenterprise.google/policies/#OriginAgentClusterDefaultEnabled)
+Management | Documentation](https://chromeenterprise.google/policies/#OriginAgentClusterDefaultEnabled).
 
 ## Browser compatibility
 
