@@ -4,7 +4,7 @@ description: >
   We are celebrating the launch of Chrome version 100 with a walk down memory lane. 
 layout:
   'layouts/blog-post.njk'
-date: 2022-03-29
+date: 2022-03-30
 authors:
   - rachelandrew
 hero: 'image/kheDArv5csY6rvQUJDbWRscckLr1/AlyVvShYHBM5I7ikG8vj.jpg'
