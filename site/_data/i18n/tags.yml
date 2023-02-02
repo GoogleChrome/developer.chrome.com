@@ -26,6 +26,9 @@ capabilities:
 case-study:
   en: Case study
 
+fugu-case-study:
+  en: Fugu case study
+
 # DevTools-related tags
 css:
   en: CSS
