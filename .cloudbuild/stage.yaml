@@ -8,7 +8,9 @@ steps:
     entrypoint: npm
     args: ['run', 'production']
     env:
+      - 'CI=true'
       - 'NODE_OPTIONS="--max_old_space_size=8192"'
+      - 'ELEVENTY_IGNORE_NACL=true'
 
   - name: node:18
     entrypoint: npm
@@ -39,5 +41,5 @@ options:
 
 availableSecrets:
   secretManager:
-    - versionName: projects/dcc-staging/secrets/GITHUB_TOKEN/versions/1
+    - versionName: projects/dcc-staging/secrets/GITHUB_TOKEN/versions/2
       env: 'GITHUB_TOKEN'
