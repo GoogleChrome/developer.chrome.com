@@ -13,6 +13,7 @@ authors:
 tags:
   - capabilities
   - case-study
+  - fugu-case-study
 ---
 
 [Boxy SVG](https://boxy-svg.com/) is a vector graphics editor. Its main use case is editing drawings in the SVG file format, for creating illustrations, logos, icons, and other elements of graphic design. It's developed by Polish developer [Jarosław Foksa](https://foksa.name/) and was initially released on March 15, 2013. Jarosław runs a [Boxy SVG blog](https://boxy-svg.com/blog/) in which he announces new features he adds to the app. The developer is a strong supporter of [Chromium's Project Fugu](/capabilities/) and even has a [Fugu tag](https://boxy-svg.com/ideas?tag=Fugu) on the app's ideas tracker.
