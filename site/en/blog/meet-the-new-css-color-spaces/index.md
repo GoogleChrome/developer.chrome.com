@@ -16,21 +16,21 @@ alt: >
 ---
 
 CSS color 4 brings a large set of tools and features to CSS for managing and
-handling color. I've written an article called the [High Definition Color
-Guide](articles/high-definition-css-color-guide/) to cover all these new
-features:
+handling color. I've written the [High Definition Color
+Guide](/articles/high-definition-css-color-guide/) to cover all these new
+features. In this guide you will learn:
 
 - What is a color gamut?
-- Human visual gamut
+- Human visual gamut.
 - What is a color space?
-- How to access more colors, new spaces, and debug results
-- A review of the classic color spaces
-- Meet the new web color spaces
-- Color interpolation
-- Gamut clamping
-- Choosing a color space
-- Migrating to HD CSS color
-- Checking for gamut and color space support
-- Debugging color with Chrome DevTools
+- How to access more colors, new spaces, and debug results.
+- A review of the classic color spaces.
+- Meet the new web color spaces.
+- Color interpolation.
+- Gamut clamping.
+- Choosing a color space.
+- Migrating to HD CSS color.
+- Checking for gamut and color space support.
+- Debugging color with Chrome DevTools.
 
-I hope this finds you well and answers all your color questions 🙂
+I hope this finds you well and answers all your color questions. 🙂
