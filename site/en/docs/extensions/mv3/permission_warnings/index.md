@@ -98,17 +98,15 @@ enable access for those features inside the extension's detail page at chrome://
 
 An extension can detect if it is enabled in incognito mode by calling
 [`extension.isAllowedIncognitoAccess()`][incognito-allow] or able run on `file://` URLs with
-[`extension.isAllowedFileSchemeAccess()`][file-scheme-allow] .
+[`extension.isAllowedFileSchemeAccess()`][file-scheme-allow].
 
-<!-- TODO duplicate ID (was previously #view_warnings) -->
-
-## Understanding permissions
+## Understanding permissions {: #understanding-permissions }
 
 Permission warnings exist to describe the capabilities granted by an API to extension users, but
 some of these warnings may not be obvious at first. For instance, adding the `"tabs"`
 permission results in a seemingly unrelated warning: the extension can **Read your browsing
 activity**. Although the [Tabs API][api-tabs] might be used to only open new tabs, it can also be used
-to see the URL that is associated with every newly opened tab by using their [tabs.Tab][23] objects.
+to see the URL that is associated with every newly opened tab by using their [tabs.Tab][tabs-tab] objects.
 
 When possible, implement [optional permissions][api-optional-perms] or a less powerful API to avoid alarming
 warnings.
@@ -246,7 +244,7 @@ the steps in [Viewing Warnings](#view_warnings).
     </tr>
     <tr id="favicon">
       <td><code>"favicon"</code></td>
-      <td>Allows the extension to use the Favicon API.</td>
+      <td>Grants the extension access to the <a href="/docs/extensions/mv3/favicon/">Favicon</a> API.</td>
       <td><strong>Read the icons of the websites you visit</strong></td>
     </tr>
     <tr id="geolocation">
@@ -367,6 +365,7 @@ This can be avoided by making the new feature optional and adding new permission
 [file-scheme-allow]: /docs/extensions/reference/extension#method-isAllowedFileSchemeAccess
 [gh-opt-perms]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/examples/optional-permissions
 [incognito-allow]: /docs/extensions/reference/extension#method-isAllowedIncognitoAccess
+[tabs-tab]: /docs/extensions/reference/tabs/#type-Tab
 [section-update]: #update_permissions
 [section-view-warnings]: #view_warnings
 [section-warnings]: #permissions_with_warnings
