@@ -2,7 +2,7 @@
 {% from 'macros/landing-deco.njk' import landingDeco with context %}
 {% from 'macros/related-articles.njk' import relatedArticles with context %}
 
-{% macro landingSectionUseCases(title, desc, useCase1Title, useCase1items, useCase2Title, useCase2items, items, color, type, ordered, imgSrc, imgAlt, imgWidth, imgHeight, smallImgSrc, learnMore) %}
+{% macro landingSectionUseCases(title, desc, useCase1Title, useCase1items, useCase2Title, useCase2items, items, color, type, ordered, imgSrc, imgAlt, imgWidth, imgHeight, smallImgSrc, learnMore, moreDocuments1Title, moreDocuments1Items, moreDocuments2Title, moreDocuments2Items) %}
 
 <section
   class="landing-section landing-section--{{type}} {% if ordered %} landing-section--ordered {% endif %} hairline rounded-lg width-full display-grid gap-top-400"
@@ -35,6 +35,9 @@
         {% endif %}
       {% endfor %}
 		</div>
+    <div class="landing-section__documents">
+         {{ relatedArticles(moreDocuments1Title, moreDocuments1Items, color) }}
+    </div>
 	{% endif %}
 	
 	
@@ -60,6 +63,9 @@
         {% endif %}
       {% endfor %}
 		</div>
+    <div class="landing-section__documents">
+         {{ relatedArticles(moreDocuments2Title, moreDocuments2Items, color) }}
+    </div>
 	{% endif %}
 
       {% if items %}
