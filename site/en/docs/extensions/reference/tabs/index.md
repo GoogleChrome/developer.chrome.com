@@ -254,8 +254,8 @@ For more Tabs API extensions demos, explore any of the following:
 [doc-match]: /docs/extensions/mv3/match_patterns/
 [doc-perms]: /docs/extensions/mv3/permission_warnings/
 [doc-promises]: /docs/extensions/mv3/promises/
-[mv2-tabs-samples]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/tabs/
-[mv3-tabs-manager]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/tabs-manager
+[mv2-tabs-samples]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/_archive/mv2/api/tabs/
+[mv3-tabs-manager]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.tabs-manager
 [samples-repo]: https://github.com/GoogleChrome/chrome-extensions-samples
 [section-manifest]: #manifest
 [tab]: #type-Tab

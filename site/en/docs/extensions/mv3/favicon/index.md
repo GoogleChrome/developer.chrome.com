@@ -109,8 +109,8 @@ There are two favicon examples in the [chrome-extension-samples][gh-samples] rep
 [doc-manifest]: /docs/extensions/mv3/manifest/
 [doc-perms-warn]: /docs/extensions/mv3/permission_warnings/#permissions_with_warnings
 [doc-war]: /docs/extensions/mv3/manifest/web_accessible_resources/
-[gh-favicon-api]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/favicon
-[gh-favicon-cs]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/examples/favicon-cs
+[gh-favicon-api]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/favicon
+[gh-favicon-cs]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.favicon-cs
 [gh-samples]: https://github.com/GoogleChrome/chrome-extensions-samples/
 [mdn-favicon]: https://developer.mozilla.org/docs/Glossary/Favicon
 [runtime-geturl]: /docs/extensions/reference/runtime/#method-getURL

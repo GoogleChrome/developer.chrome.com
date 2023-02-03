@@ -57,13 +57,13 @@ Read the instructions carefully; each extension is different. For example, some 
 If you encounter any problems with an example, let us know by [posting an issue][gh-issues]. If you want to submit a new extension, check out the [Contributing Guide][gh-contributing] to find out how to submit a new example to this collection.
 
 [dev-basics-locally]: /docs/extensions/mv3/getstarted/development-basics/
-[gh-action]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/action
-[gh-api]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api
+[gh-action]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/action
+[gh-api]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples
 [gh-contributing]: https://github.com/GoogleChrome/chrome-extensions-samples/blob/main/CONTRIBUTING.md
 [gh-examples]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/examples
 [gh-issues]: https://github.com/GoogleChrome/chrome-extensions-samples/issues
 [gh-samples]: https://github.com/GoogleChrome/chrome-extensions-samples
-[gh-tutorials]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials
+[gh-tutorials]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples
 [gs-tutorials]: /docs/extensions/mv3/getstarted/#tutorial
 [tut-fm]: /docs/extensions/mv3/getstarted/tut-focus-mode/
 [tut-rt]: /docs/extensions/mv3/getstarted/tut-reading-time/
