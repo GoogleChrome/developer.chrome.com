@@ -58,7 +58,7 @@ curl "https://chromeuxreport.googleapis.com/v1/records:queryRecord?key=$API_KEY"
 }
 ```
 
-This snapshot includes histogram density values and percentile values for a particular 28-day collection period, in this case, from December 27, 2002, to January 23, 2023.
+This snapshot includes histogram density values and percentile values for a particular 28-day collection period, in this case, from December 27, 2022, to January 23, 2023.
 
 ## Querying the CrUX History API
 
