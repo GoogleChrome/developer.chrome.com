@@ -27,7 +27,7 @@ tags:
 
 <!-- ## Recorder: Copy as options for steps, in-page replay, step’s context menu {: #recorder } -->
 
-## Recorder: ステップごとのCopy asオプション、ページ内リプレイ、ステップのコンテキストメニュー {: #recorder }
+## Recorder: ステップごとのCopy asオプション、ページ内リプレイ、ステップのコンテキストメニュー {: #recorder } 
 
 <!-- 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/uCqjrGj716ZbDJ4N37dl.png", alt="New copy options in the Recorder panel.", width="800", height="615" %}
