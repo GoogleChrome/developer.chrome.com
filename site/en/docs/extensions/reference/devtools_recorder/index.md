@@ -48,11 +48,11 @@ chrome.devtools.recorder.registerRecorderExtensionPlugin(
 
 ## Customizing the replay button
 
-Customization of the replay button also required the use of the `registerRecorderExtensionPlugin` function. The plugin instance must implement the `replay` method to customize the replay feature.
-If the Recorder panel detects the `replay` method on the plugin instance, it will show a button to replay a recording using this plugin in the Recorder panel. Once clicked, the Recorder panel will forward
-the current recording object as the first argument to the `replay` method.
+To customize the replay button in the **Recorder**, use the `registerRecorderExtensionPlugin` function. The plugin must implement the `replay` method for the customization to take effect. 
+If the method is detected, a replay button will appear in the **Recorder**. 
+Upon clicking the button, the current recording object will be passed as the first argument to the `replay` method.
 
-At this point, the extension can show a RecorderView to handle the replay or use any other extension APIs to process the replay request. You can create a new view by invoking `chrome.devtools.recorder.createView`.
+At this point, the extension can display a `RecorderView` for handling the replay or use other extension APIs to process the replay request. To create a new `RecorderView`, invoke `chrome.devtools.recorder.createView`.
 
 ## Replay plugin example 
 
