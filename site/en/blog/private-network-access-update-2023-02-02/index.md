@@ -14,7 +14,7 @@ tags:
 
 Feedback from websites currently participating in the [Private Network Access from non-secure contexts deprecation trial](/origintrials/#/view_trial/4081387162304512001) has emphasized the difficulty in migrating affected websites to HTTPS. As a result, the trial is extended until Chrome 113 inclusive. Chrome 114, the first milestone without support for the trial, will roll out to Beta in early May 2023 and Stable in the end of May 2023.
 
-A permission prompt will be built to allow mix-content requests from HTTPs public websites to plaintext private devices. For more information, please check the [feature explainer](https://github.com/WICG/local-network-access/blob/main/permission_prompt/explainer.md) for an overview and the [developer walks through document](https://docs.google.com/document/d/1W70cFFaBGWd0EeOOMxJh9zkmxZ903vKUaGjyF-w7HcY/edit#heading=h.qof2sn5s8r89) to overview developers' possible approaches to achieve. We will put out a blog post with more details in the future once it is ready.
+A permission prompt will be built to allow mix-content requests from HTTPs public websites to plaintext private devices. For more information, please check the [feature explainer](https://github.com/WICG/local-network-access/blob/main/permission_prompt/explainer.md) for an overview and the [developer walks through document](https://docs.google.com/document/d/1W70cFFaBGWd0EeOOMxJh9zkmxZ903vKUaGjyF-w7HcY/edit#heading=h.qof2sn5s8r89) to see developers' possible approaches need to achieve. We will put out a blog post with more details in the future once it is ready.
 
 For further information, please see [Private Network Access update: Introducing a deprecation trial](/blog/private-network-access-update/).
 
