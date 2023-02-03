@@ -980,10 +980,16 @@ animation it's a series of colors over time.
 ```css
 @keyframes bg {
   0%, 100% {
-    background: blue;
+    background: orange;
+  }
+  25% {
+    background: magenta;
   }
   50% {
-    background: white;
+    background: lime;
+  }
+  75% {
+    background: cyan;
   }
 }
 
@@ -1067,7 +1073,7 @@ color space interpolations. In the above case for `.gradient`, browsers will
 notice the differentiating color spaces and use the default color space `oklab`.
 You may think the browser would use lch as the color space, since that's the
 first color, but it doesn't and that's why I show a second comparison gradient
-`.lch`. The `.lch` gradfient is a gradient from the lch color space.
+`.lch`. The `.lch` gradient is a gradient from the lch color space.
 
 ##### Less banding thanks to 16-bit color
 
