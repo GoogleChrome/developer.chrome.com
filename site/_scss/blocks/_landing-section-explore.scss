@@ -1,0 +1,33 @@
+.landing-explore {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .landing-explore__link {
+    align-items: center;
+    border-radius: 0.75rem;
+    color: var(--color-bg);
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    text-decoration: none;
+
+    @include media-query('md-max') {
+      width: 100%;
+    }
+
+    @include media-query('md') {
+      width: calc((100% - 3rem) / 2);
+    }
+    
+    @include media-query('lg') {
+      width: calc((100% - 3rem) / 3);
+    }
+  }
+
+  .landing-explore__icon {
+    display: flex;
+    padding: 2px 0;
+  }
+}
