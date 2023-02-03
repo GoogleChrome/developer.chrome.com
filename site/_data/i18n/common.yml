@@ -78,12 +78,9 @@ success:
   en: 'Success'
   es: 'Éxito'
 
-gotchas:
-  en: 'Gotchas'
-  es: 'Gotchas'
-
 important:
   en: 'Important'
+  es: 'Importante'
 
 key-term:
   en: 'Key Term'
