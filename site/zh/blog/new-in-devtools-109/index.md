@@ -4,7 +4,7 @@ title: "DevTools 新功能（Chrome 109）"
 authors:
   - jecelynyeen
 date: 2023-01-15
-description: 'Recorder 面板支持复制步骤为脚本，performance 面板里面的记录显示真实的函数名称，以及更多。'
+description: 'Recorder 面板支持复制步骤为脚本，在 Performance 面板里面显示真实的函数名称，以及更多。'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/p70HCxnj5vSj9MbsSk8H.png'
 alt: ''
 tags:
@@ -31,25 +31,25 @@ tags:
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/uCqjrGj716ZbDJ4N37dl.png", alt="Recorder 面板支持新的复制选项", width="800", height="615" %}
 
 <!-- Open an existing user flow in the **Recorder**. Previously, when you replayed the user flow, DevTools would always start the replay by navigating to or reloading the page. -->
-打开 **Recorder** 面板里面已有的一个用户流程。在此之前，当您重放该用户流程时，DevTools 会始终通过跳转或重新加载页面的方式来执行此次的重放。
+在 **Recorder** 面板里面打开一个用户流程。之前，当您重放该用户流程时，DevTools 会始终通过跳转或重新加载页面的方式来执行此次的重放。
 
 <!-- With the latest updates, the **Recorder** shows the navigation step separately. You can right-click and remove it to perform in-page replay!  -->
 有了这次更新，**Recorder** 面板就可以分别展示各个跳转（navigation）步骤。您可以鼠标右键并删除它来执行页面内重放！
 
 <!-- Apart from that, you can right-click a step and copy it to the clipboard in the **Recorder* panel instead of exporting the whole user flow. It works with [extensions](https://goo.gle/recorder-extension) too. For example, try to copy a step as a [Nightwatch Test](https://bit.ly/nightwatch-recorder) script. With this feature, you can update any existing script with ease. -->
-除此之外，您还可以对步骤进行鼠标右键操作并将其复制到 **Recorder** 面板的剪贴板中，而不再是导出整个用户流程。它也适用于 [扩展](https://goo.gle/recorder-extension)。例如，尝试将步骤复制为 [Nightwatch Test](https://bit.ly/nightwatch-recorder) 脚本。有了这个功能，您可以轻松地更新任何已有脚本。
+除此之外，您还可以对步骤进行鼠标右键操作并将其复制到 **Recorder** 面板的剪贴板中，而不再是导出整个用户流程。它也适用于 [Chrome 扩展](https://goo.gle/recorder-extension)。例如，尝试将步骤复制为 [Nightwatch Test](https://bit.ly/nightwatch-recorder) 脚本。有了这个功能，您可以轻松地更新任何已有脚本。
 
 <!-- Previously, you could access the step menu only through the 3-dot button. You can now right-click anywhere on the step to access the menu. -->
-在此之前，您只能通过点击 3 个点按钮的方式来弹出步骤菜单。现在，您可以在步骤上的任何位置通过鼠标右键的方式来弹出菜单。
+现在，您可以在步骤上的任何位置通过鼠标右键的方式来弹出菜单。在此之前，您只能通过点击 3 个点按钮的方式来弹出步骤菜单。
 
 Chromium 议题：[1322313](https://crbug.com/1322313), [1351649](https://crbug.com/1351649), [1322313](https://crbug.com/1322313), [1339767](https://crbug.com/1339767)
 
 
 <!-- ## Show actual function names in performance’s recordings {: #performance } -->
-## Performance 面板里面的记录显示实际的函数名称 {: #performance }
+## 在 Performance 面板里显示实际的函数名称 {: #performance }
 
 <!-- The **Performance** panel now shows the actual function names and their sources in the trace if there’s a sourcemap. -->
-如果有 sourcemap，**Performance** 面板现在将会在 trace 中显示实际的函数名称和它们的源文件。
+**Performance** 面板现在会读取 sourcemap， 在 trace 中显示实际的函数名称和它们的源文件。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/9pHMVM1ARXrlyLoTziVA.png", alt="在 Performance 面板里面，对比显示压缩前的函数名称与压缩后的函数名称。", width="800", height="509" %}
 
@@ -85,7 +85,7 @@ Chromium 议题：[1364601](https://crbug.com/1364601), [1364601](https://crbug.
 此外，您可以在 MacOS 系统里面使用 <kbd>Ctrl</kbd> + <kbd>N</kbd> 和 <kbd>Ctrl + P</kbd> 来上下选择自动填充建议，类似于 [Emacs](https://www.gnu.org/software/emacs/)。例如，您可以在 `Console` 面板里面输入 `window.` 并使用这些快捷键来上下选择自动填充建议。
 
 <!-- On top of that, DevTools now accepts <kbd>Arrow Right</kbd> for autocompletion only at the end of line. For example, an autocomplete dialog shows when you are editing something in the middle of the code. When you press the <kbd>Arrow Right</kbd> key, most likely, you want to set the cursor to the next position instead of autocomplete. This UX change better aligns with your authoring workflow. -->
-此外，DevTools 现在只会在行尾响应用于自动填充的 <kbd>Arrow Right</kbd>。例如，当您在代码的中间位置编辑某些内容时，会弹出自动填充对话框。当您按下 <kbd>Arrow Right</kbd>时，您很可能想要将光标设置到下一个位置，而不是自动填充。这个 UX 上的变动可以更好地服务于您的工作流。
+此外，DevTools 现在只会在行尾响应用于自动填充的 <kbd>Arrow Right</kbd>。例如，当您在代码的中间位置编辑某些内容时，会弹出自动填充对话框。当您按下 <kbd>Arrow Right</kbd>时，您很可能想要将光标设置到下一个位置，而不是自动填充。这个 UX 上的变动可以更好地服务于您的工作流程。
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/686acb9789020a511405a53a13ad754a7e928c99 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/09c3ceaa1605b29d1074d0cf310958bdb823149d #}
@@ -147,7 +147,7 @@ Chromium 议题：[1267690](https://crbug.com/1267690), [1246863](https://crbug.
 
 
 <!-- ## [Experimental] Enhanced UX in managing breakpoints -->
-## 【实验】优化断点管理界面的 UX
+## 【实验阶段】优化断点管理界面的 UX
 
 
 {% Aside %}
@@ -181,7 +181,7 @@ Chromium 议题：[1346231](https://crbug.com/1346231), [1324904](https://crbug.
 
 
 <!-- ## [Experimental] Automatic in-place pretty print -->
-## 【实验】自动格式化
+## 【实验阶段】自动格式化
 
 {% Aside %}
 <!-- To enable the experiment, check **Automatically pretty print in the Sources panel** under **Settings** > **Experiments**. -->

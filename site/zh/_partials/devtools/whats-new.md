@@ -11,8 +11,8 @@
 * [Console & Sources 面板新增快捷键](/zh/blog/new-in-devtools-109/#keyboard-shortcuts)
 * [改善 JavaScript 调试体验](/zh/blog/new-in-devtools-109/#debugging)
 * [其他的更新](/zh/blog/new-in-devtools-109/#misc)
-* [【实验】优化断点管理界面的 UX](/zh/blog/new-in-devtools-109/#breakpoint-redesign)
-* [【实验】自动格式化](/zh/blog/new-in-devtools-109/#pretty-print)
+* [【实验阶段】优化断点管理界面的 UX](/zh/blog/new-in-devtools-109/#breakpoint-redesign)
+* [【实验阶段】自动格式化](/zh/blog/new-in-devtools-109/#pretty-print)
 
 
 ### Chrome 108 {: #chrome108 }
