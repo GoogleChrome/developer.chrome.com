@@ -12,7 +12,7 @@ tags:
   - security
 ---
 
-Feedback from websites currently participating in the [Private Network Access from non-secure contexts deprecation trial](https://developer.chrome.com/origintrials/#/view_trial/4081387162304512001) has emphasized the difficulty in migrating affected websites to HTTPS. As a result, the trial is extended until Chrome 113 inclusive. Chrome 114, the first milestone without support for the trial, will roll out to Beta in April 2023 and Stable in May 2023.
+Feedback from websites currently participating in the [Private Network Access from non-secure contexts deprecation trial](https://developer.chrome.com/origintrials/#/view_trial/4081387162304512001) has emphasized the difficulty in migrating affected websites to HTTPS. As a result, the trial is extended until Chrome 113 inclusive. Chrome 114, the first milestone without support for the trial, will roll out to Beta in early May 2023 and Stable in the end of May 2023.
 
 For further information, please see [Private Network Access update: Introducing a deprecation trial](/blog/private-network-access-update/).
 
