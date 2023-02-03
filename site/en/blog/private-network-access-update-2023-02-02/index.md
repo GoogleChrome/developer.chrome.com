@@ -23,6 +23,6 @@ Let us know by filing an issue with Chromium at [crbug.com](crbug.com) and set
 the component to `Blink>SecurityFeature>CORS>PrivateNetworkAccess` or open an issue
 under [Private Network Access WICG specification Github repository](https://github.com/WICG/local-network-access/issues).
 
-Thank you for all the effort you put with us to make the web safer!
+Thank you for helping us make the web safer!
 
 
