@@ -3,7 +3,7 @@ layout: 'layouts/blog-post.njk'
 title: "Private Network Access update: Announce extension of the Deprecation Trial"
 authors:
   - lyf
-description: Chrome is deprecating access to private network endpoints from non-secure public websites as part of the Private Network Access specification and is currently in a stage of deprecation trial until Chrome 113 at the moment.
+description: Chrome is deprecating access to private network endpoints from non-secure public websites as part of the Private Network Access specification. A deprecation trial is available until Chrome 113.
 date: 2023-02-02
 hero: 'image/YLflGBAPWecgtKJLqCJHSzHqe2J2/dwtN0NkxkBmIz1EyhzAm.jpg'
 alt: 'Photo by Sara Cohen on Unsplash'
