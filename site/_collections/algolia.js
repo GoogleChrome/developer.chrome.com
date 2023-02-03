@@ -71,9 +71,11 @@ const algoliaCollection = collections => {
   });
 
   return toIndex.map(item => {
-    const image = item.data.hero
-      ? generateImgixSrc(item.data.hero, {w: 100, auto: 'format'})
-      : '';
+    const thumbnail = item.data.thumbnail ?? item.data.hero;
+    const image =
+      thumbnail !== null
+        ? generateImgixSrc(thumbnail, {w: 100, auto: 'format'})
+        : '';
 
     const url = item.data.deepLink || item.url;
 
