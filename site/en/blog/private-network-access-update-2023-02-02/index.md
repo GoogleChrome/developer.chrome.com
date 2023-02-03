@@ -21,7 +21,7 @@ If you host a website within a private network that expects requests from
 public networks, we are interested in your feedback and use cases.
 Let us know by filing an issue with Chromium at [crbug.com](crbug.com) and set
 the component to `Blink>SecurityFeature>CORS>PrivateNetworkAccess` or open an issue
-under [Private Network Access WICG specification Github repository](https://github.com/WICG/local-network-access/issues).
+in the [Private Network Access WICG specification Github repository](https://github.com/WICG/local-network-access/issues).
 
 Thank you for helping us make the web safer!
 
