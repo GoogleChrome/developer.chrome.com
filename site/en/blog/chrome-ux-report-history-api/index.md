@@ -1,8 +1,8 @@
 ---
 layout: layouts/blog-post.njk
-title: History web performance data via the CrUX API
+title: Introducing historical web performance data via the CrUX History API
 description: >
-  History web performance data via the CrUX API.
+  Learn about the new CrUX History API and how to use it to track user experience trends.
 hero: image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/Xu66s88U5aDaULbgDIz0.jpg
 alt: Trinity College Library, Dublin, Ireland
 authors:
@@ -60,7 +60,7 @@ curl "https://chromeuxreport.googleapis.com/v1/records:queryRecord?key=$API_KEY"
 
 This snapshot includes histogram density values and percentile values for a particular 28-day collection period, in this case, from December 27, 2002, to January 23, 2023.
 
-## Querying the History CrUX API
+## Querying the CrUX History API
 
 To call the history endpoint, change `queryRecord` in the URL to `queryHistoryRecord` in the curl command. Using the same [CrUX API key](/docs/crux/api/#crux-api-key) as for the previous call will work.
 
