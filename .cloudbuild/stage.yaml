@@ -1,20 +1,11 @@
-timeout: 2700s # set build timeout to 45 mins
+timeout: 2700s # Set build timeout to 45 mins
 steps:
-  - id: 'install-dependencies'
+  - id: 'install'
     name: node:18
-    entrypoint: npm
-    args: ['ci']
+    entrypoint: yarn
+    args: ['install']
 
-  - id: 'eleventy-build'
-    name: node:18
-    entrypoint: npm
-    args: ['run', 'production']
-    env:
-      - 'CI=true'
-      - 'NODE_OPTIONS="--max_old_space_size=8192"'
-      - 'ELEVENTY_IGNORE_NACL=true'
-
-  - id: 'prepare-deployment'
+  - id: 'prepare'
     name: node:18
     entrypoint: npm
     env:
@@ -22,6 +13,21 @@ steps:
       - 'PR_NUMBER=$_PR_NUMBER'
     secretEnv: ['GITHUB_TOKEN']
     args: ['run', 'stage:github', 'determineDeploymentType']
+
+  - id: 'build'
+    name: node:18
+    env:
+      - 'CI=true'
+      - 'NODE_OPTIONS="--max_old_space_size=8192"'
+      - 'ELEVENTY_IGNORE_NACL=true'
+    entrypoint: bash
+    args:
+      - '-c'
+      # Only build if there have actually been relevant changes that can be previewed
+      - |
+        if ! [[ "$(cat gulp-tasks/stageGitHub/tmp/deploymentType.txt)" = "" ]]; then
+          npm run production
+        fi
 
   - id: 'deploy'
     name: 'gcr.io/cloud-builders/gcloud'
@@ -32,12 +38,14 @@ steps:
       # without further redirects, remove the leftovers and upload everything
       # to Cloud Storage, remove afterwards to not include it in the instance image
       - |
-        cp -rf dist/en/* dist/ &&
-        rm -rf dist/en &&
-        gsutil -q -m cp -r dist gs://static-dcc-staging/pr-$_PR_NUMBER
-        rm -rf dist
+        if ! [[ "$(cat gulp-tasks/stageGitHub/tmp/deploymentType.txt)" = "" ]]; then
+          cp -rf dist/en/* dist/ &&
+          rm -rf dist/en &&
+          gsutil -q -m cp -r dist gs://static-dcc-staging/pr-$_PR_NUMBER
+          rm -rf dist
+        fi
 
-        if [ $(cat gulp-tasks/stageGitHub/tmp/deploymentType.txt) = "app" ]; then
+        if [[ "$(cat gulp-tasks/stageGitHub/tmp/deploymentType.txt)" = "app" ]]; then
           gcloud app deploy --version pr-$_PR_NUMBER-app --no-promote --project dcc-staging
         fi
 options:
