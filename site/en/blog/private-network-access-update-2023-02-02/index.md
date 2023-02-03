@@ -17,7 +17,7 @@ private webpages and migrating those with TSL certification, we are now announci
 
 For further information, please follow [Private Network Access update: Introducing a deprecation trial](/blog/private-network-access-update/).
 
-If you are hosting a website within a private network that expects requests from
+If you host a website within a private network that expects requests from
 public networks, we are interested in your feedback and use cases.
 Let us know by filing an issue with Chromium at [crbug.com](crbug.com) and set
 the component to `Blink>SecurityFeature>CORS>PrivateNetworkAccess` or open an issue
