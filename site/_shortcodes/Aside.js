@@ -26,6 +26,7 @@ const icons = {
   important: loadIcon('lightbulb-outline'),
   'key-term': loadIcon('ink-highlighter'),
   codelab: loadIcon('code'),
+  example: loadIcon('graph'),
 };
 
 /**

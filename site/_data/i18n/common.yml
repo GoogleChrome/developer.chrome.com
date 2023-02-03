@@ -93,6 +93,10 @@ codelab:
   en: 'Codelab'
   es: 'Codelab'
 
+example:
+  en: 'Example'
+  es: 'Ejemplo'
+
 objective:
   en: 'Objective'
   es: 'Objective'

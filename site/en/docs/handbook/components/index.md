@@ -136,6 +136,22 @@ Use the codelab aside to link to an associated codelab.
 Get started: [Measure your page performance with Lighthouse](#).
 {% endAside %}
 
+### Example asides
+
+```md
+{% raw %}{% Aside 'example' %}
+Use the example aside to give an example use case.
+{% endAside %}{% endraw %}
+```
+
+{% Aside 'example' %}
+Advertising platform Criteo recently ran a competition with more than
+150 teams testing different machine learning models to evaluate how
+differential privacy concepts such as noise insertion and aggregation
+might impact advertising performance. It's helpful to examine these
+concepts since they underlie several of the Privacy Sandbox APIs.
+{% endAside %}
+
 ## Blockquotes
 Use blockquotes to emphasize a quotation that's important to
 the main idea of a post. (For example, in a case study you might include
