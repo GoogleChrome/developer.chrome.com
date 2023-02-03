@@ -3,3 +3,8 @@
   gap: get-size(500);
   grid-template-columns: repeat(auto-fit, minmax(px-to-rem(220px), 1fr));
 }
+
+.post-authors-social {
+  display: flex;
+  gap: get-size(200);
+}

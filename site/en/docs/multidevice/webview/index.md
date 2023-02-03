@@ -132,13 +132,13 @@ of Android you should try enabling it for KitKat based devices and see if it imp
 [6]: /docs/multidevice/user-agent/#webview_user_agent
 [7]:
   http://developer.android.com/reference/android/webkit/WebSettings.html#setUserAgentString(java.lang.String)
-[8]: http://www.html5rocks.com/en/tutorials/webgl/webgl_fundamentals/
-[9]: http://www.html5rocks.com/en/tutorials/webrtc/basics/
-[10]: http://www.html5rocks.com/en/tutorials/webaudio/intro/
-[11]: http://www.html5rocks.com/en/mobile/fullscreen/
-[12]: http://www.html5rocks.com/en/tutorials/forms/constraintvalidation/
-[13]: http://www.html5rocks.com/en/tutorials/file/filesystem/
-[14]: http://updates.html5rocks.com/2012/08/Integrating-input-type-file-with-the-Filesystem-API
+[8]: https://web.dev/webgl-fundamentals/
+[9]: https://web.dev/webrtc-basics/
+[10]: https://web.dev/webaudio-intro/
+[11]: https://web.dev/fullscreen/
+[12]: https://web.dev/constraintvalidation/
+[13]: https://web.dev/read-files/
+[14]: /blog/integrating-input-type-file-with-the-filesystem-api/
 [15]: http://updates.html5rocks.com/tag/datalist
 [16]: https://developer.mozilla.org/docs/Web/API/Geolocation_API
 [17]: https://developer.mozilla.org/docs/Web/API/Window/deviceorientation_event

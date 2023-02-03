@@ -82,7 +82,7 @@ In accounting for the privacy budget, data revealed by passive fingerprinting
 would be assumed to be used by a site. It's important that passive 
 fingerprinting surfaces are reduced, such as achieved by [User-Agent 
 reduction](/docs/privacy-sandbox/user-agent/) and proposed by 
-[Gnatcatcher](/docs/privacy-sandbox/gnatcatcher/).
+[IP Protection](/docs/privacy-sandbox/gnatcatcher/).
 
 ## How could a privacy budget be enforced?
 

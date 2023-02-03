@@ -239,7 +239,7 @@ is determined based on the priority of each rule and the operations specified.
     "*://*.headers.com/*",
     "declarativeNetRequest"
   ],
-  "manifest_version": 2
+  "manifest_version": 3
 }
 ```
 
