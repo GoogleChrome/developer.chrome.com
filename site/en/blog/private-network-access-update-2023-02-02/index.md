@@ -15,7 +15,7 @@ tags:
 Due to massive deprecation trial feedbacks mentioning the difficulty of deprecating HTTP
 private webpages and migrating those with TSL certification, we are now announcing an extension of the trial period until Chrome 113. Chrome 113 will roll out to Beta in April 2023 and Stable in May 2023.
 
-For further information, please follow [Private Network Access update: Introducing a deprecation trial](/blog/private-network-access-update/).
+For further information, please see [Private Network Access update: Introducing a deprecation trial](/blog/private-network-access-update/). 
 
 If you host a website within a private network that expects requests from
 public networks, we are interested in your feedback and use cases.
