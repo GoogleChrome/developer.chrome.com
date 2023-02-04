@@ -3,8 +3,9 @@ layout: "layouts/doc-post.njk"
 title: "Pause your code with breakpoints"
 authors:
   - kaycebasques
+  - sofiayem
 date: 2017-02-03
-#updated: YYYY-MM-DD
+updated: 2023-02-05
 description: "Learn about all the ways you can pause your code in Chrome DevTools."
 tags:
   - javascript
@@ -36,9 +37,9 @@ To set a line-of-code breakpoint in DevTools:
 4.  To the left of the line of code is the line number column. Click on it. A blue icon appears on
     top of the line number column.
 
-{% Img src="image/admin/0BqKJaEX3Afeq6s5GbA6.png", alt="A line-of-code breakpoint.", width="800", height="572" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/IcMBSM988092ZFocJ1LJ.png", alt="A line-of-code breakpoint.", width="800", height="554" %}
 
-**Figure 1**: A line-of-code breakpoint set on line **29**
+This example shows a line-of-code breakpoint set on line **29**.
 
 ### Line-of-code breakpoints in your code {: #debugger }
 
@@ -65,19 +66,20 @@ To set a conditional line-of-code breakpoint:
 4.  To the left of the line of code is the line number column. Right-click it.
 5.  Select **Add conditional breakpoint**. A dialog displays underneath the line of code.
 6.  Enter your condition in the dialog.
-7.  Press Enter to activate the breakpoint. An orange icon appears on top of the line number column.
+7.  Press Enter to activate the breakpoint. An orange icon with a question mark appears on top of the line number column.
 
-{% Img src="image/admin/g9xQCASKEYBNWZoztC4G.png", alt="A conditional line-of-code breakpoint.", width="800", height="553" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/wbb7VQOAG1GOHvBqqjdt.png", alt="A conditional line-of-code breakpoint.", width="800", height="579" %}
 
-**Figure 2**: A conditional line-of-code breakpoint set on line **32**
+This example shows a conditional line-of-code breakpoint set on line **30**.
 
 ### Manage line-of-code breakpoints {: #manage-loc }
 
 Use the **Breakpoints** pane to disable or remove line-of-code breakpoints from a single location.
 
-{% Img src="image/admin/dgJMnIWMWFIwtJ76X9w0.png", alt="The Breakpoints pane.", width="800", height="578" %} **Figure
-3**: The **Breakpoints** pane showing two line-of-code breakpoints: one on line 15 of
-`get-started.js`, another on line 32
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/zNlws7B6u3msvtOvJYYj.png", alt="The Breakpoints pane.", width="800", height="579" %}
+
+This example shows the **Breakpoints** pane with two line-of-code breakpoints: one on line 30 of
+`get-started.js`, another on line 32.
 
 - Check the checkbox next to an entry to disable that breakpoint.
 - Right-click an entry to remove that breakpoint.
@@ -87,9 +89,9 @@ Use the **Breakpoints** pane to disable or remove line-of-code breakpoints from 
   preserve their enabled state so that they are in the same state as before when
   you reactivate them.
 
-{% Img src="image/admin/jR6uTu7EVph7vbfunUa3.png", alt="Deactivated breakpoints in the Breakpoints pane.", width="800", height="657" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/i1X2N7Fy3aPpoB4T58kb.png", alt="Deactivated breakpoints in the Breakpoints pane.", width="800", height="579" %}
 
-**Figure 4**: Deactivated breakpoints in the **Breakpoints** pane are disabled and transparent
+This example shows deactivated breakpoints in the **Breakpoints** pane with transparent markers next to the corresponding line in the **Editor**.
 
 ## DOM change breakpoints {: #dom }
 
@@ -104,9 +106,9 @@ To set a DOM change breakpoint:
 4.  Hover over **Break on** then select **Subtree modifications**, **Attribute modifications**, or
     **Node removal**.
 
-{% Img src="image/admin/PlPfY25q2BTOrc69IVDj.png", alt="The context menu for creating a DOM change breakpoint.", width="800", height="577" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XsXVifCHA03yWaSJHeUR.png", alt="The context menu for creating a DOM change breakpoint.", width="800", height="756" %}
 
-**Figure 5**: The context menu for creating a DOM change breakpoint
+This example shows the context menu for creating a DOM change breakpoint.
 
 ### Types of DOM change breakpoints {: #dom-types }
 
@@ -140,10 +142,10 @@ To set an XHR breakpoint:
     anywhere in an XHR's request URL.
 5.  Press Enter to confirm.
 
-{% Img src="image/admin/BQXfCgOqQp7usvLOSySx.png", alt="Creating an XHR breakpoint.", width="800", height="698" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/AAL4i6FKWOaIEdreyLjE.png", alt="Creating an XHR breakpoint.", width="800", height="756" %}
 
-**Figure 6**: Creating an XHR breakpoint in the **XHR Breakpoints** for any request that contains
-`org` in the URL
+This example shows how to create an XHR breakpoint in the **XHR Breakpoints** for any request that contains
+`org` in the URL.
 
 ## Event listener breakpoints {: #event-listeners }
 
@@ -157,9 +159,9 @@ all mouse events.
 3.  Check one of these categories to pause whenever any event from that category is fired, or expand
     the category and check a specific event.
 
-{% Img src="image/admin/c40PakNjXuOPIn21VySn.png", alt="Creating an event listener breakpoint.", width="800", height="543" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/aFFgOPi3outuMb32WO3k.png", alt="Creating an event listener breakpoint.", width="800", height="726" %}
 
-**Figure 7**: Creating an event listener breakpoint for `deviceorientation`
+This eample shows how to create an event listener breakpoint for `deviceorientation`.
 
 ## Exception breakpoints {: #exceptions }
 
