@@ -311,7 +311,7 @@ If the `metrics` property is not set then all available metrics will be returned
 
 If no `formFactor` value is provided then the values will be aggregated across all form factors.
 
-See [Using the Chrome UX Report API on web.dev](https://web.dev/chrome-ux-report-api/) for more example queries.
+See [Using the Chrome UX Report API](/blog/chrome-ux-report-api/) for more example queries.
 
 ## Data pipeline
 

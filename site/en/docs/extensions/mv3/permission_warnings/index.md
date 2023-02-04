@@ -295,6 +295,17 @@ the steps in [Viewing Warnings](#view_warnings).
       <td>Grants the extension access to the <a href="/docs/extensions/reference/proxy">chrome.proxy</a> API.</td>
       <td><strong>Read and change all your data on all websites</strong></td>
     </tr>
+    <tr id="sessionshistory">
+      <td><code>"sessions"</code> and <code>"history"</code></td>
+      <td>Grants the extension access to the <a href="/docs/extensions/reference/sessions">chrome.sessions</a> API and <a href="/docs/extensions/reference/history">chrome.history</a> API.</td>
+      <td><strong>Read and change your browsing history on all your signed-in devices</strong></td>
+    </tr>
+    <tr id="sessionstabs">
+      <td><code>"sessions"</code> and <code>"tabs"</code></td>
+      <td>Grants the extension access to the <a href="/docs/extensions/reference/sessions">chrome.sessions</a> API and privileged fields of the <a
+          href="/docs/extensions/reference/tabs/#perms"><code>Tab</code></a> objects.</td>
+      <td><strong>Read your browsing history on all your signed-in devices</strong></td>
+    </tr>
     <tr id="system.storage">
       <td><code>"system.storage"</code></td>
       <td>Grants the extension access to the <a href="/docs/extensions/reference/system.storage">chrome.system.storage</a> API.</td>
@@ -365,7 +376,7 @@ This can be avoided by making the new feature optional and adding new permission
 [doc-match-patterns]: /docs/extensions/mv3/match_patterns
 [doc-perms]: /docs/extensions/mv3/declare_permissions
 [file-scheme-allow]: /docs/extensions/reference/extension#method-isAllowedFileSchemeAccess
-[gh-opt-perms]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/examples/optional-permissions
+[gh-opt-perms]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.optional-permissions
 [incognito-allow]: /docs/extensions/reference/extension#method-isAllowedIncognitoAccess
 [section-update]: #update_permissions
 [section-view-warnings]: #view_warnings
