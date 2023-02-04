@@ -8,7 +8,7 @@ description: |
   dataset to extract insightful results about the state of user experiences on
   the web.
 date: 2020-06-12
-updated: 2022-07-18
+updated: 2023-02-04
 tags:
   - performance
   - crux

@@ -7,7 +7,7 @@ authors:
 description: |
   PageSpeed Insights (PSI) is a tool for web developers to understand what a page's performance is and how to improve it. In this guide, learn how to use PSI to extract insights from CrUX and better understand the user experience.
 date: 2020-05-28
-updated: 2023-02-01
+updated: 2023-02-04
 tags:
   - performance
   - crux

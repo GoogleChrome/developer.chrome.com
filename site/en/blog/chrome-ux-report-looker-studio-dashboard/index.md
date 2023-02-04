@@ -12,7 +12,7 @@ description: |
   guide, learn how to create your own custom CrUX Dashboard to track an origin's
   user experience.
 date: 2020-06-22
-updated: 2023-02-01
+updated: 2023-02-04
 tags:
   - performance
   - crux

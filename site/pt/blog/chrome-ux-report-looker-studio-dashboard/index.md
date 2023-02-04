@@ -8,7 +8,7 @@ alt: >
   Screenshot of the CrUX Dashboard
 description: "\nLooker Studio é uma ferramenta poderosa de visualização de dados que permite construir \npainéis em cima de fontes de big data, como o Chrome UX Report. Nesse guia, aprenda a criar seu próprio painel CrUX personalizado para rastrear uma origem experiência de usuário."
 date: 2020-06-22
-updated: 2023-02-01
+updated: 2023-02-04
 tags:
   - performance
   - crux

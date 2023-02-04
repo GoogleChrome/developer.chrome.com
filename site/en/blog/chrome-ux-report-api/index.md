@@ -14,7 +14,7 @@ description: |
   Learn how to use the Chrome UX Report API to get easy, RESTful access to
   real-user experience data across millions of websites.
 date: 2020-06-25
-updated: 2022-07-18
+updated: 2023-02-04
 tags:
   - crux
   - web-vitals
