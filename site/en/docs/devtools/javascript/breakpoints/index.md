@@ -60,17 +60,40 @@ investigate, but you want to pause only when some other condition is true.
 
 To set a conditional line-of-code breakpoint:
 
-1.  Click the **Sources** tab.
+1.  Open the **Sources** tab.
 2.  Open the file containing the line of code you want to break on.
 3.  Go to the line of code.
 4.  To the left of the line of code is the line number column. Right-click it.
 5.  Select **Add conditional breakpoint**. A dialog displays underneath the line of code.
 6.  Enter your condition in the dialog.
-7.  Press Enter to activate the breakpoint. An orange icon with a question mark appears on top of the line number column.
+7.  Press <kbd>Enter</kbd> to activate the breakpoint. An orange icon with a question mark appears on top of the line number column.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/wbb7VQOAG1GOHvBqqjdt.png", alt="A conditional line-of-code breakpoint.", width="800", height="579" %}
 
 This example shows a conditional line-of-code breakpoint set on line **30**.
+
+### Log line-of-code breakpoints (logpoints) {: #log-loc }
+
+Use logpoints to log messages to the **Console** without cluttering up your code with `console.log()` calls.
+
+To set a logpoint:
+
+1.  Open the **Sources** tab.
+1.  Open the file containing the line of code you want to break on.
+1.  Go to the line of code.
+1.  To the left of the line of code is the line number column. Right-click it.
+1.  Select **Add logpoint**. A dialog displays underneath the line of code.
+1.  Enter your log message in the dialog.
+    
+    You can separate strings, variable, and objects with commas. Wrap strings in quotes (`" "`), objects in curly brackets (`{ }`), and type variable names as they are.
+
+    For example: `"I'm a string.", variableName, {object}`.
+
+1.  Press <kbd>Enter</kbd> to activate the breakpoint. A pink icon with two dots appears on top of the line number column.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bOYvXrwYJIxVxapZ7Mdl.png", alt="A logpoint that logs a string, variable, and object to the Console.", width="800", height="687" %}
+
+This example shows a logpoint at line 36 that logs a string, variable, and object to the **Console**.
 
 ### Manage line-of-code breakpoints {: #manage-loc }
 
