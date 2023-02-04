@@ -161,25 +161,26 @@ all mouse events.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/aFFgOPi3outuMb32WO3k.png", alt="Creating an event listener breakpoint.", width="800", height="726" %}
 
-This eample shows how to create an event listener breakpoint for `deviceorientation`.
+This example shows how to create an event listener breakpoint for `deviceorientation`.
 
 ## Exception breakpoints {: #exceptions }
 
 Use exception breakpoints when you want to pause on the line of code that's throwing a caught or
-uncaught exception.
+uncaught exception. You can pause on both such exceptions independently.
 
-1.  Click the **Sources** tab.
-2.  Click **Pause on exceptions**
-    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Ko2qtw41xR12rOnCfQzt.png", alt="Pause on exceptions", width="28", height="28" %}.
-    It turns blue when enabled.
-    <figure>{% Img src="image/admin/Rc3ID0gnnhS8JBMCbF6J.png", alt="The 'Pause on exceptions' button.", width="800", height="594" %}
-    <figcaption><strong>Figure 8</strong>: The <strong>Pause on exceptions</strong> button</figcaption>
-    </figure>
-3.  (Optional) Check the **Pause On Caught Exceptions** checkbox if you also want to pause on caught
-    exceptions, in addition to uncaught ones.
-    <figure>{% Img src="image/admin/kCtXt5gDE2wHcxyEytig.png", alt="Paused on an uncaught exception.", width="800", height="550" %}
-    <figcaption><strong>Figure 9</strong>: Paused on an uncaught exception</figcaption>
-    </figure>
+In the **Breakpoints** pane of the **Sources** tab, enable one of the following options or both, then execute the code: 
+
+- Check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Pause on uncaught exceptions**.
+
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gVGWABNL2GgZYl2BoMHb.png", alt="Paused on an uncaught exception when the corresponding checkbox is enabled.", width="800", height="687" %}
+
+  In this example, the execution is paused on an uncaught exception.
+
+- Check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Pause on caught exceptions**.
+
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ruYVlG9CAdb86DmnRdsK.png", alt="Paused on a caught exception when the corresponding checkbox is enabled.", width="800", height="687" %}
+
+  In this example, the execution is paused on a caught exception.
 
 ## Function breakpoints {: #function }
 
