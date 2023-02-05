@@ -77,7 +77,7 @@ using callbacks for events such as:
 
 - When a service worker is [installing](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/install_event).
 - When a service worker is [activating](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/activate_event).
-- When a service worker [detects a network request](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/onfetch).
+- When a service worker [detects a network request](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/fetch_event).
 
 Events can be registered using a familiar
 [`addEventListener` API](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener).

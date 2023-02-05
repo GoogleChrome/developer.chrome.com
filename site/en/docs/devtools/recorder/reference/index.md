@@ -5,7 +5,7 @@ authors:
   - sofiayem
   - jecelynyeen
 date: 2022-06-21
-#updated: YYYY-MM-DD
+updated: 2023-01-09
 description: "A comprehensive reference of Chrome DevTools Recorder panel features."
 tags:
   - test
@@ -193,18 +193,37 @@ To manually add a step:
 1. Try replaying the recording again. With the added hover step, the **Recorder** successfully replays the flow.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/P8YGHbff2vGgCKOkEth6.png", alt="Replay success.", width="800", height="567" %}
 
+### Copy steps {: #copy-steps }
+
+Instead of [exporting the entire user flow](/docs/devtools/recorder/reference/#export-flows), you can copy a single step to the clipboard:
+
+1. Right-click the step you want to copy or click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N7wEDmtW9lnrSxPRupMa.svg", alt="Three-dot menu.", width="24", height="24" %} three-dot icon next to it.
+1. In the drop-down menu, select one of the **Copy as ...** options.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/sCSd3cpON80i6n5M3Rir.png", alt="Selecting a copy option from the drop-down menu.", width="800", height="577" %}
+
+You can copy steps in various formats: JSON, [Puppeteer](https://pptr.dev/), [@puppeteer/replay](https://github.com/puppeteer/replay), and those provided by [extensions](#recorder-extension).
+
 ### Remove steps {: #remove-steps }
 
-To remove an accidentally recorded step, select **Remove step** from the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Three-dot button.", width="22", height="22" %} three-dot menu next to the step.
+To remove an accidentally recorded step, right-click the step or click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N7wEDmtW9lnrSxPRupMa.svg", alt="Three-dot menu.", width="24", height="24" %} three-dot icon next to it and select **Remove step**.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/QOPYGEUDal764qxj8YBB.png", alt="Remove a step.", width="800", height="601" %}
 
+Additionally, the **Recorder** automatically adds two separate steps to the start of every recording:
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/8szraTN0ibqAAeNDVGTs.png", alt="A recording with the set viewport and navigation steps.", width="800", height="562" %}
+
+- **Set viewport**. Lets you control the viewport's dimensions, scaling, and [other properties](#step-properties).
+- **Navigate**. Sets the URL and automatically refreshes the page for every replay.
+
+To perform in-page automation without reloading the page, remove the navigation step as described above. 
 
 ### Configure steps {: #configure-steps }
 
 To configure a step:
 
-1. Specify its type: `click`, `doubleClick`, (input) `change`, `keyUp`, `keyDown`, `scroll`, `close`, `navigate` (to a page), `waitForElement`, or `waitForExpression`.
+1. Specify its type: `click`, `doubleClick`, `hover`, (input) `change`, `keyUp`, `keyDown`, `scroll`, `close`, `navigate` (to a page), `waitForElement`, `waitForExpression`, or `setViewport`.
    
    Other properties depend on the `type` value.
 
@@ -244,13 +263,13 @@ Type-specific properties are:
     </thead>
     <tbody>
         <tr>
-            <td><code>click</code>, <code>doubleClick</code></td>
-            <td><code>offsetX</code>, <code>offsetY</code></td>
+            <td><code>click</code><br><code>doubleClick</code></td>
+            <td><code>offsetX</code><br><code>offsetY</code></td>
             <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
             <td>Relative to the top-left of the element content box, in pixels</td>
         </tr>
         <tr>
-            <td><code>click</code>, <code>doubleClick</code></td>
+            <td><code>click</code><br><code>doubleClick</code></td>
             <td><code>button</code></td>
             <td></td>
             <td>Pointer button: primary | auxiliary | second | back | forward</td>
@@ -262,14 +281,14 @@ Type-specific properties are:
             <td>Final value</td>
         </tr>
         <tr>
-            <td><code>keyDown</code>, <code>keyUp</code></td>
+            <td><code>keyDown</code><br><code>keyUp</code></td>
             <td><code>key</code></td>
             <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
             <td>Key name</td>
         </tr>
         <tr>
             <td><code>scroll</code></td>
-            <td><code>x</code>, <code>y</code></td>
+            <td><code>x</code><br><code>y</code></td>
             <td></td>
             <td>Absolute scroll x and y positions in pixels, default 0</td>
         </tr>
@@ -296,6 +315,24 @@ Type-specific properties are:
             <td><code>expression</code></td>
             <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
             <td>JavaScript expression that resolves to true</td>
+        </tr>
+        <tr>
+            <td><code>setViewport</code></td>
+            <td><code>width</code><br><code>height</code></td>
+            <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
+            <td>Width and height of the viewport in pixels</td>
+        </tr>
+        <tr>
+            <td><code>setViewport</code></td>
+            <td><code>deviceScaleFactor</code></td>
+            <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
+            <td>Similar to Device Pixel Ratio (DPR), default 1</td>
+        </tr>
+        <tr>
+            <td><code>setViewport</code></td>
+            <td><code>isMobile</code><br><code>hasTouch</code><br><code>isLandscape</code></td>
+            <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
+            <td>Boolean flags that specify whether to: <li>Take the meta tag into account</li><li>Support touch events</li><li>Display in landscape mode</li></td>
         </tr>
     </tbody>
 </table>

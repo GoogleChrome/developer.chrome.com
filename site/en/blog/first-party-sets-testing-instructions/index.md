@@ -67,7 +67,7 @@ To see a FPS demo in action, visit [https://first-party-sets.glitch.me/](https:/
 
 ```text
 google-chrome \
---enable-features="FirstPartySets:FirstPartySetsClearSiteDataOnChangedSets/1,StorageAccessAPI,StorageAccessAPIForOriginExtension,PageInfoCookiesSubpage,PrivacySandboxFirstPartySetsUI" \
+--enable-features="FirstPartySets,StorageAccessAPI,StorageAccessAPIForOriginExtension,PageInfoCookiesSubpage,PrivacySandboxFirstPartySetsUI" \
 --use-first-party-set="{\"primary\": \"https://first-party-sets.glitch.me\", \"associatedSites\": [\"https://fps-member-1.glitch.me\"]}" \
 ```
 
@@ -83,10 +83,12 @@ To enable FPS locally, you need to use Chrome's  `--enable-features` option with
 `FirstPartySets` enables FPS in Chrome.
 
 ```text
-FirstPartySets:FirstPartySetsClearSiteDataOnChangedSets/1
+FirstPartySets
 ```
 
-Starting in Chrome M109, the additional parameter `FirstPartySetsClearSiteDataOnChangedSets/1`  will enable [clearing site data in case members of a set change](https://github.com/WICG/first-party-sets#clearing-site-data-on-set-transitions). This prevents linking a user's identity across all the sets a site has historically been in. This behavior will be the default in Chrome.
+{% Aside %}
+Starting in Chrome M109, [site data will be cleared in case members of a set change](https://github.com/WICG/first-party-sets#clearing-site-data-on-set-transitions). This prevents linking a user's identity across all the sets a site has historically been in. 
+{% endAside %}
 
 
 

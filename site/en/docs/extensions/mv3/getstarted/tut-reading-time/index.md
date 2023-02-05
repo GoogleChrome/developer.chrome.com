@@ -287,8 +287,8 @@ development learning journey. We recommend the following learning path:
 [doc-perms]:/docs/extensions/mv3/permission_warnings/
 [doc-promises]: /docs/extensions/mv3/promises/
 [doc-welcome]:/docs/extensions/mv3/
-[github-reading-time]:https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/reading-time
-[github-rt-icons]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/reading-time/images
+[github-reading-time]:https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.reading-time
+[github-rt-icons]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.reading-time/images
 [man-desc]: /docs/extensions/mv3/manifest/description
 [man-name]: /docs/extensions/mv3/manifest/name/
 [man-ver]: /docs/extensions/mv3/manifest/version

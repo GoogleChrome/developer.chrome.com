@@ -619,7 +619,7 @@ when you migrate to Manifest V3.
 [doc-whats-new]: /docs/extensions/whatsnew/
 [enterprise-force-list]: https://cloud.google.com/docs/chrome-enterprise/policies/?policy=ExtensionInstallForcelist
 [enterprise-settings]: https://cloud.google.com/docs/chrome-enterprise/policies/?policy=ExtensionSettings
-[github-samples-content]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/reference/mv3/intro/mv3-migration/content-scripts
+[github-samples-content]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/reference.mv3-content-scripts
 [manifest-sandbox]: /docs/extensions/mv3/manifest/sandbox
 [mdn-cdn]: https://developer.mozilla.org/docs/Glossary/CDN
 [mdn-eval]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/eval

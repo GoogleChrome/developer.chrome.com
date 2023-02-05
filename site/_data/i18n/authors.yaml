@@ -509,7 +509,7 @@ yoavweiss:
   title:
     en: 'Yoav Weiss'
   description:
-    en: 'Our latest news, updates, and stories by Yoav Weiss.'
+    en: 'Software engineer at Google working on web performance.'
 solomonkinard:
   title:
     en: 'Solomon Kinard'
@@ -1106,17 +1106,17 @@ greenido:
   title:
     en: Ido Green
   description:
-    en: ''
+    en: 'Senior technology leader and entrepreneur at heart'
 christianliebel:
   title:
     en: Christian Liebel
   description:
-    en: ''
+    en: 'Consultant, Thinktecture AG'
 jonathangarbee:
   title:
     en: Jonathan Garbee
   description:
-    en: ''
+    en: 'Front-end engineer with a passion for usability and accessibility'
 noraoneill:
   title:
     en: "Nora O'Neill"
@@ -1282,3 +1282,30 @@ mstensho:
     en: Morten Stenshorne
   description:
     en: Morten is a layout engineer on the Blink team at Google.
+sarino:
+  title:
+    en: Sarino Grasso
+  description:
+    en: Sarino is a Web Ecosystem Consultant at Google
+ianstanion:
+  title:
+    en: Ian Stanion
+  description:
+    en: 'Ian is a technical content developer at Google.'
+exterkamp:
+  title:
+    en: Shane Exterkamp
+    es: Shane Exterkamp
+    ja: Shane Exterkamp
+    ko: Shane Exterkamp
+    pt: Shane Exterkamp
+    ru: Shane Exterkamp
+    zh: Shane Exterkamp
+  description:
+    en: Shane is a SWE on Lighthouse
+    es: Shane es un Ingeniero de software en Lighthouse
+    ja: Shane は Lighthouse の開発に取り組むソフトウェアエンジニアです
+    ko: Shane은 Lighthouse의 SWE입니다.
+    pt: Shane é engenheiro de software na empresa Lighthouse
+    ru: Шейн — инженер-программист в команде Lighthouse
+    zh: Shane 是一名负责 Lighthouse 的软件工程师
