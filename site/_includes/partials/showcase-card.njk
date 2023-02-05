@@ -8,49 +8,59 @@
 {% endfor %}
 {% set apis = apis | trim | lower | replace("(", "") | replace(")", "") %}
 
-<article id="{{ item.title | slug }}" data-name="{{ (item.title | lower) + " " + (searchApis | lower) + " " + (item.appURL | lower) }}" data-used-apis="{{ apis }}" class="blog-card fugu-card rounded-lg pad-300 md:pad-400 width-full">
-  <div class="thumbnail">
+<div
+  id="{{ item.title | slug }}"
+  data-terms="{{ (item.title | lower) + " " + (searchApis | lower) + " " + (item.appURL | lower) }}"
+  data-used-apis="{{ apis }}"
+  class="blog-card fugu-card rounded-lg pad-300 md:pad-400 width-full"
+>
+  <div class="blog-card__thumbnail gap-bottom-300">
     <a href="{{ item.appURL }}" rel="noopener" target="_blank">
-      {% Img
-        src="image/SZHNhsfjU9RbCestTGZU6N7JEWs1/rihrk2y6yg8hLvmxipjz.png",
-        alt="Abstract icon",
-        width="360",
-        height="225",
-        fetchpriority="high"
-      %}
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://googlechromelabs.github.io/fugu-showcase/data/{{ item.screenshot }}">
+        <source media="(prefers-color-scheme: light)" srcset="https://googlechromelabs.github.io/fugu-showcase/data/{{ item.screenshotDark }}">
+        <img alt="Screenshot of {{ item.title }}" height="800" src="1tuner.com.webp" width="1280">
+      </picture>
     </a>
   </div>
 
-  {% if item.isElectronApp or item.sourceURL %}
-    <div class="card-intro display-inline-flex pad-top-300 pad-bottom-300">
-      {% if item.isElectronApp %}
-        <a class="display-flex align-center color-primary" href="{{ item.appURL }}" rel="noopener" target="_blank">
-          {{ icon('external-link') }}
-          {{ 'i18n.common.launch_app' | i18n(locale) }}
-        </a>
-      {% endif %}
-      {% if item.sourceURL %}
-        <a class="display-flex align-center color-primary" href="{{ item.sourceURL }}" rel="noopener" target="_blank">
-          {{ icon('code') }}
-          {{ 'i18n.common.source_code' | i18n(locale) }}
-        </a>
-      {% endif %}
-    </div>
-  {% endif %}
-
-  <div class="gap-top-300">            
-    <h3>
-      <a class="surface display-inline-flex color-text" href="{{ item.appURL }}">
-        {{ item.title }}
+  <div class="blog-card__actions display-inline-flex gap-bottom-300 pad-bottom-300">
+    {% if item.appURL %}
+      <a class="display-flex align-center gap-right-500 color-primary type--small" href="{{ item.appURL }}" rel="noopener" target="_blank">
+        {{ icon('external-link') }}
+        {{ 'i18n.common.launch_app' | i18n(locale) }}
       </a>
-    </h3>
-    <p class="type--caption gap-top-200">{{ item.description }}</p>
+    {% endif %}
+    {% if item.sourceURL %}
+      <a class="display-flex align-center color-primary type--small" href="{{ item.sourceURL }}" rel="noopener" target="_blank">
+        {{ icon('code') }}
+        {{ 'i18n.common.source_code' | i18n(locale) }}
+      </a>
+    {% endif %}
+  </div>
+
+  <h2 class="type--h5">
+    <a class="surface display-inline-flex color-text" href="{{ item.appURL }}">
+      {{ item.title }}
+    </a>
+  </h2>
+
+  <p class="type--caption gap-top-200">
+    {{ item.description }}
+  </p>
+
+  <div>
+    {% from 'macros/tag.njk' import tag with context %}
     <div class="cluster flow-space-200 gap-top-300">
       <div>
         {% for api in item.usedAPIs %}
-          <a class="tag-pill surface hairline color-secondary-text" href="{{ api.url }}" rel="noopener" target="_blank">{{ api.name }}</a>
+          <a
+            class="tag-pill surface decoration-none hairline color-secondary-text type--label weight-regular rounded-lg"
+            href="{{ api.url }}"
+            rel="noopener"
+            target="_blank">{{ api.name }}</a>
         {% endfor %}
       </div>
     </div>
   </div>
-</article>
+</div>

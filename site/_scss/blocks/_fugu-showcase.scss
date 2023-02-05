@@ -1,207 +1,47 @@
-/* stylelint-disable max-nesting-depth*/
-/* stylelint-disable order/order*/
-
-.fugu-container {
-  .load-more__button {
-    margin-left: 80px;
-    padding: 10px 20px;
-  }
-}
-
 .fugu-showcase {
-  .pills-container {
-    gap: 12px;
-  }
 
-  .tag-pill {
-    border-radius: 18px;
-    color: get-color('blue-700');
-    font-size: 0.875rem;
-    font-weight: 500;
-    padding: 5px 38px 5px 15px;
-    position: relative;
-
-    button {  
-      background-color: transparent;
-      display: inline-block;
-      position: absolute;
-      right: 4px;
-      top: 3px;
-    }
-
-    .icon {
-      fill: get-color('blue-700');
-      height: 18px;
-      width: 18px;
-    }
-  }
-
-  .enhanced-select li[selected] {
-    background: transparent;
-    color: var(--color-text);
-  }
-}
-
-.fugu-showcase__hero {
-  .hero-card__inner {
-    align-items: center;
-    max-width: 100%;
-    padding: 40px 40px 20px;
-    text-align: center;
-  }
-
-  .hero-card {
-    background-color: #e2f7fa;
-    max-width: 100%;
-    padding: 0;
-  }
-
-  img {
-    display: none;
-  }
-
-  @include media-query('md') {
-    .hero-card__inner {
-      padding: 80px 80px 70px;
-      text-align: center;
-    }
-
-    .hero-card__inner {
-      display: block;
-
-      > div:first-child {
-        width: 100%;
-      }
-    }
-  }
-
-  @include media-query('lg') {
-    .hero-card__inner {
-      display: grid;
-      overflow: hidden;
-      padding: 20px 60px;
-      text-align: left;
-
-      > div:first-child {
-        width: 420px;
-      }
-    }
-    
-    img {
-      display: block;
-      min-width: 780px;
-    }
-  }
-}
-
-.project-grid {
-  gap: 1rem;
-  grid-template-columns: 1fr;
-  justify-content: space-evenly;
-  
-  @include media-query('md') {
+  .search-box {
     gap: 1rem;
-    grid-template-columns: 2fr 2fr;
-  }
-  
-  @include media-query('lg') {
-    grid-template-columns: repeat(auto-fill, 28rem);
+    align-items: center;
+
+    input {
+      background: var(--color-bg-shade);
+      border: 0;
+      border-radius: px-to-rem(100px);
+      margin: 0;
+      padding: get-size(200) get-size(300) get-size(200) get-size(700);
+
+      &::placeholder {
+        color: var(--color-secondary-text);
+      }
+    }
   }
 
-  .fugu-card {
-    margin: 0 auto;
-    min-width: 300px;
+  label[for="api-select"] {
+    text-transform: uppercase;
+  }
+
+  .enhanced-select__wrapper {
+    border: none;
+    color: var(--color-primary);
+  }
+
+
+  .blog-grid {
+    justify-content: space-evenly;
+  }
+
+  .blog-card__actions {
+    border-bottom: 1px solid var(--color-hairline);
     width: 100%;
 
-    @include media-query('lg') {
-      max-width: 100%;
-      min-width: 360px;
+    a {
+      align-items: center;
+      text-decoration: none;
     }
 
-    h3 {
-      font-size: 20px;
-      font-weight: 400;
-    }
-
-    .tag-pill {
-      color: var(--color-secondary-text);
-      font-size: 0.75rem;
-      padding: 2px 12px;
-    }
-
-    img {
-      width: 100%;
-    }
-  }
-}
-
-.fugu-card .card-intro {
-  border-bottom: 1px solid var(--color-hairline);
-  width: 100%;
-
-  a {
-    align-items: center;
-    font-size: 0.875rem;
-    margin-right: 30px;
-    text-decoration: none;
-  }
-
-  svg {
-    height: 24px;
-    margin-right: 8px;
-    width: 24px;
-  }
-}
-
-.search-apps-apis {
-  border-bottom: 1px solid var(--color-hairline);
-  padding-bottom: 40px;
-
-  .icon {
-    height: 24px !important;
-    left: 20px;
-    position: absolute;
-    top: 10px;
-    width: 24px !important;
-  }
-
-  .search-app-container {
-    margin: 0 0 10px;
-    position: relative;
-
-    @include media-query('md') {
-      margin: 0 40px 0 0;
-    }
-  }
-
-  .search-box__input {
-    color: var(--color-secondary-text);
-    display: block;
-    padding-left: 55px;
-    width: 325px;
-
-    @include media-query('lg') {
-      width: 400px;
-    }
-  }
-
-  .search-api-container {
-    .enhanced-select__wrapper {
-      border: 0;
-    }
-
-    .label {
-      color: get-color('grey-700');
-      font-weight: 500;
-    }
-
-    span {
-      color: get-color('blue-700');
-      font-weight: 500;
-    }
-
-    path {
-      fill: get-color('blue-700');
+    svg {
+      margin-right: 8px;
     }
   }
 }

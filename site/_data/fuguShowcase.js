@@ -14,14 +14,19 @@
  * limitations under the License.
  */
 
-const fs = require('fs');
-const path = require('path');
+/**
+ * @fileoverview Extract fugu items and api names from fugu showcase data.
+ */
 
-module.exports = async () => {
-  const fuguFile = path.join(__dirname, '../../_data/fuguShowcase.json');
-  const fuguItems = /** @type {FuguProject[]} */ (
-    JSON.parse(fs.readFileSync(fuguFile, 'utf-8'))
+const path = require('path');
+const fs = require('fs');
+
+module.exports = () => {
+  const fuguShowcaseFile = path.join(
+    __dirname,
+    '../../external/data/fugu-showcase.json'
   );
+  const fuguItems = JSON.parse(fs.readFileSync(fuguShowcaseFile, 'utf-8'));
 
   const availableAPIs = new Set();
   fuguItems.forEach(item => {
