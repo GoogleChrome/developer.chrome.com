@@ -35,9 +35,11 @@
         {% endif %}
       {% endfor %}
 		</div>
-    <div class="landing-section__documents">
-         {{ relatedArticles(moreDocuments1Title, moreDocuments1Items, color) }}
-    </div>
+    {% if moreDocuments1Items %}
+      <div class="landing-section__documents">
+          {{ relatedArticles(moreDocuments1Title, moreDocuments1Items, color) }}
+      </div>
+    {% endif %}
 	{% endif %}
 	
 	
@@ -63,9 +65,11 @@
         {% endif %}
       {% endfor %}
 		</div>
-    <div class="landing-section__documents">
-         {{ relatedArticles(moreDocuments2Title, moreDocuments2Items, color) }}
-    </div>
+    {% if moreDocuments2Items %}
+      <div class="landing-section__documents">
+          {{ relatedArticles(moreDocuments2Title, moreDocuments2Items, color) }}
+      </div>
+    {% endif %}
 	{% endif %}
 
       {% if items %}
