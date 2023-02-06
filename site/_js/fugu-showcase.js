@@ -23,6 +23,7 @@ import './web-components/enhanced-select';
   /** @type ExtendedSelect|null */
   const apiSelect = document.querySelector('#api-select');
   const searchClose = document.querySelector('#search-fugu-apps-close');
+  const container = document.querySelector('.fugu-showcase');
 
   if (!searchAppsInput || !apiSelect) {
     return;
@@ -42,12 +43,24 @@ import './web-components/enhanced-select';
     window.history.pushState({}, '', url);
   };
 
+  const onAppLinkClick = e => {
+    const appLink = e.target?.closest('.fugu-app-link');
+    if (appLink) {
+      e.preventDefault();
+      navigator.clipboard.writeText(appLink.href);
+      window.history.pushState({}, '', appLink.href);
+      searchAppsInput.value = document.location.hash.replace('#', '') || '';
+      onSearch();
+    }
+  };
+
   apiSelect.addEventListener('change', onSearch);
-  searchAppsInput.addEventListener('change', onSearch);
+  searchAppsInput.addEventListener('input', onSearch);
   searchClose?.addEventListener('click', () => {
     searchAppsInput.value = '';
     onSearch();
   });
+  container?.addEventListener('click', onAppLinkClick);
 
   const filterCards = (cards, searchTerm, selectedApis) => {
     if (selectedApis.length === 0 && searchTerm.length === 0) {

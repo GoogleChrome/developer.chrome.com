@@ -10,7 +10,7 @@
     border-radius: px-to-rem(100px);
     display: block;
     margin: 0;
-    padding: get-size(200) get-size(300) get-size(200) get-size(700);
+    padding: get-size(200) get-size(700);
 
     &::placeholder {
       color: var(--color-secondary-text);
