@@ -6,6 +6,7 @@
 
   .search-box__input {
     background: var(--color-bg-shade);
+    display: block;
     border: 0;
     border-radius: px-to-rem(100px);
     margin: 0;
