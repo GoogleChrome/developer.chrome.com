@@ -29,5 +29,5 @@ You can find a simple example of using the cookies API in the
 the source code, see [Samples][3].
 
 [1]: /docs/extensions/mv3/declare_permissions
-[2]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/cookies
+[2]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/cookies/cookie-clearer
 [3]: /docs/extensions/mv3/samples
