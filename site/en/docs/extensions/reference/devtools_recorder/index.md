@@ -25,7 +25,7 @@ The [`mediaType`][4] parameter allows the extension to specify the kind of outpu
 `stringify` and `stringifyStep` functions. For example, `application/javascript` if the result is a JavaScript
 program.
 
-## Export plugin example
+## Export plugin example 
 
 The following code implements an extension plugin that stringifes a recording using `JSON.stringify`:
 
