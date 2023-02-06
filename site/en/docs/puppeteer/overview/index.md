@@ -24,8 +24,6 @@ Most things that you can do manually in the browser can be done using Puppeteer!
 - Capture a timeline trace of your site to help diagnose performance issues.
 - Test Chrome Extensions.
 
-{% YouTube id="qPD2yc8BoDk" %}
-
 ## Next steps
 
 * Install Puppeteer and [Get Started](/docs/puppeteer/get-started)!
