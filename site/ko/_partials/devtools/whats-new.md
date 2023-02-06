@@ -11,8 +11,8 @@
 * [콘솔 & 소스 패널의 새로운 단축키](/ko/blog/new-in-devtools-109/#keyboard-shortcuts)
 * [향상된 JavaScript 디버깅](/ko/blog/new-in-devtools-109/#debugging)
 * [기타 하이라이트](/ko/blog/new-in-devtools-109/#misc)
-* [[실험 기능] UX가 향상된 절단점 관리](/ko/blog/new-in-devtools-109/#breakpoint-redesign)
-* [[실험 기능] 자동적인 알맞은 위치에 출력](/ko/blog/new-in-devtools-109/#pretty-print)
+* [[실험 기능] 브레이크포인트 관리시의 UX 개선](/ko/blog/new-in-devtools-109/#breakpoint-redesign)
+* [[실험 기능] 자동적으로 알맞은 위치에 출력하기](/ko/blog/new-in-devtools-109/#pretty-print)
  #}
 
 ### Chrome 108 {: #chrome108 }
