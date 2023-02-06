@@ -20,7 +20,7 @@ import './web-components/enhanced-select';
   const cards = document.querySelectorAll('.fugu-card');
   /** @type HTMLInputElement|null */
   const searchAppsInput = document.querySelector('#search-fugu-apps');
-  /** @type HTMLSelectElement|null */
+  /** @type ExtendedSelect|null */
   const apiSelect = document.querySelector('#api-select');
 
   if (!searchAppsInput || !apiSelect) {
@@ -31,6 +31,14 @@ import './web-components/enhanced-select';
     const searchTerm = searchAppsInput.value;
     const selectedApis = apiSelect.value;
     filterCards(cards, searchTerm, selectedApis);
+    const url = new URL(window.location.href);
+    url.hash = searchTerm ? '#' + searchTerm : '';
+    if (selectedApis.length) {
+      url.searchParams.set('api', selectedApis.join(','));
+    } else {
+      url.searchParams.delete('api');
+    }
+    window.history.pushState({}, '', url);
   };
 
   apiSelect.addEventListener('change', onSearch);
@@ -54,6 +62,11 @@ import './web-components/enhanced-select';
       }
     });
   };
+
+  searchAppsInput.value = document.location.hash.replace('#', '') || '';
+  apiSelect.value =
+    new URL(document.location.href).searchParams.get('api')?.split(',') || [];
+  onSearch();
 
   window.addEventListener('keydown', e => {
     if (e.key === 'f' && e.metaKey) {

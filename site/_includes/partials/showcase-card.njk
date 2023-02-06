@@ -7,10 +7,11 @@
   {% set searchApis = searchApis + " " + api.name %}
 {% endfor %}
 {% set apis = apis | trim | lower | replace("(", "") | replace(")", "") %}
+{% set id = item.title | slugify %}
 
 <div
-  id="{{ item.title | slug }}"
-  data-terms="{{ (item.title | lower) + " " + (searchApis | lower) + " " + (item.appURL | lower) }}"
+  id="{{ id }}"
+  data-terms="{{ id + (item.title | lower) + " " + (searchApis | lower) + " " + (item.appURL | lower) }}"
   data-used-apis="{{ apis }}"
   class="blog-card fugu-card rounded-lg pad-300 md:pad-400 width-full"
 >
@@ -26,7 +27,7 @@
 
   <div class="blog-card__actions display-inline-flex gap-bottom-300 pad-bottom-300">
     {% if item.appURL %}
-      <a class="display-flex align-center gap-right-500 color-primary type--small" href="{{ item.appURL }}" rel="noopener" target="_blank">
+      <a class="display-flex align-center color-primary type--small" href="{{ item.appURL }}" rel="noopener" target="_blank">
         {{ icon('external-link') }}
         {{ 'i18n.common.launch_app' | i18n(locale) }}
       </a>
@@ -37,6 +38,9 @@
         {{ 'i18n.common.source_code' | i18n(locale) }}
       </a>
     {% endif %}
+    <a class="display-flex align-center color-primary type--small" href="/fugu-showcase#{{ id }}">
+      #
+    </a>
   </div>
 
   <h2 class="type--h5">

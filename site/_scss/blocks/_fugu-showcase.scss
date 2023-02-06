@@ -32,6 +32,7 @@
 
   .blog-card__actions {
     border-bottom: 1px solid var(--color-hairline);
+    justify-content: space-between;
     width: 100%;
 
     a {
