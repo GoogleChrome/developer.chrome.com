@@ -25,10 +25,9 @@ const {default: fetch} = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
 
-const url = `https://googlechromelabs.github.io/fugu-showcase/data/data.json`;
+const url = 'https://googlechromelabs.github.io/fugu-showcase/data/data.json';
 
 async function run() {
-
   const r = await fetch(url);
 
   if (!r.ok) {

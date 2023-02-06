@@ -17,15 +17,17 @@
 import './web-components/enhanced-select';
 
 (() => {
-  const cards =  document.querySelectorAll('.fugu-card');
+  const cards = document.querySelectorAll('.fugu-card');
+  /** @type HTMLInputElement|null */
   const searchAppsInput = document.querySelector('#search-fugu-apps');
+  /** @type HTMLSelectElement|null */
   const apiSelect = document.querySelector('#api-select');
 
   if (!searchAppsInput || !apiSelect) {
     return;
   }
 
-  const onSearch = (e) => {
+  const onSearch = () => {
     const searchTerm = searchAppsInput.value;
     const selectedApis = apiSelect.value;
     filterCards(cards, searchTerm, selectedApis);
@@ -39,10 +41,12 @@ import './web-components/enhanced-select';
       cards.forEach(card => card.removeAttribute('hidden'));
       return;
     }
-    const isSelectedApi = (api) => selectedApis.includes(api);
+    const isSelectedApi = api => selectedApis.includes(api);
     cards.forEach(card => {
       const cardApis = card.dataset.usedApis.split(' ');
-      const matchApis = selectedApis.length ? cardApis.some(isSelectedApi) : true;
+      const matchApis = selectedApis.length
+        ? cardApis.some(isSelectedApi)
+        : true;
       if (card.dataset.terms.match(searchTerm) && matchApis) {
         card.removeAttribute('hidden');
       } else {
@@ -57,5 +61,4 @@ import './web-components/enhanced-select';
       searchAppsInput.focus();
     }
   });
-
 })();

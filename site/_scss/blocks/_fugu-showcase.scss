@@ -1,28 +1,27 @@
 .fugu-showcase {
-
   .search-box {
-    gap: 1rem;
     align-items: center;
+    gap: 1rem;
+  }
 
-    input {
-      background: var(--color-bg-shade);
-      border: 0;
-      border-radius: px-to-rem(100px);
-      margin: 0;
-      padding: get-size(200) get-size(300) get-size(200) get-size(700);
+  .search-box__input {
+    background: var(--color-bg-shade);
+    border: 0;
+    border-radius: px-to-rem(100px);
+    margin: 0;
+    padding: get-size(200) get-size(300) get-size(200) get-size(700);
 
-      &::placeholder {
-        color: var(--color-secondary-text);
-      }
+    &::placeholder {
+      color: var(--color-secondary-text);
     }
   }
 
-  label[for="api-select"] {
+  label[for='api-select'] {
     text-transform: uppercase;
   }
 
   .enhanced-select__wrapper {
-    border: none;
+    border: 0;
     color: var(--color-primary);
   }
 
