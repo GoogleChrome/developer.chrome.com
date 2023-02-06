@@ -15,7 +15,7 @@
  */
 
 /**
- * @fileoverview Extract fugu items and api names from fugu showcase data.
+ * @fileoverview Extract Fugu items and API names from Fugu showcase data.
  */
 
 const path = require('path');
