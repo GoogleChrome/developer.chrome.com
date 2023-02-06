@@ -39,7 +39,7 @@ Unfortunately, this behavior did not apply to extension events. Extension events
 As of Chrome 110, all events reset the lidle timer and the idle timeout will not occur if there are pending events. In other words, assuming there are no unexpected interruptions, extension service workers will now stay alive as long as they are actively processing events. Be aware that:
 
 * The service worker will terminate after 30 seconds if there are no events.
-* The service worker will terminate after 5 minutes if a single request (event or API call) takes longer than 5 minutes to process.
+* The service worker will terminate after 5 minutes if a single request, such as an event or API call, takes longer than 5 minutes to process (with the exception of a native messaging connection).
 
 You are still strongly encouraged to design your extensions to be event-based and guard against unexpected termination. Not only should you refrain from keeping your extensions alive indefinitely (which we consider an anti-pattern), you should test your extensions to ensure that they're not doing this unintentionally.
 
