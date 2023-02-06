@@ -7,7 +7,7 @@
 {# ### Chrome 109 {: #chrome109 }
 
 * [Recorder: 단계별 옵션, 페이지내 반복재생, 단계의 내용 메뉴](/ko/blog/new-in-devtools-109/#recorder)
-* [퍼포먼스 Recording의 실제 함수명 표현](/ko/blog/new-in-devtools-109/#performance)
+* [성능 기록 시 실제 함수 이름 보이기](/ko/blog/new-in-devtools-109/#performance)
 * [콘솔 & 소스 패널의 새로운 단축키](/ko/blog/new-in-devtools-109/#keyboard-shortcuts)
 * [향상된 JavaScript 디버깅](/ko/blog/new-in-devtools-109/#debugging)
 * [기타 하이라이트](/ko/blog/new-in-devtools-109/#misc)
