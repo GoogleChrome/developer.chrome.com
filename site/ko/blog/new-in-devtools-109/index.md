@@ -165,7 +165,7 @@ Chromium issues: [1346231](https://crbug.com/1346231), [1324904](https://crbug.c
 이제 **Sources** 패널에서 자동적으로 축소된 파일들을 알맞은 위치에 출력합니다. **pretty print button `{ }`을 클릭하여 underdo할 수 있습니다.
 <!-- Previously, the **Sources** panel shows minified content by default. Developers need to click on the pretty print button manually to format the content. On top of that, the pretty printed content is not displayed in the same file, but in another `::formatted` tab. -->
 이전에는 **Sources** 패널에서 축소된 파일을 기보으로 보여줬습니다. 개발자들은 알맞은 위치에 출력 버튼을 수동적으로 눌러야만 내용을 포맷할 수 있었습니다. 심지어는 알맞은 위치에 출력된 내용도 같은 파일에서가 아닌 `::formatted`탭 에서 확인할 수 있었습니다.
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/twp21SJIisjYpnCWRbWi.png", alt="축소된 파일을 알맞은 위치에 미관적으로 자동 프린트 전후비교.", width="800", height="501" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/twp21SJIisjYpnCWRbWi.png", alt="자동 미화 프린트 전/후 축소된 파일 보이기.", width="800", height="501" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/0c96e7f4cdaf2009e5223553cabb606099f85569 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/6ea8fee1935d3c56dfea1edaa752af09579fffcc #}
