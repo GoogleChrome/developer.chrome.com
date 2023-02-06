@@ -16,7 +16,7 @@ steps:
     args:
       - '-c'
       - |
-        npm run stage:github determineDeploymentType
+        npm run stage:github determineDeploymentType &&
         npm run stage:github announceDeploymentStart
 
   - id: 'build'
