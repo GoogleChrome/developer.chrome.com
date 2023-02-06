@@ -7,12 +7,12 @@ steps:
 
   - id: 'prepare'
     name: node:18
-    entrypoint: npm
     env:
       - 'BRANCH_NAME=$BRANCH_NAME'
       - 'COMMIT_SHA=$COMMIT_SHA'
       - 'PR_NUMBER=$_PR_NUMBER'
     secretEnv: ['GITHUB_TOKEN']
+    entrypoint: bash
     args:
       - '-c'
       - |
@@ -26,6 +26,7 @@ steps:
       - 'NODE_OPTIONS="--max_old_space_size=8192"'
       - 'ELEVENTY_IGNORE_NACL=true'
     secretEnv: ['GITHUB_TOKEN']
+    entrypoint: bash
     args:
       - '-c'
       - |
@@ -53,12 +54,12 @@ steps:
 
   - id: 'finalize'
     name: node:18
-    entrypoint: npm
     env:
       - 'BRANCH_NAME=$BRANCH_NAME'
       - 'COMMIT_SHA=$COMMIT_SHA'
       - 'PR_NUMBER=$_PR_NUMBER'
     secretEnv: ['GITHUB_TOKEN']
+    entrypoint: bash
     args:
       - '-c'
       - |
