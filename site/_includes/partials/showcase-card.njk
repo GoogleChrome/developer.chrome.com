@@ -18,8 +18,8 @@
   <div class="blog-card__thumbnail gap-bottom-300">
     <a href="{{ item.appURL }}" rel="noopener" target="_blank">
       <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://googlechromelabs.github.io/fugu-showcase/data/{{ item.screenshot }}">
-        <source media="(prefers-color-scheme: light)" srcset="https://googlechromelabs.github.io/fugu-showcase/data/{{ item.screenshotDark }}">
+        <source srcset="https://googlechromelabs.github.io/fugu-showcase/data/{{ item.screenshot }}">
+        <source media="(prefers-color-scheme: dark)" srcset="https://googlechromelabs.github.io/fugu-showcase/data/{{ item.screenshotDark }}">
         <img class="hairline " alt="Screenshot of {{ item.title }}." height="800" src="{{ item.screenshot }}" width="1280">
       </picture>
     </a>
