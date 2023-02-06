@@ -28,13 +28,15 @@ const {default: fetch} = require('node-fetch');
  */
 async function fetchGitHubApi(endpoint) {
   const token = process.env.GITHUB_TOKEN;
+  console.log(process.env.HEAD_REPO_URL, process.env.REPO_NAME);
+
   if (!token) {
     throw new Error(
       'GitHub is not authenticated, process.env.GITHUB_TOKEN is not set.'
     );
   }
 
-  const url = `https://api.github.com/repos/GoogleChrome/developer.chrome.com/${endpoint}`;
+  const url = `https://api.github.com/repos/matthiasrohmer/developer.chrome.com/${endpoint}`;
   console.log('Requesting GitHub API', url);
 
   const request = await fetch(url, {
@@ -44,6 +46,7 @@ async function fetchGitHubApi(endpoint) {
   });
 
   const data = await request.json();
+  console.log('GitHub API response', data);
   return data;
 }
 

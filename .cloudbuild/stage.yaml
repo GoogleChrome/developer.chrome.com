@@ -7,11 +7,6 @@ steps:
 
   - id: 'prepare'
     name: node:18
-    env:
-      - 'BRANCH_NAME=$BRANCH_NAME'
-      - 'COMMIT_SHA=$COMMIT_SHA'
-      - 'PR_NUMBER=$_PR_NUMBER'
-    secretEnv: ['GITHUB_TOKEN']
     entrypoint: bash
     args:
       - '-c'
@@ -25,7 +20,6 @@ steps:
       - 'CI=true'
       - 'NODE_OPTIONS="--max_old_space_size=8192"'
       - 'ELEVENTY_IGNORE_NACL=true'
-    secretEnv: ['GITHUB_TOKEN']
     entrypoint: bash
     args:
       - '-c'
@@ -54,11 +48,6 @@ steps:
 
   - id: 'finalize'
     name: node:18
-    env:
-      - 'BRANCH_NAME=$BRANCH_NAME'
-      - 'COMMIT_SHA=$COMMIT_SHA'
-      - 'PR_NUMBER=$_PR_NUMBER'
-    secretEnv: ['GITHUB_TOKEN']
     entrypoint: bash
     args:
       - '-c'
@@ -67,6 +56,13 @@ steps:
 
 options:
   machineType: 'E2_HIGHCPU_32'
+  env:
+    - 'BRANCH_NAME=$BRANCH_NAME'
+    - 'HEAD_REPO_URL=$_HEAD_REPO_URL'
+    - 'REPO_NAME=$REPO_NAME'
+    - 'COMMIT_SHA=$COMMIT_SHA'
+    - 'PR_NUMBER=$_PR_NUMBER'
+  secretEnv: ['GITHUB_TOKEN']
 
 availableSecrets:
   secretManager:
