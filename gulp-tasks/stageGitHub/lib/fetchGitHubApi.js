@@ -26,9 +26,8 @@ const {default: fetch} = require('node-fetch');
  * @param {string} endpoint
  * @returns {Promise<{[key: string]: any}>}
  */
-async function fetchGitHubApi(endpoint) {
+async function fetchGitHubApi(endpoint, userOptions = {}) {
   const token = process.env.GITHUB_TOKEN;
-  console.log(process.env.HEAD_REPO_URL, process.env.REPO_NAME);
 
   if (!token) {
     throw new Error(
@@ -36,17 +35,30 @@ async function fetchGitHubApi(endpoint) {
     );
   }
 
-  const url = `https://api.github.com/repos/matthiasrohmer/developer.chrome.com/${endpoint}`;
+  // This is a value like https://github.com/GoogleChrome/developer.chrome.com, which
+  // can be used to construct the proper API URL. It is good to keep this dynamic, if
+  // the repo is moved or forked.
+  const headRepoUrl = process.env.HEAD_REPO_URL;
+  const orgRepo = headRepoUrl.replace('https://github.com/', '');
+  const url = `https://api.github.com/repos/${orgRepo}/${endpoint}`;
+
   console.log('Requesting GitHub API', url);
 
-  const request = await fetch(url, {
-    headers: {
-      Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+  const options = Object.assign(
+    {},
+    {
+      headers: {
+        Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+      },
     },
-  });
+    userOptions
+  );
+
+  const request = await fetch(url, options);
 
   const data = await request.json();
   console.log('GitHub API response', data);
+
   return data;
 }
 
