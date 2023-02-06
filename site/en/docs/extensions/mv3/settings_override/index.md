@@ -3,11 +3,10 @@ layout: "layouts/doc-post.njk"
 title: "Overriding Chrome settings"
 seoTitle: "Overriding Chrome settings in Chrome Extensions"
 date: 2014-02-14
-updated: 2023-01-09
+updated: 2023-02-06
 description: How to override Chrome settings from a Chrome Extension.
 ---
 
-{% Partial 'extensions/mv2page-in-mv3.md' %}
 
 Settings overrides are a way for extensions to override selected Chrome settings. The API is
 available on Windows in all current versions of Chrome and is available on Mac in Chrome 56 and
