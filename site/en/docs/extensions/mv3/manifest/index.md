@@ -75,7 +75,7 @@ The following code shows the supported manifest keys. For additional usage infor
 
 The following are three examples of manifest files taken from the [Getting Started tutorials][gs-tutorials]:
 
-<web-tabs data-unresolved>
+<web-tabs>
   <web-tab title="Reading time">
 
   ```json

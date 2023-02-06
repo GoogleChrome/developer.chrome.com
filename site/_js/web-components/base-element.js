@@ -22,7 +22,7 @@ export class BaseElement extends LitElement {
    * @param {PropertyValues} changedProperties
    */
   firstUpdated(changedProperties) {
-    this.removeAttribute('data-unresolved');
+    this.setAttribute('data-resolved', '');
     super.firstUpdated(changedProperties);
   }
 

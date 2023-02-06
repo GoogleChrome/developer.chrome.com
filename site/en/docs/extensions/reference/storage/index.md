@@ -70,7 +70,7 @@ To use the storage API, declare the `"storage"` permission in the extension
 The following samples demonstrate the `local`, `sync`, and
 `session` storage areas:
 
-<web-tabs data-unresolved>
+<web-tabs>
   <web-tab title="storage.local">
 
   ```js
