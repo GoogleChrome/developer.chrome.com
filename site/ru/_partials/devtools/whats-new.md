@@ -5,6 +5,17 @@
 
 {# $content #}
 
+{# ### Chrome 109 {: #chrome109 }
+
+* [Recorder: Copy as options for steps, in-page replay, step’s context menu](/ru/blog/new-in-devtools-109/#recorder)
+* [Show actual function names in performance’s recordings](/ru/blog/new-in-devtools-109/#performance)
+* [New keyboard shortcuts in the Console & Sources panel](/ru/blog/new-in-devtools-109/#keyboard-shortcuts)
+* [Improved JavaScript debugging](/ru/blog/new-in-devtools-109/#debugging)
+* [Miscellaneous highlights](/ru/blog/new-in-devtools-109/#misc)
+* [[Experimental] Enhanced UX in managing breakpoints](/ru/blog/new-in-devtools-109/#breakpoint-redesign)
+* [[Experimental] Automatic in-place pretty print](/ru/blog/new-in-devtools-109/#pretty-print)
+ #}
+
 
 ### Chrome 108 {: #chrome108 }
 

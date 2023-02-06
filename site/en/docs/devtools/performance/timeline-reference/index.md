@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Timeline Event Reference"
+title: "Timeline event reference"
 authors:
   - megginkearney
   - flaviocopes

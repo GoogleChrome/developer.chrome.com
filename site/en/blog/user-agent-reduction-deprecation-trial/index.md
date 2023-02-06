@@ -1,7 +1,7 @@
 ---
 layout: "layouts/blog-post.njk"
 title: "User-Agent Reduction deprecation trial"
-subhead: > 
+subhead: >
   Register to continue receiving the full User-Agent string.
 description: >
   Starting from Chrome 101, the information available in the User-Agent string will be reduced.
@@ -43,19 +43,22 @@ To register for the origin trial and get a token for your domains, visit the [Us
 
 ### Setup
 
-Once you've registerd for the trial, update your HTTP response headers with the following:
+Once you've registered for the trial, update your HTTP response headers with the following:
 
 1.  Add `Origin-Trial: <ORIGIN TRIAL TOKEN>` to your HTTP response header. <`ORIGIN TRIAL TOKEN`> contains the token you got when registering for the origin trial.
-1.  Add `Accept-CH: Sec-CH-UA-Full` to your HTTP response header. Setting `Accept-CH` will only cause the full User-Agent string to be sent on subsequent requests to the origin. 
+1.  Add `Accept-CH: Sec-CH-UA-Full` to your HTTP response header. Setting `Accept-CH` will only cause the full User-Agent string to be sent on subsequent requests to the origin.
 1. To resend the first navigation request with the full User-Agent string, add `Critical-CH: Sec-CH-UA-Full` to your HTTP response header, in addition to the `Accept-CH` and `Origin-Trial` headers.
-1.  If you want third-party subresource requests to also receive the full UA string, you have two options:
+1.  If you have opted in your site to the trial and also want third-party subresource requests to also receive the full UA string, you have two options:
     - Add a `Permissions-Policy` header with the third-party domains that should receive the full UA.
-        -  To allow a named list of third-party domains, add `Permissions-Policy: ch-ua-full=(self "https://google.com")`.
+        -  To allow a named list of third-party domains, add `Permissions-Policy: ch-ua-full=(self "https://thirdparty.example.com")`.
         -  To allow all third-party domains, add `Permissions-Policy: ch-ua-full=*`.
     - Add an `Accept-CH` meta tag with the third-party domains that should receive the full UA (only in Chrome 100 and above).
-        -  To allow a named list of third-party domains, add `<meta name="accept-ch" content="ch-ua-full=( https://google.com )">`.
+        -  To allow a named list of third-party domains, add `<meta http-equiv="delegate-ch" value="sec-ch-ua-full https://thirdparty.example.com">`.
+
         -  It's not possible to delegate to all third-party domains via `*` in the meta tag.
 1. Load your website in Chrome 100 (or later) and continue receiving the full User-Agent string.
+
+Note: a third-party embed can register and opt in to the trial without requiring the top-level site to delegate permission via Permissions Policy or `<meta http-equiv="delegate-ch">`. The [standard advice for third-party origin trials](/docs/web-platform/third-party-origin-trials/) applies.
 
 ### Demo
 

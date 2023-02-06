@@ -353,7 +353,7 @@ directory.
 [37]: /docs/extensions/mv3/security#content_scripts
 [38]: /docs/extensions/mv3/security#sanitize
 [39]: https://en.wikipedia.org/wiki/Cross-site_scripting
-[40]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/messaging
+[40]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/_archive/mv2/api/messaging
 [41]: /docs/apps/nativeMessaging/#examples
 [42]: /docs/extensions/mv3/samples
 [43]: /docs/extensions/mv3/manifest/externally_connectable

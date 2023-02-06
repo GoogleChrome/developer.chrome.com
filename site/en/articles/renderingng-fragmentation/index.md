@@ -115,7 +115,7 @@ Next, let's make it a bit more complicated, with transforms and box-shadow. Noti
 
 {% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/TA8zkJYaP914aSjcGUap.jpg", alt="Boxes are incorrectly broken across two columns.", width="800", height="602" %}
 
-The legacy engine also has problems with tall monolithic content. Content is _[monolithic_](https://www.w3.org/TR/css-break-3/#monolithic) if it is not eligible for breaking into multiple fragments. Elements with overflow scrolling are monolithic, because it doesn't make sense to users to scroll in a non-rectangular region. Line boxes and images are other examples of monolithic content. Here's an example:
+The legacy engine also has problems with tall monolithic content. Content is [_monolithic_](https://www.w3.org/TR/css-break-3/#monolithic) if it is not eligible for breaking into multiple fragments. Elements with overflow scrolling are monolithic, because it doesn't make sense to users to scroll in a non-rectangular region. Line boxes and images are other examples of monolithic content. Here's an example:
 
 {% Codepen {
   user: 'web-dot-dev',

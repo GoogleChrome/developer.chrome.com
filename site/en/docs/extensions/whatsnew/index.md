@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-01-05
+updated: 2023-01-27
 tags:
   - extensions-news
 
@@ -20,7 +20,7 @@ and related policy or other changes.
 
 January 5, 2023
 
-Previously, an extension service worker would frequently shut down at the five minute mark. We've changed this behavior to more closely resemble service worker lifetime's on the web. An extension service worker will be shut down after either thirty seconds of inactivity or if a single activity takes longer than 5 minutes to process. Watch this space for a blogpost with details about extension service worker lifetimes.
+Previously, an extension service worker would frequently shut down at the five minute mark. We've changed this behavior to more closely resemble service worker lifetime's on the web. An extension service worker will be shut down after either thirty seconds of inactivity or if a single activity takes longer than 5 minutes to process. For more information, see [Longer extension service worker lifetimes](/blog/longer-esw-lifetimes).
 
 ### Post: Pausing Manifest V2 phase-out
 
@@ -275,7 +275,6 @@ A number of APIs now support promises in Manifest V3.
 - [`chrome.processes`](/docs/extensions/reference/processes)
 - [`chrome.search`](/docs/extensions/reference/search)
 - [`chrome.sessions`](/docs/extensions/reference/sessions)
-- [`chrome.signedInDevices`](/docs/extensions/reference/signedInDevices)
 - [`chrome.topSites`](/docs/extensions/reference/topSites)
 
 Also, APIs that use the [`ChromeSetting`](/docs/extensions/reference/types/#type-ChromeSetting)

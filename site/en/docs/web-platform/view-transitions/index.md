@@ -25,6 +25,7 @@ It's currently behind the `chrome://flags/#view-transition` flag in Chrome 109+.
 
 <figure>
   {% Video
+    playsinline="true",
     src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/hgnJfPFUbGlucFegEEtl.mp4",
     class="video-full-demo",
     loop="true",
@@ -90,6 +91,7 @@ And just like that, pages cross-fade:
 
 <figure>
   {% Video
+    playsinline="true",
     src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/9rdbsCmBXKOYxOQNjBMI.mp4",
     class="desktop-demo",
     loop="true",
@@ -154,6 +156,7 @@ With that one change, the fade is now really slow:
 
 <figure>
   {% Video
+    playsinline="true",
     src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/90h6Ppxza6oPqNiMpTPE.mp4",
     class="desktop-demo",
     loop="true",
@@ -198,6 +201,7 @@ And here's the result:
 
 <figure>
   {% Video
+    playsinline="true",
     src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/BRT5dMgEzpixRmrVYKwN.mp4",
     class="desktop-demo",
     loop="true",
@@ -234,6 +238,7 @@ And the result of that:
 
 <figure>
   {% Video
+    playsinline="true",
     src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/zlpY4YFct0LHC6eowSFA.mp4",
     class="desktop-demo",
     loop="true",
@@ -295,6 +300,7 @@ But again, just going with the defaults:
 
 <figure>
   {% Video
+    playsinline="true",
     src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/eXu6vohojllPLNEQScjO.mp4",
     class="desktop-demo",
     loop="true",
@@ -324,6 +330,7 @@ Using the animations panel, you can pause the next animation, then scrub back an
 
 <figure>
   {% Video
+    playsinline="true",
     src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/DMH7qPqMszyVbTYOA2zd.mp4",
     class="devtools-demo",
     muted="true",
@@ -362,6 +369,7 @@ And the result:
 
 <figure>
   {% Video
+    playsinline="true",
     src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/283vqtaDXSaGRTn5nEEn.mp4",
     class="desktop-demo",
     loop="true",
@@ -374,6 +382,75 @@ And the result:
 The thumbnail now transitions into the main image. Even though they're conceptually (and literally) different elements, the transition API treats them as the same thing because they shared the same `view-transition-name`.
 
 The real code for this is a little more complicated than the simple example above, as it also handles the transition back to the thumbnail page. [See the source](https://glitch.com/edit/#!/simple-set-demos?path=6-expanding-image%2Fscript.js%3A15%3A17) for the full implementation.
+
+## Custom entry and exit transitions
+
+Look at this example:
+
+<style>
+  .enter-exit-video {
+    aspect-ratio: 1400/776;
+  }
+</style>
+
+<figure>
+  {% Video
+    playsinline="true",
+    src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/uXSSraCaMIvu7nbWv0XS.mp4",
+    class="enter-exit-video",
+    loop="true",
+    muted="true",
+    controls="true"
+  %}
+  <figcaption>Entering and exiting sidebar. <a href="https://simple-set-demos.glitch.me/enter-exit-sidebar/">Minimal demo</a>. <a href="https://glitch.com/edit/#!/simple-set-demos?path=enter-exit-sidebar%2Fstyles.css%3A1%3A0">Source</a>.</figcaption>
+</figure>
+
+The sidebar is part of the transition:
+
+```css
+.sidebar {
+  view-transition-name: sidebar;
+  contain: layout;
+}
+```
+
+But, unlike the header in the previous example, the sidebar doesn't appear on all pages. If both states have the sidebar, the transition pseudo-elements look like this:
+
+```diff
+::view-transition
+├─ …other transition groups…
+└─ ::view-transition-group(sidebar)
+   └─ ::view-transition-image-pair(sidebar)
+      ├─ ::view-transition-old(sidebar)
+      └─ ::view-transition-new(sidebar)
+```
+
+However, if the sidebar is only on the new page, the `::view-transition-old(sidebar)` pseudo-element won't be there. Since there's no 'old' image for the sidebar, the image-pair will only have a `::view-transition-new(sidebar)`. Similarly, if the sidebar is only on the old page, the image-pair will only have a `::view-transition-old(sidebar)`.
+
+In the demo above, the sidebar transitions differently depending on whether it's entering, exiting, or present in both states. It enters by sliding from the right and fading in, it exits by sliding to the right and fading out, and it stays in place when it's present in both states.
+
+To create specific entry and exit transitions, you can use the [`:only-child` pseudo-class](https://developer.mozilla.org/docs/Web/CSS/:only-child) to target the old/new pseudo-element when it's the only child in the image-pair:
+
+<!-- prettier-ignore -->
+```css
+/* Entry transition */
+::view-transition-new(sidebar):only-child {
+  animation: 300ms cubic-bezier(0, 0, 0.2, 1) both fade-in,
+    300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
+}
+
+/* Exit transition */
+::view-transition-old(sidebar):only-child {
+  animation: 150ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
+    300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-right;
+}
+```
+
+In this case, there's no specific transition for when the sidebar is present in both states, since the default is perfect.
+
+{% Aside %}
+Support for `:only-child` on transition pseudo-elements was added in Chrome 110.
+{% endAside %}
 
 ## Async DOM updates, and waiting for content
 
@@ -410,6 +487,7 @@ In the case where the thumbnail transitions to a larger image:
 
 <figure>
   {% Video
+    playsinline="true",
     src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/283vqtaDXSaGRTn5nEEn.mp4",
     class="desktop-demo",
     loop="true",
@@ -450,6 +528,7 @@ Conveniently, all the transitions so far have been to elements with the same asp
 
 <figure>
   {% Video
+    playsinline="true",
     src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/gXiaS9IpE70fnv4kkrK5.mp4",
     class="aspect-ratio-change-demo",
     loop="true",
@@ -506,6 +585,7 @@ You may want to use different transitions on mobile vs desktop, such as this exa
 
 <figure>
   {% Video
+    playsinline="true",
     src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/NSCx5JTmzyJPOu6rrpeT.mp4",
     class="desktop-demo",
     loop="true",
@@ -569,6 +649,7 @@ Sometimes a navigation from one particular type of page to another should have a
 
 <figure>
   {% Video
+    playsinline="true",
     src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/Btn9XiUhpQC7Lz198IKI.mp4",
     class="desktop-demo",
     loop="true",
@@ -629,12 +710,85 @@ Now you can use that class name in your CSS to change the transition:
 
 As with media queries, the presence of these classes could also be used to change which elements get a `view-transition-name`.
 
+## Transitioning without freezing other animations {:#transitioning-without-freezing}
+
+Take a look at this demo of a video transitioning position:
+
+<style>
+  .not-freezing-demo {
+    aspect-ratio: 1366/1584;
+    max-width: 683px;
+    max-height: 70vh;
+  }
+</style>
+
+<figure>
+  {% Video
+    playsinline="true",
+    src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/PdbIbficqb89NkKrBOBt.mp4",
+    class="not-freezing-demo",
+    loop="true",
+    muted="true",
+    controls="true"
+  %}
+  <figcaption>Video transition. <a href="https://simple-set-demos.glitch.me/video/">Minimal demo</a>. <a href="https://glitch.com/edit/#!/simple-set-demos?path=video%2Fstyles.css%3A2%3A21">Source</a>.</figcaption>
+</figure>
+
+Did you see anything wrong with it? Don't worry if you didn't. Here it is slowed right down:
+
+<figure>
+  {% Video
+    playsinline="true",
+    src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/gfErCErLjrbc5RdXUR43.mp4",
+    class="not-freezing-demo",
+    loop="true",
+    muted="true",
+    controls="true"
+  %}
+  <figcaption>Video transition, slower. <a href="https://simple-set-demos.glitch.me/video/">Minimal demo</a>. <a href="https://glitch.com/edit/#!/simple-set-demos?path=video%2Fstyles.css%3A2%3A21">Source</a>.</figcaption>
+</figure>
+
+During the transition, the video appears to freeze, then the playing version of the video fades in. This is because the `::view-transition-old(video)` is a screenshot of the old view, whereas the `::view-transition-new(video)` is a _live_ image of the new view.
+
+You can fix this, but first, ask yourself if it's worth fixing. If you didn't see the 'problem' when the transition was playing at its normal speed, I wouldn't bother changing it.
+
+If you really want to fix it, then don't show the `::view-transition-old(video)`; switch straight to the `::view-transition-new(video)`. You can do this by overriding the default styles and animations:
+
+```css
+::view-transition-old(video) {
+  /* Don't show the frozen old view */
+  display: none;
+}
+
+::view-transition-new(video) {
+  /* Don't fade the new view in */
+  animation: none;
+}
+```
+
+And that's it!
+
+<figure>
+  {% Video
+    playsinline="true",
+    src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/n5BdihfhzitBSIak1KhM.mp4",
+    class="not-freezing-demo",
+    loop="true",
+    muted="true",
+    controls="true"
+  %}
+  <figcaption>Video transition, slower. <a href="https://simple-set-demos.glitch.me/video/">Minimal demo</a>. <a href="https://glitch.com/edit/#!/simple-set-demos?path=video%2Fstyles.css%3A2%3A21">Source</a>.</figcaption>
+</figure>
+
+Now the video plays throughout the transition.
+
 ## Animating with JavaScript {:#animating-with-javascript}
 
 So far, all the transitions have been defined using CSS, but sometimes CSS isn't enough:
 
 <figure>
   {% Video
+    playsinline="true",
     src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/MrrqwatxWSPdobfDR1Qo.mp4",
     class="desktop-demo",
     loop="true",
@@ -756,7 +910,7 @@ async function switchView(data) {
 
   animateFromMiddle(transition);
 
-  await transition.domUpdated;
+  await transition.updateCallbackDone;
 }
 
 async function animateFromMiddle(transition) {
@@ -781,9 +935,13 @@ async function animateFromMiddle(transition) {
 
 {% endCompare %}
 
-This example uses `transition.domUpdated` to wait for the DOM update, and to reject if it fails. `switchView` no longer rejects if the transition fails, it resolves when the DOM update completes, and rejects if it fails.
+This example uses `transition.updateCallbackDone` to wait for the DOM update, and to reject if it fails. `switchView` no longer rejects if the transition fails, it resolves when the DOM update completes, and rejects if it fails.
 
-If you want `switchView` to resolve when the new view has 'settled', as in, any animated transition has completed or skipped to the end, replace `transition.domUpdated` with `transition.finished`.
+If you want `switchView` to resolve when the new view has 'settled', as in, any animated transition has completed or skipped to the end, replace `transition.updateCallbackDone` with `transition.finished`.
+
+{% Aside %}
+`updateCallbackDone` was previously `domUpdated`. It was renamed in Chrome 111.
+{% endAside %}
 
 ## Not a polyfill, but… {:#not-a-polyfill}
 
@@ -798,12 +956,13 @@ function transitionHelper({
   updateDOM,
 }) {
   if (skipTransition || !document.startViewTransition) {
-    const domUpdated = Promise.resolve(updateDOM()).then(() => undefined);
+    const updateCallbackDone = Promise.resolve(updateDOM()).then(() => {});
 
     return {
       ready: Promise.reject(Error('View transitions unsupported')),
-      domUpdated,
-      finished: domUpdated,
+      updateCallbackDone,
+      finished: updateCallbackDone,
+      skipTransition: () => {},
     };
   }
 
@@ -844,38 +1003,42 @@ You can also pass `true` to `skipTransition` if you don't want an animation, eve
 
 ## API reference {:#api-reference}
 
-`const viewTransition = document.startViewTransition(domUpdateCallback)`
+`const viewTransition = document.startViewTransition(updateCallback)`
 : Start a new `ViewTransition`.
 
-    `domUpdateCallback` is called once the current state of the document is captured.
+    `updateCallback` is called once the current state of the document is captured.
 
-    Then, when the promise returned by `domUpdateCallback` fulfills, the transition begins in the next frame. If the promise returned by `domUpdateCallback` rejects, the transition is abandoned.
+    Then, when the promise returned by `updateCallback` fulfills, the transition begins in the next frame. If the promise returned by `updateCallback` rejects, the transition is abandoned.
 
 Instance members of `ViewTransition`:
 
-`viewTransition.domUpdated`
-: A promise that fulfills when the promise returned by `domUpdateCallback` fulfills, or rejects when it rejects.
+`viewTransition.updateCallbackDone`
+: A promise that fulfills when the promise returned by `updateCallback` fulfills, or rejects when it rejects.
 
-    The View Transition API wraps a DOM change and creates a transition. However, sometimes you don't care about the success/failure of the transition animation, you just want to know if and when the DOM change happens. `domUpdated` is for that use-case.
+    The View Transition API wraps a DOM change and creates a transition. However, sometimes you don't care about the success/failure of the transition animation, you just want to know if and when the DOM change happens. `updateCallbackDone` is for that use-case.
+
+    {% Aside %}
+    `updateCallbackDone` was previously `domUpdated`. It was renamed in Chrome 111.
+    {% endAside %}
 
 `viewTransition.ready`
 : A promise that fulfills once the pseudo-elements for the transition are created, and the animation is about to start.
 
-    It rejects if the transition cannot begin. This can be due to misconfiguration, such as duplicate `view-transition-name`s, or if `domUpdateCallback` returns a rejected promise.
+    It rejects if the transition cannot begin. This can be due to misconfiguration, such as duplicate `view-transition-name`s, or if `updateCallback` returns a rejected promise.
 
     This is useful for [animating the transition pseudo-elements with JavaScript](#animating-with-javascript).
 
 `viewTransition.finished`
 : A promise that fulfills once the end state is fully visible and interactive to the user.
 
-    It only rejects if `domUpdateCallback` returns a rejected promise, as this indicates the end state wasn't created.
+    It only rejects if `updateCallback` returns a rejected promise, as this indicates the end state wasn't created.
 
     Otherwise, if a transition fails to begin, or is skipped during the transition, the end state is still reached, so `finished` fulfills.
 
 `viewTransition.skipTransition()`
 : Skip the animation part of the transition.
 
-    This won't skip calling `domUpdateCallback`, as the DOM change is separate to the transition.
+    This won't skip calling `updateCallback`, as the DOM change is separate to the transition.
 
 ## Default style and transition reference
 

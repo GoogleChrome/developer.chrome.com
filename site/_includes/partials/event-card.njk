@@ -67,7 +67,7 @@
     <div class="event-card__details gap-top-400 grid-cols-1 grid-gap-400 lg:grid-cols-2">
       {% for session in event.sessions %}
         {% if session.type === 'speaker' %}
-          {% set alt = session.speaker.title or session.title %}
+          {% set alt = session.speaker.title | i18n or session.title %}
           {% set sessionImage = session.speaker.image %}
           {% set sessionTitle = session.speaker.title | i18n %}
 

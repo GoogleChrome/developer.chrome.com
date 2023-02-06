@@ -87,7 +87,7 @@ listed as web accessible. Note these corner cases:
 
 The [Web Accessible Resources example][war-example] demonstrates the use of this element in a working extension.
 
-[war-example]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/web-accessible-resources
+[war-example]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/web-accessible-resources
 [1]: /docs/extensions/reference/extension/#method-getURL
 [2]: https://www.w3.org/TR/cors/
 [3]: /docs/extensions/reference/webRequest/
