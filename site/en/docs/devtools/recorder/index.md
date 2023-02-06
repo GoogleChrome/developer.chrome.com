@@ -85,7 +85,10 @@ In the next sections, we will walk you through how to record, replay and audit t
 1. In the payment details form, fill in the *Name* and *Email* textboxes, and check the *I would like to receive order updates and promotional messages.* checkbox.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/UOewwKwP99GldzuTtIL7.png", alt="Payment details form.", width="800", height="519" %}
 1. Click on the *Submit* button to complete the checkout process.
-1. In the **Recorder** panel. Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/atK0ZIkmafgOnagKckde.svg", alt="End recording.", width="20", height="20" %} **End recording** button to end the recording.
+   {% Aside 'gotchas' %}
+   You can manually [edit steps](#edit-steps) even before you end the recording.
+   {% endAside %}
+1. In the **Recorder** panel, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/atK0ZIkmafgOnagKckde.svg", alt="End recording.", width="20", height="20" %} **End recording** button to end the recording.
 
 
 ## Replay a user flow {: #replay }
@@ -127,7 +130,7 @@ Learn how to [analyze your page's runtime performance](/devtools/evaluate-perfor
 
 Let's walk through the basic options to edit the steps within the recorded workflow.
 
-For a comprehensive list of editing options, see [Edit steps](/docs/devtools/recorder/reference/##edit-steps) in features reference.
+For a comprehensive list of editing options, see [Edit steps](/docs/devtools/recorder/reference/#edit-steps) in features reference.
 
 ### Expand steps {: #expand-step }
 
