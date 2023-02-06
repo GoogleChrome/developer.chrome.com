@@ -1,9 +1,9 @@
 const {determineDeploymentType} = require('./determineDeploymentType');
-const {awaitGoogleCloudBuild} = require('./awaitGoogleCloudBuild');
+const {buildStaticSite} = require('./buildStaticSite');
 const {buildAnnouncementComment} = require('./buildAnnouncementComment');
 
 module.exports = {
   determineDeploymentType,
-  awaitGoogleCloudBuild,
+  buildStaticSite,
   buildAnnouncementComment,
 };

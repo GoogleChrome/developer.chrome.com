@@ -2,17 +2,22 @@ timeout: 2700s # Set build timeout to 45 mins
 steps:
   - id: 'install'
     name: node:18
-    entrypoint: yarn
-    args: ['install']
+    entrypoint: npm
+    args: ['ci']
 
   - id: 'prepare'
     name: node:18
     entrypoint: npm
     env:
       - 'BRANCH_NAME=$BRANCH_NAME'
+      - 'COMMIT_SHA=$COMMIT_SHA'
       - 'PR_NUMBER=$_PR_NUMBER'
     secretEnv: ['GITHUB_TOKEN']
-    args: ['run', 'stage:github', 'determineDeploymentType']
+    args:
+      - '-c'
+      - |
+        npm run stage:github determineDeploymentType
+        npm run stage:github announceDeploymentStart
 
   - id: 'build'
     name: node:18
@@ -20,14 +25,11 @@ steps:
       - 'CI=true'
       - 'NODE_OPTIONS="--max_old_space_size=8192"'
       - 'ELEVENTY_IGNORE_NACL=true'
-    entrypoint: bash
+    secretEnv: ['GITHUB_TOKEN']
     args:
       - '-c'
-      # Only build if there have actually been relevant changes that can be previewed
       - |
-        if ! [[ "$(cat gulp-tasks/stageGitHub/tmp/deploymentType.txt)" = "" ]]; then
-          npm run production
-        fi
+        npm run stage:github buildStaticSite
 
   - id: 'deploy'
     name: 'gcr.io/cloud-builders/gcloud'
@@ -48,6 +50,20 @@ steps:
         if [[ "$(cat gulp-tasks/stageGitHub/tmp/deploymentType.txt)" = "app" ]]; then
           gcloud app deploy --version pr-$_PR_NUMBER-app --no-promote --project dcc-staging
         fi
+
+  - id: 'finalize'
+    name: node:18
+    entrypoint: npm
+    env:
+      - 'BRANCH_NAME=$BRANCH_NAME'
+      - 'COMMIT_SHA=$COMMIT_SHA'
+      - 'PR_NUMBER=$_PR_NUMBER'
+    secretEnv: ['GITHUB_TOKEN']
+    args:
+      - '-c'
+      - |
+        npm run stage:github announceDeploymentFinished
+
 options:
   machineType: 'E2_HIGHCPU_32'
 
