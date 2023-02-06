@@ -6,14 +6,25 @@
 
   .search-box__input {
     background: var(--color-bg-shade);
-    display: block;
     border: 0;
     border-radius: px-to-rem(100px);
+    display: block;
     margin: 0;
     padding: get-size(200) get-size(300) get-size(200) get-size(700);
 
     &::placeholder {
       color: var(--color-secondary-text);
+    }
+  }
+
+  .search-box__btn--close {
+    justify-self: end;
+  }
+
+  .search-box__btn--close {
+    svg {
+      height: 18px;
+      width: 18px;
     }
   }
 

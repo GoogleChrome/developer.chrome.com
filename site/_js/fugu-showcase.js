@@ -22,6 +22,7 @@ import './web-components/enhanced-select';
   const searchAppsInput = document.querySelector('#search-fugu-apps');
   /** @type ExtendedSelect|null */
   const apiSelect = document.querySelector('#api-select');
+  const searchClose = document.querySelector('#search-fugu-apps-close');
 
   if (!searchAppsInput || !apiSelect) {
     return;
@@ -43,6 +44,10 @@ import './web-components/enhanced-select';
 
   apiSelect.addEventListener('change', onSearch);
   searchAppsInput.addEventListener('change', onSearch);
+  searchClose?.addEventListener('click', () => {
+    searchAppsInput.value = '';
+    onSearch();
+  });
 
   const filterCards = (cards, searchTerm, selectedApis) => {
     if (selectedApis.length === 0 && searchTerm.length === 0) {
