@@ -20,7 +20,7 @@
       <picture>
         <source srcset="https://googlechromelabs.github.io/fugu-showcase/data/{{ item.screenshot }}">
         <source media="(prefers-color-scheme: dark)" srcset="https://googlechromelabs.github.io/fugu-showcase/data/{{ item.screenshotDark }}">
-        <img class="hairline " alt="Screenshot of {{ item.title }}." height="800" src="{{ item.screenshot }}" width="1280">
+        <img class="hairline " alt="Screenshot of {{ item.title }}." height="800" src="{{ item.screenshot }}" width="1280" loading="lazy">
       </picture>
     </a>
   </div>
