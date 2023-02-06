@@ -38,8 +38,8 @@ alt: Blowfish swarm swimming in the ocean.
         <input
           id="search-fugu-apps"
           class="search-box__input"
-          placeholder="Search apps"
-          aria-label="Search apps"
+          placeholder="{{ 'i18n.fugu_showcase.search_apps' | i18n(locale) }}"
+          aria-label="{{ 'i18n.fugu_showcase.search_apps' | i18n(locale) }}"
           aria-autocomplete="list"
         />
         <span class="search-box__btn search-box__btn--close" id="search-fugu-apps-close">
@@ -47,7 +47,7 @@ alt: Blowfish swarm swimming in the ocean.
         </span>
       </div>
       <label class="label lg:gap-left-500" for="api-select">{{ 'i18n.filter_sheet.filter_by' | i18n(locale) }}</label>
-      <enhanced-select id="api-select" label="Select API">
+      <enhanced-select id="api-select" label="{{ 'i18n.fugu_showcase.select_api' | i18n(locale) }}">
         <select name="api-select" multiple>
           {% for availableAPI in fuguShowcase.availableApis %}
             <option value="{{ availableAPI | replace(" ", '-') | lower | replace("(", "") | replace(")", "") }}">{{ availableAPI }}</option>
