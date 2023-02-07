@@ -16,13 +16,13 @@ tags:
  - crux
 ---
 
-This article introduces the [Chrome UX API](https://developer.chrome.com/docs/crux/history-api/) history endpoint, which provides time series of web performance data. This data updates weekly, and allows you to see about 6 months worth of history, with 25 data points spaced out by a week.
+This article introduces the [Chrome UX API](/docs/crux/history-api/) history endpoint, which provides time series of web performance data. This data updates weekly, and allows you to see about 6 months worth of history, with 25 data points spaced out by a week.
 
 When used with the daily updates from the original CrUX API endpoint, you can now quickly see both the most recent data and what happened previously, making this a powerful tool for tracking webpage changes over time.
 
 ## Querying the daily CrUX API
 
-To recap from [a previous article](https://web.dev/chrome-ux-report-api/), you can get a snapshot of the field data for a particular origin from the CrUX API in this way:
+To recap from [a previous article](/blog/chrome-ux-report-api/), you can get a snapshot of the field data for a particular origin from the CrUX API in this way:
 
 ```shell
 API_KEY="[YOUR_API_KEY]"
@@ -60,7 +60,7 @@ This snapshot includes histogram density values and percentile values for a part
 
 ## Querying the CrUX History API
 
-To call the history endpoint, change `queryRecord` in the URL to `queryHistoryRecord` in the curl command. Using the same [CrUX API key](https://developer.chrome.com/docs/crux/api/#crux-api-key) as for the previous call will work.
+To call the history endpoint, change `queryRecord` in the URL to `queryHistoryRecord` in the curl command. Using the same [CrUX API key](/docs/crux/api/#crux-api-key) as for the previous call will work.
 
 ```shell
 API_KEY="[YOUR_API_KEY]"
@@ -125,7 +125,7 @@ The overall shape of a response is similar—but there is a lot more data! Inste
 }
 ```
 
-In this example, the `densities` time series for the 0 to 2500 ms bucket of the [Largest Contentful Paint (LCP)](https://web.dev/lcp) metric is [`0.9190, 0.9203, 0.9194, 0.9195, 0.9183, 0.9187].` Each of these densities was observed during the corresponding `collectionPeriods` entry. For example, the fifth density, 0.9183, was the density for the fifth collection period, ending in September 3rd, 2022, and 0.9187 was the density in the period ending the week after that.
+In this example, the `densities` time series for the 0 to 2500 ms bucket of the [Largest Contentful Paint (LCP)](https://web.dev/lcp/) metric is [`0.9190, 0.9203, 0.9194, 0.9195, 0.9183, 0.9187].` Each of these densities was observed during the corresponding `collectionPeriods` entry. For example, the fifth density, 0.9183, was the density for the fifth collection period, ending in September 3rd, 2022, and 0.9187 was the density in the period ending the week after that.
 
 In other words, interpreting the last time series entries in the example for [https://web.dev](https://web.dev), it was found that from August 14, 2022 until September 10, 2022, 91.87% of page loads had LCP values smaller than 2500ms, 5.27% had values between 2500ms and 4000ms, and 2.85% had values greater than 4000ms.
 
@@ -143,7 +143,7 @@ In any given response, the length of the time series for the histogram bin densi
 
 ## Querying page-level data
 
-As well as origin-level data, the historical API allows access to historical page-level data. While the origin-level data was available previously via the [CrUX dataset on BigQuery](https://developer.chrome.com/docs/crux/bigquery/) (or via [the CrUX Dashboard](https://developer.chrome.com/docs/crux/dashboard/)), the page-level historical data was only available if sites collected and stored the data themselves. The new API now unlocks that historical page-level data.
+As well as origin-level data, the historical API allows access to historical page-level data. While the origin-level data was available previously via the [CrUX dataset on BigQuery](/docs/crux/bigquery/) (or via [the CrUX Dashboard](/docs/crux/dashboard/)), the page-level historical data was only available if sites collected and stored the data themselves. The new API now unlocks that historical page-level data.
 
 The page-level data can be queried in the same manner, but using `url` instead of `origin` in the payload:
 
@@ -154,11 +154,11 @@ curl "https://chromeuxreport.googleapis.com/v1/records:queryHistoryRecord?key=$A
  --data '{"url": "https://web.dev/blog/"}'
 ```
 
-Page-level (and origin-level) historical data is subject to [the same eligibility requirements](https://developer.chrome.com/docs/crux/methodology/#eligibility) as the rest of CrUX, and so pages in particular may not have a complete historical record.
+Page-level (and origin-level) historical data is subject to [the same eligibility requirements](/docs/crux/methodology/#eligibility) as the rest of CrUX, and so pages in particular may not have a complete historical record.
 
 ## Visualizing the data
 
-So, you may ask, why is the data shaped in this way? It wasfound that this makes it easy to plot graphs. For example, here is a graph for the p75 values for [Interaction To Next Paint (INP)](https://web.dev/inp) for [https://web.dev](https://web.dev):
+So, you may ask, why is the data shaped in this way? It wasfound that this makes it easy to plot graphs. For example, here is a graph for the p75 values for [Interaction To Next Paint (INP)](https://web.dev/inp/) for [https://web.dev](https://web.dev):
 
 {% Img src="image/kd0zRXNeKScEzrwMmhY1NNvIzeM2/fgLRTt2WB2Yd67bL3mMc.png", alt="Time series graph of p75 value showing a regression around November 2022", width="512", height="339" %}
 
