@@ -153,7 +153,14 @@
     "twitter": "mikewest"
   },
   "johannes": {
-    "github": "powdercloud"
+    "github": "powdercloud",
+    "twitter": "powdercloud",
+    "mastodon": "https://mastodon.social/@powdercloud",
+    "image": "image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/okZMIdTu1wPPE4YqqKDX.jpeg"
+  },
+  "jasmineyan": {
+    "github": "jazyan",
+    "image": "image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/fBUEuHdxeM0oGVbrelgI.png"
   },
   "housseindjirdeh": {
     "homepage": "https://houssein.me/",
