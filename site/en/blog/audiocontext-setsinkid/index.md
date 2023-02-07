@@ -34,7 +34,8 @@ The example below shows you how to request microphone access if needed and direc
 const permission = await navigator.permissions.query({ name: "microphone" });
 if (permission.state == "prompt") {
   // More audio outputs are available when user grants access to the mic.
-  await navigator.mediaDevices.getUserMedia({ audio: true });
+  const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+  stream.getTracks().forEach((track) => track.stop());
 }
 
 // Request a list of media devices and filter audio output devices.

@@ -195,7 +195,7 @@ The following sections briefly summarize each tool and how the data can be used.
 
 ### CrUX on BigQuery {: #tool-bigquery}
 
-Origin-level CrUX data is available for public querying via [BigQuery](https://cloud.google.com/bigquery). Read the guide on [Using the Chrome UX Report](https://web.dev/chrome-ux-report-bigquery/).
+Origin-level CrUX data is available for public querying via [BigQuery](https://cloud.google.com/bigquery). Read the guide on [Using the Chrome UX Report](/blog/chrome-ux-report-bigquery/).
 
 [CrUX on BigQuery](/docs/crux/bigquery/) provides a publicly accessible database of all origin-level data collected by CrUX. It is possible to query any and all origins for which data is collected, analyze any metric that CrUX supports and filter by all available dimensions. Full metric histograms are stored in the BigQuery tables allowing for visualization of performance distributions, including experimental metrics.
 

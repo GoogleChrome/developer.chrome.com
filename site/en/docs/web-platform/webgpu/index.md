@@ -7,7 +7,7 @@ authors:
   - beaufortfrancois
   - cwallez
 date: 2021-08-26
-updated: 2022-07-20
+updated: 2023-01-27
 ---
 
 ## What is WebGPU? {: #what }
@@ -118,7 +118,8 @@ WebGPU.
 ## Browser support {: #browser-support }
 
 WebGPU is available on select devices on ChromeOS, macOS, and Windows 10 in
-Chrome&nbsp;94 with more devices being supported in the future. Linux
+Chrome&nbsp;94 with more devices being supported in the future.
+Android support is available on Android in Chrome&nbsp;111. Linux
 experimental support is available by running Chrome with
 `--enable-features=Vulkan`. More support for more platforms will
 follow.
