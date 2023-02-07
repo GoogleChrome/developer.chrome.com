@@ -135,7 +135,7 @@ While the example only lists 6 time series entries and collection periods, respo
 
 {% Aside %}
 
-Unlike the daily API, the historical API is only available once a week. However, like the daily API, each value in the historical API is measured from the previous 28 days. This means the historical API should represent the same data that was available via the daily API for the given date—it is just now available to query retrospectively. However, it does mean the historical API contains overlapping periods of data but—as a trend analysis—it is useful to track the change in metrics over time.
+Unlike the daily API, the CrUX History API is only updated once a week on Mondays. However, like the daily API, each value in the CrUX History API is measured from the previous 28 days. This means the history API should represent the same data that was available via the daily API for the given date—it is just now available to query retrospectively. However, it does mean the history API contains overlapping periods of data but—as a trend analysis—it is useful to track the change in metrics over time.
 
 {% endAside %}
 
@@ -143,7 +143,7 @@ In any given response, the length of the time series for the histogram bin densi
 
 ## Querying page-level data
 
-As well as origin-level data, the historical API allows access to historical page-level data. While the origin-level data was available previously via the [CrUX dataset on BigQuery](/docs/crux/bigquery/) (or via [the CrUX Dashboard](/docs/crux/dashboard/)), the page-level historical data was only available if sites collected and stored the data themselves. The new API now unlocks that historical page-level data.
+As well as origin-level data, the CrUX History API allows access to historical page-level data. While the origin-level data was available previously via the [CrUX dataset on BigQuery](/docs/crux/bigquery/) (or via [the CrUX Dashboard](/docs/crux/dashboard/)), the page-level historical data was only available if sites collected and stored the data themselves. The new API now unlocks that historical page-level data.
 
 The page-level data can be queried in the same manner, but using `url` instead of `origin` in the payload:
 
@@ -158,7 +158,7 @@ Page-level (and origin-level) historical data is subject to [the same eligibilit
 
 ## Visualizing the data
 
-So, you may ask, why is the data shaped in this way? It wasfound that this makes it easy to plot graphs. For example, here is a graph for the p75 values for [Interaction To Next Paint (INP)](https://web.dev/inp/) for [https://web.dev](https://web.dev):
+So, you may ask, why is the data shaped in this way? It was found that this makes it easy to plot graphs. For example, here is a graph for the p75 values for [Interaction To Next Paint (INP)](https://web.dev/inp/) for [https://web.dev](https://web.dev):
 
 {% Img src="image/kd0zRXNeKScEzrwMmhY1NNvIzeM2/fgLRTt2WB2Yd67bL3mMc.png", alt="Time series graph of p75 value showing a regression around November 2022", width="512", height="339" %}
 
@@ -180,9 +180,9 @@ This Colab allows you to make p75 charts, tri-bin charts, get data in tabular fo
 
 ## Conclusion
 
-Before the introduction of the CrUX Historical API endpoint, site owners were limited in the historical information they could obtain from CrUX. Monthly origin-level data was available via BigQuery and the CrUX Dashboard, but weekly data was not available nor was page-level historical data. Site owners could record this data themselves using the daily API, but often the need for this was only discovered after a regression in metrics.
+Before the introduction of the CrUX History API endpoint, site owners were limited in the historical information they could obtain from CrUX. Monthly origin-level data was available via BigQuery and the CrUX Dashboard, but weekly data was not available nor was page-level historical data. Site owners could record this data themselves using the daily API, but often the need for this was only discovered after a regression in metrics.
 
-The hope with the introduction of this historical API is that it will allow site owners to have a better understanding of their changing site metrics, and as a diagnostic tool for when issues arise. If you are using the new API, feedback is welcomed at the [Chrome UX Report (Discussions) google group](https://groups.google.com/a/chromium.org/g/chrome-ux-report).
+The hope with the introduction of this history API is that it will allow site owners to have a better understanding of their changing site metrics, and as a diagnostic tool for when issues arise. If you are using the new API, feedback is welcomed at the [Chrome UX Report (Discussions) google group](https://groups.google.com/a/chromium.org/g/chrome-ux-report).
 
 ## Acknowledgements
 
