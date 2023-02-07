@@ -10,7 +10,7 @@
 * [Recorder: опции копирования для шага, воспроизведение на странице, контекстное меню шага](/ru/blog/new-in-devtools-109/#recorder)
 * [Показ настоящих названий функций в записях производительности](/ru/blog/new-in-devtools-109/#performance)
 * [Новые горячие клавиши во вкладках Консоль (Console) и Источники (Sources)](/ru/blog/new-in-devtools-109/#keyboard-shortcuts)
-* [Улучшена отладка JavaScript](/ru/blog/new-in-devtools-109/#debugging)
+* [Улучшенная отладка JavaScript](/ru/blog/new-in-devtools-109/#debugging)
 * [Другие важные моменты](/ru/blog/new-in-devtools-109/#misc)
 * [[Эксперимент] Улучшенный UX в интерфейсе управления точками останова](/ru/blog/new-in-devtools-109/#breakpoint-redesign)
 * [[Эксперимент] Автоматическое красивое форматирование внутри файла](/ru/blog/new-in-devtools-109/#pretty-print)

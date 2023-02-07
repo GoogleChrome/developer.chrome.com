@@ -38,7 +38,7 @@ tags:
 С последним обновлением **Recorder** показывает шаг навигации отдельно. Вы можете нажать правой клавишей мыши и удалить его для воспроизведения на странице.
 
 <!-- Apart from that, you can right-click a step and copy it to the clipboard in the **Recorder* panel instead of exporting the whole user flow. It works with [extensions](https://goo.gle/recorder-extension) too. For example, try to copy a step as a [Nightwatch Test](https://bit.ly/nightwatch-recorder) script. With this feature, you can update any existing script with ease. -->
-Кроме того, вы можете нажать правой клавишей мыши на шаг и скопировать его в буфер обмена во вкладке **Recorder** вместо того, чтобы экспортировать весь пользовательский сценарий. Это работает и с [расширениями](https://goo.gle/recorder-extension) тоже. Например, попробуйте скопировать шаг как скрипт для [Nightwatch Test](https://bit.ly/nightwatch-recorder). С помощью этой функции вы можете легко обновить любой существующий скрипт.
+Кроме того, вы можете кликнуть правой клавишей мыши на шаг и скопировать его в буфер обмена во вкладке **Recorder** вместо того, чтобы экспортировать весь пользовательский сценарий. Это работает и с [расширениями](https://goo.gle/recorder-extension) тоже. Например, попробуйте скопировать шаг как скрипт для [Nightwatch Test](https://bit.ly/nightwatch-recorder). С помощью этой функции вы можете легко обновить любой существующий скрипт.
 
 
 <!-- Previously, you could access the step menu only through the 3-dot button. You can now right-click anywhere on the step to access the menu. -->
@@ -64,7 +64,7 @@ tags:
 Ранее, когда вы записывали трассировку во вкладке **Производительность** (Performance), в трассировке показывались только минифицированные имена функций. Это затрудняло отладку.
 
 <!-- With the latest changes, DevTools now reads the source map and shows the actual function names and source location.  -->
-С последним обновлением DevTools читают карту источников и показывают фактические имена функций и их положение в исходниках.
+С последним обновлением DevTools читает карту источников и показывает фактические имена функций и их положение в исходниках.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/4be8b5bcc00889ca35a455aa093ec242dce8ce6c #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/24d850860bda04864069e6c0d4dab32c8f53bc7f  #}
@@ -86,7 +86,7 @@ tags:
 Кроме того, вы можете переключаться между предложениями автодополнения при помощи <kbd>Ctrl</kbd> + <kbd>N</kbd> и <kbd>Ctrl + P</kbd> на MacOS так же как в [Emacs](https://www.gnu.org/software/emacs/). Например, вы можете напечатать `window.` в Консоли (Console) и затем использовать эти горячие клавиши для навигации.
 
 <!-- On top of that, DevTools now accepts <kbd>Arrow Right</kbd> for autocompletion only at the end of line. For example, an autocomplete dialog shows when you are editing something in the middle of the code. When you press the <kbd>Arrow Right</kbd> key, most likely, you want to set the cursor to the next position instead of autocomplete. This UX change better aligns with your authoring workflow. -->
-В добавок ко всему, DevTools теперь позволяет использовать клавишу <kbd>Стрелка вправо</kbd> для автодополнения только в конце строки. Например, вы редактируете что-то в середине строки кода. Когда вы нажимаете клавишу <kbd>Стрелка вправо</kbd>, вы, скорее всего, ожидаете, что курсор переместится на следующий символ вместо вставки автодополнения. Это изменение UX лучше согласуется с вашим рабочим процессом редактирования.
+В добавок к этому, DevTools теперь позволяет использовать клавишу <kbd>Стрелка вправо</kbd> для автодополнения только в конце строки. Например, диалоговое окно появляется, когда вы редактируете что-то в середине строки кода. Когда вы нажимаете клавишу <kbd>Стрелка вправо</kbd>, вы, скорее всего, хотите, чтобы курсор переместится на следующий символ вместо вставки автодополнения. Это изменение UX лучше согласуется с вашим рабочим процессом редактирования.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/686acb9789020a511405a53a13ad754a7e928c99 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/09c3ceaa1605b29d1074d0cf310958bdb823149d #}
@@ -96,13 +96,13 @@ tags:
 
 
 <!-- ## Improved JavaScript debugging {: #debugging } -->
-## Улучшена отладка JavaScript {: #debugging }
+## Улучшенная отладка JavaScript {: #debugging }
 
 <!-- These are some JavaScript debugging improvements in this release: -->
 Вот некоторые улучшения процесса отладки JavaScript в этом обновлении:
 
 <!-- - `new.target` is a meta-property that lets you detect whether a function or constructor was called using the new operator. You can now log `new.target` in the **Console** to check its value during debugging. Previously, it would return errors when you entered `new.target`. -->
-- `new.target` это мета-свойство, позволяющее определить, были ли функция или конструктор вызваны с помощью оператора new.
+- `new.target` это мета-свойство, позволяющее определить, были ли функция или конструктор вызваны с помощью оператора new. Теперь вы можете логировать `new.target` в **Консоли** (Console) чтобы проверять значение во время отладки. Ранее при вводе `new.target` возвращались ошибки.
    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hKOEn03BZN2IUmWJ1Hho.png", alt="Показано сравнение до и после внедрения new.target", width="800", height="499" %}
 <!-- - A `WeakRef` object lets you hold a weak reference to another object, without preventing that object from getting garbage-collected. DevTools now shows an inline preview for the value and evaluates the weak reference directly in the console during debugging. Previously, you had to explicitly call “deref” on them to resolve it. -->
 - Объект `WeakRef` позволяет хранить слабую ссылку на другой объект, не препятствуя работе сборщика мусора. DevTools теперь показывает предварительный просмотр значения и выполняет обработку слабой ссылки непосредственно в консоли во время отладки. Ранее для решения этой проблемы необходимо было непосредственно вызывать для них команду "deref".
@@ -160,7 +160,7 @@ tags:
 Нынешняя панель **Точки останова** (Breakpoints) мало помогает при просмотре всех точек останова. Кроме того, часто используемые действия спрятаны в контекстном меню.
 
 <!-- This experimental UX redesign aims at bringing structure into the **Breakpoints** pane and allow developers to have quick access to commonly used features, in particular editing and removing breakpoints. -->
-Экспериментальный редизайн UX нужен, чтобы добавить структуры в панель **Точки останова** (Breakpoints) и предоставляет разработчикам быстрый доступ к основным функциям, в частности, к добавлению и удалению точки останова.
+Экспериментальный редизайн UX привносит структуру в панель **Точки останова** (Breakpoints) и предоставляет разработчикам быстрый доступ к основным функциям, в частности, к добавлению и удалению точки останова.
 
 <!-- These are some highlights: -->
 Основные моменты:
@@ -190,7 +190,7 @@ tags:
 {% endAside %}
 
 <!-- The **Sources** panel now automatically pretty print minified source files in-place. You can click on the **pretty print button `{ }` to underdo it. -->
-Во вкладке **Источники** (Sources) минифицированные файлы теперь автоматически форматируются. Вы можете нажать на кнопку автоформатирования `{ }`, чтобы увидеть файл без форматирования.
+Во вкладке **Источники** (Sources) минифицированные файлы теперь автоматически форматируются. Вы можете нажать на кнопку автоформатирования `{ }`, чтобы отменить это.
 
 <!-- Previously, the **Sources** panel shows minified content by default. Developers need to click on the pretty print button manually to format the content. On top of that, the pretty printed content is not displayed in the same file, but in another `::formatted` tab. -->
 Ранее на вкладке **Источники** (Sources) минифицированный контент по умолчанию отображался без форматирования. Разработчикам нужно было нажать на кнопку автоформатирования, чтобы удобно читать контент. Кроме того, ранее форматированный контент отображался не в том же файле, а на новой вкладке `::formatted`.
