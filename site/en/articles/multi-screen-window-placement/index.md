@@ -147,44 +147,35 @@ try {
 While browsers with the old and the new permission name are in use, be sure to use defensive code when requesting permission, as in the example below.
 
 ```js
-document.querySelector('button').addEventListener('click', async () => {
+async function getWindowManagementPermissionState() {
   let state;
-  let permissionName;
   // The new permission name.
   try {
-    state = (
-      await navigator.permissions.query({
-        name: 'window-management',
-      })
-    ).state;
-    permissionName = 'window-management'
+    ({ state } = await navigator.permissions.query({
+      name: "window-management",
+    }));
   } catch (err) {
-    if (err.name === 'TypeError') {
-      // The old permission name.
-      try {
-        state = (
-          await navigator.permissions.query({
-            name: 'window-placement',
-          })
-        ).state;
-        permissionName = 'window-placement'
-      } catch (err) {
-        if (err.name === 'TypeError') {
-          state = 'Window management not supported.';
-        } else {
-          state = `${err.name}: ${err.message}`;
-        }
+    if (err.name !== "TypeError") {
+      return `${err.name}: ${err.message}`;
+    }
+    // The old permission name.
+    try {
+      ({ state } = await navigator.permissions.query({
+        name: "window-placement",
+      }));
+    } catch (err) {
+      if (err.name === "TypeError") {
+        return "Window management not supported.";
       }
-    } else {
-      state = `${err.name}: ${err.message}`;
+      return `${err.name}: ${err.message}`;
     }
   }
-  if ('request' in Permissions.prototype) {
-    state = (await navigator.permissions.request({
-      name: permissionName,
-    })).state
-  }
-  document.querySelector('pre').textContent = state;
+  return state;
+}
+
+document.querySelector("button").addEventListener("click", async () => {
+  const state = await getWindowManagementPermissionState();
+  document.querySelector("pre").textContent = state;
 });
 ```
 
