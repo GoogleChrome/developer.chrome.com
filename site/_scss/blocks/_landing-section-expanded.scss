@@ -88,6 +88,12 @@
       width: 100%;
     }
 
+    .related-articles {
+      @include media-query('md-max') {
+        padding: 0;
+      }
+    }
+
     .related-items {
       column-count: unset;
       margin: 0;
@@ -95,6 +101,10 @@
   }
 
   .related-articles {
+    @include media-query('md-max') {
+      padding: 0 1.5rem;
+    }
+
     ul {
       column-count: 2;
       column-gap: 20px;
