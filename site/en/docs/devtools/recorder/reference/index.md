@@ -161,14 +161,16 @@ To inspect the code of a user flow in various formats:
 1. Open a recording in the **Recorder** panel.
 1. Click **Show code** in the top right corner of the steps list.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/KhynxMityVxQeMJuNdU9.png", alt="The Show code button.", width="800", height="669" %}
-1. The **Recorder** shows a side-by-side view of the steps and their code. As you hover over a step, the **Recorder** highlights its respective code.
+1. The **Recorder** shows a side-by-side view of the steps and their code. 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/3K7idCdrqrZHmMR5Kczc.png", alt="The side-by-side view of the steps and their code.", width="800", height="685" %}
+1. As you hover over a step, the **Recorder** highlights its respective code in any format, including those provided by [extensions](#recorder-extension).
+   {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/u4YeMnjPuw9nINCPdViD.mp4", autoplay=true, controls=true, loop=true, class="screenshot" %}
 1. Expand the format drop-down list to select a format that you use to [export user flows](#export-flows).
 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/fefVto1d2oXvkmBD9DPQ.png", alt="The format drop-down list.", width="800", height="685" %}
 
    It can be one of the three default formats (JSON, [@puppeteer/replay](https://github.com/puppeteer/replay), [Puppeteer script](https://pptr.dev/)) or a format provided by an [extension](#recorder-extension).
-1. Proceed to debug your recording by [editing step parameters and values](#edit-steps). The code view isn't editable.
+1. Proceed to debug your recording by [editing step parameters and values](#edit-steps). The code view isn't editable but it updates accordingly as you make changes to steps on the left.
 
 ### Set breakpoints and execute step by step {: #breakpoints-and-step-through }
 
