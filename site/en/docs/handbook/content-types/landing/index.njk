@@ -48,7 +48,9 @@ exploreLandingSection:
     - url: https://developer.chrome.com
       title: A custom link
       icon: lightbulb-outline
-useCaseLandingSection:  
+useCaseLandingSection:
+  learn_more:
+    link: https://developer.chrome.com
   links:
     - title: A custom link
       description: A custom link for this use case
@@ -70,16 +72,18 @@ useCaseLandingSection:
       description: A custom link for this use case
       url: /content-types/landing/
   use_case_1_additional:
-    - title: An additional document
-      description: A custom link for this use case
-      url: /content-types/landing/
-      important: true
-    - title: An additional document
-      description: A custom link for this use case
-      url: /content-types/landing/
-    - title: An additional document
-      description: A custom link for this use case
-      url: /content-types/landing/
+    title: More documents
+    items:
+      - title: An additional document
+        description: A custom link for this use case
+        url: /content-types/landing/
+        important: true
+      - title: An additional document
+        description: A custom link for this use case
+        url: /content-types/landing/
+      - title: An additional document
+        description: A custom link for this use case
+        url: /content-types/landing/
   use_case_2:
     - title: Use case 2 resource
       description: A custom link for this use case
@@ -91,17 +95,18 @@ useCaseLandingSection:
       description: A custom link for this use case
       url: /content-types/landing/
   use_case_2_additional:
-    - title: An additional document
-      description: A custom link for this use case
-      url: /content-types/landing/
-      important: true
-    - title: An additional document
-      description: A custom link for this use case
-      url: /content-types/landing/
-      important: true
-    - title: An additional document
-      description: A custom link for this use case
-      url: /content-types/landing/
+    items:
+      - title: An additional document
+        description: A custom link for this use case
+        url: /content-types/landing/
+        important: true
+      - title: An additional document
+        description: A custom link for this use case
+        url: /content-types/landing/
+        important: true
+      - title: An additional document
+        description: A custom link for this use case
+        url: /content-types/landing/
 ---
 
 {% from 'macros/cards/hero-card-wide.njk' import heroCardWide with context %}
@@ -254,11 +259,8 @@ useCaseLandingSection:
   429,
   278,
   "image/VbsHyyQopiec0718rMq2kTE1hke2/yrsJmUfAnqDIDxjVYhXq.svg",
-  "Learn more",
-  "https://developer.chrome.com",
-  "More documents",
+  useCaseLandingSection.learn_more,
   useCaseLandingSection.use_case_1_additional,
-  "More documents",
   useCaseLandingSection.use_case_2_additional
   )
 }}
