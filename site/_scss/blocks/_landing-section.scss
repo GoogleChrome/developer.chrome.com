@@ -147,10 +147,10 @@
     &.landing-section--top-3,
     &.landing-section--top-4 {
       .item {
-        margin-top: 1.5em;
+        margin-top: 1.75em;
 
         @include media-query('md-max') {
-          margin: 1.5rem 0;
+          margin: 1.75em 0;
           padding: 0 0 0 3.125rem;
           position: relative;
         }
