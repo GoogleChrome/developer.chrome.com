@@ -27,7 +27,7 @@ chrome-extension://EXTENSION_ID/_favicon/?pageUrl=EXAMPLE_URL&size=FAV_SIZE
 : The URL of the favicon's website.
 
 `FAV_SIZE`
-: The size of the favicon. The most common size is 16 pixels.
+: The size of the favicon. The most common size is 16 x 16 pixels.
 
 The following steps describe how to construct this URL in a Chrome extension:  
 
