@@ -19,7 +19,7 @@
           {{ desc | md | safe }}
         </p>
         {% if learnMore %}
-          <a class="landing-deco__learn-more color-{{color}}-medium" href="{{learnMore.link}}">{{ learnMore.title or 'i18n.common.landing_sections.learn_more'| i18n }}</a>
+          <a class="landing-deco__learn-more color-{{color}}-medium" href="{{learnMore.link}}">{{ learnMore.title or 'i18n.landing.landing_sections.learn_more'| i18n }}</a>
         {% endif %}
       </div>
       {% if imgSrc %}
