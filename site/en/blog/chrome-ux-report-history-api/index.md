@@ -170,11 +170,7 @@ The x-axis is set up as the `lastDate` for each collection period. This time, ho
 
 For example, even though the p75 chart suggests that [https://web.dev](https://web.dev) had almost acceptable INP values during the observation period, the tri-bin chart shows that for a small fraction of page loads, the INP was actually poor. In both charts, it’s relatively easy to infer that there was a performance regression which started toward the end of October, and was fixed by mid-November.
 
-To generate such charts yourself, we have created an example [Colab](https://colab.research.google.com/). A Colab, or 'Colaboratory', allows you to write and execute Python in your browser. The [CrUX History API Colab](https://colab.research.google.com/github/GoogleChrome/CrUX/blob/main/colab/crux-history-api.ipynb) [[source]](https://github.com/GoogleChrome/CrUX/blob/main/colab/crux-history-api.ipynb) uses Python to make calls to the API and chart the data.
-
-{% Aside %}
-You can safely ignore the initial warning when loading it (we are working on getting this warning removed).
-{% endAside %}
+To generate such charts yourself, we have created an example [Colab](https://colab.research.google.com/). A Colab, or 'Colaboratory', allows you to write and execute Python from within your browser. The [CrUX History API Colab](https://colab.research.google.com/github/GoogleChrome/CrUX/blob/main/colab/crux-history-api.ipynb) [[source]](https://github.com/GoogleChrome/CrUX/blob/main/colab/crux-history-api.ipynb) uses Python to make calls to the API and chart the data.
 
 This Colab allows you to make p75 charts, tri-bin charts, get data in tabular form, and see the request/response pair for the CrUX API, by filling out a brief form. You need not be a programmer to use this—but you certainly can look at the Python code and modify it into something amazing! Please enjoy and don't hesitate to provide feedback on what you find!
 

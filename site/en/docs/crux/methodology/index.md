@@ -194,7 +194,7 @@ The CrUX dataset is made available through a variety of tools maintained by Goog
 <p>
 <a id="footnote-1"><sup>1</sup></a> Monthly data is released on the second Tuesday after each monthly collection period. The last 28 days of each month period are included.<br>
 <a id="footnote-2"><sup>2</sup></a> 28-day rolling average data is updated daily, based on the aggregated data from the previous 28 days.<br>
-<a id="footnote-3"><sup>3</sup></a> Weekly historical data is released every Monday, containing the previous 25-week collection periods. Each period covers a 28-day period from Sunday to Saturday.<br>
+<a id="footnote-3"><sup>3</sup></a> Weekly historical data is released every Monday, containing the 25 most recent 28 day collection periods that end on Saturdays.<br>
 <a id="footnote-4"><sup>4</sup></a> The web vital metrics are available in all tools.<br>
 <a id="footnote-5"><sup>5</sup></a> Not all metrics are available in all monthly tables, see the <a href="/docs/crux/release-notes">release notes</a> for details.<br>
 <a id="footnote-6"><sup>6</sup></a> Search Console <a href="https://support.google.com/webmasters/answer/9205520#page_groups">groups URLs</a> that provide similar experiences, Core Web Vitals data are shown aggregated by these page groups.
