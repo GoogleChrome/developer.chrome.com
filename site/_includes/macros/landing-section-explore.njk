@@ -13,7 +13,7 @@
     </div>
     <div class="landing-explore">
         {% for item in items %}
-            <a class="landing-explore__link bg-{{ color }}-medium" href="{{ item.url }}">{% if item.icon %}<div class="landing-explore__icon gap-right-200 color-bg flex">{{ icon(item.icon) }}</div>{% endif %}{{ item.title}}</a>
+            <a class="landing-explore__link bg-{{ color }}-medium" href="{{ item.url }}">{% if item.icon %}<div class="landing-explore__icon gap-right-200 color-bg flex">{{ icon(item.icon) }}</div>{% endif %}<div>{{ item.title}}</div></a>
         {% endfor %}
     </div>
   </div>
