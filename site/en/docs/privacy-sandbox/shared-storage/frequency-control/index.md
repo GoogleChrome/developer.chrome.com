@@ -20,7 +20,7 @@ possible use cases. One example is frequency control, which is available to
 test in Chrome Beta 104.0.5086.0 and later.
 
 Run a worklet script to select a URL from a provided list, based on the stored
-data, and then render that URL in a fenced frame. This can be used to select
+data, and then render that URL in a [fenced frame](/docs/privacy-sandbox/fenced-frame/). This can be used to select
 new ads or other content when the frequency cap has been reached.
 
 ## Test frequency control
