@@ -62,7 +62,7 @@ self.addEventListener(e => {
 
 To enable the change locally for development purposes:
 
-1. Use Chrome 108, 109 or 110.
+1. Use Chrome 108, 109, or 110.
 2. Enter `chrome://flags/#clear-identity-in-can-make-payment` in the URL bar.
 3. Enable the flag.
 4. Relaunch Chrome.
@@ -102,8 +102,8 @@ origin-trial: Auw/tjTQ2eJQ911wiMHi1Bb7i71...
 ## Re-enable the identity fields locally after Chrome 111
 
 If you are using Chrome 111 or later, the identity fields in the
-`canmakepayment` event is already emptied-out. You can locally re-enable the
-fields by:
+`canmakepayment` event are left empty. To re-enable the
+fields locally, you can do the following:
 
 1. Use Chrome 111 or later.
 2. Enter `chrome://flags/#add-identity-in-can-make-payment` in the URL bar.
@@ -112,6 +112,6 @@ fields by:
 
 ## Next steps
 
-This change is planned to be enabled by default from Chrome 111. Start testing today to be prepared
+This change is planned to be enabled by default from Chrome 111. You can start testing today to be prepared
 for the change in time for the launch.
 
