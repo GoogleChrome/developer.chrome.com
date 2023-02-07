@@ -15,11 +15,12 @@
     text-decoration: none;
 
     @include media-query('md-max') {
+      margin-top: 1rem;
       width: 100%;
     }
 
     @include media-query('md') {
-      width: calc((100% - 3rem) / 2);
+      width: calc((100% - 1.5rem) / 2);
     }
     
     @include media-query('lg') {
