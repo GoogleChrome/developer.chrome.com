@@ -1,8 +1,8 @@
 ---
-title: Qué hay de nuevo en Chrome 110
+layout: "layouts/blog-post.njk"
+title: "Qué hay de nuevo en Chrome 110"
 description: >
-    ¡Chrome 110 ya está llegando! Agregue un estilo personalizado a sus elementos de picture-in-picture con la nueva :picture-in-picture pseudo-class, configure el comportamiento de inicio de su aplicación web con launch_handler, use el atributo credentialless en iframes para incrustar contenido de terceros que no establezca una política de incrustación de origen cruzado y mucho más.
-layout: 'layouts/blog-post.njk'
+  "¡Chrome 110 ya está llegando! Agregue un estilo personalizado a sus elementos de picture-in-picture con la nueva :picture-in-picture pseudo-class, configure el comportamiento de inicio de su aplicación web con launch_handler, use el atributo credentialless en iframes para incrustar contenido de terceros que no establezca una política de incrustación de origen cruzado y mucho más."
 date: 2023-02-07
 authors:
   - ajara
@@ -14,7 +14,7 @@ tags:
   - chrome-110
 ---
 
-{% ID de YouTube='036w1MUoAa0' %}
+{% YouTube id='036w1MUoAa0' %}
 
 Esto es lo que necesita saber:
 
@@ -33,7 +33,7 @@ Ahora con la pseudo-clase de CSS [`:picture-in- picture`](https://developer.mozi
 
 El fragmento a continuación muestra cómo usar la clase de :picture-in-picture para agregar un mensaje al contenedor de video que le recuerda al usuario que el video ahora se está reproduciendo en otro lugar.
 
-```
+```css
 #video-container:has(video:picture-in-picture)::before {
   bottom: 36px;
   color: #ddd;
@@ -58,7 +58,7 @@ Ahora, usando el [miembro `launch_handler` del manifest](/docs/web-platform/laun
 
 Por ejemplo, el fragmento a continuación hace que todos los inicios de esta aplicación web se centren en una ventana de aplicación existente y naveguen hasta ella (si existe) en lugar de abrir siempre una nueva ventana.
 
-```
+```json
 {
  "launch_handler": {
    "client_mode": "navegar-nuevo"
@@ -68,8 +68,8 @@ Por ejemplo, el fragmento a continuación hace que todos los inicios de esta apl
 ```
 
 
-## `creDencialess` iframes.{:#credencialeso }
-Uno de los mayores desafíos con el aislamiento de origen cruzado es que todos los iframes de origen cruzado deben implementar [COEP](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) y [ CORP](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy) . Un iframe sin esos encabezados no serán cargados por el navegador.
+## `credentialless` iframes.{:#credencialeso }
+Uno de los mayores desafíos con el aislamiento de origen cruzado es que todos los iframes de origen cruzado deben implementar [COEP](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) y [CORP](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy). Un iframe sin esos encabezados no serán cargados por el navegador.
 
 El atributo `credentialless` ayuda a insertar iframes de terceros que no configuran estos encabezados.
 
@@ -85,9 +85,9 @@ Ay, por supuesto, hay mucho más.
 
 Web SQL ahora se elimina en contextos no seguros.
 
-La propiedad de CSS [ `initial-letter`](https://developer.mozilla.org/docs/Web/CSS/initial-letter) proporciona una manera de establecer el número de líneas en las que debe hundirse una letra inicial en las siguientes líneas de texto
+La propiedad de CSS [`initial-letter`](https://developer.mozilla.org/docs/Web/CSS/initial-letter) proporciona una manera de establecer el número de líneas en las que debe hundirse una letra inicial en las siguientes líneas de texto
 
-FileSystemHandle ahora incluye un [método `remove()`](https://developer.mozilla.org/en-US/docs/Web/API/FileSystemHandle/remove)
+FileSystemHandle ahora incluye un [método `remove()`](https://developer.mozilla.org/docs/Web/API/FileSystemHandle/remove)
 
 ## Lectura adicional
 
