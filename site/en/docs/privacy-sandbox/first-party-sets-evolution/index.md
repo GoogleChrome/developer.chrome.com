@@ -9,6 +9,9 @@ alt: A diagram showing First-Party Sets.
 tags: 
   - privacy
 authors:
+  - helencho
+  - kaustubhag
+  - johannhof
   - jney
 ---
 
