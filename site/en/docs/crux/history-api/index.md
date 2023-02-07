@@ -155,7 +155,9 @@ As the CrUX History API uses the same metric value types, you can reference [the
 
 #### Metric eligibility
 
-Based on the [eligibility criteria](../methodology/#eligibility) an origin or URL may only be eligible for some of the collection periods covered by the CrUX History API. In these cases the CrUX History API will return `"NaN"` for the `histogramTimeseries` densities and `null` for the `percentilesTimeseries` for the collection periods which have no eligible data. For example, if the second period did not have any eligible data, this would show as:
+Based on the [eligibility criteria](../methodology/#eligibility) an origin or URL may only be eligible for some of the collection periods covered by the CrUX History API. In these cases the CrUX History API will return `"NaN"` for the `histogramTimeseries` densities and `null` for the `percentilesTimeseries` for the collection periods which have no eligible data. The reason for the difference is the histogram densities are always numbers, while the percentiles can be numbers or strings (CLS uses strings, even if they look like numbers).
+
+For example, if the second period did not have any eligible data, this would show as:
 
 ```json
 {
@@ -180,6 +182,8 @@ Based on the [eligibility criteria](../methodology/#eligibility) an origin or UR
   },
 }
 ```
+
+For URLs or origins that fall in and out of eligibility over time, you may notice many missing entries.
 
 ### Collection periods
 
