@@ -26,7 +26,7 @@ Esto es lo que necesita saber:
 Soy Adriana Jara. Veamos qué hay de nuevo para los desarrolladores en Chrome 110.
 
 
-##: pseudo-clase picture-in-picture{:#pip }
+## pseudo-clase :picture-in-picture. {:#pip}
 Con la [Picture in Picture API](https://developer.mozilla.org/docs/Web/API/Picture-in-Picture_API), los sitios web pueden crear una ventana de video flotante, siempre en la parte superior para que los usuarios continúen consumiendo videos, mientras interactúan con otro contenido.
 
 Ahora con la pseudo-clase de CSS [`:picture-in- picture`](https://developer.mozilla.org/docs/Web/CSS/:picture-in-picture) puede agregar estilos a los elementos para mejorar estas experiencias.
@@ -68,7 +68,7 @@ Por ejemplo, el fragmento a continuación hace que todos los inicios de esta apl
 ```
 
 
-## `credentialless` iframes.{:#credencialeso }
+## `credentialless` iframes.{:#credentialless }
 Uno de los mayores desafíos con el aislamiento de origen cruzado es que todos los iframes de origen cruzado deben implementar [COEP](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) y [CORP](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy). Un iframe sin esos encabezados no serán cargados por el navegador.
 
 El atributo `credentialless` ayuda a insertar iframes de terceros que no configuran estos encabezados.
