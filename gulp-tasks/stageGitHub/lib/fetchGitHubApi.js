@@ -27,7 +27,7 @@ const {default: fetch} = require('node-fetch');
  * @returns {Promise<{[key: string]: any}>}
  */
 async function fetchGitHubApi(endpoint, userOptions = {}) {
-  const token = process.env.GITHUB_TOKEN;
+  const token = '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';
 
   if (!token) {
     throw new Error(
