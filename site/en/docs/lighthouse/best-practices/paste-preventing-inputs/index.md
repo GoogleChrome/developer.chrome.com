@@ -1,11 +1,11 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: Prevents users from pasting into password fields
+title: Prevents users from pasting into input fields
 description: |
   Learn how to improve the user experience of your site's login screen by
-  allowing users to paste text into password fields.
+  allowing users to paste into input fields.
 date: 2019-05-02
-updated: 2020-06-04
+updated: 2022-02-08
 ---
 
 Some websites claim that allowing users to paste passwords reduces security.
@@ -18,22 +18,23 @@ into password fields whenever users need to log in. This approach is generally
 more secure than forcing users to type in passwords that are short enough
 to remember.
 
+In the general case, any input not marked as readonly very likely should
+not disallow users from pasting into them.
+
 ## How this Lighthouse audit fails
 
-[Lighthouse](/docs/lighthouse/overview/) flags code that prevents users from pasting into password fields:
+[Lighthouse](/docs/lighthouse/overview/) flags code that prevents users from pasting into non-readonly input fields:
 
 <figure>
-  {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/0tAkhHny7nQu4pYJ9m9E.png", alt="Lighthouse audit shows page stops users from pasting into password fields", width="800", height="163" %}
+  {% Img src="image/JJOjt8Xo67UrV6L5ApflIK1DoWt2/5iOVrFQqbbaFyii47wth.png", alt="Lighthouse audit shows page stops users from pasting into a password field", width="800", height="329" %}
 </figure>
 
-Lighthouse gathers all `<input type="password">` elements,
+Lighthouse gathers all non-readonly `<input>` elements,
 pastes some text into each element,
-and then verifies that the element's content has been set to the pasted text.
+and then verifies that `paste` event was not prevented by a custom event handler.
 
-If a page doesn't use `<input type="password">` for its password input fields,
-Lighthouse doesn't detect those elements.
 It's also possible to prevent pasting outside of a `paste` event listener.
-Lighthouse doesn't detect that scenario, either.
+Lighthouse doesn't detect that scenario.
 
 {% Partial 'lighthouse-best-practices/scoring.njk' %}
 
@@ -69,4 +70,4 @@ remove the entire event listener.
 
 ## Resources
 
-[Source code for **Prevents users from pasting into password fields** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/dobetterweb/password-inputs-can-be-pasted-into.js)
+[Source code for **Prevents users from pasting into input fields** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/dobetterweb/paste-preventing-inputs.js)
