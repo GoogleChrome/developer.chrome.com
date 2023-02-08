@@ -178,7 +178,6 @@ for browser experimentation.
 is automatically updated with all available flags and, last time we checked, there were more
 than 1400 of them!
 - [Chromium Flag Updates](https://twitter.com/ChromiumFlags) is a bot that tweets changes to the [chrome/browser/flag-metadata.json](https://chromium.googlesource.com/chromium/src/+/master/chrome/browser/flag-metadata.json) file.
- chrome/browser/flag-metadata.json file.
 - There are even more flags available to configure individual JavaScript API features. You can
 find out more about them from API documentation and proposal explainers.
 - [Experimental features in Firefox](https://developer.mozilla.org/docs/Mozilla/Firefox/Experimental_features)
