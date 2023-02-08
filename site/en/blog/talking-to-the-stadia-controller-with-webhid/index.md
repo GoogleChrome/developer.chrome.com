@@ -13,7 +13,7 @@ tags:
   - capabilities
 ---
 
-Since Stadia shut down, many feared that the controller would end up as a useless piece of hardware on the landfill. Luckily, the Stadia team has decided to instead open up the Stadia controller by providing a custom firmware that you can flash on your controller by going to the [Stadia Bluetooth mode](https://stadia.com/controller) page. This makes your Stadia controller appear as a standard gamepad that you can connect to via USB cable or wirelessly via Bluetooth. Proudly [featured on the Project Fugu API Showcase](https://developer.chrome.com/blog/fugu-showcase/#stadia.google.com!controller), the Stadia Bluetooth page itself uses [WebHID](https://developer.mozilla.org/en-US/docs/Web/API/WebHID_API) and [WebUSB](https://developer.mozilla.org/en-US/docs/Web/API/USB), but this is not the topic of this article. In this post, I want to explain how you can talk to the Stadia controller via WebHID.
+Since Stadia shut down, many feared that the controller would end up as a useless piece of hardware on the landfill. Luckily, the Stadia team has decided to instead open up the Stadia controller by providing a custom firmware that you can flash on your controller by going to the [Stadia Bluetooth mode](https://stadia.com/controller) page. This makes your Stadia controller appear as a standard gamepad that you can connect to via USB cable or wirelessly via Bluetooth. Proudly [featured on the Project Fugu API Showcase](/fugu-showcase/#stadia-bluetooth-mode), the Stadia Bluetooth page itself uses [WebHID](https://developer.mozilla.org/docs/Web/API/WebHID_API) and [WebUSB](https://developer.mozilla.org/docs/Web/API/USB), but this is not the topic of this article. In this post, I want to explain how you can talk to the Stadia controller via WebHID.
 
 ## The Stadia controller as a standard gamepad
 
@@ -35,7 +35,7 @@ In the picker, the penultimate entry looks like the Stadia controller.
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/j9eJ6MlwBoE8aPFoeJBf.png", alt="The WebHID API device picker showing some unrelated devices, and the Stadia controller in the penultimate position.", width="445", height="425" %}
 
-After selecting the "Stadia Controller rev. A" device, log the resulting [`HIDDevice`](https://developer.mozilla.org/en-US/docs/Web/API/HIDDevice) object to the Console. This reveals the Stadia controller's `productId` (`37888`, which is `0x9400` in hex) and `vendorId` (`6353`, which is `0x18d1` in hex). If you look up the `vendorID` in the official [USB vendor ID table](https://usb.org/sites/default/files/vendor_ids051920_0.pdf), you will find that `6353` maps to what you would expect: `Google Inc.`.
+After selecting the "Stadia Controller rev. A" device, log the resulting [`HIDDevice`](https://developer.mozilla.org/docs/Web/API/HIDDevice) object to the Console. This reveals the Stadia controller's `productId` (`37888`, which is `0x9400` in hex) and `vendorId` (`6353`, which is `0x18d1` in hex). If you look up the `vendorID` in the official [USB vendor ID table](https://usb.org/sites/default/files/vendor_ids051920_0.pdf), you will find that `6353` maps to what you would expect: `Google Inc.`.
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/PrdSqHe6ZGpHL08ZW722.png", alt="Chrome DevTools Console showing the output of logging the HIDDevice object.", width="800", height="218" %}
 
@@ -58,7 +58,7 @@ Now the noise from all the unrelated devices is gone, and only the Stadia contro
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/XiYdITiLC0xcmWJzbm3J.png", alt="The WebHID API device picker showing only the Stadia controller.", width="443", height="423" %}
 
-Up next, open the `HIDDevice` by calling the [`open()`](https://developer.mozilla.org/en-US/docs/Web/API/HIDDevice/open) method.
+Up next, open the `HIDDevice` by calling the [`open()`](https://developer.mozilla.org/docs/Web/API/HIDDevice/open) method.
 
 ```js
 await stadiaController.open();
@@ -68,7 +68,7 @@ Log the `HIDDevice` again, and the `opened` flag is set to `true`.
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/9Gyu3SyEXOZxOkc1mPE5.png", alt="The Chrome DevTools Console showing the output of logging the HIDDevice object after opening it.", width="800", height="266" %}
 
-With the device open, listen for incoming [`inputreport`](https://developer.mozilla.org/en-US/docs/Web/API/HIDInputReportEvent) events by attaching an event listener.
+With the device open, listen for incoming [`inputreport`](https://developer.mozilla.org/docs/Web/API/HIDInputReportEvent) events by attaching an event listener.
 
 ```js
 stadiaController.addEventListener('inputreport', (e) => {
@@ -80,7 +80,7 @@ When you press and let go the **Assistant** button on the controller, two events
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/trcZJZs3cDb3BC3BDEH4.png", alt="The Chrome DevTools Console showing HIDInputReportEvent objects being logged.", width="800", height="864" %}
 
-The `reportId` property of the `HIDInputReportEvent` interface returns the one-byte identification prefix for this report, or `0` if the HID interface does not use report IDs. In this case it's `3`. The secret is in the [`data` property](https://developer.mozilla.org/en-US/docs/Web/API/HIDInputReportEvent/data), which is represented as a [`DataView`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView) of size 10. A `DataView` provides a low-level interface for reading and writing multiple number types in a binary [`ArrayBuffer`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer). The way to get something more digestible out of this representation is by creating a [`Uint8Array`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) out of the `ArrayBuffer`, so you can see the individual 8-bit unsigned integers.
+The `reportId` property of the `HIDInputReportEvent` interface returns the one-byte identification prefix for this report, or `0` if the HID interface does not use report IDs. In this case it's `3`. The secret is in the [`data` property](https://developer.mozilla.org/docs/Web/API/HIDInputReportEvent/data), which is represented as a [`DataView`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/DataView) of size 10. A `DataView` provides a low-level interface for reading and writing multiple number types in a binary [`ArrayBuffer`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer). The way to get something more digestible out of this representation is by creating a [`Uint8Array`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) out of the `ArrayBuffer`, so you can see the individual 8-bit unsigned integers.
 
 ```js
 const data = new Uint8Array(event.data.buffer);
@@ -116,7 +116,7 @@ stadia.addEventListener('inputreport', (event) => {
 
 Using a reverse-engineering approach like this, you can, button by button and axis by axis, figure out how to talk to the Stadia controller with WebHID. Once you get the hang of it, the rest is almost mechanical integer mapping work.
 
-The one thing that's missing now is the smooth connecting experience that the Gamepad API gives you. While for security reasons you always need to go through the initial picker experience once in order to work with a WebHID device like the Stadia controller, for future connections, you can reconnect to known devices. Do that by calling the [`getDevices()`](https://developer.mozilla.org/en-US/docs/Web/API/HID/getDevices) method.
+The one thing that's missing now is the smooth connecting experience that the Gamepad API gives you. While for security reasons you always need to go through the initial picker experience once in order to work with a WebHID device like the Stadia controller, for future connections, you can reconnect to known devices. Do that by calling the [`getDevices()`](https://developer.mozilla.org/docs/Web/API/HID/getDevices) method.
 
 ```js
 let stadiaController;
