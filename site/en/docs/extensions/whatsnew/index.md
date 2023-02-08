@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-01-27
+updated: 2023-02-10
 tags:
   - extensions-news
 
@@ -15,6 +15,12 @@ tags:
 
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes.
+
+### Chrome 110: New methods for actions {: #m110-action }
+
+Chrome 110, release on February 7, adds new methods to `chrome.action`. The [`isEnabled()`](/docs/extensions/reference/action/#method-isEnabled) method programmatically checks whether an extension has been enabled for a specific tab. This saves you from maintaining the enabled state of your tabs. This new method takes a tab ID and a reference to a callback and returns a boolean. It has one limitation: tabs created using [`chrome.declarativeContent`](/docs/extensions/reference/declarativeContent/) will always report disabled.
+
+The [`setBadgeTextColor()`](/docs/extensions/reference/action/#method-setBadgeTextColor) and [`getBadgeTextColor()`](/docs/extensions/reference/action/#method-getBadgeTextColor) methods allow an extension to change and query its toolbar icon's badge text color. When used with [`setBadgeBackgroundColor`](/docs/extensions/reference/action/#method-setBadgeBackgroundColor) and [`getBadgeBackgroundColor`](/docs/extensions/reference/action/#method-getBadgeBackgroundColor) these new methods let you enforce design and brand consistency.
 
 ### Chrome 110: Change in service worker idle timeout {: #m110-sw-idle }
 
