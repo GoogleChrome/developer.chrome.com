@@ -1,16 +1,8 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: 'Coordinator Service Additional Terms of Service'
-subhead: >
-  Additional Terms of Service alongside the Google Terms of Service, that must
-  be accepted to use the Coordinator Service.
-description: >
-  Additional Terms of Service alongside the Google Terms of Service, that must
-  be accepted to use the Coordinator Service.
-date: 2023-02-07
+date: 2023-02-08
 ---
-
-## Coordinator Service Additional Terms of Service
 
 To use the Coordinator Service, including related reports, features and
 functionality (collectively the "**Coordinator Service**"), you and the legal
@@ -26,7 +18,7 @@ the Coordinator Service, and what we expect from you.
 If these Additional Terms conflict with [the Google Terms of
 Service](https://policies.google.com/terms), these Additional Terms will apply. 
 
-### Purpose of Coordinator Service:
+### Purpose of Coordinator Service
 
 The Coordinator Service is designed to ensure that reports from the client
 software, such as a Chrome browser or an Android device, which are sent to the
@@ -92,7 +84,7 @@ acting on your behalf to):
 2. Interfere with or disrupt the Coordinator Service or the servers or networks
    providing the Coordinator Service or the TEE.
 
-### Use of Coordinator Service is subject to your understanding and agreement to the following:
+### Use of Coordinator Service is subject to your understanding and agreement to the following
 
 This is a non-consumer service that is provided to You free of charge. If You
 are based in the  European Economic Area or the United Kingdom, Google agrees
