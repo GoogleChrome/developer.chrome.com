@@ -18,7 +18,7 @@ into password fields whenever users need to log in. This approach is generally
 more secure than forcing users to type in passwords that are short enough
 to remember.
 
-In the general case, `<input>` elements should not disallow users from pasting into them.
+In the general case, users should not be prevented from pasting into `<input>` elements.
 
 ## How this Lighthouse audit fails
 
