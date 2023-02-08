@@ -4,6 +4,7 @@ description: >
   Chrome 110 is rolling out now! Add custom style to your picture-in-picture elements with the new :picture-in-picture pseudo-class, set your web app launch behavior with launch_handler, use the credentialless attribute in iframes to embed third party content that doesn’t set a cross origin embedder policy and there’s plenty more.
 layout: 'layouts/blog-post.njk'
 date: 2023-02-07
+updated: 2023-02-08
 authors:
   - ajara
 hero: 'image/SeARmcA1EicLXagFnVOe0ou9cqK2/jJI6JaytfRglmVkUULRm.png'
@@ -87,7 +88,7 @@ Web SQL is now removed in non-secure contexts.
 
 The CSS [`initial-letter` property](https://developer.mozilla.org/docs/Web/CSS/initial-letter) provides a way to set the number of lines that an initial-letter should sink into following lines of text.
 
-FileSystemHandle now includes a [`remove()` method](https://developer.mozilla.org/docs/Web/API/FileSystemHandle/remove)
+FileSystemHandle now includes a [`remove()` method](https://developer.mozilla.org/docs/Web/API/FileSystemHandle/remove).
 
 ## Further reading
 
@@ -96,7 +97,7 @@ additional changes in Chrome 110.
 
 * [What's new in Chrome DevTools (110)](/blog/new-in-devtools-110/)
 * [Chrome 110 deprecations and removals](/blog/deps-rems-110/)
-* [ChromeStatus.com updates for Chrome 110](https://www.chromestatus.com/features#milestone%3D108)
+* [ChromeStatus.com updates for Chrome 110](https://www.chromestatus.com/features#milestone%3D110)
 * [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/109.0.5414.128..110.0.5481.9)
 * [Chrome release calendar](https://chromiumdash.appspot.com/schedule)
 
