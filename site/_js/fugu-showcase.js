@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 /*
  * Copyright 2023 Google LLC
  *
@@ -33,7 +35,7 @@ const fallbackSVGBase64 = window.btoa(
     y="113"
     dominant-baseline="central"
   >
-    Screenshot not available.
+    ${document.querySelector('#screenshot_not_available')?.textContent.trim()}
   </text>
 </svg>`
 );

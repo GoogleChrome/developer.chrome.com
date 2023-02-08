@@ -3,3 +3,6 @@ select_api:
 
 search_apps:
   en: Search apps
+
+screenshot_not_available:
+  en: Screenshot not available
