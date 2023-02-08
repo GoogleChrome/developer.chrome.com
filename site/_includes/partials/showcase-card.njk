@@ -38,8 +38,9 @@
         {{ 'i18n.common.view_source' | i18n(locale) }}
       </a>
     {% endif %}
-    <a class="display-flex align-center color-primary type--small fugu-app-link" href="/fugu-showcase/#{{ id }}">
-      #
+    <a class="display-none align-center color-primary type--small web-share" href="#">
+      {{ icon('share') }}
+      {{ 'i18n.fugu_showcase.share_app' | i18n(locale) }}
     </a>
   </div>
 
@@ -64,6 +65,13 @@
             rel="noopener"
             target="_blank">{{ api.name }}</a>
         {% endfor %}
+      </div>
+    </div>
+    <div class="blog-card__actions low-space-200 gap-top-300 end">
+      <div class="display-flex justify-content-end">
+        <a class="color-primary type--small fugu-app-link" href="/fugu-showcase/#{{ id }}">
+          # {{ 'i18n.fugu_showcase.copy_link' | i18n(locale) }}
+        </a>
       </div>
     </div>
   </div>

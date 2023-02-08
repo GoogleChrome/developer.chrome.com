@@ -86,6 +86,53 @@ import './web-components/enhanced-select';
     new URL(document.location.href).searchParams.get('api')?.split(',') || [];
   onSearch();
 
+  const imageToPNG = async blob => {
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d');
+    const image = await createImageBitmap(blob);
+    canvas.width = image.width;
+    canvas.height = image.height;
+    context.drawImage(image, 0, 0);
+    return new Promise(resolve => {
+      canvas.toBlob(resolve, 'image/png');
+    });
+  };
+
+  if ('share' in navigator && 'canShare' in navigator) {
+    document.querySelectorAll('.web-share').forEach(shareLink => {
+      shareLink.classList.remove('display-none');
+      shareLink.classList.add('display-flex');
+      shareLink.addEventListener('click', async e => {
+        e.preventDefault();
+        const url = shareLink
+          .closest('.fugu-card')
+          .querySelector('img').currentSrc;
+        const fileName = url.split('/').pop().replace('.webp', '.png');
+        const blob = await fetch(url, {
+          mode: 'cors',
+        }).then(response => response.blob());
+        const pngBlob = await imageToPNG(blob);
+        const file = new File([pngBlob], fileName);
+        const shareData = {
+          files: [file],
+          title: 'Fugu Showcase',
+          text: 'Check out this Fugu Showcase',
+          url: document.location.href,
+        };
+        console.log(shareData);
+        if (navigator.canShare(shareData)) {
+          try {
+            await navigator.share(shareData);
+          } catch (err) {
+            if (err.name !== 'AbortError') {
+              console.error(err.name, err.message);
+            }
+          }
+        }
+      });
+    });
+  }
+
   window.addEventListener('keydown', e => {
     if (e.key === 'f' && e.metaKey) {
       e.preventDefault();

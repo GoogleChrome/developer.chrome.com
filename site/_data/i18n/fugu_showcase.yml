@@ -3,3 +3,9 @@ select_api:
 
 search_apps:
   en: Search apps
+
+share_app:
+  en: Share app
+
+copy_link:
+  en: Copy link
