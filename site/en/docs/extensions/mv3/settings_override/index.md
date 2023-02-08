@@ -9,12 +9,11 @@ description: How to override Chrome settings from a Chrome Extension.
 
 
 Settings overrides are a way for extensions to override selected Chrome settings. The API is
-available on Windows in all current versions of Chrome and is available on Mac in Chrome 56 and
-later.
+available on Windows and Mac in all current versions of Chrome.
 
 ## Homepage, search provider, and startup pages {: #others }
 
-Here is an example how [homepage][1], [search provider][2], and [startup pages][3] can be modified 
+Here is an example of how [homepage][1], [search provider][2], and [startup pages][3] can be modified 
 in the [extension manifest][4]. Any domain used in the settings API must be [verified][5] (via 
 Google Search Console) by the same developer account publishing the extension. Note that if you 
 verify ownership for a domain (for example, https://example.com) you can use any subdomain or page 
