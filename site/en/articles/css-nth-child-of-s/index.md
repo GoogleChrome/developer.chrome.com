@@ -70,8 +70,8 @@ In the demo below you can see this difference:
 - The element that matches `.highlight:nth-child(2)` has a green outline.
 
 {% Codepen {
-  user: 'bramus',
-  id: 'QWBRwvB',
+  user: 'web-dot-dev',
+  id: 'oNMRaQq',
   height: 960,
   theme: 'dark',
   tab: 'result'
@@ -82,8 +82,8 @@ Note that `S` is a selector list which means it accepts multiple selectors separ
 In the demo below, the element that matches `:nth-child(4 of .highlight, .sale)` has an orange outline applied to it.
 
 {% Codepen {
-  user: 'bramus',
-  id: 'zYLQxyv',
+  user: 'web-dot-dev',
+  id: 'BaPeqGe',
   height: 960,
   theme: 'dark',
   tab: 'result'
@@ -102,9 +102,9 @@ tr:nth-child(even) {
 While this works fine for static tables, it becomes problematic when you start to dynamically filter the table contents. When, for example, row two gets hidden, you’d end up with rows one and three visible, each with the same background color.
 
 {% Codepen {
-  user: 'bramus',
-  id: 'JjBqdRJ',
-  height: 960,
+  user: 'web-dot-dev',
+  id: 'WNKBaLN',
+  height: 700,
   theme: 'dark',
   tab: 'result'
 } %}
@@ -118,9 +118,9 @@ tr:nth-child(even of :not([hidden])) {
 ```
 
 {% Codepen {
-  user: 'bramus',
-  id: 'mdjYJrj',
-  height: 960,
+  user: 'web-dot-dev',
+  id: 'KKBLGbd',
+  height: 700,
   theme: 'dark',
   tab: 'result'
 } %}
