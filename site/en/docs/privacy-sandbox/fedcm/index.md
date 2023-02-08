@@ -248,6 +248,13 @@ They can do the same for Chrome on desktop by going to
    width="800", height="678", class="screenshot"
 %}
 
+{% Aside 'caution' %}
+
+FedCM is temperarily disabled wherever third-party cookies are unavailable.
+For example, by default third-party cookies are blocked in incognito mode.
+Starting from Chrome 110, you can test FedCM without third-party cookies by
+enabling the Chrome flag: chrome://flags/#fedcm-without-third-party-cookies.
+
 ## Roadmap {: #roadmap}
 
 We are working on landing a number of changes on the FedCM.
