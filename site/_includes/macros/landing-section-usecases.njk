@@ -35,7 +35,7 @@
       {% endfor %}
 		</div>
     {% if moreDocuments1.items %}
-      {% set relatedTitle1 = moreDocuments1.title or 'i18n.landing.landing_sections.more_documents'| i18n %}
+      {% set relatedTitle1 = moreDocuments1.title or 'i18n.landing.sections.more_documents'| i18n %}
       <div class="landing-section__documents">
           {{ relatedArticles(relatedTitle1, moreDocuments1.items, color) }}
       </div>
@@ -66,7 +66,7 @@
       {% endfor %}
 		</div>
     {% if moreDocuments2.items %}
-    {% set relatedTitle2 = moreDocuments2.title or 'i18n.landing.landing_sections.more_documents'| i18n  %}
+    {% set relatedTitle2 = moreDocuments2.title or 'i18n.landing.sections.more_documents'| i18n  %}
       <div class="landing-section__documents">
           {{ relatedArticles(relatedTitle2, moreDocuments2.items, color) }}
       </div>
