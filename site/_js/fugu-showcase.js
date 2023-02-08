@@ -16,6 +16,28 @@
 
 import './web-components/enhanced-select';
 
+const fallbackSVGBase64 = window.btoa(
+  `
+<svg
+  viewBox="0 0 400 225"
+  xmlns="http://www.w3.org/2000/svg"
+  preserveAspectRatio="xMidYMid slice"
+>
+  <path fill="rgba(145,145,145,0.5)" d="M0 0h400v225H0z" />
+  <text
+    fill="rgba(0,0,0,0.33)"
+    font-family="system-ui,sans-serif"
+    font-size="1rem"
+    text-anchor="middle"
+    x="200"
+    y="113"
+    dominant-baseline="central"
+  >
+    Screenshot not available.
+  </text>
+</svg>`
+);
+
 (() => {
   const cards = document.querySelectorAll('.fugu-card');
   /** @type HTMLInputElement|null */
@@ -24,6 +46,19 @@ import './web-components/enhanced-select';
   const apiSelect = document.querySelector('#api-select');
   const searchClose = document.querySelector('#search-fugu-apps-close');
   const container = document.querySelector('.fugu-showcase');
+
+  // In case any of the screenshots fail to load, add a fallback image.
+  for (const card of cards) {
+    const img = card.querySelector('img');
+    img?.addEventListener('error', () => {
+      const picture = img.closest('picture');
+      picture?.querySelector('source[media]')?.remove();
+      const source = picture?.querySelector('source');
+      if (source) {
+        source.srcset = `data:image/svg+xml;base64,${fallbackSVGBase64}`;
+      }
+    });
+  }
 
   if (!searchAppsInput || !apiSelect) {
     return;
