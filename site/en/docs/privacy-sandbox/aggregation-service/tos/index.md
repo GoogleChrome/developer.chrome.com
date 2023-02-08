@@ -18,7 +18,7 @@ the Coordinator Service, and what we expect from you.
 If these Additional Terms conflict with [the Google Terms of
 Service](https://policies.google.com/terms), these Additional Terms will apply. 
 
-### Purpose of Coordinator Service
+## Purpose of Coordinator Service
 
 The Coordinator Service is designed to ensure that reports from the client
 software, such as a Chrome browser or an Android device, which are sent to the
@@ -26,7 +26,7 @@ Aggregation Service, will run on Approved Aggregation Service Code and Binaries
 and to configure access to decryption keys and manage aggregatable report
 accounting .
 
-### Definitions
+## Definitions
 
 "Aggregation Service"
 : means a service operated by You using Approved Aggregation Service Code and
@@ -56,7 +56,7 @@ memory protection and cryptographic protection of storage and where the TEE's
 contents are protected from observation and tampering by unauthorized parties,
 including the root user.
 
-### What we expect from you
+## What we expect from you
 
 You are responsible for using the Coordinator Service in accordance with these
 Terms. That means, in addition to following [the Google Terms of
@@ -84,7 +84,7 @@ acting on your behalf to):
 2. Interfere with or disrupt the Coordinator Service or the servers or networks
    providing the Coordinator Service or the TEE.
 
-### Use of Coordinator Service is subject to your understanding and agreement to the following
+## Use of Coordinator Service is subject to your understanding and agreement to the following
 
 This is a non-consumer service that is provided to You free of charge. If You
 are based in the  European Economic Area or the United Kingdom, Google agrees
