@@ -60,6 +60,14 @@ async function announceDeploymentFinished() {
   const commitSha = process.env.COMMIT_SHA;
   const deploymentType = await getDeploymentType();
 
+  if (!deploymentType) {
+    await updateStickyComment(
+      prNumber,
+      `:zzz: Nothing to preview for commit ${commitSha}.`
+    );
+    return;
+  }
+
   const baseUrl = `https://pr-${prNumber}-${deploymentType}-dot-dcc-staging.uc.r.appspot.com/`;
   const changedPages = await getChangedPages(prNumber, baseUrl);
 
