@@ -40,7 +40,7 @@ async function determineDeploymentType() {
   isGoogleCloudBuild();
 
   const prNumber = process.env.PR_NUMBER;
-  let changedFiles = await requestGitHubApi(
+  let {data: changedFiles} = await requestGitHubApi(
     'GET',
     `pulls/${prNumber}/files?per_page=100`
   );

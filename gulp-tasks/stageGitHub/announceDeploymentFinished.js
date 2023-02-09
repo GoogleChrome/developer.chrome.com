@@ -25,7 +25,7 @@ const {isGoogleCloudBuild} = require('./lib/isGoogleCloudBuild');
 const {updateStickyComment} = require('./lib/updateStickyComment');
 
 async function getChangedPages(prNumber, baseUrl) {
-  const changedFiles = await requestGitHubApi(
+  const {data: changedFiles} = await requestGitHubApi(
     'GET',
     `pulls/${prNumber}/files?per_page=100`
   );
