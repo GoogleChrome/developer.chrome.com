@@ -7,7 +7,7 @@ description: Reference documentation for the declarativeNetRequest property of m
 
 An optional manifest key and permission enabling the [declarativeNetRequest API](/docs/extensions/reference/declarativeNetRequest/). Using `declarativeNetRequest`, you can block or modify network requests by specifying declarative rules. This lets extensions modify network requests without intercepting them and viewing their content, providing more privacy. Runtime modification and registration of declarativeNetRequest rules can be done with only the permission requested, without the need for the full manifest key implementation.
 The manifest key accepts a dictionary with a single key called `"rule_resources"`, containing a list of static ruleset dictionaries. Either the `"declarativeNetRequest"` or `"declarativeNetRequestWithHostAccess"` permissions must be added, with `"declarativeNetRequestFeedback"` available as an additional permission for debugging. `"host_permissions"` are required for certain actions that a rule can perform, if only using the `"declarativeNetRequest"` permission.
-A list of specified  "host_permissions" URLs are also required.
+A list of specified  `"host_permissions"` URLs are also required.
 
 ```json
 {
