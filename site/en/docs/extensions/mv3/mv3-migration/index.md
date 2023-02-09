@@ -566,8 +566,6 @@ cases without requiring host permissions, and without needing to read the actual
   given priority over the webRequest API because it allows for synchronous interception. Similarly,
   any headers removed through declarativeNetRequest API are not made visible to web request
   extensions.
-- The webRequest API is more flexible as compared to the declarativeNetRequest API because it allows
-  extensions to evaluate a request programmatically.
 
 ### Conditional permissions and declarativeNetRequest  {: #declarativenetrequest-conditional-perms }
 
