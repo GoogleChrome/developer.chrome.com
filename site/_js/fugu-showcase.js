@@ -88,26 +88,21 @@ import './web-components/enhanced-select';
     new URL(document.location.href).searchParams.get('api')?.split(',') || [];
   onSearch();
 
-  const imageToPNG = async blob => {
-    const canvas = document.createElement('canvas');
-    const context = canvas.getContext('2d');
-    const image = await createImageBitmap(blob);
-    canvas.width = image.width;
-    canvas.height = image.height;
-    context?.drawImage(image, 0, 0);
-    return new Promise(resolve => {
-      canvas.toBlob(resolve, 'image/png');
-    });
-  };
-
   if ('share' in navigator && 'canShare' in navigator) {
-    document.querySelectorAll('.web-share').forEach(shareLink => {
-      shareLink.classList.remove('display-none');
-      shareLink.classList.add('display-flex');
+    const imageToPNG = async blob => {
+      const canvas = document.createElement('canvas');
+      const context = canvas.getContext('2d');
+      const image = await createImageBitmap(blob);
+      canvas.width = image.width;
+      canvas.height = image.height;
+      context?.drawImage(image, 0, 0);
+      return new Promise(resolve => {
+        canvas.toBlob(resolve, 'image/png');
+      });
+    };
 
-      shareLink.addEventListener('click', async e => {
-        e.preventDefault();
-
+    const prepareShareData = async shareLink => {
+      try {
         const fuguCard = shareLink.closest('.fugu-card');
         const heading = fuguCard.querySelector('h2');
         const appURL = heading?.querySelector('a').href;
@@ -127,32 +122,63 @@ import './web-components/enhanced-select';
         }).then(response => response.blob());
         const pngBlob = await imageToPNG(blob);
         const file = new File([pngBlob], fileName);
+
+        const iJustFoundTheApp = document
+          .querySelector('#i_just_found_the_app')
+          .textContent.trim();
+        const itUsesTheseFuguAPIs = document
+          .querySelector('#it_uses_these_fugu_apis')
+          .textContent.trim();
+        const viaTheFuguShowcase = document
+          .querySelector('#via_the_fugu_showcase')
+          .textContent.trim();
+
         const shareData = {
           files: [file],
-          text: `👀 I just found the app “${appName}”: ${appURL}.\n\nAmong others, it uses these cool Project Fugu APIs:\n\n${appAPIs}\n\n(via the 🐡 ${document.title}: ${location.href})`.trim(),
+          text: `${iJustFoundTheApp} “${appName}”: ${appURL}.\n\n${itUsesTheseFuguAPIs}:\n\n${appAPIs}\n\n(${viaTheFuguShowcase}: ${location.href})`.trim(),
         };
+        return shareData;
+      } catch (err) {
+        return err;
+      }
+    };
 
-        if (navigator.canShare(shareData)) {
-          try {
-            await navigator.share(shareData);
-          } catch (err) {
-            if (err.name === 'AbortError') {
-              return;
-            } else if (err.name === 'NotAllowedError') {
-              // Try sharing without the screenshot.
-              try {
-                delete shareData.files;
-                console.log(shareData);
-                await navigator.share(shareData);
-              } catch (err) {
-                if (err.name === 'AbortError') {
-                  return;
-                }
-                console.error(err.name, err.message);
-              }
-            }
-            console.error(err.name, err.message);
+    document.querySelectorAll('.web-share').forEach(shareLink => {
+      shareLink.classList.remove('display-none');
+      shareLink.classList.add('display-flex');
+
+      shareLink.addEventListener('click', async e => {
+        e.preventDefault();
+
+        const shareData = await prepareShareData(shareLink);
+        if (shareData instanceof Error) {
+          console.error(shareData.name, shareData.message);
+          return;
+        }
+        try {
+          if (!navigator.canShare(shareData)) {
+            console.warn('Cannot share data', shareData);
+            return;
           }
+          await navigator.share(shareData);
+        } catch (err) {
+          if (err.name === 'AbortError') {
+            return;
+          } else if (err.name === 'NotAllowedError') {
+            // Try sharing without the screenshot.
+            try {
+              delete shareData.files;
+              await navigator.share(shareData);
+            } catch (err) {
+              if (err.name === 'AbortError') {
+                return;
+              }
+              console.error(err.name, err.message);
+              return;
+            }
+          }
+          console.error(err.name, err.message);
+          return;
         }
       });
     });
