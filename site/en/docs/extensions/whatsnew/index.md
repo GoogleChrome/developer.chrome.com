@@ -20,7 +20,7 @@ and related policy or other changes.
 
 January 12, 2023
 
-The [`chrome.action.isEnabled()`](/docs/extensions/reference/action/#method-isEnabled) method programmatically checks whether an extension has been enabled for a specific tab. This saves you from maintaining the enabled state of your tabs. This new method takes a tab ID and a reference to a callback and returns a boolean. It has one limitation: tabs created using [`chrome.declarativeContent`](/docs/extensions/reference/declarativeContent/) will always report disabled.
+The [`chrome.action.isEnabled()`](/docs/extensions/reference/action/#method-isEnabled) method programmatically checks whether an extension has been enabled for a specific tab. This saves you from maintaining the enabled state of your tabs. This new method takes a tab ID and a reference to a callback and returns a boolean. It has one limitation: tabs created using [`chrome.declarativeContent`](/docs/extensions/reference/declarativeContent/) will always return false.
 
 (The `chrome.action` namespace recently got new methods for controlling the appearance of extension badges. For more information, see [Setting badge colors](#m110-badge-color).)
 
