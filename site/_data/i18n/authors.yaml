@@ -238,6 +238,11 @@ johannes:
     en: 'Johannes Henkel'
   description:
     en: 'Software Engineer working on the Chrome User Experience Report at Google.'
+jasmineyan:
+  title:
+    en: 'Jasmine Yan'
+  description:
+    en: 'Software Engineer working on Chrome Tooling.'
 emilaeklund:
   title:
     en: 'Emil Eklund'
@@ -1292,3 +1297,20 @@ ianstanion:
     en: Ian Stanion
   description:
     en: 'Ian is a technical content developer at Google.'
+exterkamp:
+  title:
+    en: Shane Exterkamp
+    es: Shane Exterkamp
+    ja: Shane Exterkamp
+    ko: Shane Exterkamp
+    pt: Shane Exterkamp
+    ru: Shane Exterkamp
+    zh: Shane Exterkamp
+  description:
+    en: Shane is a SWE on Lighthouse
+    es: Shane es un Ingeniero de software en Lighthouse
+    ja: Shane は Lighthouse の開発に取り組むソフトウェアエンジニアです
+    ko: Shane은 Lighthouse의 SWE입니다.
+    pt: Shane é engenheiro de software na empresa Lighthouse
+    ru: Шейн — инженер-программист в команде Lighthouse
+    zh: Shane 是一名负责 Lighthouse 的软件工程师

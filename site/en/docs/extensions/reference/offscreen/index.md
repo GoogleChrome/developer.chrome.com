@@ -23,7 +23,7 @@ Pages loaded as offscreen documents are handled differently from other types of 
 * An extension can only have one offscreen document open at a time. If the extension is running in split mode with an active incognito profile, both the normal and incognito profiles can each have one offscreen document. 
 
 ## Reasons
-Reasons, listed [below](/docs/extensions/reference/offscreen/#type-Reason), are set upon document creation to determine the document's lifespan. Currently, the `AUDIO_PLAYBACK` reason has specialized lifetime enforcement (`CreateAudioLifetimeEnforcer`). All others use generic idle detection (`CreateEmptyEnforcer`).
+Reasons, listed [below](/docs/extensions/reference/offscreen/#type-Reason), are set upon document creation to determine the document's lifespan. Currently, the `AUDIO_PLAYBACK` reason has specialized lifetime enforcement [`CreateAudioLifetimeEnforcer`][audio-lifetime-enforcer]. All others use generic idle detection [`CreateEmptyEnforcer`][empty-enforcer].
 
 ## Examples
 The following methods create and close an offscreen document. Only a single Document can be open at a time. 
@@ -37,3 +37,6 @@ chrome.offscreen.createDocument({
 
 chrome.offscreen.closeDocument()
 ```
+
+[audio-lifetime-enforcer]: https://source.chromium.org/chromium/chromium/src/+/main:extensions/browser/api/offscreen/audio_lifetime_enforcer.h
+[empty-enforcer]: https://source.chromium.org/chromium/chromium/src/+/main:extensions/browser/api/offscreen/lifetime_enforcer_factories.cc

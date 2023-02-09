@@ -141,7 +141,7 @@ As this example shows, the LCP element for the soft navigation can be reported d
 
 For a soft navigation this is a more tricky question. Should we measure the first request made for the new page? What if all the content already exists in the app and there are no additional requests? What if that request is made in advance with a prefetch? What if a request unrelated to the soft navigation from a user perspective (for example, it’s an analytics request)?
 
-A simpler method is to report TTFB of 0 for soft navigations—in a similar manner as we recommend for [back/forward cache](https://web.dev/bfcache/) restores. This is the method the [`web-vitals` library](using-web-vitalsjs-to-measure-soft-navigation-core-web-vitals) currently uses for soft navigations.
+A simpler method is to report TTFB of 0 for soft navigations—in a similar manner as we recommend for [back/forward cache](https://web.dev/bfcache/) restores. This is the method the [`web-vitals` library](#using-the-web-vitals-library-to-measure-core-web-vitals-for-soft-navigations) currently uses for soft navigations.
 
 In the future, we may support more precise ways of knowing which request is the soft navigation’s “navigation request” and will be able to have more precise TTFB measurements. But that’s not part of the current experiment.
 

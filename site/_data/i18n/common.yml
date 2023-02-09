@@ -36,7 +36,7 @@ compare_current:
   en: 'Current'
 
 compare_proposed:
-  en: 'Proposed' 
+  en: 'Proposed'
 
 menu:
   en: 'menu'
@@ -197,6 +197,15 @@ website:
 featured:
   en: Featured
 
+launch_app:
+  en: 'Launch app'
+
+view_source:
+  en: 'View source'
+
+load_more:
+  en: 'Load more'
+
 improve_article:
   en: 'Improve article'
   zh: '改进文章'
@@ -249,7 +258,7 @@ bug_report:
     en: Report a bug.
 
 checkbox_group:
-  reset: 
+  reset:
     en: Reset
   select_all:
     en: Select all

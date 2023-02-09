@@ -1,0 +1,70 @@
+---
+title: 'Project Fugu API Showcase'
+subhead: >
+  The Project Fugu API Showcase is a collection of apps that make use of APIs that were conceived in the context of Project Fugu.
+description: >
+  The Project Fugu API Showcase is a collection of apps that make use of APIs that were conceived in the context of Project Fugu.
+hero: image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/wu6CeuL1HpHtc8b4WIIm.png
+alt: Blowfish swarm swimming in the ocean.
+---
+
+{% extends "layouts/base.njk" %}
+{% from 'macros/cards/hero-card.njk' import heroCard with context %}
+{% from 'macros/icon.njk' import icon with context %}
+
+{% block content %}
+
+<div class="fugu-showcase">
+  <div class="width-full pad-400 fugu-showcase__hero">
+    {% if hero %}
+      {{ heroCard(
+        "Project Fugu API Showcase",
+        "The Project Fugu API Showcase is a collection of apps that make use of APIs that were conceived in the context of Project Fugu.",
+        "Submit a new app",
+        "https://docs.google.com/forms/d/e/1FAIpQLScNd1rClbmFWh6FcMmjUNrwg9RLz8Jk4BkHz_-EOpmkVd_-9g/viewform",
+        hero,
+        "Project Fugu API Showcase",
+        "cyan"
+      ) }}
+    {% endif %}
+  </div>
+
+  <div class="width-full pad-left-400 pad-right-400">
+    <div class="md:display-flex search-box">
+      <div class="search-box__inner" role="presentation">
+        <span class="search-box__btn">
+          {{ icon('search', {hidden: false}) }}
+        </span>
+        <input
+          id="search-fugu-apps"
+          class="search-box__input"
+          placeholder="{{ 'i18n.fugu_showcase.search_apps' | i18n(locale) }}"
+          aria-label="{{ 'i18n.fugu_showcase.search_apps' | i18n(locale) }}"
+          aria-autocomplete="list"
+        />
+        <span class="search-box__btn search-box__btn--close" id="search-fugu-apps-close">
+          {{ icon('close', {hidden: false}) }}
+        </span>
+      </div>
+      <label class="label lg:gap-left-500" for="api-select">{{ 'i18n.filter_sheet.filter_by' | i18n(locale) }}</label>
+      <enhanced-select id="api-select" label="{{ 'i18n.fugu_showcase.select_api' | i18n(locale) }}">
+        <select name="api-select" multiple>
+          {% for availableAPI in fuguShowcase.availableApis %}
+            <option value="{{ availableAPI | replace(" ", '-') | lower | replace("(", "") | replace(")", "") }}">{{ availableAPI }}</option>
+          {% endfor %}
+        </select>
+      </enhanced-select>
+    </div>
+    <div class="blog-grid fugu-showcase-container lg:pad-top-400 pad-top-200"
+      total-items="{{ fuguShowcase.fuguItems.length }}">
+      {% for item in fuguShowcase.fuguItems %}
+        {% include 'partials/showcase-card.njk' %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+  <script type="module" src="{{ helpers.hashForProd('/js/fugu-showcase.js') }}"></script>
+{% endblock %}

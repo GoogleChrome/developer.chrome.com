@@ -103,7 +103,7 @@
   "devDependencies": {
     "@ava/babel": "^1.0.1",
     "@google-cloud/secret-manager": "^3.2.2",
-    "@percy/cli": "^1.1.0",
+    "@percy/cli": "^1.16.0",
     "@rollup/plugin-commonjs": "^15.1.0",
     "@rollup/plugin-json": "^4.1.0",
     "ava": "^3.12.1",

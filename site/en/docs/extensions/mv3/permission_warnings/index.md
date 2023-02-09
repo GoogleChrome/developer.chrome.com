@@ -377,6 +377,7 @@ This can be avoided by making the new feature optional and adding new permission
 [doc-perms]: /docs/extensions/mv3/declare_permissions
 [file-scheme-allow]: /docs/extensions/reference/extension#method-isAllowedFileSchemeAccess
 [gh-opt-perms]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/examples/optional_permissions
+[gh-opt-perms]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.optional-permissions
 [incognito-allow]: /docs/extensions/reference/extension#method-isAllowedIncognitoAccess
 [section-update]: #update_permissions
 [section-view-warnings]: #view_warnings
