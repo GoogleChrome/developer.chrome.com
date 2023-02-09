@@ -15,7 +15,7 @@ authors:
 
 - 質問の対象となっている提案の解説用レポジトリで問題を報告してください。各レポジトリには、下記のリンクまたは[プライバシーサンドボックスのステータスページ](/docs/privacy-sandbox/status/)からアクセスできます。
 - プライバシー サンドボックスに関する一般的な質問と、複数の API にまたがる質問については、[プライバシー サンドボックス デベロッパー サポート リポジトリ](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)に投稿してください。
-- If you'd prefer, you can [file a feature request](https://github.com/GoogleChrome/developer.chrome.com/issues/new?assignees=&labels=feature+request%2CP2&template=feature_request.md&title=) on the repo for this site.
+- 必要に応じて、このサイトのリポジトリで[機能リクエストを提出](https://github.com/GoogleChrome/developer.chrome.com/issues/new?assignees=&labels=feature+request%2CP2&template=feature_request.md&title=)できます。
 
 ## 一般的な質問
 
@@ -112,7 +112,7 @@ iOS と iPadOS の Chrome では Chrome オリジン トライアルはサポー
 
 {% Aside 'warning' %} ユーザーは、現在地とは異なる地域からオリジンにアクセスすることを選択する場合があります。つまり、米国のユーザーが `uk.example.com` にアクセスできる可能性があるということです。これらのユーザーには、英国のサイトではブロックされていた米国のサイトの機能が表示されます。 {% endAside %}
 
-## Privacy State Tokens
+## プライバシー状態トークン
 
 ### この機能について質問するにはどうすればよいですか？
 
@@ -163,7 +163,7 @@ Chrome DevTools では、[ネットワーク] タブと [アプリケーショ�
 ### この機能について質問するにはどうすればよいですか？
 
 - この提案に関する質問がある場合は、提案リポジトリで[イシューを作成](https://github.com/WICG/turtledove/issues)してください。
-- オリジン トライアルの参加者で技術的な質問がある場合は、デベロッパー向けの[アトリビューションレポート メーリングリスト](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev)に参加して質問するか、[Chromium バグを報告](https://bugs.chromium.org/p/chromium/issues/list?q=attribution%20reporting)してください。
+- 現在 Chrome でテストできる実装に関する質問については、[Chromium のバグを報告](https://bugs.chromium.org/p/chromium/issues/list?q=fledge)してください。
 - 実装、統合、一般的なベスト プラクティスに関する質問がある場合は、「プライバシー サンドボックス デベロッパー サポート」リポジトリで[イシューを作成](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)してください。
 
 ### この機能について質問するにはどうすればよいですか？
@@ -191,7 +191,7 @@ FLEDGE は、「信頼できるサーバー」が、プライバシーを侵害�
 
 ### Attribution Reporting は Event Conversion Measurement API と同じですか？
 
-Yes. [The name was changed](/docs/privacy-sandbox/attribution-reporting-introduction/), as the original event-level scope expanded to cover additional measurement use cases.
+はい。元のイベントレベルの範囲が拡張され、追加の測定ユースケースをカバーするようになったため、[名前が変更されました](/docs/privacy-sandbox/attribution-reporting-introduction/)。
 
 ## First-Party Sets
 
@@ -219,7 +219,7 @@ Yes. [The name was changed](/docs/privacy-sandbox/attribution-reporting-introduc
 
 ただし、ユーザーエージェント文字列と User-Agent Client Hints の両方についてブラウザが提供する情報は同じソースから取得されるため、同じ形式のロジックが機能するはずです。
 
-For example, if this pattern is checked on the UA string:
+たとえば、このパターンが UA 文字列でチェックされている場合:
 
 - 携帯のパターン: `'Android' + 'Chrome/[.0-9]* Mobile'`
 - タブレットのパターン: `'Android' + 'Chrome/[.0-9]* (?!Mobile)'`
@@ -229,7 +229,7 @@ For example, if this pattern is checked on the UA string:
 - 携帯のパターン: `Sec-CH-UA-Platform: "Android"`, `Sec-CH-UA-Mobile: ?1`
 - タブレットのパターン: `Sec-CH-UA-Platform: "Android"`, `Sec-CH-UA-Mobile: ?0`
 
-Or the equivalent JavaScript interface:
+または同等の JavaScript インターフェース:
 
 - 携帯のパターン: `navigator.userAgentData.platform === 'Android' && navigator.userAgentData.mobile === true`
 - タブレットのパターン: `navigator.userAgentData.platform === 'Android' && navigator.userAgentData.mobile === false`
@@ -242,7 +242,7 @@ Or the equivalent JavaScript interface:
 
 ### UA-CH は HTTP/2 と HTTP/3 で動作しますか？
 
-UA-CH works with both HTTP/2 and HTTP/3 connections.
+UA-CH は、HTTP/2 接続と HTTP/3 接続の両方で動作します。
 
 {% Aside 'caution' %} クライアント ヒントは安全な接続でのみ送信されるため、HTTPS を使用していることを確認してください。 {% endAside %}
 
@@ -254,9 +254,9 @@ DNS 側でオリジンがどのように定義されているかに関係なく�
 
 ユーザーエージェント文字列に対する Chrome の変更は、ボットが送信するユーザーエージェント文字列に直接影響しません。
 
-Bots may choose to update their own strings to reflect the reduced information Chrome sends, but that is entirely their implementation choice. Chrome is still sending the same user-agent format, and bots that append their own identifier to the end of a Chrome user-agent string can continue to do so.
+ボットは、Chrome が送信する削減された情報を反映するために独自の文字列を更新することを選択する場合がありますが、それは完全に実装上の選択です。 Chrome は引き続き同じユーザー エージェント形式を送信しており、Chrome ユーザー エージェント文字列の末尾に独自の識別子を追加するボットは引き続き送信できます。
 
-For any concerns with specific bots, it may be worth reaching out directly to the owners to ask if they have any plans to change their user-agent string.
+特定のボットに関する懸念事項がある場合は、所有者に直接連絡して、ユーザー エージェント文字列を変更する計画があるかどうかを確認することをお勧めします。
 
 ## 共有ストレージ
 
