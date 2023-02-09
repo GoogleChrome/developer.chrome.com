@@ -2,7 +2,6 @@
 layout: "layouts/doc-post.njk"
 title: "Manifest - declarativeNetRequest"
 date: 2022-12-13
-updated: 
 description: Reference documentation for the declarativeNetRequest property of manifest.json.
 ---
 
