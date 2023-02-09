@@ -6,7 +6,7 @@ subhead: >
 description: >
   A web platform API that allows users to login to websites with their federated accounts in a manner compatible with improvements to browser privacy.
 date: 2022-04-25
-updated: 2022-11-28
+updated: 2023-02-09
 authors:
   - agektmr
 ---
