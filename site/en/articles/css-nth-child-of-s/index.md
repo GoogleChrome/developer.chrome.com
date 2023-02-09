@@ -4,9 +4,9 @@ title: More control over :nth-child() selections with the of S syntax
 authors:
   - bramus
 subhead: >
-  Pre-filter a set of child elements before applying `An+B` logic on it.
+  Pre-filter a set of child elements before applying An+B logic on it.
 description: >
-  Pre-filter a set of child elements before applying `An+B` logic on it.
+  Pre-filter a set of child elements before applying An+B logic on it.
 date: 2023-02-09
 hero: image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/d3BZ8gLh8WkVPRfJf6mz.jpg
 alt: "Rows of green chairs in the Munich Olympic Stadium."
