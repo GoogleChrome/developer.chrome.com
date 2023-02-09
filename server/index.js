@@ -49,6 +49,7 @@ const cspHandler = (_req, res, next) => {
   // nb. This is superceded by 'frame-ancestors' above, but retain while that
   // policy is "Report-Only".
   res.setHeader('X-Frame-Options', 'SAMEORIGIN');
+  res.setHeader('X-PR-TEST', 'dcc-staging');
   next();
 };
 
