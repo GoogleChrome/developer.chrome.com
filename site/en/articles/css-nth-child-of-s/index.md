@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: More control over `:nth-child()` selections with the `of S` syntax
+title: More control over :nth-child() selections with the of S syntax
 authors:
   - bramus
 subhead: >
