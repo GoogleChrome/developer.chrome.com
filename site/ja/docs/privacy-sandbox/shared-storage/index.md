@@ -41,7 +41,7 @@ Shared Storage API を使用することでメリットが得られる可能性�
 
 まだ解決されていないクロスサイトストレージソリューションを探していますか？[ユースケースをお知らせください](https://github.com/WICG/shared-storage/issues)。
 
-### Use cases
+### ユースケース
 
 Shared Storage API は、サードパーティ Cookie の既存のいくつかの用途を置き換えて多くのユースケースをサポートすることを意図しておます。これには以下が含まれる可能性があります。
 
@@ -49,8 +49,8 @@ Shared Storage API は、サードパーティ Cookie の既存のいくつか�
   <thead>
   <tr>
    <th>ユースケース</th>
-   <th>Description</th>
-   <th>Output gate</th>
+   <th>説明</th>
+   <th>出力ゲート</th>
   </tr>
   </thead>
   <tr>
@@ -58,53 +58,53 @@ Shared Storage API は、サードパーティ Cookie の既存のいくつか�
 <strong><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/shared-storage/frequency-control/">フリークエンシーコントロール</a></p></strong>
    </td>
    <td>効果的なフリークエンシーの振り子の反対側は過飽和状態になっており、ユーザーに同じコンテンツが頻繁に表示されれば、ユーザーエクスペリエンスが低下してしまいます。ビュー数のバランスを取って制御するために、組織はユーザーのビュー数を共有ストレージに記録し、ユーザーが事前定義されたカスタマイズ可能な制限に達したら、別のコンテンツを表示するようにできます。</td>
-   <td>URL Selection    </td>
+   <td>URL の選択</td>
   </tr>
   <tr>
    <td>
-<strong><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/shared-storage/ab-testing/">A/B testing</a></p></strong>
+<strong><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/shared-storage/ab-testing/">A/B テスト</a></p></strong>
    </td>
-   <td>You can assign a user to an experiment group, then store that group in shared storage to be accessed cross-site.     </td>
-   <td>URL Selection    </td>
+   <td>ユーザーを実験グループに割り当て、そのグループを共有ストレージに保存して、サイト間でアクセスできるようにすることができます。</td>
+   <td>URL の選択</td>
   </tr>
   <tr>
    <td>
-<strong><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/shared-storage/creative-rotation/">Creative rotation</a></p></strong>
+<strong><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/shared-storage/creative-rotation/">クリエイティブ ローテーション</a></p></strong>
    </td>
    <td>クリエイティブローテーションモードとその他のメタデータを保存して、異なるサイト間でクリエイティブをローテーションできます。</td>
-   <td>URL Selection    </td>
+   <td>URL の選択</td>
   </tr>
   <tr>
    <td>
 <strong><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/shared-storage/known-customer/">決済プロバイダーの既知の顧客</a></p></strong>
    </td>
-   <td>You can store whether the user has registered on your site into shared storage, then render a different element based on that stored status.    </td>
-   <td>URL Selection    </td>
+   <td>ユーザーがサイトに登録したかどうかを共有ストレージに保存し、その保存されたステータスに基づいて別の要素をレンダリングできます。</td>
+   <td>URL の選択</td>
   </tr>
   <tr>
    <td>
-<strong>Anti-abuse mitigation</strong>
+<strong>乱用防止の緩和</strong>
    </td>
    <td>悪用防止、詐欺防止、およびウェブセキュリティ組織は、独自の技術を使用して、自動化されたボットであれ、危害を加えようとしている実際の人間であれ、悪意のあるユーザーを検出することがよくあります。ここでは、URL の選択出力ゲートを使用してユーザーの信頼性評価をエンコードするか、プライベート集計出力ゲートを使用して異常検出用のデータセットを構築するかにかかわらず、さまざまな戦略をテストできます。</td>
    <td>URL の選択、Private Aggregation API</td>
   </tr>
   <tr>
    <td>
-<strong><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/shared-storage/unique-reach/">Unique Reach Reporting</a></p></strong>
+<strong><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/shared-storage/unique-reach/">ユニークリーチ レポート</a></p></strong>
    </td>
    <td>多くのコンテンツプロデューサーや広告主は、自分のコンテンツを閲覧したユニークユーザー数を知りたいと考えています。共有ストレージを使用して、ユーザーが広告、埋め込みビデオ、出版物を初めて見たときのレポートを作成し、同じユーザーが別のサイトで重複してカウントされるのを防ぎ、集計されたノイズの多いおおよそのユニークリーチのレポートを提供できます。</td>
    <td>Private Aggregation API</td>
   </tr>
   <tr>
    <td>
-<strong><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/shared-storage/user-demographics">User Demographics Reporting</a></p></strong>
+<strong><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/shared-storage/user-demographics">ユーザー人口統計レポート</a></p></strong>
    </td>
    <td>コンテンツプロデューサーは、多くの場合、オーディエンスの人口統計を理解したいと考えています。共有ストレージを使用して、1P サイトなどのコンテキストでユーザーの人口統計データを記録し、集約レポートを使用して、埋め込みコンテンツなどの他の多くのサイトでレポートを作成できます。</td>
    <td>Private Aggregation API</td>
   </tr>
   <tr>
    <td>
-<strong><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/shared-storage/k-freq-reach">K+ Frequency Reach Reporting</a></p></strong>
+<strong><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/shared-storage/k-freq-reach">K+ フリークエンシー リーチ レポート</a></p></strong>
    </td>
    <td>「有効フリークエンシー」と呼ばれることもありますが、ユーザーが特定のコンテンツを認識または思い出す前に（多くの場合、広告ビューのコンテキストで）閲覧する最小限のビュー数が存在することがよくあります。共有ストレージを使用して、コンテンツを少なくとも K 回見た一意のユーザーのレポートを作成できます。</td>
    <td>Private Aggregation API</td>
@@ -121,7 +121,7 @@ Shared Storage API は、サードパーティ Cookie の既存のいくつか�
 
 {% Aside 'key-term' %} [ワークレット](https://developer.mozilla.org/docs/Web/API/Worklet)を使用すると、特定の JavaScript 関数を実行して、要求元に情報を返すことができます。ワークレット内では、JavaScript を実行できますが、外部ページと対話したり通信したりすることはできません。 {% endAside %}
 
-Worklets are where you add your business logic. Inside the worklet, you are allowed to read and process a value from Shared Storage, but you cannot directly return the exact value to the worklet caller. To extract useful information from the worklet, a set of “gates” are available. There are two gates available, but more may be added in the future.
+ワークレットは、ビジネス ロジックを追加する場所です。ワークレット内では、共有ストレージから値を読み取って処理できますが、ワークレットの呼び出し元に正確な値を直接返すことはできません。ワークレットから有用な情報を抽出するために、一連の「ゲート」を使用できます。利用可能なゲートは 2 つありますが、今後さらに追加される可能性があります。
 
 利用可能な Shared Storage API 出力ゲート:
 
@@ -136,7 +136,7 @@ URL の選択出力ゲートとプライベート集計出力ゲートの Shared
 
 {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/CWfgCMJQ5cYPOfjttF3k.png", alt="これらの API を使用するには、Privacy Sandbox Ads APIs experiment を有効に設定してください", width="744", height="124" %}
 
-### Use the demo
+### デモを使用する
 
 [デモを利用できます](https://shared-storage-demo.web.app/)。コードを [GitHub](https://github.com/GoogleChromeLabs/shared-storage-demo) でご覧ください。
 
