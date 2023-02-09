@@ -41,7 +41,7 @@ The [back/forward cache (bfcache)](https://web.dev/bfcache/) is one of the most 
 There are a few ways that a page can prevent the browser from restoring a page from the bfcache, however. This new Lighthouse audit actually navigates away from the test page and back again to test if it's bfcache-able, and lists the reasons if it fails.
 
 <figure>
-  {% Img src="image/MtjnObpuceYe3ijODN3a79WrxLU2/X0KOxBXEWQB0NCqUqvdl.png", alt="An example result from the bfcache audit, listing failures due to an open IndexDB connection and unload handlers in the page", width="800", height="402"class="screenshot" %}
+  {% Img src="image/MtjnObpuceYe3ijODN3a79WrxLU2/X0KOxBXEWQB0NCqUqvdl.png", alt="An example result from the bfcache audit, listing failures due to an open IndexDB connection and unload handlers in the page", width="800", height="402", class="screenshot" %}
 </figure>
 
 Take a look at the [bfcache audit's docs](/docs/lighthouse/performance/bf-cache/) for more information.
