@@ -5,7 +5,6 @@ description: >
    Five tricks to use in the Console Panel
 authors:
   - umarhansa
-  - asd
 date: 2015-08-09
 updated: 2015-08-09
 ---
