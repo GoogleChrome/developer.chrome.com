@@ -166,7 +166,7 @@ method.
 
 ### web_accessible_resources
 
-When an extension uses declarativeNetRequest APIs to redirect a public resource request to a resource that is not web accessible, it is blocked and will result in a net::ERR_UNSAFE_REDIRECT error. The above holds true even if the resource that is not web accessible is owned by the redirecting extension. To declare resources for use with declarativeNetRequest APIs, the `"web_accessible_resources"` array must be declared and populated in the manifest as documented [here](/docs/extensions/mv3/manifest/web_accessible_resources/).
+When an extension uses declarativeNetRequest APIs to redirect a public resource request to a resource that is not web accessible, it is blocked and will result in a net::ERR_UNSAFE_REDIRECT error. The above holds true even if the resource that is not web accessible is owned by the redirecting extension. To declare resources for use with declarativeNetRequest APIs, populate the [`"web_accessible_resources"`](/docs/extensions/mv3/manifest/web_accessible_resources/) array.
 
 ### Matching algorithm
 
