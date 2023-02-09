@@ -62,7 +62,7 @@ options:
     - 'REPO_NAME=$REPO_NAME'
     - 'COMMIT_SHA=$COMMIT_SHA'
     - 'PR_NUMBER=$_PR_NUMBER'
-  secretEnv: ['GITHUB_APP_SECRET', 'GITHUB_APP_KEY', 'GITHUB_APP_SECRET']
+  secretEnv: ['GITHUB_APP_ID', 'GITHUB_APP_KEY', 'GITHUB_APP_INSTALLATION_ID']
 
 availableSecrets:
   secretManager:
@@ -70,5 +70,5 @@ availableSecrets:
       env: 'GITHUB_APP_ID'
     - versionName: projects/dcc-staging/secrets/GITHUB_APP_KEY/versions/1
       env: 'GITHUB_APP_KEY'
-    - versionName: projects/dcc-staging/secrets/GITHUB_APP_SECRET/versions/1
-      env: 'GITHUB_APP_SECRET'
+    - versionName: projects/dcc-staging/secrets/GITHUB_APP_INSTALLATION_ID/versions/1
+      env: 'GITHUB_APP_INSTALLATION_ID'

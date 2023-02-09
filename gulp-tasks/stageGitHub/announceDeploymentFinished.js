@@ -25,7 +25,7 @@ const {isGoogleCloudBuild} = require('./lib/isGoogleCloudBuild');
 const {updateStickyComment} = require('./lib/updateStickyComment');
 
 async function getChangedPages(prNumber, baseUrl) {
-  const changedFiles = await requestGitHubApi(
+  const {data: changedFiles} = await requestGitHubApi(
     'GET',
     `pulls/${prNumber}/files?per_page=100`
   );
@@ -57,7 +57,7 @@ async function announceDeploymentFinished() {
   isGoogleCloudBuild();
 
   const prNumber = process.env.PR_NUMBER;
-  const commitSha = process.env.PR_HEAD_COMMIT_SHA;
+  const commitSha = process.env.COMMIT_SHA;
   const deploymentType = await getDeploymentType();
 
   const baseUrl = `https://pr-${prNumber}-${deploymentType}-dot-dcc-staging.uc.r.appspot.com/`;
