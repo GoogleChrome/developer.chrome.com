@@ -22,11 +22,11 @@ Lighthouse 10 is available immediately on the [command line through npm](https:/
 
 The venerable [Time To Interactive (TTI)](https://web.dev/tti/) metric is being removed in Lighthouse 10, with its 10% score weight shifted to [Cumulative Layout Shift (CLS)](https://web.dev/cls/), which will now account for 25% of the [overall performance score](/docs/lighthouse/performance/performance-scoring/#lighthouse-10). Ideally this change will increase focus on CLS for sites that still need fixes for unnecessary layout shifts.
 
-<figure>
-  {% Img src="image/MtjnObpuceYe3ijODN3a79WrxLU2/jHmu88pYXtx1ShAUYgVS.png", alt="A Lighthouse score gauge, broken down by the metrics (FCP, SI, LCP, TBT, and CLS) that make up the total score", width="420", height="380" %}
-</figure>
-
 We expect this to improve most pages' performance scores, since most pages tend to score better on CLS than TTI. In an analysis of 13 million page loads in the latest HTTP Archive run, 90% of those pages would see an improvement in their Lighthouse performance score, with 50% of them seeing a performance improvement of more than 5 points.
+
+<figure>
+  {% Img src="image/MtjnObpuceYe3ijODN3a79WrxLU2/jHmu88pYXtx1ShAUYgVS.png", alt="A Lighthouse score gauge, broken down by the metrics (FCP, SI, LCP, TBT, and CLS) that make up the total score", width="210", height="190" %}
+</figure>
 
 If for some reason you still need the Lighthouse TTI value (in a CI assertion, for example), it's still available unchanged in the Lighthouse JSON output, just with score weight 0 and hidden in the HTML report. Any scripted access of the JSON value should continue to work without changes.
 
