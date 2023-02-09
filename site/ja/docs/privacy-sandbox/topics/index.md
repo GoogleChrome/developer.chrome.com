@@ -1,12 +1,14 @@
 ---
-layout: 'layouts/doc-post.njk'
-title: 'Topics API'
-subhead: >
-  ユーザーがアクセスしたサイトを追跡せずに、インタレストベース広告を可能にします。
-description: >
-  ユーザーがアクセスしたサイトを追跡せずに、インタレストベース広告を可能にするメカニズムの提案。
-date: 2022-01-25
-updated: 2022-07-18
+layout: layouts/doc-post.njk
+title: 'Topics API: developer guide'
+subhead: |2
+
+  Try out the Topics demo, and learn about the API and how to run Topics with flags or participate in an origin trial.
+description: |2
+
+  Try out the Topics demo, and learn about the API and how to run Topics with flags or participate in an origin trial.
+date: '2022-01-25'
+updated: '2022-01-30'
 authors:
   - samdutton
 ---
@@ -19,11 +21,25 @@ authors:
 - この提案には皆さんからのフィードバックが必要です。コメントがある場合は、[Topics Explainer リポジトリ](https://github.com/jkarlin/topics)でイシューを作成するか、[Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants)（ウェブ広告の改善ビジネスグループ）のディスカッションに参加してください。Explainer には、さらに定義が必要な[未解決の質問](https://github.com/jkarlin/topics/issues)が多数あります。
 - [プライバシーサンドボックスのタイムライン](http://privacysandbox.com/timeline)は、Topics API とその他のプライバシーサンドボックス提案の実装のタイミングを示しています。
 
+{% Aside %}
+
+[Topics API: latest updates](/docs/privacy-sandbox/topics/latest) details changes and enhancements to the API and implementations.
+
+{% endAside %}
+
 ---
+
+## Try the demo {: #demo}
+
+There is a demo of the Topics API at [topics-demo.glitch.me](https://topics-demo.glitch.me/). This explains how to try out and debug the API for a single user.
+
+You can also run the Topics [colab](#colab) to try out the Topics [classifier model](#classifier-model).
+
+{% YouTube id='hEBzWuXjeTQ' %}
 
 ## Topics オリジントライアルに参加する {: #origin-trial}
 
-Topics、[FLEDGE](/docs/privacy-sandbox/fledge)、および [アトリビューション レポート](/docs/privacy-sandbox/attribution-reporting/) API に関するプライバシーサンドボックスの関連性と測定の[オリジントライアル](/blog/origin-trials/)が、デスクトップ版 Chrome Beta 101.0.4951.26 以降で利用できるようになりました。
+Topics、[FLEDGE](/docs/privacy-sandbox/fledge)、および [アトリビューション レポート](/docs/privacy-sandbox/attribution-reporting/)の API に関するプライバシーサンドボックスの関連性と測定の[オリジントライアル](/blog/origin-trials/)が、デスクトップ版 Chrome Beta 101.0.4951.26 以降で利用できるようになりました。
 
 参加するには、[オリジントライアルトークンに登録](/origintrials/#/view_trial/771241436187197441)してください。
 
@@ -58,10 +74,16 @@ Topics、[FLEDGE](/docs/privacy-sandbox/fledge)、および [アトリビュー�
 
 ## `chrome://flags` または機能フラグを使ってテストする {: #feature-flags}
 
-Topics API は、Chrome 101 以降を実行している単一のユーザーに対して試すことができます。
+There are two ways to try the Topics API as a single user, running Chrome 101 or above:
 
-- コマンドラインから `--enable-features=PrivacySandboxAdsAPIsOverride` フラグを設定します。
 - `chrome://flags/#privacy-sandbox-ads-apis` を有効にします。
+- Run Chrome from the command line with the following flags:
+
+```text
+--enable-features=BrowsingTopics,PrivacySandboxAdsAPIsOverride,OverridePrivacySandboxSettingsLocalTesting
+```
+
+The [Topics demo](#demo) shows how to use additional flags to adjust settings such as epoch length. If you access the Topics API by running Chrome with command-line flags, don't set `chrome://flags`, as these can override command-line settings.
 
 「[フラグを使用して Chromium を実行する](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)」には、Chrome やその他の Chromium ベースのブラウザを実行する際にコマンドラインからフラグを設定する方法について説明されています。
 
@@ -113,31 +135,31 @@ Topics API には、次の 3 つの主要なタスクがあります。
 
 Topics API は、人が認識可能かつハイレベルなトピックで構成されているため、堅牢なユーザー制御が容易に可能です。 Chrome では、個々のトピックを削除するオプションと、ブラウザーに保存されているトピックを表示するオプションを提供する予定です。
 
-## トピックの分類と選択の方法
+### トピックの分類と選択の方法
 
 トピックは[分類体系](https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md)から選択されます。これは、「カントリーミュージック」、「メークアップとコスメ」、「ベジタリアン料理」などの項目のリストです。これらのトピックは、当初、テスト用に Chrome で分類されますが、最終的には、トピックの分類は、エコシステムに貢献している信頼された組織によって管理されることを目指しています。多くのブラウザーが各トピックに関連付けられるように、分類に使用されるトピックの数はある程度絞る必要があります（現在の提案は約 350 ですが、最終的なトピックの数は数百から数千になると想定されています）。
 
 センシティブなカテゴリを避けるには、これらのトピックを公開し、人間が分類し、 最新の状態に保つ必要があります。Chrome のテスト用に提案された最初の分類は、民族性や性的指向など、[一般的にセンシティブと考えられるのカテゴリを除外](#sensitive-topics)するために人間が分類しています。
 
+{: #classifier-model}
+
 Topics API では、[機械学習](https://royalsociety.org/topics-policy/projects/machine-learning/what-is-machine-learning-infographic/)を使用して、ホスト名からトピックを推測することを提案しています。このための分類器モデルは、最初は、ブラウザベンダーまたは信頼できるサードパーティによって、人間が分類するホスト名とトピックを使用してトレーニングされます。モデルはブラウザとともに配布されるため、オープンに開発され、自由に利用できます。するとユーザーのデバイスのブラウザは、このモデルを使用して、最近アクセスしたサイトの[ホスト名](https://web.dev/same-site-same-origin/#origin)に基づいて、ユーザーに最も関心のあるトピックを計算できるようになります。
 
-{% Aside %}
-[`chrome://topics internal` ページでは、](#view-inferred-topics)ホスト名について推測されたトピックを確認できます。
-{% endAside %}
+{% Aside %} Chrome's implementation of the Topics API downloads a [TensorFlow Lite](tensorflow.org/lite/guide) file representing the model, so it can be used locally on your device. The model file is in an efficient, portable format known as FlatBuffers, which has the `.tflite` filename extension.
+
+Access the TensorFlow Lite model file, and the topics inferred for hostnames, [from the `chrome://topics internal` page](#view-inferred-topics). {% endAside %}
 
 下の図は、アドテクプラットフォームが適切な広告を選択する方法を Topics API がどうサポートするかを単純化した例として示しています。この例では、ユーザーのブラウザに、ウェブサイトのホスト名をトピックにマッピングするための モデルが既に存在していることを前提としています。
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/u9e1VvzblNVHCfyk1hRY.png", alt="ユーザーが Web サイトにアクセスしてから広告 が表示されるまでの Topics API ライフサイクルのステージを示す図", width="800", height="275" %}
 
-Topics API のライフサイクル: [拡大版を表示](https://wd.imgix.net/image/80mq7dk16vVEg8BBhsVe42n6zn82/u9e1VvzblNVHCfyk1hRY.png?auto=format&w=1600)
+The Topics API lifecycle: [view a larger version](https://wd.imgix.net/image/80mq7dk16vVEg8BBhsVe42n6zn82/u9e1VvzblNVHCfyk1hRY.png?auto=format&w=1600)
 
 ## Topics API の仕組み
 
 {% Aside %}
 
-Topics API の提案は、エコシステムからフィードバックを収集し、そのフィードバックに基づいて行動するための[最初のディスカッションフェーズ](/docs/privacy-sandbox/cds21-update/#discussion)です。
-
-API 設計は最終段階ではなく、検討が進むにつれて次の詳細内容が変更されます。
+The Topics API proposal is in the [discussion phase](/docs/privacy-sandbox/proposal-lifecycle/#discussion) to gather and act on feedback from the ecosystem. The API design is not final and the details below will change as discussions progress.
 
 {% endAside %}
 
@@ -159,7 +181,7 @@ Topics の Explainer では、`document.browsingTopics()` 返す配列のトピ�
 
 {% Aside %}
 
-現在、Topics API の設計は、[Explainer](https://github.com/jkarlin/topics) として議論されています。これは標準化プロセスの最初のステップに過ぎません。 API は確定されていません。
+The design of the Topics API is currently under discussion as an [explainer](https://github.com/patcg-individual-drafts/topics). The API is not finalized.
 
 この記事で説明するパラメーターと API の詳細 (分類サイズ、1 週間に計算されるトピック数、呼び出しごとに返されるトピック数など) は、エコシステムのフィードバックを取り入れ、API に反映させることを繰り返すため、変更される可能性があります。
 
@@ -194,13 +216,15 @@ API の `document.browsingTopics()` メソッドは、直近の 3 つの[エポ�
 
 `document.browsingTopics()` によって返されるトピックの数は、[API 呼び出し元](#caller)が以前に観測したトピックの数と、ユーザーが利用できるトピックの数 (データが蓄積された週数など) によって異なります。 0 ～ 3 つのトピックが返される可能性があります。
 
+{: #skipobservation}
+
+{% Aside %} From Chrome 108, the `document.browsingTopics()` method can be passed an optional `{skipObservation:true}` argument.
+
+This allows the method to return topics without causing the browser to record a topic observation (the default is `false`). In other words, `document.browsingTopics({skipObservation:true})` can be used to return topics of interest for the current user, but with no side effects. {% endAside %}
+
 ### JavaScript APIを使用してトピックにアクセスする {: #access-topics}
 
 これは、現在のユーザーのトピックにアクセスするための API の使用方法として考えられる基本的な例です。単純さを維持するために、エラー処理を含めていません。
-
-{% Aside 'warning' %}
-このコードスニペットは、Topics JavaScript API の使用方法を示すためにのみ提供されています。API の設計は変更される可能性があります。
-{% endAside %}
 
 ```javascript
 // Get the array of top topics for this user.
@@ -220,6 +244,67 @@ const creative = await response.json();
 
 // Display ad.
 ```
+
+{% Aside 'warning' %} このコードスニペットは、Topics JavaScript API の使用方法を示すためにのみ提供されています。API の設計は変更される可能性があります。 {% endAside %}
+
+#### Access topics without modifying state {: #observe-false}
+
+A caller can specify that they would like to retrieve topics without modifying state by calling `document.browsingTopics({observe: false})`.
+
+Including the `{observe: false}` argument means that topics can be returned, but the call will not cause the current page to be included in the weekly epoch calculation, nor will it update the list of topics observed for the caller.
+
+### Use headers to access and observe topics {: #headers}
+
+Rather than use the Topics JavaScript API from an iframe, topics can be accessed and marked as observed by using request and response headers:
+
+- Topics can be accessed from the `Sec-Browsing-Topics` header of a `fetch()` or `XHR` request.
+- Topics that were provided in a request header can be marked as observed by setting a `Observe-Browsing-Topics: ?1` header on the response to the request. The browser will then use those topics (that were included in the request header) for calculating topics of interest for a user.
+
+Using request and response headers to access topics and mark them as observed can be much more performant than using the JavaScript API from an iframe. For example, the header mechanism could be used when a `fetch()` request is made to an ad server. No iframe required!
+
+#### Demo
+
+The demo at [topics-fetch-demo.glitch.me](https://topics-fetch-demo.glitch.me) shows how to use `fetch()` request and response headers to access topics and mark them as observed.
+
+#### Access the `Sec-Browsing-Topics` request header to view topics
+
+Instead of using `document.browsingTopics()` from an iframe to view topics for a user, API callers can access observed topics from the `Sec-Browsing-Topics` request header of a [`fetch()`](https://developer.mozilla.org/docs/Web/API/fetch) request that includes `{browsingTopics: true}` in its `options` parameter—or from the same header of an [`XHR`](https://developer.mozilla.org/docs/Glossary/XHR_(XMLHttpRequest)) request that sets `deprecatedBrowsingTopics` attribute to `true`.
+
+For example:
+
+```javascript
+fetch('https://topics-server.glitch.me', {browsingTopics: true}).
+  then(...);
+```
+
+In browsers that support the API, the `fetch()` request will include a `Sec-Browsing-Topics` header that lists topics observed for the request URL hostname: in this example, `topics-server.glitch.me`.
+
+If no topics have been observed for this hostname and this user, the header is included but the value is empty. In other words, the `Sec-Browsing-Topics` header on a `fetch()` request only includes topics that have been observed for the current user's browser by a caller whose origin matches the hostname of the request URL. This is the same as if you were calling `document.browsingTopics()` from an iframe to view observed topics for the current user.
+
+{% Aside %} The request header is sent on a request as long as it has the appropriate [permission policy](#site-opt-out) is in play, the context is secure, and user settings permit it. Topics [are not provided](https://github.com/patcg-individual-drafts/topics/issues/7) in headers for navigation requests. {% endAside %}
+
+The Topics request header looks like this:
+
+```text
+Sec-Browsing-Topics: 186;version="chrome.1:1:2206021246";config_version="chrome.1";model_version="2206021246";taxonomy_version="1", 265;version="chrome.1:1:2206021246";config_version="chrome.1";model_version="2206021246";taxonomy_version="1"
+```
+
+This example includes two topics from the [Topics taxonomy](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md), 186 and 265, along with each topic's version information.
+
+{% Aside %} The [fetch()](https://chromium-review.googlesource.com/c/chromium/src/+/4044267) and [XHR](https://chromium-review.googlesource.com/c/chromium/src/+/4103742) implementations were first made available in Chrome 111.
+
+Inclusion of the topics header in `XHR` requests is only available temporarily, and support will be removed in future. {% endAside %}
+
+#### Use the `Observe-Browsing-Topics` response header to mark topics as observed
+
+If a request includes a `Sec-Browsing-Topics` header and the response to that request includes an `Observe-Browsing-Topics: ?1` header, then topics from the request header will be marked by the browser as observed. Observed topics are eligible for calculation by the Topics API. This mechanism is designed to match the functionality provided by using the JavaScript API from an iframe.
+
+#### Notes
+
+- Redirects will be followed, and the topics sent in the redirect request will be specific to the redirect URL.
+- The request header will not modify state for the caller unless there is a corresponding response header. That is, the topic of the page won't be considered observed, nor will it affect the user's topic calculation for the next epoch.
+- The response header is only honored if the corresponding request included the topics header (or would have included the header, if the request wasn't empty).
+- The URL of the request provides the registrable domain used for topic observation.
 
 ### Topics API でどの呼び出し元がどのトピックを表示できるのかを決定する方法
 
@@ -319,6 +404,8 @@ Topis API の Explainer は、トピックは、ウェブサイトの[ホスト�
 
 #### 現在の分類器モデルはどこにありますか？
 
+{: #manually-curated}
+
 トピックは 10,000 件の上位ドメインに対して手動で分類されており、この分類は分類器のトレーニングに使用されています。このリストは `override_list.pb.gz` にあり、`chrome://topics-internals/` の［Classifier］タブの現在のモデルから利用できます。リスト内のドメインとトピックの関連付けは、モデル自体の出力ではなく API によって使用されます。
 
 モデルを直接実行するには、[TensorFlow のモデルの実行ガイド](https://www.tensorflow.org/lite/guide/inference#running_a_model)をご覧ください。
@@ -355,25 +442,21 @@ API はエポックごとに 1 つのトピック、最大 3 つのトピック�
 
 `Document.browsingTopics()` メソッドは、エポックごとに上位 5 つのトピックからランダムにトピックを返します。トピックの完全な分類からこれらのいずれかがランダムに選択される確率は 5% です。 Chrome では、ユーザーが個々のトピックを削除したり、閲覧履歴をにクリアして API から返されるトピックの数を減らしたりすることもできます。 ユーザーは API をオプトアウトすることもできます。[ユーザーオプトアウト](#opt-out)を参照してください。
 
-{% Aside %}
-現在のエポック中に観察されたトピックに関する情報は、[`chrome://topics internal` ページ](#view-current-topics)に表示されます。
-{% endAside %}
+{% Aside %} 現在のエポック中に観察されたトピックに関する情報は、[`chrome://topics internal` ページ](#view-current-topics)に表示されます。 {% endAside %}
 
 ### API の使用箇所をデバッグするには？ {: #debug}
 
-[Topics API を有効にする](/docs/privacy-sandbox/topics/#feature-flags)と、Chrome Canary と Chrome Dev で `chrome://topics-internals` ページを利用できるようになります。このページには、現在のユーザーのトピック、ホスト名から推測されたトピック、および API の実装に関する技術情報が表示されます。
+The `chrome://topics-internals` page is available in Chrome on desktop if [you enable the Topics API](/docs/privacy-sandbox/topics/#feature-flags). This displays topics for the current user, topics inferred for hostnames, and technical information about the API implementation.
 
-{% Aside %}
-`chrome://topics-internals` は新しいページです！デザインと機能は現在議論中です。
+{% Aside %} `chrome://topics-internals` は新しいページです！デザインと機能は現在議論中です。
 
-現在、開発者のフィードバックに基づいて設計のイテレーションと改善を行っています。[bugs.chromium.org](https://bugs.chromium.org/p/chromium/issues/entry?template=Defect+report+from+developer&components=Blink%3ETopicsAPI) でフィードバックを追加してください。
-{% endAside %}
+We're currently iterating and improving the design based on developer feedback. Add your feedback at [bugs.chromium.org](https://bugs.chromium.org/p/chromium/issues/entry?template=Defect+report+from+developer&components=Blink%3ETopicsAPI). {% endAside %}
 
 #### ブラウザに対して計算されたトピックを表示する {: #view-current-topics}
 
 現在および前のエポックにおいて、ブラウザに対して観察されたトピックに関する情報を表示できます。
 
-{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/M253GclVFDCnvPJlTSVR.png", alt="［Topics State］パネルが選択された chrome://topics-internal ページのスクリーンショット。", width="800", height="697" %}
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/M253GclVFDCnvPJlTSVR.png", alt="chrome://topics-internal page with Topics State panel selected.", width="800", height="697" %}
 
 この例では、最近アクセスしたサイトに [topics-demo-cats.glitch.me](http://topics-demo-cats.glitch.me) と [cats-cats-cats-cats.glitch.me](cats-cats-cats-cats.glitch.me) が含まれています。これを基に、Topics API は、現在のエポックの上位トピックから `Pets` と `Cats` の 2 つを選択しました。残りの 3 つのトピックについては、5 つのトピックを提供するのに十分な閲覧履歴（トピックを観察するサイト上の履歴）がないため、[ランダムに選択](https://github.com/patcg-individual-drafts/topics#:~:text=random)されています。
 
@@ -383,29 +466,17 @@ API はエポックごとに 1 つのトピック、最大 3 つのトピック�
 
 1 つ以上のホスト名に対して Topics [分類器モデル](https://github.com/patcg-individual-drafts/topics#:~:text=classifier%20model)が推測したトピックを表示できます。
 
-{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/SOTuE2ljC55PaYll1UP1.png", alt="［Classifier］パネルが選択されている chrome://topics-internal ページのスクリーンショット。", width="800", height="695" %}
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/SOTuE2ljC55PaYll1UP1.png", alt="chrome://topics-internal page with Classifier panel selected.", width="800", height="695" %}
 
-{% Aside %}
-Topics API の現在の実装は、ホスト名からのみトピックを推測します。URL の他の部分からは推測しません。
+{% Aside %} Topics API の現在の実装は、ホスト名からのみトピックを推測します。URL の他の部分からは推測しません。
 
-`chrome://topics-internals` の［Classifier］から推測されたトピックを表示するには、ホスト名のみ（プロトコルまたはパスを除外）を使用します。Host フィールドに「/」を含めると、`chrome://topics-internals` にエラーが表示されます。
-{% endAside %}
-
-#### tflite 分類器モデルファイルにアクセスする {: #access-tflite-file}
-
-`chrome://topics-internals` ページの［**Classifier**］タブには、Topics API で使用される tflite モデルのファイルパスも表示されます。
-
-{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/txujKqPgnQdbwmTfdPZT.png", alt="［Classifier］パネルが選択され tflite ファイルパスがハイライトされた chrome://topics-internal ページのスクリーンショット。", width="800", height="696" %}
-
-[Topics Model Execution Demo Colab](https://colab.sandbox.google.com/drive/1hIVoz8bRCTpllYvads51MV7YS3zi3prn) を使用すると、このファイルをダウンロードしてモデルを読み込むことができます。（Colab または Colaboratory は、コード、出力、および説明テキストを 1 つの共同ドキュメントに結合するデータ分析ツールです。）
-
-{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/OWOHUKsrvv7ZPtBP9i85.png", alt="Topics API Model Execution Demo Colab のスクリーンショット。", width="800", height="565" %}
+`chrome://topics-internals` の［Classifier］から推測されたトピックを表示するには、ホスト名のみ（プロトコルまたはパスを除外）を使用します。Host フィールドに「/」を含めると、`chrome://topics-internals` にエラーが表示されます。 {% endAside %}
 
 #### Topics API の表示を表示する {: #view-api-information}
 
 [分類体系](/docs/privacy-sandbox/topics/#taxonomy)のバージョンや[エポック](/docs/privacy-sandbox/topics/#epoch)期間など、Topics API の実装と設定に関する情報が提供されています。これらの値は、[コマンドラインから](#feature-flags)正常に設定された API またはパラメーターのデフォルト設定を反映します。この情報は、コマンドラインフラグが期待どおりに機能したことを確認するのに役立ちます。以下の例では、`time_period_per_epoch` が 15 秒（デフォルトは 7 日）に設定されています。
 
-{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/7vFveJtxWgY6yB8gHnW3.png", alt="［Features and Parameters］パネルが選択されている chrome://topics-internal ページのスクリーンショット。", width="800", height="695" %}
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/7vFveJtxWgY6yB8gHnW3.png", alt="chrome://topics-internal page with Features and Parameters panel selected.", width="800", height="695" %}
 
 以下の表では、各パラメータの意味を説明しています。（すべての情報を見るには、水平方向にスクロールする必要があります！）
 
@@ -502,6 +573,41 @@ Topics API の現在の実装は、ホスト名からのみトピックを推測
   </tbody>
 </table>
 
+## Run the Topics colab to test topic inference {: #colab}
+
+A colab—or colaboratory—is a data analysis tool that combines code, output, and descriptive text into one collaborative document. You can run the [Topics Model Execution Demo colab](https://colab.research.google.com/drive/1hIVoz8bRCTpllYvads51MV7YS3zi3prn) to test topic inference using the Topics classifier model.
+
+1. From the **Classifier** tab of the `chrome://topics-internals` page get the directory path for the `.tflite` file used by the Topics API. The [override list](#manually-curated) `.pb.gz` file is in the same directory.
+
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/txujKqPgnQdbwmTfdPZT.png", alt="chrome://topics-internal page with Classifier panel selected and tflite file path highlighted.", width="800", height="696" %}
+
+1. Open the [colab](https://colab.research.google.com/drive/1hIVoz8bRCTpllYvads51MV7YS3zi3prn) and click on the folder icon.
+
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/FcBRhBOyLm2EEU1J4ET0.png", alt="Topics API colab.", width="800", height="605" %}
+
+1. Click the Upload icon and upload `model.tflite` and `override_list.pb.gz` from your computer to the colab.
+
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/8PiaYhdpKUx5hyMNcVwG.png", alt="Topics API colab file upload.", width="800", height="402" %}
+
+You can then run all the colab steps, by selecting **Run all** from the **Runtime** menu.
+
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/gP8GmUH2xiwbEz27LbjO.png", alt="Topics API colab page, 'Run all' selected form the Runtime menu.", width="800", height="605" %}
+
+This does the following:
+
+1. Install the Python packages used by the colab.
+2. Install the `tflite` libraries and the Topics taxonomy.
+3. Define the taxonomy.
+4. Run each of the Model Execution Demo steps to show how classification works for two example domains.
+
+You'll see a green tick next to each step that completes successfully. (Each step can also be run individually, by clicking the Play button next to it.)
+
+For each of the domains defined, you can see the topic scores inferred by the classifier. Try listing different domains to see how they compare.
+
+{% Aside 'caution' %} For some domains you may notice a difference in topic inference, between the colab and the `chrome://topics-internals` Classifier.
+
+This is because the colab only uses the classifier model to infer topics, whereas `chrome://topics-internals` uses Chrome's Topics implementation, which uses a [manually-curated list of topics](#manually-curated) (rather than the classifier model) for the top 10,000 sites. {% endAside %}
+
 ## FLoC に関する懸案事項に Topics API がどう対処するのか
 
 2021 年の [FLoC](https://github.com/WICG/floc) のオリジントライアルでは、アドテクおよび Web エコシステムのコントリビューターから幅広いフィードバックを受け取りました。 特に、ユーザーを識別するために FLoC コホートがフィンガープリント面として使用されたり、ユーザーとセンシティブなカテゴリとの関連付けが明らかにされたりする可能性があるという懸念がありました。 FLoC をユーザーにとってより透過的で理解しやすいものにするための喚起もありました。
@@ -518,7 +624,7 @@ Topics API では、Topics API だけを使用してサイト全体でかなり�
 - ユーザーが同じサイトに頻繁に (毎週など) アクセスする場合、サイトで実行されているコードは、1 週間に最大 1 つの新しいトピックしか学習しません。
 - サイトが異なると、同じエポック内の同じユーザーでも受信するトピックが異なります。 あるサイトのユーザーに対して返されたトピックが別のサイトのユーザーに対して返されたトピックと一致する確率はわずか 5 分の 1 です。 このため、同じユーザーであるかどうかを判断するのがさらに難しくなります。
 - ユーザーのトピックは週に 1 回更新されるため、情報を共有できる確率が制限されます。
-- トピックは、最近同じユーザーに対して[同じトピックを観察した](#observed-topics) API 呼び出し元に対してのみ返されます。 このモデルは、エンティティが最初に観測していなかったユーザーの興味/関心に関する情報を知る (または共有する) 可能性を制限するのに役立ちます。
+- A topic will only be returned for an API caller that [previously observed the same topic](#observed-topics) for the same user recently. This approach helps limit the potential for entities to learn about (or share) information about user interests they have not observed firsthand.
 
 {: #sensitive-topics}
 
