@@ -29,7 +29,7 @@ authors:
 
 ---
 
-## Try the demo {: #demo}
+## デモを試す {: #demo}
 
 API のデモは、[topics-demo.glitch.me](https://topics-demo.glitch.me/) にあります。ここでは、1 人のユーザーに対して API を試してデバッグする方法について説明しています。
 
@@ -262,7 +262,7 @@ iframe から Topics JavaScript API を使用するのではなく、リクエ�
 
 リクエストヘッダーとレスポンスヘッダーを使用してトピックにアクセスし、観察済みとしてマークすると、iframe から JavaScript API を使用するよりもはるかにパフォーマンスが向上する場合があります。たとえば、広告サーバーに `fetch()` リクエストを行うときにヘッダーメカニズムを使用することが可能です。iframe は必要ありません！
 
-#### Demo
+#### デモ
 
 [topics-fetch-demo.glitch.me](https://topics-fetch-demo.glitch.me) のデモでは、`fetch()` リクエストとレスポンスヘッダーを使用してトピックにアクセスし、観察済みとしてマークする方法を示しています。
 
@@ -304,7 +304,7 @@ Sec-Browsing-Topics: 186;version="chrome.1:1:2206021246";config_version="chrome.
 - リダイレクトは追跡され、リダイレクトリクエストで送信されるトピックはリダイレクト URL に固有のものになります。
 - 対応するレスポンスヘッダーがない限り、リクエストヘッダーは呼び出し元の状態を変更しません。つまり、ページのトピックは観察されたとは見なされず、次のエポックのユーザーのトピック計算にも影響しません。
 - レスポンスヘッダーは、対応するリクエストにトピックヘッダーが含まれている場合（または、リクエストが空でない場合はヘッダーが含まれていた場合）にのみ受け入れられます。
-- The URL of the request provides the registrable domain used for topic observation.
+- リクエストの URL は、トピックの観察に使用される登録可能なドメインを提供します。
 
 ### Topics API でどの呼び出し元がどのトピックを表示できるのかを決定する方法
 
@@ -593,9 +593,9 @@ colab（colaboratory）は、コード、出力、および説明テキストを
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/gP8GmUH2xiwbEz27LbjO.png", alt="Topics API の colab ページ。Runtime メニューで「Run all」を選択。", width="800", height="605" %}
 
-This does the following:
+これにより、次のことが行われます。
 
-1. Install the Python packages used by the colab.
+1. colab で使用される Python パッケージをインストールします。
 2. `tflite` ライブラリと Topics の分類体系をインストールします。
 3. 分類体系を定義します。
 4. Model Execution Demo の各ステップを実行して、2 つのサンプルドメインで分類がどのように機能するかを示します。
