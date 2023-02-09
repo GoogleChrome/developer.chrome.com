@@ -39,7 +39,7 @@ const filterOutDrafts = item => {
  */
 function isScheduledForFuture(postDate, now = new Date()) {
   if (!(now instanceof Date)) {
-    throw new Error('argument <now> must by a Date object.');
+    throw new Error('argument <now> must be a Date object.');
   }
   postDate = postDate ? new Date(postDate) : new Date();
   return postDate.getTime() > now.getTime();
