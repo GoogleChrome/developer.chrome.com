@@ -339,13 +339,13 @@ You can test how FedCM works without third-party cookies on Chrome before it's
 actually enforced.
 
 To block third-party cookies, use [Incognito
-mode](https://support.google.com/chrome/answer/95464), or block third-party
-cookies in settings on desktop at `chrome://settings/cookies` or on mobile by
-navigating to **Settings** > **Site settings** > **Cookies**.
+mode](https://support.google.com/chrome/answer/95464), or choose "Block
+third-party cookies" in settings on desktop at `chrome://settings/cookies` or on
+mobile by navigating to **Settings** > **Site settings** > **Cookies**.
 
 {% Aside 'caution' %}
 
-FedCM is temperarily disabled when third-party cookies are disabled. Starting
+FedCM is temperarily disabled when third-party cookies are blocked. Starting
 from Chrome 110, you can force enabling it with the Chrome flag:
 `chrome://flags/#fedcm-without-third-party-cookies`.
 
