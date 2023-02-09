@@ -124,7 +124,7 @@ Chromium でのフラグ設定による FLEDGE は、FLEDGE 提案の以下の�
 - **セラー（SSP またはサイト運営者）によるオンデバイス広告の選択**: バイヤーからのオークション入札とメタデータに基づきます。
 - **一時的に緩和されたバージョンの Fenced Frames での広告レンダリング**: 広告のレンダリングが許可されたネットワークアクセスとロギング。
 
-Read more about feature support and constraints in the [FLEDGE API explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#summary).
+機能のサポートと制約について詳しくは、[FLEDGE API の Explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#summary) をご覧ください。
 
 ### インタレストグループの権限
 
