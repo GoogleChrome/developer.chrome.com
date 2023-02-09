@@ -32,8 +32,8 @@ To interactively see how the `An+B` logic affects selections use [the `:nth-chil
 
 But, there’s more creative selections you can do, if you omit the `A` parameter. For example:
 
-- `:nth-child(n+3)`: Select every child from the 3rd one up _(3rd, 4th, 5th, and so on)_
-- `:nth-child(-n+5)`: Select every child up to the 5th one _(1st, 2nd, 3rd, 4th, 5th)_
+- `:nth-child(n+3)`: Select every child from the 3rd one up _(3rd, 4th, 5th, and so on)_.
+- `:nth-child(-n+5)`: Select every child up to the 5th one _(1st, 2nd, 3rd, 4th, 5th)_.
 
 Combine a few of these `:nth-child()` selections and you can select ranges of elements:
 
