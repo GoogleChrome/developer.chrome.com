@@ -691,7 +691,6 @@
     "country": "US",
     "twitter": "kevinkiklee",
     "github": "kevinkiklee",
-    "glitch": "kevinkiklee",
     "image": "image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/8bRRaZVXzJKCDu0RlK1Y.jpg"
   },
   "stefanzager": {
@@ -1047,5 +1046,13 @@
     "twitter": "shane_exterkamp",
     "github": "exterkamp",
     "image": "image/admin/yPytekIqH5VnoqMx3jj2.jpg"
+  },
+  "priyankachatterjee": {
+    "country": "US",
+    "image": "image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/Q9SoxqpDiTGCSfZul60a.jpeg"
+  },
+  "tristramsouthey": {
+    "country": "US",
+    "image": "image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/yh2i5pJyWLqMz49B7qWq.jpeg"
   }
 }
