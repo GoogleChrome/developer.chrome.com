@@ -147,7 +147,7 @@ You should only use FedCM if your current integration is affected by the
 third-party cookie phase out.
 
 If you're unsure if your identity federation will continue to work after
-Chrome's third-party cookie phase out, you can test the effect on a website by
+Chrome's third-party-cookie phase-out, you can test the effect on a website by
 [blocking third-party cookies on Chrome](#block-third-party-cookies).
 
 If there is no discoverable impact on your identity federation without
@@ -340,13 +340,13 @@ actually enforced.
 
 To block third-party cookies, use [Incognito
 mode](https://support.google.com/chrome/answer/95464), or choose "Block
-third-party cookies" in settings on desktop at `chrome://settings/cookies` or on
+third-party cookies" in your desktop settings at `chrome://settings/cookies` or on
 mobile by navigating to **Settings** > **Site settings** > **Cookies**.
 
 {% Aside 'caution' %}
 
 FedCM is temperarily disabled when third-party cookies are blocked. Starting
-from Chrome 110, you can force enabling it with the Chrome flag:
+from Chrome 110, you can force enable it with the Chrome flag:
 `chrome://flags/#fedcm-without-third-party-cookies`.
 
 {% endAside %}
