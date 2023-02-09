@@ -80,7 +80,7 @@ This adds support for streaming, by attaching the shadow root on the opening, ra
 
 Enables the creation of polished transitions in Single-Page Applications (SPAs) by snapshotting views and allowing the DOM to change without any overlap between states. Use View Transitions to build custom transitions, or use a simple crossfade default to improve user experience.
 
-Check out the [Chrome Developers article](https://developer.chrome.com/docs/web-platform/view-transitions/) for more information and example transitions to help you get started. 
+Check out the [Chrome Developers article](/docs/web-platform/view-transitions/) for more information and example transitions to help you get started. 
 
 ### WebRTC Scalable Video Coding extensions
 
