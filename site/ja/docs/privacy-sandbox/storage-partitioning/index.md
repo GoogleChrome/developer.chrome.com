@@ -14,11 +14,11 @@ tags:
   - privacy
 ---
 
-## Implementation status
+## 実施状況
 
 - [Storage Partitioning の提案](https://github.com/privacycg/storage-partitioning)はディスカッションを受け付けています。
-- [Chrome Platform Status](https://chromestatus.com/feature/5723617717387264)
-- Available for testing in Chrome Beta version 105.0.5195.17 and later.
+- [Chrome プラットフォームのステータス](https://chromestatus.com/feature/5723617717387264)
+- Chrome Beta バージョン 105.0.5195.17 以降でテストできます。
 
 機能のリリースは、安定性と互換性に応じて、2023 年早期に予定されています。オリジントライアルでサードパーティのストレージ パーティションをテストし、バグを報告することで、潜在的な問題を発見し、一般公開のロールアウト前に解決することができます。
 
