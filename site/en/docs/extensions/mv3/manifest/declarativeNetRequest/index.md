@@ -37,4 +37,4 @@ A list of specified  `"host_permissions"` URLs are also required.
 }
 ```
 
-It must be noted that extensions cannot clear the browser's Cache Storage or Service Worker registrations automatically. When enabling an extension using `declarativeNetRequest` rules to block certain sites, the rule may be ignored depending on if the site is cached. This caching can persist after browser restarts. You use the chrome.browsingData API to clear the browser memory manually to ensure specified `declarativeNetRequest` rules are followed. 
+It must be noted that extensions cannot clear the browser's cache storage or service worker registrations automatically. When enabling an extension using `declarativeNetRequest` rules to block certain sites, the rule may be ignored depending on if the site is cached. This caching can persist after browser restarts. You use the `chrome.browsingData` API to clear the browser memory manually to ensure specified `declarativeNetRequest` rules are followed. 
