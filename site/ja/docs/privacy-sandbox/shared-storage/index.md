@@ -18,7 +18,7 @@ authors:
 
 このドキュメントでは、パーティション化されていないクロスサイトストレージの新しい提案である Shared Storage API の概要を説明します。
 
-- [Shared Storage の提案](https://github.com/pythagoraskitty/shared-storage)の[公開ディスカッション](https://github.com/pythagoraskitty/shared-storage/issues)が開始しました。
+- [共有ストレージの提案](https://github.com/pythagoraskitty/shared-storage)の[公開ディスカッション](https://github.com/pythagoraskitty/shared-storage/issues)が開始しました。
 - この API を Chrome に実装中です。[ライブデモが公開されています](#try-the-shared-storage-api)。
     - URL の選択出力ゲートは、Chrome M105+ からのローカルテストで利用可能です。
     - プライベート集計出力ゲートは、Chrome M107+ からのローカルテストで利用可能です。
@@ -35,7 +35,7 @@ Shared Storage API を使用すると、サイトはパーティション化さ�
 
 Shared Storage API を使用することでメリットが得られる可能性のある企業は、多種多様にあります。以下はその一例です。
 
-- Adtechs could measure campaign reach, set frequency caps, and rotate creatives, all of which currently rely on third-party cookies.
+- アドテックは、キャンペーンのリーチを測定し、フリークエンシーの上限を設定し、クリエイティブをローテーションすることができますが、現在はすべて、サードパーティの Cookie に依存しています。
 - 決済プロバイダーは、ユーザーが既存の顧客であるかどうかを判断し、チェックアウトのエクスペリエンスを調整できます。
 - ウェブセキュリティ会社は、カスタムロジックを構築して、不審または危険な行動にフラグを付けることができます。
 
@@ -132,9 +132,9 @@ Worklets are where you add your business logic. Inside the worklet, you are allo
 
 ## Shared Storage API を試す
 
-Shared Storage API for URL selection output gate and Private Aggregation output gate are available for testing.  URL selection can be tested in Chrome Canary/Dev/Beta M105+ and Private Aggregation API is available for testing in Chrome M107+ Canary and Dev. The API can be tested by enabling the **Privacy Sandbox Ads APIs experiment** flag at `chrome://flags/#privacy-sandbox-ads-apis`.
+URL の選択出力ゲートとプライベート集計出力ゲートの Shared Storage API をテストできます。URL の選択は Chrome Canary/Dev/Beta M105+ でテストでき、Private Aggregation API は Chrome M107+ Canary および Dev でテストできます。この API は、`chrome://flags/#privacy-sandbox-ads-apis` で **Privacy Sandbox Ads APIs experiment** フラグを有効にすることでテストできます。
 
-広告主のフリークエンシーキャップ（1 つの広告に対するユーザーの最大インプレッション数）に基づいて広告をレンダリングするとします。 フリークエンシーキャップは共有ストレージに保存されます。 共有ストレージワークレットは、共有ストレージ内の値を読み取り、ビューが追加されるたびにその値を減らします。 利用可能なインプレッションが残っている場合（ユーザーがフリークエンシーキャップに達していない場合）、広告が返されます（インデックス `1`）。 そうでない場合、デフォルトの URL が返されます（インデックス `0`）。
+{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/CWfgCMJQ5cYPOfjttF3k.png", alt="これらの API を使用するには、Privacy Sandbox Ads APIs experiment を有効に設定してください", width="744", height="124" %}
 
 ### Use the demo
 
