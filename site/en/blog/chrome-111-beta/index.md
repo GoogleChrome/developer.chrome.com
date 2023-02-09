@@ -26,7 +26,7 @@ Read the [High definition CSS color guide](/articles/high-definition-css-color-g
 
 ### The `color-mix()` function
 
-The incredibly useful [`color-mix()`](/blog/css-color-mix/) function from CSS Color 5 (https://www.w3.org/TR/css-color-5/#color-mix) is also shipping. This function enables mixing a percentage of one color into another, in any supported colorspace. This following example mixes 10% of `blue` into `white` in SRGB.
+The incredibly useful [`color-mix()`](/blog/css-color-mix/) function from [CSS Color 5](https://www.w3.org/TR/css-color-5/#color-mix) is also shipping. This function enables mixing a percentage of one color into another, in any supported colorspace. This following example mixes 10% of `blue` into `white` in SRGB.
 
 ```css
 .item {
