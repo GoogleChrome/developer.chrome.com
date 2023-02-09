@@ -27,7 +27,7 @@ With [the `:nth-child()` pseudo-class selector](https://web.dev/learn/css/pseudo
 - `:nth-child(5n+2)`: Select the 2nd _(=(5×0)+2)_, 6th _(=(5×1)+2)_, 11th _(=(5×2)+2)_, … child.
 
 {% Aside %}
-To interactively see how the `An+B` logic affects selections use [the `:nth-child` tester](https://css-tricks.com/examples/nth-child-tester/)
+To interactively see how the `An+B` logic affects selections use [the `:nth-child` tester](https://css-tricks.com/examples/nth-child-tester/).
 {% endAside %}
 
 But, there’s more creative selections you can do, if you omit the `A` parameter. For example:
