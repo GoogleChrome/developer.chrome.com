@@ -25,7 +25,7 @@ const micromatch = require('micromatch');
 const fs = require('fs/promises');
 const path = require('path');
 
-const {fetchGitHubApi} = require('./lib/fetchGitHubApi');
+const {requestGitHubApi} = require('./lib/gitHubApi');
 const {isGoogleCloudBuild} = require('./lib/isGoogleCloudBuild');
 
 const APP_GLOB = ['package.json', 'server/**/*.js'];
@@ -40,7 +40,8 @@ async function determineDeploymentType() {
   isGoogleCloudBuild();
 
   const prNumber = process.env.PR_NUMBER;
-  let changedFiles = await fetchGitHubApi(
+  let changedFiles = await requestGitHubApi(
+    'GET',
     `pulls/${prNumber}/files?per_page=100`
   );
   changedFiles = changedFiles.map(file => {

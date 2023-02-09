@@ -19,28 +19,29 @@
  * existing comment coming from a bot or creates a new one.
  */
 
-const {fetchGitHubApi} = require('./fetchGitHubApi');
+const {requestGitHubApi} = require('./gitHubApiClient');
 
-const GITHUB_BOT_NAME = 'github-actions[bot]';
+const GITHUB_BOT_NAME = 'chrome-devrel-infra[bot]';
 
 async function updateStickyComment(prNumber, body) {
-  const comments = await fetchGitHubApi(`issues/${prNumber}/comments`);
+  const {data: comments} = await requestGitHubApi(
+    'GET',
+    `issues/${prNumber}/comments`
+  );
 
   const comment = comments.find(comment => {
     return comment.user.login === GITHUB_BOT_NAME;
   });
 
-  if (comment) {
-    await fetchGitHubApi(`issues/comments/${comment.id}`, {
-      method: 'PATCH',
-      body: JSON.stringify({body}),
-    });
+  if (!comment) {
+    await requestGitHubApi('POST', `issues/${prNumber}/comments`, {body});
   } else {
-    await fetchGitHubApi(`issues/${prNumber}/comments`, {
-      method: 'POST',
-      body: JSON.stringify({body}),
-    });
+    await requestGitHubApi('PATCH', `issues/comments/${comment.id}`, {body});
   }
 }
+
+(async () => {
+  await updateStickyComment(5128, 'Hello world, sticky?');
+})();
 
 module.exports = {updateStickyComment};

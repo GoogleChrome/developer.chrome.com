@@ -19,13 +19,14 @@
  * staging build status.
  */
 
-const {fetchGitHubApi} = require('./lib/fetchGitHubApi');
+const {requestGitHubApi} = require('./lib/gitHubApi');
 const {getDeploymentType} = require('./lib/getDeploymentType');
 const {isGoogleCloudBuild} = require('./lib/isGoogleCloudBuild');
 const {updateStickyComment} = require('./lib/updateStickyComment');
 
 async function getChangedPages(prNumber, baseUrl) {
-  const changedFiles = await fetchGitHubApi(
+  const changedFiles = await requestGitHubApi(
+    'GET',
     `pulls/${prNumber}/files?per_page=100`
   );
   const changedPages = changedFiles
