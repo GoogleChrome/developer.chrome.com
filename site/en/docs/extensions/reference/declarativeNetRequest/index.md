@@ -41,6 +41,7 @@ a list containing dictionaries of type [Ruleset][4], as shown below.
   },
   "permissions": [
     "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
   ],
   "host_permissions": [
   "http://www.blogger.com/",
