@@ -6,7 +6,7 @@ authors:
 date: 2023-02-09
 description: >
   Lighthouse 10 is here with a new scoring and audits.
-hero: 'image/MtjnObpuceYe3ijODN3a79WrxLU2/2VsCQh8xoNGKS8l7zQmD.png'
+hero: 'image/MtjnObpuceYe3ijODN3a79WrxLU2/SM05YIr19Ucx2cUCx5lR.png'
 alt: 'Lighthouse category scores, all 100'
 tags:
   - new-in-lighthouse
@@ -57,6 +57,10 @@ The new audit is now ["Allows users to paste into input fields" (`paste-preventi
 If you use Lighthouse as a Node library, there are a few programmatic breaking changes in this release you may need to account for. See the [10.0 changelog](https://github.com/GoogleChrome/lighthouse/releases/tag/v10.0.0) for full details.
 
 Lighthouse 10 also ships with full TypeScript type declarations! Anything imported from `lighthouse` should now be typed, which should be particularly helpful if you're scripting [Lighthouse user flows](https://web.dev/lighthouse-user-flows/).
+
+<figure>
+  {% Img src="image/MtjnObpuceYe3ijODN3a79WrxLU2/VlPiDhDRI96PCBWyPm7x.png", alt="ALT_TEXT_HERE", width="562", height="199" %}
+</figure>
 
 Try out the types and let us know if you run into any issues using them.
 
