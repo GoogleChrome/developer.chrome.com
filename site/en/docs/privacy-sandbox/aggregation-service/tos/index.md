@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: 'Coordinator Service Additional Terms of Service'
-date: 2023-02-08
+date: 2023-02-09
 ---
 
 To use the Coordinator Service, including related reports, features and
@@ -84,7 +84,8 @@ acting on your behalf to):
 2. Interfere with or disrupt the Coordinator Service or the servers or networks
    providing the Coordinator Service or the TEE.
 
-## Use of Coordinator Service is subject to your understanding and agreement to the following
+**Use of Coordinator Service is subject to your understanding and agreement to
+the following:**
 
 This is a non-consumer service that is provided to You free of charge. If You
 are based in the  European Economic Area or the United Kingdom, Google agrees
