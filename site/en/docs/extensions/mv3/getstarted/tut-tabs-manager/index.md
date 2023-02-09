@@ -369,8 +369,8 @@ development learning journey. We recommend the following learning path:
 [doc-overview]: /docs/extensions/mv3/architecture-overview/
 [doc-ui]: /docs/extensions/mv3/user_interface/
 [doc-welcome]: /docs/extensions/mv3/
-[github-tabs-manager-icons]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/tabs-manager/images
-[github-tabs-manager]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/tabs-manager
+[github-tabs-manager-icons]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.tabs-manager/images
+[github-tabs-manager]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.tabs-manager
 [mdn-collator]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator
 [mdn-spread-syntax]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 [mdn-top-level]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/await#top_level_await

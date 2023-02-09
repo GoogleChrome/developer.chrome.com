@@ -153,7 +153,14 @@
     "twitter": "mikewest"
   },
   "johannes": {
-    "github": "powdercloud"
+    "github": "powdercloud",
+    "twitter": "powdercloud",
+    "mastodon": "https://mastodon.social/@powdercloud",
+    "image": "image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/okZMIdTu1wPPE4YqqKDX.jpeg"
+  },
+  "jasmineyan": {
+    "github": "jazyan",
+    "image": "image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/fBUEuHdxeM0oGVbrelgI.png"
   },
   "housseindjirdeh": {
     "homepage": "https://houssein.me/",
@@ -293,7 +300,7 @@
   },
   "justinschuh": {
     "country": "US",
-    "github": "https://github.com/jschuh",
+    "github": "jschuh",
     "twitter": "justinschuh",
     "image": "image/80mq7dk16vVEg8BBhsVe42n6zn82/Cv4qmh8vnXhcHPgCzbpb.jpg"
   },
@@ -732,8 +739,8 @@
   "jarhar": {
     "country": "US",
     "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/xHYktxBPGfDHbzmEufy9.jpeg",
-    "github": "https://github.com/josepharhar",
-    "twitter": "https://twitter.com/josepharhar"
+    "github": "josepharhar",
+    "twitter": "josepharhar"
   },
   "emmatwersky": {
     "country": "US",
@@ -1033,6 +1040,12 @@
     "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/9vzh9pyZ3U1P2zxrzGaS.jpg"
   },
   "ianstanion": {
-    "image": "image/6AZNJBRnkpQUWTKPzig99lQY8jT2/nmzrTw8LuV7YzoDPwxhy.jpg"
+    "image": "image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/x4tksWHlknXbJ0xQc957.jpg"
+  },
+  "exterkamp": {
+    "country": "US",
+    "twitter": "shane_exterkamp",
+    "github": "exterkamp",
+    "image": "image/admin/yPytekIqH5VnoqMx3jj2.jpg"
   }
 }
