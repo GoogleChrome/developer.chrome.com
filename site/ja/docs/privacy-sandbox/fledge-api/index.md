@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc-post.njk
-title: 'FLEDGE API: developer guide'
+title: 'FLEDGE API: 開発者ガイド'
 subhead: クロスサイトサードパーティトラッキングを使わずにリマーケティングとカスタムオーディエンスにサービスを提供するオンデバイス広告オークションの開発者ガイド
 description: サードパーティがサイト間でユーザーのブラウジング行動を追跡できないように過去にアクセスしたウェブサイトから関連する広告を選択するように設計された、オンデバイス広告オークションの開発者ガイド。
 date: '2022-01-27'
@@ -20,20 +20,20 @@ FLEDGE は、[リマーケティング](/docs/privacy-sandbox/fledge#remarketing
 
 FLEDGE は、[TURTLEDOVE](https://github.com/WICG/turtledove) ファミリの提案の中で Chromium に実装された最初の実験です。
 
-## Try FLEDGE {: #try-fledge}
+## FLEDGE を試す {: #try-fledge}
 
-### Available API reference {: #api-reference }
+### 利用可能な API リファレンス {: #api-reference }
 
 このドキュメントは、FLEDGE API の概要として機能します。特定の API メソッドとパラメーターを探している場合は、以下をご覧ください。
 
 - セラー向けの [`joinAdInterestGroup()` と `generateBid()`](/docs/privacy-sandbox/fledge-api/interest-groups) ガイド
 - セラー向けの FLEDGE [`runAdAuction()`](/docs/privacy-sandbox/fledge-api/ad-auction) ガイド
 - バイヤー向けの [`reportWin()`](/docs/privacy-sandbox/fledge-api/reports) ガイドとセラー向けの [`reportResult()`](/docs/privacy-sandbox/fledge-api/reports) ガイド
-- [Troubleshoot FLEDGE API](/docs/privacy-sandbox/fledge-api/troubleshoot)
+- [FLEDGE API のトラブルシューティング](/docs/privacy-sandbox/fledge-api/troubleshoot)
 
 また、[FLEDGE 広告オークションの待ち時間に関するベストプラクティス](/docs/privacy-sandbox/fledge-api/latency)もご覧ください。
 
-### FLEDGE demo {: #demo}
+### FLEDGE デモ {: #demo}
 
 広告主とサイト運営者のサイトにまたがる基本的な FLEDGE のデプロイに関するウォークスルーは、[fledge-demo.glitch.me](https://fledge-demo.glitch.me/) で入手できます。
 
@@ -55,7 +55,7 @@ FLEDGE API コードを実行するすべてのページにトライアルトー
 <meta http-equiv="origin-trial" content="TOKEN_GOES_HERE">
 ```
 
-- As an HTTP header:
+- HTTP ヘッダーとして:
 
 ```text
 Origin-Trial: TOKEN_GOES_HERE
@@ -115,7 +115,7 @@ document.head.append(otMeta);
 
 {% endAside %}
 
-## Supported features
+## サポートされる機能
 
 Chromium でのフラグ設定による FLEDGE は、FLEDGE 提案の以下の機能をテストするための最初の実験です。
 
@@ -173,9 +173,9 @@ API を使用する前に、API がブラウザでサポートされており、
 
 {% endAside %}
 
-Features of FLEDGE will be added over time as work on implementation progresses.
+FLEDGE の機能は、実装作業が進むにつれて徐々に追加されます。
 
-### 1. A user visits an advertiser site
+### 1. ユーザーが広告主のサイトにアクセスする
 
 <figure>{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/lrC3QOqthGpWyI6Ou9Eb.png", alt="ノートパソコンのブラウザでカスタムバイクメーカーのサイトにアクセスしている人。", width="400", height="190" %}</figure>
 
@@ -213,7 +213,7 @@ Features of FLEDGE will be added over time as work on implementation progresses.
 
 [`generatedBid()` 開発者向けドキュメント](/docs/privacy-sandbox/fledge-api/interest-groups#generatebid)をお読みください。
 
-### 3. The user visits a site that sells ad space
+### 3. ユーザーが広告スペースを販売するサイトにアクセスする
 
 <figure>{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/95tUp50coQWLsqzxQhgi.png", alt="ノートパソコンのブラウザでニュースサイトにアクセスしている人。サイトには空の広告スロットがあります。", width="400", height ="182" %}</figure>
 
@@ -246,7 +246,7 @@ https://kv-service.example/getvalues?hostname=publisher.example&keys=key1,key2
 - `hostname` はブラウザによって提供されます。
 - `keys` の値は `trustedBiddingSignalsKeys` から取得されます。
 
-The response to this request is a JSON object providing values for each of the keys.
+このリクエストへのレスポンスは、各キーの値を提供する JSON オブジェクトです。
 
 - **FLEDGE の Explainer を読む:** [FLEDGE Key/Value サービスからリアルタイムデータを取得する](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#31-fetching-real-time-data-from-a-trusted-server)。
 - **[FLEDGE Key/Value サービスのオープンソース化](/blog/open-sourcing-fledge-key-value-service/)**をお読みください。
@@ -289,7 +289,7 @@ Fenced Frame にレンダリングされた広告のクリックが報告され�
 
 {% endDetailsSummary %}
 
-FLEDGE is the first experiment to be implemented in Chromium within the TURTLEDOVE family of proposals.
+FLEDGE は、<a>TURTLEDOVE</a> ファミリの提案の中で Chromium に実装された最初の実験です。
 
 FLEDGE は、TURTLEDOVE の高レベルの原則に従います。一部のオンライン広告は、以前に広告主または広告ネットワークとやり取りしたことのある潜在的に関心のある人に広告を表示することに基づいています。これまで、これは広告主がウェブサイトをブラウジングする際に特定の人物を認識することで機能してきました。これが、今日のウェブのプライバシーに関する主な懸念事項です。
 
@@ -298,7 +298,7 @@ TURTLEDOVE の取り組みは、このユースケースに対処するための
 - 広告主が考えるユーザーの興味についての情報を、広告主ではなくブラウザが保持する。
 - 広告主は興味に基づいて広告を配信できますが、その興味を個人に関する他の情報（特に、そのユーザーやアクセスしているページなど）と組み合わせることはできません。
 
-FLEDGE grew out of TURTLEDOVE and a collection of related proposals for modifications to better served the developers who would be using the API:
+FLEDGE は、TURTLEDOVE と、API を使用する開発者により良いサービスを提供するための変更に関する関連提案のコレクションから生まれました。
 
 - [SPARROW](https://github.com/WICG/sparrow): [Criteo](https://www.admonsters.com/what-is-sparrow/) は、[信頼できる実行環境（TEE）](https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#trusted-execution-environment)で実行される（「ゲートキーパー」）サービスモデルの追加を提案しました。 FLEDGE には、リアルタイムのデータ検索と集計レポートのための、より限定された TEE の使用が含まれます。
 - NextRoll の [TERN](https://github.com/WICG/turtledove/blob/main/TERN.md) と Magnite の [PARRROT](https://github.com/prebid/identity-gatekeeper/blob/master/proposals/PARRROT.md) の提案には、オンデバイス オークションにおけるバイヤーとセラーのさまざまな役割が説明されています。FLEDGE の広告入札・スコア付けフローは、この作業に基づいています。
@@ -315,7 +315,7 @@ FLEDGE はまだ、ユーザーがどの広告を見たかをウェブサイト�
 
 {% DetailsSummary %}
 
-### Available browser configuration
+### 利用可能なブラウザ構成
 
 {% endDetailsSummary %}
 
@@ -333,7 +333,7 @@ FLEDGE の提案が進むにつれて、[テストとフィードバックに基
 
 ## 貢献とフィードバックの共有
 
-### Get support {: #get-support }
+### サポートを受ける {: #get-support }
 
 実装、デモ、またはドキュメントに関する質問とサポートについては、以下をご覧ください。
 
@@ -346,11 +346,11 @@ FLEDGE でのニーズへの対応に関する一般的な質問については�
 
 プライバシーサンドボックスの[フィードバックフォーム](/docs/privacy-sandbox/feedback/#feedback-form)を使用すると、公開フォーラムの外で Chrome チームと非公開でフィードバックを共有できます。
 
-#### Opt-out {: #opt-out}
+#### オプトアウト {: #opt-out}
 
 FLEDGE からのオプトアウトをご希望ですか？サイトオーナーまたは個人ユーザーとして [FLEDGE API へのアクセスをブロックする](/docs/privacy-sandbox/fledge-api/opt-out/)方法をご覧ください。
 
-### Get updates
+### アップデートを入手する
 
 - API ステータス変更の通知を受け取るには、[開発者向けメーリングリスト](https://groups.google.com/u/3/a/chromium.org/g/fledge-api-announce)に参加してください。
 - API に関する現在進行中のすべてのディスカッションを細かくフォローするには、[GitHub の提案ページ](https://github.com/WICG/turtledove/blob/main/FLEDGE.md)にある **Watch** ボタンをクリックしてください。これには、[GitHub アカウントを持っているか作成する](https://docs.github.com/get-started/signing-up-for-github/signing-up-for-a-new-github-account)必要があります。
