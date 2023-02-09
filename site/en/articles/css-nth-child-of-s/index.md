@@ -9,7 +9,7 @@ description: >
   Pre-filter a set of child elements before applying `An+B` logic on it.
 date: 2023-02-09
 hero: image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/d3BZ8gLh8WkVPRfJf6mz.jpg
-alt: "Rows of green chairs in the Munich Olympic Stadium"
+alt: "Rows of green chairs in the Munich Olympic Stadium."
 tags:
   - css
   - chrome-stable
