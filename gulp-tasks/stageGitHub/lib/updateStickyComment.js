@@ -19,7 +19,7 @@
  * existing comment coming from a bot or creates a new one.
  */
 
-const {requestGitHubApi} = require('./gitHubApiClient');
+const {requestGitHubApi} = require('./gitHubApi');
 
 const GITHUB_BOT_NAME = 'chrome-devrel-infra[bot]';
 
