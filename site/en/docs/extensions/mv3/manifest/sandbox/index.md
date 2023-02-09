@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manifest - Sandbox"
+seoTitle: "Chrome Extensions Manifest: sandbox"
 date: 2013-05-12
 updated: 2022-04-28
 description: Reference documentation for the sandbox property of manifest.json.
@@ -14,7 +15,7 @@ Being in a sandbox has two implications:
 
 1.  A sandboxed page will not have access to extension APIs, or direct access to
     non-sandboxed pages (it may communicate with them via `postMessage()`).
-2.  A sandboxed page is not subject to the [Content Security Policy (CSP)][2] used by the rest of
+2.  A sandboxed page is not subject to the [Content Security Policy (CSP)][doc-csp] used by the rest of
     the extension (it has its own separate CSP value). This means that, for example, it can
     use inline script and `eval`.
 
@@ -49,14 +50,11 @@ used by sandboxed pages (e.g. stylesheets or JavaScript source files) do not nee
 `pages` list because they will use the sandbox of the frame that embeds them.
 
 ["Using eval in Chrome Extensions. Safely."][4] goes into more detail about implementing a
-sandboxing workflow that enables use of libraries that would otherwise have issues executing under
-extension's [default Content Security Policy][5].
-
-Sandboxed pages may only be specified when using [`manifest_version`][6] 2 or above.
+sandboxing workflow that enables the use of libraries that would otherwise have issues executing under
+extension's [default Content Security Policy][doc-csp].
 
 [1]: /docs/apps/webview_tag
-[2]: /docs/extensions/mv3/contentSecurityPolicy
 [3]: https://html.spec.whatwg.org/multipage/iframe-embed-object.html#attr-iframe-sandbox
 [4]: /docs/extensions/mv3/sandboxingEval
-[5]: /docs/extensions/mv3/contentSecurityPolicy
 [6]: /docs/extensions/mv3/tabs#manifest_version
+[doc-csp]: /docs/extensions/mv3/manifest/content_security_policy/

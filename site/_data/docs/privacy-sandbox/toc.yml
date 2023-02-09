@@ -19,6 +19,7 @@
 - title: i18n.docs.privacy-sandbox.strengthen-boundaries
   sections:
     - url: /docs/privacy-sandbox/first-party-sets
+    - url: /docs/privacy-sandbox/first-party-sets-integration
     - url: /docs/privacy-sandbox/chips
     - url: /docs/privacy-sandbox/fenced-frame
     - title: i18n.docs.privacy-sandbox.cross-site-federation
@@ -60,7 +61,9 @@
         - url: /docs/privacy-sandbox/fledge
         - url: /docs/privacy-sandbox/fledge-api
         - url: /docs/privacy-sandbox/fledge-experiment
+        - url: /docs/privacy-sandbox/fledge-api/feature-status
         - url: /docs/privacy-sandbox/fledge-api/latency
+    - url: /docs/privacy-sandbox/maximize-ad-relevance
 - title: i18n.docs.privacy-sandbox.measure
   sections:
     - title: i18n.docs.privacy-sandbox.measure-ads
@@ -71,6 +74,10 @@
           title: i18n.docs.privacy-sandbox.attribution-reporting-system
         - url: /docs/privacy-sandbox/attribution-reporting-experiment
           title: i18n.docs.privacy-sandbox.attribution-reporting-experiment
+        - url: /docs/privacy-sandbox/attribution-reporting/chrome-shipping
+          title: i18n.docs.privacy-sandbox.attribution-reporting-chrome-shipping
+        - url: /docs/privacy-sandbox/attribution-reporting-debugging
+          title: i18n.docs.privacy-sandbox.attribution-reporting-debugging
         - url: https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/view?usp=sharing
           title: i18n.docs.privacy-sandbox.attribution-reporting-handbook
         - url: /docs/privacy-sandbox/attribution-reporting-updates

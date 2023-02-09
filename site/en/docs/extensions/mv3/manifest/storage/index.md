@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manifest for storage areas"
+seoTitle: "Chrome Extensions Manifest: storage"
 date: 2013-12-06
 updated: 2018-05-14
 description: Reference documentation for the storage property of manifest.json.

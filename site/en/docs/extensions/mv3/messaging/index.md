@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Message passing"
+seoTitle: "Chrome Extensions Message passing"
 date: 2012-09-18
 updated: 2022-11-11
 description: How to pass messages between extensions and content scripts.
@@ -352,7 +353,7 @@ directory.
 [37]: /docs/extensions/mv3/security#content_scripts
 [38]: /docs/extensions/mv3/security#sanitize
 [39]: https://en.wikipedia.org/wiki/Cross-site_scripting
-[40]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/messaging
+[40]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/_archive/mv2/api/messaging
 [41]: /docs/apps/nativeMessaging/#examples
 [42]: /docs/extensions/mv3/samples
 [43]: /docs/extensions/mv3/manifest/externally_connectable

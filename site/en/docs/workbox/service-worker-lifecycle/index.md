@@ -197,7 +197,7 @@ Browsers will check for updates to a service worker when:
 
 - The user navigates to a page within the service worker's scope.
 - [`navigator.serviceWorker.register()`](https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/register)
-is called with a URL different from the currently installed service worker&mdash;[but don't change a service worker's URL](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#avoid-url-change)!
+is called with a URL different from the currently installed service worker&mdash;[but don't change a service worker's URL](https://web.dev/service-worker-lifecycle/#avoid-url-change)!
 - [`navigator.serviceWorker.register()`](https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/register)
 is called with the same URL as the installed service worker,
 but with a different scope.
@@ -348,6 +348,6 @@ With that understanding, service worker behaviors should seem more logical than 
 
 For those interested in a deeper dive into this subject,
 it's worth checking out
-[this article by Jake Archibald](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle).
+[this article by Jake Archibald](https://web.dev/service-worker-lifecycle/).
  There's tons of nuance in how the whole dance around the service lifecycle goes,
  but it _is_ knowable, and that knowledge will go far when using Workbox.

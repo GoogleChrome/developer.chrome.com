@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: Canvas toBlob() support added in chrome 50 
+title: Canvas toBlob() support added in chrome 50
 description: >
   Support for canvas.toBlob set to land in Chrome 50.
 authors:
@@ -27,11 +27,11 @@ function sendImageToServer (canvas, url) {
 
     canvas.toBlob(onBlob);
 }
-```   
+```
 
 
 Using `toBlob()` is great, because instead of manipulating a base64 encoded string that you get from `toDataURL()`, you can now you work with the encoded binary data directly. It’s smaller, and it tends to fit more use-cases than a data URI.
 
-If you’re wondering whether you can draw image blobs to another canvas context, the answer is -- in Firefox and Chrome -- yes, absolutely! [You can do this with the `createImageBitmap()` API](https://developers.google.com/web/updates/2016/03/createimagebitmap-in-chrome-50), which is also landing in Chrome 50.
+If you’re wondering whether you can draw image blobs to another canvas context, the answer is -- in Firefox and Chrome -- yes, absolutely! [You can do this with the `createImageBitmap()` API](/blog/createimagebitmap-in-chrome-50), which is also landing in Chrome 50.
 
 

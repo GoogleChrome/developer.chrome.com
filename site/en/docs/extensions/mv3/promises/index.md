@@ -2,6 +2,7 @@
 layout: 'layouts/doc-post.njk'
 
 title: Using promises
+seoTitle: "Chrome Extensions: Using promises"
 # subhead: 'How to use promises when calling extensions APIs'
 
 # This appears in the ToC of the project landing page at

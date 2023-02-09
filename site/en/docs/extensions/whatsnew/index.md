@@ -3,7 +3,9 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2022-09-28
+updated: 2023-01-27
+tags:
+  - extensions-news
 
 # Note: disabling the linter for duplicate headings because this isn't hierarchical and it needs
 # smaller font headings.
@@ -13,6 +15,18 @@ updated: 2022-09-28
 
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes.
+
+### Chrome 110: Change in service worker idle timeout {: #m110-sw-idle }
+
+January 5, 2023
+
+Previously, an extension service worker would frequently shut down at the five minute mark. We've changed this behavior to more closely resemble service worker lifetime's on the web. An extension service worker will be shut down after either thirty seconds of inactivity or if a single activity takes longer than 5 minutes to process. For more information, see [Longer extension service worker lifetimes](/blog/longer-esw-lifetimes).
+
+### Post: Pausing Manifest V2 phase-out
+
+December 9, 2022
+
+The Manifest V2 deprecation timelines are under review and the experiments scheduled for early 2023 are being postponed. For more information, [read the update](https://groups.google.com/u/1/a/chromium.org/g/chromium-extensions/c/zQ77HkGmK9E) in the chromium-extensions Google Group.
 
 ### Blog post: More details on the transition to Manifest V3 {: #blog-mv3-transition-details }
 
@@ -261,7 +275,6 @@ A number of APIs now support promises in Manifest V3.
 - [`chrome.processes`](/docs/extensions/reference/processes)
 - [`chrome.search`](/docs/extensions/reference/search)
 - [`chrome.sessions`](/docs/extensions/reference/sessions)
-- [`chrome.signedInDevices`](/docs/extensions/reference/signedInDevices)
 - [`chrome.topSites`](/docs/extensions/reference/topSites)
 
 Also, APIs that use the [`ChromeSetting`](/docs/extensions/reference/types/#type-ChromeSetting)

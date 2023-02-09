@@ -16,6 +16,6 @@ sessions:
       Interop 2022 initiative.
     topics: []
     type: speaker
-    slidesUrl: null
+    slidesUrl: https://noti.st/rachelandrew/DcQeSo/whats-new-in-css
     videoUrl: null
 ---

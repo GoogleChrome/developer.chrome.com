@@ -1,11 +1,11 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: Add a Landing Page
-description: 'Add a Landing Page'
+title: Add a landing page
+description: 'Add a landing page'
 date: 2022-12-29
 ---
 
-## Featured Card
+## Create a Featured Card
 
 Feature Card contains content and actions that relate information about a single topic. You can use HTML entities (```&mdash;```) or basic Markdown styling (```*emphasis*```) inside these string arguments.
 

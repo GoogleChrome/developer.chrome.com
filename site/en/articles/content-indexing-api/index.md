@@ -11,7 +11,6 @@ tags:
   - capabilities
   - service-worker
   - chrome-80
-  - index
   - caching
 hero: image/admin/tuIkBEm2DdHBYy62dDac.jpg
 alt: Index cards in a filing cabinet.
@@ -27,7 +26,7 @@ launched in Chrome 84 for Android.
 ## What is the Content Indexing API? {: #what }
 
 Using a [progressive web
-app](https://developers.google.com/web/progressive-web-apps) means having access
+app](https://web.dev/progressive-web-apps/) means having access
 to information people care about—images, videos, articles, and more—regardless
 of the current state of your network connection. Technologies like [service
 workers](/docs/workbox/service-worker-overview/),
@@ -124,7 +123,7 @@ underlying media URL as a query parameter and then display the contents of the
 file, potentially with additional controls or content on the page.
 
 Web apps can only add URLs to the content index that are under the
-[scope](https://developers.google.com/web/ilt/pwa/introduction-to-service-worker)
+[scope](https://web.dev/learn/pwa/service-workers/)
 of the current service worker. In other words, a web app could not add a URL
 belonging to a completely different domain into the content index.
 
@@ -161,7 +160,7 @@ you to choose when items are added to the index. You might want to add to the
 index in response to an input, like clicking a "save offline" button. Or you
 might add items automatically each time cached data is updated via a mechanism
 like [periodic background
-sync](https://developers.google.com/web/updates/2019/08/periodic-background-sync).
+sync](/articles/periodic-background-sync/).
 
 ```js
 await registration.index.add({

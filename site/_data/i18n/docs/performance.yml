@@ -55,3 +55,9 @@ topics:
     pt: Diagnóstico
     ru: Диагностика
     zh: 诊断
+  cls:
+    en: Cumulative Layout Shift
+  cls_description:
+    en: Learn about the Cumulative Layout Shift (CLS) metric and how to optimize for it.
+  retired_metrics:
+    en: Retired metrics

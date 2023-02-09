@@ -1,19 +1,22 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: Overview
+seoTitle: Lighthouse overview
 description: |
   Learn how to set up Lighthouse to audit your web apps.
 date: 2016-09-27
 updated: 2022-05-24
 ---
 
-[Lighthouse](https://github.com/GoogleChrome/lighthouse) is an open-source, automated tool for improving the quality of web pages. You can run it against any web page, public or requiring authentication. It has audits for performance, accessibility, progressive web apps, SEO and more.
+[Lighthouse](https://github.com/GoogleChrome/lighthouse) is an open-source, automated tool for improving the quality of web pages. You can run it against any web page, public or requiring authentication. It has audits for performance, accessibility, progressive web apps, SEO, and more.
 
 <figure>
   {% Img src="image/MtjnObpuceYe3ijODN3a79WrxLU2/QXJ5lmcjHEFLTHg5B4o8.svg", class="float-right", alt="Lighthouse logo", width="150", height="150" %}
 </figure>
 
-You can run Lighthouse in Chrome DevTools, from the command line, or as a Node module. You give Lighthouse a URL to audit, it runs a series of audits against the page, and then it generates a report on how well the page did. From there, use the failing audits as indicators on how to improve the page. Each audit has a reference doc explaining why the audit is important, as well as how to fix it.
+You can run Lighthouse in Chrome DevTools, from the command line, or as a Node module. You give Lighthouse a URL to audit, it runs a series of audits against the page,
+and then it generates a report on how well the page did. From there, use the failing audits as indicators on how to improve the page. Each audit has a reference doc explaining why
+the audit is important, as well as how to fix it.
 
 You can also use [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci/blob/main/docs/getting-started.md) to prevent regressions on your sites.
 
@@ -40,7 +43,7 @@ The CLI and Node workflows require you to have an instance of Google Chrome inst
 
 Lighthouse has its own panel in Chrome DevTools. To run a report:
 
-1. Download [Google Chrome for Desktop](https://www.google.com/chrome/browser/desktop/).
+1. Download [Google Chrome for Desktop][desktop].
 1. In Google Chrome, go to the URL you want to audit. You can audit any URL on the web.
 1. [Open Chrome DevTools](/docs/devtools/open/).
 1. Click the **Lighthouse** tab.
@@ -66,7 +69,7 @@ Lighthouse has its own panel in Chrome DevTools. To run a report:
 
 To install the Node module:
 
-1. Download [Google Chrome for Desktop](https://www.google.com/chrome/browser/desktop/).
+1. Download [Google Chrome for Desktop][desktop].
 1. Install the current [Long-Term Support](https://github.com/nodejs/Release) version of [Node](https://nodejs.org).
 1. Install Lighthouse. The `-g` flag installs it as a global module.
 
@@ -189,7 +192,7 @@ Lighthouse aims to provide guidance that is relevant and actionable for all web 
 
 ### Stack Packs
 
-Developers use many different technologies (backend/CMS/JavaScript frameworks) to build their web pages. Instead of only surfacing general recommendations, Lighthouse is now able to provide more relevant and actionable advice depending on the tools used.  
+Developers use many different technologies (backend/CMS/JavaScript frameworks) to build their web pages. Instead of only surfacing general recommendations, Lighthouse is now able to provide more relevant and actionable advice depending on the tools used.
 
 "Stack Packs" allow Lighthouse to detect what platform your site is built on and display specific stack-based recommendations. These recommendations are defined and curated by experts from the community.
 
@@ -208,3 +211,5 @@ If you are a company or an individual who is integrating Lighthouse as part of t
 ## Contribute to Lighthouse {: #contribute }
 
 Lighthouse is open source and [contributions are welcome](https://github.com/GoogleChrome/lighthouse/blob/master/CONTRIBUTING.md)! Check out the repository's [issue tracker](https://github.com/GoogleChrome/lighthouse/issues) to find [bugs that you can fix](https://github.com/GoogleChrome/lighthouse/labels/good%20first%20issue), or audits that you can create or improve upon. The issues tracker is also a good place to discuss performance metrics, ideas for new audits, or anything else related to Lighthouse.
+
+[desktop]: https://www.google.com/chrome/browser/desktop/

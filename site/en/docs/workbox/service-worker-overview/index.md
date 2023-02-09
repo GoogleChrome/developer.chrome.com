@@ -13,6 +13,8 @@ However, because service workers solve hard problems,
 any abstraction of that technology will also be tricky without understanding it.
 Thus, these first few bits of documentation will cover that underlying technology before getting into Workbox specifics.
 
+A running list of can be viewed at [chrome://serviceworker-internals/](chrome://serviceworker-internals/).
+
 ## What do service workers provide?
 
 Service workers are specialized JavaScript assets that act as proxies between web browsers and web servers.
@@ -75,7 +77,7 @@ using callbacks for events such as:
 
 - When a service worker is [installing](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/install_event).
 - When a service worker is [activating](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/activate_event).
-- When a service worker [detects a network request](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/onfetch).
+- When a service worker [detects a network request](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/fetch_event).
 
 Events can be registered using a familiar
 [`addEventListener` API](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener).

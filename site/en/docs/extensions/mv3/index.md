@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: Welcome
+seoTitle: Welcome to Chrome Extensions
 subhead: 'Learn about developing extensions for Chrome.'
 description: 'Documentation for Chrome extensions developers.'
 date: 2020-11-09
@@ -42,5 +43,5 @@ Thank you for being a member of the extension developer community. We're glad yo
 [gg-extensions]: https://groups.google.com/a/chromium.org/g/chromium-extensions
 [gh-ext-samples]: https://github.com/GoogleChrome/chrome-extensions-samples
 [github-ext-doc]: https://github.com/GoogleChrome/developer.chrome.com
-[gs-tuts]: /docs/extensions/mv3/getstarted/#tutorials
+[gs-tuts]: /docs/extensions/mv3/getstarted/#tutorial
 [so-extension-tag]: https://stackoverflow.com/questions/tagged/google-chrome-extension

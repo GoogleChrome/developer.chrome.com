@@ -154,6 +154,7 @@ storage, cookies, Application Cache, images, fonts, and stylesheets.
 - [Debug Progressive Web Apps][40]
 - [Inspect and Manage Storage, Databases, and Caches][41]
 - [Inspect and Delete Cookies][42]
+- [View origin trial information][50]
 
 ### Security panel {: #security }
 
@@ -236,3 +237,4 @@ DevTools also has a Slack channel, but the team doesn't monitor it consistently.
 [47]: https://stackoverflow.com/questions/ask?tags=google-chrome-devtools
 [48]: https://github.com/google/webfundamentals/issues/new
 [49]: https://chromiumdev.slack.com/messages/devtools/
+[50]: /docs/web-platform/origin-trials/#devtools

@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Rich notifications API"
+seoTitle: "Chrome Extensions: Rich notifications API"
 date: 2014-06-25
 updated: 2017-04-27
 description: How to show notifications to your Chrome Extension users.
@@ -181,7 +182,7 @@ can pop-up even when the extension isn't running.
 [4]: /docs/extensions/reference/notifications#type-NotificationOptions
 [5]: /docs/extensions/reference/notifications#type-TemplateType
 [6]: /docs/extensions/reference/gcm
-[7]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/apps/samples/gcm-notifications
+[7]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/_archive/apps/samples/gcm-notifications
 [8]: /docs/apps/contentSecurityPolicy
 [9]: /docs/apps/app_external
 [10]: /docs/extensions/reference/events

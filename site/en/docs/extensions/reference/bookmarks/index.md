@@ -74,5 +74,5 @@ help in viewing the source code, see [Samples][6].
 [2]: #type-BookmarkTreeNode
 [3]: #method-create
 [4]: #type-BookmarkTreeNode
-[5]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/bookmarks/basic/
+[5]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/_archive/mv2/api/bookmarks/basic/
 [6]: /docs/extensions/mv2/samples

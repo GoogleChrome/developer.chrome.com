@@ -41,7 +41,6 @@ a list containing dictionaries of type [Ruleset][4], as shown below.
   },
   "permissions": [
     "declarativeNetRequest",
-    "declarativeNetRequestFeedback",
   ],
   "host_permissions": [
   "http://www.blogger.com/",
@@ -150,16 +149,16 @@ An extension can add or remove rules dynamically using the [updateDynamicRules][
 
 ## Updating enabled rulesets
 
-An extension can update the set of enabled static rulesets using the [updateEnabledRulesets][14] API
+An extension can update the set of enabled static rulesets using the [updateEnabledRulesets()][14]
 method.
 
 - The number of static rulesets which are enabled at one time must not exceed
   [MAX_NUMBER_OF_ENABLED_STATIC_RULESETS][18].
 - The number of rules across enabled static rulesets across all extensions must not exceed the
-  [global limit][15]. Calling [getAvailableStaticRuleCount][10] is recommended to check the number
+  [global limit][15]. Calling [getAvailableStaticRuleCount()][10] is recommended to check the number
   of rules an extension can still enable before the global limit is reached.
 - The set of enabled static rulesets is persisted across sessions but not across extension updates.
-  The `rule_resources` manifest key will determine the set of enabled static rulesets on initial
+  The `"rule_resources"` manifest key will determine the set of enabled static rulesets on initial
   extension install and on each subsequent extension update.
 
 ## Implementation details
@@ -231,7 +230,7 @@ When rules are applied to browsers with pages in the service worker's cached sto
     "*://*.headers.com/*",
     "declarativeNetRequest"
   ],
-  "manifest_version": 2
+  "manifest_version": 3
 }
 ```
 

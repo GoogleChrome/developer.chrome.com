@@ -82,6 +82,11 @@ A coordinator has several responsibilities:
 * Track the aggregatable reports to prevent reuse in aggregation for summary
   reports, as reuse may reveal personal identifying information (PII).
 
+{% Aside %}
+If you are testing the Aggregation Service, see the [Coordinator Service
+Additional Terms of Service](/docs/privacy-sandbox/aggregation-service/tos/).
+{% endAside %}
+
 ## Noise and scaling {: #noise-scale}
 
 To protect user privacy, the aggregation service applies an
@@ -124,4 +129,4 @@ and the [Attribution Reporting API](/docs/privacy-sandbox/summary-reports#attrib
 We want to engage in conversations with you to ensure we build an API that works for everyone. Like other Privacy Sandbox proposals, the aggregation service is [documented and discussed publicly](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md).
 
 * You can [experiment with the Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting-experiment/).
-* The Private Aggregation API is available for testing in Chrome M107+ Canary and Dev, but the aggregation service is still in development.
+* The Private Aggregation API is available for testing in Chrome M107+ Canary and Dev locally, and is available in the [Privacy Sandbox Unified Origin Trial] in Chrome M107+ Beta, but the integration with the aggregation service backend is still in development.
