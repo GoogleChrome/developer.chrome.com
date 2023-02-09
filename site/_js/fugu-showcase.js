@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 /*
  * Copyright 2023 Google LLC
  *
@@ -92,7 +94,7 @@ import './web-components/enhanced-select';
     const image = await createImageBitmap(blob);
     canvas.width = image.width;
     canvas.height = image.height;
-    context.drawImage(image, 0, 0);
+    context?.drawImage(image, 0, 0);
     return new Promise(resolve => {
       canvas.toBlob(resolve, 'image/png');
     });
@@ -102,31 +104,54 @@ import './web-components/enhanced-select';
     document.querySelectorAll('.web-share').forEach(shareLink => {
       shareLink.classList.remove('display-none');
       shareLink.classList.add('display-flex');
+
       shareLink.addEventListener('click', async e => {
         e.preventDefault();
-        const url = shareLink
-          .closest('.fugu-card')
-          .querySelector('img').currentSrc;
-        const fileName = url.split('/').pop().replace('.webp', '.png');
-        const blob = await fetch(url, {
+
+        const fuguCard = shareLink.closest('.fugu-card');
+        const heading = fuguCard.querySelector('h2');
+        const appURL = heading?.querySelector('a').href;
+        const appName = heading.textContent?.trim();
+        const tagPills = fuguCard?.querySelectorAll('.tag-pill');
+        const appAPIs = Array.from(tagPills)
+          .slice(0, 2)
+          .map(a => `👉 ${a.textContent}`)
+          .join('\n');
+        const screenshotURL = fuguCard.querySelector('img').currentSrc;
+        const fileName = screenshotURL
+          .split('/')
+          .pop()
+          .replace('.webp', '.png');
+        const blob = await fetch(screenshotURL, {
           mode: 'cors',
         }).then(response => response.blob());
         const pngBlob = await imageToPNG(blob);
         const file = new File([pngBlob], fileName);
         const shareData = {
           files: [file],
-          title: 'Fugu Showcase',
-          text: 'Check out this Fugu Showcase',
-          url: document.location.href,
+          text: `👀 I just found the app “${appName}”: ${appURL}.\n\nAmong others, it uses these cool Project Fugu APIs:\n\n${appAPIs}\n\n(via the 🐡 ${document.title}: ${location.href})`.trim(),
         };
-        console.log(shareData);
+
         if (navigator.canShare(shareData)) {
           try {
             await navigator.share(shareData);
           } catch (err) {
-            if (err.name !== 'AbortError') {
-              console.error(err.name, err.message);
+            if (err.name === 'AbortError') {
+              return;
+            } else if (err.name === 'NotAllowedError') {
+              // Try sharing without the screenshot.
+              try {
+                delete shareData.files;
+                console.log(shareData);
+                await navigator.share(shareData);
+              } catch (err) {
+                if (err.name === 'AbortError') {
+                  return;
+                }
+                console.error(err.name, err.message);
+              }
             }
+            console.error(err.name, err.message);
           }
         }
       });

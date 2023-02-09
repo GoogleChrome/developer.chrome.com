@@ -67,12 +67,10 @@
         {% endfor %}
       </div>
     </div>
-    <div class="blog-card__actions low-space-200 gap-top-300 end">
-      <div class="display-flex justify-content-end">
-        <a class="color-primary type--small fugu-app-link" href="/fugu-showcase/#{{ id }}">
-          # {{ 'i18n.fugu_showcase.copy_link' | i18n(locale) }}
-        </a>
-      </div>
+    <div class="low-space-200 gap-top-300 end display-flex justify-content-end">
+      <a class="button color-primary type--small fugu-app-link" href="/fugu-showcase/#{{ id }}">
+        # {{ 'i18n.fugu_showcase.copy_link' | i18n(locale) }}
+      </a>
     </div>
   </div>
 </div>
