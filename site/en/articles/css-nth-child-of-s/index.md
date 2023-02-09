@@ -12,7 +12,6 @@ hero: image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/d3BZ8gLh8WkVPRfJf6mz.jpg
 alt: "Rows of green chairs in the Munich Olympic Stadium."
 tags:
   - css
-  - chrome-stable
   - chrome-111
 ---
 
