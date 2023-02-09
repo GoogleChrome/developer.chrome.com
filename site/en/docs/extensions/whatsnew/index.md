@@ -16,11 +16,13 @@ tags:
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes.
 
-### Chrome 110: New methods for actions {: #m110-action }
+### Chrome 109: Is an exension enabled {: #m110-action }
 
-Chrome 110, release on February 7, adds new methods to `chrome.action`. The [`isEnabled()`](/docs/extensions/reference/action/#method-isEnabled) method programmatically checks whether an extension has been enabled for a specific tab. This saves you from maintaining the enabled state of your tabs. This new method takes a tab ID and a reference to a callback and returns a boolean. It has one limitation: tabs created using [`chrome.declarativeContent`](/docs/extensions/reference/declarativeContent/) will always report disabled.
+January 12, 2023
 
-The [`setBadgeTextColor()`](/docs/extensions/reference/action/#method-setBadgeTextColor) and [`getBadgeTextColor()`](/docs/extensions/reference/action/#method-getBadgeTextColor) methods allow an extension to change and query its toolbar icon's badge text color. When used with [`setBadgeBackgroundColor`](/docs/extensions/reference/action/#method-setBadgeBackgroundColor) and [`getBadgeBackgroundColor`](/docs/extensions/reference/action/#method-getBadgeBackgroundColor) these new methods let you enforce design and brand consistency.
+The [`chrome.action.isEnabled()`](/docs/extensions/reference/action/#method-isEnabled) method programmatically checks whether an extension has been enabled for a specific tab. This saves you from maintaining the enabled state of your tabs. This new method takes a tab ID and a reference to a callback and returns a boolean. It has one limitation: tabs created using [`chrome.declarativeContent`](/docs/extensions/reference/declarativeContent/) will always report disabled.
+
+(The `chrome.action` namespace recently got new methods for controlling the appearance of extension badges. For more information, see [Setting badge colors](#m110-badge-color).)
 
 ### Chrome 110: Change in service worker idle timeout {: #m110-sw-idle }
 
@@ -33,6 +35,12 @@ Previously, an extension service worker would frequently shut down at the five m
 December 9, 2022
 
 The Manifest V2 deprecation timelines are under review and the experiments scheduled for early 2023 are being postponed. For more information, [read the update](https://groups.google.com/u/1/a/chromium.org/g/chromium-extensions/c/zQ77HkGmK9E) in the chromium-extensions Google Group.
+
+### Chrome 108: Setting badge colors {: #m110-badge-color }
+
+November 29, 2022
+
+The `chrome.action` namespace has two new methods to give you more control over the appearance extension badges. The [`setBadgeTextColor()`](/docs/extensions/reference/action/#method-setBadgeTextColor) and [`getBadgeTextColor()`](/docs/extensions/reference/action/#method-getBadgeTextColor) methods allow an extension to change and query its toolbar icon's badge text color. When used with [`setBadgeBackgroundColor`](/docs/extensions/reference/action/#method-setBadgeBackgroundColor) and [`getBadgeBackgroundColor`](/docs/extensions/reference/action/#method-getBadgeBackgroundColor) these new methods let you enforce design and brand consistency.
 
 ### Blog post: More details on the transition to Manifest V3 {: #blog-mv3-transition-details }
 
