@@ -28,7 +28,7 @@ I’m Adriana Jara. Let’s dive in and see what’s new for developers in Chrom
 
 
 ## :picture-in-picture pseudo class {: #pip }
-With the [picture in picture API](https://developer.mozilla.org/docs/Web/API/Picture-in-Picture_API) websites can create a floating video window, always on top so that users continue consuming media, while interacting with other content.
+With the [Picture-in-Picture API](https://developer.mozilla.org/docs/Web/API/Picture-in-Picture_API) websites can create a floating video window, always on top so that users continue consuming media, while interacting with other content.
 
 Now with the [`:picture-in-picture` css pseudo-class](https://developer.mozilla.org/docs/Web/CSS/:picture-in-picture) you can add styles to the elements to improve the experience.
 
@@ -46,7 +46,7 @@ The snippet below shows how to use the picture-in-picture class to add a message
 
 Use the pseudo-class again on the video element, to make the element transparent to display the message correctly.
 
-Play with [the example](https://googlechrome.github.io/samples/picture-in-picture/) and improve your picture-in-picture video experiences.
+Play with [the example](https://googlechrome.github.io/samples/picture-in-picture/css-pseudo-class) and improve your picture-in-picture video experiences.
 
 ## launch_handler manifest member. {: #launch-handler }
 
