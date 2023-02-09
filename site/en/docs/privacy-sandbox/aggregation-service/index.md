@@ -83,7 +83,7 @@ A coordinator has several responsibilities:
   reports, as reuse may reveal personal identifying information (PII).
 
 {% Aside %}
-If you are testing the Aggregation service, see the [Coordinator Service
+If you are testing the Aggregation Service, see the [Coordinator Service
 Additional Terms of Service](/docs/privacy-sandbox/aggregation-service/tos/).
 {% endAside %}
 

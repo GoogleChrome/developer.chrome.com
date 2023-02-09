@@ -24,7 +24,7 @@ The Coordinator Service is designed to ensure that reports from the client
 software, such as a Chrome browser or an Android device, which are sent to the
 Aggregation Service, will run on Approved Aggregation Service Code and Binaries
 and to configure access to decryption keys and manage aggregatable report
-accounting .
+accounting.
 
 ## Definitions
 
