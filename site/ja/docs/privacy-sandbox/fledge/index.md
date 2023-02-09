@@ -18,9 +18,9 @@ authors:
 
 ## この記事の対象者
 
-This article covers the basics of FLEDGE and explains some underlying concepts, but doesn't go into much technical detail.
+この記事では、FLEDGE の基本を取り上げ、いくつかの基本的な概念について説明しますが、技術的な詳細についてはあまり触れません。
 
-- If you work in **advertising or adtech**, you'll get an overview of [how FLEDGE works](#overview).
+- **広告やアドテック**の仕事をしている方なら、 [FLEDGE の仕組み](#overview)の概要がわかります。
 - **開発者またはソフトウェアエンジニア**の場合は、[FLEDGE API 開発者ガイド](/docs/privacy-sandbox/fledge-api)で提案に関するより詳細な技術的説明、[Intent to prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI) ではブラウザでの FLEDGE のステータスに関する最新の議論をお読みいただけます。
 - [FLEDGE デモ](/docs/privacy-sandbox/fledge-api#demo)では、FLEDGE の基本的なデプロイをウォークスルー形式で説明しています。
 
@@ -62,7 +62,7 @@ FLEDGE では、「[インタレストグループ](#interest-group-detail)」�
 
 入札コードは、インタレストグループの構成情報で指定された URL から取得されます。このコードには、インタレストグループに関するデータとセラーからの情報と、ページとブラウザからのコンテキストデータが渡されます。
 
-Each bidder is also known as a buyer.
+各入札者はバイヤーとも呼ばれます。
 
 ブラウザが関数を呼び出して広告オークションを実行すると、各バイヤーのコードは、[FLEDGE の Key/Value サービス](#key-value-service-detail)によって提供されるリアルタイムデータを利用して入札を生成します。次に、セラーはこれらの入札とバイヤーが所有するリアルタイム データを受け取り、各入札をスコアリングします。最高スコアの入札がオークションを落札します。
 
@@ -116,7 +116,7 @@ API 呼び出し元は、ユーザーがシークレットモードで閲覧し�
 
 {: #glossary}
 
-## Key concepts
+## 重要な概念
 
 FLEDGE 用語の詳細をお探しですか？[プライバシーサンドボックスの用語集](/docs/privacy-sandbox/glossary/)をご覧ください。
 
@@ -275,7 +275,7 @@ FLEDGE では、広告オークションは、広告を選択するためにブ�
 
 セラーは、各バイヤーの値、広告クリエイティブの URL、およびバイヤーごとに返されたその他のデータを含む、入札をスコアリングするためのコードをブラウザに提供します。オークション中、バイヤーからの入札コードとセラーからの入札スコアリング コードは、[Key/Value サービス](#key-value-service-detail)からデータを受け取ることができます。広告が選択されて表示されると（プライバシーを保護する [Fenced Frame](/docs/privacy-sandbox/fenced-frame/) に表示）、セラーと落札者はオークション結果を報告できます。
 
-1. A user visits a site which displays ads.
+1. ユーザーが広告を表示するサイトにアクセスします。
 
 2. セラーのコードがオークションを開始します。セラーは、どの広告スペースを販売するか、誰が入札できるか、それらの入札のスコアリング方法を指定します。
 
@@ -339,9 +339,9 @@ FLEDGE のプライバシー要件を満たすために、広告オークショ�
 
 FLEDGE の詳細な概要については、[FLEDGE API 開発者ガイド](/docs/privacy-sandbox/fledge-api/)を参照してください。
 
-### Developers
+### 開発者
 
-If you're ready to start working with FLEDGE, read [experiment and participate](/docs/privacy-sandbox/fledge-experiment/).
+FLEDGE の使用を開始する準備ができている場合は、[実験を読んで参加](/docs/privacy-sandbox/fledge-experiment/)してください。
 
 [API 開発者ガイド](/docs/privacy-sandbox/fledge-api)を作成し、FLEDGE の基本的なデプロイをウォークスルー形式で説明する [FLEDGE デモ](https://fledge-demo.glitch.me)を作成しました。[FLEDGE デモ動画](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv)では、デモコードがどのように機能するか、また Chrome DevTools で FLEDGE をデバッグする方法を説明しています。
 
