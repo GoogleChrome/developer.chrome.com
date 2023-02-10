@@ -7,8 +7,8 @@ subhead: |2-
 description: |2-
 
   安全な環境で、パーティション化されていないクロスサイトデータへのアクセスを許可します。
-date: '2022-04-25'
-updated: '2023-01-19'
+date: 2022-04-25
+updated: 2023-01-19
 authors:
   - alexandrawhite
   - kevinkiklee
