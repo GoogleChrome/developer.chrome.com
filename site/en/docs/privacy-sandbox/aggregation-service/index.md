@@ -82,6 +82,11 @@ A coordinator has several responsibilities:
 * Track the aggregatable reports to prevent reuse in aggregation for summary
   reports, as reuse may reveal personal identifying information (PII).
 
+{% Aside %}
+If you are testing the Aggregation Service, see the [Coordinator Service
+Additional Terms of Service](/docs/privacy-sandbox/aggregation-service/tos/).
+{% endAside %}
+
 ## Noise and scaling {: #noise-scale}
 
 To protect user privacy, the aggregation service applies an
