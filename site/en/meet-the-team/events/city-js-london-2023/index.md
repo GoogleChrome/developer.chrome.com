@@ -17,7 +17,7 @@ sessions:
 
       In this talk, Jecelyn will walk you through the current state of cross-browser
       automation, unfold how browser automation works behind the scenes, and share
-      about the motivation of WebDriver BiDi – the upcoming browser automation protocol.
+      about the motivation of WebDriver BiDi–the upcoming browser automation protocol.
     topics: []
     type: speaker
     slidesUrl: null
