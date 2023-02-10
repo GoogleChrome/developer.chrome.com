@@ -36,6 +36,8 @@ announcements are also made on [this issue](https://github.com/WICG/attribution-
 
 ## Past events
 
+<iframe src="https://drive.google.com/file/d/1riGrGwP5cyz3q4IcDjV5kulOK48OJV2S/preview" width="640" height="480" allow="autoplay"></iframe>
+
 ### First-Party Sets Office Hours {: #oh06}
 
 We hosted two office hours sessions for [First-Party Sets](/docs/privacy-sandbox/first-party-sets/): an English language session on December 15th, 2022 and a Japanese language session on December 20th, 2022. You can view the [recording of the presentation and demo from the first session](https://drive.google.com/file/d/1riGrGwP5cyz3q4IcDjV5kulOK48OJV2S/view?usp=share_link).
