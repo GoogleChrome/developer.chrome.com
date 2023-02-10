@@ -5,6 +5,7 @@ description: >
   Beginning gradually in Chrome 112, storage, service workers, and communication APIs will be partitioned in third-party contexts. For sites that need time to adjust to this new feature, these deprecation trials will allow them to temporarily keep their third-party storage, service workers, and communication APIs unpartitioned.
 authors:
   - arichiv
+  - kyraseevers
 date: 2023-02-10
 tags:
   - privacy
