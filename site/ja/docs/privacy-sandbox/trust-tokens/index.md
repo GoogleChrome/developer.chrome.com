@@ -1,95 +1,90 @@
 ---
-layout: 'layouts/doc-post.njk'
-title: 'トラストトークン'
+layout: layouts/doc-post.njk
+title: プライベートステートトークン
 subhead: >
+
   限定的な情報をブラウジングコンテキストから別のブラウジングコンテキストに（サイト間など）伝達できるようにすることで、パッシブ追跡を行わずに不正行為に対抗できるようにするための API。
 description: >
+
   限定的な情報をブラウジングコンテキストから別のブラウジングコンテキストに（サイト間など）伝達できるようにすることで、パッシブ追跡を行わずに不正行為に対抗できるようにするための API。
 date: 2021-05-18
-updated: 2022-03-31
+updated: 2022-10-06
 authors:
   - samdutton
 ---
 
+{% Aside %} この記事では以前、プライベートステートトークンを「トラスト トークン」と呼んでいました。 Trust Token API は、Private State Token API に名前が変更され、プライバシーとユーティリティのメリットがよりよく示されています。
+
+詳細は、[トラストトークンからプライベートステートトークンへの名前の変更](/blog/rename-trust-tokens)をご覧ください。 {% endAside %}
+
 ## 実装状況
 
-* [オリジントライアル実施中](https://web.dev/origin-trials/) Chrome 84～101
-* [トライアルに登録](/origintrials/#/view_trial/2479231594867458049)
-* [デモ](https://trust-token-demo.glitch.me/)
-* [Chrome DevTools の統合](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token)
-* [Chrome プラットフォームのステータス](https://www.chromestatus.com/feature/5078049450098688)
+- Chrome 84 から 101 の[オリジントライアル](https://web.dev/origin-trials/): [終了しました](/origintrials/#/view_trial/2479231594867458049)。
+- [デモ](https://trust-token-demo.glitch.me/): オリジントライアルが終了したため、これは機能しなくなりました。コードは引き続き閲覧できます。
+- [Chrome DevTools の統合](/blog/new-in-devtools-89/#trust-token)。
+- [Chrome プラットフォームのステータス](https://www.chromestatus.com/feature/5078049450098688)
 
-## トラストトークンとは？
+## プライベートステートトークンとは？
 
 {% YouTube id='bXB1Iwq6Eq4' %}
 
-トラストトークンを使用すると、ユーザーを認証できるかどうかの信頼性をあるコンテキストから別のコンテキストに伝達できるため、パッシブ追跡を用いなくても、サイトが詐欺行為を防いだり、ボットを実際の人間と区別したりするのに役立ちます。
+プライベートステートトークンを使用すると、ユーザーの真正性に対する信頼を、あるコンテキストから別のコンテキストに伝達できるようになり、サイトが詐欺に対抗し、パッシブトラッキングなしでボットと実際の人間を区別できるようになります。
 
-* **発行側**のウェブサイトは、たとえば、アカウントの継続的な使用、トランザクションの完了、または許容可能な [reCAPTCHA スコア](https://developers.google.com/recaptcha)の取得などの方法で信頼性を証明できるユーザーのウェブブラウザにトークンを発行できます。
-* **引き換え側**のウェブサイトは、引き換え側が信頼する発行側からのトークンを有しているかを確認した上で、必要に応じてトークンを引き換えることで、ユーザーが正当なユーザーであることを確認できます。
+- **発行側**のウェブサイトは、たとえば、アカウントの継続的な使用、トランザクションの完了、または許容可能な [reCAPTCHA スコア](https://developers.google.com/recaptcha)の取得などの方法で信頼性を証明できるユーザーのウェブブラウザにトークンを発行できます。
+- **引き換え側**のウェブサイトは、引き換え側が信頼する発行側からのトークンを有しているかを確認した上で、必要に応じてトークンを引き換えることで、ユーザーが正当なユーザーであることを確認できます。
 
-トラストトークンは暗号化されているため、個人を識別したり、信頼できるインスタンスと信頼できないインスタンスを接続してユーザー ID を検出したりすることはできません。
+プライベートステートトークンは暗号化されているため、個人を識別したり、信頼できるインスタンスと信頼できないインスタンスを接続してユーザー ID を検出したりすることはできません。
 
-{% Aside 'caution' %}
-トラストトークンは、reCAPTCHAや、ユーザーが本人で かどうかを判断するための他の仕組みに代わるものではありません。
+{% Aside 'caution' %} プライベートステートトークンは、ユーザーが本人であるかどうかを判断するための reCAPTCHA やその他のメカニズムに代わるものではありません。
 
-トラストトークンは、ユーザーの信頼性を**伝達**する手段であり、ユーザーの信頼性を**確立**するものではありません。
-{% endAside %}
+プライベートステートトークンは、ユーザーの信頼を**確立**する方法ではなく、ユーザーの信頼を**伝える**手法です。{% endAside %}
 
-
-## トラストトークンが必要な理由
+## プライベートステートトークンが必要な理由
 
 ウェブには、ユーザーが主張する人物であり、人間になりすましているボットではないこと、また実在の人物やサービスを装った悪質なサードパーティではないことを示す信頼のシグナルを確立し、それを伝達する手段が必要です。 不正防止は、特に広告主、広告プロバイダー、および [CDN](https://www.cloudflare.com/en-gb/learning/cdn/what-is-a-cdn/) にとって重要なことです。
 
 残念ながら、実際の人物がサイトと対話しているかどうかを判断するなどのために、信頼性を測定して伝播する既存の仕組みには、多くの場合、フィンガープリンティングにも使用できる手法が活用されています。 信頼を伝達する仕組みはプライバシーを保護し、個々のユーザーを追跡することなくサイト間で信頼を伝播できるものでなければなりません。
 
-Trust Tokens API を使用すると、ウェブサイトはそれが信頼できるユーザーに暗号化トークンを発行できます。この暗号化トークンは後で他の場所で使用することが可能です。 トークンはユーザーのブラウザによって安全に保存されるため、他のコンテキストでユーザーの信憑性を確認する必要がある場合に、引き換えることができます。 これにより、ユーザーを特定したり、サイト間で ID を関連付けたりすることなく、あるウェブサイト（ソーシャルメディアサイトやメールサービスなど）におけるユーザーの信頼性を別のウェブサイト（サイト運営者やオンラインストアなど）に伝達することが可能となります。
+Private State Token API を使用すると、ウェブサイトは信頼できるユーザーに暗号化トークンを発行でき、後で他の場所で使用できます。トークンはユーザーのブラウザによって安全に保管され、ユーザーの信頼性を確認するために他のコンテキストで引き換えることができます。これにより、あるウェブサイト（ソーシャルメディアサイトや電子メールサービスなど）でのユーザーの信頼を、ユーザーを識別したりサイト間で ID をリンクしたりすることなく、別のウェブサイト（サイト運営者やオンラインストアなど）に伝えることができます。
 
-{% Aside 'key-term' %}
-[フィンガープリンティング](https://w3c.github.io/fingerprinting-guidance/#passive)手法では、サイトがユーザーのデバイス、オペレーティングシステム、およびブラウザの設定（言語設定、[ユーザーエージェント](https://developer.mozilla.org/docs/Web/API/NavigatorID/userAgent)、使用可能なフォントなど）を取得して、個々のユーザーを特定し追跡することができます。 これは、サーバー上でリクエストヘッダーをチェックするか、クライアント上で JavaScript を使用して実行できます。
+{% Aside 'key-term' %} [フィンガープリンティング](https://w3c.github.io/fingerprinting-guidance/#passive)手法では、サイトがユーザーのデバイス、オペレーティングシステム、およびブラウザの設定（言語設定、[ユーザーエージェント](https://developer.mozilla.org/docs/Web/API/NavigatorID/userAgent)、使用可能なフォントなど）を取得して、個々のユーザーを特定し追跡することができます。 これは、サーバー上でリクエストヘッダーをチェックするか、クライアント上で JavaScript を使用して実行できます。
 
-フィンガープリンティングは、ユーザーが認識しない制御不能な仕組みを使用しています。 [Panopticlick](https://panopticlick.eff.org/) や [amiunique.org](https://amiunique.org/) などのサイトでは、フィンガープリントデータを組み合わせて個人としてユーザーを識別する方法を示しています。
-{% endAside %}
+フィンガープリンティングは、ユーザーが認識しない制御不能な仕組みを使用しています。 [Panopticlick](https://panopticlick.eff.org/) や [amiunique.org](https://amiunique.org/) などのサイトでは、フィンガープリントデータを組み合わせて個人としてユーザーを識別する方法を示しています。 {% endAside %}
 
-
-## トラストトークンの仕組み
+## プライベートステートトークンの仕組み
 
 以下は、広告を表示する前に、ユーザーがボットではなく実際の人物であることを確認したいと考えるサイト運営者サイトの例です。
 
-
 1. ユーザーがウェブサイト（**発行者**と呼ばれる）にアクセスし、何かを購入したり、電子メールアカウントを使用したり、reCAPTCHA を完了させたりするなど、サイトがそのユーザーを実際の人物として信頼するようなアクションを実行します。
-1. 発行者サイトは、Trust Tokens JavaScript API を使用して、ユーザーのブラウザに対するトラストトークンのリクエストをトリガーします。
-1. 発行者サイトはそれにトークンデータで応答します。
-1. ユーザーのブラウザは、トラストトークンのデータを安全に保存します。
-1. ユーザーは、広告を表示するときなどに、ユーザーが実際の人物であるかどうかを確認しようとする別のウェブサイト（ニュースサイトなど）にアクセスします。
-1. サイトは、Trust Tokens APIを使用して、ユーザーのブラウザに、そのサイトが信頼する発行者のトラストトークンが保存されているかどうかを確認します。
-1. ユーザーが以前にアクセスした発行者に対するトラストトークンが検出されます。
-1. ニュースサイトは、発行者にそのトラストトークンの引き換えを要求します。
-1. 発行者サイトは、Redemption Record（引き換えレコード）を返します。
-1. ニュースサイトは、ユーザーが発行者から実際の人物であると信頼されていることを示すために、Redemption Record（引き換えレコード）を含めて広告プラットフォームにリクエストを送信します。
-1. 広告プラットフォームは、広告を表示するために必要なデータを返します。
-1. ニュースサイトに広告が表示されます。
-1. 広告ビューのインプレッションがカウントされます。
+2. 発行者サイトは、Private State Token JavaScript API を使用して、ユーザーのブラウザのトラスト トークンの要求をトリガーします。
+3. 発行者サイトはそれにトークンデータで応答します。
+4. ユーザーのブラウザは、トラストトークンのデータを安全に保存します。
+5. ユーザーは、広告を表示するときなどに、ユーザーが実際の人物であるかどうかを確認しようとする別のウェブサイト（ニュースサイトなど）にアクセスします。
+6. このサイトは、Private State Token API を使用して、サイトが信頼する発行者のトラスト トークンがユーザーのブラウザに保存されているかどうかを確認します。
+7. ユーザーが以前にアクセスした発行者のプライベートステートトークンが見つかります。
+8. ニュースサイトは、発行者にそのトラストトークンの引き換えを要求します。
+9. 発行者サイトは、Redemption Record（引き換えレコード）を返します。
+10. ニュースサイトは、ユーザーが発行者から実際の人物であると信頼されていることを示すために、Redemption Record（引き換えレコード）を含めて広告プラットフォームにリクエストを送信します。
+11. 広告プラットフォームは、広告を表示するために必要なデータを返します。
+12. ニュースサイトに広告が表示されます。
+13. 広告ビューのインプレッションがカウントされます。
 
-{% Aside %}
-この例の JavaScript 呼び出しの詳細については、[API の使用例](https://web.dev/trust-tokens/#sample-api-usage)をご覧ください。
-{% endAside %}
+{% Aside %} この例の JavaScript 呼び出しの詳細については、[API の使用例](https://web.dev/trust-tokens/#sample-api-usage)をご覧ください。 {% endAside %}
 
 ---
 
 ## 貢献とフィードバックの共有
 
-* **オリジントライアル**: [Chrome オリジントライアル](/origintrials/#/view_trial/2479231594867458049)に登録して参加してください。
-* **デモ**: トラストトークンの[発行と引き換え](https://trust-token-demo.glitch.me/)をお試しください。
-* **GitHub**: [提案](https://github.com/WICG/trust-token-api)を読み、[質問を投稿したり、ディスカッションに参加したり](https://github.com/WICG/trust-token-api/issues)できます。
-* **W3C**: [Improving Web Advertising Business&nbsp;Group](https://www.w3.org/community/web-adv/participants) で、業界ユースケースについて議論できます。
-* **IETF**: IETF の [Privacy&nbsp;Pass ワーキンググループ](https://datatracker.ietf.org/wg/privacypass/about/)では、基盤のプロトコルに関する技術的な意見を投稿できます。
-* **開発者サポート**: [Privacy Sandbox Developer Support リポジトリ](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)では、質問したり、ディスカッションに参加したりできます。
-
+- **オリジントライアル**: [終了しました](/origintrials/#/view_trial/2479231594867458049)。
+- **デモ**: Trust Tokens オリジントライアルが終了したため、[デモ](https://trust-token-demo.glitch.me/)は機能しなくなりましたが、コードは引き続き閲覧できます。
+- **GitHub**: [提案](https://github.com/WICG/trust-token-api)を読み、[質問を投稿したり、ディスカッションに参加したり](https://github.com/WICG/trust-token-api/issues)できます。
+- **W3C**: [Improving Web Advertising Business&nbsp;Group](https://www.w3.org/community/web-adv/participants) で、業界ユースケースについて議論できます。
+- **IETF**: IETF の [Privacy&nbsp;Pass ワーキンググループ](https://datatracker.ietf.org/wg/privacypass/about/)では、基盤のプロトコルに関する技術的な意見を投稿できます。
+- **開発者サポート**: [Privacy Sandbox Developer Support リポジトリ](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)では、質問したり、ディスカッションに参加したりできます。
 
 ## 詳細について
 
-* [Trust Token API 技術的な Explainer](https://github.com/dvorak42/trust-token-api)
-* [トラストトークンの基礎](https://web.dev/trust-tokens/): ウェブ開発者向けの概要
-* [Chrome のオリジントライアル入門](https://web.dev/origin-trials)
-* [プライバシーサンドボックスを掘り下げる](https://web.dev/digging-into-the-privacy-sandbox)
+- [Private State Token API の技術的 Explainer](https://github.com/dvorak42/trust-token-api)
+- [Private State Tokens の基礎](https://web.dev/trust-tokens/): ウェブ開発者向けの概要
+- [Chrome のオリジントライアル入門](https://web.dev/origin-trials)
+- [プライバシーサンドボックスを掘り下げる](https://web.dev/digging-into-the-privacy-sandbox)
