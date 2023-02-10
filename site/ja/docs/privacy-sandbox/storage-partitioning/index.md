@@ -9,7 +9,7 @@ description: |2-
   サードパーティのコンテキストで通信 API からストレージを分離して、特定の種類のサイドチャネル クロスサイトトラッキングを防止します。
 authors:
   - kevinkiklee
-date: '2022-08-24'
+date: 2022-08-24
 tags:
   - privacy
 ---
