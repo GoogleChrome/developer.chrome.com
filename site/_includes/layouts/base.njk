@@ -61,20 +61,33 @@
     </script>
     {% endif %}
 
-    {# Dogfood automatic prerender origin trial #}
+    {# Dogfood document speculation rules origin trial #}
     <!-- https://deploy-preview-5216--developer-chrome-com.netlify.app origin trial token - for testing only, remove before merging -->
     <meta http-equiv="origin-trial" content="AnPT3evjaRTfw9ulDJcm9FduIu55WahnYvDXddn2429tg6toyy92jSOFuBvq3lWSTr1WUFJo3hMCj8SV9ZOZZQQAAACNeyJvcmlnaW4iOiJodHRwczovL2RlcGxveS1wcmV2aWV3LTUyMTYtLWRldmVsb3Blci1jaHJvbWUtY29tLm5ldGxpZnkuYXBwOjQ0MyIsImZlYXR1cmUiOiJTcGVjdWxhdGlvblJ1bGVzUHJlZmV0Y2hGdXR1cmUiLCJleHBpcnkiOjE2OTQxMzExOTl9">
     <!-- developer.chrome.com origin trial token - valid until 23 Mar 2023 -->
     <meta http-equiv="origin-trial" content="AhaT7AdLUbVk3M0VorYLzXSY8Km9PJZlzg3Xkv6KT2QMZ4zyqA5BfdTJLCj1TVnGhryWtQH66HWQEsIbZDUrsAwAAABseyJvcmlnaW4iOiJodHRwczovL2RldmVsb3Blci5jaHJvbWUuY29tOjQ0MyIsImZlYXR1cmUiOiJTcGVjdWxhdGlvblJ1bGVzUHJlZmV0Y2hGdXR1cmUiLCJleHBpcnkiOjE2OTQxMzExOTl9">
     {# Exlude the /articles/ section as a control #}
     <script type="speculationrules">
-    {"prerender": [
-      {"source": "document",
-        "where": {"and": [
-          {"href_matches": "/*\\?*", "relative_to": "document"},
-          {"not": {"href_matches": "/articles/*\\?*", "relative_to": "document"}}
-        ]}}
-    ]}
+    {
+      "prefetch": [
+        {
+          "source": "document",
+          "where": {
+            "and": [
+              {
+                "href_matches": "/*\\?*", "relative_to": "document"
+              },
+              {
+                "not": {
+                  "href_matches": "/articles/*\\?*",
+                  "relative_to": "document"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
     </script>
 
   </head>
