@@ -6,6 +6,7 @@ subhead: >
   New CSS color types and color spaces, CSS trigonometric functions, and the View Transitions API.
 layout: 'layouts/blog-post.njk'
 date: 2023-02-09
+update: 2023-02-10
 hero: 'image/kheDArv5csY6rvQUJDbWRscckLr1/pcXsIOqFVrZiYPjNulQf.png'
 alt: >
   Chrome 111 beta hero logo.
@@ -40,7 +41,7 @@ Extends `:nth-child(an + b)` and `:nth-last-child()` to take a selector. For exa
 
 ### CSS root font units
 
-Adds root font units:  `ex`, `ch`, `ic`, and `lh` to the existing root font unit of `rem`.
+Adds root font units:  `rex`, `rch`, `ric`, and `rlh` to the existing root font unit of `rem`.
 
 ### CSS trigonometric functions
 
