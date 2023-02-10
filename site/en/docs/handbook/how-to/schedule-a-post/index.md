@@ -33,7 +33,7 @@ The post will go live in **the next release** after the specified date, which
 might take up to 15 mins.
 
 {% Aside 'caution' %}
-In DEV mode, all posts are rendered (also drafts and future posts).
+When developing on the site using `npm run dev`, all posts are rendered (also drafts and future posts).
 {% endAside %}
 
 
