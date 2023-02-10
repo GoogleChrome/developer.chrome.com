@@ -1,7 +1,7 @@
 ---
 layout: layouts/doc-post.njk
 title: 共有ストレージ
-subhead: |2-
+subhead: >
 
   安全な環境で、パーティション化されていないクロスサイトデータへのアクセスを許可します。
 description: |2-
