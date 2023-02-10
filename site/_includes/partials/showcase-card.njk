@@ -32,6 +32,9 @@
         {{ 'i18n.common.launch_app' | i18n(locale) }}
       </a>
     {% endif %}
+    {% if item.isElectronApp %}
+      <span class="type--xsmall">(Electron.js)</span>
+    {% endif %}
     {% if item.sourceURL %}
       <a class="display-flex align-center color-primary type--small" href="{{ item.sourceURL }}" rel="noopener" target="_blank">
         {{ icon('code') }}
