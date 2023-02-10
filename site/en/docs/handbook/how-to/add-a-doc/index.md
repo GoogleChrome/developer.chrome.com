@@ -3,6 +3,8 @@ layout: 'layouts/doc-post.njk'
 title: Add a doc
 description: 'Add a doc to a documentation set.'
 date: 2020-10-22
+is_outdated: true
+new_available_content_url: /docs/handbook/how-to/add-a-blog-post/
 ---
 
 ## Clone the sample doc
