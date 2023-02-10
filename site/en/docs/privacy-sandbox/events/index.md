@@ -34,9 +34,34 @@ if you plan on participating.
 * [Attribution Reporting](https://github.com/WICG/attribution-reporting-api/tree/main/meetings): 
 announcements are also made on [this issue](https://github.com/WICG/attribution-reporting-api/issues/80)
 
-## Past events
+## Watch videos and demos from past events
+
+Below are videos and demos from some of our past events. Features worked as described at the time the videos were recorded, but details may have changed since that time.
+
+### First-Party Sets Talk with Demo - Dec. 15, 2022
 
 <iframe src="https://drive.google.com/file/d/1riGrGwP5cyz3q4IcDjV5kulOK48OJV2S/preview" width="640" height="480" allow="autoplay"></iframe>
+
+### Topics API Overview - September 6, 2022
+
+<iframe src="https://drive.google.com/file/d/1831_uKSlTwnSzYNjpp9pkDEniDA_Q9lF/preview" width="640" height="480" allow="autoplay"></iframe>
+
+### Topics API Demo - September 6, 2022
+
+<iframe src="https://drive.google.com/file/d/1dmpMKLJcGNe56M6ECRdRYhuITTv9YUDV/preview" width="640" height="480" allow="autoplay"></iframe>
+
+### Attribution Reporting Discussion - August 11, 2022
+
+<iframe src="https://drive.google.com/file/d/18RGEx_mrhDJuMsLUK1BZ0cK5FSZRAAqh/preview" width="640" height="480" allow="autoplay"></iframe>
+
+### Attribution Reporting Demo - August 11, 2022
+
+<iframe src="https://drive.google.com/file/d/1hmHoM3xyU4eLTJ1dM7_E8x-u6nZgim1O/preview" width="640" height="480" allow="autoplay"></iframe>
+
+### Intro to Attribution Reporting - June 30, 2022 
+
+<iframe src="https://drive.google.com/file/d/1EVCw6MTz3JIdkno2lICN6q7gNrmZBYGf/preview" width="640" height="480" allow="autoplay"></iframe>
+
 
 ### First-Party Sets Office Hours {: #oh06}
 
