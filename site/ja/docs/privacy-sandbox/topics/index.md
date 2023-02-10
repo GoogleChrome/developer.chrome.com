@@ -7,8 +7,8 @@ subhead: |2-
 description: |2-
 
   Topics のデモを試して、API と、フラグを使用して Topics を実行する方法、またはオリジントライアルに参加する方法について学びます。
-date: '2022-01-25'
-updated: '2022-01-30'
+date: 2022-01-25
+updated: 2022-01-30
 authors:
   - samdutton
 ---
