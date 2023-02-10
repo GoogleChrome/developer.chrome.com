@@ -117,14 +117,14 @@ This release of Chrome removes three features.
 
 ### Remove PaymentInstruments
 
-PaymentInstruments is the Web API that backs non-JIT install of payment apps (see https://w3c.github.io/payment-handler/). It was designed with the assumption that the browser would store the actual payment instrument details, which has not turned out to be true, and has some privacy leaks. It also has not shipped on any other browser, not have we seen any interest from other browser vendors. As such, this API has been deprecated and removed.
+PaymentInstruments is the Web API that backs non-JIT install of payment apps (see https://w3c.github.io/payment-handler/). It was designed with the assumption that the browser would store the actual payment instrument details, which has not turned out to be true, and has some privacy leaks. It also has not shipped on any other browser, not have we seen any interest from other browser vendors. As such, [this API has been deprecated and removed](https://web.dev/registering-a-web-based-payment-app/).
 
 ### Remove `connect-src` CSP bypass in Web Payment API
 
-Deprecate the ability for Web Payment API to bypass the `connect-src` CSP policy when fetching the manifest. After this removal, a site's `connect-src` CSP policy will need to allow for the payment method URL specified in a PaymentRequest call, as well as any other URLs that the method chains to fetch its manifest.
+[Deprecate the ability for Web Payment API to bypass the `connect-src` CSP policy when fetching the manifest](/blog/payment-handler-csp-connect-src/). After this removal, a site's `connect-src` CSP policy will need to allow for the payment method URL specified in a PaymentRequest call, as well as any other URLs that the method chains to fetch its manifest.
 
 See the infomation under origin trials for a method of opting into a deprecation trial giving more time to make required changes due to this removal.
 
 ### Merchant identity in `canmakepayment` event
 
-The `canmakepayment` service worker event lets the merchant know whether the user has a card on file in an installed payment app. It used to silently pass the merchant's origin and arbitrary data to a service worker from payment app origin. This cross-origin communication happened on PaymentRequest construction in JavaScript, did not require a user gesture, and did not show any user interface. This silent data passage has been removed from the `canmakepayment` event, and the Android `IS_READY_TO_PAY` Intent).
+The `canmakepayment` service worker event lets the merchant know whether the user has a card on file in an installed payment app. It used to silently pass the merchant's origin and arbitrary data to a service worker from payment app origin. This cross-origin communication happened on PaymentRequest construction in JavaScript, did not require a user gesture, and did not show any user interface. [This silent data passage has been removed from the `canmakepayment` event, and the Android `IS_READY_TO_PAY` Intent)](/blog/payment-handler-canmakepayment-update/).
