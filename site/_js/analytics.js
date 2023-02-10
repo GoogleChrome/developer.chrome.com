@@ -48,7 +48,7 @@ function sendToGoogleAnalytics({name, delta, id, attribution, navigationType}) {
     // See: https://web.dev/debug-web-vitals-in-the-field/
     [dimensions.WEB_VITALS_DEBUG]: webVitalInfo,
     // Override for 'navigational-prefetch' for the prefetch origin trial
-    // experiment (https://github.com/GoogleChrome/web.dev/pull/9532)
+    // experiment (https://github.com/GoogleChrome/developer.chrome.com/pull/5216)
     [dimensions.NAVIGATION_TYPE]:
       navigationType === 'navigate' &&
       performance.getEntriesByType &&
