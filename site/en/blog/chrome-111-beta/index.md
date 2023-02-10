@@ -40,7 +40,7 @@ Extends `:nth-child(an + b)` and `:nth-last-child()` to take a selector. For exa
 
 ### CSS root font units
 
-Adds root font units:  `ex`, `ch`, `ic`, and `lh` to the existing root font unit of `rem`.
+Adds root font units:  `rex`, `rch`, `ric`, and `rlh` to the existing root font unit of `rem`.
 
 ### CSS trigonometric functions
 
