@@ -1,7 +1,7 @@
 ---
 layout: layouts/blog-post.njk
 title: "[OUTDATED] First-Party Sets と SameParty 属性"
-description: |2
+description: >
 
   First-Party Sets では、ファーストパーティとサードパーティが別の物として処理される場合に、同一のエンティティが所有して運営している関連ドメイン名をファースト パーティとして扱えるようにすることができます。
 date: 2021-08-26
