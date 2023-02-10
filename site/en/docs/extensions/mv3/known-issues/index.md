@@ -5,6 +5,8 @@ seoTitle: Known issues when migrating Chrome Extensions to Manifest V3
 description: ''
 date: 2022-09-23
 updated: 2023-02-09
+tags:
+  - extensions-news
 ---
 
 {% Aside %}
