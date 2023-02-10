@@ -44,7 +44,7 @@ async function determineDeploymentType() {
     'GET',
     `pulls/${prNumber}/files?per_page=100`
   );
-  {data: changedFiles} = changedFiles.map(file => {
+  changedFiles = changedFiles.map(file => {
     return file.filename;
   });
 
