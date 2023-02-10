@@ -51,7 +51,7 @@ what the software manufacturer claims it does—nothing more or less.
 
 The TEE's code is the only place in the aggregation service which has access to
 raw reports&mdash;this code will be auditable by security researchers, privacy
-advocates, and adtechs. To confirm that the TEE is running the exact approved
+advocates, and ad techs. To confirm that the TEE is running the exact approved
 software and that data remains secured, a coordinator performs attestation.
 
 <figure>
