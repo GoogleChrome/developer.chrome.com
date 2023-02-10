@@ -34,7 +34,7 @@
     "stage": "npm run production && gcloud app deploy --project=web-dev-staging --quiet",
     "start": "node ./server",
     "test:watch": "ava --watch",
-    "pretest": "npm run sync-external && cd tests && npx rollup -c && cd e2e/fixtures && eleventy",
+    "pretest": "npm run sync-external && npx rollup -c && cd tests && npx rollup -c && cd e2e/fixtures && rimraf dist && NODE_ENV=production eleventy",
     "test": "nyc ava",
     "version-check": "npm run sync-external && node version-check.js",
     "build-external": "node ./external/build-external.js",
@@ -87,8 +87,9 @@
     "unistore": "^3.5.2",
     "uslug": "^1.0.4",
     "web-vitals": "^3.1.1",
-    "webdev-infra": "1.0.42",
-    "xss": "^1.0.14"
+    "webdev-infra": "1.0.44",
+    "xss": "^1.0.14",
+    "@mdn/browser-compat-data": "5.2.35"
   },
   "optionalDependencies": {
     "@types/cheerio": "^0.22.22",
