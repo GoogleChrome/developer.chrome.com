@@ -1,12 +1,8 @@
 ---
 layout: layouts/blog-post.njk
 title: ストレージ パーティション
-subhead: |2-
-
-  サードパーティのコンテキストで通信 API からストレージを分離して、特定の種類のサイドチャネル クロスサイトトラッキングを防止します。
-description: |2-
-
-  サードパーティのコンテキストで通信 API からストレージを分離して、特定の種類のサイドチャネル クロスサイトトラッキングを防止します。
+subhead: サードパーティのコンテキストで通信 API からストレージを分離して、特定の種類のサイドチャネル クロスサイトトラッキングを防止します。
+description: サードパーティのコンテキストで通信 API からストレージを分離して、特定の種類のサイドチャネル クロスサイトトラッキングを防止します。
 authors:
   - kevinkiklee
 date: 2022-08-24
@@ -38,13 +34,15 @@ tags:
 
 ### パーティション ストレージ有効前
 
-<figure>  {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/wOagNNjLO8LHJUn6p1iM.png", alt="パーティション化のないストレージ API の図。", width="793", height="415" %}    <figcaption>      ストレージ パーティション有効前は a.com と b.com でデータを共有可能。<br><a href="https://wd.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/wOagNNjLO8LHJUn6p1iM.png">拡大表示</a>。    </figcaption> </figure>  {% endColumn %}
+<figure>  {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/wOagNNjLO8LHJUn6p1iM.png", alt="パーティション化のないストレージ API の図。", width="793", height="415" %}    <figcaption>      ストレージ パーティション有効前は a.com と b.com でデータを共有可能。<br><a href="https://wd.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/wOagNNjLO8LHJUn6p1iM.png">拡大表示</a>。    </figcaption> </figure>  
+{% endColumn %}
 
-{% Columns %}
+{% Column %}
 
 ### パーティション ストレージ後
 
-<figure>   {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/X8tExxdcoVSE4P1bUKQJ.png", alt="パーティション化によるストレージ API の図。", width="800", height="553" %}     <figcaption>       ストレージ パーティション有効後は b.com は a.com のストレージにアクセスできなくなる。<br><a href="https://wd.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/X8tExxdcoVSE4P1bUKQJ.png">拡大表示</a>。     </figcaption> </figure>  {% endColumn %}
+<figure>   {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/X8tExxdcoVSE4P1bUKQJ.png", alt="パーティション化によるストレージ API の図。", width="800", height="553" %}     <figcaption>       ストレージ パーティション有効後は b.com は a.com のストレージにアクセスできなくなる。<br><a href="https://wd.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/X8tExxdcoVSE4P1bUKQJ.png">拡大表示</a>。     </figcaption> </figure>  
+{% endColumn %}
 
 {% endColumns %}
 

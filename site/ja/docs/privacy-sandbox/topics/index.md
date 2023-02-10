@@ -579,7 +579,7 @@ colab（colaboratory）は、コード、出力、および説明テキストを
 
 1. `chrome://topics-internals` ページの **分類器**タブから、Topics API で使用される `.tflite` ファイルのディレクトリパスを取得します。[オーバーライドリスト](#manually-curated)の `.pb.gz` ファイルは同じディレクトリにあります。
 
-{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/txujKqPgnQdbwmTfdPZT.png", alt="［分類器］パネルが選択されており、tflite のファイルパスがハイライトされている chrome://topics-internal ページ。", width="800", height="696" % }
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/txujKqPgnQdbwmTfdPZT.png", alt="［分類器］パネルが選択されており、tflite のファイルパスがハイライトされている chrome://topics-internal ページ。", width="800", height="696" %}
 
 1. [colab](https://colab.research.google.com/drive/1hIVoz8bRCTpllYvads51MV7YS3zi3prn) を開き、フォルダアイコンをクリックします。
 

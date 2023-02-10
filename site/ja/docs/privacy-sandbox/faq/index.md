@@ -166,7 +166,7 @@ Chrome DevTools では、[ネットワーク] タブと [アプリケーショ�
 - 現在 Chrome でテストできる実装に関する質問については、[Chromium のバグを報告](https://bugs.chromium.org/p/chromium/issues/list?q=fledge)してください。
 - 実装、統合、一般的なベスト プラクティスに関する質問がある場合は、「プライバシー サンドボックス デベロッパー サポート」リポジトリで[イシューを作成](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)してください。
 
-### この機能について質問するにはどうすればよいですか？
+### FLEDGE と TURTLEDOVE の違い
 
 [FLEDGE](/docs/privacy-sandbox/fledge) は、[TURTLEDOVE](https://github.com/WICG/turtledove) ファミリの提案の中でも Chromium に実装された最初の実験です。違いは主に、広告のバイヤーとセラーのデバイス上のロールの分離に関連しています。
 
