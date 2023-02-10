@@ -33,7 +33,7 @@ This trial is available due to a need for some sites to migrate their Firebase
 Starting in [Chrome 111 Beta](https://chromiumdash.appspot.com/schedule), we'll
 open up two deprecation trials:
 
-1.  [`DisableThirdPartyStoragePartitioning`](https://developer.chrome.com/origintrials/#/view_trial/-8517432795264450559):
+1.  [`DisableThirdPartyStoragePartitioning`](/origintrials/#/view_trial/-8517432795264450559):
     allows a top-level site to unpartition (temporarily remove isolation by
     top-level site) in storage, service workers, and communication APIs in
     third-party content embedded on its pages.
