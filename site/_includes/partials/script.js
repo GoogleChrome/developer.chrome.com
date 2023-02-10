@@ -40,9 +40,9 @@
   );
   try {
     // For the document speculation rules origin trial
-    // overrwrite the navigation type
-    const navEntry = performance.getEntriesByType('navigation')[0];
-    const navigationType = (navEntry.type =
+    // overwrite the navigation type
+    const navEntry = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+    const navigationType = (navEntry.type ===
       'navigate' && navEntry.deliveryType === 'navigational-prefetch'
         ? 'navigational-prefetch'
         : navEntry.type.replace(/_/g, '-'));

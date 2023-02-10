@@ -51,6 +51,7 @@ function sendToGoogleAnalytics({name, delta, id, attribution, navigationType}) {
     // experiment (https://github.com/GoogleChrome/web.dev/pull/9532)
     [dimensions.NAVIGATION_TYPE]:
       navigationType === 'navigate' &&
+      performance.getEntriesByType &&
       performance.getEntriesByType('navigation')[0].deliveryType ===
         'navigational-prefetch'
         ? 'navigational-prefetch'
