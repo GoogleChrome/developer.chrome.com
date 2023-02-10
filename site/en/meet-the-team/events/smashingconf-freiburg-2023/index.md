@@ -1,7 +1,7 @@
 ---
 title: SmashingConf Freiburg 2023
 summary: >-
-  The 11th SmashingConf Freiburg - all about front-end, UX and design - for
+  The 11th SmashingConf Freiburg—all about front-end, UX and design—for
   front-end developers and designers. With adventures into design systems,
   accessibility, CSS, JavaScript, web performance and cutting-edge techniques.
 image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/9Paz0GyJW9AgEVtmc4yN.jpg
