@@ -1,7 +1,7 @@
 ---
 title: Selenium Conference
 summary: >-
-  SeleniumConf brings together Selenium and WebDriver ecosystem developers &
+  SeleniumConf brings together Selenium and WebDriver ecosystem developers and
   enthusiasts from around the world to share ideas, socialize, and work together
   on advancing the present and future success of the project and automated
   testing.
