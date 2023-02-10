@@ -1,8 +1,8 @@
 ---
 title: City JS London 2023
 summary: >-
-  A JavaScript festival focused on JS frameworks, NodeJS,
-  TypeScript, Testing, and more.
+  A JavaScript festival focused on JavaScript frameworks, NodeJS,
+  TypeScript, testing, and more.
 image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/6mj7t7rHxZ5Vs31fWoSs.jpg
 location: London, UK
 date: 2023-03-28
