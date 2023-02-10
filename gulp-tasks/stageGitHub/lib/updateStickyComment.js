@@ -40,8 +40,4 @@ async function updateStickyComment(prNumber, body) {
   }
 }
 
-(async () => {
-  await updateStickyComment(5128, 'Hello world, sticky?');
-})();
-
 module.exports = {updateStickyComment};
