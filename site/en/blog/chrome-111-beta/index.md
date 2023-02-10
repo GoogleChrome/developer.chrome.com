@@ -65,7 +65,7 @@ Chrome 111 adds `window-management` as an alias for `window-placement` permissio
 
 Adds `previousslide` and `nextslide` actions to the existing Media Session API. 
 
-### `Resizable ArrayBuffer` and growable `SharedArrayBuffer`
+### Resizable `ArrayBuffer` and growable `SharedArrayBuffer`
 
 Extend the `ArrayBuffer` constructors to take an additional maximum length that allows in-place growth and shrinking of buffers. Similarly, `SharedArrayBuffer` is extended to take an additional maximum length that allows in-place growth. 
 
