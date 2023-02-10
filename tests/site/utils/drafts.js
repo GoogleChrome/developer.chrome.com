@@ -30,7 +30,7 @@ test('isScheduledForFuture throws if now is not a date', t => {
     {instanceOf: Error}
   );
 
-  t.is(error.message, 'argument <now> must by a Date object.');
+  t.is(error.message, 'argument <now> must be a Date object.');
 });
 
 test('isScheduledForFuture returns false if date is earlier than now', t => {
