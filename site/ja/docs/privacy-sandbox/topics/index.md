@@ -4,7 +4,7 @@ title: 'Topics API: 開発者ガイド'
 subhead: >
 
   Topics のデモを試して、API と、フラグを使用して Topics を実行する方法、またはオリジントライアルに参加する方法について学びます。
-description: |2-
+description: >
 
   Topics のデモを試して、API と、フラグを使用して Topics を実行する方法、またはオリジントライアルに参加する方法について学びます。
 date: 2022-01-25
