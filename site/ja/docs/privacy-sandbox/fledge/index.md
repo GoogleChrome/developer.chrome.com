@@ -1,12 +1,8 @@
 ---
 layout: layouts/doc-post.njk
 title: FLEDGE
-subhead: |2-
-
-  クロスサイトサードパーティトラッキングを使わずにリマーケティングとカスタムオーディエンスにサービスを提供するオンデバイス広告オークション。
-description: |2-
-
-  サードパーティがサイト間でユーザーのブラウジング行動を追跡できないように過去にアクセスしたウェブサイトから関連する広告を選択するように設計された、オンデバイス広告オークションの提案。
+subhead: クロスサイトサードパーティトラッキングを使わずにリマーケティングとカスタムオーディエンスにサービスを提供するオンデバイス広告オークション。
+description: サードパーティがサイト間でユーザーのブラウジング行動を追跡できないように過去にアクセスしたウェブサイトから関連する広告を選択するように設計された、オンデバイス広告オークションの提案。
 date: 2022-01-27
 updated: 2022-08-23
 authors:
@@ -40,7 +36,13 @@ FLEDGE は、 [TURTLEDOVE](https://github.com/WICG/turtledove) ファミリー�
 
 FLEDGE の詳細な概要については、[FLEDGE API 開発者ガイド](/docs/privacy-sandbox/fledge-api/)を参照してください。
 
-<figure class="w-figure">   {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/zXKEk8OymLJp6KpOwwbk.png", alt="FLEDGE ライフサイクルの各ステージの概要",   width="800", height="366" %}   <figcaption class="w-figcaption">     FLEDGE のライフサイクル: <a href="https://wd.imgix.net/image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/zXKEk8OymLJp6KpOwwbk.png?auto=format&amp;w=1600" title="クリックすると、画像の拡大版が表示されます" target="_blank">拡大表示</a>。   </figcaption></figure>
+<figure class="w-figure">
+  {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/zXKEk8OymLJp6KpOwwbk.png", alt="FLEDGE ライフサイクルの各ステージの概要",
+  width="800", height="366" %}
+  <figcaption class="w-figcaption">
+    FLEDGE のライフサイクル: <a href="https://wd.imgix.net/image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/zXKEk8OymLJp6KpOwwbk.png?auto=format&amp;w=1600" title="クリックすると、画像の拡大版が表示されます" target="_blank">拡大表示</a>。
+  </figcaption>
+</figure>
 
 FLEDGE では、「[インタレストグループ](#interest-group-detail)」を使用することで、サイトがユーザーに関連する広告を表示できるようになっています。
 
@@ -94,7 +96,7 @@ FLEDGE の機能は、徐々に追加される予定です。[オリジントラ
 
 - [fledge-demo.glitch.me](https://fledge-demo.glitch.me/) には、広告主とサイト運営者サイトにまたがる基本的な FLEDGE デプロイメントのウォークスルーが提供されています。
 
-    - [FLEDGE デモ動画](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv)では、デモコードがどのように動作するかを説明し、FLEDGE のデバッグに Chrome DevTools を使用する方法を示しています。
+- [FLEDGE デモ動画](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv)では、デモコードがどのように動作するかを説明し、FLEDGE のデバッグに Chrome DevTools を使用する方法を示しています。
 
 {% YouTube id='znDD0gkdJyM' %}
 
@@ -263,9 +265,11 @@ FLEDGE では、広告スペースの[セラー](/docs/privacy-sandbox/glossary/
 
 {: #auction-diagram}
 
-以下の図は、FLEDGE の<a href="https://wd.imgix.net/image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/M8lyXt6JbwFncB16mTb0.png?auto=format&amp;w=1600" title="クリックすると、画像の拡大版が表示されます" target="_blank">広告オークション</a>の各ステージの概要を示しています（<a>拡大表示</a>）。
+以下の図は、FLEDGE の<a href="https://wd.imgix.net/image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/M8lyXt6JbwFncB16mTb0.png?auto=format&w=1600" title="クリックすると、画像の拡大版が表示されます" target="_blank">広告オークション</a>の各ステージの概要を示しています（<a>拡大表示</a>）。
 
-<figure class="w-figure">   {% Img     src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/M8lyXt6JbwFncB16mTb0.png",     alt="FLEDGE 広告オークションの 6 つのステージ",     width="800", height="481"     %}</figure>
+<figure class="w-figure">   
+{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/M8lyXt6JbwFncB16mTb0.png", alt="FLEDGE 広告オークションの 6 つのステージ", width="800", height="481" %}
+</figure>
 
 <br>
 
@@ -285,9 +289,12 @@ FLEDGE では、広告オークションは、広告を選択するためにブ�
 
 5. 落札した広告は opaque 値として返され、Fenced Frame<br> に表示されます。セラーとサイト運営者のいずれもこの値を閲覧できなくなります。
 
-6. オークションは、セラーと落札したバイヤーに報告されます。{% Aside %} セラーの `reportResult()` とバイヤーの `reportWin()` には、`sendReportTo()` の呼び出しを含めることができます。これは、[非公開集計](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#5-event-level-reporting-for-now)で集計レポートが利用可能になるまで、[一時的](/docs/privacy-sandbox/private-aggregation)に利用できます。
+6. オークションは、セラーと落札したバイヤーに報告されます。
+    {% Aside %}
+    セラーの `reportResult()` とバイヤーの `reportWin()` には、`sendReportTo()` の呼び出しを含めることができます。これは、[非公開集計](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#5-event-level-reporting-for-now)で集計レポートが利用可能になるまで、[一時的](/docs/privacy-sandbox/private-aggregation)に利用できます。
 
-    落札できなかったバイヤーのレポートメカニズムは[ディスカッション中](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#53-losing-bidder-reporting)です {% endAside %}
+    落札できなかったバイヤーのレポートメカニズムは[ディスカッション中](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#53-losing-bidder-reporting)です
+    {% endAside %}
 
 {% endDetails %}
 
