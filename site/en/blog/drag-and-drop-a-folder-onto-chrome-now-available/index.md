@@ -22,12 +22,12 @@ Let’s look at a code sample of existing drag and drop.
 ```
 
 ```js
-var dropzone = document.getElementById('dropzone');
-dropzone.ondrop = function(e) {
-    var length = e.dataTransfer.files.length;
+const dropzone = document.getElementById('dropzone');
+dropzone.ondrop = (e) => {
+    const length = e.dataTransfer.files.length;
     for (var i = 0; i < length; i++) {
-    var file = e.dataTransfer.files[i];
-    ... // do whatever you want
+        const file = e.dataTransfer.files[i];
+        // do whatever you want
     }
 };
 ```
@@ -44,17 +44,17 @@ Chrome 21 allows you to drop a folder or multiple folders into the browser windo
 ```
 
 ```js
-var dropzone = document.getElementById('dropzone');
-dropzone.ondrop = function(e) {
-    var length = e.dataTransfer.items.length;
-    for (var i = 0; i < length; i++) {
-    var entry = e.dataTransfer.items[i].webkitGetAsEntry();
-    if (entry.isFile) {
-        ... // do whatever you want
-    } else if (entry.isDirectory) {
-        ... // do whatever you want
-    }
-    }
+const dropzone = document.getElementById('dropzone');
+dropzone.ondrop = (e) => {
+        const length = e.dataTransfer.items.length;
+        for (var i = 0; i < length; i++) {
+            const entry = e.dataTransfer.items[i].webkitGetAsEntry();
+            if (entry.isFile) {
+                // do whatever you want
+            } else if (entry.isDirectory) {
+                // do whatever you want
+            }
+        }
 };
 ```
 
