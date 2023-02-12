@@ -10,7 +10,7 @@ authors:
   - kevinkiklee
 ---
 
-Permissions Policy, formerly known as Feature Policy, allows the developer to control the browser features available to a page, its iframes, and subresources, by declaring a set of policies for the browser to enforce. These policies are applied to origins provided in a response header origin list. The origin list can contain same-origins and/or cross-origins, and it allows the developer to control first-party and third-party access to browser features.
+以前は機能ポリシー (Feature Policy) と呼ばれていた権限ポリシー (Permissions Policy) を使用すると、開発者は、ブラウザが適用する一連のポリシーを宣言することにより、ページ、その iframe、およびサブリソースで使用できるブラウザ機能を制御できます。これらのポリシーは、レスポンスヘッダーのオリジンリストで提供されるオリジンに適用されます。オリジンリストには、同一オリジンやクロスオリジンを含めることができ、開発者はブラウザ機能へのファーストパーティとサードパーティのアクセスを制御できます。
 
 より強力な機能へのアクセスを許可する最終決定権はユーザーにあり、プロンプトを介して明示的な許可を与える必要があります。
 
