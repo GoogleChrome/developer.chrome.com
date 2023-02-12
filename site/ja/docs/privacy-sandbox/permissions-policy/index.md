@@ -135,7 +135,7 @@ Key-Value ペアの例を以下に示します。
 
 クロスオリジンを使用する場合、iframe が機能にアクセスするには、そのタグに `allow` 属性が必要です。
 
-Syntax: `<iframe src="[ORIGIN]" allow="[FEATURE] <'src' | [ORIGIN(s)]"></iframe>`
+構文: `<iframe src="[ORIGIN]" allow="[FEATURE] <'src' | [ORIGIN(s)]"></iframe>`
 
 たとえば、次のようになります。
 
@@ -346,4 +346,4 @@ Document-Policy: document-write=?0; report-to=main-endpoint;
 
 - [権限ポリシーの仕様](https://www.w3.org/TR/permissions-policy-1/)
 - [権限ポリシーの Explainer](https://github.com/w3c/webappsec-permissions-policy/blob/main/permissions-policy-explainer.md)
-- A list of [policy-controlled features](https://github.com/w3c/webappsec-permissions-policy/blob/main/features.md).
+- [ポリシーで制御される機能](https://github.com/w3c/webappsec-permissions-policy/blob/main/features.md)のリスト。
