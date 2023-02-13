@@ -123,15 +123,12 @@ import './web-components/enhanced-select';
         const pngBlob = await imageToPNG(blob);
         const file = new File([pngBlob], fileName);
 
-        const iJustFoundTheApp = document
-          .querySelector('#i_just_found_the_app')
-          .textContent.trim();
-        const itUsesTheseFuguAPIs = document
-          .querySelector('#it_uses_these_fugu_apis')
-          .textContent.trim();
-        const viaTheFuguShowcase = document
-          .querySelector('#via_the_fugu_showcase')
-          .textContent.trim();
+        const fuguShowcaseI18N = JSON.parse(
+          document.querySelector('#fugu-showcase-i18n').textContent
+        );
+        const iJustFoundTheApp = fuguShowcaseI18N.i_just_found_the_app;
+        const itUsesTheseFuguAPIs = fuguShowcaseI18N.it_uses_these_fugu_apis;
+        const viaTheFuguShowcase = fuguShowcaseI18N.via_the_fugu_showcase;
 
         const shareData = {
           files: [file],
