@@ -38,7 +38,7 @@ The snippet below shows how to use the picture-in-picture class to add a message
 #video-container:has(video:picture-in-picture)::before {
   bottom: 36px;
   color: #ddd;
-  content: 'Video is now playing in a Picture-in-Picture window';
+  content: '';
   position: absolute;
   right: 36px;
 }
