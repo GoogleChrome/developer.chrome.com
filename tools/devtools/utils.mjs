@@ -1,5 +1,4 @@
 import {readFile, writeFile, mkdir} from 'fs/promises';
-// eslint-disable-next-line node/no-extraneous-import
 import nunjucks from 'nunjucks';
 import {Octokit} from 'octokit';
 import {dirname} from 'path';
