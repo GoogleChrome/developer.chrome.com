@@ -15,7 +15,7 @@ This feature was previously called "Shared Element Transitions", and is sometime
 
 The View Transition API makes it easy to change the DOM in a single step, while creating an animated transition between the two states.
 
-It's currently behind the `chrome://flags/#view-transition` flag in Chrome 109+.
+It's available in Chrome 111+, currently in beta.
 
 <style>
   .video-full-demo {
@@ -33,7 +33,7 @@ It's currently behind the `chrome://flags/#view-transition` flag in Chrome 109+.
     muted="true",
     controls="true"
   %}
-  <figcaption>Transitions created with the View Transition API. <a href="https://http203-playlist.netlify.app/">Try the demo site</a> – Requires Chrome 109+ and the <code>chrome://flags/#view-transition</code> flag.</figcaption>
+  <figcaption>Transitions created with the View Transition API. <a href="https://http203-playlist.netlify.app/">Try the demo site</a> – Requires Chrome 111+.</figcaption>
 </figure>
 
 ## Why do we need this feature?
