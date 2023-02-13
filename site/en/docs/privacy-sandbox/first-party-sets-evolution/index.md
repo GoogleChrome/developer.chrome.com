@@ -251,17 +251,17 @@ proposal.
 Chrome is developing first-party sets to align with many of our use cases, like preserving use journeys. This demonstrates to us that the Google team is working to understand the different types of needs of site owners across the web.
 {% endBlockquote %}
 
-{% Blockquote 'Nitish Mittal, Director of Engineering, VWO' %}
-At VWO, we appreciate Google's efforts to elevate privacy standards, while ensuring that genuine use cases are handled. It's great that the team is collaborating with the developer ecosystem, and is constantly improving the implementation of the first-party sets proposal based upon the feedback from web stakeholders. We are excited about being a part of the testing journey of the proposal and looking forward to its incorporation into the browser.
-{% endBlockquote %}
-
 We recognize that web ecosystem stakeholders are still familiarizing themselves
 with the updated proposal. Please engage with us so we can continue to improve
 the design in a manner that is more useful for developers and continues to
 improve privacy on the web. Google will also continue working with the UK's
 Competition and Markets Authority (CMA) to ensure compliance with the Commitments.
 
-Engage here:
+{% Blockquote 'Nitish Mittal, Director of Engineering, VWO' %}
+At VWO, we appreciate Google's efforts to elevate privacy standards, while ensuring that genuine use cases are handled. It's great that the team is collaborating with the developer ecosystem, and is constantly improving the implementation of the first-party sets proposal based upon the feedback from web stakeholders. We are excited about being a part of the testing journey of the proposal and looking forward to its incorporation into the browser.
+{% endBlockquote %}
+
+To engage check out the following resources:
 
 -   Incubation in [WICG](https://github.com/WICG/first-party-sets/issues)
 -   [FPS testing instructions](/blog/first-party-sets-testing-instructions/)
