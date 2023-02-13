@@ -4,6 +4,7 @@ description: >
   Chrome 110 is rolling out now! Add custom style to your picture-in-picture elements with the new :picture-in-picture pseudo-class, set your web app launch behavior with launch_handler, use the credentialless attribute in iframes to embed third party content that doesn’t set a cross origin embedder policy and there’s plenty more.
 layout: 'layouts/blog-post.njk'
 date: 2023-02-07
+updated: 2023-02-08
 authors:
   - ajara
 hero: 'image/SeARmcA1EicLXagFnVOe0ou9cqK2/jJI6JaytfRglmVkUULRm.png'
@@ -27,7 +28,7 @@ I’m Adriana Jara. Let’s dive in and see what’s new for developers in Chrom
 
 
 ## :picture-in-picture pseudo class {: #pip }
-With the [picture in picture API](https://developer.mozilla.org/docs/Web/API/Picture-in-Picture_API) websites can create a floating video window, always on top so that users continue consuming media, while interacting with other content.
+With the [Picture-in-Picture API](https://developer.mozilla.org/docs/Web/API/Picture-in-Picture_API) websites can create a floating video window, always on top so that users continue consuming media, while interacting with other content.
 
 Now with the [`:picture-in-picture` css pseudo-class](https://developer.mozilla.org/docs/Web/CSS/:picture-in-picture) you can add styles to the elements to improve the experience.
 
@@ -45,7 +46,7 @@ The snippet below shows how to use the picture-in-picture class to add a message
 
 Use the pseudo-class again on the video element, to make the element transparent to display the message correctly.
 
-Play with [the example](https://googlechrome.github.io/samples/picture-in-picture/) and improve your picture-in-picture video experiences.
+Play with [the example](https://googlechrome.github.io/samples/picture-in-picture/css-pseudo-class) and improve your picture-in-picture video experiences.
 
 ## launch_handler manifest member. {: #launch-handler }
 
@@ -87,7 +88,7 @@ Web SQL is now removed in non-secure contexts.
 
 The CSS [`initial-letter` property](https://developer.mozilla.org/docs/Web/CSS/initial-letter) provides a way to set the number of lines that an initial-letter should sink into following lines of text.
 
-FileSystemHandle now includes a [`remove()` method](https://developer.mozilla.org/docs/Web/API/FileSystemHandle/remove)
+FileSystemHandle now includes a [`remove()` method](https://developer.mozilla.org/docs/Web/API/FileSystemHandle/remove).
 
 ## Further reading
 
@@ -96,7 +97,7 @@ additional changes in Chrome 110.
 
 * [What's new in Chrome DevTools (110)](/blog/new-in-devtools-110/)
 * [Chrome 110 deprecations and removals](/blog/deps-rems-110/)
-* [ChromeStatus.com updates for Chrome 110](https://www.chromestatus.com/features#milestone%3D108)
+* [ChromeStatus.com updates for Chrome 110](https://www.chromestatus.com/features#milestone%3D110)
 * [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/109.0.5414.128..110.0.5481.9)
 * [Chrome release calendar](https://chromiumdash.appspot.com/schedule)
 
