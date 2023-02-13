@@ -1,80 +1,62 @@
 const {html} = require('common-tags');
-const fetch = require('node-fetch/lib/index');
-const API_KEY = 'AIzaSyAzOX6K8IXsxPwQ0rgW7QgJPndroPOiWfc';
-const MAX_RESULTS = 50;
-const PART = 'snippet';
+
+const playlistsData = require('../_data/youtubePlaylists');
 
 /** Renders a a YouTube playlist widget
  * @param {string} playlistId is a YouTube playlist id
  */
+
+async function getPlaylistData(id){
+  let playlists = await playlistsData();
+  let playlistResult = [];
+  let channelResult = []
+  
+  playlistResult = playlists?.playlists.filter(playlist => {return playlist.id === id});
+  if(playlistResult){  
+    channelResult = playlists?.channels.filter(channel => {
+    return channel.id === playlistResult[0]?.channel;
+  });}
+
+
+  return({
+    playlist: playlistResult[0],
+    channel: channelResult[0]
+  })
+}
+
+
+
 async function Playlist(playlistId) {
   let videoNumber = 1;
   let videoTotal = 0;
 
   // Set some empty variables to populate
-  let channelId = '';
-  let channelName = '';
-  let channelThumb = '';
-  let playlistName = '';
-  let playlistFirstVideo = '';
-  let playlistThumb = '';
-  let playlistUpdated = '';
+  
   let playlistHtml = '';
 
-  /*
-    Playlist Information
-  */
-  await fetch(
-    `https://youtube.googleapis.com/youtube/v3/playlists?part=${PART}&id=${playlistId}&key=${API_KEY}`
-  )
-    .then(res => res.json())
-    .then(playlistResult => {
-      if (playlistResult.items.length > 0) {
-        channelId = playlistResult.items[0].snippet.channelId;
-        playlistName = playlistResult.items[0].snippet.title;
-        playlistThumb = playlistResult.items[0].snippet.thumbnails.medium.url;
-        playlistUpdated = new Date(
-          playlistResult.items[0].snippet.publishedAt
-        ).toLocaleDateString('en-us', {
+
+  let playlistData = await getPlaylistData(playlistId);
+  let channelId = playlistData?.channel?.id
+  let channelName = playlistData?.channel?.name
+  let channelThumb = playlistData?.channel?.thumbnail;
+  let playlistFirstVideo = playlistData?.playlist?.videos[0].id;
+  let playlistName = playlistData?.playlist?.title;
+  let playlistThumb = playlistData?.playlist?.thumbnail;
+  let playlistUpdated = new Date(playlistData?.playlist?.updated).toLocaleDateString('en-us', {
           weekday: 'long',
           year: 'numeric',
           month: 'short',
           day: 'numeric',
         });
-      } else {
-        return false;
-      }
+  
+  playlistData?.playlist?.videos.forEach(video => {
+    playlistHtml += getVideoHtml(video, videoNumber, channelName);
 
-      // Next Call: Query Channel Information
-      return fetch(
-        `https://youtube.googleapis.com/youtube/v3/channels?part=${PART}&id=${channelId}&key=${API_KEY}`
-      );
-    })
-    .then(res => res.json())
-    .then(channelResult => {
-      channelName = channelResult.items[0].snippet.title;
-      channelThumb = channelResult.items[0].snippet.thumbnails.medium.url;
+    videoNumber++;
+    videoTotal++;
+  });
 
-      // Next Call: Query Channel Information
-      return fetch(
-        `https://youtube.googleapis.com/youtube/v3/playlistItems?part=${PART}&playlistId=${playlistId}&MAX_RESULTS${MAX_RESULTS}&key=${API_KEY}`
-      );
-    })
-    .then(res => res.json())
-    .then(videosResult => {
-      playlistFirstVideo = videosResult.items[0].snippet.resourceId.videoId;
-      videosResult.items.forEach(video => {
-        playlistHtml += getVideoHtml(video, videoNumber);
-
-        videoNumber++;
-        videoTotal++;
-      });
-    })
-    .catch(error => {
-      console.error(error);
-    });
-
-  return getChannelHtml(
+  let result = getChannelHtml(
     playlistThumb,
     playlistName,
     playlistFirstVideo,
@@ -86,21 +68,23 @@ async function Playlist(playlistId) {
     channelId,
     playlistHtml
   );
+
+  return result
+  
 }
 
-function getVideoHtml(video, videoNumber) {
+function getVideoHtml(video, videoNumber, channelTitle) {
   return html`<div class="playlist-video">
     <div class="playlist-video__number">${videoNumber}</div>
 
     <div class="playlist-video--content">
       <a
-        href="https://www.youtube.com/watch?v=${video.snippet.resourceId
-          .videoId}"
+        href="https://www.youtube.com/watch?v=${video.id}"
         target="_blank"
       >
         <div class="playlist-video__thumbnail">
           <img
-            src="${video.snippet.thumbnails.medium.url}"
+            src="${video.thumbnail}"
             height="114"
             width="204"
             alt="Thumbnail"
@@ -111,14 +95,13 @@ function getVideoHtml(video, videoNumber) {
 
       <div class="playlist-video__details">
         <a
-          href="https://www.youtube.com/watch?v=${video.snippet.resourceId
-            .videoId}"
+          href="https://www.youtube.com/watch?v=${video.id}"
           class="no-visited"
           target="_blank"
         >
-          <h4 class="playlist-video__title">${video.snippet.title}</h4>
+          <h4 class="playlist-video__title">${video.title}</h4>
         </a>
-        <p>${video.snippet.channelTitle}</p>
+        <p>${channelTitle}</p>
       </div>
     </div>
   </div>`;
