@@ -91,46 +91,6 @@ jobs:
         run: |
           npm run test
 
-  stage:
-    needs: queue
-    runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      PR_HEAD_COMMIT_SHA: ${{ github.event.pull_request.head.sha }}
-      PR_NUMBER: ${{ github.event.number }}
-    steps:
-      - name: Posting announcement
-        uses: marocchino/sticky-pull-request-comment@v2
-        with:
-          message: |
-            Staging build in progress ...
-
-      - name: Cloning repository
-        uses: actions/checkout@v3
-
-      - name: Setting up Node.js
-        uses: actions/setup-node@v3
-        with:
-          cache: npm
-          node-version: 16
-
-      - name: Installing Node.js packages
-        run: npm ci
-
-      - name: Staging
-        id: staging
-        run: |
-          npm run stage:github -- determineDeploymentType
-          npm run stage:github -- awaitGoogleCloudBuild
-          npm run stage:github -- buildAnnouncementComment
-
-      - name: Posting announcement
-        uses: marocchino/sticky-pull-request-comment@v2
-        with:
-          path: gulp-tasks/stageGitHub/tmp/announcement.md
-
   build:
     needs: queue
     runs-on: ubuntu-latest
