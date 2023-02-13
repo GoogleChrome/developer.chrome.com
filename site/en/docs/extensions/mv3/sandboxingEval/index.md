@@ -2,11 +2,10 @@
 layout: "layouts/doc-post.njk"
 title: "Using eval in Chrome extensions"
 date: 2012-09-18
-updated: 2014-05-22
+updated: 2023-02-06
 description: How to use eval() in a Chrome Extension.
 ---
 
-{% Partial 'extensions/mv2page-in-mv3.md' %}
 
 Chrome's extension system enforces a fairly strict default [**Content Security Policy (CSP)**][1].
 The policy restrictions are straightforward: script must be moved out-of-line into separate
