@@ -16,7 +16,7 @@ draft: true
 
 *翻訳者の [technohippy](https://github.com/technohippy) さん、レビュアーの [yoichiro](https://github.com/yoichiro) さん、 [lacolaco](https://github.com/lacolaco) さん、 [yoshiko-pg](https://github.com/yoshiko-pg) さんに感謝いたします。*
 
-% Partial 'devtools/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 <!-- Translation instructions:
   1. Remove the "draft: true" tag above when submitting PR

@@ -16,7 +16,7 @@ draft: true
 
 *Переводы предоставлены [Alena Batitskaia](https://twitter.com/ABatickaya). Редактор — [Maxim Salnikov](https://twitter.com/webmaxru).*
 
-% Partial 'devtools/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 <!-- Translation instructions:
   1. Remove the "draft: true" tag above when submitting PR
