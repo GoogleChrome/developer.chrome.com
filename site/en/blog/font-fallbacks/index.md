@@ -27,7 +27,7 @@ If you’d prefer to skip reading this article, these are some of the tools that
 
 ## Background
 
-A fallback font is a font face that is used when the primary font face is not loaded yet, or is missing [glyphs](https://fonts.google.com/knowledge/glossary/glyph) necessary to render page content. For example, the CSS below indicates that the `sans-serif` font family should be used as the font fallback for `Roboto`.
+A fallback font is a font face that is used when the primary font face is not loaded yet, or is missing [glyphs](https://fonts.google.com/knowledge/glossary/glyph) necessary to render page content. For example, the CSS below indicates that the `sans-serif` font family should be used as the font fallback for `"Roboto"`.
 
 ```css
 font-family: "Roboto" , sans-serif;
