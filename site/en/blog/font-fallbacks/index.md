@@ -487,11 +487,8 @@ AvgCharWidth:
 }
 
 {% Aside %}
-
-There are other local fonts that can be used as font fallbacks—but doing so requires knowing a user’s operating system. For example, `Calibri`, `Lucinda Sans`, and `Impact` are fonts that are all widely available on Windows—but not on other operating systems.
-
+There are other local fonts that can be used as font fallbacks—but doing so requires knowing a user’s operating system. For example, `"Calibri"`, `"Lucinda Sans"`, and `"Impact"` are fonts that are all widely available on Windows—but not on other operating systems.
 {% endAside %}
-
 
 ## Request for feedback
 
