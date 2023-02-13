@@ -293,7 +293,7 @@ Because of how `size-adjust` is calculated (which is explained in the next secti
 
 ```css/7-10,16-19
 body {
-  font-family: Poppins, "fallback for Poppins", "another fallback for Poppins";
+  font-family: "Poppins", "fallback for Poppins", "another fallback for Poppins";
 }
 
 @font-face {
