@@ -400,5 +400,5 @@ involved in the [standardization effort].
 [jennifer apacible]: https://twitter.com/japacible
 [media session api]: https://web.dev/media-session
 [audio playlist sample]: https://googlechrome.github.io/samples/picture-in-picture/audio-playlist
-[new web api]: https://github.com/steimelchrome/document-pip-explainer/blob/main/explainer.md
+[new web api]: /docs/web-platform/document-picture-in-picture/
 [mdn]: https://developer.mozilla.org/docs/Web/API/Picture-in-Picture_API#browser_compatibility

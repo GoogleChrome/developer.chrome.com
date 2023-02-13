@@ -6,16 +6,21 @@ authors:
   - lyf
 description: Chrome is deprecating access to private network endpoints from non-secure public websites in Chrome 94 as part of the Private Network Access specification. Read on for recommended actions.
 date: 2021-08-26
-updated: 2022-08-12
+updated: 2023-02-02
 hero: image/YLflGBAPWecgtKJLqCJHSzHqe2J2/dwtN0NkxkBmIz1EyhzAm.jpg
 alt: A private sign in German
 tags:
   - chrome-94
+  - chrome-113
+  - security
 ---
 
 **Updates**
 
-- **August 12, 2022**: The  timeline has been updated, and deprecation
+- **January 19, 2023**: The timeline has been updated, and deprecation
+   will not occur until Chrome 113.
+
+- **August 12, 2022**: The timeline has been updated, and deprecation
    will not occur until Chrome 109.
 
 - **February 10, 2022**: An updated article is published at [Private Network
@@ -37,7 +42,7 @@ Chrome will introduce the following changes:
 * Blocking requests to private networks from insecure public websites starting in
   Chrome 94.
 * Introducing a [deprecation trial](#whats-deprecation-trial) which will end in Chrome
-  109. It will allow developers to request a time extension for chosen origins,
+  113. It will allow developers to request a time extension for chosen origins,
   which will not be affected during the deprecation trial.
 * Introducing a Chrome policy which will allow managed Chrome deployments to
   bypass the deprecation permanently. Available in Chrome 92.
@@ -75,8 +80,10 @@ strategies:
   for the deprecation trial.
 * September 2021: Chrome 94 rolls out to Stable. Web developers should have signed
   up for the deprecation trial and deployed trial tokens to production.
-* December 2022: Chrome 109 rolls out to Beta.
-* February 2023: Chrome 109 rolls out to Stable. The deprecation trial ends. Chrome
+* December 2022: Origin trial survey sent and feedback received. The deprecation
+  trial has been extended to Chrome 113.
+* April 2023: Chrome 113 rolls out to Beta.
+* May 2023: Chrome 113 rolls out to Stable. The deprecation trial ends. Chrome
   blocks all private network requests from public, non-secure contexts.
 
 ## What is Private Network Access 
@@ -141,7 +148,7 @@ still mention the earlier milestone.
 
 This deprecation is accompanied by a deprecation trial, allowing web developers
 whose websites make use of the deprecated feature to continue using it until
-Chrome 109 by registering for tokens. See [below](#register-deprecation-trial)
+Chrome 113 by registering for tokens. See [below](#register-deprecation-trial)
 for instructions on how to register and enable the trial on your website.
 
 A pair of [Chrome policies](#policies) can be leveraged to disable the
@@ -149,7 +156,7 @@ deprecation either entirely or on specific origins, indefinitely. This allows
 managed Chrome installations, for example, those in corporate settings, to
 avoid breakage.
 
-### Chrome 109
+### Chrome 113
 
 The deprecation trial ends. All websites must be migrated off of the deprecated
 feature, or their users' policies configured to continue enabling the feature.
@@ -262,7 +269,7 @@ You can bypass the lack of a valid TLS certificate signed by a trusted CA by
 using [WebTransport](https://w3c.github.io/webtransport) and its [certificate
 pinning
 mechanism](https://w3c.github.io/webtransport/#dom-webtransportoptions-servercertificatefingerprints).
-This allows establishing secure connections to local devices that might have a
+This allows establishing secure connections to private devices that might have a
 self-signed certificate for example. WebTransport connections allow
 bidirectional data transfer, but not fetch requests. You can combine this
 approach with a service worker to transparently proxy HTTP requests over the

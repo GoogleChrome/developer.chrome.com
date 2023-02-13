@@ -94,6 +94,8 @@ jobs:
   stage:
     needs: queue
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       PR_HEAD_COMMIT_SHA: ${{ github.event.pull_request.head.sha }}

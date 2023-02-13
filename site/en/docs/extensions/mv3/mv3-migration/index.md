@@ -550,6 +550,24 @@ reference documentation for a more detailed description of rules
 This feature allows content blockers and other request-modifying extensions to implement their use
 cases without requiring host permissions, and without needing to read the actual requests.
 
+### Differences between [webRequest](/docs/extensions/reference/webRequest/) and [declarativeNetRequest](/docs/extensions/reference/declarativeNetRequest/) API
+
+- The declarativeNetRequest API allows for evaluating network requests in the browser itself. This
+  makes it more performant than the webRequest API, where each network request is evaluated in
+  JavaScript in the extension process.
+- Because the requests are not intercepted by the extension process, declarativeNetRequest removes
+  the need for extensions to have a service worker; resulting in less memory consumption.
+- Unlike the webRequest API, blocking or upgrading requests using the declarativeNetRequest API
+  requires no host permissions when used with the `declarativeNetRequest` permission.
+- The declarativeNetRequest API provides better privacy to users because extensions can't actually
+  read the network requests made on the user's behalf.
+- Unlike the webRequest API, any images or iframes blocked using the declarativeNetRequest API are
+  automatically collapsed in the DOM.
+- While deciding whether a request is to be blocked or redirected, the declarativeNetRequest API is
+  given priority over the webRequest API because it allows for synchronous interception. Similarly,
+  any headers removed through declarativeNetRequest API are not made visible to web request
+  extensions.
+
 ### Conditional permissions and declarativeNetRequest  {: #declarativenetrequest-conditional-perms }
 
 Most use cases for `declarativeNetRequest` don't require any host permissions at all. However, some
@@ -619,7 +637,7 @@ when you migrate to Manifest V3.
 [doc-whats-new]: /docs/extensions/whatsnew/
 [enterprise-force-list]: https://cloud.google.com/docs/chrome-enterprise/policies/?policy=ExtensionInstallForcelist
 [enterprise-settings]: https://cloud.google.com/docs/chrome-enterprise/policies/?policy=ExtensionSettings
-[github-samples-content]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/reference/mv3/intro/mv3-migration/content-scripts
+[github-samples-content]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/reference.mv3-content-scripts
 [manifest-sandbox]: /docs/extensions/mv3/manifest/sandbox
 [mdn-cdn]: https://developer.mozilla.org/docs/Glossary/CDN
 [mdn-eval]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/eval
