@@ -219,12 +219,11 @@ In this example, the animation always moves from right to left, which doesn't fe
 
 In the previous demo, the whole page is involved in the shared axis transition. That works for most of the page, but it doesn't seem quite right for the heading, as it slides out just to slide back in again.
 
-To avoid this, you can extract the header from the rest of the page so it can be animated separately. This is done by assigning a `view-transition-name` to the element, and giving the element [`layout`](https://developer.mozilla.org/docs/Web/CSS/CSS_Containment#layout_containment) or [`paint`](https://developer.mozilla.org/docs/Web/CSS/CSS_Containment#paint_containment) containment. `layout` containment has fewer restrictions, so it's usually the better choice.
+To avoid this, you can extract the header from the rest of the page so it can be animated separately. This is done by assigning a `view-transition-name` to the element.
 
 ```css
 .main-header {
   view-transition-name: main-header;
-  contain: layout;
 }
 ```
 
@@ -277,7 +276,6 @@ That hasn't mattered until now, as the header is the same size and position both
 ```css
 .main-header-text {
   view-transition-name: main-header-text;
-  contain: layout;
   width: fit-content;
 }
 ```
@@ -348,7 +346,6 @@ For instance, the main video embed can be given a `view-transition-name`:
 ```css
 .full-embed {
   view-transition-name: full-embed;
-  contain: layout;
 }
 ```
 
@@ -410,7 +407,6 @@ The sidebar is part of the transition:
 ```css
 .sidebar {
   view-transition-name: sidebar;
-  contain: layout;
 }
 ```
 
