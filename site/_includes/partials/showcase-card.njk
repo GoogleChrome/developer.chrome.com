@@ -29,7 +29,11 @@
     {% if item.appURL %}
       <a class="display-flex align-center color-primary type--small" href="{{ item.appURL }}" rel="noopener" target="_blank">
         {{ icon('external-link') }}
-        {{ 'i18n.common.launch_app' | i18n(locale) }}
+        {% if item.isElectronApp %}
+          {{ 'i18n.common.download_app' | i18n(locale) }}
+        {% else %}
+          {{ 'i18n.common.launch_app' | i18n(locale) }}
+        {% endif %}
       </a>
     {% endif %}
     {% if item.isElectronApp %}
