@@ -23,7 +23,7 @@ If you’d prefer to skip reading this article, these are some of the tools that
 **Non-framework tools:**
 
 *   [Fontaine](https://github.com/unjs/fontaine): Fontaine is a library that automatically generates and inserts font fallbacks that use font metric overrides.
-*   This [repo](https://github.com/khempenius/font-fallbacks-dataset) contains the font metric overrides and `size-adjust` constants for all fonts hosted by Google Fonts. These values can be copied and pasted into your stylesheets.
+*   This [repo](https://github.com/khempenius/font-fallbacks-dataset) contains the font metric overrides for all fonts hosted by Google Fonts. These values can be copied and pasted into your stylesheets.
 
 ## Background
 
@@ -333,7 +333,7 @@ These are the equations for calculating `size-adjust` and font metric overrides:
 size-adjust = avgCharacterWidth of web font / avgCharacterWidth of fallback font
 ascent-override = web font ascent / (web font UPM * size-adjust)
 descent-override = web font descent / (web font UPM * size-adjust)
-line-gap-override = web font line gap / web font UPM * size-adjust)
+line-gap-override = web font line-gap / (web font UPM * size-adjust)
 ```
 
 Most of these inputs (that is, ascent, descent, and line-gap) can be read directly from the web font’s metadata. However, `avgCharacterWidth` needs to be approximated.
@@ -374,45 +374,6 @@ A more complex approach that improves accuracy is to take [letter frequency](htt
 {% Img src="image/j2RDdG43oidUy6AL6LovThjeX9c2/qzdfLueMLMrBgVWUuT5u.png", alt="A graph showing letter frequency for English.", width="800", height="495" %}
 <figcaption>Letter frequency in English<figcaption>
 </figure>
-
-
-The table below compares the results of these two approaches to calculating `avgCharacterWidth`. The frequency-weighted average is significantly more accurate than the unweighted average and should be used whenever possible.
-
-
-<table>
-  <tr>
-   <td>
-   </td>
-   <td>Average width of [a-z/s] glyphs
-   </td>
-   <td>Frequency-weighted average width of [a-z/s] glyphs
-   </td>
-  </tr>
-  <tr>
-   <td>Arial
-   </td>
-   <td>986.5185185
-   </td>
-   <td>884.1438804
-   </td>
-  </tr>
-  <tr>
-   <td>Times New Roman
-   </td>
-   <td>924.7777778
-   </td>
-   <td>801.4244973
-   </td>
-  </tr>
-  <tr>
-   <td>Roboto
-   </td>
-   <td>1014.461538
-   </td>
-   <td>969.0502537
-   </td>
-  </tr>
-</table>
 
 
 {% Aside %}
