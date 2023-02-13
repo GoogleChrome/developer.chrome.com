@@ -3,3 +3,6 @@ select_api:
 
 search_apps:
   en: Search apps
+
+rss_feed:
+  en: RSS feed

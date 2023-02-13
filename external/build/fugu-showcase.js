@@ -27,11 +27,85 @@ const path = require('path');
 
 const url = 'https://googlechromelabs.github.io/fugu-showcase/data/data.json';
 
+async function getContentLength(url) {
+  try {
+    const response = await fetch(url, {
+      method: 'HEAD',
+    });
+    const contentLength = response.headers.get('Content-Length');
+    return contentLength;
+  } catch (error) {
+    console.error(error);
+    return 0;
+  }
+}
+
+async function toRSS(jsonData) {
+  let rss = `<?xml version="1.0" encoding="UTF-8"?>
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Project Fugu API Showcase</title>
+      <description>The Project Fugu API Showcase is a collection of apps that make use of APIs that were conceived in the context of Project Fugu.</description>
+      <link>https://developer.chrome.com/fugu-showcase/feed.xml</link>
+      <atom:link href="https://developer.chrome.com/fugu-showcase/feed.xml" rel="self" type="application/rss+xml" />`;
+
+  jsonData.sort((a, b) => {
+    return new Date(b.timestamp) - new Date(a.timestamp);
+  });
+
+  const promises = jsonData.map(
+    item =>
+      new Promise(async resolve => {
+        const contentLength = await getContentLength(
+          `https://googlechromelabs.github.io/fugu-showcase/data/${item.screenshot}`
+        );
+        const id = item.screenshot.replace('.webp', '');
+        resolve(`
+      <item>
+        <title>${escapeXml(item.title)}</title>
+        <description>${escapeXml(item.description)}</description>
+        <pubDate>${new Date(item.timestamp).toUTCString()}</pubDate>
+        <link>https://developer.chrome.com/fugu-showcase/#${id}</link>
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/${
+          item.screenshot
+        }" length="${contentLength}" type="image/webp" />
+        <guid>https://developer.chrome.com/fugu-showcase/#${id}</guid>
+      </item>`);
+      })
+  );
+
+  const rssItems = await Promise.all(promises);
+
+  rss += rssItems.join('');
+  rss += `
+    </channel>
+  </rss>`;
+
+  return rss;
+}
+
+function escapeXml(unsafe) {
+  return unsafe.replace(/[<>&'"]/g, c => {
+    switch (c) {
+      case '<':
+        return '&lt;';
+      case '>':
+        return '&gt;';
+      case '&':
+        return '&amp;';
+      case "'":
+        return '&apos;';
+      case '"':
+        return '&quot;';
+    }
+  });
+}
+
 async function run() {
   const r = await fetch(url);
 
   if (!r.ok) {
-    throw new Error(`Could not fetch FUGU Showcase data, status: ${r.status}`);
+    throw new Error(`Could not fetch Fugu Showcase data, status: ${r.status}`);
   }
 
   const json = await r.json();
@@ -43,6 +117,13 @@ async function run() {
 
   const targetFile = path.join(__dirname, '../data/fugu-showcase.json');
   fs.writeFileSync(targetFile, JSON.stringify(json));
+
+  const rss = await toRSS(json);
+  const targetRssFile = path.join(
+    __dirname,
+    '../../site/en/fugu-showcase/feed.xml'
+  );
+  fs.writeFileSync(targetRssFile, rss);
 }
 
 run();
