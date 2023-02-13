@@ -53,14 +53,12 @@ async function toRSS(jsonData) {
     return new Date(b.timestamp) - new Date(a.timestamp);
   });
 
-  const promises = jsonData.map(
-    item =>
-      new Promise(async resolve => {
-        const contentLength = await getContentLength(
-          `https://googlechromelabs.github.io/fugu-showcase/data/${item.screenshot}`
-        );
-        const id = item.screenshot.replace('.webp', '');
-        resolve(`
+  const promises = jsonData.map(item => {
+    const id = item.screenshot.replace('.webp', '');
+    return getContentLength(
+      `https://googlechromelabs.github.io/fugu-showcase/data/${item.screenshot}`
+    ).then(
+      contentLength => `
       <item>
         <title>${escapeXml(item.title)}</title>
         <description>${escapeXml(item.description)}</description>
@@ -70,9 +68,9 @@ async function toRSS(jsonData) {
           item.screenshot
         }" length="${contentLength}" type="image/webp" />
         <guid>https://developer.chrome.com/fugu-showcase/#${id}</guid>
-      </item>`);
-      })
-  );
+      </item>`
+    );
+  });
 
   const rssItems = await Promise.all(promises);
 
