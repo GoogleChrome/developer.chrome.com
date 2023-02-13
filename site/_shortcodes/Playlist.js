@@ -6,49 +6,29 @@ const playlistsData = require('../_data/youtubePlaylists');
  * @param {string} playlistId is a YouTube playlist id
  */
 
-async function getPlaylistData(id){
-  let playlists = await playlistsData();
-  let playlistResult = [];
-  let channelResult = []
-  
-  playlistResult = playlists?.playlists.filter(playlist => {return playlist.id === id});
-  if(playlistResult){  
-    channelResult = playlists?.channels.filter(channel => {
-    return channel.id === playlistResult[0]?.channel;
-  });}
-
-
-  return({
-    playlist: playlistResult[0],
-    channel: channelResult[0]
-  })
-}
-
-
-
 async function Playlist(playlistId) {
   let videoNumber = 1;
   let videoTotal = 0;
 
   // Set some empty variables to populate
-  
   let playlistHtml = '';
 
+  const playlistData = await playlistsData(playlistId);
+  const channelId = playlistData?.channel?.id;
+  const channelName = playlistData?.channel?.name;
+  const channelThumb = playlistData?.channel?.thumbnail;
+  const playlistFirstVideo = playlistData?.playlist?.videos[0].id;
+  const playlistName = playlistData?.playlist?.title;
+  const playlistThumb = playlistData?.playlist?.thumbnail;
+  const playlistUpdated = new Date(
+    playlistData?.playlist?.updated
+  ).toLocaleDateString('en-us', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  });
 
-  let playlistData = await getPlaylistData(playlistId);
-  let channelId = playlistData?.channel?.id
-  let channelName = playlistData?.channel?.name
-  let channelThumb = playlistData?.channel?.thumbnail;
-  let playlistFirstVideo = playlistData?.playlist?.videos[0].id;
-  let playlistName = playlistData?.playlist?.title;
-  let playlistThumb = playlistData?.playlist?.thumbnail;
-  let playlistUpdated = new Date(playlistData?.playlist?.updated).toLocaleDateString('en-us', {
-          weekday: 'long',
-          year: 'numeric',
-          month: 'short',
-          day: 'numeric',
-        });
-  
   playlistData?.playlist?.videos.forEach(video => {
     playlistHtml += getVideoHtml(video, videoNumber, channelName);
 
@@ -56,7 +36,7 @@ async function Playlist(playlistId) {
     videoTotal++;
   });
 
-  let result = getChannelHtml(
+  const result = getChannelHtml(
     playlistThumb,
     playlistName,
     playlistFirstVideo,
@@ -69,8 +49,7 @@ async function Playlist(playlistId) {
     playlistHtml
   );
 
-  return result
-  
+  return result;
 }
 
 function getVideoHtml(video, videoNumber, channelTitle) {
@@ -78,10 +57,7 @@ function getVideoHtml(video, videoNumber, channelTitle) {
     <div class="playlist-video__number">${videoNumber}</div>
 
     <div class="playlist-video--content">
-      <a
-        href="https://www.youtube.com/watch?v=${video.id}"
-        target="_blank"
-      >
+      <a href="https://www.youtube.com/watch?v=${video.id}" target="_blank">
         <div class="playlist-video__thumbnail">
           <img
             src="${video.thumbnail}"
