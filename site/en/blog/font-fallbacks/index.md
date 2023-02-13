@@ -20,9 +20,7 @@ If you’d prefer to skip reading this article, these are some of the tools that
 *   [@next/font](https://nextjs.org/docs/basic-features/font-optimization): Starting in Next 13, `next/font` automatically uses font metric overrides and `size-adjust` to provide matching font fallbacks.
 *   [@nuxtjs/fontaine](https://github.com/nuxt-modules/fontaine): Starting in Nuxt 3, you can use `nuxt/fontaine` to automatically generate and insert matching font fallbacks into the stylesheets used by your Nuxt app.
 
-Non-framework tools:
-
-
+**Non-framework tools:**
 
 *   [Fontaine](https://github.com/unjs/fontaine): Fontaine is a library that automatically generates and inserts font fallbacks that use font metric overrides.
 *   This [repo](https://github.com/khempenius/font-fallbacks-dataset) contains the font metric overrides and `size-adjust` constants for all fonts hosted by Google Fonts. These values can be copy-pasted into your stylesheets.
