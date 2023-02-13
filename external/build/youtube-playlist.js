@@ -56,7 +56,7 @@ async function run() {
 
     try {
       const playlistRes = await getPlaylistData(channel.trim());
-      result.playlists.push(playlistRes);
+      result.playlists = [...result.playlists, ...playlistRes];
     } catch (error) {
       throw new Error('Error fetching the playlist data');
     }
@@ -92,6 +92,7 @@ async function getPlaylistData(id) {
           title: playlist?.snippet?.title,
           description: playlist?.snippet?.description,
           thumbnail: playlist?.snippet?.thumbnails?.medium?.url,
+          updated: playlist?.snippet?.publishedAt,
           channel: playlist?.snippet?.channelId,
           videos: videoRes,
         });
@@ -123,6 +124,7 @@ async function getPlaylistItemData(id) {
   } else {
     for (const video of videos) {
       playlistItemData.push({
+        id: video.id,
         title: video?.snippet?.title,
         description: video?.snippet?.description,
         thumbnail: video?.snippet?.thumbnails?.medium?.url,
@@ -151,7 +153,7 @@ async function getChannelData(id) {
     throw new Error('No channel found');
   } else {
     channelData.id = channels[0]?.id;
-    channelData.title = channels[0]?.snippet?.title;
+    channelData.name = channels[0]?.snippet?.title;
     channelData.description = channels[0]?.snippet?.description;
     channelData.thumbnail = channels[0]?.snippet?.thumbnails?.medium?.url;
   }
