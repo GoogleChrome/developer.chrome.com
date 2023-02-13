@@ -42,7 +42,7 @@ Below are videos and demos from some of our past events. Features worked as desc
 
 Maybe add more description below each.
 
-<iframe src="https://drive.google.com/file/d/1riGrGwP5cyz3q4IcDjV5kulOK48OJV2S/preview" width="640" height="480" preload="auto" allow="autoplay"></iframe>
+<iframe src="https://drive.google.com/file/d/1riGrGwP5cyz3q4IcDjV5kulOK48OJV2S/preview" width="640" height="480" allow="autoplay"></iframe>
 
 #### Topics API Overview - September 6, 2022
 
