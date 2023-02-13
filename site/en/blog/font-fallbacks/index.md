@@ -23,7 +23,7 @@ If you’d prefer to skip reading this article, these are some of the tools that
 **Non-framework tools:**
 
 *   [Fontaine](https://github.com/unjs/fontaine): Fontaine is a library that automatically generates and inserts font fallbacks that use font metric overrides.
-*   This [repo](https://github.com/khempenius/font-fallbacks-dataset) contains the font metric overrides and `size-adjust` constants for all fonts hosted by Google Fonts. These values can be copy-pasted into your stylesheets.
+*   This [repo](https://github.com/khempenius/font-fallbacks-dataset) contains the font metric overrides and `size-adjust` constants for all fonts hosted by Google Fonts. These values can be copied and pasted into your stylesheets.
 
 ## Background
 
