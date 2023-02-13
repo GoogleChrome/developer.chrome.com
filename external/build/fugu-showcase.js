@@ -50,6 +50,7 @@ async function toRSS(jsonData) {
       <atom:link href="https://developer.chrome.com/fugu-showcase/feed.xml" rel="self" type="application/rss+xml" />`;
 
   jsonData.sort((a, b) => {
+    // @ts-ignore
     return new Date(b.timestamp) - new Date(a.timestamp);
   });
 
@@ -83,6 +84,7 @@ async function toRSS(jsonData) {
 }
 
 function escapeXml(unsafe) {
+  // @ts-ignore
   return unsafe.replace(/[<>&'"]/g, c => {
     switch (c) {
       case '<':
@@ -96,6 +98,7 @@ function escapeXml(unsafe) {
       case '"':
         return '&quot;';
     }
+    return '';
   });
 }
 
