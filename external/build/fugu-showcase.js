@@ -63,11 +63,11 @@ async function toRSS(jsonData) {
       <item>
         <title>${escapeXml(item.title)}</title>
         <description>${escapeXml(item.description)}</description>
-        <pubDate>${new Date(item.timestamp).toUTCString()}</pubDate>
-        <link>https://developer.chrome.com/fugu-showcase/#${id}</link>
         <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/${
           item.screenshot
         }" length="${contentLength}" type="image/webp" />
+        <pubDate>${new Date(item.timestamp).toUTCString()}</pubDate>
+        <link>https://developer.chrome.com/fugu-showcase/#${id}</link>
         <guid>https://developer.chrome.com/fugu-showcase/#${id}</guid>
       </item>`
     );
