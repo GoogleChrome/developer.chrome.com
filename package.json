@@ -51,6 +51,7 @@
     "@google-cloud/error-reporting": "^2.0.4",
     "@google-cloud/storage": "^6.7.0",
     "@lhci/cli": "^0.7.2",
+    "@mdn/browser-compat-data": "5.2.35",
     "@rollup/plugin-node-resolve": "^8.4.0",
     "algoliasearch": "^4.6.0",
     "async-transforms": "1.0.6",
@@ -79,6 +80,7 @@
     "negotiator": "0.6.3",
     "node-fetch": "^2.6.0",
     "npm-run-all": "^4.1.5",
+    "nunjucks": "3.2.3",
     "octokit": "^2.0.14",
     "readdirp": "^3.4.0",
     "redirects-yaml": "2.0.4",
@@ -90,8 +92,7 @@
     "uslug": "^1.0.4",
     "web-vitals": "^3.1.1",
     "webdev-infra": "1.0.44",
-    "xss": "^1.0.14",
-    "@mdn/browser-compat-data": "5.2.35"
+    "xss": "^1.0.14"
   },
   "optionalDependencies": {
     "@types/cheerio": "^0.22.22",
