@@ -3,7 +3,7 @@ layout: 'layouts/blog-post.njk'
 title: "How Chrome evolved the First-Party Sets proposal"
 subheading: "Evolving First-Party Sets to advance privacy for users and web interoperability for developers."
 description: "Evolving First-Party Sets to advance privacy for users and web interoperability for developers."
-date: 2023-02-07
+date: 2023-02-13
 thumbnail: 'image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/TxiweGXhJ3d2RTsH8sZh.png'
 alt: A diagram showing First-Party Sets.
 tags: 
@@ -191,9 +191,9 @@ private, more specific, and easier to enforce consistently.
         understanding, we felt that a numeric limit was most appropriate to
         uphold protections against potential widespread and passive tracking.
         For organizations that have multiple domains (beyond three) that could
-        qualify for the "associated" subset, we are hopeful that we could
-        address their use cases through specific subsets complemented by the
-        appropriate technical enforcement or with purpose-specific APIs.
+        qualify for the “associated” subset, we encourage these organizations to
+        identify specific use cases so Chrome can consider how to best minimize
+        user-facing breakage post-third-party cookie deprecation.   
 
 For each of these use cases, there are discrete policy requirements,
 corresponding technical validation checks, and specific browser-handling
@@ -212,6 +212,9 @@ currently use the
 (SAA) to facilitate active cookie requests, we opted for leveraging SAA in
 Chrome not only to help address key feedback we received, but also to support
 web interoperability.
+
+To provide more flexibility for developers and address known limitations of SAA,
+we have also proposed the `requestStorageAccessForOrigin` API. 
 
 ### Opportunity to use Storage Access API and FPS together
 
@@ -237,17 +240,26 @@ Finally, developers who implement SAA to work with FPS in Chrome will also be
 able to leverage SAA for their sites' performance on other browsers, *even those
 that don't ship FPS*.
 
-## Continued discussion
+## Working with the ecosystem
 
 We believe our latest proposal strikes the right balance in a challenging
 tradeoff space that considers the needs of users and developers. We appreciate
 the feedback raised by web ecosystem stakeholders that helped us evolve the FPS
 proposal.
 
+{% Blockquote 'MercadoLibre' %}
+Chrome is developing first-party sets to align with many of our use cases, like preserving use journeys. This demonstrates to us that the Google team is working to understand the different types of needs of site owners across the web.
+{% endBlockquote %}
+
+{% Blockquote 'Nitish Mittal, Director of Engineering, VWO' %}
+At VWO, we appreciate Google's efforts to elevate privacy standards, while ensuring that genuine use cases are handled. It's great that the team is collaborating with the developer ecosystem, and is constantly improving the implementation of the first-party sets proposal based upon the feedback from web stakeholders. We are excited about being a part of the testing journey of the proposal and looking forward to its incorporation into the browser.
+{% endBlockquote %}
+
 We recognize that web ecosystem stakeholders are still familiarizing themselves
 with the updated proposal. Please engage with us so we can continue to improve
 the design in a manner that is more useful for developers and continues to
-improve privacy on the web.
+improve privacy on the web. Google will also continue working with the UK's
+Competition and Markets Authority (CMA) to ensure compliance with the Commitments.
 
 Engage here:
 
@@ -255,3 +267,4 @@ Engage here:
 -   [FPS testing instructions](/blog/first-party-sets-testing-instructions/)
 -   [First-Party Sets: integration guide](/docs/privacy-sandbox/first-party-sets-integration/)
 -   [FPS Submission Guidelines](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md)
+
