@@ -262,7 +262,7 @@ To engage check out the following resources:
 
 ## Working with the ecosystem
 
-_"Chrome is developing first-party sets to align with many of our use cases, like preserving use journeys. This demonstrates to us that the Google team is working to understand the different types of needs of site owners across the web."_ -MercadoLibre
+_"Chrome is developing first-party sets to align with many of our use cases, like preserving use journeys. This demonstrates to us that the Google team is working to understand the different types of needs of site owners across the web."_ - MercadoLibre
 
 
-_"At VWO, we appreciate Google's efforts to elevate privacy standards, while ensuring that genuine use cases are handled. It's great that the team is collaborating with the developer ecosystem, and is constantly improving the implementation of the first-party sets proposal based upon the feedback from web stakeholders. We are excited about being a part of the testing journey of the proposal and looking forward to its incorporation into the browser."_ -Nitish Mittal, Director of Engineering, VWO
+_"At VWO, we appreciate Google's efforts to elevate privacy standards, while ensuring that genuine use cases are handled. It's great that the team is collaborating with the developer ecosystem, and is constantly improving the implementation of the first-party sets proposal based upon the feedback from web stakeholders. We are excited about being a part of the testing journey of the proposal and looking forward to its incorporation into the browser."_ - Nitish Mittal, Director of Engineering, VWO
