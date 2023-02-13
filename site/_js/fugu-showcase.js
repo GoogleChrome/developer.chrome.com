@@ -140,14 +140,11 @@ import './web-components/enhanced-select';
       }
     };
 
-    document.querySelectorAll('.web-share').forEach(shareLink => {
-      shareLink.classList.remove('display-none');
-      shareLink.classList.add('display-flex');
+    document.querySelectorAll('.web-share').forEach(shareButton => {
+      shareButton.classList.remove('visibility-hidden');
 
-      shareLink.addEventListener('click', async e => {
-        e.preventDefault();
-
-        const shareData = await prepareShareData(shareLink);
+      shareButton.addEventListener('click', async e => {
+        const shareData = await prepareShareData(shareButton);
         if (shareData instanceof Error) {
           console.error(shareData.name, shareData.message);
           return;
