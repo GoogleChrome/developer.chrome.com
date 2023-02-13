@@ -143,7 +143,7 @@ import './web-components/enhanced-select';
     document.querySelectorAll('.web-share').forEach(shareButton => {
       shareButton.classList.remove('visibility-hidden');
 
-      shareButton.addEventListener('click', async e => {
+      shareButton.addEventListener('click', async () => {
         const shareData = await prepareShareData(shareButton);
         if (shareData instanceof Error) {
           console.error(shareData.name, shareData.message);
