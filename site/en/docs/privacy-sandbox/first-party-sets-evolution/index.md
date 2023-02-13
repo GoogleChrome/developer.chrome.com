@@ -185,15 +185,18 @@ private, more specific, and easier to enforce consistently.
     sites to better understand how an organization's user base interacts with
     their sites, or to remember a user's logged-in state on a related site
     relying on the same login infrastructure.
-    -   For the "associated" subset, we proposed a numeric limit of
-        three domains as an objective, technical mechanism to prevent
-        widespread tracking abuse. Absent an impartial method of assessing user
-        understanding, we felt that a numeric limit was most appropriate to
-        uphold protections against potential widespread and passive tracking.
-        For organizations that have multiple domains (beyond three) that could
-        qualify for the “associated” subset, we encourage these organizations to
-        identify specific use cases so Chrome can consider how to best minimize
-        user-facing breakage post-third-party cookie deprecation.   
+
+{% Aside %}    
+For the "associated" subset, we proposed a numeric limit of
+three domains as an objective, technical mechanism to prevent
+widespread tracking abuse. Absent an impartial method of assessing user
+understanding, we felt that a numeric limit was most appropriate to
+uphold protections against potential widespread and passive tracking.
+For organizations that have multiple domains (beyond three) that could
+qualify for the “associated” subset, we encourage these organizations to
+identify specific use cases so Chrome can consider how to best minimize
+user-facing breakage post-third-party cookie deprecation. 
+{% endAside %}  
 
 For each of these use cases, there are discrete policy requirements,
 corresponding technical validation checks, and specific browser-handling
