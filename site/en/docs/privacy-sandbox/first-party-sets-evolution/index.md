@@ -136,7 +136,7 @@ We also
 [feedback](https://github.com/WICG/first-party-sets/issues/30) that
 understanding the meaning of "common ownership" boundaries may vary from user to
 user, which makes creating guidelines that can be applied to all sites
-difficult
+difficult.
 
 #### A subjective policy is difficult to enforce at scale
 
@@ -213,8 +213,8 @@ currently use the
 Chrome not only to help address key feedback we received, but also to support
 web interoperability.
 
-To provide more flexibility for developers and address known limitations of SAA,
-we have also proposed the `requestStorageAccessForOrigin` API. 
+To provide more flexibility for developers and address [known limitations](https://github.com/WICG/first-party-sets/#providing-capabilities-beyond-the-storage-access-api) of SAA,
+we have also proposed the [`requestStorageAccessForOrigin`](https://github.com/privacycg/requestStorageAccessForOrigin) API. 
 
 ### Opportunity to use Storage Access API and FPS together
 
@@ -251,7 +251,7 @@ We recognize that web ecosystem stakeholders are still familiarizing themselves
 with the updated proposal. Please engage with us so we can continue to improve
 the design in a manner that is more useful for developers and continues to
 improve privacy on the web. Google will also continue working with the UK's
-Competition and Markets Authority (CMA) to ensure compliance with the Commitments.
+Competition and Markets Authority (CMA) to ensure compliance with the [Commitments](https://assets.publishing.service.gov.uk/media/62052c6a8fa8f510a204374a/100222_Appendix_1A_Google_s_final_commitments.pdf).
 
 To engage check out the following resources:
 
