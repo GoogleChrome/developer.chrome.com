@@ -239,7 +239,7 @@ Because font metric overrides are calculated using measurements that come from t
 
 ```css/5,13
 body {
-  font-family: Poppins, "fallback for Poppins", "another fallback for Poppins";
+  font-family: "Poppins", "fallback for Poppins", "another fallback for Poppins";
 }
 
 @font-face {
