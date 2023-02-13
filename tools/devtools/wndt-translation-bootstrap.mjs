@@ -50,9 +50,9 @@ languages.forEach(
   });
 
   readline.question(
-    'Do you want to generate GitHub issues? y/[n]: ',
+    `Do you want to generate GitHub issues for WNDT ${process.env.DEVTOOLS_VERSION} ? Y/[n]: `,
     async answer => {
-      const ans = answer.toUpperCase();
+      const ans = answer;
       if (ans === 'Y' || ans === 'YES') {
         await createGitHubIssues(
           // @ts-ignore
@@ -62,6 +62,8 @@ languages.forEach(
           process.env.GITHUB_TOKEN,
           translators
         );
+      } else if (ans === 'y') {
+        console.log('Please use capital Y to confirm your action.');
       } else {
         console.log('No GitHub issues created.');
       }
