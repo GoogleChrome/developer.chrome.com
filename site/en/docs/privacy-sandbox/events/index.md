@@ -13,15 +13,7 @@ authors:
 ---
 
 Learn about forthcoming events, and get access to resources for events that have
-already taken place.
-
-## Future events
-
-Subscribe to the following mailing lists to be notified of other events:
-
-* [Attribution Reporting](https://groups.google.com/u/2/a/chromium.org/g/attribution-reporting-api-dev)
-* [FLEDGE](https://groups.google.com/u/2/a/chromium.org/g/fledge-api-announce)
-* [Topics](https://groups.google.com/u/2/a/chromium.org/g/topics-api-announce)
+already taken place. You can also subscribe to the following mailing lists to be notified of other events: [Attribution Reporting](https://groups.google.com/u/2/a/chromium.org/g/attribution-reporting-api-dev), [FLEDGE](https://groups.google.com/u/2/a/chromium.org/g/fledge-api-announce), and [Topics](https://groups.google.com/u/2/a/chromium.org/g/topics-api-announce).
 
 ## Ongoing events
 
@@ -34,47 +26,50 @@ if you plan on participating.
 * [Attribution Reporting](https://github.com/WICG/attribution-reporting-api/tree/main/meetings): 
 announcements are also made on [this issue](https://github.com/WICG/attribution-reporting-api/issues/80)
 
-## Past events
+## Watch videos and demos from past events
 
-### First-Party Sets Office Hours {: #oh06}
+Below are videos and demos from some of our past Office Hours and events. Features worked as described at the time the videos were recorded, but details may have changed since that time.
 
-We hosted two office hours sessions for [First-Party Sets](/docs/privacy-sandbox/first-party-sets/): an English language session on December 15th, 2022 and a Japanese language session on December 20th, 2022. You can view the [recording of the presentation and demo from the first session](https://drive.google.com/file/d/1riGrGwP5cyz3q4IcDjV5kulOK48OJV2S/view?usp=share_link).
+### First-Party Sets Talk with Demo - Dec. 15, 2022
 
-### Privacy Sandbox Office Hours: Ask Me Anything {: #oh05}
+This Office Hours session covers the First-Party Sets proposal, how the proposal has been evolving based on feedback, discusses use cases, and provides a demo.
 
-**Session A (APAC time-friendly)** 
+<iframe src="https://drive.google.com/file/d/1riGrGwP5cyz3q4IcDjV5kulOK48OJV2S/preview" width="640" height="480" allow="autoplay"></iframe>
 
-* Monday, September 19, 8 – 9:00am PDT • Tuesday 20 September, 8:30am IST / 11am SIN / 1pm AEST / 3pm NZST
+[Open full-size video](https://drive.google.com/file/d/1riGrGwP5cyz3q4IcDjV5kulOK48OJV2S/preview)
 
-### Topics API Office Hours {: #oh04}
+### Topics API Overview - September 6, 2022
 
-We hosted two Office Hours sessions, providing an overview and a demo of the Topics API, 
-as well as a Q&A session with DevRel, Product and Engineering leads. 
+This Office Hours session provides an overview of the Topics API with DevRel Product and Engineering leads. The demo portion of the session is in the video that follows.
 
-**Session 1 with English-language demo**
+<iframe src="https://drive.google.com/file/d/1831_uKSlTwnSzYNjpp9pkDEniDA_Q9lF/preview" width="640" height="480" allow="autoplay"></iframe>
+ 
+[Open full-size video](https://drive.google.com/file/d/1831_uKSlTwnSzYNjpp9pkDEniDA_Q9lF/preview)
 
-* September 6, 2022 
-* Videos of event: [presentation](https://drive.google.com/file/d/1831_uKSlTwnSzYNjpp9pkDEniDA_Q9lF), 
-[demo](https://drive.google.com/file/d/1dmpMKLJcGNe56M6ECRdRYhuITTv9YUDV)
+### Topics API Demo - September 6, 2022
 
-**Session 2 with Japanese-language demo** 
+<iframe src="https://drive.google.com/file/d/1dmpMKLJcGNe56M6ECRdRYhuITTv9YUDV/preview" width="640" height="480" allow="autoplay"></iframe>
 
-* September 13/14, 2022
+[Open full-size video](https://drive.google.com/file/d/1dmpMKLJcGNe56M6ECRdRYhuITTv9YUDV/preview)
 
-### Attribution end-to-end demo with summary reports {: #oh03}
+### Attribution Reporting Discussion - August 11, 2022
 
-* August 11, 2022
-* Videos of event: [presentation](https://drive.google.com/file/d/18RGEx_mrhDJuMsLUK1BZ0cK5FSZRAAqh/view), 
-[demo](https://drive.google.com/file/d/1hmHoM3xyU4eLTJ1dM7_E8x-u6nZgim1O/view)
-* [Find out more](https://groups.google.com/a/chromium.org/g/attribution-reporting-api-dev/c/s3QYro6SjeE/m/R6jI9TseAgAJ)
+<iframe src="https://drive.google.com/file/d/18RGEx_mrhDJuMsLUK1BZ0cK5FSZRAAqh/preview" width="640" height="480" allow="autoplay"></iframe>
 
-### An Introduction to Attribution Reporting {: #oh02}
+[Open full-size video](https://drive.google.com/file/d/18RGEx_mrhDJuMsLUK1BZ0cK5FSZRAAqh/preview)
 
-* June 30, 2022
-* [Video of presentation](https://drive.google.com/file/d/1EVCw6MTz3JIdkno2lICN6q7gNrmZBYGf/view?pli=1)
-* [Find out more](https://groups.google.com/u/2/a/chromium.org/g/attribution-reporting-api-dev/c/NLbPwiwj3BE)
+### Attribution Reporting Demo - August 11, 2022
+
+<iframe src="https://drive.google.com/file/d/1hmHoM3xyU4eLTJ1dM7_E8x-u6nZgim1O/preview" width="640" height="480" allow="autoplay"></iframe>
+
+[Open full-size video](https://drive.google.com/file/d/1hmHoM3xyU4eLTJ1dM7_E8x-u6nZgim1O/preview)
+
+### Intro to Attribution Reporting - June 30, 2022 
+
+<iframe src="https://drive.google.com/file/d/1EVCw6MTz3JIdkno2lICN6q7gNrmZBYGf/preview" width="640" height="480" allow="autoplay"></iframe>
+
+[Open full-size video](https://drive.google.com/file/d/1EVCw6MTz3JIdkno2lICN6q7gNrmZBYGf/preview)
 
 ### Learn about Chrome origin trials {: #oh01}
 
-* April 20, 27 and 28, 2022
 * [Find out more](/blog/privacy-sandbox-office-hours-1/)
