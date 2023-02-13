@@ -35,7 +35,10 @@ const fallbackSVGBase64 = window.btoa(
     y="113"
     dominant-baseline="central"
   >
-    ${document.querySelector('#screenshot_not_available')?.textContent.trim()}
+    ${
+      JSON.parse(document.querySelector('#fugu-showcase-i18n').textContent)
+        .screenshot_not_available
+    }
   </text>
 </svg>`
 );
