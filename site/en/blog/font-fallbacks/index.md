@@ -453,7 +453,7 @@ The example below uses three fallback fonts to ensure widespead device coverage:
 
 ```css/1
 body {
-	font-family: Poppins, poppins-fallback, poppins-fallback-android, sans-serif;
+  font-family: "Poppins", poppins-fallback, poppins-fallback-android, sans-serif;
 }
 
 /*
