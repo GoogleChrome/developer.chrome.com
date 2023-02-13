@@ -5,16 +5,15 @@
 
 {# $content #}
 
-{# ### Chrome 109 {: #chrome109 }
+### Chrome 109 {: #chrome109
 
-* [Recorder: Copy as options for steps, in-page replay, step’s context menu](/ru/blog/new-in-devtools-109/#recorder)
-* [Show actual function names in performance’s recordings](/ru/blog/new-in-devtools-109/#performance)
-* [New keyboard shortcuts in the Console & Sources panel](/ru/blog/new-in-devtools-109/#keyboard-shortcuts)
-* [Improved JavaScript debugging](/ru/blog/new-in-devtools-109/#debugging)
-* [Miscellaneous highlights](/ru/blog/new-in-devtools-109/#misc)
-* [[Experimental] Enhanced UX in managing breakpoints](/ru/blog/new-in-devtools-109/#breakpoint-redesign)
-* [[Experimental] Automatic in-place pretty print](/ru/blog/new-in-devtools-109/#pretty-print)
- #}
+* [Recorder: опции копирования для шага, воспроизведение на странице, контекстное меню шага](/ru/blog/new-in-devtools-109/#recorder)
+* [Показ настоящих названий функций в записях производительности](/ru/blog/new-in-devtools-109/#performance)
+* [Новые горячие клавиши во вкладках Консоль (Console) и Источники (Sources)](/ru/blog/new-in-devtools-109/#keyboard-shortcuts)
+* [Улучшенная отладка JavaScript](/ru/blog/new-in-devtools-109/#debugging)
+* [Другие важные моменты](/ru/blog/new-in-devtools-109/#misc)
+* [[Эксперимент] Улучшенный UX в интерфейсе управления точками останова](/ru/blog/new-in-devtools-109/#breakpoint-redesign)
+* [[Эксперимент] Автоматическое красивое форматирование внутри файла](/ru/blog/new-in-devtools-109/#pretty-print)
 
 
 ### Chrome 108 {: #chrome108 }

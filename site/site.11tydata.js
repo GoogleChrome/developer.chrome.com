@@ -1,3 +1,5 @@
+const {isPublished} = require('./_utils/drafts');
+
 // Matches e.g. "/es/docs/blah/" or "/en/docs/foo-bar_zing/".
 const projectKeyRe = /\/\w{2,}\/docs\/([_-\w]+)\//;
 
@@ -5,7 +7,8 @@ module.exports = {
   eleventyComputed: {
     /**
      * Adds support for drafts.
-     * If a page has `draft: true` in its YAML frontmatter then this snippet
+     * If a page has `draft: true` in its YAML frontmatter or is scheduled
+     * for future then this snippet
      * will set its permalink to false and the page will not be output in
      * production builds.
      *
@@ -15,7 +18,14 @@ module.exports = {
       if (process.env.NODE_ENV !== 'production') {
         return data.permalink;
       } else {
-        return data.draft ? false : data.permalink;
+        return isPublished(data) ? data.permalink : false;
+      }
+    },
+    eleventyExcludeFromCollections: data => {
+      if (process.env.NODE_ENV !== 'production') {
+        return data.permalink;
+      } else {
+        return isPublished(data) ? data.permalink : false;
       }
     },
     // Give some pages a project_key.

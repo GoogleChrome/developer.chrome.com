@@ -20,7 +20,11 @@ Lighthouse 10 is available immediately on the [command line through npm](https:/
 
 ## Scoring changes
 
-The venerable [Time To Interactive (TTI)](https://web.dev/tti/) metric is being removed in Lighthouse 10, with its 10% score weight shifted to [Cumulative Layout Shift (CLS)](https://web.dev/cls/), which will now account for 25% of the [overall performance score](/docs/lighthouse/performance/performance-scoring/#lighthouse-10). Ideally this change will increase focus on CLS for sites that still need fixes for unnecessary layout shifts.
+The venerable [Time To Interactive (TTI)](https://web.dev/tti/) metric is being removed in Lighthouse 10, concluding the [deprecation process started in Lighthouse 8](https://github.com/GoogleChrome/lighthouse/blob/main/docs/v8-perf-faq.md#whats-the-story-with-tti). TTI's 10% score weight is shifting to [Cumulative Layout Shift (CLS)](https://web.dev/cls/), which will now account for 25% of the [overall performance score](/docs/lighthouse/performance/performance-scoring/#lighthouse-10).
+
+TTI marks a point in time, but the way it's defined makes it overly sensitive to outlier network requests and long tasks. [Largest Contentful Paint (LCP)](/docs/lighthouse/performance/lighthouse-largest-contentful-paint/) and [Speed Index](/docs/lighthouse/performance/speed-index/) are usually better heuristics for a page's contents feeling loaded than a count of active network requests. [Total Blocking Time (TBT)](/docs/lighthouse/performance/lighthouse-total-blocking-time/) meanwhile handles long tasks and main-thread availability more robustly, and while not a direct proxy, tends to correlate better with [Core Web Vitals](https://web.dev/vitals/#core-web-vitals) as measured in the field.
+
+CLS's increased weight is incidental to TTI's removal, but better reflects its importance as a Core Web Vital and will ideally increase focus for sites that still make unnecessary layout shifts.
 
 We expect this to improve most pages' performance scores, since most pages tend to score better on CLS than TTI. In an analysis of 13 million page loads in the latest HTTP Archive run, 90% of those pages would see an improvement in their Lighthouse performance score, with 50% of them seeing a performance improvement of more than 5 points.
 
