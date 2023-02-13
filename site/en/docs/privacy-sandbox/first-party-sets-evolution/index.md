@@ -147,7 +147,7 @@ to cover exceptions or edge cases for others
 
 To ensure the policy was applied equitably and consistently, Chrome would have
 had to provide site authors with much more specific guidelines. We determined
-that attempting to create stricter guidelines** **could be exclusive to the
+that attempting to create stricter guidelines could be exclusive to the
 detriment of the ecosystem.
 
 While we had initially proposed that an independent enforcement entity take on
@@ -240,26 +240,18 @@ Finally, developers who implement SAA to work with FPS in Chrome will also be
 able to leverage SAA for their sites' performance on other browsers, *even those
 that don't ship FPS*.
 
-## Working with the ecosystem
+## Continued discussion
 
 We believe our latest proposal strikes the right balance in a challenging
 tradeoff space that considers the needs of users and developers. We appreciate
 the feedback raised by web ecosystem stakeholders that helped us evolve the FPS
 proposal.
 
-{% Blockquote 'MercadoLibre' %}
-Chrome is developing first-party sets to align with many of our use cases, like preserving use journeys. This demonstrates to us that the Google team is working to understand the different types of needs of site owners across the web.
-{% endBlockquote %}
-
 We recognize that web ecosystem stakeholders are still familiarizing themselves
 with the updated proposal. Please engage with us so we can continue to improve
 the design in a manner that is more useful for developers and continues to
 improve privacy on the web. Google will also continue working with the UK's
 Competition and Markets Authority (CMA) to ensure compliance with the Commitments.
-
-{% Blockquote 'Nitish Mittal, Director of Engineering, VWO' %}
-At VWO, we appreciate Google's efforts to elevate privacy standards, while ensuring that genuine use cases are handled. It's great that the team is collaborating with the developer ecosystem, and is constantly improving the implementation of the first-party sets proposal based upon the feedback from web stakeholders. We are excited about being a part of the testing journey of the proposal and looking forward to its incorporation into the browser.
-{% endBlockquote %}
 
 To engage check out the following resources:
 
@@ -268,3 +260,9 @@ To engage check out the following resources:
 -   [First-Party Sets: integration guide](/docs/privacy-sandbox/first-party-sets-integration/)
 -   [FPS Submission Guidelines](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md)
 
+## Working with the ecosystem
+
+_"Chrome is developing first-party sets to align with many of our use cases, like preserving use journeys. This demonstrates to us that the Google team is working to understand the different types of needs of site owners across the web."_ -MercadoLibre
+
+
+_"At VWO, we appreciate Google's efforts to elevate privacy standards, while ensuring that genuine use cases are handled. It's great that the team is collaborating with the developer ecosystem, and is constantly improving the implementation of the first-party sets proposal based upon the feedback from web stakeholders. We are excited about being a part of the testing journey of the proposal and looking forward to its incorporation into the browser."_ -Nitish Mittal, Director of Engineering, VWO
