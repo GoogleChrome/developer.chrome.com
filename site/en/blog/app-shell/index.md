@@ -8,7 +8,6 @@ authors:
   - mattgaunt
 date: 2015-11-16
 updated: 2020-07-24
-
 ---
 
 An **application shell** is the minimal HTML, CSS, and JavaScript powering a user interface. The application shell should:
