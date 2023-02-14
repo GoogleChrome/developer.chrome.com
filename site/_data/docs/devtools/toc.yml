@@ -113,7 +113,6 @@
     - url: /docs/devtools/customize/
     - url: /docs/devtools/customize/dark-theme/
     - url: /docs/devtools/customize/placement/
-    - url: /docs/devtools/javascript/ignore-chrome-extension-scripts/
     - title: i18n.docs.devtools.settings
       sections:
         - url: /docs/devtools/settings/

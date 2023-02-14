@@ -194,6 +194,9 @@ redirects:
 
 # DevTools redirects
 
+- from: /docs/devtools/javascript/ignore-chrome-extension-scripts/
+  to: /docs/devtools/settings/other/#skip-extensions
+
 - from: /docs/devtools/evaluate-performance/
   to: /docs/devtools/performance/
 

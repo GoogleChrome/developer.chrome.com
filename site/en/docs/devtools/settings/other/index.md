@@ -78,9 +78,16 @@ To enable or disable all ignore listing for the debugger, check or clear {% Img 
 
 With ignore-listing enabled, you can further customize the list of scripts to ignore.
 
-### Ignore Chrome Extensions code  {: #skip-extensions }
+### Ignore Chrome Extensions scripts  {: #skip-extensions }
 
-To make [the debugger skip code from Chrome Extensions](/docs/devtools/javascript/ignore-chrome-extension-scripts/), check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="22", height="22" %} **Settings** > **Ignore List** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Add content scripts to ignore list**.
+When using the **Sources** panel of Chrome DevTools to [step through code](/docs/devtools/javascript#code-stepping), sometimes you pause on code that you don't recognize. You're probably paused on the code of one of the Chrome Extensions that you've installed.
+
+In {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Ignore List**, enable two checkboxes:
+
+- {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable Ignore Listing**
+  - {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Add content scripts to ignore list**.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/61Ez8rtic95aCrG0WhPi.png", alt="Settings DevTools to ignore extensions code.", width="800", height="525" %}
 
 ### Ignore known third-party scripts {: #skip-third-party }
 
