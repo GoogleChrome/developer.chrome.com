@@ -123,8 +123,8 @@ Attribution-Reporting-Register-Trigger:
 }
 ```
 
-**[Demo code: source debug key](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/763079d962dca0e9cf3d8e68dc18b57784fb98d7/attribution-reporting/functions/apps/ad tech.js#L160)**
-**[Demo code: trigger debug key](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/763079d962dca0e9cf3d8e68dc18b57784fb98d7/attribution-reporting/functions/apps/ad tech.js#L278)**
+**[Demo code: source debug key](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/763079d962dca0e9cf3d8e68dc18b57784fb98d7/attribution-reporting/functions/apps/adtech.js#L160)**
+**[Demo code: trigger debug key](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/763079d962dca0e9cf3d8e68dc18b57784fb98d7/attribution-reporting/functions/apps/adtech.js#L278)**
 
 {% Aside %}
 In the demo code, we give both debug keys the value of the legacy measurement third-party cookie. In a real system, you would make each key a unique ID, and map it to additional source-time information that you deem useful for debugging, as suggested in the example debug keys above.
