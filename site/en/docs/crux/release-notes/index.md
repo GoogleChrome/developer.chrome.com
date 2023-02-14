@@ -52,7 +52,7 @@ Publication date
 
 What's new
  : - Good [INP](https://web.dev/inp) increased by 4.3% to 75.6% of origins, primarily due to [an improvement in the Chrome scheduler](https://bugs.chromium.org/p/chromium/issues/detail?id=853771). The next frame is now scheduled with highest priority after discrete input events, which shortens the lag between input event and visual update.
- : - This month we've launched a [CrUX History API](/docs/crux/history-api/), which provides 25 weeks of historical data at both origin and URL level. We've [written a post](/blog/chrome-ux-report-history-api/) detailing how to use this new API, and a [Colab](https://colab.sandbox.google.com/github/GoogleChrome/CrUX/blob/main/colab/crux-history-api.ipynb) showing you an example of how to plot this historical data in various graphs. We're excited to see what you all build with it!
+ : - This month we've launched a [CrUX History API](/docs/crux/history-api/), which provides 25 weeks of historical data at both origin and URL level. We've [written a post](/blog/chrome-ux-report-history-api/) detailing how to use this new API, and a [Colab](https://colab.sandbox.google.com/github/GoogleChrome/CrUX/blob/main/colab/crux-history-api.ipynb) showing you an example of how to plot this historical data in various graphs.
 
 Notable stats
  : - 18,203,637 origins
