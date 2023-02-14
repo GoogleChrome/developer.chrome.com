@@ -93,9 +93,13 @@
 
 enhanced-select {
   align-items: center;
-  display: inline-flex;
+  display: none;
   height: 2.5rem;
   position: relative;
+
+  &:defined {
+    display: inline-flex;
+  }
 
   select {
     max-height: 100%;
