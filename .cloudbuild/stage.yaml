@@ -35,10 +35,15 @@ steps:
       # without further redirects, remove the leftovers and upload everything
       # to Cloud Storage, remove afterwards to not include it in the instance image
       - |
+
+        echo "Starting deployment ..."
+        cat gulp-tasks/stageGitHub/tmp/deploymentType.txt
         if [ ! -z "$(cat gulp-tasks/stageGitHub/tmp/deploymentType.txt)" ]; then
           cp -rf dist/en/* dist/ &&
           rm -rf dist/en &&
-          gsutil -q -m cp -r dist gs://static-dcc-staging/pr-$_PR_NUMBER
+          echo "Uploading files ..."
+          gsutil -m rsync -r dist gs://static-dcc-staging/pr-$_PR_NUMBER
+          echo "Done uploading!"
           rm -rf dist
         fi
 
