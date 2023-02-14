@@ -41,6 +41,8 @@ To restore default preferences, scroll down to the end of the **Preferences** ta
 
 ### Appearance
 
+This section lists options that customize DevTools appearance.
+
 {% Details %}
 
 {% DetailsSummary %}
@@ -149,6 +151,8 @@ This video shows how to switch between the tabs using the corresponding keyboard
 {% endDetails %}
 
 ### Sources
+
+This section lists options that customize the **Sources** panel.
 
 {% Details %}
 
@@ -481,8 +485,9 @@ This video first shows the requests log refreshed on page reload, then persisted
 
 ### Performance
 
-{% Details %}
+This section lists options that customize the **Performance** panel.
 
+{% Details %}
 {% DetailsSummary %}
 **Flamechart mouse wheel action** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} assigns scroll or zoom action to your mouse wheel when you navigate the flame chart.
 {% endDetailsSummary %}
@@ -605,6 +610,8 @@ You can find the same option in [Console > Settings](/docs/devtools/console/refe
 
 ### Extension
 
+This section lists options that customize the **Performance** panel.
+
 {% Details %}
 
 {% DetailsSummary %}
@@ -624,6 +631,8 @@ You can find the same option in [Console > Settings](/docs/devtools/console/refe
 
 ### Persistence
 
+This section lists options that control how DevTools saves the changes you make.
+
 {% Details %}
 {% DetailsSummary %}
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable local overrides** makes DevTools persist changes you make to sources across page loads.
@@ -634,7 +643,7 @@ For more information, see [Local Overrides](/docs/devtools/workspaces/#overrides
 
 ### Debugger {: #debugger }
 
-This section lists options that control **Debugger** behavior.
+This section lists options that control the **Debugger** behavior.
 
 {% Details %}
 {% DetailsSummary %}
@@ -680,6 +689,8 @@ This video first shows how DevTools "jumps" as you type a search query. Then whe
 {% endDetails %}
 
 ### Sync
+
+This section lets you set up the synchronization of settings between devices.
 
 {% Details %}
 {% DetailsSummary %}
