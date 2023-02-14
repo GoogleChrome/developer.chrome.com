@@ -60,12 +60,33 @@ module.exports = collection => {
   const tagsFeeds = {};
 
   /** @type {EleventyCollectionItem[]} */
+  const all = [];
+
+  /** @type {EleventyCollectionItem[]} */
   const blog = [];
 
+  /** @type {EleventyCollectionItem[]} */
+  const articles = [];
+
   for (const post of posts) {
-    // If post is a blog post, push it into blog array.
-    if (post.data.type === 'blogPost' && blog.length < MAX_POSTS) {
-      blog.push(post);
+    switch (post.data.type) {
+      case 'blogPost':
+        if (blog.length < MAX_POSTS) {
+          blog.push(post);
+        }
+        if (all.length < MAX_POSTS) {
+          all.push(post);
+        }
+        break;
+
+      case 'article':
+        if (articles.length < MAX_POSTS) {
+          articles.push(post);
+        }
+        if (all.length < MAX_POSTS) {
+          all.push(post);
+        }
+        break;
     }
 
     const postTags = tagsForData(post.data);
@@ -91,6 +112,12 @@ module.exports = collection => {
   // tagged feeds of the same name.
   /** @type {FeedsCollection} */
   const specialFeeds = {
+    articles: {
+      items: articles,
+      permalink: '/feeds/articles.xml',
+      title: i18n('i18n.common.articles'),
+      url: '/articles',
+    },
     blog: {
       items: blog,
       permalink: '/feeds/blog.xml',
@@ -98,7 +125,7 @@ module.exports = collection => {
       url: '/blog',
     },
     all: {
-      items: posts.slice(0, MAX_POSTS),
+      items: all,
       permalink: '/feeds/all.xml',
     },
   };

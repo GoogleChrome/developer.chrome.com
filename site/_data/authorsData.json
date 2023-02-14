@@ -860,6 +860,7 @@
   },
   "jney": {
     "country": "US",
+    "homepage": "https://www.jeremybney.com",
     "twitter": "jeremybney",
     "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/TAnCBPCUpoC4X3jwXN7Y.webp"
   },
@@ -1051,6 +1052,15 @@
     "twitter": "shane_exterkamp",
     "github": "exterkamp",
     "image": "image/admin/yPytekIqH5VnoqMx3jj2.jpg"
+  },
+  "helencho": {
+    "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/XAQGcTjOZYDZuupT6DIx.jpeg"
+  },
+  "kaustubhag": {
+    "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/Uva1hZaQBRpV8k1tJr7R.jpeg"
+  },
+  "johannhof": {
+    "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/U6iZ9cAgFDT7v4cmIxEP.jpeg"
   },
   "priyankachatterjee": {
     "country": "US",
