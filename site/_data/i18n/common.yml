@@ -200,6 +200,9 @@ featured:
 launch_app:
   en: 'Launch app'
 
+download_app:
+  en: 'Download app'
+
 view_source:
   en: 'View source'
 
