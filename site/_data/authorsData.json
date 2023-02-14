@@ -119,7 +119,8 @@
     "twitter": "aerotwist"
   },
   "chriswilson": {
-    "twitter": "cwilso"
+    "twitter": "cwilso",
+    "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/YwzRFxyI5YWUTUCIp3W1.jpeg"
   },
   "renatomangini": {
     "homepage": "http://www.renatomangini.com/",
@@ -1069,5 +1070,9 @@
   "tristramsouthey": {
     "country": "US",
     "image": "image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/yh2i5pJyWLqMz49B7qWq.jpeg"
+  },
+  "jyasskin": {
+    "country": "US",
+    "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/I9TmKizOlEBpFNDmT8qp.jpeg"
   }
 }

@@ -7,11 +7,14 @@ subhead: >
 layout: 'layouts/blog-post.njk'
 date: 2023-02-14
 hero: 'image/kheDArv5csY6rvQUJDbWRscckLr1/HYruo4j2ir5MYZ96WabJ.jpg'
+authors:
+    - chriswilson
+    - jyasskin
 alt: >
   An arrow pointing to the right.
 ---
 
-One of the challenges in the web standards community has always been ensuring respectful, inclusive, and constructive conduct in standards discussions. Several of us in the Chrome team set out to work with the community to develop some insights into how to improve. We hope to encourage the broad adoption of more respectful and productive interactions by setting a good example ourselves.  We've collected our guidance at [https://github.com/WebStandardsFuture/standards-of-behavior](https://github.com/WebStandardsFuture/standards-of-behavior), and this post is a summary of that guidance.  
+One of the challenges in the web standards community has always been ensuring respectful, inclusive, and constructive conduct in standards discussions. Several of us in the Chrome team set out to work with the community to develop some insights into how to improve. We hope to encourage the broad adoption of more respectful and productive interactions by setting a good example ourselves.  We've collected our guidance at [github.com/WebStandardsFuture/standards-of-behavior](https://github.com/WebStandardsFuture/standards-of-behavior), and this post is a summary of that guidance.  
 
 We believe the development of successful, open standards for the web platform requires _safe, inclusive and productive_ venues for discussion. In particular, standards discourse must include and be respectful of diverse perspectives. Our interactions should always be respectful, professional, and constructive.  The continuing evolution of the web means new people are joining to contribute ideas all the time, and we want standards venues to be a place where not just old timers and thick-skinned people can feel comfortable and be productive.  
 
