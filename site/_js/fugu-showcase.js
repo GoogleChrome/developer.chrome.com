@@ -126,6 +126,96 @@ const fallbackSVGBase64 = window.btoa(
     new URL(document.location.href).searchParams.get('api')?.split(',') || [];
   onSearch();
 
+  if ('share' in navigator && 'canShare' in navigator) {
+    const imageToPNG = async blob => {
+      const canvas = document.createElement('canvas');
+      const context = canvas.getContext('2d');
+      const image = await createImageBitmap(blob);
+      canvas.width = image.width;
+      canvas.height = image.height;
+      context?.drawImage(image, 0, 0);
+      return new Promise(resolve => {
+        canvas.toBlob(resolve, 'image/png');
+      });
+    };
+
+    const prepareShareData = async shareLink => {
+      try {
+        const fuguCard = shareLink.closest('.fugu-card');
+        const heading = fuguCard.querySelector('h2');
+        const appURL = heading?.querySelector('a').href;
+        const appName = heading.textContent?.trim();
+        const tagPills = fuguCard?.querySelectorAll('.tag-pill');
+        const appAPIs = Array.from(tagPills)
+          .slice(0, 2)
+          .map(a => `👉 ${a.textContent}`)
+          .join('\n');
+        const screenshotURL = fuguCard.querySelector('img').currentSrc;
+        const fileName = screenshotURL
+          .split('/')
+          .pop()
+          .replace('.webp', '.png');
+        const blob = await fetch(screenshotURL, {
+          mode: 'cors',
+        }).then(response => response.blob());
+        const pngBlob = await imageToPNG(blob);
+        const file = new File([pngBlob], fileName);
+
+        const fuguShowcaseI18N = JSON.parse(
+          document.querySelector('#fugu-showcase-i18n').textContent
+        );
+        const iJustFoundTheApp = fuguShowcaseI18N.i_just_found_the_app;
+        const itUsesTheseFuguAPIs = fuguShowcaseI18N.it_uses_these_fugu_apis;
+        const viaTheFuguShowcase = fuguShowcaseI18N.via_the_fugu_showcase;
+
+        const shareData = {
+          files: [file],
+          text: `${iJustFoundTheApp} “${appName}”: ${appURL}.\n\n${itUsesTheseFuguAPIs}:\n\n${appAPIs}\n\n(${viaTheFuguShowcase}: ${location.href})`.trim(),
+        };
+        return shareData;
+      } catch (err) {
+        return err;
+      }
+    };
+
+    document.querySelectorAll('.web-share').forEach(shareButton => {
+      shareButton.classList.remove('visibility-hidden');
+
+      shareButton.addEventListener('click', async () => {
+        const shareData = await prepareShareData(shareButton);
+        if (shareData instanceof Error) {
+          console.error(shareData.name, shareData.message);
+          return;
+        }
+        try {
+          if (!navigator.canShare(shareData)) {
+            console.warn('Cannot share data', shareData);
+            return;
+          }
+          await navigator.share(shareData);
+        } catch (err) {
+          if (err.name === 'AbortError') {
+            return;
+          } else if (err.name === 'NotAllowedError') {
+            // Try sharing without the screenshot.
+            try {
+              delete shareData.files;
+              await navigator.share(shareData);
+            } catch (err) {
+              if (err.name === 'AbortError') {
+                return;
+              }
+              console.error(err.name, err.message);
+              return;
+            }
+          }
+          console.error(err.name, err.message);
+          return;
+        }
+      });
+    });
+  }
+
   window.addEventListener('keydown', e => {
     if (e.key === 'f' && e.metaKey) {
       e.preventDefault();

@@ -6,7 +6,7 @@ subhead: >
 description: >
   A web platform API that allows users to login to websites with their federated accounts in a manner compatible with improvements to browser privacy.
 date: 2022-04-25
-updated: 2022-11-28
+updated: 2023-02-09
 authors:
   - agektmr
 ---
@@ -21,7 +21,7 @@ Credential Management API (FedCM).
 *  FedCM is shipped in Chrome 108.
 *  FedCM isn't supported in other browsers yet, but Mozilla is [implementing a
    prototype](https://bugzilla.mozilla.org/show_bug.cgi?id=1782066) to Firefox,
-   while the [Apple has expressed general
+   while [Apple has expressed general
    support](https://lists.webkit.org/pipermail/webkit-dev/2022-March/032162.html)
    and interest in working together on the FedCM proposal.
 *  [Chrome Platform Status](https://chromestatus.com/feature/6438627087220736)
@@ -143,22 +143,12 @@ instructions.
 
 ### You're affected by the third-party cookie phase out {: #unaffected-by-3p-cookies }
 
-<figure class="float-right">
-{%
-   Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/GMv2zAgNt8dG62JnoSEC.png", alt="Simulate third-party cookie phase-out by configuring Chrome to block them", width="800", height="908"
-%}
-   <figcaption>Simulate third-party cookie phase-out by configuring Chrome to block them</figcaption>
-</figure>
-
 You should only use FedCM if your current integration is affected by the
 third-party cookie phase out.
 
 If you're unsure if your identity federation will continue to work after
-Chrome's third-party cookie phase out, you can test the effect on a website
-with your integration in [Incognito
-mode](https://support.google.com/chrome/answer/95464). Alternatively, you
-can block third-party cookies on desktop at `chrome://settings/cookies` or
-on mobile by navigating to **Settings** > **Site settings** > **Cookies**.
+Chrome's third-party-cookie phase-out, you can test the effect on a website by
+[blocking third-party cookies on Chrome](#block-third-party-cookies).
 
 If there is no discoverable impact on your identity federation without
 third-party cookies, you can continue using your current integration without
@@ -335,6 +325,31 @@ forwarding](/docs/devtools/remote-debugging/local-server/).
 You can use DevTools on desktop to debug Chrome on Android by following the
 instructions at [Remote debug Android
 devices](/docs/devtools/remote-debugging/).
+
+### Block third-party cookies on Chrome {: #block-third-party-cookies}
+
+<figure class="float-right">
+{%
+   Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/GMv2zAgNt8dG62JnoSEC.png", alt="Simulate third-party cookie phase-out by configuring Chrome to block them", width="800", height="908"
+%}
+   <figcaption>Simulate third-party cookie phase-out by configuring Chrome to block them</figcaption>
+</figure>
+
+You can test how FedCM works without third-party cookies on Chrome before it's
+actually enforced.
+
+To block third-party cookies, use [Incognito
+mode](https://support.google.com/chrome/answer/95464), or choose "Block
+third-party cookies" in your desktop settings at `chrome://settings/cookies` or on
+mobile by navigating to **Settings** > **Site settings** > **Cookies**.
+
+{% Aside 'caution' %}
+
+FedCM is temperarily disabled when third-party cookies are blocked. Starting
+from Chrome 110, you can force enable it with the Chrome flag:
+`chrome://flags/#fedcm-without-third-party-cookies`.
+
+{% endAside %}
 
 ## Use the FedCM API {: #use-api }
 
