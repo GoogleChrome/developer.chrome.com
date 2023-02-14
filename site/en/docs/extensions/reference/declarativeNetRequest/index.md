@@ -44,9 +44,9 @@ a list containing dictionaries of type [Ruleset][4], as shown below.
     "declarativeNetRequestFeedback",
   ],
   "host_permissions": [
-  "http://www.blogger.com/",
-  "http://*.google.com/"
-],
+    "http://www.blogger.com/*",
+    "http://*.google.com/*"
+  ],
   ...
 }
 ```
@@ -204,13 +204,12 @@ is determined based on the priority of each rule and the operations specified.
 - If a rule has removed a header, then lower priority rules cannot further modify the header.
 
 ### Interaction with cached pages
+
 When rules are applied to browsers with pages in the service worker's cached storage, the browser may ignore the set rule for those specific pages until the cached storage is cleared. This is because cached storage is intended to be persistent, and many features like offline use do not expect the cache to be cleared without also clearing a service worker's registration as well. For cases when extensions utilizing declarativeNetRequest must be enabled and disabled repeatedly, the [`chrome.browsingData`](/docs/extensions/reference/browsingData/) API may be used to clear the cache to guarantee proper functionality.
-
-
 
 ## Example
 
-**manifest.json**
+{% Label %}manifest.json:{% endLabel %}
 
 ```json
 {
@@ -224,18 +223,20 @@ When rules are applied to browsers with pages in the service worker's cached sto
     }]
   },
   "permissions": [
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
     "*://*.google.com/*",
     "*://*.abcd.com/*",
     "*://*.example.com/*",
     "https://*.xyz.com/*",
     "*://*.headers.com/*",
-    "declarativeNetRequest"
   ],
   "manifest_version": 3
 }
 ```
 
-**rules.json**
+{% Label %}rules.json:{% endLabel %}
 
 ```json
 [
