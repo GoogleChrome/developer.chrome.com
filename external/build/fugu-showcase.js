@@ -68,7 +68,7 @@ async function toRSS(jsonData) {
           ${item.isElectronApp ? '<p>(This is an Electron.js app.)</p>' : ''}
           <p>
             ${
-              contentLength > 0
+              contentLength
                 ? `<img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/${item.screenshot}" alt="The app at ${item.appURL}."/>`
                 : '<img style="width: 200px; height: 150px;" src="data:image/svg+xml;base64,CjxzdmcKICB2aWV3Qm94PSIwIDAgNDAwIDIyNSIKICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQgc2xpY2UiCj4KICA8cGF0aCBmaWxsPSJyZ2JhKDE0NSwxNDUsMTQ1LDAuNSkiIGQ9Ik0wIDBoNDAwdjIyNUgweiIgLz4KICA8dGV4dAogICAgZmlsbD0icmdiYSgwLDAsMCwwLjMzKSIKICAgIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiIKICAgIGZvbnQtc2l6ZT0iMXJlbSIKICAgIHRleHQtYW5jaG9yPSJtaWRkbGUiCiAgICB4PSIyMDAiCiAgICB5PSIxMTMiCiAgICBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIKICA+CiAgICBTY3JlZW5zaG90IG5vdCBhdmFpbGFibGUKICA8L3RleHQ+Cjwvc3ZnPg==" alt=""/>'
             }
