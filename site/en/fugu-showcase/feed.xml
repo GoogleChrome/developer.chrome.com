@@ -6,15 +6,40 @@
       <link>https://developer.chrome.com/fugu-showcase/feed.xml</link>
       <atom:link href="https://developer.chrome.com/fugu-showcase/feed.xml" rel="self" type="application/rss+xml" />
       <item>
+        <title>WebGamer.io | Next-Gen Web Games (www.webgamer.io)</title>
+        <description><![CDATA[
+          <p>
+            <a href="https://www.webgamer.io/">
+              <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/webgamer.io.webp" alt="The app at https://www.webgamer.io/."/>
+            </a>
+          </p>
+          <p>
+            🚀 Try it out and
+            <a href="https://www.webgamer.io/">launch the app</a>.
+          </p>
+          <p><strong>Used APIs:</strong></p>
+          <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
+          </ul>
+        ]]></description>
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/webgamer.io.webp" length="49362" type="image/webp" />
+        <pubDate>Tue, 14 Feb 2023 11:46:22 GMT</pubDate>
+        <link>https://developer.chrome.com/fugu-showcase/#webgamer.io</link>
+        <guid>https://developer.chrome.com/fugu-showcase/#webgamer.io</guid>
+      </item>
+      <item>
         <title>Vite + React + TS (vodon-player.vercel.app)</title>
         <description><![CDATA[
           <p>
             <a href="https://vodon-player.vercel.app/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/vodon-player.vercel.app.webp" alt="The app at https://vodon-player.vercel.app/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://vodon-player.vercel.app/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://vodon-player.vercel.app/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/Rodeoclash/vodon-player">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -37,10 +62,11 @@
           <p>
             <a href="https://vimeo.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/vimeo.com.webp" alt="The app at https://vimeo.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://vimeo.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://vimeo.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -61,10 +87,11 @@
           <p>
             <a href="https://web.goodnotes.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/web.goodnotes.com.webp" alt="The app at https://web.goodnotes.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://web.goodnotes.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://web.goodnotes.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -84,10 +111,11 @@
           <p>
             <a href="https://app.sketchup.com/app">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/app.sketchup.com!app.webp" alt="The app at https://app.sketchup.com/app."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://app.sketchup.com/app">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://app.sketchup.com/app">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -95,7 +123,7 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/app.sketchup.com!app.webp" length="10686" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/app.sketchup.com!app.webp" length="10662" type="image/webp" />
         <pubDate>Tue, 07 Feb 2023 15:57:18 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#app.sketchup.com!app</link>
         <guid>https://developer.chrome.com/fugu-showcase/#app.sketchup.com!app</guid>
@@ -107,10 +135,11 @@
           <p>
             <a href="https://www.duolingo.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/duolingo.com.webp" alt="The app at https://www.duolingo.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://www.duolingo.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://www.duolingo.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -130,10 +159,11 @@
           <p>
             <a href="https://tasmota.github.io/install/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/tasmota.github.io!install.webp" alt="The app at https://tasmota.github.io/install/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://tasmota.github.io/install/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://tasmota.github.io/install/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/tasmota/install/">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -153,10 +183,11 @@
           <p>
             <a href="https://stadia.google.com/controller/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/stadia.google.com!controller.webp" alt="The app at https://stadia.google.com/controller/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://stadia.google.com/controller/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://stadia.google.com/controller/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -176,10 +207,11 @@
           <p>
             <a href="https://elk.zone/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/elk.zone.webp" alt="The app at https://elk.zone/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://elk.zone/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://elk.zone/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/elk-zone/elk">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -190,7 +222,7 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/elk.zone.webp" length="11558" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/elk.zone.webp" length="12210" type="image/webp" />
         <pubDate>Fri, 13 Jan 2023 09:26:12 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#elk.zone</link>
         <guid>https://developer.chrome.com/fugu-showcase/#elk.zone</guid>
@@ -202,10 +234,11 @@
           <p>
             <a href="https://pixlr.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/pixlr.com.webp" alt="The app at https://pixlr.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://pixlr.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://pixlr.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -229,10 +262,11 @@
           <p>
             <a href="https://www.fotor.com/photo-editor-app/editor/basic">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/fotor.com!photo-editor-app!editor!basic.webp" alt="The app at https://www.fotor.com/photo-editor-app/editor/basic."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://www.fotor.com/photo-editor-app/editor/basic">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://www.fotor.com/photo-editor-app/editor/basic">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -255,10 +289,11 @@
           <p>
             <a href="https://web.snapchat.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/web.snapchat.com.webp" alt="The app at https://web.snapchat.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://web.snapchat.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://web.snapchat.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -285,10 +320,11 @@
           <p>
             <a href="https://pinafore.social/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/pinafore.social.webp" alt="The app at https://pinafore.social/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://pinafore.social/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://pinafore.social/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/nolanlawson/pinafore">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -312,10 +348,11 @@
           <p>
             <a href="https://natto.dev/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/natto.dev.webp" alt="The app at https://natto.dev/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://natto.dev/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://natto.dev/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -334,10 +371,11 @@
           <p>
             <a href="https://readyplayer.me/avatar">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/readyplayer.me!avatar.webp" alt="The app at https://readyplayer.me/avatar."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://readyplayer.me/avatar">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://readyplayer.me/avatar">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -356,10 +394,11 @@
           <p>
             <a href="https://tylify.app/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/tylify.app.webp" alt="The app at https://tylify.app/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://tylify.app/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://tylify.app/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -367,7 +406,7 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/tylify.app.webp" length="16456" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/tylify.app.webp" length="16016" type="image/webp" />
         <pubDate>Mon, 09 Jan 2023 13:12:22 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#tylify.app</link>
         <guid>https://developer.chrome.com/fugu-showcase/#tylify.app</guid>
@@ -379,10 +418,11 @@
           <p>
             <a href="https://three-colors.opl.io/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/three-colors.opl.io.webp" alt="The app at https://three-colors.opl.io/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://three-colors.opl.io/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://three-colors.opl.io/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -404,10 +444,11 @@
           <p>
             <a href="https://regex101.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/regex101.com.webp" alt="The app at https://regex101.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://regex101.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://regex101.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -415,7 +456,7 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/regex101.com.webp" length="16320" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/regex101.com.webp" length="16544" type="image/webp" />
         <pubDate>Mon, 09 Jan 2023 13:05:27 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#regex101.com</link>
         <guid>https://developer.chrome.com/fugu-showcase/#regex101.com</guid>
@@ -427,10 +468,11 @@
           <p>
             <a href="https://gltf.report/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/gltf.report.webp" alt="The app at https://gltf.report/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://gltf.report/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://gltf.report/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/donmccurdy/glTF-Report-Feedback">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -451,10 +493,11 @@
           <p>
             <a href="https://edit.video/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/edit.video.webp" alt="The app at https://edit.video/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://edit.video/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://edit.video/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -474,10 +517,11 @@
           <p>
             <a href="https://edit.photo/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/edit.photo.webp" alt="The app at https://edit.photo/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://edit.photo/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://edit.photo/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -486,7 +530,7 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/edit.photo.webp" length="23538" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/edit.photo.webp" length="23566" type="image/webp" />
         <pubDate>Mon, 09 Jan 2023 12:59:07 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#edit.photo</link>
         <guid>https://developer.chrome.com/fugu-showcase/#edit.photo</guid>
@@ -498,17 +542,18 @@
           <p>
             <a href="https://graphtoy.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/graphtoy.com.webp" alt="The app at https://graphtoy.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://graphtoy.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://graphtoy.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/graphtoy.com.webp" length="25274" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/graphtoy.com.webp" length="25340" type="image/webp" />
         <pubDate>Mon, 09 Jan 2023 12:56:18 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#graphtoy.com</link>
         <guid>https://developer.chrome.com/fugu-showcase/#graphtoy.com</guid>
@@ -520,10 +565,11 @@
           <p>
             <a href="https://audiomass.co/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/audiomass.co.webp" alt="The app at https://audiomass.co/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://audiomass.co/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://audiomass.co/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/pkalogiros/audiomass">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -544,10 +590,11 @@
           <p>
             <a href="https://www.globs.design/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/globs.design.webp" alt="The app at https://www.globs.design/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://www.globs.design/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://www.globs.design/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/steveruizok/globs">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -555,7 +602,7 @@
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/globs.design.webp" length="6742" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/globs.design.webp" length="6744" type="image/webp" />
         <pubDate>Mon, 09 Jan 2023 12:46:21 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#globs.design</link>
         <guid>https://developer.chrome.com/fugu-showcase/#globs.design</guid>
@@ -566,10 +613,11 @@
           <p>
             <a href="https://www.vimonlineeditor.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/vimonlineeditor.com.webp" alt="The app at https://www.vimonlineeditor.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://www.vimonlineeditor.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://www.vimonlineeditor.com/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/programmerhat/vim-online-editor">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -577,7 +625,7 @@
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/vimonlineeditor.com.webp" length="20844" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/vimonlineeditor.com.webp" length="20848" type="image/webp" />
         <pubDate>Mon, 09 Jan 2023 12:38:09 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#vimonlineeditor.com</link>
         <guid>https://developer.chrome.com/fugu-showcase/#vimonlineeditor.com</guid>
@@ -588,10 +636,11 @@
           <p>
             <a href="https://web-gphoto2.rreverser.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/web-gphoto2.rreverser.com.webp" alt="The app at https://web-gphoto2.rreverser.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://web-gphoto2.rreverser.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://web-gphoto2.rreverser.com/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/GoogleChromeLabs/web-gphoto2">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -611,10 +660,11 @@
           <p>
             <a href="https://logiwebconnect.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/logiwebconnect.com.webp" alt="The app at https://logiwebconnect.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://logiwebconnect.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://logiwebconnect.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -635,10 +685,11 @@
           <p>
             <a href="https://boardgamearena.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/boardgamearena.com.webp" alt="The app at https://boardgamearena.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://boardgamearena.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://boardgamearena.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -647,7 +698,7 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/boardgamearena.com.webp" length="23604" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/boardgamearena.com.webp" length="23590" type="image/webp" />
         <pubDate>Tue, 15 Nov 2022 12:36:03 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#boardgamearena.com</link>
         <guid>https://developer.chrome.com/fugu-showcase/#boardgamearena.com</guid>
@@ -658,10 +709,11 @@
           <p>
             <a href="https://install.wled.me/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/install.wled.me.webp" alt="The app at https://install.wled.me/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://install.wled.me/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://install.wled.me/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/Aircoookie/WLED">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -681,10 +733,11 @@
           <p>
             <a href="https://grapheneos.org/install/web#flashing-factory-images">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/grapheneos.org!install!webflashing-factory-images.webp" alt="The app at https://grapheneos.org/install/web#flashing-factory-images."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://grapheneos.org/install/web#flashing-factory-images">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://grapheneos.org/install/web#flashing-factory-images">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/GrapheneOS/grapheneos.org">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -704,10 +757,11 @@
           <p>
             <a href="https://songwhip.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/songwhip.com.webp" alt="The app at https://songwhip.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://songwhip.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://songwhip.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -728,10 +782,11 @@
           <p>
             <a href="https://excalidraw.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/excalidraw.com.webp" alt="The app at https://excalidraw.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://excalidraw.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://excalidraw.com/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/excalidraw/excalidraw">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -757,10 +812,11 @@
           <p>
             <a href="https://stackblitz.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/stackblitz.com.webp" alt="The app at https://stackblitz.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://stackblitz.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://stackblitz.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -781,10 +837,11 @@
           <p>
             <a href="https://toot.cafe/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/toot.cafe.webp" alt="The app at https://toot.cafe/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://toot.cafe/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://toot.cafe/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -795,7 +852,7 @@
 <li><a href="https://web.dev/web-share-target/"> Web Share Target</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/toot.cafe.webp" length="12258" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/toot.cafe.webp" length="12314" type="image/webp" />
         <pubDate>Fri, 04 Nov 2022 14:54:39 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#toot.cafe</link>
         <guid>https://developer.chrome.com/fugu-showcase/#toot.cafe</guid>
@@ -806,10 +863,11 @@
           <p>
             <a href="https://www.tiktok.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/tiktok.com.webp" alt="The app at https://www.tiktok.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://www.tiktok.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://www.tiktok.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -820,7 +878,7 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/tiktok.com.webp" length="20872" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/tiktok.com.webp" length="24692" type="image/webp" />
         <pubDate>Wed, 26 Oct 2022 16:45:05 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#tiktok.com</link>
         <guid>https://developer.chrome.com/fugu-showcase/#tiktok.com</guid>
@@ -831,10 +889,11 @@
           <p>
             <a href="https://trovo.live/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/trovo.live.webp" alt="The app at https://trovo.live/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://trovo.live/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://trovo.live/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -843,7 +902,7 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/trovo.live.webp" length="31534" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/trovo.live.webp" length="30750" type="image/webp" />
         <pubDate>Wed, 26 Oct 2022 16:42:44 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#trovo.live</link>
         <guid>https://developer.chrome.com/fugu-showcase/#trovo.live</guid>
@@ -855,10 +914,11 @@
           <p>
             <a href="https://h5.topwargame.com/h5game/index.html">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/h5.topwargame.com!h5game!index.html.webp" alt="The app at https://h5.topwargame.com/h5game/index.html."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://h5.topwargame.com/h5game/index.html">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://h5.topwargame.com/h5game/index.html">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -866,7 +926,7 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/h5.topwargame.com!h5game!index.html.webp" length="11178" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/h5.topwargame.com!h5game!index.html.webp" length="11388" type="image/webp" />
         <pubDate>Wed, 26 Oct 2022 15:51:12 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#h5.topwargame.com!h5game!index.html</link>
         <guid>https://developer.chrome.com/fugu-showcase/#h5.topwargame.com!h5game!index.html</guid>
@@ -878,10 +938,11 @@
           <p>
             <a href="https://www.capcut.com/editor">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/capcut.com!editor.webp" alt="The app at https://www.capcut.com/editor."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://www.capcut.com/editor">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://www.capcut.com/editor">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -903,10 +964,11 @@
           <p>
             <a href="https://shots.so/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/shots.so.webp" alt="The app at https://shots.so/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://shots.so/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://shots.so/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -920,7 +982,7 @@
 <li><a href="https://web.dev/tabbed-application-mode/"> Tabbed Application Mode</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/shots.so.webp" length="19352" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/shots.so.webp" length="19330" type="image/webp" />
         <pubDate>Wed, 26 Oct 2022 10:13:55 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#shots.so</link>
         <guid>https://developer.chrome.com/fugu-showcase/#shots.so</guid>
@@ -931,10 +993,11 @@
           <p>
             <a href="https://web.blockbench.net/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/web.blockbench.net.webp" alt="The app at https://web.blockbench.net/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://web.blockbench.net/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://web.blockbench.net/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/JannisX11/blockbench">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -960,10 +1023,11 @@
           <p>
             <a href="https://www.pinterest.de/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/pinterest.de.webp" alt="The app at https://www.pinterest.de/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://www.pinterest.de/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://www.pinterest.de/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -977,7 +1041,7 @@
 <li><a href="https://web.dev/web-share/"> Web Share</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/pinterest.de.webp" length="20310" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/pinterest.de.webp" length="20222" type="image/webp" />
         <pubDate>Wed, 26 Oct 2022 10:00:09 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#pinterest.de</link>
         <guid>https://developer.chrome.com/fugu-showcase/#pinterest.de</guid>
@@ -989,10 +1053,11 @@
           <p>
             <a href="https://pokedex.org/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/pokedex.org.webp" alt="The app at https://pokedex.org/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://pokedex.org/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://pokedex.org/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/nolanlawson/pokedex.org">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -1015,10 +1080,11 @@
           <p>
             <a href="https://docs.craft.do/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/docs.craft.do.webp" alt="The app at https://docs.craft.do/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://docs.craft.do/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://docs.craft.do/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -1037,10 +1103,11 @@
           <p>
             <a href="https://app.diagrams.net/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/app.diagrams.net.webp" alt="The app at https://app.diagrams.net/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://app.diagrams.net/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://app.diagrams.net/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/jgraph/drawio">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -1064,10 +1131,11 @@
           <p>
             <a href="https://www.irccloud.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/irccloud.com.webp" alt="The app at https://www.irccloud.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://www.irccloud.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://www.irccloud.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -1088,10 +1156,11 @@
           <p>
             <a href="https://www.tldraw.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/tldraw.com.webp" alt="The app at https://www.tldraw.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://www.tldraw.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://www.tldraw.com/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/tldraw/tldraw">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -1114,10 +1183,11 @@
           <p>
             <a href="https://linear.app/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/linear.app.webp" alt="The app at https://linear.app/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://linear.app/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://linear.app/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -1139,10 +1209,11 @@
           <p>
             <a href="https://www.soundslice.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/soundslice.com.webp" alt="The app at https://www.soundslice.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://www.soundslice.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://www.soundslice.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -1150,7 +1221,7 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/soundslice.com.webp" length="22446" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/soundslice.com.webp" length="22422" type="image/webp" />
         <pubDate>Wed, 26 Oct 2022 09:34:49 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#soundslice.com</link>
         <guid>https://developer.chrome.com/fugu-showcase/#soundslice.com</guid>
@@ -1161,10 +1232,11 @@
           <p>
             <a href="https://radio-house.app/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/radio-house.app.webp" alt="The app at https://radio-house.app/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://radio-house.app/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://radio-house.app/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -1184,10 +1256,11 @@
           <p>
             <a href="https://narrow.one/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/narrow.one.webp" alt="The app at https://narrow.one/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://narrow.one/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://narrow.one/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -1213,10 +1286,11 @@
           <p>
             <a href="https://lichess.org/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/lichess.org.webp" alt="The app at https://lichess.org/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://lichess.org/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://lichess.org/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -1225,7 +1299,7 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/lichess.org.webp" length="18722" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/lichess.org.webp" length="18222" type="image/webp" />
         <pubDate>Wed, 26 Oct 2022 09:16:01 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#lichess.org</link>
         <guid>https://developer.chrome.com/fugu-showcase/#lichess.org</guid>
@@ -1237,17 +1311,18 @@
           <p>
             <a href="https://www.lightningmaps.org/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/lightningmaps.org.webp" alt="The app at https://www.lightningmaps.org/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://www.lightningmaps.org/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://www.lightningmaps.org/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Background_Synchronization_API"> Background Sync</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/lightningmaps.org.webp" length="34330" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/lightningmaps.org.webp" length="36352" type="image/webp" />
         <pubDate>Wed, 26 Oct 2022 09:09:15 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#lightningmaps.org</link>
         <guid>https://developer.chrome.com/fugu-showcase/#lightningmaps.org</guid>
@@ -1259,10 +1334,11 @@
           <p>
             <a href="https://traintimes.org.uk/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/traintimes.org.uk.webp" alt="The app at https://traintimes.org.uk/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://traintimes.org.uk/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://traintimes.org.uk/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -1271,7 +1347,7 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/traintimes.org.uk.webp" length="52488" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/traintimes.org.uk.webp" length="52444" type="image/webp" />
         <pubDate>Wed, 26 Oct 2022 09:07:56 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#traintimes.org.uk</link>
         <guid>https://developer.chrome.com/fugu-showcase/#traintimes.org.uk</guid>
@@ -1283,10 +1359,11 @@
           <p>
             <a href="https://thesession.org/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/thesession.org.webp" alt="The app at https://thesession.org/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://thesession.org/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://thesession.org/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -1305,10 +1382,11 @@
           <p>
             <a href="https://www.instagram.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/instagram.com.webp" alt="The app at https://www.instagram.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://www.instagram.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://www.instagram.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -1333,10 +1411,11 @@
           <p>
             <a href="https://hoppscotch.io/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/hoppscotch.io.webp" alt="The app at https://hoppscotch.io/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://hoppscotch.io/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://hoppscotch.io/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -1347,7 +1426,7 @@
 <li><a href="https://web.dev/web-share/"> Web Share</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/hoppscotch.io.webp" length="6502" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/hoppscotch.io.webp" length="6498" type="image/webp" />
         <pubDate>Wed, 26 Oct 2022 09:01:16 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#hoppscotch.io</link>
         <guid>https://developer.chrome.com/fugu-showcase/#hoppscotch.io</guid>
@@ -1358,10 +1437,11 @@
           <p>
             <a href="https://github.dev/github/dev">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/github.dev!github!dev.webp" alt="The app at https://github.dev/github/dev."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://github.dev/github/dev">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://github.dev/github/dev">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -1383,10 +1463,11 @@
           <p>
             <a href="https://twitter.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/twitter.com.webp" alt="The app at https://twitter.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://twitter.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://twitter.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -1412,10 +1493,11 @@
           <p>
             <a href="https://www.netflix.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/netflix.com.webp" alt="The app at https://www.netflix.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://www.netflix.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://www.netflix.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -1426,7 +1508,7 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/netflix.com.webp" length="38790" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/netflix.com.webp" length="40846" type="image/webp" />
         <pubDate>Wed, 26 Oct 2022 08:51:40 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#netflix.com</link>
         <guid>https://developer.chrome.com/fugu-showcase/#netflix.com</guid>
@@ -1438,10 +1520,11 @@
           <p>
             <a href="https://www.photopea.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/photopea.com.webp" alt="The app at https://www.photopea.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://www.photopea.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://www.photopea.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -1465,10 +1548,11 @@
           <p>
             <a href="https://bitmidi.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/bitmidi.com.webp" alt="The app at https://bitmidi.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://bitmidi.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://bitmidi.com/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/feross/bitmidi.com">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -1491,10 +1575,11 @@
           <p>
             <a href="https://wormhole.app/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/wormhole.app.webp" alt="The app at https://wormhole.app/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://wormhole.app/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://wormhole.app/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -1513,16 +1598,16 @@
         <guid>https://developer.chrome.com/fugu-showcase/#wormhole.app</guid>
       </item>
       <item>
-        <title>Snapdrop (snapdrop.net)</title>
+        <title>snapdrop.net (snapdrop.net)</title>
         <description><![CDATA[
-          <p>Instantly share images, videos, PDFs, and links with people nearby. Peer2Peer and Open Source. No Setup, No Signup.</p>
           <p>
             <a href="https://snapdrop.net/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/snapdrop.net.webp" alt="The app at https://snapdrop.net/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://snapdrop.net/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://snapdrop.net/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -1534,7 +1619,7 @@
 <li><a href="https://web.dev/web-share-target/"> Web Share Target</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/snapdrop.net.webp" length="4630" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/snapdrop.net.webp" length="5232" type="image/webp" />
         <pubDate>Fri, 21 Oct 2022 08:59:24 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#snapdrop.net</link>
         <guid>https://developer.chrome.com/fugu-showcase/#snapdrop.net</guid>
@@ -1545,10 +1630,11 @@
           <p>
             <a href="https://cleanfeed.net/studio">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/cleanfeed.net!studio.webp" alt="The app at https://cleanfeed.net/studio."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://cleanfeed.net/studio">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://cleanfeed.net/studio">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -1568,10 +1654,11 @@
           <p>
             <a href="https://app.storz-bickel.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/app.storz-bickel.com.webp" alt="The app at https://app.storz-bickel.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://app.storz-bickel.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://app.storz-bickel.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -1592,10 +1679,11 @@
           <p>
             <a href="https://okso.app/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/okso.app.webp" alt="The app at https://okso.app/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://okso.app/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://okso.app/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -1616,10 +1704,11 @@
           <p>
             <a href="https://www.airconsole.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/airconsole.com.webp" alt="The app at https://www.airconsole.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://www.airconsole.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://www.airconsole.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -1627,7 +1716,7 @@
 <li><a href="https://web.dev/web-share/"> Web Share</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/airconsole.com.webp" length="16390" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/airconsole.com.webp" length="16418" type="image/webp" />
         <pubDate>Tue, 11 Oct 2022 08:37:57 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#airconsole.com</link>
         <guid>https://developer.chrome.com/fugu-showcase/#airconsole.com</guid>
@@ -1638,10 +1727,11 @@
           <p>
             <a href="https://microsoftedge.github.io/Demos/wami/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/microsoftedge.github.io!Demos!wami.webp" alt="The app at https://microsoftedge.github.io/Demos/wami/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://microsoftedge.github.io/Demos/wami/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://microsoftedge.github.io/Demos/wami/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/MicrosoftEdge/Demos/tree/main/wami">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -1661,10 +1751,11 @@
           <p>
             <a href="https://niftypass.app/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/niftypass.app.webp" alt="The app at https://niftypass.app/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://niftypass.app/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://niftypass.app/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -1685,10 +1776,11 @@
           <p>
             <a href="https://app.cosee.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/app.cosee.com.webp" alt="The app at https://app.cosee.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://app.cosee.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://app.cosee.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -1708,10 +1800,11 @@
           <p>
             <a href="https://kryogenix.org/farmbound">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/kryogenix.org!farmbound.webp" alt="The app at https://kryogenix.org/farmbound."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://kryogenix.org/farmbound">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://kryogenix.org/farmbound">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -1734,10 +1827,11 @@
           <p>
             <a href="https://www.conifer-music.app">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/conifer-music.app.webp" alt="The app at https://www.conifer-music.app."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://www.conifer-music.app">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://www.conifer-music.app">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -1768,10 +1862,11 @@
           <p>
             <a href="https://editor.kota-yata.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/editor.kota-yata.com.webp" alt="The app at https://editor.kota-yata.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://editor.kota-yata.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://editor.kota-yata.com/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/kota-yata/editor.kota-yata.com">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -1793,10 +1888,11 @@
           <p>
             <a href="https://pwa.journalisticapp.com">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/pwa.journalisticapp.com.webp" alt="The app at https://pwa.journalisticapp.com."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://pwa.journalisticapp.com">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://pwa.journalisticapp.com">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -1816,10 +1912,11 @@
           <p>
             <a href="https://buddy.edgetx.org/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/buddy.edgetx.org.webp" alt="The app at https://buddy.edgetx.org/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://buddy.edgetx.org/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://buddy.edgetx.org/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/EdgeTX/buddy">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -1828,7 +1925,7 @@
 <li><a href="https://web.dev/file-system-access/"> File System Access</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/buddy.edgetx.org.webp" length="28614" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/buddy.edgetx.org.webp" length="28598" type="image/webp" />
         <pubDate>Tue, 20 Sep 2022 00:17:15 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#buddy.edgetx.org</link>
         <guid>https://developer.chrome.com/fugu-showcase/#buddy.edgetx.org</guid>
@@ -1840,10 +1937,11 @@
           <p>
             <a href="https://esc-configurator.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/esc-configurator.com.webp" alt="The app at https://esc-configurator.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://esc-configurator.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://esc-configurator.com/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/stylesuxx/esc-configurator">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -1854,7 +1952,7 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/esc-configurator.com.webp" length="27968" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/esc-configurator.com.webp" length="27990" type="image/webp" />
         <pubDate>Tue, 20 Sep 2022 00:13:58 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#esc-configurator.com</link>
         <guid>https://developer.chrome.com/fugu-showcase/#esc-configurator.com</guid>
@@ -1866,10 +1964,11 @@
           <p>
             <a href="https://fpv.wtf/#/about">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/fpv.wtf!!about.webp" alt="The app at https://fpv.wtf/#/about."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://fpv.wtf/#/about">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://fpv.wtf/#/about">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/fpv-wtf/voc-web">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -1889,10 +1988,11 @@
           <p>
             <a href="https://web-serial-app.netlify.app/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/web-serial-app.netlify.app.webp" alt="The app at https://web-serial-app.netlify.app/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://web-serial-app.netlify.app/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://web-serial-app.netlify.app/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/tanepiper/web-serial-controller">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -1900,7 +2000,7 @@
             <li><a href="https://web.dev/serial/"> WebSerial</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/web-serial-app.netlify.app.webp" length="25790" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/web-serial-app.netlify.app.webp" length="25782" type="image/webp" />
         <pubDate>Fri, 09 Sep 2022 08:08:52 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#web-serial-app.netlify.app</link>
         <guid>https://developer.chrome.com/fugu-showcase/#web-serial-app.netlify.app</guid>
@@ -1912,10 +2012,11 @@
           <p>
             <a href="https://usevia.app/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/usevia.app.webp" alt="The app at https://usevia.app/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://usevia.app/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://usevia.app/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/the-via/app">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -1934,10 +2035,11 @@
           <p>
             <a href="https://microsoftedge.github.io/Demos/pwamp/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/microsoftedge.github.io!Demos!pwamp.webp" alt="The app at https://microsoftedge.github.io/Demos/pwamp/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://microsoftedge.github.io/Demos/pwamp/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://microsoftedge.github.io/Demos/pwamp/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/MicrosoftEdge/Demos/tree/main/pwamp">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -1966,10 +2068,11 @@
           <p>
             <a href="https://tidepool.org/uploader">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/tidepool.org!uploader.webp" alt="The app at https://tidepool.org/uploader."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://tidepool.org/uploader">download the app</a>.
+            🚀 Try it out and
+            <a href="https://tidepool.org/uploader">download the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/tidepool-org/uploader">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -1991,10 +2094,11 @@
           <p>
             <a href="https://setu-upi-over-nfc.herokuapp.com/how-it-works/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/setu-upi-over-nfc.herokuapp.com!how-it-works.webp" alt="The app at https://setu-upi-over-nfc.herokuapp.com/how-it-works/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://setu-upi-over-nfc.herokuapp.com/how-it-works/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://setu-upi-over-nfc.herokuapp.com/how-it-works/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/SetuHQ/upi-pos">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -2014,10 +2118,11 @@
           <p>
             <a href="https://roland50.studio/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/roland50.studio.webp" alt="The app at https://roland50.studio/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://roland50.studio/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://roland50.studio/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -2025,7 +2130,7 @@
 <li><a href="https://web.dev/web-share/"> Web Share</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/roland50.studio.webp" length="6880" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/roland50.studio.webp" length="6930" type="image/webp" />
         <pubDate>Tue, 09 Aug 2022 09:14:57 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#roland50.studio</link>
         <guid>https://developer.chrome.com/fugu-showcase/#roland50.studio</guid>
@@ -2037,10 +2142,11 @@
           <p>
             <a href="https://docs.qq.com/desktop/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/docs.qq.com!desktop.webp" alt="The app at https://docs.qq.com/desktop/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://docs.qq.com/desktop/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://docs.qq.com/desktop/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -2051,7 +2157,7 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/docs.qq.com!desktop.webp" length="9786" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/docs.qq.com!desktop.webp" length="9810" type="image/webp" />
         <pubDate>Tue, 09 Aug 2022 07:58:51 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#docs.qq.com!desktop</link>
         <guid>https://developer.chrome.com/fugu-showcase/#docs.qq.com!desktop</guid>
@@ -2063,10 +2169,11 @@
           <p>
             <a href="https://open.spotify.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/open.spotify.com.webp" alt="The app at https://open.spotify.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://open.spotify.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://open.spotify.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -2077,7 +2184,7 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/estimate"> Storage Estimation</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/open.spotify.com.webp" length="24036" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/open.spotify.com.webp" length="24044" type="image/webp" />
         <pubDate>Mon, 08 Aug 2022 14:57:45 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#open.spotify.com</link>
         <guid>https://developer.chrome.com/fugu-showcase/#open.spotify.com</guid>
@@ -2089,10 +2196,11 @@
           <p>
             <a href="https://paintz.app">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/paintz.app.webp" alt="The app at https://paintz.app."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://paintz.app">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://paintz.app">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/ZMYaro/PaintZ">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -2118,10 +2226,11 @@
           <p>
             <a href="https://ui.perfetto.dev/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/ui.perfetto.dev.webp" alt="The app at https://ui.perfetto.dev/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://ui.perfetto.dev/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://ui.perfetto.dev/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -2131,7 +2240,7 @@
 <li><a href="https://web.dev/usb/"> WebUSB</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/ui.perfetto.dev.webp" length="10550" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/ui.perfetto.dev.webp" length="960" type="image/webp" />
         <pubDate>Mon, 25 Jul 2022 15:06:45 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#ui.perfetto.dev</link>
         <guid>https://developer.chrome.com/fugu-showcase/#ui.perfetto.dev</guid>
@@ -2143,10 +2252,11 @@
           <p>
             <a href="https://pixa.pics/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/pixa.pics.webp" alt="The app at https://pixa.pics/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://pixa.pics/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://pixa.pics/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/pixa-pics/pixa-pics.github.io">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -2159,7 +2269,7 @@
 <li><a href="https://web.dev/web-share/"> Web Share</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/pixa.pics.webp" length="25204" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/pixa.pics.webp" length="25400" type="image/webp" />
         <pubDate>Mon, 18 Jul 2022 07:36:19 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#pixa.pics</link>
         <guid>https://developer.chrome.com/fugu-showcase/#pixa.pics</guid>
@@ -2170,10 +2280,11 @@
           <p>
             <a href="https://play.spacelancers.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/play.spacelancers.com.webp" alt="The app at https://play.spacelancers.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://play.spacelancers.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://play.spacelancers.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -2193,10 +2304,11 @@
           <p>
             <a href="https://configure.zsa.io/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/configure.zsa.io.webp" alt="The app at https://configure.zsa.io/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://configure.zsa.io/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://configure.zsa.io/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -2215,10 +2327,11 @@
           <p>
             <a href="https://web.brewflasher.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/web.brewflasher.com.webp" alt="The app at https://web.brewflasher.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://web.brewflasher.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://web.brewflasher.com/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/thorrak/brewflasher_web">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -2238,10 +2351,11 @@
           <p>
             <a href="https://dj.beatport.com/home">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/dj.beatport.com!home.webp" alt="The app at https://dj.beatport.com/home."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://dj.beatport.com/home">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://dj.beatport.com/home">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -2251,7 +2365,7 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_MIDI_API"> WebMIDI</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/dj.beatport.com!home.webp" length="18444" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/dj.beatport.com!home.webp" length="18460" type="image/webp" />
         <pubDate>Fri, 01 Jul 2022 11:51:58 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#dj.beatport.com!home</link>
         <guid>https://developer.chrome.com/fugu-showcase/#dj.beatport.com!home</guid>
@@ -2263,10 +2377,11 @@
           <p>
             <a href="https://www.topdecked.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/topdecked.com.webp" alt="The app at https://www.topdecked.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://www.topdecked.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://www.topdecked.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -2279,7 +2394,7 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/estimate"> Storage Estimation</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/topdecked.com.webp" length="16182" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/topdecked.com.webp" length="16294" type="image/webp" />
         <pubDate>Wed, 29 Jun 2022 16:03:55 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#topdecked.com</link>
         <guid>https://developer.chrome.com/fugu-showcase/#topdecked.com</guid>
@@ -2291,10 +2406,11 @@
           <p>
             <a href="https://snapper-gps.herokuapp.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/snapper-gps.herokuapp.com.webp" alt="The app at https://snapper-gps.herokuapp.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://snapper-gps.herokuapp.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://snapper-gps.herokuapp.com/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/SnapperGPS/snappergps-app">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -2318,10 +2434,11 @@
           <p>
             <a href="https://haven.pages.dev/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/haven.pages.dev.webp" alt="The app at https://haven.pages.dev/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://haven.pages.dev/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://haven.pages.dev/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/ThaUnknown/pwa-haven">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -2354,10 +2471,11 @@
           <p>
             <a href="https://codev5.vex.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/codev5.vex.com.webp" alt="The app at https://codev5.vex.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://codev5.vex.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://codev5.vex.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -2366,7 +2484,7 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/codev5.vex.com.webp" length="2850" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/codev5.vex.com.webp" length="2844" type="image/webp" />
         <pubDate>Mon, 20 Jun 2022 17:28:54 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#codev5.vex.com</link>
         <guid>https://developer.chrome.com/fugu-showcase/#codev5.vex.com</guid>
@@ -2377,10 +2495,11 @@
           <p>
             <a href="https://app.element.io/#/welcome">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/app.element.io!!welcome.webp" alt="The app at https://app.element.io/#/welcome."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://app.element.io/#/welcome">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://app.element.io/#/welcome">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -2393,7 +2512,7 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/estimate"> Storage Estimation</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/app.element.io!!welcome.webp" length="576" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/app.element.io!!welcome.webp" length="40002" type="image/webp" />
         <pubDate>Mon, 20 Jun 2022 09:20:15 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#app.element.io!!welcome</link>
         <guid>https://developer.chrome.com/fugu-showcase/#app.element.io!!welcome</guid>
@@ -2404,10 +2523,11 @@
           <p>
             <a href="https://bangle.io">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/bangle.io.webp" alt="The app at https://bangle.io."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://bangle.io">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://bangle.io">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/bangle-io/bangle-io">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -2416,29 +2536,30 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/bangle.io.webp" length="13832" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/bangle.io.webp" length="13830" type="image/webp" />
         <pubDate>Mon, 13 Jun 2022 14:18:46 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#bangle.io</link>
         <guid>https://developer.chrome.com/fugu-showcase/#bangle.io</guid>
       </item>
       <item>
-        <title>Flipper Lab (my.flipp.dev)</title>
+        <title>My Flipper (my.flipp.dev)</title>
         <description><![CDATA[
           <p>Web platform for your Flipper</p>
           <p>
             <a href="https://my.flipp.dev/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/my.flipp.dev.webp" alt="The app at https://my.flipp.dev/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://my.flipp.dev/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://my.flipp.dev/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
             <li><a href="https://web.dev/serial/"> WebSerial</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/my.flipp.dev.webp" length="3628" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/my.flipp.dev.webp" length="2918" type="image/webp" />
         <pubDate>Fri, 10 Jun 2022 23:44:59 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#my.flipp.dev</link>
         <guid>https://developer.chrome.com/fugu-showcase/#my.flipp.dev</guid>
@@ -2450,10 +2571,11 @@
           <p>
             <a href="https://www.senomix.com/timesheet">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/senomix.com!timesheet.webp" alt="The app at https://www.senomix.com/timesheet."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://www.senomix.com/timesheet">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://www.senomix.com/timesheet">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -2463,7 +2585,7 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/senomix.com!timesheet.webp" length="5668" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/senomix.com!timesheet.webp" length="5674" type="image/webp" />
         <pubDate>Fri, 10 Jun 2022 15:31:49 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#senomix.com!timesheet</link>
         <guid>https://developer.chrome.com/fugu-showcase/#senomix.com!timesheet</guid>
@@ -2475,10 +2597,11 @@
           <p>
             <a href="https://www.figma.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/figma.com.webp" alt="The app at https://www.figma.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://www.figma.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://www.figma.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -2489,7 +2612,7 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/persist"> Persistent Storage</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/figma.com.webp" length="9500" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/figma.com.webp" length="10282" type="image/webp" />
         <pubDate>Tue, 07 Jun 2022 15:46:52 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#figma.com</link>
         <guid>https://developer.chrome.com/fugu-showcase/#figma.com</guid>
@@ -2501,10 +2624,11 @@
           <p>
             <a href="https://wootility.io/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/wootility.io.webp" alt="The app at https://wootility.io/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://wootility.io/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://wootility.io/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -2518,7 +2642,7 @@
 <li><a href="https://web.dev/hid/"> WebHID</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/wootility.io.webp" length="16468" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/wootility.io.webp" length="16492" type="image/webp" />
         <pubDate>Tue, 07 Jun 2022 08:30:21 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#wootility.io</link>
         <guid>https://developer.chrome.com/fugu-showcase/#wootility.io</guid>
@@ -2530,10 +2654,11 @@
           <p>
             <a href="https://pwa.kiwix.org/www/index.html">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/pwa.kiwix.org!www!index.html.webp" alt="The app at https://pwa.kiwix.org/www/index.html."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://pwa.kiwix.org/www/index.html">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://pwa.kiwix.org/www/index.html">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/kiwix/kiwix-js-windows">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -2545,7 +2670,7 @@
 <li><a href="https://web.dev/tabbed-application-mode/"> Tabbed Application Mode</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/pwa.kiwix.org!www!index.html.webp" length="30364" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/pwa.kiwix.org!www!index.html.webp" length="31256" type="image/webp" />
         <pubDate>Thu, 12 May 2022 10:19:13 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#pwa.kiwix.org!www!index.html</link>
         <guid>https://developer.chrome.com/fugu-showcase/#pwa.kiwix.org!www!index.html</guid>
@@ -2556,10 +2681,11 @@
           <p>
             <a href="https://apps.tibbo.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/apps.tibbo.com.webp" alt="The app at https://apps.tibbo.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://apps.tibbo.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://apps.tibbo.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -2577,10 +2703,11 @@
           <p>
             <a href="https://www.canva.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/canva.com.webp" alt="The app at https://www.canva.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://www.canva.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://www.canva.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -2593,7 +2720,7 @@
 <li><a href="https://web.dev/web-share/"> Web Share</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/canva.com.webp" length="6670" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/canva.com.webp" length="6516" type="image/webp" />
         <pubDate>Fri, 06 May 2022 07:16:39 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#canva.com</link>
         <guid>https://developer.chrome.com/fugu-showcase/#canva.com</guid>
@@ -2605,10 +2732,11 @@
           <p>
             <a href="https://www.xbox.com/en-US/play/games/fortnite/BT5P2X999VH2">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/xbox.com!en-US!play!games!fortnite!BT5P2X999VH2.webp" alt="The app at https://www.xbox.com/en-US/play/games/fortnite/BT5P2X999VH2."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://www.xbox.com/en-US/play/games/fortnite/BT5P2X999VH2">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://www.xbox.com/en-US/play/games/fortnite/BT5P2X999VH2">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -2626,10 +2754,11 @@
           <p>
             <a href="https://activerecall.com/login.html">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/activerecall.com!login.html.webp" alt="The app at https://activerecall.com/login.html."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://activerecall.com/login.html">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://activerecall.com/login.html">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -2650,10 +2779,11 @@
           <p>
             <a href="https://squoosh.app">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/squoosh.app.webp" alt="The app at https://squoosh.app."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://squoosh.app">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://squoosh.app">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/GoogleChromeLabs/squoosh">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -2676,10 +2806,11 @@
           <p>
             <a href="https://hoten.cc/zc/play/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/hoten.cc!zc!play.webp" alt="The app at https://hoten.cc/zc/play/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://hoten.cc/zc/play/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://hoten.cc/zc/play/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/connorjclark/ZeldaClassic">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -2692,7 +2823,7 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/hoten.cc!zc!play.webp" length="2264" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/hoten.cc!zc!play.webp" length="2352" type="image/webp" />
         <pubDate>Wed, 04 May 2022 07:51:50 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#hoten.cc!zc!play</link>
         <guid>https://developer.chrome.com/fugu-showcase/#hoten.cc!zc!play</guid>
@@ -2704,10 +2835,11 @@
           <p>
             <a href="https://sharedgametimer.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/sharedgametimer.com.webp" alt="The app at https://sharedgametimer.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://sharedgametimer.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://sharedgametimer.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -2733,10 +2865,11 @@
           <p>
             <a href="https://lookscanned.io/scan">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/lookscanned.io!scan.webp" alt="The app at https://lookscanned.io/scan."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://lookscanned.io/scan">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://lookscanned.io/scan">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/rwv/lookscanned.io">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -2746,7 +2879,7 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/lookscanned.io!scan.webp" length="9930" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/lookscanned.io!scan.webp" length="9844" type="image/webp" />
         <pubDate>Tue, 03 May 2022 10:28:50 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#lookscanned.io!scan</link>
         <guid>https://developer.chrome.com/fugu-showcase/#lookscanned.io!scan</guid>
@@ -2758,10 +2891,11 @@
           <p>
             <a href="https://play.geforcenow.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/play.geforcenow.com.webp" alt="The app at https://play.geforcenow.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://play.geforcenow.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://play.geforcenow.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -2779,10 +2913,11 @@
           <p>
             <a href="https://duino.app/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/duino.app.webp" alt="The app at https://duino.app/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://duino.app/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://duino.app/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/duinoapp/duinoapp-client">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -2802,17 +2937,18 @@
           <p>
             <a href="https://www.stemplayer.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/stemplayer.com.webp" alt="The app at https://www.stemplayer.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://www.stemplayer.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://www.stemplayer.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
             <li><a href="https://web.dev/usb/"> WebUSB</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/stemplayer.com.webp" length="650" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/stemplayer.com.webp" length="658" type="image/webp" />
         <pubDate>Wed, 27 Apr 2022 18:35:41 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#stemplayer.com</link>
         <guid>https://developer.chrome.com/fugu-showcase/#stemplayer.com</guid>
@@ -2823,10 +2959,11 @@
           <p>
             <a href="https://my.numworks.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/my.numworks.com.webp" alt="The app at https://my.numworks.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://my.numworks.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://my.numworks.com/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://www.numworks.com/blog/webusb-firmware-update/">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -2845,10 +2982,11 @@
           <p>
             <a href="https://make.firialabs.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/make.firialabs.com.webp" alt="The app at https://make.firialabs.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://make.firialabs.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://make.firialabs.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -2866,10 +3004,11 @@
           <p>
             <a href="https://www.espruino.com/ide/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/espruino.com!ide.webp" alt="The app at https://www.espruino.com/ide/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://www.espruino.com/ide/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://www.espruino.com/ide/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/espruino/EspruinoWebIDE">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -2890,10 +3029,11 @@
           <p>
             <a href="https://1tuner.com">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/1tuner.com.webp" alt="The app at https://1tuner.com."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://1tuner.com">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://1tuner.com">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/robinbakker/1tuner">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -2914,10 +3054,11 @@
           <p>
             <a href="https://scrapbook-pwa.web.app/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/scrapbook-pwa.web.app.webp" alt="The app at https://scrapbook-pwa.web.app/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://scrapbook-pwa.web.app/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://scrapbook-pwa.web.app/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/web-share/">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -2944,10 +3085,11 @@
           <p>
             <a href="https://yt-playlist-notifier.web.app/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/yt-playlist-notifier.web.app.webp" alt="The app at https://yt-playlist-notifier.web.app/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://yt-playlist-notifier.web.app/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://yt-playlist-notifier.web.app/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/jeffposnick/yt-playlist-notifier">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -2969,10 +3111,11 @@
           <p>
             <a href="https://josephrocca.github.io/clip-image-sorter/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/josephrocca.github.io!clip-image-sorter.webp" alt="The app at https://josephrocca.github.io/clip-image-sorter/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://josephrocca.github.io/clip-image-sorter/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://josephrocca.github.io/clip-image-sorter/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/josephrocca/clip-image-sorter">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -2991,10 +3134,11 @@
           <p>
             <a href="https://kenchris.github.io/webnfc-groceries/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/kenchris.github.io!webnfc-groceries.webp" alt="The app at https://kenchris.github.io/webnfc-groceries/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://kenchris.github.io/webnfc-groceries/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://kenchris.github.io/webnfc-groceries/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/kenchris/webnfc-groceries">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -3014,10 +3158,11 @@
           <p>
             <a href="https://maskable.app/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/maskable.app.webp" alt="The app at https://maskable.app/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://maskable.app/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://maskable.app/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/NotWoods/maskable">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -3043,10 +3188,11 @@
           <p>
             <a href="https://ember.ly/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/ember.ly.webp" alt="The app at https://ember.ly/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://ember.ly/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://ember.ly/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -3067,10 +3213,11 @@
           <p>
             <a href="https://tinder.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/tinder.com.webp" alt="The app at https://tinder.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://tinder.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://tinder.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -3098,10 +3245,11 @@
           <p>
             <a href="https://www.jsmusicdb.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/jsmusicdb.com.webp" alt="The app at https://www.jsmusicdb.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://www.jsmusicdb.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://www.jsmusicdb.com/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/lucienimmink/jsmusicdb">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -3126,10 +3274,11 @@
           <p>
             <a href="https://logseq.com/?spa=true">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/logseq.com!spa=true.webp" alt="The app at https://logseq.com/?spa=true."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://logseq.com/?spa=true">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://logseq.com/?spa=true">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -3139,7 +3288,7 @@
 <li><a href="https://web.dev/file-system-access/"> File System Access</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/logseq.com!spa=true.webp" length="11920" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/logseq.com!spa=true.webp" length="11918" type="image/webp" />
         <pubDate>Tue, 26 Apr 2022 09:16:50 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#logseq.com!spa=true</link>
         <guid>https://developer.chrome.com/fugu-showcase/#logseq.com!spa=true</guid>
@@ -3151,10 +3300,11 @@
           <p>
             <a href="https://stedit.app/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/stedit.app.webp" alt="The app at https://stedit.app/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://stedit.app/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://stedit.app/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/Offroaders123/Smart-Text-Editor">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -3182,10 +3332,11 @@
           <p>
             <a href="https://leonidasesteban.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/leonidasesteban.com.webp" alt="The app at https://leonidasesteban.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://leonidasesteban.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://leonidasesteban.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -3193,7 +3344,7 @@
 <li><a href="https://web.dev/web-share/"> Web Share</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/leonidasesteban.com.webp" length="20824" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/leonidasesteban.com.webp" length="20892" type="image/webp" />
         <pubDate>Mon, 25 Apr 2022 21:25:04 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#leonidasesteban.com</link>
         <guid>https://developer.chrome.com/fugu-showcase/#leonidasesteban.com</guid>
@@ -3205,10 +3356,11 @@
           <p>
             <a href="https://bundle.js.org">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/bundle.js.org.webp" alt="The app at https://bundle.js.org."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://bundle.js.org">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://bundle.js.org">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/okikio/bundle">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -3230,10 +3382,11 @@
           <p>
             <a href="https://flash.android.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/flash.android.com.webp" alt="The app at https://flash.android.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://flash.android.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://flash.android.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -3251,10 +3404,11 @@
           <p>
             <a href="https://fuse.littlebits.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/fuse.littlebits.com.webp" alt="The app at https://fuse.littlebits.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://fuse.littlebits.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://fuse.littlebits.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -3273,17 +3427,18 @@
           <p>
             <a href="https://studio.samlabs.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/studio.samlabs.com.webp" alt="The app at https://studio.samlabs.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://studio.samlabs.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://studio.samlabs.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
             <li><a href="https://web.dev/bluetooth/"> WebBluetooth</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/studio.samlabs.com.webp" length="19190" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/studio.samlabs.com.webp" length="3028" type="image/webp" />
         <pubDate>Mon, 25 Apr 2022 17:21:45 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#studio.samlabs.com</link>
         <guid>https://developer.chrome.com/fugu-showcase/#studio.samlabs.com</guid>
@@ -3294,10 +3449,11 @@
           <p>
             <a href="https://code.irobot.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/code.irobot.com.webp" alt="The app at https://code.irobot.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://code.irobot.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://code.irobot.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -3306,7 +3462,7 @@
 <li><a href="https://web.dev/webgpu"> WebGPU</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/code.irobot.com.webp" length="516" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/code.irobot.com.webp" length="25264" type="image/webp" />
         <pubDate>Mon, 25 Apr 2022 17:18:06 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#code.irobot.com</link>
         <guid>https://developer.chrome.com/fugu-showcase/#code.irobot.com</guid>
@@ -3317,10 +3473,11 @@
           <p>
             <a href="https://code.makewonder.com/cue/#/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/code.makewonder.com!cue.webp" alt="The app at https://code.makewonder.com/cue/#/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://code.makewonder.com/cue/#/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://code.makewonder.com/cue/#/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -3338,17 +3495,18 @@
           <p>
             <a href="https://app.thepocketlab.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/app.thepocketlab.com.webp" alt="The app at https://app.thepocketlab.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://app.thepocketlab.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://app.thepocketlab.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
             <li><a href="https://web.dev/bluetooth/"> WebBluetooth</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/app.thepocketlab.com.webp" length="7246" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/app.thepocketlab.com.webp" length="12170" type="image/webp" />
         <pubDate>Mon, 25 Apr 2022 16:56:40 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#app.thepocketlab.com</link>
         <guid>https://developer.chrome.com/fugu-showcase/#app.thepocketlab.com</guid>
@@ -3360,10 +3518,11 @@
           <p>
             <a href="https://codeit.codes">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/codeit.codes.webp" alt="The app at https://codeit.codes."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://codeit.codes">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://codeit.codes">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/codeitcodes/codeit">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -3386,10 +3545,11 @@
           <p>
             <a href="https://chrome.google.com/webstore/detail/croskeys-by-crosexperts/akiaafoeijpibmbbfaebhkhccepbdgfi">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/chrome.google.com!webstore!detail!croskeys-by-crosexperts!akiaafoeijpibmbbfaebhkhccepbdgfi.webp" alt="The app at https://chrome.google.com/webstore/detail/croskeys-by-crosexperts/akiaafoeijpibmbbfaebhkhccepbdgfi."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://chrome.google.com/webstore/detail/croskeys-by-crosexperts/akiaafoeijpibmbbfaebhkhccepbdgfi">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://chrome.google.com/webstore/detail/croskeys-by-crosexperts/akiaafoeijpibmbbfaebhkhccepbdgfi">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -3401,7 +3561,7 @@
 <li><a href="https://web.dev/web-share/"> Web Share</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/chrome.google.com!webstore!detail!croskeys-by-crosexperts!akiaafoeijpibmbbfaebhkhccepbdgfi.webp" length="13064" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/chrome.google.com!webstore!detail!croskeys-by-crosexperts!akiaafoeijpibmbbfaebhkhccepbdgfi.webp" length="13032" type="image/webp" />
         <pubDate>Mon, 25 Apr 2022 13:05:50 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#chrome.google.com!webstore!detail!croskeys-by-crosexperts!akiaafoeijpibmbbfaebhkhccepbdgfi</link>
         <guid>https://developer.chrome.com/fugu-showcase/#chrome.google.com!webstore!detail!croskeys-by-crosexperts!akiaafoeijpibmbbfaebhkhccepbdgfi</guid>
@@ -3413,10 +3573,11 @@
           <p>
             <a href="https://mishipay.shop/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/mishipay.shop.webp" alt="The app at https://mishipay.shop/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://mishipay.shop/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://mishipay.shop/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -3439,10 +3600,11 @@
           <p>
             <a href="https://vscode.dev/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/vscode.dev.webp" alt="The app at https://vscode.dev/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://vscode.dev/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://vscode.dev/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -3450,7 +3612,7 @@
 <li><a href="https://web.dev/file-system-access/"> File System Access</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/vscode.dev.webp" length="13304" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/vscode.dev.webp" length="13060" type="image/webp" />
         <pubDate>Mon, 25 Apr 2022 11:00:59 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#vscode.dev</link>
         <guid>https://developer.chrome.com/fugu-showcase/#vscode.dev</guid>
@@ -3461,10 +3623,11 @@
           <p>
             <a href="https://app.vysor.io/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/app.vysor.io.webp" alt="The app at https://app.vysor.io/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://app.vysor.io/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://app.vysor.io/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -3484,10 +3647,11 @@
           <p>
             <a href="https://qrsnapper.com">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/qrsnapper.com.webp" alt="The app at https://qrsnapper.com."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://qrsnapper.com">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://qrsnapper.com">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/PaulKinlan/qrcode">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -3510,10 +3674,11 @@
           <p>
             <a href="https://remap-keys.app/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/remap-keys.app.webp" alt="The app at https://remap-keys.app/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://remap-keys.app/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://remap-keys.app/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/remap-keys/remap">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -3535,10 +3700,11 @@
           <p>
             <a href="https://editor.construct.net">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/editor.construct.net.webp" alt="The app at https://editor.construct.net."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://editor.construct.net">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://editor.construct.net">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -3571,10 +3737,11 @@
           <p>
             <a href="https://photoshop.adobe.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/photoshop.adobe.com.webp" alt="The app at https://photoshop.adobe.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://photoshop.adobe.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://photoshop.adobe.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -3585,7 +3752,7 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/photoshop.adobe.com.webp" length="12922" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/photoshop.adobe.com.webp" length="41024" type="image/webp" />
         <pubDate>Mon, 25 Apr 2022 07:31:18 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#photoshop.adobe.com</link>
         <guid>https://developer.chrome.com/fugu-showcase/#photoshop.adobe.com</guid>
@@ -3597,10 +3764,11 @@
           <p>
             <a href="https://dev.to">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/dev.to.webp" alt="The app at https://dev.to."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://dev.to">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://dev.to">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/forem/forem">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -3608,7 +3776,7 @@
             <li><a href="https://web.dev/web-share/"> Web Share</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/dev.to.webp" length="30742" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/dev.to.webp" length="24182" type="image/webp" />
         <pubDate>Mon, 18 Apr 2022 04:15:32 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#dev.to</link>
         <guid>https://developer.chrome.com/fugu-showcase/#dev.to</guid>
@@ -3620,10 +3788,11 @@
           <p>
             <a href="https://postr.me/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/postr.me.webp" alt="The app at https://postr.me/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://postr.me/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://postr.me/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -3642,10 +3811,11 @@
           <p>
             <a href="https://spike.legoeducation.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/spike.legoeducation.com.webp" alt="The app at https://spike.legoeducation.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://spike.legoeducation.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://spike.legoeducation.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -3665,17 +3835,18 @@
           <p>
             <a href="https://case.xchart.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/case.xchart.com.webp" alt="The app at https://case.xchart.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://case.xchart.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://case.xchart.com/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
             <li><a href="https://web.dev/serial/"> WebSerial</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/case.xchart.com.webp" length="14888" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/case.xchart.com.webp" length="14866" type="image/webp" />
         <pubDate>Thu, 14 Apr 2022 18:24:15 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#case.xchart.com</link>
         <guid>https://developer.chrome.com/fugu-showcase/#case.xchart.com</guid>
@@ -3687,10 +3858,11 @@
           <p>
             <a href="https://bpmtech.no">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/bpmtech.no.webp" alt="The app at https://bpmtech.no."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://bpmtech.no">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://bpmtech.no">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/webmaxru/bpm-counter">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -3717,10 +3889,11 @@
           <p>
             <a href="https://developer.chrome.com/fugu-showcase/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/developer.chrome.com!fugu-showcase.webp" alt="The app at https://developer.chrome.com/fugu-showcase/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://developer.chrome.com/fugu-showcase/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://developer.chrome.com/fugu-showcase/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/GoogleChromeLabs/fugu-showcase">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -3743,10 +3916,11 @@
           <p>
             <a href="https://svgco.de/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/svgco.de.webp" alt="The app at https://svgco.de/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://svgco.de/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://svgco.de/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/tomayac/SVGcode">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -3773,10 +3947,11 @@
           <p>
             <a href="https://web.telegram.org/z/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/web.telegram.org!z.webp" alt="The app at https://web.telegram.org/z/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://web.telegram.org/z/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://web.telegram.org/z/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/Ajaxy/telegram-tt">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -3789,7 +3964,7 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/web.telegram.org!z.webp" length="10826" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/web.telegram.org!z.webp" length="4296" type="image/webp" />
         <pubDate>Thu, 31 Mar 2022 12:04:37 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#web.telegram.org!z</link>
         <guid>https://developer.chrome.com/fugu-showcase/#web.telegram.org!z</guid>
@@ -3801,10 +3976,11 @@
           <p>
             <a href="https://mconverter.eu/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/mconverter.eu.webp" alt="The app at https://mconverter.eu/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://mconverter.eu/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://mconverter.eu/">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -3820,7 +3996,7 @@
 <li><a href="https://web.dev/web-share-target/"> Web Share Target (Files)</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/mconverter.eu.webp" length="10376" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/mconverter.eu.webp" length="10382" type="image/webp" />
         <pubDate>Tue, 01 Mar 2022 09:29:47 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#mconverter.eu</link>
         <guid>https://developer.chrome.com/fugu-showcase/#mconverter.eu</guid>
@@ -3832,10 +4008,11 @@
           <p>
             <a href="https://boxy-svg.com/app">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/boxy-svg.com!app.webp" alt="The app at https://boxy-svg.com/app."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://boxy-svg.com/app">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://boxy-svg.com/app">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -3860,10 +4037,11 @@
           <p>
             <a href="https://tgstorage.com">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/tgstorage.com.webp" alt="The app at https://tgstorage.com."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://tgstorage.com">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://tgstorage.com">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/sh-a-v/tgstorage">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -3889,10 +4067,11 @@
           <p>
             <a href="https://panel.hostmeapp.com">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/panel.hostmeapp.com.webp" alt="The app at https://panel.hostmeapp.com."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://panel.hostmeapp.com">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://panel.hostmeapp.com">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -3916,10 +4095,11 @@
           <p>
             <a href="https://loilo.github.io/diffr/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/loilo.github.io!diffr.webp" alt="The app at https://loilo.github.io/diffr/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://loilo.github.io/diffr/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://loilo.github.io/diffr/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/loilo/diffr">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -3939,10 +4119,11 @@
           <p>
             <a href="https://yakuneba-community.com/welcome/YwAnWZXanuD7QckXWJwd">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/yakuneba-community.com!welcome!YwAnWZXanuD7QckXWJwd.webp" alt="The app at https://yakuneba-community.com/welcome/YwAnWZXanuD7QckXWJwd."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://yakuneba-community.com/welcome/YwAnWZXanuD7QckXWJwd">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://yakuneba-community.com/welcome/YwAnWZXanuD7QckXWJwd">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -3954,7 +4135,7 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/yakuneba-community.com!welcome!YwAnWZXanuD7QckXWJwd.webp" length="47182" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/yakuneba-community.com!welcome!YwAnWZXanuD7QckXWJwd.webp" length="47310" type="image/webp" />
         <pubDate>Thu, 24 Feb 2022 05:11:50 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#yakuneba-community.com!welcome!YwAnWZXanuD7QckXWJwd</link>
         <guid>https://developer.chrome.com/fugu-showcase/#yakuneba-community.com!welcome!YwAnWZXanuD7QckXWJwd</guid>
@@ -3966,10 +4147,11 @@
           <p>
             <a href="https://whatpwacando.today ">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/whatpwacando.today.webp" alt="The app at https://whatpwacando.today ."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://whatpwacando.today ">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://whatpwacando.today ">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -4004,10 +4186,11 @@
           <p>
             <a href="https://dannymoerkerke.github.io/file-tree">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/dannymoerkerke.github.io!file-tree.webp" alt="The app at https://dannymoerkerke.github.io/file-tree."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://dannymoerkerke.github.io/file-tree">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://dannymoerkerke.github.io/file-tree">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/DannyMoerkerke/file-tree">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -4027,10 +4210,11 @@
           <p>
             <a href="https://www.microsoft.com/en-us/makecode">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/microsoft.com!en-us!makecode.webp" alt="The app at https://www.microsoft.com/en-us/makecode."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://www.microsoft.com/en-us/makecode">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://www.microsoft.com/en-us/makecode">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -4039,7 +4223,7 @@
 <li><a href="https://web.dev/usb/"> WebUSB</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/microsoft.com!en-us!makecode.webp" length="34326" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/microsoft.com!en-us!makecode.webp" length="34328" type="image/webp" />
         <pubDate>Wed, 23 Feb 2022 19:38:16 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#microsoft.com!en-us!makecode</link>
         <guid>https://developer.chrome.com/fugu-showcase/#microsoft.com!en-us!makecode</guid>
@@ -4051,10 +4235,11 @@
           <p>
             <a href="https://hexed.it">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/hexed.it.webp" alt="The app at https://hexed.it."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://hexed.it">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://hexed.it">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -4073,10 +4258,11 @@
           <p>
             <a href="https://stackedit.io ">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/stackedit.io.webp" alt="The app at https://stackedit.io ."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://stackedit.io ">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://stackedit.io ">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/benweet/stackedit/">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -4096,10 +4282,11 @@
           <p>
             <a href="https://esphome.github.io/esp-web-tools/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/esphome.github.io!esp-web-tools.webp" alt="The app at https://esphome.github.io/esp-web-tools/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://esphome.github.io/esp-web-tools/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://esphome.github.io/esp-web-tools/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/esphome/esp-web-tools">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -4119,10 +4306,11 @@
           <p>
             <a href="https://www.improv-wifi.com/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/improv-wifi.com.webp" alt="The app at https://www.improv-wifi.com/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://www.improv-wifi.com/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://www.improv-wifi.com/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/improv-wifi/sdk-js/">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -4143,10 +4331,11 @@
           <p>
             <a href="https://avg-colour.netlify.app/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/avg-colour.netlify.app.webp" alt="The app at https://avg-colour.netlify.app/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://avg-colour.netlify.app/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://avg-colour.netlify.app/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/ThomasRettig/average-color">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -4166,10 +4355,11 @@
           <p>
             <a href="https://linkcleaner.app/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/linkcleaner.app.webp" alt="The app at https://linkcleaner.app/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://linkcleaner.app/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://linkcleaner.app/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/corbindavenport/link-cleaner">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -4190,10 +4380,11 @@
           <p>
             <a href="https://edit.photostack.app">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/edit.photostack.app.webp" alt="The app at https://edit.photostack.app."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://edit.photostack.app">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://edit.photostack.app">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/photostack/photostack">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -4215,10 +4406,11 @@
           <p>
             <a href="https://md.nico.dev/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/md.nico.dev.webp" alt="The app at https://md.nico.dev/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://md.nico.dev/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://md.nico.dev/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/nico-martin/markdown-editor/">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -4241,10 +4433,11 @@
           <p>
             <a href="https://thelogbook.app">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/thelogbook.app.webp" alt="The app at https://thelogbook.app."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://thelogbook.app">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://thelogbook.app">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -4269,10 +4462,11 @@
           <p>
             <a href="https://anaesthetics.app/bluetooth/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/anaesthetics.app!bluetooth.webp" alt="The app at https://anaesthetics.app/bluetooth/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://anaesthetics.app/bluetooth/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://anaesthetics.app/bluetooth/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/anaestheticsapp/bluetooth">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -4294,10 +4488,11 @@
           <p>
             <a href="https://uspeaking.netlify.app/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/uspeaking.netlify.app.webp" alt="The app at https://uspeaking.netlify.app/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://uspeaking.netlify.app/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://uspeaking.netlify.app/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/rafaelguinho/u-speaking-react">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>
@@ -4306,7 +4501,7 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
           </ul>
         ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/uspeaking.netlify.app.webp" length="4042" type="image/webp" />
+        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/uspeaking.netlify.app.webp" length="4204" type="image/webp" />
         <pubDate>Wed, 23 Feb 2022 12:26:05 GMT</pubDate>
         <link>https://developer.chrome.com/fugu-showcase/#uspeaking.netlify.app</link>
         <guid>https://developer.chrome.com/fugu-showcase/#uspeaking.netlify.app</guid>
@@ -4318,10 +4513,11 @@
           <p>
             <a href="https://sqliteviewer.app">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/sqliteviewer.app.webp" alt="The app at https://sqliteviewer.app."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://sqliteviewer.app">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://sqliteviewer.app">launch the app</a>.
           </p>
           <p><strong>Used APIs:</strong></p>
           <ul>
@@ -4344,10 +4540,11 @@
           <p>
             <a href="https://editor.bridge-core.app/">
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/editor.bridge-core.app.webp" alt="The app at https://editor.bridge-core.app/."/>
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="https://editor.bridge-core.app/">launch the app</a>.
+            🚀 Try it out and
+            <a href="https://editor.bridge-core.app/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/bridge-core/editor">source code</a>.</p>
           <p><strong>Used APIs:</strong></p>

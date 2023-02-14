@@ -75,10 +75,11 @@ async function toRSS(jsonData) {
                   ? `<img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/${item.screenshot}" alt="The app at ${item.appURL}."/>`
                   : '<img style="width: 200px; height: 150px;" src="data:image/svg+xml;base64,CjxzdmcKICB2aWV3Qm94PSIwIDAgNDAwIDIyNSIKICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQgc2xpY2UiCj4KICA8cGF0aCBmaWxsPSJyZ2JhKDE0NSwxNDUsMTQ1LDAuNSkiIGQ9Ik0wIDBoNDAwdjIyNUgweiIgLz4KICA8dGV4dAogICAgZmlsbD0icmdiYSgwLDAsMCwwLjMzKSIKICAgIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiIKICAgIGZvbnQtc2l6ZT0iMXJlbSIKICAgIHRleHQtYW5jaG9yPSJtaWRkbGUiCiAgICB4PSIyMDAiCiAgICB5PSIxMTMiCiAgICBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIKICA+CiAgICBTY3JlZW5zaG90IG5vdCBhdmFpbGFibGUKICA8L3RleHQ+Cjwvc3ZnPg==" alt=""/>'
               }
-            </a
+            </a>
           </p>
           <p>
-            🚀 Try it out and <a href="${item.appURL}">${
+            🚀 Try it out and
+            <a href="${item.appURL}">${
           item.isElectronApp ? 'download' : 'launch'
         } the app</a>.
           </p>
