@@ -397,7 +397,7 @@ sites, by following the following privacy mechanisms:
   little cross-site information: 1 bit or 3 bits, which are not enough to hold
   an identifier.
   - The ad-side 64 bits are not new information. A user ID can already be
-    available on the ad side today. `news.example` or `ad tech.example` 
+    available on the ad side today. `news.example` or `adtech.example` 
     already knows about a certain user's activity on `news.example`.
 - Additional protections are applied to prevent abuse and cross-site tracking:
   - The reports are sent with a **delay**.

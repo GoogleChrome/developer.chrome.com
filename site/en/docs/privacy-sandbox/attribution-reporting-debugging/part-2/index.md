@@ -82,7 +82,7 @@ Set-Cookie: ar_debug=1; SameSite=None; Secure; Path=/; HttpOnly
 
 The browser will check for the presence of this cookie on both source and trigger registration. The success debug report will only be generated if the cookie is present at both times.
 
-**[Demo code: debug cookie](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/763079d962dca0e9cf3d8e68dc18b57784fb98d7/attribution-reporting/functions/apps/ad tech.js#L91)**
+**[Demo code: debug cookie](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/763079d962dca0e9cf3d8e68dc18b57784fb98d7/attribution-reporting/functions/apps/adtech.js#L91)**
 
 {% endDetails %}
 
@@ -159,7 +159,7 @@ Your server code to handle incoming success debug reports may look as follows (h
 
 ```javascript
 // Handle incoming event-Level Success Debug reports
-ad tech.post(
+adtech.post(
   '/.well-known/attribution-reporting/debug/report-event-attribution',
   async (req, res) => {
     // Debug report is in req.body
@@ -168,7 +168,7 @@ ad tech.post(
 );
 
 // Handle incoming aggregatable Success Debug reports
-ad tech.post(
+adtech.post(
   '/.well-known/attribution-reporting/debug/report-aggregate-attribution',
   async (req, res) => {
     // Debug report is in req.body
@@ -177,9 +177,9 @@ ad tech.post(
 );
 ```
 
-**[Demo code: event-level debug reports endpoint](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/763079d962dca0e9cf3d8e68dc18b57784fb98d7/attribution-reporting/functions/apps/ad tech.js#L318)**
+**[Demo code: event-level debug reports endpoint](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/763079d962dca0e9cf3d8e68dc18b57784fb98d7/attribution-reporting/functions/apps/adtech.js#L318)**
 
-**[Demo code: aggregatable debug reports endpoint](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/763079d962dca0e9cf3d8e68dc18b57784fb98d7/attribution-reporting/functions/apps/ad tech.js#L353)**
+**[Demo code: aggregatable debug reports endpoint](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/763079d962dca0e9cf3d8e68dc18b57784fb98d7/attribution-reporting/functions/apps/adtech.js#L353)**
 
 {% endDetails %}
 
@@ -242,7 +242,7 @@ A success debug report is identical to an attribution report, and contains both 
       "payload": "0s9mYVIuznK4WRV/t7uHKquHPYCpAN9mZHsUGNiYd2G/9cg87Y0IjlmZkEtiJghMT7rmg3GtWVPWTJU5MvtScK3HK3qR2W8CVDmKRAhqqlz1kPZfdGUB4NsXGyVCy2UWapklE/r7pmRDDP48b4sQTyDMFExQGUTE56M/8WFVQ0qkc7UMoLI/uwh2KeIweQCEKTzw"
     }
   ],
-  "shared_info": "{\"api\":\"attribution-reporting\",\"attribution_destination\":\"https://advertiser.example\",\"debug_mode\":\"enabled\",\"report_id\":\"4a04f0ff-91e7-4ef6-9fcc-07d000c20495\",\"reporting_origin\":\"https://ad tech.example\",\"scheduled_report_time\":\"1669888617\",\"source_registration_time\":\"1669852800\",\"version\":\"0.1\"}",
+  "shared_info": "{\"api\":\"attribution-reporting\",\"attribution_destination\":\"https://advertiser.example\",\"debug_mode\":\"enabled\",\"report_id\":\"4a04f0ff-91e7-4ef6-9fcc-07d000c20495\",\"reporting_origin\":\"https://adtech.example\",\"scheduled_report_time\":\"1669888617\",\"source_registration_time\":\"1669852800\",\"version\":\"0.1\"}",
   "source_debug_key": "647775351539539",
   "trigger_debug_key": "156477391437535"
 }
@@ -285,9 +285,9 @@ Attribution-Reporting-Register-Trigger:
 }
 ```
 
-**[Demo code: source header](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/main/attribution-reporting/functions/apps/ad tech.js#L168)**
+**[Demo code: source header](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/main/attribution-reporting/functions/apps/adtech.js#L168)**
 
-**[Demo code: trigger header](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/main/attribution-reporting/functions/apps/ad tech.js#L280)**
+**[Demo code: trigger header](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/main/attribution-reporting/functions/apps/adtech.js#L280)**
 
 {% endDetails %}
 
@@ -301,7 +301,7 @@ Step 4: Set up an endpoint to collect verbose debug reports
 Set up an endpoint to collect the debug reports. This endpoint should be similar to the main attribution endpoint, with an additional `debug/verbose` string in the path:
 
 ```text
-https://ad tech.example/.well-known/attribution-reporting/debug/verbose
+https://adtech.example/.well-known/attribution-reporting/debug/verbose
 ```
 
 When verbose debug reports are generated, that is when a source or trigger isn't registered, the browser will immediately send a verbose debug report via a `POST` request to this endpoint.
@@ -309,7 +309,7 @@ Your server code to handle incoming verbose debug reports may look as follows (h
 
 ```javascript
 // Handle incoming verbose debug reports
-ad tech.post(
+adtech.post(
   '/.well-known/attribution-reporting/debug/verbose',
   async (req, res) => {
     // List of verbose debug reports is in req.body
@@ -320,7 +320,7 @@ ad tech.post(
 
 Unlike success debug reports, there's only one endpoint for verbose reports. Verbose reports that relate to event-level and aggregated reports will all be sent to the same endpoint.
 
-**[Demo code: verbose debug reports endpoint](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/d6e4c38664b6631657f81e6bdd13d0480be3c07d/attribution-reporting/functions/apps/ad tech.js#L373)**
+**[Demo code: verbose debug reports endpoint](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/d6e4c38664b6631657f81e6bdd13d0480be3c07d/attribution-reporting/functions/apps/adtech.js#L373)**
 
 {% endDetails %}
 
