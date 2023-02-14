@@ -12,7 +12,7 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 * [Customize selector types of a recording](/blog/new-in-devtools-110/#recorder-selector)
 * [Edit user flow while recording](/blog/new-in-devtools-110/#recorder-edit)
 * [Automatic in-place pretty print](/blog/new-in-devtools-110/#pretty-print)
-* [Better syntax highlight and inline preview for Vue, SCSS and more](/blog/new-in-devtools-110/#syntax)
+* [Better syntax highlight and inline preview for Vue, SCSS and more](/blog/new-in-devtools-110/#highlight)
 * [Ergonomic and consistent Autocomplete in the Console](/blog/new-in-devtools-110/#console)
 * [Miscellaneous highlights](/blog/new-in-devtools-110/#misc)
 

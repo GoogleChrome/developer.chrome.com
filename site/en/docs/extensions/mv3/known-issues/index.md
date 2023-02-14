@@ -4,7 +4,9 @@ title: Known issues when migrating to Manifest V3
 seoTitle: Known issues when migrating Chrome Extensions to Manifest V3
 description: ''
 date: 2022-09-23
-updated: 2022-12-09
+updated: 2023-02-09
+tags:
+  - extensions-news
 ---
 
 {% Aside %}
@@ -36,13 +38,13 @@ This section lists major features that will be added to the Manifest V3 platform
 
 **Summary:** Offscreen documents are a new capability that allows Manifest V3 extensions to create a headless page (no user visible window) to call DOM APIs that aren't supported in extension service workers. Extensions can use offscreen documents to interact with the clipboard, play audio, parse HTML, and XML documents, and so on. We will continue iterating this API in future Chrome versions.
 
-**Shipped in Chrome 109.**
+**Shipped in Chrome 110.**
 
-### Relax the fixed maximum lifetime for extension service workers {: #sw-fixed-lifetime }
+### FIXED: Relax the fixed maximum lifetime for extension service workers {: #sw-fixed-lifetime }
 
 **Summary:** Extension service workers are currently terminated a set amount of time after starting. This fixed limit will be replaced by an activity-based system. As a result, an extension's service worker will be able to stay alive so long as it is continuously working.
 
-**Estimated timeline:** Targeting Canary support in first quarter of 2023.
+**Shipped in Chrome 110.**
 
 ### Userscript managers support {: #userscript-managers-support }
 
@@ -64,11 +66,11 @@ This section lists major features that will be added to the Manifest V3 platform
 
 **Shipped Chrome 107.**
 
-### Sandboxed page CSP can't be customized {: #sandboxed-csp }
+### FIXED: Sandboxed page CSP can't be customized {: #sandboxed-csp }
 
 **Summary:** Declaring a custom sandboxed page content security policy in the extension's `manifest.json` does not override the default content security policy. This prevents extensions from integrating with services that require their scripts or iframes to be remotely loaded.
 
-**Estimated timeline:** Targeting Canary support in the first quarter of 2023.
+**Shipped in Chrome 110.**
 
 **Tracking issue:** [1247690][]
 

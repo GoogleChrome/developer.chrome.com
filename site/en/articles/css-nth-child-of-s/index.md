@@ -22,8 +22,8 @@ With [the `:nth-child()` pseudo-class selector](https://web.dev/learn/css/pseudo
 - `:nth-child(2)`: Select the 2nd child.
 - `:nth-child(2n)`: Select all even children _(2nd, 4th, 6th, 8th, and so on)_.
 - `:nth-child(2n+1)`: Select all odd children _(1st, 3rd, 5th, 7th, and so on)_.
-- `:nth-child(5n+1)`: Select the 1st _(=(5×0)+1)_, 5th _(=(5×1)+1)_, 10th _(=(5×2)+1)_, … child.
-- `:nth-child(5n+2)`: Select the 2nd _(=(5×0)+2)_, 6th _(=(5×1)+2)_, 11th _(=(5×2)+2)_, … child.
+- `:nth-child(5n+1)`: Select the 1st _(=(5×0)+1)_, 6th _(=(5×1)+1)_, 11th _(=(5×2)+1)_, … child.
+- `:nth-child(5n+2)`: Select the 2nd _(=(5×0)+2)_, 7th _(=(5×1)+2)_, 12th _(=(5×2)+2)_, … child.
 
 {% Aside %}
 To interactively see how the `An+B` logic affects selections use [the `:nth-child` tester](https://css-tricks.com/examples/nth-child-tester/).
@@ -55,6 +55,7 @@ New in [CSS Selectors Level 4](https://www.w3.org/TR/selectors-4/) is the abilit
 
 When `of S` is specified, the `An+B` logic is only applied onto elements that match the given selector list `S`. This essentially means that you can prefilter children before `An+B` does its thing.
 
+{% BrowserCompat 'css.selectors.nth-child.of_syntax' %}
 
 ## Examples
 

@@ -4,17 +4,28 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 
 {# $content #}
 
-{# ### Chrome 109 {: #chrome109 }
+{# ### Chrome 110 {: #chrome110 }
 
-* [Recorder: Copy as options for steps, in-page replay, step’s context menu](/es/blog/new-in-devtools-109/#recorder)
-* [Show actual function names in performance’s recordings](/es/blog/new-in-devtools-109/#performance)
-* [New keyboard shortcuts in the Console & Sources panel](/es/blog/new-in-devtools-109/#keyboard-shortcuts)
-* [Improved JavaScript debugging](/es/blog/new-in-devtools-109/#debugging)
-* [Miscellaneous highlights](/es/blog/new-in-devtools-109/#misc)
-* [[Experimental] Enhanced UX in managing breakpoints](/es/blog/new-in-devtools-109/#breakpoint-redesign)
-* [[Experimental] Automatic in-place pretty print](/es/blog/new-in-devtools-109/#pretty-print)
+* [Clearing Performance Panel on reload](/es/blog/new-in-devtools-110/#perf)
+* [Recorder updates](/es/blog/new-in-devtools-110/#recorder)
+* [View and highlight the code of your user flow in the Recorder](/es/blog/new-in-devtools-110/#recorder-code)
+* [Customize selector types of a recording](/es/blog/new-in-devtools-110/#recorder-selector)
+* [Edit user flow while recording](/es/blog/new-in-devtools-110/#recorder-edit)
+* [Automatic in-place pretty print](/es/blog/new-in-devtools-110/#pretty-print)
+* [Better syntax highlight and inline preview for Vue, SCSS and more](/es/blog/new-in-devtools-110/#highlight)
+* [Ergonomic and consistent Autocomplete in the Console](/es/blog/new-in-devtools-110/#console)
+* [Miscellaneous highlights](/es/blog/new-in-devtools-110/#misc)
  #}
 
+### Chrome 109 {: #chrome109 }
+
+* [Recorder: Copia como opciones para los pasos, reproducción en la página, menú contextual del paso](/es/blog/new-in-devtools-109/#recorder)
+* [Muestra los nombres reales de las funciones en las grabaciones de rendimiento](/es/blog/new-in-devtools-109/#performance)
+* [Nuevos atajos de teclado en el panel Consola y Fuentes](/es/blog/new-in-devtools-109/#keyboard-shortcuts)
+* [Mejoras en la depuración de JavaScript {: #debugging](/es/blog/new-in-devtools-109/#debugging)
+* [Otros aspectos destacados](/es/blog/new-in-devtools-109/#misc)
+* [[Experimental] Mejorada la UX para la gestión de puntos de interrupción](/es/blog/new-in-devtools-109/#breakpoint-redesign)
+* [[Experimental] Formatea automáticamente el código para una mejor lectura](/es/blog/new-in-devtools-109/#pretty-print)
 
 
 ### Chrome 108 {: #chrome108 }
