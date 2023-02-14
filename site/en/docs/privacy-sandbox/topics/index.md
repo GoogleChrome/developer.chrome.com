@@ -20,7 +20,7 @@ This document outlines a new proposal for interest-based advertising: the Topics
    discussion](https://github.com/jkarlin/topics/issues) and is now available in an [origin trial](#origin-trial).
 -  This proposal needs your feedback. If you have comments, create an issue on the [Topics
    Explainer repository](https://github.com/jkarlin/topics) or participate in discussions in the
-   [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants).
+   [Improving adWeb Advertising Business Group](https://www.w3.org/community/web-adv/participants).
    The explainer has a number of [open questions](https://github.com/jkarlin/topics/issues) that
    still require further definition.
 -  [The Privacy Sandbox timeline](http://privacysandbox.com/timeline) provides implementation
@@ -211,7 +211,7 @@ Access the TensorFlow Lite model file, and the topics inferred for hostnames,
 {% endAside %}
 
 The diagram below outlines a simplified example, to demonstrate how the Topics API might help an
-adtech platform to select an appropriate ad. The example assumes that the user's browser already
+ad tech platform to select an appropriate ad. The example assumes that the user's browser already
 has a model to map website hostnames to topics.
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/u9e1VvzblNVHCfyk1hRY.png",
@@ -282,7 +282,7 @@ limited timeframe.
 A Topics API _caller_ is the entity that calls the `document.browsingTopics()` JavaScript
 method, and will use the topics returned by the method to help select relevant ads.
 Typically, a call to `document.browsingTopics()` would be from code included in a site from a
-third party such as an adtech platform. The browser determines the caller from the site of the
+third party such as an ad tech platform. The browser determines the caller from the site of the
 current document. So, if you're a third party on a page, make sure you call the API from an
 iframe that your site owns.
 
@@ -857,7 +857,7 @@ This is because the colab only uses the classifier model to infer topics, wherea
 ## How does the Topics API address concerns with FLoC?
 
 The origin trial of [FLoC](https://github.com/WICG/floc) in 2021 received a wide range of feedback
-from adtech and web ecosystem contributors. In particular, there were concerns that FLoC cohorts
+from ad tech and web ecosystem contributors. In particular, there were concerns that FLoC cohorts
 could be used as a fingerprinting surface to identify users, or could reveal a user's association
 with a sensitive category. There were also calls to make FLoC more transparent and understandable to
 users.
