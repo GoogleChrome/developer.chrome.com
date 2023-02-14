@@ -46,7 +46,7 @@ a list containing dictionaries of type [Ruleset][4], as shown below.
   "host_permissions": [
     "http://www.blogger.com/*",
     "http://*.google.com/*"
-],
+  ],
   ...
 }
 ```
@@ -231,7 +231,7 @@ When rules are applied to browsers with pages in the service worker's cached sto
     "*://*.example.com/*",
     "https://*.xyz.com/*",
     "*://*.headers.com/*",
-],
+  ],
   "manifest_version": 3
 }
 ```
