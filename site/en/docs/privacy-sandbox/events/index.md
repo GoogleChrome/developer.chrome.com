@@ -12,25 +12,26 @@ authors:
  - mihajlija
 ---
 
+<img src="https://screenshot.googleplex.com/6Dqyjo8insUUKny.png" style="width: 111px; margin-right: 50px; display: inline;" alt="ticket image">
+<img src="https://wd.imgix.net/image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/xaRHmkuKLfCcGdRaEiDr.png?auto=format&w=338" style="width: 100px; display: inline; margin-right: 50px;" alt="ticket image">
+<img src="https://wd.imgix.net/image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/6mj7t7rHxZ5Vs31fWoSs.jpg?auto=format&w=338" style="width: 100px; display: inline;" alt="ticket image">
+
 Learn about forthcoming events, and get access to resources for events that have
 already taken place. You can also subscribe to the following mailing lists to be notified of other events: [Attribution Reporting](https://groups.google.com/u/2/a/chromium.org/g/attribution-reporting-api-dev), [FLEDGE](https://groups.google.com/u/2/a/chromium.org/g/fledge-api-announce), and [Topics](https://groups.google.com/u/2/a/chromium.org/g/topics-api-announce).
 
-## Ongoing events
+## W3C WICG calls
 
-### W3C WICG calls
+Make sure to join the [W3C](https://www.w3.org/participate/) and [WICG](https://www.w3.org/community/wicg/) if you plan to participate.
 
-Make sure to join the [W3C](https://www.w3.org/participate/) and [WICG](https://www.w3.org/community/wicg/) 
-if you plan on participating.
-
-* [FLEDGE](https://github.com/WICG/turtledove/tree/main/meetings)
-* [Attribution Reporting](https://github.com/WICG/attribution-reporting-api/tree/main/meetings): 
-announcements are also made on [this issue](https://github.com/WICG/attribution-reporting-api/issues/80)
+* The meeting minutes are here for [FLEDGE](https://github.com/WICG/turtledove/tree/main/meetings)
+* They're here for [Attribution Reporting](https://github.com/WICG/attribution-reporting-api/tree/main/meetings). 
+Announcements are also made on [this issue](https://github.com/WICG/attribution-reporting-api/issues/80)
 
 ## Watch videos and demos from past events
 
 Below are videos and demos from some of our past Office Hours and events. Features worked as described at the time the videos were recorded, but details may have changed since that time.
 
-### First-Party Sets Talk with Demo - Dec. 15, 2022
+### First-Party Sets talk and demo - Dec. 15, 2022
 
 This Office Hours session covers the First-Party Sets proposal, how the proposal has been evolving based on feedback, discusses use cases, and provides a demo.
 
@@ -38,7 +39,7 @@ This Office Hours session covers the First-Party Sets proposal, how the proposal
 
 [Open full-size video](https://drive.google.com/file/d/1riGrGwP5cyz3q4IcDjV5kulOK48OJV2S/preview)
 
-### Topics API Overview - September 6, 2022
+### Topics API overview - September 6, 2022
 
 This Office Hours session provides an overview of the Topics API with DevRel Product and Engineering leads. The demo portion of the session is in the video that follows.
 
@@ -46,19 +47,19 @@ This Office Hours session provides an overview of the Topics API with DevRel Pro
  
 [Open full-size video](https://drive.google.com/file/d/1831_uKSlTwnSzYNjpp9pkDEniDA_Q9lF/preview)
 
-### Topics API Demo - September 6, 2022
+### Topics API demo - September 6, 2022
 
 <iframe src="https://drive.google.com/file/d/1dmpMKLJcGNe56M6ECRdRYhuITTv9YUDV/preview" width="640" height="480" allow="autoplay"></iframe>
 
 [Open full-size video](https://drive.google.com/file/d/1dmpMKLJcGNe56M6ECRdRYhuITTv9YUDV/preview)
 
-### Attribution Reporting Discussion - August 11, 2022
+### Attribution Reporting discussion - August 11, 2022
 
 <iframe src="https://drive.google.com/file/d/18RGEx_mrhDJuMsLUK1BZ0cK5FSZRAAqh/preview" width="640" height="480" allow="autoplay"></iframe>
 
 [Open full-size video](https://drive.google.com/file/d/18RGEx_mrhDJuMsLUK1BZ0cK5FSZRAAqh/preview)
 
-### Attribution Reporting Demo - August 11, 2022
+### Attribution Reporting demo - August 11, 2022
 
 <iframe src="https://drive.google.com/file/d/1hmHoM3xyU4eLTJ1dM7_E8x-u6nZgim1O/preview" width="640" height="480" allow="autoplay"></iframe>
 
