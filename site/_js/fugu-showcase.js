@@ -18,6 +18,10 @@
 
 import './web-components/enhanced-select';
 
+const fuguShowcaseI18N = JSON.parse(
+  document.querySelector('#fugu-showcase-i18n').textContent
+);
+
 const fallbackSVGBase64 = window.btoa(
   `
 <svg
@@ -35,10 +39,7 @@ const fallbackSVGBase64 = window.btoa(
     y="113"
     dominant-baseline="central"
   >
-    ${
-      JSON.parse(document.querySelector('#fugu-showcase-i18n').textContent)
-        .screenshot_not_available
-    }
+    ${fuguShowcaseI18N.screenshot_not_available}
   </text>
 </svg>`
 );
@@ -161,9 +162,6 @@ const fallbackSVGBase64 = window.btoa(
         const pngBlob = await imageToPNG(blob);
         const file = new File([pngBlob], fileName);
 
-        const fuguShowcaseI18N = JSON.parse(
-          document.querySelector('#fugu-showcase-i18n').textContent
-        );
         const iJustFoundTheApp = fuguShowcaseI18N.i_just_found_the_app;
         const itUsesTheseFuguAPIs = fuguShowcaseI18N.it_uses_these_fugu_apis;
         const viaTheFuguShowcase = fuguShowcaseI18N.via_the_fugu_showcase;
