@@ -12,7 +12,7 @@ Configure other aspects of DevTools using the corresponding tabs in {% Img src="
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hMEi26vDQRtc1mRc3iTj.png", alt="Other tabs in Settings.", width="800", height="552" %}
 
-See the next sections learn how to configure Workspace, experiments, ignore list, devices, throttling, locations, and shortcuts.
+See the next sections to learn how to configure Workspace, experiments, ignore list, devices, throttling, locations, and shortcuts.
 
 To customize the appearance of DevTools and its panels, see [Preferences](/docs/devtools/settings/preferences).
 
@@ -23,6 +23,8 @@ To customize the appearance of DevTools and its panels, see [Preferences](/docs/
 {% Aside 'gotchas' %}
 DevTools automatically maps your local sources to network resources using source maps. This way, you can make changes to sources in DevTools and immediately see the effect on the website you host locally and view in Chrome.
 {% endAside %}
+
+To configure your workspaces, open {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [Settings][1] > **Workspace**.
 
 ### Customize exclusions {: #workspace-exclusions }
 
@@ -70,7 +72,7 @@ The next time you open DevTools, the experiment is enabled. To disable an experi
 
 The **Ignore List** tab lets you configure the list of scripts the [debugger](/docs/devtools/javascript/) ignores.
 
-To enable or disable all ignore listing for the debugger, check or clear {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable Ignore Listing**. This is the main switch for all ignore-listing capabilities.
+To enable or disable all ignore listing for the debugger, check or clear {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable Ignore Listing**. This is the main switch for all ignore-listing capabilities.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bissqX3mFMWLW6A1M4kp.png", alt="The Enable Ignore Listing checkbox.", width="800", height="548" %}
 
