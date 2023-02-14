@@ -449,7 +449,7 @@ var x = 0;
 ```
 {% endCompare %}
 
-## Details (including accordion functionality)
+## Details (accordion functionality)
 
 Use a details section to hide extra information from the user until it's needed. It can have an optional preview. Use this component if you need an accordion or expandable section.
 
