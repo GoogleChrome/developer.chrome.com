@@ -2,7 +2,8 @@
   <div class="landing-deco pad-300 md:pad-500 masonry:pad-500 width-full bg-{{color}}-lightest">
     <div class="landing-deco__inner">
       <div>
-        <h2 class="type--h3 color-{{color}}-darkest">
+        {% set titleSlug = title | slugify %}
+        <h2 id="{{ titleSlug }}" class="type--h3 color-{{color}}-darkest">
           {% if smallImgSrc %}
           <span class="sm-only landing-deco__icon">{% Img
             src=smallImgSrc,
@@ -12,6 +13,7 @@
           %}</span>
           {% endif %}
           <span>
+            <a class="heading-link" href="#{{ titleSlug }}">#</a>
             {{ title | md | safe }}
           </span>
         </h2>

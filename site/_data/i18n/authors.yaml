@@ -238,6 +238,11 @@ johannes:
     en: 'Johannes Henkel'
   description:
     en: 'Software Engineer working on the Chrome User Experience Report at Google.'
+jasmineyan:
+  title:
+    en: 'Jasmine Yan'
+  description:
+    en: 'Software Engineer working on Chrome Tooling.'
 emilaeklund:
   title:
     en: 'Emil Eklund'
@@ -555,6 +560,23 @@ beaufortfrancois:
     en: 'François Beaufort'
   description:
     en: 'Dives into Chromium source code'
+reillyg:
+  title:
+    en: Reilly Grant
+    es: Reilly Grant
+    ja: Reilly Grant
+    ko: Reilly Grant
+    pt: Reilly Grant
+    ru: Reilly Grant
+    zh: Reilly Grant
+  description:
+    en: Software Engineer on Google Chrome focusing on hardware APIs
+    es: Ingeniero de software en Google Chrome centrado en las API de hardware
+    ja: ハードウェア API に関心を持つ Google Chrome のソフトウェアエンジニア
+    ko: 하드웨어 API에 중점을 둔 Chrome의 소프트웨어 엔지니어
+    pt: Engenheiro de software no Google Chrome com foco em APIs de hardware
+    ru: Инженер-программист в команде Google Chrome, специализирующийся на API для работы с устройствами
+    zh: 专注于硬件 API 的 Google Chrome 软件工程师
 cwallez:
   title:
     en: Corentin Wallez
@@ -1292,3 +1314,45 @@ ianstanion:
     en: Ian Stanion
   description:
     en: 'Ian is a technical content developer at Google.'
+exterkamp:
+  title:
+    en: Shane Exterkamp
+    es: Shane Exterkamp
+    ja: Shane Exterkamp
+    ko: Shane Exterkamp
+    pt: Shane Exterkamp
+    ru: Shane Exterkamp
+    zh: Shane Exterkamp
+  description:
+    en: Shane is a SWE on Lighthouse
+    es: Shane es un Ingeniero de software en Lighthouse
+    ja: Shane は Lighthouse の開発に取り組むソフトウェアエンジニアです
+    ko: Shane은 Lighthouse의 SWE입니다.
+    pt: Shane é engenheiro de software na empresa Lighthouse
+    ru: Шейн — инженер-программист в команде Lighthouse
+    zh: Shane 是一名负责 Lighthouse 的软件工程师
+helencho:
+  title:
+    en: Helen Cho
+  description:
+    en: 'Helen is a product manager at Google.'
+kaustubhag:
+  title:
+    en: Kaustubha Govind
+  description:
+    en: 'Kaustubha is a software engineering manager at Google.'
+johannhof:
+  title:
+    en: Johann Hofmann
+  description:
+    en: 'Johann is a software engineer at Google.'
+priyankachatterjee:
+  title:
+    en: Priyanka Chatterjee
+  description:
+    en: Software Engineer, Privacy Sandbox
+tristramsouthey:
+  title:
+    en: 'Tristram Southey'
+  description:
+    en: 'Product Manager, Google Chrome'
