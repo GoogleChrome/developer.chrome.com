@@ -449,9 +449,9 @@ var x = 0;
 ```
 {% endCompare %}
 
-## Details
+## Details (including accordion functionality)
 
-Use a details section to hide extra information from the user until it's needed. It can have an optional preview.
+Use a details section to hide extra information from the user until it's needed. It can have an optional preview. It can be used as an accordion or expandable section.
 
 ````md
 {% raw %}{% Details %}
