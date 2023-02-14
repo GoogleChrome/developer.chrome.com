@@ -3,11 +3,11 @@ layout: "layouts/doc-post.njk"
 title: "Manifest - Minimum Chrome Version"
 seoTitle: "Chrome Extensions Manifest: minimum_chrome_version"
 date: 2013-05-12
-updated: 2023-01-04
+updated: 2023-02-14
 description: Reference documentation for the minimum_chrome_version property of manifest.json.
 ---
 
-An optional manifest key containing a string that defines what versions of Chrome are able to install the extension. The value set for this string must be identical to an existing Chrome browser version string. Either a full version number can be used if you need to specify a specific update to chrome, or simply the first number in the string for that version.
+An optional manifest key containing a string that defines what versions of Chrome are able to install the extension. The value set for this string must be a substring of an existing Chrome browser version string. Either a full version number can be used if you need to specify a specific update to Chrome, or simply the first number in the string to specify a particular major version.
 
  ```json
 {
@@ -16,3 +16,13 @@ An optional manifest key containing a string that defines what versions of Chrom
   // ...
 }
 ```
+
+## Enforcement
+
+### New Installs
+
+In versions of Chrome older than the minimum version, the Chrome Web Store will show a "Not compatible" message in place of the install button. Users will not be able to install your extension.
+
+### Existing Installs
+
+Existing users of your extension will not receive updates when the `minimum_chrome_version` is higher than their current browser version. This happens silently so you should exercise caution and consider ways of letting existing users know that they are no longer receiving updates.
