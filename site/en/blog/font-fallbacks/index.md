@@ -62,12 +62,9 @@ Font metric overrides provide a way to override the ascent, descent, and line-ga
 Font metric overrides can be used to override the ascent, descent, and line-gap of a fallback font to match the ascent, descent, and line-gap of the web font. As a result, the web font and the adjusted fallback font will always have the same vertical dimensions.
 
 
-{% Img src="image/j2RDdG43oidUy6AL6LovThjeX9c2/CCB3NSFsvrdsThLLLmMF.png", alt="Diagram comparing the results of displaying a fallback font with and without using font metric overrides. In this example, when the fallback font is used without font metric overrides, the resulting text is visibly shorter than the web font. On the other hand, when the web font is used with font metric overrides, it matches the height of the web font.
-", width="800", height="419" %}
-
-{% Aside %}
-In the diagram above, you may notice that the "j" appears slightly shorter when it is rendered using font metric overrides than when it is rendered using the web font. This is not a bug: the goal of font metric overrides is to standardize the vertical metrics of a font—however this doesn't necessarily mean that fallback font glyphs will look identical to their web font counterparts.
-{% endAside %}
+{% Glitch
+  id='overrides-only-demo'
+%}
 
 Font metric overrides are used in a stylesheet like this:
 
@@ -259,8 +256,6 @@ body {
 }
 ```
 
-For live examples of using font metric overrides, see this [demo](https://overrides-only-demo.glitch.me/).
-
 
 ### How size-adjust works
 
@@ -275,6 +270,10 @@ The [`size-adjust`](https://developer.mozilla.org/docs/Web/CSS/@font-face/size-a
 
 
 By itself, `size-adjust` has limited applications for improving font fallbacks: in most cases, a fallback font needs to be narrowed or widened slightly (rather than scaled proportionally) in order to match a web font. However, combining `size-adjust` with font metric overrides makes it possible to make any two fonts match each other both horizontally and vertically.
+
+{% Glitch
+  id='overrides-and-size-adjust-demo'
+%}
 
 This is how `size-adjust` is used in stylesheets:
 
@@ -315,8 +314,6 @@ body {
 }
 
 ```
-
-For live examples of using both `size-adjust` and font metric overrides, see this [demo](https://overrides-and-size-adjust-demo.glitch.me/).
 
 {% Aside %}
 
@@ -446,6 +443,7 @@ AvgCharWidth:
   descent-override: 63.04108683%;
   line-gap-override: 18.01173909%;
 }
+```
 
 {% Aside %}
 There are other local fonts that can be used as font fallbacks—but doing so requires knowing a user’s operating system. For example, `"Calibri"`, `"Lucinda Sans"`, and `"Impact"` are fonts that are all widely available on Windows—but not on other operating systems.
