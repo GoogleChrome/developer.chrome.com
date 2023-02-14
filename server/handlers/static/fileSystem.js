@@ -37,7 +37,7 @@ function buildFileSystemHandler() {
   const router = express.Router();
   const staticPaths = getStaticPaths();
   for (const staticPath of staticPaths) {
-    router.use(express.static(staticPath));
+    router.use(express.static(staticPath, {lastModified: true}));
   }
 
   // If serving from file system, redirect handlers that
