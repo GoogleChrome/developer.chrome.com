@@ -1,22 +1,30 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Workspace, Experiments, Ignore List, Devices, Throttling, Locations, and Shortcuts"
+title: "Other tabs"
 authors:
   - sofiayem
 date: 2023-02-14
 #updated: YYYY-MM-DD
-description: "A comprehensive reference of other DevTools settings."
+description: "A comprehensive reference of other Settings tabs: Workspace, Experiments, Ignore List, Devices, Throttling, Locations, and Shortcuts."
 ---
 
 Configure other aspects of DevTools using the corresponding tabs in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings**](/docs/devtools/settings/#open).
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hMEi26vDQRtc1mRc3iTj.png", alt="Other tabs in Settings.", width="800", height="552" %}
 
-See the next sections to learn how to configure Workspace, experiments, ignore list, devices, throttling, locations, and shortcuts.
+See the next sections to learn how to configure:
+
+- [Workspace](#workspace)
+- [Experiments](#experiments)
+- [Ignore List](#ignore-list)
+- [Devices](#devices)
+- [Throttling](#throttling)
+- [Locations](#locations)
+- [Shortcuts](#shortcuts)
 
 To customize the appearance of DevTools and its panels, see [Preferences](/docs/devtools/settings/preferences).
 
-## Workspace
+## Workspace {: #workspace }
 
 [**Workspaces**](/docs/devtools/workspaces/) let you to save changes that you make within DevTools to source code that's stored on your computer.
 
@@ -50,7 +58,7 @@ To add a new **Workspace**:
 
 To remove a workspace, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/0G3yI9F8BnkrEXyLf5EJ.svg", alt="Close.", width="24", height="24" %} next to the corresponding folder.
 
-## Experiments
+## Experiments {: #experiments }
 
 {% Aside 'caution' %}
 Chrome DevTools experiments may be unstable.
@@ -68,7 +76,7 @@ The next time you open DevTools, the experiment is enabled. To disable an experi
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/TmKNYVbWgbsx5MSnHLgs.png", alt="The Experiments tab.", width="800", height="533" %}
 
-## Ignore List
+## Ignore List {: #ignore-list }
 
 The **Ignore List** tab lets you configure the list of scripts the [debugger](/docs/devtools/javascript/) ignores.
 
@@ -117,7 +125,7 @@ To enable or disable ignoring of a specific script or pattern of script names, i
 
 To edit or remove a script or a pattern of script names, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JJEyylF1sToNKTtoFm4Q.svg", alt="Edit.", width="22", height="22" %} or {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YxQ6ggkbUKxxxqHiaUz4.svg", alt="Delete.", width="22", height="22" %} buttons that appear on hover.
 
-## Devices
+## Devices {: #devices }
 
 The **Devices** tab contains a list of devices and their dimensions. You can select these devices from the **Dimentions** drop-down list in [device mode](/docs/devtools/device-mode/#device).
 
@@ -148,7 +156,7 @@ If you don't see a device you want to test, add a custom one:
 
 To edit or remove a custom device you added, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JJEyylF1sToNKTtoFm4Q.svg", alt="Edit.", width="22", height="22" %} or {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YxQ6ggkbUKxxxqHiaUz4.svg", alt="Delete.", width="22", height="22" %} buttons that appear on hover.
 
-## Throttling
+## Throttling {: #throttling }
 
 The **Throttling** tab contains a list of custom throttling profiles. You can use these profiles to test [custom connection speeds in the **Network** panel](/docs/devtools/network/reference/#throttling-profile).
 
@@ -168,7 +176,7 @@ To add a custom profile:
 
 To edit or remove an existing profile, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JJEyylF1sToNKTtoFm4Q.svg", alt="Edit.", width="22", height="22" %} or {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YxQ6ggkbUKxxxqHiaUz4.svg", alt="Delete.", width="22", height="22" %} buttons that appear on hover.
 
-## Locations
+## Locations {: #locations }
 
 The **Location** tab contains a list of geolocation presets. You can use these presets to [override geolocation](/docs/devtools/sensors/#geolocation) in Chrome. You can also populate the list with your own preset that you use frequently.
 
@@ -194,7 +202,7 @@ To add a custom preset:
 
 To edit or remove an existing preset, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JJEyylF1sToNKTtoFm4Q.svg", alt="Edit.", width="22", height="22" %} or {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YxQ6ggkbUKxxxqHiaUz4.svg", alt="Delete.", width="22", height="22" %} buttons that appear on hover.
 
-## Shortcuts
+## Shortcuts {: #shortcuts }
 
 The **Shortcuts** tab lists default shortcuts you can use while focused in DevTools to speed up your workflow.
 

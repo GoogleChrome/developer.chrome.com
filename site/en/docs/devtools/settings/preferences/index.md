@@ -14,7 +14,7 @@ Configure the appearance and behavior of DevTools and its panels using the {% Im
 
 To find out what each setting does, search this page for the setting's name and expand its description.
 
-To configure other aspects of DevTools, see [Workspace, Experiments, Ignore List, Devices, Throttling, Locations, and Shortcuts](/docs/devtools/settings/other).
+To configure other aspects of DevTools, see [Other tab](/docs/devtools/settings/other).
 
 ## Preferences
 
