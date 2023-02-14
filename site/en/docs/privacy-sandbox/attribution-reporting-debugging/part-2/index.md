@@ -151,8 +151,8 @@ Step 3: Set up an endpoint to collect success debug reports
 
 Set up an endpoint to collect the debug reports. This endpoint should be similar to the main attribution endpoint, with an additional `debug` string in the path:
 
-- Endpoint for **event-level** success debug reports: `https://ad tech.example/.well-known/attribution-reporting/debug/report-event-attribution`
-- Endpoint for **aggregatable** success debug reports: `https://ad tech.example/.well-known/attribution-reporting/debug/report-aggregate-attribution`
+- Endpoint for **event-level** success debug reports: `https://adtech.example/.well-known/attribution-reporting/debug/report-event-attribution`
+- Endpoint for **aggregatable** success debug reports: `https://adtech.example/.well-known/attribution-reporting/debug/report-aggregate-attribution`
 
 When an attribution is triggered, the browser will immediately send a debug report via a `POST` request to this endpoint.
 Your server code to handle incoming success debug reports may look as follows (here on a node endpoint):
