@@ -88,7 +88,7 @@ async function toRSS(jsonData) {
               ? `<p>🧑‍💻 Check out the <a href="${item.sourceURL}">source code</a>.</p>`
               : ''
           }
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             ${item.usedAPIs
               .map(usedAPI => {

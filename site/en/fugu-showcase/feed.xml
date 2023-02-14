@@ -17,7 +17,7 @@
             🚀 Try it out and
             <a href="https://www.webgamer.io/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
@@ -42,7 +42,7 @@
             <a href="https://vodon-player.vercel.app/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/Rodeoclash/vodon-player">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
 <li><a href="https://web.dev/file-system-access/"> File System Access</a></li>
@@ -68,7 +68,7 @@
             🚀 Try it out and
             <a href="https://vimeo.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Session_API"> Media Session</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Push_API"> Push</a></li>
@@ -93,7 +93,7 @@
             🚀 Try it out and
             <a href="https://web.goodnotes.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/HapticsDevice/explainer.md"> HapticsDevice</a></li>
 <li><a href="https://web.dev/url-protocol-handler/"> Protocol Handlers</a></li>
@@ -117,7 +117,7 @@
             🚀 Try it out and
             <a href="https://app.sketchup.com/app">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
@@ -141,7 +141,7 @@
             🚀 Try it out and
             <a href="https://www.duolingo.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Push_API"> Push</a></li>
@@ -166,7 +166,7 @@
             <a href="https://tasmota.github.io/install/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/tasmota/install/">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/serial/"> WebSerial</a></li>
           </ul>
@@ -189,7 +189,7 @@
             🚀 Try it out and
             <a href="https://stadia.google.com/controller/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/hid/"> WebHID</a></li>
 <li><a href="https://web.dev/usb/"> WebUSB</a></li>
@@ -214,7 +214,7 @@
             <a href="https://elk.zone/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/elk-zone/elk">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
 <li><a href="https://web.dev/file-system-access/"> File System Access</a></li>
@@ -240,7 +240,7 @@
             🚀 Try it out and
             <a href="https://pixlr.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard (Images)</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
@@ -268,7 +268,7 @@
             🚀 Try it out and
             <a href="https://www.fotor.com/photo-editor-app/editor/basic">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
@@ -295,7 +295,7 @@
             🚀 Try it out and
             <a href="https://web.snapchat.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
@@ -327,7 +327,7 @@
             <a href="https://pinafore.social/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/nolanlawson/pinafore">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/badging-api/"> Badging</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Push_API"> Push</a></li>
@@ -354,7 +354,7 @@
             🚀 Try it out and
             <a href="https://natto.dev/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
 <li><a href="https://web.dev/file-system-access/"> File System Access</a></li>
@@ -377,7 +377,7 @@
             🚀 Try it out and
             <a href="https://readyplayer.me/avatar">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
           </ul>
@@ -400,7 +400,7 @@
             🚀 Try it out and
             <a href="https://tylify.app/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
@@ -424,7 +424,7 @@
             🚀 Try it out and
             <a href="https://three-colors.opl.io/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
@@ -450,7 +450,7 @@
             🚀 Try it out and
             <a href="https://regex101.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
@@ -475,7 +475,7 @@
             <a href="https://gltf.report/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/donmccurdy/glTF-Report-Feedback">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard (Images)</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
@@ -499,7 +499,7 @@
             🚀 Try it out and
             <a href="https://edit.video/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
@@ -523,7 +523,7 @@
             🚀 Try it out and
             <a href="https://edit.photo/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard (Images)</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
@@ -548,7 +548,7 @@
             🚀 Try it out and
             <a href="https://graphtoy.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
           </ul>
@@ -572,7 +572,7 @@
             <a href="https://audiomass.co/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/pkalogiros/audiomass">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
@@ -597,7 +597,7 @@
             <a href="https://www.globs.design/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/steveruizok/globs">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
           </ul>
@@ -620,7 +620,7 @@
             <a href="https://www.vimonlineeditor.com/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/programmerhat/vim-online-editor">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
           </ul>
@@ -643,7 +643,7 @@
             <a href="https://web-gphoto2.rreverser.com/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/GoogleChromeLabs/web-gphoto2">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/usb/"> WebUSB</a></li>
           </ul>
@@ -666,7 +666,7 @@
             🚀 Try it out and
             <a href="https://logiwebconnect.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
 <li><a href="https://web.dev/bluetooth/"> WebBluetooth</a></li>
@@ -691,7 +691,7 @@
             🚀 Try it out and
             <a href="https://boardgamearena.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Push_API"> Push</a></li>
@@ -716,7 +716,7 @@
             <a href="https://install.wled.me/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/Aircoookie/WLED">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/serial/"> WebSerial</a></li>
           </ul>
@@ -740,7 +740,7 @@
             <a href="https://grapheneos.org/install/web#flashing-factory-images">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/GrapheneOS/grapheneos.org">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/usb/"> WebUSB</a></li>
           </ul>
@@ -763,7 +763,7 @@
             🚀 Try it out and
             <a href="https://songwhip.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Device_Memory_API"> Device Memory</a></li>
@@ -789,7 +789,7 @@
             <a href="https://excalidraw.com/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/excalidraw/excalidraw">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard (Images)</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
@@ -818,7 +818,7 @@
             🚀 Try it out and
             <a href="https://stackblitz.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
 <li><a href="https://web.dev/file-system-access/"> File System Access</a></li>
@@ -843,7 +843,7 @@
             🚀 Try it out and
             <a href="https://toot.cafe/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Push_API"> Push</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
@@ -869,7 +869,7 @@
             🚀 Try it out and
             <a href="https://www.tiktok.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
@@ -895,7 +895,7 @@
             🚀 Try it out and
             <a href="https://trovo.live/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Session_API"> Media Session</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Push_API"> Push</a></li>
@@ -920,7 +920,7 @@
             🚀 Try it out and
             <a href="https://h5.topwargame.com/h5game/index.html">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
@@ -944,7 +944,7 @@
             🚀 Try it out and
             <a href="https://www.capcut.com/editor">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
@@ -970,7 +970,7 @@
             🚀 Try it out and
             <a href="https://shots.so/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard (Images)</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
@@ -1000,7 +1000,7 @@
             <a href="https://web.blockbench.net/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/JannisX11/blockbench">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard (Images)</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
@@ -1029,7 +1029,7 @@
             🚀 Try it out and
             <a href="https://www.pinterest.de/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
@@ -1060,7 +1060,7 @@
             <a href="https://pokedex.org/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/nolanlawson/pokedex.org">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
 <li><a href="https://web.dev/get-installed-related-apps/"> getInstalledRelatedApps</a></li>
@@ -1086,7 +1086,7 @@
             🚀 Try it out and
             <a href="https://docs.craft.do/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard (Images)</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
@@ -1110,7 +1110,7 @@
             <a href="https://app.diagrams.net/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/jgraph/drawio">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard (Images)</a></li>
@@ -1137,7 +1137,7 @@
             🚀 Try it out and
             <a href="https://www.irccloud.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
 <li><a href="https://web.dev/url-protocol-handler/"> Protocol Handlers</a></li>
@@ -1163,7 +1163,7 @@
             <a href="https://www.tldraw.com/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/tldraw/tldraw">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard (Images)</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
@@ -1189,7 +1189,7 @@
             🚀 Try it out and
             <a href="https://linear.app/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard (Images)</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
@@ -1215,7 +1215,7 @@
             🚀 Try it out and
             <a href="https://www.soundslice.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
@@ -1238,7 +1238,7 @@
             🚀 Try it out and
             <a href="https://radio-house.app/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
@@ -1262,7 +1262,7 @@
             🚀 Try it out and
             <a href="https://narrow.one/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
@@ -1292,7 +1292,7 @@
             🚀 Try it out and
             <a href="https://lichess.org/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Push_API"> Push</a></li>
@@ -1317,7 +1317,7 @@
             🚀 Try it out and
             <a href="https://www.lightningmaps.org/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Background_Synchronization_API"> Background Sync</a></li>
           </ul>
@@ -1340,7 +1340,7 @@
             🚀 Try it out and
             <a href="https://traintimes.org.uk/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
@@ -1365,7 +1365,7 @@
             🚀 Try it out and
             <a href="https://thesession.org/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/web-share/"> Web Share</a></li>
           </ul>
@@ -1388,7 +1388,7 @@
             🚀 Try it out and
             <a href="https://www.instagram.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
@@ -1417,7 +1417,7 @@
             🚀 Try it out and
             <a href="https://hoppscotch.io/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
@@ -1443,7 +1443,7 @@
             🚀 Try it out and
             <a href="https://github.dev/github/dev">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard (Images)</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
@@ -1469,7 +1469,7 @@
             🚀 Try it out and
             <a href="https://twitter.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://web.dev/badging-api/"> Badging</a></li>
@@ -1499,7 +1499,7 @@
             🚀 Try it out and
             <a href="https://www.netflix.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Device_Memory_API"> Device Memory</a></li>
@@ -1526,7 +1526,7 @@
             🚀 Try it out and
             <a href="https://www.photopea.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard (Images)</a></li>
@@ -1555,7 +1555,7 @@
             <a href="https://bitmidi.com/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/feross/bitmidi.com">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigationPreloadManager"> Navigation Preload</a></li>
@@ -1581,7 +1581,7 @@
             🚀 Try it out and
             <a href="https://wormhole.app/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
@@ -1609,7 +1609,7 @@
             🚀 Try it out and
             <a href="https://snapdrop.net/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
@@ -1636,7 +1636,7 @@
             🚀 Try it out and
             <a href="https://cleanfeed.net/studio">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/wake-lock/"> Screen Wake Lock</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/estimate"> Storage Estimation</a></li>
@@ -1660,7 +1660,7 @@
             🚀 Try it out and
             <a href="https://app.storz-bickel.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
@@ -1685,7 +1685,7 @@
             🚀 Try it out and
             <a href="https://okso.app/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard (Images)</a></li>
 <li><a href="https://web.dev/file-system-access/"> File System Access</a></li>
@@ -1710,7 +1710,7 @@
             🚀 Try it out and
             <a href="https://www.airconsole.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/wake-lock/"> Screen Wake Lock</a></li>
 <li><a href="https://web.dev/web-share/"> Web Share</a></li>
@@ -1734,7 +1734,7 @@
             <a href="https://microsoftedge.github.io/Demos/wami/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/MicrosoftEdge/Demos/tree/main/wami">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/file-system-access/"> File System Access</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
@@ -1757,7 +1757,7 @@
             🚀 Try it out and
             <a href="https://niftypass.app/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Push_API"> Push</a></li>
@@ -1782,7 +1782,7 @@
             🚀 Try it out and
             <a href="https://app.cosee.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
@@ -1806,7 +1806,7 @@
             🚀 Try it out and
             <a href="https://kryogenix.org/farmbound">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
@@ -1833,7 +1833,7 @@
             🚀 Try it out and
             <a href="https://www.conifer-music.app">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://web.dev/badging-api/"> Badging</a></li>
@@ -1869,7 +1869,7 @@
             <a href="https://editor.kota-yata.com/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/kota-yata/editor.kota-yata.com">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/file-system-access/"> File System Access</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
@@ -1894,7 +1894,7 @@
             🚀 Try it out and
             <a href="https://pwa.journalisticapp.com">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
@@ -1919,7 +1919,7 @@
             <a href="https://buddy.edgetx.org/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/EdgeTX/buddy">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/usb/"> WebUSB</a></li>
 <li><a href="https://web.dev/file-system-access/"> File System Access</a></li>
@@ -1944,7 +1944,7 @@
             <a href="https://esc-configurator.com/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/stylesuxx/esc-configurator">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/serial/"> WebSerial</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
@@ -1971,7 +1971,7 @@
             <a href="https://fpv.wtf/#/about">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/fpv-wtf/voc-web">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/usb/"> WebUSB</a></li>
           </ul>
@@ -1995,7 +1995,7 @@
             <a href="https://web-serial-app.netlify.app/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/tanepiper/web-serial-controller">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/serial/"> WebSerial</a></li>
           </ul>
@@ -2019,7 +2019,7 @@
             <a href="https://usevia.app/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/the-via/app">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/hid/"> WebHID</a></li>
           </ul>
@@ -2042,7 +2042,7 @@
             <a href="https://microsoftedge.github.io/Demos/pwamp/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/MicrosoftEdge/Demos/tree/main/pwamp">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
 <li><a href="https://web.dev/file-handling/"> File Handling</a></li>
@@ -2075,7 +2075,7 @@
             <a href="https://tidepool.org/uploader">download the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/tidepool-org/uploader">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/bluetooth/"> WebBluetooth</a></li>
 <li><a href="https://web.dev/hid/"> WebHID</a></li>
@@ -2101,7 +2101,7 @@
             <a href="https://setu-upi-over-nfc.herokuapp.com/how-it-works/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/SetuHQ/upi-pos">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/nfc/"> WebNFC</a></li>
           </ul>
@@ -2124,7 +2124,7 @@
             🚀 Try it out and
             <a href="https://roland50.studio/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/web-share/"> Web Share (Files)</a></li>
 <li><a href="https://web.dev/web-share/"> Web Share</a></li>
@@ -2148,7 +2148,7 @@
             🚀 Try it out and
             <a href="https://docs.qq.com/desktop/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard (Images)</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
@@ -2175,7 +2175,7 @@
             🚀 Try it out and
             <a href="https://open.spotify.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
@@ -2203,7 +2203,7 @@
             <a href="https://paintz.app">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/ZMYaro/PaintZ">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard (Images)</a></li>
@@ -2232,7 +2232,7 @@
             🚀 Try it out and
             <a href="https://ui.perfetto.dev/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
@@ -2259,7 +2259,7 @@
             <a href="https://pixa.pics/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/pixa-pics/pixa-pics.github.io">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard (Images)</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
@@ -2286,7 +2286,7 @@
             🚀 Try it out and
             <a href="https://play.spacelancers.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
 <li><a href="https://web.dev/gamepad/"> Gamepad</a></li>
@@ -2310,7 +2310,7 @@
             🚀 Try it out and
             <a href="https://configure.zsa.io/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/hid/"> WebHID</a></li>
 <li><a href="https://web.dev/usb/"> WebUSB</a></li>
@@ -2334,7 +2334,7 @@
             <a href="https://web.brewflasher.com/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/thorrak/brewflasher_web">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/serial/"> WebSerial</a></li>
           </ul>
@@ -2357,7 +2357,7 @@
             🚀 Try it out and
             <a href="https://dj.beatport.com/home">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
@@ -2383,7 +2383,7 @@
             🚀 Try it out and
             <a href="https://www.topdecked.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard (Images)</a></li>
@@ -2413,7 +2413,7 @@
             <a href="https://snapper-gps.herokuapp.com/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/SnapperGPS/snappergps-app">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
@@ -2441,7 +2441,7 @@
             <a href="https://haven.pages.dev/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/ThaUnknown/pwa-haven">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard (Images)</a></li>
@@ -2477,7 +2477,7 @@
             🚀 Try it out and
             <a href="https://codev5.vex.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/serial/"> WebSerial</a></li>
 <li><a href="https://web.dev/usb/"> WebUSB</a></li>
@@ -2501,7 +2501,7 @@
             🚀 Try it out and
             <a href="https://app.element.io/#/welcome">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
 <li><a href="https://web.dev/badging-api/"> Badging</a></li>
@@ -2530,7 +2530,7 @@
             <a href="https://bangle.io">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/bangle-io/bangle-io">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/file-system-access/"> File System Access</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
@@ -2554,7 +2554,7 @@
             🚀 Try it out and
             <a href="https://my.flipp.dev/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/serial/"> WebSerial</a></li>
           </ul>
@@ -2577,7 +2577,7 @@
             🚀 Try it out and
             <a href="https://www.senomix.com/timesheet">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://web.dev/file-handling/"> File Handling</a></li>
@@ -2603,7 +2603,7 @@
             🚀 Try it out and
             <a href="https://www.figma.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard (Images)</a></li>
 <li><a href="https://github.com/WICG/eyedropper-api/blob/main/README.md"> EyeDropper</a></li>
@@ -2630,7 +2630,7 @@
             🚀 Try it out and
             <a href="https://wootility.io/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
@@ -2661,7 +2661,7 @@
             <a href="https://pwa.kiwix.org/www/index.html">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/kiwix/kiwix-js-windows">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
@@ -2687,7 +2687,7 @@
             🚀 Try it out and
             <a href="https://apps.tibbo.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/usb/"> WebUSB</a></li>
           </ul>
@@ -2709,7 +2709,7 @@
             🚀 Try it out and
             <a href="https://www.canva.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard (Images)</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
@@ -2738,7 +2738,7 @@
             🚀 Try it out and
             <a href="https://www.xbox.com/en-US/play/games/fortnite/BT5P2X999VH2">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/gamepad/"> Gamepad</a></li>
           </ul>
@@ -2760,7 +2760,7 @@
             🚀 Try it out and
             <a href="https://activerecall.com/login.html">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
 <li><a href="https://web.dev/file-system-access/"> File System Access</a></li>
@@ -2786,7 +2786,7 @@
             <a href="https://squoosh.app">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/GoogleChromeLabs/squoosh">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
@@ -2813,7 +2813,7 @@
             <a href="https://hoten.cc/zc/play/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/connorjclark/ZeldaClassic">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
@@ -2841,7 +2841,7 @@
             🚀 Try it out and
             <a href="https://sharedgametimer.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://web.dev/gamepad/"> Gamepad</a></li>
@@ -2872,7 +2872,7 @@
             <a href="https://lookscanned.io/scan">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/rwv/lookscanned.io">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
 <li><a href="https://web.dev/file-system-access/"> File System Access</a></li>
@@ -2897,7 +2897,7 @@
             🚀 Try it out and
             <a href="https://play.geforcenow.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/gamepad/"> Gamepad</a></li>
           </ul>
@@ -2920,7 +2920,7 @@
             <a href="https://duino.app/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/duinoapp/duinoapp-client">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/serial/"> WebSerial</a></li>
           </ul>
@@ -2943,7 +2943,7 @@
             🚀 Try it out and
             <a href="https://www.stemplayer.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/usb/"> WebUSB</a></li>
           </ul>
@@ -2966,7 +2966,7 @@
             <a href="https://my.numworks.com/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://www.numworks.com/blog/webusb-firmware-update/">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/usb/"> WebUSB</a></li>
           </ul>
@@ -2988,7 +2988,7 @@
             🚀 Try it out and
             <a href="https://make.firialabs.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/usb/"> WebUSB</a></li>
           </ul>
@@ -3011,7 +3011,7 @@
             <a href="https://www.espruino.com/ide/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/espruino/EspruinoWebIDE">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/bluetooth/"> WebBluetooth</a></li>
 <li><a href="https://web.dev/serial/"> WebSerial</a></li>
@@ -3036,7 +3036,7 @@
             <a href="https://1tuner.com">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/robinbakker/1tuner">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Session_API"> Media Session</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
@@ -3061,7 +3061,7 @@
             <a href="https://scrapbook-pwa.web.app/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/web-share/">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
@@ -3092,7 +3092,7 @@
             <a href="https://yt-playlist-notifier.web.app/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/jeffposnick/yt-playlist-notifier">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
@@ -3118,7 +3118,7 @@
             <a href="https://josephrocca.github.io/clip-image-sorter/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/josephrocca/clip-image-sorter">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/file-system-access/"> File System Access</a></li>
           </ul>
@@ -3141,7 +3141,7 @@
             <a href="https://kenchris.github.io/webnfc-groceries/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/kenchris/webnfc-groceries">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/nfc/"> WebNFC</a></li>
           </ul>
@@ -3165,7 +3165,7 @@
             <a href="https://maskable.app/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/NotWoods/maskable">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard (Images)</a></li>
@@ -3194,7 +3194,7 @@
             🚀 Try it out and
             <a href="https://ember.ly/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
@@ -3219,7 +3219,7 @@
             🚀 Try it out and
             <a href="https://tinder.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
@@ -3252,7 +3252,7 @@
             <a href="https://www.jsmusicdb.com/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/lucienimmink/jsmusicdb">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
@@ -3280,7 +3280,7 @@
             🚀 Try it out and
             <a href="https://logseq.com/?spa=true">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard (Images)</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
@@ -3307,7 +3307,7 @@
             <a href="https://stedit.app/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/Offroaders123/Smart-Text-Editor">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
@@ -3338,7 +3338,7 @@
             🚀 Try it out and
             <a href="https://leonidasesteban.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://web.dev/web-share/"> Web Share</a></li>
@@ -3363,7 +3363,7 @@
             <a href="https://bundle.js.org">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/okikio/bundle">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
@@ -3388,7 +3388,7 @@
             🚀 Try it out and
             <a href="https://flash.android.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/usb/"> WebUSB</a></li>
           </ul>
@@ -3410,7 +3410,7 @@
             🚀 Try it out and
             <a href="https://fuse.littlebits.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/bluetooth/"> WebBluetooth</a></li>
 <li><a href="https://web.dev/usb/"> WebUSB</a></li>
@@ -3433,7 +3433,7 @@
             🚀 Try it out and
             <a href="https://studio.samlabs.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/bluetooth/"> WebBluetooth</a></li>
           </ul>
@@ -3455,7 +3455,7 @@
             🚀 Try it out and
             <a href="https://code.irobot.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/gamepad/"> Gamepad</a></li>
 <li><a href="https://web.dev/bluetooth/"> WebBluetooth</a></li>
@@ -3479,7 +3479,7 @@
             🚀 Try it out and
             <a href="https://code.makewonder.com/cue/#/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/bluetooth/"> WebBluetooth</a></li>
           </ul>
@@ -3501,7 +3501,7 @@
             🚀 Try it out and
             <a href="https://app.thepocketlab.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/bluetooth/"> WebBluetooth</a></li>
           </ul>
@@ -3525,7 +3525,7 @@
             <a href="https://codeit.codes">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/codeitcodes/codeit">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
@@ -3551,7 +3551,7 @@
             🚀 Try it out and
             <a href="https://chrome.google.com/webstore/detail/croskeys-by-crosexperts/akiaafoeijpibmbbfaebhkhccepbdgfi">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard (Images)</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
@@ -3579,7 +3579,7 @@
             🚀 Try it out and
             <a href="https://mishipay.shop/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Device_Memory_API"> Device Memory</a></li>
@@ -3606,7 +3606,7 @@
             🚀 Try it out and
             <a href="https://vscode.dev/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://web.dev/file-system-access/"> File System Access</a></li>
@@ -3629,7 +3629,7 @@
             🚀 Try it out and
             <a href="https://app.vysor.io/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://web.dev/usb/"> WebUSB</a></li>
@@ -3654,7 +3654,7 @@
             <a href="https://qrsnapper.com">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/PaulKinlan/qrcode">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
@@ -3681,7 +3681,7 @@
             <a href="https://remap-keys.app/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/remap-keys/remap">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/hid/"> WebHID</a></li>
 <li><a href="https://web.dev/serial/"> WebSerial</a></li>
@@ -3706,7 +3706,7 @@
             🚀 Try it out and
             <a href="https://editor.construct.net">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard (Images)</a></li>
@@ -3743,7 +3743,7 @@
             🚀 Try it out and
             <a href="https://photoshop.adobe.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard (Images)</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
@@ -3771,7 +3771,7 @@
             <a href="https://dev.to">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/forem/forem">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/web-share/"> Web Share</a></li>
           </ul>
@@ -3794,7 +3794,7 @@
             🚀 Try it out and
             <a href="https://postr.me/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/web-share/"> Web Share</a></li>
 <li><a href="https://web.dev/web-share-target/"> Web Share Target</a></li>
@@ -3817,7 +3817,7 @@
             🚀 Try it out and
             <a href="https://spike.legoeducation.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/bluetooth/"> WebBluetooth</a></li>
 <li><a href="https://web.dev/serial/"> WebSerial</a></li>
@@ -3841,7 +3841,7 @@
             🚀 Try it out and
             <a href="https://case.xchart.com/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/serial/"> WebSerial</a></li>
           </ul>
@@ -3865,7 +3865,7 @@
             <a href="https://bpmtech.no">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/webmaxru/bpm-counter">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
 <li><a href="https://web.dev/launch-handler/"> Launch Handler</a></li>
@@ -3896,7 +3896,7 @@
             <a href="https://developer.chrome.com/fugu-showcase/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/GoogleChromeLabs/fugu-showcase">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
@@ -3923,7 +3923,7 @@
             <a href="https://svgco.de/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/tomayac/SVGcode">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard (Images)</a></li>
@@ -3954,7 +3954,7 @@
             <a href="https://web.telegram.org/z/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/Ajaxy/telegram-tt">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard (Images)</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
@@ -3982,7 +3982,7 @@
             🚀 Try it out and
             <a href="https://mconverter.eu/">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard (Images)</a></li>
@@ -4014,7 +4014,7 @@
             🚀 Try it out and
             <a href="https://boxy-svg.com/app">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
@@ -4044,7 +4044,7 @@
             <a href="https://tgstorage.com">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/sh-a-v/tgstorage">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
@@ -4073,7 +4073,7 @@
             🚀 Try it out and
             <a href="https://panel.hostmeapp.com">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
@@ -4102,7 +4102,7 @@
             <a href="https://loilo.github.io/diffr/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/loilo/diffr">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
           </ul>
@@ -4125,7 +4125,7 @@
             🚀 Try it out and
             <a href="https://yakuneba-community.com/welcome/YwAnWZXanuD7QckXWJwd">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/generic-sensor/"> Absolute Orientation Sensor</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
@@ -4153,7 +4153,7 @@
             🚀 Try it out and
             <a href="https://whatpwacando.today ">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
@@ -4193,7 +4193,7 @@
             <a href="https://dannymoerkerke.github.io/file-tree">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/DannyMoerkerke/file-tree">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/file-system-access/"> File System Access</a></li>
           </ul>
@@ -4216,7 +4216,7 @@
             🚀 Try it out and
             <a href="https://www.microsoft.com/en-us/makecode">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/bluetooth/"> WebBluetooth</a></li>
 <li><a href="https://web.dev/serial/"> WebSerial</a></li>
@@ -4241,7 +4241,7 @@
             🚀 Try it out and
             <a href="https://hexed.it">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> Cache Storage</a></li>
           </ul>
@@ -4265,7 +4265,7 @@
             <a href="https://stackedit.io ">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/benweet/stackedit/">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
           </ul>
@@ -4289,7 +4289,7 @@
             <a href="https://esphome.github.io/esp-web-tools/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/esphome/esp-web-tools">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/serial/"> WebSerial</a></li>
           </ul>
@@ -4313,7 +4313,7 @@
             <a href="https://www.improv-wifi.com/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/improv-wifi/sdk-js/">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/bluetooth/"> WebBluetooth</a></li>
 <li><a href="https://web.dev/serial/"> WebSerial</a></li>
@@ -4338,7 +4338,7 @@
             <a href="https://avg-colour.netlify.app/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/ThomasRettig/average-color">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
           </ul>
@@ -4362,7 +4362,7 @@
             <a href="https://linkcleaner.app/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/corbindavenport/link-cleaner">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
 <li><a href="https://web.dev/web-share/"> Web Share</a></li>
@@ -4387,7 +4387,7 @@
             <a href="https://edit.photostack.app">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/photostack/photostack">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/file-system-access/"> File System Access</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
@@ -4413,7 +4413,7 @@
             <a href="https://md.nico.dev/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/nico-martin/markdown-editor/">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://web.dev/file-handling/"> File Handling</a></li>
@@ -4439,7 +4439,7 @@
             🚀 Try it out and
             <a href="https://thelogbook.app">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://web.dev/file-handling/"> File Handling</a></li>
@@ -4469,7 +4469,7 @@
             <a href="https://anaesthetics.app/bluetooth/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/anaestheticsapp/bluetooth">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/async-clipboard/"> Async Clipboard</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Push_API"> Push</a></li>
@@ -4495,7 +4495,7 @@
             <a href="https://uspeaking.netlify.app/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/rafaelguinho/u-speaking-react">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/persist"> Persistent Storage</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> Service Worker</a></li>
@@ -4519,7 +4519,7 @@
             🚀 Try it out and
             <a href="https://sqliteviewer.app">launch the app</a>.
           </p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://web.dev/file-handling/"> File Handling</a></li>
 <li><a href="https://web.dev/file-system-access/"> File System Access</a></li>
@@ -4547,7 +4547,7 @@
             <a href="https://editor.bridge-core.app/">launch the app</a>.
           </p>
           <p>🧑‍💻 Check out the <a href="https://github.com/bridge-core/editor">source code</a>.</p>
-          <p><strong>Used APIs:</strong></p>
+          <p>🛠️ Used APIs:</p>
           <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> Add to Home Screen</a></li>
 <li><a href="https://web.dev/badging-api/"> Badging</a></li>
