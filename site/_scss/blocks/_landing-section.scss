@@ -98,6 +98,8 @@
 
     .item__title a,
     .item__title a:visited {
+      font-family: 'Google Sans';
+      font-weight: 400;
       color: var(--number-color);
       text-decoration: none;
     }
