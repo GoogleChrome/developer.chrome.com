@@ -114,7 +114,11 @@
     - url: /docs/devtools/customize/dark-theme/
     - url: /docs/devtools/customize/placement/
     - url: /docs/devtools/javascript/ignore-chrome-extension-scripts/
-    - url: /docs/devtools/settings/
+    - title: i18n.docs.devtools.settings
+      sections:
+        - url: /docs/devtools/settings/
+        - url: /docs/devtools/settings/preferences
+        - url: /docs/devtools/settings/other
 - url: https://developer.chrome.com/tags/devtools-engineering/
   title: i18n.docs.devtools.blog
   description: i18n.docs.devtools.blog_description
