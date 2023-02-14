@@ -62,7 +62,9 @@ async function toRSS(jsonData) {
       contentLength =>
         `
       <item>
-        <title>${item.appURL} — ${escapeXml(item.title)}</title>
+        <title>${escapeXml(item.title)} (${item.appURL
+          .replace(/https?:\/\//, '')
+          .replace(/\/$/, '')})</title>
         <description><![CDATA[
           ${item.description ? `<p>${escapeXml(item.description)}</p>` : ''}
           ${item.isElectronApp ? '<p>(This is an Electron.js app.)</p>' : ''}
