@@ -8,7 +8,7 @@ authors:
  - tunetheweb
  - yoavweiss
 date: 2023-02-01
-#updated: 2023-02-01
+updated: 2023-02-11
 hero: image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/ZJLD5QJvoFcWXkqF8m5P.jpg
 alt: A compass on top of some booklets labeled Field Notes
 tags:
@@ -70,7 +70,17 @@ Site owners can choose to include the origin trial on their pages for all, or fo
 
 ## How can I measure Core Web Vitals per soft navigation?
 
-Some considerations need to be taken into account when attempting to measure Core Web Vitals for soft navigations.
+To includes soft navigations you need to include `includeSoftNavigationObservations: true` in your performance observer's `observe` call:
+
+```js
+new PerformanceObserver((entryList) => {
+  for (const entry of entryList.getEntries()) {
+    console.log('LCP candidate:', entry.startTime, entry);
+  }
+}).observe({type: 'largest-contentful-paint', buffered: true, includeSoftNavigationObservations: true});
+```
+
+This extra flag on the `observe` method is needed in addition to [enabling the soft navigation functionality in Chrome](#how-do-i-enable-soft-navigations-in-chrome). This explicit opt-in at the performance observer level is to [ensure existing performance observers aren't surprised by these extra entries](https://github.com/WICG/soft-navigations/issues/11) as some considerations need to be taken into account when attempting to measure Core Web Vitals for soft navigations.
 
 Some metrics have traditionally been measured throughout the life of the page: LCP, for example, can change until an interaction occurs. CLS, FID and INP can be updated until the page is navigated away from. Therefore each “navigation” (including the original navigation) will need to finalize these metrics as each new soft navigation occurs.
 
@@ -90,7 +100,7 @@ You can use a `PerformanceObserver` to observe soft navigations. Below is an exa
 
 ```js
 const observer = new PerformanceObserver(console.log);
-observer.observe({ type: "soft-navigation", buffered: true });
+observer.observe({ type: "soft-navigation", buffered: true, includeSoftNavigationObservations: true });
 ```
 
 This can be used to finalize full-life page metrics for the previous navigation.
@@ -141,7 +151,7 @@ As this example shows, the LCP element for the soft navigation can be reported d
 
 For a soft navigation this is a more tricky question. Should we measure the first request made for the new page? What if all the content already exists in the app and there are no additional requests? What if that request is made in advance with a prefetch? What if a request unrelated to the soft navigation from a user perspective (for example, it’s an analytics request)?
 
-A simpler method is to report TTFB of 0 for soft navigations—in a similar manner as we recommend for [back/forward cache](https://web.dev/bfcache/) restores. This is the method the [`web-vitals` library](using-web-vitalsjs-to-measure-soft-navigation-core-web-vitals) currently uses for soft navigations.
+A simpler method is to report TTFB of 0 for soft navigations—in a similar manner as we recommend for [back/forward cache](https://web.dev/bfcache/) restores. This is the method the [`web-vitals` library](#using-the-web-vitals-library-to-measure-core-web-vitals-for-soft-navigations) currently uses for soft navigations.
 
 In the future, we may support more precise ways of knowing which request is the soft navigation’s “navigation request” and will be able to have more precise TTFB measurements. But that’s not part of the current experiment.
 

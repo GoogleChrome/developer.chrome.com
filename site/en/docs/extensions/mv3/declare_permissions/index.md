@@ -131,8 +131,12 @@ The following table lists the currently available permissions:
     </tr>
     <tr id="declarativeNetRequest">
       <td><code>"declarativeNetRequest"</code></td>
-      <td>Gives access to the <a href="/docs/extensions/reference/declarativeNetRequest/">chrome.declarativeNetRequest</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/declarativeNetRequest/">chrome.declarativeNetRequest</a> API. Some operations may require host permissions to perform.</td>
     </tr>
+     <tr id="declarativeNetRequestWithHostAccess">
+      <td><code>"declarativeNetRequestWithHostAccess"</code></td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/declarativeNetRequest/">chrome.declarativeNetRequest</a> API, but requires host permissions to the request URL and initiator to act on a request.</td>
+      </tr>
     <tr id="declarativeNetRequestFeedback">
       <td><code>"declarativeNetRequestFeedback"</code></td>
       <td>Gives access to events and methods within the <a
@@ -253,6 +257,10 @@ The following table lists the currently available permissions:
       <td><code>"notifications"</code></td>
       <td>Gives access to the <a href="/docs/extensions/reference/notifications/">chrome.notifications</a> API.</td>
     </tr>
+    <tr id="offscreen">
+      <td><code>"offscreen"</code></td>
+      <td>Gives access to the <a href="/docs/extensions/reference/offscreen/"><code>chrome.offscreen</code></a> API. 
+    </tr>    
     <tr id="pageCapture">
       <td><code>"pageCapture"</code></td>
       <td>Gives access to the <a href="/docs/extensions/reference/pageCapture/">chrome.pageCapture</a> API.</td>
@@ -337,9 +345,6 @@ The following table lists the currently available permissions:
         many circumstances your extension will not need to declare the <code>"tabs"</code> permission to make use of
         these APIs.</td>
     </tr>
-    <tr id="offscreen">
-      <td><code>"offscreen"</code></td>
-      <td>Gives access to the <a href="/docs/extensions/reference/offscreen/"><code>chrome.offscreen</code></a> API, allowing developers to create off-screen documents to use DOM APIs without obtrusively opening new windows or tabs that interrupt the user experience. Offscreen documents do not have the same API access as the rest of the extension, but have access to the [`chrome.runtime`](/docs/extensions/reference/runtime/) messaging API to communicate with the service worker. 
     <tr id="topSites">
       <td><code>"topSites"</code></td>
       <td>Gives access to the <a href="/docs/extensions/reference/topSites/">chrome.topSites</a> API.</td>

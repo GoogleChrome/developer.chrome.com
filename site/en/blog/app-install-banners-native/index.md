@@ -3,9 +3,8 @@ layout: "layouts/blog-post.njk"
 title: Native App Install Prompt
 description: >
   Native app install banners give you the ability to let users quickly and seamlessly install your native app on their device from the app store, without leaving the browser.
-
 date: 2014-12-16
-updated: 2020-05-08
+updated: 2023-01-20
 ---
 
 The native app install prompt gives you the ability to let users quickly and
@@ -17,24 +16,21 @@ without leaving the browser, and without showing an annoying interstitial.
 In order to show the native app install prompt to the user, your site must
 meet the following criteria:
 
-* The web app nor the native app are already installed.
-* Meets a user engagement heuristic (currently, the user has interacted
-  with the domain for at least 30 seconds)
+* Neither the web app nor the native app currently installed on the device.
 * Includes a [Web App Manifest](https://web.dev/add-manifest) that includes:
     - `short_name`
     - `name` (used in the banner prompt)
     - `icons` including a 192px and a 512px version
-    - [`prefer_related_applications`](#prefer_related) is `true`
-    - [`related_applications`](#prefer_related) object with information
+    - [`prefer_related_applications`](#prefer_related_applications) is `true`
+    - [`related_applications`](#related_applications) object with information
       about the app
 * Served over **HTTPS**
 
-When these criteria are met, will fire a `beforeinstallprompt` event that you
-can use to prompt the user to install your native app, and may show a
-[mini-info bar](#mini-info-bar).
+A `beforeinstallprompt` event will fire when you meet these criteria. You
+can use it to prompt the user to install your native app.
 
 {% Aside %}
-On Chrome, the native app install prompt is only supported in the
+Chrome only supports the native app install prompt in the
 current stable release. On other Chrome channels (Beta/Dev/Canary), the
 `beforeinstallprompt` event will **not** fire, even if the above criteria
 are met.
@@ -59,7 +55,7 @@ to your web app manifest, `prefer_related_applications` and
 ### `prefer_related_applications`
 
 The `prefer_related_applications` property tells the browser to prompt the
-user with your native app instead of the web app. Leaving this value unset,
+user with your native app instead of the web app. If you leave this value unset,
 or `false`, the browser will prompt the user to install the web app instead.
 
 ### `related_applications`
@@ -73,7 +69,7 @@ and the `id` is your Play Store app ID.
 
 In order to show the install dialog, you need to:
 
-1. Listen for the `beforeinstallprompt` event
+1. Listen for the `beforeinstallprompt` event.
 1. Notify the user your native app can be installed with a button or other
    element that will generate a user gesture event.
 1. Show the prompt by calling `prompt()` on the saved `beforeinstallprompt`
@@ -81,8 +77,8 @@ In order to show the install dialog, you need to:
 
 ### Listen for `beforeinstallprompt`
 
-If the [criteria](#criteria) are met, Chrome will fire a `beforeinstallprompt`
-event, that you can use to indicate your app can be installed, and then prompt
+If the [criteria](#what-are-the-criteria) are met, Chrome will fire a `beforeinstallprompt`
+event. You can use it to indicate your app can be installed, and then prompt
 the user to install it.
 
 When the `beforeinstallprompt` event has fired, save a reference to the event,
@@ -102,7 +98,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
 ### Notify the user your app can be installed
 
 The best way to notify the user your app can be installed is by adding a button
-or other element to your user interface. **Don't show a full page interstitial
+or other element to your user interface. **Don't show a full page [interstitial](https://support.google.com/webdesigner/answer/7334234)
 or other elements that may be annoying or distracting.**
 
 ```js
@@ -127,7 +123,7 @@ before interrupting them with the prompt.
 
 To show the install prompt, call `prompt()` on the saved event
 from within a user gesture. It will show a modal dialog, asking the user
-to to add your app to their home screen.
+to add your app to their home screen.
 
 Then, listen for the promise returned by the `userChoice` property. The
 promise returns an object with an `outcome` property after the prompt has
@@ -153,9 +149,8 @@ btnAdd.addEventListener('click', (e) => {
 ```
 
 You can only call `prompt()` on the deferred event once. If the user dismisses
-it, you'll need to wait until the `beforeinstallprompt` event is fired on
+it, you'll need to wait until the `beforeinstallprompt` event fires on
 the next page navigation.
-
 
 ## Special considerations for when using content security policy
 

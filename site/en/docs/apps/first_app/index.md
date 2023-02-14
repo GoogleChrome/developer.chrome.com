@@ -139,7 +139,7 @@ These command line options to Chrome may help you iterate:
 [1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: publish_app
-[4]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/apps/samples/hello-world
+[4]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/_archive/apps/samples/hello-world
 [5]: manifest
 [6]: manifestVersion
 [7]: app_lifecycle#lifecycle
