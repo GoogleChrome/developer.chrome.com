@@ -57,6 +57,11 @@ This office hours session shows a demo of the Topics API. Sam Dutton from the Pr
 
 [Open full-size video](https://drive.google.com/file/d/1dmpMKLJcGNe56M6ECRdRYhuITTv9YUDV/preview)
 
+{% Details %}
+{% DetailsSummary %}
+Older office hours videos
+{% endDetailsSummary %}
+
 ### Attribution Reporting discussion - August 11, 2022
 
 This office hours session covers key concepts for the Attribution Reporting API including Summary Reports and Aggregatable Reports. The video explains how to generate keys for retrieving reports, what data is reported, and how to generate the reports.
@@ -64,6 +69,9 @@ This office hours session covers key concepts for the Attribution Reporting API 
 <iframe src="https://drive.google.com/file/d/18RGEx_mrhDJuMsLUK1BZ0cK5FSZRAAqh/preview" width="640" height="480" allow="autoplay"></iframe>
 
 [Open full-size video](https://drive.google.com/file/d/18RGEx_mrhDJuMsLUK1BZ0cK5FSZRAAqh/preview)
+{% endDetails %}
+
+
 
 ### Attribution Reporting demo - August 11, 2022
 
