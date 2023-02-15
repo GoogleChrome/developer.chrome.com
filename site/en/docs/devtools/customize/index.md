@@ -15,16 +15,22 @@ This page lists the ways you can customize Chrome DevTools.
 
 ## Settings {: #settings }
 
-**Settings** > **Preferences** contains many options for customizing DevTools.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Preferences** contains many options for customizing DevTools.
 
-To open Settings, do one of the following:
+See [Open Settings](/docs/devtools/settings/#open) and [Preferences](/docs/devtools/settings/preferences/).
 
-- Click on the **Settings** icon.
-- Press <kbd>F1</kbd> while DevTools is in focus.
-- Press <kbd>?</kbd> while DevTools is in focus.
+## Dark theme {: #dark-theme }
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/HaeLqueTSvpXQQXUwUCk.png", alt="Settings icon", width="800", height="485" %}
+You can enable dark theme in [Settings](/docs/devtools/settings/) or the [Command Menu](/docs/devtools/command-menu/).
 
+{% Img src="image/admin/WvpPi2YTkYNCsmeguTwm.png", alt="The dark theme.", width="800", height="477" %}
+
+1.  [Open the Command Menu](/docs/devtools/command-menu).
+1.  Start typing `dark`, select the **Switch to dark theme** command, and then press
+    <kbd>Enter</kbd> to run the command.
+
+    {% Img src="image/admin/ZuWH6C0rI0XPrSNock9l.png", alt="The dark theme command.", width="800", height="350" %}
+1.  Alternatively, set your theme in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Preferences** > **Appearance**](/docs/devtools/settings/preferences/#appearance) > **Themes**.
 
 ## Drawer {: #drawer }
 
@@ -39,6 +45,11 @@ tabs.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/CUmjkDySI6MMzgEjukxi.png", alt="The More Tools button that opens other Drawer tabs.", width="800", height="485" %}
 
+## Change DevTools placement {: #placement }
+
+See [Chrome DevTools Placement](/docs/devtools/customize/placement).
+
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/60jo8OMncIlLhh6VRILs.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
 
 ## Reorder panels, tabs, and panes {: #reorder }
 
@@ -54,20 +65,6 @@ Additionally, you can [move panels and tabs up and down](/blog/new-in-devtools-8
 
 Your custom tab order persists across DevTools sessions.
 
-## Change DevTools placement {: #placement }
-
-See [Chrome DevTools Placement](/docs/devtools/customize/placement).
-
-{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/60jo8OMncIlLhh6VRILs.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
-
-
-## Dark theme {: #dark-theme }
-
-See [Enable Dark Theme](/docs/devtools/customize/dark-theme).
-
-{% Img src="image/admin/aeIyPT88dwvuDGDmQTDw.png", alt="The dark theme.", width="800", height="477" %}
-
-
 ## Panel layout {: #panel-layout }
 
 By default, DevTools will auto-rearrange your panel layout depending on window size. You can disable the auto-rearrangement. Go to **Settings** > update the **panel layout** based on your preference. 
@@ -79,7 +76,7 @@ For example, the **Styles pane** in the **Elements** panel will move from the si
 
 ## Change DevTools UI language {: #language }
 
-See [Use DevTools in your preferred language](/blog/new-in-devtools-94/#localized).
+See {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Preferences** > **Appearance**](/docs/devtools/settings/preferences/#appearance) > **Language**.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/eozpCcjmnn7zwya9zXu6.png", alt="Change language in Settings > Preferences", width="800", height="494" %}
 
@@ -92,7 +89,7 @@ To enable sync, first turn on [Chrome Sync](https://support.google.com/chrome/an
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/yhIipqtEvDuy6ygB677t.png", alt="Chrome profile sync.", width="400", height="579" %}
 
-You can enable or disable the DevTools settings sync separately using the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="22", height="22" %} **Settings** > **Sync** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Enable settings sync**](/docs/devtools/settings/#sync) checkbox.
+You can enable or disable the DevTools settings sync separately using the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="22", height="22" %} [**Settings** > **Sync**](/docs/devtools/settings/preferences/#sync) > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable settings sync** checkbox.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/LUwFNTDyP22L1euSGg73.png", alt="DevTools sync settings", width="800", height="654" %}
 
