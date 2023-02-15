@@ -12,7 +12,7 @@ authors:
  - mihajlija
 ---
 
-<img src="https://wd.imgix.net/image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/oon9wpGOh5kvEJNGJhkp.png" style="width: 500px; margin: auto;"  alt="Where to meet us">
+<img src="https://wd.imgix.net/image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/oon9wpGOh5kvEJNGJhkp.png" style="width: 700px; margin: auto;"  alt="Where to meet us">
 
 You can join the Privacy Sandbox team during office hours, which we announce in the [Chrome Developers blog](https://developer.chrome.com/blog/), at conferences, and in W3C calls. You can also subscribe to the following mailing lists to be notified of other events: [Attribution Reporting](https://groups.google.com/u/2/a/chromium.org/g/attribution-reporting-api-dev), [FLEDGE](https://groups.google.com/u/2/a/chromium.org/g/fledge-api-announce), and [Topics](https://groups.google.com/u/2/a/chromium.org/g/topics-api-announce).
 
