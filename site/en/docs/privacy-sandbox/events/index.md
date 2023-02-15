@@ -12,9 +12,9 @@ authors:
  - mihajlija
 ---
 
-<img src="https://screenshot.googleplex.com/6Dqyjo8insUUKny.png" style="width: 111px; margin-right: 50px; display: inline;" alt="ticket image">
+<img src="https://screenshot.googleplex.com/6Dqyjo8insUUKny.png" style="width: 111px; margin-right: 50px; display: inline;" alt="blank image">
 <img src="https://wd.imgix.net/image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/xaRHmkuKLfCcGdRaEiDr.png?auto=format&w=338" style="width: 100px; display: inline; margin-right: 50px;" alt="ticket image">
-<img src="https://wd.imgix.net/image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/6mj7t7rHxZ5Vs31fWoSs.jpg?auto=format&w=338" style="width: 100px; display: inline;" alt="ticket image">
+<img src="https://wd.imgix.net/image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/6mj7t7rHxZ5Vs31fWoSs.jpg?auto=format&w=338" style="width: 100px; display: inline;" alt="calendar image">
 
 Learn about forthcoming events, and get access to resources for events that have
 already taken place. You can also subscribe to the following mailing lists to be notified of other events: [Attribution Reporting](https://groups.google.com/u/2/a/chromium.org/g/attribution-reporting-api-dev), [FLEDGE](https://groups.google.com/u/2/a/chromium.org/g/fledge-api-announce), and [Topics](https://groups.google.com/u/2/a/chromium.org/g/topics-api-announce).
