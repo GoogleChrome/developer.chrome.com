@@ -453,7 +453,7 @@ This video first shows the requests log refreshed on page reload, then persisted
 
 {% Details %}
 {% DetailsSummary %}
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Group network log by frame** is the same as [Group by frames](/docs/devtools/network/reference/#group-by-frames) in the **Network** panel. Groups by frame the requests initiated by inline frames.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Group network log by frame** is the same as [Group by frames](/docs/devtools/network/reference/#group-by-frames) in the **Network** panel. This option groups requests initiated by inline frames.
 {% endDetailsSummary %}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/QgdViJaRvfWo8suAE6a6.png", alt="The network request log with requests grouped by inline frames.", width="800", height="702" %}
@@ -573,7 +573,7 @@ This video shows various output previews.
 
 {% Details %}
 {% DetailsSummary %}
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Evaluate triggers user activation** makes the **Console** set `navigator.userActivation.isActive` to `true` upon evaluation, that is, upon any command you run.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Evaluate triggers user activation** turns any command you run in the **Console** into user interaction. In other words, it sets [`navigator.userActivation.isActive`](https://developer.mozilla.org/docs/Web/API/Navigator/userActivation) to `true` upon evaluation.
 {% endDetailsSummary %}
 
 You can find the same option in [Console > Settings](/docs/devtools/console/reference/#trigger-user-activation).
