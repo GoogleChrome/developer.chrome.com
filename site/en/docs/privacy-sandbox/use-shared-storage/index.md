@@ -75,9 +75,9 @@ testing use cases.
 
 ### Not recommended: user consent status {: #user-content-status }
 
-Adtech companies often have cross-site consent statuses that they need to keep
-track of. For example, an adtech company may want to store if a user consents
-to an adtech's terms or service or policies related to regulations, such as
+Ad tech companies often have cross-site consent statuses that they need to keep
+track of. For example, an ad tech company may want to store if a user consents
+to an ad tech's terms or service or policies related to regulations, such as
 GDPR.  
 
 **Shared storage is not recommended for this use case**. This is because:
