@@ -43,8 +43,8 @@ This Office Hours session covers the First-Party Sets proposal, how the proposal
 This Office Hours session provides an overview of the Topics API proposal with DevRel Product and Engineering leads. The demo portion of the session is in the video that follows.
 
 
-<img src="https://screenshot.googleplex.com/pL69tPJX5b22aFa.png" style="width:640; height:480; visibility: visible;">
-<iframe src="https://drive.google.com/file/d/1831_uKSlTwnSzYNjpp9pkDEniDA_Q9lF/preview" width="640" height="480" allow="autoplay" style="visibility: hidden;"></iframe>
+<img src="https://screenshot.googleplex.com/pL69tPJX5b22aFa.png" style="width:640; height:480; display: block;">
+<iframe src="https://drive.google.com/file/d/1831_uKSlTwnSzYNjpp9pkDEniDA_Q9lF/preview" width="640" height="480" allow="autoplay" style="display: none;"></iframe>
 
 [Open full-size video](https://drive.google.com/file/d/1831_uKSlTwnSzYNjpp9pkDEniDA_Q9lF/preview)
 
