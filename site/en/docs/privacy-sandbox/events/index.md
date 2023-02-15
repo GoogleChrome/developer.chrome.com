@@ -16,6 +16,8 @@ authors:
 <img src="https://wd.imgix.net/image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/xaRHmkuKLfCcGdRaEiDr.png?auto=format&w=338" style="width: 100px; display: inline; margin-right: 50px;" alt="ticket image">
 <img src="https://wd.imgix.net/image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/6mj7t7rHxZ5Vs31fWoSs.jpg?auto=format&w=338" style="width: 100px; display: inline;" alt="calendar image">
 
+You can join the Privacy Sandbox team during office hours, which we announce in the [Chrome Developers blog](https://developer.chrome.com/blog/), at conferences, and in W3C calls.
+
 Learn about forthcoming events, and get access to resources for events that have
 already taken place. You can also subscribe to the following mailing lists to be notified of other events: [Attribution Reporting](https://groups.google.com/u/2/a/chromium.org/g/attribution-reporting-api-dev), [FLEDGE](https://groups.google.com/u/2/a/chromium.org/g/fledge-api-announce), and [Topics](https://groups.google.com/u/2/a/chromium.org/g/topics-api-announce).
 
@@ -64,6 +66,8 @@ This office hours session covers key concepts for the Attribution Reporting API 
 [Open full-size video](https://drive.google.com/file/d/18RGEx_mrhDJuMsLUK1BZ0cK5FSZRAAqh/preview)
 
 ### Attribution Reporting demo - August 11, 2022
+
+This portion of the Attribution Reporting demo shows how to collect, batch, and process the reports in the Attribution Reporting API, and shows what the reports look like.
 
 <iframe src="https://drive.google.com/file/d/1hmHoM3xyU4eLTJ1dM7_E8x-u6nZgim1O/preview" width="640" height="480" allow="autoplay"></iframe>
 
