@@ -433,6 +433,9 @@ This video first shows the requests log refreshed on page reload, then persisted
 {% DetailsSummary %}
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable network request blocking** blocks requests that match patterns in the **Network request blocking** drawer.
 {% endDetailsSummary %}
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/GQg1mjs5D3cXbthrJgw5.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+This video first shows that the requests aren't blocked. Then, after you enable this option, a pattern in the **Network request blocking** drawer blocks them.
 {% endDetails %}
 
 {% Details %}
