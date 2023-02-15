@@ -12,10 +12,6 @@ authors:
  - mihajlija
 ---
 
-<script>
-alert("hi");
-</script>
-
 <img src="https://wd.imgix.net/image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/oon9wpGOh5kvEJNGJhkp.png" style="width: 700px; margin: auto;"  alt="Where to meet us">
 
 You can join the Privacy Sandbox team during office hours, which we announce in the [Chrome Developers blog](https://developer.chrome.com/blog/), at conferences, and in W3C calls. You can also subscribe to the following mailing lists to be notified of other events: [Attribution Reporting](https://groups.google.com/u/2/a/chromium.org/g/attribution-reporting-api-dev), [FLEDGE](https://groups.google.com/u/2/a/chromium.org/g/fledge-api-announce), and [Topics](https://groups.google.com/u/2/a/chromium.org/g/topics-api-announce).
@@ -46,8 +42,10 @@ This Office Hours session covers the First-Party Sets proposal, how the proposal
 
 This Office Hours session provides an overview of the Topics API proposal with DevRel Product and Engineering leads. The demo portion of the session is in the video that follows.
 
-<iframe src="https://drive.google.com/file/d/1831_uKSlTwnSzYNjpp9pkDEniDA_Q9lF/preview" width="640" height="480" allow="autoplay"></iframe>
- 
+<div style="position: relative;">
+<img src="https://screenshot.googleplex.com/pL69tPJX5b22aFa.png" style="width:640; height:480; z-index: 100; position: absolute; top: 0; left: 0;
+<iframe src="https://drive.google.com/file/d/1831_uKSlTwnSzYNjpp9pkDEniDA_Q9lF/preview" width="640" height="480" allow="autoplay" style="z-index: 1;"></iframe>
+ </div>
 [Open full-size video](https://drive.google.com/file/d/1831_uKSlTwnSzYNjpp9pkDEniDA_Q9lF/preview)
 
 ### Topics API demo - September 6, 2022
