@@ -30,7 +30,7 @@ Announcements are also made on [this issue](https://github.com/WICG/attribution-
 
 Below are videos and demos from some of our past Office Hours and events. Features worked as described at the time the videos were recorded, but details may have changed since that time.
 
-### First-Party Sets talk and demo - Dec. 15, 2022
+#### First-Party Sets talk and demo - Dec. 15, 2022
 
 This Office Hours session covers the First-Party Sets proposal, how the proposal has been evolving based on feedback, discusses use cases, and provides a demo.
 
@@ -38,7 +38,7 @@ This Office Hours session covers the First-Party Sets proposal, how the proposal
 
 [Open full-size video](https://drive.google.com/file/d/1riGrGwP5cyz3q4IcDjV5kulOK48OJV2S/preview)
 
-### Topics API overview - September 6, 2022
+#### Topics API overview - September 6, 2022
 
 This Office Hours session provides an overview of the Topics API proposal with DevRel Product and Engineering leads. The demo portion of the session is in the video that follows.
 
@@ -48,7 +48,7 @@ This Office Hours session provides an overview of the Topics API proposal with D
 
 [Open full-size video](https://drive.google.com/file/d/1831_uKSlTwnSzYNjpp9pkDEniDA_Q9lF/preview)
 
-### Topics API demo - September 6, 2022
+#### Topics API demo - September 6, 2022
 
 This office hours session shows a demo of the Topics API. Sam Dutton from the Privacy Sandbox team shows the topics taxonomy proposal as it stands today, shows how to run the demo using Chrome flags, and explains the `document.browsingTopics()` method.
 
@@ -64,7 +64,7 @@ This office hours session shows a demo of the Topics API. Sam Dutton from the Pr
 Watch older office hours videos
 {% endDetailsSummary %}
 
-### Attribution Reporting discussion - August 11, 2022
+#### Attribution Reporting discussion - August 11, 2022
 
 This office hours session covers key concepts for the Attribution Reporting API including Summary Reports and Aggregatable Reports. The video explains how to generate keys for retrieving reports, what data is reported, and how to generate the reports.
 
@@ -72,7 +72,7 @@ This office hours session covers key concepts for the Attribution Reporting API 
 
 [Open full-size video](https://drive.google.com/file/d/18RGEx_mrhDJuMsLUK1BZ0cK5FSZRAAqh/preview)
 
-### Attribution Reporting demo - August 11, 2022
+#### Attribution Reporting demo - August 11, 2022
 
 This portion of the Attribution Reporting demo shows how to collect, batch, and process the reports in the Attribution Reporting API, and shows what the reports look like.
 
@@ -80,7 +80,7 @@ This portion of the Attribution Reporting demo shows how to collect, batch, and 
 
 [Open full-size video](https://drive.google.com/file/d/1hmHoM3xyU4eLTJ1dM7_E8x-u6nZgim1O/preview)
 
-### Intro to Attribution Reporting - June 30, 2022 
+#### Intro to Attribution Reporting - June 30, 2022 
 
 This earlier Office Hours on Attribution Reporting covers a little more of the background of this API and the thoughts behind the proposal.
 
