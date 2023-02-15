@@ -55,6 +55,7 @@ New in [CSS Selectors Level 4](https://www.w3.org/TR/selectors-4/) is the abilit
 
 When `of S` is specified, the `An+B` logic is only applied onto elements that match the given selector list `S`. This essentially means that you can prefilter children before `An+B` does its thing.
 
+{% BrowserCompat 'css.selectors.nth-child.of_syntax' %}
 
 ## Examples
 
