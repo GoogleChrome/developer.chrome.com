@@ -121,7 +121,7 @@ You can use the `%c` format specifier to style the console messages with CSS.
 
 {% Aside 'gotchas' %}
 To prevent data leaks and bypasses of security policies, in this format, the [`url()` CSS function](https://developer.mozilla.org/en-US/docs/Web/CSS/url) supports only the [`data:` URL schema](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs).
-{% endAside %}
+
 
 For example, you can set a background image in the following way: 
 
@@ -130,6 +130,7 @@ background: url(data:image/png;base64,iVBORw…);
 ```
 
 Where `iVBORw…` is a base64-encoded PNG image.
+{% endAside %}
 
 ### Style with ANSI escape sequences {: #style-ansi }
 
