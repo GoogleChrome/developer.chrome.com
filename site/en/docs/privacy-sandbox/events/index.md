@@ -12,9 +12,7 @@ authors:
  - mihajlija
 ---
 
-<img src="https://screenshot.googleplex.com/6Dqyjo8insUUKny.png" style="width: 111px; margin-right: 50px; display: inline;" alt="blank image">
-<img src="https://wd.imgix.net/image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/xaRHmkuKLfCcGdRaEiDr.png?auto=format&w=338" style="width: 100px; display: inline; margin-right: 50px;" alt="ticket image">
-<img src="https://wd.imgix.net/image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/6mj7t7rHxZ5Vs31fWoSs.jpg?auto=format&w=338" style="width: 100px; display: inline;" alt="calendar image">
+<img src="https://wd.imgix.net/image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/oon9wpGOh5kvEJNGJhkp.png?auto=format&w=1252" style="width: 111px; margin-right: 50px; display: inline;" alt="blank image">
 
 You can join the Privacy Sandbox team during office hours, which we announce in the [Chrome Developers blog](https://developer.chrome.com/blog/), at conferences, and in W3C calls.
 
