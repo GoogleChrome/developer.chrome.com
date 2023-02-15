@@ -129,7 +129,7 @@ To edit or remove a script or a pattern of script names, click {% Img src="image
 
 The **Devices** tab contains a list of devices and their dimensions. You can select these devices from the **Dimentions** drop-down list in [device mode](/docs/devtools/device-mode/#device).
 
-### Add a device to the Dimensions list {: #add-device }
+### Add a device to the Devices list {: #add-device }
 
 To add a device to the list:
 

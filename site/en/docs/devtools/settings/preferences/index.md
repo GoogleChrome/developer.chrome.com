@@ -12,7 +12,7 @@ Configure the appearance and behavior of DevTools and its panels using the {% Im
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Ms79s5pwzGOXMtzdFYxm.png", alt="The Preferences tab.", width="800", height="582" %}
 
-To find out what each setting does, search this page for the setting's name and expand its description.
+To find out what each setting does, search this page for the setting's name and expand its description. Some options are checkboxes indicated by {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} icons, others are drop-down lists indicated by {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} icons.
 
 To configure other aspects of DevTools, see [Other tab](/docs/devtools/settings/other).
 
@@ -168,11 +168,10 @@ This video shows how, with this option enabled, the **Sources** panel selects fi
 
 {% Aside 'gotchas' %}
 - This option works only if the source maps are available.
-- The **Sources** panel shows the source files under the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} **Authored** drop-down in the navigation tree.
 - The **Sources** panel also puts a link to the generated or minified file in the status bar.
 {% endAside %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/APHkhTpIXCfhyTuqS1qd.png", alt="The Sources panel shows the source file under the Authored section in the navigation tree and a link to the file in the status bar.", width="800", height="523" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/rWo3UOHwEWTfiG4lvq8v.png", alt="The Sources panel shows a link to the minified file in the status bar.", width="800", height="472" %}
 {% endDetails %}
 
 {% Details %}
@@ -595,7 +594,7 @@ You can find the same option in [Console > Settings](/docs/devtools/console/refe
 
 ### Extension
 
-This section lists options that customize the **Performance** panel.
+This section lists options that customize link handling for Chrome DevTools extensions.
 
 {% Details %}
 
