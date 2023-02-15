@@ -57,9 +57,11 @@ This office hours session shows a demo of the Topics API. Sam Dutton from the Pr
 
 [Open full-size video](https://drive.google.com/file/d/1dmpMKLJcGNe56M6ECRdRYhuITTv9YUDV/preview)
 
+## Office hours video archive
+
 {% Details %}
 {% DetailsSummary %}
-Older office hours videos
+Watch older office hours videos
 {% endDetailsSummary %}
 
 ### Attribution Reporting discussion - August 11, 2022
@@ -69,9 +71,6 @@ This office hours session covers key concepts for the Attribution Reporting API 
 <iframe src="https://drive.google.com/file/d/18RGEx_mrhDJuMsLUK1BZ0cK5FSZRAAqh/preview" width="640" height="480" allow="autoplay"></iframe>
 
 [Open full-size video](https://drive.google.com/file/d/18RGEx_mrhDJuMsLUK1BZ0cK5FSZRAAqh/preview)
-{% endDetails %}
-
-
 
 ### Attribution Reporting demo - August 11, 2022
 
@@ -86,6 +85,9 @@ This portion of the Attribution Reporting demo shows how to collect, batch, and 
 <iframe src="https://drive.google.com/file/d/1EVCw6MTz3JIdkno2lICN6q7gNrmZBYGf/preview" width="640" height="480" allow="autoplay"></iframe>
 
 [Open full-size video](https://drive.google.com/file/d/1EVCw6MTz3JIdkno2lICN6q7gNrmZBYGf/preview)
+
+{% endDetails %}
+
 
 ### Learn about Chrome origin trials {: #oh01}
 
