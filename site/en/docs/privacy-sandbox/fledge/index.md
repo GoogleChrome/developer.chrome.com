@@ -470,7 +470,7 @@ We've written an  [API developer guide](/docs/privacy-sandbox/fledge-api) and bu
 
 -  **GitHub**: Read the [proposal](https://github.com/WICG/turtledove/blob/master/FLEDGE.md),
    [raise questions and follow discussion](https://github.com/WICG/turtledove/issues).
--  To be notified of status changes in the API, join the [mailing list for developers](https://groups.google.com/u/0/a/chromium.org/g/fledge-api-announce).
+-  **FLEDGE API announcements**: Join or view the mailing list at: https://groups.google.com/u/0/a/chromium.org/g/fledge-api-announce.
 -  **W3C**: Discuss industry use cases in the [Improving Web Advertising Business
    Group](https://www.w3.org/community/web-adv/participants).
 -  **Developer support**: Ask questions and join discussions on the
