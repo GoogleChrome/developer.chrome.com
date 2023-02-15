@@ -49,6 +49,8 @@ This Office Hours session provides an overview of the Topics API with DevRel Pro
 
 ### Topics API demo - September 6, 2022
 
+This office hours session shows a demo of the Topics API. Sam Dutton from the Privacy Sandbox team shows the topics taxonomy as it stands today, shows how to run the demo using Chrome flags, and explains the `document.browsingTopics()` method.
+
 <iframe src="https://drive.google.com/file/d/1dmpMKLJcGNe56M6ECRdRYhuITTv9YUDV/preview" width="640" height="480" allow="autoplay"></iframe>
 
 [Open full-size video](https://drive.google.com/file/d/1dmpMKLJcGNe56M6ECRdRYhuITTv9YUDV/preview)
