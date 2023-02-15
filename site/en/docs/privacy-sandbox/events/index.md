@@ -44,7 +44,7 @@ This Office Hours session provides an overview of the Topics API proposal with D
 
 <div style="position: relative;">
 <img src="https://screenshot.googleplex.com/pL69tPJX5b22aFa.png" style="width:640; height:480; z-index: 100; position: absolute; top: 0; left: 0;
-<iframe src="https://drive.google.com/file/d/1831_uKSlTwnSzYNjpp9pkDEniDA_Q9lF/preview" width="640" height="480" allow="autoplay" style="z-index: 1;"></iframe>
+<iframe src="https://drive.google.com/file/d/1831_uKSlTwnSzYNjpp9pkDEniDA_Q9lF/preview" width="640" height="480" allow="autoplay" style="z-index: 1; position: absolute; top: 0; left: 0;"></iframe>
  </div>
 [Open full-size video](https://drive.google.com/file/d/1831_uKSlTwnSzYNjpp9pkDEniDA_Q9lF/preview)
 
