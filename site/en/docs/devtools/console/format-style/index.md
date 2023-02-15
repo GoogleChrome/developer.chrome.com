@@ -120,8 +120,7 @@ You can use the `%c` format specifier to style the console messages with CSS.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/p9oAce6M63d1tYChjaXN.png", alt="style output with CSS", width="800", height="452" %}
 
 {% Aside 'gotchas' %}
-To prevent data leaks and bypasses of security policies, in this format, the [`url()` CSS function](https://developer.mozilla.org/en-US/docs/Web/CSS/url) supports only the [`data:` URL schema](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs).
-
+To prevent data leaks and bypasses of security policies, in this format, the [`url()` CSS function](https://developer.mozilla.org/docs/Web/CSS/url) supports only the [`data:` URL schema](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/Data_URLs).
 
 For example, you can set a background image in the following way: 
 
