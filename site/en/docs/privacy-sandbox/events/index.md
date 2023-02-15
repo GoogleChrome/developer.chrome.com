@@ -43,8 +43,8 @@ This Office Hours session covers the First-Party Sets proposal, how the proposal
 This Office Hours session provides an overview of the Topics API proposal with DevRel Product and Engineering leads. The demo portion of the session is in the video that follows.
 
 
-<img src="https://screenshot.googleplex.com/pL69tPJX5b22aFa.png" style="width:640; height:480; display: block;">
-<iframe src="https://drive.google.com/file/d/1831_uKSlTwnSzYNjpp9pkDEniDA_Q9lF/preview" width="640" height="480" allow="autoplay" style="display: none;"></iframe>
+<img src="video2.png" alt="Topics API video thumbnail" id="img1" style="width:600; display: block;" onclick="showVideo('img1', 'vid1');">
+<iframe id="vid1" src="https://drive.google.com/file/d/1831_uKSlTwnSzYNjpp9pkDEniDA_Q9lF/preview" width="640" height="480" allow="autoplay" style="display: none;"></iframe>
 
 [Open full-size video](https://drive.google.com/file/d/1831_uKSlTwnSzYNjpp9pkDEniDA_Q9lF/preview)
 
@@ -52,7 +52,8 @@ This Office Hours session provides an overview of the Topics API proposal with D
 
 This office hours session shows a demo of the Topics API. Sam Dutton from the Privacy Sandbox team shows the topics taxonomy proposal as it stands today, shows how to run the demo using Chrome flags, and explains the `document.browsingTopics()` method.
 
-<iframe src="https://drive.google.com/file/d/1dmpMKLJcGNe56M6ECRdRYhuITTv9YUDV/preview" width="640" height="480" allow="autoplay"></iframe>
+<img src="video3.png" alt="Topics API video thumbnail" id="img3" style="width:640; display: block;" onclick="showVideo('img3', 'vid3');">
+<iframe style="display: none;" id="vid3" src="https://drive.google.com/file/d/1dmpMKLJcGNe56M6ECRdRYhuITTv9YUDV/preview" width="640" height="480" allow="autoplay"></iframe>
 
 [Open full-size video](https://drive.google.com/file/d/1dmpMKLJcGNe56M6ECRdRYhuITTv9YUDV/preview)
 
@@ -91,3 +92,13 @@ This portion of the Attribution Reporting demo shows how to collect, batch, and 
 ### Learn about Chrome origin trials {: #oh01}
 
 * [Find out more](/blog/privacy-sandbox-office-hours-1/)
+
+<script>
+   function showVideo(img, vid) {
+        var pic=document.getElementById(img);
+        var vid=document.getElementById(vid);
+        pic.style.display="none";
+        vid.style.display="block";
+
+    }
+</script>
