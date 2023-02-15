@@ -82,7 +82,7 @@ This portion of the Attribution Reporting demo shows how to collect, batch, and 
 
 ### Intro to Attribution Reporting - June 30, 2022 
 
-This earlier office hours on Attribution Reporting covers a little more of the background of this API and the thoughts behind the proposal.
+This earlier Office Hours on Attribution Reporting covers a little more of the background of this API and the thoughts behind the proposal.
 
 <iframe src="https://drive.google.com/file/d/1EVCw6MTz3JIdkno2lICN6q7gNrmZBYGf/preview" width="640" height="480" allow="autoplay"></iframe>
 
