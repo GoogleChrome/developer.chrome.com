@@ -41,7 +41,7 @@ This Office Hours session covers the First-Party Sets proposal, how the proposal
 
 ### Topics API overview - September 6, 2022
 
-This Office Hours session provides an overview of the Topics API with DevRel Product and Engineering leads. The demo portion of the session is in the video that follows.
+This Office Hours session provides an overview of the Topics API proposal with DevRel Product and Engineering leads. The demo portion of the session is in the video that follows.
 
 <iframe src="https://drive.google.com/file/d/1831_uKSlTwnSzYNjpp9pkDEniDA_Q9lF/preview" width="640" height="480" allow="autoplay"></iframe>
  
@@ -49,13 +49,15 @@ This Office Hours session provides an overview of the Topics API with DevRel Pro
 
 ### Topics API demo - September 6, 2022
 
-This office hours session shows a demo of the Topics API. Sam Dutton from the Privacy Sandbox team shows the topics taxonomy as it stands today, shows how to run the demo using Chrome flags, and explains the `document.browsingTopics()` method.
+This office hours session shows a demo of the Topics API. Sam Dutton from the Privacy Sandbox team shows the topics taxonomy proposal as it stands today, shows how to run the demo using Chrome flags, and explains the `document.browsingTopics()` method.
 
 <iframe src="https://drive.google.com/file/d/1dmpMKLJcGNe56M6ECRdRYhuITTv9YUDV/preview" width="640" height="480" allow="autoplay"></iframe>
 
 [Open full-size video](https://drive.google.com/file/d/1dmpMKLJcGNe56M6ECRdRYhuITTv9YUDV/preview)
 
 ### Attribution Reporting discussion - August 11, 2022
+
+This office hours session covers key concepts for the Attribution Reporting API including Summary Reports and Aggregatable Reports. The video explains how to generate keys for retrieving reports, what data is reported, and how to generate the reports.
 
 <iframe src="https://drive.google.com/file/d/18RGEx_mrhDJuMsLUK1BZ0cK5FSZRAAqh/preview" width="640" height="480" allow="autoplay"></iframe>
 
