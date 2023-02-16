@@ -1,5 +1,6 @@
 - url: /docs/extensions/mv3
 - url: /docs/extensions/whatsnew
+- url: /docs/extensions/gethelp
 - title: i18n.docs.extensions.get-started
   sections:
   - url: /docs/extensions/mv3/getstarted/

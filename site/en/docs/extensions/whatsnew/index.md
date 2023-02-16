@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-01-27
+updated: 2023-02-23
 tags:
   - extensions-news
 
@@ -14,7 +14,7 @@ tags:
 <!--lint disable first-heading-level-->
 
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
-and related policy or other changes.
+and related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about many of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).)
 
 ### Chrome 110: Change in service worker idle timeout {: #m110-sw-idle }
 
