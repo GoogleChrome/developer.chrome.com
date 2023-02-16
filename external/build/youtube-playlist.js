@@ -19,7 +19,8 @@ const CHANNELS = 'UCnUYZLuoy1rq1aVMwx4aTzw';
 const MAX_RESULTS = 50;
 
 //Set the target directory for the JSON file
-const targetFile = path.join(__dirname, '/data/youtube-playlist.json');
+const targetFile = path.join(__dirname, '../data/youtube-playlist.json');
+const currentTimestamp = Date.now();
 
 //Initialise the final result object
 const result = {};
@@ -162,13 +163,19 @@ async function getChannelData(id) {
 }
 
 // Fetch current data set and checks timestamp to see if the data is stale
+let dataAge = 0;
+try {
+  if (fs.existsSync(targetFile)) {
+    const currentDataRaw = fs.readFileSync(targetFile);
+    const currentData = JSON.parse(currentDataRaw.toString());
 
-const currentDataRaw = fs.readFileSync('data/youtube-playlist.json');
-const currentData = JSON.parse(currentDataRaw.toString());
+    dataAge = currentTimestamp - currentData.timestamp;
+  }
+} catch (err) {
+  console.error(err);
+}
 
-const currentTimestamp = Date.now();
-const dataAge = currentTimestamp - currentData.timestamp;
-
-if (dataAge > FETCH_INTERVAL_MILLISECONDS) {
+if (dataAge > FETCH_INTERVAL_MILLISECONDS || !dataAge) {
+  console.log('HERE');
   run();
 }
