@@ -6,7 +6,10 @@ description: >
 authors:
   - katiehempenius
 date: 2023-02-10
-updated: 2023-02-10
+updated: 2023-02-15
+tags:
+  - performance
+  - aurora-project
 ---
 
 ## Summary
