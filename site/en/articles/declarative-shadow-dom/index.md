@@ -16,7 +16,6 @@ tags:
   - dom
   - html
   - javascript
-  - layout
   - rendering
 feedback:
   - api
