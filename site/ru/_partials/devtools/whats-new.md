@@ -5,6 +5,17 @@
 
 {# $content #}
 
+{# ### Chrome 111 {: #chrome111 }
+
+* [Debugging HD color with the Styles pane](/ru/blog/new-in-devtools-111/#color)
+* [Enhanced breakpoint UX](/ru/blog/new-in-devtools-111/#breakpoint-redesign)
+* [Customizable Recorder shortcuts](/ru/blog/new-in-devtools-111/#recorder)
+* [Better syntax highlight for Angular](/ru/blog/new-in-devtools-111/#syntax)
+* [Reorganize caches in the Application panel](/ru/blog/new-in-devtools-111/#cache)
+* [Miscellaneous highlights](/ru/blog/new-in-devtools-111/#misc)
+ #}
+
+
 {# ### Chrome 110 {: #chrome110 }
 
 * [Clearing Performance Panel on reload](/ru/blog/new-in-devtools-110/#perf)
