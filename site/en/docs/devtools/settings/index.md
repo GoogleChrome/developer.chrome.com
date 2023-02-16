@@ -13,7 +13,13 @@ DevTools settings let you control the behavior of both individual panels and Dev
 The {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** panel has several tabs described in the following sections:
 
 - [**Preferences**](/docs/devtools/settings/preferences/)
-- [Other tabs](/docs/devtools/settings/other/): **Workspace**, **Experiments**, **Ignore List**, **Devices**, **Throttling**, **Locations**, and **Shortcuts**
+- [**Workspace**](/docs/devtools/settings/workspace)
+- [**Experiments**](/docs/devtools/settings/experiments)
+- [**Ignore List**](/docs/devtools/settings/ignore-list)
+- [**Devices**](/docs/devtools/settings/devices)
+- [**Throttling**](/docs/devtools/settings/throttling)
+- [**Locations**](/docs/devtools/settings/locations)
+- [**Shortcuts**](/docs/devtools/settings/shortcuts)
 
 ## Open Settings {: #open }
 

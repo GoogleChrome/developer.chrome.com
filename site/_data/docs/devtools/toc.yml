@@ -108,14 +108,18 @@
     - url: /docs/devtools/accessibility/contrast/
     - url: /docs/devtools/accessibility/navigation/
     - url: /docs/devtools/accessibility/focus/ 
-- title: i18n.docs.devtools.customization
+- url: /docs/devtools/customize/
+- title: i18n.docs.devtools.settings
   sections:
-    - url: /docs/devtools/customize/
-    - title: i18n.docs.devtools.settings
-      sections:
-        - url: /docs/devtools/settings/
-        - url: /docs/devtools/settings/preferences
-        - url: /docs/devtools/settings/other
+    - url: /docs/devtools/settings/
+    - url: /docs/devtools/settings/preferences
+    - url: /docs/devtools/settings/workspace
+    - url: /docs/devtools/settings/experiments
+    - url: /docs/devtools/settings/ignore-list
+    - url: /docs/devtools/settings/devices
+    - url: /docs/devtools/settings/throttling
+    - url: /docs/devtools/settings/locations
+    - url: /docs/devtools/settings/shortcuts
 - url: https://developer.chrome.com/tags/devtools-engineering/
   title: i18n.docs.devtools.blog
   description: i18n.docs.devtools.blog_description

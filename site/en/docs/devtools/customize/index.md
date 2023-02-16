@@ -1,12 +1,13 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Customize"
+title: "Customize DevTools"
 authors:
   - kaycebasques
   - jecelynyeen
+  - sofiayem
 date: 2019-05-02
-updated: 2022-06-21
-description: "A list of ways you can customize Chrome DevTools."
+updated: 2023-02-16
+description: "A list of ways you can customize Chrome DevTools: Change theme, placement, panel order, language, and more."
 ---
 
 This page lists the ways you can customize Chrome DevTools.
