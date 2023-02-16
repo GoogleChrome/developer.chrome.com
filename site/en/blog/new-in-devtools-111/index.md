@@ -111,7 +111,7 @@ Chromium issue: [1339771](https://crbug.com/bbb)
 
 ## Better syntax highlight for Angular {: #syntax }
 
-DevTools enhanced the syntax highlighting for the Angular HTML templates, enabling you to read code more easily and recognize its structure.
+DevTools enhanced the syntax highlighting for Angular HTML templates, making it easier for you to read code and recognize its structure.
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/lJU7wOa4vNDb2Vm2zPJq.png", alt="Syntax highlighting for the Angular HTML templates.", width="800", height="507" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/4ec36d2fc5e7506d1ff65fd282a43215164f03f2 #}
