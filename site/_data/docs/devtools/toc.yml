@@ -111,7 +111,6 @@
 - title: i18n.docs.devtools.customization
   sections:
     - url: /docs/devtools/customize/
-    - url: /docs/devtools/customize/placement/
     - title: i18n.docs.devtools.settings
       sections:
         - url: /docs/devtools/settings/

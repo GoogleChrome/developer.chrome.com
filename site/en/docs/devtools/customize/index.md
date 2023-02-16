@@ -47,9 +47,28 @@ tabs.
 
 ## Change DevTools placement {: #placement }
 
-See [Chrome DevTools Placement](/docs/devtools/customize/placement).
+By default, DevTools is docked to the right of your viewport. You can also dock to the bottom or left sides or undock DevTools into a separate window.
 
-{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/60jo8OMncIlLhh6VRILs.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/v0G4eZnKz0u6wXmL0tSU.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
+
+You can change the placement of DevTools in two ways:
+
+- **Main Menu**: Open {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N7wEDmtW9lnrSxPRupMa.svg", alt="More.", width="24", height="24" %} **Customize And Control DevTools** and click:
+  - {% Img src="image/admin/32ywiTV2crhhBz4Qy24M.png", alt="Undock.", width="24", height="22" %} **Undock into separate window**
+  - {% Img src="image/admin/rrwMCjKldgIkwl7bCH1p.png", alt="Dock to left", width="24", height="22" %} **Dock to left**
+  - {% Img src="image/admin/ckt768UpO2BOngVqYbfG.png", alt="Dock to bottom.", width="24", height="22" %} **Dock to bottom** 
+  - {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7RPiByVYQRpml2szndNy.png", alt="Dock to right.", width="24", height="22" %} **Dock to right**
+- **Command Menu**:
+
+  1. [Open the Command Menu](/docs/devtools/command-menu).
+  1. Start typing `dock` and select one of the suggested options: dock to bottom, left, right, undock, or restore last dock position.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XIBCqmxgj9jcRbSxgrqJ.png", alt="Suggested docking option in the Command Menu.", width="800", height="488" %}
+
+To toggle **Restore last dock position** with a keyboard shortcut, press:
+
+- On Linux or Windows: <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd>
+- On MacOS: <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd>
 
 ## Reorder panels, tabs, and panes {: #reorder }
 
