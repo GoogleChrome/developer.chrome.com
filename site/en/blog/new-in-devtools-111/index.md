@@ -40,7 +40,7 @@ DevTools supports converting colors between color formats. Use the **Change Colo
 When converting, it's important to know if the conversion was clipped to fit the space. DevTools puts a warning icon next to the converted color that alerts you to this clipping.
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5Y4rVIqL9rjuSbHcodKr.png", alt="Warning of color clipping.", width="800", height="657" %}
 
-In addition, you can pick colors from your screen with the new shortcut - press 'c' to activate the eye dropper and hit `Escape` to deactivate it.
+In addition, you can pick colors from your screen with the new shortcut. Press 'C' to activate the eye dropper and hit `Escape` to deactivate it.
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/VNBu6RenRerRqNhNYfyf.png", alt="Activate the eye dropper.", width="800", height="657" %}
 
 Finally, the **Color format** setting is now deprecated to make room for the new HD color format.
