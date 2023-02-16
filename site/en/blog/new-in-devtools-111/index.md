@@ -135,7 +135,7 @@ Chromium issue: [1407166](https://crbug.com/1407166)
 These are some noteworthy fixes in this release:
 
 - DevTools has been updated to respect the [Disable cache](/docs/devtools/network/reference/#disable-cache) setting when loading sourcemaps. ([1407084](https://crbug.com/1407084))
-- The **Elements** panel now instant autofocus on the first matching element in search results. ([1381853](https://crbug.com/1381853))
+- The **Elements** panel now instantly autofocuses on the first matching element in search results. ([1381853](https://crbug.com/1381853))
 - Various fixes to improve the sourcemap and breakpoints reliability. ([508270](https://crbug.com/508270), [1403362](https://crbug.com/1403362), [1403432](https://crbug.com/1403432), [1396298](https://crbug.com/1396298), [1395337](https://crbug.com/1395337), [1405134](https://crbug.com/1405134))
 - To better facilitate debugging, DevTools now supports evaluating expressions with private class members. ([1381806](https://crbug.com/1381806))
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/q68fvo870weBVwupujqf.png", alt="Evaluating expressions with private class members.", width="800", height="683" %}
