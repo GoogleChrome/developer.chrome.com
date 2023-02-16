@@ -17,8 +17,7 @@
           "AmySteam"
         ],
         "paths" : [
-          "site/**/*.md",
-          "!site/es/**/*.md"
+          "site/**/*.md"
         ]
       },
       {
