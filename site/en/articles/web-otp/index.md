@@ -409,7 +409,7 @@ Permissions-Policy: otp-credentials=(self "https://bank.example")
 ```
 
 See [more examples on how to specify a permission policy
-](https://developer.chrome.com/docs/privacy-sandbox/permissions-policy/#example-permissions-policy-setups/).
+](/docs/privacy-sandbox/permissions-policy/#example-permissions-policy-setups/).
 
 {% Aside %}
 
@@ -462,7 +462,7 @@ the same way they do on their mobile website, but no special tricks are
 required.
 
 Learn more details at [Verify a phone number on desktop using WebOTP
-API](https://developer.chrome.com/blog/cross-device-webotp/).
+API](/blog/cross-device-webotp/).
 
 ## FAQ
 
@@ -526,7 +526,7 @@ Find more questions at [the FAQ section in the explainer](https://github.com/WIC
 
 * [SMS OTP form best practices](https://web.dev/sms-otp-form/)
 * [Verify a phone number on desktop using WebOTP
-  API](https://developer.chrome.com/blog/cross-device-webotp/)
+  API](/blog/cross-device-webotp/)
 * [Fill OTP forms within cross-origin iframes with WebOTP API](https://web.dev/web-otp-iframe/)
 * [Yahoo! JAPAN's password-free authentication reduced inquiries by 25%, sped up
   sign-in time by 2.6x](https://web.dev/yahoo-japan-identity-case-study/)

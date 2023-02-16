@@ -283,7 +283,7 @@ The [WebTransport draft specification](https://w3c.github.io/webtransport/) incl
 
 ### WebTransport in Chrome's DevTools
 
-Unfortunately, [Chrome's DevTools](https://developer.chrome.com/docs/devtools/) do not currently support WebTransport. You can "star" [this Chrome issue](https://bugs.chromium.org/p/chromium/issues/detail?id=1152290) to be notified about updates on the DevTools interface.
+Unfortunately, [Chrome's DevTools](/docs/devtools/) do not currently support WebTransport. You can "star" [this Chrome issue](https://bugs.chromium.org/p/chromium/issues/detail?id=1152290) to be notified about updates on the DevTools interface.
 
 ## Polyfill
 

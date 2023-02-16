@@ -37,7 +37,7 @@ as convolution neural networks and other models can take advantage of the
 architecture to run more efficiently on GPUs. With the current Web Platform
 lacking in GPU Compute capabilities, the W3C's "GPU for the Web" Community Group
 is designing an API to expose the modern GPU APIs that are available on most
-current devices. This API is called WebGPU.
+current devices. This API is called [WebGPU].
 
 WebGPU is a low-level API, like WebGL. It is very powerful and quite verbose, as
 you'll see. But that's OK. What we're looking for is performance.
@@ -600,11 +600,11 @@ This article was just the beginning of my journey [exploring WebGPU]. Expect mor
 articles soon featuring more deep dives in GPU Compute and on how rendering
 (canvas, texture, sampler) works in WebGPU.
 
-[WebGPU]: https://gpuweb.github.io/gpuweb/
+[webgpu]: https://gpuweb.github.io/gpuweb/
 [try out this sample]: https://glitch.com/edit/#!/gpu-compute-sample-1
-[WGSL]: https://gpuweb.github.io/gpuweb/wgsl/
-[SPIR-V]: https://www.khronos.org/spir/
+[wgsl]: https://gpuweb.github.io/gpuweb/wgsl/
+[spir-v]: https://www.khronos.org/spir/
 [play with the sample]: https://glitch.com/edit/#!/gpu-compute-sample-2
 [infer the bind group layout from the shader module]: https://github.com/gpuweb/gpuweb/issues/446
 [available]: https://glitch.com/edit/#!/gpu-compute-sample-3
-[exploring WebGPU]: /gpu/
+[exploring webgpu]: /docs/web-platform/webgpu/
