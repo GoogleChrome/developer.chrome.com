@@ -79,7 +79,7 @@ callback).
 
 June 08, 2022
 
- Manifest V3 extensions can now access favicons using a new URL pattern: `chrome-extension://<id>/_favicon/`, where <id> is the ID of your extension. This replaces the Manifest V2 platform's `chrome://favicons` API. See the Favicon API docs for more information.
+ Manifest V3 extensions can now access favicons using a new URL pattern: `chrome-extension://<id>/_favicon/`, where <id> is the ID of your extension. This replaces the Manifest V2 platform's `chrome://favicons` API. See the [Favicon API](/docs/extensions/mv3/favicon/) docs for more information.
 
 ### Docs update: Developer trader/non-trader disclosure {: #cws-trader-disclosure-doc }
 
