@@ -4,6 +4,7 @@ title: "How Chrome evolved the First-Party Sets proposal"
 subheading: "Evolving First-Party Sets to advance privacy for users and web interoperability for developers."
 description: "Evolving First-Party Sets to advance privacy for users and web interoperability for developers."
 date: 2023-02-13
+updated: 2023-02-16
 thumbnail: 'image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/TxiweGXhJ3d2RTsH8sZh.png'
 alt: A diagram showing First-Party Sets.
 tags: 
@@ -264,6 +265,8 @@ To engage check out the following resources:
 -   [FPS Submission Guidelines](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md)
 
 ## Working with the ecosystem
+
+It's great to see companies like Salesforce and CafeMedia engaging on key feedback and development of First-Party Sets. They have been instrumental in advancing the technology. Several others have also shared their thoughts on First-Party Sets and Chrome’s efforts to work with the web ecosystem:
 
 _"Chrome is developing first-party sets to align with many of our use cases, like preserving user journeys. This demonstrates to us that the Google team is working to understand the different types of needs of site owners across the web."_ - Mercado Libre
 
