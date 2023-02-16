@@ -13,7 +13,6 @@ authors:
 description: |
   Declarative Shadow DOM is a new way to implement and use Shadow DOM directly in HTML.
 tags:
-  - blog
   - dom
   - html
   - javascript

@@ -12,7 +12,6 @@ hero_position: center
 alt: |
   Photo of fast-moving traffic.
 tags:
-  - blog
   - capabilities
   - network
 feedback:
