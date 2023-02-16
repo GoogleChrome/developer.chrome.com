@@ -35,7 +35,7 @@ draft: true
 <!-- Here are examples of CSS color definitions with `color()`, `lch()`, `oklab()` and `color-mix()`. -->
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/dA8VCKaSZhNb9gzlAUT9.png", alt="Examples of CSS color definitions.", width="800", height="509" %}
 
-<!-- When using the `color-mix()` function, you can view final output color in the **Computed** pane. -->
+<!-- When using the `color-mix()` function, you can view the final color output in the **Computed** pane. -->
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/3VkOGbbb5qLVvo1A1qSa.png", alt="color-mix result in the Computed pane.", width="800", height="487" %}
 
 <!-- The color picker supports all the new color spaces with more features. For example, click on the color swatch of `color(display-03 1 0 1)`. A gamut boundary line has also been added, distinguishing between the `sRGB` and `display-p3` gamuts for a clearer understanding of your selected color's gamut. -->
@@ -44,10 +44,10 @@ draft: true
 <!-- DevTools supports converting colors between color formats. Use the **Change Color Format** icon to access the conversion popup, or simply use the `Shift` + click on a color swatch in the **Styles** pane. -->
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/uoz3yaPPdVs6T2ASnQ62.png", alt="Converting colors between color formats.", width="800", height="460" %}
 
-<!-- When converting, it's important to know if the conversion was clipped to fit the space. DevTools has a warning icon to the converted color that alerts you to this clipping. -->
+<!-- When converting, it's important to know if the conversion was clipped to fit the space. DevTools puts a warning icon next to the converted color that alerts you to this clipping. -->
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5Y4rVIqL9rjuSbHcodKr.png", alt="Warning of color clipping.", width="800", height="657" %}
 
-<!-- In addition, you can pick colors from your screen with the new shortcut - press 'c' to activate the eye dropper and hit `Escape` to deactivate it. -->
+<!-- In addition, you can pick colors from your screen with the new shortcut. Press 'c' to activate the eye dropper and hit `Escape` to deactivate it. -->
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/VNBu6RenRerRqNhNYfyf.png", alt="Activate the eye dropper.", width="800", height="657" %}
 
 <!-- Finally, the **Color format** setting is now deprecated to make room for the new HD color format. -->
@@ -69,19 +69,19 @@ Chromium issues: [1073895](https://crbug.com/1073895), [1395782](https://crbug.c
 
 <!-- ## Enhanced breakpoint UX {: #breakpoint-redesign } -->
 
-<!-- The redesigned **Breakpoints** pane allows developers to have quick access to commonly used features, in particular deactivating, editing and removing breakpoints. -->
+<!-- The redesigned **Breakpoints** pane allows you to have quick access to commonly used features, in particular, deactivating, editing, and removing breakpoints. -->
 
 <!-- These are some highlights: -->
 <!-- - Both pause exception options moved to the **Breakpoints** pane and labeled with text to make it more self-explanatory. -->
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/KADuAqVdrxxQDg5AYYeA.png", alt="Pause exception options.", width="800", height="518" %}
 
-<!-- - Breakpoints are grouped by file, ordered by line/column number, and collapsible. -->
+<!-- - Breakpoints are grouped by file, ordered by line or column numbers, and are collapsible. -->
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AXJ7IL5aJ6gwbZmnoH39.png", alt="Group breakpoints by file.", width="800", height="454" %}
 
-<!-- - New options to deactivate, remove and edit breakpoints when hovering over a breakpoint or file. -->
+<!-- - There are new options to deactivate, remove, and edit breakpoints when hovering over a breakpoint or file. -->
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/vAQ4YuWGuXYLxXQXt0HG.png", alt="New options to deactivate breakpoints.", width="800", height="496" %}
 
-<!-- - Click on edit breakpoint to open the breakpoint editor. From here, you can enter the breakpoint condition or switch to logpoint. -->
+<!-- - Click the edit breakpoint button to open the breakpoint editor. From here, you can enter the breakpoint condition or switch to a logpoint. -->
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/SrgbxxF8U3s9yzDPV25q.png", alt="Breakpoint edit dialog.", width="800", height="697" %}
 
 <!-- See [JavaScript debugging reference](/docs/devtools/javascript/reference/) to learn how to debug with DevTools. -->
@@ -97,13 +97,13 @@ Chromium issues: [1407586](https://crbug.com/1407586), [1402891](https://crbug.c
 
 <!-- The **Recorder** introduces a few convenient keyboard shortcuts for faster recording and replaying of user flows.  -->
 
-<!-- Don’t remember the shortcuts? No problem, click on the `?` button to view all the shortcuts at any time. -->
+<!-- Don’t remember the shortcuts? No problem, click the `?` button to view all the shortcuts at any time. -->
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/BJq63X8k89HTdINY2RKu.png", alt="The Recorder shortcuts.", width="800", height="625" %}
 
 <!-- You can even customize these shortcuts via the **Settings** menu. -->
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/FtZSO1pPSooAbBrPTGC6.png", alt="Customize Recorder shortcuts.", width="800", height="494" %}
 
-<!-- If you're working in a different panel and want to start a user flow recording, simply use the **Create a new recording** command from the [Command Menu](/docs/devtools/command-menu/) in devtools to get started. -->
+<!-- If you're working in a different panel and want to start a user flow recording, use the **Create a new recording** command from the [Command Menu](/docs/devtools/command-menu/) in DevTools to get started. -->
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fErUqzQ03p5zOk301nTN.png", alt="Create a new recording command.", width="800", height="435" %}
 
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/140ffb3e4c5e084eff5522508310af5dd407cf6e #} 
@@ -118,7 +118,7 @@ Chromium issue: [1339771](https://crbug.com/bbb)
 
 <!-- ## Better syntax highlight for Angular {: #syntax } -->
 
-<!-- DevTools enhanced the syntax highlighting for the Angular HTML templates, enabling you to read code more easily and recognize its structure. -->
+<!-- DevTools enhanced the syntax highlighting for Angular HTML templates, making it easier for you to read code and recognize its structure. -->
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/lJU7wOa4vNDb2Vm2zPJq.png", alt="Syntax highlighting for the Angular HTML templates.", width="800", height="507" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/4ec36d2fc5e7506d1ff65fd282a43215164f03f2 #}
@@ -142,10 +142,11 @@ Chromium issue: [1407166](https://crbug.com/1407166)
 <!-- These are some noteworthy fixes in this release: -->
 
 <!-- - DevTools has been updated to respect the [Disable cache](/docs/devtools/network/reference/#disable-cache) setting when loading sourcemaps. ([1407084](https://crbug.com/1407084)) -->
-<!-- - The **Elements** panel now instant autofocus on the first matching element in search results. ([1381853](https://crbug.com/1381853)) -->
+<!-- - The **Elements** panel now instantly autofocuses on the first matching element in search results. ([1381853](https://crbug.com/1381853)) -->
 <!-- - Various fixes to improve the sourcemap and breakpoints reliability. ([508270](https://crbug.com/508270), [1403362](https://crbug.com/1403362), [1403432](https://crbug.com/1403432), [1396298](https://crbug.com/1396298), [1395337](https://crbug.com/1395337), [1405134](https://crbug.com/1405134)) -->
 <!-- - To better facilitate debugging, DevTools now supports evaluating expressions with private class members. ([1381806](https://crbug.com/1381806)) -->
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/q68fvo870weBVwupujqf.png", alt="Evaluating expressions with private class members.", width="800", height="683" %}
+
 
 {% Partial 'devtools/reach-out.md' %}
 {% Partial 'devtools/whats-new.md' %}
