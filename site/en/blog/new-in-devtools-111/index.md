@@ -5,13 +5,14 @@ authors:
   - jecelynyeen
 date: 2023-02-16
 description: ""
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GZr06vqTxoJGEIXVqXT9.png'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/KwNETHFT5o1aAv74huRF.jpg'
 alt: 'Debugging HD color, enhanced breakpoint UX, and more'
 tags:
   - new-in-devtools
   - devtools
   - chrome-111
 ---
+<!-- image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GZr06vqTxoJGEIXVqXT9.png  -->
 
 {% Partial 'devtools/banner.md' %}
 
