@@ -16,7 +16,7 @@ To find out what each setting does, search this page for the setting's name and 
 
 To restore default preferences, scroll down to the end of the **Preferences** tab and click **Restore defaults and reload**.
 
-### Appearance
+## Appearance
 
 This section lists options that customize DevTools appearance.
 
@@ -127,7 +127,7 @@ This video shows how to switch between the tabs using the corresponding keyboard
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bUkU6F9okmYJ5L88neGH.png", alt="The What's New drawer tab.", width="800", height="616" %}
 {% endDetails %}
 
-### Sources
+## Sources
 
 This section lists options that customize the **Sources** panel.
 
@@ -343,7 +343,7 @@ If left disabled, DevTools logs to the **Console** messages similar to the follo
 This example shows how to set the default indentation to eight spaces first and then to a Tab character.
 {% endDetails %}
 
-### Elements
+## Elements
 
 This section lists options that customize the **Elements** panel.
 
@@ -400,7 +400,7 @@ This video first shows that DOM nodes aren't selected in the DOM tree. Then when
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/kYLQC0rNON8sAdCSJTpu.png", alt="Rulers shown in viewport.", width="800", height="531" %}
 {% endDetails %}
 
-### Network
+## Network
 
 This section lists options that customize the **Network** panel. Most of the options are the same as in the panel's settings.
 
@@ -462,7 +462,7 @@ This video first shows that the requests aren't blocked. Then, after you enable 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/BLkQZlLgXuqPNIMnq95b.png", alt="An ad-related network request shown in the Network panel with the Blocked Requests filter enabled.", width="800", height="565" %}
 {% endDetails %}
 
-### Performance
+## Performance
 
 This section lists options that customize the **Performance** panel.
 
@@ -484,7 +484,7 @@ This section lists options that customize the **Performance** panel.
 This example shows both scroll and zoom mouse wheel actions on a flame chart in the **Performance** panel.
 {% endDetails %}
 
-### Console
+## Console
 
 This section lists options that customize the **Console**. Most of the options are the same as in [Console Settings](/docs/devtools/console/reference/#settings).
 
@@ -587,7 +587,7 @@ You can find the same option in [Console > Settings](/docs/devtools/console/refe
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/wXm8EGHa1UpmT4x8hj90.png", alt="The Console shows 'Navigated to' messages and saves logs across different pages.", width="800", height="361" %}
 {% endDetails %}
 
-### Extension
+## Extension
 
 This section lists options that customize link handling for Chrome DevTools extensions.
 
@@ -608,7 +608,7 @@ This section lists options that customize link handling for Chrome DevTools exte
 </fieldset>
 {% endDetails %}
 
-### Persistence
+## Persistence
 
 This section lists options that control how DevTools saves the changes you make.
 
@@ -620,7 +620,7 @@ This section lists options that control how DevTools saves the changes you make.
 For more information, see [Local Overrides](/docs/devtools/workspaces/#overrides).
 {% endDetails %}
 
-### Debugger {: #debugger }
+## Debugger {: #debugger }
 
 This section lists options that control the **Debugger** behavior.
 
@@ -645,7 +645,7 @@ By default, the **Debugger** tries to trace async operations if the framework yo
 For more information, see [View async stack traces](/docs/devtools/console/reference/#async-stack-traces).
 {% endDetails %}
 
-### Global
+## Global
 
 This section lists options that have global effects in DevTools.
 
@@ -667,7 +667,7 @@ This video first shows how to click on a link and open a new tab *without* DevTo
 This video first shows how DevTools "jumps" as you type a search query. Then when you enable this option, DevTools takes you to the first result when you press <kbd>Enter</kbd>.
 {% endDetails %}
 
-### Sync
+## Sync
 
 This section lets you set up the synchronization of settings between devices.
 
