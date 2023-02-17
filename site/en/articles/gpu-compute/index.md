@@ -9,6 +9,7 @@ authors:
 date: 2019-08-28
 updated: 2023-01-27
 hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/AwjccGqafT2OOWqLGdDX.jpeg
+alt: A handdrawn schema showing how work is split between GPU cores
 thumbnail: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/AwjccGqafT2OOWqLGdDX.jpeg
 description: |
   This post explores the experimental WebGPU API through examples and helps
