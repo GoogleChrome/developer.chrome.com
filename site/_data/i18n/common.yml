@@ -96,6 +96,11 @@ codelab:
 example:
   en: 'Example'
   es: 'Ejemplo'
+  ja: '例'
+  ko: '예'
+  pt: 'Exemplo'
+  ru: 'Пример'
+  zh: '例子'
 
 objective:
   en: 'Objective'
