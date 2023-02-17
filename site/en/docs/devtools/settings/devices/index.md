@@ -33,6 +33,6 @@ If you don't see a device you want to test, add a custom one:
    For more information on what to specify, see [User-Agent Client Hints](https://web.dev/user-agent-client-hints/).
    {% endAside %}
 
-1. Click **Save**. Your device is enabled by default and you can select it from the **Dimentions** drop-down list in [device mode](/docs/devtools/device-mode/#device).
+1. Click **Save**. Your device is enabled by default and you can select it from the **Dimensions** drop-down list in [device mode](/docs/devtools/device-mode/#device).
 
 To edit or remove a custom device you added, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JJEyylF1sToNKTtoFm4Q.svg", alt="Edit.", width="22", height="22" %} or {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YxQ6ggkbUKxxxqHiaUz4.svg", alt="Delete.", width="22", height="22" %} buttons that appear on hover.
