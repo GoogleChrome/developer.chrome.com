@@ -27,7 +27,7 @@ It is enabled by default in Chrome version 111.
 {% Aside %}
 Declarative Shadow DOM has been available since Chrome 90 and Edge 91, but it used an older non-standard attribute called
 `shadowroot` instead of the standardized `shadowrootmode` attribute.
-(% endAside %}
+{% endAside %}
 
 [Shadow DOM](https://web.dev/shadowdom-v1/) is one of the three Web Components standards, rounded out by [HTML templates](https://developer.mozilla.org/docs/Web/Web_Components/Using_templates_and_slots)
 and [Custom Elements](https://developer.mozilla.org/docs/Web/Web_Components/Using_custom_elements). Shadow DOM provides
