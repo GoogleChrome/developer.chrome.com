@@ -17,7 +17,7 @@ anchorRedirects:
 Take a glance at the new **Recorder** panel (preview feature) with the video below.
 
 {% YouTube id='rMUayh1QPYs' %}
-<!-- {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/jDJpU85zWj1dipsUPrMr.mp4", autoplay="true", muted="false", loop="true",  class="screenshot" %} -->
+<!-- {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/jDJpU85zWj1dipsUPrMr.mp4", autoplay="true", muted="false", loop="true", controls="true",  class="screenshot" %} -->
 
 Complete this tutorial to learn how to use the **Recorder** panel to record, replay, and measure user flows.
 
@@ -49,7 +49,7 @@ We will be using this [coffee ordering](https://coffee-cart.netlify.app/) demo p
 
 In the next sections, we will walk you through how to record, replay and audit the following checkout flow with the **Recorder** panel:
 
-{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/UcCr4JgWqpJm2n8Y5Q8W.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/UcCr4JgWqpJm2n8Y5Q8W.mp4", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
 
 1. Add a coffee to the cart.
 2. Add another coffee to the cart.
@@ -95,7 +95,7 @@ In the next sections, we will walk you through how to record, replay and audit t
 
 After recording a user flow, you can replay it by clicking on the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Replay.", width="20", height="20" %}**Replay** button.
 
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/DZDWWSq8muswhFL2hAng.mp4" , autoplay="true", muted="true", loop="true", class="screenshot" %}
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/DZDWWSq8muswhFL2hAng.mp4" , autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
 
 You can see the user flow replay on the page. The replay progress is shown in the **Recorder** panel as well.
 
@@ -118,7 +118,7 @@ More settings might be supported in the future. [Share with us](https://goo.gle/
 
 You can measure the performance of a user flow by clicking on the **Measure performance** button. For example, checkout is a critical user flow of a shopping website. With the **Recorder** panel, you can record the checkout flow once and measure it regularly.
 
-{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/RfznQY25Sut04RjOfAZQ.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/RfznQY25Sut04RjOfAZQ.mp4", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
 
 Clicking on the **Measure performance** button will first trigger a replay of the user flow, then open the performance trace in the **Performance** panel.
 
@@ -159,7 +159,7 @@ The **selector** is editable too.  For example, if you want to select *Mocha* in
 
    Alternatively, click the **Select**{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ihbO22H4EA0HfrNX6gV1.png", alt="Select button.", width="24", height="22" %} button and then click *Mocha* on the page.
 
-   {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/ab7PcmmkoYnoR3RRZ8M1.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
+   {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/ab7PcmmkoYnoR3RRZ8M1.mp4", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
 
 1. [Replay](#replay) the flow now, it should select *Mocha* instead of *Cappuccino*.
 

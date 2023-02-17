@@ -423,7 +423,7 @@ When you start a new recording, you can configure the following:
 For more information, see [Syntactic vs. semantic selectors](/blog/puppetaria/#syntactic-vs-semantic-selectors) and [Selector priority](#selector-priority).
 {% endAside %}
 
-### Common test selectors {: common-test-selector}
+### Common test selectors {: common-test-selector }
 
 For simple webpages, `id` attributes and CSS `class` attributes are sufficient for the **Recorder** to detect the selectors. However, that might not always be the case because:
 
