@@ -98,7 +98,7 @@ time. But with Web Bundles, here's what you can now do:
 
 Here's a video that explains this scenario.
 
-{% YouTube 'xAujz66la3Y' %}
+{% YouTube id='xAujz66la3Y' %}
 
 As you can see, a Web Bundle can contain every resource, making it work offline
 and load instantly.
