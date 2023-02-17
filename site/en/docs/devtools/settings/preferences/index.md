@@ -12,6 +12,8 @@ Configure the appearance and behavior of DevTools and its panels using {% Img sr
 
 To set preferences, open {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [Settings](/docs/devtools/settings/#open) > **Preferences** and scroll down to one of the sections described next.
 
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/IFH59J9W2RT4nDN2miTU.png", alt="The Appearance section in the Preferences tab.", width="800", height="812" %}
+
 To find out what each setting does, search this page for the setting's name and expand its description. Some options are checkboxes indicated by {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} icons, others are drop-down lists indicated by {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} icons.
 
 To restore default preferences, scroll down to the end of the **Preferences** tab and click **Restore defaults and reload**.
