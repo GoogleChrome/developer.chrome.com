@@ -119,7 +119,7 @@ For example, the following **Appearance** settings are synced, so you have a con
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/t8SQuZ4mE2xiLVxaZz11.png", alt="The appearance settings.", width="800", height="584" %}
 
-However, the **dock** setting isn't sync because developers have different dock preferences when debugging on different sites.
+However, the **dock** setting isn't synced because developers have different dock preferences when debugging on different sites.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/jWv8rwkF4q6SwTQbSNpp.png", alt="The dock.", width="426", height="134" %}
 
