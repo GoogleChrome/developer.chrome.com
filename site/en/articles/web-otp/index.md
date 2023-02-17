@@ -14,7 +14,6 @@ description: |
 tags:
   - identity
   - capabilities
-  - otp
 feedback:
   - api
 ---

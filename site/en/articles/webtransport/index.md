@@ -13,7 +13,6 @@ alt: |
   Photo of fast-moving traffic.
 tags:
   - capabilities
-  - network
 feedback:
   - api
 ---

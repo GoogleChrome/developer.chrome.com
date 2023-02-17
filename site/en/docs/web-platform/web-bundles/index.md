@@ -13,8 +13,6 @@ authors:
 description: |
   Web Bundles enable you to share websites as a single file over Bluetooth and run them
   offline in your origin's context.
-tags:
-  - web-bundles
 feedback:
   - api
 ---
