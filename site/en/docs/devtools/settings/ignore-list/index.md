@@ -37,7 +37,7 @@ To make the debugger skip known third-party scripts, check {% Img src="image/NJd
 {% Aside 'gotchas' %}
 DevTools adds third-party scripts to the ignore list based on the `x_google_ignoreList` property in sourcemaps. Frameworks and bundlers need to supply this information.
 
-As of Chrome version 106, [Angular v14.1.0](https://github.com/angular/angular-cli/releases/tag/14.1.0) supports this feature. See [Case Study: Better Angular Debugging with DevTools](http://localhost:8080/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular).
+As of Chrome version 106, [Angular v14.1.0](https://github.com/angular/angular-cli/releases/tag/14.1.0) supports this feature. See [Case Study: Better Angular Debugging with DevTools](/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular).
 {% endAside %}
 
 ## Ignore a custom list of scripts {: #custom-ignore-pattern }
