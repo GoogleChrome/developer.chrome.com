@@ -342,7 +342,7 @@ To group requests by iframes, open **Settings** {% Img src="image/NJdAV9UgKuN8Ah
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/QgdViJaRvfWo8suAE6a6.png", alt="The network request log with requests grouped by iframes.", width="800", height="702" %}
 
-To view request initiated by an inline frame, expand it in the request log.
+To view a request initiated by an inline frame, expand it in the request log.
 
 ### View the timing of requests in relation to one another {: #waterfall }
 
