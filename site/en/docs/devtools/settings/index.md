@@ -45,3 +45,20 @@ To open {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg"
 The **Settings** panel opens.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bEjoxfvtBIHKXqb4lvnN.png", alt="The Settings panel.", width="800", height="450" %}
+
+## Use the Command Menu to access settings faster {: #command-menu-settings }
+
+The [Command Menu](/docs/devtools/command-menu/) is a faster alternative to accessing many of the settings. In particular, if you remember the name of the settings or even its value but don't remember where the setting is.
+
+To quickly change a setting:
+
+1. [Open the Command Menu](/docs/devtools/command-menu/#open).
+1. Start typing the setting's name or its value, select a suggested option, and press <kbd>Enter</kbd>.
+
+For example, to set the DevTools UI language to Chinese, type `Chinese` and select an option.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/dBRcWgqLF2s5z1hUmMXV.png", alt="Options for a Chinese DevTools UI locale.", width="800", height="491" %}
+
+These commands directly set the value of {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Preferences** > **Appearance**](/docs/devtools/settings/preferences/#appearance) > Language.
+
+
