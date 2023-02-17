@@ -8,7 +8,7 @@ date: 2023-02-16
 description: "Devices tab reference."
 ---
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings**](/docs/devtools/settings/#open) > **Devices** list devices and their dimensions. You can select these devices from the **Dimentions** drop-down list in [device mode](/docs/devtools/device-mode/#device).
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings**](/docs/devtools/settings/#open) > **Devices** list devices and their dimensions. You can select these devices from the **Dimensions** drop-down list in [device mode](/docs/devtools/device-mode/#device).
 
 ## Add a device to the Devices list {: #add-device }
 
