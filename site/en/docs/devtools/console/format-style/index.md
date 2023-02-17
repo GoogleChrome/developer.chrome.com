@@ -119,6 +119,17 @@ You can use the `%c` format specifier to style the console messages with CSS.
 2. The command above produces `Hooray` with CSS styles applied.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/p9oAce6M63d1tYChjaXN.png", alt="style output with CSS", width="800", height="452" %}
 
+{% Aside 'gotchas' %}
+To prevent data leaks and bypasses of security policies, in this format, the [`url()` CSS function](https://developer.mozilla.org/docs/Web/CSS/url) supports only the [`data:` URL schema](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/Data_URLs).
+
+For example, you can set a background image in the following way: 
+
+```css
+background: url(data:image/png;base64,iVBORw…);
+```
+
+Where `iVBORw…` is a base64-encoded PNG image.
+{% endAside %}
 
 ### Style with ANSI escape sequences {: #style-ansi }
 

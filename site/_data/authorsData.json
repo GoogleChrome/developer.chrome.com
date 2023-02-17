@@ -499,6 +499,11 @@
     "github": "beaufortfrancois",
     "image": "image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/8SV7KI2QNVXph2L5Cga2.jpeg"
   },
+  "reillyg": {
+    "twitter": "reillyeon",
+    "github": "reillyeon",
+    "image": "image/admin/C7kO2T8Q8jSZxU9xj3AC.jpg"
+  },
   "cwallez": {
     "country": "FR",
     "twitter": "DaKangz",
@@ -691,7 +696,6 @@
     "country": "US",
     "twitter": "kevinkiklee",
     "github": "kevinkiklee",
-    "glitch": "kevinkiklee",
     "image": "image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/8bRRaZVXzJKCDu0RlK1Y.jpg"
   },
   "stefanzager": {
@@ -856,6 +860,7 @@
   },
   "jney": {
     "country": "US",
+    "homepage": "https://www.jeremybney.com",
     "twitter": "jeremybney",
     "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/TAnCBPCUpoC4X3jwXN7Y.webp"
   },
@@ -1047,5 +1052,22 @@
     "twitter": "shane_exterkamp",
     "github": "exterkamp",
     "image": "image/admin/yPytekIqH5VnoqMx3jj2.jpg"
+  },
+  "helencho": {
+    "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/XAQGcTjOZYDZuupT6DIx.jpeg"
+  },
+  "kaustubhag": {
+    "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/Uva1hZaQBRpV8k1tJr7R.jpeg"
+  },
+  "johannhof": {
+    "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/U6iZ9cAgFDT7v4cmIxEP.jpeg"
+  },
+  "priyankachatterjee": {
+    "country": "US",
+    "image": "image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/Q9SoxqpDiTGCSfZul60a.jpeg"
+  },
+  "tristramsouthey": {
+    "country": "US",
+    "image": "image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/yh2i5pJyWLqMz49B7qWq.jpeg"
   }
 }

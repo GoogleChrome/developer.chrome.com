@@ -51,7 +51,7 @@ what the software manufacturer claims it does—nothing more or less.
 
 The TEE's code is the only place in the aggregation service which has access to
 raw reports&mdash;this code will be auditable by security researchers, privacy
-advocates, and adtechs. To confirm that the TEE is running the exact approved
+advocates, and ad techs. To confirm that the TEE is running the exact approved
 software and that data remains secured, a coordinator performs attestation.
 
 <figure>
@@ -81,6 +81,11 @@ A coordinator has several responsibilities:
   necessary for proving the aggregation service code matches the binary images.
 * Track the aggregatable reports to prevent reuse in aggregation for summary
   reports, as reuse may reveal personal identifying information (PII).
+
+{% Aside %}
+If you are testing the Aggregation Service, see the [Coordinator Service
+Additional Terms of Service](/docs/privacy-sandbox/aggregation-service/tos/).
+{% endAside %}
 
 ## Noise and scaling {: #noise-scale}
 

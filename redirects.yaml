@@ -78,7 +78,7 @@ redirects:
   to: /blog/wasm-debugging/
 
 - from: /docs/privacy-sandbox/fledge-best-practices/
-  to: /docs/privacy-sandbox/fledge/latency/
+  to: /docs/privacy-sandbox/fledge-api/latency/
 
 - from: /blog/fledge-api/
   to: /docs/privacy-sandbox/fledge-api/
