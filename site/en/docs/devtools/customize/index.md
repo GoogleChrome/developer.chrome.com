@@ -50,7 +50,7 @@ tabs.
 
 By default, DevTools is docked to the right of your viewport. You can also dock to the bottom or left sides or undock DevTools into a separate window.
 
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/v0G4eZnKz0u6wXmL0tSU.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/v0G4eZnKz0u6wXmL0tSU.mp4", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
 
 You can change the placement of DevTools in two ways:
 
@@ -81,7 +81,7 @@ To change ordering, click and drag left or right any of the following:
 
 Additionally, you can [move panels and tabs up and down](/blog/new-in-devtools-87/#moveable-tools) to and from the **Drawer**. To do this, right-click the panel or tab and select **Move to top** or **Move to bottom** from the drop-down menu.
 
-{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/TrzgaUT4vNk1ToIDTnKv.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/TrzgaUT4vNk1ToIDTnKv.mp4", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
 
 Your custom tab order persists across DevTools sessions.
 
