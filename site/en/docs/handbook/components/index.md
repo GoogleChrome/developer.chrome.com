@@ -94,17 +94,17 @@ Use the success aside to describe a successful action or an error-free status.
 Use the success aside to describe a successful action or an error-free status.
 {% endAside %}
 
-### Gotchas asides
+### Important asides
 
 ```md
-{% raw %}{% Aside 'gotchas' %}
-Use the gotcha aside to indicate a common problem that the reader wouldn't know
+{% raw %}{% Aside 'important' %}
+Use the important aside to indicate a common problem that the reader wouldn't know
 without specialized knowledge of the topic.
 {% endAside %}{% endraw %}
 ```
 
-{% Aside 'gotchas' %}
-Use the gotchas aside to indicate a common problem that the reader wouldn't know
+{% Aside 'important' %}
+Use the important aside to indicate a common problem that the reader wouldn't know
 without specialized knowledge of the topic.
 {% endAside %}
 
