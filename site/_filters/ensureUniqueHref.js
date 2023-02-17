@@ -16,7 +16,7 @@ const pageIds = [];
  * @return {string} unique id for the section
  */
 
-function uniqueId(id, url) {
+function ensureUniqueHref(id, url) {
   const idUrl = `${url}#${id}`;
 
   if (pageIds.includes(idUrl)) {
@@ -34,5 +34,5 @@ function uniqueId(id, url) {
 }
 
 module.exports = {
-  uniqueId,
+  ensureUniqueHref,
 };
