@@ -44,7 +44,7 @@ Want to try it out? To learn how to open the Memory Inspector and view your arra
 
 In this part we’ll have a look at how the Memory Inspector is designed using Web Components, and we’ll show one of the design goals that we had and how we implemented it. If you are curious and want to see more, have a look at our [design doc](https://docs.google.com/document/d/1LUOat3Q3pQ08IsnBQLrvL-4zWXSTgIuArb5ig3lEm-Y) for the Memory Inspector.
 
-You might have seen our blogpost on [Migrating to Web Components](/blog/migrating-to-web-components/), where Jack has published our internal guide on how to build UI components using Web Components. The migration to Web Components coincided with our work on the Memory Inspector, and as a result, we decided to give the new system a try. Below is a diagram that shows the components that we have built to create the Memory Inspector (note that internally we call it **Linear Memory Inspector**):
+You might have seen our blog post on [Migrating to Web Components](/blog/migrating-to-web-components/), where Jack has published our internal guide on how to build UI components using Web Components. The migration to Web Components coincided with our work on the Memory Inspector, and as a result, we decided to give the new system a try. Below is a diagram that shows the components that we have built to create the Memory Inspector (note that internally we call it **Linear Memory Inspector**):
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ACJlqjKcViEXjd1IYhd2.png", alt="Web Components", width="622", height="410" %}
 
