@@ -6,11 +6,12 @@ require('dotenv').config();
 
 const fs = require('fs');
 const path = require('path');
+const ms = require('ms');
 const {google} = require('googleapis');
 
 // Set an interval of time that makes this data stale and converts it in ms
 const FETCH_INTERVAL_HOURS = 4;
-const FETCH_INTERVAL_MILLISECONDS = FETCH_INTERVAL_HOURS * 3600000;
+const FETCH_INTERVAL_MILLISECONDS = ms(`${FETCH_INTERVAL_HOURS} hrs`);
 
 // Set all the config constansts needed for the API calls
 const API_KEY = process.env.YOUTUBE_API_KEY;
@@ -176,6 +177,5 @@ try {
 }
 
 if (dataAge > FETCH_INTERVAL_MILLISECONDS || !dataAge) {
-  console.log('HERE');
   run();
 }
