@@ -2,8 +2,7 @@
 layout: 'layouts/blog-post.njk'
 title: Declarative Shadow DOM
 subhead: Una nueva forma de implementar y utilizar Shadow DOM directamente en HTML.
-date: 2020-09-30
-updated: 2021-04-14
+date: 2023-02-17
 hero: image/admin/IIPe5m8edvp0XMPpzrz9.jpg
 alt: cúpula de sombra decorativa
 authors:
