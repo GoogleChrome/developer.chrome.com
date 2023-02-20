@@ -284,7 +284,7 @@ First, open any of the following pages:
 - [Publish in the Chrome Web Store][cws-publish]
 - [Scripting API][api-scripting]
 
-Then, click on the extension action. If you set up a keyboard shortcut ([link][tut-reading-time-step6]), you can test it by pressing `Ctrl + B` or `Cmd + B`.
+Then, click on the extension action. If you set up a keyboard shortcut ([link][tut-focus-time-step6]), you can test it by pressing `Ctrl + B` or `Cmd + B`.
 
 It should go from this:
 
