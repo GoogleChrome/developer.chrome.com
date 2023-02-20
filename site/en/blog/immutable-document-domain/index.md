@@ -6,7 +6,7 @@ description: >
 subhead: >
   If your website relies on setting `document.domain`, your action is required.
 date: 2022-01-11
-updated: 2022-02-14
+updated: 2023-01-14
 authors:
   - agektmr
 tags:
@@ -18,6 +18,12 @@ alt: >
 
 **Updates**
 
+- **January 20, 2023**: Updated timeline—`document.domain` setter will be
+    removed by default starting from Chrome 112. Also, [a mention about
+    enterprise policy](#enterprise-policy) to control the `document.domain`
+    behavior is added.
+- **July 25, 2022**: Updated timeline—`document.domain` setter will be removed
+    by default starting from Chrome 109.
 - **February 4, 2022**: Updated with the new timeline - we'll show a warning in
   the Issues panel starting from Chrome 100, removing `document.domain` setter
   by default starting from Chrome 106.
@@ -36,7 +42,7 @@ was designed to get or set the origin's hostname.
 
 On Chrome, websites will be unable to set `document.domain`. You will need to
 use alternative approaches, such as `postMessage()` or the Channel Messaging
-API, to communicate cross-origin. We're targeting Chrome 106 to ship this change
+API, to communicate cross-origin. We're targeting Chrome 112 to ship this change
 at the earliest, but this is dependent on the response to the [Intent to
 Ship](https://groups.google.com/a/chromium.org/g/blink-dev/c/_oRc19PjpFo/).
 
@@ -107,19 +113,18 @@ The [current discussion with other browser
 vendors](https://github.com/w3ctag/design-reviews/issues/564) is moving in
 the same direction.
 
-For example, if a hosting service provides different subdomains per user, an
-attacker can set `document.domain` to pretend they are the same-origin
-as another user's page. Further, an attacker can host a website under a shared
-hosting service, which serves sites through the same IP address with different
-port numbers. In that case, the attacker can pretend to be on the same-site-but-same-origin
-as yours. This is possible because `document.domain` ignores the port number
-part of the domain.
+For example, when two pages set `document.domain`, they can pretend as if they
+are the same-origin. This is particularly critical when these pages use a shared
+hosting service with different subdomains. Setting `document.domain` opens up
+access to all other sites hosted by that same service, which makes it easier for
+attackers to access your sites. This is possible because `document.domain`
+ignores the port number part of the domain.
 
 To learn more about the security implications of setting `document.domain`, read
 ["Document.domain" page on
 MDN](https://developer.mozilla.org/docs/Web/API/Document/domain#setter).
 
-Chrome plans to make `document.domain` immutable in Chrome 106.
+Chrome plans to make `document.domain` immutable in Chrome 112.
 
 ### How do I know if my site is affected?
 
@@ -143,7 +148,7 @@ be removed from Chrome.
 
 ## Alternative cross-origin communication
 
-At this time, you have two options to replace `document.domain` for your website.
+At this time, you have three options to replace `document.domain` for your website.
 
 ### Use `postMessage()` or Channel Messaging API
 
@@ -215,6 +220,13 @@ should be handled by the origin-keyed agent cluster or not. To learn more about
 
 When you send this header, your document can continue to set `document.domain`
 even after it becomes immutable by default.
+
+### Configure `OriginAgentClusterDefaultEnabled` for enterprise policy {: #enterprise-policy}
+
+Optionally, your admin can configure `OriginAgentClusterDefaultEnabled` policy
+to `false` to make `document.domain` settable by default on Chrome instances
+across your organization. To learn more, read [Chrome Enterprise Policy List &
+Management | Documentation](https://chromeenterprise.google/policies/#OriginAgentClusterDefaultEnabled).
 
 ## Browser compatibility
 

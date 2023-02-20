@@ -45,7 +45,7 @@ This means HTML parsers may discover service worker registration code before the
 
 This is a problem. A service worker should ideally be performance-neutral in the worst of cases,
 not make performance worse. Do users a favor and
-[register a service worker when the page's `load` event fires](https://developers.google.com/web/fundamentals/primers/service-workers/registration).
+[register a service worker when the page's `load` event fires](https://web.dev/service-workers-registration/).
 This reduces the chance that precaching will interfere with loading a page's critical assets,
 which in turn means the page can get interactive faster without having to contend with network requests for assets that may not be needed until later anyway.
 
@@ -68,12 +68,12 @@ This extra overhead before a request can be handled is small compared to the ben
 
 When using strategies that can't serve from the cache,
 and has to go to the network&mdash;in particular when handling
-[navigation requests](https://web.dev/handling-navigation-requests/)&mdash;[bootup time always adds some delay](https://developers.google.com/web/updates/2017/02/navigation-preload#the-problem).
+[navigation requests](https://web.dev/handling-navigation-requests/)&mdash;[bootup time always adds some delay](https://web.dev/navigation-preload/#the-problem).
 Depending on device capabilities and/or CPU pressure,
 a navigation request can experience a noticeable delay due to slow service worker boot-ups.
 Deploying a service worker without awareness of this delay means that users could experience an unintentional performance hit.
 
-This problem has been solved with [Navigation Preload](https://developers.google.com/web/updates/2017/02/navigation-preload#the-solution),
+This problem has been solved with [Navigation Preload](https://web.dev/navigation-preload/#the-solution),
 but [it isn't supported in all browsers yet](https://caniuse.com/mdn-api_navigationpreloadmanager_enable).
 However, it's use is worth considering,
 and it's covered [later in this documentation](/docs/workbox/navigation-preload).

@@ -7,7 +7,7 @@ description: >
     Step-by-step instructions on how to track usage of your Extension with Google Analytics.
 ---
 
-{% include 'partials/extensions/mv2-legacy-page.md' %}
+{% Partial 'extensions/mv2-legacy-page.md' %}
 
 This tutorial demonstrates using Google Analytics to track the usage of your extension. If you are
 developing a platform app, see [Analytics for Apps][1] since apps have different restrictions from
@@ -162,4 +162,4 @@ An example extension that uses these techniques is available in the [samples rep
 [6]: /docs/extensions/mv2/tabs
 [7]: /docs/extensions/mv2/tut_debugging
 [8]: https://developers.google.com/analytics/devguides/collection/gajs/eventTrackerGuide
-[9]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/tutorials/analytics/
+[9]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/_archive/mv2/tutorials/analytics/

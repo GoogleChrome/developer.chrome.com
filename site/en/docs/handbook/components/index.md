@@ -2,86 +2,8 @@
 title: Components
 layout: 'layouts/doc-post.njk'
 date: 2021-01-12
-updated: 2021-01-27
+updated: 2022-06-17
 ---
-
-## Details
-
-Use a details section to hide extra information from the user until it's needed. It can have an optional preview.
-
-````md
-{% raw %}{% Details %}
-{% DetailsSummary %}
-A brief summary goes here
-{% endDetailsSummary %}
-
-The body of the Details component goes here, and **can** contain markdown.
-
-{% endDetails %}{% endraw %}
-````
-
-{% Details %}
-{% DetailsSummary %}
-A brief summary goes here
-{% endDetailsSummary %}
-
-The body of the Details component goes here, and **can** contain markdown.
-
-{% endDetails %}
-
-The details shortcode also supports using headers in the summary.
-
-````md
-{% raw %}{% Details %}
-{% DetailsSummary %}
-### A normal heading goes here
-{% endDetailsSummary %}
-
-The body of the Details component goes here, and **can** contain markdown.
-
-{% endDetails %}{% endraw %}
-````
-
-{% Details %}
-{% DetailsSummary %}
-### A normal heading goes here
-{% endDetailsSummary %}
-
-The body of the Details component goes here, and **can** contain markdown.
-
-{% endDetails %}
-
-````md
-{% raw %}{% Details %}
-{% DetailsSummary %}
-### Details component summary
-This is an optional preview.
-{% endDetailsSummary %}
-
-This is the body of the Details component.
-It **can** contain markdown.
-
-```js
-const bar = 'foo';
-console.log(bar);
-```
-{% endDetails %}{% endraw %}
-````
-
-{% Details %}
-{% DetailsSummary %}
-### Details component summary
-This is an optional preview.
-{% endDetailsSummary %}
-
-This is the body of the Details component.
-It **can** contain markdown.
-
-```js
-const bar = 'foo';
-console.log(bar);
-```
-{% endDetails %}
 
 ## Asides
 Use asides to provide information that's related to but distinct from the
@@ -282,6 +204,31 @@ These buttons are shown for reference.
 <button class="material-button button-filled button-round color-bg bg-primary">
   Round button
 </button>
+
+## Browser Compat
+
+With the `BrowserCompat` shortcode, you can embed an
+[MDN - Browser Compatibility Data](https://github.com/mdn/browser-compat-data/)
+widget in your post. You have to pass in the dot-separated feature ID,
+as used on [BCD Schema](https://github.com/mdn/browser-compat-data), e.g. for
+[Web/API/BackgroundFetchEvent](https://developer.mozilla.org/docs/Web/API/BackgroundFetchEvent)
+the ID is `api.BackgroundFetchEvent`.
+
+```text
+{% raw %}{% BrowserCompat 'api.BackgroundFetchEvent' %}{% endraw %}
+```
+
+{% BrowserCompat 'api.BackgroundFetchEvent' %}
+
+The widget will use 🗑 symbols to represent features that are deprecated:
+
+{% BrowserCompat 'api.Document.execCommand' %}
+
+The following JavaScript snippet, run from the DevTools console, will display the correct ID for a given MDN page that's currently open:
+
+```js
+window.alert(document.querySelector(".bc-github-link")?.href.match(/title=(.+?)\+/)[1] ?? "No browser compat widget found on the page.")
+```
 
 ## Code
 
@@ -502,6 +449,84 @@ var x = 0;
 ```
 {% endCompare %}
 
+## Details (accordion functionality)
+
+Use a details section to hide extra information from the user until it's needed. It can have an optional preview. Use this component if you need an accordion or expandable section.
+
+````md
+{% raw %}{% Details %}
+{% DetailsSummary %}
+A brief summary goes here
+{% endDetailsSummary %}
+
+The body of the Details component goes here, and **can** contain markdown.
+
+{% endDetails %}{% endraw %}
+````
+
+{% Details %}
+{% DetailsSummary %}
+A brief summary goes here
+{% endDetailsSummary %}
+
+The body of the Details component goes here, and **can** contain markdown.
+
+{% endDetails %}
+
+The details shortcode also supports using headers in the summary.
+
+````md
+{% raw %}{% Details %}
+{% DetailsSummary %}
+### A normal heading goes here
+{% endDetailsSummary %}
+
+The body of the Details component goes here, and **can** contain markdown.
+
+{% endDetails %}{% endraw %}
+````
+
+{% Details %}
+{% DetailsSummary %}
+### A normal heading goes here
+{% endDetailsSummary %}
+
+The body of the Details component goes here, and **can** contain markdown.
+
+{% endDetails %}
+
+````md
+{% raw %}{% Details %}
+{% DetailsSummary %}
+### Details component summary
+This is an optional preview.
+{% endDetailsSummary %}
+
+This is the body of the Details component.
+It **can** contain markdown.
+
+```js
+const bar = 'foo';
+console.log(bar);
+```
+{% endDetails %}{% endraw %}
+````
+
+{% Details %}
+{% DetailsSummary %}
+### Details component summary
+This is an optional preview.
+{% endDetailsSummary %}
+
+This is the body of the Details component.
+It **can** contain markdown.
+
+```js
+const bar = 'foo';
+console.log(bar);
+```
+{% endDetails %}
+
 ## Glitches {: #glitches }
 
 ### Create a Glitch
@@ -635,7 +660,26 @@ place the `Img` shortcode snippet inside:
   </figcaption>
 </figure>
 
+## Labels
+
+Labels can be used to display a filename associated with a [code](https://web.dev/handbook/markup-code/) snippet.
+
+````text
+{% raw %}{% Label %}filename.js:{% endLabel %}{% endraw %}
+
+```js
+console.log('hello');
+```
+````
+
+{% Label %}filename.js:{% endLabel %}
+
+```js
+console.log('hello');
+```
+
 ## Lists
+
 See the [Lists section of the Grammar, mechanics, and usage post](https://web.dev/handbook/grammar/#lists)
 for information about when to use each list type.
 
@@ -683,6 +727,16 @@ First Term
 Second Term
 : This is one definition of the second term.
 : This is another definition of the second term.
+
+## Partials
+
+Use partials to reuse the same piece of content across a series of articles without having to rewrite it. Like a banner asking for feedback.
+
+```md
+{% raw %}{% Partial 'devtools/banner.md' %}{% endraw %}
+```
+
+{% Partial 'devtools/banner.md' %}
 
 ## Tabs
 

@@ -16,9 +16,10 @@ tags:
 
 *感谢 [流浪大法师 @liuliangsir](https://github.com/liuliangsir) 提供的翻译*。
 
-{% include 'partials/devtools/zh/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='u9GRAliBrM8' %}
+
 <!-- ## Import and export recorded user flows as a JSON file  {: #recorder } -->
 ## 导入以及导出用户流程为 JSON 文件 {: #recorder }
 
@@ -116,7 +117,7 @@ Chromium 议题: [1296855](https://crbug.com/1296855), [https://crbug.com/130340
 
 
 <!-- ## [Experimental] New timespan and snapshot mode in the Lighthouse panel {: #lighthouse } -->
-## [实验性] Lighthouse 面板新增 timespan 和快照模式 {: #lighthouse }
+## [实验阶段] Lighthouse 面板新增 timespan 和快照模式 {: #lighthouse }
 
 {% Aside %}
 <!-- To enable the experiment, enable the **Use Lighthouse panel with timespan and snapshot modes** checkbox under **Settings** > **Experiments**. -->
@@ -138,5 +139,5 @@ Chromium 议题: [1296855](https://crbug.com/1296855), [https://crbug.com/130340
 
 Chromium 议题: [772558](https://crbug.com/772558)
 
-{% include 'partials/devtools/zh/reach-out.md' %}
-{% include 'partials/devtools/zh/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

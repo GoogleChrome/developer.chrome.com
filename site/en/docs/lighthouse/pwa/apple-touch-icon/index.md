@@ -18,7 +18,7 @@ user experience.
 
 ## How the Lighthouse Apple touch icon audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+[Lighthouse](/docs/lighthouse/overview/)
 flags pages without a `<link rel="apple-touch-icon" href="/example.png">`
 tag in the `<head>`:
 
@@ -34,7 +34,7 @@ tag in the `<head>`:
 Lighthouse doesn't check whether the icon actually exists or whether the icon is
 the correct size.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## How to add an Apple touch icon
 

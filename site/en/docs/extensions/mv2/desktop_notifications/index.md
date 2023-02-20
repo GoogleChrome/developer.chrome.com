@@ -6,7 +6,7 @@ updated: 2017-01-05
 description: How to implement notifications in your Chrome Extension.
 ---
 
-{% include 'partials/extensions/mv2-legacy-page.md' %}
+{% Partial 'extensions/mv2-legacy-page.md' %}
 
 {% Aside 'warning' %}
 **Warning:** `webKitNotifications.createHTMLNotification()` in the [web notifications API][1] has
@@ -109,6 +109,6 @@ unnecessary if you declare the "notifications" permission.
 [5]: http://dev.chromium.org/developers/design-documents/desktop-notifications/api-specification
 [6]: /docs/extensions/extension#method-getBackgroundPage
 [7]: /docs/extensions/extension#method-getViews
-[8]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/notifications/
+[8]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/_archive/mv2/api/notifications/
 [9]: /docs/extensions/mv2/samples
 [10]: http://www.html5rocks.com/tutorials/notifications/quick/

@@ -17,7 +17,7 @@ crawl. An invalid `robots.txt` configuration can cause two types of problems:
 
 ## How the Lighthouse `robots.txt` audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) flags invalid
+[Lighthouse](/docs/lighthouse/overview/) flags invalid
 `robots.txt` files:
 
 <figure class="w-figure">
@@ -45,7 +45,7 @@ Lighthouse doesn't check that your `robots.txt` file is
 in the correct location. To function correctly, the file must be in the root of
 your domain or subdomain.
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% Partial 'lighthouse-seo/scoring.njk' %}
 
 ## How to fix problems with `robots.txt`
 
@@ -57,7 +57,7 @@ crawled. They may stop crawling your entire site, which would prevent new
 content from being indexed.
 
 To check the HTTP status code, open `robots.txt` in Chrome and
-[check the request in Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/network/reference#analyze).
+[check the request in Chrome DevTools](/docs/devtools/network/reference/#analyze).
 
 ### Keep `robots.txt` smaller than 500 KiB
 
@@ -176,7 +176,7 @@ sitemap: https://example.com/sitemap-file.xml
 
 ## Resources
 
-- [Source code for **`robots.txt` is not valid** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/seo/robots-txt.js)
+- [Source code for **`robots.txt` is not valid** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/seo/robots-txt.js)
 - [Create a `robots.txt file`](https://support.google.com/webmasters/answer/6062596)
 - [Robots.txt](https://moz.com/learn/seo/robotstxt)
 - [Robots meta tag and X-Robots-Tag HTTP header specifications](https://developers.google.com/search/reference/robots_meta_tag)

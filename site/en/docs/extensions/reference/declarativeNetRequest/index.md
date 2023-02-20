@@ -2,7 +2,9 @@
 api: declarativeNetRequest
 extra_permissions_html:
   <code>declarativeNetRequestFeedback</code><br/>
-  <a href="declare_permissions#host-permissions">host permissions</a><br />
+  <a href="/docs/extensions/mv3/declare_permissions#host-permissions">host permissions</a><br />
+has_warning: One or more of these permissions <a href="/docs/extensions/mv3/permission_warnings/#permissions_with_warnings">triggers a warning</a>.
+
 ---
 
 ## Manifest
@@ -40,7 +42,10 @@ a list containing dictionaries of type [Ruleset][4], as shown below.
   "permissions": [
     "declarativeNetRequest",
     "declarativeNetRequestFeedback",
-    "*://example.com/*"
+  ],
+  "host_permissions": [
+    "http://www.blogger.com/*",
+    "http://*.google.com/*"
   ],
   ...
 }
@@ -145,19 +150,23 @@ An extension can add or remove rules dynamically using the [updateDynamicRules][
 
 ## Updating enabled rulesets
 
-An extension can update the set of enabled static rulesets using the [updateEnabledRulesets][14] API
+An extension can update the set of enabled static rulesets using the [updateEnabledRulesets()][14]
 method.
 
 - The number of static rulesets which are enabled at one time must not exceed
   [MAX_NUMBER_OF_ENABLED_STATIC_RULESETS][18].
 - The number of rules across enabled static rulesets across all extensions must not exceed the
-  [global limit][15]. Calling [getAvailableStaticRuleCount][10] is recommended to check the number
+  [global limit][15]. Calling [getAvailableStaticRuleCount()][10] is recommended to check the number
   of rules an extension can still enable before the global limit is reached.
 - The set of enabled static rulesets is persisted across sessions but not across extension updates.
-  The `rule_resources` manifest key will determine the set of enabled static rulesets on initial
+  The `"rule_resources"` manifest key will determine the set of enabled static rulesets on initial
   extension install and on each subsequent extension update.
 
 ## Implementation details
+
+### web_accessible_resources
+
+When an extension uses declarativeNetRequest APIs to redirect a public resource request to a resource that is not web accessible, it is blocked and will result in an error. The above holds true even if the resource that is not web accessible is owned by the redirecting extension. To declare resources for use with declarativeNetRequest APIs, populate the [`"web_accessible_resources"`](/docs/extensions/mv3/manifest/web_accessible_resources/) array.
 
 ### Matching algorithm
 
@@ -194,29 +203,13 @@ is determined based on the priority of each rule and the operations specified.
   `append` rules from the same extension.
 - If a rule has removed a header, then lower priority rules cannot further modify the header.
 
-### Comparison with the [webRequest][16] API
+### Interaction with cached pages
 
-- The declarativeNetRequest API allows for evaluating network requests in the browser itself. This
-  makes it more performant than the webRequest API, where each network request is evaluated in
-  JavaScript in the extension process.
-- Because the requests are not intercepted by the extension process, declarativeNetRequest removes
-  the need for extensions to have a background page; resulting in less memory consumption.
-- Unlike the webRequest API, blocking or upgrading requests using the declarativeNetRequest API
-  requires no host permissions when used with the `declarativeNetRequest` permission.
-- The declarativeNetRequest API provides better privacy to users because extensions can't actually
-  read the network requests made on the user's behalf.
-- Unlike the webRequest API, any images or iframes blocked using the declarativeNetRequest API are
-  automatically collapsed in the DOM.
-- While deciding whether a request is to be blocked or redirected, the declarativeNetRequest API is
-  given priority over the webRequest API because it allows for synchronous interception. Similarly,
-  any headers removed through declarativeNetRequest API are not made visible to web request
-  extensions.
-- The webRequest API is more flexible as compared to the declarativeNetRequest API because it allows
-  extensions to evaluate a request programmatically.
+When rules are applied to browsers with pages in the service worker's cached storage, the browser may ignore the set rule for those specific pages until the cached storage is cleared. This is because cached storage is intended to be persistent, and many features like offline use do not expect the cache to be cleared without also clearing a service worker's registration as well. For cases when extensions utilizing declarativeNetRequest must be enabled and disabled repeatedly, the [`chrome.browsingData`](/docs/extensions/reference/browsingData/) API may be used to clear the cache to guarantee proper functionality.
 
 ## Example
 
-**manifest.json**
+{% Label %}manifest.json:{% endLabel %}
 
 ```json
 {
@@ -230,18 +223,20 @@ is determined based on the priority of each rule and the operations specified.
     }]
   },
   "permissions": [
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
     "*://*.google.com/*",
     "*://*.abcd.com/*",
     "*://*.example.com/*",
     "https://*.xyz.com/*",
     "*://*.headers.com/*",
-    "declarativeNetRequest"
   ],
-  "manifest_version": 2
+  "manifest_version": 3
 }
 ```
 
-**rules.json**
+{% Label %}rules.json:{% endLabel %}
 
 ```json
 [
@@ -387,8 +382,8 @@ is determined based on the priority of each rule and the operations specified.
   `h1` was removed by (10), `h2` was set by (10) then appended by (11), and `h3` was appended by
   (10) and (11).
 
-[1]: /docs/extensions/mv2/tabs
-[2]: /docs/extensions/mv2/declare_permissions
+[1]: /docs/extensions/mv3/manifest
+[2]: /docs/extensions/mv3/declare_permissions
 [3]: #type-Ruleset
 [4]: #type-Ruleset
 [5]: #property-MAX_NUMBER_OF_STATIC_RULESETS

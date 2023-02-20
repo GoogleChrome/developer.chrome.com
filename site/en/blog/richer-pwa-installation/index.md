@@ -35,41 +35,40 @@ information. If they continue to install, the process is over too quickly withou
 context to the user. This goes against their expectations of installing apps and can leave them
 somewhat confused about what has happened.  
 
-
-{% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/VwB1V3K61vQMs1htKJpY.png", alt="An example of PWA install UI", width="360", height="720" %}
+<figure>
+  {% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/VwB1V3K61vQMs1htKJpY.png", alt="An example of PWA install UI.", width="360", height="720" %}
+  <figcaption>An example of the PWA install UI.</figcaption>
+</figure>
 
 To enable developers to provide installed experiences on par with native experiences
 Chrome is introducing a new install surface, Richer Install, that allows developers to add a
 description and screenshots to their manifest file and have it appear in a bottomsheet dialog
 within Chrome for Android. 
 
-{% Columns %}
-{% Column %}
-{% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/RoQRxu3CPkKvAtkxYsAQ.jpeg", alt="Example of bottomsheet UI in Chrome", width="360", height="720" %}
-{% Aside %}
-Example of bottomsheet UI in Chrome.
-{% endAside %}
-{% endColumn %}
-{% endColumns %}
+<figure>
+  {% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/RoQRxu3CPkKvAtkxYsAQ.jpeg", alt="Example of bottomsheet UI in Chrome", width="360", height="720" %}
+  <figcaption>Example of bottomsheet UI in Chrome.</figcaption>
+</figure>
 
 This gives developers the opportunity to create a more enticing install process
 that better aligns to user expectations and that mimics their existing mental model
 of installed experiences. 
 
+
 {% Columns %}
 {% Column %}
-{% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/SpStAtUk8Zp5iwi9yqKP.jpg", 
+<figure>
+  {% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/SpStAtUk8Zp5iwi9yqKP.jpg", 
 alt="Richer Install UI Expanded", width="342", height="722" %}
-{% Aside %}
-Richer Install UI Expanded
-{% endAside %}
+  <figcaption>Richer Install UI Expanded.</figcaption>
+</figure>
 {% endColumn %}
 {% Column %}
-{% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/k7r4yKqrh6iOm2XyZHfw.jpg", 
+<figure>
+  {% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/k7r4yKqrh6iOm2XyZHfw.jpg", 
 alt="Richer Install UI Collapsed", width="342", height="722" %}
-{% Aside %}
-Richer Install UI Collapsed
-{% endAside %}
+  <figcaption>Richer Install UI Collapsed.</figcaption>
+</figure>
 {% endColumn %}
 {% endColumns %}
 
@@ -143,16 +142,12 @@ is rendered correctly.
     }
 ]
 ```
- 
-{% Columns %}
-{% Column %}
-{% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/7jsL23QoMfniU7WTHDK8.jpg", 
+
+<figure>
+  {% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/7jsL23QoMfniU7WTHDK8.jpg", 
 alt="A single screenshot added.", width="342", height="684" %}
-{% Aside %}
-A single screenshot added.
-{% endAside %}
-{% endColumn %}
-{% endColumns %}
+  <figcaption>A single screenshot added.</figcaption>
+</figure>
 
 ## Description {: #description }
 
@@ -170,20 +165,21 @@ be based on feedback from developers and users.
 right in your browser."
  ```
 
+
 {% Columns %}
 {% Column %}
-{% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/oOj7Ls7cQ8E274faxfOz.jpg", 
+<figure>
+  {% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/oOj7Ls7cQ8E274faxfOz.jpg", 
 alt="Description added", width="342", height="684" %}
-{% Aside %}
-Description added.
-{% endAside %}
+  <figcaption>Description added.</figcaption>
+</figure>
 {% endColumn %}
 {% Column %}
-{% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/Dpzs03K6QmBkZaefX2nU.jpg", 
+<figure>
+  {% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/Dpzs03K6QmBkZaefX2nU.jpg", 
 alt="A longer description that has been truncated.", width="342", height="684" %}
-{% Aside %}
-Longer descriptions are truncated.
-{% endAside %}
+  <figcaption>Longer descriptions are truncated.</figcaption>
+</figure>
 {% endColumn %}
 {% endColumns %}
 

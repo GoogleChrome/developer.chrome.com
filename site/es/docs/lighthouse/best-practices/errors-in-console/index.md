@@ -16,7 +16,7 @@ Los mensajes que se registran en la consola provienen de los desarrolladores web
 
 <figure>{% Img src = "image/tcFciHGuF3MxnTr1y5ue01OGLBn2/AjfKRZm8E4ZUi2QvQtL3.png", alt = "La auditoría de Lighthouse muestra los errores del navegador en la consola", width = "800", height = "247"%}</figure>
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## Cómo corregir errores en el navegador
 

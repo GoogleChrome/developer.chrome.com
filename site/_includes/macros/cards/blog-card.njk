@@ -3,8 +3,11 @@
 {% macro blogCard(post) %}
 {% set pd = post.data %}
 <div class="blog-card rounded-lg pad-300 md:pad-400 width-full">
-
-  {% set thumbnail = pd.hero or pd.thumbnail %}
+  {% if pd.thumbnail %}
+  {% set thumbnail = pd.thumbnail %}
+  {% else %}
+  {% set thumbnail = pd.hero %}
+  {% endif %}
   {% set alt = pd.alt %}
   {% set tags = pd.tags %}
 
@@ -31,13 +34,13 @@
 
   <h2 class="type--h5">
     <a class="surface display-inline-flex color-text" href="{{ post.url }}">
-      {{ pd.title }}
+      {{ pd.title | md | safe }}
     </a>
   </h2>
 
 {% if not thumbnail %}
   <p class="type--caption gap-top-200">
-     {{ pd.description }}
+     {{ pd.description | md | safe }}
   </p>
 {% endif %}
 

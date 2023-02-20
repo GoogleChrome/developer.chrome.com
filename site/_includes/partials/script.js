@@ -36,8 +36,21 @@
   ga(
     'set',
     '{{ analytics.dimensions.TRACKING_VERSION }}',
-    '{{ analytics.TRACKING_VERSION }}'
+    '{{ analytics.version }}'
   );
+  try {
+    // For the document speculation rules origin trial
+    // overwrite the navigation type
+    const navEntry = performance.getEntriesByType('navigation')[0];
+    const navigationType =
+      navEntry.type === 'navigate' &&
+      navEntry.deliveryType === 'navigational-prefetch'
+        ? 'navigational-prefetch'
+        : navEntry.type.replace(/_/g, '-');
+    ga('set', '{{ analytics.dimensions.NAVIGATION_TYPE }}', navigationType);
+  } catch (error) {
+    ga('set', '{{ analytics.dimensions.NAVIGATION_TYPE }}', '(not set)');
+  }
 
   ga('send', 'pageview');
 

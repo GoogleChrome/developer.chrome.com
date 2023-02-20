@@ -61,7 +61,7 @@ Esta tabela mostra como interpretar sua pontuação FMP:
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Como melhorar sua pontuação FMP
 
@@ -69,11 +69,11 @@ Veja [Como melhorar a Largest Contentful Paint em seu site](https://web.dev/lcp/
 
 ## Rastreando FMP em dispositivos de usuários reais
 
-Para saber como medir quando a FMP realmente ocorre nos dispositivos dos usuários, consulte a página [Métricas de desempenho centradas no usuário do Google.](https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics) A seção [Acompanhamento de FMP usando elementos hero](https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#tracking_fmp_using_hero_elements) descreve como acessar programaticamente os dados da FCP e enviá-los ao Google Analytics.
+Para saber como medir quando a FMP realmente ocorre nos dispositivos dos usuários, consulte a página [Métricas de desempenho centradas no usuário do Google.](https://web.dev/user-centric-performance-metrics/) A seção [Acompanhamento de FMP usando elementos hero](https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#tracking_fmp_using_hero_elements) descreve como acessar programaticamente os dados da FCP e enviá-los ao Google Analytics.
 
 Consulte [Avaliação do desempenho de carregamento do Google na vida real com navegação e tempo de recursos](https://developers.google.com/web/fundamentals/performance/navigation-and-resource-timing/) para obter mais informações sobre como coletar métricas de usuários reais. A auditoria [Marcas e medidas de tempo do usuário do Lighthouse](/docs/lighthouse/performance/user-timings/) permite que você veja os dados de tempo do usuário em seu relatório.
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## Recursos
 

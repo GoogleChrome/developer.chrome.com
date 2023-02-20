@@ -1,8 +1,9 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "What are themes?"
+seoTitle: "Chrome Extensions: What are themes?"
 date: 2012-09-18
-updated: 2018-09-18
+updated: 2022-07-14
 description: Guidelines on how to create a theme.
 ---
 
@@ -26,6 +27,7 @@ Here is an example [`manifest.json`][3] file for a theme:
 
 ```json
 {
+  "manifest_version": 3,
   "version": "2.6",
   "name": "camo theme",
   "theme": {
@@ -90,9 +92,9 @@ You can alternatively use `-1.0` for any of the HSL values to specify _no change
 
 [1]: /docs/extensions/mv3/linux_hosting/#packaging
 [2]: https://chrome.google.com/webstore/category/themes
-[3]: /docs/extensions/reference/tabs
-[4]: https://cs.chromium.org/search/?q=file:chrome/browser/themes%20symbol:kOverwritableColorTable
-[5]: https://cs.chromium.org/search/?q=file:chrome/browser/themes%20symbol:kPersistingImages$
-[6]: https://cs.chromium.org/search/?q=file:chrome/browser/themes%20symbol:kDisplayProperties$
-[7]: https://cs.chromium.org/search/?q=file:chrome/browser/themes%20symbol:kTintTable$
+[3]: /docs/extensions/mv3/manifest/
+[4]: https://source.chromium.org/search/?q=file:chrome/browser/themes%20symbol:kOverwritableColorTable
+[5]: https://source.chromium.org/search/?q=file:chrome/browser/themes%20symbol:kPersistingImages$
+[6]: https://source.chromium.org/search/?q=file:chrome/browser/themes%20symbol:kDisplayProperties$
+[7]: https://source.chromium.org/search/?q=file:chrome/browser/themes%20symbol:kTintTable$
 [8]: https://bugs.chromium.org/p/chromium/issues/detail?id=1200459

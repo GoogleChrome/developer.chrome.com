@@ -64,7 +64,7 @@ This table shows how to interpret your FCP score:
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## How to improve your FCP score
 
@@ -80,17 +80,17 @@ see Google's [User-centric Performance Metrics][metrics] page.
 The [Tracking FP/FCP][tracking] section describes
 how to programmatically access FCP data and submit it to Google Analytics.
 
-See Google's [Assessing Loading Performance in Real Life with Navigation and Resource Timing](https://developers.google.com/web/fundamentals/performance/navigation-and-resource-timing/)
+See Google's [Assessing Loading Performance in Real Life with Navigation and Resource Timing](https://web.dev/navigation-and-resource-timing/)
 for more on collecting real-user metrics.
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## Resources
 
-- [Source code for **First Contentful Paint** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/first-contentful-paint.js)
+- [Source code for **First Contentful Paint** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/metrics/first-contentful-paint.js)
 - [FCP Metric Guide](https://web.dev/fcp/)
 - [Lighthouse Scoring Guide](/docs/lighthouse/performance/performance-scoring/)
 - [Paint Timing specification](https://w3c.github.io/paint-timing)
 
-[metrics]: https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics
-[tracking]: https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#tracking_fpfcp
+[metrics]: https://web.dev/user-centric-performance-metrics/
+[tracking]: https://web.dev/user-centric-performance-metrics/#important-metrics-to-measure

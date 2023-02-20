@@ -15,7 +15,7 @@ achieved by converting these GIFs to video:
   {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/MTfWMspCIMjREn2rpwlG.png", alt="A screenshot of the Lighthouse Use video formats for animated content audit", width="800", height="235" %}
 </figure>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Why you should replace animated GIFs with video
 
@@ -40,7 +40,7 @@ and to convert it to a video called `my-animation.mp4`.
 ## Create WebM videos
 
 WebM videos are much smaller than MP4 videos,
-but not all browsers support WebM so it makes sense to generate both.
+but not all browsers support WebM, so it makes sense to generate both.
 
 To use FFmpeg to convert `my-animation.gif` to a WebM video,
 run the following command in your console:
@@ -79,6 +79,6 @@ usage when the content is offscreen.
 
 ## Resources
 
-- [Source code for **Use video formats for animated content** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/byte-efficiency/efficient-animated-content.js)
+- [Source code for **Use video formats for animated content** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/byte-efficiency/efficient-animated-content.js)
 - [Replace animated GIFs with video for faster page loads](https://web.dev/replace-gifs-with-videos/)
 - [Replace GIFs with video codelab](https://web.dev/codelab-replace-gifs-with-video/)

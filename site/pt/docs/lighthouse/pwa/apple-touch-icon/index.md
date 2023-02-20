@@ -19,7 +19,7 @@ O [Lighthouse](https://developers.google.com/web/tools/lighthouse/) sinaliza as 
 
 O Lighthouse não verifica se o ícone realmente existe ou se o tamanho dele está correto.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## Como adicionar um ícone Apple Touch
 

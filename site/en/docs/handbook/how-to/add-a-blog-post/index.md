@@ -3,7 +3,13 @@ layout: 'layouts/doc-post.njk'
 title: Add a blog post
 description: 'Add a new post to /blog'
 date: 2021-01-27
+updated: 2022-05-19
 ---
+
+## Before you start
+
+Make sure your content is a blog post, and not reference documentation or an article (or a mixture of all three). 
+See [where to publish](/docs/handbook/where-to-publish) for more information.
 
 ## Clone the sample post
 

@@ -1,14 +1,14 @@
 ---
 layout: 'layouts/doc-post.njk'
-
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2022-04-11
+updated: 2023-01-27
+tags:
+  - extensions-news
 
 # Note: disabling the linter for duplicate headings because this isn't hierarchical and it needs
 # smaller font headings.
-
 ---
 <!--lint disable no-duplicate-headings-->
 <!--lint disable first-heading-level-->
@@ -16,13 +16,101 @@ updated: 2022-04-11
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes.
 
-### Chrome 102: {: #m102-registercontentscripts-main-world }
+### Chrome 110: Change in service worker idle timeout {: #m110-sw-idle }
+
+January 5, 2023
+
+Previously, an extension service worker would frequently shut down at the five minute mark. We've changed this behavior to more closely resemble service worker lifetime's on the web. An extension service worker will be shut down after either thirty seconds of inactivity or if a single activity takes longer than 5 minutes to process. For more information, see [Longer extension service worker lifetimes](/blog/longer-esw-lifetimes).
+
+### Post: Pausing Manifest V2 phase-out
+
+December 9, 2022
+
+The Manifest V2 deprecation timelines are under review and the experiments scheduled for early 2023 are being postponed. For more information, [read the update](https://groups.google.com/u/1/a/chromium.org/g/chromium-extensions/c/zQ77HkGmK9E) in the chromium-extensions Google Group.
+
+### Blog post: More details on the transition to Manifest V3 {: #blog-mv3-transition-details }
+
+September 28, 2022
+
+We have [clarified the Manifest V2 deprecation timeline](/blog/more-mv2-transition/). The [Manifest V2 support timeline](/docs/extensions/mv3/mv2-sunset/) has also been updated to reflect this information.
+
+### Docs update: Known issues when migrating to Manifest V3 {: #known-issues }
+
+September 28, 2022
+
+We've put together a list of [major features currently in development and open bugs](/docs/extensions/mv3/known-issues/). Our goal with this page is to help developers better understand the current state of the platform and what features they can target as they prepare for the future.
+
+### Chrome Web Store: "large promo tile" image upload removed {: #cws-large-promo-tile }
+
+August 17, 2022
+
+Chrome Web Store has removed the "large promo tile" upload UI from the item Store Listing tab in the developer dashboard. This change does not affect the end user experience as these images were not used in the consumer UI. See this chromium-extensions post for additional details.
+
+### Chrome 106: Allow pages on file:// urls to access web accessible resources {: #m106-file-pages }
+
+August 15, 2022
+
+Opaque origins such as sandboxed iframes and dynamic import should also be able to access web accessible resources, according to [crbug.com/1219825#c11](https://crbug.com/1219825#c11).
+
+### Chrome 106: Fixed bug allowing incorrect final arguments on some async API functions {: #m106-async-arg-fix }
+
+August 8, 2022
+
+Previously, Manifest V3 calling async APIs could provide an invalid final argument and Chrome would not error. With this fix Chrome will now correctly error and report that there was no matching signature. Developers are encouraged to check their extensions on Canary for any errors in case they accidentally using incorrect signature for an API call that will be broken by this bug fix.
+
+### Blog post: Chrome Web Store analytics revamp {: #cws-analytics-revamp }
+
+July 28, 2022
+
+Chrome Web Store has a revamped item analytics experience for the Chrome Web Store Developer Dashboard. The new dashboard is easier to understand at a glance and consolidates the most useful information up front. [Read the blog post](/blog/cws-analytics-revamp/) for more information.
+
+### Chrome 105: promises for the Identity API {: #m105-identity-promise }
+
+July 15, 2022
+
+Functions on the [Identity API](/docs/extensions/reference/identity/#method-getAuthToken) now
+support promise based calls. This comes with a slight change to the surface for
+[`identity.getAuthToken()`](/docs/extensions/reference/identity/#method-getAuthToken), where the
+asynchronous return set to a promise based call will have "token" and "grantedScopes" as parameters
+on a single object (as opposed to the callback version receiving them as separate arguments to the
+callback).
+
+### Chrome 104: New favicons API for Manifest V3 {: #m104-favicon-api }
+
+June 08, 2022
+
+ Manifest V3 extensions can now access favicons using a new URL pattern: `chrome-extension://<id>/_favicon/`, where <id> is the ID of your extension. This replaces the Manifest V2 platform's `chrome://favicons` API. See the [Favicon API](/docs/extensions/mv3/favicon/) docs for more information.
+
+### Docs update: Developer trader/non-trader disclosure {: #cws-trader-disclosure-doc }
+
+May 26, 2022
+
+Added the [trader/non-trader developer identification](/docs/webstore/trader-disclosure) that
+informs developers to accurately self-declare their trader/non-trader status.
+
+### Chrome 103: Wasm in Manifest V3 requires wasm-unsafe-eval {: #m103-wasm-csp }
+
+May 12, 2022
+
+Chrome no longer grants extensions `script-src: wasm-unsafe-eval` by default. Extensions that use
+WebAssembly must now explicitly add this directive and value to `extension_pages` in their
+`content_security_policy` declarations.
+
+### Chrome 103: Changing MV3 shortcuts take effect immediately {: #m103-keyboard-shortcut }
+
+April 28, 2022
+
+When changing a Manifest V3 extension's keyboard shortcut on `chrome://extensions/shortcuts`,
+updates are now applied immediately. Previously the extension would have to be reloaded before the
+change would take effect.
+
+### Chrome 102: Dynamic content scripts in main world {: #m102-registercontentscripts-main-world }
 
 April 14, 2022
 
 Dynamically registered content scripts can now specify the
 [world](/docs/extensions/mv3/content_scripts/#isolated_world) that assets will be injected into. See
-[scripting.registerContentScripts()](/docs/extensions/reference/scripting/#method-registerContentScripts)
+[`scripting.registerContentScripts()`](/docs/extensions/reference/scripting/#method-registerContentScripts)
 for details.
 
 ### Chrome 102: New manifest field "optional_host_permissions" {: #m102-optional-host-permissions }
@@ -84,8 +172,15 @@ window could fail.
 
 February 9, 2022
 
+{% Aside 'warning' %}
+
+This change did not fully address the underlying issue. We will share another update when we are
+confident that native messaging ports are behaving as intended.
+
+{% endAside %}
+
 Connecting to a native messaging host using `chrome.runtime.connectNative()` in an extension's
-service worker will keep the service worker alive as long as the port is open.
+service worker should keep the service worker alive as long as the port is open.
 
 ### Chrome 100: omnibox.setDefaultSuggestion() supports promises and callbacks {: #m100-omnibox-setdefault }
 
@@ -109,7 +204,7 @@ January 5, 2022
 
 Content scripts can now specify the `match_origin_as_fallback` key to inject into frames that are
 related to a matching frame, including frames with `about:`, `data:`, `blob:`, and `filesystem:`
-URLs.  See the [content scripts](/docs/extensions/mv3/content_scripts/#injecting-in-related-frames)
+URLs. See the [content scripts](/docs/extensions/mv3/content_scripts/#injecting-in-related-frames)
 documentation for details.
 
 ### Chrome 99: extension service worker support for file: schemes in Canary {: #canary-file-access }
@@ -136,15 +231,15 @@ December 10, 2021
 
 Added [a new reference page](/docs/webstore/review-process) that provides an overview of the Chrome
 Web Store review process and explains how [developer program
-policy](/docs/webstore/program_policies/) enforcement is handled.
+policy](/docs/webstore/program-policies/) enforcement is handled.
 
 ### Chrome 98: scripting.executeScript() and scripting.insertCSS() accept multiple files {: #m98-execute-multiple-files }
 
 November 9, 2021
 
 The Scripting API's [`executeScript()`](/docs/extensions/reference/scripting/#method-executeScript)
-and [`insertCSS()`](/docs/extensions/reference/scripting/#method-insertCSS) methods now accept multiple
-files. Previously these methods required an array with a single file entry.
+and [`insertCSS()`](/docs/extensions/reference/scripting/#method-insertCSS) methods now accept
+multiple files. Previously these methods required an array with a single file entry.
 
 ### Docs update: review violation troubleshooting updates {: #2021-10-27-reivew-troubleshooting }
 
@@ -180,7 +275,6 @@ A number of APIs now support promises in Manifest V3.
 - [`chrome.processes`](/docs/extensions/reference/processes)
 - [`chrome.search`](/docs/extensions/reference/search)
 - [`chrome.sessions`](/docs/extensions/reference/sessions)
-- [`chrome.signedInDevices`](/docs/extensions/reference/signedInDevices)
 - [`chrome.topSites`](/docs/extensions/reference/topSites)
 
 Also, APIs that use the [`ChromeSetting`](/docs/extensions/reference/types/#type-ChromeSetting)
@@ -289,7 +383,7 @@ resources can load an extension's pages and enables the use of low level web pla
 
 June 29, 2021
 
-The Chrome Web Store [Developer Program Policies](/docs/webstore/program_policies) have been updated
+The Chrome Web Store [Developer Program Policies](/docs/webstore/program-policies) have been updated
 with clarifications to the deceptive installation tactics, spam, and repetitive content policies.
 This update also includes a new two step verification requirement to publish on the Chrome Web
 Store. [Read the blog post](/blog/policy-update-2sv/) for more information.

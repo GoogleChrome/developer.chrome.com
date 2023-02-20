@@ -1,10 +1,10 @@
 ---
 layout: layouts/doc-post.njk
-title: Privacy Sandbox とは何ですか？
-subhead: Privacy Sandbox とは、サードパーティ Cookie やその他の追跡メカニズムを使用せずにクロスサイトのユース ケースに対応するための一連の提案のことを指しています。
-description: "何がその中に含まれているのか、どのようにして参加するのか、何のためのものなのか。"
+title: プライバシーサンドボックスとは？
+subhead: プライバシーサンドボックスは、サードパーティ Cookie やその他の追跡の仕組みを使用せずにクロスサイトに関わるユースケースを満たすための一連の提案です。
+description: "提案の内容、貢献方法、およびその目的について。"
 date: 2021-05-18
-updated: 2021-07-29
+updated: 2021-01-25
 authors:
   - samdutton
 ---
@@ -12,95 +12,141 @@ authors:
 
 {% YouTube id='WnCKlNE52tc' %}
 
-## Privacy Sandboxが必要な理由
 
-Privacy Sandboxのイニシアチブには、2つの主要な目的があります。
+## プライバシーサンドボックスが必要な理由
 
-- ユーザーのサイト間での追跡やユーザーに知らせずに行うサイト間での追跡行為を防ぎながら、Webで活用でき、ビジネスモデルをサポートする代替ソリューションを開発すること。
-- 新しいソリューションが導入されたら、サードパーティのCookieのサポートを段階的に廃止すること。
+プライバシーサンドボックスのイニシアチブには、主な目的が 2 つあります。
+* サイト間でのユーザーの追跡やユーザーが認識しないサイト間追跡を行わずに、ウェブのユースケースとビジネスモデルをサポートするための代替ソリューションを開発する。
+* 新しいソリューションが導入されたら、サードパーティ Cookie のサポートを段階的に廃止する。
 
-## Privacy Sandboxの提案とは？
 
-Chromeやその他のエコシステムの利害関係者は、これまでに31件以上の提案を提供してきました。これらの提案は、さまざまな使い方と要件に対応しています。<a href="https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo" data-md-type="link"> W3Cグループの公開リソース</a>で確認できます。
+## プライバシーサンドボックスの提案とは？
 
-Chromeチームによって立案された主な提案を以下の通りです。
+Chrome やその他のエコシステムの関係者は、これまでに 30 件を超える提案を提出し、[W3C グループの公開リソース](https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo)で閲覧できるようになっています。 これらの提案では、多様なユースケースと要件がカバーされています。
 
-### 関連するコンテンツと広告
+主な提案は以下のとおりです。
 
-- [**FLoC**](/docs/privacy-sandbox/floc)：プライバシーを保護する、関心事に基づいた広告とコンテンツの選択：「関連広告」。
-- [**FLEDGE**](/docs/privacy-sandbox/fledge)：リマーケティングのための広告の選択。 [TURTLEDOVE](https://github.com/WICG/turtledove)から生まれたAPI。
+{% Aside %}
+以下の一部の項目は、API の Explainer やその他のリソースにリンクされています。
 
-### 測定とアトリビューション
+今後数か月にわたって、外部コンテンツを要約した内容を、このサイト内に投稿していく予定です。
+{% endAside %}
 
-- [**アトリビューションレポート**](/docs/privacy-sandbox/attribution-reporting)：広告へのクリックまたは広告閲覧とコンバージョンとの関連性を探れます。以前はEvent Conversion Measurement APIとして知られていました。イベントレベルレポートと集計レポートという2種類のレポートを実現します。
 
-### ファーストパーティの保護
+### サイト間プライバシーの境界の強化
 
-- [**SameSite Cookieの変更**](https://web.dev/samesite-cookies-explained/)：クロスサイトCookieを明示的にマークして、サイトを保護できます。
-- [**First-Party Sets**](/docs/privacy-sandbox/first-party-sets)：同じエンティティが所有する関連ドメイン名が同じファーストパーティに属していると名乗れるようにします。
+* [**First-Party Sets**](/docs/privacy-sandbox/first-party-sets): 同じエンティティが所有する関連ドメイン名が、同じファーストパーティに属していることを宣言できるようにします。
+* [**共有ストレージ**](https://github.com/pythagoraskitty/shared-storage): 現在パーティションされていないストレージ（使用廃止中）に依存している多くの正当なユースケースに対応できる汎用の低レベル API の提案。
+* [**CHIPS**](https://github.com/WICG/CHIPS): [First-Party Sets](/docs/privacy-sandbox/first-party-sets)と同様に、この提案では、パーティショニングに関するユースケース、意味を持つ場合にクロスオリジンのインタラクションと共有を有効にする方法、およびこれを安全に保つ方法について説明されています。 サードパーティサービスが Cookie を設定できるようにする一方で、Cookie が最初に設定されたトップレベルサイトのコンテキスト内でのみ読み取れるようにすることを主な目的としています。 パーティショニングされたサードパーティ Cookie は、それを最初に設定したトップレベルサイトに関連付けられるため、他の場所からはアクセスできません。
+* [**Origin-Bound Cookie**](https://www.chromestatus.com/feature/4945698250293248): デフォルトで Cookie をその設定オリジンにバインドし、そのオリジンからのみアクセスできるようにします。
+* [**SameSite Cookie**](https://web.dev/samesite-cookies-explained/): クロスサイト Cookie を明示的にマーキングしてサイトを保護します。
+* [**ストレージパーティショニング**](https://github.com/privacycg/storage-partitioning): `localStorage` または Cookie など、あらゆる形態の[ユーザーエージェントステート](https://github.com/privacycg/storage-partitioning#user-agent-state)を、単一のオリジンまたはサイトではなく、トップレベルサイトと読み込まれるリソースのオリジンによってダブルキーで使用できるようにします。
+* [**Fenced Frame**](https://github.com/shivanigithub/fenced-frame): コンテンツ（広告など）の表示に使用できても、同じページ内の他の要素とは対話できないようにする一種の frame 要素を提供します。
+* [**ネットワークの状態のパーティショニング**](https://github.com/MattMenke2/Explainer---Partition-Network-State/blob/main/README.md): ネットワークの状態を分割し、リソースの再利用を可能にするために照合する必要のあるネットワークパーティションキーをすべてのリクエストに割り当てることによって、ブラウザネットワークリソースがファーストパーティのコンテキスト間で共有されないようにします。
+* [**HTTP キャッシュのパーティショニング**](https://developers.google.com/web/updates/2020/10/http-cache-partitioning): ブラウザの HTTP キャッシュを分割することで、セキュリティとプライバシーを向上させます。
+* [**Federated Credential Management**](https://github.com/wicg/fedcm): ユーザーが明示的に同意しない限り、ユーザーのメールアドレスやその他の識別情報をサードパーティのサービスやウェブサイトに共有することなく、フェデレーション ID をサポートします（ユーザーがサードパーティサービスを通じてウェブサイトにサインインできる場合）。 WebID を使用すると、リダイレクト、ポップアップ、またはサイト間でユーザーの識別と追跡に使用できるサードパーティ Cookie を用いずに、ID 連携によるログインが可能になります。
 
-### 不正検出
 
-- [**Trust Tokens**](/docs/privacy-sandbox/trust-tokens)：不正行為を防ぎ、ボットと人間を区別するために、ユーザーに対するコンテキスト間の信頼を表します。
+### 関連するコンテンツと広告の表示
 
-### データ収集の制限
+* [**Topics API**](/docs/privacy-sandbox/topics): インタレストベース広告を有効にします。 サードパーティ Cookie を必要とせず、サイト間でユーザー のブラウジング行動を追跡する目的でサードパーティが使用できないように設計されています。 Topics API は、ウェブサイトのホスト名を関心のあるトピックにマッピングする仕組みを提案しており、最近のブラウジングアクティビティに基づいてユーザーが現在関心を示している可能性のある大まかなトピックを返す JavaScript API を提供します。
+* [**FLEDGE**](/docs/privacy-sandbox/fledge): リマーケティングとカスタムオーディエンスのユースケースに配信するための広告選択手法で、サードパーティがサイト間でのユーザーのブラウジング行動を追跡するために使用できないように設計されています。  FLEDGE は、[TURTLEDOVE](https://github.com/WICG/turtledove) ファミリーの提案内で、Chromium に最初に実装された実験的機能です。
 
-- [**Privacy Budget**](https://www.youtube.com/watch?v=0STgfjSA6T8)：Webサイトがユーザーのブラウザーまたはデバイスに関する情報を取得できるようにしますが、ブラウザーがサイトがアクセスできる情報の合計量を制限できるようにし、ユーザーを識別できないようにします。
-- [**User-Agent Client Hints**](https://web.dev/user-agent-client-hints/)：[User-Agent](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent)（UA）という文字列は、消極的にユーザーを識別できる重要でかつ処理しにくい[情報源](https://w3c.github.io/fingerprinting-guidance/#passive)です。Client Hintsを使用すると、開発者は、User-Agent文字列からこのデータを解析する必要がなくなり、ユーザーのデバイスまたは条件について必要な情報のみを積極的に要求できます。
-- [**Gnatcatcher**](https://github.com/bslassey/ip-blindness)：IPアドレスを利用して個々のユーザーを識別する機能を制限します。提案には2つの部分があります。[<strong data-md="">Willful IP Blindness</strong>](https://github.com/bslassey/ip-blindness/blob/master/willful_ip_blindness.md)では、WebサイトがIPアドレスをユーザーに関連付けしていないことをブラウザに通知できるようになります。[<strong data-md-type="double_emphasis">Near-path NAT</strong>](https://github.com/bslassey/ip-blindness/blob/master/near_path_nat.md)では、ユーザーのグループが同じプライベートサーバーを介してトラフィックを送信し、実質、サイトホストからIPアドレスを隠せます。Gnatcatcherはまた、不正使用防止などの正当な目的でIPアドレスの情報を必要とするサイトが、認証と監査を条件としてIPアドレス情報を取得できるようにします。
 
-### アイデンティティ
+### デジタル広告の測定
 
-- [**WebID**](https://github.com/WICG/WebID)：ユーザーが明示的に同意しない限り、ユーザーのメールアドレスやその他の識別情報をサードパーティのサービスまたはWebサイトと共有せずに、フェデレーションID（ユーザーがサードパーティのサービスを介してWebサイトにサインインできるもの）をサポートします。WebIDを使用すると、リダイレクト、ポップアップ、またはサイト間でユーザーを識別および追跡するために使用できるサードパーティのCookieを使用せずに、フェデレーションサインインを実現できます。
+* [**アトリビューション レポート**](/docs/privacy-sandbox/attribution-reporting): 広告クリックまたは広告ビューをコンバージョンに関連付けます。 以前は Event Conversion Measurement API と呼ばれていました。 イベントレベルと集計の 2 つのタイプのレポートを有効にします。
 
-## Privacy Sandboxに取り組んでいるのは誰ですか？
 
-2021年頭までに次のような取り組みがありました。
+### 秘密追跡の防止
 
-- Chromeなどが30件以上のPrivacy Sandboxの提案を立案しました。
-- [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants)および[Privacy Community Group](https://www.w3.org/community/privacycg/participants)を含めて、400以上の参加者がW3Cグループに参加して感想を寄せました。
-- Chromeでのテスト用の5つのAPI実装が利用可能になりました。
+* [**User-Agent Client Hints**](https://web.dev/user-agent-client-hints/): [User-Agent](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent)（UA）文字列は、重要なパッシブ[フィンガープリンティング](https://w3c.github.io/fingerprinting-guidance/#passive)サーフェスであり、処理が困難です。 クライアントヒントを使用すると、開発者は、User-Agent 文字列からこのデータを解析することなく、ユーザーのデバイスまたは条件について必要な情報のみを積極的にリクエストすることができます。
+* [**DNS-over-HTTPS**](https://www.cloudflare.com/en-gb/learning/ssl/what-is-https/): の安全なコンテキストを介した [DNS 解決](https://www.cloudflare.com/en-gb/learning/dns/what-is-dns/)のプロトコル。</p></li> 
 
-## APIの実装日
+  * [**Gnatcatcher**](https://github.com/bslassey/ip-blindness): IP アドレスにアクセスして、個々のユーザーを識別する機能を制限します。 この提案には 2 つの機能が含まれます。1 つは、ウェブサイトが IP アドレスとユーザーを関連付けていないことをブラウザに知らせる [**Willful IP Blindness**](https://github.com/bslassey/ip-blindness/blob/master/willful_ip_blindness.md) という機能で、もう 1 つは、ユーザーのグループが同じ秘匿化サーバーを通じてトラフィックを送信することで、サイトホストからユーザーの IP アドレスを効果的に隠す [**Near-path NAT**](https://github.com/bslassey/ip-blindness/blob/master/near_path_nat.md) という機能です。 Gnatcatcher はまた、不正使用防止などの正当な目的で IP アドレスへのアクセスを必要とするサイトが、認証と監査に基づいてアクセスできるようにします。
 
-このサイトの[実装状況ページ](/docs/privacy-sandbox/status/)には、個々のAPIの進捗状況に関する最新情報が記載されています。
+* [**プライバシーバジェット**](https://www.youtube.com/watch?v=0STgfjSA6T8): ユーザーのブラウザまたはデバイスに関してウェブサイトが利用できる情報の量を数量化する方法を探り、サイトがアクセスできる情報に対してブラウザ単位の制限を有効にできる実用的な仕組みを開発します。</ul>
+
+
+
+
+### ウェブのスパムや詐欺への対抗
+
+* [**トラストトークン**](/docs/privacy-sandbox/trust-tokens): ウェブサイトが限定的な情報をブラウジングコンテキストから別のブラウジングコンテキストに（サイト間など）伝達できるようにすることで、パッシブ追跡を行わずに不正行為に対抗できるようにします。
+
+
+
+
+## プライバシーサンドボックスへの取り組み状況
+
+2021年早期までの状況は以下のとおりです。
+
+* 30 件以上のプライバシーサンドボックスの提案が Chrome などから提出されています。
+* 400 人以上が参加しました。これらのユーザーは、W3C グループに参加して、[Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants) や [Privacy Community Group](https://www.w3.org/community/privacycg/participants) などに意見を投稿しています。
+
+* 5 つの API 実装を Chrome でテストできます。
+
+
+
+
+## API の実装時期
+
+各 API の進捗状況は、このサイトの [実装ステータス](/docs/privacy-sandbox/status/) ページでお知らせしています。
+
+
 
 ---
 
-## 本APIに関わってフィードバックを共有しましょう
 
-- **GitHub**：GitHubで提案の説明を読み、説明用の [問題] タブで質問やコメントを投稿しましょう。<br> [説明へのリンク](#explainers)は以下に記載されています。
-- **W3C**：W3C <a href="https://www.w3.org/community/web-adv/" data-md-type="link">Improving Web Advertising Business Group</a>、[Privacy Community Group](https://www.w3.org/community/privacycg/participants)、および[Web Incubator Community Group](https://github.com/WICG)で使い方について話し合い、業界での使用に関してフィードバックを提供できます。
-- **開発者サポート**：[Privacy Sandbox開発者サポートリポジトリ](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)で質問をしたり、ディスカッションに参加したりしましょう。
 
-## 詳細はこちら
 
-### プライバシーサンドボックス提案の説明 {: #explainers }
+## 貢献とフィードバックの共有
 
-API提案の説明にはフィードバックが必要です。特に述べられていない使い方や目標を達成するためのよりプライベートな方法を提案するフィードバックが必要です。各説明の [問題] タブでコメントしたり質問したりできます。
+* **GitHub**: GitHub で提案の Explainer を読み、Explainer の［Issues］タブで質問またはコメントを投稿してください。  
+  [Explainer へのリンク](#explainers) は以下に記載されています。
 
-- [Privacy Budget](https://github.com/bslassey/privacy-budget)
-- [Trust Tokens](https://github.com/dvorak42/trust-token-api)
-- [First-Party Sets](https://github.com/privacycg/first-party-sets)
-- [Gnatcatcher](https://github.com/bslassey/ip-blindness)
-- [集計レポートAPI](https://github.com/csharrison/aggregate-reporting-api)
-- [アトリビューションレポート](https://github.com/csharrison/conversion-measurement-api)
-- [FLoC](https://github.com/jkarlin/floc)
-- [FLEDGE](https://github.com/michaelkleber/turtledove)
+* **W3C**: W3C の [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/)、[Privacy Community Group](https://www.w3.org/community/privacycg/participants)、および [Web Incubator Community Group](https://github.com/WICG) では、ユースケースに関するディスカッションや業界のフィードバックが共有されています。
 
-### Web開発者向けの記事とビデオ
+* **開発者サポート**: [Privacy Sandbox Developer Support リポジトリ](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)では、質問したり、ディスカッションに参加したりできます。
 
-- [Privacy Sandboxを掘り下げる](https://web.dev/digging-into-the-privacy-sandbox)
-- [SameSite Cookieの説明](https://web.dev/samesite-cookies-explained/)
-- [Trust Tokensの入門](https://web.dev/trust-tokens)
-- [広告のコンバージョンを測定するためのよりプライベートな方法](https://web.dev/conversion-measurement/)
-- [FLoC とは](https://web.dev/floc/)
-- [Privacy Budgetの紹介](https://www.youtube.com/watch?v=0STgfjSA6T8)
+
+
+
+## 詳細について
+
+
+
+### プライバシーサンドボックス提案の Explainer {: #explainers }
+
+API 提案の Explainer では、特に欠落しているユースケースや、目標を達成するためのよりプライベートな方法の提案などのフィードバックを求めています。 各 Exapliner の［Issues］タブでコメントや質問を投稿できます。
+
+* [プライバシーバジェット](https://github.com/bslassey/privacy-budget)
+* [トラストトークン](https://github.com/dvorak42/trust-token-api)
+* [First-Party Sets](https://github.com/privacycg/first-party-sets)
+* [Gnatcatcher](https://github.com/bslassey/ip-blindness)
+* [Aggregated Reporting API](https://github.com/csharrison/aggregate-reporting-api)
+* [アトリビューション レポート](https://github.com/csharrison/conversion-measurement-api)
+* [Topics API](https://github.com/jkarlin/topics)
+* [FLEDGE](https://github.com/michaelkleber/turtledove)
+
+
+
+### ウェブ開発者向けの記事と動画
+
+* [プライバシーサンドボックスを掘り下げる](https://web.dev/digging-into-the-privacy-sandbox)
+* [SameSite Cookie の説明](https://web.dev/samesite-cookies-explained/)
+* [トラストトークンの基礎](https://web.dev/trust-tokens)
+* [広告コンバージョンを測定するよりプライベートな方法](https://web.dev/conversion-measurement/)
+* [プライバシーバジェットの紹介](https://www.youtube.com/watch?v=0STgfjSA6T8)
+
+
 
 ### 提案の背後にある原則と概念
 
-- [Webの潜在的なプライバシーモデル](https://github.com/michaelkleber/privacy-model)は、APIの基礎となる主な原則を示しています。
-- [Privacy Sandbox](https://www.chromium.org/Home/chromium-privacy/privacy-sandbox)
-- Privacy Sandboxの概要：[よりプライベートなウェブの構築](https://www.blog.google/products/chrome/building-a-more-private-web/)
-- Google AIブログ：[連合学習：一元化されたトレーニングデータを使用しない協調的な機械学習](https://ai.googleblog.com/2017/04/federated-learning-collaborative.html)
-- [サードパーティCookieの未来について](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
+* 「[A Potential Privacy Model for the Web](https://github.com/michaelkleber/privacy-model)」（ウェブの潜在的なプライバシーモデル）は、API の基盤となるコア原則を説明しています。
+
+* [プライバシーサンドボックス](https://www.chromium.org/Home/chromium-privacy/privacy-sandbox)
+
+* プライバシーサンドボックスの概要: [Building a more private web](https://www.blog.google/products/chrome/building-a-more-private-web/)（よりプライベートなウェブを構築する）
+* Google AI ブログ: [Federated Learning: Collaborative Machine Learning without Centralized Training Data](https://ai.googleblog.com/2017/04/federated-learning-collaborative.html)（連合学習: 一元化されたトレーニングデータを使用しない共同機械学習）
+* [The future of third-party cookies（サードパーティ Cookie の未来）](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)

@@ -30,9 +30,9 @@ Privacy Sandbox API の実装ステータス。注意 API ごとに個別のオ�
 
 ### [すべてのリソース](/docs/privacy-sandbox/status/#all-resources)
 
-- [Attribution Reporting（Conversion Measurement](/docs/privacy-sandbox/attribution-reporting/)
+- [アトリビューション レポート（Conversion Measurement](/docs/privacy-sandbox/attribution-reporting/)
 
-- [Attribution Reporting（Conversion Measurement）の概要](/docs/privacy-sandbox/attribution-reporting-introduction/)
+- [アトリビューション レポート（Conversion Measurement）の概要](/docs/privacy-sandbox/attribution-reporting-introduction/)
 
 - [API のテクニカル Explainer](https://github.com/WICG/conversion-measurement-api/)
 

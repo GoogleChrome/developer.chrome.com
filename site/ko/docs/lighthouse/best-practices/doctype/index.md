@@ -16,7 +16,7 @@ doctype을 지정하면 브라우저가 페이지가 [예기치 않은 방식으
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/l6IEjHdtgCa45QimENjb.png", alt="Lighthouse 감사에서 누락된 문서 유형이 표시됨", width="800", height="76" %}</figure>
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## 문서 유형 선언을 추가하는 방법
 

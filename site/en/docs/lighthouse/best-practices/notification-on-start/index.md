@@ -8,13 +8,13 @@ date: 2019-05-02
 updated: 2019-08-28
 ---
 
-Good notifications are [timely, relevant, and precise](https://developers.google.com/web/fundamentals/push-notifications/).
+Good notifications are [timely, relevant, and precise](https://web.dev/notifications/).
 If your page asks for permission to send notifications on page load,
 those notifications may not be relevant to your users or their needs.
 
 ## How the Lighthouse notification audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) flags pages that request notification permissions on load:
+[Lighthouse](/docs/lighthouse/overview/) flags pages that request notification permissions on load:
 
 <figure>
   {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/eKTrQAAdl1v7pQL0GYRc.png", alt="Lighthouse audit shows page requests notification permissions on load", width="800", height="213" %}
@@ -32,7 +32,7 @@ before running the audit.
 Lighthouse reports the URL and line number
 of each request for notification permission.
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## How to ask for users' notification permissions responsibly
 Remove all calls to `notification.requestPermission()`
@@ -44,5 +44,5 @@ To provide a better user experience:
 
 ## Resources
 
-- [Source code for **Requests the notification permission on page load** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/dobetterweb/notification-on-start.js)
-- [Web Push Notifications: Timely, Relevant, and Precise](https://developers.google.com/web/fundamentals/push-notifications/)
+- [Source code for **Requests the notification permission on page load** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/dobetterweb/notification-on-start.js)
+- [Web Push Notifications: Timely, Relevant, and Precise](https://web.dev/notifications/)

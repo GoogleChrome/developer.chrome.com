@@ -16,7 +16,7 @@ your page more mobile-friendly and accessible.
 
 ## How the Lighthouse tap targets audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) flags pages
+[Lighthouse](/docs/lighthouse/overview/) flags pages
 with tap targets that are too small or too close together:
 
 <figure class="w-figure">
@@ -46,7 +46,7 @@ table with three columns:
   </table>
 </div>
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% Partial 'lighthouse-seo/scoring.njk' %}
 
 ## How to fix your tap targets
 
@@ -69,4 +69,4 @@ tap targets.
 ## Resources
 
 - [Accessible tap targets](https://web.dev/accessible-tap-targets/): more information on how to ensure your tap targets are accessible by all users.
-- [Source code for **Tap targets are not sized appropriately** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/seo/tap-targets.js)
+- [Source code for **Tap targets are not sized appropriately** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/seo/tap-targets.js)

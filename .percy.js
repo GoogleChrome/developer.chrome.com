@@ -1,34 +1,39 @@
+const SNAPSHOTS = [
+  '/en/index.html',
+  '/en/docs/handbook/content-types/blog-landing/index.html',
+  '/en/docs/handbook/content-types/docs-landing/index.html',
+  '/en/docs/handbook/content-types/doc-post/index.html',
+  '/en/docs/handbook/content-types/landing/index.html',
+  '/en/docs/handbook/content-types/meet-the-team/index.html',
+];
+
 module.exports = {
-  'version': 1,
-  'snapshot': {
-    'widths': [375, 865, 1280, 1600],
-    'percy-css': `
-      iframe, .cookie-banner {
-        display: none !important;
-      }
-    `,
-    // We need this for pages that use the masonry layout which requires
-    // runtime JS to layout correctly.
-    'enable-javascript': true,
+  version: 2,
+  snapshot: {
+    widths: [
+      375,
+      865,
+      1280,
+      1600
+    ],
+    percyCSS: '\n' +
+      '      iframe, .cookie-banner {\n' +
+      '        display: none !important;\n' +
+      '      }\n' +
+      '    ',
+    enableJavaScript: true
   },
-  'static-snapshots': {
-    'path': 'dist',
-    'snapshot-files': [
-      'index.html',
-      'releases/index.html',
-      'docs/index.html',
-      'docs/native-client/index.html',
-      'blog/welcome/index.html',
-      'docs/extensions/what-are-extensions/index.html',
-      'docs/extensions/reference/action/index.html',
-      'docs/handbook/components/index.html'
-    ].join(',')
+  discovery: {
+    disableCache: true,
+    networkIdleTimeout: 250,
+    concurrency: 15,
   },
-  'agent': {
-    'asset-discovery': {
-      'network-idle-timeout': 250, // ms
-      'page-pool-size-min': 5, // pages
-      'page-pool-size-max': 20 // pages
-    }
+  static: {
+    baseUrl: '/',
+    include: SNAPSHOTS,
+    exclude: [
+      // Prevent percy to snapshot all index.html files in ./dist dir
+      ({ name }) => !SNAPSHOTS.includes(name)
+    ],
   }
-};
+}

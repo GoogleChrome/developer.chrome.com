@@ -5,7 +5,7 @@ description: >
   How to convert ArrayBuffer to and from String
 authors:
   - renatomangini
-date: 2012-06-14 
+date: 2012-06-14
 updated: 2019-02-09
 
 ---
@@ -16,7 +16,7 @@ number of browsers now support it natively. The information in this article
 still applies for browsers that don’t yet support the Encoding API, but the
 recommended approach is to use the official API wherever possible. See [Easier
 ArrayBuffer <-> String conversion with the Encoding
-API](https://developers.google.com/web/updates/2014/08/Easier-ArrayBuffer-String-conversion-with-the-Encoding-API)
+API](/blog/easier-arraybuffer-string-conversion-with-the-encoding-api)
 for more details.
 {% endAside %}
 

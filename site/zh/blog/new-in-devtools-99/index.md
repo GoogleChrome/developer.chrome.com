@@ -17,7 +17,7 @@ tags:
 
 *感谢 [流浪大法师 @liuliangsir](https://github.com/liuliangsir) 提供的翻译*。
 
-{% include 'partials/devtools/zh/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='zFVWeOKZBHs' %}
 
@@ -239,5 +239,5 @@ Chromium 议题: [1284245](https://crbug.com/1284245), [1284995](https://crbug.c
 - 在 DevTools 里面切换 [浅色/深色主题](/docs/devtools/customize/dark-theme/)，不需要重新加载 DevTools。([1278738](https://crbug.com/1278738))
 
 
-{% include 'partials/devtools/zh/reach-out.md' %}
-{% include 'partials/devtools/zh/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

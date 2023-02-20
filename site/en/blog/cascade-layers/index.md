@@ -80,7 +80,7 @@ Ultimately, all the links are either green or pink. This is because: while `.lin
 
 ## Organizing layers
 
-You can organize layers directly on the page, as shown above, or you can organize them at the top of a file. 
+You can organize layers directly on the page, as shown above, or you can organize them at the top of a file.
 
 Layer order is established by the first time each layer name appears in your code.
 
@@ -187,7 +187,7 @@ Layers can also be nested within other layers. The following example comes from 
 In the above code snippet, you can access `framework.default`, using a `.` as a signifier of the `default` layer being nested within `framework`. You can also write this in a more shorthand format:
 
 ```css
-@layer.default {
+@layer framework.default {
   p { margin-block: 0.75em }
 }
 ```
@@ -227,7 +227,7 @@ This will lead to all of the `a` tags in your file getting this override. It’s
 
 ### Rule 2: cascade layers are ordered behind non-layered CSS
 
-It’s important to note that a layered CSS file will *not* override non-layered CSS. This was an intentional decision to make it easier to introduce layers in a more sensible way to work with your existing codebase. Using a `reset.css` file, for example, is a good starting point and use case for cascade layers. 
+It’s important to note that a layered CSS file will *not* override non-layered CSS. This was an intentional decision to make it easier to introduce layers in a more sensible way to work with your existing codebase. Using a `reset.css` file, for example, is a good starting point and use case for cascade layers.
 
 ### Rule 3: `!important` inverts cascade specificity
 
@@ -247,7 +247,7 @@ This can be in a list, in a layer block, or in an import. If you put `@layer` af
 
 With cascade layers, a less-specific selector (like `a`) will override a more-specific selector (like `.link`) if that less-specific selector is on a more specific layer. Consider the following:
 
-`a` in `layer(components)` would override `.pink` in `layer(utilities)` if: `@layer utilities, components` was specified. While an intentional part of the API, this could be confusing and frustrating if you’re not expecting it. 
+`a` in `layer(components)` would override `.pink` in `layer(utilities)` if: `@layer utilities, components` was specified. While an intentional part of the API, this could be confusing and frustrating if you’re not expecting it.
 
 So if you’re writing utility classes, always include them as a higher-order layer than the components you intend to override them with. You might think “I just added this `.pink` class to change the color and it's not being applied”.
 

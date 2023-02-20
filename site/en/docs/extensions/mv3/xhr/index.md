@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Cross-origin XMLHttpRequest"
+seoTitle: "Chrome Extensions: Cross-origin XMLHttpRequest"
 date: 2012-09-18
 updated: 2020-03-09
 description: How to implement cross-origin XHR in your Chrome Extension.
@@ -224,4 +225,4 @@ be careful when explicitly adding either the `connect-src` or `default-src` dire
 [9]: https://en.wikipedia.org/wiki/Cross-site_scripting
 [10]: /docs/extensions/mv3/security#content_scripts
 [11]: https://en.wikipedia.org/wiki/Man-in-the-middle_attack
-[12]: /docs/extensions/mv3/contentSecurityPolicy
+[12]: /docs/extensions/mv3/intro/mv3-migration/#content-security-policy

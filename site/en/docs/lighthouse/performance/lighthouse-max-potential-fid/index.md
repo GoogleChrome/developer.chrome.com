@@ -2,11 +2,15 @@
 layout: 'layouts/doc-post.njk'
 title: Max Potential First Input Delay
 description: |
-  Learn about Lighthouse's Max Potential First Input Delay metric and
+  Learn about Lighthouse's deprecated Max Potential First Input Delay metric and
   how to measure and optimize it.
 date: 2019-05-02
 updated: 2019-10-16
 ---
+
+{% Aside 'caution' %}
+Max Potential First Input Delay was deprecated in Lighthouse 6.0. Moving forward, consider using [Total Blocking Time](https://web.dev/lcp/) in the lab and [First Input Delay](https://web.dev/fid/) and [Interaction to Next Paint](https://web.dev/inp/) in the field.
+{% endAside %}
 
 Max Potential First Input Delay (FID) is one of the metrics
 tracked in the **Performance** section of the Lighthouse report.
@@ -68,7 +72,7 @@ This table shows how to interpret your Max Potential FID score:
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## How to improve your Max Potential FID score
 
@@ -93,23 +97,23 @@ it's more inherently variable than typical performance metrics.
 See [Analyzing and reporting on FID data][analysis] for guidance
 about how to evaluate the FID data you collect.
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## Resources
 
-- [Source code for **Max Potential First Input Delay** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/max-potential-fid.js)
+- [Source code for **Max Potential First Input Delay** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/metrics/max-potential-fid.js)
 - [First Input Delay][fid]
 - [Time to Interactive](http://web.dev/tti/)
 - [Are long JavaScript tasks delaying your Time to Interactive?](https://web.dev/long-tasks-devtools/)
 - [First paint and first contentful paint][fcp]
 - [How To Think About Speed Tools][tools]
 
-[analysis]: https://developers.google.com/web/updates/2018/05/first-input-delay#analyzing_and_reporting_on_fid_data
-[fid]: https://developers.google.com/web/updates/2018/05/first-input-delay
+[analysis]: https://web.dev/fid/#analyzing-and-reporting-on-fid-data
+[fid]: https://web.dev/fid/
 [tti]: https://web.dev/interactive/#how-to-improve-your-tti-score
-[fcp]: https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#first_paint_and_first_contentful_paint
-[fid]: https://developers.google.com/web/updates/2018/05/first-input-delay
-[rum]: https://developers.google.com/web/fundamentals/performance/speed-tools#field_data
-[lab]: https://developers.google.com/web/fundamentals/performance/speed-tools#lab_data
+[fcp]: https://web.dev/user-centric-performance-metrics/#important-metrics-to-measure
+[fid]: https://web.dev/fid/
+[rum]: https://web.dev/speed-tools/#field-data
+[lab]: https://web.dev/speed-tools/#lab-data
 [longtask]: https://web.dev/long-tasks-devtools/#what-are-long-tasks
-[tools]: https://developers.google.com/web/fundamentals/performance/speed-tools
+[tools]: https://web.dev/speed-tools/

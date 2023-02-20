@@ -55,7 +55,7 @@ A tabela abaixo mostra como interpretar sua pontuação TTI:
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Como melhorar sua pontuação TTI
 
@@ -68,11 +68,11 @@ Essas duas auditorias de diagnóstico fornecem oportunidades adicionais para red
 
 ## Rastreando a TTI em dispositivos de usuários reais
 
-Para saber como medir quando a TTI ocorre nos dispositivos dos seus usuários, consulte a página Google [Métricas de desempenho centradas no usuário](https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics). A [seção Tracking TTI](https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#tracking_tti) descreve como acessar programaticamente os dados do TTI e enviá-los ao Google Analytics.
+Para saber como medir quando a TTI ocorre nos dispositivos dos seus usuários, consulte a página Google [Métricas de desempenho centradas no usuário](https://web.dev/user-centric-performance-metrics/). A [seção Tracking TTI](https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#tracking_tti) descreve como acessar programaticamente os dados do TTI e enviá-los ao Google Analytics.
 
 {% Aside %} TTI pode ser difícil de rastrear em campo. Rastrear o [First Input Delay](https://developers.google.com/web/updates/2018/05/first-input-delay) pode ser um bom proxy para TTI. {% endAside %}
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## Recursos
 

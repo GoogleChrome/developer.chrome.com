@@ -1,12 +1,11 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Extending DevTools"
+seoTitle: "Extending DevTools with Chrome Extensions"
 date: 2012-09-17
-updated: 2020-08-25
+updated: 2023-02-06
 description: How to create a Chrome Extension that adds functionality to Chrome DevTools.
 ---
-
-{% include 'partials/extensions/mv2page-in-mv3.md' %}
 
 ## Overview {: #overview }
 
@@ -17,14 +16,15 @@ DevTools extensions have access to an additional set of DevTools-specific extens
 - [`devtools.inspectedWindow`][api-inspectedwindow]
 - [`devtools.network`][api-network]
 - [`devtools.panels`][api-panels]
+- [`devtools.recorder` (preview feature)][api-recorder]
 
-A DevTools extension is structured like any other extension: it can have a background page, content
+A DevTools extension is structured like any other extension: it can have a service worker, content
 scripts, and other items. In addition, each DevTools extension has a DevTools page, which has access
 to the DevTools APIs.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/kcLMpTY6qtez03TVSqt4.png",
        alt="Architecture diagram showing DevTools page communicating with the
-       inspected window and the background page. The background page is shown
+       inspected window and the service worker. The service worker is shown
        communicating with the content scripts and accessing extension APIs.
        The DevTools page has access to the DevTools APIs, for example, creating panels.",
        height="556", width="522" %}
@@ -39,10 +39,11 @@ DevTools APIs and a limited set of extension APIs. Specifically, the DevTools pa
 - Get information about the inspected window and evaluate code in the inspected window using the
   [`devtools.inspectedWindow`][api-inspectedwindow] APIs.
 - Get information about network requests using the [`devtools.network`][api-network] APIs.
+- Extend the [Recorder panel](/docs/devtools/recorder/) using the [`devtools.recorder`][api-recorder] APIs (preview feature).
 
 The DevTools page cannot use most of the extensions APIs directly. It has access to the same subset
 of the [`extension`][api-extension] and [`runtime`][api-runtime] APIs that a content script has
-access to. Like a content script, a DevTools page can communicate with the background page using
+access to. Like a content script, a DevTools page can communicate with the service worker using
 [Message Passing][doc-message-passing]. For an example, see [Injecting a Content
 Script][header-injecting].
 
@@ -67,8 +68,7 @@ DevTools window using the [`devtools.panels`][api-panels] API.
 
 {% Aside %}
 
-The `devtools_page` field must point to an HTML page. This differs from the `background` field, used
-for specifying a background page, which lets you specify JavaScript files directly. The DevTools
+The `devtools_page` field must point to an HTML page. The DevTools
 page must be local to your extension, so it is best to specify it using a relative URL.
 
 {% endAside %}
@@ -271,16 +271,16 @@ extensionPanel.onShown.addListener(function (extPanelWindow) {
 
 ### Messaging from content scripts to the DevTools page {: #content-script-to-devtools }
 
-Messaging between the DevTools page and content scripts is indirect, by way of the background page.
+Messaging between the DevTools page and content scripts is indirect, by way of the serice worker.
 
-When sending a message _to_ a content script, the background page can use the
+When sending a message _to_ a content script, the service worker can use the
 [`tabs.sendMessage()`][api-scripting-sendmessage] method, which directs a message to the content
 scripts in a specific tab, as shown in [Injecting a Content Script][header-injecting].
 
 When sending a message _from_ a content script, there is no ready-made method to deliver a message
 to the correct DevTools page instance associated with the current tab. As a workaround, you can have
-the DevTools page establish a long-lived connection with the background page, and have the
-background page keep a map of tab IDs to connections, so it can route each message to the correct
+the DevTools page establish a long-lived connection with the service worker, and have the
+service worker keep a map of tab IDs to connections, so it can route each message to the correct
 connection.
 
 ```js
@@ -338,7 +338,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 The DevTools page (or panel or sidebar pane) establishes the connection like this:
 
 ```js
-// Create a connection to the background page
+// Create a connection to the service worker
 var backgroundPageConnection = chrome.runtime.connect({
     name: "panel"
 });
@@ -384,7 +384,7 @@ window.addEventListener('message', function(event) {
 
   // Only accept messages that we know are ours
   if (typeof message !== 'object' || message === null ||
-      !message.source === 'my-devtools-extension') {
+      message.source !== 'my-devtools-extension') {
     return;
   }
 
@@ -401,7 +401,7 @@ here][gh-devtools-messaging].
 ### Detecting when DevTools opens and closes {: #detecting-open-close }
 
 If your extension needs to track whether the DevTools window is open, you can add an
-[onConnect][api-runtime-onconnect] listener to the background page, and call
+[onConnect][api-runtime-onconnect] listener to the service worker, and call
 [connect()][api-runtime-connect] from the DevTools page. Since each tab can have its own DevTools
 window open, you may receive multiple connect events. To track whether any DevTools window is open,
 you need to count the connect and disconnect events as shown below:
@@ -431,7 +431,7 @@ The DevTools page creates a connection like this:
 ```js
 // devtools.js
 
-// Create a connection to the background page
+// Create a connection to the service worker
 var backgroundPageConnection = chrome.runtime.connect({
     name: "devtools-page"
 });
@@ -455,7 +455,8 @@ Browse the source of these DevTools extension examples:
 
 ## More information {: #more }
 
-For information on the standard APIs that extensions can use, see [chrome.\* APIs][api-index].
+For information on the standard APIs that extensions can use, see [chrome.\* APIs][api-index] and [web
+APIs][mdn-web-apis].
 
 [Give us feedback!][group-devtools] Your comments and suggestions help us improve the APIs.
 
@@ -474,6 +475,7 @@ You can find examples that use DevTools APIs in [Samples][doc-samples].
 [api-panels-setobject]: /docs/extensions/reference/devtools_panels#method-ExtensionSidebarPane-setObject
 [api-panels-setpane]: /docs/extensions/reference/devtools_panels#method-ExtensionSidebarPane-setPage
 [api-panels]: /docs/extensions/reference/devtools_panels
+[api-recorder]: /docs/extensions/reference/devtools_recorder
 [api-runtime-connect]: /docs/extensions/reference/runtime#method-connect
 [api-runtime-onconnect]: /docs/extensions/reference/runtime#event-onConnect
 [api-runtime-sendmessage]: /docs/extensions/reference/runtime#method-sendMessage
@@ -493,3 +495,5 @@ You can find examples that use DevTools APIs in [Samples][doc-samples].
 [header-injecting]: #injecting
 [header-selected-element]: #selected-element
 [mdn-postmessage]: https://developer.mozilla.org/docs/Web/API/Window.postMessage
+[mdn-web-apis]: https://developer.mozilla.org/docs/Web/API
+

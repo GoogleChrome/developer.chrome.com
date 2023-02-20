@@ -11,6 +11,8 @@ description: |
    Many operating systems offer the ability to launch applications automatically when the user logs in. This ability is now available for installed web applications.
 hero: image/SeARmcA1EicLXagFnVOe0ou9cqK2/e5ATqM7ge5Y3Sxdqf1T8.jpg
 alt: Laptop, coffee, and stationary tools on desk.
+tags:
+  - progressive-web-apps
 ---
 Run on login lets the user choose which applications start
 automatically when they first log into their computer. This ability has been
@@ -20,7 +22,7 @@ platform specific applications. Now it is available for installed web applicatio
 ## Save users time
 
 Users want to automatically run a set of applications they always use.
-Ttypical examples include high-engagement applications like email clients, chat apps,
+Typical examples include high-engagement applications like email clients, chat apps,
 monitoring dashboards, and real-time data display apps, to name just a few.
 
 Auto-starting these apps at login streamlines the user experience by saving

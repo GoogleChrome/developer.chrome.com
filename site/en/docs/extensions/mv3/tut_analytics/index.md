@@ -1,13 +1,13 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Tutorial: Google analytics"
+seoTitle: "Chrome Extensions Tutorial: Google analytics"
 date: 2012-09-18
-updated: 2021-10-06
+updated: 2023-02-06
 description: >
     Step-by-step instructions on how to track usage of your Extension with Google Analytics.
 ---
 
-{% include 'partials/extensions/mv2page-in-mv3.md' %}
 
 This tutorial demonstrates using Google Analytics to track the usage of your extension.
 
@@ -163,4 +163,4 @@ An example extension that uses these techniques is available in the [samples rep
 [6]: /docs/extensions/mv3/tabs
 [7]: /docs/extensions/mv3/tut_debugging
 [8]: https://developers.google.com/analytics/devguides/collection/gajs/eventTrackerGuide
-[9]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/tutorials/analytics/
+[9]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/_archive/mv2/tutorials/analytics/

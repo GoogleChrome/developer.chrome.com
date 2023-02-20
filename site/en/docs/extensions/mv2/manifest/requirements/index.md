@@ -6,6 +6,8 @@ updated: 2018-04-26
 description: Reference documentation for the requirements property of manifest.json.
 ---
 
+{% Partial 'extensions/mv2-legacy-page.md' %}
+
 Technologies required by the app or extension. Hosting sites such as the Chrome Web Store may use
 this list to dissuade users from installing apps or extensions that will not work on their computer.
 Supported requirements currently include "3D" and "plugins"; additional requirements checks may be

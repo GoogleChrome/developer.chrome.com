@@ -86,7 +86,7 @@ Chrome에서 API를 실험하는 경우 **현재** 구현된 모든 기능에 �
 - 이벤트 수준 보고서, 클릭만:
 
     - [라이브 데모](https://goo.gle/sppi-devrel-eventlevel)
-    - 필요에 따라 [분기하고 사용자 지정](https://github.com/GoogleChromeLabs/trust-safety-demo/tree/main/conversion-measurement#fork-and-customize)할 수 있는 이 데모의 [소스 코드](https://github.com/GoogleChromeLabs/trust-safety-demo/tree/main/conversion-measurement)
+    - 필요에 따라 [분기하고 사용자 지정](https://github.com/GoogleChromeLabs/trust-safety-demo/tree/main/attribution-reporting#fork-and-customize)할 수 있는 이 데모의 [소스 코드](https://github.com/GoogleChromeLabs/trust-safety-demo/tree/main/attribution-reporting)
 
 ## 사용 사례 및 기능
 

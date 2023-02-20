@@ -8,7 +8,7 @@ description: >
   model to improve the performance of your Chrome Extension.
 ---
 
-{% include 'partials/extensions/mv2-legacy-page.md' %}
+{% Partial 'extensions/mv2-legacy-page.md' %}
 
 Implementing non-persistent background scripts will greatly reduce the resource cost of your
 extension. Most extension functionality can be supported by an event based background script. Only
@@ -16,7 +16,7 @@ under [rare circumstances][1] should an extension have a persistent background, 
 consume system resources and can cause a strain on lower-powered devices.
 
 Enhance an extension's performance by migrating a persistent background script to an event-based
-non-persistent model.
+non-persistent model. By default, `"persistent"` is set to true.
 
 ## Designate persistence as false {: #persistence }
 

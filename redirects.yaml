@@ -13,10 +13,16 @@
 # WARNING! Redirects DO NOT take priority over static content.
 # For example, if you try to redirect "/foo" but the site contains a static file
 # "/foo/index.html", the static file will always win.
+#
+# For anchors that let you redirect from #section to #section,
+# see developer.chrome.com/docs/handbook/how-to/create-anchor-redirects/.
 
 redirects:
 
 # Simple redirects
+
+- from: /blog/navigation-preload/
+  to: https://web.dev/navigation-preload/
 
 - from: /activeTab
   to: /docs/extensions/reference/activeTab
@@ -32,6 +38,23 @@ redirects:
 
 - from: /docs/extensions/mv3/background_pages
   to: /docs/extensions/mv3/service_workers
+
+- from: /docs/extensions/mv3/overview
+  to: /docs/extensions/mv3/architecture-overview
+
+- from: /blog/fedcm-origin-trial
+  to: /docs/privacy-sandbox/fedcm
+
+- from: /docs/privacy-sandbox/attribution-reporting/summary-reports/
+  to: /docs/privacy-sandbox/summary-reports/
+
+- from: /android
+  to: /docs/android
+
+# FYI (simeonv): Until https://github.com/samthor/redirects-yaml/pull/2 is merged, the hash on the
+# redirect destination will be ignored
+- from: /docs/extensions/mv3/manifest/content_security_policy
+  to: /docs/extensions/mv3/intro/mv3-migration/#content-security-policy
 
 - from: /docs/multidevice/android/customtabs/
   to: /docs/android/custom-tabs/overview
@@ -54,6 +77,12 @@ redirects:
 - from: /blog/wasm-debugging-2020/
   to: /blog/wasm-debugging/
 
+- from: /docs/privacy-sandbox/fledge-best-practices/
+  to: /docs/privacy-sandbox/fledge-api/latency/
+
+- from: /blog/fledge-api/
+  to: /docs/privacy-sandbox/fledge-api/
+
 - from: /docs/privacy-sandbox/attribution-reporting-introduction/
   to: /docs/privacy-sandbox/attribution-reporting/
 
@@ -65,6 +94,18 @@ redirects:
 
 - from: /docs/privacy-sandbox/attribution-reporting-event-introduction/
   to: /docs/privacy-sandbox/attribution-reporting-experiment/
+
+- from: /docs/privacy-sandbox/attribution-reporting-changes-january-2022/
+  to: /blog/attribution-reporting-jan-2022-updates/
+
+- from: /blog/capture-handle/
+  to: /docs/web-platform/capture-handle/
+
+- from: /blog/shared-element-transitions-for-spas/
+  to: /docs/web-platform/view-transitions/
+
+- from: /docs/privacy-sandbox/gnatcatcher/
+  to: /docs/privacy-sandbox/ip-protection/
 
 # Removal of /overview pages
 
@@ -79,6 +120,15 @@ redirects:
 
 - from: /multidevice/webview/overview/
   to: /multidevice/webview/
+
+- from: /blog/origin-trials/
+  to: /docs/web-platform/origin-trials/
+
+- from: /blog/origin-trial-troubleshooting/
+  to: /docs/web-platform/origin-trial-troubleshooting/
+
+- from: /blog/third-party-origin-trials/
+  to: /docs/web-platform/third-party-origin-trials/
 
 # CWS payments/apps purge
 - from: /docs/webstore/hosted_apps
@@ -119,7 +169,7 @@ redirects:
 # The new site doesn't break out Platform Apps APIs, but instead just locates them at the bottom of
 # the main Extensions reference page.
 - from: /apps/api_index
-  to: /docs/extensions/reference/#platform-apis
+  to: /docs/extensions/reference/#platform_apps_apis
 
 - from: /apps/app_codelab1_setup
   to: /docs/apps/app_codelab_intro
@@ -143,6 +193,39 @@ redirects:
   to: /docs/apps/about_apps
 
 # DevTools redirects
+
+- from: /docs/devtools/evaluate-performance/
+  to: /docs/devtools/performance/
+
+- from: /docs/devtools/evaluate-performance/reference/
+  to: /docs/devtools/performance/reference/
+
+- from: /docs/devtools/evaluate-performance/performance-reference/
+  to: /docs/devtools/performance/timeline-reference/
+
+- from: /docs/devtools/device-mode/geolocation/
+  to: /docs/devtools/sensors/#geolocation
+
+- from: /docs/devtools/device-mode/orientation/
+  to: /docs/devtools/sensors/#orientation
+
+- from: /docs/devtools/css/overrides/
+  to: /docs/devtools/css/issues/
+
+- from: /docs/devtools/speed/get-started
+  to: /docs/devtools/lighthouse
+
+- from: /docs/devtools/console/live-expressions/docs/devtools/accessibility/focus/
+  to: /docs/devtools/accessibility/focus/
+
+- from: /docs/devtools/changes/blog/new-in-devtools-65/
+  to: /blog/new-in-devtools-65/
+
+- from: /docs/devtools/panels/sources
+  to: /docs/devtools/sources
+
+- from: /docs/devtools/javascript/sources
+  to: /docs/devtools/sources
 
 - from: /docs/devtools/css/print-preview
   to: /docs/devtools/rendering
@@ -184,7 +267,7 @@ redirects:
   to: /docs/devtools/javascript/reference/#format
 
 - from: /docs/devtools/manage-data/local-storage/
-  to: /docs/devtools/#storage
+  to: /docs/devtools/storage/localstorage/
 
 - from: /docs/devtools/network/network-conditions/
   to: /docs/devtools/network/reference/
@@ -275,6 +358,9 @@ redirects:
 - from: /docs/extensions/mv2/migrating_to_manifest_v3
   to: /docs/extensions/mv3/mv3-migration-checklist
 
+- from: /docs/extensions/mv3/intro/mv3-migration
+  to: /docs/extensions/mv3/mv3-migration
+
 - from: /home
   to: /
 
@@ -302,7 +388,10 @@ redirects:
   to: /docs/webstore/one_time_payments/
 
 - from: /webstore/intl/en/program_policies
-  to: /docs/webstore/program_policies/
+  to: /docs/webstore/program-policies/
+
+- from: /docs/webstore/program_policies/
+  to: /docs/webstore/program-policies/
 
 - from: /webview/overview
   to: /docs/multidevice/android/overview/
@@ -345,6 +434,17 @@ redirects:
     - /docs/apps/manifest/...
   else: /docs/extensions/...
 
+- from: /docs/extensions/...
+  try:
+    - /docs/extensions/reference/...
+    - /docs/extensions/mv3/manifest/...
+    - /docs/extensions/mv3/...
+    - /docs/extensions/mv2/manifest/...
+    - /docs/extensions/mv2/...
+    - /docs/apps/...
+    - /docs/apps/manifest/...
+  else: /docs/extensions/...
+
 - from: /manifest/...
   try:
     - /docs/extensions/mv3/manifest/...
@@ -356,8 +456,8 @@ redirects:
 - from: /native-client/...
   to: /docs/native-client/...
 
-- from: /privacy-sandbox/...
-  to: /docs/privacy-sandbox/...
+# - from: /privacy-sandbox/...
+#  to: /docs/privacy-sandbox/...
 
 - from: /webstore/...
   to: /docs/webstore/...
@@ -368,6 +468,132 @@ redirects:
 - from: /webstore/webstore/...
   to: /docs/webstore/...
 
+# Redirecting blog posts that were moved to articles
+
+- from: /blog/blinkng/...
+  to: /articles/blinkng/...
+
+- from: /articles/faster-wasm-debugging/...
+  to: /blog/faster-wasm-debugging/...
+
+- from: /articles/performance-insights/...
+  to: /blog/performance-insights/...
+
+- from: /blog/hidden-until-found/...
+  to: /articles/hidden-until-found/...
+
+- from: /blog/inert/...
+  to: /articles/inert/...
+
+- from: /blog/layoutng/...
+  to: /articles/layoutng/...
+
+- from: /blog/renderingng-architecture/...
+  to: /articles/renderingng-architecture/...
+
+- from: /blog/renderingng-data-structures/...
+  to: /articles/renderingng-data-structures/...
+
+- from: /blog/renderingng/...
+  to: /articles/renderingng/...
+
+- from: /blog/videong/...
+  to: /articles/videong/...
+
+- from: /blog/inside-oct-2022/...
+  to: /blog/insider-oct-2022/...
+
+# Redirecting the intersection observer post from d.c.c. to web.dev
+- from: /intersectionobserver/
+  to: https://web.dev/intersectionobserver/
+
+# Renaming of Pop-up API attribute from popup to popover
+- from: /docs/web-platform/popup-api/
+  to: /docs/web-platform/popover-api/
+
+- from: /docs/web-platform/popup-api/hidepopup-method/
+  to: /docs/web-platform/popover-api/hidepopover-method/
+
+- from: /docs/web-platform/popup-api/showpopup-method/
+  to: /docs/web-platform/popover-api/showpopover-method/
+
+- from: /docs/web-platform/popup-api/popup-attribute/
+  to: /docs/web-platform/popover-api/popover-attribute/
+
+- from: /docs/web-platform/popup-api/popup-property/
+  to: /docs/web-platform/popover-api/popover-property/
+
+- from: /docs/web-platform/popup-api/popuphide-event/
+  to: /docs/web-platform/popover-api/popoverhide-event/
+
+- from: /docs/web-platform/popup-api/popuphidetarget-attribute/
+  to: /docs/web-platform/popover-api/popoverhidetarget-attribute/
+
+- from: /docs/web-platform/popup-api/popuphidetarget-property/
+  to: /docs/web-platform/popover-api/popoverhidetarget-property/
+
+- from: /docs/web-platform/popup-api/popupshow-event/
+  to: /docs/web-platform/popover-api/popovershow-event/
+
+- from: /docs/web-platform/popup-api/popupshowtarget-attribute/
+  to: /docs/web-platform/popover-api/popovershowtarget-attribute/
+
+- from: /docs/web-platform/popup-api/popupshowtarget-property/
+  to: /docs/web-platform/popover-api/popovershowtarget-property/
+
+- from: /docs/web-platform/popup-api/popuptoggletarget-attribute/
+  to: /docs/web-platform/popover-api/popovertoggletarget-attribute/
+
+- from: /docs/web-platform/popup-api/popuptoggletarget-property/
+  to: /docs/web-platform/popover-api/popovertoggletarget-property/
+
+# Renaming of pop-up-api to popover-api
+
+- from: /docs/web-platform/pop-up-api/
+  to: /docs/web-platform/popover-api/
+
+- from: /docs/web-platform/pop-up-api/hidepopover-method/
+  to: /docs/web-platform/popover-api/hidepopover-method/
+
+- from: /docs/web-platform/pop-up-api/showpopover-method/
+  to: /docs/web-platform/popover-api/showpopover-method/
+
+- from: /docs/web-platform/pop-up-api/popover-attribute/
+  to: /docs/web-platform/popover-api/popover-attribute/
+
+- from: /docs/web-platform/pop-up-api/popover-property/
+  to: /docs/web-platform/popover-api/popover-property/
+
+- from: /docs/web-platform/pop-up-api/popoverhide-event/
+  to: /docs/web-platform/popover-api/popoverhide-event/
+
+- from: /docs/web-platform/pop-up-api/popoverhidetarget-attribute/
+  to: /docs/web-platform/popover-api/popoverhidetarget-attribute/
+
+- from: /docs/web-platform/pop-up-api/popoverhidetarget-property/
+  to: /docs/web-platform/popover-api/popoverhidetarget-property/
+
+- from: /docs/web-platform/pop-up-api/popovershow-event/
+  to: /docs/web-platform/popover-api/popovershow-event/
+
+- from: /docs/web-platform/pop-up-api/popovershowtarget-attribute/
+  to: /docs/web-platform/popover-api/popovershowtarget-attribute/
+
+- from: /docs/web-platform/pop-up-api/popovershowtarget-property/
+  to: /docs/web-platform/popover-api/popovershowtarget-property/
+
+- from: /docs/web-platform/pop-up-api/popovertoggletarget-attribute/
+  to: /docs/web-platform/popover-api/popovertoggletarget-attribute/
+
+- from: /docs/web-platform/pop-up-api/popovertoggletarget-property/
+  to: /docs/web-platform/popover-api/popovertoggletarget-property/
+
+# Lighthouse redirects
+- from: /docs/lighthouse/best-practices/password-inputs-can-be-pasted-into/
+  to: /docs/lighthouse/best-practices/paste-preventing-inputs/
+
+# Generic
+
 - from: /...
   try:
     - /docs/extensions/...
@@ -377,9 +603,22 @@ redirects:
     - /docs/apps/manifest/...
     - /docs/apps/...
 
-# Temporary Chrome Dev Insider collection page placeholder
-- from: /insider/
-  to: /blog/insider-april-2022/
+- from: /insider-july-2022/
+  to: /blog/insider-july-2022/
+
+- from: /insider/...
+  to: /tags/insider/
+
+# Tag Redirects
+
+- from: /tags/removals/
+  to: /tags/deprecations-removals/
+
+- from: /tags/deprecations/
+  to: /tags/deprecations-removals/
+
+- from: /tags/extensions/
+  to: /tags/extensions-news/
 
 # DO NOT REMOVE. This seems pointless but we rewrite "." to "_" inside our server's code, so if the
 # URL is fine for all but incorrect syntax, we'll fix it up.

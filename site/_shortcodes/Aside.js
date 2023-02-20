@@ -1,5 +1,8 @@
 const fs = require('fs');
+const path = require('path');
 const {i18n} = require('../_filters/i18n');
+
+const defaultLocale = 'en';
 
 /**
  * Load SVG icons to be injected into the page.
@@ -7,8 +10,12 @@ const {i18n} = require('../_filters/i18n');
  * load.
  * @return {string} The SVG file contents.
  */
-const loadIcon = name =>
-  fs.readFileSync(`site/_includes/icons/${name}.svg`, 'utf-8');
+function loadIcon(name) {
+  const iconPath = path.resolve(
+    path.join(__dirname, `../_includes/icons/${name}.svg`)
+  );
+  return fs.readFileSync(iconPath, 'utf-8');
+}
 
 const icons = {
   caution: loadIcon('error'),
@@ -27,19 +34,8 @@ const icons = {
  * @param {string} [type='note'] An aside style type
  */
 function Aside(content, type = 'note') {
-  // Infer the page locale using this.page.
-  // The locale is used to display localized text next to the icon
-  // e.g. 'Caution' -> 'Precaución'
-  let locale;
-  // @ts-ignore
-  if (this.page && this.page.filePathStem) {
-    // filePath stem looks like '/en/docs/webstore/hosted_apps/index'
-    // @ts-ignore
-    locale = this.page.filePathStem.split('/')[1];
-  } else {
-    locale = 'en';
-  }
-
+  // @ts-ignore: `this` has type of `any`
+  const locale = this.ctx.locale || defaultLocale;
   let text;
   if (type !== 'note') {
     text = i18n(`i18n.common.${type}`, locale);

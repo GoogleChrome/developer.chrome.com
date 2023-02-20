@@ -2,7 +2,7 @@
 layout: 'layouts/blog-post.njk'
 title: Experimenting with First Input Delay in the Chrome UX Report
 date: 2018-07-10
-updated: 2018-07-10
+updated: 2022-07-19
 authors:
   - rviscomi
 description: Announcing the addition of the First Input Delay (FID) experimental metric to the Chrome User Experience Report.
@@ -11,7 +11,7 @@ description: Announcing the addition of the First Input Delay (FID) experimental
 
 
 The goal of the
-[Chrome User Experience Report](https://developers.google.com/web/tools/chrome-user-experience-report/)
+[Chrome User Experience Report](/docs/crux/)
 is to help the web community understand the distribution and evolution of real
 user performance. To date, our focus has been on paint and page load metrics
 like First Contentful Paint (FCP) and Onload (OL), which have helped us
@@ -32,7 +32,7 @@ origin trial within a separate "experimental" namespace.
 ## How FID is measured
 
 So what exactly is FID? Here’s how it’s defined in the
-[First Input Delay](https://developers.google.com/web/updates/2018/05/first-input-delay)
+[First Input Delay](https://web.dev/fid/)
 announcement blog post:
 
 > First Input Delay (FID) measures the time from when a user first interacts
@@ -43,7 +43,7 @@ announcement blog post:
 <figure>
   {% YouTube id="5mo8JfIi3HI" %}
 	<figcaption class="clearfix align-center">
-			Animation showing how a busy main thread delays the response to a 
+			Animation showing how a busy main thread delays the response to a
 			user interaction.
 	</figcaption>
 </figure>
@@ -63,7 +63,7 @@ demonstrate how to extract these insights from the Chrome UX Report on BigQuery.
 
 Let’s start by querying for the percent of fast FID experiences for [developers.google.com](/).
 We can define a fast experience as one in which FID is less than 100 ms.
-Per [RAIL recommendations](https://developers.google.com/web/fundamentals/performance/rail#ux),
+Per [RAIL recommendations](https://web.dev/rail/#focus-on-the-user),
 if the delay is 100 ms or better, it should feel instantaneous to the user.
 
 ```sql
@@ -207,7 +207,7 @@ of interactivity experiences. Using this baseline, we can observe its change in
 future releases or benchmark individual origins. If you’d like to start
 collecting FID in your own site’s field measurements, sign up for the origin
 trial by going to [bit.ly/event-timing-ot](http://bit.ly/event-timing-ot)
-and select the Event Timing feature. And of course, [start exploring](https://developers.google.com/web/tools/chrome-user-experience-report/getting-started)
+and select the Event Timing feature. And of course, [start exploring](/docs/crux/)
 the dataset for interesting insights into the state of interactivity on the web.
 This is still an experimental metric, so please give us your feedback and share
 your analysis on the [Chrome UX Report discussion group](https://groups.google.com/a/chromium.org/forum/#!forum/chrome-ux-report)

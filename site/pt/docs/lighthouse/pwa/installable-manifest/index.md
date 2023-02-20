@@ -30,7 +30,7 @@ Se o manifesto de uma página não incluir as seguintes propriedades, ele falhar
 
 {% Aside 'caution' %} Um manifesto de aplicativo da web é _necessário_ para que seu aplicativo seja instalável, mas não é _suficiente_. Para saber como atender a todos os requisitos de instalabilidade, consulte a postagem [Descubra o que é preciso para ser instalável.](https://web.dev/progressive-web-apps/) {% endAside %}
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## Como tornar seu PWA instalável
 

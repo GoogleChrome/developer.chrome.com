@@ -63,7 +63,7 @@ This table shows how to interpret your mobile Speed Index score:
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## How to improve your Speed Index score
 
@@ -76,11 +76,11 @@ should have a particularly big impact:
 - [Reduce JavaScript execution time](/docs/lighthouse/performance/bootup-time/)
 - [Ensure text remains visible during webfont load](/docs/lighthouse/performance/font-display/)
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## Resources
 
-- [Source code for **Speed Index** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/speed-index.js)
+- [Source code for **Speed Index** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/metrics/speed-index.js)
 - [Lighthouse Scoring Guide](/docs/lighthouse/performance/performance-scoring/)
 - [Speedline](https://github.com/paulirish/speedline)
 - [WebPagetest Speed Index](https://github.com/WPO-Foundation/webpagetest-docs/blob/main/src/metrics/SpeedIndex.md)

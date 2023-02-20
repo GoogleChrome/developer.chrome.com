@@ -2,22 +2,21 @@
 layout: 'layouts/doc-post.njk'
 title: 'User-Agent reduction'
 subhead: >
-  Limit browser data shared to remove sensitive information and reduce fingerprinting.
+  Limit passively shared browser data to reduce the volume of sensitive information which leads to fingerprinting.
 description: >
-  The reduced User-Agent shares a limited set of data to improve user privacy and reduce opportunities for tracking. With User-Agent Client Hints, developers can request more details in a managed and audited process.
+  Limit passively shared browser data to reduce the volume of sensitive information which leads to fingerprinting.
 date: 2021-11-09
-updated: 2022-02-11
+updated: 2022-07-28
 authors:
   - alexandrawhite
 ---
 
 ## Implementation status
 
-*  [In origin trial](/blog/user-agent-reduction-origin-trial/) Chrome 95 to 100
-*  [In deprecation trial](/blog/user-agent-reduction-deprecation-trial/) Chrome 100 to Chrome 112
-*  [Register for the trial](/origintrials/#/view_trial/-7123568710593282047)
+*  [Origin trial](/blog/user-agent-reduction-origin-trial/) Chrome 95 to 103
+*  [Deprecation trial](/blog/user-agent-reduction-deprecation-trial/) Chrome 103 to Chrome 112
 *  [Chrome DevTools integration](/blog/new-in-devtools-89/#ua-ch)
-*  [UA-CH Chrome platform status](https://chromestatus.com/feature/5995832180473856)
+*  Review the [UA-CH Chrome platform status](https://chromestatus.com/feature/5995832180473856)
 
 ## What is User-Agent reduction?
 
@@ -82,28 +81,29 @@ break (though it will return less data), and you'll need to migrate to UA-CH
 if your site [needs specific information
 information](https://wicg.github.io/ua-client-hints/#use-cases).
 
-## How do the reduced UA and UA-CH work?
+## How does the reduced UA and UA-CH work?
 
 Here is a brief example of how the reduced User-Agent string and UA-CH work.
 For a more in-depth example, review [Improving user privacy and developer
 experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/#example-exchange).
 
-1. A user opens the browser and enters `example.com` into the address bar.
+A user opens the browser and enters `example.com` into the address bar:
+
 1. The browser sends a request to load the webpage.
    1. The browser includes the `User-Agent` header with the reduced User-Agent
       string. For example:
       `User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML,
-      like Gecko) Chrome/93.0.0.0 Mobile Safari/537.36`
-   1. The browser includes that same information in the default User-Agent Client
-      Hint headers. For example:
+      like Gecko) Chrome/98.0.0.0 Mobile Safari/537.36`
+   1. The browser includes that same information in the default User-Agent
+      Client Hint headers. For example:
       ```powershell
-      Sec-CH-UA: "Chrome"; v="93"
+      Sec-CH-UA: "Chrome"; v="98"
       Sec-CH-UA-Mobile: ?1
       Sec-CH-UA-Platform: "Android"
       ```
 1. The server can ask the browser to send additional client hints with the
-   `Accept-CH` response header. For example:
-   `Accept-CH: Sec-CH-UA-Arch`
+   `Accept-CH` response header, such as the device model. For example:
+   `Accept-CH: Sec-CH-UA, Sec-CH-UA-Mobile, Sec-CH-UA-Platform, Sec-CH-UA-Model`
 1. The browser applies policies and user configuration to determine what data
    is allowed to return to the server in subsequent request headers. For
    example:
@@ -111,7 +111,7 @@ experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints
    Sec-CH-UA: "Chrome"; v="93"
    Sec-CH-UA-Mobile: ?1
    Sec-CH-UA-Platform: "Android"
-   Sec-CH-UA-Arch: "arm"
+   Sec-CH-UA-Model: "Pixel 2"
    ```
 
 ### Critical Client Hints
@@ -145,8 +145,7 @@ for more information.
 
 ## How do I prepare for reduced UA? {: #prepare-and-test}
 
-As we get closer to scaled availability of the reduced User-Agent string in
-Chrome Stable, [review your site
+As we get closer to scaled availability of the reduced User-Agent string, [review your site
 code](https://web.dev/migrate-to-ua-ch/#audit-collection-and-use-of-user-agent-data)
 for instances and uses of the User-Agent string. If your site relies on parsing
 the User-Agent string to read the device model, platform version, or full
@@ -206,12 +205,59 @@ sites. When you register for the Chrome origin trial, select the "third-party
 matching" option to allow the script to be injected when your site is embedded
 on third-parties.
 
+## Support for Client Hints and critical hints
+
+There are three [default Client Hints](https://web.dev/migrate-to-ua-ch/#are-you-only-using-basic-user-agent-data)
+returned to the server, including browser name and major version, a boolean
+which indicates if the browser is on a mobile device, and the operating system
+name. These are sent after the TLS handshake. These are already available and
+supported in your browser.
+
+However, there may be some times when you need to retrieve critical information
+for your site to render.
+
+### Optimize critical hints
+
+{% Aside 'warning' %}
+
+Using critical hints should be rare, so make sure you've reviewed the reason
+for implementation. The question to ask yourself is, do you require extended
+data on the initial page load? Will your page fail to load without this
+information?
+
+{% endAside %}
+
+A Transport Layer Security protocol (TLS) handshake is the first step to create
+a secure connection between the browser and web server. Without an
+intervention, the
+[Critical-CH response header](https://www.ietf.org/archive/id/draft-davidben-http-client-hint-reliability-03.html#name-the-critical-ch-response-he)
+was designed to tell the browser to immediately retry the request if the first
+one was sent without a critical hint.
+
+<figure>
+  {% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/Ce0SL7g881Kjoa0VyhUc.png", alt="Sequence diagram for Client Hints with critical hints", width="800", height="939" %}
+  <figcaption>When a critical hint is requested by the server, the client will retry sending the first request for the webpage with the critical hint. In this example, the hint for <code>Sec-CH-UA-Model</code> is requested twice: once as a Client Hint with <code>Accept-CH</code> and again as a critical hint with <code>Critical-CH</code>.</figcaption>
+</figure>
+
+To optimize critical hints ([`Critical-CH` header](https://groups.google.com/a/chromium.org/g/blink-dev/c/zPYGbULXn7o/m/q3OJ2kZAAQAJ)),
+you must intercept this handshake and provide a model for Client Hints. These
+steps may be complex, and require advanced knowledge.
+
+The [`ACCEPT_CH` HTTP/2 and HTTP/3 frames](https://datatracker.ietf.org/doc/html/draft-davidben-http-client-hint-reliability-02#section-4),
+combined with the [TLS ALPS extension](https://github.com/vasilvv/tls-alps),
+are a connection-level optimization to deliver the server’s Client Hint
+preferences in time for the first HTTP request. These require complex
+configuration, and we recommend only using this for truly critical information.
+BoringSSL (a fork of OpenSSL) helps you work with Google’s experimental
+features in Chromium. At this time, ALPS is only
+[implemented in BoringSSL](https://commondatastorage.googleapis.com/chromium-boringssl-docs/ssl.h.html#Application-layer-protocol-settings).
+
+If you need to use critical hints, refer to our guide on
+[critical hints reliability and optimization](https://docs.google.com/document/d/1HQd3vosjFls2jp6DwpkNMUN4CBdmmxZJJz0WhhcqOPw/edit?usp=sharing).
+
 ## Engage and share feedback
 
-*  **Origin trial**:
-   [Register for the Chrome origin trial](/origintrials/#/view_trial/-7123568710593282047)
-   to opt-in for the reduced user-agent, and
-   [share your feedback](https://github.com/abeyad/user-agent-reduction/issues).
+*  **Origin trial**: [Share your feedback](https://github.com/miketaylr/user-agent-reduction/issues).
 *  **Demo**: Try our [demo of User-Agent reduction](https://uar-ot.glitch.me/).
 *  **GitHub**: Read the [UA-CH proposal](https://github.com/WICG/ua-client-hints),
    [raise questions and follow discussion](https://github.com/WICG/ua-client-hints/issues).
@@ -220,7 +266,6 @@ on third-parties.
 
 ## Find out more
 
-*  [Origin trial and schedule](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html)
 *  [Improving user privacy and developer experience](https://web.dev/user-agent-client-hints/):
    an overview for web developers
 *  [Migrate from UA string to UA-CH](https://web.dev/migrate-to-ua-ch/): a
@@ -229,4 +274,3 @@ on third-parties.
   snippets to transform the current user-agent string to the reduced format for
   testing
 *  [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
-

@@ -57,7 +57,7 @@ The table below shows how to interpret your LCP score:
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## How to improve your LCP score
 
@@ -65,11 +65,11 @@ See [How to improve Largest Contentful Paint on your site][improve].
 
 ## Resources
 
-- [Source code for **Largest Contentful Paint** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/largest-contentful-paint.js)
+- [Source code for **Largest Contentful Paint** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/metrics/largest-contentful-paint.js)
 - [Largest Contentful Paint](https://web.dev/lcp/)
 - [Largest Contentful Paint API](https://wicg.github.io/largest-contentful-paint/)
 - [New in Chrome 77: Largest Contentful Paint][launch]
 
 [definition]: https://web.dev/lcp/#what-is-lcp
-[launch]: https://developers.google.com/web/updates/2019/09/nic77#lcp
+[launch]: /blog/new-in-chrome-77/#lcp
 [improve]: https://web.dev/lcp/#how-to-improve-lcp

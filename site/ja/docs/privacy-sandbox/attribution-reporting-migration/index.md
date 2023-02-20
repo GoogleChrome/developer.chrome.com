@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: コンバージョン測定APIからアトリビューションレポートAPIへの移行ガイド（Chrome 92）
+title: コンバージョン測定APIから Attribution Reporting API への移行ガイド（Chrome 92）
 subhead: |2-
 
   Conversion Measurement（コンバージョン測定）APIがChrome92で変更されます。

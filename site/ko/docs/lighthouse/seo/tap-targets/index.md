@@ -37,7 +37,7 @@ updated: 2019-08-21
   </table>
 </div>
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% Partial 'lighthouse-seo/scoring.njk' %}
 
 ## 탭 대상을 수정하는 방법
 

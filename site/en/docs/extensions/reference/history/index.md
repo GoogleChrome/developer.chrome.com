@@ -1,5 +1,6 @@
 ---
 api: history
+has_warning: This permission <a href="/docs/extensions/mv3/permission_warnings/#permissions_with_warnings">triggers a warning</a>.
 ---
 
 ## Manifest
@@ -33,13 +34,13 @@ The following table describes each transition type.
 For examples of using this API, see the [history sample directory][8] and the [history API test
 directory][9]. For other examples and for help in viewing the source code, see [Samples][10].
 
-[1]: /docs/extensions/mv2/tabs
+[1]: /docs/extensions/mv3/manifest
 [2]: #tt_generated
 [3]: #tt_manual_subframe
 [4]: #tt_typed
 [5]: #tt_keyword
 [6]: #tt_keyword_generated
 [7]: #tt_keyword
-[8]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/history/
+[8]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/_archive/mv2/api/history/
 [9]: https://chromium.googlesource.com/chromium/src/+/master/chrome/test/data/extensions/api_test/history/
 [10]: /docs/extensions/mv2/samples

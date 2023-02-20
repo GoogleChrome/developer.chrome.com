@@ -1,0 +1,229 @@
+---
+layout: 'layouts/landing.njk'
+title: 'Program Policies'
+description: 'Guiding principles for Chrome Web Store Extension reviews.'
+sections:
+  principles:
+    - title: Be Safe
+      color: blue
+      description: We strive to make the Chrome Web Store a safe and trusted environment for developers and users. This means that we will remove extensions that pose security threats, access data beyond what is necessary to implement their functions, appear to take advantage of users, encourage harm or hate speech, or otherwise abuse the Store system and network.
+    - title: Be Honest
+      color: red
+      description: Building and maintaining user trust in the Chrome Web Store is paramount, which means we set a high bar for developer transparency. All functionalities of extensions should be clearly disclosed to the user, with no surprises. This means we will remove extensions which appear to deceive or mislead users, enable dishonest behavior, or utilize clickbaity functionality to artificially grow their distribution.
+    - title: Be Useful
+      color: green
+      description: Extensions in the Store must provide experiences that are educational, informative, entertaining, inclusive, and that result in a positive user experience. We will remove extensions that appear to provide little to no utility to users, or do not provide the reasonably expected functionality. Chrome will also strive to provide useful tools to developers to help encourage innovation.
+  best_practices:
+    - url: /docs/webstore/program-policies/best-practices/
+  safe_ecosystem:
+    - url: /docs/webstore/program-policies/explicit-material/
+    - url: /docs/webstore/program-policies/malicious-and-prohibited/
+    - url: /docs/webstore/program-policies/hate-and-violence/
+    - url: /docs/webstore/program-policies/regulated-goods-and-services/
+  user_privacy:
+    - url: /docs/webstore/program-policies/privacy/
+    - url: /docs/webstore/program-policies/limited-use/
+    - url: /docs/webstore/program-policies/permissions/
+    - url: /docs/webstore/program-policies/disclosure-requirements/
+    - url: /docs/webstore/program-policies/data-handling/
+  user_privacy_related:
+    - url: /webstore/user_data/
+      title: User Data FAQ
+  marketing:
+    - url: /docs/webstore/program-policies/impersonation-and-intellectual-property/
+    - url: /docs/webstore/program-policies/deceptive-installation-tactics/
+    - url: /docs/webstore/program-policies/accepting-payment/
+    - url: /docs/webstore/program-policies/unexpected-behavior/
+    - url: /docs/webstore/program-policies/ads/
+    - url: /docs/webstore/program-policies/affiliate-ads/
+  marketing_related:
+    - url: /webstore/deceptive_installation_tactics/
+      title: Deceptive Installation Tactics FAQ
+    - url: /webstore/affiliate-ads-faq/
+      title: Affiliate Ads FAQ
+  quality:
+    - url: /docs/webstore/program-policies/featured-products/
+    - url: /docs/webstore/program-policies/spam-and-abuse/
+    - url: /docs/webstore/program-policies/quality-guidelines/
+    - url: /docs/webstore/program-policies/listing-requirements/
+    - url: /docs/webstore/program-policies/minimum-functionality/
+    - url: /docs/webstore/program-policies/chrome-apps/
+  quality_related:
+    - url: /docs/webstore/faq/#faq-gen-24
+      title: Product Ranking Info
+    - url: /webstore/spam-faq/
+      title: Spam policy FAQ
+    - url: /docs/extensions/mv3/single_purpose/
+      title: Extensions quality guidelines FAQ
+  tech_reqs:
+    - url: /docs/webstore/program-policies/code-readability/
+    - url: /docs/webstore/program-policies/api-use/
+    - url: /docs/webstore/program-policies/mv3-requirements/
+    - url: /docs/webstore/program-policies/two-step-verification/
+  enforcement:
+    - url: /docs/webstore/program-policies/enforcement/
+    - url: /docs/webstore/program-policies/notification-and-appeals/
+    - url: /docs/webstore/program-policies/repeat-abuse/
+---
+
+{% from 'macros/cards/hero-card-wide.njk' import heroCardWide with context %}
+{% from 'macros/cards/blog-card.njk' import blogCard with context %}
+{% from 'macros/icon.njk' import icon with context %}
+{% from 'macros/landing-section.njk' import landingSection with context %}
+{% from 'macros/landing-section-expanded.njk' import landingSectionExpanded with context %}
+{% from 'macros/landing-deco.njk' import landingDeco with context %}
+
+{# All Sections #}
+
+{{ heroCardWide(
+  'Program Policies',
+  "The Chrome Web Store is committed to providing a safe and secure environment for users, built on trust and transparency. For these reasons, the Chrome Web Store requires all developers to comply with both the Developer Program Policies listed below, and the Developer Agreement. When your extension is reviewed by Google, these policies act as a guiding principle for those reviews. These policies apply to the entire user experience of your application/extension/theme – including any marketing materials, user generated content, ads, landing pages, etc – unless otherwise noted.",
+  "Documentation",
+  "/docs/webstore",
+  "",
+  "",
+  "blue",
+  "image/WlD8wC6g8khYWPJUsQceQkhXSlv1/TxmTDYQwpo6c34N0wuCq.svg"
+  )
+}}
+
+{# Custom Landing Section 1 #}
+
+<div class="landing-section rounded-lg width-full hairline display-grid gap-top-500">
+  {{ landingDeco(
+    'Chrome Web Store Principles',
+    'The Chrome Web Store is a premier platform where users can discover and install extensions that are high-quality, trusted, and safe. Chrome strives to reflect the diversity of its developers and users, but will robustly curate the products in the store to ensure a positive experience.  As we enhance and improve upon the Chrome Web Store experience, we are guided by the following core principles:',
+    'yellow',
+    "image/VbsHyyQopiec0718rMq2kTE1hke2/YSCPsUMCff5dlVbBCf7b.svg",
+    "Shield.",
+    250,
+    124,
+    "image/VbsHyyQopiec0718rMq2kTE1hke2/YSCPsUMCff5dlVbBCf7b.svg"
+     ) }}
+</div>
+
+{# Custom Landing Section 2 #}
+
+<div class="landing-section landing-section--boxes rounded-lg width-full display-grid gap-top-500">
+  {% for item in sections.principles %}
+    <div class="rounded-lg pad-300 md:pad-400 width-full hairline display-flex direction-column">
+      <h2 class="type--h3 color-{{item.color}}-medium">
+        {{ item.title | md | safe }}
+      </h2>
+      <p class="flex-1">{{ item.description | md | safe }}</p>
+    </div>
+  {% endfor %}
+</div>
+
+{{ landingSection(
+  'Best Practices and Guidelines',
+  "To help ensure the best experience for both users and developers, please review the below guidelines before submitting your extension to the Chrome Web Store. Following all of these guidelines doesn’t mean your extension will be automatically approved, but they will help you to avoid common mistakes that often delay the review process.",
+  sections.best_practices,
+  'blue',
+  'top-3',
+  false,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/QDyL1Otpv6Id7sDTconF.svg",
+  "Graduation cap icon.",
+  250,
+  124,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/QDyL1Otpv6Id7sDTconF.svg"
+  )
+}}
+
+{{ landingSection(
+  'Fostering a Safe Ecosystem',
+  "The Chrome Web Store is committed to providing a safe and secure environment for users. Extensions which contain objectionable content or place users at risk are strictly prohibited.",
+  sections.safe_ecosystem,
+  'green',
+  'top-4',
+  true,
+  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/2xzRN81jadQ55f1WFkWH.svg',
+  'Waving hand icon',
+  250,
+  124,
+  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kdPhkPXy7R0mmcJaKyoi.svg'
+  )
+}}
+
+{{ landingSectionExpanded(
+  'Protecting User Privacy',
+  "We want to make sure users feel confident that the products they find in the Chrome Web Store are safe, transparent, and prioritize user privacy. Integrating these considerations within your product's design is critical.",
+  sections.user_privacy,
+  'yellow',
+  'top-3',
+  true,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/tCE6xv0QdnKWNSEJQUbA.svg",
+  "Fence icon.",
+  250,
+  124,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/tCE6xv0QdnKWNSEJQUbA.svg",
+  "More documentation",
+  sections.user_privacy_related
+  )
+}}
+
+{{ landingSectionExpanded(
+  'Ensuring Responsible Marketing and Monetization',
+  "Extensions must be marketed responsibly. When developers copy someone else's work or deceive users, it hurts users and the developer community. Don't rely on misleading behavior or unfair use of other people's work.",
+  sections.marketing,
+  'green',
+  'top-3',
+  true,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/cT27jgN3G7aYl9ftM0lt.svg",
+  "Analytics icon.",
+  250,
+  124,
+  "image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kdPhkPXy7R0mmcJaKyoi.svg",
+  "More documentation",
+  sections.marketing_related
+  )
+}}
+
+{{ landingSectionExpanded(
+  'Building Quality Products',
+  "Developers are critical partners in maintaining a great user experience in the Chrome Web Store. Your extensions should include features, content, and UI that provide unique value to the Chrome Web Store. At a minimum, extensions should provide users with a basic degree of functionality and a respectful user experience. We may reject extensions unless they provide a unique, high-quality experience. Spamming the store may lead to your removal as a developer from the Chrome web Store.",
+  sections.quality,
+  'blue',
+  'top-3',
+  true,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/pfYmfQtnte4ZKFE7r9nE.svg",
+  "People icon.",
+  250,
+  124,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/pfYmfQtnte4ZKFE7r9nE.svg",
+  "More documentation",
+  sections.quality_related
+  )
+}}
+
+{{ landingSection(
+  'Technical Requirements',
+  "In addition to compliance with the policies set out elsewhere in the Developer Program Policies, extensions must follow certain technical guidelines to ensure a positive user experience.",
+  sections.tech_reqs,
+  'yellow',
+  'top-4',
+  true,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/YSCPsUMCff5dlVbBCf7b.svg",
+  "Shield.",
+  250,
+  124,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/YSCPsUMCff5dlVbBCf7b.svg"
+  )
+}}
+
+{{ landingSection(
+  'Enforcement',
+  "Learn more about how our policies apply, how we enforce our policies, and how you can manage policy violations.",
+  sections.enforcement,
+  'green',
+  'top-3',
+  true,
+  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/n9vOrhzQ2QEwhI2MQ7G3.svg',
+  'Docs folder icon',
+  250,
+  124,
+  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/cE1je8n7zbHoDRq6KoGa.svg'
+  )
+}}
+
+

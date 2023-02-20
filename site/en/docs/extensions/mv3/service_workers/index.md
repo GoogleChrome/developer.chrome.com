@@ -1,26 +1,27 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manage events with service workers"
+seoTitle: "Chrome Extensions: Manage events with service workers"
 date: 2012-09-17
-updated: 2018-05-01
-description: How to respond to browser triggers (events) from a Chrome Extension background script.
+updated: 2023-01-06
+description: How to respond to browser triggers (events) from a Chrome Extension service worker.
 ---
 
 Extensions are event-based programs used to modify or enhance the Chrome browsing experience. Events
 are browser triggers, such as navigating to a new page, removing a bookmark, or closing a tab.
-Extensions monitor these events using scripts in their background [service
-worker][doc-sw-migration], which then react with specified instructions.
+Extensions monitor these events using scripts in an [extension service
+worker][doc-sw-migration] (previously called a background script), which then executes specified instructions.
 
-A background service worker is loaded when it is needed, and unloaded when it goes idle. Some
-examples include:
+An extension service worker is loaded when it is needed, and unloaded when it goes dormant.
+Examples include:
 
 - The extension is first installed or updated to a new version.
-- The background page was listening for an event, and the event is dispatched.
-- A content script or other extension [sends a message.][1]
-- Another view in the extension, such as a popup, calls [`runtime.getBackgroundPage`][2].
+- An extension event is dispatched.
+- A content script or other extension [sends a message][1].
 
-Once it has been loaded, an extension's service worker generally keeps running as long as it is
-performing an action, such as calling a Chrome API or issuing a network request. 
+Once it has been loaded, an extension service worker generally runs as long as it is
+actively receiving events. The browser will stop the service worker once it idles for
+a short period (30 seconds).
 
 {% Aside %}
 
@@ -29,12 +30,11 @@ loaded.
 
 {% endAside %}
 
-Effective background scripts stay dormant until an event they are listening for fires, react with
-specified instructions, then unload.
+Extension service workers stay dormant until an event they are listening for fires. At which point, they execute the appropriate event listener, idle, then unload.
 
-## Register background scripts {: #manifest }
+## Register the service worker {: #manifest }
 
-Extensions register their background service workers in the [manifest][3] under the `"background"`
+Extensions register their service worker in the [manifest][3] under the `"background"`
 field. This field uses the `"service_worker"` key, which specifies a single JavaScript file.
 
 ```json/3-6
@@ -47,12 +47,6 @@ field. This field uses the `"service_worker"` key, which specifies a single Java
   ...
 }
 ```
-
-{% Aside %}
-
-The script used for `"service_worker"` must be located in your extension's root directory.
-
-{% endAside %}
 
 You can optionally specify an extra field of `"type": "module"` to include the service worker as an
 ES Module, which allows you to `import` further code. See [ES modules in service workers][sw-module]
@@ -82,13 +76,17 @@ chrome.runtime.onInstalled.addListener(() => {
 
 ## Set up listeners {: #listeners }
 
-Structure background scripts around events the extension depends on. Defining functionally relevant
-events allows background scripts to lie dormant until those events are fired and prevents the
+Structure extension service workers around events the extension depends on. Defining functionally relevant
+events allows the service worker to lie dormant until those events are fired and prevents the
 extension from missing important triggers.
 
-Listeners must be registered synchronously from the start of the page.
+Make sure your event handlers are registered in global scope by not nesting them in functions.
+This ensures that they are registered synchronously on initial script execution, which Chrome
+needs in order to dispatch events to the listener right after the service worker starts up.
+Notice that in this example the listener for creating bookmarks is at the top level of the script.
 
-```js
+{% Compare 'better' %}
+```js/9-11
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
     "id": "sampleContextMenu",
@@ -102,20 +100,25 @@ chrome.bookmarks.onCreated.addListener(() => {
   // do something
 });
 ```
+{% endCompare %}
 
-Do not register listeners asynchronously, as they will not be properly triggered.
+If you register the same listener asynchronously (for example, inside a `runtime.onInstalled` listener), 
+the event will be dropped because the nested listener will not be registered when the browser 
+attempts to dispatch it.
 
+{% Compare 'worse' %}
 ```js
 chrome.runtime.onInstalled.addListener(() => {
   // ERROR! Events must be registered synchronously from the start of
-  // the page.
+  // the service worker.
   chrome.bookmarks.onCreated.addListener(() => {
     // do something
   });
 });
 ```
+{% endCompare %}
 
-Extensions can remove listeners from their background scripts by calling `removeListener`. If all
+Extensions can remove listeners from their background scripts by calling `removeListener()`. If all
 listeners for an event are removed, Chrome will no longer load the extension's background script for
 that event.
 
@@ -127,10 +130,10 @@ chrome.runtime.onMessage.addListener((message, sender, reply) => {
 
 ## Filter events {: #filters }
 
-Use APIs that support [event filters][8] to restrict listeners to the cases the extension cares
-about. If an extension is listening for the [`tabs.onUpdated`][9] event, try using the
-[`webNavigation.onCompleted`][10] event with filters instead, as the tabs API does not support
-filters.
+Use APIs that support [event filters][8] to restrict listeners to specific use cases. If an
+extension is listening for the [`tabs.onUpdated`][9] event to detect when a user navigates
+to a specific website, try using the [`webNavigation.onCompleted`][10] event with filters
+instead, as the `tabs.onUpdated` event does not support filters.
 
 ```js
 const filter = {
@@ -149,13 +152,13 @@ chrome.webNavigation.onCompleted.addListener(() => {
 ## React to listeners {: #react }
 
 Listeners exist to trigger functionality once an event has fired. To react to an event, structure
-the desired reaction inside of the listener event.
+the desired reaction inside of the appropriate listener.
 
 ```js
 chrome.runtime.onMessage.addListener((message, callback) => {
   const tabId = getForegroundTabId();
   if (message.data === "setAlarm") {
-    chrome.alarms.create({delayInMinutes: 5})
+    chrome.alarms.create({delayInMinutes: 5});
   } else if (message.data === "runLogic") {
     chrome.scripting.executeScript({file: 'logic.js', tabId});
   } else if (message.data === "changeColor") {
@@ -165,52 +168,12 @@ chrome.runtime.onMessage.addListener((message, callback) => {
 });
 ```
 
-## Unload background scripts {: #unloading }
+## Unload extension service workers {: #unloading }
 
-Data should be persisted periodically so that important information is not lost if an extension
-crashes without receiving `onSuspend`. Use the [storage][11] API to assist with this.
-
-```js
-chrome.storage.local.set({variable: variableInformation});
-```
-
-If an extension uses [message passing][12], ensure all ports are closed. The background script will
-not unload until all message ports have shut. Listening to the [`runtime.Port.onDisconnect`][13]
-event will give insight to when open ports are closing. Manually close them with
-[`runtime.Port.disconnect`][14].
-
-```js
-chrome.runtime.onMessage.addListener((message, callback) => {
-  if (message === 'hello') {
-    sendResponse({greeting: 'welcome!'})
-  } else if (message === 'goodbye') {
-    chrome.runtime.Port.disconnect();
-  }
-});
-```
-
-The lifetime of a background service worker is observable by monitoring when an entry for the
-extension appears and disappears from Chrome's task manager.
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/occ8HD81vNq2zboXIbiu.png",
-       alt="Chrome with an extension's popup open.", height="623", width="730" %}
-
-Open the task manager by clicking the Chrome menu, hovering over more tools and selecting "Task
-Manager".
-
-Service workers unload on their own after a few seconds of inactivity. If any last minute cleanup is
-required, listen to the [`runtime.onSuspend`][15] event.
-
-```js
-chrome.runtime.onSuspend.addListener(() => {
-  console.log("Unloading.");
-  chrome.browserAction.setBadgeText({text: ""});
-});
-```
-
-However, persisting data in the storage API should be preferred over relying on
-[`runtime.onSuspend`][16]. It doesn't allow for as much cleanup as may be needed and will not help
-in case of a crash.
+Extension service workers do not receive any kind of unload or suspend event before they are
+stopped. This is because documents have [`unload`][mdn-unload] and
+[`beforeUnload`][mdn-beforeunload] events, but web workers (and by extension service workers) do
+not have an equivalent event.
 
 [1]: /docs/extensions/mv3/messaging
 [2]: /docs/extensions/runtime#method-getBackgroundPage
@@ -230,4 +193,7 @@ in case of a crash.
 [16]: /docs/extensions/reference/runtime#event-onSuspend
 
 [doc-sw-migration]: /docs/extensions/mv3/migrating_to_service_workers
+[event-page-unload]: https://developer.chrome.com/docs/extensions/mv2/background_pages/
+[mdn-beforeunload]: https://developer.mozilla.org/docs/Web/API/Window/beforeunload_event
+[mdn-unload]: https://developer.mozilla.org/docs/Web/API/Window/unload_event
 [sw-module]: https://web.dev/es-modules-in-sw/

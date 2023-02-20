@@ -28,7 +28,7 @@ The best time to use navigation preload is when a website can't precache HTML. T
 
 ## Using navigation preload in Workbox
 
-Using navigation preload directly in a service worker not powered by Workbox is tricky. First, [it's not supported in all browsers](https://caniuse.com/mdn-api_navigationpreloadmanager). Secondly, it can be difficult to get right. You can learn how to use it directly in [this great explainer by Jake Archibald](https://developers.google.com/web/updates/2017/02/navigation-preload).
+Using navigation preload directly in a service worker not powered by Workbox is tricky. First, [it's not supported in all browsers](https://caniuse.com/mdn-api_navigationpreloadmanager). Secondly, it can be difficult to get right. You can learn how to use it directly in [this great explainer by Jake Archibald](https://web.dev/navigation-preload/).
 
 Workbox simplifies using navigation preload, because the `workbox-navigation-preload` module's [`enable` method](/docs/workbox/reference/workbox-navigation-preload/#method-enable) does the necessary feature support checks, as well as creating the `activate` event listener to enable it for you.
 
@@ -93,7 +93,7 @@ In cases like these, it pays to know that preload requests are sent with a `Serv
 Service-Worker-Navigation-Preload: true
 ```
 
-Then, in your application backend of choice, you can check for this header and modify the response to suit your needs. If the header's default value is problematic for any reason, [you can change it in the window context](https://developers.google.com/web/updates/2017/02/navigation-preload#changing_the_header). Just know that any work you do on the server to read this header is up to you, and outside the scope of Workbox.
+Then, in your application backend of choice, you can check for this header and modify the response to suit your needs. If the header's default value is problematic for any reason, [you can change it in the window context](https://web.dev/navigation-preload/#changing-the-header). Just know that any work you do on the server to read this header is up to you, and outside the scope of Workbox.
 
 ## Conclusion
 

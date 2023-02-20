@@ -23,7 +23,7 @@ Para passar na auditoria:
 
 {% Aside 'caution' %} O Lighthouse não inspeciona a imagem especificada como ícone mascarável. Você precisará verificar manualmente se a imagem é exibida corretamente. {% endAside %}
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## Como adicionar suporte a ícones mascaráveis ao seu PWA
 

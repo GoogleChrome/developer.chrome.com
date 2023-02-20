@@ -164,12 +164,12 @@ For example, if you add support for French and Arabic, you'll need to add two fi
 `_locales/en_GB/messages.json`, but with translated versions of the `message` values.
 
 
-For details, see the extension [Internationalization][i18n] documentation: 
+For details, see the extension [Internationalization][i18n] documentation:
 - The [How extensions find strings][searching-messages] section shows how you can sometimes omit
   message strings. For example, if the extension's name isn't translated, you can leave it out for
   non-default locales.
 - The [How to set your browser's locale][set-browser-locale] section is helpful when you test your
-  translations.    
+  translations.
 
 Once you've completed this step, upload your extension using the Developer Dashboard, as described
 in [Publishing Your extension][publish].
@@ -189,14 +189,14 @@ following figure shows, if you support multiple locales a pull-down list appears
 listing details. Each item in the list corresponds to one of the `_locales/LOCALE_CODE` directories
 that you uploaded.
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/GNIhOrJH6k6x4rM6iZyg.png", 
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/GNIhOrJH6k6x4rM6iZyg.png",
 alt="Choose language in store listing", width="800", height="162" %}
 
 Next, choose the locale that you want to edit. Skip this if your extension supports only one locale.
 
 Now edit the detailed description, providing text for the currently selected locale.
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/70mdctbPy8hIIHPFxvZF.png", 
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/70mdctbPy8hIIHPFxvZF.png",
 alt="Detailed description of the Store Listing", width="483", height="140" %}
 
 If you support multiple locales, repeat the previous two steps until you've provided a detailed
@@ -204,15 +204,15 @@ description for each supported locale.
 
 ### Screenshots {: #screenshots }
 
-As the [screenshot guidelines][screenshot-guidelines] say, you should provide screenshots for your extension. You can tailor
-these screenshots for each locale.
+As the [screenshot guidelines][screenshot-guidelines] say, you should provide screenshots for your
+extension. You can tailor these screenshots for each locale.
 
-Go to the top of the of the **Store Listing** tab to choose the locale.
+Go to the top of the **Store Listing** tab to choose the locale.
 
 To add a screenshot, drop your screenshots in the **Localized screenshots** section. If you have a
 YouTube video in the target language, you can add the URL in the **Localized promo video** field.
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/y792ypc5Zy3AGyh0HwhE.png", 
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/y792ypc5Zy3AGyh0HwhE.png",
 alt="localize screenshots and video", width="414", height="256" %}
 
 To provide screenshots for another locale, use the pull-down list at the top of the page and select
@@ -224,62 +224,62 @@ By default, your extension is listed in all regions that can use the Chrome Web 
 want your extension to be listed in a particular region, unselect that region from the following
 list in the **Regions** section of the [Payments and Distribution][distribution] tab.
 
-- Australia  
-- Austria  
-- Belgium  
-- Brazil  
-- Bulgaria  
-- Canada  
-- Chile  
-- China  
-- Colombia  
-- Cuba  
-- Czechia  
-- Denmark  
-- Ecuador  
-- Egypt  
-- Estonia  
-- Finland  
-- France  
-- Germany  
-- Greece  
-- Hong Kong  
-- Hungary  
-- India  
-- Indonesia  
-- Ireland  
-- Israel  
-- Italy  
-- Japan  
-- Lithuania  
-- Malaysia  
-- Mexico  
-- Morocco  
-- Netherlands  
-- New Zealand  
-- Norway  
-- Panama  
-- Peru  
-- Philippines  
-- Poland  
-- Portugal  
-- Romania  
-- Russia  
-- Saudi Arabia  
-- Singapore  
-- Slovakia  
-- South Africa  
-- Spain  
-- Sweden  
-- Switzerland  
-- Taiwan  
-- Thailand  
-- Turkey  
-- Ukraine  
-- United Arab Emirates  
-- United Kingdom  
-- United States  
-- Venezuela  
+- Australia
+- Austria
+- Belgium
+- Brazil
+- Bulgaria
+- Canada
+- Chile
+- China
+- Colombia
+- Cuba
+- Czechia
+- Denmark
+- Ecuador
+- Egypt
+- Estonia
+- Finland
+- France
+- Germany
+- Greece
+- Hong Kong
+- Hungary
+- India
+- Indonesia
+- Ireland
+- Israel
+- Italy
+- Japan
+- Lithuania
+- Malaysia
+- Mexico
+- Morocco
+- Netherlands
+- New Zealand
+- Norway
+- Panama
+- Peru
+- Philippines
+- Poland
+- Portugal
+- Romania
+- Russia
+- Saudi Arabia
+- Singapore
+- Slovakia
+- South Africa
+- Spain
+- Sweden
+- Switzerland
+- Taiwan
+- Thailand
+- Turkey
+- Ukraine
+- United Arab Emirates
+- United Kingdom
+- United States
+- Venezuela
 - Vietnam
 
 {% Aside %}
@@ -293,7 +293,7 @@ Unselecting a region prevents your extension from being listed in that region.
 To see your store listing in each locale, you can choose the Chrome Web Store language in the
 **Settings** icon located at the top right corner of your store listing.
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/xVFiHOU8OUfAdgvVvlCP.PNG", 
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/xVFiHOU8OUfAdgvVvlCP.PNG",
 alt="Chrome Web Store language setting", width="488", height="227" %}
 
 [cws-description]: #detailed-description
@@ -307,7 +307,7 @@ alt="Chrome Web Store language setting", width="488", height="227" %}
 [name-description]: #name-and-description
 [manifest]:  /docs/extensions/mv3/manifest/
 [name]: /docs/extensions/mv3/manifest/name/
-[publish]: /docs/webstore/publish#upload-your-item 
+[publish]: /docs/webstore/publish#upload-your-item
 [regions]: #specify-where-to-publish-your-extension
 [screenshot-guidelines]: /docs/webstore/images#screenshots
 [searching-messages]: /docs/extensions/reference/i18n/#searching-for-messages

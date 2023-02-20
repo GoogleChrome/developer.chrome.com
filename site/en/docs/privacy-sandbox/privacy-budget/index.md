@@ -4,7 +4,7 @@ title: 'Privacy Budget'
 subhead: >
   Limit the amount of individual user data exposed to sites to prevent covert tracking.
 description: >
-  Limit the amount of individual user data exposed to sites to prevent covert tracking.
+  A proposal to limit the amount of individual user data exposed to sites to prevent covert tracking.
 date: 2022-03-04
 authors:
   - alexandrawhite
@@ -82,7 +82,7 @@ In accounting for the privacy budget, data revealed by passive fingerprinting
 would be assumed to be used by a site. It's important that passive 
 fingerprinting surfaces are reduced, such as achieved by [User-Agent 
 reduction](/docs/privacy-sandbox/user-agent/) and proposed by 
-[Gnatcatcher](/docs/privacy-sandbox/gnatcatcher/).
+[IP Protection](/docs/privacy-sandbox/gnatcatcher/).
 
 ## How could a privacy budget be enforced?
 

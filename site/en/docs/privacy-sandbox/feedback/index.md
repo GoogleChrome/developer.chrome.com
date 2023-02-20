@@ -6,6 +6,7 @@ subhead: >
 description: >
   Where and how to provide feedback for Privacy Sandbox proposals throughout the development process.
 date: 2022-02-28
+updated: 2022-07-27
 authors:
   - rowan_m
 ---
@@ -25,20 +26,22 @@ share feedback directly to the Chrome team outside of public forums. Feedback
 received through the feedback form may be aggregated for inclusion in the Chrome
 team’s public reports, without attribution.
 
-{% Aside %}
-
-**_How will you know feedback has been considered?_**
+## How will you know feedback has been considered?  {: #reports}
 
 Regular updates for each Privacy Sandbox API are published on this site. In
 particular, these updates will cover a summary of common feedback themes per
 API.
+
+ * [Feedback report for 2022 Q4](/docs/privacy-sandbox/feedback/report-2022-q4/)
+ * [Feedback report for 2022 Q3](/docs/privacy-sandbox/feedback/report-2022-q3/)
+ * [Feedback report for 2022 Q2](/docs/privacy-sandbox/feedback/report-2022-q2/)
+ * [Feedback report for 2022 Q1](/docs/privacy-sandbox/feedback/report-2022-q1/)
 
 While public feedback channels are preferred, both public (e.g., GitHub) and
 direct (e.g., feedback form) channels do exist, and the Chrome team will explain
 whether and how feedback and concerns arising from stakeholder engagement are
 being incorporated into the design and development of each API.
 
-{% endAside %}
 
 ## Feedback routes
 
@@ -167,7 +170,7 @@ section](#proposals).
 
 {% Details %} {% DetailsSummary %}
 
-### Raise and track feature issues 
+### Raise and track feature issues
 
 **_As implementation continues, issues with the feature behavior can be raised
 in the Chromium issue tracker._**
@@ -721,7 +724,7 @@ _The HTTP cache previously provided a single point where it was possible for one
 site to determine if its resources had been loading another—effectively leaking
 cross-site information. Partitioning the cache ensures that activity is
 restricted to a single site. [Learn more about HTTP Cache
-Partitioning](https://developers.google.com/web/updates/2020/10/http-cache-partitioning)._
+Partitioning](/blog/http-cache-partitioning/)._
 
 **_Last updated 2022/02: HTTP cache partitioning has fully shipped_**
 

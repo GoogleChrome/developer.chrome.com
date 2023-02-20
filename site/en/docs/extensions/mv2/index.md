@@ -24,7 +24,7 @@ date: 2020-11-09
 
 ---
 
-{% include 'partials/extensions/mv2-legacy-page.md' %}
+{% Partial 'extensions/mv2-legacy-page.md' %}
 
 These pages contain guides and reference information for developers who want to
 create extensions for the Chrome browser. If you're not sure where to begin,
@@ -36,7 +36,7 @@ have a look at the following starting pages:
 Beyond that, you might find useful entry points in these pages:
 
 * Learn the scope of things in the [Extension development overview](/docs/extensions/mv2/devguide/)
-* Pick something from the [samples page](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/mv2-archive), install it, and start hacking on it.
+* Pick something from the [samples page](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/_archive/mv2), install it, and start hacking on it.
 * Look for answers in the [Extensions FAQ page](/docs/extensions/mv2/faq/)
 
 In addition to the documentation here, many developers find helpful community content at:

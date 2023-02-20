@@ -24,7 +24,7 @@ tags:
 
 *感谢[流浪大法师](https://webfrontend.dev/)提供的翻译。*
 
-{% include 'partials/devtools/zh/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='3CXbhnaFNEw' %}
 
@@ -233,7 +233,7 @@ Chromium 议题：[1084190](https://crbug.com/1084190)
 
 
 <!-- ## [Experimental] New Reporting API pane in the Application panel {: #reporting-api } -->
-## [实验] 应用程序面板里面新增 Reporting API 边栏 {: #reporting-api }
+## [实验阶段] 应用程序面板里面新增 Reporting API 边栏 {: #reporting-api }
 
 {% Aside %}
 <!-- To enable the experiment, check the **Enable Reporting API panel in the Application panel** checkbox under **Settings** > **Experiments**. -->
@@ -258,5 +258,5 @@ Chromium 议题：[1084190](https://crbug.com/1084190)
 
 Chromium 议题：[1205856](https://crbug.com/1205856)
 
-{% include 'partials/devtools/zh/reach-out.md' %}
-{% include 'partials/devtools/zh/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

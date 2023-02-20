@@ -15,6 +15,8 @@ tags:
 This page explains how the Chrome DevTools Console makes it easier to develop web pages. The Console
 has 2 main uses: [viewing logged messages][1] and [running JavaScript][2].
 
+{% YouTube id='76U0gtuV9AY' %}
+
 ## Viewing logged messages {: #view }
 
 Web developers often log messages to the Console to make sure that their JavaScript is working as

@@ -6,7 +6,7 @@ authors:
 date: 2022-04-12
 updated: 2022-04-12
 description: "Import and export user flow as JSON, support hwb() colors, view cascade layers in the Styles pane and more."
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mPXyPxgzu9PAoAgctnn1.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/B5K95d3OAmyytzJVCyr1.jpg'
 alt: ''
 tags:
   - new-in-devtools
@@ -14,9 +14,7 @@ tags:
   - chrome-101
 ---
 
-<!-- image/dPDCek3EhZgLQPGtEG3y0fTn4v82/B5K95d3OAmyytzJVCyr1.jpg -->
-
-{% include 'partials/devtools/en/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='u9GRAliBrM8' %}
 
@@ -110,5 +108,5 @@ Each mode has its own unique use cases, benefits, and limitations. Please refer 
 Chromium issue: [772558](https://crbug.com/772558)
 
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}
