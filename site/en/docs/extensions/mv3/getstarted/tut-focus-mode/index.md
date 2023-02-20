@@ -355,8 +355,8 @@ development learning journey. We recommend the following learning paths:
 [github-focus-mode]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.focus-mode
 [mdn-indexeddb]: https://developer.mozilla.org/docs/Web/API/IndexedDB_API
 [runtime-oninstalled]: /docs/extensions/reference/runtime#event-onInstalled
+[tut-focus-time-step6]: /docs/extensions/mv3/getstarted/tut-focus-time#step-6
 [tut-reading-time-step1]: /docs/extensions/mv3/getstarted/tut-reading-time#step-1
 [tut-reading-time-step2]: /docs/extensions/mv3/getstarted/tut-reading-time#step-2
-[tut-reading-time-step6]: /docs/extensions/mv3/getstarted/tut-reading-time#step-6
 [tut-reading-time]: /docs/extensions/mv3/getstarted/tut-reading-time
 [tut-tabs-manager]: /docs/extensions/mv3/getstarted/tut-tabs-manager
