@@ -9,40 +9,50 @@ const path = require('path');
 const ms = require('ms');
 const {google} = require('googleapis');
 
-// Set an interval of time that makes this data stale and converts it in ms
+/**
+ * Time interval to determine if the current data set is stale
+ */
 const FETCH_INTERVAL_HOURS = 4;
 const FETCH_INTERVAL_MILLISECONDS = ms(`${FETCH_INTERVAL_HOURS} hrs`);
 
-// Set all the config constansts needed for the API calls
+/**
+ * Config constants to interact with the YouTube API
+ */
 const API_KEY = process.env.YOUTUBE_API_KEY;
 const PART = 'snippet';
 const MAX_RESULTS = 50;
 
-//Set Google Chrome Developers Youtube channel ID (https://www.youtube.com/@ChromeDevs)
+/**
+ * Set Google Chrome Developers Youtube channel ID (https://www.youtube.com/@ChromeDevs)
+ */
 const CHANNELS = 'UCnUYZLuoy1rq1aVMwx4aTzw';
 
-//Set the target directory for the JSON file
+/**
+ * Target directory for the fetched data
+ */
 const targetFile = path.join(__dirname, '../data/youtube-playlist.json');
 const currentTimestamp = Date.now();
 
-//Initialise the final result object
 const result = {};
 
-//Initialise the Youtube API library
 const youtube = google.youtube('v3');
 
-// Main function that starts the data fetching process form the channel name
-// specified in the config.
+/**
+ * Main function that starts the data fetching process form the channel name
+ * specified in the config.
+ */
 
 async function run() {
   if (!process.env.YOUTUBE_API_KEY) {
     if (process.env.CI) {
-      return; // do nothing, the fallback data will win
+      return;
     }
     throw new Error('No `API KEY` environment var for production');
   }
 
-  // Fetch current data set and checks timestamp to see if the data is stale
+  /**
+   * Fetch current data set and checks timestamp to see if the data is stale
+   */
   let dataAge = 0;
   try {
     const targetFileExists = await checkIfFileexists(targetFile);
@@ -57,17 +67,15 @@ async function run() {
     throw new Error('Error fetching the current data');
   }
   if (dataAge > FETCH_INTERVAL_MILLISECONDS || !dataAge) {
-    //Set current timestamp
     result.timestamp = currentTimestamp;
 
-    //Starts data fetch for each channel speficied in the config
     result.playlists = [];
     result.channels = [];
     const channelsArray = CHANNELS.split(',');
 
     for (const channel of channelsArray) {
       try {
-        const channelRes = await getChannelData(channel.trim());
+        const channelRes = await getChannelData([channel.trim()]);
         result.channels.push(channelRes);
       } catch (error) {
         console.error(error);
@@ -83,44 +91,50 @@ async function run() {
       }
     }
 
-    //Overrides stale data with the data that's just been fetched
     await fs.writeFile(targetFile, JSON.stringify(result));
   }
 }
 
-// Function that accepts a channel id and fetches all the meta data for
-// the playlist and then calls the function needed for fetching the
-// single videos data
+/**
+ * Function that accepts a channel id and fetches all the meta data for
+ * the playlist and then calls the function needed for fetching the
+ * single videos data
+ * @param {string} id The YouTube playlist id
+ * @return {promise} A promise that resolves in the YouTube playlist data
+ * neeeded to display the playlist component
+ */
 
 async function getPlaylistData(id) {
   const playlistData = [];
-  const response = await youtube.playlists.list({
+  const response = await youtube?.playlists?.list({
     part: [PART],
     channelId: id,
     auth: API_KEY,
     maxResults: MAX_RESULTS,
   });
 
-  const playlists = response.data.items;
+  const playlists = response?.data?.items;
 
   if (!playlists || playlists.length === 0) {
     throw new Error('No playlist found');
   } else {
     for (const playlist of playlists) {
-      try {
-        const videoRes = await getPlaylistItemData(playlist.id);
-        playlistData.push({
-          id: playlist.id,
-          title: playlist?.snippet?.title,
-          description: playlist?.snippet?.description,
-          thumbnail: playlist?.snippet?.thumbnails?.medium?.url,
-          updated: playlist?.snippet?.publishedAt,
-          channel: playlist?.snippet?.channelId,
-          videos: videoRes,
-        });
-      } catch (error) {
-        console.error(error);
-        throw new Error('Error fetching the playlist data');
+      if (playlist.id) {
+        try {
+          const videoRes = await getPlaylistItemData(playlist?.id);
+          playlistData.push({
+            id: playlist.id,
+            title: playlist?.snippet?.title,
+            description: playlist?.snippet?.description,
+            thumbnail: playlist?.snippet?.thumbnails?.medium?.url,
+            updated: playlist?.snippet?.publishedAt,
+            channel: playlist?.snippet?.channelId,
+            videos: videoRes,
+          });
+        } catch (error) {
+          console.error(error);
+          throw new Error('Error fetching the playlist data');
+        }
       }
     }
   }
@@ -128,8 +142,13 @@ async function getPlaylistData(id) {
   return playlistData;
 }
 
-// Function that accepts a video Id and fetches all the video meta data
-// the component will need to render correctly the playlist
+/**
+ * Function that accepts a video Id and fetches all the video meta data
+ * the component will need to render correctly the playlist.
+ * @param {string} id The YouTube playlist id
+ * @return {promise} A promise that resolves in the YouTube videos data
+ * needed to display the playlist component
+ */
 
 async function getPlaylistItemData(id) {
   const playlistItemData = [];
@@ -158,9 +177,14 @@ async function getPlaylistItemData(id) {
   return playlistItemData;
 }
 
-// Function that accepts a channel username and ignites the data fetching
-// cascade. Picks up the Channel data and then calls the function needed for
-// Fetching the playlists data
+/**
+ * Function that accepts a channel username and ignites the data fetching
+ * cascade. Picks up the Channel data and then calls the function needed for
+ * fetching the playlists data.
+ * @param {array} id The YouTube channel id
+ * @return {promise} A promise that resolves in the YouTube Channel data needed
+ * to display the playlist component
+ */
 
 async function getChannelData(id) {
   const channelData = {};
@@ -184,6 +208,12 @@ async function getChannelData(id) {
   return channelData;
 }
 
+/**
+ * Function that accepts a file path and checks if the file exists
+ * @param {string} path A string with a path pointing to the file to check
+ * @returns {promise} A promise that resolves in a boolean indicating if the file exists
+ * or not
+ */
 async function checkIfFileexists(path) {
   try {
     await fs.access(path);
