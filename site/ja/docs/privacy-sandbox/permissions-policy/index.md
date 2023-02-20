@@ -2,10 +2,8 @@
 layout: layouts/doc-post.njk
 title: Permissions Policy によるブラウザ機能の制御
 subhead: ページとページ内のサードパーティ iframe がブラウザ機能にアクセスする方法を管理します。
-description: |2-
-
-  ページと埋め込みのサードパーティ iframe がブラウザ機能にアクセスする方法を管理するための提案。
-date: '2022-04-20'
+description: ページと埋め込みのサードパーティ iframe がブラウザ機能にアクセスする方法を管理するための提案。
+date: 2022-04-20
 authors:
   - kevinkiklee
 ---
