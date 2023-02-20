@@ -40,10 +40,10 @@ Paste that into the `hero` field in your YAML frontmatter.
 #### YouTube Videos as Heroes
 
 Alternatively, you can replace the hero field in your YAML frontmatter with
-the heroYoutubeId field, for example:
+the hero_youtube_id field, for example:
 ```diff
 - hero: 'image/BrQidfK9jaQyIHwdw91aVpkPiib2/EnMzOm0mBytBA3AzlCG6.png'
-+ heroYoutubeId: 'PupwBARjaYU'
++ hero_youtube_id: 'PupwBARjaYU'
 ```
 
 If this is done, the thumbnail field is required.
