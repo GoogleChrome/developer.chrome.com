@@ -255,10 +255,6 @@ while (true) {
 
 [Черновик спецификации WebTransport](https://wicg.github.io/web-transport/) включает ряд дополнительных встроенных примеров, а также полную документацию по всем методам и свойствам.
 
-## Включение поддержки во время испытаний по схеме Origin Trial {: #register-for-ot }
-
-{% include 'content/origin-trial-register.njk' %}
-
 ### WebTransport в Chrome DevTools
 
 К сожалению, поддержка [Chrome DevTools](/docs/devtools/) для WebTransport к моменту запуска испытаний по схеме Origin Trial не готова. Вы можете пометить [эту проблему в Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1152290), чтобы получать уведомления об обновлениях интерфейса DevTools.

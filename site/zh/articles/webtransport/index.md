@@ -257,10 +257,6 @@ while (true) {
 
 [WebTransport 草案规范](https://wicg.github.io/web-transport/)包括许多额外的内联示例，以及所有方法和属性的完整文档。
 
-## 在初始试用期间启用支持 {: #register-for-ot }
-
-{% include 'content/origin-trial-register.njk' %}
-
 ### Chrome DevTools 中的 WebTransport
 
 遗憾的是， 初始试用之初，对 WebTransport 的 [Chrome DevTools](/docs/devtools/) 支持还没有准备好。您可以对[此 Chrome 问题](https://bugs.chromium.org/p/chromium/issues/detail?id=1152290)添加“星标”，以便在 DevTools 界面上收到有关更新的通知。

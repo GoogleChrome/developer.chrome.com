@@ -255,10 +255,6 @@ while (true) {
 
 [WebTransport 초안 사양](https://wicg.github.io/web-transport/)에는 모든 메서드 및 속성에 대한 전체 문서와 함께 여러 추가 인라인 예제가 포함되어 있습니다.
 
-## 원본 평가판 동안 지원 활성화 {: #register-for-ot }
-
-{% include 'content/origin-trial-register.njk' %}
-
 ### Chrome DevTools의 WebTransport
 
 불행히도 WebTransport에 대한 [Chrome의 DevTools](/docs/devtools/) 지원은 원본 평가판을 시작할 준비가 되지 않았습니다. [이 Chrome 문제](https://bugs.chromium.org/p/chromium/issues/detail?id=1152290)에 "별표"를 표시하여 DevTools 인터페이스의 업데이트에 대한 알림을 받을 수 있습니다.

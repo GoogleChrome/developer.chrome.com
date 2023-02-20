@@ -255,10 +255,6 @@ while (true) {
 
 [WebTransportドラフト仕様](https://wicg.github.io/web-transport/)には、すべてのメソッドとプロパティの完全なドキュメントとともに、いくつかのインライン例が追加で含まれています。
 
-## オリジントライアル中のサポートの有効化 {: #register-for-ot }
-
-{% include 'content/origin-trial-register.njk' %}
-
 ### ChromeのDevToolsのWebTransport
 
 残念ながら、 WebTransport用の[ChromeのDevTools](/docs/devtools/)サポートは、オリジントライアルを開始する準備ができていません。[このChromeの問題](https://bugs.chromium.org/p/chromium/issues/detail?id=1152290)に「スター」を付けて、DevToolsインターフェースの更新について通知を受けることができます。
