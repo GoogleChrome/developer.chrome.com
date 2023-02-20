@@ -28,19 +28,6 @@ answered here:
 
 ## General questions
 
-### Are the Privacy Sandbox APIs in Chromium or Chrome?
-
-The APIs are implemented in
-[Chromium](https://en.wikipedia.org/wiki/Chromium_(web_browser)), which
-is the open-source browser used to make Chrome. Code for the Privacy Sandbox
-APIs can be accessed via
-[Chromium Code Search](https://source.chromium.org/search?q=floc).
-
-You can
-[download Chromium](http://chromium.org/getting-involved/download-chromium),
-then [run it with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
-to allow access to APIs that are in the process of implementation.
-
 ### How can I try Privacy Sandbox APIs that aren't yet turned on by default?
 
 As an API progresses through development in Chrome, there are multiple ways it

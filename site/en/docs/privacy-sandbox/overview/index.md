@@ -130,6 +130,16 @@ and cover a wide variety of use cases and requirements.
 the [Privacy Community Group](https://www.w3.org/community/privacycg/participants).
 Five API implementations are currently available for testing in Chrome.
 
+The APIs are implemented in
+[Chromium](https://en.wikipedia.org/wiki/Chromium_(web_browser)), which
+is the open-source browser used to make Chrome. Code for the Privacy Sandbox
+APIs can be accessed via
+[Chromium Code Search](https://source.chromium.org/search?q=floc).
+
+You can
+[download Chromium](http://chromium.org/getting-involved/download-chromium),
+then [run it with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
+to allow access to APIs that are in the process of implementation.
 
 ## When will the APIs be implemented?
 
