@@ -22,7 +22,7 @@ inefficient to set, especially if you don't know exactly where to look, or if yo
 large codebase. You can save yourself time when debugging by knowing how and when to use the other
 types of breakpoints.
 
-<table><tbody><tr><th>Breakpoint Type</th><th>Use This When You Want To Pause...</th></tr><tr><td><a href="#loc">Line-of-code</a></td><td>On an exact region of code.</td></tr><tr><td><a href="#conditional-loc">Conditional line-of-code</a></td><td>On an exact region of code, but only when some other condition is true.</td></tr><tr><td><a href="#dom">DOM</a></td><td>On the code that changes or removes a specific DOM node, or its children.</td></tr><tr><td><a href="#xhr">XHR</a></td><td>When an XHR URL contains a string pattern.</td></tr><tr><td><a href="#event-listeners">Event listener</a></td><td>On the code that runs after an event, such as <code translate="no" dir="ltr">click</code>, is fired.</td></tr><tr><td><a href="#exceptions">Exception</a></td><td>On the line of code that is throwing a caught or uncaught exception.</td></tr><tr><td><a href="#function">Function</a></td><td>Whenever a specific function is called.</td></tr></tbody></table>
+<table><tbody><tr><th>Breakpoint Type</th><th>Use this when you want to ...</th></tr><tr><td><a href="#loc">Line-of-code</a></td><td>On an exact region of code.</td></tr><tr><td><a href="#conditional-loc">Conditional line-of-code</a></td><td>Pause on an exact region of code, but only when some other condition is true.</td></tr><tr><td><a href="#log-loc">Logpoint</a></td><td>Log a message to the <b>Console</b> without pausing the execution.</td></tr><tr><td><a href="#dom">DOM</a></td><td>Pause on the code that changes or removes a specific DOM node, or its children.</td></tr><tr><td><a href="#xhr">XHR</a></td><td>Pause when an XHR URL contains a string pattern.</td></tr><tr><td><a href="#event-listeners">Event listener</a></td><td>Pause on the code that runs after an event, such as <code translate="no" dir="ltr">click</code>, is fired.</td></tr><tr><td><a href="#exceptions">Exception</a></td><td>Pause on the line of code that is throwing a caught or uncaught exception.</td></tr><tr><td><a href="#function">Function</a></td><td>Pause whenever a specific function is called.</td></tr></tbody></table>
 
 ## Line-of-code breakpoints {: #loc }
 
@@ -72,9 +72,9 @@ To set a conditional line-of-code breakpoint:
 
 This example shows a conditional line-of-code breakpoint set on line **30**.
 
-### Log line-of-code breakpoints (logpoints) {: #log-loc }
+### Log line-of-code breakpoints {: #log-loc }
 
-Use logpoints to log messages to the **Console** without cluttering up your code with `console.log()` calls.
+Use log line-of-code breakpoints (logpoints) to log messages to the **Console** without pausing the execution and without cluttering up your code with `console.log()` calls.
 
 To set a logpoint:
 
@@ -95,26 +95,56 @@ To set a logpoint:
 
 This example shows a logpoint at line 36 that logs a string, variable, and object to the **Console**.
 
-### Manage line-of-code breakpoints {: #manage-loc }
+### Edit line-of-code breakpoints {: #manage-loc }
 
-Use the **Breakpoints** pane to disable or remove line-of-code breakpoints from a single location.
+Use the **Breakpoints** pane to disable, edit, or remove line-of-code breakpoints.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/zNlws7B6u3msvtOvJYYj.png", alt="The Breakpoints pane.", width="800", height="579" %}
+#### Edit groups of breakpoints {: #manage-groups }
 
-This example shows the **Breakpoints** pane with two line-of-code breakpoints: one on line 30 of
-`get-started.js`, another on line 32.
+The **Breakpoints** pane groups the breakpoints by file and orders them by line and column numbers. You can do the following with groups:
 
-- Check the checkbox next to an entry to disable that breakpoint.
-- Right-click an entry to remove that breakpoint.
-- Right-click anywhere in the **Breakpoints** pane to deactivate all breakpoints, disable all
-  breakpoints, or remove all breakpoints. Disabling all breakpoints is equivalent to unchecking each
-  one. Deactivating all breakpoints instructs DevTools to ignore all line-of-code breakpoints as well as
-  preserve their enabled state so that they are in the same state as before when
-  you reactivate them.
+- To collapse or expand a group, click its name.
+- To enable or disable a group or breakpoint individually, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} next to the group or the breakpoint. 
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/i1X2N7Fy3aPpoB4T58kb.png", alt="Deactivated breakpoints in the Breakpoints pane.", width="800", height="579" %}
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/UslK4pKSMUfuzuzE29gx.mp4", muted="true", controls="true", class="screenshot" %}
 
-This example shows deactivated breakpoints in the **Breakpoints** pane with transparent markers next to the corresponding line in the **Editor**.
+This video shows how to collapse groups and disable or enable breakpoints one by one or by groups. When you disable a breakpoint, the **Sources** panel makes its marker next to the line number transparent.
+
+To remove a group, hover over it and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gtAWQj5HMLjKYPqU9dBP.svg", alt="Close.", width="24", height="24" %}.
+
+Groups have context menus. Right-click a group and choose:
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/SdWkkrJ10XJ7IrsSluZv.png", alt="The context menu of a group.", width="800", height="749" %}
+
+- Remove all breakpoints in file (group).
+- Disable all breakpoints in file.
+- Enable all breakpoints in file.
+- Remove all breakpoints (in all files). 
+- Remove other breakpoints (in other groups).
+
+#### Edit breakpoints {: #edit-breakpoints }
+
+To edit a breakpoint:
+
+- Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} next to a breakpoint to enable or disable it. When you disable a breakpoint, the **Sources** panel makes its marker next to the line number transparent.
+- Hover over a breakpoint and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/k3WKQOAItcJ2pliOyD47.svg", alt="Edit.", width="24", height="24" %} to edit and {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gtAWQj5HMLjKYPqU9dBP.svg", alt="Close.", width="24", height="24" %} to remove it.
+- When editing a breakpoint, change its type from the drop-down menu of the inline editor.
+
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/nokI9Jswa1DfxNd9cLoO.png", alt="Changing the type of a breakpoint.", width="800", height="600" %}
+
+- Right-click a breakpoint to see its context menu and choose one of the options:
+
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/nXywqsxpmuMDQgDaQusa.png", alt="The context menu of a breakpoint.", width="800", height="749" %}
+
+  - Remove breakpoint.
+  - Edit condition or logpoint.
+  - Reveal location.
+  - Remove all breakpoints (in all files).
+  - Remove other breakpoints (in other files).
+
+Watch the video to see various breakpoint edits in action: disable, remove, edit condition, reveal location from the menu, and change type.
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/lfy2SaF34u32cXyORfR7.mp4", muted="true", controls="true", class="screenshot" %}
 
 ## DOM change breakpoints {: #dom }
 
