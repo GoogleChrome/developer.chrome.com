@@ -30,7 +30,7 @@ sessions:
   - speaker: thomassteiner
     # Required
     title: >-
-      Estándares Web para Apps
+      Estándares Web para Apps. (Event language is Spanish.)
     # Optional
     description: >-
       Doctor en Informática por la Universitat Politècnica de Catalunya (Barcelona, España), y con dos títulos de Máster en Informática (por el Karlsruhe Institute of Technology, Alemania y la École Nationale Supérieure d’Informatique et de Mathématiques Appliquées de Grenoble, Francia). Su actual interés investigador se enfoca en las aplicaciones web progresivas, la web semántica, las redes sociales, la semántica multimedia, los datos enlazados y la arquitectura REST.
