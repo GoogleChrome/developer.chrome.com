@@ -51,7 +51,8 @@ async function run() {
 
       dataAge = currentTimestamp - currentData.timestamp;
     }
-  } catch (err) {
+  } catch (error) {
+    console.error(error);
     throw new Error('Error fetching the current data');
   }
   if (dataAge > FETCH_INTERVAL_MILLISECONDS || !dataAge) {
@@ -68,6 +69,7 @@ async function run() {
         const channelRes = await getChannelData(channel.trim());
         result.channels.push(channelRes);
       } catch (error) {
+        console.error(error);
         throw new Error('Error fetching the channel data');
       }
 
@@ -75,6 +77,7 @@ async function run() {
         const playlistRes = await getPlaylistData(channel.trim());
         result.playlists = [...result.playlists, ...playlistRes];
       } catch (error) {
+        console.error(error);
         throw new Error('Error fetching the playlist data');
       }
     }
@@ -115,6 +118,7 @@ async function getPlaylistData(id) {
           videos: videoRes,
         });
       } catch (error) {
+        console.error(error);
         throw new Error('Error fetching the playlist data');
       }
     }
