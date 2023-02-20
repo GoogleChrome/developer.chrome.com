@@ -61,20 +61,6 @@ browser settings. Users who opt-out will not have Privacy Sandbox features
 turned on, even on pages which provide a valid origin trial token.  
 {% endAside%}  
 
-### I registered for an origin trial, but the API isn't working on my site
-
-See [Troubleshooting Chrome's origin trials](/blog/origin-trial-troubleshooting/#chrome).
-
-### Will Privacy Sandbox origin trials work in Chromium or other browsers?
-
-Chrome origin trials are designed to work for Chrome users. Don't rely on Chrome
-origin trial tokens to allow trial features in other browsers, including Chromium,
-and other Chromium-based browsers.
-
-For more detailed information, see
-[Troubleshooting Chrome's origin trials](/blog/origin-trial-troubleshooting/#chrome).
-
-Chrome on iOS and iPadOS does not support Chrome origin trials.
 
 ### Will `SameSite` become irrelevant after third-party cookies are deprecated?
 

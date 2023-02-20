@@ -141,6 +141,18 @@ You can
 then [run it with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
 to allow access to APIs that are in the process of implementation.
 
+{% Aside 'caution' %}  
+Chrome origin trials are designed to work for Chrome users. Don't rely on Chrome
+origin trial tokens to allow trial features in other browsers, including Chromium,
+and other Chromium-based browsers.
+
+For more detailed information, see
+[Troubleshooting Chrome's origin trials](/blog/origin-trial-troubleshooting/#chrome).
+
+Chrome on iOS and iPadOS does not support Chrome origin trials.
+{% endAside%}  
+
+
 ## When will the APIs be implemented?
 
 The [implementation status](/docs/privacy-sandbox/status/) page on this site provides progress
