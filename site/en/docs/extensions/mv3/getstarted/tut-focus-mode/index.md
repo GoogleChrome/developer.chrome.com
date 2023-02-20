@@ -284,7 +284,7 @@ First, open any of the following pages:
 - [Publish in the Chrome Web Store][cws-publish]
 - [Scripting API][api-scripting]
 
-Then, click on the extension action. If you set up a keyboard shortcut (link), you can test it by pressing `Ctrl + B` or `Cmd + B`.
+Then, click on the extension action. If you set up a keyboard shortcut ([link][tut-reading-time-step6]), you can test it by pressing `Ctrl + B` or `Cmd + B`.
 
 It should go from this:
 
@@ -357,5 +357,6 @@ development learning journey. We recommend the following learning paths:
 [runtime-oninstalled]: /docs/extensions/reference/runtime#event-onInstalled
 [tut-reading-time-step1]: /docs/extensions/mv3/getstarted/tut-reading-time#step-1
 [tut-reading-time-step2]: /docs/extensions/mv3/getstarted/tut-reading-time#step-2
+[tut-reading-time-step6]: /docs/extensions/mv3/getstarted/tut-reading-time#step-6
 [tut-reading-time]: /docs/extensions/mv3/getstarted/tut-reading-time
 [tut-tabs-manager]: /docs/extensions/mv3/getstarted/tut-tabs-manager
