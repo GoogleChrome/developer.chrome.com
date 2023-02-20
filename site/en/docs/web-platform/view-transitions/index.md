@@ -997,10 +997,6 @@ You can also provide some `classNames` to add to `<html>` during the transition,
 
 You can also pass `true` to `skipTransition` if you don't want an animation, even in browsers that support View Transitions. This is useful if your site has a user preference to disable transitions.
 
-## React/Preact hook
-
-React doesn't provide an easy way to be notified when a DOM update is complete, but the complexity can be [wrapped up in a hook](https://gist.github.com/jakearchibald/8437ee8247177ab0d8f171fecba0a628).
-
 ## API reference {:#api-reference}
 
 `const viewTransition = document.startViewTransition(updateCallback)`
