@@ -261,7 +261,7 @@ while (true) {
 
 ### Chrome DevTools의 WebTransport
 
-불행히도 WebTransport에 대한 [Chrome의 DevTools](https://developer.chrome.com/docs/devtools/) 지원은 원본 평가판을 시작할 준비가 되지 않았습니다. [이 Chrome 문제](https://bugs.chromium.org/p/chromium/issues/detail?id=1152290)에 "별표"를 표시하여 DevTools 인터페이스의 업데이트에 대한 알림을 받을 수 있습니다.
+불행히도 WebTransport에 대한 [Chrome의 DevTools](/docs/devtools/) 지원은 원본 평가판을 시작할 준비가 되지 않았습니다. [이 Chrome 문제](https://bugs.chromium.org/p/chromium/issues/detail?id=1152290)에 "별표"를 표시하여 DevTools 인터페이스의 업데이트에 대한 알림을 받을 수 있습니다.
 
 ## 개인 정보 및 보안 고려 사항
 
@@ -287,7 +287,7 @@ Chrome 구현에서 버그를 찾으셨나요?
 
 공개 지원은 Chrome이 기능의 우선 순위를 지정하는 데 도움이 되며 다른 브라우저 공급업체에서 해당 기능을 지원하는 것이 얼마나 중요한지 보여줍니다.
 
-- 관심을 표시하고 도메인 및 연락처 정보를 제공하려면 [원본 평가판](https://developer.chrome.com/origintrials/#/view_trial/793759434324049921)에 가입했는지 확인하십시오.
+- 관심을 표시하고 도메인 및 연락처 정보를 제공하려면 [원본 평가판](/origintrials/#/view_trial/793759434324049921)에 가입했는지 확인하십시오.
 - 에 트윗 보내기 [@ChromiumDev](https://twitter.com/chromiumdev) 해시 태그 사용 [`#WebTransport`](https://twitter.com/search?q=%23WebTransport&src=typed_query&f=live) 당신이 그것을 사용하는 위치 및 방법에 관한 세부 사항을.
 
 ### 일반 토론

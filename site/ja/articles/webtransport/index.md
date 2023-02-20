@@ -261,7 +261,7 @@ while (true) {
 
 ### ChromeのDevToolsのWebTransport
 
-残念ながら、 WebTransport用の[ChromeのDevTools](https://developer.chrome.com/docs/devtools/)サポートは、オリジントライアルを開始する準備ができていません。[このChromeの問題](https://bugs.chromium.org/p/chromium/issues/detail?id=1152290)に「スター」を付けて、DevToolsインターフェースの更新について通知を受けることができます。
+残念ながら、 WebTransport用の[ChromeのDevTools](/docs/devtools/)サポートは、オリジントライアルを開始する準備ができていません。[このChromeの問題](https://bugs.chromium.org/p/chromium/issues/detail?id=1152290)に「スター」を付けて、DevToolsインターフェースの更新について通知を受けることができます。
 
 ## プライバシーとセキュリティに関する考慮事項
 
@@ -287,7 +287,7 @@ Chromeの実装にバグが見つかりましたか？
 
 皆さんの一般サポートによって、Chromeは機能に優先順位を付け、他のブラウザベンダーにそれらをサポートすることがいかに重要であるかを示すことができます。
 
-- [オリジントライアル](https://developer.chrome.com/origintrials/#/view_trial/793759434324049921)に登録して関心があることを示し、ドメインと連絡先情報を入力してください。
+- [オリジントライアル](/origintrials/#/view_trial/793759434324049921)に登録して関心があることを示し、ドメインと連絡先情報を入力してください。
 - ハッシュタグ「[`#WebTransport`](https://twitter.com/search?q=%23WebTransport&src=typed_query&f=live)」を使用し、どこでどのようWebTransformを使用しているかを詳しくツイートしてください。
 
 ### 一般的なディスカッション

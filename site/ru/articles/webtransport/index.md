@@ -261,7 +261,7 @@ while (true) {
 
 ### WebTransport в Chrome DevTools
 
-К сожалению, поддержка [Chrome DevTools](https://developer.chrome.com/docs/devtools/) для WebTransport к моменту запуска испытаний по схеме Origin Trial не готова. Вы можете пометить [эту проблему в Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1152290), чтобы получать уведомления об обновлениях интерфейса DevTools.
+К сожалению, поддержка [Chrome DevTools](/docs/devtools/) для WebTransport к моменту запуска испытаний по схеме Origin Trial не готова. Вы можете пометить [эту проблему в Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1152290), чтобы получать уведомления об обновлениях интерфейса DevTools.
 
 ## Вопросы конфиденциальности и безопасности
 
@@ -287,7 +287,7 @@ while (true) {
 
 Ваша публичная поддержка помогает команде Chrome определять приоритет функций и показывает важность их поддержки разработчикам других браузеров.
 
-- Обязательно подпишитесь на [отчет о ходе испытаний Origin Trial](https://developer.chrome.com/origintrials/#/view_trial/793759434324049921), указав свой домен и контактную информацию. Так вы покажете, что заинтересованы в этом интерфейсе.
+- Обязательно подпишитесь на [отчет о ходе испытаний Origin Trial](/origintrials/#/view_trial/793759434324049921), указав свой домен и контактную информацию. Так вы покажете, что заинтересованы в этом интерфейсе.
 - Упомяните в твите [@ChromiumDev](https://twitter.com/chromiumdev), поставьте хэштег [`#WebTransport`](https://twitter.com/search?q=%23WebTransport&src=typed_query&f=live) и подробно расскажите, где и как вы используете этот API.
 
 ### Обсуждение
