@@ -16,8 +16,10 @@ const FETCH_INTERVAL_MILLISECONDS = ms(`${FETCH_INTERVAL_HOURS} hrs`);
 // Set all the config constansts needed for the API calls
 const API_KEY = process.env.YOUTUBE_API_KEY;
 const PART = 'snippet';
-const CHANNELS = 'UCnUYZLuoy1rq1aVMwx4aTzw';
 const MAX_RESULTS = 50;
+
+//Set Google Chrome Developers Youtube channel ID (https://www.youtube.com/@ChromeDevs)
+const CHANNELS = 'UCnUYZLuoy1rq1aVMwx4aTzw';
 
 //Set the target directory for the JSON file
 const targetFile = path.join(__dirname, '../data/youtube-playlist.json');
@@ -40,32 +42,46 @@ async function run() {
     throw new Error('No `API KEY` environment var for production');
   }
 
-  //Set current timestamp
-  result.timestamp = currentTimestamp;
+  // Fetch current data set and checks timestamp to see if the data is stale
+  let dataAge = 0;
+  try {
+    if (fs.existsSync(targetFile)) {
+      const currentDataRaw = fs.readFileSync(targetFile);
+      const currentData = JSON.parse(currentDataRaw.toString());
 
-  //Starts data fetch for each channel speficied in the config
-  result.playlists = [];
-  result.channels = [];
-  const channelsArray = CHANNELS.split(',');
-
-  for (const channel of channelsArray) {
-    try {
-      const channelRes = await getChannelData(channel.trim());
-      result.channels.push(channelRes);
-    } catch (error) {
-      throw new Error('Error fetching the channel data');
+      dataAge = currentTimestamp - currentData.timestamp;
     }
-
-    try {
-      const playlistRes = await getPlaylistData(channel.trim());
-      result.playlists = [...result.playlists, ...playlistRes];
-    } catch (error) {
-      throw new Error('Error fetching the playlist data');
-    }
+  } catch (err) {
+    throw new Error('Error fetching the current data');
   }
+  if (dataAge > FETCH_INTERVAL_MILLISECONDS || !dataAge) {
+    //Set current timestamp
+    result.timestamp = currentTimestamp;
 
-  //Overrides stale data with the data that's just been fetched
-  fs.writeFileSync(targetFile, JSON.stringify(result));
+    //Starts data fetch for each channel speficied in the config
+    result.playlists = [];
+    result.channels = [];
+    const channelsArray = CHANNELS.split(',');
+
+    for (const channel of channelsArray) {
+      try {
+        const channelRes = await getChannelData(channel.trim());
+        result.channels.push(channelRes);
+      } catch (error) {
+        throw new Error('Error fetching the channel data');
+      }
+
+      try {
+        const playlistRes = await getPlaylistData(channel.trim());
+        result.playlists = [...result.playlists, ...playlistRes];
+      } catch (error) {
+        throw new Error('Error fetching the playlist data');
+      }
+    }
+
+    //Overrides stale data with the data that's just been fetched
+    fs.writeFileSync(targetFile, JSON.stringify(result));
+  }
 }
 
 // Function that accepts a channel id and fetches all the meta data for
@@ -163,19 +179,4 @@ async function getChannelData(id) {
   return channelData;
 }
 
-// Fetch current data set and checks timestamp to see if the data is stale
-let dataAge = 0;
-try {
-  if (fs.existsSync(targetFile)) {
-    const currentDataRaw = fs.readFileSync(targetFile);
-    const currentData = JSON.parse(currentDataRaw.toString());
-
-    dataAge = currentTimestamp - currentData.timestamp;
-  }
-} catch (err) {
-  console.error(err);
-}
-
-if (dataAge > FETCH_INTERVAL_MILLISECONDS || !dataAge) {
-  run();
-}
+run();
