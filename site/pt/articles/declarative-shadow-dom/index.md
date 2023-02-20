@@ -2,8 +2,7 @@
 layout: 'layouts/blog-post.njk'
 title: Shadow DOM Declarativa
 subhead: Uma nova maneira de implementar e usar Shadow DOM diretamente em HTML.
-date: 2020-09-30
-updated: 2021-04-14
+date: 2023-02-17
 hero: image/admin/IIPe5m8edvp0XMPpzrz9.jpg
 alt: domo de shadow decorativo
 authors:
