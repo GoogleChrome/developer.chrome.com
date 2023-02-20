@@ -113,7 +113,7 @@ The `navigationID` attribute of the appropriate `PerformanceEntry` can be used t
 
 ```js
 pageUrl =
-  performance.getEntriesByType('soft-navigation')[navigationId - 2]?.name
+  performance.getEntriesByType('soft-navigation')['navigationId' - 2]?.name
   || performance.getEntriesByType('navigation')[0]?.name
 ```
 
@@ -131,7 +131,7 @@ The navigation start time can be obtained in a similar manner:
 
 ```js
 startTime =
-  performance.getEntriesByType('soft-navigation')[navigationId - 2]?.startTime
+  performance.getEntriesByType('soft-navigation')['navigationId' - 2]?.startTime
   || performance.getEntriesByType('navigation')[0]?.startTime
 ```
 
