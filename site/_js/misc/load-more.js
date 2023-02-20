@@ -15,8 +15,8 @@
  */
 
 /**
- * @param {HTMLElement} button
- * @param {HTMLElement} container
+ * @param {Element} button
+ * @param {Element} container
  * @param {Function} fetchItems
  * @param {Function} onError
  * @param {{skip?:number,take?:number, total?:number}} params
@@ -83,7 +83,7 @@ export const loadMore = async (
 };
 
 /**
- * @param {HTMLElement} container
+ * @param {Element} container
  * @param {{total?:number}} params
 
  */

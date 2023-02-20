@@ -21,8 +21,9 @@
 import {BaseElement} from './base-element';
 import {EnhancedSelect} from './enhanced-select';
 import {loadMore} from '../misc/load-more';
+import memoize from '../utils/memoize';
 
-const getEvents = async () => {
+const getEvents = memoize(async () => {
   const response = await fetch('/events.json');
 
   //todo - handle
@@ -36,7 +37,7 @@ const getEvents = async () => {
     upcomingEvents: all.filter(event => !event.isPastEvent),
     pastEvents: all.filter(event => event.isPastEvent),
   };
-};
+});
 
 export class EnhancedEventsPage extends BaseElement {
   constructor() {
@@ -51,6 +52,8 @@ export class EnhancedEventsPage extends BaseElement {
     this.filterElements = this.getFilterElements();
     //todo - hook the mobile filters up too
     this.mobileElements = this.getMobileElements();
+    this.loadMoreUpcoming = null;
+    this.loadMorePast = null;
   }
 
   async connectedCallback() {
@@ -58,20 +61,8 @@ export class EnhancedEventsPage extends BaseElement {
     this.mobileElements.handleConnect();
     this.filterElements.handleConnect();
 
-    //todo - error handling
-    const {pastEvents, upcomingEvents} = await getEvents();
-
-    this.loadMoreUpcoming = await this.initLoadMore(
-      '#load-upcoming-events',
-      '#upcoming-events',
-      upcomingEvents
-    );
-
-    this.loadMorePast = await this.initLoadMore(
-      '#load-past-events',
-      '#past-events',
-      pastEvents
-    );
+    this.loadMoreUpcoming = await this.initLoadMore('UPCOMING');
+    this.loadMorePast = await this.initLoadMore('PAST');
   }
 
   disconnectedCallback() {
@@ -196,21 +187,30 @@ export class EnhancedEventsPage extends BaseElement {
   }
 
   /**
-   * @param buttonSelector
-   * @param containerSelector
-   * @param events
-   * @returns {Promise<{currentOffset, total, take, restart}>}
+   * @param{('UPCOMING'|'PAST')} group
+   * @returns {Promise<{currentOffset, total, take, restart}|null>}
    */
-  async initLoadMore(buttonSelector, containerSelector, events) {
+  async initLoadMore(group) {
+    const button = this.querySelector(
+      group === 'UPCOMING' ? '#load-upcoming-events' : '#load-past-events'
+    );
+    const container = this.querySelector(
+      group === 'UPCOMING' ? '#upcoming-events' : '#past-events'
+    );
+
+    if (!button || !container) return null;
+
     return loadMore(
-      this.querySelector(buttonSelector),
-      this.querySelector(containerSelector),
+      button,
+      container,
       async (skip, take) => {
-        const all = this.filterEvents(events);
+        const groups = await getEvents();
+        const events =
+          group === 'UPCOMING' ? groups.upcomingEvents : groups.pastEvents;
 
         return {
-          updated_total: all.length,
-          items: all.slice(skip, take + skip).map(event => event.html),
+          updated_total: events.length,
+          items: events.slice(skip, take + skip).map(event => event.html),
         };
       },
       () => {
@@ -219,9 +219,7 @@ export class EnhancedEventsPage extends BaseElement {
           ?.classList.remove('display-none');
       },
       {
-        skip:
-          document.querySelectorAll(`${containerSelector} enhanced-event-card`)
-            .length ?? 0,
+        skip: container.querySelectorAll('enhanced-event-card').length ?? 0,
         take: 10,
       }
     );
