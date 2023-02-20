@@ -15,7 +15,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
  #}
 
 
-# ### Chrome 110 {: #chrome110 }
+### Chrome 110 {: #chrome110 }
 
 * [Borrado del panel de rendimiento al recargar](/es/blog/new-in-devtools-110/#perf)
 * [Actualizaciones de la grabadora](/es/blog/new-in-devtools-110/#recorder)
@@ -26,7 +26,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 * [Mejor resaltado de sintaxis y vista previa en línea para Vue, SCSS y más](/es/blog/new-in-devtools-110/#highlight)
 * [Autocompletar ergonómico y consistente en la Consola](/es/blog/new-in-devtools-110/#console)
 * [Destacados varios](/es/blog/new-in-devtools-110/#misc)
- #
+
 
 
 
