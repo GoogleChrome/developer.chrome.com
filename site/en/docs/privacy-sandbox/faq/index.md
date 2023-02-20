@@ -28,16 +28,6 @@ answered here:
 
 ## General questions
 
-### Why do we need the Privacy Sandbox?
-
-The Privacy Sandbox initiative has two core aims:
-
--  Develop replacement solutions to support web use cases and business models
-   without allowing users to be tracked across sites, and avoiding cross-site
-   tracking users aren't aware of.
--  Phase out support for third-party cookies and other forms of tracking when
-   new solutions are in place.
-
 ### Who works on the Privacy Sandbox?
 
 The Privacy Sandbox is a set of proposed web standards.
