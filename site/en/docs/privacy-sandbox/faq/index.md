@@ -28,42 +28,6 @@ answered here:
 
 ## General questions
 
-### Who works on the Privacy Sandbox?
-
-The Privacy Sandbox is a set of proposed web standards.
-
-Chrome and other browser vendors, as well as ad companies and other
-stakeholders, have offered more than 30 proposals to date. These proposals can
-be found in the
-[public resources of W3C groups](https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo)
-and cover a wide variety of use cases and requirements.
-
-### How can I keep track of changes and progress in the Privacy Sandbox?
-
-You can follow the monthly updates to the [Progress in the Privacy Sandbox](/tags/progress-in-the-privacy-sandbox/) series of articles which also includes an [RSS / Atom feed where you can subscribe](/feeds/progress-in-the-privacy-sandbox.xml) with your preferred reader.
-
-The article series links to the matching monthly updates to the [Privacy Sandbox timeline](https://privacysandbox.com/timeline/) which shows the current status and schedule for proposals.
-
-These high-level resources will provide signposts to changes across the project, but for individual proposals where you want to follow in detail you should:
-
- - Watch or Star proposal repos on GitHub to get notification of new issues and updates: the Privacy Sandbox [status page](/docs/privacy-sandbox/status/) provides a link to the repo for each proposal
- - Join the associated [W3C group](https://www.w3.org/groups/) for regular meetings discussing the proposal detail
- - Star the associated entry on [Chrome Platform Status](https://chromestatus.com) for email updates on Chrome implementation changes
-
-### How can I get involved?
-
--  Participate in incubation, testing and refinement of the APIs:  
-   [How to participate in the Privacy Sandbox initiative](/blog/privacy-sandbox-participate/)
--  As a developer, join discussions or ask questions:  
-   [Privacy Sandbox Developer Support](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)
-
-For questions about specific APIs, you can file an issue on the
-[GitHub repo for an API Explainer](/docs/privacy-sandbox/status/).
-
-### Can you define the terminology in the API explainers?
-
-Yes, refer to the [Privacy Sandbox glossary](/docs/privacy-sandbox/glossary/).
-
 ### When will the Privacy Sandbox APIs be implemented?
 
 The [Privacy Sandbox timeline](https://privacysandbox.com/timeline/) shows the
