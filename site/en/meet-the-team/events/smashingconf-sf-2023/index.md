@@ -1,23 +1,14 @@
 ---
-title: JS Nation 2023
+title: SmashingConf SF
 summary: >-
-  Understand the latest trends in JavaScript development. See what 20k+ JS
-  developers are up to. Meet those who shape the present and the
-  future of the prospering nation.
-image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/xaRHmkuKLfCcGdRaEiDr.png
-location: Amsterdam, Netherlands
-date: 2023-06-01
-externalUrl: https://jsnation.com/
+  From accessibility and advanced CSS to JavaScript gems and web performance. This web
+  conference in San Francisco features interactive sessions, case-studies and a dash
+  of Tailwind, Next.js and TypeScript.
+image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/nmNwNgvOmvjk5fOm4MOM.jpg
+location: San Francisco, USA
+date: 2023-05-23
+externalUrl:
 sessions:
-  - speaker: jecelynyeen
-    title: Coming soon
-    description:
-    topics:
-      - Web Developer Tools
-    time: TBC
-    type: speaker
-    slidesUrl: null
-    videoUrl: null
   - speaker: jakearchibald
     title: Bringing Page Transitions to the Web
     description: >-
