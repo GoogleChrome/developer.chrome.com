@@ -5,7 +5,7 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2016-07-25
-updated: 2022-08-30
+updated: 2023-01-30
 description:
   "Use the Application panel to inspect, modify, and debug web app manifests, service workers, and
   service worker caches."
@@ -17,6 +17,8 @@ anchorRedirects:
 
 Use the **Application** panel to inspect, modify, and debug web app manifests, service workers, and
 service worker caches.
+
+{% YouTube id='fGU39PukAlA' %}
 
 [Progressive Web Apps (PWAs)][1] are modern, high quality applications built using web technology.
 PWAs offer similar capabilities to iOS, Android, and desktop apps. They are:
@@ -50,15 +52,31 @@ launching from home screen, and what the app looks like on launch.
 Once you've got your manifest set up, you can use the **Manifest** pane of the **Application** panel
 to inspect it.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/whsOfT3UtuAXpAbxt9kX.png", alt="The Manifest pane.", width="800", height="486" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/t2qbshH5F1g24IcsNbZz.png", alt="The Manifest pane.", width="800", height="562" %}
 
 - To look at the manifest source, click the link below **App Manifest** label
-  (`https://airhorner.com/manifest.json` in the screenshot above).
+  (`manifest.webmanifest` in the screenshot above).
 - The **Identity** and **Presentation** sections just display fields from the manifest source in a
   more user-friendly way.
 - The **Protocol Handlers** section lets you to test the URL protocol handler registration of your PWA with a click of a button.
   To learn more, see [Test URL protocol handler registration](#test-protocol-handler).
-- The **Icons** section displays every icon that you've specified.
+- The [**Icons** section](#icons) displays every icon that you've specified and lets you check their masks.
+- The [Shortcut #N](#shortcuts) set of sections displays information on all your shortcut objects.
+- The [Screenshot #N](#screenshot) set of section displays the screenshots for a richer installation UI of your app.
+
+In addition, if DevTools encounters an error, such as an icon that cannot be loaded, the **Manifest** pane displays an **Installability** section describing the error.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/WAghLd3P4X8COyEVOL2c.png", alt="The Installability section in the Manifest pane.", width="800", height="541" %}
+
+### View and check maskable icons {: #icons }
+
+The **Icons** section of the **Manifest** pane displays all the icons of your application. In this section, you can also check safe areas for [maskable icons](https://web.dev/maskable-icon/), the format of icons that adapt to platforms.
+
+To trim the icons so that only the minimum safe area is visible, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show only the minimum safe area for maskable icons**.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/MDbgTRivBwSWpcpY1Civ.png", alt="Viewing the minimum safe areas for maskable icons.", width="800", height="642" %}
+
+If your entire logo is visible in the safe area, you're good to go.
 
 ### Trigger installation {: #trigger-installation }
 
@@ -87,6 +105,26 @@ mobile, too.
 
 If you want to test out the genuine mobile experience, you can connect a real mobile device to
 DevTools via [remote debugging][6]. To trigger the installation on the connected mobile device, open the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Three-dot menu.", width="22", height="22" %} three-dot menu and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YwNSnnzuZ3dJwtVhcC4I.svg", alt="Install app.", width="24", height="24" %} **Install app**.
+
+### Inspect shortcuts {: #shortcut }
+
+[App shortcuts](https://web.dev/app-shortcuts/) let you to provide quick access to a handful of common actions that users need frequently.
+
+To inspect the shortcuts you defined in your [manifest file](https://web.dev/app-shortcuts/#define-app-shortcuts-in-the-web-app-manifest), scroll to the **Shortcut #N** sections of the **Manifest** pane.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/q3uzqiM5Psp7ggEAn3Y0.png", alt="Shortcut section in the Manifest pane.", width="800", height="452" %}
+
+{% Aside %}
+**Note**: This screenshot is taken from this [demo page](https://rowsie.app/). Inspect it for more examples.
+{% endAside%}
+
+### Inspect screenshots for a richer installation UI {: #screenshot }
+
+When you add a description and a set of [screenshots to your manifest file](https://web.dev/add-manifest/#screenshots), your app gets a richer installation dialog.
+
+To inspect the screenshots, scroll to the **Screenshot #N** sections of the **Manifest** pane.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/F6Z7McDxhXmSJZxqT1Yx.png", alt="The installation dialog and screenshots in the Manifest pane.", width="800", height="523" %}
 
 ### Test URL protocol handler registration {: #test-protocol-handler }
 
@@ -122,55 +160,66 @@ Related Guides:
 The **Service Workers** pane in the **Application** panel is the main place in DevTools to inspect
 and debug service workers.
 
-{% Img src="image/admin/6DPB4hljonLW1hVhaka5.png", alt="service worker pane", width="718", height="415" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/TATykdak02rXVcKINPJ5.png", alt="The Service Workers pane.", width="800", height="639" %}
 
 - If a service worker is installed to the currently open page, then you'll see it listed on this
   pane. For example, in the screenshot above there's a service worker installed for the scope of
-  `https://events.google.com/io2016/`.
-- The **Offline** checkbox puts DevTools into offline mode. This is equivalent to the offline mode
+  `https://airhorner.com/`.
+- The {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Offline** checkbox puts DevTools into offline mode. This is equivalent to the offline mode
   available from the **Network** panel, or the `Go offline` option in the [Command Menu][9].
-- The **Update on reload** checkbox forces the service worker to update on every page load.
-- The **Bypass for network** checkbox bypasses the service worker and forces the browser to go to
+- The {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Update on reload** checkbox forces the service worker to update on every page load.
+- The {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Bypass for network** checkbox bypasses the service worker and forces the browser to go to
   the network for requested resources.
-- The **Update** button performs a one-time update of the specified service worker.
+- The **Network requests** link takes you to the **Network** panel with a list of intercepted requests related to the service worker (`is:service-worker-intercepted` filter). 
+- The **Update** link performs a one-time update of the specified service worker.
 - The **Push** button emulates a push notification without a payload (also known as a [tickle][10]).
 - The **Sync** button emulates a background sync event.
-- The **Unregister** button unregisters the specified service worker. Check out [Clear storage][11]
+- The **Unregister** link unregisters the specified service worker. Check out [Clear storage][11]
   for a way to unregister a service worker and wipe storage and caches with a single button click.
 - The **Source** line tells you when the currently running service worker was installed. The link is
   the name of the service worker's source file. Clicking on the link sends you to the service
   worker's source.
-- The **Status** line tells you the status of the service worker. The number on this line (`#1` in
-  the screenshot above) indicates how many times the service worker has been updated. If you enable
-  the **update on reload** checkbox you'll notice that the number increments on every page load.
-  Next to the status you'll see a **start** button (if the service worker is stopped) or a **stop**
-  button (if the service worker is running). Service workers are designed to be stopped and started
-  by the browser at any time. Explicitly stopping your service worker using the **stop** button can
+- The **Status** line tells you the status of the service worker. The number on this line (`#16` in
+  the screenshot) indicates how many times the service worker has been updated. If you enable
+  the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Update on reload** checkbox you'll notice that the number increments on every page load.
+  Next to the status you'll see a **start** link (if the service worker is stopped) or a **stop**
+  link (if the service worker is running). Service workers are designed to be stopped and started
+  by the browser at any time. Explicitly stopping your service worker using the **stop** link can
   simulate that. Stopping your service worker is a great way to test how your code behaves when the
   service worker starts back up again. It frequently reveals bugs due to faulty assumptions about
   persistent global state.
 - The **Clients** line tells you the origin that the service worker is scoped to. The **focus**
-  button is mostly useful when you've enabled the **show all** checkbox. When that checkbox is
-  enabled, all registered service workers are listed. If you click on the **focus** button next to a
+  button is mostly useful when you have multiple registered service workers. If you click on the **focus** button next to a
   service worker that is running in a different tab, Chrome focuses on that tab.
+- The **Update Cycle** table shows you the service worker's activities and their elapsed times, such as install, wait, and activate.
+  To see the exact timestamp of each activity, click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bJ1ZWs8NN8S0NaZnCHyQ.svg", alt="Expand.", width="20", height="20" %} **Expand** buttons.
 
-If the service worker causes any errors, a new label called **Errors** shows up.
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/8Zm0jydouqxuO3erPfBN.png", alt="Activities and their timestamps.", width="400", height="587" %}
+  
+  For more information, see [The service worker lifecycle](https://web.dev/service-worker-lifecycle/).
 
-{% Img src="image/admin/EhulxkNH9EIAwVbQX6Xd.png", alt="service worker with errors", width="508", height="296" %}
+If the service worker causes any errors, the **Service Workers** pane shows an {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/99Zk6gIDdtxuEzPABtiy.png", alt="Error.", width="22", height="24" %} **Error** icon with the number of errors next to the **Source** line.
+The link with the number takes you to the **Console** with all the logged errors.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/V8XlKZmYpUbkPIcwoQzB.png", alt="Service worker errors in the Console.", width="800", height="569" %}
+
+To see information on all service workers, click **See all registrations** at the bottom of the **Service Workers** pane. This link takes to `chrome://serviceworker-internals/?devtools` where you can further debug your service workers.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/8hXPZUpaujkJDFkHnMvl.png", alt="Service worker registrations at serviceworker-internals.", width="800", height="614" %}
 
 ## Service worker caches {: #caches }
 
 The **Cache Storage** pane provides a read-only list of resources that have been cached using the
 (service worker) [Cache API][12].
 
-{% Img src="image/admin/KLqhHBwpNPFGTiv1kUTR.png", alt="service worker cache pane", width="800", height="421" %}
+{% Img src="image/admin/KLqhHBwpNPFGTiv1kUTR.png", alt="Service worker cache pane.", width="800", height="421" %}
 
 Note that the first time you open a cache and add a resource to it, DevTools might not detect the
 change. Reload the page and you should see the cache.
 
-If you've got two or more caches open, you'll see them listed below the **Cache Storage** dropdown.
+If you've got two or more caches open, you'll see them listed below the **Cache Storage** drop-down.
 
-{% Img src="image/admin/mK84c0i8pMq3hPTXCNpv.png", alt="multiple service worker caches", width="800", height="206" %}
+{% Img src="image/admin/mK84c0i8pMq3hPTXCNpv.png", alt="Multiple service worker caches.", width="800", height="206" %}
 
 ## Quota usage {: #opaque-responses }
 

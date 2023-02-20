@@ -55,7 +55,7 @@ For example, you may have a widget that is embedded across multiple sites and wa
 The key supplied to the Private Aggregation API is a
 [BigInt](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/BigInt), which consists of multiple dimensions. In this example, the dimensions are the widget ID and country ID. Let's say that the widget ID can be up to 4 digits long such as `1234`, and each country is mapped to a number in alphabetical order such as Afghanistan is `1`, France is `61`, and Zimbabwe is '195'.  Therefore, the aggregatable key would be 7 digits long, where the first 4 characters are reserved for the `WidgetID` and the last 3 characters are reserved for the `CountryID`. 
 
-Let's say the key represents the count of users from France (country ID `061`) who have seen the widget ID `3276`, The aggregation key is `327061`. 
+Let's say the key represents the count of users from France (country ID `061`) who have seen the widget ID `3276`, The aggregation key is `3276061`. 
 
 <table>
   <tr>

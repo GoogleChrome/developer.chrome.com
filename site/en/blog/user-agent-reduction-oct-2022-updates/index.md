@@ -91,7 +91,7 @@ to run until the end of the middle of October 2022 (M106) and local testing is
 also available via feature flags using `chrome://flags/#reduce-user-agent`.
 
 If you need additional time to migrate to the UA-CH API, you can opt-in to the
-[User-Agent Reduction Deprecation origin trial](blog/user-agent-reduction-deprecation-trial/),
+[User-Agent Reduction Deprecation origin trial](/origintrials/#/view_trial/2608710084154359809),
 which will allow your site to receive the full legacy UA string until May 2023
 (M113).
 

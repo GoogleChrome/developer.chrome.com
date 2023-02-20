@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-01-05
+updated: 2023-01-27
 tags:
   - extensions-news
 
@@ -20,7 +20,7 @@ and related policy or other changes.
 
 January 5, 2023
 
-Previously, an extension service worker would frequently shut down at the five minute mark. We've changed this behavior to more closely resemble service worker lifetime's on the web. An extension service worker will be shut down after either thirty seconds of inactivity or if a single activity takes longer than 5 minutes to process. Watch this space for a blogpost with details about extension service worker lifetimes.
+Previously, an extension service worker would frequently shut down at the five minute mark. We've changed this behavior to more closely resemble service worker lifetime's on the web. An extension service worker will be shut down after either thirty seconds of inactivity or if a single activity takes longer than 5 minutes to process. For more information, see [Longer extension service worker lifetimes](/blog/longer-esw-lifetimes).
 
 ### Post: Pausing Manifest V2 phase-out
 
@@ -79,7 +79,7 @@ callback).
 
 June 08, 2022
 
- Manifest V3 extensions can now access favicons using a new URL pattern: `chrome-extension://<id>/_favicon/`, where <id> is the ID of your extension. This replaces the Manifest V2 platform's `chrome://favicons` API. See the Favicon API docs for more information.
+ Manifest V3 extensions can now access favicons using a new URL pattern: `chrome-extension://<id>/_favicon/`, where <id> is the ID of your extension. This replaces the Manifest V2 platform's `chrome://favicons` API. See the [Favicon API](/docs/extensions/mv3/favicon/) docs for more information.
 
 ### Docs update: Developer trader/non-trader disclosure {: #cws-trader-disclosure-doc }
 
@@ -275,7 +275,6 @@ A number of APIs now support promises in Manifest V3.
 - [`chrome.processes`](/docs/extensions/reference/processes)
 - [`chrome.search`](/docs/extensions/reference/search)
 - [`chrome.sessions`](/docs/extensions/reference/sessions)
-- [`chrome.signedInDevices`](/docs/extensions/reference/signedInDevices)
 - [`chrome.topSites`](/docs/extensions/reference/topSites)
 
 Also, APIs that use the [`ChromeSetting`](/docs/extensions/reference/types/#type-ChromeSetting)

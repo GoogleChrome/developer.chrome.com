@@ -28,6 +28,10 @@
   <div class="display-flex gap-top-300 lg:gap-top-400">
     <div class="display-flex justify-content-center width-full">
       <article class="post stack measure-long width-full pad-left-400 pad-right-400">
+        {% if is_outdated %}
+          {% include 'partials/post-banner.njk' %}
+        {% endif %}
+
         <div class="stack flow-space-200">
           {% include 'partials/post-headline.njk' %}
         </div>

@@ -351,8 +351,8 @@ development learning journey. We recommend the following learning paths:
 [doc-promises]: /docs/extensions/mv3/promises/
 [doc-sw]: /docs/extensions/mv3/service_workers/
 [doc-welcome]: /docs/extensions/mv3/
-[github-focus-mode-icons]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/focus-mode/images
-[github-focus-mode]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/focus-mode
+[github-focus-mode-icons]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.focus-mode/images
+[github-focus-mode]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.focus-mode
 [mdn-indexeddb]: https://developer.mozilla.org/docs/Web/API/IndexedDB_API
 [runtime-oninstalled]: /docs/extensions/reference/runtime#event-onInstalled
 [tut-reading-time-step1]: /docs/extensions/mv3/getstarted/tut-reading-time#step-1

@@ -6,7 +6,7 @@ subhead: >
 description: >
   Allow access to unpartitioned cross-site data in a secure environment.
 date: 2022-04-25
-updated: 2022-11-08
+updated: 2023-01-19
 authors:
   - alexandrawhite
   - kevinkiklee
@@ -17,8 +17,9 @@ This document outlines a new proposal for unpartitioned, cross-site storage: the
 
 *   The [Shared Storage proposal](https://github.com/WICG/shared-storage) has entered [public discussion](https://github.com/WICG/shared-storage/issues).
 *   We are implementing this API in Chrome, and the [live demo is available](#try-the-shared-storage-api).
-    *   The initial origin trial opened with the URL selection output,  from Chrome version 105 (Canary, Dev, Beta). 
-    *   Support for the Private Aggregation output gate is available from Chrome version 107 (Canary, Dev).
+    *   URL selection output gate is available for local testing from Chrome M105+. 
+    *   Private Aggregation output gate is available for local testing from Chrome M107+.
+    *   Private Aggregation API is available in the [Privacy Sandbox Unified Origin Trial](/docs/privacy-sandbox/unified-origin-trial/) from Chrome M107+ Beta.
 *   [The Privacy Sandbox timeline](http://privacysandbox.com/timeline) provides implementation timings for the Shared Storage API and other Privacy Sandbox proposals.
 
 ## Why do we need this API?
@@ -146,7 +147,7 @@ Shared Storage API for URL selection output gate and Private Aggregation output 
 
 A [demo is available](https://shared-storage-demo.web.app/), and you can review the code on [GitHub](https://github.com/GoogleChromeLabs/shared-storage-demo). 
 
-This demo is constructed from the perspective of an advertiser, adtech, content distributor or other third party service that wants to store information across different publishers’ sites. In the demo, the same third party’s code will run on both \*\*Publisher A\*\* and \*\*Publisher B\*\* sites for each use case. Visit the publisher’s pages to see how the data is shared in a cross-site context.
+This demo is constructed from the perspective of an advertiser, ad tech, content distributor or other third party service that wants to store information across different publishers’ sites. In the demo, the same third party’s code will run on both \*\*Publisher A\*\* and \*\*Publisher B\*\* sites for each use case. Visit the publisher’s pages to see how the data is shared in a cross-site context.
 
 The demo contains use cases for URL selection and Private Aggregation.
 

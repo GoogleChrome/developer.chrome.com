@@ -149,4 +149,4 @@ The CrUX Dashboard also trades away some of the versatility of the raw data on B
 
 ### How can I customize the dashboard
 
-The page details how to access a read-only version of the CrUX Dashboard maintained by the CrUX team. If you wish to create your own copy of the dashboard, so you can edit it to show different visualizations, then [see this user guide](https://web.dev/chrome-ux-report-data-studio-dashboard/) for more info. Note that by creating you own copy, you will need to update the month manually and also will not benefit from any additions added to the official dashboard—for example new metrics, or other information.
+The page details how to access a read-only version of the CrUX Dashboard maintained by the CrUX team. If you wish to create your own copy of the dashboard, so you can edit it to show different visualizations, then [see this user guide](/blog/chrome-ux-report-looker-studio-dashboard/) for more info. Note that by creating you own copy, you will need to update the month manually and also will not benefit from any additions added to the official dashboard—for example new metrics, or other information.
