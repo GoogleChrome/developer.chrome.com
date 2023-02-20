@@ -4,7 +4,7 @@
 
 require('dotenv').config();
 
-const fs = require('fs');
+const fs = require('fs').promises;
 const path = require('path');
 const ms = require('ms');
 const {google} = require('googleapis');
@@ -45,8 +45,9 @@ async function run() {
   // Fetch current data set and checks timestamp to see if the data is stale
   let dataAge = 0;
   try {
-    if (fs.existsSync(targetFile)) {
-      const currentDataRaw = fs.readFileSync(targetFile);
+    const targetFileExists = await checkIfFileexists(targetFile);
+    if (targetFileExists) {
+      const currentDataRaw = await fs.readFile(targetFile);
       const currentData = JSON.parse(currentDataRaw.toString());
 
       dataAge = currentTimestamp - currentData.timestamp;
@@ -83,7 +84,7 @@ async function run() {
     }
 
     //Overrides stale data with the data that's just been fetched
-    fs.writeFileSync(targetFile, JSON.stringify(result));
+    await fs.writeFile(targetFile, JSON.stringify(result));
   }
 }
 
@@ -181,6 +182,15 @@ async function getChannelData(id) {
   }
 
   return channelData;
+}
+
+async function checkIfFileexists(path) {
+  try {
+    await fs.access(path);
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 run();
