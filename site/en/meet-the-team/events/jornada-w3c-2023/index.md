@@ -4,7 +4,7 @@ title: Jornada W3C
 
 # Required
 summary: >-
-  Tecnologías Web para desarrollar Aplicaciones Móviles (Event language is Spanish)
+  Tecnologías Web para desarrollar Aplicaciones Móviles. (Event language is Spanish.)
 
 # Required
 # One of:
