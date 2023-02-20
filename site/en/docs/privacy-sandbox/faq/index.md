@@ -28,13 +28,6 @@ answered here:
 
 ## General questions
 
-### When will the Privacy Sandbox APIs be implemented?
-
-The [Privacy Sandbox timeline](https://privacysandbox.com/timeline/) shows the
-roadmap to phase out third-party cookies. Additional current information for
-individual APIs is available on the
-[implementation status page](/docs/privacy-sandbox/status/).
-
 ### Are the Privacy Sandbox APIs in Chromium or Chrome?
 
 The APIs are implemented in
