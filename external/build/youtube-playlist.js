@@ -51,16 +51,14 @@ async function run() {
    */
   let dataAge = 0;
   try {
-    const targetFileExists = await checkIfFileexists(targetFile);
-    if (targetFileExists) {
-      const currentDataRaw = await fs.readFile(targetFile, {encoding: 'utf8'});
-      const currentData = JSON.parse(currentDataRaw);
+    const currentDataRaw = await fs.readFile(targetFile, {encoding: 'utf8'});
+    const currentData = JSON.parse(currentDataRaw);
 
-      dataAge = currentTimestamp - currentData.timestamp;
-    }
+    dataAge = currentTimestamp - currentData.timestamp;
   } catch (error) {
-    console.error(error);
-    throw new Error('Error fetching the current data');
+    console.warn(
+      'No existing data found or existing data malformatted. Fetching from YouTube...'
+    );
   }
   if (dataAge > FETCH_INTERVAL || !dataAge) {
     result.timestamp = currentTimestamp;
@@ -201,21 +199,6 @@ async function getChannelData(id) {
   }
 
   return data;
-}
-
-/**
- * Function that accepts a file path and checks if the file exists
- * @param {string} path A string with a path pointing to the file to check
- * @returns {promise} A promise that resolves in a boolean indicating if the file exists
- * or not
- */
-async function checkIfFileexists(path) {
-  try {
-    await fs.access(path);
-    return true;
-  } catch {
-    return false;
-  }
 }
 
 run();
