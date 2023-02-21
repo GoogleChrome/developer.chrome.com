@@ -18,13 +18,14 @@
     - url: /docs/extensions/mv3/themes
     - url: /docs/extensions/mv3/faq
     - url: /docs/extensions/mv3/single_purpose
-- title: i18n.docs.extensions.migrating
+- title: i18n.docs.extensions.upgrading
   sections:
-    - url: /docs/extensions/mv3/mv3-migration
-    - url: /docs/extensions/mv3/mv3-migration-checklist
-    - url: /docs/extensions/mv3/migrating_to_service_workers
-    - url: /docs/extensions/mv3/mv2-sunset
-    - url: /docs/extensions/mv3/known-issues/
+    - url: /docs/extensions/upgrading/checklist
+    - url: /docs/extensions/upgrading/manifest
+    - url: /docs/extensions/upgrading/service-worker
+    - url: /docs/extensions/upgrading/api-calls
+    - url: /docs/extensions/upgrading/blocking-web-requests
+    - url: /docs/extensions/upgrading/improve-security
 - url: /docs/extensions/reference
 - url: https://github.com/GoogleChrome/chrome-extensions-samples
   title: i18n.docs.extensions.samples
