@@ -45,11 +45,7 @@ export class EnhancedEventsList extends BaseElement {
     super();
 
     this.type = null;
-    this.filters = {
-      location: [],
-      topics: [],
-      googler: [],
-    };
+    this.filters = {};
     this.loader = null;
     this.loadMoreButton = this.getLoadMoreButton();
     this.loadedItems = [];
@@ -83,11 +79,13 @@ export class EnhancedEventsList extends BaseElement {
   }
 
   async attributeChangedCallback(name, oldval, newval) {
-    if ('resolved' in this.dataset && name === 'filters') {
-      this.loadedItems = await this.loader?.restart();
-    }
-
     super.attributeChangedCallback(name, oldval, newval);
+
+    if ('resolved' in this.dataset && name === 'filters') {
+      const loaded = await this.loader?.restart();
+
+      this.loadedItems = loaded || [];
+    }
   }
 
   getLoadMoreButton() {
@@ -100,7 +98,7 @@ export class EnhancedEventsList extends BaseElement {
 
       const loaded = await this.loader?.next();
 
-      this.loadedItems = this.loadedItems.concat(loaded);
+      this.loadedItems = this.loadedItems.concat(loaded || []);
 
       element.removeAttribute('disabled');
 
@@ -127,23 +125,22 @@ export class EnhancedEventsList extends BaseElement {
   filterEvents(events) {
     return events.filter(event => {
       if (
-        this.filters.location.length &&
+        this.filters?.location !== undefined &&
         this.filters.location[0] !== event.location
       ) {
         return false;
       }
 
       if (
-        this.filters.topics.length &&
-        this.filters.topics.some(topic => event.topics.includes(topic)) ===
-          false
+        this.filters?.topics !== undefined &&
+        !this.filters.topics.some(topic => event.topics.includes(topic))
       ) {
         return false;
       }
 
       if (
-        this.filters.googler.length &&
-        event.googlers.includes(this.filters.googler[0]) === false
+        this.filters?.googler !== undefined &&
+        !event.googlers.includes(this.filters.googler[0])
       ) {
         return false;
       }

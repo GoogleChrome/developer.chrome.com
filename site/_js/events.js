@@ -18,5 +18,33 @@ import './web-components/enhanced-event-card';
 import './web-components/truncate-text';
 import './web-components/enhanced-select';
 import './web-components/checkbox-group';
-// import './web-components/enhanced-events-page';
 import './web-components/enhanced-events-list';
+import {EnhancedSelect} from './web-components/enhanced-select';
+
+(() => {
+  let activeFilters = {};
+  /** @type {EnhancedEventsList|null} */
+  const upcomingEvents = document.querySelector('#upcoming-events');
+  /** @type {EnhancedEventsList|null} */
+  const pastEvents = document.querySelector('#past-events');
+  const filters = document.querySelectorAll('.events-filter');
+
+  filters.forEach(ele => {
+    ele.addEventListener('change', e => {
+      const t = e.target;
+
+      if (!(t instanceof EnhancedSelect)) {
+        return;
+      }
+
+      //todo - update the ui showing list of selected filters.
+      activeFilters = {
+        ...activeFilters,
+        ...{[t.name]: t.value},
+      };
+
+      if (upcomingEvents) upcomingEvents.filters = activeFilters;
+      if (pastEvents) pastEvents.filters = activeFilters;
+    });
+  });
+})();

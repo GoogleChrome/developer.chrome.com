@@ -33,7 +33,8 @@
   </web-tabs-interlude>
 
   <web-tab title="{{ 'i18n.events.upcoming_events' | i18n(locale) }}">
-    <enhanced-events-list type="UPCOMING">
+    <enhanced-events-list id="upcoming-events"
+                          type="UPCOMING">
       <div class="events-list__items"
            total-items="{{ collections.currentEvents.length }}">
         {% for event in collections.currentEvents.slice(0,show) %}
@@ -53,7 +54,8 @@
   </web-tab>
 
   <web-tab title="{{ 'i18n.events.past_events' | i18n(locale) }}">
-    <enhanced-events-list type="PAST">
+    <enhanced-events-list id="past-events"
+                          type="PAST">
       <div class="events-list__items"
            total-items="{{ collections.pastEvents.length }}">
         {% for event in collections.pastEvents.slice(0,show) %}
