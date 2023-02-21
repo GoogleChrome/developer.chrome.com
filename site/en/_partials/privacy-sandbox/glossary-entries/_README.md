@@ -6,4 +6,4 @@ These partials each contain one glossary term. If you use any and need a subhead
 
     {% Partial 'privacy-sandbox/glossary-entries/ad-exchange.njk' %}
     
-These partials don't line have spacing before the content, thus the line space between the header and the partial reference is necessary, as above.
+These partials don't have line spacing before the content, thus the line space between the header and the partial reference is necessary, as above.
