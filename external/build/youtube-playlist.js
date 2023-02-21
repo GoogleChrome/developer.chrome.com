@@ -37,7 +37,7 @@ const result = {};
 const youtube = google.youtube('v3');
 
 /**
- * Main function that starts the data fetching process form the channel name
+ * Starts the data fetching process form the channel name
  * specified in the config.
  */
 
@@ -96,9 +96,8 @@ async function run() {
 }
 
 /**
- * Function that accepts a channel id and fetches all the meta data for
- * the playlist and then calls the function needed for fetching the
- * single videos data
+ * Fetches all the meta data for the playlist and then calls the function
+ * needed for fetching the single videos data
  * @param {string} id The YouTube playlist id
  * @return {promise} A promise that resolves in the YouTube playlist data
  * neeeded to display the playlist component
@@ -145,8 +144,7 @@ async function getPlaylistData(id) {
 }
 
 /**
- * Function that accepts a video Id and fetches all the video meta data
- * the component will need to render correctly the playlist.
+ * Fetches all the video meta data the component will need to render correctly the playlist.
  * @param {string} id The YouTube playlist id
  * @return {promise} A promise that resolves in the YouTube videos data
  * needed to display the playlist component
@@ -180,9 +178,7 @@ async function getPlaylistItemData(id) {
 }
 
 /**
- * Function that accepts a channel username and ignites the data fetching
- * cascade. Picks up the Channel data and then calls the function needed for
- * fetching the playlists data.
+ * Fetches all the channel meta data the component will need to render correctly the playlist.
  * @param {array} id The YouTube channel id
  * @return {promise} A promise that resolves in the YouTube Channel data needed
  * to display the playlist component
