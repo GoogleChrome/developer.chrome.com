@@ -43,10 +43,7 @@ const youtube = google.youtube('v3');
 
 async function run() {
   if (!process.env.YOUTUBE_API_KEY) {
-    if (process.env.CI) {
-      return;
-    }
-    throw new Error('No `API KEY` environment var for production');
+    throw new Error('No `YOUTUBE_API_KEY` environment var for production');
   }
 
   /**
