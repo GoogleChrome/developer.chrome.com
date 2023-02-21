@@ -629,6 +629,23 @@ redirects:
 - from: /tags/extensions/
   to: /tags/extensions-news/
 
+# Redirects from old to new Extensions migration/upgrade guide
+
+- from: /docs/extenions/mv3/mv3-migration/
+  to: /docs/extenions/upgrading/
+
+- from: /docs/extenions/mv3/mv3-migration-checklist/
+  to: /docs/extenions/upgrading/checklist/
+
+- from: /docs/extenions/mv3/migrating_to_service_workers/
+  to: /docs/extenions/upgrading/to-service-workers/
+
+- from: /docs/extenions/mv3/mv2-sunset/
+  to: /docs/extenions/upgrading/mv2-sunset/
+
+- from: /docs/extenions/mv3/known-issues/
+  to: /docs/extenions/upgrading/mv3/known-issues/
+
 # DO NOT REMOVE. This seems pointless but we rewrite "." to "_" inside our server's code, so if the
 # URL is fine for all but incorrect syntax, we'll fix it up.
 - from: /...
