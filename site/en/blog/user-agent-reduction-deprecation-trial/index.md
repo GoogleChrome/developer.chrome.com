@@ -39,7 +39,7 @@ Sites should still audit their usage of the User-Agent header and related APIs, 
 
 ### Register for the trial
 
-To register for the origin trial and get a token for your domains, visit the [User Agent Reduction deprecation trial page](/origintrials/#/view_trial/2608710084154359809).
+To register for the origin trial and get a token for your domains, visit the [User Agent Reduction deprecation trial page](/origintrials/#/view_trial/2608710084154359809). If you are a third-party registering please check 'Third-party matching'.
 
 ### Setup
 
@@ -47,15 +47,15 @@ Once you've registered for the trial, update your HTTP response headers with the
 
 1.  Add `Origin-Trial: <ORIGIN TRIAL TOKEN>` to your HTTP response header. <`ORIGIN TRIAL TOKEN`> contains the token you got when registering for the origin trial.
 1.  Add `Accept-CH: Sec-CH-UA-Full` to your HTTP response header. Setting `Accept-CH` will only cause the full User-Agent string to be sent on subsequent requests to the origin.
-1. To resend the first navigation request with the full User-Agent string, add `Critical-CH: Sec-CH-UA-Full` to your HTTP response header, in addition to the `Accept-CH` and `Origin-Trial` headers.
-1.  If you have opted in your site to the trial and also want third-party subresource requests to also receive the full UA string, you have two options:
-    - Add a `Permissions-Policy` header with the third-party domains that should receive the full UA.
-        -  To allow a named list of third-party domains, add `Permissions-Policy: ch-ua-full=(self "https://thirdparty.example.com")`.
+1.  If the full User-Agent string is critical on first request add `Critical-CH: Sec-CH-UA-Full` to your HTTP response header, in addition to the `Accept-CH` and `Origin-Trial` headers.
+1.  For participants joining the reduction deprecation trial we suggest allowing all third-party domains access to the full User-Agent string. Failure to extend third-party domains access to the full User-Agent string will block their full User-Agent string access regardless of their own reduction deprecation trial registration. You can allow full User-Agent string access to third-party domains by one of the following two options:
+    - Add a `Permissions-Policy` header with the third-party domains that should receive the full User-Agent string.
         -  To allow all third-party domains, add `Permissions-Policy: ch-ua-full=*`.
-    - Add an `Accept-CH` meta tag with the third-party domains that should receive the full UA (only in Chrome 100 and above).
+        -  To allow a named list of third-party domains, add `Permissions-Policy: ch-ua-full=(self "https://thirdparty.example.com")`.
+    - Add an `Accept-CH` meta tag with the third-party domains that should receive the full User-Agent string (only in Chrome 100 and above).
         -  To allow a named list of third-party domains, add `<meta http-equiv="delegate-ch" value="sec-ch-ua-full https://thirdparty.example.com">`.
-
         -  It's not possible to delegate to all third-party domains via `*` in the meta tag.
+
 1. Load your website in Chrome 100 (or later) and continue receiving the full User-Agent string.
 
 Note: a third-party embed can register and opt in to the trial without requiring the top-level site to delegate permission via Permissions Policy or `<meta http-equiv="delegate-ch">`. The [standard advice for third-party origin trials](/docs/web-platform/third-party-origin-trials/) applies.
@@ -95,7 +95,7 @@ The second, referenced here, is a deprecation trial intended for sites that need
 
 ## How long will the deprecation trial last?
 
-The UA Reduction deprecation trial will run from Chrome 100 to Chrome 112. Chrome 113 will be the first release where only the completely reduced User-Agent string is sent.
+The User-Agent Reduction deprecation trial will run from Chrome 100 to Chrome 112. Chrome 113 will be the first release where only the completely reduced User-Agent string is sent.
 
 ## How do I share feedback for the User-Agent Reduction depreciation trial?
 
