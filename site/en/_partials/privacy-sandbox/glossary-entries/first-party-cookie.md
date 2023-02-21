@@ -1,5 +1,3 @@
-## First-party cookie {: #first-party-cookie } 
-
 [Cookie](#cookie) stored by a website while a user is on the site itself.
 
 For example, an online store might ask a browser to store a cookie in order to

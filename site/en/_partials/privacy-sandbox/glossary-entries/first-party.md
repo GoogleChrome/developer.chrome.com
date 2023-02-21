@@ -1,5 +1,3 @@
-## First-party {: #first-party }
-
 Resources from the site you're visiting.
 
 For example, the page you're reading is on the site `developer.chrome.com` and

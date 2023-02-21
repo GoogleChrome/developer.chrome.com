@@ -1,5 +1,3 @@
-## Third-party cookie {: #third-party-cookie}
-
 [Cookie](#cookie) stored by a third-party service.
 
 For example, a video website might include a **Watch Later** button in their

@@ -1,5 +1,3 @@
-## Conversion
-
 The completion of some desired goal following action by a user.
 
 For example, a conversion may occur with the purchase of a product or sign-up

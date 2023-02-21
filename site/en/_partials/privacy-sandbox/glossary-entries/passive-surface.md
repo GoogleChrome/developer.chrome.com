@@ -1,5 +1,3 @@
-## Passive surface {: #passive-surface }
-
 Some [fingerprinting surfaces](#fingerprinting-surface)&mdash;such as 
 User-Agent strings, IP addresses, and Accept-Language headers&mdash;that are
 available to every website, whether the site asks for them or not.

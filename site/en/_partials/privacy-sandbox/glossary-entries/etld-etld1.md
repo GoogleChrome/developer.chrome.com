@@ -1,5 +1,3 @@
-## eTLD, eTLD+1 {: #etld }
-
 Stands for effective top-level domains (TLD), which are defined by the
 [Public Suffix List](https://publicsuffix.org/list/).
 

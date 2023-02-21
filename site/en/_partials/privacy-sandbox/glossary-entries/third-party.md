@@ -1,5 +1,3 @@
-## Third-party {: #third-party }
-
 Resources served from a domain that's different from the website you're
 visiting.
 

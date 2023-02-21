@@ -1,5 +1,3 @@
-## Demand-side platform (DSP) {: #dsp }
-
 An adtech service used to automate ad purchasing. DSPs are used by advertisers
 to buy [ad impressions](https://en.wikipedia.org/wiki/Impression_(online_media))
 across a range of publisher sites. Publishers put their

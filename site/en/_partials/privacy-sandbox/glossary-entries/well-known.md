@@ -1,5 +1,3 @@
-## .well-known {: #well-known }
-
 A file used to add redirects to a website from standardized URLs.
 
 For example, password managers can make it easier for users to update passwords

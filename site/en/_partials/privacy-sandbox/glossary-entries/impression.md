@@ -1,5 +1,3 @@
-## Impression {: #impression }
-
 Could refer to either:
 
 *  View of an ad. See also [click-through rate](#ctr).

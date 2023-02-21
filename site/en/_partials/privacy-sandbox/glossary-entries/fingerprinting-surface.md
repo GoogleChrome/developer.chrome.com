@@ -1,5 +1,3 @@
-## Fingerprinting surface {: #fingerprinting-surface }
-
 Something that can be used (probably in combination with other surfaces) to
 identify a particular user or device.
 
