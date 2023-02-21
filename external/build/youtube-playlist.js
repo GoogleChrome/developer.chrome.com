@@ -24,7 +24,7 @@ const MAX_RESULTS = 50;
 /**
  * Set Google Chrome Developers Youtube channel ID (https://www.youtube.com/@ChromeDevs)
  */
-const CHANNELS = 'UCnUYZLuoy1rq1aVMwx4aTzw';
+const CHANNELS = ['UCnUYZLuoy1rq1aVMwx4aTzw'];
 
 /**
  * Target directory for the fetched data
@@ -70,17 +70,16 @@ async function run() {
 
     result.playlists = [];
     result.channels = [];
-    const channelsArray = CHANNELS.split(',');
 
-    for (const channel of channelsArray) {
-      try {
-        const channelRes = await getChannelData([channel.trim()]);
-        result.channels.push(channelRes);
-      } catch (error) {
-        console.error(error);
-        throw new Error('Error fetching the channel data');
-      }
+    try {
+      const channelRes = await getChannelData(CHANNELS);
+      result.channels.push(channelRes);
+    } catch (error) {
+      console.error(error);
+      throw new Error('Error fetching the channel data');
+    }
 
+    for (const channel of CHANNELS) {
       try {
         const playlistRes = await getPlaylistData(channel.trim());
         result.playlists = [...result.playlists, ...playlistRes];
@@ -188,7 +187,7 @@ async function getPlaylistItemData(id) {
 async function getChannelData(id) {
   const channelData = {};
   const response = await youtube.channels.list({
-    part: [PART],
+    part: PART.split(','),
     id: id,
     auth: API_KEY,
   });
