@@ -1,5 +1,3 @@
-## Fenced frame
-
 A (`<fencedframe>`) is a proposed HTML element for embedded content, similar to
 an [iframe](https://developer.mozilla.org/docs/Web/HTML/Element/iframe). Unlike
 iframes, a fenced frame restricts communication with its embedding context to
