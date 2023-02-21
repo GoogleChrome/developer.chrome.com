@@ -18,7 +18,7 @@ const FETCH_INTERVAL = ms('4h');
  * Config constants to interact with the YouTube API
  */
 const API_KEY = process.env.YOUTUBE_API_KEY;
-const PART = 'snippet';
+const PART = ['snippet'];
 const MAX_RESULTS = 50;
 
 /**
@@ -98,7 +98,7 @@ async function run() {
 /**
  * Fetches all the meta data for the playlist and then calls the function
  * needed for fetching the single videos data
- * @param {string} id The YouTube playlist id
+ * @param {string} id The YouTube channel id
  * @return {promise} A promise that resolves in the YouTube playlist data
  * neeeded to display the playlist component
  */
@@ -106,7 +106,7 @@ async function run() {
 async function getPlaylistData(id) {
   const data = [];
   const response = await youtube?.playlists?.list({
-    part: [PART],
+    part: PART,
     channelId: id,
     auth: API_KEY,
     maxResults: MAX_RESULTS,
@@ -153,7 +153,7 @@ async function getPlaylistData(id) {
 async function getPlaylistItemData(id) {
   const data = [];
   const response = await youtube.playlistItems.list({
-    part: [PART],
+    part: PART,
     playlistId: id,
     auth: API_KEY,
     maxResults: MAX_RESULTS,
@@ -187,7 +187,7 @@ async function getPlaylistItemData(id) {
 async function getChannelData(id) {
   const data = {};
   const response = await youtube.channels.list({
-    part: PART.split(','),
+    part: PART,
     id: id,
     auth: API_KEY,
   });
