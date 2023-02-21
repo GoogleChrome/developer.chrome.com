@@ -44,6 +44,22 @@ shortcode snippet, it should look like this:
 
 Paste that into the `hero` field in your YAML frontmatter.
 
+### Social sharing image 
+
+Social sharing image is the visual thumbnail that appears when a post or page 
+is shared on social media platforms like Twitter and Facebook.
+
+Follow the [add media guide](/docs/handbook/how-to/add-media/) to upload your
+image to our CDN or use the [sharing image generator](https://web-dev-uploads.web.app/sharing-image-generator)
+to generate the social sharing image. 
+
+Once you've uploaded the image or generated the sharing image, copy the path out,
+it should look like this:
+
+`'image/BrQidfK9jaQyIHwdw91aVpkPiib2/EnMzOm0mBytBA3AzlCG6.png'`
+
+Paste that into the `sharing_image` field in your YAML frontmatter.
+
 ## Components
 
 See the [components guide](/docs/handbook/components/) for a full list of
