@@ -56,8 +56,8 @@ async function run() {
   try {
     const targetFileExists = await checkIfFileexists(targetFile);
     if (targetFileExists) {
-      const currentDataRaw = await fs.readFile(targetFile);
-      const currentData = JSON.parse(currentDataRaw.toString());
+      const currentDataRaw = await fs.readFile(targetFile, {encoding: 'utf8'});
+      const currentData = JSON.parse(currentDataRaw);
 
       dataAge = currentTimestamp - currentData.timestamp;
     }
