@@ -104,7 +104,7 @@ async function run() {
  */
 
 async function getPlaylistData(id) {
-  const playlistData = [];
+  const data = [];
   const response = await youtube?.playlists?.list({
     part: [PART],
     channelId: id,
@@ -122,7 +122,7 @@ async function getPlaylistData(id) {
         if (playlist.id) {
           try {
             const videoRes = await getPlaylistItemData(playlist?.id);
-            playlistData.push({
+            data.push({
               id: playlist.id,
               title: playlist?.snippet?.title,
               description: playlist?.snippet?.description,
@@ -140,7 +140,7 @@ async function getPlaylistData(id) {
     );
   }
 
-  return playlistData;
+  return data;
 }
 
 /**
@@ -151,7 +151,7 @@ async function getPlaylistData(id) {
  */
 
 async function getPlaylistItemData(id) {
-  const playlistItemData = [];
+  const data = [];
   const response = await youtube.playlistItems.list({
     part: [PART],
     playlistId: id,
@@ -165,7 +165,7 @@ async function getPlaylistItemData(id) {
     throw new Error('No playlist videos found');
   } else {
     for (const video of videos) {
-      playlistItemData.push({
+      data.push({
         id: video.id,
         title: video?.snippet?.title,
         description: video?.snippet?.description,
@@ -174,7 +174,7 @@ async function getPlaylistItemData(id) {
     }
   }
 
-  return playlistItemData;
+  return data;
 }
 
 /**
@@ -185,7 +185,7 @@ async function getPlaylistItemData(id) {
  */
 
 async function getChannelData(id) {
-  const channelData = {};
+  const data = {};
   const response = await youtube.channels.list({
     part: PART.split(','),
     id: id,
@@ -197,13 +197,13 @@ async function getChannelData(id) {
   if (!channels || channels.length === 0) {
     throw new Error('No channel found');
   } else {
-    channelData.id = channels[0]?.id;
-    channelData.name = channels[0]?.snippet?.title;
-    channelData.description = channels[0]?.snippet?.description;
-    channelData.thumbnail = channels[0]?.snippet?.thumbnails?.medium?.url;
+    data.id = channels[0]?.id;
+    data.name = channels[0]?.snippet?.title;
+    data.description = channels[0]?.snippet?.description;
+    data.thumbnail = channels[0]?.snippet?.thumbnails?.medium?.url;
   }
 
-  return channelData;
+  return data;
 }
 
 /**
