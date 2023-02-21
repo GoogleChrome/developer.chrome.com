@@ -17,19 +17,31 @@ tags:
 
 Have you ever applied some CSS to an element but it just doesn't work?
 
-With Chrome DevTools, you can discover and debug CSS issues with the **Elements** > **Styles** and **Computed** panes.
+With Chrome DevTools, you can discover CSS issues at a glance, debug, and test them.
 
 <!-- {% YouTube id='-------' %} -->
 
-Watch the video to learn how DevTools highlights various CSS issues:
+Watch the video to learn how the **Elements** > **Styles** pane highlights various CSS issues:
 
-- Properties with invalid syntax
-  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/vZqUZJOGJRKpZqTw5BOH.png", alt="Invalid value.", width="380", height="88" %}
-- Overridden properties
-- Inactive properties
-- Inherited and non-inherited properties
-- Implied longhand properties
-- Non-editable properties
+- {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/jmGK9ty59IimtzofYo64.png", alt="Warning.", width="26", height="24" %} <s>Property with invalid syntax</s>
+
+- {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} <s>Overridden property</s>
+
+- <span style="opacity:0.5">{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} Inactive property {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/2OyGRodvgk9neTIEAH4g.svg", alt="Information.", width="20", height="20" %}{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/xWgVEhCcJCewCZMPA40M.png", alt="With a hint.", width="80", height="20" %}<span>
+
+- <span style="background-color: #e9ebed;display: block;">Inherited from <code>parent</code></span>
+
+  - {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} Inherited property
+  - <span style="opacity:0.5">{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} Non-inherited property</span>
+
+- {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} Expandable shorthand property {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/EFQ1zrhFIERbYg3nkEdG.png", alt="Expand.", width="20", height="16" %}
+
+  - <span style="opacity:0.5">{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} <s>Overridden longhand property</s></span>
+  - <span style="opacity:0.5">{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} Active longhand property</span>
+
+<span style="float:right; opacity: 0.5;"><em>user agent stylesheet</em></span>
+- *Non-editable property*
+- <s><em>Overridden non-editable property</em></s>
 
 More debugging tips: 
 
