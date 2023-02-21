@@ -5,7 +5,7 @@ seoTitle: Welcome to Chrome Extensions
 subhead: 'Learn about developing extensions for Chrome.'
 description: 'Documentation for Chrome extensions developers.'
 date: 2020-11-09
-updated: 2023-02-23
+updated: 2023-02-21
 ---
 
 These pages contain guides and reference information for developers who want to

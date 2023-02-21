@@ -2,7 +2,7 @@
 layout: 'layouts/doc-post.njk'
 title: Get help with Chrome extensions
 description: 'Where to go for help with questions not covered by the documentation.'
-date: 2023-02-23
+date: 2023-02-21
 tags:
   - extensions
 ---
