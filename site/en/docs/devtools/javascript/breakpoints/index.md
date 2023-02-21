@@ -218,7 +218,12 @@ This example shows how to create an event listener breakpoint for `deviceorienta
 ## Exception breakpoints {: #exceptions }
 
 Use exception breakpoints when you want to pause on the line of code that's throwing a caught or
-uncaught exception. You can pause on both such exceptions independently.
+uncaught exception. You can pause on both such exceptions independently in any debug session other than [Node.js](https://nodejs.org/).
+
+{% Aside 'gotchas' %}
+Currently, in a Node.js debug session, you can pause on caught exceptions only if you also pause on uncaught ones.
+See [Chromium bug #1382762](https://crbug.com/1382762) for details.
+{% endAside %}
 
 In the **Breakpoints** pane of the **Sources** tab, enable one of the following options or both, then execute the code: 
 
