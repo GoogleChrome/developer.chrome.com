@@ -19,6 +19,7 @@
     - url: /docs/extensions/mv3/faq
     - url: /docs/extensions/mv3/single_purpose
 - title: i18n.docs.extensions.upgrading
+- url: /docs/extensions/upgrading/
   sections:
     - url: /docs/extensions/upgrading/checklist
     - url: /docs/extensions/upgrading/manifest
