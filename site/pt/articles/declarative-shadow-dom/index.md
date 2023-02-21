@@ -11,7 +11,6 @@ authors:
   - masonfreed
 description: Shadow DOM declarativa é uma nova maneira de implementar e usar Shadow DOM diretamente em HTML.
 tags:
-  - blog
   - dom
   - html
   - javascript
