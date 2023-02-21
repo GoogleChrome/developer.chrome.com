@@ -105,12 +105,11 @@ The **Breakpoints** pane groups the breakpoints by file and orders them by line 
 
 - To collapse or expand a group, click its name.
 - To enable or disable a group or breakpoint individually, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} next to the group or the breakpoint. 
+- To remove a group, hover over it and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gtAWQj5HMLjKYPqU9dBP.svg", alt="Close.", width="24", height="24" %}.
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/UslK4pKSMUfuzuzE29gx.mp4", muted="true", controls="true", class="screenshot" %}
 
 This video shows how to collapse groups and disable or enable breakpoints one by one or by groups. When you disable a breakpoint, the **Sources** panel makes its marker next to the line number transparent.
-
-To remove a group, hover over it and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gtAWQj5HMLjKYPqU9dBP.svg", alt="Close.", width="24", height="24" %}.
 
 Groups have context menus. Right-click a group and choose:
 
@@ -128,7 +127,7 @@ To edit a breakpoint:
 
 - Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} next to a breakpoint to enable or disable it. When you disable a breakpoint, the **Sources** panel makes its marker next to the line number transparent.
 - Hover over a breakpoint and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/k3WKQOAItcJ2pliOyD47.svg", alt="Edit.", width="24", height="24" %} to edit and {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gtAWQj5HMLjKYPqU9dBP.svg", alt="Close.", width="24", height="24" %} to remove it.
-- When editing a breakpoint, change its type from the drop-down menu of the inline editor.
+- When editing a breakpoint, change its type from the drop-down list in the inline editor.
 
   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/nokI9Jswa1DfxNd9cLoO.png", alt="Changing the type of a breakpoint.", width="800", height="600" %}
 
