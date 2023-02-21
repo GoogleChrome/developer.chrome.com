@@ -5,7 +5,7 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2017-01-04
-updated: 2022-08-30
+updated: 2023-03-07
 description: "Learn how to use Chrome DevTools to find and fix JavaScript bugs."
 tags:
   - get-started
@@ -22,10 +22,7 @@ on, or watch the video version of this tutorial, below.
 Finding a series of actions that consistently reproduces a bug is always the first step to
 debugging.
 
-1.  Click **Open Demo**. The demo opens in a new tab.
-
-    <a href="https://googlechrome.github.io/devtools-samples/debug-js/get-started" target="_blank">Open Demo</a>
-
+1.  [Open this demo](https://googlechrome.github.io/devtools-samples/debug-js/get-started) in a new tab.
 2.  Enter `5` in the **Number 1** text box.
 3.  Enter `1` in the **Number 2** text box.
 4.  Click **Add Number 1 and Number 2**. The label below the button says `5 + 1 = 51`. The result
