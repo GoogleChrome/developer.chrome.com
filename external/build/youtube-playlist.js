@@ -79,15 +79,17 @@ async function run() {
       throw new Error('Error fetching the channel data');
     }
 
-    for (const channel of CHANNELS) {
-      try {
-        const playlistRes = await getPlaylistData(channel.trim());
-        result.playlists = [...result.playlists, ...playlistRes];
-      } catch (error) {
-        console.error(error);
-        throw new Error('Error fetching the playlist data');
-      }
-    }
+    await Promise.all(
+      CHANNELS.map(async channel => {
+        try {
+          const playlistRes = await getPlaylistData(channel.trim());
+          result.playlists = [...result.playlists, ...playlistRes];
+        } catch (error) {
+          console.error(error);
+          throw new Error('Error fetching the playlist data');
+        }
+      })
+    );
 
     await fs.writeFile(targetFile, JSON.stringify(result));
   }
@@ -116,25 +118,27 @@ async function getPlaylistData(id) {
   if (!playlists || playlists.length === 0) {
     throw new Error('No playlist found');
   } else {
-    for (const playlist of playlists) {
-      if (playlist.id) {
-        try {
-          const videoRes = await getPlaylistItemData(playlist?.id);
-          playlistData.push({
-            id: playlist.id,
-            title: playlist?.snippet?.title,
-            description: playlist?.snippet?.description,
-            thumbnail: playlist?.snippet?.thumbnails?.medium?.url,
-            updated: playlist?.snippet?.publishedAt,
-            channel: playlist?.snippet?.channelId,
-            videos: videoRes,
-          });
-        } catch (error) {
-          console.error(error);
-          throw new Error('Error fetching the playlist data');
+    await Promise.all(
+      playlists.map(async playlist => {
+        if (playlist.id) {
+          try {
+            const videoRes = await getPlaylistItemData(playlist?.id);
+            playlistData.push({
+              id: playlist.id,
+              title: playlist?.snippet?.title,
+              description: playlist?.snippet?.description,
+              thumbnail: playlist?.snippet?.thumbnails?.medium?.url,
+              updated: playlist?.snippet?.publishedAt,
+              channel: playlist?.snippet?.channelId,
+              videos: videoRes,
+            });
+          } catch (error) {
+            console.error(error);
+            throw new Error('Error fetching the playlist data');
+          }
         }
-      }
-    }
+      })
+    );
   }
 
   return playlistData;
