@@ -1,1 +1,1 @@
-A conversion attributed to an ad that was 'clicked'.
+A click-through conversion is a conversion attributed to an ad that was 'clicked'.

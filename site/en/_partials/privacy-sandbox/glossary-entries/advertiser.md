@@ -1,1 +1,1 @@
-A company that pays to advertise its products.
+An advertiser is a company that pays to advertise its products.

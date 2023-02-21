@@ -1,1 +1,1 @@
-Arbitrary number used once only in cryptographic communication.
+A nonce is an arbitrary number used only once in cryptographic communication.

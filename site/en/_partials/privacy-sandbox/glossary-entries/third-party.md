@@ -1,4 +1,4 @@
-Resources served from a domain that's different from the website you're
+Third party refers to resources served from a domain that's different from the website you're
 visiting.
 
 For example, a website `foo.com` might use analytics code from
