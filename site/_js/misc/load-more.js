@@ -15,85 +15,38 @@
  */
 
 /**
- * @param {Element} button
- * @param {Element} container
  * @param {Function} fetchItems
  * @param {Function} onError
  * @param {{skip?:number,take?:number, total?:number}} params
- * @returns {Promise<{currentOffset, total, take, restart}>}
+ * @returns {Promise<{currentOffset, total, take, next, restart}>}
  */
-export const loadMore = async (
-  button,
-  container,
-  fetchItems,
-  onError,
-  params = {}
-) => {
+export const loadMore = async (fetchItems, onError, params = {}) => {
   let currentOffset = params.skip || 0;
-  let total = getTotalItems(container, params);
+  let total = params.total;
   const take = params.take || 10;
 
-  const fetch = async (append = true) => {
-    button.setAttribute('disabled', '');
-
+  const next = async () => {
     try {
       const {items, updated_total} = await fetchItems(currentOffset, take);
 
       total = updated_total;
 
-      if (append) {
-        container.insertAdjacentHTML('beforeend', items.join(''));
-      } else {
-        container.innerHTML = items.join('');
-      }
-
       currentOffset += take;
+
+      return items;
     } catch (e) {
       onError(e);
     }
-
-    button.removeAttribute('disabled');
-
-    if (currentOffset >= total) {
-      button.setAttribute('hidden', '');
-    } else {
-      button.removeAttribute('hidden');
-    }
   };
-
-  button.addEventListener('click', async e => {
-    e.preventDefault();
-
-    await fetch();
-  });
-
-  if (currentOffset >= total) {
-    button.setAttribute('hidden', '');
-  }
 
   return {
     currentOffset: () => currentOffset,
     total: () => total,
     take: () => take,
+    next,
     restart: async () => {
       currentOffset = 0;
-      await fetch(false);
+      return await next();
     },
   };
 };
-
-/**
- * @param {Element} container
- * @param {{total?:number}} params
-
- */
-function getTotalItems(container, params) {
-  if (
-    typeof params.total === 'undefined' &&
-    !container.hasAttribute('total-items')
-  ) {
-    throw new Error('Missing total: please pass via attribute or params');
-  }
-
-  return params.total ?? Number(container.getAttribute('total-items'));
-}

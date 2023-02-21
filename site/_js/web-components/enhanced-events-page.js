@@ -194,11 +194,12 @@ export class EnhancedEventsPage extends BaseElement {
     const button = this.querySelector(
       group === 'UPCOMING' ? '#load-upcoming-events' : '#load-past-events'
     );
+
     const container = this.querySelector(
       group === 'UPCOMING' ? '#upcoming-events' : '#past-events'
     );
 
-    if (!button || !container) return null;
+    if (!container) return null;
 
     return loadMore(
       button,
@@ -206,7 +207,9 @@ export class EnhancedEventsPage extends BaseElement {
       async (skip, take) => {
         const groups = await getEvents();
         const events =
-          group === 'UPCOMING' ? groups.upcomingEvents : groups.pastEvents;
+          group === 'UPCOMING'
+            ? this.filterEvents(groups.upcomingEvents)
+            : this.filterEvents(groups.pastEvents);
 
         return {
           updated_total: events.length,

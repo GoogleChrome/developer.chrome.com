@@ -18,4 +18,5 @@ import './web-components/enhanced-event-card';
 import './web-components/truncate-text';
 import './web-components/enhanced-select';
 import './web-components/checkbox-group';
-import './web-components/enhanced-events-page';
+// import './web-components/enhanced-events-page';
+import './web-components/enhanced-events-list';

@@ -26,6 +26,10 @@
       width: auto;
     }
   }
+
+  .load-more__button {
+    margin-top: var(--flow-space);
+  }
 }
 
 .events-list__selected-filters {
