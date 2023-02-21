@@ -1,4 +1,4 @@
-A fingerprinting surface is Something that can be used (probably in combination with other surfaces) to
+A fingerprinting surface is something that can be used (probably in combination with other surfaces) to
 identify a particular user or device.
 
 For example, the `navigator.userAgent()` JavaScript method and the `User-Agent`
