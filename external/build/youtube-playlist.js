@@ -115,7 +115,7 @@ async function getPlaylistData(id) {
   const playlists = response?.data?.items;
 
   if (!playlists || playlists.length === 0) {
-    throw new Error('No playlist found');
+    console.warn('No playlist found');
   } else {
     await Promise.all(
       playlists.map(async playlist => {
