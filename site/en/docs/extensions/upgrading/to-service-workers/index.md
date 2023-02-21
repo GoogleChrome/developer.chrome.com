@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: Replace blocking web request listeners
+title: Upgrade to a service worker
 subhead: ''
 description: ''
 date: 2023-02-21
