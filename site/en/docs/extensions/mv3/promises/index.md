@@ -1,19 +1,10 @@
 ---
 layout: 'layouts/doc-post.njk'
-
 title: Using promises
 seoTitle: "Chrome Extensions: Using promises"
 # subhead: 'How to use promises when calling extensions APIs'
-
-# This appears in the ToC of the project landing page at
-# /docs/[project-name]/. It also appears in the <meta description> used in
-# Google Search.
 description: 'How to use promises when calling extensions APIs'
-
-# The publish date
 date: 2021-03-26
-
-# An optional updated date
 # updated: 2020-10-16
 
 ---
@@ -49,7 +40,7 @@ methods in Manifest V3.
 
 {% endAside  %}
 
-Promises can and should be used in many circumstances. However, there are times (for example, event
+Promises can and should be used in many circumstances; however, there are times (for example, with event
 listeners) when a promise won't work and a callback is more appropriate. Methods that support
 promises also support callbacks to provide backwards compatibility.
 
@@ -65,7 +56,7 @@ method.
 You can check whether a method supports promises by checking its API reference page:
 
 {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/AYQVtnh19vNMHoXzxZB1.png",
-  alt="captureVisibleTab is a method that supports promises as demonstrated in the API reference",
+  alt="The captureVisibleTab() method supports promises as shown in the API reference",
   width="800", height="280" %}
 
 The example method, `captureVisibleTab()`, can be found in the [`chrome.tabs`][api-tabs-methods]
@@ -75,7 +66,7 @@ signatures.
 
 ## How to use promises
 
-There are many places where using promises will result in cleaner, easier-to-maintain code. You
+There are many places where using promises results in cleaner, easier-to-maintain code. You
 should consider using promises in situations such as the following:
 
 * Any time that you want to clean up your code by using a more "synchronous" invocation style.
