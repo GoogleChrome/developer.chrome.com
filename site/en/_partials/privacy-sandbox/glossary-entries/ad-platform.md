@@ -1,1 +1,1 @@
-A company that provides services to deliver ads.
+An ad platform is a company that provides services to deliver ads.
