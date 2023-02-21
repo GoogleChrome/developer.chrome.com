@@ -1,9 +1,9 @@
 ---
 title: Improving standards of behavior in standards discussions
 description: > 
-  How the Chrome team aim to encourage more professional, respectful and inclusive discussions.
+  How the Chrome team aims to encourage more professional, respectful and inclusive discussions.
 subhead: >
-  How the Chrome team aim to encourage more professional, respectful and inclusive discussions.
+  How the Chrome team aims to encourage more professional, respectful and inclusive discussions.
 layout: 'layouts/blog-post.njk'
 date: 2023-02-21
 hero: 'image/kheDArv5csY6rvQUJDbWRscckLr1/HYruo4j2ir5MYZ96WabJ.jpg'
@@ -22,14 +22,14 @@ We believe the development of successful, open standards for the web platform re
 
 These guidelines are not an attempt to rewrite Codes of Conduct in venues; we are saying that we expect organizations to enforce their Codes of Conduct, and participants to abide by them. We can have better, more inclusive outcomes for all if we improve the processes and interactions in standards groups.
 
-We want to be clear that this is a standard of behavior we (the Chrome team) expect of ourselves, as well as of others, in our interactions in standards venues. We welcome input in refining these expectations of behavior (by filing issues and participating in the [discussion](https://github.com/WebStandardsFuture/standards-of-behavior)), and we expect to call out violations of these expectations as counter-productive. We also expect Chrome team members to be called out if they are failing to meet these expectations.  Please email the web standards team ombuds ([web-standards-ombuds@google.com](mailto:web-standards-ombuds@google.com)) if our teammates aren't living up to our standards.  
+We want to be clear that this is a standard of behavior we (the Chrome team) expect of ourselves, as well as of others, in our interactions in standards venues. We welcome input in refining these expectations of behavior (by filing issues and participating in the [discussion](https://github.com/WebStandardsFuture/standards-of-behavior/discussions)), and we expect to call out violations of these expectations as counter-productive. We also expect Chrome team members to be called out if they are failing to meet these expectations.  Please email the web standards team ombuds ([web-standards-ombuds@google.com](mailto:web-standards-ombuds@google.com)) if our teammates aren't living up to our standards.  
 
 A quick summary of our guidance is that we believe:
 
 -  Standards discussions should adhere to standards organizations' Codes of Conduct.
 -  Participants should follow some simple golden rules for standards discourse:
     -  Be respectful, and recognize the validity of others' points of view.
-    -  Don't assume, ask for confirmation instead.
+    -  Don't assume; ask for confirmation instead.
     -  Look for (and communicate) basic requirements, clear use cases and problem statements.
     -  Take actions that are constructive, and move towards consensus when possible.
     -  Take responsibility for your own words, work to reduce hostility, and be intentionally welcoming and inclusive.
