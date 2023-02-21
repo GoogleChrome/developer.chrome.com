@@ -21,12 +21,15 @@ import './web-components/checkbox-group';
 import './web-components/enhanced-events-list';
 import {EnhancedSelect} from './web-components/enhanced-select';
 
+let activeFilters = {},
+  upcomingEvents,
+  pastEvents;
+
 (() => {
-  let activeFilters = {};
   /** @type {EnhancedEventsList|null} */
-  const upcomingEvents = document.querySelector('#upcoming-events');
+  upcomingEvents = document.querySelector('#upcoming-events');
   /** @type {EnhancedEventsList|null} */
-  const pastEvents = document.querySelector('#past-events');
+  pastEvents = document.querySelector('#past-events');
   const filters = document.querySelectorAll('.events-filter');
 
   filters.forEach(ele => {
@@ -43,8 +46,62 @@ import {EnhancedSelect} from './web-components/enhanced-select';
         ...{[t.name]: t.value},
       };
 
-      if (upcomingEvents) upcomingEvents.filters = activeFilters;
-      if (pastEvents) pastEvents.filters = activeFilters;
+      injectFilters();
     });
   });
+
+  addMobileListeners();
 })();
+
+function injectFilters() {
+  if (upcomingEvents) upcomingEvents.filters = activeFilters;
+  if (pastEvents) pastEvents.filters = activeFilters;
+}
+
+function addMobileListeners() {
+  /** @type {HTMLDialogElement|null} */
+  const filters = document.querySelector('#mobile-filters');
+  const opener = document.querySelector('#mobile-filters-opener');
+  const done = document.getElementById('mobile-filters-done');
+  const reset = document.getElementById('mobile-filters-reset');
+
+  // @ts-ignore
+  opener?.addEventListener('click', () => filters.showModal());
+
+  filters?.addEventListener('click', e => {
+    if (/** @type {HTMLElement} */ (e.target).nodeName === 'DIALOG')
+      closeFiltersModal();
+  });
+
+  done?.addEventListener('click', () => {
+    const selected = Array.from(
+      document.querySelectorAll(
+        '#mobile-filters input[type="checkbox"]:checked'
+      )
+    );
+
+    activeFilters = selected.reduce((target, checkbox) => {
+      const name = checkbox.getAttribute('name');
+      const value = checkbox.getAttribute('value');
+
+      if (name === null) return target;
+
+      if (typeof target[name] === 'undefined') {
+        target[name] = [value];
+        return target;
+      }
+
+      target[name].push(value);
+
+      return target;
+    }, {});
+
+    injectFilters();
+    closeFiltersModal();
+  });
+
+  function closeFiltersModal() {
+    // @ts-ignore
+    filters?.close();
+  }
+}

@@ -25,7 +25,7 @@
         <enhanced-select class="gap-right-600 events-filter"
                          label="Location"
                          fixedLabel>
-          <select name="location">
+          <select name="locations" multiple>
             {% for location in collections.eventTags.locations %}
               <option value="{{ location }}">{{ location }}</option>
             {% endfor %}
@@ -35,7 +35,7 @@
         <enhanced-select class="events-filter"
                          label="Googler"
                          fixedLabel>
-          <select name="googler">
+          <select name="googlers" multiple>
             {% for googler in collections.eventTags.googlers %}
               <option value="{{ googler.handle }}">{{ googler.title | i18n }}</option>
             {% endfor %}
@@ -56,7 +56,7 @@
               <checkbox-group show="4" i18n="{{ 'i18n.checkbox_group' | i18n(locale) | dump }}">
                 {% for topic in collections.eventTags.topics %}
                   <label>
-                    <input type="checkbox" name="topics[]" value="{{ topic }}" />
+                    <input type="checkbox" name="topics" value="{{ topic }}" />
                     {{ topic }}
                   </label>
                 {% endfor %}
@@ -69,7 +69,7 @@
               <checkbox-group show="4" i18n="{{ 'i18n.checkbox_group' | i18n(locale) | dump }}">
                 {% for location in collections.eventTags.locations %}
                   <label>
-                    <input type="checkbox" name="location" value="{{ location }}" />
+                    <input type="checkbox" name="locations" value="{{ location }}" />
                     {{ location }}
                   </label>
                 {% endfor %}
@@ -93,11 +93,13 @@
           <div
             class="filter-sheet__buttons display-flex align-center justify-content-end"
           >
-            <button class="material-button button-filled color-primary bg-white">
+            <button id="mobile-filters-reset"
+                    class="material-button button-filled color-primary bg-white">
               Reset
             </button>
 
-            <button class="material-button button-filled color-bg bg-primary">
+            <button id="mobile-filters-done"
+                    class="material-button button-filled color-bg bg-primary">
               Done
             </button>
           </div>

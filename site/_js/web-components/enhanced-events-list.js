@@ -119,14 +119,14 @@ export class EnhancedEventsList extends BaseElement {
   }
 
   /**
-   * @param {{location:array, topics:array, googlers:array}[]} events
+   * @param {{locations:array, topics:array, googlers:array}[]} events
    * @returns {*}
    */
   filterEvents(events) {
     return events.filter(event => {
       if (
-        this.filters?.location !== undefined &&
-        this.filters.location[0] !== event.location
+        this.filters?.locations !== undefined &&
+        !this.filters.locations.some(location => location === event.location)
       ) {
         return false;
       }
@@ -139,8 +139,8 @@ export class EnhancedEventsList extends BaseElement {
       }
 
       if (
-        this.filters?.googler !== undefined &&
-        !event.googlers.includes(this.filters.googler[0])
+        this.filters?.googlers !== undefined &&
+        !this.filters.googlers.some(googler => event.googlers.includes(googler))
       ) {
         return false;
       }
