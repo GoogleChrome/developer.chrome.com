@@ -68,13 +68,13 @@ if something is missing!
 
 {% Partial 'privacy-sandbox/glossary-entries/chromium.njk' %}
 
+## Click-through conversion (CTC) {: #ctc }
+
+{% Partial 'privacy-sandbox/glossary-entries/clickthrough-conversion.njk' %}
+
 ## Click-through rate (CTR) {: #ctr }
 
 {% Partial 'privacy-sandbox/glossary-entries/clickthrough-rate.njk' %}
-
-## Click-through-conversion (CTC) {: #ctc }
-
-{% Partial 'privacy-sandbox/glossary-entries/clickthrough-conversion.njk' %}
 
 ## Conversion
 
