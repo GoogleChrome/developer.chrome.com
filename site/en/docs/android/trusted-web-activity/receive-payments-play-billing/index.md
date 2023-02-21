@@ -376,7 +376,7 @@ by the Digital Goods API, and server-side components.
  - Implement [Real-Time developer notifications][30] (RTDN) and subscribe for notifications so your
  backend is notified  when the state of a subscription changes instead of polling their status on
  Play.
- - Implement `linkedPurchaseToken` to prevent duplicate subscriptions. Read [this blogpost][31] on
+ - Implement `linkedPurchaseToken` to prevent duplicate subscriptions. Read [this blog post][31] on
  how to implement it correctly.
 
 [1]: https://developer.android.com/google/play/billing

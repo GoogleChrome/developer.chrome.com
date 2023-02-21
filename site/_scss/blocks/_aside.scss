@@ -44,7 +44,7 @@
     color: var(--color-green-darkest);
   }
   
-  &--gotchas {
+  &--important {
     --link-color: var(--color-purple-darkest);
     --link-visited-color: var(--color-purple-darkest);
     --link-rgb-background: var(--rgb-purple-darkest);
@@ -60,7 +60,8 @@
     color: var(--color-pink-darkest);
   }
   
-  &--codelab {
+  &--codelab,
+  &--example {
     --link-color: var(--color-cyan-darkest);
     --link-visited-color: var(--color-cyan-darkest);
     --link-rgb-background: var(--rgb-cyan-darkest);

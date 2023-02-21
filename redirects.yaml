@@ -194,6 +194,15 @@ redirects:
 
 # DevTools redirects
 
+- from: /docs/devtools/customize/placement/
+  to: /docs/devtools/customize/#placement
+
+- from: /docs/devtools/customize/dark-theme/
+  to: /docs/devtools/customize/#dark-theme
+
+- from: /docs/devtools/javascript/ignore-chrome-extension-scripts/
+  to: /docs/devtools/settings/other/#skip-extensions
+
 - from: /docs/devtools/evaluate-performance/
   to: /docs/devtools/performance/
 
