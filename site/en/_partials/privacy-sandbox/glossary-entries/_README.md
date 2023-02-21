@@ -1,4 +1,4 @@
-# Using glossary partials
+## Using glossary partials
 
 These partials each contain one glossary term. If you use any and need a subhead for them, you'll need to include the subhead inline in your content before the include, like so
 
