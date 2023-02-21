@@ -1,4 +1,4 @@
-Stands for effective top-level domains (TLD), which are defined by the
+eLTDs are effective top-level domains (TLD), which are defined by the
 [Public Suffix List](https://publicsuffix.org/list/).
 
 For example:
