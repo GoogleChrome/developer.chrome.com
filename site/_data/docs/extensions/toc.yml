@@ -22,7 +22,7 @@
   sections:
     - url: /docs/extensions/upgrading/checklist
     - url: /docs/extensions/upgrading/manifest
-    - url: /docs/extensions/upgrading/service-worker
+    - url: /docs/extensions/upgrading/to-service-workers
     - url: /docs/extensions/upgrading/api-calls
     - url: /docs/extensions/upgrading/blocking-web-requests
     - url: /docs/extensions/upgrading/improve-security
