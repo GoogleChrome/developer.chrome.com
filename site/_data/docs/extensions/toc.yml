@@ -26,6 +26,8 @@
     - url: /docs/extensions/upgrading/api-calls
     - url: /docs/extensions/upgrading/blocking-web-requests
     - url: /docs/extensions/upgrading/improve-security
+    - url: /docs/extensions/upgrading/mv2-sunset
+    - url: /docs/extensions/upgrading/known-issues
 - url: /docs/extensions/reference
 - url: https://github.com/GoogleChrome/chrome-extensions-samples
   title: i18n.docs.extensions.samples
