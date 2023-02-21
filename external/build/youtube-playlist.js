@@ -12,8 +12,7 @@ const {google} = require('googleapis');
 /**
  * Time interval to determine if the current data set is stale
  */
-const FETCH_INTERVAL_HOURS = 4;
-const FETCH_INTERVAL_MILLISECONDS = ms(`${FETCH_INTERVAL_HOURS} hrs`);
+const FETCH_INTERVAL = ms('4h');
 
 /**
  * Config constants to interact with the YouTube API
@@ -66,7 +65,7 @@ async function run() {
     console.error(error);
     throw new Error('Error fetching the current data');
   }
-  if (dataAge > FETCH_INTERVAL_MILLISECONDS || !dataAge) {
+  if (dataAge > FETCH_INTERVAL || !dataAge) {
     result.timestamp = currentTimestamp;
 
     result.playlists = [];
