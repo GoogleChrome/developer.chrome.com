@@ -65,7 +65,7 @@ It is common for users to leave the browser tab during a video conferencing sess
 
 ### Productivity
  
-Research has shown that users need more ways to be productive on the web. Document in Picture-in-Picture gives web apps the flexibility to accomplish more. Whether it's text editing, note-taking, task lists, messaging/chat, or design and development tools, web apps can now keep their content always accessible.
+Research has shown that users need more ways to be productive on the web. Document in Picture-in-Picture gives web apps the flexibility to accomplish more. Whether it's text editing, note-taking, task lists, messaging and chat, or design and development tools, web apps can now keep their content always accessible.
 
 ## Interface
 
