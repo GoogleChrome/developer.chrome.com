@@ -55,8 +55,9 @@ console.log('c');
 
 ### Conditional line-of-code breakpoints {: #conditional-loc }
 
-Use a conditional line-of-code breakpoint when you know the exact region of code that you need to
-investigate, but you want to pause only when some other condition is true. This can help you catch edge cases with variables.
+Use a conditional line-of-code breakpoint when you want to stop the execution but only when some condition is true.
+
+Such breakpoints are useful when you want to skip breaks that are irrelevant to your case, especially in a loop.
 
 To set a conditional line-of-code breakpoint:
 
@@ -68,9 +69,9 @@ To set a conditional line-of-code breakpoint:
 6.  Enter your condition in the dialog.
 7.  Press <kbd>Enter</kbd> to activate the breakpoint. An orange icon with a question mark appears on top of the line number column.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/IUIuRrqQMrnNGng8ysfb.png", alt="A conditional line-of-code breakpoint.", width="800", height="627" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/W2xfoXd2E6y9k4xYfSjX.png", alt="A conditional line-of-code breakpoint.", width="800", height="807" %}
 
-This example shows a conditional line-of-code breakpoint set on line 31. The breakpoint pauses only if any or both of the two variables are negative.
+This example shows a conditional line-of-code breakpoint that fired only when the `x` exceeded `10` in a loop at iteration `i=6`.
 
 ### Log line-of-code breakpoints {: #log-loc }
 
