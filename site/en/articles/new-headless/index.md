@@ -24,7 +24,7 @@ Chrome’s Headless mode just got a whole lot better! This article presents an o
 
 [Back in 2017](/blog/headless-chrome/), Chrome 59 introduced the so-called Headless mode, which lets you run the browser in an unattended environment without any visible UI. Essentially, running Chrome without chrome!
 
-Headless mode is a popular choice for browser automation through projects like Puppeteer or ChromeDriver. Here’s a minimal command-line example of using Headless mode to create a PDF file of a given URL:
+Headless mode is a popular choice for browser automation through projects like [Puppeteer](/docs/puppeteer/) or [ChromeDriver](https://chromedriver.chromium.org/). Here’s a minimal command-line example of using Headless mode to create a PDF file of a given URL:
 
 ```sh
 chrome --headless --print-to-pdf https://developer.chrome.com/
