@@ -57,3 +57,12 @@ meet_the_team_card:
     en: Events
   cta:
     en: See all events
+
+topic:
+  en: "Topic"
+
+location:
+  en: "Location"
+
+googler:
+  en: "Googler"
