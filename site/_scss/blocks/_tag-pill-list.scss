@@ -1,7 +1,7 @@
 tag-pill-list {
   display: none;
-  gap: get-size(100);
   flex-wrap: wrap;
+  gap: get-size(100);
 
   &:defined {
     display: inline-flex;
