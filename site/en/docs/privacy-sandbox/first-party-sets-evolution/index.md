@@ -4,6 +4,7 @@ title: "How Chrome evolved the First-Party Sets proposal"
 subheading: "Evolving First-Party Sets to advance privacy for users and web interoperability for developers."
 description: "Evolving First-Party Sets to advance privacy for users and web interoperability for developers."
 date: 2023-02-13
+updated: 2023-02-16
 thumbnail: 'image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/TxiweGXhJ3d2RTsH8sZh.png'
 alt: A diagram showing First-Party Sets.
 tags: 
@@ -63,7 +64,7 @@ First-Party Sets such that sites could define cookies originating from sites
 within the "same party". We used a
 [User-Agent Policy](https://github.com/WICG/first-party-sets/blob/main/archive/ua_policy_proposal.md)
 to define what would constitute a "same party". This policy definition attempted
-to build upon existing frameworks of "party" (for example, the [W3C DNT's
+to build upon existing frameworks of "party" (for example, from the [W3C DNT
 specification](https://www.w3.org/TR/tracking-compliance/#party)) and
 incorporated recommendations from relevant privacy discourse (such as the 2012
 Federal Trade Commission report titled
@@ -265,7 +266,9 @@ To engage check out the following resources:
 
 ## Working with the ecosystem
 
-_"Chrome is developing first-party sets to align with many of our use cases, like preserving use journeys. This demonstrates to us that the Google team is working to understand the different types of needs of site owners across the web."_ - MercadoLibre
+It's great to see companies like Salesforce and CafeMedia engaging on key feedback and development of First-Party Sets. They have been instrumental in advancing the technology. Several others have also shared their thoughts on First-Party Sets and Chrome’s efforts to work with the web ecosystem:
+
+_"Chrome is developing first-party sets to align with many of our use cases, like preserving user journeys. This demonstrates to us that the Google team is working to understand the different types of needs of site owners across the web."_ - Mercado Libre
 
 
 _"At VWO, we appreciate Google's efforts to elevate privacy standards, while ensuring that genuine use cases are handled. It's great that the team is collaborating with the developer ecosystem, and is constantly improving the implementation of the first-party sets proposal based upon the feedback from web stakeholders. We are excited about being a part of the testing journey of the proposal and looking forward to its incorporation into the browser."_ - Nitish Mittal, Director of Engineering, VWO

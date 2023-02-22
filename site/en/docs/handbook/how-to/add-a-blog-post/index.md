@@ -23,6 +23,13 @@ Posts support markdown syntax with some additional features and shortcodes.
 Each `index.md` file starts with YAML Front Matter. See
 `site/en/blog/_example/` for documentation of all supported metadata.
 
+### Outdated banner 
+
+The outdated banner indicates this article is outdated and no longer accurate.
+
+Set `is_outdated` field in your YAML frontmatter.
+If new material is available, paste an available content URL into the `new_available_content_url` field in your YAML frontmatter.
+
 ### Hero images
 
 Hero images should be at least 1920 x 960. Use jpg unless you have a specific
@@ -36,6 +43,22 @@ shortcode snippet, it should look like this:
 `'image/foR0vJZKULb5AGJExlazy1xYDgI2/ZnGIwrOoVIL6J5CohCki.jpg'`
 
 Paste that into the `hero` field in your YAML frontmatter.
+
+### Social sharing image 
+
+Social sharing image is the visual thumbnail that appears when a post or page 
+is shared on social media platforms like Twitter and Facebook.
+
+Follow the [add media guide](/docs/handbook/how-to/add-media/) to upload your
+image to our CDN or use the [sharing image generator](https://web-dev-uploads.web.app/sharing-image-generator)
+to generate the social sharing image. 
+
+Once you've uploaded the image or generated the sharing image, copy the path out,
+it should look like this:
+
+`'image/BrQidfK9jaQyIHwdw91aVpkPiib2/EnMzOm0mBytBA3AzlCG6.png'`
+
+Paste that into the `sharing_image` field in your YAML frontmatter.
 
 ## Components
 

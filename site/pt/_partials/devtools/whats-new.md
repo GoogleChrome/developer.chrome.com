@@ -4,7 +4,17 @@ Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no"
 
 {# $content #}
 
-### Chrome 110 {: #chrome110 }
+
+{# ### Chrome 111 {: #chrome111 }
+
+* [Debugging HD color with the Styles pane](/pt/blog/new-in-devtools-111/#color)
+* [Enhanced breakpoint UX](/pt/blog/new-in-devtools-111/#breakpoint-redesign)
+* [Customizable Recorder shortcuts](/pt/blog/new-in-devtools-111/#recorder)
+* [Better syntax highlight for Angular](/pt/blog/new-in-devtools-111/#syntax)
+* [Reorganize caches in the Application panel](/pt/blog/new-in-devtools-111/#cache)
+* [Miscellaneous highlights](/pt/blog/new-in-devtools-111/#misc)
+ #}
+
 
 * [Limpeza do painel Desempenho ao recarregar](/pt/blog/new-in-devtools-110/#perf)
 * [Atualizações do Gravador](/pt/blog/new-in-devtools-110/#recorder)
@@ -15,6 +25,7 @@ Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no"
 * [Melhor destaque de sintaxe e visualização inline para Vue, SCSS e outros](/pt/blog/new-in-devtools-110/#highlight)
 * [Autocomplete ergonômico e consistente no console](/pt/blog/new-in-devtools-110/#console)
 * [Outros destaques](/pt/blog/new-in-devtools-110/#misc)
+
 
 ### Chrome 109 {: #chrome109 } 
 

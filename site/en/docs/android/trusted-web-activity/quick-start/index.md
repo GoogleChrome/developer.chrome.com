@@ -109,7 +109,7 @@ because we haven't set up our Digital Asset Links validation yet, but first...
 [PWA Builder](https://www.pwabuilder.com/) provides a GUI interface that uses the Bubblewrap
 library to power the generation of Trusted Web Activity projects. Find more instructions on how to
 use PWA Builder to create an Android App that opens your PWA in
-[this blogpost](https://www.davrous.com/2020/02/07/publishing-your-pwa-in-the-play-store-in-a-couple-of-minutes-using-pwa-builder/).
+[this blog post](https://www.davrous.com/2020/02/07/publishing-your-pwa-in-the-play-store-in-a-couple-of-minutes-using-pwa-builder/).
 
 ### A note on signing keys {: #a-note-on-signing-keys }
 

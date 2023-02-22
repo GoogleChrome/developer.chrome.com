@@ -14,7 +14,7 @@
           "AaronForinton",
           "anusmitaray",
           "IanStanion-google",
-          "amysteam"
+          "AmySteam"
         ],
         "paths" : [
           "site/**/*.md"
@@ -61,6 +61,16 @@
           "site/_data/**.yaml",
           "site/_data/**.json",
           "redirects.yaml"
+        ]
+      },
+      {
+        "check_name" : "Content (es) team approval",
+        "teams" : [],
+        "users" : [
+          "tropicadri"
+        ],
+        "paths" : [
+          "site/es/**/*.md"
         ]
       }
     ]

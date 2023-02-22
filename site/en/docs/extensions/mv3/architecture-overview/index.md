@@ -115,6 +115,7 @@ Now that you have completed the [Getting Started guides][doc-gs] and understand 
 [doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics
 [doc-dev-guide]: /docs/extensions/mv3/devguide
 [doc-ext-101]: /docs/extensions/mv3/getstarted/extensions-101
+[doc-gs]: /docs/extensions/mv3/getstarted
 [doc-manifest-examples]: /docs/extensions/mv3/manifest#manifest-examples
 [doc-match]: /docs/extensions/mv3/match_patterns/
 [doc-manifest]: /docs/extensions/mv3/manifest
