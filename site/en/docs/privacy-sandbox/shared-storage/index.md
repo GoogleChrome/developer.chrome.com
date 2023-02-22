@@ -109,7 +109,7 @@ The Shared Storage API intends to support many use cases, replacing several exis
   <tr>
    <td><strong><a href="/docs/privacy-sandbox/shared-storage/k-freq-reach">K+ Frequency Reach Reporting</a></strong>
    </td>
-   <td>Sometimes described as “effective frequency”, there is often a minimum number of views before a user will recognize or recall certain content (often in the context of advertisement views). You can use Shared Storage to build reports of unique users that have seen a piece of content at least K times. 
+   <td>Sometimes described as “effective frequency,” there is often a minimum number of views before a user will recognize or recall certain content (often in the context of advertisement views). You can use Shared Storage to build reports of unique users that have seen a piece of content at least K times. 
    </td>
    <td>Private Aggregation API
    </td>
