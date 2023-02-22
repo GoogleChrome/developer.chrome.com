@@ -147,7 +147,7 @@ Shared Storage API for URL selection output gate and Private Aggregation output 
 
 A [demo is available](https://shared-storage-demo.web.app/), and you can review the code on [GitHub](https://github.com/GoogleChromeLabs/shared-storage-demo). 
 
-This demo is constructed from the perspective of an advertiser, ad tech, content distributor or other third party service that wants to store information across different publishers’ sites. In the demo, the same third party’s code will run on both \*\*Publisher A\*\* and \*\*Publisher B\*\* sites for each use case. Visit the publisher’s pages to see how the data is shared in a cross-site context.
+This demo is constructed from the perspective of an advertiser, ad tech, content distributor or other third party service that wants to store information across different publishers’ sites. In the demo, the same third party’s code will run on both **Publisher A** and **Publisher B** sites for each use case. Visit the publisher’s pages to see how the data is shared in a cross-site context.
 
 The demo contains use cases for URL selection and Private Aggregation.
 
