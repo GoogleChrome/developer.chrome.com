@@ -139,7 +139,7 @@ Available Shared Storage API output gates:
 
 ## Try the Shared Storage API
 
-Shared Storage API for URL selection output gate and Private Aggregation output gate are available for testing.  URL selection can be tested in Chrome Canary/Dev/Beta M105+ and Private Aggregation API is available for testing in Chrome M107+ Canary and Dev. The API can be tested by enabling the `Privacy Sandbox Ads APIs experiment` flag at `chrome://flags/#privacy-sandbox-ads-apis`.
+Shared Storage API for URL selection output gate and Private Aggregation output gate are available for testing.  URL selection can be tested in Chrome Canary/Dev/Beta M105+ and Private Aggregation API is available for testing in Chrome M107+ Canary and Dev. The API can be tested by enabling the **Privacy Sandbox Ads APIs experiment** flag at `chrome://flags/#privacy-sandbox-ads-apis`.
 
 {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/CWfgCMJQ5cYPOfjttF3k.png", alt="Set Privacy Sandbox Ads APIs experiment to enabled to use these APIs", width="744", height="124" %}
 
