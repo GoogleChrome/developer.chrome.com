@@ -1,0 +1,7 @@
+tag-pill-list {
+  display: none;
+
+  &:defined {
+    display: initial;
+  }
+}
