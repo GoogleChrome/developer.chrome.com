@@ -19,20 +19,20 @@ import './web-components/truncate-text';
 import './web-components/enhanced-select';
 import './web-components/checkbox-group';
 import './web-components/enhanced-events-list';
+import './web-components/tag-pill-list';
 import {EnhancedSelect} from './web-components/enhanced-select';
 
-let activeFilters = {},
-  upcomingEvents,
-  pastEvents;
+let activeFilters = {};
+/** @type {TagPillList} */
+const activeFiltersList = document.getElementById('active-filters');
+/** @type {EnhancedEventsList} */
+const upcomingEvents = document.getElementById('upcoming-events');
+/** @type {EnhancedEventsList} */
+const pastEvents = document.getElementById('past-events');
+const selectFields = document.querySelectorAll('.events-filter');
 
 (() => {
-  /** @type {EnhancedEventsList|null} */
-  upcomingEvents = document.querySelector('#upcoming-events');
-  /** @type {EnhancedEventsList|null} */
-  pastEvents = document.querySelector('#past-events');
-  const filters = document.querySelectorAll('.events-filter');
-
-  filters.forEach(ele => {
+  selectFields.forEach(ele => {
     ele.addEventListener('change', e => {
       const t = e.target;
 
@@ -40,22 +40,23 @@ let activeFilters = {},
         return;
       }
 
-      //todo - update the ui showing list of selected filters.
-      activeFilters = {
-        ...activeFilters,
-        ...{[t.name]: t.value},
-      };
+      reactivelySetFilter(t.name, t.value);
 
       injectFilters();
     });
   });
 
   addMobileListeners();
+  handleDeselections();
 })();
 
 function injectFilters() {
-  if (upcomingEvents) upcomingEvents.filters = activeFilters;
-  if (pastEvents) pastEvents.filters = activeFilters;
+  upcomingEvents.filters = activeFilters;
+  pastEvents.filters = activeFilters;
+
+  activeFiltersList.items = Object.entries(activeFilters).flatMap(i => {
+    return i[1].map(value => ({key: i[0], value: value}));
+  });
 }
 
 function addMobileListeners() {
@@ -104,4 +105,32 @@ function addMobileListeners() {
     // @ts-ignore
     filters?.close();
   }
+}
+
+function handleDeselections() {
+  activeFiltersList.addEventListener('click', e => {
+    if (!e.target.matches('.tag-pill')) return;
+
+    const key = e.target.dataset.key;
+
+    reactivelySetFilter(
+      key,
+      activeFilters[key].filter(i => i !== e.target.dataset.value)
+    );
+
+    injectFilters();
+
+    selectFields.forEach(field => {
+      /** @type {EnhancedSelect} */ (field).setValue(
+        activeFilters[field.getAttribute('name')] || []
+      );
+    });
+  });
+}
+
+function reactivelySetFilter(key, value) {
+  activeFilters = {
+    ...activeFilters,
+    ...{[key]: value},
+  };
 }
