@@ -19,7 +19,7 @@ Have you ever applied CSS to an element but it just doesn't work?
 
 With Chrome DevTools, you can discover CSS issues at a glance, debug, and test them.
 
-<!-- {% YouTube id='-------' %} -->
+{% YouTube id='iuZx0kHS0Xs' %}
 
 Watch the video to learn how the **Elements** > **Styles** pane highlights various CSS issues:
 
