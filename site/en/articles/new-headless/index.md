@@ -5,8 +5,8 @@ description: >
   Chrome’s Headless mode just got a whole lot better! This article presents an overview of recent engineering efforts to make Headless more useful for developers by bringing Headless closer to Chrome’s regular “headful” mode.
 subhead: >
   Chrome’s Headless mode just got a whole lot better!
-date: 2023-02-20
-updated: 2023-02-20
+date: 2023-02-23
+updated: 2023-02-23
 authors:
   - mathiasbynens
   - peterkvitek
