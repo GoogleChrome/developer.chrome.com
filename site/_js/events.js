@@ -101,6 +101,14 @@ function addMobileListeners() {
     closeFiltersModal();
   });
 
+  reset?.addEventListener('click', () => {
+    document
+      .querySelectorAll('#mobile-filters input[type="checkbox"]:checked')
+      .forEach(checkbox => {
+        /** @type {HTMLInputElement } */ (checkbox).checked = false;
+      });
+  });
+
   function closeFiltersModal() {
     // @ts-ignore
     filters?.close();
