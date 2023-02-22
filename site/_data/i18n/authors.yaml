@@ -1356,6 +1356,11 @@ tristramsouthey:
     en: 'Tristram Southey'
   description:
     en: 'Product Manager, Google Chrome'
+peterkvitek:
+  title:
+    en: Peter Kvitek
+  description:
+    en: 'Software engineer'
 developit:
   title:
     en: Jason Miller

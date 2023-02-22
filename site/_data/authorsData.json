@@ -334,6 +334,10 @@
     "github": "PEConn",
     "image": "image/Vww75TFpThOgTNuASFM6UYfBAp53/bphnrZBppE6u1ZqNnhKU.jpg"
   },
+  "peterkvitek": {
+    "country": "US",
+    "image": "image/ZQjEes3OsyYCDLE5837FjNRQ1Gw2/62sncQPT61F2Irw5MJRI.jpg"
+  },
   "pavoldrotar": {
     "country": "UK",
     "homepage": "https://pavoldrotar.com",
@@ -408,6 +412,7 @@
     "country": "DE",
     "twitter": "mathias",
     "github": "mathiasbynens",
+    "homepage": "https://mathiasbynens.be/",
     "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/abpvpv7lyW7ECZNEJ7wb.jpg"
   },
   "jackfranklin": {
