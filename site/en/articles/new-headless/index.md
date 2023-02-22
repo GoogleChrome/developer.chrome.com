@@ -58,7 +58,7 @@ chrome --headless=old
 
 Currently, passing the `--headless` command-line flag without an explicit value still activates the old Headless mode — but we plan to change this default to new Headless over time.
 
-We plan to completely remove old Headless from the Chrome binary and to stop supporting old Headless in Puppeteer later this year. As part of this removal, we’ll make old Headless available as a separate stand-alone binary for those users who cannot upgrade yet.
+We plan to completely remove the old Headless from the Chrome binary and stop supporting this mode in Puppeteer later this year. As part of this removal, we’ll make the old Headless available as a separate standalone binary for those users who can’t upgrade yet.
 
 ### New Headless in Puppeteer
 
