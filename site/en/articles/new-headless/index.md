@@ -114,7 +114,7 @@ The `--dump-dom` flag prints the serialized DOM of the target page to stdout. He
 chrome --headless=new --dump-dom https://developer.chrome.com/
 ```
 
-Note that this is different from simply printing the HTML source code (which you might do with `curl`). `--dump-dom` gives you the result of Chrome parsing the HTML code into a DOM, executing any `<script>`s that might alter the DOM — and then turning that DOM back into a serialized string of HTML.
+Note that this is different from simply printing the HTML source code (which you might do with `curl`). To bring you the output of `--dump-dom`, Chrome first parses the HTML code into a DOM, executes any `<script>` that might alter the DOM, and then turns that DOM back into a serialized string of HTML.
 
 #### `--screenshot`
 
