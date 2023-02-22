@@ -18,14 +18,18 @@
  * @param {Function} fetchItems
  * @param {Function} onError
  * @param {{skip?:number,take?:number, total?:number}} params
- * @returns {Promise<{currentOffset, total, take, next, restart}>}
+ * @returns {Promise<{currentOffset, total, take, nextPage, isLastPage, restart}>}
  */
 export const loadMore = async (fetchItems, onError, params = {}) => {
+  if (!params.total) {
+    throw new Error('Parameter missing: total');
+  }
+
   let currentOffset = params.skip || 0;
   let total = params.total;
   const take = params.take || 10;
 
-  const next = async () => {
+  const nextPage = async () => {
     try {
       const {items, updated_total} = await fetchItems(currentOffset, take);
 
@@ -43,10 +47,11 @@ export const loadMore = async (fetchItems, onError, params = {}) => {
     currentOffset: () => currentOffset,
     total: () => total,
     take: () => take,
-    next,
+    isLastPage: () => currentOffset >= total,
+    nextPage,
     restart: async () => {
       currentOffset = 0;
-      return await next();
+      return await nextPage();
     },
   };
 };

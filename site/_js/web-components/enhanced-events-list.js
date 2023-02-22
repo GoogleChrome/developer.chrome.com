@@ -46,10 +46,12 @@ export class EnhancedEventsList extends BaseElement {
 
     this.type = null;
     this.filters = {};
+    this.total = null;
     this.loader = null;
     this.loadMoreButton = this.getLoadMoreButton();
     this.loadedItems = [];
     this.initialItems = [];
+    this.omitInitialItems = false;
   }
 
   static get properties() {
@@ -57,6 +59,7 @@ export class EnhancedEventsList extends BaseElement {
       filters: {type: Object, reflect: true},
       type: {type: String, reflect: true},
       loadedItems: {type: Array, reflect: false},
+      total: {type: Number, reflect: false},
     };
   }
 
@@ -82,6 +85,8 @@ export class EnhancedEventsList extends BaseElement {
     super.attributeChangedCallback(name, oldval, newval);
 
     if ('resolved' in this.dataset && name === 'filters') {
+      this.omitInitialItems = true;
+
       const loaded = await this.loader?.restart();
 
       this.loadedItems = loaded || [];
@@ -96,7 +101,7 @@ export class EnhancedEventsList extends BaseElement {
 
       element.setAttribute('disabled', '');
 
-      const loaded = await this.loader?.next();
+      const loaded = await this.loader?.nextPage();
 
       this.loadedItems = this.loadedItems.concat(loaded || []);
 
@@ -149,12 +154,8 @@ export class EnhancedEventsList extends BaseElement {
     });
   }
 
-  haveFilters() {
-    return Object.entries(this.filters).some(i => i[1].length > 0);
-  }
-
   /**
-   * @returns {Promise<{currentOffset, total, take, restart}|null>}
+   * @returns {Promise<{currentOffset, total, take, nextPage, isLastPage, restart}>}
    */
   async initLoadMore() {
     return loadMore(
@@ -178,18 +179,22 @@ export class EnhancedEventsList extends BaseElement {
       {
         skip: this.initialItems.length,
         take: 10,
+        total: this.total,
       }
     );
   }
 
   render() {
-    const initialItems = !this.haveFilters() ? this.initialItems : null;
+    const initialItems = this.omitInitialItems ? null : this.initialItems;
+    const loadMoreButton = !this.loader?.isLastPage()
+      ? this.loadMoreButton?.element
+      : null;
 
     return html`
       <div class="display-grid grid-cols-1 grid-gap-400">
         ${initialItems} ${unsafeHTML(this.loadedItems.join(''))}
       </div>
-      ${this.loadMoreButton?.element}
+      ${loadMoreButton}
     `;
   }
 }

@@ -27,9 +27,9 @@
 
   <web-tab title="{{ 'i18n.events.upcoming_events' | i18n(locale) }}">
     <enhanced-events-list id="upcoming-events"
-                          type="UPCOMING">
-      <div class="events-list__items"
-           total-items="{{ collections.currentEvents.length }}">
+                          type="UPCOMING"
+                          total="{{ collections.currentEvents.length }}">
+      <div class="events-list__items">
         {% for event in collections.currentEvents.slice(0,show) %}
           {% include 'partials/event-card.njk' %}
         {% endfor %}
@@ -48,9 +48,9 @@
 
   <web-tab title="{{ 'i18n.events.past_events' | i18n(locale) }}">
     <enhanced-events-list id="past-events"
-                          type="PAST">
-      <div class="events-list__items"
-           total-items="{{ collections.pastEvents.length }}">
+                          type="PAST"
+                          total="{{ collections.pastEvents.length }}">
+      <div class="events-list__items">
         {% for event in collections.pastEvents.slice(0,show) %}
           {% include 'partials/event-card.njk' %}
         {% endfor %}
