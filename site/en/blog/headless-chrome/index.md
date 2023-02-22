@@ -20,7 +20,7 @@ date: 2017-04-27
 
 # Optional
 # Include an updated date when you update your post
-updated: 2023-02-20
+updated: 2023-02-23
 
 # Optional
 # How to add a new tag
@@ -595,7 +595,7 @@ in the container.
 
 **Can I use this with Selenium / WebDriver / ChromeDriver**?
 
-Yes. See [Using Selenium, WebDrive, or ChromeDriver](#drivers).
+Yes. See [Using Selenium, WebDriver, and ChromeDriver](#using-selenium-webdriver-and-chromedriver).
 
 **How is this related to PhantomJS?**
 
