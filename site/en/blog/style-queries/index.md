@@ -1,9 +1,9 @@
 ---
 title: "Getting Started with Style Queries"
 description: >
-  "Style queries allow developers to query a parent element's style values using the @container rule. In M112, style queries for CSS custom properties are landing stable. Learn how to get started with them."
+  Style queries allow developers to query a parent element's style values using the @container rule. In M112, style queries for CSS custom properties are landing stable. Learn how to get started with them.
 layout: 'layouts/blog-post.njk'
-date: 2023-02-25
+date: 2023-02-23
 hero: 'image/HodOHWjMnbNw56hvNASHWSgZyAf2/N8vx7PDIeyMNI2wzWnax.jpg'
 alt: >
   Two-tone pink and blue background with opposite colored purses on each background.
