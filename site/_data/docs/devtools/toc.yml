@@ -87,6 +87,7 @@
   sections:
     - url: /docs/devtools/recorder/
     - url: /docs/devtools/recorder/reference
+    - url: /docs/devtools/recorder/extensions
 - title: i18n.docs.devtools.rendering
   sections:
     - url: /docs/devtools/rendering/
