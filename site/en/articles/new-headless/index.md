@@ -179,7 +179,7 @@ With `--timeout=42000` it would take at least 42 seconds before the PDF gets pri
 
 ## Debugging
 
-Since Chrome is effectively invisible in Headless mode, it might sound tricky to figure out what’s going on in case of issues. Luckily, it’s possible to debug Headless Chrome in a way that’s very similar to headful Chrome. The trick is to launch Chrome in Headless mode with the `--remote-debugging-port` command-line flag.
+Because Chrome is effectively invisible in Headless mode, it might sound tricky to figure out what’s going on in case of issues. Luckily, it’s possible to debug Headless Chrome in a way that’s very similar to headful Chrome. The trick is to launch Chrome in Headless mode with the `--remote-debugging-port` command-line flag.
 
 ```sh
 chrome --headless=new --remote-debugging-port=0 https://developer.chrome.com/
