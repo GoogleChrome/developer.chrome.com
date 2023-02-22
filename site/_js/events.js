@@ -125,6 +125,15 @@ function handleDeselections() {
         activeFilters[field.getAttribute('name')] || []
       );
     });
+
+    document
+      .querySelectorAll('#mobile-filters input[type="checkbox"]:checked')
+      .forEach(checkbox => {
+        const target = activeFilters?.[checkbox.getAttribute('name')];
+
+        /** @type {HTMLInputElement } */ (checkbox).checked =
+          target && target.includes(checkbox.getAttribute('value'));
+      });
   });
 }
 
