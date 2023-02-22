@@ -84,15 +84,23 @@ To set a logpoint:
 1.  Go to the line of code.
 1.  To the left of the line of code is the line number column. Right-click it.
 1.  Select **Add logpoint**. A dialog displays underneath the line of code.
-1.  Enter your log message in the dialog.
-
-    You can use the same syntax as you would with a [`console.log(message)`](https://developer.mozilla.org/docs/Web/API/Console/log) call.
+1.  Enter your log message in the dialog. You can use the same syntax as you would with a [`console.log(message)`](https://developer.mozilla.org/docs/Web/API/Console/log) call.
 
     For example, you can log:
 
     ```js
-    "A string", object, variable, variable.length > 1
+    "A string " + num, str.length > 1, str.toUpperCase(), obj
     ```
+
+    In this case, the logged message is:
+
+    ```js
+    // str = "test"
+    // num = 3
+    // obj = {attr: "x"}
+    A string 42 true TEST {attr: 'x'}
+    ```
+
 1.  Press <kbd>Enter</kbd> to activate the breakpoint. A pink icon with two dots appears on top of the line number column.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/daHPau6iUXfqFJSZ61Lh.png", alt="A logpoint that logs a string and a variable value to the Console.", width="800", height="548" %}
