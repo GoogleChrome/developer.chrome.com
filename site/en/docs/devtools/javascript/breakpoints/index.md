@@ -56,7 +56,7 @@ console.log('c');
 ### Conditional line-of-code breakpoints {: #conditional-loc }
 
 Use a conditional line-of-code breakpoint when you know the exact region of code that you need to
-investigate, but you want to pause only when some other condition is true.
+investigate, but you want to pause only when some other condition is true. This can help you catch edge cases with variables.
 
 To set a conditional line-of-code breakpoint:
 
@@ -68,9 +68,9 @@ To set a conditional line-of-code breakpoint:
 6.  Enter your condition in the dialog.
 7.  Press <kbd>Enter</kbd> to activate the breakpoint. An orange icon with a question mark appears on top of the line number column.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/wbb7VQOAG1GOHvBqqjdt.png", alt="A conditional line-of-code breakpoint.", width="800", height="579" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/IUIuRrqQMrnNGng8ysfb.png", alt="A conditional line-of-code breakpoint.", width="800", height="627" %}
 
-This example shows a conditional line-of-code breakpoint set on line **30**.
+This example shows a conditional line-of-code breakpoint set on line 31. The breakpoint pauses only if any or both of the two variables are negative.
 
 ### Log line-of-code breakpoints {: #log-loc }
 
@@ -111,9 +111,9 @@ The **Breakpoints** pane groups the breakpoints by file and orders them by line 
 
 This video shows how to collapse groups and disable or enable breakpoints one by one or by groups. When you disable a breakpoint, the **Sources** panel makes its marker next to the line number transparent.
 
-Groups have context menus. Right-click a group and choose:
+Groups have context menus. In the **Breakpoints** pane, right-click a group and choose:
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/SdWkkrJ10XJ7IrsSluZv.png", alt="The context menu of a group.", width="800", height="749" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/BN1wTH94xG36ffQm33ue.png", alt="The context menu of a group.", width="800", height="749" %}
 
 - Remove all breakpoints in file (group).
 - Disable all breakpoints in file.
@@ -133,7 +133,7 @@ To edit a breakpoint:
 
 - Right-click a breakpoint to see its context menu and choose one of the options:
 
-  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/nXywqsxpmuMDQgDaQusa.png", alt="The context menu of a breakpoint.", width="800", height="749" %}
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/FCsRKMDAEccIPT3ecc0B.png", alt="The context menu of a breakpoint.", width="800", height="749" %}
 
   - Remove breakpoint.
   - Edit condition or logpoint.
@@ -162,6 +162,18 @@ To set a DOM change breakpoint:
 
 This example shows the context menu for creating a DOM change breakpoint.
 
+You can find a list of DOM change breakpoints in:
+
+- **Elements** > **DOM Breakpoints** pane.
+- **Sources** > **DOM Breakpoints** side pane.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ffaxCrSKWLf8ulyuYePH.png", alt="Lists of DOM Breakpoints in the Elements and Sources panels.", width="800", height="582" %}
+
+There you can:
+
+- Enable or disable them with {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %}.
+- Right-click > **Remove** or **Reveal** them in the DOM.
+
 ### Types of DOM change breakpoints {: #dom-types }
 
 - **Subtree modifications**. Triggered when a child of the currently-selected node is removed or
@@ -171,32 +183,26 @@ This example shows the context menu for creating a DOM change breakpoint.
   currently-selected node, or when an attribute value changes.
 - **Node Removal**: Triggered when the currently-selected node is removed.
 
-## XHR/Fetch breakpoints {: #xhr }
+## XHR/fetch breakpoints {: #xhr }
 
-Use an XHR breakpoint when you want to break when the request URL of an XHR contains a specified
+Use an XHR/fetch breakpoint when you want to break when the request URL of an XHR contains a specified
 string. DevTools pauses on the line of code where the XHR calls `send()`.
-
-{% Aside %}
-
-**Note:** This feature also works with [Fetch][10] requests.
-
-{% endAside %}
 
 One example of when this is helpful is when you see that your page is requesting an incorrect URL,
 and you want to quickly find the AJAX or Fetch source code that is causing the incorrect request.
 
-To set an XHR breakpoint:
+To set an XHR/fetch breakpoint:
 
 1.  Click the **Sources** tab.
 2.  Expand the **XHR Breakpoints** pane.
-3.  Click **Add breakpoint**.
+3.  Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YihNsXarRhDgEi9rOT4H.svg", alt="Add.", width="24", height="24" %} **Add breakpoint**.
 4.  Enter the string which you want to break on. DevTools pauses when this string is present
     anywhere in an XHR's request URL.
-5.  Press Enter to confirm.
+5.  Press <kbd>Enter</kbd> to confirm.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/AAL4i6FKWOaIEdreyLjE.png", alt="Creating an XHR breakpoint.", width="800", height="756" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/AAL4i6FKWOaIEdreyLjE.png", alt="Creating an XHR/fetch breakpoint.", width="800", height="756" %}
 
-This example shows how to create an XHR breakpoint in the **XHR Breakpoints** for any request that contains
+This example shows how to create an XHR/fetch breakpoint in the **XHR/fetch Breakpoints** for any request that contains
 `org` in the URL.
 
 ## Event listener breakpoints {: #event-listeners }
@@ -214,6 +220,8 @@ all mouse events.
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/aFFgOPi3outuMb32WO3k.png", alt="Creating an event listener breakpoint.", width="800", height="726" %}
 
 This example shows how to create an event listener breakpoint for `deviceorientation`.
+
+Additionally, you can find a list of event listeners in the **Elements** > **Event Listeners** pane.
 
 ## Exception breakpoints {: #exceptions }
 
