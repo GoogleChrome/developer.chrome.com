@@ -32,7 +32,7 @@ The Shared Storage API allows sites to store and access unpartitioned cross-site
 
 There are many different kinds of companies which may benefit from using the Shared Storage API. For example:
 
-*   Adtechs could measure campaign reach, set frequency caps, and rotate creatives, all of which currently rely on third-party cookies.
+*   Ad techs could measure campaign reach, set frequency caps, and rotate creatives, all of which currently rely on third-party cookies.
 *   Payments providers could determine if a user is an existing customer and tailor the checkout experience.
 *   Web security companies can build custom logic to flag suspicious or dangerous behavior.
 
