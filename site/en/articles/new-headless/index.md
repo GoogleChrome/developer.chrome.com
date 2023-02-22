@@ -169,7 +169,7 @@ The `--virtual-time-budget` enables time travel! Well, kinda. Virtual Time acts 
 chrome --headless=new --print-to-pdf --virtual-time-budget=5000 https://mathiasbynens.be/demo/time
 ```
 
-This produces the same result as the previous example with `--timeout`. The difference is that with `--virtual-time-budget` the process takes very little real time — just about the same time as if there was no timeout specified at all. The difference becomes more obvious with larger values:
+This produces the same result as the previous example with `--timeout`. The difference is that, with `--virtual-time-budget`, the process takes very little real time — just about the same time as if there was no timeout specified at all. The difference becomes more obvious with larger values:
 
 ```sh
 chrome --headless=new --print-to-pdf --virtual-time-budget=42000 https://mathiasbynens.be/demo/time
