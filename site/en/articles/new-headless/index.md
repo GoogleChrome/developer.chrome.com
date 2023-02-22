@@ -40,7 +40,7 @@ In 2021, the Chrome team set out to solve this problem, and unify Headless and h
 
 {% Img src="image/ZQjEes3OsyYCDLE5837FjNRQ1Gw2/K9FXq7WkolxhfVmYCnAO.svg", alt="The new Chrome Headless is no longer a separate browser implementation, and now instead shares code with Chrome.", width="500", height="516" %}
 
-We’re excited to announce that the new Headless mode is now available in Chrome 112! In this mode Chrome creates, but does not display, any platform windows. All other functionality, existing and future, is available with no limitations.
+We’re excited to announce that the new Headless mode is now available in Chrome 112! In this mode, Chrome creates but doesn’t display any platform windows. All other functionality, existing and future, is available with no limitations.
 
 ## Try out the new Headless
 
