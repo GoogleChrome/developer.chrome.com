@@ -161,7 +161,7 @@ The `--timeout=5000` flag tells Chrome to wait for 5 seconds before printing the
 
 #### `--virtual-time-budget`
 
-The `--virtual-time-budget` enables time travel! Well, kinda. Virtual Time acts as a “fast-forward” for any time-dependent code (e.g. `setTimeout`/`setInterval`). It forces the browser to execute any of the page’s code as fast as possible while making the page believe that the time actually goes by.
+The `--virtual-time-budget` enables time travel! Well, to some extent. Virtual Time acts as a “fast-forward” for any time-dependent code (for example, `setTimeout`/`setInterval`). It forces the browser to execute any of the page’s code as fast as possible while making the page believe that the time actually goes by.
 
 `--virtual-time-budget` is most commonly used as a replacement for `--timeout`, like this:
 
