@@ -23,7 +23,7 @@ const pageIds = new Set();
  * @this {any} The eleventy context
  * @return {string} unique id for the section
  */
-function ensureUniqueHref(id) {
+function ensureUniqueHrefInProduction(id) {
   // Incremental builds (e.g. `npm run dev`) can not check for uniqueness
   // as they create the same ID for every run which would trigger an error.
   if (process.env.ELEVENTY_ENV !== 'production') {
@@ -44,5 +44,5 @@ function ensureUniqueHref(id) {
 }
 
 module.exports = {
-  ensureUniqueHref,
+  ensureUniqueHrefInProduction,
 };
