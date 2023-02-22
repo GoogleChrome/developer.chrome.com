@@ -191,7 +191,7 @@ This prints a unique WebSocket URL to stdout, for example:
 DevTools listening on ws://127.0.0.1:60926/devtools/browser/b4bd6eaa-b7c8-4319-8212-225097472fd9
 ```
 
-In a regular headful Chrome instance, we can then use [Chrome DevTools remote debugging](/docs/devtools/remote-debugging/) to connect to the Headless target and inspect it. To do so, go to `chrome://inspect`, click the “Configure…” button, and enter the IP address and port number from the WebSocket URL. In the above example, I entered `127.0.0.1:60926`. Click “Done”, and you should see a Remote Target appear with all its tabs and other targets listed below. Click “inspect”, _et voilà_ — you now have access to Chrome DevTools inspecting the remote Headless target, **including a live view of the page**!
+In a regular headful Chrome instance, we can then use [Chrome DevTools remote debugging](/docs/devtools/remote-debugging/) to connect to the Headless target and inspect it. To do so, go to `chrome://inspect`, click the **Configure…** button, and enter the IP address and port number from the WebSocket URL. In the above example, I entered `127.0.0.1:60926`. Click **Done** and you should see a Remote Target appear with all its tabs and other targets listed below. Click **inspect** and you now have access to Chrome DevTools inspecting the remote Headless target, **including a live view of the page**!
 
 {% Img src="image/ZQjEes3OsyYCDLE5837FjNRQ1Gw2/GDP1l2VF3lV67bxNzskn.png", alt="Chrome DevTools can inspect a remote Headless target page", width="800", height="515" %}
 
