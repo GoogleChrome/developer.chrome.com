@@ -1,7 +1,7 @@
 ---
 title: "Getting Started with Style Queries"
 description: >
-  "Container queries enable components to own their responsive styling information based on the space they fit within. This feature is starting to roll out to modern browsers, and there's been a big update for polyfill support."
+  "Style queries allow developers to query a parent element's style values using the @container rule. In M112, style queries for CSS custom properties are landing stable. Learn how to get started with them."
 layout: 'layouts/blog-post.njk'
 date: 2023-02-25
 hero: 'image/HodOHWjMnbNw56hvNASHWSgZyAf2/N8vx7PDIeyMNI2wzWnax.jpg'
