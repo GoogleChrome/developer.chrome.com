@@ -175,7 +175,7 @@ This produces the same result as the previous example with `--timeout`. The diff
 chrome --headless=new --print-to-pdf --virtual-time-budget=42000 https://mathiasbynens.be/demo/time
 ```
 
-With `--timeout=42000` it would take at least 42 seconds before the PDF gets printed. With `--virtual-time-budget=42000` it barely takes longer than the previous example.
+With `--timeout=42000`, it would take at least 42 seconds before the PDF gets printed. With `--virtual-time-budget=42000`, it barely takes longer than the previous example.
 
 ## Debugging
 
