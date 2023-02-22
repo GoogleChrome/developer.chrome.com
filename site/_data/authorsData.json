@@ -1074,5 +1074,21 @@
   "tristramsouthey": {
     "country": "US",
     "image": "image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/yh2i5pJyWLqMz49B7qWq.jpeg"
+  },
+  "developit": {
+    "homepage": "https://jasonformat.com",
+    "twitter": "_developit",
+    "github": "developit",
+    "image": "image/admin/bPCYfhUgxdCpXhKAWc9X.jpg"
+  },
+  "masonfreed": {
+    "twitter": "Mfreed777",
+    "github": "mfreed7",
+    "image": "image/admin/t7E3inN3orEPpDUXSkXR.jpg"
+  },
+  "uskay": {
+    "homepage": "https://blog.uskay.io/",
+    "twitter": "uskay",
+    "image": "image/admin/ztcrpMPYTd84oPTN4GdY.jpg"
   }
 }

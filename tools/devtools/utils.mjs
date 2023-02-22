@@ -54,7 +54,7 @@ const translation = {
   reviewers: {
     es: ['midudev', 'Caballerog', 'and-oli'],
     ja: ['yoshiko-pg', 'lacolaco', 'technohippy', 'yoichiro'],
-    ko: ['techhtml', 'TORU0239', 'cwdoh'],
+    ko: ['syang0624', 'TORU0239', 'cwdoh'],
     pt: ['alvarocamillont', 'khaosdoctor'],
     ru: ['solarrust', 'webmaxru', 'kateryna-prokopenko'],
     zh: ['xyugroup', 'aquaMAX', 'liuliangsir', 'louisyoong', 'hanselfmu'],
@@ -148,7 +148,7 @@ export async function populateTranslationContent(version, langs) {
 
   const enParagraphs = (
     enContent.match(
-      /(?<=\n)((?!{%|{#|Chromium issue: |Chromium issues: ).*)(?=\n)$/gm
+      /(?<=\n)((?!{%|\s*{%|{#|Chromium issue: |Chromium issues: ).*)(?=\n)$/gm
     ) || []
   ).filter(x => x);
 
@@ -210,17 +210,14 @@ export async function createWndtOutline(version, langs) {
     }
 
     const outlineFileName = nunjucks.renderString(outlineDest, {lang});
-    let outlineFileContent = await readFile(outlineFileName, 'utf-8');
+    const outlineFileContent = await readFile(outlineFileName, 'utf-8');
 
     const contentHolder = '{# $content #}';
-    outlineFileContent = outlineFileContent.replace(
-      contentHolder,
-      '{{ content }}'
-    );
 
-    const out = nunjucks.renderString(outlineFileContent, {
-      content: contentHolder + '\n\n' + langOutput,
-    });
+    const out = outlineFileContent.replace(
+      contentHolder,
+      contentHolder + '\n\n' + langOutput
+    );
 
     await writeFile(outlineFileName, out, 'utf-8');
   }

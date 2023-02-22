@@ -17,6 +17,10 @@
     - url: /docs/web-platform/region-capture
     - url: /docs/web-platform/virtual-keyboard
 
+- title: i18n.docs.web-platform.beta
+  sections:
+    - url: /docs/web-platform/view-transitions
+
 - title: i18n.docs.web-platform.origin-trials
   sections:
     - url: /docs/web-platform/document-picture-in-picture
@@ -29,10 +33,10 @@
 - title: i18n.docs.web-platform.developer-trials
   sections:
     - url: /docs/web-platform/compute-pressure
-    - url: /docs/web-platform/view-transitions
 
 - title: i18n.docs.web-platform.not-pursuing
   sections:
     - url: /docs/web-platform/declarative-link-capturing
     - url: /docs/web-platform/storage-foundation
     - url: /docs/web-platform/notification-triggers
+    - url: /docs/web-platform/web-bundles

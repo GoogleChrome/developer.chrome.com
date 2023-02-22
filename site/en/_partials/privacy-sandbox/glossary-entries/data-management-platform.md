@@ -1,6 +1,4 @@
-## Data management platform (DMP) {: #dmp }
-
-A software used to collect and manage data relevant for advertisers. These
+A data management platform is software used to collect and manage data relevant for advertisers. These
 platforms help advertisers and publishers identify audience segments, which can
 then be used for campaign targeting.
 

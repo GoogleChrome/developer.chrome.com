@@ -64,7 +64,7 @@ First-Party Sets such that sites could define cookies originating from sites
 within the "same party". We used a
 [User-Agent Policy](https://github.com/WICG/first-party-sets/blob/main/archive/ua_policy_proposal.md)
 to define what would constitute a "same party". This policy definition attempted
-to build upon existing frameworks of "party" (for example, the [W3C DNT's
+to build upon existing frameworks of "party" (for example, from the [W3C DNT
 specification](https://www.w3.org/TR/tracking-compliance/#party)) and
 incorporated recommendations from relevant privacy discourse (such as the 2012
 Federal Trade Commission report titled

@@ -31,7 +31,7 @@ provided by these early experiments is the impact of **user-initiated data clear
 were recently published. This post adresses answering common questions on the impact of
 user-initiated data clearing on attribution reports.
 
-{% Aside %} Numbers and statements in this blogpost are correct at the time of its
+{% Aside %} Numbers and statements in this blog post are correct at the time of its
 publication. They're subject to change as the API evolves. {% endAside %}
 
 ## How does user-initiated data clearing impact attribution reports?
