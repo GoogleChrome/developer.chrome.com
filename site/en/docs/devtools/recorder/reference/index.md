@@ -73,7 +73,7 @@ You can install a Chrome extension to export replay scripts in your favorite for
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xRO1d79tBe0ILcBoD0oh.png", alt="Custom extension for the Recorder panel.", width="800", height="486" %}
 
-For a list of known Recorder extensions, see [Extensions]()
+For a list of known **Recorder** extensions, see [Extensions](/docs/devtools/recorder/extensions/).
 
 ##### Troubleshooting {: #extension-troubleshooting }
 
