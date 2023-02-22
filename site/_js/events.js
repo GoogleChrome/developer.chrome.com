@@ -18,17 +18,19 @@ import './web-components/enhanced-event-card';
 import './web-components/truncate-text';
 import './web-components/enhanced-select';
 import './web-components/checkbox-group';
-import './web-components/enhanced-events-list';
-import './web-components/tag-pill-list';
+// eslint-disable-next-line no-unused-vars
+import {EnhancedEventsList} from './web-components/enhanced-events-list';
+// eslint-disable-next-line no-unused-vars
+import {TagPillList} from './web-components/tag-pill-list';
 import {EnhancedSelect} from './web-components/enhanced-select';
 
 let activeFilters = {};
-/** @type {TagPillList} */
-const activeFiltersList = document.getElementById('active-filters');
-/** @type {EnhancedEventsList} */
-const upcomingEvents = document.getElementById('upcoming-events');
-/** @type {EnhancedEventsList} */
-const pastEvents = document.getElementById('past-events');
+/** @type {TagPillList|null} */
+const activeFiltersList = document.querySelector('#active-filters');
+/** @type {EnhancedEventsList|null} */
+const upcomingEvents = document.querySelector('#upcoming-events');
+/** @type {EnhancedEventsList|null} */
+const pastEvents = document.querySelector('#past-events');
 const selectFields = document.querySelectorAll('.events-filter');
 
 (() => {
@@ -51,12 +53,13 @@ const selectFields = document.querySelectorAll('.events-filter');
 })();
 
 function injectFilters() {
-  upcomingEvents.filters = activeFilters;
-  pastEvents.filters = activeFilters;
+  if (upcomingEvents) upcomingEvents.filters = activeFilters;
+  if (pastEvents) pastEvents.filters = activeFilters;
 
-  activeFiltersList.items = Object.entries(activeFilters).flatMap(i => {
-    return i[1].map(value => ({key: i[0], value: value}));
-  });
+  if (activeFiltersList)
+    activeFiltersList.items = Object.entries(activeFilters).flatMap(i => {
+      return i[1].map(value => ({key: i[0], value: value}));
+    });
 }
 
 function addMobileListeners() {
@@ -116,14 +119,20 @@ function addMobileListeners() {
 }
 
 function handleDeselections() {
-  activeFiltersList.addEventListener('click', e => {
-    if (!e.target.matches('.tag-pill')) return;
+  if (!activeFiltersList) return;
 
-    const key = e.target.dataset.key;
+  activeFiltersList.addEventListener('click', e => {
+    const target = e.target;
+
+    if (!(target instanceof HTMLElement)) return;
+
+    if (!target.matches('.tag-pill')) return;
+
+    const key = target.dataset.key;
 
     reactivelySetFilter(
       key,
-      activeFilters[key].filter(i => i !== e.target.dataset.value)
+      activeFilters[key].filter(i => i !== target.dataset.value)
     );
 
     injectFilters();
