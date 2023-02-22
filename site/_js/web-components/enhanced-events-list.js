@@ -87,9 +87,7 @@ export class EnhancedEventsList extends BaseElement {
     if ('resolved' in this.dataset && name === 'filters') {
       this.omitInitialItems = true;
 
-      const loaded = await this.loader?.restart();
-
-      this.loadedItems = loaded || [];
+      this.loadedItems = await this.loader?.restart();
     }
   }
 
@@ -106,10 +104,6 @@ export class EnhancedEventsList extends BaseElement {
       this.loadedItems = this.loadedItems.concat(loaded || []);
 
       element.removeAttribute('disabled');
-
-      if (this.loader?.currentOffset() >= this.loader?.total()) {
-        element.setAttribute('hidden', '');
-      }
     };
 
     return {
