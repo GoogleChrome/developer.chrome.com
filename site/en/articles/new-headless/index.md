@@ -62,7 +62,7 @@ We plan to completely remove the old Headless from the Chrome binary and stop su
 
 ### New Headless in Puppeteer
 
-To opt-in to the new Headless mode in Puppeteer:
+To opt in to the new Headless mode in Puppeteer:
 
 ```js
 import puppeteer from 'puppeteer';
