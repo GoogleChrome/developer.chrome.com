@@ -15,7 +15,7 @@ tags:
   - devtools-tips
 ---
 
-Have you ever applied some CSS to an element but it just doesn't work?
+Have you ever applied CSS to an element but it just doesn't work?
 
 With Chrome DevTools, you can discover CSS issues at a glance, debug, and test them.
 
@@ -47,6 +47,10 @@ More debugging tips:
 
 - Use the filter in the **Styles** pane to focus on the one property that interests you.
 - Use the **Computed** pane to see all the [Cascade](https://developer.mozilla.org/docs/Web/CSS/Cascade) winners and their computed values.
-- In the **Computed** pane, expand a property and click a link to its source in the **Styles** pane.
+- In the **Computed** pane, expand a property and click a link to find its source in the **Styles** pane.
 
 To learn more about all the ways DevTools highlights CSS issues, see [Find invalid, overridden, inactive, and other CSS](/docs/devtools/css/issues/).
+
+To level up your CSS expertise, see [Learn CSS](https://web.dev/learn/css/).
+
+To learn how to create websites that look great and work well for everyone, see [Learn Responsive Design](https://web.dev/learn/design/).
