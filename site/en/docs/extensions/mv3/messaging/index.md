@@ -82,6 +82,9 @@ For new extensions you should prefer promises over callbacks. If you're using ca
 will be invoked automatically if no handlers return true or if the `sendResponse()` callback is
 garbage-collected.
 
+For information on using promises, see [Promises on MDN][mdn-promise]. For information on converting
+callbacks to promises and for using them in extensions, see [our own article][doc-promises].
+
 ## Long-lived connections {: #connect }
 
 Sometimes it's useful to have a conversation that lasts longer than a single request and response.

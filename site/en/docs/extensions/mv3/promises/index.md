@@ -16,7 +16,7 @@ It's long been possible to "promisify" Chrome extension APIs using libraries. St
 
 For backward compatibility, many methods continue to support callbacks after promise support is added. Be aware that you cannot use both on the same function call. If you pass a callback, the function will not return a promise and if you want a promise returned do not pass a callback. Some API features, such as event listeners, will continue to require callbacks.
 
-To check whether a method supports promises, look for the "Promise" label in its API reference. You'll find it below the method signature. Here's an example from the [`chrome.tabs`](/docs/extensions/reference/tabs/#methods) API:
+To check whether a method supports promises, look for the "Promise" label in its API reference. You'll find it below the method signature. Here's an example from the [`chrome.tabs`](/docs/extensions/reference/tabs/#methods) namespace:
 
 <figure>
 {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/GoaezeAlSfYqW2ymK0mC.png",
@@ -30,7 +30,7 @@ To check whether a method supports promises, look for the "Promise" label in its
 There are many places where using promises results in cleaner, easier-to-maintain code. You
 should consider using promises in situations such as the following:
 
-* Any time that you want to clean up your code by using a more "synchronous" invocation style.
+* Any time you want to clean up your code by using a more "synchronous" invocation style.
 * Where error handling would be too difficult using callbacks.
 * When you want a more condensed way to invoke several concurrent methods and gather the results into a single thread of code.
 

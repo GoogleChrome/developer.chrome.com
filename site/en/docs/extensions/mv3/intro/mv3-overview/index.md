@@ -107,15 +107,15 @@ for more about how to work with this change.
 
 Manifest V3 provides first-class support for promises. Many popular APIs support
 promises now, and we will eventually support promises on all appropriate
-methods. Promise chains, async and await are also supported. 
+methods. Promise chains, async and await are also supported. Some API features,
+such as event listeners, will continue to require callbacks.
 
 For backward compatibility, many methods continue to support callbacks after
 promise support is added. Be aware that you cannot use both on the same
 function call. If you pass a callback, the function will not return a promise
-and if you want a promise returned do not pass a callback. Some API features,
-such as event listeners, will continue to require callbacks.
+and if you want a promise returned do not pass a callback. 
 
-Forninformation on using promises, see [Promises on MDN][mdn-promise]. For
+For information on using promises, see [Promises on MDN][mdn-promise]. For
 information on converting callbacks to promises and for using them in
 extensions, see [our own article][doc-promises].
 
