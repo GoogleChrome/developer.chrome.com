@@ -472,7 +472,7 @@ To enable or disable a class on an element:
 To set and preview changes to the [CSS Grid](https://developer.mozilla.org/docs/Web/CSS/CSS_Grid_Layout):
 
 1. [Select an element][21] with [`display: grid`](https://developer.mozilla.org/docs/Web/CSS/grid#examples) or `display: inline-grid` applied.
-2. Click the **CSS Grid** icon {% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/nNtcPTUMWFRw5vHQoN9w.png", alt="CSS Grid icon.", width="40", height="40" %} that appears next to the `display` element in the **Styles** pane.
+2. Click the **CSS Grid** icon {% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/nNtcPTUMWFRw5vHQoN9w.png", alt="CSS Grid icon.", width="55", height="55" %} that appears next to the `display` element in the **Styles** pane.
 3. Preview and author changes to the grid using the options that pop-up in the modal window.
 
 {% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/WXHpmoybdfComXMlJxf5.png", alt="CSS Grid preview modal showing alignment options for the current page.", width="800", height="261" %}

@@ -86,17 +86,6 @@ the Sidebar, which is useful for filtering.
 This section contains features that change how messages are presented in the Console. See [View
 messages][15] for a hands-on walkthrough.
 
-### Copy options {: #copy-options }
-
-The console outputs strings as valid JavaScript literals by default. When right-clicking, you can choose between three copy options:
-
-* **Copy as JavaScript literal**, which escapes appropriate special characters and wraps the string in either single quotes, double quotes,
-or backticks depending on the content.
-* **Copy string contents** copies the raw string contents (including new lines and other special characters) to the clipboard verbatim.
-* **Copy as JSON literal** formats the string to valid JSON.
-
-{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/BM72ZiTnSm8IPnhMrbk1.png", alt="The copy options.", width="800", height="477" %}
-
 ### Disable message grouping {: #group }
 
 [Open Console Settings][16] and disable **Group similar** to disable the Console's default message
@@ -277,6 +266,17 @@ To search for text in log messages:
 
 This section contains features related to running JavaScript in the Console. See [Run
 JavaScript][28] for a hands-on walkthrough.
+
+### Copy options {: #copy-options }
+
+The console outputs strings as valid JavaScript literals by default. When right-clicking, you can choose between three copy options:
+
+* **Copy as JavaScript literal**, which escapes appropriate special characters and wraps the string in either single quotes, double quotes,
+  or backticks depending on the content.
+* **Copy string contents** copies the raw string contents (including new lines and other special characters) to the clipboard verbatim.
+* **Copy as JSON literal** formats the string to valid JSON.
+
+{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/BM72ZiTnSm8IPnhMrbk1.png", alt="The copy options.", width="800", height="477" %}
 
 ### Re-run expressions from history {: #history }
 
