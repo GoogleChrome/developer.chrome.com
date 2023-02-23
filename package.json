@@ -92,7 +92,8 @@
     "uslug": "^1.0.4",
     "web-vitals": "^3.1.1",
     "webdev-infra": "1.0.44",
-    "xss": "^1.0.14"
+    "xss": "^1.0.14",
+    "chalk": "^5.2.0"
   },
   "optionalDependencies": {
     "@types/cheerio": "^0.22.22",
