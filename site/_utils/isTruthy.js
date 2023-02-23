@@ -20,6 +20,10 @@
  * @param {string|undefined|boolean} value
  */
 function isTruthy(value) {
+  if (typeof value === 'string') {
+    value = value.toLowerCase();
+  }
+
   if (value === '0' || value === 'false') return false;
   return !!value;
 }
