@@ -54,7 +54,7 @@ Console** command that has the **Drawer** badge next to it.
 
 ### Open Console Settings {: #settings }
 
-Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Console Settings** in the top-right corner of the **Console**. 
+Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Console Settings** in the top-right corner of the **Console**.
 
 {% Aside 'gotchas' %}
 Not to be confused with {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **DevTools Settings** above and next to the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Three-dot menu.", width="22", height="22" %} three-dot menu.
@@ -85,6 +85,18 @@ the Sidebar, which is useful for filtering.
 
 This section contains features that change how messages are presented in the Console. See [View
 messages][15] for a hands-on walkthrough.
+
+{% Aside %}
+Strings are output as valid JavaScript literals by default. The console includes three copy options:
+
+* **Copy as JavaScript literal**, which escapes appropriate special characters and wraps the string in either single quotes, double quotes,
+or backticks depending on the content.
+* **Copy string contents** copies the raw string contents (including new lines and other special characters) to the clipboard verbatim.
+* **Copy as JSON literal** formats the string to valid JSON.
+
+{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/K5E3fzW7plaLIp5Kyv4q.avif", alt="ALT_TEXT_HERE", width="800", height="477" %}
+
+{% endAside %}
 
 ### Disable message grouping {: #group }
 
@@ -187,7 +199,7 @@ page's JavaScript.
 
 DevTools assigns most of `console.*` methods severity levels.
 
-There are four levels: 
+There are four levels:
 
 - `Verbose`
 - `Info`
@@ -254,7 +266,7 @@ For example, the following filters out all messages that don't match `/[gm][ta][
 
 To search for text in log messages:
 
-1. To open a built-in search bar, press <kbd>Command</kbd>+<kbd>F</kbd> (Mac) or <kbd>Ctrl</kbd>+<kbd>F</kbd> (Windows, Linux) 
+1. To open a built-in search bar, press <kbd>Command</kbd>+<kbd>F</kbd> (Mac) or <kbd>Ctrl</kbd>+<kbd>F</kbd> (Windows, Linux)
 1. In the bar, type your query. In this example the query is `legacy`.
     {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/rLEzbmZU3zU3rE3OWNli.png", alt="Typing a query.", width="800", height="426" %}
     Optionally, you can:
