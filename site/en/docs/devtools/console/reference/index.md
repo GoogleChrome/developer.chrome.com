@@ -86,15 +86,16 @@ the Sidebar, which is useful for filtering.
 This section contains features that change how messages are presented in the Console. See [View
 messages][15] for a hands-on walkthrough.
 
-{% Aside %}
-Strings are output as valid JavaScript literals by default. The console includes three copy options:
+### Copy options {: #copy-options }
+
+The console outputs strings as valid JavaScript literals by default. When right-clicking, you can choose between three copy options:
 
 * **Copy as JavaScript literal**, which escapes appropriate special characters and wraps the string in either single quotes, double quotes,
 or backticks depending on the content.
 * **Copy string contents** copies the raw string contents (including new lines and other special characters) to the clipboard verbatim.
 * **Copy as JSON literal** formats the string to valid JSON.
 
-{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/zsubZm7Gs6NLqsgum5Tr.avif", alt="The copy options.", width="800", height="477" %}{% endAside %}
+{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/zsubZm7Gs6NLqsgum5Tr.avif", alt="The copy options.", width="800", height="477" %}
 
 ### Disable message grouping {: #group }
 
