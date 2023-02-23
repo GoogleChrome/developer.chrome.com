@@ -588,9 +588,10 @@
   },
   "rowan_m": {
     "country": "UK",
-    "twitter": "rowan_m",
-    "github": "rowan-m",
+    "mastodon": "https://mastodon.social/@rowan_m",
     "glitch": "rowan-m",
+    "github": "rowan-m",
+    "twitter": "rowan_m",
     "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/36DbfIY65yZEBUfN0VZ3.jpeg"
   },
   "danielcheng": {
