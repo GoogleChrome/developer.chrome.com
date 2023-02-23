@@ -164,7 +164,7 @@ The **Show source order** option labels page elements with numbers corresponding
 tool for users of assistive technology. This is useful because elements do not necessarily appear on the page in
 their source order.
 
-{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/IKaRqJRKgyd5X6j8oTyP.png", alt="Source order option checked.", width="800", height="144" %}
+{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/WZaDwMCNE1hsGPW1I9Ub.png", alt="Source order option checked.", width="800", height="644" %}
 
 ### View an element's computed accessibility properties {: #computed }
 
