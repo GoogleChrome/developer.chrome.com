@@ -8,11 +8,11 @@
     - url: https://privacysandbox.com/timeline
       title: i18n.docs.privacy-sandbox.timeline
     - url: /docs/privacy-sandbox/glossary
+    - url: /docs/privacy-sandbox/proposal-lifecycle
     - url: /docs/privacy-sandbox/events
 - title: i18n.docs.privacy-sandbox.start
   sections:
     - url: /docs/privacy-sandbox/unified-origin-trial
-    - url: /docs/privacy-sandbox/proposal-lifecycle
     - url: /docs/privacy-sandbox/faq
     - url: /docs/privacy-sandbox/feedback
 - title: i18n.docs.privacy-sandbox.strengthen-boundaries
