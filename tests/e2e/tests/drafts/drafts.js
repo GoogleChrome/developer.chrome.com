@@ -66,10 +66,7 @@ test('Outputs a past file with date with timezone', t => {
   t.truthy(statsObj);
 });
 
-if (
-  process.env.NODE_ENV === 'production' &&
-  !isTruthy(process.env.ELEVENTY_RENDER_DRAFTS)
-) {
+if (process.env.NODE_ENV === 'production' && !isTruthy(process.env.CI)) {
   test('Does not output a draft file', t => {
     const filePath = path.join(distPath, 'en/drafts/draft/index.html');
     const error = t.throws(() => fs.statSync(filePath), {instanceOf: Error});

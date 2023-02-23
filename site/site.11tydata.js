@@ -11,26 +11,20 @@ module.exports = {
      * If a page has `draft: true` in its YAML frontmatter
      * or is scheduled for future, then this snippet will
      * set its permalink to false and the page will not be output in
-     * production builds. For preview builds this behaviour can be
-     * overriden by setting the `ELEVENTY_RENDER_DRAFTS` variable
+     * production builds. For preview builds this behaviour is
+     * overriden by setting the `CI` variable to true
      *
      * For dev builds we will render the page with a warning that it's a draft.
      */
     permalink: data => {
-      if (
-        process.env.NODE_ENV !== 'production' ||
-        isTruthy(process.env.ELEVENTY_RENDER_DRAFTS)
-      ) {
+      if (process.env.NODE_ENV !== 'production' || isTruthy(process.env.CI)) {
         return data.permalink;
       } else {
         return isPublished(data) ? data.permalink : false;
       }
     },
     eleventyExcludeFromCollections: data => {
-      if (
-        process.env.NODE_ENV !== 'production' ||
-        isTruthy(process.env.ELEVENTY_RENDER_DRAFTS)
-      ) {
+      if (process.env.NODE_ENV !== 'production' || isTruthy(process.env.CI)) {
         return data.permalink;
       } else {
         return isPublished(data) ? data.permalink : false;
