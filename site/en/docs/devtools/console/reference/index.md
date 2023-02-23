@@ -95,7 +95,7 @@ or backticks depending on the content.
 * **Copy string contents** copies the raw string contents (including new lines and other special characters) to the clipboard verbatim.
 * **Copy as JSON literal** formats the string to valid JSON.
 
-{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/zsubZm7Gs6NLqsgum5Tr.avif", alt="The copy options.", width="800", height="477" %}
+{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/BM72ZiTnSm8IPnhMrbk1.png", alt="The copy options.", width="800", height="477" %}
 
 ### Disable message grouping {: #group }
 
