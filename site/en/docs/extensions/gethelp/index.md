@@ -16,4 +16,4 @@ We do our best to improve the content of this site and of the [Chrome Web Store 
 
 ## For Chrome Web Store
 
-Our [One Stop Suppoprt](https://support.google.com/chrome_webstore/contact/one_stop_support) lets you contact the Chrome Web Store team.
+Use our [One Stop Suppoprt](https://support.google.com/chrome_webstore/contact/one_stop_support) page to get help with issues related to your Chrome Web Store account or items.
