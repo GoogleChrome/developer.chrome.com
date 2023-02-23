@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Message passing"
 seoTitle: "Chrome Extensions Message passing"
 date: 2012-09-18
-updated: 2022-11-11
+updated: 2023-02-22
 description: How to pass messages between extensions and content scripts.
 ---
 
@@ -23,10 +23,11 @@ messages][3] section.
 ## Simple one-time requests {: #simple }
 
 If you only need to send a single message to another part of your extension (and optionally get a
-response back), use the simplified [runtime.sendMessage()][4] or [tabs.sendMessage()][5].
-This lets you send a one-time JSON-serializable message from a content script to the extension, or vice
-versa. To handle the response, use the returned Promise. (For backward compatibility, you can still
-pass a callback as the last argument.)
+response back), use the simplified [runtime.sendMessage()][4] method or [tabs.sendMessage()][5]
+method. This lets you send a one-time JSON-serializable message from a content script to the
+extension, or vice versa. To handle the response, use the returned Promise. For backward
+compatibility, you can alternatively pass a callback as the last argument. You cannot use both a
+promise and a callback.
 
 Sending a request from a content script looks like this:
 
