@@ -8,7 +8,7 @@ hero: 'image/HodOHWjMnbNw56hvNASHWSgZyAf2/N8vx7PDIeyMNI2wzWnax.jpg'
 alt: >
   Two-tone pink and blue background with opposite colored purses on each background.
 tags:
-  - chrome-112
+  - chrome-111
   - css
 authors:
   - unakravets
@@ -204,10 +204,10 @@ In both of these demos, there’s a structural benefit of separating the data la
 
 Updating custom property values through JavaScript can be done seamlessly, either while setting up the DOM model (i.e. while building the component in a framework), or updated at any time using `<parentElem>.style.setProperty('--myProperty’, <value>)`. I
 
-Here’s a demo that in a few lines of code, updates the `--theme` of a button, and applies styles using style queries and that custom property (`--theme`)`:
+Here’s a demo that in a few lines of code, updates the `--theme` of a button, and applies styles using style queries and that custom property (`--theme`):
 
 
-{% Video src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/mxE8At7l4Ii0O8meY5Zo.mp4", autoplay="true", muted="true", loop="true", alt="Demo cylcing through themes", width="800", height="243" %}
+{% Video src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/mxE8At7l4Ii0O8meY5Zo.mp4", autoplay="true", muted="true", loop="true", controls="true", alt="Demo cycling through themes", width="800", height="243" %}
 
 {% Codepen {
   user: 'web-dot-dev',
@@ -216,7 +216,7 @@ Here’s a demo that in a few lines of code, updates the `--theme` of a button, 
   tab: 'result'
 } %}
 
-You style the card using style queries, and the JavaScript you use to update the custom property values is:
+Style the card using style queries, the JavaScript used to update the custom property values is:
 
 ```js
 const themePicker = document.querySelector('#theme-picker')
@@ -227,5 +227,5 @@ themePicker.addEventListener('input', (e) => {
 })
 ```
 
-As container queries land in browsers and their feature sets grow, expect more opportunities for dynamic, responsive interfaces. As for style queries specifically, there are still a few open issues. One is the implementation of style queries for CSS styles beyond custom properties. This is already a part of the current spec level, but not yet implemented in any brewers. The boolean context evaluation is expected to be added to the current spec level when the outstanding [issue](https://github.com/w3c/csswg-drafts/issues/8127) is resolved, while the [range querying](https://github.com/w3c/csswg-drafts/issues/8376) is planned for the next level of the spec. Exploring style queries with custom properties is now available in Chromium Beta, with more feature additions to come.
+The features detailed in this article are just the start. You can expect more things from container queries to help you build dynamic, responsive interfaces. As for style queries specifically, there are still a few open issues. One is the implementation of style queries for CSS styles beyond custom properties. This is already a part of the current spec level, but not yet implemented in any browsers. The boolean context evaluation is expected to be added to the current spec level when the outstanding [issue](https://github.com/w3c/csswg-drafts/issues/8127) is resolved, while [range querying](https://github.com/w3c/csswg-drafts/issues/8376) is planned for the next level of the spec. 
 
