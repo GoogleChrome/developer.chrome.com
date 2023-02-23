@@ -20,6 +20,7 @@ steps:
       - 'CI=true'
       - 'NODE_OPTIONS="--max_old_space_size=8192"'
       - 'ELEVENTY_IGNORE_NACL=true'
+      - 'ELEVENTY_RENDER_DRAFTS=true'
     entrypoint: bash
     args:
       - '-c'
