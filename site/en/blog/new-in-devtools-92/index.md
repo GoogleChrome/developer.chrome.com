@@ -60,7 +60,6 @@ The order of content in an HTML document is important for search engine optimiza
 Chromium issue: [1094406](https://crbug.com/1094406)
 
 ## New shortcut to view frame details {: #frame-details }
-
 View iframe details by right-clicking on the iframe element in the Elements panel, and select **Show frame details**.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/YdENg6wjsgPNyMODdOHC.png", alt="Show frame details", width="800", height="486" %}
