@@ -94,7 +94,7 @@ or backticks depending on the content.
 * **Copy string contents** copies the raw string contents (including new lines and other special characters) to the clipboard verbatim.
 * **Copy as JSON literal** formats the string to valid JSON.
 
-{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/K5E3fzW7plaLIp5Kyv4q.avif", alt="ALT_TEXT_HERE", width="800", height="477" %}
+{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/K5E3fzW7plaLIp5Kyv4q.avif", alt="The copy options.", width="800", height="477" %}
 
 {% endAside %}
 
