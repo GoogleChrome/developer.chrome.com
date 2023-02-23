@@ -158,6 +158,14 @@ View an element's ARIA attributes in [the Accessibility pane][9].
 
 {% Img src="image/admin/5gOS8Kz2Qdxu3FbaKZ6W.png", alt="The ARIA Attributes section", width="800", height="506" %}
 
+### View the source order of elements on screen {: #source-order }
+
+The **Show source order** option labels page elements with numbers corresponding to their source order. Source order is an essential
+tool for users of assistive technology. This is useful because elements do not necessarily appear on the page in
+their source order.
+
+{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/IKaRqJRKgyd5X6j8oTyP.png", alt="Source order option checked.", width="800", height="144" %}
+
 ### View an element's computed accessibility properties {: #computed }
 
 {% Aside %}
