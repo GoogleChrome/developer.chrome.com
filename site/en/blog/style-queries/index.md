@@ -155,7 +155,7 @@ The above code allows us to apply a chip for `--detail: low-stock` and `--detail
 
 The previous example used a single custom property with multiple possible values to apply styles. But you can mix it up by using and querying for multiple custom properties too. Take this weather card example:
 
-{% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/VCk15tNjkP3Emrrw2Xkl.png", alt="Weather cards demo", width="800", height="255" %}
+{% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/VCk15tNjkP3Emrrw2Xkl.png", alt="Weather cards demo.", width="800", height="255" %}
 
 To style the background gradients and icons for these cards, look for weather characteristics, such as “cloudy”, “rainy”, or “sunny”:
 
