@@ -1,7 +1,5 @@
 const {html} = require('common-tags');
 
-const playlistsData = require('../../external/data/youtube-playlist.json');
-
 /**
  * Generates the HTML to render each single video added to the playlist
  * @param {object} video An object with the single video data
@@ -152,9 +150,16 @@ function getComponentHtml(
 }
 
 async function getPlaylistData(id) {
+  let playlistsData = null;
   let playlistResult = [];
   let channelResult = [];
 
+  try {
+    playlistsData = require('../../external/data/youtube-playlist.json');
+  } catch (e) {
+    console.error('YouTube Playlists data file is missing');
+    return;
+  }
   playlistResult = playlistsData?.playlists.filter(playlist => {
     return playlist.id === id;
   });
@@ -179,6 +184,8 @@ async function YouTubePlaylist(playlistId) {
   let videosHtml = '';
 
   const playlistData = await getPlaylistData(playlistId);
+
+  if (!playlistData) return '';
   const videoTotal = playlistData?.playlist?.videos.length;
 
   if (!playlistData.playlist) {
