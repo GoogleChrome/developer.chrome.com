@@ -108,16 +108,16 @@ async function run() {
 /**
  * Fetches all the meta data for the playlist and then calls the function
  * needed for fetching the single videos data
- * @param {string} id The YouTube channel id
+ * @param {string} channelId The YouTube channel id
  * @return {promise} A promise that resolves in the YouTube playlist data
  * neeeded to display the playlist component
  */
 
-async function getPlaylistData(id) {
+async function getPlaylistData(channelId) {
   const data = [];
   const response = await youtube?.playlists?.list({
     part: PART,
-    channelId: id,
+    channelId: channelId,
     auth: API_KEY,
     maxResults: MAX_RESULTS,
   });
