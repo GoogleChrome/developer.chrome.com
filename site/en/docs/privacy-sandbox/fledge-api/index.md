@@ -34,6 +34,16 @@ the browser, to choose relevant ads for websites the user has previously visited
 FLEDGE is the first experiment to be implemented in Chromium within the
 [TURTLEDOVE](https://github.com/WICG/turtledove) family of proposals.
 
+### Can the Topics API be used with the FLEDGE API? 
+
+Yes. An observed topic for the current user, provided by the Topics API, could be used as 
+contextual information by a seller or bidder. A topic could be included in
+the following properties:
+
+*  `auctionSignals`, a property of the auction configuration object passed to `navigator.runAdAuction()`
+*  `userBiddingSignals`, a property of the interest group configuration
+   object passed to `navigator.joinAdInterestGroup()`
+
 ## Try FLEDGE {: #try-fledge}
 
 ### Available API reference {: #api-reference }

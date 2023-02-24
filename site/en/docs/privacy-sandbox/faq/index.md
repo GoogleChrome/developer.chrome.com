@@ -185,46 +185,6 @@ which has an active discussion on the Prebid Topics module's intended workflow.
 - If this is a high dependency, reach out to Prebid.js to check in on status updates and timelines, 
 through whatever standard channel they offer.
 
-## FLEDGE
-
-### How can I ask a question about this feature?
-
--  For questions about the proposal:
-   [create an issue](https://github.com/WICG/turtledove/issues) on the proposal
-   repo.
--  For questions about the implementation currently available to test in
-   Chrome: [file a Chromium bug](https://bugs.chromium.org/p/chromium/issues/list?q=fledge).
--  For implementation, integration, and general best practice questions:
-   [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) 
-   on the Privacy Sandbox developer support repo.
-
-### What's the difference between FLEDGE and TURTLEDOVE?
-
-[FLEDGE](/docs/privacy-sandbox/fledge) is the first experiment to be implemented
-in Chromium within the [TURTLEDOVE](https://github.com/WICG/turtledove) family
-of proposals. The differences mostly pertain to separation of the on-device role
-of the ad buyer and seller:
-
-FLEDGE allows a 'trusted server' to provide access to real-time data used by a
-worklet in bidding, without compromising privacy. Each interest group can
-have a `trusted_bidding_signals_url` and `trusted_bidding_signals_keys`
-attribute.
-
-At auction time, the browser communicates with the trusted server to
-fetch the values for those keys, and then makes those values available
-to the `generate_bid()` function. The advertiser (ad buyer) can store additional
-metadata, along with the interest group, to improve on-device bidding.
-
-### Can the Topics API be used with the FLEDGE API? 
-
-Yes. An observed topic for the current user, provided by the Topics API, could be used as 
-contextual information by a seller or bidder. A topic could be included in
-the following properties:
-
-*  `auctionSignals`, a property of the auction configuration object passed to `navigator.runAdAuction()`
-*  `userBiddingSignals`, a property of the interest group configuration
-   object passed to `navigator.joinAdInterestGroup()`
-
 
 ## Attribution Reporting
 

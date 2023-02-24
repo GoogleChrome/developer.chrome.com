@@ -49,6 +49,11 @@ FLEDGE is the first experiment to be implemented in Chromium within the
 [Privacy Sandbox timeline](https://privacysandbox.com/timeline) provides implementation timing
 information for FLEDGE and other Privacy Sandbox proposals.
 
+### How does FLEDGE differ from Turtledove?
+
+The differences mostly pertain to separation of the on-device role
+of the ad buyer and seller. The sections below explain how FLEDGE works.
+
 ### FLEDGE in one minute {: #overview}
 
 For a more in-depth overview of FLEDGE, read the
@@ -475,3 +480,8 @@ We've written an  [API developer guide](/docs/privacy-sandbox/fledge-api) and bu
    Group](https://www.w3.org/community/web-adv/participants).
 -  **Developer support**: Ask questions and join discussions on the
    [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
+-  For questions about the implementation currently available to test in
+   Chrome: [file a Chromium bug](https://bugs.chromium.org/p/chromium/issues/list?q=fledge).
+-  For implementation, integration, and general best practice questions:
+   [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) 
+   on the Privacy Sandbox developer support repo.
