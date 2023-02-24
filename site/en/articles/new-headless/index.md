@@ -139,7 +139,7 @@ chrome --headless=new --print-to-pdf --no-pdf-header-footer https://developer.ch
 ```
 
 {% Aside %}
-The functionality behind the `--no-pdf-header-footer` flag used to be available via the `--print-to-pdf-no-header` flag instead. Depending on which Chrome version you’re using, you might need to fall back to the old flag name.
+The functionality behind the `--no-pdf-header-footer` flag was previously available via the `--print-to-pdf-no-header` flag. Depending on which Chrome version you’re using, you might need to fall back to the old flag name.
 {% endAside %}
 
 #### `--timeout`
