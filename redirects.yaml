@@ -51,6 +51,9 @@ redirects:
 - from: /docs/privacy-sandbox/attribution-reporting/summary-reports/
   to: /docs/privacy-sandbox/summary-reports/
 
+- from: /docs/privacy-sandbox/status
+  to: https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline
+
 - from: /android
   to: /docs/android
 
