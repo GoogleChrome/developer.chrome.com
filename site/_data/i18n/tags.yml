@@ -17,6 +17,9 @@ accessibility:
 amp:
   en: AMP
 
+automation:
+  en: Browser Automation
+
 autoplay:
   en: Autoplay
 
@@ -109,6 +112,9 @@ graphics:
 
 houdini:
   en: Houdini
+
+headless:
+  en: Chrome’s Headless mode
 
 html:
   en: HTML

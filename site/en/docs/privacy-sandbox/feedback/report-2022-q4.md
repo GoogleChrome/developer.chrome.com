@@ -215,7 +215,7 @@ The W3C Technical Architecture Group has recently published its <a href="https:/
     <tr>
       <td>Custom ranking for topics caller</td>
       <td>Allow rankings to be tailored by caller</td>
-      <td>The challenge with enabling per-adtech topic ranking/values is that it is a mechanism by which they can influence the Topics that are returned, and therefore a fingerprinting vector.</td>
+      <td>The challenge with custom topic ranking or values for each ad tech is that this could become a mechanism by which an ad tech can influence the topics that are returned, therefore a fingerprinting vector.</td>
     </tr>
     <tr>
       <td>Topics caller priority list</td>

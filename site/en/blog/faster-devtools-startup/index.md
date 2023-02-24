@@ -59,7 +59,7 @@ For both revisions, we ran the following scenario 5 times:
 
 Based on these experiments, DevTools opens **~13% faster (from 11.2s down to 10s)** with the optimization.
 
-### Hightlights, CPU durations
+### Highlights, CPU durations
 
 <table class="responsive" markdown="1">
 <thead>

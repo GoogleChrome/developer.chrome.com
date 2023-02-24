@@ -5,6 +5,31 @@
 
 {# $content #}
 
+{# ### Chrome 111 {: #chrome111 }
+
+* [Debugging HD color with the Styles pane](/ru/blog/new-in-devtools-111/#color)
+* [Enhanced breakpoint UX](/ru/blog/new-in-devtools-111/#breakpoint-redesign)
+* [Customizable Recorder shortcuts](/ru/blog/new-in-devtools-111/#recorder)
+* [Better syntax highlight for Angular](/ru/blog/new-in-devtools-111/#syntax)
+* [Reorganize caches in the Application panel](/ru/blog/new-in-devtools-111/#cache)
+* [Miscellaneous highlights](/ru/blog/new-in-devtools-111/#misc)
+ #}
+
+
+{# ### Chrome 110 {: #chrome110 }
+
+* [Clearing Performance Panel on reload](/ru/blog/new-in-devtools-110/#perf)
+* [Recorder updates](/ru/blog/new-in-devtools-110/#recorder)
+* [View and highlight the code of your user flow in the Recorder](/ru/blog/new-in-devtools-110/#recorder-code)
+* [Customize selector types of a recording](/ru/blog/new-in-devtools-110/#recorder-selector)
+* [Edit user flow while recording](/ru/blog/new-in-devtools-110/#recorder-edit)
+* [Automatic in-place pretty print](/ru/blog/new-in-devtools-110/#pretty-print)
+* [Better syntax highlight and inline preview for Vue, SCSS and more](/ru/blog/new-in-devtools-110/#highlight)
+* [Ergonomic and consistent Autocomplete in the Console](/ru/blog/new-in-devtools-110/#console)
+* [Miscellaneous highlights](/ru/blog/new-in-devtools-110/#misc)
+ #}
+
+
 ### Chrome 109 {: #chrome109
 
 * [Recorder: опции копирования для шага, воспроизведение на странице, контекстное меню шага](/ru/blog/new-in-devtools-109/#recorder)

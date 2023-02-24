@@ -103,7 +103,7 @@ For the third prerender option, web developers can insert JSON instructions onto
 </script>
 ```
 
-The Speculation Rules API is planned to be expanded beyond this simple example with the addition of prefetch, [scores](https://github.com/WICG/nav-speculation/blob/main/triggers.md#scores) (for example, the likelihood of a navigation), and syntax to implement [document rules](https://github.com/WICG/nav-speculation/blob/main/triggers.md#document-rules) instead fo `list` rules (for example, matching `href` patterns on the page), which can be combined to only prerender links on mouse down, for example.
+The Speculation Rules API is planned to be expanded beyond this simple example with the addition of prefetch, [scores](https://github.com/WICG/nav-speculation/blob/main/triggers.md#scores) (for example, the likelihood of a navigation), and syntax to implement [document rules](https://github.com/WICG/nav-speculation/blob/main/triggers.md#document-rules) instead of `list` rules (for example, matching `href` patterns on the page), which can be combined to only prerender links on mouse down, for example.
 
 For now, only the above syntax is supported in Chrome, which is a simple list of urls to prerender.
 

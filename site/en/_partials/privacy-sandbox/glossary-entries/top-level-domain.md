@@ -1,5 +1,3 @@
-## Top-level domain (TLD) {: #tld }
-
 Top-level domains such as .com and .org are listed in the
 [Root Zone Database](https://www.iana.org/domains/root/db).
 

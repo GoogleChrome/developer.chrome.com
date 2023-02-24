@@ -94,17 +94,17 @@ Use the success aside to describe a successful action or an error-free status.
 Use the success aside to describe a successful action or an error-free status.
 {% endAside %}
 
-### Gotchas asides
+### Important asides
 
 ```md
-{% raw %}{% Aside 'gotchas' %}
-Use the gotcha aside to indicate a common problem that the reader wouldn't know
+{% raw %}{% Aside 'important' %}
+Use the important aside to indicate a common problem that the reader wouldn't know
 without specialized knowledge of the topic.
 {% endAside %}{% endraw %}
 ```
 
-{% Aside 'gotchas' %}
-Use the gotchas aside to indicate a common problem that the reader wouldn't know
+{% Aside 'important' %}
+Use the important aside to indicate a common problem that the reader wouldn't know
 without specialized knowledge of the topic.
 {% endAside %}
 
@@ -134,6 +134,22 @@ Use the codelab aside to link to an associated codelab.
 
 {% Aside 'codelab' %}
 Get started: [Measure your page performance with Lighthouse](#).
+{% endAside %}
+
+### Example asides
+
+```md
+{% raw %}{% Aside 'example' %}
+Use the example aside to give an example use case.
+{% endAside %}{% endraw %}
+```
+
+{% Aside 'example' %}
+Advertising platform Criteo recently ran a competition with more than
+150 teams testing different machine learning models to evaluate how
+differential privacy concepts such as noise insertion and aggregation
+might impact advertising performance. It's helpful to examine these
+concepts since they underlie several of the Privacy Sandbox APIs.
 {% endAside %}
 
 ## Blockquotes
@@ -449,9 +465,9 @@ var x = 0;
 ```
 {% endCompare %}
 
-## Details
+## Details (accordion functionality)
 
-Use a details section to hide extra information from the user until it's needed. It can have an optional preview.
+Use a details section to hide extra information from the user until it's needed. It can have an optional preview. Use this component if you need an accordion or expandable section.
 
 ````md
 {% raw %}{% Details %}
