@@ -17,11 +17,20 @@ accessibility:
 amp:
   en: AMP
 
+automation:
+  en: Browser Automation
+
 autoplay:
   en: Autoplay
 
 capabilities:
   en: Capabilities
+
+case-study:
+  en: Case study
+
+fugu-case-study:
+  en: Fugu case study
 
 # DevTools-related tags
 css:
@@ -104,6 +113,9 @@ graphics:
 houdini:
   en: Houdini
 
+headless:
+  en: Chrome’s Headless mode
+
 html:
   en: HTML
 
@@ -112,6 +124,7 @@ media:
 
 new-in-chrome:
   en: New in Chrome
+  es: Qué hay de nuevo en Chrome
 
 privacy:
   en: Privacy
@@ -217,6 +230,12 @@ chrome69:
 
 chrome70:
   en: Chrome 70
+
+chrome109:
+  en: Chrome 109
+
+chrome110:
+  en: Chrome 110
 
 beta:
   en: Beta

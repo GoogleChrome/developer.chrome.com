@@ -41,6 +41,13 @@
       display: flex;
       gap: 0.8em;
     }
+
+    .landing-deco__learn-more {
+      display: inline-block;
+      font-size: px-to-rem(14px);
+      padding: 1rem 0;
+      text-decoration: unset;
+    }
   }
 
   &__links {
@@ -141,6 +148,12 @@
     &.landing-section--top-4 {
       .item {
         margin-top: 1.75em;
+
+        @include media-query('md-max') {
+          margin: 1.75em 0;
+          padding: 0 0 0 3.125rem;
+          position: relative;
+        }
       }
 
       .item__outer {
@@ -285,6 +298,10 @@
 
     .item::before {
       margin-top: -1.75em;
+      
+      @include media-query('md-max') {
+        margin-top: 0;
+      }
     }
   }
 }

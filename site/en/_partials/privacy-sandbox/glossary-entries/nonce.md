@@ -1,0 +1,1 @@
+A nonce is an arbitrary number used only once in cryptographic communication.

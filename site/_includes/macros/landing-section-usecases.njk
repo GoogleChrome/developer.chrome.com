@@ -2,13 +2,12 @@
 {% from 'macros/landing-deco.njk' import landingDeco with context %}
 {% from 'macros/related-articles.njk' import relatedArticles with context %}
 
-{% macro landingSectionUseCases(title, desc, useCase1Title, useCase1items, useCase2Title, useCase2items, items, color, type, ordered, imgSrc, imgAlt, imgWidth, imgHeight, smallImgSrc) %}
-
+{% macro landingSectionUseCases(title, desc, useCase1Title, useCase1items, useCase2Title, useCase2items, items, color, type, ordered, imgSrc, imgAlt, imgWidth, imgHeight, smallImgSrc, learnMore, moreDocuments1, moreDocuments2) %}
 <section
   class="landing-section landing-section--{{type}} {% if ordered %} landing-section--ordered {% endif %} hairline rounded-lg width-full display-grid gap-top-400"
   style="--number-color: var(--color-{{ color }}-medium); --dot-color: var(--color-{{ color }}-lighter);">
 
-  {{ landingDeco(title, desc, color, imgSrc, imgAlt, imgWidth, imgHeight, smallImgSrc) }}
+  {{ landingDeco(title, desc, color, imgSrc, imgAlt, imgWidth, imgHeight, smallImgSrc, learnMore) }}
 
   <div class="gap-top-200 gap-left-200 gap-right-200">
     <div class="landing-section__links usecases">
@@ -35,6 +34,12 @@
         {% endif %}
       {% endfor %}
 		</div>
+    {% if moreDocuments1.items %}
+      {% set relatedTitle1 = moreDocuments1.title or 'i18n.landing.sections.more_documents'| i18n %}
+      <div class="landing-section__documents">
+          {{ relatedArticles(relatedTitle1, moreDocuments1.items, color) }}
+      </div>
+    {% endif %}
 	{% endif %}
 	
 	
@@ -60,6 +65,12 @@
         {% endif %}
       {% endfor %}
 		</div>
+    {% if moreDocuments2.items %}
+    {% set relatedTitle2 = moreDocuments2.title or 'i18n.landing.sections.more_documents'| i18n  %}
+      <div class="landing-section__documents">
+          {{ relatedArticles(relatedTitle2, moreDocuments2.items, color) }}
+      </div>
+    {% endif %}
 	{% endif %}
 
       {% if items %}

@@ -21,8 +21,11 @@
                 article: 'articles'
                } %}
               {% set iconName = icons[post.data.type] or 'articles' %}
+              {% if post.important %}
+                {% set iconName="important" %}
+              {% endif %}
               <li class="related-item">
-		     <p><a href="{{ post.url }}"><span class="gap-right-100 color-primary">{{ icon(iconName) }}</span> {{ post.title or post.data.title }}</a></p>
+		            <a href="{{ post.url }}"><div class="gap-right-100 color-primary display-flex">{{ icon(iconName) }}</div><div>{{ post.title or post.data.title }}</div></a>
               </li>
              {% endif %}
       {% endfor %}
