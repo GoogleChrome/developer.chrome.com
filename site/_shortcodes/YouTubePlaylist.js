@@ -180,11 +180,11 @@ async function getPlaylistData(id) {
  */
 
 async function YouTubePlaylist(playlistId) {
-  let videoNumber = 1;
-  let videoTotal = 0;
+  //let videoNumber = 1;
   let videosHtml = '';
 
   const playlistData = await getPlaylistData(playlistId);
+  const videoTotal = playlistData?.playlist?.videos.length;
 
   if (!playlistData.playlist) {
     throw new Error('Playlist Id not found');
@@ -205,12 +205,11 @@ async function YouTubePlaylist(playlistId) {
     day: 'numeric',
   });
 
-  playlistData?.playlist?.videos.forEach(video => {
-    videosHtml += getVideoHtml(video, videoNumber, channelName);
-
-    videoNumber++;
-    videoTotal++;
-  });
+  const videos = playlistData?.playlist?.videos;
+  for (let i = 0; i < videos.length; i++) {
+    const video = videos[i];
+    videosHtml += getVideoHtml(video, i + 1, channelName);
+  }
 
   const channelHtml = getChannelHtml(channelThumbnail, channelName, channelId);
   const playlistHtml = getPlaylistHtml(
