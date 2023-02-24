@@ -99,7 +99,9 @@
     .item__title a,
     .item__title a:visited {
       color: var(--number-color);
-      text-decoration: none;
+      font-family: 'Google Sans';
+      font-weight: 400;
+      text-decoration: underline;
     }
   }
 
