@@ -73,34 +73,36 @@ async function run() {
       'No existing data found or existing data malformatted. Fetching from YouTube...'
     );
   }
-  if (dataAge > FETCH_INTERVAL || !dataAge) {
-    result.timestamp = currentTimestamp;
-
-    result.playlists = [];
-    result.channels = [];
-
-    try {
-      const channelRes = await getChannelData(CHANNELS);
-      result.channels.push(channelRes);
-    } catch (error) {
-      console.error(error);
-      throw new Error('Error fetching the channel data');
-    }
-
-    await Promise.all(
-      CHANNELS.map(async channel => {
-        try {
-          const playlistRes = await getPlaylistData(channel.trim());
-          result.playlists = [...result.playlists, ...playlistRes];
-        } catch (error) {
-          console.error(error);
-          throw new Error('Error fetching the playlist data');
-        }
-      })
-    );
-
-    await fs.writeFile(targetFile, JSON.stringify(result));
+  if (dataAge < FETCH_INTERVAL && dataAge) {
+    console.log(`YouTube data is ${ms(dataAge)} old, no need to fetch.`);
+    return;
   }
+  result.timestamp = currentTimestamp;
+
+  result.playlists = [];
+  result.channels = [];
+
+  try {
+    const channelRes = await getChannelData(CHANNELS);
+    result.channels.push(channelRes);
+  } catch (error) {
+    console.error(error);
+    throw new Error('Error fetching the channel data');
+  }
+
+  await Promise.all(
+    CHANNELS.map(async channel => {
+      try {
+        const playlistRes = await getPlaylistData(channel.trim());
+        result.playlists = [...result.playlists, ...playlistRes];
+      } catch (error) {
+        console.error(error);
+        throw new Error('Error fetching the playlist data');
+      }
+    })
+  );
+
+  await fs.writeFile(targetFile, JSON.stringify(result));
 }
 
 /**
@@ -124,29 +126,30 @@ async function getPlaylistData(id) {
 
   if (!playlists || playlists.length === 0) {
     console.warn('No playlist found');
-  } else {
-    await Promise.all(
-      playlists.map(async playlist => {
-        if (playlist.id) {
-          try {
-            const videoRes = await getPlaylistItemData(playlist?.id);
-            data.push({
-              id: playlist.id,
-              title: playlist?.snippet?.title,
-              description: playlist?.snippet?.description,
-              thumbnail: playlist?.snippet?.thumbnails?.medium?.url,
-              updated: playlist?.snippet?.publishedAt,
-              channel: playlist?.snippet?.channelId,
-              videos: videoRes,
-            });
-          } catch (error) {
-            console.error(error);
-            throw new Error('Error fetching the playlist data');
-          }
-        }
-      })
-    );
+    return data;
   }
+
+  await Promise.all(
+    playlists.map(async playlist => {
+      if (playlist.id) {
+        try {
+          const videoRes = await getPlaylistItemData(playlist?.id);
+          data.push({
+            id: playlist.id,
+            title: playlist?.snippet?.title,
+            description: playlist?.snippet?.description,
+            thumbnail: playlist?.snippet?.thumbnails?.medium?.url,
+            updated: playlist?.snippet?.publishedAt,
+            channel: playlist?.snippet?.channelId,
+            videos: videoRes,
+          });
+        } catch (error) {
+          console.error(error);
+          throw new Error('Error fetching the playlist data');
+        }
+      }
+    })
+  );
 
   return data;
 }
@@ -171,15 +174,14 @@ async function getPlaylistItemData(id) {
 
   if (!videos || videos.length === 0) {
     throw new Error('No playlist videos found');
-  } else {
-    for (const video of videos) {
-      data.push({
-        id: video.id,
-        title: video?.snippet?.title,
-        description: video?.snippet?.description,
-        thumbnail: video?.snippet?.thumbnails?.medium?.url,
-      });
-    }
+  }
+  for (const video of videos) {
+    data.push({
+      id: video.id,
+      title: video?.snippet?.title,
+      description: video?.snippet?.description,
+      thumbnail: video?.snippet?.thumbnails?.medium?.url,
+    });
   }
 
   return data;
@@ -204,12 +206,11 @@ async function getChannelData(id) {
 
   if (!channels || channels.length === 0) {
     throw new Error('No channel found');
-  } else {
-    data.id = channels[0]?.id;
-    data.name = channels[0]?.snippet?.title;
-    data.description = channels[0]?.snippet?.description;
-    data.thumbnail = channels[0]?.snippet?.thumbnails?.medium?.url;
   }
+  data.id = channels[0]?.id;
+  data.name = channels[0]?.snippet?.title;
+  data.description = channels[0]?.snippet?.description;
+  data.thumbnail = channels[0]?.snippet?.thumbnails?.medium?.url;
 
   return data;
 }
