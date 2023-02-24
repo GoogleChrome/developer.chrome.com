@@ -4,25 +4,29 @@ const playlistsData = require('../_data/youtubePlaylists');
 
 /** Renders a a YouTube playlist widget
  * @param {string} playlistId is a YouTube playlist id
+ * @this {any} The eleventy context
  */
 
 async function Playlist(playlistId) {
   let videoNumber = 1;
   let videoTotal = 0;
-
-  // Set some empty variables to populate
-  let playlistHtml = '';
+  let videosHtml = '';
 
   const playlistData = await playlistsData(playlistId);
+
+  if (!playlistData.playlist) {
+    throw new Error('Playlist Id not found');
+  }
+
   const channelId = playlistData?.channel?.id;
   const channelName = playlistData?.channel?.name;
-  const channelThumb = playlistData?.channel?.thumbnail;
+  const channelThumbnail = playlistData?.channel?.thumbnail;
   const playlistFirstVideo = playlistData?.playlist?.videos[0].id;
   const playlistName = playlistData?.playlist?.title;
-  const playlistThumb = playlistData?.playlist?.thumbnail;
+  const playlistThumbnail = playlistData?.playlist?.thumbnail;
   const playlistUpdated = new Date(
     playlistData?.playlist?.updated
-  ).toLocaleDateString('en-us', {
+  ).toLocaleDateString(this.ctx.locale, {
     weekday: 'long',
     year: 'numeric',
     month: 'short',
@@ -30,28 +34,37 @@ async function Playlist(playlistId) {
   });
 
   playlistData?.playlist?.videos.forEach(video => {
-    playlistHtml += getVideoHtml(video, videoNumber, channelName);
+    videosHtml += getVideoHtml(video, videoNumber, channelName);
 
     videoNumber++;
     videoTotal++;
   });
 
-  const result = getChannelHtml(
-    playlistThumb,
+  const channelHtml = getChannelHtml(channelThumbnail, channelName, channelId);
+  const playlistHtml = getPlaylistHtml(
+    playlistThumbnail,
     playlistName,
     playlistFirstVideo,
-    playlistId,
+    playlistId
+  );
+  const result = getComponentHtml(
     videoTotal,
     playlistUpdated,
-    channelThumb,
-    channelName,
-    channelId,
-    playlistHtml
+    playlistHtml,
+    channelHtml,
+    videosHtml
   );
 
   return result;
 }
 
+/**
+ * Generates the HTML to render each single video added to the playlist
+ * @param {object} video An object with the single video data
+ * @param {number} videoNumber The index of the video within the playlist
+ * @param {string} channelTitle The title of the channel owning the playlist
+ * @returns {string}
+ */
 function getVideoHtml(video, videoNumber, channelTitle) {
   return html`<div class="playlist-video">
     <div class="playlist-video__number">${videoNumber}</div>
@@ -83,77 +96,108 @@ function getVideoHtml(video, videoNumber, channelTitle) {
   </div>`;
 }
 
-function getChannelHtml(
-  playlistThumb,
+/**
+ * Generates the HTML to render the channel section
+ * @param {string} channelThumbnail The url to the channel profile picture
+ * @param {string} channelName The channel name
+ * @param {string} channelId The channel id
+ * @returns {string}
+ */
+function getChannelHtml(channelThumbnail, channelName, channelId) {
+  return html`<div class="playlist-channel__details">
+      <div class="playlist-channel__icon">
+        <img
+          src="${channelThumbnail}"
+          alt="Channel icon"
+          height="56"
+          width="56"
+        />
+      </div>
+
+      <p class="playlist-channel__name">${channelName}</p>
+    </div>
+    <div class="playlist-channel__subscribe">
+      <a
+        href="https://www.youtube.com/channel/${channelId}?sub_confirmation=1"
+        target="_blank"
+        class="material-button button-filled button-round display-inline-flex color-bg bg-red-medium"
+        >Subscribe</a
+      >
+    </div>`;
+}
+
+/**
+ * Generates the HTML to render the playlist meta section
+ * @param {string} playlistThumbnail The playlist thumbnail
+ * @param {string} playlistName The playlist name
+ * @param {string} playlistFirstVideo The id of the playlists' first video
+ * @param {string} playlistId The playlist id
+ * @returns {string}
+ */
+function getPlaylistHtml(
+  playlistThumbnail,
   playlistName,
   playlistFirstVideo,
-  playlistId,
+  playlistId
+) {
+  return html`<div class="playlist-thumbnail">
+      <img
+        src="${playlistThumbnail}"
+        height="158"
+        width="316"
+        alt="Thumbnail for ${playlistName}"
+        class="rounded-lg"
+      />
+      <div class="playlist-play-all">
+        <a
+          href="https://www.youtube.com/watch?v=${playlistFirstVideo}&list=${playlistId}"
+          target="_blank"
+          class="no-visited"
+          >PLAY ALL</a
+        >
+      </div>
+    </div>
+
+    <h2 class="playlist-name type--h3-card gap-top-400">
+      <a
+        class="color-red-darkest surface display-inline-flex no-visited"
+        href="https://www.youtube.com/playlist?list=${playlistId}"
+        target="_blank"
+      >
+        ${playlistName}
+      </a>
+    </h2>`;
+}
+
+/**
+ * Generates the HTML to render the outer component including channel info, playlist info and single videos
+ * @param {number} videoTotal The total number of videos within the playlist
+ * @param {string} playlistUpdated The date of the last update on the playlist
+ * @param {string} playlistHtml The HTML displaying the playlist data
+ * @param {string} channelHtml The HTML displaying the channel data
+ * @param {string} videosHtml The HTML displaying the video items
+ * @returns {string}
+ */
+
+function getComponentHtml(
   videoTotal,
   playlistUpdated,
-  channelThumb,
-  channelName,
-  channelId,
-  playlistHtml
+  playlistHtml,
+  channelHtml,
+  videosHtml
 ) {
   return html`<div class="gap-top-400">
     <div class="playlist hairline rounded-lg width-full">
       <div class="playlist-details rounded-lg">
         <div class="playlist-details-inner rounded-lg">
-          <div class="playlist-thumbnail">
-            <img
-              src="${playlistThumb}"
-              height="158"
-              width="316"
-              alt="Thumbnail for ${playlistName}"
-              class="rounded-lg"
-            />
-            <div class="playlist-play-all">
-              <a
-                href="https://www.youtube.com/watch?v=${playlistFirstVideo}&list=${playlistId}"
-                target="_blank"
-                class="no-visited"
-                >PLAY ALL</a
-              >
-            </div>
-          </div>
-
-          <h2 class="playlist-name type--h3-card gap-top-400">
-            <a
-              class="color-red-darkest surface display-inline-flex no-visited"
-              href="https://www.youtube.com/playlist?list=${playlistId}"
-              target="_blank"
-            >
-              ${playlistName}
-            </a>
-          </h2>
+          ${playlistHtml}
 
           <p class="playlist-meta gap-top-200">
             ${videoTotal} Videos<br />
             Last updated on ${playlistUpdated}
           </p>
 
-          <div class="playlist-channel">
-            <div class="playlist-channel__details">
-              <div class="playlist-channel__icon">
-                <img
-                  src="${channelThumb}"
-                  alt="Channel icon"
-                  height="56"
-                  width="56"
-                />
-              </div>
-
-              <p class="playlist-channel__name">${channelName}</p>
-            </div>
-            <div class="playlist-channel__subscribe">
-              <a
-                href="https://www.youtube.com/channel/${channelId}?sub_confirmation=1"
-                target="_blank"
-                class="material-button button-filled button-round display-inline-flex color-bg bg-red-medium"
-                >Subscribe</a
-              >
-            </div>
-          </div>
+          <div class="playlist-channel">${channelHtml}</div>
           ${videoTotal >= 4
             ? `<div class="playlist-decorations">
           <img src="https://wd.imgix.net/image/T4FyVKpzu4WKF1kBNvXepbi08t52/3IgLIoZypldJWF5SSLR5.svg" alt="YouTube logo decoration" />
@@ -162,7 +206,7 @@ function getChannelHtml(
         </div>
       </div>
 
-      <div class="playlist-videos">${playlistHtml}</div>
+      <div class="playlist-videos">${videosHtml}</div>
     </div>
   </div>`;
 }
