@@ -5,7 +5,6 @@ subhead: >
   Exploring two challenges that the Chrome team faced in implementing CHIPS and how community feedback played a key role in evolving the proposal design.
 description: >
   Exploring two challenges that the Chrome team faced in implementing CHIPS and how community feedback played a key role in evolving the proposal design.
-hero: 'image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/bexHXIGrlvywGpkLzdeH.png'
 date: 2023-02-28
 authors:
   - mihajlija
