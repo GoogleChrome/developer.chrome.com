@@ -37,7 +37,7 @@ shortcode snippet, it should look like this:
 
 Paste that into the `hero` field in your YAML frontmatter.
 
-#### YouTube Videos as Heroes
+#### YouTube videos as heroes
 
 Alternatively, you can replace the hero field in your YAML frontmatter with
 the hero_youtube_id field, for example:
