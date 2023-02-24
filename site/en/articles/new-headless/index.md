@@ -132,7 +132,7 @@ The `--print-to-pdf` flag saves the target page as a PDF named `output.pdf` in t
 chrome --headless=new --print-to-pdf https://developer.chrome.com/
 ```
 
-Optionally, the `--no-pdf-header-footer` flag can be added to omit the print header (containing the current date and time) and footer (containing the URL and the page number).
+Optionally, you can add the `--no-pdf-header-footer` flag to omit the print header (with the current date and time) and footer (with the URL and the page number).
 
 ```sh
 chrome --headless=new --print-to-pdf --no-pdf-header-footer https://developer.chrome.com/
