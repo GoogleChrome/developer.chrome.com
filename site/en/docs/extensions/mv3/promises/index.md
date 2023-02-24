@@ -19,9 +19,7 @@ For backward compatibility, many methods continue to support callbacks after pro
 To check whether a method supports promises, look for the "Promise" label in its API reference. You'll find it below the method signature. Here's an example from the [`chrome.tabs`](/docs/extensions/reference/tabs/#methods) namespace:
 
 <figure>
-{% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/GoaezeAlSfYqW2ymK0mC.png",
-  alt="The captureVisibleTab() method supports promises as shown in the API reference",
-  width="800", height="280" %}
+{% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/GoaezeAlSfYqW2ymK0mC.png", alt="The captureVisibleTab() method supports promises as shown in the API reference", width="800", height="280" %}
 <figcaption>The captureVisibleTab() method supports promises as shown in the API reference.</figcaption>
 </figure>
 
@@ -38,7 +36,7 @@ should consider using promises in situations such as the following:
 
 As previously mentioned, a method cannot both take a callback and return a promise. To convert from a callback to a promise, remove the callback and handle the returned promise. The example below shows the same method used with a passed callback  and a returned promise.
 
-<div class="switcher">
+<!-- <div class="switcher">
 {% Compare 'worse' 'Callback' %}
 
 ```js
@@ -51,6 +49,9 @@ As previously mentioned, a method cannot both take a callback and return a promi
 // TBD
 ```
 {% endCompare %}
+</div> -->
+
+<div class="switcher">
+<p>Item one.</p>
+<p>Item two.</p>
 </div>
-
-
