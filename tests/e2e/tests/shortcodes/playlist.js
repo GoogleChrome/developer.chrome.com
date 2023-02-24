@@ -23,4 +23,7 @@ test('renders a playlist', async t => {
   const $ = await getPageByUrl('en/shortcodes/playlist/default');
 
   t.assert($('.playlist').length === 1);
+  t.assert($('.playlist__name > a').text().trim().length !== 0);
+  t.assert($('.playlist__channel-name').text().trim().length !== 0);
+  t.assert($('.playlist__videos').length !== 0);
 });
