@@ -22,7 +22,7 @@ require('dotenv').config();
 const fs = require('fs').promises;
 const path = require('path');
 const ms = require('ms');
-const {google} = require('googleapis');
+const youtube = require('googleapis').google.youtube('v3');
 
 /**
  * Time interval to determine if the current data set is stale
@@ -48,8 +48,6 @@ const targetFile = path.join(__dirname, '../data/youtube-playlist.json');
 const currentTimestamp = Date.now();
 
 const result = {};
-
-const youtube = google.youtube('v3');
 
 /**
  * Starts the data fetching process form the channel name
