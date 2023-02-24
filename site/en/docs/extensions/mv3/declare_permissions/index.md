@@ -251,7 +251,7 @@ The following table lists the currently available permissions:
     </tr>
     <tr id="nativeMessaging">
       <td><code>"nativeMessaging"</code></td>
-      <td>Gives access to the <a href="/docs/apps/nativeMessaging/">native messaging API</a>.</td>
+      <td>Gives access to the <a href="/docs/extensions/mv3/nativeMessaging/">native messaging API</a>.</td>
     </tr>
     <tr id="notifications">
       <td><code>"notifications"</code></td>
