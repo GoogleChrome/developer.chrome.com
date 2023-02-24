@@ -70,7 +70,7 @@ export class SearchBox extends BaseElement {
     this._active = false;
     this.buttonLabel = 'open search';
     this.docsLabel = 'Documentation';
-    this.otherLabel = 'Other';
+    this.overviewLabel = 'Overview';
     this.articlesLabel = 'Articles';
     this.blogLabel = 'Blog';
     this.locale = 'en';
@@ -341,6 +341,7 @@ export class SearchBox extends BaseElement {
       };
 
       this.categorisedResults = {
+        [this.overviewLabel]: [],
         [this.docsLabel]: mutableResults.filterMutate(r => r.type === 'doc'),
         [this.articlesLabel]: mutableResults.filterMutate(
           r => r.type === 'article'
@@ -348,8 +349,9 @@ export class SearchBox extends BaseElement {
         [this.blogLabel]: mutableResults.filterMutate(
           r => r.type === 'blogPost'
         ),
-        [this.otherLabel]: mutableResults,
       };
+
+      this.categorisedResults[this.overviewLabel] = mutableResults;
     } catch (err) {
       console.error(err);
       console.error(/** @type {any} */ (err).debugData);
