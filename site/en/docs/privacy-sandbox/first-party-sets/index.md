@@ -48,7 +48,7 @@ An organization may have different top-level domains for:
 
 ## Find out more
 
--   [First-Party testing instructions](https://developer.chrome.com/blog/first-party-sets-testing-instructions/)
+-   [First-Party testing instructions](/blog/first-party-sets-testing-instructions/)
 -   [First-Party Sets technical explainer](https://github.com/WICG/first-party-sets#introduction)
 -   [Chrome Platform Status](https://chromestatus.com/feature/5640066519007232)
 -   [Chromium Projects](https://www.chromium.org/updates/first-party-sets)
