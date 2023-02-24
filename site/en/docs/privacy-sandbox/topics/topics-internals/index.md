@@ -11,4 +11,6 @@ authors:
   - samdutton
 ---
 
+{% Partial 'privacy-sandbox/ps-implementation-status.njk' %}
+
 ## Implementation status
