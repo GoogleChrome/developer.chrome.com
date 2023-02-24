@@ -1,12 +1,12 @@
-const fs = require('fs');
+const fs = require('fs').promises;
 const path = require('path');
 
 module.exports = async id => {
   const playlistFile = path.join(
     __dirname,
-    '../../external/data/youtube-playlists.json'
+    '../../external/data/youtube-playlist.json'
   );
-  const playlists = JSON.parse(fs.readFileSync(playlistFile, 'utf-8'));
+  const playlists = JSON.parse(await fs.readFile(playlistFile, 'utf-8'));
 
   let playlistResult = [];
   let channelResult = [];
