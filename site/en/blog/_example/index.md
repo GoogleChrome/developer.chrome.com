@@ -50,10 +50,18 @@ tags:
 hero: 'image/BrQidfK9jaQyIHwdw91aVpkPiib2/EnMzOm0mBytBA3AzlCG6.png'
 
 # Optional
+# Hero YouTube video ID, only applies if hero is unset
+# hero_youtube_id: 'PupwBARjaYU'
+
+# Optional
 # You can provide an optional cropping of your hero image to be used as a
 # thumbnail. Note the alt text will be the same for both the thumbnail and
 # the hero.
+#
 # Thumbnail images should be at least 828 x 416
+#
+# This field is required if hero_youtube_id is used.
+#
 # thumbnail: 'image/BrQidfK9jaQyIHwdw91aVpkPiib2/EnMzOm0mBytBA3AzlCG6.png'
 
 # Required if there is a hero or social image

@@ -22,6 +22,13 @@
         fetchpriority="high"
       %}
     </div>
+
+  {% elseif hero_youtube_id %}
+    <div class="display-flex justify-content-center lg:pad-left-400 lg:pad-right-400">
+      <div class="measure-960 width-full rounded-lg overflow-hidden">
+        {% YouTube id=hero_youtube_id %}
+      </div>
+    </div>
   {% endif %}
 
   {# The article is wrapped again so that the ToC aligns on its right on desktop #}
