@@ -50,8 +50,3 @@ As previously mentioned, a method cannot both take a callback and return a promi
 ```
 {% endCompare %}
 </div> -->
-
-<div class="switcher">
-<p>Item one.</p>
-<p>Item two.</p>
-</div>
