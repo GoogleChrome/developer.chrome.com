@@ -5,6 +5,7 @@ subhead: 'How to use promises in extension APIs'
 description: 'How to use promises in extension APIs'
 date: 2021-03-26
 updated: 2023-02-22
+
 ---
 
 In Manifest V3, many extension API methods return promises. A *Promise* is a proxy or placeholder for a value returned by an asynchronous method. If you've never used Promises, you can [read about them on MDN](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Using_promises). This page describes what you need to know to use them in a Chrome extension.
@@ -23,6 +24,19 @@ To check whether a method supports promises, look for the "Promise" label in its
   width="800", height="280" %}
 <figcaption>The captureVisibleTab() method supports promises as shown in the API reference.</figcaption>
 </figure>
+
+## When to use promises
+
+There are many places where using promises results in cleaner, easier-to-maintain code. You
+should consider using promises in situations such as the following:
+
+* Any time you want to clean up your code by using a more "synchronous" invocation style.
+* Where error handling would be too difficult using callbacks.
+* When you want a more condensed way to invoke several concurrent methods and gather the results into a single thread of code.
+
+## Converting a callback to a promise {: #compare-to-callback}
+
+As previously mentioned, a method cannot both take a callback and return a promise. To convert from a callback to a promise, remove the callback and handle the returned promise. The example below shows the same method used with a passed callback  and a returned promise.
 
 <div class="switcher">
 {% Compare 'worse' 'Callback' %}
