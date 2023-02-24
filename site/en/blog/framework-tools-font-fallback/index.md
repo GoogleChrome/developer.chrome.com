@@ -16,14 +16,14 @@ tags:
 
 Sites that load fonts with _font-display: swap_ often suffer from a layout shift ([CLS](https://web.dev/cls/)) when the web font loads and is swapped with the fallback font.
 
-You can prevent CLS by adjusting the dimensions of the fallback font to match that of the primary font. Properties such as size-adjust, ascent-override, decent-override, and line-gap-override in the [@font-face](https://developer.mozilla.org/docs/Web/CSS/@font-face) rule can help override the metrics of a fallback font allowing developers more control over how fonts are displayed. You can read more about font-fallbacks and the override properties in this [post](https://developer.chrome.com/blog/font-fallbacks/). You can also see a working implementation of this technique in this [demo](https://cultured-rightful-check.glitch.me).
+You can prevent CLS by adjusting the dimensions of the fallback font to match that of the primary font. Properties such as size-adjust, ascent-override, decent-override, and line-gap-override in the [@font-face](https://developer.mozilla.org/docs/Web/CSS/@font-face) rule can help override the metrics of a fallback font allowing developers more control over how fonts are displayed. You can read more about font-fallbacks and the override properties in this [post](/blog/font-fallbacks/). You can also see a working implementation of this technique in this [demo](https://cultured-rightful-check.glitch.me).
 
 This article explores how font size adjustments are implemented in the Next.js and Nuxt.js frameworks to generate the fallback font CSS and reduce the CLS. It also demonstrates how you can generate fallback fonts using tools such as Fontaine and Capsize. 
 
 
 ## Background
 
-_[font-display: swap](https://developer.chrome.com/blog/font-display/#swap)_ is generally used to prevent FOIT (Flash of invisible text) and to display contents faster on the screen. The value of_ swap_ tells the browser that text using the font should be displayed immediately using a system font and to replace the system font only when the custom font is ready.
+_[font-display: swap](/blog/font-display/#swap)_ is generally used to prevent FOIT (Flash of invisible text) and to display contents faster on the screen. The value of _swap_ tells the browser that text using the font should be displayed immediately using a system font and to replace the system font only when the custom font is ready.
 
 The biggest issue with _swap_ is the jarring effect, where the difference in character sizes of the two fonts results in screen content shifting around. This leads to poor CLS scores, especially for text-heavy websites. 
 
@@ -66,7 +66,7 @@ The following images show an example of the issue. The first image uses `font-di
 </figure>
 
 
-Adjusting the size of the fallback font can be an effective strategy for preventing font loading layout shift, but implementing the logic from scratch can be tricky, as described in [this post about font fallbacks](https://developer.chrome.com/blog/font-fallbacks/). Fortunately, several tooling options are already available to make this easier while developing apps. 
+Adjusting the size of the fallback font can be an effective strategy for preventing font loading layout shift, but implementing the logic from scratch can be tricky, as described in [this post about font fallbacks](/blog/font-fallbacks/). Fortunately, several tooling options are already available to make this easier while developing apps. 
 
 
 ## How to optimize font fallbacks with Next.js
@@ -208,7 +208,7 @@ The module automatically scans your CSS to read the @font-face declarations and 
 }
 ```
 
-You can now use ‘Roboto override’ as the fallback font in your CSS, as shown in the following example
+You can now use `Roboto override` as the fallback font in your CSS, as shown in the following example
 
 ```css
 :root {
@@ -287,7 +287,7 @@ The module will automatically scan your files to modify the @font-face rules:
 }
 ```
 
-You can now use ‘Roboto override’ as your fallback font in CSS.
+You can now use `Roboto override` as your fallback font in CSS.
 ```css
 :root {
   font-family: 'Roboto';
@@ -307,7 +307,7 @@ The API is part of the [@capsize/core](https://www.npmjs.com/package/@capsizecss
 You can refer to the documentation on using Capsize [here](https://github.com/seek-oss/capsize#usage-1ontains%20the%20generated%20font%20face%20declarations%20as%20well%20as%20the%20computed%20fontFamily%20with%20the%20appropriately%20ordered%20font%20aliases.https://github.com/seek-oss/capsize#usage-1).
 
 
-#### Example:
+#### Example
 
 Consider the following example: The desired web font is Lobster, falling back to Helvetica Neue and then Arial. In CSS, `font-family: Lobster, 'Helvetica Neue', Arial`.
 
