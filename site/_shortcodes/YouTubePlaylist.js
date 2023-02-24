@@ -142,11 +142,7 @@ function getComponentHtml(
           </p>
 
           <div class="playlist-channel">${channelHtml}</div>
-          ${videoTotal >= 4
-            ? `<div class="playlist-decorations">
-          <img src="https://wd.imgix.net/image/T4FyVKpzu4WKF1kBNvXepbi08t52/3IgLIoZypldJWF5SSLR5.svg" alt="YouTube logo decoration" />
-        </div>`
-            : ''}
+          ${videoTotal >= 4 ? '<div class="playlist-decorations"></div>' : ''}
         </div>
       </div>
 
@@ -180,7 +176,6 @@ async function getPlaylistData(id) {
  */
 
 async function YouTubePlaylist(playlistId) {
-  //let videoNumber = 1;
   let videosHtml = '';
 
   const playlistData = await getPlaylistData(playlistId);
@@ -205,7 +200,7 @@ async function YouTubePlaylist(playlistId) {
     day: 'numeric',
   });
 
-  const videos = playlistData?.playlist?.videos;
+  const videos = playlistData.playlist.videos;
   for (let i = 0; i < videos.length; i++) {
     const video = videos[i];
     videosHtml += getVideoHtml(video, i + 1, channelName);
