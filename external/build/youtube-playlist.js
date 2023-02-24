@@ -82,13 +82,8 @@ async function run() {
   result.playlists = [];
   result.channels = [];
 
-  try {
-    const channelRes = await getChannelData(CHANNELS);
-    result.channels.push(channelRes);
-  } catch (error) {
-    console.error(error);
-    throw new Error('Error fetching the channel data');
-  }
+  const channelRes = await getChannelData(CHANNELS);
+  result.channels.push(channelRes);
 
   await Promise.all(
     CHANNELS.map(async channel => {
@@ -205,7 +200,7 @@ async function getChannelData(id) {
   const channels = response.data.items;
 
   if (!channels || channels.length === 0) {
-    throw new Error('No channel found');
+    return data;
   }
   data.id = channels[0]?.id;
   data.name = channels[0]?.snippet?.title;
