@@ -13,7 +13,7 @@ function getVideoHtml(video, videoNumber, channelTitle) {
   return html`<div class="playlist-video">
     <div class="playlist-video__number">${videoNumber}</div>
 
-    <div class="playlist-video--content">
+    <div class="playlist-video__content">
       <a href="https://www.youtube.com/watch?v=${video.id}" target="_blank">
         <div class="playlist-video__thumbnail">
           <img
@@ -48,8 +48,8 @@ function getVideoHtml(video, videoNumber, channelTitle) {
  * @returns {string}
  */
 function getChannelHtml(channelThumbnail, channelName, channelId) {
-  return html`<div class="playlist-channel__details">
-      <div class="playlist-channel__icon">
+  return html`<div class="playlist__channel-details">
+      <div class="playlist__channel-icon">
         <img
           src="${channelThumbnail}"
           alt="Channel icon"
@@ -58,9 +58,9 @@ function getChannelHtml(channelThumbnail, channelName, channelId) {
         />
       </div>
 
-      <p class="playlist-channel__name">${channelName}</p>
+      <p class="playlist__channel-name">${channelName}</p>
     </div>
-    <div class="playlist-channel__subscribe">
+    <div class="playlist__channel-subscribe">
       <a
         href="https://www.youtube.com/channel/${channelId}?sub_confirmation=1"
         target="_blank"
@@ -84,7 +84,7 @@ function getPlaylistHtml(
   playlistFirstVideo,
   playlistId
 ) {
-  return html`<div class="playlist-thumbnail">
+  return html`<div class="playlist__thumbnail">
       <img
         src="${playlistThumbnail}"
         height="158"
@@ -92,7 +92,7 @@ function getPlaylistHtml(
         alt="Thumbnail for ${playlistName}"
         class="rounded-lg"
       />
-      <div class="playlist-play-all">
+      <div class="playlist__play-all">
         <a
           href="https://www.youtube.com/watch?v=${playlistFirstVideo}&list=${playlistId}"
           target="_blank"
@@ -102,7 +102,7 @@ function getPlaylistHtml(
       </div>
     </div>
 
-    <h2 class="playlist-name type--h3-card gap-top-400">
+    <h2 class="playlist__name type--h3-card gap-top-400">
       <a
         class="color-red-darkest surface display-inline-flex no-visited"
         href="https://www.youtube.com/playlist?list=${playlistId}"
@@ -132,21 +132,21 @@ function getComponentHtml(
 ) {
   return html`<div class="gap-top-400">
     <div class="playlist hairline rounded-lg width-full">
-      <div class="playlist-details rounded-lg">
-        <div class="playlist-details-inner rounded-lg">
+      <div class="playlist__details rounded-lg">
+        <div class="playlist__details-inner rounded-lg">
           ${playlistHtml}
 
-          <p class="playlist-meta gap-top-200">
+          <p class="playlist__meta gap-top-200">
             ${videoTotal} Videos<br />
             Last updated on ${playlistUpdated}
           </p>
 
-          <div class="playlist-channel">${channelHtml}</div>
-          ${videoTotal >= 4 ? '<div class="playlist-decorations"></div>' : ''}
+          <div class="playlist__channel">${channelHtml}</div>
+          ${videoTotal >= 4 ? '<div class="playlist__decorations"></div>' : ''}
         </div>
       </div>
 
-      <div class="playlist-videos">${videosHtml}</div>
+      <div class="playlist__videos">${videosHtml}</div>
     </div>
   </div>`;
 }
