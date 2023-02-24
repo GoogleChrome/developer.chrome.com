@@ -5,7 +5,6 @@ subhead: 'How to use promises in extension APIs'
 description: 'How to use promises in extension APIs'
 date: 2021-03-26
 updated: 2023-02-22
-
 ---
 
 In Manifest V3, many extension API methods return promises. A *Promise* is a proxy or placeholder for a value returned by an asynchronous method. If you've never used Promises, you can [read about them on MDN](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Using_promises). This page describes what you need to know to use them in a Chrome extension.
