@@ -856,15 +856,14 @@ let them sign-in and start a new session.
 
 ### Call FedCM from within a cross-origin iframe
 
-FedCM can be invoked from within an iframe if the parent frame allows it with a
-permissions policy `identity-credentials-get`. All you have to do is to append
-an `allow="identity-credentials-get"` attribute to the iframe tag.
+FedCM can be invoked from within an iframe using an `identity-credentials-get` permissions policy, if the parent frame allows it. To do so, append
+the `allow="identity-credentials-get"` attribute to the iframe tag as follows:
 
 ```html
 <iframe src="https://fedcm-cross-origin-iframe.glitch.me" allow="identity-credentials-get"></iframe>
 ```
 
-See it in action at [an example](https://fedcm-top-frame.glitch.me/).
+You can see it in action in [an example](https://fedcm-top-frame.glitch.me/).
 
 Optionally, if the parent frame wants to restrict the origins to call FedCM,
 send a `Permissions-Policy` header with a list of allowed origins.
