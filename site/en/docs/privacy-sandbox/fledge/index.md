@@ -480,8 +480,8 @@ We've written an  [API developer guide](/docs/privacy-sandbox/fledge-api) and bu
    Group](https://www.w3.org/community/web-adv/participants).
 -  **Developer support**: Ask questions and join discussions on the
    [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
--  For questions about the implementation currently available to test in
+-  **Current implementation**: For questions about the implementation currently available to test in
    Chrome: [file a Chromium bug](https://bugs.chromium.org/p/chromium/issues/list?q=fledge).
--  For implementation, integration, and general best practice questions:
+-  **Best practices**: For implementation, integration, and general best practice questions:
    [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) 
    on the Privacy Sandbox developer support repo.
