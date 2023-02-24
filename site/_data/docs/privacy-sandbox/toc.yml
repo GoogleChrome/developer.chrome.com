@@ -61,6 +61,7 @@
         - url: /docs/privacy-sandbox/fledge
         - title: i18n.docs.privacy-sandbox.fledge-api
           sections:
+            - url: /docs/privacy-sandbox/fledge-api/
             - url: /docs/privacy-sandbox/fledge-api/ad-auction
             - url: /docs/privacy-sandbox/fledge-api/interest-groups
             - url: /docs/privacy-sandbox/fledge-api/latency
