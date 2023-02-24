@@ -13,6 +13,7 @@ alt: A diagram showing First-Party Sets. One set contains domains example.com,
   fly-brandx.site, and drive-brandx.site.
 tags: 
   - privacy
+is_outdated: true
 authors:
   - rowan_m
   - mihajlija

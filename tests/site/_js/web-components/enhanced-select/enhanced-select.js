@@ -128,6 +128,52 @@ test('enhanced-select: supports multiselect', withPage, async (t, page) => {
 });
 
 test(
+  'enhanced-select: calling setValue directly behaves as expected',
+  withPage,
+  async (t, page) => {
+    await page.setContent(html`
+      <enhanced-select>
+        <select name="test" multiple>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </enhanced-select>
+    `);
+
+    await addPageScript(page, '_enhanced-select.js');
+
+    const lastOption = await page.$('enhanced-select li:last-child');
+    await lastOption.click();
+
+    const initialValue = await page.evaluate(() => {
+      return document.querySelector('enhanced-select').value;
+    });
+
+    t.deepEqual(initialValue, ['3']);
+
+    await page.evaluate(() => {
+      document.querySelector('enhanced-select').setValue([]);
+    });
+
+    const resetValue = await page.evaluate(() => {
+      return document.querySelector('enhanced-select').value;
+    });
+
+    t.deepEqual(resetValue, []);
+
+    const firstOption = await page.$('enhanced-select li:first-child');
+    await firstOption.click();
+
+    const finalValue = await page.evaluate(() => {
+      return document.querySelector('enhanced-select').value;
+    });
+
+    t.deepEqual(finalValue, ['1']);
+  }
+);
+
+test(
   'enhanced-select: can be opened/closed with keyboard',
   withPage,
   async (t, page) => {

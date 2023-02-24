@@ -238,6 +238,11 @@ johannes:
     en: 'Johannes Henkel'
   description:
     en: 'Software Engineer working on the Chrome User Experience Report at Google.'
+jasmineyan:
+  title:
+    en: 'Jasmine Yan'
+  description:
+    en: 'Software Engineer working on Chrome Tooling.'
 emilaeklund:
   title:
     en: 'Emil Eklund'
@@ -509,7 +514,7 @@ yoavweiss:
   title:
     en: 'Yoav Weiss'
   description:
-    en: 'Our latest news, updates, and stories by Yoav Weiss.'
+    en: 'Software engineer at Google working on web performance.'
 solomonkinard:
   title:
     en: 'Solomon Kinard'
@@ -555,6 +560,23 @@ beaufortfrancois:
     en: 'François Beaufort'
   description:
     en: 'Dives into Chromium source code'
+reillyg:
+  title:
+    en: Reilly Grant
+    es: Reilly Grant
+    ja: Reilly Grant
+    ko: Reilly Grant
+    pt: Reilly Grant
+    ru: Reilly Grant
+    zh: Reilly Grant
+  description:
+    en: Software Engineer on Google Chrome focusing on hardware APIs
+    es: Ingeniero de software en Google Chrome centrado en las API de hardware
+    ja: ハードウェア API に関心を持つ Google Chrome のソフトウェアエンジニア
+    ko: 하드웨어 API에 중점을 둔 Chrome의 소프트웨어 엔지니어
+    pt: Engenheiro de software no Google Chrome com foco em APIs de hardware
+    ru: Инженер-программист в команде Google Chrome, специализирующийся на API для работы с устройствами
+    zh: 专注于硬件 API 的 Google Chrome 软件工程师
 cwallez:
   title:
     en: Corentin Wallez
@@ -1287,3 +1309,88 @@ sarino:
     en: Sarino Grasso
   description:
     en: Sarino is a Web Ecosystem Consultant at Google
+ianstanion:
+  title:
+    en: Ian Stanion
+  description:
+    en: 'Ian is a technical content developer at Google.'
+exterkamp:
+  title:
+    en: Shane Exterkamp
+    es: Shane Exterkamp
+    ja: Shane Exterkamp
+    ko: Shane Exterkamp
+    pt: Shane Exterkamp
+    ru: Shane Exterkamp
+    zh: Shane Exterkamp
+  description:
+    en: Shane is a SWE on Lighthouse
+    es: Shane es un Ingeniero de software en Lighthouse
+    ja: Shane は Lighthouse の開発に取り組むソフトウェアエンジニアです
+    ko: Shane은 Lighthouse의 SWE입니다.
+    pt: Shane é engenheiro de software na empresa Lighthouse
+    ru: Шейн — инженер-программист в команде Lighthouse
+    zh: Shane 是一名负责 Lighthouse 的软件工程师
+helencho:
+  title:
+    en: Helen Cho
+  description:
+    en: 'Helen is a product manager at Google.'
+kaustubhag:
+  title:
+    en: Kaustubha Govind
+  description:
+    en: 'Kaustubha is a software engineering manager at Google.'
+johannhof:
+  title:
+    en: Johann Hofmann
+  description:
+    en: 'Johann is a software engineer at Google.'
+priyankachatterjee:
+  title:
+    en: Priyanka Chatterjee
+  description:
+    en: Software Engineer, Privacy Sandbox
+tristramsouthey:
+  title:
+    en: 'Tristram Southey'
+  description:
+    en: 'Product Manager, Google Chrome'
+peterkvitek:
+  title:
+    en: Peter Kvitek
+  description:
+    en: 'Software engineer'
+developit:
+  title:
+    en: Jason Miller
+  description:
+    en: Jason is a Web DevRel focused on speed and the JS ecosystem.
+    es: Jason es un Web DevRel centrado en la velocidad y en el ecosistema de JS.
+    ja: Jason は、スピードと JS のエコシステムに関心を持つ Web DevRel チームのメンバーです。
+    ko: Jason은 속도와 JS 생태계에 중점을 둔 Web DevRel입니다.
+    pt: Jason é Web DevRel focado na velocidade e no ecossistema JS.
+    ru: Джейсон — DevRel по вопросам веб-технологий, специализирующийся на оптимизации скорости и экосистеме JS.
+    zh: Jason 是网络开发者关系团队成员，专注于速度和 JS 生态系统。
+masonfreed:
+  title:
+    en: Mason Freed
+  description:
+    en: Developer on the Chrome team
+    es: Desarrollador en el equipo de Chrome
+    ja: Chrome チームに所属する開発者
+    ko: Chrome 팀 개발자
+    pt: Desenvolvedor na equipe do Chrome
+    ru: Разработчик в команде Chrome
+    zh: Chrome 团队的开发者
+uskay:
+  title:
+    en: Yusuke Utsunomiya
+  description:
+    en: Tech consultant for Web, Chrome & AMP
+    es: Consultor técnico para Web, Chrome y AMP
+    ja: Web、Chrome、AMP を対象とした技術コンサルタント
+    ko: Web, Chrome 및 AMP 기술 컨설턴트
+    pt: Consultor técnico para a web, Chrome e AMP
+    ru: Технический консультант по веб-разработке, Chrome и AMP
+    zh: 网络、Chrome 和 AMP 技术顾问
