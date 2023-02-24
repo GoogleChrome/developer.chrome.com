@@ -53,7 +53,7 @@ If this is done, the thumbnail field is required.
 ```
 
 This results in the thumbnail being displayed on pages referencing the
-article, such as the blog index and a YouTube video embed being
+article, such as the blog index page, and a YouTube video embed being
 displayed on the article page where the hero image otherwise would be.
 
 ## Components
