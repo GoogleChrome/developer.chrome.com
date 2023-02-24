@@ -1,5 +1,3 @@
-# Implementation status
-
 - The [Topics API proposal](https://github.com/jkarlin/topics) has been through a [public discussion](https://github.com/jkarlin/topics/issues) phase  and is now available in an [origin trial](https://github.com/jkarlin/topics/issues). The API is now approaching launch for scaled adoption. 
 - The API needs your feedback. If you have comments, create an issue on the [Topics Explainer repository](https://github.com/jkarlin/topics) or participate in discussions in the [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants). The explainer has a number of [open questions](https://github.com/jkarlin/topics/issues) that still require further definition.
 - [The Privacy Sandbox timeline](http://privacysandbox.com/timeline) provides implementation timelines for the Topics API and other Privacy Sandbox proposals.
