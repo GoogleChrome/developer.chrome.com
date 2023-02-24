@@ -6,7 +6,7 @@ description: >
 subhead: >
   Chrome’s Headless mode just got a whole lot better!
 date: 2023-02-22
-updated: 2023-02-22
+updated: 2023-02-23
 authors:
   - mathiasbynens
   - peterkvitek
@@ -34,7 +34,7 @@ chrome --headless --print-to-pdf https://developer.chrome.com/
 
 Before we dive into the recent Headless improvements, it’s important to understand how the “old” Headless worked. The command-line snippet we showed earlier uses the `--headless` command-line flag, suggesting that Headless is just a mode of operation of the regular Chrome browser. Perhaps surprisingly, this wasn’t actually true. Technically, **the old Headless was [a separate, alternate browser implementation](https://source.chromium.org/chromium/chromium/src/+/main:headless/;drc=c67febd82ae3e18ac8db1397f4ccfa87b0da2ffc)** that happened to be shipped as part of the same Chrome binary. It doesn’t share any of the Chrome browser code in [`//chrome`](https://source.chromium.org/chromium/chromium/src/+/main:chrome/).
 
-As you might imagine, implementing and maintaining this separate Headless browser came with a lot of engineering overhead — but that wasn’t the only problem. Because Headless was a separate implementation, it had its own bugs and features that weren’t present in headful Chrome. This created a confusing situation where any automated browser test might pass in headful mode but fail in Headless mode, or vice versa — a major pain point for automation engineers.
+As you might imagine, implementing and maintaining this separate Headless browser came with a lot of engineering overhead — but that wasn’t the only problem. Because Headless was a separate implementation, it had its own bugs and features that weren’t present in headful Chrome. This created a confusing situation where any automated browser test might pass in headful mode but fail in Headless mode, or vice versa — a major pain point for automation engineers. It also excluded any automated testing that relied on having a browser extension installed, for example. The same goes for any other browser-level functionality: unless Headless had its own, separate implementation of it, it wasn’t supported.
 
 In 2021, the Chrome team set out to solve this problem, and unify Headless and headful modes once and for all.
 
@@ -131,6 +131,16 @@ The `--print-to-pdf` flag saves the target page as a PDF named `output.pdf` in t
 ```sh
 chrome --headless=new --print-to-pdf https://developer.chrome.com/
 ```
+
+Optionally, you can add the `--no-pdf-header-footer` flag to omit the print header (with the current date and time) and footer (with the URL and the page number).
+
+```sh
+chrome --headless=new --print-to-pdf --no-pdf-header-footer https://developer.chrome.com/
+```
+
+{% Aside %}
+The functionality behind the `--no-pdf-header-footer` flag was previously available via the `--print-to-pdf-no-header` flag. Depending on which Chrome version you’re using, you might need to fall back to the old flag name.
+{% endAside %}
 
 #### `--timeout`
 
