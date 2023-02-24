@@ -2,62 +2,6 @@ const {html} = require('common-tags');
 
 const playlistsData = require('../../external/data/youtube-playlist.json');
 
-/** Renders a a YouTube playlist widget
- * @param {string} playlistId is a YouTube playlist id
- * @this {any} The eleventy context
- */
-
-async function Playlist(playlistId) {
-  let videoNumber = 1;
-  let videoTotal = 0;
-  let videosHtml = '';
-
-  const playlistData = await getPlaylistData(playlistId);
-
-  if (!playlistData.playlist) {
-    throw new Error('Playlist Id not found');
-  }
-
-  const channelId = playlistData?.channel?.id;
-  const channelName = playlistData?.channel?.name;
-  const channelThumbnail = playlistData?.channel?.thumbnail;
-  const playlistFirstVideo = playlistData?.playlist?.videos[0].id;
-  const playlistName = playlistData?.playlist?.title;
-  const playlistThumbnail = playlistData?.playlist?.thumbnail;
-  const playlistUpdated = new Date(
-    playlistData?.playlist?.updated
-  ).toLocaleDateString(this.ctx.locale, {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-  });
-
-  playlistData?.playlist?.videos.forEach(video => {
-    videosHtml += getVideoHtml(video, videoNumber, channelName);
-
-    videoNumber++;
-    videoTotal++;
-  });
-
-  const channelHtml = getChannelHtml(channelThumbnail, channelName, channelId);
-  const playlistHtml = getPlaylistHtml(
-    playlistThumbnail,
-    playlistName,
-    playlistFirstVideo,
-    playlistId
-  );
-  const result = getComponentHtml(
-    videoTotal,
-    playlistUpdated,
-    playlistHtml,
-    channelHtml,
-    videosHtml
-  );
-
-  return result;
-}
-
 /**
  * Generates the HTML to render each single video added to the playlist
  * @param {object} video An object with the single video data
@@ -230,4 +174,60 @@ async function getPlaylistData(id) {
   };
 }
 
-module.exports = {Playlist};
+/** Renders a a YouTube playlist widget
+ * @param {string} playlistId is a YouTube playlist id
+ * @this {any} The eleventy context
+ */
+
+async function YouTubePlaylist(playlistId) {
+  let videoNumber = 1;
+  let videoTotal = 0;
+  let videosHtml = '';
+
+  const playlistData = await getPlaylistData(playlistId);
+
+  if (!playlistData.playlist) {
+    throw new Error('Playlist Id not found');
+  }
+
+  const channelId = playlistData?.channel?.id;
+  const channelName = playlistData?.channel?.name;
+  const channelThumbnail = playlistData?.channel?.thumbnail;
+  const playlistFirstVideo = playlistData?.playlist?.videos[0].id;
+  const playlistName = playlistData?.playlist?.title;
+  const playlistThumbnail = playlistData?.playlist?.thumbnail;
+  const playlistUpdated = new Date(
+    playlistData?.playlist?.updated
+  ).toLocaleDateString(this.ctx.locale, {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  });
+
+  playlistData?.playlist?.videos.forEach(video => {
+    videosHtml += getVideoHtml(video, videoNumber, channelName);
+
+    videoNumber++;
+    videoTotal++;
+  });
+
+  const channelHtml = getChannelHtml(channelThumbnail, channelName, channelId);
+  const playlistHtml = getPlaylistHtml(
+    playlistThumbnail,
+    playlistName,
+    playlistFirstVideo,
+    playlistId
+  );
+  const result = getComponentHtml(
+    videoTotal,
+    playlistUpdated,
+    playlistHtml,
+    channelHtml,
+    videosHtml
+  );
+
+  return result;
+}
+
+module.exports = {YouTubePlaylist};

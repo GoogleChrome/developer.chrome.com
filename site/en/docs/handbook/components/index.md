@@ -1143,10 +1143,10 @@ Use the {% raw %}`{% YouTube %}`{% endraw %} shortcode to embed a YouTube video.
 
 ## YouTube Playlist
 
-Use the {% raw %}`{% Playlist %}`{% endraw %} shortcode to display a YouTube playlist.
+Use the {% raw %}`{% YouTubePlaylist %}`{% endraw %} shortcode to display a YouTube playlist.
 
 ```md
-{% raw %}{% Playlist "PLNYkxOF6rcIC3BwCw--jvZNN7obH4QUlH"  %}{% endraw %}
+{% raw %}{% YouTubePlaylist "PLNYkxOF6rcIC3BwCw--jvZNN7obH4QUlH"  %}{% endraw %}
 ```
 
-{% Playlist "PLNYkxOF6rcIC3BwCw--jvZNN7obH4QUlH" %}
+{% YouTubePlaylist "PLNYkxOF6rcIC3BwCw--jvZNN7obH4QUlH" %}

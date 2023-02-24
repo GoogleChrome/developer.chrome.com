@@ -39,7 +39,7 @@ const includeRaw = require('./site/_shortcodes/includeRaw');
 const {LanguageList} = require('./site/_shortcodes/LanguageList');
 const {Partial} = require('./site/_shortcodes/Partial');
 const {BrowserCompat} = require('webdev-infra/shortcodes/BrowserCompat');
-const {Playlist} = require('./site/_shortcodes/Playlist');
+const {YouTubePlaylist} = require('./site/_shortcodes/YouTubePlaylist');
 
 // Transforms
 const {domTransformer} = require('./site/_transforms/dom-transformer-pool');
@@ -152,7 +152,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addShortcode('LanguageList', LanguageList);
   eleventyConfig.addShortcode('BrowserCompat', BrowserCompat);
   eleventyConfig.addNunjucksAsyncShortcode('Partial', Partial);
-  eleventyConfig.addAsyncShortcode('Playlist', Playlist);
+  eleventyConfig.addAsyncShortcode('YouTubePlaylist', YouTubePlaylist);
 
   // Empty shortcodes. They are added for backward compatibility with web.dev.
   // They will not render any html, but will prevent the build from failing.
