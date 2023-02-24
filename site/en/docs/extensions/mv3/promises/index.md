@@ -23,3 +23,20 @@ To check whether a method supports promises, look for the "Promise" label in its
   width="800", height="280" %}
 <figcaption>The captureVisibleTab() method supports promises as shown in the API reference.</figcaption>
 </figure>
+
+<div class="switcher">
+{% Compare 'worse' 'Callback' %}
+
+```js
+// TBD
+```
+{% endCompare %}
+
+{% Compare 'better' 'Promise' %}
+```js
+// TBD
+```
+{% endCompare %}
+</div>
+
+
