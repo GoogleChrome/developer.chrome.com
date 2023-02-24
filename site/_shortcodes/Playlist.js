@@ -1,6 +1,6 @@
 const {html} = require('common-tags');
 
-const playlistsData = require('../_data/youtubePlaylists');
+const playlistsData = require('../../external/data/youtube-playlist.json');
 
 /** Renders a a YouTube playlist widget
  * @param {string} playlistId is a YouTube playlist id
@@ -12,7 +12,7 @@ async function Playlist(playlistId) {
   let videoTotal = 0;
   let videosHtml = '';
 
-  const playlistData = await playlistsData(playlistId);
+  const playlistData = await getPlaylistData(playlistId);
 
   if (!playlistData.playlist) {
     throw new Error('Playlist Id not found');
@@ -210,4 +210,24 @@ function getComponentHtml(
     </div>
   </div>`;
 }
+
+async function getPlaylistData(id) {
+  let playlistResult = [];
+  let channelResult = [];
+
+  playlistResult = playlistsData?.playlists.filter(playlist => {
+    return playlist.id === id;
+  });
+  if (playlistResult) {
+    channelResult = playlistsData?.channels.filter(channel => {
+      return channel.id === playlistResult[0]?.channel;
+    });
+  }
+
+  return {
+    playlist: playlistResult[0],
+    channel: channelResult[0],
+  };
+}
+
 module.exports = {Playlist};
