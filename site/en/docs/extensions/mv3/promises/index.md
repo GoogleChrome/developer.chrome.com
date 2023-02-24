@@ -35,17 +35,4 @@ should consider using promises in situations such as the following:
 
 As previously mentioned, a method cannot both take a callback and return a promise. To convert from a callback to a promise, remove the callback and handle the returned promise. The example below shows the same method used with a passed callback  and a returned promise.
 
-<!-- <div class="switcher">
-{% Compare 'worse' 'Callback' %}
 
-```js
-// TBD
-```
-{% endCompare %}
-
-{% Compare 'better' 'Promise' %}
-```js
-// TBD
-```
-{% endCompare %}
-</div> -->
