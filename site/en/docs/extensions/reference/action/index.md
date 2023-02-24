@@ -294,4 +294,4 @@ chrome.runtime.onInstalled.addListener(() => {
 [html-canvas]: https://developer.mozilla.org/docs/Web/API/HTMLCanvasElement
 [html-offscreencanvas]: https://developer.mozilla.org/docs/Web/API/OffscreenCanvas
 [repo-samples]: https://github.com/GoogleChrome/chrome-extensions-samples
-[sample-example]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/action
+[sample-example]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/action

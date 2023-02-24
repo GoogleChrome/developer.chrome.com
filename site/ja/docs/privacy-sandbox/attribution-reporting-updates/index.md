@@ -4,7 +4,7 @@ title: 'アトリビューション レポート: 更新情報'
 subhead: Attribution Reporting API の最新の変更を確認します。
 description: Attribution Reporting API の最新の変更を確認します。
 date: 2022-06-15
-updated: 2022-06-23
+updated: 2022-12-15
 authors:
   - maudn
   - alexandrawhite
@@ -25,6 +25,7 @@ authors:
 
 ## 変更ログ
 
+- **2022 年 12 月 15 日**: [Attribution Reporting API を 2023 年前半に出荷する](/docs/privacy-sandbox/attribution-reporting/chrome-shipping)予定である理由を公開しました。
 - **2022 年 6 月 23 日**: [2022 年 6 月に発行された「アトリビューション レポートの更新」ブログ記事](/blog/attribution-reporting-updates-june-2022)に、いくつかの更新の詳細が記載されています。また、以下の変更があります。
     - [API ハンドブック](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit)が更新されました。
     - 要約レポートに関する [アトリビューション レポートの実験:戦略とヒント](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit?usp=sharing)を公開しました。

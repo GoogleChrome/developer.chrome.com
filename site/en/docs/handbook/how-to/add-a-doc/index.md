@@ -39,3 +39,9 @@ videos are served in a performant, responsive manner.
 Take a look at the guide on [uploading media](/docs/handbook/how-to/add-media)
 to learn how to add images and videos to your docs.
 
+### Outdated banner 
+
+The outdated banner indicates this article is outdated and no longer accurate.
+
+Set `is_outdated` field in your YAML frontmatter.
+If new material is available, paste an available content URL into the `new_available_content_url` field in your YAML frontmatter.
