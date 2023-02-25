@@ -3,7 +3,7 @@ layout: 'layouts/blog-post.njk'
 title: Framework tools for font fallbacks
 description: 
   Learn how Next.js, Nuxt.js, and other libraries help to generate fallback font CSS without CLS.
-date: 2023-02-24
+date: 2023-02-27
 authors:
   - janicklasralphj
 hero: 'image/IypihH3o5cSpEMVp5i08dp69otp2/aBnMiacBdhhgGBozA5jJ.jpg'
