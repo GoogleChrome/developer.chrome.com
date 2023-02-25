@@ -18,7 +18,7 @@ Sites that load fonts with _font-display: swap_ often suffer from a layout shift
 
 You can prevent CLS by adjusting the dimensions of the fallback font to match that of the primary font. Properties such as `size-adjust`, `ascent-override`, `descent-override`, and `line-gap-override` in the [`@font-face`](https://developer.mozilla.org/docs/Web/CSS/@font-face) rule can help override the metrics of a fallback font allowing developers more control over how fonts are displayed. You can read more about font-fallbacks and the override properties in this [post](/blog/font-fallbacks/). You can also see a working implementation of this technique in this [demo](https://cultured-rightful-check.glitch.me).
 
-This article explores how font size adjustments are implemented in the Next.js and Nuxt.js frameworks to generate the fallback font CSS and reduce the CLS. It also demonstrates how you can generate fallback fonts using tools such as Fontaine and Capsize. 
+This article explores how font size adjustments are implemented in the Next.js and Nuxt.js frameworks to generate the fallback font CSS and reduce the CLS. It also demonstrates how you can generate fallback fonts using cross-cutting tools such as Fontaine and Capsize. 
 
 
 ## Background
@@ -149,7 +149,7 @@ module.exports = {
 ```
 
 
-**Note**: There is no plan to support this feature with the app dir. In the long term, it’s ideal to use `next/font`.
+**Note**: There is no plan to support this feature with the newly introduced `app` dir. In the long term, it’s ideal to use `next/font`.
 
 
 ## How to adjust font fallbacks with Nuxt 
