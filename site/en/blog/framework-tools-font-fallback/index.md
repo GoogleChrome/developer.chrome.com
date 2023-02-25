@@ -90,6 +90,7 @@ When used, the fallback font metrics are automatically calculated and injected i
 body {
   font-family: Roboto;
 }
+```
 
 To migrate to next/font:
 
@@ -164,7 +165,7 @@ import { defineNuxtConfig } from 'nuxt'
 export default defineNuxtConfig({
   modules: ['@nuxtjs/fontaine'],
 })
-
+```
 
 If you use Google Fonts or don't have a `@font-face` declaration for a font, you can declare them as additional options.
 
@@ -180,6 +181,8 @@ export default defineNuxtConfig({
   fonts: ['Inter', { family: 'Some Custom Font', src: '/path/to/custom/font.woff2' }],
 },
 })
+```
+
 The module automatically scans your CSS to read the @font-face declarations and generates the fallback @font-face rules.
 
 ```css
@@ -354,20 +357,43 @@ This returns the following:
    }
  ]
 }
-
+```
 
 You must add the fontFamily and fontFaces code to your CSS. The following code shows how to implement it in a CSS style sheet, or within a `<style>` block.
+
+```html
+<style type="text/css">
+  .heading {
+    font-family: {{ fontFamily }}
+  }
+
+  {{ fontFaces }}
+</style>
+```
 
 This will produce the following CSS:
 
 ```css
-<style type="text/css">
-  .heading {
-  font-family: {{ fontFamily }}
+.heading {
+  font-family: Lobster, 'Lobster Fallback: Helvetica Neue',
+    'Lobster Fallback: Arial';
 }
 
-{{ fontFaces }}
-</style>
+@font-face {
+  font-family: 'Lobster Fallback: Helvetica Neue';
+  src: local('Helvetica Neue');
+  ascent-override: 115.1741%;
+  descent-override: 28.7935%;
+  size-adjust: 86.8251%;
+}
+@font-face {
+  font-family: 'Lobster Fallback: Arial';
+  src: local('Arial');
+  ascent-override: 113.5679%;
+  descent-override: 28.392%;
+  size-adjust: 88.053%;
+}
+```
 
 You can also use the [@capsize/metrics](https://www.npmjs.com/package/@capsizecss/metrics) package to calculate the override values, and apply them to the CSS yourself.
 
@@ -380,11 +406,8 @@ let sizeAdjust = mainFontAvgWidth / fallbackFontAvgWidth;
 let ascent = fontMetrics.ascent / (unitsPerEm * fontMetrics.sizeAdjust));
 let descent = fontMetrics.descent / (unitsPerEm * fontMetrics.sizeAdjust));
 let lineGap = fontMetrics.lineGap / (unitsPerEm * fontMetrics.sizeAdjust));
-
-## Request for feedback
-
-We welcome feedback on your experiences using font metric overrides and `size-adjust` to improve fallback fonts.
+```
 
 ## Acknowledgements
 
-Hero image by [Alexander Andrews](https://unsplash.com/@alex_andrews) on [Unsplash](https://unsplash.com/)
+Hero image by [Alexander Andrews](https://unsplash.com/@alex_andrews) on [Unsplash](https://unsplash.com/).
