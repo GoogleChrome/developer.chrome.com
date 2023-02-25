@@ -180,7 +180,7 @@ about the real-world issues, update code, profit!
 
 ## Future work {: #future }
 
-In the future, my hope is that `ReportingObserver` becomes the de-facto API for
+In the future, my hope is that `ReportingObserver` becomes the de facto API for
 catching all types of issues in JavaScript. Imagine one API to catch everything
 that goes wrong in your app:
 
