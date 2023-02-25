@@ -5,10 +5,10 @@ description: >
   Starting in Chrome 110 (February 2023) we are gradually introducing a fixed value for Android version and device model—the default value will always be `Android 10` on a model `K`.
 subhead: >
   Chrome is continuing to reduce the information shared in its user-agent string to help protect user's privacy.
-date: 2023-02-22
-# updated: 2021-02-21
+date: 2023-02-24
+# updated: 2021-02-24
 # is_outdated: true
-# new_available_content_url: /docs/handbook/how-to/add-a-blog-post/
+# new_available_content_url: /docs/privacy-sandbox/user-agent/
 authors:
   - rowan_m
 tags:
@@ -67,9 +67,9 @@ Instead of seeing something like `Android 13` on `Pixel 7` the default value wil
 The user-agent reduction changes the _values_ returned in the user-agent, but the _format_ stays the same.
 If you only use the user-agent to read the operating system type or major browser version, that data will continue to update as before and you _do not need to take any action_.
 
-{% Img src="image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/HTdWXbl4TuCgwGiqZAbW.png", alt="The platform, browser name, browser major version, and mobile indicator parts of the user-agent string continue to update as before.
+{% Img src="image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/GXIXCnvSXvaL7MZmHXgw.png", alt="The platform, browser name, browser major version, and mobile indicator parts of the user-agent string continue to update as before.
 Operating system type, device model, and browser minor version are static values.
-All other portions of the user-agent string remain as is.", width="800", height="326" %}
+All other portions of the user-agent string remain as is.", width="800", height="317" %}
 
 ## Alternatives to user-agent
 
