@@ -17,14 +17,6 @@ tags:
 
 {% Partial 'devtools/banner.md' %}
 
-<!-- Translation instructions:
-  1. Remove the "draft: true" tag above when submitting PR
-  2. Provide translations under each of the English commented original content
-  3. Translate the "description" tag above
-  4. Translate all the <img> alt text
-  5. Update the sites/es/_partials/devtools/whats-new.md file -->
-
-
 ## 再読み込み時の Performance パネルのクリア {: #perf }
 
 <!-- The **Performance** panel now clears both the screenshot and trace when you click the **Start profiling and reload page** button. -->
