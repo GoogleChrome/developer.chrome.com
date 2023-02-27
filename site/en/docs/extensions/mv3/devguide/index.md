@@ -67,7 +67,7 @@ functionality.
 [Browsing data](/docs/extensions/reference/browsingData)
 : Remove browsing data from a user's local profile.
 
-[Downloads](/docs/extensions/reference/downloads
+[Downloads](/docs/extensions/reference/downloads)
 : Programmatically initiate, monitor, manipulate, and search for downloads.
 
 [Settings](/docs/extensions/reference/fontSettings)
@@ -77,7 +77,7 @@ functionality.
 : Interact with the browser's record of visited pages.
 
 [Privacy](/docs/extensions/reference/privacy)
-: Control Chrome privacy features
+: Control Chrome privacy features.
 
 [Proxy](/docs/extensions/reference/proxy)
 : Manage Chrome's proxy settings.
