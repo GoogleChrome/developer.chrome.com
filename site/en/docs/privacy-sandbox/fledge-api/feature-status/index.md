@@ -113,7 +113,7 @@ We will soon publish an explainer with more details on how [k-anonymity](https:/
 
 For rendering a creative, we will require _a crowd of 50 users per creative within the past 7 days_ to pass the k-anonymity threshold before the ad can be served. The creative is available to be served as soon as it hits the 50 ads threshold and does not need to wait for 7 days. 
 
-K-anonymity requirements will be available for testing and will be enforced later in 2023. We encourage feedback from adtech on this parameter.
+K-anonymity requirements will be available for testing and will be enforced later in 2023. We encourage feedback from ad tech on this parameter.
 
 ## Bidding and Auction Services
 

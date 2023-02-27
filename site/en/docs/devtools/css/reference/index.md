@@ -421,7 +421,7 @@ To change the length unit:
 1. Click on the unit name to select a unit from the drop-down.
 
    <div style="margin-top: 20px;">
-   {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/vWiU9o1DxsOpWXM0SrBa.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}</div>
+   {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/vWiU9o1DxsOpWXM0SrBa.mp4", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}</div>
 
 To change the length value:
 
@@ -429,7 +429,7 @@ To change the length value:
 1. Drag horizontally to increase or decrease the value.
 
    <div style="margin-top: 20px;">
-   {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/nbvRDPyARJmdTeB9ajOq.mp4", autoplay="true", muted="true", loop="true",class="screenshot" %}</div>
+   {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/nbvRDPyARJmdTeB9ajOq.mp4", autoplay="true", muted="true", loop="true", controls="true",class="screenshot" %}</div>
 
 To adjust the value by 10, hold <kbd>Shift</kbd> when dragging.
 
