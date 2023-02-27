@@ -717,10 +717,6 @@ Additionally, you can [track changes](/docs/devtools/changes/) you make with the
 [26]: https://material.io/design/color/the-color-system.html#color-usage-and-palettes
 [27]: #select
 [28]: /docs/devtools/shortcuts#styles
-[29]: https://drafts.csswg.org/css-color/#rgb-functions
-[30]: https://drafts.csswg.org/css-color/#the-hsl-notation
-[31]: https://drafts.csswg.org/css-color/#the-hwb-notation
-[32]: https://drafts.csswg.org/css-color/#hex-notation
 [33]: https://developer.mozilla.org/docs/Web/CSS/Pseudo-elements
 [34]: /blog/auto-dark-theme/
 [35]: https://web.dev/prefers-color-scheme/
