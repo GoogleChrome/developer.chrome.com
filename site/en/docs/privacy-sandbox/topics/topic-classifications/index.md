@@ -2,9 +2,9 @@
 layout: 'layouts/doc-post.njk'
 title: 'Topic classifications'
 subhead: >
-  Try out the Topics demo, and learn about the API and how to run Topics with flags or participate in an origin trial.
+  Get some more in-depth information about the topics themselves and how they are chosen.
 description: >
-  Try out the Topics demo, and learn about the API and how to run Topics with flags or participate in an origin trial.
+  How topics are chosen, how they're delivered to users, and how users can control their topics list.
 date: 2022-01-25
 updated: 2022-02-01
 authors:
