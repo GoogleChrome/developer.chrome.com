@@ -8,7 +8,7 @@ authors:
   - janicklasralphj
 hero: 'image/IypihH3o5cSpEMVp5i08dp69otp2/aBnMiacBdhhgGBozA5jJ.jpg'
 alt: >
-  The alphabet A in different sizes
+  The letter A in different sizes.
 tags:
   - performance
   - aurora-project
