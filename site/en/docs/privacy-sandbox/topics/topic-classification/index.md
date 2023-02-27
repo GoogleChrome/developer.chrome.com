@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Topic classifications'
+title: 'Topic classification'
 subhead: >
   Get some more in-depth information about the topics themselves and how they are chosen.
 description: >
