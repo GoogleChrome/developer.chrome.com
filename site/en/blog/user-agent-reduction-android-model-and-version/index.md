@@ -5,8 +5,8 @@ description: >
   Starting in Chrome 110 (February 2023) we are gradually introducing a fixed value for Android version and device model—the default value will always be `Android 10` on a model `K`.
 subhead: >
   Chrome is continuing to reduce the information shared in its user-agent string to help protect user's privacy.
-date: 2023-02-24
-# updated: 2021-02-24
+date: 2023-02-27
+# updated: 2021-02-27
 # is_outdated: true
 # new_available_content_url: /docs/privacy-sandbox/user-agent/
 authors:
