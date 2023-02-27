@@ -12,13 +12,12 @@ extensions. Extensions typically use this feature to expose images or other asse
 loaded in web pages, but any asset included in an extension's bundle can be made web accessible.
 
 By default no resources are web accessible; only pages or scripts loaded from an extension's origin
-can access that extension's resources. Use the `web_accessible_resources`
-manifest property to declare which resources are exposed and to what origins.
+can access that extension's resources. 
 
 {% Aside %}
-Prior to Manifest V2 all resources within an extension could be accessed from any page on the
-web. This allowed a malicious website to [fingerprint][6] the extensions that a user has installed
-or exploit vulnerabilities (for example [XSS bugs][7]) within installed extensions. 
+Before Manifest V2 all resources in an extension could be accessed from any page on the
+web. This allowed a malicious website to [fingerprint][6] extensions that a user has installed
+or exploit vulnerabilities (for example [XSS bugs][7]) in installed extensions. 
 
 Beginning with Manifest V2, access to those resources was limited to protect the privacy of users. Manifest V2
 extensions exposed only those resources explicitly designated as web accessible.
@@ -30,8 +29,9 @@ pages, domains, or extensions.
 
 ## Manifest declaration
 
-An array of objects that declares resource access rules. Each object maps an array of
-extension resources to an array of URLs and/or extension IDs that can access those resources.
+Use the `web_accessible_resources` manifest property to declare which resources are exposed and to
+what origins. This property is an array of objects that declares resource access rules. Each object
+maps an array of extension resources to an array of URLs and/or extension IDs that can access those resources.
 
 ```json
 {
@@ -71,9 +71,9 @@ Each element must include a `"resources"` element and either a `"matches"` or `"
 Resources are available in a webpage via the URL
 `chrome-extension://[PACKAGE ID]/[PATH]`, which can be generated with the [`runtime.getURL()`][1]
 method. The resources are served with appropriate [CORS][2] headers, so they're available
-via mechanisms XHR.
+via XHR.
 
-A navigation from a web origin to an extension resource will be blocked unless the resource is
+A navigation from a web origin to an extension resource is blocked unless the resource is
 listed as web accessible. Note these corner cases:
 
 - When an extension uses the [webRequest][3] or [declarativeWebRequest][4] APIs to redirect a public
