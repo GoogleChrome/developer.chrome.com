@@ -11,7 +11,9 @@ authors:
   - samdutton
 ---
 
-The Privacy Sandbox is and initiative aims to create technologies that both protect people's privacy online and give companies and developers tools to build thriving digital businesses.
+The Privacy Sandbox is and initiative aims to create technologies that both
+protect people's privacy online and give companies and developers tools to
+build thriving digital businesses.
 
 The Privacy Sandbox has two core aims:
 
@@ -34,7 +36,7 @@ Several key proposals are listed below.
 ### Strengthen cross-site privacy boundaries
 
 * [**CHIPS**](/docs/privacy-sandbox/chips/): Allow developers to opt-in a
-  cookie to "partitioned" storage, with a separate cookie jar per top-level site.
+  cookie to partitioned storage, with a separate cookie jar per top-level site.
 * [**First-Party Sets**](/docs/privacy-sandbox/first-party-sets): Allow related
   domain names owned by the same entity to declare themselves as belonging to
   the same first party.
@@ -43,8 +45,11 @@ Several key proposals are listed below.
   cross-site data. This data must be read in a secure environment to prevent leakage.
 * [**SameSite cookies**](https://web.dev/samesite-cookies-explained/): Secure
   sites by explicitly marking cross-site cookies.
-* [**Storage Partitioning**](https://github.com/privacycg/storage-partitioning): Enable
-  all forms of [user agent state](https://github.com/privacycg/storage-partitioning#user-agent-state), such as `localStorage` or cookies, to be double-keyed: by the top-level site as well as the origin of the resource being loaded, rather than a single origin or site.
+* [**Storage Partitioning**](https://github.com/privacycg/storage-partitioning):
+  Enable all forms of [user agent state](https://github.com/privacycg/storage-partitioning#user-agent-state),
+  such as `localStorage` or cookies, to be double-keyed: by the top-level site
+  as well as the origin of the resource being loaded, rather than a single
+  origin or site.
 * [**Fenced Frames**](/docs/privacy-sandbox/fenced-frame): Securely embed content onto a page without sharing cross-site data.
 * [**Network State Partitioning**](https://github.com/MattMenke2/Explainer---Partition-Network-State):
   Prevent browser network resources being shared across first-party contexts, by ensuring that every request has a network partition key that must match in order for resources to be reused.
@@ -54,24 +59,41 @@ Several key proposals are listed below.
 
 ### Show relevant content and ads
 
-* [**Topics API**](/docs/privacy-sandbox/topics): Enable interest-based advertising without use of third-party cookies or tracking user behavior across sites.
-* [**FLEDGE**](/docs/privacy-sandbox/fledge): Ad selection to serve remarketing and custom audience use cases, designed so that it cannot be used by third parties to track user browsing behavior across sites.
+* [**Topics API**](/docs/privacy-sandbox/topics): Enable interest-based
+  advertising without use of third-party cookies or tracking user behavior
+  across sites.
+* [**FLEDGE**](/docs/privacy-sandbox/fledge): Ad selection to serve remarketing
+  and custom audience use cases, designed so that it cannot be used by third
+  parties to track user browsing behavior across sites.
 
 ### Measure digital ads
 
-* [**Attribution Reporting**](/docs/privacy-sandbox/attribution-reporting): Correlate ad clicks or ad views with conversions. Ad techs can generate event-level or [summary reports](/docs/privacy-sandbox/summary-reports).
+* [**Attribution Reporting**](/docs/privacy-sandbox/attribution-reporting):
+  Correlate ad clicks or ad views with conversions. Ad techs can generate
+  event-level or [summary reports](/docs/privacy-sandbox/summary-reports).
 * [**Private Aggregation API**](/docs/privacy-sandbox/private-aggregation/): Generate noisy summary reports with cross-site data.
 
 ### Prevent covert tracking
 
-* [**User-Agent reduction and User-Agent Client Hints**](/docs/privacy-sandbox/user-agent/): Limit passively shared browser data to reduce the volume of sensitive information which leads to fingerprinting. Client Hints allow developers to actively request only the information they need about the user's device or conditions.
-* [**IP Protection**](/docs/privacy-sandbox/ip-protection/): Improve user privacy by protecting their IP address from being used for tracking.
-* [**Bounce tracking mitigations**](/docs/privacy-sandbox/bounce-tracking-mitigations/): A proposal to reduce or eliminate the ability of bounce tracking to recognize people across contexts.
-* [**Privacy Budget**](/docs/privacy-sandbox/privacy-budget/): Limit the amount of individual user data exposed to sites to prevent covert tracking.
+* [**User-Agent reduction and User-Agent Client Hints**](/docs/privacy-sandbox/user-agent/):
+  Limit passively shared browser data to reduce the volume of sensitive
+  information which leads to fingerprinting. Client Hints allow developers to
+  actively request only the information they need about the user's device or
+  conditions.
+* [**IP Protection**](/docs/privacy-sandbox/ip-protection/): Improve user
+  privacy by protecting their IP address from being used for tracking.
+* [**Bounce tracking mitigations**](/docs/privacy-sandbox/bounce-tracking-mitigations/):
+  A proposal to reduce or eliminate the ability of bounce tracking to recognize
+  people across contexts.
+* [**Privacy Budget**](/docs/privacy-sandbox/privacy-budget/): Limit the amount
+  of individual user data exposed to sites to prevent covert tracking.
 
 ### Fight spam and fraud on the web
 
-* [**Private State Tokens**](/docs/privacy-sandbox/trust-tokens): Allow websites to convey a limited amount of information from one browsing context to another (for example, across sites) to help combat fraud, without passive tracking.
+* [**Private State Tokens**](/docs/privacy-sandbox/trust-tokens): Allow
+  websites to convey a limited amount of information from one browsing context
+  to another (for example, across sites) to help combat fraud, without passive
+  tracking.
 
 ## Who works on the Privacy Sandbox?
 
@@ -91,7 +113,8 @@ as APIs move from proposal to experiment to scaled availability.
 
 ## Engage and share feedback
 
-* **GitHub**: read the explainers for the proposal on GitHub and raise questions or comments in the Issues tab for the explainer.
+* **GitHub**: read the explainers on GitHub and raise questions or comments in
+  the Issues tab for each.
 * **W3C**: Use cases can be discussed and industry feedback shared in the W3C [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/), the [Privacy Community Group](https://www.w3.org/community/privacycg/participants),
 and the [Web Incubator Community Group](https://github.com/WICG).
 * **Developer support**: Ask questions and join discussions on the
