@@ -24,8 +24,10 @@ The Privacy Sandbox has two core aims:
 
 ## What are the Privacy Sandbox proposals?
 
-Chrome and other ecosystem stakeholders have offered more than 30 proposals to date, which can be
-found in the [public resources of W3C groups](https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo). These proposals cover a wide variety of use cases and requirements.
+Chrome and other ecosystem stakeholders have offered more than 30 proposals to
+date, which can be found in the
+[public resources of W3C groups](https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo).
+These proposals cover a wide variety of use cases and requirements.
 
 Several key proposals are listed below.
 
