@@ -31,7 +31,13 @@ An example of the file is as follows:
 
 The native messaging host manifest file must be valid JSON and contain the following fields:
 
-<table class="simple" id="native-messaging-host-manifest"><tbody><tr><th>Name</th><th>Description</th></tr><tr><td><code>name</code></td><td>Name of the native messaging host. Clients pass this string to <a href="/apps/runtime#method-connectNative">runtime.connectNative</a> or <a href="/apps/runtime#method-sendNativeMessage">runtime.sendNativeMessage</a>. This name can only contain lowercase alphanumeric characters, underscores and dots. The name cannot start or end with a dot, and a dot cannot be followed by another dot.</td></tr><tr><td><code>description</code></td><td>Short application description.</td></tr><tr><td><code>path</code></td><td>Path to the native messaging host binary. On Linux and macOS the path must be absolute. On Windows it can be relative to the directory in which the manifest file is located. The host process is started with the current directory set to the directory that contains the host binary. For example if this parameter is set to <code>C:\Application\nm_host.exe</code> then it will be started with current directory <code>C:\Application\</code>.</td></tr><tr><td><code>type</code></td><td>Type of the interface used to communicate with the native messaging host. Currently there is only one possible value for this parameter: <code>stdio</code>. It indicates that Chrome should use <code>stdin</code> and <code>stdout</code> to communicate with the host.</td></tr><tr><td><code>allowed_origins</code></td><td>List of extensions that should have access to the native messaging host. Wildcards such as <code>chrome-extension://*/*</code> are <em>not</em> allowed.</td></tr></tbody></table>
+|Name|Description|
+|----|-----------|
+|`name`|Name of the native messaging host. Clients pass this string to [runtime.connectNative][connect-native] or [runtime.sendNativeMessage][send-native-message]. This name can only contain lowercase alphanumeric characters, underscores and dots. The name cannot start or end with a dot, and a dot cannot be followed by another dot.|
+|`description`|Short application description.|
+|`path`|Path to the native messaging host binary. On Linux and macOS the path must be absolute. On Windows it can be relative to the directory in which the manifest file is located. The host process is started with the current directory set to the directory that contains the host binary. For example if this parameter is set to `C:\Application\nm_host.exe` then it will be started with current directory `C:\Application\`.|
+|`type`|Type of the interface used to communicate with the native messaging host. Currently there is only one possible value for this parameter: `stdio`. It indicates that Chrome should use `stdin` and `stdout` to communicate with the host.|
+|`allowed_origins`|List of extensions that should have access to the native messaging host. Wildcards such as `chrome-extension://*/*` are _not_ allowed.|
 
 ### Native messaging host location {: #native-messaging-host-location }
 
@@ -90,8 +96,6 @@ The first argument to the native messaging host is the origin of the caller, usu
 `chrome-extension://[ID of allowed extension]`. This allows native messaging hosts to identify the
 source of the message when multiple extensions are specified in the `allowed_origins` key in the
 [native messaging host manifest][native-messaging-host-manifest].
-**_Warning_**: In Windows, in Chrome 54 and earlier, the origin was passed as the second parameter
-instead of the first parameter.
 
 On Windows, the native messaging host is also passed a command line argument with a handle to the
 calling Chrome native window: `--parent-window=<decimal handle value>`. This lets the native
@@ -174,7 +178,7 @@ Check the following:
 - Is the name spelled correctly in the extension and in the manifest file?
 - Is the manifest in the right directory and with the correct name? See [native messaging host
   location][native-messaging-host-location] for the expected formats.
-- Is the manifest file in the correct format? In particular, is the JSON syntax correct and do the
+- Is the manifest file in the correct format? In particular, is the JSON valid and well-formed and do the
   values match the definition of a [native messaging host manifest][native-messaging-host-manifest]?
 - Does the file specified in `path` exist? On Windows, paths may be relative, but on macOS and Linux,
   the paths must be absolute.
@@ -206,7 +210,7 @@ This indicates an incorrect implementation of the communication protocol in the 
 
 [messaging]: /docs/extensions/mv3/messaging/
 [user-data-directory]: https://chromium.googlesource.com/chromium/src/+/HEAD/docs/user_data_dir.md
-[native-messaging-host-manifest]: #native-messaging-host-manifest
+[native-messaging-host-manifest]: #native-messaging-host
 [connect-native]: /docs/extensions/reference/runtime/#method-connectNative
 [send-native-message]: /docs/extensions/reference/runtime/#method-sendNativeMessage
 [connect]: /docs/extensions/reference/runtime/#method-connect
