@@ -3,8 +3,6 @@ layout: 'layouts/blog-post.njk'
 title: "O que há de novo no DevTools (Chrome 111)"
 authors:
   - jecelynyeen
-  - khaosdoctor
-  - alvarocamillont
 date: 2023-02-16
 description: ""
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/i6B3ZaSwJ9dxC7hx7YqA.png'
