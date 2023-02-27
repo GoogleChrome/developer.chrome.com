@@ -16,14 +16,14 @@ Many organizations have related sites with different domain names, such as `bran
 {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/OLx3AXkweLjAiDzoDslb.png", alt="Diagram showing brandx.com, fly-brandx.com and drive-brandx.com as one group and example.com, example.rs, example.co.uk as another group.", width="800", height="348" %}
 
 
-Imagine a company that helps you book a vacation. The company might have two related sites: `fly-brandx.com` and `drive-brandx.com` to separate flights and car hire. Over the course of booking one journey, you might go between these sites to select their different options and you'd expect your shopping cart to remember your choices across these sites.
+Imagine a company that helps you book a vacation. The company has two related sites: `fly-brandx.com` and `drive-brandx.com` to separate flights and car hire. Over the course of booking one journey, you can go between these sites to select their different options and you'd expect your shopping cart to remember your choices across these sites.
 
 Related sites like these often rely on cookies to keep you signed in or show you personalized content.
 
 As [Chrome moves towards blocking third-party cookies](https://blog.chromium.org/2020/01/building-more-private-web-path-towards.html) to improve privacy on the web, new mechanisms are needed to enable these experiences to work.
 
 {% Aside %}
-Cookies set by the site you visit–the one shown in the URL bar–are first-party cookies. A site you visit can embed content from other sites, for example images, ads, and text. Cookies coming from sites other than the current site are [third-party cookies](https://web.dev/samesite-cookie-recipes/#use-cases-for-cross-site-or-third-party-cookies).
+Cookies set by the site you visit—the one shown in the URL bar—are first-party cookies. A site you visit can embed content from other sites, for example, images, ads, and text. Cookies coming from sites other than the current site are [third-party cookies](https://web.dev/samesite-cookie-recipes/#use-cases-for-cross-site-or-third-party-cookies).
 {% endAside %}
 
 ## Defining related sites with First-Party Sets
