@@ -8,7 +8,7 @@ date: 2020-11-09
 updated: 2023-02-22
 ---
 
-Manifest V3 (Manifest V3) is a major step forward in steering towards our
+Manifest V3 is a major step forward in steering towards our
 [vision for the extensions platform](/docs/extensions/mv3/intro/platform-vision/).
 Manifest V3 focuses on the three pillars of that vision: privacy, security, and
 performance, while preserving and improving our foundation of capability and
