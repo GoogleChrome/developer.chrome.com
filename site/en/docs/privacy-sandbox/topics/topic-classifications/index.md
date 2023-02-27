@@ -4,7 +4,7 @@ title: 'Topic classifications'
 subhead: >
   Get some more in-depth information about the topics themselves and how they are chosen.
 description: >
-  How topics are chosen, how they're delivered to users, and how users can control their topics list.
+  How topics are inferred, how they're assigned to users' browsers, and how users can control their topics list.
 date: 2022-01-25
 updated: 2022-02-01
 authors:
@@ -36,7 +36,7 @@ This suggests several questions. For example:
 
 ### How the API infers topics for a site
 
-Topics are derived from a [classifier model](https://github.com/jkarlin/topics#:~:text=classifier) that maps website [hostnames}(https://web.dev/same-site-same-origin/#origin) to zero or more topics.
+Topics are derived from a [classifier model](https://github.com/jkarlin/topics#:~:text=classifier) that maps website [hostnames](https://web.dev/same-site-same-origin/#origin) to zero or more topics.
 Analyzing additional information (such as full URLs or page contents) might allow for more relevant ads, but might also reduce privacy.
 The classifier model for mapping hostnames to topics is publicly available, and the explainer proposes that it should be possible to view the topics for a site via browser developer tools. The model is expected to evolve and improve over time and be updated periodically; the frequency of this is still under consideration.
 
