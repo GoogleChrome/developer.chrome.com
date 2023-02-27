@@ -5,7 +5,7 @@ description: >
 subhead: >
   How the Chrome team aims to encourage more professional, respectful and inclusive discussions.
 layout: 'layouts/blog-post.njk'
-date: 2023-02-21
+date: 2023-02-27
 hero: 'image/kheDArv5csY6rvQUJDbWRscckLr1/HYruo4j2ir5MYZ96WabJ.jpg'
 authors:
     - chriswilson
