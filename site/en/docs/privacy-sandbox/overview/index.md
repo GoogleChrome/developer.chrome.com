@@ -31,14 +31,14 @@ Several key proposals are listed below.
 
 ### Strengthen cross-site privacy boundaries
 
+* [**CHIPS**](/docs/privacy-sandbox/chips/): Allow developers to opt-in a
+  cookie to "partitioned" storage, with a separate cookie jar per top-level site.
 * [**First-Party Sets**](/docs/privacy-sandbox/first-party-sets): Allow related
   domain names owned by the same entity to declare themselves as belonging to
   the same first party.
 * [**Shared Storage**](/docs/privacy-sandbox/shared-storage/): Create a
   general-purpose API which allows sites to store and access unpartitioned
   cross-site data. This data must be read in a secure environment to prevent leakage.
-* [**CHIPS**](/docs/privacy-sandbox/chips/): Allow developers to opt-in a
-  cookie to "partitioned" storage, with a separate cookie jar per top-level site.
 * [**SameSite cookies**](https://web.dev/samesite-cookies-explained/): Secure
   sites by explicitly marking cross-site cookies.
 * [**Storage Partitioning**](https://github.com/privacycg/storage-partitioning): Enable
@@ -57,7 +57,7 @@ Several key proposals are listed below.
 
 ### Measure digital ads
 
-* [**Attribution Reporting**](/docs/privacy-sandbox/attribution-reporting): Correlate ad clicks or ad views with conversions. Ad techs can generate event-level or summary reports.
+* [**Attribution Reporting**](/docs/privacy-sandbox/attribution-reporting): Correlate ad clicks or ad views with conversions. Ad techs can generate event-level or [summary reports](/docs/privacy-sandbox/summary-reports).
 * [**Private Aggregation API**](/docs/privacy-sandbox/private-aggregation/): Generate noisy summary reports with cross-site data.
 
 ### Prevent covert tracking
@@ -71,16 +71,12 @@ Several key proposals are listed below.
 
 * [**Private State Tokens**](/docs/privacy-sandbox/trust-tokens): Allow websites to convey a limited amount of information from one browsing context to another (for example, across sites) to help combat fraud, without passive tracking.
 
-## Who is working on the Privacy Sandbox?
-
-By early 2021 there were:
+## Who works on the Privacy Sandbox?
 
 * 30+ Privacy Sandbox proposals offered by Chrome and others.
 * 400+ participants who joined W3C groups to provide input including the
-[Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants) and
-the [Privacy Community Group](https://www.w3.org/community/privacycg/participants).
-* Five API implementations available for testing in Chrome.
-
+  [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants)
+  and the [Privacy Community Group](https://www.w3.org/community/privacycg/participants).
 
 ## When will the APIs be implemented?
 
@@ -109,8 +105,8 @@ and the [Web Incubator Community Group](https://github.com/WICG).
 
 ### Principles and concepts behind the proposals
 
-* [A Potential Privacy Model for the Web](https://github.com/michaelkleber/privacy-model) sets out the
-core principles underlying the APIs.
+* [A Potential Privacy Model for the Web](https://github.com/michaelkleber/privacy-model)
+  sets out the core principles underlying the APIs.
 * [The Privacy Sandbox](https://www.chromium.org/Home/chromium-privacy/privacy-sandbox)
 * Privacy Sandbox overview: [Building a more private web](https://www.blog.google/products/chrome/building-a-more-private-web/)
 * Google AI Blog: [Federated Learning: Collaborative Machine Learning without Centralized Training Data](https://ai.googleblog.com/2017/04/federated-learning-collaborative.html)
