@@ -11,7 +11,7 @@ authors:
   - samdutton
 ---
 
-### Implementation status
+## Implementation status
 {% Partial 'privacy-sandbox/ps-implementation-status.njk' %}
 
 ## What is a topic?
