@@ -35,7 +35,7 @@ should consider using promises in situations such as the following:
 
 As previously mentioned, a method cannot both take a callback and return a promise. To convert from a callback to a promise, remove the callback and handle the returned promise. The example below is taken from the [optional permissions sample](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.optional_permissions), `newtab.js` specifically. The callback version shows what the sample's call to `request()` would look like with a callback. Note that the promise version could be rewritten with async and await.
 
-{% Compare 'worse' 'Callback' %}
+{% Compare 'worse', 'Callback' %}
 
 ```js
 chrome.permissions.request(newPerms, (granted) => {
@@ -48,7 +48,7 @@ chrome.permissions.request(newPerms, (granted) => {
 ```
 {% endCompare %}
 
-{% Compare 'better' 'Promise' %}
+{% Compare 'better', 'Promise' %}
 ```js
 const newPerms = { permissions: ['topSites'] };
 chrome.permissions.request(newPerms)
