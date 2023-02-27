@@ -2,7 +2,7 @@
 layout: 'layouts/doc-post.njk'
 title: 'Topic classification'
 subhead: >
-  How topics are inferred, how they're assigned to users' browsers, and how users can control their topics list.
+  Read how topics are inferred, how they're assigned to users' browsers, and how users can control their topics list.
 description: >
   More in-depth information about the topics themselves and how they are chosen.
   
