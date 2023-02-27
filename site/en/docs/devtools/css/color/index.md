@@ -36,7 +36,14 @@ Use the **Color Picker** to change color values with a click:
 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/UbGGOVBV5ZCxcPT3JCZk.png", alt="Color preview.", width="600", height="400" %}
 
-1. Click the preview to open the **Color Picker**.
+   {% Aside %}
+   This example shows two intersected circles next to the [`color-mix()`](https://developer.mozilla.org/docs/Web/CSS/color_value/color-mix) function: {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/NxzOQosIfXPQDL5gi566.png", alt="Color-mix preview.", width="24", height="24" %}. The intersection is a preview of the resulting color.
+
+   To inspect the computed value, [use the **Computed** pane](/docs/devtools/css/issues/#computed).
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/V3DUCujgQV8OQDzR0f4h.png", alt="The computed value of color-mix().", width="400", height="204", class="screenshot", style="margin-top: 20px;" %}
+   {% endAside %}
+
+1. Click the preview square next to a color to open the **Color Picker**.
 1. To change the color, use any of the UI elements of the **Color Picker**.
 
 ## Color Picker elements {: #color-picker-elements }
