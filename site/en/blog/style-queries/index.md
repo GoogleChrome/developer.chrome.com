@@ -49,7 +49,7 @@ Unlike with style queries, you don’t need to apply containment using the `cont
 To directly query a parent, you can write:
 
 ```css
-/* styling .card based on the value of --myVar on .card-container */
+/* styling .card based on the value of --theme on .card-container */
 @container style(--theme: warm) {
   .card {
     background-color: wheat;
