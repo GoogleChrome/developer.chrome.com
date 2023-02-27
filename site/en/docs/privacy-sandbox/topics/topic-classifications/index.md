@@ -45,7 +45,7 @@ Only sites that include code that calls the Topics API are included in the brows
 In addition, a caller can only receive topics that their code has “seen.” So if another caller’s code registered a topic, say `/Autos & Vehicles/Motor Vehicles (By Type)/Hatchbacks`, for a user’s browser and your code did not cause that topic to be registered for that user’s browser, you will not be able to learn of that topic of interest for that user’s browser when you call the API from your embedded code.
 The Topics explainer also suggests sites are allowed to block topic calculation for their visitors with the following [Permissions-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy) header:
 
-```
+```text
 Permissions-Policy: browsing-topics=()
 ```
 
@@ -56,11 +56,11 @@ Topics are manually curated for 10,000 top domains, and this curation is used to
 To run the model directly, refer to [TensorFlow's guide to running a model](https://www.tensorflow.org/lite/guide/inference#running_a_model).
 To inspect the `override_list.pb.gz` file:
 Unpack it: 
-```
+```text
 gunzip -c override_list.pb.gz > override_list.pb
 ```
 Use protoc to inspect: 
-```
+```text
 protoc --decode_raw < override_list.pb > output.txt
 ```
 
