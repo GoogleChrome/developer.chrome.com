@@ -2,9 +2,10 @@
 layout: 'layouts/doc-post.njk'
 title: 'Topic classification'
 subhead: >
-  Get some more in-depth information about the topics themselves and how they are chosen.
-description: >
   How topics are inferred, how they're assigned to users' browsers, and how users can control their topics list.
+description: >
+  More in-depth information about the topics themselves and how they are chosen.
+  
 date: 2022-01-25
 updated: 2022-02-01
 authors:
