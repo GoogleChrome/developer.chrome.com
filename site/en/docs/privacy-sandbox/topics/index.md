@@ -737,7 +737,7 @@ context. The browser will internally keep up to N+1 epochs.</td>
     <tr>
       <td><code>BrowsingTopics:time_period_per_epoch</code></td>
       <td style="white-space: nowrap;">7d-0h-0m-0s</td>
-      <td>Duration of each <a href="https://developer.chrome.com/docs/privacy-sandbox/topics/#:~:text=epoch">epoch</a>.
+      <td>Duration of each <a href="/docs/privacy-sandbox/topics/#:~:text=epoch">epoch</a>.
       For debugging, it can be useful to set this to (say) 15 seconds, rather than the default 7 days.</td>
     </tr>
     <tr>
@@ -750,7 +750,7 @@ context. The browser will internally keep up to N+1 epochs.</td>
       <td>5</td>
       <td>Probability that an individual topic within an epoch is one returned at random from
 the entire <a
-href="https://developer.chrome.com/docs/privacy-sandbox/topics/#:~:text=taxonomy">taxonomy</a>
+href="/docs/privacy-sandbox/topics/#:~:text=taxonomy">taxonomy</a>
 of topics. The randomness is sticky to an epoch and site.</td>
     </tr>
     <tr>
@@ -790,7 +790,7 @@ inconsistent state and/or could let the browser crash, e.g. updating the
       <td><code>BrowsingTopics:taxonomy_version</code></td>
       <td>1</td>
       <td>The <a
-href="https://developer.chrome.com/docs/privacy-sandbox/topics/#:~:text=taxonomy">taxonomy</a>
+href="/docs/privacy-sandbox/topics/#:~:text=taxonomy">taxonomy</a>
 version used by the API.</td>
     </tr>
   </tbody>
