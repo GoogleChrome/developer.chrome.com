@@ -17,9 +17,9 @@ authors:
 ## What is a topic?
 A topic, in the Topics API, is a subject a user is interested in as evidenced by the websites they visit.
 
-The Topics API allows third parties, such as ad tech platforms, to observe and then access topics of interest to a user. For example, the API might suggest the topic "Fiber & Textile Arts" for a user who visits the website `knitting.example`. 
-
 Topics are a signal to help ad tech platforms select relevant ads. Unlike third-party cookies, this information is shared without revealing further information about the user themself or the user's browsing activity.
+
+The Topics API allows third parties, such as ad tech platforms, to observe and then access topics of interest to a user. For example, the API might suggest the topic "Fiber & Textile Arts" for a user who visits the website `knitting.example`. 
 
 The [list of topics used by the Topics API](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md) is public, human-curated, human-readable, and designed to avoid sensitive categories. This is the current list, which will expand over time. This type of list is known as a _taxonomy_. The topics can be high-level or more specific. For example, `Food & Drink` is a broad category, with a subcategory of `Cooking & Recipes`. Subcategories may be further divided into additional subcategories.
 
