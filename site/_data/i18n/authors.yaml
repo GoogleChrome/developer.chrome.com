@@ -197,7 +197,7 @@ chriswilson:
   title:
     en: 'Chris Wilson'
   description:
-    en: 'Chris is a contributor to Chrome Developers'
+    en: 'Chrome Web Standards Lead'
 renatomangini:
   title:
     en: 'Renato Mangini'
@@ -1356,6 +1356,11 @@ tristramsouthey:
     en: 'Tristram Southey'
   description:
     en: 'Product Manager, Google Chrome'
+jyasskin:
+  title:
+    en: 'Jeffrey Yasskin'
+  description:
+    en: 'Chrome Web Standards Lead'
 peterkvitek:
   title:
     en: Peter Kvitek
