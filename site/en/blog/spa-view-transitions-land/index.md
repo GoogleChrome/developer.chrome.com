@@ -99,7 +99,7 @@ You can already do this with JavaScript by dynamically setting `style.viewTransi
 
 ### requestAnimationFrame-driven animations
 
-You can already [create view transition animations with JavaScript](/docs/web-platform/view-transitions/#animating-with-javascript) via the [web animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API), but sometimes you need to drive things frame-by-frame with <code>[requestAnimationFrame](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame)</code>.
+You can already [create view transition animations with JavaScript](/docs/web-platform/view-transitions/#animating-with-javascript) via the [web animations API](https://developer.mozilla.org/docs/Web/API/Web_Animations_API), but sometimes you need to drive things frame-by-frame with <code>[requestAnimationFrame](https://developer.mozilla.org/docs/Web/API/window/requestAnimationFrame)</code>.
 
 You can already do that, but it's a bit hacky. [Here's a demo](https://simple-set-demos.glitch.me/raf/) with some helpers you might find useful. We want to make it not-hacky!
 
