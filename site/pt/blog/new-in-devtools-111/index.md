@@ -178,7 +178,7 @@ Mais algumas novidades dignas de nota nessa release:
 - Várias correções para melhorar a confiabilidade de sourcemaps e dos breakpoints. ([508270](https://crbug.com/508270), [1403362](https://crbug.com/1403362), [1403432](https://crbug.com/1403432), [1396298]( https://crbug.com/1396298), [1395337](https://crbug.com/1395337), [1405134](https://crbug.com/1405134))
 <!-- - To better facilitate debugging, DevTools now supports evaluating expressions with private class members. ([1381806](https://crbug.com/1381806)) -->
 - Para facilitar melhor o debugging, o DevTools agora oferece suporte à avaliação de expressões com membros de classes privadas. ([1381806](https://crbug.com/1381806))
-     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/q68fvo870weBVwupujqf.png", alt="Evaluating expressions with private class members.", width="800", height="683" %}
+     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/q68fvo870weBVwupujqf.png", alt="Avaliando expressões com membros de classe privados.", width="800", height="683" %}
 
 
 {% Partial 'devtools/reach-out.md' %}
