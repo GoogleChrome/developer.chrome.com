@@ -27,28 +27,6 @@ specification of  `rel="noopener"` helps protect users of legacy browsers
 including Edge Legacy and Internet Explorer.
 {% endAside %}
 
-## How the Lighthouse cross-origin destination audit fails
-
-[Lighthouse](/docs/lighthouse/overview/) flags unsafe links to cross-origin destinations:
-
-<figure>
-  {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/ztiQKS8eOfdzONC7bocp.png", alt="Lighthouse audit showing unsafe links to cross-origin destinations", width="800", height="213" %}
-</figure>
-
-Lighthouse uses the following process to identify links as unsafe:
-
-1. Gather all `<a>` tags that contain the `target="_blank"` attribute
-   but not the `rel="noopener"` or `rel="noreferrer"` attributes.
-2. Filter out any same-host links.
-
-Because Lighthouse filters out same-host links,
-there's an edge case you should be aware of if you're working on a large site:
-if one page contains a `target="_blank"` link to another page on your site without using `rel="noopener"`,
-the performance implications of this audit still apply.
-However, you won't see these links in your Lighthouse results.
-
-{% Partial 'lighthouse-best-practices/scoring.njk' %}
-
 ## How to improve your site's performance and prevent security vulnerabilities
 
 Add `rel="noopener"` or `rel="noreferrer"`
@@ -75,6 +53,5 @@ post for more information.
 
 ## Resources
 
-- [Source code for **Links to cross-origin destinations are unsafe** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/dobetterweb/external-anchors-use-rel-noopener.js)
 - [Share cross-origin resources safely](https://web.dev/cross-origin-resource-sharing/)
 - [Site isolation for web developers](/blog/site-isolation/)
