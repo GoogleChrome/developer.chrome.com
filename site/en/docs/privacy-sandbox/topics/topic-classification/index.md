@@ -35,7 +35,7 @@ This suggests several questions. For example:
 - How could the taxonomy be structured to make it more useful?
 - What specific items should the taxonomy include?
 
-### How the API infers topics for a site
+## How the API infers topics for a site
 
 Topics are derived from a [classifier model](https://github.com/jkarlin/topics#:~:text=classifier) that maps website [hostnames](https://web.dev/same-site-same-origin/#origin) to zero or more topics.
 Analyzing additional information (such as full URLs or page contents) might allow for more relevant ads, but might also reduce privacy.
@@ -50,13 +50,19 @@ The Topics explainer also suggests sites are allowed to block topic calculation 
 Permissions-Policy: browsing-topics=()
 ```
 
-### The classifier model
+## The classifier model
 
 Topics are manually curated for 10,000 top domains, and this curation is used to train the classifier. This list can be found in `override_list.pb.gz`, which is available at `chrome://topics-internals/` under the current model in the "Classifier" tab. The domain-to-topics associations in the list are used by the API in lieu of the output of the model itself.
 
+<figure>
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/SOTuE2ljC55PaYll1UP1.png",
   alt="chrome://topics-internal page with Classifier panel selected.",
   width="800", height="695" %}
+  <figcaption>
+    chrome://topics-internal page with Classifier panel selected
+  </figcaption>
+</figure>
+
 
 To run the model directly, refer to [TensorFlow's guide to running a model](https://www.tensorflow.org/lite/guide/inference#running_a_model).
 
@@ -73,33 +79,34 @@ protoc --decode_raw < override_list.pb > output.txt
 A full [taxonomy of topics with IDs](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md) is available on GitHub.
 
 
-#### Providing feedback or input on the classifier model
+### Providing feedback or input on the classifier model
 
 There are [several channels](/docs/privacy-sandbox/feedback/) for providing feedback on the Topics proposal. For feedback on the classifier model, we recommend [submitting a GitHub issue](https://github.com/patcg-individual-drafts/topics/issues) or replying to an existing issue. For example:
 
 - [What topics taxonomy should be used long term?](https://github.com/patcg-individual-drafts/topics/issues/3)
 - [What if a site disagrees to the topics assigned?](https://github.com/patcg-individual-drafts/topics/issues/3)
 
-#### How the user's top five topics are selected
+### How the user's top five topics are selected
 
 The API returns one topic for each epoch, up to a maximum of three. If three are returned, this includes topics for the current epoch and the previous two.
 
 1. At the end of each epoch, the browser compiles a list of pages that meet the following criteria:
     - The page was visited by the user during the epoch.
-    - The page includes code that calls document.browsingTopics()
+    - The page includes code that calls `document.browsingTopics()`
     - The API was enabled (for example, not blocked by the user or via a [response header](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy)).
 2. The browser, on the user's device, uses the classifier model provided by the Topics API to map the hostname for each page to a list of topics.
 3. The browser accumulates the list of topics.
 4. The browser generates a list of the top five topics by frequency.
 
-The `document.browsingTopics()` method then returns a random topic from the top five for each epoch, with a 5% chance that any of these may be randomly chosen from the full taxonomy of topics. In Chrome, users would also be able to remove individual topics, or clear their browsing history to reduce the number of topics returned by the API. Users may also opt-out of the API; [user opt out](#opt-out).
+The `document.browsingTopics()` method then returns a random topic from the top five for each epoch, with a 5% chance that any of these may be randomly chosen from the full taxonomy of topics. In Chrome, users would also be able to remove individual topics, or clear their browsing history to reduce the number of topics returned by the API. Users may also [opt out](#opt-out) of the API.
+
 View information about topics observed during the current epoch from the `chrome://topics-internals` page.
 
 
-#### How the API decides which callers see which topics
+### How the API decides which callers see which topics
 
 API callers only receive topics they've recently observed, and the topics for a user are refreshed once each epoch. That means the API provides a rolling window in which a given caller may receive certain topics.
-The table below outlines an example (though unrealistically small) of a hypothetical browsing history for a user during a single epoch, showing topics associated with the sites they've visited, and the API callers present on each site (the entities that call document.browsingTopics() in JavaScript code included on the site).
+The table below outlines an example (though unrealistically small) of a hypothetical browsing history for a user during a single epoch, showing topics associated with the sites they've visited, and the API callers present on each site (the entities that call `document.browsingTopics()` in JavaScript code included on the site).
 
 <table>
   <thead>
@@ -182,7 +189,7 @@ As well as "Fitness" and "Travel & Transportation" from week 1, this means that 
 After another two weeks, "Fitness" and "Travel & Transportation" may drop out of adtech2.example's list of eligible topics, if the user doesn't visit any sites with those topics that include code from adtech2.example.
 
 
-### User controls, transparency, and opting out {: #opt-out}
+## User controls, transparency, and opting out {: #opt-out}
 
 Users should be able to understand the purpose of the Topics API, recognize what is being said about them, know when the API is in use, and be provided with controls to enable or disable it.
 
@@ -190,13 +197,13 @@ The API's human-readable taxonomy enables people to learn about and control the 
 
 The list of topics returned will be empty if:
 
-- The user opts out of the Topics API via browser settings at chrome://settings/privacySandbox.
-- The user has cleared their topics (via the browser settings at chrome://settings/privacySandbox) or cleared their cookies.
+- The user opts out of the Topics API via browser settings at `chrome://settings/privacySandbox`.
+- The user has cleared their topics (via the browser settings at `chrome://settings/privacySandbox`) or cleared their cookies.
 - The browser is in Incognito mode.
 
 The explainer [provides more detail about privacy goals](https://github.com/jkarlin/topics#meeting-the-privacy-goals) and how the API seeks to address them.
 
-### Next steps
+## Next steps
 
 If you’re an ad tech developer, [experiment and participate](/docs/privacy-sandbox/topics-experiment/) with the Topics API. Read the [developer guide](#) for more in-depth resources.
 
