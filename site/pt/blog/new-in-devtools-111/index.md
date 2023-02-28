@@ -47,7 +47,7 @@ O seletor de cores suporta todos os novos espaços de cores com mais recursos. P
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/bL6uw8VV4cGuDd9hmAjX.png", alt="A linha de distinção do gama.", width="800", height="657" %}
 
 <!-- DevTools supports converting colors between color formats. Use the **Change Color Format** icon to access the conversion popup, or simply use the `Shift` + click on a color swatch in the **Styles** pane. -->
-O DevTools oferece suporte à conversão de cores entre formatos de cores. Use o ícone **Alterar formato de cor** para acessar o pop-up de conversão ou simplesmente use `Shift` + clique em uma amostra de cor no painel **Estilos**.
+O DevTools oferece suporte à conversão de cores entre formatos diferentes. Use o ícone **Alterar formato de cor** para acessar o pop-up de conversão ou simplesmente use `Shift` + clique em uma amostra de cor no painel **Estilos**.
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/uoz3yaPPdVs6T2ASnQ62.png", alt="Convertendo entre formatos de cores.", width="800", height="460" %}
 
 <!-- When converting, it's important to know if the conversion was clipped to fit the space. DevTools puts a warning icon next to the converted color that alerts you to this clipping. -->
