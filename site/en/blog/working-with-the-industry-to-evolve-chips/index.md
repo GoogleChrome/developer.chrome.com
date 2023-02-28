@@ -9,6 +9,9 @@ date: 2023-02-28
 authors:
   - mihajlija
   - jney
+hero: 'image/udVScdcCFAdRjZwFdLk2jWAFQyr1/l8Pq4wxoggKrVz7cUczG.png'
+alt: >
+  Working with the industry to evolve CHIPS.
 ---
 
 
