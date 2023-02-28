@@ -81,7 +81,7 @@ async function injectContent() {
 injectContent();
 ```
 
-**[ab-testing-worklet.js](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/advertiser/ab-testing-worklet.js)**
+**[ab-testing-worklet.js](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/content-producer/url-selection/ab-testing-worklet.js)**
 
 ```js
 class SelectURLOperation {
