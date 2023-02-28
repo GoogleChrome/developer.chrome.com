@@ -19,7 +19,7 @@ CHIPS is being developed with the goal to become an open web standard. It is und
 
 Let's explore two challenges that the Chrome team faced in implementing CHIPS and how community feedback played a key role in evolving the proposal design.
 
-## Removing the no `Domain` requirement
+## Removing the host-prefix and no `Domain` requirement
 
 To encourage good security practices, CHIPS design requires that cookies only be set by and sent over secure protocols and that partitioned cookies must be set with `Secure`.  
 
