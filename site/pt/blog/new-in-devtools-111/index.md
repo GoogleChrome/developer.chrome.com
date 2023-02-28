@@ -168,7 +168,7 @@ Issue relacionada: [1407166](https://crbug.com/1407166)
 ## Outras novidades {: #misc }
 
 <!-- These are some noteworthy fixes in this release: -->
-Mais algumas novidades dignas de nota nessa release:
+Mais algumas novidades dignas de atenção nessa versão:
 
 <!-- - DevTools has been updated to respect the [Disable cache](/docs/devtools/network/reference/#disable-cache) setting when loading sourcemaps. ([1407084](https://crbug.com/1407084)) -->
 - O DevTools foi atualizado para respeitar a configuração [Desativar cache](/docs/devtools/network/reference/#disable-cache) ao carregar sourcemaps. ([1407084](https://crbug.com/1407084))
