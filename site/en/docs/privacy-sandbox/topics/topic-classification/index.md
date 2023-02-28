@@ -92,7 +92,7 @@ The API returns one topic for each epoch, up to a maximum of three. If three are
 3. The browser accumulates the list of topics.
 4. The browser generates a list of the top five topics by frequency.
 
-The `document.browsingTopics()` method then returns a random topic from the top five for each epoch, with a 5% chance that any of these may be randomly chosen from the full taxonomy of topics. In Chrome, users would also be able to remove individual topics, or clear their browsing history to reduce the number of topics returned by the API. Users may also opt-out of the API; see User {.#opt-out}.
+The `document.browsingTopics()` method then returns a random topic from the top five for each epoch, with a 5% chance that any of these may be randomly chosen from the full taxonomy of topics. In Chrome, users would also be able to remove individual topics, or clear their browsing history to reduce the number of topics returned by the API. Users may also opt-out of the API; [user opt out](#opt-out).
 View information about topics observed during the current epoch from the `chrome://topics-internals` page.
 
 
@@ -182,7 +182,7 @@ As well as "Fitness" and "Travel & Transportation" from week 1, this means that 
 After another two weeks, "Fitness" and "Travel & Transportation" may drop out of adtech2.example's list of eligible topics, if the user doesn't visit any sites with those topics that include code from adtech2.example.
 
 
-### User controls, transparency, and opting out {#opt-out}
+### User controls, transparency, and opting out {: #opt-out}
 
 Users should be able to understand the purpose of the Topics API, recognize what is being said about them, know when the API is in use, and be provided with controls to enable or disable it.
 
