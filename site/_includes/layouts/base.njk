@@ -34,6 +34,33 @@
       {% endfor %}
     {% endif %}
 
+    {# Dogfood document speculation rules origin trial #}
+    <!-- developer.chrome.com origin trial token - valid until 23 Mar 2023 -->
+    <meta http-equiv="origin-trial" content="AruEiDffaZB5Q0dZU3GQhhwS0Tqnenf0D9J5/juwWbRpGcEeLp1YztcgbXwHb6MVntT2l1B+dUU5+6kz3mf//gUAAACNeyJvcmlnaW4iOiJodHRwczovL2RlcGxveS1wcmV2aWV3LTU0ODEtLWRldmVsb3Blci1jaHJvbWUtY29tLm5ldGxpZnkuYXBwOjQ0MyIsImZlYXR1cmUiOiJTcGVjdWxhdGlvblJ1bGVzUHJlZmV0Y2hGdXR1cmUiLCJleHBpcnkiOjE2OTQxMzExOTl9">
+    {# Exclude the /articles/ section as a control #}
+    <script type="speculationrules">
+    {
+      "prefetch": [
+        {
+          "source": "document",
+          "where": {
+            "and": [
+              {
+                "href_matches": "/*\\?*", "relative_to": "document"
+              },
+              {
+                "not": {
+                  "href_matches": "/articles/*\\?*",
+                  "relative_to": "document"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+    </script>
+
     {# This needs to be include'd, because it expands 11ty variables #}
     <script>{% include 'partials/script.js' %}</script>
 
@@ -62,33 +89,6 @@
       })();
     </script>
     {% endif %}
-
-    {# Dogfood document speculation rules origin trial #}
-    <!-- developer.chrome.com origin trial token - valid until 23 Mar 2023 -->
-    <meta http-equiv="origin-trial" content="AruEiDffaZB5Q0dZU3GQhhwS0Tqnenf0D9J5/juwWbRpGcEeLp1YztcgbXwHb6MVntT2l1B+dUU5+6kz3mf//gUAAACNeyJvcmlnaW4iOiJodHRwczovL2RlcGxveS1wcmV2aWV3LTU0ODEtLWRldmVsb3Blci1jaHJvbWUtY29tLm5ldGxpZnkuYXBwOjQ0MyIsImZlYXR1cmUiOiJTcGVjdWxhdGlvblJ1bGVzUHJlZmV0Y2hGdXR1cmUiLCJleHBpcnkiOjE2OTQxMzExOTl9">
-    {# Exclude the /articles/ section as a control #}
-    <script type="speculationrules">
-    {
-      "prefetch": [
-        {
-          "source": "document",
-          "where": {
-            "and": [
-              {
-                "href_matches": "/*\\?*", "relative_to": "document"
-              },
-              {
-                "not": {
-                  "href_matches": "/articles/*\\?*",
-                  "relative_to": "document"
-                }
-              }
-            ]
-          }
-        }
-      ]
-    }
-    </script>
 
   </head>
   <body>
