@@ -23,7 +23,7 @@
 * [レコーディング時のセレクタタイプのカスタマイズ](/ja/blog/new-in-devtools-110/#recorder-selector)
 * [レコーディング中のユーザーフローの編集](/ja/blog/new-in-devtools-110/#recorder-edit)
 * [自動的な直接のプリティプリント](/ja/blog/new-in-devtools-110/#pretty-print)
-* [Vue、SCSS などの構文の強調表示とインラインプレビューの改善](/ja/blog/new-in-devtools-110/#highlight)
+* [Vue、SCSS などのシンタックスハイライトとインラインプレビューの改善](/ja/blog/new-in-devtools-110/#highlight)
 * [Console での人間工学的で一貫性のあるオートコンプリート](/ja/blog/new-in-devtools-110/#console)
 * [その他のハイライト](/ja/blog/new-in-devtools-110/#misc)
 

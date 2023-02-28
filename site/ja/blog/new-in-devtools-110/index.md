@@ -85,7 +85,7 @@ Chromium issue: [1381971](https://crbug.com/1381971)
 Chromium issues: [1383453](https://crbug.com/1383453), [1382752](https://crbug.com/1382752), [1382397](https://crbug.com/1382397)
 
 
-## Vue、SCSS などの構文の強調表示とインラインプレビューの改善 {: #highlight }
+## Vue、SCSS などのシンタックスハイライトとインラインプレビューの改善 {: #highlight }
 
 <!-- The **Sources** panel enhanced the syntax highlighting for several widely-used file formats, enabling you to read code more easily and recognize its structure, including Vue, JSX, Dart, LESS, SCSS, SASS, and inline CSS. -->
 **Sources** パネルでは、広く使用されているいくつかのファイル形式の構文の強調表示が強化され、Vue、JSX、Dart、LESS、SCSS、SASS、インライン CSS など、コードをより簡単に読み、その構造を認識できるようになりました。
@@ -125,7 +125,7 @@ DevTools は、次の変更を実装することにより、オートコンプ�
 <!-- - The behavior of `Arrow right` and `Enter` varies based on context. -->
 <!-- - The autocompletion experience is consistent across text editors, in the **Console**, **Sources**, and **Elements** panels  -->
 - `Tab` は常にオートコンプリートに使用されます。
-- `右矢印` と `Enter` の動作は、コンテキストによって異なります。
+- `右カーソルキー` と `Enter` の動作は、コンテキストによって異なります。
 - オートコンプリートの体験は、 **Console** 、 **Sources** 、および **Elements** パネルのテキストエディタ間で一貫しています。
 
 <!-- For example, here is what happens when you type `cons` in the **Console**: -->
@@ -136,19 +136,19 @@ DevTools は、次の変更を実装することにより、オートコンプ�
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/kSTUPmkQK3HzE7BElmAK.png", alt="オートコンプリーションオプションの周りの点線の境界線", width="800", height="580" %}
 
 <!-- - The **Console** executes the line when you press `Enter`. Previously, it would automatically complete the line with the top suggestion. To auto-complete, press either `Tab` or `Arrow Right`. -->
-- `Enter` を押すと、 **Console** はその行を実行します。以前は、最上位の提案で自動的に行を補完していました。オートコンプリートするには、 `Tab` または `右矢印` を押します。
+- `Enter` を押すと、 **Console** はその行を実行します。以前は、最上位の提案で自動的に行を補完していました。オートコンプリートするには、 `Tab` または `右カーソルキー` を押します。
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/7SZ8AM51vI7WEIovjUDX.png", alt="Enter での行の実行", width="800", height="549" %}
 
 <!-- - The **Console** highlights the selected option as you navigate through the suggestion list using the `Arrow up` and `Arrow down` shortcuts. -->
-- **Console** は、 `上向き矢印` と `下向き矢印` のショートカットを使用して候補リストをナビゲートする際に、選択されたオプションを強調表示します。
+- **Console** は、 `上カーソルキー` と `下カーソルキー` のショートカットを使用して候補リストをナビゲートする際に、選択されたオプションを強調表示します。
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XxjZu5GrFnPEUZhoQN0i.png", alt="候補をナビゲートしている際のハイライト", width="800", height="580" %}
 
 <!-- - To auto-complete with the selected option during navigation, use the keyboard keys `Tab`, `Enter`, or `Arrow Right`. -->
-- ナビゲーション中に選択したオプションでオートコンプリートするには、キーボードの `Tab` 、 `Enter` 、または `右矢印` キーを使用します。
+- ナビゲーション中に選択したオプションでオートコンプリートするには、キーボードの `Tab` 、 `Enter` 、または `右カーソルキー` キーを使用します。
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/YU89q0lRFsocpdXS6ZMO.png", alt="ナビゲーション中に選択されたオプションを使ったオートコンプリーション", width="800", height="360" %}
 
 <!-- - When editing in the middle of code, for example, when the cursor is between `n` and `s`, use `Tab` for autocompletion, `Enter` to execute the line, and `Arrow Right` to move the cursor forward. -->
-- コードの途中で編集する場合、たとえば、カーソルが `n` と `s` の間にある場合、 `Tab` を使用してオートコンプリートを行い、 `Enter` を使用して行を実行し、 `右矢印` を使用してカーソルを前方に移動します。
+- コードの途中で編集する場合、たとえば、カーソルが `n` と `s` の間にある場合、 `Tab` を使用してオートコンプリートを行い、 `Enter` を使用して行を実行し、 `右カーソルキー` を使用してカーソルを前方に移動します。
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/4jiMQ2btaT4MX7Y3VqgH.png", alt="コードの途中での編集", width="800", height="549" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/00103b19eec2ba086c608b79ff34b696fe07bb62 #}
