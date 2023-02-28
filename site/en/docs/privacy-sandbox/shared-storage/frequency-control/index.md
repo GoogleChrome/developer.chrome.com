@@ -98,22 +98,21 @@ async function injectAd() {
 injectAd();
 ```
 
-**[frequency-cap-worklet.js](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/advertiser/frequency-cap-worklet.js)**
+**[frequency-cap-worklet.js](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/content-producer/url-selection/frequency-cap-worklet.js)**
 
 ```javascript
 class SelectURLOperation {
   async run(urls, data) {
     // Read the current frequency cap in shared storage
     const count = parseInt(await this.sharedStorage.get('frequency-cap-count'));
-
+    
     // If the count is 0, the frequency cap has been reached
     if (count === 0) {
-      console.log('frequency cap has been reached, and the default ad will be rendered');
       return 0;
     }
 
     // Set the new frequency count in shared storage
-    await this.sharedStorage.set('frequency-cap-count', count - 1);
+    await this.sharedStorage.set('frequency-cap-count', (count - 1).toString());
     return 1;
   }
 }
