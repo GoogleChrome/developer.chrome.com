@@ -51,7 +51,6 @@
     ga('set', '{{ analytics.dimensions.NAVIGATION_TYPE }}', navigationType);
     console.log(
       'BARRY2',
-      performance.getEntriesByType('navigation')[0].deliveryType,
       navEntry,
       navEntry.type,
       navEntry.deliveryType,
