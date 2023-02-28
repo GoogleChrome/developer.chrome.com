@@ -9,7 +9,6 @@ date: 2023-02-28
 authors:
   - mihajlija
   - jney
-hero: 'image/udVScdcCFAdRjZwFdLk2jWAFQyr1/l8Pq4wxoggKrVz7cUczG.png'  
 ---
 
 
@@ -40,7 +39,7 @@ While this provided additional security benefits, [Tableau highlighted](https://
 
 After Chrome made this change, Tableau, the company behind the visual analytics platform now owned by Salesforce, [shared](https://github.com/privacycg/CHIPS/issues/30#issuecomment-1104225686):  
 
-{% Blockquote 'Tableau' %}
+{% Blockquote 'Lee Graber, Software Engineering Architect, Tableau' %}
 This removal of the naming change makes the requirement much more inline with the previous changes to add the `SameSite=None` attribute and so a more 'known' quantity. We appreciate Google hearing the feedback, looking through the implications, and making the change to help support easier transitions.
 {% endBlockquote %}
 
