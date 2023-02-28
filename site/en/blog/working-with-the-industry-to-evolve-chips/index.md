@@ -62,7 +62,7 @@ The Chrome team heard similar feedback in other forums, across partner meetings 
   <figcaption>Diagram showing the maximum number of SameSite=None cookies a single domain has on clients' machines</figcaption>
 </figure>
 
-After considering how to incorporate community feedback, Chrome presented an updated idea at [TPAC 2022](https://docs.google.com/presentation/d/1aOnVsWs1uhCGw4Vnkto_GFQ-yXEi5-Iwtqb-RyMYmQ4/edit?resourcekey=0-ZI-9q4cCKMPYQPaJ1m4JNA#slide=id.g15142f79aec_0_5), suggesting that CHIPS move from a _static_ 10 cookie limit to a _dynamic _10 kb limit based on memory. The analysis showed that this change should cover 99% of use cases on the web and would uphold the privacy principles that Chrome was trying to achieve (limiting too much information shared about users cross sites) while still maintaining key uses.  
+After considering how to incorporate community feedback, Chrome presented an updated idea at [TPAC 2022](https://drive.google.com/file/d/1wSUfOb7BIjtmsO6TdxyBMmw3RUQqCtGa/view), suggesting that CHIPS move from a _static_ 10 cookie limit to a _dynamic _10 kb limit based on memory. The analysis showed that this change should cover 99% of use cases on the web and would uphold the privacy principles that Chrome was trying to achieve (limiting too much information shared about users cross sites) while still maintaining key uses.  
 
 Other browser vendors [weighed in](https://github.com/privacycg/CHIPS/issues/48#issuecomment-1271611177) saying that they agreed with the updated solution, which was important for ensuring CHIPS maintained cross-browser support in the PrivacyCG.  
 
