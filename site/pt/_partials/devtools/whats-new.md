@@ -24,7 +24,7 @@ Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no"
 * [Edição de fluxo de usuário durante a gravação](/pt/blog/new-in-devtools-110/#recorder-edit)
 * [Auto formatação de código na mesma aba](/pt/blog/new-in-devtools-110/#pretty-print)
 * [Melhor syntax highlight para Vue, SCSS e mais](/pt/blog/new-in-devtools-110/#highlight)
-* [Autocomplete consistente no console](/pt/blog/new-in-devtools-110/#console)
+* [Autocomplete ergonômico e consistente no Console](/pt/blog/new-in-devtools-110/#console)
 * [Outras novidades](/pt/blog/new-in-devtools-110/#misc)
  #}
 
