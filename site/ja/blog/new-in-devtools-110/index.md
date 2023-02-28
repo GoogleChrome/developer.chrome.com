@@ -132,7 +132,7 @@ DevTools は、次の変更を実装することにより、オートコンプ�
 たとえば、 **Console** に `cons` と入力すると、次のようになります。
 
 <!-- - The **Console** displays a list of autocomplete suggestions, with a subtle dotted border around the top option indicating that navigation has not yet begun. -->
-- **Console** には、オートコンプリート候補のリストが表示されます。上部のオプションの周りにわずかな点線の境界線が表示され、ナビゲーションがまだ開始されていないことが示されます。
+- **Console** には、オートコンプリート候補のリストが表示されます。上部のオプションの周りに細かい点線の境界線が表示され、ナビゲーションがまだ開始されていないことが示されます。
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/kSTUPmkQK3HzE7BElmAK.png", alt="オートコンプリーションオプションの周りの点線の境界線", width="800", height="580" %}
 
 <!-- - The **Console** executes the line when you press `Enter`. Previously, it would automatically complete the line with the top suggestion. To auto-complete, press either `Tab` or `Arrow Right`. -->
