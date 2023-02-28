@@ -160,11 +160,16 @@ View an element's ARIA attributes in [the Accessibility pane][9].
 
 ### View the source order of elements on screen {: #source-order }
 
-The **Show source order** option labels page elements with numbers corresponding to their source order. Source order is an essential
-tool for users of assistive technology. This is useful because elements do not necessarily appear on the page in
-their source order.
+The elements on the page don't always appear in the order they are in the source. If you don't consider their perspective, this might confuse users who depend on assistive technology to navigate the web.
 
-{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/MnBKeKfFo0DE0I7vFPE0.png", alt="Source order option checked.", width="800", height="444" %}
+To view and debug the source order on your website:
+
+1. [Inspect an element](/docs/devtools/open/#inspect) on the page.
+1. In **Elements** > **Accessibility** > **Source Order Viewer**, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="24", height="24" %} **Show source order**.
+
+In the viewport, DevTools outlines nested elements with borders and marks them with numbers corresponding to their source order. 
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/sBXqLvOkou3OTfwPzR36.png", alt="Source order option checked.", width="800", height="623" %}
 
 ### View an element's computed accessibility properties {: #computed }
 
