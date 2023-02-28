@@ -126,7 +126,7 @@ DevTools は、次の変更を実装することにより、オートコンプ�
 <!-- - The autocompletion experience is consistent across text editors, in the **Console**, **Sources**, and **Elements** panels  -->
 - `Tab` は常にオートコンプリートに使用されます。
 - `右矢印` と `Enter` の動作は、コンテキストによって異なります。
-- オートコンプリートエクスペリエンスは、 **Console** 、 **Sources** 、および **Elements** パネルのテキスト エディタ間で一貫しています。
+- オートコンプリートの体験は、 **Console** 、 **Sources** 、および **Elements** パネルのテキストエディタ間で一貫しています。
 
 <!-- For example, here is what happens when you type `cons` in the **Console**: -->
 たとえば、 **Console** に `cons` と入力すると、次のようになります。
