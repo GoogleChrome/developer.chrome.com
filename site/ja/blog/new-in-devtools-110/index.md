@@ -88,7 +88,7 @@ Chromium issues: [1383453](https://crbug.com/1383453), [1382752](https://crbug.c
 ## Vue、SCSS などのシンタックスハイライトとインラインプレビューの改善 {: #highlight }
 
 <!-- The **Sources** panel enhanced the syntax highlighting for several widely-used file formats, enabling you to read code more easily and recognize its structure, including Vue, JSX, Dart, LESS, SCSS, SASS, and inline CSS. -->
-**Sources** パネルでは、広く使用されているいくつかのファイル形式の構文の強調表示が強化され、Vue、JSX、Dart、LESS、SCSS、SASS、インライン CSS など、コードをより簡単に読み、その構造を認識できるようになりました。
+**Sources** パネルでは、広く使用されているいくつかのファイル形式のシンタックスハイライトが強化され、Vue、JSX、Dart、LESS、SCSS、SASS、インライン CSS など、コードをより簡単に読み、その構造を認識できるようになりました。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/92SB2J5N6ImqJlOY3tIB.png", alt="Vue のシンタックスハイライト", width="800", height="550" %}
 
