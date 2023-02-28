@@ -86,7 +86,7 @@ There are [several channels](/docs/privacy-sandbox/feedback/) for providing feed
 - [What topics taxonomy should be used long term?](https://github.com/patcg-individual-drafts/topics/issues/3)
 - [What if a site disagrees to the topics assigned?](https://github.com/patcg-individual-drafts/topics/issues/3)
 
-### How the user's top five topics are selected
+## How the user's top five topics are selected
 
 The API returns one topic for each epoch, up to a maximum of three. If three are returned, this includes topics for the current epoch and the previous two.
 
@@ -103,7 +103,7 @@ The `document.browsingTopics()` method then returns a random topic from the top 
 View information about topics observed during the current epoch from the `chrome://topics-internals` page.
 
 
-### How the API decides which callers see which topics
+## How the API decides which callers see which topics
 
 API callers only receive topics they've recently observed, and the topics for a user are refreshed once each epoch. That means the API provides a rolling window in which a given caller may receive certain topics.
 The table below outlines an example (though unrealistically small) of a hypothetical browsing history for a user during a single epoch, showing topics associated with the sites they've visited, and the API callers present on each site (the entities that call `document.browsingTopics()` in JavaScript code included on the site).
