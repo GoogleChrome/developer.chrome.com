@@ -26,7 +26,7 @@ tags:
 
 
 <!-- ## Debugging HD color with the Styles pane {: #color } -->
-## Debugando cores HD no painel de Estilos {: #color }
+## Debugando cores em alta definição no painel de Estilos {: #color }
 
 <!-- New [CSS color types and spaces](/blog/chrome-111-beta/#new-css-color-types-and-spaces) are coming to the web! It is equally exciting that DevTools introduced new tools to help developers create, convert and debug High Definition color.  -->
 Novos [tipos e espaços de cores CSS](/blog/chrome-111-beta/#new-css-color-types-and-spaces) estão chegando à web! É igualmente empolgante que o DevTools tenha introduzido novas ferramentas para ajudar os desenvolvedores a criar, converter e depurar cores de alta definição.
