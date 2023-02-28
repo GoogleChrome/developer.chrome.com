@@ -23,7 +23,7 @@ tags:
 **Start profiling and reload page** ボタンをクリックすると、 **Performance** パネルでスクリーンショットとトレースの両方がクリアされるようになりました。
 
 <!-- Previously, the **Performance** panel displayed a timeline with screenshots from previous recordings. This made it difficult to see when the actual measurement started. The panel now always navigates to the `about:blank` page first to guarantee that the recording begins with a blank trace. This aligns with the **Performance Insights** panel which already did the same. -->
-今までは、 **Performance** パネルには以前のレコーディングのスクリーンショットを含むタイムラインが表示されていました。これにより、実際の測定がいつ開始されたかを確認することが難しくなっていました。レコーディングが空白のトレースで開始されることを保証するために、パネルは常に最初に `about:blank` ページに移動します。これは、すでに同じことを行っている **Performance Insights** パネルと一致します。
+今までは、 **Performance** パネルには以前のレコーディングのスクリーンショットを含むタイムラインが表示されていました。これにより、実際の測定がいつ開始されたかを確認することが難しくなっていました。これからは、レコーディングが空白のトレースで開始されることを保証するために、パネルは常に最初に `about:blank` ページに移動します。これは、すでに同じことを行っている **Performance Insights** パネルの動作と一致します。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/JVXCt6hKIxMtf0tCLWwh.png", alt="再読み込み時の Performance パネルのクリア", width="800", height="548" %}
 
