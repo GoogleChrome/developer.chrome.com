@@ -160,7 +160,7 @@ View an element's ARIA attributes in [the Accessibility pane][9].
 
 ### View the source order of elements on screen {: #source-order }
 
-The elements on the page don't always appear in the order they are in the source. If you don't consider their perspective, this might confuse users who depend on assistive technology to navigate the web.
+The elements on the page don't always appear in the order they are in the source. This might confuse users who depend on assistive technology to navigate the web.
 
 To view and debug the source order on your website:
 
