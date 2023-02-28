@@ -10,7 +10,7 @@ Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no"
 * [Melhorias na UX dos breakpoints](/pt/blog/new-in-devtools-111/#breakpoint-redesign)
 * [Atalhos customizáveis no Gravador](/pt/blog/new-in-devtools-111/#recorder)
 * [Melhor syntax highlighting para Angular](/pt/blog/new-in-devtools-111/#syntax)
-* [Paineis de caches reorganizador na aba Aplicação](/pt/blog/new-in-devtools-111/#cache)
+* [Reorganize caches no painel de Aplicação](/pt/blog/new-in-devtools-111/#cache)
 * [Outras novidades](/pt/blog/new-in-devtools-111/#misc)
  #}
 
