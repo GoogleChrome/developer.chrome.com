@@ -25,19 +25,23 @@ To encourage good security practices, CHIPS design requires that cookies only be
 
 Along with these requirements, the initial proposal disallowed the `Domain` attribute on partitioned cookies. Omitting `Domain` on cookies prevented sharing them between different third-party subdomains within a partition.  
 
-The CHIPS team initially proposed this requirement to guarantee that sites do not receive cross-site cookies from any malicious or compromised subdomains, and mitigate the possibility of using Domain cookies as a channel to leak data across subdomains.  
+During the origin trial, the Chrome team [heard from partners and other stakeholders](https://github.com/privacycg/CHIPS/issues/30) that the no-domain requirement made it difficult for sites with subdomains to implement CHIPS. For example, it would make it harder for `shop.example.com` and `pay.example.com` to share partitioned cookie jars. In other [cases, it made authentication flows difficult in embedded contexts](https://github.com/privacycg/CHIPS/issues/39). 
 
-While this provided additional security benefits, [Tableau highlighted](https://github.com/privacycg/CHIPS/issues/30) that it presented challenges for the adoption of CHIPS because some current application architectures rely on sharing cookies between subdomains.
-
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/P8OeJqoGqjW8oZLTWmr5.png", alt="Diagram showing sites pay.example.com and shop.example.com", width="800", height="224" %}
-
-During the origin trial, the Chrome team [heard from partners and other stakeholders](https://github.com/privacycg/CHIPS/issues/30) that the no-domain requirement made it difficult for sites with subdomains to implement CHIPS. For example, it would make it harder for `shop.example.com` and `pay.example.com` to share partitioned cookie jars. In other [cases, it made authentication flows difficult in embedded contexts](https://github.com/privacycg/CHIPS/issues/39).   
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/P8OeJqoGqjW8oZLTWmr5.png", alt="Diagram showing sites pay.example.com and shop.example.com", width="800", height="224" %}  
 
 The Chrome team evaluated this feedback and concluded that removing the no-domain requirement would not create privacy challenges, but it would improve usability. In response, the CHIPS product team opened a discussion on [GitHub](https://github.com/privacycg/CHIPS/issues/43), inviting more feedback about removing this requirement. Several companies that were testing CHIPS responded and commented publicly about the importance of this change for their use case.  
 
 Chrome took the feedback to the W3C's Privacy Community Group and presented the updated proposal–Firefox and Edge approved the change to and Safari didn't raise any concerns. The following day, the Chrome team updated [Blink-Dev](https://groups.google.com/a/chromium.org/g/blink-dev/c/kZRtetS8jsY/m/ppK4kDbqAwAJ?utm_medium=email&utm_source=footer) and presented the plan to remove the requirement on the [CHIPS Github repository](https://github.com/privacycg/CHIPS/issues/47).  
 
-After Chrome made this change, Tableau, the company behind the visual analytics platform now owned by Salesforce, [shared](https://github.com/privacycg/CHIPS/issues/30#issuecomment-1104225686), "This removal of the naming change makes the requirement much more inline with the previous changes to add the `SameSite=None` attribute and so a more 'known' quantity. I appreciate you hearing the feedback, looking through the implications, and making the change to help support easier transitions."  
+The CHIPS team initially proposed this requirement to guarantee that sites do not receive cross-site cookies from any malicious or compromised subdomains, and mitigate the possibility of using Domain cookies as a channel to leak data across subdomains.  
+
+While this provided additional security benefits, [Tableau highlighted](https://github.com/privacycg/CHIPS/issues/30) that it presented challenges for the adoption of CHIPS because some current application architectures rely on sharing cookies between subdomains.
+
+After Chrome made this change, Tableau, the company behind the visual analytics platform now owned by Salesforce, [shared](https://github.com/privacycg/CHIPS/issues/30#issuecomment-1104225686):  
+
+{% Blockquote 'Tableau' %}
+This removal of the naming change makes the requirement much more inline with the previous changes to add the `SameSite=None` attribute and so a more 'known' quantity. We appreciate Google hearing the feedback, looking through the implications, and making the change to help support easier transitions.
+{% endBlockquote %}
 
 Through this process, CHIPS was made easier to implement for stakeholders while preserving privacy for users.
 
