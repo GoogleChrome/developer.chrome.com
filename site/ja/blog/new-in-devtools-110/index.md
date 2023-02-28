@@ -4,7 +4,7 @@ title: "DevTools の新機能 (Chrome 110)"
 authors:
   - jecelynyeen
 date: 2023-02-13
-description: '再読み込み時の Performance パネルのクリア、Recorder でのコードの表示およびハイライト、その他'
+description: '再読み込み時の Performance パネルのクリア、Recorder でのコードの表示およびハイライトなど'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/8sed36sPev0UBbQfL4vn.png'
 alt: ''
 tags:
