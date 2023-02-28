@@ -143,9 +143,9 @@
 
             {% if node._method.isReturnsAsync %}
               <p>
-                In Manifest V3 and later, return a <code>Promise</code> by omitting the 
-                <code>callback</code> argument.
-                The type inside the <code>Promise</code> is the same as the 1st argument to <code>callback</code>.
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
               </p>
             {% endif %}
           </li>
