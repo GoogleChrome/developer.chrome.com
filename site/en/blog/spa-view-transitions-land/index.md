@@ -47,7 +47,7 @@ The functionality landing in Chrome 111 is just the first release. We hope we've
 
 This release is a small-but-hopefully-useful part of a bigger picture. We've already sketched some extensions to this feature to ensure the parts we're shipping today are future-compatible.
 
-Here's a sneak preview of what we're thinking:
+Here's a sneak preview of what we're thinking. These aren't in priority order (well, maybe the first one is the most important for a lot of folks), so we'd love feedback on which additions are the most important to you.
 
 ### Transitions across documents
 
@@ -105,6 +105,6 @@ You can already do that, but it's a bit hacky. [Here's a demo](https://simple-se
 
 We’ll do this in two parts. One, by providing an API to [indicate when the animation is done](https://github.com/w3c/csswg-drafts/issues/8132). And two, by [providing JavaScript access to pseudo-elements](https://www.w3.org/TR/css-pseudo-4/#CSSPseudoElement-interface). That second part might be a pretty big job, but it feels like the right thing to do in the long term.
 
-## Now go make some great page transitions!
+## Now go make some great view transitions!
 
-Hopefully, like me, you're excited about the present and future of this feature. If you have any feedback, or just want to show off some page transitions you made, be they [smooth and functional](https://twitter.com/jaffathecake/status/1630156449610362885), or just [plain](https://twitter.com/jaffathecake/status/1626161752827199489) [silly](https://twitter.com/jaffathecake/status/1621949535437164546), please [reach out to me on Twitter](https://twitter.com/jaffathecake) or [Mastodon](https://mastodon.social/@jaffathecake)!
+Hopefully, like me, you're excited about the present and future of this feature. If you have any feedback, or just want to show off some view transitions you made, be they [smooth and functional](https://twitter.com/jaffathecake/status/1630156449610362885), or just [plain](https://twitter.com/jaffathecake/status/1626161752827199489) [silly](https://twitter.com/jaffathecake/status/1621949535437164546), please [reach out to me on Twitter](https://twitter.com/jaffathecake) or [Mastodon](https://mastodon.social/@jaffathecake)!
