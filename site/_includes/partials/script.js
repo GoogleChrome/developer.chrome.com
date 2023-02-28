@@ -49,7 +49,7 @@
         ? 'navigational-prefetch'
         : navEntry.type.replace(/_/g, '-');
     ga('set', '{{ analytics.dimensions.NAVIGATION_TYPE }}', navigationType);
-    console.log('BARRY2', navigationType);
+    console.log('BARRY2', navEntry.type, navEntry.deliveryType, navEntry.type === 'navigate', navEntry.deliveryType === 'navigational-prefetch', navigationType);
   } catch (error) {
     ga('set', '{{ analytics.dimensions.NAVIGATION_TYPE }}', '(not set)');
   }
