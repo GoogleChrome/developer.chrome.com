@@ -93,13 +93,13 @@ To choose a color space:
    - [`hsl(X X X / X)`](https://developer.mozilla.org/docs/Web/CSS/color_value/hsl).
    - [`hwb(X X X / .X)`](https://developer.mozilla.org/docs/Web/CSS/color_value/hwb).
    
-   Or one of the experimental ones:
+   Or one of the new spaces:
    - [`lch(X X X / .X)`](https://developer.mozilla.org/docs/Web/CSS/color_value/lch)
    - [`oklch(X X X / .X)`](https://developer.mozilla.org/docs/Web/CSS/color_value/oklch)
    - [`lab(X X X / .X)`](https://developer.mozilla.org/docs/Web/CSS/color_value/lab)
    - [`oklab(X X X / .X)`](https://developer.mozilla.org/docs/Web/CSS/color_value/oklab)
 
-   Or one defined by the [`color(<color_space> X X X)`](/articles/high-definition-css-color-guide/#the-color-function) function.
+   Or a space defined by the [`color(<color_space> X X X)`](/articles/high-definition-css-color-guide/#the-color-function) function.
 
 ### Convert colors {: #convert-colors }
 
@@ -140,18 +140,20 @@ To get a list of all contrast issues in one go, follow the [Make your website mo
 
 ## Sample a color anywhere with the Eyedropper {: #eyedropper }
 
-When you open the **Color Picker**, the **Eyedropper**
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/WKeaXT922ot9wQjtvwcZ.svg", alt="Eyedropper.", width="20", height="20" %} is on by default.
-
-The **Eyedropper** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/WKeaXT922ot9wQjtvwcZ.svg", alt="Eyedropper.", width="20", height="20" %} can sample colors both from the page and from anywhere on the screen:
+The {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/WKeaXT922ot9wQjtvwcZ.svg", alt="Eyedropper.", width="20", height="20" %} **Eyedropper** can sample colors both from the page and from anywhere on the screen.
 
 To pick a color from anywhere on the screen:
 
-1. Select a color space with the [**Display value switcher**](#convert-colors).
-1. Hover over the target color.
-1. Click to confirm.
+1. [Open the **Color Picker**](#change-colors) and do one of the following:
+   - Click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/WKeaXT922ot9wQjtvwcZ.svg", alt="Eyedropper.", width="20", height="20" %} button.
+   - Press <kbd>C</kbd> to activate the **Eyedropper**. To deactivate, press <kbd>Escape</kbd>.
+1. With the **Eyedropper** active, hover over the target color and click to sample.
+
+{% Aside %}
+The **Eyedropper** samples colors only in the sRGB color space. When you sample outside this space, the **Eyedropper** clips the color to the closest one. See [Convert colors](#convert-colors).
+{% endAside %}
 
   <div class="elevation--4" style="margin-top: 20px; margin-bottom: 20px;">
   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/8Omn8AauWoiknzjzjlGA.png", alt="Using the Eyedropper anywhere on the screen.", width="800", height="450" %}</div>
 
-In this, the **Color Picker** shows a current color value of `rgb(224 255 255 / 15%)`. This color changes to pink once you click it.
+In this example, the **Color Picker** shows a current color value of `rgb(224 255 255 / 15%)`. This color changes to pink once you click outside Chrome.
