@@ -142,7 +142,7 @@ Issue relacionada: [1339771](https://crbug.com/bbb)
 ## Melhor syntax highlight para Angular {: #syntax }
 
 <!-- DevTools enhanced the syntax highlighting for Angular HTML templates, making it easier for you to read code and recognize its structure. -->
-O DevTools aprimorou o realce de sintaxe para templates HTML do Angular, facilitando a leitura do código e o reconhecimento de sua estrutura.
+O DevTools aprimorou o sintaxe highlighting para templates HTML do Angular, facilitando a leitura do código e o reconhecimento de sua estrutura.
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/lJU7wOa4vNDb2Vm2zPJq.png", alt="Syntax highlighting para templates no Angular.", width="800", height="507" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/4ec36d2fc5e7506d1ff65fd282a43215164f03f2 #}
