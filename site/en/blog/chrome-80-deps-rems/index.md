@@ -52,8 +52,7 @@ trial flag `allow-sync-xhr-in-page-dismissal` to allow synchronous XHR requests
 during page unload. This is a temporary "opt-out" measure, and we expect to
 remove this flag in Chrome 88. 
 
-For details about this and the alternatives, see [Disallowing synchronous
-XMLHTTPRequest() during page dismissal]().
+For details about this and the alternatives, see [Disallowing synchronous XMLHTTPRequest&#40;) during page dismissal]().
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/cCWNIXB4dzY/discussion) &#124;
 [Chrome Platform Status](https://www.chromestatus.com/feature/4664843055398912) &#124;
