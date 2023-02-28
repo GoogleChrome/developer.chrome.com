@@ -85,19 +85,19 @@ O painel reprojetado **Breakpoints** permite que você tenha acesso rápido a re
 Essas são algumas novidades:
 <!-- - Both pause exception options moved to the **Breakpoints** pane and labeled with text to make it more self-explanatory. -->
 - Ambas as opções de exceção de pausa foram movidas para o painel **Breakpoints** e rotuladas com texto para torná-lo mais autoexplicativo.
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/KADuAqVdrxxQDg5AYYeA.png", alt="Pause exception options.", width="800", height="518" %}
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/KADuAqVdrxxQDg5AYYeA.png", alt="Opções de breakpoints.", width="800", height="518" %}
 
 <!-- - Breakpoints are grouped by file, ordered by line or column numbers, and are collapsible. -->
 - Os breakpoints são agrupados por arquivo, ordenados por números de linha ou coluna e são recolhíveis.
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AXJ7IL5aJ6gwbZmnoH39.png", alt="Group breakpoints by file.", width="800", height="454" %}
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AXJ7IL5aJ6gwbZmnoH39.png", alt="Agrupe breakpoints por arquivo.", width="800", height="454" %}
 
 <!-- - There are new options to deactivate, remove, and edit breakpoints when hovering over a breakpoint or file. -->
 - Existem novas opções para desativar, remover e editar breakpoints ao passar o mouse sobre um deles ou arquivo.
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/vAQ4YuWGuXYLxXQXt0HG.png", alt="New options to deactivate breakpoints.", width="800", height="496" %}
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/vAQ4YuWGuXYLxXQXt0HG.png", alt="Diálogo de edição de breakpoint.", width="800", height="496" %}
 
 <!-- - Click the edit breakpoint button to open the breakpoint editor. From here, you can enter the breakpoint condition or switch to a logpoint. -->
 - Clique no botão editar breakpoint para abrir o editor. A partir daqui, você pode inserir a condição do breakpoint ou alternar para um ponto de log.
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/SrgbxxF8U3s9yzDPV25q.png", alt="Breakpoint edit dialog.", width="800", height="697" %}
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/SrgbxxF8U3s9yzDPV25q.png", alt="Painel de edição do breakpoint.", width="800", height="697" %}
 
 <!-- See [JavaScript debugging reference](/docs/devtools/javascript/reference/) to learn how to debug with DevTools. -->
 Consulte [Referência de debugging para JavaScript](/docs/devtools/javascript/reference/) para aprender como depurar com o DevTools.
