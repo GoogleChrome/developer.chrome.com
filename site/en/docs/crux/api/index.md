@@ -22,7 +22,7 @@ date: 2022-06-23
 
 # Optional
 # Include an updated date when you update your post
-updated: 2022-11-01
+updated: 2023-02-27
 
 # Optional
 # How to add a new author
@@ -720,3 +720,7 @@ Object representing the normalization actions taken to normalize a url to achiev
     </tr>
   </tbody>
 </table>
+
+## Rate limits
+
+The CrUX API is limited to 150 queries per minute per Google Cloud project, which is offered free of charge. This limit, and your current usage, can be seen in the [Google Cloud Console](https://console.cloud.google.com/apis/api/chromeuxreport.googleapis.com/quotas). This generous quota should be sufficient for the vast majority of use cases and at present it is not possible to pay for an increased quota.
