@@ -254,7 +254,7 @@ For example, the following filters out all messages that don't match `/[gm][ta][
 
 To search for text in log messages:
 
-1. To open a built-in search bar, press <kbd>Command</kbd>+<kbd>F</kbd> (Mac) or <kbd>Ctrl</kbd>+<kbd>F</kbd> (Windows, Linux)
+1. To open a built-in search bar, press <kbd>Command</kbd>+<kbd>F</kbd> (Mac) or <kbd>Ctrl</kbd>+<kbd>F</kbd> (Windows, Linux).
 1. In the bar, type your query. In this example the query is `legacy`.
     {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/rLEzbmZU3zU3rE3OWNli.png", alt="Typing a query.", width="800", height="426" %}
     Optionally, you can:
@@ -269,14 +269,14 @@ JavaScript][28] for a hands-on walkthrough.
 
 ### Copy options {: #copy-options }
 
-The console outputs strings as valid JavaScript literals by default. When right-clicking, you can choose between three copy options:
+The console outputs strings as valid JavaScript literals by default. Right-click an output and choose between three copy options:
 
-* **Copy as JavaScript literal**, which escapes appropriate special characters and wraps the string in either single quotes, double quotes,
+* **Copy as JavaScript literal**. Escapes appropriate special characters and wraps the string in either single quotes, double quotes,
   or backticks depending on the content.
-* **Copy string contents** copies the raw string contents (including new lines and other special characters) to the clipboard verbatim.
-* **Copy as JSON literal** formats the string to valid JSON.
+* **Copy string contents**. Copies the exact raw string to the clipboard, including new lines and other special characters.
+* **Copy as JSON literal**. Formats the string to valid JSON.
 
-{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/BM72ZiTnSm8IPnhMrbk1.png", alt="The copy options.", width="800", height="477" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/PSEzB4mBuTWeVebHZr5p.png", alt="The copy options.", width="800", height="398" %}
 
 ### Re-run expressions from history {: #history }
 
