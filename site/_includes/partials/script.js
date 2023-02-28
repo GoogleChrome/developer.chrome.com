@@ -38,6 +38,7 @@
     '{{ analytics.dimensions.TRACKING_VERSION }}',
     '{{ analytics.version }}'
   );
+  console.log('BARRY1', performance.getEntriesByType('navigation')[0]);
   try {
     // For the document speculation rules origin trial
     // overwrite the navigation type
@@ -48,6 +49,7 @@
         ? 'navigational-prefetch'
         : navEntry.type.replace(/_/g, '-');
     ga('set', '{{ analytics.dimensions.NAVIGATION_TYPE }}', navigationType);
+    console.log('BARRY2', navigationType);
   } catch (error) {
     ga('set', '{{ analytics.dimensions.NAVIGATION_TYPE }}', '(not set)');
   }
