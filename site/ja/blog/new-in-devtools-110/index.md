@@ -119,7 +119,7 @@ Chromium issues: [1385374](https://crbug.com/1385374), [1385632](https://crbug.c
 ## Console での人間工学的で一貫性のあるオートコンプリート {: #console }
 
 <!-- DevTools enhances the autocompletion experience by implementing the following changes: -->
-DevTools は、次の変更を実装することにより、オートコンプリートエクスペリエンスを強化します。
+DevTools は、次の変更を実装することにより、オートコンプリートの体験を強化します。
 
 <!-- - `Tab` is always used for autocompletion. -->
 <!-- - The behavior of `Arrow right` and `Enter` varies based on context. -->
