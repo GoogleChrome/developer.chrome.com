@@ -21,7 +21,7 @@ Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no"
 * [Novidades no Gravador](/pt/blog/new-in-devtools-110/#recorder)
 * [Veja e realçe códigos do fluxo do usuário no Gravador](/pt/blog/new-in-devtools-110/#recorder-code)
 * [Customize os tipos de seletores de uma gravação](/pt/blog/new-in-devtools-110/#recorder-selector)
-* [Edição de fluxo de usuário enquanto grava](/pt/blog/new-in-devtools-110/#recorder-edit)
+* [Edição de fluxo de usuário durante a gravação](/pt/blog/new-in-devtools-110/#recorder-edit)
 * [Auto formatação de código na mesma aba](/pt/blog/new-in-devtools-110/#pretty-print)
 * [Melhor syntax highlight para Vue, SCSS e mais](/pt/blog/new-in-devtools-110/#highlight)
 * [Autocomplete consistente no console](/pt/blog/new-in-devtools-110/#console)
