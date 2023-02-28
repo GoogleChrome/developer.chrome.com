@@ -27,6 +27,8 @@ As of Chrome 108, you can asynchronously supply credentials for [`onAuthRequired
 events](#event-onAuthRequired) if you use the `"webRequest"` and `"webRequestAuthProvider"`
 permissions.
 
+**note** As of Manifest V3, the `webRequestBlocking` manifest key is replaced by `declarativeNetRequest`, which enables use of the [declarativeNetRequest API](/docs/extensions/reference/declarativeNetRequest/).
+
 ## Life cycle of requests
 
 The web request API defines a set of events that follow the life cycle of a web request. You can use
