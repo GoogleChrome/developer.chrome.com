@@ -20,7 +20,7 @@ date: 2017-04-27
 
 # Optional
 # Include an updated date when you update your post
-updated: 2023-02-23
+updated: 2023-03-01
 
 # Optional
 # How to add a new tag
@@ -40,6 +40,12 @@ figure {
   text-align: center;
 }
 </style>
+
+{% Aside %}
+Note: This article is about the initial “old” Headless launch in Chrome 59. Since then, a new
+Headless implementation has shipped. Find out more by reading [_Chrome’s Headless mode gets an
+upgrade: introducing `--headless=new`_](/articles/new-headless/).
+{% endAside %}
 
 ## TL;DR
 
