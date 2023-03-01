@@ -20,7 +20,8 @@ Our demo is a preview  that demonstrates most features of the Topics API, for yo
 ## Test with chrome://flags or feature flags
 
 There are two ways to try the Topics API as a single user, running Chrome 101 or above:
-Enable the API in the CHrome page: `chrome://flags/#privacy-sandbox-ads-apis`
+
+- Enable the API in the CHrome page: `chrome://flags/#privacy-sandbox-ads-apis`
 
 <figure>
 
@@ -28,7 +29,7 @@ Enable the API in the CHrome page: `chrome://flags/#privacy-sandbox-ads-apis`
   <figcaption>Enable the Topics API using the chrome://flags/#privacy-sandbox-ads-apis page</figcaption>
 </figure>
 
-Run Chrome from the command line with the following flags:
+- Run Chrome from the command line with the following flags:
 
 ```text
 --enable-features=BrowsingTopics,PrivacySandboxAdsAPIsOverride,OverridePrivacySandboxSettingsLocalTesting
