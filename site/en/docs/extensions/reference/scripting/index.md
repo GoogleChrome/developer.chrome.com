@@ -4,7 +4,7 @@ api: scripting
 
 ## Manifest {: #manifest }
 
-To use the `chrome.scripting` API, you need to declare the `"scripting"` permission in the [manifest][manifest] plus the host permissions for the pages you want to inject scripts into. You can either use the [`"host_permissions"`][match-patterns] key or the [activeTab][activetab] permission, which grants temporary host permissions. The following example uses the activeTab permission.
+To use the `chrome.scripting` API, declare the `"scripting"` permission in the [manifest][manifest] plus the host permissions for the pages to inject scripts into. Use the [`"host_permissions"`][match-patterns] key or the [activeTab][activetab] permission, which grants temporary host permissions. The following example uses the activeTab permission.
 
 ```json
 {
