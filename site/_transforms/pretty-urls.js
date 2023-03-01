@@ -76,14 +76,7 @@ const prettyUrls = ($, outputPath, locale) => {
 
     const href = $link.attr('href');
     if (!href && !$link.attr('id')) {
-      // Only warn in non-production builds, as this is a common occurrence and might
-      // be confusing when debugging build errors.
-      if (process.env.ELEVENTY_ENV !== 'production') {
-        console.warn(
-          `Found <a> in ${outputPath} with no href/id (text=\`${$link.text()}\`)`
-        );
-      }
-
+      // Early-exit if a link has no href and no id.
       return;
     }
 
