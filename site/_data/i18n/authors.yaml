@@ -197,7 +197,7 @@ chriswilson:
   title:
     en: 'Chris Wilson'
   description:
-    en: 'Chris is a contributor to Chrome Developers'
+    en: 'Chrome Web Standards Lead'
 renatomangini:
   title:
     en: 'Renato Mangini'
@@ -1356,3 +1356,63 @@ tristramsouthey:
     en: 'Tristram Southey'
   description:
     en: 'Product Manager, Google Chrome'
+jyasskin:
+  title:
+    en: 'Jeffrey Yasskin'
+  description:
+    en: 'Chrome Web Standards Lead'
+peterkvitek:
+  title:
+    en: Peter Kvitek
+  description:
+    en: 'Software engineer'
+developit:
+  title:
+    en: Jason Miller
+  description:
+    en: Jason is a Web DevRel focused on speed and the JS ecosystem.
+    es: Jason es un Web DevRel centrado en la velocidad y en el ecosistema de JS.
+    ja: Jason は、スピードと JS のエコシステムに関心を持つ Web DevRel チームのメンバーです。
+    ko: Jason은 속도와 JS 생태계에 중점을 둔 Web DevRel입니다.
+    pt: Jason é Web DevRel focado na velocidade e no ecossistema JS.
+    ru: Джейсон — DevRel по вопросам веб-технологий, специализирующийся на оптимизации скорости и экосистеме JS.
+    zh: Jason 是网络开发者关系团队成员，专注于速度和 JS 生态系统。
+masonfreed:
+  title:
+    en: Mason Freed
+  description:
+    en: Developer on the Chrome team
+    es: Desarrollador en el equipo de Chrome
+    ja: Chrome チームに所属する開発者
+    ko: Chrome 팀 개발자
+    pt: Desenvolvedor na equipe do Chrome
+    ru: Разработчик в команде Chrome
+    zh: Chrome 团队的开发者
+uskay:
+  title:
+    en: Yusuke Utsunomiya
+  description:
+    en: Tech consultant for Web, Chrome & AMP
+    es: Consultor técnico para Web, Chrome y AMP
+    ja: Web、Chrome、AMP を対象とした技術コンサルタント
+    ko: Web, Chrome 및 AMP 기술 컨설턴트
+    pt: Consultor técnico para a web, Chrome e AMP
+    ru: Технический консультант по веб-разработке, Chrome и AMP
+    zh: 网络、Chrome 和 AMP 技术顾问
+janicklasralphj:
+  title:
+    en: Janicklas Ralph James
+    es: Janicklas Ralph James
+    ja: Janicklas Ralph James
+    ko: Janicklas Ralph James
+    pt: Janicklas Ralph James
+    ru: Janicklas Ralph James
+    zh: Janicklas Ralph James
+  description:
+    en: Software Engineer on the Aurora team at Chrome.
+    es: Ingeniera de software en el equipo de Aurora en Chrome.
+    ja: ChromeのAuroraチームのソフトウェアエンジニア。
+    ko: Chrome에서 Aurora 팀의 소프트웨어 엔지니어입니다.
+    pt: Engenheiro de software da equipe Aurora no Chrome.
+    ru: Инженер-программист в команде Aurora в Chrome.
+    zh: Chrome 公司 Aurora 团队的软件工程师。

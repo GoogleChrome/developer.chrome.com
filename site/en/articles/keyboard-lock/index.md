@@ -78,8 +78,8 @@ You can respond to captured key presses using keyboard events.
 For example this code uses the `onkeydown` event:
 
 ```js
-document.addEventListener('keydown', (e) => {
-  if ((e.code === 'KeyA') && !(event.ctrlKey || event.metaKey)) {
+document.addEventListener('keydown', (event) => {
+  if ((event.code === 'KeyA') && !(event.ctrlKey || event.metaKey)) {
     // Do something when the 'A' key was pressed, but only
     // when not in combination with the command or control key.
   }

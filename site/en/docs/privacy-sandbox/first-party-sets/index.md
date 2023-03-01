@@ -7,6 +7,7 @@ description: >
   First-Party Sets enables related domain names owned and operated by the same entity to declare themselves as belonging to the same first party.
 date: 2021-05-18
 updated: 2022-08-04
+is_outdated: true
 authors:
   - samdutton
 ---

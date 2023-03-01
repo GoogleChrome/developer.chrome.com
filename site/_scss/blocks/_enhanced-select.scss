@@ -45,8 +45,8 @@
       font-family: 'Google Sans', sans-serif;
       font-size: 0.875rem;
       font-weight: 500;
-      line-height: 3rem;
-      padding: 0 2.75rem;
+      line-height: 1.2rem;
+      padding: 1rem 2.75rem;
       text-align: left;
     }
 
@@ -93,9 +93,13 @@
 
 enhanced-select {
   align-items: center;
-  display: inline-flex;
+  display: none;
   height: 2.5rem;
   position: relative;
+
+  &:defined {
+    display: inline-flex;
+  }
 
   select {
     max-height: 100%;

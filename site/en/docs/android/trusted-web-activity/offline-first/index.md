@@ -10,7 +10,7 @@ authors:
 The first time a user launches a Progressive Web App (PWA) via Trusted Web
 Activity, the service worker won't yet be available since [the registration
 process](https://developers.google.com/web/fundamentals/primers/service-workers/registration)
-hasn't taken place yet. Aditionally, if the user doesn't have connectivity during the first app
+hasn't taken place yet. Additionally, if the user doesn't have connectivity during the first app
 launch, instead of the custom offline experience, the network error page is
 shown.
 
@@ -156,7 +156,7 @@ private boolean hasTwaLaunchedSuccessfully() {
 ```
 
 The previous code calls the `launchTWA()` from the parent class, and saves the
-`twa_launched_successfully` flag in shared preferences. This indeicates that the TWA
+`twa_launched_successfully` flag in shared preferences. This indicates that the TWA
 has launched successfully, at least once.
 
 The remaining helper method, `renderOfflineFallback()` renders an Android

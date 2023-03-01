@@ -2,7 +2,7 @@
 layout: 'layouts/blog-post.njk'
 title: WebRTC Protothon 
 description: >
-  On March 24th, Google hosted the world's first WebRTC developer event, the WebRTC.
+  On March 24th, Google hosted the world's first WebRTC developer event, the WebRTC Protothon.
 authors:
   - ilmariheikkinen
 date: 2012-04-17

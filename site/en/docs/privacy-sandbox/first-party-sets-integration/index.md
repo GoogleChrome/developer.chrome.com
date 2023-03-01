@@ -4,7 +4,7 @@ title: "First-Party Sets: integration guide"
 date: 2023-01-12
 thumbnail: 'image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/JL7L7S2qKI53pTWACfcv.jpg'
 alt: A diagram showing First-Party Sets. One set contains domains example.com,
-  example.rs, and example.co.uk. The other set containts brandx.site,
+  example.rs, and example.co.uk. The other set contains brandx.site,
   fly-brandx.site, and drive-brandx.site.
 tags: 
   - privacy
@@ -124,7 +124,7 @@ Early testing goals and what we’re looking for:
 - Validating that the process and the technology work and that cookie access can be enabled within the declared FPS.
 - Identifying potential bugs.
 
-The testing methodology for both of these componenets is outlined below.
+The testing methodology for both of these components is outlined below.
 
 ### Key aspects
 

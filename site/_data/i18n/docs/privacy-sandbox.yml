@@ -10,8 +10,6 @@ fledge:
   en: 'FLEDGE'
 fledge-best-practices:
   en: 'FLEDGE latency best practices'
-floc:
-  en: 'Federated Learning of Cohorts (FLoC)'
 topics-api:
   en: 'The Topics API'
 topics-latest:
@@ -117,3 +115,5 @@ privacy-budget:
   en: 'Privacy Budget'
 fenced-frame:
   en: 'Fenced Frames'
+fledge-api:
+  en: 'Developer guide'

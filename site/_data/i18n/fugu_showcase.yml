@@ -7,6 +7,9 @@ search_apps:
 rss_feed:
   en: RSS feed
 
+screenshot_not_available:
+  en: Screenshot not available
+
 share_app:
   en: Share app
 

@@ -3,19 +3,18 @@
 - title: i18n.docs.privacy-sandbox.overview
   sections:
     - url: /docs/privacy-sandbox/overview
-    - url: /tags/privacy
-      title: i18n.docs.privacy-sandbox.blog
+    - url: /docs/privacy-sandbox/glossary
     - url: https://privacysandbox.com/timeline
       title: i18n.docs.privacy-sandbox.timeline
-    - url: /docs/privacy-sandbox/events
     - url: /docs/privacy-sandbox/proposal-lifecycle
+    - url: /docs/privacy-sandbox/events
+    - url: /tags/privacy
+      title: i18n.docs.privacy-sandbox.blog
 - title: i18n.docs.privacy-sandbox.start
   sections:
     - url: /docs/privacy-sandbox/unified-origin-trial
-    - url: /docs/privacy-sandbox/feedback
-    - url: /docs/privacy-sandbox/glossary
-    - url: /docs/privacy-sandbox/status
     - url: /docs/privacy-sandbox/faq
+    - url: /docs/privacy-sandbox/feedback
 - title: i18n.docs.privacy-sandbox.strengthen-boundaries
   sections:
     - url: /docs/privacy-sandbox/first-party-sets
@@ -55,15 +54,22 @@
     - title: i18n.docs.privacy-sandbox.interest-ads
       sections:
         - url: /docs/privacy-sandbox/topics
-        - url: /docs/privacy-sandbox/topics/latest
         - url: /docs/privacy-sandbox/topics-experiment
+        - url: /docs/privacy-sandbox/topics/latest
     - title: i18n.docs.privacy-sandbox.ondevice-auctions
       sections:
         - url: /docs/privacy-sandbox/fledge
-        - url: /docs/privacy-sandbox/fledge-api
         - url: /docs/privacy-sandbox/fledge-experiment
+        - title: i18n.docs.privacy-sandbox.fledge-api
+          sections:
+            - url: /docs/privacy-sandbox/fledge-api/
+            - url: /docs/privacy-sandbox/fledge-api/ad-auction
+            - url: /docs/privacy-sandbox/fledge-api/interest-groups
+            - url: /docs/privacy-sandbox/fledge-api/latency
+            - url: /docs/privacy-sandbox/fledge-api/opt-out
+            - url: /docs/privacy-sandbox/fledge-api/reports
+            - url: /docs/privacy-sandbox/fledge-api/troubleshoot
         - url: /docs/privacy-sandbox/fledge-api/feature-status
-        - url: /docs/privacy-sandbox/fledge-api/latency
     - url: /docs/privacy-sandbox/maximize-ad-relevance
 - title: i18n.docs.privacy-sandbox.measure
   sections:

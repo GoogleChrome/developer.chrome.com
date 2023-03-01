@@ -5,7 +5,7 @@ authors:
   - brendankenny
 date: 2023-02-09
 description: >
-  Lighthouse 10 is here with a new scoring and audits.
+  Lighthouse 10 is here with new scoring and audits.
 hero: 'image/MtjnObpuceYe3ijODN3a79WrxLU2/SM05YIr19Ucx2cUCx5lR.png'
 alt: 'Lighthouse category scores, all 100'
 tags:
@@ -16,7 +16,7 @@ tags:
 
 [Lighthouse is a website auditing tool](/docs/lighthouse/overview/) that helps developers with opportunities and diagnostics to improve the user experience of their sites.
 
-Lighthouse 10 is available immediately on the [command line through npm](https://www.npmjs.com/package/lighthouse), in [Chrome Canary](https://www.google.com/chrome/canary/), and in [PageSpeed Insights](https://pagespeed.web.dev/). It will land in Chrome stable in Chrome 112.
+Lighthouse 10 is available immediately on the [command line through npm](https://www.npmjs.com/package/lighthouse) and in [Chrome Canary](https://www.google.com/chrome/canary/). It will land in Chrome stable in Chrome 112 and in [PageSpeed Insights](https://pagespeed.web.dev/) in the coming weeks.
 
 ## Scoring changes
 
@@ -63,7 +63,7 @@ If you use Lighthouse as a Node library, there are a few programmatic breaking c
 Lighthouse 10 also ships with full TypeScript type declarations! Anything imported from `lighthouse` should now be typed, which should be particularly helpful if you're scripting [Lighthouse user flows](https://web.dev/lighthouse-user-flows/).
 
 <figure>
-  {% Img src="image/MtjnObpuceYe3ijODN3a79WrxLU2/VlPiDhDRI96PCBWyPm7x.png", alt="ALT_TEXT_HERE", width="562", height="199" %}
+  {% Img src="image/MtjnObpuceYe3ijODN3a79WrxLU2/VlPiDhDRI96PCBWyPm7x.png", alt="A Node script importing Lighthouse as a function, demonstrating that the options object passed into the function is now type checked by TypeScript", width="562", height="199" %}
 </figure>
 
 Try out the types and let us know if you run into any issues using them.

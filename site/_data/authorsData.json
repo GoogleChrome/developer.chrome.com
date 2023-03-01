@@ -119,7 +119,8 @@
     "twitter": "aerotwist"
   },
   "chriswilson": {
-    "twitter": "cwilso"
+    "twitter": "cwilso",
+    "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/YwzRFxyI5YWUTUCIp3W1.jpeg"
   },
   "renatomangini": {
     "homepage": "http://www.renatomangini.com/",
@@ -334,6 +335,10 @@
     "github": "PEConn",
     "image": "image/Vww75TFpThOgTNuASFM6UYfBAp53/bphnrZBppE6u1ZqNnhKU.jpg"
   },
+  "peterkvitek": {
+    "country": "US",
+    "image": "image/ZQjEes3OsyYCDLE5837FjNRQ1Gw2/62sncQPT61F2Irw5MJRI.jpg"
+  },
   "pavoldrotar": {
     "country": "UK",
     "homepage": "https://pavoldrotar.com",
@@ -408,6 +413,7 @@
     "country": "DE",
     "twitter": "mathias",
     "github": "mathiasbynens",
+    "homepage": "https://mathiasbynens.be/",
     "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/abpvpv7lyW7ECZNEJ7wb.jpg"
   },
   "jackfranklin": {
@@ -583,9 +589,10 @@
   },
   "rowan_m": {
     "country": "UK",
-    "twitter": "rowan_m",
-    "github": "rowan-m",
+    "mastodon": "https://mastodon.social/@rowan_m",
     "glitch": "rowan-m",
+    "github": "rowan-m",
+    "twitter": "rowan_m",
     "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/36DbfIY65yZEBUfN0VZ3.jpeg"
   },
   "danielcheng": {
@@ -1069,5 +1076,30 @@
   "tristramsouthey": {
     "country": "US",
     "image": "image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/yh2i5pJyWLqMz49B7qWq.jpeg"
+  },
+  "jyasskin": {
+    "country": "US",
+    "mastodon": "https://hachyderm.io/@jyasskin",
+    "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/I9TmKizOlEBpFNDmT8qp.jpeg"
+  },
+  "developit": {
+    "homepage": "https://jasonformat.com",
+    "twitter": "_developit",
+    "github": "developit",
+    "image": "image/admin/bPCYfhUgxdCpXhKAWc9X.jpg"
+  },
+  "masonfreed": {
+    "twitter": "Mfreed777",
+    "github": "mfreed7",
+    "image": "image/admin/t7E3inN3orEPpDUXSkXR.jpg"
+  },
+  "uskay": {
+    "homepage": "https://blog.uskay.io/",
+    "twitter": "uskay",
+    "image": "image/admin/ztcrpMPYTd84oPTN4GdY.jpg"
+  },
+  "janicklasralphj": {
+    "twitter": "Janicklas",
+    "image": "image/IypihH3o5cSpEMVp5i08dp69otp2/XClrajjKMkDpS2XeK83c.jpg"
   }
 }
