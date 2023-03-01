@@ -467,23 +467,6 @@ To enable or disable a class on an element:
     Class** text box are all of the classes that are being applied to this element.
 3.  Toggle the checkbox next to the class that you want to enable or disable.
 
-### Change the CSS Grid {: #change-cssgrid }
-
-To set and preview changes to the [CSS Grid](https://developer.mozilla.org/docs/Web/CSS/CSS_Grid_Layout):
-
-1. [Select an element][21] with [`display: grid`](https://developer.mozilla.org/docs/Web/CSS/grid#examples) or `display: inline-grid` applied.
-2. Click the **CSS Grid** icon {% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/nNtcPTUMWFRw5vHQoN9w.png", alt="CSS Grid icon.", width="45", height="45" %} that appears next to the `display` element in the **Styles** pane.
-3. Preview and author changes to the grid using the options that pop-up in the modal window.
-
-{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/WXHpmoybdfComXMlJxf5.png", alt="CSS Grid preview modal showing alignment options for the current page.", width="800", height="261" %}
-
-The following CSS properties can be edited using the DevTools CSS Grid:
-
-* [`align-content`](https://developer.mozilla.org/docs/Web/CSS/align-content)
-* [`justify-content`](https://developer.mozilla.org/docs/Web/CSS/justify-content)
-* [`align-items`](https://developer.mozilla.org/docs/Web/CSS/align-items)
-* [`justify-items`](https://developer.mozilla.org/docs/Web/CSS/justify-items)
-
 ### Add a style rule {: #style-rule }
 
 To add a new style rule:
