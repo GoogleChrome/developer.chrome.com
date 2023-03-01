@@ -64,14 +64,17 @@ Several key proposals are listed below.
   across sites.
 * [**FLEDGE**](/docs/privacy-sandbox/fledge): Ad selection to serve remarketing
   and custom audience use cases, designed so that it cannot be used by third
-  parties to track user browsing behavior across sites.
+  parties to track user browsing behavior across sites. FLEDGE is the first
+  experiment to be implemented in Chromium from the
+  [TURTLEDOVE](https://github.com/WICG/turtledove) family of proposals.
 
 ### Measure digital ads
 
 * [**Attribution Reporting**](/docs/privacy-sandbox/attribution-reporting):
   Correlate ad clicks or ad views with conversions. Ad techs can generate
   event-level or [summary reports](/docs/privacy-sandbox/summary-reports).
-* [**Private Aggregation API**](/docs/privacy-sandbox/private-aggregation/): Generate noisy summary reports with cross-site data.
+* [**Private Aggregation API**](/docs/privacy-sandbox/private-aggregation/):
+  Generate noisy summary reports with cross-site data.
 
 ### Prevent covert tracking
 
