@@ -41,6 +41,13 @@ date, which can be found in the
 [public resources of W3C groups](https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo).
 These proposals cover a wide variety of use cases and requirements.
 
+Proposals have a lifecycle with up to three phases before becoming
+[web standards](https://www.w3.org/standards/): discussion, testing, and scaled
+adoption. It's critical we [receive feedback](/docs/privacy-sandbox/feedback/)
+from developers and industry leaders to ensure we create durable
+web features with broad utility and robust privacy protections for users.
+Read more about the [proposal lifecycle](/docs/privacy-sandbox/proposal-lifecycle/).
+
 Several key proposals are listed below.
 
 ### Strengthen cross-site privacy boundaries
