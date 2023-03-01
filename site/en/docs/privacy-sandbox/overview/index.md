@@ -134,7 +134,7 @@ The [timeline](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline
 has the latest implementation status for the Privacy Sandbox on the web. Each
 API has an implementation status in their documentation.
 
-We'll make regular announcements on the [Chrome Developers blog](/tags/privacy/)
+We publish regular announcements on the [Chrome Developers blog](/tags/privacy/)
 as APIs move from proposal to experiment to scaled availability.
 
 ## Engage and share feedback
