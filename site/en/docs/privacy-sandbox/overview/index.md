@@ -11,7 +11,7 @@ authors:
   - samdutton
 ---
 
-The Privacy Sandbox is and initiative aims to create technologies that both
+The Privacy Sandbox initiative aims to create technologies that both
 protect people's privacy online and give companies and developers tools to
 build thriving digital businesses.
 
