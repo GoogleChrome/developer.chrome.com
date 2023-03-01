@@ -35,11 +35,13 @@ your configuration, and provides further resources for testing against the APIs.
 
 #### FLEDGE 1% ramp back up
 
-Last month, we [temporarily reduced FLEDGE origin trial traffic](/docs/privacy-sandbox/unified-origin-trial/#january-2023) from 5% to 4% of Chrome stable for testing. The initial testing has concluded, and we plan to ramp FLEDGE back up to 5% from 4% for the unified experiment on Tuesday, March 7, 2023. The ramped-up users will be the same set of users that were ramped down, but their previous interest groups have expired, since more than 30 days have passed since the ramp-down. 
+Last month, we [temporarily reduced FLEDGE origin trial traffic](/docs/privacy-sandbox/unified-origin-trial/#january-2023) from 5% to 4% of Chrome stable for testing. The initial testing has concluded, and we plan to ramp FLEDGE back up to 5% from 4% for the unified experiment on Tuesday, March 7, 2023.
+
+The ramped-up users will be the same set of users that were ramped down. However, their previous interest groups have expired, since more than 30 days have passed since the ramp-down. 
 
 #### Isolated experiments
 
-To improve our testing process, and to continue observing the metrics of origin trial APIs, we are creating isolated experiments for each API, in addition to the existing unified experiment. New experiments will be created for Attribution Reporting, Topics, a combination of FLEDGE and Fenced Frames, and a combination of Shared Storage’s URL Selection operation and Fenced Frames. In the isolated experiment, only the assigned APIs will be available for the users in that group.
+To improve our testing process and continue observing the metrics of origin trial APIs, we're creating isolated experiments for each API, in addition to the existing unified experiment. New experiments will be created for Attribution Reporting, Topics, a combination of FLEDGE and Fenced Frames, and a combination of Shared Storage’s URL Selection operation and Fenced Frames. In each isolated experiment, only the assigned APIs will be available for the users in that group.
 
 <table>
   <tr>
@@ -61,7 +63,7 @@ To improve our testing process, and to continue observing the metrics of origin 
    </td>
   </tr>
   <tr>
-   <td>Shared Storage (URL Selection) + Fenced Frames
+   <td>Shared Storage (URL selection) + Fenced Frames
    </td>
    <td>1%
    </td>
@@ -106,7 +108,7 @@ The current unified origin trials traffic allocation as of Tuesday, February 28,
    </td>
   </tr>
   <tr>
-   <td>Shared Storage (URL Selection)
+   <td>Shared Storage (URL selection)
    </td>
    <td>5%
    </td>
