@@ -254,9 +254,9 @@ Alternatively, you will be able to define an anchor in your HTML with the `ancho
 
 Once you've defined an anchor, you can use the `anchor` function. The `anchor` function takes 3 arguments:
 
-**Anchor element:** The `anchor-name` of the anchor to use—or, you can omit the value to use an `implicit` anchor. It can be defined via the HTML relationship, or with an `anchor-default` property with an `anchor-name` value.
-**Anchor side:** A keyword of the position you want to use. This could be `top`, `right`, `bottom`, `left`, `center`, etc. Or, you can pass a percentage. For example, 50% would be equal to `center`.
-**Fallback:** This is an optional fallback value that accepts a length or percentage.
+- **Anchor element:** The `anchor-name` of the anchor to use—or, you can omit the value to use an `implicit` anchor. It can be defined via the HTML relationship, or with an `anchor-default` property with an `anchor-name` value.
+- **Anchor side:** A keyword of the position you want to use. This could be `top`, `right`, `bottom`, `left`, `center`, etc. Or, you can pass a percentage. For example, 50% would be equal to `center`.
+- **Fallback:** This is an optional fallback value that accepts a length or percentage.
 
 
 You use the `anchor` function as a value for the [inset properties](https://developer.mozilla.org/docs/Web/CSS/inset) (`top`, `right`, `bottom`, `left`, or their logical equivalents) of the anchored element. You can also use the `anchor` function in [`calc`](https://developer.mozilla.org/docs/Web/CSS/calc):
