@@ -59,12 +59,18 @@ Several key proposals are listed below.
   such as `localStorage` or cookies, to be double-keyed: by the top-level site
   as well as the origin of the resource being loaded, rather than a single
   origin or site.
-* [**Fenced Frames**](/docs/privacy-sandbox/fenced-frame): Securely embed content onto a page without sharing cross-site data.
+* [**Fenced Frames**](/docs/privacy-sandbox/fenced-frame): Securely embed
+  content onto a page without sharing cross-site data.
 * [**Network State Partitioning**](https://github.com/MattMenke2/Explainer---Partition-Network-State):
-  Prevent browser network resources being shared across first-party contexts, by ensuring that every request has a network partition key that must match in order for resources to be reused.
+  Prevent browser network resources being shared across first-party contexts,
+  by ensuring that every request has a network partition key that must match in
+  order for resources to be reused.
 * [**HTTP Cache Partitioning**](/blog/http-cache-partitioning): Improve
   security and privacy by partitioning the browser HTTP cache.
-* [**Federated Credential Management (FedCM)**](/docs/privacy-sandbox/fedcm/): Support federated identity without sharing the user's email address or other identifying information with a third-party service or website, unless the user explicitly agrees to do so.
+* [**Federated Credential Management (FedCM)**](/docs/privacy-sandbox/fedcm/):
+  Support federated identity without sharing the user's email address or other
+  identifying information with a third-party service or website, unless the
+  user explicitly agrees to do so.
 
 ### Show relevant content and ads
 
@@ -130,7 +136,7 @@ as APIs move from proposal to experiment to scaled availability.
 * **W3C**: Use cases can be discussed and industry feedback shared in the W3C [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/), the [Privacy Community Group](https://www.w3.org/community/privacycg/participants),
 and the [Web Incubator Community Group](https://github.com/WICG).
 * **Developer support**: Ask questions and join discussions on the
-[Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
+  [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
 
 ## Find out more
 
