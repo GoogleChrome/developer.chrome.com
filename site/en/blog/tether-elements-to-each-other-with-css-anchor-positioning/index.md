@@ -34,7 +34,7 @@ How do you currently tether one element to another? You might try tracking their
 
 These solutions often aren't ideal. They need JavaScript or introduce extra markup. The CSS anchor positioning API aims to solve this by providing a CSS API for tethering elements. It provides a means to position and size one element based on the position and size of other elements.
 
-{% Img src="image/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/ZrBRrAMuhnkvS0EOqx4j.png", alt="Image shows a mockup browser window detailing the anatomy of a tooltip", width="664", height="582" %}
+{% Img src="image/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/ZrBRrAMuhnkvS0EOqx4j.png", alt="Image shows a mockup browser window detailing the anatomy of a tooltip.", width="664", height="582" %}
 
 ## Browser support
 You can try out the CSS anchor positioning API in Chrome Canary behind the "Experimental Web Platform Features" flag. To enable that flag, open Chrome Canary and visit `chrome://flags`. Then enable the "Experimental web platform features" flag.
