@@ -4,11 +4,12 @@ title: What is the Privacy Sandbox?
 subhead: >
   A series of proposals to satisfy cross-site use cases without
   third-party cookies or other tracking mechanisms.
-description: "What's in it, how to get involved, and what it's for."
+description: "What's in it, what's it for, and how to get involved."
 date: 2021-05-18
 updated: 2023-02-27
 authors:
   - samdutton
+  - alexandrawhite
 ---
 
 The Privacy Sandbox initiative aims to create technologies that both
