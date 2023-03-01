@@ -267,7 +267,7 @@ To search for text in log messages:
 This section contains features related to running JavaScript in the Console. See [Run
 JavaScript][28] for a hands-on walkthrough.
 
-### Copy options {: #copy-options }
+### String copy options {: #string-copy-options }
 
 The console outputs strings as valid JavaScript literals by default. Right-click an output and choose between three copy options:
 
