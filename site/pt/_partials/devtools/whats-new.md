@@ -16,6 +16,8 @@ Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no"
  #}
 
 
+### Chrome 110 {: #chrome110 }
+
 * [Limpeza do painel Desempenho ao recarregar](/pt/blog/new-in-devtools-110/#perf)
 * [Atualizações do Gravador](/pt/blog/new-in-devtools-110/#recorder)
 * [Visualização e realce do código do fluxo de usuário no Gravador](/pt/blog/new-in-devtools-110/#recorder-code)
