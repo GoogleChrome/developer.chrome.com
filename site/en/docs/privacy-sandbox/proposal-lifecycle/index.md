@@ -109,7 +109,10 @@ on real-world experience.
 <figure>
 {% Img
   src="image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/gSDnOdAhjtUa5XnBFVI7.png",
-  alt="Proposals move through discussion to functional testing, effectiveness and scaled testing, to general availability. At each stage, Chromium publishes Intent documents.", width="800", height="231"
+  alt="Proposals move through discussion to functional testing,
+  effectiveness and scaled testing, to general availability. At each
+  stage, Chromium publishes Intent documents.",
+  width="800", height="231"
 %}
 <figcaption>
 Features progress through a timeline of development and testing through to
