@@ -9,7 +9,7 @@ alt: "Photo of two small gold-plated anchors resting on top of each other on a t
 tags:
   - css
   - html
-date: 2023-02-28
+date: 2023-03-01
 ---
 
 How do you currently tether one element to another? You might try tracking their positions, or use some form of wrapper element.
