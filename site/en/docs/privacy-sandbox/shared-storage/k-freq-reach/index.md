@@ -41,8 +41,8 @@ You may want to measure the number of users who have seen your content K or more
 
 In this example:
 
-*   [`k-frequency-measurement.js`](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/advertiser/private-aggregation/k-freq-measurement.js) is loaded via a frame, and is responsible for loading the shared storage worklet.
-*   [`k-frequency-measurement-worklet.js`](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/advertiser/private-aggregation/k-freq-measurement-worklet.js) is the shared storage worklet that reads the impression count in shared storage and sends a report via the Private Aggregation API.
+*   [`k-frequency-measurement.js`](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/content-producer/private-aggregation/k-freq-measurement.js) is loaded via a frame, and is responsible for loading the shared storage worklet.
+*   [`k-frequency-measurement-worklet.js`](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/content-producer/private-aggregation/k-freq-measurement-worklet.js) is the shared storage worklet that reads the impression count in shared storage and sends a report via the Private Aggregation API.
 
 **`k-frequency-measurement.js`**
 
