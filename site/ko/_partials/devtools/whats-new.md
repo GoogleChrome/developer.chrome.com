@@ -6,12 +6,12 @@
 
 {# ### Chrome 111 {: #chrome111 }
 
-* [Debugging HD color with the Styles pane](/ko/blog/new-in-devtools-111/#color)
-* [Enhanced breakpoint UX](/ko/blog/new-in-devtools-111/#breakpoint-redesign)
-* [Customizable Recorder shortcuts](/ko/blog/new-in-devtools-111/#recorder)
-* [Better syntax highlight for Angular](/ko/blog/new-in-devtools-111/#syntax)
-* [Reorganize caches in the Application panel](/ko/blog/new-in-devtools-111/#cache)
-* [Miscellaneous highlights](/ko/blog/new-in-devtools-111/#misc)
+* [스타일 창에서 고화질 컬러 디버깅하기](/ko/blog/new-in-devtools-111/#color)
+* [개선된 중단점 UX](/ko/blog/new-in-devtools-111/#breakpoint-redesign)
+* [사용자 설정 가능한 녹음기 단축키](/ko/blog/new-in-devtools-111/#recorder)
+* [Angular 를 위한 개선된 구문 강조](/ko/blog/new-in-devtools-111/#syntax)
+* [애플리케이션 패널에서의 캐시 재조직](/ko/blog/new-in-devtools-111/#cache)
+* [기타 하이라이트](/ko/blog/new-in-devtools-111/#misc)
  #}
 
 
