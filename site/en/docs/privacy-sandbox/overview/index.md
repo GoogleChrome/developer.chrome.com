@@ -24,6 +24,15 @@ The Privacy Sandbox has two core aims:
 	id='WnCKlNE52tc'
 %}
 
+The Privacy Sandbox APIs require web browsers to take on a new role. Rather 
+than working with limited tools and protections, the APIs allow a user's
+browser to act on the user's behalf—locally, on their device—to protect the
+user's identifying information as they navigate the web. This is a shift in
+direction for browsers.
+
+The Privacy Sandbox's vision of the future has browsers providing specific
+tools to satisfy specific use cases, while preserving user privacy.
+
 ## What are the Privacy Sandbox proposals?
 
 Chrome and other ecosystem stakeholders have offered more than 30 proposals to
@@ -100,10 +109,10 @@ Several key proposals are listed below.
 
 ## Who works on the Privacy Sandbox?
 
-* 30+ Privacy Sandbox proposals offered by Chrome and others.
 * 400+ participants who joined W3C groups to provide input including the
   [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants)
   and the [Privacy Community Group](https://www.w3.org/community/privacycg/participants).
+* 30+ Privacy Sandbox proposals offered by Chrome and others.
 
 ## When will the APIs be implemented?
 
@@ -125,17 +134,9 @@ and the [Web Incubator Community Group](https://github.com/WICG).
 
 ## Find out more
 
-### Articles and videos for web developers
-
 * [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
-* [SameSite cookies explained](https://web.dev/samesite-cookies-explained/)
-* [Getting started with Privacy State Tokens](https://web.dev/trust-tokens)
-
-### Principles and concepts behind the proposals
-
 * [A Potential Privacy Model for the Web](https://github.com/michaelkleber/privacy-model)
   sets out the core principles underlying the APIs.
-* [The Privacy Sandbox](https://www.chromium.org/Home/chromium-privacy/privacy-sandbox)
-* Privacy Sandbox overview: [Building a more private web](https://www.blog.google/products/chrome/building-a-more-private-web/)
+* Chromium's overview of [the Privacy Sandbox](https://www.chromium.org/Home/chromium-privacy/privacy-sandbox)
 * Google AI Blog: [Federated Learning: Collaborative Machine Learning without Centralized Training Data](https://ai.googleblog.com/2017/04/federated-learning-collaborative.html)
 * [The future of third-party cookies](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
