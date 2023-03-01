@@ -284,6 +284,7 @@ use it, first install from npm:
 
 ```bash
 npm i --save chrome-launcher
+```
 
 **Example** - using `chrome-launcher` to launch Headless
 
