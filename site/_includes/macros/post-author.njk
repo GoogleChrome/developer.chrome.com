@@ -31,22 +31,22 @@
       <!-- Start author social links -->
       <div class="post-authors-social">
         {% if author.homepage %}
-          <a href="{{ author.homepage }}" class="link">{{ 'i18n.common.website' | i18n(locale) }}</a>
+          <a rel="me" href="{{ author.homepage }}" class="link">{{ 'i18n.common.website' | i18n(locale) }}</a>
         {% endif %}
         {% if author.twitter %}
-          <a href="https://twitter.com/{{ author.twitter }}" class="link">Twitter</a>
+          <a rel="me" href="https://twitter.com/{{ author.twitter }}" class="link">Twitter</a>
         {% endif %}
         {% if author.github %}
-          <a href="https://github.com/{{ author.github }}" class="link">GitHub</a>
+          <a rel="me" href="https://github.com/{{ author.github }}" class="link">GitHub</a>
         {% endif %}
         {% if author.glitch %}
-          <a href="https://glitch.com/@{{ author.glitch }}" class="link">Glitch</a>
+          <a rel="me" href="https://glitch.com/@{{ author.glitch }}" class="link">Glitch</a>
         {% endif %}
         {% if author.mastodon %}
-          <a href="{{ author.mastodon }}" class="link">Mastodon</a>
+          <a rel="me" href="{{ author.mastodon }}" class="link">Mastodon</a>
         {% endif %}
         {% if author.linkedin %}
-          <a href="https://www.linkedin.com/in/{{ author.linkedin }}" class="link">LinkedIn</a>
+          <a rel="me" href="https://www.linkedin.com/in/{{ author.linkedin }}" class="link">LinkedIn</a>
         {% endif %}
       </div>
       <!-- End author social links -->
