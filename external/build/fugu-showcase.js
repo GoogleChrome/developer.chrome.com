@@ -27,117 +27,6 @@ const path = require('path');
 
 const url = 'https://googlechromelabs.github.io/fugu-showcase/data/data.json';
 
-async function getContentLength(url) {
-  try {
-    const response = await fetch(url, {
-      method: 'HEAD',
-    });
-    const contentLength = response.headers.get('Content-Length');
-    return contentLength;
-  } catch (error) {
-    console.error(error);
-    return 0;
-  }
-}
-
-async function toRSS(jsonData) {
-  let rss = `<?xml version="1.0" encoding="UTF-8"?>
-  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-      <title>Project Fugu API Showcase</title>
-      <description>The Project Fugu API Showcase is a collection of apps that make use of APIs that were conceived in the context of Project Fugu.</description>
-      <link>https://developer.chrome.com/fugu-showcase/feed.xml</link>
-      <atom:link href="https://developer.chrome.com/fugu-showcase/feed.xml" rel="self" type="application/rss+xml" />`;
-
-  jsonData.sort((a, b) => {
-    // @ts-ignore
-    return new Date(b.timestamp) - new Date(a.timestamp);
-  });
-
-  const promises = jsonData.map(item => {
-    const id = item.screenshot.replace('.webp', '');
-    return getContentLength(
-      `https://googlechromelabs.github.io/fugu-showcase/data/${item.screenshot}`
-    ).then(
-      contentLength =>
-        `
-      <item>
-        <title>${escapeXml(item.title)} (${item.appURL
-          .replace(/https?:\/\//, '')
-          .replace(/\/$/, '')})</title>
-        <description><![CDATA[
-          ${item.description ? `<p>${escapeXml(item.description)}</p>` : ''}
-          ${item.isElectronApp ? '<p>(This is an Electron.js app.)</p>' : ''}
-          <p>
-            <a href="${item.appURL}">
-              ${
-                contentLength
-                  ? `<img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/${item.screenshot}" alt="The app at ${item.appURL}."/>`
-                  : '<img style="width: 200px; height: 150px;" src="data:image/svg+xml;base64,CjxzdmcKICB2aWV3Qm94PSIwIDAgNDAwIDIyNSIKICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQgc2xpY2UiCj4KICA8cGF0aCBmaWxsPSJyZ2JhKDE0NSwxNDUsMTQ1LDAuNSkiIGQ9Ik0wIDBoNDAwdjIyNUgweiIgLz4KICA8dGV4dAogICAgZmlsbD0icmdiYSgwLDAsMCwwLjMzKSIKICAgIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiIKICAgIGZvbnQtc2l6ZT0iMXJlbSIKICAgIHRleHQtYW5jaG9yPSJtaWRkbGUiCiAgICB4PSIyMDAiCiAgICB5PSIxMTMiCiAgICBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIKICA+CiAgICBTY3JlZW5zaG90IG5vdCBhdmFpbGFibGUKICA8L3RleHQ+Cjwvc3ZnPg==" alt=""/>'
-              }
-            </a>
-          </p>
-          <p>
-            🚀 Try it out and
-            <a href="${item.appURL}">${
-          item.isElectronApp ? 'download' : 'launch'
-        } the app</a>.
-          </p>
-          ${
-            item.sourceURL
-              ? `<p>🧑‍💻 Check out the <a href="${item.sourceURL}">source code</a>.</p>`
-              : ''
-          }
-          <p>🛠️ Used APIs:</p>
-          <ul>
-            ${item.usedAPIs
-              .map(usedAPI => {
-                return `<li><a href="${usedAPI.url}"> ${escapeXml(
-                  usedAPI.name
-                )}</a></li>`;
-              })
-              .join('\n')}
-          </ul>
-        ]]></description>
-        <enclosure url="https://googlechromelabs.github.io/fugu-showcase/data/${
-          item.screenshot
-        }" length="${contentLength}" type="image/webp" />
-        <pubDate>${new Date(item.timestamp).toUTCString()}</pubDate>
-        <link>https://developer.chrome.com/fugu-showcase/#${id}</link>
-        <guid>https://developer.chrome.com/fugu-showcase/#${id}</guid>
-      </item>`
-    );
-  });
-
-  const rssItems = await Promise.all(promises);
-
-  rss += rssItems.join('');
-  rss += `
-    </channel>
-  </rss>`;
-
-  return rss.replace(/^\s*$\n/gm, '');
-}
-
-function escapeXml(unsafe) {
-  // @ts-ignore
-  return unsafe.replace(/[<>&'"]/g, c => {
-    switch (c) {
-      case '<':
-        return '&lt;';
-      case '>':
-        return '&gt;';
-      case '&':
-        return '&amp;';
-      case "'":
-        return '&apos;';
-      case '"':
-        return '&quot;';
-    }
-    return '';
-  });
-}
-
 async function run() {
   const response = await fetch(url);
 
@@ -156,13 +45,6 @@ async function run() {
 
   const targetFile = path.join(__dirname, '../data/fugu-showcase.json');
   fs.writeFileSync(targetFile, JSON.stringify(json));
-
-  const rss = await toRSS(json);
-  const targetRssFile = path.join(
-    __dirname,
-    '../../site/en/fugu-showcase/feed.xml'
-  );
-  fs.writeFileSync(targetRssFile, rss);
 }
 
 run();

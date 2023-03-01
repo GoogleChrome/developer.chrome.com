@@ -84,9 +84,6 @@ module.exports = eleventyConfig => {
   // they can't be, then this passthrough copy will pick them up.
   eleventyConfig.addPassthroughCopy('site/en/**/*.{jpg,jpeg,png,webp,gif}');
 
-  // The Project Fugu API Showcase RSS feed.
-  eleventyConfig.addPassthroughCopy('site/en/fugu-showcase/feed.xml');
-
   // Make .yml files work in the _data directory.
   eleventyConfig.addDataExtension('yml', contents => yaml.load(contents));
 
