@@ -151,7 +151,7 @@ The traffic allocation will look like the following starting on Tuesday, March 7
    </td>
   </tr>
   <tr>
-   <td style="border-left: 1px solid var(--color-hairline);border-right: 1px solid var(--color-hairline);">Isolated - 1% - Shared Storage (URL Selection) + Fenced Frames
+   <td style="border-left: 1px solid var(--color-hairline);border-right: 1px solid var(--color-hairline);">Isolated - 1% - Shared Storage (URL Selection) + Fenced Frames only
    </td>
   </tr>
   <tr>
