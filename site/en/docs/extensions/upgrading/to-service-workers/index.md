@@ -129,3 +129,97 @@ chrome.storage.local.get(["badgeText"], ({ badgeText }) => {
 
 `XMLHttpRequest()` can't be called from a service worker, extension or otherwise. Replace calls from your background script to `XMLHttpRequest()` with calls to [global `fetch()`](https://developer.mozilla.org/docs/Web/API/fetch). 
 
+{% Compare 'worse', 'XMLHttpRequest()' %}
+```javascript
+const xhr = new XMLHttpRequest();
+console.log('UNSENT', xhr.readyState); 
+
+xhr.open('GET', '/api', true);
+console.log('OPENED', xhr.readyState);
+
+xhr.onload = () => {
+    console.log('DONE', xhr.readyState);
+};
+xhr.send(null);
+```
+{% endCompare %}
+
+{% Compare 'better', 'fetch()' %}
+```js
+const response = await fetch('https://www.example.com/data.json'')
+console.log(response.statusText);
+```
+{% endCompare %}
+
+{% Aside 'important' %}
+If you previously used `XMLHttpRequest()` or `fetch()` to retrieve executable code, you can no longer do so. All executable code must be part of your extension package. For more information, see [Improve extension security](/docs/extensions/upgrading/improve-security).
+{% endAside %}
+
+## Persist states {: #persist-states }
+
+Service workers are ephemeral, which means they'll likely start, run, and terminate repeatedly during a user's browser session. It also means that data is not immediately available in global variables since the previous context was torn down. To get around this, use storage APIs as the source of truth. An example will show how to do this.
+
+The following example uses a global variable to store a name. In a service worker, this variable could be reset multiple times over the course of a user's browser session.
+
+{% Compare 'worse', 'Manifest V2 background script' %}
+```js
+let savedName = undefined;
+
+chrome.runtime.onMessage.addListener(({ type, name }) => {
+  if (type === "set-name") {
+    savedName = name;
+  }
+});
+
+chrome.browserAction.onClicked.addListener((tab) => {
+  chrome.tabs.sendMessage(tab.id, { name: savedName });
+});
+```
+{% endCompare %}
+
+For Manifest V3, replace the global variable with a call to [Storage API](/docs/extensions/reference/storage/). 
+
+{% Compare 'better', 'Manifest V3 service worker' %}
+```js
+chrome.runtime.onMessage.addListener(({ type, name }) => {
+  if (type === "set-name") {
+    chrome.storage.local.set({ name });
+  }
+});
+
+chrome.action.onClicked.addListener(async (tab) => {
+  const { name } = await chrome.storage.local.get(["name"]);
+  chrome.tabs.sendMessage(tab.id, { name });
+});
+```
+{% endCompare %}
+
+## Convert timers to alarms {: #convert-timers }
+
+It's common to use delayed or periodic operations using the `setTimeout()` or `setInterval()` methods. These APIs can fail in service workers, though, because the timers are canceled whenever the service worker is terminated.
+
+{% Compare 'worse', 'Manifest V2 background script' %}
+```js
+// 3 minutes in milliseconds
+const TIMEOUT = 3 * 60 * 1000; 
+setTimeout(() => {
+  chrome.action.setIcon({
+    path: getRandomIconPath(),
+  });
+}, TIMEOUT);
+```
+{% endCompare %}
+
+Instead, use the [Alarms API](/docs/extensions/reference/alarms/). As with other listeners, alarm listeners should be registered in the top level of your script.
+
+{% Compare 'better', 'Manifest V3 service worker' %}
+```js
+chrome.alarms.create({ delayInMinutes: 3 });
+
+chrome.alarms.onAlarm.addListener(() => {
+  chrome.action.setIcon({
+    path: getRandomIconPath(),
+  });
+});
+```
+{% endCompare %}
