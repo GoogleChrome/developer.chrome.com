@@ -49,7 +49,7 @@ You can check for anchoring support with:
 }
 ```
 
-Note that this API is still in an experimental stage and could change. This article covers the important parts at a high level. The current implementation also isn't completely in sync with the [CSSWG spec](https://drafts.csswg.org/css-anchor-position-1).
+Note that this API is still in an experimental stage and could change. This article covers the important parts at a high level. The current implementation also isn't completely in sync with the [CSS Working Group spec](https://drafts.csswg.org/css-anchor-position-1).
 
 ## The problem
 Why would you need to do this? A prominent use case would be creating tooltips or tooltip-like experiences. In that case, you often want to tether the tooltip to the content that it references. There is often a need for some way to tether an element to another. You also expect that interacting with the page doesn't break that tether—for example, if a user scrolls or resizes the UI.
