@@ -40,7 +40,7 @@ The following sections describe common use cases for declarative net requests. T
 A common use case in Manifest V2 was to blockIn Manifest V2, extensions blocked web requests using the `BeforeRequest` event in the background script. 
 
 {% Compare 'worse', 'Manifest V2 background script' %}
-```jsavascript
+```javascript
 chrome.webRequest.onBeforeRequest.addListener((e) => {
     return { cancel: true };
 }, { urls: ["https://www.example.com/*"] }, ["blocking"]);
@@ -92,7 +92,7 @@ To make this work, you'll need to update the extension's permissions. In the `ma
 Another common use case in Manifest V2 was to use the `BeforeRequest` event to redirect web requests. 
 
 {% Compare 'worse', 'Manifest V2 background script' %}
-```jsavascript
+```javascript
 chrome.webRequest.onBeforeRequest.addListener((e) => {
     console.log(e);
     return { redirectUrl: "https://developer.chrome.com/docs/extensions/mv3/intro/" };
