@@ -3,12 +3,17 @@ footer {
   background-color: var(--color-footer-bg);
 }
 
-.footer__stack .footer__heading {
-  color: var(--color-secondary-text);
-  font-size: 1.2rem;
-  line-height: 0.8rem;
-  opacity: 0.7;
-}
+.footer__stack {
+  .footer__heading {
+    color: get-color('grey-700');
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+  }
+
+  ul {
+    margin-top: 1.5rem;
+  }
+} 
 
 .footer__stack + .footer__stack {
   margin-top: get-size(500);
