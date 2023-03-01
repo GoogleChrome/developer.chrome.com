@@ -285,6 +285,13 @@ As you type JavaScript expressions in the Console, **Eager Evaluation** shows a 
 expression's return value. [Open Console Settings][30] and disable the **Eager Evaluation** checkbox
 to turn off the return value previews.
 
+### Trigger user activation with evaluation {: #trigger-user-activation }
+
+[User activation](/blog/user-activation/) is the state of a browsing session that depends on user actions. An "active" state means the user is currently interacting with the page or has interacted since page load.
+
+To trigger user activation with any evaluation, [open Console Settings][31] and
+check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Evaluate triggers user activation**.
+
 ### Disable autocomplete from history {: #autocomplete }
 
 As you type out an expression, the Console's autocomplete popup shows expressions that you ran

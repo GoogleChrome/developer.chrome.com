@@ -1,0 +1,23 @@
+select_api:
+  en: Select API
+
+search_apps:
+  en: Search apps
+
+screenshot_not_available:
+  en: Screenshot not available
+
+share_app:
+  en: Share app
+
+copy_link:
+  en: Copy link
+
+i_just_found_the_app:
+  en: "👀 I just found the app"
+
+it_uses_these_fugu_apis:
+  en: "Among others, it uses these cool Project Fugu APIs"
+
+via_the_fugu_showcase:
+  en: "via the 🐡 Project Fugu API Showcase"

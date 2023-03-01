@@ -4,16 +4,41 @@
 
 {# $content #}
 
-{# ### Chrome 109 {: #chrome109 }
+{# ### Chrome 111 {: #chrome111 }
 
-* [Recorder: Copy as options for steps, in-page replay, step’s context menu](/ja/blog/new-in-devtools-109/#recorder)
-* [Show actual function names in performance’s recordings](/ja/blog/new-in-devtools-109/#performance)
-* [New keyboard shortcuts in the Console & Sources panel](/ja/blog/new-in-devtools-109/#keyboard-shortcuts)
-* [Improved JavaScript debugging](/ja/blog/new-in-devtools-109/#debugging)
-* [Miscellaneous highlights](/ja/blog/new-in-devtools-109/#misc)
-* [[Experimental] Enhanced UX in managing breakpoints](/ja/blog/new-in-devtools-109/#breakpoint-redesign)
-* [[Experimental] Automatic in-place pretty print](/ja/blog/new-in-devtools-109/#pretty-print)
+* [Debugging HD color with the Styles pane](/ja/blog/new-in-devtools-111/#color)
+* [Enhanced breakpoint UX](/ja/blog/new-in-devtools-111/#breakpoint-redesign)
+* [Customizable Recorder shortcuts](/ja/blog/new-in-devtools-111/#recorder)
+* [Better syntax highlight for Angular](/ja/blog/new-in-devtools-111/#syntax)
+* [Reorganize caches in the Application panel](/ja/blog/new-in-devtools-111/#cache)
+* [Miscellaneous highlights](/ja/blog/new-in-devtools-111/#misc)
  #}
+ 
+
+{# ### Chrome 110 {: #chrome110 }
+
+* [Clearing Performance Panel on reload](/ja/blog/new-in-devtools-110/#perf)
+* [Recorder updates](/ja/blog/new-in-devtools-110/#recorder)
+* [View and highlight the code of your user flow in the Recorder](/ja/blog/new-in-devtools-110/#recorder-code)
+* [Customize selector types of a recording](/ja/blog/new-in-devtools-110/#recorder-selector)
+* [Edit user flow while recording](/ja/blog/new-in-devtools-110/#recorder-edit)
+* [Automatic in-place pretty print](/ja/blog/new-in-devtools-110/#pretty-print)
+* [Better syntax highlight and inline preview for Vue, SCSS and more](/ja/blog/new-in-devtools-110/#highlight)
+* [Ergonomic and consistent Autocomplete in the Console](/ja/blog/new-in-devtools-110/#console)
+* [Miscellaneous highlights](/ja/blog/new-in-devtools-110/#misc)
+ #}
+
+
+### Chrome 109 {: #chrome109 }
+
+* [Recorder: ステップごとのCopy asオプション、ページ内リプレイ、ステップのコンテキストメニュー](/ja/blog/new-in-devtools-109/#recorder)
+* [パフォーマンスの記録の中で実際の関数名を表示](/ja/blog/new-in-devtools-109/#performance)
+* [ConsoleとSourcesパネルでの新しいキーボードショートカット](/ja/blog/new-in-devtools-109/#keyboard-shortcuts)
+* [JavaScript デバッグの改善](/ja/blog/new-in-devtools-109/#debugging)
+* [その他のハイライト](/ja/blog/new-in-devtools-109/#misc)
+* [[実験的] ブレークポイント管理の UX 改善](/ja/blog/new-in-devtools-109/#breakpoint-redesign)
+* [[実験的] 自動的な直接のプリティプリント](/ja/blog/new-in-devtools-109/#pretty-print)
+
 
 ### Chrome 108 {: #chrome108 }
 

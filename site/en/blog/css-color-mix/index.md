@@ -199,7 +199,7 @@ both produce a vibrant result, while srgb and oklab produce unsaturated colors.
   <figcaption><a href="https://codepen.io/web-dot-dev/pen/VwBdxGm">Try the demo</a></figcaption>
 </figure>
 
-If you want consistency and subtly, use oklab. In the following demo which mixes
+If you want consistency and subtlety, use oklab. In the following demo which mixes
 blue and black, hsl and hwb produce overly vibrant and hue shifted colors while
 srgb and oklab produce a darker blue.
 

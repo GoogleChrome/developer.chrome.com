@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What are Chrome flags?
 subhead: Activate additional debugging tools, or try out new or experimental features.
 description: Enable additional debugging tools or try out new or experimental features in Chrome. 
-date: 2022-12-20
+date: 2023-02-08
 authors:
 - samdutton
 ---
@@ -177,6 +177,7 @@ for browser experimentation.
 [List of Chromium Command Line Switches](https://peter.sh/experiments/chromium-command-line-switches/)
 is automatically updated with all available flags and, last time we checked, there were more
 than 1400 of them!
+- [Chromium Flag Updates](https://twitter.com/ChromiumFlags) is a bot that tweets changes to the [chrome/browser/flag-metadata.json](https://chromium.googlesource.com/chromium/src/+/master/chrome/browser/flag-metadata.json) file.
 - There are even more flags available to configure individual JavaScript API features. You can
 find out more about them from API documentation and proposal explainers.
 - [Experimental features in Firefox](https://developer.mozilla.org/docs/Mozilla/Firefox/Experimental_features)

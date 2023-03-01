@@ -14,13 +14,13 @@
   <web-tab title="{{ 'i18n.events.upcoming_events' | i18n(locale) }}">
     <div id="upcoming-events"
          class="display-grid grid-cols-1 grid-gap-400"
-         total-items="{{ collections.currentEvents.length }}">
-      {% for event in collections.currentEvents.slice(0,show) %}
+         total-items="{{ currentEvents.length }}">
+      {% for event in currentEvents.slice(0,show) %}
         {% include 'partials/event-card.njk' %}
       {% endfor %}
     </div>
 
-    {% if collections.currentEvents.length > show %}
+    {% if currentEvents.length > show %}
       <button id="load-upcoming-events"
          class="load-more__button type--small display-inline-flex"
          aria-controls="upcoming-events"
@@ -30,17 +30,16 @@
       </button>
     {% endif %}
   </web-tab>
-
   <web-tab title="{{ 'i18n.events.past_events' | i18n(locale) }}">
     <div id="past-events"
          class="display-grid grid-cols-1 grid-gap-400"
-         total-items="{{ collections.pastEvents.length }}">
-      {% for event in collections.pastEvents.slice(0,show) %}
+         total-items="{{ pastEvents.length }}">
+      {% for event in pastEvents.slice(0,show) %}
         {% include 'partials/event-card.njk' %}
       {% endfor %}
     </div>
 
-    {% if collections.pastEvents.length > show %}
+    {% if pastEvents.length > show %}
       <button id="load-past-events"
               class="load-more__button type--small display-inline-flex"
               aria-controls="upcoming-events"

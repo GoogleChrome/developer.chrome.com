@@ -146,7 +146,7 @@ If you have a use case that relies on a shared cookie partition across sites wit
 
 To encourage good security practices, CHIPS proposes cookies only be set by and sent over secure protocols.
 
-Partitioned cookies must be set with `Secure` and `Path=/`.
+Partitioned cookies must be set with `Secure`.
 
 It is recommended to use the `__Host` prefix when setting partitioned cookies to make them bound to the hostname (and not the registrable domain).
 

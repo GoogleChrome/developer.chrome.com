@@ -20,6 +20,9 @@ accessibility:
 amp:
   en: AMP
 
+automation:
+  en: Browser Automation
+
 autoplay:
   en: Autoplay
 
@@ -113,6 +116,9 @@ graphics:
 houdini:
   en: Houdini
 
+headless:
+  en: Chrome’s Headless mode
+
 html:
   en: HTML
 
@@ -121,6 +127,7 @@ media:
 
 new-in-chrome:
   en: New in Chrome
+  es: Qué hay de nuevo en Chrome
 
 privacy:
   en: Privacy
