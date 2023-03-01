@@ -51,6 +51,11 @@
               {{ icon('mastodon', {hidden: true}) }}
             </a>
           {% endif %}
+          {% if paged.linkedin  %}
+            <a href="{{ paged.linkedin }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="LinkedIn">
+              {{ icon('linkedin', {hidden: true}) }}
+            </a>
+          {% endif %}
         </div>
       </div>
     </div>

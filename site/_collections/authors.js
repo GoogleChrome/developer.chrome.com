@@ -47,6 +47,7 @@ module.exports = collections => {
           authors[authorId].github = authorsData[authorId].github;
           authors[authorId].glitch = authorsData[authorId].glitch;
           authors[authorId].mastodon = authorsData[authorId].mastodon;
+          authors[authorId].linkedin = authorsData[authorId].linkedin;
 
           const element = {
             title: item.data.title,
