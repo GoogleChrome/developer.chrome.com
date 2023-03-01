@@ -80,7 +80,7 @@ const Glitch = args => {
   ).join('; ');
 
   return html`
-    <div style="height: ${glitchProps.height}px; width: 100%;">
+    <div class="glitch-embed-wrap" style="height: ${glitchProps.height}px; width: 100%;">
       ${IFrame({
         src: `${url.toString()}?${searchParams.toString()}`,
         title: `${glitchProps.id} on Glitch`,
