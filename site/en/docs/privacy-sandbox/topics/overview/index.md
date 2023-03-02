@@ -36,7 +36,7 @@ In the past, third-party cookies and other mechanisms have been used to track us
 
 With the Topics API, the browser observes and records topics that appear to be of interest to the user, based on their browsing activity. This information is recorded on the user's device. The Topics API can then give API callers (such as ad tech platforms) access to a user's topics of interest, but without revealing additional information about the user's browsing activity.
 
-Of course the Topics API must ensure that the topics of interest it provides are kept up to date. The browser infers topics for a user based on their browsing activity during a period of time known as an epoch, currently one week. The topic selected for each epoch is randomly selected from the user's top five topics for that time period. To further enhance privacy and ensure that all topics may be represented, there is a 5% chance the topic is randomly selected from all possible topics in a [taxonomy](https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md) of interests.
+Of course the Topics API must ensure that the topics of interest it provides are kept up to date. The browser infers topics for a user based on their browsing activity during a period of time known as an *epoch*, currently one week. The topic selected for each epoch is randomly selected from the user's top five topics for that time period. To further enhance privacy and ensure that all topics may be represented, there is a 5% chance the topic is randomly selected from all possible topics in a [taxonomy](https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md) of interests.
 
 The Topics API has three main tasks:
 
@@ -81,7 +81,7 @@ For more information on how to use and test the Topics API, refer to the [Topics
 #### How the API reduces fingerprinting
 {% endDetailsSummary %}
 
-The Topics API proposes multiple mechanisms to help ensure that it is difficult to re-identify significant numbers of users across sites using the Topics API alone:
+The Topics API proposes multiple mechanisms to help ensure that it is difficult to re-identify significant numbers of users *across* sites using the Topics API alone:
 
 - Because the Topics taxonomy provides  coarse-grained topics, each topic is expected to have large numbers of users (depending on the total number of users the given browser has). In fact, there is a guaranteed minimum number of users per topic, because 5% of the time the returned topic is random.
 - Topics are returned at random from the user's top five.
@@ -102,12 +102,11 @@ The origin trial of [FLoC](https://github.com/WICG/floc) in 2021 received a wide
 The Topics API has been designed with this feedback in mind, to explore other ways to support interest-based advertising, with improved transparency, stronger privacy assurances and a different approach for sensitive categories.
 {% endDetails %}
 
-{% Partial 'privacy-sandbox/topics-feedback.njk' %}
-
 ## Next steps
 
 Learn more about [what topics are and how they work](https://docs.google.com/document/d/17GWxmqP-eQyiNzyXlnsyQj2sGj3oEkm0dDAfZMIjRRg/edit#heading=h.oqqmacrrxpj3).
 
 If you're an ad tech developer, [experiment and participate](/docs/privacy-sandbox/topics-experiment/) with the Topics API. Read the developer guide for more in-depth resources.
 
+{% Partial 'privacy-sandbox/topics-feedback.njk' %}
 
