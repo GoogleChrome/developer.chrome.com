@@ -39,6 +39,7 @@ const {Aside} = require('./site/_shortcodes/Aside');
 const includeRaw = require('./site/_shortcodes/includeRaw');
 const {LanguageList} = require('./site/_shortcodes/LanguageList');
 const {Partial} = require('./site/_shortcodes/Partial');
+const {ChromeDate} = require('./site/_shortcodes/ChromeDate');
 const {BrowserCompat} = require('webdev-infra/shortcodes/BrowserCompat');
 
 // Transforms
@@ -153,6 +154,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addShortcode('LanguageList', LanguageList);
   eleventyConfig.addShortcode('BrowserCompat', BrowserCompat);
   eleventyConfig.addNunjucksAsyncShortcode('Partial', Partial);
+  eleventyConfig.addShortcode('ChromeDate', ChromeDate);
 
   // Empty shortcodes. They are added for backward compatibility with web.dev.
   // They will not render any html, but will prevent the build from failing.
