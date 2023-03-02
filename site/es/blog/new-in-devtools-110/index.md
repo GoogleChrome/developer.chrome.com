@@ -26,7 +26,7 @@ tags:
 
 
 <!-- ## Clearing Performance Panel on reload {: #perf } -->
-## Borrado del panel de rendimiento al recargar {: #perf }
+## Borrado del Panel Rendimiento al recargar {: #perf }
 
 <!-- The **Performance** panel now clears both the screenshot and trace when you click the **Start profiling and reload page** button. -->
 Ahora el panel **Rendimiento** borra tanto la captura de pantalla como el seguimiento cuando hace clic en el botón **Comenzar a crear perfiles y volver a cargar la página**.
