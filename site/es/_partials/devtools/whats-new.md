@@ -19,7 +19,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 
 * [Borrado del Panel Rendimiento al recargar](/es/blog/new-in-devtools-110/#perf)
 * [Actualizaciones en la Grabadora](/es/blog/new-in-devtools-110/#recorder)
-* [Vea y resalte el código de su flujo de usuario en el Grabador](/es/blog/new-in-devtools-110/#recorder-code)
+* [Vea y resalte el código de su flujo de usuario en la Grabadora](/es/blog/new-in-devtools-110/#recorder-code)
 * [Personalizar los tipos de selector de una grabación](/es/blog/new-in-devtools-110/#recorder-selector)
 * [Edite el flujo de usuario mientras graba](/es/blog/new-in-devtools-110/#recorder-edit)
 * [Formateo automático in-situ](/es/blog/new-in-devtools-110/#pretty-print)
