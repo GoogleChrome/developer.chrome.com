@@ -21,8 +21,8 @@ The [Private Aggregation API]( /docs/privacy-sandbox/private-aggregation) enable
 
 Before reading this article, it will be helpful to familiarize yourself with key terms and concepts. Each of these terms will be described in-depth within this article.
 
-*   An [_aggregation key_](#aggregation-key) (also known as a bucket) is a predetermined collection of data points. For example, you may want to collect a bucket of location data where the browser reports the country name. An aggregation key may contain more than one dimension (for example, country and ID of your content widget).
-*   An [_aggregatable value_](#aggregatable-value) is an individual data point collected into an aggregation key. In the example where the key is `country`, the value may be `Morocco`.
+*   An [_aggregation key_](#aggregation-key) (also known as a bucket) is a predetermined collection of data points. For example, you may want to collect a bucket of location data where the browser reports the country name. An aggregation key may contain more than one dimension (for example, country and ID of your content widget). 
+*   An [_aggregatable value_](#aggregatable-value) is an individual data point collected into an aggregation key. If you want to measure how many users from France have seen your content, then `France` is a dimension in the aggregation key, and the `viewCount` of `1` is the aggregatable value.
 *   _Aggregatable reports_ are generated and encrypted within a browser. For the Private Aggregation API, this contains data about a single event.
 *   The [_aggregation service_](/docs/privacy-sandbox/aggregation-service) processes data from aggregatable reports to create a summary report.
 *   A _summary report_ is the final output of the aggregation service, and contains noisy aggregated user data and detailed conversion data.
@@ -55,7 +55,7 @@ For example, you may have a widget that is embedded across multiple sites and wa
 The key supplied to the Private Aggregation API is a
 [BigInt](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/BigInt), which consists of multiple dimensions. In this example, the dimensions are the widget ID and country ID. Let's say that the widget ID can be up to 4 digits long such as `1234`, and each country is mapped to a number in alphabetical order such as Afghanistan is `1`, France is `61`, and Zimbabwe is '195'.  Therefore, the aggregatable key would be 7 digits long, where the first 4 characters are reserved for the `WidgetID` and the last 3 characters are reserved for the `CountryID`. 
 
-Let's say the key represents the count of users from France (country ID `061`) who have seen the widget ID `3276`, The aggregation key is `327061`. 
+Let's say the key represents the count of users from France (country ID `061`) who have seen the widget ID `3276`, The aggregation key is `3276061`. 
 
 <table>
   <tr>

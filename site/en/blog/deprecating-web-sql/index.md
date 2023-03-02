@@ -10,7 +10,7 @@ description: >
 authors:
   - thomassteiner
 date: 2022-08-31
-updated: 2022-12-13
+updated: 2023-01-12
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/yUp8lfaCt4EmxmVei3lj.jpg
 alt: Filing cabinet symbolizing a database.
 tags:
@@ -41,9 +41,12 @@ technologies show their strengths when it comes to key/value stores and structur
 acknowledgedly also have weaknesses like the lack of a strong query language. People want SQL on the
 web for a reason.
 
-{% Aside %} Our intention is to empower developers to create their own solutions for structured
-storage and we're therefore working with the [SQLite](https://www.sqlite.org/index.html) team to
-create a SQLite implementation over WebAssembly. This solution will replace Web SQL. {% endAside %}
+{% Aside 'success' %} Our intention is to empower developers to create their own solutions for structured
+storage. We've worked with the [SQLite](https://www.sqlite.org/index.html) team to
+create a SQLite implementation over WebAssembly. This
+[solution is now ready](/blog/sqlite-wasm-in-the-browser-backed-by-the-origin-private-file-system/)
+and outperforms Web SQL in many cases.
+{% endAside %}
 
 ## Web SQL deprecation and removal steps
 
@@ -52,7 +55,7 @@ create a SQLite implementation over WebAssembly. This solution will replace Web 
 - [✅ Done.] Web SQL access in **insecure contexts** was deprecated as of
   **Chromium&nbsp;105** ({{ '105'|chromeDate }}) at which time a warning message was shown in the Chrome DevTools Issue
   panel.
-  
+
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/AunrHQyWXS6AmECRn9oT.png", alt="Chrome DevTools Issues panel with a warning that reads Web SQL in non-secure contexts is deprecated.", width="800", height="158" %}
 
 - [📍 We are here.] Web SQL access in **insecure contexts** is no longer available as of
@@ -70,10 +73,11 @@ As pointed out in the introduction,
 [IndexedDB](https://developer.mozilla.org/docs/Web/API/IndexedDB_API/Using_IndexedDB) standard are
 good alternatives in many, but by far not all cases.
 
-We're therefore working with the SQLite community on a replacement for Web SQL based on SQLite
-implemented in WebAssembly (Wasm), which will be released in the near future. For developers looking
-for a drop-in replacement, we're investigating if a shim script can be provided. The article will be
-updated once the replacement is ready.
+{% Aside %}
+We recommend most users switch to
+[SQLite compiled to WebAssembly, backed by the Origin Private File System (OPFS)](/blog/sqlite-wasm-in-the-browser-backed-by-the-origin-private-file-system/),
+especially those with strong performance requirements.
+{% endAside %}
 
 ### Rationale for leaving storage to web developers
 
@@ -83,7 +87,8 @@ With the advent of Wasm, SQL or NoSQL solutions can come to the web. One example
 developer community can iterate on and create new storage solutions faster and better than browser
 vendors.
 
-We're not planning to just remove Web SQL. In fact, we're planning to replace it with something that
+We're not planning to just remove Web SQL. In fact, we replaced it with
+[something](/blog/sqlite-wasm-in-the-browser-backed-by-the-origin-private-file-system/) that
 will be maintained by the open-source community, served as a package that can be updated at
 will—without the burden of introducing fixes and new features directly into browsers. Our objective
 really is to let developers bring their own database to the web.
@@ -229,6 +234,7 @@ this group is open to anyone, and anyone is allowed to post.
   [Deprecate and remove WebSQL in insecure contexts](https://bugs.chromium.org/p/chromium/issues/detail?id=1212492)
 - Chromium issue:
   [Deprecate and remove WebSQL (Window#openDatabase)](https://bugs.chromium.org/p/chromium/issues/detail?id=695592)
+- [SQLite Wasm in the browser backed by the Origin Private File System](/blog/sqlite-wasm-in-the-browser-backed-by-the-origin-private-file-system/)
 
 ## Acknowledgements
 

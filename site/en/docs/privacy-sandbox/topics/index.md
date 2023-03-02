@@ -6,7 +6,7 @@ subhead: >
 description: >
   Try out the Topics demo, and learn about the API and how to run Topics with flags or participate in an origin trial.
 date: 2022-01-25
-updated: 2022-11-13
+updated: 2022-02-01
 authors:
   - samdutton
 ---
@@ -211,7 +211,7 @@ Access the TensorFlow Lite model file, and the topics inferred for hostnames,
 {% endAside %}
 
 The diagram below outlines a simplified example, to demonstrate how the Topics API might help an
-adtech platform to select an appropriate ad. The example assumes that the user's browser already
+ad tech platform to select an appropriate ad. The example assumes that the user's browser already
 has a model to map website hostnames to topics.
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/u9e1VvzblNVHCfyk1hRY.png",
@@ -224,11 +224,10 @@ The Topics API lifecycle: [view a larger version](https://wd.imgix.net/image/80m
 
 {% Aside %}
 
-The Topics API proposal is at the
-[initial discussion phase](/docs/privacy-sandbox/cds21-update/#discussion)
-to gather and act on feedback from the ecosystem.
-
-The API design is not final and the details below will change as discussions progress.
+The Topics API proposal is in the
+[discussion phase](/docs/privacy-sandbox/proposal-lifecycle/#discussion)
+to gather and act on feedback from the ecosystem. The API design is not final
+and the details below will change as discussions progress.
 
 {% endAside %}
 
@@ -259,8 +258,7 @@ The Topics explainer proposes that each topic object in the array returned by
 {% Aside %}
 
 The design of the Topics API is currently under discussion as an
-[explainer](https://github.com/jkarlin/topics), which is only the first step in the
-standardization process. The API is not finalized.
+[explainer](https://github.com/patcg-individual-drafts/topics). The API is not finalized.
 
 The parameters described in this article, and details of the API (such as taxonomy size, the
 number of topics calculated per week and the number of topics returned per call) are subject to
@@ -284,7 +282,7 @@ limited timeframe.
 A Topics API _caller_ is the entity that calls the `document.browsingTopics()` JavaScript
 method, and will use the topics returned by the method to help select relevant ads.
 Typically, a call to `document.browsingTopics()` would be from code included in a site from a
-third party such as an adtech platform. The browser determines the caller from the site of the
+third party such as an ad tech platform. The browser determines the caller from the site of the
 current document. So, if you're a third party on a page, make sure you call the API from an
 iframe that your site owns.
 
@@ -353,53 +351,85 @@ This snippet of code is provided only to show how the Topics JavaScript API
 might be used. API design is subject to change.
 {% endAside %}
 
-#### Access topics without modifying state {: #observe-false}
+#### Access topics without modifying state {: #skipobservation}
 
 A caller can specify that they would like to retrieve topics without modifying state by calling
-`document.browsingTopics({observe: false})`.
+`document.browsingTopics({skipObservation: true})`.
 
-Including the `{observe: false}` argument means that topics can be returned, but the call will not
+Including the `{skipObservation: true}` argument means that topics can be returned, but the call will not
 cause the current page to be included in the weekly epoch calculation, nor will it update the list
 of topics observed for the caller.
 
-### Use a header to access topics
+### Use headers to access and observe topics {: #headers}
 
-Instead of calling `document.browsingTopics()`, topics can be retrieved via a request header, and
-marked as observed and eligible for topics calculation via response headers.
+Rather than use the Topics JavaScript API from an iframe, topics can be accessed and marked as 
+observed by using request and response headers:
 
-This is likely to be much more performant than using the JavaScript API.
+* Topics can be accessed from the `Sec-Browsing-Topics` header of a `fetch()` or `XHR` request. 
+* Topics that were provided in a request header can be marked as observed by setting a 
+`Observe-Browsing-Topics: ?1` header on the response to the request. The browser will then use those 
+topics (that were included in the request header) for calculating topics of interest for a user.
 
-The request header will be sent on document requests, if the list of topics is non-empty and the
-request is allowable. For example, when the appropriate [permission policy](#site-opt-out) is in play,
-and the context is secure.
+Using request and response headers to access topics and mark them as observed can be much more performant 
+than using the JavaScript API from an iframe. For example, the header mechanism could be used when a `fetch()` 
+request is made to an ad server. No iframe required!
 
-{% Aside 'caution' %}
-This feature is not yet available for testing within the [Privacy Sandbox Relevance and Measurement origin trial](/origintrials/#/view_trial/771241436187197441). It will be made available in the future,
-and is currently [targeted for Chrome 108](https://github.com/patcg-individual-drafts/topics/pull/81#issuecomment-1260846931),
-but that is subject to change.
-{% endAside %}
+#### Demo
 
-#### Request header example
+The demo at [topics-fetch-demo.glitch.me](https://topics-fetch-demo.glitch.me) shows how to use `fetch()` 
+request and response headers to access topics and mark them as observed.
 
-``` text
-Sec-Browsing-Topics: 123;model=1;taxonomy=1;version=2, 2;model=1;taxonomy=1;version=2
-```
+#### Access the `Sec-Browsing-Topics` request header to view topics
 
-This header includes two topics from the
-[taxonomy](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md), 123 and 2,
-along with their version information.
+Instead of using `document.browsingTopics()` from an iframe to view topics for a user, API callers 
+can access observed topics from the `Sec-Browsing-Topics` request header of a 
+[`fetch()`](https://developer.mozilla.org/docs/Web/API/fetch) request that includes `{browsingTopics: true}` 
+in its `options` parameter—or from the same header of an [`XHR`](https://developer.mozilla.org/docs/Glossary/XHR_(XMLHttpRequest)) 
+request that sets `deprecatedBrowsingTopics` attribute to `true`. 
 
-A Topics request header can also be provided with a `fetch()` request:
+For example:
 
 ``` javascript
-fetch(<url>, {browsingTopics: true})
+fetch('https://topics-server.glitch.me', {browsingTopics: true}).
+  then(...);
 ```
+In browsers that support the API, the `fetch()` request will include a `Sec-Browsing-Topics` header 
+that lists topics observed for the request URL hostname: in this example, `topics-server.glitch.me`.
 
-#### Response header example
+If no topics have been observed for this hostname and this user, the header is included but the 
+value is empty. In other words, the `Sec-Browsing-Topics` header on a `fetch()` request only includes 
+topics that have been observed for the current user's browser by a caller whose origin matches the 
+hostname of the request URL. This is the same as if you were calling `document.browsingTopics()` from 
+an iframe to view observed topics for the current user.
+
+{% Aside %}
+The request header is sent on a request as long as it has the appropriate [permission policy](#site-opt-out) 
+is in play, the context is secure, and user settings permit it. Topics 
+[are not provided](https://github.com/patcg-individual-drafts/topics/issues/7) in headers for navigation requests.
+{% endAside %}
+
+The Topics request header looks like this:
 
 ``` text
-Observe-Browsing-Topics: ?1
+Sec-Browsing-Topics: 186;version="chrome.1:1:2206021246";config_version="chrome.1";model_version="2206021246";taxonomy_version="1", 265;version="chrome.1:1:2206021246";config_version="chrome.1";model_version="2206021246";taxonomy_version="1"
 ```
+
+This example includes two topics from the [Topics taxonomy](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md), 
+186 and 265, along with each topic's version information.
+
+{% Aside %}
+The [fetch()](https://chromium-review.googlesource.com/c/chromium/src/+/4044267) and 
+[XHR](https://chromium-review.googlesource.com/c/chromium/src/+/4103742) implementations were first made available in Chrome 111.
+
+Inclusion of the topics header in `XHR` requests is only available temporarily, and support will be removed in future.
+{% endAside %}
+
+#### Use the `Observe-Browsing-Topics` response header to mark topics as observed
+
+If a request includes a `Sec-Browsing-Topics` header and the response to that request includes 
+an `Observe-Browsing-Topics: ?1` header, then topics from the request header will be marked by 
+the browser as observed. Observed topics are eligible for calculation by the Topics API.
+This mechanism is designed to match the functionality provided by using the JavaScript API from an iframe.
 
 #### Notes
 
@@ -410,7 +440,7 @@ Observe-Browsing-Topics: ?1
     affect the user's topic calculation for the next epoch.
 -  The response header is only honored if the corresponding request included the topics
     header (or would have included the header, if the request wasn't empty).
--  The URL of this request provides the registrable domain used for topic observation.
+-  The URL of the request provides the registrable domain used for topic observation.
 
 ### How does the Topics API decide which callers can see which topic?
 
@@ -827,7 +857,7 @@ This is because the colab only uses the classifier model to infer topics, wherea
 ## How does the Topics API address concerns with FLoC?
 
 The origin trial of [FLoC](https://github.com/WICG/floc) in 2021 received a wide range of feedback
-from adtech and web ecosystem contributors. In particular, there were concerns that FLoC cohorts
+from ad tech and web ecosystem contributors. In particular, there were concerns that FLoC cohorts
 could be used as a fingerprinting surface to identify users, or could reveal a user's association
 with a sensitive category. There were also calls to make FLoC more transparent and understandable to
 users.

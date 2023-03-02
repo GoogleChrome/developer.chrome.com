@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Manifest - Web Accessible Resources"
 seoTitle: "Chrome Extensions Manifest: web_accessible_resources"
 date: 2013-05-12
-updated: 2022-10-18
+updated: 2023-02-16
 description: Reference documentation for the web_accessible_resources property of manifest.json.
 ---
 
@@ -12,13 +12,12 @@ extensions. Extensions typically use this feature to expose images or other asse
 loaded in web pages, but any asset included in an extension's bundle can be made web accessible.
 
 By default no resources are web accessible; only pages or scripts loaded from an extension's origin
-can access that extension's resources. Extension authors can use the `web_accessible_resources`
-manifest property to declare which resources are exposed and to what origins.
+can access that extension's resources. 
 
 {% Aside %}
-Prior to Manifest V2 all resources within an extension could be accessed from any page on the
-web. This allowed a malicious website to [fingerprint][6] the extensions that a user has installed
-or exploit vulnerabilities (for example [XSS bugs][7]) within installed extensions. 
+Before Manifest V2 all resources in an extension could be accessed from any page on the
+web. This allowed a malicious website to [fingerprint][6] extensions that a user has installed
+or exploit vulnerabilities (for example [XSS bugs][7]) in installed extensions. 
 
 Beginning with Manifest V2, access to those resources was limited to protect the privacy of users. Manifest V2
 extensions exposed only those resources explicitly designated as web accessible.
@@ -30,8 +29,9 @@ pages, domains, or extensions.
 
 ## Manifest declaration
 
-An array of objects that declare resource access rules. Each object maps an array of
-extension resources to an array of URLs and/or extension IDs that can access those resources.
+Use the `web_accessible_resources` manifest property to declare which resources are exposed and to
+what origins. This property is an array of objects that declares resource access rules. Each object
+maps an array of extension resources to an array of URLs and/or extension IDs that can access those resources.
 
 ```json
 {
@@ -68,18 +68,19 @@ Each element must include a `"resources"` element and either a `"matches"` or `"
 
 ## Navigability of resources
 
-These resources are available in a webpage via the URL
-`chrome-extension://[PACKAGE ID]/[PATH]`, which can be generated with the [`runtime.getURL`][1]
+Resources are available in a webpage via the URL
+`chrome-extension://[PACKAGE ID]/[PATH]`, which can be generated with the [`runtime.getURL()`][1]
 method. The resources are served with appropriate [CORS][2] headers, so they're available
-via mechanisms like XHR.
+via XHR.
 
-A navigation from a web origin to an extension resource will be blocked unless the resource is
+A navigation from a web origin to an extension resource is blocked unless the resource is
 listed as web accessible. Note these corner cases:
 
 - When an extension uses the [webRequest][3] or [declarativeWebRequest][4] APIs to redirect a public
-  resource request to a resource that is not web accessible, such request is also blocked.
+  resource request to a resource that is not web accessible, such a request is also blocked.
 - The above holds true even if the resource that is not web accessible is owned by the redirecting
   extension.
+- Navigation is blocked in incognito mode unless the value of the [`"incognito"` field](/docs/extensions/mv3/manifest/incognito/) is set to `"split"`.
 
 [Content scripts][5] themselves do not need to be allowed.
 
@@ -87,7 +88,7 @@ listed as web accessible. Note these corner cases:
 
 The [Web Accessible Resources example][war-example] demonstrates the use of this element in a working extension.
 
-[war-example]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/web-accessible-resources
+[war-example]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/web-accessible-resources
 [1]: /docs/extensions/reference/extension/#method-getURL
 [2]: https://www.w3.org/TR/cors/
 [3]: /docs/extensions/reference/webRequest/

@@ -30,7 +30,57 @@ your configuration, and provides further resources for testing against the APIs.
 
 ## Check the status of the origin trial {: #status}
 
-### November 2022
+### January 2023
+
+As part of a Chrome regression investigation, we will temporarily reduce FLEDGE origin trial traffic from 5% to 4% of Chrome Stable, from January 26th 2023. We estimate the investigation will take about a month, and we will notify you when the traffic is ramped back up.  
+
+This change will happen automatically, and will not impact your existing origin trial tokens. For the users in the 1% traffic that will ramp down, the interest groups will remain in their browsers. The same users will be part of the ramp back up, and their interest groups can be reused. However, the interest groups expire in 30 days, and the regression investigation may take longer than that. 
+
+Also, Shared Storage’s URL Selection API origin trial will be increasing to 5% of Chrome Stable traffic from January 26th 2023.
+
+<table>
+  <tr>
+   <th>API</th>
+   <th>Notes</th>
+  </tr>
+  <tr>
+   <td><a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a>
+   </td>
+   <td>Available in Stable, increased to 5% from October 26th 2022.
+   </td>
+  </tr>
+  <tr>
+   <td><a href="/docs/privacy-sandbox/topics/">Topics</a>
+   </td>
+   <td>Available in Stable, increased to 5% from October 26th 2022.
+   </td>
+  </tr>
+  <tr>
+   <td><a href="/docs/privacy-sandbox/fledge/">FLEDGE</a>
+   </td>
+   <td>Available in Stable, temporarily decreasing to 4% from January 26th 2023.
+   </td>
+  </tr>
+  <tr>
+   <td><a href="/docs/privacy-sandbox/fenced-frame/">Fenced Frames</a>
+   </td>
+   <td>Available in Stable, increasing to 5% from November 9th 2022.
+   </td>
+  </tr>
+  <tr>
+   <td><a href="/docs/privacy-sandbox/shared-storage/">Shared Storage</a>
+   </td>
+   <td>Available in Stable, increasing 5% from January 26th 2023.
+   </td>
+  </tr>
+</table>
+
+{% Details %} {% DetailsSummary %}
+### Previous updates
+
+Check out previous updates on the origin trial. {% endDetailsSummary %}
+
+#### November 2022
 
 Shared Storage’s `selectURL` API will be [joining the origin
 trial](https://groups.google.com/a/chromium.org/g/blink-dev/c/Vi-Rj37aZLs/m/wXlBwB_UAQAJ)
@@ -76,11 +126,6 @@ on November 9th.
    </td>
   </tr>
 </table>
-
-{% Details %} {% DetailsSummary %}
-### Previous updates
-
-Check out previous updates on the origin trial. {% endDetailsSummary %}
 
 #### October 2022: 5% increase
 

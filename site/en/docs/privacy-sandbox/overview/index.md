@@ -103,14 +103,8 @@ parse this data from the User-Agent string.
 * [**DNS-over-HTTPS**](https://en.wikipedia.org/wiki/DNS_over_HTTPS): A protocol for
 [DNS resolution](https://www.cloudflare.com/en-gb/learning/dns/what-is-dns/) via the secure
 context of [HTTPS](https://www.cloudflare.com/en-gb/learning/ssl/what-is-https/).
-* [**Gnatcatcher**](https://github.com/bslassey/ip-blindness): Limit the ability to identify individual
-users by accessing their IP address. There are two parts to the proposal:
-[**Willful IP Blindness**](https://github.com/bslassey/ip-blindness/blob/master/willful_ip_blindness.md)
-provides a way for websites to let browsers know they are not connecting IP addresses with users,
-and [**Near-path NAT**](https://github.com/bslassey/ip-blindness/blob/master/near_path_nat.md) allows
-groups of users to send their traffic through the same privatizing server, effectively hiding their
-IP addresses from a site host. Gnatcatcher also ensures that sites requiring access to IP addresses
-for legitimate purposes such as abuse prevention can do so, subject to certification and auditing.
+* [**IP Protection**](https://github.com/spanicker/ip-blindness): IP Protection proposes to anonymize the user's IP address, to help protect it from being used by third parties identified as potentially using IP addresses for web-wide cross-site tracking.
+* [**Bounce tracking mitigations**](/docs/privacy-sandbox/bounce-tracking-mitigations/): A proposal to reduce or eliminate the ability of bounce tracking to recognize people across contexts.
 * [**Privacy Budget**](https://www.youtube.com/watch?v=0STgfjSA6T8): Explore methods of quantifying
 the amount of information about a user's browser or device that are available to websites, and develop
 practical mechanisms to enable browser-based limits on the information a site can access.
@@ -163,7 +157,7 @@ tab for each explainer.
 * [Privacy Budget](https://github.com/bslassey/privacy-budget)
 * [Private State Tokens](https://github.com/dvorak42/trust-token-api)
 * [First-Party Sets](https://github.com/privacycg/first-party-sets)
-* [Gnatcatcher](https://github.com/bslassey/ip-blindness)
+* [IP Protection](https://github.com/spanicker/ip-blindness)
 * [Aggregated Reporting API](https://github.com/csharrison/aggregate-reporting-api)
 * [Attribution Reporting](https://github.com/csharrison/conversion-measurement-api)
 * [Topics API](https://github.com/jkarlin/topics)

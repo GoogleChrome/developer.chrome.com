@@ -1,11 +1,11 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Recorder features reference"
+title: "Features reference"
 authors:
   - sofiayem
   - jecelynyeen
 date: 2022-06-21
-#updated: YYYY-MM-DD
+updated: 2023-02-07
 description: "A comprehensive reference of Chrome DevTools Recorder panel features."
 tags:
   - test
@@ -73,13 +73,7 @@ You can install a Chrome extension to export replay scripts in your favorite for
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xRO1d79tBe0ILcBoD0oh.png", alt="Custom extension for the Recorder panel.", width="800", height="486" %}
 
-For example:
-
-- [Cypress extension](https://chrome.google.com/webstore/detail/cypress-chrome-recorder/fellcphjglholofndfmmjmheedhomgin) lets you export JSON user flows as [Cypress test script](https://github.com/cypress-io/cypress-recorder-extension). [Cypress](https://cypress.io) is a front end testing tool built for the modern web.
-- [WebPageTest extension](https://chrome.google.com/webstore/detail/webpagetest-recorder-exte/eklpnjohdjknellndlnepihjnhpaimok) lets you export user flows from the Recorder directly as [WebPageTest Custom scripts](https://docs.webpagetest.org/scripting/) to measure site's performance. See [Converting user flows to WebPageTest custom scripts](https://blog.webpagetest.org/posts/introducing-the-new-webpagetest-recorder-chrome-extension/) to learn more. 
-- [Nightwatch extension](https://chrome.google.com/webstore/detail/nightwatch-chrome-recorde/nhbccjfogdgkahamfohokdhcnemjafjk/) lets you export JSON user flows as [Nightwatch test script](https://github.com/nightwatchjs/nightwatch-recorder-extension). [Nightwatch](https://nightwatchjs.org/) is an end-to-end testing solution for web applications and websites.
-- [Testing Library extension](https://chrome.google.com/webstore/detail/testing-library-recorder/pnobfbfcnoeealajjgnpeodbkkhgiici) lets you export JSON user flows as [Testing Library script](https://github.com/nickmccurdy/testing-library-recorder-extension). [Testing Library](https://testing-library.com/) has simple and complete testing utilities that encourage good testing practices.
-- [WebdriverIO extension](https://chrome.google.com/webstore/detail/webdriverio-chrome-record/pllimkccefnbmghgcikpjkmmcadeddfn) lets you export JSON user flows as [WebdriverIO test script](https://github.com/webdriverio/recorder-extension). [WebdriverIO](https://webdriver.io/) is an end-to-end testing solution for web, mobile and IoT applications and websites.
+For a list of known **Recorder** extensions, see [Extensions](/docs/devtools/recorder/extensions/).
 
 ##### Troubleshooting {: #extension-troubleshooting }
 
@@ -117,6 +111,7 @@ Transform JSON user flows to custom scripts:
 
 - [Cypress Chrome Recorder](https://github.com/cypress-io/cypress-chrome-recorder). You can use it to convert user flow JSON files to Cypress test scripts. Watch this [demo](https://youtu.be/4qYs2bMz4GI) to see it in action.
 - [Nightwatch Chrome Recorder](https://github.com/nightwatchjs/nightwatch-chrome-recorder). You can use it to convert user flow JSON files to Nightwatch test scripts. 
+- [CodeceptJS Chrome Recorder](https://github.com/PeterNgTr/codeceptjs-chrome-recorder). You can use it to convert user flow JSON files to CodeceptJS test scripts. 
 
 Replay JSON user flows:
 
@@ -135,7 +130,7 @@ Similar to the 3rd party libraries above, you can build your own library on top 
 
 Like any code, sometimes you have to debug the recorded user flows.
 
-To help you debug, the **Recorder** panel lets you slow down the replays, set breakpoints, and step through the execution.
+To help you debug, the **Recorder** panel lets you slow down the replays, set breakpoints, step through the execution, and inspect code in various formats in parallel with steps.
 
 ### Slow down the replay
 
@@ -153,6 +148,24 @@ By default, the **Recorder** replays the user flow as fast as it can. To underst
 {% Aside 'gotchas' %}
 You can use these slow replay options only in the **Recorder**. To add timeouts to the recording itself, see [Adjust timeouts for steps](/docs/devtools/recorder/reference/#adjust-timeout).
 {% endAside %}
+
+### Inspect code {: #inspect-code }
+
+To inspect the code of a user flow in various formats:
+
+1. Open a recording in the **Recorder** panel.
+1. Click **Show code** in the top right corner of the steps list.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/KhynxMityVxQeMJuNdU9.png", alt="The Show code button.", width="800", height="669" %}
+1. The **Recorder** shows a side-by-side view of the steps and their code. 
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/3K7idCdrqrZHmMR5Kczc.png", alt="The side-by-side view of the steps and their code.", width="800", height="685" %}
+1. As you hover over a step, the **Recorder** highlights its respective code in any format, including those provided by [extensions](#recorder-extension).
+   {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/u4YeMnjPuw9nINCPdViD.mp4", autoplay=true, controls=true, loop=true, class="screenshot" %}
+1. Expand the format drop-down list to select a format that you use to [export user flows](#export-flows).
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/fefVto1d2oXvkmBD9DPQ.png", alt="The format drop-down list.", width="800", height="685" %}
+
+   It can be one of the three default formats (JSON, [@puppeteer/replay](https://github.com/puppeteer/replay), [Puppeteer script](https://pptr.dev/)) or a format provided by an [extension](#recorder-extension).
+1. Proceed to debug your recording by [editing step parameters and values](#edit-steps). The code view isn't editable but it updates accordingly as you make changes to steps on the left.
 
 ### Set breakpoints and execute step by step {: #breakpoints-and-step-through }
 
@@ -193,18 +206,37 @@ To manually add a step:
 1. Try replaying the recording again. With the added hover step, the **Recorder** successfully replays the flow.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/P8YGHbff2vGgCKOkEth6.png", alt="Replay success.", width="800", height="567" %}
 
+### Copy steps {: #copy-steps }
+
+Instead of [exporting the entire user flow](/docs/devtools/recorder/reference/#export-flows), you can copy a single step to the clipboard:
+
+1. Right-click the step you want to copy or click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N7wEDmtW9lnrSxPRupMa.svg", alt="Three-dot menu.", width="24", height="24" %} three-dot icon next to it.
+1. In the drop-down menu, select one of the **Copy as ...** options.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/sCSd3cpON80i6n5M3Rir.png", alt="Selecting a copy option from the drop-down menu.", width="800", height="577" %}
+
+You can copy steps in various formats: JSON, [Puppeteer](https://pptr.dev/), [@puppeteer/replay](https://github.com/puppeteer/replay), and those provided by [extensions](#recorder-extension).
+
 ### Remove steps {: #remove-steps }
 
-To remove an accidentally recorded step, select **Remove step** from the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Three-dot button.", width="22", height="22" %} three-dot menu next to the step.
+To remove an accidentally recorded step, right-click the step or click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N7wEDmtW9lnrSxPRupMa.svg", alt="Three-dot menu.", width="24", height="24" %} three-dot icon next to it and select **Remove step**.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/QOPYGEUDal764qxj8YBB.png", alt="Remove a step.", width="800", height="601" %}
 
+Additionally, the **Recorder** automatically adds two separate steps to the start of every recording:
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/8szraTN0ibqAAeNDVGTs.png", alt="A recording with the set viewport and navigation steps.", width="800", height="562" %}
+
+- **Set viewport**. Lets you control the viewport's dimensions, scaling, and [other properties](#step-properties).
+- **Navigate**. Sets the URL and automatically refreshes the page for every replay.
+
+To perform in-page automation without reloading the page, remove the navigation step as described above. 
 
 ### Configure steps {: #configure-steps }
 
 To configure a step:
 
-1. Specify its type: `click`, `doubleClick`, (input) `change`, `keyUp`, `keyDown`, `scroll`, `close`, `navigate` (to a page), `waitForElement`, or `waitForExpression`.
+1. Specify its type: `click`, `doubleClick`, `hover`, (input) `change`, `keyUp`, `keyDown`, `scroll`, `close`, `navigate` (to a page), `waitForElement`, `waitForExpression`, or `setViewport`.
    
    Other properties depend on the `type` value.
 
@@ -244,13 +276,13 @@ Type-specific properties are:
     </thead>
     <tbody>
         <tr>
-            <td><code>click</code>, <code>doubleClick</code></td>
-            <td><code>offsetX</code>, <code>offsetY</code></td>
+            <td><code>click</code><br><code>doubleClick</code></td>
+            <td><code>offsetX</code><br><code>offsetY</code></td>
             <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
             <td>Relative to the top-left of the element content box, in pixels</td>
         </tr>
         <tr>
-            <td><code>click</code>, <code>doubleClick</code></td>
+            <td><code>click</code><br><code>doubleClick</code></td>
             <td><code>button</code></td>
             <td></td>
             <td>Pointer button: primary | auxiliary | second | back | forward</td>
@@ -262,14 +294,14 @@ Type-specific properties are:
             <td>Final value</td>
         </tr>
         <tr>
-            <td><code>keyDown</code>, <code>keyUp</code></td>
+            <td><code>keyDown</code><br><code>keyUp</code></td>
             <td><code>key</code></td>
             <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
             <td>Key name</td>
         </tr>
         <tr>
             <td><code>scroll</code></td>
-            <td><code>x</code>, <code>y</code></td>
+            <td><code>x</code><br><code>y</code></td>
             <td></td>
             <td>Absolute scroll x and y positions in pixels, default 0</td>
         </tr>
@@ -296,6 +328,24 @@ Type-specific properties are:
             <td><code>expression</code></td>
             <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
             <td>JavaScript expression that resolves to true</td>
+        </tr>
+        <tr>
+            <td><code>setViewport</code></td>
+            <td><code>width</code><br><code>height</code></td>
+            <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
+            <td>Width and height of the viewport in pixels</td>
+        </tr>
+        <tr>
+            <td><code>setViewport</code></td>
+            <td><code>deviceScaleFactor</code></td>
+            <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
+            <td>Similar to Device Pixel Ratio (DPR), default 1</td>
+        </tr>
+        <tr>
+            <td><code>setViewport</code></td>
+            <td><code>isMobile</code><br><code>hasTouch</code><br><code>isLandscape</code></td>
+            <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
+            <td>Boolean flags that specify whether to: <li>Take the meta tag into account</li><li>Support touch events</li><li>Display in landscape mode</li></td>
         </tr>
     </tbody>
 </table>
@@ -365,7 +415,7 @@ When you start a new recording, you can configure the following:
 For more information, see [Syntactic vs. semantic selectors](/blog/puppetaria/#syntactic-vs-semantic-selectors) and [Selector priority](#selector-priority).
 {% endAside %}
 
-### Common test selectors {: common-test-selector}
+### Common test selectors {: common-test-selector }
 
 For simple webpages, `id` attributes and CSS `class` attributes are sufficient for the **Recorder** to detect the selectors. However, that might not always be the case because:
 

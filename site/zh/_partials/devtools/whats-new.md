@@ -4,6 +4,41 @@
 
 {# $content #}
 
+{# ### Chrome 111 {: #chrome111 }
+
+* [Debugging HD color with the Styles pane](/zh/blog/new-in-devtools-111/#color)
+* [Enhanced breakpoint UX](/zh/blog/new-in-devtools-111/#breakpoint-redesign)
+* [Customizable Recorder shortcuts](/zh/blog/new-in-devtools-111/#recorder)
+* [Better syntax highlight for Angular](/zh/blog/new-in-devtools-111/#syntax)
+* [Reorganize caches in the Application panel](/zh/blog/new-in-devtools-111/#cache)
+* [Miscellaneous highlights](/zh/blog/new-in-devtools-111/#misc)
+ #}
+
+
+{# ### Chrome 110 {: #chrome110 }
+
+* [Clearing Performance Panel on reload](/zh/blog/new-in-devtools-110/#perf)
+* [Recorder updates](/zh/blog/new-in-devtools-110/#recorder)
+* [View and highlight the code of your user flow in the Recorder](/zh/blog/new-in-devtools-110/#recorder-code)
+* [Customize selector types of a recording](/zh/blog/new-in-devtools-110/#recorder-selector)
+* [Edit user flow while recording](/zh/blog/new-in-devtools-110/#recorder-edit)
+* [Automatic in-place pretty print](/zh/blog/new-in-devtools-110/#pretty-print)
+* [Better syntax highlight and inline preview for Vue, SCSS and more](/zh/blog/new-in-devtools-110/#highlight)
+* [Ergonomic and consistent Autocomplete in the Console](/zh/blog/new-in-devtools-110/#console)
+* [Miscellaneous highlights](/zh/blog/new-in-devtools-110/#misc)
+ #}
+
+
+### Chrome 109 {: #chrome109 }
+
+* [Recorder: 为步骤提供新的复制选项，支持页面内重放，步骤支持鼠标右键弹出菜单](/zh/blog/new-in-devtools-109/#recorder)
+* [Performance 面板里面的记录显示实际的函数名称](/zh/blog/new-in-devtools-109/#performance)
+* [Console & Sources 面板新增快捷键](/zh/blog/new-in-devtools-109/#keyboard-shortcuts)
+* [改善 JavaScript 调试体验](/zh/blog/new-in-devtools-109/#debugging)
+* [其他的更新](/zh/blog/new-in-devtools-109/#misc)
+* [【实验阶段】优化断点管理界面的 UX](/zh/blog/new-in-devtools-109/#breakpoint-redesign)
+* [【实验阶段】自动格式化](/zh/blog/new-in-devtools-109/#pretty-print)
+
 
 ### Chrome 108 {: #chrome108 }
 
@@ -16,11 +51,11 @@
 
 ### Chrome 107 {: #chrome107 }
 
-* [客制化开发者工具 （DevTools） 的键盘快捷键](/zh/blog/new-in-devtools-107/#shortcuts)
+* [客制化开发者工具（DevTools）的键盘快捷键](/zh/blog/new-in-devtools-107/#shortcuts)
 * [使用键盘快捷键对光亮与深色主题进行快速切换](/zh/blog/new-in-devtools-107/#toggle-themes)
 * [高亮记忆检查器里的 C/C++ 对象](/zh/blog/new-in-devtools-107/#memory)
 * [支持 HAR 导入的完整启动器的资讯](/zh/blog/new-in-devtools-107/#har)
-* [点击回车键 (Enter) 后开始DOM搜索](/zh/blog/new-in-devtools-107/#search-type)
+* [点击回车键 (Enter) 后开始 DOM 搜索](/zh/blog/new-in-devtools-107/#search-type)
 * [在 `align-content` 的 CSS flexbox 属性中显示 `start` 和 `end` 图标](/zh/blog/new-in-devtools-107/#flexbox)
 * [其他的更新](/zh/blog/new-in-devtools-107/#misc)
 
@@ -34,7 +69,7 @@
 * [在来源面板中隐藏被忽略的来源](/zh/blog/new-in-devtools-106/#ignore-nav)
 * [在命令菜单中隐藏被忽略的文件](/zh/blog/new-in-devtools-106/#ignore-search)
 * [性能面板中的新互动轨道](/zh/blog/new-in-devtools-106/#performance)
-* [性能洞察面板中的LCP时序分解](/zh/blog/new-in-devtools-106/#insights)
+* [性能洞察面板中的 LCP 时序分解](/zh/blog/new-in-devtools-106/#insights)
 * [在 Recorder 面板中自动生成录音的默认名称](/zh/blog/new-in-devtools-106/#recorder)
 * [其他的更新](/zh/blog/new-in-devtools-106/#misc)
 
@@ -43,7 +78,7 @@
 
 * [录制面板中的分步重放](/zh/blog/new-in-devtools-105/#recorder)
 * [支持录制面板中的鼠标悬浮事件](/zh/blog/new-in-devtools-105/#recorder-hover)
-* [性能洞察面板中的最大内容绘制 （LCP）](/zh/blog/new-in-devtools-105/#lcp)
+* [性能洞察面板中的最大内容绘制（LCP）](/zh/blog/new-in-devtools-105/#lcp)
 * [将闪烁的文本（FOIT、FOUT）识别为布局变化的潜在根本原因](/zh/blog/new-in-devtools-105/#foit-fout)
 * [Manifest 窗格中的协议处理程序](/zh/blog/new-in-devtools-105/#manifest)
 * [元素面板中的顶层徽章](/zh/blog/new-in-devtools-105/#top-layer)
@@ -67,7 +102,7 @@
 * [识别退后/前进缓存面板中的阻塞帧](/zh/blog/new-in-devtools-104/#bfcache)
 * [优化 JavaScript 对象的自动填充建议功能](/zh/blog/new-in-devtools-104/#autocomplete)
 * [优化 Sourcemaps 功能](/zh/blog/new-in-devtools-104/#sourcemaps)
-* [其他的更新](/zh/blog/new-in-devtools-104/#misc) 
+* [其他的更新](/zh/blog/new-in-devtools-104/#misc)
 
 
 ### Chrome 103 {: #chrome103 }
@@ -121,7 +156,7 @@
 ### Chrome 99 {: #chrome99 }
 
 * [WebSocket 请求限速](/zh/blog/new-in-devtools-99/#websocket)
-* [应用面板里面的 报告 API （Reportng API）新边栏](/zh/blog/new-in-devtools-99/#reporting-api)
+* [应用面板里面的 报告 API（Reportng API）新边栏](/zh/blog/new-in-devtools-99/#reporting-api)
 * [支持 Recorder 面板一直处于等待状态，直到元素可见或可点击](/zh/blog/new-in-devtools-99/#recorder)
 * [更好的控制台样式，格式化和过滤](/zh/blog/new-in-devtools-99/#console)
 * [使用 sourcemap 文件来调试 Chrome 扩展](/zh/blog/new-in-devtools-99/#extension)
@@ -142,7 +177,7 @@
 * [模拟 CSS forced-colors 媒体功能](/zh/blog/new-in-devtools-98/#forced-colors)
 * [在鼠标指针悬停时显示标尺](/zh/blog/new-in-devtools-98/#show-rulers)
 * [在 Flexbox 编辑器中支持 `row-reverse` 和 `column-reverse`](/zh/blog/new-in-devtools-98/#flexbox-editor)
-* [新增“重放 XHR “和“扩展所有搜索结果”的键盘快捷键](/zh/blog/new-in-devtools-98/#shortcuts)
+* [新增“重放 XHR“和“扩展所有搜索结果”的键盘快捷键](/zh/blog/new-in-devtools-98/#shortcuts)
 * [Lighthouse 面板中的 Lighthouse 9](/zh/blog/new-in-devtools-98/#lighthouse)
 * [源代码面板的改善](/zh/blog/new-in-devtools-98/#sources)
 * [其他的更新](/zh/blog/new-in-devtools-98/#misc)
@@ -159,10 +194,10 @@
 
 ### Chrome 96 {: #chrome96 }
 
-* [预览特性: 新的 CSS 概览面板](/zh/blog/new-in-devtools-96/#css-overview)
-* [修复以及改善 CSS 长度编辑与复制的体验](/zh/blog/new-in-devtools-96/#length) 
+* [预览特性：新的 CSS 概览面板](/zh/blog/new-in-devtools-96/#css-overview)
+* [修复以及改善 CSS 长度编辑与复制的体验](/zh/blog/new-in-devtools-96/#length)
 * [模拟 CSS prefers-contrast 媒体特性](/zh/blog/new-in-devtools-96/#prefers-contrast)
-* [Emulate the Chrome’s Auto Dark Theme feature模拟 Chrome 的自动深色主题特性](/zh/blog/new-in-devtools-96/#auto-dark-mode)
+* [Emulate the Chrome’s Auto Dark Theme feature 模拟 Chrome 的自动深色主题特性](/zh/blog/new-in-devtools-96/#auto-dark-mode)
 * [将样式窗格里面的 CSS 规则复制为 JavaScript 属性](/zh/blog/new-in-devtools-96/#copy-as-js)
 * [网络面板新增载荷（Payload）边栏](/zh/blog/new-in-devtools-96/#payload)
 * [优化属性窗格里面的属性展示](/zh/blog/new-in-devtools-96/#properties)

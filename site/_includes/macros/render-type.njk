@@ -491,13 +491,13 @@
       </span>
     {% endif %}
     {% if feature.minManifest %}
-      <span class="aside--gotchas tag-pill type--label rounded-lg" title="Minimum manifest version">
+      <span class="aside--important tag-pill type--label rounded-lg" title="Minimum manifest version">
         {{ feature.minManifest }}+
       </span>
     {% endif %}
 
     {% if feature.disallowServiceWorkers %}
-      <span class="aside--gotchas tag-pill type--label rounded-lg" title="Not available in Service Workers">
+      <span class="aside--important tag-pill type--label rounded-lg" title="Not available in Service Workers">
         Foreground only
       </span>
     {% endif %}

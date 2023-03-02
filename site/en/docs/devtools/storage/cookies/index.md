@@ -36,7 +36,7 @@ The **Cookies** table contains the following fields:
 - **Expires / Max-Age**. The cookie's expiration date or maximum age.
   For [session cookies][6] this value is always `Session`.
 - **Size**. The cookie's size, in bytes.
-- **HTTP**. If true, this field indicates that the cookie should only be used over HTTP, and
+- **HttpOnly**. If true, this field indicates that the cookie should only be used over HTTP, and
   JavaScript modification is not allowed.
 - **Secure**. If true, this field indicates that the cookie can only be sent to the server over a
   secure, HTTPS connection.

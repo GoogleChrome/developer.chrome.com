@@ -4,13 +4,42 @@ title: "Give users options"
 seoTitle: "Chrome Extensions: Give users options"
 date: 2012-09-18
 updated: 2018-04-29
-description: How to let users customize your Extension.
+description: How to let users customize your extension.
 ---
 
-Allow users to customise the behavior of an extension by providing an options page. A user can view
-an extension's options by right-clicking the extension icon in the toolbar then selecting options or
-by navigating to the extension management page at `chrome://extensions`, locating the desired
-extension, clicking **Details**, then selection the options link.
+Just as extensions allow users to customize the Chrome browser, the options page enables customization of the extension. Options can be used to enable features and allow users to choose what functionality is relevant to their needs.
+
+## Locating the options page {: #view_page }
+
+Users can access the options page via [direct link][section-link-options] or by right-clicking the extension icon in the toolbar and then selecting options. Additionally, a user can navigate to the Extensions page at `chrome://extensions`, locate the desired extension, click **Details**, and then select the options link.
+
+{% Columns %}
+
+{% Column %}
+
+<figure>
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/Mz7GV76tFkzxRlb7Pq6e.png", 
+alt="Options page link in the user interface", width="800", height="299" %}
+  <figcaption>
+    Link to the Options page.
+  </figcaption>
+</figure>
+
+{% endColumn %}
+
+{% Column %}
+
+<figure>
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/BM11QeGCThsUNTlsZbAe.png", 
+alt="Context Menu Options page", width="357", height="222" %}
+
+  <figcaption>
+    Right-clicking on the extension's icon.
+  </figcaption>
+</figure>
+
+{% endColumn %}
+{% endColumns %}
 
 ## Write the options page {: #write_page }
 
@@ -214,3 +243,4 @@ embedded page will find an appropriate size.
 [14]: /docs/extensions/runtime#method-sendMessage
 [15]: /docs/extensions/runtime#property-MessageSender-tab
 [16]: /docs/extensions/runtime#property-MessageSender-url
+[section-link-options]: #linking

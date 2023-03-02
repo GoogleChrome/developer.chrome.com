@@ -18,6 +18,7 @@ This document outlines a new proposal for cross-site measurement.
 
 * The [Private Aggregation API](https://github.com/patcg-individual-drafts/private-aggregation-api/) has entered [public discussion](https://github.com/patcg-individual-drafts/private-aggregation-api/issues).
 * Private Aggregation API is available for testing in Chrome M107+ Canary and Dev.
+* Private Aggregation API is available in the [Privacy Sandbox Unified Origin Trial](/docs/privacy-sandbox/unified-origin-trial/) in Chrome M107+ Beta.
 
 ## What is the Private Aggregation API
 

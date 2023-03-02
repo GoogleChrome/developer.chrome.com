@@ -80,7 +80,7 @@ Modifier key strings
     - To use the Control key on macOS, replace `Ctrl` with `MacCtrl` when defining the `"mac"`
       shortcut.
 
-    - Including `MacCtrl` in other shortcuts will cause the extension to be uninstallable.
+    - Using `MacCtrl` in the combination for another platform will cause a validation error and prevent the extension from being installed.
 
 - `Shift` is an optional modifier on all platforms.
 

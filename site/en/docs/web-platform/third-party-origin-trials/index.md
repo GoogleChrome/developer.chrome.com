@@ -10,7 +10,7 @@ description: >
 author:
   - samdutton
 date: 2020-10-01
-updated: 2022-04-11
+updated: 2023-01-05
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/gPlFs9TIUayaQ1MvxRlP.jpg
 alt: Person wearing medical gloves pouring purple liquid from glass beaker into flask. Bristol Robotics Laboratory, UK.
 tags:
@@ -85,6 +85,10 @@ on progress with third-party origin trials.
      <figcaption class="w-figcaption">Registration page for the Conversion Measurement trial.</figcaption>
    </figure>
 
+{% Aside 'caution' %}
+A third-party token must be provided in an external JavaScript file included via a `<script>`
+element: a third-party token won't work in a meta tag, inline script or HTTP header.
+{% endAside %}
 
 ## Provide a trial token programmatically {: #provide-token}
 
@@ -117,9 +121,10 @@ on the Origin Trials GitHub repository.
 
 ## Find out more
 
--  [Demo](https://ot-3p.glitch.me)
--  [Getting started with Chrome's origin trials](/blog/origin-trials/)
--  [Origin Trials Guide for Web Developers](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
--  [Chrome Platform Status](https://www.chromestatus.com/features/5691464711405568)
+* [Demo](https://ot-3p.glitch.me)
+* [Cross-origin iframe examples](https://ot-iframe-3p.glitch.me)
+* [Getting started with Chrome's origin trials](/blog/origin-trials/)
+* [Origin Trials Guide for Web Developers](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
+* [Chrome Platform Status](https://www.chromestatus.com/features/5691464711405568)
 
 Photo by [Louis Reed](https://unsplash.com/@_louisreed) on [Unsplash](https://unsplash.com/photos/JeInkKlI2Po).

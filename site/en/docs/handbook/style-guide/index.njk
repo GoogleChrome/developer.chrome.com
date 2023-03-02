@@ -502,7 +502,11 @@ line-height: 160%;
     {% Img src='image/BrQidfK9jaQyIHwdw91aVpkPiib2/TDNgfhI9byR4eeGQ0Xxv.png', alt='Screenshot', height="302", width="770", class="screenshot screenshot--filled" %}
   </div>
 
-  <checkbox-group show="4" i18n="{{ 'i18n.checkbox_group' | i18n(locale) | dump }}">
+  {% set checkboxGroupI18n = {
+    reset: 'i18n.common.checkbox_group.reset'|i18n, 
+    select_all: 'i18n.common.checkbox_group.select_all'|i18n
+  } %}
+  <checkbox-group show="4" i18n='{{ checkboxGroupI18n|dump|safe }}''>
     <label><input type="checkbox" /> Option 1</label>
     <label><input type="checkbox" /> Option 2</label>
     <label><input type="checkbox" disabled /> Option 3</label>

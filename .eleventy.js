@@ -14,6 +14,7 @@ const {githubLink} = require('./site/_filters/github-link');
 const {namespaceToPath} = require('./site/_filters/namespace');
 const mdFilters = require('./site/_filters/md');
 const {slugify} = require('./site/_filters/slugify');
+const {ensureUniqueHrefInProduction} = require('./site/_filters/ensureUniqueHrefInProduction');
 const {toc} = require('./site/_filters/toc');
 const {chromeDate} = require('./site/_filters/chromeDate');
 const {updateSvgForInclude} = require('webdev-infra/filters/svg');
@@ -39,6 +40,7 @@ const {Aside} = require('./site/_shortcodes/Aside');
 const includeRaw = require('./site/_shortcodes/includeRaw');
 const {LanguageList} = require('./site/_shortcodes/LanguageList');
 const {Partial} = require('./site/_shortcodes/Partial');
+const {BrowserCompat} = require('webdev-infra/shortcodes/BrowserCompat');
 
 // Transforms
 const {domTransformer} = require('./site/_transforms/dom-transformer-pool');
@@ -126,6 +128,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('updateSvgForInclude', updateSvgForInclude);
   eleventyConfig.addFilter('slugify', slugify);
   eleventyConfig.addFilter('toc', toc);
+  eleventyConfig.addFilter('ensureUniqueHrefInProduction', ensureUniqueHrefInProduction);
   eleventyConfig.addFilter('typeof', x => typeof x);
   eleventyConfig.addFilter('chromeDate', chromeDate);
   eleventyConfig.addNunjucksAsyncFilter('minifyHtml', minifyHtml);
@@ -150,12 +153,12 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPairedShortcode('Aside', Aside);
   eleventyConfig.addPairedShortcode('Label', Label);
   eleventyConfig.addShortcode('LanguageList', LanguageList);
+  eleventyConfig.addShortcode('BrowserCompat', BrowserCompat);
   eleventyConfig.addNunjucksAsyncShortcode('Partial', Partial);
 
   // Empty shortcodes. They are added for backward compatibility with web.dev.
   // They will not render any html, but will prevent the build from failing.
   eleventyConfig.addShortcode('Widget', Empty);
-  eleventyConfig.addShortcode('BrowserCompat', Empty);
   eleventyConfig.addShortcode('CodePattern', Empty);
 
   // Add transforms

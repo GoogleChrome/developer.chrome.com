@@ -1,5 +1,6 @@
 - url: /docs/extensions/mv3
 - url: /docs/extensions/whatsnew
+- url: /docs/extensions/gethelp
 - title: i18n.docs.extensions.get-started
   sections:
   - url: /docs/extensions/mv3/getstarted/
@@ -15,7 +16,6 @@
     - url: /docs/extensions/mv3/intro/mv3-overview
 - title: i18n.docs.extensions.overview
   sections:
-    - url: /docs/extensions/mv3/overview
     - url: /docs/extensions/mv3/themes
     - url: /docs/extensions/mv3/faq
     - url: /docs/extensions/mv3/single_purpose
@@ -55,9 +55,11 @@
   sections:
     - url: /docs/extensions/mv3/settings_override
     - url: /docs/extensions/mv3/devtools
+    - url: /docs/extensions/mv3/favicon
     - url: /docs/extensions/mv3/tut_oauth
     - url: /docs/extensions/mv3/override
     - url: /docs/extensions/mv3/richNotifications
+    - url: /docs/extensions/mv3/nativeMessaging
 - title: i18n.docs.extensions.quality
   sections:
     - url: /docs/extensions/mv3/user_privacy

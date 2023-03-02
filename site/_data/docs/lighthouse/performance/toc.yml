@@ -4,13 +4,12 @@
 - title: i18n.docs.performance.topics.metrics
   sections:
     - url: /docs/lighthouse/performance/first-contentful-paint/
-    - url: /docs/lighthouse/performance/first-meaningful-paint/
     - url: /docs/lighthouse/performance/speed-index/
-    - url: /docs/lighthouse/performance/first-cpu-idle/
-    - url: /docs/lighthouse/performance/interactive/
-    - url: /docs/lighthouse/performance/lighthouse-max-potential-fid/
     - url: /docs/lighthouse/performance/lighthouse-total-blocking-time/
     - url: /docs/lighthouse/performance/lighthouse-largest-contentful-paint/
+    - url: https://web.dev/cls/
+      title: i18n.docs.performance.topics.cls
+      description: i18n.docs.performance.topics.cls_description
 - title: i18n.docs.performance.topics.opportunities
   sections:
     - url: /docs/lighthouse/performance/render-blocking-resources/
@@ -41,3 +40,10 @@
     - url: /docs/lighthouse/performance/mainthread-work-breakdown/
     - url: /docs/lighthouse/performance/font-display/
     - url: /docs/lighthouse/performance/resource-summary/
+    - url: /docs/lighthouse/performance/bf-cache/
+- title: i18n.docs.performance.topics.retired_metrics
+  sections:
+    - url: /docs/lighthouse/performance/interactive/
+    - url: /docs/lighthouse/performance/first-meaningful-paint/
+    - url: /docs/lighthouse/performance/first-cpu-idle/
+    - url: /docs/lighthouse/performance/lighthouse-max-potential-fid/

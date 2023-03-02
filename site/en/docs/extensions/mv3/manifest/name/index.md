@@ -1,40 +1,32 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Manifest - Name and Short Name"
-seoTitle: "Chrome Extensions Manifest: name and short_name"
+title: "Manifest - name"
+seoTitle: "Chrome Extensions Manifest: name"
 date: 2013-05-12
-updated: 2018-04-26
-description: Reference documentation for the name and short_name properties of manifest.json.
+updated: 2023-01-23
+description: Reference documentation for the name property of manifest.json.
 ---
 
-The `name` and `short_name` manifest properties are short, plain text strings that identify the
-extension. For example:
+The `name` property (required) is a short, plain text string (maximum of 45
+characters) that identifies the extension. For example:
 
 ```json
 {
-  "name": "My extension name",
-  "short_name": "My short extension name"
+  "name": "My extension name"
 }
 ```
 
-You can specify locale-specific strings for both fields; see [Internationalization][api-i18n]
+You can specify a locale-specific string; see [Internationalization][api-i18n]
 for details.
 
-## Name {: #name }
-
-The `name` (maximum of 45 characters) is the primary identifier of the extension and is a required
-field. It is displayed in the following locations:
+It is displayed in the following locations:
 
 - Install dialog
 - Extensions page (chrome://extensions)
 - [Chrome Web Store][cws]
 
-## Short Name {: #short_name }
-
-The `short_name` (maximum of 12 characters recommended) is a short version of the extension's name.
-It is an optional field and if not specified, the `name` will be used, though it will likely be
-truncated. The short name is typically used where there is insufficient space to display the full
-name.
+See also [Short Name](short-name).
 
 [api-i18n]: /docs/extensions/i18n
 [cws]: https://chrome.google.com/webstore
+[short-name]: /docs/extensions/mv3/manifest/short_name/

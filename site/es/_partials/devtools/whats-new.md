@@ -4,14 +4,44 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 
 {# $content #}
 
-{# ### Chrome 108 {: #chrome108 }
+{# ### Chrome 111 {: #chrome111 }
 
-* [Hints for inactive CSS properties](/es/blog/new-in-devtools-108/#css-hint)
-* [Auto-detect XPath and text selectors in the Recorder panel](/es/blog/new-in-devtools-108/#recorder)
-* [Step through comma-separated expressions](/es/blog/new-in-devtools-108/#debugging)
-* [Improved Ignore list setting](/es/blog/new-in-devtools-108/#ignore-list)
-* [Miscellaneous highlights](/es/blog/new-in-devtools-108/#misc)
+* [Debugging HD color with the Styles pane](/es/blog/new-in-devtools-111/#color)
+* [Enhanced breakpoint UX](/es/blog/new-in-devtools-111/#breakpoint-redesign)
+* [Customizable Recorder shortcuts](/es/blog/new-in-devtools-111/#recorder)
+* [Better syntax highlight for Angular](/es/blog/new-in-devtools-111/#syntax)
+* [Reorganize caches in the Application panel](/es/blog/new-in-devtools-111/#cache)
+* [Miscellaneous highlights](/es/blog/new-in-devtools-111/#misc)
  #}
+
+
+{# ### Chrome 110 {: #chrome110 }
+
+* [Clearing Performance Panel on reload](/es/blog/new-in-devtools-110/#perf)
+* [Recorder updates](/es/blog/new-in-devtools-110/#recorder)
+* [View and highlight the code of your user flow in the Recorder](/es/blog/new-in-devtools-110/#recorder-code)
+* [Customize selector types of a recording](/es/blog/new-in-devtools-110/#recorder-selector)
+* [Edit user flow while recording](/es/blog/new-in-devtools-110/#recorder-edit)
+* [Automatic in-place pretty print](/es/blog/new-in-devtools-110/#pretty-print)
+* [Better syntax highlight and inline preview for Vue, SCSS and more](/es/blog/new-in-devtools-110/#highlight)
+* [Ergonomic and consistent Autocomplete in the Console](/es/blog/new-in-devtools-110/#console)
+* [Miscellaneous highlights](/es/blog/new-in-devtools-110/#misc)
+ #}
+
+ 
+
+
+
+### Chrome 109 {: #chrome109 }
+
+* [Recorder: Copia como opciones para los pasos, reproducción en la página, menú contextual del paso](/es/blog/new-in-devtools-109/#recorder)
+* [Muestra los nombres reales de las funciones en las grabaciones de rendimiento](/es/blog/new-in-devtools-109/#performance)
+* [Nuevos atajos de teclado en el panel Consola y Fuentes](/es/blog/new-in-devtools-109/#keyboard-shortcuts)
+* [Mejoras en la depuración de JavaScript {: #debugging](/es/blog/new-in-devtools-109/#debugging)
+* [Otros aspectos destacados](/es/blog/new-in-devtools-109/#misc)
+* [[Experimental] Mejorada la UX para la gestión de puntos de interrupción](/es/blog/new-in-devtools-109/#breakpoint-redesign)
+* [[Experimental] Formatea automáticamente el código para una mejor lectura](/es/blog/new-in-devtools-109/#pretty-print)
+
 
 ### Chrome 108 {: #chrome108 }
 
@@ -165,7 +195,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 ### Chrome 96 {: #chrome96 }
 
 * [Función de vista previa: Nuevo panel de Descripción General de CSS](/es/blog/new-in-devtools-96/#css-overview)
-{# * [Restored and improved CSS length edit and copy experince](/es/blog/new-in-devtools-966/#length) #}
+
 * [Emule la función multimedia CSS de contraste](/es/blog/new-in-devtools-96/#prefers-contrast)
 * [Emula la función de tema oscuro automático de Chrome](/es/blog/new-in-devtools-96/#auto-dark-mode)
 * [Copiar declaraciones como JavaScript en el panel Estilos](/es/blog/new-in-devtools-96/#copy-as-js)
