@@ -127,7 +127,6 @@ We recommend reading the corresponding experiment and participate guide for the 
 
 We've created a local testing tool to process aggregatable reports for Attribution Reporting and the Private Aggregation API. [Read the instructions](https://github.com/privacysandbox/aggregation-service/blob/main/README.md).
 
-To use this tool, install a Java Runtime Environment.
 
 ### Test on AWS
 
