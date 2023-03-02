@@ -508,7 +508,6 @@ the following properties:
 {: #user-controls}
 
 {% DetailsSummary %}
-
 ### Available browser configuration
 
 {% endDetailsSummary %}
