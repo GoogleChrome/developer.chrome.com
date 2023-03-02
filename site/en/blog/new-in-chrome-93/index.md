@@ -24,7 +24,7 @@ tags:
 Here's what you need to know:
 
 * You can now load CSS style sheets with [`import` statements](#css-modules),
-  just like JavaScript modules.
+  just like JavaScript modules. 
 * Installed PWAs can register as [URL handlers](#url-handlers), making it
   possible for users to jump straight into your PWA.
 * The [Multi-Screen Window Placement API](#window-placement) has been updated
