@@ -493,7 +493,7 @@ FLEDGE does not yet prevent a website's ad network from learning which ads a per
 ### Can the Topics API be used with the FLEDGE API? 
 
 {% endDetailsSummary %}
-Yes. An observed topic for the current user, provided by the Topics API, could be used as 
+Yes. An observed topic for the current user, provided by the [Topics API](/docs/privacy-sandbox/topics/), could be used as 
 contextual information by a seller or bidder. A topic could be included in
 the following properties:
 
