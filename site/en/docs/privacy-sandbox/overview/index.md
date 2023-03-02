@@ -128,6 +128,8 @@ and cover a wide variety of use cases and requirements.
 400+ participants have joined W3C groups to provide input including the
 [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants) and
 the [Privacy Community Group](https://www.w3.org/community/privacycg/participants).
+## Where are the Privacy Sandbox APIs available?
+
 Five API implementations are currently available for testing in Chrome.
 
 The APIs are implemented in
