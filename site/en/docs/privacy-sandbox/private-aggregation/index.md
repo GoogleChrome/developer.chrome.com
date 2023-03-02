@@ -50,7 +50,7 @@ Attribution Reporting associates data gathered from an impression event and a co
 
 The API is available in the [Privacy Sandbox unified origin trial](/docs/privacy-sandbox/unified-origin-trial/) on Chrome Canary and Dev M107 or later. Learn how you can register for a [third-party origin trial](/docs/web-platform/third-party-origin-trials/).
 
-The Private Aggregation API can also be locally tested by enabling the Privacy Sandbox Ads APIs experiment flag at ``chrome://flags/#privacy-sandbox-ads-apis``.
+The Private Aggregation API can also be locally tested by enabling the Privacy Sandbox Ads APIs experiment flag at `chrome://flags/#privacy-sandbox-ads-apis`.
 
 {% Img
 	src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/CWfgCMJQ5cYPOfjttF3k.png",
@@ -58,9 +58,7 @@ The Private Aggregation API can also be locally tested by enabling the Privacy S
 	width="744", height="124"
 %}
 
-{% Aside %}
-At this time, the Aggregation Service back-end and its local testing tool only process aggregatable reports for the Attribution Reporting API. This will be updated to support the Private Aggregation API soon.
-{% endAside %}
+Read more about testing in [experiment and participate](/docs/privacy-sandbox/private-aggregation-experiment/).
 
 ### Use the demo
 

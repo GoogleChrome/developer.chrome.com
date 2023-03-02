@@ -18,20 +18,12 @@ reports from the
 the [Private Aggregation API](/docs/privacy-sandbox/private-aggregation/) to
 create a [summary report](/docs/privacy-sandbox/summary-report/).
 
-{% Aside %}
-At this time, the aggregation service and its local testing tool only process
-aggregatable reports for the Attribution Reporting API. This will be updated to
-support the Private Aggregation API soon.
-{% endAside %}
-
 ## Implementation status
 
 * The [Aggregation Service proposal](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md)
-  has entered public discussion.
-* The aggregation service can be tested for the
-  [Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting-experiment/).
-  It is still in development for use with the
-  [Private Aggregation API](/docs/privacy-sandbox/private-aggregation/).
+  is available for discussion.
+* The [Aggregation Service can be tested](#test) with the
+  Attribution Reporting API and the Private Aggegration API for FLEDGE and Shared Storage.
 
 The proposal outlines
 [key terms](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md#key-terms),
@@ -123,6 +115,30 @@ Summary report generation is dependent on your API usage. Learn more about
 generating summary reports for the
 [Private Aggregation API](/docs/privacy-sandbox/summary-reports#private-aggregation) 
 and the [Attribution Reporting API](/docs/privacy-sandbox/summary-reports#attribution-reporting).
+
+## Test the Aggregation Service {: #test}
+
+We recommend reading the corresponding experiment and participate guide for the API you're testing:
+
+* [Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting-experiment/)
+* [Private Aggregation API](/docs/privacy-sandbox/private-aggregation-experiment/)
+
+### Local testing
+
+We've created a local testing tool to process aggregatable reports for Attribution Reporting and the Private Aggregation API. [Read the instructions](https://github.com/privacysandbox/aggregation-service/blob/main/README.md).
+
+To use this tool, install a Java Runtime Environment.
+
+### Test on AWS
+
+To test the Aggregation Service on AWS, [register for the origin trial](/origintrials/#/view_trial/771241436187197441) and complete the
+[onboarding form](https://forms.gle/EHoecersGKhpcLPNA).
+Once submitted, we'll contact you to verify your information and send the remaining instructions.
+
+To test on AWS, install [Terraform](https://www.terraform.io/) and the latest
+[AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
+
+[Read the instructions](https://github.com/privacysandbox/aggregation-service/blob/main/README.md#test-on-aws-with-support-for-encrypted-reports).
 
 ## Engage and share feedback
 
