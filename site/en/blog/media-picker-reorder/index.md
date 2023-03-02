@@ -8,7 +8,7 @@ authors:
   - eladalon
 date: 2023-03-02
 hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/XSMbLh499JYrwCB7xAcO.jpg
-alt: Golfer flicking ball
+alt: Golfer flicking ball.
 tags:
   - chrome-108
 ---
