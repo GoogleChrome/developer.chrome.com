@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+// eslint-disable-next-line node/no-missing-require
 const {milestones} = require('../../external/data/chrome-release.json');
 
 const AVAILABLE_DATES = ['stableDate', 'earliestBetaDate', 'finalBetaDate'];
