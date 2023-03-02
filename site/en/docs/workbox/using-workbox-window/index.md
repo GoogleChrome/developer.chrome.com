@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: Using workbox-window
 date: 2021-12-07
 description: >
-  Sometimes users go offline. Learn how to adapt, and help them resume requests when they eventually go back online.
+  Sometimes users go offline. Learn how to adapt, and help them resume requests when they eventually go back online. 
 ---
 
 One Workbox module that hasn't gotten much coverage yet in this documentation is [`workbox-window`](/docs/workbox/reference/workbox-window/), which is a set of modules intended to run in the [`window`](https://developer.mozilla.org/docs/Web/API/Window). The goals of this module are:
