@@ -1,7 +1,7 @@
 const test = require('ava');
-let {chromeDate} = require('../../../site/_filters/chromeDate');
+let {ChromeDate} = require('../../../site/_shortcodes/ChromeDate');
 
-chromeDate = chromeDate.bind({
+ChromeDate = ChromeDate.bind({
   env: {
     filters: {
       safe: s => {
@@ -14,28 +14,28 @@ chromeDate = chromeDate.bind({
 
 test('fails for unknown milestone', t => {
   t.throws(() => {
-    chromeDate(undefined);
+    ChromeDate(undefined);
   });
 });
 
 test('fails to get unknown date type', t => {
   t.throws(() => {
-    chromeDate('120', 'partyDate');
+    ChromeDate('120', 'partyDate');
   });
 });
 
 test('returns stable date per default', t => {
-  t.assert(chromeDate('108') === chromeDate('108', 'stableDate'));
+  t.assert(ChromeDate('108') === ChromeDate('108', 'stableDate'));
 });
 
 test('returns earliestBetaDate', t => {
-  t.assert(chromeDate('108', 'earliestBetaDate'));
+  t.assert(ChromeDate('108', 'earliestBetaDate'));
 });
 
 test('returns finalBetaDate', t => {
-  t.assert(chromeDate('108', 'finalBetaDate'));
+  t.assert(ChromeDate('108', 'finalBetaDate'));
 });
 
 test('localizes output', t => {
-  t.assert(chromeDate('107').includes('Oktober'));
+  t.assert(ChromeDate('107').includes('Oktober'));
 });
