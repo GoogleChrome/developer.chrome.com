@@ -55,11 +55,13 @@
       sections:
         - url: /docs/privacy-sandbox/topics
         - url: /docs/privacy-sandbox/topics-experiment
+          title: i18n.docs.privacy-sandbox.experiment-participate
         - url: /docs/privacy-sandbox/topics/latest
     - title: i18n.docs.privacy-sandbox.ondevice-auctions
       sections:
         - url: /docs/privacy-sandbox/fledge
         - url: /docs/privacy-sandbox/fledge-experiment
+          title: i18n.docs.privacy-sandbox.experiment-participate
         - title: i18n.docs.privacy-sandbox.fledge-api
           sections:
             - url: /docs/privacy-sandbox/fledge-api/
@@ -80,7 +82,7 @@
         - url: /docs/privacy-sandbox/attribution-reporting/system-overview
           title: i18n.docs.privacy-sandbox.attribution-reporting-system
         - url: /docs/privacy-sandbox/attribution-reporting-experiment
-          title: i18n.docs.privacy-sandbox.attribution-reporting-experiment
+          title: i18n.docs.privacy-sandbox.experiment-participate
         - url: /docs/privacy-sandbox/attribution-reporting/chrome-shipping
           title: i18n.docs.privacy-sandbox.attribution-reporting-chrome-shipping
         - url: /docs/privacy-sandbox/attribution-reporting-debugging
@@ -93,6 +95,8 @@
       sections:
         - url: /docs/privacy-sandbox/private-aggregation
         - url: /docs/privacy-sandbox/private-aggregation-fundamentals
+        - url: /docs/privacy-sandbox/private-aggregation-experiment
+          title: i18n.docs.privacy-sandbox.experiment-participate
     - url: /docs/privacy-sandbox/aggregation-service
     - url: /docs/privacy-sandbox/summary-reports
 - title: i18n.docs.privacy-sandbox.fight-spam
