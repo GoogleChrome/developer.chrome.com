@@ -218,7 +218,7 @@ These high-level resources will provide signposts to changes across the project,
  - Join the associated [W3C group](https://www.w3.org/groups/) for regular meetings discussing the proposal detail
  - Star the associated entry on [Chrome Platform Status](https://chromestatus.com) for email updates on Chrome implementation changes.
 
- ### Get involved
+### Get involved
 
 -  Participate in incubation, testing and refinement of the APIs:  
    [How to participate in the Privacy Sandbox initiative](/blog/privacy-sandbox-participate/)
