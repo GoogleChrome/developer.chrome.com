@@ -11,4 +11,9 @@ authors:
   - samdutton
 ---
 
-## X
+
+## Implementation status
+{% Partial 'privacy-sandbox/ps-implementation-status.njk' %}
+
+## What is the Topics API?
+
