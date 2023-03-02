@@ -93,6 +93,7 @@
       sections:
         - url: /docs/privacy-sandbox/private-aggregation
         - url: /docs/privacy-sandbox/private-aggregation-fundamentals
+        - url: /docs/privacy-sandbox/private-aggregation-experiment
     - url: /docs/privacy-sandbox/aggregation-service
     - url: /docs/privacy-sandbox/summary-reports
 - title: i18n.docs.privacy-sandbox.fight-spam
