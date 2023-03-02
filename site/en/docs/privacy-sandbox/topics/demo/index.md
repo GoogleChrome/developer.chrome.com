@@ -22,9 +22,12 @@ This explains how to try out and debug the API for a single user.
 
 You can also run the Topics [colab](#colab) to try out the Topics [classifier model](#classifier-model).
 
+The following video shows how the demo works.
+
 {% YouTube
   id='hEBzWuXjeTQ'
 %}
+
 
 ## Test with chrome://flags or feature flags
 
