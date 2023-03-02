@@ -43,7 +43,7 @@ Chromium issues: [1101268](https://crbug.com/1101268), [1382044](https://crbug.c
 
 
 <!-- ## Recorder updates {: #recorder } -->
- ## Actualizaciones de la grabadora {: #recorder }
+ ## Actualizaciones de la Grabadora {: #recorder }
 
 <!-- ### View and highlight the code of your user flow in the Recorder {: #recorder-code } -->
 ### Vea y resalte el código de su flujo de usuario en el Grabador {: #recorder-code }
