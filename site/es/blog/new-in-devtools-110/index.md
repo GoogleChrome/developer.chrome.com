@@ -46,7 +46,7 @@ Chromium issues: [1101268](https://crbug.com/1101268), [1382044](https://crbug.c
  ## Actualizaciones de la Grabadora {: #recorder }
 
 <!-- ### View and highlight the code of your user flow in the Recorder {: #recorder-code } -->
-### Vea y resalte el código de su flujo de usuario en el Grabador {: #recorder-code }
+### Vea y resalte el código de su flujo de usuario en la Grabadora {: #recorder-code }
 
 <!-- The **Recorder** now offers split code view, making it easier to view your user flow code. To access the code view, open a user flow and click **Show Code**.  -->
 La **Grabadora** ahora ofrece una vista de código dividido, lo que facilita la visualización de su código de flujo de usuario. Para acceder a la vista de código, abra un flujo de usuario y haga clic en **Mostrar código**.
