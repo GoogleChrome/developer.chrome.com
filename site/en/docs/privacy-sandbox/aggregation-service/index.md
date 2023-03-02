@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Aggregation service'
+title: 'Aggregation Service'
 subhead: >
   Deploy and manage this service to produce summary reports for the
   Attribution Reporting API or the Private Aggregation API.
@@ -12,7 +12,7 @@ authors:
   - alexandrawhite
 ---
 
-Deploy and manage an aggregation service to process aggregatable
+Deploy and manage an Aggregation Service to process aggregatable
 reports from the
 [Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/) or
 the [Private Aggregation API](/docs/privacy-sandbox/private-aggregation/) to
@@ -27,11 +27,11 @@ create a [summary report](/docs/privacy-sandbox/summary-report/).
 
 The proposal outlines
 [key terms](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md#key-terms),
-useful for understanding the aggregation service.
+useful for understanding the Aggregation Service.
 
 ## Secure data processing
 
-The aggregation service decrypts and combines the collected data from the aggregatable reports, [adds noise](#noise-scale), and returns the final summary report. This service runs in a trusted execution environment (TEE), which is deployed on a cloud service that supports necessary security measures to protect this data.
+The Aggregation Service decrypts and combines the collected data from the aggregatable reports, [adds noise](#noise-scale), and returns the final summary report. This service runs in a trusted execution environment (TEE), which is deployed on a cloud service that supports necessary security measures to protect this data.
 
 {% Aside %}
 A [Trusted Execution Environment](https://en.wikipedia.org/wiki/Trusted_execution_environment)
@@ -41,7 +41,7 @@ computer. TEEs allow external parties to verify that the software does exactly
 what the software manufacturer claims it does—nothing more or less.
 {% endAside %}
 
-The TEE's code is the only place in the aggregation service which has access to
+The TEE's code is the only place in the Aggregation Service which has access to
 raw reports&mdash;this code will be auditable by security researchers, privacy
 advocates, and ad techs. To confirm that the TEE is running the exact approved
 software and that data remains secured, a coordinator performs attestation.
@@ -53,7 +53,7 @@ software and that data remains secured, a coordinator performs attestation.
   width="800", height="457"
 %}
 <figcaption>
-  <p>Aggregatable reports are collected, batched, and send to the aggregation service, running on a TEE. The aggregation service environment is owned and operated by the same party collecting the data.</p>
+  <p>Aggregatable reports are collected, batched, and send to the Aggregation Service, running on a TEE. The Aggregation Service environment is owned and operated by the same party collecting the data.</p>
 </figure>
 
 ### Coordinator attestation of the TEE {: #coordinator }
@@ -65,12 +65,12 @@ A coordinator has several responsibilities:
 
 * Maintain a list of authorized binary images. These images are
   [cryptographic hashes](https://en.wikipedia.org/wiki/Cryptographic_hash_function)
-  of the aggregation service software builds, which Google will periodically
+  of the Aggregation Service software builds, which Google will periodically
   release. This will be reproducible so that any party can verify the images
-  are identical to the aggregation service builds.
+  are identical to the Aggregation Service builds.
 * Operate a key management system. Encryption keys are required for the Chrome
   on a user's device to encrypt aggregatable reports. Decryption keys are
-  necessary for proving the aggregation service code matches the binary images.
+  necessary for proving the Aggregation Service code matches the binary images.
 * Track the aggregatable reports to prevent reuse in aggregation for summary
   reports, as reuse may reveal personal identifying information (PII).
 
@@ -81,7 +81,7 @@ Additional Terms of Service](/docs/privacy-sandbox/aggregation-service/tos/).
 
 ## Noise and scaling {: #noise-scale}
 
-To protect user privacy, the aggregation service applies an
+To protect user privacy, the Aggregation Service applies an
 [additive noise mechanism](https://en.wikipedia.org/wiki/Additive_noise_mechanisms)
 to the raw data from aggregatable reports. This means that a certain amount of
 statistical noise is added to each aggregate value before its release in a
@@ -142,7 +142,7 @@ To test on AWS, install [Terraform](https://www.terraform.io/) and the latest
 
 ## Engage and share feedback
 
-The aggregation service is a key piece of the Privacy Sandbox measurement proposals. Like other Privacy Sandbox proposals, this is documented and discussed publicly on GitHub.
+The Aggregation Service is a key piece of the Privacy Sandbox measurement proposals. Like other Privacy Sandbox proposals, this is documented and discussed publicly on GitHub.
   
 * **Github**: Read the [proposal](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md), [raise questions and participate in the discussion](https://github.com/WICG/attribution-reporting-api/issues). Also take a look at the [Aggregation Service implementation](https://github.com/privacysandbox/aggregation-service) and provide [feedback on the implementation](https://github.com/privacysandbox/aggregation-service/issues).
 * **Developer support**: Ask questions and join discussions on the [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
