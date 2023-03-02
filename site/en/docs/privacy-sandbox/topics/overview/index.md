@@ -60,7 +60,9 @@ You can access the TensorFlow Lite model file, and the topics inferred for hostn
 
 The diagram below outlines a simplified example to demonstrate how the Topics API might help an ad tech platform select an appropriate ad. The example assumes that the user's browser already has a model to map website hostnames to topics.
 
-![image](insert_image_url_here)
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/u9e1VvzblNVHCfyk1hRY.png",
+  alt="Diagram showing the stages in the Topics API lifecycle, from a user visiting websites to an ad
+  being displayed.", width="800", height="275" %}
 
 The Topics API lifecycle: [view a larger version](https://wd.imgix.net/image/80mq7dk16vVEg8BBhsVe42n6zn82/u9e1VvzblNVHCfyk1hRY.png?auto=format&w=1600)
 
@@ -74,7 +76,10 @@ The number of topics returned  depends on the number of topics that the [API cal
 
 For more information on how to use `and` test the Topics API, refer to ______(link to dev guide)____________________
 
+{% Details %}
+{% DetailsSummary %}
 ### How the API reduces fingerprinting
+{% endDetailsSummary %}
 
 The Topics API proposes multiple mechanisms to help ensure that it is difficult to re-identify significant numbers of users across sites using the Topics API alone:
 
@@ -85,13 +90,17 @@ The Topics API proposes multiple mechanisms to help ensure that it is difficult 
 -   Topics are updated for a user once each week, which limits the rate at which information can be shared. In other words, the API helps mitigate against fingerprinting by not providing topics updates too frequently.
 -   A topic will only be returned for an API caller that [previously observed the same topic](/docs/privacy-sandbox/topics/#observed-topics) for the same user recently. This approach helps limit the potential for entities to learn about (or share) information about user interests they have not observed firsthand.
 
+{% endDetails %}
+
+{% Details %}
+{% DetailsSummary %}
 ### How the API addresses concerns with FLoC
+{% endDetailsSummary %}
 
 The origin trial of [FLoC](https://github.com/WICG/floc) in 2021 received a wide range of feedback from ad tech and web ecosystem contributors. In particular, there were concerns that FLoC cohorts could be used as a fingerprinting surface to identify users, or could reveal a user's association with a sensitive category. There were also calls to make FLoC more transparent and understandable to users.
 
 The Topics API has been designed with this feedback in mind, to explore other ways to support interest-based advertising, with improved transparency, stronger privacy assurances and a different approach for sensitive categories.
-
-#Implementation status
+{% endDetails %}
 
 ## Next steps
 
