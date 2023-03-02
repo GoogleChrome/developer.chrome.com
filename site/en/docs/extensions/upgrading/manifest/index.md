@@ -6,6 +6,8 @@ description: The manifest.json file requires a slightly different format for V3 
 date: 2023-02-28
 ---
 
+The `manifest.json` file requires a slightly different format for V3 than for V2. This page describes changes that only affect the `manifest.json` file. But many of the changes to scripts and pages also require changes to the manifest. Those changes are covered with the upgrade tasks that require them.
+
 ## Change the manifest version number {: #change-version }
 
 Change the value of the `"manifest_version"` field from 2 to 3.

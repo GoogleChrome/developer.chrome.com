@@ -8,7 +8,7 @@ date: 2023-02-28
 
 A service worker replaces the extension's background or event page to ensure that background code stays off the main thread. This enables extensions to run only when needed, saving resources. 
 
-*Background pages* have been a fundamental component of extensions since their introduction. To put it simply, background pages provide an environment that lives independent of any other window or tab. This allows extensions to observe and act in response to events.
+Background pages have been a fundamental component of extensions since their introduction. To put it simply, background pages provide an environment that lives independent of any other window or tab. This allows extensions to observe and act in response to events.
 
 ## Differences between background scripts and extension service workers {: #differences-with-sws }
 
@@ -28,7 +28,7 @@ You'll need to make a few code adjustments to account for differences between th
 
 - Because they can't access the DOM or the `window` interface, you'll need to move such calls to a different API or into an offscreen document.
 - Event listeners should not be registered in response to returned promises or inside event callbacks.
-- Since they're not backward compatible with `XMLHttpRequest` you'll need to replace calls to this interface with calls to [`fetch()`][mdn-fetch].
+- Since they're not backward compatible with `XMLHttpRequest()` you'll need to replace calls to this interface with calls to [`fetch()`](https://developer.mozilla.org/docs/Web/API/Fetch_API/Using_Fetch).
 - Since they terminate when not in use, you'll need to persist application states rather than rely on global variables. Terminating service workers can also end timers before they have completed. You'll need to replace them with alarms.
 
 This page describes these tasks in detail.

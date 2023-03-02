@@ -21,8 +21,6 @@ The `manifest.json` file requires a slightly different format for V3 than for V2
 * [Update web accessible resources](/docs/extensions/upgrading/manifest/#update-wa-resources).
 {% endDetails %}
 
-
-
 {% Details  'open' %}
 
 {% DetailsSummary %}
@@ -31,7 +29,7 @@ The `manifest.json` file requires a slightly different format for V3 than for V2
 
 A service worker replaces the extension's background or event page to ensure that background code stays off the main thread. This enables extensions to run only when needed, saving resources.
 
-Before beginning, read about the [differences between background scripts and extension service workers](/docs/extensions/upgrading/to-service-workers/#differences-with-sws)
+Before beginning, read about the [differences between background scripts and extension service workers](/docs/extensions/upgrading/to-service-workers/#differences-with-sws).
 
 * [Update the "background" field in the manifest](/docs/extensions/upgrading/to-service-workers/#update-bg-field)
 * [Move DOM and window calls to an offscreen document](/docs/extensions/upgrading/to-service-workers/#move-dom-and-window)
@@ -41,7 +39,6 @@ Before beginning, read about the [differences between background scripts and ext
 * [Convert timers to alarms](/docs/extensions/upgrading/to-service-workers/#convert-timers)
 
 {% endDetails %}
-
 
 {% Details  'open' %}
 
@@ -57,8 +54,6 @@ Some features need to be replaced with more modern equivalents. Others need to b
 * [Replace functions that expect a Manifest V2 background context](/docs/extensions/upgrading/api-calls/#replace-mv2-function).
 * [Replace unsupported APIs](/docs/extensions/upgrading/api-calls/#replace-unsupported-apis) 
 {% endDetails %}
-
-
 
 {% Details  'open' %}
 
@@ -79,7 +74,6 @@ After completing the items above, you may want to review a few [common use cases
 
 {% endDetails %}
 
-
 {% Details  'open' %}
 
 {% DetailsSummary %}
@@ -91,3 +85,5 @@ Changes are required to improve the security of extensions. This includes ending
 * [Remove remotely hosted code](/docs/extensions/upgrading/improve-security/#remove-remote-code)
 * [Update content security policy](/docs/extensions/upgrading/improve-security/#update-csp).
 * [Remove unsupported content security policy values](/docs/extensions/upgrading/improve-security/#remove-unsupported-csv)
+
+{% endDetails %}
