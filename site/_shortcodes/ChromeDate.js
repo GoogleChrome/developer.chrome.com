@@ -37,6 +37,12 @@ const AVAILABLE_DATES = ['stableDate', 'earliestBetaDate', 'finalBetaDate'];
  * @this {any}
  */
 function ChromeDate(milestone, dateType = 'stableDate') {
+  // If someone is using old external data, milestones are not yet
+  // available so this is to avoid breaking their build
+  if (!milestones) {
+    return 'TBA';
+  }
+
   const milestoneData = milestones[milestone];
   if (!milestoneData) {
     throw new Error(
