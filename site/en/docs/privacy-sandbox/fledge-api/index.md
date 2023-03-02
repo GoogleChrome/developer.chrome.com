@@ -504,9 +504,8 @@ the following properties:
 {% endDetails %}
 
 {% Details %}
-{: #user-controls}
 {% DetailsSummary %}
-### Available browser configuration
+### Available browser configuration {: #user-controls}
 
 {% endDetailsSummary %}
 
