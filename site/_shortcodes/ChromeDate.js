@@ -36,7 +36,7 @@ const AVAILABLE_DATES = ['stableDate', 'earliestBetaDate', 'finalBetaDate'];
  * @return {string}
  * @this {any}
  */
-function chromeDate(milestone, dateType = 'stableDate') {
+function ChromeDate(milestone, dateType = 'stableDate') {
   const milestoneData = milestones[milestone];
   if (!milestoneData) {
     throw new Error(
@@ -65,8 +65,7 @@ function chromeDate(milestone, dateType = 'stableDate') {
   // Make sure date gets not split over multiple lines, and mark
   // the returned string as safe, to avoid having to |safe everytime
   // in the template
-  const {safe} = this.env.filters;
-  return safe(formattedDate.replace(' ', '&nbsp;'));
+  return formattedDate.replace(' ', '&nbsp;');
 }
 
-module.exports = {chromeDate};
+module.exports = {ChromeDate};

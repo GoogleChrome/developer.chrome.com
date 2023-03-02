@@ -22,10 +22,10 @@ const SCHEDULE_JSON =
 const SKIP_OS = ['webview', 'ios'];
 
 // How many previous releases counting back from the current one should be fetched
-const MILESTONES_OFFSET = 24;
+const MILESTONES_OFFSET = 48;
 
 // How many milestones should be fetched in total
-const MILESTONES_COUNT = 48;
+const MILESTONES_COUNT = 96;
 
 const {default: fetch} = require('node-fetch');
 

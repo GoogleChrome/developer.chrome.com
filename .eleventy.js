@@ -16,7 +16,6 @@ const mdFilters = require('./site/_filters/md');
 const {slugify} = require('./site/_filters/slugify');
 const {ensureUniqueHrefInProduction} = require('./site/_filters/ensureUniqueHrefInProduction');
 const {toc} = require('./site/_filters/toc');
-const {chromeDate} = require('./site/_filters/chromeDate');
 const {updateSvgForInclude} = require('webdev-infra/filters/svg');
 const {minifyHtml} = require('webdev-infra/filters/minifyHtml');
 
@@ -40,6 +39,7 @@ const {Aside} = require('./site/_shortcodes/Aside');
 const includeRaw = require('./site/_shortcodes/includeRaw');
 const {LanguageList} = require('./site/_shortcodes/LanguageList');
 const {Partial} = require('./site/_shortcodes/Partial');
+const {ChromeDate} = require('./site/_shortcodes/ChromeDate');
 const {BrowserCompat} = require('webdev-infra/shortcodes/BrowserCompat');
 
 // Transforms
@@ -130,7 +130,6 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('toc', toc);
   eleventyConfig.addFilter('ensureUniqueHrefInProduction', ensureUniqueHrefInProduction);
   eleventyConfig.addFilter('typeof', x => typeof x);
-  eleventyConfig.addFilter('chromeDate', chromeDate);
   eleventyConfig.addNunjucksAsyncFilter('minifyHtml', minifyHtml);
 
   // Add shortcodes
@@ -155,6 +154,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addShortcode('LanguageList', LanguageList);
   eleventyConfig.addShortcode('BrowserCompat', BrowserCompat);
   eleventyConfig.addNunjucksAsyncShortcode('Partial', Partial);
+  eleventyConfig.addShortcode('ChromeDate', ChromeDate);
 
   // Empty shortcodes. They are added for backward compatibility with web.dev.
   // They will not render any html, but will prevent the build from failing.
