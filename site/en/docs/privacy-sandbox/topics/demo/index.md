@@ -11,7 +11,7 @@ authors:
   - samdutton
 ---
 
-The Topics API demo provides a look at how topics are inferred from hostnames. You can preview what topics are observed when you visit a demo site which requires very little setup.
+The Topics API demo provides a look at how topics are inferred from hostnames. You can preview what topics are observed when you visit a demo site, which requires very little setup.
 
 If you want to test the API with your users, sign up for the [Relevance and Measurement origin trial](LINK).
 
@@ -19,7 +19,7 @@ Our demo is a preview  that demonstrates most features of the Topics API, for yo
 
 ## Test with chrome://flags or feature flags
 
-There are two ways to try the Topics API as a single user, running Chrome 101 or above:
+There are two ways to try the Topics API as a single user; you'll need to be running Chrome 101 or above:
 
 - Enable the API in the `chrome://flags/#privacy-sandbox-ads-apis` Chrome page:
 
@@ -44,7 +44,7 @@ The [Topics demo](https://topics-demo.glitch.me/) shows how to use additional fl
 
 ## The Topics API headers demo
 
-The demo at [topics-fetch-demo.glitch.me](https://topics-fetch-demo.glitch.me/) shows how to use fetch() request and response headers to access topics and mark them as observed.
+The demo at [topics-fetch-demo.glitch.me](https://topics-fetch-demo.glitch.me/) shows how to use `fetch()` request and response headers to access topics and mark them as observed.
 
 ### Access the `Sec-Browsing-Topics` request header
 
