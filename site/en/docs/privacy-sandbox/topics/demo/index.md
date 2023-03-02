@@ -110,7 +110,6 @@ You can check to see which topics are real and which are random on the Topics St
 
 [View a larger version](https://wd.imgix.net/image/RtQlPaM9wdhEJGVKR8boMPkWf443/Ef9ml82uPg3RdX5PX5QU.png?auto=format&w=1600)
 
-
 ## Next steps
 
 If you’re an ad tech developer, [experiment and participate](/docs/privacy-sandbox/topics-experiment/) with the Topics API. Read the [developer guide](/docs/privacy-sandbox/topics/) for more in-depth resources.
