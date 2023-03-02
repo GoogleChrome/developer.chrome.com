@@ -14,8 +14,15 @@
  * limitations under the License.
  */
 
-// eslint-disable-next-line node/no-missing-require
-const {milestones} = require('../../external/data/chrome-release.json');
+const fs = require('fs');
+const path = require('path');
+
+const {milestones} = JSON.parse(
+  fs.readFileSync(
+    path.join(__dirname, '../../external/data/chrome-release.json'),
+    {encoding: 'utf8'}
+  )
+);
 
 const AVAILABLE_DATES = ['stableDate', 'earliestBetaDate', 'finalBetaDate'];
 
