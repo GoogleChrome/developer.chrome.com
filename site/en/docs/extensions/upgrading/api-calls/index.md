@@ -188,15 +188,15 @@ The methods and properties listed below need to change in Manifest V3.
 
 | Manifest V2 method or property        | Replace with                                         |
 |---------------------------------------|------------------------------------------------------|
-| `chrome.extension.connect()`          |                                                      |
+| `chrome.extension.connect()`          | `chrome.extension.connect()`                         |
 | `chrome.extension.getExtensionTabs()` | `chrome.extension.getViews()`                        |
 | `chrome.extension.getURL()`           | `chrome.runtime.getURL()`                            |
 | `chrome.extension.lastError`          | Where methods return promises, use `promise.catch()` |
-| `chrome.extension.onConnect`          |                                                      |
-| `chrome.extension.onMessage`          |                                                      |
+| `chrome.extension.onConnect`          | `chrome.runtime.onConnect`                           |
+| `chrome.extension.onMessage`          | `chrome.runtime.onMessage`                           |
 | `chrome.extension.onRequest`          | `chrome.runtime.onRequest`                           |
 | `chrome.extension.onRequestExternal`  | `chrome.runtime.onMessageExternal`                   |
-| `chrome.extension.sendMessage()`      |                                                      |
+| `chrome.extension.sendMessage()`      | `chrome.runtime.sendMessage()`                       |
 | `chrome.extension.sendRequest()`      | `chrome.runtime.sendMessage()`                       |
 | `chrome.runtime.onSuspend` (background scripts) | Not supported in extension service workers. Use the web platform events `beforeunload` and `unload` instead. |
 | `chrome.tabs.getAllInWindow()`        | `chrome.tabs.query()`                                |
@@ -205,4 +205,4 @@ The methods and properties listed below need to change in Manifest V3.
 | `chrome.tabs.onHighlightChanged`      | `chrome.tabs.onHighlighted`                          |
 | `chrome.tabs.onSelectionChanged`      | `chrome.tabs.onActivated`                            |
 | `chrome.tabs.sendRequest()`           | `chrome.runtime.sendMessage()`                       |
-| `chrome.tabs.Tab.selected`            |                                                      |
+| `chrome.tabs.Tab.selected`            | `chrome.tabs.Tab.highlighted`                        |
