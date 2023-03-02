@@ -2,13 +2,6 @@ const test = require('ava');
 let {ChromeDate} = require('../../../site/_shortcodes/ChromeDate');
 
 ChromeDate = ChromeDate.bind({
-  env: {
-    filters: {
-      safe: s => {
-        return s;
-      },
-    },
-  },
   ctx: {locale: 'de'},
 });
 
