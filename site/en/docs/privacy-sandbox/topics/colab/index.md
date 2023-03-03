@@ -2,9 +2,9 @@
 layout: 'layouts/doc-post.njk'
 title: 'Test topic inference in a colab'
 subhead: >
-  Try out the Topics demo, and learn about the API and how to run Topics with flags or participate in an origin trial.
+  Try the colab to learn how to load the TensorFlow Lite model used by Chrome to infer topics from hostnames.
 description: >
-  Try out the Topics demo, and learn about the API and how to run Topics with flags or participate in an origin trial.
+  Try the colab to learn how to load the TensorFlow Lite model used by Chrome to infer topics from hostnames.
 date: 2022-01-25
 updated: 2022-02-01
 authors:
