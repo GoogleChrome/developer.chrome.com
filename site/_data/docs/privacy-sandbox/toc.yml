@@ -3,10 +3,11 @@
 - title: i18n.docs.privacy-sandbox.overview
   sections:
     - url: /docs/privacy-sandbox/overview
-    - url: /docs/privacy-sandbox/glossary
+    - url: /docs/privacy-sandbox/proposal-lifecycle
     - url: https://privacysandbox.com/timeline
       title: i18n.docs.privacy-sandbox.timeline
-    - url: /docs/privacy-sandbox/proposal-lifecycle
+    - url: /docs/privacy-sandbox/glossary
+      title: i18n.docs.privacy-sandbox.glossary
     - url: /docs/privacy-sandbox/events
     - url: /tags/privacy
       title: i18n.docs.privacy-sandbox.blog
