@@ -43,6 +43,20 @@ The classifier model for mapping hostnames to topics is publicly available, and 
 
 Only sites that include code that calls the Topics API are included in the browsing history eligible for topic frequency calculations, and API callers only receive topics they've observed. In other words, sites are not eligible for topic frequency calculations without the site or an embedded service taking action to call the API.
 
+{% Aside 'key-term' %}
+
+A Topics API _caller_ is the entity that calls the `document.browsingTopics()` JavaScript
+method, and will use the topics returned by the method to help select relevant ads.
+Typically, a call to `document.browsingTopics()` would be from code included in a site from a
+third party such as an ad tech platform. The browser determines the caller from the site of the
+current document. So, if you're a third party on a page, make sure you call the API from an
+iframe that your site owns.
+
+In order for  `document.browsingTopics() `to return one or more topics, it must be called in
+code from the same origin as code that was on a site where those topics were observed.
+
+{% endAside %}
+
 In addition, a caller can only receive topics that their code has “seen.” So if another caller’s code registered a topic, say `/Autos & Vehicles/Motor Vehicles (By Type)/Hatchbacks`, for a user’s browser and your code did not cause that topic to be registered for that user’s browser, you will not be able to learn of that topic of interest for that user’s browser when you call the API from your embedded code.
 The Topics explainer also suggests sites are allowed to block topic calculation for their visitors with the following [Permissions-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy) header:
 
