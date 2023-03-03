@@ -252,7 +252,6 @@ addition to seasonality effects, try and estimate the number of daily
 single-touch attributable conversions to the closest power of 10: 10, 100,
 1,000, or 10,000.
 
-
 1. Go to **Advanced** mode.
 1. In the **Parameters** side panel, look for **Your conversion data**.
 1. Observe the default parameters. By default, the **TOTAL daily
@@ -310,7 +309,6 @@ Things to consider:
 New to [Noise Lab](https://noise-lab.uc.r.appspot.com/)? [Take a quick tour](#quick-tour).
 {% endAside %}
 
-
 1.  Go to **Advanced** mode.
 1.  In the **Parameters** side panel, look for **Your aggregation strategy** > **Scaling**. It's set to **Yes** by default.
 1.  For the sake of understanding the positive effects of scaling on noise
@@ -353,7 +351,6 @@ New to [Noise Lab](https://noise-lab.uc.r.appspot.com/)? [Take a quick tour](#qu
 {% endAside %}
 
 A measurement goal is a distinct data point collected in conversion events.
-
 
 1. Go to **Advanced** mode.
 1. In the **Parameters** side panel, look for **Data you want to track:
@@ -403,7 +400,7 @@ If you measure one data point (measurement goal) on a conversion event, such as
 conversion count, that data point can get all the contribution budget (65536). If you set multiple measurement goals on a conversion event,
 such as conversion count and purchase value, then those data points will need to
 share the contribution budget. This means you have less leeway to scale up your
-values. 
+values.
 
 **Therefore, the more measurement goals you have, the lower signal-to-noise ratios
 are likely to be (higher noise)**.
@@ -432,7 +429,6 @@ New to [Noise Lab](https://noise-lab.uc.r.appspot.com/)? [Take a quick tour](#qu
 {% endAside %}
 
 A measurement goal is a distinct data point collected in conversion events.
-
 
 1.  Go to **Advanced** mode.
 1.  In the **Parameters** side panel, look for **Your aggregation strategy** > **Scaling**.
@@ -476,6 +472,12 @@ measurement data via an origin trial. Review guides and tips to [Try the API](/d
 
 {% Details %}
 {% DetailsSummary %}
+
+### Noise metrics
+
+#### APE (average percentage error) {: ape}
+
+#### RMSPE_T (root-mean-square percentage error with a threshold) {: #rmspe_t}
 
 ### Noise Lab quick tour {: #quick-tour}
 
