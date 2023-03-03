@@ -17,7 +17,6 @@ pagination:
   </author>
   {% for item in pagination.items %}
     {% set id = item.screenshot | replace('.webp', '') %}
-    {% set screenshotSize = fuguShowcase.screenshotSizes[item.screenshot] %}
     <entry>
       <title>{{ item.title | escape }} ({{ item.appURL | replace(r/https?:\/\//, '') | replace(r/\/$/, '')}})</title>
       <content type="html"><![CDATA[
@@ -29,7 +28,7 @@ pagination:
         {% endif %}
         <p>
           <a href="{{ item.appURL }}">
-            {% if screenshotSize > 0 %}
+            {% if item.screenshotSize > 0 %}
               <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/{{ item.screenshot }}" alt="The app at {{ item.appURL }}."/>
             {% else %}
               <img style="width: 200px; height: 150px;" src="data:image/svg+xml;base64,CjxzdmcKICB2aWV3Qm94PSIwIDAgNDAwIDIyNSIKICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQgc2xpY2UiCj4KICA8cGF0aCBmaWxsPSJyZ2JhKDE0NSwxNDUsMTQ1LDAuNSkiIGQ9Ik0wIDBoNDAwdjIyNUgweiIgLz4KICA8dGV4dAogICAgZmlsbD0icmdiYSgwLDAsMCwwLjMzKSIKICAgIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiIKICAgIGZvbnQtc2l6ZT0iMXJlbSIKICAgIHRleHQtYW5jaG9yPSJtaWRkbGUiCiAgICB4PSIyMDAiCiAgICB5PSIxMTMiCiAgICBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIKICA+CiAgICBTY3JlZW5zaG90IG5vdCBhdmFpbGFibGUKICA8L3RleHQ+Cjwvc3ZnPg==" alt=""/>

@@ -22,19 +22,6 @@ const path = require('path');
 const fs = require('fs');
 const {default: fetch} = require('node-fetch');
 
-async function getContentLength(url) {
-  try {
-    const response = await fetch(url, {
-      method: 'HEAD',
-    });
-    const contentLength = response.headers.get('Content-Length');
-    return contentLength;
-  } catch (error) {
-    console.error(error);
-    return 0;
-  }
-}
-
 module.exports = (async () => {
   const fuguShowcaseFile = path.join(
     __dirname,
@@ -43,14 +30,11 @@ module.exports = (async () => {
   const fuguItems = JSON.parse(fs.readFileSync(fuguShowcaseFile, 'utf-8'));
 
   const availableAPIs = new Set();
-  const screenshotSizes = {};
   await Promise.all(
     fuguItems.map(async item => {
       item.usedAPIs.forEach(api => {
         availableAPIs.add(api.name);
       });
-      const url = `https://googlechromelabs.github.io/fugu-showcase/data/${item.screenshot}`;
-      screenshotSizes[item.screenshot] = await getContentLength(url);
     })
   );
   return {
@@ -58,7 +42,6 @@ module.exports = (async () => {
       (a, b) =>
         new Date(b.timestamp).valueOf() - new Date(a.timestamp).valueOf()
     ),
-    screenshotSizes,
     availableApis: Array.from(availableAPIs.keys()).sort((a, b) =>
       a.toLowerCase().localeCompare(b.toLowerCase())
     ),
