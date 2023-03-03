@@ -29,13 +29,12 @@ module.exports = (async () => {
   const fuguItems = JSON.parse(fs.readFileSync(fuguShowcaseFile, 'utf-8'));
 
   const availableAPIs = new Set();
-  await Promise.all(
-    fuguItems.map(async item => {
-      item.usedAPIs.forEach(api => {
-        availableAPIs.add(api.name);
-      });
-    })
-  );
+  fuguItems.forEach(item => {
+    item.usedAPIs.forEach(api => {
+      availableAPIs.add(api.name);
+    });
+  });
+
   return {
     fuguItems: fuguItems.sort(
       (a, b) =>
