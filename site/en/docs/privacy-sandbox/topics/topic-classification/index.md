@@ -52,7 +52,7 @@ third party such as an ad tech platform. The browser determines the caller from 
 current document. So, if you're a third party on a page, make sure you call the API from an
 iframe that your site owns.
 
-In order for  `document.browsingTopics() `to return one or more topics, it must be called in
+In order for `document.browsingTopics()` to return one or more topics, it must be called in
 code from the same origin as code that was on a site where those topics were observed.
 
 {% endAside %}
