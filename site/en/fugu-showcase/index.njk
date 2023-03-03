@@ -54,6 +54,10 @@ alt: Blowfish swarm swimming in the ocean.
           {% endfor %}
         </select>
       </enhanced-select>
+      <a href="/feeds/fugu-showcase.xml" class="material-button button-filled button-round display-inline-flex color-bg bg-cyan-medium">
+        {{ icon('rss', {hidden: false}) }}
+        &nbsp;{{ 'i18n.common.rss_feed' | i18n(locale) }}
+      </a>
     </div>
     <div class="blog-grid fugu-showcase-container lg:pad-top-400 pad-top-200"
       total-items="{{ fuguShowcase.fuguItems.length }}">

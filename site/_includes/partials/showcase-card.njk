@@ -7,7 +7,7 @@
   {% set searchApis = searchApis + " " + api.name %}
 {% endfor %}
 {% set apis = apis | trim | lower | replace("(", "") | replace(")", "") %}
-{% set id = item.title | slugify %}
+{% set id = item.screenshot | replace('.webp', '') %}
 
 <div
   id="{{ id }}"
