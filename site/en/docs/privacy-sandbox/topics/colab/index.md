@@ -55,3 +55,6 @@ This is because the colab only uses the classifier model to infer topics, wherea
 10,000 sites. <!-- will need to link to topic-classification page -->
 {% endAside %}
 
+## Next steps
+
+If you’re an ad tech developer, [experiment and participate](/docs/privacy-sandbox/topics-experiment/) with the Topics API, and check out the [Topics API demo](/docs/privacy-sandbox/topics/demo).
