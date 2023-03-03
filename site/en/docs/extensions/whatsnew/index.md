@@ -16,6 +16,12 @@ tags:
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about many of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).)
 
+### Chrome 112: Increased storage.session quota {: #m112-storage-session-quota}
+
+March 3, 2023
+
+From Chrome 112, the quota for the [`storage.session`](/docs/extensions/reference/storage/#property-session) property has been increased to approximately 10 MB. This was agreed in the Web Extensions Community Group: [https://github.com/w3c/webextensions/issues/350](https://github.com/w3c/webextensions/issues/350)
+
 ### Chrome 109: Is an exension enabled {: #m110-action }
 
 January 12, 2023
