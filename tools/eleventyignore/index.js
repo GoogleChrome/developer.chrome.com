@@ -61,10 +61,10 @@ if (!isProduction || isCI) {
   }
 
   // Ignore /blog/
-  // if (isTruthy(process.env.ELEVENTY_IGNORE_BLOG)) {
-  //   console.log(warning('Ignoring BLOG.'));
-  //   ignores.push('site/**/blog/**/*');
-  // }
+  if (isTruthy(process.env.ELEVENTY_IGNORE_BLOG)) {
+    console.log(warning('Ignoring BLOG.'));
+    ignores.push('site/**/blog/**/*');
+  }
 
   // Ignore /docs/
   if (isTruthy(process.env.ELEVENTY_IGNORE_DOCS)) {
