@@ -67,6 +67,8 @@ For Manifest V3, create a new declarativeNetRequest rule using the `"block"` act
 
 To make this work, you'll need to update the extension's permissions. In the `manifest.json` replace the `"webRequestBlocking"` permission with the `"declarativeNetRequest"` permission. Notice that the URL is removed from the `"permissions"` field because blocking content doesn't require host permissions. As shown above, the host or hosts that a declarative net request applies to is specified in the rule file.
 
+If you want to try this, the code below is [available in our samples repo](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/declarativeNetRequest/url-blocker).
+
 <div class="switcher">
 {% Compare 'worse', 'Manifest V2' %}
 ```json
@@ -131,6 +133,8 @@ For Manifest V3, use the `"redirect"` action type. As before, `"urlFilter"` repl
 
 This scenario also requires changes to the extension's permissions. As before, replace the `"webRequestBlocking"` permission with the `"declarativeNetRequest"` permission. The URLs are again moved from the `manifest.json` to a rule file. Notice that redirecting also requires the `"declarativeNetRequestWithHostAccess"` permission in addition to the host permission.
 
+If you want to try this, the code below is [available in our samples repo](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/declarativeNetRequest/url-redirect).
+
 <div class="switcher">
 {% Compare 'worse', 'Manifest V2' %}
 ```json
@@ -174,6 +178,10 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
 
 Manifest V3 also does this with a rule in a rule file. This time the action type is `"modifyHeaders"`. The file takes an array of `"requestHeaders"` objects specifying the headers to modify and how to modify them. Notice that the `"condition"` object only contains a `"resourceTypes"` array. It supports the same values as the previous examples.
 
+If you want to try this, the code below is [available in our samples repo](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/declarativeNetRequest/no-cookies).
+
+
+
 {% Compare 'better', 'Manifest V3 manifest.json' %}
 ```json/5-8,10
 [
@@ -186,7 +194,10 @@ Manifest V3 also does this with a rule in a rule file. This time the action type
         { "header": "cookie", "operation": "remove" }
       ]
     },
-    "condition": { "resourceTypes": ["main_frame"] }
+    "condition": {
+      "urlFilter": "|*?no-cookies=1",
+      "resourceTypes": ["main_frame"]
+    }
   }
 ]
 ```
