@@ -3,8 +3,8 @@ layout: 'layouts/blog-post.njk'
 title: "First-Party Sets: integration guide"
 date: 2023-01-12
 thumbnail: 'image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/JL7L7S2qKI53pTWACfcv.jpg'
-alt: A diagram showing First-Party Sets. One set contains domains example.com,
-  example.rs, and example.co.uk. The other set contains brandx.site,
+alt: A diagram with one First-Party Set that contains domains example.com,
+  example.rs, and example.co.uk. The other contains brandx.site,
   fly-brandx.site, and drive-brandx.site.
 tags: 
   - privacy
@@ -14,23 +14,22 @@ authors:
 ---
 
 
-First-Party Sets (FPS) is a web platform mechanism which allows browsers to
-understand the relationships amongst a collection of domains so that browsers
-can make key decisions (such as whether to facilitate access to cross-site
-cookies) to enable site functionality,  and so this information can be presented
-to users. FPS allows sites to share information across domains with specific
-controls in place.
+First-Party Sets (FPS) is a web platform mechanism which helps browsers to
+understand the relationships amongst a collection of domains. This allows browsers
+to make key decisions (such as whether to facilitate access to cross-site
+cookies) to enable certain site functions and to present this information
+to users. FPS allows sites to share data across domains, with specific
+controls.
 
 ## Familiarize yourself with the API
 
 Chrome has been iterating on FPS based on feedback from the ecosystem. The
-original proposal had required that sites share a common brand, a common privacy
+original proposal required that sites share a common brand, a common privacy
 policy, and common ownership. After listening to feedback, some of which is
 [summarized on GitHub repo](https://github.com/WICG/first-party-sets/issues/93#issuecomment-1298786481),
-Chrome has updated the proposal to orient around "primaries" and "subsets" so
-that FPS can better focus on use cases. The subsets approach creates different
-rules based on different domains to improve flexibility and transparency on the
-web.
+Chrome has updated the proposal to orient around "primaries" and "subsets" of
+domains, so FPS can better focus on use cases. The subsets approach creates
+different rules for different domains to improve flexibility and transparency.
 
 There are two key components to the proposal:
 
@@ -59,7 +58,9 @@ know that many sites rely on multiple domains to serve a single user experience.
 Organizations may want to maintain different top-level domains for multiple use
 cases like country specific domains or service domains for hosting images or
 video. Chrome's goals are to maintain key uses on the web while improving
-privacy for users. FPS can achieve this by meeting these two goals:
+privacy for users.
+
+FPS can achieve this by meeting these two goals:
 
 -   Allow for browsers to understand the relationships between domains of
     multi-domain sites so that they can make decisions on behalf of the user
@@ -128,8 +129,11 @@ The testing methodology for both of these components is outlined below.
 
 ### Key aspects
 
--   Only developer feature-flag testing will be available from Chrome 108. This means there is no origin trial testing at  the moment.
--   For local testing, you can only declare sets on the command line and pass them directly to the browser. This means that it is not required to submit a set to the GitHub repo in order to test locally with feature flags.
+-  Only developer feature-flag testing will be available from Chrome 108.
+   This means there is no origin trial testing at  the moment.
+-  For local testing, you can only declare sets on the command line and
+   pass them directly to the browser. You're not required to submit the
+   set to the GitHub repo for local testing with feature flags.
 
 {% Aside 'caution' %}
 Before First-Party Sets launches in Chrome, all the sets created on
@@ -315,7 +319,7 @@ script tags requiring cookies.
 
 ### API roadmap
 
-The team is the process of implementing improvements to the API in light of
+The team is implementing improvements to the API in light of
 [security considerations](https://docs.google.com/document/d/1AsrETl-7XvnZNbG81Zy9BcZfKbqACQYBSrjM3VsIpjY/edit#heading=h.vb3ujl8dnk4q).
 
 Some key changes that are in progress are the following:
