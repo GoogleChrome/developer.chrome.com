@@ -1,9 +1,6 @@
 ---
-permalink: /fugu-showcase/feed.xml
+permalink: /feeds/fugu-showcase.xml
 disable_algolia: true
-pagination:
-  data: fuguShowcase.fuguItems
-  size: 10000000000
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
@@ -15,7 +12,7 @@ pagination:
   <author>
     <name>{{ site.title }}</name>
   </author>
-  {% for item in pagination.items %}
+  {% for item in fuguShowcase.fuguItems %}
     {% set id = item.screenshot | replace('.webp', '') %}
     <entry>
       <title>{{ item.title | escape }} ({{ item.appURL | replace(r/https?:\/\//, '') | replace(r/\/$/, '')}})</title>
