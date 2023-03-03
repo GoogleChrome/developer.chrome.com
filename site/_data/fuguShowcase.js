@@ -20,7 +20,6 @@
 
 const path = require('path');
 const fs = require('fs');
-const {default: fetch} = require('node-fetch');
 
 module.exports = (async () => {
   const fuguShowcaseFile = path.join(
