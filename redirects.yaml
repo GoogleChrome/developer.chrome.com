@@ -34,13 +34,19 @@ redirects:
   to: /docs/apps/overview/
 
 - from: /docs/extensions/mv3/background_migration
-  to: /docs/extensions/mv3/migrating_to_service_workers
+  to: /docs/extensions/upgrading/to-service-workers
+  
+- from: /docs/extensions/mv3/migrating_to_service_workers
+  to: /docs/extensions/upgrading/to-service-workers
 
 - from: /docs/extensions/mv3/background_pages
   to: /docs/extensions/mv3/service_workers
 
 - from: /docs/extensions/mv3/overview
   to: /docs/extensions/mv3/architecture-overview
+
+- from: /docs/extensions/mv3/mv2-sunset/
+  to: /docs/extensions/upgrading/mv2-sunset/
 
 - from: /blog/fedcm-origin-trial
   to: /docs/privacy-sandbox/fedcm
@@ -361,14 +367,23 @@ redirects:
 - from: /extensions/packaging
   to: /docs/extensions/mv3/hosting
 
+- from: /docs/extensions/mv3/mv3-migration-checklist
+  to: /docs/extensions/upgrading/checklist
+
 - from: /extensions/migrating_to_manifest_v3
-  to: /docs/extensions/mv3/mv3-migration-checklist
+  to: /docs/extensions/upgrading/checklist
+
+- from: /docs/extensions/mv3/mv3-migration-checklist
+  to: /docs/extensions/upgrading/checklist
 
 - from: /docs/extensions/mv2/migrating_to_manifest_v3
-  to: /docs/extensions/mv3/mv3-migration-checklist
+  to: /docs/extensions/upgrading/checklist
 
 - from: /docs/extensions/mv3/intro/mv3-migration
   to: /docs/extensions/mv3/mv3-migration
+
+- from: /docs/extensions/mv3/intro/mv3-migration
+  to: /docs/extensions/upgrading
 
 - from: /home
   to: /
@@ -644,7 +659,7 @@ redirects:
   to: /docs/extenions/upgrading/mv2-sunset/
 
 - from: /docs/extenions/mv3/known-issues/
-  to: /docs/extenions/upgrading/mv3/known-issues/
+  to: /docs/extenions/upgrading/known-issues/
 
 # DO NOT REMOVE. This seems pointless but we rewrite "." to "_" inside our server's code, so if the
 # URL is fine for all but incorrect syntax, we'll fix it up.
