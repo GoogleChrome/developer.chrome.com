@@ -21,7 +21,7 @@
 const path = require('path');
 const fs = require('fs');
 
-module.exports = (async () => {
+module.exports = (() => {
   const fuguShowcaseFile = path.join(
     __dirname,
     '../../external/data/fugu-showcase.json'
