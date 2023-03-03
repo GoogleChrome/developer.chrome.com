@@ -32,9 +32,9 @@ Reasons, listed [below][offscreen-reason], are set upon document creation to det
 | AUDIO_PLAYBACK    | Closed after 30 seconds without audio playing. |
 | All other reasons | Not currently limited                          |
 
-## Examples
+## Example
 
-The following methods create and close an offscreen document. Only a single Document can be open at a time. 
+Use `chrome.offscree.createDocument(...)` and `chrome.offscreen.closeDocument()` for creating and closing an offscreen document. Only a single Document can be open at a time. 
 
 ```js
 chrome.offscreen.createDocument({
@@ -46,11 +46,50 @@ chrome.offscreen.createDocument({
 chrome.offscreen.closeDocument()
 ```
 
-For a complete extension, see the [offscreen-clipboard demo][gh-offscreen-clipboard] on GitHub.
+The following example shows how to check for existing offscreen documents. The `hasOffscreenDocument` method uses [clients.matchAll()](https://developer.mozilla.org/docs/Web/API/Clients/matchAll) to find existing offscreen documents.
 
-[api-runtime]: /docs/extensions/reference/runtime/
-[api-windows]: /docs/extensions/reference/windows/
-[doc-manifest]: /docs/extensions/mv3/manifest/
-[gh-offscreen-clipboard]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.offscreen-clipboard-write
-[offscreen-reason]: /docs/extensions/reference/offscreen/#type-Reason
+```js
+async function hasOffscreenDocument(path) {
+  // Check all windows controlled by the service worker if one 
+  // of them is the offscreen document with the given path
+  const offscreenUrl = chrome.runtime.getURL(path);
+  const matchedClients = await clients.matchAll();
+  for (const client of matchedClients) {
+    if (client.url === offscreenUrl) {
+      return true;
+    }
+  }
+  return false;
+}
+```
 
+Before trying to create a new offscreen document, use `hasOffscreenDocument` to make sure that there is no existing offscreen document, as demonstrated in the following example. 
+
+```js
+chrome.action.onClicked.addListener(async () => {
+  const offscreenDocumentPath = 'off_screen.html'
+  // create offscreen document if it's not open already
+  if (!(await hasOffscreenDocument(offscreenDocumentPath))) {
+    await chrome.offscreen.createDocument({
+      url: chrome.runtime.getURL(offscreenDocumentPath),
+      reasons: ['CLIPBOARD'],
+      justification: 'reason for needing the document',
+    });
+  }
+  // Send message to offscreen document
+  chrome.runtime.sendMessage({
+    type: '...',
+    target: 'offscreen',
+    data: '...'
+  });
+});
+```
+
+For complete examples, see the [offscreen-clipboard][gh-offscreen-clipboard] and [offscreen-dom][gh-offscreen-dom] demos on GitHub.
+
+ [api-runtime]: /docs/extensions/reference/runtime/
+ [api-windows]: /docs/extensions/reference/windows/
+ [doc-manifest]: /docs/extensions/mv3/manifest/
+ [gh-offscreen-clipboard]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.offscreen-clipboard-write
+ [gh-offscreen-dom]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.offscreen-dom
+ [offscreen-reason]: /docs/extensions/reference/offscreen/#type-Reason
