@@ -56,7 +56,7 @@ This section lists major features that will be added to the Manifest V3 platform
 
 **Summary:** When it was introduced, the `session` storage area had an intentionally conservative maximum quota of 1 MB. This limit is being increased to 10 MB.
 
-**Estimated timeline**: This will be available in Chrome 112.
+**Estimated timeline**: This will be available in Chrome 112. Chrome 112 beta is planned around March 9, with a stable release around the beginning of April.
 
 ## Bugs {: #bugs }
 

@@ -18,9 +18,9 @@ and related policy or other changes. You'll find other notices posted on the [Ex
 
 ### Chrome 112: Increased storage.session quota {: #m112-storage-session-quota}
 
-March 1, 2023
+March 3, 2023
 
-From Chrome 112, the quota for the [`storage.session`](/docs/extensions/reference/storage/#property-session) API has been increased to approximately 10 MB. This was discussed in the Web Extensions Community Group: [https://github.com/w3c/webextensions/issues/350](https://github.com/w3c/webextensions/issues/350)
+From Chrome 112, the quota for the [`storage.session`](/docs/extensions/reference/storage/#property-session) property has been increased to approximately 10 MB. This was discussed in the Web Extensions Community Group: [https://github.com/w3c/webextensions/issues/350](https://github.com/w3c/webextensions/issues/350)
 
 ### Chrome 109: Is an exension enabled {: #m110-action }
 
