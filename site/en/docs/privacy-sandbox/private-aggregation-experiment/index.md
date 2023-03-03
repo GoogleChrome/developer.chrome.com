@@ -22,7 +22,7 @@ for the Private Aggregation API.
    *  Set up
       [local testing](https://github.com/privacysandbox/aggregation-service/blob/main/README.md).
       The Aggregation Service for the Private Aggregation API is not yet
-      available to test in production.
+      available to test in a production environment.
 
 ## Get support
 
