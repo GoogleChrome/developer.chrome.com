@@ -34,7 +34,7 @@ Reasons, listed [below][offscreen-reason], are set upon document creation to det
 
 ## Example
 
-Use `chrome.offscree.createDocument(...)` and `chrome.offscreen.closeDocument()` for creating and closing an offscreen document. Only a single Document can be open at a time. 
+Use `chrome.offscreen.createDocument(...)` and `chrome.offscreen.closeDocument()` for creating and closing an offscreen document. Only a single Document can be open at a time. 
 
 ```js
 chrome.offscreen.createDocument({
@@ -46,7 +46,7 @@ chrome.offscreen.createDocument({
 chrome.offscreen.closeDocument()
 ```
 
-The following example shows how to check for existing offscreen documents. The `hasOffscreenDocument` method uses [clients.matchAll()](https://developer.mozilla.org/docs/Web/API/Clients/matchAll) to find existing offscreen documents.
+The following example shows how to check for existing offscreen documents. The `hasOffscreenDocument` function uses [clients.matchAll()](https://developer.mozilla.org/docs/Web/API/Clients/matchAll) to find existing offscreen documents. Please note: the function assumes that your extension uses a single offscreen document. 
 
 ```js
 async function hasOffscreenDocument(path) {
