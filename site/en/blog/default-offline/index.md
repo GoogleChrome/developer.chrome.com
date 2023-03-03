@@ -31,6 +31,6 @@ The option to create your own custom offline page is still available. The follow
 
 {% YouTube id='M7gQg9JojGE' %}
 
-Even though the feature is available on Android only at the moment, we are working to bring it to desktop as well. If you have any feedback send it our way via [this form](https://forms.gle/PnrpAtgGgvQ2jVof6)
+This feature is available on Android (Chrome 109) and desktop environments (Chrome 110). If you have any feedback send it our way via [this form](https://forms.gle/PnrpAtgGgvQ2jVof6)
 
 Photo by [Sten Ritterfeld](https://unsplash.com/@stenslens) on [Unsplash](https://unsplash.com/s/photos/airplane-phone)
