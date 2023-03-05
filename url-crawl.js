@@ -1,6 +1,9 @@
 const fs = require('fs');
 const chalk = require('chalk');
 const handlers = require('./server/handlers');
+const {createMocks} = require('node-mocks-http');
+const EventEmitter = require('events');
+const response = require('express/lib/response');
 
 // matches <body>...</body>
 const HTML_BODY_REGEX = /<body>(.*)<\/body>/is;
@@ -129,84 +132,32 @@ class UrlCrawl {
    * Simulates a network request to the express webserver.
    *
    * @param {string} urlPath The URL path to simulate
-   * @returns {Promise<{
-   *   sendFile: (file: string, options: {root: string}) => void,
-   *   redirect: (code: number, target: string) => void,
-   *   status: (code: number) => void,
-   *   headers: Record<string, string>,
-   *   setHeader: (key: string, value: string) => void,
-   *   getHeader: (key: string) => string,
-   *   content: string,
-   *   end: (content?: string) => void,
-   *   statusCode: number,
-   * }>}
+   * @returns {Promise<import('express').Response>}
    */
   simulateExpressPath(urlPath) {
     return new Promise(resolve => {
-      const res = new Writable(
-        /**
-         * @typedef {module:stream.internal.WritableOptions} WritableOptions
-         * @type {WritableOptions & {
-         *   content: string,
-         * }} */ ({
-          construct(callback) {
-            this.content = '';
-            callback();
-          },
-          write(chunk, _encoding, callback) {
-            this.content += chunk.toString();
-            callback();
-          },
-        })
+      const {req, res} = createMocks(
+        {
+          method: 'GET',
+          url: urlPath,
+        },
+        {
+          eventEmitter: EventEmitter,
+        }
       );
 
-      // essentially we're just mocking the express response object for the middlewares to work
-      // correctly
-      Object.assign(res, {
-        // added to trick the "send" package into not immediately closing the writable
-        finished: false,
-
-        // used by the notFoundHandler
-        sendFile(file, options) {
-          const content = fs.readFileSync(path.join(options?.root, file));
-          this.setHeader('Content-Type', 'text/html');
-          this.end(content);
-        },
-
-        statusCode: 200,
-        redirect(code, target) {
-          this.statusCode = code;
-          this.setHeader('Location', target);
-          this.end();
-        },
-        status(code) {
-          this.statusCode = code;
-        },
-
-        headers: {},
-        setHeader(key, value) {
-          this.headers[key] = value;
-        },
-        getHeader(key) {
-          return this.headers[key];
-        },
-
-        content: '',
-        end(content) {
-          if (content !== undefined) {
-            this.content = content;
-          }
-
-          resolve(this);
+      let body = '';
+      Object.assign(res, response, {
+        req,
+        write(data) {
+          body += data.toString();
         },
       });
 
-      const req = {
-        method: 'GET',
-        path: urlPath,
-        url: urlPath,
-        headers: {},
-      };
+      res.on('end', () => {
+        res.content = body;
+        resolve(res);
+      });
 
       /**
        * Call the next in line handler
@@ -318,7 +269,7 @@ class UrlCrawl {
 
       return res.statusCode;
     } else if (res.statusCode === 301 || res.statusCode === 302) {
-      const location = res.headers.Location;
+      const location = /** @type {string} */ (res.getHeader('Location'));
       // external redirect, ignore
       if (location.startsWith('http://') || location.startsWith('https://')) {
         return 200;
@@ -346,7 +297,7 @@ class UrlCrawl {
     }
 
     // if the content is not HTML, we don't need to scan it
-    const contentType = res.headers['Content-Type'];
+    const contentType = /** @type {string} */ (res.getHeader('Content-Type'));
     if (contentType === null || !contentType.startsWith('text/html')) {
       return 200;
     }
