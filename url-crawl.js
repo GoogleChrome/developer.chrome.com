@@ -78,7 +78,28 @@ class UrlCrawlResult {
   }
 }
 
+/**
+ * @typedef {{
+ *   shouldNormalizeTrailingSlash?: boolean;
+ *   shouldDisableDuplicateUrls?: boolean;
+ *   onErrorOutput?: (error: ScanError) => string;
+ *   handlers?: import('express').RequestHandler[];
+ * }} UrlCrawlOptions
+ */
+
 class UrlCrawl {
+  /**
+   * @param {UrlCrawlOptions} options
+   */
+  constructor(options) {
+    this.shouldNormalizeTrailingSlash =
+      options?.shouldNormalizeTrailingSlash ?? false;
+    this.shouldDisableDuplicateUrls =
+      options?.shouldDisableDuplicateUrls ?? false;
+    this.onErrorOutput = options?.onErrorOutput ?? null;
+    this.handlers = options?.handlers ?? [];
+  }
+
   /**
    * Prints debug message to the console
    *
@@ -186,9 +207,13 @@ class UrlCrawl {
           return;
         }
 
-        handler(req, res, () => {
-          callNextHandler(handlerIndex + 1);
-        });
+        handler(
+          /** @type {import('express').Request} */ (req),
+          /** @type {import('express').Response} */ (res),
+          () => {
+            callNextHandler(handlerIndex + 1);
+          }
+        );
       };
 
       callNextHandler();
@@ -211,8 +236,8 @@ class UrlCrawl {
    * @param {ScanError} error
    */
   handleError(result, cachePath, error) {
-    if (this.handleErrorOutputCallback) {
-      console.log(this.handleErrorOutputCallback(error));
+    if (this.onErrorOutput) {
+      console.log(this.onErrorOutput(error));
     }
 
     result.errors.push(error);
@@ -239,12 +264,12 @@ class UrlCrawl {
   ) {
     // instead of checking a URL everytime it is reused, we check it once and cache the result
     let cachePath = urlPath;
-    if (this._shouldNormalizeTrailingSlash && !urlPath.endsWith('/')) {
+    if (this.shouldNormalizeTrailingSlash && !urlPath.endsWith('/')) {
       cachePath += '/';
     }
 
     const cachedResult = result.scannedUrls[cachePath];
-    if (this._shouldDisableDuplicateUrls && cachedResult) {
+    if (this.shouldDisableDuplicateUrls && cachedResult) {
       return 200;
     }
 
@@ -349,59 +374,6 @@ class UrlCrawl {
   }
 
   /**
-   * Adds a (or many) handler to the list of handlers that will be called for each URL
-   *
-   * @param {function[]} handlers
-   * @returns {UrlCrawl}
-   */
-  use(...handlers) {
-    this.handlers = handlers;
-
-    return this;
-  }
-
-  /**
-   * Sets the error output callback for printing as the scan is running
-   * If left unset, nothing will be printed during scan
-   *
-   * @param {(ScanError) => string} callback
-   * @returns {UrlCrawl}
-   */
-  handleErrorOutput(callback) {
-    this.handleErrorOutputCallback = callback;
-
-    return this;
-  }
-
-  /**
-   * Sets if a URL with a trailing slash should be treated as a different URL
-   * true = /about and /about/ are treated as the same URL
-   * false = /about and /about/ are treated as different URLs
-   *
-   * @param {boolean} shouldNormalizeTrailingSlash
-   * @returns {UrlCrawl}
-   */
-  shouldNormalizeTrailingSlash(shouldNormalizeTrailingSlash = true) {
-    this._shouldNormalizeTrailingSlash = shouldNormalizeTrailingSlash;
-
-    return this;
-  }
-
-  /**
-   * Sets if a URL referenced in multiple places should be treated as multiple errors
-   * true = a URL is only an error once
-   * false = a URL is an error for each place it is referenced
-   *
-   * @param {boolean} shouldDisableDuplicateUrls
-   * @returns {UrlCrawl}
-   */
-  shouldDisableDuplicateUrls(shouldDisableDuplicateUrls = true) {
-    this._shouldDisableDuplicateUrls = shouldDisableDuplicateUrls;
-
-    return this;
-  }
-
-  /**
    * Detect URLs in a HTML string and call onUrl for each one
    *
    * @param {string} html The HTML to search for URLs
@@ -453,16 +425,16 @@ class UrlCrawl {
 }
 
 (async () => {
-  const urlCrawlResult = await new UrlCrawl()
-    .use(...handlers)
-    .handleErrorOutput(error => {
+  const urlCrawlResult = await new UrlCrawl({
+    handlers,
+    shouldDisableDuplicateUrls: true,
+    shouldNormalizeTrailingSlash: true,
+    onErrorOutput: error => {
       return `${chalk[error.statusCode === 200 ? 'green' : 'red'].bold(
         `${error.statusCode} ${error.summary}`
       )} ${error.tag}[href="${chalk.red(error.path)}"] @ ${error.parent}`;
-    })
-    .shouldNormalizeTrailingSlash()
-    .shouldDisableDuplicateUrls()
-    .go();
+    },
+  }).go();
 
   urlCrawlResult.summaryToConsole();
 })();
