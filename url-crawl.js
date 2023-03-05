@@ -206,174 +206,144 @@ class UrlCrawl {
    */
 
   /**
+   * @param {UrlCrawlResult} result
+   * @param {string} cachePath
+   * @param {ScanError} error
+   */
+  handleError(result, cachePath, error) {
+    if (this.handleErrorOutputCallback) {
+      console.log(this.handleErrorOutputCallback(error));
+    }
+
+    result.errors.push(error);
+    result.scannedUrls[cachePath] = error;
+  }
+
+  /**
+   * Recursively loads a path's content and scans it for URLs
+   *
+   * @param {UrlCrawlResult} result
+   * @param {string} urlPath
+   * @param {string} tag
+   * @param {?string} parent
+   * @param {boolean} shouldSilentlyFail
+   *
+   * @returns {Promise<number>}
+   */
+  async scanPath(
+    result,
+    urlPath,
+    tag,
+    parent = null,
+    shouldSilentlyFail = false
+  ) {
+    // instead of checking a URL everytime it is reused, we check it once and cache the result
+    let cachePath = urlPath;
+    if (this._shouldNormalizeTrailingSlash && !urlPath.endsWith('/')) {
+      cachePath += '/';
+    }
+
+    const cachedResult = result.scannedUrls[cachePath];
+    if (this._shouldDisableDuplicateUrls && cachedResult) {
+      return 200;
+    }
+
+    result.incrementScanCount();
+
+    if (cachedResult !== undefined) {
+      if (cachedResult !== 'OK' && !shouldSilentlyFail) {
+        this.handleError(result, cachePath, {
+          ...cachedResult,
+          parent,
+          tag,
+        });
+      }
+
+      return cachedResult.statusCode;
+    }
+
+    // run request simulation on the path
+    const res = await this.simulateExpressPath(urlPath);
+    if (res.statusCode === 404) {
+      if (!shouldSilentlyFail) {
+        this.handleError(result, cachePath, {
+          path: urlPath,
+          statusCode: res.statusCode,
+          tag,
+          summary: 'Not Found',
+          parent,
+        });
+      }
+
+      return res.statusCode;
+    } else if (res.statusCode === 301 || res.statusCode === 302) {
+      const location = res.headers.Location;
+      // external redirect, ignore
+      if (location.startsWith('http://') || location.startsWith('https://')) {
+        return 200;
+      }
+
+      const redirectResult = await this.scanPath(
+        result,
+        location,
+        tag,
+        parent,
+        true
+      );
+
+      if (redirectResult !== 200 && !shouldSilentlyFail) {
+        this.handleError(result, cachePath, {
+          path: urlPath,
+          tag,
+          statusCode: redirectResult,
+          summary: 'Redirected',
+          parent,
+        });
+      }
+
+      return redirectResult;
+    }
+
+    // if the content is not HTML, we don't need to scan it
+    const contentType = res.headers['Content-Type'];
+    if (contentType === null || !contentType.startsWith('text/html')) {
+      return 200;
+    }
+
+    // will contain the ... in <body>...</body>
+    const bodyContent = HTML_BODY_REGEX.exec(res.content)?.[1];
+    if (bodyContent === undefined) {
+      this.handleError(result, cachePath, {
+        path: urlPath,
+        tag,
+        statusCode: res.statusCode,
+        summary: 'No <body>',
+        parent,
+      });
+
+      return res.statusCode;
+    }
+
+    await this.detectUrls(bodyContent, urlPath, async (url, elTag) => {
+      result.scannedUrls[cachePath] = 'OK';
+      if (url.hostname !== 'internal') {
+        return;
+      }
+
+      await this.scanPath(result, url.pathname, elTag, urlPath);
+    });
+
+    return 200;
+  }
+
+  /**
    * @returns {Promise<UrlCrawlResult>}
    */
   async go() {
     const result = new UrlCrawlResult();
 
-    /**
-     * @param {string} cachePath
-     * @param {ScanError} error
-     */
-    const handleError = (cachePath, error) => {
-      if (this.handleErrorOutputCallback) {
-        console.log(this.handleErrorOutputCallback(error));
-      }
-
-      result.errors.push(error);
-      result.scannedUrls[cachePath] = error;
-    };
-
-    /**
-     * Recursively loads a path's content and scans it for URLs
-     *
-     * @param {string} urlPath
-     * @param {string} tag
-     * @param {?string} parent
-     * @param {boolean} shouldSilentlyFail
-     *
-     * @returns {Promise<number>}
-     */
-    const scanPath = async (
-      urlPath,
-      tag,
-      parent = null,
-      shouldSilentlyFail = false
-    ) => {
-      // instead of checking a URL everytime it is reused, we check it once and cache the result
-      let cachePath = urlPath;
-      if (this._shouldNormalizeTrailingSlash && !urlPath.endsWith('/')) {
-        cachePath += '/';
-      }
-
-      const cachedResult = result.scannedUrls[cachePath];
-      if (this._shouldDisableDuplicateUrls && cachedResult) {
-        return 200;
-      }
-
-      result.incrementScanCount();
-
-      if (cachedResult !== undefined) {
-        if (cachedResult !== 'OK' && !shouldSilentlyFail) {
-          handleError(cachePath, {
-            ...cachedResult,
-            parent,
-            tag,
-          });
-        }
-
-        return cachedResult.statusCode;
-      }
-
-      // run request simulation on the path
-      const res = await this.simulateExpressPath(urlPath);
-      if (res.statusCode === 404) {
-        if (!shouldSilentlyFail) {
-          handleError(cachePath, {
-            path: urlPath,
-            statusCode: res.statusCode,
-            tag,
-            summary: 'Not Found',
-            parent,
-          });
-        }
-
-        return res.statusCode;
-      } else if (res.statusCode === 301 || res.statusCode === 302) {
-        const location = res.headers.Location;
-        // external redirect, ignore
-        if (location.startsWith('http://') || location.startsWith('https://')) {
-          return 200;
-        }
-
-        const redirectResult = await scanPath(location, tag, parent, true);
-
-        if (redirectResult !== 200 && !shouldSilentlyFail) {
-          handleError(cachePath, {
-            path: urlPath,
-            tag,
-            statusCode: redirectResult,
-            summary: 'Redirected',
-            parent,
-          });
-        }
-
-        return redirectResult;
-      }
-
-      // if the content is not HTML, we don't need to scan it
-      const contentType = res.headers['Content-Type'];
-      if (contentType === null || !contentType.startsWith('text/html')) {
-        return 200;
-      }
-
-      // will contain the ... in <body>...</body>
-      const bodyContent = HTML_BODY_REGEX.exec(res.content)?.[1];
-      if (bodyContent === undefined) {
-        handleError(cachePath, {
-          path: urlPath,
-          tag,
-          statusCode: res.statusCode,
-          summary: 'No <body>',
-          parent,
-        });
-
-        return res.statusCode;
-      }
-
-      HTML_HREF_ELEMENT_REGEX.lastIndex = 0;
-      // find all <a ...> or <area ...> matches
-      // eslint-disable-next-line no-constant-condition
-      while (true) {
-        const match = HTML_HREF_ELEMENT_REGEX.exec(
-          /** @type {string} */ (bodyContent)
-        );
-
-        if (match === null) {
-          break;
-        }
-
-        // find the href attribute
-        HTML_HREF_ATTRIBUTE_REGEX.lastIndex = 0;
-        const hrefMatch = HTML_HREF_ATTRIBUTE_REGEX.exec(match[0]);
-        if (hrefMatch === null) {
-          continue;
-        }
-
-        let url = hrefMatch[1];
-        // to cheaply support quote attributes, we can convert it using JSON.parse
-        if (url.charAt(0) === '"') {
-          try {
-            url = JSON.parse(
-              url
-                .replaceAll('\t', '\\t')
-                .replaceAll('\r', '\\r')
-                .replaceAll('\n', '\\n')
-                .replaceAll('\f', '\\f')
-                .replaceAll('\b', '\\b')
-            );
-          } catch (e) {
-            this.debug('Failed to parse attribute value', url, e);
-
-            continue;
-          }
-        }
-
-        const parsedUrl = new URL(url, `http://internal${urlPath ?? ''}`);
-
-        result.scannedUrls[cachePath] = 'OK';
-        if (parsedUrl.hostname !== 'internal') {
-          continue;
-        }
-
-        await scanPath(parsedUrl.pathname, match[1], urlPath);
-      }
-
-      return 200;
-    };
-
     // initiate the scan
-    await scanPath('/', 'root');
+    await this.scanPath(result, '/', 'root');
 
     return result;
   }
@@ -429,6 +399,56 @@ class UrlCrawl {
     this._shouldDisableDuplicateUrls = shouldDisableDuplicateUrls;
 
     return this;
+  }
+
+  /**
+   * Detect URLs in a HTML string and call onUrl for each one
+   *
+   * @param {string} html The HTML to search for URLs
+   * @param {string} pageUrl The URL of the page that contains the HTML
+   * @param {(url: URL, elTag: string) => void} onUrl A callback that is called for each URL found
+   */
+  async detectUrls(html, pageUrl, onUrl) {
+    HTML_HREF_ELEMENT_REGEX.lastIndex = 0;
+    // find all <a ...> or <area ...> matches
+    // eslint-disable-next-line no-constant-condition
+    while (true) {
+      const match = HTML_HREF_ELEMENT_REGEX.exec(html);
+
+      if (match === null) {
+        break;
+      }
+
+      // find the href attribute
+      HTML_HREF_ATTRIBUTE_REGEX.lastIndex = 0;
+      const hrefMatch = HTML_HREF_ATTRIBUTE_REGEX.exec(match[0]);
+      if (hrefMatch === null) {
+        continue;
+      }
+
+      let url = hrefMatch[1];
+      // to cheaply support quote attributes, we can convert it using JSON.parse
+      if (url.charAt(0) === '"') {
+        try {
+          url = JSON.parse(
+            url
+              .replaceAll('\t', '\\t')
+              .replaceAll('\r', '\\r')
+              .replaceAll('\n', '\\n')
+              .replaceAll('\f', '\\f')
+              .replaceAll('\b', '\\b')
+          );
+        } catch (e) {
+          this.debug('Failed to parse attribute value', url, e);
+
+          continue;
+        }
+      }
+
+      const parsedUrl = new URL(url, `http://internal${pageUrl ?? ''}`);
+
+      await onUrl(parsedUrl, match[1]);
+    }
   }
 }
 
