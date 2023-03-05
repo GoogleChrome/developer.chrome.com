@@ -13,6 +13,71 @@ const HTML_HREF_ELEMENT_REGEX = /<(a|area)\s.+?>.+?(?=>)\/?>/gi;
 // matches href="..." (backslash escape aware) or href=... (does not match href='...')
 const HTML_HREF_ATTRIBUTE_REGEX = /href=("(?:\\["\\]|[^"\\]+)*"|[^\s>]+)/gi;
 
+class UrlCrawlResult {
+  constructor() {
+    this.scannedUrls = {};
+    this.scanCount = 0;
+    /** @type {ScanError[]} */
+    this.errors = [];
+
+    this.startTime = Date.now();
+  }
+
+  get errorCount() {
+    return this.errors.length;
+  }
+
+  incrementScanCount() {
+    this.scanCount++;
+  }
+
+  summaryToConsole() {
+    const errorCategories = {};
+    for (const error of this.errors) {
+      const key = `${error.statusCode} ${error.summary}`;
+      if (errorCategories[key] === undefined) {
+        errorCategories[key] = [];
+      }
+
+      errorCategories[key].push(error);
+    }
+
+    /**
+     * @param {number} number
+     * @returns {string}
+     */
+    function formatNumber(number) {
+      return number.toLocaleString('en-GB');
+    }
+
+    const errorCount = this.errorCount;
+    const summary = [
+      '',
+      '=== Summary ===',
+      `Scanned ${formatNumber(this.scanCount)} URLs in ${
+        (Date.now() - this.startTime) / 1000
+      }s`,
+      '',
+      'Error Summary',
+      Object.entries(errorCategories)
+        .map(
+          ([key, errors]) =>
+            `  ${chalk[errors[0].statusCode === 200 ? 'green' : 'red'].bold(
+              key
+            )}: ${formatNumber(errors.length)}`
+        )
+        .join('\n'),
+      '',
+      'Totals',
+      `  Errors: ${formatNumber(errorCount)}`,
+      `  Pass: ${formatNumber(this.scanCount - errorCount)}`,
+      '',
+    ];
+
+    console.log(summary.join('\n'));
+  }
+}
+
 class UrlCrawl {
   /**
    * Prints debug message to the console
@@ -141,30 +206,16 @@ class UrlCrawl {
    */
 
   /**
-   * @returns {Promise<{
-   *   scanCount: number,
-   *   errorCount: number,
-   *   scannedUrls: {
-   *     [key: string]: ScanError | 'OK',
-   *   },
-   *   errors: ScanError[]
-   * }>}
+   * @returns {Promise<UrlCrawlResult>}
    */
   async go() {
-    const result = {
-      scannedUrls: {},
-      scanCount: 0,
-      errorCount: 0,
-      /** @type {ScanError[]} */
-      errors: [],
-    };
+    const result = new UrlCrawlResult();
 
     /**
      * @param {string} cachePath
      * @param {ScanError} error
      */
     const handleError = (cachePath, error) => {
-      result.errorCount++;
       if (this.handleErrorOutputCallback) {
         console.log(this.handleErrorOutputCallback(error));
       }
@@ -195,13 +246,13 @@ class UrlCrawl {
         cachePath += '/';
       }
 
-      if (this._shouldDisableDuplicateUrls && result.scannedUrls[cachePath]) {
+      const cachedResult = result.scannedUrls[cachePath];
+      if (this._shouldDisableDuplicateUrls && cachedResult) {
         return 200;
       }
 
-      result.scanCount++;
+      result.incrementScanCount();
 
-      const cachedResult = result.scannedUrls[cachePath];
       if (cachedResult !== undefined) {
         if (cachedResult !== 'OK' && !shouldSilentlyFail) {
           handleError(cachePath, {
@@ -381,58 +432,17 @@ class UrlCrawl {
   }
 }
 
-const startTime = Date.now();
-new UrlCrawl()
-  .use(...handlers)
-  .handleErrorOutput(error => {
-    return `${chalk[error.statusCode === 200 ? 'green' : 'red'].bold(
-      `${error.statusCode} ${error.summary}`
-    )} ${error.tag}[href="${chalk.red(error.path)}"] @ ${error.parent}`;
-  })
-  .shouldNormalizeTrailingSlash()
-  .shouldDisableDuplicateUrls()
-  .go()
-  .then(result => {
-    const errorCategories = {};
-    for (const error of result.errors) {
-      const key = `${error.statusCode} ${error.summary}`;
-      if (errorCategories[key] === undefined) {
-        errorCategories[key] = [];
-      }
+(async () => {
+  const urlCrawlResult = await new UrlCrawl()
+    .use(...handlers)
+    .handleErrorOutput(error => {
+      return `${chalk[error.statusCode === 200 ? 'green' : 'red'].bold(
+        `${error.statusCode} ${error.summary}`
+      )} ${error.tag}[href="${chalk.red(error.path)}"] @ ${error.parent}`;
+    })
+    .shouldNormalizeTrailingSlash()
+    .shouldDisableDuplicateUrls()
+    .go();
 
-      errorCategories[key].push(error);
-    }
-
-    /**
-     * @param {number} number
-     * @returns {string}
-     */
-    function formatNumber(number) {
-      return number.toLocaleString('en-GB');
-    }
-
-    const summary = [
-      '',
-      '=== Summary ===',
-      `Scanned ${formatNumber(result.scanCount)} URLs in ${
-        (Date.now() - startTime) / 1000
-      }s`,
-      '',
-      'Error Summary',
-      Object.entries(errorCategories)
-        .map(
-          ([key, errors]) =>
-            `  ${chalk[errors[0].statusCode === 200 ? 'green' : 'red'].bold(
-              key
-            )}: ${formatNumber(errors.length)}`
-        )
-        .join('\n'),
-      '',
-      'Totals',
-      `  Errors: ${formatNumber(result.errorCount)}`,
-      `  Pass: ${formatNumber(result.scanCount - result.errorCount)}`,
-      '',
-    ];
-
-    console.log(summary.join('\n'));
-  });
+  urlCrawlResult.summaryToConsole();
+})();
