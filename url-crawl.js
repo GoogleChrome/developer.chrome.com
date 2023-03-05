@@ -1,6 +1,4 @@
-const path = require('path');
 const fs = require('fs');
-const {Writable} = require('node:stream');
 const chalk = require('chalk');
 const handlers = require('./server/handlers');
 
@@ -31,6 +29,10 @@ class UrlCrawlResult {
     this.scanCount++;
   }
 
+  getScanDuration() {
+    return `${(Date.now() - this.startTime) / 1000}s`;
+  }
+
   summaryToConsole() {
     const errorCategories = {};
     for (const error of this.errors) {
@@ -54,9 +56,9 @@ class UrlCrawlResult {
     const summary = [
       '',
       '=== Summary ===',
-      `Scanned ${formatNumber(this.scanCount)} URLs in ${
-        (Date.now() - this.startTime) / 1000
-      }s`,
+      `Scanned ${formatNumber(
+        this.scanCount
+      )} URLs in ${this.getScanDuration()}`,
       '',
       'Error Summary',
       Object.entries(errorCategories)
@@ -75,6 +77,20 @@ class UrlCrawlResult {
     ];
 
     console.log(summary.join('\n'));
+  }
+
+  toJson(shouldPrettyPrint = false) {
+    return JSON.stringify(
+      {
+        scanDuration: this.getScanDuration(),
+        scanCount: this.scanCount,
+        errorCount: this.errorCount,
+        scannedUrls: this.scannedUrls,
+        errors: this.errors,
+      },
+      null,
+      shouldPrettyPrint ? 2 : 0
+    );
   }
 }
 
@@ -437,4 +453,9 @@ class UrlCrawl {
   }).go();
 
   urlCrawlResult.summaryToConsole();
+  fs.mkdirSync('crawl-results', {recursive: true});
+  fs.writeFileSync(
+    'crawl-results/express-simulate.json',
+    urlCrawlResult.toJson(true)
+  );
 })();
