@@ -26,7 +26,7 @@ After living in an embedded iframe that didn't really allow the showcase to full
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/c7is7cp31DfaKl3mPt2q.png", alt="The Project Fugu API Showcase.", width="800", height="749" %}
 
-Launch each app by clicking its name, screenshot, or the **Launch app** link. For many apps, you can also see the source code by clicking **View source**. On browsers that support the [Web Share API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Share_API), click **Share app** to do exactly that. As a special inception Easter egg, the [Project Fugu API Showcase is of course contained in the Project Fugu API Showcase](/fugu-showcase/#developer.chrome.com!fugu-showcase).
+Launch each app by clicking its name, screenshot, or the **Launch app** link. For many apps, you can also see the source code by clicking **View source**. On browsers that support the [Web Share API](https://developer.mozilla.org/docs/Web/API/Web_Share_API), click **Share app** to do exactly that. As a special inception Easter egg, the [Project Fugu API Showcase is of course contained in the Project Fugu API Showcase](/fugu-showcase/#developer.chrome.com!fugu-showcase).
 
 {% Aside 'success' %}
 Be sure to subscribe to the [RSS feed](/feeds/fugu-showcase.xml) so you never miss a new Fugu app.
