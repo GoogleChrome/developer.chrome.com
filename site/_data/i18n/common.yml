@@ -291,3 +291,7 @@ outdated_banner:
     en: This content is outdated and no longer accurate.
   new_material:
     en: New material available
+
+blog_card:
+  default_alt:
+    en: Abstract blue circles

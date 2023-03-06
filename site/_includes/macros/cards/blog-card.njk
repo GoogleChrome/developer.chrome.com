@@ -4,7 +4,7 @@
 {% set pd = post.data %}
 <div class="blog-card rounded-lg pad-300 md:pad-400 width-full">
   {% set thumbnail = pd.thumbnail or pd.hero or site.defaultPostImg %}
-  {% set alt = pd.alt or 'fallback image' %}
+  {% set alt = pd.alt or 'i18n.common.blog_card.default_alt' | i18n(locale) %}
   {% set tags = pd.tags %}
 
   {% if thumbnail %}
