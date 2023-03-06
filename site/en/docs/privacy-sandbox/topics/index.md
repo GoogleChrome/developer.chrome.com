@@ -2,9 +2,9 @@
 layout: 'layouts/doc-post.njk'
 title: 'Topics API: developer guide'
 subhead: >
-  Try out the Topics demo, and learn about the API and how to run Topics with flags or participate in an origin trial.
+  Learn how to work with the API, including how to use Chrome flags for testing.
 description: >
-  Try out the Topics demo, and learn about the API and how to run Topics with flags or participate in an origin trial.
+  Learn how to work with the API, including how to use Chrome flags for testing.
 date: 2022-01-25
 updated: 2022-02-01
 authors:
@@ -273,7 +273,6 @@ version used by the API.</td>
     </tr>
   </tbody>
 </table>
-
 
 
 ## Next steps
