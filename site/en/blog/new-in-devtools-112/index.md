@@ -43,7 +43,7 @@ DevTools pulls the descriptions for tooltips from [VS Code Custom Data](https://
 The **Recorder** introduces support for custom replay options that you can embed into DevTools with an extension.
 
 Try out the [example extension](https://github.com/puppeteer/replay/tree/main/examples/chrome-extension-replay):
-1. [Create a new recording](/docs/devtools/recorder/#record), expand the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Play.", width="20", height="20" %} **Replay** options, and select the extension.
+1. Install it, [create a new recording](/docs/devtools/recorder/#record), expand the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Play.", width="20", height="20" %} **Replay** options, and select the extension.
 1. Provide an arbitrary name and password (`leeloo` and `multipass` will do). 
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/kfAzPxEF08zwvYYKzP4e.mp4", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
