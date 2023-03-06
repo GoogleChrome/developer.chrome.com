@@ -277,7 +277,8 @@ version used by the API.</td>
 
 ## Next steps
 
-…
+- Learn more about what topics are and how they work. <!-- topic classification page and demo and trial links needed-->
+- Try out the demo or join an origin trial.
 
 {% Partial 'privacy-sandbox/topics-feedback.njk' %}
 
