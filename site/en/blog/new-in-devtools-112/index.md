@@ -106,14 +106,15 @@ Record your interaction with elements in the shadow DOM and inspect the correspo
 
 ## Logpoint and conditional breakpoint improvements {: #logpoint }
 
-Building on top of the [enhanced breakpoint UX](/blog/new-in-devtools-111/#breakpoint-redesign), the **Console** now marks messages triggered by breakpoints:
+Further improving the [enhanced breakpoint UX](/blog/new-in-devtools-111/#breakpoint-redesign), the **Console** now marks messages triggered by breakpoints:
 
-- Conditional breakpoint with a `console.*` call—by an orange question mark`?`
-- Logpoint message with pink two dots `..`
+- `console.*` calls in [conditional breakpoints](/docs/devtools/javascript/breakpoints/#conditional-loc) with an orange question mark `?`
+- [Logpoint](/docs/devtools/javascript/breakpoints/#log-loc) message with pink two dots `..`
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/5udIX9W4LFcDb3H6DuDp.png", alt="Changes to how the Console now displays messages triggered by breakpoints: with icons and proper source link.", width="800", height="566" %}
 
-Additionally, the **Console** now gives you a proper anchor link to breakpoints in source files instead of a hidden VM script.
+The **Console** now gives you proper anchor links to breakpoints in source files instead of `VM<number>` scripts that Chrome creates to run any piece of Javascript on [V8](https://v8.dev/).
+
 Click the link next to the breakpoint message to jump directly to the breakpoint editor.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/8lAz0lb168HXKvhscP2Q.png", alt="The anchor link next to a logpoint message that opens the breakpoint editor.", width="800", height="811" %}
