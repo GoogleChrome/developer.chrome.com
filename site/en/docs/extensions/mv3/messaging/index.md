@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Message passing"
 seoTitle: "Chrome Extensions Message passing"
 date: 2012-09-18
-updated: 2022-11-11
+updated: 2023-02-22
 description: How to pass messages between extensions and content scripts.
 ---
 
@@ -23,10 +23,11 @@ messages][3] section.
 ## Simple one-time requests {: #simple }
 
 If you only need to send a single message to another part of your extension (and optionally get a
-response back), use the simplified [runtime.sendMessage()][4] or [tabs.sendMessage()][5].
-This lets you send a one-time JSON-serializable message from a content script to the extension, or vice
-versa. To handle the response, use the returned Promise. (For backward compatibility, you can still
-pass a callback as the last argument.)
+response back), use the simplified [runtime.sendMessage()][4] method or [tabs.sendMessage()][5]
+method. This lets you send a one-time JSON-serializable message from a content script to the
+extension, or vice versa. To handle the response, use the returned Promise. For backward
+compatibility, you can alternatively pass a callback as the last argument. You cannot use both a
+promise and a callback.
 
 Sending a request from a content script looks like this:
 
@@ -80,6 +81,9 @@ For new extensions you should prefer promises over callbacks. If you're using ca
 `true` to indicate that it will respond asynchronously. The `sendMessage()` function's callback
 will be invoked automatically if no handlers return true or if the `sendResponse()` callback is
 garbage-collected.
+
+For information on using promises, see [Promises on MDN][mdn-promise]. For information on converting
+callbacks to promises and for using them in extensions, see [our own article][doc-promises].
 
 ## Long-lived connections {: #connect }
 
@@ -353,7 +357,7 @@ directory.
 [37]: /docs/extensions/mv3/security#content_scripts
 [38]: /docs/extensions/mv3/security#sanitize
 [39]: https://en.wikipedia.org/wiki/Cross-site_scripting
-[40]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/messaging
+[40]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/_archive/mv2/api/messaging
 [41]: /docs/apps/nativeMessaging/#examples
 [42]: /docs/extensions/mv3/samples
 [43]: /docs/extensions/mv3/manifest/externally_connectable

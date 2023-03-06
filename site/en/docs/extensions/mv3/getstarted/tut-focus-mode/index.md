@@ -39,7 +39,7 @@ Create a file called `manifest.json` and include the following code.
 {
   "manifest_version": 3,
   "name": "Focus Mode",
-  "description": "Enable reading mode on Chrome's official Extensions and Chrome Web Store documentation.",
+  "description": "Enable focus mode on Chrome's official Extensions and Chrome Web Store documentation.",
   "version": "1.0",
   "icons": {
     "16": "images/icon-16.png",
@@ -85,7 +85,7 @@ chrome.runtime.onInstalled.addListener(() => {
 The first event our service worker will listen for is
 [`runtime.onInstalled()`][runtime-oninstalled]. This method allows the extension to set an initial
 state or complete some tasks on installation. Extensions can use the [Storage API][api-storage] and
-[IndexedDB][mdn-indexeddb] to store the application state. In this case, though, since we're only handling two states, we will use the the _action's badge_ text itself to track whether the extension is 'ON' or 'OFF'.
+[IndexedDB][mdn-indexeddb] to store the application state. In this case, though, since we're only handling two states, we will use the _action's badge_ text itself to track whether the extension is 'ON' or 'OFF'.
 
 {% Aside 'key-term' %}
 
@@ -252,8 +252,8 @@ Just for fun, let's add a shortcut to make it easier to enable or disable focus 
   "commands": {
     "_execute_action": {
       "suggested_key": {
-        "default": "Ctrl+U",
-        "mac": "Command+U"
+        "default": "Ctrl+B",
+        "mac": "Command+B"
       }
     }
   }
@@ -284,7 +284,7 @@ First, open any of the following pages:
 - [Publish in the Chrome Web Store][cws-publish]
 - [Scripting API][api-scripting]
 
-Then, click on the extension action. If you set up a keyboard shortcut (link), you can test it by pressing `Ctrl + U` or `Cmd + U`.
+Then, click on the extension action. If you set up a [keyboard shortcut][tut-focus-mode-step6], you can test it by pressing `Ctrl + B` or `Cmd + B`.
 
 It should go from this:
 
@@ -351,10 +351,11 @@ development learning journey. We recommend the following learning paths:
 [doc-promises]: /docs/extensions/mv3/promises/
 [doc-sw]: /docs/extensions/mv3/service_workers/
 [doc-welcome]: /docs/extensions/mv3/
-[github-focus-mode-icons]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/focus-mode/images
-[github-focus-mode]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/focus-mode
+[github-focus-mode-icons]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.focus-mode/images
+[github-focus-mode]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.focus-mode
 [mdn-indexeddb]: https://developer.mozilla.org/docs/Web/API/IndexedDB_API
 [runtime-oninstalled]: /docs/extensions/reference/runtime#event-onInstalled
+[tut-focus-mode-step6]: /docs/extensions/mv3/getstarted/tut-focus-mode#step-6
 [tut-reading-time-step1]: /docs/extensions/mv3/getstarted/tut-reading-time#step-1
 [tut-reading-time-step2]: /docs/extensions/mv3/getstarted/tut-reading-time#step-2
 [tut-reading-time]: /docs/extensions/mv3/getstarted/tut-reading-time

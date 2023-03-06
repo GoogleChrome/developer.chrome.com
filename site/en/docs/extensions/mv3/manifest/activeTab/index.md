@@ -99,7 +99,7 @@ The following user gestures enable `activeTab`:
 
 [insert-css-method]: /docs/extensions/reference/scripting#method-insertCSS
 [1]: /docs/extensions/reference/action
-[2]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/examples/page-redder
+[2]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.page-redder
 [3]: /docs/extensions/reference/action
 [4]: /docs/extensions/reference/contextMenus
 [7]: /docs/extensions/reference/tabs#type-Tab

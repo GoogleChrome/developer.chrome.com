@@ -7,10 +7,10 @@ authors:
   - chrisdavidmills
   - jheyy
 date: 2022-10-19
-updated: 2022-11-10
+updated: 2023-01-25
 ---
 
-The **`popover`** [global attribute](https://developer.mozilla.org/docs/Web/HTML/Global_attributes) is an [emumerated](https://developer.mozilla.org/docs/Glossary/Enumerated) attribute that turns an element into a [popover](/docs/web-platform/popover-api/).
+The **`popover`** [global attribute](https://developer.mozilla.org/docs/Web/HTML/Global_attributes) is an [enumerated](https://developer.mozilla.org/docs/Glossary/Enumerated) attribute that turns an element into a [popover](/docs/web-platform/popover-api/).
 
 It can be used on any HTML element that makes sense as a popover.
 
@@ -44,4 +44,4 @@ The attribute can have any of the following values:
 * [The Popover API](/docs/web-platform/popover-api/)
 * [Pop-ups: They're making a resurgence!](/blog/pop-ups-theyre-making-a-resurgence/), by Jhey Tompkins
 * [Chrome Platform Status: The Popover API](https://chromestatus.com/feature/5463833265045504) 
-* [Open UI: Popover API Explainer](https://open-ui.org/components/popup.research.explainer)
+* [Open UI: Popover API Explainer](https://open-ui.org/components/popover.research.explainer)

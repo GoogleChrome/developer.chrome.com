@@ -595,7 +595,7 @@ let's consider the following scenarios:
 
 #### Key Strategy A
 
-The adtech provider decides to create and manage **one key** across all of its
+The ad tech provider decides to create and manage **one key** across all of its
 advertising customers. Across all advertisers and all currencies, the range of
 purchases vary from low volume, high-end purchases to high volume, low-end
 purchases. This results in the following key:
@@ -621,7 +621,7 @@ purchases. This results in the following key:
 
 #### Key Strategy B
 
-The adtech provider decides to create and manage **two keys** across all of its
+The ad tech provider decides to create and manage **two keys** across all of its
 advertising customers. They decide to separate keys by currency. Across all
 advertisers and all currencies, the range of purchases vary from low volume,
 high-end purchases to high volume, low-end purchases. Separating by currency,
@@ -656,7 +656,7 @@ USD will alter the underlying data and resulting noisy output.
 
 #### Key Strategy C
 
-The adtech provider decides to create and manage **four keys** across all of
+The ad tech provider decides to create and manage **four keys** across all of
 its advertising customers, and to separate them by Currency x Advertiser
 industry:
 
@@ -749,7 +749,7 @@ that help to manage outlier data, and to more evenly distribute purchase values
 across the purchase range of the key.
 
 For Advertiser B, you could create two separate keys to capture two different
-purchase value ranges. In this example, the adtech has noted that outliers
+purchase value ranges. In this example, the ad tech has noted that outliers
 appear above the $500 purchase value. Try implementing two separate keys for
 this advertiser:
 

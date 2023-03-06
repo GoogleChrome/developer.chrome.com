@@ -252,6 +252,20 @@ function buildCanvas(width, height) {
 For additional guidance on working with `OffscreenCanvas`, see [OffscreenCanvas—Speed up Your Canvas
 Operations with a Web Worker][18].
 
+### Offscreen Documents
+
+For extensions that need to unobtrusively use APIs that require DOM access without visually opening up a new window or tab, developers can now use the [Offscreen API](/docs/extensions/reference/offscreen/). This API allows developers to open and close undisplayed documents packaged with the extension for DOM-related tasks without disrupting the user experience. Offscreen documents do not share APIs with the extension's service worker, and function as fully functional web pages for the extension to interact with.
+
+```js
+// background.js
+// for Manifest V3 service workers
+chrome.offscreen.createDocument({
+  url: chrome.runtime.getURL('offscreen.html'),
+  reasons: ['CLIPBOARD'],
+  justification: 'testing the offscreen API',
+});
+```
+
 [2]: https://developers.google.com/web/fundamentals/primers/service-workers/
 [3]: #events
 [4]: #workers

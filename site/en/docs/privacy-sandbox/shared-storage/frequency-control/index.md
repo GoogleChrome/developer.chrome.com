@@ -70,7 +70,7 @@ In this example:
 *  `frequency-cap-worklet.js` is the shared storage worklet that reads the
    frequency cap count value to determine which URL is returned for the ad creative.
 
-**[frequency-cap.js](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/advertiser/frequency-cap.js)**
+**[frequency-cap.js](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/content-producer/url-selection/frequency-cap.js)**
 
 ```javascript
 // The first URL is the default ad to be rendered when the frequency cap is reached
@@ -98,7 +98,7 @@ async function injectAd() {
 injectAd();
 ```
 
-**[frequency-cap-worklet.js](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/advertiser/frequency-cap-worklet.js)**
+**[frequency-cap-worklet.js](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/content-producer/url-selection/frequency-cap-worklet.js)**
 
 ```javascript
 class SelectURLOperation {

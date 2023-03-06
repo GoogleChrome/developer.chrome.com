@@ -24,6 +24,9 @@ redirects:
 - from: /blog/navigation-preload/
   to: https://web.dev/navigation-preload/
 
+- from: /maskable-icon/
+  to: https://web.dev/maskable-icon/
+
 - from: /activeTab
   to: /docs/extensions/reference/activeTab
 
@@ -39,11 +42,17 @@ redirects:
 - from: /docs/extensions/mv3/background_pages
   to: /docs/extensions/mv3/service_workers
 
+- from: /docs/extensions/mv3/overview
+  to: /docs/extensions/mv3/architecture-overview
+
 - from: /blog/fedcm-origin-trial
   to: /docs/privacy-sandbox/fedcm
 
 - from: /docs/privacy-sandbox/attribution-reporting/summary-reports/
   to: /docs/privacy-sandbox/summary-reports/
+
+- from: /docs/privacy-sandbox/status
+  to: https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline
 
 - from: /android
   to: /docs/android
@@ -75,7 +84,7 @@ redirects:
   to: /blog/wasm-debugging/
 
 - from: /docs/privacy-sandbox/fledge-best-practices/
-  to: /docs/privacy-sandbox/fledge/latency/
+  to: /docs/privacy-sandbox/fledge-api/latency/
 
 - from: /blog/fledge-api/
   to: /docs/privacy-sandbox/fledge-api/
@@ -190,6 +199,15 @@ redirects:
   to: /docs/apps/about_apps
 
 # DevTools redirects
+
+- from: /docs/devtools/customize/placement/
+  to: /docs/devtools/customize/#placement
+
+- from: /docs/devtools/customize/dark-theme/
+  to: /docs/devtools/customize/#dark-theme
+
+- from: /docs/devtools/javascript/ignore-chrome-extension-scripts/
+  to: /docs/devtools/settings/other/#skip-extensions
 
 - from: /docs/devtools/evaluate-performance/
   to: /docs/devtools/performance/
@@ -584,6 +602,10 @@ redirects:
 
 - from: /docs/web-platform/pop-up-api/popovertoggletarget-property/
   to: /docs/web-platform/popover-api/popovertoggletarget-property/
+
+# Lighthouse redirects
+- from: /docs/lighthouse/best-practices/password-inputs-can-be-pasted-into/
+  to: /docs/lighthouse/best-practices/paste-preventing-inputs/
 
 # Generic
 

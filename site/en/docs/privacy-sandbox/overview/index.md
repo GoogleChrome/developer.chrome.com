@@ -1,187 +1,156 @@
 ---
 layout: layouts/doc-post.njk
 title: What is the Privacy Sandbox?
-subhead: The Privacy Sandbox is a series of proposals to satisfy cross-site use cases without third-party cookies or other tracking mechanisms.
-description: "What's in it, how to get involved, and what it's for."
+subhead: >
+  A series of proposals to satisfy cross-site use cases without
+  third-party cookies or other tracking mechanisms.
+description: "What's in it, what's it for, and how to get involved."
 date: 2021-05-18
-updated: 2021-01-25
+updated: 2023-02-27
 authors:
   - samdutton
+  - alexandrawhite
 ---
 
+The Privacy Sandbox initiative aims to create technologies that both
+protect people's privacy online and give companies and developers tools to
+build thriving digital businesses.
+
+The Privacy Sandbox has two core aims:
+
+* Phase out support for third-party cookies when new solutions are in place.
+* Reduce cross-site and cross-app tracking while helping to keep online content and services free for all.
 
 {% YouTube
 	id='WnCKlNE52tc'
 %}
 
+The Privacy Sandbox APIs require web browsers to take on a new role. Rather 
+than working with limited tools and protections, the APIs allow a user's
+browser to act on the user's behalf—locally, on their device—to protect the
+user's identifying information as they navigate the web. This is a shift in
+direction for browsers.
 
-## Why do we need the Privacy Sandbox?
-
-The Privacy Sandbox initiative has two core aims:
-* Develop replacement solutions to support web use cases and business models without enabling users
-to be tracked across sites, and avoiding cross-site tracking users aren't aware of.
-* Phase out support for third-party cookies when new solutions are in place.
-
+The Privacy Sandbox's vision of the future has browsers providing specific
+tools to satisfy specific use cases, while preserving user privacy.
 
 ## What are the Privacy Sandbox proposals?
 
-Chrome and other ecosystem stakeholders have offered more than 30 proposals to date, which can be
-found in the [public resources of W3C groups](https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo). These proposals cover a wide variety of use cases and requirements.
+Chrome and other ecosystem stakeholders have offered more than 30 proposals to
+date, which can be found in the
+[public resources of W3C groups](https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo).
+These proposals cover a wide variety of use cases and requirements.
 
-The key proposals are listed below.
+Proposals have a lifecycle with up to three phases before becoming
+[web standards](https://www.w3.org/standards/): discussion, testing, and scaled
+adoption. It's critical we [receive feedback](/docs/privacy-sandbox/feedback/)
+from developers and industry leaders to ensure we create durable
+web features with broad utility and robust privacy protections for users.
+Read more about the [proposal lifecycle](/docs/privacy-sandbox/proposal-lifecycle/).
 
-{% Aside %}
-Some items below link to API explainers or other resources.
-
-Over the coming months, we'll add more posts within this site to summarize external content.
-{% endAside %}
-
+Several key proposals are listed below.
 
 ### Strengthen cross-site privacy boundaries
 
-* [**First-Party Sets**](/docs/privacy-sandbox/first-party-sets): Allow related domain names owned by
-the same entity to declare themselves as belonging to the same first party.
-* [**Shared Storage**](https://github.com/pythagoraskitty/shared-storage): Proposal for a
-general-purpose, low-level API that can serve a number of legitimate use cases that currently rely
-on unpartitioned storage (which is being deprecated).
-* [**CHIPS**](https://github.com/WICG/CHIPS): As with [First-Party Sets](/docs/privacy-sandbox/first-party-sets),
-this proposal addresses use cases around partitioning, and how cross-origin interactions and sharing
-might be enabled, where it makes sense, and how this can be kept safe. The core aim is to allow cookies
-to be set by a third-party service, but only read within the context of the top-level site where they
-were initially set. A partitioned third-party cookie is tied to the top-level site where it was initially
-set and cannot be accessed from elsewhere.
-* [**SameSite cookies**](https://web.dev/samesite-cookies-explained/): Secure sites by explicitly
-marking cross-site cookies.
-* [**Storage Partitioning**](https://github.com/privacycg/storage-partitioning): Enable all forms of
-[user agent state](https://github.com/privacycg/storage-partitioning#user-agent-state), such as
-`localStorage` or cookies, to be double-keyed: by the top-level site as well as the origin of
-the resource being loaded, rather than a single origin or site.
-* [**Fenced Frames**](https://github.com/shivanigithub/fenced-frame): Provide a type of frame element
-that can be used to display content (such as an advertisement) but can't interact with the page
-around it.
-* [**Network State Partitioning**](https://github.com/MattMenke2/Explainer---Partition-Network-State/blob/main/README.md):
-Partition network state to prevent browser network resources being shared across first-party
-contexts, by ensuring that every request has a network partition key that must match in order for
-resources to be reused.
-* [**HTTP Cache Partitioning**](/blog/http-cache-partitioning):
-Improve security and privacy by partitioning the browser HTTP cache.
-* [**Federated Credential Management**](https://github.com/wicg/fedcm):  Support federated identity (where a
-user can sign into a website through a third-party service) without sharing the user's email address
-or other identifying information with a third-party service or website, unless the user
-explicitly agrees to do so. WebID enables federated sign-in without the use of redirects, pop-ups or
-third-party cookies which can be used to identify and track users across sites.
-
+* [**CHIPS**](/docs/privacy-sandbox/chips/): Allow developers to opt-in a
+  cookie to partitioned storage, with a separate cookie jar per top-level site.
+* [**First-Party Sets**](/docs/privacy-sandbox/first-party-sets): Allow related
+  domain names owned by the same entity to declare themselves as belonging to
+  the same first party.
+* [**Shared Storage**](/docs/privacy-sandbox/shared-storage/): Create a
+  general-purpose API which allows sites to store and access unpartitioned
+  cross-site data. This data must be read in a secure environment to prevent leakage.
+* [**SameSite cookies**](https://web.dev/samesite-cookies-explained/): Secure
+  sites by explicitly marking cross-site cookies.
+* [**Storage Partitioning**](https://github.com/privacycg/storage-partitioning):
+  Enable all forms of [user agent state](https://github.com/privacycg/storage-partitioning#user-agent-state),
+  such as `localStorage` or cookies, to be double-keyed: by the top-level site
+  as well as the origin of the resource being loaded, rather than a single
+  origin or site.
+* [**Fenced Frames**](/docs/privacy-sandbox/fenced-frame): Securely embed
+  content onto a page without sharing cross-site data.
+* [**Network State Partitioning**](https://github.com/MattMenke2/Explainer---Partition-Network-State):
+  Prevent browser network resources being shared across first-party contexts,
+  by ensuring that every request has a network partition key that must match in
+  order for resources to be reused.
+* [**HTTP Cache Partitioning**](/blog/http-cache-partitioning): Improve
+  security and privacy by partitioning the browser HTTP cache.
+* [**Federated Credential Management (FedCM)**](/docs/privacy-sandbox/fedcm/):
+  Support federated identity without sharing the user's email address or other
+  identifying information with a third-party service or website, unless the
+  user explicitly agrees to do so.
 
 ### Show relevant content and ads
 
-* [**Topics API**](/docs/privacy-sandbox/topics): Enable interest-based advertising. Designed so
-  that it doesn't require third-party cookies and cannot be used by third parties to track user
-  browsing behavior across sites. The Topics API proposes a mechanism to map website hostnames to
-  topics of interest, and provides a JavaScript API that returns coarse-grained topics a user
-  might currently be interested in, based on their recent browsing activity.
-* [**FLEDGE**](/docs/privacy-sandbox/fledge): Ad selection to serve remarketing and custom audience
-use cases, designed so that it cannot be used by third parties to track user browsing behavior across
-sites.  FLEDGE is the first experiment to be implemented in Chromium within the
-[TURTLEDOVE](https://github.com/WICG/turtledove) family of proposals.
-
+* [**Topics API**](/docs/privacy-sandbox/topics): Enable interest-based
+  advertising without use of third-party cookies or tracking user behavior
+  across sites.
+* [**FLEDGE**](/docs/privacy-sandbox/fledge): Ad selection to serve remarketing
+  and custom audience use cases, designed so that it cannot be used by third
+  parties to track user browsing behavior across sites. FLEDGE is the first
+  experiment to be implemented in Chromium from the
+  [TURTLEDOVE](https://github.com/WICG/turtledove) family of proposals.
 
 ### Measure digital ads
 
-* [**Core Attribution Reporting**](/docs/privacy-sandbox/attribution-reporting): Correlate ad clicks or ad
-views with conversions. Previously known as the Event Conversion Measurement API. Enables two types
-of reports: event-level and aggregate.
-
+* [**Attribution Reporting**](/docs/privacy-sandbox/attribution-reporting):
+  Correlate ad clicks or ad views with conversions. Ad techs can generate
+  event-level or [summary reports](/docs/privacy-sandbox/summary-reports).
+* [**Private Aggregation API**](/docs/privacy-sandbox/private-aggregation/):
+  Generate noisy summary reports with cross-site data.
 
 ### Prevent covert tracking
 
-* [**User-Agent Client Hints**](https://web.dev/user-agent-client-hints/):
-The [User-Agent](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent) (UA) string
-is a significant passive [fingerprinting](https://w3c.github.io/fingerprinting-guidance/#passive)
-surface, as well as being difficult to process. Client Hints enable developers to actively
-request only the information they need about the user's device or conditions, rather than needing to
-parse this data from the User-Agent string.
-* [**DNS-over-HTTPS**](https://en.wikipedia.org/wiki/DNS_over_HTTPS): A protocol for
-[DNS resolution](https://www.cloudflare.com/en-gb/learning/dns/what-is-dns/) via the secure
-context of [HTTPS](https://www.cloudflare.com/en-gb/learning/ssl/what-is-https/).
-* [**Gnatcatcher**](https://github.com/bslassey/ip-blindness): Limit the ability to identify individual
-users by accessing their IP address. There are two parts to the proposal:
-[**Willful IP Blindness**](https://github.com/bslassey/ip-blindness/blob/master/willful_ip_blindness.md)
-provides a way for websites to let browsers know they are not connecting IP addresses with users,
-and [**Near-path NAT**](https://github.com/bslassey/ip-blindness/blob/master/near_path_nat.md) allows
-groups of users to send their traffic through the same privatizing server, effectively hiding their
-IP addresses from a site host. Gnatcatcher also ensures that sites requiring access to IP addresses
-for legitimate purposes such as abuse prevention can do so, subject to certification and auditing.
-* [**Privacy Budget**](https://www.youtube.com/watch?v=0STgfjSA6T8): Explore methods of quantifying
-the amount of information about a user's browser or device that are available to websites, and develop
-practical mechanisms to enable browser-based limits on the information a site can access.
-
+* [**User-Agent reduction and User-Agent Client Hints**](/docs/privacy-sandbox/user-agent/):
+  Limit passively shared browser data to reduce the volume of sensitive
+  information which leads to fingerprinting. Client Hints allow developers to
+  actively request only the information they need about the user's device or
+  conditions.
+* [**IP Protection**](/docs/privacy-sandbox/ip-protection/): Improve user
+  privacy by protecting their IP address from being used for tracking.
+* [**Bounce tracking mitigations**](/docs/privacy-sandbox/bounce-tracking-mitigations/):
+  A proposal to reduce or eliminate the ability of bounce tracking to recognize
+  people across contexts.
+* [**Privacy Budget**](/docs/privacy-sandbox/privacy-budget/): Limit the amount
+  of individual user data exposed to sites to prevent covert tracking.
 
 ### Fight spam and fraud on the web
 
-* [**Private State Tokens**](/docs/privacy-sandbox/trust-tokens): Enable a website to convey a limited amount of
-information from one browsing context to another (for example, across sites) to help combat fraud,
-without passive tracking.
+* [**Private State Tokens**](/docs/privacy-sandbox/trust-tokens): Allow
+  websites to convey a limited amount of information from one browsing context
+  to another (for example, across sites) to help combat fraud, without passive
+  tracking.
 
+## Who works on the Privacy Sandbox?
 
-## Who is working on the Privacy Sandbox?
-
-By early 2021 there were:
-* 30+ Privacy Sandbox proposals offered by Chrome and others.
 * 400+ participants who joined W3C groups to provide input including the
-[Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants) and
-the [Privacy Community Group](https://www.w3.org/community/privacycg/participants).
-* Five API implementations available for testing in Chrome.
-
+  [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants)
+  and the [Privacy Community Group](https://www.w3.org/community/privacycg/participants).
+* 30+ Privacy Sandbox proposals offered by Chrome and others.
 
 ## When will the APIs be implemented?
 
-The [implementation status](/docs/privacy-sandbox/status/) page on this site provides progress
-updates for individual APIs.
+The [timeline](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline)
+has the latest implementation status for the Privacy Sandbox on the web. Each
+API has an implementation status in their documentation.
 
----
-
+We publish regular announcements on the [Chrome Developers blog](/tags/privacy/)
+as APIs move from proposal to experiment to scaled availability.
 
 ## Engage and share feedback
 
-* **GitHub**: read the explainer for the proposal on GitHub and raise questions or comments in the
-Issues tab for the explainer.
-[Links to explainers](#explainers) are provided below.
+* **GitHub**: read the explainers on GitHub and raise questions or comments in
+  the Issues tab for each.
 * **W3C**: Use cases can be discussed and industry feedback shared in the W3C [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/), the [Privacy Community Group](https://www.w3.org/community/privacycg/participants),
 and the [Web Incubator Community Group](https://github.com/WICG).
 * **Developer support**: Ask questions and join discussions on the
-[Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
-
+  [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
 
 ## Find out more
 
-### Privacy Sandbox proposal explainers {: #explainers }
-
-The API proposal explainers need feedback, in particular to suggest missing use cases and
-more-private ways to accomplish their goals. You can make comments or ask questions in the Issues
-tab for each explainer.
-
-* [Privacy Budget](https://github.com/bslassey/privacy-budget)
-* [Private State Tokens](https://github.com/dvorak42/trust-token-api)
-* [First-Party Sets](https://github.com/privacycg/first-party-sets)
-* [Gnatcatcher](https://github.com/bslassey/ip-blindness)
-* [Aggregated Reporting API](https://github.com/csharrison/aggregate-reporting-api)
-* [Attribution Reporting](https://github.com/csharrison/conversion-measurement-api)
-* [Topics API](https://github.com/jkarlin/topics)
-* [FLEDGE](https://github.com/michaelkleber/turtledove)
-
-### Articles and videos for web developers
-
 * [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
-* [SameSite cookies explained](https://web.dev/samesite-cookies-explained/)
-* [Getting started with Privacy State Tokens](https://web.dev/trust-tokens)
-* [A more private way to measure ad conversions](https://web.dev/conversion-measurement/)
-* [Introducing the Privacy Budget](https://www.youtube.com/watch?v=0STgfjSA6T8)
-
-### Principles and concepts behind the proposals
-
-* [A Potential Privacy Model for the Web](https://github.com/michaelkleber/privacy-model) sets out the
-core principles underlying the APIs.
-* [The Privacy Sandbox](https://www.chromium.org/Home/chromium-privacy/privacy-sandbox)
-* Privacy Sandbox overview: [Building a more private web](https://www.blog.google/products/chrome/building-a-more-private-web/)
+* [A Potential Privacy Model for the Web](https://github.com/michaelkleber/privacy-model)
+  sets out the core principles underlying the APIs.
+* Chromium's overview of [the Privacy Sandbox](https://www.chromium.org/Home/chromium-privacy/privacy-sandbox)
 * Google AI Blog: [Federated Learning: Collaborative Machine Learning without Centralized Training Data](https://ai.googleblog.com/2017/04/federated-learning-collaborative.html)
 * [The future of third-party cookies](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)

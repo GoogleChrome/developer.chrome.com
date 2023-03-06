@@ -108,7 +108,7 @@ A popup is similar to a web page with one exception: it can't run inline JavaScr
 
 {% Aside %}
 
-💡 **TIP**: You can use [top level await][mdn-top-level] by adding `type="module”` to the script
+💡 **TIP**: You can use [top level await][mdn-top-level] by adding `type="module"` to the script
 tag.
 
 {% endAside %}
@@ -153,7 +153,7 @@ Many methods in the Tabs API can be used without requesting any permission. Howe
 
 Narrow [host permissions][doc-match] allow us to protect user privacy by granting elevated permission to **specific sites**. This will grant access to the `title`, and `URL` properties, as well as additional capabilities. Add the highlighted code to the `manifest.json` file:
 
-```json/2-3
+```json/2-4
 {
   ...
   "host_permissions": [
@@ -369,8 +369,8 @@ development learning journey. We recommend the following learning path:
 [doc-overview]: /docs/extensions/mv3/architecture-overview/
 [doc-ui]: /docs/extensions/mv3/user_interface/
 [doc-welcome]: /docs/extensions/mv3/
-[github-tabs-manager-icons]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/tabs-manager/images
-[github-tabs-manager]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/tabs-manager
+[github-tabs-manager-icons]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.tabs-manager/images
+[github-tabs-manager]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.tabs-manager
 [mdn-collator]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator
 [mdn-spread-syntax]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 [mdn-top-level]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/await#top_level_await

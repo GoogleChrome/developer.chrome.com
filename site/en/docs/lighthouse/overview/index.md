@@ -43,7 +43,7 @@ The CLI and Node workflows require you to have an instance of Google Chrome inst
 
 Lighthouse has its own panel in Chrome DevTools. To run a report:
 
-1. Download [Google Chrome for Desktop](https://www.google.com/chrome/browser/desktop/).
+1. Download [Google Chrome for Desktop][desktop].
 1. In Google Chrome, go to the URL you want to audit. You can audit any URL on the web.
 1. [Open Chrome DevTools](/docs/devtools/open/).
 1. Click the **Lighthouse** tab.
@@ -69,7 +69,7 @@ Lighthouse has its own panel in Chrome DevTools. To run a report:
 
 To install the Node module:
 
-1. Download [Google Chrome for Desktop](https://www.google.com/chrome/browser/desktop/).
+1. Download [Google Chrome for Desktop][desktop].
 1. Install the current [Long-Term Support](https://github.com/nodejs/Release) version of [Node](https://nodejs.org).
 1. Install Lighthouse. The `-g` flag installs it as a global module.
 
@@ -211,3 +211,5 @@ If you are a company or an individual who is integrating Lighthouse as part of t
 ## Contribute to Lighthouse {: #contribute }
 
 Lighthouse is open source and [contributions are welcome](https://github.com/GoogleChrome/lighthouse/blob/master/CONTRIBUTING.md)! Check out the repository's [issue tracker](https://github.com/GoogleChrome/lighthouse/issues) to find [bugs that you can fix](https://github.com/GoogleChrome/lighthouse/labels/good%20first%20issue), or audits that you can create or improve upon. The issues tracker is also a good place to discuss performance metrics, ideas for new audits, or anything else related to Lighthouse.
+
+[desktop]: https://www.google.com/chrome/browser/desktop/

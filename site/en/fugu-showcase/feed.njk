@@ -1,0 +1,65 @@
+---
+permalink: /feeds/fugu-showcase.xml
+disable_algolia: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Project Fugu API Showcase</title>
+  <subtitle>The Project Fugu API Showcase is a collection of apps that make use of APIs that were conceived in the context of Project Fugu.</subtitle>
+  <link href="https://developer.chrome.com/fugu-showcase/feed.xml" rel="self" />
+  <id>https://developer.chrome.com/fugu-showcase/feed.xml</id>
+  <updated>{{ pagination.items[0].timestamp }}</updated>
+  <author>
+    <name>{{ site.title }}</name>
+  </author>
+  {% for item in fuguShowcase.fuguItems %}
+    {% set id = item.screenshot | replace('.webp', '') %}
+    <entry>
+      <title>{{ item.title | escape }} ({{ item.appURL | replace(r/https?:\/\//, '') | replace(r/\/$/, '')}})</title>
+      <content type="html"><![CDATA[
+        {% if item.description %}
+          <p>{{ item.description | escape }}</p>
+        {% endif %}
+        {% if item.isElectronApp %}
+          <p>(This is an Electron.js app.)</p>
+        {% endif %}
+        <p>
+          <a href="{{ item.appURL }}">
+            {% if item.screenshotSize > 0 %}
+              <img style="max-width: 100%; height: auto;" src="https://googlechromelabs.github.io/fugu-showcase/data/{{ item.screenshot }}" alt="The app at {{ item.appURL }}."/>
+            {% else %}
+              <img style="width: 200px; height: 150px;" src="data:image/svg+xml;base64,CjxzdmcKICB2aWV3Qm94PSIwIDAgNDAwIDIyNSIKICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQgc2xpY2UiCj4KICA8cGF0aCBmaWxsPSJyZ2JhKDE0NSwxNDUsMTQ1LDAuNSkiIGQ9Ik0wIDBoNDAwdjIyNUgweiIgLz4KICA8dGV4dAogICAgZmlsbD0icmdiYSgwLDAsMCwwLjMzKSIKICAgIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiIKICAgIGZvbnQtc2l6ZT0iMXJlbSIKICAgIHRleHQtYW5jaG9yPSJtaWRkbGUiCiAgICB4PSIyMDAiCiAgICB5PSIxMTMiCiAgICBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIKICA+CiAgICBTY3JlZW5zaG90IG5vdCBhdmFpbGFibGUKICA8L3RleHQ+Cjwvc3ZnPg==" alt=""/>
+            {% endif %}
+          </a>
+        </p>
+        <p>
+          🚀 Try it out and
+          <a href="{{ item.appURL }}">
+            {% if item.isElectronApp %}
+              download
+            {% else %}
+              launch
+            {% endif %}
+            the app
+          </a>.
+        </p>
+        {% if item.sourceURL %}
+          <p>🧑‍💻 Check out the <a href="{{ item.sourceURL }}">source code</a>.</p>
+        {% endif %}
+        <p>🛠️ Used APIs:</p>
+        <ul>
+          {% for usedAPI in item.usedAPIs %}
+            <li>
+              <a href="{{ usedAPI.url }}">
+                {{ usedAPI.name | escape }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+       ]]></content>
+      <updated>{{ item.timestamp }}</updated>
+      <link href="https://developer.chrome.com/fugu-showcase/#{{ id }}" />
+      <id>https://developer.chrome.com/fugu-showcase/#{{ id }}</id>
+    </entry>
+  {% endfor %}
+</feed>
