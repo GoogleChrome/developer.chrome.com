@@ -17,7 +17,7 @@ The cross-company Capabilities Project (code name [Project Fugu](/capabilities/)
 
 But what are examples of apps that make use of these capabilities? Our answer to this question is the [Project Fugu API Showcase](/fugu-showcase/). It is sourced by community submissions, and contains a filterable list of apps that make use of one or more of the Fugu APIs.
 
-{% Aside 'success' %}
+{% Aside %}
 Propose missing apps to the showcase by submitting them via an [anonymous form](https://docs.google.com/forms/d/e/1FAIpQLScNd1rClbmFWh6FcMmjUNrwg9RLz8Jk4BkHz_-EOpmkVd_-9g/viewform). Submissions are reviewed regularly and the showcase will be updated accordingly.
 {% endAside %}
 
@@ -28,6 +28,6 @@ After living in an embedded iframe that didn't really allow the showcase to full
 
 Launch each app by clicking its name, screenshot, or the **Launch app** link. For many apps, you can also see the source code by clicking **View source**. On browsers that support the [Web Share API](https://developer.mozilla.org/docs/Web/API/Web_Share_API), click **Share app** to do exactly that. As a special inception Easter egg, the [Project Fugu API Showcase is of course contained in the Project Fugu API Showcase](/fugu-showcase/#developer.chrome.com!fugu-showcase).
 
-{% Aside 'success' %}
+{% Aside %}
 Be sure to subscribe to the [RSS feed](/feeds/fugu-showcase.xml) so you never miss a new Fugu app.
 {% endAside %}
