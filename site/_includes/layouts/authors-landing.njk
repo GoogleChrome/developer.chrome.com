@@ -1,5 +1,10 @@
 {% extends "layouts/base.njk" %}
 
+
+{% block css %}
+{% InlineCss '/css/main.css' %}
+{% endblock %}
+
 {% from 'macros/cards/author-card.njk' import authorCard with context %}
 
 {% block title_bar %}

@@ -1,5 +1,10 @@
 {% extends "layouts/base.njk" %}
 
+
+{% block css %}
+{% InlineCss '/css/main.css' %}
+{% endblock %}
+
 {% from 'macros/cards/hero-card.njk' import heroCard with context %}
 {% from 'macros/icon.njk' import icon with context %}
 {% from 'macros/cards/blog-card.njk' import blogCard with context %}

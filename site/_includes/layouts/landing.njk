@@ -1,5 +1,9 @@
 {% extends "layouts/base.njk" %}
 
+{% block css %}
+{% InlineCss '/css/main.css' %}
+{% endblock %}
+
 {% block content %}
   <div class="landing-container width-full pad-400">
     {{ content | safe }}

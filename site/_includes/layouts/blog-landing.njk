@@ -1,5 +1,10 @@
 {% extends "layouts/base.njk" %}
 
+
+{% block css %}
+{% InlineCss '/css/main.css' %}
+{% endblock %}
+
 {% from 'macros/cards/blog-card.njk' import blogCard with context %}
 
 {% block title_bar %}

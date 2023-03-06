@@ -1,5 +1,9 @@
 {% extends "layouts/base.njk" %}
 
+{% block css %}
+{% InlineCss '/css/main.css' %}
+{% endblock %}
+
 {% block title_bar %}
   {% set sharingEnabled = true %}
   {% include 'partials/breadcrumbs.njk' %}
