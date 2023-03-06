@@ -39,7 +39,7 @@ export class TagPillList extends BaseElement {
     const items = this.items.map(
       item => html`
         <span
-          class="surface color-blue-medium hairline rounded-lg tag-pill type--label display-inline-flex align-center"
+          class="surface hairline rounded-lg tag-pill type--label display-inline-flex align-center"
           data-key="${item.key}"
           data-value="${item.value}"
         >

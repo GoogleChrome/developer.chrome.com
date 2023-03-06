@@ -16,3 +16,4 @@
 
 import './web-components/enhanced-select';
 import './web-components/checkbox-group';
+import './web-components/tag-pill-list';

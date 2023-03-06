@@ -3,6 +3,12 @@ tag-pill-list {
   flex-wrap: wrap;
   gap: get-size(100);
 
+  .icon {
+    height: get-size(300);
+    margin-left: 0.5rem;
+    width: get-size(300);
+  }
+
   &:defined {
     display: inline-flex;
   }

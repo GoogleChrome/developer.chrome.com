@@ -8,6 +8,8 @@ banner:
 ---
 {% extends 'layouts/base.njk' %}
 
+{% from 'macros/icon.njk' import icon with context %}
+
 {% block css %}
 {% InlineCss '/css/styleguide-main.css' %}
 {% endblock %}
@@ -503,7 +505,7 @@ line-height: 160%;
   </div>
 
   {% set checkboxGroupI18n = {
-    reset: 'i18n.common.checkbox_group.reset'|i18n, 
+    reset: 'i18n.common.checkbox_group.reset'|i18n,
     select_all: 'i18n.common.checkbox_group.select_all'|i18n
   } %}
   <checkbox-group show="4" i18n='{{ checkboxGroupI18n|dump|safe }}''>
@@ -569,6 +571,27 @@ line-height: 160%;
       </div>
     </div>
   </div>
+
+  {% set tagPillListItems = [
+    {
+      "key": "googlers",
+      "value": "adamsilverstein"
+    },
+    {
+      "key": "locations",
+      "value": "Amsterdam, Netherlands"
+    },
+    {
+      "key": "topics",
+      "value": "Advanced Apps and Project Fugu"
+    }
+  ] %}
+
+  <p class="type--h4">Tag pill list:</p>
+
+  <tag-pill-list items='{{ tagPillListItems | dump | safe }}'>
+    <tag-pill-list-icon>{{ icon('close') }}</tag-pill-list-icon>
+  </tag-pill-list>
 
 </article>
 {% endblock %}
