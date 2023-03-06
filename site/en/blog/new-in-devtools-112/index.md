@@ -22,9 +22,7 @@ tags:
 
 ## CSS documentation in the Styles pane {: #css }
 
-How many times a day do you look up documentation on CSS properties? With DevTools, you don't have to.
-
-When you hover over a property in the **Elements** > **Styles** pane, it now shows you a tooltip with the property's documentation.
+How many times a day do you look up documentation on CSS properties? The **Elements** > **Styles** pane now shows you a short description when you hover over a property.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/v0joPkQg0NiMauy0bwwB.png", alt="The tooltip with documentation on a CSS property.", width="800", height="651" %}
 
@@ -139,6 +137,8 @@ All ignore-listed scripts and folders are grayed out in the file tree.
 
 If you select an ignored script, the **Configure** button takes you to 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Ignore List**](/docs/devtools/settings/ignore-list/). You can also hide ignored sources from the file tree with {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Three-dot menu.", width="24", height="24" %} > [**Hide ignore-listed sources**](/docs/devtools/javascript/reference/#hide-ignore-listed) {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XfSWf04g2cwpnFcmp40m.svg", alt="Experimental.", width="20", height="20" %}.
+
+How many times a day do you look up documentation on CSS properties? The **Elements** > **Styles** pane now shows you a short description when you hover over a property.
 
 <!-- $contentEnd -->
 
