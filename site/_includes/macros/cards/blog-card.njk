@@ -3,9 +3,8 @@
 {% macro blogCard(post) %}
 {% set pd = post.data %}
 <div class="blog-card rounded-lg pad-300 md:pad-400 width-full">
-  {% set fallbackImg = 'image/SZHNhsfjU9RbCestTGZU6N7JEWs1/Wa6Eb8lgDc7Q4ugFV2bw.svg' %}
-  {% set thumbnail = pd.thumbnail or pd.hero or fallbackImg %}
-  {% set alt = pd.alt or pd.title %}
+  {% set thumbnail = pd.thumbnail or pd.hero or site.defaultPostImg %}
+  {% set alt = pd.alt or 'fallback image' %}
   {% set tags = pd.tags %}
 
   {% if thumbnail %}
