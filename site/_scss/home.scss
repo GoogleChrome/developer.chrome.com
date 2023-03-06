@@ -7,6 +7,7 @@
 @import 'globals/mixins';
 @import 'globals/gorko';
 @import 'globals/extends';
+@import 'globals/common-blocks';
 
 @import 'fonts';
 @import 'theme';
@@ -15,24 +16,6 @@
 @import 'typography';
 
 
-// Common Blocks
-@import 'blocks/stack';
-@import 'blocks/search-box';
-@import 'blocks/logo';
-@import 'blocks/top-nav';
-@import 'blocks/footer';
-@import 'blocks/scaffold';
-@import 'blocks/navigation-rail';
-@import 'blocks/announcement-banner';
-@import 'blocks/cookie-banner';
-@import 'blocks/banner';
-@import 'blocks/button';
-@import 'blocks/link';
-@import 'blocks/icon';
-@import 'blocks/cluster';
-@import 'blocks/select';
-@import 'blocks/side-nav';
-@import 'blocks/skip-link';
 
 //Home Specific
 @import 'blocks/hero-card';
