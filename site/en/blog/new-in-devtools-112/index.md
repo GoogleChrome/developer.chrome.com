@@ -72,12 +72,7 @@ Open your recording, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4dU9UX
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ko6OD4tgGwUxqCJScYr9.png", alt="Export Puppeteer (including Lighthouse analysis).", width="800", height="584" %}
 
-Run the Puppeteer script to get a Lighthouse report in a `flow.report.html` file:
-
-```sh
-# npm i puppeteer lighthouse
-node your_export.js
-```
+Run the Puppeteer script to get a Lighthouse report in a `flow.report.html` file.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/pfvZ3QX0XhhbDBxpsyBF.png", alt="The Lighthouse report opened in Chrome.", width="800", height="690" %}
 
