@@ -55,7 +55,7 @@
   </web-tab>
 
   <web-tab title="{{ 'i18n.events.past_events' | i18n(locale) }}">
-    <enhanced-events-list id="upcoming-events"
+    <enhanced-events-list id="past-events"
                           type="PAST"
                           total="{{ collections.pastEvents.length }}">
       <div class="events-list__items">
@@ -67,7 +67,7 @@
       {% if collections.pastEvents.length > show %}
         <button id="load-past-events"
                 class="load-more__button type--small display-inline-flex"
-                aria-controls="upcoming-events"
+                aria-controls="past-events"
         >
           {{ 'i18n.events.load_more' | i18n(locale) }}
           {{ icon('arrow-forward', {hidden: true}) }}
