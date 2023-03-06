@@ -125,10 +125,10 @@ Right-click any script or folder and select one of the ignore-related options.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/RrL7ZmzMjfhtH4gUW3ST.png", alt="Context menus of a folder and script with ignore-related options.", width="800", height="521" %}
 
-Depending on script of folder you right-clicked, you may see options to add or remove to and from the list:
+Depending on the script or folder you right-clicked, you may see options to add or remove to and from the list:
 
-- A script or a folder to a custom exclusion rule.
-- All known third-party scripts to the list.
+- A script or a folder to or from a custom exclusion rule.
+- All known third-party scripts.
 - All content scripts.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/DRI11RoakrLnwLZPOJPO.png", alt="Ignore-listed scripts and folders are grayed out, you can hide them with an experimental option in the More options drop-down menu.", width="800", height="542" %}
@@ -147,6 +147,26 @@ The [**Rendering**](/docs/devtools/rendering/#open-rendering) tab adds a new opt
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7qrlmuO7R47l5mytvoeQ.png", alt="The reduced contrast option on the Rendering > Emulate vision deficiencies.", width="800", height="574" %}
 
 With DevTools, you can find and fix all contrast issues at once. For more information, see [Make your website more readable](/docs/devtools/accessibility/contrast/).
+
+## JavaScript Profiler deprecation started {: #js-profiler-deprecation }
+
+This DevTools version (112) starts the [four-phase **JavaScript Profiler** deprecation](https://github.com/ChromeDevTools/rfcs/discussions/2#discussioncomment-5189668). The **Profiler** panel now shows the corresponding warning banner.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/v4S5YWGdBV3nbc3OkGZ3.png", alt="Deprecation banner at the top of the Profiler.", width="800", height="712" %}
+
+Use the **Performance** panel to profile CPU:
+
+- For **Chart**, see the [**Main** section in the **Performance** panel](/docs/devtools/performance/reference/#main).
+- For **Heavy (bottom up)**, see [**Performance** > **Bottom-up**](/docs/devtools/performance/reference/#bottom-up).
+- For **Call Tree**, see [**Performance** > **Call Tree**](/docs/devtools/performance/reference/#call-tree).
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/EkViYZ9gk6PF4dIcZBrk.png", alt="The Performance panel: Main section, Bottom-up tab, and Call Tree tab.", width="800", height="510" %}
+
+To see the real-time total JS heap size, open the **Memory** panel.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/8BI75JYUTcri7R4k6U3W.png", alt="JS heap size in the Memory panel.", width="800", height="535" %}
+
+Learn more and provide feedback in the corresponding [RFC](https://github.com/ChromeDevTools/rfcs/discussions/2) and [crbug.com/1354548](https://crbug.com/1354548). 
 
 <!-- $contentEnd -->
 
