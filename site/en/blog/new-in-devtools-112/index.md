@@ -140,6 +140,14 @@ If you select an ignored script, the **Configure** button takes you to
 
 How many times a day do you look up documentation on CSS properties? The **Elements** > **Styles** pane now shows you a short description when you hover over a property.
 
+## Emulate reduced contrast {: #reduced-contrast }
+
+The [**Rendering**](/docs/devtools/rendering/#open-rendering) tab adds a new option to the [list of vision deficiencies emulation options](/docs/devtools/rendering/apply-effects/#emulate-vision-deficiencies)—**Reduced contrast**. With this option, you can discover how your website looks to people with low contrast sensitivity.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7qrlmuO7R47l5mytvoeQ.png", alt="The reduced contrast option on the Rendering > Emulate vision deficiencies.", width="800", height="574" %}
+
+With DevTools, you can find and fix all contrast issues at once. For more information, see [Make your website more readable](/docs/devtools/accessibility/contrast/).
+
 <!-- $contentEnd -->
 
 {% Partial 'devtools/reach-out.md' %}
