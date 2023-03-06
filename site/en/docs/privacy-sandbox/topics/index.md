@@ -138,11 +138,11 @@ The **Observed-by context domains (hashed)** column provides the hashed value of
 You can view the topics inferred by the Topics [classifier model](https://github.com/patcg-individual-drafts/topics#:~:text=classifier%20model) for one or more hostnames.
 
 <figure>
-  <figcaption>chrome://topics-internal page with Classifier panel selected."
+  <figcaption>chrome://topics-internal page with Classifier panel selected.</figcaption>
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/SOTuE2ljC55PaYll1UP1.png",
   alt="chrome://topics-internal page with Classifier panel selected.",
   width="800", height="695" %}
-</figcaption>
+
 </figure>
 
 The current implementation of the Topics API infers topics from hostnames only: not any other part of a URL.
