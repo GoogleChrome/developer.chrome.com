@@ -15,26 +15,24 @@ authors:
 ## Implementation status
 {% Partial 'privacy-sandbox/ps-implementation-status.njk' %}
 
-## Trying the Topics API
+## Try the Topics API
 
 Topics is not currently available by default in any version of Chrome, but you can activate the API in two ways, as a single user or at scale:
 
 -   The Topics API demo, which allows you to try it out as a single user.
 -   The Topics origin trial, which allows you to try the API at scale with your website users.
 
-### Using the demo
+### Use the demo
 
 The demo of the Topics API is at [topics-demo.glitch.me](https://topics-demo.glitch.me/). It explains how to try out and debug the API for a single user.
 
 You can also run the Topics [colab](/docs/privacy-sandbox/topics/#colab) to try out the Topics [classifier model](/docs/privacy-sandbox/topics/#classifier-model).
 
-### Taking part in a Topics origin trial
+### Take part in a Topics origin trial
 
 A Privacy Sandbox Relevance and Measurement [origin trial](/blog/origin-trials/) has been made available in Chrome Beta 101.0.4951.26 and above on desktop for the Topics, [FLEDGE](/docs/privacy-sandbox/fledge/), and [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) APIs.
 
----
-
-## Getting and setting topics
+## Get and set topics
 
 The Topics JavaScript API has one method: `document.browsingTopics()`. It returns a promise that resolves to an array of up to three topics, one for each of the three most recent epochs, in random order.
 
@@ -48,31 +46,32 @@ Each topic object in the array returned by `document.browsingTopics()` will have
 
 The parameters described in this article, and details of the API (such as taxonomy size, the number of topics calculated per week and the number of topics returned per call) are subject to change as we incorporate ecosystem feedback and iterate on the API.
 
-### Detecting support for document.browsingTopics
+### Detect support for document.browsingTopics
 
 Before using the API, check if it's supported by the browser and available in the document:
 
-```
+```javascript
 'browsingTopics' in document && document.featurePolicy.allowsFeature('browsing-topics') ?
  console.log('document.browsingTopics() is supported on this page') :
  console.log('document.browsingTopics() is not supported on this page');
 ```
 
-Caution
+{% Aside 'caution' %}
 
 Feature support on the current page isn't a guarantee that an API is usable: the user may have disabled the API via browser settings, or they may have other settings that prevent the API from being used. To protect user privacy, there is no way to check for these other settings programmatically.
+{% endAside %}
 
-### Accessing topics without modifying state
+### Access topics without modifying state
 
 From Chrome 108, the `document.browsingTopics()` method can be passed an optional argument: `{skipObservation:true}`.
+This allows the method to return topics without causing the browser to record a topic observation. By default, it does.. In other words, the call will not cause the current page to be included in the weekly epoch calculation, nor will it update the list of topics observed for the caller.
 
-This allows the method to return topics without causing the browser to record a topic observation. By default, it does. (the default is `false`). In other words, `document.browsingTopics({skipObservation:true}` can be used to return topics of interest for the current user, but with no side effects.In other words, the call will not cause the current page to be included in the weekly epoch calculation, nor will it update the list of topics observed for the caller.
 
-### Accessing topics with the JavaScript API
+### Access topics with the JavaScript API
 
 Here is a basic example of possible API usage to access topics for the current user. To keep it simple, there's no error handling.
 
-```
+```javascript
 // Get the array of top topics for this user.
 const topics = await document.browsingTopics();
 
@@ -91,11 +90,11 @@ const creative = await response.json();
 // Display ad.
 ```
 
-Warning
-
+{% Aside 'warning' %}
 This snippet of code above is provided only to show how the Topics JavaScript API might be used. API design is subject to change.
+{% endAside %}
 
-### Using headers to access and observe topics
+### Use headers to access and observe topics
 
 Rather than using the Topics JavaScript API from an iframe, topics can be accessed and marked as observed by using request and response headers:
 
@@ -104,49 +103,6 @@ Rather than using the Topics JavaScript API from an iframe, topics can be access
 
 Using request and response headers to access topics and mark them as observed can be much more performant than using the JavaScript API from an iframe. For example, the header mechanism could be used when a `fetch()` request is made to an ad server. No iframe required! For more on this technique, check out the demo page.
 
-Header options
-
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th><br>
-Values</th>
-      <th><br>
-Where?</th>
-      <th><br>
-Purpose</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p><pre>
-Observe-Browsing-Topics:
-</pre></p></td>
-      <td><br>
-1; <br>
-</td>
-      <td><br>
-Response</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><p><pre>
-Sec-Browsing-Topics
-</pre></p></td>
-      <td></td>
-      <td><br>
-Request</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
 
 #### Notes
 
@@ -155,13 +111,13 @@ Request</td>
 -   The response header is only honored if the corresponding request included the topics header (or would have included the header, if the request wasn't empty).
 -   The URL of the request provides the registrable domain used for topic observation.
 
-## Debugging your API implementation
+## Debug your API implementation
 
 The `chrome://topics-internals` page is available in Chrome on desktop if [you enable the Topics API](/docs/privacy-sandbox/topics/#feature-flags). This displays topics for the current user, topics inferred for hostnames, and technical information about the API implementation.
 
 The `chrome://topics-internals` page is new. The design and functionality are still under discussion. We're currently iterating and improving the design based on developer feedback. Add your feedback at [bugs.chromium.org](https://bugs.chromium.org/p/chromium/issues/entry?template=Defect+report+from+developer&components=Blink%3ETopicsAPI).
 
-### Viewing topics calculated for your browser
+### View topics calculated for your browser
 
 Users can view information about topics observed for their browser during the current and previous epochs.
 
@@ -173,19 +129,19 @@ In this example, recently visited sites included [topics-demo-cats.glitch.me](ht
 
 The **Observed-by context domains (hashed)** column provides the hashed value of a hostname for which a topic was observed.
 
-### Viewing topics inferred for hostnames
+### View topics inferred for hostnames
 
 You can view the topics inferred by the Topics [classifier model](https://github.com/patcg-individual-drafts/topics#:~:text=classifier%20model) for one or more hostnames.
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/SOTuE2ljC55PaYll1UP1.png",
   alt="chrome://topics-internal page with Classifier panel selected.",
   width="800", height="695" %}
-  
+
 The current implementation of the Topics API infers topics from hostnames only: not any other part of a URL.
 
 Use hostnames only (without protocol or path) to view inferred topics from the `chrome://topics-internals` Classifier. `chrome://topics-internals` will display an error if you attempt to include a "/" in the Host field.
 
-### Viewing Topics API information
+### View Topics API information
 
 Information is provided about the Topics API implementation and settings, such as the [taxonomy](/docs/privacy-sandbox/topics/#taxonomy) version and [epoch](/docs/privacy-sandbox/topics/#epoch) duration. These values reflect default settings for the API or parameters successfully set [from the command line](/docs/privacy-sandbox/topics/#feature-flags). This is handy for checking that command-line flags have worked as expected. In the example below, `time_period_per_epoch` has been set to 15 seconds (the default is seven days).
 
@@ -197,16 +153,16 @@ The meaning of each parameter is explained in the table below. (You'll need to s
 
 The parameters correspond to flags that can be set when running Chrome from the command line. For example, the demo at [topics-demo.glitch.me](https://topics-demo.glitch.me/) recommends using the following flags:
 
-```
+```text
 --enable-features=BrowsingTopics:time_period_per_epoch/15s,PrivacySandboxAdsAPIsOverride,PrivacySandboxSettings3,OverridePrivacySandboxSettingsLocalTesting
 ```
 
 **Chrome flags**
 
-<table>
+<table class="width-full">
   <thead>
     <tr>
-      <th style="text-align: left;"><strong>Parameter</strong></th>
+      <th style="text-align: left;"><strong>Parameter</strong><br><strong>Default value</strong><br><strong>Meaning</strong></th>
       <th style="text-align: left;"><strong>Default value</strong></th>
       <th style="text-align: left;"><strong>Meaning</strong></th>
     </tr>
@@ -307,6 +263,7 @@ version used by the API.</td>
     </tr>
   </tbody>
 </table>
+
 
 
 ## Next steps
