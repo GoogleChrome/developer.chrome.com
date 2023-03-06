@@ -269,7 +269,7 @@ You use the `anchor` function as a value for the [inset properties](https://deve
 
  /* alternative with anchor-default */
 .boat {
-  anchor-default: –my-anchor;
+  anchor-default: --my-anchor;
   bottom: anchor(top);
   left: calc(anchor(center) - (var(--boat-size) * 0.5));
 }
@@ -279,7 +279,7 @@ There is no `center` inset property so one option is to use `calc` if you know t
 
 ```css
 .boat {
-  anchor-default: –my-anchor;
+  anchor-default: --my-anchor;
   bottom: anchor(top);
   left: anchor(center);
   translate: -50% 0;

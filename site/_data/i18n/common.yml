@@ -287,11 +287,13 @@ checkbox_group:
     en: Select all
 
 outdated_banner:
-  content: 
+  content:
     en: This content is outdated and no longer accurate.
   new_material:
     en: New material available
 
-blog_card:
-  default_alt:
-    en: Abstract blue circles
+blog_default_alt:
+  en: Abstract blue circles
+
+rss_feed:
+  en: RSS feed

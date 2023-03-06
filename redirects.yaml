@@ -607,6 +607,10 @@ redirects:
 - from: /docs/lighthouse/best-practices/password-inputs-can-be-pasted-into/
   to: /docs/lighthouse/best-practices/paste-preventing-inputs/
 
+# Fugu redirects
+- from: /blog/fugu-showcase/
+- to: /fugu-showcase/
+
 # Generic
 
 - from: /...
