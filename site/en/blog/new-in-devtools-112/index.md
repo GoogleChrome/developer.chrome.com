@@ -42,24 +42,13 @@ DevTools pulls the descriptions for tooltips from [VS Code Custom Data](https://
 
 The **Recorder** introduces support for custom replay options that you can embed into DevTools with an extension.
 
-Try out our extension example:
-
-1. Download the [example extension](https://github.com/puppeteer/replay/tree/main/examples/chrome-extension-replay).
-1. [Load the extension locally](/docs/extensions/mv3/getstarted/development-basics/#load-unpacked).
-1. [Create a new recording](/docs/devtools/recorder/#record).
-1. Expand the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Play.", width="20", height="20" %} **Replay** options and select the extension.
+Try out the [example extension](https://github.com/puppeteer/replay/tree/main/examples/chrome-extension-replay):
+1. [Create a new recording](/docs/devtools/recorder/#record), expand the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Play.", width="20", height="20" %} **Replay** options, and select the extension.
 1. Provide an arbitrary name and password (`leeloo` and `multipass` will do). 
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/uvfeDWVEIQDpd7oZSTPC.png", alt="An replay option provided by an extension.", width="800", height="630" %}
 
-To customize the **Recorder** to your needs and integrate it with your tools, consider developing your own extension:
-
-1. Explore the [chrome.devtools.recorder API](/docs/extensions/reference/devtools_recorder/).
-1. [Develop your extension](/docs/extensions/mv3/).
-1. Publish it on [Chrome Web Store](/docs/webstore/about_webstore/).
-1. [Add the extension](https://github.com/GoogleChrome/developer.chrome.com/edit/main/site/en/docs/devtools/recorder/extensions/index.md) to the list of [Recorder Extensions](/docs/devtools/recorder/extensions/).
-   
-We look forward to populate the **Replay extensions** section with new entries!
+To customize the **Recorder** to your needs and integrate it with your tools, consider developing your own extension:  explore the [chrome.devtools.recorder API](/docs/extensions/reference/devtools_recorder/) and check out more [extension examples](https://github.com/puppeteer/replay/tree/main/examples/).
 
 ### Get extensions {: #get-extensions }
 
@@ -72,6 +61,8 @@ Get extensions for the **Recorder** with a couple of clicks:
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/vwgXoxR0FyArbCHvdvEY.png", alt="The Get extensions option in the Export drop-down menu.", width="800", height="649" %}
 
 Your export extensions will be listed in the corresponding section of the same drop-down menu.
+
+Feel free to [add your extension](https://github.com/GoogleChrome/developer.chrome.com/edit/main/site/en/docs/devtools/recorder/extensions/index.md) to the list of [Recorder Extensions](/docs/devtools/recorder/extensions/). We look forward to seeing yours on the list!
 
 ### Export as a Puppeteer script with Lighthouse analysis {: #puppeteer-lighthouse }
 
