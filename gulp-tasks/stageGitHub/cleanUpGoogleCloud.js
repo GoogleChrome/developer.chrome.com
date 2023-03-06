@@ -24,7 +24,7 @@
 const {Storage} = require('@google-cloud/storage');
 const {VersionsClient} = require('@google-cloud/appengine-admin');
 
-const {fetchGitHubApi} = require('./lib/fetchGitHubApi');
+const {requestGitHubApi} = require('./lib/gitHubApi');
 
 /**
  * The bucket where static files are deployed
@@ -82,7 +82,10 @@ async function getDeployedPullRequestsFromStorage() {
  */
 async function getOpenPullRequestsFromGitHub() {
   try {
-    const apiResponse = await fetchGitHubApi('pulls?state=open&per_page=100');
+    const apiResponse = await requestGitHubApi(
+      'GET',
+      'pulls?state=open&per_page=100'
+    );
     const pullRequests = apiResponse.map(item => item.number);
     return pullRequests;
   } catch (e) {

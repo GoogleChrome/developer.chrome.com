@@ -9,4 +9,5 @@ module.exports = {
   determineDeploymentType,
   buildStaticSite,
   announceDeploymentFinished,
+  cleanUpGoogleCloud,
 };
