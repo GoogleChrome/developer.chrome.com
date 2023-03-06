@@ -4,6 +4,7 @@ title: 'Introduction to debug reports'
 subhead: Part 1 of 3 on debugging Attribution Reporting. Learn why debugging matters and when to use debug reports in testing.
 description: Part 1 of 3 on debugging Attribution Reporting. Learn why debugging matters and when to use debug reports in testing.
 date: 2022-12-13
+updated: 2023-03-02
 authors:
   - maudn
   - alexandrawhite
@@ -46,16 +47,25 @@ A _transitional debug report_ is a debug report that requires a cookie to be set
 
 Two types of debug reports are available. Use both, as they fulfill different use cases.
 
+#### Success debug reports
+
 _Success debug reports_ track **successful generation of an attribution report**. They relate
-directly to an attribution report. Success debug reports have been available since Chrome 101 (April 2022).
+directly to an attribution report.
 
-Review example reports in [Part 2: Set up debug reports](/docs/privacy-sandbox/attribution-reporting-debugging/part-2#success-reports-examples).
+Success debug reports have been available since Chrome 101 (April 2022).
 
-_Verbose debug reports_ can track **missing reports** and help you determine
-why they're missing. They indicate cases where the browser did not record a source or trigger event, (which means it will not generate an attribution report), and cases where an attribution report can't be generated or sent for some reason. Verbose debug reports also include a `type` field that describes the reason why a source event, trigger event or attribution report was not generated.
+#### Verbose debug reports
 
-Verbose debug reports are available starting in Chrome 109 ([Stable
-in January 2023](https://chromiumdash.appspot.com/schedule)).
+_Verbose debug reports_ give you more visibility into the source and trigger events—so you can either ensure that sources were registered successfully, or track missing reports and determine why they're missing (failure in source or trigger events, failure when sending or generating the report).
+Verbose debug reports indicate:
+
+- Cases where the browser successfully registered a source.
+- Cases where the browser did **not** successfully register a source or trigger event — which means that it will not generate an attribution report.
+- Cases where an attribution report **can't be generated or sent** for some reason.
+
+Verbose debug reports include a `type` field that describes either a successful source registration, or the reason why a source, trigger or attribution report was not generated.
+
+Verbose debug reports have been available since Chrome 109 (January 2023)—except for _source registration success verbose debug reports_ that have been added later in Chrome 112.
 
 Review example reports in [Part 2: Set up debug reports](/docs/privacy-sandbox/attribution-reporting-debugging/part-2#verbose-reports-examples).
 
