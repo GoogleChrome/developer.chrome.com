@@ -25,7 +25,7 @@ import {loadMore} from '../misc/load-more';
 import {unsafeHTML} from 'lit-html/directives/unsafe-html';
 
 const getEvents = memoize(async () => {
-  const response = await fetch('/eventss.json');
+  const response = await fetch('/events.json');
 
   if (response.status !== 200) {
     throw new Error('Unable to fetch /events.json');
