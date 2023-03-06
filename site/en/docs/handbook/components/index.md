@@ -777,6 +777,8 @@ Attribute `title` becomes the title of the corresponding tab panel.
 
 ````html
 <web-tabs>
+  <web-tabs-interlude>Use a `web-tabs-interlude` element to add content between the tabs and content.</web-tabs-interlude>
+
   <web-tab title="Tab 1 (html)">
     <p>I'm content of Tab 1</p>
   </web-tab>
@@ -805,6 +807,8 @@ const hello = 'world';
 ````
 
 <web-tabs>
+  <web-tabs-interlude>Use a `web-tabs-interlude` element to add content between the tabs and content.</web-tabs-interlude>
+
   <web-tab title="Tab 1 (html)">
     <p>I'm content of Tab 1</p>
   </web-tab>
