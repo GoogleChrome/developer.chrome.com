@@ -162,7 +162,7 @@ The parameters correspond to flags that can be set when running Chrome from the 
 <table class="width-full">
   <thead>
     <tr>
-      <th style="text-align: left;"><strong>Parameter</strong><br><strong>Default value</strong><br><strong>Meaning</strong></th>
+      <th style="text-align: left;"><strong>Parameter</strong></th>
       <th style="text-align: left;"><strong>Default value</strong></th>
       <th style="text-align: left;"><strong>Meaning</strong></th>
     </tr>
