@@ -43,6 +43,14 @@
           {{ icon('arrow-forward', {hidden: true}) }}
         </button>
       {% endif %}
+
+      <enhanced-events-list-error>
+        <p class="color-red-medium gap-top-100">
+          {{ 'i18n.events.load_more_error' | i18n(locale) }}
+          <a href="https://github.com/GoogleChrome/developer.chrome.com/issues/new?labels=bug&template=bug_report.md"
+             class="color-red-medium">{{ 'i18n.events.load_more_error_link' | i18n(locale) }}</a>.
+        </p>
+      </enhanced-events-list-error>
     </enhanced-events-list>
   </web-tab>
 
@@ -65,12 +73,14 @@
           {{ icon('arrow-forward', {hidden: true}) }}
         </button>
       {% endif %}
+
+      <enhanced-events-list-error>
+        <p class="color-red-medium gap-top-100">
+          {{ 'i18n.events.load_more_error' | i18n(locale) }}
+          <a href="https://github.com/GoogleChrome/developer.chrome.com/issues/new?labels=bug&template=bug_report.md"
+             class="color-red-medium">{{ 'i18n.events.load_more_error_link' | i18n(locale) }}</a>.
+        </p>
+      </enhanced-events-list-error>
     </enhanced-events-list>
   </web-tab>
 </web-tabs>
-
-<p id="loading-error" class="color-red-medium gap-top-100 display-none">
-  {{ 'i18n.events.load_more_error' | i18n(locale) }}
-  <a href="https://github.com/GoogleChrome/developer.chrome.com/issues/new?labels=bug&template=bug_report.md"
-     class="color-red-medium">{{ 'i18n.events.load_more_error_link' | i18n(locale) }}</a>.
-</p>

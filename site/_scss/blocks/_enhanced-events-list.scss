@@ -1,0 +1,11 @@
+enhanced-events-list {
+  enhanced-events-list-error {
+    display: none;
+  }
+
+  &:defined {
+    enhanced-events-list-error {
+      display: initial;
+    }
+  }
+}

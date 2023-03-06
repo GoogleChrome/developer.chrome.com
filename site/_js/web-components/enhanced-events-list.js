@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,9 +25,8 @@ import {loadMore} from '../misc/load-more';
 import {unsafeHTML} from 'lit-html/directives/unsafe-html';
 
 const getEvents = memoize(async () => {
-  const response = await fetch('/events.json');
+  const response = await fetch('/eventss.json');
 
-  //todo - handle
   if (response.status !== 200) {
     throw new Error('Unable to fetch /events.json');
   }
@@ -52,6 +51,8 @@ export class EnhancedEventsList extends BaseElement {
     this.loadedItems = [];
     this.initialItems = [];
     this.omitInitialItems = false;
+    this.haveError = false;
+    this.errorMessage = this.querySelector('enhanced-events-list-error');
   }
 
   static get properties() {
@@ -60,6 +61,7 @@ export class EnhancedEventsList extends BaseElement {
       type: {type: String, reflect: true},
       loadedItems: {type: Array, reflect: false},
       total: {type: Number, reflect: false},
+      haveError: {type: Boolean, reflect: false},
     };
   }
 
@@ -82,13 +84,12 @@ export class EnhancedEventsList extends BaseElement {
   }
 
   async attributeChangedCallback(name, oldval, newval) {
-    super.attributeChangedCallback(name, oldval, newval);
-
     if ('resolved' in this.dataset && name === 'filters') {
       this.omitInitialItems = true;
-
       this.loadedItems = await this.loader?.restart();
     }
+
+    super.attributeChangedCallback(name, oldval, newval);
   }
 
   getLoadMoreButton() {
@@ -101,7 +102,7 @@ export class EnhancedEventsList extends BaseElement {
 
       const loaded = await this.loader?.nextPage();
 
-      this.loadedItems = this.loadedItems.concat(loaded || []);
+      this.loadedItems = this.loadedItems.concat(loaded);
 
       element.removeAttribute('disabled');
     };
@@ -154,6 +155,8 @@ export class EnhancedEventsList extends BaseElement {
   async initLoadMore() {
     return loadMore(
       async (skip, take) => {
+        this.haveError = false;
+
         const groups = await getEvents();
         const events =
           this.type === 'UPCOMING'
@@ -165,11 +168,7 @@ export class EnhancedEventsList extends BaseElement {
           items: events.slice(skip, take + skip).map(event => event.html),
         };
       },
-      () => {
-        document
-          .getElementById('loading-error')
-          ?.classList.remove('display-none');
-      },
+      () => (this.haveError = true),
       {
         skip: this.initialItems.length,
         take: 10,
@@ -180,15 +179,18 @@ export class EnhancedEventsList extends BaseElement {
 
   render() {
     const initialItems = this.omitInitialItems ? null : this.initialItems;
-    const loadMoreButton = !this.loader?.isLastPage()
-      ? this.loadMoreButton?.element
-      : null;
+
+    const loadMoreButton = this.loader?.isLastPage()
+      ? null
+      : this.loadMoreButton?.element;
+
+    const errorMessage = this.haveError ? this.errorMessage : null;
 
     return html`
       <div class="display-grid grid-cols-1 grid-gap-400">
         ${initialItems} ${unsafeHTML(this.loadedItems.join(''))}
       </div>
-      ${loadMoreButton}
+      ${loadMoreButton} ${errorMessage}
     `;
   }
 }
