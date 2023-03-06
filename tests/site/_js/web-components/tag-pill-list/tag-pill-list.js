@@ -18,96 +18,83 @@ const test = require('ava');
 const {withPage, addPageScript} = require('../../../../puppeteer');
 const {html} = require('common-tags');
 
-test(
-  'tag-pill-list: renders expected items',
-  withPage,
-  async (t, page) => {
-    const data =  [
-      {
-        "key": "googlers",
-        "value": "adamsilverstein"
-      },
-      {
-        "key": "locations",
-        "value": "Amsterdam, Netherlands"
-      },
-      {
-        "key": "topics",
-        "value": "Advanced Apps and Project Fugu"
-      }
-    ];
+test('tag-pill-list: renders expected items', withPage, async (t, page) => {
+  const data = [
+    {
+      key: 'googlers',
+      value: 'adamsilverstein',
+    },
+    {
+      key: 'locations',
+      value: 'Amsterdam, Netherlands',
+    },
+    {
+      key: 'topics',
+      value: 'Advanced Apps and Project Fugu',
+    },
+  ];
 
-    await page.setContent(html`
-      <tag-pill-list items='${JSON.stringify(data)}' />
-    `);
+  await page.setContent(html`
+    <tag-pill-list items="${JSON.stringify(data)}" />
+  `);
 
-    await addPageScript(page, '_tag-pill-list.js');
+  await addPageScript(page, '_tag-pill-list.js');
 
-    const items = await page.evaluate(() => {
-      return Array.from(document.querySelectorAll('.tag-pill'))
-        .map((e) => (
-          {
-            label: e.innerText.trim(),
-            key: e.dataset.key,
-            value: e.dataset.value,
-          }
-        ));
-    });
+  const items = await page.evaluate(() => {
+    return Array.from(document.querySelectorAll('.tag-pill')).map(e => ({
+      label: e.innerText.trim(),
+      key: e.dataset.key,
+      value: e.dataset.value,
+    }));
+  });
 
-    t.is(items[0].label, 'adamsilverstein');
-    t.is(items[0].key, 'googlers');
-    t.is(items[0].value, 'adamsilverstein');
+  t.is(items[0].label, 'adamsilverstein');
+  t.is(items[0].key, 'googlers');
+  t.is(items[0].value, 'adamsilverstein');
 
-    t.is(items[1].label, 'Amsterdam, Netherlands');
-    t.is(items[1].key, 'locations');
-    t.is(items[1].value, 'Amsterdam, Netherlands');
+  t.is(items[1].label, 'Amsterdam, Netherlands');
+  t.is(items[1].key, 'locations');
+  t.is(items[1].value, 'Amsterdam, Netherlands');
 
-    t.is(items[2].label, 'Advanced Apps and Project Fugu');
-    t.is(items[2].key, 'topics');
-    t.is(items[2].value, 'Advanced Apps and Project Fugu');
-  }
-);
+  t.is(items[2].label, 'Advanced Apps and Project Fugu');
+  t.is(items[2].key, 'topics');
+  t.is(items[2].value, 'Advanced Apps and Project Fugu');
+});
 
-test(
-  'tag-pill-list: adds icon to pills',
-  withPage,
-  async (t, page) => {
-    const data =  [
-      {
-        "key": "googlers",
-        "value": "adamsilverstein"
-      },
-      {
-        "key": "locations",
-        "value": "Amsterdam, Netherlands"
-      },
-    ];
+test('tag-pill-list: adds icon to pills', withPage, async (t, page) => {
+  const data = [
+    {
+      key: 'googlers',
+      value: 'adamsilverstein',
+    },
+    {
+      key: 'locations',
+      value: 'Amsterdam, Netherlands',
+    },
+  ];
 
-    await page.setContent(html`
-      <tag-pill-list items='${JSON.stringify(data)}'>
-        <tag-pill-list-icon>
-          <svg>
-            <rect width="100" height="100" x="50" y="50" />
-          </svg>
-        </tag-pill-list-icon>
-      </tag-pill-list>
-    `);
+  await page.setContent(html`
+    <tag-pill-list items="${JSON.stringify(data)}">
+      <tag-pill-list-icon>
+        <svg>
+          <rect width="100" height="100" x="50" y="50" />
+        </svg>
+      </tag-pill-list-icon>
+    </tag-pill-list>
+  `);
 
-    await addPageScript(page, '_tag-pill-list.js');
+  await addPageScript(page, '_tag-pill-list.js');
 
-    const numPills = await page.evaluate(() => {
-      return document.querySelectorAll('.tag-pill').length
-    });
+  const numPills = await page.evaluate(() => {
+    return document.querySelectorAll('.tag-pill').length;
+  });
 
-    const haveItemsWithoutIcon = await page.evaluate(() => {
-      const pills = Array.from(document.querySelectorAll('.tag-pill'));
+  const haveItemsWithoutIcon = await page.evaluate(() => {
+    const pills = Array.from(document.querySelectorAll('.tag-pill'));
 
-      return pills.some(e => e.querySelector('svg') === null);
-    });
+    return pills.some(e => e.querySelector('svg') === null);
+  });
 
-
-    t.is(numPills, 2);
-    t.is(haveItemsWithoutIcon, false);
-  }
-);
-
+  t.is(numPills, 2);
+  t.is(haveItemsWithoutIcon, false);
+});
