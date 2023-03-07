@@ -16,7 +16,7 @@ This is the second of three sections describing changes needed for code that is 
 
 ## Update permissions {: #update-permissions }
 
-Make the following changes to the [`"permissions"`](/docs/extensions/reference/permissions/) field in your `manifest.json`.
+Make the following changes to the [`"permissions"`](/docs/extensions/mv3/declare_permissions/) field in your `manifest.json`.
 
 * Remove the `"webRequest"` permission if you no longer need to observe network requests.
 * Move Match Patterns from `"permissions"` to `"host_permissions"`. 
