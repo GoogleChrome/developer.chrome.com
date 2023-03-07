@@ -75,7 +75,7 @@ Replacing items in `"background.page"` will be dealt with in a later section.
 {% endCompare %}
 </div>
 
-The `"service_worker"` field takes a single string.  To use additional scripts in your service worker, use [importScripts](https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/importScripts) or you can declare the service worker as an [ES Module](https://web.dev/es-modules-in-sw/#static-imports-only) by specifying `"type": "module"` to use the [`import` keyword](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import).
+The `"service_worker"` field takes a single string.  To use additional scripts in your service worker, use [importScripts](https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/importScripts) or you can declare the service worker as an [ES Module](https://web.dev/es-modules-in-sw/#static-imports-only) by specifying `"type": "module"` to use the [`import`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import) keyword.
 
 ## Move DOM and window calls to an offscreen document {: #move-dom-and-window }
 
