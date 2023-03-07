@@ -13,15 +13,15 @@ However, because service workers solve hard problems,
 any abstraction of that technology will also be tricky without understanding it.
 Thus, these first few bits of documentation will cover that underlying technology before getting into Workbox specifics.
 
+To view a running list of service workers, enter `chrome://serviceworker-internals/` into your address bar.
+
+{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/6Q4ZxOPzefe1rrXZjlVM.png", alt="A running list of service workers.", width="800", height="321" %}
+
 ## What do service workers provide?
 
 Service workers are specialized JavaScript assets that act as proxies between web browsers and web servers.
 They aim to improve reliability by providing offline access,
 as well as boost page performance.
-
-To view a running list of service workers, enter `chrome://serviceworker-internals/` into your address bar.
-
-{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/6Q4ZxOPzefe1rrXZjlVM.png", alt="A running list of service workers.", width="800", height="321" %}
 
 ### A progressively enhancing, app-like lifecycle
 
