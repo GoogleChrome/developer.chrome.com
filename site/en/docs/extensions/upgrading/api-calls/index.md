@@ -148,7 +148,6 @@ In the `manifest.json` replace the `"browser_action"` and `"page_action"` fields
 
 {% endCompare %}
 </div>
-```
 
 ### Replace the browserAction and pageAction APIs with the action API
 
