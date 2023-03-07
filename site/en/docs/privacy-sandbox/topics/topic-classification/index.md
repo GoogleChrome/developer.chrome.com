@@ -98,7 +98,7 @@ A full [taxonomy of topics with IDs](https://github.com/patcg-individual-drafts/
 There are [several channels](/docs/privacy-sandbox/feedback/) for providing feedback on the Topics proposal. For feedback on the classifier model, we recommend [submitting a GitHub issue](https://github.com/patcg-individual-drafts/topics/issues) or replying to an existing issue. For example:
 
 - [What topics taxonomy should be used long term?](https://github.com/patcg-individual-drafts/topics/issues/3)
-- [What if a site disagrees to the topics assigned?](https://github.com/patcg-individual-drafts/topics/issues/3)
+- [What if a site disagrees with the topics assigned?](https://github.com/patcg-individual-drafts/topics/issues/2)
 
 ## How the user's top five topics are selected
 
