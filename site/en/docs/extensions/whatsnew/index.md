@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-01-27
+updated: 2023-02-21
 tags:
   - extensions-news
 
@@ -14,7 +14,21 @@ tags:
 <!--lint disable first-heading-level-->
 
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
-and related policy or other changes.
+and related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about many of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).)
+
+### Chrome 112: Increased storage.session quota {: #m112-storage-session-quota}
+
+March 3, 2023
+
+From Chrome 112, the quota for the [`storage.session`](/docs/extensions/reference/storage/#property-session) property has been increased to approximately 10 MB. This was agreed in the Web Extensions Community Group: [https://github.com/w3c/webextensions/issues/350](https://github.com/w3c/webextensions/issues/350)
+
+### Chrome 109: Is an exension enabled {: #m110-action }
+
+January 12, 2023
+
+The [`chrome.action.isEnabled()`](/docs/extensions/reference/action/#method-isEnabled) method programmatically checks whether an extension has been enabled for a specific tab. This saves you from maintaining the enabled state of your tabs. This new method takes a tab ID and a reference to a callback and returns a boolean. It has one limitation: tabs created using [`chrome.declarativeContent`](/docs/extensions/reference/declarativeContent/) always return false.
+
+(The `chrome.action` namespace recently got new methods for controlling the appearance of extension badges. For more information, see [Setting badge colors](#m110-badge-color).)
 
 ### Chrome 110: Change in service worker idle timeout {: #m110-sw-idle }
 
@@ -27,6 +41,12 @@ Previously, an extension service worker would frequently shut down at the five m
 December 9, 2022
 
 The Manifest V2 deprecation timelines are under review and the experiments scheduled for early 2023 are being postponed. For more information, [read the update](https://groups.google.com/u/1/a/chromium.org/g/chromium-extensions/c/zQ77HkGmK9E) in the chromium-extensions Google Group.
+
+### Chrome 108: Setting badge colors {: #m110-badge-color }
+
+November 29, 2022
+
+The `chrome.action` namespace has two new methods to give you more control over the appearance extension badges. The [`setBadgeTextColor()`](/docs/extensions/reference/action/#method-setBadgeTextColor) and [`getBadgeTextColor()`](/docs/extensions/reference/action/#method-getBadgeTextColor) methods allow an extension to change and query its toolbar icon's badge text color. When used with [`setBadgeBackgroundColor`](/docs/extensions/reference/action/#method-setBadgeBackgroundColor) and [`getBadgeBackgroundColor`](/docs/extensions/reference/action/#method-getBadgeBackgroundColor) these new methods let you enforce design and brand consistency.
 
 ### Blog post: More details on the transition to Manifest V3 {: #blog-mv3-transition-details }
 
@@ -79,7 +99,7 @@ callback).
 
 June 08, 2022
 
- Manifest V3 extensions can now access favicons using a new URL pattern: `chrome-extension://<id>/_favicon/`, where <id> is the ID of your extension. This replaces the Manifest V2 platform's `chrome://favicons` API. See the Favicon API docs for more information.
+ Manifest V3 extensions can now access favicons using a new URL pattern: `chrome-extension://<id>/_favicon/`, where <id> is the ID of your extension. This replaces the Manifest V2 platform's `chrome://favicons` API. See the [Favicon API](/docs/extensions/mv3/favicon/) docs for more information.
 
 ### Docs update: Developer trader/non-trader disclosure {: #cws-trader-disclosure-doc }
 

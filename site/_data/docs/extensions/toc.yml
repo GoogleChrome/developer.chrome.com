@@ -1,5 +1,6 @@
 - url: /docs/extensions/mv3
 - url: /docs/extensions/whatsnew
+- url: /docs/extensions/gethelp
 - title: i18n.docs.extensions.get-started
   sections:
   - url: /docs/extensions/mv3/getstarted/
@@ -58,6 +59,7 @@
     - url: /docs/extensions/mv3/tut_oauth
     - url: /docs/extensions/mv3/override
     - url: /docs/extensions/mv3/richNotifications
+    - url: /docs/extensions/mv3/nativeMessaging
 - title: i18n.docs.extensions.quality
   sections:
     - url: /docs/extensions/mv3/user_privacy

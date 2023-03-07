@@ -24,5 +24,5 @@ You can find simple examples of using the `chrome.downloads` API in the [example
 directory. For other examples and for help in viewing the source code, see [Samples][3].
 
 [1]: /docs/extensions/mv3/manifest
-[2]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/downloads/
+[2]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/_archive/mv2/api/downloads/
 [3]: /docs/extensions/mv2/samples

@@ -126,7 +126,8 @@ if ('getScreenDetails' in window) {
 ### The `window-management` permission
 
 {% Aside %}
-In earlier versions of the API, the permission was called `window-placement`.
+In earlier versions of the API, the permission was called `window-placement`. See
+[crbug/1328581](https://crbug.com/1328581) for details.
 {% endAside %}
 
 Before I can use the Multi-Screen Window Placement API, I must ask the user for permission to do so.
@@ -141,6 +142,41 @@ try {
 } catch {
   // Nothing.
 }
+```
+
+While browsers with the old and the new permission name are in use, be sure to use defensive code when requesting permission, as in the example below.
+
+```js
+async function getWindowManagementPermissionState() {
+  let state;
+  // The new permission name.
+  try {
+    ({ state } = await navigator.permissions.query({
+      name: "window-management",
+    }));
+  } catch (err) {
+    if (err.name !== "TypeError") {
+      return `${err.name}: ${err.message}`;
+    }
+    // The old permission name.
+    try {
+      ({ state } = await navigator.permissions.query({
+        name: "window-placement",
+      }));
+    } catch (err) {
+      if (err.name === "TypeError") {
+        return "Window management not supported.";
+      }
+      return `${err.name}: ${err.message}`;
+    }
+  }
+  return state;
+}
+
+document.querySelector("button").addEventListener("click", async () => {
+  const state = await getWindowManagementPermissionState();
+  document.querySelector("pre").textContent = state;
+});
 ```
 
 The browser

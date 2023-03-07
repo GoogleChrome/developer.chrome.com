@@ -47,10 +47,10 @@ history. The browser recalculates its cohort periodically, on the user's device,
 individual browsing data with the browser vendor or anyone else.
 
 Advertisers (sites that pay for advertisements) can include code on their own websites to gather and 
-provide cohort data to their adtech platforms (companies that provide software and tools to deliver 
-advertising). For example, an adtech platform might learn from an online shoe store that browsers 
+provide cohort data to their ad tech platforms (companies that provide software and tools to deliver 
+advertising). For example, an ad tech platform might learn from an online shoe store that browsers 
 from cohorts 1101 and 1354 seem interested in the store's hiking gear. From other advertisers, the 
-adtech platform learns about other interests of those cohorts.
+ad tech platform learns about other interests of those cohorts.
 
 Subsequently, the ad platform can use this data to select relevant ads when a browser from one of 
 those cohorts visits a page from a site that displays ads, such as a news website.
@@ -76,7 +76,7 @@ by using FLoC.
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/oH6SuZegrVJMbkTsl9mq.png", 
 alt="Diagram showing, step by step, the different roles in selecting and delivering a relevant ad by 
-	using FLoC: FLoC service, Browser, Advertisers, Publisher (to observe cohorts), Adtech,
+	using FLoC: FLoC service, Browser, Advertisers, Publisher (to observe cohorts), Ad tech,
   Publisher (to display ads)", width="800", height="359" %}
 
 

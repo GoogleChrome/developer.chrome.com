@@ -8,7 +8,7 @@ description: >
 date: 2022-12-01
 thumbnail: 'image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/JL7L7S2qKI53pTWACfcv.jpg'
 alt: A diagram showing First-Party Sets. One set contains domains example.com,
-  example.rs, and example.co.uk. The other set containts brandx.site,
+  example.rs, and example.co.uk. The other set contains brandx.site,
   fly-brandx.site, and drive-brandx.site.
 tags: 
   - privacy

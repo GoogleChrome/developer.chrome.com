@@ -50,7 +50,7 @@ In this example:
 *   `known-customer.js` is embedded in a frame. This script sets the options for which button should be displayed on a site, “Register” or “Buy now.”
 *   `known-customer-worklet.js`  is the shared storage worklet that determines if the user is known. If the user is known, the information is returned. If the user is unknown, that information is returned to display the “Register” button and the user is marked as known for the future.
 
-**[known-customer.js](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/advertiser/known-customer.js)**
+**[known-customer.js](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/content-producer/url-selection/known-customer.js)**
 
 ```js
 // The first URL for the "register" button is rendered for unknown users.
@@ -78,7 +78,7 @@ async function injectButton() {
 injectButton();
 ```
 
-**[known-customer-worklet.js](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/advertiser/known-customer-worklet.js)**
+**[known-customer-worklet.js](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/content-producer/url-selection/known-customer-worklet.js)**
 
 ```js
 class SelectURLOperation {

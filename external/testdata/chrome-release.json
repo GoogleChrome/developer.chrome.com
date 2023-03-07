@@ -1,1 +1,256 @@
-{"channels":{"beta":{"mstone":95,"key":"beta","stableDate":"2021-10-18T13:00:00.000Z"},"stable":{"mstone":94,"key":"stable","stableDate":"2021-09-20T14:00:00.000Z"}}}
+{
+  "channels": {
+    "beta": {
+      "mstone": 111,
+      "key": "beta",
+      "stableDate": "2023-03-06T22:00:00.000Z"
+    },
+    "stable": {
+      "mstone": 110,
+      "key": "stable",
+      "stableDate": "2023-02-06T22:00:00.000Z"
+    }
+  },
+  "milestones": {
+    "88": {
+      "stableDate": "2021-01-18T22:00:00.000Z",
+      "earliestBetaDate": "2020-12-02T22:00:00.000Z",
+      "finalBetaDate": "2021-01-12T22:00:00.000Z"
+    },
+    "89": {
+      "stableDate": "2021-03-01T22:00:00.000Z",
+      "earliestBetaDate": "2021-01-27T22:00:00.000Z",
+      "finalBetaDate": "2021-02-23T22:00:00.000Z"
+    },
+    "90": {
+      "stableDate": "2021-04-12T21:00:00.000Z",
+      "earliestBetaDate": "2021-03-10T22:00:00.000Z",
+      "finalBetaDate": "2021-04-06T21:00:00.000Z"
+    },
+    "91": {
+      "stableDate": "2021-05-24T21:00:00.000Z",
+      "earliestBetaDate": "2021-04-21T21:00:00.000Z",
+      "finalBetaDate": "2021-05-18T21:00:00.000Z"
+    },
+    "92": {
+      "stableDate": "2021-07-19T21:00:00.000Z",
+      "earliestBetaDate": "2021-06-02T21:00:00.000Z",
+      "finalBetaDate": "2021-07-13T21:00:00.000Z"
+    },
+    "93": {
+      "stableDate": "2021-08-30T21:00:00.000Z",
+      "earliestBetaDate": "2021-07-28T21:00:00.000Z",
+      "finalBetaDate": "2021-08-24T21:00:00.000Z"
+    },
+    "94": {
+      "stableDate": "2021-09-20T21:00:00.000Z",
+      "earliestBetaDate": "2021-08-25T21:00:00.000Z",
+      "finalBetaDate": "2021-09-14T21:00:00.000Z"
+    },
+    "95": {
+      "stableDate": "2021-10-18T21:00:00.000Z",
+      "earliestBetaDate": "2021-09-22T21:00:00.000Z",
+      "finalBetaDate": "2021-10-12T21:00:00.000Z"
+    },
+    "96": {
+      "stableDate": "2021-11-15T22:00:00.000Z",
+      "earliestBetaDate": "2021-10-20T21:00:00.000Z",
+      "finalBetaDate": "2021-11-09T22:00:00.000Z"
+    },
+    "97": {
+      "stableDate": "2022-01-03T22:00:00.000Z",
+      "earliestBetaDate": "2021-11-17T22:00:00.000Z",
+      "finalBetaDate": "2021-12-14T22:00:00.000Z"
+    },
+    "98": {
+      "stableDate": "2022-01-31T22:00:00.000Z",
+      "earliestBetaDate": "2022-01-05T22:00:00.000Z",
+      "finalBetaDate": "2022-01-25T22:00:00.000Z"
+    },
+    "99": {
+      "stableDate": "2022-02-28T22:00:00.000Z",
+      "earliestBetaDate": "2022-02-02T22:00:00.000Z",
+      "finalBetaDate": "2022-02-22T22:00:00.000Z"
+    },
+    "100": {
+      "stableDate": "2022-03-28T21:00:00.000Z",
+      "earliestBetaDate": "2022-03-02T22:00:00.000Z",
+      "finalBetaDate": "2022-03-22T22:00:00.000Z"
+    },
+    "101": {
+      "stableDate": "2022-04-25T21:00:00.000Z",
+      "earliestBetaDate": "2022-03-30T21:00:00.000Z",
+      "finalBetaDate": "2022-04-19T21:00:00.000Z"
+    },
+    "102": {
+      "stableDate": "2022-05-23T21:00:00.000Z",
+      "earliestBetaDate": "2022-04-27T21:00:00.000Z",
+      "finalBetaDate": "2022-05-17T21:00:00.000Z"
+    },
+    "103": {
+      "stableDate": "2022-06-20T21:00:00.000Z",
+      "earliestBetaDate": "2022-05-25T21:00:00.000Z",
+      "finalBetaDate": "2022-06-14T21:00:00.000Z"
+    },
+    "104": {
+      "stableDate": "2022-08-01T21:00:00.000Z",
+      "earliestBetaDate": "2022-06-22T21:00:00.000Z",
+      "finalBetaDate": "2022-07-26T21:00:00.000Z"
+    },
+    "105": {
+      "stableDate": "2022-08-29T21:00:00.000Z",
+      "earliestBetaDate": "2022-08-03T21:00:00.000Z",
+      "finalBetaDate": "2022-08-23T21:00:00.000Z"
+    },
+    "106": {
+      "stableDate": "2022-09-26T21:00:00.000Z",
+      "earliestBetaDate": "2022-08-31T21:00:00.000Z",
+      "finalBetaDate": "2022-09-20T21:00:00.000Z"
+    },
+    "107": {
+      "stableDate": "2022-10-24T21:00:00.000Z",
+      "earliestBetaDate": "2022-09-28T21:00:00.000Z",
+      "finalBetaDate": "2022-10-18T21:00:00.000Z"
+    },
+    "108": {
+      "stableDate": "2022-11-28T22:00:00.000Z",
+      "earliestBetaDate": "2022-10-26T21:00:00.000Z",
+      "finalBetaDate": "2022-11-15T22:00:00.000Z"
+    },
+    "109": {
+      "stableDate": "2023-01-09T22:00:00.000Z",
+      "earliestBetaDate": "2022-11-30T22:00:00.000Z",
+      "finalBetaDate": "2023-01-03T22:00:00.000Z"
+    },
+    "110": {
+      "stableDate": "2023-02-06T22:00:00.000Z",
+      "earliestBetaDate": "2023-01-11T22:00:00.000Z",
+      "finalBetaDate": "2023-01-31T22:00:00.000Z"
+    },
+    "111": {
+      "stableDate": "2023-03-06T22:00:00.000Z",
+      "earliestBetaDate": "2023-02-08T22:00:00.000Z",
+      "finalBetaDate": "2023-02-28T22:00:00.000Z"
+    },
+    "112": {
+      "stableDate": "2023-04-03T21:00:00.000Z",
+      "earliestBetaDate": "2023-03-08T22:00:00.000Z",
+      "finalBetaDate": "2023-03-28T21:00:00.000Z"
+    },
+    "113": {
+      "stableDate": "2023-05-01T21:00:00.000Z",
+      "earliestBetaDate": "2023-04-05T21:00:00.000Z",
+      "finalBetaDate": "2023-04-25T21:00:00.000Z"
+    },
+    "114": {
+      "stableDate": "2023-05-29T21:00:00.000Z",
+      "earliestBetaDate": "2023-05-03T21:00:00.000Z",
+      "finalBetaDate": "2023-05-23T21:00:00.000Z"
+    },
+    "115": {
+      "stableDate": "2023-06-26T21:00:00.000Z",
+      "earliestBetaDate": "2023-05-31T21:00:00.000Z",
+      "finalBetaDate": "2023-06-20T21:00:00.000Z"
+    },
+    "116": {
+      "stableDate": "2023-08-07T21:00:00.000Z",
+      "earliestBetaDate": "2023-06-28T21:00:00.000Z",
+      "finalBetaDate": "2023-08-01T21:00:00.000Z"
+    },
+    "117": {
+      "stableDate": "2023-09-04T21:00:00.000Z",
+      "earliestBetaDate": "2023-08-09T21:00:00.000Z",
+      "finalBetaDate": "2023-08-29T21:00:00.000Z"
+    },
+    "118": {
+      "stableDate": "2023-10-02T21:00:00.000Z",
+      "earliestBetaDate": "2023-09-06T21:00:00.000Z",
+      "finalBetaDate": "2023-09-26T21:00:00.000Z"
+    },
+    "119": {
+      "stableDate": "2023-10-30T22:00:00.000Z",
+      "earliestBetaDate": "2023-10-04T21:00:00.000Z",
+      "finalBetaDate": "2023-10-24T21:00:00.000Z"
+    },
+    "120": {
+      "stableDate": "2023-12-04T22:00:00.000Z",
+      "earliestBetaDate": "2023-11-01T22:00:00.000Z",
+      "finalBetaDate": "2023-11-28T22:00:00.000Z"
+    },
+    "121": {
+      "stableDate": "2024-01-08T22:00:00.000Z",
+      "earliestBetaDate": "2023-12-06T22:00:00.000Z",
+      "finalBetaDate": "2024-01-02T22:00:00.000Z"
+    },
+    "122": {
+      "stableDate": "2024-02-05T22:00:00.000Z",
+      "earliestBetaDate": "2024-01-10T22:00:00.000Z",
+      "finalBetaDate": "2024-01-30T22:00:00.000Z"
+    },
+    "123": {
+      "stableDate": "2024-03-04T22:00:00.000Z",
+      "earliestBetaDate": "2024-02-07T22:00:00.000Z",
+      "finalBetaDate": "2024-02-27T22:00:00.000Z"
+    },
+    "124": {
+      "stableDate": "2024-04-01T21:00:00.000Z",
+      "earliestBetaDate": "2024-03-06T22:00:00.000Z",
+      "finalBetaDate": "2024-03-26T22:00:00.000Z"
+    },
+    "125": {
+      "stableDate": "2024-04-29T21:00:00.000Z",
+      "earliestBetaDate": "2024-04-03T21:00:00.000Z",
+      "finalBetaDate": "2024-04-23T21:00:00.000Z"
+    },
+    "126": {
+      "stableDate": "2024-05-27T21:00:00.000Z",
+      "earliestBetaDate": "2024-05-01T21:00:00.000Z",
+      "finalBetaDate": "2024-05-21T21:00:00.000Z"
+    },
+    "127": {
+      "stableDate": "2024-06-24T21:00:00.000Z",
+      "earliestBetaDate": "2024-05-29T21:00:00.000Z",
+      "finalBetaDate": "2024-06-18T21:00:00.000Z"
+    },
+    "128": {
+      "stableDate": "2024-08-05T21:00:00.000Z",
+      "earliestBetaDate": "2024-06-26T21:00:00.000Z",
+      "finalBetaDate": "2024-07-30T21:00:00.000Z"
+    },
+    "129": {
+      "stableDate": "2024-09-02T21:00:00.000Z",
+      "earliestBetaDate": "2024-08-07T21:00:00.000Z",
+      "finalBetaDate": "2024-08-27T21:00:00.000Z"
+    },
+    "130": {
+      "stableDate": "2024-09-30T21:00:00.000Z",
+      "earliestBetaDate": "2024-09-04T21:00:00.000Z",
+      "finalBetaDate": "2024-09-24T21:00:00.000Z"
+    },
+    "131": {
+      "stableDate": "2024-10-28T22:00:00.000Z",
+      "earliestBetaDate": "2024-10-02T21:00:00.000Z",
+      "finalBetaDate": "2024-10-22T21:00:00.000Z"
+    },
+    "132": {
+      "stableDate": "2024-12-02T22:00:00.000Z",
+      "earliestBetaDate": "2024-10-30T22:00:00.000Z",
+      "finalBetaDate": "2024-11-19T22:00:00.000Z"
+    },
+    "133": {
+      "stableDate": "2025-01-13T22:00:00.000Z",
+      "earliestBetaDate": "2024-12-04T22:00:00.000Z",
+      "finalBetaDate": "2025-01-07T22:00:00.000Z"
+    },
+    "134": {
+      "stableDate": "2025-02-10T22:00:00.000Z",
+      "earliestBetaDate": "2025-01-15T22:00:00.000Z",
+      "finalBetaDate": "2025-02-04T22:00:00.000Z"
+    },
+    "135": {
+      "stableDate": "2025-03-10T22:00:00.000Z",
+      "earliestBetaDate": "2025-02-12T22:00:00.000Z",
+      "finalBetaDate": "2025-03-04T22:00:00.000Z"
+    }
+  }
+}

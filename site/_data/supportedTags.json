@@ -17,6 +17,9 @@
   "capabilities": {
     "title": "i18n.tags.capabilities"
   },
+  "case-study": {
+    "title": "i18n.tags.case-study"
+  },
   "chrome": {
     "title": "i18n.tags.chrome"
   },
@@ -46,6 +49,9 @@
   },
   "file-system": {
     "title": "i18n.tags.file-system"
+  },
+  "fugu-case-study": {
+    "title": "i18n.tags.fugu-case-study"
   },
   "games": {
     "title": "i18n.tags.games"
@@ -91,5 +97,8 @@
   },
   "devtools-architecture": {
     "title": "i18n.tags.devtools-architecture"
+  },
+  "example": {
+    "title": "i18n.tags.example"
   }
 }

@@ -25,7 +25,8 @@ const micromatch = require('micromatch');
 const fs = require('fs/promises');
 const path = require('path');
 
-const {fetchGitHubApi} = require('./lib/fetchGitHubApi');
+const {requestGitHubApi} = require('./lib/gitHubApi');
+const {isGoogleCloudBuild} = require('./lib/isGoogleCloudBuild');
 
 const APP_GLOB = ['package.json', 'server/**/*.js'];
 const STATIC_GLOB = ['site/**/*'];
@@ -36,16 +37,11 @@ const OUTPUT_STATIC_BUILD = 'static';
 const DEPLOYMENT_TYPE_PATH = path.join(__dirname, 'tmp', 'deploymentType.txt');
 
 async function determineDeploymentType() {
-  const prNumber = process.env.PR_NUMBER;
-  if (!prNumber) {
-    console.warn(
-      'This task is inteded to run on Google Cloud Build, which exports $PR_NUMBER. ' +
-        'Use npm run stage:personal locally instead.'
-    );
-    return;
-  }
+  isGoogleCloudBuild();
 
-  let changedFiles = await fetchGitHubApi(
+  const prNumber = process.env.PR_NUMBER;
+  let {data: changedFiles} = await requestGitHubApi(
+    'GET',
     `pulls/${prNumber}/files?per_page=100`
   );
   changedFiles = changedFiles.map(file => {

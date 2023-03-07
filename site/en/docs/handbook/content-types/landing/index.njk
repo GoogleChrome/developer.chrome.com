@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: 'layouts/landing.njk'
 title: Sample landing page
 description: A sample landing page used for visual testing
@@ -23,8 +24,90 @@ expandedLandingSection:
   additional_links:
     - url: /
       title: A custom title
+      important: true
     - url: /content-types/landing/
+      title: A custom title
     - url: /content-types/blog-post/
+      title: A custom title
+exploreLandingSection:
+  links:
+    - url: https://developer.chrome.com
+      title: A custom link
+      icon: error
+    - url: /content-types/landing/
+      title: A custom link
+      icon: done
+    - url: /content-types/blog-post/
+      title: A custom link
+      icon: home
+    - url: https://developer.chrome.com
+      title: A custom link
+      icon: blog
+    - url: https://developer.chrome.com
+      title: A custom link
+      icon: star
+    - url: https://developer.chrome.com
+      title: A custom link
+      icon: lightbulb-outline
+useCaseLandingSection:
+  learn_more:
+    link: https://developer.chrome.com
+  links:
+    - title: A custom link
+      description: A custom link for this use case
+      url: /content-types/landing/
+    - title: A custom link
+      description: A custom link for this use case
+      url: /content-types/landing/
+    - title: A custom link
+      description: A custom link for this use case
+      url: /content-types/landing/
+  use_case_1:
+    - title: Use case 1 resource
+      description: A custom link for this use case
+      url: /content-types/landing/
+    - title:  Use case 1 resource
+      description: A custom link for this use case
+      url: /content-types/landing/
+    - title:  Use case 1 resource
+      description: A custom link for this use case
+      url: /content-types/landing/
+  use_case_1_additional:
+    title: More documents
+    items:
+      - title: An additional document
+        description: A custom link for this use case
+        url: /content-types/landing/
+        important: true
+      - title: An additional document
+        description: A custom link for this use case
+        url: /content-types/landing/
+      - title: An additional document
+        description: A custom link for this use case
+        url: /content-types/landing/
+  use_case_2:
+    - title: Use case 2 resource
+      description: A custom link for this use case
+      url: /content-types/landing/
+    - title:  Use case 2 resource
+      description: A custom link for this use case
+      url: /content-types/landing/
+    - title:  Use case 2 resource
+      description: A custom link for this use case
+      url: /content-types/landing/
+  use_case_2_additional:
+    items:
+      - title: An additional document
+        description: A custom link for this use case
+        url: /content-types/landing/
+        important: true
+      - title: An additional document
+        description: A custom link for this use case
+        url: /content-types/landing/
+        important: true
+      - title: An additional document
+        description: A custom link for this use case
+        url: /content-types/landing/
 ---
 
 {% from 'macros/cards/hero-card-wide.njk' import heroCardWide with context %}
@@ -32,6 +115,8 @@ expandedLandingSection:
 {% from 'macros/landing-section.njk' import landingSection with context %}
 {% from 'macros/landing-deco.njk' import landingDeco with context %}
 {% from 'macros/landing-section-expanded.njk' import landingSectionExpanded with context %}
+{% from 'macros/landing-section-explore.njk' import landingSectionExplore with context %}
+{% from 'macros/landing-section-usecases.njk' import landingSectionUseCases with context %}
 
 {{ heroCardWide(
   "A sample landing page",
@@ -57,6 +142,14 @@ expandedLandingSection:
   ) }}
 </div>
 
+<div class="gap-top-500">
+  {{ landingSectionExplore(
+      "Explore use cases",
+      "blue",
+      exploreLandingSection.links
+  ) }}
+</div>
+
 {{ landingSection(
   'This is a landing section',
   'Such blocks can be added using the landingSection macro. The three blocks beneath are also landingSections; they showcase the various layouts that can be achieved with the macro',
@@ -68,7 +161,8 @@ expandedLandingSection:
   '',
   333,
   165,
-  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kdPhkPXy7R0mmcJaKyoi.svg'
+  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kdPhkPXy7R0mmcJaKyoi.svg',
+  'section-id'
   )
 }}
 
@@ -149,6 +243,28 @@ expandedLandingSection:
   "You can add additional links:",
   expandedLandingSection.additional_links
 )
+}}
+
+{{ landingSectionUseCases(
+  "Use case landing section",
+  "Proposals to prevent third-parties from fingerprinting or collecting unlimited sensitive data.",
+  "Use Case 1",
+  useCaseLandingSection.use_case_1,
+  "Use Case 2",
+  useCaseLandingSection.use_case_2,
+  useCaseLandingSection.links,
+  "green",
+  "right",
+  true,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/yrsJmUfAnqDIDxjVYhXq.svg",
+  "Click icon.",
+  429,
+  278,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/yrsJmUfAnqDIDxjVYhXq.svg",
+  useCaseLandingSection.learn_more,
+  useCaseLandingSection.use_case_1_additional,
+  useCaseLandingSection.use_case_2_additional
+  )
 }}
 
 <div class="landing-section rounded-lg width-full hairline display-grid gap-top-500">

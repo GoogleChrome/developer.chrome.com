@@ -6,7 +6,8 @@ description: >
 authors:
   - beaufortfrancois
   - eladalon
-date: 2022-09-30
+date: 2022-09-29
+updated: 2023-02-07
 hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/5VpvNzrvEM3qSxasqP1j.jpeg
 alt: toddler holding her lips photo
 tags:
@@ -93,7 +94,7 @@ const stream = await navigator.mediaDevices.getDisplayMedia({
   </figcaption>
 </figure>
 
-Presently, the default value for `selfBrowserSurface` is `"include"`, but web apps are encouraged to set it explicitly, as the default may change in the future.
+Presently, the default value for `selfBrowserSurface` is `"exclude"`, but web apps are encouraged to set it explicitly, as the default may change in the future.
 
 Note that `selfBrowserSurface: "exclude"` is mutually exclusive with [`preferCurrentTab: true`].
 
