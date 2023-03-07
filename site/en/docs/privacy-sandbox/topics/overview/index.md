@@ -95,7 +95,7 @@ The Topics API proposes multiple mechanisms to help ensure that it is difficult 
 
 {% Details %}
 {% DetailsSummary %}
-#### How the API addresses concerns with FLoC
+#### How the API addressed concerns with FLoC
 {% endDetailsSummary %}
 
 The origin trial of [FLoC](https://github.com/WICG/floc) in 2021 received a wide range of feedback from ad tech and web ecosystem contributors. In particular, there were concerns that FLoC cohorts could be used as a fingerprinting surface to identify users, or could reveal a user's association with a sensitive category. There were also calls to make FLoC more transparent and understandable to users.
