@@ -54,9 +54,9 @@ The following APIs will remain unpartitioned in third-party contexts should you
 enroll the top-level site in the `DisableThirdPartyStoragePartitioning`
 deprecation trial:
 [Storage APIs](https://github.com/wanderview/quota-storage-partitioning/blob/main/explainer.md#storage-apis)
-(i.e.: localStorage, sessionStorage, IndexedDB, Quota, etc.),
+(such as localStorage, sessionStorage, IndexedDB, Quota, and other),
 [Communication APIs](https://github.com/wanderview/quota-storage-partitioning/blob/main/explainer.md#communication-apis)
-(i.e. BroadcastChannel, SharedWorkers, and WebLocks), and
+(such as BroadcastChannel, SharedWorkers, and WebLocks), and
 [ServiceWorker API](https://github.com/wanderview/quota-storage-partitioning/blob/main/explainer.md#serviceworker-api).
 
 {% Aside 'caution' %}
