@@ -46,7 +46,7 @@ chrome.offscreen.createDocument({
 chrome.offscreen.closeDocument()
 ```
 
-The following example shows how to check for existing offscreen documents. The `hasOffscreenDocument` function uses [clients.matchAll()](https://developer.mozilla.org/docs/Web/API/Clients/matchAll) to find existing offscreen documents. Please note: the function assumes that your extension uses a single offscreen document. 
+The following example shows how to check for existing offscreen documents. The `hasOffscreenDocument()` function uses [clients.matchAll()](https://developer.mozilla.org/docs/Web/API/Clients/matchAll) to find existing offscreen documents. Please note: the function assumes that your extension uses a single offscreen document. 
 
 ```js
 async function hasOffscreenDocument(path) {
