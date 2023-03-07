@@ -53,9 +53,9 @@ Topics are selected from a [taxonomy](https://github.com/jkarlin/topics/blob/mai
 
 To avoid sensitive categories, topics must be public, human-curated, and kept updated. The initial taxonomy proposed for testing by Chrome has been human-curated [to exclude categories generally considered sensitive](https://github.com/patcg-individual-drafts/topics#meeting-the-privacy-goals:~:text=of%20a%20page.-,The,-topics%20revealed%20by), such as ethnicity or sexual orientation.
 
-For 10,000 top sites, the Topics API implementation in Chrome uses a manually curated, publicly available [override list](/docs/privacy-sandbox/topics/#colab:~:text=override_list.pb.gz) to map hostnames to topics. For other sites, the Topics API uses a [machine learning](https://royalsociety.org/topics-policy/projects/machine-learning/what-is-machine-learning-infographic/) model to infer topics from hostnames. 
+For 10,000 top sites, the Topics API implementation in Chrome uses a manually curated, publicly available [override list](/docs/privacy-sandbox/topics/topic-classification/#the-classifier-model) to map hostnames to topics. For other sites, the Topics API uses a [machine learning](https://royalsociety.org/topics-policy/projects/machine-learning/what-is-machine-learning-infographic/) model to infer topics from hostnames. 
 
-Chrome's implementation of the Topics API downloads a [TensorFlow Lite](/docs/privacy-sandbox/topics/tensorflow.org/lite/guide) file representing the model, so it can be used locally on the user's device. 
+Chrome's implementation of the Topics API downloads a [TensorFlow Lite](https://www.tensorflow.org/lite/guide) file representing the model, so it can be used locally on the user's device. 
 
 You can access the TensorFlow Lite model file, and the topics inferred for hostnames, from `chrome://topics`.
 
