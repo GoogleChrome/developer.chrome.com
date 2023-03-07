@@ -104,7 +104,7 @@ The Topics API has been designed with this feedback in mind, to explore other wa
 
 ## Next steps
 
-Learn more about [what topics are and how they work](https://docs.google.com/document/d/17GWxmqP-eQyiNzyXlnsyQj2sGj3oEkm0dDAfZMIjRRg/edit#heading=h.oqqmacrrxpj3).
+Learn more about [what topics are and how they work](/docs/privacy-sandbox/topics/topic-classification/).
 
 If you're an ad tech developer, [experiment and participate](/docs/privacy-sandbox/topics-experiment/) with the Topics API. Read the developer guide for more in-depth resources.
 
