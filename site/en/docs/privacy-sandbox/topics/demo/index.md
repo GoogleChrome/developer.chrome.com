@@ -19,7 +19,7 @@ If you want to test the API with your users, sign up for the [Relevance and Meas
 
 Our demo is a preview  that demonstrates most features of the Topics API, for you to gain familiarity with how the API is implemented.
 
-You can also run the Topics [colab](#colab) to try out the Topics [classifier model](#classifier-model).
+You can also run the Topics [colab](/docs/privacy-sandbox/topics/colab) to try out the Topics [classifier model](/docs/privacy-sandbox/topics/topic-classification/#the-classifier-model).
 
 The following video shows how the demo works.
 
