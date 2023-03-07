@@ -6,7 +6,7 @@ subhead: >
 description: >
   Learn about the Topics API; why it was developed and how to prepare. 
 date: 2022-01-25
-updated: 2022-02-01
+updated: 2023-03-08
 authors:
   - samdutton
 ---
