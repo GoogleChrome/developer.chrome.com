@@ -217,6 +217,14 @@ Lighthouse 10 now uses Moto G Power as the [default emulation device](https://gi
 
 Chromium issue: [772558](https://crbug.com/772558).
 
+## Miscellaneous highlights {: #misc }
+
+These are some noteworthy fixes in this release:
+
+- The [**Sources** > **Breakpoints**](/docs/devtools/javascript/breakpoints/#manage-loc) pane now shows differentiating file paths next to ambiguous file names ([1403924](crbug.com/1403924)).
+- The [**Main** section](/docs/devtools/performance/reference/#main) in the flame chart of the **Performance** panel now designates `CpuProfiler::StartProfiling` as `Profiler Overhead` ([1358602](https://crbug.com/1358602)).
+- 
+
 <!-- $contentEnd -->
 
 {% Partial 'devtools/reach-out.md' %}
