@@ -55,7 +55,7 @@ chrome.scripting.executeScript({
   files: ['jquery-min.js', 'content-script.js']
 });
 ```
-### Inject a function
+### Inject a function {: #inject-func }
 
 If you need more dynamism, the new `func` property in `scripting.executeScript()` allows you to inject a function as a content script and pass variables using the `args` property. 
 
