@@ -10,7 +10,7 @@ This is the first of three sections describing changes needed for code that is n
 
 ## Replace tabs.executeScript() with scripting.executeScript() {: #replace-executescript }
 
-In Manifest V3, `executeScript()` moves from the `tabs` API to the [`scripting` API](/docs/extensions/reference/scripting/). This requires changes to permissions in the manifest file in addition to actual code changes.
+In Manifest V3, `executeScript()` moves from the `tabs` API to the [`scripting`](/docs/extensions/reference/scripting/) API. This requires changes to permissions in the manifest file in addition to actual code changes.
 
 For the `executeScript()` method you need:
 
