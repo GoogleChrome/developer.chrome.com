@@ -26,7 +26,7 @@ Topics is not currently available by default in any version of Chrome, but you c
 
 The demo of the Topics API is at [topics-demo.glitch.me](https://topics-demo.glitch.me/). It explains how to try out and debug the API for a single user.
 
-You can also run the Topics [colab](/docs/privacy-sandbox/topics/#colab) to try out the Topics [classifier model](/docs/privacy-sandbox/topics/#classifier-model).
+You can also run the Topics [colab](/docs/privacy-sandbox/topics/colab/) to try out the Topics [classifier model](/docs/privacy-sandbox/topics/#classifier-model).
 
 ### Take part in a Topics origin trial
 
