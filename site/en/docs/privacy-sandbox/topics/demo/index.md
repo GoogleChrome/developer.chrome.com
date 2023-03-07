@@ -17,9 +17,6 @@ If you want to test the API with your users, sign up for the [Relevance and Meas
 
 Our demo is a preview  that demonstrates most features of the Topics API, for you to gain familiarity with how the API is implemented.
 
-The demo of the Topics API  is at [topics-demo.glitch.me](https://topics-demo.glitch.me/).
-This explains how to try out and debug the API for a single user.
-
 You can also run the Topics [colab](#colab) to try out the Topics [classifier model](#classifier-model).
 
 The following video shows how the demo works.
