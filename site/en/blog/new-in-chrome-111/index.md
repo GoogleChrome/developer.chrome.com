@@ -63,7 +63,7 @@ Once that's complete, the `callback` passed to `.startViewTransition()` is calle
 
 Note that the API is launched for Single-Page Apps (SPAs) but support for other models is being implemented too.
 
-There are many details to this API, learn more [in our article containing samples and details](/docs/web-platform/view-transitions/), or explore the [View Transitions documentation on MDN](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API).
+There are many details to this API, learn more [in our article containing samples and details](/docs/web-platform/view-transitions/), or explore the [View Transitions documentation on MDN](https://developer.mozilla.org/docs/Web/API/View_Transitions_API).
 
 ## CSS Color Level 4. {: #css-color-level4 }
 

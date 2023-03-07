@@ -63,7 +63,7 @@ Una vez que se completa, se llama la `callback` que se pasó `.startViewTransiti
 
 Ten en cuenta que la API está disponible para aplicaciones de una sola página (SPA), pero también se está implementando la funcionalidad para otros modelos.
 
-Hay muchos detalles sobre esta API, [este artículo](/docs/web-platform/view-transitions/) contiene ejemplos y detalles para crear sus propias transiciones personalizadas.
+Hay muchos detalles sobre esta API, [este artículo](/docs/web-platform/view-transitions/) contiene ejemplos y detalles para crear sus propias transiciones personalizadas, , también puedes explorar [La documentación de View Transitions en MDN](https://developer.mozilla.org/docs/Web/API/View_Transitions_API).
 
 ## Nivel de color CSS 4.{:#css-color-nivel4 }
 
