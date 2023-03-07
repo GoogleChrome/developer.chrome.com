@@ -60,7 +60,7 @@ Instead of using `document.browsingTopics()` from an iframe to view topics for a
 
 For example:
 
-```text
+```javascript
 fetch('https://topics-server.glitch.me', {browsingTopics: true})
     .then((response) => {
         // Process the response
