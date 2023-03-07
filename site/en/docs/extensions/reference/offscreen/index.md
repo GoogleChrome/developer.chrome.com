@@ -34,7 +34,7 @@ Reasons, listed [below][offscreen-reason], are set upon document creation to det
 
 ## Example
 
-Use `chrome.offscreen.createDocument(...)` and `chrome.offscreen.closeDocument()` for creating and closing an offscreen document. Only a single Document can be open at a time. 
+Use `chrome.offscreen.createDocument()` and `chrome.offscreen.closeDocument()` for creating and closing an offscreen document. Only a single Document can be open at a time. 
 
 ```js
 chrome.offscreen.createDocument({
