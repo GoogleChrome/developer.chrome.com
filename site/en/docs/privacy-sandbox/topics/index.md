@@ -19,8 +19,8 @@ authors:
 
 Topics is not currently available by default in any version of Chrome, but you can activate the API in two ways, as a single user or at scale:
 
--   The Topics API demo, which allows you to try it out as a single user.
--   The Topics origin trial, which allows you to try the API at scale with your website users.
+-   The Topics API demo allows you to try it out as a single user.
+-   The Topics origin trial allows you to try the API at scale with your website users.
 
 ### Use the demo
 
