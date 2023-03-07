@@ -10,6 +10,9 @@ authors:
   - samdutton
 ---
 
+## Implementation status
+{% Partial 'privacy-sandbox/ps-implementation-status.njk' %}
+
 The Topics API demo provides a look at how topics are inferred from hostnames. You can preview what topics are observed when you visit a demo site, which requires very little setup.
 
 If you want to test the API with your users, sign up for the [Relevance and Measurement origin trial](LINK).
@@ -96,11 +99,8 @@ The screenshot below shows the topics recorded from visiting the sites on the AP
 
 <figure>
   {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/7GjvLNY86mBzeXPERRam.png", alt="Topics API demo page on glitch.me", width="656", height="566" %}
-  <figcaption>Topics API demo page on glitch.me</figcaption>
+  <figcaption>Topics API demo page on glitch.me. [View a larger version](https://wd.imgix.net/image/RtQlPaM9wdhEJGVKR8boMPkWf443/7GjvLNY86mBzeXPERRam.png?auto=format&w=1600)</figcaption>
 </figure>
-
-[View a larger version](https://wd.imgix.net/image/RtQlPaM9wdhEJGVKR8boMPkWf443/7GjvLNY86mBzeXPERRam.png?auto=format&w=1600)
-
 
 This list shows the sites you can visit from the demo to record topics of interest. As you can see, the Arts & Entertainment/Humor category in the screenshot is not the topic of one of these websites, so this recorded topic is one that was added as the possible 5 percent random topics.
 
@@ -113,10 +113,8 @@ You can check to see which topics are real and which are random on the Topics St
 
 <figure>
   {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/Ef9ml82uPg3RdX5PX5QU.png", alt="ALT_TEXT_HERE", width="474", height="416" %}
-  <figcaption>Topics State tab showing real and random topics</figcaption>
+  <figcaption>Topics State tab showing real and random topics.[View a larger version](https://wd.imgix.net/image/RtQlPaM9wdhEJGVKR8boMPkWf443/Ef9ml82uPg3RdX5PX5QU.png?auto=format&w=1600)</figcaption>
 </figure>
-
-[View a larger version](https://wd.imgix.net/image/RtQlPaM9wdhEJGVKR8boMPkWf443/Ef9ml82uPg3RdX5PX5QU.png?auto=format&w=1600)
 
 ## Next steps
 
