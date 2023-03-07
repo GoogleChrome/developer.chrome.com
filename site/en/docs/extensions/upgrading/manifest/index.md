@@ -122,7 +122,7 @@ For more information, see [Web Accessible Resources](/docs/extensions/mv3/manife
         "images/*"
       ],
       "matches": [
-        "*:///"
+        "*://*/*"
       ]
     },
     {
