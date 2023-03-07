@@ -14,8 +14,6 @@ tags:
   - chrome-111
 ---
 
-{% YouTube id='' %}
-
 Here's what you need to know:
 
 * Create polished transitions in your single page app with the [View Transitions API](#view-transitions-api).

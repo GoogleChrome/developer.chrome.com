@@ -1,8 +1,8 @@
 ---
-layout: "layouts/blog-post.njk"
-title: "Qué hay de nuevo en Chrome 110"
+title: Nuevo en Chrome 111
 description: >
-  "¡Chrome 110 ya está llegando! Agregue un estilo personalizado a sus elementos de picture-in-picture con la nueva :picture-in-picture pseudo-class, configure el comportamiento de inicio de su aplicación web con launch_handler, use el atributo credentialless en iframes para incrustar contenido de terceros que no establezca una política de incrustación de origen cruzado y mucho más."
+  ¡Chrome 111 ya está disponible! Crea transiciones pulidas en tu aplicación de una sola página (SPA) con la API View Transitions y lleva los colores al siguiente nivel con soporte para CSS color level 4. Descubra nuevas herramientas en el panel de estilo para aprovechar al máximo la nueva funcionalidad de color, y hay mucho más .
+layout: 'layouts/blog-post.njk'
 date: 2023-03-07
 authors:
   - ajara
@@ -11,92 +11,136 @@ alt: >
   New in Chrome hero logo
 tags:
   - new-in-chrome
-  - chrome-110
+  - chrome-111
 ---
 
-{% YouTube id='036w1MUoAa0' %}
 
-Esto es lo que necesita saber:
+Esto es lo que necesitas saber:
 
-* Agregue un estilo personalizado a sus elementos de imagen en imagen con la nueva `:picture-in-picture` [pseudo-class] (#pip).
-* Configure el comportamiento de inicio de su aplicación web con [launch_handler](#launch-handler) en su manifest.
-* use el [atributo `credentialless`](#credentialless) en iframes para incrustar contenido de terceros que no establece una política de incrustación de origen cruzado
-* Y hay mucho [más](#más).
+* Crea transiciones elegantes en su aplicación de una sola página (SPA) con [View Transitions API](#view-transitions-api).
+* Lleve los colores al siguiente nivel con soporte para [CSS Color Level 4] (#css-color-level4).
+* Descubra [nuevas herramientas] (#devtools-color) en el panel de estilo para aprovechar al máximo la nueva funcionalidad de color.
+* Y [mucho más](#more).
 
-Soy Adriana Jara. Veamos qué hay de nuevo para los desarrolladores en Chrome 110.
+Soy Adriana Jara. Vamos un poco más allá y descubramos qué hay de nuevo para los desarrolladores en Chrome 111.
+## View Transitions API. {: #ver-transiciones-api}
+Crear transiciones fluidas en la web es una tarea compleja.
+La API View Transitions está aquí para simplificar la creación de transiciones elegantes ya que, toma capturas instantáneas de las vistas y permite que el DOM cambie sin superposición entre estados.
+
+<figure>
+  {% Video
+    playsinline="true",
+    src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/hgnJfPFUbGlucFegEEtl.mp4",
+    class="video-full-demo",
+    loop="true",
+    autoplay="true",
+    muted="true",
+    controls="true"
+  %}
+  <figcaption>Transiciones creadas usando la View Transition API. <a href="https://http203-playlist.netlify.app/">Usa el sitio de prueba</a>–Requiere Chrome 111+.</figcaption>
+</figure>
+
+La transición predeterminada es un `cross-fade`, el siguiente fragmento implementa esta experiencia.
+
+```js
+function spaNavigate(data) {
+  // Alternativa para browsers que no implementan esta API:
+  if (!document.startViewTransition) {
+    updateTheDOMSomehow(data);
+    return;
+  }
+
+  // Con una transición:
+  document.startViewTransition(() => updateTheDOMSomehow(data));
+}
+```
 
 
-## pseudo-clase :picture-in-picture. {:#pip}
-Con la [Picture in Picture API](https://developer.mozilla.org/docs/Web/API/Picture-in-Picture_API), los sitios web pueden crear una ventana de video flotante, siempre en la parte superior para que los usuarios continúen consumiendo videos, mientras interactúan con otro contenido.
+Cuando se llama a `.startViewTransition()`, la API captura el estado actual de la página.
 
-Ahora con la pseudo-clase de CSS [`:picture-in- picture`](https://developer.mozilla.org/docs/Web/CSS/:picture-in-picture) puede agregar estilos a los elementos para mejorar estas experiencias.
+Una vez que se completa, se llama la `callback` que se pasó `.startViewTransition()`. Ahí es donde se actualiza el DOM. Luego, la API captura el nuevo estado de la página.
 
-El fragmento a continuación muestra cómo usar la clase de :picture-in-picture para agregar un mensaje al contenedor de video que le recuerda al usuario que el video ahora se está reproduciendo en otro lugar.
+Ten en cuenta que la API está disponible para aplicaciones de una sola página (SPA), pero también se está implementando la funcionalidad para otros modelos.
+
+Hay muchos detalles sobre esta API, [este artículo](/docs/web-platform/view-transitions/) contiene ejemplos y detalles para crear sus propias transiciones personalizadas.
+
+## Nivel de color CSS 4.{:#css-color-nivel4 }
+
+Con el nivel de color 4 de CSS, CSS ahora es compatible con pantallas de alta definición, especificando colores de gamas HD al tiempo que ofrece espacios de color con especializaciones.
+
+En pocas palabras, ¡significa un 50 % más de colores para elegir! Y pensabas que 16 millones de colores sonaba como mucho. Yo también pensaba lo mismo.
+
+<figure>
+  {% Video
+    src="video/vS06HQ1YTsbMKSFTIPl2iogUQP73/swYaLIEXuDRZ2VO8SCLH.mp4",
+    autoplay="true",
+    loop="true",
+    muted="true",
+    controls="true"
+  %}
+
+  <figcaption>
+    A series of images are shown transitioning between wide and narrow color
+    gamuts, illustrating color vividness and its effects.<br>
+    <a href="https://ciechanow.ski/color-spaces/#:~:text=you%20can%20drag%20the%20slider%20to%20see%20how%20the%20extent%20of%20the%20chromaticity%20triangle%20corresponds%20to%20the%20representable%20colors.">Try it for yourself</a>
+  </figcaption>
+</figure>
+
+La implementación incluye la función [`color()`](https://developer.mozilla.org/docs/Web/CSS/color_value/color); se puede utilizar para cualquier espacio de color que especifique colores con canales R, G y B. `color()` toma primero un parámetro de espacio de color, luego una serie de valores de canal para RGB y, opcionalmente, un `alpha`.
+
+Estos son algunos ejemplos del uso de la función de color con diferentes espacios de color.
 
 ```css
-#video-container:has(video:picture-in-picture)::before {
-  bottom: 36px;
-  color: #ddd;
-  content: 'Video is now playing in a Picture-in-Picture window';
-  position: absolute;
-  right: 36px;
+.valid-css-color-función-colores {
+  --srgb: color(srgb 1 1 1);
+  --srgb-lineal: color(srgb-lineal 100% 100% 100% / 50%);
+  --display-p3: color(display-p3 1 1 1);
+  --rec2020: color(rec2020 0 0 0);
+  --a98-rgb: color(a98-rgb 1 1 1 / 25%);
+  --profoto: color(profoto-rgb 0% 0% 0%);
+  --xyz: color(xyz 1 1 1);
 }
 ```
 
-Usamos la pseudo-clase de nuevo en el elemento de video, para hacer que el elemento sea transparente para mostrar el mensaje correctamente.
+Consulte [este artículo](/articles/high-definition-css-color-guide/) para obtener más documentación para aprovechar al máximo los colores de alta definición mediante CSS.
 
-Juega con [el ejemplo](https://googlechrome.github.io/samples/picture-in-picture/) y mejora tus experiencias de video de imagen en imagen.
+## Nuevas herramientas de desarrollo de color.{:#devtools-color }
 
-## Miembro del Manifiest launch_handler.{:#launch-handler }
+Devtools tiene nuevas características para facilitar la especificación CSS color level 4.
 
-La [Launch Handler API](/docs/web-platform/launch-handler/) le permite controlar cómo se inicia su aplicación web Por ejemplo, si utiliza una ventana existente o una nueva, y si la ventana elegida navega a la URL de inicio.
+El panel **Estilos** ahora admite los 12 nuevos espacios de color y las 7 nuevas gamas de colores descritas en la especificación. Estos son ejemplos de definiciones de color CSS con color(), lch(), oklab() y color-mix().
 
-Veamos un ejemplo: en entornos de escritorio, si instalas una aplicación y luego la visitas en el navegador, hay un botón para pasar a la ventana de la aplicación independiente.
-Previamente, el único comportamiento posible era iniciar la aplicación en una nueva ventana.
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/dA8VCKaSZhNb9gzlAUT9.png", alt="Ejemplos de definiciones de color CSS.", width="800", height="509" %}
 
-Ahora, usando el [miembro `launch_handler` del manifest](/docs/web-platform/launch-handler/#the-launch_handler-manifest-member) las aplicaciones web pueden personalizar su comportamiento de lanzamiento.
+Al usar `color-mix()`, que permite mezclar un porcentaje de un color con otro, puede ver el resultado de color final en el pane **Calculado**
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/3VkOGbbb5qLVvo1A1qSa.png", alt="resultado de color-mix en el panel Calculado", width="800", height="487" %}
 
-Por ejemplo, el fragmento a continuación hace que todos los inicios de esta aplicación web se centren en una ventana de aplicación existente y naveguen hasta ella (si existe) en lugar de abrir siempre una nueva ventana.
+Además, el selector de color es compatible con todos los nuevos espacios de color con más funciones. Por ejemplo, haga clic en la muestra de color de color (display-p3 1 0 1). Verás que se ha agregado una línea límite de gama, que distingue entre las gamas sRGB y display-p3 para una comprensión más clara de la gama de colores seleccionada.
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/bL6uw8VV4cGuDd9hmAjX.png", alt="Línea límite de una gama.", width="800", height="657" %}
 
-```json
-{
- "launch_handler": {
-   "client_mode": "navegar-nuevo"
- }
-}
+El selector de color también admite la conversión de colores entre formatos de color.
 
-```
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/uoz3yaPPdVs6T2ASnQ62.png", alt="Convertir colores entre formatos de color.", width="800", height="460" %}
+
+Consulte [esta publicación](/blog/new-in-devtools-111/) para obtener más información sobre la depuración de colores y otras características nuevas en devtools.
 
 
-## `credentialless` iframes.{:#credentialless }
-Uno de los mayores desafíos con el aislamiento de origen cruzado es que todos los iframes de origen cruzado deben implementar [COEP](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) y [CORP](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy). Un iframe sin esos encabezados no serán cargados por el navegador.
+## ¡Y más! {: #more }
 
-El atributo `credentialless` ayuda a insertar iframes de terceros que no configuran estos encabezados.
+Por supuesto que hay mucho más.
 
-Con `credentialless`, el iframe se carga desde un contexto diferente y vacío. En particular, se carga sin cookies. El iframe comienza con un cookie jar vacío.
+* CSS agregó funciones trigonométricas, unidades de fuente raíz adicionales y [extendió el pseudoselector n-ésimo hijo] (/articles/css-nth-child-of-s/).
+* La [API Document Picture-in-Picture](/docs/web-platform/document-picture-in-picture/) está en origen trial
+* Las acciones `previousslide` y `nextslide` ahora forman parte de [Media Session API] (https://web.dev/media-session). Consulta la demostración [aquí](https://googlechrome.github.io/samples/media-session/slides.html).
 
-Asimismo, las API de almacenamiento, como LocalStorage, CacheStorage, etc., cargan y almacenan datos en la nueva partición efímera. Todo este almacenamiento se borra una vez que se descarga el documento de nivel superior. Esto permite eliminar la restricción COEP.
+## Otras lecturas
 
-Encuentre más información en [este artículo](/blog/iframe-credentialless/) para usar de forma segura `credentialless` para cargar contenido de terceros en sus iframes.
+Este artículo cubre sólo algunos aspectos destacados clave. Compruebe los enlaces a continuación para cambios adicionales en Chrome 111.
 
-## ¡Y más! {: #más }
-
-Ay, por supuesto, hay mucho más.
-
-Web SQL ahora se elimina en contextos no seguros.
-
-La propiedad de CSS [`initial-letter`](https://developer.mozilla.org/docs/Web/CSS/initial-letter) proporciona una manera de establecer el número de líneas en las que debe hundirse una letra inicial en las siguientes líneas de texto
-
-FileSystemHandle ahora incluye un [método `remove()`](https://developer.mozilla.org/docs/Web/API/FileSystemHandle/remove)
-
-## Lectura adicional
-
-Esto cubre sólo algunos aspectos destacados. Compruebe los enlaces a continuación para cambios adicionales en Chrome 110.
-
-* [Novedades de Chrome DevTools (110)](/blog/new-in-devtools-110/)
-* [Desactivación y eliminación en Chrome 110](/blog/deps-rems-110/)
-* [Actualizaciones de ChromeStatus.com para Chrome 110](https://www.chromestatus.com/features#milestone%3D108)
-*[Lista de cambios del repositorio fuente de Chromium](https://chromium.googlesource.com/chromium/src/+log/109.0.5414.128..110.0.5481.9)
+* [Novedades de Chrome DevTools (111)](/blog/new-in-devtools-111/)
+* [Desactivación y eliminación de Chrome 111](/blog/deps-rems-111/)
+* [Actualizaciones de ChromeStatus.com para Chrome 111](https://www.chromestatus.com/features#milestone%3D108)
+*[Lista de cambios del repositorio fuente de Chromium](https://chromium.googlesource.com/chromium/src/+log/110.0.5481.186..111.0.5563.53)
 * [Calendario de lanzamiento de Chrome](https://chromiumdash.appspot.com/schedule)
 
 ## Suscríbete
@@ -105,5 +149,5 @@ Para mantenerse actualizado, [suscríbase](https://goo.gl/6FP1a5) al
 [canal de YouTube para desarrolladores de Chrome](https://www.youtube.com/user/ChromeDevelopers/),
 y recibirás una notificación por correo electrónico cada vez que lancemos un nuevo video.
 
-Yo soy Adriana Jara, y tan pronto como se lance Chrome 111, estaré aquí para
-¡Contarles qué hay de nuevo en Chrome!
+Soy Adriana Jara, y tan pronto como se lance Chrome 112, estaré aquí para
+¡Cuéntanos qué hay de nuevo en Chrome!
