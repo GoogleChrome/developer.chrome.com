@@ -581,6 +581,60 @@ Click on the buttons in the top menu to toggle between the two modes (_#1. in th
 {% Details %}
 {% DetailsSummary %}
 
+### Noise metrics {: #noise-metrics}
+{% endDetailsSummary %}
+
+#### Core concept
+
+Noise is added in Noise Lab to provide [differential privacy](https://en.wikipedia.org/wiki/Differential_privacy). A high noise percentage value indicates that buckets/keys are sparse, and only contain contributions from a limited number of sensitive events. This means, to protect user privacy, the data has been made more noisy and hence less useful. **This is an expected behavior for differential privacy systems.** A high noise percentage value indicates that the system's "hiding in the crowds" mechanism has kicked in to protect individual user privacy. 
+On the other hand, a low noise percentage value indicates that the data setup has been designed in such a way that allows "hiding in the crowd": buckets contain contributions from a sufficient number of events to ensure that individual user privacy is protected.
+
+
+This statement holds true for both APE and RMSPE_T.
+
+#### APE (average percentage error) {: #ape}
+
+##### How to interpret APE
+Lower APE values mean better signal-to-noise ratios. 
+APE is the ratio of the noise over the signal, namely the true summary value.
+
+{% Aside %}
+
+What does it mean if APE is higher than 100%?
+It means that the noise is really high—higher than the true value itself.
+For example, APE = 200% means that added noise is twice as high as the signal.
+
+
+What does it mean if APE is Infinity?
+It means that the true summary value was 0, i.e. that at least one bucket was empty. Read more in the examples section.
+
+{% endAside %}
+
+##### Formula
+For a given summary report, APE is calculated as follows:
+
+{% Img src="image/URLGRmk9LjR39BLvmeGDZFZkz3p2/7gz1jLNIEfNzmd5n0ktu.png", alt="ALT_TEXT_HERE", width="347", height="62" %}
+
+*\(Note that absolute values are required because the noise can be negative.\)*
+
+*True* is the true summary value. 
+*APE* is the average of the noise over each true summary value — averaged over all entries in a summary report.
+In Noise Lab, this is then multiplied by 100 to give a percentage.
+
+#### Pros and Cons
+Buckets with smaller sizes have a disproportionate impact on the final value of APE. That could be misleading when assessing noise. This is why we've added another metric, RMSPE_T, that is designed to mitigate this limitation of APE. Review the examples for details. 
+
+#### Code
+Review here the source code for APE calculation.
+
+
+
+{% endDetails %}
+
+
+{% Details %}
+{% DetailsSummary %}
+
 ### Advanced key management {: #key-management-advanced}
 
 {% endDetailsSummary %}
