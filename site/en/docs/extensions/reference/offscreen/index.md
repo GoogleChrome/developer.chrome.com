@@ -63,7 +63,7 @@ async function hasOffscreenDocument(path) {
 }
 ```
 
-Before trying to create a new offscreen document, use `hasOffscreenDocument` to make sure that there is no existing offscreen document, as demonstrated in the following example. 
+Before trying to create a new offscreen document, call `hasOffscreenDocument()` to make sure that there is no existing offscreen document, as demonstrated in the following example. 
 
 ```js
 chrome.action.onClicked.addListener(async () => {
