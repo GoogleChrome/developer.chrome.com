@@ -40,9 +40,8 @@ open up two deprecation trials:
 1.  [`DisableThirdPartySessionStoragePartitioningAfterGeneralPartitioning`](/origintrials/#/view_trial/3444127815031586817):
     allows a site to unpartition sessionStorage across navigations.
 
-These will allow sites to discover and fix problems before third-party
-partitioning begins its launch process in M112 and becomes the default behavior
-in Chrome in a future release.
+These will enable sites to discover and fix problems before third-party
+partitioning begins its rollout process in M112.
 
 Below is an overview of the deprecation trial and what to expect. If you have
 feedback to share or you experience any issues throughout this trial let us know
@@ -60,11 +59,15 @@ deprecation trial:
 (i.e. BroadcastChannel, SharedWorkers, and WebLocks), and
 [ServiceWorker API](https://github.com/wanderview/quota-storage-partitioning/blob/main/explainer.md#serviceworker-api).
 
+{% Aside 'caution' %}
+For this `DisableThirdPartyStoragePartitioning` trial, the origin trial token must be included via an HTML `<meta>` tag and not an `Origin-Trial` HTTP header.
+{% endAside %}
+
 Example:
 
-![image](insert_image_url_here)
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/dqBSsNU8W3HOmMkPDYYh.png", alt="Storage partitioning diagram", width="800", height="544" %}
 
-For a more detailed explanation, please see the
+For a more detailed explanation, check out the
 [project explainer](https://github.com/wanderview/quota-storage-partitioning/blob/main/explainer.md).
 
 ### DisableThirdPartySessionStoragePartitioningAfterGeneralPartitioning
@@ -80,9 +83,13 @@ third-party contexts embedded within the enrolled origin, the
 deprecation trial instead registers a given origin to receive unpartitioned
 access when embedded in third-party contexts.
 
+{% Aside %}
+The `DisableThirdPartySessionStoragePartitioningAfterGeneralPartitioning` trial will work via HTML `<meta>` or an `Origin-Trial` HTTP header.
+{% endAside %}
+
 Example:
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/zDzUITZgWtDuvyqRedfn.png", alt="Storage partitioning diagram.", width="800", height="550" %}
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/6uxCgy48dDcfFVgkwycu.png", alt="Storage partitioning diagram after general paritoning.", width="800", height="432" %}
 
 ## What does this mean for web developers?
 
@@ -119,9 +126,9 @@ deprecation trials. For more detailed instructions, visit
     1.  For a top-level site to unpartition sessionStorage across
         navigations:
         `[DisableThirdPartySessionStoragePartitioningAfterGeneralPartitioning](/origintrials/#/view_trial/3444127815031586817)`
-1.  Add `Origin-Trial: <DEPRECATION TRIAL TOKEN>` to your top-level site's
-    HTTP response header, where `<DEPRECATION TRIAL TOKEN>` contains the token
-    you got when registering for the deprecation trial.
+1.  Add an origin trial token to your page:
+    1. For the `DisableThirdPartySessionStoragePartitioningAfterGeneralPartitioning` trial you may add an `Origin-Trial: <DEPRECATION TRIAL TOKEN>` to         your top-level site’s HTTP response header, where `<DEPRECATION TRIAL TOKEN>` contains the token you got when registering for the deprecation             trial. You can also do this via HTML `<meta> tag.
+    1. For the `DisableThirdPartyStoragePartitioning` trial, the token must be given via an HTML `<meta>` tag. The HTTP header method is not supported.
 1.  Load your website in Chrome M111 Beta (or later) with
     `ThirdPartyStoragePartitioning` still enabled and verify that any
     partitioning related issues have been properly mitigated.
