@@ -17,7 +17,6 @@ For the `executeScript()` method you need:
 * The `"scripting"` permission.
 * Either host permissions or the `"activeTab"` permission.
 
-You will still need `"host_permissions"` for the sites you inject into, or the `"activeTab"` permission if the code is injected in response to a user gesture.
 
 The `scripting.executeScript()` method is similar to how it worked with `tabs.executeScript()`. There are a few differences:
 
