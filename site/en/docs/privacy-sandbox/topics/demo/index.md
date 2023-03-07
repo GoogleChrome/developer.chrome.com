@@ -15,7 +15,7 @@ authors:
 
 The Topics API demo provides a look at how topics are inferred from hostnames. You can preview what topics are observed when you visit a demo site, which requires very little setup.
 
-If you want to test the API with your users, sign up for the [Relevance and Measurement origin trial](LINK).
+If you want to test the API with your users, sign up for the [Relevance and Measurement origin trial](/docs/privacy-sandbox/unified-origin-trial/).
 
 Our demo is a preview  that demonstrates most features of the Topics API, for you to gain familiarity with how the API is implemented.
 
