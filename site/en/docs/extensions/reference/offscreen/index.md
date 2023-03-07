@@ -50,7 +50,7 @@ The following example shows how to check for existing offscreen documents. The `
 
 ```js
 async function hasOffscreenDocument(path) {
-  // Check all windows controlled by the service worker if one 
+  // Check all windows controlled by the service worker to see if one 
   // of them is the offscreen document with the given path
   const offscreenUrl = chrome.runtime.getURL(path);
   const matchedClients = await clients.matchAll();
