@@ -330,7 +330,7 @@ chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
 [runtime-send-msg]: /docs/extensions/reference/runtime#method-sendMessage
 [section-external]: #external
 [section-long]: #connect
-[section-one]: #simple
+[section-one-time]: #simple
 [security-cs]: /docs/extensions/mv3/security#content_scripts
 [security-santize]: /docs/extensions/mv3/security#sanitize
 [tabs-connect]: /docs/extensions/reference/tabs#method-connect
