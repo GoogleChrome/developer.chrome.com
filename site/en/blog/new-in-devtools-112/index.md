@@ -223,7 +223,12 @@ These are some noteworthy fixes in this release:
 
 - The [**Sources** > **Breakpoints**](/docs/devtools/javascript/breakpoints/#manage-loc) pane now shows differentiating file paths next to ambiguous file names ([1403924](crbug.com/1403924)).
 - The [**Main** section](/docs/devtools/performance/reference/#main) in the flame chart of the **Performance** panel now designates `CpuProfiler::StartProfiling` as `Profiler Overhead` ([1358602](https://crbug.com/1358602)).
-- 
+- The **Performance** panel now supports CPU profile uploads from a URL ([1417439](https://crbug.com/1417439)).
+- The **Console** and the **Sources** panel introduced autocompletion improvements ([1320204](https://crbug.com/1320204), [1276960](https://crbug.com/1276960)).
+- DevTools is preparing to support Autofill debugging ([1399414](https://crbug.com/1399414)).
+- DevTools added an event listener breakpoint to let you pause when you open a [Document Picture-in-Picture window](https://wicg.github.io/document-picture-in-picture/#dom-documentpictureinpicture-onenter) ([1315352](https://crbug.com/1315352)).
+- DevTools set up a workaround that properly displays Vue2 webpack artifacts as JavaScript ([1416562](https://crbug.com/1416562)).
+- A **Console** setting that automatically expands traces gets a better name ([1139616](https://crbug.com/1139616)).
 
 <!-- $contentEnd -->
 
