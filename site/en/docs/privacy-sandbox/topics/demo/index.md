@@ -110,7 +110,7 @@ This list shows the sites you can visit from the demo to record topics of intere
 - cats-pets-animals-pets.glitch.me
 - cats-feline-meow-purr-whiskers-pet.glitch.
 
-You can check to see which topics are real and which are random on the Topics State tab of the `chrome://topics-internals` page. This screen shot shows an example from different browsing sessions.
+You can check to see which topics are real and which are random on the Topics State tab of the `chrome://topics-internals` page. This screenshot shows an example from different browsing sessions.
 
 <figure>
   {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/Ef9ml82uPg3RdX5PX5QU.png", alt="ALT_TEXT_HERE", width="474", height="416" %}
