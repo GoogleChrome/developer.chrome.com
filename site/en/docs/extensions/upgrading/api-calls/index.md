@@ -74,7 +74,7 @@ Replace the `"tabs"` permission with the `"scripting"` permission.
 
 The functions on the `scripting` API are similar to the functions on `tabs`. There are a few differences.
 
-* When calling these methods, you pass a [`CSSInjection` object](/docs/extensions/reference/scripting/#type-CSSInjection) instead of `InjectDetails`.
+* When calling these methods, you pass a [`CSSInjection`](/docs/extensions/reference/scripting/#type-CSSInjection) object instead of `InjectDetails`.
 * The `tabId` is now passed as a member of `CSSInjection.target` instead of as a method argument.
 
 The example shows how to do this for `insertCSS()`. The procedure for `removeCSS()` is the same.
