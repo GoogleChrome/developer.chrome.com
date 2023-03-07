@@ -6,7 +6,7 @@ authors:
 date: 2023-03-03
 description: ""
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/KwNETHFT5o1aAv74huRF.jpg'
-alt: 'CSS documentation and more'
+alt: 'CSS documentation, ignore-listing irrelevant scripts, enhanced logpoint debugging, Recorder replay customization, and more.'
 tags:
   - new-in-devtools
   - devtools
@@ -186,7 +186,7 @@ Use the **Performance** panel to profile CPU:
 - For **Heavy (bottom up)**, see [**Performance** > **Bottom-up**](/docs/devtools/performance/reference/#bottom-up).
 - For **Call Tree**, see [**Performance** > **Call Tree**](/docs/devtools/performance/reference/#call-tree).
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/EkViYZ9gk6PF4dIcZBrk.png", alt="The Performance panel: Main section, Bottom-up tab, and Call Tree tab.", width="800", height="510" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/6VhBZ8nlFXaO2NP6HIVk.png", alt="The Performance panel: Main section, Bottom-up tab, and Call Tree tab.", width="800", height="459" %}
 
 To see the real-time total JS heap size, open the **Memory** panel.
 
