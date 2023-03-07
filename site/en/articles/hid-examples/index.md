@@ -7,12 +7,11 @@ authors:
   - mattreynolds
 date: 2020-07-22
 updated: 2021-01-25
-description: There is a long tale of human interface devices (HID) that are too new, too old, or too uncommon to be accessible by systems' device drivers. The WebHID
-API solves this by providing a way to implement device-specific logic in JavaScript.
+hero: image/admin/8TCwHOfb8SUWaVEtCx6j.jpg
+description: There is a long tale of human interface devices (HID) that are too new, too old, or too uncommon to be accessible by systems' device drivers. The WebHID API solves this by providing a way to implement device-specific logic in JavaScript.
 tags:
   - capabilities
   - devices
-hero: image/admin/8TCwHOfb8SUWaVEtCx6j.jpg
 alt: A generic game controller
 ---
 
@@ -23,7 +22,7 @@ launched in Chrome&nbsp;89.
 
 ## What is the WebHID API? {: #what }
 
-There is a long tail of human interface devices (HIDs) that are too new, too
+Many human interface devices (HIDs) are too new, too
 old, or too uncommon to be accessible by systems' device drivers. The [WebHID
 API](/hid/) solves this by providing a way to implement device-specific logic in
 JavaScript.
