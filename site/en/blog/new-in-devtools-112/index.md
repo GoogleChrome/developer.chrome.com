@@ -36,6 +36,9 @@ To turn them back on, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXi
 DevTools pulls the descriptions for tooltips from [VS Code Custom Data](https://github.com/microsoft/vscode-custom-data).
 {% endAside %}
 
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/abe7076d2df519b001dbea807a3aaf5beaa86fc0 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/d4748c98971bfff697f209fe11de892a5b93aca6 #}
+
 ## Recorder updates {: #recorder }
 
 ### Replay extensions support {: #replay-extensions }
@@ -49,6 +52,9 @@ Try out the [example extension](https://github.com/puppeteer/replay/tree/main/ex
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/kfAzPxEF08zwvYYKzP4e.mp4", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
 
 To customize the **Recorder** to your needs and integrate it with your tools, consider developing your own extension:  explore the [chrome.devtools.recorder API](/docs/extensions/reference/devtools_recorder/) and check out more [extension examples](https://github.com/puppeteer/replay/tree/main/examples/).
+
+{# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/c2102177581f1c74d38502f469d99b20c1835b1c #}
+{# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/e304e064dbead1d684b5c61f4fb308b101b4a66b #}
 
 ### Get extensions {: #get-extensions }
 
@@ -64,6 +70,8 @@ Your export extensions will be listed in the corresponding section of the same d
 
 Feel free to [add your extension](https://github.com/GoogleChrome/developer.chrome.com/edit/main/site/en/docs/devtools/recorder/extensions/index.md) to the list of [Recorder Extensions](/docs/devtools/recorder/extensions/). We look forward to seeing yours on the list!
 
+{# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/21e3d3275c47df8b79c72d1a3e8f9d26cc11fc04 #}
+
 ### Export as a Puppeteer script with Lighthouse analysis {: #puppeteer-lighthouse }
 
 The **Recorder** introduces a new export option: **Puppeteer (including Lighthouse analysis)**. With [Puppeteer](/docs/puppeteer/), you can automate and control Chrome. With [Lighthouse](/docs/lighthouse/), you can capture and improve your website's performance.
@@ -76,6 +84,8 @@ Run the Puppeteer script to get a Lighthouse report in a `flow.report.html` file
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/pfvZ3QX0XhhbDBxpsyBF.png", alt="The Lighthouse report opened in Chrome.", width="800", height="690" %}
 
+{# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/fcaf72d9134e54140cab41c011b7520dd168a340  #}
+
 ### Record with pierce selectors {: #pierce-selectors }
 
 In addition to custom, CSS, ARIA, text, and XPath selectors, you can now record using [pierce selectors](https://pptr.dev/guides/query-selectors#pierce-selectors-pierce). These selectors behave like CSS ones but can also pierce through shadow roots.
@@ -87,6 +97,9 @@ Start a new recording on a page with [shadow DOM](https://web.dev/shadowdom-v1/)
 Record your interaction with elements in the shadow DOM and inspect the corresponding step.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/P4JFsGHTt5yaH9hAgxc3.png", alt="Pierce selector in action.", width="800", height="711" %}
+
+{# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/a3968d1c01dd4d1a00b9aa13c50bfdc66995879e #}
+{# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/b6d02827539eb54869cbb75d3705782bfd2c95ae #}
 
 ## Logpoint and conditional breakpoint improvements {: #logpoint }
 
@@ -102,6 +115,12 @@ The **Console** now gives you proper anchor links to breakpoints in source files
 Click the link next to the breakpoint message to jump directly to the breakpoint editor.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/8lAz0lb168HXKvhscP2Q.png", alt="The anchor link next to a logpoint message that opens the breakpoint editor.", width="800", height="811" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/c845a441b0fe05c22f88cdb23463edee2b5985b7 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/9762db476cd7414d3ce351f32a0564421f66901f #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/42448cc63567ac407fd2088597da83aff17c5b55 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/4739f48e50d41025aba3c2af94e61cc3069aa563 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/bb0e41ed3c30bd988c49a76f0cf084f58c0bddc2  #}
 
 ## Ignore irrelevant scripts during debugging {: #ignore-list }
 
@@ -126,6 +145,10 @@ If you select an ignored script, the **Configure** button takes you to
 
 How many times a day do you look up documentation on CSS properties? The **Elements** > **Styles** pane now shows you a short description when you hover over a property.
 
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/e95d2f3fd27301945a1a095bae4bbcad57326cd8 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/736762eda6a6f30d0e9c383998624e53ee04a6e2 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/2257f7bca42753d744b56f5b99b461a6f0494131 #}
+
 ## Emulate reduced contrast {: #reduced-contrast }
 
 The [**Rendering**](/docs/devtools/rendering/#open-rendering) tab adds a new option to the [list of vision deficiencies emulation options](/docs/devtools/rendering/apply-effects/#emulate-vision-deficiencies)—**Reduced contrast**. With this option, you can discover how your website looks to people with low contrast sensitivity.
@@ -133,6 +156,9 @@ The [**Rendering**](/docs/devtools/rendering/#open-rendering) tab adds a new opt
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7qrlmuO7R47l5mytvoeQ.png", alt="The reduced contrast option on the Rendering > Emulate vision deficiencies.", width="800", height="574" %}
 
 With DevTools, you can find and fix all contrast issues at once. For more information, see [Make your website more readable](/docs/devtools/accessibility/contrast/).
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/0eaaa173c9e2cd357c99f7a275fe1819b86f0b9a #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/768af28f8cf64e10d23b10556b59dc0770cc14b6  #}
 
 ## JavaScript Profiler deprecation started {: #js-profiler-deprecation }
 
@@ -154,6 +180,8 @@ To see the real-time total JS heap size, open the **Memory** panel.
 
 Learn more and provide feedback in the corresponding [RFC](https://github.com/ChromeDevTools/rfcs/discussions/2) and [crbug.com/1354548](https://crbug.com/1354548).
 
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/71244f613a27289936b979fe515346137d0190f8 #}
+
 ## Lighthouse 10 {: #lighthouse }
 
 The **Lighthouse** panel now runs [Lighthouse 10.0.1](/blog/lighthouse-10-0/). For more details, see [What's new in Lighthouse 10.0.1](/blog/lighthouse-10-0/).
@@ -165,6 +193,11 @@ The **Lighthouse** panel now runs [Lighthouse 10.0.1](/blog/lighthouse-10-0/). F
 Lighthouse 10 now uses Moto G Power as the [default emulation device](https://github.com/GoogleChrome/lighthouse/pull/14674). DevTools added this device to {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Devices**](/docs/devtools/settings/devices/).
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/GpqmLAiuNasdRsfisVS7.png", alt="Moto G Power in the Devices list.", width="800", height="488" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/d5f9f7b395e2965356dfcaed026b5a1d141c19c6 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/de6c4e5973980ad98d7d1699faa4e1059f102c4d #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/8a6ca7d24e2fa33c6adfef22ee708f489657dee2 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/24e50e4e50bc6e19930df75385c316ba866e9588 #}
 
 <!-- $contentEnd -->
 
