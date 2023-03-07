@@ -36,8 +36,10 @@ To turn them back on, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXi
 DevTools pulls the descriptions for tooltips from [VS Code Custom Data](https://github.com/microsoft/vscode-custom-data).
 {% endAside %}
 
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/abe7076d2df519b001dbea807a3aaf5beaa86fc0 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/f5266ee227449dbbc3bc599df1b38cdb36cae4cb #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/d4748c98971bfff697f209fe11de892a5b93aca6 #}
+
+Chromium issue: [1401107](https://crbug.com/1401107).
 
 ## Recorder updates {: #recorder }
 
@@ -56,6 +58,8 @@ To customize the **Recorder** to your needs and integrate it with your tools, co
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/c2102177581f1c74d38502f469d99b20c1835b1c #}
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/e304e064dbead1d684b5c61f4fb308b101b4a66b #}
 
+Chromium issue: [1400243](https://crbug.com/1400243).
+
 ### Get extensions {: #get-extensions }
 
 Get extensions for the **Recorder** with a couple of clicks:
@@ -71,6 +75,9 @@ Your export extensions will be listed in the corresponding section of the same d
 Feel free to [add your extension](https://github.com/GoogleChrome/developer.chrome.com/edit/main/site/en/docs/devtools/recorder/extensions/index.md) to the list of [Recorder Extensions](/docs/devtools/recorder/extensions/). We look forward to seeing yours on the list!
 
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/21e3d3275c47df8b79c72d1a3e8f9d26cc11fc04 #}
+{# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/b6d02827539eb54869cbb75d3705782bfd2c95ae #}
+
+Chromium issues: [1417104](https://crbug.com/1417104), [1413168](https://crbug.com/1413168).
 
 ### Export as a Puppeteer script with Lighthouse analysis {: #puppeteer-lighthouse }
 
@@ -84,7 +91,7 @@ Run the Puppeteer script to get a Lighthouse report in a `flow.report.html` file
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/pfvZ3QX0XhhbDBxpsyBF.png", alt="The Lighthouse report opened in Chrome.", width="800", height="690" %}
 
-{# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/fcaf72d9134e54140cab41c011b7520dd168a340  #}
+{# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/fcaf72d9134e54140cab41c011b7520dd168a340 #}
 
 ### Record with pierce selectors {: #pierce-selectors }
 
@@ -99,7 +106,8 @@ Record your interaction with elements in the shadow DOM and inspect the correspo
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/P4JFsGHTt5yaH9hAgxc3.png", alt="Pierce selector in action.", width="800", height="711" %}
 
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/a3968d1c01dd4d1a00b9aa13c50bfdc66995879e #}
-{# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/b6d02827539eb54869cbb75d3705782bfd2c95ae #}
+
+Chromium issue: [1411188](https://crbug.com/1411188).
 
 ## Logpoint and conditional breakpoint improvements {: #logpoint }
 
@@ -120,7 +128,9 @@ Click the link next to the breakpoint message to jump directly to the breakpoint
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/9762db476cd7414d3ce351f32a0564421f66901f #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/42448cc63567ac407fd2088597da83aff17c5b55 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/4739f48e50d41025aba3c2af94e61cc3069aa563 #}
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/bb0e41ed3c30bd988c49a76f0cf084f58c0bddc2  #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/bb0e41ed3c30bd988c49a76f0cf084f58c0bddc2 #}
+
+Chromium issue: [1027458](https://crbug.com/1027458).
 
 ## Ignore irrelevant scripts during debugging {: #ignore-list }
 
@@ -149,6 +159,8 @@ How many times a day do you look up documentation on CSS properties? The **Eleme
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/736762eda6a6f30d0e9c383998624e53ee04a6e2 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/2257f7bca42753d744b56f5b99b461a6f0494131 #}
 
+Chromium issue: [883325](https://crbug.com/883325).
+
 ## Emulate reduced contrast {: #reduced-contrast }
 
 The [**Rendering**](/docs/devtools/rendering/#open-rendering) tab adds a new option to the [list of vision deficiencies emulation options](/docs/devtools/rendering/apply-effects/#emulate-vision-deficiencies)—**Reduced contrast**. With this option, you can discover how your website looks to people with low contrast sensitivity.
@@ -159,6 +171,8 @@ With DevTools, you can find and fix all contrast issues at once. For more inform
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/0eaaa173c9e2cd357c99f7a275fe1819b86f0b9a #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/768af28f8cf64e10d23b10556b59dc0770cc14b6  #}
+
+Chromium issues: [1412719](https://crbug.com/1412719), [1412721](https://crbug.com/1412721).
 
 ## JavaScript Profiler deprecation started {: #js-profiler-deprecation }
 
@@ -182,6 +196,8 @@ Learn more and provide feedback in the corresponding [RFC](https://github.com/Ch
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/71244f613a27289936b979fe515346137d0190f8 #}
 
+Chromium issue: [1417647](https://crbug.com/1417647).
+
 ## Lighthouse 10 {: #lighthouse }
 
 The **Lighthouse** panel now runs [Lighthouse 10.0.1](/blog/lighthouse-10-0/). For more details, see [What's new in Lighthouse 10.0.1](/blog/lighthouse-10-0/).
@@ -198,6 +214,8 @@ Lighthouse 10 now uses Moto G Power as the [default emulation device](https://gi
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/de6c4e5973980ad98d7d1699faa4e1059f102c4d #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/8a6ca7d24e2fa33c6adfef22ee708f489657dee2 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/24e50e4e50bc6e19930df75385c316ba866e9588 #}
+
+Chromium issue: [772558](https://crbug.com/772558).
 
 <!-- $contentEnd -->
 
