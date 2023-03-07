@@ -169,111 +169,108 @@ The parameters correspond to flags that can be set when running Chrome from the 
 
 **Chrome flags**
 
-<table class="width-full">
-  <thead>
-    <tr>
-      <th style="text-align: left;"><strong>Parameter</strong></th>
-      <th style="text-align: left;"><strong>Default value</strong></th>
-      <th style="text-align: left;"><strong>Meaning</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>BrowsingTopics</code></td>
-      <td>enabled</td>
-      <td>Whether the Topics API is enabled.</td>
-    </tr>
-    <tr>
-      <td><code>PrivacySandboxAdsAPIsOverride</code></td>
-      <td>enabled</td>
-      <td>Enables ads APIs: Attribution Reporting, FLEDGE, Topics, Fenced Frames.</td>
-    </tr>
-    <tr>
-      <td><code>PrivacySandboxSettings3</code></td>
-      <td>disabled</td>
-      <td>Enables the third release of the Privacy Sandbox UI settings.</td>
-    </tr>
-    <tr>
-      <td><code>OverridePrivacySandboxSettingsLocalTesting</code></td>
-      <td>enabled</td>
-      <td>If enabled, the browser no longer requires the underlying settings to be enabled for
-enabling the Privacy Sandbox features.</td>
-    </tr>
-    <tr>
-      <td><code>BrowsingTopicsBypassIPIsPubliclyRoutableCheck</code></td>
-      <td>disabled</td>
-      <td>If enabled, the check for whether the IP address is publicly routable will be
+
+Parameter
+Default value
+Meaning
+
+<dl>
+
+<dt>
+      <dd><code>BrowsingTopics</code></dd>
+      <dd>enabled</dd>
+      <dd>Whether the Topics API is enabled.</dd>
+    </dt>
+    <dt>
+      <dd><code>PrivacySandboxAdsAPIsOverride</code></dd>
+      <dd>enabled</dd>
+      <dd>Enables ads APIs: Attribution Reporting, FLEDGE, Topics, Fenced Frames.</dd>
+    </dt>
+    <dt>
+      <dd><code>PrivacySandboxSettings3</code></dd>
+      <dd>disabled</dd>
+      <dd>Enables the third release of the Privacy Sandbox UI settings.</dd>
+    </dt>
+    <dt>
+      <dd><code>OverridePrivacySandboxSettingsLocalTesting</code></dd>
+      <dd>enabled</dd>
+      <dd>If enabled, the browser no longer requires the underlying settings to be enabled for
+enabling the Privacy Sandbox features.</dd>
+    </dt>
+    <dt>
+      <dd><code>BrowsingTopicsBypassIPIsPubliclyRoutableCheck</code></dd>
+      <dd>disabled</dd>
+      <dd>If enabled, the check for whether the IP address is publicly routable will be
 bypassed when determining the eligibility for a page to be included in topics
-calculation.</td>
-    </tr>
-    <tr>
-      <td><code>BrowsingTopics:number_of_epochs_to_expose</code></td>
-      <td>3</td>
-      <td>The number of epochs from where to calculate the topics to give to a requesting
-context. The browser will internally keep up to N+1 epochs.</td>
-    </tr>
-    <tr>
-      <td><code>BrowsingTopics:time_period_per_epoch</code></td>
-      <td style="white-space: nowrap;">7d-0h-0m-0s</td>
-      <td>Duration of each <a href="/docs/privacy-sandbox/topics/#:~:text=epoch">epoch</a>.
-      For debugging, it can be useful to set this to (say) 15 seconds, rather than the default 7 days.</td>
-    </tr>
-    <tr>
-      <td><code>BrowsingTopics:number_of_top_topics_per_epoch</code></td>
-      <td>5</td>
-      <td>Number of topics calculated per epoch.</td>
-    </tr>
-    <tr>
-      <td><code>BrowsingTopics:use_random_topic_probability_percent</code></td>
-      <td>5</td>
-      <td>Probability that an individual topic within an epoch is one returned at random from
+calculation.</dd>
+    </dt>
+    <dt>
+      <dd><code>BrowsingTopics:number_of_epochs_to_expose</code></dd>
+      <dd>3</dd>
+      <dd>The number of epochs from where to calculate the topics to give to a requesting
+context. The browser will internally keep up to N+1 epochs.</dd>
+    </dt>
+    <dt>
+      <dd><code>BrowsingTopics:time_period_per_epoch</code></dd>
+      <td style="white-space: nowrap;">7d-0h-0m-0s</dd>
+      <dd>Duration of each <a href="/docs/privacy-sandbox/topics/#:~:text=epoch">epoch</a>.
+      For debugging, it can be useful to set this to (say) 15 seconds, rather than the default 7 days.</dd>
+    </dt>
+    <dt>
+      <dd><code>BrowsingTopics:number_of_top_topics_per_epoch</code></dd>
+      <dd>5</dd>
+      <dd>Number of topics calculated per epoch.</dd>
+    </dt>
+    <dt>
+      <dd><code>BrowsingTopics:use_random_topic_probability_percent</code></dd>
+      <dd>5</dd>
+      <dd>Probability that an individual topic within an epoch is one returned at random from
 the entire <a
 href="/docs/privacy-sandbox/topics/#:~:text=taxonomy">taxonomy</a>
-of topics. The randomness is sticky to an epoch and site.</td>
-    </tr>
-    <tr>
-      <td><code>BrowsingTopics:number_of_epochs_of_observation_data_to_use_for_filtering</code></td>
-      <td>3</td>
-      <td>How many epochs of API usage data (i.e. topics observations) will be used for
-filtering the topics for a calling context.</td>
-    </tr>
-    <tr>
-      <td><code>BrowsingTopics:max_number_of_api_usage_context_domains_to_keep_per_topic</code></td>
-      <td>1000</td>
-      <td>The max number of observed-by context domains to keep for each top topic. The intent
-is to cap the in-use memory.</td>
-    </tr>
-    <tr>
-      <td><code>BrowsingTopics:max_number_of_api_usage_context_entries_to_load_per_epoch</code></td>
-      <td>100000</td>
-      <td>The max number of entries allowed to be retrieved from the database for each query
+of topics. The randomness is sticky to an epoch and site.</dd>
+    </dt>
+    <dt>
+      <dd><code>BrowsingTopics:number_of_epochs_of_observation_data_to_use_for_filtering</code></dd>
+      <dd>3</dd>
+      <dd>How many epochs of API usage data (i.e. topics observations) will be used for
+filtering the topics for a calling context.</dd>
+    </dt>
+    <dt>
+      <dd><code>BrowsingTopics:max_number_of_api_usage_context_domains_to_keep_per_topic</code></dd>
+      <dd>1000</dd>
+      <dd>The max number of observed-by context domains to keep for each top topic. The intent
+is to cap the in-use memory.</dd>
+    </dt>
+    <dt>
+      <dd><code>BrowsingTopics:max_number_of_api_usage_context_entries_to_load_per_epoch</code></dd>
+      <dd>100000</dd>
+      <dd>The max number of entries allowed to be retrieved from the database for each query
 for the API usage contexts. The query will occur once per epoch at topics calculation
-time. The intent is to cap the peak memory usage.</td>
-    </tr>
-    <tr>
-      <td><code>BrowsingTopics:max_number_of_api_usage_context_domains_to_store_per_page_load</code></td>
-      <td>30</td>
-      <td>The max number of API usage context domains allowed to be stored per page load.</td>
-    </tr>
-    <tr>
-      <td><code>BrowsingTopics:config_version</code></td>
-      <td>1</td>
-      <td>Encodes the Topics API configuration parameters. Each version number should only be
+time. The intent is to cap the peak memory usage.</dd>
+    </dt>
+    <dt>
+      <dd><code>BrowsingTopics:max_number_of_api_usage_context_domains_to_store_per_page_load</code></dd>
+      <dd>30</dd>
+      <dd>The max number of API usage context domains allowed to be stored per page load.</dd>
+    </dt>
+    <dt>
+      <dd><code>BrowsingTopics:config_version</code></dd>
+      <dd>1</dd>
+      <dd>Encodes the Topics API configuration parameters. Each version number should only be
 mapped to one configuration set. Updating the configuration parameters without updating the `config_version` should
 be usually fine for local testing, but in some situations could leave the browser in an
 inconsistent state and/or could let the browser crash, e.g. updating the
-`number_of_top_topics_per_epoch`.</td>
-    </tr>
-    <tr>
-      <td><code>BrowsingTopics:taxonomy_version</code></td>
-      <td>1</td>
-      <td>The <a
+`number_of_top_topics_per_epoch`.</dd>
+    </dt>
+    <dt>
+      <dd><code>BrowsingTopics:taxonomy_version</code></dd>
+      <dd>1</dd>
+      <dd>The <a
 href="/docs/privacy-sandbox/topics/#:~:text=taxonomy">taxonomy</a>
-version used by the API.</td>
-    </tr>
-  </tbody>
-</table>
+version used by the API.</dd>
+    </dt>
 
+</dl>
 
 ## Next steps
 
