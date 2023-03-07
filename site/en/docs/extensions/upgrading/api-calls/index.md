@@ -95,7 +95,7 @@ In a background script file.
 
 {% Compare 'better', 'Manifest V3' %}
 ```js
-const insertPromise = async chrome.scripting.insertCSS({
+const insertPromise = await chrome.scripting.insertCSS({
   files: ["style.css"],
   target: { tabId: tab.id }
 });
