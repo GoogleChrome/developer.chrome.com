@@ -6,7 +6,7 @@ subhead: >
 description: >
   First-Party Sets (FPS) is a way for a company to declare relationships among sites, so that browsers allow limited third-party cookie access for specific purposes.
 hero: image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/OLx3AXkweLjAiDzoDslb.png
-date: 2023-02-28
+date: 2023-03-07
 authors:
   - mihajlija
 ---
