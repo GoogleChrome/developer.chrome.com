@@ -21,7 +21,7 @@ For the `executeScript()` method you need:
 The `scripting.executeScript()` method is similar to how it worked with `tabs.executeScript()`. There are a few differences:
 
 * While the old method could only take a single file, the new method can take an array of files. 
-* You also pass a [`ScriptInjection` object](/docs/extensions/reference/scripting/#type-ScriptInjection) instead of [`InjectDetails`](/docs/extensions/reference/extensionTypes/#type-InjectDetails). There are multiple differences between the two. For example, the `tabId` is now passed as a member of `ScriptInjection.target` instead of as a method argument.
+* You also pass a [`ScriptInjection`](/docs/extensions/reference/scripting/#type-ScriptInjection) object instead of [`InjectDetails`](/docs/extensions/reference/extensionTypes/#type-InjectDetails). There are multiple differences between the two. For example, the `tabId` is now passed as a member of `ScriptInjection.target` instead of as a method argument.
 
 The example shows how to do this.
 
