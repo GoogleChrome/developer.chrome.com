@@ -286,3 +286,5 @@ version used by the API.</td>
 
 -   [Topics API technical explainer](https://github.com/jkarlin/topics)
 -   [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
+
+{% Partial 'privacy-sandbox/topics-feedback.njk' %}
