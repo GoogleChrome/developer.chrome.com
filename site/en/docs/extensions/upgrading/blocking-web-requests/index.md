@@ -152,7 +152,7 @@ If you want to try this, the code below is [available in our samples repo](https
     "declarativeNetRequestWithHostAccess"
   ],
   "host_permissions": [
-    "https://developer.chrome.com/"
+    "https://developer.chrome.com/*"
   ]
 ```
 {% endCompare %}
