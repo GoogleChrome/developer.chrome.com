@@ -14,7 +14,7 @@ You can no longer [execute external logic](/docs/extensions/mv3/intro/mv3-overvi
 
 - Move all external code (JS, Wasm, CSS) into your extension bundle.
 - Update script and style references to load resources from the extension bundle.
-- Use [`chrome.runtime.getURL()`][runtime-geturl] to build resource URLs at runtime.
+- Use [`chrome.runtime.getURL()`](/docs/extensions/reference/runtime/#method-getURL) to build resource URLs at runtime.
 
 The `executeScript()` method is now in the [`scripting`](/docs/extensions/reference/scripting/) namespace rather than the `tabs` namespace. For information on updating callsites, see [Move executeScript()](/docs/extensions/upgrade-to-mv3/update-code#move-executescript).
 
