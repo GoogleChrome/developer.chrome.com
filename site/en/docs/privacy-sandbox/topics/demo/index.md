@@ -2,9 +2,9 @@
 layout: 'layouts/doc-post.njk'
 title: 'Topics API demos'
 subhead: >
-  Try out the Topics API demos. 
+  Experiment and learn how topics are inferred from hostnames with minimal setup.
 description: >
-  Try out the Topics API demos.
+  Experiment and learn how topics are inferred from hostnames with minimal setup.
 date: 2022-01-25
 updated: 2022-02-01
 authors:
