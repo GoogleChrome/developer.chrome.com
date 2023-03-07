@@ -2,6 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Service worker overview
 date: 2021-09-24
+updated: 2023-03-07
 description: >
   An overview of service workers.
 ---
