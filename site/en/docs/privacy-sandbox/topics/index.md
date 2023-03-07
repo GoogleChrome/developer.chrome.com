@@ -26,7 +26,7 @@ Topics is not currently available by default in any version of Chrome, but you c
 
 The demo of the Topics API is at [topics-demo.glitch.me](https://topics-demo.glitch.me/). It explains how to try out and debug the API for a single user.
 
-You can also run the Topics [colab](/docs/privacy-sandbox/topics/colab/) to try out the Topics [classifier model](/docs/privacy-sandbox/topics/#classifier-model).
+You can also run the Topics [colab](/docs/privacy-sandbox/topics/colab/) to try out the Topics [classifier model](/docs/privacy-sandbox/topics/topic-classification/#the-classifier-model).
 
 ### Take part in a Topics origin trial
 
@@ -41,7 +41,7 @@ Each topic object in the array returned by `document.browsingTopics()` will have
 -   `configVersion`: a string identifying the current Topics API configuration
 -   `modelVersion`: a string identifying the machine-learning classifier used to infer topics for the site
 -   `taxonomyVersion`: a string identifying the set of topics currently in use by the browser
--   `topic`: a number identifying the topic in the [taxonomy](/docs/privacy-sandbox/topics/#how-would-topics-be-curated-and-selected)
+-   `topic`: a number identifying the topic in the [taxonomy](/docs/privacy-sandbox/topics/overview/#how-topics-are-curated-and-selected)
 -   `version`: a string combining the `configVersion` and the `modelVersion`
 
 The parameters described in this article, and details of the API (such as taxonomy size, the number of topics calculated per week and the number of topics returned per call) are subject to change as we incorporate ecosystem feedback and iterate on the API.
