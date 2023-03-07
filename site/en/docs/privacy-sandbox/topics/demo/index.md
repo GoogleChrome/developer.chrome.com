@@ -5,8 +5,7 @@ subhead: >
   Experiment and learn how topics are inferred from hostnames with minimal setup.
 description: >
   Experiment and learn how topics are inferred from hostnames with minimal setup.
-date: 2022-01-25
-updated: 2022-02-01
+date: 2023-03-08
 authors:
   - samdutton
 ---
