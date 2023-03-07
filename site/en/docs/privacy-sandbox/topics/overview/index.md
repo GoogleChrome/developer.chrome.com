@@ -57,7 +57,7 @@ For 10,000 top sites, the Topics API implementation in Chrome uses a manually cu
 
 Chrome's implementation of the Topics API downloads a [TensorFlow Lite](/docs/privacy-sandbox/topics/tensorflow.org/lite/guide) file representing the model, so it can be used locally on the user's device. 
 
-You can access the TensorFlow Lite model file, and the topics inferred for hostnames, from the [chrome://topics internal page](/docs/privacy-sandbox/topics/#view-inferred-topics).
+You can access the TensorFlow Lite model file, and the topics inferred for hostnames, from `chrome://topics`.
 
 The diagram below outlines a simplified example to demonstrate how the Topics API might help an ad tech platform select an appropriate ad. The example assumes that the user's browser already has a model to map website hostnames to topics.
 
