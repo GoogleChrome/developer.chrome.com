@@ -124,8 +124,8 @@ In the `manifest.json` replace the `"browser_action"` and `"page_action"` fields
 ```json
 {
   ...
-  "browser_action": { ... },
-  "page_action": {
+  "page_action": { ... },
+  "browser_action": {
     "default_popup": "popup.html"
    }
   ...
