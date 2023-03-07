@@ -156,7 +156,7 @@ event is fired when there are no valid ports at the other side of the channel. T
 following situations:
 
 - There are no listeners for [runtime.onConnect][runtime-on-connect] at the other end.
-- The tab containing the port is unloaded (e.g. if the tab is navigated).
+- The tab containing the port is unloaded (for example, if the tab is navigated).
 - The frame where `connect()` was called has unloaded.
 - All frames that received the port (via [runtime.onConnect][runtime-on-connect]) have unloaded.
 - [runtime.Port.disconnect()][runtime-port-disconnect] is called by _the other end_. Note that if a `connect()` call results
@@ -269,7 +269,7 @@ Extensions [can exchange messages][native-client] with native applications that 
 
 ### Content scripts are less trustworthy {: #content-scripts-are-less-trustworthy }
 
-[Content scripts are less trustworthy][security-cs] than the extension service worker (e.g., a malicious web
+[Content scripts are less trustworthy][security-cs] than the extension service worker (for example, a malicious web
 page might be able to compromise the renderer process where the content scripts run). Assume that
 messages from a content script might have been crafted by an attacker and make sure to [validate and
 sanitize all input][security-santize]. Assume any data sent to the content script might leak to the web page.
