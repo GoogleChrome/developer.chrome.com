@@ -5,10 +5,10 @@ subhead: Connecting to uncommon devices from your app.
 authors:
   - joemedley
   - mattreynolds
-description: There is a long tale of human interface devices (HID) that are too new, too old, or too uncommon to be accessible by systems' device drivers. The WebHID
-API solves this by providing a way to implement device-specific logic in JavaScript.
 date: 2020-07-22
 updated: 2021-01-25
+description: There is a long tale of human interface devices (HID) that are too new, too old, or too uncommon to be accessible by systems' device drivers. The WebHID
+API solves this by providing a way to implement device-specific logic in JavaScript.
 tags:
   - capabilities
   - devices
