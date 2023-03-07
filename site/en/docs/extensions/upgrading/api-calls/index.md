@@ -103,7 +103,7 @@ const insertPromise = await chrome.scripting.insertCSS({
 ```
 
 {% CompareCaption %}
-In the background service worker.
+In the extension service worker.
 {% endCompareCaption %}
 
 {% endCompare %}
