@@ -25,7 +25,7 @@ launched in Chrome&nbsp;89.
 
 There is a long tail of human interface devices (HIDs) that are too new, too
 old, or too uncommon to be accessible by systems' device drivers. The [WebHID
-API](/hid) solves this by providing a way to implement device-specific logic in
+API](/hid/) solves this by providing a way to implement device-specific logic in
 JavaScript.
 
 ### Suggested use cases for the WebHID API {: #use-cases }
