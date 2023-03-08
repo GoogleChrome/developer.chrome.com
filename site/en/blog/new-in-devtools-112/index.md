@@ -161,6 +161,8 @@ The [**Rendering**](/docs/devtools/rendering/#open-rendering) tab adds a new opt
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7qrlmuO7R47l5mytvoeQ.png", alt="The reduced contrast option on the Rendering > Emulate vision deficiencies.", width="800", height="574" %}
 
+Note that the list options have been updated to tell you what color insensitivity the options represent.
+
 With DevTools, you can find and fix all contrast issues at once. For more information, see [Make your website more readable](/docs/devtools/accessibility/contrast/).
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/0eaaa173c9e2cd357c99f7a275fe1819b86f0b9a #}
@@ -170,27 +172,19 @@ Chromium issues: [1412719](https://crbug.com/1412719), [1412721](https://crbug.c
 
 ## JavaScript Profiler deprecation started {: #js-profiler-deprecation }
 
+As early as [Chrome 58](https://developer.chrome.com/blog/devtools-javascript-cpu-profile-migration-2/), the DevTools team planned to eventually deprecate the **JavaScript Profiler** and have Node.js and Deno developers use the **Performance** panel for profiling JavaScript CPU performance.
+
 This DevTools version (112) starts the [four-phase **JavaScript Profiler** deprecation](https://github.com/ChromeDevTools/rfcs/discussions/2#discussioncomment-5189668). The **JavaScript Profiler** panel now shows the corresponding warning banner.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/v4S5YWGdBV3nbc3OkGZ3.png", alt="Deprecation banner at the top of the Profiler.", width="800", height="712" %}
 
-Instead of the profiler, use the **Performance** panel to profile CPU:
+Instead of the **Profiler**, use the **Performance** panel to profile CPU. Additionally, the **Performance** panel now supports CPU profile uploads from a URL as the **Profiler** did.
 
-- For **Chart**, see the [**Main** section in the **Performance** panel](/docs/devtools/performance/reference/#main).
-- For **Heavy (bottom up)**, see [**Performance** > **Bottom-up**](/docs/devtools/performance/reference/#bottom-up).
-- For **Call Tree**, see [**Performance** > **Call Tree**](/docs/devtools/performance/reference/#call-tree).
-
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/6VhBZ8nlFXaO2NP6HIVk.png", alt="The Performance panel: Main section, Bottom-up tab, and Call Tree tab.", width="800", height="459" %}
-
-To see the real-time total JS heap size, open the **Memory** panel.
-
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/8BI75JYUTcri7R4k6U3W.png", alt="JS heap size in the Memory panel.", width="800", height="535" %}
-
-Learn more and provide feedback in the corresponding [RFC](https://github.com/ChromeDevTools/rfcs/discussions/2) and [crbug.com/1354548](https://crbug.com/1354548).
+Learn more and provide feedback in the corresponding [RFC](https://github.com/ChromeDevTools/rfcs/discussions/2) and [crbug.com/1354548](https://crbug.com/1354548). 
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/71244f613a27289936b979fe515346137d0190f8 #}
 
-Chromium issue: [1417647](https://crbug.com/1417647).
+Chromium issues: [1417647](https://crbug.com/1417647), [1417439](https://crbug.com/1417439).
 
 ## Lighthouse 10 {: #lighthouse }
 
@@ -218,11 +212,12 @@ These are some noteworthy fixes in this release:
 - The [**Sources** > **Breakpoints**](/docs/devtools/javascript/breakpoints/#manage-loc) pane now shows differentiating file paths next to ambiguous file names ([1403924](crbug.com/1403924)).
 - The [**Main** section](/docs/devtools/performance/reference/#main) in the flame chart of the **Performance** panel now designates `CpuProfiler::StartProfiling` as `Profiler Overhead` ([1358602](https://crbug.com/1358602)).
 - The **Performance** panel now supports CPU profile uploads from a URL ([1417439](https://crbug.com/1417439)).
-- The **Console** and the **Sources** panel introduced autocompletion improvements ([1320204](https://crbug.com/1320204), [1276960](https://crbug.com/1276960)).
-- DevTools is preparing to support Autofill debugging ([1399414](https://crbug.com/1399414)).
-- DevTools added an event listener breakpoint to let you pause when you open a [Document Picture-in-Picture window](https://wicg.github.io/document-picture-in-picture/#dom-documentpictureinpicture-onenter) ([1315352](https://crbug.com/1315352)).
+- DevTools improved autocompletion:
+  - **Sources**: Consistent completions of any word ([1320204](https://crbug.com/1320204)).
+  - **Console**: `Arrow down` selects the first suggestion and suggestions get a `Tab` hint ([1276960](https://crbug.com/1276960)).
+- DevTools added an [event listener breakpoint](/docs/devtools/javascript/breakpoints/#event-listeners) to let you pause when you open a [Document Picture-in-Picture window](https://wicg.github.io/document-picture-in-picture/#dom-documentpictureinpicture-onenter) ([1315352](https://crbug.com/1315352)).
 - DevTools set up a workaround that properly displays Vue2 webpack artifacts as JavaScript ([1416562](https://crbug.com/1416562)).
-- A **Console** setting that automatically expands traces gets a better name ([1139616](https://crbug.com/1139616)).
+- A [ **Console** setting](/docs/devtools/settings/preferences/#console) gets a better name: Automatically expand console.trace() messages. ([1139616](https://crbug.com/1139616)).
 
 <!-- $contentEnd -->
 
