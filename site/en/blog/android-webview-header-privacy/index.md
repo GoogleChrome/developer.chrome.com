@@ -3,12 +3,12 @@ title: Improving user privacy by requiring opt-in to send X-Requested-With heade
 description: >
   We want to protect the user's privacy by only sending the X-Requested-With header on requests if the app developer explicitly opts-in to share with services embedded within the WebView. 
 layout: 'layouts/blog-post.njk'
-date: 2023-03-08
+date: 2023-03-13
 authors:
   - pbirk
-hero: 'image/SeARmcA1EicLXagFnVOe0ou9cqK2/djvT3JKbPBugDOsCUsFY.png'
+hero: 'image/VbsHyyQopiec0718rMq2kTE1hke2/LNiRMeNkUXQw6EBKwJw9.jpg'
 alt: >
-  New in Chrome hero logo
+  Choices, as represented by signs, at sunset.
 tags:
   - privacy
 ---
