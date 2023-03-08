@@ -20,7 +20,9 @@ tags:
 
 <!-- $contentStart -->
 
-## CSS documentation in the Styles pane {: #css }
+## Elements > Styles {: #elements- styles }
+
+### CSS documentation {: #css }
 
 How many times a day do you look up documentation on CSS properties? The **Elements** > **Styles** pane now shows you a short description when you hover over a property.
 
@@ -40,6 +42,16 @@ DevTools pulls the descriptions for tooltips from [VS Code Custom Data](https://
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/d4748c98971bfff697f209fe11de892a5b93aca6 #}
 
 Chromium issue: [1401107](https://crbug.com/1401107).
+
+### CSS nesting support {: #nesting  }
+
+The **Elements** > **Styles** pane now recognizes [CSS Nesting](https://w3c.github.io/csswg-drafts/css-nesting/) syntax and applies nested styles to right elements.
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/q4r9vBhgIqmtnQgYIb6U.mp4", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/f1ed9b6180cb75fcfd43dfac95ac9a40c35e03df #}
+
+Chromium issue: [1172985](https://crbug.com/1172985).
 
 ## Recorder updates {: #recorder }
 
