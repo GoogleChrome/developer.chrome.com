@@ -52,8 +52,7 @@ ad tech) who uses the topics returned by this method to help select relevant
 ads.
 
 The browser determines the caller from the origin of the request. If Site A
-requests topics from their code in an iframe hosted on Site B, the browser
-would determine the caller is Site A. If you're a third party, make sure you
+requests topics from their code in an iframe hosted on Site B, the browser determines the caller is Site A. If you're a third party, make sure you
 call the Topics API from an iframe you own.
 
 To retrieve one or more topics with `document.browsingTopics()`, an API
