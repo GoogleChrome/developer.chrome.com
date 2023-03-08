@@ -85,7 +85,7 @@ TEE での Key/Value サービスの実行は、サードパーティー Cookie 
 
 最近では、[Attribution Reporting API](https://github.com/WICG/turtledove/issues/281) と FLEDGE の統合について、特に Fenced frames が含まれる状況における課題が[指摘されていました](/docs/privacy-sandbox/attribution-reporting/)。
 
-For event-level reporting with FLEDGE, we have a proposed set of initial improvements to make this integration easier which you can learn more about in the [explainer](https://github.com/WICG/turtledove/blob/main/Fenced_Frames_Ads_Reporting.md#support-for-attribution-reporting). The integration will be available for both fenced frames and iFrames. Event-level reporting will be available for testing in Chrome Stable M112+.
+FLEDGE を使用したイベントレベルレポートについては、この統合をより簡素化するための初期改善案を用意しており、[Explainer](https://github.com/WICG/turtledove/blob/main/Fenced_Frames_Ads_Reporting.md#support-for-attribution-reporting) で詳細な内容をご確認いただけます。この統合は、Fenced frames と iframe の両方で利用できるようになります。イベントレベルレポートのテストは、Chrome 安定版 M112+ に提供される予定です。
 
 [FLEDGEを使用したアトリビューションレポートの集計](https://github.com/WICG/turtledove/issues/289)が必要な方向けには、集計レポートでより多くの入札シグナルをキャプチャするためのより柔軟なソリューションの開発に取り組んでいます。準備が整い次第、提案内容を公開する予定です。
 
