@@ -210,7 +210,7 @@ context. The browser will internally keep up to N+1 epochs.</dd>
     <dt>
       <dd><code>BrowsingTopics:time_period_per_epoch</code></dd>
       <dd><strong>Default value:</strong> 7d-0h-0m-0s</dd>
-      <dd>Duration of each <a href="/docs/privacy-sandbox/topics/#:~:text=epoch">epoch</a>.
+      <dd>Duration of each <a href="/docs/privacy-sandbox/topics/overview/#:~:text=epoch">epoch</a>.
       For debugging, it can be useful to set this to (say) 15 seconds, rather than the default 7 days.</dd>
     </dt><br />
     <dt>
