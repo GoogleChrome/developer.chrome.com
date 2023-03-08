@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc-post.njk
-title: IP Protection
+title: IP の保護
 subhead: |2
 
   IP アドレスが追跡に使用されないように保護することで、ユーザーのプライバシーを向上させます。
@@ -12,42 +12,42 @@ authors:
   - anusmitaray
 ---
 
-{% Aside %} This proposal used to previously have a different scope and was known as Gnatcatcher, or the Global Network Address Translation Combined with Audited and Trusted CDN or HTTP-Proxy Eliminating Reidentification. You can still view the [deprecated documentation](/docs/privacy-sandbox/archive/gnatcatcher/). {% endAside %}
+{% Aside %} この提案には以前は別のスコープがあり、Gnatcatcher（グローバルネットワークアドレス変換と Audited および Trusted CDN または HTTP-Proxy Elimination Reidentification の組み合わせ）として知られていました。[使用廃止となったドキュメント](/docs/privacy-sandbox/archive/gnatcatcher/)は引き続き閲覧できます。 {% endAside %}
 
 ## 実施状況
 
-This document outlines a new proposal to help prevent covert tracking: IP Protection.
+このドキュメントでは、隠されたトラッキングを防止するのに役立つ IP 保護という新しい提案について概説します。
 
 - The [IP Protection proposal](https://github.com/GoogleChrome/ip-protection) has entered [public discussion](https://github.com/GoogleChrome/ip-protection/issues).
-- This proposal has not been implemented in any browser.
-- [The Privacy Sandbox timeline](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline) provides implementation timings for other Privacy Sandbox proposals. IP Protection is still in its early phase and will have firmer timelines available on this website when available.
+- この提案はどのブラウザにも実装されていません。
+- [プライバシーサンドボックスのタイムライン](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline)には、他のプライバシーサンドボックス提案の実装時期が提供されています。IP 保護はまだ初期段階にあり、利用可能になった時点で、このウェブサイトでより確実なタイムラインが発表されるようになります。
 
-## Why do we need this proposal?
+## この提案が必要な理由
 
-IP addresses were created to provide unique identifiers for a client so that traffic can be routed over the internet. IP addresses can be stable over periods of time, which can lead to user identification across first-parties.
+IP アドレスは、トラフィックをインターネット経由でルーティングできるように、クライアントに一意の識別子を提供するために作成されました。IP アドレスは一定期間安定している可能性があるため、ファーストパーティ間でユーザーが識別される可能性があります。
 
-IP Protection is a proposal to avoid sharing a user's real IP address with third parties. This proposal suggests using a privacy proxy (previously called a Near-Path NAT) for a connection.  An IP address is an effective cross-site identifier as it is unique, relatively stable, cheap to collect, and IP address collection cannot be detected by the browser. Therefore limiting access to IP addresses is important to prevent methods of cross-site tracking beyond third-party cookies.
+IP 保護は、ユーザーの実際の IP アドレスをサードパーティと共有することを避けるための提案です。この提案では、接続にプライバシープロキシ（以前は Near-Path NAT と呼ばれていました）を使用することを提案しています。IP アドレスは、一意であり、比較的安定しており、収集が安価であり、IP アドレスの収集はブラウザによって検出されないため、効果的なクロスサイト識別子です。したがって、サードパーティ Cookie を超えたクロスサイト トラッキングの方法を防ぐには、IP アドレスへのアクセスを制限することが重要です。
 
-## How will IP Protection work?
+## IP 保護の仕組み
 
-IP Protection proposes to anonymize the user's IP address, to help protect it from being used by third parties identified as potentially using IP addresses for web-wide cross-site tracking.
+IP 保護は、ユーザーの IP アドレスを匿名化することを提案しています。これにより、ウェブ全体のクロスサイトトラッキングに IP アドレスを使用している可能性があると特定されたサードパーティによる使用から保護することができます。
 
 IP Protection proposes a two-hop [privacy proxy that anonymizes qualifying traffic](https://github.com/GoogleChrome/ip-protection#privacy-proxy):
 
 - 宛先オリジンがクライアントの元の IP アドレスを参照できないようにする。
-- To make sure that proxy and network intermediaries are not privy to the contents of traffic between the client and the destination origin.
+- プロキシとネットワークの仲介者が、クライアントと宛先オリジンの間のトラフィックの内容に関与していないことを保証する。
 
 ### GeoIP
 
-IP-based geolocation is used by a number of services within proxied third-party traffic to obey local laws and regulations. They let services provide content that is relevant to users, such as content localization (for example, to set language), local cache assignment, and geotargeting for ads. To support these needs, the privacy proxy assigns IP addresses that represent the user’s coarse location, including country.
+IP ベースの地理位置情報は、現地の法律や規制に従うために、プロキシされたサードパーティトラフィック内の多くのサービスで使用されます。コンテンツのローカリゼーション（言語の設定など）、ローカル キャッシュの割り当て、広告のジオターゲティングなど、サービスがユーザーに関連するコンテンツを提供できるようにします。これらのニーズをサポートするために、プライバシープロキシは、国を含むユーザーの大まかな位置を表す IP アドレスを割り当てます。
 
-## When will IP Protection be available?
+## IP 保護の提供開始日程
 
-IP protection will not launch as a default setting for Chrome users before 2024. Testing and launch timelines will be determined in accordance with [our commitments](https://blog.google/around-the-globe/google-europe/path-forward-privacy-sandbox/) to the UK’s Competition and Markets Authority, and informed by ecosystem input. The implementation of IP Protection may take place on a different timeline than [other Privacy Sandbox efforts](http://privacysandbox.com/timeline), such as phasing out third-party cookies.
+IP 保護は、2024 年より前に Chrome ユーザーのデフォルト設定としてリリースされることはありません。テストとリリースのタイムラインは、英国の競争市場局に対する [Google のコミットメント](https://blog.google/around-the-globe/google-europe/path-forward-privacy-sandbox/)に従って決定され、エコシステムのインプットによって通知されます。IP 保護の実装は、サードパーティ Cookie の段階的廃止など、[他のプライバシーサンドボックスの取り組み](http://privacysandbox.com/timeline)とは異なるタイムラインで行われる場合があります。
 
-## Engage and share feedback
+## 貢献とフィードバックの共有
 
-The IP Protection proposal is under active discussion and subject to change. If you try this API and have feedback, we'd love to hear it.
+IP 保護の提案については現在活発な議論が行われており、変更される可能性があります。この API を試してフィードバックがあれば、ぜひお寄せください。
 
 - **GitHub**: Read the [proposal](https://github.com/GoogleChrome/ip-protection), [raise questions and participate in discussion](https://github.com/GoogleChrome/ip-protection/issues).
-- **Developer support**: Ask questions and join discussions on the [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
+- **開発者サポート**: [Privacy Sandbox Developer Support リポジトリ](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)では、質問したり、ディスカッションに参加したりできます。
