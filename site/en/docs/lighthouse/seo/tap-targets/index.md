@@ -66,8 +66,8 @@ the `padding` property:
 </figure>
 
 **Option 2:** Increase the spacing between tap targets that are too close together
-using properties like `margin`. Try to have at least 8&nbsp;px between
-tap targets (Note: 8&nbsp;px is not always be enough spacing to pass the audit, especially for very small targets).
+using properties like `margin`. 8&nbsp;px between tap targets is a good starting point,
+but is not always enough spacing to pass the audit especially for very small targets.
 
 ## Resources
 
