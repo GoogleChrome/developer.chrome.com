@@ -123,9 +123,9 @@ Users can view information about topics observed for their browser during the cu
 
 <figure>
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/M253GclVFDCnvPJlTSVR.png",
-  alt="chrome://topics-internal page with Topics State panel selected.",
+  alt="The chrome://topics-internal page with Topics State panel selected.",
   width="800", height="697" %}
-<figcaption>chrome://topics-internal page with Topics State panel selected.
+<figcaption>The chrome://topics-internal page Topics State panel shows Topics IDs, random and real topic assignments, and taxonomy and model versions.
 </figcaption>
 </figure>
 
@@ -139,9 +139,9 @@ You can view the topics inferred by the Topics [classifier model](https://github
 
 <figure>
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/SOTuE2ljC55PaYll1UP1.png",
-  alt="chrome://topics-internal page with Classifier panel selected.",
+  alt="The chrome://topics-internal page with Classifier panel selected.",
   width="800", height="695" %}
-  <figcaption>chrome://topics-internal page with Classifier panel selected.</figcaption>
+  <figcaption>The chrome://topics-internal page Classifier panel shows topics selected, hosts visited, and model version and path.</figcaption>
 </figure>
 
 The current implementation of the Topics API infers topics from hostnames only: not any other part of a URL.
@@ -270,8 +270,8 @@ version used by the API.</dd>
 
 ## Next steps
 
-- Learn more about what topics are and how they work. <!-- topic classification page and demo and trial links needed-->
-- Try out the demo or join an origin trial.
+- Learn more about [what topics are and how they work](/docs/privacy-sandbox/topics/topic-classification). <!-- topic classification page and demo and trial links needed-->
+- Try out the [demo](/docs/privacy-sandbox/topics/demo) or join an [origin trial](/docs/privacy-sandbox/unified-origin-trial/).
 
 {% Partial 'privacy-sandbox/topics-feedback.njk' %}
 
