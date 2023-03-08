@@ -84,8 +84,7 @@ Topics are manually curated for 10,000 top domains, and this curation is used to
 
 To run the model directly, refer to [TensorFlow's guide to running a model](https://www.tensorflow.org/lite/guide/inference#running_a_model).
 
-To inspect the `override_list.pb.gz` file:
-Unpack it: 
+To inspect the `override_list.pb.gz` file, first unpack it: 
 ```text
 gunzip -c override_list.pb.gz > override_list.pb
 ```
