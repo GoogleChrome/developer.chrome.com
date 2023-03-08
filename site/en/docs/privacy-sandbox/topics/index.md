@@ -144,7 +144,7 @@ You can view the topics inferred by the Topics [classifier model](https://github
   <figcaption>The chrome://topics-internal page Classifier panel shows topics selected, hosts visited, and model version and path.</figcaption>
 </figure>
 
-The current implementation of the Topics API infers topics from hostnames only: not any other part of a URL.
+The current implementation of the Topics API infers topics from hostnames only; not from any other part of a URL.
 
 Use hostnames only (without protocol or path) to view inferred topics from the `chrome://topics-internals` Classifier. `chrome://topics-internals` will display an error if you attempt to include a "/" in the Host field.
 
