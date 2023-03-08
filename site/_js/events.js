@@ -121,18 +121,12 @@ function addMobileListeners() {
 function handleDeselections() {
   if (!activeFiltersList) return;
 
-  activeFiltersList.addEventListener('click', e => {
-    const target = e.target;
-
-    if (!(target instanceof HTMLElement)) return;
-
-    if (!target.matches('.tag-pill')) return;
-
-    const key = target.dataset.key;
+  activeFiltersList.addEventListener('remove-pill', e => {
+    if (!(e instanceof CustomEvent)) return;
 
     reactivelySetFilter(
-      key,
-      activeFilters[key].filter(i => i !== target.dataset.value)
+      e.detail.key,
+      activeFilters[e.detail.key].filter(i => i !== e.detail.value)
     );
 
     injectFilters();
