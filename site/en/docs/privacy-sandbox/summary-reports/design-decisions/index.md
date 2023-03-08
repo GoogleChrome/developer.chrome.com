@@ -660,8 +660,8 @@ The interpretation of  RMSPE_T over 100% is similar to that of an APE over 100% 
 RMSPE (Root Mean Square Error) is a common metricused by data scientists. 
 RMSPE_T is a variation of RMSPE. RMSPE_T differs from RMSPE in two ways:
 
-1. It uses a percentage error similar to noise-to-signal rate, like noise/true-value. 
-2. It assumes the existence of minimal signal: the percentage looks like noise/max(true, T). 
+1. RMSPE_T uses a percentage error similar to noise-to-signal rate, like noise/true-value. 
+2. RMSPE_T assumes the existence of minimal signal: the percentage looks like noise/max(true, T). 
 
 {% endAside %}
 
