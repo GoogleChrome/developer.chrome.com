@@ -68,9 +68,9 @@ files for related selector instances.
 - Reducing file size
 - Refactoring
 
-{% BrowserCompat 'css.nesting' %}
+<!-- {% BrowserCompat 'css.nesting' %} -->
 
-Set to arrive in Chrome stable 112 and available to [try in Safari Technical
+Nesting is available from Chrome 112 and also available to [try in Safari Technical
 Preview
 162](https://webkit.org/blog/13813/try-css-nesting-today-in-safari-technology-preview/).
 
