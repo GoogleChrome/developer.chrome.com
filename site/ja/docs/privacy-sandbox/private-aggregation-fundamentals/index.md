@@ -40,7 +40,7 @@ authors:
 
 このセクションで説明するワークフローは [Attribution Reporting API](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#) のものに似ています。しかしながら、アトリビューションレポートは異なる時間に発生するインプレッションイベントとコンバージョンイベントから収集したデータを関連付けるものです。プライベート集計は、単一のクロスサイトイベントを測定します。
 
-## Aggregation key
+## 集計キー
 
 *集計キー* ("キー" と略します) は、集計可能な値が蓄積されるバケットを表しています。1 つ以上のディメンションをキーへとエンコードすることができます。ディメンションは、ユーザーの年齢層や広告キャンペーンのインプレッション数などのより詳細な分析情報を得るための視点を表しています。
 
@@ -52,15 +52,15 @@ Private Aggregation API に提供されるキーは、[BigInt](https://developer
 
 <table>
   <tr>
-   <td colspan="2" style="background-color: #efefef">Aggregation key    </td>
+   <td colspan="2" style="background-color: #efefef">集計キー</td>
   </tr>
   <tr>
    <td style="background-color: #d3f1c8">ウィジェット ID</td>
-   <td style="background-color: #92da78">Country ID    </td>
+   <td style="background-color: #92da78">国 ID</td>
   </tr>
   <tr>
-   <td style="background-color: #d3f1c8">3276    </td>
-   <td style="background-color: #92da78">061    </td>
+   <td style="background-color: #d3f1c8">3276</td>
+   <td style="background-color: #92da78">061</td>
   </tr>
 </table>
 
@@ -72,7 +72,7 @@ Private Aggregation API に提供されるキーは、[BigInt](https://developer
 
 {% Aside %}コンセプトは似ていますが、Private Aggregation API と Attribution Reporting API ではキーの構成が異なっています。プライベート集計では、完全なキーが一度だけ JavaScript の呼び出しの中で指定されます。{% endAside %}
 
-## Aggregatable value
+## 集計可能な値
 
 集計可能な値は、多くのユーザーについてキーごとに合算され、サマリーレポートのサマリー値という形で集計後の分析情報を生成します。
 
@@ -80,18 +80,18 @@ Private Aggregation API に提供されるキーは、[BigInt](https://developer
 
 <table>
   <tr>
-   <td colspan="2" style="background-color: #efefef">Aggregation key    </td>
-   <td style="background-color: #efefef">Aggregatable value    </td>
+   <td colspan="2" style="background-color: #efefef">集計キー</td>
+   <td style="background-color: #efefef">集計可能な値</td>
   </tr>
   <tr>
-   <td style="background-color: #d3f1c8">Widget ID    </td>
-   <td style="background-color: #92da78">Country ID    </td>
-   <td style="background-color: #d2e9ff">View Count    </td>
+   <td style="background-color: #d3f1c8">ウィジェットID</td>
+   <td style="background-color: #92da78">国 ID</td>
+   <td style="background-color: #d2e9ff">ビュー数</td>
   </tr>
   <tr>
-   <td style="background-color: #d3f1c8">3276    </td>
-   <td style="background-color: #92da78">061    </td>
-   <td style="background-color: #d2e9ff">1    </td>
+   <td style="background-color: #d3f1c8">3276</td>
+   <td style="background-color: #92da78">061</td>
+   <td style="background-color: #d2e9ff">1</td>
   </tr>
 </table>
 
@@ -107,7 +107,7 @@ Private Aggregation API に対する各呼び出しは*コントリビューシ�
 
 コントリビューション予算の詳細については「[説明](https://github.com/patcg-individual-drafts/private-aggregation-api#contribution-bounding-and-budgeting)」を参照してください。また、[「アトリビューションレポートの戦略ガイド」の「コントリビューション予算」セクション](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#)を参照し、より詳細なガイダンスをご覧ください。
 
-## Aggregatable reports
+## 集計可能なレポート
 
 ユーザーが Private Aggregation API を呼び出すと、ブラウザーは集計可能なレポートを生成し、そのレポートはその後集約サービスで処理が行われ[サマリーレポート](/docs/privacy-sandbox/summary-reports/)が生成されます。集計可能なレポートは JSON フォーマットで、暗号化されたコントリビューションの一覧を含み、それぞれが `{集計キー, 集計可能な値}` のペアとなっています。集計可能なレポートは最大 1 時間のランダムな遅延と共に送信されます。
 
@@ -137,8 +137,8 @@ Private Aggregation API に対する各呼び出しは*コントリビューシ�
 
 ブラウザーは、リスト化された well-known パスを使用して Private Aggregation API への呼び出しを含むワークレットのオリジンへと集計可能なレポートを送信します。
 
-- For Shared Storage: `/.well-known/private-aggregation/report-shared-storage`
-- For FLEDGE: `/.well-known/private-aggregation/report-fledge`
+- 共有ストレージの場合: `/.well-known/private-aggregation/report-shared-storage`
+- FLEDGE の場合: `/.well-known/private-aggregation/report-fledge`
 
 これらのエンドポイントでは、クライアントから送信された集計可能なレポートを受信する (コレクターとして機能する) サーバーを運用する必要があります。
 
@@ -146,7 +146,7 @@ Private Aggregation API に対する各呼び出しは*コントリビューシ�
 
 1 日または 1 週間ごとにバッチ化を行うことも可能です。この戦略には柔軟性があるため、より多くのアクセスが予想される特定のイベント (たとえば、1 年の間により多くのインプレッションが予想される日) に合わせてバッチ戦略を変更することが可能です。バッチには、同一の API バージョン、レポートのオリジン、レポート時間のスケジュールから収集されたレポートを含める必要があります。
 
-## Aggregation Service
+## 集計サービス
 
 {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/b1avI43zUaKT2UAdGOo1.png", alt="The service runs in a TEE, decrypts the aggregatable reports and adds noise to create the final summary report.", width="800", height="457" %}
 
@@ -173,7 +173,7 @@ For example:
 ]
 ```
 
-### Noise and scaling
+### ノイズとスケーリング
 
 ユーザーのプライバシーを保護するために、集計サービスはサマリーレポートがリクエストされるたびに各サマリー値に一度だけノイズを追加します。ノイズ値は[ラプラス確率分布](https://en.wikipedia.org/wiki/Laplace_distribution)によりランダムに選択されます。ノイズの追加方法を直接制御することはできませんが、ノイズが測定データに与える影響にある程度働きかけることは可能です。
 
