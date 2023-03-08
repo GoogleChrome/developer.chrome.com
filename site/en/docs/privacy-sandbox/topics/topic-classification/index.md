@@ -46,15 +46,18 @@ Only sites that include code that calls the Topics API are included in the brows
 
 {% Aside 'key-term' %}
 
-A Topics API _caller_ is the entity that calls the `document.browsingTopics()` JavaScript
-method, and will use the topics returned by the method to help select relevant ads.
-Typically, a call to `document.browsingTopics()` would be from code included in a site from a
-third party such as an ad tech platform. The browser determines the caller from the site of the
-current document. So, if you're a third party on a page, make sure you call the API from an
-iframe that your site owns.
+A Topics API _caller_ is the entity that observes and requests topics with
+`document.browsingTopics()`. Typically, this caller is a third party (such as an
+ad tech) who uses the topics returned by this method to help select relevant
+ads.
 
-In order for `document.browsingTopics()` to return one or more topics, it must be called in
-code from the same origin as code that was on a site where those topics were observed.
+The browser determines the caller from the origin of the request. If Site A
+requests topics from their code in an iframe hosted on Site B, the browser
+would determine the caller is Site A. If you're a third party, make sure you
+call the Topics API from an iframe you own.
+
+To retrieve one or more topics with `document.browsingTopics()`, an API
+caller must observe and request topics from the same origin.
 
 {% endAside %}
 
