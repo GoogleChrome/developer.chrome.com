@@ -31,19 +31,19 @@ device][1] for more help.
 1.  Go to `chrome://inspect#devices`.
 1.  Make sure {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Discover USB devices** is enabled.
 
-    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/EHgnvErIO4AoWkKMqWQF.png", alt="The Discover USB Devices checkbox is enabled.", width="800", height="499" %}
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/T15tQxPKcF8J298dVbtX.png", alt="The Discover USB Devices checkbox is enabled.", width="800", height="499" %}
 
 1.  Connect your Android device directly to your development machine using a USB cable.
 
 1. If you are connecting your device for the first time, the device will show up as "Offline" and pending authentication.
 
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Zo1pNK1P40wJlJB9wW1M.png", alt="Offline device pending authentication.", width="800", height="565" %}
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/sGg5nvooStgbsEpHvuAb.png", alt="Offline device pending authentication.", width="800", height="565" %}
    
    In this case, accept the debugging session prompt on your device's screen.
 
 1. If you see the model name of your Android device, DevTools has successfully established the connection to your device.
 
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lMSZcNOREw74BwcsZkKK.png", alt="A successfully connected device designated with a model name.", width="800", height="499" %}
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Zw9XmFNCGGzqGrQyjXUo.png", alt="A successfully connected device designated with a model name.", width="800", height="515" %}
 
 1.  Continue to [Step 2][3].
 
@@ -88,12 +88,12 @@ issue in the developer.chrome.com repository][8]!
     its serial number. Below that, you can see the version of Chrome that's running on the device,
     with the version number in parentheses.
 
-    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/SLNlcxsZ1cFi4DGXhRo9.png", alt="The version of Chrome that runs on the device.", width="800", height="560" %}
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ZEBcG20eKrwsjOI7YobB.png", alt="The version of Chrome that runs on the device.", width="800", height="560" %}
 
 1.  In the **Open tab with url** text box, enter a URL and then click **Open**. The page opens in a
     new tab on your Android device.
 
-    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/APcKArTi0UK0CswCBbeK.png", alt="A remote tab displayed in a section.", width="800", height="608" %}
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9YE6lG9VNFreINQguxZR.png", alt="A remote tab listed in a section.", width="800", height="608" %}
 
     Each remote Chrome tab gets its own section in **`chrome://inspect/#devices`**. You can [interact with that tab](#more-actions) from this section. If there are any apps using [WebView](https://developer.android.com/reference/android/webkit/WebView), you see a section for each of those apps, too. In this example, there's only one tab open.
 
