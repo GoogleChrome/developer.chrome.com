@@ -42,6 +42,10 @@
       width: get-size(300);
     }
   }
+
+  &:not(:has(tag-pill-list[items='[]'])) {
+    margin-bottom: get-size(500);
+  }
 }
 
 .mobile-filters-btn {

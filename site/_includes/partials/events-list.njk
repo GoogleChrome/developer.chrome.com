@@ -10,21 +10,18 @@
   {{ icon('video', {id: 'videoIcon', hidden:true}) }}
 </div>
 
-<web-tabs class="events-list">
-  <web-tabs-interlude>
-    <div class="events-list__selected-filters display-flex flex-flow-row-wrap grid-gap-100 gap-bottom-500">
+<div class="events-list__selected-filters display-flex flex-flow-row-wrap grid-gap-100">
       <span id="mobile-filters-opener"
             class="mobile-filters-btn surface color-blue-medium hairline rounded-lg tag-pill type--label display-inline-flex align-center">
         {{ icon('filters') }} Filters
       </span>
 
-      <tag-pill-list id="active-filters">
-        <tag-pill-list-icon>{{ icon('close') }}</tag-pill-list-icon>
-      </tag-pill-list>
+  <tag-pill-list id="active-filters">
+    <tag-pill-list-icon>{{ icon('close') }}</tag-pill-list-icon>
+  </tag-pill-list>
+</div>
 
-    </div>
-  </web-tabs-interlude>
-
+<web-tabs class="events-list">
   <web-tab title="{{ 'i18n.events.upcoming_events' | i18n(locale) }}">
     <enhanced-events-list id="upcoming-events"
                           type="UPCOMING"
