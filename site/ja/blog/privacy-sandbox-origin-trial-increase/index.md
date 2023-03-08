@@ -1,8 +1,8 @@
 ---
 title: プライバシーサンドボックスの関連性と測定のオリジントライアルを 5% に引き上げ
-description: |2-
+description: >
   今週 10 月 26 日までに、プライバシーサンドボックスの関連性と測定のオリジントライアルの人口を Chrome 安定版ユーザーの 5% まで引き上げる作業を開始します。
-subhead: |2-
+subhead: >
   今週 10 月 26 日までに、プライバシーサンドボックスの関連性と測定のオリジントライアルの人口を Chrome 安定版ユーザーの 5% まで引き上げる作業を開始します。
 layout: layouts/blog-post.njk
 date: 2022-10-24
@@ -10,7 +10,7 @@ updated: 2023-01-05
 authors:
   - cilvento
 hero: image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/7Hid7vSdQtp0RNThvO5J.png
-alt: |2-
+alt: >
   プライバシーサンドボックスのロゴ
 tags:
   - privacy
