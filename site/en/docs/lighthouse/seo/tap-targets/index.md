@@ -4,7 +4,7 @@ title: Tap targets are not sized appropriately
 description: |
   Learn about the "Tap targets are not sized appropriately" Lighthouse audit.
 date: 2019-05-02
-updated: 2019-08-21
+updated: 2023-03-08
 ---
 
 Tap targets are the areas of a web page that users on touch devices can
@@ -23,8 +23,11 @@ with tap targets that are too small or too close together:
   {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/6Dhlxe7vkj7gX3e5rX4B.png", alt="Lighthouse audit showing inappropriately sized tap targets", width="800", height="206", class="w-screenshot" %}
 </figure>
 
-Targets that are smaller than 48&nbsp;px by 48&nbsp;px or closer than 8&nbsp;px
-apart fail the audit. When the audit fails, Lighthouse lists the results in a
+For a tap target to fail the audit, both of these conditions must be true:
+- The target is smaller than 48&nbsp;px by 48&nbsp;px
+- At least 25% the target area within 48&nbsp;px of the center of the target overlaps with another target.
+
+When the audit fails, Lighthouse lists the results in a
 table with three columns:
 
 <div class="w-table-wrapper">
@@ -63,8 +66,8 @@ the `padding` property:
 </figure>
 
 **Step 2:** Increase the spacing between tap targets that are too close together
-using properties like `margin`. There should be at least 8&nbsp;px between
-tap targets.
+using properties like `margin`. Try to have at least 8&nbsp;px between
+tap targets (Note: 8&nbsp;px is not always be enough spacing to pass the audit, especially for very small targets).
 
 ## Resources
 
