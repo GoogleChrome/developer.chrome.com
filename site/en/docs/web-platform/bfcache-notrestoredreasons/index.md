@@ -211,6 +211,7 @@ let us know where and how you are using it.
 - [Back/forward cache](https://web.dev/bfcache/)
 - [Public explainer][explainer]
 - [Chromium tracking bug][cr-bug]
+- [Origin trial for Back/forward cache NotRestoredReason API][ot]
 - [ChromeStatus.com feature page][cr-status]
 - [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/ce4hr99dUDc/)
 
