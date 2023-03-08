@@ -8,24 +8,24 @@ authors:
   - alexandrawhite
 ---
 
-Deploy and manage an Aggregation Service to process aggregatable reports from the [Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/) or the [Private Aggregation API](/docs/privacy-sandbox/private-aggregation/) to create a [summary report](/docs/privacy-sandbox/summary-report/).
+[Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/) または [Private Aggregation API](/docs/privacy-sandbox/private-aggregation/) からの集計可能なレポートを処理して[サマリーレポート](/docs/privacy-sandbox/summary-report/)を作成するための集計サービスの導入および管理を行います。
 
 ## 実装状況
 
-- The [Aggregation Service proposal](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md) is available for discussion.
-- The [Aggregation Service can be tested](#test) with the Attribution Reporting API and the Private Aggegration API for FLEDGE and Shared Storage.
+- [集計サービスの提案](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md)の公開ディスカッションが開始されました。
+- [集計サービスのテスト](#test)は、FLEDGE と共有ストレージの Attribution Reporting API と Private Aggegration API で行えます。
 
-The proposal outlines [key terms](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md#key-terms), useful for understanding the Aggregation Service.
+この提案では、集計サービスを理解する上で役立つ[キーワード](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md#key-terms)について解説を行っています。
 
 ## 安全なデータ処理
 
-The Aggregation Service decrypts and combines the collected data from the aggregatable reports, [adds noise](#noise-scale), and returns the final summary report. This service runs in a trusted execution environment (TEE), which is deployed on a cloud service that supports necessary security measures to protect this data.
+集計サービスは集計可能なレポートから収集したデータを復号化して結合し、[ノイズを追加](#noise-scale)してから最終的な集計レポートとして返します。このサービスは、データの保護に必要なセキュリティ対策をサポートするクラウドサービス上に実装された TEE（Trusted Execution Environment、信頼できる実行環境）上で実行されます。
 
 {% Aside %}[Trusted Execution Environment](https://en.wikipedia.org/wiki/Trusted_execution_environment) とは、コンピューターで実行されているソフトウェアの正確なバージョンを外部の団体が検証できるようにするためのコンピューターのハードウェアとソフトウェアの特別な構成のことを指します。TEE を使用することで、ソフトウェアがソフトウェアの作成者が (それ以上でもそれ以下でもなく) 意図した通りに動作しているかどうかを外部の団体が検証できるようになります。{% endAside %}
 
-The TEE's code is the only place in the Aggregation Service which has access to raw reports—this code will be auditable by security researchers, privacy advocates, and ad techs. To confirm that the TEE is running the exact approved software and that data remains secured, a coordinator performs attestation.
+TEE のコードは集計サービスの中で唯一未加工のレポートにアクセスできる場所となっており、このコードは、セキュリティ研究者、プライバシー権の擁護者、広告技術者などが監査を実施することができます。TEE が承認されたソフトウェアのみを実行し、データが安全に保護されていることを確認するために、コーディネーターが認証を行います。
 
-<figure> {% Img   src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/b1avI43zUaKT2UAdGOo1.png",   alt="Aggregatable reports are collected, batched, and send to the TEE to be transformed into a final summary report.",   width="800", height="457" %} <figcaption>   <p>Aggregatable reports are collected, batched, and send to the Aggregation Service, running on a TEE. The Aggregation Service environment is owned and operated by the same party collecting the data.</p> </figcaption></figure>
+<figure>{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/b1avI43zUaKT2UAdGOo1.png", alt="集計可能なレポートを収集してバッチ処理を行い、TEE に送信して最終的なサマリーレポートへと変換します。", width="800", height="457" %} <figcaption> <p>集計可能なレポートは、収集が行われ、バッチ処理が施された後に TEE で実行される集計サービスへと送信されます。集計サービスの環境はデータ収集を行う団体と同一の団体が所有し、運営を行います。</p> </figcaption></figure>
 
 ### TEE のコーディネーター認証 {: #coordinator }
 
@@ -33,15 +33,15 @@ The TEE's code is the only place in the Aggregation Service which has access to 
 
 コーディネーターには、以下のような役割が課せられています。
 
-- Maintain a list of authorized binary images. These images are [cryptographic hashes](https://en.wikipedia.org/wiki/Cryptographic_hash_function) of the Aggregation Service software builds, which Google will periodically release. This will be reproducible so that any party can verify the images are identical to the Aggregation Service builds.
-- Operate a key management system. Encryption keys are required for the Chrome on a user's device to encrypt aggregatable reports. Decryption keys are necessary for proving the Aggregation Service code matches the binary images.
+- 承認済みバイナリイメージの一覧の維持。これらのイメージは Google が定期的にリリースする集計サービスソフトウェアビルドの[暗号化ハッシュ](https://en.wikipedia.org/wiki/Cryptographic_hash_function)として機能します。これらは再現性を持つため、イメージが集計サービスのビルドに一致しているかどうかをすべての団体が確認できます。
+- 鍵管理システムの運用。暗号鍵は、ユーザーのデバイス上の Chrome が集計可能なレポートの暗号化を行う際に必要となります。復号鍵は、集計サービスのコードがバイナリイメージと一致していることを証明するために必要となります。
 - 集計可能なレポートを再利用することで個人を特定できる情報 (PII) が暴露されてしまう可能性があるため、集計可能なレポートを追跡してサマリーレポートの集計に再利用されないようにします。
 
 {% Aside %}集計サービスをテストする場合には、「[コーディネーターサービスに関する追加の利用規約](/docs/privacy-sandbox/aggregation-service/tos/)」を参照してください。{% endAside %}
 
 ## ノイズとスケーリング {: #noise-scale}
 
-To protect user privacy, the Aggregation Service applies an [additive noise mechanism](https://en.wikipedia.org/wiki/Additive_noise_mechanisms) to the raw data from aggregatable reports. This means that a certain amount of statistical noise is added to each aggregate value before its release in a summary report.
+ユーザーのプライバシーを保護するために、集計サービスは[加法ノイズ・メカニズム](https://en.wikipedia.org/wiki/Additive_noise_mechanisms)を集計可能なレポートからの未加工データに適用します。これは、サマリーレポートでのリリースの前に各集計値に一定量の統計的ノイズを追加することを意味しています。
 
 ノイズの追加方法を直接制御することはできませんが、ノイズが測定データに与える影響をある程度制御することは可能です。
 
@@ -64,19 +64,19 @@ To protect user privacy, the Aggregation Service applies an [additive noise mech
 
 ### ローカルテスト
 
-We've created a local testing tool to process aggregatable reports for Attribution Reporting and the Private Aggregation API. [Read the instructions](https://github.com/privacysandbox/aggregation-service/blob/main/README.md).
+Attribution Reporting と Private Aggregation API の集計可能なレポートを処理するためのローカルテストツールを作成しました。[使用方法をお読みください](https://github.com/privacysandbox/aggregation-service/blob/main/README.md)。
 
 ### AWS でテストする
 
-To test the Aggregation Service on AWS, [register for the origin trial](/origintrials/#/view_trial/771241436187197441) and complete the [onboarding form](https://forms.gle/EHoecersGKhpcLPNA). Once submitted, we'll contact you to verify your information and send the remaining instructions.
+AWS で集計サービスをテストするには、[オリジントライアルに登録](/origintrials/#/view_trial/771241436187197441)し、[オンボーディングフォーム](https://forms.gle/EHoecersGKhpcLPNA)に入力してください。送信後、フォームの内容を確認して、以降の手順とともにご連絡いたします。
 
-To test on AWS, install [Terraform](https://www.terraform.io/) and the latest [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
+AWS でテストするには、[Terraform](https://www.terraform.io/) と最新の [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) をインストールします。
 
-[Read the instructions](https://github.com/privacysandbox/aggregation-service/blob/main/README.md#test-on-aws-with-support-for-encrypted-reports).
+[手順をお読みください](https://github.com/privacysandbox/aggregation-service/blob/main/README.md#test-on-aws-with-support-for-encrypted-reports)。
 
 ## エンゲージメントとフィードバックの共有
 
-The Aggregation Service is a key piece of the Privacy Sandbox measurement proposals. Like other Privacy Sandbox proposals, this is documented and discussed publicly on GitHub.
+集計サービスは、プライバシーサンドボックスの測定に関する提案において重要な位置を占めています。プライバシーサンドボックスに関するその他の提案と同様に GitHub で文書化されており、ディスカッションが公開されています。
 
 - **Github**: [提案](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md)を読み、[質問をしてディスカッションに参加してください](https://github.com/WICG/attribution-reporting-api/issues)。また、[集計サービスの実装](https://github.com/privacysandbox/aggregation-service)をご覧いただき、[実装に関するフィードバック](https://github.com/privacysandbox/aggregation-service/issues)をご提供ください。
 - **開発者向けサポート**: [プライバシーサンドボックスの開発者向けサポートリポジトリ](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)で質問をしたり、ディスカッションに参加したりすることができます。
