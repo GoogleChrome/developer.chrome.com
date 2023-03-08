@@ -85,7 +85,7 @@ Unpack it:
 ```text
 gunzip -c override_list.pb.gz > override_list.pb
 ```
-Use protoc to inspect: 
+Use `protoc` to inspect: 
 ```text
 protoc --decode_raw < override_list.pb > output.txt
 ```
@@ -112,7 +112,7 @@ The API returns one topic for each epoch, up to a maximum of three. If three are
 3. The browser accumulates the list of topics.
 4. The browser generates a list of the top five topics by frequency.
 
-The `document.browsingTopics()` method then returns a random topic from the top five for each epoch, with a 5% chance that any of these may be randomly chosen from the full taxonomy of topics. In Chrome, users would also be able to remove individual topics, or clear their browsing history to reduce the number of topics returned by the API. Users may also [opt out](#opt-out) of the API.
+The `document.browsingTopics()` method then returns a random topic from the top five for each epoch, with a 5% chance that any of these may be randomly chosen from the full taxonomy of topics. In Chrome, users are also able to remove individual topics, or clear their browsing history to reduce the number of topics returned by the API. Users may also [opt out](#opt-out) of the API.
 
 View information about topics observed during the current epoch from the `chrome://topics-internals` page.
 
@@ -200,14 +200,14 @@ In addition, code from adtech2.example is added to diy-clothing.example:
 </table>
 
 As well as "Fitness" and "Travel & Transportation" from week 1, this means that adtech2.example will now be able to receive the "Crafts" and "Fashion & Style" topic — but not until the following epoch, week 3. This ensures that third parties can't learn more about a user's past (in this case, an interest in fashion) than they could with cookies.
-After another two weeks, "Fitness" and "Travel & Transportation" may drop out of adtech2.example's list of eligible topics, if the user doesn't visit any sites with those topics that include code from adtech2.example.
+After another two weeks, "Fitness" and "Travel & Transportation" may drop out of adtech2.example's list of eligible topics if the user doesn't visit any sites with those topics that include code from adtech2.example.
 
 
 ## User controls, transparency, and opting out {: #opt-out}
 
 Users should be able to understand the purpose of the Topics API, recognize what is being said about them, know when the API is in use, and be provided with controls to enable or disable it.
 
-The API's human-readable taxonomy enables people to learn about and control the topics that may be suggested for them by their browser. Users can remove topics they specifically do not want the Topics API to share with advertisers or publishers, and there can be controls to inform the user about the API and show how to enable or disable it. Chrome provides information and settings for the Topics API at `chrome://settings/privacySandbox`. In addition, topics are not available to API callers in Incognito mode, and topics are cleared when browsing history is cleared.
+The API's human-readable taxonomy enables users to learn about and control the topics that may be suggested for them by their browser. Users can remove topics they specifically do not want the Topics API to share with advertisers or publishers, and there can be controls to inform the user about the API and show how to enable or disable it. Chrome provides information and settings for the Topics API at `chrome://settings/privacySandbox`. In addition, topics are not available to API callers in Incognito mode, and topics are cleared when browsing history is cleared.
 
 The list of topics returned will be empty if:
 
