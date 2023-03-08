@@ -1,9 +1,9 @@
 ---
 layout: layouts/doc-post.njk
-title: " FLEDGE の保留中の機能の状況"
+title: "FLEDGE の保留中の機能の状況"
 subhead: サードパーティ Cookie の廃止を進めるにあたり、FLEDGE のオークション機能の現状について説明します。
 description: サードパーティ Cookie の廃止を進めるにあたり、FLEDGE のオークション機能の現状について説明します。
-date: '2023-02-09'
+date: 2023-02-09
 authors:
   - tristramsouthey
   - kevinkiklee
