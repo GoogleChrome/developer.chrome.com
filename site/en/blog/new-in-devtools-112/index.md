@@ -114,7 +114,7 @@ Chromium issue: [1411188](https://crbug.com/1411188).
 Further improving the [enhanced breakpoint UX](/blog/new-in-devtools-111/#breakpoint-redesign), the **Console** now marks messages triggered by breakpoints:
 
 - `console.*` calls in [conditional breakpoints](/docs/devtools/javascript/breakpoints/#conditional-loc) with an orange question mark `?`
-- [Logpoint](/docs/devtools/javascript/breakpoints/#log-loc) message with pink two dots `..`
+- [Logpoint](/docs/devtools/javascript/breakpoints/#log-loc) messages with pink two dots `..`
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/5udIX9W4LFcDb3H6DuDp.png", alt="Changes to how the Console now displays messages triggered by breakpoints: with icons and proper source link.", width="800", height="566" %}
 
@@ -153,8 +153,6 @@ All ignore-listed scripts and folders are grayed out in the file tree.
 If you select an ignored script, the **Configure** button takes you to 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Ignore List**](/docs/devtools/settings/ignore-list/). You can also hide ignored sources from the file tree with {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Three-dot menu.", width="24", height="24" %} > [**Hide ignore-listed sources**](/docs/devtools/javascript/reference/#hide-ignore-listed) {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XfSWf04g2cwpnFcmp40m.svg", alt="Experimental.", width="20", height="20" %}.
 
-How many times a day do you look up documentation on CSS properties? The **Elements** > **Styles** pane now shows you a short description when you hover over a property.
-
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/e95d2f3fd27301945a1a095bae4bbcad57326cd8 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/736762eda6a6f30d0e9c383998624e53ee04a6e2 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/2257f7bca42753d744b56f5b99b461a6f0494131 #}
@@ -163,7 +161,7 @@ Chromium issue: [883325](https://crbug.com/883325).
 
 ## Emulate reduced contrast {: #reduced-contrast }
 
-The [**Rendering**](/docs/devtools/rendering/#open-rendering) tab adds a new option to the [list of vision deficiencies emulation options](/docs/devtools/rendering/apply-effects/#emulate-vision-deficiencies)—**Reduced contrast**. With this option, you can discover how your website looks to people with low contrast sensitivity.
+The [**Rendering**](/docs/devtools/rendering/#open-rendering) tab adds a new option to the [Emulate vision deficiencies](/docs/devtools/rendering/apply-effects/#emulate-vision-deficiencies) list—**Reduced contrast**. With this option, you can discover how your website looks to people with reduced contrast sensitivity.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7qrlmuO7R47l5mytvoeQ.png", alt="The reduced contrast option on the Rendering > Emulate vision deficiencies.", width="800", height="574" %}
 
@@ -176,11 +174,11 @@ Chromium issues: [1412719](https://crbug.com/1412719), [1412721](https://crbug.c
 
 ## JavaScript Profiler deprecation started {: #js-profiler-deprecation }
 
-This DevTools version (112) starts the [four-phase **JavaScript Profiler** deprecation](https://github.com/ChromeDevTools/rfcs/discussions/2#discussioncomment-5189668). The **Profiler** panel now shows the corresponding warning banner.
+This DevTools version (112) starts the [four-phase **JavaScript Profiler** deprecation](https://github.com/ChromeDevTools/rfcs/discussions/2#discussioncomment-5189668). The **JavaScript Profiler** panel now shows the corresponding warning banner.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/v4S5YWGdBV3nbc3OkGZ3.png", alt="Deprecation banner at the top of the Profiler.", width="800", height="712" %}
 
-Use the **Performance** panel to profile CPU:
+Instead of the profiler, use the **Performance** panel to profile CPU:
 
 - For **Chart**, see the [**Main** section in the **Performance** panel](/docs/devtools/performance/reference/#main).
 - For **Heavy (bottom up)**, see [**Performance** > **Bottom-up**](/docs/devtools/performance/reference/#bottom-up).
@@ -202,7 +200,7 @@ Chromium issue: [1417647](https://crbug.com/1417647).
 
 The **Lighthouse** panel now runs [Lighthouse 10.0.1](/blog/lighthouse-10-0/). For more details, see [What's new in Lighthouse 10.0.1](/blog/lighthouse-10-0/).
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ZtDyFg7cjkxacORB3GQn.svg", alt="Empty checkbox.", width="24", height="24" %} **Legacy navigation** is now disabled by default. This option uses legacy [Lighthouse configuration](https://github.com/GoogleChrome/lighthouse/blob/main/docs/configuration.md) when in navigation mode.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ZtDyFg7cjkxacORB3GQn.svg", alt="Empty checkbox.", width="24", height="24" %} **Legacy navigation** is now disabled by default. This option uses legacy [Lighthouse configuration](https://github.com/GoogleChrome/lighthouse/blob/main/docs/configuration.md) in navigation mode.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/mYuX9d2TFaJuWBOYGN5R.png", alt="Disabled legacy navigation.", width="800", height="548" %}
 
