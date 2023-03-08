@@ -51,12 +51,12 @@ For some domains you may notice a difference in topic inference, between the col
 
 This is because the colab only uses the classifier model to infer topics, whereas
 `chrome://topics-internals` uses Chrome's Topics implementation, which uses a
-[manually-curated list of topics](/docs/privacy-sandbox/topics/#manually-curated) (rather than the classifier model) for the top
-10,000 sites. <!-- will need to link to topic-classification page -->
+[manually-curated list of topics](/docs/privacy-sandbox/topics/topic-classification/#the-classifier-model) (rather than the classifier model) for the top
+10,000 sites. The list is found in `override_list.pb.gz`, which is available in the `chrome://topics-internals/` page. 
 {% endAside %}
 
 ## Next steps
 
-If you’re an ad tech developer, [experiment and participate](/docs/privacy-sandbox/topics-experiment/) with the Topics API, and check out the [Topics API demo](/docs/privacy-sandbox/topics/demo).
+If you're an ad tech developer, [experiment and participate](/docs/privacy-sandbox/topics-experiment/) with the Topics API, and check out the [Topics API demo](/docs/privacy-sandbox/topics/demo).
 
 {% Partial 'privacy-sandbox/topics-feedback.njk' %}
