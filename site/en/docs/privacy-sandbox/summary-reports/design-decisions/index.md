@@ -682,8 +682,10 @@ In Noise Lab, this is then multiplied by 100 to give a percentage.
 
 RMSPE_T is a bit more complex to grasp than APE. However, it has a few advantages that make it in some cases more suitable than APE for analyzing noise in summary reports:
 
-* **It's more stable.** *"T"* is a threshold: it's used to give less weight, in the RMSPE_T calculation, to buckets that have less conversions and are therefore more sensitive to noise due to their small size. With T, the metric does not spike on buckets with few conversions. If T is equal to 5, a noise value as small as 1 on a bucket with 0 conversion will not be displayed as way over 100%. Instead, it will be capped at 20%, which is equivalent to 1/5, as T is equal to 5. By giving less weight to buckets that are more sensitive to noise due to their small size, this metric is more stable — and therefore makes it easier to compare two simulations.
-* **It allows for easy aggregation.** Knowing RMSPE_t of multiple buckets, together with their true counts, allows one to compute the RMSPSE_t of their sum via a simple formula. This also allows one to easily optimize for RMSPE_t of these combined values. (While aggregation is possible for APE, the formula is quite complicated since it involves the absolute value of sum of Laplace noises, which makes it hard to optimize.) 
+* **RMSPE_T is more stable.** "T" is a threshold. "T" is used to give less weight in the RMSPE_T calculation to buckets that have less conversions and are therefore more sensitive to noise due to their small size. With T, the metric does not spike on buckets with few conversions. If T is equal to 5, a noise value as small as 1 on a bucket with 0 conversions will not be displayed as way over 100%. Instead, it will be capped at 20%, which is equivalent to 1/5, as T is equal to 5. By giving less weight to smaller buckets which are therefore more sensitive to noise, this metric is more stable, and therefore makes it easier to compare two simulations.
+* **RMSPE_T allows for easy aggregation.** Knowing the RMSPE_T of multiple buckets, together with their true counts, allows you to compute the RMSPE_T of their sum. This also allows you to optimize for RMSPE_T for these combined values.
+
+While aggregation is possible for APE, the formula is quite complicated as it involves the absolute value of sum of Laplace noises. This makes APE harder to optimize.
 
 
 ##### Code
