@@ -22,7 +22,7 @@ Topics is not currently available by default in any version of Chrome, but you c
 -   The Topics API demo allows you to try it out as a single user.
 -   The Topics origin trial allows you to try the API at scale with your website users.
 
-### Use the demo
+### Try the demo
 
 The demo of the Topics API is at [topics-demo.glitch.me](https://topics-demo.glitch.me/). It explains how to try out and debug the API for a single user.
 
