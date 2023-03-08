@@ -6,6 +6,7 @@ description: >
 subhead: >
   FedCM origin trial will now be available until the release of Chrome 108, scheduled for November 23, 2022.
 date: 2023-03-09
+hero: 'image/YLflGBAPWecgtKJLqCJHSzHqe2J2/9C9Sneo3nkZlqRcsbWff.jpg'
 authors:
   - agektmr
 origin_trial:
@@ -117,3 +118,8 @@ RP must register their origin for the origin trial separately.
 {% endAside %}
 
 We are waiting for your testing and feedback at [crbug.com](https://crbug.com).
+
+Photo by <a
+href="https://unsplash.com/es/@adventureregistry?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alex
+Perz</a> on <a
+href="https://unsplash.com/photos/ysgELOy_t0c?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
