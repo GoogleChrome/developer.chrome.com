@@ -228,3 +228,4 @@ The explainer [provides more detail about privacy goals](https://github.com/jkar
 
 If you're an ad tech developer, [experiment and participate](/docs/privacy-sandbox/topics-experiment/) with the Topics API. Read the [developer guide](/docs/privacy-sandbox/topics/) for more in-depth resources.
 
+{% Partial 'privacy-sandbox/topics-feedback.njk' %}

@@ -117,3 +117,5 @@ You can check to see which topics are real and which are random on the Topics St
 ## Next steps
 
 If you're an ad tech developer, [experiment and participate](/docs/privacy-sandbox/topics-experiment/) with the Topics API. Read the [developer guide](/docs/privacy-sandbox/topics/) for more in-depth resources.
+
+{% Partial 'privacy-sandbox/topics-feedback.njk' %}
