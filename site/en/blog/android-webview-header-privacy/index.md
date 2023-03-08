@@ -1,7 +1,7 @@
 ---
 title: Improving user privacy by requiring opt-in to send X-Requested-With header from WebView
 description: >
-  We want to protect the user privacy by limiting when the X-Requested-With header is sent.
+  We want to protect user privacy by limiting when the X-Requested-With header is sent.
 layout: 'layouts/blog-post.njk'
 date: 2023-03-13
 authors:
