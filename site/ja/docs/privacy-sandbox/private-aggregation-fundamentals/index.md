@@ -3,7 +3,7 @@ layout: layouts/doc-post.njk
 title: Private Aggregation API の基礎
 subhead: Private Aggregation API の主なコンセプト
 description: Private Aggregation API の主なコンセプト
-date: '2022-10-11'
+date: 2022-10-11
 authors:
   - kevinkiklee
 ---
