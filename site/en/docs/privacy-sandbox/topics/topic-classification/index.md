@@ -39,6 +39,7 @@ This suggests several questions. For example:
 
 Topics are derived from a [classifier model](https://github.com/jkarlin/topics#:~:text=classifier) that maps website [hostnames](https://web.dev/same-site-same-origin/#origin) to zero or more topics.
 Analyzing additional information (such as full URLs or page contents) might allow for more relevant ads, but might also reduce privacy.
+
 The classifier model for mapping hostnames to topics is publicly available, and the [explainer](https://github.com/patcg-individual-drafts/topics) proposes that it should be possible to view the topics for a site via browser developer tools. The model is expected to evolve and improve over time and be updated periodically; the frequency of this is still under consideration.
 
 Only sites that include code that calls the Topics API are included in the browsing history eligible for topic frequency calculations, and API callers only receive topics they've observed. In other words, sites are not eligible for topic frequency calculations without the site or an embedded service taking action to call the API.
