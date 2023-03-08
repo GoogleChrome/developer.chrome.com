@@ -6,9 +6,8 @@ authors:
 hero: image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/J1xttcy4grVMCckg0Feu.png
 alt: FLEDGE 入札およびオークションサービスの提供状況
 description: |2-
-
   これらのサービスは、2023 年に Chrome と Android でテストできるようになります。
-date: '2023-02-09'
+date: 2023-02-09
 tags:
   - プライバシー
 ---
