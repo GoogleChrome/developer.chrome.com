@@ -16,9 +16,9 @@ updated: 2023-03-09
 
 **Update, March 2023**
 
-[The technical limitation](https://crbug.com/1393662) that caused
-`authenticatorSelection.residentKey` to be `preferred` instead of `required` is
-now lifted as of Chrome 112. Documents are updated following the change.
+As of Chrome 112, [the technical limitation](https://crbug.com/1393662) that led
+`authenticatorSelection.residentKey` to be `preferred` instead of `required` has
+been lifted. Documents have been updated following the change.
 
 {% endAside %}
 
