@@ -28,7 +28,7 @@ The following video shows how the demo works.
 %}
 
 
-## Test with chrome://flags or feature flags
+## Test with chrome://flags or feature flags {: #feature-flags}
 
 There are two ways to try the Topics API as a single user; you'll need to be running Chrome 101 or above:
 

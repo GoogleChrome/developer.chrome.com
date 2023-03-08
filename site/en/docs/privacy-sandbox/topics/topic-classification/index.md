@@ -68,7 +68,7 @@ Sites can block topic calculation for their visitors with the following [Permiss
 Permissions-Policy: browsing-topics=()
 ```
 
-## The classifier model
+## The classifier model {: #classifier-model}
 
 Topics are manually curated for 10,000 top domains, and this curation is used to train the classifier. This list can be found in `override_list.pb.gz`, which is available at `chrome://topics-internals/` under the current model in the "Classifier" tab. The domain-to-topics associations in the list are used by the API in lieu of the output of the model itself.
 

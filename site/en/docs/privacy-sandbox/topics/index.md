@@ -66,7 +66,6 @@ Feature support on the current page isn't a guarantee that an API is usable: the
 From Chrome 108, the `document.browsingTopics()` method can be passed an optional argument: `{skipObservation:true}`.
 This allows the method to return topics without causing the browser to record a topic observation. By default, it does.. In other words, the call will not cause the current page to be included in the weekly epoch calculation, nor will it update the list of topics observed for the caller.
 
-
 ### Access topics with the JavaScript API
 
 Here is a basic example of possible API usage to access topics for the current user. To keep it simple, there's no error handling.
@@ -102,7 +101,6 @@ Rather than using the Topics JavaScript API from an iframe, topics can be access
 -   Topics that were provided in a request header can be marked as observed by setting an `Observe-Browsing-Topics: ?1` header on the response to the request. The browser will then use those topics (that were included in the request header) for calculating topics of interest for a user.
 
 Using request and response headers to access topics and mark them as observed can be much more performant than using the JavaScript API from an iframe. For example, the header mechanism could be used when a `fetch()` request is made to an ad server. No iframe required! For more on this technique, check out the demo page.
-
 
 #### Notes
 
@@ -156,9 +154,10 @@ Information is provided about the Topics API implementation and settings, such a
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/7vFveJtxWgY6yB8gHnW3.png",
   alt="chrome://topics-internal page with Features and Parameters panel selected.",
   width="800", height="695" %}
-<figcaption>chrome://topics-internal page with Features and Parameters panel selected.
+<figcaption>The chrome://topics-internal Features and Parameters panel shows enabled features, time per epoch, number of epochs to use to calculate topics, taxonomy version, and other settings.
 </figcaption>
 </figure>
+
 The meaning of each parameter is explained in the table below. (You'll need to scroll it horizontally to see all the details!)
 
 The parameters correspond to flags that can be set when running Chrome from the command line. For example, the demo at [topics-demo.glitch.me](https://topics-demo.glitch.me/) recommends using the following flags:

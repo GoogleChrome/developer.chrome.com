@@ -14,7 +14,8 @@ authors:
 
 A colab—or colaboratory—is a data analysis tool that combines code, output, and descriptive text into one collaborative document. You can run the [Topics Model Execution Demo colab](https://colab.research.google.com/drive/1hIVoz8bRCTpllYvads51MV7YS3zi3prn) to test how the Topics classifier model infers topics of interest to the user, from the hostnames of pages they visit.
 
-1. From the *Classifier* tab of the `chrome://topics-internals` page get the directory path for the `.tflite` file used by the Topics API. The [override list](/docs/privacy-sandbox/topics/#manually-curated) `.pb.gz` file is in the same directory.
+1. From the *Classifier* tab of the `chrome://topics-internals` page get the directory path for the `.tflite` file used by the Topics API. The override list, `override_list.pb.gz`, 
+is available from the `chrome://topics-internals/` page under the current model in the Classifier tab.
 
     {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/txujKqPgnQdbwmTfdPZT.png",
   alt="chrome://topics-internal page with Classifier panel selected and tflite file path highlighted.",
@@ -25,7 +26,7 @@ A colab—or colaboratory—is a data analysis tool that combines code, output, 
     {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/FcBRhBOyLm2EEU1J4ET0.png",
   alt="Topics API colab.", width="800", height="605" %}
 
-1. Click the Upload icon and upload `model.tflite` and `override_list.pb.gz` from your computer to the colab.
+1. Click the **Upload** icon and upload `model.tflite` and `override_list.pb.gz` from your computer to the colab.
 
     {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/8PiaYhdpKUx5hyMNcVwG.png",
   alt="Topics API colab file upload.", width="800", height="402" %}
@@ -47,11 +48,11 @@ You'll see a green tick next to each step that completes successfully. (Each ste
 For each of the domains defined, you can see the topic scores inferred by the classifier. Try listing different domains to see how they compare.
 
 {% Aside 'caution' %}
-For some domains you may notice a difference in topic inference, between the colab and the `chrome://topics-internals` Classifier.
+For some domains you may notice a difference in topic inference between the colab and the `chrome://topics-internals` classifier.
 
 This is because the colab only uses the classifier model to infer topics, whereas
 `chrome://topics-internals` uses Chrome's Topics implementation, which uses a
-[manually-curated list of topics](/docs/privacy-sandbox/topics/topic-classification/#the-classifier-model) (rather than the classifier model) for the top
+[manually-curated list of topics](/docs/privacy-sandbox/topics/topic-classification/#classifier-model) (rather than the classifier model) for the top
 10,000 sites. The list is found in `override_list.pb.gz`, which is available in the `chrome://topics-internals/` page. 
 {% endAside %}
 
