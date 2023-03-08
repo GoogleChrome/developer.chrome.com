@@ -33,9 +33,9 @@ tags:
 
 皆さんのフィードバックは、提案の設計と開発に直接伝えられています。[フィードバックを提供する方法は複数](/docs/privacy-sandbox/feedback/)用意されていますので、引き続きご提出ください！
 
-- [Feedback report: 2022 Q1](/docs/privacy-sandbox/feedback/report-2022-q1/)
-- [Feedback report: 2022 Q2](/docs/privacy-sandbox/feedback/report-2022-q2/)
-- Feedback report: 2022 Q3 will be published this week. {% endAside %}
+- [フィードバック レポート: 2022 年第 1 四半期](/docs/privacy-sandbox/feedback/report-2022-q1/)
+- [フィードバック レポート: 2022 年第 2 四半期](/docs/privacy-sandbox/feedback/report-2022-q2/)
+- フィードバック レポート: 2022 年第 3 四半期は今週公開されます。 {% endAside %}
 
 ## オリジントライアルへの参加を制御する
 
@@ -48,12 +48,12 @@ tags:
 ここでは以下のアプローチが推奨されます。
 
 1. 実験するすべてのコンテキストに、デフォルトでオリジントライアルトークンを含めます。
-2. Use feature detection to check for active APIs.
+2. 機能検出を使用して、アクティブな API を確認します。
 3. API がアクティブな場合（したがって、ブラウザがこの実験に適している場合）、独自の実験基準に基づいて使用するかどうかを選択します。たとえば、トラフィックの割合、サンプリング、またはその他の属性で実験するための A/B テスト インフラストラクチャが既に存在する場合は、この時点で積極的に使用する機能を決定できます。
 
 レスポンスにトークンを含めないことで、どのブラウザインスタンスもオリジントライアルに参加しないようにすることができます。たとえば、実験の独自のクォータに達した場合、またはトライアル中に問題に対処する必要がある場合、トークンを含めないことで、実験的な機能がページで使用可能にならない、またはアクティブにならないことが保証されます。
 
-## Renew your token
+## トークンを更新する
 
 オリジントライアルトークンの有効期限は、発行日から 6 週間です（トライアルが終了した場合は、これより早く期限切れとなります）。
 
@@ -76,11 +76,10 @@ As individual features progress, you’ll be notified on the developer mailing l
 <table>
   <tr>
    <th>API</th>
-   <th>Origin trial status</th>
+   <th>オリジントライアルステータス</th>
   </tr>
   <tr>
-   <td>
-<a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a>    </td>
+   <td><a href="/docs/privacy-sandbox/attribution-reporting/">アトリビューション レポート</a></td>
    <td>安定版で利用可能、10 月 26 日から 5% に増加。</td>
   </tr>
   <tr>
@@ -96,8 +95,7 @@ As individual features progress, you’ll be notified on the developer mailing l
    <td>安定版で利用可能で、11 月 9 日から 5% に増加。</td>
   </tr>
   <tr>
-   <td>
-<a href="/docs/privacy-sandbox/shared-storage/">Shared Storage</a>    </td>
+   <td><a href="/docs/privacy-sandbox/shared-storage/">共有ストレージ</a></td>
    <td>現在、M105+ Canary、Dev、およびベータ版でのみ利用可能。</td>
   </tr>
 </table>
