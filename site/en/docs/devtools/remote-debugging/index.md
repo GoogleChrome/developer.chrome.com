@@ -31,7 +31,7 @@ device][1] for more help.
 1.  Go to `chrome://inspect#devices`.
 1.  Make sure {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Discover USB devices** is enabled.
 
-    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/wFE4A05EAb622lEpVW2M.png", alt="The Discover USB Devices checkbox is enabled.", width="800", height="565" %}
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/EHgnvErIO4AoWkKMqWQF.png", alt="The Discover USB Devices checkbox is enabled.", width="800", height="499" %}
 
 1.  Connect your Android device directly to your development machine using a USB cable.
 
