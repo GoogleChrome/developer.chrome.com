@@ -113,7 +113,7 @@ Using request and response headers to access topics and mark them as observed ca
 
 ## Debug your API implementation
 
-The `chrome://topics-internals` page is available in Chrome on desktop if [you enable the Topics API](/docs/privacy-sandbox/topics/demo/#feature-flags). This displays topics for the current user, topics inferred for hostnames, and technical information about the API implementation.
+The `chrome://topics-internals` page is available in Chrome on desktop if [you enable the Topics API](#feature-flags). This displays topics for the current user, topics inferred for hostnames, and technical information about the API implementation.
 
 The `chrome://topics-internals` page is new. The design and functionality are still under discussion. We're currently iterating and improving the design based on developer feedback. Add your feedback at [bugs.chromium.org](https://bugs.chromium.org/p/chromium/issues/entry?template=Defect+report+from+developer&components=Blink%3ETopicsAPI).
 
@@ -150,7 +150,7 @@ Use hostnames only (without protocol or path) to view inferred topics from the `
 
 ### View Topics API information
 
-Information is provided about the Topics API implementation and settings, such as the [taxonomy](/docs/privacy-sandbox/topics/#taxonomy) version and epoch duration. These values reflect default settings for the API or parameters successfully set [from the command line](#feature-flags). This is handy for checking that command-line flags have worked as expected. In the example below, `time_period_per_epoch` has been set to 15 seconds (the default is seven days).
+Information is provided about the Topics API implementation and settings, such as the [taxonomy](https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md) version and epoch duration. These values reflect default settings for the API or parameters successfully set [from the command line](#feature-flags). This is handy for checking that command-line flags have worked as expected. In the example below, `time_period_per_epoch` has been set to 15 seconds (the default is seven days).
 
 <figure>
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/7vFveJtxWgY6yB8gHnW3.png",
@@ -210,7 +210,7 @@ context. The browser will internally keep up to N+1 epochs.</dd>
     <dt>
       <dd><code>BrowsingTopics:time_period_per_epoch</code></dd>
       <dd><strong>Default value:</strong> 7d-0h-0m-0s</dd>
-      <dd>Duration of each <a href="/docs/privacy-sandbox/topics/overview/#:~:text=epoch">epoch</a>.
+      <dd>Duration of each epoch.
       For debugging, it can be useful to set this to (say) 15 seconds, rather than the default 7 days.</dd>
     </dt><br />
     <dt>
@@ -223,7 +223,7 @@ context. The browser will internally keep up to N+1 epochs.</dd>
       <dd><strong>Default value:</strong> 5</dd>
       <dd>Probability that an individual topic within an epoch is one returned at random from
 the entire <a
-href="/docs/privacy-sandbox/topics/#:~:text=taxonomy">taxonomy</a>
+href="https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md">taxonomy</a>
 of topics. The randomness is sticky to an epoch and site.</dd>
     </dt><br />
     <dt>
@@ -263,7 +263,7 @@ inconsistent state and/or could let the browser crash, e.g. updating the
       <dd><code>BrowsingTopics:taxonomy_version</code></dd>
       <dd><strong>Default value:</strong> 1</dd>
       <dd>The <a
-href="/docs/privacy-sandbox/topics/#:~:text=taxonomy">taxonomy</a>
+href="https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md">taxonomy</a>
 version used by the API.</dd>
     </dt><br />
 </dl>
@@ -271,7 +271,7 @@ version used by the API.</dd>
 ## Next steps
 
 - Learn more about [what topics are and how they work](/docs/privacy-sandbox/topics/topic-classification). <!-- topic classification page and demo and trial links needed-->
-- Try out the [demo](/docs/privacy-sandbox/topics/demo) or join an [origin trial](/docs/privacy-sandbox/unified-origin-trial/).
+- Try out the [demo](/docs/privacy-sandbox/topics/demo) or join an [origin trial](/docs/web-platform/origin-trials/).
 
 {% Partial 'privacy-sandbox/topics-feedback.njk' %}
 
