@@ -3,16 +3,16 @@ layout: 'layouts/blog-post.njk'
 title: "What's New in DevTools (Chrome 112)"
 authors:
   - sofiayem
-date: 2023-03-03
+date: 2023-03-08
 description: ""
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/KwNETHFT5o1aAv74huRF.jpg'
+hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/G5pxOHr2wECkBu8J2ujC.jpg'
 alt: 'CSS documentation, ignore-listing irrelevant scripts, enhanced logpoint debugging, Recorder replay customization, and more.'
 tags:
   - new-in-devtools
   - devtools
   - chrome-112
 ---
-<!-- image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GZr06vqTxoJGEIXVqXT9.png  -->
+<!-- image/NJdAV9UgKuN8AhoaPBquL7giZQo1/G5pxOHr2wECkBu8J2ujC.jpg  -->
 
 {% Partial 'devtools/banner.md' %}
 
@@ -20,7 +20,7 @@ tags:
 
 <!-- $contentStart -->
 
-## Elements > Styles {: #elements- styles }
+## Elements > Styles {: #elements-styles }
 
 ### CSS documentation {: #css }
 
@@ -43,11 +43,11 @@ DevTools pulls the descriptions for tooltips from [VS Code Custom Data](https://
 
 Chromium issue: [1401107](https://crbug.com/1401107).
 
-### CSS nesting support {: #nesting  }
+### CSS nesting support {: #nesting }
 
-The **Elements** > **Styles** pane now recognizes [CSS Nesting](https://w3c.github.io/csswg-drafts/css-nesting/) syntax and applies nested styles to right elements.
+The **Elements** > **Styles** pane now recognizes [CSS Nesting](https://w3c.github.io/csswg-drafts/css-nesting/) syntax and applies nested styles to the right elements.
 
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/q4r9vBhgIqmtnQgYIb6U.mp4", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/94Hz4zHWGUgVIV215KDg.mp4", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f1ed9b6180cb75fcfd43dfac95ac9a40c35e03df #}
 
