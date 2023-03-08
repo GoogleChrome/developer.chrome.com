@@ -99,9 +99,9 @@ K-匿名性の要求はテスト利用が可能となり、2023 年の後半に�
 
 ## Bidding and Auction Services
 
-We have heard some concerns about [FLEDGE latency](https://github.com/WICG/turtledove/issues/385) and are actively working on improving on-device latency. Both Chrome and Android plan to provide [Bidding and Auction Services](https://github.com/privacysandbox/fledge-docs/blob/main/bidding_auction_services_api.md) as an additional way to run bidding and scoring logic besides on-device auctions. Bidding and Auction services is a [FLEDGE service](/blog/fledge-service-overview/) solution for running auctions off-device, which we believe will allow for even faster performance.
+[FLEDGE の遅延](https://github.com/WICG/turtledove/issues/385)に関する懸念がいくつか寄せられており、デバイス上の遅延を改善するために積極的に取り組んでおります。Chrome と Android の両方で、デバイス上でのオークション以外の方法を用いて入札とスコアリングのロジックを実行する追加の方法として [入札およびオークションサービス](https://github.com/privacysandbox/fledge-docs/blob/main/bidding_auction_services_api.md) の提供を計画しています。入札およびオークションサービスはデバイス外でのオークションの実行を目的とした [FLEDGE サービス](/blog/fledge-service-overview/)ソリューションであり、これによりさらなるパフォーマンスの高速化が可能になると考えています。
 
-We will continue to support on-device auctions, and the use of the Bidding and Auction Services is not required unless it fits your use cases.
+デバイス上でのオークションは今後もサポートされますので、特定のユースケースに合致する場合を除いて入札およびオークションサービスの利用は必須ではありません。
 
 詳細については、[ブログ投稿](/blog/bidding-and-auction-services-availability/)を参照してください。
 
