@@ -25,7 +25,6 @@ FedCM is a purpose-built API that allows the browser to understand the context i
 We have a few updates to the Chrome's FedCM implementation recently:
 
 - For the [ID assertion endpoint](/docs/privacy-sandbox/fedcm/#id-assertion-endpoint), IdPs need to check the Origin header (instead of the Referer header) to see if the value matches the origin of the client ID.
-- [Cross-origin iframe support for FedCM](/docs/privacy-sandbox/fedcm/#call-fedcm-from-within-a-cross-origin-iframe) is now available. The embedder should specify the [Permissions-Policy](https://github.com/w3c/webappsec-permissions-policy/blob/main/permissions-policy-explainer.md#how-is-a-policy-specified) identity-credentials-get to allow FedCM API in the embedded cross-origin iframe. You can check an [example](https://fedcm-top-frame.glitch.me/) of the cross-origin iframe.
 - Added a new Chrome flag `chrome://flags/#fedcm-without-third-party-cookies`. With this flag, [you can test FedCM functionality in Chrome by blocking third-party cookies](/docs/privacy-sandbox/fedcm/#block-third-party-cookies).
 
 Check all the past updates to the API and our [FedCM documentation](/docs/privacy-sandbox/fedcm/) at [Federated Credential Management API updates](/docs/privacy-sandbox/fedcm-updates/).
@@ -39,9 +38,9 @@ FedCM auto-reauthentication ("auto-reauthn" in short) literally reauthenticates 
 <figure style="width: 300px; margin: auto; margin-top: 2em;">
   {% Img
     src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/jQvYTB6sHw5jGshyRxn6.png",
-    alt="ALT_TEXT_HERE", width="800", height="566", class="screenshot"
+    alt="A dialog the user taps on to create an account or to authenticate.", width="800", height="566", class="screenshot"
   %}
-  <figcaption>A user is auto-reauthenticating to an RP using FedCM</figcaption>
+  <figcaption>A dialog the user taps on to create an account or to authenticate.</figcaption>
 </figure>
 
 The RP can auto-reauthn the user by calling `navigator.credentials.get()` with `autoReauthn: true`.
@@ -78,7 +77,7 @@ It would be annoying if the user is auto reauthenticated immediately after the u
 
 {% Aside %}
 
-As alluded earlier, FedCM has a 10-minute quiet period after an auto-reauthn to prevent this behavior. We are also exploring other approaches to achieve this.
+As alluded earlier, FedCM has a 10-minute quiet period after an auto-reauthn to prevent this behavior. We are also exploring other approaches to achieve this such as using `CredentialsContainer.preventSilentAccess()`.
 
 {% endAside %}
 
@@ -94,11 +93,19 @@ For testing purposes, you can reset this 10-minute cooldown period by removing b
 3. Clear **"Cookies & Other Site Data"** for the time range **"All time"**
 4. Restart Chrome
 
+{% Aside 'caution' %}
+
+Be careful that by doing this, you will lose cookies and storage data from all websites on the Chrome instance.
+
+{% endAside %}
+
 ## Origin trial
 
 You can also enable the feature on your website by joining the origin trial between Chrome 112 through Chrome 114.
 
 {% Partial 'origin-trials.md' %}
+
+Third-party origin trials make it possible for providers of embedded content to try out a new feature across multiple sites by providing [a token using JavaScript](/docs/web-platform/third-party-origin-trials/#provide-token).
 
 {% Partial 'origin-trial-3p-register.md' %}
 
