@@ -84,20 +84,20 @@ function addMobileListeners() {
       )
     );
 
-    activeFilters = selected.reduce((target, checkbox) => {
+    activeFilters = selected.reduce((payload, checkbox) => {
       const name = checkbox.getAttribute('name');
       const value = checkbox.getAttribute('value');
 
-      if (name === null) return target;
+      if (name === null) return payload;
 
-      if (typeof target[name] === 'undefined') {
-        target[name] = [value];
-        return target;
+      if (typeof payload[name] === 'undefined') {
+        payload[name] = [value];
+        return payload;
       }
 
-      target[name].push(value);
+      payload[name].push(value);
 
-      return target;
+      return payload;
     }, {});
 
     injectFilters();
