@@ -14,7 +14,7 @@ authors:
 <table>
   <tr>
    <td>
-<strong>Feature</strong>
+<strong>特徴</strong>
    </td>
    <td>
 <strong>テスト利用の可否</strong>
@@ -43,19 +43,17 @@ authors:
    <td>2026 年以降に必須となります。</td>
   </tr>
   <tr>
-   <td>
-<a href="https://github.com/WICG/turtledove/blob/main/FLEDGE_k_anonymity_server.md">K-anonymity</a>    </td>
+   <td><a href="https://github.com/WICG/turtledove/blob/main/FLEDGE_k_anonymity_server.md">K-匿名性</a></td>
    <td>2023 年第三四半期後半</td>
    <td>クリエイティブのレンダリングについては、「1 件のクリエイティブにつき 7 日間で 50 人のユーザー」という K-匿名性の閾値を満たす必要があります。</td>
   </tr>
   <tr>
    <td>改善された FLEDGE と<a href="/docs/privacy-sandbox/attribution-reporting/">アトリビューションレポート</a>の統合</td>
    <td>2023 年第二四半期</td>
-   <td>Available for testing in Chrome Stable M112+.    </td>
+   <td>Chrome Stable M112+ でテストできます。</td>
   </tr>
   <tr>
-   <td>
-<a href="/blog/fledge-service-overview/#bidding-auction-service">Bidding and Auction services</a>    </td>
+   <td><a href="/blog/fledge-service-overview/#bidding-auction-service">入札およびオークションサービス</a></td>
    <td>2023 年下半期のテスト実施を目標としています。</td>
    <td>現在開発中です。</td>
   </tr>
@@ -91,7 +89,7 @@ For event-level reporting with FLEDGE, we have a proposed set of initial improve
 
 [FLEDGEを使用したアトリビューションレポートの集計](https://github.com/WICG/turtledove/issues/289)が必要な方向けには、集計レポートでより多くの入札シグナルをキャプチャするためのより柔軟なソリューションの開発に取り組んでいます。準備が整い次第、提案内容を公開する予定です。
 
-## K-anonymity
+## K-匿名性
 
 FLEDGE フレームワークを使用して [K-匿名性](https://github.com/WICG/turtledove/blob/main/FLEDGE_k_anonymity_server.md)を強制する方法については、近日中に詳細な説明を公開する予定です。
 
@@ -105,6 +103,6 @@ We have heard some concerns about [FLEDGE latency](https://github.com/WICG/turtl
 
 We will continue to support on-device auctions, and the use of the Bidding and Auction Services is not required unless it fits your use cases.
 
-More details can be found in the [blog post](/blog/bidding-and-auction-services-availability/).
+詳細については、[ブログ投稿](/blog/bidding-and-auction-services-availability/)を参照してください。
 
 {% Partial 'privacy-sandbox/fledge-api-next.njk' %}
