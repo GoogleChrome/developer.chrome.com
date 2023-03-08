@@ -30,7 +30,7 @@ The `notRestoredReasons` property, added to the [`PerformanceNavigationTiming`](
 
 Starting in version 109, the bfcache `notRestoredReasons` API is available as an [origin trial](/docs/web-platform/origin-trials/) in Chromium. Find updated information on this feature's release schedule by visiting its [ChromeStatus.com feature page][cr-status] (see the [Chrome roadmap](https://chromestatus.com/roadmap) for version release dates).
 
-You can try out the bfcache `notRestoredReasons` API by [registering for the origin trial](ot) and using it in your experiments. See [Take part in an origin trial](/docs/web-platform/origin-trials/#take-part-in-an-origin-trial) for instructions on how to use your token once you are registered.
+You can try out the bfcache `notRestoredReasons` API by [registering for the origin trial][ot] and using it in your experiments. See [Take part in an origin trial](/docs/web-platform/origin-trials/#take-part-in-an-origin-trial) for instructions on how to use your token once you are registered.
 
 ## Concepts and usage
 
