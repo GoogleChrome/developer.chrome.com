@@ -10,7 +10,7 @@ authors:
   - maudn
   - zachmastromatto
 date: 2022-11-09
-updated: 2022-11-09
+updated: 2023-03-08
 description: >
   Use Noise Lab to preview how noise affects your summary reports.
 tags:
@@ -21,7 +21,7 @@ tags:
 
 When you read this article, you will:
 
-- Understand what to strategize on before running a summary reports origin trial.
+- Understand what strategies to create before generating summary reports in the origin trial.
 - Be introduced to [Noise Lab](#quick-tour), a tool that helps grasp the effects of various noise parameters, and that enables quick exploration and assessment of various noise management strategies.
 
 ### Share your feedback
@@ -586,9 +586,18 @@ Click on the buttons in the top menu to toggle between the two modes (_#1. in th
 
 #### Core concept
 
-Noise is added in Noise Lab to protect individual user privacy. A high noise percentage value indicates that buckets/keys are sparse, and only contain contributions from a limited number of sensitive events. This means, to protect user privacy, the data has been made more noisy. A high noise percentage value indicates that the system's "hiding in the crowds" mechanism has kicked in to protect individual user privacy. 
-On the other hand, a low noise percentage value indicates that the data setup has been designed in such a way that allows "hiding in the crowd": buckets contain contributions from a sufficient number of events to ensure that individual user privacy is protected.
+Noise is added to protect individual user privacy.
 
+A high noise percentage value indicates that buckets/keys are sparse and
+contain contributions from a limited number of sensitive events. This is done
+automatically by Noise Lab, to allow individuals to "hide in the crowd," or in
+other words, protects these limited individuals' privacy with a larger amount
+of added noise.
+
+A low noise percentage indicates that the data setup was designed in such
+a way that already allows individuals to "hide in the crowd." This means the
+buckets contain contributions from a sufficient number of events to ensure that
+individual user privacy is protected.
 
 This statement holds true for both APE and RMSPE_T.
 
@@ -611,6 +620,7 @@ It means that the true summary value was 0, i.e. that at least one bucket was em
 {% endAside %}
 
 ##### Formula
+
 For a given summary report, APE is calculated as follows:
 
 {% Img src="image/URLGRmk9LjR39BLvmeGDZFZkz3p2/7gz1jLNIEfNzmd5n0ktu.png", alt="ALT_TEXT_HERE", width="347", height="62" %}
@@ -622,10 +632,13 @@ For a given summary report, APE is calculated as follows:
 In Noise Lab, this is then multiplied by 100 to give a percentage.
 
 ##### Pros and Cons
+
 Buckets with smaller sizes have a disproportionate impact on the final value of APE. That could be misleading when assessing noise. This is why we've added another metric, [RMSPE_T](#rmspe), that is designed to mitigate this limitation of APE. Review the [examples](#noise-examples) for details. 
 
 ##### Code
-Review [here](https://github.com/privacysandbox/noise-lab/blob/main/public/index.html#L43) the source code for APE calculation.
+
+Review the [source code](https://github.com/privacysandbox/noise-lab/blob/main/public/index.html#L43)
+for APE calculation.
 
 
 #### RMSPE_T  (root-mean-square percentage error with a threshold) {: #rmspe}
@@ -665,9 +678,8 @@ However, it has a few advantages that make it in some cases more suitable than A
 
 
 ##### Code
-Review [here](https://github.com/privacysandbox/noise-lab/blob/main/public/index.html#L66) the source code for RMSPE_T calculation.
 
-
+Review the [source code](https://github.com/privacysandbox/noise-lab/blob/main/public/index.html#L66) for RMSPE_T calculation.
 
 #### Examples {: #noise-examples}
 
