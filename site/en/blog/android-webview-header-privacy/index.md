@@ -5,7 +5,7 @@ description: >
 layout: 'layouts/blog-post.njk'
 date: 2023-03-13
 authors:
-  - pbirk
+  - samdutton
 hero: 'image/VbsHyyQopiec0718rMq2kTE1hke2/LNiRMeNkUXQw6EBKwJw9.jpg'
 alt: >
   Choices, as represented by signs, at sunset.
