@@ -2,12 +2,10 @@
 layout: layouts/doc-post.njk
 title: IP の保護
 subhead: |2
-
   IP アドレスが追跡に使用されないように保護することで、ユーザーのプライバシーを向上させます。
 description: |2
-
   ユーザーの IP アドレスが追跡に使用されないように保護することで、ユーザーのプライバシーを改善する提案。
-date: '2022-12-05'
+date: 2022-12-05
 authors:
   - anusmitaray
 ---
