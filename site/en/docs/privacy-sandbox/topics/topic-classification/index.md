@@ -77,7 +77,7 @@ Topics are manually curated for 10,000 top domains, and this curation is used to
   alt="chrome://topics-internal page with Classifier panel selected.",
   width="800", height="695" %}
   <figcaption>
-    chrome://topics-internal page with Classifier panel selected
+    The chrome://topics-internal page Classifier panel lists the model version, its path, and the topics associated with each host listed.
   </figcaption>
 </figure>
 
