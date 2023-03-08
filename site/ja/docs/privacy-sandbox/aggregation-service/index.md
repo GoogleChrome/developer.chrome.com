@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc-post.njk
-title: Aggregation Service
+title: 集計サービス
 subhead: このサービスを導入して管理を行い、Attribution Reporting API または Private Aggregation API のサマリーレポートを作成します。
 description: このサービスを導入して管理を行い、Attribution Reporting API または Private Aggregation API のサマリーレポートを作成します。
 date: '2022-11-29'
@@ -17,7 +17,7 @@ Deploy and manage an Aggregation Service to process aggregatable reports from th
 
 The proposal outlines [key terms](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md#key-terms), useful for understanding the Aggregation Service.
 
-## Secure data processing
+## 安全なデータ処理
 
 The Aggregation Service decrypts and combines the collected data from the aggregatable reports, [adds noise](#noise-scale), and returns the final summary report. This service runs in a trusted execution environment (TEE), which is deployed on a cloud service that supports necessary security measures to protect this data.
 
@@ -39,7 +39,7 @@ The TEE's code is the only place in the Aggregation Service which has access to 
 
 {% Aside %}集計サービスをテストする場合には、「[コーディネーターサービスに関する追加の利用規約](/docs/privacy-sandbox/aggregation-service/tos/)」を参照してください。{% endAside %}
 
-## Noise and scaling {: #noise-scale}
+## ノイズとスケーリング {: #noise-scale}
 
 To protect user privacy, the Aggregation Service applies an [additive noise mechanism](https://en.wikipedia.org/wiki/Additive_noise_mechanisms) to the raw data from aggregatable reports. This means that a certain amount of statistical noise is added to each aggregate value before its release in a summary report.
 
@@ -55,18 +55,18 @@ To protect user privacy, the Aggregation Service applies an [additive noise mech
 
 サマリーレポートの生成方法は、API の使用状況に応じて異なってきます。[Private Aggregation API](/docs/privacy-sandbox/summary-reports#private-aggregation) と [Attribution Reporting API](/docs/privacy-sandbox/summary-reports#attribution-reporting) のサマリーレポート生成に関する詳細情報をご確認ください。
 
-## Test the Aggregation Service {: #test}
+## 集計サービスをテストする {: #test}
 
-We recommend reading the corresponding experiment and participate guide for the API you're testing:
+テストする API に対応する実験と参加ガイドを読むことをお勧めします。
 
 - [Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting-experiment/)
 - [Private Aggregation API](/docs/privacy-sandbox/private-aggregation-experiment/)
 
-### Local testing
+### ローカルテスト
 
 We've created a local testing tool to process aggregatable reports for Attribution Reporting and the Private Aggregation API. [Read the instructions](https://github.com/privacysandbox/aggregation-service/blob/main/README.md).
 
-### Test on AWS
+### AWS でテストする
 
 To test the Aggregation Service on AWS, [register for the origin trial](/origintrials/#/view_trial/771241436187197441) and complete the [onboarding form](https://forms.gle/EHoecersGKhpcLPNA). Once submitted, we'll contact you to verify your information and send the remaining instructions.
 
@@ -74,7 +74,7 @@ To test on AWS, install [Terraform](https://www.terraform.io/) and the latest [A
 
 [Read the instructions](https://github.com/privacysandbox/aggregation-service/blob/main/README.md#test-on-aws-with-support-for-encrypted-reports).
 
-## Engage and share feedback
+## エンゲージメントとフィードバックの共有
 
 The Aggregation Service is a key piece of the Privacy Sandbox measurement proposals. Like other Privacy Sandbox proposals, this is documented and discussed publicly on GitHub.
 
