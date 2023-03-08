@@ -599,7 +599,7 @@ a way that already allows individuals to "hide in the crowd." This means the
 buckets contain contributions from a sufficient number of events to ensure that
 individual user privacy is protected.
 
-This statement holds true for both APE and RMSPE_T.
+This statement holds true for both the [APE](#ape) (average percentage error) and [RMSPE_T](#rmspe) (root-mean-square percentage error with a threshold).
 
 #### APE (average percentage error) {: #ape}
 
