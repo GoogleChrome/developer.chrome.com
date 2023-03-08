@@ -17,15 +17,14 @@ your page more mobile-friendly and accessible.
 ## How the Lighthouse tap targets audit fails
 
 [Lighthouse](/docs/lighthouse/overview/) flags pages
-with tap targets that are too small or too close together:
+with tap targets that meet both of these conditions:
+
+- The target is smaller than 48&nbsp;px by 48&nbsp;px.
+- At least 25% the target area within 48&nbsp;px of the center of the target overlaps with another target.
 
 <figure class="w-figure">
   {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/6Dhlxe7vkj7gX3e5rX4B.png", alt="Lighthouse audit showing inappropriately sized tap targets", width="800", height="206", class="w-screenshot" %}
 </figure>
-
-For a tap target to fail the audit, both of these conditions must be true:
-- The target is smaller than 48&nbsp;px by 48&nbsp;px
-- At least 25% the target area within 48&nbsp;px of the center of the target overlaps with another target.
 
 When the audit fails, Lighthouse lists the results in a
 table with three columns:
