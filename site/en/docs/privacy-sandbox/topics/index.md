@@ -34,7 +34,7 @@ A Privacy Sandbox Relevance and Measurement [origin trial](/blog/origin-trials/)
 
 ## Get and set topics
 
-The Topics JavaScript API has one method: `document.browsingTopics()`. It returns a promise that resolves to an array of up to three topics, one for each of the three most recent epochs, in random order.
+The Topics JavaScript API has one method: `document.browsingTopics()`. It returns a promise that resolves to an array of up to three topics, one for each of the three most recent epochs, in random order. An epoch is a period of time currently set to one week.
 
 Each topic object in the array returned by `document.browsingTopics()` will have three properties:
 
@@ -150,7 +150,7 @@ Use hostnames only (without protocol or path) to view inferred topics from the `
 
 ### View Topics API information
 
-Information is provided about the Topics API implementation and settings, such as the [taxonomy](/docs/privacy-sandbox/topics/#taxonomy) version and [epoch](/docs/privacy-sandbox/topics/#epoch) duration. These values reflect default settings for the API or parameters successfully set [from the command line](#feature-flags). This is handy for checking that command-line flags have worked as expected. In the example below, `time_period_per_epoch` has been set to 15 seconds (the default is seven days).
+Information is provided about the Topics API implementation and settings, such as the [taxonomy](/docs/privacy-sandbox/topics/#taxonomy) version and epoch duration. These values reflect default settings for the API or parameters successfully set [from the command line](#feature-flags). This is handy for checking that command-line flags have worked as expected. In the example below, `time_period_per_epoch` has been set to 15 seconds (the default is seven days).
 
 <figure>
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/7vFveJtxWgY6yB8gHnW3.png",
