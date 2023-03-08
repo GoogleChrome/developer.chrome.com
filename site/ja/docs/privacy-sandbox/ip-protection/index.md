@@ -18,7 +18,7 @@ authors:
 
 このドキュメントでは、隠されたトラッキングを防止するのに役立つ IP 保護という新しい提案について概説します。
 
-- The [IP Protection proposal](https://github.com/GoogleChrome/ip-protection) has entered [public discussion](https://github.com/GoogleChrome/ip-protection/issues).
+- [IP 保護の提案](https://github.com/GoogleChrome/ip-protection)の[公開ディスカッション](https://github.com/GoogleChrome/ip-protection/issues)が開始しました。
 - この提案はどのブラウザにも実装されていません。
 - [プライバシーサンドボックスのタイムライン](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline)には、他のプライバシーサンドボックス提案の実装時期が提供されています。IP 保護はまだ初期段階にあり、利用可能になった時点で、このウェブサイトでより確実なタイムラインが発表されるようになります。
 
@@ -32,7 +32,7 @@ IP 保護は、ユーザーの実際の IP アドレスをサードパーティ�
 
 IP 保護は、ユーザーの IP アドレスを匿名化することを提案しています。これにより、ウェブ全体のクロスサイトトラッキングに IP アドレスを使用している可能性があると特定されたサードパーティによる使用から保護することができます。
 
-IP Protection proposes a two-hop [privacy proxy that anonymizes qualifying traffic](https://github.com/GoogleChrome/ip-protection#privacy-proxy):
+IP 保護は、[適格なトラフィックを匿名化する 2 ホッププライバシープロキシ](https://github.com/GoogleChrome/ip-protection#privacy-proxy)を提案しています。
 
 - 宛先オリジンがクライアントの元の IP アドレスを参照できないようにする。
 - プロキシとネットワークの仲介者が、クライアントと宛先オリジンの間のトラフィックの内容に関与していないことを保証する。
@@ -49,5 +49,5 @@ IP 保護は、2024 年より前に Chrome ユーザーのデフォルト設定�
 
 IP 保護の提案については現在活発な議論が行われており、変更される可能性があります。この API を試してフィードバックがあれば、ぜひお寄せください。
 
-- **GitHub**: Read the [proposal](https://github.com/GoogleChrome/ip-protection), [raise questions and participate in discussion](https://github.com/GoogleChrome/ip-protection/issues).
+- **GitHub**: [提案](https://github.com/GoogleChrome/ip-protection)を読み、[質問を投稿したり、ディスカッションに参加](https://github.com/GoogleChrome/ip-protection/issues)したりできます。
 - **開発者サポート**: [Privacy Sandbox Developer Support リポジトリ](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)では、質問したり、ディスカッションに参加したりできます。
