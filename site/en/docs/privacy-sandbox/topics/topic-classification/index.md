@@ -165,6 +165,7 @@ At the end of the epoch (currently proposed to be one week) the Topics API gener
 - adtech2.example has seen the "Fitness" and "Travel & Transportation" topics, but has not seen the "Crafts" topic.
 
 The user visited diy-clothing.example, which has the "Fashion & Style" topic, but there were no calls to the Topics API on that site. At this point, this means the "Fashion & Style" topic would not be returned by the API for any caller.
+
 In week two, the user visits another site:
 
 <table>
@@ -205,6 +206,7 @@ In addition, code from adtech2.example is added to diy-clothing.example:
 </table>
 
 As well as "Fitness" and "Travel & Transportation" from week 1, this means that adtech2.example will now be able to receive the "Crafts" and "Fashion & Style" topic — but not until the following epoch, week 3. This ensures that third parties can't learn more about a user's past (in this case, an interest in fashion) than they could with cookies.
+
 After another two weeks, "Fitness" and "Travel & Transportation" may drop out of adtech2.example's list of eligible topics if the user doesn't visit any sites with those topics that include code from adtech2.example.
 
 
