@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: Replace blocking web request listeners
 subhead: 'Modifying network requests in Manifest V3'
 description: 'The second of three sections describing changes needed for code that is not part of the extension service worker.'
-date: 2023-02-28
+date: 2023-03-08
 ---
 
 Manifest V3 changes how extensions handle modification of network requests. Instead of intercepting network requests and altering them at runtime with `chrome.webRequest`, your extension specifies rules that describe actions to perform when a given set of conditions is met. Do this using the [Declarative Net Request API](/docs/extensions/reference/declarativeNetRequest/).

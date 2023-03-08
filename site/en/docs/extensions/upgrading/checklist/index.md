@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: "Manifest V3 upgrade checklist"
 subhead: Keep track of you upgrade progress
 description: A quick reference for upgrading your extensions from Manifest V2 to Manifest V3.
-date: 2023-02-28
+date: 2023-03-08
 ---
 
 The checklists below are here to help you keep track of your upgrade work. They define tasks that must be completed with links to instructions for the work. Migration work is broadly divided into five categories as described in the [Migration summary](). 

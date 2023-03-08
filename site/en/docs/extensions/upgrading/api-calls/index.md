@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: Update your code
 subhead: 'Updates that are unrelated to other issues'
 description: 'The first of three sections describing changes needed for code that is not part of the extension service worker.'
-date: 2023-02-28
+date: 2023-03-08
 ---
 
 This is the first of three sections describing changes needed for code that is not part of the extension service worker. This section is for required code changes that are unrelated to other issues. The next two sections cover [blocking web requests](/docs/extensions/upgrading/blocking-web-requests) and [improving security](/docs/extensions/upgrading/improve-security).

@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: Upgrade to Manifest V3
 subhead: A guide to upgrading Manifest V2 extensions to Manifest V3 extensions.
 description: A guide to upgrading Manifest V2 extensions to Manifest V3 extensions.
-date: 2023-02-21
+date: 2023-03-08
 ---
 
 This section helps you upgrade an extension from Manifest V2 to Manifest V3, the newest version of the Chrome Extensions platform. A summary of the work is provided below with links to pages for each of the task areas. There is also a list of new extension features you should consider incorporating into your extension. Finally, there is a [migration checklist](/docs/extensions/mv3-migration-checklist) to help you keep track of your work.

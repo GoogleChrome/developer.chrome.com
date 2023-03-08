@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: Upgrade to a service worker
 subhead: 'Replacing background or event pages with a service worker'
 description: 'A service worker enables extensions to run only when needed, saving resources.'
-date: 2023-02-28
+date: 2023-03-08
 ---
 
 A service worker replaces the extension's background or event page to ensure that background code stays off the main thread. This enables extensions to run only when needed, saving resources. 
