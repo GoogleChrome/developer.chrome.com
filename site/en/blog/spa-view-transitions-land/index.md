@@ -33,7 +33,11 @@ The View Transition API lets you update the DOM in a single step, while generati
   <figcaption>Transitions created with the View Transition API. <a href="https://http203-playlist.netlify.app/">Try the demo site</a> – Requires Chrome 111+.</figcaption>
 </figure>
 
-This was a frequently-requested feature from developers, including me, and I think we've managed to land it in a way that balances good defaults with extensibility and customization. That sounds like we're patting ourselves on the back, but [developer](https://twitter.com/DavidKPiano/status/1428043899482824710) [feedback](https://twitter.com/jods16/status/1428434783441494023) was key to the design of this feature. [An earlier prototype](https://github.com/WICG/view-transitions/tree/92ea1f3e8cd5e16099b288838644d04c6cb08b61) of this feature was much less flexible, and folks (like you?) who took the time to play with the prototypes and provide feedback triggered a total rethink. Thank you!
+{% Aside 'warning' %}
+In our efforts to work on future enhancements to this feature, we broke it in Chrome Canary. Oops! But hey, that's what Canary's for. If you want to try view transitions today, use stable Chrome 111, or beta Chrome 112.
+{% endAside %}
+
+These kinds of transitions were a frequently-requested feature from developers, including me, and I think we've managed to land it in a way that balances good defaults with extensibility and customization. That sounds like we're patting ourselves on the back, but [developer](https://twitter.com/DavidKPiano/status/1428043899482824710) [feedback](https://twitter.com/jods16/status/1428434783441494023) was key to the design of this feature. [An earlier prototype](https://github.com/WICG/view-transitions/tree/92ea1f3e8cd5e16099b288838644d04c6cb08b61) of this feature was much less flexible, and folks (like you?) who took the time to play with the prototypes and provide feedback triggered a total rethink. Thank you!
 
 To get to grips with the feature, and play with some demos, [check out our guide](/docs/web-platform/view-transitions/). If there's something you feel isn't covered there, please [reach out to me on Twitter](https://twitter.com/jaffathecake), [Mastodon](https://mastodon.social/@jaffathecake), or [via email](mailto:view-transitions-api@chromium.org).
 
