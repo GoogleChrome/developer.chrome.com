@@ -28,7 +28,7 @@ How many times a day do you look up documentation on CSS properties? The **Eleme
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/v0joPkQg0NiMauy0bwwB.png", alt="The tooltip with documentation on a CSS property.", width="800", height="651" %}
 
-The tooltip also has a **Learn more** link that takes you to an [MDN CSS Reference](https://developer.mozilla.org/docs/Web/CSS/Reference) on this very property.
+The tooltip also has a **Learn more** link that takes you to an [MDN CSS Reference](https://developer.mozilla.org/docs/Web/CSS/Reference) on this property.
 
 If you know CSS well, you might find the tooltips bothersome. To turn them all off, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Don't show**.
 
@@ -47,7 +47,7 @@ Chromium issue: [1401107](https://crbug.com/1401107).
 
 The **Elements** > **Styles** pane now recognizes [CSS Nesting](https://w3c.github.io/csswg-drafts/css-nesting/) syntax and applies nested styles to the right elements.
 
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/94Hz4zHWGUgVIV215KDg.mp4", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/Wog2uOaJTV84OtXcHpYH.mp4", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f1ed9b6180cb75fcfd43dfac95ac9a40c35e03df #}
 
@@ -190,19 +190,19 @@ This DevTools version (112) starts the [four-phase **JavaScript Profiler** depre
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/v4S5YWGdBV3nbc3OkGZ3.png", alt="Deprecation banner at the top of the Profiler.", width="800", height="712" %}
 
-Instead of the **Profiler**, use the **Performance** panel to profile CPU. Additionally, the **Performance** panel now supports CPU profile uploads from a URL as the **Profiler** did.
+Instead of the **Profiler**, use the [**Performance**](/docs/devtools/performance/reference/#main) panel to profile CPU.
 
 Learn more and provide feedback in the corresponding [RFC](https://github.com/ChromeDevTools/rfcs/discussions/2) and [crbug.com/1354548](https://crbug.com/1354548). 
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/71244f613a27289936b979fe515346137d0190f8 #}
 
-Chromium issues: [1417647](https://crbug.com/1417647), [1417439](https://crbug.com/1417439).
+Chromium issue: [1417647](https://crbug.com/1417647).
 
 ## Lighthouse 10 {: #lighthouse }
 
 The **Lighthouse** panel now runs [Lighthouse 10.0.1](/blog/lighthouse-10-0/). For more details, see [What's new in Lighthouse 10.0.1](/blog/lighthouse-10-0/).
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ZtDyFg7cjkxacORB3GQn.svg", alt="Empty checkbox.", width="24", height="24" %} **Legacy navigation** is now disabled by default. This option uses legacy [Lighthouse configuration](https://github.com/GoogleChrome/lighthouse/blob/main/docs/configuration.md) in navigation mode.
+**Lighthouse** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ZtDyFg7cjkxacORB3GQn.svg", alt="Empty checkbox.", width="24", height="24" %} **Legacy navigation** is now disabled by default. This option uses legacy [Lighthouse configuration](https://github.com/GoogleChrome/lighthouse/blob/main/docs/configuration.md) in navigation mode.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/mYuX9d2TFaJuWBOYGN5R.png", alt="Disabled legacy navigation.", width="800", height="548" %}
 
@@ -226,7 +226,7 @@ These are some noteworthy fixes in this release:
 - The **Performance** panel now supports CPU profile uploads from a URL ([1417439](https://crbug.com/1417439)).
 - DevTools improved autocompletion:
   - **Sources**: Consistent completions of any word ([1320204](https://crbug.com/1320204)).
-  - **Console**: `Arrow down` selects the first suggestion and suggestions get a `Tab` hint ([1276960](https://crbug.com/1276960)).
+  - **Console**: `Arrow down` selects the first suggestion and suggestions get `Tab` hints ([1276960](https://crbug.com/1276960)).
 - DevTools added an [event listener breakpoint](/docs/devtools/javascript/breakpoints/#event-listeners) to let you pause when you open a [Document Picture-in-Picture window](https://wicg.github.io/document-picture-in-picture/#dom-documentpictureinpicture-onenter) ([1315352](https://crbug.com/1315352)).
 - DevTools set up a workaround that properly displays Vue2 webpack artifacts as JavaScript ([1416562](https://crbug.com/1416562)).
 - A [ **Console** setting](/docs/devtools/settings/preferences/#console) gets a better name: Automatically expand console.trace() messages. ([1139616](https://crbug.com/1139616)).
