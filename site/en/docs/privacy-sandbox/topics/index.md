@@ -113,7 +113,7 @@ Using request and response headers to access topics and mark them as observed ca
 
 ## Debug your API implementation
 
-The `chrome://topics-internals` page is available in Chrome on desktop if [you enable the Topics API](/docs/privacy-sandbox/topics/#feature-flags). This displays topics for the current user, topics inferred for hostnames, and technical information about the API implementation.
+The `chrome://topics-internals` page is available in Chrome on desktop if [you enable the Topics API](/docs/privacy-sandbox/topics/demo/#feature-flags). This displays topics for the current user, topics inferred for hostnames, and technical information about the API implementation.
 
 The `chrome://topics-internals` page is new. The design and functionality are still under discussion. We're currently iterating and improving the design based on developer feedback. Add your feedback at [bugs.chromium.org](https://bugs.chromium.org/p/chromium/issues/entry?template=Defect+report+from+developer&components=Blink%3ETopicsAPI).
 
@@ -150,7 +150,7 @@ Use hostnames only (without protocol or path) to view inferred topics from the `
 
 ### View Topics API information
 
-Information is provided about the Topics API implementation and settings, such as the [taxonomy](/docs/privacy-sandbox/topics/#taxonomy) version and [epoch](/docs/privacy-sandbox/topics/#epoch) duration. These values reflect default settings for the API or parameters successfully set [from the command line](/docs/privacy-sandbox/topics/#feature-flags). This is handy for checking that command-line flags have worked as expected. In the example below, `time_period_per_epoch` has been set to 15 seconds (the default is seven days).
+Information is provided about the Topics API implementation and settings, such as the [taxonomy](/docs/privacy-sandbox/topics/#taxonomy) version and [epoch](/docs/privacy-sandbox/topics/#epoch) duration. These values reflect default settings for the API or parameters successfully set [from the command line](#feature-flags). This is handy for checking that command-line flags have worked as expected. In the example below, `time_period_per_epoch` has been set to 15 seconds (the default is seven days).
 
 <figure>
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/7vFveJtxWgY6yB8gHnW3.png",
@@ -167,7 +167,7 @@ The parameters correspond to flags that can be set when running Chrome from the 
 --enable-features=BrowsingTopics:time_period_per_epoch/15s,PrivacySandboxAdsAPIsOverride,PrivacySandboxSettings3,OverridePrivacySandboxSettingsLocalTesting
 ```
 
-#### Chrome flags
+#### Chrome flags {: #feature-flags}
 
 
 Below are the relevant flags for Chrome, including their default value and descrptions:
