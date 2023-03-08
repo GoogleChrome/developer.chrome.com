@@ -603,16 +603,15 @@ This statement holds true for both APE and RMSPE_T.
 
 #### APE (average percentage error) {: #ape}
 
-##### How to interpret APE
-Lower APE values mean better signal-to-noise ratios. 
 APE is the ratio of the noise over the signal, namely the true summary value.
+
+Lower APE values mean better signal-to-noise ratios.
 
 {% Aside %}
 
 What does it mean if APE is higher than 100%?
 It means that the noise is really high—higher than the true value itself.
 For example, APE = 200% means that added noise is twice as high as the signal.
-
 
 What does it mean if APE is Infinity?
 It means that the true summary value was 0, i.e. that at least one bucket was empty. Read more in the [examples section](#noise-examples).
@@ -623,12 +622,15 @@ It means that the true summary value was 0, i.e. that at least one bucket was em
 
 For a given summary report, APE is calculated as follows:
 
-{% Img src="image/URLGRmk9LjR39BLvmeGDZFZkz3p2/7gz1jLNIEfNzmd5n0ktu.png", alt="ALT_TEXT_HERE", width="347", height="62" %}
+<figure>
+{% Img src="image/URLGRmk9LjR39BLvmeGDZFZkz3p2/7gz1jLNIEfNzmd5n0ktu.png", alt="APE(noise, true) = E(noise/true)", width="347", height="62" %}
+<figcaption style="text-align:left">
+  The equation for APE. Absolute values are required, as noise can be negative.
+</figcaption>
+</figure>
 
-*\(Note that absolute values are required because the noise can be negative.\)*
-
-*True* is the true summary value. 
-*APE* is the average of the noise over each true summary value — averaged over all entries in a summary report.
+*True* is the true summary value. *APE* is the average of the noise over each
+true summary value, averaged over all entries in a summary report.
 In Noise Lab, this is then multiplied by 100 to give a percentage.
 
 ##### Pros and Cons
@@ -643,18 +645,21 @@ for APE calculation.
 
 #### RMSPE_T  (root-mean-square percentage error with a threshold) {: #rmspe}
 
+RMSPE_T (root-mean-square percentage error with a threshold) is another measure for noise.
+
 ##### How to interpret RMSPE_T
+
 Lower RMSPE_T values mean better signal-to-noise ratios. 
-RMSPE_T (root-mean-square percentage error with a threshold) is another measure for noise. 
+
 RMSPE_T is typically higher than the average percentage error. For example, if a noise ratio that's acceptable for your use case is 20%, and RMSPE_T is 20%, you can be confident that noise levels fall into your acceptable range.
 
 {% Aside %}
 What does it mean if RMSPE_T is above 100%?
 The interpretation of  RMSPE_T over 100% is similar to that of an APE over 100% LINK.
 
+RMSPE (Root Mean Square Error) is a common metricused by data scientists. 
+RMSPE_T is a variation of RMSPE. RMSPE_T differs from RMSPE in two ways:
 
-If you're familiar with RMSPE (Root Mean Square Error)
-RMSPE_T is a variation of RMSPE, a common error metric data scientists will be familiar with. RMSPE_T differs from RMSPE in two ways:
 1. It uses a percentage error similar to noise-to-signal rate, like noise/true-value. 
 2. It assumes the existence of minimal signal: the percentage looks like noise/max(true, T). 
 
@@ -664,15 +669,19 @@ RMSPE_T is a variation of RMSPE, a common error metric data scientists will be f
 
 For a given summary report, RMSPE_T is calculated as follows:
 
-{% Img src="image/URLGRmk9LjR39BLvmeGDZFZkz3p2/zNE4v707JUoUS8keFVsz.png", alt="ALT_TEXT_HERE", width="377", height="59" %}
-
-*\(Note that absolute value is required because the noise can be negative.\)*
+<figure>
+{% Img src="image/URLGRmk9LjR39BLvmeGDZFZkz3p2/zNE4v707JUoUS8keFVsz.png", alt="Formula for RMSPE_T", width="377", height="59" %}
+<figcaption style="text-align:left">
+  The equation for RMSPE_T. Absolute values are required, as noise can be negative.
+</figcaption>
+</figure>
 
 In Noise Lab, this is then multiplied by 100 to give a percentage.
 
 ##### Pros and cons
-RMSPE_T is a bit more complex to grasp than APE.
-However, it has a few advantages that make it in some cases more suitable than APE for analyzing noise in summary reports:
+
+RMSPE_T is a bit more complex to grasp than APE. However, it has a few advantages that make it in some cases more suitable than APE for analyzing noise in summary reports:
+
 * **It's more stable.** *"T"* is a threshold: it's used to give less weight, in the RMSPE_T calculation, to buckets that have less conversions and are therefore more sensitive to noise due to their small size. With T, the metric does not spike on buckets with few conversions. If T is equal to 5, a noise value as small as 1 on a bucket with 0 conversion will not be displayed as way over 100%. Instead, it will be capped at 20%, which is equivalent to 1/5, as T is equal to 5. By giving less weight to buckets that are more sensitive to noise due to their small size, this metric is more stable — and therefore makes it easier to compare two simulations.
 * **It allows for easy aggregation.** Knowing RMSPE_t of multiple buckets, together with their true counts, allows one to compute the RMSPSE_t of their sum via a simple formula. This also allows one to easily optimize for RMSPE_t of these combined values. (While aggregation is possible for APE, the formula is quite complicated since it involves the absolute value of sum of Laplace noises, which makes it hard to optimize.) 
 
@@ -686,7 +695,6 @@ Review the [source code](https://github.com/privacysandbox/noise-lab/blob/main/p
 {% Aside 'example' %}
 
 **Summary report with three buckets:**
-
 
 bucket_1 = noise: 10, trueSummaryValue: 100
 
@@ -715,12 +723,8 @@ bucket_3 = noise: 20, trueSummaryValue: 20
 
 APE = (0.1 + 0.2 + 1) / 3 = **43%**
 
-RMSPE_T = sqrt( ( (10/max(5,100))^2  + (20/max(5,100))^2 + (20/max(5,20))^2) / 3) 
-
-      =  sqrt( (0.01 + 0.04 + 1.0) / 3) =  0.59 =  **59%**
+RMSPE_T = sqrt( ( (10/max(5,100))^2  + (20/max(5,100))^2 + (20/max(5,20))^2) / 3)  =  sqrt( (0.01 + 0.04 + 1.0) / 3) =  0.59 =  **59%**
 {% endAside %}
-
-
 
 {% Aside 'example' %}
 
@@ -734,13 +738,10 @@ bucket_3 = noise: 20, trueSummaryValue: 0
 
 APE = (0.1 + 0.2 + Infinity) / 3 = **Infinity**
 
-RMSPE_T = sqrt( ( (10/max(5,100))^2  + (20/max(5,100))^2  + (20/max(5,0))^2) / 3)
-      =  sqrt( (0.01 + 0.04 + 16.0) / 3) =  2.31 =  **231%**
+RMSPE_T = sqrt( ( (10/max(5,100))^2  + (20/max(5,100))^2  + (20/max(5,0))^2) / 3) =  sqrt( (0.01 + 0.04 + 16.0) / 3) =  2.31 =  **231%**
 {% endAside %}
 
 {% endDetails %}
-
-
 
 {% Details %}
 {% DetailsSummary %}
