@@ -126,7 +126,7 @@ API callers only receive topics they've recently observed, and the topics for a 
 
 The table below outlines an example (though unrealistically small) of a hypothetical browsing history for a user during a single epoch, showing topics associated with the sites they've visited, and the API callers present on each site (the entities that call `document.browsingTopics()` in JavaScript code included on the site).
 
-<table>
+<table class="with-heading-tint">
   <thead>
   <tr>
   <th><strong>Site</strong></th>
@@ -168,7 +168,7 @@ The user visited diy-clothing.example, which has the "Fashion & Style" topic, bu
 
 In week two, the user visits another site:
 
-<table>
+<table class="with-heading-tint">
   <thead>
     <tr>
     <th><strong>Site</strong></th>
@@ -188,7 +188,7 @@ In week two, the user visits another site:
 In addition, code from adtech2.example is added to diy-clothing.example:
 
 
-<table>
+<table class="with-heading-tint">
   <thead>
     <tr>
     <th><strong>Site</strong></th>
