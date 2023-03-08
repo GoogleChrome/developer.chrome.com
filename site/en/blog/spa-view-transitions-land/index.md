@@ -30,7 +30,7 @@ The View Transition API lets you update the DOM in a single step, while generati
     muted="true",
     controls="true"
   %}
-  <figcaption>Transitions created with the View Transition API. <a href="https://http203-playlist.netlify.app/">Try the demo site</a> – Requires Chrome 111+.</figcaption>
+  <figcaption>Transitions created with the View Transition API. <a href="https://http203-playlist.netlify.app/">Try the demo site</a>–Requires Chrome 111+.</figcaption>
 </figure>
 
 {% Aside 'warning' %}
