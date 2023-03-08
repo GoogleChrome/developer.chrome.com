@@ -97,13 +97,9 @@ Run the Puppeteer script to get a Lighthouse report in a `flow.report.html` file
 
 In addition to custom, CSS, ARIA, text, and XPath selectors, you can now record using [pierce selectors](https://pptr.dev/guides/query-selectors#pierce-selectors-pierce). These selectors behave like CSS ones but can also pierce through shadow roots.
 
-Start a new recording on a page with [shadow DOM](https://web.dev/shadowdom-v1/) and check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Pierce** in **Selector types to record**.
+Start a new recording on a page with [shadow DOM](https://web.dev/shadowdom-v1/) and check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Pierce** in **Selector types to record**. Record your interaction with elements in the shadow DOM and inspect the corresponding step.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/1fMy1rQd3SYKMyqS5bPi.png", alt="Setting the Recorder to use pierce selectors.", width="800", height="899" %}
-
-Record your interaction with elements in the shadow DOM and inspect the corresponding step.
-
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/P4JFsGHTt5yaH9hAgxc3.png", alt="Pierce selector in action.", width="800", height="711" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Spqbf2DG3Fr0D2sc1kgC.png", alt="Setting the Recorder to use pierce selectors; Pierce selector in action.", width="800", height="534" %}
 
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/a3968d1c01dd4d1a00b9aa13c50bfdc66995879e #}
 
