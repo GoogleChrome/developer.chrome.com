@@ -196,7 +196,7 @@ The methods and properties listed below need to change in Manifest V3.
 | `chrome.extension.onRequestExternal`  | `chrome.runtime.onMessageExternal`                   |
 | `chrome.extension.sendMessage()`      | `chrome.runtime.sendMessage()`                       |
 | `chrome.extension.sendRequest()`      | `chrome.runtime.sendMessage()`                       |
-| `chrome.runtime.onSuspend` (background scripts) | Not supported in extension service workers. Use the web platform events `beforeunload` and `unload` instead. |
+| `chrome.runtime.onSuspend` (background scripts) | Not supported in extension service workers. Use the [`beforeunload`](https://developer.mozilla.org/docs/Web/API/Window/beforeunload_event) document event instead. |
 | `chrome.tabs.getAllInWindow()`        | `chrome.tabs.query()`                                |
 | `chrome.tabs.getSelected()`           | `chrome.tabs.query()`                                |
 | `chrome.tabs.onActiveChanged`         | `chrome.tabs.onActivated`                            |
