@@ -53,7 +53,7 @@ table with three columns:
 
 ## How to fix your tap targets
 
-**Step 1:** Increase the size of tap targets that are too small.
+**Option 1:** Increase the size of tap targets that are too small.
 Tap targets that are 48&nbsp;px by 48&nbsp;px never fail the audit. If you have
 elements that shouldn't _appear_ any bigger (for example, icons), try increasing
 the `padding` property:
@@ -65,7 +65,7 @@ the `padding` property:
   </figcaption>
 </figure>
 
-**Step 2:** Increase the spacing between tap targets that are too close together
+**Option 2:** Increase the spacing between tap targets that are too close together
 using properties like `margin`. Try to have at least 8&nbsp;px between
 tap targets (Note: 8&nbsp;px is not always be enough spacing to pass the audit, especially for very small targets).
 
