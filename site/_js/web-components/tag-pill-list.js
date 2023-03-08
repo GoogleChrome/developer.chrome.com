@@ -20,13 +20,14 @@
  */
 import {BaseElement} from './base-element';
 import {html} from 'lit-element';
+import {unsafeSVG} from 'lit-html/directives/unsafe-svg';
+import closeIcon from '../../_includes/icons/close.svg';
 
 export class TagPillList extends BaseElement {
   constructor() {
     super();
 
     this.items = [];
-    this.icon = this.querySelector('tag-pill-list-icon svg');
   }
 
   static get properties() {
@@ -35,15 +36,24 @@ export class TagPillList extends BaseElement {
     };
   }
 
+  _handleClick(item) {
+    const event = new CustomEvent('remove-pill', {
+      detail: item,
+    });
+
+    this.dispatchEvent(event);
+  }
+
   render() {
     const items = this.items.map(
       item => html`
         <span
-          class="surface hairline rounded-lg tag-pill type--label display-inline-flex align-center"
+          class="surface hairline rounded-lg tag-pill type--label display-inline-flex align-center "
           data-key="${item.key}"
           data-value="${item.value}"
+          @click="${() => this._handleClick(item)}"
         >
-          ${item.value} ${this.icon?.cloneNode(true)}
+          ${item.value} ${unsafeSVG(closeIcon)}
         </span>
       `
     );

@@ -16,7 +16,6 @@
 
 const test = require('ava');
 const {withPage, addPageScript} = require('../../../../puppeteer');
-const {html} = require('common-tags');
 
 test('tag-pill-list: renders expected items', withPage, async (t, page) => {
   const data = [
@@ -34,9 +33,7 @@ test('tag-pill-list: renders expected items', withPage, async (t, page) => {
     },
   ];
 
-  await page.setContent(html`
-    <tag-pill-list items="${JSON.stringify(data)}" />
-  `);
+  await page.setContent(`<tag-pill-list items='${JSON.stringify(data)}' />`);
 
   await addPageScript(page, '_tag-pill-list.js');
 
@@ -61,7 +58,7 @@ test('tag-pill-list: renders expected items', withPage, async (t, page) => {
   t.is(items[2].value, 'Advanced Apps and Project Fugu');
 });
 
-test('tag-pill-list: adds icon to pills', withPage, async (t, page) => {
+test('tag-pill-list: items is reactive', withPage, async (t, page) => {
   const data = [
     {
       key: 'googlers',
@@ -71,30 +68,75 @@ test('tag-pill-list: adds icon to pills', withPage, async (t, page) => {
       key: 'locations',
       value: 'Amsterdam, Netherlands',
     },
+    {
+      key: 'topics',
+      value: 'Advanced Apps and Project Fugu',
+    },
   ];
 
-  await page.setContent(html`
-    <tag-pill-list items="${JSON.stringify(data)}">
-      <tag-pill-list-icon>
-        <svg>
-          <rect width="100" height="100" x="50" y="50" />
-        </svg>
-      </tag-pill-list-icon>
-    </tag-pill-list>
-  `);
+  await page.setContent(`<tag-pill-list items='${JSON.stringify(data)}' />`);
 
   await addPageScript(page, '_tag-pill-list.js');
 
-  const numPills = await page.evaluate(() => {
+  const initialItemCount = await page.evaluate(() => {
     return document.querySelectorAll('.tag-pill').length;
   });
 
-  const haveItemsWithoutIcon = await page.evaluate(() => {
-    const pills = Array.from(document.querySelectorAll('.tag-pill'));
+  await page.evaluate(() => {
+    const tagPillList = document.querySelector('tag-pill-list');
 
-    return pills.some(e => e.querySelector('svg') === null);
+    tagPillList.items = [
+      {
+        key: 'googlers',
+        value: 'adamsilverstein',
+      },
+    ];
   });
 
-  t.is(numPills, 2);
-  t.is(haveItemsWithoutIcon, false);
+  const itemCount = await page.evaluate(() => {
+    return document.querySelectorAll('.tag-pill').length;
+  });
+
+  t.is(initialItemCount, 3);
+  t.is(itemCount, 1);
 });
+
+test(
+  'tag-pill-list: fires removal event on click',
+  withPage,
+  async (t, page) => {
+    const data = [
+      {
+        key: 'googlers',
+        value: 'adamsilverstein',
+      },
+      {
+        key: 'locations',
+        value: 'Amsterdam, Netherlands',
+      },
+    ];
+
+    await page.setContent(
+      `<tag-pill-list items='${JSON.stringify(data)}'></tag-pill-list>`
+    );
+
+    await addPageScript(page, '_tag-pill-list.js');
+
+    let dispatchedEvent = false;
+
+    await page.exposeFunction('onCustomEvent', async () => {
+      dispatchedEvent = true;
+    });
+
+    await page.evaluate(() => {
+      document
+        .querySelector('tag-pill-list')
+        .addEventListener('remove-pill', () => window.onCustomEvent());
+    });
+
+    const showMore = await page.$('.tag-pill:first-child');
+    await showMore.click();
+
+    t.is(dispatchedEvent, true);
+  }
+);

@@ -16,4 +16,26 @@
 
 import './web-components/enhanced-select';
 import './web-components/checkbox-group';
-import './web-components/tag-pill-list';
+import {TagPillList} from './web-components/tag-pill-list';
+
+const tagPillComponent = document.querySelector('#tag-pill-demo tag-pill-list');
+const tagPillButton = document.querySelector('#tag-pill-demo button');
+
+tagPillComponent?.addEventListener('remove-pill', e => {
+  if (!(e instanceof CustomEvent) || !(tagPillComponent instanceof TagPillList))
+    return;
+
+  tagPillComponent.items = tagPillComponent.items.filter(i => i !== e.detail);
+});
+
+tagPillButton?.addEventListener('click', () => {
+  if (!(tagPillComponent instanceof TagPillList)) return;
+
+  tagPillComponent.items = [
+    ...tagPillComponent.items,
+    {
+      key: 'addition',
+      value: 'Addition',
+    },
+  ];
+});
