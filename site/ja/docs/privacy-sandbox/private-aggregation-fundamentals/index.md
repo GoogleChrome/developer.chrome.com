@@ -22,15 +22,15 @@ authors:
 - [*集計キー*](#aggregation-key) (バケットとも呼ばれます) とは、あらかじめ決められたデータポイントのコレクションのことを指します。たとえば、ブラウザーが国名を報告する位置データのバケットを収集する必要があるとします。集計キーには、複数のディメンション (たとえば、国名とコンテンツウィジェットの ID など) を含めることができます。
 - [*集計可能な値*](#aggregatable-value)とは、集計キーに収集された個々のデータポイントのことを指します。フランスからのユーザーが何人コンテンツを閲覧したかを測定する場合、`France` が集計キーのディメンションとなり、`1` の `viewCount` が集計可能な値となります。
 - *集計可能なレポート*は、ブラウザー内で生成および暗号化が行われます。Private Aggregation API の場合、これには 1 件のイベントに関するデータが含まれます。
-- The [*Aggregation Service*](/docs/privacy-sandbox/aggregation-service) processes data from aggregatable reports to create a summary report.
-- A *summary report* is the final output of the Aggregation Service, and contains noisy aggregated user data and detailed conversion data.
+- [*集計サービス*](/docs/privacy-sandbox/aggregation-service)は、集計可能なレポートからのデータを処理してサマリーレポートを作成します。
+- *サマリーレポート*は集計サービスの最終的な出力結果であり、ノイズの多い集計済みのユーザーデータと詳細な変換データを含んでいます。
 - *[ワークレット](https://developer.mozilla.org/docs/Web/API/Worklet)*は、特定の JavaScript 関数を実行して情報をリクエストしたユーザーに返すことができるインフラストラクチャの一部です。ワークレットの内部では JavaScript を実行することができますが、外部のページと対話したり通信を行ったりすることはできません。
 
 ## プライベート集計のワークフロー
 
 集計キーと集計可能な値を使用して Private Aggregation API を呼び出すと、ブラウザーは集計可能なレポートを生成します。そのレポートは、レポートのバッチ化を行うサーバーへと送信されます。バッチ化されたレポートはその後集計サービスによって処理され、サマリーレポートが生成されます。
 
-<figure class="screenshot"> {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/NqNZ51sVCASKNyNbYoHv.png", alt="Data flows from the client to the collector, then to the Aggregation Service to generate a summary report.", width="800", height="211" %} </figure>
+<figure class="screenshot">{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/NqNZ51sVCASKNyNbYoHv.png", alt="データはクライアントからコレクター、そして集計サービスへと送られてサマリーレポートが生成されます", width="800", height="211" %}</figure>
 
 1. Private Aggregation API を呼び出すとクライアント (ブラウザー) は集計可能なレポートを生成してサーバーへと送信し、収集が行われます。
 2. サーバーはクライアントからレポートを収集し、集計サービスへと送るためにバッチ化を行います。
@@ -64,7 +64,7 @@ Private Aggregation API に提供されるキーは、[BigInt](https://developer
   </tr>
 </table>
 
-{% Aside 'example' %} If a dimension has available key space for multiple digits, but the value has fewer, add leading zeros. For example, if country ID allows 3 digits, the country ID for Algeria is `003`. {% endAside %}
+{% Aside %}ディメンションに複数桁のキースペースがあるものの値の桁数が少ない場合には、先頭に 0 を追加します。たとえば国 ID が 3 桁の場合、アルジェリアの国 ID は `003` となります。{% endAside %}
 
 集計キーは、SHA-256 などのハッシュ生成メカニズムを用いて生成することも可能です。たとえば、文字列 `“WidgetID=3276;CountryID=67”` は同等の 16 進数列である BigInt `86849257128445315549261263548129498923703362729078813106545648910309959898558n` へと変換することができます。
 
@@ -148,22 +148,22 @@ Private Aggregation API に対する各呼び出しは*コントリビューシ�
 
 ## 集計サービス
 
-{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/b1avI43zUaKT2UAdGOo1.png", alt="The service runs in a TEE, decrypts the aggregatable reports and adds noise to create the final summary report.", width="800", height="457" %}
+{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/b1avI43zUaKT2UAdGOo1.png", alt="サービスは TEE で実行し、集計可能なレポートを復号化してノイズを追加することで、最終的なサマリーレポートを作成します。", width="800", height="457" %}
 
-The [Aggregation Service](/docs/privacy-sandbox/aggregation-service/) receives encrypted aggregatable reports from the collector and generates summary reports.
+[集計サービス](/docs/privacy-sandbox/aggregation-service/)は、コレクターから暗号化された集計可能なレポートを受け取り、サマリーレポートを生成します。
 
-To decrypt the report payload, the Aggregation Service fetches a decryption key from the coordinator. The service runs in a trusted execution environment (TEE), which provides a level of assurance for data integrity, data confidentiality, and code integrity. Though you own and operate the service, you will not have visibility into the data being processed inside the TEE.
+レポートのペイロードを復号化するために、集計サービスはコーディネーターから復号化キーを取得します。このサービスは、データの整合性、データの機密性、コードの整合性について一定レベルの保証を提供する Trusted Execution Environment（TEE、信頼できる実行環境）で実行されます。自身でサービスを所有し運用することは可能ですが、TEE の内部で処理されているデータを可視化することはできません。
 
 ## サマリーレポート
 
-[Summary reports](/docs/privacy-sandbox/summary-reports/) allow you to see the data you have collected with noise added. You can request summary reports for a given set of keys.
+[サマリーレポート](/docs/privacy-sandbox/summary-reports/)では、収集したデータをノイズが追加された状態で確認することができます。指定したキーのセットについてサマリーレポートをリクエストすることが可能です。
 
 サマリーレポートには、JSON 形式で辞書型のキーと値のペアによるデータセットが含まれています。各ペアには、以下が含まれています。
 
 - *`bucket`*: 2 進数列による集計キー。使用される集計キーが "123" の場合、bucket は "1111011" となります。
 - *`value`*: 特定の測定目標についてのサマリー値。利用可能なすべてのノイズが追加された集計可能なレポートから合算されます。
 
-For example:
+例えば以下のようにします。
 
 ```js
 [
@@ -183,11 +183,11 @@ For example:
 
 したがって、集計可能な値にスケーリングファクターを掛けることで、ノイズを減らすことができるのです。スケーリングファクターは、特定の集計可能な値をどの程度スケーリングするかを表しています。
 
-{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/qJ182Vhszwsgf1PVLEpT.png", alt="Noise is constant regardless of the aggregated value.", width="600", height="462" %}
+{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/qJ182Vhszwsgf1PVLEpT.png", alt="ノイズは集計値に関わらず一定です。", width="600", height="462" %}
 
 より大きなスケーリングファクターを選択して値をスケールアップすることで、相対的なノイズが減少します。しかしながら、これはすべてのバケットにわたるすべてのコントリビューションの合計が、コントリビューション予算の上限により早く到達してしまうことの原因にもなります。より小さなスケーリングファクター定数を選択して値をスケールダウンすれば相対的なノイズは増加しますが、予算の上限に到達するリスクは減少します。
 
-{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/qgDt0a7GaMFJ07zibVUw.png", alt="Scale the aggregatable value to the contribution budget.", width="400", height="340" %}
+{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/qgDt0a7GaMFJ07zibVUw.png", alt="集計可能な値をコントリビューション予算へとスケーリングする", width="400", height="340" %}
 
 適切なスケーリングファクターを計算するには、コントリビューション予算をすべてのキーにわたる集計可能な値の最大合計値で割ります。
 
