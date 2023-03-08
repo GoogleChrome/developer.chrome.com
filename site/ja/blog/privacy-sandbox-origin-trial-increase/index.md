@@ -69,7 +69,7 @@ tags:
 
 一部の機能は、使用されている場合にのみ後のチャネルに移行する場合があります。これは、オリジントライアルまたは機能フラグを使用して、Canary および Beta で早期にテストすることが、これらの機能を Stable に進めるために重要であることを意味します。テストでは、引き続き API ごとの機能検出を積極的に使用し、時間の経過や Chrome のバージョンごとにその機能に変化が見られることを期待しておいてください。
 
-As individual features progress, you’ll be notified on the developer mailing lists for the relevant APIs ([Attribution Reporting](https://groups.google.com/a/chromium.org/g/attribution-reporting-api-dev), [FLEDGE](https://groups.google.com/a/chromium.org/g/fledge-api-announce), [Topics](https://groups.google.com/a/chromium.org/g/topics-api-announce), and [Shared Storage](https://groups.google.com/a/chromium.org/g/shared-storage-api-announcements)). We’ll continue to update the developer documentation with a summary of active functionality.
+個々の機能の進捗状況に応じて、関連する API（[アトリビューション レポート](https://groups.google.com/a/chromium.org/g/attribution-reporting-api-dev)、[FLEDGE](https://groups.google.com/a/chromium.org/g/fledge-api-announce)、[Topics](https://groups.google.com/a/chromium.org/g/topics-api-announce)、および[共有ストレージ](https://groups.google.com/a/chromium.org/g/shared-storage-api-announcements)）の開発者メーリングリストで通知されます。アクティブな機能の概要を開発者向けドキュメントに追加して更新し続けます。
 
 アトリビューション レポート、Topics、FLEDGE、Fenced Frames はすべて Chrome Stable で現在利用可能であり、トラフィック増加の一部になります。アトリビューション レポートと Topics のトラフィック増加は今週から開始し、FLEDGE と Fenced Frames の増加は 11 月 9 日開始予定です。
 
