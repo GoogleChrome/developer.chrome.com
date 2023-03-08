@@ -1,8 +1,8 @@
 ---
 layout: "layouts/blog-post.njk"
-title: "Participate in Deprecation Trial for unpartitioned third-party storage, Service Workers, and Communication APIs"
+title: "Participate in deprecation trial for unpartitioned third-party storage, Service Workers, and Communication APIs"
 description: >
-  Beginning gradually in Chrome 112, storage, service workers, and communication APIs will be partitioned in third-party contexts. For sites that need time to adjust to this new feature, these deprecation trials will allow them to temporarily keep their third-party storage, service workers, and communication APIs unpartitioned.
+  Beginning gradually in Chrome 113, storage, service workers, and communication APIs will be partitioned in third-party contexts. For sites that need time to adjust to this new feature, these deprecation trials will allow them to temporarily keep their third-party storage, service workers, and communication APIs unpartitioned.
 authors:
   - arichiv
   - kyraseevers
@@ -11,7 +11,7 @@ tags:
   - privacy
 ---
 
-Beginning gradually in [Chrome 112](https://chromiumdash.appspot.com/schedule),
+Beginning gradually in [Chrome 113](https://chromiumdash.appspot.com/schedule),
 storage, service workers, and communication APIs will be
 [partitioned in third-party contexts](/docs/privacy-sandbox/storage-partitioning/).
 In addition to being isolated by the same-origin policy, the affected APIs used
@@ -30,7 +30,7 @@ This trial is available due to a need for some sites to migrate their Firebase
 
 ## Available deprecation trials
 
-Starting in [Chrome 111 Beta](https://chromiumdash.appspot.com/schedule), we'll
+Starting in [Chrome 112 Beta](https://chromiumdash.appspot.com/schedule), we'll
 open up two deprecation trials:
 
 1.  [`DisableThirdPartyStoragePartitioning`](/origintrials/#/view_trial/-8517432795264450559):
@@ -41,7 +41,7 @@ open up two deprecation trials:
     allows a site to unpartition sessionStorage across navigations.
 
 These will enable sites to discover and fix problems before third-party
-partitioning begins its rollout process in M112.
+partitioning begins its rollout process in Chrome 113.
 
 Below is an overview of the deprecation trial and what to expect. If you have
 feedback to share or you experience any issues throughout this trial let us know
@@ -76,7 +76,7 @@ If you enroll in the
 `DisableThirdPartySessionStoragePartitioningAfterGeneralPartitioning`
 deprecation trial, navigating a tab to an enrolled origin will cause all
 cross-site iframes of that same origin to remain unpartitioned only for
-`Window.sessionStorage` only and only for the lifetime of that particular tab.
+`Window.sessionStorage` and only for the lifetime of that particular tab.
 Whereas the `DisableThirdPartyStoragePartitioning` deprecation trial affects all
 third-party contexts embedded within the enrolled origin, the
 `DisableThirdPartySessionStoragePartitioningAfterGeneralPartitioning`
@@ -96,7 +96,7 @@ Example:
 Sites should audit their usage of unpartitioned storage, service worker, and
 communication APIs in third-party contexts, and, if needed, prepare for
 third-party partitioning before these deprecation trials expire. **The intent is
-to expire these deprecation trials with M123 on March 5, 2024.**
+to expire these deprecation trials with Chrome 123, ending on May 2, 2024.**
 
 To instruct the browser to unpartition storage in third-party content embedded
 on its pages, top-level sites need to register for one or both of the
@@ -106,13 +106,13 @@ response headers (see detailed example below).
 Each deprecation trial is available on Windows, Mac, Linux, Chrome OS, Android,
 and Android WebView.
 
-## Participate in the Deprecation Trials
+## Participate in the deprecation trials
 
 The following is a brief overview of how to participate in one or both of the
 deprecation trials. For more detailed instructions, visit
 [Get started with origin trials](/docs/web-platform/origin-trials).
 
-1.  Launch Chrome M111 (or later) and ensure the
+1.  Launch Chrome version 112 (or later) and ensure the
     [`ThirdPartyStoragePartitioning`](/blog/storage-partitioning-dev-trial/)
     flag is enabled.
 1.  Verify that the behavior of third-party content embedded in your
@@ -129,7 +129,7 @@ deprecation trials. For more detailed instructions, visit
 1.  Add an origin trial token to your page:
     1. For the `DisableThirdPartySessionStoragePartitioningAfterGeneralPartitioning` trial you may add an `Origin-Trial: <DEPRECATION TRIAL TOKEN>` to         your top-level site’s HTTP response header, where `<DEPRECATION TRIAL TOKEN>` contains the token you got when registering for the deprecation             trial. You can also do this via HTML `<meta> tag.
     1. For the `DisableThirdPartyStoragePartitioning` trial, the token must be given via an HTML `<meta>` tag. The HTTP header method is not supported.
-1.  Load your website in Chrome M111 Beta (or later) with
+1.  Load your website in Chrome 112 Beta (or later) with
     `ThirdPartyStoragePartitioning` still enabled and verify that any
     partitioning related issues have been properly mitigated.
 1.  To stop participating in the deprecation trial simply remove the header
