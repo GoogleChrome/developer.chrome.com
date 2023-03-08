@@ -586,7 +586,7 @@ Click on the buttons in the top menu to toggle between the two modes (_#1. in th
 
 #### Core concept
 
-Noise is added in Noise Lab to provide [differential privacy](https://en.wikipedia.org/wiki/Differential_privacy). A high noise percentage value indicates that buckets/keys are sparse, and only contain contributions from a limited number of sensitive events. This means, to protect user privacy, the data has been made more noisy and hence less useful. **This is an expected behavior for differential privacy systems.** A high noise percentage value indicates that the system's "hiding in the crowds" mechanism has kicked in to protect individual user privacy. 
+Noise is added in Noise Lab to protect individual user privacy. A high noise percentage value indicates that buckets/keys are sparse, and only contain contributions from a limited number of sensitive events. This means, to protect user privacy, the data has been made more noisy. A high noise percentage value indicates that the system's "hiding in the crowds" mechanism has kicked in to protect individual user privacy. 
 On the other hand, a low noise percentage value indicates that the data setup has been designed in such a way that allows "hiding in the crowd": buckets contain contributions from a sufficient number of events to ensure that individual user privacy is protected.
 
 
@@ -606,7 +606,7 @@ For example, APE = 200% means that added noise is twice as high as the signal.
 
 
 What does it mean if APE is Infinity?
-It means that the true summary value was 0, i.e. that at least one bucket was empty. Read more in the examples section.
+It means that the true summary value was 0, i.e. that at least one bucket was empty. Read more in the [examples section](#noise-examples).
 
 {% endAside %}
 
@@ -621,15 +621,113 @@ For a given summary report, APE is calculated as follows:
 *APE* is the average of the noise over each true summary value — averaged over all entries in a summary report.
 In Noise Lab, this is then multiplied by 100 to give a percentage.
 
-#### Pros and Cons
-Buckets with smaller sizes have a disproportionate impact on the final value of APE. That could be misleading when assessing noise. This is why we've added another metric, RMSPE_T, that is designed to mitigate this limitation of APE. Review the examples for details. 
+##### Pros and Cons
+Buckets with smaller sizes have a disproportionate impact on the final value of APE. That could be misleading when assessing noise. This is why we've added another metric, [RMSPE_T](#rmspe), that is designed to mitigate this limitation of APE. Review the [examples](#noise-examples) for details. 
 
-#### Code
-Review here the source code for APE calculation.
+##### Code
+Review [here](https://github.com/privacysandbox/noise-lab/blob/main/public/index.html#L43) the source code for APE calculation.
 
 
+#### RMSPE_T  (root-mean-square percentage error with a threshold) {: #rmspe}
+
+##### How to interpret RMSPE_T
+Lower RMSPE_T values mean better signal-to-noise ratios. 
+RMSPE_T (root-mean-square percentage error with a threshold) is another measure for noise. 
+RMSPE_T is typically higher than the average percentage error. For example, if a noise ratio that's acceptable for your use case is 20%, and RMSPE_T is 20%, you can be confident that noise levels fall into your acceptable range.
+
+{% Aside %}
+What does it mean if RMSPE_T is above 100%?
+The interpretation of  RMSPE_T over 100% is similar to that of an APE over 100% LINK.
+
+
+If you're familiar with RMSPE (Root Mean Square Error)
+RMSPE_T is a variation of RMSPE, a common error metric data scientists will be familiar with. RMSPE_T differs from RMSPE in two ways:
+1. It uses a percentage error similar to noise-to-signal rate, like noise/true-value. 
+2. It assumes the existence of minimal signal: the percentage looks like noise/max(true, T). 
+
+{% endAside %}
+
+##### Formula
+
+For a given summary report, RMSPE_T is calculated as follows:
+
+{% Img src="image/URLGRmk9LjR39BLvmeGDZFZkz3p2/zNE4v707JUoUS8keFVsz.png", alt="ALT_TEXT_HERE", width="377", height="59" %}
+
+*\(Note that absolute value is required because the noise can be negative.\)*
+
+In Noise Lab, this is then multiplied by 100 to give a percentage.
+
+##### Pros and cons
+RMSPE_T is a bit more complex to grasp than APE.
+However, it has a few advantages that make it in some cases more suitable than APE for analyzing noise in summary reports:
+* **It's more stable.** *"T"* is a threshold: it's used to give less weight, in the RMSPE_T calculation, to buckets that have less conversions and are therefore more sensitive to noise due to their small size. With T, the metric does not spike on buckets with few conversions. If T is equal to 5, a noise value as small as 1 on a bucket with 0 conversion will not be displayed as way over 100%. Instead, it will be capped at 20%, which is equivalent to 1/5, as T is equal to 5. By giving less weight to buckets that are more sensitive to noise due to their small size, this metric is more stable — and therefore makes it easier to compare two simulations.
+* **It allows for easy aggregation.** Knowing RMSPE_t of multiple buckets, together with their true counts, allows one to compute the RMSPSE_t of their sum via a simple formula. This also allows one to easily optimize for RMSPE_t of these combined values. (While aggregation is possible for APE, the formula is quite complicated since it involves the absolute value of sum of Laplace noises, which makes it hard to optimize.) 
+
+
+##### Code
+Review [here](https://github.com/privacysandbox/noise-lab/blob/main/public/index.html#L66) the source code for RMSPE_T calculation.
+
+
+
+#### Examples {: #noise-examples}
+
+{% Aside 'example' %}
+
+**Summary report with three buckets:**
+
+
+bucket_1 = noise: 10, trueSummaryValue: 100
+
+bucket_2 = noise: 20, trueSummaryValue: 100
+
+bucket_3 = noise: 20, trueSummaryValue: 200
+
+APE = (0.1 + 0.2 + 0.1) / 3 = **13%**
+
+RMSPE_T = sqrt( ( (10/max(5,100))^2  + (20/max(5,100))^2 + (20/max(5,200))^2) / 3) 
+
+      =  sqrt( (0.01 + 0.04 + 0.01) / 3) =  0.14 =  **14%** 
+
+{% endAside %}
+
+
+{% Aside 'example' %}
+
+**Summary report with three buckets:**
+
+bucket_1 = noise: 10, trueSummaryValue: 100
+
+bucket_2 = noise: 20, trueSummaryValue: 100
+
+bucket_3 = noise: 20, trueSummaryValue: 20
+
+APE = (0.1 + 0.2 + 1) / 3 = **43%**
+
+RMSPE_T = sqrt( ( (10/max(5,100))^2  + (20/max(5,100))^2 + (20/max(5,20))^2) / 3) 
+
+      =  sqrt( (0.01 + 0.04 + 1.0) / 3) =  0.59 =  **59%**
+{% endAside %}
+
+
+
+{% Aside 'example' %}
+
+**Summary report with three buckets:**
+
+bucket_1 = noise: 10, trueSummaryValue: 100
+
+bucket_2 = noise: 20, trueSummaryValue: 100
+
+bucket_3 = noise: 20, trueSummaryValue: 0
+
+APE = (0.1 + 0.2 + Infinity) / 3 = **Infinity**
+
+RMSPE_T = sqrt( ( (10/max(5,100))^2  + (20/max(5,100))^2  + (20/max(5,0))^2) / 3)
+      =  sqrt( (0.01 + 0.04 + 16.0) / 3) =  2.31 =  **231%**
+{% endAside %}
 
 {% endDetails %}
+
 
 
 {% Details %}
