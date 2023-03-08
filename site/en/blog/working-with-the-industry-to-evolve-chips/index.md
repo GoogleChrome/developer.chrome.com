@@ -15,7 +15,7 @@ alt: >
 ---
 
 
-[Cookies Having Independent Partitioned State (CHIPS)](docs/privacy-sandbox/chips/) is a Privacy Sandbox technology that allows developers to opt a cookie into "partitioned" storage, with separate cookie jars per top-level site.  
+[Cookies Having Independent Partitioned State (CHIPS)](/docs/privacy-sandbox/chips/) is a Privacy Sandbox technology that allows developers to opt a cookie into "partitioned" storage, with separate cookie jars per top-level site.  
 Example use cases for CHIPS include any scenarios where cross-site subresources require some notion of session or persistent state that is scoped to a user's activity on a single top-level site, such as third-party chat widgets,  map embeds, subresource CDN load balancing, headless CMS providers, and more.  
 
 CHIPS is being developed with the goal to become an open web standard. It is under discussion in the PrivacyCG and has had an origin trial for 7 months during which the Chrome team has received helpful feedback. During development the team worked with key stakeholders to explore that feedback, resulting in an updated design that better serves the web ecosystem.   

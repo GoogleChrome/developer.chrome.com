@@ -54,9 +54,9 @@ This section lists major features that will be added to the Manifest V3 platform
 
 ### Increased quota for session storage in the Storage API {: #increased-session-storage-quota }
 
-**Summary:** When it was introduced, the `session` storage area had an intentionally conservative maximum quota of 1 MB. We are planning to increase this limit, but have not yet settled on a new value.
+**Summary:** When it was introduced, the `session` storage area had an intentionally conservative maximum quota of 1 MB. This limit is being increased to 10 MB.
 
-**Estimated timeline**: Targeting Canary support in the first quarter of 2023.
+**Estimated timeline**: This will be available in Chrome 112. Chrome 112 beta is planned around March 9, with a stable release around the beginning of April.
 
 ## Bugs {: #bugs }
 

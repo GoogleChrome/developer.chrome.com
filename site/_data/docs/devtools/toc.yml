@@ -23,6 +23,7 @@
       sections:
         - url: /docs/devtools/css/
         - url: /docs/devtools/css/issues/
+        - url: /docs/devtools/css/color/
         - url: /docs/devtools/css/grid/
         - url: /docs/devtools/css/flexbox/
         - url: /docs/devtools/css/container-queries/

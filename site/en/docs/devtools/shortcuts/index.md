@@ -62,6 +62,10 @@ The following keyboard shortcuts are available in most, if not all, DevTools pan
 
 <table><thead><tr><th>Action</th><th>Mac</th><th>Windows / Linux</th></tr></thead><tbody><tr><td>Expand/collapse all search results</td><td><kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>{</kbd> or <kbd>}</kbd></td><td><kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>{</kbd> or <kbd>}</kbd></td></tr></tbody></table>
 
+## Recorder panel keyboard shortcuts {: #recorder }
+
+<table><thead><tr><th>Action</th><th>Mac</th><th>Windows / Linux</th></tr></thead><tbody><tr><td>Start or stop recording</td><td><kbd>Command</kbd>+<kbd>E</kbd></td><td><kbd>Control</kbd>+<kbd>E</kbd></td></tr><tr><td>Replay recording</td><td><kbd>Command</kbd>+<kbd>Enter</kbd></td><td><kbd>Control</kbd>+<kbd>Enter</kbd></td></tr><tr><td>Copy recording or selected step</td><td><kbd>Command</kbd>+<kbd>C</kbd></td><td><kbd>Control</kbd>+<kbd>C</kbd></td></tr><tr><td>Toggle code view</td><td><kbd>Command</kbd>+<kbd>B</kbd></td><td><kbd>Control</kbd>+<kbd>B</kbd></td></tr></tbody></table>
+
 [1]: /docs/devtools/customize/#placement
 [2]: /docs/devtools/device-mode
 [3]: /docs/devtools/command-menu

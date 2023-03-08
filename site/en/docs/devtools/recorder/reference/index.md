@@ -5,7 +5,7 @@ authors:
   - sofiayem
   - jecelynyeen
 date: 2022-06-21
-updated: 2023-02-07
+updated: 2023-03-07
 description: "A comprehensive reference of Chrome DevTools Recorder panel features."
 tags:
   - test
@@ -17,6 +17,20 @@ tags:
 Discover ways to share user flows, edit them and their steps in this comprehensive features reference of the Chrome DevTools **Recorder** panel.
 
 To learn the basics of working with the **Recorder** panel, see [Record, replay, and measure user flows](/docs/devtools/recorder/).
+
+## Learn and customize shortcuts {: #shortcuts }
+
+Use shortcuts to navigate the **Recorder** faster. For a list of default shortcuts, see [Recorder panel keyboard shortcuts](/docs/devtools/shortcuts/#recorder).
+
+To open a hint that lists all the shortcuts right in the **Recorder**, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/fAwFFniVr2MfI5RwJwpv.svg", alt="Show shortcuts.", width="24", height="24" %} **Show shortcuts** in the top right corner.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/0v5iJF1nm3Glji1wrLJc.png", alt="The Show shortcuts button.", width="800", height="547" %}
+
+To customize **Recorder** shortcuts:
+
+1. Open {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Shortcuts**](/docs/devtools/settings/shortcuts/).
+1. Scroll down to the **Recorder** section.
+1. Follow the steps in [Customize shortcuts](/docs/devtools/settings/shortcuts/#customize-shortcuts).
 
 ## Edit user flows {: #edit-flows }
 
