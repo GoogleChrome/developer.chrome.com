@@ -6,6 +6,7 @@ description: >
 authors:
   - beaufortfrancois
 date: 2023-02-02
+updated: 2023-02-22
 hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/l8xW8V85N60e4dmwUwmE.jpg
 alt: Person holding outdoor lounge chairs.
 tags:
@@ -61,6 +62,10 @@ A website can provide a Picture-in-Picture video experience with the existing [P
 ### Video conferencing
 
 It is common for users to leave the browser tab during a video conferencing session for various reasons (for example, presenting another tab to the call or multitasking) while still wishing to see the call, so it's a prime use case for Picture-in-Picture. Once again, the current experience a video conferencing website can provide via the [Picture-in-Picture API for `<video>`] is limited in style and input. With a full Document in Picture-in-Picture, the website can easily combine multiple video streams into a single PiP window without having to rely on [canvas hacks] and provide custom controls such as sending a message, muting another user, or raising a hand.
+
+### Productivity
+ 
+Research has shown that users need more ways to be productive on the web. Document in Picture-in-Picture gives web apps the flexibility to accomplish more. Whether it's text editing, note-taking, task lists, messaging and chat, or design and development tools, web apps can now keep their content always accessible.
 
 ## Interface
 

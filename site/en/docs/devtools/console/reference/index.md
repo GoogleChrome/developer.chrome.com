@@ -54,7 +54,7 @@ Console** command that has the **Drawer** badge next to it.
 
 ### Open Console Settings {: #settings }
 
-Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Console Settings** in the top-right corner of the **Console**. 
+Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Console Settings** in the top-right corner of the **Console**.
 
 {% Aside 'gotchas' %}
 Not to be confused with {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **DevTools Settings** above and next to the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Three-dot menu.", width="22", height="22" %} three-dot menu.
@@ -187,7 +187,7 @@ page's JavaScript.
 
 DevTools assigns most of `console.*` methods severity levels.
 
-There are four levels: 
+There are four levels:
 
 - `Verbose`
 - `Info`
@@ -254,7 +254,7 @@ For example, the following filters out all messages that don't match `/[gm][ta][
 
 To search for text in log messages:
 
-1. To open a built-in search bar, press <kbd>Command</kbd>+<kbd>F</kbd> (Mac) or <kbd>Ctrl</kbd>+<kbd>F</kbd> (Windows, Linux) 
+1. To open a built-in search bar, press <kbd>Command</kbd>+<kbd>F</kbd> (Mac) or <kbd>Ctrl</kbd>+<kbd>F</kbd> (Windows, Linux).
 1. In the bar, type your query. In this example the query is `legacy`.
     {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/rLEzbmZU3zU3rE3OWNli.png", alt="Typing a query.", width="800", height="426" %}
     Optionally, you can:
@@ -266,6 +266,17 @@ To search for text in log messages:
 
 This section contains features related to running JavaScript in the Console. See [Run
 JavaScript][28] for a hands-on walkthrough.
+
+### String copy options {: #string-copy-options }
+
+The console outputs strings as valid JavaScript literals by default. Right-click an output and choose between three copy options:
+
+* **Copy as JavaScript literal**. Escapes appropriate special characters and wraps the string in either single quotes, double quotes,
+  or backticks depending on the content.
+* **Copy string contents**. Copies the exact raw string to the clipboard, including new lines and other special characters.
+* **Copy as JSON literal**. Formats the string to valid JSON.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/PSEzB4mBuTWeVebHZr5p.png", alt="The copy options.", width="800", height="398" %}
 
 ### Re-run expressions from history {: #history }
 

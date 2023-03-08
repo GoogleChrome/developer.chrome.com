@@ -6,7 +6,7 @@ subhead: >
 description: >
   Try out the Topics demo, and learn about the API and how to run Topics with flags or participate in an origin trial.
 date: 2022-01-25
-updated: 2022-01-30
+updated: 2022-02-01
 authors:
   - samdutton
 ---
@@ -351,12 +351,12 @@ This snippet of code is provided only to show how the Topics JavaScript API
 might be used. API design is subject to change.
 {% endAside %}
 
-#### Access topics without modifying state {: #observe-false}
+#### Access topics without modifying state {: #skipobservation}
 
 A caller can specify that they would like to retrieve topics without modifying state by calling
-`document.browsingTopics({observe: false})`.
+`document.browsingTopics({skipObservation: true})`.
 
-Including the `{observe: false}` argument means that topics can be returned, but the call will not
+Including the `{skipObservation: true}` argument means that topics can be returned, but the call will not
 cause the current page to be included in the weekly epoch calculation, nor will it update the list
 of topics observed for the caller.
 

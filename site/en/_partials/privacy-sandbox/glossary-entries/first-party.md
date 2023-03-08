@@ -1,6 +1,4 @@
-## First-party {: #first-party }
-
-Resources from the site you're visiting.
+First party refers to resources from the site you're visiting.
 
 For example, the page you're reading is on the site `developer.chrome.com` and
 includes resources requested from this site. Requests for those first-party

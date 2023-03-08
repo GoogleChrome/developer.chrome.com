@@ -4,6 +4,7 @@ Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no"
 
 {# $content #}
 
+
 {# ### Chrome 111 {: #chrome111 }
 
 * [Debugging de cores HD no painel de Estilos](/pt/blog/new-in-devtools-111/#color)
@@ -15,7 +16,7 @@ Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no"
  #}
 
 
-{# ### Chrome 110 {: #chrome110 }
+### Chrome 110 {: #chrome110 }
 
 * [Limpeza do painel Performance ao recarregar](/pt/blog/new-in-devtools-110/#perf)
 * [Novidades no Gravador](/pt/blog/new-in-devtools-110/#recorder)

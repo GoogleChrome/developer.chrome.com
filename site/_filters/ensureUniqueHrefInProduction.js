@@ -14,29 +14,26 @@
  * limitations under the License.
  */
 
-/**
- * @fileoverview This makes sure the ids of page sections are unique
- *
- * This follows a couple of rules:
- *   - we store each section id in an array
- *   - if the section id is already in the array, counts its occurences and makes the id unique using that number
- *   - otherwise just returns the id we passed to the filter
- *
- */
-
-const pageIds = [];
+const pageIds = new Set();
 
 /**
+ * Builds a key from the given id and the page URL and verifies
+ * it is unique across the page for a production build
  * @param {string} id of the section
  * @this {any} The eleventy context
  * @return {string} unique id for the section
  */
+function ensureUniqueHrefInProduction(id) {
+  // Incremental builds (e.g. `npm run dev`) can not check for uniqueness
+  // as they create the same ID for every run which would trigger an error.
+  if (process.env.ELEVENTY_ENV !== 'production') {
+    return id;
+  }
 
-function ensureUniqueHref(id) {
   const key = `${this.ctx.page.url}#${id}`;
 
-  if (!pageIds.includes(key)) {
-    pageIds.push(key);
+  if (!pageIds.has(key)) {
+    pageIds.add(key);
 
     return id;
   }
@@ -47,5 +44,5 @@ function ensureUniqueHref(id) {
 }
 
 module.exports = {
-  ensureUniqueHref,
+  ensureUniqueHrefInProduction,
 };

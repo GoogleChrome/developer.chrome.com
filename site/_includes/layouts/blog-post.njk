@@ -13,7 +13,7 @@
   {% if hero %}
     <div class="display-flex justify-content-center lg:pad-left-400 lg:pad-right-400">
       {% Img
-        class="hero-image object-fit-cover",
+        class="hero-image object-fit-cover height-full",
         src=hero,
         alt=alt,
         width="960",
@@ -21,6 +21,13 @@
         sizes="(min-width: 960px) 960px, 100vw",
         fetchpriority="high"
       %}
+    </div>
+
+  {% elseif hero_youtube_id %}
+    <div class="display-flex justify-content-center lg:pad-left-400 lg:pad-right-400">
+      <div class="measure-960 width-full rounded-lg overflow-hidden">
+        {% YouTube id=hero_youtube_id %}
+      </div>
     </div>
   {% endif %}
 

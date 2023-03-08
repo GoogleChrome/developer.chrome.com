@@ -51,7 +51,7 @@
     "@google-cloud/error-reporting": "^2.0.4",
     "@google-cloud/storage": "^6.7.0",
     "@lhci/cli": "^0.7.2",
-    "@mdn/browser-compat-data": "5.2.36",
+    "@mdn/browser-compat-data": "5.2.39",
     "@rollup/plugin-node-resolve": "^8.4.0",
     "algoliasearch": "^4.6.0",
     "async-transforms": "1.0.6",
@@ -87,11 +87,11 @@
     "rollup": "^2.22.2",
     "striptags": "^3.1.1",
     "typedoc": "^0.22.7",
-    "typescript": "^4.4.4",
+    "typescript": "4.4.4",
     "unistore": "^3.5.2",
     "uslug": "^1.0.4",
     "web-vitals": "^3.1.1",
-    "webdev-infra": "1.0.44",
+    "webdev-infra": "1.0.47",
     "xss": "^1.0.14"
   },
   "optionalDependencies": {
