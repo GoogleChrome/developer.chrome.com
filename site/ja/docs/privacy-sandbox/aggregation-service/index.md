@@ -3,7 +3,7 @@ layout: layouts/doc-post.njk
 title: 集計サービス
 subhead: このサービスを導入して管理を行い、Attribution Reporting API または Private Aggregation API のサマリーレポートを作成します。
 description: このサービスを導入して管理を行い、Attribution Reporting API または Private Aggregation API のサマリーレポートを作成します。
-date: '2022-11-29'
+date: 2022-11-29
 authors:
   - alexandrawhite
 ---
