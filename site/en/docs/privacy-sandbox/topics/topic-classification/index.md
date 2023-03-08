@@ -128,9 +128,9 @@ The table below outlines an example (though unrealistically small) of a hypothet
 <table>
   <thead>
   <tr>
-  <th style="text-align: left;"><strong>Site</strong></th>
-  <th style="text-align: left;"><strong>Topics</strong></th>
-  <th style="text-align: left;"><strong>API callers on site</strong></th>
+  <th><strong>Site</strong></th>
+  <th><strong>Topics</strong></th>
+  <th><strong>API callers on site</strong></th>
   </tr>
   </thead>
   <tbody>
@@ -168,9 +168,9 @@ In week two, the user visits another site:
 <table>
   <thead>
     <tr>
-    <th style="text-align: left;"><strong>Site</strong></th>
-    <th style="text-align: left;"><strong>Topics</strong></th>
-    <th style="text-align: left;"><strong>API callers on site</strong></th>
+    <th><strong>Site</strong></th>
+    <th><strong>Topics</strong></th>
+    <th><strong>API callers on site</strong></th>
     </tr>
   </thead>
   <tbody>
@@ -188,9 +188,9 @@ In addition, code from adtech2.example is added to diy-clothing.example:
 <table>
   <thead>
     <tr>
-    <th style="text-align: left;"><strong>Site</strong></th>
-    <th style="text-align: left;"><strong>Topics</strong></th>
-    <th style="text-align: left;"><strong>API callers on site</strong></th>
+    <th><strong>Site</strong></th>
+    <th><strong>Topics</strong></th>
+    <th><strong>API callers on site</strong></th>
     </tr>
   </thead>
   <tbody>
