@@ -14,15 +14,15 @@ Background pages have been a fundamental component of extensions since their int
 
 In some contexts you'll see extension service workers called 'background scripts'. Although extension service workers do run in the background, calling them background scripts is somewhat misleading by implying identical capabilities. The differences are described below.
 
-### Improvements over background pages {: #improvements-over-bg }
+### Changes from background pages {: #improvements-over-bg }
 
-Service workers provide a number of improvements over background pages.
+Service workers has a number of differences with background pages.
 
-- They're lighter weight, making them more performant.
+- They function off the main thread, meaning they don't interfere with extension content.
 - They have special capabilities such as intercepting fetch events on the extension's origin, such as those from a toolbar popup.
 - They can communicate and interact with other contexts via the [Clients interface](https://developer.mozilla.org/docs/Web/API/Clients)
 
-### Adjustments
+### Changes you'll need to make
 
 You'll need to make a few code adjustments to account for differences between the way background scripts and service workers function. To start with, the way a service worker is specified in the manifest file is different from how background scripts are specified. Additionally:
 
