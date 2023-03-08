@@ -159,6 +159,7 @@ The table below outlines an example (though unrealistically small) of a hypothet
 </table>
 
 At the end of the epoch (currently proposed to be one week) the Topics API generates the browser's top topics for the week.
+
 - adtech1.example is now eligible to receive the "Fitness" and "Crafts" topics, since it observed them on yoga.example and also on knitting.example.
 - adtech1.example is not eligible to receive the "Travel & Transportation" topic for this user as it is not present on any sites the user visited recently that are associated with that topic.
 - adtech2.example has seen the "Fitness" and "Travel & Transportation" topics, but has not seen the "Crafts" topic.
