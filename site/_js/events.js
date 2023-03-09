@@ -45,6 +45,7 @@ const selectFields = document.querySelectorAll('.events-filter');
       reactivelySetFilter(t.name, t.value);
 
       injectFilters();
+      updateTagPills();
     });
   });
 
@@ -55,11 +56,14 @@ const selectFields = document.querySelectorAll('.events-filter');
 function injectFilters() {
   if (upcomingEvents) upcomingEvents.filters = activeFilters;
   if (pastEvents) pastEvents.filters = activeFilters;
+}
 
-  if (activeFiltersList)
-    activeFiltersList.items = Object.entries(activeFilters).flatMap(i => {
-      return i[1].map(value => ({key: i[0], value: value}));
-    });
+function updateTagPills() {
+  if (!activeFiltersList) return;
+
+  activeFiltersList.items = Object.entries(activeFilters).flatMap(i => {
+    return i[1].map(value => ({key: i[0], value: value}));
+  });
 }
 
 function addMobileListeners() {
@@ -101,6 +105,7 @@ function addMobileListeners() {
     }, {});
 
     injectFilters();
+    updateTagPills();
     closeFiltersModal();
   });
 
@@ -121,7 +126,7 @@ function addMobileListeners() {
 function handleDeselections() {
   if (!activeFiltersList) return;
 
-  activeFiltersList.addEventListener('remove-pill', e => {
+  activeFiltersList.addEventListener('removed-pill', e => {
     if (!(e instanceof CustomEvent)) return;
 
     reactivelySetFilter(
