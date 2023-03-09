@@ -19,7 +19,7 @@ export const locales = [
   {lang: 'en', isDefault: true},
   {lang: 'es'},
   {lang: 'ja'},
-  {lang: 'ko'},
+  // {lang: 'ko'}, // disable temporarily
   {lang: 'pt'},
   {lang: 'ru'},
   {lang: 'zh'},
