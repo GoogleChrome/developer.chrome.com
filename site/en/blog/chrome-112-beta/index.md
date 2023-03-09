@@ -50,7 +50,7 @@ Some changes have been made to which element is selected to get focus when a `<d
 - Make the dialog element itself get focus if it has the autofocus attribute set.
 - Make the dialog element itself get focus as a fallback instead of focus being "reset" to the body element. 
 
-### WebAssembly Tail Call
+### WebAssembly tail call
 
 Add an explicit tail call and indirect tail call opcodes to WebAssembly. 
 
@@ -98,7 +98,7 @@ The `getStats()` method of `RTCPeerConnection` will no longer return stats objec
 
 ### X-Requested-With in WebView Deprecation
 
-The Deprecation Origin Trial supports cross-origin pre-enablement when calling services that rely on the `X-Requested-With` header. This option is available in WebView from Chrome 112. See Origin Trial setup instructions for how to use this feature.
+The Deprecation origin trial supports cross-origin pre-enablement when calling services that rely on the `X-Requested-With` header. This option is available in WebView from Chrome 112. See the origin trial setup instructions for how to use this feature.
 
 [Register for the X-Requested with WebView deprecation trial](/origintrials/#/view_trial/1390486384950640641).
 
