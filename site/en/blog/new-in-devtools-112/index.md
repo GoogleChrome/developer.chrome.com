@@ -4,7 +4,7 @@ title: "What's New in DevTools (Chrome 112)"
 authors:
   - sofiayem
   - jecelynyeen
-date: 2023-03-08
+date: 2023-03-09
 description: ""
 hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/G5pxOHr2wECkBu8J2ujC.jpg'
 alt: 'Recorder replay customization, CSS documentation, ignore-listing irrelevant scripts, enhanced logpoint debugging, and more.'
