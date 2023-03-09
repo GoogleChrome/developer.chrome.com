@@ -82,7 +82,10 @@ Sec-Browsing-Topics: 186;version="chrome.1:1:2206021246";config_version="chrome.
 
 This example includes two topics from the [Topics taxonomy](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md), 186 and 265, along with each topic's version information
 
-The [fetch()](https://chromium-review.googlesource.com/c/chromium/src/+/4044267) and [XHR](https://chromium-review.googlesource.com/c/chromium/src/+/4103742) implementations were first made available in Chrome 111.
+{% Aside 'note' %}
+The [fetch()](https://chromium-review.googlesource.com/c/chromium/src/+/4044267) and [XHR](https://chromium-review.googlesource.com/c/chromium/src/+/4103742) implementations were first made available in Chrome 111. (Refer to these builds for more information.)
+{% endAside %}
+
 
 Inclusion of the topics header in XHR requests is only available temporarily, and support will be removed in the future.
 
