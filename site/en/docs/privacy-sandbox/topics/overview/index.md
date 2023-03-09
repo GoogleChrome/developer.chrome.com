@@ -18,10 +18,9 @@ authors:
 
 ## What is the Topics API?
 
-The Topics API is a [Privacy Sandbox](/docs/privacy-sandbox/overview/) mechanism designed to preserve privacy while allowing a browser to share information with third parties about a user's interests. It enables interest-based advertising (IBA) without having to resort to tracking the sites a user visits. 
-Interest-based advertising (IBA) is a key concept to understand the Topics API.
+The Topics API is a [Privacy Sandbox](/docs/privacy-sandbox/overview/) mechanism designed to preserve privacy while allowing a browser to share information with third parties about a user's interests. It enables interest-based advertising (IBA) without having to resort to tracking the sites a user visits.
 
-IBA is a form of personalized advertising in which an ad is selected for a user based on their interests, inferred from the sites they've recently visited. This is different from contextual advertising, which aims to match ads to the content on the page the user is visiting.
+Interest-based advertising is a key concept in the Topics API. It is a form of personalized advertising in which an ad is selected for a user based on their interests, inferred from the sites they've recently visited. This is different from contextual advertising, which aims to match ads to the content on the page the user is visiting.
 
 Interest-based advertising can help both advertisers (sites that want to advertise their products or services)  and publishers (sites that use ads to help monetize their content):
 
@@ -59,7 +58,7 @@ For 10,000 top sites, the Topics API implementation in Chrome uses a manually cu
 
 Chrome's implementation of the Topics API downloads a [TensorFlow Lite](https://www.tensorflow.org/lite/guide) file representing the model so it can be used locally on the user's device. 
 
-You can access the TensorFlow Lite model file and the topics inferred for hostnames from `chrome://topics`.
+You can access the TensorFlow Lite model file and the topics inferred for hostnames from `chrome://topics-internals`.
 
 The diagram below shows a simplified example to demonstrate how the Topics API might help an ad tech platform select an appropriate ad. The example assumes that the user's browser already has a model to map website hostnames to topics.
 
@@ -68,7 +67,7 @@ The diagram below shows a simplified example to demonstrate how the Topics API m
   alt="Diagram showing the stages in the Topics API lifecycle, from a user visiting websites to an ad
   being displayed.", width="800", height="275" %}
 <figcaption>
-The Topics API lifecycle diagram walks through the stages of the API actions from a high-level point of view. [View a larger version](https://wd.imgix.net/image/80mq7dk16vVEg8BBhsVe42n6zn82/u9e1VvzblNVHCfyk1hRY.png?auto=format&w=1600)
+The Topics API lifecycle diagram walks through the stages of the API actions from a high-level point of view. <a href="https://wd.imgix.net/image/80mq7dk16vVEg8BBhsVe42n6zn82/u9e1VvzblNVHCfyk1hRY.png?auto=format&w=1600">View a larger version</a>.
 </figcaption>
 </figure>
 

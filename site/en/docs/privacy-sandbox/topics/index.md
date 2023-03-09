@@ -121,9 +121,9 @@ Users can view information about topics observed for their browser during the cu
 
 <figure>
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/M253GclVFDCnvPJlTSVR.png",
-  alt="The chrome://topics-internal page with Topics State panel selected.",
+  alt="The chrome://topics-internals page with Topics State panel selected.",
   width="800", height="697" %}
-<figcaption>The chrome://topics-internal page Topics State panel shows Topics IDs, random and real topic assignments, and taxonomy and model versions.
+<figcaption>The chrome://topics-internals page Topics State panel shows Topics IDs, random and real topic assignments, and taxonomy and model versions.
 </figcaption>
 </figure>
 
@@ -137,9 +137,9 @@ You can also view the topics inferred by the Topics [classifier model](https://g
 
 <figure>
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/SOTuE2ljC55PaYll1UP1.png",
-  alt="The chrome://topics-internal page with Classifier panel selected.",
+  alt="The chrome://topics-internals page with Classifier panel selected.",
   width="800", height="695" %}
-  <figcaption>The chrome://topics-internal page Classifier panel shows topics selected, hosts visited, and model version and path.</figcaption>
+  <figcaption>The chrome://topics-internals page Classifier panel shows topics selected, hosts visited, and model version and path.</figcaption>
 </figure>
 
 The current implementation of the Topics API infers topics from hostnames only; not from any other part of a URL.
@@ -152,9 +152,9 @@ Information is provided in `chrome://topics-internals` about the Topics API impl
 
 <figure>
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/7vFveJtxWgY6yB8gHnW3.png",
-  alt="chrome://topics-internal page with Features and Parameters panel selected.",
+  alt="chrome://topics-internals page with Features and Parameters panel selected.",
   width="800", height="695" %}
-<figcaption>The chrome://topics-internal Features and Parameters panel shows enabled features, time per epoch, number of epochs to use to calculate topics, taxonomy version, and other settings.
+<figcaption>The chrome://topics-internals Features and Parameters panel shows enabled features, time per epoch, number of epochs to use to calculate topics, taxonomy version, and other settings.
 </figcaption>
 </figure>
 

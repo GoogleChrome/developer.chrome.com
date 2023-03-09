@@ -18,7 +18,7 @@ A colab—or colaboratory—is a data analysis tool that combines code, output, 
 is available from the `chrome://topics-internals/` page under the current model in the Classifier tab.
 
     {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/txujKqPgnQdbwmTfdPZT.png",
-  alt="chrome://topics-internal page with Classifier panel selected and tflite file path highlighted.",
+  alt="chrome://topics-internals page with Classifier panel selected and tflite file path highlighted.",
   width="800", height="696" %}
 
 1. Open the [colab](https://colab.research.google.com/drive/1hIVoz8bRCTpllYvads51MV7YS3zi3prn) and click on the folder icon.
