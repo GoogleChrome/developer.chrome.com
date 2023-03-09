@@ -113,7 +113,7 @@ The **Elements** > **Styles** pane now recognizes [CSS Nesting](/articles/css-ne
 
 Chromium issue: [1172985](https://crbug.com/1172985).
 
-## Logpoint and conditional breakpoint improvements {: #logpoint }
+## Marking logpoint and conditional breakpoint in the Console {: #logpoint }
 
 Further improving the [enhanced breakpoint UX](/blog/new-in-devtools-111/#breakpoint-redesign), the **Console** now marks messages triggered by breakpoints:
 
