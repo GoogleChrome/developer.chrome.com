@@ -6,7 +6,7 @@ authors:
   - jecelynyeen
 date: 2023-03-09
 description: ""
-hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/G5pxOHr2wECkBu8J2ujC.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GJvLUWB0oNIje3SXYusK.jpg'
 alt: 'Recorder replay customization, CSS documentation, ignore-listing irrelevant scripts, enhanced logpoint debugging, and more.'
 tags:
   - new-in-devtools
