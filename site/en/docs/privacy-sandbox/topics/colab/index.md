@@ -14,8 +14,8 @@ authors:
 
 A colab—or colaboratory—is a data analysis tool that combines code, output, and descriptive text into one collaborative document. You can run the [Topics Model Execution Demo colab](https://colab.research.google.com/drive/1hIVoz8bRCTpllYvads51MV7YS3zi3prn) to test how the Topics classifier model infers topics of interest to the user, from the hostnames of pages they visit.
 
-1. From the *Classifier* tab of the `chrome://topics-internals` page get the directory path for the `.tflite` file used by the Topics API. The override list, `override_list.pb.gz`, 
-is available from the `chrome://topics-internals/` page under the current model in the Classifier tab.
+1. From the **Classifier** tab of the `chrome://topics-internals` page get the directory path for the `.tflite` file used by the Topics API. The override list, `override_list.pb.gz`, 
+is available from the `chrome://topics-internals/` page under the current model in the **Classifier** tab.
 
     {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/txujKqPgnQdbwmTfdPZT.png",
   alt="chrome://topics-internals page with Classifier panel selected and tflite file path highlighted.",
@@ -53,7 +53,7 @@ For some domains you may notice a difference in topic inference between the cola
 This is because the colab only uses the classifier model to infer topics, whereas
 `chrome://topics-internals` uses Chrome's Topics implementation, which uses a
 [manually-curated list of topics](/docs/privacy-sandbox/topics/topic-classification/#classifier-model) (rather than the classifier model) for the top
-10,000 sites. The list is found in `override_list.pb.gz`, which is available in the `chrome://topics-internals/` page. 
+10,000 sites. The list is found in `override_list.pb.gz`, which is available in the `s-internals/` page. 
 {% endAside %}
 
 ## Next steps

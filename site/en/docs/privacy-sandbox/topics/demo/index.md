@@ -19,7 +19,7 @@ If you want to test the API with your users, sign up for the [Relevance and Meas
 
 Our demo is a preview  that demonstrates most features of the Topics API, for you to gain familiarity with how the API is implemented.
 
-You can also run the Topics [colab](/docs/privacy-sandbox/topics/colab) to try out the Topics [classifier model](/docs/privacy-sandbox/topics/topic-classification/#the-classifier-model).
+You can also run the Topics [colab](/docs/privacy-sandbox/topics/colab) to try out the Topics [classifier model](/docs/privacy-sandbox/topics/topic-classification/#classifier-model).
 
 The following video shows how the demo works.
 
@@ -37,7 +37,7 @@ There are two ways to try the Topics API as a single user; you'll need to be run
     <figure>
 
     {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/4kpW1PAuzrMrecSAR3tU.png", alt="Enable the Topics API using the chrome://flags/#privacy-sandbox-ads-apis page", width="800", height="246" %}
-          <figcaption>Enable the Topics API using the chrome://flags/#privacy-sandbox-ads-apis page. <a href="https://wd.imgix.net/image/RtQlPaM9wdhEJGVKR8boMPkWf443/4kpW1PAuzrMrecSAR3tU.png?auto=format&w=1600">View a larger version</a></figcaption>
+          <figcaption>The chrome://flags/#privacy-sandbox-ads-apis page. <a href="https://wd.imgix.net/image/RtQlPaM9wdhEJGVKR8boMPkWf443/4kpW1PAuzrMrecSAR3tU.png?auto=format&w=1600">View a larger version</a></figcaption>
     </figure>
 
 - Run Chrome from the command line with the following flags:
@@ -100,7 +100,7 @@ The screenshot below shows the topics recorded from visiting the sites on the AP
 
 <figure>
   {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/7GjvLNY86mBzeXPERRam.png", alt="Topics API demo page on glitch.me", width="656", height="566" %}
-  <figcaption>Topics API demo page on glitch.me. <a href="https://wd.imgix.net/image/RtQlPaM9wdhEJGVKR8boMPkWf443/7GjvLNY86mBzeXPERRam.png?auto=format&w=1600">View a larger version</a></figcaption>
+  <figcaption>The glitch.me demo. <a href="https://wd.imgix.net/image/RtQlPaM9wdhEJGVKR8boMPkWf443/7GjvLNY86mBzeXPERRam.png?auto=format&w=1600">View a larger version</a></figcaption>
 </figure>
 
 This list shows the sites you can visit from the demo to record topics of interest. As you can see, the Arts & Entertainment/Humor category in the screenshot is not the topic of one of these websites, so this recorded topic is one that was added as the possible 5 percent random topics.
@@ -113,7 +113,7 @@ This list shows the sites you can visit from the demo to record topics of intere
 You can check to see which topics are real and which are random on the Topics State tab of the `chrome://topics-internals` page. This screenshot shows an example from different browsing sessions.
 
 <figure>
-  {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/Ef9ml82uPg3RdX5PX5QU.png", alt="ALT_TEXT_HERE", width="474", height="416" %}
+  {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/Ef9ml82uPg3RdX5PX5QU.png", alt="Topics state", width="474", height="416" %}
   <figcaption>Topics State tab showing real and random topics. <a href="https://wd.imgix.net/image/RtQlPaM9wdhEJGVKR8boMPkWf443/Ef9ml82uPg3RdX5PX5QU.png?auto=format&w=1600">View a larger version</a></figcaption>
 </figure>
 
