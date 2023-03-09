@@ -4,6 +4,18 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 
 {# $content #}
 
+### Chrome 112 {: #chrome112 }
+
+* [Recorder updates](/blog/new-in-devtools-112/#recorder)
+* [Elements > Styles updates](/blog/new-in-devtools-112/#elements-styles)
+* [Marking logpoints and conditional breakpoints in the Console](/blog/new-in-devtools-112/#logpoint)
+* [Ignore irrelevant scripts during debugging](/blog/new-in-devtools-112/#ignore-list)
+* [JavaScript Profiler deprecation started](/blog/new-in-devtools-112/#js-profiler-deprecation)
+* [Emulate reduced contrast](/blog/new-in-devtools-112/#reduced-contrast)
+* [](/blog/new-in-devtools-112/#)
+* [](/blog/new-in-devtools-112/#)
+* [Miscellaneous highlights](/blog/new-in-devtools-112/#misc)
+
 ### Chrome 111 {: #chrome111 }
 
 * [Debugging HD color with the Styles pane](/blog/new-in-devtools-111/#color)
