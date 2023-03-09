@@ -37,7 +37,7 @@ The following sections describe common use cases for declarative net requests. T
 
 ### Block a single URL {: #block-a-single-url }
 
-A common use case in Manifest V2 was to blockIn Manifest V2, extensions blocked web requests using the `BeforeRequest` event in the background script. 
+A common use case in Manifest V2 was to block web requests using the `BeforeRequest` event in the background script. 
 
 {% Compare 'worse', 'Manifest V2 background script' %}
 ```javascript
