@@ -214,7 +214,7 @@ Instead, use the [Alarms API](/docs/extensions/reference/alarms/). As with other
 
 {% Compare 'better', 'Manifest V3 service worker' %}
 ```js
-chrome.alarms.create({ delayInMinutes: 3 });
+setTimeoutForUpdate({minutes:3}); //custom method
 
 chrome.alarms.onAlarm.addListener(() => {
   chrome.action.setIcon({
