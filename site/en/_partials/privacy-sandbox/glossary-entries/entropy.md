@@ -1,6 +1,4 @@
-## Entropy
-
-A measure of how much an item of data reveals individual identity.
+Entropy, in the privacy domain, is a measure of how much an item of data reveals individual identity.
 
 Data entropy is measured in bits. The more that data reveals identity, the higher its entropy value.
 

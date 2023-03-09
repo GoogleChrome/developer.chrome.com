@@ -19,7 +19,7 @@ alt: Blowfish swarm swimming in the ocean.
     {% if hero %}
       {{ heroCard(
         "Project Fugu API Showcase",
-        "The Project Fugu API Showcase is a collection of apps that make use of APIs that were conceived in the context of Project Fugu.",
+        "The Project Fugu API Showcase is a collection of apps that make use of APIs that were conceived in the context of Project Fugu. You can learn more about Project Fugu on the [Capabilities](/capabilities/) landing page.",
         "Submit a new app",
         "https://docs.google.com/forms/d/e/1FAIpQLScNd1rClbmFWh6FcMmjUNrwg9RLz8Jk4BkHz_-EOpmkVd_-9g/viewform",
         hero,
@@ -54,6 +54,10 @@ alt: Blowfish swarm swimming in the ocean.
           {% endfor %}
         </select>
       </enhanced-select>
+      <a href="/feeds/fugu-showcase.xml" class="material-button button-filled button-round display-inline-flex color-bg bg-cyan-medium">
+        {{ icon('rss', {hidden: false}) }}
+        &nbsp;{{ 'i18n.common.rss_feed' | i18n(locale) }}
+      </a>
     </div>
     <div class="blog-grid fugu-showcase-container lg:pad-top-400 pad-top-200"
       total-items="{{ fuguShowcase.fuguItems.length }}">
@@ -63,6 +67,15 @@ alt: Blowfish swarm swimming in the ocean.
     </div>
   </div>
 </div>
+
+<script id="fugu-showcase-i18n" type="application/json">
+  {
+    "screenshot_not_available": "{{ 'i18n.fugu_showcase.screenshot_not_available' | i18n(locale) }}",
+    "i_just_found_the_app": "{{ 'i18n.fugu_showcase.i_just_found_the_app' | i18n(locale) }}",
+    "it_uses_these_fugu_apis": "{{ 'i18n.fugu_showcase.it_uses_these_fugu_apis' | i18n(locale) }}",
+    "via_the_fugu_showcase": "{{ 'i18n.fugu_showcase.via_the_fugu_showcase' | i18n(locale) }}"
+  }
+</script>
 {% endblock %}
 
 {% block scripts %}

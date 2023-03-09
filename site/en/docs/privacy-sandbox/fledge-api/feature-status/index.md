@@ -62,7 +62,7 @@ As we move [FLEDGE](/docs/privacy-sandbox/fledge/) closer to general availabilit
    </td>
    <td>2023 Q2
    </td>
-   <td>In development. 
+   <td>Available for testing in Chrome Stable M112+.
    </td>
   </tr>
   <tr>
@@ -103,7 +103,7 @@ The temporary `navigator.deprecatedURNToURL()` will be removed by third-party co
 
 Recently, challenges have been [pointed out](https://github.com/WICG/turtledove/issues/281) around the integration of the [Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/) and FLEDGE, especially in the situation where fenced frames are involved. 
 
-For event-level attribution reporting with FLEDGE, we have a proposed set of initial improvements to make this integration easier which you can learn more about in the [explainer](https://github.com/WICG/turtledove/blob/main/Fenced_Frames_Ads_Reporting.md#support-for-attribution-reporting). The integration will be available in both Fenced Frames and iFrames. 
+For event-level reporting with FLEDGE, we have a proposed set of initial improvements to make this integration easier which you can learn more about in the [explainer](https://github.com/WICG/turtledove/blob/main/Fenced_Frames_Ads_Reporting.md#support-for-attribution-reporting). The integration will be available for both fenced frames and iFrames. Event-level reporting will be available for testing in Chrome Stable M112+.
 
 For those who need [aggregate attribution reporting with FLEDGE](https://github.com/WICG/turtledove/issues/289), we are working on more flexible solutions to capture more bidding signals with aggregate reporting, and we will publish a proposal once it is ready. 
 
@@ -113,7 +113,7 @@ We will soon publish an explainer with more details on how [k-anonymity](https:/
 
 For rendering a creative, we will require _a crowd of 50 users per creative within the past 7 days_ to pass the k-anonymity threshold before the ad can be served. The creative is available to be served as soon as it hits the 50 ads threshold and does not need to wait for 7 days. 
 
-K-anonymity requirements will be available for testing and will be enforced later in 2023. We encourage feedback from adtech on this parameter.
+K-anonymity requirements will be available for testing and will be enforced later in 2023. We encourage feedback from ad tech on this parameter.
 
 ## Bidding and Auction Services
 

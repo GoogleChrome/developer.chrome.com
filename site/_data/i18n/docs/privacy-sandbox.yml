@@ -10,14 +10,12 @@ fledge:
   en: 'FLEDGE'
 fledge-best-practices:
   en: 'FLEDGE latency best practices'
-floc:
-  en: 'Federated Learning of Cohorts (FLoC)'
 topics-api:
   en: 'The Topics API'
 topics-latest:
   en: 'Latest updates to the Topics API'
 glossary:
-  en: 'Privacy Sandbox glossary'
+  en: 'Glossary and key concepts'
   ja: 'プライバシー サンドボックスの用語集'
 guiding-principles:
   en: 'Guiding principles'
@@ -58,7 +56,7 @@ attribution-reporting-overview:
   en: 'Attribution Reporting overview'
 attribution-reporting-chrome-shipping:
   en: 'Why Chrome plans to ship the Attribution Reporting API'
-attribution-reporting-experiment:
+experiment-participate:
   en: 'Experiment and participate'
 attribution-reporting-debugging:
   en: 'Debugging Attribution Reporting'
@@ -117,3 +115,5 @@ privacy-budget:
   en: 'Privacy Budget'
 fenced-frame:
   en: 'Fenced Frames'
+fledge-api:
+  en: 'Developer guide'

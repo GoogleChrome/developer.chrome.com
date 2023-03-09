@@ -4,6 +4,16 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 
 {# $content #}
 
+### Chrome 111 {: #chrome111 }
+
+* [Debugging HD color with the Styles pane](/blog/new-in-devtools-111/#color)
+* [Enhanced breakpoint UX](/blog/new-in-devtools-111/#breakpoint-redesign)
+* [Customizable Recorder shortcuts](/blog/new-in-devtools-111/#recorder)
+* [Better syntax highlight for Angular](/blog/new-in-devtools-111/#syntax)
+* [Reorganize caches in the Application panel](/blog/new-in-devtools-111/#cache)
+* [Miscellaneous highlights](/blog/new-in-devtools-111/#misc)
+
+
 ### Chrome 110 {: #chrome110 }
 
 * [Clearing Performance Panel on reload](/blog/new-in-devtools-110/#perf)
@@ -12,7 +22,7 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 * [Customize selector types of a recording](/blog/new-in-devtools-110/#recorder-selector)
 * [Edit user flow while recording](/blog/new-in-devtools-110/#recorder-edit)
 * [Automatic in-place pretty print](/blog/new-in-devtools-110/#pretty-print)
-* [Better syntax highlight and inline preview for Vue, SCSS and more](/blog/new-in-devtools-110/#syntax)
+* [Better syntax highlight and inline preview for Vue, SCSS and more](/blog/new-in-devtools-110/#highlight)
 * [Ergonomic and consistent Autocomplete in the Console](/blog/new-in-devtools-110/#console)
 * [Miscellaneous highlights](/blog/new-in-devtools-110/#misc)
 

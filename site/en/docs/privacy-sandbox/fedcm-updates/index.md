@@ -8,6 +8,7 @@ description: >
 authors:
  - agektmr
 date: 2022-11-09
+updated: 2023-02-27
 ---
 
 The Federated Credential Management API is
@@ -35,6 +36,18 @@ If you're new to this API or have not experimented with it yet, read the
 
 To stay updated on the FedCM API changes, please subscribe to [our
 newsletter](https://groups.google.com/g/fedcm-developer-newsletter).
+
+**Chrome 110 (February 2023)**
+
+- For the ID assertion endpoint, IdPs need to check the `Origin` header (instead of the `Referer` header) to see if the value matches the origin of the client ID.
+- Cross-origin iframe support for FedCM is now available. The
+  embedder should specify the
+  [Permissions-Policy](https://github.com/w3c/webappsec-permissions-policy/blob/main/permissions-policy-explainer.md#how-is-a-policy-specified)
+  `identity-credentials-get` to allow FedCM API in the embedded cross-origin
+  iframe. You can check out an [example](https://fedcm-top-frame.glitch.me/) of
+  the cross-origin iframe.
+- Added a new Chrome flag `chrome://flags/#fedcm-without-third-party-cookies`. With this flag, you can test FedCM functionality in Chrome
+  by blocking third-party cookies. Learn more from [the FedCM documentation](/docs/privacy-sandbox/fedcm/#block-third-party-cookies).
 
 **Chrome 108 (October 2022)**
 

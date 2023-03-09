@@ -5,10 +5,10 @@ seoTitle: Overview of the Chrome Extension Manifest V3
 subhead: 'Key changes and features of Manifest V3.'
 description: 'A description of the features and changes introduced by Manifest V3.'
 date: 2020-11-09
-updated: 2021-10-03
+updated: 2023-02-22
 ---
 
-Manifest V3 (Manifest V3) is a major step forward in steering towards our
+Manifest V3 is a major step forward in steering towards our
 [vision for the extensions platform](/docs/extensions/mv3/intro/platform-vision/).
 Manifest V3 focuses on the three pillars of that vision: privacy, security, and
 performance, while preserving and improving our foundation of capability and
@@ -107,16 +107,17 @@ for more about how to work with this change.
 
 Manifest V3 provides first-class support for promises. Many popular APIs support
 promises now, and we will eventually support promises on all appropriate
-methods.
+methods. Promise chains, async and await are also supported. Some API features,
+such as event listeners, will continue to require callbacks.
 
-You can use promise chains, as well as async/await. If you provide a callback
-to an API method, this prevents the promise from being returned. Therefore you
-can defer this part of your migration until you're ready, or begin using
-promises immediately.
+For backward compatibility, many methods continue to support callbacks after
+promise support is added. Be aware that you cannot use both on the same
+function call. If you pass a callback, the function will not return a promise
+and if you want a promise returned do not pass a callback. 
 
-Some scenarios, such as event listeners, will still require callbacks. For
-information on using promises, see [Promises on MDN][mdn-promise]. For information on
-converting callbacks to promises, see [our own article][doc-promises].
+For information on using promises, see [Promises on MDN][mdn-promise]. For
+information on converting callbacks to promises and for using them in
+extensions, see [our own article][doc-promises].
 
 
 ## Other features {: #other-features }

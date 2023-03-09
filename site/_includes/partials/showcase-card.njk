@@ -7,7 +7,7 @@
   {% set searchApis = searchApis + " " + api.name %}
 {% endfor %}
 {% set apis = apis | trim | lower | replace("(", "") | replace(")", "") %}
-{% set id = item.title | slugify %}
+{% set id = item.screenshot | replace('.webp', '') %}
 
 <div
   id="{{ id }}"
@@ -25,12 +25,19 @@
     </a>
   </div>
 
-  <div class="blog-card__actions display-inline-flex gap-bottom-300 pad-bottom-300">
+  <div class="fugu-card__actions display-inline-flex gap-bottom-300 pad-bottom-300">
     {% if item.appURL %}
       <a class="display-flex align-center color-primary type--small" href="{{ item.appURL }}" rel="noopener" target="_blank">
         {{ icon('external-link') }}
-        {{ 'i18n.common.launch_app' | i18n(locale) }}
+        {% if item.isElectronApp %}
+          {{ 'i18n.common.download_app' | i18n(locale) }}
+        {% else %}
+          {{ 'i18n.common.launch_app' | i18n(locale) }}
+        {% endif %}
       </a>
+    {% endif %}
+    {% if item.isElectronApp %}
+      <span class="type--xsmall">(Electron.js)</span>
     {% endif %}
     {% if item.sourceURL %}
       <a class="display-flex align-center color-primary type--small" href="{{ item.sourceURL }}" rel="noopener" target="_blank">
@@ -38,9 +45,6 @@
         {{ 'i18n.common.view_source' | i18n(locale) }}
       </a>
     {% endif %}
-    <a class="display-flex align-center color-primary type--small fugu-app-link" href="/fugu-showcase/#{{ id }}">
-      #
-    </a>
   </div>
 
   <h2 class="type--h5">
@@ -53,18 +57,27 @@
     {{ item.description }}
   </p>
 
-  <div>
-    {% from 'macros/tag.njk' import tag with context %}
-    <div class="cluster flow-space-200 gap-top-300">
-      <div>
-        {% for api in item.usedAPIs %}
-          <a
-            class="tag-pill surface decoration-none hairline color-secondary-text type--label weight-regular rounded-lg"
-            href="{{ api.url }}"
-            rel="noopener"
-            target="_blank">{{ api.name }}</a>
-        {% endfor %}
-      </div>
+  {% from 'macros/tag.njk' import tag with context %}
+  <div class="cluster flow-space-200 gap-top-300">
+    <div>
+      {% for api in item.usedAPIs %}
+        <a
+          class="tag-pill surface decoration-none hairline color-secondary-text type--label weight-regular rounded-lg"
+          href="{{ api.url }}"
+          rel="noopener"
+          target="_blank">{{ api.name }}</a>
+      {% endfor %}
     </div>
+  </div>
+
+  <div class="fugu-card__actions fugu-card__actions--secondary display-inline-flex gap-top-400 gap-bottom-300 pad-top-300">
+    <button class="visibility-hidden display-flex align-center color-secondary-text type--small web-share">
+      {{ icon('share') }}
+      {{ 'i18n.fugu_showcase.share_app' | i18n(locale) }}
+    </button>
+    <a class="display-flex align-center color-secondary-text type--small fugu-app-link" href="/fugu-showcase/#{{ id }}">
+      {{ icon('link') }}
+      {{ 'i18n.fugu_showcase.copy_link' | i18n(locale) }}
+    </a>
   </div>
 </div>

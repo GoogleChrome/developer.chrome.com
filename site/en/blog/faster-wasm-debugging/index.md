@@ -136,7 +136,7 @@ Even though our example is fairly small, we can still see the effect of skipping
 
 ### Skipping input file scanning
 
-Normally when linking an emscripten project, `emcc` will scan all of the input object files and libraries. It does this in order to implement precise dependencies between JavaScript library functions and native symbols in your program. For larger projects this extra scanning of input files (using `llvm-nm`) can add significantly to the link time.
+Normally when linking an Emscripten project, `emcc` will scan all of the input object files and libraries. It does this in order to implement precise dependencies between JavaScript library functions and native symbols in your program. For larger projects this extra scanning of input files (using `llvm-nm`) can add significantly to the link time.
 
 It is possible to instead run with `-sREVERSE_DEPS=all` which tells `emcc` to include all possible native dependencies of JavaScript functions.  This has a small code size overhead but can speed up link times and can be useful for debug builds.
 

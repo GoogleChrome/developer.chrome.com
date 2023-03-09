@@ -429,6 +429,8 @@ To ignore a script from the Editor pane:
 
 {% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/q7leDy8D975ZlhtiB3f6.png", alt="Ignoring a script from the Editor pane.", width="800", height="575" %}
 
+You can remove a script from the list of ignored from [Settings](/docs/devtools/settings/#manage-custom-ignore-list).
+
 ### Ignore a script from the Call Stack pane {: #call-stack-ignore-list }
 
 To ignore a script from the **Call Stack** pane:
@@ -437,6 +439,8 @@ To ignore a script from the **Call Stack** pane:
 2.  Select **Add script to ignore list**.
 
 {% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/y2NiIZH9UURpEtXAuVCZ.png", alt="Ignoring a script from the Call Stack pane.", width="800", height="575" %}
+
+You can remove a script from the list of ignored from [Settings](/docs/devtools/settings/#manage-custom-ignore-list).
 
 ### Ignore a script from Settings {: #settings-ignore-list }
 

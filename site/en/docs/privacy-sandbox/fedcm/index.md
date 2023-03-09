@@ -6,7 +6,7 @@ subhead: >
 description: >
   A web platform API that allows users to login to websites with their federated accounts in a manner compatible with improvements to browser privacy.
 date: 2022-04-25
-updated: 2023-02-09
+updated: 2023-02-27
 authors:
   - agektmr
 ---
@@ -410,10 +410,10 @@ const { token } = credential;
 
 Specify a full URL of the IdP config file location as a `configURL`. When
 [`navigator.credentials.get()` is called](#sign-into-rp) on the RP, the browser
-fetches the config file with a `GET` request without the `Referer` header. The
-request doesn't have cookies and doesn't follow redirects. This effectively
-prevents the IdP from learning who made the request and which RP is attempting
-to connect. For example:
+fetches the config file with a `GET` request without the `Origin` header or the
+`Referer` header. The request doesn't have cookies and doesn't follow redirects.
+This effectively prevents the IdP from learning who made the request and which
+RP is attempting to connect. For example:
 
 ```http
 GET /config.json HTTP/1.1
@@ -529,8 +529,9 @@ currently signed in on the IdP. If the IdP supports multiple accounts, this
 endpoint will return all signed in accounts.
 
 The browser sends a `GET` request with cookies, but without a `client_id`
-parameter or the `Referer` header. This effectively prevents the IdP from
-learning which RP the user is trying to sign in to. For example:
+parameter, the `Origin` header or the `Referer` header. This effectively
+prevents the IdP from learning which RP the user is trying to sign in to. For
+example:
 
 ```http
 GET /accounts.php HTTP/1.1
@@ -617,7 +618,7 @@ The browser sends a `GET` request using the `client_id`
 ```http
 GET /client_metadata.php?client_id=1234 HTTP/1.1
 Host: accounts.idp.example
-Referer: https://rp.example/
+Origin: https://rp.example/
 Accept: application/json
 Sec-Fetch-Dest: webidentity
 ```
@@ -691,7 +692,7 @@ Example HTTP header:
 ```http
 POST /assertion.php HTTP/1.1
 Host: accounts.idp.example
-Referer: https://rp.example/
+Origin: https://rp.example/
 Content-Type: application/x-www-form-urlencoded
 Cookie: 0x23223
 Sec-Fetch-Dest: webidentity
@@ -702,14 +703,14 @@ On the server, the IdP should confirm that:
 
 1. The claimed account ID matches the ID for the account that is already
    signed in. 
-2. The `Referer` header matches the origin the RP, registered in advance
-   for the given client ID.
+2. The `Origin` header matches the origin the RP, registered in advance for the
+   given client ID.
 
 {% Aside 'warning' %}
 
 Since the domain verification on OAuth or OpenID Connect relies on a browser
-redirect, it's critical in FedCM that the IdP server checks a `Referer` header value
-matches the RP's registered origin.
+redirect, it's critical in FedCM that the IdP server checks an `Origin` header
+value matches the RP's registered origin.
 
 {% endAside %}
 
@@ -852,6 +853,27 @@ non-problematic.
 
 Once the token is validated by the RP server, the RP may register the user or
 let them sign-in and start a new session.
+
+### Call FedCM from within a cross-origin iframe
+
+FedCM can be invoked from within a cross-origin iframe using an `identity-credentials-get` permissions policy, if the parent frame allows it. To do so, append the `allow="identity-credentials-get"` attribute to the iframe tag as follows:
+
+```html
+<iframe src="https://fedcm-cross-origin-iframe.glitch.me" allow="identity-credentials-get"></iframe>
+```
+
+You can see it in action in [an example](https://fedcm-top-frame.glitch.me/).
+
+Optionally, if the parent frame wants to restrict the origins to call FedCM,
+send a `Permissions-Policy` header with a list of allowed origins.
+
+```http
+Permissions-Policy: identity-credentials-get=(self "https://fedcm-cross-origin-iframe.glitch.me")
+```
+
+You can learn more about how the Permissions Policy works at [Controlling
+browser features with Permissions
+Policy](/docs/privacy-sandbox/permissions-policy/).
 
 ## Engage and share feedback {: #share-feedback}
 

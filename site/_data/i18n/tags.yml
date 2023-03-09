@@ -1,6 +1,9 @@
 # The top-level keys in this file are used to generate tag pages under /tags/<tag>, presuming
 # they have at least one matching post.
 
+example:
+  en: Example
+
 memory:
   en: Memory
 
@@ -16,6 +19,9 @@ accessibility:
 
 amp:
   en: AMP
+
+automation:
+  en: Browser Automation
 
 autoplay:
   en: Autoplay
@@ -109,6 +115,9 @@ graphics:
 
 houdini:
   en: Houdini
+
+headless:
+  en: Chrome’s Headless mode
 
 html:
   en: HTML
@@ -276,6 +285,9 @@ webauthn:
 
 passkeys:
   en: Passkeys
+
+tags:
+  en: Tags
 
 monitoring:
   en: Monitoring
