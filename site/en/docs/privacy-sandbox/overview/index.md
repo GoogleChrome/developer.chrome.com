@@ -60,8 +60,6 @@ Several key proposals are listed below.
 * [**Shared Storage**](/docs/privacy-sandbox/shared-storage/): Create a
   general-purpose API which allows sites to store and access unpartitioned
   cross-site data. This data must be read in a secure environment to prevent leakage.
-* [**SameSite cookies**](https://web.dev/samesite-cookies-explained/): Secure
-  sites by explicitly marking cross-site cookies.
 * [**Storage Partitioning**](https://github.com/privacycg/storage-partitioning):
   Enable all forms of [user agent state](https://github.com/privacycg/storage-partitioning#user-agent-state),
   such as `localStorage` or cookies, to be double-keyed: by the top-level site
@@ -73,8 +71,6 @@ Several key proposals are listed below.
   Prevent browser network resources being shared across first-party contexts,
   by ensuring that every request has a network partition key that must match in
   order for resources to be reused.
-* [**HTTP Cache Partitioning**](/blog/http-cache-partitioning): Improve
-  security and privacy by partitioning the browser HTTP cache.
 * [**Federated Credential Management (FedCM)**](/docs/privacy-sandbox/fedcm/):
   Support federated identity without sharing the user's email address or other
   identifying information with a third-party service or website, unless the
