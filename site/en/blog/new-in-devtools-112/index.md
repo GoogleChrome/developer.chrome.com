@@ -29,7 +29,6 @@ The **Recorder** introduces support for custom replay options that you can embed
 
 Try out the [example extension](https://github.com/puppeteer/replay/tree/main/examples/chrome-extension-replay):
 1. Install it, [create a new recording](/docs/devtools/recorder/#record), expand the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Play.", width="20", height="20" %} **Replay** options, and select the extension.
-1. Provide an arbitrary name and password (`leeloo` and `multipass` will do). 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/CAQFVtHyds7ByB0YMZht.png", alt="Custom replay UI.", width="800", height="563" %}
 
