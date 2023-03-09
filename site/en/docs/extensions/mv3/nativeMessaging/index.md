@@ -120,8 +120,8 @@ messaging. The main difference is that [`runtime.connectNative`][connect-native]
 To use these methods, the "nativeMessaging" permission must be [declared][declare-permissions] in your
 extensions's manifest file.
 
-These methods are not available inside content scripts, only inside your extension's pages and ServiceWorker. If you
-wish to communicate from a content script to the native application, send the message to your background script page
+These methods are not available inside content scripts, only inside your extension's pages and service worker. If you
+wish to communicate from a content script to the native application, send the message to your background context
 or service worker, and have it pass it along to the native application.
 
 The following example creates a [`runtime.Port`][port] object that's connected to native messaging host
