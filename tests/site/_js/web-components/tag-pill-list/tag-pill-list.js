@@ -131,12 +131,40 @@ test(
     await page.evaluate(() => {
       document
         .querySelector('tag-pill-list')
-        .addEventListener('remove-pill', () => window.onCustomEvent());
+        .addEventListener('removed-pill', () => window.onCustomEvent());
     });
 
-    const showMore = await page.$('.tag-pill:first-child');
-    await showMore.click();
+    const firstPill = await page.$('.tag-pill:first-child');
+    await firstPill.click();
 
     t.is(dispatchedEvent, true);
   }
 );
+
+test('tag-pill-list: can remove items', withPage, async (t, page) => {
+  const data = [
+    {
+      key: 'googlers',
+      value: 'adamsilverstein',
+    },
+    {
+      key: 'locations',
+      value: 'Amsterdam, Netherlands',
+    },
+  ];
+
+  await page.setContent(
+    `<tag-pill-list items='${JSON.stringify(data)}'></tag-pill-list>`
+  );
+
+  await addPageScript(page, '_tag-pill-list.js');
+
+  const firstPill = await page.$('.tag-pill:first-child');
+  await firstPill.click();
+
+  const itemCount = await page.evaluate(() => {
+    return document.querySelectorAll('.tag-pill').length;
+  });
+
+  t.is(itemCount, 1);
+});

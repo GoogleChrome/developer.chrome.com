@@ -37,7 +37,9 @@ export class TagPillList extends BaseElement {
   }
 
   _handleClick(item) {
-    const event = new CustomEvent('remove-pill', {
+    this.items = this.items.filter(i => i !== item);
+
+    const event = new CustomEvent('removed-pill', {
       detail: item,
     });
 
