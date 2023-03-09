@@ -22,15 +22,17 @@ Topics are a signal to help ad tech platforms select relevant ads. Unlike third-
 
 The Topics API allows third parties, such as ad tech platforms, to observe and then access topics of interest to a user. For example, the API might suggest the topic "Fiber & Textile Arts" for a user who visits the website `knitting.example`. 
 
-The [list of topics used by the Topics API](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md) is public, human-curated, human-readable, and designed to avoid sensitive categories. This is the current list, which will expand over time. This type of list is known as a _taxonomy_. The topics can be high-level or more specific. For example, `Food & Drink` is a broad category, with a subcategory of `Cooking & Recipes`. Subcategories may be further divided into additional subcategories.
+The list of topics used by the Topics API is public, human-curated, human-readable, and designed to avoid sensitive categories. This is [the current list](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md), which will expand over time. The list is structured as a _taxonomy_. The topics can be high-level or more specific. For example, `Food & Drink` is a broad category, with a subcategory of `Cooking & Recipes`. Subcategories may be further divided into additional subcategories.
 
-A taxonomy of topics needs to make a tradeoff between utility and privacy. If topics are too specific, they could be used to identify an individual user. If they are too general, they aren't useful for selecting advertising or other content.
+Such a taxonomy of topics needs to make a tradeoff between utility and privacy. If topics are too specific, they could be used to identify an individual user. If they are too general, they aren't useful for selecting advertising or other content.
 
 The topics taxonomy is constructed with two underlying requirements in mind:
+
 - Support interest-based advertising
 - Keep users safe and protect their privacy
 
 This suggests several questions. For example:
+
 - What's the best way for the API to infer topics of interest for a user, based on their browsing activity, while preserving the user's privacy?
 - How could the taxonomy be structured to make it more useful?
 - What specific items should the taxonomy include?
@@ -40,9 +42,9 @@ This suggests several questions. For example:
 Topics are derived from a [classifier model](https://github.com/jkarlin/topics#:~:text=classifier) that maps website [hostnames](https://web.dev/same-site-same-origin/#origin) to zero or more topics.
 Analyzing additional information (such as full URLs or page contents) might allow for more relevant ads, but might also reduce privacy.
 
-The classifier model for mapping hostnames to topics is publicly available, and the [explainer](https://github.com/patcg-individual-drafts/topics) proposes that it should be possible to view the topics for a site via browser developer tools. The model is expected to evolve and improve over time and be updated periodically; the frequency of this is still under consideration.
+The classifier model for mapping hostnames to topics is publicly available, and as the [explainer](https://github.com/patcg-individual-drafts/topics) notes, it is possible to view the topics for a site via browser developer tools. The model is expected to evolve and improve over time and be updated periodically; the frequency of this is still under consideration.
 
-Only sites that include code that calls the Topics API are included in the browsing history eligible for topic frequency calculations, and API callers only receive topics they've observed. In other words, sites are not eligible for topic frequency calculations without the site or an embedded service taking action to call the API.
+Only sites that include code that calls the Topics API are included in the browsing history eligible for topic frequency calculations, and API callers only receive topics they've observed. In other words, sites are not eligible for topic frequency calculations without the site or an embedded service callingß the API.
 
 {% Aside 'key-term' %}
 
@@ -70,7 +72,7 @@ Permissions-Policy: browsing-topics=()
 
 ## The classifier model {: #classifier-model}
 
-Topics are manually curated for 10,000 top domains, and this curation is used to train the classifier. This list can be found in `override_list.pb.gz`, which is available at `chrome://topics-internals/` under the current model in the "Classifier" tab. The domain-to-topics associations in the list are used by the API in lieu of the output of the model itself.
+Topics are manually curated for 10,000 top domains, and this curation is used to train the classifier. This list can be found in `override_list.pb.gz`, which is available at `chrome://topics-internals/` under the current model in the **Classifier** tab. The domain-to-topics associations in the list are used by the API in lieu of the output of the model itself.
 
 <figure>
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/SOTuE2ljC55PaYll1UP1.png",
@@ -88,7 +90,7 @@ To inspect the `override_list.pb.gz` file, first unpack it:
 ```text
 gunzip -c override_list.pb.gz > override_list.pb
 ```
-Use `protoc` to inspect: 
+Use [`protoc`](https://grpc.io/docs/protoc-installation/) to inspect it as text: 
 ```text
 protoc --decode_raw < override_list.pb > output.txt
 ```
@@ -109,7 +111,7 @@ The API returns one topic for each epoch, up to a maximum of three. If three are
 
 1. At the end of each epoch, the browser compiles a list of pages that meet the following criteria:
     - The page was visited by the user during the epoch.
-    - The page includes code that calls `document.browsingTopics()`
+    - The page includes code that calls `document.browsingTopics()`.
     - The API was enabled (for example, not blocked by the user or via a [response header](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy)).
 2. The browser, on the user's device, uses the classifier model provided by the Topics API to map the hostname for each page to a list of topics.
 3. The browser accumulates the list of topics.
@@ -117,7 +119,7 @@ The API returns one topic for each epoch, up to a maximum of three. If three are
 
 The `document.browsingTopics()` method then returns a random topic from the top five for each epoch, with a 5% chance that any of these may be randomly chosen from the full taxonomy of topics. In Chrome, users are also able to remove individual topics, or clear their browsing history to reduce the number of topics returned by the API. Users may also [opt out](#opt-out) of the API.
 
-View information about topics observed during the current epoch from the `chrome://topics-internals` page.
+You can view information about topics observed during the current epoch from the `chrome://topics-internals` page.
 
 
 ## How the API decides which callers see which topics
