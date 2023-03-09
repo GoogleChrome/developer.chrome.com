@@ -3,8 +3,12 @@
 {% macro blogCard(post) %}
 {% set pd = post.data %}
 <div class="blog-card rounded-lg pad-300 md:pad-400 width-full">
-  {% set thumbnail = pd.thumbnail or pd.hero or site.defaultPostImg %}
-  {% set alt = pd.alt or 'i18n.common.blog_default_alt' | i18n(locale) %}
+  {% set thumbnail = pd.thumbnail or pd.hero %}
+  {% set alt = pd.alt %}
+  {% if not thumbnail %}
+    {% set thumbnail = site.defaultPostImg %}
+    {% set alt = 'i18n.common.blog_default_alt' | i18n(locale) %}
+  {% endif %}
   {% set tags = pd.tags %}
 
   {% if thumbnail %}
