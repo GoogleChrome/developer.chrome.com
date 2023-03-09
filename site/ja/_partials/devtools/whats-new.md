@@ -7,9 +7,9 @@
 {# ### Chrome 111 {: #chrome111 }
 
 * [Styles ペインで高精細色をデバッグする](/ja/blog/new-in-devtools-111/#color)
-* [強化されたブレークポイントのUX](/ja/blog/new-in-devtools-111/#breakpoint-redesign)
+* [強化されたブレークポイントの UX](/ja/blog/new-in-devtools-111/#breakpoint-redesign)
 * [カスタマイズ可能な Recorder ショートカット](/ja/blog/new-in-devtools-111/#recorder)
-* [Angularのシンタックスハイライトの改善](/ja/blog/new-in-devtools-111/#syntax)
+* [Angular のシンタックスハイライトの改善](/ja/blog/new-in-devtools-111/#syntax)
 * [キャッシュを Application パネルで再整理する](/ja/blog/new-in-devtools-111/#cache)
 * [その他のハイライト](/ja/blog/new-in-devtools-111/#misc)
  #}

@@ -45,7 +45,7 @@ tags:
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/3VkOGbbb5qLVvo1A1qSa.png", alt="Computed ペインに表示される color-mix 関数の出力", width="800", height="487" %}
 
 <!-- The color picker supports all the new color spaces with more features. For example, click on the color swatch of `color(display-p3 1 0 1)`. A gamut boundary line has also been added, distinguishing between the `sRGB` and `display-p3` gamuts for a clearer understanding of your selected color's gamut. -->
-カラーピッカーは、より多くの機能を持つ新しい色空間をすべてサポートしています。例えば、 `color(display-p3 1 0 1)` の色見本をクリックしてみてください。色域境界線も追加され、`sRGB` と `display-p3` の色域を区別し、選択した色の色域をより明確に理解できるようになりました。
+カラーピッカーは、より多くの機能によって、新しい色空間をすべてサポートします。例えば、 `color(display-p3 1 0 1)` の色見本をクリックしてみてください。色域境界線も追加され、`sRGB` と `display-p3` の色域を区別し、選択した色の色域をより明確に理解できるようになりました。
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/bL6uw8VV4cGuDd9hmAjX.png", alt="色域境界線", width="800", height="657" %}
 
 <!-- DevTools supports converting colors between color formats. Use the **Change Color Format** icon to access the conversion popup, or simply use the `Shift` + click on a color swatch in the **Styles** pane. -->
@@ -54,7 +54,7 @@ DevTools はカラーフォーマット間の色変換をサポートしてい�
 
 <!-- When converting, it's important to know if the conversion was clipped to fit the space. DevTools puts a warning icon next to the converted color that alerts you to this clipping. -->
 変換するとき、空間に合わせてクリップされたかどうかを知ることは重要です。DevTools は変換された色の横に警告アイコンを表示し、このクリッピングを警告します。
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5Y4rVIqL9rjuSbHcodKr.png", alt="クリッピングの警告", width="800", height="657" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5Y4rVIqL9rjuSbHcodKr.png", alt="カラークリッピングの警告", width="800", height="657" %}
 
 <!-- In addition, you can pick colors from your screen with the new shortcut. Press 'c' to activate the eye dropper and hit `Escape` to deactivate it. The eyedropper tool only samples colors in the sRGB color space. For example, if you try to sample the color `color(display-p3 1 0 1)`, which is outside of the sRGB color space, the eyedropper tool will clip the color to the nearest color in the sRGB space, which is magenta `color(display-p3 0.92 0.2 0.97)`. -->
 さらに、新しいショートカットでスクリーンから色を選べます。 `c` を押すとスポイトがアクティブになり、`Escape` を押すと非アクティブになります。スポイトツールは sRGB 色空間内の色しかサンプリングしません。例えば、sRGB の色空間の外にある色 `color(display-p3 1 0 1)` をサンプリングしようとすると、スポイトツールはその色を sRGB 空間で最も近い色であるマゼンタ `color(display-p3 0.92 0.2 0.97)` にクリッピングします。
@@ -87,7 +87,7 @@ Chromium issues: [1073895](https://crbug.com/1073895), [1395782](https://crbug.c
 ハイライトをいくつか紹介します。
 
 <!-- - Both pause exception options moved to the **Breakpoints** pane and labeled with text to make it more self-explanatory. -->
-- 例外による一時停止オプションが **Breakpoints** ペインに移動し、テキストでラベル付けされ、より分かりやすくなりました。
+- キャッチされなかった例外による一時停止オプションについても **Breakpoints** ペインに移動され、テキストでラベル付けされ、より分かりやすくなりました。
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/KADuAqVdrxxQDg5AYYeA.png", alt="例外による一時停止オプション", width="800", height="518" %}
 
 <!-- - Breakpoints are grouped by file, ordered by line or column numbers, and are collapsible. -->
@@ -142,7 +142,7 @@ Chromium issue: [1339771](https://crbug.com/bbb)
 
 
 <!-- ## Better syntax highlight for Angular {: #syntax } -->
-## Angularのシンタックスハイライトの改善 {: #syntax }
+## Angular のシンタックスハイライトの改善 {: #syntax }
 
 <!-- DevTools enhanced the syntax highlighting for Angular HTML templates, making it easier for you to read code and recognize its structure. -->
 DevTools は、 Angular の HTML テンプレートのシンタックスハイライトを強化し、コードを読みやすく、構造を認識しやすくしました。
