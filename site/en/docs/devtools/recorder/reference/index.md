@@ -99,7 +99,7 @@ You can do the following with each default export option:
 To integrate the **Recorder** with your tools, install extensions:
 
 1. Select {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4dU9UXvsinS4zbgjd8rK.svg", alt="File download.", width="20", height="20" %} **Export** > **Get extensions...** at the top of the **Recorder** panel or go to [Extensions](/docs/devtools/recorder/extensions/).
-1. Choose an extension an click its link.
+1. Choose an extension and click its link.
 1. In Chrome Web Store, click **Add extension**.
 1. [Open DevTools](/docs/devtools/open/) in a new tab and find new custom options in the **Recorder**.
 
