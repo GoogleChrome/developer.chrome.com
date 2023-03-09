@@ -1,9 +1,9 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: Upgrade to a service worker
+title: Migrate to a service worker
 subhead: 'Replacing background or event pages with a service worker'
 description: 'A service worker enables extensions to run only when needed, saving resources.'
-date: 2023-03-08
+date: 2023-03-09
 ---
 
 A service worker replaces the extension's background or event page to ensure that background code stays off the main thread. This enables extensions to run only when needed, saving resources. 
@@ -152,7 +152,7 @@ console.log(response.statusText);
 {% endCompare %}
 
 {% Aside 'important' %}
-If you previously used `XMLHttpRequest()` or `fetch()` to retrieve executable code, you can no longer do so. All executable code must be part of your extension package. For more information, see [Improve extension security](/docs/extensions/upgrading/improve-security).
+If you previously used `XMLHttpRequest()` or `fetch()` to retrieve executable code, you can no longer do so. All executable code must be part of your extension package. For more information, see [Improve extension security](/docs/extensions/migrating/improve-security).
 {% endAside %}
 
 ## Persist states {: #persist-states }

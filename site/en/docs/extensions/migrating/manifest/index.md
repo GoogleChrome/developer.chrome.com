@@ -3,10 +3,10 @@ layout: 'layouts/doc-post.njk'
 title: Update the manifest
 subhead: Convert a V2 manifest to a V3 manifest
 description: The manifest.json file requires a slightly different format for V3 than for V2.
-date: 2023-03-08
+date: 2023-03-09
 ---
 
-The `manifest.json` file requires a slightly different format for V3 than for V2. This page describes changes that only affect the `manifest.json` file. But many of the changes to scripts and pages also require changes to the manifest. Those changes are covered with the upgrade tasks that require them.
+The `manifest.json` file requires a slightly different format for V3 than for V2. This page describes changes that only affect the `manifest.json` file. But many of the changes to scripts and pages also require changes to the manifest. Those changes are covered with the migration tasks that require them.
 
 ## Change the manifest version number {: #change-version }
 
