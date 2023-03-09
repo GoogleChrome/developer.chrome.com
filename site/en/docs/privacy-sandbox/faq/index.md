@@ -304,6 +304,12 @@ the following properties:
 *  `auctionSignals`, a property of the auction configuration object passed to `navigator.runAdAuction()`
 *  `userBiddingSignals`, a property of the interest group configuration
    object passed to `navigator.joinAdInterestGroup()`
+   
+### What is the limit to the number of interest groups that a group owner (origin) can add a single browser to?
+
+Chrome allows up to 1000 interest groups per owner, and up to 1000 interest group owners.
+
+These are meant to be guard rails, not to be hit in regular operation.
 
 
 ## Attribution Reporting
