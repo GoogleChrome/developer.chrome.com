@@ -118,7 +118,7 @@ If you don't see the export option after installing the extension, do the follow
 {% Aside 'gotchas' %} 
 **Advanced use case: Build an extension**
 
-To further customize the **Recorder** to your needs, you can build your own extension too:
+To further customize the **Recorder** to your needs, you can build your own extension:
 
 1. Explore the [chrome.devtools.recorder](/docs/extensions/reference/devtools_recorder/) API.
 1. Check out [example extensions](https://github.com/puppeteer/replay/tree/main/examples).
