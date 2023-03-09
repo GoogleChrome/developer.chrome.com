@@ -71,11 +71,11 @@ The Topics API lifecycle: [view a larger version](https://wd.imgix.net/image/80m
 
 ### API callers only receive topics they've observed
 
-A design goal of the Topics API is to enable interest-based advertising without the sharing of information to more entities than is currently possible with third-party cookies. The Topics API is designed so topics can only be returned for API callers that have already observed them, within a limited timeframe.
+A design goal of the Topics API is to enable interest-based advertising without the sharing of information to more entities than is currently possible with third-party cookies. The Topics API is designed so topics can only be returned for API callers that have already observed them, within a limited timeframe. An API caller is said to have observed a topic for a user if it has called the `document.browsingTopics()` method in code included on a site that the Topics API has mapped to that topic.
 
-The API provides only topics that have been observed by the caller within the most recent three [epochs](/docs/privacy-sandbox/topics/#epoch). This helps stop information about the user from being shared with more entities than the technologies the API is replacing (including third-party cookies).
+The API provides only topics that have been observed by the caller within the most recent three epochs. This helps stop information about the user from being shared with more entities than the technologies the API is replacing (including third-party cookies).
 
-The number of topics returned  depends on the number of topics that the [API caller](/docs/privacy-sandbox/topics/#caller) has previously observed, and the number of topics that the user has available (such as the number of weeks of data accumulated). Anywhere from zero to three topics may be returned, as one topic can be indicated for each of the three recent epochs
+The number of topics returned  depends on the number of topics that the API caller has previously observed, and the number of topics that the user has available (such as the number of weeks of data accumulated). Anywhere from zero to three topics may be returned, as one topic can be indicated for each of the three recent epochs
 
 For more information on how to use and test the Topics API, refer to the [Topics API developer guide](/docs/privacy-sandbox/topics/).
 
@@ -91,7 +91,7 @@ The Topics API proposes multiple mechanisms to help ensure that it is difficult 
 - If a user frequently visits the same site (every week, for example) code running on the site can only learn at most one new topic per week.
 - Different sites will receive different topics for the same user in the same epoch. There is only a one-in-five chance that the topic returned for a user on one site matches the topic returned for them on another. This makes it more difficult to determine if they're the same user.
 - Topics are updated for a user once each week, which limits the rate at which information can be shared. In other words, the API helps mitigate against fingerprinting by not providing topics updates too frequently.
-- A topic will only be returned for an API caller that [previously observed the same topic](/docs/privacy-sandbox/topics/#observed-topics) for the same user recently. This approach helps limit the potential for entities to learn about (or share) information about user interests they have not observed firsthand.
+- A topic will only be returned for an API caller that previously observed the same topic for the same user recently. This approach helps limit the potential for entities to learn about (or share) information about user interests they have not observed firsthand.
 
 {% endDetails %}
 
