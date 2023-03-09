@@ -66,7 +66,7 @@ Open your recording, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4dU9UX
 
 ### Get extensions {: #get-extensions }
 
-Get extensions for the **Recorder** with a couple of clicks:
+Explore options to customize your recorder experience (e.g. export to Nightwatch script). Get extensions for the **Recorder** by clicking on the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4dU9UXvsinS4zbgjd8rK.svg", alt="Export.", width="20", height="20" %} **Export** > **Get extensions** in a recording.
 
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/vwgXoxR0FyArbCHvdvEY.png", alt="The Get extensions option in the Export drop-down menu.", width="800", height="649" %}
