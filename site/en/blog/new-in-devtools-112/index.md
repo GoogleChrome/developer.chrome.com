@@ -152,7 +152,6 @@ Depending on the script or folder you right-clicked, you may see options to add 
 
 - A script or a folder to or from a custom exclusion rule.
 - All known third-party scripts.
-- All content scripts.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/DRI11RoakrLnwLZPOJPO.png", alt="Ignore-listed scripts and folders are grayed out, you can hide them with an experimental option in the More options drop-down menu.", width="800", height="542" %}
 
