@@ -68,7 +68,6 @@ Run the Puppeteer script to get a Lighthouse report in a `flow.report.html` file
 
 Get extensions for the **Recorder** with a couple of clicks:
 
-1. Open a recording, and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4dU9UXvsinS4zbgjd8rK.svg", alt="Export.", width="20", height="20" %} **Export** > **Get extensions**
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/vwgXoxR0FyArbCHvdvEY.png", alt="The Get extensions option in the Export drop-down menu.", width="800", height="649" %}
 
