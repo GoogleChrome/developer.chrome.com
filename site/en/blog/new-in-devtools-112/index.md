@@ -109,7 +109,7 @@ Chromium issue: [1401107](https://crbug.com/1401107).
 
 ### CSS nesting support {: #nesting }
 
-The **Elements** > **Styles** pane now recognizes [CSS Nesting](https://w3c.github.io/csswg-drafts/css-nesting/) syntax and applies nested styles to the right elements.
+The **Elements** > **Styles** pane now recognizes [CSS Nesting](/articles/css-nesting/) syntax and applies nested styles to the right elements.
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/Wog2uOaJTV84OtXcHpYH.mp4", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
 
