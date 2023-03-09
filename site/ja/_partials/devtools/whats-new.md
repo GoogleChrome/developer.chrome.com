@@ -4,6 +4,24 @@
 
 {# $content #}
 
+{# ### Chrome 112 {: #chrome112 }
+
+* [Recorder updates](/ja/blog/new-in-devtools-112/#recorder)
+* [Recorder replay extensions](/ja/blog/new-in-devtools-112/#replay-extensions)
+* [Record with pierce selectors](/ja/blog/new-in-devtools-112/#pierce-selectors)
+* [Export recordings as Puppeteer scripts with Lighthouse analysis](/ja/blog/new-in-devtools-112/#puppeteer-lighthouse)
+* [Get extensions](/ja/blog/new-in-devtools-112/#get-extensions)
+* [Elements > Styles updates](/ja/blog/new-in-devtools-112/#elements-styles)
+* [CSS documentation in the Styles pane](/ja/blog/new-in-devtools-112/#css)
+* [CSS nesting support](/ja/blog/new-in-devtools-112/#nesting)
+* [Marking logpoints and conditional breakpoints in the Console](/ja/blog/new-in-devtools-112/#logpoint)
+* [Ignore irrelevant scripts during debugging](/ja/blog/new-in-devtools-112/#ignore-list)
+* [JavaScript Profiler deprecation started](/ja/blog/new-in-devtools-112/#js-profiler-deprecation)
+* [Emulate reduced contrast](/ja/blog/new-in-devtools-112/#reduced-contrast)
+* [Lighthouse 10](/ja/blog/new-in-devtools-112/#lighthouse)
+* [Miscellaneous highlights](/ja/blog/new-in-devtools-112/#misc)
+ #}
+
 {# ### Chrome 111 {: #chrome111 }
 
 * [Debugging HD color with the Styles pane](/ja/blog/new-in-devtools-111/#color)

@@ -6,6 +6,7 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 
 ### Chrome 112 {: #chrome112 }
 
+* [Recorder updates](/blog/new-in-devtools-112/#recorder)
 * [Recorder replay extensions](/blog/new-in-devtools-112/#replay-extensions)
 * [Record with pierce selectors](/blog/new-in-devtools-112/#pierce-selectors)
 * [Export recordings as Puppeteer scripts with Lighthouse analysis](/blog/new-in-devtools-112/#puppeteer-lighthouse)
@@ -19,6 +20,7 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 * [Emulate reduced contrast](/blog/new-in-devtools-112/#reduced-contrast)
 * [Lighthouse 10](/blog/new-in-devtools-112/#lighthouse)
 * [Miscellaneous highlights](/blog/new-in-devtools-112/#misc)
+
 
 ### Chrome 111 {: #chrome111 }
 
