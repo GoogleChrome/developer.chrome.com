@@ -1,10 +1,10 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: 'FedCM updates: origin trial starts for "auto reauthentication"'
+title: 'FedCM updates: Origin trial for auto-reauthentication'
 description: >
-  Introducing a few updates for FedCM including a new origin trial "auto reauthentication", which reauthenticates users automatically (when RPs opt-in), when they come back after their initial authentication using FedCM.
+  Introducing a few updates to FedCM including a new origin trial for auto-reauthentication. When RPs opt-in, this feature enables reauthenticaticating users automatically when they come back after their initial authentication using FedCM.
 subhead: >
-  Introducing a few updates for FedCM including a new origin trial "auto reauthentication".
+  Introducing a few updates to FedCM including a new origin trial for auto-reauthentication.
 date: 2023-03-09
 hero: 'image/YLflGBAPWecgtKJLqCJHSzHqe2J2/9C9Sneo3nkZlqRcsbWff.jpg'
 alt: 'an automated door'
@@ -29,37 +29,35 @@ information and privilege levels being shared and prevent unintended abuse.
 
 ## Updates
 
-We have a few updates to the Chrome's FedCM implementation recently:
+There are a few updates to Chrome's FedCM implementation:
 
 * For the [ID assertion
   endpoint](/docs/privacy-sandbox/fedcm/#id-assertion-endpoint), IdPs need to
   check the `Origin` header (instead of the `Referer` header) to see if the
   value matches the origin of the client ID.
-* Added a new [Chrome flag](/docs/web-platform/chrome-flags/)
-  `chrome://flags/#fedcm-without-third-party-cookies`. With this flag, [you can
-  test FedCM functionality in Chrome by blocking third-party
+* A new [Chrome flag](/docs/web-platform/chrome-flags/)
+  `chrome://flags/#fedcm-without-third-party-cookies` added. With this flag, you can
+  [test FedCM functionality in Chrome by blocking third-party
   cookies](/docs/privacy-sandbox/fedcm/#block-third-party-cookies).
 
-Check all the past updates to the API and our [FedCM
-documentation](/docs/privacy-sandbox/fedcm/) at [Federated Credential Management
+For all the past updates to the API check out [Federated Credential Management
 API updates](/docs/privacy-sandbox/fedcm-updates/).
 
-Additionally, we are starting FedCM's new feature as an origin trial — "auto
-reauthentication" — starting in Chrome 112.
+The latest version of FedCM includes a new auto-reauthentication feature, which enables reauthenticaticating users automatically when they come back after their initial authentication using FedCM. Auto-reauthentication is available as an origin trial starting in Chrome 112.
 
 ## Auto-reauthentication
 
-Currently, after [a user has created a federated account on an RP with an IdP
-via the FedCM](/docs/privacy-sandbox/fedcm/#sign-in), the next time they revisit
-the website they need to go through the same steps with the same UI affordances.
-i.e. they will need to explicitly and manually re-confirm to re-authenticate and
-proceed with the sign-in flow. While the explicit UX makes sense before the user
-has created the federated account to prevent tracking (which is one of the main
-goals of FedCM), it is overly and unnecessarily cumbersome after the user has
-gone through it once: after the user grants permission to allow communication
+Currently, after a user has [created a federated account on an RP with an IdP
+via the FedCM](/docs/privacy-sandbox/fedcm/#sign-in), the next time they visit
+the website they need to go through the same steps in the user interface.
+That is, they need to explicitly confirm and reauthenticate to
+proceed with the sign-in flow. As one of the main
+goals of FedCM is to prevent covert tracking, this user experience (UX) makes sense before the user
+has created the federated account, but it becomes unnecessary and cumbersome after the user has
+gone through it once. After the user grants permission to allow communication
 between the RP and the IdP,  there's no privacy or security benefit for
 enforcing another explicit user confirmation for something that they have
-already previously acknowledged. Therefore we are introducing a more streamlined
+already previously acknowledged. That's why Chrome is introducing a more streamlined
 UX that RPs can choose for their returning users.
 
 [FedCM auto-reauthentication](https://github.com/fedidcg/FedCM/issues/429)
@@ -97,7 +95,7 @@ const cred = await navigator.credentials.get({
 
 ```
 
-With this call, auto-reauthn happens under the following conditions:
+With this call, auto-reauthentication happens under the following conditions:
 
 * FedCM is available to use. For example, the user has not disabled FedCM either
   globally or for the RP.
@@ -105,7 +103,7 @@ With this call, auto-reauthn happens under the following conditions:
 * The user is signed into the IdP with that account.
 * The auto-reauthn didn't happen within the last 10 minutes.
 
-When the above conditions meet, an attempt to automatically reauthenticate the
+When the above conditions are met, an attempt to automatically reauthenticate the
 user starts as soon as the FedCM `navigator.credentials.get()` is invoked.
 
 
@@ -117,32 +115,30 @@ user starts as soon as the FedCM `navigator.credentials.get()` is invoked.
   <figcaption>A user is auto-reauthenticating to an RP using FedCM</figcaption>
 </figure>
 
-It would be annoying if the user is auto reauthenticated immediately after the
-user signs out.  Developers are recommended to design the sign-out flow not to
-make this happen.
-
 {% Aside %}
+To avoid a frustrating experience of auto-reauthentication immediately after a
+user has signed out, it's recommended to design a sign-out flow that would prevent that.
 
-As alluded earlier, FedCM has a 10-minute quiet period after an auto-reauthn to
+FedCM has a 10 minute quiet period after an auto-reauthentication to
 prevent this behavior. We are also exploring other approaches to achieve this
 such as using
 [`CredentialsContainer.preventSilentAccess()`](https://developer.mozilla.org/docs/Web/API/CredentialsContainer/preventSilentAccess).
 
 {% endAside %}
 
-## Try it yourself
+## Try it out
 
-You can try FedCM auto-reauthn locally by turning on [a Chrome
+You can try FedCM auto-reauthentication locally by turning on [a Chrome
 flag](/docs/web-platform/chrome-flags/) `chrome://flags#fedcm-auto-re-authn` on
 Chrome 112 or later.
 
-For testing purposes, you can reset the 10-minute quiet period by removing
+For testing purposes, you can reset the 10 minute quiet period by removing
 browser data.
 
-1.  Navigate to `chrome://history`
-2.  Click **"Clear Browsing History"**  (under the main menu)
-3.  Clear **"Cookies & Other Site Data"** for the time range **"All time"**
-4.  Restart Chrome
+1.  Navigate to `chrome://history`.
+2.  Click **Clear Browsing History**  (under the main menu).
+3.  Clear **Cookies & Other Site Data** for the time range **All time**.
+4.  Restart Chrome.
 
 {% Aside 'caution' %}
 
@@ -151,10 +147,10 @@ websites on the Chrome instance.
 
 {% endAside %}
 
-## Origin trial
+## Participate in the origin trial
 
 You can also enable the feature on your website by joining [the third-party
-origin trial](/docs/web-platform/third-party-origin-trials/) between Chrome 112
+origin trial](/docs/web-platform/third-party-origin-trials/) available from Chrome 112
 through Chrome 114.
 
 {% Partial 'origin-trials.md' %}
@@ -168,8 +164,10 @@ must register their origin by themselves for the origin trial.
 
 {% endAside %}
 
-We are waiting for your testing and feedback at [crbug.com](http://crbug.com/)
-with a component **"Blink>Identity>FedCM"**.
+## Engage and share feedback
+
+If you have feedback or encounter any issues during testing, you can share them at [crbug.com](http://crbug.com/)
+under the **Blink>Identity>FedCM** component.
 
 Photo by [Alex
 Perz](https://unsplash.com/es/@adventureregistry?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
