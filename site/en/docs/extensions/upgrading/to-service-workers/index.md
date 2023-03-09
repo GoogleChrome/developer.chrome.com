@@ -14,7 +14,7 @@ Background pages have been a fundamental component of extensions since their int
 
 In some contexts you'll see extension service workers called 'background scripts'. Although extension service workers do run in the background, calling them background scripts is somewhat misleading by implying identical capabilities. The differences are described below.
 
-### Changes from background pages {: #improvements-over-bg }
+### Changes from background pages {: #changes-over-bg }
 
 Service workers has a number of differences with background pages.
 
