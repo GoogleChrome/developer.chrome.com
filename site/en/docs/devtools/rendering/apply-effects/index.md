@@ -28,7 +28,7 @@ To check if frames are tagged as ads:
 
 ## Emulate a focused page
 
-If you switch focus from the current page to DevTools, some overlay elements automatically hide if they are triggered by focus. For example, dropdown lists, menus, or date pickers.
+If you switch focus from the current page to DevTools, some overlay elements automatically hide if they are triggered by focus. For example, drop-down lists, menus, or date pickers.
 
 1. Open a page with the element to debug, for example, the [YouTube website](https://www.youtube.com/watch?v=zFVWeOKZBHs) with its search bar.
 1. On the page, [open the **Rendering** tab](/docs/devtools/rendering#open-rendering), then check and uncheck **Emulate a focused page**.
@@ -87,8 +87,8 @@ To enable automatic dark mode:
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/DWex5Vmp51B0e1MFKDjZ.png", alt="Automatic dark mode enabled", width="800", height="398" %}
 
-{% Aside 'gotchas' %}
-When the [Auto Dark Theme](/blog/auto-dark-theme/) is enabled, the **Emulate CSS media feature `prefers-color-scheme`** dropdown is disabled and set to `prefers-color-scheme: dark` automatically.
+{% Aside 'important' %}
+With [Auto Dark Theme](/blog/auto-dark-theme/) enabled, the [**Emulate CSS media feature `prefers-color-scheme`**](/docs/devtools/rendering/emulate-css/#emulate-css-media-feature-prefers-color-scheme) drop-down list is disabled and set to `prefers-color-scheme: dark` automatically.
 {% endAside %}
 
 ## Emulate vision deficiencies
@@ -102,18 +102,17 @@ With Chrome DevTools, you can see how people with vision deficiencies see your s
 To emulate vision deficiencies:
 
 1. [Open the **Rendering** tab](/docs/devtools/rendering#open-rendering).
-1. Under the **Emulate vision deficiencies**, select one of the following from the dropdown list:
+1. Under **Emulate vision deficiencies**, select one of the following from the drop-down list:
 
    - **No emulation**.
    - **Blurred vision**.
-   - **Protanopia**. No perception of red and green colors.
-   - **Deuteranopia**. Confusion of red, green, and yellow.
-   - **Tritanopia**. No distinction of blue and yellow.
-   - **Achromatopsia**. Partial or total absence of color vision.
+   - **Reduced contrast**. 
+   - **Protanopia (no red)**. Low perception of red; confusion of greens, reds, and yellows.
+   - **Deuteranopia (no green)**. Low perception of green; confusion of greens, reds, and yellows.
+   - **Tritanopia (no blue)**. Low perception of blue; confusion of greens and blues.
+   - **Achromatopsia (no color)**. Partial or total absence of color vision.
 
-  For example:
-
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/aj8UMMDpofn8s7UPzHTy.png", alt="Emulated blurred vision", width="800", height="481" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/nAphCZ5U3nDoEPVRDYD0.png", alt="Selected Tritanopia (no blue).", width="800", height="577" %}
 
 ## Disable AVIF and WebP image formats
 
@@ -139,6 +138,6 @@ To disable all AVIF images on a page (or, similarly, WebP images):
 
 Similarly, you can disable WebP images. 
 
-{% Aside 'gotchas' %}
+{% Aside 'important' %}
 These options disable image caching automatically. 
 {% endAside %}
