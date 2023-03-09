@@ -141,7 +141,7 @@ additional changes in Chrome 111.
 
 * [What's new in Chrome DevTools (111)](/blog/new-in-devtools-111/)
 * [Chrome 111 deprecations and removals](/blog/deps-rems-111/)
-* [ChromeStatus.com updates for Chrome 111](https://www.chromestatus.com/features#milestone%3D108)
+* [ChromeStatus.com updates for Chrome 111](https://www.chromestatus.com/features#milestone%3D111)
 * [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/110.0.5481.186..111.0.5563.53)
 * [Chrome release calendar](https://chromiumdash.appspot.com/schedule)
 
