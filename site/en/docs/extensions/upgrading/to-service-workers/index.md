@@ -146,7 +146,7 @@ xhr.send(null);
 
 {% Compare 'better', 'fetch()' %}
 ```js
-const response = await fetch('https://www.example.com/data.json'')
+const response = await fetch('https://www.example.com/greeting.json'')
 console.log(response.statusText);
 ```
 {% endCompare %}
