@@ -27,8 +27,6 @@ indepth-other:
   en: 'In depth: more topics'
 migrating:
   en: 'Migrate from Manifest V2 to Manifest V3'
-upgrading:
-  en: 'Upgrade from Manifest V2 to Manifest V3'
 obsolete:
   en: 'Obsolete topics'
 mv3:
