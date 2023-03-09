@@ -108,13 +108,13 @@ This version of Chrome introduces the deprecations and removals listed below. Vi
 
 This release of Chrome deprecates one feature.
 
-### Deprecate the `document.domain` setter.
+### Deprecate the `document.domain` setter
 
 The `document.domain` setter allows developers to relax the same-origin policy, complicating the fundamental security boundary we aim to maintain, and putting roadblocks in the way of post-Spectre changes to Chromium's process model. It is now opt-in via Origin-keyed agent clusters.
 
 This release of Chrome removes one feature.
 
-### Remove stats objects `track` and `stream` from the `getStats()` method of `RTCPeerConnection`. 
+### Remove stats objects `track` and `stream` from the `getStats()` method of `RTCPeerConnection` 
 
 The `getStats()` method of `RTCPeerConnection`  will no longer return stats objects where `type == "track"` or `"stream"`. Unshipped in Chrome 112, with a Deprecation Trial (listed above) to extend the availability of these metrics to Chrome 115.
 
