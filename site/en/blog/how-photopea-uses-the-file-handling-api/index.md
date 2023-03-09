@@ -88,18 +88,18 @@ The imperative part of the API then deals with actually handling the file(s) tha
 
 ```js
 var N = window.launchQueue;
-  if (N) {
-    var $ = this.UA;
-    N.setConsumer(function(W) {
+if (N) {
+  var $ = this.UA;
+  N.setConsumer(function (W) {
     var O = W.files;
     console.log(O);
     for (var Y = 0; Y < O.length; Y++) {
       var T = O[Y];
-      T.getFile().then(function(G) {
-        $.YO([G], null, null, null, [T])
-      })
+      T.getFile().then(function (G) {
+        $.YO([G], null, null, null, [T]);
+      });
     }
-  })
+  });
 }
 ```
 
