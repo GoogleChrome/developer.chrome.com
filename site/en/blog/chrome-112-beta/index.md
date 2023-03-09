@@ -82,11 +82,9 @@ In Chrome 112 you can opt into the following [origin trials](/docs/web-platform/
 
 ### FedCM: Auto re-authentication API
 
-Currently, after a user has created a federated account on a relying party (RP) with an identity provider (IdP) via the Federated Credential Management API (FedCM), the next time they revisit the website they need to go through the same steps. For example, they will need to explicitly and manually re-confirm to re-authenticate and proceed with the sign-in flow. 
+The latest version of FedCM includes an opt-in auto-reauthentication feature, which enables reauthenticaticating users automatically when they come back after their initial authentication using FedCM.
 
-While the explicit UX makes sense before the user has created the federated account to prevent tracking (which is one of the main goals of FedCM), it is overly and unnecessarily cumbersome after the user has gone through it once. After the user grants permission to allow communication between the RP and the IdP,  there's no privacy or security benefit for enforcing another explicit user confirmation for something that they have already previously acknowledged. Therefore we are introducing a more streamlined UX that RPs can choose for their returning users.
-
-FedCM auto-reauthentication ("auto-reauthn" in short) reauthenticates users automatically (when RPs opt-in), when they come back after their initial authentication using FedCM.
+Currently, after a user has created a federated account on an RP (relying party) with an IdP (identity provider) via the FedCM, the next time they visit the website they need to go through the same steps in the user interface. That is, they need to explicitly confirm and reauthenticate to proceed with the sign-in flow. As one of the main goals of FedCM is to prevent covert tracking, this user experience (UX) makes sense before the user has created the federated account, but it becomes unnecessary and cumbersome after the user has gone through it once. That's why Chrome is introducing a more streamlined UX that RPs can choose for their returning users.
 
 [Register for the FedCM auto-reauthentication origin trial](/origintrials/#/view_trial/2426314299245854721)
 
