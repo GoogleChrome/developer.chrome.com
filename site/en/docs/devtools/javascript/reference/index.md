@@ -308,7 +308,7 @@ Try restarting the frames of both functions in the following way:
 
 ### Show ignore-listed frames {: #show-ignore-listed-frames }
 
-With the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Ignore List** > **Automatically add known third-party scripts to ignore list** setting enabled, the **Scope** pane shows only the frames that are relevant to your code.
+By default, the **Call Stack** pane shows only the frames that are relevant to your code and omits any scripts added to {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Ignore List**](/docs/devtools/settings/ignore-list/).
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YZH1mvFdglBhJVn7AGrz.png", alt="Call stack.", width="800", height="422" %}
 

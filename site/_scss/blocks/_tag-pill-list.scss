@@ -1,0 +1,17 @@
+tag-pill-list {
+  cursor: pointer;
+  display: none;
+  flex-wrap: wrap;
+  gap: get-size(100);
+
+  svg {
+    fill: var(--color-blue-medium);
+    height: get-size(300);
+    margin-left: 0.5rem;
+    width: get-size(300);
+  }
+
+  &:defined {
+    display: flex;
+  }
+}

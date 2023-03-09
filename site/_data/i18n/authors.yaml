@@ -1264,6 +1264,11 @@ tristramsouthey:
     en: 'Tristram Southey'
   description:
     en: 'Product Manager, Google Chrome'
+kyraseevers:
+  title:
+    en: 'Kyra Seevers'
+  description:
+    en: 'Software Engineer, Google Chrome'
 jyasskin:
   title:
     en: 'Jeffrey Yasskin'

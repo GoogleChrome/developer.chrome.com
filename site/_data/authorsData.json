@@ -1081,6 +1081,10 @@
     "country": "US",
     "image": "image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/yh2i5pJyWLqMz49B7qWq.jpeg"
   },
+  "kyraseevers": {
+    "country": "US",
+    "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/bAfyIJWEgdLfw1B3K8j0.jpg"
+  },
   "jyasskin": {
     "country": "US",
     "mastodon": "https://hachyderm.io/@jyasskin",
@@ -1111,6 +1115,8 @@
     "image": "image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/T6iiWq4bxpNnhtksZITO.jpg"
   },
   "pbirk": {
-    "image": "image/VbsHyyQopiec0718rMq2kTE1hke2/OP7hHXskpMEc8q7wddG1.jpeg"
+    "image": "image/VbsHyyQopiec0718rMq2kTE1hke2/OP7hHXskpMEc8q7wddG1.jpeg",
+    "github": "peterbn",
+    "linkedin": "peter-birk-pakkenberg"
   }
 }
