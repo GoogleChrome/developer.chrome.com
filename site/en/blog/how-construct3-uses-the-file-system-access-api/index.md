@@ -30,14 +30,15 @@ For saving, the following snippet shows the original production code for obtaini
 let fileHandle = null;
 try {
   fileHandle = await window["showSaveFilePicker"]({
-    "id": "save-project-file",
-    "types": [{
-	 "description":
-          lang("ui.project-file-picker.c3-single-file-project"),
-      "accept": {
-	   "application/x-construct3-project": [".c3p"]
- }
-    }]
+    id: "save-project-file",
+    types: [
+      {
+        description: lang("ui.project-file-picker.c3-single-file-project"),
+        accept: {
+          "application/x-construct3-project": [".c3p"],
+        },
+      },
+    ],
   });
 } catch (err) {
   // Assume user cancelled, or permission otherwise denied.
