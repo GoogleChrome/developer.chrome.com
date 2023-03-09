@@ -13,7 +13,7 @@ tags:
   - devtools
   - chrome-112
 ---
-<!-- image/NJdAV9UgKuN8AhoaPBquL7giZQo1/G5pxOHr2wECkBu8J2ujC.jpg  -->
+<!--image/dPDCek3EhZgLQPGtEG3y0fTn4v82/gctGASDKBFTUtOQqVq2H.png  -->
 
 {% Partial 'devtools/banner.md' %}
 
