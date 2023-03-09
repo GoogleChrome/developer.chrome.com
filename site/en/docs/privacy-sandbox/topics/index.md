@@ -117,7 +117,7 @@ The `chrome://topics-internals` page is new. The design and functionality are st
 
 ### View topics calculated for your browser
 
-Users can view information about topics observed for their browser during the current and previous epochs.
+Users can view information about topics observed for their browser during the current and previous epochs by viewing `chrome://topics-internals`.
 
 <figure>
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/M253GclVFDCnvPJlTSVR.png",
@@ -127,13 +127,13 @@ Users can view information about topics observed for their browser during the cu
 </figcaption>
 </figure>
 
-In this example, recently visited sites include [topics-demo-cats.glitch.me](http://topics-demo-cats.glitch.me/) and [cats-cats-cats-cats.glitch.me](/docs/privacy-sandbox/topics/cats-cats-cats-cats.glitch.me). This causes the Topics API to select `Pets` and `Cats` as two of the top topics for the current epoch. The remaining three topics have been [chosen at random](https://github.com/patcg-individual-drafts/topics#:~:text=random), since there is not enough browsing history (on sites that observe topics) to provide five topics.
+In this example, recently visited sites include topics-demo-cats.glitch.me and cats-cats-cats-cats.glitch.me. This causes the Topics API to select `Pets` and `Cats` as two of the top topics for the current epoch. The remaining three topics have been [chosen at random](https://github.com/patcg-individual-drafts/topics#:~:text=random), since there is not enough browsing history (on sites that observe topics) to provide five topics.
 
 The **Observed-by context domains (hashed)** column provides the hashed value of a hostname for which a topic was observed.
 
 ### View topics inferred for hostnames
 
-You can view the topics inferred by the Topics [classifier model](https://github.com/patcg-individual-drafts/topics#:~:text=classifier%20model) for one or more hostnames.
+You can also view the topics inferred by the Topics [classifier model](https://github.com/patcg-individual-drafts/topics#:~:text=classifier%20model) for one or more hostnames in `chrome://topics-internals`.
 
 <figure>
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/SOTuE2ljC55PaYll1UP1.png",
@@ -148,7 +148,7 @@ Use hostnames only (without protocol or path) to view inferred topics from the `
 
 ### View Topics API information
 
-Information is provided about the Topics API implementation and settings, such as the [taxonomy](https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md) version and epoch duration. These values reflect default settings for the API or parameters successfully set [from the command line](#feature-flags). This is handy for checking that command-line flags have worked as expected. In the example below, `time_period_per_epoch` has been set to 15 seconds (the default is seven days).
+Information is provided in `chrome://topics-internals` about the Topics API implementation and settings, such as the [taxonomy](https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md) version and epoch duration. These values reflect default settings for the API or parameters successfully set [from the command line](#feature-flags). This is handy for checking that command-line flags have worked as expected. In the example below, `time_period_per_epoch` has been set to 15 seconds (the default is seven days).
 
 <figure>
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/7vFveJtxWgY6yB8gHnW3.png",
@@ -158,18 +158,16 @@ Information is provided about the Topics API implementation and settings, such a
 </figcaption>
 </figure>
 
-The meaning of each parameter is explained in the table below. (You'll need to scroll it horizontally to see all the details!)
 
-The parameters correspond to flags that can be set when running Chrome from the command line. For example, the demo at [topics-demo.glitch.me](https://topics-demo.glitch.me/) recommends using the following flags:
+The parameters shown in the screenshot correspond to flags that can be set when running Chrome from the command line. For example, the demo at [topics-demo.glitch.me](https://topics-demo.glitch.me/) recommends using the following flags:
 
 ```text
 --enable-features=BrowsingTopics:time_period_per_epoch/15s,PrivacySandboxAdsAPIsOverride,PrivacySandboxSettings3,OverridePrivacySandboxSettingsLocalTesting
 ```
 
+Each parameter, its default value, and its purpose is explained in the list below.
+
 #### Chrome flags {: #feature-flags}
-
-
-Below are the relevant flags for Chrome, including their default value and descrptions:
 
 <dl>
 <dt>
