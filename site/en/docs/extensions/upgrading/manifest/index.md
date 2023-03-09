@@ -92,7 +92,7 @@ Web-accessible resources are files inside an extension that can be accessed by w
 
 Manifest V3 limits exposure by restricting which web sites and extensions can access resources in your extension. Instead of providing a list of files as before, you now provide an **array of objects**, each of which maps a set of resources to a set of URLs or extension IDs.
 
-The example below compares web accessible resources between Manifest V2 and Manifest V3. In Manifest V2, the specified resources were accessible to all web sites by default. In the Manifest V3 code shown below, these resources are only available to `https://example.com`, while only png filescertain images are available to all web sites.
+The example below compares web accessible resources between Manifest V2 and Manifest V3. In Manifest V2, the specified resources were accessible to all web sites by default. In the Manifest V3 code shown below, these resources are only available to `https://example.com`, while only certain images are available to all web sites.
 
 For more information, see [Web Accessible Resources](/docs/extensions/mv3/manifest/web_accessible_resources/) and [Match Patterns](/docs/extensions/mv3/match_patterns/).
 
