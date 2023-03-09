@@ -12,8 +12,7 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 * [Ignore irrelevant scripts during debugging](/blog/new-in-devtools-112/#ignore-list)
 * [JavaScript Profiler deprecation started](/blog/new-in-devtools-112/#js-profiler-deprecation)
 * [Emulate reduced contrast](/blog/new-in-devtools-112/#reduced-contrast)
-* [](/blog/new-in-devtools-112/#)
-* [](/blog/new-in-devtools-112/#)
+* [Lighthouse 10](/blog/new-in-devtools-112/#lighthouse)
 * [Miscellaneous highlights](/blog/new-in-devtools-112/#misc)
 
 ### Chrome 111 {: #chrome111 }
