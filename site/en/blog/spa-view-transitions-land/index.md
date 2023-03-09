@@ -3,7 +3,7 @@ layout: 'layouts/blog-post.njk'
 title: SPA view transitions land in Chrome 111
 description: >
   The View Transition API allows page transitions within single-page apps, and will later include multi-page apps.
-date: 2023-03-07
+date: 2023-03-09
 authors:
   - jakearchibald
 hero: 'image/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/nR4JNO8pelD4mGP3dQbr.jpg'
