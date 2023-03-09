@@ -86,7 +86,7 @@ Currently, after a user has created a federated account on a relying party (RP) 
 
 While the explicit UX makes sense before the user has created the federated account to prevent tracking (which is one of the main goals of FedCM), it is overly and unnecessarily cumbersome after the user has gone through it once. After the user grants permission to allow communication between the RP and the IdP,  there's no privacy or security benefit for enforcing another explicit user confirmation for something that they have already previously acknowledged. Therefore we are introducing a more streamlined UX that RPs can choose for their returning users.
 
-[FedCM auto-reauthentication](/blog/fedcm-auto-reauthn-origin-trial/) ("auto-reauthn" in short) reauthenticates users automatically (when RPs opt-in), when they come back after their initial authentication using FedCM.
+FedCM auto-reauthentication ("auto-reauthn" in short) reauthenticates users automatically (when RPs opt-in), when they come back after their initial authentication using FedCM.
 
 [Register for the FedCM auto-reauthentication origin trial](/origintrials/#/view_trial/2426314299245854721)
 
