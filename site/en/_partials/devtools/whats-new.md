@@ -11,6 +11,8 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 * [Export recordings as Puppeteer scripts with Lighthouse analysis](/blog/new-in-devtools-112/#puppeteer-lighthouse)
 * [Get extensions for Recorder](/blog/new-in-devtools-112/#get-extensions)
 * [Elements > Styles updates](/blog/new-in-devtools-112/#elements-styles)
+* [CSS documentation in the Styles pane](/blog/new-in-devtools-112/#css)
+* [CSS nesting support](/blog/new-in-devtools-112/#nesting)
 * [Marking logpoints and conditional breakpoints in the Console](/blog/new-in-devtools-112/#logpoint)
 * [Ignore irrelevant scripts during debugging](/blog/new-in-devtools-112/#ignore-list)
 * [JavaScript Profiler deprecation started](/blog/new-in-devtools-112/#js-profiler-deprecation)
