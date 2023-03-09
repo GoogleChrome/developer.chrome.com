@@ -17,7 +17,7 @@ tags:
 
 {% Partial 'devtools/banner.md' %}
 
-*No 'What's New' video for this release, check out the latest DevTools tips video to learn [how to identify and fix CSS issues with the Styles pane](https://youtu.be/iuZx0kHS0Xs).*
+*No 'What's new in DevTools' video for this release. Check out the latest DevTools Tips video to learn [how to identify and fix CSS issues with the Styles pane](https://youtu.be/iuZx0kHS0Xs).*
 
 <!-- $contentStart -->
 
@@ -27,7 +27,7 @@ tags:
 
 The **Recorder** introduces support for custom replay options that you can embed into DevTools with an extension.
 
-Try out the [example extension](https://github.com/puppeteer/replay/tree/main/examples/chrome-extension-replay). Select the new custom replay option to open the customize replay UI. 
+Try out the [example extension](https://github.com/puppeteer/replay/tree/main/examples/chrome-extension-replay). Select the new custom replay option to open the customize replay UI.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/CAQFVtHyds7ByB0YMZht.png", alt="Custom replay UI.", width="800", height="563" %}
 
@@ -58,7 +58,7 @@ Open your recording, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4dU9UX
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ko6OD4tgGwUxqCJScYr9.png", alt="Export Puppeteer (including Lighthouse analysis).", width="800", height="584" %}
 
-Run the Puppeteer script to get a Lighthouse report in a `flow.report.html` file.
+[Run the Puppeteer script](/docs/puppeteer/get-started/) to get a Lighthouse report in a `flow.report.html` file.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/pfvZ3QX0XhhbDBxpsyBF.png", alt="The Lighthouse report opened in Chrome.", width="800", height="690" %}
 
@@ -218,7 +218,6 @@ These are some noteworthy fixes in this release:
 
 - The [**Sources** > **Breakpoints**](/docs/devtools/javascript/breakpoints/#manage-loc) pane now shows differentiating file paths next to ambiguous file names ([1403924](crbug.com/1403924)).
 - The [**Main** section](/docs/devtools/performance/reference/#main) in the flame chart of the **Performance** panel now designates `CpuProfiler::StartProfiling` as `Profiler Overhead` ([1358602](https://crbug.com/1358602)).
-- The **Performance** panel now supports CPU profile uploads from a URL ([1417439](https://crbug.com/1417439)).
 - DevTools improved autocompletion:
   - **Sources**: Consistent completions of any word ([1320204](https://crbug.com/1320204)).
   - **Console**: `Arrow down` selects the first suggestion and suggestions get `Tab` hints ([1276960](https://crbug.com/1276960)).
