@@ -22,6 +22,12 @@ and related policy or other changes. You'll find other notices posted on the [Ex
 
 From Chrome 112, the quota for the [`storage.session`](/docs/extensions/reference/storage/#property-session) property has been increased to approximately 10 MB. This was agreed in the Web Extensions Community Group: [https://github.com/w3c/webextensions/issues/350](https://github.com/w3c/webextensions/issues/350)
 
+### Chrome 109: Offscreen documents {: #m109-offscreen-docs}
+
+<p class="color-secondary-text type--caption">Posted on <time>January 25, 2023</time></p>
+
+Offscreen documents are now available on the stable channel. These provide support for DOM-related features and APIs in Manifest V3. For more information, [read the blog post](/blog/Offscreen-Documents-in-Manifest-v3/).
+
 ### Chrome 109: Is an extension enabled {: #m110-action }
 
 <p class="color-secondary-text type--caption">Posted on <time>January 12, 2023</time></p>
