@@ -68,10 +68,6 @@ In Manifest V3, `insertCSS()` and `removeCSS()` move from the `tabs` API to the 
 * The `"scripting"` permission.
 * Either host permissions or the `"activeTab"` permission.
 
-Replace the `"tabs"` permission with the `"scripting"` permission.
-* Remove the `"activeTab"` permission.
-* Remove any hosts from the `"permissions"` and the `"optional_permissions"` fields. You do not need to add them to the new `"host_permissions"` field.
-
 The functions on the `scripting` API are similar to the functions on `tabs`. There are a few differences.
 
 * When calling these methods, you pass a [`CSSInjection`](/docs/extensions/reference/scripting/#type-CSSInjection) object instead of `InjectDetails`.
