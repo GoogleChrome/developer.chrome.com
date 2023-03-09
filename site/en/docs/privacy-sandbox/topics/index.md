@@ -34,9 +34,9 @@ A Privacy Sandbox Relevance and Measurement [origin trial](/blog/origin-trials/)
 
 ## Get and set topics
 
-The Topics JavaScript API has one method: `document.browsingTopics()`. It returns a promise that resolves to an array of up to three topics, one for each of the three most recent epochs, in random order. An epoch is a period of time currently set to one week.
+The Topics JavaScript API has one method: `document.browsingTopics()`, which is used to get and set Topics. It returns a promise that resolves to an array of up to three topics, one for each of the three most recent epochs, in random order. An epoch is a period of time currently set to one week.
 
-Each topic object in the array returned by `document.browsingTopics()` will have three properties:
+Each topic object in the array returned by `document.browsingTopics()` will have these properties:
 
 -   `configVersion`: a string identifying the current Topics API configuration
 -   `modelVersion`: a string identifying the machine-learning classifier used to infer topics for the site
@@ -64,7 +64,7 @@ Feature support on the current page isn't a guarantee that an API is usable: the
 ### Access topics without modifying state
 
 From Chrome 108, the `document.browsingTopics()` method can be passed an optional argument: `{skipObservation:true}`.
-This allows the method to return topics without causing the browser to record a topic observation. By default, it does.. In other words, the call will not cause the current page to be included in the weekly epoch calculation, nor will it update the list of topics observed for the caller.
+This allows the method to return topics without causing the browser to record a topic observation. By default, it does. In other words, the call will not cause the current page to be included in the weekly epoch calculation, nor will it update the list of topics observed for the caller.
 
 ### Access topics with the JavaScript API
 
@@ -95,9 +95,9 @@ This snippet of code above is provided only to show how the Topics JavaScript AP
 
 ### Use headers to access and observe topics
 
-Rather than using the Topics JavaScript API from an iframe, topics can be accessed and marked as observed by using request and response headers:
+Rather than using the Topics JavaScript API from an iframe, topics can be accessed and marked as observed by using [request](https://developer.mozilla.org/en-US/docs/Web/API/Request/headers) and [response](https://developer.mozilla.org/en-US/docs/Web/API/Response/headers) headers:
 
--   Topics can be accessed from the `Sec-Browsing-Topics` header of a `fetch()` or `XHR` request.
+-   Topics can be accessed from the `Sec-Browsing-Topics` header of a [`fetch()`](https://developer.mozilla.org/en-US/docs/Web/API/fetch) or [`XHR`](https://developer.mozilla.org/docs/Glossary/XHR_(XMLHttpRequest)) request.
 -   Topics that were provided in a request header can be marked as observed by setting an `Observe-Browsing-Topics: ?1` header on the response to the request. The browser will then use those topics (that were included in the request header) for calculating topics of interest for a user.
 
 Using request and response headers to access topics and mark them as observed can be much more performant than using the JavaScript API from an iframe. For example, the header mechanism could be used when a `fetch()` request is made to an ad server. No iframe required! For more on this technique, check out the demo page.
@@ -111,7 +111,7 @@ Using request and response headers to access topics and mark them as observed ca
 
 ## Debug your API implementation
 
-The `chrome://topics-internals` page is available in Chrome on desktop if [you enable the Topics API](#feature-flags). This displays topics for the current user, topics inferred for hostnames, and technical information about the API implementation.
+The `chrome://topics-internals` page is available in Chrome on desktop once [you enable the Topics API](#feature-flags). This displays topics for the current user, topics inferred for hostnames, and technical information about the API implementation.
 
 The `chrome://topics-internals` page is new. The design and functionality are still under discussion. We're currently iterating and improving the design based on developer feedback. Add your feedback at [bugs.chromium.org](https://bugs.chromium.org/p/chromium/issues/entry?template=Defect+report+from+developer&components=Blink%3ETopicsAPI).
 
@@ -127,7 +127,7 @@ Users can view information about topics observed for their browser during the cu
 </figcaption>
 </figure>
 
-In this example, recently visited sites included [topics-demo-cats.glitch.me](http://topics-demo-cats.glitch.me/) and [cats-cats-cats-cats.glitch.me](/docs/privacy-sandbox/topics/cats-cats-cats-cats.glitch.me). This caused the Topics API to select `Pets` and `Cats` as two of the top topics for the current epoch. The remaining three topics have been [chosen at random](https://github.com/patcg-individual-drafts/topics#:~:text=random), since there is not enough browsing history (on sites that observe topics) to provide five topics.
+In this example, recently visited sites include [topics-demo-cats.glitch.me](http://topics-demo-cats.glitch.me/) and [cats-cats-cats-cats.glitch.me](/docs/privacy-sandbox/topics/cats-cats-cats-cats.glitch.me). This causes the Topics API to select `Pets` and `Cats` as two of the top topics for the current epoch. The remaining three topics have been [chosen at random](https://github.com/patcg-individual-drafts/topics#:~:text=random), since there is not enough browsing history (on sites that observe topics) to provide five topics.
 
 The **Observed-by context domains (hashed)** column provides the hashed value of a hostname for which a topic was observed.
 
