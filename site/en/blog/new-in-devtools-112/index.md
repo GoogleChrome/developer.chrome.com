@@ -6,7 +6,7 @@ authors:
 date: 2023-03-08
 description: ""
 hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/G5pxOHr2wECkBu8J2ujC.jpg'
-alt: 'CSS documentation, ignore-listing irrelevant scripts, enhanced logpoint debugging, Recorder replay customization, and more.'
+alt: 'Recorder replay customization, CSS documentation, ignore-listing irrelevant scripts, enhanced logpoint debugging, and more.'
 tags:
   - new-in-devtools
   - devtools
@@ -19,6 +19,70 @@ tags:
 *No video for this release.*
 
 <!-- $contentStart -->
+
+## Recorder updates {: #recorder }
+
+### Replay extensions support {: #replay-extensions }
+
+The **Recorder** introduces support for custom replay options that you can embed into DevTools with an extension.
+
+Try out the [example extension](https://github.com/puppeteer/replay/tree/main/examples/chrome-extension-replay):
+1. Install it, [create a new recording](/docs/devtools/recorder/#record), expand the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Play.", width="20", height="20" %} **Replay** options, and select the extension.
+1. Provide an arbitrary name and password (`leeloo` and `multipass` will do). 
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/kfAzPxEF08zwvYYKzP4e.mp4", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
+
+To customize the **Recorder** to your needs and integrate it with your tools, consider developing your own extension: explore the [chrome.devtools.recorder API](/docs/extensions/reference/devtools_recorder/) and check out more [extension examples](https://github.com/puppeteer/replay/tree/main/examples/).
+
+{# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/c2102177581f1c74d38502f469d99b20c1835b1c #}
+{# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/e304e064dbead1d684b5c61f4fb308b101b4a66b #}
+
+Chromium issue: [1400243](https://crbug.com/1400243).
+
+### Record with pierce selectors {: #pierce-selectors }
+
+In addition to custom, CSS, ARIA, text, and XPath selectors, you can now record using [pierce selectors](https://pptr.dev/guides/query-selectors#pierce-selectors-pierce). These selectors behave like CSS ones but can also pierce through shadow roots.
+
+Start a new recording on a page with [shadow DOM](https://web.dev/shadowdom-v1/) and check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Pierce** in **Selector types to record**. Record your interaction with elements in the shadow DOM and inspect the corresponding step.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Spqbf2DG3Fr0D2sc1kgC.png", alt="Setting the Recorder to use pierce selectors; Pierce selector in action.", width="800", height="534" %}
+
+{# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/a3968d1c01dd4d1a00b9aa13c50bfdc66995879e #}
+
+Chromium issue: [1411188](https://crbug.com/1411188).
+
+### Export as a Puppeteer script with Lighthouse analysis {: #puppeteer-lighthouse }
+
+The **Recorder** introduces a new export option: **Puppeteer (including Lighthouse analysis)**. With [Puppeteer](/docs/puppeteer/), you can automate and control Chrome. With [Lighthouse](/docs/lighthouse/), you can capture and improve your website's performance.
+
+Open your recording, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4dU9UXvsinS4zbgjd8rK.svg", alt="Export.", width="20", height="20" %} **Export**, select the new option, and save the `.js` file.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ko6OD4tgGwUxqCJScYr9.png", alt="Export Puppeteer (including Lighthouse analysis).", width="800", height="584" %}
+
+Run the Puppeteer script to get a Lighthouse report in a `flow.report.html` file.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/pfvZ3QX0XhhbDBxpsyBF.png", alt="The Lighthouse report opened in Chrome.", width="800", height="690" %}
+
+{# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/fcaf72d9134e54140cab41c011b7520dd168a340 #}
+
+### Get extensions {: #get-extensions }
+
+Get extensions for the **Recorder** with a couple of clicks:
+
+1. Open a recording, and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4dU9UXvsinS4zbgjd8rK.svg", alt="Export.", width="20", height="20" %} **Export** > **Get extensions**
+1. Pick one from the [Extensions](/docs/devtools/recorder/extensions/) list and install it from the Web Store.
+1. Reload DevTools.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/vwgXoxR0FyArbCHvdvEY.png", alt="The Get extensions option in the Export drop-down menu.", width="800", height="649" %}
+
+Your export extensions will be listed in the corresponding section of the same drop-down menu.
+
+Feel free to [add your own extension](https://github.com/GoogleChrome/developer.chrome.com/edit/main/site/en/docs/devtools/recorder/extensions/index.md) to the list of [Recorder Extensions](/docs/devtools/recorder/extensions/). We look forward to seeing yours on the list!
+
+{# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/21e3d3275c47df8b79c72d1a3e8f9d26cc11fc04 #}
+{# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/b6d02827539eb54869cbb75d3705782bfd2c95ae #}
+
+Chromium issues: [1417104](https://crbug.com/1417104), [1413168](https://crbug.com/1413168).
 
 ## Elements > Styles updates {: #elements-styles }
 
@@ -52,70 +116,6 @@ The **Elements** > **Styles** pane now recognizes [CSS Nesting](https://w3c.gith
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f1ed9b6180cb75fcfd43dfac95ac9a40c35e03df #}
 
 Chromium issue: [1172985](https://crbug.com/1172985).
-
-## Recorder updates {: #recorder }
-
-### Replay extensions support {: #replay-extensions }
-
-The **Recorder** introduces support for custom replay options that you can embed into DevTools with an extension.
-
-Try out the [example extension](https://github.com/puppeteer/replay/tree/main/examples/chrome-extension-replay):
-1. Install it, [create a new recording](/docs/devtools/recorder/#record), expand the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Play.", width="20", height="20" %} **Replay** options, and select the extension.
-1. Provide an arbitrary name and password (`leeloo` and `multipass` will do). 
-
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/kfAzPxEF08zwvYYKzP4e.mp4", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
-
-To customize the **Recorder** to your needs and integrate it with your tools, consider developing your own extension: explore the [chrome.devtools.recorder API](/docs/extensions/reference/devtools_recorder/) and check out more [extension examples](https://github.com/puppeteer/replay/tree/main/examples/).
-
-{# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/c2102177581f1c74d38502f469d99b20c1835b1c #}
-{# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/e304e064dbead1d684b5c61f4fb308b101b4a66b #}
-
-Chromium issue: [1400243](https://crbug.com/1400243).
-
-### Get extensions {: #get-extensions }
-
-Get extensions for the **Recorder** with a couple of clicks:
-
-1. Open a recording, and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4dU9UXvsinS4zbgjd8rK.svg", alt="Export.", width="20", height="20" %} **Export** > **Get extensions**
-1. Pick one from the [Extensions](/docs/devtools/recorder/extensions/) list and install it from the Web Store.
-1. Reload DevTools.
-
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/vwgXoxR0FyArbCHvdvEY.png", alt="The Get extensions option in the Export drop-down menu.", width="800", height="649" %}
-
-Your export extensions will be listed in the corresponding section of the same drop-down menu.
-
-Feel free to [add your own extension](https://github.com/GoogleChrome/developer.chrome.com/edit/main/site/en/docs/devtools/recorder/extensions/index.md) to the list of [Recorder Extensions](/docs/devtools/recorder/extensions/). We look forward to seeing yours on the list!
-
-{# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/21e3d3275c47df8b79c72d1a3e8f9d26cc11fc04 #}
-{# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/b6d02827539eb54869cbb75d3705782bfd2c95ae #}
-
-Chromium issues: [1417104](https://crbug.com/1417104), [1413168](https://crbug.com/1413168).
-
-### Export as a Puppeteer script with Lighthouse analysis {: #puppeteer-lighthouse }
-
-The **Recorder** introduces a new export option: **Puppeteer (including Lighthouse analysis)**. With [Puppeteer](/docs/puppeteer/), you can automate and control Chrome. With [Lighthouse](/docs/lighthouse/), you can capture and improve your website's performance.
-
-Open your recording, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4dU9UXvsinS4zbgjd8rK.svg", alt="Export.", width="20", height="20" %} **Export**, select the new option, and save the `.js` file.
-
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ko6OD4tgGwUxqCJScYr9.png", alt="Export Puppeteer (including Lighthouse analysis).", width="800", height="584" %}
-
-Run the Puppeteer script to get a Lighthouse report in a `flow.report.html` file.
-
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/pfvZ3QX0XhhbDBxpsyBF.png", alt="The Lighthouse report opened in Chrome.", width="800", height="690" %}
-
-{# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/fcaf72d9134e54140cab41c011b7520dd168a340 #}
-
-### Record with pierce selectors {: #pierce-selectors }
-
-In addition to custom, CSS, ARIA, text, and XPath selectors, you can now record using [pierce selectors](https://pptr.dev/guides/query-selectors#pierce-selectors-pierce). These selectors behave like CSS ones but can also pierce through shadow roots.
-
-Start a new recording on a page with [shadow DOM](https://web.dev/shadowdom-v1/) and check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Pierce** in **Selector types to record**. Record your interaction with elements in the shadow DOM and inspect the corresponding step.
-
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Spqbf2DG3Fr0D2sc1kgC.png", alt="Setting the Recorder to use pierce selectors; Pierce selector in action.", width="800", height="534" %}
-
-{# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/a3968d1c01dd4d1a00b9aa13c50bfdc66995879e #}
-
-Chromium issue: [1411188](https://crbug.com/1411188).
 
 ## Logpoint and conditional breakpoint improvements {: #logpoint }
 
@@ -167,21 +167,6 @@ If you select an ignored script, the **Configure** button takes you to
 
 Chromium issue: [883325](https://crbug.com/883325).
 
-## Emulate reduced contrast {: #reduced-contrast }
-
-The [**Rendering**](/docs/devtools/rendering/#open-rendering) tab adds a new option to the [Emulate vision deficiencies](/docs/devtools/rendering/apply-effects/#emulate-vision-deficiencies) list—**Reduced contrast**. With this option, you can discover how your website looks to people with reduced contrast sensitivity.
-
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7qrlmuO7R47l5mytvoeQ.png", alt="The reduced contrast option on the Rendering > Emulate vision deficiencies.", width="800", height="574" %}
-
-Note that the list options have been updated to tell you what color insensitivity the options represent.
-
-With DevTools, you can find and fix all contrast issues at once. For more information, see [Make your website more readable](/docs/devtools/accessibility/contrast/).
-
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/0eaaa173c9e2cd357c99f7a275fe1819b86f0b9a #}
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/768af28f8cf64e10d23b10556b59dc0770cc14b6  #}
-
-Chromium issues: [1412719](https://crbug.com/1412719), [1412721](https://crbug.com/1412721).
-
 ## JavaScript Profiler deprecation started {: #js-profiler-deprecation }
 
 As early as [Chrome 58](/blog/devtools-javascript-cpu-profile-migration-2/), the DevTools team planned to eventually deprecate the **JavaScript Profiler** and have Node.js and Deno developers use the **Performance** panel for profiling JavaScript CPU performance.
@@ -197,6 +182,21 @@ Learn more and provide feedback in the corresponding [RFC](https://github.com/Ch
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/71244f613a27289936b979fe515346137d0190f8 #}
 
 Chromium issue: [1417647](https://crbug.com/1417647).
+
+## Emulate reduced contrast {: #reduced-contrast }
+
+The [**Rendering**](/docs/devtools/rendering/#open-rendering) tab adds a new option to the [Emulate vision deficiencies](/docs/devtools/rendering/apply-effects/#emulate-vision-deficiencies) list—**Reduced contrast**. With this option, you can discover how your website looks to people with reduced contrast sensitivity.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7qrlmuO7R47l5mytvoeQ.png", alt="The reduced contrast option on the Rendering > Emulate vision deficiencies.", width="800", height="574" %}
+
+Note that the list options have been updated to tell you what color insensitivity the options represent.
+
+With DevTools, you can find and fix all contrast issues at once. For more information, see [Make your website more readable](/docs/devtools/accessibility/contrast/).
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/0eaaa173c9e2cd357c99f7a275fe1819b86f0b9a #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/768af28f8cf64e10d23b10556b59dc0770cc14b6  #}
+
+Chromium issues: [1412719](https://crbug.com/1412719), [1412721](https://crbug.com/1412721).
 
 ## Lighthouse 10 {: #lighthouse }
 
