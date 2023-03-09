@@ -6,7 +6,10 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 
 ### Chrome 112 {: #chrome112 }
 
-* [Recorder updates](/blog/new-in-devtools-112/#recorder)
+* [Recorder replay extensions](/blog/new-in-devtools-112/#replay-extensions)
+* [Record with pierce selectors](/blog/new-in-devtools-112/#pierce-selectors)
+* [Export recordings as Puppeteer scripts with Lighthouse analysis](/blog/new-in-devtools-112/#puppeteer-lighthouse)
+* [Get extensions for Recorder](/blog/new-in-devtools-112/#get-extensions)
 * [Elements > Styles updates](/blog/new-in-devtools-112/#elements-styles)
 * [Marking logpoints and conditional breakpoints in the Console](/blog/new-in-devtools-112/#logpoint)
 * [Ignore irrelevant scripts during debugging](/blog/new-in-devtools-112/#ignore-list)
