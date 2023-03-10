@@ -1,9 +1,9 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: Upgrade to Manifest V3
-subhead: A guide to upgrading Manifest V2 extensions to Manifest V3 extensions.
-description: A guide to upgrading Manifest V2 extensions to Manifest V3 extensions.
-date: 2023-03-08
+title: Migrate to Manifest V3
+subhead: A guide to converting Manifest V2 extensions to Manifest V3 extensions.
+description: A guide to converting Manifest V2 extensions to Manifest V3 extensions.
+date: 2023-03-09
 ---
 
 This section helps you upgrade an extension from Manifest V2 to Manifest V3, the newest version of the Chrome Extensions platform. A summary of the work is provided below with links to pages for each of the task areas. There is also a list of new extension features you should consider incorporating into your extension. Finally, there is a [migration checklist](/docs/extensions/mv3-migration-checklist) to help you keep track of your work.
@@ -24,7 +24,7 @@ Migration work is broadly divided into the categories below. The links provide d
 
 ## New extension features 
 
-The following is a list of new or recent extension features. You are not required to use them when upgrading; however, when they replace older features, you should prefer them to the features they replace and expect that the replaced features will eventually be deprecated and removed.
+The following is a list of new or recent extension features. You are not required to use them when converting; however, when they replace older features, you should prefer them to the features they replace and expect that the replaced features will eventually be deprecated and removed.
 
 * Many methods now return [Promises](/docs/extensions/mv3/intro/mv3-overview#promises). Support has been added to many methods, though you can still pass callbacks to those methods for backwards compatibility. (We will eventually support promises on all appropriate methods.)
 
