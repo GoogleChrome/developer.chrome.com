@@ -94,9 +94,9 @@ This snippet of code above is provided only to show how the Topics JavaScript AP
 
 ### Use headers to access and observe topics
 
-Rather than using the Topics JavaScript API from an iframe, topics can be accessed and marked as observed by using [request](https://developer.mozilla.org/en-US/docs/Web/API/Request/headers) and [response](https://developer.mozilla.org/en-US/docs/Web/API/Response/headers) headers:
+Rather than using the Topics JavaScript API from an iframe, topics can be accessed and marked as observed by using [request](https://developer.mozilla.org/docs/Web/API/Request/headers) and [response](https://developer.mozilla.org/docs/Web/API/Response/headers) headers:
 
--   Topics can be accessed from the `Sec-Browsing-Topics` header of a [`fetch()`](https://developer.mozilla.org/en-US/docs/Web/API/fetch) or [`XHR`](https://developer.mozilla.org/docs/Glossary/XHR_(XMLHttpRequest)) request.
+-   Topics can be accessed from the `Sec-Browsing-Topics` header of a [`fetch()`](https://developer.mozilla.org/docs/Web/API/fetch) or [`XHR`](https://developer.mozilla.org/docs/Glossary/XHR_(XMLHttpRequest)) request.
 -   Topics that were provided in a request header can be marked as observed by setting an `Observe-Browsing-Topics: ?1` header on the response to the request. The browser will then use those topics (that were included in the request header) for calculating topics of interest for a user.
 
 Using request and response headers to access topics and mark them as observed can be much more performant than using the JavaScript API from an iframe. For example, the header mechanism could be used when a `fetch()` request is made to an ad server. No iframe required! For more on this technique, check out the demo page.
