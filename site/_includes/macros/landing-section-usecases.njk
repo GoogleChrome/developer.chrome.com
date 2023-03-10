@@ -8,7 +8,7 @@
 <section
   class="landing-section landing-section--{{type}} {% if ordered %} landing-section--ordered {% endif %} hairline rounded-lg width-full display-grid gap-top-400"
   style="--number-color: var(--color-{{ color }}-medium); --dot-color: var(--color-{{ color }}-lighter);"
-  id="{{sectionId | slugify | ensureUniqueHref}}">
+  id="{{sectionId | slugify | ensureUniqueHrefInProduction}}">
 
   {{ landingDeco(title, desc, color, imgSrc, imgAlt, imgWidth, imgHeight, smallImgSrc, learnMore) }}
 
@@ -16,7 +16,7 @@
     <div class="landing-section__links usecases">
 	 
       {% if useCase1items %}
-		<h3>{{ useCase1Title }}</h3>
+		<h3 class="type--h5 color-{{color}}-darkest">{{ useCase1Title }}</h3>
 		<div class="use-case {% if ordered %} use-case--ordered {% endif %}">
       {% for useCase1item in useCase1items %}
         {% set post = null %} {# Reset #}
@@ -47,7 +47,7 @@
 	
 	
 	 {% if useCase2items %}
-	 <h3>{{ useCase2Title }}</h3>
+	 <h3 class="type--h5 color-{{color}}-darkest">{{ useCase2Title }}</h3>
 	 <div class="use-case {% if ordered %} use-case--ordered {% endif %}">
       {% for useCase2item in useCase2items %}
         {% set post = null %} {# Reset #}
@@ -77,7 +77,7 @@
 	{% endif %}
 
       {% if items %}
-		<h3>More proposals</h3>
+		<h3 class="type--h5 color-{{color}}-darkest">More proposals</h3>
 		<div class="more-docs {% if ordered %} use-case--unordered {% endif %}">
       {% for item in items %}
         {% set post = null %} {# Reset #}

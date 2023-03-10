@@ -28,13 +28,15 @@ const path = require('path');
 const url = 'https://googlechromelabs.github.io/fugu-showcase/data/data.json';
 
 async function run() {
-  const r = await fetch(url);
+  const response = await fetch(url);
 
-  if (!r.ok) {
-    throw new Error(`Could not fetch FUGU Showcase data, status: ${r.status}`);
+  if (!response.ok) {
+    throw new Error(
+      `Could not fetch Fugu Showcase data. Status code: ${response.status}`
+    );
   }
 
-  const json = await r.json();
+  const json = await response.json();
 
   if (json['errors']) {
     const error = json['errors'][0];

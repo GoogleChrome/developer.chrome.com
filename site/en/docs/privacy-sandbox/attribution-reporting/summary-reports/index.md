@@ -111,7 +111,7 @@ The proposed process to create a summary report is as follows:
    ad tech sends the reports to an [_aggregation service_](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md).
    *  In our initial implementation, the [aggregation
       service](#aggregation-service) is operated by the ad tech provider
-      with a Trusted Execution Environment (TEE) hosted in the cloud. The
+      with a trusted execution environment (TEE) hosted in the cloud. The
       _coordinator_ ensures that only verified entities have access to
       decryption keys and that no other intermediary (the ad tech, the cloud
       provider, or any other party) can access and decrypt sensitive data
@@ -152,7 +152,7 @@ audit. These safeguards are meaningful to:
 ### Generate reports with the Aggregation Service {: #aggregation-service}
 
 {% Aside 'key-term' %}
-A _Trusted Execution Environment_ is a special configuration of computer
+A _trusted execution environment_ is a special configuration of computer
 hardware and software that allows external parties to verify the exact
 versions of software running on the computer. TEEs allow external parties to
 verify that the software does exactly what the software manufacturer claims it
@@ -162,7 +162,7 @@ does—nothing more or less.
 [The initial
 proposal](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md)
 asks each ad tech provider to operate their own instance of the aggregation
-service, in a Trusted Execution Environment (TEE) deployed on a cloud service
+service, in a trusted execution environment (TEE) deployed on a cloud service
 that supports needed security features.
 
 {% Aside %}

@@ -508,62 +508,7 @@ See the corresponding [section in Inspect CSS grid](/docs/devtools/css/grid/#gri
 
 ### Change colors with the Color Picker {: #color-picker }
 
-{% YouTube id='TuR27BxCRVk' %}
-
-The **Color Picker** provides a GUI for changing `color` and `background-color` declarations.
-
-To open the **Color Picker**:
-
-1.  [Select an element][24].
-2.  In the **Styles** pane, find the `color` or `background-color` declaration that you want to
-    change. To the left of the `color` or `background-color` value, there is a small square which is
-    a preview of the color.
-
-    {% Img src="image/admin/SuJ1WT25iaaOgt8iWQzj.png", alt="Color preview.", width="800", height="517" %}
-
-    The small blue square to the left of `rgb(123, 170, 247)` is a preview of that
-    color.
-
-3.  Click the preview to open the **Color Picker**.
-
-    {% Img src="image/admin/i8pU9ALTZwhbvrhlXGm7.png", alt="The Color Picker.", width="800", height="624" %}
-
-Here's a description of each of the UI elements of the **Color Picker**:
-
-{% Img src="image/admin/kAtu8Uoi2x8IFvaX561h.svg", alt="The Color Picker, annotated.", width="800", height="548" %}
-
-1.  **Shades**.
-2.  **Eyedropper**. See [Sample a color anywhere with the Eyedropper][25].
-3.  **Copy To Clipboard**. Copy the **Display Value** to your clipboard.
-4.  **Display Value**. The [RGBA][29], [HSLA][30], [HWBA][31], or [Hex][32] representation of the color.
-5.  **Color Palette**. Click one of these squares to change the color to that square.
-6.  **Hue**.
-7.  **Opacity**.
-8.  **Display Value Switcher**. Toggle between the [RGBA][29], [HSLA][30], [HWBA][31], and [Hex][32] representations of the
-    current color.
-    {% Aside %}
-    **Note**: Alternatively, to toggle between color representations, hold down <kbd>Shift</kbd> and click on the color preview button.
-    {% endAside %}
-9.  **Color Palette Switcher**. Toggle between the [Material Design palette][26], a custom palette,
-    or a page colors palette. DevTools generates the page color palette based on the colors that it
-    finds in your stylesheets.
-
-#### Sample a color anywhere with the Eyedropper {: #eyedropper }
-
-When you open the **Color Picker**, the **Eyedropper**
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/WKeaXT922ot9wQjtvwcZ.svg", alt="Eyedropper.", width="20", height="20" %} is on by default.
-
-The **Eyedropper** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/WKeaXT922ot9wQjtvwcZ.svg", alt="Eyedropper.", width="20", height="20" %} can sample colors both from the page and from anywhere on the screen:
-
-To pick a color from anywhere on the screen:
-
-1.  Hover over the target color.
-1.  Click to confirm.
-
-    <div class="elevation--4" style="margin-top: 20px; margin-bottom: 20px;">
-    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/8Omn8AauWoiknzjzjlGA.png", alt="Using the Eyedropper anywhere on the screen.", width="800", height="450" %}</div>
-
-In the example above, the **Color Picker** shows a current color value of `rgb(224 255 255 / 15%)`. This color changes to pink once you click it.
+See [Inspect and debug HD and non-HD colors with the Color Picker](/docs/devtools/css/color).
 
 ### Change angle value with the Angle Clock {: #angle-clock }
 
@@ -772,10 +717,6 @@ Additionally, you can [track changes](/docs/devtools/changes/) you make with the
 [26]: https://material.io/design/color/the-color-system.html#color-usage-and-palettes
 [27]: #select
 [28]: /docs/devtools/shortcuts#styles
-[29]: https://drafts.csswg.org/css-color/#rgb-functions
-[30]: https://drafts.csswg.org/css-color/#the-hsl-notation
-[31]: https://drafts.csswg.org/css-color/#the-hwb-notation
-[32]: https://drafts.csswg.org/css-color/#hex-notation
 [33]: https://developer.mozilla.org/docs/Web/CSS/Pseudo-elements
 [34]: /blog/auto-dark-theme/
 [35]: https://web.dev/prefers-color-scheme/

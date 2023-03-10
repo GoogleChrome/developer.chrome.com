@@ -246,6 +246,22 @@ The following JavaScript snippet, run from the DevTools console, will display th
 window.alert(document.querySelector(".bc-github-link")?.href.match(/title=(.+?)\+/)[1] ?? "No browser compat widget found on the page.")
 ```
 
+## Chrome Date
+
+Use `ChromeDate` when you want to refer to a specific milestone date in the Chrome release schedule.
+
+```md
+{% raw %}- Chrome 111 (stable date): {% ChromeDate 111 %}
+- Chrome 111 (stable date): {% ChromeDate 111, "stableDate" %}
+- Chrome 111 (earliest beta date): {% ChromeDate 111, "earliestBetaDate" %}
+- Chrome 111 (final beta date): {% ChromeDate 111, "finalBetaDate" %}{% endraw %}
+```
+
+- Chrome 111 (stable date): {% ChromeDate 111 %}
+- Chrome 111 (stable date): {% ChromeDate 111, "stableDate" %}
+- Chrome 111 (earliest beta date): {% ChromeDate 111, "earliestBetaDate" %}
+- Chrome 111 (final beta date): {% ChromeDate 111, "finalBetaDate" %}
+
 ## Code
 
 developer.chrome.com uses the same syntax highlighter as web.dev.
