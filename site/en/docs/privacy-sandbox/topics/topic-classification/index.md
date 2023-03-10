@@ -86,11 +86,14 @@ Topics are manually curated for 10,000 top domains, and this curation is used to
 
 To run the model directly, refer to [TensorFlow's guide to running a model](https://www.tensorflow.org/lite/guide/inference#running_a_model).
 
-To inspect the `override_list.pb.gz` file, first unpack it: 
+To inspect the `override_list.pb.gz` file, first unpack it:
+
 ```text
 gunzip -c override_list.pb.gz > override_list.pb
 ```
-Use [`protoc`](https://grpc.io/docs/protoc-installation/) to inspect it as text: 
+
+Use [`protoc`](https://grpc.io/docs/protoc-installation/) to inspect it as text:
+
 ```text
 protoc --decode_raw < override_list.pb > output.txt
 ```
@@ -120,7 +123,6 @@ The API returns one topic for each epoch, up to a maximum of three. If three are
 The `document.browsingTopics()` method then returns a random topic from the top five for each epoch, with a 5% chance that any of these may be randomly chosen from the full taxonomy of topics. In Chrome, users are also able to remove individual topics, or clear their browsing history to reduce the number of topics returned by the API. Users may also [opt out](#opt-out) of the API.
 
 You can view information about topics observed during the current epoch from the `chrome://topics-internals` page.
-
 
 ## How the API decides which callers see which topics
 
@@ -189,7 +191,6 @@ In week two, the user visits another site:
 
 In addition, code from adtech2.example is added to diy-clothing.example:
 
-
 <table class="with-heading-tint">
   <thead>
     <tr>
@@ -210,7 +211,6 @@ In addition, code from adtech2.example is added to diy-clothing.example:
 As well as "Fitness" and "Travel & Transportation" from week 1, this means that adtech2.example will now be able to receive the "Crafts" and "Fashion & Style" topic — but not until the following epoch, week 3. This ensures that third parties can't learn more about a user's past (in this case, an interest in fashion) than they could with cookies.
 
 After another two weeks, "Fitness" and "Travel & Transportation" may drop out of adtech2.example's list of eligible topics if the user doesn't visit any sites with those topics that include code from adtech2.example.
-
 
 ## User controls, transparency, and opting out {: #opt-out}
 

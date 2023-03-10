@@ -11,7 +11,6 @@ authors:
   - samdutton
 ---
 
-
 A colab—or colaboratory—is a data analysis tool that combines code, output, and descriptive text into one collaborative document. You can run the [Topics Model Execution Demo colab](https://colab.research.google.com/drive/1hIVoz8bRCTpllYvads51MV7YS3zi3prn) to test how the Topics classifier model infers topics of interest to the user, from the hostnames of pages they visit.
 
 1. From the **Classifier** tab of the `chrome://topics-internals` page get the directory path for the `.tflite` file used by the Topics API. The override list, `override_list.pb.gz`, 

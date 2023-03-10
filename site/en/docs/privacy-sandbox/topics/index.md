@@ -11,7 +11,6 @@ authors:
   - samdutton
 ---
 
-
 ## Implementation status
 {% Partial 'privacy-sandbox/ps-implementation-status.njk' %}
 
@@ -157,7 +156,6 @@ Information is provided in `chrome://topics-internals` about the Topics API impl
 <figcaption>The chrome://topics-internals Features and Parameters panel shows enabled features, time per epoch, number of epochs to use to calculate topics, taxonomy version, and other settings.
 </figcaption>
 </figure>
-
 
 The parameters shown in the screenshot correspond to flags that can be set when running Chrome from the command line. For example, the demo at [topics-demo.glitch.me](https://topics-demo.glitch.me/) recommends using the following flags:
 

@@ -11,7 +11,6 @@ authors:
   - samdutton
 ---
 
-
 ## Implementation status
 
 {% Partial 'privacy-sandbox/ps-implementation-status.njk' %}
@@ -28,7 +27,6 @@ Interest-based advertising can help both advertisers (sites that want to adverti
 - IBA can supplement contextual information to help publishers use advertising to fund websites.
 
 The Topics API provides a new form of interest-based advertising using topics (categories of interest) that are assigned to a browser based on recent user activity. These topics can supplement contextual information to help select appropriate advertisements.
-
 
 ## How it works
 
@@ -88,7 +86,7 @@ For more information on how to use and test the Topics API, refer to the [Topics
 
 The Topics API provides multiple mechanisms to help ensure that it is difficult to re-identify significant numbers of users *across* sites using the Topics API alone:
 
-- Because the Topics taxonomy provides  coarsely grained topics, each topic is expected to have large numbers of users. In fact, there is a guaranteed minimum number of users per topic, because 5% of the time the returned topic is random.
+- Because the Topics taxonomy provides coarsely grained topics, each topic is expected to have large numbers of users. In fact, there is a guaranteed minimum number of users per topic, because 5% of the time the returned topic is random.
 - Topics are returned at random from the user's top five.
 - If a user frequently visits the same site (every week, for example) code running on the site can learn one new topic per week, at most.
 - Different sites will receive different topics for the same user in the same epoch. There is only a one-in-five chance that the topic returned for a user on one site matches the topic returned for them on another. This makes it more difficult to determine if they're the same user.

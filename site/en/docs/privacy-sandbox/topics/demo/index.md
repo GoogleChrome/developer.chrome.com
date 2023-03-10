@@ -17,7 +17,7 @@ The Topics API demo provides a look at how topics are inferred from hostnames. Y
 
 If you want to test the API with your users, sign up for the [Relevance and Measurement origin trial](/docs/privacy-sandbox/unified-origin-trial/).
 
-Our demo is a preview  that demonstrates most features of the Topics API, for you to gain familiarity with how the API is implemented.
+Our demo is a preview that demonstrates most features of the Topics API, for you to gain familiarity with how the API is implemented.
 
 You can also run the Topics [colab](/docs/privacy-sandbox/topics/colab) to try out the Topics [classifier model](/docs/privacy-sandbox/topics/topic-classification/#classifier-model).
 
@@ -26,7 +26,6 @@ The following video shows how the demo works.
 {% YouTube
   id='hEBzWuXjeTQ'
 %}
-
 
 ## Test with chrome://flags or feature flags {: #feature-flags}
 
@@ -37,10 +36,11 @@ There are two ways to try the Topics API as a single user; you'll need to be run
     <figure>
 
     {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/4kpW1PAuzrMrecSAR3tU.png", alt="Enable the Topics API using the chrome://flags/#privacy-sandbox-ads-apis page", width="800", height="246" %}
-          <figcaption>The chrome://flags/#privacy-sandbox-ads-apis page. <a href="https://wd.imgix.net/image/RtQlPaM9wdhEJGVKR8boMPkWf443/4kpW1PAuzrMrecSAR3tU.png?auto=format&w=1600">View a larger version</a></figcaption>
+          <figcaption>The chrome://flags/#privacy-sandbox-ads-apis page where you can enable or disable the API. <a href="https://wd.imgix.net/image/RtQlPaM9wdhEJGVKR8boMPkWf443/4kpW1PAuzrMrecSAR3tU.png?auto=format&w=1600">View a larger version</a></figcaption>
     </figure>
 
 - Run Chrome from the command line with the following flags:
+
     ```text
     --enable-features=BrowsingTopics,PrivacySandboxAdsAPIsOverride,OverridePrivacySandboxSettingsLocalTesting
     ```
@@ -80,30 +80,26 @@ The Topics request header looks like this:
 Sec-Browsing-Topics: 186;version="chrome.1:1:2206021246";config_version="chrome.1";model_version="2206021246";taxonomy_version="1", 265;version="chrome.1:1:2206021246";config_version="chrome.1";model_version="2206021246";taxonomy_version="1"
 ```
 
-This example includes two topics from the [Topics taxonomy](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md), 186 and 265, along with each topic's version information
+This example includes two topics from the [Topics taxonomy](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md), 186 and 265, along with each topic's version information.
 
 {% Aside 'note' %}
 The [fetch()](https://chromium-review.googlesource.com/c/chromium/src/+/4044267) and [XHR](https://chromium-review.googlesource.com/c/chromium/src/+/4103742) implementations were first made available in Chrome 111. (Refer to these builds for more information.)
 {% endAside %}
 
-
 Inclusion of the topics header in XHR requests is only available temporarily, and support will be removed in the future.
-
 
 ### Mark topics as observed with `Observe-Browsing-Topics`
 
 If a request includes a `Sec-Browsing-Topics` header and the response to that request includes an `Observe-Browsing-Topics: ?1` header, then topics from the request header will be marked by the browser as observed. Observed topics are eligible for calculation by the Topics API. This mechanism is designed to match the functionality provided by using the JavaScript API from an iframe.
 
-
-The screenshot below shows the topics recorded from visiting the sites on the API demo page. 
-
+The screenshot below shows the topics recorded from visiting the sites on the API demo page.
 
 <figure>
   {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/7GjvLNY86mBzeXPERRam.png", alt="Topics API demo page on glitch.me", width="656", height="566" %}
-  <figcaption>The glitch.me demo. <a href="https://wd.imgix.net/image/RtQlPaM9wdhEJGVKR8boMPkWf443/7GjvLNY86mBzeXPERRam.png?auto=format&w=1600">View a larger version</a></figcaption>
+  <figcaption>The glitch.me demo for trying the API. <a href="https://wd.imgix.net/image/RtQlPaM9wdhEJGVKR8boMPkWf443/7GjvLNY86mBzeXPERRam.png?auto=format&w=1600">View a larger version</a></figcaption>
 </figure>
 
-This list shows the sites you can visit from the demo to record topics of interest. As you can see, the Arts & Entertainment/Humor category in the screenshot is not the topic of one of these websites, so this recorded topic is one that was added as the possible 5 percent random topics.
+This list shows the sites you can visit from the demo to record topics of interest. As you can see, the Arts &amp; Entertainment/Humor category in the screenshot is not the topic of one of these websites, so this recorded topic is one that was added as the possible 5 percent random topics.
 
 - pets-animals-pets-cats.glitch.me
 - cats-cats-cats-cats.glitch.me
@@ -113,7 +109,7 @@ This list shows the sites you can visit from the demo to record topics of intere
 You can check to see which topics are real and which are random on the Topics State tab of the `chrome://topics-internals` page. This screenshot shows an example from different browsing sessions.
 
 <figure>
-  {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/Ef9ml82uPg3RdX5PX5QU.png", alt="Topics state", width="474", height="416" %}
+  {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/Ef9ml82uPg3RdX5PX5QU.png", alt="The Topics state tab provides information on topics observed.", width="474", height="416" %}
   <figcaption>Topics State tab showing real and random topics. <a href="https://wd.imgix.net/image/RtQlPaM9wdhEJGVKR8boMPkWf443/Ef9ml82uPg3RdX5PX5QU.png?auto=format&w=1600">View a larger version</a></figcaption>
 </figure>
 
