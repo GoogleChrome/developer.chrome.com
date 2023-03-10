@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Topics API: latest updates'
+title: 'Topics API latest updates'
 subhead: >
  Updates and enhancements to the design and implementation of the API.
 description: >
