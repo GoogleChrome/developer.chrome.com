@@ -2,9 +2,9 @@
 layout: 'layouts/doc-post.njk'
 title: 'Topics API: overview'
 subhead: >
-  Learn about the Topics API; why it was developed and how to prepare. 
+  Learn about this privacy-preserving API to enable interest-based advertising without third-party tracking.
 description: >
-  Learn about the Topics API; why it was developed and how to prepare. 
+  Learn about this privacy-preserving API to enable interest-based advertising without third-party tracking.
 date: 2022-01-25
 updated: 2023-03-08
 authors:
