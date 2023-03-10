@@ -24,12 +24,12 @@
 
 {# ### Chrome 111 {: #chrome111 }
 
-* [Debugging HD color with the Styles pane](/ja/blog/new-in-devtools-111/#color)
-* [Enhanced breakpoint UX](/ja/blog/new-in-devtools-111/#breakpoint-redesign)
-* [Customizable Recorder shortcuts](/ja/blog/new-in-devtools-111/#recorder)
-* [Better syntax highlight for Angular](/ja/blog/new-in-devtools-111/#syntax)
-* [Reorganize caches in the Application panel](/ja/blog/new-in-devtools-111/#cache)
-* [Miscellaneous highlights](/ja/blog/new-in-devtools-111/#misc)
+* [Styles ペインで高精細色をデバッグする](/ja/blog/new-in-devtools-111/#color)
+* [強化されたブレークポイントの UX](/ja/blog/new-in-devtools-111/#breakpoint-redesign)
+* [カスタマイズ可能な Recorder ショートカット](/ja/blog/new-in-devtools-111/#recorder)
+* [Angular のシンタックスハイライトの改善](/ja/blog/new-in-devtools-111/#syntax)
+* [キャッシュを Application パネルで再整理する](/ja/blog/new-in-devtools-111/#cache)
+* [その他のハイライト](/ja/blog/new-in-devtools-111/#misc)
  #}
 
 
