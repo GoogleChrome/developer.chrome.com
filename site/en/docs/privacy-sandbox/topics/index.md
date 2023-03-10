@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Topics API: developer guide'
+title: 'Topics API developer guide'
 subhead: >
   Learn how to work with the API, including how to use Chrome flags for testing.
 description: >
