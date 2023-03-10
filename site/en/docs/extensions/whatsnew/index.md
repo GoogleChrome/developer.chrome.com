@@ -20,7 +20,7 @@ and related policy or other changes. You'll find other notices posted on the [Ex
 
 <p class="color-secondary-text type--caption">Posted on <time>March 3, 2023</time></p>
 
-From Chrome 112, the quota for the [`storage.session`](/docs/extensions/reference/storage/#property-session) property has been increased to approximately 10 MB. This was agreed in the Web Extensions Community Group: [https://github.com/w3c/webextensions/issues/350](https://github.com/w3c/webextensions/issues/350)
+From Chrome 112, the quota for the [`storage.session`](/docs/extensions/reference/storage/#property-session) property has been increased to approximately 10 MB. This was agreed to in the Web Extensions Community Group: [https://github.com/w3c/webextensions/issues/350](https://github.com/w3c/webextensions/issues/350)
 
 ### Chrome 109: Is an extension enabled {: #m110-action }
 
