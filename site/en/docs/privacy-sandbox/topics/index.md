@@ -29,7 +29,7 @@ You can also run the Topics [colab](/docs/privacy-sandbox/topics/colab/) to try 
 
 ### Take part in a Topics origin trial
 
-A Privacy Sandbox Relevance and Measurement [origin trial](/blog/origin-trials/) has been made available in Chrome Beta 101.0.4951.26 and above on desktop for the Topics, [FLEDGE](/docs/privacy-sandbox/fledge/), and [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) APIs.
+A Privacy Sandbox Relevance and Measurement [origin trial](/docs/privacy-sandbox/unified-origin-trial/) has been made available in Chrome Beta 101.0.4951.26 and above on desktop for the Topics, [FLEDGE](/docs/privacy-sandbox/fledge/), and [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) APIs.
 
 ## Get and set topics
 
