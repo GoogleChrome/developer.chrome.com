@@ -97,7 +97,7 @@ With [Auto Dark Theme](/blog/auto-dark-theme/) enabled, the [**Emulate CSS media
 
 Everyone should be able to access and enjoy the web. [Google is committed to making that a reality](https://www.google.com/accessibility/).
 
-With Chrome DevTools, you can see how people with vision deficiencies see your site, so you can make it better for them. For more information, see [Simulating color vision deficiencies](/blog/cvd/).
+With Chrome DevTools, you can see how people with [vision deficiencies](https://web.dev/learn/accessibility/color-contrast/) see your site, so you can make it better for them. For more information, see [Simulating color vision deficiencies](/blog/cvd/).
 
 To emulate vision deficiencies:
 
