@@ -26,7 +26,7 @@ From Chrome 112, the quota for the [`storage.session`](/docs/extensions/referenc
 
 <p class="color-secondary-text type--caption">Posted on <time>January 25, 2023</time></p>
 
-Offscreen documents are now available on the stable channel. These provide support for DOM-related features and APIs in Manifest V3. For more information, [read the blog post](/blog/Offscreen-Documents-in-Manifest-v3/).
+Offscreen documents are now available in Manifest V3 extensions. These help with the transition from background pages to extension service workers by providing support for DOM-related features and APIs. For more information, [read the blog post](/blog/Offscreen-Documents-in-Manifest-v3/).
 
 ### Chrome 109: Is an extension enabled {: #m110-action }
 
