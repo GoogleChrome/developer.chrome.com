@@ -55,8 +55,8 @@
     - title: i18n.docs.privacy-sandbox.interest-ads
       sections:
         - url: /docs/privacy-sandbox/topics/overview
-        - url: /docs/privacy-sandbox/topics
         - url: /docs/privacy-sandbox/topics/topic-classification
+        - url: /docs/privacy-sandbox/topics
         - url: /docs/privacy-sandbox/topics/demo
         - url: /docs/privacy-sandbox/topics/colab
         - url: /docs/privacy-sandbox/topics-experiment
