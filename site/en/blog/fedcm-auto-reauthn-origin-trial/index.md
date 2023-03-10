@@ -136,8 +136,8 @@ For testing purposes, you can reset the 10 minute quiet period by removing
 browser data.
 
 1. Navigate to `chrome://history`.
-2. In the search history box, search for the RP origin.
-3. Click the 3 dot icon and remove it from history.
+2. In the search history box, enter the origin of the RP.
+3. Click the three-dot icon &#8942; and select **Remove from history**.
 4. Restart Chrome.
 
 ## Participate in the origin trial
