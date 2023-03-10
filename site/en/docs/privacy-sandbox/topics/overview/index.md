@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Topics API: overview'
+title: 'Topics API overview'
 subhead: >
   Learn about this privacy-preserving API to enable interest-based advertising without third-party tracking.
 description: >
