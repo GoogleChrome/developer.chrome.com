@@ -4,6 +4,24 @@ Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no"
 
 {# $content #}
 
+{# ### Chrome 112 {: #chrome112 }
+
+* [Recorder updates](/pt/blog/new-in-devtools-112/#recorder)
+* [Recorder replay extensions](/pt/blog/new-in-devtools-112/#replay-extensions)
+* [Record with pierce selectors](/pt/blog/new-in-devtools-112/#pierce-selectors)
+* [Export recordings as Puppeteer scripts with Lighthouse analysis](/pt/blog/new-in-devtools-112/#puppeteer-lighthouse)
+* [Get extensions](/pt/blog/new-in-devtools-112/#get-extensions)
+* [Elements > Styles updates](/pt/blog/new-in-devtools-112/#elements-styles)
+* [CSS documentation in the Styles pane](/pt/blog/new-in-devtools-112/#css)
+* [CSS nesting support](/pt/blog/new-in-devtools-112/#nesting)
+* [Marking logpoints and conditional breakpoints in the Console](/pt/blog/new-in-devtools-112/#logpoint)
+* [Ignore irrelevant scripts during debugging](/pt/blog/new-in-devtools-112/#ignore-list)
+* [JavaScript Profiler deprecation started](/pt/blog/new-in-devtools-112/#js-profiler-deprecation)
+* [Emulate reduced contrast](/pt/blog/new-in-devtools-112/#reduced-contrast)
+* [Lighthouse 10](/pt/blog/new-in-devtools-112/#lighthouse)
+* [Miscellaneous highlights](/pt/blog/new-in-devtools-112/#misc)
+ #}
+
 
 {# ### Chrome 111 {: #chrome111 }
 
