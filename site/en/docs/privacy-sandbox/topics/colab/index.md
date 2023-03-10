@@ -54,10 +54,12 @@ For each of the domains defined, you can see the topic scores inferred by the cl
 {% Aside 'caution' %}
 For some domains you may notice a difference in topic inference between the colab and the `chrome://topics-internals` classifier.
 
-This is because the colab only uses the classifier model to infer topics, whereas
-`chrome://topics-internals` uses Chrome's Topics implementation, which uses a
-[manually-curated list of topics](/docs/privacy-sandbox/topics/topic-classification/#classifier-model) (rather than the classifier model) for the top
-10,000 sites. The list is found in `override_list.pb.gz`, which is available in the `s-internals/` page. 
+The colab only uses the classifier model to infer topics, whereas
+`chrome://topics-internals` uses Chrome's Topics implementation. Chrome
+[manually curates list of topics](/docs/privacy-sandbox/topics/topic-classification/#classifier-model),
+rather than using the classifier model for the top 10,000 sites. The curated list
+can be found in `override_list.pb.gz`, which is available on
+`chrome://topics-internals`. 
 {% endAside %}
 
 ## Next steps
