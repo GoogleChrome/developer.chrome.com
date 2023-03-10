@@ -147,7 +147,9 @@ Use hostnames only (without protocol or path) to view inferred topics from the `
 
 ### View Topics API information
 
-Information is provided in `chrome://topics-internals` about the Topics API implementation and settings, such as the [taxonomy](https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md) version and epoch duration. These values reflect default settings for the API or parameters successfully set [from the command line](#feature-flags). This is handy for checking that command-line flags have worked as expected. In the example below, `time_period_per_epoch` has been set to 15 seconds (the default is seven days).
+You can find information about the Topics API implementation and settings, such as the [taxonomy](https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md) version and epoch duration, in `chrome://topics-internals`. These values reflect default settings for the API or parameters successfully set [from the command line](#feature-flags). This may be helpful to confirm that command line flags have worked as expected.
+
+In the example below, `time_period_per_epoch` has been set to 15 seconds (the default is seven days).
 
 <figure>
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/7vFveJtxWgY6yB8gHnW3.png",
