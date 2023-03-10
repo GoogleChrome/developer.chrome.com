@@ -154,7 +154,7 @@ To continue to get accurate values you will need to call the User-Agent Client H
 
 To minimize disruption for ongoing campaigns, we recommend integrating with UA-CH, passing the data in the bidstream following the OpenRTB 2.6 spec, and notifying your DSP partners of this change ensuring they are looking at `device.sua`.
 
-If you need more time, you can retain access through late May 2023 via the [reduction deprecation trial](https://developer.chrome.com/blog/user-agent-reduction-deprecation-trial/).
+If you need more time, you can retain access through late May 2023 via the [reduction deprecation trial](/blog/user-agent-reduction-deprecation-trial/).
 
 ### Questions to ask your team
 *	Have you already integrated with User-Agent Client Hints and are passing that data into the bidstream?
@@ -166,13 +166,13 @@ Answered yes to all the above? Great! You are ready and successfully migrated to
 ### Actions to take
 *	Integrate with UA-CH
 	*	See [Migrate to User-Agent Client Hints](https://web.dev/migrate-to-ua-ch/) for recommendations on how to integrate with the API through HTTP Headers or JavaScript.
-	*	For an API overview, see [this introductory article](https://developer.chrome.com/articles/user-agent-client-hints/).
+	*	For an API overview, see [this introductory article](/articles/user-agent-client-hints/).
 *	Updated your bidstream to include UA-CH 
 	*	We recommend updating your bidstream spec following section 3.2.29 of [Open RTB 2.6 spec](https://iabtechlab.com/wp-content/uploads/2022/04/OpenRTB-2-6_FINAL.pdf).
 	*	If there are technical blockers to updating to [Open RTB 2.6](https://iabtechlab.com/wp-content/uploads/2022/04/OpenRTB-2-6_FINAL.pdf), consider following the device.sua data structure recommended in 3.2.29 to include UACH values within the `ext object` to enable continued access to your DSP partners.
 *	(Optional) Extend access to the legacy User-Agent string
-	*	Companies who need more time to migrate to the UA-CH API can join the [reduction deprecation trial](https://developer.chrome.com/blog/user-agent-reduction-deprecation-trial/) that extends access to the legacy User-Agent string through the end of May 2023.
-	*	 Once registered, you will need to [update your HTTP Response headers](https://developer.chrome.com/blog/user-agent-reduction-deprecation-trial/#setup) for your production traffic.
+	*	Companies who need more time to migrate to the UA-CH API can join the [reduction deprecation trial](/blog/user-agent-reduction-deprecation-trial/) that extends access to the legacy User-Agent string through the end of May 2023.
+	*	 Once registered, you will need to [update your HTTP Response headers](/blog/user-agent-reduction-deprecation-trial/#setup) for your production traffic.
 	*	While this provides access until May 23, 2023, you should still integrate with UA-CH to continue to have access to accurate values.
 *	Raise awareness to your DSP partners
 	*	Reach out to your DSP partners and let them know you are passing ua information like device model and OS version in the `device.sua` of OpenRTB 2.6. 
