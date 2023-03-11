@@ -33,18 +33,17 @@
  #}
 
 
-{# ### Chrome 110 {: #chrome110 }
+### Chrome 110 {: #chrome110 }
 
-* [Clearing Performance Panel on reload](/zh/blog/new-in-devtools-110/#perf)
-* [Recorder updates](/zh/blog/new-in-devtools-110/#recorder)
-* [View and highlight the code of your user flow in the Recorder](/zh/blog/new-in-devtools-110/#recorder-code)
-* [Customize selector types of a recording](/zh/blog/new-in-devtools-110/#recorder-selector)
-* [Edit user flow while recording](/zh/blog/new-in-devtools-110/#recorder-edit)
-* [Automatic in-place pretty print](/zh/blog/new-in-devtools-110/#pretty-print)
-* [Better syntax highlight and inline preview for Vue, SCSS and more](/zh/blog/new-in-devtools-110/#highlight)
-* [Ergonomic and consistent Autocomplete in the Console](/zh/blog/new-in-devtools-110/#console)
-* [Miscellaneous highlights](/zh/blog/new-in-devtools-110/#misc)
- #}
+* [重载时清除性能面板] (/zh/blog/new-in-devtools-110/#perf)
+* [记录器更新](/zh/blog/new-in-devtools-110/#recorder)
+* [在记录器中查看并突出显示用户流的代码](/zh/blog/new-in-devtools-110/#recorder-code)
+* [自定义录音的选择器类型](/zh/blog/new-in-devtools-110/#recorder-selector)
+* [录音时编辑用户流程](/zh/blog/new-in-devtools-110/#recorder-edit)
+* [自动的代码美化器](/zh/blog/new-in-devtools-110/#pretty-print)
+* [为 Vue、SCSS 等提供更好的语法高亮和内联预览](/zh/blog/new-in-devtools-110/#highlight)
+* [控制台中符合人体工程学且一致的自动完成功能](/zh/blog/new-in-devtools-110/#console)
+* [其他的更新](/zh/blog/new-in-devtools-110/#misc)
 
 
 ### Chrome 109 {: #chrome109 }
