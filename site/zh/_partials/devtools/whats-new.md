@@ -22,15 +22,14 @@
 * [Miscellaneous highlights](/zh/blog/new-in-devtools-112/#misc)
  #}
 
-{# ### Chrome 111 {: #chrome111 }
+### Chrome 111 {: #chrome111 }
 
-* [Debugging HD color with the Styles pane](/zh/blog/new-in-devtools-111/#color)
-* [Enhanced breakpoint UX](/zh/blog/new-in-devtools-111/#breakpoint-redesign)
-* [Customizable Recorder shortcuts](/zh/blog/new-in-devtools-111/#recorder)
-* [Better syntax highlight for Angular](/zh/blog/new-in-devtools-111/#syntax)
-* [Reorganize caches in the Application panel](/zh/blog/new-in-devtools-111/#cache)
-* [Miscellaneous highlights](/zh/blog/new-in-devtools-111/#misc)
- #}
+* [使用样式面板调试高清颜色](/zh/blog/new-in-devtools-111/#color)
+* [增强断点的用户体验](/zh/blog/new-in-devtools-111/#breakpoint-redesign)
+* [可自定义的录音机快捷方式](/zh/blog/new-in-devtools-111/#recorder)
+* [Angular 更好的语法显示](/zh/blog/new-in-devtools-111/#syntax)
+* [在应用程序面板中重新组织缓存](/zh/blog/new-in-devtools-111/#cache)
+* [其他的更新](/zh/blog/new-in-devtools-111/#misc)
 
 
 {# ### Chrome 110 {: #chrome110 }
