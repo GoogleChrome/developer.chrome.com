@@ -11,7 +11,6 @@ tags:
   - new-in-devtools
   - devtools
   - chrome-110
-draft: true
 ---
 
 *感谢 [Yoong Sin Yi (Louis)](https://www.linkedin.com/in/louis-yoong-a2370ab7/) 提供的翻译*。
