@@ -23,28 +23,27 @@ Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no"
  #}
 
 
-{# ### Chrome 111 {: #chrome111 }
+### Chrome 111 {: #chrome111 }
 
-* [Debugging HD color with the Styles pane](/pt/blog/new-in-devtools-111/#color)
-* [Enhanced breakpoint UX](/pt/blog/new-in-devtools-111/#breakpoint-redesign)
-* [Customizable Recorder shortcuts](/pt/blog/new-in-devtools-111/#recorder)
-* [Better syntax highlight for Angular](/pt/blog/new-in-devtools-111/#syntax)
-* [Reorganize caches in the Application panel](/pt/blog/new-in-devtools-111/#cache)
-* [Miscellaneous highlights](/pt/blog/new-in-devtools-111/#misc)
- #}
+* [Debugging de cores HD no painel de Estilos](/pt/blog/new-in-devtools-111/#color)
+* [Melhorias na UX dos breakpoints](/pt/blog/new-in-devtools-111/#breakpoint-redesign)
+* [Atalhos customizáveis no Gravador](/pt/blog/new-in-devtools-111/#recorder)
+* [Melhor syntax highlighting para Angular](/pt/blog/new-in-devtools-111/#syntax)
+* [Reorganize caches no painel de Aplicação](/pt/blog/new-in-devtools-111/#cache)
+* [Outras novidades](/pt/blog/new-in-devtools-111/#misc)
 
 
 ### Chrome 110 {: #chrome110 }
 
-* [Limpeza do painel Desempenho ao recarregar](/pt/blog/new-in-devtools-110/#perf)
-* [Atualizações do Gravador](/pt/blog/new-in-devtools-110/#recorder)
-* [Visualização e realce do código do fluxo de usuário no Gravador](/pt/blog/new-in-devtools-110/#recorder-code)
-* [Personalize os tipos de seletor de uma gravação](/pt/blog/new-in-devtools-110/#recorder-selector)
-* [Edite o fluxo do usuário durante a gravação](/pt/blog/new-in-devtools-110/#recorder-edit)
-* [Formatação automática na mesma aba](/pt/blog/new-in-devtools-110/#pretty-print)
-* [Melhor destaque de sintaxe e visualização inline para Vue, SCSS e outros](/pt/blog/new-in-devtools-110/#highlight)
-* [Autocomplete ergonômico e consistente no console](/pt/blog/new-in-devtools-110/#console)
-* [Outros destaques](/pt/blog/new-in-devtools-110/#misc)
+* [Limpeza do painel Performance ao recarregar](/pt/blog/new-in-devtools-110/#perf)
+* [Novidades no Gravador](/pt/blog/new-in-devtools-110/#recorder)
+* [Veja e realçe códigos do fluxo do usuário no Gravador](/pt/blog/new-in-devtools-110/#recorder-code)
+* [Customize os tipos de seletores de uma gravação](/pt/blog/new-in-devtools-110/#recorder-selector)
+* [Edição de fluxo de usuário durante a gravação](/pt/blog/new-in-devtools-110/#recorder-edit)
+* [Auto formatação de código na mesma aba](/pt/blog/new-in-devtools-110/#pretty-print)
+* [Melhor syntax highlight para Vue, SCSS e mais](/pt/blog/new-in-devtools-110/#highlight)
+* [Autocomplete ergonômico e consistente no Console](/pt/blog/new-in-devtools-110/#console)
+* [Outras novidades](/pt/blog/new-in-devtools-110/#misc)
 
 
 ### Chrome 109 {: #chrome109 } 
