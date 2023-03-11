@@ -180,7 +180,7 @@ Chromium 议题: [1399436](https://crbug.com/1399436), [1276960](https://crbug.c
 <!-- - A new **Console** setting that allows you to expand or collapse `console.trace()` messages by default. Toggle the settings via **Settings** > **Preferences** >  **Expand console.trace() messages by default**. ([1139616](https://crbug.com/1139616)) -->
 - 新的 **控制台** 设置，允许你默认展开或折叠`console.trace()`信息。通过 **设置** > **首选项** > **默认展开console.trace()信息来切换设置。([1139616](https://crbug.com/1139616))
 <!-- - The [Snippets](/docs/devtools/javascript/snippets/) pane in the **Sources** panel supports enhanced autocomplete, similar to the **Console**. ([772949](https://crbug.com/772949))  -->
-- **源代码** 面板中的 [Snippets](/docs/devtools/javascript/snippets/) 窗格支持增强的自动完成功能，类似于 **控制台**。 ([772949](https://crbug.com/772949))
+- **源代码** 面板中的 [Snippets](/docs/devtools/javascript/snippets/) 边栏支持增强的自动完成功能，类似于 **控制台**。 ([772949](https://crbug.com/772949))
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/thkb1CYO0yYiGHll7Yp8.png", alt="摘录中的自动完成。", width="800", height="417" %}
 
 
