@@ -138,7 +138,7 @@ Chromium 议题: [1407586](https://crbug.com/1407586), [1402891](https://crbug.c
 Chromium 议题: [1339771](https://crbug.com/bbb)
 
 <!-- ## Better syntax highlight for Angular {: #syntax } -->
-## Angular {: #syntax } 更好的语法显示
+## Angular 更好的语法显示 {: #syntax }
 
 <!-- DevTools enhanced the syntax highlighting for Angular HTML templates, making it easier for you to read code and recognize its structure. -->
 DevTools 增强了 Angular HTML 模板的语法突出显示，使您更容易阅读代码并识别其结构。
