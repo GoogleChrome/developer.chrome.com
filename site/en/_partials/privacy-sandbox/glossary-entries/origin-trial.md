@@ -1,6 +1,4 @@
-## Origin trial {: #origin-trial}
-
-Trials provide access to a new or experimental feature, to make it possible to
+Origin trials are trials that provide access to a new or experimental feature, to make it possible to
 build functions that users can try out for a limited time before the feature is made available to everyone.
 
 When Chrome offers an origin trial for a feature, an [origin](#origin) can be

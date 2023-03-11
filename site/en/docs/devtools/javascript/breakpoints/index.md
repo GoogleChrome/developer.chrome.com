@@ -3,8 +3,9 @@ layout: "layouts/doc-post.njk"
 title: "Pause your code with breakpoints"
 authors:
   - kaycebasques
+  - sofiayem
 date: 2017-02-03
-#updated: YYYY-MM-DD
+updated: 2023-03-07
 description: "Learn about all the ways you can pause your code in Chrome DevTools."
 tags:
   - javascript
@@ -21,7 +22,7 @@ inefficient to set, especially if you don't know exactly where to look, or if yo
 large codebase. You can save yourself time when debugging by knowing how and when to use the other
 types of breakpoints.
 
-<table><tbody><tr><th>Breakpoint Type</th><th>Use This When You Want To Pause...</th></tr><tr><td><a href="#loc">Line-of-code</a></td><td>On an exact region of code.</td></tr><tr><td><a href="#conditional-loc">Conditional line-of-code</a></td><td>On an exact region of code, but only when some other condition is true.</td></tr><tr><td><a href="#dom">DOM</a></td><td>On the code that changes or removes a specific DOM node, or its children.</td></tr><tr><td><a href="#xhr">XHR</a></td><td>When an XHR URL contains a string pattern.</td></tr><tr><td><a href="#event-listeners">Event listener</a></td><td>On the code that runs after an event, such as <code translate="no" dir="ltr">click</code>, is fired.</td></tr><tr><td><a href="#exceptions">Exception</a></td><td>On the line of code that is throwing a caught or uncaught exception.</td></tr><tr><td><a href="#function">Function</a></td><td>Whenever a specific function is called.</td></tr></tbody></table>
+<table><tbody><tr><th>Breakpoint Type</th><th>Use this when you want to ...</th></tr><tr><td><a href="#loc">Line-of-code</a></td><td>Pause on an exact region of code.</td></tr><tr><td><a href="#conditional-loc">Conditional line-of-code</a></td><td>Pause on an exact region of code, but only when some other condition is true.</td></tr><tr><td><a href="#log-loc">Logpoint</a></td><td>Log a message to the <b>Console</b> without pausing the execution.</td></tr><tr><td><a href="#dom">DOM</a></td><td>Pause on the code that changes or removes a specific DOM node, or its children.</td></tr><tr><td><a href="#xhr">XHR</a></td><td>Pause when an XHR URL contains a string pattern.</td></tr><tr><td><a href="#event-listeners">Event listener</a></td><td>Pause on the code that runs after an event, such as <code translate="no" dir="ltr">click</code>, is fired.</td></tr><tr><td><a href="#exceptions">Exception</a></td><td>Pause on the line of code that is throwing a caught or uncaught exception.</td></tr><tr><td><a href="#function">Function</a></td><td>Pause whenever a specific function is called.</td></tr></tbody></table>
 
 ## Line-of-code breakpoints {: #loc }
 
@@ -36,9 +37,9 @@ To set a line-of-code breakpoint in DevTools:
 4.  To the left of the line of code is the line number column. Click on it. A blue icon appears on
     top of the line number column.
 
-{% Img src="image/admin/0BqKJaEX3Afeq6s5GbA6.png", alt="A line-of-code breakpoint.", width="800", height="572" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/IcMBSM988092ZFocJ1LJ.png", alt="A line-of-code breakpoint.", width="800", height="554" %}
 
-**Figure 1**: A line-of-code breakpoint set on line **29**
+This example shows a line-of-code breakpoint set on line **29**.
 
 ### Line-of-code breakpoints in your code {: #debugger }
 
@@ -54,42 +55,107 @@ console.log('c');
 
 ### Conditional line-of-code breakpoints {: #conditional-loc }
 
-Use a conditional line-of-code breakpoint when you know the exact region of code that you need to
-investigate, but you want to pause only when some other condition is true.
+Use a conditional line-of-code breakpoint when you want to stop the execution but only when some condition is true.
+
+Such breakpoints are useful when you want to skip breaks that are irrelevant to your case, especially in a loop.
 
 To set a conditional line-of-code breakpoint:
 
-1.  Click the **Sources** tab.
+1.  Open the **Sources** tab.
 2.  Open the file containing the line of code you want to break on.
 3.  Go to the line of code.
 4.  To the left of the line of code is the line number column. Right-click it.
 5.  Select **Add conditional breakpoint**. A dialog displays underneath the line of code.
 6.  Enter your condition in the dialog.
-7.  Press Enter to activate the breakpoint. An orange icon appears on top of the line number column.
+7.  Press <kbd>Enter</kbd> to activate the breakpoint. An orange icon with a question mark appears on top of the line number column.
 
-{% Img src="image/admin/g9xQCASKEYBNWZoztC4G.png", alt="A conditional line-of-code breakpoint.", width="800", height="553" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/W2xfoXd2E6y9k4xYfSjX.png", alt="A conditional line-of-code breakpoint.", width="800", height="807" %}
 
-**Figure 2**: A conditional line-of-code breakpoint set on line **32**
+This example shows a conditional line-of-code breakpoint that fired only when the `x` exceeded `10` in a loop at iteration `i=6`.
 
-### Manage line-of-code breakpoints {: #manage-loc }
+### Log line-of-code breakpoints {: #log-loc }
 
-Use the **Breakpoints** pane to disable or remove line-of-code breakpoints from a single location.
+Use log line-of-code breakpoints (logpoints) to log messages to the **Console** without pausing the execution and without cluttering up your code with `console.log()` calls.
 
-{% Img src="image/admin/dgJMnIWMWFIwtJ76X9w0.png", alt="The Breakpoints pane.", width="800", height="578" %} **Figure
-3**: The **Breakpoints** pane showing two line-of-code breakpoints: one on line 15 of
-`get-started.js`, another on line 32
+To set a logpoint:
 
-- Check the checkbox next to an entry to disable that breakpoint.
-- Right-click an entry to remove that breakpoint.
-- Right-click anywhere in the **Breakpoints** pane to deactivate all breakpoints, disable all
-  breakpoints, or remove all breakpoints. Disabling all breakpoints is equivalent to unchecking each
-  one. Deactivating all breakpoints instructs DevTools to ignore all line-of-code breakpoints as well as
-  preserve their enabled state so that they are in the same state as before when
-  you reactivate them.
+1.  Open the **Sources** tab.
+1.  Open the file containing the line of code you want to break on.
+1.  Go to the line of code.
+1.  To the left of the line of code is the line number column. Right-click it.
+1.  Select **Add logpoint**. A dialog displays underneath the line of code.
+1.  Enter your log message in the dialog. You can use the same syntax as you would with a [`console.log(message)`](https://developer.mozilla.org/docs/Web/API/Console/log) call.
 
-{% Img src="image/admin/jR6uTu7EVph7vbfunUa3.png", alt="Deactivated breakpoints in the Breakpoints pane.", width="800", height="657" %}
+    For example, you can log:
 
-**Figure 4**: Deactivated breakpoints in the **Breakpoints** pane are disabled and transparent
+    ```js
+    "A string " + num, str.length > 1, str.toUpperCase(), obj
+    ```
+
+    In this case, the logged message is:
+
+    ```js
+    // str = "test"
+    // num = 3
+    // obj = {attr: "x"}
+    A string 42 true TEST {attr: 'x'}
+    ```
+
+1.  Press <kbd>Enter</kbd> to activate the breakpoint. A pink icon with two dots appears on top of the line number column.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/daHPau6iUXfqFJSZ61Lh.png", alt="A logpoint that logs a string and a variable value to the Console.", width="800", height="548" %}
+
+This example shows a logpoint at line 30 that logs a string and a variable value to the **Console**.
+
+### Edit line-of-code breakpoints {: #manage-loc }
+
+Use the **Breakpoints** pane to disable, edit, or remove line-of-code breakpoints.
+
+#### Edit groups of breakpoints {: #manage-groups }
+
+The **Breakpoints** pane groups the breakpoints by file and orders them by line and column numbers. You can do the following with groups:
+
+- To collapse or expand a group, click its name.
+- To enable or disable a group or breakpoint individually, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} next to the group or the breakpoint. 
+- To remove a group, hover over it and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gtAWQj5HMLjKYPqU9dBP.svg", alt="Close.", width="24", height="24" %}.
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/UslK4pKSMUfuzuzE29gx.mp4", muted="true", controls="true", class="screenshot" %}
+
+This video shows how to collapse groups and disable or enable breakpoints one by one or by groups. When you disable a breakpoint, the **Sources** panel makes its marker next to the line number transparent.
+
+Groups have context menus. In the **Breakpoints** pane, right-click a group and choose:
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/BN1wTH94xG36ffQm33ue.png", alt="The context menu of a group.", width="800", height="749" %}
+
+- Remove all breakpoints in file (group).
+- Disable all breakpoints in file.
+- Enable all breakpoints in file.
+- Remove all breakpoints (in all files). 
+- Remove other breakpoints (in other groups).
+
+#### Edit breakpoints {: #edit-breakpoints }
+
+To edit a breakpoint:
+
+- Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} next to a breakpoint to enable or disable it. When you disable a breakpoint, the **Sources** panel makes its marker next to the line number transparent.
+- Hover over a breakpoint and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/k3WKQOAItcJ2pliOyD47.svg", alt="Edit.", width="24", height="24" %} to edit and {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gtAWQj5HMLjKYPqU9dBP.svg", alt="Close.", width="24", height="24" %} to remove it.
+- When editing a breakpoint, change its type from the drop-down list in the inline editor.
+
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/nokI9Jswa1DfxNd9cLoO.png", alt="Changing the type of a breakpoint.", width="800", height="600" %}
+
+- Right-click a breakpoint to see its context menu and choose one of the options:
+
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/FCsRKMDAEccIPT3ecc0B.png", alt="The context menu of a breakpoint.", width="800", height="749" %}
+
+  - Remove breakpoint.
+  - Edit condition or logpoint.
+  - Reveal location.
+  - Remove all breakpoints (in all files).
+  - Remove other breakpoints (in other files).
+
+Watch the video to see various breakpoint edits in action: disable, remove, edit condition, reveal location from the menu, and change type.
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/lfy2SaF34u32cXyORfR7.mp4", muted="true", controls="true", class="screenshot" %}
 
 ## DOM change breakpoints {: #dom }
 
@@ -104,9 +170,21 @@ To set a DOM change breakpoint:
 4.  Hover over **Break on** then select **Subtree modifications**, **Attribute modifications**, or
     **Node removal**.
 
-{% Img src="image/admin/PlPfY25q2BTOrc69IVDj.png", alt="The context menu for creating a DOM change breakpoint.", width="800", height="577" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XsXVifCHA03yWaSJHeUR.png", alt="The context menu for creating a DOM change breakpoint.", width="800", height="756" %}
 
-**Figure 5**: The context menu for creating a DOM change breakpoint
+This example shows the context menu for creating a DOM change breakpoint.
+
+You can find a list of DOM change breakpoints in:
+
+- **Elements** > **DOM Breakpoints** pane.
+- **Sources** > **DOM Breakpoints** side pane.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ffaxCrSKWLf8ulyuYePH.png", alt="Lists of DOM Breakpoints in the Elements and Sources panels.", width="800", height="582" %}
+
+There you can:
+
+- Enable or disable them with {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %}.
+- Right-click > **Remove** or **Reveal** them in the DOM.
 
 ### Types of DOM change breakpoints {: #dom-types }
 
@@ -117,33 +195,27 @@ To set a DOM change breakpoint:
   currently-selected node, or when an attribute value changes.
 - **Node Removal**: Triggered when the currently-selected node is removed.
 
-## XHR/Fetch breakpoints {: #xhr }
+## XHR/fetch breakpoints {: #xhr }
 
-Use an XHR breakpoint when you want to break when the request URL of an XHR contains a specified
+Use an XHR/fetch breakpoint when you want to break when the request URL of an XHR contains a specified
 string. DevTools pauses on the line of code where the XHR calls `send()`.
-
-{% Aside %}
-
-**Note:** This feature also works with [Fetch][10] requests.
-
-{% endAside %}
 
 One example of when this is helpful is when you see that your page is requesting an incorrect URL,
 and you want to quickly find the AJAX or Fetch source code that is causing the incorrect request.
 
-To set an XHR breakpoint:
+To set an XHR/fetch breakpoint:
 
 1.  Click the **Sources** tab.
 2.  Expand the **XHR Breakpoints** pane.
-3.  Click **Add breakpoint**.
+3.  Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YihNsXarRhDgEi9rOT4H.svg", alt="Add.", width="24", height="24" %} **Add breakpoint**.
 4.  Enter the string which you want to break on. DevTools pauses when this string is present
     anywhere in an XHR's request URL.
-5.  Press Enter to confirm.
+5.  Press <kbd>Enter</kbd> to confirm.
 
-{% Img src="image/admin/BQXfCgOqQp7usvLOSySx.png", alt="Creating an XHR breakpoint.", width="800", height="698" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/AAL4i6FKWOaIEdreyLjE.png", alt="Creating an XHR/fetch breakpoint.", width="800", height="756" %}
 
-**Figure 6**: Creating an XHR breakpoint in the **XHR Breakpoints** for any request that contains
-`org` in the URL
+This example shows how to create an XHR/fetch breakpoint in the **XHR/fetch Breakpoints** for any request that contains
+`org` in the URL.
 
 ## Event listener breakpoints {: #event-listeners }
 
@@ -157,27 +229,35 @@ all mouse events.
 3.  Check one of these categories to pause whenever any event from that category is fired, or expand
     the category and check a specific event.
 
-{% Img src="image/admin/c40PakNjXuOPIn21VySn.png", alt="Creating an event listener breakpoint.", width="800", height="543" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/aFFgOPi3outuMb32WO3k.png", alt="Creating an event listener breakpoint.", width="800", height="726" %}
 
-**Figure 7**: Creating an event listener breakpoint for `deviceorientation`
+This example shows how to create an event listener breakpoint for `deviceorientation`.
+
+Additionally, you can find a list of event listeners in the **Elements** > **Event Listeners** pane.
 
 ## Exception breakpoints {: #exceptions }
 
 Use exception breakpoints when you want to pause on the line of code that's throwing a caught or
-uncaught exception.
+uncaught exception. You can pause on both such exceptions independently in any debug session other than [Node.js](https://nodejs.org/).
 
-1.  Click the **Sources** tab.
-2.  Click **Pause on exceptions**
-    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Ko2qtw41xR12rOnCfQzt.png", alt="Pause on exceptions", width="28", height="28" %}.
-    It turns blue when enabled.
-    <figure>{% Img src="image/admin/Rc3ID0gnnhS8JBMCbF6J.png", alt="The 'Pause on exceptions' button.", width="800", height="594" %}
-    <figcaption><strong>Figure 8</strong>: The <strong>Pause on exceptions</strong> button</figcaption>
-    </figure>
-3.  (Optional) Check the **Pause On Caught Exceptions** checkbox if you also want to pause on caught
-    exceptions, in addition to uncaught ones.
-    <figure>{% Img src="image/admin/kCtXt5gDE2wHcxyEytig.png", alt="Paused on an uncaught exception.", width="800", height="550" %}
-    <figcaption><strong>Figure 9</strong>: Paused on an uncaught exception</figcaption>
-    </figure>
+{% Aside 'gotchas' %}
+Currently, in a Node.js debug session, you can pause on caught exceptions only if you also pause on uncaught ones.
+See [Chromium bug #1382762](https://crbug.com/1382762) for details.
+{% endAside %}
+
+In the **Breakpoints** pane of the **Sources** tab, enable one of the following options or both, then execute the code: 
+
+- Check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Pause on uncaught exceptions**.
+
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gVGWABNL2GgZYl2BoMHb.png", alt="Paused on an uncaught exception when the corresponding checkbox is enabled.", width="800", height="687" %}
+
+  In this example, the execution is paused on an uncaught exception.
+
+- Check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Pause on caught exceptions**.
+
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ruYVlG9CAdb86DmnRdsK.png", alt="Paused on a caught exception when the corresponding checkbox is enabled.", width="800", height="687" %}
+
+  In this example, the execution is paused on a caught exception.
 
 ## Function breakpoints {: #function }
 

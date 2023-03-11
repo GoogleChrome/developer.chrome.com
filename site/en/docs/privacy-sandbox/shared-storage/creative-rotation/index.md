@@ -47,7 +47,7 @@ In this example:
 *   `creative-rotation.js` is embedded in a frame. This script sets which ads are the most important ( weight), and calls to the worklet to determine which content should be displayed.
 *   `creative-rotation-worklet.js`  is the shared storage worklet that determines the weighted distribution for the contents and returns which should be displayed.
 
-**[creative-rotation.js](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/advertiser/creative-rotation.js)**
+**[creative-rotation.js](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/content-producer/url-selection/creative-rotation.js)**
 
 ```js
 // Ad config with the URL of the content, a probability weight for rotation, and the clickthrough rate.
@@ -95,7 +95,7 @@ async function injectAd() {
 injectAd();
 ```
 
-**[creative-rotation-worklet.js](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/advertiser/creative-rotation-worklet.js)**
+**[creative-rotation-worklet.js](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/content-producer/url-selection/creative-rotation-worklet.js)**
 
 ```js
 class SelectURLOperation {

@@ -27,28 +27,33 @@
       <div class="display-flex direction-column align-center">
         <div class="display-flex color-secondary-text gap-top-300 lg:gap-top-0">
           {% if paged.homepage %}
-            <a href="{{ paged.homepage }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="{{ 'i18n.common.website' | i18n(locale) }}">
+            <a rel="me" href="{{ paged.homepage }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="{{ 'i18n.common.website' | i18n(locale) }}">
               {{ icon('world', {hidden: true}) }}
             </a>
           {% endif %}
           {% if paged.twitter %}
-            <a href="https://twitter.com/{{ paged.twitter }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="Twitter">
+            <a rel="me" href="https://twitter.com/{{ paged.twitter }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="Twitter">
               {{ icon('twitter', {hidden: true}) }}
             </a>
           {% endif %}
           {% if paged.github %}
-            <a href="https://github.com/{{ paged.github }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="GitHub">
+            <a rel="me" href="https://github.com/{{ paged.github }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="GitHub">
               {{ icon('github', {hidden: true}) }}
             </a>
           {% endif %}
           {% if paged.glitch  %}
-            <a href="https://glitch.com/@{{ paged.glitch }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="Glitch">
+            <a rel="me" href="https://glitch.com/@{{ paged.glitch }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="Glitch">
               {{ icon('glitch', {hidden: true}) }}
             </a>
           {% endif %}
           {% if paged.mastodon  %}
-            <a href="{{ paged.mastodon }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="Mastodon">
+            <a rel="me" href="{{ paged.mastodon }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="Mastodon">
               {{ icon('mastodon', {hidden: true}) }}
+            </a>
+          {% endif %}
+          {% if paged.linkedin  %}
+            <a rel="me" href="https://www.linkedin.com/in/{{ paged.linkedin }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="LinkedIn">
+              {{ icon('linkedin', {hidden: true}) }}
             </a>
           {% endif %}
         </div>

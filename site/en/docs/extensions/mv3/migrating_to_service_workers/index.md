@@ -109,7 +109,7 @@ some work, and get terminated repeatedly throughout a user's browser session. Th
 to extension developers accustomed to long-lived background pages as application data is not
 immediately available in global variables.
 
-The following Manifest V2 example recieves a name from a content script and persists it for later:
+The following Manifest V2 example receives a name from a content script and persists it for later:
 
 ```js
 // background.js

@@ -4,6 +4,35 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 
 {# $content #}
 
+{# ### Chrome 112 {: #chrome112 }
+
+* [Recorder updates](/es/blog/new-in-devtools-112/#recorder)
+* [Recorder replay extensions](/es/blog/new-in-devtools-112/#replay-extensions)
+* [Record with pierce selectors](/es/blog/new-in-devtools-112/#pierce-selectors)
+* [Export recordings as Puppeteer scripts with Lighthouse analysis](/es/blog/new-in-devtools-112/#puppeteer-lighthouse)
+* [Get extensions](/es/blog/new-in-devtools-112/#get-extensions)
+* [Elements > Styles updates](/es/blog/new-in-devtools-112/#elements-styles)
+* [CSS documentation in the Styles pane](/es/blog/new-in-devtools-112/#css)
+* [CSS nesting support](/es/blog/new-in-devtools-112/#nesting)
+* [Marking logpoints and conditional breakpoints in the Console](/es/blog/new-in-devtools-112/#logpoint)
+* [Ignore irrelevant scripts during debugging](/es/blog/new-in-devtools-112/#ignore-list)
+* [JavaScript Profiler deprecation started](/es/blog/new-in-devtools-112/#js-profiler-deprecation)
+* [Emulate reduced contrast](/es/blog/new-in-devtools-112/#reduced-contrast)
+* [Lighthouse 10](/es/blog/new-in-devtools-112/#lighthouse)
+* [Miscellaneous highlights](/es/blog/new-in-devtools-112/#misc)
+ #}
+
+{# ### Chrome 111 {: #chrome111 }
+
+* [Debugging HD color with the Styles pane](/es/blog/new-in-devtools-111/#color)
+* [Enhanced breakpoint UX](/es/blog/new-in-devtools-111/#breakpoint-redesign)
+* [Customizable Recorder shortcuts](/es/blog/new-in-devtools-111/#recorder)
+* [Better syntax highlight for Angular](/es/blog/new-in-devtools-111/#syntax)
+* [Reorganize caches in the Application panel](/es/blog/new-in-devtools-111/#cache)
+* [Miscellaneous highlights](/es/blog/new-in-devtools-111/#misc)
+ #}
+
+
 {# ### Chrome 110 {: #chrome110 }
 
 * [Clearing Performance Panel on reload](/es/blog/new-in-devtools-110/#perf)
@@ -16,6 +45,10 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 * [Ergonomic and consistent Autocomplete in the Console](/es/blog/new-in-devtools-110/#console)
 * [Miscellaneous highlights](/es/blog/new-in-devtools-110/#misc)
  #}
+
+ 
+
+
 
 ### Chrome 109 {: #chrome109 }
 

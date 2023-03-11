@@ -621,7 +621,7 @@ capabilities.
 [sample-action-api]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/action
 [sample-action]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/action
 [sample-context-menu]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/contextMenus/global_context_search
-[sample-drink]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/examples/water_alarm_notification
+[sample-drink]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.water_alarm_notification
 [sample-new-tab-search]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/omnibox/new-tab-search
 [sample-tab-flipper]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/default_command_override
 [section-onclick]: #click

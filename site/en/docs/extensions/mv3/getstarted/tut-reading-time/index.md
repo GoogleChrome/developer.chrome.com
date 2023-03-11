@@ -109,7 +109,7 @@ We recommend using PNG files, but other file formats are allowed, except for SVG
 ### Step 3: Declare the content script {: #step-3 }
 
 Extensions can run scripts that read and modify the content of a page. These are called _content
-scripts_. They live in an [isolated world][doc-isolated], meaning they can make changes to their JavaScript environment without conflicting with their host page or other extension's content scripts.
+scripts_. They live in an [isolated world][doc-isolated], meaning they can make changes to their JavaScript environment without conflicting with their host page or other extensions' content scripts.
 
 Add the following code to the `manifest.json` to register a content script called
 `content.js`.

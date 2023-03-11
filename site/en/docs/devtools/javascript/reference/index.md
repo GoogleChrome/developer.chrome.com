@@ -308,7 +308,7 @@ Try restarting the frames of both functions in the following way:
 
 ### Show ignore-listed frames {: #show-ignore-listed-frames }
 
-With the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Ignore List** > **Automatically add known third-party scripts to ignore list** setting enabled, the **Scope** pane shows only the frames that are relevant to your code.
+By default, the **Call Stack** pane shows only the frames that are relevant to your code and omits any scripts added to {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Ignore List**](/docs/devtools/settings/ignore-list/).
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YZH1mvFdglBhJVn7AGrz.png", alt="Call stack.", width="800", height="422" %}
 
@@ -429,6 +429,8 @@ To ignore a script from the Editor pane:
 
 {% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/q7leDy8D975ZlhtiB3f6.png", alt="Ignoring a script from the Editor pane.", width="800", height="575" %}
 
+You can remove a script from the list of ignored from [Settings](/docs/devtools/settings/#manage-custom-ignore-list).
+
 ### Ignore a script from the Call Stack pane {: #call-stack-ignore-list }
 
 To ignore a script from the **Call Stack** pane:
@@ -437,6 +439,8 @@ To ignore a script from the **Call Stack** pane:
 2.  Select **Add script to ignore list**.
 
 {% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/y2NiIZH9UURpEtXAuVCZ.png", alt="Ignoring a script from the Call Stack pane.", width="800", height="575" %}
+
+You can remove a script from the list of ignored from [Settings](/docs/devtools/settings/#manage-custom-ignore-list).
 
 ### Ignore a script from Settings {: #settings-ignore-list }
 

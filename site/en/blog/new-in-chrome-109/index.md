@@ -71,7 +71,7 @@ This covers only some key highlights. Check the links below for
 additional changes in Chrome 109.
 
 * [What's new in Chrome DevTools (109)](/blog/new-in-devtools-109/)
-* [Chrome 109 deprecations and removals](/blog/deps-rems-109/)
+* [Chrome 109 deprecations and removals](/blog/chrome-109-beta/#deprecations-and-removals)
 * [ChromeStatus.com updates for Chrome 109](https://www.chromestatus.com/features#milestone%3D109)
 * [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/108.0.5359.70..109.0.5414.91)
 * [Chrome release calendar](https://chromiumdash.appspot.com/schedule)

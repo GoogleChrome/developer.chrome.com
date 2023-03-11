@@ -28,9 +28,9 @@ The `notRestoredReasons` property, added to the [`PerformanceNavigationTiming`](
 
 ### Try out the bfcache `notRestoredReasons` API
 
-Starting in Chromium 109, the bfcache `notRestoredReasons` API is available as an [origin trial](/docs/web-platform/origin-trials/) in Chromium. The feature's release is estimated for Chrome 111, which will hit Chrome stable in March 2023.
+Starting in version 109, the bfcache `notRestoredReasons` API is available as an [origin trial](/docs/web-platform/origin-trials/) in Chromium. Find updated information on this feature's release schedule by visiting its [ChromeStatus.com feature page][cr-status] (see the [Chrome roadmap](https://chromestatus.com/roadmap) for version release dates).
 
-Until then, you can try out the bfcache `notRestoredReasons` API by [registering for the origin trial](ot) and using it in your experiments. See [Take part in an origin trial](/docs/web-platform/origin-trials/#take-part-in-an-origin-trial) for instructions on how to use your token once you are registered.
+You can try out the bfcache `notRestoredReasons` API by [registering for the origin trial][ot] and using it in your experiments. See [Take part in an origin trial](/docs/web-platform/origin-trials/#take-part-in-an-origin-trial) for instructions on how to use your token once you are registered.
 
 ## Concepts and usage
 
@@ -62,7 +62,7 @@ function returnNRR() {
 }
 ```
 
-The `PerformanceNavigationTiming.notRestoredReasons` property returns an object with the following structure, which represents the blocked state of the top-level frame:
+For history navigations, the `PerformanceNavigationTiming.notRestoredReasons` property returns an object with the following structure, which represents the blocked state of the top-level frame:
 
 ```js
 {
@@ -98,6 +98,10 @@ The properties are as follows:
 
 `url`
 : A string representing the URL of the navigated page.
+
+{% Aside %}
+For `PerformanceNavigationTiming` objects that do not represent history navigations, `PerformanceNavigationTiming.notRestoredReasons` will return `null`. This is useful for determining whether bfcache is not relevant to a particular navigation, as opposed to `notRestoredReasons` support not being enabled (in which case it would return `undefined`).
+{% endAside %}
 
 ### Reporting bfcache blocking in same-origin frames
 
@@ -207,7 +211,8 @@ let us know where and how you are using it.
 - [Back/forward cache](https://web.dev/bfcache/)
 - [Public explainer][explainer]
 - [Chromium tracking bug][cr-bug]
-- [ChromeStatus.com entry][cr-status]
+- [Origin trial for Back/forward cache NotRestoredReason API][ot]
+- [ChromeStatus.com feature page][cr-status]
 - [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/ce4hr99dUDc/)
 
 [explainer]: https://github.com/rubberyuzu/bfcache-not-retored-reason/blob/main/NotRestoredReason.md

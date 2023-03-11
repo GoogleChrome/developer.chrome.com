@@ -11,7 +11,7 @@ authors:
 ---
 
 {% Aside %}
-This proposal has been updated with a different scope and is now called IP Protection. You can check out the [documentation](/docs/privacy-sandbox/ip-protection) and [explainer](https://github.com/spanicker/ip-blindness) for IP Protection to learn more.
+This proposal has been updated with a different scope and is now called IP Protection. You can check out the [documentation](/docs/privacy-sandbox/ip-protection) and [explainer](https://github.com/GoogleChrome/ip-protection) for IP Protection to learn more.
 {% endAside %}
 
 ## Implementation status

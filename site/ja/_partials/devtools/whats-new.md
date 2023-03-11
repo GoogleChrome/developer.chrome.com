@@ -4,18 +4,46 @@
 
 {# $content #}
 
-{# ### Chrome 110 {: #chrome110 }
+{# ### Chrome 112 {: #chrome112 }
 
-* [Clearing Performance Panel on reload](/ja/blog/new-in-devtools-110/#perf)
-* [Recorder updates](/ja/blog/new-in-devtools-110/#recorder)
-* [View and highlight the code of your user flow in the Recorder](/ja/blog/new-in-devtools-110/#recorder-code)
-* [Customize selector types of a recording](/ja/blog/new-in-devtools-110/#recorder-selector)
-* [Edit user flow while recording](/ja/blog/new-in-devtools-110/#recorder-edit)
-* [Automatic in-place pretty print](/ja/blog/new-in-devtools-110/#pretty-print)
-* [Better syntax highlight and inline preview for Vue, SCSS and more](/ja/blog/new-in-devtools-110/#highlight)
-* [Ergonomic and consistent Autocomplete in the Console](/ja/blog/new-in-devtools-110/#console)
-* [Miscellaneous highlights](/ja/blog/new-in-devtools-110/#misc)
+* [Recorder updates](/ja/blog/new-in-devtools-112/#recorder)
+* [Recorder replay extensions](/ja/blog/new-in-devtools-112/#replay-extensions)
+* [Record with pierce selectors](/ja/blog/new-in-devtools-112/#pierce-selectors)
+* [Export recordings as Puppeteer scripts with Lighthouse analysis](/ja/blog/new-in-devtools-112/#puppeteer-lighthouse)
+* [Get extensions](/ja/blog/new-in-devtools-112/#get-extensions)
+* [Elements > Styles updates](/ja/blog/new-in-devtools-112/#elements-styles)
+* [CSS documentation in the Styles pane](/ja/blog/new-in-devtools-112/#css)
+* [CSS nesting support](/ja/blog/new-in-devtools-112/#nesting)
+* [Marking logpoints and conditional breakpoints in the Console](/ja/blog/new-in-devtools-112/#logpoint)
+* [Ignore irrelevant scripts during debugging](/ja/blog/new-in-devtools-112/#ignore-list)
+* [JavaScript Profiler deprecation started](/ja/blog/new-in-devtools-112/#js-profiler-deprecation)
+* [Emulate reduced contrast](/ja/blog/new-in-devtools-112/#reduced-contrast)
+* [Lighthouse 10](/ja/blog/new-in-devtools-112/#lighthouse)
+* [Miscellaneous highlights](/ja/blog/new-in-devtools-112/#misc)
  #}
+
+{# ### Chrome 111 {: #chrome111 }
+
+* [Styles ペインで高精細色をデバッグする](/ja/blog/new-in-devtools-111/#color)
+* [強化されたブレークポイントの UX](/ja/blog/new-in-devtools-111/#breakpoint-redesign)
+* [カスタマイズ可能な Recorder ショートカット](/ja/blog/new-in-devtools-111/#recorder)
+* [Angular のシンタックスハイライトの改善](/ja/blog/new-in-devtools-111/#syntax)
+* [キャッシュを Application パネルで再整理する](/ja/blog/new-in-devtools-111/#cache)
+* [その他のハイライト](/ja/blog/new-in-devtools-111/#misc)
+ #}
+
+
+### Chrome 110 {: #chrome110 }
+
+* [再読み込み時の Performance パネルのクリア](/ja/blog/new-in-devtools-110/#perf)
+* [Recorder の更新](/ja/blog/new-in-devtools-110/#recorder)
+* [Recorder でのユーザーフローコードの表示およびハイライト](/ja/blog/new-in-devtools-110/#recorder-code)
+* [レコーディング時のセレクタタイプのカスタマイズ](/ja/blog/new-in-devtools-110/#recorder-selector)
+* [レコーディング中のユーザーフローの編集](/ja/blog/new-in-devtools-110/#recorder-edit)
+* [自動的な直接のプリティプリント](/ja/blog/new-in-devtools-110/#pretty-print)
+* [Vue、SCSS などのシンタックスハイライトとインラインプレビューの改善](/ja/blog/new-in-devtools-110/#highlight)
+* [Console での人間工学的で一貫性のあるオートコンプリート](/ja/blog/new-in-devtools-110/#console)
+* [その他のハイライト](/ja/blog/new-in-devtools-110/#misc)
 
 
 ### Chrome 109 {: #chrome109 }
