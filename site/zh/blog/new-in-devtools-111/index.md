@@ -72,8 +72,7 @@ DevTools 支持在颜色格式之间转换颜色。 使用 **Change Color Format
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/e9a64d873ac41e8d585e60b4934879abd8ba4977 #} 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/abe7076d2df519b001dbea807a3aaf5beaa86fc0 #} 
 
-Chromium issues: [1073895](https://crbug.com/1073895), [1395782](https://crbug.com/1395782), 
-<!--  [1408777](https://crbug.com/1408777),  [1395782](https://crbug.com/1395782),  [1392717](https://crbug.com/1392717), [1382409](https://crbug.com/1382409), [1392054](https://crbug.com/1392054) -->
+
 Chromium 议题 : [1073895](https://crbug.com/1073895), [1395782](https://crbug.com/1395782), 
 [1408777](https://crbug.com/1408777),  [1395782](https://crbug.com/1395782),  [1392717](https://crbug.com/1392717), [1382409](https://crbug.com/1382409), [1392054](https://crbug.com/1392054)
 
@@ -161,7 +160,6 @@ Chromium 议题: [1385374](https://crbug.com/1385374),  [1385678](https://crbug.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/adccf1afe5d585b294dee247f5a4982aca8f5f1e  #}
 
-Chromium issue: [1407166](https://crbug.com/1407166)
 Chromium 议题: [1407166](https://crbug.com/1407166)
 
 
