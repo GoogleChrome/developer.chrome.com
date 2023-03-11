@@ -154,7 +154,7 @@ If you want to throttle the network connection while working in other DevTools p
 If you want to test [`Content-Encoding`](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Encoding) compression formats while
 working in other DevTools panels, use the **Network conditions** drawer.
 
-{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/vKI9Exl5U3JGAikYUSMS.png", alt="Content-Encodings area highlighted in Network throttling menu.`", width="800", height="429" %}
+{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/vKI9Exl5U3JGAikYUSMS.png", alt="Content-Encodings area highlighted in Network throttling menu.", width="800", height="429" %}
 
 1.  Click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7oHKETDhf3c0SFRrLyVi.png", alt="Network conditions.", width="25", height="20" %} icon to open the **Network Conditions** drawer.
 2.  Select your desired format from the **Content-Encodings** menu.
