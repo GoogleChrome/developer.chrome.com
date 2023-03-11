@@ -4,7 +4,7 @@ title: "DevTools 新功能（Chrome 110）"
 authors:
   - jecelynyeen
 date: 2023-02-13
-description: 'Clearing Performance panel on reload, view and highlight the code in the Recorder, and more.'
+description: '重载时清除性能面板, 在记录器中查看并突出显示用户流的代码和更多新功能。'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/VoEi83p5Na5KhDBANwjD.png'
 alt: ''
 tags:
@@ -107,12 +107,12 @@ Chromium 议题: [1383453](https://crbug.com/1383453), [1382752](https://crbug.c
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/92SB2J5N6ImqJlOY3tIB.png", alt="Vue 里的语法突出显示.", width="800", height="550" %}
 
 <!-- In addition, DevTools also improved the inline preview for Vue, inline HTML, and TSX. Hover over a variable to preview its value.  -->
-此外，DevTools还改进了 Vue、内联 HTML 和 TSX 的内联预览。将鼠标悬停在一个变量上可以预览它的值。
+此外，DevTools 还改进了 Vue、内联 HTML 和 TSX 的内联预览。将鼠标悬停在一个变量上可以预览它的值。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/uLxVoWz3yyxYvOkgCq7t.png", alt="Vue 的内联预览。", width="800", height="700" %}
 
 <!-- Apart from that, DevTools now shows the sourcemap of a stylesheet in the **Sources** panel. For instance, when you open a SCSS file, you can access the related CSS file by clicking on the sourcemap link. -->
-除此之外，DevTools现在在 **源代码** 面板中显示样式表的源码图。例如，当你打开一个 SCSS 文件时，你可以通过点击源图链接来访问相关的 CSS 文件。
+除此之外，DevTools 现在在 **源代码** 面板中显示样式表的源码图。例如，当你打开一个 SCSS 文件时，你可以通过点击源图链接来访问相关的 CSS 文件。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/bK6TMGR8c6285bUlrIbx.png", alt="SASS 的源代码地图链接.", width="800", height="745" %}
 
