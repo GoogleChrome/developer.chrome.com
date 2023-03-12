@@ -26,7 +26,7 @@
 
 * [使用样式面板调试高清颜色](/zh/blog/new-in-devtools-111/#color)
 * [增强断点的用户体验](/zh/blog/new-in-devtools-111/#breakpoint-redesign)
-* [可自定义的录音机快捷方式](/zh/blog/new-in-devtools-111/#recorder)
+* [可自定义的记录器快捷方式](/zh/blog/new-in-devtools-111/#recorder)
 * [Angular 更好的语法显示](/zh/blog/new-in-devtools-111/#syntax)
 * [在应用程序面板中重新组织缓存](/zh/blog/new-in-devtools-111/#cache)
 * [其他的更新](/zh/blog/new-in-devtools-111/#misc)
