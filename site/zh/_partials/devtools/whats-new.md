@@ -6,20 +6,20 @@
 
 {# ### Chrome 112 {: #chrome112 }
 
-* [Recorder updates](/zh/blog/new-in-devtools-112/#recorder)
-* [Recorder replay extensions](/zh/blog/new-in-devtools-112/#replay-extensions)
-* [Record with pierce selectors](/zh/blog/new-in-devtools-112/#pierce-selectors)
-* [Export recordings as Puppeteer scripts with Lighthouse analysis](/zh/blog/new-in-devtools-112/#puppeteer-lighthouse)
-* [Get extensions](/zh/blog/new-in-devtools-112/#get-extensions)
-* [Elements > Styles updates](/zh/blog/new-in-devtools-112/#elements-styles)
-* [CSS documentation in the Styles pane](/zh/blog/new-in-devtools-112/#css)
-* [CSS nesting support](/zh/blog/new-in-devtools-112/#nesting)
-* [Marking logpoints and conditional breakpoints in the Console](/zh/blog/new-in-devtools-112/#logpoint)
-* [Ignore irrelevant scripts during debugging](/zh/blog/new-in-devtools-112/#ignore-list)
-* [JavaScript Profiler deprecation started](/zh/blog/new-in-devtools-112/#js-profiler-deprecation)
-* [Emulate reduced contrast](/zh/blog/new-in-devtools-112/#reduced-contrast)
+* [记录器更新](/zh/blog/new-in-devtools-112/#recorder)
+* [重播扩展支持](/zh/blog/new-in-devtools-112/#replay-extensions)
+* [使用 pierce 选择器记录](/zh/blog/new-in-devtools-112/#pierce-selectors)
+* [导出为带有 Lighthouse 分析的 Puppeteer 脚本](/zh/blog/new-in-devtools-112/#puppeteer-lighthouse)
+* [获取扩展](/zh/blog/new-in-devtools-112/#get-extensions)
+* [元素 > 样式更新](/zh/blog/new-in-devtools-112/#elements-styles)
+* [样式面板中的 CSS 文档](/zh/blog/new-in-devtools-112/#css)
+* [CSS 嵌套支持](/zh/blog/new-in-devtools-112/#nesting)
+* [在控制台中标记日志点和条件断点](/zh/blog/new-in-devtools-112/#logpoint)
+* [在调试过程中忽略不相关的脚本](/zh/blog/new-in-devtools-112/#ignore-list)
+* [JavaScript Profiler 开始弃用](/zh/blog/new-in-devtools-112/#js-profiler-deprecation)
+* [模拟降低对比度](/zh/blog/new-in-devtools-112/#reduced-contrast)
 * [Lighthouse 10](/zh/blog/new-in-devtools-112/#lighthouse)
-* [Miscellaneous highlights](/zh/blog/new-in-devtools-112/#misc)
+* [其他的更新](/zh/blog/new-in-devtools-112/#misc)
  #}
 
 ### Chrome 111 {: #chrome111 }
