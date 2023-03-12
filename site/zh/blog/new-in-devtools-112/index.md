@@ -36,7 +36,7 @@ tags:
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/CAQFVtHyds7ByB0YMZht.png", alt="自定义重播界面。", width="800", height="563" %}
 
 <!-- To customize the **Recorder** to your needs and integrate it with your tools, consider developing your own extension: explore the [chrome.devtools.recorder API](/docs/extensions/reference/devtools_recorder/) and check out more [extension examples](https://github.com/puppeteer/replay/tree/main/examples/). -->
-要根据您的需要自定义 **记录器** 并将其与您的工具集成，请考虑开发您自己的扩展：探索 [chrome.devtools.recorder API](/docs/extensions/reference/devtools_recorder/) 并查看更多 [ 扩展示例](https://github.com/puppeteer/replay/tree/main/examples/)。
+要根据您的需要自定义 **记录器** 并将其与您的工具集成，请考虑开发您自己的扩展：探索 [chrome.devtools.recorder API](/docs/extensions/reference/devtools_recorder/) 并查看更多 [扩展示例](https://github.com/puppeteer/replay/tree/main/examples/)。
 
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/c2102177581f1c74d38502f469d99b20c1835b1c #}
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/e304e064dbead1d684b5c61f4fb308b101b4a66b #}
@@ -46,7 +46,7 @@ Chromium 议题: [1400243](https://crbug.com/1400243).
 <!-- ### Record with pierce selectors {: #pierce-selectors } -->
 ### 使用 pierce 选择器记录 {: #pierce-selectors }
 <!-- In addition to [custom, CSS, ARIA, text, and XPath selectors](/docs/devtools/recorder/reference/#selector), you can now record using [pierce selectors](https://pptr.dev/guides/query-selectors#pierce-selectors-pierce). These selectors behave like CSS ones but can also pierce through shadow roots. -->
-除了 [ custom， CSS， ARIA， text 和 XPath 选择器](/docs/devtools/recorder/reference/#selector)，您现在还可以使用 [pierce 选择器](https://pptr.dev/guides/query-selectors#pierce-selectors-pierce)。 这些选择器的行为类似于 CSS 选择器，但也可以穿透影子根。
+除了 [custom， CSS， ARIA， text 和 XPath 选择器](/docs/devtools/recorder/reference/#selector)，您现在还可以使用 [pierce 选择器](https://pptr.dev/guides/query-selectors#pierce-selectors-pierce)。 这些选择器的行为类似于 CSS 选择器，但也可以穿透影子根。
 <!-- Start a new recording on a page with [shadow DOM](https://web.dev/shadowdom-v1/) and check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Pierce** in **Selector types to record**. Record your interaction with elements in the shadow DOM and inspect the corresponding step. -->
 在页面上开始一个新的记录 [shadow DOM](https://web.dev/shadowdom-v1/) 并检查 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="复选框.", width="22", height="22" %} **Pierce** 在 **Selector types to record**. 记录您与子 DOM 中元素的交互并检查相应的步骤。
 
@@ -220,7 +220,7 @@ Chromium 议题: [1412719](https://crbug.com/1412719), [1412721](https://crbug.c
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/mYuX9d2TFaJuWBOYGN5R.png", alt="禁用旧版导航。", width="800", height="548" %}
 
 <!-- Lighthouse 10 now uses Moto G Power as the [default emulation device](https://github.com/GoogleChrome/lighthouse/pull/14674). DevTools added this device to {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Devices**](/docs/devtools/settings/devices/). -->
-Lighthouse 10 现在使用 Moto G Power 作为[默认仿真设备](https://github.com/GoogleChrome/lighthouse/pull/14674)。 DevTools 将此设备添加到 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="设置。", width="24", height="24" %} [**Settings** > **Devices **](/docs/devtools/settings/devices/)。
+Lighthouse 10 现在使用 Moto G Power 作为[默认仿真设备](https://github.com/GoogleChrome/lighthouse/pull/14674)。 DevTools 将此设备添加到 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="设置。", width="24", height="24" %} [**Settings** > **Devices**](/docs/devtools/settings/devices/)。
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/GpqmLAiuNasdRsfisVS7.png", alt="设备列表中的 Moto G Power。", width="800", height="488" %}
 
