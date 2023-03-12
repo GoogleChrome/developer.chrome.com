@@ -108,21 +108,21 @@ Chromium 议题 : [1073895](https://crbug.com/1073895), [1395782](https://crbug.
 Chromium 议题: [1407586](https://crbug.com/1407586), [1402891](https://crbug.com/1402891), [1402893](https://crbug.com/1402893)
 
 <!-- ## Customizable Recorder shortcuts {: #recorder } -->
-## 可自定义的录音机快捷方式 {: #recorder }
+## 可自定义的记录器快捷方式 {: #recorder }
 
 <!-- Use keyboard shortcuts to record and replay user flows quicker. -->
 使用键盘快捷键可以更快地记录和重播用户流程。
 
 <!-- The **Recorder** introduces a few convenient keyboard shortcuts for faster recording and replaying of user flows.  -->
-**录音机** 引入了一些方便的键盘快捷键，可以更快地录制和重播用户流程。
+**记录器** 引入了一些方便的键盘快捷键，可以更快地录制和重播用户流程。
 
 <!-- Don’t remember the shortcuts? No problem, click the `?` button to view all the shortcuts at any time. -->
 不记得快捷方式？ 没问题，点击 `?` 按钮可以随时查看所有的快捷方式。
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/BJq63X8k89HTdINY2RKu.png", alt="录音机快捷方式。", width="800", height="625" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/BJq63X8k89HTdINY2RKu.png", alt="记录器快捷方式。", width="800", height="625" %}
 
 <!-- You can even customize these shortcuts via the **Settings** menu. -->
 您甚至可以通过**设置**菜单自定义这些快捷方式。
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/FtZSO1pPSooAbBrPTGC6.png", alt="自定义录音机快捷方式。", width="800", height="494" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/FtZSO1pPSooAbBrPTGC6.png", alt="自定义记录器快捷方式。", width="800", height="494" %}
 
 <!-- If you're working in a different panel and want to start a user flow recording, use the **Create a new recording** command from the [Command Menu](/docs/devtools/command-menu/) in DevTools to get started. -->
 当您在不同的面板中，并想要开始用户流记录，请使用 DevTools [命令菜单](/docs/devtools/command-menu/) 中的**创建新记录**命令来进行开始录制。
