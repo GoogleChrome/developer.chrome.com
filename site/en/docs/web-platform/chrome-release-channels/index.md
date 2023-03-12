@@ -97,7 +97,7 @@ these major numbers referred to as _milestones_: for example, M101 or M102.
 If you're curious about the version you're using, take a look at the `chrome://version` page. You
 can observe how the [version number](https://www.chromium.org/developers/version-numbers/) changes
 over time for each channel. You can check the latest versions for each Chrome release channel and
-platform at [omahaproxy.appspot.com](https://omahaproxy.appspot.com/). This site also provides tools
+platform at [chromiumdash.appspot.com/releases](https://chromiumdash.appspot.com/releases). This site also provides tools
 to view code differences between versions.
  
 {% Aside %}
@@ -244,6 +244,6 @@ different Chrome OS channel](support.google.com/chromebook/answer/1086915).
 - [Understand Chrome version numbers](https://www.chromium.org/developers/version-numbers/)
 - [View the Chrome release blog](http://chromereleases.googleblog.com)
 - Find the latest versions for each Chrome release channel and platform, and access tools for
-    viewing the difference between versions: [omahaproxy.appspot.com](https://omahaproxy.appspot.com/)
+    viewing the difference between versions: [chromiumdash.appspot.com](https://chromiumdash.appspot.com/)
 - [Report bugs](https://www.chromium.org/getting-involved/dev-channel/#reporting-dev-channel-and-canary-build-problems)
 - [Manage Chrome release channels for enterprise and education](support.google.com/chrome/a/answer/9027636)
