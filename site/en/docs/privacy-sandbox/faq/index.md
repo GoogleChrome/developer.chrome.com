@@ -9,10 +9,10 @@ authors:
   - samdutton
 ---
 
-Here you'll find general questions about the Privacy Sandbox that are not covered in any single topic.
+If you have questions about any parts of the Privacy Sandbox, please see the relevant sections of the documentation.
 
-Contributions are welcome. If you have a Privacy Sandbox question that's not
-answered here:
+Your questions are welcome. If you have a Privacy Sandbox question that are not
+answered anywhere, you can:
 
 -  File an issue on the explainer repo for the proposal you're asking about.
    Links to these are provided below, and are available from the
@@ -23,6 +23,3 @@ answered here:
 -  If you'd prefer, you can
    [file a feature request](https://github.com/GoogleChrome/developer.chrome.com/issues/new?assignees=&labels=feature+request%2CP2&template=feature_request.md&title=)
    on the repo for this site.
-
-## General questions
-
