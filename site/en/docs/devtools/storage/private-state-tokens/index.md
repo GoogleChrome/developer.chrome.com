@@ -26,6 +26,12 @@ Private State Tokens enable a website to convey a limited amount of information 
 (for example, across sites) to help combat fraud, without passive tracking.
 
 
+
 ## View Private State Token data
 
 1. [Open DevTools](/docs/devtools/open/) > **Application** > **Storage**.
+
+## Delete Private State Tokens
+
+1. [Open DevTools](/docs/devtools/open/) > **Application** > **Storage**.
+
