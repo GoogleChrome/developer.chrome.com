@@ -77,7 +77,7 @@ Chromium 议题: [1411188](https://crbug.com/1411188).
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/vwgXoxR0FyArbCHvdvEY.png", alt="在导出下拉菜单中的 Get extensions 选项。", width="800", height="649" %}
 
 <!-- Feel free to [add your own extension](https://github.com/GoogleChrome/developer.chrome.com/edit/main/site/en/docs/devtools/recorder/extensions/index.md) to the list of [Recorder Extensions](/docs/devtools/recorder/extensions/). We look forward to seeing yours on the list! -->
-随意[添加您自己的扩展](https://github.com/GoogleChrome/developer.chrome.com/edit/main/site/en/docs/devtools/recorder/extensions/index.md) 到列表 [记录器扩展](/docs/devtools/recorder/extensions/). 我们期待在名单上看到您的扩展！
+如果您有开发[记录器扩展]，欢迎添加(https://github.com/GoogleChrome/developer.chrome.com/edit/main/site/en/docs/devtools/recorder/extensions/index.md) 到我们的 [记录器扩展列表](/docs/devtools/recorder/extensions/). 我们期待在名单上看到您的扩展！
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/21e3d3275c47df8b79c72d1a3e8f9d26cc11fc04 #}
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/b6d02827539eb54869cbb75d3705782bfd2c95ae #}
 
