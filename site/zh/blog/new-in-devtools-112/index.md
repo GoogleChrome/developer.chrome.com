@@ -202,7 +202,7 @@ Chromium 议题: [1417647](https://crbug.com/1417647).
 请注意，列表选项已更新以告诉您选项代表的颜色不敏感度。
 
 <!-- With DevTools, you can find and fix all contrast issues at once. For more information, see [Make your website more readable](/docs/devtools/accessibility/contrast/). -->
-使用 DevTools，您可以一次找到并修复所有对比度问题。 有关详细信息，请参阅 [使您的网站更具可读性](/docs/devtools/accessibility/contrast/)。
+使用 DevTools，您可以一次找到并修复所有对比度问题。 有关详细信息，请参阅 [如何提升您的网站更具可读性](/docs/devtools/accessibility/contrast/)。
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/0eaaa173c9e2cd357c99f7a275fe1819b86f0b9a #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/768af28f8cf64e10d23b10556b59dc0770cc14b6  #}
