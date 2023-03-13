@@ -61,7 +61,7 @@ Chromium 议题: [1411188](https://crbug.com/1411188).
 <!-- The **Recorder** introduces a new export option: **Puppeteer (including Lighthouse analysis)**. With [Puppeteer](/docs/puppeteer/), you can automate and control Chrome. With [Lighthouse](/docs/lighthouse/), you can capture and improve your website's performance. -->
 **Recorder** 引入了一个新的导出选项：**Puppeteer (including Lighthouse analysis)**。 使用 [Puppeteer](/docs/puppeteer/)，您可以自动化和控制 Chrome。 使用 [Lighthouse](/docs/lighthouse/)，您可以捕捉并提高网站的性能。
 <!-- Open your recording, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4dU9UXvsinS4zbgjd8rK.svg", alt="Export.", width="20", height="20" %} **Export**, select the new option, and save the `.js` file. -->
-打开你的录影, 点击 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4dU9UXvsinS4zbgjd8rK.svg", alt="Export.", width="20", height="20" %} **Export**, 选择新选项 ，并保存 `.js` 文件。
+打开你的录影, 点击 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4dU9UXvsinS4zbgjd8rK.svg", alt="Export.", width="20", height="20" %} **导出**, 选择新选项 ，并保存 `.js` 文件。
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ko6OD4tgGwUxqCJScYr9.png", alt="导出 Puppeteer (including Lighthouse analysis).", width="800", height="584" %}
 
 <!-- [Run the Puppeteer script](/docs/puppeteer/get-started/) to get a Lighthouse report in a `flow.report.html` file. -->
