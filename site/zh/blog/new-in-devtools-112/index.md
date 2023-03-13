@@ -123,7 +123,7 @@ Chromium 议题: [1172985](https://crbug.com/1172985).
 <!-- ## Marking logpoints and conditional breakpoints in the Console {: #logpoint } -->
 ## 在控制台中标记日志点和条件断点 {: #logpoint }
 <!-- Further improving the [enhanced breakpoint UX](/blog/new-in-devtools-111/#breakpoint-redesign), the **Console** now marks messages triggered by breakpoints: -->
-进一步改进 [enhanced breakpoint UX](/blog/new-in-devtools-111/#breakpoint-redesign)，**控制台**现在标记由断点触发的消息：
+DevTools 进一步改进 [调试控制台中标记日志点和条件断点的用户体验](/blog/new-in-devtools-111/#breakpoint-redesign)。**控制台**现在标记由断点触发的消息：
 <!-- - `console.*` calls in [conditional breakpoints](/docs/devtools/javascript/breakpoints/#conditional-loc) with an orange question mark `?` -->
 - `console.*` 在 [conditional breakpoints](/docs/devtools/javascript/breakpoints/#conditional-loc) 中调用带有橙色问号 `?`
 <!-- - [Logpoint](/docs/devtools/javascript/breakpoints/#log-loc) messages with pink two dots `..` -->
