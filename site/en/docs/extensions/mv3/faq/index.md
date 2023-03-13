@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Frequently asked questions"
 seoTitle: "Chrome Extensions: Frequently asked questions"
 date: 2014-02-28
-updated: 2020-11-20
+updated: 2023-03-13
 description: Frequently asked questions about Chrome Extensions.
 ---
 
@@ -49,32 +49,8 @@ with a web service or pull new content from the web.
 ### How do I determine which version of Chrome is deployed to which channel? {: #faq-dev-14 }
 
 To determine which version of Chrome is currently available on each of the different platforms,
-visit [omahaproxy.appspot.com][34]. On that site you will see data in a format similar to:
-
-```text
-cf,dev,#.#.###.#,#.#.###.#,mm/dd/yy,mm/dd/yy,#####,#####,#####
-cf,beta,#.#.###.#,#.#.###.#,mm/dd/yy,mm/dd/yy,#####,#####,#####
-cf,stable,#.#.###.#,#.#.###.#,mm/dd/yy,mm/dd/yy,#####,#####,#####
-linux,dev,#.#.###.#,#.#.###.#,mm/dd/yy,mm/dd/yy,#####,#####,#####
-linux,beta,#.#.###.#,#.#.###.#,mm/dd/yy,mm/dd/yy,#####,#####,#####
-linux,stable,#.#.###.#,#.#.###.#,mm/dd/yy,mm/dd/yy,#####,#####,#####
-mac,dev,#.#.###.#,#.#.###.#,mm/dd/yy,mm/dd/yy,#####,#####,#####
-mac,beta,#.#.###.#,#.#.###.#,mm/dd/yy,mm/dd/yy,#####,#####,#####
-mac,stable,#.#.###.#,#.#.###.#,mm/dd/yy,mm/dd/yy,#####,#####,#####
-win,canary,#.#.###.#,#.#.###.#,mm/dd/yy,mm/dd/yy,#####,#####,#####
-win,dev,#.#.###.#,#.#.###.#,mm/dd/yy,mm/dd/yy,#####,#####,#####
-win,beta,#.#.###.#,#.#.###.#,mm/dd/yy,mm/dd/yy,#####,#####,#####
-win,stable,#.#.###.#,#.#.###.#,mm/dd/yy,mm/dd/yy,#####,#####,#####
-cros,dev,#.#.###.#,#.#.###.#,mm/dd/yy,mm/dd/yy,#####,#####,#####
-cros,beta,#.#.###.#,#.#.###.#,mm/dd/yy,mm/dd/yy,#####,#####,#####
-```
-
-Each line represents information about a different platform and channel combination. The listed
-platforms are `cf` (Google Chrome Frame), `linux`, `mac`, `win`, and `cros` (Google ChromeOS). The
-listed channels are `canary`, `dev`, `beta`, and `stable`. The two four-part numbers after the
-channel represent the current and previous versions of Chrome deployed to that platform-channel
-combination. The rest of the information is metadata about when the releases were first pushed, as
-well as revision numbers associated with each build.
+visit [chromiumdash.appspot.com][34]. On that site you can cycle through each platform with the
+dropdown menu. For programmatic access to Chrome version history use the [VersionHistory API][63].
 
 ## Capabilities {: #capabilities2 }
 
@@ -305,7 +281,7 @@ The steps you should follow to ensure this are:
 [31]: #faq-fea-02
 [32]: /docs/extensions/mv3/getstarted
 [33]: https://developer.mozilla.org/docs/Web/API
-[34]: https://omahaproxy.appspot.com
+[34]: https://chromiumdash.appspot.com/releases
 [35]: /docs/extensions/mv3/xhr
 [36]: https://json.org/js.html
 [37]: https://dev.w3.org/html5/webstorage/
@@ -338,3 +314,4 @@ The steps you should follow to ensure this are:
 [62]: https://groups.google.com/a/chromium.org/group/chromium-extensions/topics
 [stringify]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
 [parse]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
+[63]: /docs/versionhistory/guide
