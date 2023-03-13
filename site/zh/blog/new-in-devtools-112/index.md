@@ -36,7 +36,7 @@ tags:
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/CAQFVtHyds7ByB0YMZht.png", alt="自定义重播界面。", width="800", height="563" %}
 
 <!-- To customize the **Recorder** to your needs and integrate it with your tools, consider developing your own extension: explore the [chrome.devtools.recorder API](/docs/extensions/reference/devtools_recorder/) and check out more [extension examples](https://github.com/puppeteer/replay/tree/main/examples/). -->
-要根据您的需要自定义 **记录器** 并将其与您的工具集成，请考虑开发您自己的扩展：探索 [chrome.devtools.recorder API](/docs/extensions/reference/devtools_recorder/) 并查看更多 [扩展示例](https://github.com/puppeteer/replay/tree/main/examples/)。
+您可以开发自家的扩展，根据您的需要自定义 **记录器** 并将其与您的工具集成：搜索 [chrome.devtools.recorder API](/docs/extensions/reference/devtools_recorder/) 并查看更多 [扩展示例](https://github.com/puppeteer/replay/tree/main/examples/)。
 
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/c2102177581f1c74d38502f469d99b20c1835b1c #}
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/e304e064dbead1d684b5c61f4fb308b101b4a66b #}
