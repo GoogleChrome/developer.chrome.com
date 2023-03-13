@@ -16,7 +16,7 @@
 * [CSS 嵌套支持](/zh/blog/new-in-devtools-112/#nesting)
 * [在控制台中标记日志点和条件断点](/zh/blog/new-in-devtools-112/#logpoint)
 * [在调试过程中忽略不相关的脚本](/zh/blog/new-in-devtools-112/#ignore-list)
-* [JavaScript Profiler 开始弃用](/zh/blog/new-in-devtools-112/#js-profiler-deprecation)
+* [JavaScript 性能剖析器开始弃用](/zh/blog/new-in-devtools-112/#js-profiler-deprecation)
 * [模拟降低对比度](/zh/blog/new-in-devtools-112/#reduced-contrast)
 * [Lighthouse 10](/zh/blog/new-in-devtools-112/#lighthouse)
 * [其他的更新](/zh/blog/new-in-devtools-112/#misc)
