@@ -125,7 +125,7 @@ Chromium 议题: [1172985](https://crbug.com/1172985).
 <!-- Further improving the [enhanced breakpoint UX](/blog/new-in-devtools-111/#breakpoint-redesign), the **Console** now marks messages triggered by breakpoints: -->
 DevTools 进一步改进 [调试控制台中标记日志点和条件断点的用户体验](/blog/new-in-devtools-111/#breakpoint-redesign)。**控制台**现在标记由断点触发的消息：
 <!-- - `console.*` calls in [conditional breakpoints](/docs/devtools/javascript/breakpoints/#conditional-loc) with an orange question mark `?` -->
-- `console.*` 在 [conditional breakpoints](/docs/devtools/javascript/breakpoints/#conditional-loc) 中调用带有橙色问号 `?`
+- `console.*` 在 [条件断点](/docs/devtools/javascript/breakpoints/#conditional-loc) 中调用带有橙色问号 `?`
 <!-- - [Logpoint](/docs/devtools/javascript/breakpoints/#log-loc) messages with pink two dots `..` -->
 - [Logpoint](/docs/devtools/javascript/breakpoints/#log-loc)  的消息带有两个粉红色点 `..`
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/5udIX9W4LFcDb3H6DuDp.png", alt="控制台显示由断点触发的消息的更改：带有图标和正确的源链接。", width="800", height="566" %}
