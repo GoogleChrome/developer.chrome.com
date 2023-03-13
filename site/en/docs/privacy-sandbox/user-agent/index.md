@@ -146,7 +146,7 @@ for more information.
 ### How can I detect tablet devices with the UA-CH API?
 
 As the line between mobile, tablet, and desktop devices continues to become
-less distinct and dynamic form-factors are more common (folding screens,
+less distinct and dynamic form factors are more common (folding screens,
 switching between laptop and tablet mode), it's advisable to use responsive
 design and feature detection to present an appropriate user interface.
 

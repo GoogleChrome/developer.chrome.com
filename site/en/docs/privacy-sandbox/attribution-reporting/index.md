@@ -35,9 +35,7 @@ If you're unfamiliar with some of these terms, consult the
 Keep track of the [API changes](/docs/privacy-sandbox/attribution-reporting-updates/).
 
 {% Aside 'note' %}
-Attribution Reporting is the new name for the Event Conversion Measurement API. [The name was changed](/docs/privacy-sandbox/attribution-reporting-introduction/),
-as the original event-level scope expanded to cover additional measurement use
-cases.
+Attribution Reporting is the new name for the Event Conversion Measurement API. [The name was changed](/docs/privacy-sandbox/attribution-reporting-introduction/), as the original event-level scope expanded to cover additional measurement use cases.
 {% endAside %}
 
 Learn why we plan to

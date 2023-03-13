@@ -886,7 +886,7 @@ Policy](/docs/privacy-sandbox/permissions-policy/).
 
 *  **GitHub**: Read the
    [proposal](https://github.com/fedidcg/FedCM/blob/main/explainer.md), [raise
-   issues and follow discussion](https://github.com/fedidcg/s).
+   issues and follow discussion](https://github.com/fedidcg/FedCM/issues).
 *  **Developer support**: Ask questions and join discussions on the [Privacy
    Sandbox Developer Support
    repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).

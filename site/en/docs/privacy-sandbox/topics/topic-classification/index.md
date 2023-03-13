@@ -220,9 +220,7 @@ The list of topics returned will be empty if:
 
 The explainer [provides more detail about privacy goals](https://github.com/jkarlin/topics#meeting-the-privacy-goals) and how the API seeks to address them.
 
-You can opt out of topic calculation for specific pages on your site by including the `Permissions-Policy: browsing-topics=()` [Permissions-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy) header on a page to prevent topics calculation for all users on that page only. Subsequent visits to other pages on your site will
-not be affected. If you set a policy to block the Topics API on one page, this won't
-affect other pages.
+You can opt out of topic calculation for specific pages on your site by including the `Permissions-Policy: browsing-topics=()` [Permissions-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy) header on a page to prevent topics calculation for all users on that page only. Subsequent visits to other pages on your site will not be affected. If you set a policy to block the Topics API on one page, this won't affect other pages.
 
 You can also control which third parties have access to topics on your page by using the Permission Policy header to control third-party access to the Topics API.
 
@@ -241,12 +239,9 @@ the community is actively developing an integration with the Topics API via a ne
 However, as of November 2022, the Topics Module has not yet been completed. To stay abreast with the 
 development, we recommend the following:
 
-- Follow [Prebid PR #8947: Topics module: Initial Topics iframe implementation](https://github.com/prebid/Prebid.js/pull/8947) 
-which is the PR to create the Prebid Topics Module
-- Follow [Prebid Issue #8741: Enhancements to Topics module](https://github.com/prebid/Prebid.js/pull/8741) 
-which has an active discussion on the Prebid Topics module's intended workflow.
-- If this is a high dependency, reach out to Prebid.js to check in on status updates and timelines, 
-through whatever standard channel they offer.
+- Follow [Prebid PR #8947: Topics module: Initial Topics iframe implementation](https://github.com/prebid/Prebid.js/pull/8947), which is the PR to create the Prebid Topics Module.
+- Follow [Prebid Issue #8741: Enhancements to Topics module](https://github.com/prebid/Prebid.js/pull/8741), which has an active discussion on the Prebid Topics module's intended workflow.
+- If this is a high dependency, reach out to Prebid.js to check in on status updates and timelines, through whatever standard channel they offer.
 
 
 ## Next steps
