@@ -18,11 +18,11 @@ data. The [Private State Token API](https://wicg.github.io/trust-token-api/) was
 Private State Tokens enable a website to convey a limited amount of information from one browsing context to another
 (for example, across sites) to help combat fraud, without passive tracking. From the proposal [**explainer**](https://github.com/WICG/trust-token-api#overview):
 
-<blockquote>
+{% Blockquote 'WICG', 'pullquote' %}
 <p>These
 tokens are non-personalized and cannot be used to track users, but are
 cryptographically signed so they cannot be forged.</p>
-</blockquote>
+{% endBlockquote %}
 
 ## View Private State Token data
 
