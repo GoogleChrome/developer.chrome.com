@@ -8,7 +8,7 @@ description: >
    Run unified experiments across Attribution Reporting, FLEDGE,
    Topics, Fenced Frames, and Shared Storage.
 date: 2022-09-08
-updated: 2022-11-04
+updated: 2023-03-13
 authors:
   - anusmitaray
   - kevinkiklee
@@ -33,9 +33,13 @@ your configuration, and provides further resources for testing against the APIs.
 
 ### March 2023
 
+#### Timeline update
+
+We initially communicated that we will begin the isolated experiments on Monday, March 13, 2023, but the new experiments will now begin on Thursday, March 16, 2023 due to the additional time needed for setting up the experiments. The 1% FLEDGE ramp back up from 4% to 5% will also occur on Thursday, March 16, 2023.
+
 #### FLEDGE 1% ramp back up
 
-Last month, we [temporarily reduced FLEDGE origin trial traffic](/docs/privacy-sandbox/unified-origin-trial/#january-2023) from 5% to 4% of Chrome stable for testing. The initial testing has concluded, and we plan to ramp FLEDGE back up to 5% from 4% for the unified experiment on Monday, March 13, 2023.
+Last month, we [temporarily reduced FLEDGE origin trial traffic](/docs/privacy-sandbox/unified-origin-trial/#january-2023) from 5% to 4% of Chrome stable for testing. The initial testing has concluded, and we plan to ramp FLEDGE back up to 5% from 4% for the unified experiment on Thursday, March 16, 2023.
 
 The ramped-up users will be the same set of users that were ramped down. However, their previous interest groups have expired, since more than 30 days have passed since the ramp-down. 
 
@@ -76,7 +80,7 @@ To improve our testing process and continue observing the metrics of origin tria
   </tr>
 </table>
 
-Starting Monday, March 13, you will begin to receive an additional 1% of the Chrome Stable traffic for the APIs listed above, on top of the 5% traffic you are receiving from the existing unified experiment. New users will be allocated to each experiment.
+Starting Thursday, March 16, you will begin to receive an additional 1% of the Chrome Stable traffic for the APIs listed above, on top of the 5% traffic you are receiving from the existing unified experiment. New users will be allocated to each experiment.
 
 #### Traffic allocation
 
@@ -121,7 +125,7 @@ The current unified origin trials traffic allocation as of Tuesday, February 28,
   </tr>
 </table>
 
-The traffic allocation will look like the following starting on Monday, March 13, after FLEDGE is ramped back up, and the new isolated experiments begin:
+The traffic allocation will look like the following starting on Thursday, March 16, after FLEDGE is ramped back up, and the new isolated experiments begin:
 
 <table>
   <tr>
@@ -137,7 +141,7 @@ The traffic allocation will look like the following starting on Monday, March 13
    </td>
    <td style="border-left: 1px solid var(--color-hairline);border-right: 1px solid var(--color-hairline);">Unified - 5%
    </td>
-   <td rowspan="2">6% of the Stable traffic starting from March 13, 2023
+   <td rowspan="2">6% of the Stable traffic starting from March 16, 2023
    </td>
   </tr>
   <tr>
@@ -149,7 +153,7 @@ The traffic allocation will look like the following starting on Monday, March 13
    </td>
    <td style="border-left: 1px solid var(--color-hairline);border-right: 1px solid var(--color-hairline);">Unified - 5%
    </td>
-   <td rowspan="3">7% of the Stable traffic starting from March 13, 2023
+   <td rowspan="3">7% of the Stable traffic starting from March 16, 2023
    </td>
   </tr>
   <tr>
@@ -165,7 +169,7 @@ The traffic allocation will look like the following starting on Monday, March 13
    </td>
    <td style="border-left: 1px solid var(--color-hairline);border-right: 1px solid var(--color-hairline);">Unified - 5% (4% current allocation + 1% ramp back up)
    </td>
-   <td rowspan="2">6% of the Stable traffic starting from March 13, 2023
+   <td rowspan="2">6% of the Stable traffic starting from March 16, 2023
    </td>
   </tr>
   <tr>
@@ -177,7 +181,7 @@ The traffic allocation will look like the following starting on Monday, March 13
    </td>
    <td style="border-left: 1px solid var(--color-hairline);border-right: 1px solid var(--color-hairline);">Unified - 5%
    </td>
-   <td rowspan="2">6% of the Stable traffic starting from March 13, 2023
+   <td rowspan="2">6% of the Stable traffic starting from March 16, 2023
    </td>
   </tr>
   <tr>
@@ -189,7 +193,7 @@ The traffic allocation will look like the following starting on Monday, March 13
    </td>
    <td style="border-left: 1px solid var(--color-hairline);border-right: 1px solid var(--color-hairline);">Unified - 5%
    </td>
-   <td rowspan="2">6% of the Stable traffic starting from March 13, 2023
+   <td rowspan="2">6% of the Stable traffic starting from March 16, 2023
    </td>
   </tr>
   <tr>
