@@ -112,7 +112,7 @@ Chromium 议题: [1401107](https://crbug.com/1401107).
 <!-- ### CSS nesting support {: #nesting } -->
 ### CSS 嵌套支持 {: #nesting }
 <!-- The **Elements** > **Styles** pane now recognizes [CSS Nesting](/articles/css-nesting/) syntax and applies nested styles to the right elements. -->
-**元素** > **样式** 窗格现在可以识别 [CSS 嵌套](/articles/css-nesting/) 语法并将嵌套样式应用于正确的元素。
+**元素** > **样式** 边栏现在可以识别 [CSS 嵌套](/articles/css-nesting/) 语法并将嵌套样式应用于正确的元素。
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/Wog2uOaJTV84OtXcHpYH.mp4", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
 
