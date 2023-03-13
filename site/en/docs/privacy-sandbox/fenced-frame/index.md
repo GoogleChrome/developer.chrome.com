@@ -146,6 +146,7 @@ The characteristics of fenced frames are further detailed in the
 
 Now that you know what fenced frames will and won't do, it's useful to compare
 to existing iframe features.
+<!--
 
 | Feature | `<iframe>` | `<fencedframe>` |
 | ----------- | ----------- | ----------- |
@@ -156,6 +157,7 @@ to existing iframe features.
 | URLs (`http://example.com`) | Yes | Yes ([mode-dependent](https://github.com/WICG/fenced-frame/blob/master/explainer/modes.md)) |
 | Browser-managed opaque source (`urn:uuid`) | No | Yes |
 | Access to cross-site data | No | Yes (mode-dependent) |
+-->
 
 <table class="with-heading-tint">
      <thead>
