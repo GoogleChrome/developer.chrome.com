@@ -194,7 +194,7 @@ Chromium 议题: [1417647](https://crbug.com/1417647).
 ## 模拟降低对比度 {: #reduced-contrast }
 
 <!-- The [**Rendering**](/docs/devtools/rendering/#open-rendering) tab adds a new option to the [Emulate vision deficiencies](/docs/devtools/rendering/apply-effects/#emulate-vision-deficiencies) list—**Reduced contrast**. With this option, you can discover how your website looks to people with reduced contrast sensitivity. -->
-[**Rendering**](/docs/devtools/rendering/#open-rendering) 选项卡为 [Emulate vision deficiencies](/docs/devtools/rendering/apply-effects/#emulate-vision-deficiencies）列表—**对比度降低**。 使用此选项，您可以了解您的网站对对比敏感度较低的人的看法。
+[**渲染**](/docs/devtools/rendering/#open-rendering) 选项卡为[模拟视觉缺陷](/docs/devtools/rendering/apply-effects/#emulate-vision-deficiencies）列表—**对比度降低**。 使用此选项体验您网站是否对比敏感度较低的人友好呈现。
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7qrlmuO7R47l5mytvoeQ.png", alt="The reduced contrast option on the Rendering > Emulate vision deficiencies.", width="800", height="574" %}
 
