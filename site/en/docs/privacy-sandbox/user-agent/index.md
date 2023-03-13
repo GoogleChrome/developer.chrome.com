@@ -143,6 +143,32 @@ page. Refer to the [Client Hints Reliability
 specification](https://github.com/WICG/client-hints-infrastructure/blob/main/reliability.md)
 for more information.
 
+### How can I detect tablet devices with the UA-CH API?
+
+As the line between mobile, tablet, and desktop devices continues to become
+less distinct and dynamic form-factors are more common (folding screens,
+switching between laptop and tablet mode), it's advisable to use responsive
+design and feature detection to present an appropriate user interface.
+
+However, information provided by the browser for both the User-Agent string
+and User-Agent Client Hints comes from the same source, so the same forms
+of logic should work.
+
+For example, if this pattern is checked on the UA string:
+- Phone pattern: `'Android' + 'Chrome/[.0-9]* Mobile'`
+- Tablet pattern: `'Android' + 'Chrome/[.0-9]* (?!Mobile)'`
+
+The matching default UA-CH headers interface may be checked:
+- Phone pattern: `Sec-CH-UA-Platform: "Android"`, `Sec-CH-UA-Mobile: ?1`
+- Tablet pattern: `Sec-CH-UA-Platform: "Android"`, `Sec-CH-UA-Mobile: ?0`
+
+Or the equivalent JavaScript interface:
+- Phone pattern: `navigator.userAgentData.platform === 'Android' && navigator.userAgentData.mobile === true`
+- Tablet pattern: `navigator.userAgentData.platform === 'Android' && navigator.userAgentData.mobile === false`
+
+For hardware-specific use-cases, the device model name can be requested via
+the high entropy `Sec-CH-UA-Model` hint.
+
 ## How do I prepare for reduced UA? {: #prepare-and-test}
 
 As we get closer to scaled availability of the reduced User-Agent string, [review your site
@@ -254,6 +280,43 @@ features in Chromium. At this time, ALPS is only
 
 If you need to use critical hints, refer to our guide on
 [critical hints reliability and optimization](https://docs.google.com/document/d/1HQd3vosjFls2jp6DwpkNMUN4CBdmmxZJJz0WhhcqOPw/edit?usp=sharing).
+
+## FAQ
+
+### How long will hints specified via the `Accept-CH` header be sent?
+
+Hints specified via the `Accept-CH` header will be sent for the duration of the
+browser session or until a different set of hints are specified.
+
+### Does UA-CH work with HTTP/2 and HTTP/3?
+
+UA-CH works with both HTTP/2 and HTTP/3 connections.
+
+{% Aside 'caution' %}
+Client Hints are only sent over secure connections, so make sure your uses HTTPS.
+{% endAside %}
+
+### Do subdomains (and CNAMEs) require a top-level page `Permissions-Policy` to access high entropy UA-CH?
+
+High-entropy UA-CH on request headers are restricted on cross-origin requests
+regardless of how that origin is defined on the DNS side. Delegation must be
+handled via `Permissions-Policy` for any cross-origin subresource or obtained
+via JavaScript which executes in the cross-origin context.
+
+### How does User-Agent reduction affect bot detection?
+
+Chrome's change to its user-agent string does not directly impact the
+user-agent string that a bot chooses to send.
+
+Bots may choose to update their own strings to reflect the reduced
+information Chrome sends, but that is entirely their implementation
+choice. Chrome is still sending the same user-agent format, and bots
+that append their own identifier to the end of a Chrome user-agent
+string can continue to do so.
+
+For any concerns with specific bots, it may be worth reaching out
+directly to the owners to ask if they have any plans to change their
+user-agent string.
 
 ## Engage and share feedback
 
