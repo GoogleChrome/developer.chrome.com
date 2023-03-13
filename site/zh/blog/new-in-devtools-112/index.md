@@ -172,7 +172,7 @@ Chromium 议题: [1027458](https://crbug.com/1027458).
 Chromium 议题: [883325](https://crbug.com/883325).
 
 <!-- ## JavaScript Profiler deprecation started {: #js-profiler-deprecation } -->
-## JavaScript Profiler 开始弃用 {: #js-profiler-deprecation }
+## JavaScript 性能剖析器开始弃用 {: #js-profiler-deprecation }
 
 <!-- As early as [Chrome 58](/blog/devtools-javascript-cpu-profile-migration-2/), the DevTools team planned to eventually deprecate the **JavaScript Profiler** and have Node.js and Deno developers use the **Performance** panel for profiling JavaScript CPU performance. -->
 早在 [Chrome 58](/blog/devtools-javascript-cpu-profile-migration-2/) 中，DevTools 团队就计划最终弃用 **JavaScript 性能剖析器**，并让 Node.js 和 Deno 开发人员使用**性能**面板，用于分析 JavaScript CPU 性能。
