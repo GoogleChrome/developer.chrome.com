@@ -13,10 +13,8 @@ tags:
 ---
 
 This guide shows you how to use [Chrome DevTools](/docs/devtools/) to inspect [Private State Token](/docs/privacy-sandbox/trust-tokens/)
-data. The [Private State Token API](https://wicg.github.io/trust-token-api/) was previously known as the [Trust Token API](/blog/rename-trust-tokens/).
-
-Private State Tokens enable a website to convey a limited amount of information from one browsing context to another
-(for example, across sites) to help combat fraud, without passive tracking. From the proposal [**explainer**](https://github.com/WICG/trust-token-api#overview):
+data. The [Private State Token API](https://wicg.github.io/trust-token-api/) was previously known as the
+[Trust Token API](/blog/rename-trust-tokens/). From the proposal [**explainer**](https://github.com/WICG/trust-token-api#overview):
 
 <blockquote cite="https://github.com/WICG/trust-token-api/">
   <p>
@@ -26,6 +24,10 @@ Private State Tokens enable a website to convey a limited amount of information 
     The proposal explainer for the Private State Tokens
   </cite>
 </blockquote>
+
+Private State Tokens enable a website to convey a limited amount of information from one browsing context to another
+(for example, across sites) to help combat fraud, without passive tracking.
+
 
 ## View Private State Token data
 
