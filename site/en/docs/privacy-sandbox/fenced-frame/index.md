@@ -163,7 +163,7 @@ to existing iframe features.
      <thead>
     <tr>
       <th>Feature </th>
-      <th><code>iframe</code></th>
+      <th><code><iframe></code></th>
       <th><code>fencedframe</code></th>
     </tr></thead>
     <tr>
@@ -189,7 +189,7 @@ to existing iframe features.
    <tr>
       <td>URLs (<code>http://example.com</code>) </td>
       <td>Yes</td>
-      <td>Yes ([mode-dependent](https://github.com/WICG/fenced-frame/blob/master/explainer/modes.md))</td>
+      <td>Yes (<a href="https://github.com/WICG/fenced-frame/blob/master/explainer/modes.md">mode-dependent</a>)</td>
    </tr>
    <tr>
       <td>Browser-managed opaque source (<code>urn:uuid</code>)</td>
