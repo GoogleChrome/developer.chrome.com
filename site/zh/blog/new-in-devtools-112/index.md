@@ -181,7 +181,7 @@ Chromium 议题: [883325](https://crbug.com/883325).
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/v4S5YWGdBV3nbc3OkGZ3.png", alt="性能剖析器顶部的弃用横幅。", width="800", height="712" %}
 
 <!-- Instead of the **Profiler**, use the [**Performance**](/docs/devtools/performance/reference/#main) panel to profile CPU. -->
-代替 **Profiler**，使用 [**Performance**](/docs/devtools/performance/reference/#main) 面板来分析 CPU。
+使用 [**Performance**](/docs/devtools/performance/reference/#main) 面板来代替 **性能剖析器**分析 CPU。
 
 <!-- Learn more and provide feedback in the corresponding [RFC](https://github.com/ChromeDevTools/rfcs/discussions/2) and [crbug.com/1354548](https://crbug.com/1354548).  -->
 在相应的 [RFC](https://github.com/ChromeDevTools/rfcs/discussions/2) 和 [crbug.com/1354548](https://crbug.com/1354548) 中了解更多信息并提供反馈。
