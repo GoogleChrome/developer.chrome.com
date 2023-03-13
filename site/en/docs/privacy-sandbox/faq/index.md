@@ -251,26 +251,6 @@ user-agent string.
    [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)
    on the Privacy Sandbox developer support repo.
 
-## Fenced frames
 
-### How can I ask a question about this feature?
-
--  For questions about the proposal:
-   [create an issue](https://github.com/shivanigithub/fenced-frame/issues) 
-   on the proposal repo.
--  For implementation, integration, and general best practice questions: 
-   [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)
-   on the Privacy Sandbox developer support repo.
-
-## Network State Partitioning
-
-### How can I ask a question about this feature?
-
--  For questions about the specification:
-   [create an issue](https://github.com/shivanigithub/fenced-frame/issues) 
-   on repo for the explainer.
--  For implementation, integration, and general best practice questions: 
-   [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)
-   on the Privacy Sandbox developer support repo.
 
 
