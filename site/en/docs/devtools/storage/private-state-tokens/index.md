@@ -20,9 +20,6 @@ data. The [Private State Token API](https://wicg.github.io/trust-token-api/) was
   <p>
     These tokens are non-personalized and cannot be used to track users, but are cryptographically signed so they cannot be forged.
   </p>
-  <cite>
-    The proposal explainer for the Private State Tokens
-  </cite>
 </blockquote>
 
 Private State Tokens enable a website to convey a limited amount of information from one browsing context to another
