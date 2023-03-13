@@ -298,13 +298,16 @@ conversion on an advertiser site.
 {% Img
   src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/un70ZcJVrWepdWWsnMIY.png", alt="", width="800", height="1024"
 %}
- <figcaption style="text-align:left;">Summary reports are generated as follows:<br>
+ <figcaption style="text-align:left;">Summary report generation</figcaption>
+</figure>
+
+Summary reports are generated as follows:
+
 *  When the user clicks or sees a specially configured ad, the browser—on the user's local device—records this event, alongside the attribution configuration data that was specified.<br>
 *  Later on, when the user converts, the browser matches this detailed clicks or views event ("attribution source event") with detailed conversion data ("attribution trigger data") defined by an ad tech company, following a specific logic that is defined by the ad tech. The output of this process is an aggregatable report.<br>
 *  Aggregatable reports are encrypted by the browser and sent to the ad tech server. From the ad tech server, the aggregatable reports are sent to the aggregation service to produce a summary report.<br>
 *  Summary reports are then made available to the ad tech. Note that summary reports are not delayed to the same extent as event-level reports.
-</figcaption>
-</figure>
+
 
 {% Details %}
 {% DetailsSummary 'h3' %}
