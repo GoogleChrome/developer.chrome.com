@@ -80,37 +80,6 @@ The exception is cookies that are modified by either the
 These allow for a subset of cross-site use cases. As these proposals are
 under active discussion, the final formats and functionality may change.
 
-### Can a site participate in origin trials but opt-out of using a feature in specific geographic regions?
-
-In short, no, you cannot opt-out of an origin trial for specific regions.
-Origin trials are active on pages which
-[contain the token](/blog/origin-trials/#take-part-in-an-origin-trial),
-included via HTTP headers (server-side) or HTML meta tags
-(client-side). 
-
-If you can determine the user's location, then you could write code which
-opts to include the origin trial token based on that location information.
-For example, you could attempt to use IP addresses to determine a user's
-location. IP addresses can be spoofed, so this is not a guaranteed solution.
-
-However, a geographic-specific origin can set a
-[Permissions Policy](/docs/privacy-sandbox/permissions-policy/)
-to control what features are usable. For example, `us.example.com` and
-`uk.example.com` are geographic-specific origins which can be controlled.
-This does not mean that a region has opted-out of the origin trial.
-
-With a Permissions Policy, a site adds a little snippet of code to their 
-pages that provides instructions to the browser. When the page loads, the browser 
-reads the Permission Policy instructions and will allow or block features (or APIs)
-as outlined in the Permissions Policy. If a site wants to restrict an API in a 
-specific region, the developer could set a policy for all pages requested from that region.
-
-{% Aside 'warning' %}
-Users may choose to visit an origin from a region that's different
-from where they are. In other words, a user in the United States may be
-able to visit `uk.example.com`. Those users would see features and functions
-for the United States site that were blocked for the United Kingdom site.
-{% endAside %}
 
 ## Privacy State Tokens
 
@@ -142,49 +111,6 @@ looking for other tokens.
 
 The publisher must decide which token issuers to check and in what order.
 
-## Topics
-
-### How can I ask a question about this feature?
-
--  For questions about the proposal:
-   [create an issue](https://github.com/jkarlin/topics/issues) on the proposal
-   repo.
--  For questions about the implementation currently available to test in
-   Chrome: [file a Chromium bug](https://bugs.chromium.org/p/chromium/issues/list?q=topics).
--  For implementation, integration, and general best practice questions:
-   [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) 
-   on the Privacy Sandbox developer support repo.
-   
-### Can I opt out of topic calculation for specific pages on my site?
-
-Yes. Include the `Permissions-Policy: browsing-topics=()` header on a page to prevent topics
-calculation for all users on that page only. Subsequent visits to other pages on your site will
-not be affected. If you set a policy to block the Topics API on one page, this does won't
-affect other pages. 
-
-Topics are only inferred from the hostname and not from the URL path.
-
-### Can I control which third parties have access to topics on my page?
-
-Yes. You can use the Permission Policy header to control third-party access to the Topics API on your page.
-Use `self` and any domains you would like to allow access to the API as parameters.
-
-For example, to completely disable use of the Topics API within all browsing contexts except for your own origin and those whose origin is `https://example.com`, set the following HTTP response header: 'Permissions-Policy: geolocation=(self "https://example.com")`
-
-### Can Topics API be used on websites with `prebid.js`?
-
-As noted in the release of [Prebid 7](https://prebid.org/blog/the-release-of-prebid-7-0/), 
-the community is actively developing an integration with the Topics API via a new module. 
-However, as of November 2022, the Topics Module has not yet been completed. To stay abreast with the 
-development, we recommend the following:
-
-- Follow [Prebid PR #8947: Topics module: Initial Topics iframe implementation](https://github.com/prebid/Prebid.js/pull/8947) 
-which is the PR to create the Prebid Topics Module
-- Follow [Prebid Issue #8741: Enhancements to Topics module](https://github.com/prebid/Prebid.js/pull/8741) 
-which has an active discussion on the Prebid Topics module's intended workflow.
-- If this is a high dependency, reach out to Prebid.js to check in on status updates and timelines, 
-through whatever standard channel they offer.
-
 
 ## Attribution Reporting
 
@@ -201,11 +127,6 @@ through whatever standard channel they offer.
    [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) 
    on the Privacy Sandbox developer support repo.
 
-### Is Attribution Reporting the same as the Event Conversion Measurement API?
-
-Yes. [The name was changed](/docs/privacy-sandbox/attribution-reporting-introduction/),
-as the original event-level scope expanded to cover additional measurement use
-cases.
 
 ## First-Party Sets
 

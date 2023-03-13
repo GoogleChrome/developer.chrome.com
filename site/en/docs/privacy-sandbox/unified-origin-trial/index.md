@@ -713,6 +713,34 @@ met your own quota for an experiment or need to address an issue during the
 trial, then not including the token ensures no experimental functionality will
 be available or active in the page.
 
+### Origin trial control by geographic region
+
+You cannot opt-out of an origin trial for specific regions. Origin trials are active on pages that 
+[contain the token](/blog/origin-trials/#take-part-in-an-origin-trial),
+included via HTTP headers (server-side) or HTML meta tags (client-side). 
+
+If you can determine the user's location, then you *could* write code to include the origin trial token based on that location information. For example, you could attempt to use IP addresses to determine a user's
+location. IP addresses can be spoofed, so this is not a guaranteed solution.
+
+However, a geographic-specific origin can set a
+[Permissions Policy](/docs/privacy-sandbox/permissions-policy/)
+to control what features are usable. For example, `us.example.com` and
+`uk.example.com` are geographic-specific origins which can be controlled.
+This does not mean that a region has opted-out of the origin trial.
+
+With a Permissions Policy, a site adds a little snippet of code to their 
+pages that provides instructions to the browser. When the page loads, the browser 
+reads the Permission Policy instructions and will allow or block features (or APIs)
+as outlined in the Permissions Policy. If a site wants to restrict an API in a 
+specific region, the developer could set a policy for all pages requested from that region.
+
+{% Aside 'warning' %}
+Users may choose to visit an origin from a region that's different
+from where they are. In other words, a user in the United States may be
+able to visit `uk.example.com`. Those users would see features and functions
+for the United States site that were blocked for the United Kingdom site.
+{% endAside %}
+
 ## Renew your token
 
 Origin trial tokens expire six weeks from their issue date (or at the end of the
