@@ -177,7 +177,7 @@ Chromium 议题: [883325](https://crbug.com/883325).
 <!-- As early as [Chrome 58](/blog/devtools-javascript-cpu-profile-migration-2/), the DevTools team planned to eventually deprecate the **JavaScript Profiler** and have Node.js and Deno developers use the **Performance** panel for profiling JavaScript CPU performance. -->
 早在 [Chrome 58](/blog/devtools-javascript-cpu-profile-migration-2/) 中，DevTools 团队就计划最终弃用 **JavaScript 性能剖析器**，并让 Node.js 和 Deno 开发人员使用**性能**面板，用于分析 JavaScript CPU 性能。
 <!-- This DevTools version (112) starts the [four-phase **JavaScript Profiler** deprecation](https://github.com/ChromeDevTools/rfcs/discussions/2#discussioncomment-5189668). The **JavaScript Profiler** panel now shows the corresponding warning banner. -->
-此 DevTools 版本 (112) 开始 [四阶段 **JavaScript Profiler** 弃用](https://github.com/ChromeDevTools/rfcs/discussions/2#discussioncomment-5189668)。 **JavaScript Profiler** 面板现在显示相应的警告横幅。
+此 DevTools 版本 (112) 开始 [四阶段 **JavaScript 性能剖析器** 弃用](https://github.com/ChromeDevTools/rfcs/discussions/2#discussioncomment-5189668)。 **JavaScript 性能剖析器** 面板现在显示相应的警告横幅。
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/v4S5YWGdBV3nbc3OkGZ3.png", alt="Profiler 顶部的弃用横幅。", width="800", height="712" %}
 
 <!-- Instead of the **Profiler**, use the [**Performance**](/docs/devtools/performance/reference/#main) panel to profile CPU. -->
