@@ -88,7 +88,7 @@ Chromium 议题: [1417104](https://crbug.com/1417104), [1413168](https://crbug.c
 <!-- ### CSS documentation {: #css } -->
 ### CSS 文档 {: #css }
 <!-- How many times a day do you look up documentation on CSS properties? The **Elements** > **Styles** pane now shows you a short description when you hover over a property. -->
-您一天查看多少次有关 CSS 属性的文档？ 当您将鼠标悬停在某个属性上时，**元素** > **样式** 窗格现在会向您显示简短描述。
+您一天查看多少次有关 CSS 属性的文档？ 当您将鼠标悬停在某个属性上时，**元素** > **样式** 边栏现在会向您显示简短描述。
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/v0joPkQg0NiMauy0bwwB.png", alt="带有 CSS 属性文档的工具提示。", width="800", height="651" %}
 
 <!-- The tooltip also has a **Learn more** link that takes you to an [MDN CSS Reference](https://developer.mozilla.org/docs/Web/CSS/Reference) on this property. -->
