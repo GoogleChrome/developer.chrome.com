@@ -244,7 +244,7 @@ Chromium 议题: [772558](https://crbug.com/772558).
 <!-- - DevTools improved autocompletion: -->
 - DevTools 改进了自动完成：
 <!--   - **Sources**: Consistent completions of any word ([1320204](https://crbug.com/1320204)). -->
-  - **Sources**：任何单词的一致完成 ([1320204](https://crbug.com/1320204))。
+  - **源代码**：任何单词的一致完成 ([1320204](https://crbug.com/1320204))。
 <!--   - **Console**: `Arrow down` selects the first suggestion and suggestions get `Tab` hints ([1276960](https://crbug.com/1276960)). -->
   - **Console**: `Arrow down` 选择第一个建议和 suggestions 得到 `Tab` 提示 ([1276960](https://crbug.com/1276960)).
 <!-- - DevTools added an [event listener breakpoint](/docs/devtools/javascript/breakpoints/#event-listeners) to let you pause when you open a [Document Picture-in-Picture window](https://wicg.github.io/document-picture-in-picture/#dom-documentpictureinpicture-onenter) ([1315352](https://crbug.com/1315352)). -->
