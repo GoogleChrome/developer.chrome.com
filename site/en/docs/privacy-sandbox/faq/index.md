@@ -171,7 +171,7 @@ Use `self` and any domains you would like to allow access to the API as paramete
 
 For example, to completely disable use of the Topics API within all browsing contexts except for your own origin and those whose origin is `https://example.com`, set the following HTTP response header: 'Permissions-Policy: geolocation=(self "https://example.com")`
 
-### Can Topics API be used with on websites with `prebid.js`?
+### Can Topics API be used on websites with `prebid.js`?
 
 As noted in the release of [Prebid 7](https://prebid.org/blog/the-release-of-prebid-7-0/), 
 the community is actively developing an integration with the Topics API via a new module. 
