@@ -43,7 +43,7 @@ The ramped-up users will be the same set of users that were ramped down. However
 
 To improve our testing process and continue observing the metrics of origin trial APIs, we're creating isolated experiments for each API, in addition to the existing unified experiment. New experiments will be created for Attribution Reporting, Topics, a combination of FLEDGE and Fenced Frames, and a combination of Shared Storage’s URL Selection operation and Fenced Frames. In each isolated experiment, only the assigned APIs will be available for the users in that group.
 
-<table>
+<table class="with-heading-tint">
   <tr>
    <td><strong>API</strong>
    </td>
@@ -82,7 +82,7 @@ Starting Monday, March 13, you will begin to receive an additional 1% of the Chr
 
 The current unified origin trials traffic allocation as of Tuesday, February 28, is as follows:
 
-<table>
+<table class="with-heading-tint">
   <tr>
    <td><strong>API</strong>
    </td>
@@ -123,7 +123,7 @@ The current unified origin trials traffic allocation as of Tuesday, February 28,
 
 The traffic allocation will look like the following starting on Monday, March 13, after FLEDGE is ramped back up, and the new isolated experiments begin:
 
-<table>
+<table class="with-heading-tint">
   <tr>
    <td><strong>API</strong>
    </td>
@@ -208,7 +208,7 @@ This change will happen automatically, and will not impact your existing origin 
 
 Also, Shared Storage’s URL Selection API origin trial will be increasing to 5% of Chrome Stable traffic from January 26th 2023.
 
-<table>
+<table class="with-heading-tint">
   <tr>
    <th>API</th>
    <th>Notes</th>
@@ -260,7 +260,7 @@ at 1% of Chrome Stable traffic from November 9th. As previously announced in the
 Reporting and Topics are now at 5% with FLEDGE and Fenced Frames also following
 on November 9th.
 
-<table>
+<table class="with-heading-tint">
   <tr>
    <th>API</th>
    <th>Notes</th>
@@ -306,7 +306,7 @@ FLEDGE and Fenced Frames will increase from November 9th. Read more in the
 [Increasing the Privacy Sandbox Relevance and Measurement origin trial to
 5%](/blog/privacy-sandbox-origin-trial-increase/) blog post.
 
-<table>
+<table class="with-heading-tint">
   <tr>
    <th>API</th>
    <th>Notes</th>

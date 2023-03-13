@@ -157,6 +157,51 @@ to existing iframe features.
 | Browser-managed opaque source (`urn:uuid`) | No | Yes |
 | Access to cross-site data | No | Yes (mode-dependent) |
 
+<table class="with-heading-tint">
+     <thead>
+    <tr>
+      <th>Feature </th>
+      <th><code>iframe</code></th>
+      <th><code>fencedframe</code></th>
+    </tr></thead>
+    <tr>
+      <td>Embed content</td>
+      <td>Yes</td>
+      <td>Yes</td>
+   </tr>
+   <tr>
+      <td>Embedded content can access embedding context DOM</td>
+      <td>Yes</td>
+      <td>No</td>
+   </tr>
+   <tr>
+      <td>Embedding context can access embedded content DOM</td>
+      <td>Yes</td>
+      <td>No</td>
+   </tr>
+   <tr>
+      <td>Observable attributes, such as <code>name</code></td>
+      <td>Yes</td>
+      <td>No</td>
+   </tr>
+   <tr>
+      <td>URLs (<code>http://example.com</code>) </td>
+      <td>Yes</td>
+      <td>Yes ([mode-dependent](https://github.com/WICG/fenced-frame/blob/master/explainer/modes.md))</td>
+   </tr>
+   <tr>
+      <td>Browser-managed opaque source (<code>urn:uuid</code>)</td>
+      <td>No</td>
+      <td>Yes</td>
+   </tr>
+   <tr>
+      <td>Access to cross-site data </td>
+      <td>No</td>
+      <td>Yes (mode-dependent)</td>
+   </tr>
+</table>
+  
+
 Fenced frames support fewer external communication options to preserve privacy.
 
 ### Will fenced frames replace iframes?
