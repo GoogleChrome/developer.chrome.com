@@ -6,6 +6,8 @@ description: 'Details of the Manifest V2 phase-out and end of life.'
 layout: 'layouts/doc-post.njk'
 date: 2021-09-23
 updated: 2022-12-13
+tags:
+  - extensions-news
 ---
 
 {% Aside %}
