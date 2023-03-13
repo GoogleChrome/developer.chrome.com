@@ -74,7 +74,7 @@ Chromium 议题: [1411188](https://crbug.com/1411188).
 ### 获取扩展 {: #get-extensions }
 <!-- Explore options to customize your recorder experience, for example, with custom export options. Get extensions for the **Recorder** by clicking the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4dU9UXvsinS4zbgjd8rK.svg", alt="Export.", width="20", height="20" %} **Export** > **Get extensions** in a recording. -->
 探索自定义您的记录器体验的选项，例如，使用自定义导出选项。 在录影里， 通过单击 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4dU9UXvsinS4zbgjd8rK.svg", alt="导出。", width="20", height="20" %} **导出** > **Get extensions** 以获取 **Recorder** 的扩展。
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/vwgXoxR0FyArbCHvdvEY.png", alt="The Get extensions option in the Export drop-down menu.", width="800", height="649" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/vwgXoxR0FyArbCHvdvEY.png", alt="在导出下拉菜单中的 Get extensions 选项。", width="800", height="649" %}
 
 <!-- Feel free to [add your own extension](https://github.com/GoogleChrome/developer.chrome.com/edit/main/site/en/docs/devtools/recorder/extensions/index.md) to the list of [Recorder Extensions](/docs/devtools/recorder/extensions/). We look forward to seeing yours on the list! -->
 随意[添加您自己的扩展](https://github.com/GoogleChrome/developer.chrome.com/edit/main/site/en/docs/devtools/recorder/extensions/index.md) 到列表 [记录器扩展](/docs/devtools/recorder/extensions/). 我们期待在名单上看到您的扩展！
