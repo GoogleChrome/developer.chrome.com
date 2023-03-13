@@ -48,6 +48,8 @@ events:
 blog:
   en: 'Blog'
   ja: 'ブログ'
+developer-guide:
+  en: 'Developer guide'
 measure-ads:
   en: 'Measure ad conversions with Attribution Reporting'
 measure-cross-site:
