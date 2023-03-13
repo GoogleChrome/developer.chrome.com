@@ -150,7 +150,7 @@ Chromium 议题: [1027458](https://crbug.com/1027458).
 ## 在调试过程中忽略不相关的脚本 {: #ignore-list }
 
 <!-- To help you focus on the most important parts of your code, you can now add irrelevant scripts to the **Ignore List** right from the file tree on the **Sources** > **Page** pane. -->
-为了帮助您专注于代码中最重要的部分，您现在可以直接从 **Sources** > **Page** 窗格的文件树中将不相关的脚本添加到 **Ignore List**。
+为了帮助您专注于代码中最重要的部分，您现在可以直接从 **Sources** > **Page** 边栏的文件树中将不相关的脚本添加到 **Ignore List**。
 
 <!-- Right-click any script or folder and select one of the ignore-related options. You may see options to add or remove the script or folder to and from the list. The [Debugger ignores scripts](/docs/devtools/javascript/reference/#show-ignore-listed-frames) added to the list and omits them in the call stack.  -->
 右键单击任何脚本或文件夹，然后选择与忽略相关的选项之一。 您可能会看到用于在列表中添加或删除脚本或文件夹的选项。 [Debugger ignores scripts](/docs/devtools/javascript/reference/#show-ignore-listed-frames) 添加到列表中并在调用堆栈中忽略它们。
