@@ -252,7 +252,7 @@ Chromium 议题: [772558](https://crbug.com/772558).
 <!-- - DevTools set up a workaround that properly displays Vue2 webpack artifacts as JavaScript ([1416562](https://crbug.com/1416562)). -->
 - DevTools 设置了一个解决方法，可以将 Vue2 webpack 工件正确显示为 JavaScript ([1416562](https://crbug.com/1416562))。
 <!-- - A [**Console** setting](/docs/devtools/settings/preferences/#console) gets a better name: Automatically expand console.trace() messages. ([1139616](https://crbug.com/1139616)). -->
-- [**Console** setting](/docs/devtools/settings/preferences/#console) 有一个更好的名字：Automatically expand console.trace() messages。 （[1139616]（https://crbug.com/1139616））。
+- [**控制台**设置](/docs/devtools/settings/preferences/#console) 有一个更好的名字：默认展开 console.trace() 消息。 （[1139616]（https://crbug.com/1139616））。
 
 {% Partial 'devtools/reach-out.md' %}
 {% Partial 'devtools/whats-new.md' %}
