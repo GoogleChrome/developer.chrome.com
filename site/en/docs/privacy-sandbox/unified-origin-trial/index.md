@@ -44,12 +44,15 @@ The ramped-up users will be the same set of users that were ramped down. However
 To improve our testing process and continue observing the metrics of origin trial APIs, we're creating isolated experiments for each API, in addition to the existing unified experiment. New experiments will be created for Attribution Reporting, Topics, a combination of FLEDGE and Fenced Frames, and a combination of Shared Storage’s URL Selection operation and Fenced Frames. In each isolated experiment, only the assigned APIs will be available for the users in that group.
 
 <table class="with-heading-tint">
+    <thead>
   <tr>
-   <td><strong>API</strong>
-   </td>
-   <td><strong>Isolated experiment<br>traffic allocation</strong>
-   </td>
+   <th>API
+   </th>
+   <th>Isolated experiment<br>traffic allocation
+   </th>
   </tr>
+</thead>
+<tbody>
   <tr>
    <td>Attribution Reporting 
    </td>
@@ -73,7 +76,7 @@ To improve our testing process and continue observing the metrics of origin tria
    </td>
    <td>1%
    </td>
-  </tr>
+  </tr></tbody>
 </table>
 
 Starting Monday, March 13, you will begin to receive an additional 1% of the Chrome Stable traffic for the APIs listed above, on top of the 5% traffic you are receiving from the existing unified experiment. New users will be allocated to each experiment.
@@ -83,12 +86,15 @@ Starting Monday, March 13, you will begin to receive an additional 1% of the Chr
 The current unified origin trials traffic allocation as of Tuesday, February 28, is as follows:
 
 <table class="with-heading-tint">
+    <thead>
   <tr>
-   <td><strong>API</strong>
-   </td>
-   <td><strong>Current unified experiment<br>traffic allocation</strong>
-   </td>
+   <th>API
+   </th>
+   <th>Current unified experiment<br>traffic allocation
+   </th>
   </tr>
+</thead>
+<tbody>
   <tr>
    <td>Attribution Reporting 
    </td>
@@ -118,84 +124,87 @@ The current unified origin trials traffic allocation as of Tuesday, February 28,
    </td>
    <td>5%
    </td>
-  </tr>
+  </tr></tbody>
 </table>
 
 The traffic allocation will look like the following starting on Monday, March 13, after FLEDGE is ramped back up, and the new isolated experiments begin:
 
 <table class="with-heading-tint">
+    <thead>
   <tr>
-   <td><strong>API</strong>
-   </td>
-   <td><strong>New traffic allocation</strong>
-   </td>
-   <td><strong>Status</strong>
-   </td>
+   <th>API
+   </th>
+   <th>New traffic allocation
+   </th>
+   <th>Status
+   </th>
   </tr>
+</thead>
+<tbody>
   <tr>
    <td rowspan="2">Attribution Reporting 
    </td>
-   <td style="border-left: 1px solid var(--color-hairline);border-right: 1px solid var(--color-hairline);">Unified - 5%
+   <td>Unified - 5%
    </td>
    <td rowspan="2">6% of the Stable traffic starting from March 13, 2023
    </td>
   </tr>
   <tr>
-   <td style="border-left: 1px solid var(--color-hairline);border-right: 1px solid var(--color-hairline);">Isolated - 1% - ARA only
+   <td>Isolated - 1% - ARA only
    </td>
   </tr>
   <tr>
    <td rowspan="3">Fenced Frames
    </td>
-   <td style="border-left: 1px solid var(--color-hairline);border-right: 1px solid var(--color-hairline);">Unified - 5%
+   <td>Unified - 5%
    </td>
    <td rowspan="3">7% of the Stable traffic starting from March 13, 2023
    </td>
   </tr>
   <tr>
-   <td style="border-left: 1px solid var(--color-hairline);border-right: 1px solid var(--color-hairline);">Isolated - 1% - Shared Storage (URL Selection) + Fenced Frames only
+   <td>Isolated - 1% - Shared Storage (URL Selection) + Fenced Frames only
    </td>
   </tr>
   <tr>
-   <td style="border-left: 1px solid var(--color-hairline);border-right: 1px solid var(--color-hairline);">Isolated - 1% - FLEDGE + Fenced Frames only
+   <td>Isolated - 1% - FLEDGE + Fenced Frames only
    </td>
   </tr>
   <tr>
    <td rowspan="2">FLEDGE 
    </td>
-   <td style="border-left: 1px solid var(--color-hairline);border-right: 1px solid var(--color-hairline);">Unified - 5% (4% current allocation + 1% ramp back up)
+   <td>Unified - 5% (4% current allocation + 1% ramp back up)
    </td>
    <td rowspan="2">6% of the Stable traffic starting from March 13, 2023
    </td>
   </tr>
   <tr>
-   <td style="border-left: 1px solid var(--color-hairline);border-right: 1px solid var(--color-hairline);">Isolated - 1% - FLEDGE + Fenced Frames only
+   <td>Isolated - 1% - FLEDGE + Fenced Frames only
    </td>
   </tr>
   <tr>
    <td rowspan="2">Shared Storage <br>(URL Selection)
    </td>
-   <td style="border-left: 1px solid var(--color-hairline);border-right: 1px solid var(--color-hairline);">Unified - 5%
+   <td>Unified - 5%
    </td>
    <td rowspan="2">6% of the Stable traffic starting from March 13, 2023
    </td>
   </tr>
   <tr>
-   <td style="border-left: 1px solid var(--color-hairline);border-right: 1px solid var(--color-hairline);">Isolated - 1% - Shared Storage (URL Selection) + Fenced Frames only
+   <td>Isolated - 1% - Shared Storage (URL Selection) + Fenced Frames only
    </td>
   </tr>
   <tr>
    <td rowspan="2">Topics
    </td>
-   <td style="border-left: 1px solid var(--color-hairline);border-right: 1px solid var(--color-hairline);">Unified - 5%
+   <td>Unified - 5%
    </td>
    <td rowspan="2">6% of the Stable traffic starting from March 13, 2023
    </td>
   </tr>
   <tr>
-   <td style="border-left: 1px solid var(--color-hairline);border-right: 1px solid var(--color-hairline);">Isolated - 1% - Topics only
+   <td>Isolated - 1% - Topics only
    </td>
-  </tr>
+  </tr></tbody>
 </table>
 
 These changes will not affect your existing origin trial token setup, and you will not have to renew or generate a new origin trial token. 
@@ -209,10 +218,12 @@ This change will happen automatically, and will not impact your existing origin 
 Also, Shared Storage’s URL Selection API origin trial will be increasing to 5% of Chrome Stable traffic from January 26th 2023.
 
 <table class="with-heading-tint">
+    <thead>
   <tr>
    <th>API</th>
    <th>Notes</th>
-  </tr>
+  </tr></thead>
+  <tbody>
   <tr>
    <td><a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a>
    </td>
@@ -242,7 +253,7 @@ Also, Shared Storage’s URL Selection API origin trial will be increasing to 5%
    </td>
    <td>Available in Stable, increasing 5% from January 26th 2023.
    </td>
-  </tr>
+  </tr></tbody>
 </table>
 
 {% Details %} {% DetailsSummary %}
@@ -261,10 +272,13 @@ Reporting and Topics are now at 5% with FLEDGE and Fenced Frames also following
 on November 9th.
 
 <table class="with-heading-tint">
+    <thead>
   <tr>
    <th>API</th>
    <th>Notes</th>
   </tr>
+</thead>
+<tbody>
   <tr>
    <td><a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a>
    </td>
@@ -294,7 +308,7 @@ on November 9th.
    </td>
    <td>Will be available in Stable, starting at 1% from November 9th.
    </td>
-  </tr>
+  </tr></tbody>
 </table>
 
 #### October 2022: 5% increase
@@ -307,10 +321,13 @@ FLEDGE and Fenced Frames will increase from November 9th. Read more in the
 5%](/blog/privacy-sandbox-origin-trial-increase/) blog post.
 
 <table class="with-heading-tint">
+    <thead>
   <tr>
    <th>API</th>
    <th>Notes</th>
   </tr>
+</thead>
+<tbody>
   <tr>
    <td><a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a>
    </td>
@@ -340,7 +357,7 @@ FLEDGE and Fenced Frames will increase from November 9th. Read more in the
    </td>
    <td>Only available in M105+ Canary, Dev, and Beta for now.
    </td>
-  </tr>
+  </tr></tbody>
 </table>
 
 #### October 2022
@@ -365,8 +382,8 @@ APIs included in the trial:
 <table class="with-heading-tint fixed-table width-full">
   <thead>
     <tr>
-      <th><strong>API</strong></th>
-      <th><strong>Notes</strong></th>
+      <th>API</th>
+      <th>Notes</th>
     </tr>
   </thead>
   <tbody>
@@ -433,13 +450,13 @@ Origin trial availability ramps up to [50% of users from Chrome 102
 Beta](https://groups.google.com/a/chromium.org/g/blink-dev/c/Vi-Rj37aZLs/m/WBPqGvscAgAJ).
 APIs included in the trial:
 
-<table class="with-heading-tint fixed-table width-full">
+<table class="with-heading-tint">
   <thead>
     <tr>
       <th>
-<strong>API</strong></th>
+API</th>
       <th>
-<strong>Notes</strong></th>
+Notes</th>
     </tr>
   </thead>
   <tbody>
@@ -490,13 +507,13 @@ Origin trial begins with a [limited proportion of users from Chrome 102
 Beta](https://groups.google.com/a/chromium.org/g/blink-dev/c/Vi-Rj37aZLs/m/wzeBWfxxEgAJ).
 APIs included in the trial:
 
-<table class="with-heading-tint fixed-table width-full">
+<table class="with-heading-tint">
   <thead>
     <tr>
       <th>
-<strong>API</strong></th>
+API</th>
       <th>
-<strong>Notes</strong></th>
+Notes</th>
     </tr>
   </thead>
   <tbody>

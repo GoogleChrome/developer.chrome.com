@@ -155,6 +155,7 @@ to existing iframe features.
       <th><code>iframe</code></th>
       <th><code>fencedframe</code></th>
     </tr></thead>
+      <tbody>
     <tr>
       <td>Embed content</td>
       <td>Yes</td>
@@ -190,7 +191,7 @@ to existing iframe features.
       <td>No</td>
       <td>Yes (mode-dependent)</td>
    </tr>
-</table>
+</tbody></table>
   
 
 Fenced frames support fewer external communication options to preserve privacy.
