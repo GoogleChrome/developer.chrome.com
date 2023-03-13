@@ -12,7 +12,7 @@
 * [导出为带有 Lighthouse 分析的 Puppeteer 脚本](/zh/blog/new-in-devtools-112/#puppeteer-lighthouse)
 * [获取扩展](/zh/blog/new-in-devtools-112/#get-extensions)
 * [元素 > 样式更新](/zh/blog/new-in-devtools-112/#elements-styles)
-* [样式面板中的 CSS 文档](/zh/blog/new-in-devtools-112/#css)
+* [样式边栏中的 CSS 文档](/zh/blog/new-in-devtools-112/#css)
 * [CSS 嵌套支持](/zh/blog/new-in-devtools-112/#nesting)
 * [在控制台中标记日志点和条件断点](/zh/blog/new-in-devtools-112/#logpoint)
 * [在调试过程中忽略不相关的脚本](/zh/blog/new-in-devtools-112/#ignore-list)
