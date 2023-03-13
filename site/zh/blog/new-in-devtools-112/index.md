@@ -238,7 +238,7 @@ Chromium 议题: [772558](https://crbug.com/772558).
 以下是此版本中一些值得注意的修复：
 
 <!-- - The [**Sources** > **Breakpoints**](/docs/devtools/javascript/breakpoints/#manage-loc) pane now shows differentiating file paths next to ambiguous file names ([1403924](crbug.com/1403924)). -->
-- [**Sources** > **Breakpoints**](/docs/devtools/javascript/breakpoints/#manage-loc) 窗格现在在不明确的文件名旁边显示不同的文件路径 ([1403924](crbug.com/1403924 ))。
+- [**Sources** > **Breakpoints**](/docs/devtools/javascript/breakpoints/#manage-loc) 边栏现在在不明确的文件名旁边显示不同的文件路径 ([1403924](crbug.com/1403924 ))。
 <!-- - The [**Main** section](/docs/devtools/performance/reference/#main) in the flame chart of the **Performance** panel now designates `CpuProfiler::StartProfiling` as `Profiler Overhead` ([1358602](https://crbug.com/1358602)). -->
 - **Performance** 面板的火焰图中的 [**Main** section](/docs/devtools/performance/reference/#main) 现在将 `CpuProfiler::StartProfiling` 指定为 `Profiler Overhead` ([ 1358602]（https://crbug.com/1358602））。
 <!-- - DevTools improved autocompletion: -->
