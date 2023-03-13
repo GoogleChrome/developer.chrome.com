@@ -9,7 +9,7 @@
 * [记录器更新](/zh/blog/new-in-devtools-112/#recorder)
 * [重播扩展支持](/zh/blog/new-in-devtools-112/#replay-extensions)
 * [使用 pierce 选择器记录](/zh/blog/new-in-devtools-112/#pierce-selectors)
-* [导出为带有 Lighthouse 分析的 Puppeteer 脚本](/zh/blog/new-in-devtools-112/#puppeteer-lighthouse)
+* [导出带有 Lighthouse 分析的 Puppeteer 脚本](/zh/blog/new-in-devtools-112/#puppeteer-lighthouse)
 * [获取扩展](/zh/blog/new-in-devtools-112/#get-extensions)
 * [元素 > 样式更新](/zh/blog/new-in-devtools-112/#elements-styles)
 * [样式边栏中的 CSS 文档](/zh/blog/new-in-devtools-112/#css)
