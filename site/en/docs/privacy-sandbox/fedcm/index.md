@@ -43,6 +43,13 @@ currently have two recommendations for identity providers:
   ensure IdPs can make changes as the API evolves, without having to ask all of
   their relying parties to redeploy.
 
+## What is FedCM?
+
+[FedCM (Federated Credential Management)](/docs/privacy-sandbox/fedcm/)
+is a proposal for a privacy-preserving approach to federated
+identity services (such as "Sign in with&nbsp;...")  where users can log into
+sites without sharing their personal information with the identity service or
+the site.
 
 ## Why do we need FedCM?
 

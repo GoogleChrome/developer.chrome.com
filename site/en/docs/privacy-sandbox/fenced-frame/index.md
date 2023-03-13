@@ -185,6 +185,9 @@ Current candidates for this combination include:
    or [access unpartitioned
    storage](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/modes.md#unpartitioned-storage).
 
+For ads use cases, see
+[Fenced frames for Ads design document](https://docs.google.com/document/d/17rtX55WkxMcfh6ipuhP4mNULIVxUApvYt4ZYXfX2x-s/edit#heading=h.jy0hectpkl95).
+
 For more details, refer to the [Fenced Frames
 explainer](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/modes.md).
 

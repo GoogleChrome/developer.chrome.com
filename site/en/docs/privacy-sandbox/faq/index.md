@@ -262,16 +262,6 @@ user-agent string.
    [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)
    on the Privacy Sandbox developer support repo.
 
-### What are the use cases for fenced frames?
-
-The API proposes
-[a new form of embedded document](https://github.com/shivanigithub/fenced-frame)
-that will allow new APIs to isolate themselves from their embedders. This
-prevents cross-site recognition.
-
-For ads use cases, see
-[Fenced frames for Ads design document](https://docs.google.com/document/d/17rtX55WkxMcfh6ipuhP4mNULIVxUApvYt4ZYXfX2x-s/edit#heading=h.jy0hectpkl95).
-
 ## Network State Partitioning
 
 ### How can I ask a question about this feature?
@@ -283,20 +273,4 @@ For ads use cases, see
    [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)
    on the Privacy Sandbox developer support repo.
 
-## FedCM
 
-### How can I ask a question about this feature?
-
--  For questions about the proposal:
-   [create an issue](https://github.com/WICG/FedCM/issues) on the proposal repo.
--  For implementation, integration, and general best practice questions:
-   [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)
-   on the Privacy Sandbox developer support repo.
-
-### What is FedCM?
-
-[FedCM (Federated Credential Management)](/docs/privacy-sandbox/fedcm/)
-is a proposal for a privacy-preserving approach to federated
-identity services (such as "Sign in with&nbsp;...")  where users can log into
-sites without sharing their personal information with the identity service or
-the site.
