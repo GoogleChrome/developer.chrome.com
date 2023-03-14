@@ -7,7 +7,7 @@ authors:
   - beaufortfrancois
   - eladalon
 date: 2022-09-29
-updated: 2023-03-13
+updated: 2023-03-14
 hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/5VpvNzrvEM3qSxasqP1j.jpeg
 alt: toddler holding her lips photo
 tags:
@@ -95,7 +95,7 @@ const stream = await navigator.mediaDevices.getDisplayMedia({
 </figure>
 
 
-Note that `selfBrowserSurface: "exclude"` is mutually exclusive with [`preferCurrentTab: true`].
+Note that an explicit `selfBrowserSurface: "exclude"` is mutually exclusive with [`preferCurrentTab: true`].
 
 ### The `systemAudio` option {: #systemAudio }
 
