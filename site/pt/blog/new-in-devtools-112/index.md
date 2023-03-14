@@ -26,7 +26,7 @@ tags:
 
 
 <!-- ## Recorder updates {: #recorder }  -->
-## Atualizações do gravador {: #recorder } 
+## Atualizações do Gravador {: #recorder } 
 <!-- ### Replay extensions support {: #replay-extensions } -->
 ### Suporte para extensões de replay {: #replay-extensions }
 <!-- The **Recorder** introduces support for custom replay options that you can embed into DevTools with an extension. -->
