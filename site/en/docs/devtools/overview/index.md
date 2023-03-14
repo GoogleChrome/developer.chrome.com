@@ -119,6 +119,8 @@ View and debug network activity.
 
 Record, replay, and measure user flows.
 
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XKjlKjhuoccuFPCQqQ05.png", alt="Recorder panel.", width="800", height="606" %}
+
 - [Get Started][54] 
 - [Explore extensions][55]
 - [Replay beyond Recorder][56]
