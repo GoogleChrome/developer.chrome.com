@@ -57,7 +57,6 @@ const result = {};
  * @return {promise} A promise that resolves in the YouTube playlist data
  * neeeded to display the playlist component
  */
-
 async function getPlaylistData(channelId) {
   const data = [];
   const response = await youtube?.playlists?.list({
@@ -105,7 +104,6 @@ async function getPlaylistData(channelId) {
  * @return {promise} A promise that resolves in the YouTube videos data
  * needed to display the playlist component
  */
-
 async function getPlaylistItemData(id) {
   const data = [];
   const response = await youtube.playlistItems.list({
@@ -138,7 +136,6 @@ async function getPlaylistItemData(id) {
  * @return {promise} A promise that resolves in the YouTube Channel data needed
  * to display the playlist component
  */
-
 async function getChannelData(id) {
   const data = {};
   const response = await youtube.channels.list({
