@@ -143,7 +143,7 @@ page. Refer to the [Client Hints Reliability
 specification](https://github.com/WICG/client-hints-infrastructure/blob/main/reliability.md)
 for more information.
 
-### How can I detect tablet devices with the UA-CH API?
+### Detect tablet devices with the UA-CH API
 
 As the line between mobile, tablet, and desktop devices continues to become
 less distinct and dynamic form factors are more common (folding screens,
