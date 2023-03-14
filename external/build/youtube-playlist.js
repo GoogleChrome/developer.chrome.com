@@ -132,7 +132,7 @@ async function getPlaylistItemData(id) {
 
 /**
  * Fetches all the channel meta data the component will need to render correctly the playlist.
- * @param {array} id The YouTube channel id
+ * @param {string[]} id The YouTube channel id
  * @return {promise} A promise that resolves in the YouTube Channel data needed
  * to display the playlist component
  */
