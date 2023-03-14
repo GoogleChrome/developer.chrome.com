@@ -174,8 +174,7 @@ may be made available for testing.
    developer to launch the browser with the new feature enabled.
 -  **For a single user via `chrome://flags`**  
    As a feature progresses, it's often made available via an experimental flag
-   within the more accessible `chrome://flags` interface. These flags can also
-   be enabled via the command line.
+   within the more accessible `chrome://flags` interface.
    `chrome://flags#enable-experimental-web-platform-features` bundles together
    current experimental features.
 -  **For your users, in an origin trial**  
