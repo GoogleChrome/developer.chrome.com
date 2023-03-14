@@ -9,7 +9,7 @@ Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no"
 * [Atualizações do gravador](/pt/blog/new-in-devtools-112/#recorder)
 * [Suporte para extensões de replay](/pt/blog/new-in-devtools-112/#replay-extensions)
 * [Gravação com seletores pierce](/pt/blog/new-in-devtools-112/#pierce-selectors)
-* [Exportar como um script Puppeteer com análise Lighthouse](/pt/blog/new-in-devtools-112/#puppeteer-lighthouse)
+* [Exportar gravações como um script Puppeteer com análise Lighthouse](/pt/blog/new-in-devtools-112/#puppeteer-lighthouse)
 * [Obter extensões](/pt/blog/new-in-devtools-112/#get-extensions)
 * [Elementos > Atualizações de estilos](/pt/blog/new-in-devtools-112/#elements-styles)
 * [Documentação CSS no painel Estilos](/pt/blog/new-in-devtools-112/#css)
