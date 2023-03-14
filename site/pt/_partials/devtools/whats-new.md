@@ -7,7 +7,7 @@ Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no"
 ### Chrome 112 {: #chrome112 }
 
 * [Atualizações do Gravador](/pt/blog/new-in-devtools-112/#recorder)
-* [Suporte para extensões de replay](/pt/blog/new-in-devtools-112/#replay-extensions)
+* [Extensões de replay no Gravador](/pt/blog/new-in-devtools-112/#replay-extensions)
 * [Gravação com seletores pierce](/pt/blog/new-in-devtools-112/#pierce-selectors)
 * [Exportar gravações como um script Puppeteer com análise Lighthouse](/pt/blog/new-in-devtools-112/#puppeteer-lighthouse)
 * [Obter extensões](/pt/blog/new-in-devtools-112/#get-extensions)
