@@ -22,7 +22,7 @@ Topics are a signal to help ad tech platforms select relevant ads. Unlike third-
 
 The Topics API allows third parties, such as ad tech platforms, to observe and then access topics of interest to a user. For example, the API might suggest the topic "Fiber &amp; Textile Arts" for a user who visits the website `knitting.example`. 
 
-The list of topics used by the Topics API is public, human-curated, human-readable, and designed to avoid sensitive categories. This is [the current list](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md), which will expand over time. The list is structured as a _taxonomy_. The topics can be high-level or more specific. For example, `Food &amp; Drink` is a broad category, with a subcategory of `Cooking &amp; Recipes`. Subcategories may be further divided into additional subcategories.
+The list of topics used by the Topics API is public, human-curated, human-readable, and designed to avoid sensitive categories. This is [the current list](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md), which will expand over time. The list is structured as a _taxonomy_. The topics can be high-level or more specific. For example, `Food & Drink` is a broad category, with a subcategory of `Cooking & Recipes`. Subcategories may be further divided into additional subcategories.
 
 Such a taxonomy of topics needs to make a tradeoff between utility and privacy. If topics are too specific, they could be used to identify an individual user. If they are too general, they aren't useful for selecting advertising or other content.
 
@@ -62,7 +62,7 @@ caller must observe and request topics from the same origin.
 
 {% endAside %}
 
-In addition, a caller can only receive topics that their code has "seen." So if another caller's code registered a topic, say `/Autos &amp; Vehicles/Motor Vehicles (By Type)/Hatchbacks`, for a user's browser and your code did not cause that topic to be registered for that user's browser, you will not be able to learn of that topic of interest for that user's browser when you call the API from your embedded code.
+In addition, a caller can only receive topics that their code has "seen." So if another caller's code registered a topic, say `/Autos & Vehicles/Motor Vehicles (By Type)/Hatchbacks`, for a user's browser and your code did not cause that topic to be registered for that user's browser, you will not be able to learn of that topic of interest for that user's browser when you call the API from your embedded code.
 
 ## The classifier model {: #classifier-model}
 
