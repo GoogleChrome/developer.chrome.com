@@ -45,6 +45,10 @@ There are two ways to try the Topics API as a single user; you'll need to be run
     --enable-features=BrowsingTopics,PrivacySandboxAdsAPIsOverride,OverridePrivacySandboxSettingsLocalTesting
     ```
 
+{% Aside %}
+Before starting Chrome using flags, quit the Chrome running processes.
+{% endAside %}
+
 ## The Topics API demo
 
 The [Topics demo](https://topics-demo.glitch.me/) shows how to use additional flags to adjust settings, such as epoch length. If you access the Topics API by running Chrome with command-line flags, don't set `chrome://flags`, as these can override command-line settings.
