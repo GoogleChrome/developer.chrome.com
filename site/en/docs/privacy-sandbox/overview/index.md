@@ -187,7 +187,8 @@ may be made available for testing.
    a valid trial token with every page load.
 -  **For users of early Chrome releases**  
    When a feature is approved to ship in a given release, it will progress
-   through Canary and Beta channels before it reaches Stable. The feature will
+   through each [Chrome release channel](/docs/web-platform/chrome-release-channels/),
+   including Canary and Beta, before it reaches Stable. The feature will
    be turned on by default for all users of those channels.
 
 {% Aside 'caution' %}  
