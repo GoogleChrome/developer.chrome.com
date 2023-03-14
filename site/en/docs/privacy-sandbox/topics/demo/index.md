@@ -46,7 +46,7 @@ There are two ways to try the Topics API as a single user; you'll need to be run
     ```
 
 {% Aside %}
-Before starting Chrome using flags, quit the Chrome running processes.
+Before starting Chrome using flags, quit any Chrome running processes.
 {% endAside %}
 
 ## The Topics API demo
