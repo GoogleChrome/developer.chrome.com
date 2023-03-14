@@ -732,7 +732,7 @@ be available or active in the page.
 
 ### Origin trial control by geographic region
 
-You cannot opt-out of an origin trial for specific regions. Origin trials are active on pages that [contain the token](/blog/origin-trials/#take-part-in-an-origin-trial), included via HTTP headers (server-side) or HTML meta tags (client-side). 
+You cannot opt-out of an origin trial for specific regions. Origin trials are active on pages that [contain the token](/docs/web-platform/origin-trials/#take-part-in-an-origin-trial), included via HTTP headers (server-side) or HTML meta tags (client-side). 
 
 If you can determine the user's location, then you *could* write code to include the origin trial token based on that location information. For example, you could attempt to use IP addresses to determine a user's location. IP addresses can be spoofed, so this is not a guaranteed solution.
 
