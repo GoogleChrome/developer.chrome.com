@@ -25,7 +25,7 @@ events](#event-onAuthRequired) if you use the `"webRequest"` and `"webRequestAut
 permissions.
 
 {% Aside %}
-As of Manifest V3, the `webRequestBlocking` permission is no longer available for most extensions. Consider `declarativeNetRequest`, which enables use of the [declarativeNetRequest API](/docs/extensions/reference/declarativeNetRequest/). Aside from `webRequestBlocking`, the webRequest API will be unchanged and available for normal use. Policy installed extensions can continue to use `webRequestBlocking`.
+As of Manifest V3, the `"webRequestBlocking"` permission is no longer available for most extensions. Consider `"declarativeNetRequest"`, which enables use of the [declarativeNetRequest API](/docs/extensions/reference/declarativeNetRequest/). Aside from `"webRequestBlocking"`, the webRequest API will be unchanged and available for normal use. Policy installed extensions can continue to use `"webRequestBlocking"`.
 {% endAside %}
 
 ## Life cycle of requests
