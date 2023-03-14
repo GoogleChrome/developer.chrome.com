@@ -3,8 +3,9 @@ layout: "layouts/doc-post.njk"
 title: "Lighthouse: Optimize website speed"
 authors:
   - kaycebasques
+  - sofiayem
 date: 2018-06-18
-#updated: YYYY-MM-DD
+updated: 2023-03-14
 description: "Learn how to use Chrome DevTools to find ways to make your websites load faster."
 tags:
   - get-started
@@ -19,6 +20,12 @@ Read on, or watch the video version of this tutorial:
 
 {% YouTube id="5fLW5Q5ODiE" %}
 
+{% Aside 'important' %}
+This video was made with Chrome 68. Most of it is still true but some features have been updated.
+For example, the **Audits** panel is now called **Lighthouse**, and it has a different look but all of the same options are still there.
+For more information, see [What's new in Lighthouse](/tags/new-in-lighthouse/).
+{% endAside %}
+
 ## Prerequisites {: #prerequisites }
 
 - You should have basic web development experience, similar to what's taught in this [Introduction
@@ -31,14 +38,17 @@ This is Tony. Tony is very famous in cat society. He has built a website so that
 what his favorite foods are. His fans love the site, but Tony keeps hearing complaints that the site
 loads slowly. Tony has asked you to help him speed the site up.
 
+<figure>
 {% Img src="image/admin/TLlf3OH689gZcCLnEY67.jpg", alt="Tony the cat.", width="800", height="600" %}
-
-**Figure 1**. Tony the cat
+  <figcaption>
+    Tony the cat.
+  </figcaption>
+</figure>
 
 ## Step 1: Audit the site {: #audit }
 
 Whenever you set out to improve a site's load performance, **always start with an audit**. The audit
-has 2 important functions:
+has two important functions:
 
 - It creates a **baseline** for you to measure subsequent changes against.
 - It gives you **actionable tips** on what changes will have the most impact.
@@ -47,120 +57,73 @@ has 2 important functions:
 
 But first, you need to set up the site so that you can make changes to it later:
 
-1.  Go to `chrome://version` to check what version of Chrome you're using. This tutorial was made
-    with Chrome 68. If you're using an earlier or later version, some features may look different or
-    not be available. You should be able to complete the tutorial still, just keep in mind that your
-    UI may look different than the screenshots.
-2.  [Open the source code for the site][2]. This tab will be referred to as the _editor tab_.
+1. Open the [source of this demo website][2] and click **Remix to Edit** in the upper right corner. A tab opens. This tab will be referred to as the _editor tab_.
 
-    {% Img src="image/admin/h2JSHSXIa8G3kOqRILbk.png", alt="The editor tab.", width="800", height="457" %}
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/PzSGlC0EiBWw9JmpqLMu.png", alt="The editor tab.", width="800", height="488" %}
 
-    **Figure 2**. The editor tab
+   The name of the project changes from **tony** to some randomly-generated name. You now have your own editable copy of the code. Later on, you'll make changes to this code.
 
-3.  Click **tony**. A menu appears.
+1. At the bottom of the editor tab, click **Preview** > **Preview in a new window**. The demo opens in a new tab. This tab will be referred to as the _demo tab_. It may take a while for the site to load.
 
-    {% Img src="image/admin/N9c7p2yrUhWgUobkDuVs.png", alt="The menu that appears after clicking 'tony'.", width="800", height="457" %}
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/dX6kVyYogDqrDVcM4WzJ.png", alt="The demo tab.", width="800", height="614" %}
 
-    **Figure 3**. The menu that appears after clicking **tony**
+1. [Open DevTools](/docs/devtools/open) alongside the demo.
 
-4.  Click **Remix This**. The name of the project changes from **tony** to some randomly-generated
-    name. You now have your own editable copy of the code. Later on, you'll make changes to this
-    code.
-5.  Click **Show Live**. The demo opens in a new tab. This tab will be referred to as the _demo
-    tab_. It may take a while for the site to load.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/IgZOUlF1RxARqEGoKjKF.png", alt="DevTools and the demo.", width="800", height="535" %}
 
-    {% Img src="image/admin/2kZXAZgIbvKrafszL6X3.png", alt="The demo tab.", width="800", height="588" %}
-
-    **Figure 4**. The demo tab
-
-6.  Press Command+Option+J (Mac) Control+Shift+J (Windows, Linux, ChromeOS). Chrome DevTools opens
-    up alongside the demo.
-
-    {% Img src="image/admin/QyoSneXNo8Npiy28nJlU.png", alt="DevTools and the demo.", width="800", height="476" %}
-
-    **Figure 5**. DevTools and the demo
-
-For the rest of the screenshots in this tutorial, DevTools will be shown as a separate window. You
-can do this by pressing Command+Shift+P (Mac) or Control+Shift+P (Windows, Linux, ChromeOS) to open
-the Command Menu, typing `Undock`, and then selecting **Undock into separate window**.
-
-{% Img src="image/admin/YgPOzT6Re0aIGezSKPZr.png", alt="Undocked DevTools.", width="800", height="514" %}
-
-**Figure 6**. Undocked DevTools
+{% Aside 'important' %}
+For the rest of the screenshots in this tutorial, DevTools is shown in a [separate window](/docs/devtools/customize/#placement).
+{% endAside %}
 
 ### Establish a baseline {: #baseline }
 
 The baseline is a record of how the site performed before you made any performance improvements.
 
-1.  Click the **Audits** tab. It may be hidden behind the **More Panels**
-    {% Img src="image/admin/IxLXhwoZksgzzdzr9OCx.png", alt="More Panels", width="18", height="16" %} button. There's a
-    Lighthouse on this panel because the project that powers the Audits panel is called
-    [Lighthouse][3].
+1.  Open the **Lighthouse** panel. It may be hidden behind {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/V93Xxk8HvmByCBGzMdW4.svg", alt="More panels.", width="20", height="20" %} **More panels**.
 
-    {% Img src="image/admin/3pLUyTJ93xjvm0itZ3Lb.png", alt="The Audits panel.", width="800", height="1068" %}
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4zA1JQLNurO4o8WyAy9T.png", alt="The Lighthouse panel.", width="800", height="830" %}
 
-    **Figure 7**. The Audits panel
+    The panel is powered by [**Lighthouse**](/docs/lighthouse).
 
-2.  Match your audit configuration settings to those in **Figure 7**. Here's an explanation of the
+2.  Match your Lighthouse report configuration settings to those on the screenshot. Here's an explanation of the
     different options:
 
-    - **Device**. Setting to **Mobile** changes the user agent string and simulates a mobile
-      viewport. Setting to **Desktop** pretty much just disables the **Mobile** changes.
-    - **Audits**. Disabling a category prevents the Audits panel from running those audits, and
-      excludes those audits from your report. You can leave the other categories enabled, if you
-      want to see the types of recommendations they provide. Disabling categories slightly speeds up
-      the auditing process.
-    - **Throttling**. Setting to **Simulated Fast 3G, 4x CPU Slowdown** simulates the typical
-      conditions of browsing on a mobile device. It's called "simulated" because the Audits panel
-      doesn't actually throttle during the auditing process. Instead, it just extrapolates how long
-      the page would take to load under mobile conditions. The **Applied...** setting, on the other
-      hand, actually throttles your CPU and network, with the tradeoff of a longer auditing process.
-    - **Clear Storage**. Enabling this checkbox clears all storage associated with the page before
-      every audit. Leave this setting on if you want to audit how first-time visitors experience
-      your site. Disable this setting when you want the repeat-visit experience.
+    - **Mode** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ljri3HPj5aVym9qgMfkx.svg", alt="Radio button checked.", width="20", height="20" %} **Navigation (default)**. This mode analyses a single page load and that's what we need in this tutorial. For more information, see [The three modes](https://github.com/GoogleChrome/lighthouse/blob/HEAD/docs/user-flows.md#the-three-modes-navigation-timespan-snapshot).
+    - **Device** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ljri3HPj5aVym9qgMfkx.svg", alt="Radio button checked.", width="20", height="20" %} **Mobile**. The mobile option changes the user agent string and simulates a mobile
+      viewport. The desktop option pretty much just disables the mobile changes.
+    - **Categories** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="24", height="24" %} **Performance**. A single enabled category makes Lighthouse generate a report only with the corresponding set of audits. You can leave the other categories enabled, if you want to see the types of recommendations they provide. Disabling irrelevant categories slightly speeds up the auditing process.
+    - **Simulated throttling (default)** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/C8J2TiWeNKJhQn3eEauv.svg", alt="Drop-down.", width="20", height="20" %}. This option simulates the typical conditions of browsing on a mobile device. It's called "simulated" because Lighthouse doesn't actually throttle during the auditing process. Instead, it just extrapolates how long the page would take to load under mobile conditions. The **DevTools throttling (advanced)** setting, on the other hand, actually throttles your CPU and network, with the tradeoff of a longer auditing process.
+    - {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="24", height="24" %} **Clear Storage**. Enabling this checkbox clears all storage associated with the page before every audit. Leave this setting on if you want to audit how first-time visitors experience your site. Disable this setting when you want the repeat-visit experience.
 
-3.  Click **Run Audits**. After 10 to 30 seconds, the Audits panel shows you a report of the site's
+3.  Click **Analyze page load**. After 10 to 30 seconds, the **Lighthouse** panel shows you a report of the site's
     performance.
 
-    {% Img src="image/admin/NgjLST0tdYLxJIyaLMAo.png", alt="An Audits panel report of the site's performance.", width="800", height="966" %}
-
-    **Figure 8**. The Audits panel's report of the site's performance
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/aCoPjdb6CKbHmPxjCcgR.png", alt="A Lighthouse report of the site's performance.", width="800", height="959" %}
 
 #### Handling report errors {: #errors }
 
-If you ever get an error in your Audits panel report, try running the demo tab from an [incognito
+If you ever get an error in your Lighthouse report, try running the demo tab from an [incognito
 window][4] with no other tabs open. This ensures that you're running Chrome from a clean state.
 Chrome Extensions in particular often interfere with the auditing process.
 
-{% Img src="image/admin/BQOnt1Z7Qp1CUZ1Ln6ve.png", alt="A report that errored.", width="800", height="552" %}
-
-**Figure 9**. A report that errored
+{% Img src="image/admin/BQOnt1Z7Qp1CUZ1Ln6ve.png", alt="A report with an error.", width="800", height="552" %}
 
 ### Understand your report {: #report }
 
 The number at the top of your report is the overall performance score for the site. Later, as you
 make changes to the code, you should see this number rise. A higher score means better performance.
 
-{% Img src="image/admin/V9sAawCdJGzkcYHlGaom.png", alt="The overall performance score.", width="800", height="607" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/aZwib1rLHMcOMioP1SKG.png", alt="The overall performance score.", width="800", height="959" %}
 
-**Figure 10**. The overall performance score
-
-The **Metrics** section provides quantitative measurements of the site's performance. Each metric
-provides insight into a different aspect of the performance. For example, **First Contentful Paint**
+Scroll down to the **Metrics** section and click **Expand view**. This section provides quantitative measurements of the site's performance.
+Each metric provides insight into a different aspect of the performance. For example, **First Contentful Paint**
 tells you when content is first painted to the screen, which is an important milestone in the user's
 perception of the page load, whereas **Time To Interactive** marks the point at which the page
 appears ready enough to handle user interactions.
 
-{% Img src="image/admin/rPpuNEgtEJVOtfbOCS8Z.png", alt="The Metrics section.", width="800", height="607" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/agfthX3hQb21pMTYn44B.png", alt="The Metrics section.", width="800", height="699" %}
 
-**Figure 11**. The Metrics section
-
-Hover over a metric to see a description of it, and click **Learn More** to read documentation about
-it.
-
-{% Img src="image/admin/5t8Vg0jVnMqsTj3E8mqC.png", alt="Hovering over the First Meaningful Paint metric.", width="800", height="607" %}
-
-**Figure 12**. Hovering over the First Meaningful Paint metric
+Click **Learn more** to read documentation on a metric.
 
 Below Metrics is a collection of screenshots that show you how the page looked as it loaded.
 
@@ -330,7 +293,7 @@ Your new report says that properly sizing images is another big opportunity.
 
 Resizing images helps speed up load time by reducing the file size of images. If your user is
 viewing your images on a mobile device screen that's 500-pixels-wide, there's really no point in
-sending a 1500-pixel-wide image. Ideally, you'd send a 500-pixel-wided image, at most.
+sending a 1500-pixel-wide image. Ideally, you'd send a 500-pixel-wide image, at most.
 
 1.  In your report, click **Properly size images** to see what images should be resized. It looks
     like all 4 images are bigger than necessary.
