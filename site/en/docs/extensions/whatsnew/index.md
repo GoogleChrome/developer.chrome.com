@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-03-10
+updated: 2023-03-14
 tags:
   - extensions-news
 
@@ -15,6 +15,12 @@ tags:
 
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about many of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).)
+
+### New Samples: dynamic declarations and programmatic injection {: #dynamic-dec-prog-inject }
+
+<p class="color-secondary-text type--caption">Posted on <time>March 14, 2023</time></p>
+
+We've built a [new sample](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/scripting) for the [`chrome.scripting`](/docs/extensions/reference/scripting/) API. It demonstrates dynamic declarations, where a content script is registered at runtime, and programmatic injection, where a script is executed in a tab that is already open.
 
 ### New Samples: Declarative Net Request use cases {: #dNR-use-cases }
 
