@@ -34,7 +34,7 @@ O **Gravador** apresenta o suporte para opções de replay personalizadas que vo
 <!-- Try out the [example extension](https://github.com/puppeteer/replay/tree/main/examples/chrome-extension-replay). Select the new custom replay option to open the custom replay UI. -->
 Experimente a [extensão de exemplo](https://github.com/puppeteer/replay/tree/main/examples/chrome-extension-replay). Selecione a nova opção de reprodução personalizada para abrir a interface de replay personalizada.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/CAQFVtHyds7ByB0YMZht.png", alt="UI de replay personalizada.", width="800", height="563" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/CAQFVtHyds7ByB0YMZht.png", alt="Interface de replay personalizada.", width="800", height="563" %}
 
 <!-- To customize the **Recorder** to your needs and integrate it with your tools, consider developing your own extension: explore the [chrome.devtools.recorder API](/docs/extensions/reference/devtools_recorder/) and check out more [extension examples](https://github.com/puppeteer/replay/tree/main/examples/). -->
 Para personalizar o **Gravador** de acordo com suas necessidades e integrá-lo às suas ferramentas, considere desenvolver sua própria extensão: explore a [API chrome.devtools.recorder](/docs/extensions/reference/devtools_recorder/) e confira mais [exemplos de extensão](https://github.com/puppeteer/replay/tree/main/examples/).
