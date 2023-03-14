@@ -189,7 +189,7 @@ through whatever standard channel they offer.
 
 ### How can a user block an ad when it's shown as a result of a FLEDGE auction?
 
-Users will have the ability to [opt out of Privacy Sandbox API](https://developer.chrome.com/docs/privacy-sandbox/fledge-api/opt-out/#opt-out-user). To allow opt out of a specific ad or ad selection technique, the appropriate party to provide controls is the ad tech serving the ad.
+Users will have the ability to [opt out of Privacy Sandbox API](/docs/privacy-sandbox/fledge-api/opt-out/#opt-out-user). To allow opt out of a specific ad or ad selection technique, the appropriate party to provide controls is the ad tech serving the ad.
 There can be multiple approaches to controlling which ads are eligible for bidding and serving, and recording user ad preferences. One way is to call leaveAdInterestGroup() when a user asks to block an ad, for the winning interest group that provided the ad. This will remove the user's browser from membership of the interest group, and make the group ineligible to bid in the future.
 
 ## Attribution Reporting
