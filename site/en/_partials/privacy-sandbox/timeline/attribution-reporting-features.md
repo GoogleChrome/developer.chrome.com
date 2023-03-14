@@ -7,15 +7,15 @@
   </thead>
   <tr>
     <td>Event-level reports for clicks and views<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md">Explainer</a></td>
-    <td>Available in Chrome for origin trial.</td>
+    <td>Available in Chrome for origin trial</td>
   </tr>
   <tr>
     <td>Aggregatable reports for clicks and views<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md">Explainer</a></td>
-    <td>Available in Chrome for origin trial.</td>
+    <td>Available in Chrome for origin trial</td>
   </tr>
   <tr>
     <td>Conversion journey: app-to-web<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/app_to_web.md">Web explainer</a> and <a href="https://developer.android.com/design-for-safety/privacy-sandbox/attribution-app-to-web">Android explainer</a></td>
-    <td>Expected in Chrome and Android for origin trial in Q2 2023.</td>
+    <td>Expected in Chrome and Android for origin trial in Q2 2023</td>
   </tr>
   <tr>
     <td>Conversion journey: cross-device<br><a href="https://github.com/WICG/attribution-reporting-api/blob/main/archive/cross_device.md">Explainer</a></td>
@@ -26,8 +26,7 @@
       Prevent invalid aggregatable reports via report verification<br />
       <a href="https://github.com/WICG/attribution-reporting-api/blob/main/trigger_attestation.md">Explainer</a>
      </td>
-     <td>Available in Chrome for origin trial in Q1 2023
-     </td>
+     <td>Available in Chrome for origin trial in Q1 2023</td>
   </tr>
   <tr>
      <td>
@@ -42,16 +41,14 @@
     <td>Default allowlist for the Attribution Reporting API Permissions-Policy will remain</br>
       <a href="https://groups.google.com/a/chromium.org/g/attribution-reporting-api-dev/c/MV8gQ4sTc8w/m/NHLMcY6MAAAJ">Mailing list announcement</a>
     </td>
-    <td>Available in Chrome for origin trial in Q1 2023
-    </td>
+    <td>Available in Chrome for origin trial in Q1 2023</td>
   </tr>
   <tr>
     <td>Support for filter-based deduplication keys for aggregatable reports
 </br>
 <a href="https://groups.google.com/a/chromium.org/g/attribution-reporting-api-dev/c/U-XsiJrxbRQ/m/lfiG9JNrAAAJ">Mailing list announcement</a>
     </td>
-    <td>Available in Chrome for origin trial in Q1 2023
-    </td>
+    <td>Available in Chrome for origin trial in Q1 2023</td>
   </tr>
   <tr>
     <td>Support for source registration success reports in verbose debugging</br>
@@ -68,7 +65,7 @@
     </td>
   </tr>
   <tr>
-    <td>Support for Attribution Reporting API and Aggregation Service for Google Cloud</br>
+    <td>Support for Attribution Reporting API and Aggregation Service on Google Cloud</br>
       <a href="https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATE.md#data-processing-through-a-secure-aggregation-service">Attribution Reporting API Explainer</a></br>
       <a href="https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATE.md#data-processing-through-a-secure-aggregation-service">Aggregation Service Explainer</a>
     </td>

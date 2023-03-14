@@ -2,16 +2,22 @@
 layout: 'layouts/doc-post.njk'
 title: 'Status of pending FLEDGE capabilities'
 subhead: >
-  Learn the status of FLEDGE auction features as we approach third-party cookie deprecation.
+  Learn more about FLEDGE auction features as we approach third-party
+  cookie deprecation.
 description: >
-  Learn the status of FLEDGE auction features as we approach third-party cookie deprecation.
+  Learn more about FLEDGE auction features as we approach third-party
+  cookie deprecation.
 date: 2023-02-09
+updated: 2023-03-14
 authors:
   - tristramsouthey
   - kevinkiklee
 ---
 
-As we move [FLEDGE](/docs/privacy-sandbox/fledge/) closer to general availability and approach third-party cookie deprecation in Chrome, you may be wondering about the availability of FLEDGE services and features. In this update, we provide a list of the scoped FLEDGE features and when they’ll be supported. 
+As we move [FLEDGE](/docs/privacy-sandbox/fledge/) closer to general
+availability and approach third-party cookie deprecation in Chrome, you may be
+wondering about the availability of FLEDGE services and features. Here you'll
+find a list of the scoped FLEDGE features and when they'll be supported. 
 
 <table class="with-heading-tint with-borders width-full">
   <thead>
@@ -22,69 +28,95 @@ As we move [FLEDGE](/docs/privacy-sandbox/fledge/) closer to general availabilit
     </tr>
   </thead>
   <tr>
-   <td><a href="https://github.com/WICG/turtledove/blob/main/FLEDGE.md#5-event-level-reporting-for-now">Event-level auction win reporting</a>
+    <td><a href="https://github.com/WICG/turtledove/blob/main/FLEDGE.md#5-event-level-reporting-for-now">Event-level auction win reporting</a>
    </td>
-   <td>Now
+    <td>Now</td>
+    <td><p>Supported until at least 2026.</p>
+      <p>This feature is intended to make the transition to FLEDGE reporting from third-party cookie reporting easier. Thus, this reporting will not be supported after adtechs have had time to update their reporting mechanisms.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>Event-level user bidding signals for modeling (<a href="https://github.com/WICG/turtledove/issues/435">Github Issue</a>)</td>
+    <td>Later in 2023</td>
+    <td>Expected in Chrome for origin trial in Q2 2023.</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/WICG/turtledove/issues/299">Per-Buyer Latency Reporting</a></td>
+    <td>Later in 2023</td>
+    <td>Expected in Chrome for origin trial in Q1 2023</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/WICG/turtledove/issues/293">Per-buyer wall-time timeout</a></td>
+    <td>Later in 2023</td>
+    <td>Expected in Chrome for origin trial in Q1 2023.</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/WICG/turtledove/issues/165">Buyer reporting ID for custom breakdowns</a></td>
+    <td>Later in 2023</td>
+    <td>Expected in Chrome for origin trial in Q2 2023.</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/WICG/turtledove/issues/441">Direct seller destination support</a></td>
+    <td>Later in 2023</td>
+    <td>Expected in Chrome for origin trial in Q1 2023.</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/WICG/turtledove/issues/356">Accuracy-limited ad cost for cost-per-click billing</a></td>
+    <td>Later in 2023</td>
+    <td>Expected in Chrome for origin trial in Q2 2023</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/WICG/turtledove/issues/166">Currency for highest bid and highest other scoring bid</a>
+    </td>
+    <td>Later in 2023</td>
+    <td>Expected in Chrome for origin trial in Q2 2023</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#trusted-execution-environment">Trusted Execution Environment (TEE)</a> usage for Key/Value service</td>
+    <td>Now</td>
+    <td>Required no sooner than Q3 2025.</td>
+  </tr>
+  <tr>
+    <td><a href="/docs/privacy-sandbox/fenced-frame/">Fenced frames</a>
    </td>
-   <td>
-   <p>Supported until at least 2026.</p><br/>
-   <p>This feature is intended to make the transition to FLEDGE reporting from third-party cookie reporting easier. Thus, this reporting will not be supported after adtechs have had time to update their reporting mechanisms.
-   </p>
+    <td>Now
+   </td>
+    <td>Required no sooner than 2026.</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/WICG/turtledove/blob/main/FLEDGE_k_anonymity_server.md">K-anonymity</a>
+   </td>
+    <td>Later in 2023 Q3
+   </td>
+    <td>For rendering creatives, the k-anonymity threshold of “a crowd of 50 users per creative over 7 days” must be met. 
    </td>
   </tr>
   <tr>
-   <td><a href="https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#trusted-execution-environment">Trusted Execution Environment (TEE)</a> usage for Key/Value service
-   </td>
-   <td>Now
-   </td>
-   <td>Required no sooner than Q3 2025.
-   </td>
+    <td>Improved FLEDGE + <a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a> integration.</td>
+    <td>2023 Q2</td>
+    <td>Available for testing in Chrome Stable M112+.</td>
   </tr>
   <tr>
-   <td><a href="/docs/privacy-sandbox/fenced-frame/">Fenced frames</a>
+    <td><a href="/blog/fledge-service-overview/#bidding-auction-service">Bidding and Auction services</a>
    </td>
-   <td>Now
-   </td>
-   <td>Required no sooner than 2026.
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://github.com/WICG/turtledove/blob/main/FLEDGE_k_anonymity_server.md">K-anonymity</a>
-   </td>
-   <td>Later in 2023 Q3
-   </td>
-   <td>For rendering creatives, the k-anonymity threshold of “a crowd of 50 users per creative over 7 days” must be met. 
-   </td>
-  </tr>
-  <tr>
-   <td>Improved FLEDGE + <a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a> integration
-   </td>
-   <td>2023 Q2
-   </td>
-   <td>Available for testing in Chrome Stable M112+.
-   </td>
-  </tr>
-  <tr>
-   <td><a href="/blog/fledge-service-overview/#bidding-auction-service">Bidding and Auction services</a>
-   </td>
-   <td>Targeted for testing in H2 2023.
-   </td>
-   <td>In development. 
-   </td>
+    <td>Targeted for testing in H2 2023.</td>
+    <td>In development.</td>
   </tr>
 </table>
 
 ## Event-level auction win reporting
 
-We initially indicated that the event-level auction win reporting would be a temporary solution, and [aggregation](/docs/privacy-sandbox/private-aggregation/) will be used. After listening to feedback and examining the relative complexity of aggregation-based solutions, particularly for billing, we have decided to not remove support for [event-level auction win results reporting](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#5-event-level-reporting-for-now) with `reportResult()` and `reportWin()` functions having the ability to call [`sendReportTo()`](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md#reporting) until sometime after third-party cookie deprecation. 
+We initially indicated that the event-level auction win reporting would be a
+temporary solution, and [Private Aggregation API](/docs/privacy-sandbox/private-aggregation/) will be used to generate summary reports. After listening to feedback and examining the relative complexity of aggregation-based solutions, particularly for billing, we have decided to not remove support for [event-level auction win results reporting](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#5-event-level-reporting-for-now) with `reportResult()` and `reportWin()` functions having the ability to call [`sendReportTo()`](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md#reporting) until sometime after third-party cookie deprecation. 
 
 Event-level auction win reporting will be supported until at least 2026, and we will provide advanced notice before the API transitions to any alternative solutions. 
 
-Auction loss reporting will continue to be supported through the [Private Aggregation API](https://github.com/WICG/turtledove/blob/main/FLEDGE_extended_PA_reporting.md).
+Auction loss reporting will continue to be supported through the
+[Private Aggregation API](https://github.com/WICG/turtledove/blob/main/FLEDGE_extended_PA_reporting.md).
 
-## Trusted Execution Environment (TEE) usage for Key/Value service
+## Trusted Execution Environment usage for Key/Value service
 
-The [FLEDGE Key/Value service](/blog/open-sourcing-fledge-key-value-service/) allows the auction to retrieve real-time signals when the bid is generated by the buyer and the ad is scored by the seller. The Key/Value service will eventually be required to run in a [trusted execution environment (TEE)](https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#trusted-execution-environment) to ensure that the user’s data is kept private.
+The [FLEDGE Key/Value service](/blog/open-sourcing-fledge-key-value-service/) allows the auction to retrieve real-time signals when the bid is generated by the buyer and the ad is scored by the seller. The Key/Value service will eventually be required to run in a [trusted execution environment (TEE)](https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#trusted-execution-environment) to ensure that the user's data is kept private.
 
 Running the Key/Value service in a TEE will not be required until sometime after third-party cookie deprecation. We will provide at least 12 months notice before TEE usage is mandatory. Until then, you can continue to use [your own server](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#3-buyers-provide-ads-and-bidding-functions-byos-for-now) for real-time key/value signals. Note that running the Key/Value service in a TEE with [user-defined functions](https://github.com/privacysandbox/fledge-docs/blob/main/key_value_service_trust_model.md#support-for-user-defined-functions-udfs) (UDFs) will be available for testing by the end of Q1 2023 with on-device FLEDGE. 
 
@@ -100,13 +132,22 @@ The temporary `navigator.deprecatedURNToURL()` will be removed by third-party co
 
 {% Partial 'privacy-sandbox/timeline/fenced-frames-features.njk' %}
 
-## Improved FLEDGE + Attribution Reporting integration
+## Improved FLEDGE and Attribution Reporting integration
 
-Recently, challenges have been [pointed out](https://github.com/WICG/turtledove/issues/281) around the integration of the [Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/) and FLEDGE, especially in the situation where fenced frames are involved. 
+Recently, challenges have been [pointed out](https://github.com/WICG/turtledove/issues/281)
+around the integration of the
+[Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/) and
+FLEDGE, especially where fenced frames are involved. 
 
-For event-level reporting with FLEDGE, we have a proposed set of initial improvements to make this integration easier which you can learn more about in the [explainer](https://github.com/WICG/turtledove/blob/main/Fenced_Frames_Ads_Reporting.md#support-for-attribution-reporting). The integration will be available for both fenced frames and iFrames. Event-level reporting will be available for testing in Chrome Stable M112+.
+For event-level reporting with FLEDGE, we have a proposed set of initial
+improvements to make this integration easier which you can learn more about in
+the [explainer](https://github.com/WICG/turtledove/blob/main/Fenced_Frames_Ads_Reporting.md#support-for-attribution-reporting).
+The integration will be available for both fenced frames and iFrames.
+Event-level reporting will be available for testing in Chrome Stable M112+.
 
-For those who need [aggregate attribution reporting with FLEDGE](https://github.com/WICG/turtledove/issues/289), we are working on more flexible solutions to capture more bidding signals with aggregate reporting, and we will publish a proposal once it is ready. 
+For those who need [Attribution Reporting with FLEDGE](https://github.com/WICG/turtledove/issues/289),
+we are working on more flexible solutions to capture more bidding signals with
+aggregatable reports, and we will publish a proposal once it is ready. 
 
 ## K-anonymity
 
@@ -114,13 +155,22 @@ We will soon publish an explainer with more details on how [k-anonymity](https:/
 
 For rendering a creative, we will require _a crowd of 50 users per creative within the past 7 days_ to pass the k-anonymity threshold before the ad can be served. The creative is available to be served as soon as it hits the 50 ads threshold and does not need to wait for 7 days. 
 
-K-anonymity requirements will be available for testing and will be enforced later in 2023. We encourage feedback from ad tech on this parameter.
+K-anonymity requirements will be available for testing and will be enforced
+later in 2023. We encourage feedback from ad tech on this parameter.
 
 ## Bidding and Auction Services
 
-We have heard some concerns about [FLEDGE latency](https://github.com/WICG/turtledove/issues/385) and are actively working on improving on-device latency. Both Chrome and Android plan to provide [Bidding and Auction Services](https://github.com/privacysandbox/fledge-docs/blob/main/bidding_auction_services_api.md) as an additional way to run bidding and scoring logic besides on-device auctions. Bidding and Auction services is a [FLEDGE service](/blog/fledge-service-overview/) solution for running auctions off-device, which we believe will allow for even faster performance.
+We have heard some concerns about
+[FLEDGE latency](https://github.com/WICG/turtledove/issues/385) and are
+actively working on improving on-device latency. Both Chrome and Android plan
+to provide [Bidding and Auction Services](https://github.com/privacysandbox/fledge-docs/blob/main/bidding_auction_services_api.md)
+as an additional way to run bidding and scoring logic besides on-device
+auctions. Bidding and Auction services is a
+[FLEDGE service](/blog/fledge-service-overview/) solution for running auctions
+off-device, which we believe will allow for even faster performance.
 
-We will continue to support on-device auctions, and the use of the Bidding and Auction Services is not required unless it fits your use cases.
+We will continue to support on-device auctions, and the use of the Bidding and
+Auction Services is not required unless it fits your use cases.
 
 More details can be found in the [blog post](/blog/bidding-and-auction-services-availability/).
 

@@ -9,7 +9,7 @@ description: >
   previously visited websites, designed so it cannot be used by
   third parties to track user browsing behavior across sites.
 date: 2022-01-27
-updated: 2022-11-01
+updated: 2023-03-14
 authors:
   - samdutton
   - kevinkiklee
@@ -26,8 +26,6 @@ FLEDGE deployment is available, as are
 ## Implementation status
 
 {% Partial 'privacy-sandbox/timeline/fledge.njk' %}
-
-{% Partial 'privacy-sandbox/timeline/fledge-features.njk' %}
 
 ## What is FLEDGE? {: #what}
 

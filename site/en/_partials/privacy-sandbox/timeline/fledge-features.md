@@ -6,59 +6,45 @@
     </tr>
   </thead>
   <tr>
-    <td>Per-Buyer Latency Reporting
-</br>
-<a href="https://github.com/WICG/turtledove/issues/299">Github Issue</a>
+    <td>Per-Buyer Latency Reporting</br>
+      <a href="https://github.com/WICG/turtledove/issues/299">Github Issue</a>
     </td>
-    <td>Expected in Chrome for origin trial in Q1 2023
-    </td>
+    <td>Expected in Chrome for origin trial in Q1 2023</td>
   </tr>
   <tr>
-    <td>Direct Seller Destination Support
-</br>
-<a href="https://github.com/WICG/turtledove/issues/441">Github Issue</a>
+    <td>Direct seller destination support</br>
+      <a href="https://github.com/WICG/turtledove/issues/441">Github Issue</a>
     </td>
-    <td>Expected in Chrome for origin trial in Q1 2023
-    </td>
+    <td>Expected in Chrome for origin trial in Q1 2023</td>
   </tr>
   <tr>
-    <td>Per-Buyer Wall-Time Timeout 
-</br>
-<a href="https://github.com/WICG/turtledove/issues/293">Github Issue</a>
+    <td>Per-buyer wall-time timeout</br>
+      <a href="https://github.com/WICG/turtledove/issues/293">Github Issue</a>
     </td>
-    <td>Expected in Chrome for origin trial in Q1 2023
-    </td>
+    <td>Expected in Chrome for origin trial in Q1 2023</td>
   </tr>
   <tr>
-    <td>Accuracy-limited ad cost for cost-per-click billing 
-</br>
-<a href="https://github.com/WICG/turtledove/issues/356">Github Issue</a>
+    <td>Accuracy-limited ad cost for cost-per-click billing</br>
+      <a href="https://github.com/WICG/turtledove/issues/356">Github Issue</a>
     </td>
-    <td>Expected in Chrome for origin trial in Q2 2023
-    </td>
+    <td>Expected in Chrome for origin trial in Q2 2023</td>
   </tr>
   <tr>
-    <td>Event-level User Bidding Signals for Modeling 
-</br>
-<a href="https://github.com/WICG/turtledove/issues/435">Github Issue</a>
+    <td>Event-level user bidding signals for modeling</br>
+      <a href="https://github.com/WICG/turtledove/issues/435">Github Issue</a>
     </td>
-    <td>Expected in Chrome for origin trial in Q2 2023
-    </td>
+    <td>Expected in Chrome for origin trial in Q2 2023</td>
   </tr>
   <tr>
-    <td>Buyer Reporting ID for Custom Breakdowns
-</br>
-<a href="https://github.com/WICG/turtledove/issues/165">Github Issue</a>
+    <td>Buyer reporting ID for custom breakdowns</br>
+      <a href="https://github.com/WICG/turtledove/issues/165">Github Issue</a>
     </td>
-    <td>Expected in Chrome for origin trial in Q2 2023
-    </td>
+    <td>Expected in Chrome for origin trial in Q2 2023</td>
   </tr>
   <tr>
-    <td>Currency for Highest and bid Highest Other Scoring Bid
-</br>
-<a href="https://github.com/WICG/turtledove/issues/166">Github Issue</a>
+    <td>Currency for Highest and bid Highest Other Scoring Bid</br>
+      <a href="https://github.com/WICG/turtledove/issues/166">Github Issue</a>
     </td>
-    <td>Expected in Chrome for origin trial in Q2 2023
-    </td>
+    <td>Expected in Chrome for origin trial in Q2 2023</td>
   </tr>
 </table>
