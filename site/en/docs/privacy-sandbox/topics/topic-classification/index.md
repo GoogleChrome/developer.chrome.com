@@ -127,9 +127,9 @@ The table below outlines an example (though unrealistically small) of a hypothet
 <table class="with-heading-tint">
   <thead>
   <tr>
-  <th><strong>Site</strong></th>
-  <th><strong>Topics</strong></th>
-  <th><strong>API callers on site</strong></th>
+  <th>Site</th>
+  <th>Topics</th>
+  <th>API callers on site</th>
   </tr>
   </thead>
   <tbody>
@@ -169,9 +169,9 @@ In week two, the user visits another site:
 <table class="with-heading-tint">
   <thead>
     <tr>
-    <th><strong>Site</strong></th>
-    <th><strong>Topics</strong></th>
-    <th><strong>API callers on site</strong></th>
+    <th>Site</th>
+    <th>Topics</th>
+    <th>API callers on site</th>
     </tr>
   </thead>
   <tbody>
@@ -188,9 +188,9 @@ In addition, code from adtech2.example is added to diy-clothing.example:
 <table class="with-heading-tint">
   <thead>
     <tr>
-    <th><strong>Site</strong></th>
-    <th><strong>Topics</strong></th>
-    <th><strong>API callers on site</strong></th>
+    <th>Site</th>
+    <th>Topics</th>
+    <th>API callers on site</th>
     </tr>
   </thead>
   <tbody>
