@@ -225,3 +225,55 @@ jobs:
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
         run: npm run snapshots
+
+
+  check-links:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Getting changes
+        id: changes
+        uses: dorny/paths-filter@v2
+        with:
+          filters: |
+            frontend:
+              - 'package.json'
+              - 'site/_filters/**.js'
+              - 'site/_includes/**'
+              - 'site/_js/**.js'
+              - 'site/_plugins/**.js'
+              - 'site/_scss/**.scss'
+              - 'site/_shortcodes/**.js'
+              - 'site/_transforms/**.js'
+              - 'site/_utils/**.js'
+              - 'site/en/content-types/**'
+
+      - name: Cloning repository
+        uses: actions/checkout@v3
+        if: ${{ steps.changes.outputs.frontend == 'true' }}
+
+      - name: Setting up Node.js
+        uses: actions/setup-node@v3
+        if: ${{ steps.changes.outputs.frontend == 'true' }}
+        with:
+          cache: npm
+          node-version: 16
+
+      - name: Installing Node.js packages
+        if: ${{ steps.changes.outputs.frontend == 'true' }}
+        run: npm ci
+
+      - name: Downloading build artifacts
+        if: ${{ steps.changes.outputs.frontend == 'true' }}
+        uses: actions/download-artifact@v3
+        with:
+          name: dist-${{ github.run_id }}
+
+      - name: Unpacking built files
+        if: ${{ steps.changes.outputs.frontend == 'true' }}
+        run: |
+          tar xf dist.tar.gz
+
+      - name: Check Links
+        if: ${{ steps.changes.outputs.frontend == 'true' }}
+        run: npm run check-links
