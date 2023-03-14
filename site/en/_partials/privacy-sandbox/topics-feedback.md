@@ -6,5 +6,3 @@
 - **Privacy Sandbox developer support**: Ask questions and join discussions on the [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
 - For questions about the implementation currently available to test in 
 Chrome: [file a Chromium bug](https://bugs.chromium.org/p/chromium/issues/list?q=topics).
-- For implementation, integration, and general best practice questions: 
-[create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) on the Privacy Sandbox developer support repo.
