@@ -47,7 +47,7 @@ currently have two recommendations for identity providers:
 
 [FedCM (Federated Credential Management)](/docs/privacy-sandbox/fedcm/)
 is a proposal for a privacy-preserving approach to federated
-identity services (such as "Sign in with&nbsp;...")  where users can log into
+identity services (such as "Sign in with...")  where users can log into
 sites without sharing their personal information with the identity service or
 the site.
 
