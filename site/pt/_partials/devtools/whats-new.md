@@ -4,23 +4,23 @@ Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no"
 
 {# $content #}
 
-{# ### Chrome 112 {: #chrome112 }
+### Chrome 112 {: #chrome112 }
 
-* [Recorder updates](/pt/blog/new-in-devtools-112/#recorder)
-* [Recorder replay extensions](/pt/blog/new-in-devtools-112/#replay-extensions)
-* [Record with pierce selectors](/pt/blog/new-in-devtools-112/#pierce-selectors)
-* [Export recordings as Puppeteer scripts with Lighthouse analysis](/pt/blog/new-in-devtools-112/#puppeteer-lighthouse)
-* [Get extensions](/pt/blog/new-in-devtools-112/#get-extensions)
-* [Elements > Styles updates](/pt/blog/new-in-devtools-112/#elements-styles)
-* [CSS documentation in the Styles pane](/pt/blog/new-in-devtools-112/#css)
-* [CSS nesting support](/pt/blog/new-in-devtools-112/#nesting)
-* [Marking logpoints and conditional breakpoints in the Console](/pt/blog/new-in-devtools-112/#logpoint)
-* [Ignore irrelevant scripts during debugging](/pt/blog/new-in-devtools-112/#ignore-list)
-* [JavaScript Profiler deprecation started](/pt/blog/new-in-devtools-112/#js-profiler-deprecation)
-* [Emulate reduced contrast](/pt/blog/new-in-devtools-112/#reduced-contrast)
+* [Atualizações do Gravador](/pt/blog/new-in-devtools-112/#recorder)
+* [Extensões de replay no Gravador](/pt/blog/new-in-devtools-112/#replay-extensions)
+* [Gravação com seletores pierce](/pt/blog/new-in-devtools-112/#pierce-selectors)
+* [Exportar gravações como um script Puppeteer com análise Lighthouse](/pt/blog/new-in-devtools-112/#puppeteer-lighthouse)
+* [Obter extensões](/pt/blog/new-in-devtools-112/#get-extensions)
+* [Elementos > Atualizações de estilos](/pt/blog/new-in-devtools-112/#elements-styles)
+* [Documentação CSS no painel Estilos](/pt/blog/new-in-devtools-112/#css)
+* [Suporte de aninhamento de CSS](/pt/blog/new-in-devtools-112/#nesting)
+* [Destaque de logpoints e breakpoints condicionais no Console](/pt/blog/new-in-devtools-112/#logpoint)
+* [Ignorar scripts irrelevantes durante a depuração](/pt/blog/new-in-devtools-112/#ignore-list)
+* [Início da descontinuação do JavaScript Profiler](/pt/blog/new-in-devtools-112/#js-profiler-deprecation)
+* [Emulação de contraste reduzido](/pt/blog/new-in-devtools-112/#reduced-contrast)
 * [Lighthouse 10](/pt/blog/new-in-devtools-112/#lighthouse)
-* [Miscellaneous highlights](/pt/blog/new-in-devtools-112/#misc)
- #}
+* [Outras novidades](/pt/blog/new-in-devtools-112/#misc)
+
 
 
 ### Chrome 111 {: #chrome111 }
