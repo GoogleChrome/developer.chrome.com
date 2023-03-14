@@ -71,7 +71,7 @@ const fallbackSVGBase64 = window.btoa(
   }
 
   const onSearch = () => {
-    const searchTerm = searchAppsInput.value;
+    const searchTerm = searchAppsInput.value.toLowerCase();
     const selectedApis = apiSelect.value;
     filterCards(cards, searchTerm, selectedApis);
     const url = new URL(window.location.href);
@@ -114,7 +114,7 @@ const fallbackSVGBase64 = window.btoa(
       const matchApis = selectedApis.length
         ? cardApis.some(isSelectedApi)
         : true;
-      if (card.dataset.terms.match(searchTerm) && matchApis) {
+      if (card.dataset.terms.toLowerCase().match(searchTerm) && matchApis) {
         card.removeAttribute('hidden');
       } else {
         card.setAttribute('hidden', 'true');
