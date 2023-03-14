@@ -81,7 +81,7 @@ and add preconnect or DNS prefetch resource hints.
 
 ## Resources
 
-- [Source code for **Preconnect to required origins** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/uses-rel-preconnect.js)
+- [Source code for **Preconnect to required origins** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/uses-rel-preconnect.js)
 - [Resource Prioritization–Getting the Browser to Help You](https://developers.google.com/web/fundamentals/performance/resource-prioritization#preconnect)
 - [Establish network connections early to improve perceived page speed](https://web.dev/preconnect-and-dns-prefetch/)
 - [Link types: preconnect](https://developer.mozilla.org/docs/Web/HTML/Link_types/preconnect#Browser_compatibility)

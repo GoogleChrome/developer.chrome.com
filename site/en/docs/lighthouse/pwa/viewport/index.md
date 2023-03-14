@@ -58,6 +58,6 @@ Here's what each key-value pair does:
 
 ## Resources
 
-- [Source code for **Has a `<meta name="viewport">` tag with `width` or `initial-scale`** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/viewport.js)
+- [Source code for **Has a `<meta name="viewport">` tag with `width` or `initial-scale`** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/viewport.js)
 - [Responsive Web Design Basics](https://web.dev/responsive-web-design-basics/#viewport)
 - [Using the viewport meta tag to control layout on mobile browsers](https://developer.mozilla.org/docs/Web/HTML/Viewport_meta_tag)

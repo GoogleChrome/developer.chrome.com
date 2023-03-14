@@ -1,11 +1,11 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Topics API: latest updates'
+title: 'Topics API latest updates'
 subhead: >
  Updates and enhancements to the design and implementation of the API.
 description: >
  Updates and enhancements to the design and implementation of the API.
-date: 2022-11-04
+date: 2023-01-24
 authors:
  - leeronisrael
  - joeytrotz
@@ -21,6 +21,34 @@ For technical resources, see the developer guides:
 For a non-technical introduction, see the [Topics overview on privacysandbox.com](https://privacysandbox.com/intl/en_us/proposals/topics/).
 
 {% endAside %}
+
+## Chrome’s commitment to Topics
+
+**January 24, 2023**
+
+Following the W3C Technical Architecture Group’s initial design review of Topics, we’ve received some questions from ecosystem stakeholders about what this means for the Topics API.  
+
+As we [noted on Twitter](https://twitter.com/vkw/status/1614001374873944066?s=20&t=BAGWkeoOEwq4yex_JpDNDw), we want to affirm our commitment to make the Topics API available in Chrome Stable this year and continue the public development process. The Topics API offers significant privacy improvements over third-party cookies, limits cross-site tracking,  and is an important building block for a more private web. It will provide publishers and advertisers with an important signal to inform interest-based advertising once third-party cookies are no longer available.  
+
+Launching Topics in Chrome will provide the web community with the opportunity to observe how Topics performs in the real world, as we continue working toward the longer-term goal of browser interoperability.   We’ve seen a tremendous amount of engagement across the ecosystem to design and begin [testing](https://github.com/patcg-individual-drafts/topics/blob/main/topics-tester-list.md) Topics, and we are excited to improve the API in 2023 and beyond.
+
+
+## Insights from early Topics testers
+
+**January 9, 2023**
+
+Topics testing in Chrome is still at an early stage, focused on validating the technical stability
+and core functionality of the API. However, we are encouraged to see some early testers exploring
+aspects of the business logic behind Topics and sharing their insights publicly. For example,
+[Xandr](https://medium.com/xandr-tech/on-the-topic-of-topics-298f95e39269) looked at how the Topics
+classifier compares to Xandr's own method of categorizing websites, and Criteo evaluated the ability
+of Topics, as a standalone signal, to predict users' future interaction with advertiser websites. 
+While isolated analysis won't meaningfully predict the real-world performance of the Privacy Sandbox
+technologies, it can prompt constructive dialog and surface areas for improvement. As more holistic
+utility testing becomes possible in 2023, we look forward to deeper industry engagement to optimize
+Topics and develop best practices for its use in digital advertising products. If you are testing
+Topics we encourage you to share your plans and insights on the 
+[Topics API Tester List](https://github.com/patcg-individual-drafts/topics/blob/main/topics-tester-list.md).   
 
 ## Ecosystem feedback on Topics for Q3 2022
 
@@ -73,7 +101,7 @@ the Topics proposal](https://github.com/patcg-individual-drafts/topics/issues) o
 also provide feedback via the
 [Privacy Sandbox feedback form](https://docs.google.com/forms/d/e/1FAIpQLSePSeywmcwuxLFsttajiv7NOhND1WoYtKgNJYxw_AGR8LR1Dg/viewform).
 
- Here are some specific areas where the Chrome team is seeking input from testers and other
+Here are some specific areas where the Chrome team is seeking input from testers and other
 stakeholders.
 
 ### Topics taxonomy

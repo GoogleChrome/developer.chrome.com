@@ -53,7 +53,7 @@ Actually implementing those features requires more work:
 
 ## Resources
 
-- [Source code for **Does not register a service worker that controls page and `start_url`** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/service-worker.js)
+- [Source code for **Does not register a service worker that controls page and `start_url`** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/service-worker.js)
 - [Service Workers: an Introduction](/docs/workbox/service-worker-overview/)
 - [Service workers and the Cache Storage API](https://web.dev/service-workers-cache-storage/)
 - [What is network reliability and how do you measure it?](https://web.dev/network-connections-unreliable/)

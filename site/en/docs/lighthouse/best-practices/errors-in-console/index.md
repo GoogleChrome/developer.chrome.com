@@ -77,7 +77,7 @@ You can also use the `catch` block to handle the error more gracefully.
 
 ## Resources
 
-- [Source code for **Browser errors were logged to the console** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/errors-in-console.js)
+- [Source code for **Browser errors were logged to the console** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/errors-in-console.js)
 - [Console Overview](/docs/devtools/console/)
 - [Stack Overflow](https://stackoverflow.com/)
 - [try…catch](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/try...catch)

@@ -129,7 +129,7 @@ To investigate an issue:
     {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Lsz9HyD4YSKs23rdGmMC.png", alt="The Network panel shows a tooltip when you hover over the information icon.", width="800", height="548" %}
 
 [1]: https://web.dev/samesite-cookies-explained
-[2]: https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
+[2]: https://web.dev/what-is-mixed-content/
 [3]: https://web.dev/coop-coep/
 [4]: https://samesite-sandbox.glitch.me/
 [5]: /docs/devtools/open

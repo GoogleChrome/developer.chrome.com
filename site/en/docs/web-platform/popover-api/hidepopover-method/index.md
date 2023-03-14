@@ -7,7 +7,7 @@ authors:
   - chrisdavidmills
   - jheyy
 date: 2022-10-19
-updated: 2022-11-10
+updated: 2023-01-25
 ---
 
 The **`hidePopover()`** instance method of the [`Element`](https://developer.mozilla.org/docs/Web/API/Element) interface dismisses a [popover](/docs/web-platform/popover-api/) element.
@@ -57,4 +57,4 @@ popover.hidePopover();
 * [The Popover API](/docs/web-platform/popover-api/)
 * [Pop-ups: They're making a resurgence!](/blog/pop-ups-theyre-making-a-resurgence/), by Jhey Tompkins
 * [Chrome Platform Status: The Popover API](https://chromestatus.com/feature/5463833265045504) 
-* [Open UI: Popover API Explainer](https://open-ui.org/components/popup.research.explainer)
+* [Open UI: Popover API Explainer](https://open-ui.org/components/popover.research.explainer)

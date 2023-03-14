@@ -37,4 +37,4 @@ Learn more in [Workbox: your high-level service worker toolkit](/docs/workbox/).
 
 ## Resources
 
-[Source code for **Site works cross-browser** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/manual/pwa-cross-browser.js)
+[Source code for **Site works cross-browser** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/manual/pwa-cross-browser.js)

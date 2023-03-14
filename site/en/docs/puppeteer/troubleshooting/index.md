@@ -320,7 +320,7 @@ Run the container by passing `node -e "<yourscript.js content as a string>"` as 
 ```
 
 There's a full example at https://github.com/ebidel/try-puppeteer that shows
-how to run this Dockerfile from a webserver running on App Engine Flex (Node).
+how to run this Dockerfile from a web server running on App Engine Flex (Node).
 
 ### Running on Alpine
 
@@ -443,7 +443,7 @@ If you are using an EC2 instance running amazon-linux in your CI/CD pipeline, an
    sudo yum install -y chromium
    ```
 
-Now Puppeteer can launch Chromium to run your tests. If you do not enable EPEL and if you continue installing chromium as part of `npm install`, Puppeteer cannot launch Chromium due to unavailablity of `libatk-1.0.so.0` and many more packages.
+Now Puppeteer can launch Chromium to run your tests. If you do not enable EPEL and if you continue installing chromium as part of `npm install`, Puppeteer cannot launch Chromium due to unavailability of `libatk-1.0.so.0` and many more packages.
 
 ## Code Transpilation Issues
 

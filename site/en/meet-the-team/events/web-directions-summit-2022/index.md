@@ -35,7 +35,7 @@ sessions:
       - Web UI
     time: null
     type: speaker
-    slidesUrl: null
+    slidesUrl: https://www.bram.us/2022/12/02/css-architecture-2022-12-01-web-directions-summit/
     videoUrl: null
   - speaker: alexandrawhite
     title: 'Technically speaking: Improve your code with documentation'
@@ -49,7 +49,7 @@ sessions:
       - Documentation
     time: null
     type: speaker
-    slidesUrl: null
+    slidesUrl: https://alexand.us/slides-summit22
     videoUrl: null
   - speaker: thomassteiner
     title: Building amazing apps with Project Fugu APIs
@@ -62,7 +62,7 @@ sessions:
       - Web Developer Tools
     time: null
     type: speaker
-    slidesUrl: null
+    slidesUrl: https://goo.gle/web-directions-fugu
     videoUrl: null
   - speaker: rachelandrew
     title: >-
@@ -88,6 +88,6 @@ sessions:
       - Interop
     time: null
     type: speaker
-    slidesUrl: null
+    slidesUrl: https://noti.st/rachelandrew/dR6Ize/when-new-css-features-collide-possibility-and-complexity-at-the-intersections
     videoUrl: null
 ---

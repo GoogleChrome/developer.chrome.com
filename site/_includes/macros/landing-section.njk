@@ -1,9 +1,12 @@
 {% from 'macros/landing-deco.njk' import landingDeco with context %}
 
-{% macro landingSection(title, desc, items, color, type, ordered, imgSrc, imgAlt, imgWidth, imgHeight, smallImgSrc) %}
+{% macro landingSection(title, desc, items, color, type, ordered, imgSrc, imgAlt, imgWidth, imgHeight, smallImgSrc, customId) %}
+{% set sectionId = customId if customId else title %}
+
 <section
   class="landing-section landing-section--{{type}} {% if ordered %} landing-section--ordered {% endif %} hairline rounded-lg width-full display-grid gap-top-400"
-  style="--number-color: var(--color-{{ color }}-medium); --dot-color: var(--color-{{ color }}-lighter);">
+  style="--number-color: var(--color-{{ color }}-medium); --dot-color: var(--color-{{ color }}-lighter);"
+  id="{{sectionId | slugify | ensureUniqueHrefInProduction}}">
 
   {{ landingDeco(title, desc, color, imgSrc, imgAlt, imgWidth, imgHeight, smallImgSrc) }}
 

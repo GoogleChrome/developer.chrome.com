@@ -43,6 +43,7 @@ steps:
     args:
       - '-c'
       - |
+        gcloud components update --version=413.0.0
         gsutil rsync external/data/ gs://external-dcc-data
 
 options:

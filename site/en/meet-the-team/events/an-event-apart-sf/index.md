@@ -26,6 +26,6 @@ sessions:
       - Web UI
     time: TBC
     type: speaker
-    slidesUrl: null
+    slidesUrl: https://noti.st/rachelandrew/QQnOuG/when-new-css-features-collide-possibility-and-complexity-at-the-intersections
     videoUrl: null
 ---

@@ -4,7 +4,7 @@ title: Tap targets are not sized appropriately
 description: |
   Learn about the "Tap targets are not sized appropriately" Lighthouse audit.
 date: 2019-05-02
-updated: 2019-08-21
+updated: 2023-03-08
 ---
 
 Tap targets are the areas of a web page that users on touch devices can
@@ -17,14 +17,16 @@ your page more mobile-friendly and accessible.
 ## How the Lighthouse tap targets audit fails
 
 [Lighthouse](/docs/lighthouse/overview/) flags pages
-with tap targets that are too small or too close together:
+with tap targets that meet both of these conditions:
+
+- The target is smaller than 48&nbsp;px by 48&nbsp;px.
+- At least 25% the target area within 48&nbsp;px of the center of the target overlaps with another target.
 
 <figure class="w-figure">
   {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/6Dhlxe7vkj7gX3e5rX4B.png", alt="Lighthouse audit showing inappropriately sized tap targets", width="800", height="206", class="w-screenshot" %}
 </figure>
 
-Targets that are smaller than 48&nbsp;px by 48&nbsp;px or closer than 8&nbsp;px
-apart fail the audit. When the audit fails, Lighthouse lists the results in a
+When the audit fails, Lighthouse lists the results in a
 table with three columns:
 
 <div class="w-table-wrapper">
@@ -50,7 +52,7 @@ table with three columns:
 
 ## How to fix your tap targets
 
-**Step 1:** Increase the size of tap targets that are too small.
+**Option 1:** Increase the size of tap targets that are too small.
 Tap targets that are 48&nbsp;px by 48&nbsp;px never fail the audit. If you have
 elements that shouldn't _appear_ any bigger (for example, icons), try increasing
 the `padding` property:
@@ -62,11 +64,11 @@ the `padding` property:
   </figcaption>
 </figure>
 
-**Step 2:** Increase the spacing between tap targets that are too close together
-using properties like `margin`. There should be at least 8&nbsp;px between
-tap targets.
+**Option 2:** Increase the spacing between tap targets that are too close together
+using properties like `margin`. 8&nbsp;px between tap targets is a good starting point,
+but is not always enough spacing to pass the audit especially for very small targets.
 
 ## Resources
 
 - [Accessible tap targets](https://web.dev/accessible-tap-targets/): more information on how to ensure your tap targets are accessible by all users.
-- [Source code for **Tap targets are not sized appropriately** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/seo/tap-targets.js)
+- [Source code for **Tap targets are not sized appropriately** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/seo/tap-targets.js)

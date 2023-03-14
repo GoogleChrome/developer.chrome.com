@@ -252,4 +252,4 @@ Richard and Peter. [Hero image](https://unsplash.com/photos/UAvYasdkzq8) by
 [powerful-apis]:
 https://chromium.googlesource.com/chromium/src/+/lkgr/docs/security/permissions-for-powerful-web-platform-features.md
 [ot]: https://developers.chrome.com/origintrials/#/view_trial/6883752030435803137
-[devtools]: https://developers.google.com/web/updates/2019/07/devtools#backgroundservices
+[devtools]: /blog/new-in-devtools-77/#backgroundservices

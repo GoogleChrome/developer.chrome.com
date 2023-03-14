@@ -16,7 +16,7 @@ tags:
 
 {% Partial 'devtools/banner.md' %}
 
-This blog post is about the implementation of DevTools support for debugging Content Security Policy (CSP) issues with the help of the [recently introduced **Issues** tab](https://developers.google.com/web/updates/2020/09/issues-tab).
+This blog post is about the implementation of DevTools support for debugging Content Security Policy (CSP) issues with the help of the [recently introduced **Issues** tab](/blog/issues-tab/).
 
 The implementation work was done in the course of 2 internships:
 1. During the first one, we built the general reporting framework and designed the issue messages for 3 CSP violation issues.
@@ -24,7 +24,7 @@ The implementation work was done in the course of 2 internships:
 
 ## What is a Content Security Policy?
 
-[Content Security Policy (CSP)]( https://web.dev/strict-csp/) allows to restrict certain behaviors in a website to increase security. For example, CSP can be used to disallow inline scripts or to disallow [`eval`](https://tc39.es/ecma262/#sec-eval-x), both of which reduce the attack surface for [Cross-Site Scripting (XSS)](https://owasp.org/www-community/attacks/xss/) attacks. For a detailed introduction to CSP, read [here](https://developers.google.com/web/fundamentals/security/csp). 
+[Content Security Policy (CSP)]( https://web.dev/strict-csp/) allows to restrict certain behaviors in a website to increase security. For example, CSP can be used to disallow inline scripts or to disallow [`eval`](https://tc39.es/ecma262/#sec-eval-x), both of which reduce the attack surface for [Cross-Site Scripting (XSS)](https://owasp.org/www-community/attacks/xss/) attacks. For a detailed introduction to CSP, read [here](https://web.dev/csp/).
 
 A particularly new CSP is the [Trusted Types(TT)](https://web.dev/trusted-types/) policy, which enables a dynamic analysis that can systematically prevent a large class of injection attacks on websites. To achieve this, TT supports a website in policing its JavaScript code to only allow certain types of things to be assigned to DOM sinks such as innerHTML.
 
@@ -32,9 +32,9 @@ A website can activate a content security policy by including a particular HTTP 
 `content-security-policy: require-trusted-types-for 'script'; trusted-types default`
 activates the TT policy for a page.
 
-Each policy can operate in one of these modes: 
+Each policy can operate in one of these modes:
 
-- **enforced mode** - where every policy violation is an error, 
+- **enforced mode** - where every policy violation is an error,
 - **report-only mode** - which reports the error message as a warning, but doesn't cause a failure in the web page.
 
 
@@ -51,7 +51,7 @@ The goal of this work was to improve the debugging experience for CSP issues. Wh
 
 ### Step 1: defining user stories for CSP Issues
 
-Before we started our implementation work, we created a [design document](https://docs.google.com/document/d/1hmC2R-f2_024I3urdEpKm34V5tSWeIk8MuRts7rggso/) with user stories to better understand what we needed to do. For example, we wrote down the following user story: 
+Before we started our implementation work, we created a [design document](https://docs.google.com/document/d/1hmC2R-f2_024I3urdEpKm34V5tSWeIk8MuRts7rggso/) with user stories to better understand what we needed to do. For example, we wrote down the following user story:
 
 ----
 
@@ -76,7 +76,7 @@ Using this process, we learned that the source location was the most important p
 We turned this insight into the first draft of the information that we wanted to make available to DevTools via the [Chrome DevTools Protocol (CDP)](https://chromedevtools.github.io/devtools-protocol/):
 
 Below is the excerpt from [third_party/blink/public/devtools_protocol/browser_protocol.pdl](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/public/devtools_protocol/browser_protocol.pdl;l=652;drc=be78fe5cf948ee4863e72c9240a1b6f9f7430fde)
- 
+
  ```java
  type ContentSecurityPolicyIssueDetails extends object
    properties
@@ -158,7 +158,7 @@ Usage of content from not included sources is restricted to strengthen the secur
 `img-src 'self'`
 
 ### BLOCKED URLs
-https://imgur.com/JuXCo1p.jpg 
+https://imgur.com/JuXCo1p.jpg
 
 ## Specific information
 https://web.dev/strict-csp/
@@ -176,16 +176,16 @@ CSP issues on your page can also be discovered in the [tab specifically dedicate
 
 ## Debugging Trusted Types problems
 
-Working with TT at large scale can be challenging without the right developer tools. 
+Working with TT at large scale can be challenging without the right developer tools.
 
 
 ### Improved console printing
 
 When we are working with Trusted Objects, we would like to display at least the same amount of information as for the non-trusted counterpart. Unfortunately, currently when displaying a Trusted Object no information about the wrapped object is displayed.
 
-It is because the value that is displayed in the console is taken from calling `.valueOf()` on the object by default. However, in the case of Trusted Type, the returned value is not very useful. Instead, we would like to have something similar to what you get when calling `.toString()`. To achieve this, we need to modify V8 and Blink to introduce special handling for trusted type objects. 
+It is because the value that is displayed in the console is taken from calling `.valueOf()` on the object by default. However, in the case of Trusted Type, the returned value is not very useful. Instead, we would like to have something similar to what you get when calling `.toString()`. To achieve this, we need to modify V8 and Blink to introduce special handling for trusted type objects.
 
-Although due to historical reasons this custom handling was done in V8, such an approach has important disadvantages. There are many objects that require custom displaying but whose type is the same at the JS level. Since V8 is pure JS, it cannot distinguish concepts that correspond to a Web API such as a Trusted Type. For that reason, V8 has to ask its embedder (Blink) for help to distinguish them. 
+Although due to historical reasons this custom handling was done in V8, such an approach has important disadvantages. There are many objects that require custom displaying but whose type is the same at the JS level. Since V8 is pure JS, it cannot distinguish concepts that correspond to a Web API such as a Trusted Type. For that reason, V8 has to ask its embedder (Blink) for help to distinguish them.
 
 Hence, moving that part of the code to Blink or any embedder sounds like a logical choice. Apart from the exposed issue, there are many other benefits:
 

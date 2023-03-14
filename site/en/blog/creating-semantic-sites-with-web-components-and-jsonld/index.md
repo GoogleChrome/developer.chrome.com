@@ -38,9 +38,9 @@ It contains two widgets: a map with a pin for every office and a dropdown with t
 {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/jE8gDo4MKkxxCE3nuGDA.png", alt="Web Components and JSON-LD demo page", width="795", height="628" %}
 </figure>
 
-In this demo we are using [LocalBusiness](https://developers.google.com/webmasters/business-location-pages/) entities to express the meaning of our data, which is the geographical location of some of the Google Offices.
+In this demo we are using [LocalBusiness](https://developers.google.com/search/docs/appearance/structured-data/local-business) entities to express the meaning of our data, which is the geographical location of some of the Google Offices.
 
-The best way to check how Google is reading and indexing this page is though the new improved [Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/). Submit the demo’s URL in the *Fetch URL* section and click *Fetch and validate*. The section on the right will show you parsed data retrieved from the page along with any errors that may occur. It is a very convenient way to check if your JSON-LD markup is correct and processable by Google.
+The best way to check how Google is reading and indexing this page is though the new improved [Structured Data Testing Tool](https://developers.google.com/search/docs/appearance/structured-data/). Submit the demo’s URL in the *Fetch URL* section and click *Fetch and validate*. The section on the right will show you parsed data retrieved from the page along with any errors that may occur. It is a very convenient way to check if your JSON-LD markup is correct and processable by Google.
 
 <figure>
 {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/226TIltGi1Ct2JDf2U5a.png", alt="Structured data testing tool UI.", width="800", height="382" %}
@@ -106,6 +106,6 @@ To sum up, JSON-LD and schema.org combined with the web components technology en
 ## Create your own components
 
 You can try out [the examples on GitHub](https://github.com/googlearchive/structured-data-web-components) or read the Polymer’s guide on [creating reusable components](https://polymer-library.polymer-project.org/1.0/docs/tools/reusable-elements) to start writing your own.
-Check the [Structured Data documentation](https://developers.google.com/structured-data/) on developers.google.com to get inspired about various entities you can mark up with JSON-LD.
+Check the [Structured Data documentation](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data) on developers.google.com to get inspired about various entities you can mark up with JSON-LD.
 
 Consider giving us a shout at [@polymer](https://twitter.com/intent/follow?screen_name=polymer) to show off custom elements you've built!

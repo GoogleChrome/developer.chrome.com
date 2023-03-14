@@ -84,7 +84,7 @@ for Android which means we have to use the `play()` method of the audio
 element. This method must be triggered by [a user gesture] such as a touch or a
 mouse click.
 That means listening to
-[`pointerup`](https://developers.google.com/web/updates/2016/10/pointer-events), `click`, and `touchend`
+[`pointerup`](/blog/pointer-events), `click`, and `touchend`
 events. In other words, the user must click a button before your web app can
 actually make noise.
 
@@ -294,11 +294,11 @@ shows up on lock screens.
 <figure>
     {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/kqOqJ9RiTFD2BFUHIyqB.jpg", alt="Lock Screen", width="800", height="1422" %}
     <figcaption>
-      Lock Screen - 
+      Lock Screen -
       <a href="https://wikipedia.org/wiki/Rick_Astley#/media/File:Rick_Astley_Tivoli_Gardens.jpg">
         Photo
       </a>
-      by Michael Alø-Nielsen / 
+      by Michael Alø-Nielsen /
       <a href="https://creativecommons.org/licenses/by/2.0/">
         CC BY 2.0
       </a>
@@ -510,14 +510,14 @@ Chrome Bugs:
 [media session api]: https://wicg.github.io/mediasession/
 [a user gesture]: https://html.spec.whatwg.org/multipage/interaction.html#activation
 [low-end devices]: https://chromium.googlesource.com/chromium/src/+/a66fe8713400ed760cd5d78931e536f33c5828d5/chrome/android/java/src/org/chromium/chrome/browser/media/ui/MediaNotificationManager.java#514
-[service worker]: https://developers.google.com/web/fundamentals/instant-and-offline/service-worker/lifecycle
-[caching checklist]: https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching
+[service worker]: https://web.dev/service-worker-lifecycle/
+[caching checklist]: https://web.dev/http-cache/
 [cache, falling back to network]: https://jakearchibald.com/2014/offline-cookbook/#cache-falling-back-to-network
-[the very first page load]: https://developers.google.com/web/fundamentals/instant-and-offline/service-worker/lifecycle#clientsclaim
-[at least 5 seconds]: https://chromium.googlesource.com/chromium/src/+/5d8eab739eb23c4fd27ba6a18b0e1afc15182321/media/base/media_content_type.cc#10 
-[cache api]: https://developers.google.com/web/fundamentals/instant-and-offline/web-storage/offline-for-pwa
+[the very first page load]: https://web.dev/service-worker-lifecycle/#clientsclaim
+[at least 5 seconds]: https://chromium.googlesource.com/chromium/src/+/5d8eab739eb23c4fd27ba6a18b0e1afc15182321/media/base/media_content_type.cc#10
+[cache api]: https://web.dev/storage-for-the-web/
 [media session samples]: https://googlechrome.github.io/samples/media-session/
-[web audio api]: https://developers.google.com/web/updates/2012/02/HTML5-audio-and-the-Web-Audio-API-are-BFFs
+[web audio api]: /blog/html5-audio-and-the-web-audio-api-are-bffs
 [chrome platform status]: https://www.chromestatus.com/feature/5639924124483584
 [web audiofocus api]: https://wicg.github.io/audio-focus/explainer.html
 [blender foundation]: http://www.blender.org/

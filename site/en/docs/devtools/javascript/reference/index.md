@@ -21,8 +21,21 @@ See [Get Started With Debugging JavaScript In Chrome DevTools][1] to learn the b
 ## Pause code with breakpoints {: #breakpoints }
 
 Set a breakpoint so that you can pause your code in the middle of its execution.
+To learn how to set breakpoints, see [Pause Your Code With Breakpoints][2].
 
-See [Pause Your Code With Breakpoints][2] to learn how to set breakpoints.
+### Check values when paused {: #inline-eval }
+
+While the execution is paused, the debugger evaluates all variables, constants, and objects within the current function up to a breakpoint. The debugger shows the current values inline next to the corresponding declarations.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/mUySGJfdYgR3URwClr67.png", alt="Inline evaluations displayed next to declarations.", width="800", height="363" %}
+
+You can use the [**Console**](/docs/devtools/console/) to query the evaluated variables, constants, and objects.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/e1Cyyoa0bLLGDnm3SU4D.png", alt="Using the Console to query the evaluated variables, constants and objects.", width="800", height="613" %}
+
+{% Aside 'gotchas' %}
+While the execution is paused, you can also [restart the current function](/docs/devtools/javascript/reference/#restart-frame) and even [live-edit](/docs/devtools/javascript/reference/#live-edit) it.
+{% endAside %}
 
 ### Preview class/function properties on hover {: #properties }
 
@@ -295,7 +308,7 @@ Try restarting the frames of both functions in the following way:
 
 ### Show ignore-listed frames {: #show-ignore-listed-frames }
 
-With the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Ignore List** > **Automatically add known third-party scripts to ignore list** setting enabled, the **Scope** pane shows only the frames that are relevant to your code.
+By default, the **Call Stack** pane shows only the frames that are relevant to your code and omits any scripts added to {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Ignore List**](/docs/devtools/settings/ignore-list/).
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YZH1mvFdglBhJVn7AGrz.png", alt="Call stack.", width="800", height="422" %}
 
@@ -416,6 +429,8 @@ To ignore a script from the Editor pane:
 
 {% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/q7leDy8D975ZlhtiB3f6.png", alt="Ignoring a script from the Editor pane.", width="800", height="575" %}
 
+You can remove a script from the list of ignored from [Settings](/docs/devtools/settings/#manage-custom-ignore-list).
+
 ### Ignore a script from the Call Stack pane {: #call-stack-ignore-list }
 
 To ignore a script from the **Call Stack** pane:
@@ -424,6 +439,8 @@ To ignore a script from the **Call Stack** pane:
 2.  Select **Add script to ignore list**.
 
 {% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/y2NiIZH9UURpEtXAuVCZ.png", alt="Ignoring a script from the Call Stack pane.", width="800", height="575" %}
+
+You can remove a script from the list of ignored from [Settings](/docs/devtools/settings/#manage-custom-ignore-list).
 
 ### Ignore a script from Settings {: #settings-ignore-list }
 

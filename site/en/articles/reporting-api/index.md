@@ -18,7 +18,7 @@ tags:
 <p>This is an API guide with detailed usage examples for the <strong>Reporting
 API (v1)</strong>, which uses the <code>Reporting-Endpoints</code> header.</p>
 
-<p>If you're using the legacy Reporting API (<code>Report-To</code> header), read about <a href="/reporting-api-migration/">API migration</a> instead.</p>
+<p>If you're using the legacy Reporting API (<code>Report-To</code> header), read about <a href="/blog/reporting-api-migration/">API migration</a> instead.</p>
 
 <p>Are you looking for <a href="https://web.dev/network-error-logging/">Network Error Logging</a> documentation? Head over to Network Error logging instead.</p>
 {% endAside %}
@@ -166,7 +166,7 @@ that happen throughout your site:
 {% Aside 'caution' %}
 [Network Error Logging](https://w3c.github.io/network-error-logging/) isn't listed because it isn't
 supported in the new version of the API. Check the [migration
-guide](/blogs/reporting-api-migration/#network-error-logging) for details.
+guide](/blog/reporting-api-migration/#network-error-logging) for details.
 {% endAside %}
 
 <div>
@@ -307,7 +307,7 @@ Here's the data you can find in each of these reports:
 
 #### Credentialed reports
 
-Reporting endpoints that have the [same origin](/same-site-same-origin/#same-origin-and-cross-origin) as the page that generates the report receive the credentials
+Reporting endpoints that have the [same origin](https://web.dev/same-site-same-origin/#same-origin-and-cross-origin) as the page that generates the report receive the credentials
 (cookies) in the requests that contain the reports.
 
 Credentials may give useful additional context about the report; for
@@ -372,7 +372,7 @@ sent to your endpoint: the formers will, the latters won't.
 The table below sums up browser support for the **Reporting API v1**, that is with the
 `Reporting-Endpoints` header. Browser support for the Reporting API v0 (`Report-To` header) is the
 same, except for one report type: Network Error Logging isn't supported in the new Reporting API.
-Read the [migration guide](/blogs/reporting-api-migration/#network-error-logging) for details.
+Read the [migration guide](/blog/reporting-api-migration/#network-error-logging) for details.
 
 <div>
   <table>
@@ -390,8 +390,8 @@ Read the [migration guide](/blogs/reporting-api-migration/#network-error-logging
       <tr>
         <td>CSP violation (Level 3 only)*</td>
         <td>✔ Yes</td>
-        <td>✘ No</td>
-        <td>✘ No</td>
+        <td>✔ Yes</td>
+        <td>✔ Yes</td>
         <td>✘ No</td>
         <td>✔ Yes</td>
       </tr>
@@ -424,7 +424,7 @@ Read the [migration guide](/blogs/reporting-api-migration/#network-error-logging
 </ul>
 {% endAside %}
 
-<p>This table only summarizes support for <code>report-to</code> with the new <code>Reporting-Endpoints</code> header. Read the [CSP reporting migration tips](/reporting-api-migration/#csp-reporting-migration) if you're looking to migrate to <code>Reporting-Endpoints</code>.</p>
+<p>This table only summarizes support for <code>report-to</code> with the new <code>Reporting-Endpoints</code> header. Read the [CSP reporting migration tips](/blog/reporting-api-migration/#csp-reporting-migration) if you're looking to migrate to <code>Reporting-Endpoints</code>.</p>
 
 ## Using the Reporting API
 
@@ -501,9 +501,9 @@ Reporting-Endpoints: main-endpoint="https://reports.example/main", default="http
 
 If you're migrating from the legacy Reporting API to the new Reporting API, it may make sense to
 set **both** `Reporting-Endpoints` and `Report-To`. See details in the [migration
-guide](/reporting-api-migration/#migration-steps). In particular, if you're using reporting for
+guide](/blog/reporting-api-migration/#migration-steps). In particular, if you're using reporting for
 `Content-Security-Policy` violations via the `report-uri` directive only, check the [migration
-steps for CSP reporting](/reporting-api-migration/#migration-steps-for-csp-reporting).
+steps for CSP reporting](/blog/reporting-api-migration/#migration-steps-for-csp-reporting).
 
 ```http
 Reporting-Endpoints: main-endpoint="https://reports.example/main", default="https://reports.example/default"

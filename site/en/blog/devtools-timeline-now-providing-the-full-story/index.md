@@ -10,7 +10,7 @@ updated: 2019-03-16
 ---
 
 
-The DevTools [Timeline panel](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/timeline-tool) has always been the best first stop on the path to performance optimization. This centralized overview of your app’s activity helps you analyze where time is spent on loading, scripting, rendering, and painting. Recently, we’ve upgraded the Timeline with more instrumentation so that you can see a more in-depth view of your app’s performance.
+The DevTools [Timeline panel](/docs/devtools/evaluate-performance/performance-reference) has always been the best first stop on the path to performance optimization. This centralized overview of your app’s activity helps you analyze where time is spent on loading, scripting, rendering, and painting. Recently, we’ve upgraded the Timeline with more instrumentation so that you can see a more in-depth view of your app’s performance.
 
 We’ve added the following features:
 
@@ -22,7 +22,7 @@ Note that using the __Paint__ capture options described in this article do incur
 
 ## Integrated JavaScript Profiler
 
-If you’ve ever poked around in __Profiles__ panel, you’re probably familiar with the [JavaScript CPU profiler](https://developers.google.com/web/tools/chrome-devtools/rendering-tools/). This tool measures where execution time is spent in your JavaScript functions. By viewing JavaScript profiles with the Flame Chart, you can visualize your JavaScript processing over time.
+If you’ve ever poked around in __Profiles__ panel, you’re probably familiar with the [JavaScript CPU profiler](docs/devtools/rendering). This tool measures where execution time is spent in your JavaScript functions. By viewing JavaScript profiles with the Flame Chart, you can visualize your JavaScript processing over time.
 
 Now, you can get this granular breakdown of your JavaScript execution in the __Timeline__ panel. By selecting the __JS Profiler__ capture option, you can see your JavaScript call stacks in the Timeline along with other browser events. Adding this feature to the Timeline helps streamline your debugging workflow. But more than that, it allows you to view your JavaScript in context and identify the parts of your code that affect page load time and rendering.
 

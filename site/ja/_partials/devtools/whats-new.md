@@ -4,6 +4,59 @@
 
 {# $content #}
 
+{# ### Chrome 112 {: #chrome112 }
+
+* [Recorder updates](/ja/blog/new-in-devtools-112/#recorder)
+* [Recorder replay extensions](/ja/blog/new-in-devtools-112/#replay-extensions)
+* [Record with pierce selectors](/ja/blog/new-in-devtools-112/#pierce-selectors)
+* [Export recordings as Puppeteer scripts with Lighthouse analysis](/ja/blog/new-in-devtools-112/#puppeteer-lighthouse)
+* [Get extensions](/ja/blog/new-in-devtools-112/#get-extensions)
+* [Elements > Styles updates](/ja/blog/new-in-devtools-112/#elements-styles)
+* [CSS documentation in the Styles pane](/ja/blog/new-in-devtools-112/#css)
+* [CSS nesting support](/ja/blog/new-in-devtools-112/#nesting)
+* [Marking logpoints and conditional breakpoints in the Console](/ja/blog/new-in-devtools-112/#logpoint)
+* [Ignore irrelevant scripts during debugging](/ja/blog/new-in-devtools-112/#ignore-list)
+* [JavaScript Profiler deprecation started](/ja/blog/new-in-devtools-112/#js-profiler-deprecation)
+* [Emulate reduced contrast](/ja/blog/new-in-devtools-112/#reduced-contrast)
+* [Lighthouse 10](/ja/blog/new-in-devtools-112/#lighthouse)
+* [Miscellaneous highlights](/ja/blog/new-in-devtools-112/#misc)
+ #}
+
+{# ### Chrome 111 {: #chrome111 }
+
+* [Styles ペインで高精細色をデバッグする](/ja/blog/new-in-devtools-111/#color)
+* [強化されたブレークポイントの UX](/ja/blog/new-in-devtools-111/#breakpoint-redesign)
+* [カスタマイズ可能な Recorder ショートカット](/ja/blog/new-in-devtools-111/#recorder)
+* [Angular のシンタックスハイライトの改善](/ja/blog/new-in-devtools-111/#syntax)
+* [キャッシュを Application パネルで再整理する](/ja/blog/new-in-devtools-111/#cache)
+* [その他のハイライト](/ja/blog/new-in-devtools-111/#misc)
+ #}
+
+
+### Chrome 110 {: #chrome110 }
+
+* [再読み込み時の Performance パネルのクリア](/ja/blog/new-in-devtools-110/#perf)
+* [Recorder の更新](/ja/blog/new-in-devtools-110/#recorder)
+* [Recorder でのユーザーフローコードの表示およびハイライト](/ja/blog/new-in-devtools-110/#recorder-code)
+* [レコーディング時のセレクタタイプのカスタマイズ](/ja/blog/new-in-devtools-110/#recorder-selector)
+* [レコーディング中のユーザーフローの編集](/ja/blog/new-in-devtools-110/#recorder-edit)
+* [自動的な直接のプリティプリント](/ja/blog/new-in-devtools-110/#pretty-print)
+* [Vue、SCSS などのシンタックスハイライトとインラインプレビューの改善](/ja/blog/new-in-devtools-110/#highlight)
+* [Console での人間工学的で一貫性のあるオートコンプリート](/ja/blog/new-in-devtools-110/#console)
+* [その他のハイライト](/ja/blog/new-in-devtools-110/#misc)
+
+
+### Chrome 109 {: #chrome109 }
+
+* [Recorder: ステップごとのCopy asオプション、ページ内リプレイ、ステップのコンテキストメニュー](/ja/blog/new-in-devtools-109/#recorder)
+* [パフォーマンスの記録の中で実際の関数名を表示](/ja/blog/new-in-devtools-109/#performance)
+* [ConsoleとSourcesパネルでの新しいキーボードショートカット](/ja/blog/new-in-devtools-109/#keyboard-shortcuts)
+* [JavaScript デバッグの改善](/ja/blog/new-in-devtools-109/#debugging)
+* [その他のハイライト](/ja/blog/new-in-devtools-109/#misc)
+* [[実験的] ブレークポイント管理の UX 改善](/ja/blog/new-in-devtools-109/#breakpoint-redesign)
+* [[実験的] 自動的な直接のプリティプリント](/ja/blog/new-in-devtools-109/#pretty-print)
+
+
 ### Chrome 108 {: #chrome108 }
 
 * [非アクティブな CSS プロパティのヒント](/ja/blog/new-in-devtools-108/#css-hint)

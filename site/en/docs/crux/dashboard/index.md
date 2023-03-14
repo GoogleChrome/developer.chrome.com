@@ -41,7 +41,7 @@ The CrUX Dashboard is a [Looker Studio](https://cloud.google.com/looker-studio) 
 
 ## Accessing the CrUX Dashboard
 
-To use the existing CrUX Dashboard you need to [lauch the dashboard, passing the origin as a query param](https://datastudio.google.com/u/0/reporting/bbc5698d-57bb-4969-9e07-68810b9fa348/page/keDQB?params=%7B%22origin%22:%22wwww.example.com%22%7D). To make this easier–since the origin nees to be URL encoded—you can use [Rick Viscomi](https://twitter.com/rick_viscomi)'s [CrUX Dash Launcher](https://rviscomi.github.io/crux-dash-launcher/) which takes the URL as an input and constructs the dashboard URL.
+To use the existing CrUX Dashboard you need to [lauch the dashboard, passing the origin as a query param](https://datastudio.google.com/u/0/reporting/bbc5698d-57bb-4969-9e07-68810b9fa348/page/keDQB?params=%7B%22origin%22:%22wwww.example.com%22%7D). To make this easier–since the origin needs to be URL encoded—you can use [Rick Viscomi](https://twitter.com/rick_viscomi)'s [CrUX Dash Launcher](https://rviscomi.github.io/crux-dash-launcher/) which takes the URL as an input and constructs the dashboard URL.
 
 The dashboard URL can then be shared and bookmarked for easy reference.
 
@@ -149,4 +149,4 @@ The CrUX Dashboard also trades away some of the versatility of the raw data on B
 
 ### How can I customize the dashboard
 
-The page details how to access a read-only version of the CrUX Dashboard maintained by the CrUX team. If you wish to create your own copy of the dashboard, so you can edit it to show different visualizations, then [see this user guide](https://web.dev/chrome-ux-report-data-studio-dashboard/) for more info. Note that by creating you own copy, you will need to update the month manually and also will not benefit from any additions added to the official dashboard—for example new metrics, or other information.
+The page details how to access a read-only version of the CrUX Dashboard maintained by the CrUX team. If you wish to create your own copy of the dashboard, so you can edit it to show different visualizations, then [see this user guide](/blog/chrome-ux-report-looker-studio-dashboard/) for more info. Note that by creating you own copy, you will need to update the month manually and also will not benefit from any additions added to the official dashboard—for example new metrics, or other information.

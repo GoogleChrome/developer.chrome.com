@@ -28,72 +28,6 @@ answered here:
 
 ## General questions
 
-### Why do we need the Privacy Sandbox?
-
-The Privacy Sandbox initiative has two core aims:
-
--  Develop replacement solutions to support web use cases and business models
-   without allowing users to be tracked across sites, and avoiding cross-site
-   tracking users aren't aware of.
--  Phase out support for third-party cookies and other forms of tracking when
-   new solutions are in place.
-
-### Who works on the Privacy Sandbox?
-
-The Privacy Sandbox is a set of proposed web standards.
-
-Chrome and other browser vendors, as well as ad companies and other
-stakeholders, have offered more than 30 proposals to date. These proposals can
-be found in the
-[public resources of W3C groups](https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo)
-and cover a wide variety of use cases and requirements.
-
-### How can I keep track of changes and progress in the Privacy Sandbox?
-
-You can follow the monthly updates to the [Progress in the Privacy Sandbox](/tags/progress-in-the-privacy-sandbox/) series of articles which also includes an [RSS / Atom feed where you can subscribe](/feeds/progress-in-the-privacy-sandbox.xml) with your preferred reader.
-
-The article series links to the matching monthly updates to the [Privacy Sandbox timeline](https://privacysandbox.com/timeline/) which shows the current status and schedule for proposals.
-
-These high-level resources will provide signposts to changes across the project, but for individual proposals where you want to follow in detail you should:
-
- - Watch or Star proposal repos on GitHub to get notification of new issues and updates: the Privacy Sandbox [status page](/docs/privacy-sandbox/status/) provides a link to the repo for each proposal
- - Join the associated [W3C group](https://www.w3.org/groups/) for regular meetings discussing the proposal detail
- - Star the associated entry on [Chrome Platform Status](https://chromestatus.com) for email updates on Chrome implementation changes
-
-### How can I get involved?
-
--  Participate in incubation, testing and refinement of the APIs:  
-   [How to participate in the Privacy Sandbox initiative](/blog/privacy-sandbox-participate/)
--  As a developer, join discussions or ask questions:  
-   [Privacy Sandbox Developer Support](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)
-
-For questions about specific APIs, you can file an issue on the
-[GitHub repo for an API Explainer](/docs/privacy-sandbox/status/).
-
-### Can you define the terminology in the API explainers?
-
-Yes, refer to the [Privacy Sandbox glossary](/docs/privacy-sandbox/glossary/).
-
-### When will the Privacy Sandbox APIs be implemented?
-
-The [Privacy Sandbox timeline](https://privacysandbox.com/timeline/) shows the
-roadmap to phase out third-party cookies. Additional current information for
-individual APIs is available on the
-[implementation status page](/docs/privacy-sandbox/status/).
-
-### Are the Privacy Sandbox APIs in Chromium or Chrome?
-
-The APIs are implemented in
-[Chromium](https://en.wikipedia.org/wiki/Chromium_(web_browser)), which
-is the open-source browser used to make Chrome. Code for the Privacy Sandbox
-APIs can be accessed via
-[Chromium Code Search](https://source.chromium.org/search?q=floc).
-
-You can
-[download Chromium](http://chromium.org/getting-involved/download-chromium),
-then [run it with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
-to allow access to APIs that are in the process of implementation.
-
 ### How can I try Privacy Sandbox APIs that aren't yet turned on by default?
 
 As an API progresses through development in Chrome, there are multiple ways it
@@ -127,20 +61,6 @@ browser settings. Users who opt-out will not have Privacy Sandbox features
 turned on, even on pages which provide a valid origin trial token.  
 {% endAside%}  
 
-### I registered for an origin trial, but the API isn't working on my site
-
-See [Troubleshooting Chrome's origin trials](/blog/origin-trial-troubleshooting/#chrome).
-
-### Will Privacy Sandbox origin trials work in Chromium or other browsers?
-
-Chrome origin trials are designed to work for Chrome users. Don't rely on Chrome
-origin trial tokens to allow trial features in other browsers, including Chromium,
-and other Chromium-based browsers.
-
-For more detailed information, see
-[Troubleshooting Chrome's origin trials](/blog/origin-trial-troubleshooting/#chrome).
-
-Chrome on iOS and iPadOS does not support Chrome origin trials.
 
 ### Will `SameSite` become irrelevant after third-party cookies are deprecated?
 
@@ -264,46 +184,6 @@ which is the PR to create the Prebid Topics Module
 which has an active discussion on the Prebid Topics module's intended workflow.
 - If this is a high dependency, reach out to Prebid.js to check in on status updates and timelines, 
 through whatever standard channel they offer.
-
-## FLEDGE
-
-### How can I ask a question about this feature?
-
--  For questions about the proposal:
-   [create an issue](https://github.com/WICG/turtledove/issues) on the proposal
-   repo.
--  For questions about the implementation currently available to test in
-   Chrome: [file a Chromium bug](https://bugs.chromium.org/p/chromium/issues/list?q=fledge).
--  For implementation, integration, and general best practice questions:
-   [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) 
-   on the Privacy Sandbox developer support repo.
-
-### What's the difference between FLEDGE and TURTLEDOVE?
-
-[FLEDGE](/docs/privacy-sandbox/fledge) is the first experiment to be implemented
-in Chromium within the [TURTLEDOVE](https://github.com/WICG/turtledove) family
-of proposals. The differences mostly pertain to separation of the on-device role
-of the ad buyer and seller:
-
-FLEDGE allows a 'trusted server' to provide access to real-time data used by a
-worklet in bidding, without compromising privacy. Each interest group can
-have a `trusted_bidding_signals_url` and `trusted_bidding_signals_keys`
-attribute.
-
-At auction time, the browser communicates with the trusted server to
-fetch the values for those keys, and then makes those values available
-to the `generate_bid()` function. The advertiser (ad buyer) can store additional
-metadata, along with the interest group, to improve on-device bidding.
-
-### Can the Topics API be used with the FLEDGE API? 
-
-Yes. An observed topic for the current user, provided by the Topics API, could be used as 
-contextual information by a seller or bidder. A topic could be included in
-the following properties:
-
-*  `auctionSignals`, a property of the auction configuration object passed to `navigator.runAdAuction()`
-*  `userBiddingSignals`, a property of the interest group configuration
-   object passed to `navigator.joinAdInterestGroup()`
 
 
 ## Attribution Reporting

@@ -15,7 +15,7 @@ This feature was previously called "Shared Element Transitions", and is sometime
 
 The View Transition API makes it easy to change the DOM in a single step, while creating an animated transition between the two states.
 
-It's currently behind the `chrome://flags/#view-transition` flag in Chrome 109+.
+It's available in Chrome 111+, currently in beta.
 
 <style>
   .video-full-demo {
@@ -25,6 +25,7 @@ It's currently behind the `chrome://flags/#view-transition` flag in Chrome 109+.
 
 <figure>
   {% Video
+    playsinline="true",
     src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/hgnJfPFUbGlucFegEEtl.mp4",
     class="video-full-demo",
     loop="true",
@@ -32,7 +33,7 @@ It's currently behind the `chrome://flags/#view-transition` flag in Chrome 109+.
     muted="true",
     controls="true"
   %}
-  <figcaption>Transitions created with the View Transition API. <a href="https://http203-playlist.netlify.app/">Try the demo site</a> – Requires Chrome 109+ and the <code>chrome://flags/#view-transition</code> flag.</figcaption>
+  <figcaption>Transitions created with the View Transition API. <a href="https://http203-playlist.netlify.app/">Try the demo site</a> – Requires Chrome 111+.</figcaption>
 </figure>
 
 ## Why do we need this feature?
@@ -90,6 +91,7 @@ And just like that, pages cross-fade:
 
 <figure>
   {% Video
+    playsinline="true",
     src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/9rdbsCmBXKOYxOQNjBMI.mp4",
     class="desktop-demo",
     loop="true",
@@ -154,6 +156,7 @@ With that one change, the fade is now really slow:
 
 <figure>
   {% Video
+    playsinline="true",
     src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/90h6Ppxza6oPqNiMpTPE.mp4",
     class="desktop-demo",
     loop="true",
@@ -198,6 +201,7 @@ And here's the result:
 
 <figure>
   {% Video
+    playsinline="true",
     src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/BRT5dMgEzpixRmrVYKwN.mp4",
     class="desktop-demo",
     loop="true",
@@ -215,12 +219,11 @@ In this example, the animation always moves from right to left, which doesn't fe
 
 In the previous demo, the whole page is involved in the shared axis transition. That works for most of the page, but it doesn't seem quite right for the heading, as it slides out just to slide back in again.
 
-To avoid this, you can extract the header from the rest of the page so it can be animated separately. This is done by assigning a `view-transition-name` to the element, and giving the element [`layout`](https://developer.mozilla.org/docs/Web/CSS/CSS_Containment#layout_containment) or [`paint`](https://developer.mozilla.org/docs/Web/CSS/CSS_Containment#paint_containment) containment. `layout` containment has fewer restrictions, so it's usually the better choice.
+To avoid this, you can extract the header from the rest of the page so it can be animated separately. This is done by assigning a `view-transition-name` to the element.
 
 ```css
 .main-header {
   view-transition-name: main-header;
-  contain: layout;
 }
 ```
 
@@ -234,6 +237,7 @@ And the result of that:
 
 <figure>
   {% Video
+    playsinline="true",
     src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/zlpY4YFct0LHC6eowSFA.mp4",
     class="desktop-demo",
     loop="true",
@@ -272,7 +276,6 @@ That hasn't mattered until now, as the header is the same size and position both
 ```css
 .main-header-text {
   view-transition-name: main-header-text;
-  contain: layout;
   width: fit-content;
 }
 ```
@@ -295,6 +298,7 @@ But again, just going with the defaults:
 
 <figure>
   {% Video
+    playsinline="true",
     src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/eXu6vohojllPLNEQScjO.mp4",
     class="desktop-demo",
     loop="true",
@@ -324,6 +328,7 @@ Using the animations panel, you can pause the next animation, then scrub back an
 
 <figure>
   {% Video
+    playsinline="true",
     src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/DMH7qPqMszyVbTYOA2zd.mp4",
     class="devtools-demo",
     muted="true",
@@ -341,7 +346,6 @@ For instance, the main video embed can be given a `view-transition-name`:
 ```css
 .full-embed {
   view-transition-name: full-embed;
-  contain: layout;
 }
 ```
 
@@ -362,6 +366,7 @@ And the result:
 
 <figure>
   {% Video
+    playsinline="true",
     src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/283vqtaDXSaGRTn5nEEn.mp4",
     class="desktop-demo",
     loop="true",
@@ -374,6 +379,74 @@ And the result:
 The thumbnail now transitions into the main image. Even though they're conceptually (and literally) different elements, the transition API treats them as the same thing because they shared the same `view-transition-name`.
 
 The real code for this is a little more complicated than the simple example above, as it also handles the transition back to the thumbnail page. [See the source](https://glitch.com/edit/#!/simple-set-demos?path=6-expanding-image%2Fscript.js%3A15%3A17) for the full implementation.
+
+## Custom entry and exit transitions
+
+Look at this example:
+
+<style>
+  .enter-exit-video {
+    aspect-ratio: 1400/776;
+  }
+</style>
+
+<figure>
+  {% Video
+    playsinline="true",
+    src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/uXSSraCaMIvu7nbWv0XS.mp4",
+    class="enter-exit-video",
+    loop="true",
+    muted="true",
+    controls="true"
+  %}
+  <figcaption>Entering and exiting sidebar. <a href="https://simple-set-demos.glitch.me/enter-exit-sidebar/">Minimal demo</a>. <a href="https://glitch.com/edit/#!/simple-set-demos?path=enter-exit-sidebar%2Fstyles.css%3A1%3A0">Source</a>.</figcaption>
+</figure>
+
+The sidebar is part of the transition:
+
+```css
+.sidebar {
+  view-transition-name: sidebar;
+}
+```
+
+But, unlike the header in the previous example, the sidebar doesn't appear on all pages. If both states have the sidebar, the transition pseudo-elements look like this:
+
+```diff
+::view-transition
+├─ …other transition groups…
+└─ ::view-transition-group(sidebar)
+   └─ ::view-transition-image-pair(sidebar)
+      ├─ ::view-transition-old(sidebar)
+      └─ ::view-transition-new(sidebar)
+```
+
+However, if the sidebar is only on the new page, the `::view-transition-old(sidebar)` pseudo-element won't be there. Since there's no 'old' image for the sidebar, the image-pair will only have a `::view-transition-new(sidebar)`. Similarly, if the sidebar is only on the old page, the image-pair will only have a `::view-transition-old(sidebar)`.
+
+In the demo above, the sidebar transitions differently depending on whether it's entering, exiting, or present in both states. It enters by sliding from the right and fading in, it exits by sliding to the right and fading out, and it stays in place when it's present in both states.
+
+To create specific entry and exit transitions, you can use the [`:only-child` pseudo-class](https://developer.mozilla.org/docs/Web/CSS/:only-child) to target the old/new pseudo-element when it's the only child in the image-pair:
+
+<!-- prettier-ignore -->
+```css
+/* Entry transition */
+::view-transition-new(sidebar):only-child {
+  animation: 300ms cubic-bezier(0, 0, 0.2, 1) both fade-in,
+    300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
+}
+
+/* Exit transition */
+::view-transition-old(sidebar):only-child {
+  animation: 150ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
+    300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-right;
+}
+```
+
+In this case, there's no specific transition for when the sidebar is present in both states, since the default is perfect.
+
+{% Aside %}
+Support for `:only-child` on transition pseudo-elements was added in Chrome 110.
+{% endAside %}
 
 ## Async DOM updates, and waiting for content
 
@@ -410,6 +483,7 @@ In the case where the thumbnail transitions to a larger image:
 
 <figure>
   {% Video
+    playsinline="true",
     src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/283vqtaDXSaGRTn5nEEn.mp4",
     class="desktop-demo",
     loop="true",
@@ -450,6 +524,7 @@ Conveniently, all the transitions so far have been to elements with the same asp
 
 <figure>
   {% Video
+    playsinline="true",
     src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/gXiaS9IpE70fnv4kkrK5.mp4",
     class="aspect-ratio-change-demo",
     loop="true",
@@ -506,6 +581,7 @@ You may want to use different transitions on mobile vs desktop, such as this exa
 
 <figure>
   {% Video
+    playsinline="true",
     src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/NSCx5JTmzyJPOu6rrpeT.mp4",
     class="desktop-demo",
     loop="true",
@@ -569,6 +645,7 @@ Sometimes a navigation from one particular type of page to another should have a
 
 <figure>
   {% Video
+    playsinline="true",
     src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/Btn9XiUhpQC7Lz198IKI.mp4",
     class="desktop-demo",
     loop="true",
@@ -629,12 +706,85 @@ Now you can use that class name in your CSS to change the transition:
 
 As with media queries, the presence of these classes could also be used to change which elements get a `view-transition-name`.
 
+## Transitioning without freezing other animations {:#transitioning-without-freezing}
+
+Take a look at this demo of a video transitioning position:
+
+<style>
+  .not-freezing-demo {
+    aspect-ratio: 1366/1584;
+    max-width: 683px;
+    max-height: 70vh;
+  }
+</style>
+
+<figure>
+  {% Video
+    playsinline="true",
+    src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/PdbIbficqb89NkKrBOBt.mp4",
+    class="not-freezing-demo",
+    loop="true",
+    muted="true",
+    controls="true"
+  %}
+  <figcaption>Video transition. <a href="https://simple-set-demos.glitch.me/video/">Minimal demo</a>. <a href="https://glitch.com/edit/#!/simple-set-demos?path=video%2Fstyles.css%3A2%3A21">Source</a>.</figcaption>
+</figure>
+
+Did you see anything wrong with it? Don't worry if you didn't. Here it is slowed right down:
+
+<figure>
+  {% Video
+    playsinline="true",
+    src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/gfErCErLjrbc5RdXUR43.mp4",
+    class="not-freezing-demo",
+    loop="true",
+    muted="true",
+    controls="true"
+  %}
+  <figcaption>Video transition, slower. <a href="https://simple-set-demos.glitch.me/video/">Minimal demo</a>. <a href="https://glitch.com/edit/#!/simple-set-demos?path=video%2Fstyles.css%3A2%3A21">Source</a>.</figcaption>
+</figure>
+
+During the transition, the video appears to freeze, then the playing version of the video fades in. This is because the `::view-transition-old(video)` is a screenshot of the old view, whereas the `::view-transition-new(video)` is a _live_ image of the new view.
+
+You can fix this, but first, ask yourself if it's worth fixing. If you didn't see the 'problem' when the transition was playing at its normal speed, I wouldn't bother changing it.
+
+If you really want to fix it, then don't show the `::view-transition-old(video)`; switch straight to the `::view-transition-new(video)`. You can do this by overriding the default styles and animations:
+
+```css
+::view-transition-old(video) {
+  /* Don't show the frozen old view */
+  display: none;
+}
+
+::view-transition-new(video) {
+  /* Don't fade the new view in */
+  animation: none;
+}
+```
+
+And that's it!
+
+<figure>
+  {% Video
+    playsinline="true",
+    src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/n5BdihfhzitBSIak1KhM.mp4",
+    class="not-freezing-demo",
+    loop="true",
+    muted="true",
+    controls="true"
+  %}
+  <figcaption>Video transition, slower. <a href="https://simple-set-demos.glitch.me/video/">Minimal demo</a>. <a href="https://glitch.com/edit/#!/simple-set-demos?path=video%2Fstyles.css%3A2%3A21">Source</a>.</figcaption>
+</figure>
+
+Now the video plays throughout the transition.
+
 ## Animating with JavaScript {:#animating-with-javascript}
 
 So far, all the transitions have been defined using CSS, but sometimes CSS isn't enough:
 
 <figure>
   {% Video
+    playsinline="true",
     src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/MrrqwatxWSPdobfDR1Qo.mp4",
     class="desktop-demo",
     loop="true",
@@ -756,7 +906,7 @@ async function switchView(data) {
 
   animateFromMiddle(transition);
 
-  await transition.domUpdated;
+  await transition.updateCallbackDone;
 }
 
 async function animateFromMiddle(transition) {
@@ -781,9 +931,13 @@ async function animateFromMiddle(transition) {
 
 {% endCompare %}
 
-This example uses `transition.domUpdated` to wait for the DOM update, and to reject if it fails. `switchView` no longer rejects if the transition fails, it resolves when the DOM update completes, and rejects if it fails.
+This example uses `transition.updateCallbackDone` to wait for the DOM update, and to reject if it fails. `switchView` no longer rejects if the transition fails, it resolves when the DOM update completes, and rejects if it fails.
 
-If you want `switchView` to resolve when the new view has 'settled', as in, any animated transition has completed or skipped to the end, replace `transition.domUpdated` with `transition.finished`.
+If you want `switchView` to resolve when the new view has 'settled', as in, any animated transition has completed or skipped to the end, replace `transition.updateCallbackDone` with `transition.finished`.
+
+{% Aside %}
+`updateCallbackDone` was previously `domUpdated`. It was renamed in Chrome 111.
+{% endAside %}
 
 ## Not a polyfill, but… {:#not-a-polyfill}
 
@@ -798,12 +952,13 @@ function transitionHelper({
   updateDOM,
 }) {
   if (skipTransition || !document.startViewTransition) {
-    const domUpdated = Promise.resolve(updateDOM()).then(() => undefined);
+    const updateCallbackDone = Promise.resolve(updateDOM()).then(() => {});
 
     return {
       ready: Promise.reject(Error('View transitions unsupported')),
-      domUpdated,
-      finished: domUpdated,
+      updateCallbackDone,
+      finished: updateCallbackDone,
+      skipTransition: () => {},
     };
   }
 
@@ -842,40 +997,53 @@ You can also provide some `classNames` to add to `<html>` during the transition,
 
 You can also pass `true` to `skipTransition` if you don't want an animation, even in browsers that support View Transitions. This is useful if your site has a user preference to disable transitions.
 
+## Working with frameworks
+
+If you're working with a library or framework that abstracts away DOM changes, the tricky part is knowing when the DOM change is complete. Here's a set of examples, using the [helper above](#not-a-polyfill), in various frameworks.
+
+- [React](https://codesandbox.io/s/nervous-mclaren-j8v8y0?file=/src/App.tsx)—the key here is [`flushSync`](https://beta.reactjs.org/reference/react-dom/flushSync), which applies a set of state changes synchronously. Yes, there's a big warning about using that API, but [Dan Abramov](https://twitter.com/dan_abramov) assures me it's appropriate in this case. As usual with React and async code, when using the various promises returned by `startViewTransition`, take care that your code is running with the correct state.
+- [Vue.js](https://sfc.vuejs.org/#eNqNVduO2zYQ/ZWpimLlZCUZaYOiqr3YYhOgBXp7CAIEUR5oabTLmCIFXuw4jv89Q9KSvN7NxS/mZThn5szM0T75o+/zjcOkTBam1ry3YNC6/qqSvOuVtrAHje0lSPxgX/F6DQdoterggh5d/H5iZTWThluu5J8oetSjYV44y4XJ3xtvX8laSWOhVk5aWHrn6XxGFwCVbJ2svQfgstbYobQ3gjDTGey9wTlEGk4BmNnJGlzfMIsv/vtnMPe/AJNvmHD49GlACQ+2jNsxpTTCAxz838HvaLUoIh/EBG0sdr0g97QDWKyctRTlde2jW1bJ/XCr5Oqv4WBRRNv4ruEbqAUzht6EyMh0vw+rw2FR0DXZLYoTMNoauxN+eWc7ERNbsXp9q+lVU8JK0CbEXyuhdAk/tm0bM6hkHlkOj1olbdayjotdCYaIzAxq7k2JWGIiY4LfyhJqihp1OO5VZLsEtjJKOIvhmEtqkRKez3+COTBnVfThi9Mq3ZVx6RN4k2ZkFekN+IZ/xBKePd9sw9mG4zabqppJ1tF1CHpIoXgCN85YaqTJDp4Ulbxe467V9MCAVpbAMuWOqVo1NMBJUNEo/W3e4G2MiPwHiIeeuDxy5hv4i66yR3z5IpXleV5KNGnIanb5JROJ26NJBGQ0WSzcNE6HBfE2n3cmwE23kbLMsezcY8san8nllNTA6beCPI/gGxjE+whC63F8Qt8ml0mUiKxjPWmAkiQ1wT+NTbgwVVIOJFcJyYrfV8mdtb0pi8LJfn1LjdwV13RXaAqQd5g1qrv+OX+W//IrjY2xp+c5mi5babWlBifEKiHSR+cFHW5QZxplgxr1V8HObO8Bnt09AB26gggY9I8yxw9BLkehe1zSzJr3r6Z2X0LLhMGQRpCPf0OzLuHtu3A2Kh/tDsfq8RbSMzefPsEPjaqd16XcWKbtayrnZDDKZlTo6PWGCeH15oWSSIj/00Rwg7lGEoQNpieiO8vtHcqU1Hd5Bfsgo9Gdpg+KPk5U3LOGNGhy9R5rm77UWun0wod0wooBJ43rPWnYXMz8/EQnD6Mbr1ouublDEsevGN3npoQh7KPBYZhq/zeSNixeiiDueSjG39QNOWuaNM/jQajOkH7k8kS7lpO7R2owETo4mJ7mQ2J+QTntItcx4O+Ikb5Iikp2P0z/eoA6FmpC9KOcHD4DPLDcUA==)—the key here is [`nextTick`](https://vuejs.org/api/general.html#nexttick), which fulfills once the DOM has been updated.
+- [Svelte](https://svelte.dev/repl/84cffc3241514c1581bf951bdf818def?version=3.55.1)—very similar to Vue, but the method to await the next change is [`tick`](https://svelte.dev/docs#run-time-svelte-tick).
+- [Lit](https://lit.dev/playground/#project=W3sibmFtZSI6ImFwcC50cyIsImNvbnRlbnQiOiJpbXBvcnQge2h0bWwsIGNzcywgTGl0RWxlbWVudH0gZnJvbSAnbGl0JztcbmltcG9ydCB7Y3VzdG9tRWxlbWVudCwgcHJvcGVydHl9IGZyb20gJ2xpdC9kZWNvcmF0b3JzLmpzJztcbmltcG9ydCB7IHRyYW5zaXRpb25IZWxwZXIgfSBmcm9tICcuL3V0aWxzLmpzJztcblxuQGN1c3RvbUVsZW1lbnQoJ2RlbW8tYXBwJylcbmV4cG9ydCBjbGFzcyBEZW1vQXBwIGV4dGVuZHMgTGl0RWxlbWVudCB7XG4gIHN0YXRpYyBzdHlsZXMgPSBjc3NgXG4gICAgLmNvdW50IHtcbiAgICAgIGZvbnQtZmFtaWx5OiBzYW5zLXNlcmlmO1xuICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgaW5zZXQ6IDUwJSAwIGF1dG87XG4gICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoLTUwJSk7XG4gICAgICBmb250LXNpemU6IDI1dnc7XG4gICAgICB2aWV3LXRyYW5zaXRpb24tbmFtZTogY291bnQ7XG4gICAgICAvKiBUaGlzIHdvbid0IGJlIHJlcXVpcmVkIHNvb24uIEluIGZhY3QsIGl0IGFscmVhZHkgd29ya3Mgd2l0aG91dCB0aGlzIGluIENhbmFyeSAqL1xuICAgICAgY29udGFpbjogbGF5b3V0O1xuICAgIH1cbiAgYDtcbiAgXG4gIGluY3JlbWVudENsaWNrKCkge1xuICAgIHRyYW5zaXRpb25IZWxwZXIoe1xuICAgICAgdXBkYXRlRE9NOiBhc3luYyAoKSA9PiB7XG4gICAgICAgIHRoaXMuY291bnQrKztcbiAgICAgICAgYXdhaXQgdGhpcy51cGRhdGVDb21wbGV0ZTtcbiAgICAgIH1cbiAgICB9KTtcbiAgfVxuXG4gIEBwcm9wZXJ0eSgpXG4gIGNvdW50ID0gMDtcblxuICByZW5kZXIoKSB7XG4gICAgcmV0dXJuIGh0bWxgXG4gICAgICA8YnV0dG9uIEBjbGljaz0ke3RoaXMuaW5jcmVtZW50Q2xpY2t9PkluY3JlbWVudDwvYnV0dG9uPlxuICAgICAgPGRpdiBjbGFzcz1cImNvdW50XCI-JHt0aGlzLmNvdW50fTwvZGl2PlxuICAgIGA7XG4gIH1cbn1cbiJ9LHsibmFtZSI6ImluZGV4Lmh0bWwiLCJjb250ZW50IjoiPCFET0NUWVBFIGh0bWw-XG48aGVhZD5cbiAgPHN0eWxlPlxuICAgIGh0bWwge1xuICAgICAgYmFja2dyb3VuZDogYmxhY2s7XG4gICAgICBjb2xvcjogI2ZmZjtcbiAgICB9XG5cbiAgICAvKiBDdXN0b20gdHJhbnNpdGlvbiAqL1xuICAgIEBrZXlmcmFtZXMgcm90YXRlLW91dCB7XG4gICAgICB0byB7XG4gICAgICAgIHRyYW5zZm9ybTogcm90YXRlKDkwZGVnKTtcbiAgICAgIH1cbiAgICB9XG5cbiAgICBAa2V5ZnJhbWVzIHJvdGF0ZS1pbiB7XG4gICAgICBmcm9tIHtcbiAgICAgICAgdHJhbnNmb3JtOiByb3RhdGUoLTkwZGVnKTtcbiAgICAgIH1cbiAgICB9XG5cbiAgICBodG1sOjp2aWV3LXRyYW5zaXRpb24tb2xkKGNvdW50KSxcbiAgICBodG1sOjp2aWV3LXRyYW5zaXRpb24tbmV3KGNvdW50KSB7XG4gICAgICBhbmltYXRpb24tZHVyYXRpb246IDIwMG1zO1xuICAgICAgYW5pbWF0aW9uLW5hbWU6IC11YS12aWV3LXRyYW5zaXRpb24tZmFkZS1pbiwgcm90YXRlLWluO1xuICAgIH1cblxuICAgIGh0bWw6OnZpZXctdHJhbnNpdGlvbi1vbGQoY291bnQpIHtcbiAgICAgIGFuaW1hdGlvbi1uYW1lOiAtdWEtdmlldy10cmFuc2l0aW9uLWZhZGUtb3V0LCByb3RhdGUtb3V0O1xuICAgIH1cbiAgPC9zdHlsZT5cbiAgPHNjcmlwdCB0eXBlPVwibW9kdWxlXCIgc3JjPVwiLi9hcHAuanNcIj48L3NjcmlwdD5cbjwvaGVhZD5cbjxib2R5PlxuICA8ZGVtby1hcHA-PC9kZW1vLWFwcD5cbjwvYm9keT4ifSx7Im5hbWUiOiJwYWNrYWdlLmpzb24iLCJjb250ZW50Ijoie1xuICBcImRlcGVuZGVuY2llc1wiOiB7XG4gICAgXCJsaXRcIjogXCJeMi4wLjBcIixcbiAgICBcIkBsaXQvcmVhY3RpdmUtZWxlbWVudFwiOiBcIl4xLjAuMFwiLFxuICAgIFwibGl0LWVsZW1lbnRcIjogXCJeMy4wLjBcIixcbiAgICBcImxpdC1odG1sXCI6IFwiXjIuMC4wXCJcbiAgfVxufSIsImhpZGRlbiI6dHJ1ZX0seyJuYW1lIjoidXRpbHMudHMiLCJjb250ZW50IjoiZXhwb3J0IGZ1bmN0aW9uIHRyYW5zaXRpb25IZWxwZXIoe1xuICBza2lwVHJhbnNpdGlvbiA9IGZhbHNlLFxuICBjbGFzc05hbWVzID0gW10sXG4gIHVwZGF0ZURPTSxcbn0pIHtcbiAgaWYgKHNraXBUcmFuc2l0aW9uIHx8ICFkb2N1bWVudC5zdGFydFZpZXdUcmFuc2l0aW9uKSB7XG4gICAgY29uc3QgdXBkYXRlQ2FsbGJhY2tEb25lID0gUHJvbWlzZS5yZXNvbHZlKHVwZGF0ZURPTSgpKS50aGVuKCgpID0-IHt9KTtcbiAgICBjb25zdCByZWFkeSA9IFByb21pc2UucmVqZWN0KEVycm9yKCdWaWV3IHRyYW5zaXRpb25zIHVuc3VwcG9ydGVkJykpO1xuXG4gICAgLy8gQXZvaWQgc3BhbW1pbmcgdGhlIGNvbnNvbGUgd2l0aCB0aGlzIGVycm9yIHVubGVzcyB0aGUgcHJvbWlzZSBpcyB1c2VkLlxuICAgIHJlYWR5LmNhdGNoKCgpID0-IHt9KTtcblxuICAgIHJldHVybiB7XG4gICAgICByZWFkeSxcbiAgICAgIHVwZGF0ZUNhbGxiYWNrRG9uZSxcbiAgICAgIGZpbmlzaGVkOiB1cGRhdGVDYWxsYmFja0RvbmUsXG4gICAgICBza2lwVHJhbnNpdGlvbjogKCkgPT4ge30sXG4gICAgfTtcbiAgfVxuXG4gIGRvY3VtZW50LmRvY3VtZW50RWxlbWVudC5jbGFzc0xpc3QuYWRkKC4uLmNsYXNzTmFtZXMpO1xuXG4gIGNvbnN0IHRyYW5zaXRpb24gPSBkb2N1bWVudC5zdGFydFZpZXdUcmFuc2l0aW9uKHVwZGF0ZURPTSk7XG5cbiAgdHJhbnNpdGlvbi5maW5pc2hlZC5maW5hbGx5KCgpID0-XG4gICAgZG9jdW1lbnQuZG9jdW1lbnRFbGVtZW50LmNsYXNzTGlzdC5yZW1vdmUoLi4uY2xhc3NOYW1lcylcbiAgKTtcblxuICByZXR1cm4gdHJhbnNpdGlvbjtcbn0ifV0)—the key here is the [`this.updateComplete`](https://lit.dev/docs/v1/components/lifecycle/#updatecomplete) promise within components, which fulfills once the DOM has been updated.
+
 ## API reference {:#api-reference}
 
-`const viewTransition = document.startViewTransition(domUpdateCallback)`
+`const viewTransition = document.startViewTransition(updateCallback)`
 : Start a new `ViewTransition`.
 
-    `domUpdateCallback` is called once the current state of the document is captured.
+    `updateCallback` is called once the current state of the document is captured.
 
-    Then, when the promise returned by `domUpdateCallback` fulfills, the transition begins in the next frame. If the promise returned by `domUpdateCallback` rejects, the transition is abandoned.
+    Then, when the promise returned by `updateCallback` fulfills, the transition begins in the next frame. If the promise returned by `updateCallback` rejects, the transition is abandoned.
 
 Instance members of `ViewTransition`:
 
-`viewTransition.domUpdated`
-: A promise that fulfills when the promise returned by `domUpdateCallback` fulfills, or rejects when it rejects.
+`viewTransition.updateCallbackDone`
+: A promise that fulfills when the promise returned by `updateCallback` fulfills, or rejects when it rejects.
 
-    The View Transition API wraps a DOM change and creates a transition. However, sometimes you don't care about the success/failure of the transition animation, you just want to know if and when the DOM change happens. `domUpdated` is for that use-case.
+    The View Transition API wraps a DOM change and creates a transition. However, sometimes you don't care about the success/failure of the transition animation, you just want to know if and when the DOM change happens. `updateCallbackDone` is for that use-case.
+
+    {% Aside %}
+    `updateCallbackDone` was previously `domUpdated`. It was renamed in Chrome 111.
+    {% endAside %}
 
 `viewTransition.ready`
 : A promise that fulfills once the pseudo-elements for the transition are created, and the animation is about to start.
 
-    It rejects if the transition cannot begin. This can be due to misconfiguration, such as duplicate `view-transition-name`s, or if `domUpdateCallback` returns a rejected promise.
+    It rejects if the transition cannot begin. This can be due to misconfiguration, such as duplicate `view-transition-name`s, or if `updateCallback` returns a rejected promise.
 
     This is useful for [animating the transition pseudo-elements with JavaScript](#animating-with-javascript).
 
 `viewTransition.finished`
 : A promise that fulfills once the end state is fully visible and interactive to the user.
 
-    It only rejects if `domUpdateCallback` returns a rejected promise, as this indicates the end state wasn't created.
+    It only rejects if `updateCallback` returns a rejected promise, as this indicates the end state wasn't created.
 
     Otherwise, if a transition fails to begin, or is skipped during the transition, the end state is still reached, so `finished` fulfills.
 
 `viewTransition.skipTransition()`
 : Skip the animation part of the transition.
 
-    This won't skip calling `domUpdateCallback`, as the DOM change is separate to the transition.
+    This won't skip calling `updateCallback`, as the DOM change is separate to the transition.
 
 ## Default style and transition reference
 

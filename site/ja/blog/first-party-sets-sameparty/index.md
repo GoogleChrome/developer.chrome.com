@@ -1,10 +1,11 @@
 ---
 layout: layouts/blog-post.njk
-title: First-Party Sets と SameParty 属性
+title: "[OUTDATED] First-Party Sets と SameParty 属性"
 description: >
+
   First-Party Sets では、ファーストパーティとサードパーティが別の物として処理される場合に、同一のエンティティが所有して運営している関連ドメイン名をファースト パーティとして扱えるようにすることができます。
 date: 2021-08-26
-updated: 2022-08-04
+updated: 2022-11-30
 thumbnail: image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/JL7L7S2qKI53pTWACfcv.jpg
 alt: First-Party Sets を示す図。1 つのセットには example.com、example.rs、および example.co.uk ドメインが、もう 1 つのセットには brandx.site、fly-brandx.site、および drive-brandx.site ドメインが含まれている。
 tags:
@@ -14,7 +15,7 @@ authors:
   - mihajlija
 ---
 
-{% Aside 'caution' %} First-Party Sets の提案は、[ユースケース別の定義と Storage Access API を基に、新しいデザインに更新](https://github.com/WICG/first-party-sets/issues/92)されています。[レポジトリで議論をご覧頂くこともできますし](https://github.com/WICG/first-party-sets/issues)、進捗があればこちらの内容も更新していきます。{% endAside %}
+{% Aside 'warning' %} First-Party Sets の提案が更新されたため、この記事は最新ではありません。最新情報については、[Explainer](https://github.com/WICG/first-party-sets) と[テスト手順](/blog/first-party-sets-testing-instructions)を参照してください。 {% endAside %}
 
 多くの組織には、`brandx.site` や `fly-brandx.site` などの異なるドメイン名に関連するサイト、または `example.com`、`example.rs`、`example.co.uk` のように異なる国のドメインに関連するサイトがあります。
 

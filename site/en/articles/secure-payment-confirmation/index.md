@@ -65,7 +65,7 @@ Meanwhile, there is a new authentication standard on the rise called WebAuthn.
 [Web Authentication](https://webauthn.guide/) (WebAuthn in short) is a
 [web standard](https://www.w3.org/TR/webauthn-2/) that allows relying party
 (RP) servers to register and authenticate users in the browser using public key
-cryptography, instead of a password. 
+cryptography, instead of a password.
 
 RPs rely on physical authenticators, such as a security key. RPs request the
 security key to generate a private-public key pair and then store the public
@@ -92,7 +92,7 @@ SPC is designed to work with User Verifying Platform Authenticators (UVPA).
 
 <figure class="screenshot">
    {% Img
-      src="image/VbsHyyQopiec0718rMq2kTE1hke2/byYdb1HUukKGr0X07MUg.png", alt="Example UVPAs include Apple Touch ID and a mobile phone camera", 
+      src="image/VbsHyyQopiec0718rMq2kTE1hke2/byYdb1HUukKGr0X07MUg.png", alt="Example UVPAs include Apple Touch ID and a mobile phone camera",
       width="587", height="261"
    %}
    <figcaption>
@@ -144,7 +144,7 @@ Users can register for SPC in two ways:
 
 #### Registration on the RP website {: #registration-on-rp }
 
-On the RP's website,  SPC registration is no different than WebAuthn registration. Our recommendation is that the RP asks the customer to register their UVPA as part of a sign-in flow.
+On the RP's website, SPC registration is no different than WebAuthn registration. Our recommendation is that the RP asks the customer to register their UVPA as part of a sign-in flow.
 
 A typical scenario may look like this:
 
@@ -183,7 +183,7 @@ Authentication is required when a payer provides a payment credential during a p
 2. The merchant checks whether the browser supports Secure Payment
    Confirmation.
 3. If the browser supports SPC, call the Payment Request API with SPC as a
-   payment method. Otherwise fall back to the existing authentication method.
+   payment method. Otherwise, fall back to the existing authentication method.
 4. The payer confirms the transaction details and completes authentication
    (such as by touching their biometric platform authenticator).
 

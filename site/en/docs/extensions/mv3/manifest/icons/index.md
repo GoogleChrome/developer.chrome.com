@@ -35,8 +35,7 @@ Here's an example of how to declare the icons in the manifest:
 {% Aside %}
 
 You may provide icons of any other size you wish, and Chrome will attempt to use the best size where
-appropriate. For example, Windows often requires 32-pixel icons, and if the app includes a 32-pixel
-icon, Chrome will choose that instead of shrinking a 48-pixel icon.
+appropriate. 
 
 {% endAside %}
 

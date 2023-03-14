@@ -56,27 +56,27 @@ actually allowed to send messages to the receiving user.
 
 
 ```js
-const headers = new Headers();  
-// 12-hour notification time to live.  
-headers.append('TTL', 12 * 60 * 60);  
-// Assuming no data is going to be sent  
+const headers = new Headers();
+// 12-hour notification time to live.
+headers.append('TTL', 12 * 60 * 60);
+// Assuming no data is going to be sent
 headers.append('Content-Length', 0);
 
 // Assuming you're not using VAPID (read on), this
-// proprietary header is needed  
+// proprietary header is needed
 if(subscription.endpoint
-    .indexOf('https://android.googleapis.com/gcm/send/') === 0) {  
-    headers.append('Authorization', 'GCM_API_KEY');  
+    .indexOf('https://android.googleapis.com/gcm/send/') === 0) {
+    headers.append('Authorization', 'GCM_API_KEY');
 }
 
-fetch(subscription.endpoint, {  
-    method: 'POST',  
-    headers: headers  
-})  
-.then(response => {  
-    if (response.status !== 201) {  
-    throw new Error('Unable to send push message');  
-    }  
+fetch(subscription.endpoint, {
+    method: 'POST',
+    headers: headers
+})
+.then(response => {
+    if (response.status !== 201) {
+    throw new Error('Unable to send push message');
+    }
 });
 ```
 
@@ -120,14 +120,14 @@ library](https://github.com/web-push-libs/web-push/):
 
 
 ```js
-function generateVAPIDKeys() {  
-    var curve = crypto.createECDH('prime256v1');  
+function generateVAPIDKeys() {
+    var curve = crypto.createECDH('prime256v1');
     curve.generateKeys();
 
-    return {  
-    publicKey: curve.getPublicKey(),  
-    privateKey: curve.getPrivateKey(),  
-    };  
+    return {
+    publicKey: curve.getPublicKey(),
+    privateKey: curve.getPrivateKey(),
+    };
 }
 ```
 
@@ -139,12 +139,12 @@ the subscribe() method.
 
 
 ```js
-const publicKey = new Uint8Array([0x4, 0x37, 0x77, 0xfe, …. ]);  
-serviceWorkerRegistration.pushManager.subscribe(  
-    {  
-    userVisibleOnly: true,  
-    applicationServerKey: publicKey  
-    }  
+const publicKey = new Uint8Array([0x4, 0x37, 0x77, 0xfe, …. ]);
+serviceWorkerRegistration.pushManager.subscribe(
+    {
+    userVisibleOnly: true,
+    applicationServerKey: publicKey
+    }
 );
 ```
 
@@ -187,10 +187,10 @@ The JWT Header contains the algorithm name used for signing and the type of
 token. For VAPID this must be:
 
 ```json
-{  
-    "typ": "JWT",  
-    "alg": "ES256"  
-}  
+{
+    "typ": "JWT",
+    "alg": "ES256"
+}
 ```
 
 This is then base64 url encoded and forms the first part of the JWT.
@@ -211,14 +211,14 @@ The Payload is another JSON object containing the following:
     * The subject needs to be a URL or a `mailto:` URL. This provides a point
       of contact in case the push service needs to contact the message sender.
 
-An example payload could look like the following:  
+An example payload could look like the following:
 
 ```json
-{  
-    "aud": "http://push-service.example.com",  
-    "exp": Math.floor((Date.now() / 1000) + (12 * 60 * 60)),  
-    "sub": "mailto: my-email@some-url.com"  
-}  
+{
+    "aud": "http://push-service.example.com",
+    "exp": Math.floor((Date.now() / 1000) + (12 * 60 * 60)),
+    "sub": "mailto: my-email@some-url.com"
+}
 ```
 
 This JSON object is base64 url encoded and forms the second part of the JWT.
@@ -249,7 +249,7 @@ notice the dots separating the JWT header, payload, and signature.
 
 As well as the Authorization header, you must add your VAPID public key to the
 `Crypto-Key` header as a base64 url encoded string with `p256ecdsa=`
-prepended to it.  
+prepended to it.
 
 ```http
 p256ecdsa=BDd3_hVL9fZi9Ybo2UUzA284WG5FZR30_95YeZJsiApwXKpNcF1rRPF3foIiBHXRdJI2Qhumhf6_LFTeZaNndIo
@@ -258,7 +258,7 @@ p256ecdsa=BDd3_hVL9fZi9Ybo2UUzA284WG5FZR30_95YeZJsiApwXKpNcF1rRPF3foIiBHXRdJI2Qh
 **When** you are sending a notification with encrypted data, you will
 already be using the `Crypto-Key` header, so to add the application server
 key, you just need to add a semicolon before adding the above content, resulting
-in:  
+in:
 
 ```http
 dh=BGEw2wsHgLwzerjvnMTkbKrFRxdmwJ5S_k7zi7A1coR_sVjHmGrlvzYpAT1n4NPbioFlQkIrTNL8EH4V3ZZ4vJE;
@@ -286,5 +286,5 @@ VAPID it'll work in all browsers that support web push.  As more browsers
 support VAPID you can decide when to drop the `gcm_sender_id` from your
 manifest.
 
-Note: Be sure to check out the full documentation including best practices for using [Web Push Notifications](https://developers.google.com/web/fundamentals/push-notifications)
+Note: Be sure to check out the full documentation including best practices for using [Web Push Notifications](https://web.dev/notifications)
 

@@ -1,6 +1,10 @@
 const SNAPSHOTS = [
-  '/en/content-types/author-individual/index.html',
-  '/en/content-types/blog-post/index.html',
+  '/en/index.html',
+  '/en/docs/handbook/content-types/blog-landing/index.html',
+  '/en/docs/handbook/content-types/docs-landing/index.html',
+  '/en/docs/handbook/content-types/doc-post/index.html',
+  '/en/docs/handbook/content-types/landing/index.html',
+  '/en/docs/handbook/content-types/meet-the-team/index.html',
 ];
 
 module.exports = {
@@ -30,6 +34,6 @@ module.exports = {
     exclude: [
       // Prevent percy to snapshot all index.html files in ./dist dir
       ({ name }) => !SNAPSHOTS.includes(name)
-    ]
+    ],
   }
 }

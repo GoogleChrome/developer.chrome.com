@@ -113,7 +113,7 @@ can be a good proxy for TTI.
 
 ## Resources
 
-- [Source code for **Time to Interactive** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/interactive.js)
+- [Source code for **Time to Interactive** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/metrics/interactive.js)
 - [Lighthouse Scoring Guide](/docs/lighthouse/performance/performance-scoring/)
 - [First Interactive And Consistently Interactive](https://docs.google.com/document/d/1GGiI9-7KeY3TPqS3YT271upUVimo-XiL5mwWorDUD4c/edit)
 - [JavaScript Start-up Optimization](https://web.dev/optimizing-content-efficiency-javascript-startup-optimization/)
@@ -121,5 +121,5 @@ can be a good proxy for TTI.
 - [Optimize third-party resources][3p]
 
 [metrics]: https://web.dev/user-centric-performance-metrics/
-[tracking]: https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#tracking_tti
+[tracking]: https://web.dev/user-centric-performance-metrics/
 [3p]: https://web.dev/fast/#optimize-your-third-party-resources

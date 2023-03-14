@@ -7,7 +7,7 @@ authors:
   - chrisdavidmills
   - jheyy
 date: 2022-10-19
-updated: 2022-11-10
+updated: 2023-01-25
 ---
 
 The **`:open`** [CSS](https://developer.mozilla.org/docs/Web/CSS) [pseudo-class](https://developer.mozilla.org/docs/Web/CSS/Pseudo-classes) allows a [popover](/docs/web-platform/popover-api/) to be styled, but only when it is being shown.
@@ -45,4 +45,4 @@ p[popover]:open {
 * [The Popover API](/docs/web-platform/popover-api/)
 * [Pop-ups: They're making a resurgence!](/blog/pop-ups-theyre-making-a-resurgence/), by Jhey Tompkins
 * [Chrome Platform Status: The Popover API](https://chromestatus.com/feature/5463833265045504) 
-* [Open UI: Popover API Explainer](https://open-ui.org/components/popup.research.explainer)
+* [Open UI: Popover API Explainer](https://open-ui.org/components/popover.research.explainer)

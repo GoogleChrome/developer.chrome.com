@@ -38,7 +38,7 @@ page for more information.
 
 ## Resources
 
-- [Source code for **Structured data is valid** audit](https://github.com/GoogleChrome/lighthouse/blob/ecd10efc8230f6f772e672cd4b05e8fbc8a3112d/lighthouse-core/audits/seo/manual/structured-data.js)
+- [Source code for **Structured data is valid** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/seo/manual/structured-data.js)
 - [Mark Up Your Content Items](https://developers.google.com/search/docs/guides/mark-up-content)
 - [Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool/)
 - [Structured Data Linter](http://linter.structured-data.org/)

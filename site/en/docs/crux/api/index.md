@@ -22,7 +22,7 @@ date: 2022-06-23
 
 # Optional
 # Include an updated date when you update your post
-updated: 2022-11-01
+updated: 2023-02-27
 
 # Optional
 # How to add a new author
@@ -46,7 +46,7 @@ The CrUX API allows for the querying of user experience metrics for a specific U
 
 Using the CrUX API requires a Google Cloud API key. You can create one in the [Credentials](https://console.developers.google.com/apis/credentials) page and provision it for `Chrome UX Report API` usage.
 
-After you have an API key, your application can append the query parameter `key=[YOUR_API_KEY]` to all request URLs.
+After you have an API key, your application can append the query parameter `key=[YOUR_API_KEY]` to all request URLs. See the [Example queries](#example-queries) below.
 
 The API key is safe for embedding in URLs; it doesn't need any encoding.
 
@@ -67,7 +67,7 @@ Identifiers specify what records should be looked up. In CrUX these identifiers 
 When the identifier is an origin all data present for all pages in that origin are aggregated together. For example, say the `http://www.example.com` origin had pages as laid out by this sitemap:
 
 ```text
-http://www.example.com
+http://www.example.com/
 http://www.example.com/foo.html
 http://www.example.com/bar.html
 ```
@@ -79,7 +79,7 @@ This would mean that when querying the Chrome UX Report with the origin set to `
 When the identifier is a URL, only data for that specific URL will be returned. Looking again to the `http://www.example.com` origin sitemap:
 
 ```text
-http://www.example.com
+http://www.example.com/
 http://www.example.com/foo.html
 http://www.example.com/bar.html
 ```
@@ -88,7 +88,7 @@ If the identifier is set to URL with the value of `http://www.example.com/foo.ht
 
 ### Dimensions
 
-Dimensions identify a specific group of data that a record is being aggregated against, for example a form factor of Mobile indicates that the record contains information about loads that took place on a mobile device. Each dimension will have a certain number of values, and implicitly the lack of specifying that dimension will mean that the dimension is aggregated over all values. For example, specifying no form factor indicates that record contains information about loads that took place on any form factor.
+Dimensions identify a specific group of data that a record is being aggregated against, for example a form factor of `PHONE` indicates that the record contains information about loads that took place on a mobile device. Each dimension will have a certain number of values, and implicitly the lack of specifying that dimension will mean that the dimension is aggregated over all values. For example, specifying no form factor indicates that record contains information about loads that took place on any form factor.
 
 #### Form Factor
 
@@ -125,9 +125,9 @@ A simple three bin histogram for an example metric looks like this:
 }
 ```
 
-This data indicates that 38.2% of users experience the example metric value between 0ms and 1,000ms. The units of the metric are not contained in this histogram, in this case we will assume milliseconds.
+This data indicates that 38.179% of users experience the example metric value between 0ms and 1,000ms. The units of the metric are not contained in this histogram, in this case we will assume milliseconds.
 
-Additionally, 49.9% of users experience the example metric value between 1,000ms and 3,000ms, and 11.9% of users experience a value greater than 3,000ms.
+Additionally, 49.905% of users experience the example metric value between 1,000ms and 3,000ms, and 11.916% of users experience a value greater than 3,000ms.
 
 Metrics will also contain percentiles that can be useful for additional analysis.
 
@@ -235,7 +235,7 @@ Note: The values for each percentile are synthetically derived, it does not impl
 </tbody>
 </table></div>
 
-### Collection Period
+### Collection period
 
 As of October 2022, the CrUX API contains a `collectionPeriod` object with `firstDate` and `endDate` fields representing the beginning and end dates of the aggregation window. An example is provided below:
 
@@ -311,7 +311,7 @@ If the `metrics` property is not set then all available metrics will be returned
 
 If no `formFactor` value is provided then the values will be aggregated across all form factors.
 
-See [Using the Chrome UX Report API on web.dev](https://web.dev/chrome-ux-report-api/) for more example queries.
+See [Using the Chrome UX Report API](/blog/chrome-ux-report-api/) for more example queries.
 
 ## Data pipeline
 
@@ -720,3 +720,7 @@ Object representing the normalization actions taken to normalize a url to achiev
     </tr>
   </tbody>
 </table>
+
+## Rate limits
+
+The CrUX API is limited to 150 queries per minute per Google Cloud project, which is offered free of charge. This limit, and your current usage, can be seen in the [Google Cloud Console](https://console.cloud.google.com/apis/api/chromeuxreport.googleapis.com/quotas). This generous quota should be sufficient for the vast majority of use cases and at present it is not possible to pay for an increased quota.

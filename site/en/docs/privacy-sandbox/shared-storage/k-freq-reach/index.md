@@ -6,6 +6,7 @@ subhead: >
 description: >
   Use Shared Storage and Private Aggregation for K+ frequency measurement
 date: 2022-11-08
+updated: 2023-01-19
 authors:
   - alexandrawhite
   - kevinkiklee
@@ -17,7 +18,7 @@ possible use cases. [Private Aggregation API](/docs/privacy-sandbox/private-aggr
 
 ## Try K+ frequency measurement
 
-To experiment with K+ frequency measurement with Shared Storage and Private Aggregation, confirm you're using Chrome Canary and Dev M107 or later. Then enable the **Privacy Sandbox Ads APIs experiment** flag at `chrome://flags/#privacy-sandbox-ads-apis`.
+To experiment with K+ frequency measurement with Shared Storage and Private Aggregation, confirm you're using Chrome M107 or later. Then enable the **Privacy Sandbox Ads APIs experiment** flag at `chrome://flags/#privacy-sandbox-ads-apis`.
 
 {% Img
 	src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/CWfgCMJQ5cYPOfjttF3k.png",
@@ -40,8 +41,8 @@ You may want to measure the number of users who have seen your content K or more
 
 In this example:
 
-*   [`k-frequency-measurement.js`](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/advertiser/private-aggregation/k-freq-measurement.js) is loaded via a frame, and is responsible for loading the shared storage worklet.
-*   [`k-frequency-measurement-worklet.js`](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/advertiser/private-aggregation/k-freq-measurement-worklet.js) is the shared storage worklet that reads the impression count in shared storage and sends a report via the Private Aggregation API.
+*   [`k-frequency-measurement.js`](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/content-producer/private-aggregation/k-freq-measurement.js) is loaded via a frame, and is responsible for loading the shared storage worklet.
+*   [`k-frequency-measurement-worklet.js`](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/content-producer/private-aggregation/k-freq-measurement-worklet.js) is the shared storage worklet that reads the impression count in shared storage and sends a report via the Private Aggregation API.
 
 **`k-frequency-measurement.js`**
 

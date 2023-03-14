@@ -4,8 +4,16 @@ title: Known issues when migrating to Manifest V3
 seoTitle: Known issues when migrating Chrome Extensions to Manifest V3
 description: ''
 date: 2022-09-23
-#updated: 2022-07-12
+updated: 2023-02-09
+tags:
+  - extensions-news
 ---
+
+{% Aside %}
+
+**December 9, 2022:** The Manifest V2 deprecation timelines are under review and the experiments scheduled for early 2023 are being postponed. For more information, [read the update](https://groups.google.com/u/1/a/chromium.org/g/chromium-extensions/c/zQ77HkGmK9E) in the chromium-extensions Google Group.
+
+{% endAside %}
 
 This page lists major known issues that affect developers as they migrate to Manifest V3. Known issues are divided into two primary groups:
 
@@ -32,11 +40,11 @@ This section lists major features that will be added to the Manifest V3 platform
 
 **Shipped in Chrome 109.**
 
-### Relax the fixed maximum lifetime for extension service workers {: #sw-fixed-lifetime }
+### FIXED: Relax the fixed maximum lifetime for extension service workers {: #sw-fixed-lifetime }
 
 **Summary:** Extension service workers are currently terminated a set amount of time after starting. This fixed limit will be replaced by an activity-based system. As a result, an extension's service worker will be able to stay alive so long as it is continuously working.
 
-**Estimated timeline:** Targeting Canary support in first quarter of 2023.
+**Shipped in Chrome 110.**
 
 ### Userscript managers support {: #userscript-managers-support }
 
@@ -46,9 +54,9 @@ This section lists major features that will be added to the Manifest V3 platform
 
 ### Increased quota for session storage in the Storage API {: #increased-session-storage-quota }
 
-**Summary:** When it was introduced, the `session` storage area had an intentionally conservative maximum quota of 1 MB. We are planning to increase this limit, but have not yet settled on a new value.
+**Summary:** When it was introduced, the `session` storage area had an intentionally conservative maximum quota of 1 MB. This limit is being increased to 10 MB.
 
-**Estimated timeline**: Targeting Canary support in the first quarter of 2023.
+**Estimated timeline**: This will be available in Chrome 112. Chrome 112 beta is planned around March 9, with a stable release around the beginning of April.
 
 ## Bugs {: #bugs }
 
@@ -58,11 +66,11 @@ This section lists major features that will be added to the Manifest V3 platform
 
 **Shipped Chrome 107.**
 
-### Sandboxed page CSP can't be customized {: #sandboxed-csp }
+### FIXED: Sandboxed page CSP can't be customized {: #sandboxed-csp }
 
 **Summary:** Declaring a custom sandboxed page content security policy in the extension's `manifest.json` does not override the default content security policy. This prevents extensions from integrating with services that require their scripts or iframes to be remotely loaded.
 
-**Estimated timeline:** Targeting Canary support in the first quarter of 2023.
+**Shipped in Chrome 110.**
 
 **Tracking issue:** [1247690][]
 

@@ -9,7 +9,9 @@
 
     {% include 'partials/meta.njk' %}
     {% block feed %}
-      <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feeds/blog.xml">
+      <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feeds/all.xml">
+      <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - {{ 'i18n.common.blog' | i18n(locale) }}" href="{{ site.url }}/feeds/blog.xml">
+      <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - {{ 'i18n.common.articles' | i18n(locale) }}" href="{{ site.url }}/feeds/articles.xml">
     {% endblock %}
 
     <link rel="preload" as="font" crossorigin href="/fonts/google-sans-v2003/regular/latin.woff2">
@@ -23,6 +25,12 @@
       <script async src="https://www.google-analytics.com/analytics.js"></script>
     {% endif %}
 
+    {# Private Aggregation API testing script #}
+    {# The test will run until mid-April #}
+    {% if process.env.NODE_ENV === 'production' %}
+      <script type="module" defer src="{{ helpers.hashForProd('https://shared-storage-demo-content-producer.web.app/paa/scripts/private-aggregation-test.js') }}"></script>
+    {% endif %}
+
     {# Add a facility for pages to declare an array of script paths. #}
     {# Note: We could also use this approach to load module/nomodule scripts #}
     {# https://philipwalton.com/articles/deploying-es2015-code-in-production-today/ #}
@@ -32,11 +40,38 @@
       {% endfor %}
     {% endif %}
 
+    {# Dogfood document speculation rules origin trial #}
+    <!-- developer.chrome.com origin trial token - valid until 23 Mar 2023 -->
+    <meta http-equiv="origin-trial" content="AhaT7AdLUbVk3M0VorYLzXSY8Km9PJZlzg3Xkv6KT2QMZ4zyqA5BfdTJLCj1TVnGhryWtQH66HWQEsIbZDUrsAwAAABseyJvcmlnaW4iOiJodHRwczovL2RldmVsb3Blci5jaHJvbWUuY29tOjQ0MyIsImZlYXR1cmUiOiJTcGVjdWxhdGlvblJ1bGVzUHJlZmV0Y2hGdXR1cmUiLCJleHBpcnkiOjE2OTQxMzExOTl9">
+    {# Exclude the /articles/ section as a control #}
+    <script type="speculationrules">
+    {
+      "prefetch": [
+        {
+          "source": "document",
+          "where": {
+            "and": [
+              {
+                "href_matches": "/*\\?*", "relative_to": "document"
+              },
+              {
+                "not": {
+                  "href_matches": "/articles/*\\?*",
+                  "relative_to": "document"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+    </script>
+
     {# This needs to be include'd, because it expands 11ty variables #}
     <script>{% include 'partials/script.js' %}</script>
 
     {# Some articles may have previously used lists with anchors for their
-    content (like FAQs) which may have evolved into their own articles by now. 
+    content (like FAQs) which may have evolved into their own articles by now.
     Such anchors should be able to link to those new articles #}
     {% if anchorRedirects %}
     <script>
@@ -60,6 +95,7 @@
       })();
     </script>
     {% endif %}
+
   </head>
   <body>
     <div class="scaffold">

@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 不要为其所有资源使用 HTTP/2
+title: 没有为所有资源使用 HTTP/2
 description: 了解为什么 HTTP/2 对页面加载时间很重要以及如何在服务器上启用 HTTP/2。
 date: 2019-05-02
 updated: 2019-08-28
@@ -26,6 +26,6 @@ Lighthouse 会收集页面请求的所有资源，并检查每个资源的 HTTP 
 
 ## 资源
 
-- [**不要为其所有资源使用 HTTP/2**审计的源代码](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/dobetterweb/uses-http2.js)
+- [**没有为所有资源使用 HTTP/2**审计的源代码](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/dobetterweb/uses-http2.js)
 - [HTTP/2 简介](https://developers.google.com/web/fundamentals/performance/http2/)
 - [HTTP/2 常见问题](https://http2.github.io/faq/)

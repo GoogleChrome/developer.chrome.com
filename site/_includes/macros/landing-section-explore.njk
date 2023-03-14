@@ -1,0 +1,21 @@
+{% from 'macros/icon.njk' import icon with context %}
+
+{% macro landingSectionExplore(title, color, items) %}
+
+<section
+  class="landing-section hairline rounded-lg width-full display-grid gap-top-400"
+  style="--number-color: var(--color-{{ color }}-medium); --dot-color: var(--color-{{ color }}-lighter);">
+  <div class="landing-deco pad-300 md:pad-500 masonry:pad-500 width-full bg-{{color}}-lightest">
+    <div class="landing-deco__inner">
+      <div>
+        <h2 class="type--h3 color-{{ color }}-darkest">{{ title }}</h2>
+      </div>
+    </div>
+    <div class="landing-explore">
+        {% for item in items %}
+            <a class="landing-explore__link bg-{{ color }}-medium" href="{{ item.url }}">{% if item.icon %}<div class="landing-explore__icon gap-right-200 color-bg flex">{{ icon(item.icon) }}</div>{% endif %}<div>{{ item.title}}</div></a>
+        {% endfor %}
+    </div>
+  </div>
+</section>
+{% endmacro %}

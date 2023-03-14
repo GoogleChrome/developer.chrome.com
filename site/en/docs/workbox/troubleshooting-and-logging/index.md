@@ -16,8 +16,8 @@ There are loads of tools available in the browser for debugging and troubleshoot
 
 Chrome (and [recent versions of Edge based on the Blink engine](https://en.wikipedia.org/wiki/Microsoft_Edge#Anaheim_(2019%E2%80%93present))) have a robust set of developer tools. Some of those tools&mdash;specifically in Chrome's DevTools&mdash;were [touched upon earlier in this documentation](/docs/workbox/improving-development-experience/), but there's more to discover:
 
-- [Debug Progressive Web Apps](https://developers.google.com/web/tools/chrome-devtools/progressive-web-apps)
-- [Inspect Network Activity in Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/network)
+- [Debug Progressive Web Apps](/docs/devtools/progressive-web-apps/)
+- [Inspect Network Activity in Chrome DevTools](/docs/devtools/network/)
 - Video: [Debugging Service Workers in Chrome](https://www.youtube.com/watch?v=tuRPSaSiK_c)
 - Codelab: [Debugging Service Workers](https://codelabs.developers.google.com/codelabs/debugging-service-workers/index.html)
 

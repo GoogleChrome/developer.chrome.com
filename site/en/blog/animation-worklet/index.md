@@ -56,7 +56,7 @@ Another issue is styling scrollbars. They are notoriously unstylable — or at
 least not styleable enough. What if I want a [nyan cat as my
 scrollbar](https://googlechromelabs.github.io/ui-element-samples/custom-scrollbar/)?
 Whatever technique you choose, building a custom scrollbar is neither
-performant, nor [easy](https://developers.google.com/web/updates/2017/03/custom-scrollbar).
+performant, nor [easy](/blog/custom-scrollbar/).
 
 The point is all of these things are awkward and hard to impossible to
 implement efficiently. Most of them rely on events and/or

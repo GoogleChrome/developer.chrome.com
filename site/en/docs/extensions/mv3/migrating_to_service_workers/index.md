@@ -109,7 +109,7 @@ some work, and get terminated repeatedly throughout a user's browser session. Th
 to extension developers accustomed to long-lived background pages as application data is not
 immediately available in global variables.
 
-The following Manifest V2 example recieves a name from a content script and persists it for later:
+The following Manifest V2 example receives a name from a content script and persists it for later:
 
 ```js
 // background.js
@@ -191,7 +191,7 @@ exposes the capabilities that web developers are used to working with: `window`,
 `cookie`, `localStorage`, etc.
 
 The [global scope for service worker][8] is significantly more limited and doesn't have many of
-these features. Most notably, service workers don't have access to the DOM. Workers no longer provide `XMLHttpRequest`, but instead support the more modern [`fetch()`][fetch-link]. `URL.createObjectURL` is also not supported for service workers, due to its potential to create memory leaks. 
+these features. Most notably, service workers don't have access to the DOM. Workers no longer provide `XMLHttpRequest`, but instead support the more modern [`fetch()`][fetch-link]. `URL.createObjectURL` is also not supported for service workers, due to its potential to create memory leaks.
 
 The following sections cover some of the major use cases impacted by the move to service workers and
 recommendations on how to adapt.
@@ -209,7 +209,7 @@ Lighter-weight alternatives like [`undom`][11] provide just enough DOM to power 
 frameworks and libraries.
 
 Extensions that need a full native browser environment can use the [`chrome.windows.create()`][12]
-and [`chrome.tabs.create()`][13] APIs from inside a service worker to create a real browser window. 
+and [`chrome.tabs.create()`][13] APIs from inside a service worker to create a real browser window.
 Additionally, an extension's popup still provides a full (temporary) window environment.
 
 ### Audio/video playback and capture {: #audio_vidio }
@@ -252,10 +252,24 @@ function buildCanvas(width, height) {
 For additional guidance on working with `OffscreenCanvas`, see [OffscreenCanvas—Speed up Your Canvas
 Operations with a Web Worker][18].
 
+### Offscreen Documents
+
+For extensions that need to unobtrusively use APIs that require DOM access without visually opening up a new window or tab, developers can now use the [Offscreen API](/docs/extensions/reference/offscreen/). This API allows developers to open and close undisplayed documents packaged with the extension for DOM-related tasks without disrupting the user experience. Offscreen documents do not share APIs with the extension's service worker, and function as fully functional web pages for the extension to interact with.
+
+```js
+// background.js
+// for Manifest V3 service workers
+chrome.offscreen.createDocument({
+  url: chrome.runtime.getURL('offscreen.html'),
+  reasons: ['CLIPBOARD'],
+  justification: 'testing the offscreen API',
+});
+```
+
 [2]: https://developers.google.com/web/fundamentals/primers/service-workers/
 [3]: #events
 [4]: #workers
-[5]: https://developers.google.com/web/ilt/pwa/introduction-to-service-worker
+[5]: https://web.dev/learn/pwa/service-workers
 [6]: https://developer.mozilla.org/docs/Web/API/Worker
 [7]: https://developer.mozilla.org/docs/Web/API/Window
 [8]: https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope

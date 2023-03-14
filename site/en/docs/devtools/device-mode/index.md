@@ -16,14 +16,18 @@ tags:
 
 Use Device Mode to approximate how your page looks and performs on a mobile device.
 
-Device Mode is the name for the loose collection of features in Chrome DevTools that help you
+Device Mode is the name for a collection of features in Chrome DevTools that help you
 simulate mobile devices. These features include:
 
 - [Simulating a mobile viewport][1]
-- [Throttling the network][2]
 - [Throttling the CPU][3]
-- [Simulating geolocation][4]
-- [Setting orientation][5]
+- [Throttling the network][2]
+  {% Aside 'gotchas' %}
+  Alternatively, you can [throttle connection speed](/docs/devtools/network/reference/#throttling) in the **Network** panel.
+  {% endAside %}
+- Additionally, in the [**Sensors** tab](/docs/devtools/sensors/):
+  - [Simulating geolocation][4]
+  - [Setting orientation][5]
 
 ## Limitations {: #limitations }
 
@@ -254,7 +258,13 @@ You can also set network throttling from the **Performance** panel. Click **Capt
 
 {% Img src="image/admin/DVa1oLS5wWMY07WXe0K1.png", alt="Setting network throttling from the Performance panel.", width="800", height="656" %}
 
-## Override geolocation {: #geolocation }
+## Emulate sensors {: #emulate-sensors }
+
+Use the **Sensors** tab to override geolocation, simulate device orientation, force touch, and emulate idle state.
+
+The sections below provice a quick look on how to override geolocation and set device orientation. For a complete list of featrues, see [Emulate device sensors](/docs/devtools/sensors/).
+
+### Override geolocation {: #geolocation }
 
 To open the geolocation overriding UI, click **Customize and control DevTools**
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Customize and control DevTools.", width="20", height="20" %} and then select **More tools** > **Sensors**.
@@ -272,7 +282,7 @@ geolocation is in an error state.
 
 {% Img src="image/admin/VaU4wIpuUsjgsDHjOw6x.png", alt="Geolocation", width="800", height="602" %}
 
-## Set orientation {: #orientation }
+### Set orientation {: #orientation }
 
 To open the orientation UI, click **Customize and control DevTools**
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Customize and control DevTools.", width="20", height="20" %} and then select **More tools** > **Sensors**.

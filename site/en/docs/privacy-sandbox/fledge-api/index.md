@@ -477,7 +477,7 @@ modifications to better served the developers who would be using the API:
   capabilities of the on-device auction
 -  [PARAKEET](https://github.com/WICG/privacy-preserving-ads/blob/main/Parakeet.md) is
    Microsoft's proposal for a TURTLEDOVE-like ad service that relies on a proxy
-   server running in a TEE between the browser and the adtech providers, to
+   server running in a TEE between the browser and the ad tech providers, to
    anonymize ad requests and enforce privacy
    properties.  FLEDGE has not adopted this proxying model.  We are bringing
    the JavaScript APIs for PARAKEET and FLEDGE into alignment, in support of
@@ -489,11 +489,23 @@ FLEDGE does not yet prevent a website's ad network from learning which ads a per
 
 {% Details %}
 
-{: #user-controls}
-
 {% DetailsSummary %}
+### Can the Topics API be used with the FLEDGE API? 
 
-### Available browser configuration
+{% endDetailsSummary %}
+Yes. An observed topic for the current user, provided by the [Topics API](/docs/privacy-sandbox/topics/), could be used as 
+contextual information by a seller or bidder. A topic could be included in
+the following properties:
+
+*  `auctionSignals`, a property of the auction configuration object passed to `navigator.runAdAuction()`
+*  `userBiddingSignals`, a property of the interest group configuration
+   object passed to `navigator.joinAdInterestGroup()`
+   
+{% endDetails %}
+
+{% Details %}
+{% DetailsSummary %}
+### Available browser configuration {: #user-controls}
 
 {% endDetailsSummary %}
 
