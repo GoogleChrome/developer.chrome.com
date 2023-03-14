@@ -105,7 +105,7 @@ O tooltip também tem um link **Saiba mais** que leva você a uma [Referência C
 Se você conhece bem o CSS, pode achar as dicas incômodas. Para desativá-las, marque {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Não mostrar** .
 
 <!-- To turn them back on, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Preferences** > **Elements**](/docs/devtools/settings/preferences/#elements) > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show CSS documentation tooltip**. -->
-Para ativá-las novamente, marque {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Configurações.", width="24", height="24" %} [**Configurações** > * *Preferências** > **Elementos**](/docs/devtools/settings/preferences/#elements) > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width=" 22", height="22" %} **Mostrar dica da documentação CSS**.
+Para ativá-las novamente, marque {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Configurações.", width="24", height="24" %} [**Configurações** > **Preferências** > **Elementos**](/docs/devtools/settings/preferences/#elements) > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width=" 22", height="22" %} **Mostrar dica da documentação CSS**.
 
 {% Aside %}
 <!-- DevTools pulls the descriptions for tooltips from [VS Code Custom Data](https://github.com/microsoft/vscode-custom-data). -->
@@ -179,7 +179,7 @@ Issue relacionada: [883325](https://crbug.com/883325).
 <!-- ## JavaScript Profiler deprecation started {: #js-profiler-deprecation } -->
 ## Início da descontinuação do JavaScript Profiler {: #js-profiler-deprecation } 
 <!-- As early as [Chrome 58](/blog/devtools-javascript-cpu-profile-migration-2/), the DevTools team planned to eventually deprecate the **JavaScript Profiler** and have Node.js and Deno developers use the **Performance** panel for profiling JavaScript CPU performance. -->
-Já no [Chrome 58](/blog/devtools-javascript-cpu-profile-migration-2/), a equipe do DevTools planejava eventualmente descontinuar o **JavaScript Profiler** e fazer com que os desenvolvedores Node.js e Deno usassem o * Painel *Desempenho** para criação de perfil de desempenho da CPU do JavaScript.
+Já no [Chrome 58](/blog/devtools-javascript-cpu-profile-migration-2/), a equipe do DevTools planejava eventualmente descontinuar o **JavaScript Profiler** e fazer com que os desenvolvedores Node.js e Deno usassem o Painel **Desempenho** para criação de perfil de desempenho da CPU do JavaScript.
 <!-- This DevTools version (112) starts the [four-phase **JavaScript Profiler** deprecation](https://github.com/ChromeDevTools/rfcs/discussions/2#discussioncomment-5189668). The **JavaScript Profiler** panel now shows the corresponding warning banner. -->
 Esta versão do DevTools (112) inicia a [depreciação em quatro fases do **JavaScript Profiler**](https://github.com/ChromeDevTools/rfcs/discussions/2#discussioncomment-5189668). O painel **JavaScript Profiler** agora mostra o banner de aviso correspondente.
 
@@ -240,7 +240,7 @@ Mais algumas novidades dignas de atenção nessa versão:
 - O painel [**Código Fonte** > **Breakpoints**](/docs/devtools/javascript/breakpoints/#manage-loc) agora mostra caminhos de arquivo diferenciados ao lado de nomes de arquivo ambíguos 
 ([1403924](crbug.com/1403924)).
 <!-- - The [**Main** section](/docs/devtools/performance/reference/#main) in the flame chart of the **Performance** panel now designates `CpuProfiler::StartProfiling` as `Profiler Overhead` ([1358602](https://crbug.com/1358602)). -->
-- A [seção **Principal**](/docs/devtools/performance/reference/#main) no diagrama de chamas do painel **Performance** agora designa `CpuProfiler::StartProfiling` como `Profiler Overhead` ([ 1358602](https://crbug.com/1358602)).
+- A [seção **Principal**](/docs/devtools/performance/reference/#main) no diagrama de chamas do painel **Performance** agora designa `CpuProfiler::StartProfiling` como `Profiler Overhead` ([1358602](https://crbug.com/1358602)).
 <!-- - DevTools improved autocompletion: -->
 - Autocompletar aprimorado do DevTools:
 <!--   - **Sources**: Consistent completions of any word ([1320204](https://crbug.com/1320204)). -->
