@@ -179,9 +179,9 @@ may be made available for testing.
    current experimental features.
 -  **For your users, in an origin trial**  
    Once an iteration of a new feature is code-complete and relatively stable,
-   an [origin trial](https://web.dev/origin-trials) may be provided to allow
+   an [origin trial](/docs/web-platform/origin-trials/) may be provided to allow
    individual sites to turn on the feature for Chrome users on their site. If
-   an [origin trial](https://web.dev/origin-trials) is available for an API you
+   an [origin trial](/docs/web-platform/origin-trials/) is available for an API you
    want to test with your users,
    [register for the origin trial](/origintrials/#/trials/active) and provide
    a valid trial token with every page load.
