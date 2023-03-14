@@ -23,6 +23,7 @@ const fs = require('fs').promises;
 const path = require('path');
 const ms = require('ms');
 const youtube = require('googleapis').google.youtube('v3');
+const {Storage} = require('@google-cloud/storage');
 
 /**
  * Time interval to determine if the current data set is stale
@@ -48,57 +49,6 @@ const targetFile = path.join(__dirname, '../data/youtube-playlist.json');
 const currentTimestamp = Date.now();
 
 const result = {};
-
-/**
- * Starts the data fetching process form the channel name
- * specified in the config.
- */
-
-async function run() {
-  if (!process.env.YOUTUBE_API_KEY) {
-    throw new Error('No `YOUTUBE_API_KEY` environment var for production');
-  }
-
-  /**
-   * Fetch current data set and checks timestamp to see if the data is stale
-   */
-  let dataAge = 0;
-  try {
-    const currentDataRaw = await fs.readFile(targetFile, {encoding: 'utf8'});
-    const currentData = JSON.parse(currentDataRaw);
-
-    dataAge = currentTimestamp - currentData.timestamp;
-  } catch (error) {
-    console.warn(
-      'No existing data found or existing data malformatted. Fetching from YouTube...'
-    );
-  }
-  if (dataAge < FETCH_INTERVAL && dataAge) {
-    console.log(`YouTube data is ${ms(dataAge)} old, no need to fetch.`);
-    return;
-  }
-  result.timestamp = currentTimestamp;
-
-  result.playlists = [];
-  result.channels = [];
-
-  const channelRes = await getChannelData(CHANNELS);
-  result.channels.push(channelRes);
-
-  await Promise.all(
-    CHANNELS.map(async channel => {
-      try {
-        const playlistRes = await getPlaylistData(channel.trim());
-        result.playlists = [...result.playlists, ...playlistRes];
-      } catch (error) {
-        console.error(error);
-        throw new Error('Error fetching the playlist data');
-      }
-    })
-  );
-
-  await fs.writeFile(targetFile, JSON.stringify(result));
-}
 
 /**
  * Fetches all the meta data for the playlist and then calls the function
@@ -208,6 +158,84 @@ async function getChannelData(id) {
   data.thumbnail = channels[0]?.snippet?.thumbnails?.medium?.url;
 
   return data;
+}
+
+/**
+ * Checks if the data is stale and needs to be refetched
+ *
+ * @return {promise} A promise that resolves in a boolean to indicate if the data is stale or not
+ */
+async function checkDataTimestamp() {
+  const storage = new Storage();
+  try {
+    const file = storage
+      .bucket('external-dcc-data')
+      .file('youtube-playlist.json');
+    const stream = file.createReadStream();
+    let jsonFile = '';
+
+    stream.on('data', chunk => {
+      jsonFile += chunk.toString();
+    });
+
+    stream.on('end', () => {
+      const jsonObject = JSON.parse(jsonFile);
+      if (jsonObject['timestamp']) {
+        const dataTimestamp = jsonObject['timestamp'];
+        if (currentTimestamp - dataTimestamp < FETCH_INTERVAL) {
+          return false;
+        }
+      }
+      return true;
+    });
+
+    stream.on('error', error => {
+      console.error('Error reading the file', error);
+      return true;
+    });
+
+    return true;
+  } catch (error) {
+    console.error('Error reading file, refetching from YouTube', error);
+    return true;
+  }
+}
+
+/**
+ * Starts the data fetching process form the channel name
+ * specified in the config.
+ */
+async function run() {
+  if (!process.env.YOUTUBE_API_KEY) {
+    throw new Error('No `YOUTUBE_API_KEY` environment var for production');
+  }
+
+  const isDataStale = await checkDataTimestamp();
+  if (!isDataStale) {
+    console.log('YouTube data is not stale yet, no need to fetch.');
+    return;
+  }
+  result.timestamp = currentTimestamp;
+
+  result.playlists = [];
+  result.channels = [];
+
+  const channelRes = await getChannelData(CHANNELS);
+  result.channels.push(channelRes);
+
+  await Promise.all(
+    CHANNELS.map(async channel => {
+      try {
+        const playlistRes = await getPlaylistData(channel.trim());
+        result.playlists = [...result.playlists, ...playlistRes];
+      } catch (error) {
+        console.error(error);
+        throw new Error('Error fetching the playlist data');
+      }
+    })
+  );
+
+  await fs.writeFile(targetFile, JSON.stringify(result));
 }
 
 run();
