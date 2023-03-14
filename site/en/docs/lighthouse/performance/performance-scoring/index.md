@@ -65,23 +65,23 @@ impact on user-perceived performance.
     </thead>
     <tbody>
       <tr>
-        <td><a href="/first-contentful-paint/">First Contentful Paint</a></td>
+        <td><a href="/docs/lighthouse/performance/first-contentful-paint/">First Contentful Paint</a></td>
         <td>10%</td>
       </tr>
       <tr>
-        <td><a href="/speed-index/">Speed Index</a></td>
+        <td><a href="/docs/lighthouse/performance/speed-index/">Speed Index</a></td>
         <td>10%</td>
       </tr>
       <tr>
-        <td><a href="/lcp/">Largest Contentful Paint</a></td>
+        <td><a href="/docs/lighthouse/performance/lighthouse-largest-contentful-paint/">Largest Contentful Paint</a></td>
         <td>25%</td>
       </tr>
       <tr>
-        <td><a href="/lighthouse-total-blocking-time/">Total Blocking Time</a></td>
+        <td><a href="/docs/lighthouse/performance/lighthouse-total-blocking-time/">Total Blocking Time</a></td>
         <td>30%</td>
       </tr>
       <tr>
-        <td><a href="/cls/">Cumulative Layout Shift</a></td>
+        <td><a href="https://web.dev/cls/">Cumulative Layout Shift</a></td>
         <td>25%</td>
       </tr>
     </tbody>
@@ -100,27 +100,27 @@ impact on user-perceived performance.
     </thead>
     <tbody>
       <tr>
-        <td><a href="/first-contentful-paint/">First Contentful Paint</a></td>
+        <td><a href="/docs/lighthouse/performance/first-contentful-paint/">First Contentful Paint</a></td>
         <td>10%</td>
       </tr>
       <tr>
-        <td><a href="/speed-index/">Speed Index</a></td>
+        <td><a href="/docs/lighthouse/performance/speed-index/">Speed Index</a></td>
         <td>10%</td>
       </tr>
       <tr>
-        <td><a href="/lcp/">Largest Contentful Paint</a></td>
+        <td><a href="/docs/lighthouse/performance/lighthouse-largest-contentful-paint/">Largest Contentful Paint</a></td>
         <td>25%</td>
       </tr>
       <tr>
-        <td><a href="/interactive/">Time to Interactive</a></td>
+        <td><a href="/docs/lighthouse/performance/interactive/">Time to Interactive</a></td>
         <td>10%</td>
       </tr>
       <tr>
-        <td><a href="/lighthouse-total-blocking-time/">Total Blocking Time</a></td>
+        <td><a href="/docs/lighthouse/performance/lighthouse-total-blocking-time/">Total Blocking Time</a></td>
         <td>30%</td>
       </tr>
       <tr>
-        <td><a href="/cls/">Cumulative Layout Shift</a></td>
+        <td><a href="https://web.dev/cls/">Cumulative Layout Shift</a></td>
         <td>15%</td>
       </tr>
     </tbody>
