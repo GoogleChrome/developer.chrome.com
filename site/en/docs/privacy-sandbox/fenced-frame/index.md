@@ -19,6 +19,8 @@ This document outlines a proposal for a new HTML element: `<fencedframe>`.
 
 {% Partial 'privacy-sandbox/timeline/fenced-frames.njk' %}
 
+{% Partial 'privacy-sandbox/timeline/fenced-frames-features.njk' %}
+
 ## Why do we need fenced frames?
 
 A fenced frame (`<fencedframe>`) is a proposed HTML element for embedded
