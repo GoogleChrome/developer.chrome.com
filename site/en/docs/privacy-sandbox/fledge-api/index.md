@@ -23,6 +23,12 @@ recent iteration of the experimental FLEDGE API. A [demo](#demo) of a basic
 FLEDGE deployment is available, as are
 [API references for ad buyers and sellers](#api-reference).
 
+## Implementation status
+
+{% Partial 'privacy-sandbox/timeline/fledge.njk' %}
+
+{% Partial 'privacy-sandbox/timeline/fledge-features.njk' %}
+
 ## What is FLEDGE? {: #what}
 
 FLEDGE is a [Privacy Sandbox](/docs/privacy-sandbox/overview) proposal to serve

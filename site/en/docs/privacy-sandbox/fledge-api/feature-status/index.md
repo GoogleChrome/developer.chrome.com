@@ -13,15 +13,14 @@ authors:
 
 As we move [FLEDGE](/docs/privacy-sandbox/fledge/) closer to general availability and approach third-party cookie deprecation in Chrome, you may be wondering about the availability of FLEDGE services and features. In this update, we provide a list of the scoped FLEDGE features and when they’ll be supported. 
 
-<table>
-  <tr>
-   <td><strong>Feature</strong>
-   </td>
-   <td><strong>Available for testing</strong>
-   </td>
-   <td><strong>Status</strong>
-   </td>
-  </tr>
+<table class="with-heading-tint with-borders width-full">
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Available for testing</th>
+      <th>Status</th>
+    </tr>
+  </thead>
   <tr>
    <td><a href="https://github.com/WICG/turtledove/blob/main/FLEDGE.md#5-event-level-reporting-for-now">Event-level auction win reporting</a>
    </td>
@@ -98,6 +97,8 @@ After working closely with various stakeholders and examining the significant ef
 {% Aside %}
 The temporary `navigator.deprecatedURNToURL()` will be removed by third-party cookie deprecation.
 {% endAside %}
+
+{% Partial 'privacy-sandbox/timeline/fenced-frames-features.njk' %}
 
 ## Improved FLEDGE + Attribution Reporting integration
 

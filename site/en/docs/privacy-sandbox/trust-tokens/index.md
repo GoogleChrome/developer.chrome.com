@@ -6,26 +6,23 @@ subhead: >
 description: >
   An API to convey a limited amount of information from one browsing context to another (for example, across sites) to help combat fraud, without passive tracking.
 date: 2021-05-18
-updated: 2022-10-06
+updated: 2023-03-14
 authors:
   - samdutton
 ---
 
 {% Aside %}
-This article previously referred to Private State Tokens as "Trust Tokens". The Trust
-Token API has been renamed to the Private State Token API to better showcase its
-privacy and utility benefits.
+This article previously referred to Private State Tokens as "Trust Tokens". The
+Trust Token API has been renamed to the Private State Token API to better
+showcase its privacy and utility benefits.
 
-Check out [Trust Tokens renamed Private State Tokens](/blog/rename-trust-tokens)
+Read [Trust Tokens renamed Private State Tokens](/blog/rename-trust-tokens)
 for more information.
 {% endAside %}
 
 ## Implementation status
 
-* [In origin trial](https://web.dev/origin-trials/) Chrome 84 to 101: [now closed](/origintrials/#/view_trial/2479231594867458049).
-* [Demo](https://trust-token-demo.glitch.me/): this no longer works, as the origin trial is closed. You can still view the code.
-* [Chrome DevTools integration](/blog/new-in-devtools-89/#trust-token).
-* [Chrome Platform Status](https://www.chromestatus.com/feature/5078049450098688).
+{% Partial 'privacy-sandbox/timeline/private-state-tokens.njk' %}
 
 ## What are Private State Tokens?
 

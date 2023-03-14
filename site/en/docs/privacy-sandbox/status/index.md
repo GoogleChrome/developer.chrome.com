@@ -1,145 +1,110 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: Is it ready yet?
-subhead: Implementation status for Privacy Sandbox APIs.
+subhead: Timeline for Privacy Sandbox API proposals and feature releases.
 description: Implementation status for Privacy Sandbox APIs.
 date: 2021-05-18
-updated: 2022-03-31
+updated: 2023-03-17
 authors:
-  - samdutton
   - alexandrawhite
 ---
 
-{% Aside 'caution' %}
-There may be multiple separate origin trial periods for each API.
-{% endAside %}
+Each of the Privacy Sandbox proposals are in varied stages of the development
+process. Within each proposal, there are individual features that have
+different expected availability.
+
+To review the latest information on any proposal or API, visit the respective overview documentation and the [Privacy Sandbox timeline](https://privacysandbox.com/open-web/).
 
 ## Attribution Reporting
 
-_Previously known as Conversion Measurement._
+{% Partial 'privacy-sandbox/timeline/attribution-reporting.njk' %}
 
-- [Demo](https://goo.gle/demo-event-level-conversion-measurement-api).
-- [Chrome Platform Status](https://www.chromestatus.com/features/6412002824028160).
-- [Blink status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=attribution%20reporting).
-- [GitHub](https://github.com/WICG/conversion-measurement-api/): see
-  [issues](https://github.com/WICG/conversion-measurement-api/issues) for API questions
-  and discussion.
+{% Partial 'privacy-sandbox/timeline/attribution-reporting-features.njk' %}
 
-### Status: details
+## Fenced Frames
 
-See [Status](/docs/privacy-sandbox/attribution-reporting/#status).
+{% Partial 'privacy-sandbox/timeline/fenced-frames.njk' %}
 
-### All resources
-
-- [Attribution Reporting (Conversion Measurement)](/docs/privacy-sandbox/attribution-reporting)
-- [Introduction to Attribution Reporting (Conversion Measurement)](/docs/privacy-sandbox/attribution-reporting-introduction)
-- [API technical explainers](https://github.com/WICG/conversion-measurement-api/)
-- (⚠️ obsolete) [A more private way to measure ad conversions](https://web.dev/conversion-measurement/):
-  overview of the first iteration of this API for web developers
-- (⚠️ obsolete) [A more private way to measure ad conversions - Video](https://www.youtube.com/watch?v=jcDfOoWwZcM):
-  demo of the first iteration of this
-  API (clicks only)
-- (⚠️ obsolete) [Using the Event Conversion Measurement API](https://web.dev/using-conversion-measurement/): how to experiment with the first
-  iteration of this API for web developers
-- [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
+{% Partial 'privacy-sandbox/timeline/fenced-frames-features.njk' %}
 
 ## First-Party Sets
 
-- [Current origin trial](https://web.dev/origin-trials/): Chrome 89 to 93.
-- [Register for origin trial](/origintrials/#/view_trial/988540118207823873).
-- [Chrome Platform Status](https://chromestatus.com/feature/5640066519007232).
-- [Blink status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=first-party%20sets).
-- [API proposal](https://github.com/privacycg/first-party-sets): see
-  [issues](hhttps://github.com/privacycg/first-party-sets/issues) for API questions and
-  discussion.
-- Find out more: [The Chromium Projects: First-Party Sets](https://www.chromium.org/updates/first-party-sets).
+{% Partial 'privacy-sandbox/timeline/first-party-sets.njk' %}
 
 ## FLEDGE
 
 Descendant of [TURTLEDOVE](https://github.com/WICG/turtledove).
 
-- [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/0VmMSsDWsFg).
-- [Intent to Prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI/m/LqT59250CAAJ).
-- [Blink status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=fledge).
-- [API proposal](https://github.com/WICG/turtledove/blob/main/FLEDGE.md) is under
-  discussion with [WICG](https://www.w3.org/community/wicg/) and interest groups.
-- [GitHub](https://github.com/WICG/turtledove/blob/main/FLEDGE.md): see
-  [TURTLEDOVE issues](https://github.com/WICG/turtledove/issues) for API questions and discussion.
+{% Partial 'privacy-sandbox/timeline/fledge.njk' %}
 
-## FLoC
+{% Partial 'privacy-sandbox/timeline/fledge-features.njk' %}
 
-Now replaced by the Topics API.
+## Private Aggregation API
 
-- Initial [origin trial](https://web.dev/origin-trials) now closed.
+{% Partial 'privacy-sandbox/timeline/private-aggregation.njk' %}
+
+## Private State Tokens
+
+{% Partial 'privacy-sandbox/timeline/private-state-tokens.njk' %}
+
+## Topics API
+
+{% Partial 'privacy-sandbox/timeline/topics.njk' %}
+
+## User-Agent reduction and Client Hints (UA-CH)
+
+Limit passively shared browser data to reduce the volume of sensitive
+information which leads to fingerprinting.
+
+{% Partial 'privacy-sandbox/timeline/ua-ch.njk' %}
+
+## Shared Storage
+
+{% Partial 'privacy-sandbox/timeline/shared-storage.njk' %}
+
+{% Partial 'privacy-sandbox/timeline/shared-storage-features.njk' %}
+
+{% Details %}
+{% DetailsSummary %}
+
+## Closed proposals
+
+{% endDetailsSummary %}
+
+### FLoC
+
+Replaced by the [Topics API](#topics).
+
+- [Chrome Platform Status](https://www.chromestatus.com/features/5710139774468096).
+- Initial origin trial was closed.
   See [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/MmijXrmwrJs)
   for updates.
-- [Demo](https://floc.glitch.me/) of initial version (origin trial now closed).
 - [Blink status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=floc).
-- [API proposal](https://github.com/WICG/floc) is under discussion with
+- [API proposal](https://github.com/WICG/floc) was under discussion with
   [WICG](https://www.w3.org/community/wicg/) and interest groups.
 - [GitHub](https://github.com/WICG/floc): see
   [issues](https://github.com/WICG/floc/issues) for API questions and discussion.
-- [Chrome Platform Status](https://www.chromestatus.com/features/5710139774468096).
-- Find out more: [What is FLoC?](https://web.dev/floc/)
 
-## Topics
-
-Replaces FLoC.
-
-- [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/oTwd6VwCwqs).
-- [Intent to Prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/59uTw_dxM3M/m/vF9lF9BVAgAJ).
-- [Blink status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=\"topics api\").
-- [API proposal](https://github.com/jkarlin/topics) is under discussion with
-  [WICG](https://www.w3.org/community/wicg/) and interest groups.
-- [GitHub](https://github.com/jkarlin/topics/blob/main/README.md): see
-  [Topics API issues](https://github.com/jkarlin/topics/issues) for API questions and discussion.
-
-## Trust Tokens
-
-- [Current origin trial](https://web.dev/origin-trials/): from Chrome 84,
-  [now extended](https://groups.google.com/a/chromium.org/g/blink-dev/c/lv2JQjDdyhM/m/lZ-Ri4fcAQAJ) to Chrome 101.
-- [Register for origin trial](/origintrials/#/view_trial/2479231594867458049).
-- [Demo](https://trust-token-demo.glitch.me/).
-- [Chrome Platform Status](https://www.chromestatus.com/feature/5078049450098688).
-- [Blink status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=trust%tokens).
-- [GitHub](https://github.com/WICG/trust-token-api): see
-  [issues](https://github.com/WICG/trust-token-api/issues) for API questions and
-  discussion.
-- [Chrome DevTools integration](/blog/new-in-devtools-89/#trust-token).
-- Find out more: [Getting started with Trust Tokens](https://web.dev/trust-tokens/)
-
-
-## User-Agent Client Hints (UA-CH)
-
-- [Origin trial and schedule](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html)
-- [Register for origin trial](/origintrials/#/view_trial/-7123568710593282047)
-- [Demo](https://uar-ot.glitch.me/)
-- [UA-CH proposal](https://github.com/WICG/ua-client-hints)
-- Tutorial to [migrate from UA string to UA-CH](https://web.dev/migrate-to-ua-ch/)
-- Find out more: [User-Agent reduction](/docs/privacy-sandbox/user-agent/)
-
-
-<br>
+{% endDetails %}
 
 ---
 
 ## Find out more
 
-### Blink, Chromium and Chrome
+### Blink, Chromium, and Chrome
 
+- [What are Chrome release channels?](/docs/web-platform/chrome-release-channels/)
 - [Chrome release schedule](https://www.chromestatus.com/features/schedule)
 - [Process for launching new features in Chromium](https://www.chromium.org/blink/launching-features)
 - [Intent to explain: Demystifying the Blink shipping
   process](https://www.youtube.com/watch?time_continue=291&v=y3EZx_b-7tk)
 - [blink-dev](https://groups.google.com/a/chromium.org/g/blink-dev/): implementation
-  status and discussion of features in Blink, the rendering engine used by Chromium.
-- [Chromium code search](https://source.chromium.org/).
+  status and discussion of features in Blink, the rendering engine used by Chromium
+- [Chromium code search](https://source.chromium.org/)
+- [What are Chrome flahs?](/docs/web-platform/chrome-flags/)
 
 ### Origin trials
 
-- [Getting started with Chrome's origin trials](https://web.dev/origin-trials/)
-- [What are third-party origin trials?](https://web.dev/third-party-origin-trials)
-- [Troubleshooting Chrome's origin trials](/blog/origin-trial-troubleshooting/)
-- [Origin trials guide for web developers](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
-- [Origin trial explainer](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/explainer.md)
-- [Running an origin trial](https://www.chromium.org/blink/origin-trials/running-an-origin-trial)
+- [Get started with Chrome's origin trials](/docs/web-platform/origin-trials/)
+- [Third-party origin trials](/docs/web-platform/third-party-origin-trials/)
+- [Troubleshoot origin trials](/docs/web-platform/origin-trial-troubleshooting/)
