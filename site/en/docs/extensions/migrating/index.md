@@ -16,11 +16,11 @@ Follow [What's new in Chrome Extensions](/docs/extensions/whatsnew/) to read abo
 
 Migration work is broadly divided into the categories below. The links provide details of each. To help you track your work, we've provided a checklist summarizing the contents of these documents. You can access the content via the checklist, or dive into the content. Both paths end with an upgraded extension. 
 
-* [Update the manifest](/docs/extensions/upgrade-to-mv3/update-the-manifest/)&mdash;The `manifest.json` must be specific to V3. Changes that can be made on their own are described in this section. Manifest changes related to code are described with the code changes they support.
-* [Upgrade to a service worker](/docs/extensions/upgrade-to-mv3/create-the-service-worker/)&mdash;A service worker replaces the extension's background or event page to ensure that background code stays off the main thread where it can hurt performance. This change also requires moving DOM, window, and certain extension API calls into offscreen documents. 
-* [Update API calls](/docs/extensions/upgrade-to-mv3/refactor-code)&mdash;Some API calls need to be replaced with more modern equivalents. 
-* [Update network requests](/docs/extensions/upgrade-to-mv3/upgrade-web-requests)&mdash;Blocking or modifying network requests in Manifest V2 could significantly degrade performance and require excessive access to sensitive user data. The Declarative Net Request API allows extensions to block or modify web content with fewer permissions and without hindering performance.
-* [Improve security](/docs/extensions/upgrade-to-mv3)&mdash;Manifest V3 improves extension security in several ways. Besides an enhanced content security policy, support is removed for remotely hosted code and execution of arbitrary strings. 
+* [Update the manifest](/docs/extensions/migrating/manifest/)&mdash;The `manifest.json` must be specific to V3. Changes that can be made on their own are described in this section. Manifest changes related to code are described with the code changes they support.
+* [Migrate to a service worker](/docs/extensions/migrating/to-service-workers/)&mdash;A service worker replaces the extension's background or event page to ensure that background code stays off the main thread where it can hurt performance. This change also requires moving DOM, window, and certain extension API calls into offscreen documents. 
+* [Update API calls](/docs/extensions/migrating/api-calls)&mdash;Some API calls need to be replaced with more modern equivalents. 
+* [Replace blocking web request listeners](/docs/extensions/migrating/blocking-web-requests)&mdash;Blocking or modifying network requests in Manifest V2 could significantly degrade performance and require excessive access to sensitive user data. The Declarative Net Request API allows extensions to block or modify web content with fewer permissions and without hindering performance.
+* [Improve extension security](/docs/extensions/migrating/improve-security)&mdash;Manifest V3 improves extension security in several ways. Besides an enhanced content security policy, support is removed for remotely hosted code and execution of arbitrary strings. 
 
 ## New extension features 
 
