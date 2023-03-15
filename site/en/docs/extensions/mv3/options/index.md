@@ -43,7 +43,7 @@ alt="Context Menu Options page", width="357", height="222" %}
 
 ## Write the options page {: #write_page }
 
-Below is an example options page.
+Below is an example options page. Save it as `options.html` in your extension's root folder.
 
 ```html
 <!DOCTYPE html>
@@ -72,7 +72,7 @@ Favorite color:
 </html>
 ```
 
-Save a user's preferred options across devices by using the [storage.sync][1] API.
+Below is an example options script. Save it as `options.js` in the same folder as `options.html`. It lets you save a user's preferred options across devices by using the [storage.sync][1] API.
 
 ```js
 // Saves options to chrome.storage
