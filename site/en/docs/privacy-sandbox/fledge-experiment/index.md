@@ -13,12 +13,10 @@ authors:
 
 ## Learn the essentials
 
-* If you're a developer or software engineer, the [FLEDGE API Developer Guide](/blog/fledge-api)
-provides an in-depth technical reference to the proposal.
-
-* [The FLEDGE API](/docs/privacy-sandbox/fledge) is a less technical overview, and also has a
-[glossary](/docs/privacy-sandbox/fledge#glossary).
-
+* If you're a developer or software engineer, the
+  [FLEDGE API Developer Guide](/docs/privacy-sandbox/fledge-api/) provides an
+  in-depth technical reference for the proposal.
+* [The FLEDGE API](/docs/privacy-sandbox/fledge) offers a higher level overview for those who work in advertiser and ad tech, who are new to the Privacy Sandbox.
 
 ## Try the API
 
@@ -33,17 +31,25 @@ learn how to detect if a feature is available before attempting to use it.
 
 {% endAside %}
 
-1. Try the [demo](https://fledge-demo.glitch.me).
+1. Learn how to use the FLEDGE API.
+   * Review the [FLEDGE API Developer Guide](/docs/privacy-sandbox/fledge-api/).
+     This guide offers a reference for API methods and parameters.
+   * Read about [FLEDGE services](/blog/fledge-service-overview/). For example,
+     the Key/Value service offers real-time information to buyers and sellers
+     during the ad auction.
+2. Try the [demo](https://fledge-demo.glitch.me).
    * Review the [source code](https://github.com/JackJey/fledge-demo).
    * Watch the [FLEDGE demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv) to learn how the demo code works and how to use Chrome DevTools for FLEDGE debugging.
-2. Review the [FLEDGE status](/docs/privacy-sandbox/status/#fledge) for updates on the implementation of the FLEDGE API.
 3. Experiment with the API.
-   * The [developer guide](/docs/privacy-sandbox/fledge-api/) also provides a reference guide to API methods and parameters.
-   * Take part in the [origin trial](/docs/privacy-sandbox/fledge-api/#origin-trial)
+   * Sign up for the [origin trial](/docs/privacy-sandbox/fledge-api/#origin-trial)
    * Try out FLEDGE for a single user by enabling
      `chrome://flags/#privacy-sandbox-ads-apis` or by running Chrome from the
      command line with [FLEDGE feature flags](/docs/privacy-sandbox/fledge-api/#flags).
    * [Troubleshoot FLEDGE worklets](/docs/privacy-sandbox/fledge-api/troubleshoot/) with Chrome DevTools. Learn how to debug FLEDGE bidding and auction code.
+4. Review the [FLEDGE status](/docs/privacy-sandbox/status/#fledge) for updates
+   on the implementation of the FLEDGE API. Review the
+   [pending FLEDGE capabilities](/docs/privacy-sandbox/fledge-api/feature-status/)
+   for more details.
 
 [The API explainer provides more detail](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#summary) about feature support and constraints.
 
@@ -53,7 +59,7 @@ Is anything blocking you from experimenting with the API? Ask a question
 about **your implementation**, about the **demo**, or about the 
 **documentation**:
 
-*  [Open a new issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/issues/new/choose)
+*  [Open a new Issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/issues/new/choose)
    on the Privacy Sandbox Dev Support repository. Make sure to select the
    Issue template for FLEDGE.
 *  Raise an issue on the [demo code repo on
