@@ -30,15 +30,6 @@
         {% endfor %}
       </div>
 
-      {% if collections.currentEvents.length > show %}
-        <button class="load-more__button type--small display-inline-flex"
-                aria-controls="upcoming-events"
-        >
-          {{ 'i18n.events.load_more' | i18n(locale) }}
-          {{ icon('arrow-forward', {hidden: true}) }}
-        </button>
-      {% endif %}
-
       <enhanced-events-list-error>
         <p class="color-red-medium gap-top-100">
           {{ 'i18n.events.load_more_error' | i18n(locale) }}
@@ -58,16 +49,6 @@
           {% include 'partials/event-card.njk' %}
         {% endfor %}
       </div>
-
-      {% if collections.pastEvents.length > show %}
-        <button id="load-past-events"
-                class="load-more__button type--small display-inline-flex"
-                aria-controls="past-events"
-        >
-          {{ 'i18n.events.load_more' | i18n(locale) }}
-          {{ icon('arrow-forward', {hidden: true}) }}
-        </button>
-      {% endif %}
 
       <enhanced-events-list-error>
         <p class="color-red-medium gap-top-100">

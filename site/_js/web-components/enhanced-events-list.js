@@ -21,8 +21,8 @@
 import {BaseElement} from './base-element';
 import {html} from 'lit-element';
 import memoize from '../utils/memoize';
-import {loadMore} from '../misc/load-more';
-import {unsafeHTML} from 'lit-html/directives/unsafe-html';
+// eslint-disable-next-line no-unused-vars
+import {LoadMore} from './load-more';
 
 const getEvents = memoize(async () => {
   const response = await fetch('/events.json');
@@ -46,13 +46,10 @@ export class EnhancedEventsList extends BaseElement {
     this.type = null;
     this.filters = {};
     this.total = null;
-    this.loader = null;
-    this.loadMoreButton = this.getLoadMoreButton();
     this.loadedItems = [];
     this.initialItems = [];
-    this.omitInitialItems = false;
-    this.haveError = false;
     this.errorMessage = this.querySelector('enhanced-events-list-error');
+    this.fetchItems = this.fetchItems.bind(this);
   }
 
   static get properties() {
@@ -61,7 +58,6 @@ export class EnhancedEventsList extends BaseElement {
       type: {type: String, reflect: true},
       loadedItems: {type: Array, reflect: false},
       total: {type: Number, reflect: false},
-      haveError: {type: Boolean, reflect: false},
     };
   }
 
@@ -71,51 +67,18 @@ export class EnhancedEventsList extends BaseElement {
     this.initialItems = Array.from(
       this.querySelectorAll('enhanced-event-card')
     );
-
-    this.loader = await this.initLoadMore();
-
-    this.loadMoreButton?.handleConnect();
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
-
-    this.loadMoreButton?.handleDisconnect();
   }
 
   async attributeChangedCallback(name, oldval, newval) {
     if ('resolved' in this.dataset && name === 'filters') {
-      this.omitInitialItems = true;
-      this.loadedItems = await this.loader?.restart();
+      /** @type {LoadMore} */ (this.querySelector('load-more'))?.restart();
     }
 
     super.attributeChangedCallback(name, oldval, newval);
-  }
-
-  getLoadMoreButton() {
-    const element = this.querySelector('.load-more__button');
-
-    const handleClick = async () => {
-      if (!element) return;
-
-      element.setAttribute('disabled', '');
-
-      const loaded = await this.loader?.nextPage();
-
-      this.loadedItems = this.loadedItems.concat(loaded);
-
-      element.removeAttribute('disabled');
-    };
-
-    return {
-      element,
-      handleConnect: () => {
-        element?.addEventListener('click', handleClick);
-      },
-      handleDisconnect: () => {
-        element?.removeEventListener('click', handleClick);
-      },
-    };
   }
 
   /**
@@ -149,48 +112,27 @@ export class EnhancedEventsList extends BaseElement {
     });
   }
 
-  /**
-   * @returns {Promise<{currentOffset, total, take, nextPage, isLastPage, restart}>}
-   */
-  async initLoadMore() {
-    return loadMore(
-      async (skip, take) => {
-        this.haveError = false;
+  async fetchItems(skip, take) {
+    this.haveError = false;
 
-        const groups = await getEvents();
-        const events =
-          this.type === 'UPCOMING'
-            ? this.filterEvents(groups.upcomingEvents)
-            : this.filterEvents(groups.pastEvents);
+    const groups = await getEvents();
+    const events =
+      this.type === 'UPCOMING'
+        ? this.filterEvents(groups.upcomingEvents)
+        : this.filterEvents(groups.pastEvents);
 
-        return {
-          updated_total: events.length,
-          items: events.slice(skip, take + skip).map(event => event.html),
-        };
-      },
-      () => (this.haveError = true),
-      {
-        skip: this.initialItems.length,
-        take: 10,
-        total: this.total,
-      }
-    );
+    return {
+      updated_total: events.length,
+      items: events.slice(skip, take + skip).map(event => event.html),
+    };
   }
 
   render() {
-    const initialItems = this.omitInitialItems ? null : this.initialItems;
-
-    const loadMoreButton = this.loader?.isLastPage()
-      ? null
-      : this.loadMoreButton?.element;
-
-    const errorMessage = this.haveError ? this.errorMessage : null;
-
     return html`
-      <div class="display-grid grid-cols-1 grid-gap-400">
-        ${initialItems} ${unsafeHTML(this.loadedItems.join(''))}
-      </div>
-      ${loadMoreButton} ${errorMessage}
+      <load-more .fetchItems="${this.fetchItems}" .total="${this.total}">
+        ${this.initialItems}
+        <load-more-error> ${this.errorMessage}</load-more-error>
+      </load-more>
     `;
   }
 }

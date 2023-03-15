@@ -2,7 +2,7 @@
 
 {% set buttonLabel =  'i18n.events.see_details' | i18n if event.isPastEvent else 'i18n.events.see_whos_joining' | i18n %}
 
-<enhanced-event-card>
+<enhanced-event-card class="load-more__item">
   <article id="{{ event.id }}"
            class="event-card pad-400 lg:pad-500 no-js"
            tabindex="0"
