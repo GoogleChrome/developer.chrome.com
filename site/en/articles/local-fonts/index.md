@@ -151,6 +151,10 @@ The Local Font Access API is an attempt at solving these challenges. It consists
 - From each enumeration result, the ability to request low-level (byte-oriented) **SFNT container
   access** that includes the full font data.
 
+### Browser support
+
+{% BrowserCompat 'api.Window.queryLocalFonts' %}
+
 ### How to use the Local Font Access API
 
 #### Feature detection
