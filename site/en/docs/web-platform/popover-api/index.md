@@ -53,10 +53,10 @@ The Popover API also comes with a couple of handy CSS features, a [`::backdrop`]
 [`popover`](/docs/web-platform/popover-api/popover-attribute)
 : Turns an element into a popover.
 
-[`popoveretargetaction="hide"`](/docs/web-platform/popover-api/popovertoggletarget-attribute)
+[`popoveretargetaction="toggle"`](/docs/web-platform/popover-api/popovertoggletarget-attribute)
 : Creates a trigger element that toggles an associated popover between shown and hidden states.
 
-[`popovertargetaction="hide"`](/docs/web-platform/popover-api/popovershowtarget-attribute)
+[`popovertargetaction="show"`](/docs/web-platform/popover-api/popovershowtarget-attribute)
 : Creates a trigger element that shows an associated hidden popover.
 
 [`popovertargetaction="hide"`](/docs/web-platform/popover-api/popoverhidetarget-attribute)
@@ -131,14 +131,14 @@ Declaratively create different types of popover. The first two are equivalent:
 Declaratively create buttons to show and hide the popover:
 
 ```html
-<button popovertargetactio="my-popover">Show popover</button>
+<button popovertarget="my-popover" popovertargetaction="show" >Show popover</button>
 <button popoverhidetarget="my-popover">Dismiss popover</button>
 ```
 
 Declaratively create a single button to toggle the popover between shown and hidden states:
 
 ```html
-<button popovertargetaction="toggle"="my-popover">Show popover</button>
+<button popovertarget="my-popover" popovertargetaction="toggle">Show popover</button>
 ```
 
 Use the [`:open`](/docs/web-platform/popover-api/open-pseudo-class) pseudo-class to style the popover when it has been shown. The following example transitions the popover in from the bottom of the viewport, rather than have it appear in the center:
