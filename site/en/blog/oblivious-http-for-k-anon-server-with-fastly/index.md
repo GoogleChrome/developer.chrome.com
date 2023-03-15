@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: Partnering with Fastly - Oblivious HTTP relay for FLEDGE's 𝑘-anonymity server
+title: Partnering with Fastly—Oblivious HTTP relay for FLEDGE's 𝑘-anonymity server
 subtitle: >
   We are improving Chrome’s privacy measures by partnering with Fastly to implement the 𝑘-anonymity server for FLEDGE. With data being relayed through an OHTTP relay in this implementation, Google servers do not receive the IP addresses of end users. The 𝑘-anonymity server is an incremental step towards the full implementation of FLEDGE.
 description:
