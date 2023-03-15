@@ -131,14 +131,14 @@ Declaratively create different types of popover. The first two are equivalent:
 Declaratively create buttons to show and hide the popover:
 
 ```html
-<button popovershowtarget="my-popover">Show popover</button>
+<button popovertargetactio="my-popover">Show popover</button>
 <button popoverhidetarget="my-popover">Dismiss popover</button>
 ```
 
 Declaratively create a single button to toggle the popover between shown and hidden states:
 
 ```html
-<button popovertoggletarget="my-popover">Show popover</button>
+<button popovertargetaction="toggle"="my-popover">Show popover</button>
 ```
 
 Use the [`:open`](/docs/web-platform/popover-api/open-pseudo-class) pseudo-class to style the popover when it has been shown. The following example transitions the popover in from the bottom of the viewport, rather than have it appear in the center:

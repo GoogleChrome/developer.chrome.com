@@ -382,7 +382,7 @@ The Popover API allows you to specify three types of popover which differ in beh
   - related by triggering attributes on child elements such as `popovertargetaction="toggle"`, `popovertargetaction="show"`, and so on.
   - related by the `anchor` attribute (Under development CSS Anchoring API).
 - Light dismiss.
-- Opening dismisses other popovers that are not [ancestral popovers](https://open-ui.org/components/popover.research.explainer#nearest-open-ancestral-popover). Have a play with the demo below that highlights how nesting with ancestral popovers works. See how changing some of the `popovertargetaction="hide"`/`popovertargetaction="show` instances to `popovertargetaction="toggle"` changes things.
+- Opening dismisses other popovers that are not [ancestral popovers](https://open-ui.org/components/popover.research.explainer#nearest-open-ancestral-popover). Have a play with the demo below that highlights how nesting with ancestral popovers works. See how changing some of the `popovertargetaction="hide"`/`popovershowtarget` instances to `popovertargetaction="toggle"` changes things.
 - Light dismissing one dismisses all, but dismissing one in the stack only dismisses those above it in the stack.
 
 {% Codepen {
