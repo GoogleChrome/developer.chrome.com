@@ -140,7 +140,7 @@ A partir de Chromium 94, puedes emular eventos inactivos en DevTools sin estar r
 
 ### Soporte de Puppeteer
 
-A partir de la versión 5.3.1 de Puppeteer, puedes [emular los distintos estados inactivos](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageemulateidlestateoverrides) para probar mediante programación cómo cambia el comportamiento de tu aplicación web.
+A partir de la versión 5.3.1 de Puppeteer, puedes [emular los distintos estados inactivos](https://pptr.dev/api/puppeteer.page.emulateidlestate/) para probar mediante programación cómo cambia el comportamiento de tu aplicación web.
 
 ### Demo
 
