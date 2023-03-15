@@ -10,20 +10,16 @@ authors:
   - alexandrawhite
   - kevinkiklee
 date: 2022-03-07
-updated: 2022-05-10
+updated: 2023-03-14
 ---
 
 ## Implementation status
 
 This document outlines a proposal for a new HTML element: `<fencedframe>`.
 
-*  Experiment with fenced frames in the [Privacy Sandbox unified origin trial](/origintrials/#/view_trial/771241436187197441) from M102 to M107. Learn how to [set up the origin trial](/blog/privacy-sandbox-unified-origin-trial/) and [join us for a feedback/discussion](https://github.com/WICG/fenced-frame/issues).
-*  [Fenced frames proposal](https://github.com/shivanigithub/fenced-frame)
-*  [Chrome Platform Status](https://chromestatus.com/feature/5699388062040064) 
-*  This feature is [available behind a Chrome flag](#try-fenced-frames).
-*  [The Privacy Sandbox
-   timeline](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline)
-   provides implementation timings for fenced frames and other proposals.
+{% Partial 'privacy-sandbox/timeline/fenced-frames.njk' %}
+
+{% Partial 'privacy-sandbox/timeline/fenced-frames-features.njk' %}
 
 ## Why do we need fenced frames?
 

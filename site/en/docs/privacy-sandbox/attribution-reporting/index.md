@@ -1,13 +1,16 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: 'Attribution Reporting'
-subhead: An API to measure when an ad click or view leads to a conversion, such as a purchase on an advertiser site.
-description: An API to measure when an ad click or view leads to a conversion, such as a purchase on an advertiser site.
+subhead: >
+  Measure when an ad click or view leads to a conversion, such as a
+  purchase on an advertiser site.
+description: >
+  Measure when an ad click or view leads to a conversion, such as a
+  purchase on an advertiser site.
 date: 2021-05-18
-updated: 2023-01-20
+updated: 2023-03-14
 authors:
   - maudn
-  - samdutton
   - alexandrawhite
 ---
 
@@ -22,7 +25,6 @@ underlying concepts, but doesn't go into much technical detail.
 
 - If you work in **advertising or ad tech**, [Use cases](#use-cases-and-features) and [How does Attribution Reporting work?](#how-does-the-attribution-reporting-api-work) should
   be useful.
-
 - If you're a **developer or software engineer**, head over to the [Attribution Reporting: experiment and participate](/docs/privacy-sandbox/attribution-reporting-experiment/).
 
 {% Aside %}
@@ -94,35 +96,11 @@ If you're interested in experimenting with the API, head over to
 
 ### Status
 
-<table class="simple width-full fixed-table with-heading-tint">
-<thead>
-<tr>
-    <th style="text-align: left;">Proposal</th>
-    <th style="text-align: left;">Status</th>
-</tr>
-</thead>
-<tbody>
-    <tr>
-    <td>Event-level reports for clicks and views<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md">Explainer</a></td>
-    <td>Available in Chrome for origin trial.</td>
-    </tr>
-    <tr>
-    <td>Aggregatable reports for clicks and views<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md">Explainer</a></td>
-    <td>Available in Chrome for origin trial.</td>
-    </tr>
-    <td>Conversion journey: app-to-web<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/app_to_web.md">Web explainer</a> and <a href="https://developer.android.com/design-for-safety/privacy-sandbox/attribution-app-to-web">Android explainer</a></td>
-    <td>Expected in Chrome and Android for origin trial in Q2 2023.</td>
-    </tr>
-    <tr>
-    <tr>
-    <td>Conversion journey: cross-device<br><a href="https://github.com/WICG/attribution-reporting-api/blob/main/archive/cross_device.md">Explainer</a></td>
-    <td>This proposal has been archived. There are no current plans for implementation.</td>
-    </tr>
-</tbody>
-</table>
+{% Partial 'privacy-sandbox/timeline/attribution-reporting-features.njk' %}
 
 {% Aside %}
-For an overview of the status of all Privacy Sandbox APIs, see the [Privacy Sandbox timeline](https://privacysandbox.com/timeline).
+For an overview of the status of all Privacy Sandbox APIs, see the
+[Privacy Sandbox timeline](https://privacysandbox.com/timeline).
 {% endAside %}
 
 ## Use cases and features
