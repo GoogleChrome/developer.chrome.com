@@ -165,35 +165,21 @@ async function getChannelData(id) {
 async function checkDataTimestamp() {
   const storage = new Storage();
   try {
-    const file = storage
+    const [fileMetadata] = await storage
       .bucket('external-dcc-data')
-      .file('youtube-playlist.json');
-    const stream = file.createReadStream();
-    let jsonFile = '';
+      .file('youtube-playlist.json')
+      .getMetadata();
 
-    stream.on('data', chunk => {
-      jsonFile += chunk.toString();
-    });
+    const fileTimestamp = new Date(fileMetadata.timeCreated).getTime();
 
-    stream.on('end', () => {
-      const jsonObject = JSON.parse(jsonFile);
-      if (jsonObject['timestamp']) {
-        const dataTimestamp = jsonObject['timestamp'];
-        if (currentTimestamp - dataTimestamp < FETCH_INTERVAL) {
-          return false;
-        }
-      }
-      return true;
-    });
-
-    stream.on('error', error => {
-      console.error('Error reading the file', error);
-      return true;
-    });
-
+    if (currentTimestamp - fileTimestamp < FETCH_INTERVAL) {
+      return false;
+    }
     return true;
   } catch (error) {
-    console.error('Error reading file, refetching from YouTube', error);
+    console.error(
+      'Error reading file or file not found, refetching from YouTube'
+    );
     return true;
   }
 }
