@@ -181,11 +181,10 @@ and membership is removed when users clear their site data.
 Learn how you can [block access to the FLEDGE API](/docs/privacy-sandbox/fledge-api/opt-out),
 either as a site owner or as an individual user.
 
-{: #glossary}
-
 ## Key concepts
 
-Looking for more information on FLEDGE terminology? Refer to the [Privacy Sandbox glossary](/docs/privacy-sandbox/glossary/).
+Looking for more information on FLEDGE terminology? Refer to the
+[Privacy Sandbox glossary](/docs/privacy-sandbox/glossary/).
 
 {: #interest-group-detail}
 
@@ -195,16 +194,17 @@ Looking for more information on FLEDGE terminology? Refer to the [Privacy Sandbo
 ### What is an interest group?
 {% endDetailsSummary %}
 
-A FLEDGE interest group represents a group of people with a common interest, corresponding to a
-[remarketing](/docs/privacy-sandbox/glossary/#remarketing) list.
+A FLEDGE interest group represents a group of people with a common interest,
+corresponding to a [remarketing](/docs/privacy-sandbox/glossary/#remarketing) list.
 
-Every FLEDGE interest group has an owner. Different types of owners will create different types of
-interest groups with different use cases.
+Every FLEDGE interest group has an owner. Different types of owners will create
+different types of interest groups with different use cases.
 
-The owner asks the user's browser to add membership of their interest group by calling the
-JavaScript function `navigator.joinAdInterestGroup()`, providing information such as data about ads
-relevant to the interest group, and a URL for JavaScript used in bidding. Interest group data
-(such as the ads) can be updated, and an interest group can be enabled for up to 30 days.
+The owner asks the user's browser to add membership of their interest group by
+calling the JavaScript function `navigator.joinAdInterestGroup()`, providing
+information such as data about ads relevant to the interest group, and a URL
+for JavaScript used in bidding. Interest group data (such as the ads) can be
+updated, and an interest group can be enabled for up to 30 days.
 
 {% Aside %}
 
@@ -244,18 +244,23 @@ The table below provides examples of different types of FLEDGE interest group an
         <td style="vertical-align: top;">News website</td>
         <td style="vertical-align: top;">Content</td>
         <td style="vertical-align: top;">People who read about cycling.</td>
-        <td style="vertical-align: top;">Publishers can use first-party data to enable advertisers
-          to buy ads that are relevant to readers on their site. A publisher-owned interest group
-          could let publishers do the same even when those people are browsing other sites.
-          Publishers may be able to charge for the ability to show ads to specific segments of their
+        <td style="vertical-align: top;">
+          Publishers can use first-party data to enable advertisers
+          to buy ads that are relevant to readers on their site. A
+          publisher-owned interest group could let publishers do the same even
+          when those people are browsing other sites. Publishers may be able to
+          charge for the ability to show ads to specific segments of their
           audience.</td>
       </tr>
       <tr>
         <td style="vertical-align: top;">Ad tech</td>
         <td style="vertical-align: top;">DSP</td>
         <td style="vertical-align: top;">Category of products</td>
-        <td style="vertical-align: top;">People who showed an interest in cycling gear.</td>
-        <td style="vertical-align: top;">An ad tech company might create and manage an interest group
+        <td style="vertical-align: top;">
+          People who showed an interest in cycling gear.
+        </td>
+        <td style="vertical-align: top;">
+          An ad tech company might create and manage an interest group
           of people they believe are in the market for some category of item. This interest group
           could then be used to advertise products on sites that sell things in that category (and
           who work with the ad tech company).</td>
@@ -282,7 +287,7 @@ In FLEDGE, a party that owns an [interest group](#interest-group-detail) and bid
 For example:
 
 * **[Advertiser](/docs/privacy-sandbox/glossary/#advertiser)**: acting for itself.
-* **[Demand-Side Platform](/docs/privacy-sandbox/glossary/#dsp)** (DSP): acting for advertisers.
+* **[Demand-side platform](/docs/privacy-sandbox/glossary/#dsp)** (DSP): acting for advertisers.
 * **Interest group owner**: working for multiple advertisers.
 
 Buyers have three jobs:
