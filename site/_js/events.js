@@ -14,22 +14,23 @@
  * limitations under the License.
  */
 
+import memoize from './utils/memoize';
 import './web-components/enhanced-event-card';
 import './web-components/truncate-text';
 import './web-components/enhanced-select';
 import './web-components/checkbox-group';
 // eslint-disable-next-line no-unused-vars
-import {EnhancedEventsList} from './web-components/enhanced-events-list';
-// eslint-disable-next-line no-unused-vars
 import {TagPillList} from './web-components/tag-pill-list';
 import {EnhancedSelect} from './web-components/enhanced-select';
+// eslint-disable-next-line no-unused-vars
+import {LoadMore} from './web-components/load-more';
 
 let activeFilters = {};
 /** @type {TagPillList|null} */
 const activeFiltersList = document.querySelector('#active-filters');
-/** @type {EnhancedEventsList|null} */
+/** @type {LoadMore|null} */
 const upcomingEvents = document.querySelector('#upcoming-events');
-/** @type {EnhancedEventsList|null} */
+/** @type {LoadMore|null} */
 const pastEvents = document.querySelector('#past-events');
 const selectFields = document.querySelectorAll('.events-filter');
 
@@ -42,21 +43,85 @@ const selectFields = document.querySelectorAll('.events-filter');
         return;
       }
 
-      reactivelySetFilter(t.name, t.value);
+      activeFilters[t.name] = t.value;
 
-      injectFilters();
+      restart();
       updateTagPills();
     });
   });
 
+  injectCallbacks();
   addMobileListeners();
   handleDeselections();
 })();
 
-function injectFilters() {
-  if (upcomingEvents) upcomingEvents.filters = activeFilters;
-  if (pastEvents) pastEvents.filters = activeFilters;
+function injectCallbacks() {
+  if (upcomingEvents)
+    upcomingEvents.fetchItems = async (skip, take) => {
+      const groups = await getEvents();
+
+      const events = filterEvents(groups.upcomingEvents);
+
+      return {
+        updated_total: events.length,
+        items: events.slice(skip, take + skip).map(event => event.html),
+      };
+    };
+
+  if (pastEvents)
+    pastEvents.fetchItems = async (skip, take) => {
+      const groups = await getEvents();
+
+      const events = filterEvents(groups.pastEvents);
+
+      return {
+        updated_total: events.length,
+        items: events.slice(skip, take + skip).map(event => event.html),
+      };
+    };
 }
+
+const getEvents = memoize(async () => {
+  const response = await fetch('/events.json');
+
+  if (response.status !== 200) {
+    throw new Error('Unable to fetch /events.json');
+  }
+
+  const all = await response.json();
+
+  return {
+    upcomingEvents: all.filter(event => !event.isPastEvent),
+    pastEvents: all.filter(event => event.isPastEvent),
+  };
+});
+
+const filterEvents = events => {
+  return events.filter(event => {
+    if (
+      activeFilters.locations?.length &&
+      !activeFilters.locations.some(location => location === event.location)
+    ) {
+      return false;
+    }
+
+    if (
+      activeFilters.topics?.length &&
+      !activeFilters.topics.some(topic => event.topics.includes(topic))
+    ) {
+      return false;
+    }
+
+    if (
+      activeFilters.googlers?.length &&
+      !activeFilters.googlers.some(googler => event.googlers.includes(googler))
+    ) {
+      return false;
+    }
+
+    return true;
+  });
+};
 
 function updateTagPills() {
   if (!activeFiltersList) return;
@@ -104,7 +169,7 @@ function addMobileListeners() {
       return payload;
     }, {});
 
-    injectFilters();
+    restart();
     updateTagPills();
     closeFiltersModal();
   });
@@ -129,12 +194,11 @@ function handleDeselections() {
   activeFiltersList.addEventListener('removed-pill', e => {
     if (!(e instanceof CustomEvent)) return;
 
-    reactivelySetFilter(
-      e.detail.key,
-      activeFilters[e.detail.key].filter(i => i !== e.detail.value)
-    );
+    const index = activeFilters[e.detail.key].indexOf(e.detail.value);
 
-    injectFilters();
+    activeFilters[e.detail.key].splice(index, 1);
+
+    restart();
 
     selectFields.forEach(field => {
       /** @type {EnhancedSelect} */ (field).setValue(
@@ -153,9 +217,7 @@ function handleDeselections() {
   });
 }
 
-function reactivelySetFilter(key, value) {
-  activeFilters = {
-    ...activeFilters,
-    ...{[key]: value},
-  };
+function restart() {
+  if (upcomingEvents) upcomingEvents.restart();
+  if (pastEvents) pastEvents.restart();
 }

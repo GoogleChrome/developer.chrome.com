@@ -30,6 +30,11 @@
   .load-more__button {
     margin-top: var(--flow-space);
   }
+
+  .load-more__items {
+    display: grid;
+    gap: get-size(400);
+  }
 }
 
 .events-list__selected-filters {

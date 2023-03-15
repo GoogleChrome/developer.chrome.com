@@ -39,6 +39,7 @@ export class LoadMore extends BaseElement {
     return {
       skip: {type: Number, reflect: true},
       take: {type: Number, reflect: true},
+      total: {type: Number, reflect: true},
       fetchItems: {type: Function, reflect: false},
       _loading: {type: Boolean, state: true},
     };
@@ -65,23 +66,6 @@ export class LoadMore extends BaseElement {
     this.button?.handleDisconnect();
   }
 
-  async _loadMore() {
-    try {
-      const {items, updated_total} = await this.fetchItems(
-        this.skip,
-        this.take
-      );
-
-      this.total = updated_total;
-
-      this.loadedItems = this.loadedItems.concat(items);
-
-      this.skip += items.length;
-    } catch (e) {
-      this._haveError = true;
-    }
-  }
-
   shouldUpdate(_changedProperties) {
     return !('resolved' in this.dataset) || _changedProperties.has('_loading');
   }
@@ -99,6 +83,25 @@ export class LoadMore extends BaseElement {
     }
 
     super.updated(_changedProperties);
+  }
+
+  async _loadMore() {
+    try {
+      this._haveError = false;
+
+      const {items, updated_total} = await this.fetchItems(
+        this.skip,
+        this.take
+      );
+
+      this.total = updated_total;
+
+      this.loadedItems = this.loadedItems.concat(items);
+
+      this.skip += items.length;
+    } catch (e) {
+      this._haveError = true;
+    }
   }
 
   _getButton() {
@@ -121,6 +124,7 @@ export class LoadMore extends BaseElement {
   }
 
   restart() {
+    this.loadedItems = [];
     this.initialItems = [];
     this.skip = 0;
     this._loading = true;

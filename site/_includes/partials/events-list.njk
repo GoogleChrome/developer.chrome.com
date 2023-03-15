@@ -21,42 +21,36 @@
 
 <web-tabs class="events-list">
   <web-tab title="{{ 'i18n.events.upcoming_events' | i18n(locale) }}">
-    <enhanced-events-list id="upcoming-events"
-                          type="UPCOMING"
-                          total="{{ collections.currentEvents.length }}">
-      <div class="events-list__items">
-        {% for event in collections.currentEvents.slice(0,show) %}
-          {% include 'partials/event-card.njk' %}
-        {% endfor %}
-      </div>
+    <load-more  id="upcoming-events"
+                total="{{ collections.currentEvents.length }}">
+      {% for event in collections.currentEvents.slice(0,show) %}
+        {% include 'partials/event-card.njk' %}
+      {% endfor %}
 
-      <enhanced-events-list-error>
+      <load-more-error>
         <p class="color-red-medium gap-top-100">
           {{ 'i18n.events.load_more_error' | i18n(locale) }}
           <a href="https://github.com/GoogleChrome/developer.chrome.com/issues/new?labels=bug&template=bug_report.md"
              class="color-red-medium">{{ 'i18n.events.load_more_error_link' | i18n(locale) }}</a>.
         </p>
-      </enhanced-events-list-error>
-    </enhanced-events-list>
+      </load-more-error>
+    </load-more>
   </web-tab>
 
   <web-tab title="{{ 'i18n.events.past_events' | i18n(locale) }}">
-    <enhanced-events-list id="past-events"
-                          type="PAST"
-                          total="{{ collections.pastEvents.length }}">
-      <div class="events-list__items">
-        {% for event in collections.pastEvents.slice(0,show) %}
-          {% include 'partials/event-card.njk' %}
-        {% endfor %}
-      </div>
+    <load-more id="past-events"
+               total="{{ collections.pastEvents.length }}">
+      {% for event in collections.pastEvents.slice(0,show) %}
+        {% include 'partials/event-card.njk' %}
+      {% endfor %}
 
-      <enhanced-events-list-error>
+      <load-more-error>
         <p class="color-red-medium gap-top-100">
           {{ 'i18n.events.load_more_error' | i18n(locale) }}
           <a href="https://github.com/GoogleChrome/developer.chrome.com/issues/new?labels=bug&template=bug_report.md"
              class="color-red-medium">{{ 'i18n.events.load_more_error_link' | i18n(locale) }}</a>.
         </p>
-      </enhanced-events-list-error>
-    </enhanced-events-list>
+      </load-more-error>
+    </load-more>
   </web-tab>
 </web-tabs>
