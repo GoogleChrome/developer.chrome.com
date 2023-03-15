@@ -1,0 +1,57 @@
+.deprecation-calendar {
+  &__container {
+    max-width: calc(1290px + 3rem);
+  }
+
+  &__row {
+    color: var(--color-secondary-text);
+    display: flex;
+    font-family: 'Google Sans';
+    font-size: 1rem;
+    padding: 1rem 0;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &__row > div:first-child {
+    padding-left: 1rem;
+    width: 16%;     
+  }
+
+  &__row > div:nth-child(2) {
+    width: 60%;
+  }
+
+  &__row > div:nth-child(3) {
+    text-align: center;
+    width: 12%;
+  }
+
+  &__row > div:nth-child(4) {
+    padding-right: 1rem;
+    text-align: center;
+    width: 12%;
+
+    a {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    a:hover {
+      background-color: transparent;
+    }
+  }
+
+  &__row:nth-child(even) {
+    background-color: var(--color-footer-bg);
+  }
+
+  &__header {
+    font-weight: 500;
+    margin-top: 3rem;
+  }
+
+}  
