@@ -1,0 +1,29 @@
+---
+title: 'Deprecation Calendar'
+alt: 'deprecation calendar'
+---
+{% extends "layouts/base.njk" %}
+
+{% block css %}
+{% InlineCss '/css/deprecation-calendar.css' %}
+{% InlineCss '/css/chrome-main.css' %}
+{% endblock %}
+
+{% from 'macros/cards/hero-card.njk' import heroCard with context %}
+
+{% block content %}
+<div class="deprecation-calendar">
+  <div class="width-full pad-400">
+    {{ heroCard(
+            "Deprecation Calendar",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at aliquet ipsum, sed imperdiet ex. Sed commodo fringilla posuere.",
+            "",
+            "",
+            "",
+            "",
+            "red"
+        ) }}
+     {% include 'partials/deprecation-table.njk' %}
+  </div>
+</div>
+{% endblock %}
