@@ -38,7 +38,7 @@ redirects:
 
 - from: /docs/extensions/mv3/background_migration
   to: /docs/extensions/migrating/to-service-workers
-  
+
 - from: /docs/extensions/mv3/migrating_to_service_workers
   to: /docs/extensions/migrating/to-service-workers
 
@@ -617,6 +617,11 @@ redirects:
 
 - from: /docs/web-platform/pop-up-api/popovertoggletarget-property/
   to: /docs/web-platform/popover-api/popovertoggletarget-property/
+
+
+# Popover API attribute renames
+
+- from: /
 
 # Lighthouse redirects
 - from: /docs/lighthouse/best-practices/password-inputs-can-be-pasted-into/

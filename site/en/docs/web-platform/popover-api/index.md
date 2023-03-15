@@ -105,14 +105,14 @@ Events:
 
 Properties:
 
-[`popoverToggleTarget`](/docs/web-platform/popover-api/popovertoggletarget-property)
-: Creates a trigger element that toggles an associated popover between shown and hidden states. DOM definition of the HTML [`popovertoggletarget`](/docs/web-platform/popover-api/popovertoggletarget-attribute) attribute.
+[`popovertargetaction="toggle"`](/docs/web-platform/popover-api/popovertoggletarget-property)
+: Creates a trigger element that toggles an associated popover between shown and hidden states. DOM definition of the HTML [`popovertargetaction="toggle"`](/docs/web-platform/popover-api/popovertoggletarget-attribute) attribute.
 
-[`popoverShowTarget`](/docs/web-platform/popover-api/popovershowtarget-property)
-: Creates a trigger element that shows an associated hidden popover. DOM definition of the HTML [`popovershowtarget`](/docs/web-platform/popover-api/popovershowtarget-attribute) attribute.
+[`popovertargetaction="show"`](/docs/web-platform/popover-api/popovershowtarget-property)
+: Creates a trigger element that shows an associated hidden popover. DOM definition of the HTML [`popovertargetaction="show"`](/docs/web-platform/popover-api/popovershowtarget-attribute) attribute.
 
-[`popoverHideTarget`](/docs/web-platform/popover-api/popoverhidetarget-property)
-: Creates a trigger element that dismisses an associated shown popover. DOM definition of the HTML [`popoverhidetarget`](/docs/web-platform/popover-api/popoverhidetarget-attribute) attribute.
+[`popovertargetaction="hide"`](/docs/web-platform/popover-api/popoverhidetarget-property)
+: Creates a trigger element that dismisses an associated shown popover. DOM definition of the HTML [`popovertargetaction="hide"`](/docs/web-platform/popover-api/popoverhidetarget-attribute) attribute.
 
 ## Examples
 

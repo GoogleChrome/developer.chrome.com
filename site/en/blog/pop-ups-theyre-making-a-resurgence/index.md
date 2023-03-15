@@ -22,7 +22,7 @@ The goal of the [Open UI initiative](https://open-ui.org/) is to make it easier 
 
 One such problem area is pop-ups, described in Open UI as "Popovers".
 
-Popovers have had a rather polarizing reputation for a long time. This is, in part, due to the way they get both built and deployed. They're not an easy pattern to build well, but they can yield a lot of value by directing users to certain things, or making them aware of the content on your site—especially when used in a tasteful manner. 
+Popovers have had a rather polarizing reputation for a long time. This is, in part, due to the way they get both built and deployed. They're not an easy pattern to build well, but they can yield a lot of value by directing users to certain things, or making them aware of the content on your site—especially when used in a tasteful manner.
 
 There are often two major concerns when building popovers:
 
@@ -61,7 +61,7 @@ What can you currently do to promote your content above everything else? If it's
 Dialog.showModal();
 ```
 
-There are some accessibility considerations. It's advised to use [a11y-dialog](https://a11y-dialog.netlify.app/) for example if catering for users of Safari below version 15.4. 
+There are some accessibility considerations. It's advised to use [a11y-dialog](https://a11y-dialog.netlify.app/) for example if catering for users of Safari below version 15.4.
 
 You could also use one of the many popover, alert, or tooltip based libraries out there. Many of these tend to work in a similar way.
 
@@ -99,7 +99,7 @@ This is all you need.
 But, what is happening here?
 
 - You don’t have to put the popover element into a container or anything—it's hidden by default.
-- You don’t have to write any JavaScript to make it appear. That gets handled by the `popovertoggletarget` attribute.
+- You don’t have to write any JavaScript to make it appear. That gets handled by the `popovertargetaction="toggle"` attribute.
 - When it appears, it gets promoted to the top layer. That means it gets promoted above the `document` in the viewport. You don’t have to manage `z-index` or worry about where your popover is in the DOM. It could be deep down nested in the DOM, with clipping ancestors. You can also see which elements are currently in the top layer through DevTools. For more on the top layer, [check out this article](/blog/what-is-the-top-layer/).
 
 ![GIF of DevTools top layer support being demonstrated](https://wd.imgix.net/image/1D9D0Ls1ATa2ZPA9x2ZWrGFyZzT2/36Yck7O77zDipSNGNNbB.gif?auto=format&w=1600
@@ -151,7 +151,7 @@ By default, the `::backdrop` on a popover has `pointer-events: none` set.
 Let's turn our attention to styling the popover. By default, a popover has a fixed position and some applied padding. It also has `display: none`. You could override this to show a popover. But, that wouldn't promote it to the top layer.
 
 ```css
-[popover] { display: block; } 
+[popover] { display: block; }
 ```
 
 {% Codepen {
@@ -274,7 +274,7 @@ A tip here is to group transitions and animations under a media query for motion
 }
 ```
 
-Up until this point, you've seen the use of `popovertoggletarget` to show a popover. To dismiss it, we're using "Light dismiss". But, you also get `popovershowtarget` and `popoverhidetarget` attributes you can use. Let's add a button to a popover that hides it and change the toggle button to use `popovershowtarget`.
+Up until this point, you've seen the use of `popovertargetaction="toggle"` to show a popover. To dismiss it, we're using "Light dismiss". But, you also get `popovertargetaction="show"` and `popovertargetaction="hide"` attributes you can use. Let's add a button to a popover that hides it and change the toggle button to use `popovertargetaction="show"`.
 
 ```html
 <div id="code-popover" popover>
@@ -376,13 +376,13 @@ We've covered non-JavaScript interaction behavior. But what about popover behavi
 
 The Popover API allows you to specify three types of popover which differ in behavior.
 
-`[popover=auto]/[popover]`: 
+`[popover=auto]/[popover]`:
 - Nesting support. This doesn't only mean nested in the DOM either. The definition of an ancestral popover is one that is:
   - related by DOM position (child).
-  - related by triggering attributes on child elements such as `popovertoggletarget`, `popovershowtarget`, and so on.
+  - related by triggering attributes on child elements such as `popovertargetaction="toggle"`, `popovertargetaction="show"`, and so on.
   - related by the `anchor` attribute (Under development CSS Anchoring API).
 - Light dismiss.
-- Opening dismisses other popovers that are not [ancestral popovers](https://open-ui.org/components/popover.research.explainer#nearest-open-ancestral-popover). Have a play with the demo below that highlights how nesting with ancestral popovers works. See how changing some of the `popoverhidetarget`/`popovershowtarget` instances to `popovertoggletarget` changes things.
+- Opening dismisses other popovers that are not [ancestral popovers](https://open-ui.org/components/popover.research.explainer#nearest-open-ancestral-popover). Have a play with the demo below that highlights how nesting with ancestral popovers works. See how changing some of the `popovertargetaction="hide"`/`popovertargetaction="show` instances to `popovertargetaction="toggle"` changes things.
 - Light dismissing one dismisses all, but dismissing one in the stack only dismisses those above it in the stack.
 
 {% Codepen {
@@ -510,7 +510,7 @@ This demo has popovers with audible pops, so we'll need JavaScript to play the a
 
 ## Accessibility
 
-Accessibility is at the forefront of thinking with the Popover API. Accessibility mappings associate the popover with its trigger element, as needed. This means you don't need to declare `aria-*` attributes such as `aria-haspopup`, assuming you use one of the triggering attributes like `popovertoggletarget`.
+Accessibility is at the forefront of thinking with the Popover API. Accessibility mappings associate the popover with its trigger element, as needed. This means you don't need to declare `aria-*` attributes such as `aria-haspopup`, assuming you use one of the triggering attributes like `popovertargetaction="toggle"`.
 
 For focus management, you can use the autofocus attribute to move focus to an element inside a popover. This is the same as for a Dialog, but the difference comes when returning focus, and that's because of light dismiss. In most cases, closing a popover returns focus to the previously focused element. But focus gets moved to a clicked element on light dismiss, if it can get focus. Check out the [section about focus management](https://open-ui.org/components/popover.research.explainer#focus-management) in the explainer.
 
@@ -674,7 +674,7 @@ Remember, because this demo uses `autofocus`, it will need to be opened in "[ful
 
 ### Media popover
 
-This demo shows how you might pop media up. 
+This demo shows how you might pop media up.
 
 - Uses `[popover=auto]` for light dismiss.
 - JavaScript listens for the video's `play` event and pops the video up.
@@ -908,7 +908,7 @@ This demo shows how you could use popover to implement a floating action button 
 
 - Promote a `manual` type popover with the `showPopover` method. This is the main button.
 - The menu is another popover that is the target of the main button.
-- Menu is opened with `popovertoggletarget`.
+- Menu is opened with `popovertargetaction="toggle"`.
 - Use `autofocus` to focus the first menu item on show.
 - Light dismiss closes the menu.
 - The icon twist uses `:has()`. You can read more about `:has()` in [this article](/blog/has-m105/).
