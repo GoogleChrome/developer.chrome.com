@@ -618,9 +618,7 @@ redirects:
 - from: /docs/web-platform/pop-up-api/popovertoggletarget-property/
   to: /docs/web-platform/popover-api/popovertoggletarget-property/
 
-
-# Popover API attribute renames
-
+# Popover attribute renames
 - from: /
 
 # Lighthouse redirects
