@@ -31,3 +31,30 @@ This guide assumes that you have basic web development experience. We recommend 
 
 Start by creating a new directory called `open-api-reference` to hold the extension files, or download the source code from our [GitHub samples][github-open-api] repo.
 
+### Step 1: Register the service worker {: #step-1 }
+
+Extensions register their service worker in the manifest, which only takes a single JavaScript file.  There's no need to use `navigator.serviceWorker.register()`, like you would in a web app. See [Differences between extension and web service workers](tbd) to learn more.
+
+Create the manifest file in the root of the project and add the following code:
+
+{% Label %}manifest.json:{% endLabel %}
+
+```json/8-10
+{
+  "manifest_version": 3,
+  "name": "Open extension API reference",
+  "version": "1.0.0",
+  "icons": {
+    "16": "icon-16.png",
+    "128": "icon-128.png"
+  },
+  "background": {
+    "service_worker": "service-worker.js",
+  },
+}
+```
+
+To learn more about these manifest keys, check out the Reading time tutorial that explains the extension's [metadata][tut-reading-time-step1] and [icons][tut-reading-time-step2] in more detail.
+
+You can download the icons located on the [Github repo][github-open-api].
+
