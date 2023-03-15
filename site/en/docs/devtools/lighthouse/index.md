@@ -5,7 +5,7 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2018-06-18
-updated: 2023-03-14
+updated: 2023-03-15
 description: "Learn how to use Chrome DevTools to find ways to make your websites load faster."
 tags:
   - get-started
