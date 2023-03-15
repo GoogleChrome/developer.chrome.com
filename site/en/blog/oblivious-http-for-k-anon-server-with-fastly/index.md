@@ -7,6 +7,9 @@ description:
   We are improving Chrome’s privacy measures by partnering with Fastly to implement the 𝑘-anonymity server for FLEDGE. With data being relayed through an OHTTP relay in this implementation, Google servers do not receive the IP addresses of end users. The 𝑘-anonymity server is an incremental step towards the full implementation of FLEDGE.
 authors:
   - pjl
+hero: 'image/udVScdcCFAdRjZwFdLk2jWAFQyr1/abKfeo2FNt2HFX46in1l.jpg'
+alt: >
+  Image for blog post. 
 date: 2023-03-15
 ---
 
@@ -45,3 +48,5 @@ Google intends to operate the 𝑘-anonymity server on behalf of all Chrome user
 </figure>
 
 The privacy-preserving properties of FLEDGE apply equally to Google and the broader ecosystem. This server will be called from Chrome, with support for Android expected later in 2023.
+
+<em>Photo by <a href="https://unsplash.com/fr/@ianjbattaglia?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ian Battaglia</a> on <a href="https://unsplash.com/photos/9drS5E_Rguc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></em>
