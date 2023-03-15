@@ -61,7 +61,7 @@ editor][text-editor]. It lets you open a text file, edit it, save the changes ba
 a new file and save the changes to disk. It's nothing fancy, but provides enough to help you
 understand the concepts.
 
-### Browser compat
+### Browser support
 
 {% BrowserCompat 'api.Window.showOpenFilePicker' %}
 
