@@ -572,6 +572,8 @@ const dirHandle = await root.getDirectoryHandle('New Folder', { create: true });
 await root.removeEntry('Old Stuff', { recursive: true });
 ```
 
+{% BrowserCompat 'api.StorageManager.getDirectory' %}
+
 ### Accessing files optimized for performance from the origin private file system
 
 The origin private file system provides optional access to a special kind of file that is highly
