@@ -57,9 +57,9 @@ has two important functions:
 
 But first, you need to set up the site so that you can make changes to it later:
 
-1. Open the [source of this demo website][2] and click **Remix to Edit** in the upper right corner. A tab opens. This tab will be referred to as the _editor tab_.
+1. Open the [source of this demo website][2] and click **Remix** in the upper right corner. A new project opens in a tab. This tab will be referred to as the _editor tab_.
 
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/PzSGlC0EiBWw9JmpqLMu.png", alt="The editor tab.", width="800", height="488" %}
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/vNL328lOu6idOm4AKNdP.png", alt="The original source and the editor tab after clicking Remix.", width="800", height="466" %}
 
    The name of the project changes from **tony** to some randomly-generated name. You now have your own editable copy of the code. Later on, you'll make changes to this code.
 
@@ -79,11 +79,9 @@ For the rest of the screenshots in this tutorial, DevTools is shown in a [separa
 
 The baseline is a record of how the site performed before you made any performance improvements.
 
-1.  Open the **Lighthouse** panel. It may be hidden behind {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/V93Xxk8HvmByCBGzMdW4.svg", alt="More panels.", width="20", height="20" %} **More panels**.
+1.  Open the **Lighthouse** panel. It may be hidden behind {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/V93Xxk8HvmByCBGzMdW4.svg", alt="More panels.", width="20", height="20" %} **More panels**. The panel is powered by [**Lighthouse**](/docs/lighthouse).
 
     {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4zA1JQLNurO4o8WyAy9T.png", alt="The Lighthouse panel.", width="800", height="830" %}
-
-    The panel is powered by [**Lighthouse**](/docs/lighthouse).
 
 2.  Match your Lighthouse report configuration settings to those on the screenshot. Here's an explanation of the
     different options:
@@ -117,7 +115,7 @@ make changes to the code, you should see this number rise. A higher score means 
 
 #### Metrics {: #metrics }
 
-Scroll down to the **Metrics** section and click **Expand view**. Click **Learn more...** to read documentation on a metric.
+Scroll down to the **Metrics** section and click **Expand view**. To read documentation on a metric, click **Learn more...**.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/fhK91fGcQEPIkuhYbj7r.png", alt="The Metrics section.", width="800", height="712" %}
 
@@ -310,12 +308,12 @@ The first task, then, is to find code that doesn't need to be executed on page l
 
     {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/qIwOLr4ToqMYvDC9Gz5C.png", alt="More information about the 'reduce render-blocking resources' opportunity.", width="800", height="729" %}
 
-2.  Depending on your operating system, press to [open the Command Menu](/docs/devtools/command-menu/#ope):
+1.  Depending on your operating system, press the following to [open the Command Menu](/docs/devtools/command-menu/#ope):
 
     - On Mac, <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>
     - On Windows, Linux, or ChromeOS, <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>
 
-    Start typing `Coverage` and select **Show Coverage**.
+1.  Start typing `Coverage` and select **Show Coverage**.
 
     {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/weuz6NdR0mufsgCMf0E6.png", alt="Opening the Command Menu from the Lighthouse panel.", width="800", height="508" %}
 
@@ -323,19 +321,19 @@ The first task, then, is to find code that doesn't need to be executed on page l
 
     {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Pjwv19SbL16QGDoDdQ97.png", alt="The Coverage tab.", width="800", height="654" %}
 
-3.  Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/sX65QEDYhwBFHCM24BtV.svg", alt="Reload.", width="22", height="22" %} **Reload**. The **Coverage** tab provides an overview of how much of the code in `bundle.js`, `jquery.js`, and `lodash.js` is being executed while the page loads.
+1.  Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/sX65QEDYhwBFHCM24BtV.svg", alt="Reload.", width="22", height="22" %} **Reload**. The **Coverage** tab provides an overview of how much of the code in `bundle.js`, `jquery.js`, and `lodash.js` is being executed while the page loads.
 
     {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/wBN9y0nBe5zulsFT7uTx.png", alt="The Coverage report.", width="800", height="611" %}
 
     This screenshot says that about 74% and 30% of the jQuery and Lodash files aren't used, respectively.
 
-4.  Click the **jquery.js** row. DevTools opens the file in the **Sources** panel. A line of code was
+1.  Click the **jquery.js** row. DevTools opens the file in the **Sources** panel. A line of code was
     executed if it has a green bar next to it. A red bar next to a line of code means it was not executed, and is
     definitely not needed on page load.
 
     {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/EzmNiqgdBYxLSS0F6APM.png", alt="Viewing the jQuery file in the Sources panel.", width="800", height="660" %}
 
-5.  Scroll through the jQuery code a bit. Some of the lines that get "executed" are actually just
+1.  Scroll through the jQuery code a bit. Some of the lines that get "executed" are actually just
     comments. Running this code through a minifier that strips comments is another way to reduce the
     size of this file.
 
@@ -345,22 +343,21 @@ line-by-line, and only ship the code that's needed for page load.
 Are the `jquery.js` and `lodash.js` files even needed to load the page? The **Request Blocking** tab can
 show you what happens when resources aren't available.
 
-1.  Click the **Network** tab.
-2.  Press <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) or <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux, ChromeOS) to open the **Command Menu** again.
-3.  Start typing `blocking` and then select **Show Request Blocking**. The Request Blocking tab opens.
+1.  Click the **Network** tab and [open the **Command Menu** again](/docs/devtools/command-menu/#open).
+1.  Start typing `blocking` and then select **Show Request Blocking**. The **Request Blocking** tab opens.
 
     {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/kYQ5X5AMm8bRBcqr4ylT.png", alt="The Request Blocking tab.", width="800", height="585" %}
 
-4.  Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YihNsXarRhDgEi9rOT4H.svg", alt="Add.", width="24", height="24" %} **Add Pattern**, type `/libs/*` in the textbox, and press <kbd>Enter</kbd> to confirm.
+1.  Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YihNsXarRhDgEi9rOT4H.svg", alt="Add.", width="24", height="24" %} **Add Pattern**, type `/libs/*` in the textbox, and press <kbd>Enter</kbd> to confirm.
 
     {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/S7L1CsLkI7DAg7X24YtD.png", alt="Adding a pattern to block any request to the 'libs' directory.", width="800", height="556" %}
 
-5.  Reload the page. The jQuery and Lodash requests are red, meaning that they were blocked. The
+1.  Reload the page. The jQuery and Lodash requests are red, meaning that they were blocked. The
     page still loads and is interactive, so it looks like these resources aren't needed whatsoever!
 
     {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/B7IpHXkLQdInfffZ2FcO.png", alt="The Network panel shows that the requests have been blocked.", width="800", height="556" %}
 
-6.  Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Nh5W7S7oEdlTcjarzxKC.svg", alt="Remove.", width="22", height="22" %} **Remove all patterns** to delete the `/libs/*` blocking pattern.
+1.  Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Nh5W7S7oEdlTcjarzxKC.svg", alt="Remove.", width="22", height="22" %} **Remove all patterns** to delete the `/libs/*` blocking pattern.
 
 In general, the **Request Blocking** tab is useful for simulating how your page behaves when any given
 resource isn't available.
@@ -473,7 +470,7 @@ Investigate the trace to find ways to do less JavaScript work:
     currently selected. For example, if you clicked on one of the `mineBitcoin` activities, the
     **Bottom-Up** section is only going to show information for that one activity.
 
-The **Self Time** column shows you how much time was spent directly in each activity. In this case, about 82% of main thread time was spent on the `mineBitcoin` function.
+    The **Self Time** column shows you how much time was spent directly in each activity. In this case, about 82% of main thread time was spent on the `mineBitcoin` function.
 
 Time to see whether using production mode and reducing JavaScript activity will speed up the page
 load. Start with production mode:
