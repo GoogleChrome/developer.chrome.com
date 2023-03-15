@@ -132,7 +132,7 @@ information about what that person is interested in.
 
 Read the [developer guide](/docs/privacy-sandbox/fledge-api/) and
 [status of pending FLEDGE capabilities](/docs/privacy-sandbox/fledge-api/feature-status/)
-to understand what features are currently available in Chrome.
+to understand what features are currently available for testing in Chrome.
 
 FLEDGE features will be added over time, and we'll regularly update a list of
 which features are already implemented and what's still in progress. FLEDGE is
@@ -143,8 +143,8 @@ currently in an [origin trial](/docs/privacy-sandbox/unified-origin-trial/).
 ## How can I try FLEDGE? {: #try-fledge}
 
 * The [FLEDGE API developer guide](/docs/privacy-sandbox/fledge-api) describes
-  how to use the API, how to test locally and how to participate in the Privacy
-  Sandbox relevence and measurement origin trial.
+  how to use the API, how to test locally and how to participate in the
+  [relevence and measurement origin trial](/docs/privacy-sandbox/unified-origin-trial/).
 
 * [fledge-demo.glitch.me](https://fledge-demo.glitch.me/) provides a
   walkthrough of a basic FLEDGE deployment across advertiser and publisher
