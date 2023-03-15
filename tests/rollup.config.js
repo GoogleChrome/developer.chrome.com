@@ -4,7 +4,6 @@ const inputs = [
   'site/_js/web-components/enhanced-select/_enhanced-select',
   'site/_js/web-components/checkbox-group/_checkbox-group',
   'site/_js/web-components/tag-pill-list/_tag-pill-list',
-  'site/_js/misc/load-more/_load-more',
 ];
 
 const configs = inputs.map(input => {
