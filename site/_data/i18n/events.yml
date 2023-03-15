@@ -47,7 +47,7 @@ load_more:
   en: "Load more events"
 
 load_more_error:
-    en: "Sorry, that didn't work. Please refresh the page to try again and if the problem persists consider"
+    en: "Sorry, that did not work. Please refresh the page to try again and if the problem persists consider"
 
 load_more_error_link:
     en: "raising a bug"

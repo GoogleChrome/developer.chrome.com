@@ -32,7 +32,7 @@ export class LoadMore extends BaseElement {
     this.button = null;
     this._loading = false;
     this._haveError = false;
-    this._errorMessage = null;
+    this.i18n = {};
   }
 
   static get properties() {
@@ -42,6 +42,7 @@ export class LoadMore extends BaseElement {
       total: {type: Number, reflect: true},
       fetchItems: {type: Function, reflect: false},
       _loading: {type: Boolean, state: true},
+      i18n: {type: Object, reflect: true},
     };
   }
 
@@ -49,7 +50,6 @@ export class LoadMore extends BaseElement {
     super.connectedCallback();
 
     this.initialItems = Array.from(this.querySelectorAll('.load-more__item'));
-    this._errorMessage = this.querySelector('load-more-error');
     this.skip = this.initialItems.length;
   }
 
@@ -108,7 +108,6 @@ export class LoadMore extends BaseElement {
     const element = this.querySelector('.load-more__button');
 
     const handleClick = async () => {
-      if (!element) return;
       this._loading = true;
     };
 
@@ -130,26 +129,43 @@ export class LoadMore extends BaseElement {
     this._loading = true;
   }
 
-  //todo - i18n load more, fix aria-controls, position error
+  _renderError() {
+    if (!this._haveError) return null;
+
+    return html`
+      <p class="color-red-medium gap-top-300">
+        ${this.i18n.errorMessage}
+        <a
+          href="https://github.com/GoogleChrome/developer.chrome.com/issues/new?labels=bug&template=bug_report.md"
+          class="color-red-medium"
+        >
+          ${this.i18n.errorLinkLabel}
+        </a>
+      </p>
+    `;
+  }
+
+  _renderButton() {
+    if (this.skip >= this.total) return null;
+
+    return html`
+      <button
+        ?disabled="${this._loading}"
+        class="load-more__button type--small display-inline-flex"
+        aria-controls="upcoming-events"
+      >
+        ${this.i18n.buttonLabel} ${unsafeSVG(arrowIcon)}
+      </button>
+    `;
+  }
+
+  //todo - fix aria-controls
   render() {
-    const errorMessage = this._haveError ? this._errorMessage : null;
-
-    const button =
-      this.skip >= this.total
-        ? null
-        : html`<button
-            ?disabled="${this._loading}"
-            class="load-more__button type--small display-inline-flex"
-            aria-controls="upcoming-events"
-          >
-            Load more events ${unsafeSVG(arrowIcon)}
-          </button>`;
-
     return html`
       <div class="load-more__items">
         ${this.initialItems} ${unsafeHTML(this.loadedItems.join(''))}
       </div>
-      ${errorMessage} ${button}
+      ${this._renderError()} ${this._renderButton()}
     `;
   }
 }

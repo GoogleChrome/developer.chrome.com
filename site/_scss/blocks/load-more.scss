@@ -28,14 +28,4 @@
   &[hidden] {
     display: none;
   }
-
-  load-more-error {
-    display: none;
-  }
-
-  &:defined {
-    load-more-error {
-      display: initial;
-    }
-  }
 }
