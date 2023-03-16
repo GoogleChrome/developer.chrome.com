@@ -180,7 +180,6 @@ For help with using DevTools, Stack Overflow is the best channel.
 [Stack Overflow][47]
 
 To file bugs or feature requests on the DevTools docs, open a GitHub issue.
-repository.
 
 [Docs Issues][48]
 
