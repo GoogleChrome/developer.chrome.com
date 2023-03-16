@@ -83,7 +83,7 @@ Perhaps the easiest way to explain the Page Lifecycle states &mdash; as well as
 the events that signal transitions between them &mdash; is with a diagram:
 
 <figure>
-  <a href="https://wd.imgix.net/image/eqprBhZUGfb8WYnumQ9ljAxRrA72/1mN2saGWo57O6vIOdcGy.svg">
+  <a href="https://wd.imgix.net/image/eqprBhZUGfb8WYnumQ9ljAxRrA72/KCIeOsJ0lCWMthBSSBrn.svg">
     {% Img
       src="image/eqprBhZUGfb8WYnumQ9ljAxRrA72/KCIeOsJ0lCWMthBSSBrn.svg",
       alt="Page Lifecycle API state and event flow. A visual representation of the state and event flow described throughout this document.",
