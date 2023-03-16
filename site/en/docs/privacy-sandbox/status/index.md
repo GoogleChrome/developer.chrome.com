@@ -4,7 +4,7 @@ title: Is it ready yet?
 subhead: Timeline for Privacy Sandbox API proposals and feature releases.
 description: Implementation status for Privacy Sandbox APIs.
 date: 2021-05-18
-updated: 2023-03-17
+updated: 2023-03-15
 authors:
   - alexandrawhite
 ---
