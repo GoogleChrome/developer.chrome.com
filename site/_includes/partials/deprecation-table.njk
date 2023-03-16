@@ -10,10 +10,10 @@
     </div>
     {% for i in range(50) %}
     <div class="deprecation-calendar__row">
-        <div>2023-05-02</div>
-        <div><a href='developers.chrome.com'>Secure Payment Confirmation: Rename rp --> rpId in CollectedClientAdditionalPaymentData</a></div>
-        <div><a href='developers.chrome.com'>113</a></div>
-        <div><a href='developers.chrome.com'>{{ icon('articles') }}</a></div>
+        <div><span class='deprecation-calendar__mobile-label'>Removal date</span>2023-05-02</div>
+        <div><a href='https://chromestatus.com/feature/5203057325899776' class='no-visited'>Secure Payment Confirmation: Rename rp --> rpId in CollectedClientAdditionalPaymentData</a></div>
+        <div><span class='deprecation-calendar__mobile-label'>Chrome version</span><a href='https://chrome-status-lite.deno.dev/?version=113' class='no-visited'>113</a></div>
+        <div><a href='https://developers.chrome.com'  class='deprecation-calendar__article'>{{ icon('articles') }}<span class='deprecation-calendar__mobile-label'>Read article</span></a></div>
     </div>
     {% endfor %}
 </div>

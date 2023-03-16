@@ -3,30 +3,69 @@
     max-width: calc(1290px + 3rem);
   }
 
+  &__rows {
+    margin-top: 3rem;
+
+    @include media-query('md-max') {
+      margin-top: 1.5rem;
+    }
+  }
+
   &__row {
+    align-items: center;
     color: var(--color-secondary-text);
     display: flex;
     font-family: 'Google Sans';
     font-size: 1rem;
     padding: 1rem 0;
 
+    @include media-query('md-max') {
+      background-color: var(--color-footer-bg);
+      border-radius: 0.75rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+
     a {
       text-decoration: none;
     }
+
   }
 
   &__row > div:first-child {
     padding-left: 1rem;
-    width: 16%;     
+    width: 16%;
+    
+    @include media-query('md-max') {
+      font-size: px-to-rem(14px);
+      margin-top: 1.5rem;
+      order: 1;
+      padding: 0 1.5rem;
+      width: 50%;
+    }
   }
 
   &__row > div:nth-child(2) {
     width: 60%;
+
+    @include media-query('md-max') {
+      padding: 0 1.5rem;
+      width: 100%;
+    }
   }
 
   &__row > div:nth-child(3) {
     text-align: center;
     width: 12%;
+
+    @include media-query('md-max') {
+      font-size: px-to-rem(14px);
+      margin-top: 1.5rem;
+      order: 1;
+      padding: 0 1.5rem;
+      text-align: left;
+      width: 50%;
+    }
   }
 
   &__row > div:nth-child(4) {
@@ -34,14 +73,13 @@
     text-align: center;
     width: 12%;
 
-    a {
-      align-items: center;
-      display: flex;
-      justify-content: center;
-    }
-
-    a:hover {
-      background-color: transparent;
+    @include media-query('md-max') {
+      border-top: 1px solid get-color('grey-300');
+      margin: 1.5rem;
+      margin-bottom: 0;
+      order: 2;
+      padding-top: 1.5rem;
+      width: 100%;
     }
   }
 
@@ -51,7 +89,43 @@
 
   &__header {
     font-weight: 500;
-    margin-top: 3rem;
+
+    @include media-query('md-max') {
+      display: none;
+    }
+  }
+
+  &__mobile-label {
+    display: none;
+
+    @include media-query('md-max') {
+      display: block;
+    }
+  }
+
+  &__article {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    @include media-query('md-max') {
+      justify-content: start;
+    }
+
+    :hover {
+      background-color: transparent;
+    }
+
+    svg {
+      margin-right: 8px;
+    }
+
+  }
+
+  .hero-card__inner {
+    @include media-query('md-max') {
+      text-align: center;
+    }
   }
 
 }  
