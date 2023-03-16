@@ -34,7 +34,7 @@ For more information, see [What's new in Lighthouse](/tags/new-in-lighthouse/).
 
 ## Introduction {: #intro }
 
-This is Tony. Tony is very famous in cat society. He has built a website so that his fans can learn
+This is Tony. Tony is very famous in cat society. He has built a [website](https://tony.glitch.me/) so that his fans can learn
 what his favorite foods are. His fans love the site, but Tony keeps hearing complaints that the site
 loads slowly. Tony has asked you to help him speed the site up.
 
@@ -55,9 +55,9 @@ has two important functions:
 
 ### Set up {: #setup }
 
-But first, you need to set up the site so that you can make changes to it later:
+But first, you need to set up a new working environment for [Tony's website](https://glitch.com/edit/#!/tony) so that you can make changes to it later:
 
-1. Open the [source of this demo website][2] and click **Remix** in the upper right corner. A new project opens in a tab. This tab will be referred to as the _editor tab_.
+1. [Remix the website's project on Glitch][2]. Your new project opens in a tab. This tab will be referred to as the _editor tab_.
 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/vNL328lOu6idOm4AKNdP.png", alt="The original source and the editor tab after clicking Remix.", width="800", height="466" %}
 
@@ -79,7 +79,11 @@ For the rest of the screenshots in this tutorial, DevTools is shown in a [separa
 
 The baseline is a record of how the site performed before you made any performance improvements.
 
-1.  Open the **Lighthouse** panel. It may be hidden behind {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/V93Xxk8HvmByCBGzMdW4.svg", alt="More panels.", width="20", height="20" %} **More panels**. The panel is powered by [**Lighthouse**](/docs/lighthouse).
+1.  Open the **Lighthouse** panel. It may be hidden behind {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/V93Xxk8HvmByCBGzMdW4.svg", alt="More panels.", width="20", height="20" %} **More panels**.
+   
+    {% Aside %}
+    This panel is powered by its namesake—[**Lighthouse**](/docs/lighthouse), an automated tool for improving the quality of your web apps.
+    {% endAside %}
 
     {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4zA1JQLNurO4o8WyAy9T.png", alt="The Lighthouse panel.", width="800", height="830" %}
 
@@ -526,7 +530,7 @@ Run audits on your own site! If you need help interpreting your report or findin
 - Tweet us at [@ChromeDevTools][20].
 
 [1]: https://www.coursera.org/learn/web-development#syllabus
-[2]: https://glitch.com/edit/#!/tony
+[2]: https://glitch.com/edit/#!/remix/tony
 [3]: /docs/lighthouse/overview/
 [4]: https://support.google.com/chrome/answer/95464
 [5]: https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Encoding#Directives
