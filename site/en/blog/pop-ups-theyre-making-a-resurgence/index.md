@@ -274,7 +274,7 @@ A tip here is to group transitions and animations under a media query for motion
 }
 ```
 
-Up until this point, you've seen the use of `popovertargetaction="toggle"` to show a popover. To dismiss it, we're using "Light dismiss". But, you also get `popovertargetaction="show"` and `popovertargetaction="hide"` attributes you can use. Let's add a button to a popover that hides it and change the toggle button to use `popovertargetaction="show"`.
+Up until this point, you've seen the use of `popovertoggletarget` to show a popover. To dismiss it, we're using "Light dismiss". But, you also get `popovershowtarget` and `popoverhidetarget` attributes you can use. Let's add a button to a popover that hides it and change the toggle button to use `popovershowtarget`.
 
 ```html
 <div id="code-popover" popover>
