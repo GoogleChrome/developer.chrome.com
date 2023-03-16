@@ -228,7 +228,7 @@ Use the workflows that you learned earlier to manually check that the compressio
 
 1. Go back to the demo tab and reload the page.
 
-   The **Size** column should now show 2 different values for text resources like `bundle.js`. The top value of `269 KB` for `bundle.js` is the size of the file that was sent over the network, and the bottom value of `1.4 MB` is the uncompressed file size.
+   The **Size** column should now show two different values for text resources like `bundle.js`. The top value of `269 KB` for `bundle.js` is the size of the file that was sent over the network, and the bottom value of `1.4 MB` is the uncompressed file size.
 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/feaqTS50BT1JlFSXLFLr.png", alt="The Size column now shows 2 different values for text resources.", width="800", height="572" %}
 
