@@ -1,29 +1,27 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "View, edit, and delete cookies"
+title: "View, add, edit, and delete cookies"
 authors:
   - kaycebasques
+  - sofiayem
 date: 2015-04-13
-updated: 2021-09-11
-description: "Learn how to view, edit, and delete a page's HTTP cookies using Chrome DevTools."
+updated: 2023-03-16
+description: "Learn how to view, add, edit, and delete a page's HTTP cookies using Chrome DevTools."
 tags:
-  - storage
+  - cookies
 ---
 
 [HTTP Cookies][1] are mainly used to manage user sessions, store user personalization preferences,
 and track user behavior. They are also the cause of all of those annoying "this page uses cookies"
-consent forms that you see across the web. This guide teaches you how to view, edit, and delete a
+consent forms that you see across the web. This guide teaches you how to view, add, edit, and delete a
 page's cookies with Chrome DevTools.
 
 ## Open the Cookies pane {: #open }
 
 1.  [Open Chrome DevTools][2].
-2.  Click the **Application** tab to open the **Application** panel.
-    Under **Storage** expand **Cookies**, then select an origin.
+1.  Open **Application** > **Storage** > **Cookies** and select an origin.
 
-    {% Img src="image/admin/Yl2rWrOQvnBHkZwjUzOi.png", alt="The Cookies pane", width="800", height="445" %}
-
-    **Figure 1**. The Cookies pane
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/3Z0YXsThDJtTmS8Z3z33.png", alt="The Cookies pane.", width="800", height="411" %}
 
 ## Fields {: #fields }
 
@@ -40,11 +38,10 @@ The **Cookies** table contains the following fields:
   JavaScript modification is not allowed.
 - **Secure**. If true, this field indicates that the cookie can only be sent to the server over a
   secure, HTTPS connection.
-- **SameSite**. Contains `strict` or `lax` if the cookie is using the experimental `SameSite`
+- **SameSite**. Contains `Strict` or `Lax` if the cookie is using the experimental `SameSite`
   attribute.
-- **SameParty**. If true, this field indicates that the cookie is allowed to be set or sent in contexts
-  where all ancestor frames belong to the same [First-Party Set][3].
-- **Priority**. Contains `low`, `medium` (default), or `high` if using deprecated [cookie
+- **Partition key**.
+- **Priority**. Contains `Low`, `Medium` (default), or `High` if using deprecated [cookie
   Priority][10] attribute.
 
 ## Filter cookies {: #filter }
