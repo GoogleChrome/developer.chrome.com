@@ -1,4 +1,18 @@
 // Global styles start
+@import 'globals/functions';
+@import 'globals/colors';
+@import 'globals/vars';
+@import 'globals/mixins';
+@import 'globals/gorko';
+@import 'globals/extends';
+@import 'globals/fonts';
+@import 'globals/theme';
+@import 'globals/reset';
+@import 'globals/typography';
+@import 'globals/common-blocks';
+@import 'block-groups/common';
+
+
 :root {
   --flow-space: #{get-size(500)};
 }
