@@ -25,6 +25,10 @@ To review the latest information on any proposal or API, visit the respective ov
 
 {% Partial 'privacy-sandbox/timeline/attribution-reporting-features.njk' %}
 
+## Federated Credential Management API (FedCM)
+
+{% Partial 'privacy-sandbox/timeline/fedcm.njk' %}
+
 ## Fenced Frames
 
 {% Partial 'privacy-sandbox/timeline/fenced-frames.njk' %}
