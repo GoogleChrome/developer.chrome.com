@@ -21,7 +21,7 @@ The attribute takes a string value equal to the ID of the popover element that y
 ## Example
 
 ```html
-<button popoverhidetarget="my-popover">Dismiss popover</button>
+<button popovertarget="my-popover" popovertargetaction="hide">Dismiss popover</button>
 ```
 
 ## Browser compatibility

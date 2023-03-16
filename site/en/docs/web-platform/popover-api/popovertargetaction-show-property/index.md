@@ -10,7 +10,7 @@ date: 2022-10-19
 updated: 2023-01-25
 ---
 
-The **`popovertargetaction="show"`** property of the [`HTMLInputElement`](https://developer.mozilla.org/docs/Web/API/HTMLInputElement) and [`HTMLButtonElement`](https://developer.mozilla.org/docs/Web/API/HTMLButtonElement) interfaces creates a trigger element that shows an associated hidden [popover](/docs/web-platform/popover-api/). It is the DOM definition of the HTML [`popovershowtarget`](/docs/web-platform/popover-api/popovershowtarget-attribute) attribute.
+The **`popovertargetaction="show"`** property of the [`HTMLInputElement`](https://developer.mozilla.org/docs/Web/API/HTMLInputElement) and [`HTMLButtonElement`](https://developer.mozilla.org/docs/Web/API/HTMLButtonElement) interfaces creates a trigger element that shows an associated hidden [popover](/docs/web-platform/popover-api/). It is the DOM definition of the HTML [`popovertargetaction="show"`](/docs/web-platform/popover-api/popovershowtarget-attribute) attribute.
 
 ## Value
 
