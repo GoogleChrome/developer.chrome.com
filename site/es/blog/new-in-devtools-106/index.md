@@ -104,7 +104,7 @@ Anteriormente, el seguimiento de la pila incluía scripts de terceros como `zone
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GQ9B11tKBcFc1BxQYW9z.png", alt="Automatically ignore known third-party scripts in the stack trace", width="800", height="425" %}
 
-<!-- Behind the scenes, DevTools ignores third-party scripts based on the new `x_google_ignoreList` property in sourcemaps. Frameworks and bundlers need to supply this information. See [Case Study: Better Angular Debugging with DevTools](/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular).  -->
+<!-- Behind the scenes, DevTools ignores third-party scripts based on the new `x_google_ignoreList` property in source maps. Frameworks and bundlers need to supply this information. See [Case Study: Better Angular Debugging with DevTools](/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular).  -->
 Detrás de escena, DevTools ignora los scripts de terceros basados en la nueva propiedad `x_google_ignoreList` en los mapas de origen. Los frameworks y los bundlers deben proporcionar esta información. Consulte [Estudio de caso: Mejor depuración angular con DevTools](/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular).
 
 <!-- Optionally, if you prefer to always view full stack traces, you can disable the setting via **Settings** > **Ignore list** > **Automatically add known third-party scripts to ignore list**. -->

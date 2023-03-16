@@ -24,7 +24,7 @@ The **Recorder** panel can now capture double-click and right-click events.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/qsleBCUrr2twMujW0R94.png", alt="Capture double-click and right-click events in the Recorder panel", width="800", height="572" %}
 
-In this [example](https://jec.fyi/demo/dbl-right-click), start a [recording](/docs/devtools/recorder/#record) and try to perform the following steps: 
+In this [example](https://jec.fyi/demo/dbl-right-click), start a [recording](/docs/devtools/recorder/#record) and try to perform the following steps:
 
 - Double-click the card to enlarge it
 - Right-click the card and select an action from the context menu
@@ -43,7 +43,7 @@ You can now use **Lighthouse** to measure your website’s performance beyond pa
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/3GGcCxlOGrnXLMfp0t9y.png", alt="New timespan and snapshot mode in the Lighthouse panel", width="800", height="507" %}
 
-The **Lighthouse** panel now supports 3 modes of user flow measurement: 
+The **Lighthouse** panel now supports 3 modes of user flow measurement:
 
 - [Navigation](https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md#navigation) reports analyze a single page load. Navigation is the most common report type. All Lighthouse reports before the current version are navigation reports.
 - [Timespans](https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md#timespan) reports analyze an arbitrary time period, typically containing user interactions.
@@ -53,7 +53,7 @@ For example, let’s measure the performance of adding items to cart on this [de
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/pq9Vg8xOUzplWAlXGJEa.png", alt="Timespan mode", width="800", height="549" %}
 
-See [User flows in Lighthouse](https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md) to learn about the unique use cases, benefits, and limitations of each mode. 
+See [User flows in Lighthouse](https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md) to learn about the unique use cases, benefits, and limitations of each mode.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/70d4a90431dc6c881209f605411ce0bd2272d6d1 #}
 
@@ -64,7 +64,7 @@ Chromium issue: [1291284](https://crbug.com/1291284)
 
 ### Improved zoom control in the Performance Insights panel {: #zoom }
 
-DevTools will now zoom in based on your mouse cursor rather than the playhead position.With the latest cursor-based zoom, you can move your mouse to anywhere in the track, and [zoom in](/docs/devtools/performance-insights/#navigate) to the desired area right away. 
+DevTools will now zoom in based on your mouse cursor rather than the playhead position.With the latest cursor-based zoom, you can move your mouse to anywhere in the track, and [zoom in](/docs/devtools/performance-insights/#navigate) to the desired area right away.
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/U8d1PjOFZuGkyOXHQ5Z8.mp4", autoplay=true, loop=true, class="screenshot" %}
 
@@ -118,7 +118,7 @@ In this example, the `double` function has an input parameter  `a` and a variabl
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/8e1a99324bde8d093e32ede5c8d1bf50110fac66 #}
 
-Chromium issue: [1316340](https://crbug.com/1316340) 
+Chromium issue: [1316340](https://crbug.com/1316340)
 
 
 ## Support large blobs for virtual authenticators {: #webauthn }
@@ -131,7 +131,7 @@ This checkbox is disabled by default. You can enable it only for the authenticat
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/519350816e99a82142712b2e5b6781984a77e39c #}
 
-Chromium issue: [1321803](https://crbug.com/1321803) 
+Chromium issue: [1321803](https://crbug.com/1321803)
 
 
 ## New keyboard shortcuts in the Sources panel {: #shortcuts }
@@ -148,25 +148,25 @@ Two new keyboard shortcuts are now available in the  **Sources** panel:
 Chromium issues: [1226363](https://crbug.com/1226363)
 
 
-## Sourcemaps improvements {: #sourcemaps }
- 
+## Source maps improvements {: #sourcemaps }
+
 Previously, developers experience random failure during:
- 
+
 - Debugging with [Codepen](https://codepen.io/) example
 - Identifying source location of performance issues in a [Codepen](https://codepen.io/) example
 - Missing **Component** tab when [React DevTools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) is enabled
- 
-Here are a few fixes on sourcemaps to improve the overall debugging experience:
- 
+
+Here are a few fixes on source maps to improve the overall debugging experience:
+
 - Correct mapping between location and offset for inline scripts and source location
 - Use fallback information for frame’s text location
-- Properly resolve relative urls with frame's URL  
- 
+- Properly resolve relative urls with frame's URL
+
 {# https://chromium.googlesource.com/v8/v8/+/d821a6a373ecf086a2ef0d233ace7f3431e47732 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/9d3d33e0bde8357d58a3c4981dd016e9b9c553f3 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/04a58f2837c1ec9e78bd722bbe81e9cd7ab38727 #}
 
-Chromium issues: [1319828](https://crbug.com/1319828), [1318635](https://crbug.com/1318635), [1305475](https://crbug.com/1305475)  
+Chromium issues: [1319828](https://crbug.com/1319828), [1318635](https://crbug.com/1318635), [1305475](https://crbug.com/1305475)
 
 
 {% Partial 'devtools/reach-out.md' %}

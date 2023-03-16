@@ -135,17 +135,10 @@ Chrome 112 or later.
 For testing purposes, you can reset the 10 minute quiet period by removing
 browser data.
 
-1.  Navigate to `chrome://history`.
-2.  Click **Clear Browsing History**  (under the main menu).
-3.  Clear **Cookies & Other Site Data** for the time range **All time**.
-4.  Restart Chrome.
-
-{% Aside 'caution' %}
-
-Be careful that by doing this, you will lose cookies and storage data from all
-websites on the Chrome instance.
-
-{% endAside %}
+1. Navigate to `chrome://history`.
+2. In the search history box, enter the origin of the RP.
+3. Click the three-dot icon &#8942; and select **Remove from history**.
+4. Restart Chrome.
 
 ## Participate in the origin trial
 

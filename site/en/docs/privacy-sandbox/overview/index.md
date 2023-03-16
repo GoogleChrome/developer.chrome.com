@@ -60,8 +60,6 @@ Several key proposals are listed below.
 * [**Shared Storage**](/docs/privacy-sandbox/shared-storage/): Create a
   general-purpose API which allows sites to store and access unpartitioned
   cross-site data. This data must be read in a secure environment to prevent leakage.
-* [**SameSite cookies**](https://web.dev/samesite-cookies-explained/): Secure
-  sites by explicitly marking cross-site cookies.
 * [**Storage Partitioning**](https://github.com/privacycg/storage-partitioning):
   Enable all forms of [user agent state](https://github.com/privacycg/storage-partitioning#user-agent-state),
   such as `localStorage` or cookies, to be double-keyed: by the top-level site
@@ -73,8 +71,6 @@ Several key proposals are listed below.
   Prevent browser network resources being shared across first-party contexts,
   by ensuring that every request has a network partition key that must match in
   order for resources to be reused.
-* [**HTTP Cache Partitioning**](/blog/http-cache-partitioning): Improve
-  security and privacy by partitioning the browser HTTP cache.
 * [**Federated Credential Management (FedCM)**](/docs/privacy-sandbox/fedcm/):
   Support federated identity without sharing the user's email address or other
   identifying information with a third-party service or website, unless the
@@ -123,10 +119,41 @@ Several key proposals are listed below.
 
 ## Who works on the Privacy Sandbox?
 
-* 400+ participants who joined W3C groups to provide input including the
-  [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants)
-  and the [Privacy Community Group](https://www.w3.org/community/privacycg/participants).
-* 30+ Privacy Sandbox proposals offered by Chrome and others.
+Chrome and other browser vendors, as well as ad companies and other
+stakeholders, have offered more than 30 proposals to date. These proposals can
+be found in the
+[public resources of W3C groups](https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo)
+and cover a wide variety of use cases and requirements.
+
+400+ participants have joined W3C groups to provide input including the
+[Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants) and
+the [Privacy Community Group](https://www.w3.org/community/privacycg/participants).
+
+## Where are the Privacy Sandbox APIs available?
+
+Five API implementations are currently available for testing in Chrome.
+
+The APIs are implemented in
+[Chromium](https://en.wikipedia.org/wiki/Chromium_(web_browser)), which
+is the open-source browser used to make Chrome. Code for the Privacy Sandbox
+APIs can be accessed via
+[Chromium Code Search](https://source.chromium.org/search?q=floc).
+
+You can
+[download Chromium](http://chromium.org/getting-involved/download-chromium),
+then [run it with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
+to allow access to APIs that are in the process of implementation.
+
+{% Aside 'caution' %}  
+Chrome origin trials are designed to work for Chrome users. Don't rely on Chrome
+origin trial tokens to allow trial features in other browsers, including Chromium,
+and other Chromium-based browsers.
+
+For more detailed information, see
+[Troubleshooting Chrome's origin trials](/blog/origin-trial-troubleshooting/#chrome).
+
+Chrome on iOS and iPadOS does not support Chrome origin trials.
+{% endAside%}  
 
 ## When will the APIs be implemented?
 
@@ -136,6 +163,58 @@ API has an implementation status in their documentation.
 
 We publish regular announcements on the [Chrome Developers blog](/tags/privacy/)
 as APIs move from proposal to experiment to scaled availability.
+
+## How can I try Privacy Sandbox APIs that aren't yet turned on by default?
+
+As an API progresses through development in Chrome, there are multiple ways it
+may be made available for testing.
+
+-  **For a single user via command line flags**  
+   Early features may often provide a specific command line flag to allow a
+   developer to launch the browser with the new feature enabled.
+-  **For a single user via `chrome://flags`**  
+   As a feature progresses, it's often made available via an experimental flag
+   within the more accessible `chrome://flags` interface.
+   `chrome://flags#enable-experimental-web-platform-features` bundles together
+   current experimental features.
+-  **For your users, in an origin trial**  
+   Once an iteration of a new feature is code-complete and relatively stable,
+   an [origin trial](/docs/web-platform/origin-trials/) may be provided to allow
+   individual sites to turn on the feature for Chrome users on their site. If
+   an [origin trial](/docs/web-platform/origin-trials/) is available for an API you
+   want to test with your users,
+   [register for the origin trial](/origintrials/#/trials/active) and provide
+   a valid trial token with every page load.
+-  **For users of early Chrome releases**  
+   When a feature is approved to ship in a given release, it will progress
+   through each [Chrome release channel](/docs/web-platform/chrome-release-channels/),
+   including Canary and Beta, before it reaches Stable. The feature will
+   be turned on by default for all users of those channels.
+
+{% Aside 'caution' %}  
+Chrome offers users the ability to opt-out of Privacy Sandbox trials in
+browser settings. Users who opt-out will not have Privacy Sandbox features
+turned on, even on pages which provide a valid origin trial token.  
+{% endAside%}  
+
+## Will `SameSite` become irrelevant after third-party cookies are deprecated?
+
+- `SameSite=Lax` is the current default. While it does not strictly *need* to
+   be included, it's good practice to specify it for cross-browser consistency.
+- `SameSite=Strict` continues to be a more restrictive option, for cookies that
+   must only be sent when the user is already on the site. This is and remains
+   a good security practice for cookies that are part of managing particularly
+   sensitive access.
+- `SameSite=None` should continue to be sent for cross-browser consistency. However,
+   Chrome's proposed change to phase out third-party cookies would result in those
+   cookies no longer being sent as is in cross-site contexts.
+
+The exception is cookies that are modified by either the
+[CHIPS](/docs/privacy-sandbox/chips/) or
+[First-Party Sets](/docs/privacy-sandbox/first-party-sets/) proposal.
+These allow for a subset of cross-site use cases. As these proposals are
+under active discussion, the final formats and functionality may change.
+
 
 ## Engage and share feedback
 
@@ -154,3 +233,25 @@ and the [Web Incubator Community Group](https://github.com/WICG).
 * Chromium's overview of [the Privacy Sandbox](https://www.chromium.org/Home/chromium-privacy/privacy-sandbox)
 * Google AI Blog: [Federated Learning: Collaborative Machine Learning without Centralized Training Data](https://ai.googleblog.com/2017/04/federated-learning-collaborative.html)
 * [The future of third-party cookies](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
+
+### Stay up to date on the progress of the Privacy Sandbox
+
+You can follow the monthly updates to the [Progress in the Privacy Sandbox](/tags/progress-in-the-privacy-sandbox/) series of articles which also includes an [RSS / Atom feed where you can subscribe](/feeds/progress-in-the-privacy-sandbox.xml) with your preferred reader.
+
+The article series links to the matching monthly updates to the [Privacy Sandbox timeline](https://privacysandbox.com/timeline/) which shows the current status and schedule for proposals.
+
+These high-level resources will provide signposts to changes across the project, but for individual proposals where you want to follow in detail you should:
+
+ - Watch or Star proposal repos on GitHub to get notification of new issues and updates: the Privacy Sandbox [status page](/docs/privacy-sandbox/status/) provides a link to the repo for each proposal
+ - Join the associated [W3C group](https://www.w3.org/groups/) for regular meetings discussing the proposal detail
+ - Star the associated entry on [Chrome Platform Status](https://chromestatus.com) for email updates on Chrome implementation changes.
+
+### Get involved
+
+-  Participate in incubation, testing and refinement of the APIs:  
+   [How to participate in the Privacy Sandbox initiative](/blog/privacy-sandbox-participate/)
+-  As a developer, join discussions or ask questions:  
+   [Privacy Sandbox Developer Support](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)
+
+For questions about specific APIs, you can file an issue on the
+[GitHub repo for an API Explainer](/docs/privacy-sandbox/status/).

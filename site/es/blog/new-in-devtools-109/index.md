@@ -18,7 +18,7 @@ tags:
 {% Partial 'devtools/banner.md' %}
 
 <!-- ## Recorder: Copy as options for steps, in-page replay, step’s context menu {: #recorder } -->
-## Recorder: Copia como opciones para los pasos, reproducción en la página, menú contextual del paso {: #recorder } 
+## Recorder: Copia como opciones para los pasos, reproducción en la página, menú contextual del paso {: #recorder }
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/uCqjrGj716ZbDJ4N37dl.png", alt="Nuevas opciones de copia en el panel Recorder", width="800", height="615" %}
 
@@ -39,8 +39,8 @@ Chromium issues: [1322313](https://crbug.com/1322313), [1351649](https://crbug.c
 <!-- ## Show actual function names in performance’s recordings {: #performance } -->
 ## Muestra los nombres reales de las funciones en las grabaciones de rendimiento {: #performance }
 
-<!-- The **Performance** panel now shows the actual function names and their sources in the trace if there’s a sourcemap. -->
-El panel **Performance** ahora muestra los nombres reales de las funciones y sus fuentes en la traza si hay un *sourcemap*.
+<!-- The **Performance** panel now shows the actual function names and their sources in the trace if there’s a source map. -->
+El panel **Performance** ahora muestra los nombres reales de las funciones y sus fuentes en la traza si hay un *source map*.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/9pHMVM1ARXrlyLoTziVA.png", alt="Comparativa del antes y el después de mostrar los nombres de las funciones en el panel Performance.", width="800", height="509" %}
 

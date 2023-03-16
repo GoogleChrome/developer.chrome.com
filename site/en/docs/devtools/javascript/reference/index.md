@@ -202,7 +202,7 @@ The **Debugger** steps through such expressions just the same.
 Therefore, the stepping behavior is identical:
 
 - Between minified and authored code.
-- When using [sourcemaps](/blog/sourcemaps/) to debug the minified code in terms of the original code.
+- When using [source maps](/blog/sourcemaps/) to debug the minified code in terms of the original code.
   In other words, when you see semicolons, you can always expect to step through them even if the actual source you're debugging is minified.
 
 ## View and edit local, closure, and global properties {: #scope }
@@ -257,7 +257,7 @@ function foo(value) {
     console.log(value);
     bar(value);
 }
- 
+
 function bar(value) {
     value++;
     console.log(value);
@@ -286,11 +286,11 @@ Try restarting the frames of both functions in the following way:
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bduFchfauez6IjMrXOm3.png", alt="Editing the value in the Scopes pane.", width="800", height="497" %}
 1. Try restarting the `bar()` frame and stepping through the increment statement several more times. The value continues to increase.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/LGHUF27jZmP341zxOLZB.png", alt="Restarting the bar() frame again.", width="800", height="497" %}
-   
+
    {% Aside 'gotchas' %}
    Why is the value not reset to `0`?
 
-   Frame restart doesn't reset the arguments. In other words, the restart doesn't restore the initial state at function call. Instead, it simply moves the execution pointer to the start of the function. 
+   Frame restart doesn't reset the arguments. In other words, the restart doesn't restore the initial state at function call. Instead, it simply moves the execution pointer to the start of the function.
 
    Therefore, the current argument value persists in memory across restarts of the same function.
    {% endAside %}
@@ -365,7 +365,7 @@ When developing web applications using frameworks (for example, [React](https://
 
 To help you navigate sources, the **Sources** > **Page** pane can group the files into two categories:
 
-- {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/KIgoYfQUdaCtgDLdYKSE.svg", alt="Code icon.", width="24", height="24" %} **Authored**. Similar to the source files you view in your IDE. DevTools generates these files based on sourcemaps provided by your build tools.
+- {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/KIgoYfQUdaCtgDLdYKSE.svg", alt="Code icon.", width="24", height="24" %} **Authored**. Similar to the source files you view in your IDE. DevTools generates these files based on source maps provided by your build tools.
 - {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/KDnkz7biIKbfQktK3HXX.svg", alt="Deployed icon.", width="22", height="22" %} **Deployed**. The actual files that the browser reads. Usually these files are minified.
 
 To enable grouping, enable the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Three-dot menu.", width="24", height="24" %} > **Group files by Authored/Deployed** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XfSWf04g2cwpnFcmp40m.svg", alt="Experimental.", width="20", height="20" %} option under the three-dot menu at the top of the file tree.
@@ -381,7 +381,7 @@ To enable grouping, enable the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5
 To help you focus only on the code you create, the **Sources** panel can hide ignore-listed third-party scripts from the file tree.
 
 {% Aside 'gotchas' %}
-By default, DevTools automatically adds third-party scripts to the ignore list based on the new `x_google_ignoreList` property in sourcemaps. Frameworks and bundlers need to supply this information.
+By default, DevTools automatically adds third-party scripts to the ignore list based on the new `x_google_ignoreList` property in source maps. Frameworks and bundlers need to supply this information.
 
 As of Chrome version 106, [Angular v14.1.0](https://github.com/angular/angular-cli/releases/tag/14.1.0) supports this feature. See [Case Study: Better Angular Debugging with DevTools](/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular).
 {% endAside %}
@@ -391,7 +391,7 @@ To hide known third-party sources:
 1. Make sure the following two settings in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Ignore List** are enabled:
 
    - {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable Ignore Listing**
-  
+
    - {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Automatically add known third-party scripts to ignore list**
 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JOwVIMb8WzRCacSq4oeK.png", alt="Automatically add known third-party scripts to ignore list.", width="800", height="506" %}
