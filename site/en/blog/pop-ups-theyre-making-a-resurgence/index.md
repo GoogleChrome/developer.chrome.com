@@ -379,10 +379,10 @@ The Popover API allows you to specify three types of popover which differ in beh
 `[popover=auto]/[popover]`:
 - Nesting support. This doesn't only mean nested in the DOM either. The definition of an ancestral popover is one that is:
   - related by DOM position (child).
-  - related by triggering attributes on child elements such as `popovertargetaction="toggle"`, `popovertargetaction="show"`, and so on.
+  - related by triggering attributes on child elements such as `popovertoggletarget`, `popovershowtarget`, and so on.
   - related by the `anchor` attribute (Under development CSS Anchoring API).
 - Light dismiss.
-- Opening dismisses other popovers that are not [ancestral popovers](https://open-ui.org/components/popover.research.explainer#nearest-open-ancestral-popover). Have a play with the demo below that highlights how nesting with ancestral popovers works. See how changing some of the `popovertargetaction="hide"`/`popovershowtarget` instances to `popovertargetaction="toggle"` changes things.
+- Opening dismisses other popovers that are not [ancestral popovers](https://open-ui.org/components/popover.research.explainer#nearest-open-ancestral-popover). Have a play with the demo below that highlights how nesting with ancestral popovers works. See how changing some of the `popoverhidetarget`/`popovershowtarget` instances to `popovertoggletarget` changes things.
 - Light dismissing one dismisses all, but dismissing one in the stack only dismisses those above it in the stack.
 
 {% Codepen {
@@ -510,7 +510,7 @@ This demo has popovers with audible pops, so we'll need JavaScript to play the a
 
 ## Accessibility
 
-Accessibility is at the forefront of thinking with the Popover API. Accessibility mappings associate the popover with its trigger element, as needed. This means you don't need to declare `aria-*` attributes such as `aria-haspopup`, assuming you use one of the triggering attributes like `popovertargetaction="toggle"`.
+Accessibility is at the forefront of thinking with the Popover API. Accessibility mappings associate the popover with its trigger element, as needed. This means you don't need to declare `aria-*` attributes such as `aria-haspopup`, assuming you use one of the triggering attributes like `popovertoggletarget`.
 
 For focus management, you can use the autofocus attribute to move focus to an element inside a popover. This is the same as for a Dialog, but the difference comes when returning focus, and that's because of light dismiss. In most cases, closing a popover returns focus to the previously focused element. But focus gets moved to a clicked element on light dismiss, if it can get focus. Check out the [section about focus management](https://open-ui.org/components/popover.research.explainer#focus-management) in the explainer.
 
@@ -908,7 +908,7 @@ This demo shows how you could use popover to implement a floating action button 
 
 - Promote a `manual` type popover with the `showPopover` method. This is the main button.
 - The menu is another popover that is the target of the main button.
-- Menu is opened with `popovertargetaction="toggle"`.
+- Menu is opened with `popovertoggletarget`.
 - Use `autofocus` to focus the first menu item on show.
 - Light dismiss closes the menu.
 - The icon twist uses `:has()`. You can read more about `:has()` in [this article](/blog/has-m105/).
