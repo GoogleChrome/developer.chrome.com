@@ -6,7 +6,7 @@ alt: 'deprecation calendar'
 
 {% block css %}
 {% InlineCss '/css/deprecation-calendar.css' %}
-{% InlineCss '/css/chrome-main.css' %}
+{% InlineCss '/css/main.css' %}
 {% endblock %}
 
 {% from 'macros/cards/hero-card.njk' import heroCard with context %}
@@ -23,7 +23,49 @@ alt: 'deprecation calendar'
             "",
             "red"
         ) }}
+
+      <div class="deprecation-calendar__filters align-center gap-bottom-500">
+        <span class="color-secondary-text">
+          Filter by:
+        </span>
+
+        <enhanced-select class="gap-right-300"
+                         label="Removal date"
+                         fixedLabel>
+          <select name="removal-date">
+              <option value="next-7-days">Next 7 days</option>
+              <option value="next-30-days">Next 30 days</option>
+              <option value="next-90-days">Next 90 days</option>
+              <option value="next-6-months">Next 6 months</option>
+              <option value="next-12-months">Next 12 months</option>
+          </select>
+        </enhanced-select>
+
+        <enhanced-select class="gap-right-300"
+                         label="Chrome version"
+                         fixedLabel>
+          <select name="removal-date" multiple>
+              <option value="113">Chrome 113</option>
+              <option value="112">Chrome 112</option>
+              <option value="111">Chrome 111</option>
+              <option value="110">Chrome 110</option>
+              <option value="109">Chrome 109</option>
+              <option value="108">Chrome 108</option>
+              <option value="107">Chrome 107</option>
+              <option value="106">Chrome 106</option>
+              <option value="105">Chrome 105</option>
+              <option value="104">Chrome 104</option>
+              <option value="103">Chrome 103</option>
+          </select>
+        </enhanced-select>
+      </div>
+
+
      {% include 'partials/deprecation-table.njk' %}
   </div>
 </div>
+{% endblock %}
+
+{% block scripts %}
+  <script type="module" src="{{ helpers.hashForProd('/js/deprecation-calendar.js') }}"></script>
 {% endblock %}

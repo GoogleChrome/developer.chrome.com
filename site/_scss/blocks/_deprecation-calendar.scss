@@ -4,7 +4,7 @@
   }
 
   &__rows {
-    margin-top: 3rem;
+    margin-top: 2rem;
 
     @include media-query('md-max') {
       margin-top: 1.5rem;
@@ -85,6 +85,7 @@
 
   &__row:nth-child(even) {
     background-color: var(--color-footer-bg);
+    border-radius: 4px;
   }
 
   &__header {
@@ -126,6 +127,37 @@
     @include media-query('md-max') {
       text-align: center;
     }
+  }
+
+  &__filters {
+
+    align-items: center;
+    border-bottom: 1px solid get-color('grey-300');
+    display: flex;
+    justify-content: start;
+    padding: 2rem 0;
+
+    > span {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-right: 1rem;
+    }
+    
+
+    .enhanced-select__wrapper {
+      border: 0;
+      color: get-color('blue-600');
+      font-weight: 500;
+    }
+
+    .enhanced-select label {
+      margin-left: 1rem;
+    }
+
+    .enhanced-select__options {
+      padding-right: 0.75rem;
+    }
+    
   }
 
 }  
