@@ -99,7 +99,7 @@ This is all you need.
 But, what is happening here?
 
 - You don’t have to put the popover element into a container or anything—it's hidden by default.
-- You don’t have to write any JavaScript to make it appear. That gets handled by the `popovertargetaction="toggle"` attribute.
+- You don’t have to write any JavaScript to make it appear. That gets handled by the `popovertoggletarget` attribute.
 - When it appears, it gets promoted to the top layer. That means it gets promoted above the `document` in the viewport. You don’t have to manage `z-index` or worry about where your popover is in the DOM. It could be deep down nested in the DOM, with clipping ancestors. You can also see which elements are currently in the top layer through DevTools. For more on the top layer, [check out this article](/blog/what-is-the-top-layer/).
 
 ![GIF of DevTools top layer support being demonstrated](https://wd.imgix.net/image/1D9D0Ls1ATa2ZPA9x2ZWrGFyZzT2/36Yck7O77zDipSNGNNbB.gif?auto=format&w=1600
