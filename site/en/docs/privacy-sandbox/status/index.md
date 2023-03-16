@@ -25,6 +25,14 @@ To review the latest information on any proposal or API, visit the respective ov
 
 {% Partial 'privacy-sandbox/timeline/attribution-reporting-features.njk' %}
 
+## Bounce tracking mitigations
+
+{% Partial 'privacy-sandbox/timeline/bounce-tracking.njk' %}
+
+## CHIPS
+
+{% Partial 'privacy-sandbox/timeline/chips.njk' %}
+
 ## Federated Credential Management API (FedCM)
 
 {% Partial 'privacy-sandbox/timeline/fedcm.njk' %}
@@ -46,6 +54,10 @@ Descendant of [TURTLEDOVE](https://github.com/WICG/turtledove).
 {% Partial 'privacy-sandbox/timeline/fledge.njk' %}
 
 {% Partial 'privacy-sandbox/timeline/fledge-features.njk' %}
+
+## IP Protection
+
+{% Partial 'privacy-sandbox/timeline/ip-protection.njk' %}
 
 ## Private Aggregation API
 

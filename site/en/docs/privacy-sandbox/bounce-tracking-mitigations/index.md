@@ -2,9 +2,11 @@
 layout: 'layouts/doc-post.njk'
 title: 'Bounce tracking mitigations'
 subhead: >
-   Reduce or eliminate the ability of bounce tracking to recognize people across contexts.
+   Reduce or eliminate the ability of bounce tracking to recognize people
+   across contexts.
 description: >
-   Reduce or eliminate the ability of bounce tracking to recognize people across contexts.
+   Reduce or eliminate the ability of bounce tracking to recognize people
+   across contexts.
 date: 2022-10-04
 authors:
   - anusmitaray
@@ -14,9 +16,9 @@ authors:
 
 This document outlines a [new proposal for bounce tracking mitigations](https://github.com/wanderview/bounce-tracking-mitigations).
 
--   [Bounce tracking mitigations proposal](https://github.com/wanderview/bounce-tracking-mitigations/blob/main/explainer.md) has entered [public discussion](https://github.com/wanderview/bounce-tracking-mitigations/issues).
--   This proposal [has not been implemented in any browser](https://chromestatus.com/feature/5705149616488448?context=myfeatures).
--   [The Privacy Sandbox timeline](http://privacysandbox.com/timeline) provides implementation timings for bounce tracking mitigation and other Privacy Sandbox proposals.
+{% Partial 'privacy-sandbox/timeline/bounce-tracking.njk' %}
+
+[The Privacy Sandbox timeline](http://privacysandbox.com/timeline) provides implementation timings for bounce tracking mitigation and other Privacy Sandbox proposals.
 
 ## Why do we need this proposal? {: #proposal-reason}
 
