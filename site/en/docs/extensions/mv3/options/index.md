@@ -72,7 +72,7 @@ Favorite color:
 </html>
 ```
 
-Below is an example options script. Save it as `options.js` in the same folder as `options.html`. It lets you save a user's preferred options across devices by using the [storage.sync][1] API.
+Below is an example options script. Save it as `options.js` in the same folder as `options.html`. This saves the user's preferred options across devices using the [storage.sync][1] API.
 
 ```js
 // Saves options to chrome.storage
