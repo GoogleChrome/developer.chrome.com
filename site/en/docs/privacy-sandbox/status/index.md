@@ -8,7 +8,7 @@ description: >
   Review Chrome platform status, resources, and feature release
   timelines.
 date: 2021-05-18
-updated: 2023-03-15
+updated: 2023-03-16
 authors:
   - alexandrawhite
 ---
