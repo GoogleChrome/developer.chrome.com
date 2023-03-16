@@ -1,8 +1,12 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: Is it ready yet?
-subhead: Timeline for Privacy Sandbox API proposals and feature releases.
-description: Implementation status for Privacy Sandbox APIs.
+title: API status and feature releases
+subhead: >
+  Review Chrome platform status, resources, and feature release
+  timelines.
+description: >
+  Review Chrome platform status, resources, and feature release
+  timelines.
 date: 2021-05-18
 updated: 2023-03-15
 authors:
