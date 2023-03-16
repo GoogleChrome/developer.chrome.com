@@ -31,6 +31,10 @@ const entrypoints = [
     src: './site/_scss/landing.scss',
     dest: './dist/css/landing.css',
   },
+  {
+    src: './site/_scss/overview.scss',
+    dest: './dist/css/overview.css',
+  },
 ];
 
 // Flags whether we generate sourcemaps
