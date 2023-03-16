@@ -1,10 +1,14 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: Is it ready yet?
-subhead: Timeline for Privacy Sandbox API proposals and feature releases.
-description: Implementation status for Privacy Sandbox APIs.
+title: API status and feature releases
+subhead: >
+  Review Chrome platform status, resources, and feature release
+  timelines.
+description: >
+  Review Chrome platform status, resources, and feature release
+  timelines.
 date: 2021-05-18
-updated: 2023-03-17
+updated: 2023-03-16
 authors:
   - alexandrawhite
 ---
@@ -20,6 +24,18 @@ To review the latest information on any proposal or API, visit the respective ov
 {% Partial 'privacy-sandbox/timeline/attribution-reporting.njk' %}
 
 {% Partial 'privacy-sandbox/timeline/attribution-reporting-features.njk' %}
+
+## Bounce tracking mitigations
+
+{% Partial 'privacy-sandbox/timeline/bounce-tracking.njk' %}
+
+## CHIPS
+
+{% Partial 'privacy-sandbox/timeline/chips.njk' %}
+
+## Federated Credential Management API (FedCM)
+
+{% Partial 'privacy-sandbox/timeline/fedcm.njk' %}
 
 ## Fenced Frames
 
@@ -38,6 +54,10 @@ Descendant of [TURTLEDOVE](https://github.com/WICG/turtledove).
 {% Partial 'privacy-sandbox/timeline/fledge.njk' %}
 
 {% Partial 'privacy-sandbox/timeline/fledge-features.njk' %}
+
+## IP Protection
+
+{% Partial 'privacy-sandbox/timeline/ip-protection.njk' %}
 
 ## Private Aggregation API
 
