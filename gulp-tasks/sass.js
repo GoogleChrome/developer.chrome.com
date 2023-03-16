@@ -23,6 +23,10 @@ const entrypoints = [
     src: './site/_scss/home.scss',
     dest: './dist/css/home.css',
   },
+  {
+    src: './site/_scss/fugu.scss',
+    dest: './dist/css/fugu.css',
+  },
 ];
 
 // Flags whether we generate sourcemaps
