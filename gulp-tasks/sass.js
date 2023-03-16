@@ -27,6 +27,10 @@ const entrypoints = [
     src: './site/_scss/fugu.scss',
     dest: './dist/css/fugu.css',
   },
+  {
+    src: './site/_scss/landing.scss',
+    dest: './dist/css/landing.css',
+  },
 ];
 
 // Flags whether we generate sourcemaps
