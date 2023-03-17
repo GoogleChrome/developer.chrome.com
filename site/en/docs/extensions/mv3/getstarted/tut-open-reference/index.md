@@ -32,9 +32,7 @@ Start by creating a new directory called `open-api-reference` to hold the extens
 
 ### Step 1: Register the service worker {: #step-1 }
 
-Extensions register their service worker in the manifest, which only takes a single JavaScript file.  There's no need to use `navigator.serviceWorker.register()`, like you would in a web app. See [Differences between extension and web service workers](tbd) to learn more.
-
-Create the manifest file in the root of the project and add the following code:
+Create the [manifest][doc-manifest] file in the root of the project and add the following code:
 
 {% Label %}manifest.json:{% endLabel %}
 
