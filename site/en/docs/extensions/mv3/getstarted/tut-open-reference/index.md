@@ -174,53 +174,63 @@ See [Saving states](TBD) to learn about storage options for extension service wo
 
 ### Step 5: Register your events {: #step-5 }
 
-All event listeners need to be registered in the global scope of the service worker script. In other words, do not nest event listeners inside functions. This ensures that Chrome can immediately find and invoke all event handlers, even if your extension hasn't finished executing its async startup logic. The following code registers the omnibox listeners on startup:
+To use the [`chrome.omnibox`][api-omnibox] API we must first add the omnibox keyword to the manifest:
 
-<web-tabs>
-  <web-tab title="sw-omnibox.js">
-   
-  ```js
-  import { getApiSuggestions } from './sw-suggestions.js';
+{% Label %}manifest.json:{% endLabel %}
 
+```json
+{
   ...
-  const chromeURL = 'https://developer.chrome.com/docs/extensions/reference/';
-  const NUMBER_OF_PREVIOUS_SEARCHES = 4;
+  "minimum_chrome_version": "102",
+  "omnibox": {
+    "keyword": "api"
+  },
+}
+```
 
-  // Displays the suggestions after user starts typing
-  chrome.omnibox.onInputChanged.addListener(async (input, suggest) => {
-    const { description, suggestions } = await getApiSuggestions(input);
-    await chrome.omnibox.setDefaultSuggestion({ description });
-    suggest(suggestions);
+All event listeners need to be registered in the global scope of the service worker. In other words, event listeners should not be nested in functions. This way Chrome can immediately invoke all event handlers, even if the extension's async startup logic hasn't finished. The following code registers the omnibox listeners and updates storage with the latest api search:
+
+{% Label %}sw-omnibox.js:{% endLabel %}
+
+```js
+...
+const URL_CHROME_EXTENSIONS_DOC =
+  'https://developer.chrome.com/docs/extensions/reference/';
+const NUMBER_OF_PREVIOUS_SEARCHES = 4;
+
+// Display the suggestions after user starts typing
+chrome.omnibox.onInputChanged.addListener(async (input, suggest) => {
+  await chrome.omnibox.setDefaultSuggestion({
+    description: 'Enter a Chrome API or choose from past searches'
   });
-
-  // Opens the reference page of the chosen API
-  chrome.omnibox.onInputEntered.addListener((input) => {
-    chrome.tabs.create({ url: chromeURL + input });
-    // Saves the latest keyword
-    updateHistory(input);
+  const { apiSuggestions } = await chrome.storage.local.get('apiSuggestions');
+  const suggestions = apiSuggestions.map((api) => {
+    return { content: api, description: `Open chrome.${api} API` };
   });
+  suggest(suggestions);
+});
 
-  async function updateHistory(input) {
-    const { apiSuggestions } = await chrome.storage.local.get('apiSuggestions');
-    apiSuggestions.unshift(input);
-    apiSuggestions.splice(NUMBER_OF_PREVIOUS_SEARCHES);
-    await chrome.storage.local.set({ apiSuggestions });
-  }
+// Open the reference page of the chosen API
+chrome.omnibox.onInputEntered.addListener((input) => {
+  chrome.tabs.create({ url: URL_CHROME_EXTENSIONS_DOC + input });
+  // Save the latest keyword
+  updateHistory(input);
+});
 
-  ```
-  
-  </web-tab>
-  <web-tab title="sw-suggestions.js">
+async function updateHistory(input) {
+  const { apiSuggestions } = await chrome.storage.local.get('apiSuggestions');
+  apiSuggestions.unshift(input);
+  apiSuggestions.splice(NUMBER_OF_PREVIOUS_SEARCHES);
+  await chrome.storage.local.set({ apiSuggestions });
+}
+```
 
-  ```js
-  import apiList from './api-list.js';
+{% Aside %}
 
-  /**
-   * Returns a list of suggestions and a description for the default suggestion
-   */
-  export async function getApiSuggestions(input) {
-    const filtered = apiList.filter((api) => api.content.startsWith(input));
-    console.log('filtered', filtered);
+Extension service workers have access to both web APIs and Chrome APIs, with a few exceptions.
+For a deep dive, see [Service Workers...](tbd) 
+
+{% endAside %}
 
     // return suggestions if any exist
     if (filtered.length) {
