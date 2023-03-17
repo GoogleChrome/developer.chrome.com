@@ -121,7 +121,7 @@ Replaced by the [Topics API](#topics).
 - [blink-dev](https://groups.google.com/a/chromium.org/g/blink-dev/): implementation
   status and discussion of features in Blink, the rendering engine used by Chromium
 - [Chromium code search](https://source.chromium.org/)
-- [What are Chrome flahs?](/docs/web-platform/chrome-flags/)
+- [What are Chrome flags?](/docs/web-platform/chrome-flags/)
 
 ### Origin trials
 
