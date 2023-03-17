@@ -124,7 +124,7 @@ npx @cypress/chrome-recorder ./recordings/*.json
 
 ## Replay user flows with extensions {: #replay-extensions }
 
-Starting from Chrome 112, you can now enhance your experience by utilizing extensions to replay recordings. These extensions enable you to seamlessly integrate third-party services and infrastructure for replaying recordings without ever leaving DevTools.
+Starting from Chrome 112, you can now enhance your experience by using extensions to replay recordings. These extensions let you seamlessly integrate third-party services and infrastructure for replaying recordings without ever leaving DevTools.
 
 {% Img src="image/S3bCpnsKr6OqVjAww1n02HOXFsv1/Qzo4QVUa4A6HpXhHm5MI.gif", alt="Replay extensions allow the extensions to add a panel to DevTools to configure replay and display replay results.", width="800", height="450" %}
 
