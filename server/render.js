@@ -18,7 +18,6 @@ const Eleventy = require('@11ty/eleventy');
 const path = require('path');
 const matter = require('gray-matter');
 const {EleventyRenderPlugin} = require('@11ty/eleventy');
-const {OAuth2Client} = require('google-auth-library');
 
 const ignorePatterns = [
   'site/es/**/*',
@@ -39,30 +38,7 @@ const ignorePatterns = [
 
 const supportedLayouts = ['layouts/blog-post.njk', 'layouts/doc-post.njk'];
 
-const CLIENT_ID =
-  '636061184119-c4pof3b538r4ibs8bt6g8qdfth958nc9.apps.googleusercontent.com';
-const authClient = new OAuth2Client(CLIENT_ID);
-
-async function verifyLogin(token) {
-  const ticket = await authClient.verifyIdToken({
-    idToken: token,
-    audience: CLIENT_ID,
-  });
-  const payload = ticket.getPayload();
-  return payload && payload['sub']; // userid
-}
-
 const renderHandler = async (req, res) => {
-  // Check sign in
-  try {
-    const userId = await verifyLogin(req.body.t);
-    if (!userId) {
-      return res.sendStatus(401);
-    }
-  } catch (e) {
-    return res.sendStatus(401);
-  }
-
   process.env.ELEVENTY_IGNORE_EXTENSIONS = 'true';
   const defaultParsedFm = {
     data: {

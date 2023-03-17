@@ -1,0 +1,29 @@
+---
+eleventyComputed:
+  title: "{% raw %}{% BrowserCompat %}{% endraw %} Image Renderer"
+  description: 'Renders the BrowserCompat widget as a image usable on slides.'
+layout: 'layouts/landing.njk'
+pageScripts:
+  - '/js/internal.js'
+---
+<div class="stack flow-space-200">
+  <h1 class="type--h2">{% raw %}{% BrowserCompat %}{% endraw %} Image Renderer</h1>
+  <p class="type--h5">Use this form to render a browser compat widget to a static image for you to use in presentations.</p>
+</div>
+
+<form action="/_render" method="post" name="browser-compat-image-renderer">
+  <div class="pad-bottom-400 pad-top-400">
+    <label for="feature-id" class="display-block">MDN Browser Compat ID</label>
+    <input type="text" name="feature-id" id="feature-id" class="width-full" placeholder="css.types.color.rgb_hexadecimal_notation"></input>
+  </div>
+  <button type="submit" class="button-filled material-button color-bg bg-primary">Render</button>
+</form>
+
+<!-- Render a BrowserCompat widget here to have the styles included in the page -->
+<div hidden>
+  {% BrowserCompat 'css.types.color.rgb_hexadecimal_notation' %}
+</div>
+
+<div class="pad-bottom-400 pad-top-400 display-flex">
+  <div id="output" class="rounded-lg" style="min-height: 100px; background: #f1f3f4;"></div>
+</div>
