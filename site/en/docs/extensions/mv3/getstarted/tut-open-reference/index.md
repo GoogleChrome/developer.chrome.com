@@ -284,134 +284,78 @@ All [Chrome API][doc-apis] event listeners and methods restart the service worke
 
 {% endAside %}
 
+### Step 7: Communicate with other contexts {: #step-7 }
 
-  ```
-  </web-tab>
-</web-tabs>
+[Content scripts][doc-content] communicate with the rest of the extension through [message passing][doc-messages]. In this example, the content script will request the tip of the day from the service worker. 
 
+First, declare the content script in the manifest and add the match pattern corresponding to the [Chrome API][doc-apis] reference documentation.
 
+{% Label %}manifest.json:{% endLabel %}
 
-{% Details %}
-{% DetailsSummary %}
-See code for `sw-suggestions.js`
-{% endDetailsSummary %}
-
-```js
-  import apiList from './api-list.js';
-
-  /**
-   * Returns a list of suggestions and a description for the default suggestion
-   */
-  export async function getApiSuggestions(input) {
-    const filtered = apiList.filter((api) => api.content.startsWith(input));
-    console.log('filtered', filtered);
-
-    // return suggestions if any exist
-    if (filtered.length) {
-      return {
-        description: 'Matching Chrome APIs',
-        suggestions: filtered
-      };
+```json
+{
+  ...
+  "content_scripts": [
+    {
+      "matches": ["https://developer.chrome.com/docs/extensions/reference/*"],
+      "js": ["content.js"]
     }
+  ]
+}
 
-    // return past searches if no match was found
-    const { apiSuggestions } = await chrome.storage.local.get('apiSuggestions');
-    return {
-      description: 'No matches found. Choose from past searches',
-      suggestions: apiList.filter((item) => apiSuggestions.includes(item.content))
-    };
-  }
-  ```
+```
 
-{% endDetails %}
+Create a new content file and add the following code to create a new button in the navigation bar. Once the button is clicked it will open a modal using the new Popover web API:
 
-{% Details %}
-{% DetailsSummary %}
-See code for `api-list.js`
-{% endDetailsSummary %}
+{% Label %}content.js:{% endLabel %}
 
 ```js
-export default [
-  {
-    content: 'commands',
-    description:
-      'Use the <match>Commands API</match> to add a keyboard shortcuts.'
-  },
-  {
-    content: 'contextmenus',
-    description:
-      "Use the <match>ContextMenus API</match> to add a custom item to Chrome's context menu."
-  },
-  {
-    content: 'declarativeNetRequest',
-    description:
-      'Use the <match>DeclarativeNetRequest API</match> to block or modify network requests.'
-  },
-  {
-    content: 'downloads',
-    description:
-      'Use the <match>Downloads API</match> to programmatically manipulate downloads.'
-  },
-  {
-    content: 'i18n',
-    description: 'Use the <match>i18n API</match> to localize your extension'
-  },
-  {
-    content: 'identity',
-    description:
-      'Use the <match>Identity API</match> to get OAuth2 access tokens.'
-  },
-  {
-    content: 'notifications',
-    description:
-      'Use the <match>Notifications API</match> show notifications to users in the system tray.'
-  },
-  {
-    content: 'offscreen',
-    description:
-      'Use the <match>Offscreen API</match> to create and manage offscreen documents.'
-  },
-  {
-    content: 'omnibox',
-    description:
-      "Use the <match>Omnibox API</match> to register a keyword with Chrome's address bar."
-  },
-  {
-    content: 'permissions',
-    description:
-      'Use the <match>Permissions API</match> to request optional permissions at run time.'
-  },
-  {
-    content: 'runtime',
-    description:
-      'Use the <match>Runtime API</match> pass messages, manage extension lifecycle, and access other helper utils.'
-  },
-  {
-    content: 'scripting',
-    description:
-      'Use the <match>Scripting API</match> to execute scripts in different contexts.'
-  },
-  {
-    content: 'storage',
-    description:
-      'Use the <match>Storage API</match> to store, retrieve, and track changes to user data.'
-  },
-  {
-    content: 'tabs',
-    description:
-      'Use the <match>Tabs API</match> to create, update and manipulate tabs.'
-  },
-  {
-    content: 'topSites',
-    description:
-      'Use the <match>TopSites API</match> to access the most visited sites that are displayed on the new tab page.'
-  },
-  {
-    content: 'webNavigation',
-    description:
-      'Use the <match>WebNavigation API</match> to receive notifications about the status of navigation requests in-flight.'
+(async () => {
+  const nav = document.querySelector('.navigation-rail__links');
+
+  const { tip } = await chrome.runtime.sendMessage({ greeting: 'tip' });
+
+  const tipWidget = createDomElement(`
+    <button class="navigation-rail__link" popovertarget="tip-popover" popovertargetaction="show" style="padding: 0; border: none; background: none;>
+      <div class="navigation-rail__icon">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none"> 
+        <path d='M15 16H9M14.5 9C14.5 7.61929 13.3807 6.5 12 6.5M6 9C6 11.2208 7.2066 13.1599 9 14.1973V18.5C9 19.8807 10.1193 21 11.5 21H12.5C13.8807 21 15 19.8807 15 18.5V14.1973C16.7934 13.1599 18 11.2208 18 9C18 5.68629 15.3137 3 12 3C8.68629 3 6 5.68629 6 9Z'"></path>
+        </svg>
+      </div>
+      <span>Tip</span> 
+    </button>
+  `);
+
+  const popover = createDomElement(
+    `<div id='tip-popover' popover>${tip}</div>`
+  );
+
+  document.body.append(popover);
+  nav.append(tipWidget);
+})();
+
+function createDomElement(html) {
+  const dom = new DOMParser().parseFromString(html, 'text/html');
+  return dom.body.firstElementChild;
+}
+```
+
+Now add the following code to the service worker which will send the daily tip to the content script. 
+
+{% Label %}sw-api.js:{% endLabel %}
+
+
+```js
+...
+// Send tip to content script via messaging
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message.greeting === 'tip') {
+    chrome.storage.local.get('tip').then(sendResponse);
+    return true;
   }
-];
+});
+```
+
 
 ```
 {% endDetails %}
