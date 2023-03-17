@@ -57,6 +57,7 @@
     - url: /docs/devtools/performance/reference/
     - url: /docs/devtools/performance/timeline-reference/
 - url: /docs/devtools/performance-insights/
+- url: /docs/devtools/lighthouse/
 - title: i18n.docs.devtools.memory
   sections:
     - url: /docs/devtools/memory-problems/memory-101/

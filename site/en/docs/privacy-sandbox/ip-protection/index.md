@@ -18,8 +18,7 @@ This proposal used to previously have a different scope and was known as Gnatcat
 
 This document outlines a new proposal to help prevent covert tracking: IP Protection.
 
-*  The [IP Protection proposal](https://github.com/GoogleChrome/ip-protection) has entered [public discussion](https://github.com/GoogleChrome/ip-protection/issues).
-*  This proposal has not been implemented in any browser.
+{% Partial 'privacy-sandbox/timeline/ip-protection.njk' %}
 *  [The Privacy Sandbox timeline](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline) provides implementation timings for other Privacy Sandbox proposals. IP Protection is still in its early phase and will have firmer timelines available on this website when available.
 
 ## Why do we need this proposal?

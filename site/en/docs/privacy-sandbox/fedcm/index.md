@@ -11,20 +11,16 @@ authors:
   - agektmr
 ---
 
+## What is FedCM?
+
+FedCM (Federated Credential Management) is a proposal for a privacy-preserving
+approach to federated identity services (such as "Sign in with...")  where
+users can log into sites without sharing their personal information with the
+identity service or the site.
+
 ## Implementation status
 
-This document outlines a new proposal for identity federation: the Federated
-Credential Management API (FedCM).
-
-*  The [FedCM proposal](https://github.com/fedidcg/FedCM) is open for [public
-   discussion](https://github.com/fedidcg/FedCM/issues).
-*  FedCM is shipped in Chrome 108.
-*  FedCM isn't supported in other browsers yet, but Mozilla is [implementing a
-   prototype](https://bugzilla.mozilla.org/show_bug.cgi?id=1782066) to Firefox,
-   while [Apple has expressed general
-   support](https://lists.webkit.org/pipermail/webkit-dev/2022-March/032162.html)
-   and interest in working together on the FedCM proposal.
-*  [Chrome Platform Status](https://chromestatus.com/feature/6438627087220736)
+{% Partial 'privacy-sandbox/timeline/fedcm.njk' %}
 
 Moving forward, we plan to introduce [a number of new features](#roadmap) based
 on the feedback we received from identity providers (IdP), relying parties (RP)
@@ -42,14 +38,6 @@ currently have two recommendations for identity providers:
   API is maturing, and to discourage RPs from self-hosting SDKs. This will
   ensure IdPs can make changes as the API evolves, without having to ask all of
   their relying parties to redeploy.
-
-## What is FedCM?
-
-[FedCM (Federated Credential Management)](/docs/privacy-sandbox/fedcm/)
-is a proposal for a privacy-preserving approach to federated
-identity services (such as "Sign in with...")  where users can log into
-sites without sharing their personal information with the identity service or
-the site.
 
 ## Why do we need FedCM?
 
