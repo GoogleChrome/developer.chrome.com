@@ -5,6 +5,7 @@
 }
 
 .post-authors-social {
+  column-gap: get-size(200);
   display: flex;
-  gap: get-size(200);
+  flex-wrap: wrap;
 }

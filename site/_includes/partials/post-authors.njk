@@ -1,7 +1,15 @@
 {% from "macros/post-author.njk" import postAuthor with context %}
 
-<div class="post-authors">
-  {% for item in authors %}
-    {{ postAuthor(item, locale) }}
-  {% endfor %}
-</div>
+{% if authors | length > 2%}
+  <div class="condensed-post-authors">
+    {% for item in authors %}
+      {{ postAuthor(item, locale) }}
+    {% endfor %}
+  </div>
+{% else %}
+  <div class="post-authors">
+    {% for item in authors %}
+      {{ postAuthor(item, locale) }}
+    {% endfor %}
+  </div>
+{% endif %}
