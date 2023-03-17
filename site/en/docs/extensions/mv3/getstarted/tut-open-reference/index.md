@@ -131,10 +131,20 @@ Don't forget to fix the file name before moving on!
 
 ### Step 4: Initialize the state {: #step-4 }
 
-Extensions can save initial values to storage on installation. The following code saves the omnibox default suggestions in [`chrome.storage`][api-storage] when the extension is first installed:
+Extensions can save initial values to storage on installation. To use the [`chrome.storage`][api-storage] API, we need to request permission in the manifest:
+
+{% Label %}manifest.json:{% endLabel %}
+
+```json
+{
+  ...
+  "permissions": ["storage"],
+}
+```
+
+The [omnibox API][api-omnibox] allows the extension to offer suggestions. At first, we will suggest frm a list popular APIs, and later offer suggestions of the latest searches. The following code stores the default list of APIs when the extension is first installed:
 
 {% Label %}sw-omnibox.js:{% endLabel %}
-
 
 ```js
 ...
@@ -146,7 +156,6 @@ chrome.runtime.onInstalled.addListener(({ reason }) => {
     });
   }
 });
-
 ```
 
 {% Details %}
@@ -162,7 +171,6 @@ global variables.
 See [Saving states](TBD) to learn about storage options for extension service workers.
 
 {% endDetails %}
-
 
 ### Step 5: Register your events {: #step-5 }
 
