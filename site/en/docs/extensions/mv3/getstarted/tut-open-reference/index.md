@@ -113,20 +113,19 @@ Remember to set `type.module` when using a modern module bundler framework.
 
 ### _Optional: Debugging the service worker_ {: #step-3 }
 
-<!-- Considering making this part a details component  -->
-
-Before moving on, let's review where to find the service worker logs and how to
-know when it has terminated. Follow the [Load unpacked extension][doc-dev-basics-unpacked] instructions and wait for service worker to terminate after 30 seconds. You can inspect the service worker by clicking on the service worker hyperlink. 
+Let's quickly go over how to locate the service worker logs and determine when it has terminated. Follow the instructions to [Load an unpacked extension][doc-dev-basics-unpacked]. Now wait 30 seconds for the service worker to stop. Click on the hyperlink to inspect it. 
 
 {% Video src="video/BhuKGJaIeLNPW9ehns59NfwqKxF2/D1XRaA6q4xn9Ylwe1u1N.mp4", width="800", height="314", autoplay="true", muted="true", loop="true" %}
 
-Did you notice that inspecting the service worker woke it up? That's right! Opening the service worker in the devtools will keep it active. See [Debugging extensions](tbd) for more ways debug the extension service worker.
+Did you notice that inspecting the service worker woke it up? That's right! Opening the service worker in the devtools will keep it active.
 
-Let's break the extension to locate the errors. In `sw.js`, if we remove the ".js" of the './sw-omnibox.js' import, Chrome will not be able to register the service worker.
+To locate the errors, let's cause the extension to break. One way to do this is to delete the ".js" from the './sw-omnibox.js' import in sw.js. Chrome will be unable to register the service worker.
 
 Go back to chrome://extensions and refresh the extension. The following error will appear:
 
 {% Video src="video/BhuKGJaIeLNPW9ehns59NfwqKxF2/AbMNDSbURLKjH1Jm1C9Q.mp4", width="400", height="477", autoplay="true", muted="true", loop="true" %}
+
+ See [Debugging extensions](tbd) for more ways debug the extension service worker.
 
 Don't forget to fix the file name before moving on! 
 
