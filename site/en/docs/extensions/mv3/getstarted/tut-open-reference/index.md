@@ -81,17 +81,26 @@ import './sw-tips.js';
 
 Create these files and add a console log to each one.
 
+{% Columns %}
+
+{% Column %}
+
 {% Label %}sw-omnibox.js:{% endLabel %}
 
 ```js
 console.log("sw-omnibox.js")
 ```
+{% endColumn %}
 
+{% Column %}
 {% Label %}sw-tips.js:{% endLabel %}
 
 ```js
 console.log("sw-tips.js")
 ```
+{% endColumn %}
+
+{% endColumns %}
 
 See [Importing scripts](tbd) to learn about other ways to import multiple files in a service worker.
 
