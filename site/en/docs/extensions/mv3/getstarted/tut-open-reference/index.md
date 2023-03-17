@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Focus Mode'
-seoTitle: 'Chrome Extensions Tutorial: Focus Mode'
+title: 'Open reference page'
+seoTitle: 'Chrome Extensions Tutorial: Open reference page'
 subhead: 'This will be added later.'
 description: 'This will also be added later.'
 date: 2023-04-02
@@ -12,12 +12,11 @@ date: 2023-04-02
 
 This tutorial builds an extension that allows users to open the Chrome API reference page using the omnibox. It also provides a daily extension tip.
 
-<!-- TODO: Add video {% Video src='video/tcFciHGuF3MxnTr1y5ue01OGLBn2/1601081394086.mp4' %} -->
+{% Video src="video/BhuKGJaIeLNPW9ehns59NfwqKxF2/WmVEGpEZ9ts1J0pUOzEr.mp4", width="600", height="398", autoplay="true", muted="true"%}
 
 This tutorial explains how to do the following in an extension service worker:
 
-- Register a service worker.
-- Import multiple files.
+- Register a service worker and import modules.
 - Debug the extension service worker.
 - Manage state and handle events.
 - Trigger periodic events.
