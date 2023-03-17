@@ -70,7 +70,7 @@ import * as htmlToImage from 'html-to-image';
 
     //@ts-ignore
     const body = buildBody($featureId.value);
-    const response = await fetch('http://localhost:8080/_render', {
+    const response = await fetch('/_render', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
