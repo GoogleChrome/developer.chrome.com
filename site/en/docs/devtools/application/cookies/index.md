@@ -44,41 +44,50 @@ The **Cookies** table contains the following fields:
 - **Priority**. Contains `Low`, `Medium` (default), or `High` if using deprecated [cookie
   Priority][10] attribute.
 
-To view a cookie's value, select it in the table. To see the value without percent-encoding, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show URL decoded**.
+To view a cookie's value, select it in the table. To see the value without percent-encoding, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show URL-decoded**.
 
 ## Filter cookies {: #filter }
 
-Use the **Filter** text box to filter cookies by **Name** or **Value**. Filtering by other fields is
-not supported.
+Use the **Filter** text box to filter cookies by **Name** or **Value**.
 
-{% Img src="image/admin/uqHAFnsQgjLFqg5Fcu6S.png", alt="Filtering out any cookies that don't contain the text 'NID'", width="800", height="401" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/GjLhR30VavG3SLYLAesv.png", alt="Filtering out any cookies that don't contain 'id'.", width="800", height="380" %}
 
-**Figure 2**. Filtering out any cookies that don't contain the text `NID`
+Filtering by other fields is not supported. Filter is case-insensitive.
+
+## Add a cookie {: #add-cookie }
+
+To add an arbitrary cookie:
+
+1. Double-click an empty row in the table.
+1. Enter a **Name** and **Value** and press <kbd>Enter</kbd>.
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/Q9Gj9s3fU8yJU8U8UfBK.mp4", autoplay="false", muted="true", loop="false", controls="true", class="screenshot" %}
+
+DevTools populates other required fields automatically. You can edit them as described next.
 
 ## Edit a cookie {: #edit }
 
-The **Name**, **Value**, **Domain**, **Path**, and **Expires / Max-Age** fields are editable.
+All the fields are editable except **Size** that updates automatically.
+
 Double-click a field to edit it.
 
-{% Img src="image/admin/uUZg7B7jgE41Vaz4pYxx.png", alt="Setting the name of a cookie to 'DEVTOOL!'", width="800", height="445" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YqXUSqxkehuVCTNeSp7i.png", alt="Setting the name of a cookie to 'DEVTOOLS!'", width="800", height="424" %}
 
-**Figure 3**. Setting the name of a cookie to `DEVTOOLS!`
+DevTools highlights cookies with invalid [field](#fields) values in red.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/UGLmEZHAzssqmpk28IgO.png", alt="A cookie with an invalid in Partition Key value.", width="800", height="424" %}
+
+To filter out valid cookies, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Only show cookies with an issue** in the top action bar.
 
 ## Delete cookies {: #delete }
 
-Select a cookie and then click **Delete Selected**
-{% Img src="image/admin/frAwfK150YtdxHAOVccj.png", alt="Delete Selected", width="20", height="20" %} to delete that one cookie.
+To delete a cookie, select it and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/w9Vbnqf9cVz7YeqMkAi0.svg", alt="Delete selected.", width="24", height="24" %} **Delete selected** in the top action bar.
 
-{% Img src="image/admin/SRIEc7haLwu49I4A94yg.png", alt="Deleting a selected cookie", width="800", height="401" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/G1jzKCU0oMOxxB03i1q9.png", alt="Deleting a selected cookie.", width="800", height="424" %}
 
-**Figure 4**. Deleting a selected cookie
+Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/MadqZsIZpo1sj3qQ3GsZ.svg", alt="Clear.", width="24", height="24" %} **Clear all** to delete all cookies.
 
-Click **Clear All** {% Img src="image/admin/tQ74nCvbca93aX5voHXy.png", alt="Clear All", width="26", height="26" %} to delete all
-cookies.
-
-{% Img src="image/admin/YKnko46qX5nMMn3V26Sn.png", alt="Clearing all cookies", width="800", height="401" %}
-
-**Figure 5**. Clearing all cookies
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/fptz4uhHm8YevOpm4SGK.png", alt="Clearing all cookies.", width="800", height="424" %}
 
 [1]: https://developer.mozilla.org/docs/Web/HTTP/Cookies
 [2]: /docs/devtools/open
