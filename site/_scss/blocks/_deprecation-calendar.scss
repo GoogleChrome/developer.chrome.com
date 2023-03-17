@@ -4,7 +4,6 @@
   }
 
   &__rows {
-    margin-top: 2rem;
 
     @include media-query('md-max') {
       margin-top: 1.5rem;
@@ -132,10 +131,13 @@
   &__filters {
 
     align-items: center;
-    border-bottom: 1px solid get-color('grey-300');
     display: flex;
     justify-content: start;
-    padding: 2rem 0;
+    padding: 1rem 0;
+
+    @include media-query('md-max') {
+      display: none;
+    }
 
     > span {
       font-size: 1rem;
@@ -143,7 +145,6 @@
       margin-right: 1rem;
     }
     
-
     .enhanced-select__wrapper {
       border: 0;
       color: get-color('blue-600');
@@ -160,4 +161,46 @@
     
   }
 
+  &__mobile-filters {
+
+    @include media-query('md') {
+      display: none;
+    }
+
+  }
+
+  &__selected {
+    border-bottom: 1px solid get-color('grey-300');
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+  }
 }  
+
+.mobile-filters-dialog {
+  border: 0;
+  border-radius: 4px;
+  margin-right: 0;
+
+  checkbox-group label {
+    font-size: px-to-rem(14px);
+    font-weight: 400;
+  }
+
+  checkbox-group input {
+    height: 20px;
+    width: 20px;
+  } 
+}
+
+.mobile-filters-btn {
+  margin-top: 1.5rem;
+  padding: 6px 12px;
+
+  @include media-query('md') {
+    display: none;
+  }
+
+  svg {
+    margin-right: 10px;
+  }
+}

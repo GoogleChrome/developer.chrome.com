@@ -1,0 +1,150 @@
+{% from 'macros/icon.njk' import icon with context %}
+
+<div class="deprecation-calendar__filters align-center">
+  <span class="color-secondary-text">
+    Filter by:
+  </span>
+
+  <enhanced-select id="removal-date"class="deprecation-filter gap-right-300" label="Removal date" fixedLabel>
+      <select name="removal-date">
+        <option value="next-7-days">Next 7 days</option>
+        <option value="next-30-days">Next 30 days</option>
+        <option value="next-90-days">Next 90 days</option>
+        <option value="next-6-months">Next 6 months</option>
+        <option value="next-12-months">Next 12 months</option>
+      </select>
+    </enhanced-select>
+
+    <enhanced-select id="chrome-version" class="deprecation-filter gap-right-300" label="Chrome version" fixedLabel>
+      <select name="chrome-version" multiple>
+        <option value="Chrome 113">Chrome 113</option>
+        <option value="Chrome 112">Chrome 112</option>
+        <option value="Chrome 111">Chrome 111</option>
+        <option value="Chrome 110">Chrome 110</option>
+        <option value="Chrome 109">Chrome 109</option>
+        <option value="Chrome 108">Chrome 108</option>
+        <option value="Chrome 107">Chrome 107</option>
+        <option value="Chrome 106">Chrome 106</option>
+        <option value="Chrome 105">Chrome 105</option>
+        <option value="Chrome 104">Chrome 104</option>
+        <option value="Chrome 103">Chrome 103</option>
+      </select>
+    </enhanced-select>
+</div>
+
+
+
+
+
+
+
+<div class="deprecation-calendar__mobile-filters align-center">
+  <dialog id="mobile-filters" class="scrollbar lg:display-none mobile-filters-dialog"> 
+    <div class="filter-sheet display-flex direction-column">
+      
+      <p class="filter-sheet__title type--xsmall weight-medium case-upper">
+        Filter By
+      </p>
+    
+      <div class="filter-sheet__filters">
+
+        <section class="gap-bottom-500">
+          <p class="type--h5 weight-medium gap-bottom-200">Removal date mobile</p>
+
+          <checkbox-group show="5">
+            <label>
+              <input type="checkbox" name="removal-date" value="next-7-days" />
+                Next 7 days
+            </label>
+            <label>
+                <input type="checkbox" name="removal-date" value="next-30-days" />
+                Next 30 days
+            </label>
+            <label>
+                <input type="checkbox" name="removal-date" value="next-90-days" />
+                Next 90 days
+            </label>
+            <label>
+                <input type="checkbox" name="removal-date" value="next-6-months" />
+                Next 6 months
+            </label>
+            <label>
+                <input type="checkbox" name="removal-date" value="next-12-months" />
+                Next 12 months
+            </label>
+          </checkbox-group>
+        </section>
+
+        <section class="gap-bottom-500">
+          <p class="type--h5 weight-medium gap-bottom-200">Removal date mobile</p>
+
+          <checkbox-group show="7">
+            <label>
+              <input type="checkbox" name="chrome-version" value="chrome-113" />
+                Chrome 113
+            </label>
+            <label>
+                <input type="checkbox" name="chrome-version" value="chrome-112" />
+                Chrome 112
+            </label>
+            <label>
+                <input type="checkbox" name="chrome-version" value="chrome-111" />
+                Chrome 111
+            </label>
+            <label>
+                <input type="checkbox" name="chrome-version" value="chrome-110" />
+                Chrome 110
+            </label>
+            <label>
+                <input type="checkbox" name="chrome-version" value="chrome-109" />
+                Chrome 109
+            </label>
+            <label>
+                <input type="checkbox" name="chrome-version" value="chrome-108" />
+                Chrome 108
+            </label>
+            <label>
+                <input type="checkbox" name="chrome-version" value="chrome-107" />
+                Chrome 107
+            </label>
+            <label>
+                <input type="checkbox" name="chrome-version" value="chrome-106" />
+                Chrome 106
+            </label>
+            <label>
+                <input type="checkbox" name="chrome-version" value="chrome-105" />
+                Chrome 105
+            </label>
+            <label>
+                <input type="checkbox" name="chrome-version" value="chrome-104" />
+                Chrome 104
+            </label>
+            <label>
+                <input type="checkbox" name="chrome-version" value="chrome-103" />
+                Chrome 103
+            </label>
+          </checkbox-group>
+        </section>
+      </div>
+
+      <div class="filter-sheet__buttons display-flex align-center justify-content-end">
+        <button id="mobile-filters-reset" class="material-button button-filled color-primary bg-white">
+            Reset Filters
+        </button>
+
+        <button id="mobile-filters-done" class="material-button button-filled color-bg bg-primary">
+            Done
+        </button>
+      </div>
+    </div>
+  </dialog>
+</div>
+
+<div class="deprecation-calendar__selected display-flex flex-flow-row-wrap grid-gap-100">
+    <span id="mobile-filters-opener"
+        class="mobile-filters-btn surface color-blue-medium hairline rounded-lg tag-pill type--label display-inline-flex align-center">
+    {{ icon('filters') }}Filters
+    </span>
+
+    <tag-pill-list id="active-filters"></tag-pill-list>
+</div>
