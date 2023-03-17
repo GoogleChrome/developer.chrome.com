@@ -24,6 +24,31 @@ pageScripts:
   {% BrowserCompat 'css.types.color.rgb_hexadecimal_notation' %}
 </div>
 
-<div class="pad-bottom-400 pad-top-400 display-flex">
-  <div id="output" class="rounded-lg" style="min-height: 100px; background: #f1f3f4;"></div>
+<style>
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .loader {
+    display: inline-block;
+    margin-right: 5px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--color-primary);
+    border-right: 2px solid transparent;
+    animation: rotate 3s linear infinite;
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+</style>
+
+<div class="pad-bottom-400 pad-top-400">
+  <div class="rounded-lg display-flex align-center width-full pad-200" style="background: #f1f3f4;">
+    <div id="output" class="display-flex align-center"></div>
+  </div>
 </div>

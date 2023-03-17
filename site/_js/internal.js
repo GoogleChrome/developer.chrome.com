@@ -16,6 +16,10 @@ import * as htmlToImage from 'html-to-image';
     };
   }
 
+  function updateStatus(status) {
+    $output.innerHTML = `<div class="loader"></div> ${status}`;
+  }
+
   function adoptBrowserCompat($output, html) {
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, 'text/html');
@@ -29,6 +33,9 @@ import * as htmlToImage from 'html-to-image';
       // Ignore
     }
 
+    // Remove the list intendation from the items element
+    $browserCompat.querySelector('.wdi-browser-compat__items').style.padding = 0;
+
     // Attach the div to the $output element so that it can be rendered
     // by html-to-image and styles already apply
     $output.innerHTML = '';
@@ -41,7 +48,6 @@ import * as htmlToImage from 'html-to-image';
       let dataUrl = getComputedStyle($icon).backgroundImage;
       // Remove wrapping url() and quotes
       dataUrl = dataUrl.replace(/^url\(["']?/, '').replace(/["']?\)$/, '');
-      console.log(dataUrl);
       const $img = doc.createElement('img');
       $img.src = dataUrl;
       $img.className = 'wdi-browser-compat__icon';
@@ -70,16 +76,19 @@ import * as htmlToImage from 'html-to-image';
 
     //@ts-ignore
     const body = buildBody($featureId.value);
+    updateStatus('Rendering 11ty document remote ...');
     const response = await fetch('/_render', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({fm: body}),
+      body: JSON.stringify({ fm: body }),
     });
 
     // Extract the div with the class wdi-browser-compat from the HTML response
     // and return it as a string.
+    updateStatus('Extracting BrowserCompat widget ...');
+
     const html = await response.text();
     const $browserCompat = adoptBrowserCompat($output, html);
 

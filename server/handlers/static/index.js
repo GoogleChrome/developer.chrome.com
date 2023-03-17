@@ -24,10 +24,6 @@ const {buildFileSystemHandler} = require('./fileSystem');
 const {bucketHandler} = require('./bucket');
 
 function buildStaticHandler() {
-  if (process.env.GOOGLE_CLOUD_PROJECT === 'dcc-staging') {
-    return bucketHandler;
-  }
-
   return buildFileSystemHandler();
 }
 
