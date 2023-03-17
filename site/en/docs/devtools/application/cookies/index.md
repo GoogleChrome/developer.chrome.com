@@ -40,9 +40,11 @@ The **Cookies** table contains the following fields:
   secure, HTTPS connection.
 - **SameSite**. Contains `Strict` or `Lax` if the cookie is using the experimental `SameSite`
   attribute.
-- **Partition key**.
+- **Partition Key**. For [cookies with independent partition state](/docs/privacy-sandbox/chips/), the partition key is the site of the top-level URL the browser was visiting at the start of the request to the endpoint that set the cookie.
 - **Priority**. Contains `Low`, `Medium` (default), or `High` if using deprecated [cookie
   Priority][10] attribute.
+
+To view a cookie's value, select it in the table. To see the value without percent-encoding, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show URL decoded**.
 
 ## Filter cookies {: #filter }
 
