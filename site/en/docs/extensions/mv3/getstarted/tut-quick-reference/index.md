@@ -1,23 +1,22 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Open reference page'
-seoTitle: 'Chrome Extensions Tutorial: Open reference page'
-subhead: 'This will be added later.'
-description: 'This will also be added later.'
+title: 'Quick API Reference'
+subhead: 'Tutorial focused on teaching extension service worker concepts.'
+description: 'Quickly access Chrome API reference with Omnibox.'
 date: 2023-04-02
 # updated: 2022-06-13
 ---
 
 ## Overview {: #overview }
 
-This tutorial builds an extension that allows users to open the Chrome API reference page using the omnibox. It also provides a daily extension tip.
+This tutorial builds an extension that allows users to open Chrome API reference pages using the omnibox. It also provides a daily Chrome extension tip.
 
 {% Video src="video/BhuKGJaIeLNPW9ehns59NfwqKxF2/WmVEGpEZ9ts1J0pUOzEr.mp4", width="600", height="398", autoplay="true", muted="true"%}
 
-This tutorial explains how to do the following in an extension service worker:
+This article will show how to do the following tasks in an extension service worker:
 
 - Register a service worker and import modules.
-- Debug the extension service worker.
+- Find extension service worker logs.
 - Manage state and handle events.
 - Trigger periodic events.
 - Communicate with content scripts.
@@ -28,7 +27,7 @@ This guide assumes that you have basic web development experience. We recommend 
 
 ## Build the extension {: #build }
 
-Start by creating a new directory called `open-api-reference` to hold the extension files, or download the source code from our [GitHub samples][github-open-api] repo.
+Start by creating a new directory called `quick-api-reference` to hold the extension files, or download the source code from our [GitHub samples][github-open-api] repo.
 
 ### Step 1: Register the service worker {: #step-1 }
 
@@ -113,21 +112,23 @@ Remember to set `type.module` when using a modern module bundler framework.
 
 ### _Optional: Debugging the service worker_ {: #step-3 }
 
-Let's quickly go over how to locate the service worker logs and determine when it has terminated. Follow the instructions to [Load an unpacked extension][doc-dev-basics-unpacked]. Now wait 30 seconds for the service worker to stop. Click on the hyperlink to inspect it. 
+Let's quickly go over how to find the service worker logs and know when it has terminated. Follow the instructions to [Load an unpacked extension][doc-dev-basics-unpacked] and wait 30 seconds for the service worker to stop. Click on the "service worker" hyperlink to inspect it. 
 
 {% Video src="video/BhuKGJaIeLNPW9ehns59NfwqKxF2/D1XRaA6q4xn9Ylwe1u1N.mp4", width="800", height="314", autoplay="true", muted="true", loop="true" %}
 
 Did you notice that inspecting the service worker woke it up? That's right! Opening the service worker in the devtools will keep it active.
 
-To locate the errors, let's cause the extension to break. One way to do this is to delete the ".js" from the './sw-omnibox.js' import in sw.js. Chrome will be unable to register the service worker.
+Now let's break the extension to learn where to locate errors. One way to do this is to delete the ".js" from the `'./sw-omnibox.js'` import in the `sw.js` file. Chrome will be unable to register the service worker.
 
 Go back to chrome://extensions and refresh the extension. The following error will appear:
 
 {% Video src="video/BhuKGJaIeLNPW9ehns59NfwqKxF2/AbMNDSbURLKjH1Jm1C9Q.mp4", width="400", height="477", autoplay="true", muted="true", loop="true" %}
 
- See [Debugging extensions](tbd) for more ways debug the extension service worker.
+See [Debugging extensions](tbd) for more ways debug the extension service worker.
 
-Don't forget to fix the file name before moving on! 
+{% Aside 'caution' %}
+Don't forget to fix the file name before moving on!
+{% endAside %}
 
 ### Step 4: Initialize the state {: #step-4 }
 
@@ -142,7 +143,7 @@ Extensions can save initial values to storage on installation. To use the [`chro
 }
 ```
 
-The [omnibox API][api-omnibox] allows the extension to offer suggestions. At first, we will suggest frm a list popular APIs, and later offer suggestions of the latest searches. The following code stores the default list of APIs when the extension is first installed:
+The following code sets the default [omnibox][api-omnibox] suggestions when the extension is first installed:
 
 {% Label %}sw-omnibox.js:{% endLabel %}
 
@@ -158,23 +159,18 @@ chrome.runtime.onInstalled.addListener(({ reason }) => {
 });
 ```
 
-{% Details %}
-{% DetailsSummary %}
-💡 **Can I use window.LocalStorage() in a service worker? What about global variables?**
-{% endDetailsSummary %}
-
-Service workers do not have direct access to the DOM or the window object, therefore cannot use
-window.localStorage() to store values. Also, service workers are short-lived execution environments;
+Service workers do not have direct access to the DOM or the [window object][mdn-window], therefore cannot use
+[window.localStorage()][mdn-local-storage] to store values. Also, service workers are short-lived execution environments;
 they get terminated repeatedly throughout a user's browser session, which makes it incompatible with
 global variables.
 
 See [Saving states](TBD) to learn about storage options for extension service workers.
 
-{% endDetails %}
-
 ### Step 5: Register your events {: #step-5 }
 
-To use the [`chrome.omnibox`][api-omnibox] API we must first add the omnibox keyword to the manifest:
+All event listeners need to be registered in the global scope of the service worker. In other words, event listeners should not be nested in functions. This way Chrome can immediately invoke all event handlers, even if the extension's async startup logic hasn't finished. 
+
+To use the [`chrome.omnibox`][api-omnibox] API first add the omnibox keyword to the manifest:
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -188,7 +184,12 @@ To use the [`chrome.omnibox`][api-omnibox] API we must first add the omnibox key
 }
 ```
 
-All event listeners need to be registered in the global scope of the service worker. In other words, event listeners should not be nested in functions. This way Chrome can immediately invoke all event handlers, even if the extension's async startup logic hasn't finished. The following code registers the omnibox listeners and updates storage with the latest api search:
+{% Aside 'important' %}
+The [`"minimum_chrome_version"`][manifest-min-version] explains how this key behaves when a user tries to install your extension but isn't using a compatible version of Chrome.
+
+{% endAside %}
+
+The following code registers the omnibox event listeners at the top level of the script and updates [chrome.storage][api-storage] with the most recent api search.
 
 {% Label %}sw-omnibox.js:{% endLabel %}
 
@@ -225,7 +226,7 @@ async function updateHistory(input) {
 }
 ```
 
-{% Aside %}
+{% Aside 'important' %}
 
 Extension service workers have access to both web APIs and Chrome APIs, with a few exceptions.
 For a deep dive, see [Service Workers...](tbd) 
@@ -234,11 +235,11 @@ For a deep dive, see [Service Workers...](tbd)
 
 ### Step 6: Set up a recurring event {: #step-6 }
 
-It's common to perform delayed or periodic operations using the `setTimeout()` or `setInterval()`
-methods. These APIs can fail because the scheduler will cancel the timers when the service worker is
-terminated. Instead, we can use the [`chrome.alarms`][api-alarms] API. 
+The `setTimeout()` or `setInterval()` methods are commonly used to perform delayed or periodic
+tasks. However, these APIs can fail because the scheduler will cancel the timers when the service
+worker is terminated. Instead, extensions can use the [`chrome.alarms`][api-alarms] API. 
 
-First, we must request the `"alarms"` permission. Since we also need to fetch the extension tips, let's also add the site as a [host permission][doc-host-perm]:
+To use the Alarms API, request the `"alarms"` permission in the manifest. The extension also needs to request [host permission][doc-host-perm] to retrieve the extension tips from the glitch site:
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -305,7 +306,8 @@ First, declare the content script in the manifest and add the match pattern corr
 
 ```
 
-Create a new content file and add the following code to create a new button in the navigation bar. Once the button is clicked it will open a modal using the new Popover web API:
+Create a new content file. The following code generates a button that will open the tip popover. It also sends a message to the service worker requesting the extension tip.
+
 
 {% Label %}content.js:{% endLabel %}
 
@@ -340,10 +342,23 @@ function createDomElement(html) {
 }
 ```
 
-Now add the following code to the service worker which will send the daily tip to the content script. 
+
+{% Details %}
+{% DetailsSummary %}
+💡 **Interesting JavaScript used in this code**
+{% endDetailsSummary %}
+
+TBD
+
+- DomParser
+- Popover API
+- SVG element
+
+{% endDetails %}
+
+The following code sends the daily tip from the service worker to the content script. 
 
 {% Label %}sw-api.js:{% endLabel %}
-
 
 ```js
 ...
@@ -356,8 +371,104 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 });
 ```
 
+## Test that it works {: #try-out }
 
-```
-{% endDetails %}
+Verify that the file structure of your project looks like the following: 
 
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/S86ooJMjFm5uvf906u9a.png", 
+alt="The contents of the extension folder: manifest.json, service-worker.js, sw-omnibox.js, sw-tips.js,
+content.js, and icons.", width="700", height="468" %}
 
+### Load your extension locally {: #locally }
+
+To load an unpacked extension in developer mode, follow the steps in [Development
+Basics][doc-dev-basics-unpacked].
+
+### Test the extension on a documentation page {: #open-sites }
+
+First, open any of the following pages:
+
+- [Welcome to the Chrome Extension documentation][doc-welcome]
+- [Publish in the Chrome Web Store][cws-publish]
+- [Scripting API][api-scripting]
+
+Then, click on the extension action. If you set up a [keyboard shortcut][tut-focus-mode-step6], you can test it by pressing `Ctrl + B` or `Cmd + B`.
+
+It should go from this:
+
+<figure>
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/q9DOiy5Y6m8eTp182PgP.png", alt="Focus Mode extension OFF", width="600", height="378", class="screenshot" %}
+  <figcaption>
+  Focus Mode extension off
+  </figcaption>
+</figure>
+
+To this:
+
+<figure>
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/e7y4UD1rjmk1yqiVmnoP.png", 
+alt="Focus Mode extension ON", width="600", height="378", class="screenshot" %}
+  <figcaption>
+  Focus Mode extension on
+  </figcaption>
+</figure>
+
+## 🎯 Potential enhancements {: #challenge }
+
+Based on what you’ve learned today, try to accomplish any of the following:
+
+- Improve the CSS stylesheet.
+- Assign a different keyboard shortcut.
+- Change the layout of your favorite blog or documentation site.
+
+## Keep building! {: #continue }
+
+Congratulations on finishing this tutorial 🎉. Continue leveling up your skills by completing other
+tutorials on this series:
+
+| Extension                        | What you will learn                                            |
+|----------------------------------|----------------------------------------------------------------|
+| [Reading time][tut-reading-time] | To insert an element on a specific set of pages automatically. |
+| [Tabs Manager][tut-tabs-manager] | To create a popup that manages browser tabs.                   |
+
+## Continue exploring
+
+We hope you enjoyed building this Chrome extension and are excited to continue your Chrome
+development learning journey. We recommend the following learning paths:
+
+- The [Chrome Extension Architecture][doc-overview] backs up a bit and fills in a lot of detail
+  about the Extensions architecture in general.
+- The [developer's guide][doc-devguide] has dozens of additional links to pieces of documentation
+  relevant to advanced extension creation.
+- Extensions have access to powerful APIs beyond what's available on the open web.
+  The [Chrome APIs documentation][doc-apis] walks through each API.
+
+[api-scripting]: /docs/extensions/reference/scripting/
+[api-storage]: /docs/extensions/reference/storage
+[api-alarms]: /docs/extensions/reference/alarms
+[api-omnibox]: /docs/extensions/reference/omnibox
+[doc-apis]: /docs/extensions/reference
+[doc-dev-basics-unpacked]: /docs/extensions/mv3/getstarted/development-basics#load-unpacked
+[doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics
+[doc-devguide]: /docs/extensions/mv3/devguide/
+[doc-ext-101]: /docs/extensions/mv3/getstarted/extensions-101/
+[doc-manifest]: /docs/extensions/mv3/manifest/
+[doc-perms-warning]: /docs/extensions/mv3/permission_warnings/#required_permissions
+[doc-sw]: /docs/extensions/mv3/service_workers/
+[doc-content]: /docs/extensions/mv3/content_scripts/
+[doc-messages]: /docs/extensions/mv3/messaging
+[doc-welcome]: /docs/extensions/mv3/
+[github-focus-mode-icons]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.focus-mode/images
+[github-open-api]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/
+[mdn-es-module]: https://web.dev/es-modules-in-sw/
+[mdn-indexeddb]: https://developer.mozilla.org/docs/Web/API/IndexedDB_API
+[runtime-oninstalled]: /docs/extensions/reference/runtime#event-onInstalled
+[tut-focus-mode-step6]: /docs/extensions/mv3/getstarted/tut-focus-mode#step-6
+[tut-reading-time-step1]: /docs/extensions/mv3/getstarted/tut-reading-time#step-1
+[tut-reading-time-step2]: /docs/extensions/mv3/getstarted/tut-reading-time#step-2
+[tut-reading-time]: /docs/extensions/mv3/getstarted/tut-reading-time
+[tut-tabs-manager]: /docs/extensions/mv3/getstarted/tut-tabs-manager
+[mdn-local-storage]: https://developer.mozilla.org/docs/Web/API/Window/localStorage
+[doc-host-perm]: /docs/extensions/mv3/match_patterns/
+[mdn-window]: https://developer.mozilla.org/docs/Web/API/Window
+[manifest-min-version]: https://developer.chrome.com/docs/extensions/mv3/manifest/minimum_chrome_version/#enforcement
