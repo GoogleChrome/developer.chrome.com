@@ -19,13 +19,14 @@
   <tag-pill-list id="active-filters"></tag-pill-list>
 </div>
 
-{% set loadMorei18n = {
-  buttonLabel: 'i18n.events.load_more' | i18n,
-  errorMessage: 'i18n.events.load_more_error' | i18n,
-  errorLinkLabel: 'i18n.events.load_more_error_link' | i18n
-} %}
 
 <web-tabs class="events-list">
+  {% set loadMorei18n = {
+    buttonLabel: 'i18n.events.load_more' | i18n,
+    errorMessage: 'i18n.events.load_more_error' | i18n,
+    errorLinkLabel: 'i18n.events.load_more_error_link' | i18n,
+    noResultsMessage: 'i18n.events.no_upcoming_matches' | i18n
+  } %}
   <web-tab title="{{ 'i18n.events.upcoming_events' | i18n(locale) }}">
     <load-more  id="upcoming-events"
                 total="{{ collections.currentEvents.length }}"
@@ -36,6 +37,12 @@
     </load-more>
   </web-tab>
 
+  {% set loadMorei18n = {
+    buttonLabel: 'i18n.events.load_more' | i18n,
+    errorMessage: 'i18n.events.load_more_error' | i18n,
+    errorLinkLabel: 'i18n.events.load_more_error_link' | i18n,
+    noResultsMessage: 'i18n.events.no_past_matches' | i18n
+  } %}
   <web-tab title="{{ 'i18n.events.past_events' | i18n(locale) }}">
     <load-more id="past-events"
                total="{{ collections.pastEvents.length }}"

@@ -18,6 +18,7 @@ import {html} from 'lit-element';
 import {unsafeHTML} from 'lit-html/directives/unsafe-html';
 import {unsafeSVG} from 'lit-html/directives/unsafe-svg';
 import arrowIcon from '../../_includes/icons/arrow-forward.svg';
+import {generateIdSalt} from '../utils/salt';
 
 export class LoadMore extends BaseElement {
   constructor() {
@@ -33,6 +34,7 @@ export class LoadMore extends BaseElement {
     this._loading = false;
     this._haveError = false;
     this.i18n = {};
+    this._id = `load-more-${generateIdSalt('load-more-')}`;
   }
 
   static get properties() {
@@ -152,21 +154,26 @@ export class LoadMore extends BaseElement {
       <button
         ?disabled="${this._loading}"
         class="load-more__button type--small display-inline-flex"
-        aria-controls="upcoming-events"
+        aria-controls="${this._id}-items"
       >
         ${this.i18n.buttonLabel} ${unsafeSVG(arrowIcon)}
       </button>
     `;
   }
 
-  //todo - fix aria-controls
   render() {
-    return html`
-      <div class="load-more__items">
-        ${this.initialItems} ${unsafeHTML(this.loadedItems.join(''))}
-      </div>
-      ${this._renderError()} ${this._renderButton()}
-    `;
+    const haveItems =
+      this.initialItems.length > 0 || this.loadedItems.length > 0;
+
+    const contents = haveItems
+      ? html`
+          <div id="${this._id}-items" class="load-more__items">
+            ${this.initialItems} ${unsafeHTML(this.loadedItems.join(''))}
+          </div>
+        `
+      : html`<p>${this.i18n.noResultsMessage}</p>`;
+
+    return html` ${contents} ${this._renderError()} ${this._renderButton()} `;
   }
 }
 

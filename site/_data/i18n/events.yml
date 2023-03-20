@@ -72,3 +72,9 @@ done:
 
 filters:
   en: Filters
+
+no_upcoming_matches:
+  en: No upcoming events found. See our past events or try different filters
+
+no_past_matches:
+  en: No past events found. See our upcoming events or try different filters
