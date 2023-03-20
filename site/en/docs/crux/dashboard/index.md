@@ -91,11 +91,13 @@ The dashboard URL can then be shared and bookmarked for easy reference.
 
 ## Does it work for all websites?
 
-No. The CrUX dataset tracks about 16 million popular websites monthly. If your website isn't popular enough, it won't be in the dataset. Don't ask how popular is popular enough, we won't say.
+No. If your origin is not included in the CrUX dataset, there will be no data to display. There are over 15 million origins in the dataset, but the one you want may not have sufficient data to be included.
+
+Some common issues with origins are providing the wrong protocol, for example `http://` instead of `https://`, and omitting the subdomain when needed. Some websites include redirects, so if `http://example.com` redirects to `https://www.example.com`, then you should use the latter, which is the canonical version of the origin. As a rule of thumb, use whichever origin users see in the URL bar.
 
 ## Using a Custom Search Engine to access the Dashboard
 
-A better way, for those frequently visiting different domains, is to set up a custom Search Engine in Chrome. To do this go into Chrome Settings using the three dots menu in the top right of Chrome. Once in Settings choose the "Search engine" option.
+An alternative way, for those frequently visiting different domains, is to set up a custom Search Engine in Chrome which allows you to access pass a search term—the origin in this case—to a URL. To do this go into Chrome Settings using the three dots menu in the top right of Chrome. Once in Settings choose the "Search engine" option.
 
 {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/QFmABBH8qJJuyA25QXqc.png", alt="Chrome settings for Search Engines", width="800", height="243" %}
 
@@ -107,17 +109,13 @@ From here expand the "Manage search engines and site search", scroll down to "Si
 
 {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/uMyipuu95G78aQ7hdn9u.png", alt="Chrome 'Add search engine' dialog", width="600", height="422" %}
 
-After this, when you type `crux` and press `tab` in the search bar you will now be able to enter an origin, and Chrome will navigate to the preconfigured CrUX Dashboard.
+After this, when you type `crux` and press `tab` in the search bar you will now be able to enter an origin, and Chrome will navigate to the CrUX Dashboard for that origin.
 
 {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/O2sQwX4JwVRxcb24Mfw1.png", alt="Using a custom search engine in Chrome Omnibox", width="400", height="138" %}
 
 If you omit the protocol, HTTPS is assumed. Subdomains matter, for example `https://developers.google.com` and `https://www.google.com` are considered to be different origins.
 
-If your origin is not included in the CrUX dataset, there will be no data to display. There are over 15 million origins in the dataset, but the one you want may not have sufficient data to be included.
-
-Some common issues with origins are providing the wrong protocol, for example `http://` instead of `https://`, and omitting the subdomain when needed. Some websites include redirects, so if `http://example.com` redirects to `https://www.example.com`, then you should use the latter, which is the canonical version of the origin. As a rule of thumb, use whichever origin users see in the URL bar.
-
-If the origin exists, you'll be taken to the dashboard, populated with the CrUX data for this origin:
+If the origin exists in CrUX, you'll be taken to the dashboard, populated with the CrUX data for this origin:
 
 {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/9vSp9trQYMwC5kw2DZPJ.png", alt="Example CrUX Dashboard", width="800", height="565" %}
 
