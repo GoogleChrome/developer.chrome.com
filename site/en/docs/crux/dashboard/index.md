@@ -22,7 +22,7 @@ date: 2022-11-10
 
 # Optional
 # Include an updated date when you update your post
-#updated: 2022-11-09
+updated: 2023-03-20
 
 # Optional
 # How to add a new author
@@ -41,9 +41,60 @@ The CrUX Dashboard is a [Looker Studio](https://cloud.google.com/looker-studio) 
 
 ## Accessing the CrUX Dashboard
 
-To use the existing CrUX Dashboard you need to [lauch the dashboard, passing the origin as a query param](https://datastudio.google.com/u/0/reporting/bbc5698d-57bb-4969-9e07-68810b9fa348/page/keDQB?params=%7B%22origin%22:%22wwww.example.com%22%7D). To make this easier–since the origin needs to be URL encoded—you can use [Rick Viscomi](https://twitter.com/rick_viscomi)'s [CrUX Dash Launcher](https://rviscomi.github.io/crux-dash-launcher/) which takes the URL as an input and constructs the dashboard URL.
+To use the existing CrUX Dashboard you need to lauch the dashboard, passing the origin as a query param. To make this easier–since the origin needs to be URL encoded—you can use the below launcher, which takes an origin or URL as an input and constructs the dashboard URL for that origin:
+
+<style>
+  form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #origin {
+    margin: 20px 0;
+    width: 100%;
+    max-width: 800px;
+    font-size: 2em;
+    line-height: 1.3em;
+    text-align: center;
+  }
+  #origin[aria-invalid=true] {
+    outline: 2px dashed red !important;
+  }
+</style>
+
+<form id="form">
+  <input id="origin" aria-label="Origin" type="text" placeholder="https://developer.chrome.com" required>
+</form>
+
+*Note if the protocol (`http` or `https`) is not provided, then `https` will be assumed. Paths will be stripped as the CrUX Dashboard only provides data at an origins level.*
+
+<script>
+var form = document.getElementById('form');
+var origin = document.getElementById('origin');
+form.addEventListener('submit', function(e) {
+  try {
+    origin.removeAttribute('aria-invalid');
+    e.preventDefault();
+    var url = origin.value.trim();
+    if (!url.startsWith('http')) url = 'https://' + url;
+    url = new URL(url);
+    var encoded_origin = encodeURIComponent(url.origin);
+    var url = 'https://datastudio.google.com/reporting/bbc5698d-57bb-4969-9e07-68810b9fa348/page/keDQB?params=%7B%22origin%22:%22' + encoded_origin + '%22%7D';
+    window.location = url;
+  } catch {
+    origin.setAttribute('aria-invalid',true);
+  }
+});
+</script>
 
 The dashboard URL can then be shared and bookmarked for easy reference.
+
+## Does it work for all websites?
+
+No. The CrUX dataset tracks about 16 million popular websites monthly. If your website isn't popular enough, it won't be in the dataset. Don't ask how popular is popular enough, we won't say.
+
+## Using a Custom Search Engine to access the Dashboard
 
 A better way, for those frequently visiting different domains, is to set up a custom Search Engine in Chrome. To do this go into Chrome Settings using the three dots menu in the top right of Chrome. Once in Settings choose the "Search engine" option.
 
