@@ -45,7 +45,7 @@ Our proposal will address bounce tracking in the following use cases:
 
 ### Out-of-scope use cases
 
-Redirect flows that are out-of-scope include: federated authentication, SSO and payments. This is because these flows, while similar to bounce tracking scenarios, involve direct user interaction. You can find [further information in the explainer](https://github.com/wanderview/bounce-tracking-mitigations/blob/main/explainer.md).
+Redirect flows that are out-of-scope include: federated authentication, SSO and payments. This is because these flows, while similar to bounce tracking scenarios, involve direct user interaction. You can find [further information in the explainer](https://github.com/privacycg/nav-tracking-mitigations/blob/main/bounce-tracking-explainer.md).
 
 -   **Federated authentication**: [Federated authentication](/docs/privacy-sandbox/fedcm/) occurs when a user clicks on a **Login with Identity Provider** button on the web, for example, Facebook, GitHub, or Google.
 -   **Single sign-on**:  When a site uses single sign-on (SSO), the user expects to log in with the identity provider once and then be automatically logged-in for all visits on other sites.
@@ -61,11 +61,11 @@ At a high level the proposal is for the browser to automatically delete storage 
 
 Clarifying these definitions will be a key part of the bounce tracking mitigation effort.
 
-Enforcement for bounce tracking mitigation is still [in discussion](https://github.com/wanderview/bounce-tracking-mitigations/issues).
+Enforcement for bounce tracking mitigation is still [in discussion](https://github.com/privacycg/proposals/issues/6).
 
 ### Security considerations
 
-There are some [security considerations for this proposal that have been outlined in the bounce tracking mitigations explainer](https://github.com/wanderview/bounce-tracking-mitigations/blob/main/explainer.md#privacy-and-security-considerations).
+There are some [security considerations for this proposal that have been outlined in the bounce tracking mitigations explainer](https://github.com/privacycg/nav-tracking-mitigations/blob/main/bounce-tracking-explainer.md#privacy-and-security-considerations).
 
 ## When will bounce tracking mitigations be available? {: #availability}
 
@@ -75,5 +75,5 @@ This proposal largely only adds value when third-party cookies are disabled. Thi
 
 The bounce tracking mitigations proposal is under active discussion and subject to change in the future. If you have any feedback, we'd love to hear it.
 
--   **GitHub**: Read the [proposal](https://github.com/wanderview/bounce-tracking-mitigations), [raise questions and participate in discussion](https://github.com/wanderview/bounce-tracking-mitigations/issues).
+-   **GitHub**: Read the [proposal](https://github.com/privacycg/nav-tracking-mitigations/blob/main/bounce-tracking-explainer.md), [raise questions and participate in discussion](https://github.com/privacycg/proposals/issues/6).
 -   **Developer support**: Ask questions and join discussions on the [Privacy Sandbox Developer Support repository](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
