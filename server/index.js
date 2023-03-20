@@ -23,6 +23,9 @@ const {buildStaticHandler} = require('./handlers/static');
 
 const unknownDomainRedirectHandler = require('./unknown-domain');
 const healthCheckHandler = require('./health-check');
+const {
+  browserCompatImageRenderer,
+} = require('./handlers/api/browserCompatImageRenderer');
 
 const app = express();
 
@@ -73,6 +76,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 app.post('/_render', renderHandler);
+app.post('/api/browserCompatImageRenderer', browserCompatImageRenderer);
 
 app.use(...handlers);
 

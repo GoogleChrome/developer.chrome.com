@@ -3,19 +3,6 @@
 import * as htmlToImage from 'html-to-image';
 
 (() => {
-  function buildBody(featureId) {
-    return {
-      data: {
-        layout: 'layouts/blog-post.njk',
-        date: new Date().toISOString().split('T')[0],
-        title: `BrowserCompat - ${featureId}`,
-        desciption: featureId,
-        authors: ['rachelandrew'],
-      },
-      content: `{% BrowserCompat '${featureId}' %}`,
-    };
-  }
-
   function updateStatus(status) {
     $output.innerHTML = `<div class="loader"></div> ${status}`;
   }
@@ -34,7 +21,9 @@ import * as htmlToImage from 'html-to-image';
     }
 
     // Remove the list intendation from the items element
-    $browserCompat.querySelector('.wdi-browser-compat__items').style.padding = 0;
+    $browserCompat.querySelector(
+      '.wdi-browser-compat__items'
+    ).style.padding = 0;
 
     // Attach the div to the $output element so that it can be rendered
     // by html-to-image and styles already apply
@@ -75,14 +64,13 @@ import * as htmlToImage from 'html-to-image';
     $submit.disabled = true;
 
     //@ts-ignore
-    const body = buildBody($featureId.value);
-    updateStatus('Rendering 11ty document remote ...');
-    const response = await fetch('/_render', {
+    updateStatus('Rendering shortcode remotely ...');
+    const response = await fetch('/api/browserCompatImageRenderer', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ fm: body }),
+      body: JSON.stringify({featureId: $featureId.value}),
     });
 
     // Extract the div with the class wdi-browser-compat from the HTML response
