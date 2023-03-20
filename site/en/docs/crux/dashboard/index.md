@@ -51,7 +51,6 @@ To use the existing CrUX Dashboard you need to lauch the dashboard, passing the 
     align-items: center;
   }
   #origin {
-    margin: 20px 0;
     width: 100%;
     max-width: 800px;
     font-size: 2em;
@@ -59,7 +58,7 @@ To use the existing CrUX Dashboard you need to lauch the dashboard, passing the 
     text-align: center;
   }
   #origin[aria-invalid=true] {
-    outline: 2px dashed red !important;
+    outline: red dashed 2px;
   }
 </style>
 
