@@ -308,7 +308,6 @@ First, declare the content script in the manifest and add the match pattern corr
 
 Create a new content file. The following code generates a button that will open the tip popover. It also sends a message to the service worker requesting the extension tip.
 
-
 {% Label %}content.js:{% endLabel %}
 
 ```js
@@ -374,7 +373,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 ## Test that it works {: #try-out }
 
 Verify that the file structure of your project looks like the following: 
-
+<!-- TODO: Add actual file structure -->
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/S86ooJMjFm5uvf906u9a.png", 
 alt="The contents of the extension folder: manifest.json, service-worker.js, sw-omnibox.js, sw-tips.js,
 content.js, and icons.", width="700", height="468" %}
@@ -386,40 +385,15 @@ Basics][doc-dev-basics-unpacked].
 
 ### Test the extension on a documentation page {: #open-sites }
 
-First, open any of the following pages:
-
-- [Welcome to the Chrome Extension documentation][doc-welcome]
-- [Publish in the Chrome Web Store][cws-publish]
-- [Scripting API][api-scripting]
-
-Then, click on the extension action. If you set up a [keyboard shortcut][tut-focus-mode-step6], you can test it by pressing `Ctrl + B` or `Cmd + B`.
-
-It should go from this:
-
-<figure>
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/q9DOiy5Y6m8eTp182PgP.png", alt="Focus Mode extension OFF", width="600", height="378", class="screenshot" %}
-  <figcaption>
-  Focus Mode extension off
-  </figcaption>
-</figure>
-
-To this:
-
-<figure>
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/e7y4UD1rjmk1yqiVmnoP.png", 
-alt="Focus Mode extension ON", width="600", height="378", class="screenshot" %}
-  <figcaption>
-  Focus Mode extension on
-  </figcaption>
-</figure>
+TBD
 
 ## 🎯 Potential enhancements {: #challenge }
 
 Based on what you’ve learned today, try to accomplish any of the following:
 
-- Improve the CSS stylesheet.
-- Assign a different keyboard shortcut.
-- Change the layout of your favorite blog or documentation site.
+- Add a CSS stylesheet to the content script.
+- TBD
+- TBD
 
 ## Keep building! {: #continue }
 
@@ -433,15 +407,13 @@ tutorials on this series:
 
 ## Continue exploring
 
-We hope you enjoyed building this Chrome extension and are excited to continue your Chrome
-development learning journey. We recommend the following learning paths:
+To continue your extension service worker learning path, we recommend exploring the following articles:
 
-- The [Chrome Extension Architecture][doc-overview] backs up a bit and fills in a lot of detail
-  about the Extensions architecture in general.
-- The [developer's guide][doc-devguide] has dozens of additional links to pieces of documentation
-  relevant to advanced extension creation.
-- Extensions have access to powerful APIs beyond what's available on the open web.
-  The [Chrome APIs documentation][doc-apis] walks through each API.
+- TBD
+- TBD
+- TBD
+
+
 
 [api-scripting]: /docs/extensions/reference/scripting/
 [api-storage]: /docs/extensions/reference/storage
