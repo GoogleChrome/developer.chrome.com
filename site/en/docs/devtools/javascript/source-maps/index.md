@@ -1,74 +1,71 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Map Preprocessed Code to Source Code"
+title: "Map preprocessed code to source code"
 authors:
   - megginkearney
   - pbakaus
+  - sofiayem
 date: 2015-04-13
-#updated: YYYY-MM-DD
-description: "Keep your client-side code readable and debuggable even after you've combined, minified or compiled it."
+updated: 2023-03-29
+description: "Keep your client-side code readable and debuggable even after you've combined, minified, or compiled it."
 ---
 
 Keep your client-side code readable and debuggable even after you've combined, minified or compiled
 it. Use source maps to map your source code to your compiled code.
 
-## Summary {: #summary }
-
-- Use Source Maps to map minified code to source code. You can then read and debug compiled code in
-  its original source.
-- Only use preprocessors capable of producing Source Maps.
-- Verify that your web server can serve Source Maps.
-
 ## Get started with preprocessors {: #get_started_with_preprocessors }
 
-This article explains how to interact with JavaScript Source Maps in the DevTools Sources Panel.
+To read and debug the original source of compiled code in the **Sources** panel, use source maps to map minified code to source code. 
+
+To use source maps:
+
+- Use only the preprocessors that can produce source maps.
+- Verify that your web server can serve source maps.
 
 ## Use a supported preprocessor {: #use_a_supported_preprocessor }
 
-You need to use a minifier that's capable of creating source maps.
-For an extended view, see the [Source maps: languages,
-tools and other info][4] wiki page.
-
-The following types of preprocessors are commonly used in combination with Source Maps:
+The following types of preprocessors are commonly used in combination with source maps:
 
 - Transpilers ([Babel][5], [Traceur][6])
 - Compilers ([Closure Compiler][7], [TypeScript][8], [CoffeeScript][9], [Dart][10])
 - Minifiers ([UglifyJS][11])
 
-## Source Maps in DevTools Sources panel {: #source_maps_in_devtools_sources_panel }
+For an extended list, see [Source maps: Languages, tools, and other info][4].
 
-Source Maps from preprocessors cause DevTools to load your original files in addition to your
-minified ones. You then use the originals to set breakpoints and step through code. Meanwhile,
-Chrome is actually running your minified code. This gives you the illusion of running a development
-site in production.
+## Source maps in the Sources panel {: #source_maps_in_devtools_sources_panel }
 
-When running Source Maps in DevTools, you'll notice that the JavaScript isn't compiled and you can
-see all the individual JavaScript files it references. This is using source mapping, but behind the
-scenes actually runs the compiled code. Any errors, logs and breakpoints will map to the dev code
-for awesome debugging! So in effect it gives you the illusion that you're running a dev site in
-production.
+Source maps from preprocessors cause DevTools to load your original files in addition to your minified ones.
+Chrome will actually run your minified code but the **Sources** panel will show you the code you author.
+You can set breakpoints and step through code in source files and all the errors, logs, and breakpoints will automatically map.
 
-### Enable Source Maps in settings {: #enable_source_maps_in_settings }
+This gives you the appearance of running a development site in production.
 
-Source Maps are enabled by default (as of Chrome 39), but if you'd like to double-check or enable
-them, first open DevTools and click the settings cog
-{% Img src="image/admin/6OvQcMgStUCLS2kGRYn7.png", alt="gear", width="18", height="18" %}. Under **Sources**, check **Enable
-JavaScript Source Maps**. You might also check **Enable CSS Source Maps**.
+### Enable source maps in Settings {: #enable_source_maps_in_settings }
 
-{% Img src="image/admin/YGj3osOPCRzs4zWSEjNe.jpg", alt="Enable Source Maps", width="800", height="402" %}
+In {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Preferences** > **Sources**](/docs/devtools/settings/preferences/#sources), make sure to check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable JavaScript source maps**.
 
-### Debugging with Source Maps {: #debugging_with_source_maps }
+{% Aside %}
+You might also want to check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable CSS source maps**.
+{% endAside %}
 
-When [debugging your code][12] and Source Maps enabled, Source Maps will show in two places:
+Additionally, to separate source files from the minified ones in the file tree, you can [group authored and deployed code](/docs/devtools/javascript/reference/#group-authored-and-deployed).
 
-1.  In the console (the link to source should be the original file, not the generated one)
-2.  When stepping through code (the links in the call stack should open the original source file)
+## Debugging with source maps {: #debugging_with_source_maps }
+
+When [debugging your code][12] with enabled source maps, DevTools shows links to the original source files in two places:
+
+- Next to log messages in the **Console**.
+- When stepping through code, in **Source** > **Call Stack**.
+
+In addition, the **Source** panel puts a link to the minified file in the status bar of the **Editor**.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/903JBqtzB1xS9jLHSlOu.png", alt="Links to source files in log messages and Call Stack and a link to the minified file at the status bar.", width="800", height="548" %}
 
 ## @sourceURL and displayName {: #sourceurl_and_displayname }
 
-While not part of the Source Map spec, the `@sourceURL` allows you to make development much easier
+While not part of the source map spec, the `@sourceURL` allows you to make development much easier
 when working with evals. This helper looks very similar to the `//# sourceMappingURL` property and
-is actually mentioned in the Source Map V3 specifications.
+is actually mentioned in the source map V3 specifications.
 
 By including the following special comment in your code, which will be evaled, you can name evals
 and inline scripts and styles so they appear as more logical names in your DevTools.
@@ -88,7 +85,7 @@ our original source. On the last line, however, will be a `// @sourceURL` commen
 the original source file was. This can greatly help with debugging when working with language
 abstractions.
 
-{% Img src="image/admin/KJAs60U1FMmwVUTjElkV.jpg", alt="Working with sourceURL", width="800", height="403" %}
+{% Img src="image/admin/KJAs60U1FMmwVUTjElkV.jpg", alt="Working with sourceURL.", width="800", height="403" %}
 
 [1]: /web/tools/setup/setup-preprocessors?#supported_preprocessors
 [2]: /web/tools/setup/setup-preprocessors?#debugging-and-editing-preprocessed-content
