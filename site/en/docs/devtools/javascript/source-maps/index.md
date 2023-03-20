@@ -55,7 +55,7 @@ Additionally, to separate source files from the minified ones in the file tree, 
 When [debugging your code][12] with enabled source maps, DevTools shows links to the original source files in two places:
 
 - Next to log messages in the **Console**.
-- When stepping through code, in **Source** > **Call Stack**.
+- In **Source** > **Call Stack** when stepping through code.
 
 In addition, the **Source** panel puts a link to the minified file in the status bar of the **Editor**.
 
@@ -63,33 +63,22 @@ In addition, the **Source** panel puts a link to the minified file in the status
 
 ## @sourceURL and displayName {: #sourceurl_and_displayname }
 
-While not part of the source map spec, the `@sourceURL` allows you to make development much easier
-when working with evals. This helper looks very similar to the `//# sourceMappingURL` property and
-is actually mentioned in the source map V3 specifications.
+While not part of the source map specification, the [`#sourceURL`](/blog/sourcemappingurl-and-sourceurl-syntax-changed/#sourceurl) lets you make development much easier
+when working with `eval()` calls. This helper looks very similar to the [`//# sourceMappingURL` property](/blog/sourcemaps/#how-does-the-source-map-work) and the [Source Map V3 specification](https://sourcemaps.info/spec.html) mentions it.
 
-By including the following special comment in your code, which will be evaled, you can name evals
-and inline scripts and styles so they appear as more logical names in your DevTools.
+The `//# sourceURL=/path/to/source.file` comment tells the browser to look for the source file when you use `eval()`. This helps you name your evaluations and inline scripts and styles.
 
-`//# sourceURL=source.coffee`
+Test it on this [demo page][13]:
 
-Navigate to this **[demo][13]**, then:
+1. [Open the DevTools](/docs/devtools/open) and go to the **Sources** panel.
+1. On the page, enter an arbitrary filename into the _Name your code:_ input field.
+1. Click the **Compile** button. An alert appears with the evaluated sum from the CoffeeScript source.
+1. In the file tree on the **Page** pane, open a new file with the custom filename you entered. It contains the compiled JavaScript code.
 
-- Open the DevTools and go to the **Sources** panel.
-- Enter in a filename into the _Name your code:_ input field.
-- Click on the **compile** button.
-- An alert will appear with the evaluated sum from the CoffeeScript source.
+The compiled code has the `// #sourceURL` comment with the original name of the source file. This helps with debugging language abstractions.
 
-If you expand the _Sources_ sub-panel you will now see a new file with the custom filename you
-entered earlier. If you double-click to view this file it will contain the compiled JavaScript for
-our original source. On the last line, however, will be a `// @sourceURL` comment indicating what
-the original source file was. This can greatly help with debugging when working with language
-abstractions.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/jKgjH0ggMa3aGqrwqfbi.png", alt="The sourceURL comment.", width="800", height="560" %}
 
-{% Img src="image/admin/KJAs60U1FMmwVUTjElkV.jpg", alt="Working with sourceURL.", width="800", height="403" %}
-
-[1]: /web/tools/setup/setup-preprocessors?#supported_preprocessors
-[2]: /web/tools/setup/setup-preprocessors?#debugging-and-editing-preprocessed-content
-[3]: /web/tools/setup/setup-preprocessors?#supported_preprocessors
 [4]: https://github.com/ryanseddon/source-map/wiki/Source-maps:-languages,-tools-and-other-info
 [5]: https://babeljs.io/
 [6]: https://github.com/google/traceur-compiler/wiki/Getting-Started
