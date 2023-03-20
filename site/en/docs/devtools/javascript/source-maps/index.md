@@ -73,11 +73,10 @@ Test it on this [demo page][13]:
 1. [Open the DevTools](/docs/devtools/open) and go to the **Sources** panel.
 1. On the page, enter an arbitrary filename into the _Name your code:_ input field.
 1. Click the **Compile** button. An alert appears with the evaluated sum from the CoffeeScript source.
-1. In the file tree on the **Page** pane, open a new file with the custom filename you entered. It contains the compiled JavaScript code.
+1. In the file tree on the **Page** pane, open a new file with the custom filename you entered. It contains the compiled JavaScript code that has the `// #sourceURL` comment with the original name of the source file.
+1. To open the source file, click the link in the status bar of the **Editor**.
 
-The compiled code has the `// #sourceURL` comment with the original name of the source file. This helps with debugging language abstractions.
-
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/jKgjH0ggMa3aGqrwqfbi.png", alt="The sourceURL comment.", width="800", height="560" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/emBmyXDMqalJSQuus1Bx.png", alt="The sourceURL comment and the link to the source file in the status bar.", width="800", height="560" %}
 
 [4]: https://github.com/ryanseddon/source-map/wiki/Source-maps:-languages,-tools-and-other-info
 [5]: https://babeljs.io/
