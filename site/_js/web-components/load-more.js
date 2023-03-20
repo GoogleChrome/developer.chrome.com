@@ -30,7 +30,6 @@ export class LoadMore extends BaseElement {
     this.fetchItems = null;
     this.initialItems = [];
     this.loadedItems = [];
-    this.button = null;
     this._loading = false;
     this._haveError = false;
     this.i18n = {};
@@ -57,15 +56,10 @@ export class LoadMore extends BaseElement {
 
   firstUpdated(changedProperties) {
     super.firstUpdated(changedProperties);
-
-    this.button = this._getButton();
-    this.button?.handleConnect();
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
-
-    this.button?.handleDisconnect();
   }
 
   shouldUpdate(_changedProperties) {
@@ -96,7 +90,9 @@ export class LoadMore extends BaseElement {
         this.take
       );
 
-      this.total = updated_total;
+      if (updated_total !== undefined) {
+        this.total = updated_total;
+      }
 
       this.loadedItems = this.loadedItems.concat(items);
 
@@ -104,24 +100,6 @@ export class LoadMore extends BaseElement {
     } catch (e) {
       this._haveError = true;
     }
-  }
-
-  _getButton() {
-    const element = this.querySelector('.load-more__button');
-
-    const handleClick = async () => {
-      this._loading = true;
-    };
-
-    return {
-      element,
-      handleConnect: () => {
-        element?.addEventListener('click', handleClick);
-      },
-      handleDisconnect: () => {
-        element?.removeEventListener('click', handleClick);
-      },
-    };
   }
 
   restart() {
@@ -135,7 +113,7 @@ export class LoadMore extends BaseElement {
     if (!this._haveError) return null;
 
     return html`
-      <p class="color-red-medium gap-top-300">
+      <p class="load-more__error color-red-medium gap-top-300">
         ${this.i18n.errorMessage}
         <a
           href="https://github.com/GoogleChrome/developer.chrome.com/issues/new?labels=bug&template=bug_report.md"
@@ -147,6 +125,10 @@ export class LoadMore extends BaseElement {
     `;
   }
 
+  _handleClick() {
+    this._loading = true;
+  }
+
   _renderButton() {
     if (this.skip >= this.total) return null;
 
@@ -155,25 +137,35 @@ export class LoadMore extends BaseElement {
         ?disabled="${this._loading}"
         class="load-more__button type--small display-inline-flex"
         aria-controls="${this._id}-items"
+        @click="${this._handleClick}"
       >
         ${this.i18n.buttonLabel} ${unsafeSVG(arrowIcon)}
       </button>
     `;
   }
 
-  render() {
+  _renderItems() {
+    if (this._haveError) return null;
+
     const haveItems =
       this.initialItems.length > 0 || this.loadedItems.length > 0;
 
-    const contents = haveItems
-      ? html`
-          <div id="${this._id}-items" class="load-more__items">
-            ${this.initialItems} ${unsafeHTML(this.loadedItems.join(''))}
-          </div>
-        `
-      : html`<p>${this.i18n.noResultsMessage}</p>`;
+    if (!haveItems)
+      return html`<p class="load-more__noResults">
+        ${this.i18n.noResultsMessage}
+      </p>`;
 
-    return html` ${contents} ${this._renderError()} ${this._renderButton()} `;
+    return html`
+      <div id="${this._id}-items" class="load-more__items">
+        ${this.initialItems} ${unsafeHTML(this.loadedItems.join(''))}
+      </div>
+    `;
+  }
+
+  render() {
+    return html`
+      ${this._renderItems()} ${this._renderError()} ${this._renderButton()}
+    `;
   }
 }
 
