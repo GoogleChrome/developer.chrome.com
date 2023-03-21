@@ -41,7 +41,7 @@ The CrUX Dashboard is a [Looker Studio](https://cloud.google.com/looker-studio) 
 
 ## Accessing the CrUX Dashboard
 
-To use the existing CrUX Dashboard you need to lauch the dashboard, passing the origin as a query param. To make this easier–since the origin needs to be URL encoded—you can use the below launcher, which takes an origin or URL as an input and constructs the dashboard URL for that origin:
+To use the existing CrUX Dashboard you need to lauch the dashboard, passing the origin as a query param. To make this easier–since the origin needs to be URL encoded—you can use the below launcher, which takes an origin or URL as an input and launches the appropriate dashboard URL for that origin:
 
 <style>
   form {
@@ -49,10 +49,11 @@ To use the existing CrUX Dashboard you need to lauch the dashboard, passing the 
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    max-width: 800px;
   }
   #origin {
     width: 100%;
-    max-width: 800px;
     font-size: 2em;
     line-height: 1.3em;
     text-align: center;
@@ -60,13 +61,17 @@ To use the existing CrUX Dashboard you need to lauch the dashboard, passing the 
   #origin[aria-invalid=true] {
     outline: red dashed 2px;
   }
+  #origin-submit {
+    line-height: 2.25em;
+  }
 </style>
 
 <form id="form">
   <input id="origin" aria-label="Origin" type="text" placeholder="https://developer.chrome.com" required>
+  <button id="origin-submit" class="bg-primary button-filled color-bg material-button">Go</button>
 </form>
 
-*Note if the protocol (`http` or `https`) is not provided, then `https` will be assumed. Paths will be stripped as the CrUX Dashboard only provides data at an origins level.*
+*Note: if the protocol (`http` or `https`) is not provided, then `https` will be assumed. Paths will be stripped as the CrUX Dashboard only provides data at an origins level.*
 
 <script>
 var form = document.getElementById('form');
