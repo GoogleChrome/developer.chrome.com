@@ -20,7 +20,7 @@ Service workers has a number of differences with background pages.
 
 - They function off the main thread, meaning they don't interfere with extension content.
 - They have special capabilities such as intercepting fetch events on the extension's origin, such as those from a toolbar popup.
-- They can communicate and interact with other contexts via the [Clients interface](https://developer.mozilla.org/docs/Web/API/Clients)
+- They can communicate and interact with other contexts via the [Clients interface](https://developer.mozilla.org/docs/Web/API/Clients).
 
 ### Changes you'll need to make
 
