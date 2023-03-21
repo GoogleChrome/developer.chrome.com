@@ -24,28 +24,30 @@ let activeFilters = {};
 const activeFiltersList = document.querySelector('#active-filters');
 const selectFields = document.querySelectorAll('.deprecation-filter');
 
-(() => {
-  selectFields.forEach(element => {
-    element.addEventListener('change', e => {
-      const t = e.target;
-
-      if (!(t instanceof EnhancedSelect)) {
-        return;
-      }
-
-      activeFilters[t.name] = t.value;
-      updateTagPills();
-    });
-  });
-
-  addMobileListeners();
-})();
-
 function updateTagPills() {
   if (!activeFiltersList) return;
   activeFiltersList.items = Object.entries(activeFilters).flatMap(i => {
+    if (i[0] === 'removal-date') {
+      i[1] = formatDateRange(i[1][0]);
+    }
     return i[1].map(value => ({key: i[0], value: value}));
   });
+}
+
+function formatDateRange(days) {
+  const endDate = new Date();
+  endDate.setDate(endDate.getDate() + parseInt(days));
+
+  const startDate = new Date();
+  const startDateString = `${startDate.getDate()} ${startDate.toLocaleString(
+    'default',
+    {month: 'short'}
+  )}`;
+  const endDateString = `${endDate.getDate()} ${endDate.toLocaleString(
+    'default',
+    {month: 'short'}
+  )}`;
+  return [`${startDateString} - ${endDateString}`];
 }
 
 function addMobileListeners() {
@@ -56,7 +58,6 @@ function addMobileListeners() {
   const reset = document.getElementById('mobile-filters-reset');
   const removalDates = document.querySelectorAll('input[name="removal-date"]');
 
-  console.log(removalDates);
   // @ts-ignore
   opener?.addEventListener('click', () => filters.showModal());
 
@@ -87,6 +88,8 @@ function addMobileListeners() {
 
       return payload;
     }, {});
+
+    console.log(activeFilters);
     updateTagPills();
     closeFiltersModal();
   });
@@ -114,3 +117,20 @@ function addMobileListeners() {
     filters?.close();
   }
 }
+
+(() => {
+  selectFields.forEach(element => {
+    element.addEventListener('change', e => {
+      const t = e.target;
+
+      if (!(t instanceof EnhancedSelect)) {
+        return;
+      }
+
+      activeFilters[t.name] = t.value;
+      updateTagPills();
+    });
+  });
+
+  addMobileListeners();
+})();

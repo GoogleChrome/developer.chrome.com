@@ -194,9 +194,9 @@
 }
 
 .mobile-filters-btn {
-  padding: 0.25rem 0.75rem;
   font-size: 0.75rem;
   font-weight: 500;
+  padding: 0.25rem 0.75rem;
 
   @include media-query('md') {
     display: none;
