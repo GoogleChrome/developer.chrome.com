@@ -112,11 +112,13 @@ Remember to set `type.module` when using a modern module bundler framework, such
 
 ### _Optional: Debugging the service worker_ {: #step-3 }
 
-Let's quickly go over how to find the service worker logs and know when it has terminated. Follow the instructions to [Load an unpacked extension][doc-dev-basics-unpacked] and wait 30 seconds for the service worker to stop. Click on the "service worker" hyperlink to inspect it. 
+Let's quickly go over how to find the service worker logs and know when it has terminated. First, follow the instructions to [Load an unpacked extension][doc-dev-basics-unpacked]. After 30 seconds it will show "service worker(inactive)" which means the service worker has terminated. 
+
+Click on the "service worker(inactive)" hyperlink to inspect it. 
 
 {% Video src="video/BhuKGJaIeLNPW9ehns59NfwqKxF2/D1XRaA6q4xn9Ylwe1u1N.mp4", width="800", height="314", autoplay="true", muted="true", loop="true" %}
 
-Did you notice that inspecting the service worker woke it up? That's right! Opening the service worker in the devtools will keep it active. This means, if you want to make sure that your extension behaves correctly when your service worker is terminated, you need to make sure to close DevTools.
+Did you notice that inspecting the service worker woke it up? That's right! Opening the service worker in the devtools will keep it active. This means, if you want to make sure that your extension behaves correctly when your service worker is terminated, remember to close the DevTools.
 
 Now let's break the extension to learn where to locate errors. One way to do this is to delete the ".js" from the `'./sw-omnibox.js'` import in the `service-worker.js` file. Chrome will be unable to register the service worker.
 
