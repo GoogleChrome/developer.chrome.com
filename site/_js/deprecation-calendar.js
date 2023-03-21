@@ -54,7 +54,9 @@ function addMobileListeners() {
   const opener = document.querySelector('#mobile-filters-opener');
   const done = document.getElementById('mobile-filters-done');
   const reset = document.getElementById('mobile-filters-reset');
+  const removalDates = document.querySelectorAll('input[name="removal-date"]');
 
+  console.log(removalDates);
   // @ts-ignore
   opener?.addEventListener('click', () => filters.showModal());
 
@@ -78,7 +80,6 @@ function addMobileListeners() {
 
       if (typeof payload[name] === 'undefined') {
         payload[name] = [value];
-        console.log(payload);
         return payload;
       }
 
@@ -96,6 +97,16 @@ function addMobileListeners() {
       .forEach(checkbox => {
         /** @type {HTMLInputElement } */ (checkbox).checked = false;
       });
+  });
+
+  removalDates.forEach(checkbox => {
+    checkbox.addEventListener('click', () => {
+      removalDates.forEach(otherCheckbox => {
+        if (otherCheckbox !== checkbox) {
+          /** @type {HTMLInputElement } */ (otherCheckbox).checked = false;
+        }
+      });
+    });
   });
 
   function closeFiltersModal() {

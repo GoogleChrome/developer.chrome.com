@@ -172,6 +172,7 @@
   &__selected {
     border-bottom: 1px solid get-color('grey-300');
     margin-bottom: 2rem;
+    margin-top: 1.5rem;
     padding-bottom: 1rem;
   }
 }  
@@ -193,8 +194,9 @@
 }
 
 .mobile-filters-btn {
-  margin-top: 1.5rem;
-  padding: 6px 12px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
 
   @include media-query('md') {
     display: none;
