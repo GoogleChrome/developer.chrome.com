@@ -13,7 +13,7 @@ This tutorial builds an extension that allows users to open Chrome API reference
 
 {% Video src="video/BhuKGJaIeLNPW9ehns59NfwqKxF2/WmVEGpEZ9ts1J0pUOzEr.mp4", width="600", height="398", autoplay="true", muted="true"%}
 
-This article will show how to do the following tasks in an extension service worker:
+This article will explain how to do the following tasks in an extension service worker:
 
 - Register a service worker and import modules.
 - Find extension service worker logs.
@@ -118,7 +118,7 @@ Let's quickly go over how to find the service worker logs and know when it has t
 
 Did you notice that inspecting the service worker woke it up? That's right! Opening the service worker in the devtools will keep it active.
 
-Now let's break the extension to learn where to locate errors. One way to do this is to delete the ".js" from the `'./sw-omnibox.js'` import in the `sw.js` file. Chrome will be unable to register the service worker.
+Now let's break the extension to learn where to locate errors. One way to do this is to delete the ".js" from the `'./sw-omnibox.js'` import in the `service-worker.js` file. Chrome will be unable to register the service worker.
 
 Go back to chrome://extensions and refresh the extension. The following error will appear:
 
@@ -143,7 +143,7 @@ Extensions can save initial values to storage on installation. To use the [`chro
 }
 ```
 
-The following code sets the default [omnibox][api-omnibox] suggestions when the extension is first installed:
+The following code save the default suggestions to storage when the extension is first installed:
 
 {% Label %}sw-omnibox.js:{% endLabel %}
 
@@ -159,12 +159,12 @@ chrome.runtime.onInstalled.addListener(({ reason }) => {
 });
 ```
 
-Service workers do not have direct access to the DOM or the [window object][mdn-window], therefore cannot use
+Service workers do not have direct access to the [window object][mdn-window], therefore cannot use
 [window.localStorage()][mdn-local-storage] to store values. Also, service workers are short-lived execution environments;
 they get terminated repeatedly throughout a user's browser session, which makes it incompatible with
 global variables.
 
-See [Saving states](TBD) to learn about storage options for extension service workers.
+See [Saving state](TBD) to learn about storage options for extension service workers.
 
 ### Step 5: Register your events {: #step-5 }
 
@@ -281,7 +281,7 @@ chrome.alarms.onAlarm.addListener(updateTip);
 
 {% Aside %}
 
-All [Chrome API][doc-apis] event listeners and methods restart the service worker 30 second termination timer. To learn more about the extension service worker lifecycle, see [TBD](tbd)
+All [Chrome API][doc-apis] event listeners and methods restart the service worker 30 second termination timer. See [Extension service worker lifecycle](tdb) to learn more.
 
 {% endAside %}
 
@@ -373,17 +373,20 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 ## Test that it works {: #try-out }
 
 Verify that the file structure of your project looks like the following: 
-<!-- TODO: Add actual file structure -->
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/S86ooJMjFm5uvf906u9a.png", 
-alt="The contents of the extension folder: manifest.json, service-worker.js, sw-omnibox.js, sw-tips.js,
-content.js, and icons.", width="700", height="468" %}
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/bnfc65cdTGctM4A15DD9.png", alt="The contents of the extension folder: manifest.json, service-worker.js, sw-omnibox.js, sw-tips.js,
+content.js, and icons.", width="400", height="338" %}
 
 ### Load your extension locally {: #locally }
 
 To load an unpacked extension in developer mode, follow the steps in [Development
 Basics][doc-dev-basics-unpacked].
 
-### Test the extension on a documentation page {: #open-sites }
+### Open an api using the omnibox {: #open-api }
+
+TBD
+
+### Open the tip of the day {: #open-tip }
 
 TBD
 
@@ -413,8 +416,6 @@ To continue your extension service worker learning path, we recommend exploring 
 - TBD
 - TBD
 
-
-
 [api-scripting]: /docs/extensions/reference/scripting/
 [api-storage]: /docs/extensions/reference/storage
 [api-alarms]: /docs/extensions/reference/alarms
@@ -433,9 +434,7 @@ To continue your extension service worker learning path, we recommend exploring 
 [github-focus-mode-icons]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.focus-mode/images
 [github-open-api]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/
 [mdn-es-module]: https://web.dev/es-modules-in-sw/
-[mdn-indexeddb]: https://developer.mozilla.org/docs/Web/API/IndexedDB_API
 [runtime-oninstalled]: /docs/extensions/reference/runtime#event-onInstalled
-[tut-focus-mode-step6]: /docs/extensions/mv3/getstarted/tut-focus-mode#step-6
 [tut-reading-time-step1]: /docs/extensions/mv3/getstarted/tut-reading-time#step-1
 [tut-reading-time-step2]: /docs/extensions/mv3/getstarted/tut-reading-time#step-2
 [tut-reading-time]: /docs/extensions/mv3/getstarted/tut-reading-time
@@ -443,4 +442,4 @@ To continue your extension service worker learning path, we recommend exploring 
 [mdn-local-storage]: https://developer.mozilla.org/docs/Web/API/Window/localStorage
 [doc-host-perm]: /docs/extensions/mv3/match_patterns/
 [mdn-window]: https://developer.mozilla.org/docs/Web/API/Window
-[manifest-min-version]: https://developer.chrome.com/docs/extensions/mv3/manifest/minimum_chrome_version/#enforcement
+[manifest-min-version]: /docs/extensions/mv3/manifest/minimum_chrome_version/#enforcement
