@@ -375,20 +375,41 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 Verify that the file structure of your project looks like the following: 
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/bnfc65cdTGctM4A15DD9.png", alt="The contents of the extension folder: manifest.json, service-worker.js, sw-omnibox.js, sw-tips.js,
-content.js, and icons.", width="400", height="338" %}
+content.js, and icons.", width="400", height="538" %}
 
 ### Load your extension locally {: #locally }
 
 To load an unpacked extension in developer mode, follow the steps in [Development
 Basics][doc-dev-basics-unpacked].
 
-### Open an api using the omnibox {: #open-api }
+### Open a reference page {: #open-api }
 
-TBD
+1. Enter the keyword "api" in the browser address bar.
+1. Press "tab" or "space".
+1. Enter the complete name of the API.
+   - OR choose from a list of past searches
+1. A new page will open to the Chrome API reference page.
+
+It should look like this:
+
+<figure>
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/tKsdFmAYFGApMRF47Nlp.gif", alt="Quick API Reference opening the runtime api reference", width="500", height="306", class="screenshot" %}
+  <figcaption>
+  Quick API extension opening the Runtime API.
+  </figcaption>
+</figure>
 
 ### Open the tip of the day {: #open-tip }
 
-TBD
+Click the Tip button located on the navigation bar to open the extension tip.
+
+<figure>
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/GqjdrVtuA0zt87l3QIn9.gif", alt="Open daily tip in ", width="500", height="593" %}
+  <figcaption>
+  Quick API extension opening the Runtime API.
+  </figcaption>
+</figure>
+
 
 ## 🎯 Potential enhancements {: #challenge }
 
