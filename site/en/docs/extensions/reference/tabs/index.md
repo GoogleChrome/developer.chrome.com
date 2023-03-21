@@ -101,7 +101,7 @@ installed. The following example shows how to do this.
 
 ```js
 chrome.runtime.onInstalled.addListener(({reason}) => {
-  if (reason === chrome.runtime.OnInstalledReason.INSTALL) {
+  if (reason === 'install') {
     chrome.tabs.create({
       url: "onboarding.html"
     });
