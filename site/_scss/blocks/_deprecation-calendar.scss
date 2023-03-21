@@ -172,8 +172,12 @@
   &__selected {
     border-bottom: 1px solid get-color('grey-300');
     margin-bottom: 2rem;
-    margin-top: 1.5rem;
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
+
+    @include media-query('md-max') {
+      margin-top: 1.5rem;
+    }
+
   }
 }  
 
