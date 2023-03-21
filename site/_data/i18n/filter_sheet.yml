@@ -1,2 +1,11 @@
 filter_by:
   en: 'Filter by'
+
+filters:
+  en: "Filters"
+
+reset_filters:
+  en: 'Reset filters'
+
+done:
+  en: "Done"

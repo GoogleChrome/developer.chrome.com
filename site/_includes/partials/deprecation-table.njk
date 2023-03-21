@@ -3,10 +3,10 @@
 
 <div class="deprecation-calendar__rows">
     <div class="deprecation-calendar__row deprecation-calendar__header">
-        <div>Removal date</div>
-        <div>Name</div>
-        <div>Chrome version</div>
-        <div>Article</div>
+        <div>{{ 'i18n.deprecation_calendar.removal_date' | i18n(locale) }}</div>
+        <div>{{ 'i18n.deprecation_calendar.name' | i18n(locale) }}</div>
+        <div>{{ 'i18n.deprecation_calendar.chrome_version' | i18n(locale) }}</div>
+        <div>{{ 'i18n.deprecation_calendar.article' | i18n(locale) }}</div>
     </div>
     {% for i in range(50) %}
     <div class="deprecation-calendar__row">

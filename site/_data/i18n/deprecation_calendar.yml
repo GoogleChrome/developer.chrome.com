@@ -1,0 +1,29 @@
+filter_by:
+  en: 'Filter by'
+
+name:
+  en: 'Name'
+
+removal_date:
+  en: 'Removal date'
+
+chrome_version:
+  en: 'Chrome version'
+
+article:
+  en: 'Article'
+
+next_7_days:
+  en: 'Next 7 days'
+
+next_30_days:
+  en: 'Next 30 days'
+
+next_90_days:
+  en: 'Next 90 days'
+
+next_6_months:
+  en: 'Next 6 months'
+
+next_12_months:
+  en: 'Next 12 months'
