@@ -104,9 +104,9 @@ console.log("sw-tips.js")
 See [Importing scripts](tbd) to learn about other ways to import multiple files in a service worker.
 
 
-{% Aside %}
+{% Aside 'important' %}
 
-Remember to set `type.module` when using a modern module bundler framework.
+Remember to set `type.module` when using a modern module bundler framework, such as [CRXjs Vite plugin][crxjs-vite].
 
 {% endAside %}
 
@@ -464,3 +464,4 @@ To continue your extension service worker learning path, we recommend exploring 
 [doc-host-perm]: /docs/extensions/mv3/match_patterns/
 [mdn-window]: https://developer.mozilla.org/docs/Web/API/Window
 [manifest-min-version]: /docs/extensions/mv3/manifest/minimum_chrome_version/#enforcement
+[crxjs-vite]: https://crxjs.dev/vite-plugin
