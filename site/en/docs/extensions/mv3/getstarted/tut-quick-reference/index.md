@@ -56,9 +56,9 @@ There's no need to use `navigator.serviceWorker.register()`, like you would in a
 
 You can download the icons located on the [Github repo][github-open-api].
 
-### Step 2: Import multiple files {: #step-2 }
+### Step 2: Import multiple service worker modules {: #step-2 }
 
-This extension has two features, so we will split the extension logic into two files. The following code declares the service worker as an [ES Module][mdn-es-module], which allows us to import multiple files:
+Our service worker implements two features. For better maintainability, we will implement each feature in a separate module. First, we need to declare the service worker as an [ES Module][mdn-es-module] in our manifest, which allows us to import modules in our service worker:
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -116,7 +116,7 @@ Let's quickly go over how to find the service worker logs and know when it has t
 
 {% Video src="video/BhuKGJaIeLNPW9ehns59NfwqKxF2/D1XRaA6q4xn9Ylwe1u1N.mp4", width="800", height="314", autoplay="true", muted="true", loop="true" %}
 
-Did you notice that inspecting the service worker woke it up? That's right! Opening the service worker in the devtools will keep it active.
+Did you notice that inspecting the service worker woke it up? That's right! Opening the service worker in the devtools will keep it active. This means, if you want to make sure that your extension behaves correctly when your service worker is terminated, you need to make sure to close DevTools.
 
 Now let's break the extension to learn where to locate errors. One way to do this is to delete the ".js" from the `'./sw-omnibox.js'` import in the `service-worker.js` file. Chrome will be unable to register the service worker.
 
