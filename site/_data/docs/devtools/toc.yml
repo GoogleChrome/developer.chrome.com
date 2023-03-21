@@ -71,7 +71,7 @@
     - url: /docs/devtools/storage/sessionstorage/
     - url: /docs/devtools/storage/indexeddb/
     - url: /docs/devtools/storage/websql/
-    - url: /docs/devtools/storage/cookies/
+    - url: /docs/devtools/application/cookies/
     - url: /docs/devtools/storage/cache/
     - url: /docs/devtools/application/back-forward-cache/
     - url: /docs/devtools/javascript/background-services/

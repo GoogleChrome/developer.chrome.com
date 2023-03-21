@@ -209,6 +209,9 @@ redirects:
 
 # DevTools redirects
 
+- from: /docs/devtools/storage/cookies/
+  to: /docs/devtools/application/cookies/
+
 - from: /docs/devtools/customize/placement/
   to: /docs/devtools/customize/#placement
 
