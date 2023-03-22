@@ -50,7 +50,7 @@ export class LoadMore extends BaseElement {
   async connectedCallback() {
     super.connectedCallback();
 
-    this.initialItems = Array.from(this.querySelectorAll('.load-more__item'));
+    this.initialItems = Array.from(this.children);
     this.skip = this.initialItems.length;
   }
 
