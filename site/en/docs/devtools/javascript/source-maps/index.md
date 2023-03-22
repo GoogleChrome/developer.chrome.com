@@ -61,7 +61,7 @@ In addition, the **Source** panel puts a link to the minified file in the status
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/903JBqtzB1xS9jLHSlOu.png", alt="Links to source files in log messages and Call Stack and a link to the minified file at the status bar.", width="800", height="548" %}
 
-## @sourceURL and displayName {: #sourceurl_and_displayname }
+## @sourceURL and display name {: #sourceurl_and_displayname }
 
 While not part of the source map specification, the [`#sourceURL`](/blog/sourcemappingurl-and-sourceurl-syntax-changed/#sourceurl) lets you make development much easier
 when working with `eval()` calls. This helper looks very similar to the [`//# sourceMappingURL` property](/blog/sourcemaps/#how-does-the-source-map-work) and the [Source Map V3 specification](https://sourcemaps.info/spec.html) mentions it.
