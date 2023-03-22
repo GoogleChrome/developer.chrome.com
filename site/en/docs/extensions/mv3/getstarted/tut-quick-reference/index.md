@@ -28,7 +28,7 @@ This guide assumes that you have basic web development experience. We recommend 
 
 ## Build the extension {: #build }
 
-Start by creating a new directory called `quick-api-reference` to hold the extension files, or download the source code from our [GitHub samples][github-open-api] repo.
+Start by creating a new directory called `quick-api-reference` to hold the extension files, or download the source code from our [GitHub samples][github-quick-api] repo.
 
 ### Step 1: Register the service worker {: #step-1 }
 
@@ -55,7 +55,9 @@ Extensions register their service worker in the manifest, which only takes a sin
 There's no need to use `navigator.serviceWorker.register()`, like you would in a web app. See
 [Differences between extension and web service workers](tbd) to learn more.
 
-You can download the icons located on the [Github repo][github-open-api].
+To learn more about these manifest keys, check out the Reading time tutorial that explains the extension's [metadata][tut-reading-time-step1] and [icons][tut-reading-time-step2] in more detail.
+
+Create an `images` folder then [download the icons][github-quick-api-icons] into it.
 
 ### Step 2: Import multiple service worker modules {: #step-2 }
 
@@ -456,7 +458,8 @@ To continue your extension service worker learning path, we recommend exploring 
 [doc-messages]: /docs/extensions/mv3/messaging
 [doc-welcome]: /docs/extensions/mv3/
 [github-focus-mode-icons]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.focus-mode/images
-[github-open-api]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/
+[github-quick-api]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.quick-api-reference
+[github-quick-api-icons]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.quick-api-reference/images
 [mdn-es-module]: https://web.dev/es-modules-in-sw/
 [runtime-oninstalled]: /docs/extensions/reference/runtime#event-onInstalled
 [tut-reading-time-step1]: /docs/extensions/mv3/getstarted/tut-reading-time#step-1
