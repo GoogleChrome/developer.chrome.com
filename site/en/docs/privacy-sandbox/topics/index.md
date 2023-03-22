@@ -32,11 +32,13 @@ You can also run the Topics [colab](/docs/privacy-sandbox/topics/colab/) to try 
 
 A Privacy Sandbox Relevance and Measurement [origin trial](/docs/privacy-sandbox/unified-origin-trial/) has been made available in Chrome Beta 101.0.4951.26 and above on desktop for the Topics, [FLEDGE](/docs/privacy-sandbox/fledge/), and [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) APIs.
 
-## Get and set topics
+{: #access-topics }
 
-The Topics JavaScript API has one method: `document.browsingTopics()`, which is used to get and set Topics. It returns a promise that resolves to an array of up to three topics, one for each of the three most recent epochs, in random order. An epoch is a period of time currently set to one week.
+## Access and observe topics
 
-Each topic object in the array returned by `document.browsingTopics()` will have these properties:
+The Topics JavaScript API has one method, `document.browsingTopics()`, which is used to get and set Topics. It returns a promise that resolves to an array of up to three topics, one for each of the three most recent epochs, in random order. An epoch is a period of time currently set to one week.
+
+Each topic object in the array returned by `document.browsingTopics()` has these properties:
 
 -   `configVersion`: a string identifying the current Topics API configuration
 -   `modelVersion`: a string identifying the machine-learning classifier used to infer topics for the site
@@ -46,7 +48,7 @@ Each topic object in the array returned by `document.browsingTopics()` will have
 
 The parameters described in this article, and details of the API (such as taxonomy size, the number of topics calculated per week and the number of topics returned per call) are subject to change as we incorporate ecosystem feedback and iterate on the API.
 
-### Detect support for document.browsingTopics
+### Detect API support
 
 Before using the API, check if it's supported by the browser and available in the document:
 
@@ -58,13 +60,21 @@ Before using the API, check if it's supported by the browser and available in th
 
 {% Aside 'caution' %}
 
-Feature support on the current page isn't a guarantee that an API is usable: the user may have disabled the API via browser settings, or they may have other settings that prevent the API from being used. To protect user privacy, there is no way to check for these other settings programmatically.
+Feature support on the current page isn't a guarantee that an API is usable. The user may have disabled the API via browser settings, or they may have other settings that prevent API usage. To protect user privacy, there is no way to check for user settings programmatically.
+
 {% endAside %}
 
 ### Access topics without modifying state
 
-From Chrome 108, the `document.browsingTopics()` method can be passed an optional argument: `{skipObservation:true}`.
-This allows the method to return topics without causing the browser to record a topic observation. By default, it does. In other words, the call will not cause the current page to be included in the weekly epoch calculation, nor will it update the list of topics observed for the caller.
+By default, the `document.browsingTopics` records topic observation.
+
+From Chrome 108, you can pass an argument to skip observation in the  `document.browsingTopics()` method:
+
+```javascript
+document.browsingTopics({skipObservation:true})
+```
+
+With `skipObservation:true`, the current page is hidden from the weekly epoch calculation, and the list of observed topics isn't updated.
 
 ### Access topics with the JavaScript API
 
@@ -105,7 +115,7 @@ Using request and response headers to access topics and mark them as observed ca
 #### Notes
 
 -   Redirects will be followed, and the topics sent in the redirect request will be specific to the redirect URL.
--   The request header will not modify state for the caller unless there is a corresponding response header. That is, the topic of the page won't be considered observed, nor will it affect the user's topic calculation for the next epoch.
+-   The request header won't modify state for the caller unless there's a corresponding response header. That is, the topic of the page won't be considered observed, nor will it affect the user's topic calculation for the next epoch.
 -   The response header is only honored if the corresponding request included the topics header (or would have included the header, if the request wasn't empty).
 -   The URL of the request provides the registrable domain used for topic observation.
 
