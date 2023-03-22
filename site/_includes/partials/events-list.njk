@@ -28,7 +28,7 @@
       errorLinkLabel: 'i18n.events.load_more_error_link' | i18n,
       noResultsMessage: 'i18n.events.no_upcoming_matches' | i18n
     } %}
-    <web-tab title="{{ 'i18n.events.upcoming_events' | i18n(locale) }}">
+    <web-tab title="{{ 'i18n.events.upcoming_events' | i18n(locale) }} ({{ collections.currentEvents.length }})">
       <load-more  id="upcoming-events"
                   total="{{ collections.currentEvents.length }}"
                   i18n='{{ loadMorei18n|dump|safe }}'>
@@ -44,7 +44,7 @@
       errorLinkLabel: 'i18n.events.load_more_error_link' | i18n,
       noResultsMessage: 'i18n.events.no_past_matches' | i18n
     } %}
-    <web-tab title="{{ 'i18n.events.past_events' | i18n(locale) }}">
+    <web-tab title="{{ 'i18n.events.past_events' | i18n(locale) }} ({{ collections.pastEvents.length }})">
       <load-more id="past-events"
                  total="{{ collections.pastEvents.length }}"
                  i18n='{{ loadMorei18n|dump|safe }}'>

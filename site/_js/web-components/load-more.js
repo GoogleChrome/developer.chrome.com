@@ -97,6 +97,12 @@ export class LoadMore extends BaseElement {
       this.loadedItems = this.loadedItems.concat(items);
 
       this.skip += items.length;
+
+      this.dispatchEvent(
+        new CustomEvent('items-loaded', {
+          detail: items,
+        })
+      );
     } catch (e) {
       this._haveError = true;
     }

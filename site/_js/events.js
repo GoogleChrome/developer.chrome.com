@@ -34,8 +34,16 @@ const upcomingEvents = document.querySelector('#upcoming-events');
 const pastEvents = document.querySelector('#past-events');
 const selectFields = document.querySelectorAll('.events-filter');
 const wrapper = document.querySelector('.events-list');
+const upcomingTab = document.querySelector('[role=tab]:first-child');
+const pastTab = document.querySelector('[role=tab]:last-child');
 
 (() => {
+  injectCallbacks();
+  addListeners();
+  addMobileListeners();
+})();
+
+function addListeners() {
   selectFields.forEach(ele => {
     ele.addEventListener('change', e => {
       const t = e.target;
@@ -48,14 +56,53 @@ const wrapper = document.querySelector('.events-list');
 
       restart();
       updateTagPills();
-      updateDOM();
+      updateFiltersAttribute();
     });
   });
 
-  injectCallbacks();
-  addMobileListeners();
-  handleDeselections();
-})();
+  activeFiltersList?.addEventListener('removed-pill', e => {
+    if (!(e instanceof CustomEvent)) return;
+
+    const index = activeFilters[e.detail.key].indexOf(e.detail.value);
+
+    activeFilters[e.detail.key].splice(index, 1);
+
+    restart();
+
+    selectFields.forEach(field => {
+      /** @type {EnhancedSelect} */ (field).setValue(
+        activeFilters[field.getAttribute('name')] || []
+      );
+    });
+
+    document
+      .querySelectorAll('#mobile-filters input[type="checkbox"]:checked')
+      .forEach(checkbox => {
+        const target = activeFilters?.[checkbox.getAttribute('name')];
+
+        /** @type {HTMLInputElement } */ (checkbox).checked =
+          target && target.includes(checkbox.getAttribute('value'));
+      });
+  });
+
+  upcomingEvents?.addEventListener('items-loaded', e => {
+    if (!(e.target instanceof LoadMore)) return;
+
+    updateCount(upcomingTab, e.target.total);
+  });
+
+  pastEvents?.addEventListener('items-loaded', e => {
+    if (!(e.target instanceof LoadMore)) return;
+
+    updateCount(pastTab, e.target.total);
+  });
+}
+
+function updateCount(element, total) {
+  if (!(element instanceof HTMLElement)) return;
+
+  element.innerText = element.innerText.replace(/\([0-9]+\)/, `(${total})`);
+}
 
 function injectCallbacks() {
   if (upcomingEvents)
@@ -133,7 +180,12 @@ function updateTagPills() {
   });
 }
 
-function updateDOM() {
+/*
+Used exclusively to modify the margin when pills
+are present. Can be replaced with a :has selector
+once FF supports it.
+*/
+function updateFiltersAttribute() {
   if (Object.values(activeFilters).some(i => i.length > 0)) {
     wrapper?.setAttribute('data-active-filters', '');
   } else {
@@ -181,7 +233,7 @@ function addMobileListeners() {
 
     restart();
     updateTagPills();
-    updateDOM();
+    updateFiltersAttribute();
     closeFiltersModal();
   });
 
@@ -197,35 +249,6 @@ function addMobileListeners() {
     // @ts-ignore
     filters?.close();
   }
-}
-
-function handleDeselections() {
-  if (!activeFiltersList) return;
-
-  activeFiltersList.addEventListener('removed-pill', e => {
-    if (!(e instanceof CustomEvent)) return;
-
-    const index = activeFilters[e.detail.key].indexOf(e.detail.value);
-
-    activeFilters[e.detail.key].splice(index, 1);
-
-    restart();
-
-    selectFields.forEach(field => {
-      /** @type {EnhancedSelect} */ (field).setValue(
-        activeFilters[field.getAttribute('name')] || []
-      );
-    });
-
-    document
-      .querySelectorAll('#mobile-filters input[type="checkbox"]:checked')
-      .forEach(checkbox => {
-        const target = activeFilters?.[checkbox.getAttribute('name')];
-
-        /** @type {HTMLInputElement } */ (checkbox).checked =
-          target && target.includes(checkbox.getAttribute('value'));
-      });
-  });
 }
 
 function restart() {
