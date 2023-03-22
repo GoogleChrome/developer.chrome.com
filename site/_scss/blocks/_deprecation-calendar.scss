@@ -88,7 +88,6 @@
       padding-top: 1.5rem;
       width: 100%;
     }
-
   }
 
   &__row:nth-child(even) {
@@ -121,9 +120,12 @@
     align-items: center;
     display: flex;
     justify-content: center;
+    margin: 0 auto;
+    width: px-to-rem(30px);
 
     @include media-query('md-max') {
       justify-content: start;
+      width: auto;
     }
 
     :hover {
