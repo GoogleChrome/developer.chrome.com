@@ -21,7 +21,6 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 * [Lighthouse 10](/blog/new-in-devtools-112/#lighthouse)
 * [Miscellaneous highlights](/blog/new-in-devtools-112/#misc)
 
-
 ### Chrome 111 {: #chrome111 }
 
 * [Debugging HD color with the Styles pane](/blog/new-in-devtools-111/#color)
