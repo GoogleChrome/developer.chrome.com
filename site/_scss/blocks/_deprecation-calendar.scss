@@ -201,12 +201,18 @@
     @include media-query('md-max') {
       margin-top: 1.5rem;
     }
+  }
 
-    .tag-pill {
-      border-radius: 1rem;
+  .tag-pill {
+    border-radius: 1rem;
+
+    svg {
+      fill: var(--color-blue-medium);
     }
   }
 }  
+
+
 
 .mobile-filters-dialog {
   border: 0;
