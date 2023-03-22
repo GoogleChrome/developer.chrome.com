@@ -54,14 +54,6 @@ export class LoadMore extends BaseElement {
     this.skip = this.initialItems.length;
   }
 
-  firstUpdated(changedProperties) {
-    super.firstUpdated(changedProperties);
-  }
-
-  disconnectedCallback() {
-    super.disconnectedCallback();
-  }
-
   shouldUpdate(_changedProperties) {
     return !('resolved' in this.dataset) || _changedProperties.has('_loading');
   }
