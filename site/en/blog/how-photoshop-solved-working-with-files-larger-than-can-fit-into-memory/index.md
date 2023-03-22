@@ -47,7 +47,6 @@ As an example of one of the aspects managed by the VM, image data is stored usin
 During application initialization, Photoshop determines how much RAM is available. It sets aside one portion for data to be stored in the VM. The remaining RAM is available for other application needs via the standard C++ runtime library. The VM memory is broken up into [pages](https://en.wikipedia.org/wiki/Page_(computer_memory)). Each page is typically a multiple of the hardware page size for the device. When used for image data, memory is referenced as tiles. A tile is a square area of pixels of a single layer including geometry bounds. A tile consumes one or more pages.
 
 Photoshop creates one or more scratch files to provide disk-based backing for VM pages. These scratch files are stored in the [origin private file system](/articles/file-system-access/#accessing-the-origin-private-file-system). The screenshot shows an exemplary file hierarchy of such a scratch file (highlighted in yellow) and other files during an image editing session. Each scratch file can contain many VM pages. When the VM needs more backing, it creates additional scratch files. As pages are freed, their space in a scratch file can be reused for new pages.
-​​
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/kKYj5nMKPskfps1gD2p1.png", alt="Inspecting Photoshop's origin private file system file hierarchy with the OPFS Explorer Chrome extension.", width="800", height="345" %}
 
@@ -55,7 +54,7 @@ When processing image data, Photoshop iterates over tiles, performing pixel calc
 
 ## Conclusions
 
-While the concrete implementation details of the VM would go far beyond the scope of this article (and are also proprietary to Adobe), with the high-level description of the solution, we have put you in a position where you can understand how Photoshop can deal with large files. The origin private file system with its highly performant read and write access to files is a key component of the solution. If you have an Adobe Creative Cloud subscription, we invite you to download this $n gigabyte Photoshop image and open it in Photoshop.
+While the concrete implementation details of the VM would go far beyond the scope of this article (and are also proprietary to Adobe), with the high-level description of the solution, we have put you in a position where you can understand how Photoshop can deal with large files. The origin private file system with its highly performant read and write access to files is a key component of the solution.
 
 ## Acknowledgements
 
