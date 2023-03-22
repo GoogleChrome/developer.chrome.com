@@ -57,6 +57,7 @@ const productionConfig = {
     'site/_js/events.js',
     'site/_js/styleguide.js',
     'site/_js/fugu-showcase.js',
+    'site/_js/deprecation-calendar.js',
   ],
   output: {
     dir: 'dist/js',
