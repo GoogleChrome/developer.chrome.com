@@ -7,7 +7,9 @@ updated: 2018-04-29
 description: How to let users customize your extension.
 ---
 
-Just as extensions allow users to customize the Chrome browser, the options page enables customization of the extension. Options can be used to enable features and allow users to choose what functionality is relevant to their needs.
+Just as extensions allow users to customize the Chrome browser, the options page enables
+customization of the extension. Options can be used to enable features and allow users to choose
+what functionality is relevant to their needs.
 
 ## Locating the options page {: #view_page }
 
@@ -43,73 +45,80 @@ alt="Context Menu Options page", width="357", height="222" %}
 
 ## Write the options page {: #write_page }
 
-Below is an example options page. Save it as `options.html` in your extension's root folder.
+The following is an example of an options page:
+
+{% Label %}options.html:{% endLabel %}
 
 ```html
 <!DOCTYPE html>
 <html>
-<head><title>My Test Extension Options</title></head>
-<body>
+  <head>
+    <title>My Test Extension Options</title>
+  </head>
+  <body>
+    <select id="color">
+      <option value="red">red</option>
+      <option value="green">green</option>
+      <option value="blue">blue</option>
+      <option value="yellow">yellow</option>
+    </select>
 
-Favorite color:
-<select id="color">
- <option value="red">red</option>
- <option value="green">green</option>
- <option value="blue">blue</option>
- <option value="yellow">yellow</option>
-</select>
+    <label>
+      <input type="checkbox" id="like" />
+      I like colors.
+    </label>
 
-<label>
-  <input type="checkbox" id="like">
-  I like colors.
-</label>
+    <div id="status"></div>
+    <button id="save">Save</button>
 
-<div id="status"></div>
-<button id="save">Save</button>
-
-<script src="options.js"></script>
-</body>
+    <script src="options.js"></script>
+  </body>
 </html>
 ```
 
-Below is an example options script. Save it as `options.js` in the same folder as `options.html`. This saves the user's preferred options across devices using the [storage.sync][1] API.
+Below is an example options script. Save it in the same folder as `options.html`.
+This saves the user's preferred options across devices using the [storage.sync][1] API.
+
+{% Label %}options.js:{% endLabel %}
 
 ```js
 // Saves options to chrome.storage
-function save_options() {
-  var color = document.getElementById('color').value;
-  var likesColor = document.getElementById('like').checked;
-  chrome.storage.sync.set({
-    favoriteColor: color,
-    likesColor: likesColor
-  }, function() {
-    // Update status to let user know options were saved.
-    var status = document.getElementById('status');
-    status.textContent = 'Options saved.';
-    setTimeout(function() {
-      status.textContent = '';
-    }, 750);
-  });
-}
+const saveOptions = () => {
+  const color = document.getElementById('color').value;
+  const likesColor = document.getElementById('like').checked;
+
+  chrome.storage.sync.set(
+    { favoriteColor: color, likesColor: likesColor },
+    () => {
+      // Update status to let user know options were saved.
+      const status = document.getElementById('status');
+      status.textContent = 'Options saved.';
+      setTimeout(() => {
+        status.textContent = '';
+      }, 750);
+    }
+  );
+};
 
 // Restores select box and checkbox state using the preferences
 // stored in chrome.storage.
-function restore_options() {
-  // Use default value color = 'red' and likesColor = true.
-  chrome.storage.sync.get({
-    favoriteColor: 'red',
-    likesColor: true
-  }, function(items) {
-    document.getElementById('color').value = items.favoriteColor;
-    document.getElementById('like').checked = items.likesColor;
-  });
-}
-document.addEventListener('DOMContentLoaded', restore_options);
-document.getElementById('save').addEventListener('click',
-    save_options);
+const restoreOptions = () => {
+  chrome.storage.sync.get(
+    { favoriteColor: 'red', likesColor: true },
+    (items) => {
+      document.getElementById('color').value = items.favoriteColor;
+      document.getElementById('like').checked = items.likesColor;
+    }
+  );
+};
+
+document.addEventListener('DOMContentLoaded', restoreOptions);
+document.getElementById('save').addEventListener('click', saveOptions);
 ```
 
-Finally, add the `"storage"` permission to the extension's `manifest.json`:
+Finally, add the `"storage"` permission to the extension's [manifest][doc-manifest] file:
+
+{% Label %}manifest.json:{% endLabel %}
 
 ```json/4
 {
@@ -129,8 +138,10 @@ of options is determined by how it is declared in the manifest.
 
 ### Full page options {: #full_page }
 
-An extension's options page will be displayed in a new tab. The options HTML file is listed
-registered under the `options_page` field.
+An extension's options page will be displayed in a new tab. The options HTML file is
+registered under the `"options_page"` field.
+
+{% Label %}manifest.json:{% endLabel %}
 
 ```json/3
 {
@@ -147,9 +158,11 @@ registered under the `options_page` field.
 ### Embedded options {:#embedded_options }
 
 Embedded options allows users to adjust extension options without navigating away from the
-extensions management page inside an embedded box. To declare an embedded options, register the HTML
-file under the `options_ui` field in the extension manifest, with the `open_in_tab` key set to
+extensions management page inside an embedded box. To declare embedded options, register the HTML
+file under the `"options_ui"` field in the extension manifest, with the `open_in_tab` key set to
 false.
+
+{% Label %}manifest.json:{% endLabel %}
 
 ```json
 {
@@ -183,11 +196,18 @@ not being hosted inside their own tabs.
 ### Linking to the options page {: #linking }
 
 An extension can link directly to the options page by calling
-[`chrome.runtime.openOptionsPage()`][4] .
+[`chrome.runtime.openOptionsPage()`][4]. For example, it can be added to a popup:
+
+{% Label %}popup.html:{% endLabel %}
 
 ```html
+...
 <button id="go-to-options">Go to options</button>
+<script src="popup.js"></script>
+...
 ```
+
+{% Label %}popup.js:{% endLabel %}
 
 ```js
 document.querySelector('#go-to-options').addEventListener('click', function() {
@@ -220,7 +240,7 @@ be the options page URL.
 
 ### Sizing {: #sizing }
 
-The embedded options should automatically determine its own size based on the page content. However,
+The embedded options should automatically determine their own size based on the page content. However,
 the embedded box may not find a good size for some types of content. This problem is most common for
 options pages that adjust their content shape based on window size.
 
@@ -244,3 +264,4 @@ embedded page will find an appropriate size.
 [15]: /docs/extensions/runtime#property-MessageSender-tab
 [16]: /docs/extensions/runtime#property-MessageSender-url
 [section-link-options]: #linking
+[doc-manifest]: /docs/extensions/mv3/manifest/
