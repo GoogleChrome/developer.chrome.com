@@ -1,7 +1,8 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: 'Quick API Reference'
-subhead: 'Tutorial focused on teaching extension service worker concepts.'
+seoTitle: 'Chrome extension service worker tutorial.'
+subhead: 'This tutorial teaches concepts relevant to extension service workers.'
 description: 'Quickly access Chrome API reference with Omnibox.'
 date: 2023-04-02
 # updated: 2022-06-13
