@@ -4,10 +4,10 @@
   }
 
   &[data-active-filters] {
-    margin-top: get-size(200);
+    margin-top: calc(#{get-size(200)} - 1px);
 
     .events-list__selected-filters {
-      margin-bottom: get-size(200);
+      margin-bottom: calc(#{get-size(200)} - 1px);
     }
   }
 
