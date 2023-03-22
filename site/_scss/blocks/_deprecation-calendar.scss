@@ -51,6 +51,10 @@
       padding: 0 1.5rem;
       width: 100%;
     }
+
+    @include media-query('md') {
+      margin: 0 px-to-rem(24px);
+    }
   }
 
   &__row > div:nth-child(3) {
@@ -64,6 +68,10 @@
       padding: 0 1.5rem;
       text-align: left;
       width: 50%;
+    }
+    
+    @include media-query('md') {
+      margin-right: px-to-rem(24px);
     }
   }
 
@@ -80,11 +88,16 @@
       padding-top: 1.5rem;
       width: 100%;
     }
+
   }
 
   &__row:nth-child(even) {
     background-color: var(--color-footer-bg);
     border-radius: 4px;
+
+    @include media-query('md-max') {
+      border-radius: 0.75rem;
+    }
   }
 
   &__header {
@@ -93,6 +106,7 @@
     @include media-query('md-max') {
       display: none;
     }
+
   }
 
   &__mobile-label {
@@ -122,9 +136,19 @@
 
   }
 
+  .hero-card {
+    margin: 0;
+    max-width: 100%;
+  }
+
   .hero-card__inner {
     @include media-query('md-max') {
       text-align: center;
+    }
+
+    @include media-query('md') {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
     }
   }
 
@@ -178,6 +202,9 @@
       margin-top: 1.5rem;
     }
 
+    .tag-pill {
+      border-radius: 1rem;
+    }
   }
 }  
 
