@@ -43,7 +43,7 @@ Chromium issues: [1322313](https://crbug.com/1322313), [1351649](https://crbug.c
 
 <!-- ## Show actual function names in performance’s recordings {: #performance } -->
 
-<!-- The **Performance** panel now shows the actual function names and their sources in the trace if there’s a sourcemap. -->
+<!-- The **Performance** panel now shows the actual function names and their sources in the trace if there’s a source map. -->
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/9pHMVM1ARXrlyLoTziVA.png", alt="Show before and after comparison of function names display in the Performance panel.", width="800", height="509" %}
 
@@ -85,9 +85,9 @@ Chromium issue: [1167965](https://crbug.com/1167965), [1172535](https://crbug.co
 <!-- - `new.target` is a meta-property that lets you detect whether a function or constructor was called using the new operator. You can now log `new.target` in the **Console** to check its value during debugging. Previously, it would return errors when you entered `new.target`. -->
    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hKOEn03BZN2IUmWJ1Hho.png", alt="Show before and after comparison of new.target evaluation debugging.", width="800", height="499" %}
 <!-- - A `WeakRef` object lets you hold a weak reference to another object, without preventing that object from getting garbage-collected. DevTools now shows an inline preview for the value and evaluates the weak reference directly in the console during debugging. Previously, you had to explicitly call “deref” on them to resolve it. -->
-   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/M7DP4bI7pA07oY7M21wF.png", alt="Show before and after comparison of WeakRef evaluation during debugging.", width="800", height="453" %} 
+   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/M7DP4bI7pA07oY7M21wF.png", alt="Show before and after comparison of WeakRef evaluation during debugging.", width="800", height="453" %}
 <!-- - Fixed inline preview for shadowed variable. Previously, the display value was incorrect.  -->
-   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XHL8pnBxhZ65ni7zYV0Q.png", alt="Show before and after comparison inline preview for shadowed variable.", width="800", height="519" %} 
+   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XHL8pnBxhZ65ni7zYV0Q.png", alt="Show before and after comparison inline preview for shadowed variable.", width="800", height="519" %}
 <!-- - Deobfuscate variable names in `Generator` and `async` functions in the **Scope** pane in the **Sources** panel. -->
 
 
@@ -138,7 +138,7 @@ Chromium issues: [1267690](https://crbug.com/1267690), [1246863](https://crbug.c
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ytfyl8qK5rkHQRTS3sXf.png", alt="Show Breakpoint pane before and after the redesign.", width="800", height="684" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f2140378e0bb1687b263c226de01b741487ff324 #}
-Chromium issues: [1346231](https://crbug.com/1346231), [1324904](https://crbug.com/1324904) 
+Chromium issues: [1346231](https://crbug.com/1346231), [1324904](https://crbug.com/1324904)
 
 
 <!-- ## [Experimental] Automatic in-place pretty print -->

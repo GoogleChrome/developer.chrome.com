@@ -286,9 +286,6 @@ webauthn:
 passkeys:
   en: Passkeys
 
-tags:
-  en: Tags
-
 monitoring:
   en: Monitoring
 

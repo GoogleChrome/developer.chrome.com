@@ -32,15 +32,14 @@ available before attempting to use it.
 1. Check the Privacy Sandbox [status page](/docs/privacy-sandbox/status/#topics) for updates on the
 implementation status of the Topics API.
 2. Experiment with the API:
-   * [The Topics API](/docs/privacy-sandbox/topics/#origin-trial) explains how to take part in the
-   Privacy Sandbox Relevance and Measurement origin trial.
+   * Learn how to take part in the [Privacy Sandbox Relevance and Measurement origin trial](/docs/privacy-sandbox/unified-origin-trial/).
    * Try out Topics for a single user in Chrome 101 or above by enabling `chrome://flags/#privacy-sandbox-ads-apis`
    or by running Chrome from the command line with the `--enable-features=PrivacySandboxAdsAPIsOverride`
-   [feature flag](https://www.chromium.org/developers/how-tos/run-chromium-with-flags).
-   * [Use the Topics JavaScript API to access topics](/docs/privacy-sandbox/topics/#access-topics)
+   [feature flag](https://www.chromium.org/developers/how-tos/run-chromium-with-flags). Refer to [Topics API demos](/docs/privacy-sandbox/topics/demo/).
+   * [Use the Topics JavaScript API to access topics](/docs/privacy-sandbox/topics/#access-topics-with-the-javascript-api)
    provides a short code example to demonstrate how the API might be used to access topics observed
    for the current user.
-   * [How does the Topics API work?](/docs/privacy-sandbox/topics/#what-might-the-topics-javascript-api-look-like)
+   * [The Topics API developer guide](/docs/privacy-sandbox/topics/#get-and-set-topics)
    outlines the values returned by the API, and provides more information about feature support and
    constraints.
 
