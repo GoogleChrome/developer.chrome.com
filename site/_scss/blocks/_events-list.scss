@@ -1,4 +1,16 @@
 .events-list {
+  @include media-query('lg') {
+    margin-top: get-size(600);
+  }
+
+  &[data-active-filters] {
+    margin-top: get-size(200);
+
+    .events-list__selected-filters {
+      margin-bottom: get-size(200);
+    }
+  }
+
   [role=tab] {
     cursor: pointer;
     font-family: #{$font-google-sans};
@@ -34,12 +46,6 @@
   .load-more__items {
     display: grid;
     gap: get-size(400);
-  }
-}
-
-.events-list__selected-filters {
-  &:not(:has(tag-pill-list[items='[]'])) {
-    margin-bottom: get-size(500);
   }
 }
 

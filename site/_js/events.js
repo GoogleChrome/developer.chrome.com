@@ -33,6 +33,7 @@ const upcomingEvents = document.querySelector('#upcoming-events');
 /** @type {LoadMore|null} */
 const pastEvents = document.querySelector('#past-events');
 const selectFields = document.querySelectorAll('.events-filter');
+const wrapper = document.querySelector('.events-list');
 
 (() => {
   selectFields.forEach(ele => {
@@ -47,6 +48,7 @@ const selectFields = document.querySelectorAll('.events-filter');
 
       restart();
       updateTagPills();
+      updateDOM();
     });
   });
 
@@ -131,6 +133,14 @@ function updateTagPills() {
   });
 }
 
+function updateDOM() {
+  if (Object.values(activeFilters).some(i => i.length > 0)) {
+    wrapper?.setAttribute('data-active-filters', '');
+  } else {
+    wrapper?.removeAttribute('data-active-filters');
+  }
+}
+
 function addMobileListeners() {
   /** @type {HTMLDialogElement|null} */
   const filters = document.querySelector('#mobile-filters');
@@ -171,6 +181,7 @@ function addMobileListeners() {
 
     restart();
     updateTagPills();
+    updateDOM();
     closeFiltersModal();
   });
 
