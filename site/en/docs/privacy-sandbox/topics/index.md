@@ -12,6 +12,7 @@ authors:
 ---
 
 ## Implementation status
+
 {% Partial 'privacy-sandbox/ps-implementation-status.njk' %}
 
 ## Try the Topics API
@@ -107,6 +108,8 @@ Using request and response headers to access topics and mark them as observed ca
 -   The request header will not modify state for the caller unless there is a corresponding response header. That is, the topic of the page won't be considered observed, nor will it affect the user's topic calculation for the next epoch.
 -   The response header is only honored if the corresponding request included the topics header (or would have included the header, if the request wasn't empty).
 -   The URL of the request provides the registrable domain used for topic observation.
+
+{: #debug }
 
 ## Debug your API implementation
 

@@ -2,10 +2,11 @@
 layout: 'layouts/doc-post.njk'
 title: 'Topic classification'
 subhead: >
-  Read how topics are inferred, how they're assigned to users' browsers, and how users can control their topics list.
+  Read how topics are inferred, how they're assigned to users' browsers,
+  and how users can control their topics list.
 description: >
-  More in-depth information about the topics themselves and how they are chosen.
-  
+  Read how topics are inferred, how they're assigned to users' browsers,
+  and how users can control their topics list.
 date: 2022-01-25
 updated: 2023-03-08
 authors:
@@ -13,9 +14,11 @@ authors:
 ---
 
 ## Implementation status
+
 {% Partial 'privacy-sandbox/ps-implementation-status.njk' %}
 
 ## What is a topic?
+
 A topic, in the Topics API, is a subject a user is interested in as evidenced by the websites they visit.
 
 Topics are a signal to help ad tech platforms select relevant ads. Unlike third-party cookies, this information is shared without revealing further information about the user themself or the user's browsing activity.
@@ -92,15 +95,21 @@ Use [`protoc`](https://grpc.io/docs/protoc-installation/) to inspect it as text:
 protoc --decode_raw < override_list.pb > output.txt
 ```
 
-A full [taxonomy of topics with IDs](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md) is available on GitHub.
+A full [taxonomy of topics with IDs](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md)
+is available on GitHub.
 
 
-### Providing feedback or input on the classifier model
+### Provide feedback or input on the classifier model
 
-There are [several channels](/docs/privacy-sandbox/feedback/) for providing feedback on the Topics proposal. For feedback on the classifier model, we recommend [submitting a GitHub issue](https://github.com/patcg-individual-drafts/topics/issues) or replying to an existing issue. For example:
+There are [several channels](/docs/privacy-sandbox/feedback/) for providing
+feedback on the Topics proposal. For feedback on the classifier model, we
+recommend [submitting a GitHub issue](https://github.com/patcg-individual-drafts/topics/issues) or replying to an existing issue. For example:
 
 - [What topics taxonomy should be used long term?](https://github.com/patcg-individual-drafts/topics/issues/3)
 - [What if a site disagrees with the topics assigned?](https://github.com/patcg-individual-drafts/topics/issues/2)
+
+
+{: #top-5-selection }
 
 ## How the user's top five topics are selected
 
@@ -114,15 +123,28 @@ The API returns one topic for each epoch, up to a maximum of three. If three are
 3. The browser accumulates the list of topics.
 4. The browser generates a list of the top five topics by frequency.
 
-The `document.browsingTopics()` method then returns a random topic from the top five for each epoch, with a 5% chance that any of these may be randomly chosen from the full taxonomy of topics. In Chrome, users are also able to remove individual topics, or clear their browsing history to reduce the number of topics returned by the API. Users may also [opt out](#opt-out) of the API.
+The `document.browsingTopics()` method then returns a random topic from the top
+five for each epoch, with a 5% chance that any of these may be randomly chosen
+from the full taxonomy of topics. In Chrome, users are also able to remove
+individual topics, or clear their browsing history to reduce the number of
+topics returned by the API. Users may also [opt out](#opt-out) of the API.
 
-You can view information about topics observed during the current epoch from the `chrome://topics-internals` page.
+You can view information about topics observed during the current epoch from
+the `chrome://topics-internals` page.
+
+{: #which-callers-see-topics }
 
 ## How the API decides which callers see which topics
 
-API callers only receive topics they've recently observed, and the topics for a user are refreshed once each epoch. That means the API provides a rolling window in which a given caller may receive certain topics.
+API callers only receive topics they've recently observed, and the topics for a
+user are refreshed once each epoch. That means the API provides a rolling
+window in which a given caller may receive certain topics.
 
-The table below outlines an example (though unrealistically small) of a hypothetical browsing history for a user during a single epoch, showing topics associated with the sites they've visited, and the API callers present on each site (the entities that call `document.browsingTopics()` in JavaScript code included on the site).
+The table below outlines an example (though unrealistically small) of a
+hypothetical browsing history for a user during a single epoch, showing topics
+associated with the sites they've visited, and the API callers present on each
+site (the entities that call `document.browsingTopics()` in JavaScript code
+included on the site).
 
 <table class="with-heading-tint">
   <thead>
@@ -162,7 +184,10 @@ At the end of the epoch (currently proposed to be one week) the Topics API gener
 - adtech1.example is not eligible to receive the "Travel &amp; Transportation" topic for this user as it is not present on any sites the user visited recently that are associated with that topic.
 - adtech2.example has seen the "Fitness" and "Travel &amp; Transportation" topics, but has not seen the "Crafts" topic.
 
-The user visited diy-clothing.example, which has the "Fashion &amp; Style" topic, but there were no calls to the Topics API on that site. At this point, this means the "Fashion &amp; Style" topic would not be returned by the API for any caller.
+The user visited diy-clothing.example, which has the "Fashion &amp; Style"
+topic, but there were no calls to the Topics API on that site. At this point,
+this means the "Fashion &amp; Style" topic would not be returned by the API for
+any caller.
 
 In week two, the user visits another site:
 
@@ -243,7 +268,6 @@ development, we recommend the following:
 - Follow [Prebid Issue #8741: Enhancements to Topics module](https://github.com/prebid/Prebid.js/pull/8741), which has an active discussion on the Prebid Topics module's intended workflow.
 - If this is a high dependency, reach out to Prebid.js to check in on status updates and timelines, 
 through whatever standard channel they offer.
-
 
 ## Next steps
 
