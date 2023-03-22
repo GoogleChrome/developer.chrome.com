@@ -145,7 +145,7 @@ Extensions can save initial values to storage on installation. To use the [`chro
 }
 ```
 
-The following code save the default suggestions to storage when the extension is first installed:
+The following code save the default suggestions to storage when the extension is first installed by listening to the `onInstalled` event:
 
 {% Label %}sw-omnibox.js:{% endLabel %}
 
@@ -170,7 +170,7 @@ See [Saving state](TBD) to learn about storage options for extension service wor
 
 ### Step 5: Register your events {: #step-5 }
 
-All event listeners need to be registered in the global scope of the service worker. In other words, event listeners should not be nested in functions. This way Chrome can immediately invoke all event handlers, even if the extension's async startup logic hasn't finished. 
+All event listeners need to be statically registered in the global scope of the service worker. In other words, event listeners should not be nested in async functions. This way Chrome can ensure that all event handlers are restored in case of a service worker reboot.
 
 To use the [`chrome.omnibox`][api-omnibox] API first add the omnibox keyword to the manifest:
 
@@ -241,7 +241,7 @@ The `setTimeout()` or `setInterval()` methods are commonly used to perform delay
 tasks. However, these APIs can fail because the scheduler will cancel the timers when the service
 worker is terminated. Instead, extensions can use the [`chrome.alarms`][api-alarms] API. 
 
-To use the Alarms API, request the `"alarms"` permission in the manifest. The extension also needs to request [host permission][doc-host-perm] to retrieve the extension tips from the glitch site:
+To use the Alarms API, request the `"alarms"` permission in the manifest. The extension also needs to request [host permission][doc-host-perm] to be able to fetch the extension tips from a remote hosted location:
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -357,7 +357,7 @@ TBD
 
 {% endDetails %}
 
-The following code sends the daily tip from the service worker to the content script. 
+The final step is to add a message handler to our service worker that replies the daily tip when requested from the content script. 
 
 {% Label %}sw-api.js:{% endLabel %}
 
