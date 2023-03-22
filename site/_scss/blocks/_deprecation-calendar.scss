@@ -210,6 +210,21 @@
       fill: var(--color-blue-medium);
     }
   }
+
+  .clear-filters {
+    background-color: var(--color-blue-medium);
+    border: unset;
+    color: #fff;
+    height: px-to-rem(34px);
+
+    svg {
+      display: none;
+    }
+  }
+
+  .clear-filters.hidden {
+    display: none;
+  }
 }  
 
 

@@ -23,14 +23,23 @@ let activeFilters = {};
 /** @type {TagPillList|null} */
 const activeFiltersList = document.querySelector('#active-filters');
 const selectFields = document.querySelectorAll('.deprecation-filter');
+const clearFilters = document.querySelector('.clear-filters');
 
 function updateTagPills() {
   if (!activeFiltersList) return;
+
   activeFiltersList.items = Object.entries(activeFilters).flatMap(i => {
     if (i[0] === 'removal-date') {
       i[1] = formatDateRange(i[1][0]);
     }
-    return i[1].map(value => ({key: i[0], value: value}));
+    const pills = i[1].map(value => ({key: i[0], value: value}));
+
+    clearFilters?.classList.remove('hidden');
+    if (pills.length === 0) {
+      clearFilters?.classList.add('hidden');
+    }
+
+    return pills;
   });
 }
 
@@ -88,8 +97,6 @@ function addMobileListeners() {
 
       return payload;
     }, {});
-
-    console.log(activeFilters);
     updateTagPills();
     closeFiltersModal();
   });
@@ -126,11 +133,28 @@ function addMobileListeners() {
       if (!(t instanceof EnhancedSelect)) {
         return;
       }
-
       activeFilters[t.name] = t.value;
       updateTagPills();
     });
   });
 
+  clearFilters?.addEventListener('click', () => {
+    selectFields.forEach(element => {
+      // @ts-ignore
+      element.value = [];
+      // @ts-ignore
+      element.options.forEach(option => {
+        option.selected = false;
+      });
+    });
+    document
+      .querySelectorAll('#mobile-filters input[type="checkbox"]:checked')
+      .forEach(checkbox => {
+        /** @type {HTMLInputElement } */ (checkbox).checked = false;
+      });
+    activeFilters = {};
+    updateTagPills();
+    clearFilters?.classList.add('hidden');
+  });
   addMobileListeners();
 })();
