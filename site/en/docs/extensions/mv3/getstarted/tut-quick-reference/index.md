@@ -14,13 +14,13 @@ This tutorial builds an extension that allows users to open Chrome API reference
 
 {% Video src="video/BhuKGJaIeLNPW9ehns59NfwqKxF2/WmVEGpEZ9ts1J0pUOzEr.mp4", width="600", height="398", autoplay="true", muted="true"%}
 
-This article will explain how to do the following tasks in an extension service worker:
+This article will cover the following topics:
 
-- Register a service worker and import modules.
-- Find extension service worker logs.
-- Manage state and handle events.
-- Trigger periodic events.
-- Communicate with content scripts.
+- Registering a service worker and importing modules.
+- Debugging your extension service worker.
+- Managing state and handling events.
+- Triggering periodic events.
+- Communicating with content scripts.
 
 ## Before you start {: #prereq }
 
