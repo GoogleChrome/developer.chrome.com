@@ -45,7 +45,7 @@ As third-party cookies are phased out, ad tech solutions for interest-based
 advertising should evolve to take advantage of privacy-friendly signals to show
 relevant ads. These include first-party data, contextual signals, and
 platform-provided privacy-preserving APIs, such as the
-[Topics API](/docs/privacy-sandbox/topics/),
+[Topics API](/docs/privacy-sandbox/topics/overview/),
 [FLEDGE API](/docs/privacy-sandbox/fledge/), and
 [Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/),
 which help support critical use cases for the ad industry while protecting

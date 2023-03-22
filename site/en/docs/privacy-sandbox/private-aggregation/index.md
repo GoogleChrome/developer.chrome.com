@@ -6,23 +6,26 @@ subhead: >
 description: >
    Generate noisy summary reports with cross-site data in a privacy-preserving manner
 date: 2022-10-11
+updated: 2023-03-14
 authors:
    - kevinkiklee
 ---
 
-Privacy Sandbox proposals aim to reduce cross-site tracking while supporting legitimate use cases that respect user’s privacy. It’s important that companies can still measure cross-site data such as reach measurement. To provide critical features that the web relies on, the Private Aggregation API has been proposed for aggregating cross-site data in a privacy-preserving manner. 
+To provide critical features that the web relies on, the Private Aggregation
+API has been proposed for aggregating and reporting on cross-site data in a
+privacy-preserving manner. 
 
 ## Implementation status
 
 This document outlines a new proposal for cross-site measurement.
 
-* The [Private Aggregation API](https://github.com/patcg-individual-drafts/private-aggregation-api/) has entered [public discussion](https://github.com/patcg-individual-drafts/private-aggregation-api/issues).
-* Private Aggregation API is available for testing in Chrome M107+ Canary and Dev.
-* Private Aggregation API is available in the [Privacy Sandbox Unified Origin Trial](/docs/privacy-sandbox/unified-origin-trial/) in Chrome M107+ Beta.
+{% Partial 'privacy-sandbox/timeline/private-aggregation.njk' %}
 
 ## What is the Private Aggregation API
 
-The Private Aggregation API enables aggregate data collection from worklets with access to cross-site data such as [FLEDGE](/docs/privacy-sandbox/fledge/) and [Shared Storage](/docs/privacy-sandbox/shared-storage/). 
+The Private Aggregation API enables aggregate data collection from worklets
+with access to cross-site data such as [FLEDGE](/docs/privacy-sandbox/fledge/)
+and [Shared Storage](/docs/privacy-sandbox/shared-storage/). 
 
 This API proposal provides one operation, `sendHistogramReport()`, but more may be supported in the future. The histogram operation allows you to aggregate data across users in each bucket (known in the API as an aggregation key) you define. Your histogram call accumulates values and returns a noised aggregated result in the form of a summary report. For instance, the report might show the number of sites each user has seen your content on, or come across a bug in your third-party script. This operation is performed within another API’s worklet.
 

@@ -1264,6 +1264,11 @@ tristramsouthey:
     en: 'Tristram Southey'
   description:
     en: 'Product Manager, Google Chrome'
+kyraseevers:
+  title:
+    en: 'Kyra Seevers'
+  description:
+    en: 'Software Engineer, Google Chrome'
 jyasskin:
   title:
     en: 'Jeffrey Yasskin'
@@ -1321,12 +1326,6 @@ janicklasralphj:
 mattreynolds:
   title:
     en: Matt Reynolds
-    es: Matt Reynolds
-    ja: Matt Reynolds
-    ko: Matt Reynolds
-    pt: Matt Reynolds
-    ru: Matt Reynolds
-    zh: Matt Reynolds
   description:
     en: Matt is a software developer
     es: Matt es un desarrollador de software
@@ -1335,3 +1334,18 @@ mattreynolds:
     pt: Matt é um desenvolvedor de software
     ru: Мэтт — разработчик программного обеспечения
     zh: Matt 是一名软件开发者
+pbirk:
+  title:
+    en: Peter Birk Pakkenberg
+  description:
+    en: Software Engineer, Android
+pjl:
+  title:
+    en: Philip Lee
+  description:
+    en: Software Engineer
+georgiafranklin:
+  title:
+    en: Georgia Franklin
+  description:
+    en: Product Manager, Privacy Sandbox	

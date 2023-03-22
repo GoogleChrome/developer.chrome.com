@@ -6,7 +6,7 @@ subhead: >
 description: >
   Review the latest changes to the Attribution Reporting API.
 date: 2022-06-15
-updated: 2022-12-15
+updated: 2023-03-17
 authors:
   - maudn
   - alexandrawhite
@@ -31,6 +31,8 @@ If you're new to this API or have not experimented with it yet, read the
 
 ## Changelog
 
+* **March 17, 2023**: We've updated the
+  [status for API features](/docs/privacy-sandbox/attribution-reporting#status)
 * **December 15, 2022**: We've published why we plan to
   [ship the Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/chrome-shipping)
   in the first half of 2023.
