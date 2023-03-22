@@ -13,7 +13,6 @@ authors:
 
 ## Learn the essentials
 
-* [The Topics API](/docs/privacy-sandbox/topics) provides an overview of the proposal.
 * [Topics API overview](/docs/privacy-sandbox/topics/overview) introduces the API and explains the issues it addresses. 
 * [Topic classification](/docs/privacy-sandbox/topics/topic-classification) explains the classifier model.
 * [The Topics API developer guide](/docs/privacy-sandbox/topics/#get-and-set-topics) covers setup and debugging.
