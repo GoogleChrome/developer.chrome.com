@@ -204,7 +204,7 @@ Lighthouse 10 now uses Moto G Power as the [default emulation device](https://gi
 
 Chromium issue: [772558](https://crbug.com/772558).
 
-## A Console warning to remove your no-op fetch listener {: #no-op-fetch-warning }
+## A Console warning to remove your no-op service worker fetch handler {: #no-op-fetch-warning }
 
 Chrome 112 [skips no-op (no operation) service worker fetch handlers](/blog/chrome-112-beta/#skip-service-worker-no-op-fetch-handler) because they may slow down navigation but don't serve a purpose. Such handlers are no longer required for your website to quialify as a [Progressive Web App](https://web.dev/learn/pwa/).
 
