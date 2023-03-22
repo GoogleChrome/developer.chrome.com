@@ -39,9 +39,9 @@ implementation status of the Topics API.
    * [Use the Topics JavaScript API to access topics](/docs/privacy-sandbox/topics/#access-topics-with-the-javascript-api)
    provides a short code example to demonstrate how the API might be used to access topics observed
    for the current user.
-   * [The Topics API developer guide](/docs/privacy-sandbox/topics/#get-and-set-topics)
-   outlines the values returned by the API, and provides more information about feature support and
-   constraints.
+   * [Topics API overview](/docs/privacy-sandbox/topics/overview) introduces the API and explains the problems it seeks to address. 
+   * [Topic classification](/docs/privacy-sandbox/topics/topic-classification) explains the classifier model.
+   * [The Topics API developer guide](/docs/privacy-sandbox/topics/#get-and-set-topics) covers setup and debugging.
 
 
 ## Get support
