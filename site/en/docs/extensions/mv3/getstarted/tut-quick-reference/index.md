@@ -137,7 +137,7 @@ Don't forget to fix the file name before moving on!
 
 ### Step 4: Initialize the state {: #step-4 }
 
-Extensions can save initial values to storage on installation. To use the [`chrome.storage`][api-storage] API, we need to request permission in the manifest:
+Extensions can save initial values to storage. To use the [`chrome.storage`][api-storage] API, we need to request permission in the manifest:
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -148,7 +148,7 @@ Extensions can save initial values to storage on installation. To use the [`chro
 }
 ```
 
-The following code save the default suggestions to storage when the extension is first installed by listening to the `onInstalled` event:
+First, let's save the default suggestions to storage. We can initialize state when the extension is first installed by listening to the [`runtime.onInstalled()`][runtime-oninstalled] event:
 
 {% Label %}sw-omnibox.js:{% endLabel %}
 
@@ -167,9 +167,9 @@ chrome.runtime.onInstalled.addListener(({ reason }) => {
 Service workers do not have direct access to the [window object][mdn-window], therefore cannot use
 [window.localStorage()][mdn-local-storage] to store values. Also, service workers are short-lived execution environments;
 they get terminated repeatedly throughout a user's browser session, which makes it incompatible with
-global variables.
+global variables.  Instead, we use [`chrome.storage.local`](tbd) which stores data on the local machine.
 
-See [Saving state](TBD) to learn about storage options for extension service workers.
+See [Saving state](TBD) to learn about other storage options for extension service workers.
 
 ### Step 5: Register your events {: #step-5 }
 
