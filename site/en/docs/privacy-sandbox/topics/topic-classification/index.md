@@ -220,17 +220,7 @@ The list of topics returned will be empty if:
 
 The explainer [provides more detail about privacy goals](https://github.com/jkarlin/topics#meeting-the-privacy-goals) and how the API seeks to address them.
 
-You can opt out of topic calculation for specific pages on your site by including the `Permissions-Policy: browsing-topics=()` [Permissions-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy) header on a page to prevent topics calculation for all users on that page only. Subsequent visits to other pages on your site will not be affected. If you set a policy to block the Topics API on one page, this won't affect other pages.
-
-You can also control which third parties have access to topics on your page by using the Permission Policy header to control third-party access to the Topics API.
-
-Use `self` and any domains you would like to allow access to the API as parameters.
-
-For example, to completely disable use of the Topics API within all browsing contexts except for your own origin and those whose origin is `https://example.com`, set the following HTTP response header: 
-
-```text
-Permissions-Policy: geolocation=(self "https://example.com")
-```
+The [Developer guide](/docs/privacy-sandbox/topics/#site-opt-out) explains how you can opt out of Topics for your sire or pges on it. 
 
 ## Using the Topics API on websites with `prebid.js`
 
