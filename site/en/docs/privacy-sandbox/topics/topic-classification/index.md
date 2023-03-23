@@ -220,7 +220,9 @@ The list of topics returned will be empty if:
 
 The explainer [provides more detail about privacy goals](https://github.com/jkarlin/topics#meeting-the-privacy-goals) and how the API seeks to address them.
 
-The [Developer guide](/docs/privacy-sandbox/topics/#site-opt-out) explains how you can opt out of Topics for your sire or pges on it. 
+### Site opt out
+
+In addition to the user's ability to opt out, you can opt out of Topics for your site or pages on it. The [Developer guide](/docs/privacy-sandbox/topics/#site-opt-out) explains how.
 
 ## Using the Topics API on websites with `prebid.js`
 
