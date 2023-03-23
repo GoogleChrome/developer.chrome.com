@@ -252,7 +252,7 @@ async function updateHistory(input) {
 
 {% Aside 'important' %}
 
-Extension service workers can use both web APIs and Chrome APIs, with a few exceptions. For more information, see [Service Workers events](tbd) 
+Extension service workers can use both web APIs and Chrome APIs, with a few exceptions. For more information, see [Service Workers events](tbd).
 
 {% endAside %}
 
@@ -262,7 +262,7 @@ The `setTimeout()` or `setInterval()` methods are commonly used to perform delay
 tasks. However, these APIs can fail because the scheduler will cancel the timers when the service
 worker is terminated. Instead, extensions can use the [`chrome.alarms`][api-alarms] API. 
 
-To use the Alarms API, request the `"alarms"` permission in the manifest. The extension also needs to request [host permission][doc-host-perm] to be able to fetch the extension tips from a remote hosted location:
+Start by requesting the `"alarms"` permission in the manifest. Additionally, to fetch the extension tips from a remote hosted location, you need to request [host permission][doc-host-perm]:
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -275,8 +275,7 @@ To use the Alarms API, request the `"alarms"` permission in the manifest. The ex
 }
 ```
 
-The following code sets up an alarm once a day to fetch the daily tip and save it to
-[`chrome.storage.local()`][api-storage]:
+The extension will fetch all the tips and pick one at random. Then save it to storage. We will create an alarm that will be triggered once a day. Alarms are not saved when you close Chrome. So we need to check if the alarm exists and create it if it doesn't.
 
 {% Label %}sw-tips.js:{% endLabel %}
 
@@ -286,25 +285,30 @@ const updateTip = async () => {
   const response = await fetch('https://extension-tips.glitch.me/tips.json');
   const tips = await response.json();
   const randomIndex = Math.floor(Math.random() * tips.length);
-  await chrome.storage.local.set({ tip: tips[randomIndex] });
+  return chrome.storage.local.set({ tip: tips[randomIndex] });
 };
 
-// Create a daily alarm and retrieves the first tip when extension is installed.
-chrome.runtime.onInstalled.addListener(({ reason }) => {
-  if (reason === 'install') {
-    chrome.alarms.create({ delayInMinutes: 1, periodInMinutes: 1440 });
+// Creates an alarm if it doesn't exist
+async function createAlarm() {
+  const alarm = await chrome.alarms.get('tip');
+  if (typeof alarm === 'undefined') {
+    await chrome.alarms.create('tip', {
+      delayInMinutes: 1,
+      periodInMinutes: 1440
+    });
     updateTip();
   }
-});
+}
+
+createAlarm();
 
 // Update tip once a the day
 chrome.alarms.onAlarm.addListener(updateTip);
-
 ```
 
-{% Aside %}
+{% Aside 'important' %}
 
-All [Chrome API][doc-apis] event listeners and methods restart the service worker 30 second termination timer. See [Extension service worker lifecycle](tdb) to learn more.
+All [Chrome API][doc-apis] event listeners and methods restart the service worker's 30 second termination timer. For more information, see the [Extension service worker lifecycle](tdb).
 
 {% endAside %}
 
