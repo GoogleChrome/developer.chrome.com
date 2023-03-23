@@ -3,10 +3,11 @@ layout: 'layouts/blog-post.njk'
 title: 'How Photoshop solved working with files larger than can fit into memory'
 subhead: >
   Learn how Adobe managed to let users edit even the biggest files on the web version of its iconic Photoshop app.
-date: 2023-03-21
+date: 2023-03-23
 # updated: 2023-03-21
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/pYiISdhsJe3oEL871Dqp.png
 alt: A part of Photoshop's user interface.
+thumbnail: image/8WbTDNrhLsU0El80frMBGE4eMCD3/tTlvAYtbWrg8xLqXdjua.png
 authors:
   - nabeelalshamma
   - thomassteiner
@@ -34,7 +35,7 @@ Devices and platforms, be they desktop machines, mobile devices or browsers, all
 
 Ideally, applications would use as much memory as they need. This generally allows them to provide the best performance to their users. However, if they use too much memory, they may be penalized by the runtime platform or may run out of memory, resulting in failures.
 
-As a historical note, the original problem that Photoshop needed to solve was editing print resolution files on early versions of macOS, as low as 1MB for the OS and all applications. A 300 dpi full page image in CMYK is approximately 32MB uncompressed.
+As a historical note, the original problem that Photoshop needed to solve was editing print resolution files on early versions of macOS, as low as 1&nbsp;MB for the OS and all applications. A 300&nbsp;dpi full page image in CMYK is approximately 32&nbsp;MB uncompressed.
 
 ## The solution
 
