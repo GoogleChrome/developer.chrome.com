@@ -25,12 +25,17 @@ const activeFiltersList = document.querySelector('#active-filters');
 const selectFields = document.querySelectorAll('.deprecation-filter');
 const clearFilters = document.querySelector('.clear-filters');
 
+/**
+ * Formats the active filters values for the tag pills section
+ *
+ * @returns {Object}
+ */
 function updateTagPills() {
   if (!activeFiltersList) return;
 
   activeFiltersList.items = Object.entries(activeFilters).flatMap(i => {
     if (i[0] === 'removal-date') {
-      i[1] = formatDateRange(i[1][0]);
+      i[1] = [formatDateRange(i[1][0])];
     }
     const pills = i[1].map(value => ({key: i[0], value: value}));
 
@@ -43,6 +48,12 @@ function updateTagPills() {
   });
 }
 
+/**
+ * Transforms the selected date range option in a date range starting from the current date
+ *
+ * @param {String} days The value of the date range filter
+ * @returns {String}
+ */
 function formatDateRange(days) {
   const endDate = new Date();
   endDate.setDate(endDate.getDate() + parseInt(days));
@@ -56,9 +67,14 @@ function formatDateRange(days) {
     'default',
     {month: 'short'}
   )}`;
-  return [`${startDateString} - ${endDateString}`];
+  return `${startDateString} - ${endDateString}`;
 }
 
+/**
+ * Adds all the event listeners needed for the mobile UI
+ *
+ * @returns {void}
+ */
 function addMobileListeners() {
   /** @type {HTMLDialogElement|null} */
   const filters = document.querySelector('#mobile-filters');
@@ -125,19 +141,12 @@ function addMobileListeners() {
   }
 }
 
-(() => {
-  selectFields.forEach(element => {
-    element.addEventListener('change', e => {
-      const t = e.target;
-
-      if (!(t instanceof EnhancedSelect)) {
-        return;
-      }
-      activeFilters[t.name] = t.value;
-      updateTagPills();
-    });
-  });
-
+/**
+ * Adds the listener to the "Clear Filters" tag pill
+ *
+ * @returns {void}
+ */
+function addClarFilterListener() {
   clearFilters?.addEventListener('click', () => {
     selectFields.forEach(element => {
       // @ts-ignore
@@ -156,5 +165,40 @@ function addMobileListeners() {
     updateTagPills();
     clearFilters?.classList.add('hidden');
   });
+}
+
+/**
+ * Adds the listeners to the select inputs used on desktop/tablet
+ *
+ * @returns {void}
+ */
+function addSelectListeners() {
+  selectFields.forEach(element => {
+    element.addEventListener('change', e => {
+      const t = e.target;
+
+      if (!(t instanceof EnhancedSelect)) {
+        return;
+      }
+      activeFilters[t.name] = t.value;
+      updateTagPills();
+    });
+  });
+  selectFields.forEach(element => {
+    element.addEventListener('change', e => {
+      const t = e.target;
+
+      if (!(t instanceof EnhancedSelect)) {
+        return;
+      }
+      activeFilters[t.name] = t.value;
+      updateTagPills();
+    });
+  });
+}
+
+(() => {
+  addSelectListeners();
   addMobileListeners();
+  addClarFilterListener();
 })();
