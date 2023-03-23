@@ -19,7 +19,7 @@ All `chrome.printing` methods and events require you to declare the `"printing"`
 
 ## Examples {: #examples }
 
-The examples below demonstrate using each of the methods in the printing namespace. This code is copied from or based on the [printing](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/printing) in the Extension samples database.
+The examples below demonstrate using each of the methods in the printing namespace. This code is copied from or based on the [api-samples/printing](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/printing) in the extensions-samples Github repo.
 
 ### cancelJob()
 
