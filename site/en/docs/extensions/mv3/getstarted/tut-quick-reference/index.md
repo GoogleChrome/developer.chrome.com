@@ -175,7 +175,7 @@ See [Saving state](TBD) to learn about other storage options for extension servi
 
 All event listeners need to be statically registered in the global scope of the service worker. In other words, event listeners should not be nested in async functions. This way Chrome can ensure that all event handlers are restored in case of a service worker reboot.
 
-To use the [`chrome.omnibox`][api-omnibox] API first add the omnibox keyword to the manifest:
+In this example, we are going to use the [`chrome.omnibox`][api-omnibox] API, but first we must add the omnibox keyword to the manifest:
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -190,11 +190,16 @@ To use the [`chrome.omnibox`][api-omnibox] API first add the omnibox keyword to 
 ```
 
 {% Aside 'important' %}
-The [`"minimum_chrome_version"`][manifest-min-version] explains how this key behaves when a user tries to install your extension but isn't using a compatible version of Chrome.
+The [`"minimum_chrome_version"`][manifest-min-version] explains how this key behaves when a user tries to install your extension but isn't using a compatible version of Chrome. 
 
 {% endAside %}
 
-The following code registers the omnibox event listeners at the top level of the script and updates [chrome.storage][api-storage] with the most recent api search.
+Now let's register the omnibox event listeners at the top level of the script. The
+[`onInputChanged()`](tbd) takes the current user input and a [suggestResult][omnibox-suggest]
+object. The keywords in storage will populate the suggestions. When user enters the omnibox keyword
+(api) in the address bar followed by tab or space, Chrome will display a list of suggestions.
+
+Now, let's register the omnibox event listeners at the top level of the script. When the user enters the omnibox keyword "api" in the address bar followed by tab or space, Chrome will display a list of suggestions based on the keywords in storage. The [onInputChanged()][omnibox-input-changed] event, which takes the current user input and a suggestResult object, is responsible for populating these suggestions.
 
 {% Label %}sw-omnibox.js:{% endLabel %}
 
@@ -215,26 +220,39 @@ chrome.omnibox.onInputChanged.addListener(async (input, suggest) => {
   });
   suggest(suggestions);
 });
+```
 
+After the user selects a suggestion, [`onInputEntered()`][omnibox-input-entered] will open the corresponding Chrome API reference page.
+
+{% Label %}sw-omnibox.js:{% endLabel %}
+
+```js
+...
 // Open the reference page of the chosen API
 chrome.omnibox.onInputEntered.addListener((input) => {
   chrome.tabs.create({ url: URL_CHROME_EXTENSIONS_DOC + input });
   // Save the latest keyword
   updateHistory(input);
 });
+```
 
+The `updateHistory()` function below takes the omnibox input and saves it to [storage.local][api-storage]. This way the most recent search term can be used later as an omnibox suggestion.
+
+{% Label %}sw-omnibox.js:{% endLabel %}
+
+```js
+...
 async function updateHistory(input) {
   const { apiSuggestions } = await chrome.storage.local.get('apiSuggestions');
   apiSuggestions.unshift(input);
   apiSuggestions.splice(NUMBER_OF_PREVIOUS_SEARCHES);
-  await chrome.storage.local.set({ apiSuggestions });
+  return chrome.storage.local.set({ apiSuggestions });
 }
 ```
 
 {% Aside 'important' %}
 
-Extension service workers have access to both web APIs and Chrome APIs, with a few exceptions.
-For a deep dive, see [Service Workers...](tbd) 
+Extension service workers can use both web APIs and Chrome APIs, with a few exceptions. For more information, see [Service Workers events](tbd) 
 
 {% endAside %}
 
