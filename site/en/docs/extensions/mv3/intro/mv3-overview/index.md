@@ -1,31 +1,14 @@
 ---
 layout: 'layouts/doc-post.njk'
-
-# The page title. This appears at the top of the doc and as the page name
-# in Google Search.
 title: Overview of Manifest V3
 seoTitle: Overview of the Chrome Extension Manifest V3
-
-# This appears below the title and is an optional teaser
 subhead: 'Key changes and features of Manifest V3.'
-
-# This appears in the ToC of the project landing page at
-# /docs/[project-name]/. It also appears in the <meta description> used in
-# Google Search.
 description: 'A description of the features and changes introduced by Manifest V3.'
-
-# The publish date
 date: 2020-11-09
-
-# An optional updated date
-updated: 2021-10-03
-
-# A list of authors. These usernames correspond to the keys in the
-# _data/authorsData.json file.
-
+updated: 2023-02-22
 ---
 
-Manifest V3 (Manifest V3) is a major step forward in steering towards our
+Manifest V3 is a major step forward in steering towards our
 [vision for the extensions platform](/docs/extensions/mv3/intro/platform-vision/).
 Manifest V3 focuses on the three pillars of that vision: privacy, security, and
 performance, while preserving and improving our foundation of capability and
@@ -124,37 +107,42 @@ for more about how to work with this change.
 
 Manifest V3 provides first-class support for promises. Many popular APIs support
 promises now, and we will eventually support promises on all appropriate
-methods.
+methods. Promise chains, async and await are also supported. Some API features,
+such as event listeners, will continue to require callbacks.
 
-You can use promise chains, as well as async/await. If you provide a callback
-to an API method, this prevents the promise from being returned. Therefore you
-can defer this part of your migration until you're ready, or begin using
-promises immediately.
+For backward compatibility, many methods continue to support callbacks after
+promise support is added. Be aware that you cannot use both on the same
+function call. If you pass a callback, the function will not return a promise
+and if you want a promise returned do not pass a callback. 
 
-Some scenarios, such as event listeners, will still require callbacks. For
-information on using promises, see [Promises on MDN][3]. For information on
-converting callbacks to promises, see [our own article][4].
+For information on using promises, see [Promises on MDN][mdn-promise]. For
+information on converting callbacks to promises and for using them in
+extensions, see [our own article][doc-promises].
 
 
 ## Other features {: #other-features }
 
 There are a number of other changes introduced in Manifest V3:
 
-* [Action API consolidation](/docs/extensions/mv3/intro/mv3-migration#action-api-unification):
+* [Action API consolidation][mig-action]:
   The Browser Action and Page Action APIs are unified into a single Action API.
-* [Web accessible resources](/docs/extensions/mv3/intro/mv3-migration#web-accessible-resources): These resources are now available only to specified sites and extensions.
-* [Content security policy (CSP)](/docs/extensions/mv3/intro/mv3-migration#content-security-policy): You now specify separate CSP for different execution contexts in a single object, and certain policies are disallowed.
-* [executeScript() changes](/docs/extensions/mv3/intro/mv3-migration#executing-arbitrary-strings): Extensions can no longer execute arbitrary strings, only script files and functions. This method is also migrating from the Tabs API to the new Scripting API.
-* [A new in-memory StorageArea][2] that can be used to store values in-memory across service worker restarts.
+* [Web accessible resources][mig-war]: These resources are now available only to specified sites and extensions.
+* [Content security policy (CSP)][mig-csp]: You now specify separate CSP for different execution contexts in a single object, and certain policies are disallowed.
+* [executeScript() changes][mig-code]: Extensions can no longer execute arbitrary strings, only script files and functions. This method is also migrating from the Tabs API to the new Scripting API.
+* [A new in-memory StorageArea][storage-session]: Extensions can store values in-memory across service worker restarts.
+* [Dynamic content scripts][cs-runtime]: You can now register and unregister content scripts at runtime using the new [Scripting API][doc-scripting].
+* [New favicon API][doc-favicon]: Extensions can retrieve a website's favicon with this new JavaScript API.
 
-The following features will be added to Manifest V3 soon:
+Look for [announcements][whats-new] of new Manifest V3 features as they become available.
 
-* **Dynamic content scripts:** the new [Scripting API][1] lets extensions register and unregister content scripts at runtime.
-* **New favicon API:** this new JavaScript API replaces "chrome://favicons" and gives  developers a way to retrieve websites' favicons.
-
-Look for announcements of these and other Manifest V3 features as they become available.
-
-[1]: /docs/extensions/reference/scripting/
-[2]: /docs/extensions/reference/storage/#property-session
-[3]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
-[4]: /docs/extensions/mv3/promises#compare-to-callback
+[cs-runtime]: /docs/extensions/mv3/content_scripts/#run_time
+[doc-favicon]: /docs/extensions/mv3/favicon/
+[doc-promises]: /docs/extensions/mv3/promises#compare-to-callback
+[doc-scripting]: /docs/extensions/reference/scripting/
+[mdn-promise]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
+[mig-action]: /docs/extensions/mv3/intro/mv3-migration#action-api-unification
+[mig-code]: /docs/extensions/mv3/intro/mv3-migration#executing-arbitrary-strings
+[mig-csp]: /docs/extensions/mv3/intro/mv3-migration#content-security-policy
+[mig-war]: /docs/extensions/mv3/intro/mv3-migration#web-accessible-resources
+[storage-session]: /docs/extensions/reference/storage/#property-session
+[whats-new]: /docs/extensions/whatsnew/

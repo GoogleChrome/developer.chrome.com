@@ -1,11 +1,11 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Recorder features reference"
+title: "Features reference"
 authors:
   - sofiayem
   - jecelynyeen
 date: 2022-06-21
-updated: 2023-01-09
+updated: 2023-02-07
 description: "A comprehensive reference of Chrome DevTools Recorder panel features."
 tags:
   - test
@@ -73,13 +73,7 @@ You can install a Chrome extension to export replay scripts in your favorite for
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xRO1d79tBe0ILcBoD0oh.png", alt="Custom extension for the Recorder panel.", width="800", height="486" %}
 
-For example:
-
-- [Cypress extension](https://chrome.google.com/webstore/detail/cypress-chrome-recorder/fellcphjglholofndfmmjmheedhomgin) lets you export JSON user flows as [Cypress test script](https://github.com/cypress-io/cypress-recorder-extension). [Cypress](https://cypress.io) is a front end testing tool built for the modern web.
-- [WebPageTest extension](https://chrome.google.com/webstore/detail/webpagetest-recorder-exte/eklpnjohdjknellndlnepihjnhpaimok) lets you export user flows from the Recorder directly as [WebPageTest Custom scripts](https://docs.webpagetest.org/scripting/) to measure site's performance. See [Converting user flows to WebPageTest custom scripts](https://blog.webpagetest.org/posts/introducing-the-new-webpagetest-recorder-chrome-extension/) to learn more. 
-- [Nightwatch extension](https://chrome.google.com/webstore/detail/nightwatch-chrome-recorde/nhbccjfogdgkahamfohokdhcnemjafjk/) lets you export JSON user flows as [Nightwatch test script](https://github.com/nightwatchjs/nightwatch-recorder-extension). [Nightwatch](https://nightwatchjs.org/) is an end-to-end testing solution for web applications and websites.
-- [Testing Library extension](https://chrome.google.com/webstore/detail/testing-library-recorder/pnobfbfcnoeealajjgnpeodbkkhgiici) lets you export JSON user flows as [Testing Library script](https://github.com/nickmccurdy/testing-library-recorder-extension). [Testing Library](https://testing-library.com/) has simple and complete testing utilities that encourage good testing practices.
-- [WebdriverIO extension](https://chrome.google.com/webstore/detail/webdriverio-chrome-record/pllimkccefnbmghgcikpjkmmcadeddfn) lets you export JSON user flows as [WebdriverIO test script](https://github.com/webdriverio/recorder-extension). [WebdriverIO](https://webdriver.io/) is an end-to-end testing solution for web, mobile and IoT applications and websites.
+For a list of known **Recorder** extensions, see [Extensions](/docs/devtools/recorder/extensions/).
 
 ##### Troubleshooting {: #extension-troubleshooting }
 
@@ -117,6 +111,7 @@ Transform JSON user flows to custom scripts:
 
 - [Cypress Chrome Recorder](https://github.com/cypress-io/cypress-chrome-recorder). You can use it to convert user flow JSON files to Cypress test scripts. Watch this [demo](https://youtu.be/4qYs2bMz4GI) to see it in action.
 - [Nightwatch Chrome Recorder](https://github.com/nightwatchjs/nightwatch-chrome-recorder). You can use it to convert user flow JSON files to Nightwatch test scripts. 
+- [CodeceptJS Chrome Recorder](https://github.com/PeterNgTr/codeceptjs-chrome-recorder). You can use it to convert user flow JSON files to CodeceptJS test scripts. 
 
 Replay JSON user flows:
 
@@ -135,7 +130,7 @@ Similar to the 3rd party libraries above, you can build your own library on top 
 
 Like any code, sometimes you have to debug the recorded user flows.
 
-To help you debug, the **Recorder** panel lets you slow down the replays, set breakpoints, and step through the execution.
+To help you debug, the **Recorder** panel lets you slow down the replays, set breakpoints, step through the execution, and inspect code in various formats in parallel with steps.
 
 ### Slow down the replay
 
@@ -153,6 +148,24 @@ By default, the **Recorder** replays the user flow as fast as it can. To underst
 {% Aside 'gotchas' %}
 You can use these slow replay options only in the **Recorder**. To add timeouts to the recording itself, see [Adjust timeouts for steps](/docs/devtools/recorder/reference/#adjust-timeout).
 {% endAside %}
+
+### Inspect code {: #inspect-code }
+
+To inspect the code of a user flow in various formats:
+
+1. Open a recording in the **Recorder** panel.
+1. Click **Show code** in the top right corner of the steps list.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/KhynxMityVxQeMJuNdU9.png", alt="The Show code button.", width="800", height="669" %}
+1. The **Recorder** shows a side-by-side view of the steps and their code. 
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/3K7idCdrqrZHmMR5Kczc.png", alt="The side-by-side view of the steps and their code.", width="800", height="685" %}
+1. As you hover over a step, the **Recorder** highlights its respective code in any format, including those provided by [extensions](#recorder-extension).
+   {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/u4YeMnjPuw9nINCPdViD.mp4", autoplay=true, controls=true, loop=true, class="screenshot" %}
+1. Expand the format drop-down list to select a format that you use to [export user flows](#export-flows).
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/fefVto1d2oXvkmBD9DPQ.png", alt="The format drop-down list.", width="800", height="685" %}
+
+   It can be one of the three default formats (JSON, [@puppeteer/replay](https://github.com/puppeteer/replay), [Puppeteer script](https://pptr.dev/)) or a format provided by an [extension](#recorder-extension).
+1. Proceed to debug your recording by [editing step parameters and values](#edit-steps). The code view isn't editable but it updates accordingly as you make changes to steps on the left.
 
 ### Set breakpoints and execute step by step {: #breakpoints-and-step-through }
 
@@ -402,7 +415,7 @@ When you start a new recording, you can configure the following:
 For more information, see [Syntactic vs. semantic selectors](/blog/puppetaria/#syntactic-vs-semantic-selectors) and [Selector priority](#selector-priority).
 {% endAside %}
 
-### Common test selectors {: common-test-selector}
+### Common test selectors {: common-test-selector }
 
 For simple webpages, `id` attributes and CSS `class` attributes are sufficient for the **Recorder** to detect the selectors. However, that might not always be the case because:
 

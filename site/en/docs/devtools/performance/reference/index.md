@@ -40,8 +40,8 @@ opposed to running.
 
 1.  Go to the page that you want to analyze.
 2.  Open the **Performance** panel of DevTools.
-3.  Click **Reload page**
-    {% Img src="image/admin/LLUc63dXLxWMXnoL8kyr.png", alt="Reload Page.", width="24", height="25" %}. DevTools
+3.  Click **Start profiling and reload page**
+    {% Img src="image/admin/LLUc63dXLxWMXnoL8kyr.png", alt="Start profiling and reload page.", width="20", height="20" %}. DevTools first navigates to `about:blank` to clear any remaining screenshots and traces. Then DevTools
     records performance metrics while the page reloads and then automatically stops the recording a
     couple seconds after the load finishes.
 

@@ -10,12 +10,9 @@ description: >
 date: 2022-12-07
 updated: 2022-12-07
 authors:
-  - mihajlija
-  - surma
+  - example
 tags:
- - origin-trials
- - cookies
- - privacy
+ - example
 project_key: workbox
 ---
 

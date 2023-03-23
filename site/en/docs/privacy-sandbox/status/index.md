@@ -43,20 +43,6 @@ See [Status](/docs/privacy-sandbox/attribution-reporting/#status).
   iteration of this API for web developers
 - [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
 
-## Trust Tokens
-
-- [Current origin trial](https://web.dev/origin-trials/): from Chrome 84,
-  [now extended](https://groups.google.com/a/chromium.org/g/blink-dev/c/lv2JQjDdyhM/m/lZ-Ri4fcAQAJ) to Chrome 101.
-- [Register for origin trial](/origintrials/#/view_trial/2479231594867458049).
-- [Demo](https://trust-token-demo.glitch.me/).
-- [Chrome Platform Status](https://www.chromestatus.com/feature/5078049450098688).
-- [Blink status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=trust%tokens).
-- [GitHub](https://github.com/WICG/trust-token-api): see
-  [issues](https://github.com/WICG/trust-token-api/issues) for API questions and
-  discussion.
-- [Chrome DevTools integration](/blog/new-in-devtools-89/#trust-token).
-- Find out more: [Getting started with Trust Tokens](https://web.dev/trust-tokens/)
-
 ## First-Party Sets
 
 - [Current origin trial](https://web.dev/origin-trials/): Chrome 89 to 93.
@@ -68,14 +54,17 @@ See [Status](/docs/privacy-sandbox/attribution-reporting/#status).
   discussion.
 - Find out more: [The Chromium Projects: First-Party Sets](https://www.chromium.org/updates/first-party-sets).
 
-## User-Agent Client Hints (UA-CH)
+## FLEDGE
 
-- [Origin trial and schedule](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html)
-- [Register for origin trial](/origintrials/#/view_trial/-7123568710593282047)
-- [Demo](https://uar-ot.glitch.me/)
-- [UA-CH proposal](https://github.com/WICG/ua-client-hints)
-- Tutorial to [migrate from UA string to UA-CH](https://web.dev/migrate-to-ua-ch/)
-- Find out more: [User-Agent reduction](/docs/privacy-sandbox/user-agent/)
+Descendant of [TURTLEDOVE](https://github.com/WICG/turtledove).
+
+- [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/0VmMSsDWsFg).
+- [Intent to Prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI/m/LqT59250CAAJ).
+- [Blink status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=fledge).
+- [API proposal](https://github.com/WICG/turtledove/blob/main/FLEDGE.md) is under
+  discussion with [WICG](https://www.w3.org/community/wicg/) and interest groups.
+- [GitHub](https://github.com/WICG/turtledove/blob/main/FLEDGE.md): see
+  [TURTLEDOVE issues](https://github.com/WICG/turtledove/issues) for API questions and discussion.
 
 ## FLoC
 
@@ -93,18 +82,6 @@ Now replaced by the Topics API.
 - [Chrome Platform Status](https://www.chromestatus.com/features/5710139774468096).
 - Find out more: [What is FLoC?](https://web.dev/floc/)
 
-## FLEDGE
-
-Descendant of [TURTLEDOVE](https://github.com/WICG/turtledove).
-
-- [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/0VmMSsDWsFg).
-- [Intent to Prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI/m/LqT59250CAAJ).
-- [Blink status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=fledge).
-- [API proposal](https://github.com/WICG/turtledove/blob/main/FLEDGE.md) is under
-  discussion with [WICG](https://www.w3.org/community/wicg/) and interest groups.
-- [GitHub](https://github.com/WICG/turtledove/blob/main/FLEDGE.md): see
-  [TURTLEDOVE issues](https://github.com/WICG/turtledove/issues) for API questions and discussion.
-
 ## Topics
 
 Replaces FLoC.
@@ -116,6 +93,31 @@ Replaces FLoC.
   [WICG](https://www.w3.org/community/wicg/) and interest groups.
 - [GitHub](https://github.com/jkarlin/topics/blob/main/README.md): see
   [Topics API issues](https://github.com/jkarlin/topics/issues) for API questions and discussion.
+
+## Trust Tokens
+
+- [Current origin trial](https://web.dev/origin-trials/): from Chrome 84,
+  [now extended](https://groups.google.com/a/chromium.org/g/blink-dev/c/lv2JQjDdyhM/m/lZ-Ri4fcAQAJ) to Chrome 101.
+- [Register for origin trial](/origintrials/#/view_trial/2479231594867458049).
+- [Demo](https://trust-token-demo.glitch.me/).
+- [Chrome Platform Status](https://www.chromestatus.com/feature/5078049450098688).
+- [Blink status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=trust%tokens).
+- [GitHub](https://github.com/WICG/trust-token-api): see
+  [issues](https://github.com/WICG/trust-token-api/issues) for API questions and
+  discussion.
+- [Chrome DevTools integration](/blog/new-in-devtools-89/#trust-token).
+- Find out more: [Getting started with Trust Tokens](https://web.dev/trust-tokens/)
+
+
+## User-Agent Client Hints (UA-CH)
+
+- [Origin trial and schedule](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html)
+- [Register for origin trial](/origintrials/#/view_trial/-7123568710593282047)
+- [Demo](https://uar-ot.glitch.me/)
+- [UA-CH proposal](https://github.com/WICG/ua-client-hints)
+- Tutorial to [migrate from UA string to UA-CH](https://web.dev/migrate-to-ua-ch/)
+- Find out more: [User-Agent reduction](/docs/privacy-sandbox/user-agent/)
+
 
 <br>
 

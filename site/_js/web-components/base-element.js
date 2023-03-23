@@ -18,6 +18,14 @@ import {LitElement} from 'lit-element';
 
 /* eslint-disable require-jsdoc */
 export class BaseElement extends LitElement {
+  /**
+   * @param {PropertyValues} changedProperties
+   */
+  firstUpdated(changedProperties) {
+    this.setAttribute('data-resolved', '');
+    super.firstUpdated(changedProperties);
+  }
+
   createRenderRoot() {
     // Disable shadow DOM.
     // Instead templates will be rendered in the light DOM.

@@ -69,7 +69,7 @@ of the following reasons:
 
 - Picture-in-Picture is not supported by the system.
 - Document is not allowed to use Picture-in-Picture due to a restrictive
-  [feature policy].
+  [permissions policy].
 - Video metadata have not been loaded yet (`videoElement.readyState === 0`).
 - Video file is audio-only.
 - The new `disablePictureInPicture` attribute is present on the video element.
@@ -244,7 +244,7 @@ debouncing] to address this problem.
 
 The Picture-in-Picture Web API may not be supported, so you have to detect this
 to provide progressive enhancement. Even when it is supported, it may be
-turned off by the user or [disabled by a feature policy]. Luckily, you can use
+turned off by the user or [disabled by a permissions policy]. Luckily, you can use
 the new boolean `document.pictureInPictureEnabled` to determine this.
 
 ```js
@@ -382,12 +382,12 @@ involved in the [standardization effort].
 [may reject]: https://wicg.github.io/picture-in-picture/#request-pip
 [applicable only]: https://github.com/WICG/picture-in-picture/issues/116
 [feature support]: #feature-support
-[feature policy]: /blog/feature-policy
+[permissions policy]: /docs/privacy-sandbox/permissions-policy/
 [video enters fullscreen]: https://developer.mozilla.org/docs/Web/API/Document/fullscreenchange_event
 [media session sample]: https://googlechrome.github.io/samples/media-session/video.html
 [throttling and debouncing]: https://css-tricks.com/debouncing-throttling-explained-examples/
 [user may have turned it off]: https://support.google.com/youtube/answer/7552722
-[disabled by a feature policy]: https://github.com/WICG/feature-policy/blob/main/features.md#picture-in-picture
+[disabled by a permissions policy]: https://github.com/w3c/webappsec-permissions-policy/blob/main/features.md#picture-in-picture
 [implementation status page]: https://github.com/WICG/picture-in-picture/blob/master/implementation-status.md
 [add custom picture-in-picture controls]: https://github.com/WICG/picture-in-picture/pull/69
 [https://www.chromestatus.com/feature/5729206566649856]: https://www.chromestatus.com/feature/5729206566649856
@@ -400,5 +400,5 @@ involved in the [standardization effort].
 [jennifer apacible]: https://twitter.com/japacible
 [media session api]: https://web.dev/media-session
 [audio playlist sample]: https://googlechrome.github.io/samples/picture-in-picture/audio-playlist
-[new web api]: https://github.com/steimelchrome/document-pip-explainer/blob/main/explainer.md
+[new web api]: /docs/web-platform/document-picture-in-picture/
 [mdn]: https://developer.mozilla.org/docs/Web/API/Picture-in-Picture_API#browser_compatibility

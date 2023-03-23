@@ -6,6 +6,7 @@ description: >
 authors:
     - alinavarkki
 date: 2022-07-21
+last_updated: 2023-01-25
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/56D6d9pfdEWRPQdima0W.jpg'
 alt: ''
 tags:
@@ -31,7 +32,7 @@ The [top layer](https://fullscreen.spec.whatwg.org/#new-stacking-layer) can be d
 Multiple elements can be inside the top layer at the same time. When that happens, they stack on top of each other, the last one on top. In other words, all of the top layer elements are placed in a *last in, first out* (LIFO) stack in the top layer.
 
 The `<dialog>` element is not the only element that the browser renders into a top layer. Currently, the top layer elements are:
-[pop-ups](https://open-ui.org/components/popup.research.explainer), [modal dialogs](https://developer.mozilla.org/docs/Web/HTML/Element/dialog), and elements in a [fullscreen mode](https://developer.mozilla.org/docs/Web/API/Fullscreen_API).
+[popovers](https://open-ui.org/components/popover.research.explainer), [modal dialogs](https://developer.mozilla.org/docs/Web/HTML/Element/dialog), and elements in a [fullscreen mode](https://developer.mozilla.org/docs/Web/API/Fullscreen_API).
 
 Examine the following dialog implementation:
 

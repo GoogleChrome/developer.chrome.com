@@ -284,7 +284,7 @@ First, open any of the following pages:
 - [Publish in the Chrome Web Store][cws-publish]
 - [Scripting API][api-scripting]
 
-Then, click on the extension action. If you set up a keyboard shortcut (link), you can test it by pressing `Ctrl + B` or `Cmd + B`.
+Then, click on the extension action. If you set up a [keyboard shortcut][tut-focus-mode-step6], you can test it by pressing `Ctrl + B` or `Cmd + B`.
 
 It should go from this:
 
@@ -351,10 +351,11 @@ development learning journey. We recommend the following learning paths:
 [doc-promises]: /docs/extensions/mv3/promises/
 [doc-sw]: /docs/extensions/mv3/service_workers/
 [doc-welcome]: /docs/extensions/mv3/
-[github-focus-mode-icons]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/focus-mode/images
-[github-focus-mode]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/focus-mode
+[github-focus-mode-icons]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.focus-mode/images
+[github-focus-mode]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.focus-mode
 [mdn-indexeddb]: https://developer.mozilla.org/docs/Web/API/IndexedDB_API
 [runtime-oninstalled]: /docs/extensions/reference/runtime#event-onInstalled
+[tut-focus-mode-step6]: /docs/extensions/mv3/getstarted/tut-focus-mode#step-6
 [tut-reading-time-step1]: /docs/extensions/mv3/getstarted/tut-reading-time#step-1
 [tut-reading-time-step2]: /docs/extensions/mv3/getstarted/tut-reading-time#step-2
 [tut-reading-time]: /docs/extensions/mv3/getstarted/tut-reading-time

@@ -13,7 +13,7 @@ changes to them, and pass information to their parent extension.
 
 ## Understand content script capabilities {: #capabilities }
 
-Content scripts can access Chrome APIs used by their parent extension by exchanging [messages][2]. They can [access extension files][section-files] after declaring them as web-accessible resources.
+Content scripts can access Chrome APIs used by their parent extension by exchanging [messages][2]. They can [access extension files][section-files] after declaring them as [web-accessible resources][34].
 
 Additionally, content scripts can access the following chrome APIs directly:
 
@@ -219,7 +219,7 @@ chrome.scripting
 
 ```js
 chrome.scripting
-  .unregisterContentScript(["session-script"])
+  .unregisterContentScripts({ ids: ["session-script"] })
   .then(() => console.log("un-registration complete"));
 ```
 
@@ -237,15 +237,19 @@ Below we'll look at different versions of an activeTab-based extension.
 
 {% Label %}manifest.json:{% endLabel %}
 
-```json/4-6
+```json/4
 {
   "name": "My extension",
   ...
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "scripting"
   ],
   "background": {
     "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Action Button"
   }
 }
 ```
@@ -280,7 +284,7 @@ function injectedFunction() {
 chrome.action.onClicked.addListener((tab) => {
   chrome.scripting.executeScript({
     target : {tabId : tab.id},
-    function : injectedFunction,
+    func : injectedFunction,
   });
 });
 ```
@@ -290,7 +294,6 @@ Be aware that the injected function is a copy of the function referenced in the
 body must be self contained; references to variables outside of the function will cause the content
 script to throw a [`ReferenceError`][ref-error].
 
-{% if false %}
 When injecting as a function, you can also pass arguments to the function.
 
 ```js
@@ -301,12 +304,11 @@ function injectedFunction(color) {
 chrome.action.onClicked.addListener((tab) => {
   chrome.scripting.executeScript({
     target : {tabId : tab.id},
-    function : injectedFunction,
-    arguments : [ "orange" ],
+    func : injectedFunction,
+    args : [ "orange" ],
   });
 });
 ```
-{% endif %}
 
 ### Exclude matches and globs {: #matchAndGlob }
 
@@ -356,7 +358,7 @@ can only be used to limit which pages will be affected.
 The following extension injects the content script into **https://www.nytimes.com/ health**
 but not into **https://www.nytimes.com/ business** .
 
-```json/6
+```json/5-6
 {
   "name": "My extension",
   ...
@@ -370,13 +372,13 @@ but not into **https://www.nytimes.com/ business** .
   ...
 }
 ```
-```js/2
-chrome.scripting.registerContentScript({
-  id : 1,
+```js/2-3
+chrome.scripting.registerContentScripts([{
+  id : "test",
   matches : [ "https://*.nytimes.com/*" ],
-  exclude_matches : [ "*://*/*business*" ],
+  excludeMatches : [ "*://*/*business*" ],
   js : [ "contentScript.js" ],
-});
+}]);
 ```
 
 Glob properties follow a different, more flexible syntax than [match patterns][24]. Acceptable glob
@@ -413,14 +415,6 @@ This extension injects the content script into **https://www.nytimes.com/arts/in
   ...
 }
 ```
-```js/3
-chrome.scripting.registerContentScript({
-  id : 1,
-  matches : [ "https://*.nytimes.com/*" ],
-  include_globs : [ "*nytimes.com/???s/*" ],
-  js : [ "contentScript.js" ],
-});
-```
 
 This extension injects the content script into **https://history.nytimes.com** and
 **https://.nytimes.com/history**, but not into **https://science.nytimes.com** or
@@ -440,14 +434,6 @@ This extension injects the content script into **https://history.nytimes.com** a
   ...
 }
 ```
-```js/3
-chrome.scripting.registerContentScript({
-  id : 1,
-  matches : [ "https://*.nytimes.com/*" ],
-  exclude_globs : [ "*science*" ],
-  js : [ "contentScript.js" ],
-});
-```
 
 One, all, or some of these can be included to achieve the correct scope.
 
@@ -466,15 +452,6 @@ One, all, or some of these can be included to achieve the correct scope.
   ],
   ...
 }
-```
-```js/2-4
-chrome.scripting.registerContentScript({
-  matches : [ "https://*.nytimes.com/*" ],
-  exclude_matches : [ "*://*/*business*" ],
-  include_globs : [ "*nytimes.com/???s/*" ],
-  exclude_globs : [ "*science*" ],
-  js : [ "contentScript.js" ],
-});
 ```
 
 ### Run time {: #run_time }
@@ -498,12 +475,13 @@ values.
 }
 ```
 
-```js/2
-chrome.scripting.registerContentScript({
+```js/3
+chrome.scripting.registerContentScripts([{
+  id : "test",
   matches : [ "https://*.nytimes.com/*" ],
   runAt : "document_idle",
   js : [ "contentScript.js" ],
-});
+}]);
 ```
 
 <table class="simple">
@@ -564,12 +542,13 @@ tab.
   ...
 }
 ```
-```js/2
-chrome.scripting.registerContentScript({
+```js/3
+chrome.scripting.registerContentScripts([{
+  id: "test",
   matches : [ "https://*.nytimes.com/*" ],
-  all_frames : true,
+  allFrames : true,
   js : [ "contentScript.js" ],
-});
+}]);
 ```
 
 <table class="simple">
@@ -796,6 +775,7 @@ window.setTimeout(() => animate(elmt_id), 200);
 [30]: https://en.wikipedia.org/wiki/Man-in-the-middle_attack
 [31]: #functionality
 [33]: /docs/extensions/reference/permissions
+[34]: /docs/extensions/mv3/manifest/web_accessible_resources/
 
 [api-get-registered-cs]: /docs/extensions/reference/scripting/#method-getRegisteredContentScripts
 [api-register-cs]: /docs/extensions/reference/scripting/#method-registerContentScripts

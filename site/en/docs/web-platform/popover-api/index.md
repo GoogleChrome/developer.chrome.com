@@ -7,10 +7,10 @@ authors:
   - chrisdavidmills
   - jheyy
 date: 2022-10-19
-updated: 2022-11-10
+updated: 2023-01-25
 ---
 
-The Popover API provides developers with a standard, consistent, flexible mechanism for displaying popover content on top of other page content. Popovers can be light dismissed with a close signal. Close signals include closing by clicking out of the popover or pressing <kbd>Esc</kbd>, and opening other [non-ancestral popovers](https://open-ui.org/components/popup.research.explainer#nearest-open-ancestral-popover). Typical use cases include user-interactive elements like action menus, form element suggestions, content pickers, teaching UI, and the Listbox portion of a `<select>` control.
+The Popover API provides developers with a standard, consistent, flexible mechanism for displaying popover content on top of other page content. Popovers can be light dismissed with a close signal. Close signals include closing by clicking out of the popover or pressing <kbd>Esc</kbd>, and opening other [non-ancestral popovers](https://open-ui.org/components/popover.research.explainer#nearest-open-ancestral-popover). Typical use cases include user-interactive elements like action menus, form element suggestions, content pickers, teaching UI, and the Listbox portion of a `<select>` control.
 
 ## Current status
 
@@ -21,7 +21,7 @@ The Popover API provides developers with a standard, consistent, flexible mechan
 
 ## Concepts and usage
 
-Popovers are used constantly, all over the web. Developers keep having to reimplement popover styling, positioning and z-index stacking, focus management, keyboard interactions, and accessibility semantics for each new project. As well as duplication of work, this has also resulted in an inconsistent end-user experience across different apps. In answer to this, the [Open UI group](https://open-ui.org/) published a [proposal for the Popover API](https://open-ui.org/components/popup.research.explainer).
+Popovers are used constantly, all over the web. Developers keep having to reimplement popover styling, positioning and z-index stacking, focus management, keyboard interactions, and accessibility semantics for each new project. As well as duplication of work, this has also resulted in an inconsistent end-user experience across different apps. In answer to this, the [Open UI group](https://open-ui.org/) published a [proposal for the Popover API](https://open-ui.org/components/popover.research.explainer).
 
 Any HTML element can be turned into a popover using the [`popover`](/docs/web-platform/popover-api/popover-attribute) attribute. The Popover API provides the following default behavior:
 
@@ -29,8 +29,8 @@ Any HTML element can be turned into a popover using the [`popover`](/docs/web-pl
 * Popovers are also given a default fixed position in the center of the viewport, padding, and a border.
 * When shown, popovers are promoted to the [top layer](/blog/what-is-the-top-layer/) (above `document` and outside of `document` flow).
 * Popovers have light dismiss. By that, we mean you can close the popover with a close signal, such as clicking outside the popover, keyboard-navigating to another element, or pressing the Esc key.
-* Popovers are designed to be accessible, with an element defined as a popover trigger automatically getting [`aria-haspopup`](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) semantics. In addition, focus into the popover can be controlled using `autofocus` and, when the popover is light dismissed, a heuristic determines where focus should go next. For example, focus could go back to the previously-focused element, or an element clicked outside of the popover. See [Focus Management](https://open-ui.org/components/popup.research.explainer#focus-management) for more details.
-* Opening a popover dismisses other popovers that are not [ancestral popovers](https://open-ui.org/components/popup.research.explainer#nearest-open-ancestral-popover).
+* Popovers are designed to be accessible, with an element defined as a popover trigger automatically getting [`aria-haspopup`](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) semantics. In addition, focus into the popover can be controlled using `autofocus` and, when the popover is light dismissed, a heuristic determines where focus should go next. For example, focus could go back to the previously-focused element, or an element clicked outside of the popover. See [Focus Management](https://open-ui.org/components/popover.research.explainer#focus-management) for more details.
+* Opening a popover dismisses other popovers that are not [ancestral popovers](https://open-ui.org/components/popover.research.explainer#nearest-open-ancestral-popover).
 
 {% Aside 'key-term' %}
 A _popover trigger_ is an element that causes a change in the state of the popover it is associated with, for example a `<button>` that shows and dismisses the popover.
@@ -189,4 +189,4 @@ Your feedback on the API is welcome. [Send an email](mailto:public-open-ui@w3.or
 
 * [Pop-ups: They're making a resurgence!](/blog/pop-ups-theyre-making-a-resurgence/), by Jhey Tompkins
 * [Chrome Platform Status: The Popover API](https://chromestatus.com/feature/5463833265045504) 
-* [Open UI: Popover API Explainer](https://open-ui.org/components/popup.research.explainer)
+* [Open UI: Popover API Explainer](https://open-ui.org/components/popover.research.explainer)

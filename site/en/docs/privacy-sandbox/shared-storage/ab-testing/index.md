@@ -48,7 +48,7 @@ In this example:
 *   `ab-testing.js` should be embedded in a frame, which maps a control and two experiment contents. The script calls the shared storage worklet for the experiment.
 *   `ab-testing-worklet.js`  is the shared storage worklet that returns which group the user is assigned to, determining which ad is shown.
 
-**[ab-testing.js](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/advertiser/ab-testing.js)**
+**[ab-testing.js](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/content-producer/url-selection/ab-testing.js)**
 
 ```js
 // Randomly assigns a user to a group 0 or 1
@@ -81,7 +81,7 @@ async function injectContent() {
 injectContent();
 ```
 
-**[ab-testing-worklet.js](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/advertiser/ab-testing-worklet.js)**
+**[ab-testing-worklet.js](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/content-producer/url-selection/ab-testing-worklet.js)**
 
 ```js
 class SelectURLOperation {

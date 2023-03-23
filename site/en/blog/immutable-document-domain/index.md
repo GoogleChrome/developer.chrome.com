@@ -223,12 +223,10 @@ even after it becomes immutable by default.
 
 ### Configure `OriginAgentClusterDefaultEnabled` for enterprise policy {: #enterprise-policy}
 
-Optionally, if you are using [Chrome
-Enterprise](https://chromeenterprise.google/), your admin can configure
-`OriginAgentClusterDefaultEnabled` policy to `false` to make `document.domain`
-settable by default on Chrome instances across your organization. To learn more,
-read [Chrome Enterprise Policy List & Management |
-Documentation](https://chromeenterprise.google/policies/#OriginAgentClusterDefaultEnabled)
+Optionally, your admin can configure `OriginAgentClusterDefaultEnabled` policy
+to `false` to make `document.domain` settable by default on Chrome instances
+across your organization. To learn more, read [Chrome Enterprise Policy List &
+Management | Documentation](https://chromeenterprise.google/policies/#OriginAgentClusterDefaultEnabled).
 
 ## Browser compatibility
 

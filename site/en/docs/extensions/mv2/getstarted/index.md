@@ -437,7 +437,7 @@ What's next?
 [declarative-content]: /declarativeContent
 [developer-chrome-docs]: /docs/
 [devguide-mv2]: /docs/extensions/mv2/devguide/
-[get-started-sample]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/mv2-archive/tutorials/get_started_complete
+[get-started-sample]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/_archive/mv2/tutorials/get_started_complete
 [icons]: /user_interface#icons
 [images-zip]: https://storage.googleapis.com/web-dev-uploads/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/qwlTyQ1ah3RmqsgDhRkL.zip "images.zip"
 [manifest]: /docs/extensions/mv2/manifest

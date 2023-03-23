@@ -10,7 +10,7 @@ tags:
   - css
   - html
 date: 2022-09-13
-last_updated: 2022-12-01
+last_updated: 2023-01-25
 ---
 
 {% Aside 'caution' %}
@@ -29,13 +29,13 @@ There are often two major concerns when building popovers:
 - How to make sure it gets placed above the rest of your content in an appropriate place.
 - How to make it accessible (keyboard friendly, focusable, and so on).
 
-The built-in Popover API has a [variety of goals](https://open-ui.org/components/popup.research.explainer#goals), all with the same overarching goal of making it easy for developers to build this pattern. Notable of those goals are:
+The built-in Popover API has a [variety of goals](https://open-ui.org/components/popover.research.explainer#goals), all with the same overarching goal of making it easy for developers to build this pattern. Notable of those goals are:
 
 - Make it easy to display an element and its descendants above the rest of the document.
 - Make it accessible.
 - Not require JavaScript for most common behaviors  (light dismiss, singleton, stacking, and so on).
 
-You can check out the full spec for pop-ups on the [OpenUI site](https://open-ui.org/components/popup.research.explainer).
+You can check out the full spec for pop-ups on the [OpenUI site](https://open-ui.org/components/popover.research.explainer).
 
 ## Browser compatibility
 
@@ -382,7 +382,7 @@ The Popover API allows you to specify three types of popover which differ in beh
   - related by triggering attributes on child elements such as `popovertoggletarget`, `popovershowtarget`, and so on.
   - related by the `anchor` attribute (Under development CSS Anchoring API).
 - Light dismiss.
-- Opening dismisses other popovers that are not [ancestral popovers](https://open-ui.org/components/popup.research.explainer#nearest-open-ancestral-popover). Have a play with the demo below that highlights how nesting with ancestral popovers works. See how changing some of the `popoverhidetarget`/`popovershowtarget` instances to `popovertoggletarget` changes things.
+- Opening dismisses other popovers that are not [ancestral popovers](https://open-ui.org/components/popover.research.explainer#nearest-open-ancestral-popover). Have a play with the demo below that highlights how nesting with ancestral popovers works. See how changing some of the `popoverhidetarget`/`popovershowtarget` instances to `popovertoggletarget` changes things.
 - Light dismissing one dismisses all, but dismissing one in the stack only dismisses those above it in the stack.
 
 {% Codepen {
@@ -512,7 +512,7 @@ This demo has popovers with audible pops, so we'll need JavaScript to play the a
 
 Accessibility is at the forefront of thinking with the Popover API. Accessibility mappings associate the popover with its trigger element, as needed. This means you don't need to declare `aria-*` attributes such as `aria-haspopup`, assuming you use one of the triggering attributes like `popovertoggletarget`.
 
-For focus management, you can use the autofocus attribute to move focus to an element inside a popover. This is the same as for a Dialog, but the difference comes when returning focus, and that's because of light dismiss. In most cases, closing a popover returns focus to the previously focused element. But focus gets moved to a clicked element on light dismiss, if it can get focus. Check out the [section about focus management](https://open-ui.org/components/popup.research.explainer#focus-management) in the explainer.
+For focus management, you can use the autofocus attribute to move focus to an element inside a popover. This is the same as for a Dialog, but the difference comes when returning focus, and that's because of light dismiss. In most cases, closing a popover returns focus to the previously focused element. But focus gets moved to a clicked element on light dismiss, if it can get focus. Check out the [section about focus management](https://open-ui.org/components/popover.research.explainer#focus-management) in the explainer.
 
 
 {% Codepen {
@@ -932,7 +932,7 @@ This demo shows how you could use popover to implement a floating action button 
 
 So, that’s an intro to popover, coming down the road as part of the Open UI initiative. Used sensibly, it’s going to be a fantastic addition to the web platform.
 
-Be sure to check out [Open UI](https://open-ui.org). The [popover explainer](https://open-ui.org/components/popup.research.explainer/) is kept up to date as the API evolves. And here's [the collection](https://codepen.io/collection/vBJmGx) for all the demos.
+Be sure to check out [Open UI](https://open-ui.org). The [popover explainer](https://open-ui.org/components/popover.research.explainer/) is kept up to date as the API evolves. And here's [the collection](https://codepen.io/collection/vBJmGx) for all the demos.
 
 Thanks for “popping” by!
 
