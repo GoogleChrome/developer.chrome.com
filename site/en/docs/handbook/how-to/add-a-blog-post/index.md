@@ -44,6 +44,25 @@ shortcode snippet, it should look like this:
 
 Paste that into the `hero` field in your YAML frontmatter.
 
+#### YouTube videos as heroes
+
+Alternatively, you can replace the hero field in your YAML frontmatter with
+the hero_youtube_id field, for example:
+```diff
+- hero: 'image/BrQidfK9jaQyIHwdw91aVpkPiib2/EnMzOm0mBytBA3AzlCG6.png'
++ hero_youtube_id: 'PupwBARjaYU'
+```
+
+If this is done, the thumbnail field is required.
+
+```diff
++ thumbnail: 'image/BrQidfK9jaQyIHwdw91aVpkPiib2/EnMzOm0mBytBA3AzlCG6.png'
+```
+
+This results in the thumbnail being displayed on pages referencing the
+article, such as the blog index page, and a YouTube video embed being
+displayed on the article page where the hero image otherwise would be.
+
 ### Social sharing image 
 
 Social sharing image is the visual thumbnail that appears when a post or page 

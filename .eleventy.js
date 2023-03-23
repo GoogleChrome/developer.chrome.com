@@ -14,6 +14,7 @@ const {githubLink} = require('./site/_filters/github-link');
 const {namespaceToPath} = require('./site/_filters/namespace');
 const mdFilters = require('./site/_filters/md');
 const {slugify} = require('./site/_filters/slugify');
+const {ensureUniqueHrefInProduction} = require('./site/_filters/ensureUniqueHrefInProduction');
 const {toc} = require('./site/_filters/toc');
 const {updateSvgForInclude} = require('webdev-infra/filters/svg');
 const {minifyHtml} = require('webdev-infra/filters/minifyHtml');
@@ -38,6 +39,7 @@ const {Aside} = require('./site/_shortcodes/Aside');
 const includeRaw = require('./site/_shortcodes/includeRaw');
 const {LanguageList} = require('./site/_shortcodes/LanguageList');
 const {Partial} = require('./site/_shortcodes/Partial');
+const {ChromeDate} = require('./site/_shortcodes/ChromeDate');
 const {BrowserCompat} = require('webdev-infra/shortcodes/BrowserCompat');
 const {YouTubePlaylist} = require('./site/_shortcodes/YouTubePlaylist');
 
@@ -127,6 +129,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('updateSvgForInclude', updateSvgForInclude);
   eleventyConfig.addFilter('slugify', slugify);
   eleventyConfig.addFilter('toc', toc);
+  eleventyConfig.addFilter('ensureUniqueHrefInProduction', ensureUniqueHrefInProduction);
   eleventyConfig.addFilter('typeof', x => typeof x);
   eleventyConfig.addNunjucksAsyncFilter('minifyHtml', minifyHtml);
 
@@ -153,6 +156,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addShortcode('BrowserCompat', BrowserCompat);
   eleventyConfig.addNunjucksAsyncShortcode('Partial', Partial);
   eleventyConfig.addAsyncShortcode('YouTubePlaylist', YouTubePlaylist);
+  eleventyConfig.addShortcode('ChromeDate', ChromeDate);
 
   // Empty shortcodes. They are added for backward compatibility with web.dev.
   // They will not render any html, but will prevent the build from failing.

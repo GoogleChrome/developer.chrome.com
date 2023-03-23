@@ -1,6 +1,9 @@
 # The top-level keys in this file are used to generate tag pages under /tags/<tag>, presuming
 # they have at least one matching post.
 
+example:
+  en: Example
+
 memory:
   en: Memory
 

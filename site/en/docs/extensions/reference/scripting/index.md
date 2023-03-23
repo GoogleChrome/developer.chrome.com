@@ -2,17 +2,15 @@
 api: scripting
 ---
 
-## Manifest
+## Manifest {: #manifest }
 
-In order to use the `chrome.scripting` API, you need to specify a
-`"manifest_version"` of `3` or higher and include the `"scripting"` permission
-in your [manifest file][manifest].
+To use the `chrome.scripting` API, declare the `"scripting"` permission in the [manifest][manifest] plus the host permissions for the pages to inject scripts into. Use the [`"host_permissions"`][match-patterns] key or the [activeTab][activetab] permission, which grants temporary host permissions. The following example uses the activeTab permission.
 
 ```json
 {
   "name": "Scripting Extension",
   "manifest_version": 3,
-  "permissions": ["scripting"],
+  "permissions": ["scripting", "activeTab"],
   ...
 }
 ```
@@ -21,7 +19,7 @@ in your [manifest file][manifest].
 
 You can use the `chrome.scripting` API to inject JavaScript and CSS into
 websites. This is similar to what you can do with [content
-scripts][contentscripts]. But by using the [`chrome.scripting` namespace](/docs/extensions/reference/scripting/), extensions
+scripts][contentscripts]. But by using the [`chrome.scripting`](/docs/extensions/reference/scripting/) namespace, extensions
 can make decisions at runtime.
 
 ### Injection targets
@@ -66,8 +64,7 @@ function getTabId() { ... }
 
 chrome.scripting
     .executeScript({
-      target : {tabId : getTabId()},
-      frameIds : [ frameId1, frameId2 ],
+      target : {tabId : getTabId(), frameIds : [ frameId1, frameId2 ]},
       files : [ "script.js" ],
     })
     .then(() => console.log("script injected on target frames"));
@@ -248,15 +245,17 @@ async function unregisterAllDynamicContentScripts() {
 }
 ```
 
-{% Aside %}
+{% Aside 'important' %}
 
 Unregistering content scripts will not remove scripts or styles that have
 already been injected.
 
 {% endAside %}
 
-[manifest]: /docs/extensions/mv3/manifest
+[activetab]: /docs/extensions/mv3/manifest/activeTab/
 [contentscripts]: /docs/extensions/mv3/content_scripts
-[webnavigation]: /docs/extensions/reference/webNavigation
-[storage]: /docs/extensions/reference/storage
+[manifest]: /docs/extensions/mv3/manifest
+[match-patterns]: /docs/extensions/mv3/match_patterns
 [messaging]: /docs/extensions/mv3/messaging
+[storage]: /docs/extensions/reference/storage
+[webnavigation]: /docs/extensions/reference/webNavigation

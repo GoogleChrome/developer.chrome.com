@@ -27,9 +27,9 @@ tags:
 
 <!-- ## Recorder: Copy as options for steps, in-page replay, step’s context menu {: #recorder } -->
 
-## Recorder: ステップごとのCopy asオプション、ページ内リプレイ、ステップのコンテキストメニュー {: #recorder } 
+## Recorder: ステップごとのCopy asオプション、ページ内リプレイ、ステップのコンテキストメニュー {: #recorder }
 
-<!-- 
+<!--
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/uCqjrGj716ZbDJ4N37dl.png", alt="New copy options in the Recorder panel.", width="800", height="615" %}
 -->
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/uCqjrGj716ZbDJ4N37dl.png", alt="Recorder パネルの新しいコピーオプション", width="800", height="615" %}
@@ -53,7 +53,7 @@ Chromium issues: [1322313](https://crbug.com/1322313), [1351649](https://crbug.c
 <!-- ## Show actual function names in performance’s recordings {: #performance } -->
 ## パフォーマンスの記録の中で実際の関数名を表示 {: #performance }
 
-<!-- The **Performance** panel now shows the actual function names and their sources in the trace if there’s a sourcemap. -->
+<!-- The **Performance** panel now shows the actual function names and their sources in the trace if there’s a source map. -->
 ソースマップが存在すれば、**Performance**パネルのトレース内で実際の関数名とそのソースが表示されるようになりました。
 
 <!--
@@ -113,17 +113,17 @@ Chromium issue: [1167965](https://crbug.com/1167965), [1172535](https://crbug.co
 <!-- - `new.target` is a meta-property that lets you detect whether a function or constructor was called using the new operator. You can now log `new.target` in the **Console** to check its value during debugging. Previously, it would return errors when you entered `new.target`.
    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hKOEn03BZN2IUmWJ1Hho.png", alt="Show before and after comparison of new.target evaluation debugging.", width="800", height="499" %}
 - A `WeakRef` object lets you hold a weak reference to another object, without preventing that object from getting garbage-collected. DevTools now shows an inline preview for the value and evaluates the weak reference directly in the console during debugging. Previously, you had to explicitly call “deref” on them to resolve it.
-   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/M7DP4bI7pA07oY7M21wF.png", alt="Show before and after comparison of WeakRef evaluation during debugging.", width="800", height="453" %} 
+   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/M7DP4bI7pA07oY7M21wF.png", alt="Show before and after comparison of WeakRef evaluation during debugging.", width="800", height="453" %}
 - Fixed inline preview for shadowed variable. Previously, the display value was incorrect.
-   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XHL8pnBxhZ65ni7zYV0Q.png", alt="Show before and after comparison inline preview for shadowed variable.", width="800", height="519" %} 
+   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XHL8pnBxhZ65ni7zYV0Q.png", alt="Show before and after comparison inline preview for shadowed variable.", width="800", height="519" %}
 - Deobfuscate variable names in `Generator` and `async` functions in the **Scope** pane in the **Sources** panel. -->
 
 - `new.target` はメタプロパティで、このプロパティを使用すると関数やコンストラクタが new 演算子を使用して呼び出されたものかどうかを確認できます。 **Console** で `new.target` をログ出力してデバッグ中にその値を確認できるようになりました。これまでは、`new.target` を入力するとエラーになっていました。
    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hKOEn03BZN2IUmWJ1Hho.png", alt="Show before and after comparison of new.target evaluation debugging.", width="800", height="499" %}
 - `WeakRef` オブジェクトを使用すると、別のオブジェクトがガーベジコレクタに回収されることを妨げないように、そのオブジェクトの弱参照を保持できます。 DevTools はその値をインラインプレビューし、デバッグ中にコンソール内で直接弱参照を評価できるようになりました。これまでは、明示的に `deref` を呼び出して解決する必要がありました。
-   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/M7DP4bI7pA07oY7M21wF.png", alt="Show before and after comparison of WeakRef evaluation during debugging.", width="800", height="453" %} 
+   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/M7DP4bI7pA07oY7M21wF.png", alt="Show before and after comparison of WeakRef evaluation during debugging.", width="800", height="453" %}
 - シャドウされた変数のインラインプレビューが修正されました。これまでは、表示される値が間違っていました。
-   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XHL8pnBxhZ65ni7zYV0Q.png", alt="Show before and after comparison inline preview for shadowed variable.", width="800", height="519" %} 
+   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XHL8pnBxhZ65ni7zYV0Q.png", alt="Show before and after comparison inline preview for shadowed variable.", width="800", height="519" %}
 - **Sources** パネル内の **Scope** ペインで、`Generator` と `async` 関数内の変数名の難読化を解除
 
 
@@ -193,7 +193,7 @@ Chromium issues: [1267690](https://crbug.com/1267690), [1246863](https://crbug.c
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ytfyl8qK5rkHQRTS3sXf.png", alt="Show Breakpoint pane before and after the redesign.", width="800", height="684" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f2140378e0bb1687b263c226de01b741487ff324 #}
-Chromium issues: [1346231](https://crbug.com/1346231), [1324904](https://crbug.com/1324904) 
+Chromium issues: [1346231](https://crbug.com/1346231), [1324904](https://crbug.com/1324904)
 
 
 <!-- ## [Experimental] Automatic in-place pretty print -->

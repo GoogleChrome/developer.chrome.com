@@ -197,7 +197,7 @@ chriswilson:
   title:
     en: 'Chris Wilson'
   description:
-    en: 'Chris is a contributor to Chrome Developers'
+    en: 'Chrome Web Standards Lead'
 renatomangini:
   title:
     en: 'Renato Mangini'
@@ -563,12 +563,6 @@ beaufortfrancois:
 reillyg:
   title:
     en: Reilly Grant
-    es: Reilly Grant
-    ja: Reilly Grant
-    ko: Reilly Grant
-    pt: Reilly Grant
-    ru: Reilly Grant
-    zh: Reilly Grant
   description:
     en: Software Engineer on Google Chrome focusing on hardware APIs
     es: Ingeniero de software en Google Chrome centrado en las API de hardware
@@ -792,13 +786,6 @@ twifkak:
 jheyy:
   title:
     en: 'Jhey Tompkins'
-    es: 'Jhey Tompkins'
-    it: 'Jhey Tompkins'
-    ja: 'Jhey Tompkins'
-    ko: 'Jhey Tompkins'
-    pt: 'Jhey Tompkins'
-    ru: 'Jhey Tompkins'
-    zh: 'Jhey Tompkins'
   description:
     en: 'Whimsy Dev Supreme! Developer Relations Engineer @ Google'
     es: '¡Extravagante Dev Supremo! Ingeniero de Relaciones con los Desarrolladores @ Google'
@@ -896,12 +883,6 @@ miriamsuzanne:
 tunetheweb:
   title:
     en: Barry Pollard
-    es: Barry Pollard
-    ja: Barry Pollard
-    ko: Barry Pollard
-    pt: Barry Pollard
-    ru: Barry Pollard
-    zh: Barry Pollard
   description:
     en: Web Performance Developer Advocate for Google
     es: Rendimiento web aesarrollador partidario para Google
@@ -948,12 +929,6 @@ jney:
 bramus:
   title:
     en: Bramus
-    es: Bramus
-    ja: Bramus
-    ko: Bramus
-    pt: Bramus
-    ru: Bramus
-    zh: Bramus
   description:
     en: Developer Advocate for CSS, UI, and DevTools at Chrome
     es: Desarrollador partidario para CSS, UI y DevTools en Chrome
@@ -970,12 +945,6 @@ victorporof:
 leenasohoni:
   title:
     en: Leena Sohoni
-    es: Leena Sohoni
-    ja: Leena Sohoni
-    ko: Leena Sohoni
-    pt: Leena Sohoni
-    ru: Leena Sohoni
-    zh: Leena Sohoni
   description:
     en: Freelance technical analyst and writer
     es: Analista técnica / escritora independiente
@@ -987,12 +956,6 @@ leenasohoni:
 karaerickson:
   title:
     en: Kara Erickson
-    es: Kara Erickson
-    ja: Kara Erickson
-    ko: Kara Erickson
-    pt: Kara Erickson
-    ru: Kara Erickson
-    zh: Kara Erickson
   description:
     en: Software Engineer on the Aurora team at Chrome.
     es: Ingeniera de software en el equipo de Aurora en Chrome.
@@ -1004,12 +967,6 @@ karaerickson:
 mgechev:
   title:
     en: Minko Gechev
-    es: Minko Gechev
-    ja: Minko Gechev
-    ko: Minko Gechev
-    pt: Minko Gechev
-    ru: Minko Gechev
-    zh: Minko Gechev
   description:
     en: Our latest news, updates, and stories by Minko Gechev.
     es: Consulte las últimas noticias, actualizaciones e historias publicadas por Minko Gechev.
@@ -1021,12 +978,6 @@ mgechev:
 alexcastle:
   title:
     en: Alex Castle
-    es: Alex Castle
-    ja: Alex Castle
-    ko: Alex Castle
-    pt: Alex Castle
-    ru: Alex Castle
-    zh: Alex Castle
   description:
     en: Software Engineer on the Aurora team at Chrome.
     es: Ingeniero de software en el equipo de Aurora en Chrome.
@@ -1038,12 +989,6 @@ alexcastle:
 shubhie:
   title:
     en: Shubhie Panicker
-    es: Shubhie Panicker
-    ja: Shubhie Panicker
-    ko: Shubhie Panicker
-    pt: Shubhie Panicker
-    ru: Shubhie Panicker
-    zh: Shubhie Panicker
   description:
     en: Tech Lead Manager on the Chrome Web Platform team
     es: Gerente principal de tecnología de la plataforma web de Chrome
@@ -1055,12 +1000,6 @@ shubhie:
 keenyeeliau:
   title:
     en: Keen Yee Liau
-    es: Keen Yee Liau
-    ja: Keen Yee Liau
-    ko: Keen Yee Liau
-    pt: Keen Yee Liau
-    ru: Keen Yee Liau
-    zh: Keen Yee Liau
   description:
     en: Software Engineer on the Aurora team at Chrome.
     es: Ingeniera de software en el equipo de Aurora en Chrome.
@@ -1217,12 +1156,6 @@ adamsilverstein:
 djuffin:
   title:
     en: Eugene Zemtsov
-    es: Eugene Zemtsov
-    ja: Eugene Zemtsov
-    ko: Eugene Zemtsov
-    pt: Eugene Zemtsov
-    ru: Eugene Zemtsov
-    zh: Eugene Zemtsov
   description:
     en: Our latest news, updates, and stories by Eugene Zemtsov.
     es: Consulte las últimas noticias, actualizaciones e historias publicadas por Eugene Zemtsov.
@@ -1234,12 +1167,6 @@ djuffin:
 nateschloss:
   title:
     en: Nate Schloss
-    es: Nate Schloss
-    ja: Nate Schloss
-    ko: Nate Schloss
-    pt: Nate Schloss
-    ru: Nate Schloss
-    zh: Nate Schloss
   description:
     en: Our latest news, updates, and stories by Nate Schloss.
     es: Consulte las últimas noticias, actualizaciones e historias publicadas por Nate Schloss.
@@ -1251,12 +1178,6 @@ nateschloss:
 andrewcomminos:
   title:
     en: Andrew Comminos
-    es: Andrew Comminos
-    ja: Andrew Comminos
-    ko: Andrew Comminos
-    pt: Andrew Comminos
-    ru: Andrew Comminos
-    zh: Andrew Comminos
   description:
     en: Our latest news, updates, and stories by Andrew Comminos.
     es: Consulte las últimas noticias, actualizaciones e historias publicadas por Andrew Comminos.
@@ -1268,12 +1189,6 @@ andrewcomminos:
 alexshalamov:
   title:
     en: Alex Shalamov
-    es: Alex Shalamov
-    ja: Alex Shalamov
-    ko: Alex Shalamov
-    pt: Alex Shalamov
-    ru: Alex Shalamov
-    zh: Alex Shalamov
   description:
     en: Alex is an Engineer at Intel
     es: Alex es un ingeniero en Intel
@@ -1285,12 +1200,6 @@ alexshalamov:
 pozdnyakov:
   title:
     en: Mikhail Pozdnyakov
-    es: Mikhail Pozdnyakov
-    ja: Mikhail Pozdnyakov
-    ko: Mikhail Pozdnyakov
-    pt: Mikhail Pozdnyakov
-    ru: Mikhail Pozdnyakov
-    zh: Mikhail Pozdnyakov
   description:
     en: Mikhail is an Engineer at Intel
     es: Mikhail es un ingeniero en Intel
@@ -1304,6 +1213,11 @@ mstensho:
     en: Morten Stenshorne
   description:
     en: Morten is a layout engineer on the Blink team at Google.
+example:
+  title:
+    en: Example author
+  description:
+    en: Used for testing purposes, no real author.
 sarino:
   title:
     en: Sarino Grasso
@@ -1317,12 +1231,6 @@ ianstanion:
 exterkamp:
   title:
     en: Shane Exterkamp
-    es: Shane Exterkamp
-    ja: Shane Exterkamp
-    ko: Shane Exterkamp
-    pt: Shane Exterkamp
-    ru: Shane Exterkamp
-    zh: Shane Exterkamp
   description:
     en: Shane is a SWE on Lighthouse
     es: Shane es un Ingeniero de software en Lighthouse
@@ -1356,6 +1264,16 @@ tristramsouthey:
     en: 'Tristram Southey'
   description:
     en: 'Product Manager, Google Chrome'
+kyraseevers:
+  title:
+    en: 'Kyra Seevers'
+  description:
+    en: 'Software Engineer, Google Chrome'
+jyasskin:
+  title:
+    en: 'Jeffrey Yasskin'
+  description:
+    en: 'Chrome Web Standards Lead'
 peterkvitek:
   title:
     en: Peter Kvitek
@@ -1394,3 +1312,40 @@ uskay:
     pt: Consultor técnico para a web, Chrome e AMP
     ru: Технический консультант по веб-разработке, Chrome и AMP
     zh: 网络、Chrome 和 AMP 技术顾问
+janicklasralphj:
+  title:
+    en: Janicklas Ralph James
+  description:
+    en: Software Engineer on the Aurora team at Chrome.
+    es: Ingeniera de software en el equipo de Aurora en Chrome.
+    ja: ChromeのAuroraチームのソフトウェアエンジニア。
+    ko: Chrome에서 Aurora 팀의 소프트웨어 엔지니어입니다.
+    pt: Engenheiro de software da equipe Aurora no Chrome.
+    ru: Инженер-программист в команде Aurora в Chrome.
+    zh: Chrome 公司 Aurora 团队的软件工程师。
+mattreynolds:
+  title:
+    en: Matt Reynolds
+  description:
+    en: Matt is a software developer
+    es: Matt es un desarrollador de software
+    ja: Matt はソフトウェア開発者です
+    ko: Matt는 소프트웨어 개발자입니다.
+    pt: Matt é um desenvolvedor de software
+    ru: Мэтт — разработчик программного обеспечения
+    zh: Matt 是一名软件开发者
+pbirk:
+  title:
+    en: Peter Birk Pakkenberg
+  description:
+    en: Software Engineer, Android
+pjl:
+  title:
+    en: Philip Lee
+  description:
+    en: Software Engineer
+georgiafranklin:
+  title:
+    en: Georgia Franklin
+  description:
+    en: Product Manager, Privacy Sandbox	

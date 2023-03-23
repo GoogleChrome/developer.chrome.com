@@ -5,7 +5,7 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2017-01-04
-updated: 2022-08-30
+updated: 2023-03-07
 description: "Learn how to use Chrome DevTools to find and fix JavaScript bugs."
 tags:
   - get-started
@@ -22,10 +22,7 @@ on, or watch the video version of this tutorial, below.
 Finding a series of actions that consistently reproduces a bug is always the first step to
 debugging.
 
-1.  Click **Open Demo**. The demo opens in a new tab.
-
-    <a href="https://googlechrome.github.io/devtools-samples/debug-js/get-started" target="_blank">Open Demo</a>
-
+1.  [Open this demo](https://googlechrome.github.io/devtools-samples/debug-js/get-started) in a new tab.
 2.  Enter `5` in the **Number 1** text box.
 3.  Enter `1` in the **Number 2** text box.
 4.  Click **Add Number 1 and Number 2**. The label below the button says `5 + 1 = 51`. The result
@@ -179,7 +176,7 @@ code that you want to pause on, use a line-of-code breakpoint:
     script continues executing until it reaches line 32. On lines 29, 30, and 31, DevTools [shows
     the values](/docs/devtools/javascript/reference/#inline-eval) of `addend1`, `addend2`, and `sum` inline next to their declarations.
 
-{% Img src="image/admin/99Omb7ALyJB7MfYpuqXp.png", alt="DevTools pauses on the line-of-code breakpoint on line 32.", width="800", height="571" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/dDtaoDZ2a8F7mFkhLp9U.png", alt="DevTools pauses on the line-of-code breakpoint on line 32.", width="800", height="554" %}
 
 In this example, DevTools pauses on the line-of-code breakpoint on line 32.
 
@@ -197,7 +194,7 @@ are currently defined, along with the value of each variable. It also shows clos
 applicable. Double-click a variable value to edit it. When you're not paused on a line of code, the
 **Scope** pane is empty.
 
-{% Img src="image/admin/Tynv55DnsSgtvpd6Iz9z.png", alt="The Scope pane.", width="800", height="538" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7Pjgz6fXsYWZB9GLjATQ.png", alt="The Scope pane.", width="800", height="554" %}
 
 ### Method 2: Watch Expressions {: #watch-expressions }
 
@@ -209,10 +206,10 @@ expression in a Watch Expression. Try it now:
 2.  Click **Add Expression**
     {% Img src="image/admin/IYPLvXHyMtjVBILENOIL.png", alt="Add Expression", width="20", height="20" %}.
 3.  Type `typeof sum`.
-4.  Press Enter. DevTools shows `typeof sum: "string"`. The value to the right of the colon is the
+4.  Press <kbd>Enter</kbd>. DevTools shows `typeof sum: "string"`. The value to the right of the colon is the
     result of your Watch Expression.
 
-{% Img src="image/admin/iAZLQFWjCy2kNbYKPGpR.png", alt="The Watch Expression pane.", width="800", height="542" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/srnzLyxWyeSvCA2Bjqzt.png", alt="The Watch Expression pane", width="800", height="554" %}
 
 The screenshot above shows the **Watch Expression** pane (bottom-right) after creating the `typeof sum` watch
 expression. If your DevTools window is large, the **Watch Expression** pane is on the right, above
@@ -227,14 +224,14 @@ In addition to viewing `console.log()` messages, you can also use the Console to
 JavaScript statements. In terms of debugging, you can use the Console to test out potential fixes
 for bugs. Try it now:
 
-1.  If you don't have the Console drawer open, press Escape to open it. It opens at the bottom of
+1.  If you don't have the Console drawer open, press <kbd>Escape</kbd> to open it. It opens at the bottom of
     your DevTools window.
 2.  In the Console, type `parseInt(addend1) + parseInt(addend2)`. This statement works because you
     are paused on a line of code where `addend1` and `addend2` are in scope.
-3.  Press Enter. DevTools evaluates the statement and prints out `6`, which is the result you expect
+3.  Press <kbd>Enter</kbd>. DevTools evaluates the statement and prints out `6`, which is the result you expect
     the demo to produce.
 
-{% Img src="image/admin/Z5dF1m9vAWBnpMG29Ltv.png", alt="The Console drawer, after evaluating parseInt(addend1) + parseInt(addend2).", width="800", height="608" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/KrpBYhxN1iEfKul9qMUV.png", alt="The Console drawer, after evaluating variables that are in scope.", width="800", height="554" %}
 
 The screenshot above shows the **Console** drawer after evaluating `parseInt(addend1) + parseInt(addend2)`.
 

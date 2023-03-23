@@ -12,13 +12,12 @@ extensions. Extensions typically use this feature to expose images or other asse
 loaded in web pages, but any asset included in an extension's bundle can be made web accessible.
 
 By default no resources are web accessible; only pages or scripts loaded from an extension's origin
-can access that extension's resources. Use the `web_accessible_resources`
-manifest property to declare which resources are exposed and to what origins.
+can access that extension's resources. 
 
 {% Aside %}
-Prior to Manifest V2 all resources within an extension could be accessed from any page on the
-web. This allowed a malicious website to [fingerprint][6] the extensions that a user has installed
-or exploit vulnerabilities (for example [XSS bugs][7]) within installed extensions. 
+Before Manifest V2 all resources in an extension could be accessed from any page on the
+web. This allowed a malicious website to [fingerprint][6] extensions that a user has installed
+or exploit vulnerabilities (for example [XSS bugs][7]) in installed extensions. 
 
 Beginning with Manifest V2, access to those resources was limited to protect the privacy of users. Manifest V2
 extensions exposed only those resources explicitly designated as web accessible.
@@ -30,8 +29,9 @@ pages, domains, or extensions.
 
 ## Manifest declaration
 
-An array of objects that declares resource access rules. Each object maps an array of
-extension resources to an array of URLs and/or extension IDs that can access those resources.
+Use the `web_accessible_resources` manifest property to declare which resources are exposed and to
+what origins. This property is an array of objects that declares resource access rules. Each object
+maps an array of extension resources to an array of URLs and/or extension IDs that can access those resources.
 
 ```json
 {
@@ -56,7 +56,7 @@ Each object in the array contains these elements:
 : An array of strings, each containing a relative path to a given resource from the extension's root directory. Resources may contain asterisks (`*`) for wildcard matches. For example, `"/images/*"` exposes everything in the extension's `images/` directory, recursively, while `"*.png"` exposes all PNG files.
 
 `"matches"`
-: An array of strings, each containing a [match pattern](/docs/extensions/mv3/match_patterns/) that specifies which sites can access this set of resources. Only the origin is used to match URLs. Origins include subdomain matching. Paths are ignored. 
+: An array of strings, each containing a [match pattern](/docs/extensions/mv3/match_patterns/) that specifies which sites can access this set of resources. Only the origin is used to match URLs. Origins include subdomain matching. Google Chrome emits an "Invalid match pattern" error if the pattern has a path other than '/'.
 
 `"extension_ids"`
 : An array of strings, each containing the ID of an extension that can access the resources.
@@ -71,9 +71,9 @@ Each element must include a `"resources"` element and either a `"matches"` or `"
 Resources are available in a webpage via the URL
 `chrome-extension://[PACKAGE ID]/[PATH]`, which can be generated with the [`runtime.getURL()`][1]
 method. The resources are served with appropriate [CORS][2] headers, so they're available
-via mechanisms XHR.
+via XHR.
 
-A navigation from a web origin to an extension resource will be blocked unless the resource is
+A navigation from a web origin to an extension resource is blocked unless the resource is
 listed as web accessible. Note these corner cases:
 
 - When an extension uses the [webRequest][3] or [declarativeWebRequest][4] APIs to redirect a public

@@ -23,6 +23,7 @@
       sections:
         - url: /docs/devtools/css/
         - url: /docs/devtools/css/issues/
+        - url: /docs/devtools/css/color/
         - url: /docs/devtools/css/grid/
         - url: /docs/devtools/css/flexbox/
         - url: /docs/devtools/css/container-queries/
@@ -56,6 +57,7 @@
     - url: /docs/devtools/performance/reference/
     - url: /docs/devtools/performance/timeline-reference/
 - url: /docs/devtools/performance-insights/
+- url: /docs/devtools/lighthouse/
 - title: i18n.docs.devtools.memory
   sections:
     - url: /docs/devtools/memory-problems/memory-101/
@@ -69,7 +71,7 @@
     - url: /docs/devtools/storage/sessionstorage/
     - url: /docs/devtools/storage/indexeddb/
     - url: /docs/devtools/storage/websql/
-    - url: /docs/devtools/storage/cookies/
+    - url: /docs/devtools/application/cookies/
     - url: /docs/devtools/storage/cache/
     - url: /docs/devtools/application/back-forward-cache/
     - url: /docs/devtools/javascript/background-services/

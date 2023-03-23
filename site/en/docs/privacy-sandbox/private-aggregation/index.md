@@ -6,23 +6,26 @@ subhead: >
 description: >
    Generate noisy summary reports with cross-site data in a privacy-preserving manner
 date: 2022-10-11
+updated: 2023-03-14
 authors:
    - kevinkiklee
 ---
 
-Privacy Sandbox proposals aim to reduce cross-site tracking while supporting legitimate use cases that respect user’s privacy. It’s important that companies can still measure cross-site data such as reach measurement. To provide critical features that the web relies on, the Private Aggregation API has been proposed for aggregating cross-site data in a privacy-preserving manner. 
+To provide critical features that the web relies on, the Private Aggregation
+API has been proposed for aggregating and reporting on cross-site data in a
+privacy-preserving manner. 
 
 ## Implementation status
 
 This document outlines a new proposal for cross-site measurement.
 
-* The [Private Aggregation API](https://github.com/patcg-individual-drafts/private-aggregation-api/) has entered [public discussion](https://github.com/patcg-individual-drafts/private-aggregation-api/issues).
-* Private Aggregation API is available for testing in Chrome M107+ Canary and Dev.
-* Private Aggregation API is available in the [Privacy Sandbox Unified Origin Trial](/docs/privacy-sandbox/unified-origin-trial/) in Chrome M107+ Beta.
+{% Partial 'privacy-sandbox/timeline/private-aggregation.njk' %}
 
 ## What is the Private Aggregation API
 
-The Private Aggregation API enables aggregate data collection from worklets with access to cross-site data such as [FLEDGE](/docs/privacy-sandbox/fledge/) and [Shared Storage](/docs/privacy-sandbox/shared-storage/). 
+The Private Aggregation API enables aggregate data collection from worklets
+with access to cross-site data such as [FLEDGE](/docs/privacy-sandbox/fledge/)
+and [Shared Storage](/docs/privacy-sandbox/shared-storage/). 
 
 This API proposal provides one operation, `sendHistogramReport()`, but more may be supported in the future. The histogram operation allows you to aggregate data across users in each bucket (known in the API as an aggregation key) you define. Your histogram call accumulates values and returns a noised aggregated result in the form of a summary report. For instance, the report might show the number of sites each user has seen your content on, or come across a bug in your third-party script. This operation is performed within another API’s worklet.
 
@@ -50,7 +53,7 @@ Attribution Reporting associates data gathered from an impression event and a co
 
 The API is available in the [Privacy Sandbox unified origin trial](/docs/privacy-sandbox/unified-origin-trial/) on Chrome Canary and Dev M107 or later. Learn how you can register for a [third-party origin trial](/docs/web-platform/third-party-origin-trials/).
 
-The Private Aggregation API can also be locally tested by enabling the Privacy Sandbox Ads APIs experiment flag at ``chrome://flags/#privacy-sandbox-ads-apis``.
+The Private Aggregation API can also be locally tested by enabling the Privacy Sandbox Ads APIs experiment flag at `chrome://flags/#privacy-sandbox-ads-apis`.
 
 {% Img
 	src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/CWfgCMJQ5cYPOfjttF3k.png",
@@ -58,9 +61,7 @@ The Private Aggregation API can also be locally tested by enabling the Privacy S
 	width="744", height="124"
 %}
 
-{% Aside %}
-At this time, the Aggregation Service back-end and its local testing tool only process aggregatable reports for the Attribution Reporting API. This will be updated to support the Private Aggregation API soon.
-{% endAside %}
+Read more about testing in [experiment and participate](/docs/privacy-sandbox/private-aggregation-experiment/).
 
 ### Use the demo
 

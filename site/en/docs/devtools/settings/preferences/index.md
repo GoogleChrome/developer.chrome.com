@@ -14,7 +14,13 @@ To set preferences, open {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/IFH59J9W2RT4nDN2miTU.png", alt="The Appearance section in the Preferences tab.", width="800", height="812" %}
 
-To find out what each setting does, search this page for the setting's name and expand its description. Some options are checkboxes indicated by {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} icons, others are drop-down lists indicated by {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} icons.
+To find out what each setting does, search this page for the setting's name and expand its description.
+
+This reference indicates different settings with the following icons:
+
+- {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} Checkboxes
+- Drop-down lists {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %}
+- {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/E7duEXTRnleJ5OOJ0f0C.svg", alt="Deprecated.", width="24", height="24" %} Deprecated
 
 To restore default preferences, scroll down to the end of the **Preferences** tab and click **Restore defaults and reload**.
 
@@ -60,11 +66,19 @@ Affects **Elements** > **Styles** and sister tabs, and the **Sources** > **Debug
 </fieldset>
 {% endDetails %}
 
+
 {% Details %}
 
+
 {% DetailsSummary %}
-**Color format** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} sets the format of CSS color values in **Elements** > **Styles**.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/E7duEXTRnleJ5OOJ0f0C.svg", alt="Deprecated.", width="24", height="24" %} **Color format** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} sets the format of CSS color values in **Elements** > **Styles**.
 {% endDetailsSummary %}
+
+{% Aside %}
+**Deprecated**: This settings is disabled to make room for [HD color spaces](/docs/devtools/css/color/).
+
+To re-enable it, clear the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Experiments**](/docs/devtools/settings/experiments/) > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Disable the deprecated Color Format setting** checkbox.
+{% endAside %}
 
 DevTools automatically converts any valid color value to the chosen format.
 
