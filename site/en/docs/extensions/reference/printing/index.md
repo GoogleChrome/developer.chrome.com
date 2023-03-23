@@ -2,7 +2,7 @@
 api: printing
 ---
 
-## Manifest
+## Manifest {: #manifest }
 
 All `chrome.printing` methods and events require you to declare the "printing" permission in the [extension manifest](/docs/extensions/mv3/manifest/). For example:
 
