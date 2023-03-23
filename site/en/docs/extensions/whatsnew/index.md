@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-03-14
+updated: 2023-03-22
 tags:
   - extensions-news
 
@@ -16,12 +16,6 @@ tags:
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about many of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).)
 
-### New Samples: dynamic declarations and programmatic injection {: #dynamic-dec-prog-inject }
-
-<p class="color-secondary-text type--caption">Posted on <time>March 14, 2023</time></p>
-
-We've built a [new sample](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/scripting) for the [`chrome.scripting`](/docs/extensions/reference/scripting/) API. It demonstrates dynamic declarations, where a content script is registered at runtime, and programmatic injection, where a script is executed in a tab that is already open.
-
 ### New Samples: Declarative Net Request use cases {: #dNR-use-cases }
 
 <p class="color-secondary-text type--caption">Posted on <time>March 10, 2023</time></p>
@@ -32,11 +26,15 @@ We've built a [new sample](https://github.com/GoogleChrome/chrome-extensions-sam
 
 <p class="color-secondary-text type--caption">Posted on <time>March 3, 2023</time></p>
 
-From Chrome 112, the quota for the [`storage.session`](/docs/extensions/reference/storage/#property-session) property has been increased to approximately 10 MB. This was agreed to in the Web Extensions Community Group: [https://github.com/w3c/webextensions/issues/350](https://github.com/w3c/webextensions/issues/350)
+From Chrome 112, the quota for the [`storage.session`](/docs/extensions/reference/storage/#property-session) property has been increased to approximately 10 MB. This was agreed to in the Web Extensions Community Group: [https://github.com/w3c/webextensions/issues/350](https://github.com/w3c/webextensions/issues/350).
 
-### Chrome 109: Offscreen documents {: #m109-offscreen-docs}
+### Chrome 110: Relax the fixed maximum lifetime for extension service workers {: #sw-fixed-lifetime }
 
-<p class="color-secondary-text type--caption">Posted on <time>January 25, 2023</time></p>
+Extension service workers were previously terminated a set amount of time after starting. This fixed limit was replaced by an activity-based system. As a result, an extension's service worker is now able to stay alive so long as it is continuously working. For more information, see [Longer service worker extension lifetimes](/blog/longer-esw-lifetimes/).
+
+### Chrome 110: Offscreen documents {: #m109-offscreen-docs} {: #offscreen-documents-api }
+
+<p class="color-secondary-text type--caption">Posted on <time>February 7, 2023</time></p>
 
 Offscreen documents are now available in Manifest V3 extensions. These help with the transition from background pages to extension service workers by providing support for DOM-related features and APIs. For more information, [read the blog post](/blog/Offscreen-Documents-in-Manifest-v3/).
 
@@ -54,17 +52,35 @@ The [`chrome.action.isEnabled()`](/docs/extensions/reference/action/#method-isEn
 
 Previously, an extension service worker would frequently shut down at the five minute mark. We've changed this behavior to more closely resemble service worker lifetime's on the web. An extension service worker will be shut down after either thirty seconds of inactivity or if a single activity takes longer than 5 minutes to process. For more information, see [Longer extension service worker lifetimes](/blog/longer-esw-lifetimes).
 
+### Chrome 110: Sandboxed page CSP can't be customized {: #sandboxed-csp }
+
+<p class="color-secondary-text type--caption">Posted on <time>February 7, 2023</time></p>
+
+Declaring a custom sandboxed page content security policy in the extension's `manifest.json` does not override the default content security policy. This prevents extensions from integrating with services that require their scripts or iframes to be remotely loaded.
+
 ### Post: Pausing Manifest V2 phase-out
 
 <p class="color-secondary-text type--caption">Posted on <time>December 9, 2022</time></p>
 
 The Manifest V2 deprecation timelines are under review and the experiments scheduled for early 2023 are being postponed. For more information, [read the update](https://groups.google.com/u/1/a/chromium.org/g/chromium-extensions/c/zQ77HkGmK9E) in the chromium-extensions Google Group.
 
+### Chrome 108: webRequest.onAuthRequired events {: #webrequest-onauthrequired }
+
+<p class="color-secondary-text type--caption">Posted on <time>November 29, 2022</time></p>
+
+User-installed Manifest V3 extensions could not intercept `webRequest.onAuthRequired` events because the `webRequestBlocking` permission is restricted to policy-installed extensions. Chrome now allows extensions with the `webRequest` and `webRequestAuthProvider` permissions to asynchronously supply credentials for `onAuthRequired` events.
+
 ### Chrome 108: Setting badge colors {: #m110-badge-color }
 
 <p class="color-secondary-text type--caption">Posted on <time>November 29, 2022</time></p>
 
 The `chrome.action` namespace has two new methods to give you more control over the appearance extension badges. The [`setBadgeTextColor()`](/docs/extensions/reference/action/#method-setBadgeTextColor) and [`getBadgeTextColor()`](/docs/extensions/reference/action/#method-getBadgeTextColor) methods allow an extension to change and query its toolbar icon's badge text color. When used with [`setBadgeBackgroundColor`](/docs/extensions/reference/action/#method-setBadgeBackgroundColor) and [`getBadgeBackgroundColor`](/docs/extensions/reference/action/#method-getBadgeBackgroundColor) these new methods let you enforce design and brand consistency.
+
+### Chrome 107: Service workers are not started in response to webRequest events {: #webrequest-in-sw }
+
+<p class="color-secondary-text type--caption">Posted on <time>October 25, 2022</time></p>
+
+Previously, Manifest V3 extensions only received [Web Request API](/docs/extensions/reference/webRequest) events for a short time immediately after installation. After the extension service worker stopped for the first time, events on this API would no longer be dispatched as intended. This effectively prevented Manifest V3 extensions from observing network requests. This issue has been resolved.
 
 ### Blog post: More details on the transition to Manifest V3 {: #blog-mv3-transition-details }
 

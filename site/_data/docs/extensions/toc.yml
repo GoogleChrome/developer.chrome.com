@@ -29,7 +29,7 @@
     - url: /docs/extensions/migrating/blocking-web-requests
     - url: /docs/extensions/migrating/improve-security
     - url: /docs/extensions/migrating/mv2-sunset
-    - url: /docs/extensions/migrating/known-issues
+    - url: /docs/extensions/migrating/mv3-status
 - url: /docs/extensions/reference
 - url: https://github.com/GoogleChrome/chrome-extensions-samples
   title: i18n.docs.extensions.samples
