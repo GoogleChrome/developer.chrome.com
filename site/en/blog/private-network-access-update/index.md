@@ -11,6 +11,9 @@ hero: image/YLflGBAPWecgtKJLqCJHSzHqe2J2/dwtN0NkxkBmIz1EyhzAm.jpg
 alt: A private sign in German
 tags:
   - chrome-94
+  - chrome-109
+  - chrome-113
+  - chrome-116
   - chrome-117
   - security
 ---
@@ -21,7 +24,7 @@ tags:
   occur until Chrome 117.
 
 - **January 19, 2023**: The timeline has been updated, and deprecation
-   will not occur until Chrome 113.
+   will not occur until Chrome 114.
 
 - **August 12, 2022**: The timeline has been updated, and deprecation
    will not occur until Chrome 109.
@@ -85,7 +88,7 @@ strategies:
   up for the deprecation trial and deployed trial tokens to production.
 * December 2022: Origin trial survey sent and feedback received. The deprecation
   trial is extended to Chrome 113.
-* March 2023: The deprecation trial is extended to Chrome 116 inclusive, set to
+* March 2023: The deprecation trial is extended to Chrome 116, and set to
   end in Chrome 117. A [permission-based alternative mechanism](https://chromestatus.com/feature/5954091755241472)
   is in development, targeting initial release in Chrome 114.
 * May 2023 (tentative): The permisssion-based mechanism rolls out in Chrome 114.
@@ -155,7 +158,7 @@ still mention the earlier milestone.
 
 This deprecation is accompanied by a deprecation trial, allowing web developers
 whose websites make use of the deprecated feature to continue using it until
-Chrome 117 by registering for tokens. See [below](#register-deprecation-trial)
+Chrome 116 by registering for tokens. See [below](#register-deprecation-trial)
 for instructions on how to register and enable the trial on your website.
 
 A pair of [Chrome policies](#policies) can be leveraged to disable the
