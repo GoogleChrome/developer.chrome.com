@@ -38,7 +38,7 @@ chrome.printing.onJobStatusChanged.addListener((jobId, status) => {
       }
     });
   });
-  if (status !== "PENDDING" && status !== "IN_PROGRESS") {
+  if (status !== "PENDING" && status !== "IN_PROGRESS") {
     cancelButton.style.visibility = 'hidden';
   } else {
     cancelButton.style.visibility = 'visible';
