@@ -7,6 +7,12 @@ const DEPRECATION_ENDPOINT =
 
 const CHANNELS_ENDPOINT = 'https://chromestatus.com/api/v0/channels';
 
+/**
+ * Fetches all the deprecations from a list of features
+ *
+ * @return {promise} A promise that resolves in an array containing
+ * all the deprecations
+ */
 async function fetchDeprecations() {
   let deprecations = [];
   try {
@@ -21,6 +27,15 @@ async function fetchDeprecations() {
   return deprecations;
 }
 
+/**
+ * Fetches all channels info needed to get depracation
+ * dates starting from a Chrome version
+ *
+ * @param {number | undefined} start oldest version needed
+ * @param {number  | undefined} end newest version needed
+ * @return {promise} A promise that resolves in an array containing
+ * all the channel infos needed
+ */
 async function fetchChannels(start, end) {
   let channels = [];
   let queryString = '';
@@ -40,6 +55,14 @@ async function fetchChannels(start, end) {
   return channels;
 }
 
+/**
+ * Starting from an array of deprecations, removes the ones that have
+ * no Chrome version associated and them orders them chronologically
+ *
+ * @param {object[]} deprecations a list of deprecations to filter and order
+ * @return {number[]} an array containing all the versions involved in the
+ * deprecation list
+ */
 function getVersions(deprecations) {
   const versions = deprecations
     .map(f => f.browsers.chrome.desktop)
@@ -49,6 +72,13 @@ function getVersions(deprecations) {
   return versions;
 }
 
+/**
+ * Confronts deprecations to sort them chronologically using Array.sort()
+ *
+ * @param {object} a
+ * @param {object} b
+ * @return {number}
+ */
 function deprecationsSort(a, b) {
   if (!b.browsers.chrome.desktop) return -1;
   if (!a.browsers.chrome.desktop) return 1;
