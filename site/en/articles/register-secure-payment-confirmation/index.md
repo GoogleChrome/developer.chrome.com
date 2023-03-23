@@ -6,6 +6,7 @@ description: >
 authors:
   - agektmr
 date: 2022-05-27
+updated: 2023-03-09
 tags:
   - payments
   - webauthn
@@ -180,7 +181,7 @@ const options = {
   }],
   authenticatorSelection: {
     userVerification: "required",
-    residentKey: "preferred",
+    residentKey: "required",
     authenticatorAttachment: "platform",
   },
   timeout: 360000,  // 6 minutes

@@ -15,6 +15,8 @@ tags:
 
 {% Partial 'devtools/banner.md' %}
 
+*No video for this release.*
+
 <!-- $contentStart -->
 
 ## Clearing Performance Panel on reload {: #perf }
@@ -35,7 +37,7 @@ Chromium issues: [1101268](https://crbug.com/1101268), [1382044](https://crbug.c
 
 ### View and highlight the code of your user flow in the Recorder {: #recorder-code }
 
-The **Recorder** now offers split code view, making it easier to view your user flow code. To access the code view, open a user flow and click **Show Code**. 
+The **Recorder** now offers split code view, making it easier to view your user flow code. To access the code view, open a user flow and click **Show Code**.
 
 The  **Recorder**  highlights the corresponding code as you hover over each step on the left, making it easy to track your flow. You can change the code format using the dropdown, which lets you switch between formats such as [Nightwatch Test](https://bit.ly/nightwatch-recorder) script.
 
@@ -74,22 +76,22 @@ Previously, the **Sources** panel showed minified content by default. To format 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/0b9c42efb6065c8a697eaf3acd656cb87e3d4f54 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/b6bddcbabb2d977b620758ac20785675053a4db9  #}
 
-Chromium issues: [1383453](https://crbug.com/1383453), [1382752](https://crbug.com/1382752), [1382397](https://crbug.com/1382397) 
+Chromium issues: [1383453](https://crbug.com/1383453), [1382752](https://crbug.com/1382752), [1382397](https://crbug.com/1382397)
 
 
-## Better syntax highlight and inline preview for Vue, SCSS and more {: #syntax }
+## Better syntax highlight and inline preview for Vue, SCSS and more {: #highlight }
 
 The **Sources** panel enhanced the syntax highlighting for several widely-used file formats, enabling you to read code more easily and recognize its structure, including Vue, JSX, Dart, LESS, SCSS, SASS, and inline CSS.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/92SB2J5N6ImqJlOY3tIB.png", alt="Syntax highlighting in Vue.", width="800", height="550" %}
 
-In addition, DevTools also improved the inline preview for Vue, inline HTML, and TSX. Hover over a variable to preview its value. 
+In addition, DevTools also improved the inline preview for Vue, inline HTML, and TSX. Hover over a variable to preview its value.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/uLxVoWz3yyxYvOkgCq7t.png", alt="Inline preview for Vue.", width="800", height="700" %}
 
-Apart from that, DevTools now shows the sourcemap of a stylesheet in the **Sources** panel. For instance, when you open a SCSS file, you can access the related CSS file by clicking on the sourcemap link.
+Apart from that, DevTools now shows the source map of a stylesheet in the **Sources** panel. For instance, when you open a SCSS file, you can access the related CSS file by clicking on the sourcemap link.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/bK6TMGR8c6285bUlrIbx.png", alt="Sourcemap link for SASS.", width="800", height="745" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/bK6TMGR8c6285bUlrIbx.png", alt="Source map link for SASS.", width="800", height="745" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/c9af6b86b85bf23f9ed07d68b2d58b45910426de #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/4f330a0d5cef6e74b5b73f258e55cc0960769bca #}
@@ -111,7 +113,7 @@ DevTools enhances the autocompletion experience by implementing the following ch
 
 - `Tab` is always used for autocompletion.
 - The behavior of `Arrow right` and `Enter` varies based on context.
-- The autocompletion experience is consistent across text editors, in the **Console**, **Sources**, and **Elements** panels 
+- The autocompletion experience is consistent across text editors, in the **Console**, **Sources**, and **Elements** panels
 
 For example, here is what happens when you type `cons` in the **Console**:
 
@@ -142,7 +144,7 @@ These are some noteworthy fixes in this release:
 
 - A regression issue in DevTools, where it failed to stop at the `debugger` statement in inline scripts, has been resolved. ([1385374](https://crbug.com/1385374))
 - A new **Console** setting that allows you to expand or collapse `console.trace()` messages by default. Toggle the settings via **Settings** > **Preferences** >  **Expand console.trace() messages by default**. ([1139616](https://crbug.com/1139616))
-- The [Snippets](/docs/devtools/javascript/snippets/) pane in the **Sources** panel supports enhanced autocomplete, similar to the **Console**. ([772949](https://crbug.com/772949)) 
+- The [Snippets](/docs/devtools/javascript/snippets/) pane in the **Sources** panel supports enhanced autocomplete, similar to the **Console**. ([772949](https://crbug.com/772949))
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/thkb1CYO0yYiGHll7Yp8.png", alt="Autocomplete in Snippets.", width="800", height="417" %}
 
 <!-- $contentEnd -->

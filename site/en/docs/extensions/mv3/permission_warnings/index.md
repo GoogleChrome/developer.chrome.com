@@ -374,7 +374,7 @@ This can be avoided by making the new feature optional and adding new permission
 [doc-match-patterns]: /docs/extensions/mv3/match_patterns
 [doc-perms]: /docs/extensions/mv3/declare_permissions
 [file-scheme-allow]: /docs/extensions/reference/extension#method-isAllowedFileSchemeAccess
-[gh-opt-perms]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.optional-permissions
+[gh-opt-perms]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.optional_permissions
 [incognito-allow]: /docs/extensions/reference/extension#method-isAllowedIncognitoAccess
 [tabs-tab]: /docs/extensions/reference/tabs/#type-Tab
 [section-update]: #update_permissions

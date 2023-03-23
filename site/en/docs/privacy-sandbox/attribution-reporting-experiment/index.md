@@ -16,7 +16,7 @@ in the first half of 2023.
 
 ## Try the API
 
-1. Try the [demo](https://goo.gle/attribution-reporting-demo/).
+1. Try the [demo](https://goo.gle/attribution-reporting-demo).
 2. Check the [API status](/docs/privacy-sandbox/attribution-reporting/#status) to learn about ways
    you can experiment with the API today.
 3. Experiment with the API.

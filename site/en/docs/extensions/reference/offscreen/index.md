@@ -3,7 +3,8 @@ api: offscreen
 ---
 
 ## Manifest
-You must declare the `"offscreen"` permission in the [extension manifest][1] to use the Offscreen API. For example:
+
+You must declare the `"offscreen"` permission in the [extension manifest][doc-manifest] to use the Offscreen API. For example:
 
 ```json
 {
@@ -15,18 +16,25 @@ You must declare the `"offscreen"` permission in the [extension manifest][1] to 
   ...
 }
 ```
-Pages loaded as offscreen documents are handled differently from other types of extension pages. The extension's permissions carry over to offscreen documents, but extension API access is heavily limited. Currently, an offscreen document can only use the `chrome.runtime` APIs to send and receive messages; all other extension APIs are not exposed. Other notable differences between offscreen documents and normal pages are as follows:
+Pages loaded as offscreen documents are handled differently from other types of extension pages. The extension's permissions carry over to offscreen documents, but extension API access is heavily limited. Currently, an offscreen document can only use the [`chrome.runtime`][api-runtime] APIs to send and receive messages; all other extension APIs are not exposed. Other notable differences between offscreen documents and normal pages are as follows:
 
 * An offscreen document's URL must be a static HTML file bundled with the extension.
 * Offscreen documents cannot be focused.
-* Offscreen documents cannot have their `opener` property set using the [`chrome.windows` API](docs/extensions/reference/windows/) method `windows.setSelfAsOpener()`.
+* Offscreen documents cannot have their `opener` property set using the [`chrome.windows` API][api-windows] method `windows.setSelfAsOpener()`.
 * An extension can only have one offscreen document open at a time. If the extension is running in split mode with an active incognito profile, both the normal and incognito profiles can each have one offscreen document. 
 
 ## Reasons
-Reasons, listed [below](/docs/extensions/reference/offscreen/#type-Reason), are set upon document creation to determine the document's lifespan. Currently, the `AUDIO_PLAYBACK` reason has specialized lifetime enforcement [`CreateAudioLifetimeEnforcer`][audio-lifetime-enforcer]. All others use generic idle detection [`CreateEmptyEnforcer`][empty-enforcer].
 
-## Examples
-The following methods create and close an offscreen document. Only a single Document can be open at a time. 
+Reasons, listed [below][offscreen-reason], are set upon document creation to determine the document's lifespan.
+
+| Reason            | Offscreen Document Lifetime                    |
+|-------------------|------------------------------------------------|
+| AUDIO_PLAYBACK    | Closed after 30 seconds without audio playing. |
+| All other reasons | Not currently limited                          |
+
+## Example
+
+Use `chrome.offscreen.createDocument()` and `chrome.offscreen.closeDocument()` for creating and closing an offscreen document. Only a single Document can be open at a time. 
 
 ```js
 chrome.offscreen.createDocument({
@@ -38,5 +46,50 @@ chrome.offscreen.createDocument({
 chrome.offscreen.closeDocument()
 ```
 
-[audio-lifetime-enforcer]: https://source.chromium.org/chromium/chromium/src/+/main:extensions/browser/api/offscreen/audio_lifetime_enforcer.h
-[empty-enforcer]: https://source.chromium.org/chromium/chromium/src/+/main:extensions/browser/api/offscreen/lifetime_enforcer_factories.cc
+The following example shows how to check for existing offscreen documents. The `hasOffscreenDocument()` function uses [clients.matchAll()](https://developer.mozilla.org/docs/Web/API/Clients/matchAll) to find existing offscreen documents. Please note: the function assumes that your extension uses a single offscreen document. 
+
+```js
+async function hasOffscreenDocument(path) {
+  // Check all windows controlled by the service worker to see if one 
+  // of them is the offscreen document with the given path
+  const offscreenUrl = chrome.runtime.getURL(path);
+  const matchedClients = await clients.matchAll();
+  for (const client of matchedClients) {
+    if (client.url === offscreenUrl) {
+      return true;
+    }
+  }
+  return false;
+}
+```
+
+Before trying to create a new offscreen document, call `hasOffscreenDocument()` to make sure that there is no existing offscreen document, as demonstrated in the following example. 
+
+```js
+chrome.action.onClicked.addListener(async () => {
+  const offscreenDocumentPath = 'off_screen.html'
+  // create offscreen document if it's not open already
+  if (!(await hasOffscreenDocument(offscreenDocumentPath))) {
+    await chrome.offscreen.createDocument({
+      url: chrome.runtime.getURL(offscreenDocumentPath),
+      reasons: ['CLIPBOARD'],
+      justification: 'reason for needing the document',
+    });
+  }
+  // Send message to offscreen document
+  chrome.runtime.sendMessage({
+    type: '...',
+    target: 'offscreen',
+    data: '...'
+  });
+});
+```
+
+For complete examples, see the [offscreen-clipboard][gh-offscreen-clipboard] and [offscreen-dom][gh-offscreen-dom] demos on GitHub.
+
+ [api-runtime]: /docs/extensions/reference/runtime/
+ [api-windows]: /docs/extensions/reference/windows/
+ [doc-manifest]: /docs/extensions/mv3/manifest/
+ [gh-offscreen-clipboard]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.offscreen-clipboard-write
+ [gh-offscreen-dom]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.offscreen-dom
+ [offscreen-reason]: /docs/extensions/reference/offscreen/#type-Reason

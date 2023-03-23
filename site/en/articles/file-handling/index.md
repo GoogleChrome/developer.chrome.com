@@ -41,6 +41,10 @@ app, however, can be achieved through two other means:
 - The [File System Access API](https://web.dev/file-system-access/) can be integrated with file drag and drop, so
   developers can handle dropped files in the already opened app.
 
+### Browser support
+
+{% BrowserCompat 'api.Window.launchQueue' %}
+
 ### Feature detection
 
 To check if the File Handling API is supported, use:

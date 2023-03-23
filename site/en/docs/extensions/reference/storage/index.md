@@ -38,13 +38,15 @@ The Storage API is divided into the following four buckets ("storage areas"):
 
 
 {% Aside 'warning' %}
-
 Local and sync storage areas should not store confidential user data because they are not encrypted. When working with sensitive data, consider using the `session` storage area to hold values in memory until the browser is shut down.
-
 {% endAside %}
 
 [storage.session][prop-session]
-: Holds data in memory for the duration of a browser session. By default, it's not exposed to content scripts, but this behavior can be changed by setting [`chrome.storage.session.setAccessLevel()`][method-access-level]. The quota limitation is 1 MB approx. Consider using it to store global variables across service worker runs.
+: Holds data in memory for the duration of a browser session. By default, it's not exposed to content scripts, but this behavior can be changed by setting [`chrome.storage.session.setAccessLevel()`][method-access-level]. The quota limitation is approximately 10 MB. Consider using it to store global variables across service worker runs.
+
+{% Aside 'warning' %}
+Before Chrome 112, the quota was approximately 1 MB.
+{% endAside %}
 
 [storage.managed][prop-managed]
 : Administrator can use a [schema][manifest-storage] and enterprise policies to configure a supporting extension's settings in a managed environment. This storage area is read-only.

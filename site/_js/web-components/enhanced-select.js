@@ -35,8 +35,12 @@ export class EnhancedSelect extends BaseElement {
   constructor() {
     super();
 
-    // @ts-ignore
-    this.internals = this.attachInternals();
+    try {
+      // @ts-ignore
+      this.internals = this.attachInternals();
+    } catch (e) {
+      console.warn('ElementInternals not supported');
+    }
 
     this.handleLabelClick = this.handleLabelClick.bind(this);
     this.handleLabelKeydown = this.handleLabelKeydown.bind(this);
@@ -123,7 +127,12 @@ export class EnhancedSelect extends BaseElement {
 
     value.forEach(value => data.append(this.name, value));
 
-    this.internals.setFormValue(data);
+    // ElementInternals are not yet supported in Safari, but would
+    // also only be used in a <form> context, where we currently
+    // don't use it.
+    if (this.internals) {
+      this.internals.setFormValue(data);
+    }
 
     this.dispatchEvent(new Event('change', {bubbles: true, cancelable: true}));
   }

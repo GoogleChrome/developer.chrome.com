@@ -21,9 +21,7 @@ tags:
 
 ## Implementation status
 
-- [Origin trial](/origintrials/#/view_trial/1239615797433729025) available from Chrome 100 to 106
-- [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/_dJFNJpf91U) 
-- [Chrome Platform Status](https://chromestatus.com/feature/5179189105786880)
+{% Partial 'privacy-sandbox/timeline/chips.njk' %}
 
 ## What is CHIPS
 
@@ -146,7 +144,7 @@ If you have a use case that relies on a shared cookie partition across sites wit
 
 To encourage good security practices, CHIPS proposes cookies only be set by and sent over secure protocols.
 
-Partitioned cookies must be set with `Secure` and `Path=/`.
+Partitioned cookies must be set with `Secure`.
 
 It is recommended to use the `__Host` prefix when setting partitioned cookies to make them bound to the hostname (and not the registrable domain).
 

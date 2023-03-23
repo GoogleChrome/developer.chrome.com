@@ -1,11 +1,11 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Recorder features reference"
+title: "Features reference"
 authors:
   - sofiayem
   - jecelynyeen
 date: 2022-06-21
-updated: 2023-02-07
+updated: 2023-03-07
 description: "A comprehensive reference of Chrome DevTools Recorder panel features."
 tags:
   - test
@@ -17,6 +17,20 @@ tags:
 Discover ways to share user flows, edit them and their steps in this comprehensive features reference of the Chrome DevTools **Recorder** panel.
 
 To learn the basics of working with the **Recorder** panel, see [Record, replay, and measure user flows](/docs/devtools/recorder/).
+
+## Learn and customize shortcuts {: #shortcuts }
+
+Use shortcuts to navigate the **Recorder** faster. For a list of default shortcuts, see [Recorder panel keyboard shortcuts](/docs/devtools/shortcuts/#recorder).
+
+To open a hint that lists all the shortcuts right in the **Recorder**, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/fAwFFniVr2MfI5RwJwpv.svg", alt="Show shortcuts.", width="24", height="24" %} **Show shortcuts** in the top right corner.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/0v5iJF1nm3Glji1wrLJc.png", alt="The Show shortcuts button.", width="800", height="547" %}
+
+To customize **Recorder** shortcuts:
+
+1. Open {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Shortcuts**](/docs/devtools/settings/shortcuts/).
+1. Scroll down to the **Recorder** section.
+1. Follow the steps in [Customize shortcuts](/docs/devtools/settings/shortcuts/#customize-shortcuts).
 
 ## Edit user flows {: #edit-flows }
 
@@ -73,13 +87,7 @@ You can install a Chrome extension to export replay scripts in your favorite for
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xRO1d79tBe0ILcBoD0oh.png", alt="Custom extension for the Recorder panel.", width="800", height="486" %}
 
-For example:
-
-- [Cypress extension](https://chrome.google.com/webstore/detail/cypress-chrome-recorder/fellcphjglholofndfmmjmheedhomgin) lets you export JSON user flows as [Cypress test script](https://github.com/cypress-io/cypress-recorder-extension). [Cypress](https://cypress.io) is a front end testing tool built for the modern web.
-- [WebPageTest extension](https://chrome.google.com/webstore/detail/webpagetest-recorder-exte/eklpnjohdjknellndlnepihjnhpaimok) lets you export user flows from the Recorder directly as [WebPageTest Custom scripts](https://docs.webpagetest.org/scripting/) to measure site's performance. See [Converting user flows to WebPageTest custom scripts](https://blog.webpagetest.org/posts/introducing-the-new-webpagetest-recorder-chrome-extension/) to learn more. 
-- [Nightwatch extension](https://chrome.google.com/webstore/detail/nightwatch-chrome-recorde/nhbccjfogdgkahamfohokdhcnemjafjk/) lets you export JSON user flows as [Nightwatch test script](https://github.com/nightwatchjs/nightwatch-recorder-extension). [Nightwatch](https://nightwatchjs.org/) is an end-to-end testing solution for web applications and websites.
-- [Testing Library extension](https://chrome.google.com/webstore/detail/testing-library-recorder/pnobfbfcnoeealajjgnpeodbkkhgiici) lets you export JSON user flows as [Testing Library script](https://github.com/nickmccurdy/testing-library-recorder-extension). [Testing Library](https://testing-library.com/) has simple and complete testing utilities that encourage good testing practices.
-- [WebdriverIO extension](https://chrome.google.com/webstore/detail/webdriverio-chrome-record/pllimkccefnbmghgcikpjkmmcadeddfn) lets you export JSON user flows as [WebdriverIO test script](https://github.com/webdriverio/recorder-extension). [WebdriverIO](https://webdriver.io/) is an end-to-end testing solution for web, mobile and IoT applications and websites.
+For a list of known **Recorder** extensions, see [Extensions](/docs/devtools/recorder/extensions/).
 
 ##### Troubleshooting {: #extension-troubleshooting }
 
@@ -117,6 +125,7 @@ Transform JSON user flows to custom scripts:
 
 - [Cypress Chrome Recorder](https://github.com/cypress-io/cypress-chrome-recorder). You can use it to convert user flow JSON files to Cypress test scripts. Watch this [demo](https://youtu.be/4qYs2bMz4GI) to see it in action.
 - [Nightwatch Chrome Recorder](https://github.com/nightwatchjs/nightwatch-chrome-recorder). You can use it to convert user flow JSON files to Nightwatch test scripts. 
+- [CodeceptJS Chrome Recorder](https://github.com/PeterNgTr/codeceptjs-chrome-recorder). You can use it to convert user flow JSON files to CodeceptJS test scripts. 
 
 Replay JSON user flows:
 
@@ -420,7 +429,7 @@ When you start a new recording, you can configure the following:
 For more information, see [Syntactic vs. semantic selectors](/blog/puppetaria/#syntactic-vs-semantic-selectors) and [Selector priority](#selector-priority).
 {% endAside %}
 
-### Common test selectors {: common-test-selector}
+### Common test selectors {: common-test-selector }
 
 For simple webpages, `id` attributes and CSS `class` attributes are sufficient for the **Recorder** to detect the selectors. However, that might not always be the case because:
 

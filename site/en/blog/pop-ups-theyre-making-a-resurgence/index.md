@@ -11,6 +11,7 @@ tags:
   - html
 date: 2022-09-13
 last_updated: 2023-01-25
+is_outdated: true
 ---
 
 {% Aside 'caution' %}
@@ -22,7 +23,7 @@ The goal of the [Open UI initiative](https://open-ui.org/) is to make it easier 
 
 One such problem area is pop-ups, described in Open UI as "Popovers".
 
-Popovers have had a rather polarizing reputation for a long time. This is, in part, due to the way they get both built and deployed. They're not an easy pattern to build well, but they can yield a lot of value by directing users to certain things, or making them aware of the content on your site—especially when used in a tasteful manner. 
+Popovers have had a rather polarizing reputation for a long time. This is, in part, due to the way they get both built and deployed. They're not an easy pattern to build well, but they can yield a lot of value by directing users to certain things, or making them aware of the content on your site—especially when used in a tasteful manner.
 
 There are often two major concerns when building popovers:
 
@@ -61,7 +62,7 @@ What can you currently do to promote your content above everything else? If it's
 Dialog.showModal();
 ```
 
-There are some accessibility considerations. It's advised to use [a11y-dialog](https://a11y-dialog.netlify.app/) for example if catering for users of Safari below version 15.4. 
+There are some accessibility considerations. It's advised to use [a11y-dialog](https://a11y-dialog.netlify.app/) for example if catering for users of Safari below version 15.4.
 
 You could also use one of the many popover, alert, or tooltip based libraries out there. Many of these tend to work in a similar way.
 
@@ -151,7 +152,7 @@ By default, the `::backdrop` on a popover has `pointer-events: none` set.
 Let's turn our attention to styling the popover. By default, a popover has a fixed position and some applied padding. It also has `display: none`. You could override this to show a popover. But, that wouldn't promote it to the top layer.
 
 ```css
-[popover] { display: block; } 
+[popover] { display: block; }
 ```
 
 {% Codepen {
@@ -376,7 +377,7 @@ We've covered non-JavaScript interaction behavior. But what about popover behavi
 
 The Popover API allows you to specify three types of popover which differ in behavior.
 
-`[popover=auto]/[popover]`: 
+`[popover=auto]/[popover]`:
 - Nesting support. This doesn't only mean nested in the DOM either. The definition of an ancestral popover is one that is:
   - related by DOM position (child).
   - related by triggering attributes on child elements such as `popovertoggletarget`, `popovershowtarget`, and so on.
@@ -674,7 +675,7 @@ Remember, because this demo uses `autofocus`, it will need to be opened in "[ful
 
 ### Media popover
 
-This demo shows how you might pop media up. 
+This demo shows how you might pop media up.
 
 - Uses `[popover=auto]` for light dismiss.
 - JavaScript listens for the video's `play` event and pops the video up.

@@ -2,6 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Service worker overview
 date: 2021-09-24
+updated: 2023-03-07
 description: >
   An overview of service workers.
 ---
@@ -13,7 +14,9 @@ However, because service workers solve hard problems,
 any abstraction of that technology will also be tricky without understanding it.
 Thus, these first few bits of documentation will cover that underlying technology before getting into Workbox specifics.
 
-A running list of can be viewed at [chrome://serviceworker-internals/](chrome://serviceworker-internals/).
+To view a running list of service workers, enter `chrome://serviceworker-internals/` into your address bar.
+
+{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/6Q4ZxOPzefe1rrXZjlVM.png", alt="A running list of service workers.", width="800", height="321" %}
 
 ## What do service workers provide?
 

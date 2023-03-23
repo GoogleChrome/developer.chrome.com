@@ -23,6 +23,7 @@
       sections:
         - url: /docs/devtools/css/
         - url: /docs/devtools/css/issues/
+        - url: /docs/devtools/css/color/
         - url: /docs/devtools/css/grid/
         - url: /docs/devtools/css/flexbox/
         - url: /docs/devtools/css/container-queries/
@@ -56,6 +57,7 @@
     - url: /docs/devtools/performance/reference/
     - url: /docs/devtools/performance/timeline-reference/
 - url: /docs/devtools/performance-insights/
+- url: /docs/devtools/lighthouse/
 - title: i18n.docs.devtools.memory
   sections:
     - url: /docs/devtools/memory-problems/memory-101/
@@ -69,7 +71,7 @@
     - url: /docs/devtools/storage/sessionstorage/
     - url: /docs/devtools/storage/indexeddb/
     - url: /docs/devtools/storage/websql/
-    - url: /docs/devtools/storage/cookies/
+    - url: /docs/devtools/application/cookies/
     - url: /docs/devtools/storage/cache/
     - url: /docs/devtools/application/back-forward-cache/
     - url: /docs/devtools/javascript/background-services/
@@ -87,6 +89,7 @@
   sections:
     - url: /docs/devtools/recorder/
     - url: /docs/devtools/recorder/reference
+    - url: /docs/devtools/recorder/extensions
 - title: i18n.docs.devtools.rendering
   sections:
     - url: /docs/devtools/rendering/
@@ -108,12 +111,18 @@
     - url: /docs/devtools/accessibility/contrast/
     - url: /docs/devtools/accessibility/navigation/
     - url: /docs/devtools/accessibility/focus/ 
-- title: i18n.docs.devtools.customization
+- url: /docs/devtools/customize/
+- title: i18n.docs.devtools.settings
   sections:
-    - url: /docs/devtools/customize/
-    - url: /docs/devtools/customize/dark-theme/
-    - url: /docs/devtools/customize/placement/
-    - url: /docs/devtools/javascript/ignore-chrome-extension-scripts/
+    - url: /docs/devtools/settings/
+    - url: /docs/devtools/settings/preferences
+    - url: /docs/devtools/settings/workspace
+    - url: /docs/devtools/settings/experiments
+    - url: /docs/devtools/settings/ignore-list
+    - url: /docs/devtools/settings/devices
+    - url: /docs/devtools/settings/throttling
+    - url: /docs/devtools/settings/locations
+    - url: /docs/devtools/settings/shortcuts
 - url: https://developer.chrome.com/tags/devtools-engineering/
   title: i18n.docs.devtools.blog
   description: i18n.docs.devtools.blog_description

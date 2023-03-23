@@ -15,7 +15,7 @@ This feature was previously called "Shared Element Transitions", and is sometime
 
 The View Transition API makes it easy to change the DOM in a single step, while creating an animated transition between the two states.
 
-It's currently behind the `chrome://flags/#view-transition` flag in Chrome 109+.
+It's available in Chrome 111+, currently in beta.
 
 <style>
   .video-full-demo {
@@ -33,7 +33,7 @@ It's currently behind the `chrome://flags/#view-transition` flag in Chrome 109+.
     muted="true",
     controls="true"
   %}
-  <figcaption>Transitions created with the View Transition API. <a href="https://http203-playlist.netlify.app/">Try the demo site</a> – Requires Chrome 109+ and the <code>chrome://flags/#view-transition</code> flag.</figcaption>
+  <figcaption>Transitions created with the View Transition API. <a href="https://http203-playlist.netlify.app/">Try the demo site</a> – Requires Chrome 111+.</figcaption>
 </figure>
 
 ## Why do we need this feature?
@@ -219,12 +219,11 @@ In this example, the animation always moves from right to left, which doesn't fe
 
 In the previous demo, the whole page is involved in the shared axis transition. That works for most of the page, but it doesn't seem quite right for the heading, as it slides out just to slide back in again.
 
-To avoid this, you can extract the header from the rest of the page so it can be animated separately. This is done by assigning a `view-transition-name` to the element, and giving the element [`layout`](https://developer.mozilla.org/docs/Web/CSS/CSS_Containment#layout_containment) or [`paint`](https://developer.mozilla.org/docs/Web/CSS/CSS_Containment#paint_containment) containment. `layout` containment has fewer restrictions, so it's usually the better choice.
+To avoid this, you can extract the header from the rest of the page so it can be animated separately. This is done by assigning a `view-transition-name` to the element.
 
 ```css
 .main-header {
   view-transition-name: main-header;
-  contain: layout;
 }
 ```
 
@@ -277,7 +276,6 @@ That hasn't mattered until now, as the header is the same size and position both
 ```css
 .main-header-text {
   view-transition-name: main-header-text;
-  contain: layout;
   width: fit-content;
 }
 ```
@@ -348,7 +346,6 @@ For instance, the main video embed can be given a `view-transition-name`:
 ```css
 .full-embed {
   view-transition-name: full-embed;
-  contain: layout;
 }
 ```
 
@@ -410,7 +407,6 @@ The sidebar is part of the transition:
 ```css
 .sidebar {
   view-transition-name: sidebar;
-  contain: layout;
 }
 ```
 
@@ -1000,6 +996,15 @@ In browsers that don't support View Transitions, `updateDOM` will still be calle
 You can also provide some `classNames` to add to `<html>` during the transition, making it easier to [change the transition depending on the type of navigation](#changing-on-navigation-type).
 
 You can also pass `true` to `skipTransition` if you don't want an animation, even in browsers that support View Transitions. This is useful if your site has a user preference to disable transitions.
+
+## Working with frameworks
+
+If you're working with a library or framework that abstracts away DOM changes, the tricky part is knowing when the DOM change is complete. Here's a set of examples, using the [helper above](#not-a-polyfill), in various frameworks.
+
+- [React](https://codesandbox.io/s/nervous-mclaren-j8v8y0?file=/src/App.tsx)—the key here is [`flushSync`](https://beta.reactjs.org/reference/react-dom/flushSync), which applies a set of state changes synchronously. Yes, there's a big warning about using that API, but [Dan Abramov](https://twitter.com/dan_abramov) assures me it's appropriate in this case. As usual with React and async code, when using the various promises returned by `startViewTransition`, take care that your code is running with the correct state.
+- [Vue.js](https://sfc.vuejs.org/#eNqNVduO2zYQ/ZWpimLlZCUZaYOiqr3YYhOgBXp7CAIEUR5oabTLmCIFXuw4jv89Q9KSvN7NxS/mZThn5szM0T75o+/zjcOkTBam1ry3YNC6/qqSvOuVtrAHje0lSPxgX/F6DQdoterggh5d/H5iZTWThluu5J8oetSjYV44y4XJ3xtvX8laSWOhVk5aWHrn6XxGFwCVbJ2svQfgstbYobQ3gjDTGey9wTlEGk4BmNnJGlzfMIsv/vtnMPe/AJNvmHD49GlACQ+2jNsxpTTCAxz838HvaLUoIh/EBG0sdr0g97QDWKyctRTlde2jW1bJ/XCr5Oqv4WBRRNv4ruEbqAUzht6EyMh0vw+rw2FR0DXZLYoTMNoauxN+eWc7ERNbsXp9q+lVU8JK0CbEXyuhdAk/tm0bM6hkHlkOj1olbdayjotdCYaIzAxq7k2JWGIiY4LfyhJqihp1OO5VZLsEtjJKOIvhmEtqkRKez3+COTBnVfThi9Mq3ZVx6RN4k2ZkFekN+IZ/xBKePd9sw9mG4zabqppJ1tF1CHpIoXgCN85YaqTJDp4Ulbxe467V9MCAVpbAMuWOqVo1NMBJUNEo/W3e4G2MiPwHiIeeuDxy5hv4i66yR3z5IpXleV5KNGnIanb5JROJ26NJBGQ0WSzcNE6HBfE2n3cmwE23kbLMsezcY8san8nllNTA6beCPI/gGxjE+whC63F8Qt8ml0mUiKxjPWmAkiQ1wT+NTbgwVVIOJFcJyYrfV8mdtb0pi8LJfn1LjdwV13RXaAqQd5g1qrv+OX+W//IrjY2xp+c5mi5babWlBifEKiHSR+cFHW5QZxplgxr1V8HObO8Bnt09AB26gggY9I8yxw9BLkehe1zSzJr3r6Z2X0LLhMGQRpCPf0OzLuHtu3A2Kh/tDsfq8RbSMzefPsEPjaqd16XcWKbtayrnZDDKZlTo6PWGCeH15oWSSIj/00Rwg7lGEoQNpieiO8vtHcqU1Hd5Bfsgo9Gdpg+KPk5U3LOGNGhy9R5rm77UWun0wod0wooBJ43rPWnYXMz8/EQnD6Mbr1ouublDEsevGN3npoQh7KPBYZhq/zeSNixeiiDueSjG39QNOWuaNM/jQajOkH7k8kS7lpO7R2owETo4mJ7mQ2J+QTntItcx4O+Ikb5Iikp2P0z/eoA6FmpC9KOcHD4DPLDcUA==)—the key here is [`nextTick`](https://vuejs.org/api/general.html#nexttick), which fulfills once the DOM has been updated.
+- [Svelte](https://svelte.dev/repl/84cffc3241514c1581bf951bdf818def?version=3.55.1)—very similar to Vue, but the method to await the next change is [`tick`](https://svelte.dev/docs#run-time-svelte-tick).
+- [Lit](https://lit.dev/playground/#project=W3sibmFtZSI6ImFwcC50cyIsImNvbnRlbnQiOiJpbXBvcnQge2h0bWwsIGNzcywgTGl0RWxlbWVudH0gZnJvbSAnbGl0JztcbmltcG9ydCB7Y3VzdG9tRWxlbWVudCwgcHJvcGVydHl9IGZyb20gJ2xpdC9kZWNvcmF0b3JzLmpzJztcbmltcG9ydCB7IHRyYW5zaXRpb25IZWxwZXIgfSBmcm9tICcuL3V0aWxzLmpzJztcblxuQGN1c3RvbUVsZW1lbnQoJ2RlbW8tYXBwJylcbmV4cG9ydCBjbGFzcyBEZW1vQXBwIGV4dGVuZHMgTGl0RWxlbWVudCB7XG4gIHN0YXRpYyBzdHlsZXMgPSBjc3NgXG4gICAgLmNvdW50IHtcbiAgICAgIGZvbnQtZmFtaWx5OiBzYW5zLXNlcmlmO1xuICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgaW5zZXQ6IDUwJSAwIGF1dG87XG4gICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoLTUwJSk7XG4gICAgICBmb250LXNpemU6IDI1dnc7XG4gICAgICB2aWV3LXRyYW5zaXRpb24tbmFtZTogY291bnQ7XG4gICAgICAvKiBUaGlzIHdvbid0IGJlIHJlcXVpcmVkIHNvb24uIEluIGZhY3QsIGl0IGFscmVhZHkgd29ya3Mgd2l0aG91dCB0aGlzIGluIENhbmFyeSAqL1xuICAgICAgY29udGFpbjogbGF5b3V0O1xuICAgIH1cbiAgYDtcbiAgXG4gIGluY3JlbWVudENsaWNrKCkge1xuICAgIHRyYW5zaXRpb25IZWxwZXIoe1xuICAgICAgdXBkYXRlRE9NOiBhc3luYyAoKSA9PiB7XG4gICAgICAgIHRoaXMuY291bnQrKztcbiAgICAgICAgYXdhaXQgdGhpcy51cGRhdGVDb21wbGV0ZTtcbiAgICAgIH1cbiAgICB9KTtcbiAgfVxuXG4gIEBwcm9wZXJ0eSgpXG4gIGNvdW50ID0gMDtcblxuICByZW5kZXIoKSB7XG4gICAgcmV0dXJuIGh0bWxgXG4gICAgICA8YnV0dG9uIEBjbGljaz0ke3RoaXMuaW5jcmVtZW50Q2xpY2t9PkluY3JlbWVudDwvYnV0dG9uPlxuICAgICAgPGRpdiBjbGFzcz1cImNvdW50XCI-JHt0aGlzLmNvdW50fTwvZGl2PlxuICAgIGA7XG4gIH1cbn1cbiJ9LHsibmFtZSI6ImluZGV4Lmh0bWwiLCJjb250ZW50IjoiPCFET0NUWVBFIGh0bWw-XG48aGVhZD5cbiAgPHN0eWxlPlxuICAgIGh0bWwge1xuICAgICAgYmFja2dyb3VuZDogYmxhY2s7XG4gICAgICBjb2xvcjogI2ZmZjtcbiAgICB9XG5cbiAgICAvKiBDdXN0b20gdHJhbnNpdGlvbiAqL1xuICAgIEBrZXlmcmFtZXMgcm90YXRlLW91dCB7XG4gICAgICB0byB7XG4gICAgICAgIHRyYW5zZm9ybTogcm90YXRlKDkwZGVnKTtcbiAgICAgIH1cbiAgICB9XG5cbiAgICBAa2V5ZnJhbWVzIHJvdGF0ZS1pbiB7XG4gICAgICBmcm9tIHtcbiAgICAgICAgdHJhbnNmb3JtOiByb3RhdGUoLTkwZGVnKTtcbiAgICAgIH1cbiAgICB9XG5cbiAgICBodG1sOjp2aWV3LXRyYW5zaXRpb24tb2xkKGNvdW50KSxcbiAgICBodG1sOjp2aWV3LXRyYW5zaXRpb24tbmV3KGNvdW50KSB7XG4gICAgICBhbmltYXRpb24tZHVyYXRpb246IDIwMG1zO1xuICAgICAgYW5pbWF0aW9uLW5hbWU6IC11YS12aWV3LXRyYW5zaXRpb24tZmFkZS1pbiwgcm90YXRlLWluO1xuICAgIH1cblxuICAgIGh0bWw6OnZpZXctdHJhbnNpdGlvbi1vbGQoY291bnQpIHtcbiAgICAgIGFuaW1hdGlvbi1uYW1lOiAtdWEtdmlldy10cmFuc2l0aW9uLWZhZGUtb3V0LCByb3RhdGUtb3V0O1xuICAgIH1cbiAgPC9zdHlsZT5cbiAgPHNjcmlwdCB0eXBlPVwibW9kdWxlXCIgc3JjPVwiLi9hcHAuanNcIj48L3NjcmlwdD5cbjwvaGVhZD5cbjxib2R5PlxuICA8ZGVtby1hcHA-PC9kZW1vLWFwcD5cbjwvYm9keT4ifSx7Im5hbWUiOiJwYWNrYWdlLmpzb24iLCJjb250ZW50Ijoie1xuICBcImRlcGVuZGVuY2llc1wiOiB7XG4gICAgXCJsaXRcIjogXCJeMi4wLjBcIixcbiAgICBcIkBsaXQvcmVhY3RpdmUtZWxlbWVudFwiOiBcIl4xLjAuMFwiLFxuICAgIFwibGl0LWVsZW1lbnRcIjogXCJeMy4wLjBcIixcbiAgICBcImxpdC1odG1sXCI6IFwiXjIuMC4wXCJcbiAgfVxufSIsImhpZGRlbiI6dHJ1ZX0seyJuYW1lIjoidXRpbHMudHMiLCJjb250ZW50IjoiZXhwb3J0IGZ1bmN0aW9uIHRyYW5zaXRpb25IZWxwZXIoe1xuICBza2lwVHJhbnNpdGlvbiA9IGZhbHNlLFxuICBjbGFzc05hbWVzID0gW10sXG4gIHVwZGF0ZURPTSxcbn0pIHtcbiAgaWYgKHNraXBUcmFuc2l0aW9uIHx8ICFkb2N1bWVudC5zdGFydFZpZXdUcmFuc2l0aW9uKSB7XG4gICAgY29uc3QgdXBkYXRlQ2FsbGJhY2tEb25lID0gUHJvbWlzZS5yZXNvbHZlKHVwZGF0ZURPTSgpKS50aGVuKCgpID0-IHt9KTtcbiAgICBjb25zdCByZWFkeSA9IFByb21pc2UucmVqZWN0KEVycm9yKCdWaWV3IHRyYW5zaXRpb25zIHVuc3VwcG9ydGVkJykpO1xuXG4gICAgLy8gQXZvaWQgc3BhbW1pbmcgdGhlIGNvbnNvbGUgd2l0aCB0aGlzIGVycm9yIHVubGVzcyB0aGUgcHJvbWlzZSBpcyB1c2VkLlxuICAgIHJlYWR5LmNhdGNoKCgpID0-IHt9KTtcblxuICAgIHJldHVybiB7XG4gICAgICByZWFkeSxcbiAgICAgIHVwZGF0ZUNhbGxiYWNrRG9uZSxcbiAgICAgIGZpbmlzaGVkOiB1cGRhdGVDYWxsYmFja0RvbmUsXG4gICAgICBza2lwVHJhbnNpdGlvbjogKCkgPT4ge30sXG4gICAgfTtcbiAgfVxuXG4gIGRvY3VtZW50LmRvY3VtZW50RWxlbWVudC5jbGFzc0xpc3QuYWRkKC4uLmNsYXNzTmFtZXMpO1xuXG4gIGNvbnN0IHRyYW5zaXRpb24gPSBkb2N1bWVudC5zdGFydFZpZXdUcmFuc2l0aW9uKHVwZGF0ZURPTSk7XG5cbiAgdHJhbnNpdGlvbi5maW5pc2hlZC5maW5hbGx5KCgpID0-XG4gICAgZG9jdW1lbnQuZG9jdW1lbnRFbGVtZW50LmNsYXNzTGlzdC5yZW1vdmUoLi4uY2xhc3NOYW1lcylcbiAgKTtcblxuICByZXR1cm4gdHJhbnNpdGlvbjtcbn0ifV0)—the key here is the [`this.updateComplete`](https://lit.dev/docs/v1/components/lifecycle/#updatecomplete) promise within components, which fulfills once the DOM has been updated.
 
 ## API reference {:#api-reference}
 

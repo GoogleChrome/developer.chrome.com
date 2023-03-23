@@ -24,8 +24,8 @@ Before reading this article, it will be helpful to familiarize yourself with key
 *   An [_aggregation key_](#aggregation-key) (also known as a bucket) is a predetermined collection of data points. For example, you may want to collect a bucket of location data where the browser reports the country name. An aggregation key may contain more than one dimension (for example, country and ID of your content widget). 
 *   An [_aggregatable value_](#aggregatable-value) is an individual data point collected into an aggregation key. If you want to measure how many users from France have seen your content, then `France` is a dimension in the aggregation key, and the `viewCount` of `1` is the aggregatable value.
 *   _Aggregatable reports_ are generated and encrypted within a browser. For the Private Aggregation API, this contains data about a single event.
-*   The [_aggregation service_](/docs/privacy-sandbox/aggregation-service) processes data from aggregatable reports to create a summary report.
-*   A _summary report_ is the final output of the aggregation service, and contains noisy aggregated user data and detailed conversion data.
+*   The [_Aggregation Service_](/docs/privacy-sandbox/aggregation-service) processes data from aggregatable reports to create a summary report.
+*   A _summary report_ is the final output of the Aggregation Service, and contains noisy aggregated user data and detailed conversion data.
 *   A _[worklet](https://developer.mozilla.org/docs/Web/API/Worklet)_ is a piece of infrastructure which allows you to run specific JavaScript functions and return information back to the requester. Within a worklet, you can execute JavaScript but you cannot interact or communicate with the outside page.
 
 ## Private Aggregation workflow
@@ -33,7 +33,7 @@ Before reading this article, it will be helpful to familiarize yourself with key
 When you call the Private Aggregation API with an aggregation key and an aggregatable value, the browser generates an aggregatable report. The reports are sent to your server that batches the reports.  The batched reports are processed later by the Aggregation Service, and a summary report is generated. 
 
 <figure class="screenshot">
-{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/NqNZ51sVCASKNyNbYoHv.png", alt="Data flows from the client to the collector, then to the aggregation service to generate a summary report", width="800", height="211" %}
+{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/NqNZ51sVCASKNyNbYoHv.png", alt="Data flows from the client to the collector, then to the Aggregation Service to generate a summary report.", width="800", height="211" %}
 </figure>
 
 1. When you call the Private Aggregation API, the client (browser) generates and sends the aggregatable report to your server to be collected.
@@ -76,7 +76,7 @@ Let's say the key represents the count of users from France (country ID `061`) w
   </tr>
 </table>
 
-{% Aside %}
+{% Aside 'example' %}
 If a dimension has available key space for multiple digits, but the value has fewer, add leading zeros. For example, if country ID allows 3 digits, the country ID for Algeria is `003`.
 {% endAside %}
 
@@ -172,25 +172,22 @@ You may decide to batch on a daily or weekly basis. This strategy is flexible, a
 
 ## Aggregation Service
 
-{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/b1avI43zUaKT2UAdGOo1.png", alt="how the aggregation service runs in a trusted execution environment", width="800", height="457" %}
+{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/b1avI43zUaKT2UAdGOo1.png", alt="The service runs in a TEE, decrypts the aggregatable reports and adds noise to create the final summary report.", width="800", height="457" %}
 
-The Aggregation Service receives encrypted aggregatable reports from the collector and generates summary reports with noise. To decrypt the report payload, the Aggregation Service fetches a decryption key from the coordinator. The service runs in a trusted execution environment (TEE), which provides a level of assurance for data integrity, data confidentiality, and code integrity. Though you own and operate the service, you will not have visibility into the data being processed inside the TEE.  
+The [Aggregation Service](/docs/privacy-sandbox/aggregation-service/) receives encrypted aggregatable reports from the collector and generates summary reports.
 
-For each aggregation key, the aggregatable values from the aggregatable reports are summed, then the result is returned in a summary report with noise added. 
-
-{% Aside %}
-At this time, the Aggregation Service and its local testing tool only process aggregatable reports for the Attribution Reporting API. This will be updated to support the Private Aggregation API soon.
-{% endAside %}
+To decrypt the report payload, the Aggregation Service fetches a decryption key from the coordinator. The service runs in a trusted execution environment (TEE), which provides a level of assurance for data integrity, data confidentiality, and code integrity. Though you own and operate the service, you will not have visibility into the data being processed inside the TEE.  
 
 ## Summary reports
 
-Summary reports allow you to see the data you have collected with noise added. You can request summary reports for a given set of keys.  
+[Summary reports](/docs/privacy-sandbox/summary-reports/) allow you to see the data you have collected with noise added. You can request summary reports for a given set of keys.  
 
 A summary report contains a JSON dictionary-style set of key-value pairs. Each pair contains:
+
 *   _`bucket`_: the aggregation key as a binary number string.  If the aggregation key used is “123”, then the bucket is “1111011”.
 *   _`value`_: the summary value for a given measurement goal, summed up from all available aggregatable reports with noise added.
 
-Example:
+For example:
 
 ```js
 [
@@ -210,11 +207,11 @@ For example, let's say the noise distribution has a standard deviation of 100 an
 
 Therefore, multiplying your aggregatable value by a scaling factor can help reduce noise. The scaling factor represents how much you want to scale a given aggregatable value.
 
-{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/qJ182Vhszwsgf1PVLEpT.png", alt="how noise is constant regardless of the aggregated value", width="600", height="462" %}
+{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/qJ182Vhszwsgf1PVLEpT.png", alt="Noise is constant regardless of the aggregated value.", width="600", height="462" %}
 
 Scaling the values up by choosing a larger scaling factor reduces the relative noise. However, this also causes the sum of all contributions across all buckets to reach the contribution budget limit faster. Scaling the values down by choosing a smaller scaling factor constant increases relative noise, but reduces the risk of reaching the budget limit.
 
-{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/qgDt0a7GaMFJ07zibVUw.png", alt="scaling the aggregatable value to the contribution budget", width="400", height="340" %}
+{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/qgDt0a7GaMFJ07zibVUw.png", alt="Scale the aggregatable value to the contribution budget.", width="400", height="340" %}
 
 To calculate an appropriate scaling factor, divide the contribution budget by the maximum sum of aggregatable values across all keys.  
 
