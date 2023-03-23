@@ -489,3 +489,7 @@ To continue your extension service worker learning path, we recommend exploring 
 [mdn-window]: https://developer.mozilla.org/docs/Web/API/Window
 [manifest-min-version]: /docs/extensions/mv3/manifest/minimum_chrome_version/#enforcement
 [crxjs-vite]: https://crxjs.dev/vite-plugin
+[runtime-oninstalled]: /docs/extensions/reference/runtime/#event-onInstalled
+[omnibox-suggest]: /docs/extensions/reference/omnibox/#type-SuggestResult
+[omnibox-input-changed]: /docs/extensions/reference/omnibox/#event-onInputChanged
+[omnibox-input-entered]: /docs/extensions/reference/omnibox/#event-onInputEntered
