@@ -45,8 +45,7 @@ and automatically updates them without user intervention.
 development process.
 
 {% Aside %}
-Windows/MacOs users *can not* install packed extensions not distributed by Chrome, except in an enterprise environment
-Linux users can manually install packed extensions that are not distributed or signed by Chrome
+Windows/macOS users can only install self-hosted extensions through enterprise policies. However, Linux users can manually install packed extensions that are not distributed or signed by Chrome
 Web Store.
 {% endAside %}
 
