@@ -22,9 +22,7 @@ To use source maps:
 - Use only the preprocessors that can produce source maps.
 - Verify that your web server can serve source maps.
 
-## Use a supported preprocessor {: #use_a_supported_preprocessor }
-
-The following types of preprocessors are commonly :
+### Use a supported preprocessor {: #use_a_supported_preprocessor }
 
 Common preprocessors used in combination with source maps include but aren't limited to:
 
