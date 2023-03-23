@@ -26,7 +26,7 @@ To use source maps:
 
 The following types of preprocessors are commonly used in combination with source maps:
 
-- Transpilers ([Babel][5], [Traceur][6])
+- Transpilers ([Babel][5])
 - Compilers ([TypeScript][8], [Dart][10])
 - Minifiers ([UglifyJS][11])
 
