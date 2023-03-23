@@ -21,17 +21,17 @@ Topics is not currently available by default in any version of Chrome, but you c
 -   The Topics API demo allows you to try it out as a single user.
 -   The Topics origin trial allows you to try the API at scale with your website users.
 
-### Try the demo
+### Try the demo {: #demo}
 
 The demo of the Topics API is at [topics-demo.glitch.me](https://topics-demo.glitch.me/). It explains how to try out and debug the API for a single user.
 
 You can also run the Topics [colab](/docs/privacy-sandbox/topics/colab/) to try out the Topics [classifier model](/docs/privacy-sandbox/topics/topic-classification/#classifier-model).
 
-### Test Topics in an origin trial
+### Test Topics in an origin trial {: #origin-trial}
 
 A Privacy Sandbox Relevance and Measurement [origin trial](/docs/privacy-sandbox/unified-origin-trial/) has been made available in Chrome Beta 101.0.4951.26 and above on desktop for the Topics, [FLEDGE](/docs/privacy-sandbox/fledge/), and [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) APIs.
 
-## Get and set topics
+## Get and set topics {: #epoch}
 
 The Topics JavaScript API has one method: `document.browsingTopics()`, which is used to get and set Topics. It returns a promise that resolves to an array of up to three topics, one for each of the three most recent epochs, in random order. An epoch is a period of time currently set to one week.
 
@@ -114,7 +114,7 @@ The `chrome://topics-internals` page is available in Chrome on desktop once [you
 
 The `chrome://topics-internals` page is new. The design and functionality are still under discussion. We're currently iterating and improving the design based on developer feedback. Add your feedback at [bugs.chromium.org](https://bugs.chromium.org/p/chromium/issues/entry?template=Defect+report+from+developer&components=Blink%3ETopicsAPI).
 
-### View topics calculated for your browser
+### View topics calculated for your browser {: #observed-topics}
 
 Users can view information about topics observed for their browser during the current and previous epochs by viewing `chrome://topics-internals`.
 
