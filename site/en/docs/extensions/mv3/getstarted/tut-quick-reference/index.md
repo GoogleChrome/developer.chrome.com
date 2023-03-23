@@ -1,8 +1,8 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Handling events with a service worker'
+title: 'Handle events with service workers'
 seoTitle: 'Chrome extension service worker tutorial.'
-subhead: 'This tutorial teaches concepts relevant to extension service workers.'
+subhead: 'Tutorial that covers fundamental concepts for extension service workers'
 description: 'Learn how to create and debug an extension service worker.'
 date: 2023-04-02
 # updated: 2022-06-13
@@ -16,7 +16,7 @@ This tutorial builds an extension that allows users to open Chrome API reference
 
 This article will cover the following topics:
 
-- Registering a service worker and importing modules.
+- Registering your service worker and importing modules.
 - Debugging your extension service worker.
 - Managing state and handling events.
 - Triggering periodic events.
@@ -42,8 +42,8 @@ Create the [manifest][doc-manifest] file in the root of the project and add the 
   "name": "Open extension API reference",
   "version": "1.0.0",
   "icons": {
-    "16": "icon-16.png",
-    "128": "icon-128.png"
+    "16": "images/icon-16.png",
+    "128": "images/icon-128.png"
   },
   "background": {
     "service_worker": "service-worker.js",
@@ -52,12 +52,12 @@ Create the [manifest][doc-manifest] file in the root of the project and add the 
 ```
 
 Extensions register their service worker in the manifest, which only takes a single JavaScript file.
-There's no need to use `navigator.serviceWorker.register()`, like you would in a web app. See
-[Differences between extension and web service workers](tbd) to learn more.
-
-To learn more about these manifest keys, check out the Reading time tutorial that explains the extension's [metadata][tut-reading-time-step1] and [icons][tut-reading-time-step2] in more detail.
+There's no need to call `navigator.serviceWorker.register()`, like you would in a web app. Learn about the
+[differences between extension and web service workers](tbd).
 
 Create an `images` folder then [download the icons][github-quick-api-icons] into it.
+
+Check out the first steps of the Reading time tutorial to learn more about the extension's [metadata][tut-reading-time-step1] and [icons][tut-reading-time-step2] in the manifest.
 
 ### Step 2: Import multiple service worker modules {: #step-2 }
 
