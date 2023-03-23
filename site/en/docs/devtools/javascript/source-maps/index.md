@@ -24,11 +24,14 @@ To use source maps:
 
 ## Use a supported preprocessor {: #use_a_supported_preprocessor }
 
-The following types of preprocessors are commonly used in combination with source maps:
+The following types of preprocessors are commonly :
 
-- Transpilers ([Babel][5])
-- Compilers ([TypeScript][8], [Dart][10])
-- Minifiers ([UglifyJS][11])
+Common preprocessors used in combination with source maps include but aren't limited to:
+
+- Transpilers: [Babel][5]
+- Compilers: [TypeScript][8] and [Dart][10]
+- Minifiers: [terser](https://github.com/terser/terser)
+- Bundlers: [Webpack](https://webpack.js.org/), [Vite](https://vitejs.dev/), [esbuild](https://esbuild.github.io/), and [Parcel](https://parceljs.org/)
 
 For an extended list, see [Source maps: Languages, tools, and other info][4].
 
@@ -80,11 +83,8 @@ Test it on this [demo page][13]:
 
 [4]: https://github.com/ryanseddon/source-map/wiki/Source-maps:-languages,-tools-and-other-info
 [5]: https://babeljs.io/
-[6]: https://github.com/google/traceur-compiler/wiki/Getting-Started
 [7]: https://github.com/google/closure-compiler
 [8]: http://www.typescriptlang.org/
-[9]: http://coffeescript.org
 [10]: https://www.dartlang.org
-[11]: https://github.com/mishoo/UglifyJS
 [12]: /docs/devtools/javascript/#code-stepping
 [13]: http://www.thecssninja.com/demo/source_mapping/compile.html
