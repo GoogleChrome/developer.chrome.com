@@ -295,7 +295,7 @@ version used by the API.</dd>
 
 ## Next steps
 
-- Learn more about [what topics are and how they work](/docs/privacy-sandbox/topics/topic-classification). <!-- topic classification page and demo and trial links needed-->
+- Learn more about [what topics are and how they work](/docs/privacy-sandbox/topics/topic-classification).
 - Try out the [demo](/docs/privacy-sandbox/topics/demo) or join an [origin trial](/docs/web-platform/origin-trials/).
 
 ## Find out more
