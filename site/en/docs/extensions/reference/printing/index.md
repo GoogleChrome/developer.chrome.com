@@ -62,18 +62,20 @@ console.log(`Default printer: ${defaultPrinter.name}.\n\t${defaultPrinter.descri
 ### submitJob()
 
 The `submitJob()` method requires three things.
+
 * A `ticket` structure specifying which capabilities of the printer are to be used. If the user needs to select from available capabilities, you can retrieve them for a specific printer using `getPrinterInfo()`.
 * A `SubmitJobRequest` structure, which specifies the printer to use, and the file or date to print. This structure contains a reference to the `ticket` structure. 
 * A blob of the file or data to print.
 
-This is a simplified version of the printing example. Notice that the `ticket` is attached to the `SubmitJobRequest` structure (line 6) and that the data to print is converted to a blob (line 8). 
+This is a simplified version of the printing example. Notice that the `ticket` is attached to the `SubmitJobRequest` structure (line 8) and that the data to print is converted to a blob (line 10). Getting the ID of the printer (line 1) is more complicated [in the sample](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/printing)than is shown here. 
 
-```javascript/6,8
-const ticket = getPrinterTicket(printerId);
+```javascript/0,7,9
+const defaultPrinter = getDefaultPrinter();
+const ticket = getPrinterTicket(defaultPrinter);
 const arrayBuffer = getPrintData();
 const submitJobRequest = {
   job: {
-    printerId: printerId,
+    printerId: defaultPrinter,
     title: 'test job',
     ticket: ticket,
     contentType: 'application/pdf',
