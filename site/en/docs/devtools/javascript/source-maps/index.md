@@ -1,105 +1,110 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Map Preprocessed Code to Source Code"
+title: "Debug your original code instead of deployed with source maps"
 authors:
   - megginkearney
   - pbakaus
+  - sofiayem
 date: 2015-04-13
-#updated: YYYY-MM-DD
-description: "Keep your client-side code readable and debuggable even after you've combined, minified or compiled it."
+updated: 2023-03-29
+description: "Keep your client-side code readable and debuggable even after you've combined, minified, or compiled it."
 ---
 
 Keep your client-side code readable and debuggable even after you've combined, minified or compiled
-it. Use source maps to map your source code to your compiled code.
-
-## Summary {: #summary }
-
-- Use Source Maps to map minified code to source code. You can then read and debug compiled code in
-  its original source.
-- Only use preprocessors capable of producing Source Maps.
-- Verify that your web server can serve Source Maps.
+it. Use source maps to map your source code to your compiled code in the **Sources** panel.
 
 ## Get started with preprocessors {: #get_started_with_preprocessors }
 
-This article explains how to interact with JavaScript Source Maps in the DevTools Sources Panel.
+Source maps from preprocessors cause DevTools to load your original files in addition to your minified ones.
+Chrome will actually run your minified code but the **Sources** panel will show you the code you author.
+You can set breakpoints and step through code in source files and all the errors, logs, and breakpoints will automatically map.
 
-## Use a supported preprocessor {: #use_a_supported_preprocessor }
+This gives you the appearance of debugging the code as you wrote it, as opposed to code that is served by your development server and executed by the browser.
 
-You need to use a minifier that's capable of creating source maps.
-For an extended view, see the [Source maps: languages,
-tools and other info][4] wiki page.
+To use source maps in the **Sources** panel:
 
-The following types of preprocessors are commonly used in combination with Source Maps:
+- Use only the preprocessors that can produce source maps.
+- Verify that your web server can serve source maps.
 
-- Transpilers ([Babel][5], [Traceur][6])
-- Compilers ([Closure Compiler][7], [TypeScript][8], [CoffeeScript][9], [Dart][10])
-- Minifiers ([UglifyJS][11])
+### Use a supported preprocessor {: #use_a_supported_preprocessor }
 
-## Source Maps in DevTools Sources panel {: #source_maps_in_devtools_sources_panel }
+Common preprocessors used in combination with source maps include but aren't limited to:
 
-Source Maps from preprocessors cause DevTools to load your original files in addition to your
-minified ones. You then use the originals to set breakpoints and step through code. Meanwhile,
-Chrome is actually running your minified code. This gives you the illusion of running a development
-site in production.
+- Transpilers: [Babel][5]
+- Compilers: [TypeScript][8] and [Dart][10]
+- Minifiers: [terser](https://github.com/terser/terser)
+- Bundlers and development servers: [Webpack](https://webpack.js.org/), [Vite](https://vitejs.dev/), [esbuild](https://esbuild.github.io/), and [Parcel](https://parceljs.org/)
 
-When running Source Maps in DevTools, you'll notice that the JavaScript isn't compiled and you can
-see all the individual JavaScript files it references. This is using source mapping, but behind the
-scenes actually runs the compiled code. Any errors, logs and breakpoints will map to the dev code
-for awesome debugging! So in effect it gives you the illusion that you're running a dev site in
-production.
+For an extended list, see [Source maps: Languages, tools, and other info][4].
 
-### Enable Source Maps in settings {: #enable_source_maps_in_settings }
+## Enable source maps in Settings {: #enable_source_maps_in_settings }
 
-Source Maps are enabled by default (as of Chrome 39), but if you'd like to double-check or enable
-them, first open DevTools and click the settings cog
-{% Img src="image/admin/6OvQcMgStUCLS2kGRYn7.png", alt="gear", width="18", height="18" %}. Under **Sources**, check **Enable
-JavaScript Source Maps**. You might also check **Enable CSS Source Maps**.
+In {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Preferences** > **Sources**](/docs/devtools/settings/preferences/#sources), make sure to check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable JavaScript source maps**.
 
-{% Img src="image/admin/YGj3osOPCRzs4zWSEjNe.jpg", alt="Enable Source Maps", width="800", height="402" %}
+{% Aside %}
+You might also want to check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable CSS source maps**.
+{% endAside %}
 
-### Debugging with Source Maps {: #debugging_with_source_maps }
+## Debugging with source maps {: #debugging_with_source_maps }
 
-When [debugging your code][12] and Source Maps enabled, Source Maps will show in two places:
+{% Aside %}
+This tutorial uses [this demo](https://github.com/jecfish/parcel-demo) as an example.
+{% endAside %}
 
-1.  In the console (the link to source should be the original file, not the generated one)
-2.  When stepping through code (the links in the call stack should open the original source file)
+With source maps [ready](#use_a_supported_preprocessor) and [enabled](#enable_source_maps_in_settings), you can do the following:
 
-## @sourceURL and displayName {: #sourceurl_and_displayname }
+1. [Open your website's sources](/docs/devtools/javascript/#sources-ui) in the **Sources** panel.
+1. To focus only on the code you author, [group authored and deployed files in the file tree](/docs/devtools/javascript/reference/#group-authored-and-deployed). Then expand the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/KIgoYfQUdaCtgDLdYKSE.svg", alt="Authored.", width="24", height="24" %} **Authored** section and open your original source file in the **Editor**.
 
-While not part of the Source Map spec, the `@sourceURL` allows you to make development much easier
-when working with evals. This helper looks very similar to the `//# sourceMappingURL` property and
-is actually mentioned in the Source Map V3 specifications.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/RjxMoAjP106QbqZziwaZ.png", alt="The original file opened in the Authored section.", width="800", height="450" %}
 
-By including the following special comment in your code, which will be evaled, you can name evals
-and inline scripts and styles so they appear as more logical names in your DevTools.
+1. [Set a breakpoint](/docs/devtools/javascript/breakpoints/) as you normally would. For example, a [logpoint](/docs/devtools/javascript/breakpoints/#log-loc). Then run the code.
 
-`//# sourceURL=source.coffee`
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/prEovjLfQ9YsV3YaD7GS.png", alt="A logpoint set in an authored file.", width="800", height="498" %}
 
-Navigate to this **[demo][13]**, then:
+1. Notice that the **Editor** puts a link to the deployed file in the status bar at the bottom. Similarly, it does so for deployed CSS files.
 
-- Open the DevTools and go to the **Sources** panel.
-- Enter in a filename into the _Name your code:_ input field.
-- Click on the **compile** button.
-- An alert will appear with the evaluated sum from the CoffeeScript source.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ld63Rt54s8uA2kQDoHnm.png", alt="A link to the deployed CSS files in the status bar.", width="800", height="437" %}
 
-If you expand the _Sources_ sub-panel you will now see a new file with the custom filename you
-entered earlier. If you double-click to view this file it will contain the compiled JavaScript for
-our original source. On the last line, however, will be a `// @sourceURL` comment indicating what
-the original source file was. This can greatly help with debugging when working with language
-abstractions.
+1. [Open the **Console** drawer](/docs/devtools/console/reference/#drawer). In this example, next to the logpoint's message, the Console shows a link to the original file, not the deployed one.
 
-{% Img src="image/admin/KJAs60U1FMmwVUTjElkV.jpg", alt="Working with sourceURL", width="800", height="403" %}
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ThmjmrqfrAldVWc3o0sg.png", alt="The Console message with a link to the original file.", width="800", height="599" %}
 
-[1]: /web/tools/setup/setup-preprocessors?#supported_preprocessors
-[2]: /web/tools/setup/setup-preprocessors?#debugging-and-editing-preprocessed-content
-[3]: /web/tools/setup/setup-preprocessors?#supported_preprocessors
+1. Change the [breakpoint type](/docs/devtools/javascript/breakpoints/#overview) to a [regular one](/docs/devtools/javascript/breakpoints/#loc) and run the code again. The execution pauses this time.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/3uhd8F9ME1M07fipL7rG.png", alt="Execution paused on a regular breakpoint.", width="800", height="557" %}
+
+   Notice that the **Call Stack** pane shows the name of the original file and not the deployed one.
+
+1. In the status bar at the bottom of the **Editor**, click the link to the deployed file. The **Sources** panel takes you to the corresponding file.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Ny275qI4jkgZaZpM1nmU.png", alt="The deployed file with the sourceMappingURL comment.", width="800", height="498" %}
+
+When you open any deployed file, DevTools notifies you if it found the `//# sourceMappingURL` comment and the associated original file.
+
+Notice that the **Editor** automatically pretty-printed the deployed file. In reality, it contains all the code in a single line, except for the `//# sourceMappingURL` comment.
+
+## Name `eval()` calls with `#sourceURL` {: #sourceurl_and_displayname }
+
+The [`#sourceURL`](/blog/sourcemappingurl-and-sourceurl-syntax-changed/#sourceurl) lets you simplify debugging
+when dealing with `eval()` calls. This helper looks very similar to the [`//# sourceMappingURL` property](/blog/sourcemaps/#how-does-the-source-map-work). For more information, see the [Source Map V3 specification](https://sourcemaps.info/spec.html).
+
+The `//# sourceURL=/path/to/source.file` comment tells the browser to look for the source file when you use `eval()`. This helps you name your evaluations and inline scripts and styles.
+
+Test it on this [demo page][13]:
+
+1. [Open the DevTools](/docs/devtools/open) and go to the **Sources** panel.
+1. On the page, enter an arbitrary filename into the _Name your code:_ input field.
+1. Click the **Compile** button. An alert appears with the evaluated sum from the CoffeeScript source.
+1. In the file tree on the **Page** pane, open a new file with the custom filename you entered. It contains the compiled JavaScript code that has the `// #sourceURL` comment with the original name of the source file.
+1. To open the source file, click the link in the status bar of the **Editor**.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/emBmyXDMqalJSQuus1Bx.png", alt="The sourceURL comment and the link to the source file in the status bar.", width="800", height="560" %}
+
 [4]: https://github.com/ryanseddon/source-map/wiki/Source-maps:-languages,-tools-and-other-info
 [5]: https://babeljs.io/
-[6]: https://github.com/google/traceur-compiler/wiki/Getting-Started
 [7]: https://github.com/google/closure-compiler
 [8]: http://www.typescriptlang.org/
-[9]: http://coffeescript.org
 [10]: https://www.dartlang.org
-[11]: https://github.com/mishoo/UglifyJS
 [12]: /docs/devtools/javascript/#code-stepping
 [13]: http://www.thecssninja.com/demo/source_mapping/compile.html

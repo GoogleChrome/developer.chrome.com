@@ -119,11 +119,26 @@ Using request and response headers to access topics and mark them as observed ca
 -   The response header is only honored if the corresponding request included the topics header (or would have included the header, if the request wasn't empty).
 -   The URL of the request provides the registrable domain used for topic observation.
 
+## Opt out {: #site-opt-out}
+
+You can opt out of topic calculation for specific pages on your site by including the `Permissions-Policy: browsing-topics=()` [Permissions-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy) header on a page to prevent topics calculation for all users on that page only. Subsequent visits to other pages on your site will not be affected. If you set a policy to block the Topics API on one page, this won't affect other pages.
+
+You can also control which third parties have access to topics on your page by using the Permission Policy header to control third-party access to the Topics API.
+
+Use `self` and any domains you would like to allow access to the API as parameters.
+
+For example, to completely disable use of the Topics API within all browsing contexts except for your own origin and those whose origin is `https://example.com`, set the following HTTP response header: 
+
+```text
+Permissions-Policy: geolocation=(self "https://example.com")
+```
+
 {: #debug }
 
 ## Debug your API implementation
 
-The `chrome://topics-internals` page is available in Chrome on desktop once [you enable the Topics API](#feature-flags). This displays topics for the current user, topics inferred for hostnames, and technical information about the API implementation.
+The `chrome://topics-internals` page is available in Chrome on desktop once you
+[enable the Topics API](#feature-flags). This displays topics for the current user, topics inferred for hostnames, and technical information about the API implementation.
 
 The `chrome://topics-internals` page is new. The design and functionality are still under discussion. We're currently iterating and improving the design based on developer feedback. Add your feedback at [bugs.chromium.org](https://bugs.chromium.org/p/chromium/issues/entry?template=Defect+report+from+developer&components=Blink%3ETopicsAPI).
 
@@ -139,7 +154,7 @@ Users can view information about topics observed for their browser during the cu
 </figcaption>
 </figure>
 
-In this example, recently visited sites include topics-demo-cats.glitch.me and cats-cats-cats-cats.glitch.me. This causes the Topics API to select `Pets` and `Cats` as two of the top topics for the current epoch. The remaining three topics have been [chosen at random](https://github.com/patcg-individual-drafts/topics#:~:text=random), since there is not enough browsing history (on sites that observe topics) to provide five topics.
+In this example, recently visited sites include `topics-demo-cats.glitch.me` and `cats-cats-cats-cats.glitch.me`. This causes the Topics API to select `Pets` and `Cats` as two of the top topics for the current epoch. The remaining three topics have been [chosen at random](https://github.com/patcg-individual-drafts/topics#:~:text=random), since there is not enough browsing history (on sites that observe topics) to provide five topics.
 
 The **Observed-by context domains (hashed)** column provides the hashed value of a hostname for which a topic was observed.
 
