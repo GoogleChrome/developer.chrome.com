@@ -19,7 +19,7 @@ Source maps from preprocessors cause DevTools to load your original files in add
 Chrome will actually run your minified code but the **Sources** panel will show you the code you author.
 You can set breakpoints and step through code in source files and all the errors, logs, and breakpoints will automatically map.
 
-This gives you the appearance of debugging the code as you wrote it, as opposed to code that is served by your server (development) and executed by the browser.
+This gives you the appearance of debugging the code as you wrote it, as opposed to code that is served by your development server and executed by the browser.
 
 To use source maps in the **Sources** panel:
 
