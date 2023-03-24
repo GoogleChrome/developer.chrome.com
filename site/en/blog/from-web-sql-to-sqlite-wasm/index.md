@@ -3,8 +3,8 @@ layout: 'layouts/blog-post.njk'
 title: 'From Web SQL to SQLite Wasm: the database migration guide'
 subhead: >
   With SQLite Wasm backed by the origin private file system, there is a versatile replacement for the deprecated Web SQL database technology. This article is a guide to migrating your data from Web SQL to SQLite Wasm.
-date: 2023-03-23
-# updated: 2023-03-23
+date: 2023-03-24
+# updated: 2023-03-24
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/l5kRHOrUI9mQmwOTJKr7.jpg
 alt: Library symbolizing a database.
 authors:
