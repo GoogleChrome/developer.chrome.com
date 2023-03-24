@@ -36,9 +36,9 @@ authors:
 
 Cookie ベースのコンバージョン測定結果を Attribution Reporting レポートと比較するには、[デバッグキー](#glossary)を使用し、Cookie コンバージョンをデバッグレポートにマッピングします。デバッグレポートはエンドポイントに[すぐに送信](/docs/privacy-sandbox/attribution-reporting-debugging/part-1/#debug-reports-are-sent-immediately)されることに注意してください。
 
-### Overview
+### 概要
 
-{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/VZpOhA8ra1QtQ9W34tBH.png", alt="Steps for a loss analysis", width="800", height="609" %}
+{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/VZpOhA8ra1QtQ9W34tBH.png", alt="損失分析の手順", width="800", height="609" %}
 
 デバッグキー（`<source_debug_key, trigger_debug_key>` ペア）を使用して、Cookie のコンバージョンを成功デバッグレポートにマッピングします。**各 Cookie のコンバージョンについて、コンバージョン時に、対応する成功デバッグレポートを受け取りましたか？**
 
@@ -60,13 +60,13 @@ Cookie ベースのコンバージョン測定結果を Attribution Reporting �
 
 ただし、包括的な損失分析を実行して特定のコンバージョンセットを待つ必要はなく、実装の問題を排除することに専念したいテスト段階にある場合があります。その場合は、受信時に[実装の問題を示している可能性がある特定の詳細レポートタイプ](#other-verbose-reports)を直接調べることができます。 {% endAside %}
 
-### Possible scenarios
+### 考えられるシナリオ
 
 #### 成功デバッグレポート
 
 特定の Cookie コンバージョンについて、成功デバッグレポートを受け取った場合、これは、このコンバージョンがアトリビューション レポートに正常に登録されたことを意味します。
 
-**You can expect to receive later an attribution report for this conversion**⏤with a few exceptions:
+いくつかの例外を除いて、**このコンバージョンのアトリビューション レポートを後で受け取ることができます**。
 
 - ユーザーの行動: コンバージョン後、アトリビューション レポートが送信される前に[データを消去](/docs/privacy-sandbox/attribution-reporting-data-clearing/)した、ブラウザを閉じたなど。コンバージョン後にユーザーがブラウザを閉じ、その後 1 週間ブラウザを起動しなかった場合、レポートは 1 週間以上送信されません。この遅延は損失と見なすことができます。
 - イベントレベルのみに適用: イベントレベルのレポートは、優先度の高い別のレポートに置き換えられます。
@@ -86,11 +86,11 @@ Cookie ベースのコンバージョン測定結果を Attribution Reporting �
 
 特定の Cookie コンバージョンについて、詳細デバッグレポートを受け取った場合、成功デバッグレポートを受け取らないため、後でアトリビューション レポートも生成されません。これは報告可能なエラーが発生したことを意味します。ソースの登録、トリガーの登録、レポートの生成、またはレポートの送信が何らかの原因で妨げられています。以下のような原因が考えられます。
 
-- Privacy limits
-- Storage limits
+- プライバシーの制限
+- 保管制限
 - カスタムルール
-- Implementation issue in your code
-- Browser bug
+- コードの実装の問題
+- ブラウザのバグ
 
 こういった原因はよくあることです！どのように対処するかは、各詳細レポートの `type` によって異なります。[詳細レポートのリファレンス](#verbose-reference)を確認してください。
 
@@ -102,7 +102,7 @@ Cookie ベースのコンバージョン測定結果を Attribution Reporting �
 - Cookie が見つからない、またはデバッグキーが見つからない（Cookie が欠落されているためデバッグキーが消去された）。`chrome://attribution-internals` で **Logs** タブを開き、問題が発生していないかどうかを確認します。
 - アトリビューション レポートの送信時ではなく、ソースまたはトリガー時にネットワークの問題が発生した。
 
-**Are you receiving attribution reports?**
+**アトリビューション レポートを受け取っていますか？**
 
 これは、デバッグレポートを受信していない場合のケースです。特定の Cookie コンバージョンについて、いかなるタイプのレポートも受信しなかった場合（いかなるタイプのデバッグレポートもアトリビューション レポートも受信しなかった）、これは報告不可能なエラーが発生したことを意味します。以下のような原因が考えられます。
 
@@ -116,7 +116,7 @@ Cookie ベースのコンバージョン測定結果を Attribution Reporting �
 
 {% Aside %} 詳細レポートの `type` が `trigger-event` で始まる場合、アトリビューション レポートは、イベントレベルのレポートに関連付けられたソースイベントまたはトリガーイベントに対してのみ生成されます。詳細レポートの `type` が `trigger-aggregate` で始まる場合、集計可能なレポートに関連付けられているソースイベントまたはトリガーイベントに対してのみ生成されます。それ以外の場合はすべて、イベントレベルまたは集計可能なレポート用です。 {% endAside %}
 
-### Source registration success
+### ソース登録成功
 
 ソースは正常に登録されています。
 
@@ -124,7 +124,7 @@ Cookie ベースのコンバージョン測定結果を Attribution Reporting �
 
 {% Aside 'gotchas' %} ソース登録成功の詳細デバッグレポートは、アトリビューションのないレポート作成元の制限に達した場合でも送信されます。その場合、ソース登録が実際には成功していなくても、セキュリティ上の理由により送信されます。 {% endAside %}
 
-### Privacy limitations reports
+### プライバシー制限レポート
 
 **以下のレポートが期待されます。**これらは、サイト間のユーザー ID の漏えいを抑制するためのプライバシー制限を示しています。
 
@@ -140,7 +140,7 @@ Cookie ベースのコンバージョン測定結果を Attribution Reporting �
 
 `trigger-event-excessive-reports`: レポート数が制限を超えた場合に生成されます。ビューに対して最大 1 つのコンバージョン、クリックに対して最大 3 つのコンバージョンを登録できます。[優先順位](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit#heading=h.4ju6u3z5bons)を設定すれば、どのレポートを受け取るかを構成できます。[詳細とレポート本文](https://github.com/WICG/attribution-reporting-api/blob/main/verbose_debugging_reports.md)
 
-### Storage limitations reports
+### ストレージ制限レポート
 
 **こ以下のレポートが期待されます。**これらは、過度のリソース使用を防ぐためのストレージ制限を示しています。
 
@@ -168,7 +168,7 @@ Cookie ベースのコンバージョン測定結果を Attribution Reporting �
 
 `trigger-aggregate-report-window-passed`: [詳細とレポート本文](https://github.com/WICG/attribution-reporting-api/blob/main/verbose_debugging_reports.md#trigger-aggregate-report-window-passed)
 
-### Other verbose reports
+### その他の詳細レポート
 
 **以下のレポートは、コードの潜在的な実装の問題を示している可能性があります。**
 
@@ -188,19 +188,19 @@ Cookie ベースのコンバージョン測定結果を Attribution Reporting �
 
 {% Details %} {% DetailsSummary 'h2' %}
 
-## Loss analysis example
+## 損失分析例
 
 {% endDetailsSummary %}
 
-### Step 1: Setup and mapping with cookies
+### ステップ 1: Cookie を使用したセットアップとマッピング
 
 [パート 2: デバッグレポートのセットアップ](/docs/privacy-sandbox/attribution-reporting-debugging/part-2)の手順に従って、**成功デバッグレポート**と**詳細デバッグレポート**を生成するようにシステムを設定します。
 
 これにより、Cookie ベースのコンバージョン情報を使用して、対応するデバッグレポートまたはアトリビューション レポートを検索できます。
 
-### Step 2: Identify successful registrations and missing reports
+### ステップ 2: 成功した登録と不足しているレポートを特定する
 
-In this example, let's assume you've tracked 100 conversions with your cookie-based system.
+この例では、Cookie ベースのシステムで 100 件のコンバージョンを追跡したと仮定します。
 
 Cookie ベースのコンバージョンを記録するたびに、この Cookie ベースのコンバージョンと同じ `<source_debug_key, trigger_debug_key>` ペアを持つ成功デバッグレポートを探します（すぐに送信されます）。
 
@@ -211,13 +211,13 @@ Cookie ベースのコンバージョンを記録するたびに、この Cookie
 
 {% Aside %} Cookie ベースのコンバージョンにマッピングされないイベントレベルのアトリビューション レポートがある可能性があります。これらは、API によってランダムに生成されたノイズを含むレポートである可能性が最も高いです。これは、イベントレベルのレポートと同じソースデバッグキーを持つ `source-noised` タイプのデバッグ詳細レポートを探すことで確認できます。 {% endAside %}
 
-### Step 3: Brief loss assessment
+### ステップ 3: 簡単な損失評価
 
 100-70 = 30 件の成功デバッグレポートが見つかりません。これは、これらの 30 件のコンバージョン（Cookie ベースの実装で追跡されたもの）がアトリビューション レポートで記録されなかったことを意味します。これらのアトリビューション レポートを受け取ることはありません。
 
-Since you have 100 cookie-based conversions and only 70 attribution-based conversions, your loss is 30%. You now have a brief loss assessment.
+Cookie ベースのコンバージョンが 100 件あり、アトリビューション ベースのコンバージョンが 70 件しかないため、損失は 30% です。これで、簡単な損失評価ができました。
 
-### Step 4: Analyze causes
+### ステップ 4: 原因を分析する
 
 これらのレポートが欠落している理由を調査するには、コンバージョン（トリガー登録）時またはそれ以前のソース登録時に受け取った、対応する詳細デバッグレポートを探します。Cookie ベースのコンバージョンのキーを使用して、これらを詳細なデバッグレポートにマッピングします。
 
