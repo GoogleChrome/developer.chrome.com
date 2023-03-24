@@ -2,7 +2,7 @@
 layout: 'layouts/doc-post.njk'
 title: 'Handle events with service workers'
 seoTitle: 'Chrome extension service worker tutorial.'
-subhead: 'Tutorial that covers fundamental concepts for extension service workers'
+subhead: 'Tutorial that covers extension service worker concepts'
 description: 'Learn how to create and debug an extension service worker.'
 date: 2023-04-02
 # updated: 2022-06-13
@@ -314,9 +314,9 @@ All [Chrome API][doc-apis] event listeners and methods restart the service worke
 
 ### Step 7: Communicate with other contexts {: #step-7 }
 
-[Content scripts][doc-content] communicate with the rest of the extension through [message passing][doc-messages]. In this example, the content script will request the tip of the day from the service worker. 
+Extensions use [content scripts][doc-content] to read and modify the content of the page. When a user visits a Chrome API reference page, the extension's content script will [send a message][doc-messages] to request the tip of the day from the service worker. 
 
-First, declare the content script in the manifest and add the match pattern corresponding to the [Chrome API][doc-apis] reference documentation.
+Start by declaring the content script in the manifest and add the match pattern corresponding to the [Chrome API][doc-apis] reference documentation.
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -333,16 +333,17 @@ First, declare the content script in the manifest and add the match pattern corr
 
 ```
 
-Create a new content file. The following code generates a button that will open the tip popover. It also sends a message to the service worker requesting the extension tip.
+Create a new content file. The following code sends a message to the service worker requesting the tip. Then, adds a button that will open a popover containing the extension tip. This code uses the new web platform [Popover API][popover-chrome-status] (see the [HTML spec][popover-html-spec] for more details). 
 
 {% Label %}content.js:{% endLabel %}
 
 ```js
 (async () => {
-  const nav = document.querySelector('.navigation-rail__links');
-
+  // Sends a message to the service worker and receives a tip in response
   const { tip } = await chrome.runtime.sendMessage({ greeting: 'tip' });
 
+  const nav = document.querySelector('.navigation-rail__links');
+  
   const tipWidget = createDomElement(`
     <button class="navigation-rail__link" popovertarget="tip-popover" popovertargetaction="show" style="padding: 0; border: none; background: none;>
       <div class="navigation-rail__icon">
@@ -368,21 +369,7 @@ function createDomElement(html) {
 }
 ```
 
-
-{% Details %}
-{% DetailsSummary %}
-💡 **Interesting JavaScript used in this code**
-{% endDetailsSummary %}
-
-TBD
-
-- DomParser
-- Popover API
-- SVG element
-
-{% endDetails %}
-
-The final step is to add a message handler to our service worker that replies the daily tip when requested from the content script. 
+The final step is to add a message handler to our service worker that sends a reply to the content script with the daily tip. 
 
 {% Label %}sw-api.js:{% endLabel %}
 
@@ -401,8 +388,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 Verify that the file structure of your project looks like the following: 
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/bnfc65cdTGctM4A15DD9.png", alt="The contents of the extension folder: manifest.json, service-worker.js, sw-omnibox.js, sw-tips.js,
-content.js, and icons.", width="400", height="538" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/l2HHbaSJeveap8EWLhrU.png", alt="The contents of the extension folder: images folder, manifest.json, service-worker.js, sw-omnibox.js, sw-tips.js,
+and content.js", width="379", height="299" %}
 
 ### Load your extension locally {: #locally }
 
@@ -431,20 +418,35 @@ It should look like this:
 Click the Tip button located on the navigation bar to open the extension tip.
 
 <figure>
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/GqjdrVtuA0zt87l3QIn9.gif", alt="Open daily tip in ", width="500", height="593" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/GqjdrVtuA0zt87l3QIn9.gif", alt="Open daily tip in ", width="500", height="593", class="screenshot" %}
   <figcaption>
-  Quick API extension opening the Runtime API.
+  Quick API extension opening the tip of the day.
   </figcaption>
 </figure>
 
+{% Details %}
+{% DetailsSummary %}
+**Popover API available now in Canary behind a flag**
+{% endDetailsSummary %}
+
+The Popover API is planned for [launch in Chrome 114][popover-chrome-status], available in stable in early May 2023. But you can start using it now by following these steps:
+
+1. Download Canary
+1. Go to chrome://flags
+1. Enable the "Experimental Web Platform features" flag.
+1. Restart the browser
+
+It is enabled by default in Chrome Canary for local testing.
+
+{% endDetails %}
 
 ## 🎯 Potential enhancements {: #challenge }
 
 Based on what you’ve learned today, try to accomplish any of the following:
 
-- Add a CSS stylesheet to the content script.
-- TBD
-- TBD
+- Explore another way to implement the omnibox suggestions.
+- Create your own custom modal for displaying the extension tip.
+- Open an additional page to the MDN's Web Extensions reference API pages.
 
 ## Keep building! {: #continue }
 
@@ -464,36 +466,39 @@ To continue your extension service worker learning path, we recommend exploring 
 - TBD
 - TBD
 
-[api-scripting]: /docs/extensions/reference/scripting/
-[api-storage]: /docs/extensions/reference/storage
 [api-alarms]: /docs/extensions/reference/alarms
 [api-omnibox]: /docs/extensions/reference/omnibox
+[api-scripting]: /docs/extensions/reference/scripting/
+[api-storage]: /docs/extensions/reference/storage
+[crxjs-vite]: https://crxjs.dev/vite-plugin
 [doc-apis]: /docs/extensions/reference
+[doc-content]: /docs/extensions/mv3/content_scripts/
 [doc-dev-basics-unpacked]: /docs/extensions/mv3/getstarted/development-basics#load-unpacked
 [doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics
 [doc-devguide]: /docs/extensions/mv3/devguide/
 [doc-ext-101]: /docs/extensions/mv3/getstarted/extensions-101/
+[doc-host-perm]: /docs/extensions/mv3/match_patterns/
 [doc-manifest]: /docs/extensions/mv3/manifest/
+[doc-messages]: /docs/extensions/mv3/messaging
 [doc-perms-warning]: /docs/extensions/mv3/permission_warnings/#required_permissions
 [doc-sw]: /docs/extensions/mv3/service_workers/
-[doc-content]: /docs/extensions/mv3/content_scripts/
-[doc-messages]: /docs/extensions/mv3/messaging
 [doc-welcome]: /docs/extensions/mv3/
 [github-focus-mode-icons]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.focus-mode/images
-[github-quick-api]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.quick-api-reference
 [github-quick-api-icons]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.quick-api-reference/images
+[github-quick-api]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.quick-api-reference
+[manifest-min-version]: /docs/extensions/mv3/manifest/minimum_chrome_version/#enforcement
 [mdn-es-module]: https://web.dev/es-modules-in-sw/
-[runtime-oninstalled]: /docs/extensions/reference/runtime#event-onInstalled
+[mdn-local-storage]: https://developer.mozilla.org/docs/Web/API/Window/localStorage
+[mdn-window]: https://developer.mozilla.org/docs/Web/API/Window
+[omnibox-input-changed]: /docs/extensions/reference/omnibox/#event-onInputChanged
+[omnibox-input-entered]: /docs/extensions/reference/omnibox/#event-onInputEntered
+[omnibox-suggest]: /docs/extensions/reference/omnibox/#type-SuggestResult
+[popover-chrome-status]: https://chromestatus.com/feature/5463833265045504
+[popover-explainer]: https://open-ui.org/components/popover.research.explainer/
+[popover-chromium-issue]: https://bugs.chromium.org/p/chromium/issues/detail?id=1307772
+[popover-html-spec]: https://html.spec.whatwg.org/multipage/popover.html
+[runtime-oninstalled]: /docs/extensions/reference/runtime/#event-onInstalled
 [tut-reading-time-step1]: /docs/extensions/mv3/getstarted/tut-reading-time#step-1
 [tut-reading-time-step2]: /docs/extensions/mv3/getstarted/tut-reading-time#step-2
 [tut-reading-time]: /docs/extensions/mv3/getstarted/tut-reading-time
 [tut-tabs-manager]: /docs/extensions/mv3/getstarted/tut-tabs-manager
-[mdn-local-storage]: https://developer.mozilla.org/docs/Web/API/Window/localStorage
-[doc-host-perm]: /docs/extensions/mv3/match_patterns/
-[mdn-window]: https://developer.mozilla.org/docs/Web/API/Window
-[manifest-min-version]: /docs/extensions/mv3/manifest/minimum_chrome_version/#enforcement
-[crxjs-vite]: https://crxjs.dev/vite-plugin
-[runtime-oninstalled]: /docs/extensions/reference/runtime/#event-onInstalled
-[omnibox-suggest]: /docs/extensions/reference/omnibox/#type-SuggestResult
-[omnibox-input-changed]: /docs/extensions/reference/omnibox/#event-onInputChanged
-[omnibox-input-entered]: /docs/extensions/reference/omnibox/#event-onInputEntered
