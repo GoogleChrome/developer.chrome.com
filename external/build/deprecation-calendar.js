@@ -101,6 +101,7 @@ async function run() {
     }
 
     const formattedDeprecation = {
+      id: deprecation.id,
       version: deprecation.browsers.chrome.desktop,
       name: deprecation.name,
       date: date,
