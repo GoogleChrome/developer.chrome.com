@@ -91,7 +91,7 @@ more Chrome settings you can configure from the command line than what's availab
 
 For example, to run Chrome Canary from a terminal on a Mac, with the [Topics
 API](/docs/privacy-sandbox/topics/) activated and [epoch
-length](/docs/privacy-sandbox/topics/#epoch) set to 15 seconds, use the
+length](/docs/privacy-sandbox/topics/overview/#epoch) set to 15 seconds, use the
 following command:
 
 ``` text
