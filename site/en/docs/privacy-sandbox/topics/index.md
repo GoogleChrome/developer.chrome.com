@@ -108,6 +108,21 @@ Using request and response headers to access topics and mark them as observed ca
 -   The response header is only honored if the corresponding request included the topics header (or would have included the header, if the request wasn't empty).
 -   The URL of the request provides the registrable domain used for topic observation.
 
+## Opt out {: #site-opt-out}
+
+You can opt out of topic calculation for specific pages on your site by including the `Permissions-Policy: browsing-topics=()` [Permissions-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy) header on a page to prevent topics calculation for all users on that page only. Subsequent visits to other pages on your site will not be affected. If you set a policy to block the Topics API on one page, this won't affect other pages.
+
+You can also control which third parties have access to topics on your page by using the Permission Policy header to control third-party access to the Topics API.
+
+Use `self` and any domains you would like to allow access to the API as parameters.
+
+For example, to completely disable use of the Topics API within all browsing contexts except for your own origin and those whose origin is `https://example.com`, set the following HTTP response header: 
+
+```text
+Permissions-Policy: geolocation=(self "https://example.com")
+```
+
+
 ## Debug your API implementation
 
 The `chrome://topics-internals` page is available in Chrome on desktop once [you enable the Topics API](#feature-flags). This displays topics for the current user, topics inferred for hostnames, and technical information about the API implementation.
