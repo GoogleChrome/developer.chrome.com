@@ -2,9 +2,11 @@
 layout: 'layouts/doc-post.njk'
 title: 'Topics API developer guide'
 subhead: >
-  Learn how to work with the API, including how to use Chrome flags for testing.
+  Learn how to work with the Topics, demo the API, and test with Chrome
+  flags.
 description: >
-  Learn how to work with the API, including how to use Chrome flags for testing.
+  Learn how to work with the Topics, demo the API, and test with Chrome
+  flags.
 date: 2022-01-25
 updated: 2023-03-08
 authors:
@@ -310,7 +312,6 @@ href="https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md">taxonomy</a>
 version used by the API.</dd>
     </dt><br />
 </dl>
-
 
 ## Next steps
 
