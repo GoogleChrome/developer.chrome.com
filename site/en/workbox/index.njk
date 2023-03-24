@@ -54,6 +54,7 @@ sections:
 {% from 'macros/icon.njk' import icon with context %}
 {% from 'macros/landing-section.njk' import landingSection with context %}
 {% from 'macros/landing-deco.njk' import landingDeco with context %}
+{% from 'macros/youtube-playlist.njk' import youTubePlaylist with context %}
 
 {# unique styles, needed only for Workbox hero card. #}
 <style>
@@ -97,9 +98,7 @@ sections:
   )
 }}
 
-
-{% YouTubePlaylist "PLNYkxOF6rcIC3BwCw--jvZNN7obH4QUlH"  %}
-
+{{ youTubePlaylist("PLNYkxOF6rcIC3BwCw--jvZNN7obH4QUlH") }}
 
 {{ landingSection(
   'How to use Workbox',
