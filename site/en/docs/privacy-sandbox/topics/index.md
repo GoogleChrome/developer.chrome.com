@@ -119,7 +119,9 @@ Using request and response headers to access topics and mark them as observed ca
 -   The response header is only honored if the corresponding request included the topics header (or would have included the header, if the request wasn't empty).
 -   The URL of the request provides the registrable domain used for topic observation.
 
-## Opt out {: #site-opt-out}
+ {: #site-opt-out}
+
+## Opt out
 
 You can opt out of topic calculation for specific pages on your site by including the `Permissions-Policy: browsing-topics=()` [Permissions-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy) header on a page to prevent topics calculation for all users on that page only. Subsequent visits to other pages on your site will not be affected. If you set a policy to block the Topics API on one page, this won't affect other pages.
 
@@ -296,7 +298,8 @@ version used by the API.</dd>
 ## Next steps
 
 - Learn more about [what topics are and how they work](/docs/privacy-sandbox/topics/topic-classification).
-- Try out the [demo](/docs/privacy-sandbox/topics/demo) or join an [origin trial](/docs/web-platform/origin-trials/).
+- Try out the [demo](/docs/privacy-sandbox/topics/demo) or join the
+  [origin trial](/docs/web-platform/origin-trials/).
 
 ## Find out more
 
