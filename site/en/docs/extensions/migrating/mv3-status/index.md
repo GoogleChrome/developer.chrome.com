@@ -20,7 +20,7 @@ The following enhancement is currently under development.
 
 Userscript managers cannot inject scripts that are not included in the extension's package because of platform and policy changes that prevent arbitrary code execution. To address this, Manifest V3 is being expanded to specifically support user-authored scripts and styles.
 
-**Estimated timeline:** Targeting Canary support in the first quarter of 2023.
+**Estimated timeline:** Targeting Canary support in the second quarter of 2023.
 
 ## Completed work {: #complated-work }
 
