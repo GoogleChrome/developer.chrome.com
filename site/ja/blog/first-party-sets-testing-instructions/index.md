@@ -6,7 +6,7 @@ date: '2022-12-01'
 thumbnail: image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/JL7L7S2qKI53pTWACfcv.jpg
 alt: First-Party Sets を示す図。1 つのセットには example.com、example.rs、および example.co.uk ドメインが、もう 1 つのセットには brandx.site、fly-brandx.site、および drive-brandx.site ドメインが含まれている。
 tags:
-  - privacy
+  - プライバシー
 authors:
   - mihajlija
 ---
@@ -31,7 +31,7 @@ First-Party Sets（FPS）は、開発者がサイト間の関係を宣言する�
 
 SAA を使用すると、サイトはクロスサイト Cookie アクセスを積極的に要求できます。リクエストしているサイトとトップレベルのウェブサイトが同じ FPS 内にある場合、Chrome はリクエストを自動的に許可します。SAA への呼び出しが他のブラウザでどのように処理されるかについては、[Storage Access API（SAA）のドキュメント](https://developer.mozilla.org/docs/Web/API/Storage_Access_API)を参照してください。
 
-SAA currently requires that the document obtains user activation before calling the API's methods.
+SAA では現在、ドキュメントが API のメソッドを呼び出す前にユーザーのアクティベーションを取得する必要があります。
 
 これにより、クロスサイト画像や Cookie を必要とするスクリプトタグを使用するトップレベル サイトでは、FPS の採用が困難になる可能性があります。[これらの課題のいくつかに対処する](https://github.com/WICG/first-party-sets#extending-the-storage-access-api)ために、新しい API である [`requestStorageAccessForOrigin`](https://github.com/mreichhoff/requestStorageAccessForOrigin) を提案し、開発者がこの変更を簡単に採用できるようにしました。この API はテスト用にも利用できます。
 
@@ -43,15 +43,15 @@ SAA currently requires that the document obtains user activation before calling 
 
 セットの送信プロセスはまだ活発な開発段階にあるため、ローカルテストでは、コマンドラインでセットを作成し、ブラウザに直接渡すことしかできません。ローカルテストでは、機能フラグを使用してテストするため、セットを GitHub リポジトリに送信する必要はありません。
 
-## How to test locally
+## ローカルでテストする方法
 
-### Prerequisites
+### 前提条件
 
 FPS をローカルでテストするには、Chrome 108 以降をコマンドラインで起動して使用します。
 
 今後のリリース前の Chrome 機能をプレビューするには、[ベータ版](https://www.google.com/chrome/beta/)または [Canary](https://www.google.com/chrome/canary/) 版の Chrome をダウンロードしてください。
 
-### Example
+### 例
 
 {% Aside %} 実際の FPS デモを見るには、[https://first-party-sets.glitch.me/](https://first-party-sets.glitch.me/) にアクセスしてください。 {% endAside %}
 
@@ -63,11 +63,11 @@ google-chrome \
 
 [フラグを使用して Chromium を実行する方法](https://www.chromium.org/developers/how-tos/run-chromium-with-flags/)については、こちらをご覧ください。
 
-### Steps
+### 手順
 
 FPS をローカルで有効にするには、このセクションで説明されているカンマ区切りのフラグリストとともに Chrome の `--enable-features` オプションを使用し、一連の関連サイトを `--use-first-party-set` に渡す JSON オブジェクトとして宣言する必要があります。
 
-#### Enable FPS
+#### FPS を有効にする
 
 `FirstPartySets` を使って Chrome で FPS を有効にします。
 
@@ -93,7 +93,7 @@ StorageAccessAPIForOriginExtension
 
 トップレベルサイトが `requestStorageAccessForOrigin()` を使用して、特定のオリジンに代わってストレージアクセスを要求できるようにします。これは、Cookie を必要とするクロスサイト画像またはスクリプトタグを使用するトップレベル サイトに役立ち、SAA を[採用する際のいくつかの課題に対処します](https://github.com/WICG/first-party-sets#extending-the-storage-access-api)。
 
-#### Declare a set locally
+#### セットをローカルで宣言する
 
 First-Party Set はドメインのコレクションであり、単一の「セットプライマリ」と場合によっては複数の「セットメンバー」が存在します。セットメンバーには、[ユース ケースに基づいたサブセット](https://github.com/WICG/first-party-sets#defining-a-set-through-use-case-based-subsetsgh-use-case-based-subsets)を含むさまざまなドメインタイプを含めることができます。
 
@@ -118,13 +118,13 @@ First-Party Set はドメインのコレクションであり、単一の「セ�
 
 ローカルテストでは、コマンドラインでセットを作成し、ブラウザに直接渡すことしかできません。ローカルでのテスト目的では、セットの検証はありませんが、FPS が安定バージョンで出荷される場合には、すべてのセットを FPS GitHub リポジトリに提出し、検証基準に従う必要があります。
 
-#### Enable FPS UI
+#### FPS UI を有効にする
 
 ```text
 PageInfoCookiesSubpage
 ```
 
-Enables showing FPS in the PageInfo section accessible from the URL bar.
+URL バーからアクセスできる PageInfo セクションで FPS を表示できるようにします。
 
 {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/ZljqGAmnZWXbFTQWhtMw.png", alt="", width="800", height="513" %}
 
@@ -142,11 +142,11 @@ Chrome 設定の［プライバシーとセキュリティ］→［Cookie およ
 2. ［一般設定］で、［サード パーティの Cookie をブロックする］が有効になっていることを確認します。
 3. サブオプションの［関連サイトがグループ内のアクティビティを表示できるようにする］も有効になっていることを確認します。
 
-## Security considerations
+## セキュリティに関する考慮事項
 
 Storage Access API により、ウェブサイトは特定のケースでサードパーティ Cookie へのアクセスを取り戻すことができるため、ウェブアプリケーションがクロスサイト攻撃や情報漏えいの影響を受けやすくなる可能性があります。クロスサイト コンテキストで Cookie に依存するサイトは、[CSRF](https://developer.mozilla.org/docs/Glossary/CSRF) やその他の攻撃のリスクを認識する必要があります。
 
-### Planned improvements
+### 改善予定
 
 これを改善するために、将来の Chrome リリースでは、明示的な埋め込み先のオプトインを確実にすることを目的として、追加のセキュリティ制御が必要になります。提案された改善点は、フレームごとにのみアクセスを許可し、認証されたリクエストで CORS を要求し、オリジンへのアクセス範囲のみを維持することです。詳細については、[最近のセキュリティ分析](https://docs.google.com/document/d/1AsrETl-7XvnZNbG81Zy9BcZfKbqACQYBSrjM3VsIpjY/edit#heading=h.vb3ujl8dnk4q)をご覧ください。
 
