@@ -18,7 +18,7 @@ Attribution Reporting API のテストを行う場合、統合が正しく機能
 
 これらの作業を完了するには、デバッグレポートが必要となります。したがって、[オリジントライアル](/docs/privacy-sandbox/unified-origin-trial/)に参加する場合にはデバッグレポートのセットアップを強くお勧めさせていただきます。
 
-## Glossary
+## 用語集
 
 {% Aside 'key-term' %}*レポートオリジン*とは、アトリビューションレポートの[ソースヘッダー](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit#heading=h.zea9dm525c2d)と[トリガーヘッダー](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit#heading=h.r2yh4lr9r7p3)を設定する[オリジン](https://web.dev/same-site-same-origin/#origin)です。ブラウザーによって生成されたすべてのレポートはこのオリジンへと送信されます。このガイダンスでは、レポートオリジンの例として `https://adtech.example` を使用します。{% endAside %}
 
@@ -81,7 +81,7 @@ Review example reports in [Part 2: Set up debug reports](/docs/privacy-sandbox/a
 
 詳細については、「[第 2 回: デバッグレポートのセットアップ](/docs/privacy-sandbox/attribution-reporting-debugging/part-2/)」を参照してください。
 
-## Use cases
+## ユースケース
 
 ### 基本的なリアルタイムでの統合チェック
 
@@ -89,7 +89,7 @@ Review example reports in [Part 2: Set up debug reports](/docs/privacy-sandbox/a
 
 これを行う方法の詳細については、「[第 3 回: デバッグのクックブック](/docs/privacy-sandbox/attribution-reporting-debugging/part-3/)」を参照してください。
 
-### Loss analysis
+### 損失分析
 
 サードパーティ Cookie とは異なり、Attribution Reporting API には実用性とプライバシーのバランスを取るように設計されている組み込みのプライバシー保護が含まれています。つまり、Attribution Reporting API では現在 Cookie を使用して収集している測定データのすべてを収集することができない可能性があります。サードパーティ Cookie で追跡可能なコンバージョンのすべてがアトリビューションレポートを生成するわけではありません。
 
@@ -101,13 +101,13 @@ Review example reports in [Part 2: Set up debug reports](/docs/privacy-sandbox/a
 
 損失分析を行う方法の詳細については、「[第 3 回: デバッグのクックブック](/docs/privacy-sandbox/attribution-reporting-debugging/part-3/)」を参照してください。
 
-### Troubleshooting
+### トラブルシューティング
 
 プライバシーの保護やリソースの保護による損失は想定内であると言えますが、それ以外の損失については意図しないものである可能性があります。実装における構成ミスやブラウザー自体のバグによりレポートが失われてしまう場合もあるのです。
 
 デバッグレポートを使用すれば、自分で実装に関する問題を検出して修正したり、ブラウザーの開発チームに潜在的なバグを報告したりすることができます。これを行う方法については、「[第 3 回: デバッグのクックブック](/docs/privacy-sandbox/attribution-reporting-debugging/part-3/)」を参照してください。
 
-### Advanced configuration check
+### 高度な構成チェック
 
 Attribution Reporting API の一部の機能を使えば、API の動作をカスタマイズできるようになります。フィルタリングルール、重複排除ルール、優先順位ルールなどがその例として挙げられます。
 
