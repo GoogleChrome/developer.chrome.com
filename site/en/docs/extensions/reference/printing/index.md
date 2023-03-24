@@ -66,9 +66,9 @@ The `submitJob()` method requires three things.
 * A `SubmitJobRequest` structure, which specifies the printer to use, and the file or date to print. This structure contains a reference to the `ticket` structure. 
 * A blob of the file or data to print.
 
-This is a simplified version of the printing example. Notice that the `ticket` is attached to the `SubmitJobRequest` structure (line 8) and that the data to print is converted to a blob (line 8). 
+This is a simplified version of the printing example. Notice that the `ticket` is attached to the `SubmitJobRequest` structure (line 6) and that the data to print is converted to a blob (line 8). 
 
-```javascript
+```javascript/6,8
 const ticket = getPrinterTicket(printerId);
 const arrayBuffer = getPrintData();
 const submitJobRequest = {
