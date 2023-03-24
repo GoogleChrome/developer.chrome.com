@@ -3,7 +3,7 @@ layout: layouts/doc-post.njk
 title: デバッグレポートをセットアップする
 subhead: アトリビューション レポートのデバッグに関するパート 2/3。デバッグレポートをセットアップします。
 description: アトリビューション レポートのデバッグに関するパート 2/3。デバッグレポートをセットアップします。
-date: '2022-12-13'
+date: 2022-12-13
 authors:
   - maudn
   - alexandrawhite
