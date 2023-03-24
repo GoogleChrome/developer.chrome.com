@@ -18,7 +18,7 @@ async function fetchDeprecations() {
   try {
     const data = await fetch(DEPRECATION_ENDPOINT);
 
-    const deprecationsText = (await data.text()).substring(5);
+    const deprecationsText = (await data.text()).substring(5); // Remove first 5 chars to have a correctly formatted JSON
     const deprecationsJson = JSON.parse(deprecationsText);
     deprecations = deprecationsJson?.features.sort(deprecationsSort);
   } catch (error) {
@@ -46,7 +46,7 @@ async function fetchChannels(start, end) {
   try {
     const data = await fetch(`${CHANNELS_ENDPOINT}${queryString}`);
 
-    const channelsText = (await data.text()).substring(5);
+    const channelsText = (await data.text()).substring(5); // Remove first 5 chars to have a correctly formatted JSON
     channels = JSON.parse(channelsText);
   } catch (error) {
     console.error('Error fetching the channels', error);
@@ -57,7 +57,7 @@ async function fetchChannels(start, end) {
 
 /**
  * Starting from an array of deprecations, removes the ones that have
- * no Chrome version associated and them orders them chronologically
+ * no Chrome version associated and then orders them chronologically
  *
  * @param {object[]} deprecations a list of deprecations to filter and order
  * @return {number[]} an array containing all the versions involved in the
@@ -110,7 +110,11 @@ async function run() {
   });
 
   const targetFile = path.join(__dirname, '../data/deprecation-calendar.json');
-  fs.writeFile(targetFile, JSON.stringify(formattedDeprecations));
+  try {
+    fs.writeFile(targetFile, JSON.stringify(formattedDeprecations));
+  } catch (error) {
+    console.error('Error writing the data', error);
+  }
 }
 
 run();
