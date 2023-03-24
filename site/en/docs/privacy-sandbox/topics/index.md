@@ -60,12 +60,14 @@ Before using the API, check if it's supported by the browser and available in th
 Feature support on the current page isn't a guarantee that an API is usable: the user may have disabled the API via browser settings, or they may have other settings that prevent the API from being used. To protect user privacy, there is no way to check for these other settings programmatically.
 {% endAside %}
 
-### Access topics without modifying state
+### Access topics without modifying state {: #skipobservation}
 
+{% Aside %}
 From Chrome 108, the `document.browsingTopics()` method can be passed an optional argument: `{skipObservation:true}`.
 This allows the method to return topics without causing the browser to record a topic observation. By default, it does. In other words, the call will not cause the current page to be included in the weekly epoch calculation, nor will it update the list of topics observed for the caller.
+{% endAside %}
 
-### Access topics with the JavaScript API
+### Access topics with the JavaScript API {: #access-topics}
 
 Here is a basic example of possible API usage to access topics for the current user. To keep it simple, there's no error handling.
 
@@ -123,9 +125,9 @@ Permissions-Policy: geolocation=(self "https://example.com")
 ```
 
 
-## Debug your API implementation
+## Debug your API implementation {: #debug}
 
-The `chrome://topics-internals` page is available in Chrome on desktop once [you enable the Topics API](#feature-flags). This displays topics for the current user, topics inferred for hostnames, and technical information about the API implementation.
+The `chrome://topics-internals` page is available in Chrome on desktop once [you enable the Topics API](/docs/privacy-sandbox/topics/demo/#feature-flags). This displays topics for the current user, topics inferred for hostnames, and technical information about the API implementation.
 
 The `chrome://topics-internals` page is new. The design and functionality are still under discussion. We're currently iterating and improving the design based on developer feedback. Add your feedback at [bugs.chromium.org](https://bugs.chromium.org/p/chromium/issues/entry?template=Defect+report+from+developer&components=Blink%3ETopicsAPI).
 
@@ -145,7 +147,7 @@ In this example, recently visited sites include topics-demo-cats.glitch.me and c
 
 The **Observed-by context domains (hashed)** column provides the hashed value of a hostname for which a topic was observed.
 
-### View topics inferred for hostnames
+### View topics inferred for hostnames {: #view-inferred-topics}
 
 You can also view the topics inferred by the Topics [classifier model](https://github.com/patcg-individual-drafts/topics#:~:text=classifier%20model) for one or more hostnames in `chrome://topics-internals`.
 
@@ -160,7 +162,7 @@ The current implementation of the Topics API infers topics from hostnames only; 
 
 Use hostnames only (without protocol or path) to view inferred topics from the `chrome://topics-internals` Classifier. `chrome://topics-internals` will display an error if you attempt to include a "/" in the Host field.
 
-### View Topics API information
+### View Topics API information {: #view-api-information}
 
 You can find information about the Topics API implementation and settings, such as the [taxonomy](https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md) version and epoch duration, in `chrome://topics-internals`. These values reflect default settings for the API or parameters successfully set [from the command line](#feature-flags). This may be helpful to confirm that command line flags have worked as expected.
 
