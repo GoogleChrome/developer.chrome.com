@@ -34,25 +34,25 @@ Attribution Reporting API のテストを行う場合、統合が正しく機能
 
 2 種類のデバッグレポートが使用可能となっています。様々なユースケースに対応するために両方を使用してください。
 
-#### Success debug reports
+#### 成功デバッグレポート
 
-*Success debug reports* track **successful generation of an attribution report**. They relate directly to an attribution report.
+*成功デバッグレポート*は**アトリビューションレポートの生成の成功**を追跡します。これらのレポートは、アトリビューションレポートに直接関係しています。
 
-Success debug reports have been available since Chrome 101 (April 2022).
+成功デバッグレポートは、Chrome 101（2022 年 4 月）以降で提供されています。
 
-#### Verbose debug reports
+#### 詳細デバッグレポート
 
-*Verbose debug reports* give you more visibility into the source and trigger events—so you can either ensure that sources were registered successfully, or track missing reports and determine why they're missing (failure in source or trigger events, failure when sending or generating the report). Verbose debug reports indicate:
+*詳細デバッグレポート*では、ソースイベントとトリガーイベントをより詳細に把握できます。そのため、ソースが正常に登録されたことを確認するか、不足しているレポートを追跡して、不足している理由（ソースイベントまたはトリガーイベントの失敗、イベントの送信または生成時の失敗）を特定することが可能です。詳細デバッグレポートには、以下の内容が示されます。
 
-- Cases where the browser successfully registered a source.
-- Cases where the browser did **not** successfully register a source or trigger event — which means that it will not generate an attribution report.
-- Cases where an attribution report **can't be generated or sent** for some reason.
+- ブラウザがソースを正常に登録したケース。
+- ブラウザがソースイベントまたはトリガーイベントを正常に**登録しなかった**ケース。つまり、アトリビューション レポートは生成されません。ないことを意味します。
+- 何らかの理由でアトリビューション レポートを**生成または送信できない**ケース。
 
-Verbose debug reports include a `type` field that describes either a successful source registration, or the reason why a source, trigger or attribution report was not generated.
+詳細デバッグレポートには、ソース登録の成功、またはソース、トリガー、またはアトリビューション レポートが生成されなかった理由を説明する `type` フィールドが含まれます。
 
-Verbose debug reports have been available since Chrome 109 (January 2023)—except for *source registration success verbose debug reports* that have been added later in Chrome 112.
+後の Chrome 112 で追加された*ソース登録成功の詳細デバッグレポート*を除き、詳細デバッグレポートは、Chrome 109（2023 年 1 月）以降で提供されています。
 
-Review example reports in [Part 2: Set up debug reports](/docs/privacy-sandbox/attribution-reporting-debugging/part-2#verbose-reports-examples).
+「[パート 2: デバッグレポートのセットアップ](/docs/privacy-sandbox/attribution-reporting-debugging/part-2#verbose-reports-examples)」でサンプルレポートをご確認ください。
 
 ### デバッグレポートは Cookie ベースである
 
