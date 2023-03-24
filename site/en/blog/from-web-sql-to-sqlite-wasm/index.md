@@ -28,7 +28,7 @@ The baseline assumption of this migration guide is that you have one (or several
 
 ### Translating the Web SQL database to SQL statements
 
-To migrate the data in a way that is transparent to the user, that is, without requiring them to perform any of the migration steps on their own, the pieces of data in the database need to be translated back to the original SQL statements that created them in the first place. This challenge has come up before, and the migration script used in this article—[`mywebsqldump.js`](https://web-sql-to-sqlite-wasm.glitch.me/mywebsqldump.js)—is based on a community library called []`websqldump.js`](https://github.com/sdesalas/websqldump), with some minor adjustments. The following code sample shows the code required to translate the Web SQL database _mydatabase_ to a set of SQL statements.
+To migrate the data in a way that is transparent to the user, that is, without requiring them to perform any of the migration steps on their own, the pieces of data in the database need to be translated back to the original SQL statements that created them in the first place. This challenge has come up before, and the migration script used in this article—[`mywebsqldump.js`](https://web-sql-to-sqlite-wasm.glitch.me/mywebsqldump.js)—is based on a community library called [`websqldump.js`](https://github.com/sdesalas/websqldump), with some minor adjustments. The following code sample shows the code required to translate the Web SQL database _mydatabase_ to a set of SQL statements.
 
 ```js
 websqldump.export({
