@@ -220,6 +220,8 @@ The list of topics returned will be empty if:
 
 The explainer [provides more detail about privacy goals](https://github.com/jkarlin/topics#meeting-the-privacy-goals) and how the API seeks to address them.
 
+{: #out-out }
+
 ### Site opt out
 
 In addition to the user's ability to opt out, you can opt out of Topics for your site or pages on it. The [Developer guide](/docs/privacy-sandbox/topics/#site-opt-out) explains how.
