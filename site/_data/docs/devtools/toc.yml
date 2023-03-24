@@ -44,6 +44,7 @@
     - url: /docs/devtools/javascript/
     - url: /docs/devtools/javascript/breakpoints/
     - url: /docs/devtools/javascript/snippets/
+    - url: /docs/devtools/javascript/source-maps/
     - url: /docs/devtools/workspaces/
     - url: /docs/devtools/javascript/reference/
 - title: i18n.docs.devtools.network
