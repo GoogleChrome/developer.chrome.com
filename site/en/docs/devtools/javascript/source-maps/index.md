@@ -19,7 +19,7 @@ Source maps from preprocessors cause DevTools to load your original files in add
 Chrome will actually run your minified code but the **Sources** panel will show you the code you author.
 You can set breakpoints and step through code in source files and all the errors, logs, and breakpoints will automatically map.
 
-This gives you the appearance of running a development site in production.
+This gives you the appearance of debugging the code as you wrote it, as opposed to code that is served by your server (development) and executed by the browser.
 
 To use source maps in the **Sources** panel:
 
@@ -33,7 +33,7 @@ Common preprocessors used in combination with source maps include but aren't lim
 - Transpilers: [Babel][5]
 - Compilers: [TypeScript][8] and [Dart][10]
 - Minifiers: [terser](https://github.com/terser/terser)
-- Bundlers: [Webpack](https://webpack.js.org/), [Vite](https://vitejs.dev/), [esbuild](https://esbuild.github.io/), and [Parcel](https://parceljs.org/)
+- Bundlers and development servers: [Webpack](https://webpack.js.org/), [Vite](https://vitejs.dev/), [esbuild](https://esbuild.github.io/), and [Parcel](https://parceljs.org/)
 
 For an extended list, see [Source maps: Languages, tools, and other info][4].
 
@@ -82,12 +82,12 @@ With source maps [ready](#use_a_supported_preprocessor) and [enabled](#enable_so
 
 When you open any deployed file, DevTools notifies you if it found the `//# sourceMappingURL` comment and the associated original file.
 
-Notice that the **Editor** automatically pretty-printed the deployed file. In fact, it contains all the code in a single line, except for the `//# sourceMappingURL` comment.
+Notice that the **Editor** automatically pretty-printed the deployed file. In reality, it contains all the code in a single line, except for the `//# sourceMappingURL` comment.
 
 ## Name `eval()` calls with `#sourceURL` {: #sourceurl_and_displayname }
 
-While not part of the source map specification, the [`#sourceURL`](/blog/sourcemappingurl-and-sourceurl-syntax-changed/#sourceurl) lets you make development much easier
-when working with `eval()` calls. This helper looks very similar to the [`//# sourceMappingURL` property](/blog/sourcemaps/#how-does-the-source-map-work) and the [Source Map V3 specification](https://sourcemaps.info/spec.html) mentions it.
+The [`#sourceURL`](/blog/sourcemappingurl-and-sourceurl-syntax-changed/#sourceurl) lets you simplify debugging
+when dealing with `eval()` calls. This helper looks very similar to the [`//# sourceMappingURL` property](/blog/sourcemaps/#how-does-the-source-map-work). For more information, see the [Source Map V3 specification](https://sourcemaps.info/spec.html).
 
 The `//# sourceURL=/path/to/source.file` comment tells the browser to look for the source file when you use `eval()`. This helps you name your evaluations and inline scripts and styles.
 
