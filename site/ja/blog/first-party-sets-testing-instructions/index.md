@@ -6,7 +6,7 @@ date: 2022-12-01
 thumbnail: image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/JL7L7S2qKI53pTWACfcv.jpg
 alt: First-Party Sets を示す図。1 つのセットには example.com、example.rs、および example.co.uk ドメインが、もう 1 つのセットには brandx.site、fly-brandx.site、および drive-brandx.site ドメインが含まれている。
 tags:
-  - プライバシー
+  - privacy
 authors:
   - mihajlija
 ---

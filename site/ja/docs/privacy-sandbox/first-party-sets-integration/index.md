@@ -5,7 +5,7 @@ date: 2023-01-12
 thumbnail: image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/JL7L7S2qKI53pTWACfcv.jpg
 alt: example.com、example.rs、および example.co.uk のドメインを含む 1 つの First-Party Set を示す図。もう 1 つには、brandx.site、fly-brandx.site、および drive-brandx.site を含む。
 tags:
-  - プライバシー
+  - privacy
 authors:
   - jney
   - sarino
