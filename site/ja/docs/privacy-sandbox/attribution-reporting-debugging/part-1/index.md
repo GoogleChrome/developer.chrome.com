@@ -1,0 +1,124 @@
+---
+layout: layouts/doc-post.njk
+title: デバッグレポートの概要
+subhead: アトリビューションレポートのデバッグについて 3 回にわたり解説を行うシリーズの第 1 回目です。デバッグの重要性や、テストでデバッグレポートを使用する場面について説明します。
+description: アトリビューションレポートのデバッグについて 3 回にわたり解説を行うシリーズの第 1 回目です。デバッグの重要性や、テストでデバッグレポートを使用する場面について説明します。
+date: '2022-12-13'
+updated: '2023-03-02'
+authors:
+  - maudn
+  - alexandrawhite
+---
+
+{% Partial 'privacy-sandbox/ara-debugging-series-intro.njk' %}
+
+## デバッグレポートが必要な理由
+
+Attribution Reporting API のテストを行う場合、統合が正しく機能しているかどうかを確認し、Cookie ベースの実装とアトリビューションレポートを用いた実装との間の測定結果の誤差について理解し、統合に関連するすべての問題についてのトラブルシューティングを行う必要があります。
+
+これらの作業を完了するには、デバッグレポートが必要となります。したがって、[オリジントライアル](/docs/privacy-sandbox/unified-origin-trial/)に参加する場合にはデバッグレポートのセットアップを強くお勧めさせていただきます。
+
+## Glossary
+
+{% Aside 'key-term' %}*レポートオリジン*とは、アトリビューションレポートの[ソースヘッダー](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit#heading=h.zea9dm525c2d)と[トリガーヘッダー](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit#heading=h.r2yh4lr9r7p3)を設定する[オリジン](https://web.dev/same-site-same-origin/#origin)です。ブラウザーによって生成されたすべてのレポートはこのオリジンへと送信されます。このガイダンスでは、レポートオリジンの例として `https://adtech.example` を使用します。{% endAside %}
+
+{% Aside %}*アトリビューションレポート* (*レポート*と略されます) は、リクエストした測定データを含むイベントレベルの集計可能な最終的なレポートのことを指します。 {% endAside %}
+
+{% Aside %}*デバッグレポート*には、アトリビューションレポートもしくはソースイベントやトリガーイベントに関する追加データが含まれています。デバッグレポートを受信しただけでは、何らかの不正な動作が発生しているとは限りません。[デバッグレポートには 2 種類のものがあります](#debug-report-types)。{% endAside %}
+
+{% Aside 'key-term' %}*トランジショナルデバッグレポート*は、生成および送信に Cookie の設定を必要とするデバッグレポートです。トランジショナルデバッグレポートは Cookie が設定されていない場合には利用できなくなるため、サードパーティ Cookie が廃止されると利用できなくなります。**このガイドで説明するデバッグレポートはすべてトランジショナルデバッグレポートです**。{% endAside %}
+
+## デバッグレポートの主なポイント
+
+### 2 種類のデバッグレポート {: #debug-report-types}
+
+2 種類のデバッグレポートが使用可能となっています。様々なユースケースに対応するために両方を使用してください。
+
+#### Success debug reports
+
+*Success debug reports* track **successful generation of an attribution report**. They relate directly to an attribution report.
+
+Success debug reports have been available since Chrome 101 (April 2022).
+
+#### Verbose debug reports
+
+*Verbose debug reports* give you more visibility into the source and trigger events—so you can either ensure that sources were registered successfully, or track missing reports and determine why they're missing (failure in source or trigger events, failure when sending or generating the report). Verbose debug reports indicate:
+
+- Cases where the browser successfully registered a source.
+- Cases where the browser did **not** successfully register a source or trigger event — which means that it will not generate an attribution report.
+- Cases where an attribution report **can't be generated or sent** for some reason.
+
+Verbose debug reports include a `type` field that describes either a successful source registration, or the reason why a source, trigger or attribution report was not generated.
+
+Verbose debug reports have been available since Chrome 109 (January 2023)—except for *source registration success verbose debug reports* that have been added later in Chrome 112.
+
+Review example reports in [Part 2: Set up debug reports](/docs/privacy-sandbox/attribution-reporting-debugging/part-2#verbose-reports-examples).
+
+### デバッグレポートは Cookie ベースである
+
+デバッグレポートを使用するには、[レポートオリジン](#glossary)で [Cookie を設定する](/docs/privacy-sandbox/attribution-reporting-debugging/part-3/)必要があります。
+
+レポートを受信するように設定されたオリジンがサードパーティである場合、この Cookie はサードパーティー Cookie となります。これにはいくつかの重要な意味が含まれています。
+
+- デバッグレポートは、**ユーザーのブラウザーでサードパーティ Cookie が許可されている場合**にのみ生成されます。
+- **サードパーティ Cookie が段階的に廃止されると、デバッグレポートは利用できなくなります**。
+
+### デバッグレポートはすぐに送信される
+
+デバッグレポートはブラウザーによってすぐに[レポートオリジン](#glossary)へと送信されます。これは、[遅れて送信される](/docs/privacy-sandbox/attribution-reporting/system-overview/#data-collection)アトリビューションレポートとは異なります。
+
+成功デバッグレポートは、対応するアトリビューションレポートが生成されるとすぐに生成されて送信されます。つまり、トリガー登録時に送信されます。
+
+冗長デバッグレポートは、ソースまたはトリガーの登録時にすぐに送信されます。
+
+### デバッグレポートのエンドポイントパスは複数ある
+
+アトリビューションレポートと同様に、すべてのデバッグレポートは[レポートオリジン](#glossary)へと送信されます。デバッグレポートは、3 つの異なる[レポートオリジン](#glossary)のエンドポイントへと送信されます。
+
+- **成功**デバッグレポートのエンドポイント: イベントレベル
+- **成功**デバッグレポートのエンドポイント: 集計可能
+- **冗長**デバッグレポートのエンドポイント: イベントレベルおよび集計可能
+
+詳細については、「[第 2 回: デバッグレポートのセットアップ](/docs/privacy-sandbox/attribution-reporting-debugging/part-2/)」を参照してください。
+
+## Use cases
+
+### 基本的なリアルタイムでの統合チェック
+
+デバッグレポートは、ユーザーのプライバシーを保護するために遅延を発生させるアトリビューションレポートとは異なり、エンドポイントへとすぐに送信されます。**Attribution Reporting API との統合が機能していることを示すリアルタイムのシグナルとしてデバッグレポートを使用することができます。**
+
+これを行う方法の詳細については、「[第 3 回: デバッグのクックブック](/docs/privacy-sandbox/attribution-reporting-debugging/part-3/)」を参照してください。
+
+### Loss analysis
+
+サードパーティ Cookie とは異なり、Attribution Reporting API には実用性とプライバシーのバランスを取るように設計されている組み込みのプライバシー保護が含まれています。つまり、Attribution Reporting API では現在 Cookie を使用して収集している測定データのすべてを収集することができない可能性があります。サードパーティ Cookie で追跡可能なコンバージョンのすべてがアトリビューションレポートを生成するわけではありません。
+
+一例を挙げると、イベントレベルのレポートでは 1 回のインプレッションにつき最大で 1 件のコンバージョンしか登録することができません。つまり、ある 1 回の広告インプレッションについてはユーザーが何度コンバージョンしてもアトリビューションレポートは 1 つしか得られないことになります。
+
+デバッグレポートを使用して、Cookie ベースの測定結果と Attribution Reporting API で得られた結果との違いを可視化します。どのコンバージョンについてレポートが生成されたか、どれだけのコンバージョンについてレポートが生成されなかったか、そして具体的にどのコンバージョンについてなぜレポートが生成されたのかについてピンポイントに把握することができます。
+
+{% Aside 'key-term' %}*損失分析*の実行とは、デバッグレポートを使用し、Cookie を使用して得られた測定結果とアトリビューションレポートを使用して得られた測定結果との間の違いを定量化することを意味しています。また、詳細な損失分析によってこれら 2 つの結果の間の違いの原因を特定することもできます。{% endAside %}
+
+損失分析を行う方法の詳細については、「[第 3 回: デバッグのクックブック](/docs/privacy-sandbox/attribution-reporting-debugging/part-3/)」を参照してください。
+
+### Troubleshooting
+
+プライバシーの保護やリソースの保護による損失は想定内であると言えますが、それ以外の損失については意図しないものである可能性があります。実装における構成ミスやブラウザー自体のバグによりレポートが失われてしまう場合もあるのです。
+
+デバッグレポートを使用すれば、自分で実装に関する問題を検出して修正したり、ブラウザーの開発チームに潜在的なバグを報告したりすることができます。これを行う方法については、「[第 3 回: デバッグのクックブック](/docs/privacy-sandbox/attribution-reporting-debugging/part-3/)」を参照してください。
+
+### Advanced configuration check
+
+Attribution Reporting API の一部の機能を使えば、API の動作をカスタマイズできるようになります。フィルタリングルール、重複排除ルール、優先順位ルールなどがその例として挙げられます。
+
+これらの機能を使用する際は、アトリビューションレポートを待つのではなくデバッグレポートを使用してロジックが実際の運用中に意図した動作につながっているかどうかを確認します。これを行う方法については、「[第 3 回: デバッグのクックブック](/docs/privacy-sandbox/attribution-reporting-debugging/part-3/)」を参照してください。
+
+### 集計可能なレポートを使用したローカルテスト
+
+暗号化されている集計可能なアトリビューションレポートとは異なり、集計可能なデバッグレポートには暗号化されていないペイロードが含まれています。
+
+集計可能なデバッグレポートを使用して集計可能なレポートの内容を検証し、テストを行うためにローカルの[集計ツール](https://github.com/privacysandbox/aggregation-service#set-up-local-testing)を使用してサマリーレポートを生成します。
+
+## 次へ
+
+[第 2 回: デバッグレポートのセットアップ](/docs/privacy-sandbox/attribution-reporting-debugging/part-2/)
