@@ -1,0 +1,111 @@
+
+{% macro youTubePlaylist(id) %}
+
+
+{% for playlist in youtubePlaylist %}
+  {% if playlist.id === id %}
+
+  <div class="gap-top-400">
+    <div class="playlist hairline rounded-lg width-full">
+      <div class="playlist__details rounded-lg">
+        <div class="playlist__details-inner rounded-lg">
+          <div class="playlist__thumbnail">
+            <img
+              src="{{playlist.thumbnail}}"
+              height="158"
+              width="316"
+              alt="Thumbnail for {{playlist.title}}"
+              class="rounded-lg"
+            />
+            <div class="playlist__play-all">
+                <a
+                href="https://www.youtube.com/watch?v={{playlist.videos[0].id}}&list={{playlist.id}}"
+                target="_blank"
+                class="no-visited">
+                PLAY ALL
+                </a>
+            </div>
+          </div>
+
+          <h2 class="playlist__name type--h3-card gap-top-400">
+            <a
+                class="color-red-darkest surface display-inline-flex no-visited"
+                href="https://www.youtube.com/playlist?list={{playlist.id}}}"
+                target="_blank"
+            >
+              {{playlist.title}}
+            </a>
+          </h2>
+
+          <p class="playlist__meta gap-top-200">
+            {{playlist.videos | length}} Videos<br />
+            Last updated on {{playlist.updated}}
+          </p>
+
+          <div class="playlist__channel">
+            <div class="playlist__channel-details">
+              <div class="playlist__channel-icon">
+                <img
+                  src="{{ playlist.channel.thumbnail }}"
+                  alt="Channel icon"
+                  height="56"
+                  width="56"
+                  />
+              </div>
+
+              <p class="playlist__channel-name">{{ playlist.channel.name }}</p>
+          </div>
+          <div class="playlist__channel-subscribe">
+              <a
+              href="https://www.youtube.com/channel/{{ playlist.channel.id }}?sub_confirmation=1"
+              target="_blank"
+              class="material-button button-filled button-round display-inline-flex color-bg bg-red-medium"
+              >Subscribe</a
+              >
+          </div>
+        </div>
+        {% if (playlist.videos | length) > 4 %}
+            <div class="playlist__decorations"></div>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="playlist__videos">
+
+    {% for video in playlist.videos %}
+
+      <div class="playlist-video">
+        <div class="playlist-video__number">{{loop.index}}</div>
+
+        <div class="playlist-video__content">
+          <a href="https://www.youtube.com/watch?v={{ video.id }}}" target="_blank">
+            <div class="playlist-video__thumbnail">
+              <img
+                src="{{video.thumbnail}}"
+                height="114"
+                width="204"
+                alt="Thumbnail"
+                class="rounded-lg"
+              />
+            </div>
+          </a>
+
+          <div class="playlist-video__details">
+            <a
+              href="https://www.youtube.com/watch?v={{video.id}}"
+              class="no-visited"
+              target="_blank"
+            >
+              <h4 class="playlist-video__title">{{video.title}}</h4>
+            </a>
+            <p>{{playlist.channel.name}}</p>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+
+    </div>
+  </div>
+      {% endif %}
+    {% endfor %}
+  {% endmacro %}
