@@ -17,6 +17,7 @@ The following code shows the supported fields for `messages.json`. Only the "_na
 fields are required.
 
 {% Label %}messages.json:{% endLabel %}
+
 ```json
 {
   "name": {
