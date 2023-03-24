@@ -3,8 +3,8 @@ layout: layouts/doc-post.njk
 title: デバッグのクックブック
 subhead: アトリビューション レポートのデバッグに関するパート 3/3。デバッグレポートの使用方法について説明します。
 description: アトリビューション レポートのデバッグに関するパート 3/3。デバッグレポートの使用方法について説明します。
-date: '2022-12-13'
-updated: '2023-03-02'
+date: 2022-12-13
+updated: 2023-03-02
 authors:
   - maudn
   - alexandrawhite
