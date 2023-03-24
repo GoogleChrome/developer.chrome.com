@@ -66,7 +66,7 @@ DevTools のイシューにはさまざまな種類があります。`invalid he
 
 {% endDetailsSummary %}
 
-Set the following cookie on the [reporting origin](#glossary):
+[レポート作成元](#glossary)に次の Cookie を設定します。
 
 ```http
 Set-Cookie: ar_debug=1; SameSite=None; Secure; Path=/; HttpOnly
@@ -177,7 +177,7 @@ adtech.post(
 - **Event-Level Reports** タブと **Aggregatable Reports** タブの両方で、**Show Debug Reports** チェックボックスがオンになっていることを確認します。
 - アトリビューション レポートを実装したサイトを開きます。アトリビューション レポートの生成に使用する手順を完了します。これらの同じ手順により、成功デバッグレポートが生成されます。
 - `chrome://attribution-internals` で以下を確認します。
-    - Check that attribution reports are correctly generated.
+    - アトリビューション レポートが正しく生成されていることを確認します。
     - **Event-Level Reports** タブと **Aggregatable Reports** タブで、成功デバッグレポートも生成されていることを確認します。リスト内の青い `debug` パスでそれらを認識できます。
 
 {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/n3BCxJZ9h915NJIrMdsi.png", alt="スクリーンショット: Attribution internals", width="800", height="484", class="screenshot screenshot--filled" %}
@@ -365,7 +365,7 @@ adtech.post(
 
 `Body`: レポートの本文。レポートのタイプによって異なります。[パート 3: デバッグのクックブック](/docs/privacy-sandbox/attribution-reporting-debugging/part-3/)の詳細レポートのリファレンスをご覧ください。
 
-A request's body will contain at least one, and at most two verbose reports:
+リクエストの本文には、少なくとも 1 つ、最大で 2 つの詳細レポートが含まれます。
 
 - 障害がイベントレベルのレポートにのみ影響する場合（または、集計可能なレポートにのみ影響する場合）は、1 つの詳細レポート。ソースまたはトリガーの登録失敗の理由は 1 つだけです。したがって、失敗ごと、およびレポートタイプ（イベントレベルまたは集計可能）ごとに 1 つの詳細レポートを生成できます。
 - 失敗がイベントレベルレポートと集計可能レポートの両方に影響する場合は、2 つの詳細レポート。ただし例外があり、イベントレベルレポートと集計可能レポートの障害の理由が同じである場合、詳細レポートは 1 つしか生成されません（例: `trigger-no-matching-source`）
