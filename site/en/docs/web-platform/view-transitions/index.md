@@ -6,16 +6,14 @@ authors:
 description: >
   The View Transition API allows page transitions within single-page apps, and will later include multi-page apps.
 date: 2021-08-17
-updated: 2022-11-22
+updated: 2023-03-24
 ---
 
 {% Aside %}
 This feature was previously called "Shared Element Transitions", and is sometimes referred to as "page transitions".
 {% endAside %}
 
-The View Transition API makes it easy to change the DOM in a single step, while creating an animated transition between the two states.
-
-It's available in Chrome 111+, currently in beta.
+The View Transition API makes it easy to change the DOM in a single step, while creating an animated transition between the two states. It's available in Chrome 111+.
 
 <style>
   .video-full-demo {
