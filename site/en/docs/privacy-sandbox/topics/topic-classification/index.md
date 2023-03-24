@@ -220,7 +220,7 @@ The list of topics returned will be empty if:
 
 The explainer [provides more detail about privacy goals](https://github.com/jkarlin/topics#meeting-the-privacy-goals) and how the API seeks to address them.
 
-{: #out-out }
+{: #opt-out }
 
 ### Site opt out
 
