@@ -49,6 +49,7 @@ The classifier model for mapping hostnames to topics is publicly available, and 
 
 Only sites that include code that calls the Topics API are included in the browsing history eligible for topic frequency calculations, and API callers only receive topics they've observed. In other words, sites are not eligible for topic frequency calculations without the site or an embedded service callingß the API.
 
+{: #caller}
 {% Aside 'key-term' %}
 
 A Topics API _caller_ is the entity that observes and requests topics with

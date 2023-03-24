@@ -22,17 +22,21 @@ Topics is not currently available by default in any version of Chrome, but you c
 -   The Topics API demo allows you to try it out as a single user.
 -   The Topics origin trial allows you to try the API at scale with your website users.
 
-### Try the demo
+### Try the demo {: #demo}
 
 The demo of the Topics API is at [topics-demo.glitch.me](https://topics-demo.glitch.me/). It explains how to try out and debug the API for a single user.
 
 You can also run the Topics [colab](/docs/privacy-sandbox/topics/colab/) to try out the Topics [classifier model](/docs/privacy-sandbox/topics/topic-classification/#classifier-model).
 
-### Test Topics in an origin trial
+### Test Topics in an origin trial {: #origin-trial}
 
 A Privacy Sandbox Relevance and Measurement [origin trial](/docs/privacy-sandbox/unified-origin-trial/) has been made available in Chrome Beta 101.0.4951.26 and above on desktop for the Topics, [FLEDGE](/docs/privacy-sandbox/fledge/), and [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) APIs.
 
 {: #access-topics }
+
+{: #epoch}
+
+{: #get-and-set-topics }
 
 ## Access and observe topics
 
@@ -64,7 +68,7 @@ Feature support on the current page isn't a guarantee that an API is usable. The
 
 {% endAside %}
 
-### Access topics without modifying state
+### Access topics without modifying state {: #skipobservation}
 
 By default, the `document.browsingTopics` records topic observation.
 
@@ -76,7 +80,8 @@ document.browsingTopics({skipObservation:true})
 
 With `skipObservation:true`, the current page is hidden from the weekly epoch calculation, and the list of observed topics isn't updated.
 
-### Access topics with the JavaScript API
+
+### Access topics with the JavaScript API {: #access-topics}
 
 Here is a basic example of possible API usage to access topics for the current user. To keep it simple, there's no error handling.
 
@@ -137,14 +142,18 @@ Permissions-Policy: geolocation=(self "https://example.com")
 
 {: #debug }
 
-## Debug your API implementation
+## Debug your API implementation {: #debug}
 
 The `chrome://topics-internals` page is available in Chrome on desktop once you
-[enable the Topics API](#feature-flags). This displays topics for the current user, topics inferred for hostnames, and technical information about the API implementation.
+[enable the Topics API](/docs/privacy-sandbox/topics/demo/#feature-flags).
+This displays topics for the current user, topics inferred for hostnames, and
+technical information about the API implementation.
 
-The `chrome://topics-internals` page is new. The design and functionality are still under discussion. We're currently iterating and improving the design based on developer feedback. Add your feedback at [bugs.chromium.org](https://bugs.chromium.org/p/chromium/issues/entry?template=Defect+report+from+developer&components=Blink%3ETopicsAPI).
+The `chrome://topics-internals` page is new. We're currently iterating and
+improving the design based on developer feedback. Add your feedback at
+[bugs.chromium.org](https://bugs.chromium.org/p/chromium/issues/entry?template=Defect+report+from+developer&components=Blink%3ETopicsAPI).
 
-### View topics calculated for your browser
+### View topics calculated for your browser {: #observed-topics}
 
 Users can view information about topics observed for their browser during the current and previous epochs by viewing `chrome://topics-internals`.
 
@@ -152,15 +161,22 @@ Users can view information about topics observed for their browser during the cu
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/M253GclVFDCnvPJlTSVR.png",
   alt="The chrome://topics-internals page with Topics State panel selected.",
   width="800", height="697" %}
-<figcaption>The chrome://topics-internals page Topics State panel shows Topics IDs, random and real topic assignments, and taxonomy and model versions.
+<figcaption>
+The chrome://topics-internals page Topics State panel shows Topics IDs, random and
+real topic assignments, and taxonomy and model versions.
 </figcaption>
 </figure>
 
-In this example, recently visited sites include `topics-demo-cats.glitch.me` and `cats-cats-cats-cats.glitch.me`. This causes the Topics API to select `Pets` and `Cats` as two of the top topics for the current epoch. The remaining three topics have been [chosen at random](https://github.com/patcg-individual-drafts/topics#:~:text=random), since there is not enough browsing history (on sites that observe topics) to provide five topics.
+In this example, recently visited sites include `topics-demo-cats.glitch.me`
+and `cats-cats-cats-cats.glitch.me`. This causes the Topics API to select
+`Pets` and `Cats` as two of the top topics for the current epoch. The
+remaining three topics have been [chosen at random](https://github.com/patcg-individual-drafts/topics#:~:text=random),
+since there is not enough browsing history (on sites that observe topics)
+to provide five topics.
 
 The **Observed-by context domains (hashed)** column provides the hashed value of a hostname for which a topic was observed.
 
-### View topics inferred for hostnames
+### View topics inferred for hostnames {: #view-inferred-topics}
 
 You can also view the topics inferred by the Topics [classifier model](https://github.com/patcg-individual-drafts/topics#:~:text=classifier%20model) for one or more hostnames in `chrome://topics-internals`.
 
@@ -175,7 +191,7 @@ The current implementation of the Topics API infers topics from hostnames only; 
 
 Use hostnames only (without protocol or path) to view inferred topics from the `chrome://topics-internals` Classifier. `chrome://topics-internals` will display an error if you attempt to include a "/" in the Host field.
 
-### View Topics API information
+### View Topics API information {: #view-api-information}
 
 You can find information about the Topics API implementation and settings, such as the [taxonomy](https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md) version and epoch duration, in `chrome://topics-internals`. These values reflect default settings for the API or parameters successfully set [from the command line](#feature-flags). This may be helpful to confirm that command line flags have worked as expected.
 
@@ -294,6 +310,7 @@ href="https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md">taxonomy</a>
 version used by the API.</dd>
     </dt><br />
 </dl>
+
 
 ## Next steps
 
