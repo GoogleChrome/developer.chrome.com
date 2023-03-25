@@ -1,10 +1,19 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: Known issues when migrating to Manifest V3
+seoTitle: Known issues when migrating Chrome Extensions to Manifest V3
 description: ''
 date: 2022-09-23
-#updated: 2022-07-12
+updated: 2023-02-09
+tags:
+  - extensions-news
 ---
+
+{% Aside %}
+
+**December 9, 2022:** The Manifest V2 deprecation timelines are under review and the experiments scheduled for early 2023 are being postponed. For more information, [read the update](https://groups.google.com/u/1/a/chromium.org/g/chromium-extensions/c/zQ77HkGmK9E) in the chromium-extensions Google Group.
+
+{% endAside %}
 
 This page lists major known issues that affect developers as they migrate to Manifest V3. Known issues are divided into two primary groups:
 
@@ -19,43 +28,49 @@ When a capability is added to the platform or a bug is addressed, it will be rem
 
 This section lists major features that will be added to the Manifest V3 platform in order to aid developers migrating from Manifest V2. Timelines included here are best effort estimates, not hard commitments.
 
-### webRequest.onAuthRequired events {: #webrequest-onauthrequired }
+### FIXED: webRequest.onAuthRequired events {: #webrequest-onauthrequired }
 
-**Summary:** User-installed Manifest V3 extensions cannot currently intercept `webRequest.onAuthRequired` events, since the `webRequestBlocking` permission is restricted to policy-installed extensions. Chrome provides extensions with a way to supply credentials for authentication requests in Manifest V3.
+**Summary:** User-installed Manifest V3 extensions could not intercept `webRequest.onAuthRequired` events because the `webRequestBlocking` permission is restricted to policy-installed extensions. Chrome now allows extensions with the `webRequest` and `webRequestAuthProvider` permissions to asynchronously supply credentials for `onAuthRequired` events.
 
-**Estimated timeline:** Scheduled for Chrome 108.
+**Shipped in Chrome 108.**
 
-### Offscreen Documents API {: #offscreen-documents-api }
+### FIXED: Offscreen Documents API {: #offscreen-documents-api }
 
-**Summary:** Offscreen documents are a new capability that will allow Manifest V3 extensions to create a headless page (no user visible window) in order to call DOM APIs that aren't supported in extension service workers. Extensions will be able to use offscreen documents to interact with the clipboard, play audio, parse HTML, and XML documents, and so on.
+**Summary:** Offscreen documents are a new capability that allows Manifest V3 extensions to create a headless page (no user visible window) to call DOM APIs that aren't supported in extension service workers. Extensions can use offscreen documents to interact with the clipboard, play audio, parse HTML, and XML documents, and so on. We will continue iterating this API in future Chrome versions.
 
-**Estimated timeline:** Scheduled for Chrome 109.
+**Shipped in Chrome 109.**
+
+### FIXED: Relax the fixed maximum lifetime for extension service workers {: #sw-fixed-lifetime }
+
+**Summary:** Extension service workers are currently terminated a set amount of time after starting. This fixed limit will be replaced by an activity-based system. As a result, an extension's service worker will be able to stay alive so long as it is continuously working.
+
+**Shipped in Chrome 110.**
 
 ### Userscript managers support {: #userscript-managers-support }
 
 **Summary:** Userscript managers cannot inject scripts that are not included in the extension's package due to platform and policy changes that prevent arbitrary code execution. To address this, the Manifest V3 platform will be expanded to specifically support user-authored scripts and styles.
 
-**Estimated timeline:** Targeting Canary support around December, 2022.
+**Estimated timeline:** Targeting Canary support in the first quarter of 2023.
 
 ### Increased quota for session storage in the Storage API {: #increased-session-storage-quota }
 
-**Summary:** When it was introduced, the `session` storage area had an intentionally conservative maximum quota of 1 MB. We are planning to increase this limit, but have not yet settled on a new value.
+**Summary:** When it was introduced, the `session` storage area had an intentionally conservative maximum quota of 1 MB. This limit is being increased to 10 MB.
 
-**Estimated timeline**: Targeting Canary support around November, 2022.
+**Estimated timeline**: This will be available in Chrome 112. Chrome 112 beta is planned around March 9, with a stable release around the beginning of April.
 
 ## Bugs {: #bugs }
 
-### Service workers are not started in response to webRequest events {: #webrequest-in-sw }
+### FIXED: Service workers are not started in response to webRequest events {: #webrequest-in-sw }
 
-**Summary:** Manifest V3 extensions will only receive [Web Request API](/docs/extensions/reference/webRequest) events for a short time immediately after installation. After the extension service worker is stopped for the first time, events on this API are no longer dispatched as intended. This prevents Manifest V3 extensions from observing network requests.
+**Summary:** Previously, Manifest V3 extensions only received [Web Request API](/docs/extensions/reference/webRequest) events for a short time immediately after installation. After the extension service worker stopped for the first time, events on this API would no longer be dispatched as intended. This effectively prevented Manifest V3 extensions from observing network requests. This issue has been resolved.
 
-**Shipped**: Chrome 107.
+**Shipped Chrome 107.**
 
-### Sandboxed page CSP can't be customized {: #sandboxed-csp }
+### FIXED: Sandboxed page CSP can't be customized {: #sandboxed-csp }
 
 **Summary:** Declaring a custom sandboxed page content security policy in the extension's `manifest.json` does not override the default content security policy. This prevents extensions from integrating with services that require their scripts or iframes to be remotely loaded.
 
-**Estimated timeline:** Targeting Canary support before January, 2023.
+**Shipped in Chrome 110.**
 
 **Tracking issue:** [1247690][]
 

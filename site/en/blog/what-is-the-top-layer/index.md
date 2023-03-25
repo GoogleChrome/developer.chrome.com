@@ -10,6 +10,7 @@ tags:
   - css
   - html
 date: 2022-08-22
+updated: 2023-01-25
 ---
 
 The top layer sits above its related `document` in the browser viewport, and each `document` has one associated top layer. This means that elements promoted to the top layer needn't worry about `z-index` or DOM hierarchy. They also get a neat `::backdrop` pseudo-element to play with. The [Fullscreen API](https://fullscreen.spec.whatwg.org/#new-stacking-layer) spec goes into more details as [Fullscreen](https://developer.mozilla.org/docs/Web/API/Element/requestFullScreen) was a great example of the top layer in use before [`dialog` support](https://caniuse.com/dialog) came along.
@@ -35,7 +36,7 @@ How have we mimicked the top layer until now? Well, it's not uncommon to see dev
 %}
 
 
-With new built-in components and APIs like `<dialog>` and ["Pop-up"](https://open-ui.org/components/popup.research.explainer), you won't need to resort to these workarounds. You can promote content to the top layer. 
+With new built-in components and APIs like `<dialog>` and ["Popover"](https://open-ui.org/components/popover.research.explainer), you won't need to resort to these workarounds. You can promote content to the top layer. 
 
 UI frameworks allow us to co-locate promoted elements with their component counterparts. But, they often get separated in the DOM when it comes to rendering.
 
@@ -90,6 +91,6 @@ A brief intro to the top layer. Making it possible to say "Bye!" to things like:
 }
 ```
 
-What would you push into the Top Layer? Have you tried out [`dialog`](https://developer.mozilla.org/docs/Web/HTML/Element/dialog)? Or checked out the [OpenUI Pop-up API](https://open-ui.org/components/popup.research.explainer)? Let us know!
+What would you push into the Top Layer? Have you tried out [`dialog`](https://developer.mozilla.org/docs/Web/HTML/Element/dialog)? Or checked out the [OpenUI Popover API](https://open-ui.org/components/popover.research.explainer)? Let us know!
 
 

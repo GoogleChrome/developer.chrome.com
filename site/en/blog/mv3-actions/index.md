@@ -11,7 +11,7 @@ date: 2021-06-23
 hero: 'image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/cAjp0aky7GBuS3ZK9sXB.png'
 alt: ''
 tags:
-  - extensions
+  - extensions-news
 ---
 
 Since the launch of Chrome extensions, the platform has allowed developers to expose extension

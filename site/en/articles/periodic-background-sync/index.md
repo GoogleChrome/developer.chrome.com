@@ -47,7 +47,7 @@ Before using it, make sure that:
 
 * You're using Chrome 80 or later.
 * You
-  [install](https://developers.google.com/web/fundamentals/app-install-banners/)
+  [install](https://web.dev/customize-install/)
   the web app before enabling periodic background sync.
 
 ## Concepts and usage
@@ -140,8 +140,8 @@ consideration and download different amounts of data in response. You can use
 the following resources to help:
 
 * [Network Information API](https://developer.mozilla.org/docs/Web/API/Network_Information_API)
-* [Detecting data saver mode](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/save-data/#detecting_the_save-data_setting)
-* [Estimating available storage](https://developers.google.com/web/updates/2017/08/estimating-available-storage-space)
+* [Detecting data saver mode](https://web.dev/optimizing-content-efficiency-save-data/#detecting-the-save-data-setting)
+* [Estimating available storage](/blog/estimating-available-storage-space/)
 
 ### Permissions
 

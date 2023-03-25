@@ -37,6 +37,7 @@ async function fetchAndPrepare(packages, targetDir) {
   /** @type {childProcess.ExecFileSyncOptions} */
   const options = {cwd: targetDir, stdio: 'inherit'};
 
+  childProcess.execFileSync('npm', ['init', '--yes'], options);
   childProcess.execFileSync('npm', ['install', ...packages], options);
 
   const versionData = Object.fromEntries(

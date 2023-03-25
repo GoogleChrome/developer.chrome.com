@@ -1,9 +1,10 @@
 ---
 layout: "layouts/doc-post.njk"
 title: Overview
+seoTitle: Android Custom Tabs Overview
 date: 2020-02-04
 updated: 2022-10-25
-description: An overview of Custom Tabs
+description: Learn when best to use Android Custom Tabs for opening an URL in your Android app.
 ---
 
 App developers face a choice when a user taps a URL to either launch a

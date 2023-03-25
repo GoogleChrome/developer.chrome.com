@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Cross-origin isolation"
+seoTitle: "Chrome Extensions cross-origin isolation"
 date: 2021-08-03
 updated: 2021-11-10
 description: Overview of cross-origin isolation for extensions

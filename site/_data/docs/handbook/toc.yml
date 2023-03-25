@@ -1,12 +1,15 @@
 - url: /docs/handbook/where-to-publish
 - url: /docs/handbook/components
+- url: /docs/handbook/content-types
 - title: i18n.docs.handbook.how_to
   sections:
     - url: /docs/handbook/how-to/add-a-project
     - url: /docs/handbook/how-to/add-a-doc
     - url: /docs/handbook/how-to/add-a-blog-post
+    - url: /docs/handbook/how-to/schedule-a-post
     - url: /docs/handbook/how-to/add-an-api
     - url: /docs/handbook/how-to/add-a-collection-page
+    - url: /docs/handbook/how-to/add-a-collection-docs-page
     - url: /docs/handbook/how-to/add-media
     - url: /docs/handbook/how-to/add-an-author
     - url: /docs/handbook/how-to/add-a-tag

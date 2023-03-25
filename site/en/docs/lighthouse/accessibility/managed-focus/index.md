@@ -20,8 +20,8 @@ Single-page apps are important to test,
 especially when it comes to managing a user's focus
 to new content.
 
-Typically in a single-page app,
-clicking on a link won't do a hard refresh.
+Typically, in a single-page app,
+clicking on a link won't cause a hard refresh.
 Instead,
 a route change fetches new data for the `<main>` content area.
 

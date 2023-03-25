@@ -7,7 +7,7 @@ authors:
   - thomassteiner
 description: The File System Access API enables developers to build powerful web apps that interact with files on the user's local device, such as IDEs, photo and video editors, text editors, and more. After a user grants a web app access, this API allows them to read or save changes directly to files and folders on the user's device.
 date: 2019-08-20
-updated: 2022-11-02
+updated: 2023-01-12
 tags:
   - capabilities
   - file-system
@@ -49,11 +49,10 @@ API to ensure that people can easily manage their files. See the
 The File System Access API is currently supported on most Chromium browsers on
 Windows, macOS, ChromeOS, and Linux. A notable exception is Brave where it is
 [currently only available behind a
-flag](https://github.com/brave/brave-browser/issues/18979). Android support is
-coming for the origin private file system part
-([https://crbug.com/1354273](https://bugs.chromium.org/p/chromium/issues/detail?id=1354273)).
-There are no plans currently for picker methods, but you can track
-potential progress by starring [crbug.com/1011535](https://crbug.com/1011535).
+flag](https://github.com/brave/brave-browser/issues/18979). Android supports the origin private
+file system part of the API as of Chromium&nbsp;109. There are no plans currently for picker
+methods, but you can track potential progress by starring
+[crbug.com/1011535](https://crbug.com/1011535).
 
 ## Using the File System Access API {: #how-to-use }
 
@@ -61,6 +60,10 @@ To show off the power and usefulness of the File System Access API, I wrote a si
 editor][text-editor]. It lets you open a text file, edit it, save the changes back to disk, or start
 a new file and save the changes to disk. It's nothing fancy, but provides enough to help you
 understand the concepts.
+
+### Browser support
+
+{% BrowserCompat 'api.Window.showOpenFilePicker' %}
 
 ### Try it
 
@@ -569,6 +572,8 @@ const dirHandle = await root.getDirectoryHandle('New Folder', { create: true });
 await root.removeEntry('Old Stuff', { recursive: true });
 ```
 
+{% BrowserCompat 'api.StorageManager.getDirectory' %}
+
 ### Accessing files optimized for performance from the origin private file system
 
 The origin private file system provides optional access to a special kind of file that is highly
@@ -644,7 +649,7 @@ write to the file.
 
 To help protect users and their data, the browser may limit the user's ability to save to certain
 folders, for example, core operating system folders like Windows, the macOS Library folders, etc.
-When this happens, the browser shows a modal prompt and ask the user to choose a different
+When this happens, the browser shows a prompt and ask the user to choose a different
 folder.
 
 ### Modifying an existing file or directory
@@ -654,7 +659,7 @@ A web app cannot modify a file on disk without getting explicit permission from 
 #### Permission prompt
 
 If a person wants to save changes to a file that they previously granted read access to, the browser
-shows a modal permission prompt, requesting permission for the site to write changes to disk.
+shows a permission prompt, requesting permission for the site to write changes to disk.
 The permission request can only be triggered by a user gesture, for example, by clicking a Save
 button.
 
@@ -778,7 +783,7 @@ https://github.com/GoogleChromeLabs/text-editor/blob/main/src/inline-scripts/fs-
 [text-editor-app-js]:
 https://github.com/GoogleChromeLabs/text-editor/blob/main/src/inline-scripts/app.js
 [download-file]:
-https://developers.google.com/web/updates/2011/08/Downloading-resources-in-HTML5-a-download
+https://web.dev/downloading-resources-in-html5-a-download/
 [cr-dev-twitter]: https://twitter.com/chromiumdev
 [fs-writablestream]: https://wicg.github.io/file-system-access/#api-filesystemwritablefilestream
 [writable-stream]: https://developer.mozilla.org/docs/Web/API/WritableStream

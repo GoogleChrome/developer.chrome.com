@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: Add a YouTube Embed
+title: Add a YouTube embed
 description: 'Add a YouTube embed to a post.'
 date: 2020-11-30
 ---

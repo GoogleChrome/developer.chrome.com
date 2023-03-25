@@ -11,7 +11,7 @@ date: 2022-11-01
 hero: 'image/WlD8wC6g8khYWPJUsQceQkhXSlv1/Z3DIUjSZNKZzmdYcNL6m.jpg'
 alt: 'Photo by Sara Cohen on Unsplash'
 tags:
-  - extensions
+  - extensions-news
   - cws
 ---
 

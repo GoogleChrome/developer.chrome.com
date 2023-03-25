@@ -38,7 +38,7 @@ You can think of image CDNs like web service APIs for transforming images.
 
 Another strategy is to use vector-based image formats, like SVG.
 With a finite amount of code, an SVG image can scale to any size.
-See [Replace complex icons with SVG](https://developers.google.com/web/fundamentals/design-and-ux/responsive/images#replace_complex_icons_with_svg) to learn more.
+See [Replace complex icons with SVG](https://web.dev/responsive-images/#replace-complex-icons-with-svg) to learn more.
 
 Tools like
 [gulp-responsive](https://www.npmjs.com/package/gulp-responsive) or
@@ -96,5 +96,5 @@ pages](https://wordpress.org/support/article/inserting-images-into-posts-and-pag
 
 ## Resources
 
-- [Source code for **Properly size images** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/byte-efficiency/uses-responsive-images.js)
+- [Source code for **Properly size images** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/byte-efficiency/uses-responsive-images.js)
 - [Serve images with correct dimensions](https://web.dev/serve-images-with-correct-dimensions/)

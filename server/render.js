@@ -16,8 +16,7 @@
 
 const Eleventy = require('@11ty/eleventy');
 const path = require('path');
-const yaml = require('js-yaml');
-const xss = require('xss').filterXSS;
+const matter = require('gray-matter');
 const {EleventyRenderPlugin} = require('@11ty/eleventy');
 const {OAuth2Client} = require('google-auth-library');
 
@@ -53,22 +52,6 @@ async function verifyLogin(token) {
   return payload && payload['sub']; // userid
 }
 
-/**
- * Escapes and formats frontmatter provided by user to 11ty format.
- * @param {string} inputFm Frontmatter string
- */
-const parseFrontmatter = inputFm => {
-  const /** @type {any} */ parsedFm = yaml.load(inputFm) || {};
-  const date = parsedFm.date?.toISOString ? parsedFm.date : new Date();
-  return {
-    layout: xss(parsedFm.layout) || 'layouts/blog-post.njk',
-    date: date.toISOString().split('T')[0],
-    title: xss(parsedFm.title) || 'Test title TBD',
-    desciption: xss(parsedFm.description) || 'Test description TBD',
-    authors: parsedFm.authors?.map(author => xss(author)) || ['rachelandrew'],
-  };
-};
-
 const renderHandler = async (req, res) => {
   // Check sign in
   try {
@@ -81,18 +64,31 @@ const renderHandler = async (req, res) => {
   }
 
   process.env.ELEVENTY_IGNORE_EXTENSIONS = 'true';
+  const defaultParsedFm = {
+    data: {
+      layout: 'layouts/blog-post.njk',
+      date: new Date().toISOString().split('T')[0],
+      title: 'Test title TBD',
+      desciption: 'Test description TBD',
+      authors: ['rachelandrew'],
+    },
+    content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+  };
 
-  let fm = {};
+  let /** @type {any} */ fm = {};
   try {
-    fm = parseFrontmatter(req.body.fm);
+    fm = !req.body.fm ? defaultParsedFm : matter(req.body.fm);
   } catch (e) {
     return res.status(400).send(`FrontMatter malformed: ${e}`);
   }
-  if (!supportedLayouts.includes(fm.layout)) {
-    return res.status(400).send(`Unsupported layout: ${fm.layout}`);
+  if (!supportedLayouts.includes(fm.data.layout)) {
+    return res.status(400).send(`Unsupported layout: ${fm.data.layout}`);
   }
-  const body = xss(req.body.md);
-  const inputPath = path.join('./site/en/preview', fm.layout);
+
+  const inputPath = path.join('./site/en/preview', fm.data.layout);
+  const postDate = fm.data?.date?.toISOString ? fm.data.date : new Date();
+  fm.date = postDate.toISOString().split('T')[0];
 
   try {
     const elev = new Eleventy(inputPath, 'dist', {
@@ -100,8 +96,8 @@ const renderHandler = async (req, res) => {
       inputDir: './site',
       config: function (eleventyConfig) {
         eleventyConfig.addPlugin(EleventyRenderPlugin);
-        eleventyConfig.addGlobalData('fm', fm);
-        eleventyConfig.addGlobalData('body', body);
+        eleventyConfig.addGlobalData('fm', fm.data);
+        eleventyConfig.addGlobalData('body', fm.content);
         eleventyConfig.addGlobalData('date', fm.date);
 
         eleventyConfig.addAsyncShortcode('render', async function (str) {

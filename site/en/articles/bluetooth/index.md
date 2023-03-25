@@ -560,7 +560,7 @@ Hero image by [SparkFun Electronics from Boulder, USA].
 [secure contexts]: https://w3c.github.io/webappsec-secure-contexts/#intro
 [tls]: https://en.wikipedia.org/wiki/Transport_Layer_Security
 [a user gesture]: https://html.spec.whatwg.org/multipage/interaction.html#activation
-[`pointerup`]: https://developers.google.com/web/updates/2016/10/pointer-events
+[`pointerup`]: /blog/pointer-events/
 [promises]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
 [promises tutorial]: /promises
 [arrow functions]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions

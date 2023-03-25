@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: 'Development basics'
+seoTitle: 'Chrome Extension development basics'
 subhead: 'Learn the basics of Chrome extension development.'
 description: 'What to expect during the development of a Chrome extension.'
 date: 2022-10-04
@@ -211,7 +212,7 @@ manifest.json file in the extension's **root directory**. The following is a str
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/hjccQNanPjTDpIajkhPU.png", alt="The contents of an extension folder: manifest.json, background.js, scripts folder, popup folder, and images folder.", width="700", height="468" %}
 
-## Using Typescript {: #types }
+## Using TypeScript {: #types }
 
 If you are developing using a [code editor][mdn-ide] such as VSCode or Atom, you can use the npm
 package [chrome-types][npm-chrome-types] to take advantage of auto-completion for the [Chrome
@@ -220,7 +221,7 @@ changes.
 
 {% Aside  'gotchas' %}
 
-Upgrade this npm package frequently to work with the latest Chromium version.
+Update this npm package frequently to work with the latest Chromium version.
 
 {% endAside %}
 
@@ -249,7 +250,7 @@ extension and Chrome Web store documentation:
 [hello-icon]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/gmKIT88Ha1z8VBMJFOOH.png
 [mdn-ide]: https://developer.mozilla.org/docs/Glossary/IDE
 [npm-chrome-types]: https://www.npmjs.com/package/chrome-types
-[sample-hello-world]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/hello-world
+[sample-hello-world]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.hello-world
 [tut-focus-mode]: /docs/extensions/mv3/getstarted/tut-focus-mode
 [tut-reading-time]: /docs/extensions/mv3/getstarted/tut-reading-time
 [tut-tabs-manager]: /docs/extensions/mv3/getstarted/tut-tabs-manager

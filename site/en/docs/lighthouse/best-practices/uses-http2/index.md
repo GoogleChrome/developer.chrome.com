@@ -13,7 +13,7 @@ and with less data moving over the wire.
 
 ## How the Lighthouse HTTP/2 audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) lists all resources not served over HTTP/2:
+[Lighthouse](/docs/lighthouse/overview/) lists all resources not served over HTTP/2:
 
 <figure>
   {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/Gs0J63479ELUkMeI8MRS.png", alt="Lighthouse audit shows resources not served over HTTP/2 ", width="800", height="191" %}
@@ -36,6 +36,6 @@ see [Setting up HTTP/2](https://dassur.ma/things/h2setup/).
 
 ## Resources
 
-- [Source code for **Does not use HTTP/2 for all of its resources** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/dobetterweb/uses-http2.js)
-- [Introduction to HTTP/2](https://developers.google.com/web/fundamentals/performance/http2/)
+- [Source code for **Does not use HTTP/2 for all of its resources** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/dobetterweb/uses-http2.js)
+- [Introduction to HTTP/2](https://web.dev/performance-http2/)
 - [HTTP/2 Frequently Asked Questions](https://http2.github.io/faq/)

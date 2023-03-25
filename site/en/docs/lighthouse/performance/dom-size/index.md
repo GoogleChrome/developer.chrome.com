@@ -22,7 +22,7 @@ A large DOM tree can slow down your page performance in multiple ways:
 
   As users and scripts interact with your page,
   the browser must constantly
-  [recompute the position and styling of nodes](https://developers.google.com/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations?utm_source=lighthouse&utm_medium=cli).
+  [recompute the position and styling of nodes](https://web.dev/reduce-the-scope-and-complexity-of-style-calculations/).
   A large DOM tree in combination with complicated style rules can severely slow down rendering.
 
 - **Memory performance**
@@ -33,7 +33,7 @@ A large DOM tree can slow down your page performance in multiple ways:
 
 ## How the Lighthouse DOM size audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+[Lighthouse](/docs/lighthouse/overview/)
 reports the total DOM elements for a page, the page's maximum DOM depth,
 and its maximum child elements:
 
@@ -60,12 +60,12 @@ and only create them after a relevant user interaction,
 such as a scroll or a button click.
 
 If you create DOM nodes at runtime,
-[Subtree Modification DOM Change Breakpoints](https://developers.google.com/web/tools/chrome-devtools/javascript/breakpoints#dom)
+[Subtree Modification DOM Change Breakpoints](/docs/devtools/dom/)
 can help you pinpoint when nodes get created.
 
 If you can't avoid a large DOM tree,
 another approach for improving rendering performance is simplifying your CSS selectors.
-See Google's [Reduce the Scope and Complexity of Style Calculations](https://developers.google.com/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations)
+See Google's [Reduce the Scope and Complexity of Style Calculations](https://web.dev/reduce-the-scope-and-complexity-of-style-calculations)
 for more information.
 
 ## Stack-specific guidance
@@ -89,5 +89,5 @@ If you're rendering large lists, use [virtual scrolling](https://web.dev/virtual
 
 ## Resources
 
-- [Source code for **Avoid an excessive DOM size** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/dobetterweb/dom-size.js)
-- [Reduce the Scope and Complexity of Style Calculations](https://developers.google.com/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations)
+- [Source code for **Avoid an excessive DOM size** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/dobetterweb/dom-size.js)
+- [Reduce the Scope and Complexity of Style Calculations](https://web.dev/reduce-the-scope-and-complexity-of-style-calculations/)

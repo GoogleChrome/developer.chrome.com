@@ -5,14 +5,14 @@ description: >
     Using the native macOS echo canceller in Chrome
 authors:
   - ossu
-date: 2018-03-23 
+date: 2018-03-23
 updated: 2018-07-02
 ---
 
 {% Aside 'caution' %}
 This information applies to Chrome M66 and M67. In M68 and later, the
 functionality has changed but the command line flag remains the same; see the
-[More Native Echo Cancellation](https://developers.google.com/web/updates/2018/06/more-native-echo-cancellation)
+[More Native Echo Cancellation](/blog/more-native-echo-cancellation)
 post.
 {% endAside %}
 

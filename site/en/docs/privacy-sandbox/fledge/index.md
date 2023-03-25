@@ -24,7 +24,7 @@ authors:
 This article covers the basics of FLEDGE and explains some underlying
 concepts, but doesn't go into much technical detail.
 
-* If you work in **advertising or adtech**, you'll get an overview of [how FLEDGE works](#overview).
+* If you work in **advertising or ad tech**, you'll get an overview of [how FLEDGE works](#overview).
 * If you're a **developer or software engineer**, the [FLEDGE API Developer Guide](/docs/privacy-sandbox/fledge-api) provides more in-depth technical detail about the proposal and the [Intent to prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI)
   offers the latest conversation about FLEDGE status in the browser.
 * [The FLEDGE demo](/docs/privacy-sandbox/fledge-api#demo) provides a walkthrough of a basic FLEDGE deployment.
@@ -48,6 +48,11 @@ FLEDGE is the first experiment to be implemented in Chromium within the
 [TURTLEDOVE](https://github.com/WICG/turtledove) family of proposals. The
 [Privacy Sandbox timeline](https://privacysandbox.com/timeline) provides implementation timing
 information for FLEDGE and other Privacy Sandbox proposals.
+
+### How does FLEDGE differ from Turtledove?
+
+The differences mostly pertain to separation of the on-device role
+of the ad buyer and seller. The sections below explain how FLEDGE works.
 
 ### FLEDGE in one minute {: #overview}
 
@@ -128,7 +133,7 @@ relevant ads, so content publishers can get ad revenue, without cross-site
 tracking.
 
 The FLEDGE experiment aims to move the web platform closer to a state where the
-user's browser, on their device—not the advertiser or adtech platforms—holds
+user's browser, on their device—not the advertiser or ad tech platforms—holds
 information about what that person is interested in.
 
 {% Aside 'warning' %}
@@ -259,14 +264,14 @@ The table below provides examples of different types of FLEDGE interest group an
           audience.</td>
       </tr>
       <tr>
-        <td style="vertical-align: top;">Adtech</td>
+        <td style="vertical-align: top;">Ad tech</td>
         <td style="vertical-align: top;">DSP</td>
         <td style="vertical-align: top;">Category of products</td>
         <td style="vertical-align: top;">People who showed an interest in cycling gear.</td>
-        <td style="vertical-align: top;">An adtech company might create and manage an interest group
+        <td style="vertical-align: top;">An ad tech company might create and manage an interest group
           of people they believe are in the market for some category of item. This interest group
           could then be used to advertise products on sites that sell things in that category (and
-          who work with the adtech company).</td>
+          who work with the ad tech company).</td>
       </tr>
     </tbody>
   </table>
@@ -417,9 +422,9 @@ privacy) the seller and the winning bidder can report the auction result.
 ### What is a FLEDGE Key/Value service?
 {% endDetailsSummary %}
 
-FLEDGE Key/Value service allows adtechs to query for realtime data when a bid is made by the buyer, and for sellers to score ads while preserving privacy. FLEDGE Key/Value service is one of the [FLEDGE services](/blog/fledge-service-overview/). 
+FLEDGE Key/Value service allows ad techs to query for realtime data when a bid is made by the buyer, and for sellers to score ads while preserving privacy. FLEDGE Key/Value service is one of the [FLEDGE services](/blog/fledge-service-overview/). 
 
-The Key/Value service is deployed to the adtech's own cloud infrastructure, and the service runs on a [trusted execution environment](/docs/privacy-sandbox/glossary/#trusted-execution-environment). A request to a Key/Value service cannot result in event-level logging or have other side effects. The Key/Value service will also support [user-defined functions (UDFs)](https://github.com/WICG/turtledove/blob/main/FLEDGE_Key_Value_Server_trust_model.md#support-for-user-defined-functions-udfs) that allow adtechs to execute their own custom logic within the Key/Value service. 
+The Key/Value service is deployed to the ad tech's own cloud infrastructure, and the service runs on a [trusted execution environment](/docs/privacy-sandbox/glossary/#trusted-execution-environment). A request to a Key/Value service cannot result in event-level logging or have other side effects. The Key/Value service will also support [user-defined functions (UDFs)](https://github.com/WICG/turtledove/blob/main/FLEDGE_Key_Value_Server_trust_model.md#support-for-user-defined-functions-udfs) that allow ad techs to execute their own custom logic within the Key/Value service. 
 
 {: #key-value}
 
@@ -446,7 +451,7 @@ seller may be required to check ad creatives against publisher policies.
 
 To meet the privacy requirements of FLEDGE, realtime data required during an ad auction is provided by the [Key/Value service](#key-value-service-detail). When each buyer calls `navigator.joinAdInterestGroup()`,the buyer specifies a Key/Value service URL and specifies the keys to be queried to the service during an auction. Likewise, when the seller runs an ad auction by calling `navigator.runAdAuction()`, the seller provides a URL for its Key/Value service. The seller's Key/Value service will be queried with the render URL of the creative.
 
-For initial testing, ["Bring Your Own Server"](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#3-buyers-provide-ads-and-bidding-functions-byos-for-now) model is used. In the long-term, adtechs will need to use the open-source FLEDGE Key/Value services running in [trusted execution environments](https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#trusted-execution-environment) for retrieving real-time data.
+For initial testing, ["Bring Your Own Server"](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#3-buyers-provide-ads-and-bidding-functions-byos-for-now) model is used. In the long-term, ad techs will need to use the open-source FLEDGE Key/Value services running in [trusted execution environments](https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#trusted-execution-environment) for retrieving real-time data.
 
 To ensure that the ecosystem has sufficient time to test, we don’t expect to require the use of the open-source Key/Value services or TEEs until sometime after third-party cookie deprecation. We will provide substantial notice for developers to begin testing and adoption before this transition takes place.
 
@@ -470,7 +475,10 @@ We've written an  [API developer guide](/docs/privacy-sandbox/fledge-api) and bu
 
 -  **GitHub**: Read the [proposal](https://github.com/WICG/turtledove/blob/master/FLEDGE.md),
    [raise questions and follow discussion](https://github.com/WICG/turtledove/issues).
+-  **Announcements**: Join or view past announcements on the [FLEDGE mailing list](https://groups.google.com/u/0/a/chromium.org/g/fledge-api-announce).
 -  **W3C**: Discuss industry use cases in the [Improving Web Advertising Business
    Group](https://www.w3.org/community/web-adv/participants).
--  **Developer support**: Ask questions and join discussions on the
+-  **Developer support**: Ask questions about implementation, and best practices, or join discussions on the
    [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
+-  **Current implementation**: For questions about the implementation currently available to test in
+   Chrome: [file a Chromium bug](https://bugs.chromium.org/p/chromium/issues/list?q=fledge).

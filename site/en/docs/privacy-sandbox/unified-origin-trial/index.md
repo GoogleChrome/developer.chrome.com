@@ -8,9 +8,10 @@ description: >
    Run unified experiments across Attribution Reporting, FLEDGE,
    Topics, Fenced Frames, and Shared Storage.
 date: 2022-09-08
-updated: 2022-11-04
+updated: 2023-03-13
 authors:
   - anusmitaray
+  - kevinkiklee
   - rowan_m
 ---
 
@@ -30,7 +31,241 @@ your configuration, and provides further resources for testing against the APIs.
 
 ## Check the status of the origin trial {: #status}
 
-### November 2022
+### March 2023
+
+#### Timeline update
+
+We initially communicated that we will begin the isolated experiments on Monday, March 13, 2023, but the new experiments will now begin on Thursday, March 16, 2023 due to the additional time needed for setting up the experiments. The 1% FLEDGE ramp back up from 4% to 5% will also occur on Thursday, March 16, 2023.
+
+#### FLEDGE 1% ramp back up
+
+Last month, we [temporarily reduced FLEDGE origin trial traffic](/docs/privacy-sandbox/unified-origin-trial/#january-2023) from 5% to 4% of Chrome stable for testing. The initial testing has concluded, and we plan to ramp FLEDGE back up to 5% from 4% for the unified experiment on Thursday, March 16, 2023.
+
+The ramped-up users will be the same set of users that were ramped down. However, their previous interest groups have expired, since more than 30 days have passed since the ramp-down. 
+
+#### Isolated experiments
+
+To improve our testing process and continue observing the metrics of origin trial APIs, we're creating isolated experiments for each API, in addition to the existing unified experiment. New experiments will be created for Attribution Reporting, Topics, a combination of FLEDGE and Fenced Frames, and a combination of Shared Storage’s URL Selection operation and Fenced Frames. In each isolated experiment, only the assigned APIs will be available for the users in that group.
+
+<table class="with-heading-tint">
+    <thead>
+  <tr>
+   <th>API
+   </th>
+   <th>Isolated experiment<br>traffic allocation
+   </th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+   <td>Attribution Reporting 
+   </td>
+   <td>1%
+   </td>
+  </tr>
+  <tr>
+   <td>FLEDGE + Fenced Frames
+   </td>
+   <td>1%
+   </td>
+  </tr>
+  <tr>
+   <td>Shared Storage (URL selection) + Fenced Frames
+   </td>
+   <td>1%
+   </td>
+  </tr>
+  <tr>
+   <td>Topics
+   </td>
+   <td>1%
+   </td>
+  </tr></tbody>
+</table>
+
+Starting Thursday, March 16, you will begin to receive an additional 1% of the Chrome Stable traffic for the APIs listed above, on top of the 5% traffic you are receiving from the existing unified experiment. New users will be allocated to each experiment.
+
+#### Traffic allocation
+
+The current unified origin trials traffic allocation as of Tuesday, February 28, is as follows:
+
+<table class="with-heading-tint">
+    <thead>
+  <tr>
+   <th>API
+   </th>
+   <th>Current unified experiment<br>traffic allocation
+   </th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+   <td>Attribution Reporting 
+   </td>
+   <td>5%
+   </td>
+  </tr>
+  <tr>
+   <td>Fenced Frames
+   </td>
+   <td>5%
+   </td>
+  </tr>
+  <tr>
+   <td>FLEDGE
+   </td>
+   <td>4%
+   </td>
+  </tr>
+  <tr>
+   <td>Shared Storage (URL selection)
+   </td>
+   <td>5%
+   </td>
+  </tr>
+  <tr>
+   <td>Topics
+   </td>
+   <td>5%
+   </td>
+  </tr></tbody>
+</table>
+
+The traffic allocation will look like the following starting on Thursday, March 16, after FLEDGE is ramped back up, and the new isolated experiments begin:
+
+<table class="with-heading-tint">
+    <thead>
+  <tr>
+   <th>API
+   </th>
+   <th>New traffic allocation
+   </th>
+   <th>Status
+   </th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+   <td rowspan="2">Attribution Reporting 
+   </td>
+   <td>Unified - 5%
+   </td>
+   <td rowspan="2">6% of the Stable traffic starting from March 16, 2023
+   </td>
+  </tr>
+  <tr>
+   <td>Isolated - 1% - ARA only
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="3">Fenced Frames
+   </td>
+   <td>Unified - 5%
+   </td>
+   <td rowspan="3">7% of the Stable traffic starting from March 16, 2023
+   </td>
+  </tr>
+  <tr>
+   <td>Isolated - 1% - Shared Storage (URL Selection) + Fenced Frames only
+   </td>
+  </tr>
+  <tr>
+   <td>Isolated - 1% - FLEDGE + Fenced Frames only
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="2">FLEDGE 
+   </td>
+   <td>Unified - 5% (4% current allocation + 1% ramp back up)
+   </td>
+   <td rowspan="2">6% of the Stable traffic starting from March 16, 2023
+   </td>
+  </tr>
+  <tr>
+   <td>Isolated - 1% - FLEDGE + Fenced Frames only
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="2">Shared Storage <br>(URL Selection)
+   </td>
+   <td>Unified - 5%
+   </td>
+   <td rowspan="2">6% of the Stable traffic starting from March 16, 2023
+   </td>
+  </tr>
+  <tr>
+   <td>Isolated - 1% - Shared Storage (URL Selection) + Fenced Frames only
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="2">Topics
+   </td>
+   <td>Unified - 5%
+   </td>
+   <td rowspan="2">6% of the Stable traffic starting from March 16, 2023
+   </td>
+  </tr>
+  <tr>
+   <td>Isolated - 1% - Topics only
+   </td>
+  </tr></tbody>
+</table>
+
+These changes will not affect your existing origin trial token setup, and you will not have to renew or generate a new origin trial token. 
+
+### January 2023
+
+As part of a Chrome regression investigation, we will temporarily reduce FLEDGE origin trial traffic from 5% to 4% of Chrome Stable, from January 26th 2023. We estimate the investigation will take about a month, and we will notify you when the traffic is ramped back up.  
+
+This change will happen automatically, and will not impact your existing origin trial tokens. For the users in the 1% traffic that will ramp down, the interest groups will remain in their browsers. The same users will be part of the ramp back up, and their interest groups can be reused. However, the interest groups expire in 30 days, and the regression investigation may take longer than that. 
+
+Also, Shared Storage’s URL Selection API origin trial will be increasing to 5% of Chrome Stable traffic from January 26th 2023.
+
+<table class="with-heading-tint">
+    <thead>
+  <tr>
+   <th>API</th>
+   <th>Notes</th>
+  </tr></thead>
+  <tbody>
+  <tr>
+   <td><a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a>
+   </td>
+   <td>Available in Stable, increased to 5% from October 26th 2022.
+   </td>
+  </tr>
+  <tr>
+   <td><a href="/docs/privacy-sandbox/topics/">Topics</a>
+   </td>
+   <td>Available in Stable, increased to 5% from October 26th 2022.
+   </td>
+  </tr>
+  <tr>
+   <td><a href="/docs/privacy-sandbox/fledge/">FLEDGE</a>
+   </td>
+   <td>Available in Stable, temporarily decreasing to 4% from January 26th 2023.
+   </td>
+  </tr>
+  <tr>
+   <td><a href="/docs/privacy-sandbox/fenced-frame/">Fenced Frames</a>
+   </td>
+   <td>Available in Stable, increasing to 5% from November 9th 2022.
+   </td>
+  </tr>
+  <tr>
+   <td><a href="/docs/privacy-sandbox/shared-storage/">Shared Storage</a>
+   </td>
+   <td>Available in Stable, increasing 5% from January 26th 2023.
+   </td>
+  </tr></tbody>
+</table>
+
+{% Details %} {% DetailsSummary %}
+### Previous updates
+
+Check out previous updates on the origin trial. {% endDetailsSummary %}
+
+#### November 2022
 
 Shared Storage’s `selectURL` API will be [joining the origin
 trial](https://groups.google.com/a/chromium.org/g/blink-dev/c/Vi-Rj37aZLs/m/wXlBwB_UAQAJ)
@@ -40,11 +275,14 @@ at 1% of Chrome Stable traffic from November 9th. As previously announced in the
 Reporting and Topics are now at 5% with FLEDGE and Fenced Frames also following
 on November 9th.
 
-<table>
+<table class="with-heading-tint">
+    <thead>
   <tr>
    <th>API</th>
    <th>Notes</th>
   </tr>
+</thead>
+<tbody>
   <tr>
    <td><a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a>
    </td>
@@ -74,13 +312,8 @@ on November 9th.
    </td>
    <td>Will be available in Stable, starting at 1% from November 9th.
    </td>
-  </tr>
+  </tr></tbody>
 </table>
-
-{% Details %} {% DetailsSummary %}
-### Previous updates
-
-Check out previous updates on the origin trial. {% endDetailsSummary %}
 
 #### October 2022: 5% increase
 
@@ -91,11 +324,14 @@ FLEDGE and Fenced Frames will increase from November 9th. Read more in the
 [Increasing the Privacy Sandbox Relevance and Measurement origin trial to
 5%](/blog/privacy-sandbox-origin-trial-increase/) blog post.
 
-<table>
+<table class="with-heading-tint">
+    <thead>
   <tr>
    <th>API</th>
    <th>Notes</th>
   </tr>
+</thead>
+<tbody>
   <tr>
    <td><a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a>
    </td>
@@ -125,7 +361,7 @@ FLEDGE and Fenced Frames will increase from November 9th. Read more in the
    </td>
    <td>Only available in M105+ Canary, Dev, and Beta for now.
    </td>
-  </tr>
+  </tr></tbody>
 </table>
 
 #### October 2022
@@ -150,8 +386,8 @@ APIs included in the trial:
 <table class="with-heading-tint fixed-table width-full">
   <thead>
     <tr>
-      <th><strong>API</strong></th>
-      <th><strong>Notes</strong></th>
+      <th>API</th>
+      <th>Notes</th>
     </tr>
   </thead>
   <tbody>
@@ -218,13 +454,13 @@ Origin trial availability ramps up to [50% of users from Chrome 102
 Beta](https://groups.google.com/a/chromium.org/g/blink-dev/c/Vi-Rj37aZLs/m/WBPqGvscAgAJ).
 APIs included in the trial:
 
-<table class="with-heading-tint fixed-table width-full">
+<table class="with-heading-tint">
   <thead>
     <tr>
       <th>
-<strong>API</strong></th>
+API</th>
       <th>
-<strong>Notes</strong></th>
+Notes</th>
     </tr>
   </thead>
   <tbody>
@@ -275,13 +511,13 @@ Origin trial begins with a [limited proportion of users from Chrome 102
 Beta](https://groups.google.com/a/chromium.org/g/blink-dev/c/Vi-Rj37aZLs/m/wzeBWfxxEgAJ).
 APIs included in the trial:
 
-<table class="with-heading-tint fixed-table width-full">
+<table class="with-heading-tint">
   <thead>
     <tr>
       <th>
-<strong>API</strong></th>
+API</th>
       <th>
-<strong>Notes</strong></th>
+Notes</th>
     </tr>
   </thead>
   <tbody>
@@ -497,6 +733,24 @@ instance by not including the token in the response. For instance, if you have
 met your own quota for an experiment or need to address an issue during the
 trial, then not including the token ensures no experimental functionality will
 be available or active in the page.
+
+### Origin trial control by geographic region
+
+You cannot opt-out of an origin trial for specific regions. Origin trials are active on pages that [contain the token](/docs/web-platform/origin-trials/#take-part-in-an-origin-trial), included via HTTP headers (server-side) or HTML meta tags (client-side). 
+
+If you can determine the user's location, then you *could* write code to include the origin trial token based on that location information. For example, you could attempt to use IP addresses to determine a user's location. IP addresses can be spoofed, so this is not a guaranteed solution.
+
+However, a geographic-specific origin can set a [Permissions Policy](/docs/privacy-sandbox/permissions-policy/)
+to control what features are usable. For example, `us.example.com` and `uk.example.com` are geographic-specific origins which can be controlled. This does not mean that a region has opted-out of the origin trial.
+
+With a Permissions Policy, a site adds a little snippet of code to their  pages that provides instructions to the browser. When the page loads, the browser  reads the Permission Policy instructions and will allow or block features (or APIs) as outlined in the Permissions Policy. If a site wants to restrict an API in a specific region, the developer could set a policy for all pages requested from that region.
+
+{% Aside 'warning' %}
+Users may choose to visit an origin from a region that's different
+from where they are. In other words, a user in the United States may be
+able to visit `uk.example.com`. Those users would see features and functions
+for the United States site that were blocked for the United Kingdom site.
+{% endAside %}
 
 ## Renew your token
 

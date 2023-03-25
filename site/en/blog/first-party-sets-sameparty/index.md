@@ -13,6 +13,7 @@ alt: A diagram showing First-Party Sets. One set contains domains example.com,
   fly-brandx.site, and drive-brandx.site.
 tags: 
   - privacy
+is_outdated: true
 authors:
   - rowan_m
   - mihajlija
@@ -20,7 +21,7 @@ authors:
 
 
 {% Aside 'warning' %}
-First-Party Sets proposal has been updated and this article is no longer up to date. Refer to the [explainer](https://github.com/WICG/first-party-sets) and [testing instructions](/first-party-sets-testing-instructions) for the latest information.
+First-Party Sets proposal has been updated and this article is no longer up to date. Refer to the [explainer](https://github.com/WICG/first-party-sets) and [testing instructions](/blog/first-party-sets-testing-instructions) for the latest information.
 {% endAside %}
 
 Many organizations have related sites with different domain names, such as

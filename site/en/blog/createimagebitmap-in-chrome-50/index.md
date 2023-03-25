@@ -24,7 +24,7 @@ fetch(url)
 ```
 
 
-This approach will also work with images stored as blobs in IndexedDB, making blobs something of a convenient intermediate format. As it happens [Chrome 50 also supports the `.toBlob()` method](https://developers.google.com/web/updates/2016/03/canvas-toblob-in-chrome-50) on canvas elements, which means you can -- for example -- generate blobs from canvas elements.
+This approach will also work with images stored as blobs in IndexedDB, making blobs something of a convenient intermediate format. As it happens [Chrome 50 also supports the `.toBlob()` method](/blog/canvas-toblob-in-chrome-50) on canvas elements, which means you can -- for example -- generate blobs from canvas elements.
 
 ## Using createImageBitmap() in web workers
 
@@ -56,7 +56,7 @@ worker.onmessage = (evt) => {
 
     canvasContext.drawImage(evt.data.imageBitmap, 0, 0);
 }
-```   
+```
 
 Today if you call `createImageBitmap()` on the main thread, that’s exactly where the decoding will be done. The plans are, however, to have [Chrome automatically do the decoding in another thread](https://bugs.chromium.org/p/chromium/issues/detail?id=580202), helping to keep the main thread workload down. In the meantime, however, you should be mindful of doing the decoding on the main thread, as it is intensive work that could block other essential tasks, like JavaScript, style calculations, layout, painting, or compositing.
 

@@ -1,0 +1,9 @@
+<div class="post-banner">
+  <div class="post-banner__content">
+    {% if new_available_content_url %}
+      {% set material_url = helpers.findByUrl(collections.all, new_available_content_url, locale) %}
+    {% endif %}
+
+    {{ 'i18n.common.outdated_banner.content' | i18n(locale) }} {% if material_url %}<a href={{ material_url.url }}>{{ 'i18n.common.outdated_banner.new_material' | i18n(locale) }}</a>.{% endif %}
+  </div>
+</div>

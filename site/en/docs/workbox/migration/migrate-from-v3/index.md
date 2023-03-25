@@ -117,7 +117,7 @@ The `npm` package has been renamed [`workbox-broadcast-update`](https://www.npmj
 
 In Workbox v3 the verbosity of log levels could be controlled via the `workbox.core.setLogLevel()` method, which you'd pass one of the values in the `workbox.core.LOG_LEVELS` enum. You could also read the current log level via `workbox.core.logLevel`.
 
-In Workbox v4, all of these have been removed since all modern developer tools now ship with rich log filtering capabilities (see [filtering the console output](https://developers.google.com/web/tools/chrome-devtools/console/#filtering_the_console_output) for Chrome Dev Tools).
+In Workbox v4, all of these have been removed since all modern developer tools now ship with rich log filtering capabilities (see [filtering the console output](/docs/devtools/console/reference/#filter) for Chrome Dev Tools).
 
 ### workbox-sw
 

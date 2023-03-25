@@ -82,7 +82,7 @@ const handlerCb = async ({url, request, event, params}) => {
 
 Your handler must return a promise that resolves to a `Response`. In this
 example, we're using
-[`async` and `await`](https://developers.google.com/web/fundamentals/primers/async-functions).
+[`async` and `await`](https://web.dev/javascript-async-functions/).
 Under the hood, the return `Response` value will be wrapped in a promise.
 
 You can register these callbacks like so:
@@ -151,14 +151,14 @@ expression `new RegExp('https://cdn\\.third-party-site\\.com.*/styles/.*\\.css')
 
 If you wanted to match both local and third parties you can use a wildcard
 at the start of your regular expression, but this should be done with caution
-to ensure it doesn't cause unexpected behaviors in you web app.
+to ensure it doesn't cause unexpected behaviors in your web app.
 
 ## How to Register a Navigation Route
 
 If your site is a single page app, you can use a
 [`NavigationRoute`](/docs/workbox/reference/workbox-routing/#type-NavigationRoute) to
 return a specific response for all
-[navigation requests](https://developers.google.com/web/fundamentals/primers/service-workers/high-performance-loading#first_what_are_navigation_requests).
+[navigation requests](/docs/workbox/caching-strategies-overview/).
 
 ```js
 import {createHandlerBoundToURL} from 'workbox-precaching';

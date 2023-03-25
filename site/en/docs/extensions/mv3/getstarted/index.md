@@ -1,8 +1,9 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: 'Welcome'
+seoTitle: 'Chrome Extensions getting started guides '
 subhead: 'Welcome to the Getting Started Guides.'
-description: 'Welcome to the Getting Started Guides.'
+description: 'Overview of all Chrome Extensions getting started guides.'
 date: 2022-10-04
 # updated: 2022-06-13
 anchorRedirects:
@@ -17,7 +18,7 @@ Welcome to the Getting Started Guides! The purpose of this page is to describe e
 : Briefly covers some fundamental concepts of Chrome Extension development like web technologies and commonly used extension components. In addition, it includes what to be aware of when designing and distributing an extension in the Chrome Web Store. 
 
 [Development Basics][doc-dev-basics]
-: Introduces the extension development workflow by creating a _Hello, Extensions_ example. It walks through loading the extension during development, locating logs and errors, choosing a project structure, and using Typescript.
+: Introduces the extension development workflow by creating a "Hello, Extensions" example. It walks through loading the extension during development, locating logs and errors, choosing a project structure, and using Typescript.
 
 ## Extension tutorials {: #tutorial } 
 

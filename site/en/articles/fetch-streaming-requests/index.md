@@ -172,7 +172,7 @@ This is because, according to HTTP/1.1 rules, request and response bodies either
 Chunked encoding is pretty common when it comes to HTTP/1.1 _responses_, but very rare when it comes to _requests_, so it's too much of a compatibility risk.
 
 {% Aside %}
-This isn't an issue for HTTP/2 or 3, as data is always 'chunked', although it calls the chunks [frames](https://developers.google.com/web/fundamentals/performance/http2#streams_messages_and_frames).
+This isn't an issue for HTTP/2 or 3, as data is always 'chunked', although it calls the chunks [frames](https://web.dev/performance-http2/#streams,-messages,-and-frames).
 {% endAside %}
 
 ## Potential issues

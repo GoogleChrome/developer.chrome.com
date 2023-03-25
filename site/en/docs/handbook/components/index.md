@@ -94,17 +94,17 @@ Use the success aside to describe a successful action or an error-free status.
 Use the success aside to describe a successful action or an error-free status.
 {% endAside %}
 
-### Gotchas asides
+### Important asides
 
 ```md
-{% raw %}{% Aside 'gotchas' %}
-Use the gotcha aside to indicate a common problem that the reader wouldn't know
+{% raw %}{% Aside 'important' %}
+Use the important aside to indicate a common problem that the reader wouldn't know
 without specialized knowledge of the topic.
 {% endAside %}{% endraw %}
 ```
 
-{% Aside 'gotchas' %}
-Use the gotchas aside to indicate a common problem that the reader wouldn't know
+{% Aside 'important' %}
+Use the important aside to indicate a common problem that the reader wouldn't know
 without specialized knowledge of the topic.
 {% endAside %}
 
@@ -134,6 +134,22 @@ Use the codelab aside to link to an associated codelab.
 
 {% Aside 'codelab' %}
 Get started: [Measure your page performance with Lighthouse](#).
+{% endAside %}
+
+### Example asides
+
+```md
+{% raw %}{% Aside 'example' %}
+Use the example aside to give an example use case.
+{% endAside %}{% endraw %}
+```
+
+{% Aside 'example' %}
+Advertising platform Criteo recently ran a competition with more than
+150 teams testing different machine learning models to evaluate how
+differential privacy concepts such as noise insertion and aggregation
+might impact advertising performance. It's helpful to examine these
+concepts since they underlie several of the Privacy Sandbox APIs.
 {% endAside %}
 
 ## Blockquotes
@@ -204,6 +220,47 @@ These buttons are shown for reference.
 <button class="material-button button-filled button-round color-bg bg-primary">
   Round button
 </button>
+
+## Browser Compat
+
+With the `BrowserCompat` shortcode, you can embed an
+[MDN - Browser Compatibility Data](https://github.com/mdn/browser-compat-data/)
+widget in your post. You have to pass in the dot-separated feature ID,
+as used on [BCD Schema](https://github.com/mdn/browser-compat-data), e.g. for
+[Web/API/BackgroundFetchEvent](https://developer.mozilla.org/docs/Web/API/BackgroundFetchEvent)
+the ID is `api.BackgroundFetchEvent`.
+
+```text
+{% raw %}{% BrowserCompat 'api.BackgroundFetchEvent' %}{% endraw %}
+```
+
+{% BrowserCompat 'api.BackgroundFetchEvent' %}
+
+The widget will use 🗑 symbols to represent features that are deprecated:
+
+{% BrowserCompat 'api.Document.execCommand' %}
+
+The following JavaScript snippet, run from the DevTools console, will display the correct ID for a given MDN page that's currently open:
+
+```js
+window.alert(document.querySelector(".bc-github-link")?.href.match(/title=(.+?)\+/)[1] ?? "No browser compat widget found on the page.")
+```
+
+## Chrome Date
+
+Use `ChromeDate` when you want to refer to a specific milestone date in the Chrome release schedule.
+
+```md
+{% raw %}- Chrome 111 (stable date): {% ChromeDate 111 %}
+- Chrome 111 (stable date): {% ChromeDate 111, "stableDate" %}
+- Chrome 111 (earliest beta date): {% ChromeDate 111, "earliestBetaDate" %}
+- Chrome 111 (final beta date): {% ChromeDate 111, "finalBetaDate" %}{% endraw %}
+```
+
+- Chrome 111 (stable date): {% ChromeDate 111 %}
+- Chrome 111 (stable date): {% ChromeDate 111, "stableDate" %}
+- Chrome 111 (earliest beta date): {% ChromeDate 111, "earliestBetaDate" %}
+- Chrome 111 (final beta date): {% ChromeDate 111, "finalBetaDate" %}
 
 ## Code
 
@@ -424,9 +481,9 @@ var x = 0;
 ```
 {% endCompare %}
 
-## Details
+## Details (accordion functionality)
 
-Use a details section to hide extra information from the user until it's needed. It can have an optional preview.
+Use a details section to hide extra information from the user until it's needed. It can have an optional preview. Use this component if you need an accordion or expandable section.
 
 ````md
 {% raw %}{% Details %}

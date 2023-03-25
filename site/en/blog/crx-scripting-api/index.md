@@ -10,7 +10,7 @@ date: 2021-06-08
 hero: 'image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/i5pqKwKHgLHAt7ZwaP0E.png'
 alt: ''
 tags:
-  - extensions
+  - extensions-news
 ---
 
 [Manifest V3][mv3-docs] introduces a number of changes to Chrome's extension platform. In this post,

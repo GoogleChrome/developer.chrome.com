@@ -8,7 +8,6 @@ authors:
   - mattgaunt
 date: 2015-11-16
 updated: 2020-07-24
-
 ---
 
 An **application shell** is the minimal HTML, CSS, and JavaScript powering a user interface. The application shell should:
@@ -26,7 +25,7 @@ An application shell is the secret to reliably good performance. Think of your a
 
 ## Background
 
-Alex Russell's [Progressive Web Apps](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/) article describes how a web app can *progressively* change through use and user consent to provide a more native-app-like experience complete with offline support, push notifications and the ability to be added to the home screen. It depends very much on the functionality and performance benefits of [service worker](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers) and their caching abilities. This allows you to focus on **speed**, giving your web apps the same **instant loading** and regular updates you're used to seeing in native applications.
+Alex Russell's [Progressive Web Apps](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/) article describes how a web app can *progressively* change through use and user consent to provide a more native-app-like experience complete with offline support, push notifications and the ability to be added to the home screen. It depends very much on the functionality and performance benefits of [service worker](https://developer.mozilla.org/docs/Web/API/Service_Worker_API) and their caching abilities. This allows you to focus on **speed**, giving your web apps the same **instant loading** and regular updates you're used to seeing in native applications.
 
 To take full advantage of these capabilities we need a new way of thinking about websites: the **application shell architecture**.
 
@@ -57,7 +56,7 @@ On repeat visits, this allows you to get **meaningful pixels** on the screen wit
 
 To test this architecture on real devices, we’ve run our [application shell sample](https://github.com/GoogleChrome/application-shell/) on [WebPageTest.org](http://www.webpagetest.org/) and shown the results below.
 
-**Test 1:** [Testing on Cable with a Nexus 5 using Chrome Dev](http://www.webpagetest.org/result/151113_8S_G68/) 
+**Test 1:** [Testing on Cable with a Nexus 5 using Chrome Dev](http://www.webpagetest.org/result/151113_8S_G68/)
 
 The first view of the app has to fetch all the resources from the network and doesn’t achieve a meaningful paint until **1.2 seconds** in. Thanks to service worker caching, our repeat visit achieves meaningful paint and fully finishes loading in **0.5 seconds**.
 
@@ -68,7 +67,7 @@ The first view of the app has to fetch all the resources from the network and do
 </figure>
 </a>
 
-**Test 2:** [Testing on 3G with a Nexus 5 using Chrome Dev](http://www.webpagetest.org/result/151112_8R_YQN/) 
+**Test 2:** [Testing on 3G with a Nexus 5 using Chrome Dev](http://www.webpagetest.org/result/151112_8R_YQN/)
 
 We can also test our sample with a slightly slower 3G connection. This time it takes **2.5 seconds** on first visit for our first meaningful paint. It takes [**7.1 seconds**](http://www.webpagetest.org/video/view.php?id=151112_8R_YQN.3.0) to fully load the page. With service worker caching, our repeat visit achieves meaningful paint and fully finishes loading in [**0.8 seconds**](http://www.webpagetest.org/video/view.php?id=151112_8R_YQN.3.1).
 
@@ -117,7 +116,7 @@ The application shell architecture makes the most sense for apps and sites that 
 
 ## Are there any production apps using this pattern yet?
 
-The application shell architecture is possible with just a few changes to your overall application’s UI and has worked well for large-scale sites such as Google’s [I/O 2015 Progressive Web App](https://developers.google.com/web/showcase/case-study/service-workers-iowa) and Google’s Inbox.
+The application shell architecture is possible with just a few changes to your overall application’s UI and has worked well for large-scale sites such as Google’s [I/O 2015 Progressive Web App](https://web.dev/service-workers-iowa/) and Google’s Inbox.
 
 <figure>
 {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/VrI0pv3eihgLe7qMF3Hs.png", alt="Image of Google Inbox loading. Illustrates Inbox using service worker.", width="800", height="618" %}

@@ -18,10 +18,9 @@ sessions:
       software engineer at Fitbit.
     topics:
       - Performance
-    time: null
     type: speaker
     slidesUrl: null
-    videoUrl: null
+    videoUrl: https://www.youtube.com/watch?v=jXZd-HzKgM4
   - topics:
       - Performance
     description: >-
@@ -47,5 +46,5 @@ sessions:
       - milutinkristofic
     type: participant
     slidesUrl: null
-    videoUrl: null
+    videoUrl: https://www.youtube.com/watch?v=_FOQoMvIxeQ
 ---

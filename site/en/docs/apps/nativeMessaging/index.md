@@ -194,17 +194,6 @@ Here are some errors and tips for solving the issues:
       mode is `O_TEXT`, which corrupts the message format as line breaks (`\n` = `0A`) are replaced with
       Windows-style line endings (`\r\n` = `0D 0A`). The I/O mode can be set using [`__setmode`][23].
 
-## Examples {: #examples }
-
-The [examples/api/nativeMessaging][24] directory contains an example application that uses native
-messaging to communicate with a Python script that serves as a native messaging host. The sample
-host's directory also contains scripts to install/remove the native messaging host.
-
-To try out the example, first download and extract the [sample app][25] and [sample host][26]. Run
-`install_host.bat` (Windows) or `install_host.sh` (Linux / OS X) to install the native messaging
-host. Then [load the app][27] and interact with the app. Run `uninstall_host.bat` or
-`uninstall_host.sh` to unregister the native messaging host when you are done.
-
 [1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: messaging
@@ -228,7 +217,3 @@ host. Then [load the app][27] and interact with the app. Run `uninstall_host.bat
 [21]: #native-messaging-host-location
 [22]: #native-messaging-host-protocol
 [23]: https://msdn.microsoft.com/en-us/library/tw4k6df8.aspx
-[24]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/nativeMessaging
-[25]: /extensions/examples/api/nativeMessaging/app.zip
-[26]: /extensions/examples/api/nativeMessaging/host.zip
-[27]: getstarted#unpacked

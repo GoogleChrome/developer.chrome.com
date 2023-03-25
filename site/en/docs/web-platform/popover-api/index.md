@@ -7,21 +7,21 @@ authors:
   - chrisdavidmills
   - jheyy
 date: 2022-10-19
-updated: 2022-11-10
+updated: 2023-01-25
 ---
 
-The Popover API provides developers with a standard, consistent, flexible mechanism for displaying popover content on top of other page content. Popovers can be light dismissed with a close signal. Close signals include closing by clicking out of the popover or pressing <kbd>Esc</kbd>, and opening other [non-ancestral popovers](https://open-ui.org/components/popup.research.explainer#nearest-open-ancestral-popover). Typical use cases include user-interactive elements like action menus, form element suggestions, content pickers, teaching UI, and the Listbox portion of a `<select>` control.
+The Popover API provides developers with a standard, consistent, flexible mechanism for displaying popover content on top of other page content. Popovers can be light dismissed with a close signal. Close signals include closing by clicking out of the popover or pressing <kbd>Esc</kbd>, and opening other [non-ancestral popovers](https://open-ui.org/components/popover.research.explainer#nearest-open-ancestral-popover). Typical use cases include user-interactive elements like action menus, form element suggestions, content pickers, teaching UI, and the Listbox portion of a `<select>` control.
 
 ## Current status
 
-* The Popover API is planned for launch in Chrome 110, available in stable in early February 2023 (check the [Chrome Roadmap](https://chromestatus.com/roadmap) for updates).
-* It is enabled by default in [Chrome Canary](https://www.google.com/chrome/canary/) for local testing.  
+* The Popover API is planned for launch in Chrome 114, available in stable in early May 2023 (check the [Chrome Roadmap](https://chromestatus.com/roadmap) for updates).
+* It is enabled by default in [Chrome Canary](https://www.google.com/chrome/canary/) for local testing.
 * Register for the [Origin Trial](/origintrials/#/view_trial/4500221927649968129) if you want to test it in a production environment. Read [Getting started with Chrome's origin trials](/docs/web-platform/origin-trials/) for more information.
 * There is a polyfill available at [https://github.com/oddbird/popup-polyfill](https://github.com/oddbird/popup-polyfill).
 
 ## Concepts and usage
 
-Popovers are used constantly, all over the web. Developers keep having to reimplement popover styling, positioning and z-index stacking, focus management, keyboard interactions, and accessibility semantics for each new project. As well as duplication of work, this has also resulted in an inconsistent end-user experience across different apps. In answer to this, the [Open UI group](https://open-ui.org/) published a [proposal for the Popover API](https://open-ui.org/components/popup.research.explainer).
+Popovers are used constantly, all over the web. Developers keep having to reimplement popover styling, positioning and z-index stacking, focus management, keyboard interactions, and accessibility semantics for each new project. As well as duplication of work, this has also resulted in an inconsistent end-user experience across different apps. In answer to this, the [Open UI group](https://open-ui.org/) published a [proposal for the Popover API](https://open-ui.org/components/popover.research.explainer).
 
 Any HTML element can be turned into a popover using the [`popover`](/docs/web-platform/popover-api/popover-attribute) attribute. The Popover API provides the following default behavior:
 
@@ -29,8 +29,8 @@ Any HTML element can be turned into a popover using the [`popover`](/docs/web-pl
 * Popovers are also given a default fixed position in the center of the viewport, padding, and a border.
 * When shown, popovers are promoted to the [top layer](/blog/what-is-the-top-layer/) (above `document` and outside of `document` flow).
 * Popovers have light dismiss. By that, we mean you can close the popover with a close signal, such as clicking outside the popover, keyboard-navigating to another element, or pressing the Esc key.
-* Popovers are designed to be accessible, with an element defined as a popover trigger automatically getting [`aria-haspopup`](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) semantics. In addition, focus into the popover can be controlled using `autofocus` and, when the popover is light dismissed, a heuristic determines where focus should go next. For example, focus could go back to the previously-focused element, or an element clicked outside of the popover. See [Focus Management](https://open-ui.org/components/popup.research.explainer#focus-management) for more details.
-* Opening a popover dismisses other popovers that are not [ancestral popovers](https://open-ui.org/components/popup.research.explainer#nearest-open-ancestral-popover).
+* Popovers are designed to be accessible, with an element defined as a popover trigger automatically getting [`aria-haspopup`](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) semantics. In addition, focus into the popover can be controlled using `autofocus` and, when the popover is light dismissed, a heuristic determines where focus should go next. For example, focus could go back to the previously-focused element, or an element clicked outside of the popover. See [Focus Management](https://open-ui.org/components/popover.research.explainer#focus-management) for more details.
+* Opening a popover dismisses other popovers that are not [ancestral popovers](https://open-ui.org/components/popover.research.explainer#nearest-open-ancestral-popover).
 
 {% Aside 'key-term' %}
 A _popover trigger_ is an element that causes a change in the state of the popover it is associated with, for example a `<button>` that shows and dismisses the popover.
@@ -43,7 +43,7 @@ The [`popover`](/docs/web-platform/popover-api/popover-attribute) attribute can 
 
 You can show and dismiss popovers in two different ways:
 
-* Declaratively, using HTML attributes. Add the [`popovertoggletarget`](/docs/web-platform/popover-api/popovertoggletarget-attribute), [`popovershowtarget`](/docs/web-platform/popover-api/popovershowtarget-attribute), or [`popoverhidetarget`](/docs/web-platform/popover-api/popoverhidetarget-attribute) to an `<input>` or `<button>` element to turn it into a popover trigger element. In each case, the attribute value must be the `id` of the popover, to associate the two.
+* Declaratively, using HTML attributes. Add the [`popovertargetaction="toggle"`](/docs/web-platform/popover-api/popovertoggletarget-attribute), [`popovertargetaction="show"`](/docs/web-platform/popover-api/popovershowtarget-attribute), or [`popovertargetaction="hide"`](/docs/web-platform/popover-api/popoverhidetarget-attribute) to an `<input>` or `<button>` element to turn it into a popover trigger element. In each case, the attribute value must be the `id` of the popover, to associate the two.
 * Programmatically, using JavaScript. The [`showPopover()`](/docs/web-platform/popover-api/showpopover-method) and [`hidePopover()`](/docs/web-platform/popover-api/hidepopover-method) methods are used to show and dismiss popovers, respectively, and the [`popovershow`](/docs/web-platform/popover-api/popovershow-event) and [`popoverhide`](/docs/web-platform/popover-api/popoverhide-event) events can be used to react to popovers being shown or hidden.
 
 The Popover API also comes with a couple of handy CSS features, a [`::backdrop`](/docs/web-platform/popover-api/backdrop-pseudo-element) pseudo-element to style the document behind the popover when it is shown (for example, you might want to blur or fade the page while showing popovers), and an [`:open`](/docs/web-platform/popover-api/open-pseudo-class) pseudo-class to style the popover only when it is open.
@@ -53,13 +53,13 @@ The Popover API also comes with a couple of handy CSS features, a [`::backdrop`]
 [`popover`](/docs/web-platform/popover-api/popover-attribute)
 : Turns an element into a popover.
 
-[`popovertoggletarget`](/docs/web-platform/popover-api/popovertoggletarget-attribute)
+[`popoveretargetaction="toggle"`](/docs/web-platform/popover-api/popovertoggletarget-attribute)
 : Creates a trigger element that toggles an associated popover between shown and hidden states.
 
-[`popovershowtarget`](/docs/web-platform/popover-api/popovershowtarget-attribute)
+[`popovertargetaction="show"`](/docs/web-platform/popover-api/popovershowtarget-attribute)
 : Creates a trigger element that shows an associated hidden popover.
 
-[`popoverhidetarget`](/docs/web-platform/popover-api/popoverhidetarget-attribute)
+[`popovertargetaction="hide"`](/docs/web-platform/popover-api/popoverhidetarget-attribute)
 : Creates a trigger element that dismisses an associated shown popover.
 
 ## CSS features
@@ -105,14 +105,14 @@ Events:
 
 Properties:
 
-[`popoverToggleTarget`](/docs/web-platform/popover-api/popovertoggletarget-property)
-: Creates a trigger element that toggles an associated popover between shown and hidden states. DOM definition of the HTML [`popovertoggletarget`](/docs/web-platform/popover-api/popovertoggletarget-attribute) attribute.
+[`popovertargetaction="toggle"`](/docs/web-platform/popover-api/popovertoggletarget-property)
+: Creates a trigger element that toggles an associated popover between shown and hidden states. DOM definition of the HTML [`popovertargetaction="toggle"`](/docs/web-platform/popover-api/popovertoggletarget-attribute) attribute.
 
-[`popoverShowTarget`](/docs/web-platform/popover-api/popovershowtarget-property)
-: Creates a trigger element that shows an associated hidden popover. DOM definition of the HTML [`popovershowtarget`](/docs/web-platform/popover-api/popovershowtarget-attribute) attribute.
+[`popovertargetaction="show"`](/docs/web-platform/popover-api/popovershowtarget-property)
+: Creates a trigger element that shows an associated hidden popover. DOM definition of the HTML [`popovertargetaction="show"`](/docs/web-platform/popover-api/popovershowtarget-attribute) attribute.
 
-[`popoverHideTarget`](/docs/web-platform/popover-api/popoverhidetarget-property)
-: Creates a trigger element that dismisses an associated shown popover. DOM definition of the HTML [`popoverhidetarget`](/docs/web-platform/popover-api/popoverhidetarget-attribute) attribute.
+[`popovertargetaction="hide"`](/docs/web-platform/popover-api/popoverhidetarget-property)
+: Creates a trigger element that dismisses an associated shown popover. DOM definition of the HTML [`popovertargetaction="hide"`](/docs/web-platform/popover-api/popoverhidetarget-attribute) attribute.
 
 ## Examples
 
@@ -131,14 +131,14 @@ Declaratively create different types of popover. The first two are equivalent:
 Declaratively create buttons to show and hide the popover:
 
 ```html
-<button popovershowtarget="my-popover">Show popover</button>
+<button popovertarget="my-popover" popovertargetaction="show" >Show popover</button>
 <button popoverhidetarget="my-popover">Dismiss popover</button>
 ```
 
 Declaratively create a single button to toggle the popover between shown and hidden states:
 
 ```html
-<button popovertoggletarget="my-popover">Show popover</button>
+<button popovertarget="my-popover" popovertargetaction="toggle">Show popover</button>
 ```
 
 Use the [`:open`](/docs/web-platform/popover-api/open-pseudo-class) pseudo-class to style the popover when it has been shown. The following example transitions the popover in from the bottom of the viewport, rather than have it appear in the center:
@@ -183,10 +183,10 @@ Use event listeners to respond to popovers being shown and hidden. The following
 
 ## Feedback
 
-Your feedback on the API is welcome. [Send an email](mailto:public-open-ui@w3.org) to the Open UI group, or go to their [Getting Involved](https://open-ui.org/get-involved) page to learn about other ways to ask questions and contribute. 
+Your feedback on the API is welcome. [Send an email](mailto:public-open-ui@w3.org) to the Open UI group, or go to their [Getting Involved](https://open-ui.org/get-involved) page to learn about other ways to ask questions and contribute.
 
 ## See also
 
 * [Pop-ups: They're making a resurgence!](/blog/pop-ups-theyre-making-a-resurgence/), by Jhey Tompkins
-* [Chrome Platform Status: The Popover API](https://chromestatus.com/feature/5463833265045504) 
-* [Open UI: Popover API Explainer](https://open-ui.org/components/popup.research.explainer)
+* [Chrome Platform Status: The Popover API](https://chromestatus.com/feature/5463833265045504)
+* [Open UI: Popover API Explainer](https://open-ui.org/components/popover.research.explainer)

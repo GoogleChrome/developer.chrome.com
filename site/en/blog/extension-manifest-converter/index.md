@@ -13,7 +13,7 @@ authors:
   - solomonkinard
   - dotproto
 tags:
-  - extensions
+  - extensions-news
 hero: image/WlD8wC6g8khYWPJUsQceQkhXSlv1/GVDuhpIli5DeYmbiPlqG.jpg
 alt: A woodworking hand plane.
 ---

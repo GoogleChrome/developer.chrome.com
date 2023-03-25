@@ -1,4 +1,4 @@
-## Keep a consistent extension ID {: #keep-consistent-id }
+## Keeping a consistent extension ID {: #keep-consistent-id }
 
 Preserving a single ID is essential during development. To keep a consistent ID, follow these steps:
 

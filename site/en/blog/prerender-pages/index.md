@@ -7,7 +7,7 @@ description: |
 authors:
  - tunetheweb
 date: 2022-12-02
-#updated: 2022-12-02
+updated: 2023-01-06
 hero: image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/eohdiqaZlxnWen7TT66M.jpg
 alt: City road at dusk with a long exposure of car lights giving impression of speed
 tags:
@@ -65,7 +65,7 @@ See the [Measuring performance](#measuring-performance) section for more informa
 
 ### Viewing Chrome's address bar predictions
 
-For the first two use cases, you can view Chrome's predictions for URLs in the `chrome://predictors` page:
+For the first use case, you can view Chrome's predictions for URLs in the `chrome://predictors` page:
 
 <figure>
 {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/Oy3gv9Gyhx0eTKWVtUVo.png", alt="Screenshot of the Chrome Predictors page filtered to show low (grey), medium (amber), and high (green) predictions based on text entered.", width="800", height="560" %}
@@ -103,7 +103,7 @@ For the third prerender option, web developers can insert JSON instructions onto
 </script>
 ```
 
-The Speculation Rules API is planned to be expanded beyond this simple example with the addition of prefetch, [scores](https://github.com/WICG/nav-speculation/blob/main/triggers.md#scores) (for example, the likelihood of a navigation), and syntax to implement [document rules](https://github.com/WICG/nav-speculation/blob/main/triggers.md#document-rules) instead fo `list` rules (for example, matching `href` patterns on the page), which can be combined to only prerender links on mouse down, for example.
+The Speculation Rules API is planned to be expanded beyond this simple example with the addition of prefetch, [scores](https://github.com/WICG/nav-speculation/blob/main/triggers.md#scores) (for example, the likelihood of a navigation), and syntax to implement [document rules](https://github.com/WICG/nav-speculation/blob/main/triggers.md#document-rules) instead of `list` rules (for example, matching `href` patterns on the page), which can be combined to only prerender links on mouse down, for example.
 
 For now, only the above syntax is supported in Chrome, which is a simple list of urls to prerender.
 
@@ -111,8 +111,8 @@ For the initial launch in Chrome 108, prerender is restricted to same-origin pag
 
 Speculation rules can be:
 
-* Statically inserted in the page's HTML. For example a news media site, or a blog may prerender the newest article, if that is often the next navigation for a large proportion of users.
-* Dynamically inserted into the page by JavaScript. This could be based on application logic, personalized to the user, or on certain user actions such as hovering over, or clicking down on a link—as many libraries have done in the past with `preconnect`, `prefetch`, or even `preload`. Those favoring dynamic insertion, are recommended to keep an eye on Speculation Rules support, as the document rules may make allow the browser to handle many of your use cases as this is introduced in the future.
+* Statically included in the page's HTML. For example a news media site, or a blog may prerender the newest article, if that is often the next navigation for a large proportion of users.
+* Dynamically inserted into the page by JavaScript. This could be based on application logic, personalized to the user, or on certain user actions such as hovering over, or clicking down on a link—as many libraries have done in the past with `preconnect`, `prefetch`, or the older NoState Prefetch `prerender`. Those favoring dynamic insertion, are recommended to keep an eye on Speculation Rules support, as the document rules may make allow the browser to handle many of your use cases as this is introduced in the future.
 
 Speculation rules can be added in either the `<head>` or the `<body>` of in the main frame. Speculation rules in subframes are not acted upon, and speculation rules in prerendered pages are only acted upon once that page is activated.
 
@@ -226,7 +226,7 @@ As Speculation Rules use a `<script>` element, even though they only contain JSO
 
 Prerender is usually a positive experience for users as it allows fast page rendering—often instant. This benefits both the user, and the site owner, since prerendered pages allow a better user experience that may be difficult to achieve otherwise.
 
-However, there may be instances when you do not wish prerendering of pages to happen, for example when pages change state—either based on the initial request, or based on JavaScript executing on the page.
+However, there may be instances when you [do not wish prerendering of pages to happen](https://docs.google.com/document/d/1_9XkDUKMGf2f3tDt1gvQQjfliNLpGyFf36BB1-NUZ98/edit), for example when pages change state—either based on the initial request, or based on JavaScript executing on the page.
 
 ### Enabling and disabling prerender in Chrome
 
@@ -250,7 +250,7 @@ The `document.prerendering` API will return `true` while the page is prerenderin
 
 Once a prerendered document is activated, `PerformanceNavigationTiming`'s `activationStart` will also be set to a non-zero time representing the time between when the prerender was started and the document was actually activated.
 
-You can have a function to check for _prendering_ and _prerendered_ pages like the following:
+You can have a function to check for _prerendering_ and _prerendered_ pages like the following:
 
 ```js
 function pagePrerendered() {
@@ -343,6 +343,10 @@ Be aware that some prerendering may be taking place due to the address bar prere
 
 Remember to also look at pages which have no prerenders, as that could indicate these pages are not eligible for prerendering, even from the address bar. That may mean you are not benefiting from this performance enhancement. The Chrome team is looking to add extra tooling to test for Prerender eligibility perhaps [similar to the bfcache testing tool](https://web.dev/bfcache/#test-to-ensure-your-pages-are-cacheable), and also potentially add an API to expose why a prerender failed.
 
+## Impact on extensions
+
+See the dedicated post on [Chrome Extensions: Extending API to support Instant Navigation](/blog/extension-instantnav/) which details some additional considerations extension authors may need to think about for prerendered pages.
+
 ## Feedback
 
 Prerendering is in active development by the Chrome team, and there are plenty of plans to expand the scope of what has been made available in the Chrome 108 release. We welcome any feedback on [the GitHub repo](https://github.com/WICG/nav-speculation/issues) or via [our issue tracker](https://bugs.chromium.org/p/chromium/issues/list), and look forward to hearing and sharing case studies of this exciting new API.
@@ -352,6 +356,7 @@ Prerendering is in active development by the Chrome team, and there are plenty o
 - [Introducing NoState Prefetch](/blog/nostate-prefetch/)
 - [Speculation Rules API](https://github.com/jeremyroman/alternate-loading-modes/blob/main/triggers.md#speculation-rules)
 - [The Navigational speculation GitHub repo](https://github.com/WICG/nav-speculation/)
+- [Chrome Extensions: Extending API to support Instant Navigation](/blog/extension-instantnav/)
 
 ## Acknowledgements
 

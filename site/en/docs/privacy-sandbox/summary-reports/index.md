@@ -99,11 +99,11 @@ Summary reports offer a combination of aggregated data alongside detailed conver
 #### Ad conversions
 {% endDetailsSummary %}
 
-Conversions are defined by the advertiser or adtech company, and may be different for different ad campaigns. One campaign could measure the number of ad clicks that were followed by a user purchasing the advertised item. Another campaign could measure how many ad views led to advertiser site visits. 
+Conversions are defined by the advertiser or ad tech company, and may be different for different ad campaigns. One campaign could measure the number of ad clicks that were followed by a user purchasing the advertised item. Another campaign could measure how many ad views led to advertiser site visits. 
 
-For example, an adtech provider runs an ad campaign on news.example, where a conversion represents a user clicking an ad for shoes and completing a purchase of shoes on shoes.example.
+For example, an ad tech provider runs an ad campaign on news.example, where a conversion represents a user clicking an ad for shoes and completing a purchase of shoes on shoes.example.
 
-The adtech receives a summary report for this ad campaign with ID `1234567`, which states there were <strong>518</strong> conversions on shoes.example on <strong>January 12, 2022</strong>, with a total spend of <strong>$38,174</strong>. <strong>60%</strong> of conversions were from users buying blue sneakers with product SKU `9872` and <strong>40%</strong> were users who bought yellow sandals with product SKU `2643`. The campaign ID is detailed ad-side data, while the product SKUs are detailed conversion data. The number of conversions and total spend are aggregated data.
+The ad tech receives a summary report for this ad campaign with ID `1234567`, which states there were <strong>518</strong> conversions on shoes.example on <strong>January 12, 2022</strong>, with a total spend of <strong>$38,174</strong>. <strong>60%</strong> of conversions were from users buying blue sneakers with product SKU `9872` and <strong>40%</strong> were users who bought yellow sandals with product SKU `2643`. The campaign ID is detailed ad-side data, while the product SKUs are detailed conversion data. The number of conversions and total spend are aggregated data.
 
 {% endDetails %}
 
@@ -149,8 +149,8 @@ For Attribution Reporting data, aggregatable reports are captured as such:
 
 1. A user visits a publisher site and sees or clicks an ad, otherwise known as an attribution source event.
 2. A few minutes or days later the user converts, otherwise known as an attribution trigger event. For example, a conversion can be defined as a product purchase.
-3. The browser software matches the ad click or view with the conversion event. Based on this match, the browser creates an aggregatable report with specific logic created by an adtech provider.
-4. The browser encrypts this data and, after a small delay, sends it to an adtech server for collection. The adtech server must rely on an aggregation service to access the noised insights.
+3. The browser software matches the ad click or view with the conversion event. Based on this match, the browser creates an aggregatable report with specific logic created by an ad tech provider.
+4. The browser encrypts this data and, after a small delay, sends it to an ad tech server for collection. The ad tech server must rely on an aggregation service to access the noised insights.
 
 For Private Aggregation, it looks like the following:
 
@@ -186,15 +186,15 @@ The _[aggregation service](/docs/privacy-sandbox/aggregation-service/)_ decrypts
 
 ## Summary reports with Attribution Reporting
 
-For adtech providers to retrieve a summary report, the following steps must
+For ad tech providers to retrieve a summary report, the following steps must
 be taken:
 
-1. The adtech provider collects aggregatable reports from individual users'
+1. The ad tech provider collects aggregatable reports from individual users'
    browsers.
    {% Aside %}
-   The adtech provider can only decrypt these reports in the aggregation service.
+   The ad tech provider can only decrypt these reports in the aggregation service.
    {% endAside %}
-1. The adtech provider batches the aggregatable reports and sends the batches
+1. The ad tech provider batches the aggregatable reports and sends the batches
    to the aggregation service.
 1. The aggregation service schedules a
    [worker](https://developer.mozilla.org/docs/Web/API/Service_Worker_API) to
@@ -206,13 +206,13 @@ be taken:
    {% endAside %}
 1. The aggregation worker decrypts and aggregates data from the aggregatable
    reports, along with noised data.
-1. The aggregation service returns the summary report to the adtech provider.
+1. The aggregation service returns the summary report to the ad tech provider.
 
 <figure class="screenshot">
   {% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/U1ZeswSEnAMSSoCcE5Za.png", alt="", width="800", height="146" %}
 </figure>
 
-The adtech can use the summary report to inform bidding and to offer reporting
+The ad tech can use the summary report to inform bidding and to offer reporting
 to its own customers. A
 [JSON-encoded scheme](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md#aggregate-attribution-reports)
 is the proposed format for summary reports.

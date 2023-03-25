@@ -22,7 +22,7 @@ this warning.
 Warnings will be enabled by default for everyone in Chrome 56, slated for
 release in January 2017.
 
-To test the upcoming user experience before that time, install the latest 
+To test the upcoming user experience before that time, install the latest
 [Google Chrome Canary](https://www.google.com/chrome/browser/canary.html) build.
 
 To configure Chrome to show the warning as it will appear in January 2017, open
@@ -46,7 +46,7 @@ has been added to the URL bar.`
 To ensure that the Not Secure warning is not displayed for your pages, you must
 ensure that all forms containing `<input type=password>` elements and any inputs
 detected as [credit card
-fields](https://developers.google.com/web/updates/2015/06/checkout-faster-with-autofill) are present _only_
+fields](https://web.dev/learn/forms/autofill/#help-users-fill-in-their-credit-card-information) are present _only_
 on secure origins. This means that the top-level page must be HTTPS and, if the
 `input` is in an iframe, that iframe must also be served over HTTPS.
 

@@ -85,7 +85,7 @@ on most sites.
 
 ## Resources
 
-- [Source code for **Total Blocking Time** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/total-blocking-time.js)
+- [Source code for **Total Blocking Time** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/metrics/total-blocking-time.js)
 - [Are long JavaScript tasks delaying your Time to Interactive?][long tasks]
 - [Optimize First Input Delay][optimize fid]
 - [First Contentful Paint][fcp]

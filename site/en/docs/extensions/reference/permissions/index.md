@@ -35,14 +35,12 @@ using the same format as the [permissions][2] field:
   "name": "My extension",
   ...
   "optional_permissions": ["tabs"],
-  "host_permissions": ["https://www.google.com/"],
+  "optional_host_permissions": ["https://www.google.com/"],
   ...
 }
 ```
 
-If you want to request hosts that you only discover at runtime, include `"https://*/"` in your
-in your Manifest V3 extension's `host_permissions` field (or `optional_permissions` for Manifest
-V2). This lets you specify any origin in [Permissions.origins][3] as long as it has a matching
+If you want to request hosts that you only discover at runtime, include `"https://*/*"` in your extension's `optional_host_permissions` field. This lets you specify any origin in [Permissions.origins][3] as long as it has a matching
 scheme.
 
 **Permissions that can _not_ be specified as optional**
@@ -115,7 +113,7 @@ Most Chrome extension permissions can be specified as optional, with the followi
   </tbody>
 </table>
 
-View [Declare Permissions and Warn Users][17] for further information on available permissions and
+View [Declare Permissions and Warn Users][4] for further information on available permissions and
 their warnings.
 
 ### Step 3: Request optional permissions
@@ -140,7 +138,7 @@ document.querySelector('#my-button').addEventListener('click', (event) => {
 });
 ```
 
-Chrome prompts the user if adding the permissions results in different [warning messages][18] than
+Chrome prompts the user if adding the permissions results in different [warning messages][5] than
 the user has already seen and accepted. For example, the previous code might result in a prompt like
 this:
 
@@ -184,20 +182,7 @@ chrome.permissions.remove({
 ```
 
 [1]: /docs/extensions/mv3/manifest
-[2]: /docs/extensions/mv2/declare_permissions#manifest
+[2]: /docs/extensions/mv3/declare_permissions
 [3]: #property-Permissions-origins
-[4]: /docs/extensions/debugger
-[5]: /devtools/docs/debugger-protocol
-[6]: /docs/extensions/declarativeNetRequest
-[7]: /docs/extensions/mv2/devtools
-[8]: https://tools.google.com/dlpage/chromesxs
-[9]: https://www.chromium.org/getting-involved/dev-channel
-[10]: /docs/extensions/experimental
-[11]: https://w3c.github.io/geolocation-api/
-[12]: /docs/extensions/mdns
-[13]: /docs/extensions/mdns
-[14]: /docs/extensions/tts
-[15]: /docs/extensions/reference/ttsEngine
-[16]: /docs/extensions/reference/ttsEngine
-[17]: /docs/extensions/mv2/permission_warnings
-[18]: /docs/extensions/mv2/permission_warnings
+[4]: /docs/extensions/mv3/permission_warnings
+[5]: /docs/extensions/mv3/permission_warnings

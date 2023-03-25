@@ -16,7 +16,7 @@ using only the keyboard.
 
 ## How to manually test
 
-To test users can't accidentally trap their focus,
+To test that your users can't accidentally trap their focus,
 navigate to and from all page elements using only the keyboard.
 Use `TAB` to navigate "forward" and `SHIFT + TAB` to navigate "backward."
 
@@ -27,9 +27,9 @@ where keyboard focus may get stuck.
 
 ## How to fix
 
-Pages that present content in multiple formats, such as modal dialogs,
+Pages that present content in multiple formats, such as modal dialogs and
 widgets, are at risk for focus traps.
-In the case of a displaying a modal,
+In the case of displaying a modal,
 when you don't want the user interacting with the rest of the page,
 it makes sense to temporarily trap the user.
 

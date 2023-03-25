@@ -151,9 +151,9 @@ with the author's CSS styles or even their JavaScript. You are right. Enter
 Shadow DOM!
 
 While most people think about [Shadow
-DOM](https://developers.google.com/web/fundamentals/web-components/shadowdom) as a way to attach "internal"
+DOM](https://web.dev/shadowdom-v1/) as a way to attach "internal"
 elements to their [Custom
-Elements](https://developers.google.com/web/fundamentals/web-components/customelements), it is also an
+Elements](https://web.dev/custom-elements-v1/), it is also an
 isolation and performance primitive! JavaScript and CSS cannot pierce Shadow DOM
 boundaries which allows us to duplicate content without interfering with the
 developer's styles or application logic. We already have a `<div>` element for
@@ -166,7 +166,7 @@ copies are styled the same way as the original.
 {% Aside %}
 In most cases — especially when writing custom elements — we advise
 against using closed `ShadowRoots`. Find out more in [Eric's
-article](https://developers.google.com/web/fundamentals/web-components/shadowdom#closed).
+article](https://web.dev/shadowdom-v1/#creating-closed-shadow-roots-should-avoid).
 {% endAside %}
 
 

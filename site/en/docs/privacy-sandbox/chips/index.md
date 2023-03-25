@@ -7,7 +7,7 @@ description: >
   Allow developers to opt-in a cookie to "partitioned" storage, with a separate cookie jar per top-level site.
   Partitioned cookies can be set by a third-party service, but only read within the context of the top-level site where they were initially set.
 date: 2022-02-15
-updated: 2022-09-23
+updated: 2023-01-27
 authors:
   - mihajlija
 tags:
@@ -21,9 +21,7 @@ tags:
 
 ## Implementation status
 
-- [Origin trial](/origintrials/#/view_trial/1239615797433729025) available from Chrome 100 to 106
-- [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/_dJFNJpf91U) 
-- [Chrome Platform Status](https://chromestatus.com/feature/5179189105786880)
+{% Partial 'privacy-sandbox/timeline/chips.njk' %}
 
 ## What is CHIPS
 
@@ -136,19 +134,17 @@ key={("https", "retail.example"),
 
 #### First-Party Sets and cookie partitioning
 
-[First-Party Sets](/blog/first-party-sets-sameparty/#how-to-define-a-first-party-set) allow related domain names that are owned and operated by the same entity to be treated as the same first-party as the top-level site, in situations where Chrome may apply restrictions, such as access to cookies on third-party subresources.
+[First-Party Sets (FPS)](/blog/first-party-sets-testing-instructions) is a web platform mechanism for developers to declare relationships among sites, so that browsers can use this information to enable limited cross-site cookie access for specific, user-facing purposes. Chrome will use these declared relationships to decide when to allow or deny a site access to their cookies when in a third-party context.
 
-When an embedded service sets a cookie on a site that's a member of a First-Party Set, that cookie will be accessible to the service when it's embedded on any of the First-Party Set member sites. This allows the embedded service to provide a seamless, unified user session across all member sites.
+The current First-Party Sets design relies on Storage Access API and does not integrate with CHIPS partitioning.
 
-Sites from the same First-Party Set will have the same partition key—the owner of the set. 
-
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/ho7jqWrZzBxmX3fsIpTt.png", alt="", width="800", height="548" %}
+If you have a use case that relies on a shared cookie partition across sites within a FPS you can [provide examples and feedback on the GitHub issue](https://github.com/WICG/first-party-sets/issues/94).
 
 ### Security design
 
 To encourage good security practices, CHIPS proposes cookies only be set by and sent over secure protocols.
 
-Partitioned cookies must be set with `Secure` and `Path=/`.
+Partitioned cookies must be set with `Secure`.
 
 It is recommended to use the `__Host` prefix when setting partitioned cookies to make them bound to the hostname (and not the registrable domain).
 

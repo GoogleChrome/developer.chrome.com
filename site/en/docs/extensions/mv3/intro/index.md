@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: Welcome to Manifest V3
+seoTitle: Welcome to the Chrome Extension Manifest V3
 subhead: 'A step in the direction of security, privacy, and performance.'
 description: 'An introduction to Manifest V3'
 date: 2020-11-09
@@ -48,7 +49,7 @@ We're excited about the improvements that Manifest V3 brings to the platform. Lo
 [doc-new]: /docs/extensions/whatsnew/
 [manifest-version]: /docs/extensions/mv3/manifest/manifest_version/
 [mv2-sunset]: /docs/extensions/mv3/mv2-sunset/
-[mv3-checklist]: /docs/extensions/mv3/mv3-migration-checklist/
-[mv3-migration]: /docs/extensions/mv3/intro/mv3-migration/
+[mv3-checklist]: /docs/extensions/migrating/checklist/
+[mv3-migration]: /docs/extensions/migrating/
 [mv3-overview]: /docs/extensions/mv3/intro/mv3-overview/
 [mv3-platform]: /docs/extensions/mv3/intro/platform-vision/

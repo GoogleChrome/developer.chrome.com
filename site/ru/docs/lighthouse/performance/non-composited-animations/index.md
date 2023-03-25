@@ -27,12 +27,12 @@ date: 2020-08-12
 
 ## Как обеспечить анимацию в рамках этапа компоновки
 
-См. статьи [Используйте свойства, вызывающие только компоновку, и контролируйте количество слоев](https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count) и [Высокопроизводительная анимация](https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/).
+См. статьи [Используйте свойства, вызывающие только компоновку, и контролируйте количество слоев](https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count) и [Высокопроизводительная анимация](https://web.dev/animations-guide/).
 
 ## Ресурсы
 
 - [Исходный код проверки *Avoid non-composited animations*](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/non-composited-animations.js)
 - [Используйте свойства, вызывающие только компоновку, и контролируйте количество слоев](https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count)
-- [Высокопроизводительная анимация](https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/)
+- [Высокопроизводительная анимация](https://web.dev/animations-guide/)
 - [Упрощение и сокращение областей прорисовки](https://developers.google.com/web/fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas)
 - [Взгляд изнутри на современные веб-браузеры (часть 3)](https://developers.google.com/web/updates/2018/09/inside-browser-part3)

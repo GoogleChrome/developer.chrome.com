@@ -110,4 +110,4 @@ code and unused code. Any unused lines of code will have a red line at the begin
   green section is used bytes.
 
 [button]: https://getbootstrap.com/docs/4.3/components/buttons/
-[render]: https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css/
+[render]: https://web.dev/critical-rendering-path-render-blocking-css/

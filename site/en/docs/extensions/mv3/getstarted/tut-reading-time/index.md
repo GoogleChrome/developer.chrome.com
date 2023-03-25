@@ -1,7 +1,8 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Reading time'
-description: 'Learn how to insert an element on each page.'
+title: 'Run scripts on every page'
+seoTitle: 'Chrome Extensions Tutorial: Reading time'
+description: 'Learn how to automatically add new elements to existing webpages.'
 subhead: 'Create your first extension that inserts a new element on the page.'
 date: 2022-10-04
 # updated: 2022-06-13
@@ -48,7 +49,7 @@ extension. Create a `manifest.json` file in the _root_ of the project and add th
   "manifest_version": 3,
   "name": "Reading time",
   "version": "1.0",
-  "description": "Add the reading time to Chrome Extension documentation articles",
+  "description": "Add the reading time to Chrome Extension documentation articles"
 }
 ```
 
@@ -108,7 +109,7 @@ We recommend using PNG files, but other file formats are allowed, except for SVG
 ### Step 3: Declare the content script {: #step-3 }
 
 Extensions can run scripts that read and modify the content of a page. These are called _content
-scripts_. They live in an [isolated world][doc-isolated], meaning they can make changes to their JavaScript environment without conflicting with their host page or other extension's content scripts.
+scripts_. They live in an [isolated world][doc-isolated], meaning they can make changes to their JavaScript environment without conflicting with their host page or other extensions' content scripts.
 
 Add the following code to the `manifest.json` to register a content script called
 `content.js`.
@@ -286,8 +287,8 @@ development learning journey. We recommend the following learning path:
 [doc-perms]:/docs/extensions/mv3/permission_warnings/
 [doc-promises]: /docs/extensions/mv3/promises/
 [doc-welcome]:/docs/extensions/mv3/
-[github-reading-time]:https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/reading-time
-[github-rt-icons]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/reading-time/images
+[github-reading-time]:https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.reading-time
+[github-rt-icons]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.reading-time/images
 [man-desc]: /docs/extensions/mv3/manifest/description
 [man-name]: /docs/extensions/mv3/manifest/name/
 [man-ver]: /docs/extensions/mv3/manifest/version

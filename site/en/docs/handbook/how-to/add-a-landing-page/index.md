@@ -1,13 +1,13 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: Add a Landing Page
-description: 'Add a Landing Page'
+title: Add a landing page
+description: 'Add a landing page'
 date: 2022-12-29
 ---
 
-## Featured Card
+## Create a Featured Card
 
-Feature Card contains content and actions that relate information about a single topic.
+Feature Card contains content and actions that relate information about a single topic. You can use HTML entities (```&mdash;```) or basic Markdown styling (```*emphasis*```) inside these string arguments.
 
 The `featuredCard` component requires these fields:
 
@@ -33,7 +33,7 @@ To add an **Featured Card** to the page, you can use the {% raw %}`{{ featuredCa
 ```md
 {{ featuredCard({
   title: '#100CoolWebMoments',
-  description: 'Take a stroll down memory lane and celebrate #100CoolwebMoments since Chrome’s first release lorem ipsum.', 
+  description: 'Take a stroll down memory lane and celebrate **#100CoolwebMoments** since Chrome’s first release &mdash; _lorem ipsum._',
   imgSrc: 'image/kheDArv5csY6rvQUJDbWRscckLr1/AlyVvShYHBM5I7ikG8vj.jpg',
   imgAlt: '#100CoolWebMoments',
   actionUrl: '/blog/insider-april-2022/',
@@ -48,7 +48,7 @@ To add an **Featured Card** to the page, you can use the {% raw %}`{{ featuredCa
 <!-- lint disable no-unescaped-template-tags -->
 {{ featuredCard({
   title: '#100CoolWebMoments',
-  description: 'Take a stroll down memory lane and celebrate #100CoolwebMoments since Chrome’s first release lorem ipsum.',
+  description: 'Take a stroll down memory lane and celebrate **#100CoolwebMoments** since Chrome’s first release &mdash; _lorem ipsum._',
   imgSrc: 'image/kheDArv5csY6rvQUJDbWRscckLr1/AlyVvShYHBM5I7ikG8vj.jpg',
   imgAlt: '#100CoolWebMoments',
   actionUrl: '/blog/100-web-moments/',
@@ -121,7 +121,7 @@ A featured section is a layout of cards on the same plane. The code below is the
     }, 
     { customPost: {
         title: '#100CoolWebMoments',
-        description: 'Take a stroll down memory lane and celebrate #100CoolwebMoments since Chrome’s first release lorem ipsum.',
+        description: 'Take a stroll down memory lane and celebrate **#100CoolwebMoments** since Chrome’s first release &mdash; _lorem ipsum._',
         imgSrc: 'image/kheDArv5csY6rvQUJDbWRscckLr1/AlyVvShYHBM5I7ikG8vj.jpg',
         imgAlt: '#100CoolWebMoments',
       },
@@ -147,7 +147,7 @@ A featured section is a layout of cards on the same plane. The code below is the
     {
       customPost: {
         title: '#100CoolWebMoments',
-        description: 'Take a stroll down memory lane and celebrate #100CoolwebMoments since Chrome’s first release lorem ipsum.',
+        description: 'Take a stroll down memory lane and celebrate **#100CoolwebMoments** since Chrome’s first release &mdash; _lorem ipsum._', 
         imgSrc: 'image/kheDArv5csY6rvQUJDbWRscckLr1/AlyVvShYHBM5I7ikG8vj.jpg',
         imgAlt: '#100CoolWebMoments'
       },

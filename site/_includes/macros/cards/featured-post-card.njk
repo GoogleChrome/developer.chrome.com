@@ -37,12 +37,12 @@
 
   <h2 class="type--h3-card gap-top-300">
     <a class="color-text surface display-inline-flex" href="{{ post.url }}">
-      {{ pd.title }}
+      {{ pd.title | md | safe }}
     </a>
   </h2>
 
   <p class="type--caption gap-top-200">
-    {{ pd.description }}
+    {{ pd.description | md | safe }}
   </p>
 
   {% if pd.authors and pd.authors.length %}

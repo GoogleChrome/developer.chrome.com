@@ -2,7 +2,7 @@
 
 {% macro heroCardWide(title, text, actionText, actionLink, imgSrc, imgAlt, color, titleIcon) %}
   {% set color = color or 'blue' %}
-<div class="hero-card width-full rounded-lg bg-{{color}}-lightest pad-400 masonry:pad-right-500 masonry:pad-top-1000 masonry:pad-bottom-1000 masonry:pad-left-500">
+<div class="hero-card width-full rounded-lg bg-{{color}}-lightest pad-400 masonry:pad-right-500 masonry:pad-top-700 masonry:pad-left-500 masonry:pad-bottom-500">
   <div class="hero-card__inner hero-card__inner-wide">
     <div>
       <h1 class="type--h1 color-{{color}}-darkest">
@@ -20,10 +20,10 @@
             </div>
           </div>
         {% endif %}
-        {{ title }}
+        {{ title | md | safe }}
       </h1>
       <p class="gap-top-300">
-        {{ text }}
+        {{ text | md | safe }}
       </p>
       {% if actionText %}
         <a href="{{ actionLink }}" class="material-button button-filled button-round display-inline-flex color-bg bg-{{color}}-medium gap-top-400">

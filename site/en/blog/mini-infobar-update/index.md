@@ -18,16 +18,16 @@ updated: 2019-07-25
 
 ## Background on Progressive Web Apps and the mini-infobar
 
-[Progressive Web Apps (PWA)](https://developers.google.com/web/progressive-web-apps/) are a pattern for
+[Progressive Web Apps (PWA)](https://web.dev/progressive-web-apps/) are a pattern for
 creating app-like, instant loading, reliable and installable websites.
 
 When your PWA passes the
 [installability checklist](https://developers.google.com//web/fundamentals/app-install-banners/#criteria) on
-Android, a Chrome system dialog called  the mini-infobar will appear at the
+Android, a Chrome system dialog called the mini-infobar will appear at the
 bottom of the browser window.
 
 Today the Add to Home screen mini-infobar is shown at the same time as the
-[`beforeinstallprompt`](https://developers.google.com//web/fundamentals/app-install-banners/#listen_for_beforeinstallprompt)
+[`beforeinstallprompt`](https://web.dev/customize-install/#beforeinstallprompt)
 event.
 
 ## Changes in Chrome 76

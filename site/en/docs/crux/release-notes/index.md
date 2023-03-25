@@ -21,7 +21,7 @@ date: 2017-10-01
 
 # Optional
 # Include an updated date when you update your post
-updated: 2022-11-08
+updated: 2023-03-14
 
 # Optional
 # How to add a new author
@@ -42,6 +42,63 @@ In the list below, we've curated some release notes for each monthly dataset. Su
 The CrUX dataset on BigQuery is generally updated on the second Tuesday of every month. Each release is numbered according to the year and calendar month of the data collection period, for example 201912 corresponds to the UX data collected during December 2019 and would be released on the second Tuesday of January 2020 after the data collection period has ended.
 
 In the list below, we've curated some release notes for each monthly dataset. Subscribe to our [CrUX Announce](https://groups.google.com/a/chromium.org/forum/#!forum/chrome-ux-report-announce) mailing list or follow [@ChromeUXReport](https://twitter.com/ChromeUXReport) on Twitter for release Announcements.
+
+## 202302
+
+[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/1im_J9824AU)
+
+Publication date
+ : March 14, 2023
+
+What's new
+ : - We're seeing further improvements to the good [INP](https://web.dev/inp) rate which has increased by 2.3% to 77.3% of origins due to [the improvement in the Chrome scheduler](https://bugs.chromium.org/p/chromium/issues/detail?id=853771) mentioned last month, which was still rolling out during February.
+
+Notable stats
+ : - 18,184,396 origins
+ : - 43.1% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+
+## 202301
+
+[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/ImlvxIZ8Jss)
+
+Publication date
+ : February 14, 2023
+
+What's new
+ : - Good [INP](https://web.dev/inp) increased by 4.3% to 75.6% of origins, primarily due to [an improvement in the Chrome scheduler](https://bugs.chromium.org/p/chromium/issues/detail?id=853771). The next frame is now scheduled with highest priority after discrete input events, which shortens the lag between input event and visual update.
+ : - This month we've launched a [CrUX History API](/docs/crux/history-api/), which provides 25 weeks of historical data at both origin and URL level. We've [written a post](/blog/chrome-ux-report-history-api/) detailing how to use this new API, and a [Colab](https://colab.sandbox.google.com/github/GoogleChrome/CrUX/blob/main/colab/crux-history-api.ipynb) showing you an example of how to plot this historical data in various graphs.
+
+Notable stats
+ : - 18,203,637 origins
+ : - 43.0% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+
+## 202212
+
+[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/T0TDE_VCWTE)
+
+Publication date
+ : January 10, 2023
+
+What's new
+ : - No significant updates in this release.
+
+Notable stats
+ : - 16,824,271 origins
+ : - 41.8% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+
+## 202211
+
+[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/-LcubQclVAg)
+
+Publication date
+ : December 13, 2022
+
+What's new
+ : - No significant updates in this release.
+
+Notable stats
+ : - 17,618,944 origins
+ : - 41.8% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
 
 ## 202210
 
@@ -71,13 +128,13 @@ What's new
     "collectionPeriod": {
       "firstDate": {
         "year": 2022,
-        "month": 10,
-        "day": 9
+        "month": 9,
+        "day": 12
       },
       "lastDate": {
         "year": 2022,
-        "month": 9,
-        "day": 12
+        "month": 10,
+        "day": 9
       }
     }
 ```

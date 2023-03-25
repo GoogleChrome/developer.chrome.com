@@ -1,8 +1,9 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manifest - Requirements"
+seoTitle: "Chrome Extensions Manifest: requirements"
 date: 2013-05-12
-updated: 2018-04-26
+updated: 2022-11-15
 description: Reference documentation for the requirements property of manifest.json.
 ---
 

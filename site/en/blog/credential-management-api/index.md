@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: Streamlining the sign-in flow using credential management API 
+title: Streamlining the sign-in flow using credential management API
 description: >
   To provide a sophisticated user experience, it's important to help users authenticate themselves to your website. But creating, remembering and typing passwords tends to be cumbersome for end users, especially on mobile
 authors:
@@ -25,12 +25,12 @@ a browser's credential manager and helps users sign in more easily.
 {% Aside 'warning' %}
 This API has been drastically updated and sample codes in this article
 won't work any longer. Checkout [the updated integration
-guide](https://developers.google.com/web/fundamentals/security/credential-management/) or [the update
-summary](https://developers.google.com/web/updates/2017/06/credential-management-updates).
+guide](https://web.dev/security-credential-management/) or [the update
+summary](/blog/credential-management-updates/).
 {% endAside %}
 
 {% Aside %}
-The new [one tap sign-up and automatic sign-in API](https://developers.google.com/identity/one-tap/web/overview),
+The new [one tap sign-up and automatic sign-in API](https://developers.google.com/identity/gsi/web/guides/overview),
 built on the Credential Management API, combines Google sign-in and
 password-based sign-in into one API call, and adds support for one-tap account
 creation. Consider using this new API instead of directly using the Credential

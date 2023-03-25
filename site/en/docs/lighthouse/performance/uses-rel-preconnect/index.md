@@ -51,7 +51,7 @@ as the browser closes it, wasting all of that early connection work.
 In general,
 try to use `<link rel="preload">`,
 as it's a more comprehensive performance tweak,
-but do keep `<link rel="preconnect">` in your toolbelt for the edge cases like:
+but do keep `<link rel="preconnect">` in your tool belt for the edge cases like:
 
 - [Use-case: Knowing Where From, but not What You're Fetching](https://developers.google.com/web/fundamentals/performance/resource-prioritization#use-case_knowing_where_from_but_not_what_youre_fetching)
 - [Use-case: Streaming Media](https://developers.google.com/web/fundamentals/performance/resource-prioritization#use-case_knowing_where_from_but_not_what_youre_fetching)
@@ -81,7 +81,7 @@ and add preconnect or DNS prefetch resource hints.
 
 ## Resources
 
-- [Source code for **Preconnect to required origins** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/uses-rel-preconnect.js)
+- [Source code for **Preconnect to required origins** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/uses-rel-preconnect.js)
 - [Resource Prioritization–Getting the Browser to Help You](https://developers.google.com/web/fundamentals/performance/resource-prioritization#preconnect)
 - [Establish network connections early to improve perceived page speed](https://web.dev/preconnect-and-dns-prefetch/)
 - [Link types: preconnect](https://developer.mozilla.org/docs/Web/HTML/Link_types/preconnect#Browser_compatibility)

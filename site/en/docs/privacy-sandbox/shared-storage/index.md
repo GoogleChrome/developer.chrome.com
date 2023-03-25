@@ -6,20 +6,18 @@ subhead: >
 description: >
   Allow access to unpartitioned cross-site data in a secure environment.
 date: 2022-04-25
-updated: 2022-11-08
+updated: 2023-03-14
 authors:
   - alexandrawhite
   - kevinkiklee
 ---
 ## Implementation status
 
-This document outlines a new proposal for unpartitioned, cross-site storage: the Shared Storage API.
+This document outlines a proposal for unpartitioned, cross-site storage: the Shared Storage API.
 
-*   The [Shared Storage proposal](https://github.com/WICG/shared-storage) has entered [public discussion](https://github.com/WICG/shared-storage/issues).
-*   We are implementing this API in Chrome, and the [live demo is available](#try-the-shared-storage-api).
-    *   The initial origin trial opened with the URL selection output,  from Chrome version 105 (Canary, Dev, Beta). 
-    *   Support for the Private Aggregation output gate is available from Chrome version 107 (Canary, Dev).
-*   [The Privacy Sandbox timeline](http://privacysandbox.com/timeline) provides implementation timings for the Shared Storage API and other Privacy Sandbox proposals.
+{% Partial 'privacy-sandbox/timeline/shared-storage.njk' %}
+
+{% Partial 'privacy-sandbox/timeline/shared-storage-features.njk' %}
 
 ## Why do we need this API?
 
@@ -31,7 +29,7 @@ The Shared Storage API allows sites to store and access unpartitioned cross-site
 
 There are many different kinds of companies which may benefit from using the Shared Storage API. For example:
 
-*   Adtechs could measure campaign reach, set frequency caps, and rotate creatives, all of which currently rely on third-party cookies.
+*   Ad techs could measure campaign reach, set frequency caps, and rotate creatives, all of which currently rely on third-party cookies.
 *   Payments providers could determine if a user is an existing customer and tailor the checkout experience.
 *   Web security companies can build custom logic to flag suspicious or dangerous behavior.
 
@@ -108,7 +106,7 @@ The Shared Storage API intends to support many use cases, replacing several exis
   <tr>
    <td><strong><a href="/docs/privacy-sandbox/shared-storage/k-freq-reach">K+ Frequency Reach Reporting</a></strong>
    </td>
-   <td>Sometimes described as “effective frequency”, there is often a minimum number of views before a user will recognize or recall certain content (often in the context of advertisement views). You can use Shared Storage to build reports of unique users that have seen a piece of content at least K times. 
+   <td>Sometimes described as “effective frequency,” there is often a minimum number of views before a user will recognize or recall certain content (often in the context of advertisement views). You can use Shared Storage to build reports of unique users that have seen a piece of content at least K times. 
    </td>
    <td>Private Aggregation API
    </td>
@@ -138,7 +136,7 @@ Available Shared Storage API output gates:
 
 ## Try the Shared Storage API
 
-Shared Storage API for URL selection output gate and Private Aggregation output gate are available for testing.  URL selection can be tested in Chrome Canary/Dev/Beta M105+ and Private Aggregation API is available for testing in Chrome M107+ Canary and Dev. The API can be tested by enabling the \*\*Privacy Sandbox Ads APIs experiment\*\* flag at `chrome://flags/#privacy-sandbox-ads-apis`.
+Shared Storage API for URL selection output gate and Private Aggregation output gate are available for testing.  URL selection can be tested in Chrome Canary/Dev/Beta M105+ and Private Aggregation API is available for testing in Chrome M107+ Canary and Dev. The API can be tested by enabling the **Privacy Sandbox Ads APIs experiment** flag at `chrome://flags/#privacy-sandbox-ads-apis`.
 
 {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/CWfgCMJQ5cYPOfjttF3k.png", alt="Set Privacy Sandbox Ads APIs experiment to enabled to use these APIs", width="744", height="124" %}
 
@@ -146,7 +144,7 @@ Shared Storage API for URL selection output gate and Private Aggregation output 
 
 A [demo is available](https://shared-storage-demo.web.app/), and you can review the code on [GitHub](https://github.com/GoogleChromeLabs/shared-storage-demo). 
 
-This demo is constructed from the perspective of an advertiser, adtech, content distributor or other third party service that wants to store information across different publishers’ sites. In the demo, the same third party’s code will run on both \*\*Publisher A\*\* and \*\*Publisher B\*\* sites for each use case. Visit the publisher’s pages to see how the data is shared in a cross-site context.
+This demo is constructed from the perspective of an advertiser, ad tech, content distributor or other third party service that wants to store information across different publishers’ sites. In the demo, the same third party’s code will run on both **Publisher A** and **Publisher B** sites for each use case. Visit the publisher’s pages to see how the data is shared in a cross-site context.
 
 The demo contains use cases for URL selection and Private Aggregation.
 

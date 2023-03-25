@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "What are themes?"
+seoTitle: "Chrome Extensions: What are themes?"
 date: 2012-09-18
 updated: 2022-07-14
 description: Guidelines on how to create a theme.

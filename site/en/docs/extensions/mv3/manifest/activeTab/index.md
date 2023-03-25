@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "The activeTab permission"
+seoTitle: "Chrome Extensions: The activeTab permission"
 date: 2012-09-21
 updated: 2021-09-20
 description: How to use the activeTab permission in your Chrome Extension.
@@ -37,7 +38,7 @@ See the [Page Redder][2] sample extension:
   "name": "Page Redder",
   "version": "2.0",
   "permissions": [
-    "activeTab"
+    "activeTab",
     "scripting"
   ],
   "background": {
@@ -98,7 +99,7 @@ The following user gestures enable `activeTab`:
 
 [insert-css-method]: /docs/extensions/reference/scripting#method-insertCSS
 [1]: /docs/extensions/reference/action
-[2]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/examples/page-redder
+[2]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.page-redder
 [3]: /docs/extensions/reference/action
 [4]: /docs/extensions/reference/contextMenus
 [7]: /docs/extensions/reference/tabs#type-Tab

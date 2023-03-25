@@ -10,7 +10,7 @@ description: More native echo cancellation support
 
 
 We're continuing on from the [previous
-experiment](https://developers.google.com/web/updates/2018/03/macos-native-echo-cancellation) and in Chrome
+experiment](/blog/macos-native-echo-cancellation) and in Chrome
 M68, we have added an experimental `MediaStreamTrack` constraint to control
 which echo canceller is being used, added support for a native echo canceller on
 Windows as well as improved the functionality of the native echo canceller on

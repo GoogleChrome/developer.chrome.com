@@ -77,7 +77,7 @@ track to the worker. For example, `MediaStreamTrackProcessor` can be used to obt
 the stream is transferred to a web worker where frames are read one by one and queued
 into a `VideoEncoder`.
 
-With [`HTMLCanvasElement.transferControlToOffscreen`](https://developers.google.com/web/updates/2018/08/offscreen-canvas#unblock_main_thread) even rendering can be done off the main thread. But if all the high level tools turned
+With [`HTMLCanvasElement.transferControlToOffscreen`](/blog/offscreen-canvas/#unblock-main-thread) even rendering can be done off the main thread. But if all the high level tools turned
 out to be inconvenient, `VideoFrame` itself is [transferable](https://developer.mozilla.org/docs/Web/API/Transferable) and may be
 moved between workers.
 
@@ -207,7 +207,7 @@ while (true) {
     frame.close();
   } else {
     frameCounter++;
-    const keyframe = frameCounter % 150 == 0;
+    const keyFrame = frameCounter % 150 == 0;
     encoder.encode(frame, { keyFrame });
     frame.close();
   }
@@ -392,7 +392,7 @@ The demo below shows how animation frames from a canvas are:
 Also check out our other demos:
 - [Decoding gifs with ImageDecoder](https://imagedecoder.glitch.me/)
 - [Capture camera input to a file](https://w3c.github.io/webcodecs/samples/capture-to-file/capture-to-file.html)
-- [MP4 playback](https://w3c.github.io/webcodecs/samples/mp4-decode/)
+- [MP4 playback](https://w3c.github.io/webcodecs/samples/video-decode-display/) 
 - [Other samples](https://w3c.github.io/webcodecs/samples/)
 
 ## Using the WebCodecs API {: #use }

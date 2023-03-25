@@ -5,7 +5,7 @@ description: >
     Implications for Web Developers and Chrome’s mitigations.
 authors:
   - surma
-date: 2018-02-06  
+date: 2018-02-06
 updated: 2018-10-23
 ---
 
@@ -96,7 +96,7 @@ have Site Isolation enabled.
 {% Aside %}
 After the publication of this document, Cross-Site Document Blocking was
 renamed to [Cross-Origin Read
-Blocking](https://developers.google.com/web/updates/2018/07/site-isolation#corb). These two terms refer to
+Blocking](/blog/site-isolation/#corb). These two terms refer to
 the same concept.
 {% endAside %}
 
@@ -177,7 +177,7 @@ access to your `window` object](https://mathiasbynens.github.io/rel-noopener/),
 can navigate your page to a different URL, and without Site Isolation will be in
 the same process as your page. To better protect your page, links to external
 pages that open in a new window should always [specify
-`rel="noopener"`](https://developers.google.com/web/tools/lighthouse/audits/noopener).
+`rel="noopener"`](/docs/lighthouse/best-practices/external-anchors-use-rel-noopener).
 
 ### High-resolution timers
 

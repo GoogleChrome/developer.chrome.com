@@ -23,9 +23,8 @@ sessions:
     topics:
       - CSS
       - Web UI
-    time: null
     type: speaker
-    slidesUrl: null
+    slidesUrl: https://noti.st/rachelandrew/nN3xO8/now-and-next-in-responsive-design
     videoUrl: null
   - speaker: addyosmani
     title: >-
@@ -42,7 +41,6 @@ sessions:
     topics:
       - Project Aurora
       - Performance
-    time: null
     type: speaker
     slidesUrl: null
     videoUrl: null

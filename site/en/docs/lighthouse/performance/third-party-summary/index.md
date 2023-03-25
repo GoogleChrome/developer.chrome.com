@@ -21,7 +21,7 @@ longer:
   {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/Q7GdvYGsSGwIjdWvNhTE.png", alt="A screenshot of the Lighthouse Reduce the impact of third-party code audit", width="800", height="481" %}
 </figure>
 
-A third-party script is any script hosted on a domain that's different than the domain of the URL
+A third-party script is any script hosted on a domain that's different to the domain of the URL
 that you audited with Lighthouse. As the page loads, Lighthouse calculates how long each of the
 third-party scripts blocks the main thread. If the total blocking time is greater than 250&nbsp;ms
 the audit fails.
@@ -35,7 +35,7 @@ optimization strategies.
 
 ## Resources
 
-- [Source code for **Reduce the impact of third-party code** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/third-party-summary.js)
-- [Loading Third-party JavaScript](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/)
+- [Source code for **Reduce the impact of third-party code** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/third-party-summary.js)
+- [Loading Third-party JavaScript](https://web.dev/optimizing-content-efficiency-loading-third-party-javascript/)
 
 [main thread]: https://developer.mozilla.org/docs/Glossary/Main_thread

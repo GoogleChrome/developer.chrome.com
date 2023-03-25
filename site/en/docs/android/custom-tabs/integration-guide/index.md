@@ -1,14 +1,15 @@
 ---
 layout: "layouts/doc-post.njk"
 title: Implementation guide
+seoTitle: Android Custom Tabs implementation guide
 date: 2020-02-04
-updated: 2022-10-25
-description: Custom Tabs implementation guide
+updated: 2022-12-09
+description: Learn how to integrate a web browser into your Android app.
 ---
 
 A complete example is available on [the GitHub sample application][1]. It
 contains re-usable classes to customize the UI, connect to the background service, and handle the
-lifecycle of both the application and the custom tab activity.
+lifecycle of both the application and the Custom Tab activity.
 
 If you follow the guidance from this page, you will be able to create a great integration.
 
@@ -18,13 +19,13 @@ project. Open the `app/build.gradle` file and add the browser library to the dep
 ```groovy
 dependencies {
     ...
-    implementation "androidx.browser:browser:1.3.0"
+    implementation "androidx.browser:browser:1.4.0"
 }
 ```
 
 Once the Browser Library is added to your project there are two sets of possible customizations:
 
-- Customizing the UI and interaction with the custom tabs.
+- Customizing the UI and interaction with the Custom Tabs.
 - Making the page load faster, and keeping the application alive.
 
 The UI Customizations are done by using the [`CustomTabsIntent`][3] and the
@@ -33,6 +34,7 @@ The UI Customizations are done by using the [`CustomTabsIntent`][3] and the
 which urls will be opened.
 
 ## Opening a Custom Tab
+
 A [`CustomTabsIntent.Builder`][4] can be used to configure a Custom Tab. Once ready, call
 [`CustomTabsIntent.Builder.build`][22] to create a [`CustomTabsIntent`][3] and launch the desired
 Url with [`CustomTabsIntent.launchUrl`][7].
@@ -48,29 +50,84 @@ customTabsIntent.launchUrl(this, Uri.parse(url));
 
 By default, Custom Tabs launch as a full-window activity. Starting in Chrome 107, you can use partial Custom Tabs to specify a different launch height such that users can interact with your app while viewing web content. Users will be able to expand the Custom Tab to full-screen by dragging the toolbar handle up and restoring the initial launch height by dragging the handle down.
 
-{% Img src="image/6AZNJBRnkpQUWTKPzig99lQY8jT2/iMTvWNK7aEqqxHEHEXuv.png", alt="Example Partial Tab", width="584", height="1168" %}
+{% Img src="image/6AZNJBRnkpQUWTKPzig99lQY8jT2/iMTvWNK7aEqqxHEHEXuv.png", alt="Example Partial Tab", width="584", height="1168", class="screenshot" %}
 
-You can also choose to make the Custom Tab non-resizable. In this case, users will not have the ability to resize the Custom Tab. If a value below 50% of the screen height is provided in the intent, Chrome automatically adjusts the Custom Tab to 50% of the screen height. Custom Tabs are not supported when users are in multi-window or landscape mode.
+You can also choose to make the Custom Tab non-resizable, which prevents users from resizing it. If you set a value below 50% of the screen height in the intent, Chrome automatically adjusts the Custom Tab to 50% of the screen height. Custom Tabs are not supported when users are in multi-window or landscape mode.
 
-The snippet below changes the launch height of the Custom Tab. `CustomTabsIntent.Builder` has a new method `setInitialActivityHeightPx()` that allows you to define the initial launch height in pixels. As a prerequisite to using Custom Tabs, you will need to [connect to the Custom Tabs Service](/docs/android/custom-tabs/integration-guide/#connect-to-the-custom-tabs-service) or launch the custom tabs intent using [Activity#startActivityForResult()](/reference/android/app/Activity#startActivityForResult(android.content.Intent,%20int)).
+Partial Custom Tabs are supported by the AndroidX browser library from version 1.5 onwards:
 
-There are properties that do not work when building an Intent for partial Custom Tabs:
+```groovy
+implementation 'androidx.browser:browser:1.5.0-alpha02'
+```
 
--   `CustomTabColorScheme.navigationBarColor`
--   `CustomTabColorScheme.navigationBarDividerColor`
+To turn a Custom Tab into a partial Custom Tab, define the initial launch height in pixels by calling `new CustomTabsIntent.Builder().setInitialActivityHeightPx()`. Furthermore, you need to either:
 
-Custom Tabs will inherit the host app's color scheme for the UI properties above. You will be responsible for ensuring visual consistency for these properties before launching a Custom Tab.
+1. [start a new browser session via a `CustomTabsServiceConnection`](/docs/android/custom-tabs/integration-guide/#connect-to-the-custom-tabs-service) and pass it to the Custom Tabs intent or
+2. start the Custom Tab activity via [`startActivityForResult`](https://developer.android.com/reference/android/app/Activity#startActivityForResult(android.content.Intent,%20int)).
 
-These new APIs are available from Chrome 107 and onwards.
+Starting a new browser session is the recommended approach to launching a partial Custom Tab, as it enables you to [warm up the browser process](#warm-up-the-browser-process) and [pre-render webpages](/docs/android/custom-tabs/best-practices/#pre-render-content). If you don't need these features, using `startActivityForResult()` is the easier way to launch a partial Custom Tab.
+
+{% Aside 'gotchas' %}
+* Specifying the initial activity height will not have an effect if the default browser does not support resizing the Custom Tab. In this case, the intent extra will be ignored and the Custom Tab will span the complete display height.
+
+* Custom Tabs will inherit the host app's color scheme for the user interface properties above. You will be responsible for ensuring visual consistency for these properties before launching a Custom Tab. This means the `CustomTabColorScheme.navigationBarColor` and `CustomTabColorScheme.navigationBarDividerColor` properties do not work when building an intent for a partial Custom Tab.
+
+{% endAside %}
+
+
+### Launch a partial Custom Tab with an existing session
 
 ```java
-CustomTabsIntent customTabsIntent;
-...
-customTabsIntent = new CustomTabsIntent.Builder()
+CustomTabsSession customTabsSession;
+
+// ...
+
+CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder(customTabsSession)
   .setInitialActivityHeightPx(500)
   .setCloseButtonPosition(CustomTabsIntent.CLOSE_BUTTON_POSITION_END)
-  ...
+  // ...
   .build();
+
+customTabsIntent.launchUrl(context, Uri.parse(url))
+```
+
+### Launch a partial Custom Tab via startActivityForResult
+
+```java
+private ActivityResultLauncher<String> mCustomTabLauncher = registerForActivityResult(new ActivityResultContract<String, Integer>() {
+    @Override
+    public Integer parseResult(int statusCode, @Nullable Intent intent) {
+        return statusCode;
+    }
+
+    @NonNull
+    @Override
+    public Intent createIntent(@NonNull Context context, String url) {
+        CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder()
+                .setInitialActivityHeightPx(500)
+                .setCloseButtonPosition(CustomTabsIntent.CLOSE_BUTTON_POSITION_END)
+                .setToolbarCornerRadiusDp(10);
+        Intent customTabsIntent = builder.build().intent;
+        customTabsIntent.setData(Uri.parse(url));
+        return customTabsIntent;
+    }
+}, new ActivityResultCallback<Integer>() {
+    @Override
+    public void onActivityResult(Integer statusCode) {
+       // ...
+    }
+});
+
+@Override
+public void onCreate(@Nullable Bundle savedInstanceState) {
+    Button selectButton = findViewById(R.id.select_button);
+    selectButton.setOnClickListener(new OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            mCustomTabLauncher.launch(customTabsIntent.intent);
+        }
+    });
+}
 ```
 
 ## Configure the color of the address bar
@@ -95,7 +152,7 @@ intentBuilder.setDefaultColorSchemeParams(defaultColors);
 builder.setActionButton(icon, description, pendingIntent, tint);
 ```
 
-{% Img src="image/Vww75TFpThOgTNuASFM6UYfBAp53/wBbdC6mX8P6moJRJekjL.png", alt="Screenshot of the Action Button in the Tumblr app", width="800", height="1422" %}
+{% Img src="image/Vww75TFpThOgTNuASFM6UYfBAp53/wBbdC6mX8P6moJRJekjL.png", alt="Screenshot of the Action Button in the Tumblr app", width="800", height="1422", class="screenshot screenshot--filled" %}
 
 
 
@@ -124,7 +181,7 @@ It can be customized by calling [`CustomTabsIntentBuilder#setActionButton`][30]:
 builder.addMenuItem(menuItemTitle, menuItemPendingIntent);
 ```
 
-{% Img src="image/Vww75TFpThOgTNuASFM6UYfBAp53/7vKsCO6qBKcuOeYk1tnv.png", alt="Screenshot of the menu on the Twitter app", width="800", height="1422" %}
+{% Img src="image/Vww75TFpThOgTNuASFM6UYfBAp53/7vKsCO6qBKcuOeYk1tnv.png", alt="Screenshot of the menu on the Twitter app", width="800", height="1422", class="screenshot screenshot-filled" %}
 
 The browser has a comprehensive menu of actions that users will perform frequently inside a
 browser, however they may not be relevant to your application context.
@@ -209,6 +266,17 @@ CustomTabsServiceConnection connection = new CustomTabsServiceConnection() {
 boolean ok = CustomTabsClient.bindCustomTabsService(this, mPackageNameToBind, connection);
 ```
 
+When targeting API level 30, in order to connect to a Custom Tabs service, you need to add a queries section to your Android Manifest, declaring an intent-filter that matches browsers with Custom Tabs support.
+
+```xml
+<queries>
+    <intent>
+        <action android:name=
+            "android.support.customtabs.action.CustomTabsService" />
+    </intent>
+</queries>
+```
+
 ## Warm up the Browser Process
 
 [`boolean warmup(long flags)`][16]
@@ -244,7 +312,7 @@ completed successfully.
 
 [`void onNavigationEvent(int navigationEvent, Bundle extras)`][19]
 
-Will be called when a navigation event happens in the custom tab. The `navigationEvent int`
+Will be called when a navigation event happens in the Custom Tab. The `navigationEvent int`
 is one of 6 values that defines the state of the page is in.  See below for more information.
 
 ```java
@@ -282,13 +350,11 @@ public static final int TAB_HIDDEN = 6;
 
 ```java
 /**
-* Called when Custom Tab's height is resized. This applies when users resize a
-* Custom Tab with {@link CustomTabsIntent#ACTIVITY_HEIGHT_ADJUSTABLE} for the {@link
-* CustomTabsIntent#ActivityResizeBehavior}.
+* Called when the tab is resized.
 */
 private static class ResizeCallback extends CustomTabsCallback {
     @Override
-    public void onActivityResized(int size, @NonNull Bundle extras) {
+    public void onActivityResized(int height, int width, @NonNull Bundle extras) {
             ...
         }
     }

@@ -298,5 +298,5 @@ on the Chromium site.
 [progressive-web-apps]: https://web.dev/progressive-web-apps/
 [promise]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
 [pull request]: https://github.com/GoogleChromeLabs/airhorn/pull/37
-[rejected]: https://developers.google.com/web/updates/2017/06/play-request-was-interrupted
+[rejected]: /blog/play-request-was-interrupted/
 [web audio api]: https://developer.mozilla.org/docs/Web/API/Web_Audio_API

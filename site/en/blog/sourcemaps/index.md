@@ -67,7 +67,7 @@ The textarea in the demo also allows you to write ES6 which will be compiled on 
 
 ## How does the source map work?
 
-The only JavaScript compiler/minifier that has support, at the moment, for source map generation is the Closure compiler. (I'll explain how to use it later.) Once you've combined and minified your JavaScript, alongside it will exist a sourcemap file.
+The only JavaScript compiler/minifier that has support, at the moment, for source map generation is the Closure compiler. (I'll explain how to use it later.) Once you've combined and minified your JavaScript, alongside it will exist a source map file.
 
 Currently, the Closure compiler doesn't add the special comment at the end that is required to signify to a browsers dev tools that a source map is available:
 
@@ -132,7 +132,7 @@ Above you can see that a source map is an object literal containing lots of juic
 
 ## Base64 VLQ and keeping the source map small
 
-Originally, the source map spec had a very verbose output of all the mappings and resulted in the sourcemap being about 10 times the size of the generated code. Version two reduced that by around 50% and version three reduced it again by another 50%, so for a 133kB file you end up with a ~300kB source map.
+Originally, the source map spec had a very verbose output of all the mappings and resulted in the source map being about 10 times the size of the generated code. Version two reduced that by around 50% and version three reduced it again by another 50%, so for a 133kB file you end up with a ~300kB source map.
 
 So how did they reduce the size while still maintaining the complex mappings?
 
@@ -149,7 +149,7 @@ The values shown above are purely the Base64 decoded values, there is some more 
 - Generated column
 - Original file this appeared in
 - Original line number
-- Original column 
+- Original column
 - And, if available, original name
 
 Not every segment has a name, method name or argument, so segments throughout will switch between four and five variable length. The g value in the segment diagram above is what's called a continuation bit this allows for further optimisation in the Base64 VLQ decoding stage. A continuation bit allows you to build on a segment value so you can store big numbers without having to store a big number, a very clever space saving technique that has its roots in the midi format.

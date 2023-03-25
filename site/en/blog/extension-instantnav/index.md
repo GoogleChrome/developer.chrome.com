@@ -19,8 +19,8 @@ preloading navigations. See below for details.
 Chrome has been working hard at making navigation fast. Instant Navigation
 technologies such as [Back/Forward Cache](https://web.dev/bfcache/)
 ([shipped](https://chromestatus.com/feature/6279906713403392) on desktop in
-Chrome 96) and [Speculation Rules](https://chromestatus.com/feature/5740655424831488)
-(shipped in Chrome 103) improve both the going back and going forward
+Chrome 96) and [Speculation Rules](/blog/prerender-pages/)
+([shipped](https://chromestatus.com/feature/5740655424831488) in Chrome 103) improve both the going back and going forward
 experience. In this post we will explore the updates we’ve made to browser
 extensions APIs to accommodate these new workflows.
 

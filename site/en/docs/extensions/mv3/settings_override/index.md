@@ -1,27 +1,27 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Overriding Chrome settings"
+seoTitle: "Overriding Chrome settings in Chrome Extensions"
 date: 2014-02-14
-updated: 2022-12-01
+updated: 2023-02-06
 description: How to override Chrome settings from a Chrome Extension.
 ---
 
-{% Partial 'extensions/mv2page-in-mv3.md' %}
 
 Settings overrides are a way for extensions to override selected Chrome settings. The API is
-available on Windows in all current versions of Chrome and is available on Mac in Chrome 56 and
-later.
+available on Windows and Mac in all current versions of Chrome.
 
 ## Homepage, search provider, and startup pages {: #others }
 
-Here is an example how [homepage][1], [search provider][2], and [startup pages][3] can be modified 
+Here is an example of how [homepage][1], [search provider][2], and [startup pages][3] can be modified 
 in the [extension manifest][4]. Any domain used in the settings API must be [verified][5] (via 
 Google Search Console) by the same developer account publishing the extension. Note that if you 
 verify ownership for a domain (for example, https://example.com) you can use any subdomain or page 
 (for example, https://app.example.com or https://example.com/page.html) within your extension.
 
-Starting in Chrome 107, if an extension only overrides the browser's search provider and provides
-no other capabilities, the post installation dialog box will not be shown.
+Using the settings override permission while also requesting any additional capabilities or permissions is inconsistent with our single purpose policy. When Chrome detects that an item is potentially violating our single purpose policy, a confirmation dialog is shown to the user. Extensions that limit themselves to only modifying a single setting without seeking additional capabilities or permissions do not get a confirmation dialog.
+
+This applies to Chrome 107 and later.
 
 ```json
 {

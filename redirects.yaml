@@ -24,6 +24,9 @@ redirects:
 - from: /blog/navigation-preload/
   to: https://web.dev/navigation-preload/
 
+- from: /maskable-icon/
+  to: https://web.dev/maskable-icon/
+
 - from: /activeTab
   to: /docs/extensions/reference/activeTab
 
@@ -34,16 +37,28 @@ redirects:
   to: /docs/apps/overview/
 
 - from: /docs/extensions/mv3/background_migration
-  to: /docs/extensions/mv3/migrating_to_service_workers
+  to: /docs/extensions/migrating/to-service-workers
+
+- from: /docs/extensions/mv3/migrating_to_service_workers
+  to: /docs/extensions/migrating/to-service-workers
 
 - from: /docs/extensions/mv3/background_pages
   to: /docs/extensions/mv3/service_workers
+
+- from: /docs/extensions/mv3/overview
+  to: /docs/extensions/mv3/architecture-overview
+
+- from: /docs/extensions/mv3/mv2-sunset/
+  to: /docs/extensions/migrating/mv2-sunset/
 
 - from: /blog/fedcm-origin-trial
   to: /docs/privacy-sandbox/fedcm
 
 - from: /docs/privacy-sandbox/attribution-reporting/summary-reports/
   to: /docs/privacy-sandbox/summary-reports/
+
+- from: /docs/privacy-sandbox/status
+  to: https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline
 
 - from: /android
   to: /docs/android
@@ -75,7 +90,7 @@ redirects:
   to: /blog/wasm-debugging/
 
 - from: /docs/privacy-sandbox/fledge-best-practices/
-  to: /docs/privacy-sandbox/fledge/latency/
+  to: /docs/privacy-sandbox/fledge-api/latency/
 
 - from: /blog/fledge-api/
   to: /docs/privacy-sandbox/fledge-api/
@@ -159,6 +174,9 @@ redirects:
 - from: /extensions/manifestVersion
   to: /docs/extensions/mv3/manifest/version/
 
+- from: /docs/extensions/mv3/mv3-migration/
+  to: /docs/extensions/migrating/
+
 # Fixes #675
 - from: /apps/manifestVersion
   to: /docs/apps/manifestVersion
@@ -190,6 +208,33 @@ redirects:
   to: /docs/apps/about_apps
 
 # DevTools redirects
+
+- from: /docs/devtools/storage/cookies/
+  to: /docs/devtools/application/cookies/
+
+- from: /docs/devtools/customize/placement/
+  to: /docs/devtools/customize/#placement
+
+- from: /docs/devtools/customize/dark-theme/
+  to: /docs/devtools/customize/#dark-theme
+
+- from: /docs/devtools/javascript/ignore-chrome-extension-scripts/
+  to: /docs/devtools/settings/other/#skip-extensions
+
+- from: /docs/devtools/evaluate-performance/
+  to: /docs/devtools/performance/
+
+- from: /docs/devtools/evaluate-performance/reference/
+  to: /docs/devtools/performance/reference/
+
+- from: /docs/devtools/evaluate-performance/performance-reference/
+  to: /docs/devtools/performance/timeline-reference/
+
+- from: /docs/devtools/device-mode/geolocation/
+  to: /docs/devtools/sensors/#geolocation
+
+- from: /docs/devtools/device-mode/orientation/
+  to: /docs/devtools/sensors/#orientation
 
 - from: /docs/devtools/css/overrides/
   to: /docs/devtools/css/issues/
@@ -334,14 +379,23 @@ redirects:
 - from: /extensions/packaging
   to: /docs/extensions/mv3/hosting
 
+- from: /docs/extensions/mv3/mv3-migration-checklist
+  to: /docs/extensions/migrating/checklist
+
 - from: /extensions/migrating_to_manifest_v3
-  to: /docs/extensions/mv3/mv3-migration-checklist
+  to: /docs/extensions/migrating/checklist
+
+- from: /docs/extensions/mv3/mv3-migration-checklist
+  to: /docs/extensions/migrating/checklist
 
 - from: /docs/extensions/mv2/migrating_to_manifest_v3
-  to: /docs/extensions/mv3/mv3-migration-checklist
+  to: /docs/extensions/migrating/checklist
 
 - from: /docs/extensions/mv3/intro/mv3-migration
   to: /docs/extensions/mv3/mv3-migration
+
+- from: /docs/extensions/mv3/intro/mv3-migration
+  to: /docs/extensions/migrating
 
 - from: /home
   to: /
@@ -509,19 +563,19 @@ redirects:
   to: /docs/web-platform/popover-api/popoverhide-event/
 
 - from: /docs/web-platform/popup-api/popuphidetarget-attribute/
-  to: /docs/web-platform/popover-api/popoverhidetarget-attribute/
+  to: /docs/web-platform/popover-api/popovertargetaction-hide-attribute/
 
 - from: /docs/web-platform/popup-api/popuphidetarget-property/
-  to: /docs/web-platform/popover-api/popoverhidetarget-property/
+  to: /docs/web-platform/popover-api/popovertargetaction-hide-property/
 
 - from: /docs/web-platform/popup-api/popupshow-event/
   to: /docs/web-platform/popover-api/popovershow-event/
 
 - from: /docs/web-platform/popup-api/popupshowtarget-attribute/
-  to: /docs/web-platform/popover-api/popovershowtarget-attribute/
+  to: /docs/web-platform/popover-api/popovertargetaction-show-attribute/
 
 - from: /docs/web-platform/popup-api/popupshowtarget-property/
-  to: /docs/web-platform/popover-api/popovershowtarget-property/
+  to: /docs/web-platform/popover-api/popovertargetaction-show-property/
 
 - from: /docs/web-platform/popup-api/popuptoggletarget-attribute/
   to: /docs/web-platform/popover-api/popovertoggletarget-attribute/
@@ -550,7 +604,7 @@ redirects:
   to: /docs/web-platform/popover-api/popoverhide-event/
 
 - from: /docs/web-platform/pop-up-api/popoverhidetarget-attribute/
-  to: /docs/web-platform/popover-api/popoverhidetarget-attribute/
+  to: /docs/web-platform/popover-api/popovertargetaction-hide-attribute/
 
 - from: /docs/web-platform/pop-up-api/popoverhidetarget-property/
   to: /docs/web-platform/popover-api/popoverhidetarget-property/
@@ -565,10 +619,38 @@ redirects:
   to: /docs/web-platform/popover-api/popovershowtarget-property/
 
 - from: /docs/web-platform/pop-up-api/popovertoggletarget-attribute/
-  to: /docs/web-platform/popover-api/popovertoggletarget-attribute/
+  to: /docs/web-platform/popover-api/popovertargetaction-toggle-attribute/
 
 - from: /docs/web-platform/pop-up-api/popovertoggletarget-property/
-  to: /docs/web-platform/popover-api/popovertoggletarget-property/
+  to: /docs/web-platform/popover-api/popovertargetaction-toggle-property/
+
+# Popover attribute renames
+- from: /docs/web-platform/popover-api/popoverhidetarget-attribute/
+  to: /docs/web-platform/popover-api/popovertargetaction-hide-attribute/
+
+- from: /docs/web-platform/popover-api/popoverhidetarget-property/
+  to: /docs/web-platform/popover-api/popovertargetaction-hide-property/
+
+- from: /docs/web-platform/popover-api/popovershowtarget-attribute/
+  to: /docs/web-platform/popover-api/popovertargetaction-show-attribute/
+
+- from: /docs/web-platform/popover-api/popovershowtarget-property/
+  to: /docs/web-platform/popover-api/popovertargetaction-show-property/
+
+- from: /docs/web-platform/popover-api/popovertoggletarget-attribute/
+  to: /docs/web-platform/popover-api/popovertargetaction-toggle-attribute/
+
+- from: /docs/web-platform/popover-api/popovertoggletarget-property/
+  to: /docs/web-platform/popover-api/popovertargetaction-toggle-property/
+
+
+# Lighthouse redirects
+- from: /docs/lighthouse/best-practices/password-inputs-can-be-pasted-into/
+  to: /docs/lighthouse/best-practices/paste-preventing-inputs/
+
+# Fugu redirects
+- from: /blog/fugu-showcase/
+- to: /fugu-showcase/
 
 # Generic
 
@@ -594,6 +676,26 @@ redirects:
 
 - from: /tags/deprecations/
   to: /tags/deprecations-removals/
+
+- from: /tags/extensions/
+  to: /tags/extensions-news/
+
+# Redirects from old to new Extensions migration guide
+
+- from: /docs/extenions/mv3/mv3-migration/
+  to: /docs/extenions/migrating/
+
+- from: /docs/extenions/mv3/mv3-migration-checklist/
+  to: /docs/extenions/migrating/checklist/
+
+- from: /docs/extenions/mv3/migrating_to_service_workers/
+  to: /docs/extenions/migrating/to-service-workers/
+
+- from: /docs/extenions/mv3/mv2-sunset/
+  to: /docs/extenions/migrating/mv2-sunset/
+
+- from: /docs/extenions/mv3/known-issues/
+  to: /docs/extenions/migrating/known-issues/
 
 # DO NOT REMOVE. This seems pointless but we rewrite "." to "_" inside our server's code, so if the
 # URL is fine for all but incorrect syntax, we'll fix it up.

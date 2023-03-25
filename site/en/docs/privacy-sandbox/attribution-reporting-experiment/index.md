@@ -2,20 +2,21 @@
 layout: 'layouts/doc-post.njk'
 title: 'Attribution Reporting: experiment and participate'
 date: 2022-03-31
-updated: 2022-06-23
+updated: 2022-12-15
 authors:
   - maudn
   - alexandrawhite
 ---
 
-## Learn the essentials
+Read [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) to
+see the use cases and key concepts for this API and check the most recent [updates](/docs/privacy-sandbox/attribution-reporting-updates/).
 
-Read [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) and
-check the most recent [updates](/docs/privacy-sandbox/attribution-reporting-updates/).
+Learn why we plan to [ship the Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/chrome-shipping)
+in the first half of 2023.
 
 ## Try the API
 
-1. Try the [demo](https://goo.gle/attribution-reporting-demo/).
+1. Try the [demo](https://goo.gle/attribution-reporting-demo).
 2. Check the [API status](/docs/privacy-sandbox/attribution-reporting/#status) to learn about ways
    you can experiment with the API today.
 3. Experiment with the API.

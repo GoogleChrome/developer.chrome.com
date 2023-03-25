@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: Using workbox-window
 date: 2021-12-07
 description: >
-  Sometimes users go offline. Learn how to adapt, and help them resume requests when they eventually go back online.
+  Sometimes users go offline. Learn how to adapt, and help them resume requests when they eventually go back online. 
 ---
 
 One Workbox module that hasn't gotten much coverage yet in this documentation is [`workbox-window`](/docs/workbox/reference/workbox-window/), which is a set of modules intended to run in the [`window`](https://developer.mozilla.org/docs/Web/API/Window). The goals of this module are:
@@ -32,7 +32,8 @@ npm install workbox-window --save
 
 Then, in your application JavaScript, you can `import` the `Workbox` class from `workbox-window`:
 
-```js
+```html
+<script type="module">
 import {Workbox} from 'workbox-window';
 
 if ('serviceWorker' in navigator) {
@@ -40,19 +41,24 @@ if ('serviceWorker' in navigator) {
 
   wb.register();
 }
+</script>  
 ```
 
 Though `workbox-window` is quite small, you _could_ split it from your website's core application logic using [dynamic `import`](https://web.dev/reduce-javascript-payloads-with-code-splitting/), which can reduce the size of your page's main bundle:
 
-```js
+```html
+<script type="module">
 if ('serviceWorker' in navigator) {
   const {Workbox} = await import('workbox-window');
 
   const wb = new Workbox('/sw.js');
   wb.register();
 }
+</script>  
 ```
+
 ### Using the CDN
+
 While not the recommended approach, an easier way to use `workbox-window` is to import it from a CDN:
 
 ```html
@@ -68,7 +74,9 @@ While not the recommended approach, an easier way to use `workbox-window` is to 
 ```
 
 You'll note that the [`<script>` element](https://developer.mozilla.org/docs/Web/HTML/Element/script) in the above example uses the `type="module"` attribute. This is required if you want to use static `import` statements in the browser without a build step. All major browsers that support service workers also support JavaScript modules, so it's fine to serve this code to any browser, as older browsers will ignore `<script>` elements with a `type` attribute value of `"module"`.
+
 ## Registering a service worker
+
 Registering a service worker with `workbox-window` is done with the `Workbox` class's `register` method like so:
 
 ```js

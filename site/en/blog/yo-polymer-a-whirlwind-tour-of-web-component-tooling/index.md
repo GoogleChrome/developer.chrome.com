@@ -95,8 +95,8 @@ A few other articles that are worth checking out on the subject:
 
 * [Building WebApps With Yeoman and Polymer](https://www.html5rocks.com/tutorials/webcomponents/yeoman/)
 * [Concatenating Web Components With Vulcanize](http://www.polymer-project.org/articles/concatenating-web-components.html)
-* [Chrome Dev Summit: Polymer declarative, encapsulated, reusable components](https://developers.google.com/web/updates/2014/01/Chrome-Dev-Summit-Polymer-declarative-encapsulated-reusable-components)
-* [The Landscape Of Development Automation](https://developers.google.com/web/updates/2013/11/The-Landscape-Of-Front-end-Development-Automation-Slides)
+* [Chrome Dev Summit: Polymer declarative, encapsulated, reusable components](/blog/chrome-dev-summit-polymer-declarative-encapsulated-reusable-components)
+* [The Landscape Of Development Automation](/blog/the-landscape-of-front-end-development-automation-slides/)
 * [Web Components: the future of web development](http://html5-demos.appspot.com/static/cds2013/index.html#26)
 * [Building Apps With The Yeoman Workflow](https://code.tutsplus.com/tutorials/building-apps-with-the-yeoman-workflow--net-33254)
 

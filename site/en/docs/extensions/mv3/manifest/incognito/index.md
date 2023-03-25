@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manifest - Incognito"
+seoTitle: "Chrome Extensions Manifest: incognito"
 date: 2013-05-12
 updated: 2015-09-25
 description: Reference documentation for the incognito property of manifest.json.

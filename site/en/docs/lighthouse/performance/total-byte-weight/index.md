@@ -22,7 +22,7 @@ You can adjust the results to factor in purchasing power.
 
 ## How the Lighthouse network payload audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+[Lighthouse](/docs/lighthouse/overview/)
 shows the total size in [kibibytes (KiB)](https://en.wikipedia.org/wiki/Kibibyte) of all resources requested by your page.
 The largest requests are presented first:
 
@@ -75,16 +75,16 @@ number of content items shown on a given page.
 
 ### Joomla
 
-Consider showing excerpts in your article categories (e.g. via a "read more"
+Consider showing excerpts in your article categories (one popular solution is a "read more"
 link), reducing the number of articles shown on a given page, breaking your long
 posts into multiple pages, or using a plugin to lazy-load comments.
 
 ### WordPress
 
-Consider showing excerpts in your post lists (e.g. via the "more" tag), reducing
+Consider showing excerpts in your post lists (you can use the "more" tag), reducing
 the number of posts shown on a given page, breaking your long posts into
 multiple pages, or using a plugin to lazy-load comments.
 
 ## Resources
 
-[Source code for **Avoid enormous network payloads** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/byte-efficiency/total-byte-weight.js)
+[Source code for **Avoid enormous network payloads** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/byte-efficiency/total-byte-weight.js)

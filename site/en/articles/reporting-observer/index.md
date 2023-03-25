@@ -79,7 +79,7 @@ sleep wondering if users are hitting unexpected issues on your live site.
 
 {% Aside 'key-term' %}
 `ReportingObserver` is part of a larger spec, the [Reporting
-API](/reporting-api), which provides a common way to send
+API](/articles/reporting-api), which provides a common way to send
 these different reports to a back end. The Reporting API is a generic framework
 to specify a set of server endpoints to report issues to.
 {% endAside %}
@@ -180,7 +180,7 @@ about the real-world issues, update code, profit!
 
 ## Future work {: #future }
 
-In the future, my hope is that `ReportingObserver` becomes the de-facto API for
+In the future, my hope is that `ReportingObserver` becomes the de facto API for
 catching all types of issues in JavaScript. Imagine one API to catch everything
 that goes wrong in your app:
 
@@ -203,6 +203,6 @@ on [Unsplash](https://unsplash.com).
 [reportingobserver]: https://w3c.github.io/reporting/#observers
 [explainer]: https://github.com/W3C/reporting/blob/master/EXPLAINER.md
 [chromestatus]: https://www.chromestatus.com/feature/4691191559880704
-[featurepolicy]: https://developers.google.com/web/updates/2018/06/feature-policy
+[featurepolicy]: /blog/feature-policy/
 [interventions]: https://www.chromestatus.com/features#intervention
 [deprecations]: https://www.chromestatus.com/features#intervention

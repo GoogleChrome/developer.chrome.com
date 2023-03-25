@@ -8,7 +8,7 @@ date: 2022-10-06
 hero: 'image/BhuKGJaIeLNPW9ehns59NfwqKxF2/9mMec0BTzXrg4uMqJF63.jpg'
 alt: 'Two puzzle pieces coming together'
 tags:
-  - extensions
+  - extensions-news
 ---
 
 In this post, we're excited to share some significant improvements to the Chrome Extension getting started experience and a few ways you can be part of this dream.

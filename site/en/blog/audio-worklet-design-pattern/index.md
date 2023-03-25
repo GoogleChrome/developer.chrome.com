@@ -9,7 +9,7 @@ date: 2018-06-18
 updated: 2020-07-24
 ---
 
-The [previous article](https://developers.google.com/web/updates/2017/12/audio-worklet)
+The [previous article](/blog/audio-worklet/)
 on Audio Worklet detailed the basic concepts and usage. Since its launch
 in Chrome 66 there have been many requests for more examples of how it can be
 used in actual applications. The Audio Worklet unlocks the full potential of
@@ -28,7 +28,7 @@ as well!
 
 Before diving in, let's quickly recap terms and facts around the Audio Worklet
 system which was previously introduced in
-[this post](https://developers.google.com/web/updates/2017/12/audio-worklet).
+[this post](/blog/audio-worklet/).
 
   - [BaseAudioContext](https://developer.mozilla.org/docs/Web/API/BaseAudioContext):
     Web Audio API's primary object.
@@ -79,7 +79,7 @@ the accompanied code example can be found
 [here](https://googlechromelabs.github.io/web-audio-samples/audio-worklet/design-pattern/wasm/).
 For the basic tutorial on how to use Emscripten and WebAssembly (especially the
 Emscripten glue code), please take a look at
-[this article](https://developers.google.com/web/updates/2018/03/emscripting-a-c-library).
+[this article](https://web.dev/emscripting-a-c-library/).
 
 #### Setting Up
 

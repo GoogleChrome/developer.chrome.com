@@ -24,7 +24,7 @@ of the resource by hundreds of milliseconds.
 
 ## How the Lighthouse multiple redirects audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+[Lighthouse](/docs/lighthouse/overview/)
 flags pages that have multiple redirects:
 
 <figure>
@@ -38,11 +38,11 @@ A page fails this audit when it has two or more redirects.
 Point links to flagged resources
 to the resources' current locations.
 It's especially important to avoid redirects in resources
-required for your [Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/).
+required for your [Critical Rendering Path](https://web.dev/critical-rendering-path/).
 
 If you're using redirects to divert mobile users to the mobile version of your page,
 consider redesigning your site to use
-[Responsive Design](https://developers.google.com/web/fundamentals/design-and-ux/responsive/).
+[Responsive Design](https://web.dev/responsive-web-design-basics/).
 
 ## Stack-specific guidance
 
@@ -53,6 +53,6 @@ If you are using React Router, minimize usage of the `<Redirect>` component for
 
 ## Resources
 
-- [Source code for **Avoid multiple page redirects** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/redirects.js)
+- [Source code for **Avoid multiple page redirects** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/redirects.js)
 - [Redirections in HTTP](https://developer.mozilla.org/docs/Web/HTTP/Redirections)
 - [Avoid Landing Page Redirects](https://developers.google.com/speed/docs/insights/AvoidRedirects)

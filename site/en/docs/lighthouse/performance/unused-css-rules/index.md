@@ -44,7 +44,7 @@ These extra network trips can significantly increase the time
 that users must wait before they see any content on their screens.
 
 Unused CSS also slows down a browser's construction of the
-[render tree](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction).
+[render tree](https://web.dev/critical-rendering-path-render-tree-construction/).
 The render tree is like the DOM tree, except that it also includes the styles for each node.
 To construct the render tree, a browser must walk the entire DOM tree, and check which CSS rules apply to each node.
 The more unused CSS there is,
@@ -53,7 +53,7 @@ the more time that a browser might potentially need to spend calculating the sty
 ## How to detect unused CSS {: #coverage }
 
 The Coverage tab of Chrome DevTools can help you discover critical and uncritical CSS.
-See [View used and unused CSS with the Coverage tab](https://developers.google.com/web/tools/chrome-devtools/css/reference#coverage).
+See [View used and unused CSS with the Coverage tab](/docs/devtools/css/reference/#coverage).
 
 <figure>
   {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/ydgzuclRCAlY2nzrpDmk.png", alt="Chrome DevTools: Coverage tab", width="800", height="407" %}
@@ -81,7 +81,7 @@ Learn more in [Defer non-critical CSS](https://web.dev/defer-non-critical-css/).
 
 ### Drupal
 
-Consider removing unused CSS rules and only attach the needed Drupal libraries
+Consider removing unused CSS rules. Only attach the needed Drupal libraries
 to the relevant page or component in a page. See the [Defining a
 library](https://www.drupal.org/docs/8/creating-custom-modules/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-module#library)
 for details.
@@ -96,4 +96,4 @@ Consider reducing, or switching, the number of [WordPress plugins](https://wordp
 
 ## Resources
 
-- [Source code for **Remove unused CSS** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/byte-efficiency/unused-css-rules.js)
+- [Source code for **Remove unused CSS** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/byte-efficiency/unused-css-rules.js)

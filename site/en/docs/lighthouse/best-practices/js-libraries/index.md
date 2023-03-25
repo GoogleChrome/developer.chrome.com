@@ -7,7 +7,7 @@ date: 2019-05-02
 updated: 2019-08-28
 ---
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) lists all front-end JavaScript libraries detected on the page:
+[Lighthouse](/docs/lighthouse/overview/) lists all front-end JavaScript libraries detected on the page:
 
 <figure>
   {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/cMTmEHvebD2V2saRMJ4u.png", alt="Lighthouse audit showing all front-end JavaScript libraries detected on page", width="800", height="168" %}
@@ -23,4 +23,4 @@ Make sure to update any insecure libraries.
 
 ## Resources
 
-[Source code for **Detected JavaScript libraries** audit](https://github.com/GoogleChrome/lighthouse/blob/ecd10efc8230f6f772e672cd4b05e8fbc8a3112d/lighthouse-core/audits/dobetterweb/js-libraries.js)
+[Source code for **Detected JavaScript libraries** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/dobetterweb/js-libraries.js)

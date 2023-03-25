@@ -1,5 +1,5 @@
 ---
-title: Expanding Privacy Sandbox for the Web testing into 2023
+title: "Privacy Sandbox for the web: Expanding testing into 2023"
 description: >
   Testing takes time. We're taking a deliberate approach to testing the Privacy
   Sandbox for the web. The APIs are available for functional testing through

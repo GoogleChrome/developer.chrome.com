@@ -1,6 +1,11 @@
-- url: /docs/web-platform/origin-trials
-- url: /docs/web-platform/origin-trial-troubleshooting
-- url: /docs/web-platform/third-party-origin-trials
+- title: i18n.docs.web-platform.chrome-concepts
+  sections:
+    - url: /docs/web-platform/chrome-release-channels
+    - url: /docs/web-platform/chrome-flags
+    - url: /docs/web-platform/chrome-variations
+    - url: /docs/web-platform/origin-trials
+    - url: /docs/web-platform/third-party-origin-trials
+    - url: /docs/web-platform/origin-trial-troubleshooting
 
 - title: i18n.docs.web-platform.shipped
   sections:
@@ -11,20 +16,27 @@
     - url: /docs/web-platform/navigation-api
     - url: /docs/web-platform/region-capture
     - url: /docs/web-platform/virtual-keyboard
+    - url: /docs/web-platform/view-transitions
+
+- title: i18n.docs.web-platform.beta
+  sections:
 
 - title: i18n.docs.web-platform.origin-trials
   sections:
+    - url: /docs/web-platform/document-picture-in-picture
     - url: /docs/web-platform/launch-handler
     - url: /docs/web-platform/webgpu
     - url: /docs/web-platform/popup-api
+    - url: /docs/web-platform/bfcache-notrestoredreasons
+    - url: /blog/soft-navigations-experiment/
 
 - title: i18n.docs.web-platform.developer-trials
   sections:
     - url: /docs/web-platform/compute-pressure
-    - url: /docs/web-platform/view-transitions
 
 - title: i18n.docs.web-platform.not-pursuing
   sections:
     - url: /docs/web-platform/declarative-link-capturing
     - url: /docs/web-platform/storage-foundation
     - url: /docs/web-platform/notification-triggers
+    - url: /docs/web-platform/web-bundles

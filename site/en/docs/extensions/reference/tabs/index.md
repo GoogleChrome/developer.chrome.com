@@ -100,10 +100,10 @@ installed. The following example shows how to do this.
 {% Label %}background.js:{% endLabel %}
 
 ```js
-chrome.runtime.onInstalled.addListener((reason) => {
-  if (reason === chrome.runtime.OnInstalledReason.INSTALL) {
+chrome.runtime.onInstalled.addListener(({reason}) => {
+  if (reason === 'install') {
     chrome.tabs.create({
-      url: 'onboarding.html'
+      url: "onboarding.html"
     });
   }
 });
@@ -164,20 +164,19 @@ This example shows how an extension can toggle the muted state for a given tab.
     const tab = await chrome.tabs.get(tabId);
     const muted = !tab.mutedInfo.muted;
     await chrome.tabs.update(tabId, {muted});
-    console.log(`Tab ${tab.id} is ${muted ? 'muted' : 'unmuted'}`);
+    console.log(`Tab ${tab.id} is ${muted ? "muted" : "unmuted"}`);
   }
   ```
 
-</web-tab>
-<web-tab  title="Manifest V2 (callback)">
+  </web-tab>
+  <web-tab  title="Manifest V2 (callback)">
 
   ```js
   function toggleMuteState(tabId) {
-    chrome.tabs.get(tabId, (tab) => {
+    chrome.tabs.get(tabId, async (tab) => {
       let muted = !tab.mutedInfo.muted;
-      chrome.tabs.update(tabId, {muted}, () => {
-        console.log(`Tab ${tab.id} is ${muted ? 'muted' : 'unmuted'}`);
-      });
+      await chrome.tabs.update(tabId, { muted });
+      console.log(`Tab ${tab.id} is ${ muted ? "muted" : "unmuted" }`);
     });
   }
   ```
@@ -200,9 +199,9 @@ a drag is in progress.
   async function moveToFirstPosition(activeInfo) {
     try {
       await chrome.tabs.move(activeInfo.tabId, {index: 0});
-      console.log('Success.');
+      console.log("Success.");
     } catch (error) {
-      if (error == 'Error: Tabs cannot be edited right now (user may be dragging a tab).') {
+      if (error == "Error: Tabs cannot be edited right now (user may be dragging a tab).") {
         setTimeout(() => moveToFirstPosition(activeInfo), 50);
       } else {
         console.error(error);
@@ -217,27 +216,29 @@ Using catch(error) in a Promise context is a way to ensure that an error that ot
 populates chrome.runtime.lastError is not unchecked.
 
 {% endAside %}
+
   </web-tab>
   <web-tab title="Manifest V2 (callback)">
 
-```js
-chrome.tabs.onActivated.addListener(moveToFirstPositionMV2);
+  ```js
+  chrome.tabs.onActivated.addListener(moveToFirstPositionMV2);
 
-function moveToFirstPositionMV2(activeInfo) {
-  chrome.tabs.move(activeInfo.tabId, { index: 0 }, () => {
-    if (chrome.runtime.lastError) {
-      const error = chrome.runtime.lastError;
-      if (error == 'Error: Tabs cannot be edited right now (user may be dragging a tab).') {
-        setTimeout(() => moveToFirstPositionMV2(activeInfo), 50);
+  function moveToFirstPositionMV2(activeInfo) {
+    chrome.tabs.move(activeInfo.tabId, { index: 0 }, () => {
+      if (chrome.runtime.lastError) {
+        const error = chrome.runtime.lastError;
+        if (error == "Error: Tabs cannot be edited right now (user may be dragging a tab).") {
+          setTimeout(() => moveToFirstPositionMV2(activeInfo), 50);
+        } else {
+          console.error(error);
+        }
       } else {
-        console.error(error);
+        console.log("Success.");
       }
-    } else {
-      console.log('Success.');
-    }
-  });
-}
-```
+    });
+  }
+  ```
+
   </web-tab>
 </web-tabs>
 
@@ -253,8 +254,8 @@ For more Tabs API extensions demos, explore any of the following:
 [doc-match]: /docs/extensions/mv3/match_patterns/
 [doc-perms]: /docs/extensions/mv3/permission_warnings/
 [doc-promises]: /docs/extensions/mv3/promises/
-[mv2-tabs-samples]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/tabs/
-[mv3-tabs-manager]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/tabs-manager
+[mv2-tabs-samples]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/_archive/mv2/api/tabs/
+[mv3-tabs-manager]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.tabs-manager
 [samples-repo]: https://github.com/GoogleChrome/chrome-extensions-samples
 [section-manifest]: #manifest
 [tab]: #type-Tab

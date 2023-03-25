@@ -7,7 +7,7 @@ description: >
 subhead: >
   Speeding up Largest Contentful Paint (LCP) with cross-site prefetching.
 date: 2022-05-11
-updated: 2022-12-02
+updated: 2023-01-30
 authors:
   - katiehempenius
   - kenjibaheux
@@ -22,9 +22,7 @@ alt: >
 
 Starting with Chrome 103 for Android, Chrome will gradually roll out a private prefetch proxy feature to speed up out-going navigations from Google Search and other participating websites by 30% at the median. This private prefetch proxy feature allows the prefetching of cross-origin content without exposing user information to the destination website until the user navigates.
 
-Read on to learn about [how this feature works](#how),
-[how it can help significantly improve your sites' Largest Contentful Paint (LCP)](#owners),
-or [how referrer websites can help their users](#referrers) achieve their goals by speeding up cross-site navigations.
+Read on to learn about [how this feature works](#how), [how it can help significantly improve your sites' Largest Contentful Paint (LCP)](#owners), or [how referrer websites can help their users](#referrers) achieve their goals by speeding up cross-site navigations.
 
 ## How Private Prefetch Proxy works {: #how }
 
@@ -76,7 +74,7 @@ So, with that in mind, here is what we recommend:
 
 ### Traffic control {: #traffic }
 
-From past experiments, we know that this feature typically results in less than 2% extra requests for main resources (for example HTML documents). That said, if you are the cautious kind, you can use the traffic advice's fraction field to control how much Private Prefetch Proxy should let through. You can start with a small fraction such as 0.3 (that is, 30%), and gradually increase it to 1.0 (that is, 100%).
+From past experiments, we know that this feature typically results in less than 2% extra requests for main resources (for example HTML documents). That said, if you are the cautious kind, you can use the traffic advice's fraction field to control how much traffic the Private Prefetch Proxy should let through. You can start with a small fraction such as 0.3 (that is, 30%), and gradually increase it to 1.0 (that is, 100%) by adding the following JSON to a `/.well-known/traffic-advice` file, which needs to be served with the `application/trafficadvice+json` MIME type:
 
 ```json
 [{
@@ -85,9 +83,18 @@ From past experiments, we know that this feature typically results in less than 
 }]
 ```
 
-The `fraction` field gives you control over the prefetch traffic by specifying how much Private Prefetch Proxy should let through. The value is a float between 0.0 (no prefetch at all) and 1.0 (100% of the prefetch requests get through).
+The `fraction` field is a float between 0.0 (no prefetch at all) and 1.0 (100% of the prefetch requests get through).
 
-For more flexibility (for example, a sudden peak of heavy access), you may want to temporarily reject prefetch requests (`Sec-Purpose: prefetch;anonymous-client-ip`) with a 503 status code, and by setting the `Cache-Control: no-store` header on the response. You may also add the [`Retry-After`](https://tools.ietf.org/html/rfc7231#section-6.6.4) header to tell Chrome how long to wait before retrying prefetch requests.
+It is also possible to disable this completely with the following configuration:
+
+```json
+[{
+  "user_agent": "prefetch-proxy",
+  "disallow": true
+}]
+```
+
+The `/.well-known/traffic-advice` file is fetched by the proxy, not the client, and cached at the proxy per the usual HTTP cache semantics. For more flexibility—for example, a sudden peak of heavy access—you may want to temporarily reject prefetch requests (`Sec-Purpose: prefetch;anonymous-client-ip`) with a 503 status code, and by setting the `Cache-Control: no-store` header on the response. You may also add the [`Retry-After`](https://tools.ietf.org/html/rfc7231#section-6.6.4) header to tell Chrome how long to wait before retrying prefetch requests.
 
 ## For referrer website owners {: #referrers }
 
@@ -116,5 +123,7 @@ This launch is only a first step. We hope to expand and improve this feature bas
 ## Read more
 
 - [Prefetch proxy for network administrators](/multidevice/private-prefetch-proxy-for-network-admins).
+- [Traffic advice explainer](https://github.com/buettner/private-prefetch-proxy/blob/main/traffic-advice.md)
+- [Traffic advice interesting ideas](https://buettner.github.io/private-prefetch-proxy/traffic-advice.html)
 - [WICG github repository for efforts related to navigation speculation](https://github.com/WICG/nav-speculation/).
 - [Chromium blog in which the private prefetch proxy concept was originally introduced](https://blog.chromium.org/2020/12/continuing-our-journey-to-bring-instant.html).

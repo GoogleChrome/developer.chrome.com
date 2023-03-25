@@ -355,6 +355,6 @@ npm or as a separate repo. The primary use is educational.
 
 [infscroller demo]: http://googlechromelabs.github.io/ui-element-samples/infinite-scroller/
 [infscroller code]: https://github.com/GoogleChromeLabs/ui-element-samples/tree/gh-pages/infinite-scroller
-[containment]: https://developers.google.com/web/updates/2016/06/css-containment
+[containment]: /blog/css-containment
 [intersectionobserver]: https://developers.google.com/web/updates/2016/04/intersectionobserver
 [compositor worklet]: https://developers.google.com/web/updates/2016/05/houdini
