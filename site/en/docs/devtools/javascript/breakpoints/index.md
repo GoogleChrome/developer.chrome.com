@@ -315,7 +315,7 @@ reaches a _sink_, which is a function like `eval()` or a property setter like
 
 In the **Breakpoints** pane of the **Sources** tab, go to the **CSP Violation Breakpoints** section and enable one of the following options or both, then execute the code:
 
-- Check {% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/0XBZkraxRXNBOP7W82K8.png", alt="Checkbox.", width="22", height="22" %} **Sink Violations**.
+- Check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Sink Violations**.
 
   {% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/0XBZkraxRXNBOP7W82K8.png", alt="Paused on a sink violation when the corresponding checkbox is enabled.", width="800", height="687" %}
 
