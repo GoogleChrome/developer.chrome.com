@@ -317,7 +317,7 @@ In the **Breakpoints** pane of the **Sources** tab, go to the **CSP Violation Br
 
 - Check {% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/0XBZkraxRXNBOP7W82K8.png", alt="Checkbox.", width="22", height="22" %} **Sink Violations**.
 
-  {% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/nV0Q1ZN1IJfe5gFgVEgZ.png", alt="Paused on a sink violation when the corresponding checkbox is enabled.", width="800", height="687" %}
+  {% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/0XBZkraxRXNBOP7W82K8.png", alt="Paused on a sink violation when the corresponding checkbox is enabled.", width="800", height="687" %}
 
   In this example, the execution is paused on a sink violation.
 
