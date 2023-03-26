@@ -294,9 +294,8 @@ In the **Breakpoints** pane of the **Sources** tab, go to the **CSP Violation Br
 
   In this example, the execution is paused on a policy exception. Trusted Type policies can be set using [`trustedTypes.createPolicy`](https://developer.mozilla.org/docs/Web/API/TrustedTypePolicyFactory/createPolicy).
 
-
 You can find more information about using the API to further your security aims at [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types/). See [Implementing CSP and Trusted Types debugging in Chrome DevTools](/blog/csp-issues/#debugging-trusted-types-problems)
-for debugging using the breakpoint.
+to learn about debugging using the breakpoint.
 
 ### Make sure the target function is in scope {: #scope }
 
