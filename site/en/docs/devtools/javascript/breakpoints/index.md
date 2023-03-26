@@ -275,28 +275,6 @@ debug(sum); // Pass the function object, not a string.
 sum();
 ```
 
-## Trusted Type breakpoints {: #trusted-type }
-
-The [Trusted Type API](https://developer.mozilla.org/docs/Web/API/Trusted_Types_API) provides protection against security
-exploits known as [cross-site scripting](https://owasp.org/www-community/attacks/xss/) (XSS) attacks.
-
-In the **Breakpoints** pane of the **Sources** tab, go to the **CSP Violation Breakpoints** section and enable one of the following options or both, then execute the code:
-
-- Check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Sink Violations**.
-
-  {% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/nV0Q1ZN1IJfe5gFgVEgZ.png", alt="Paused on a sink violation when the corresponding checkbox is enabled.", width="800", height="687" %}
-
-  In this example, the execution is paused on a sink violation. In XSS attacks, a sink
-
-- Check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Policy Violations**.
-
-  {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/n4ml9mus6jP2pl11HNeA.png", alt="Paused on a policy violation when the corresponding checkbox is enabled.", width="800", height="687" %}
-
-  In this example, the execution is paused on a policy exception. Trusted Type policies can be set using [`trustedTypes.createPolicy`](https://developer.mozilla.org/docs/Web/API/TrustedTypePolicyFactory/createPolicy).
-
-You can find more information about using the API to further your security aims at [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types/). See [Implementing CSP and Trusted Types debugging in Chrome DevTools](/blog/csp-issues/#debugging-trusted-types-problems)
-to learn about debugging using the breakpoint.
-
 ### Make sure the target function is in scope {: #scope }
 
 DevTools throws a `ReferenceError` if the function you want to debug is not in scope.
@@ -322,6 +300,29 @@ Console. Here's one strategy:
 2.  Trigger the breakpoint.
 3.  Call `debug()` in the DevTools Console while the code is still paused on your line-of-code
     breakpoint.
+
+## Trusted Type breakpoints {: #trusted-type }
+
+The [Trusted Type API](https://developer.mozilla.org/docs/Web/API/Trusted_Types_API) provides protection against security
+exploits known as [cross-site scripting](https://owasp.org/www-community/attacks/xss/) (XSS) attacks.
+
+In the **Breakpoints** pane of the **Sources** tab, go to the **CSP Violation Breakpoints** section and enable one of the following options or both, then execute the code:
+
+- Check {% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/iMHF1crfZUoEIZ121Wjj.png", alt="Checkbox.", width="22", height="22" %} **Sink Violations**.
+
+  {% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/nV0Q1ZN1IJfe5gFgVEgZ.png", alt="Paused on a sink violation when the corresponding checkbox is enabled.", width="800", height="687" %}
+
+  In this example, the execution is paused on a sink violation. In XSS attacks, a sink
+
+- Check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Policy Violations**.
+
+  {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/n4ml9mus6jP2pl11HNeA.png", alt="Paused on a policy violation when the corresponding checkbox is enabled.", width="800", height="687" %}
+
+  In this example, the execution is paused on a policy exception. Trusted Type policies can be set using [`trustedTypes.createPolicy`](https://developer.mozilla.org/docs/Web/API/TrustedTypePolicyFactory/createPolicy).
+
+You can find more information about using the API:
+- To further your security aims at [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types/).
+- To debug at [Implementing CSP and Trusted Types debugging in Chrome DevTools](/blog/csp-issues/#debugging-trusted-types-problems)
 
 [1]: /docs/devtools/javascript
 [2]: #loc
