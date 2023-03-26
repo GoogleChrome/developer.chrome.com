@@ -17,7 +17,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 
 ### Chrome 110 {: #chrome110 }
 
-* [Borrado del Panel Rendimiento al recargar](/es/blog/new-in-devtools-110/#perf)
+* [Reinicio del Panel Rendimiento al recargar](/es/blog/new-in-devtools-110/#perf)
 * [Actualizaciones en la Grabadora](/es/blog/new-in-devtools-110/#recorder)
 * [Vea y resalte el código de su flujo de usuario en la Grabadora](/es/blog/new-in-devtools-110/#recorder-code)
 * [Personalizar los tipos de selector de una grabación](/es/blog/new-in-devtools-110/#recorder-selector)
