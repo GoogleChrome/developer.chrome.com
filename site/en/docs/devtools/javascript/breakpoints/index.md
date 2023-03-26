@@ -315,7 +315,7 @@ reaches a _sink_, which is a function like `eval()` or a property setter like
 
 In the **Breakpoints** pane of the **Sources** tab, go to the **CSP Violation Breakpoints** section and enable one of the following options or both, then execute the code:
 
-- Check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Sink Violations**.
+- Check {% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/0XBZkraxRXNBOP7W82K8.png", alt="Checkbox.", width="22", height="22" %} **Sink Violations**.
 
   {% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/nV0Q1ZN1IJfe5gFgVEgZ.png", alt="Paused on a sink violation when the corresponding checkbox is enabled.", width="800", height="687" %}
 
@@ -325,7 +325,7 @@ In the **Breakpoints** pane of the **Sources** tab, go to the **CSP Violation Br
 
   {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/n4ml9mus6jP2pl11HNeA.png", alt="Paused on a policy violation when the corresponding checkbox is enabled.", width="800", height="687" %}
 
-  In this example, the execution is paused on a policy violation. Trusted Type policies are set using [`trustedTypes.createPolicy`](https://developer.mozilla.org/docs/Web/API/TrustedTypePolicyFactory/createPolicy).
+  In this example, the execution is paused on a policy violation. Trusted Type policies are set up using [`trustedTypes.createPolicy`](https://developer.mozilla.org/docs/Web/API/TrustedTypePolicyFactory/createPolicy).
 
 You can find more information about using the API:
 - To further your security aims, [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types/).
