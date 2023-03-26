@@ -325,7 +325,7 @@ In the **Breakpoints** pane of the **Sources** tab, go to the **CSP Violation Br
 
   {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/n4ml9mus6jP2pl11HNeA.png", alt="Paused on a policy violation when the corresponding checkbox is enabled.", width="800", height="687" %}
 
-  In this example, the execution is paused on a policy violation. The parameters of your Trusted Type policies can be set up using [`trustedTypes.createPolicy`](https://developer.mozilla.org/docs/Web/API/TrustedTypePolicyFactory/createPolicy).
+  In this example, the execution is paused on a policy violation. Trusted Type policies are set using [`trustedTypes.createPolicy`](https://developer.mozilla.org/docs/Web/API/TrustedTypePolicyFactory/createPolicy).
 
 You can find more information about using the API:
 - To further your security aims, [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types/).
