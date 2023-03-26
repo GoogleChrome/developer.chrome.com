@@ -316,7 +316,7 @@ In the **Breakpoints** pane of the **Sources** tab, go to the **CSP Violation Br
 
 {% Aside 'key-term' %}
 DOM-based cross-site scripting happens when data from a user controlled
-_source_ (like user name, or redirect URL taken from the URL fragment)
+_source_ (like username, or redirect URL taken from the URL fragment)
 reaches a _sink_, which is a function like `eval()` or a property setter like
 `.innerHTML`, that can execute arbitrary JavaScript code.
 {% endAside %}
