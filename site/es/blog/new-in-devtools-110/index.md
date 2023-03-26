@@ -29,10 +29,10 @@ tags:
 ## Reinicio del Panel Rendimiento al recargar {: #perf }
 
 <!-- The **Performance** panel now clears both the screenshot and trace when you click the **Start profiling and reload page** button. -->
-Ahora el panel **Rendimiento** reinicia tanto la captura de pantalla como el seguimiento cuando hace clic en el botón **Comenzar a crear perfiles y volver a cargar la página**.
+Ahora el panel **Rendimiento** reinicia tanto las capturas de pantalla como los datos del rastro cuando se hace clic en el botón **Comenzar a crear perfiles y volver a cargar la página**.
 
 <!-- Previously, the **Performance** panel displayed a timeline with screenshots from previous recordings. This made it difficult to see when the actual measurement started. The panel now always navigates to the `about:blank` page first to guarantee that the recording begins with a blank trace. This aligns with the **Performance Insights** panel which already did the same. -->
-Anteriormente, el panel **Rendimiento** mostraba una línea de tiempo con capturas de pantalla de grabaciones anteriores. Esto hizo que fuera difícil ver cuándo comenzó la medición real. El panel ahora siempre navega primero a la página `about:blank` para garantizar que la grabación comience con un rastro en blanco. Esto se alinea con el panel **Performance Insights** que ya hizo lo mismo.
+Anteriormente, el panel **Rendimiento** mostraba una línea de tiempo con capturas de pantalla de grabaciones anteriores. Esto hacía que fuera difícil ver cuándo comenzó la medición real. El panel ahora siempre navega primero a la página `about:blank` para garantizar que la grabación comience con un rastro en blanco. Esto se alinea con el panel **Performance Insights** que hizo lo mismo.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/JVXCt6hKIxMtf0tCLWwh.png", alt="Reinicio del panel de rendimiento al recargar.", width="800", height="548" %}
 
@@ -52,7 +52,7 @@ Chromium issues: [1101268](https://crbug.com/1101268), [1382044](https://crbug.c
 La **Grabadora** ahora ofrece una vista de código dividido, lo que facilita la visualización de su código de flujo de usuario. Para acceder a la vista de código, abra un flujo de usuario y haga clic en **Mostrar código**.
 
 <!-- The  **Recorder**  highlights the corresponding code as you hover over each step on the left, making it easy to track your flow. You can change the code format using the dropdown, which lets you switch between formats such as [Nightwatch Test](https://bit.ly/nightwatch-recorder) script. -->
-La **Grabadora** resalta el código correspondiente a medida que pasa el `mouse` sobre cada paso a la izquierda, lo que facilita el seguimiento de su flujo. Puede cambiar el formato del código usando el menú desplegable, que le permite cambiar entre formatos como el script [Nightwatch Test](https://bit.ly/nightwatch-recorder).
+La **Grabadora** resalta el código correspondiente a medida que pasa el *mouse* sobre cada paso a la izquierda, lo que facilita el seguimiento de su flujo. Puede cambiar el formato del código usando el menú desplegable, que le permite cambiar entre formatos como el script [Nightwatch Test](https://bit.ly/nightwatch-recorder).
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ZxNNmun9Yfqs97JCAn7C.png", alt="Vista de código en la grabadora.", width="800", height="542" %}
 
