@@ -41,9 +41,8 @@ Anteriormente, el panel **Rendimiento** mostraba una línea de tiempo con captur
 
 Chromium issues: [1101268](https://crbug.com/1101268), [1382044](https://crbug.com/1382044)
 
-
 <!-- ## Recorder updates {: #recorder } -->
- ## Actualizaciones de la Grabadora {: #recorder }
+## Actualizaciones de la Grabadora {: #recorder }
 
 <!-- ### View and highlight the code of your user flow in the Recorder {: #recorder-code } -->
 ### Vea y resalte el código de su flujo de usuario en la Grabadora {: #recorder-code }
