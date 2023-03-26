@@ -4,7 +4,7 @@ title: "Qué hay de nuevo en DevTools (Chrome 110)"
 authors:
   - jecelynyeen
 date: 2023-02-13
-description: 'Borrar el panel de Rendimiento al recargar, ver y resaltar el código en la Grabadora, y más.'
+description: 'Reinicio del panel de Rendimiento al recargar, ver y resaltar el código en la Grabadora, y más.'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/OWVZZ0I0ryefamwCQNTj.png'
 alt: ''
 tags:
@@ -26,15 +26,15 @@ tags:
 
 
 <!-- ## Clearing Performance Panel on reload {: #perf } -->
-## Borrado del Panel Rendimiento al recargar {: #perf }
+## Reinicio del Panel Rendimiento al recargar {: #perf }
 
 <!-- The **Performance** panel now clears both the screenshot and trace when you click the **Start profiling and reload page** button. -->
-Ahora el panel **Rendimiento** borra tanto la captura de pantalla como el seguimiento cuando hace clic en el botón **Comenzar a crear perfiles y volver a cargar la página**.
+Ahora el panel **Rendimiento** reinicia tanto la captura de pantalla como el seguimiento cuando hace clic en el botón **Comenzar a crear perfiles y volver a cargar la página**.
 
 <!-- Previously, the **Performance** panel displayed a timeline with screenshots from previous recordings. This made it difficult to see when the actual measurement started. The panel now always navigates to the `about:blank` page first to guarantee that the recording begins with a blank trace. This aligns with the **Performance Insights** panel which already did the same. -->
 Anteriormente, el panel **Rendimiento** mostraba una línea de tiempo con capturas de pantalla de grabaciones anteriores. Esto hizo que fuera difícil ver cuándo comenzó la medición real. El panel ahora siempre navega primero a la página `about:blank` para garantizar que la grabación comience con un rastro en blanco. Esto se alinea con el panel **Performance Insights** que ya hizo lo mismo.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/JVXCt6hKIxMtf0tCLWwh.png", alt="Borrado del panel de rendimiento al recargar.", width="800", height="548" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/JVXCt6hKIxMtf0tCLWwh.png", alt="Reinicio del panel de rendimiento al recargar.", width="800", height="548" %}
 
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/0a301d29d165f17a6eceb1adf91bff0c1c2e07eb #}
