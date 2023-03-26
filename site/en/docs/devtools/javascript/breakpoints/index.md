@@ -322,7 +322,7 @@ In the **Breakpoints** pane of the **Sources** tab, go to the **CSP Violation Br
 
 You can find more information about using the API:
 - To further your security aims at [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types/).
-- To debug at [Implementing CSP and Trusted Types debugging in Chrome DevTools](/blog/csp-issues/#debugging-trusted-types-problems)
+- For debugging at [Implementing CSP and Trusted Types debugging in Chrome DevTools](/blog/csp-issues/#debugging-trusted-types-problems)
 
 [1]: /docs/devtools/javascript
 [2]: #loc
