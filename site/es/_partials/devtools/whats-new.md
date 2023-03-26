@@ -15,20 +15,20 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
  #}
 
 
-{# ### Chrome 110 {: #chrome110 }
+### Chrome 110 {: #chrome110 }
 
-* [Clearing Performance Panel on reload](/es/blog/new-in-devtools-110/#perf)
-* [Recorder updates](/es/blog/new-in-devtools-110/#recorder)
-* [View and highlight the code of your user flow in the Recorder](/es/blog/new-in-devtools-110/#recorder-code)
-* [Customize selector types of a recording](/es/blog/new-in-devtools-110/#recorder-selector)
-* [Edit user flow while recording](/es/blog/new-in-devtools-110/#recorder-edit)
-* [Automatic in-place pretty print](/es/blog/new-in-devtools-110/#pretty-print)
-* [Better syntax highlight and inline preview for Vue, SCSS and more](/es/blog/new-in-devtools-110/#highlight)
-* [Ergonomic and consistent Autocomplete in the Console](/es/blog/new-in-devtools-110/#console)
-* [Miscellaneous highlights](/es/blog/new-in-devtools-110/#misc)
- #}
+* [Reinicio del Panel Rendimiento al recargar](/es/blog/new-in-devtools-110/#perf)
+* [Actualizaciones en la Grabadora](/es/blog/new-in-devtools-110/#recorder)
+* [Vea y resalte el código de su flujo de usuario en la Grabadora](/es/blog/new-in-devtools-110/#recorder-code)
+* [Personalizar los tipos de selector de una grabación](/es/blog/new-in-devtools-110/#recorder-selector)
+* [Edite el flujo de usuario mientras graba](/es/blog/new-in-devtools-110/#recorder-edit)
+* [Formateo automático in-situ](/es/blog/new-in-devtools-110/#pretty-print)
+* [Mejor resaltado de sintaxis y vista previa en línea para Vue, SCSS y más](/es/blog/new-in-devtools-110/#highlight)
+* [Autocompletar ergonómico y consistente en la Consola](/es/blog/new-in-devtools-110/#console)
+* [Destacados varios](/es/blog/new-in-devtools-110/#misc)
 
- 
+
+
 
 
 
