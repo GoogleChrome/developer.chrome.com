@@ -306,6 +306,13 @@ Console. Here's one strategy:
 The [Trusted Type API](https://developer.mozilla.org/docs/Web/API/Trusted_Types_API) provides protection against security
 exploits known as [cross-site scripting](https://owasp.org/www-community/attacks/xss/) (XSS) attacks.
 
+{% Aside 'key-term' %}
+DOM-based cross-site scripting happens when data from a user controlled
+_source_ (like username, or redirect URL taken from the URL fragment)
+reaches a _sink_, which is a function like `eval()` or a property setter like
+`.innerHTML`, that can execute arbitrary JavaScript code.
+{% endAside %}
+
 In the **Breakpoints** pane of the **Sources** tab, go to the **CSP Violation Breakpoints** section and enable one of the following options or both, then execute the code:
 
 - Check {% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/iMHF1crfZUoEIZ121Wjj.png", alt="Checkbox.", width="22", height="22" %} **Sink Violations**.
@@ -313,13 +320,6 @@ In the **Breakpoints** pane of the **Sources** tab, go to the **CSP Violation Br
   {% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/nV0Q1ZN1IJfe5gFgVEgZ.png", alt="Paused on a sink violation when the corresponding checkbox is enabled.", width="800", height="687" %}
 
   In this example, the execution is paused on a sink violation.
-
-{% Aside 'key-term' %}
-DOM-based cross-site scripting happens when data from a user controlled
-_source_ (like username, or redirect URL taken from the URL fragment)
-reaches a _sink_, which is a function like `eval()` or a property setter like
-`.innerHTML`, that can execute arbitrary JavaScript code.
-{% endAside %}
 
 - Check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Policy Violations**.
 
