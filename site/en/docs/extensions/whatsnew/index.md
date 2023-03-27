@@ -18,6 +18,8 @@ and related policy or other changes. You'll find other notices posted on the [Ex
 
 ### The File Handling API comes to ChromeOS
 
+<p class="color-secondary-text type--caption">Posted on <time>March 24, 2023</time></p>
+
 The File Handler API is available for experimentation on ChromeOS in Canary for versions 112 and 113. It lets extensions on ChromeOS open files with specified MIME types and file extensions. To implement file handling add a set of rules to the `manifest.json`. This feature works the same as for Progressive web apps. For more information, see [the article](/articles/file-handling/) elsewhere on this site.
 
 To enable file handling:
