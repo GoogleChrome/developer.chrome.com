@@ -114,7 +114,7 @@ const fallbackSVGBase64 = window.btoa(
       const matchApis = selectedApis.length
         ? cardApis.some(isSelectedApi)
         : true;
-      if (card.dataset.terms.toLowerCase().match(searchTerm) && matchApis) {
+      if (card.dataset.terms.match(searchTerm) && matchApis) {
         card.removeAttribute('hidden');
       } else {
         card.setAttribute('hidden', 'true');
