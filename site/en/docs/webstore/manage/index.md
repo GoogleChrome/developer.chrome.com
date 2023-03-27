@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Manage your Chrome Web Store Item"
 date: 2021-08-17
-updated: 2023-03-20
+updated: 2023-03-27
 description: >
   How to manage an extension or theme ("item") in the Chrome Web Store.
 ---
@@ -208,7 +208,7 @@ The **Weekly Users** stats only captures installations; it doesn't monitor wheth
 
 To track store item metrics, you can opt in to Google Analytics 4 by clicking **Opt in to Google Analytics** under **Additional metrics** on the **Store listing** tab. After opting in you will receive an email notification.
 
-The Chrome Web Store manages the account for you and makes the data available in Google Analytics. Chrome Web Store grants you access only to non user-level data. Fpr group publishers, all developers within the group, regardless of their role within the group, are granted access data for items owned by the group.
+The Chrome Web Store manages the account for you and makes the data available in Google Analytics. Chrome Web Store grants you access only to non user-level data. For group publishers, all developers within the group, regardless of their role within the group, are granted access to data for items owned by the group.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/nYdeRcgteYZL6pTyPQMA.png", alt="Where to opt in to Google Analytics", width="787", height="121" %}
 
