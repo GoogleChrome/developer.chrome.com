@@ -71,7 +71,7 @@ const fallbackSVGBase64 = window.btoa(
   }
 
   const onSearch = () => {
-    const searchTerm = searchAppsInput.value;
+    const searchTerm = searchAppsInput.value.toLowerCase();
     const selectedApis = apiSelect.value;
     filterCards(cards, searchTerm, selectedApis);
     const url = new URL(window.location.href);
