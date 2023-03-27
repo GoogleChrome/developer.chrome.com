@@ -27,6 +27,12 @@ export class LoadMore extends BaseElement {
     this.total = null;
     this.skip = 0;
     this.take = 10;
+    /**
+     * @callback
+     * @param {number} skip
+     * @param {number} take
+     * @returns {{items: string[], updated_total: number|undefined}} a list of html strings and an updated total if appropriate
+     */
     this.fetchItems = null;
     this.initialItems = [];
     this.loadedItems = [];

@@ -38,7 +38,7 @@ const upcomingTab = document.querySelector('[role=tab]:first-child');
 const pastTab = document.querySelector('[role=tab]:last-child');
 
 (() => {
-  injectCallbacks();
+  setFetchItems();
   addListeners();
   addMobileListeners();
 })();
@@ -104,7 +104,7 @@ function updateCount(element, total) {
   element.innerText = element.innerText.replace(/\([0-9]+\)/, `(${total})`);
 }
 
-function injectCallbacks() {
+function setFetchItems() {
   if (upcomingEvents)
     upcomingEvents.fetchItems = async (skip, take) => {
       const groups = await getEvents();
