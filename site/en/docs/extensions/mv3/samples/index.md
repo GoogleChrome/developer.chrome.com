@@ -55,7 +55,7 @@ To test these examples in your local machine, follow these steps:
 1. Navigate to the directory of the extension you want to try.
 1. [Load your extension locally][dev-basics-locally].
 
-Many samples a `README.md` with instructions on how the extension works. (We are working to add READMEs to all samples.)
+Many samples have a `README.md` with instructions on how the extension works. (We are working to add READMEs to all samples.)
 Read the instructions carefully; each extension is different. For example, some extensions run by clicking on the extension icon, while others run automatically but only run on specific sites. 
 
 ## Contributing samples {: #collaborating }
