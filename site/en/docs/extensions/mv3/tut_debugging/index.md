@@ -9,10 +9,7 @@ description: Step-by-step instructions on how to debug Chrome Extensions.
 
 ## Overview {: #overview }
 
-Extensions can leverage the same debugging benefits [Chrome DevTools][chrome-devtools] provides for web
-pages, but they carry unique behavior properties. Becoming a master extension debugger requires an
-understanding of these behaviors, how extension components work with each other, and where to corner
-bugs. This tutorial gives developers a basic understanding of debugging extensions.
+Extensions can access the same debugging tools as web pages in [Chrome DevTools][chrome-devtools]. However, to become an expert in debugging extensions, you need to know how the different parts of an extension work together and where to find logs and errors for each component. This tutorial provides developers with basic concepts and techniques to debug their extensions.
 
 ## Locate the logs {: #locate_logs }
 
