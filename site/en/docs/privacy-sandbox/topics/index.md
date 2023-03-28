@@ -87,9 +87,13 @@ const creative = await response.json();
 
 ### Access topics without modifying state {: #skipobservation}
 
-By default,  `document.browsingTopics()` records a topic observation whenever it returns topics. From Chrome 108, the `document.browsingTopics()` method can be passed an optional argument to skip this recording: `{skipObservation:true}`.
+By default,  `document.browsingTopics()` records a topic observation whenever
+it returns topics. From Chrome 108, the `document.browsingTopics()` method can
+be passed an optional argument to skip this recording: `{skipObservation:true}`.
 
-In other words, the call will not cause the current page to be included in the weekly epoch calculation, nor will it update the list of topics observed for the caller.}
+In other words, the call will not cause the current page to be included in the
+weekly epoch calculation, nor will it update the list of topics observed for
+the caller.
 
 ### Use headers to access and observe topics
 
