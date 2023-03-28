@@ -9,7 +9,7 @@ description: >
   When multiple animations affect the same property simultaneously, should they replace each other, add, or accumulate?
 date: 2023-03-29
 hero: 'image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/YBkrNxjn85x5n5HLFEXj.jpg'
-alt: "Milk pouring over tea"
+alt: "Milk pouring over tea."
 tags:
   - css
   - chrome-112
