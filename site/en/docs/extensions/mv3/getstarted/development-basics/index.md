@@ -169,9 +169,9 @@ To see this message logged in the Console:
   3. Select **Inspect**. 
       <figure> 
       {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/vHGHW1o4J0kZgUkAteRQ.png", 
-      alt="Inspecting the popup", width="322", height="262", class="screenshot" %}
+      alt="Inspecting the popup.", width="322", height="262", class="screenshot" %}
         <figcaption>
-        Inspecting a popup 
+        Inspecting a popup. 
         </figcaption>
       </figure>
   4. In the [DevTools][dev-tools], navigate to the **Console** panel.
