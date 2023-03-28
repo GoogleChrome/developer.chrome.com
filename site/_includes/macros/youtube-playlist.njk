@@ -2,9 +2,9 @@
 {% macro youTubePlaylist(id) %}
 
 
-{% for playlist in youtubePlaylist %}
-  {% if playlist.id === id %}
 
+{% for playlist in youtubePlaylists %}
+  {% if playlist.id === id %}
   <div class="gap-top-400">
     <div class="playlist hairline rounded-lg width-full">
       <div class="playlist__details rounded-lg">
@@ -14,7 +14,7 @@
               src="{{playlist.thumbnail}}"
               height="158"
               width="316"
-              alt="Thumbnail for {{playlist.title}}"
+              alt="{{playlist.title}} {{ 'i18n.youtube_playlist.thumbnail' | i18n(locale) }}"
               class="rounded-lg"
             />
             <div class="playlist__play-all">
@@ -22,7 +22,7 @@
                 href="https://www.youtube.com/watch?v={{playlist.videos[0].id}}&list={{playlist.id}}"
                 target="_blank"
                 class="no-visited">
-                PLAY ALL
+                {{ 'i18n.youtube_playlist.play_all' | i18n(locale) | upper  }}
                 </a>
             </div>
           </div>
@@ -38,8 +38,8 @@
           </h2>
 
           <p class="playlist__meta gap-top-200">
-            {{playlist.videos | length}} Videos<br />
-            Last updated on {{playlist.updated}}
+            {{playlist.videos | length}} {{  'i18n.youtube_playlist.videos' | i18n(locale) }}<br />
+            {{ 'i18n.youtube_playlist.updated' | i18n(locale) }} {{playlist.updated}}
           </p>
 
           <div class="playlist__channel">
@@ -47,7 +47,7 @@
               <div class="playlist__channel-icon">
                 <img
                   src="{{ playlist.channel.thumbnail }}"
-                  alt="Channel icon"
+                  alt="{{ 'i18n.youtube_playlist.channel_icon' | i18n(locale) }}"
                   height="56"
                   width="56"
                   />
@@ -60,7 +60,7 @@
               href="https://www.youtube.com/channel/{{ playlist.channel.id }}?sub_confirmation=1"
               target="_blank"
               class="material-button button-filled button-round display-inline-flex color-bg bg-red-medium"
-              >Subscribe</a
+              >{{  'i18n.youtube_playlist.subscribe' | i18n(locale) }}</a
               >
           </div>
         </div>
@@ -84,7 +84,7 @@
                 src="{{video.thumbnail}}"
                 height="114"
                 width="204"
-                alt="Thumbnail"
+                alt="{{ 'i18n.youtube_playlist.thumbnail' | i18n(locale) }}"
                 class="rounded-lg"
               />
             </div>
