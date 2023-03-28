@@ -148,7 +148,7 @@ An example aggregatable report with [debug mode](/docs/privacy-sandbox/private-a
     }
   ],
   "debug_key": "777",
-  "shared_info": "{\"api\":\"private-aggregation\",\"debug_mode\":\"enabled\",\"report_id\":\"5bc74ea5-7656-43da-9d76-5ea3ebb5fca5\",\"reporting_origin\":\"https://localhost:4437\",\"scheduled_report_time\":\"1664907229\",\"version\":\"0.1\"}"
+  "shared_info": "{\"api\":\"shared-storage\",\"debug_mode\":\"enabled\",\"report_id\":\"5bc74ea5-7656-43da-9d76-5ea3ebb5fca5\",\"reporting_origin\":\"https://localhost:4437\",\"scheduled_report_time\":\"1664907229\",\"version\":\"0.1\"}"
 ```
 
 The aggregatable reports can be inspected from the `chrome://private-aggregation-internals` page: 

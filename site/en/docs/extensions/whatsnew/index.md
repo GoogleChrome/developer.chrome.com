@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-03-14
+updated: 2023-03-24
 tags:
   - extensions-news
 
@@ -15,6 +15,19 @@ tags:
 
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about many of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).)
+
+### The File Handling API comes to ChromeOS
+
+<p class="color-secondary-text type--caption">Posted on <time>March 24, 2023</time></p>
+
+The File Handler API is available for experimentation on ChromeOS in Canary for versions 112 and 113. It lets extensions on ChromeOS open files with specified MIME types and file extensions. To implement file handling add a set of rules to the `manifest.json`. This feature works the same as for Progressive web apps. For more information, see [the article](/articles/file-handling/) elsewhere on this site.
+
+To enable file handling:
+
+* Starting in 112, launch Chrome using the `--enable-features=ExtensionWebFileHandlers` flag, starting in 112 
+* Starting in 113, paste `chrome://flags/#extension-web-file-handlers` into the Chrome omnibox and select 'Enabled' from the dropdown menu. 
+
+We hope to launch this feature in Chrome 115, in late June. Watch this space for updates.
 
 ### New Samples: dynamic declarations and programmatic injection {: #dynamic-dec-prog-inject }
 
