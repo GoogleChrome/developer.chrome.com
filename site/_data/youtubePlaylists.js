@@ -1,4 +1,3 @@
-// const escapeStringRegexp = require('escape-string-regexp');
 const fs = require('fs');
 const path = require('path');
 
