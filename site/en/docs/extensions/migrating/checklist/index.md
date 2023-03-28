@@ -6,7 +6,7 @@ description: A quick reference for upgrading your extensions from Manifest V2 to
 date: 2023-03-09
 ---
 
-The checklists below are here to help you keep track of your migration work. They define tasks that must be completed with links to instructions for the work. Migration work is broadly divided into five categories as described in the [Migration summary](). 
+The checklists below are here to help you keep track of your migration work. They define tasks that must be completed with links to instructions. Migration work is broadly divided into five categories as described in the [Migration summary](). 
 
 {% Details  'open' %}
 
@@ -14,7 +14,7 @@ The checklists below are here to help you keep track of your migration work. The
 ## Update the manifest {: update-manifest }
 {% endDetailsSummary %}
 
-The `manifest.json` file requires a slightly different format for V3 than for V2. This page describes changes that only affect the `manifest.json` file. But many of the changes to scripts and pages also require changes to the manifest. Those changes are covered with the migration tasks that require them.
+The `manifest.json` file requires a slightly different format for Manoifest V3 than for Manifest V2. This page describes changes that only affect the `manifest.json` file. But many of the changes to scripts and pages also require changes to the manifest. Those changes are covered with the migration tasks that require them.
 
 * [Change the manifest version number](/docs/extensions/migrating/manifest/#change-version).
 * [Update host permissions](/docs/extensions/migrating/manifest/#update-host-permissions).
@@ -46,7 +46,7 @@ Before beginning, read about the [differences between background scripts and ext
 ## Update API calls
 {% endDetailsSummary %}
 
-Some features need to be replaced with more modern equivalents. Others need to be removed entirely.
+Some features need to be replaced with Manifest V3 equivalents. Others need to be removed entirely.
 
 * [Replace `tabs.executeScript()` with `scripting.executeScript()`](/docs/extensions/migrating/api-calls/#replace-executescript).
 * [Replace `tabs.insertCSS()` and `tabs.removeCSS()` with `scripting.insertCSS()` and `scripting.removeCSS()`](/docs/extensions/migrating/api-calls/#replace-insertcss-removecss).
@@ -80,7 +80,7 @@ After completing the items above, you may want to review a few [common use cases
 ## Improve extension security
 {% endDetailsSummary %}
 
-Changes are required to improve the security of extensions. This includes ending support for remotely hosted code.
+Changes are required to improve the security of extensions. This includes removing remotely hosted code, which is no longer supported.
 * [Remove execution of arbitrary strings](/docs/extensions/migrating/improve-security/#remove-execution-of-strings).
 * [Remove remotely hosted code](/docs/extensions/migrating/improve-security/#remove-remote-code)
 * [Update content security policy](/docs/extensions/migrating/improve-security/#update-csp).
