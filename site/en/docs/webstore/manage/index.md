@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Manage your Chrome Web Store Item"
 date: 2021-08-17
-updated: 2022-11-02
+updated: 2023-03-27
 description: >
   How to manage an extension or theme ("item") in the Chrome Web Store.
 ---
@@ -206,11 +206,11 @@ The **Weekly Users** stats only captures installations; it doesn't monitor wheth
 
 ### Google Analytics
 
-To use Google Analytics to track Store item metrics, you can add your Google
-Analytics ID in the **Store listing Tab** under Additional fields.
+To track store item metrics, you can opt in to Google Analytics 4 by clicking **Opt in to Google Analytics** under **Additional metrics** on the **Store listing** tab. After opting in you will receive an email notification.
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/nYdeRcgteYZL6pTyPQMA.png", alt="where to add google
-analytics id", width="787", height="121" %}
+The Chrome Web Store manages the account for you and makes the data available in Google Analytics. Chrome Web Store grants you access only to non user-level data. For group publishers, all developers within the group, regardless of their role within the group, are granted access to data for items owned by the group.
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/nYdeRcgteYZL6pTyPQMA.png", alt="Where to opt in to Google Analytics", width="787", height="121" %}
 
 [cws-review]: /docs/webstore/review-process/
 [cws-support]: https://support.google.com/chrome_webstore/contact/dev_account_transfer
