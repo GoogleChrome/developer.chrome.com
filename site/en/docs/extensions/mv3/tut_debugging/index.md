@@ -3,11 +3,13 @@ layout: "layouts/doc-post.njk"
 title: "Debugging extensions"
 seoTitle: "Chrome Extensions Tutorial: Debugging extensions"
 date: 2012-09-18
-updated: 2021-09-17
+updated: 2022-04-03
 description: Step-by-step instructions on how to debug Chrome Extensions.
 ---
 
-Extensions are able to leverage the same debugging benefits [Chrome DevTools][1] provides for web
+## Overview {: #overview }
+
+Extensions can leverage the same debugging benefits [Chrome DevTools][chrome-devtools] provides for web
 pages, but they carry unique behavior properties. Becoming a master extension debugger requires an
 understanding of these behaviors, how extension components work with each other, and where to corner
 bugs. This tutorial gives developers a basic understanding of debugging extensions.
@@ -15,7 +17,7 @@ bugs. This tutorial gives developers a basic understanding of debugging extensio
 ## Locate the logs {: #locate_logs }
 
 Extensions are made of many different components, and these components have individual
-responsibilities. Download a broken extension [here][2] to begin locating error logs for different
+responsibilities. Download a broken extension [here TBD][gh-broken-color] to begin locating error logs for different
 extension components.
 
 ### Background script {: #debug_bg }
@@ -60,9 +62,9 @@ chrome.runtime.oninstalled.addListener(function() {
 });
 ```
 
-The background script is attempting to listen for the [`onInstalled`][3] event, but the property
+The background script is attempting to listen for the [`onInstalled`][runtime-oninstalled] event, but the property
 name requires an upper case "I". Update the code to reflect the correct call, click the **Clear
-all** button in the upper right hand corner, then reload the extension.
+all** button in the upper right-hand corner, then reload the extension.
 
 ### Popup {: #debug_popup }
 
@@ -84,7 +86,7 @@ Popup errors can also be viewed by inspecting the popup.
        alt="DevTools displaying popup error", height="189", width="499" %}
 
 The error, `tabs is undefined`, says the extension doesn't know where to inject the content script.
-This can be corrected by calling the [`tabs.query()`][4] method, then selecting the active tab.
+This can be corrected by calling the [`tabs.query()`][tabs-query] method, then selecting the active tab.
 
 ```js/8-12
   let changeColor = document.getElementById('changeColor');
@@ -109,7 +111,7 @@ This can be corrected by calling the [`tabs.query()`][4] method, then selecting 
 
 ```
 
-Update the code, click the **Clear all** button in the upper right hand corner, and then reload the
+Update the code, click the **Clear all** button in the upper right-hand corner, and then reload the
 extension.
 
 ### Content script {: #debug_cs }
@@ -141,7 +143,7 @@ Correct the injected script to pass the color variable into the code.
 
 ### Extension tabs {: #extension_tabs }
 
-Logs for extension pages displayed as a tab, such as [override pages][5] and [full-page options][6],
+Logs for extension pages displayed as a tab, such as [override pages][doc-override] and [full-page options][doc-options],
 can be found in the web page console and on the extensions management page.
 
 ## Monitor network requests {: #network_requests }
@@ -156,9 +158,9 @@ reload the popup without closing the DevTools panel.
 ## Declare permissions {: #declare_permission }
 
 While extensions have similar capabilities as web pages they often need permission to use certain
-features, such as [cookies][7], [storage][8] and [Cross-Origin XMLHttpRequests][9]. Refer to the
-[permissions article][10] and the available [Chrome APIs][11] to ensure an extension is requesting
-the correct permissions in its [manifest][12].
+features, such as [cookies][api-cookies], [storage][api-storage] and [Fetch][9]. Refer to the
+[permissions article][doc-perms] and the available [Chrome APIs][doc-chrome-apis] to ensure an extension is requesting
+the correct permissions in its [manifest][doc-manifest].
 
 ```json/4-8
   {
@@ -195,20 +197,18 @@ the correct permissions in its [manifest][12].
 
 ## Next steps {: #next }
 
-For further information on debugging extensions, watch [Developing and Debugging][13]. Learn more
-about [Chrome Devtools][14] by reading the documentation.
+Learn more about [Chrome Devtools][chrome-devtools] by reading the documentation.
 
-[1]: https://developers.google.com/web/tools/chrome-devtools/
-[2]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/e716678b67fd30a5876a552b9665e9f847d6d84b/mv2-archive/tutorials/broken_background_color
-[3]: /docs/extensions/reference/runtime#event-onInstalled
-[4]: /docs/extensions/reference/tabs#method-query
-[5]: /docs/extensions/mv3/override
-[6]: /docs/extensions/mv3/options#full_page
-[7]: /docs/extensions/reference/cookies
-[8]: /docs/extensions/reference/storage
-[9]: /docs/extensions/mv3/xhr
-[10]: /docs/extensions/mv3/permission_warnings
-[11]: /docs/extensions/reference
-[12]: /docs/extensions/reference/tabs
-[13]: http://www.youtube.com/watch?v=IP0nMv_NI1s&feature=PlayList&p=CA101D6A85FE9D4B&index=5
-[14]: https://developers.google.com/web/tools/chrome-devtools/
+[api-cookies]: /docs/extensions/reference/cookies
+[api-storage]: /docs/extensions/reference/storage
+[api-tabs]: /docs/extensions/reference/tabs
+[chrome-devtools]: https://developers.google.com/web/tools/chrome-devtools/
+[doc-chrome-apis]: /docs/extensions/reference
+[doc-manifest]: /docs/extensions/mv3/manifest
+[doc-options]: /docs/extensions/mv3/options#full_page
+[doc-override]: /docs/extensions/mv3/override
+[doc-perms]: /docs/extensions/mv3/declare_permissions/
+[doc-xhr]: /docs/extensions/mv3/xhr
+[gh-broken-color]: https://github.com/GoogleChrome/chrome-extensions-samples/
+[runtime-oninstalled]: /docs/extensions/reference/runtime#event-onInstalled
+[tabs-query]: /docs/extensions/reference/tabs#method-query
