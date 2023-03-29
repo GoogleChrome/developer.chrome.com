@@ -105,12 +105,10 @@ Communicate between offscreen documents and extension service workers using [mes
 
 ## Convert localStorage to chrome.storage.local {: #convert-localstorage }
 
-The web platform's [`Storage`](https://developer.mozilla.org/docs/Web/API/Storage) interface (accessible from `window.localStorage`) cannot be used in a background script. You have two options for replacing it.
+The web platform's [`Storage`](https://developer.mozilla.org/docs/Web/API/Storage) interface (accessible from `window.localStorage`) cannot be used in a background script. To address this:
 
-* Move its calls to an [offscreen document](/docs/extensions/reference/offscreen/).
-* Replace it with calls to the [`chrome.storage.local`](/docs/extensions/reference/storage/#property-local) namespace.
-
-In the latter case, you will still need to handle the conversion in an offscreen document.
+1. Move its calls to an [offscreen document](/docs/extensions/reference/offscreen/).
+1. (Optional) Replace it with calls to the [`chrome.storage.local`](/docs/extensions/reference/storage/#property-local) namespace. For details, see [the instructions](/docs/extensions/reference/storage/#can-extensions-use-storage).
 
 ## Register listeners synchronously {: #register-listeners }
 
