@@ -83,14 +83,15 @@ function getPlayAllUrl(playlistId, firstVideoUrl) {
 
 module.exports = async () => {
   const data = await getPlaylistData();
-
+  const playlists = {};
   data.playlists.forEach(playlist => {
     playlist.url = getPlaylistUrl(playlist.id);
     playlist.playAll = getPlayAllUrl(playlist.id, playlist.videos[0].id);
     playlist.updated = formatDate(playlist.updated);
     playlist.channel = getChannelData(playlist.channel, data.channels);
     playlist.videos = formatVideos(playlist.videos, playlist.id);
+    playlists[playlist.id] = playlist;
   });
 
-  return data.playlists;
+  return playlists;
 };

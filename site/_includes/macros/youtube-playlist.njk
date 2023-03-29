@@ -1,10 +1,8 @@
 
 {% macro youTubePlaylist(id) %}
 
+{% set playlist =  youtubePlaylists[id] %}
 
-
-{% for playlist in youtubePlaylists %}
-  {% if playlist.id === id %}
   <div class="gap-top-400">
     <div class="playlist hairline rounded-lg width-full">
       <div class="playlist__details rounded-lg">
@@ -103,6 +101,4 @@
 
     </div>
   </div>
-      {% endif %}
-    {% endfor %}
   {% endmacro %}
