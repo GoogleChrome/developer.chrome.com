@@ -5,9 +5,9 @@
   position: relative;
 
   @include media-query('lg-max') {
-    border-top: 1px solid #dadce0;
+    border-top: 1px solid get-color('grey-300');
     margin: 0 1rem;
-    padding: px-to-rem(16px) 0;
+    padding: 1rem 0;
   }
 
   &:first-child {
@@ -24,10 +24,10 @@
     content: '';
     display: block;
     height: 100%;
-    left: px-to-rem(14px);
+    left: 0.875rem;
     position: absolute;
     top: 0;
-    width: calc(100% - #{px-to-rem(14px)});
+    width: calc(100% - #{0.875rem});
     z-index: -1;
 
     @include media-query('lg-max') {
@@ -38,8 +38,8 @@
   }
 
   &:first-child::after {
-    height: calc(100% + #{px-to-rem(32px)});
-    top: px-to-rem(-32px);
+    height: calc(100% + 2rem);
+    top: -2rem;
   }
 
   &:hover .playlist-video__action {
@@ -69,8 +69,8 @@
 
     @include media-query('lg-max') {
       border-bottom: unset;
-      padding-bottom: px-to-rem(16px);
-      padding-right: px-to-rem(110px);
+      padding-bottom: 1rem;
+      padding-right: 6.875rem;
       padding-top: 1rem;
 
     }
@@ -84,55 +84,56 @@
     background: get-color('red-600');
     border-radius: 100%;
     color: #fff;
-    height: px-to-rem(30px);
-    line-height: px-to-rem(30px);
-    margin-right: px-to-rem(24px);
-    min-width: px-to-rem(30px);
+    height: 1.875rem;
+    line-height: 1.875rem;
+    margin-right: 1.5rem;
+    min-width: 1.875rem;
     position: relative;
     text-align: center;
 
     @include media-query('lg-max') {
-      font-size: px-to-rem(14px);
-      height: px-to-rem(22px);
-      line-height: px-to-rem(22px);
-      margin-right: px-to-rem(16px);
+      font-size: 0.875rem;
+      height: 1.375rem;
+      line-height: 1.375rem;
+      margin-right: 1rem;
       margin-top: 1rem;
-      max-width: px-to-rem(22px);
-      min-width: px-to-rem(22px);
+      max-width: 1.375rem;
+      min-width: 1.375rem;
     }
 
     &::after {
-      border-left: 5px dotted #fde9e6;
+      border-left: 5px dotted var(--color-red-lighter);
       content: '';
       display: block;
-      height: 145px;
-      left: px-to-rem(13px);
+      height: 9.063rem;
+      left: 0.813rem;
       position: absolute;
-      width: 4px;
+      width: 0.25rem;
     }
   }
 
-  @media screen and (max-width: 991px) {
-    .playlist-video__number::after {
+   
+  &__number::after {
+    @include media-query('lg-max') {
       display: none;
     }
   }
 
   &__thumbnail {
-    flex-basis: 204px;
-    margin-right: px-to-rem(24px);
-    min-width: 204px;
+    flex-basis: 12.75rem;
+    margin-right: 1.5rem;
+    min-width: 12.75rem;
 
     @include media-query('lg-max') {
-      border-radius: px-to-rem(10px);
+      border-radius: 0.625rem;
       height: auto;
       margin-right: 0;
-      min-width: px-to-rem(100px);
+      min-width: 6.25rem;
       overflow: hidden;
       padding-left: 0.5rem;
       position: absolute;
-      right: px-to-rem(16px);
-      top: px-to-rem(16px);
+      right: 1rem;
+      top: 1rem;
       width: 8rem;
     }
   }
@@ -151,7 +152,7 @@
   &__detail p {
     
     @include media-query('lg-max') {
-      font-size: px-to-rem(14px);
+      font-size: 0.875rem;
       line-height: 1.5;
     }
   }
@@ -168,11 +169,11 @@
 
   &__title {
     font-weight: 500;
-    line-height: px-to-rem(24px);
+    line-height: 1.5rem;
     margin-right: 2rem;
     
     @include media-query('lg-max') {
-      margin-bottom: px-to-rem(6px);
+      margin-bottom: 0.375rem;
     }
   }
 
