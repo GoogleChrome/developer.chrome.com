@@ -16,10 +16,10 @@
     - url: /docs/web-platform/navigation-api
     - url: /docs/web-platform/region-capture
     - url: /docs/web-platform/virtual-keyboard
+    - url: /docs/web-platform/view-transitions
 
 - title: i18n.docs.web-platform.beta
   sections:
-    - url: /docs/web-platform/view-transitions
 
 - title: i18n.docs.web-platform.origin-trials
   sections:

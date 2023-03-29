@@ -269,7 +269,11 @@ The table below provides examples of different types of FLEDGE interest group an
   </table>
 </div>
 
-<br>
+{: #interest-group-limits}
+
+Chrome allows up to 1000 interest groups per owner, and up to 1000 interest group
+owners. These limits are meant as guard rails, not to be hit in regular operation.
+
 
 {% endDetails %}
 

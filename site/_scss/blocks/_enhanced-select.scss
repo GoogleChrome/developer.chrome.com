@@ -30,7 +30,7 @@
     padding: 1.125rem 0;
     position: absolute;
     transform: translateY(100%);
-    z-index: 1;
+    z-index: 10;
 
     &::-webkit-scrollbar-thumb {
       background: get-color('grey-200');
@@ -58,6 +58,10 @@
     li:hover:not([selected]) {
       background: get-color('blue-50');
       color: get-color('blue-700');
+    }
+
+    li:first-child {
+      margin-top: 0;
     }
 
     li:last-child {
