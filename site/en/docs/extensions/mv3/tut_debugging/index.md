@@ -20,6 +20,58 @@ This guide assumes that you have basic web development experience. We recommend 
 
 Start by downloading the [Broken Background Color][gh-broken-color]. The following sections break one component of the extension at a time. Remember to correct these errors before moving on to the next section.
 
+### Debug the manifest {: #debug-manifest}
+
+Open the manifest file and change the `"version"` key to `"versions"`
+
+{% Label %}manifest.json:{% endLabel %}
+
+```json/3/2
+{
+  "name": "Broken Background Color",
+  "version": "1.0",
+  "versions": "1.0",
+  "description": "Fix an Extension!",
+  ...
+}
+```
+
+Follow the instructions to [Load an unpacked extension][dev-basic-unpacked]. When a manifest key is invalid, the extension will fail to load. You will see a message pointing to the problem: 
+
+<figure>
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/acjM7iQ73yXZJO90eeuR.png", alt="TBD", width="600", height="347", class="screenshot" %}
+  <figcaption>
+    TBD
+  </figcaption>
+</figure>
+
+After correcting the previous error, change the `"activeTab"` permission to `"activetab"`:
+
+{% Label %}manifest.json:{% endLabel %}
+
+```json/3/2
+{
+  ...
+  "permissions": ["activeTab", "scripting", "storage"],
+  "permissions": ["activetab", "scripting", "storage"],
+  ...
+}
+```
+
+Save the extension and load it again. This time it will load successfully, but you will see the **Errors** button turn red. Click on the button to locate the error.
+
+<figure>
+  {% Video src="video/BhuKGJaIeLNPW9ehns59NfwqKxF2/MklSHq3NqtDYvvXHLTmk.mp4", width="800", height="714", autoplay="true", loop="true", muted="true" %}
+  <figcaption>
+    TBD
+  </figcaption>
+</figure>
+
+{% Aside 'success' %}
+
+Using a [manifest schema][manifest-schema] in your code editor is a way to ensure that the manifest has the proper formatting and required fields.
+
+{% endAside %}
 
 Extensions are made of many different components, and these components have individual
 responsibilities. Download a broken extension [here TBD][gh-broken-color] to begin locating error logs for different
