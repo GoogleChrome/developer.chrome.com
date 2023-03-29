@@ -8,12 +8,12 @@ description: How to let users customize your extension.
 ---
 
 Just as extensions allow users to customize the Chrome browser, the options page enables
-customization of the extension. Options can be used to enable features and allow users to choose
+customization of the extension. Use options to enable features and allow users to choose
 what functionality is relevant to their needs.
 
 ## Locating the options page {: #view_page }
 
-Users can access the options page via [direct link][section-link-options] or by right-clicking the extension icon in the toolbar and then selecting options. Additionally, a user can navigate to the Extensions page at `chrome://extensions`, locate the desired extension, click **Details**, and then select the options link.
+Users can access the options page by [direct link][section-link-options] or by right-clicking the extension icon in the toolbar and then selecting options. Additionally, users can navigate to the Extensions page at `chrome://extensions`, locate the desired extension, click **Details**, and then select the options link.
 
 {% Columns %}
 
@@ -77,7 +77,7 @@ The following is an example of an options page:
 ```
 
 Below is an example options script. Save it in the same folder as `options.html`.
-This saves the user's preferred options across devices using the [storage.sync][1] API.
+This saves the user's preferred options across devices using the [`storage.sync`][1] API.
 
 {% Label %}options.js:{% endLabel %}
 
@@ -134,11 +134,11 @@ Finally, add the `"storage"` permission to the extension's [manifest][doc-manife
 ## Declare options page behavior {: #declare_options }
 
 There are two available types of extension options pages, [full page][2] and [embedded][3]. The type
-of options is determined by how it is declared in the manifest.
+of options page is determined by how it is declared in the manifest.
 
 ### Full page options {: #full_page }
 
-An extension's options page will be displayed in a new tab. The options HTML file is
+An extension's options page is displayed in a new tab. The options HTML file is
 registered under the `"options_page"` field.
 
 {% Label %}manifest.json:{% endLabel %}
@@ -151,16 +151,19 @@ registered under the `"options_page"` field.
   ...
 }
 ```
-
+<figure>
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Ej3H0FMApR7srtGbZfBZ.png", 
        alt="Full page options", height="124", width="367" %}
+  <figcaption>
+    Full page options in a new tab.
+  </figcaption>
+</figure>
 
 ### Embedded options {:#embedded_options }
 
 Embedded options allows users to adjust extension options without navigating away from the
 extensions management page inside an embedded box. To declare embedded options, register the HTML
-file under the `"options_ui"` field in the extension manifest, with the `open_in_tab` key set to
-false.
+file under the `"options_ui"` field in the extension manifest, with the `"open_in_tab"` key set to `false`.
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -176,22 +179,23 @@ false.
 }
 ```
 
+<figure>
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/AW1YkMTrWYUNmtTaRM0q.png",
        alt="Embedded options", height="386", width="633" %}
+  <figcaption>
+    Embedded options.
+  </figcaption>
+</figure>
 
-- **`page` (string)**
+`page` (string)
+: Path to the options page, relative to the extension's root.
 
-  Path to the options page, relative to the extension's root.
-
-- **`open_in_tab` (boolean)**
-
-  Specify as `false` to declare an embedded options page. If `true`, the extension's options page
-  will be opened in a new tab rather than embedded in _chrome://extensions_.
+`open_in_tab` (boolean)
+: Specify as `false` to declare an embedded options page. If `true`, the extension's options page will be opened in a new tab rather than embedded in _chrome://extensions_.
 
 ## Consider the differences {: #considerations }
 
-Options pages embedded inside _chrome://extensions_ have some subtle behavior differences related to
-not being hosted inside their own tabs.
+Options pages embedded inside _chrome://extensions_ have subtle behavior differences from options pages in tabs.
 
 ### Linking to the options page {: #linking }
 
@@ -201,10 +205,8 @@ An extension can link directly to the options page by calling
 {% Label %}popup.html:{% endLabel %}
 
 ```html
-...
 <button id="go-to-options">Go to options</button>
 <script src="popup.js"></script>
-...
 ```
 
 {% Label %}popup.js:{% endLabel %}
@@ -224,18 +226,18 @@ document.querySelector('#go-to-options').addEventListener('click', function() {
 Extension embedded options page code is not hosted inside a tab, affecting how the [Tabs API][5] can
 be used:
 
-- [tabs.query][6] will never find a tab within an extension's options page URL.
-- [tabs.onCreated][7] will not fire when the options page is opened.
-- [tabs.onUpdated][8] will not fire when the options page load state changes.
-- [tabs.connect][9] or [tabs.sendMessage][10] cannot be used to communicate with the options page.
+- [`tabs.query()`][6] will never find a tab within an extension's options page URL.
+- [`tabs.onCreated`][7] will not fire when the options page is opened.
+- [`tabs.onUpdated`][8] will not fire when the options page load state changes.
+- [`tabs.connect()`][9] or [`tabs.sendMessage()`][10] cannot be used to communicate with the options page.
 
-Using [runtime.connect][11] and [runtime.sendMessage][12] is a work around to these restrictions, if
-the options page does need to manipulate the containing tab.
+Use [`runtime.connect()`][11] and [`runtime.sendMessage()`][12] to work around these restrictions,
+if the options page does need to manipulate the containing tab.
 
 ### Messaging APIs {: #messaging-api }
 
-If an extension's options page sends a message using [runtime.connect][13] or
-[runtime.sendMessage][14], the [Sender's tab][15] will not be set, and the [Sender's URL][16] will
+If an extension's options page sends a message using [`runtime.connect()`][13] or
+[`runtime.sendMessage()`][14], the [sender's tab][15] will not be set, and the [sender's URL][16] will
 be the options page URL.
 
 ### Sizing {: #sizing }
