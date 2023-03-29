@@ -6,7 +6,9 @@ authors:
   - shubhie
   - addyosmani
   - housseindjirdeh
+  - karaerickson
 date: 2021-06-15
+updated: 2023-03-29
 hero: image/0SXGYLkliuPQY3aSy3zWvdv7RqG2/KvZQXFKIGKEzAjxzf5bF.jpg
 alt: Night sky
 
@@ -148,19 +150,19 @@ defaults of multiple frameworks, including:
 - An Image component in
   [Next.js](https://nextjs.org/docs/basic-features/image-optimization) that
   encapsulates best practices for image loading, followed by a collaboration
-  with [Nuxt](https://image.nuxtjs.org/) on the same. Use of this component
-  has resulted in significant improvements to paint times and layout shift
-  (example: 57% reduction in Largest Contentful Paint and 100% reduction in
-  Cumulative Layout Shift on
+  with [Nuxt](https://image.nuxtjs.org/) and [Angular](/blog/angular-image-directive) 
+  using the same approach. Use of this component has resulted in significant improvements 
+  to paint times and layout shift (example: 57% reduction in Largest Contentful Paint 
+  and 100% reduction in Cumulative Layout Shift on
   [nextjs.org/give](https://mobile.twitter.com/rauchg/status/1321452444656623616/photo/2)).
 - Automated inlining of CSS for Web Font declarations at build time. This
   feature has landed in
   [Angular](https://angular.io/guide/workspace-config#fonts-optimization-options)
-  (Google Fonts) and
+  (Google Fonts),
   [Next.js](https://nextjs.org/docs/basic-features/font-optimization) (Google
-  Fonts & Adobe Fonts) resulting in notable improvements to Largest Contentful
-  Paint and First Contentful Paint
-  ([example](https://twitter.com/griefcode/status/1387746148883050496)).
+  Fonts & Adobe Fonts), and [Nuxt](https://google-fonts.nuxtjs.org/) (Google Fonts), 
+  resulting in notable improvements to Largest Contentful Paint and First Contentful 
+  Paint ([example](https://twitter.com/griefcode/status/1387746148883050496)).
 - Inlining critical CSS using
   [Critters](https://github.com/GoogleChromeLabs/critters) in both
   [Angular](https://angular.io/guide/workspace-config#styles-optimization-options)
@@ -171,6 +173,11 @@ defaults of multiple frameworks, including:
   in Next.js that includes a custom plugin and shareable configuration to make
   it easier to catch common framework-specific issues at build-time, resulting
   in more predictable loading performance.
+- A Script component in [Next.js](/blog/script-component) that facilitates best practices 
+  for loading third-party scripts. 
+- Built-in modules for size-adjustment for web font fallbacks in 
+  [Next.js and Nuxt](/blog/framework-tools-font-fallback), which can reduce CLS caused by web 
+  fonts when they are swapped with the fallback font.
 - An introduction of a built-in performance relayer in [Create React
   App](https://create-react-app.dev/docs/measuring-performance/) and
   [Next.js](https://nextjs.org/docs/advanced-features/measuring-performance) to
@@ -188,28 +195,30 @@ Every one of these features have either been automated to be enabled by default
 or only need a simple opt-in. This is essential to ensure that developers can
 easily reap their benefits without adding complexity to their workflow.
 
-## What are we planning for 2021?
+## What are we planning for 2023?
 
-Through the rest of this year, we will be focused on helping framework stacks
-improve user experience and how well they perform on metrics such as the Core
-Web Vitals. This work will include:
+In 2023, we will be focused on helping framework stacks improve user experience and how well they 
+perform on metrics such as the Core Web Vitals. This work will include:
 
-- Conformance for enforcing best practices. Check out the [blog post](/blog/conformance) to
-  learn more.
-- Optimizing initial load performance by building on our collaborations to optimize
-  [Images](https://nextjs.org/blog/next-10#built-in-image-component-and-automatic-image-optimization),
-  [Fonts](https://nextjs.org/blog/next-10-2#automatic-webfont-optimization) and [Critical
-  CSS](https://angular.io/guide/workspace-config#optimization-configuration).
 - Loading third-party scripts (3Ps) with minimal perf impact by building on our foundation of work
-  on a [Script](https://nextjs.org/docs/basic-features/script) component and performing deep
-  research into how best to order and sequence 3Ps.
-- JavaScript performance at scale (e.g. supporting [React Server
-  Components](https://reactjs.org/blog/2020/12/21/data-fetching-with-react-server-components.html)
-  in Next.js).
+  on a [Next.js Script component](/blog/script-component) and performing deep research into how best
+  to order and sequence 3Ps.
+- Optimizing initial load performance by building on our collaborations to optimize
+  images with [Angular](/blog/angular-image-directive) and [Nuxt](https://image.nuxtjs.org/).
+- Digging deeper into common causes for [INP](https://web.dev/inp/) issues in frameworks and building built-in 
+  solutions for framework users where possible.
+- Improving the developer experience for Angular SSR and hydration to allow more applications to take 
+  advantage of the LCP benefits.
+
+## Follow our progress
 
 Our team will aim to post more regular information on RFCs and design docs for
 these ideas so that any framework or developer that wishes to follow along can
-do so.
+do so. 
+
+- See our [landing page](/aurora) to stay updated on our latest tech talks and blog posts.
+- Follow our latest announcements on Twitter ([@karaforthewin](https://twitter.com/karaforthewin) and 
+  [@hdjirdeh](https://twitter.com/hdjirdeh))
 
 ## Conclusion
 
@@ -218,9 +227,9 @@ The Aurora team ([Shubhie](https://github.com/spanicker),
 [Alex](https://github.com/atcastle), [Gerald](https://github.com/devknoll),
 [Ralph](https://github.com/janicklas-ralph),
 [Addy](https://github.com/addyosmani), [Kara](https://github.com/kara),
-[Keen](https://github.com/kyliau),
-[Katie](https://github.com/khempenius)) look forward to continuing to work
+[Katie](https://github.com/khempenius),
+[Thorsten](https://github.com/flashdesignory)) look forward to continuing to work
 closely with the open-source framework community on improving user experience
 defaults in Next.js, Nuxt and Angular. We'll be growing our engagement to cover
-even more frameworks and tools over time. Watch this space for more blog posts,
+even more frameworks and tools over time. Watch [this space](/aurora) for more blog posts,
 talks and RFCs from our team over the coming year :)
