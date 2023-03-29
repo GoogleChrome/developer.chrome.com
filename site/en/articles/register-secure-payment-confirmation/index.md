@@ -132,11 +132,8 @@ currently actively used, but is required for future compatibility.
 {% endAside %}
 
 {% Aside %}
-On Chrome Android between versions M109 and M111 (inclusive), there is a
-[technical limitation](https://bugs.chromium.org/p/chromium/issues/detail?id=1393662)
-that requires that `authenticatorSelection.residentKey` be set to `preferred`
-rather than `required`. From Chrome Android M112 onwards, `required` can be
-used as with other platforms.
+For versions M109, M110, and M111 of Chrome Android, `authenticatorSelection.residentKey` needs to be set to `preferred`
+instead of `required` due to a [technical limitation](https://bugs.chromium.org/p/chromium/issues/detail?id=1393662). From Chrome Android M112 onwards, `required` can be used as with other platforms.
 {% endAside %}
 
 In addition, specify a "payment" extension with `isPayment: true`. Specifying
