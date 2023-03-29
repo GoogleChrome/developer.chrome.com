@@ -494,7 +494,7 @@ A user's browsing history for the site that called `joinAdInterestGroup()` can b
 
 {% Details %}
 {% DetailsSummary %}
-### What is an owner's interest group limit for a single browser?
+### What's the maximum number of interest groups per-group owner for a single user?
 {% endDetailsSummary %}
 
 {: #interest-group-limits}
