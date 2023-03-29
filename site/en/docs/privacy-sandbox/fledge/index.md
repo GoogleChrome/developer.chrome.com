@@ -9,7 +9,7 @@ description: >
   websites a user has previously visited, designed so it cannot be
   used by third parties to track user browsing behavior across sites.
 date: 2022-01-27
-updated: 2022-08-23
+updated: 2023-03-29
 authors:
   - samdutton
   - kevinkiklee
@@ -174,18 +174,16 @@ enabling or disabling the top-level setting in
 `chrome://settings/privacySandbox`. During initial testing, people can use the
 Privacy Sandbox setting to opt out of FLEDGE. 
 
-Chrome plans to allow users to see and manage the list of interest groups that
-they've been added to, across the sites they've visited.  As with the Privacy
-Sandbox technologies, user settings may evolve with feedback from users,
-regulators, and others.
-
-We'll update the available settings in Chrome as the FLEDGE proposal
-progresses, [based on tests and feedback](/docs/privacy-sandbox/proposal-lifecycle/#testing).
-In the future, we'll offer more granular settings to manage FLEDGE and
-associated data.
-
 API callers can't access group membership when users browse in Incognito mode,
 and membership is removed when users clear their site data.
+
+`chrome://settings/adPrivacy/sites` lists sites where the user has been added to 
+an interest group. Chrome DevTools shows interest groups that were joined, 
+left, or that participated in an auction. As with other Privacy Sandbox technologies, 
+user settings may evolve with feedback from users, regulators, and others.
+
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/jkNZ1ZT44itRV653UiPX.png", 
+  alt="Chrome settings for FLEDGE", width="800", height="648" %}
 
 {: #opt-out-site}
 
