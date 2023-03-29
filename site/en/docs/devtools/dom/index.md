@@ -242,7 +242,7 @@ You can also use the keyboard shortcuts: <kbd>Shift + Alt + Down</kbd> arrow (Wi
 
 You can screenshot any individual node using **Capture a node screenshot** in the node drop-down menu.
 
-{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/G1505nyzfYIvA4MUChV9.png", alt="ALT_TEXT_HERE", width="800", height="500" %}
+{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/ErWsgrDAV1xYWrj87OQT.png", alt="A node screenshot being captured.", width="800", height="500" %}
 
 1. Right-click any image on this page and select **Inspect**.
 
