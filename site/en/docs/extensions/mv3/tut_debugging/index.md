@@ -58,10 +58,19 @@ After correcting the previous error, change the `"activeTab"` permission to `"ac
 }
 ```
 
-Save the extension and load it again. This time it will load successfully, but you will see the **Errors** button turn red. Click on the button to locate the error.
+Save the extension and load it again. After the extension is loaded, it should have three buttons: **Details**, **Remove** and **Errors** in red letters. Click on the **Errors** button to locate the error.
 
 <figure>
   {% Video src="video/BhuKGJaIeLNPW9ehns59NfwqKxF2/MklSHq3NqtDYvvXHLTmk.mp4", width="800", height="714", autoplay="true", loop="true", muted="true" %}
+  <figcaption>
+    TBD
+  </figcaption>
+</figure>
+
+Before moving on, change the permission back, click the **Clear all** button in the upper right-hand corner, then reload the extension.
+
+<figure>
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/8U43Q83u7Tr8fRR6TFHv.png", alt="ALT_TEXT_HERE", width="600", height="574", class="screenshot" %}
   <figcaption>
     TBD
   </figcaption>
