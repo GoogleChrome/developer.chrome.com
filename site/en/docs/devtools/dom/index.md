@@ -225,16 +225,16 @@ You can duplicate any element using **Duplicate element** in the node drop-down 
 
 1. Right-click **Nana** below and select **Inspect**.
 
-  * Bonfire of the Vanities
-  * Nana
-  * Orlando
-  * White Noise
+    * Bonfire of the Vanities
+    * Nana
+    * Orlando
+    * White Noise
 
-1. In the **Elements** panel, right-click the current node and select **Duplicate element** from the drop-down menu.
+1. In the **Elements** panel, right-click `<li>Nana</li>` and select **Duplicate element** from the drop-down menu.
 
 {% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/UJUiPt3gSSjVlQ9uyYmZ.png", alt="Duplicate element highlighted in drop-down", width="260", height="474" %}
 
-1.
+1. Return to the page. The list item has been instantly duplicated.
 
 You can also use the keyboard shortcuts:
 
