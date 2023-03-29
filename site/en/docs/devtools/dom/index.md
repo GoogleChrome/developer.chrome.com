@@ -221,7 +221,7 @@ To edit nodes as HTML with syntax highlighting and autocomplete, select **Edit a
 
 You can duplicate any element using **Duplicate element** in the node drop-down menu.
 
-{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/xERpA07cNN6MvlDW06ro.png", alt="Duplicate element highlighted on copy options.", width="800", height="467" %}
+{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/uYxwxYEdEy3p5Jrb8glT.png", alt="Duplicate element highlighted on copy options.", width="800", height="467" %}
 
 1. Right-click **Nana** below and select **Inspect**.
 
@@ -237,6 +237,12 @@ You can duplicate any element using **Duplicate element** in the node drop-down 
 1. Return to the page. The list item has been instantly duplicated.
 
 You can also use the keyboard shortcuts: <kbd>Shift + Alt + Down</kbd> arrow (Windows and Linux) and <kbd>Shift + Option + Down</kbd> arrow (MacOS).
+
+### Capture a node screenshot {: #screenshot }
+
+You can screenshot any individual node using **Capture a node screenshot** in the node drop-down menu.
+
+
 
 ### Reorder DOM nodes {: #reorder }
 
