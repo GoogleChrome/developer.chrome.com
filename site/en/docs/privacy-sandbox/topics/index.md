@@ -104,6 +104,10 @@ Headers can be much more performant than calling the JavaScript API.
 
 Topics can be accessed from the `Sec-Browsing-Topics` header of a [`fetch()`](https://developer.mozilla.org/docs/Web/API/fetch) or [`XHR`](https://developer.mozilla.org/docs/Glossary/XHR_(XMLHttpRequest)) request.
 
+{% Aside %}
+Inclusion of the Topics header in `XHR` requests is only available temporarily, and support will be removed in the future.
+{% endAside %}
+
 You can mark topics provided by request headers as observed by setting an
 `Observe-Browsing-Topics: ?1` header on the response to the request. The
 browser will then use those topics included in the request header to calculate
