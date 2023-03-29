@@ -82,55 +82,68 @@ Using a [manifest schema][manifest-schema] in your code editor is a way to ensur
 
 {% endAside %}
 
-Extensions are made of many different components, and these components have individual
-responsibilities. Download a broken extension [here TBD][gh-broken-color] to begin locating error logs for different
-extension components.
+## Debug the service worker {: #debug-bg } 
 
-### Background script {: #debug_bg }
+The service worker initializes the default color to storage and logs it to the console.
 
-Navigate to the chrome extensions management page at `chrome://extensions` and ensure developer mode
-is on. Click the **Load Unpacked** button and select the broken extension directory. After the
-extension is loaded, it should have three buttons: **Details**, **Remove** and **Errors** in red
-letters.
+### Locating logs {: #sw-logs }
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/NPUXnZrLSG6T6zTCmbxj.png",
-       alt="Image displaying error button on extension management page", height="220", width="412" %}
-
-Click the **Errors** button to view the error log. The extensions system has found an issue in the
-background script.
-
-`Uncaught TypeError: Cannot read property 'addListener' of undefined`
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/5UNQ4gp40qQZIwOLTzxA.png",
-       alt="Extensions Management Page displaying background script error", height="556", width="646" %}
-
-Additionally, the Chrome DevTools panel can be opened for the background script by selecting the
+To view service worker logs, open the Chrome DevTools panel for the service worker by selecting the
 blue link next to **Inspect views**.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/GvIXA3o7JvOxUg9BV12z.png",
-       alt="DevTools displaying background script error", height="222", width="743" %}
+<figure>
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/H48asatrNaKDVVBluWTT.png", alt="ALT_TEXT_HERE", width="650", height="333", class='screenshot' %}
+  <figcaption>
+    TBD
+  </figcaption>
+</figure>
 
-Return to the code.
+### Locating errors {: #sw-errors }
 
-```js/0
-chrome.runtime.oninstalled.addListener(function() {
-  chrome.storage.sync.set({color: '#3aa757'}, function() {
-    console.log('The color is green.');
-  });
-  chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
-    chrome.declarativeContent.onPageChanged.addRules([{
-      conditions: [new chrome.declarativeContent.PageStateMatcher({
-        pageUrl: {hostEquals: 'developer.chrome.com'},
-      })],
-      actions: [new chrome.declarativeContent.ShowPageAction()]
-    }]);
+Let's break the extension by changing `onInstalled` to lowercase `oninstalled`.
+
+{% Label %}service-worker.js:{% endLabel %}
+
+```js/3/2
+// There's a typo in the line below;
+// ❌ oninstalled should be ✅ onInstalled.
+chrome.runtime.onInstalled.addListener(() => {
+chrome.runtime.oninstalled.addListener(() => {
+  chrome.storage.sync.set({ color: '#3aa757' }, () => {
+    console.log('The background color is green.');
   });
 });
 ```
 
+Refresh and click the **Errors** button to view the error log. The extensions system has found an issue in the service worker script.
+
+<figure>
+  
+  <figcaption>
+  TBD  
+  </figcaption>
+</figure>
+
+
+`Uncaught TypeError: Cannot read property 'addListener' of undefined`
+
 The background script is attempting to listen for the [`onInstalled`][runtime-oninstalled] event, but the property
 name requires an upper case "I". Update the code to reflect the correct call, click the **Clear
 all** button in the upper right-hand corner, then reload the extension.
+
+### Check the service worker status {: #sw-stats }
+
+1. Open your manifest file in the browser. For example:
+  ```text
+  chrome-extension://EXTENSION_ID/manifest.json
+  ``` 
+2. Inspect the file.
+3. Navigate to the **Application panel**.
+4. Go to the **Service worker** side panel.
+5. Select the extension's service worker.
+
+
+
 
 ### Popup {: #debug_popup }
 
