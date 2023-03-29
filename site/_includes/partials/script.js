@@ -72,7 +72,7 @@
   // Note that it's possible for a banner to have more than one action but
   // we always use the url from the first action as the localStorage value.
   try {
-    const bannerCtaUrl = '{{ banner.actions[0].href }}';
+    const bannerCtaUrl = '{{ banner.actions[0].href|safe }}';
     const savedBannerCtaUrl = localStorage.getItem('user-banner');
 
     if (savedBannerCtaUrl === bannerCtaUrl) {
