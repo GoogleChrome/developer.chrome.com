@@ -24,7 +24,6 @@ Even though extensions can use the [`Storage`][mdn-storage] interface (accessibl
 - Content scripts share storage with the host page.
 - Data saved using the `Storage` interface is lost when the user clears their browsing history.
 
-Even though extension service workers can use `chrome.storage`, if need to move data, from the `Storage` interface to `chrome.storage` you'll need to use an [offscreen document][offscreen-document]. 
 
 1. Create an offscreen document with a conversion routine and an [`onMessage`][on-message] handler.
 1. Add a conversion routine to an offscreen document.
