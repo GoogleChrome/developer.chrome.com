@@ -67,7 +67,7 @@ Read more about testing in [experiment and participate](/docs/privacy-sandbox/pr
 
 The demo of Private Aggregation API for Shared Storage can be accessed at [goo.gle/shared-storage-demo](http://goo.gle/shared-storage-demo), and the code is available on [GitHub](https://github.com/GoogleChromeLabs/shared-storage-demo). The demo implements the client-side operations and produces an aggregatable report that is sent to your server. 
 
-A demo of Private Aggregation API for FLEDGE will be published in the future, once the proposal has been finalized. 
+A demo of Private Aggregation API for FLEDGE will be published in the future. 
 
 ## Use cases
 
@@ -97,9 +97,11 @@ Private Aggregation can provide an answer such as "Approximately 89 users have s
 
 ### With FLEDGE
 
-FLEDGE enables retargeting and custom audience use cases, and Private Aggregation will allow you to report events from buyer and seller worklets. The API can be used for tasks such as measuring the distribution of auction bids. The Private Aggregation API design for FLEDGE has not been finalized. We will publish additional content once a more complete design is available in FLEDGE.
+FLEDGE enables retargeting and custom audience use cases, and Private Aggregation allows you to report events from buyer and seller worklets. The API can be used for tasks such as measuring the distribution of auction bids.
 
-## Available operations
+From a FLEDGE worklet, you can aggregate your data directly using `sendHistogramReport()` and report your data based on a trigger using `reportContributionForEvent()`, which is a special extension for FLEDGE.
+
+## Available functions
 
 The following functions are available in the `privateAggregation` object available in Shared Storage and FLEDGE worklets. To learn how to run your code in a worklet, refer to the [Shared Storage code samples](/docs/privacy-sandbox/use-shared-storage/). 
 
@@ -177,7 +179,7 @@ While third-party cookies are still available, we'll provide a temporary mechani
 
 Calling `privateAggregation.enableDebugMode()` in the worklet enables the debug mode which causes aggregatable reports to include the unencrypted (cleartext) payload. You can then process these payloads with the Aggregation Service [local testing tool](https://github.com/google/trusted-execution-aggregation-service#set-up-local-testing). 
 
-You can also set the debug key by calling `privateAggregation.enableDebugMode({ debug_key: &lt;debug_key> })` where a BigInt can be used as a debug key. The debug key can be used to associate data from a cookie-based measurement and data from Private Aggregation measurement. These can be called only once per context. Any subsequent calls will be ignored.
+You can also set the debug key by calling `privateAggregation.enableDebugMode({ <debug_key: debug_key> })` where a BigInt can be used as a debug key. The debug key can be used to associate data from a cookie-based measurement and data from Private Aggregation measurement. These can be called only once per context. Any subsequent calls will be ignored.
 
 ```js
 // Enables debug mode
@@ -186,6 +188,10 @@ privateAggregation.enableDebugMode();
 // Enables debug mode and sets a debug key
 privateAggregation.enableDebugMode({ debug_key: BigInt(1234) });
 ```
+
+### reportContributionForEvent()
+
+Within FLEDGE worklets only, we provide a trigger-based mechanism for sending a report only if a certain event occurs. This function also allows for the bucket and value to depend on signals that are not yet available at that point in the auction (for example, the value of the winning bid in `generateBid()`). More detail is available in the [explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE_extended_PA_reporting.md).
 
 ## Engage and share feedback
 

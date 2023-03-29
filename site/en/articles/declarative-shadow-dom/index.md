@@ -107,8 +107,6 @@ constructor. If there is already a value, the HTML for this component includes a
 null, there was no Declarative Shadow Root present in the HTML or the browser doesn't support Declarative Shadow DOM.
 
 ```html
--Formatted HTML-
-
 <menu-toggle>
   <template shadowrootmode="open">
     <button>
@@ -118,27 +116,27 @@ null, there was no Declarative Shadow Root present in the HTML or the browser do
   Open Menu
 </menu-toggle>
 <script>
-   class MenuToggle extends HTMLElement {
-     constructor() {
-       super();
+  class MenuToggle extends HTMLElement {
+    constructor() {
+      super();
 
-       // Detect whether we have SSR content already:
-       if (this.shadowRoot) {
-         // A Declarative Shadow Root exists!
-         // wire up event listeners, references, etc.:
-         const button = this.shadowRoot.firstElementChild;
-         button.addEventListener('click', toggle);
-       } else {
-         // A Declarative Shadow Root doesn't exist.
-         // Create a new shadow root and populate it:
-         const shadow = this.attachShadow({mode: 'open'});
-         shadow.innerHTML = `<button><slot></slot></button>`;
-         shadow.firstChild.addEventListener('click', toggle);
-       }
-     }
-   }
+      // Detect whether we have SSR content already:
+      if (this.shadowRoot) {
+        // A Declarative Shadow Root exists!
+        // wire up event listeners, references, etc.:
+        const button = this.shadowRoot.firstElementChild;
+        button.addEventListener('click', toggle);
+      } else {
+        // A Declarative Shadow Root doesn't exist.
+        // Create a new shadow root and populate it:
+        const shadow = this.attachShadow({mode: 'open'});
+        shadow.innerHTML = `<button><slot></slot></button>`;
+        shadow.firstChild.addEventListener('click', toggle);
+      }
+    }
+  }
 
-   customElements.define('menu-toggle', MenuToggle);
+  customElements.define('menu-toggle', MenuToggle);
 </script>
 ```
 
@@ -155,24 +153,24 @@ not provided.
 
 ```javascript
 class MenuToggle extends HTMLElement {
-   constructor() {
-      super();
+  constructor() {
+    super();
 
-      const internals = this.attachInternals();
+    const internals = this.attachInternals();
 
-      // check for a Declarative Shadow Root:
-      let shadow = internals.shadowRoot;
-      if (!shadow) {
-         // there wasn't one. create a new Shadow Root:
-         shadow = this.attachShadow({
-            mode: 'open'
-         });
-         shadow.innerHTML = `<button><slot></slot></button>`;
-      }
+    // check for a Declarative Shadow Root:
+    let shadow = internals.shadowRoot;
+    if (!shadow) {
+      // there wasn't one. create a new Shadow Root:
+      shadow = this.attachShadow({
+        mode: 'open'
+      });
+      shadow.innerHTML = `<button><slot></slot></button>`;
+    }
 
-      // in either case, wire up our event listener:
-      shadow.firstChild.addEventListener('click', toggle);
-   }
+    // in either case, wire up our event listener:
+    shadow.firstChild.addEventListener('click', toggle);
+  }
 }
 customElements.define('menu-toggle', MenuToggle);
 ```
@@ -203,19 +201,19 @@ Associating Declarative Shadow Roots directly with their parent element simplifi
 that element. Declarative Shadow Roots are detected during HTML parsing, and attached immediately when their **opening** `<template>`
 tag is encountered. Parsed HTML within the `<template>` is parsed directly into the shadow root, so it can be "streamed": rendered as it is received.
 
-```javascript
+```html
 <div id="el">
- <script>
-   el.shadowRoot; // null
- </script>
+  <script>
+    el.shadowRoot; // null
+  </script>
 
- <template shadowrootmode="open">
-   <!-- shadow realm -->
- </template>
+  <template shadowrootmode="open">
+    <!-- shadow realm -->
+  </template>
 
- <script>
-   el.shadowRoot; // ShadowRoot
- </script>
+  <script>
+    el.shadowRoot; // ShadowRoot
+  </script>
 </div>
 ```
 
@@ -227,9 +225,9 @@ be constructed during initial HTML parsing:
 
 ```html
 <some-element>
- <template shadowrootmode="open">
-   shadow root content for some-element
- </template>
+  <template shadowrootmode="open">
+    shadow root content for some-element
+  </template>
 </some-element>
 ```
 
@@ -248,18 +246,18 @@ To avoid some important security considerations, Declarative Shadow Roots also c
 like `innerHTML` or `insertAdjacentHTML()`. The only way to parse HTML with Declarative Shadow Roots applied is to pass a
 new `includeShadowRoots` option to `DOMParser`:
 
-```javascript
+```html
 <script>
- const html = `
-   <div>
-     <template shadowrootmode="open"></template>
-   </div>
- `;
- const div = document.createElement('div');
- div.innerHTML = html; // No shadow root here
- const fragment = new DOMParser().parseFromString(html, 'text/html', {
-   includeShadowRoots: true
- }); // Shadow root here
+  const html = `
+    <div>
+      <template shadowrootmode="open"></template>
+    </div>
+  `;
+  const div = document.createElement('div');
+  div.innerHTML = html; // No shadow root here
+  const fragment = new DOMParser().parseFromString(html, 'text/html', {
+    includeShadowRoots: true
+  }); // Shadow root here
 </script>
 ```
 
@@ -269,18 +267,18 @@ Inline and external stylesheets are fully supported inside Declarative Shadow Ro
 
 ```html
 <nineties-button>
-   <template shadowrootmode="open">
-      <style>
-         button {
-         color: seagreen;
-         }
-      </style>
-      <link rel="stylesheet" href="/comicsans.css" />
-      <button>
-         <slot></slot>
-      </button>
-   </template>
-   I'm Blue
+  <template shadowrootmode="open">
+    <style>
+      button {
+        color: seagreen;
+      }
+    </style>
+    <link rel="stylesheet" href="/comicsans.css" />
+    <button>
+      <slot></slot>
+    </button>
+  </template>
+  I'm Blue
 </nineties-button>
 ```
 
@@ -299,23 +297,23 @@ where the raw contents are shown for Custom Elements that have not yet been upgr
 for avoiding FOUC was to apply a `display:none` style rule to Custom Elements that haven't been loaded yet, since these have
 not had their shadow root attached and populated. In this way, content is not displayed until it is "ready":
 
-```javascript
+```html
 <style>
- x-foo:not(:defined) > * {
-   display: none;
- }
+  x-foo:not(:defined) > * {
+    display: none;
+  }
 </style>
 ```
 
 With the introduction of Declarative Shadow DOM, Custom Elements can be rendered or authored in HTML such that their shadow
 content is in-place and ready before the client-side component implementation is loaded:
 
-```javascript
+```html
 <x-foo>
- <template shadowrootmode="open">
-   <style>h2 { color: blue; }</style>
-   <h2>shadow content</h2>
- </template>
+  <template shadowrootmode="open">
+    <style>h2 { color: blue; }</style>
+    <h2>shadow content</h2>
+  </template>
 </x-foo>
 ```
 
@@ -328,11 +326,11 @@ Fortunately, this can be solved in CSS by modifying the FOUC style rule. In brow
 `<template shadowrootmode>` element is immediately converted into a shadow root, leaving no `<template>` element in the DOM
 tree. Browsers that don't support Declarative Shadow DOM preserve the `<template>` element, which we can use to prevent FOUC:
 
-```javascript
+```html
 <style>
- x-foo:not(:defined) > template[shadowrootmode] ~ *  {
-   display: none;
- }
+  x-foo:not(:defined) > template[shadowrootmode] ~ *  {
+    display: none;
+  }
 </style>
 ```
 
@@ -351,7 +349,7 @@ can be detected by checking for the existence of a `shadowRootMode` property on 
 
 ```javascript
 function supportsDeclarativeShadowDOM() {
- return HTMLTemplateElement.prototype.hasOwnProperty('shadowRootMode');
+  return HTMLTemplateElement.prototype.hasOwnProperty('shadowRootMode');
 }
 ```
 
@@ -365,13 +363,13 @@ more specific events like Custom Element lifecycles.
 
 ```javascript
 (function attachShadowRoots(root) {
- root.querySelectorAll("template[shadowrootmode]").forEach(template => {
-   const mode = template.getAttribute("shadowrootmode");
-   const shadowRoot = template.parentNode.attachShadow({ mode });
-   shadowRoot.appendChild(template.content);
-   template.remove();
-   attachShadowRoots(shadowRoot);
- });
+  root.querySelectorAll("template[shadowrootmode]").forEach(template => {
+    const mode = template.getAttribute("shadowrootmode");
+    const shadowRoot = template.parentNode.attachShadow({ mode });
+    shadowRoot.appendChild(template.content);
+    template.remove();
+    attachShadowRoots(shadowRoot);
+  });
 })(document);
 ```
 
@@ -379,6 +377,3 @@ more specific events like Custom Element lifecycles.
 
 * [Chromestatus for Streaming Declarative Shadow DOM](https://chromestatus.com/feature/5161240576393216)
 * [HTML Spec Pull Request](https://github.com/whatwg/html/pull/5465)
-
-
-
