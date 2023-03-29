@@ -179,17 +179,9 @@ To see this message logged in the Console:
     {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/1ZrcBEYcbMxW1c9UvBy9.png", 
     alt="DevTools Code Panel", width="400", height="374", class="screenshot" %}
       <figcaption>
-      Inspecting a popup 
+      DevTools Console Panel
       </figcaption>
     </figure>   
-  5. In the [DevTools][dev-tools], navigate to the **Console** panel.
-    <figure>
-    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/1ZrcBEYcbMxW1c9UvBy9.png", 
-    alt="DevTools Code Panel", width="400", height="374", class="screenshot" %}
-      <figcaption>
-      DevTools Console Panel 
-      </figcaption>
-    </figure>
 
 ### Error logs {: #errors }
 
