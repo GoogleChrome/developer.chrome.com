@@ -167,7 +167,7 @@ below to learn how to add attributes to a node.
 
 You can also use the **Add attribute** right-click option.
 
-{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/dxp3s0z1HeBXyJAgVW76.png", alt="Right-click options with add attribute highlighted.", width="130", height="237" %}
+{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/dxp3s0z1HeBXyJAgVW76.png", alt="Right-click options with add attribute highlighted.", width="260", height="464" %}
 
 ### Edit node type {: #type }
 
@@ -232,7 +232,7 @@ You can duplicate any element using **Duplicate element** in the node drop-down 
 
 1. In the **Elements** panel, right-click the current node and select **Duplicate element** from the drop-down menu.
 
-{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/UJUiPt3gSSjVlQ9uyYmZ.png", alt="Duplicate element highlighted in drop-down", width="130", height="237" %}
+{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/UJUiPt3gSSjVlQ9uyYmZ.png", alt="Duplicate element highlighted in drop-down", width="260", height="474" %}
 
 1.
 
