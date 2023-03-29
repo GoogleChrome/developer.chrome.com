@@ -8,7 +8,7 @@
   <div class="gap-top-400">
     <div class="playlist hairline rounded-lg width-full">
       <div class="playlist__details rounded-lg">
-        <div class="playlist__details-inner rounded-lg">
+        <div class="playlist__details-inner rounded-lg {{ "has-decoration" if (playlist.videos | length) > 4}}">
           <div class="playlist__thumbnail">
             <img
               src="{{playlist.thumbnail}}"
@@ -64,9 +64,6 @@
               >
           </div>
         </div>
-        {% if (playlist.videos | length) > 4 %}
-            <div class="playlist__decorations"></div>
-        {% endif %}
       </div>
     </div>
 
