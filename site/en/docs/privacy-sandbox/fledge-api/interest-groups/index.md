@@ -500,8 +500,8 @@ A user's browsing history for the site that called `joinAdInterestGroup()` can b
 {: #interest-group-limits}
 
 Chrome allows up to 1000 interest groups per owner, and up to 1000 interest group
-
 owners. These limits are meant as guard rails, not to be hit in regular operation.
+
 {% endDetails %}
 
 ## All FLEDGE API references
