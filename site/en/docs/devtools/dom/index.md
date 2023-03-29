@@ -236,10 +236,7 @@ You can duplicate any element using **Duplicate element** in the node drop-down 
 
 1. Return to the page. The list item has been instantly duplicated.
 
-You can also use the keyboard shortcuts:
-
-- Mac: `Shift` + `Option` + `⬇️`
-- Window/ Linux: `Shift` + `Alt` + `⬇️`
+You can also use the keyboard shortcuts: <kbd>Shift + Alt + Down</kbd> arrow (Windows and Linux) and <kbd>Shift + Option + Down</kbd> arrow (MacOS).
 
 ### Reorder DOM nodes {: #reorder }
 
