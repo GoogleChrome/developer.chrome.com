@@ -175,7 +175,7 @@ Privacy Sandbox setting to opt out of FLEDGE. API callers can't access group mem
 browse in Incognito mode, and membership is removed when users clear their site data.
 
 `chrome://settings/adPrivacy/sites` lists sites where the user has been added to an interest group.
-Chrome DevTools [shows interest groups](https://developer.chrome.com/blog/fledge-api/#debugging)
+Chrome DevTools [shows interest groups](/blog/fledge-api/#debugging)
 that have been joined, left, or that participated in an auction.
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/jkNZ1ZT44itRV653UiPX.png",
