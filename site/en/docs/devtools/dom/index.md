@@ -165,6 +165,10 @@ below to learn how to add attributes to a node.
 
    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/7SKDEvndWzq2KPSketg1.png", alt="Adding a style attribute to the node", width="800", height="545" %}
 
+You can also use the **Add attribute** right-click option.
+
+{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/dxp3s0z1HeBXyJAgVW76.png", alt="Right-click options with add attribute highlighted.", width="130", height="237" %}
+
 ### Edit node type {: #type }
 
 To edit a node's type, double-click the type and then type in the new type.
@@ -213,6 +217,30 @@ To edit nodes as HTML with syntax highlighting and autocomplete, select **Edit a
 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/unvKWSLDvzoh7kHZoWbK.png", alt="Applying changes.", width="800", height="678" %}
 
+### Duplicate elements {: #duplicate }
+
+You can duplicate any element using **Duplicate element** in the node drop-down menu.
+
+{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/xERpA07cNN6MvlDW06ro.png", alt="Duplicate element highlighted on copy options.", width="800", height="467" %}
+
+1. Right-click **Nana** below and select **Inspect**.
+
+  * Bonfire of the Vanities
+  * Nana
+  * Orlando
+  * White Noise
+
+1. In the **Elements** panel, right-click the current node and select **Duplicate element** from the drop-down menu.
+
+{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/UJUiPt3gSSjVlQ9uyYmZ.png", alt="Duplicate element highlighted in drop-down", width="130", height="237" %}
+
+1.
+
+You can also use the keyboard shortcuts:
+
+- Mac: `Shift` + `Option` + `⬇️`
+- Window/ Linux: `Shift` + `Alt` + `⬇️`
+
 ### Reorder DOM nodes {: #reorder }
 
 Drag nodes to reorder them.
@@ -244,7 +272,7 @@ You can force nodes to remain in states like `:active`, `:hover`, `:focus`,
 
 1. Hover over **The Lord of the Flies** below. The background color becomes orange.
 
-     <ul> 
+     <ul>
        <li class="demo--hover">The Lord of the Flies</li>
        <li>Crime and Punishment</li>
        <li>Moby Dick</li>
@@ -295,7 +323,7 @@ JavaScript references to them.
 ### Reference the currently-selected node with $0 {: #current }
 
 When you inspect a node, the `== $0` text next to the node means that you can reference this
-node in the Console with the variable `$0`. 
+node in the Console with the variable `$0`.
 
 1. Right-click **The Left Hand of Darkness** below and select **Inspect**.
 
