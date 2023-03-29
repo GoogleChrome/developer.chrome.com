@@ -19,7 +19,7 @@
             />
             <div class="playlist__play-all">
                 <a
-                href="https://www.youtube.com/watch?v={{playlist.videos[0].id}}&list={{playlist.id}}"
+                href="{{playlist.playAll}}"
                 target="_blank"
                 class="no-visited">
                 {{ 'i18n.youtube_playlist.play_all' | i18n(locale) | upper  }}
@@ -30,7 +30,7 @@
           <h2 class="playlist__name type--h3-card gap-top-400">
             <a
                 class="color-red-darkest surface display-inline-flex no-visited"
-                href="https://www.youtube.com/playlist?list={{playlist.id}}}"
+                href="{{playlist.url}}"
                 target="_blank"
             >
               {{playlist.title}}
@@ -57,7 +57,7 @@
           </div>
           <div class="playlist__channel-subscribe">
               <a
-              href="https://www.youtube.com/channel/{{ playlist.channel.id }}?sub_confirmation=1"
+              href="{{playlist.channel.subscribe}}"
               target="_blank"
               class="material-button button-filled button-round display-inline-flex color-bg bg-red-medium"
               >{{  'i18n.youtube_playlist.subscribe' | i18n(locale) }}</a
@@ -78,7 +78,7 @@
         <div class="playlist-video__number">{{loop.index}}</div>
 
         <div class="playlist-video__content">
-          <a href="https://www.youtube.com/watch?v={{ video.id }}}" target="_blank">
+          <a href="{{video.url}}" target="_blank">
             <div class="playlist-video__thumbnail">
               <img
                 src="{{video.thumbnail}}"
@@ -92,7 +92,7 @@
 
           <div class="playlist-video__details">
             <a
-              href="https://www.youtube.com/watch?v={{video.id}}"
+              href="{{video.url}}"
               class="no-visited"
               target="_blank"
             >
