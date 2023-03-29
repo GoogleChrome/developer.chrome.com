@@ -492,6 +492,18 @@ A user's browsing history for the site that called `joinAdInterestGroup()` can b
 `dailyUpdateUrl` provides a mechanism to periodically update the attributes of the interest group, but this update is not based on the user's browsing history. 
 {% endDetails %}
 
+{% Details %}
+{% DetailsSummary %}
+### What is an owner's interest group limit for a single browser?
+{% endDetailsSummary %}
+
+{: #interest-group-limits}
+
+Chrome allows up to 1000 interest groups per owner, and up to 1000 interest group
+
+owners. These limits are meant as guard rails, not to be hit in regular operation.
+{% endDetails %}
+
 ## All FLEDGE API references
 
 {% Partial 'privacy-sandbox/fledge-api-reference.njk' %}
