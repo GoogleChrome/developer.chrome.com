@@ -494,10 +494,8 @@ A user's browsing history for the site that called `joinAdInterestGroup()` can b
 
 {% Details %}
 {% DetailsSummary %}
-### What's the maximum number of interest groups per-group owner for a single user?
+### What's the maximum number of interest groups per group owner for a single user?
 {% endDetailsSummary %}
-
-{: #interest-group-limits}
 
 Chrome allows up to 1000 interest groups per owner, and up to 1000 interest group
 owners. These limits are meant as guard rails, not to be hit in regular operation.
