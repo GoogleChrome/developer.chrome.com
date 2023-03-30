@@ -63,7 +63,7 @@ Given that the two files `node_modules/…/frameworks.js` and `node_modules/.../
   </figcaption>
 </figure>
 
-This also applies to the [**Call Stack**](https://developer.chrome.com/docs/devtools/javascript/reference/#show-ignore-listed-frames) in the **Sources** panel during breakpoint debugging.  
+This also applies to the [**Call Stack**](/docs/devtools/javascript/reference/#show-ignore-listed-frames) in the **Sources** panel during breakpoint debugging.  
 
 Behind the scenes, DevTools has an extra setting enabled by default: [Automatically add known third-party scripts to ignore list](/docs/devtools/settings/ignore-list/#skip-third-party). You can find it in DevTools > **Settings** > **Ignore List**.
 
