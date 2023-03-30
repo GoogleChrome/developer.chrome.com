@@ -217,7 +217,7 @@ To edit nodes as HTML with syntax highlighting and autocomplete, select **Edit a
 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/unvKWSLDvzoh7kHZoWbK.png", alt="Applying changes.", width="800", height="678" %}
 
-### Duplicate elements {: #duplicate }
+### Duplicate a node {: #duplicate }
 
 You can duplicate an element using **Duplicate element** in the node drop-down menu.
 
