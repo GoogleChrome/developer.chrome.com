@@ -238,23 +238,6 @@ You can duplicate an element using **Duplicate element** in the node drop-down m
 
 You can also use the keyboard shortcuts: <kbd>Shift + Alt + Down</kbd> arrow (Windows and Linux) and <kbd>Shift + Option + Down</kbd> arrow (MacOS).
 
-### Delete an element {: #delete }
-
-You can delete an element using **Delete element** in the node drop-down menu.
-
-{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/uYxwxYEdEy3p5Jrb8glT.png", alt="Delete element highlighted on copy options.", width="800", height="467" %}
-
-1. Right-click **Orlando** below and select **Inspect**.
-
-  * Bonfire of the Vanities
-  * Nana
-  * Orlando
-  * White Noise
-
-1. In the **Elements** panel, right-click `<li>Orlando</li>` and select **Delete element** from the drop-down menu. You can also use the <kbd>Delete</kbd> key.
-
-1. Return to the page. The list item has been instantly deleted.
-
 ### Capture a node screenshot {: #screenshot }
 
 You can screenshot any individual node using **Capture node screenshot** in the node drop-down menu.
@@ -323,7 +306,7 @@ Press <kbd>H</kbd> to hide a node.
      * The Count of Monte Cristo
      * The Stars My Destination
 
-1. Press the <kbd>H</kbd> key. The node is hidden.
+1. Press the <kbd>H</kbd> key. The node is hidden. You can also right-click the node and use the **Hide element** option.
 
    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ynrZooiPHy2DUBbdGL3k.png", alt="What the node looks like in the DOM Tree after it's hidden", width="800", height="545" %}
 
@@ -339,7 +322,7 @@ Press <kbd>Delete</kbd> to delete a node.
      * Through the Looking-Glass
      * Foundation
 
-1. Press the <kbd>Delete</kbd> key. The node is deleted.
+1. Press the <kbd>Delete</kbd> key. The node is deleted. You can also right-click the node and use the **Delete element** option.
 1. Press <kbd>Control</kbd>+<kbd>Z</kbd> or <kbd>Command</kbd>+<kbd>Z</kbd> (Mac).
    The last action is undone and the node reappears.
 
