@@ -5,7 +5,7 @@ description: >
   Improve debugging experience in Chrome DevTools with the x_google_ignoreList source map extension.
 subhead: >
   Improve debugging experience in Chrome DevTools with the `x_google_ignoreList` source map extension.
-date: 2022-03-30
+date: 2023-03-30
 authors:
   - jecelynyeen
 tags:
