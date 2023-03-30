@@ -145,17 +145,17 @@ const auctionResultPromise = navigator.runAdAuction(auctionConfig);
 ```
 
 `runAdAuction()` returns a promise that resolves to a [URN](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#urns) (`urn:uuid:<something>`) that represents the
-ad auction outcome. This can only be decoded by the browser when passed to a [fenced frame](/docs/privacy-sandbox/fledge#fenced-frame)
+ad auction outcome. This can only be decoded by the browser when passed to a [fenced frame](/docs/privacy-sandbox/fenced-frame/)
 for rendering: the publisher page cannot inspect the winning ad.
 
 {% Aside %}
-The origin of the script with [`joinAdInterestGroup()`](/docs/privacy-sandbox/fledge/interest-groups) 
+The origin of the script with [`joinAdInterestGroup()`](/blog/fledge-api/#joinadinterestgroup) 
 must match the interest group owner's origin, so `joinAdInterestGroup()` will
 need to be called from an iframe (for example, from a DSP) unless the origin of
 the interest group owner matches the origin of the current document (for
 example, a website with its own interest groups).
 
-[`runAdAuction`](/docs/privacy-sandbox/fledge/ad-auction) doesn't have the same
+[`runAdAuction`](/blog/fledge-api/#ad-auction) doesn't have the same
 requirements, so using a `<script>` tag is probably far more performant than a
 cross-origin iframe.
 {% endAside %}
@@ -239,7 +239,7 @@ desirability score.
         <td style="vertical-align: top;"><code>[{'seller': 'https://www.some-other-ssp.com',<br>
           &nbsp;&nbsp;'decisionLogicUrl': ..., ...},<br>
           &nbsp;&nbsp;...]</code></td>
-        <td style="vertical-align: top;">Additional configurations for <a href="#ad-components">component auctions</a>.</td>
+        <td style="vertical-align: top;">Additional configurations for <a href="/blog/fledge-api/#:~:text=componentauctions">component auctions</a>.</td>
       </tr>
     </tbody>
     <caption style="text-align:left">
