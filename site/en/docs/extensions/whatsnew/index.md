@@ -16,6 +16,12 @@ tags:
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about many of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).)
 
+### Google Analytics 4 now in the Developer Dashboard
+
+<p class="color-secondary-text type--caption">Posted on <time>March 30, 2023</time></p>
+
+The Chrome Web Store Developer Dashboard now supports Google Analytics 4 (GA4). We've simplified setting up Google Analytics and made access management for group publishers more straightforward. If you previously used Google Universal Analytics to track your store listing activity, you will need to take action by July 1, 2023 to ensure that you continue receiving data about your store listing. For more information, see the [post on the Chromium Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/JpzTRHBXDok/m/0F93f7FyBQAJ).
+
 ### The File Handling API comes to ChromeOS
 
 <p class="color-secondary-text type--caption">Posted on <time>March 24, 2023</time></p>
