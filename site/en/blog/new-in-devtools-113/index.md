@@ -59,7 +59,7 @@ DevTools skips such frames:
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/172xiWtjMOXmwZYAgeSo.png", alt="The stack trace before and after enabling third-party ignore-listing.", width="800", height="489" %}
 
 {% Aside %}
-You can always manually [disable ignore-listing](/docs/devtools/settings/ignore-list/#skip-third-party) in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Ignore List**](/docs/devtools/settings/ignore-list/).
+You can manually [disable ignore-listing](/docs/devtools/settings/ignore-list/#skip-third-party) in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Ignore List**](/docs/devtools/settings/ignore-list/).
 {% endAside %}
 
 To bring you these improvements, the DevTools, Nuxt, Vite, and Rollup teams collaborated to adopt the [`x_google_ignoreList` source map extension](/articles/ignore-list):
