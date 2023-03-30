@@ -2,7 +2,7 @@
 layout: 'layouts/doc-post.njk'
 title: 'Manifest file format'
 date: 2012-09-18
-updated: 2022-11-08
+updated: 2023-03-24
 description: An overview of the manifest.json properties of a Chrome Extension.
 ---
 
@@ -52,7 +52,6 @@ The following code shows the supported manifest keys. For additional usage infor
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/input_components">input_components</a>"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/key">key</a>"</span><span class="token operator">:</span> <span class="token string">"publicKey"</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/minimum_chrome_version">minimum_chrome_version</a>"</span><span class="token operator">:</span> <span class="token string">"107"</span><span class="token punctuation">,</span>
-  <span class="token property">"<a href="/docs/extensions/mv3/manifest/nacl_modules">nacl_modules</a>"</span><span class="token operator">:</span> <span class="token punctuation">[</span>...<span class="token punctuation">]</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/oauth2">oauth2</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/reference/omnibox">omnibox</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/reference/permissions/#step-2-declare-optional-permissions-in-the-manifest">optional_host_permissions</a>"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"..."</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
@@ -60,7 +59,6 @@ The following code shows the supported manifest keys. For additional usage infor
   <span class="token property">"<a href="/docs/extensions/mv3/options">options_page</a>"</span><span class="token operator">:</span> <span class="token string">"options.html"</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/options/#embedded_options">options_ui</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/declare_permissions/">permissions</a>"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"..."</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-  <span class="token property">"<a href="/docs/extensions/mv3/manifest/replacement_web_app">replacement_web_app</a>"</span><span class="token operator">:</span> <span class="token string">"https://example.com"</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/requirements">requirements</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/sandbox">sandbox</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/name#short_name">short_name</a>"</span><span class="token operator">:</span> <span class="token string">"Short Name"</span><span class="token punctuation">,</span>

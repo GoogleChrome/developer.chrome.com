@@ -33,28 +33,34 @@ permits, to provide users with informed control over access to resources and dat
 See the [platform vision][vision-optperms] to better understand this recommendation.
 {% endAside %}
 
-If an API requires you to declare a permission in the manifest, then its documentation tells you how
+If an API requires you to declare a permission in the [manifest][doc-manifest], then its documentation tells you how
 to do so. For example, the [Storage][api-storage] page shows how to declare the `"storage"` permission.
 
 Here's an example of the permissions part of a manifest file:
 
+{% Label %}manifest.json:{% endLabel %}
+
 ```json
-"permissions": [
-  "tabs",
-  "bookmarks",
-  "unlimitedStorage"
-],
-"optional_permissions": [
-  "unlimitedStorage"
-],
-"host_permissions": [
-  "https://www.blogger.com/",
-  "https://*.google.com/"
-],
-"optional_host_permissions": [
-  "https://*/*",
-  "http://*/*"
-],
+{
+  ...
+  "permissions": [
+    "tabs",
+    "bookmarks",
+    "unlimitedStorage"
+  ],
+  "optional_permissions": [
+    "unlimitedStorage"
+  ],
+  "host_permissions": [
+    "https://www.blogger.com/",
+    "https://*.google.com/"
+  ],
+  "optional_host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+  ...
+}
 ```
 
 The following table lists the currently available permissions:
@@ -251,7 +257,7 @@ The following table lists the currently available permissions:
     </tr>
     <tr id="nativeMessaging">
       <td><code>"nativeMessaging"</code></td>
-      <td>Gives access to the <a href="/docs/apps/nativeMessaging/">native messaging API</a>.</td>
+      <td>Gives access to the <a href="/docs/extensions/mv3/nativeMessaging/">native messaging API</a>.</td>
     </tr>
     <tr id="notifications">
       <td><code>"notifications"</code></td>

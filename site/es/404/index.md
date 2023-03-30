@@ -9,4 +9,4 @@ layout: 'layouts/error.njk'
 
 No encontramos la pagina buscada.
 
-<a class="material-button button-filled button-round display-inline-flex color-bg bg-primary" href="/">Volver al home</a>
+<a class="material-button button-filled button-round display-inline-flex color-bg bg-primary" href="/">Volver a la página de inicio</a>

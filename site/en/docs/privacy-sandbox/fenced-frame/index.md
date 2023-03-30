@@ -10,20 +10,16 @@ authors:
   - alexandrawhite
   - kevinkiklee
 date: 2022-03-07
-updated: 2022-05-10
+updated: 2023-03-14
 ---
 
 ## Implementation status
 
 This document outlines a proposal for a new HTML element: `<fencedframe>`.
 
-*  Experiment with fenced frames in the [Privacy Sandbox unified origin trial](/origintrials/#/view_trial/771241436187197441) from M102 to M107. Learn how to [set up the origin trial](/blog/privacy-sandbox-unified-origin-trial/) and [join us for a feedback/discussion](https://github.com/WICG/fenced-frame/issues).
-*  [Fenced frames proposal](https://github.com/shivanigithub/fenced-frame)
-*  [Chrome Platform Status](https://chromestatus.com/feature/5699388062040064) 
-*  This feature is [available behind a Chrome flag](#try-fenced-frames).
-*  [The Privacy Sandbox
-   timeline](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline)
-   provides implementation timings for fenced frames and other proposals.
+{% Partial 'privacy-sandbox/timeline/fenced-frames.njk' %}
+
+{% Partial 'privacy-sandbox/timeline/fenced-frames-features.njk' %}
 
 ## Why do we need fenced frames?
 
@@ -147,15 +143,52 @@ The characteristics of fenced frames are further detailed in the
 Now that you know what fenced frames will and won't do, it's useful to compare
 to existing iframe features.
 
-| Feature | `<iframe>` | `<fencedframe>` |
-| ----------- | ----------- | ----------- |
-| Embed content | Yes | Yes |
-| Embedded content can access embedding context DOM | Yes | No |
-| Embedding context can access embedded content DOM | Yes | No | 
-| Observable attributes, such as `name` | Yes | No |
-| URLs (`http://example.com`) | Yes | Yes ([mode-dependent](https://github.com/WICG/fenced-frame/blob/master/explainer/modes.md)) |
-| Browser-managed opaque source (`urn:uuid`) | No | Yes |
-| Access to cross-site data | No | Yes (mode-dependent) |
+
+<table class="with-heading-tint">
+     <thead>
+    <tr>
+      <th>Feature </th>
+      <th><code>iframe</code></th>
+      <th><code>fencedframe</code></th>
+    </tr></thead>
+      <tbody>
+    <tr>
+      <td>Embed content</td>
+      <td>Yes</td>
+      <td>Yes</td>
+   </tr>
+   <tr>
+      <td>Embedded content can access embedding context DOM</td>
+      <td>Yes</td>
+      <td>No</td>
+   </tr>
+   <tr>
+      <td>Embedding context can access embedded content DOM</td>
+      <td>Yes</td>
+      <td>No</td>
+   </tr>
+   <tr>
+      <td>Observable attributes, such as <code>name</code></td>
+      <td>Yes</td>
+      <td>No</td>
+   </tr>
+   <tr>
+      <td>URLs (<code>http://example.com</code>) </td>
+      <td>Yes</td>
+      <td>Yes (<a href="https://github.com/WICG/fenced-frame/blob/master/explainer/modes.md">mode-dependent</a>)</td>
+   </tr>
+   <tr>
+      <td>Browser-managed opaque source (<code>urn:uuid</code>)</td>
+      <td>No</td>
+      <td>Yes</td>
+   </tr>
+   <tr>
+      <td>Access to cross-site data </td>
+      <td>No</td>
+      <td>Yes (mode-dependent)</td>
+   </tr>
+</tbody></table>
+  
 
 Fenced frames support fewer external communication options to preserve privacy.
 
@@ -184,6 +217,7 @@ Current candidates for this combination include:
    [read-only](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/modes.md#read-only)
    or [access unpartitioned
    storage](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/modes.md#unpartitioned-storage).
+
 
 For more details, refer to the [Fenced Frames
 explainer](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/modes.md).

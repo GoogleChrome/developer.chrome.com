@@ -103,13 +103,13 @@ In addition, if a console message is shown, the group (or the ancestor group) it
 Chromium issue: [1068788](https://crbug.com/1068788)
 
 
-## Sourcemaps improvements {: #sourcemap }
+## Source maps improvements {: #sourcemap }
 
-### Debug Chrome extension with sourcemap files {: #extension }
+### Debug Chrome extension with source map files {: #extension }
 
-You can now [debug Chrome extension](/docs/extensions/mv3/getstarted/#unpacked) with sourcemap files. Previously, DevTools only supported inline sourcemap for Chrome extension debugging.
+You can now [debug Chrome extension](/docs/extensions/mv3/getstarted/#unpacked) with source map files. Previously, DevTools only supported inline sourcemap for Chrome extension debugging.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/lnRa954ROl0MSSExlBl7.png", alt="Debug Chrome extension with sourcemap files", width="800", height="518" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/lnRa954ROl0MSSExlBl7.png", alt="Debug Chrome extension with source map files", width="800", height="518" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/1e73eb62955de7c4b0920575c7b374d47dab6a65 #}
 
@@ -118,7 +118,7 @@ Chromium issue: [212374](https://crbug.com/212374)
 
 ### Improved source folder tree in the Sources panel {: #source-tree }
 
-The source folder tree in the **Sources** panel is now improved with less clutter in the folder structures and naming (e.g. “../”, “./”, etc). Under the hood, this is the result of normalizing the absolute source URLs in the sourcemaps.
+The source folder tree in the **Sources** panel is now improved with less clutter in the folder structures and naming (e.g. “../”, “./”, etc). Under the hood, this is the result of normalizing the absolute source URLs in the source maps.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Wl1pPVfQ51NaCtpp3KuY.png", alt="Improved source folder tree in the Sources panel", width="800", height="444" %}
 

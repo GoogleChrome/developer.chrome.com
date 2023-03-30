@@ -21,7 +21,7 @@ functionality.
 [Menus](/docs/extensions/reference/contextMenus)
 : Add items to Google Chrome's context menu.
 
-[Omnibox](/docs/extensions/reference/omnibox">Omnibox)
+[Omnibox](/docs/extensions/reference/omnibox)
 : Add keyword functionality to the address bar.
 
 [Pages](/docs/extensions/mv3/override)
@@ -117,7 +117,7 @@ functionality.
 [Declarative content](/docs/extensions/reference/declarativeContent)
 : Perform actions on the content of a page without requiring permission.
 
-[Desktop capture](docs/extensions/reference/desktopCapture)
+[Desktop capture](/docs/extensions/reference/desktopCapture)
 : Capture content of screen, individual windows or tabs.
 
 [Page capture](/docs/extensions/reference/pageCapture)

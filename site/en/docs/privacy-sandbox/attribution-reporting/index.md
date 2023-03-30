@@ -1,13 +1,16 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: 'Attribution Reporting'
-subhead: An API to measure when an ad click or view leads to a conversion, such as a purchase on an advertiser site.
-description: An API to measure when an ad click or view leads to a conversion, such as a purchase on an advertiser site.
+subhead: >
+  Measure when an ad click or view leads to a conversion, such as a
+  purchase on an advertiser site.
+description: >
+  Measure when an ad click or view leads to a conversion, such as a
+  purchase on an advertiser site.
 date: 2021-05-18
-updated: 2023-01-20
+updated: 2023-03-14
 authors:
   - maudn
-  - samdutton
   - alexandrawhite
 ---
 
@@ -22,11 +25,7 @@ underlying concepts, but doesn't go into much technical detail.
 
 - If you work in **advertising or ad tech**, [Use cases](#use-cases-and-features) and [How does Attribution Reporting work?](#how-does-the-attribution-reporting-api-work) should
   be useful.
-
 - If you're a **developer or software engineer**, head over to the [Attribution Reporting: experiment and participate](/docs/privacy-sandbox/attribution-reporting-experiment/).
-
-- [The Attribution Reporting demo](https://attribution-reporting-demo.glitch.me/) provides a walkthrough of a basic Attribution Reporting
-  deployment.
 
 {% Aside %}
 If you're unfamiliar with some of these terms, consult the
@@ -36,6 +35,10 @@ If you're unfamiliar with some of these terms, consult the
 ## Changes
 
 Keep track of the [API changes](/docs/privacy-sandbox/attribution-reporting-updates/).
+
+{% Aside %}
+Attribution Reporting was formerly known as the Event Conversion Measurement API. [The name was changed](/docs/privacy-sandbox/attribution-reporting-introduction/) in 2022, as the original event-level scope expanded to cover additional measurement use cases.
+{% endAside %}
 
 Learn why we plan to
 [ship the Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/chrome-shipping)
@@ -93,35 +96,11 @@ If you're interested in experimenting with the API, head over to
 
 ### Status
 
-<table class="simple width-full fixed-table with-heading-tint">
-<thead>
-<tr>
-    <th style="text-align: left;">Proposal</th>
-    <th style="text-align: left;">Status</th>
-</tr>
-</thead>
-<tbody>
-    <tr>
-    <td>Event-level reports for clicks and views<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md">Explainer</a></td>
-    <td>Available in Chrome for origin trial.</td>
-    </tr>
-    <tr>
-    <td>Aggregatable reports for clicks and views<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md">Explainer</a></td>
-    <td>Available in Chrome for origin trial.</td>
-    </tr>
-    <td>Conversion journey: app-to-web<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/app_to_web.md">Web explainer</a> and <a href="https://developer.android.com/design-for-safety/privacy-sandbox/attribution-app-to-web">Android explainer</a></td>
-    <td>Expected in Chrome and Android for origin trial in Q2 2023.</td>
-    </tr>
-    <tr>
-    <tr>
-    <td>Conversion journey: cross-device<br><a href="https://github.com/WICG/attribution-reporting-api/blob/main/archive/cross_device.md">Explainer</a></td>
-    <td>This proposal has been archived. There are no current plans for implementation.</td>
-    </tr>
-</tbody>
-</table>
+{% Partial 'privacy-sandbox/timeline/attribution-reporting-features.njk' %}
 
 {% Aside %}
-For an overview of the status of all Privacy Sandbox APIs, see the [Privacy Sandbox timeline](https://privacysandbox.com/timeline).
+For an overview of the status of all Privacy Sandbox APIs, see the
+[Privacy Sandbox timeline](https://privacysandbox.com/timeline).
 {% endAside %}
 
 ## Use cases and features
@@ -297,13 +276,16 @@ conversion on an advertiser site.
 {% Img
   src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/un70ZcJVrWepdWWsnMIY.png", alt="", width="800", height="1024"
 %}
- <figcaption style="text-align:left;">Summary reports are generated as follows:<br>
+ <figcaption style="text-align:left;">Summary report generation</figcaption>
+</figure>
+
+Summary reports are generated as follows:
+
 *  When the user clicks or sees a specially configured ad, the browser—on the user's local device—records this event, alongside the attribution configuration data that was specified.<br>
 *  Later on, when the user converts, the browser matches this detailed clicks or views event ("attribution source event") with detailed conversion data ("attribution trigger data") defined by an ad tech company, following a specific logic that is defined by the ad tech. The output of this process is an aggregatable report.<br>
 *  Aggregatable reports are encrypted by the browser and sent to the ad tech server. From the ad tech server, the aggregatable reports are sent to the aggregation service to produce a summary report.<br>
 *  Summary reports are then made available to the ad tech. Note that summary reports are not delayed to the same extent as event-level reports.
-</figcaption>
-</figure>
+
 
 {% Details %}
 {% DetailsSummary 'h3' %}
@@ -429,3 +411,16 @@ They provide conversion insights without tracking users across sites, by using t
   - Queries on different slices of the data are rate-limited.
  
 {% endDetails %}
+
+## Engage and share feedback
+
+-  For questions about the proposal:
+   [create an issue](https://github.com/WICG/conversion-measurement-api/issues) 
+   on the proposal repo.
+-  If you're an origin trial participant and have technical questions, join the
+   [Attribution Reporting mailing list](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev) 
+   for developers and ask questions there, or
+   [file a Chromium bug](https://bugs.chromium.org/p/chromium/issues/list?q=attribution%20reporting).
+-  For implementation, integration, and general best practice questions:
+   [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) 
+   on the Privacy Sandbox developer support repo.

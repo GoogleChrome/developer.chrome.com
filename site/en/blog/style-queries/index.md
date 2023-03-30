@@ -82,7 +82,7 @@ But all of this makes a lot more sense in practice. Let’s take a look at some 
 
 {% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/oKtluVGgWpuYyEn8Zd6W.png", alt="Demo image with multiple product cards, some with ‘new’ or ‘low stock’ tags and the ‘low stock’ card with a red background.", width="800", height="355" %}
 
-Style queries are particularly useful when you either have a reusable component with multiple variations, or when you don’t have control over all of your styles but need to apply changes in certain cases. This example shows a set of product cards which share the same card component. Some product cards have additional details/notes such as “New” or “Low Stock”, triggered by a custom property named `--details`. Additionally, if a product is in “Low Stock”, it gets a deep red border background. This type of information is likely server rendered, and can be applied to the cards through inline styles like so:
+Style queries are particularly useful when you either have a reusable component with multiple variations, or when you don’t have control over all of your styles but need to apply changes in certain cases. This example shows a set of product cards which share the same card component. Some product cards have additional details/notes such as “New” or “Low Stock”, triggered by a custom property named `--detail`. Additionally, if a product is in “Low Stock”, it gets a deep red border background. This type of information is likely server rendered, and can be applied to the cards through inline styles like so:
 
 ```html
  <div class="product-list">

@@ -14,7 +14,7 @@ sessions:
       how to use them, and how they might change the way we reason about our styles.
     topics: []
     type: speaker
-    slidesUrl: null
+    slidesUrl: bit.ly/new-css-power-changhao
     videoUrl: null
   - speaker: tunetheweb
     title: "Core Web Vitals: Top Developer Recommendations"
@@ -25,6 +25,6 @@ sessions:
       implement.
     topics: []
     type: speaker
-    slidesUrl: null
+    slidesUrl: https://docs.google.com/presentation/d/1JQ6xgepxIlMKNlxAHKRwI4ml8SHqDIIqbtZl0L83CDo/edit?usp=drivesdk
     videoUrl: null
 ---
