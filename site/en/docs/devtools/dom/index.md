@@ -219,7 +219,7 @@ To edit nodes as HTML with syntax highlighting and autocomplete, select **Edit a
 
 ### Duplicate elements {: #duplicate }
 
-You can duplicate any element using **Duplicate element** in the node drop-down menu.
+You can duplicate an element using **Duplicate element** in the node drop-down menu.
 
 {% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/uYxwxYEdEy3p5Jrb8glT.png", alt="Duplicate element highlighted on copy options.", width="800", height="467" %}
 
@@ -238,6 +238,23 @@ You can duplicate any element using **Duplicate element** in the node drop-down 
 
 You can also use the keyboard shortcuts: <kbd>Shift + Alt + Down</kbd> arrow (Windows and Linux) and <kbd>Shift + Option + Down</kbd> arrow (MacOS).
 
+### Delete an element {: #delete }
+
+You can delete an element using **Delete element** in the node drop-down menu.
+
+{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/uYxwxYEdEy3p5Jrb8glT.png", alt="Delete element highlighted on copy options.", width="800", height="467" %}
+
+1. Right-click **Orlando** below and select **Inspect**.
+
+  * Bonfire of the Vanities
+  * Nana
+  * Orlando
+  * White Noise
+
+1. In the **Elements** panel, right-click `<li>Orlando</li>` and select **Delete element** from the drop-down menu. You can also use the <kbd>Delete</kbd> key.
+
+1. Return to the page. The list item has been instantly deleted.
+
 ### Capture a node screenshot {: #screenshot }
 
 You can screenshot any individual node using **Capture node screenshot** in the node drop-down menu.
@@ -251,7 +268,6 @@ You can screenshot any individual node using **Capture node screenshot** in the 
 1. The screenshot will be saved to your downloads.
 
 {% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/uIMeY1flDrlSBhvYqU5b.png", alt="Node screenshot saved to downloads.", width="800", height="296" %}
-
 
 ### Reorder DOM nodes {: #reorder }
 
