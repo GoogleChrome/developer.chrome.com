@@ -70,13 +70,13 @@ To bring you these improvements, the DevTools, Nuxt, Vite, and Rollup teams coll
 
 The DevTools team would like to express gratitude to the Nuxt, Vite, and Rollup teams for making this possible. We appreciate your efforts and collaboration, which were essential to the success of this implementation. Thank you again for your contributions!
 
-## New Console setting: Autocomplete on Enter {: # }
+## New Console setting: Autocomplete on Enter {: #console }
 
 You can now configure the DevTools **Console** to apply an autocomplete suggestion when you press `Enter`.
 
 By default, to accept an autocomplete suggestion, you can press `Tab` or `Arrow right`. To also autocomplete with `Enter`, enable {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Console** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Accept autocomplete suggestion on Enter**.
 
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/yM8StJzP6O0p3uaREet6.mp4" width="800", height="457" %}
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/yM8StJzP6O0p3uaREet6.mp4", autoplay="false", muted="true", loop="false", controls="true", class="screenshot" %}
 
 Additionally, the text of [another setting](/docs/devtools/settings/preferences/#console) is now more user-friendly: {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Treat code evaluation as user action**.
 
