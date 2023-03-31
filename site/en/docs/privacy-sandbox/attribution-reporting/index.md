@@ -24,12 +24,15 @@ This article covers the basics of Attribution Reporting, and explains some
 underlying concepts, but doesn't go into much technical detail.
 
 - If you work in **advertising or ad tech**, [Use cases](#use-cases-and-features) and [How does Attribution Reporting work?](#how-does-the-attribution-reporting-api-work) should
-  be useful.
+  be useful. The Attribution Reporting API supports functions that currently rely on third-party cookies.
 - If you're a **developer or software engineer**, head over to the [Attribution Reporting: experiment and participate](/docs/privacy-sandbox/attribution-reporting-experiment/).
 
+**Advertisers and publishers who that rely on ad tech platforms** for conversion measurement don't need to use the API directly, but may be interested in understanding it if they're working with ad tech platforms that may integrate the API.
+
 {% Aside %}
-If you're unfamiliar with some of these terms, consult the
-[Privacy Sandbox glossary](/docs/privacy-sandbox/glossary/).
+
+In the future, the Attribution Reporting API may serve use cases that are not related to advertising.
+
 {% endAside %}
 
 ## Changes
@@ -52,42 +55,25 @@ cookies](https://developer.mozilla.org/docs/Web/HTTP/Cookies#Third-party_cookies
 Browsers are restricting access to third-party cookies because these can be
 used to track users across sites and hinder user privacy.
 
-The Attribution Reporting API enables those measurements in a privacy-preserving way, without
-third-party cookies.
+The Attribution Reporting API enables those measurements in a privacy-preserving way, without third-party cookies.
 
 This API enables advertisers and ad tech providers to measure conversions in the following cases:
 
 - Ad **clicks** and **views**.
-- Ads in a **third-party** iframe, such as ads on a publisher site that uses a third-party ad tech
-  provider.
-- Ads in a **first-party** context, such as ads on a social network or a search engine results page,
-  or a publisher serving their own ads.
-
-## Who needs to know about this API?
-
-- **Ad tech platforms** such as [demand-side
-  platforms](/docs/privacy-sandbox/glossary/#dsp) (DSP) or [data management
-  platforms](/docs/privacy-sandbox/glossary/#dmp) (DMP) may use this API to
-  support functionality that currently relies on third-party cookies.
-- **Advertisers and publishers relying on custom code** for advertising or
-  conversion measurement may use this API to replace existing techniques.
-- **Advertisers and publishers relying on ad tech platforms** for conversion
-  measurement don't need
-  to use the API directly, but may be interested in understanding it if they're working with ad tech
-  platforms that may integrate the API.
-
-{% Aside %}
-
-In the future, the Attribution Reporting API may serve use cases that are not related to advertising.
-
-{% endAside %}
+- Ads in a **third-party** iframe, such as ads on a publisher site that uses a
+  third-party ad tech provider.
+- Ads in a **first-party** context, such as ads on a social network or a search
+  engine results page, or a publisher serving their own ads.
+  
+If you're unfamiliar with some of these terms or concepts, consult the
+[Privacy Sandbox glossary](/docs/privacy-sandbox/glossary/).
 
 ## Try the API
 
 - The Attribution Reporting API is available for experiments in the
-  [ads relevance and measurement origin trial](/docs/privacy-sandbox/unified-origin-trial/).
+  [relevance and measurement origin trial](/docs/privacy-sandbox/unified-origin-trial/).
    - Multiple rounds of origin trials are run to improve and adjust APIs based on ecosystem feedback.
-- You can test locally in your browser. [Set a _flag_](/blog/browser-flags/),
+- You can test locally in your browser. [Set a _flag_](/docs/web-platform/chrome-flags/),
   which tells the Chrome browser to enable specific experimental
   features.
 
@@ -105,8 +91,9 @@ For an overview of the status of all Privacy Sandbox APIs, see the
 
 ## Use cases and features
 
-The Attribution Reporting API gives access to different types of insights via two types of reports that can be sent to an
-advertiser or a third-party ad tech provider. These two types of reports can be used simultaneously
+The Attribution Reporting API gives access to different types of insights via
+two types of reports that can be sent to an advertiser or a third-party ad tech
+provider. These two types of reports can be used simultaneously
 and are complementary.
 
 - [**Event-level reports**](#event-level-reports) associate a particular ad click or view (on the ad side) with data on the
@@ -117,8 +104,6 @@ and are complementary.
 - [**Summary reports**](#summary-reports) are not tied to a specific event on the ad side. These reports provide
   richer, higher-fidelity conversion data than event-level reports. A combination of privacy
   techniques help reduce the risk of identity joining across sites.
-
-Both report types can be used simultaneously. They're complementary.
 
 ### Event-level reports
 
@@ -132,8 +117,7 @@ Event-level reports associate an ad click or view with coarse conversion data.
 
 Event-level reports are suited for:
 
-- **Optimization**. Event-level reports help answer questions like "How can I improve my return on
-  investment?". In particular, these reports can be used to optimize for ad placement, since a
+- **Optimization**. Event-level reports help answer questions like "How can I improve my return on investment?". In particular, these reports can be used to optimize for ad placement, since a
   unique ID for the ad side can be made available in the reports. Event-level reports can provide
   training data for machine learning models.
 - **Coarse reporting**, where very little information is needed about the conversion. The current
