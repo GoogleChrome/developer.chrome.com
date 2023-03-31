@@ -14,6 +14,7 @@ hero: image/1L2RBhCLSnXjCnSlevaDjy3vba73/EK3nTunaRZbP96S2zwM2.jpeg
 alt: Person about to touch the calm water.
 tags:
   - aurora-project
+  - performance
 ---
 
 Chrome recently introduced a new [experimental responsiveness metric](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/F7S4_emZkcw) in the [Chrome UX Report](/docs/crux/) report. This metric, which we now know as [Interaction to Next Paint (INP)](https://web.dev/inp/) measures overall responsiveness to user interactions on the page. Today we want to share insights on where websites built using modern JavaScript frameworks stand in relation to this metric. We want to discuss why INP is relevant to frameworks and how [Aurora](/blog/introducing-aurora/) and frameworks are working to optimize responsiveness.
