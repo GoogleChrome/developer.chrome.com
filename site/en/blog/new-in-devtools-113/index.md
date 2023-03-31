@@ -79,6 +79,21 @@ The DevTools team would like to express gratitude to the Nuxt, Vite, and Rollup 
 
 Chromium issue: [](https://crbug.com/).
 
+## New Console setting: Autocomplete on Enter {: # }
+
+You can now configure the DevTools **Console** to autocomplete with when you press `Enter`.
+
+By default, to accept an autocomplete suggestion, you can press `Tab` or `Arrow right`. To also autocomplete with `Enter`, enable {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Console** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Accept autocomplete suggestion on Enter**.
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/yM8StJzP6O0p3uaREet6.mp4" width="800", height="457" %}
+
+Additionally, the text of [another setting](/docs/devtools/settings/preferences/#console) is now more user-friendly: {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Treat code evaluation as user action**.
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/fa57e2c4429e60c47361383e3cf80b2c9022fab0 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/b35381df8e54d028accbd304f2edaa696a2c8218 #}
+
+Chromium issue: [1276960](https://crbug.com/1276960).
+
 ## JavaScript Profiler deprecation: stage two {: # }
 
 As early as [Chrome 58](/blog/devtools-javascript-cpu-profile-migration-2/), the DevTools team planned to eventually deprecate the **JavaScript Profiler** and have Node.js and Deno developers use the **Performance** panel for profiling JavaScript CPU performance.
