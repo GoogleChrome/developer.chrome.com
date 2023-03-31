@@ -74,7 +74,9 @@ If you're unfamiliar with some of these terms or concepts, consult the
 If you're interested in experimenting with the API, head over to
 [Attribution Reporting: experiment and participate](/docs/privacy-sandbox/attribution-reporting-experiment/).
 
-## Changes
+{: #changes }
+
+### API changes
 
 * Keep track of the [API changes](/docs/privacy-sandbox/attribution-reporting-updates/).
 * Learn why we plan to [ship the Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/chrome-shipping) in the first half of 2023.
@@ -85,7 +87,9 @@ Attribution Reporting was formerly known as the Event Conversion Measurement API
 
 {% endAside %}
 
-### Status
+{: #status }
+
+### Availability
 
 {% Partial 'privacy-sandbox/timeline/attribution-reporting-features.njk' %}
 
