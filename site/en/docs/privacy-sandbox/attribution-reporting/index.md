@@ -27,11 +27,15 @@ underlying concepts, but doesn't go into much technical detail.
   be useful. The Attribution Reporting API supports functions that currently rely on third-party cookies.
 - If you're a **developer or software engineer**, head over to the [Attribution Reporting: experiment and participate](/docs/privacy-sandbox/attribution-reporting-experiment/).
 
-**Advertisers and publishers who that rely on ad tech platforms** for conversion measurement don't need to use the API directly, but may be interested in understanding it if they're working with ad tech platforms that may integrate the API.
+**Advertisers and publishers that rely on ad tech platforms** for conversion
+measurement don't need to use the API directly, but may be interested in
+understanding it if they're working with ad tech platforms that may integrate
+the API.
 
 {% Aside %}
 
-In the future, the Attribution Reporting API may serve use cases that are not related to advertising.
+In the future, the Attribution Reporting API may serve use cases that are not
+related to advertising.
 
 {% endAside %}
 
