@@ -32,7 +32,7 @@ find a list of the scoped FLEDGE features and when they'll be supported.
    </td>
     <td>Now</td>
     <td><p>Supported until at least 2026.</p>
-      <p>This feature is intended to make the transition to FLEDGE reporting from third-party cookie reporting easier. Thus, this reporting will not be supported after adtechs have had time to update their reporting mechanisms.</p>
+      <p>This feature is intended to make the transition to FLEDGE reporting from third-party cookie reporting easier. Thus, this reporting will not be supported after ad techs have had time to update their reporting mechanisms.</p>
     </td>
   </tr>
   <tr>
