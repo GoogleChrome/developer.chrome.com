@@ -15,7 +15,7 @@ tags:
   - devtools-tips
 ---
 
-[Source maps](/blog/sourcemaps/) let you keep your code readable and debuggable even after you've combined and minified it, without impacting performance.
+[Source maps](web.dev/blog/source-maps/) let you keep your code readable and debuggable even after you've combined and minified it, without impacting performance.
 
 {% YouTube id='FIYkjjFYvoI' %}
 
@@ -33,9 +33,10 @@ Chrome DevTools reads both the deployed code and source maps and lets you [debug
 
 To better understand how source maps work, check out the [source maps visualizer](https://sokra.github.io/source-map-visualization/).
 
-Additionally, source maps can have [extensions](https://sourcemaps.info/spec.html#h.ghqpj1ytqjbm). If you build tools and frameworks, consider supporting them. Check out this [Case Study: Better Angular Debugging with DevTools](/blog/devtools-better-angular-debugging/), where the DevTools Team and Angular improved the debugging experience in DevTools by supporting the `x_google_ignoreList` extension.
+Additionally, source maps can have [extensions](https://sourcemaps.info/spec.html#h.ghqpj1ytqjbm). If you build tools and frameworks, consider supporting them. Check out this [Case Study: Better Angular Debugging with DevTools](/blog/devtools-better-angular-debugging/), where the DevTools Team and Angular improved the debugging experience in DevTools by supporting the [`x_google_ignoreList` extension](/articles/x-google-ignore-list/).
 
 To learn more, see:
 
 - [Introduction to JavaScript Source Maps](/blog/sourcemaps/)
+- [What are source maps?](web.dev/blog/source-maps/)
 - [Debug your original code instead of deployed with source maps](/docs/devtools/javascript/source-maps/)
