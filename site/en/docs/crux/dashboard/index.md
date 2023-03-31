@@ -59,7 +59,7 @@ To launch the CrUX Dashboard, enter an origin or URL:
     text-align: center;
   }
   #origin[aria-invalid=true] {
-    outline: red dashed 2px;
+    border: red dashed 2px;
   }
   #origin-submit {
     line-height: 2.25em;
