@@ -79,14 +79,21 @@ The DevTools team would like to express gratitude to the Nuxt, Vite, and Rollup 
 
 Chromium issue: [](https://crbug.com/).
 
-##  {: # }
+## JavaScript Profiler deprecation: stage two {: # }
 
+As early as [Chrome 58](/blog/devtools-javascript-cpu-profile-migration-2/), the DevTools team planned to eventually deprecate the **JavaScript Profiler** and have Node.js and Deno developers use the **Performance** panel for profiling JavaScript CPU performance.
 
+This DevTools version (113) starts *phase two* of the [four-phase **JavaScript Profiler** deprecation](https://github.com/ChromeDevTools/rfcs/discussions/2#discussioncomment-5189668). During this phase, you can still open the panel but its UI is no longer available.
 
-{#  #}
-{#  #}
+To profile CPU, click **Go to Performance panel**.
 
-Chromium issue: [](https://crbug.com/).
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/1HHtEbstCweUkTAK6eYH.png", alt="JavaScript Profiler deprecation.", width="800", height="393" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/4f15b9fdb6b7f1932749813eb6e6f51fdef64e00 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/351e005d9e41f8310552cc84ab0ce9f9ab6e0b7d #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/1dca54ab8016d2377885bd6146c89248ef81e24c #}
+
+Chromium issue: [1354548](https://crbug.com/1354548).
 
 
 ## Miscellaneous highlights {: #misc }
