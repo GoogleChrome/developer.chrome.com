@@ -1,8 +1,8 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Reading time'
+title: 'Run scripts on every page'
 seoTitle: 'Chrome Extensions Tutorial: Reading time'
-description: 'Learn how to insert an element on each page.'
+description: 'Learn how to automatically add new elements to existing webpages.'
 subhead: 'Create your first extension that inserts a new element on the page.'
 date: 2022-10-04
 # updated: 2022-06-13
