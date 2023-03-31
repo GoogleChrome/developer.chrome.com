@@ -21,6 +21,10 @@ The post [Deprecating and removing Web SQL](/blog/deprecating-web-sql/) announce
 
 The following four steps demonstrate the conceptual idea of migrating a Web SQL database over to SQLite Wasm, with the SQLite database backed by the origin private file system. This can serve as the foundation for your own code customized to _your_ Web SQL migration needs.
 
+{% Aside 'success' %}
+The SQLite team have run some benchmarks on their WebAssembly implementation compared to the deprecated Web SQL. These benchmarks show that SQLite Wasm is generally about as fast as Web SQL. Sometimes it's a little slower, sometimes it's a little faster. See all details on the [results page](https://sqlite-wasm-opfs.glitch.me/speedtest.html).
+{% endAside %}
+
 ### The to-be-migrated Web SQL database(s)
 The baseline assumption of this migration guide is that you have one (or several) existing Web SQL databases that hold data relevant to your app. In the screenshot below, you see an example database called _mydatabase_ with a rainstorms table that maps moods to severities. Chrome DevTools allow you to [view Web SQL databases for debugging](/docs/devtools/storage/websql/#view), as shown in the following screenshot.
 
