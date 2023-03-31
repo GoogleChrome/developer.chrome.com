@@ -84,7 +84,7 @@ form.addEventListener('submit', function(e) {
     if (!url.startsWith('http')) url = 'https://' + url;
     url = new URL(url);
     var encoded_origin = encodeURIComponent(url.origin);
-    var url = 'https://datastudio.google.com/reporting/bbc5698d-57bb-4969-9e07-68810b9fa348/page/keDQB?params=%7B%22origin%22:%22' + encoded_origin + '%22%7D';
+    var url = 'https://lookerstudio.google.com/reporting/bbc5698d-57bb-4969-9e07-68810b9fa348/page/keDQB?params=%7B%22origin%22:%22' + encoded_origin + '%22%7D';
     window.location = url;
   } catch {
     origin.setAttribute('aria-invalid',true);
