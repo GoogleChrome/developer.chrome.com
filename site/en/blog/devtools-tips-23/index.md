@@ -4,7 +4,7 @@ title: >
 description: >
   Learn how source maps can help you debug your original code instead of deployed.
 layout: 'layouts/blog-post.njk'
-date: 2023-03-29
+date: 2023-03-31
 authors:
   - sofiayem
 hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Ho0KpciQ9ch9ERgYwzjb.png'
