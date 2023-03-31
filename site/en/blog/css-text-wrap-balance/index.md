@@ -42,8 +42,8 @@ CSS can massively improve your text layouts.
 Without `text-wrap: balance`; designers, content editors and publishers have
 [few tools](https://developer.mozilla.org/docs/Web/CSS/CSS_Text/Wrapping_Text)
 to change the way lines are balanced.. The best options available being to use
-[`<wbr>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr) or
-[`&shy;`](https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens) to help
+[`<wbr>`](https://developer.mozilla.org/docs/Web/HTML/Element/wbr) or
+[`&shy;`](https://developer.mozilla.org/docs/Web/CSS/hyphens) to help
 guide text layouts into smarter decisions about where to break lines and words.
 
 As a developer, you don’t know the final size, font size, or even language of a
@@ -159,7 +159,7 @@ h1,h2,h3,h4,h5,h6 {
 Just applying this style may not provide you with the results you expect, as the
 text needs to wrap and therefore have a maximum line length applied from
 somewhere. You'll see a
-[`max-inline-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/max-inline-size)
+[`max-inline-size`](https://developer.mozilla.org/docs/Web/CSS/max-inline-size)
 set on the examples in this post, this style is like `max-width` but can be set
 once for any language.
 
@@ -213,7 +213,7 @@ browser takes care of it!
 ### Interactions with the `white-space` property
 
 Balancing text competes with the
-[`white-space`](https://developer.mozilla.org/en-US/docs/Web/CSS/white-space)
+[`white-space`](https://developer.mozilla.org/docs/Web/CSS/white-space)
 property because one is asking for no wrapping and the other is asking for
 balanced wrapping. Overcome this by unsetting the white space property, then
 balanced wrapping can apply again.
