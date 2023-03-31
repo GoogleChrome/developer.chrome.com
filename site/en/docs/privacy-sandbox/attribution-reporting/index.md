@@ -20,17 +20,20 @@ authors:
 
 ## Who is this article for?
 
-This article covers the basics of Attribution Reporting, and explains some
+This article covers the basics of Attribution Reporting and explains some
 underlying concepts, but doesn't go into much technical detail.
 
-- If you work in **advertising or ad tech**, [Use cases](#use-cases-and-features) and [How does Attribution Reporting work?](#how-does-the-attribution-reporting-api-work) should
-  be useful. The Attribution Reporting API supports functions that currently rely on third-party cookies.
-- If you're a **developer or software engineer**, head over to the [Attribution Reporting: experiment and participate](/docs/privacy-sandbox/attribution-reporting-experiment/).
+- If you work in **advertising or ad tech**, you'll learn about how this API to
+  supports functions that are currently supported by third-party cookies. Check
+  out the API [use cases](#use-cases-and-features), with a more details of how
+  [the reports are generated](#how-does-the-attribution-reporting-api-work).
+- If you're a **developer or software engineer**, head over to the
+  [full system overview](/docs/privacy-sandbox/attribution-reporting/system-overview/) or
+  [experiment and participate](/docs/privacy-sandbox/attribution-reporting-experiment/) with the API.
 
 **Advertisers and publishers that rely on ad tech platforms** for conversion
-measurement don't need to use the API directly, but may be interested in
-understanding it if they're working with ad tech platforms that may integrate
-the API.
+measurement don't need to use the API directly. You may be interested in
+understanding how Attribution Reporting works if your ad tech plans to integrate with this API.
 
 {% Aside %}
 
@@ -39,23 +42,10 @@ related to advertising.
 
 {% endAside %}
 
-## Changes
-
-Keep track of the [API changes](/docs/privacy-sandbox/attribution-reporting-updates/).
-
-{% Aside %}
-Attribution Reporting was formerly known as the Event Conversion Measurement API. [The name was changed](/docs/privacy-sandbox/attribution-reporting-introduction/) in 2022, as the original event-level scope expanded to cover additional measurement use cases.
-{% endAside %}
-
-Learn why we plan to
-[ship the Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/chrome-shipping)
-in the first half of 2023.
-
 ## What is the Attribution Reporting API?
 
 Today, ad conversion measurement often relies on [third-party
 cookies](https://developer.mozilla.org/docs/Web/HTTP/Cookies#Third-party_cookies).
-
 Browsers are restricting access to third-party cookies because these can be
 used to track users across sites and hinder user privacy.
 
@@ -83,6 +73,17 @@ If you're unfamiliar with some of these terms or concepts, consult the
 
 If you're interested in experimenting with the API, head over to
 [Attribution Reporting: experiment and participate](/docs/privacy-sandbox/attribution-reporting-experiment/).
+
+## Changes
+
+* Keep track of the [API changes](/docs/privacy-sandbox/attribution-reporting-updates/).
+* Learn why we plan to [ship the Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/chrome-shipping) in the first half of 2023.
+
+{% Aside %}
+
+Attribution Reporting was formerly known as the Event Conversion Measurement API. [The name was changed](/docs/privacy-sandbox/attribution-reporting-introduction/) in 2022, as the original event-level scope expanded to cover additional measurement use cases.
+
+{% endAside %}
 
 ### Status
 
