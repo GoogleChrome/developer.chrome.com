@@ -68,6 +68,7 @@ To launch the CrUX Dashboard, enter an origin or URL:
 
 <form id="form">
   <input id="origin" aria-label="Origin" type="text" placeholder="https://developer.chrome.com" required>
+  <input id="formatted-origin" aria-label="Formatted Origin" type="url" hidden>
   <button id="origin-submit" class="bg-primary button-filled color-bg material-button">Go</button>
 </form>
 
@@ -81,10 +82,21 @@ form.addEventListener('submit', function(e) {
     origin.removeAttribute('aria-invalid');
     e.preventDefault();
     var url = origin.value.trim();
+    // Do some basic checks to ensure it's a valid external URL (of the format
+    // (xxx.yyy). Later we'll use `new URL()` to do more thorough validation
+    // but it allows single word URLs like http://localhost or http://test
+    // which are not valid external URLs that CrUX needs.
+    if (!(url.indexOf('.') > 0)) throw new TypeError('Invalid URL');
+    if (url.endsWith('.')) throw new TypeError('Invalid URL');
+    // Add default scheme of https if needed
     if (!url.startsWith('http')) url = 'https://' + url;
-    url = new URL(url);
+    // Check it's a valid URL
+    var url = new URL(url);
     var encoded_origin = encodeURIComponent(url.origin);
-    var url = 'https://lookerstudio.google.com/reporting/bbc5698d-57bb-4969-9e07-68810b9fa348/page/keDQB?params=%7B%22origin%22:%22' + encoded_origin + '%22%7D';
+    var url =
+      'https://lookerstudio.google.com/reporting/bbc5698d-57bb-4969-9e07-68810b9fa348/page/keDQB?params=%7B%22origin%22:%22' +
+      encoded_origin +
+      '%22%7D';
     window.location = url;
   } catch {
     origin.setAttribute('aria-invalid',true);
@@ -110,7 +122,7 @@ From here expand the "Manage search engines and site search", scroll down to "Si
 
 - Search engine: `CrUX`
 - Shortcut: `crux`
-- URL with %s in place of query: `https://datastudio.google.com/c/u/0/reporting/bbc5698d-57bb-4969-9e07-68810b9fa348/page/keDQB?params=%7B%22origin%22:%22%s%22%7D`
+- URL with %s in place of query: `https://lookerstudio.google.com/c/u/0/reporting/bbc5698d-57bb-4969-9e07-68810b9fa348/page/keDQB?params=%7B%22origin%22:%22%s%22%7D`
 
 {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/uMyipuu95G78aQ7hdn9u.png", alt="Chrome 'Add search engine' dialog", width="600", height="422" %}
 
