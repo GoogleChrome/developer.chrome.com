@@ -192,7 +192,7 @@ See the [Manifest V3 - Web Accessible Resources demo][github-war-sample] for mor
 [method-geturl]: #method-getURL
 [method-onconnect]: #event-onConnect
 [method-onconnectexternal]: #event-onConnectExternal
-[method-onconnect]: #event-onMessage
+[method-onmessage]: #event-onMessage
 [method-onmessageexternal]: #event-onMessageExternal
 [method-oninstalled]: #event-onInstalled
 [method-onstartup]: #event-onStartup
