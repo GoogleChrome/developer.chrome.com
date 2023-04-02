@@ -10,7 +10,7 @@ new_available_content_url: https://web.dev/source-maps/
 ---
 
 {% Aside 'warning' %}
-[Source map specification](https://bit.ly/sourcemap) has been updated and this article is no longer up to date. Refer to the [What are source maps](https://web.dev/source-maps) for the latest information.
+[Source map specification](https://bit.ly/sourcemap) has been updated and this article is no longer up to date. Refer to [What are source maps?](https://web.dev/source-maps) for the latest information.
 {% endAside %}
 
 Have you ever wished you could keep your client-side code readable and more importantly debuggable even after you've combined and minified it, without impacting performance? Well now you can through the magic of [source maps](https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k/edit?hl=en_US&amp;pli=1&amp;pli=1).
