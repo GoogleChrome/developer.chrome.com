@@ -14,7 +14,7 @@ Message passing
 [onConnect][method-onconnect], 
 [onConnectExternal][method-onconnectexternal],
 [sendMessage()][method-sendmessage], 
-[onMessage][method-onconnect] and
+[onMessage][method-onmessage] and
 [onMessageExternal][method-onmessageexternal]. 
 In addition, your extension can pass messages to native applications on the user's device using 
 [connectNative()][method-connectnative] and
@@ -192,6 +192,7 @@ See the [Manifest V3 - Web Accessible Resources demo][github-war-sample] for mor
 [method-geturl]: #method-getURL
 [method-onconnect]: #event-onConnect
 [method-onconnectexternal]: #event-onConnectExternal
+[method-onconnect]: #event-onMessage
 [method-onmessageexternal]: #event-onMessageExternal
 [method-oninstalled]: #event-onInstalled
 [method-onstartup]: #event-onStartup
