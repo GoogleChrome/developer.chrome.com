@@ -19,7 +19,7 @@ alt: >
 
 {% YouTube id='FIYkjjFYvoI', startTime='256' %}
 
-Chrome DevTools parses the `x_google_ignoreList` field in source maps to help improve developer debugging experience. Take a look at the following stack trace in the **Console**. DevTools automatically hides all the third party frames, and shows only the frames that are relevant to your code.
+Chrome DevTools parses the `x_google_ignoreList` field in [source maps](https://web.dev/source-maps/) to help improve developer debugging experience. Take a look at the following stack trace in the **Console**. DevTools automatically hides all the third party frames, and shows only the frames that are relevant to your code.
 
 <figure>
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/4Q6lH52avZS6Om6UV3Dl.png", alt="A comparison of stack trace results.", width="800", height="439" %}
