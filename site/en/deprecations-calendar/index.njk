@@ -1,21 +1,21 @@
 ---
-title: 'Deprecation Calendar'
-alt: 'deprecation calendar'
+title: 'Deprecations Calendar'
+alt: 'deprecations calendar'
 ---
 {% extends "layouts/base.njk" %}
 
 {% block css %}
-{% InlineCss '/css/deprecation-calendar.css' %}
+{% InlineCss '/css/deprecations-calendar.css' %}
 {% InlineCss '/css/main.css' %}
 {% endblock %}
 
 {% from 'macros/cards/hero-card.njk' import heroCard with context %}
 
 {% block content %}
-<div class="deprecation-calendar">
-  <div class="deprecation-calendar__container width-full pad-400">
+<div class="deprecations-calendar">
+  <div class="deprecations-calendar__container width-full pad-400">
     {{ heroCard(
-            "Deprecation Calendar",
+            "Deprecations Calendar",
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at aliquet ipsum, sed imperdiet ex. Sed commodo fringilla posuere.",
             "",
             "",
@@ -26,12 +26,12 @@ alt: 'deprecation calendar'
 
       
 
-     {% include 'partials/deprecation-filters.njk' %}
-     {% include 'partials/deprecation-table.njk' %}
+     {% include 'partials/deprecations-filters.njk' %}
+     {% include 'partials/deprecations-table.njk' %}
   </div>
 </div>
 {% endblock %}
 
 {% block scripts %}
-  <script type="module" src="{{ helpers.hashForProd('/js/deprecation-calendar.js') }}"></script>
+  <script type="module" src="{{ helpers.hashForProd('/js/deprecations-calendar.js') }}"></script>
 {% endblock %}

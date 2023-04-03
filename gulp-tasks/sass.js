@@ -20,8 +20,8 @@ const entrypoints = [
     dest: './dist/css/styleguide-main.css',
   },
   {
-    src: './site/_scss/deprecation-calendar.scss',
-    dest: './dist/css/deprecation-calendar.css',
+    src: './site/_scss/deprecations-calendar.scss',
+    dest: './dist/css/deprecations-calendar.css',
   },
 ];
 

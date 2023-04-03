@@ -1,11 +1,11 @@
 {% from 'macros/icon.njk' import icon with context %}
 
-<div class="deprecation-calendar__filters align-center">
+<div class="deprecations-calendar__filters align-center">
   <span class="color-secondary-text">
     {{ 'i18n.filter_sheet.filter_by' | i18n(locale) }}:
   </span>
 
-  <enhanced-select id="removal-date"class="deprecation-filter gap-right-300" label="{{ 'i18n.deprecation_calendar.removal_date' | i18n(locale) }}" fixedLabel>
+  <enhanced-select id="removal-date"class="deprecations-filter gap-right-300" label="{{ 'i18n.deprecation_calendar.removal_date' | i18n(locale) }}" fixedLabel>
       <select name="removal-date">
         <option value="7">{{ 'i18n.deprecation_calendar.next_7_days' | i18n(locale) }}</option>
         <option value="30">{{ 'i18n.deprecation_calendar.next_30_days' | i18n(locale) }}</option>
@@ -15,7 +15,7 @@
       </select>
     </enhanced-select>
 
-    <enhanced-select id="chrome-version" class="deprecation-filter gap-right-300" label="{{ 'i18n.deprecation_calendar.chrome_version' | i18n(locale) }}" fixedLabel>
+    <enhanced-select id="chrome-version" class="deprecations-filter gap-right-300" label="{{ 'i18n.deprecation_calendar.chrome_version' | i18n(locale) }}" fixedLabel>
       <select name="chrome-version" multiple>
         <option value="Chrome 113">Chrome 113</option>
         <option value="Chrome 112">Chrome 112</option>
@@ -38,7 +38,7 @@
 
 
 
-<div class="deprecation-calendar__mobile-filters align-center">
+<div class="deprecations-calendar__mobile-filters align-center">
   <dialog id="mobile-filters" class="scrollbar lg:display-none mobile-filters-dialog"> 
     <div class="filter-sheet display-flex direction-column">
       
@@ -139,7 +139,7 @@
   </dialog>
 </div>
 
-<div class="deprecation-calendar__selected display-flex flex-flow-row-wrap grid-gap-100">
+<div class="deprecations-calendar__selected display-flex flex-flow-row-wrap grid-gap-100">
     <span id="mobile-filters-opener"
         class="mobile-filters-btn mobile-filters-opener surface color-blue-medium hairline rounded-lg tag-pill">
     {{ icon('filters') }}{{ 'i18n.filter_sheet.filters' | i18n(locale) }}
