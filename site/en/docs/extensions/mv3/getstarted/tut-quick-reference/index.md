@@ -106,7 +106,6 @@ console.log("sw-tips.js")
 
 See [Importing scripts](tbd) to learn about other ways to import multiple files in a service worker.
 
-
 {% Aside 'important' %}
 
 Remember to set `type.module` when using a modern module bundler framework, such as [CRXjs Vite plugin][crxjs-vite].
@@ -136,7 +135,7 @@ An unknown error occurred when fetching the script.
 
 {% Video src="video/BhuKGJaIeLNPW9ehns59NfwqKxF2/AbMNDSbURLKjH1Jm1C9Q.mp4", width="800", height="677", autoplay="true", muted="true", loop="true" %}
 
-See [Debugging extensions](tbd) for more ways debug the extension service worker.
+See [Debugging extensions][doc-debug-ext] for more ways debug the extension service worker.
 
 {% Aside 'caution' %}
 Don't forget to fix the file name before moving on!
@@ -174,7 +173,7 @@ chrome.runtime.onInstalled.addListener(({ reason }) => {
 Service workers do not have direct access to the [window object][mdn-window], therefore cannot use
 [window.localStorage()][mdn-local-storage] to store values. Also, service workers are short-lived execution environments;
 they get terminated repeatedly throughout a user's browser session, which makes it incompatible with
-global variables.  Instead, we use [`chrome.storage.local`](tbd) which stores data on the local machine.
+global variables.  Instead, we use [`chrome.storage.local`][api-storage-local] which stores data on the local machine.
 
 See [Saving state](TBD) to learn about other storage options for extension service workers.
 
@@ -202,7 +201,7 @@ The [`"minimum_chrome_version"`][manifest-min-version] explains how this key beh
 {% endAside %}
 
 Now let's register the omnibox event listeners at the top level of the script. The
-[`onInputChanged()`](tbd) takes the current user input and a [suggestResult][omnibox-suggest]
+[`onInputChanged()`][omnibox-input-changed] takes the current user input and a [suggestResult][omnibox-suggest]
 object. The keywords in storage will populate the suggestions. When user enters the omnibox keyword
 (api) in the address bar followed by tab or space, Chrome will display a list of suggestions.
 
@@ -318,7 +317,7 @@ chrome.alarms.onAlarm.addListener(updateTip);
 
 {% Aside 'important' %}
 
-All [Chrome API][doc-apis] event listeners and methods restart the service worker's 30 second termination timer. For more information, see the [Extension service worker lifecycle](tdb).
+All [Chrome API][doc-apis] event listeners and methods restart the service worker's 30 second termination timer. For more information, see the [Extension service worker lifecycle](tbd).
 
 {% endAside %}
 
@@ -512,3 +511,6 @@ To continue your extension service worker learning path, we recommend exploring 
 [tut-reading-time-step2]: /docs/extensions/mv3/getstarted/tut-reading-time#step-2
 [tut-reading-time]: /docs/extensions/mv3/getstarted/tut-reading-time
 [tut-tabs-manager]: /docs/extensions/mv3/getstarted/tut-tabs-manager
+[doc-debug-ext]: /docs/extensions/mv3/tut_debugging/#debug_bg
+[api-storage-local]: /docs/extensions/reference/storage/#property-local
+[omnibox-input-changed]: /docs/extensions/reference/omnibox/#event-onInputChanged
