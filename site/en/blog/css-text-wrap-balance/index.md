@@ -5,7 +5,7 @@ description: >
   A classic typography technique of hand-authoring line breaks for balanced text blocks, comes to CSS.
 subhead: >
   A classic typography technique of hand-authoring line breaks for balanced text blocks, comes to CSS.
-date: 2023-04-01
+date: 2023-04-03
 authors:
   - argyle
 tags:
