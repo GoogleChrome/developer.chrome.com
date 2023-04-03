@@ -38,7 +38,7 @@ A Privacy Sandbox Relevance and Measurement [origin trial](/docs/privacy-sandbox
 
 {: #get-and-set-topics }
 
-## Access and observe topics {: #access-topics }
+## Access and observe topics
 
 The Topics JavaScript API has one method, `document.browsingTopics()`, which is used to get and set Topics. It returns a promise that resolves to an array of up to three topics, one for each of the three most recent epochs, in random order. An epoch is a period of time currently set to one week.
 
