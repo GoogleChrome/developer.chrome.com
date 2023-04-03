@@ -10,17 +10,17 @@ date: 2023-04-02
 
 ## Overview {: #overview }
 
-This tutorial builds an extension that allows users to open Chrome API reference pages using the omnibox. It also provides a daily Chrome extension tip.
+This tutorial provides an introduction to Chrome Extension service workers. As part of this
+tutorial, we will build an extension that allows users to quickly navigate to Chrome API reference
+pages using the omnibox. You will learn how to:
 
-{% Video src="video/BhuKGJaIeLNPW9ehns59NfwqKxF2/WmVEGpEZ9ts1J0pUOzEr.mp4", width="600", height="398", autoplay="true", muted="true"%}
+- Register your service worker and import modules.
+- Debug your extension service worker.
+- Manage state and handling events.
+- Trigger periodic events.
+- Communicate with content scripts.
 
-This article will cover the following topics:
-
-- Registering your service worker and importing modules.
-- Debugging your extension service worker.
-- Managing state and handling events.
-- Triggering periodic events.
-- Communicating with content scripts.
+{% Video src="video/BhuKGJaIeLNPW9ehns59NfwqKxF2/WmVEGpEZ9ts1J0pUOzEr.mp4", width="800", height="498", autoplay="true", muted="true"%}
 
 ## Before you start {: #prereq }
 
@@ -125,9 +125,16 @@ Did you notice that inspecting the service worker woke it up? That's right! Open
 
 Now let's break the extension to learn where to locate errors. One way to do this is to delete the ".js" from the `'./sw-omnibox.js'` import in the `service-worker.js` file. Chrome will be unable to register the service worker.
 
-Go back to chrome://extensions and refresh the extension. The following error will appear:
+Go back to chrome://extensions and refresh the extension. You will see two errors:
 
-{% Video src="video/BhuKGJaIeLNPW9ehns59NfwqKxF2/AbMNDSbURLKjH1Jm1C9Q.mp4", width="400", height="477", autoplay="true", muted="true", loop="true" %}
+```text
+Service worker registration failed. Status code: 3.
+```
+```text
+An unknown error occurred when fetching the script.
+```
+
+{% Video src="video/BhuKGJaIeLNPW9ehns59NfwqKxF2/AbMNDSbURLKjH1Jm1C9Q.mp4", width="800", height="677", autoplay="true", muted="true", loop="true" %}
 
 See [Debugging extensions](tbd) for more ways debug the extension service worker.
 
