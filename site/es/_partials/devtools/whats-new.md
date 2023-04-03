@@ -6,20 +6,20 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 
 {# ### Chrome 112 {: #chrome112 }
 
-* [Recorder updates](/es/blog/new-in-devtools-112/#recorder)
-* [Recorder replay extensions](/es/blog/new-in-devtools-112/#replay-extensions)
-* [Record with pierce selectors](/es/blog/new-in-devtools-112/#pierce-selectors)
-* [Export recordings as Puppeteer scripts with Lighthouse analysis](/es/blog/new-in-devtools-112/#puppeteer-lighthouse)
-* [Get extensions](/es/blog/new-in-devtools-112/#get-extensions)
-* [Elements > Styles updates](/es/blog/new-in-devtools-112/#elements-styles)
-* [CSS documentation in the Styles pane](/es/blog/new-in-devtools-112/#css)
-* [CSS nesting support](/es/blog/new-in-devtools-112/#nesting)
-* [Marking logpoints and conditional breakpoints in the Console](/es/blog/new-in-devtools-112/#logpoint)
-* [Ignore irrelevant scripts during debugging](/es/blog/new-in-devtools-112/#ignore-list)
-* [JavaScript Profiler deprecation started](/es/blog/new-in-devtools-112/#js-profiler-deprecation)
-* [Emulate reduced contrast](/es/blog/new-in-devtools-112/#reduced-contrast)
+* [Actualizaciones de la grabadora](/es/blog/new-in-devtools-112/#recorder)
+* [Extensiones de reproducción de la grabadora](/es/blog/new-in-devtools-112/#replay-extensions)
+* [Grabar con selectores Pierce](/es/blog/new-in-devtools-112/#pierce-selectors)
+* [Exporte grabaciones en scripts de Puppeteer con el análisis de Lighthouse](/es/blog/new-in-devtools-112/#puppeteer-lighthouse)
+* [Obtener extensiones](/es/blog/new-in-devtools-112/#get-extensions)
+* [Elementos > Actualizaciones de estilos](/es/blog/new-in-devtools-112/#elements-styles)
+* [Documentación de CSS en el panel Estilos](/es/blog/new-in-devtools-112/#css)
+* [Soporte de anidamiento de CSS](/es/blog/new-in-devtools-112/#nesting)
+* [Marcado de puntos de registro y puntos de interrupción condicionales en la Consola](/es/blog/new-in-devtools-112/#logpoint)
+* [Ignorar scripts irrelevantes durante la depuración](/es/blog/new-in-devtools-112/#ignore-list)
+* [Comenzó la obsolescencia de JavaScript Profiler](/es/blog/new-in-devtools-112/#js-profiler-deprecation)
+* [Emular contraste reducido](/es/blog/new-in-devtools-112/#reduced-contrast)
 * [Lighthouse 10](/es/blog/new-in-devtools-112/#lighthouse)
-* [Miscellaneous highlights](/es/blog/new-in-devtools-112/#misc)
+* [Destacados varios](/es/blog/new-in-devtools-112/#misc)
  #}
 
 {# ### Chrome 111 {: #chrome111 }
