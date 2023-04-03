@@ -126,7 +126,8 @@ Event-level reports associate an ad click or view with coarse conversion data.
 
 Event-level reports are suited for:
 
-- **Optimization**. Event-level reports help answer questions like "How can I improve my return on investment?". In particular, these reports can be used to optimize for ad placement, since a
+- **Optimization**. Event-level reports help answer questions like "How can I improve my return on
+  investment?". In particular, these reports can be used to optimize for ad placement, since a
   unique ID for the ad side can be made available in the reports. Event-level reports can provide
   training data for machine learning models.
 - **Coarse reporting**, where very little information is needed about the conversion. The current
