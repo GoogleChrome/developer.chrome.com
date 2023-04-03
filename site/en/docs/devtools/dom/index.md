@@ -149,8 +149,9 @@ To edit a node's content, double-click the content in the DOM Tree.
 Attributes can be added to a node in the DOM Tree. Follow the instructions
 below to learn how to add an attribute to a node.
 
-1. Right-click **Homer** and select **Inspect**: Homer
+1. Right-click **Homer** and select **Inspect**:
 
+Homer
     * Marge
 
 1. In the DOM tree, right-click `Homer`. The text is highlighted blue to indicate that it's selected.
