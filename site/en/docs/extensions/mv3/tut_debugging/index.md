@@ -98,6 +98,12 @@ blue link next to **Inspect views**.
   </figcaption>
 </figure>
 
+{% Aside 'important' %}
+
+Inspecting the service worker this way will keep it active. To make sure that your extension behaves correctly when your service worker is terminated, remember to close the DevTools. 
+
+{% endAside %}
+
 ### Locating errors {: #sw-errors }
 
 Let's break the extension by changing `onInstalled` to lowercase `oninstalled`.
@@ -115,21 +121,29 @@ chrome.runtime.oninstalled.addListener(() => {
 });
 ```
 
-Refresh and click the **Errors** button to view the error log. The extensions system has found an issue in the service worker script.
+Refresh and click the **Errors** button to view the error log. The first error will let you know that the service worker failed to register. This means something went wrong during the initiation. 
 
 <figure>
-  
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/5Vq0jbo4AGUp1P9MoU3v.png", alt="ALT_TEXT_HERE", width="800", height="418" %}
   <figcaption>
   TBD  
   </figcaption>
 </figure>
 
+When the service worker fails to register, you can't access the devTools until you fix the registration bugs. 
 
-`Uncaught TypeError: Cannot read property 'addListener' of undefined`
+Another way it fails to register is if there is an error when importing other modules. See [SW tutorial TDB](TDB) for an example. 
 
-The background script is attempting to listen for the [`onInstalled`][runtime-oninstalled] event, but the property
-name requires an upper case "I". Update the code to reflect the correct call, click the **Clear
-all** button in the upper right-hand corner, then reload the extension.
+The second is the following TypeError:
+
+<figure>
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/LauDnPFrNyExahWz3RF1.png", alt="ALT_TEXT_HERE", width="800", height="528" %}
+  <figcaption>
+    TBD
+  </figcaption>
+</figure>
+
+Update the code to reflect the correct call, click the **Clear all** button in the upper right-hand corner, then reload the extension.
 
 ### Check the service worker status {: #sw-stats }
 
