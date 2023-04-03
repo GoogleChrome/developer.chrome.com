@@ -9,7 +9,7 @@ description: >
   websites a user has previously visited, designed so it cannot be
   used by third parties to track user browsing behavior across sites.
 date: 2022-01-27
-updated: 2023-03-29
+updated: 2023-04-03
 authors:
   - samdutton
   - kevinkiklee
