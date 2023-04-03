@@ -16,8 +16,7 @@ alt: >
   A cairn of rocks balanced.
 ---
 
-[Chrome Canary](https://www.google.com/chrome/canary/) includes a new feature —
-`text-wrap: balance` from [CSS Text Level
+[Chrome Canary](https://www.google.com/chrome/canary/) includes a new feature—`text-wrap: balance` from [CSS Text Level
 4](https://www.w3.org/TR/css-text-4/#text-wrap). To check it out, enable
 [chrome://flags/#enable-experimental-web-platform-features](chrome://flags/#enable-experimental-web-platform-features),
 and then take a look at the examples in this post to learn how this one line of
