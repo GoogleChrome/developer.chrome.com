@@ -16,7 +16,9 @@ authors:
 * If you're a developer or software engineer, the
   [FLEDGE API Developer Guide](/docs/privacy-sandbox/fledge-api/) provides an
   in-depth technical reference for the proposal.
-* [The FLEDGE API](/docs/privacy-sandbox/fledge) offers a higher level overview for those who work in advertiser and ad tech, who are new to the Privacy Sandbox.
+* [The FLEDGE API](/docs/privacy-sandbox/fledge) offers a higher level overview
+  for those who work in advertiser and ad tech, who are new to the Privacy
+  Sandbox.
 
 ## Try the API
 
@@ -26,8 +28,8 @@ Not all users may be eligible to experience features from the Privacy Sandbox
 Relevance and Measurement origin trial, even on pages that provide a valid
 trial token.
 
-Learn more about [feature detection](/docs/privacy-sandbox/unified-origin-trial/#feature-detection) to
-learn how to detect if a feature is available before attempting to use it.
+Learn more about [feature detection](/docs/privacy-sandbox/unified-origin-trial/#feature-detection)
+to learn how to detect if a feature is available before attempting to use it.
 
 {% endAside %}
 
@@ -51,7 +53,8 @@ learn how to detect if a feature is available before attempting to use it.
    [pending FLEDGE capabilities](/docs/privacy-sandbox/fledge-api/feature-status/)
    for more details.
 
-[The API explainer provides more detail](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#summary) about feature support and constraints.
+The [FLEDGE API explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#summary)
+provides more detail about feature support and constraints.
 
 ## Get support
 
@@ -92,12 +95,14 @@ Like other Privacy Sandbox proposals, this API is documented and discussed publi
 
 ### Discuss related topics
 
-Discuss industry use cases in the [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants).
+Discuss industry use cases in the
+[Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants).
 
 ### Give feedback
 
 [Privacy Sandbox feedback](/docs/privacy-sandbox/feedback/#fledge-api)
-explains how to provide other types of feedback, and how to engage in discussion of Privacy Sandbox proposals.
+explains how to provide other types of feedback, and how to engage in
+discussion of Privacy Sandbox proposals.
 
 ## Get updates
 
