@@ -144,21 +144,6 @@ To edit a node's content, double-click the content in the DOM Tree.
 1. Delete `Michelle`, type `Leela`, then press <kbd>Enter</kbd> to confirm the change. The text
    above changes from **Michelle** to **Leela**.
 
-### Add attributes {: #add }
-
-Attributes can be added to a node in the DOM Tree. Follow the instructions
-below to learn how to add an attribute to a node.
-
-1. Right-click **Homer** and select **Inspect**:
-
-Homer
-
-    * Marge
-
-1. In the DOM tree, right-click `Homer`. The text is highlighted blue to indicate that it's selected.
-
-1.
-
 ### Edit attributes {: #attributes }
 
 To edit attributes, highlight and double-click the attribute name or value. Follow the instructions
