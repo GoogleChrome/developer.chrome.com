@@ -5,7 +5,7 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2015-04-13
-updated: 2022-12-05
+updated: 2023-03-04
 description: "A comprehensive reference of Chrome DevTools Network panel features."
 ---
 
@@ -606,6 +606,7 @@ Under the **Name** column of the Requests table, right-click a request, hover ov
 select one of the following options:
 
 - **Copy link address**. Copy the request's URL to the clipboard.
+- **Copy file name**. Copy the file's name to the clipboard.
 - **Copy response**. Copy the response body to the clipboard.
 - **Copy as PowerShell**. Copy the request as a PowerShell command.
 - **Copy as fetch**. Copy the request as a fetch call.
