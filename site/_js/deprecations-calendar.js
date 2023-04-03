@@ -146,7 +146,7 @@ function addMobileListeners() {
  *
  * @returns {void}
  */
-function addClarFilterListener() {
+function addClearFilterListener() {
   clearFilters?.addEventListener('click', () => {
     selectFields.forEach(element => {
       // @ts-ignore
@@ -200,5 +200,5 @@ function addSelectListeners() {
 (() => {
   addSelectListeners();
   addMobileListeners();
-  addClarFilterListener();
+  addClearFilterListener();
 })();
