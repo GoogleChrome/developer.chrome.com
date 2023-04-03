@@ -13,6 +13,9 @@ chrome_version:
 article:
   en: 'Article'
 
+read_article:
+  en: 'Read article'
+
 next_7_days:
   en: 'Next 7 days'
 

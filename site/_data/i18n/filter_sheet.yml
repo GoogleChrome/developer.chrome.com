@@ -2,10 +2,13 @@ filter_by:
   en: 'Filter by'
 
 filters:
-  en: "Filters"
+  en: 'Filters'
 
 reset_filters:
   en: 'Reset filters'
 
+clear_filters:
+  en: 'Clear filters'
+
 done:
-  en: "Done"
+  en: 'Done'
