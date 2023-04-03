@@ -28,8 +28,8 @@ Not all users may be eligible to experience features from the Privacy Sandbox
 Relevance and Measurement origin trial, even on pages that provide a valid
 trial token.
 
-Learn more about [feature detection](/docs/privacy-sandbox/unified-origin-trial/#feature-detection)
-to learn how to detect if a feature is available before attempting to use it.
+Read about [feature detection](/docs/privacy-sandbox/unified-origin-trial/#feature-detection)
+to learn how to determine if a feature is available before attempting to use it.
 
 {% endAside %}
 
@@ -59,8 +59,7 @@ provides more detail about feature support and constraints.
 ## Get support
 
 Is anything blocking you from experimenting with the API? Ask a question 
-about **your implementation**, about the **demo**, or about the 
-**documentation**:
+about **your implementation**, the **demo**, or the **documentation**:
 
 *  [Open a new Issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/issues/new/choose)
    on the Privacy Sandbox Dev Support repository. Make sure to select the
