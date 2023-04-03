@@ -1,15 +1,15 @@
 {% from 'macros/icon.njk' import icon with context %}
 
 
-<div class="deprecations-calendar__rows">
-    <div class="deprecations-calendar__row deprecations-calendar__header">
+<div class='deprecations-calendar__rows'>
+    <div class='deprecations-calendar__row deprecations-calendar__header'>
         <div>{{ 'i18n.deprecations_calendar.removal_date' | i18n(locale) }}</div>
         <div>{{ 'i18n.deprecations_calendar.name' | i18n(locale) }}</div>
         <div>{{ 'i18n.deprecations_calendar.chrome_version' | i18n(locale) }}</div>
         <div>{{ 'i18n.deprecations_calendar.article' | i18n(locale) }}</div>
     </div>
     {% for i in range(50) %}
-    <div class="deprecations-calendar__row">
+    <div class='deprecations-calendar__row'>
         <div><span class='deprecations-calendar__mobile-label'>{{ 'i18n.deprecations_calendar.removal_date' | i18n(locale) }}</span>2023-05-02</div>
         <div><a href='https://chromestatus.com/feature/5203057325899776' class='link no-visited'>Secure Payment Confirmation: Rename rp --> rpId in CollectedClientAdditionalPaymentData</a></div>
         <div><span class='deprecations-calendar__mobile-label'>{{ 'i18n.deprecations_calendar.chrome_version' | i18n(locale) }}</span><a href='https://chromestatus.com/features#milestone%3D113' class='link no-visited'>113</a></div>
