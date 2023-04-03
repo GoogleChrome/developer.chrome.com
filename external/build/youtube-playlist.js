@@ -120,7 +120,7 @@ async function getPlaylistItemData(id) {
   }
   for (const video of videos) {
     data.push({
-      id: video.id,
+      id: video?.snippet?.resourceId?.videoId,
       title: video?.snippet?.title,
       description: video?.snippet?.description,
       thumbnail: video?.snippet?.thumbnails?.medium?.url,
@@ -172,7 +172,7 @@ async function checkDataTimestamp() {
 
     const fileTimestamp = new Date(fileMetadata.timeCreated).getTime();
 
-    if (currentTimestamp - fileTimestamp < FETCH_INTERVAL) {
+    if (currentTimestamp - fileTimestamp > FETCH_INTERVAL) {
       return false;
     }
     return true;
