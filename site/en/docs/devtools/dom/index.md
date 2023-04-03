@@ -146,7 +146,7 @@ To edit a node's content, double-click the content in the DOM Tree.
 
 ### Edit attributes {: #attributes }
 
-To edit attributes, highlight and double-click the attribute name or value. Follow the instructions
+To edit attributes, double-click the attribute name or value. Follow the instructions
 below to learn how to add attributes to a node.
 
 1. Right-click **Howard** below and select **Inspect**.
