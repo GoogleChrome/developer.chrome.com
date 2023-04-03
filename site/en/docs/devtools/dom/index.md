@@ -144,9 +144,21 @@ To edit a node's content, double-click the content in the DOM Tree.
 1. Delete `Michelle`, type `Leela`, then press <kbd>Enter</kbd> to confirm the change. The text
    above changes from **Michelle** to **Leela**.
 
+### Add attributes {: #add }
+
+Follow the instructions
+below to learn how to add attributes to a node.
+
+1. Right-click **Homer** below and select **Inspect**.
+
+    * Homer
+    * Marge
+
+1.
+
 ### Edit attributes {: #attributes }
 
-To edit attributes, double-click the attribute name or value. Follow the instructions
+To add attributes, highlight and right-click the attribute name or value. Follow the instructions
 below to learn how to add attributes to a node.
 
 1. Right-click **Howard** below and select **Inspect**.
@@ -165,9 +177,9 @@ below to learn how to add attributes to a node.
 
    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/7SKDEvndWzq2KPSketg1.png", alt="Adding a style attribute to the node", width="800", height="545" %}
 
-You can also use the **Add attribute** right-click option.
+You can also use the **Edit attribute** right-click option.
 
-{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/dxp3s0z1HeBXyJAgVW76.png", alt="Right-click options with add attribute highlighted.", width="260", height="464" %}
+{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/3OB9C2lU8bm77eTsDXxB.png", alt="Right-click options with edit attribute highlighted.", width="260", height="464" %}
 
 ### Edit node type {: #type }
 
