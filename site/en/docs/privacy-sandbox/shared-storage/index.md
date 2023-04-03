@@ -6,21 +6,18 @@ subhead: >
 description: >
   Allow access to unpartitioned cross-site data in a secure environment.
 date: 2022-04-25
-updated: 2023-01-19
+updated: 2023-03-14
 authors:
   - alexandrawhite
   - kevinkiklee
 ---
 ## Implementation status
 
-This document outlines a new proposal for unpartitioned, cross-site storage: the Shared Storage API.
+This document outlines a proposal for unpartitioned, cross-site storage: the Shared Storage API.
 
-*   The [Shared Storage proposal](https://github.com/WICG/shared-storage) has entered [public discussion](https://github.com/WICG/shared-storage/issues).
-*   We are implementing this API in Chrome, and the [live demo is available](#try-the-shared-storage-api).
-    *   URL selection output gate is available for local testing from Chrome M105+. 
-    *   Private Aggregation output gate is available for local testing from Chrome M107+.
-    *   Private Aggregation API is available in the [Privacy Sandbox Unified Origin Trial](/docs/privacy-sandbox/unified-origin-trial/) from Chrome M107+ Beta.
-*   [The Privacy Sandbox timeline](http://privacysandbox.com/timeline) provides implementation timings for the Shared Storage API and other Privacy Sandbox proposals.
+{% Partial 'privacy-sandbox/timeline/shared-storage.njk' %}
+
+{% Partial 'privacy-sandbox/timeline/shared-storage-features.njk' %}
 
 ## Why do we need this API?
 

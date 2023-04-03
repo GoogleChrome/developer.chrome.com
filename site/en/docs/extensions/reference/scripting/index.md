@@ -64,8 +64,7 @@ function getTabId() { ... }
 
 chrome.scripting
     .executeScript({
-      target : {tabId : getTabId()},
-      frameIds : [ frameId1, frameId2 ],
+      target : {tabId : getTabId(), frameIds : [ frameId1, frameId2 ]},
       files : [ "script.js" ],
     })
     .then(() => console.log("script injected on target frames"));

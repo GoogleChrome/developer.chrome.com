@@ -103,7 +103,7 @@ took multiple seconds to load. Processing and visualizing is faster in Chrome 70
 
 Chrome 70 fixes some bugs that were causing breakpoints to disappear or not get triggered.
 
-It also fixes bugs related to sourcemaps. Some TypeScript users would instruct DevTools to ignore
+It also fixes bugs related to source maps. Some TypeScript users would instruct DevTools to ignore
 a certain TypeScript file while stepping through code, and instead DevTools would ignore the
 entire bundled JavaScript file. These fixes also address an issue that was causing the Sources panel
 to generally run slowly.

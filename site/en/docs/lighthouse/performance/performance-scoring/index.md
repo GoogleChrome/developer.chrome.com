@@ -5,7 +5,7 @@ description: |
   Learn how Lighthouse generates the overall Performance score for your page.
 subhead: How Lighthouse calculates your overall Performance score
 date: 2019-09-19
-updated: 2023-02-09
+updated: 2023-03-14
 ---
 
 In general, only [metrics](/docs/lighthouse/performance/#metrics)
@@ -65,23 +65,23 @@ impact on user-perceived performance.
     </thead>
     <tbody>
       <tr>
-        <td><a href="/first-contentful-paint/">First Contentful Paint</a></td>
+        <td><a href="https://web.dev/fcp/">First Contentful Paint</a></td>
         <td>10%</td>
       </tr>
       <tr>
-        <td><a href="/speed-index/">Speed Index</a></td>
+        <td><a href="https://developer.chrome.com/en/docs/lighthouse/performance/speed-index/">Speed Index</a></td>
         <td>10%</td>
       </tr>
       <tr>
-        <td><a href="/lcp/">Largest Contentful Paint</a></td>
+        <td><a href="https://web.dev/lcp/">Largest Contentful Paint</a></td>
         <td>25%</td>
       </tr>
       <tr>
-        <td><a href="/lighthouse-total-blocking-time/">Total Blocking Time</a></td>
+        <td><a href="https://web.dev/tbt/">Total Blocking Time</a></td>
         <td>30%</td>
       </tr>
       <tr>
-        <td><a href="/cls/">Cumulative Layout Shift</a></td>
+        <td><a href="https://web.dev/cls/">Cumulative Layout Shift</a></td>
         <td>25%</td>
       </tr>
     </tbody>
@@ -100,27 +100,27 @@ impact on user-perceived performance.
     </thead>
     <tbody>
       <tr>
-        <td><a href="/first-contentful-paint/">First Contentful Paint</a></td>
+        <td><a href="https://web.dev/fcp/">First Contentful Paint</a></td>
         <td>10%</td>
       </tr>
       <tr>
-        <td><a href="/speed-index/">Speed Index</a></td>
+        <td><a href="https://developer.chrome.com/en/docs/lighthouse/performance/speed-index/">Speed Index</a></td>
         <td>10%</td>
       </tr>
       <tr>
-        <td><a href="/lcp/">Largest Contentful Paint</a></td>
+        <td><a href="https://web.dev/lcp/">Largest Contentful Paint</a></td>
         <td>25%</td>
       </tr>
       <tr>
-        <td><a href="/interactive/">Time to Interactive</a></td>
+        <td><a href="https://web.dev/tti/">Time to Interactive</a></td>
         <td>10%</td>
       </tr>
       <tr>
-        <td><a href="/lighthouse-total-blocking-time/">Total Blocking Time</a></td>
+        <td><a href="https://web.dev/tbt/">Total Blocking Time</a></td>
         <td>30%</td>
       </tr>
       <tr>
-        <td><a href="/cls/">Cumulative Layout Shift</a></td>
+        <td><a href="https://web.dev/cls/">Cumulative Layout Shift</a></td>
         <td>15%</td>
       </tr>
     </tbody>

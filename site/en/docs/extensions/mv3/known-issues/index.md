@@ -38,7 +38,7 @@ This section lists major features that will be added to the Manifest V3 platform
 
 **Summary:** Offscreen documents are a new capability that allows Manifest V3 extensions to create a headless page (no user visible window) to call DOM APIs that aren't supported in extension service workers. Extensions can use offscreen documents to interact with the clipboard, play audio, parse HTML, and XML documents, and so on. We will continue iterating this API in future Chrome versions.
 
-**Shipped in Chrome 110.**
+**Shipped in Chrome 109.**
 
 ### FIXED: Relax the fixed maximum lifetime for extension service workers {: #sw-fixed-lifetime }
 

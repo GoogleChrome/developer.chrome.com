@@ -28,7 +28,7 @@
     {# Private Aggregation API testing script #}
     {# The test will run until mid-April #}
     {% if process.env.NODE_ENV === 'production' %}
-      <script type="module" defer src="{{ helpers.hashForProd('https://shared-storage-demo-content-producer.web.app/paa/scripts/private-aggregation-test.js') }}"></script>
+      <script type="module" defer src="https://shared-storage-demo-content-producer.web.app/paa/scripts/private-aggregation-test.js"></script>
     {% endif %}
 
     {# Add a facility for pages to declare an array of script paths. #}

@@ -5,6 +5,24 @@
 
 {# $content #}
 
+{# ### Chrome 112 {: #chrome112 }
+
+* [Recorder updates](/ru/blog/new-in-devtools-112/#recorder)
+* [Recorder replay extensions](/ru/blog/new-in-devtools-112/#replay-extensions)
+* [Record with pierce selectors](/ru/blog/new-in-devtools-112/#pierce-selectors)
+* [Export recordings as Puppeteer scripts with Lighthouse analysis](/ru/blog/new-in-devtools-112/#puppeteer-lighthouse)
+* [Get extensions](/ru/blog/new-in-devtools-112/#get-extensions)
+* [Elements > Styles updates](/ru/blog/new-in-devtools-112/#elements-styles)
+* [CSS documentation in the Styles pane](/ru/blog/new-in-devtools-112/#css)
+* [CSS nesting support](/ru/blog/new-in-devtools-112/#nesting)
+* [Marking logpoints and conditional breakpoints in the Console](/ru/blog/new-in-devtools-112/#logpoint)
+* [Ignore irrelevant scripts during debugging](/ru/blog/new-in-devtools-112/#ignore-list)
+* [JavaScript Profiler deprecation started](/ru/blog/new-in-devtools-112/#js-profiler-deprecation)
+* [Emulate reduced contrast](/ru/blog/new-in-devtools-112/#reduced-contrast)
+* [Lighthouse 10](/ru/blog/new-in-devtools-112/#lighthouse)
+* [Miscellaneous highlights](/ru/blog/new-in-devtools-112/#misc)
+ #}
+
 {# ### Chrome 111 {: #chrome111 }
 
 * [Debugging HD color with the Styles pane](/ru/blog/new-in-devtools-111/#color)
@@ -16,21 +34,20 @@
  #}
 
 
-{# ### Chrome 110 {: #chrome110 }
+### Chrome 110 {: #chrome110 }
 
-* [Clearing Performance Panel on reload](/ru/blog/new-in-devtools-110/#perf)
-* [Recorder updates](/ru/blog/new-in-devtools-110/#recorder)
-* [View and highlight the code of your user flow in the Recorder](/ru/blog/new-in-devtools-110/#recorder-code)
-* [Customize selector types of a recording](/ru/blog/new-in-devtools-110/#recorder-selector)
-* [Edit user flow while recording](/ru/blog/new-in-devtools-110/#recorder-edit)
-* [Automatic in-place pretty print](/ru/blog/new-in-devtools-110/#pretty-print)
-* [Better syntax highlight and inline preview for Vue, SCSS and more](/ru/blog/new-in-devtools-110/#highlight)
-* [Ergonomic and consistent Autocomplete in the Console](/ru/blog/new-in-devtools-110/#console)
-* [Miscellaneous highlights](/ru/blog/new-in-devtools-110/#misc)
- #}
+* [Очистка вкладки Производительность при перезагрузке](/ru/blog/new-in-devtools-110/#perf)
+* [Обновления Регистратора (Recorder)](/ru/blog/new-in-devtools-110/#recorder)
+* [Просмотр и подсветка кода в пользовательском сценарии в Регистраторе](/ru/blog/new-in-devtools-110/#recorder-code)
+* [Настройка типов селекторов записи](/ru/blog/new-in-devtools-110/#recorder-selector)
+* [Редактирование пользовательского сценария во время записи](/ru/blog/new-in-devtools-110/#recorder-edit)
+* [Автоматическое красивое форматирование внутри файла](/ru/blog/new-in-devtools-110/#pretty-print)
+* [Улучшенная подсветка синтаксиса и встроенный предварительный просмотр для Vue, SCSS и других](/ru/blog/new-in-devtools-110/#highlight)
+* [Эргономичное и единообразное автодополнения в Консоли (Console)](/ru/blog/new-in-devtools-110/#console)
+* [Другие важные моменты](/ru/blog/new-in-devtools-110/#misc)
 
 
-### Chrome 109 {: #chrome109
+### Chrome 109 {: #chrome109 }
 
 * [Recorder: опции копирования для шага, воспроизведение на странице, контекстное меню шага](/ru/blog/new-in-devtools-109/#recorder)
 * [Показ настоящих названий функций в записях производительности](/ru/blog/new-in-devtools-109/#performance)

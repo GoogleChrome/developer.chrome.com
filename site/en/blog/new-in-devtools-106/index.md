@@ -72,7 +72,7 @@ Previously, the stack trace included third-party scripts like `zone.js` and `cor
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GQ9B11tKBcFc1BxQYW9z.png", alt="Automatically ignore known third-party scripts in the stack trace", width="800", height="425" %}
 
-Behind the scenes, DevTools ignores third-party scripts based on the new `x_google_ignoreList` property in sourcemaps. Frameworks and bundlers need to supply this information. See [Case Study: Better Angular Debugging with DevTools](/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular).
+Behind the scenes, DevTools ignores third-party scripts based on the new `x_google_ignoreList` property in source maps. Frameworks and bundlers need to supply this information. See [Case Study: Better Angular Debugging with DevTools](/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular).
 
 Optionally, if you prefer to always view full stack traces, you can disable the setting via **Settings** > **Ignore list** > **Automatically add known third-party scripts to ignore list**.
 

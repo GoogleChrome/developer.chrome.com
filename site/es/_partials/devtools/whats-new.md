@@ -4,6 +4,24 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 
 {# $content #}
 
+{# ### Chrome 112 {: #chrome112 }
+
+* [Recorder updates](/es/blog/new-in-devtools-112/#recorder)
+* [Recorder replay extensions](/es/blog/new-in-devtools-112/#replay-extensions)
+* [Record with pierce selectors](/es/blog/new-in-devtools-112/#pierce-selectors)
+* [Export recordings as Puppeteer scripts with Lighthouse analysis](/es/blog/new-in-devtools-112/#puppeteer-lighthouse)
+* [Get extensions](/es/blog/new-in-devtools-112/#get-extensions)
+* [Elements > Styles updates](/es/blog/new-in-devtools-112/#elements-styles)
+* [CSS documentation in the Styles pane](/es/blog/new-in-devtools-112/#css)
+* [CSS nesting support](/es/blog/new-in-devtools-112/#nesting)
+* [Marking logpoints and conditional breakpoints in the Console](/es/blog/new-in-devtools-112/#logpoint)
+* [Ignore irrelevant scripts during debugging](/es/blog/new-in-devtools-112/#ignore-list)
+* [JavaScript Profiler deprecation started](/es/blog/new-in-devtools-112/#js-profiler-deprecation)
+* [Emulate reduced contrast](/es/blog/new-in-devtools-112/#reduced-contrast)
+* [Lighthouse 10](/es/blog/new-in-devtools-112/#lighthouse)
+* [Miscellaneous highlights](/es/blog/new-in-devtools-112/#misc)
+ #}
+
 {# ### Chrome 111 {: #chrome111 }
 
 * [Debugging HD color with the Styles pane](/es/blog/new-in-devtools-111/#color)
@@ -26,10 +44,6 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 * [Mejor resaltado de sintaxis y vista previa en línea para Vue, SCSS y más](/es/blog/new-in-devtools-110/#highlight)
 * [Autocompletar ergonómico y consistente en la Consola](/es/blog/new-in-devtools-110/#console)
 * [Destacados varios](/es/blog/new-in-devtools-110/#misc)
-
-
-
-
 
 
 ### Chrome 109 {: #chrome109 }
@@ -116,7 +130,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 * [Mejorada previsualización de valor en línea durante la depuración](/es/blog/new-in-devtools-103/#inline-preview)
 * [Soporte para grandes bloques para autenticadores virtuales](/es/blog/new-in-devtools-103/#webauthn)
 * [Nuevos atajos de teclado en el panel Fuentes](/es/blog/new-in-devtools-103/#shortcuts)
-* [Mejoras en los sourcemaps](/es/blog/new-in-devtools-103/#sourcemaps)
+* [Mejoras en los source maps](/es/blog/new-in-devtools-103/#sourcemaps)
 
 
 ### Chrome 102 {: #chrome102 }

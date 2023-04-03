@@ -4,14 +4,32 @@
 
 {# $content #}
 
+{# ### Chrome 112 {: #chrome112 }
+
+* [Recorder updates](/ja/blog/new-in-devtools-112/#recorder)
+* [Recorder replay extensions](/ja/blog/new-in-devtools-112/#replay-extensions)
+* [Record with pierce selectors](/ja/blog/new-in-devtools-112/#pierce-selectors)
+* [Export recordings as Puppeteer scripts with Lighthouse analysis](/ja/blog/new-in-devtools-112/#puppeteer-lighthouse)
+* [Get extensions](/ja/blog/new-in-devtools-112/#get-extensions)
+* [Elements > Styles updates](/ja/blog/new-in-devtools-112/#elements-styles)
+* [CSS documentation in the Styles pane](/ja/blog/new-in-devtools-112/#css)
+* [CSS nesting support](/ja/blog/new-in-devtools-112/#nesting)
+* [Marking logpoints and conditional breakpoints in the Console](/ja/blog/new-in-devtools-112/#logpoint)
+* [Ignore irrelevant scripts during debugging](/ja/blog/new-in-devtools-112/#ignore-list)
+* [JavaScript Profiler deprecation started](/ja/blog/new-in-devtools-112/#js-profiler-deprecation)
+* [Emulate reduced contrast](/ja/blog/new-in-devtools-112/#reduced-contrast)
+* [Lighthouse 10](/ja/blog/new-in-devtools-112/#lighthouse)
+* [Miscellaneous highlights](/ja/blog/new-in-devtools-112/#misc)
+ #}
+
 {# ### Chrome 111 {: #chrome111 }
 
-* [Debugging HD color with the Styles pane](/ja/blog/new-in-devtools-111/#color)
-* [Enhanced breakpoint UX](/ja/blog/new-in-devtools-111/#breakpoint-redesign)
-* [Customizable Recorder shortcuts](/ja/blog/new-in-devtools-111/#recorder)
-* [Better syntax highlight for Angular](/ja/blog/new-in-devtools-111/#syntax)
-* [Reorganize caches in the Application panel](/ja/blog/new-in-devtools-111/#cache)
-* [Miscellaneous highlights](/ja/blog/new-in-devtools-111/#misc)
+* [Styles ペインで高精細色をデバッグする](/ja/blog/new-in-devtools-111/#color)
+* [強化されたブレークポイントの UX](/ja/blog/new-in-devtools-111/#breakpoint-redesign)
+* [カスタマイズ可能な Recorder ショートカット](/ja/blog/new-in-devtools-111/#recorder)
+* [Angular のシンタックスハイライトの改善](/ja/blog/new-in-devtools-111/#syntax)
+* [キャッシュを Application パネルで再整理する](/ja/blog/new-in-devtools-111/#cache)
+* [その他のハイライト](/ja/blog/new-in-devtools-111/#misc)
  #}
 
 
@@ -84,7 +102,7 @@
 * [実行時に WASM のデバッグ情報をアタッチ](/ja/blog/new-in-devtools-105/#wasm)
 * [デバッグ中のライブ編集をサポート](/ja/blog/new-in-devtools-105/#live-edit)
 * [Styles ペインで @scope at-rule の閲覧と編集](/ja/blog/new-in-devtools-105/#scope)
-* [Sourcemap の改善](/ja/blog/new-in-devtools-105/#sourcemaps)
+* [Source map の改善](/ja/blog/new-in-devtools-105/#sourcemaps)
 * [その他のハイライト](/ja/blog/new-in-devtools-105/#misc)
 
 ### Chrome 104 {: #chrome104 }
