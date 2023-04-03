@@ -146,19 +146,20 @@ To edit a node's content, double-click the content in the DOM Tree.
 
 ### Add attributes {: #add }
 
-Follow the instructions
-below to learn how to add attributes to a node.
+Attributes can be added to a node in the DOM Tree. Follow the instructions
+below to learn how to add an attribute to a node.
 
-1. Right-click **Homer** below and select **Inspect**.
+1. Right-click **Homer** and select **Inspect**: Homer
 
-    * Homer
     * Marge
+
+1. In the DOM tree, right-click `Homer`. The text is highlighted blue to indicate that it's selected.
 
 1.
 
 ### Edit attributes {: #attributes }
 
-To add attributes, highlight and right-click the attribute name or value. Follow the instructions
+To edit attributes, highlight and double-click the attribute name or value. Follow the instructions
 below to learn how to add attributes to a node.
 
 1. Right-click **Howard** below and select **Inspect**.
@@ -231,7 +232,7 @@ To edit nodes as HTML with syntax highlighting and autocomplete, select **Edit a
 
 ### Duplicate a node {: #duplicate }
 
-You can duplicate an element using **Duplicate element** in the node drop-down menu.
+You can duplicate an element using the **Duplicate element** right-click option.
 
 {% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/uYxwxYEdEy3p5Jrb8glT.png", alt="Duplicate element highlighted on copy options.", width="800", height="467" %}
 
@@ -252,7 +253,7 @@ You can also use the keyboard shortcuts: <kbd>Shift + Alt + Down</kbd> arrow (Wi
 
 ### Capture a node screenshot {: #screenshot }
 
-You can screenshot any individual node using **Capture node screenshot** in the node drop-down menu.
+You can screenshot any individual node in the DOM Tree using **Capture node screenshot**.
 
 {% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/ErWsgrDAV1xYWrj87OQT.png", alt="A node screenshot being captured.", width="800", height="500" %}
 
