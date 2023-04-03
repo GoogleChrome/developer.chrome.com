@@ -143,7 +143,7 @@ Don't forget to fix the file name before moving on!
 
 ### Step 4: Initialize the state {: #step-4 }
 
-Extensions can save initial values to storage. To use the [`chrome.storage`][api-storage] API, we need to request permission in the manifest:
+Chrome will shut down service workers if they are not needed. We use the [`chrome.storage`][api-storage] API to persist state across service worker sessions. For storage access, we need to request permission in the manifest:
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -181,7 +181,7 @@ See [Saving state](TBD) to learn about other storage options for extension servi
 
 All event listeners need to be statically registered in the global scope of the service worker. In other words, event listeners should not be nested in async functions. This way Chrome can ensure that all event handlers are restored in case of a service worker reboot.
 
-In this example, we are going to use the [`chrome.omnibox`][api-omnibox] API, but first we must add the omnibox keyword to the manifest:
+In this example, we are going to use the [`chrome.omnibox`][api-omnibox] API, but first we must declare the omnibox keyword trigger in the manifest:
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -203,9 +203,9 @@ The [`"minimum_chrome_version"`][manifest-min-version] explains how this key beh
 Now let's register the omnibox event listeners at the top level of the script. The
 [`onInputChanged()`][omnibox-input-changed] takes the current user input and a [suggestResult][omnibox-suggest]
 object. The keywords in storage will populate the suggestions. When user enters the omnibox keyword
-(api) in the address bar followed by tab or space, Chrome will display a list of suggestions.
+(`api`) in the address bar followed by tab or space, Chrome will display a list of suggestions.
 
-Now, let's register the omnibox event listeners at the top level of the script. When the user enters the omnibox keyword "api" in the address bar followed by tab or space, Chrome will display a list of suggestions based on the keywords in storage. The [onInputChanged()][omnibox-input-changed] event, which takes the current user input and a suggestResult object, is responsible for populating these suggestions.
+Now, let's register the omnibox event listeners at the top level of the script. When the user enters the omnibox keyword `api` in the address bar followed by tab or space, Chrome will display a list of suggestions based on the keywords in storage. The [onInputChanged()][omnibox-input-changed] event, which takes the current user input and a suggestResult object, is responsible for populating these suggestions.
 
 {% Label %}sw-omnibox.js:{% endLabel %}
 
@@ -281,7 +281,7 @@ Start by requesting the `"alarms"` permission in the manifest. Additionally, to 
 }
 ```
 
-The extension will fetch all the tips and pick one at random. Then save it to storage. We will create an alarm that will be triggered once a day. Alarms are not saved when you close Chrome. So we need to check if the alarm exists and create it if it doesn't.
+The extension will fetch all the tips, pick one at random and save it to storage. We will create an alarm that will be triggered once a day to update the tip. Alarms are not saved when you close Chrome. So we need to check if the alarm exists and create it if it doesn't.
 
 {% Label %}sw-tips.js:{% endLabel %}
 
@@ -323,7 +323,7 @@ All [Chrome API][doc-apis] event listeners and methods restart the service worke
 
 ### Step 7: Communicate with other contexts {: #step-7 }
 
-Extensions use [content scripts][doc-content] to read and modify the content of the page. When a user visits a Chrome API reference page, the extension's content script will [send a message][doc-messages] to request the tip of the day from the service worker. 
+Extensions use [content scripts][doc-content] to read and modify the content of the page. When a user visits a Chrome API reference page, the extension's content script will update the page with the tip of the day. It [sends a message][doc-messages] to request the tip of the day from the service worker. 
 
 Start by declaring the content script in the manifest and add the match pattern corresponding to the [Chrome API][doc-apis] reference documentation.
 
