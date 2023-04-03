@@ -51,7 +51,7 @@ treatment of text wrapping, are in the browser. This is why we see headline
 wrapping as in the following image:
 
 <figure>
-  {% Img src="image/vS06HQ1YTsbMKSFTIPl2iogUQP73/tm4L941iouiU3Z2pj0Sw.png", alt="Headline is highlighted with DevTools, is spanning the full width of it's inline space, and has 2 hanging words on the 2nd line.", width="800", height="197" %}
+  {% Img src="image/vS06HQ1YTsbMKSFTIPl2iogUQP73/tm4L941iouiU3Z2pj0Sw.png", alt="Headline is highlighted with DevTools, is spanning the full width of its inline space, and has two hanging words on the second line.", width="800", height="197" %}
 
   <figcaption>
     <a href="https://codepen.io/web-dot-dev/pen/ExeBjrO">
