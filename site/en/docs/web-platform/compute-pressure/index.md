@@ -44,9 +44,41 @@ tags:
 
 To experiment with the Compute Pressure API locally, read this [page][how-to].
 
+## Use-Cases
+
+The primary use cases enhanced by v1 are video conferencing and video games.
+
+These popular real-time applications are classified as soft. That is, the quality of service
+degrades if the system is exercised beyond certain states, but does not lead to a total system
+failure. These soft real-time applications greatly benefit from being able to adapt their workloads
+based on CPU consumption/pressure.
+
+Specifically, v1 aims to facilitate the following adaptation decisions for these use cases:
+
+  - Video conferencing
+    - Adjust the number of video feeds shown simultaneously during calls with many participants
+    - Reduce the quality of video processing (video resolution, frames per second)
+    - Skip non-essential video processing, such as some camera filters
+    - Disable non-essential audio processing, such as WebRTC noise suppression
+    - Turn quality-vs-speed and size-vs-speed knobs towards “speed” in video and audio encoding
+      (in WebRTC, WebCodecs, or software encoding)
+
+  - Video games
+    - Use lower-quality assets to compose the game’s video (3D models, textures, shaders) and audio
+      (voices, sound effects)
+    - Disable effects that result in less realistic non-essential details (water / cloth / fire
+      animations, skin luminance, glare effects, physical simulations that don’t impact gameplay)
+    - Tweak quality-vs-speed knobs in the game’s rendering engine (shadows quality, texture filtering,
+      view distance)
+
+Technically these can be accomplished by knowing thermal states (e.g., is the system being
+passively cooled - throttled) as well as CPU pressure states for the threads the site is using such
+as main thread and workers. System thermal state is a global state and can be affected by other
+apps and sites than the observing site.
+
 ## Interfaces
 
-Pressure Observer API can be run in the following contexts:
+Compute Pressure API can be run in the following contexts:
 - Window or main thread
 - Dedicated Worker
 - Shared Worker
@@ -54,12 +86,13 @@ Pressure Observer API can be run in the following contexts:
 The Compute Pressure API defines two new interfaces.
 
 `PressureObserver`: An object to observe the compute pressure of any number of sources at a
-predefined sample rate. Each observer can asynchronously observe pressure changes trends in a
-system.
+predefined sample rate. First iteration in Chromium exposes `cpu` as `source`. See section about
+[parameters](#parameters)  for more details. Each observer can asynchronously observe pressure
+changes trends in a system.
 
 `PressureRecord`: Describes the pressure trend at a specific moment of transition. Objects of this
 type can only be obtained in two ways: as an input to your PressureObserver callback, or by calling
-PressureObserver.takeRecords().
+the `takeRecords()` method on PressureObserver instance.
 
 ### PressureObserver
 
@@ -74,15 +107,16 @@ after the creation of the object.
 specified callback function when it detects that a change in the values of the source being
 observed has happened.
 
-The constructor takes a [callback](#callback) function and [options](#options)(optional), as parameters.
+The constructor takes a mandatory [callback](#callback) function and optional [options](#options), as parameters.
 
 ##### Callback {: #callback }
 
-'callback()': Callback receives the observer handle as well as an array of unread `PressureRecord` objects.
+`callback()`: The callback is called with an array of unread `PressureRecord` objects.
 
 ##### Options {: #options }
 
-`PressureObserverOptions`: Contains the sample rate,`sampleRate`, at which the user requests updates.
+`PressureObserverOptions`: Contains the sample rate,`sampleRate` in Hz, at which the user requests
+updates.
 
 #### Methods
 
@@ -98,25 +132,28 @@ The constructor takes a [callback](#callback) function and [options](#options)(o
 `PressureObserver.takeRecords()`: Returns a sequence of [records](#records), since the last callback invocation.
 
 
-`PressureObserver.supportedSources()`(read only): Returns supported source types by the hardware.
+`static PressureObserver.supportedSources()` (read only): Returns supported source types by the hardware.
 
-##### Parameters
+##### Parameters {: #parameters }
 
-`source`: The source to be observed, for example `cpu`.  This must be one of the [supported source
+`source`: The source to be observed, for example `cpu`. This must be one of the [supported source
 types](https://w3c.github.io/compute-pressure/#dfn-supported-source-types).
+
+In the current version of Compute Pressure, only `cpu` is supported.
 
 ### PressureRecord
 
-The `PressureRecord` interface of the Pressure Observer API describes the pressure trend of a
+The `PressureRecord` interface of the Compute Pressure API describes the pressure trend of a
 source at a specific moment of transition.
 
 #### Instance Properties
 
-`PressureRecord.source` (Read-only): Returns the origin source from which the record is coming.
+`PressureRecord.source` (Read-only): Returns a `string` representing the origin source from which the
+record is coming.
 
-`PressureRecord.state` (Read-only): Returns the pressure state recorded.
+`PressureRecord.state` (Read-only): Returns a `string` representing the pressure state recorded.
 
-`PressureRecord.time`(Read-only): Returns a high resolution timestamp.
+`PressureRecord.time` (Read-only): Returns a `number` representing a high resolution timestamp.
 
 ##Feedback {: #feedback }
 
@@ -138,30 +175,31 @@ Create the pressure observer by calling its constructor with a callback function
 there is a pressure update:
 
 ```js
-let observer = new PressureObserver(callback, { sampleRate: 0.5 });
+const observer = new PressureObserver((records) => { /* ... */ }, { sampleRate: 0.5 });
 ```
 
-A sample rate, `sampleRate`, of 0.5, means that there will be updates at most every two seconds.
+A sample rate, `sampleRate`, of 0.5 Hz, means that there will be updates at most every two seconds.
 
-The sample rate requested cannot always be served by the system. It is restricted by the
-implementation.
+If the sample rate requested cannot be served by the system. The system will provide samples at 
+the best suitable rate existing. For example if the rate of 2 Hz is requested, but the system can
+only provide samples at maximum 1 Hz, 1 Hz will be selected.
 
 ### Using a pressure observer
 
 There is only one way to start a pressure observer. For each source call
-`ComputePressure.observe(source)'.
+`ComputePressure.observe(source)`.
 
 ```js
-observer.observe('cpu');
+observer.observe("cpu");
 ```
 
 In this example the `cpu` is the pressure source we are interested in. For now, it is the only
-source available. In the future, there may be other sources such as `gpu`, `power`.
+source available. In the future, there may be other sources such as `gpu`, `power` or `thermals`.
 
 To stop observing a source, use the `unobserve()` method, as in the following example:
 
 ```js
-observer.unobserve('cpu');
+observer.unobserve("cpu");
 ```
 
 In order to unobserve all sources at once, use the `disconnect()` method, as in the following example:
@@ -171,7 +209,7 @@ observer.disconnect();
 ```
 ### Retrieving pressure records
 The `takeRecords()` method of the `PressureObserver` interface returns an array of
-`PressureRecords' objects stored in the pressure observer, emptying it out.
+`PressureRecords` objects stored in the pressure observer, emptying it out.
 
 Calling this method clears the pending records list, so the callback will not be run.
 
@@ -182,7 +220,7 @@ function callback(records) {
 }
 
 const observer = new PressureObserver(callback, { sampleRate: 1 });
-await observer.observe('cpu');
+await observer.observe("cpu");
 
 // forced record reading
 const records = observer.takeRecords();
@@ -199,7 +237,7 @@ File a bug at [new.crbug.com](https://new.crbug.com). Be sure to include as much
 for reproducing, and enter [Blink>PerformanceAPIs>ComputePressure][blink-component] in the **Components** box.
 
 ## Helpful links {: #helpful }
-- [Specifications] [specs]
+- [Specifications][specs]
 - [Public explainer][explainer]
 - [Compute Pressure API Demo][demo] | [Compute Pressure API Demo source][demo-source]
 - [Chromium tracking bug][cr-bug]
@@ -214,7 +252,7 @@ for reproducing, and enter [Blink>PerformanceAPIs>ComputePressure][blink-compone
 [demo]:  https://w3c.github.io/compute-pressure/demo/
 [demo-source]: https://github.com/w3c/compute-pressure/tree/main/demo
 [explainer]: https://github.com/w3c/compute-pressure#readme
-[cr-bug]: https://bugs.chromium.org/p/chromium/issues/detail?id=1231886
+[cr-bug]: https://bugs.chromium.org/p/chromium/issues/detail?id=1067627
 [cr-status]: https://chromestatus.com/feature/5597608644968448
 [blink-component]: https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EPerformanceAPIs%3EComputePressure
 [dev-trial]: https://groups.google.com/a/chromium.org/g/blink-dev/c/-1ciwdn23J4/m/CuCT52x3DgAJ
