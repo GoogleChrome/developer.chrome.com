@@ -29,7 +29,7 @@ tags:
 ## Reinicio del Panel Rendimiento al recargar {: #perf }
 
 <!-- The **Performance** panel now clears both the screenshot and trace when you click the **Start profiling and reload page** button. -->
-Ahora el panel **Rendimiento** reinicia tanto las capturas de pantalla como los datos del rastro cuando se hace clic en el botón **Comenzar a crear perfiles y volver a cargar la página**.
+Ahora el panel **Rendimiento** reinicia tanto las capturas de pantalla como las trazas cuando se hace clic en el botón **Comenzar a crear perfiles y volver a cargar la página**.
 
 <!-- Previously, the **Performance** panel displayed a timeline with screenshots from previous recordings. This made it difficult to see when the actual measurement started. The panel now always navigates to the `about:blank` page first to guarantee that the recording begins with a blank trace. This aligns with the **Performance Insights** panel which already did the same. -->
 Anteriormente, el panel **Rendimiento** mostraba una línea de tiempo con capturas de pantalla de grabaciones anteriores. Esto hacía que fuera difícil ver cuándo comenzó la medición real. El panel ahora siempre navega primero a la página `about:blank` para garantizar que la grabación comience con una traza en blanco. Esto se alinea con el panel **Performance Insights** que hizo lo mismo.
