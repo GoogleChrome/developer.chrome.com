@@ -131,6 +131,11 @@ accounts for the user to sign in with upon authentication. This UX is not
 currently actively used, but is required for future compatibility.
 {% endAside %}
 
+{% Aside %}
+For versions M109, M110, and M111 of Chrome Android, `authenticatorSelection.residentKey` needs to be set to `preferred`
+instead of `required` due to a [technical limitation](https://bugs.chromium.org/p/chromium/issues/detail?id=1393662). From Chrome Android M112 onwards, `required` can be used as with other platforms.
+{% endAside %}
+
 In addition, specify a "payment" extension with `isPayment: true`. Specifying
 this extension without meeting the above requirements will throw an exception
 

@@ -116,7 +116,7 @@ If you inspect the traffic with DevTools, you should find the following informat
 
 ### Speedtest
 
-The SQLite team have run some benchmarks on their WebAssembly implementation compared to the deprecated Web SQL. See all details on the [results page](https://sqlite-wasm-opfs.glitch.me/speedtest.html).
+The SQLite team have run some benchmarks on their WebAssembly implementation compared to the deprecated Web SQL. These benchmarks show that SQLite Wasm is generally about as fast as Web SQL. Sometimes it's a little slower, sometimes it's a little faster. See all details on the [results page](https://sqlite-wasm-opfs.glitch.me/speedtest.html).
 
 ### Getting started code sample
 

@@ -60,6 +60,9 @@ test:
 performance:
   en: Performance
 
+sourcemap:
+  en: source map
+
 storage:
   en: Storage
 

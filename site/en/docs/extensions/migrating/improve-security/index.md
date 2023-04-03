@@ -10,7 +10,7 @@ This is the last of three sections describing changes needed for code that is no
 
 ## Remove execution of arbitrary strings {: #remove-execution-of-strings }
 
-You can no longer [execute external logic](/docs/extensions/mv3/intro/mv3-overview#remotely-hosted-code) using `executeScript()`, `eval()`, and `new Function()`.
+You can no longer [execute external logic](/docs/extensions/mv3/intro/mv3-overview#remotely-hosted-code) using `executeScript()`, `eval()`, and `new&nbsp;Function()`.
 
 - Move all external code (JS, Wasm, CSS) into your extension bundle.
 - Update script and style references to load resources from the extension bundle.
