@@ -63,7 +63,7 @@ For a more in-depth overview of FLEDGE, read the
   </figcaption>
 </figure>
 
-FLEDGE uses [interest groups](#interest-group-detail) to allow sites to display
+FLEDGE uses [interest groups](#interest-group-detail) to enable sites to display
 ads that are relevant to their users.
 
 For example, when a user visits a site that wants to advertise its products,
