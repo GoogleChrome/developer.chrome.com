@@ -16,8 +16,6 @@ authors:
 
 {% YouTube id='UGA74CIcom8' %}
 
-{% Partial 'privacy-sandbox/feedback-aside.njk' %}
-
 ## Who is this for?
 
 This article covers the basics of Attribution Reporting and explains some
@@ -73,6 +71,8 @@ If you're unfamiliar with some of these terms or concepts, consult the
 
 If you're interested in experimenting with the API, head over to
 [Attribution Reporting: experiment and participate](/docs/privacy-sandbox/attribution-reporting-experiment/).
+
+{% Partial 'privacy-sandbox/feedback-aside.njk' %}
 
 {: #changes }
 
