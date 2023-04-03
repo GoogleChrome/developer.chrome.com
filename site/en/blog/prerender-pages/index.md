@@ -65,7 +65,7 @@ See the [Measuring performance](#measuring-performance) section for more informa
 
 ### Viewing Chrome's address bar predictions
 
-For the first two use cases, you can view Chrome's predictions for URLs in the `chrome://predictors` page:
+For the first use case, you can view Chrome's predictions for URLs in the `chrome://predictors` page:
 
 <figure>
 {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/Oy3gv9Gyhx0eTKWVtUVo.png", alt="Screenshot of the Chrome Predictors page filtered to show low (grey), medium (amber), and high (green) predictions based on text entered.", width="800", height="560" %}
@@ -111,8 +111,8 @@ For the initial launch in Chrome 108, prerender is restricted to same-origin pag
 
 Speculation rules can be:
 
-* Statically inserted in the page's HTML. For example a news media site, or a blog may prerender the newest article, if that is often the next navigation for a large proportion of users.
-* Dynamically inserted into the page by JavaScript. This could be based on application logic, personalized to the user, or on certain user actions such as hovering over, or clicking down on a link—as many libraries have done in the past with `preconnect`, `prefetch`, or even `preload`. Those favoring dynamic insertion, are recommended to keep an eye on Speculation Rules support, as the document rules may make allow the browser to handle many of your use cases as this is introduced in the future.
+* Statically included in the page's HTML. For example a news media site, or a blog may prerender the newest article, if that is often the next navigation for a large proportion of users.
+* Dynamically inserted into the page by JavaScript. This could be based on application logic, personalized to the user, or on certain user actions such as hovering over, or clicking down on a link—as many libraries have done in the past with `preconnect`, `prefetch`, or the older NoState Prefetch `prerender`. Those favoring dynamic insertion, are recommended to keep an eye on Speculation Rules support, as the document rules may make allow the browser to handle many of your use cases as this is introduced in the future.
 
 Speculation rules can be added in either the `<head>` or the `<body>` of in the main frame. Speculation rules in subframes are not acted upon, and speculation rules in prerendered pages are only acted upon once that page is activated.
 

@@ -1,7 +1,9 @@
-:root {
+:root,
+::backdrop {
   // Set theme aliases
   --color-mode: 'light';
   --color-bg: #{get-color('white')};
+  --color-inverse: #{get-color('black')};
   --color-bg-shade: #{get-color('grey-100')};
   --color-text: #{get-color('grey-900')};
   --color-secondary-text: #{get-color('grey-800')};
@@ -39,6 +41,8 @@
   --color-project-lighthouse: #06f;
 
   --color-meettheteam-bg: #{get-color('yellow-50')};
+
+  --color-grey-medium: #{get-color('grey-700')};
 
   --color-blue-lightest: #{rgb(get-color('blue-50'), 0.4)};
   --color-blue-lighter: #{get-color('blue-100')};

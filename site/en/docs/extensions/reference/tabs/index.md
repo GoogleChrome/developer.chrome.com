@@ -100,8 +100,8 @@ installed. The following example shows how to do this.
 {% Label %}background.js:{% endLabel %}
 
 ```js
-chrome.runtime.onInstalled.addListener((reason) => {
-  if (reason === chrome.runtime.OnInstalledReason.INSTALL) {
+chrome.runtime.onInstalled.addListener(({reason}) => {
+  if (reason === 'install') {
     chrome.tabs.create({
       url: "onboarding.html"
     });
