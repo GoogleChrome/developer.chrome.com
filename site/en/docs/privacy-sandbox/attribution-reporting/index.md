@@ -18,7 +18,7 @@ authors:
 
 {% Partial 'privacy-sandbox/feedback-aside.njk' %}
 
-## Who is this article for?
+## Who is this for?
 
 This article covers the basics of Attribution Reporting and explains some
 underlying concepts, but doesn't go into much technical detail.
