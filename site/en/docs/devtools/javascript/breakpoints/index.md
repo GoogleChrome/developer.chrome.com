@@ -5,7 +5,7 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2017-02-03
-updated: 2023-03-07
+updated: 2023-03-04
 description: "Learn about all the ways you can pause your code in Chrome DevTools."
 tags:
   - javascript
