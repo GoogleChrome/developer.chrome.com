@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Get started with viewing and changing the DOM"
 date: 2019-03-01
-updated: 2023-03-04
+updated: 2023-04-03
 description: "How to view nodes, search for nodes, edit nodes, reference nodes in the Console, break on node changes, and more."
 authors:
   - kaycebasques
