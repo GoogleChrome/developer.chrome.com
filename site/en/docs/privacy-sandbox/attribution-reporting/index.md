@@ -47,7 +47,8 @@ cookies](https://developer.mozilla.org/docs/Web/HTTP/Cookies#Third-party_cookies
 Browsers are restricting access to third-party cookies because these can be
 used to track users across sites and hinder user privacy.
 
-The Attribution Reporting API enables those measurements in a privacy-preserving way, without third-party cookies.
+The Attribution Reporting API enables those measurements in a privacy-preserving way, without
+third-party cookies.
 
 This API enables advertisers and ad tech providers to measure conversions in the following cases:
 
