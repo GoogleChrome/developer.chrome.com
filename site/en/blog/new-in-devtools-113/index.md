@@ -132,7 +132,8 @@ Chromium issue: [1354548](https://crbug.com/1354548).
 
 These are some noteworthy fixes in this release:
 
-- 
+- Fixed a bug that caused pretty-printing in the **Sources** panel to handle variable names with Unicode characters incorrectly ([1425055](https://crbug.com/1425055)).
+- The **Issues** panel added a new message for Autofill issues regarding non-standard HTML values ([1399414](https://crbug.com/1399414).
 
 <!-- $contentEnd -->
 
