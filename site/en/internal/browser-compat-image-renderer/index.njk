@@ -1,54 +1,42 @@
 ---
 eleventyComputed:
-  title: "{% raw %}{% BrowserCompat %}{% endraw %} Image Renderer"
+  title: "Browser Compat Image Renderer"
   description: 'Renders the BrowserCompat widget as a image usable on slides.'
-layout: 'layouts/landing.njk'
-pageScripts:
-  - '/js/internal.js'
+authors:
+  - mrohmer
 ---
-<div class="stack flow-space-200">
-  <h1 class="type--h2">{% raw %}{% BrowserCompat %}{% endraw %} Image Renderer</h1>
-  <p class="type--h5">Use this form to render a browser compat widget to a static image for you to use in presentations.</p>
-</div>
+<p>Use this tool to render a <a href="/docs/handbook/components/#browser-compat">browser compat widget</a> to a static image 
+for you to use in presentations, videos and other media.</p>
 
-<form action="/_render" method="post" name="browser-compat-image-renderer">
-  <div class="pad-bottom-400 pad-top-400">
-    <label for="feature-id" class="display-block">MDN Browser Compat ID</label>
-    <input type="text" name="feature-id" id="feature-id" class="width-full" placeholder="css.types.color.rgb_hexadecimal_notation"></input>
-  </div>
-  <button type="submit" class="button-filled material-button color-bg bg-primary">Render</button>
-</form>
+<p>
+  This tool currently supports data included in 
+  <a href="https://www.npmjs.com/package/@mdn/browser-compat-data">@mdn/browser-compat-data</a>&nbsp;{{pkg.dependencies['@mdn/browser-compat-data']}} and prior.
+</p>
 
-<!-- Render a BrowserCompat widget here to have the styles included in the page -->
+<browser-compat-image-renderer>
+  <div class="spinner spinner--big display-flex gap-top-400 center-margin"></div>
+</browser-compat-image-renderer>
+
+<!-- A static BrowserCompat widget, otherwise the CSS purging process removes the required styles -->
 <div hidden>
-  {% BrowserCompat 'css.types.color.rgb_hexadecimal_notation' %}
-</div>
-
-<style>
-  @keyframes rotate {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-  .loader {
-    display: inline-block;
-    margin-right: 5px;
-    width: 18px;
-    height: 18px;
-    border: 2px solid var(--color-primary);
-    border-right: 2px solid transparent;
-    animation: rotate 3s linear infinite;
-    border-radius: 50%;
-    vertical-align: middle;
-  }
-</style>
-
-<div class="pad-bottom-400 pad-top-400">
-  <div class="rounded-lg display-flex align-center width-full pad-200" style="background: #f1f3f4;">
-    <div id="output" class="display-flex align-center"></div>
+  <div class="wdi-browser-compat">
+    <ul class="wdi-browser-compat__items">
+      <li class="wdi-browser-compat__item">
+        <span class="wdi-browser-compat__browser" data-browser="chrome"></span>
+        <span class="wdi-browser-compat__version" data-compat="yes">x</span>
+      </li>
+      <li class="wdi-browser-compat__item">
+        <span class="wdi-browser-compat__browser" data-browser="safari"></span>
+        <span class="wdi-browser-compat__version" data-compat="no">x</span>
+      </li>
+      <li class="wdi-browser-compat__item">
+        <span class="wdi-browser-compat__browser" data-browser="edge"></span>
+        <span class="wdi-browser-compat__version" data-compat="preview">x</span>
+      </li>
+      <li class="wdi-browser-compat__item">
+        <span class="wdi-browser-compat__browser" data-browser="firefox"></span>
+        <span class="wdi-browser-compat__version" data-compat="no">x</span>
+      </li>
+    </ul>
   </div>
 </div>

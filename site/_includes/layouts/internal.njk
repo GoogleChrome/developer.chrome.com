@@ -1,0 +1,30 @@
+{% extends "layouts/base.njk" %}
+
+{% block css %}
+{% InlineCss '/css/internal.css' %}
+{% endblock %}
+
+{% block title_bar %}
+{% include 'partials/breadcrumbs.njk' %}
+{% endblock %}
+
+{% block content %}
+  <div class="display-flex gap-top-300 lg:gap-top-400 center-margin">
+    <div class="display-flex justify-content-center width-full">
+      <article class="stack measure-long width-full pad-left-400 pad-right-400">
+        <div class="stack flow-space-200">
+          {% include 'partials/post-headline.njk' %}
+        </div>
+        {% if authors %}
+          <div class="stack-exception-600 lg:stack-exception-700">
+            {% include 'partials/post-authors.njk' %}
+          </div>
+        {% endif %}
+
+        <div class="stack stack--block type center-images">
+          {{ content | safe }}
+        </div>
+      </article>
+    </div>
+  </div>
+{% endblock %}
