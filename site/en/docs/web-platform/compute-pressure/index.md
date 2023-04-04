@@ -79,7 +79,7 @@ apps and sites than the observing site.
 
 ## Interfaces
 
-Compute Pressure API can be run in the following contexts:
+The Compute Pressure API can be run in the following contexts:
 - Window or main thread
 - Dedicated Worker
 - Shared Worker
@@ -87,7 +87,7 @@ Compute Pressure API can be run in the following contexts:
 The Compute Pressure API defines two new interfaces.
 
 `PressureObserver`: An object to observe the compute pressure of any number of sources at a
-predefined sample rate. First iteration in Chromium exposes `cpu` as `source`. See section about
+predefined sample rate. First iteration in Chromium exposes `"cpu"` as `source`. See section about
 [parameters](#parameters)  for more details. Each observer can asynchronously observe pressure
 changes trends in a system.
 
@@ -137,10 +137,10 @@ updates.
 
 ##### Parameters {: #parameters }
 
-`source`: The source to be observed, for example `cpu`. This must be one of the [supported source
+`source`: The source to be observed, for example `"cpu"`. This must be one of the [supported source
 types](https://w3c.github.io/compute-pressure/#dfn-supported-source-types).
 
-In the current version of Compute Pressure, only `cpu` is supported.
+In the current version of Compute Pressure, only `"cpu"` is supported.
 
 ### PressureRecord {: #records }
 
@@ -176,7 +176,10 @@ Create the pressure observer by calling its constructor with a callback function
 there is a pressure update:
 
 ```js
-const observer = new PressureObserver((records) => { /* ... */ }, { sampleRate: 0.5 });
+const observer = new PressureObserver(
+  (records) => { /* ... */ },
+  { sampleRate: 0.5 }
+);
 ```
 
 A sample rate, `sampleRate`, of 0.5 Hz, means that there will be updates at most every two seconds.
@@ -188,14 +191,14 @@ only provide samples at maximum 1 Hz, 1 Hz will be selected.
 ### Using a pressure observer
 
 There is only one way to start a pressure observer. For each source call
-`ComputePressure.observe(source)`.
+`observer.observe(source)`.
 
 ```js
 observer.observe("cpu");
 ```
 
 In this example the `"cpu"` is the pressure source we are interested in. For now, it is the only
-source available. In the future, there may be other sources such as `gpu`, `power` or `thermals`.
+source available. In the future, there may be other sources such as `"gpu"`, `"power"` or `"thermals"`.
 
 To stop observing a source, use the `unobserve()` method, as in the following example:
 
@@ -217,7 +220,13 @@ change is happening in the pressure state.
 function callback(records) {
   const lastRecord = records[records.length - 1];
   console.log(`Current pressure ${lastRecords.state}`);
-  // Do something with records.
+  if (lastRecords.state === critical) {
+    // Reduce workers load by 4.
+  } else if (lastRecords.state === serious) {
+    // Reduce workers load by 2.
+  } else {
+    // Do not reduce.
+  }
 }
 
 const observer = new PressureObserver(callback, { sampleRate: 1 });
@@ -231,7 +240,11 @@ The `takeRecords()` method of the `PressureObserver` interface returns an array 
 Calling this method clears the pending records list, so the callback will not be run.
 
 ```js
-const observer = new PressureObserver(()=>{}, { sampleRate: 1 });
+const observer = new PressureObserver(
+  () => { /* Will not be called as we call takeRecords(). */ },
+  { sampleRate: 1 }
+);
+
 await observer.observe("cpu");
 
 // Forced records reading.
