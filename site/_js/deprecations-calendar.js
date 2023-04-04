@@ -22,7 +22,7 @@ import {TagPillList} from './web-components/tag-pill-list';
 let activeFilters = {};
 /** @type {TagPillList|null} */
 const activeFiltersList = document.querySelector('#active-filters');
-const selectFields = document.querySelectorAll('.deprecation-filter');
+const selectFields = document.querySelectorAll('.deprecations-filter');
 const clearFilters = document.querySelector('.clear-filters');
 
 /**
@@ -39,9 +39,10 @@ function updateTagPills() {
     }
     const pills = i[1].map(value => ({key: i[0], value: value}));
 
-    clearFilters?.classList.remove('hidden');
+    console.log(clearFilters);
+    clearFilters?.classList.remove('visually-hidden');
     if (pills.length === 0) {
-      clearFilters?.classList.add('hidden');
+      clearFilters?.classList.add('visually-hidden');
     }
 
     return pills;
@@ -163,7 +164,7 @@ function addClearFilterListener() {
       });
     activeFilters = {};
     updateTagPills();
-    clearFilters?.classList.add('hidden');
+    clearFilters?.classList.add('visually-hidden');
   });
 }
 
