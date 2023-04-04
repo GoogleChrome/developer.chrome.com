@@ -15,6 +15,7 @@
  */
 import './web-components/checkbox-group';
 import './web-components/enhanced-select';
+import './web-components/filters-wrapper';
 import {EnhancedSelect} from './web-components/enhanced-select';
 // eslint-disable-next-line no-unused-vars
 import {TagPillList} from './web-components/tag-pill-list';
@@ -39,7 +40,6 @@ function updateTagPills() {
     }
     const pills = i[1].map(value => ({key: i[0], value: value}));
 
-    console.log(clearFilters);
     clearFilters?.classList.remove('visually-hidden');
     if (pills.length === 0) {
       clearFilters?.classList.add('visually-hidden');
@@ -79,18 +79,10 @@ function formatDateRange(days) {
 function addMobileListeners() {
   /** @type {HTMLDialogElement|null} */
   const filters = document.querySelector('#mobile-filters');
-  const opener = document.querySelector('#mobile-filters-opener');
+  //const opener = document.querySelector('#mobile-filters-opener');
   const done = document.getElementById('mobile-filters-done');
   const reset = document.getElementById('mobile-filters-reset');
   const removalDates = document.querySelectorAll('input[name="removal-date"]');
-
-  // @ts-ignore
-  opener?.addEventListener('click', () => filters.showModal());
-
-  filters?.addEventListener('click', e => {
-    if (/** @type {HTMLElement} */ (e.target).nodeName === 'DIALOG')
-      closeFiltersModal();
-  });
 
   done?.addEventListener('click', () => {
     const selected = Array.from(
