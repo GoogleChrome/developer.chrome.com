@@ -502,4 +502,4 @@ The **Recorder** looks for selectors in the following order depending on if you 
 There can be multiple regular CSS, XPath, and Pierce selectors. The **Recorder** captures:
 
 - Regular CSS and XPath selectors at every root level, that is, nested [shadow hosts](https://developer.mozilla.org/docs/Web/Web_Components/Using_shadow_DOM#high-level_view), if any.
-- Pierce selectors that are unique among all elements *within* all shadow roots, if possible.
+- Pierce selectors that are unique among all elements *within* all shadow roots.
