@@ -1,0 +1,26 @@
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  display: inline-block;
+  margin-right: 1em;
+  width: 1em;
+  height: 1em;
+  border: 2px solid var(--color-primary);
+  border-right: 2px solid transparent;
+  animation: rotate 3s linear infinite;
+  border-radius: 50%;
+  vertical-align: middle;
+
+  &--big {
+    width: 2em;
+    height: 2em;
+    border-width: 4px;
+  }
+}
