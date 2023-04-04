@@ -3,10 +3,10 @@ title: New in Chrome 112
 description: >
   Chrome 112 is rolling out now! Now CSS supports nesting rules, the algorithm to set the initial focus on dialog elements was updated, no-op fetch handlers on service workers are skipped from now on to make navigations faster and there’s plenty more.
 layout: 'layouts/blog-post.njk'
-date: 2023-03-7
+date: 2023-04-04
 authors:
   - ajara
-hero: ‘image/SeARmcA1EicLXagFnVOe0ou9cqK2/kYS3DlJai8qJioFUduBI.png’
+hero: 'image/SeARmcA1EicLXagFnVOe0ou9cqK2/kYS3DlJai8qJioFUduBI.png'
 alt: >
   New in Chrome hero logo
 tags:
