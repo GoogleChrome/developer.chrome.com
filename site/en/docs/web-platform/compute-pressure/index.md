@@ -46,7 +46,8 @@ To experiment with the Compute Pressure API locally, read this [page][how-to].
 
 ## Use-Cases
 
-The primary use cases enhanced by v1 are video conferencing and video games.
+The primary use cases enhanced by the current Compute Pressure API are video conferencing and
+video games.
 
 These popular real-time applications are classified as soft. That is, the quality of service
 degrades if the system is exercised beyond certain states, but does not lead to a total system
@@ -141,7 +142,7 @@ types](https://w3c.github.io/compute-pressure/#dfn-supported-source-types).
 
 In the current version of Compute Pressure, only `cpu` is supported.
 
-### PressureRecord
+### PressureRecord {: #records }
 
 The `PressureRecord` interface of the Compute Pressure API describes the pressure trend of a
 source at a specific moment of transition.
@@ -193,7 +194,7 @@ There is only one way to start a pressure observer. For each source call
 observer.observe("cpu");
 ```
 
-In this example the `cpu` is the pressure source we are interested in. For now, it is the only
+In this example the `"cpu"` is the pressure source we are interested in. For now, it is the only
 source available. In the future, there may be other sources such as `gpu`, `power` or `thermals`.
 
 To stop observing a source, use the `unobserve()` method, as in the following example:
@@ -208,23 +209,35 @@ In order to unobserve all sources at once, use the `disconnect()` method, as in 
 observer.disconnect();
 ```
 ### Retrieving pressure records
+
+Pressure records can be retrieved with a callback function, which will be invoked every time a
+change is happening in the pressure state.
+
+```js
+function callback(records) {
+  const lastRecord = records[records.length - 1];
+  console.log(`Current pressure ${lastRecords.state}`);
+  // Do something with records.
+}
+
+const observer = new PressureObserver(callback, { sampleRate: 1 });
+await observer.observe("cpu");
+```
+The user can also force the reading of `PressureRecord` by calling the `takeRecords()` method.
+
 The `takeRecords()` method of the `PressureObserver` interface returns an array of
 `PressureRecords` objects stored in the pressure observer, emptying it out.
 
 Calling this method clears the pending records list, so the callback will not be run.
 
 ```js
-function callback(records) {
-  const lastRecord = records[records.length - 1];
-  console.log(`Current pressure ${lastRecords.state}`);
-}
-
-const observer = new PressureObserver(callback, { sampleRate: 1 });
+const observer = new PressureObserver(()=>{}, { sampleRate: 1 });
 await observer.observe("cpu");
 
-// forced record reading
+// Forced records reading.
 const records = observer.takeRecords();
 ```
+
 ### Tell us about the API design
 Is there anything about the API that does not work as you expected? Do you see any missing method
 or property for your usage of the API? File a spec issue or comment on an existing one in the
