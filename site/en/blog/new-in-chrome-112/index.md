@@ -108,7 +108,7 @@ Having the fetch handler was one of the PWA requirements for a web app to be ins
 
 As part of this change, Chrome will show console warnings if all the service worker’s fetch listeners are no-ops, and encourage developers to remove those fetch listeners.
 
-{% Img src="image/SeARmcA1EicLXagFnVOe0ou9cqK2/rVEXxK1RvVOvaz7Gi8FP.png", alt="Warnings in devtools for empty service worker fetch handlers.", width="800", height="297" %}
+{% Img src="image/SeARmcA1EicLXagFnVOe0ou9cqK2/rVEXxK1RvVOvaz7Gi8FP.png", alt="Warnings in DevTools for empty service worker fetch handlers.", width="800", height="297" %}
 
 
 
