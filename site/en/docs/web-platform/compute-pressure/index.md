@@ -49,33 +49,33 @@ To experiment with the Compute Pressure API locally, read this [page][how-to].
 The primary use cases enhanced by the current Compute Pressure API are video conferencing and
 video games.
 
-These popular real-time applications are classified as soft. That is, the quality of service
+These popular real-time applications are classified as _soft_. That is, the quality of service
 degrades if the system is exercised beyond certain states, but does not lead to a total system
 failure. These soft real-time applications greatly benefit from being able to adapt their workloads
 based on CPU consumption/pressure.
 
-Specifically, v1 aims to facilitate the following adaptation decisions for these use cases:
+Specifically, the first version of this API aims to enable the following adaptation decisions.
 
-  - Video conferencing
-    - Adjust the number of video feeds shown simultaneously during calls with many participants
-    - Reduce the quality of video processing (video resolution, frames per second)
-    - Skip non-essential video processing, such as some camera filters
-    - Disable non-essential audio processing, such as WebRTC noise suppression
-    - Turn quality-vs-speed and size-vs-speed knobs towards “speed” in video and audio encoding
-      (in WebRTC, WebCodecs, or software encoding)
+### Video conferencing
+  - Adjust the number of video feeds shown simultaneously during calls with many participants.
+  - Reduce the quality of video processing (video resolution, frames per second).
+  - Skip non-essential video processing, such as some camera filters.
+  - Disable non-essential audio processing, such as WebRTC noise suppression.
+  - Turn quality-versus-speed and size-versus-speed knobs towards “speed” in video and audio
+    encoding (in WebRTC, WebCodecs, or software encoding).
 
-  - Video games
-    - Use lower-quality assets to compose the game’s video (3D models, textures, shaders) and audio
-      (voices, sound effects)
-    - Disable effects that result in less realistic non-essential details (water / cloth / fire
-      animations, skin luminance, glare effects, physical simulations that don’t impact gameplay)
-    - Tweak quality-vs-speed knobs in the game’s rendering engine (shadows quality, texture filtering,
-      view distance)
+### Video games
+  - Use lower-quality assets to compose the game’s video (3D models, textures, shaders) and audio
+    (voices, sound effects).
+  - Disable effects that result in less realistic non-essential details (water, cloth, fire
+    animations, skin luminance, glare effects or physical simulations that don’t impact gameplay).
+  - Tweak quality-versus-speed knobs in the game’s rendering engine (shadows quality, texture
+    filtering, view distance).
 
-Technically these can be accomplished by knowing thermal states (e.g., is the system being
-passively cooled - throttled) as well as CPU pressure states for the threads the site is using such
-as main thread and workers. System thermal state is a global state and can be affected by other
-apps and sites than the observing site.
+Technically these can be accomplished by knowing thermal (for example, is the system being
+passively cooled) and CPU pressure states for the main thread and workers the site is using.
+System thermal state is a global state and can be affected by apps and sites other than the
+observing site.
 
 ## Interfaces
 
@@ -93,13 +93,13 @@ changes trends in a system.
 
 `PressureRecord`: Describes the pressure trend at a specific moment of transition. Objects of this
 type can only be obtained in two ways: as an input to your PressureObserver callback, or by calling
-the `takeRecords()` method on PressureObserver instance.
+the `takeRecords()` method on the `PressureObserver` instance.
 
 ### PressureObserver
 
 When an `PressureObserver` object is created, it's configured to watch the pressure of supported
-sources, at a given sample rate. The supported sources can be individually observed/unobserved at
-any time during the lifetime of the PressureObserver object. The sample rate cannot be changed
+sources, at a given sample rate. The supported sources can be individually observed or unobserved
+at any time during the lifetime of the `PressureObserver` object. The sample rate cannot be changed
 after the creation of the object.
 
 #### Constructor
@@ -149,12 +149,12 @@ source at a specific moment of transition.
 
 #### Instance Properties
 
-`PressureRecord.source` (Read-only): Returns a `string` representing the origin source from which the
+`PressureRecord.source` (Read-only): Returns a string representing the origin source from which the
 record is coming.
 
-`PressureRecord.state` (Read-only): Returns a `string` representing the pressure state recorded.
+`PressureRecord.state` (Read-only): Returns a string representing the pressure state recorded.
 
-`PressureRecord.time` (Read-only): Returns a `number` representing a high resolution timestamp.
+`PressureRecord.time` (Read-only): Returns a number representing a high resolution timestamp.
 
 ##Feedback {: #feedback }
 
@@ -185,8 +185,8 @@ const observer = new PressureObserver(
 A sample rate, `sampleRate`, of 0.5 Hz, means that there will be updates at most every two seconds.
 
 If the sample rate requested cannot be served by the system. The system will provide samples at 
-the best suitable rate existing. For example if the rate of 2 Hz is requested, but the system can
-only provide samples at maximum 1 Hz, 1 Hz will be selected.
+the best suitable rate that exists. For example if the rate of 2 Hz is requested, but the system
+can only provide samples at maximum 1 Hz, 1 Hz will be selected.
 
 ### Using a pressure observer
 
