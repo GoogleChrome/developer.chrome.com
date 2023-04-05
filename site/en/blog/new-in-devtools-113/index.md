@@ -56,7 +56,7 @@ DevTools skips such frames:
 - In **Console** traces, under the **Show N more frames** link.
 - In [**Sources** > **Call Stack**](/docs/devtools/javascript/reference/#show-ignore-listed-frames), under {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show ignore-listed frames**.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/172xiWtjMOXmwZYAgeSo.png", alt="The stack trace before and after enabling third-party ignore-listing.", width="800", height="489" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JbfA2QCj3YiZVgiycZ0q.png", alt="The stack trace before and after enabling third-party ignore-listing.", width="800", height="482" %}
 
 {% Aside %}
 You can manually [disable ignore-listing](/docs/devtools/settings/ignore-list/#skip-third-party) in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Ignore List**](/docs/devtools/settings/ignore-list/).
@@ -70,7 +70,7 @@ To bring you these improvements, the DevTools, Nuxt, Vite, and Rollup teams coll
 
 The DevTools team would like to express gratitude to the Nuxt, Vite, and Rollup teams for making this possible. We appreciate your efforts and collaboration, which were essential to the success of this implementation. Thank you again for your contributions!
 
-## CSS improvements in the Styles pane {: #css }
+## CSS improvements in Elements > Styles {: #css }
 
 ### Invalid CSS properties and values
 
