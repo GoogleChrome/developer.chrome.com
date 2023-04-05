@@ -34,7 +34,7 @@ Both the [Dawn](https://dawn.googlesource.com/dawn) library for Chromium and the
 
 This initial release of WebGPU is available in Chrome&nbsp;113 on ChromeOS devices with Vulkan support, Windows devices with Direct3D 12 support, and macOS. Linux, Android, and expanded support for existing platforms will come soon.
 
-WebGPU is currently a [work-in-progress](https://github.com/gpuweb/gpuweb/wiki/Implementation-Status) in [Firefox](https://hacks.mozilla.org/2020/04/experimental-webgpu-in-firefox/) and [Safari](https://github.com/WebKit/WebKit/commits/main/Source/WebCore/Modules/WebGPU), in addition to the initial implementation in Chrome.
+WebGPU is currently a work-in-progress in [Firefox](https://hacks.mozilla.org/2020/04/experimental-webgpu-in-firefox/) and [Safari](https://github.com/WebKit/WebKit/commits/main/Source/WebCore/Modules/WebGPU), in addition to the initial implementation in Chrome.
 
 ## Library support
 
