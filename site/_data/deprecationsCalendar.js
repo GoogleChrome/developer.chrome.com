@@ -4,11 +4,11 @@ const yaml = require('js-yaml');
 
 const RELATED_ARTICLES_PATH = path.join(
   __dirname,
-  './deprecation-calendar/deprecation-articles.yml'
+  './deprecations-calendar/deprecations-articles.yml'
 );
 const DEPRECATIONS_FILE_PATH = path.join(
   __dirname,
-  '../../external/data/deprecation-calendar.json'
+  '../../external/data/chrome-deprecations.json'
 );
 
 /**
@@ -57,13 +57,12 @@ async function getArticles() {
  * @return {object[]} An array of deprecations with their related articles
  */
 function addArticles(deprecations, articles) {
-  deprecations.forEach(deprecation => {
-    const linkedArticle = articles.filter(
-      article => article.deprecation_id === deprecation.id
-    );
-    if (linkedArticle.length > 0)
-      deprecation.article = linkedArticle[0].article;
-  });
+  for (const deprecation of deprecations) {
+    const linkedArticle = articles[deprecation.id];
+    if (linkedArticle) {
+      deprecation.article = linkedArticle.article;
+    }
+  }
   return deprecations;
 }
 
