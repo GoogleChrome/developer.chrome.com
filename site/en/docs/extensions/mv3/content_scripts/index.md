@@ -746,7 +746,7 @@ window.setTimeout(() => animate(elmt_id), 200);
 ```
 {% endCompare %}
 
-[1]: https://www.w3.org/TR/DOM-Level-2-HTML/
+[1]: https://developer.mozilla.org/docs/Web/API/Document_Object_Model
 [2]: /docs/extensions/mv3/messaging
 [3]: /docs/extensions/reference/i18n
 [4]: /docs/extensions/reference/storage
