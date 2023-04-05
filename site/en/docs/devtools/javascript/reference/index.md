@@ -378,27 +378,11 @@ To enable grouping, enable the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5
 **Note**: This is a {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XfSWf04g2cwpnFcmp40m.svg", alt="Experimental.", width="20", height="20" %} preview feature available from Chrome version 106.
 {% endAside %}
 
-To help you focus only on the code you create, the **Sources** panel can hide ignore-listed third-party scripts from the file tree.
+To help you focus only on the code you create, the **Sources** > **Page** pane grays out all scripts or directories added to {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Ignore List**](/docs/devtools/settings/ignore-list/) by default.
 
-{% Aside 'gotchas' %}
-By default, DevTools automatically adds third-party scripts to the ignore list based on the new `x_google_ignoreList` property in source maps. Frameworks and bundlers need to supply this information.
+To hide such scripts altogether, select **Sources** > **Page** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Three-dot menu.", width="24", height="24" %} > **Hide ignore-listed sources** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XfSWf04g2cwpnFcmp40m.svg", alt="Experimental.", width="20", height="20" %}.
 
-As of Chrome version 106, [Angular v14.1.0](https://github.com/angular/angular-cli/releases/tag/14.1.0) supports this feature. See [Case Study: Better Angular Debugging with DevTools](/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular).
-{% endAside %}
-
-To hide known third-party sources:
-
-1. Make sure the following two settings in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Ignore List** are enabled:
-
-   - {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable Ignore Listing**
-
-   - {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Automatically add known third-party scripts to ignore list**
-
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JOwVIMb8WzRCacSq4oeK.png", alt="Automatically add known third-party scripts to ignore list.", width="800", height="506" %}
-
-1. Select **Sources** > **Page** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Three-dot menu.", width="24", height="24" %} > **Hide ignore-listed sources** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XfSWf04g2cwpnFcmp40m.svg", alt="Experimental.", width="20", height="20" %}.
-
-   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Y4KSjl9zJQdnAhTvtnXm.png", alt="Hide ignore-listed sources.", width="800", height="449" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/6FMlKaxyNzlf3j41kzVZ.png", alt="Before and after hiding ignore-listed sources.", width="800", height="420" %}
 
 ## Ignore a script or pattern of scripts {: #ignore-list }
 
@@ -419,9 +403,24 @@ function animate() {
 `A` is a third-party library that you trust. If you're confident that the problem you're debugging
 is not related to the third-party library, then it makes sense to ignore the script.
 
+### Ignore a script or a directory from the file tree {: #file-tree-ignore-list }
+
+To ignore an individual script or an entire directory:
+
+1. In **Sources** > **Page**, right-click a directory or a script file.
+1. Select **Add directory/script to ignore list**.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Y7gblKGiZIzM9gkVSmch.png", alt="Ignore options for a directory or script file.", width="800", height="667" %}
+
+If you didn't [hide ignore-listed sources](#hide-ignore-listed), you can select such a source in the file tree and, on the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/BOj6neshf7WbowM3j21R.svg", alt="Warning.", width="24", height="24" %} warning banner, click **Remove from ignored list** or **Configure**.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/kL33cvwDpOREDHu7waX5.png", alt="A selected ignored file shows Remove and Configure buttons.", width="800", height="509" %}
+
+Otherwise, you can remove hidden and ignored directories and scripts from the list in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Ignore List**](/docs/devtools/settings/ignore-list/).
+
 ### Ignore a script from the Editor pane {: #editor-ignore-list }
 
-To ignore a script from the Editor pane:
+To ignore a script from the **Editor** pane:
 
 1.  Open the file.
 2.  Right-click anywhere.
@@ -429,7 +428,7 @@ To ignore a script from the Editor pane:
 
 {% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/q7leDy8D975ZlhtiB3f6.png", alt="Ignoring a script from the Editor pane.", width="800", height="575" %}
 
-You can remove a script from the list of ignored from [Settings](/docs/devtools/settings/#manage-custom-ignore-list).
+You can remove a script from the list of ignored from {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Ignore List**](/docs/devtools/settings/ignore-list/).
 
 ### Ignore a script from the Call Stack pane {: #call-stack-ignore-list }
 
@@ -440,27 +439,11 @@ To ignore a script from the **Call Stack** pane:
 
 {% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/y2NiIZH9UURpEtXAuVCZ.png", alt="Ignoring a script from the Call Stack pane.", width="800", height="575" %}
 
-You can remove a script from the list of ignored from [Settings](/docs/devtools/settings/#manage-custom-ignore-list).
+You can remove a script from the list of ignored from {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Ignore List**](/docs/devtools/settings/ignore-list/).
 
 ### Ignore a script from Settings {: #settings-ignore-list }
 
-To ignore a single script or pattern of scripts from Settings:
-
-1. Open [Settings][3].
-1. Go to the **Ignore List** tab.
-1. Make sure {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable Ignore Listing** is checked.
-    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/oNWiT5ZdB1FCDNE6TuXp.png", alt="Ignoring a script from Settings.", width="800", height="576" %}
-1. Under **Custom exclusion rules**, click **Add pattern**.
-1. Enter the script name or a RegEx pattern of script names to ignore.
-1. Click **Add**.
-
-For more information on checkboxes under **General exclusion rules**, see:
-
-- {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Add content scripts to ignore list**](/docs/devtools/javascript/ignore-chrome-extension-scripts/)
-- {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Automatically add known third-party scripts to ignore list**:
-
-  - [Show ignore-listed frames](/docs/devtools/javascript/reference/#show-ignore-listed-frames)
-  - [Hide ignore-listed sources from the file tree](/docs/devtools/javascript/reference/#hide-ignore-listed)
+See {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Ignore List**](/docs/devtools/settings/ignore-list/).
 
 ## Run snippets of debug code from any page {: #snippets }
 
