@@ -219,10 +219,10 @@ change is happening in the pressure state.
 ```js
 function callback(records) {
   const lastRecord = records[records.length - 1];
-  console.log(`Current pressure ${lastRecords.state}`);
-  if (lastRecords.state === critical) {
+  console.log(`Current pressure ${lastRecord.state}`);
+  if (lastRecord.state === "critical") {
     // Reduce workers load by 4.
-  } else if (lastRecords.state === serious) {
+  } else if (lastRecord.state === "serious") {
     // Reduce workers load by 2.
   } else {
     // Do not reduce.
@@ -237,18 +237,27 @@ The user can also force the reading of `PressureRecord` by calling the `takeReco
 The `takeRecords()` method of the `PressureObserver` interface returns an array of
 `PressureRecords` objects stored in the pressure observer, emptying it out.
 
+The most common use case for this is to immediately fetch all pending pressure records, not yet
+processed by the observer's callback function, prior to disconnecting the observer, so that any
+pending records can be processed when shutting down the observer.
+
 Calling this method clears the pending records list, so the callback will not be run.
 
 ```js
 const observer = new PressureObserver(
-  () => { /* Will not be called as we call takeRecords(). */ },
+  (records) => { /* Do something with records. */ },
   { sampleRate: 1 }
 );
 
 await observer.observe("cpu");
 
-// Forced records reading.
-const records = observer.takeRecords();
+setTimeout(() => {
+  // Forced records reading.
+  const records = observer.takeRecords();
+  observer.disconnect();
+  // Do something with last records if any.
+}, 2000);
+
 ```
 
 ### Tell us about the API design
