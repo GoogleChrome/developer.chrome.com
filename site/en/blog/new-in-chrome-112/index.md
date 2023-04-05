@@ -4,6 +4,7 @@ description: >
   Chrome 112 is rolling out now! Now CSS supports nesting rules, the algorithm to set the initial focus on dialog elements was updated, no-op fetch handlers on service workers are skipped from now on to make navigations faster and there’s plenty more.
 layout: 'layouts/blog-post.njk'
 date: 2023-04-04
+updated: 2023-04-05
 authors:
   - ajara
 hero: 'image/SeARmcA1EicLXagFnVOe0ou9cqK2/kYS3DlJai8qJioFUduBI.png'
@@ -23,7 +24,7 @@ Here's what you need to know:
 * No-op `fetch()` handlers on [service workers are skipped](#no-op-sw) from now on to make navigations faster.
 * And there’s plenty [more](#more).
 
-I’m Adriana Jara. Let’s dive in and see what’s new for developers in Chrome 111.
+I’m Adriana Jara. Let’s dive in and see what’s new for developers in Chrome 112.
 ## CSS support for nesting. {: #nesting-rules}
 One of our favorite CSS preprocessor features is now built into the language: nesting style rules.
 
@@ -127,7 +128,7 @@ additional changes in Chrome 112.
 
 * [What's new in Chrome DevTools (112)](/blog/new-in-devtools-112/)
 * [Chrome 112 deprecations and removals](/blog/deps-rems-112/)
-* [ChromeStatus.com updates for Chrome 111](https://www.chromestatus.com/features#milestone%3D108)
+* [ChromeStatus.com updates for Chrome 112](https://www.chromestatus.com/features#milestone%3D112)
 * [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/111.0.5563.53..112.0.5615.54)
 * [Chrome release calendar](https://chromiumdash.appspot.com/schedule)
 
