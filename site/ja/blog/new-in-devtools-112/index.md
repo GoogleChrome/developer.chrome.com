@@ -11,7 +11,6 @@ tags:
   - new-in-devtools
   - devtools
   - chrome-112
-draft: true
 ---
 
 *翻訳者の [technohippy](https://github.com/technohippy) さん、レビュアーの [yoichiro](https://github.com/yoichiro) さん、 [lacolaco](https://github.com/lacolaco) さん、 [yoshiko-pg](https://github.com/yoshiko-pg) さんに感謝いたします。*
@@ -27,7 +26,7 @@ draft: true
 
 
 <!-- ## Recorder updates {: #recorder } -->
-## Recorderのアップデート {: #recorder }
+## Recorder のアップデート {: #recorder }
 
 <!-- ### Replay extensions support {: #replay-extensions } -->
 ### リプレイの拡張機能サポート {: #replay-extensions }
@@ -64,7 +63,7 @@ Chromium issue: [1400243](https://crbug.com/1400243).
 Chromium issue: [1411188](https://crbug.com/1411188).
 
 <!-- ### Export as a Puppeteer script with Lighthouse analysis {: #puppeteer-lighthouse } -->
-### Lighthouseの解析結果をPuppeteerのスクリプトとして書き出す {: #puppeteer-lighthouse }
+### Lighthouse の解析結果を Puppeteer のスクリプトとして書き出す {: #puppeteer-lighthouse }
 
 <!-- The **Recorder** introduces a new export option: **Puppeteer (including Lighthouse analysis)**. With [Puppeteer](/docs/puppeteer/), you can automate and control Chrome. With [Lighthouse](/docs/lighthouse/), you can capture and improve your website's performance. -->
 **Recorder** に新しいエクスポートオプション **Puppeteer (including Lighthouse analysis)** を導入しました。[Puppeteer](/docs/puppeteer/)を使用すると、Chromeを自動化し制御することができます。[Lighthouse](/docs/lighthouse/)を使用すると、ウェブサイトのパフォーマンスを把握し、改善することができます。
@@ -82,7 +81,7 @@ Chromium issue: [1411188](https://crbug.com/1411188).
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/fcaf72d9134e54140cab41c011b7520dd168a340 #}
 
 <!-- ### Get extensions {: #get-extensions } -->
-### 拡張機能を手に入れよう {: #get-extensions }
+### 拡張機能を手に入れる {: #get-extensions }
 
 <!-- Explore options to customize your recorder experience, for example, with custom export options. Get extensions for the **Recorder** by clicking the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4dU9UXvsinS4zbgjd8rK.svg", alt="Export.", width="20", height="20" %} **Export** > **Get extensions** in a recording. -->
 カスタムエクスポートオプションなど、レコーダーの体験をカスタマイズする選択肢を探しましょう。**Recorder**の拡張機能を入手するには、{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4dU9UXvsinS4zbgjd8rK.svg", alt="Export.", width="20", height="20" %} **Export** > **Get extensions** をクリックします
@@ -217,7 +216,7 @@ CPUのプロファイルは、 **Profiler** の代わりに [**Performance**](/d
 Chromium issue: [1417647](https://crbug.com/1417647).
 
 <!-- ## Emulate reduced contrast {: #reduced-contrast } -->
-## 低減したコントラストをエミュレートする {: #reduced-contrast }
+## コントラスト低減をエミュレートする {: #reduced-contrast }
 
 <!-- The [**Rendering**](/docs/devtools/rendering/#open-rendering) tab adds a new option to the [Emulate vision deficiencies](/docs/devtools/rendering/apply-effects/#emulate-vision-deficiencies) list—**Reduced contrast**. With this option, you can discover how your website looks to people with reduced contrast sensitivity. -->
 [**Rendering**](/docs/devtools/rendering/#open-rendering) タブでは、 [Emulate vision deficiencies](/docs/devtools/rendering/apply-effects/#emulate-vision-deficiencies) に新しいオプション **Reduced contrast** を追加しました。このオプションを使用すると、コントラスト感度が低下している人にあなたのウェブサイトがどのように見えるかを発見することができます。
