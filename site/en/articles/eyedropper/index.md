@@ -47,6 +47,10 @@ The EyeDropper API fills this gap by providing a way to sample colors from the s
 
 ## How to use the EyeDropper API {: #use }
 
+### Browser support
+
+{% BrowserCompat 'api.EyeDropper.EyeDropper' %}
+
 ### Feature detection and browser support
 
 First, make sure the API is available before using it.
