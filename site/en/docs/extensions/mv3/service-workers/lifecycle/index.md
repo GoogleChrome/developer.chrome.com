@@ -64,7 +64,9 @@ Any global variables you set will be lost if the service worker shuts down. Inst
 
 [CacheStorage API](https://developer.mozilla.org/docs/Web/API/CacheStorage)
 : A persistent storage mechanism for Request and Response object pairs. This API was designed specifically for web service workers and is used to retrieve data from an endpoint. There are a variety of ways to use this API depending on whether and how critical it is that users see up-to-date data. For more information, see [The Offline Cookbook](​​https://web.dev/offline-cookbook). We recommend using chrome.storage over the cache API for extensions.
-Be careful with timeouts
-If an operation takes more than 30 seconds to complete, the service worker can shut down. An example is the `fetch()` call described above. The fetch fails if the service worker shuts down befor the [`response`](https://developer.mozilla.org/docs/Web/API/Response) is received. 
+
+## Be careful with timeouts
+
+If an operation takes more than 30 seconds to complete, the service worker can shut down. An example is the `fetch()` call described above. The fetch fails if the service worker shuts down before the [`response`](https://developer.mozilla.org/docs/Web/API/Response) is received. 
 
 Guard against long-running operations failing by implementing a timeout mechanism. You can use either [`setTimeout()`](https://developer.mozilla.org/docs/Web/API/setTimeout) or the [`setInterval()`](https://developer.mozilla.org/docs/Web/API/setInterval) methods for this. Be aware that these methods also have a 30 second time limit. Usually the intent is not to keep something alive indefinitely, but to inform the user that something has gone wrong. Using these methods with an interval less than 30 seconds will allow you to do that. In cases where you need more than thirty seconds, use the [Alarms](/docs/extensions/reference/alarms/) API.

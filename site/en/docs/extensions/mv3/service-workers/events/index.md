@@ -18,7 +18,9 @@ Fired when anything is retrieved from the extension package or when `fetch()` an
 
 ### ServiceWorkerGlobal.message
 
-Extensions support their own [messaging passing](/docs/extensions/mv3/messaging/) capabilities. Service worker message passing is also available, but the two systems are not interoperable. If you need or want to use service worker message passing, you would do so using the service worker registration. For example, you could implement the following code in a popup script.
+Service worker message passing is available in addition to extension [messaging passing](/docs/extensions/mv3/messaging/), but the two systems are not interoperable. That means that messages sent using `sendMessage()` (which is available from several extension APIs) aren't intercepted by service worker message handlers. Likewise, messages sent using `postMessage()` aren't intercepted by extension message handlers. Both types of message handlers—meaning both `ServiceWorkerGlobal.message` and `chrome.runtime.onMessage`—are supported in extension service workers. Extension service workers cannot send messages to popup or content scripts using `postMessage()`.
+
+To send a message to an extension service worker using `postMessage()`, use the service worker registration in any script. For example, you could implement the following code in a popup script.
 
 ```javascript
 postMsgButton.addEventListener('click', async () => {
@@ -26,6 +28,15 @@ postMsgButton.addEventListener('click', async () => {
     const msg = { greeting: "Hello, service worker." }
     registration.active.postMessage(msg);
   });
+});
+```
+
+And inside the service worker:
+
+```javascript
+this.addEventListener('message', (e) => {
+  const msg = `Service worker message handler called with:\n${e.data.greeting}`;
+  console.log(msg);
 });
 ```
 

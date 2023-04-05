@@ -28,7 +28,9 @@ Service workers in web pages or web apps register service workers by first featu
 
 ## Importing scripts
 
-If you want to use ecmascript modules with a service worker, add the `"type" field to your manifest and specify `"module"`. For example:
+There are two methods of importing scripts into a service worker: the [`import`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import) statement and the [`importScripts()`](https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/importScripts) method. Note that `import()`, often called a dynamic import, is not supported.
+
+To use the `import` statement, add the `"type" field to your manifest and specify `"module"`. For example:
 
 ```json/2
   "background": {
@@ -37,11 +39,18 @@ If you want to use ecmascript modules with a service worker, add the `"type" fie
   }
 ```
 
-Then use `import` as you normally would. Note that [import assertions](https://v8.dev/features/import-assertions) are not supported.
+Then use `import` as you normally would. Note that import assertions are not supported.
 
 ```javascript
 import { tldLocales } from './locales.js';
 ```
+
+Use `importScripts()` as you would in a web service worker.
+
+```javascript
+importScripts('./locales.js');
+```
+
 ## Updating
 
 To update the service worker, [publish a new version](/docs/webstore/publish/) of your extension to the Chrome Web Store. You cannot get around this by loading your extension from a server. For security reasons Manifest V3 [does not support](/docs/extensions/migrating/improve-security/#remove-remote-code) remotely-hosted code. Your service worker must be part of the extension package.
