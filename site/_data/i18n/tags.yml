@@ -274,6 +274,12 @@ chrome-stable:
 cross-browser:
   en: Supported cross-browser
 
+topics-updates:
+  en: Topics API updates
+
+privacy-api-updates:
+  en: Privacy Sandbox API updates
+
 ####
 # These are for collections
 
