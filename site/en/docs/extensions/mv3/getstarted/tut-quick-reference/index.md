@@ -112,7 +112,7 @@ Remember to set `type.module` when using a modern module bundler framework, such
 
 {% endAside %}
 
-### _Optional: Debugging the service worker_ {: #step-3 }
+### Optional: Debugging the service worker {: #step-3 }
 
 Let's quickly go over how to find the service worker logs and know when it has terminated. First, follow the instructions to [Load an unpacked extension][doc-dev-basics-unpacked]. 
 
