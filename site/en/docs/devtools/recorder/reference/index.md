@@ -79,7 +79,7 @@ You can do the following with each default export option:
 - **JSON**. Edit the human-readable JSON object and [import](#import-flows) the JSON file back to the **Recorder**.
 - **@puppeteer/replay**. Replay the script with the [Puppeteer Replay](https://github.com/puppeteer/replay) library. When exporting as a @puppeteer/replay script, the steps remain a JSON object. This option is perfect if you want to integrate with your CI/CD pipeline but still have the flexibility to edit the steps as JSON, later convert and import them back into the **Recorder**.
 - **Puppeteer script**. Replay the script with [Puppeteer](/docs/puppeteer/). Because the steps are converted into JavaScript, you can have more fine-grained customization, for example, looping the steps. One caveat, you can't import this script back into the **Recorder**.
-- **Puppeteer (including Lighthouse analysis)**. This export option is the same as the previous one but it includes a [Lighthouse](/docs/lighthouse/) analysis.
+- **Puppeteer (including Lighthouse analysis)**. This export option is the same as the previous one but it includes code that generates a [Lighthouse](/docs/lighthouse/) analysis.
 
   Run the script and check out the output in a `flow.report.html` file:
 
