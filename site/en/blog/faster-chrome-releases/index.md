@@ -68,8 +68,8 @@ The following table shows how this change affects the 114 release.
     </tr>
     <tr>
       <td>Stable Release</td>
-      <td>Tue, Jun 1</td>
-      <td><strong>Tue, May 30</strong></td>
+      <td>Tue, May 30</td>
+      <td>Tue, May 30</td>
     </tr>
   </tbody>
 </table>
