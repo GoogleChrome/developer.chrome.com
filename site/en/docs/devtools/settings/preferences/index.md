@@ -416,6 +416,16 @@ This video first shows that DOM nodes aren't selected in the DOM tree. Then when
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/kYLQC0rNON8sAdCSJTpu.png", alt="Rulers shown in viewport.", width="800", height="531" %}
 {% endDetails %}
 
+{% Details %}
+{% DetailsSummary %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show CSS documentation tooltip** displays a tooltip with a short description when you hover over a property in the **Styles** pane.
+{% endDetailsSummary %}
+
+The **Learn more** link takes you an [MDN CSS Reference](https://developer.mozilla.org/docs/Web/CSS/Reference) on the property.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/v0joPkQg0NiMauy0bwwB.png", alt="The tooltip with documentation on a CSS property.", width="800", height="651" %}
+{% endDetails %}
+
 ## Network
 
 This section lists options that customize the **Network** panel. Most of the options are the same as in the panel's settings.
