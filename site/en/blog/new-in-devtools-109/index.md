@@ -25,7 +25,7 @@ tags:
 
 Open an existing user flow in the **Recorder**. Previously, when you replayed the user flow, DevTools would always start the replay by navigating to or reloading the page.
 
-With the latest updates, the **Recorder** shows the navigation step separately. You can right-click and remove it to perform in-page replay! 
+With the latest updates, the **Recorder** shows the navigation step separately. You can right-click and remove it to perform in-page replay!
 
 Apart from that, you can right-click a step and copy it to the clipboard in the **Recorder* panel instead of exporting the whole user flow. It works with [extensions](https://goo.gle/recorder-extension) too. For example, try to copy a step as a [Nightwatch Test](https://bit.ly/nightwatch-recorder) script. With this feature, you can update any existing script with ease.
 
@@ -36,7 +36,7 @@ Chromium issues: [1322313](https://crbug.com/1322313), [1351649](https://crbug.c
 
 ## Show actual function names in performance’s recordings {: #performance }
 
-The **Performance** panel now shows the actual function names and their sources in the trace if there’s a sourcemap.
+The **Performance** panel now shows the actual function names and their sources in the trace if there’s a source map.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/9pHMVM1ARXrlyLoTziVA.png", alt="Show before and after comparison of function names display in the Performance panel.", width="800", height="509" %}
 
@@ -44,9 +44,9 @@ In this example, a source file is minified during production. For example, the `
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ywER8cdQUNYrdAaBJTKT.png", alt="Show files before and after minfication.", width="800", height="392" %}
 
-Previously, when you recorded a trace in the **Performance** panel, the trace only showed you the minified function names. This made it harder to debug. 
+Previously, when you recorded a trace in the **Performance** panel, the trace only showed you the minified function names. This made it harder to debug.
 
-With the latest changes, DevTools now reads the source map and shows the actual function names and source location. 
+With the latest changes, DevTools now reads the source map and shows the actual function names and source location.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/4be8b5bcc00889ca35a455aa093ec242dce8ce6c #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/24d850860bda04864069e6c0d4dab32c8f53bc7f  #}
@@ -79,7 +79,7 @@ These are some JavaScript debugging improvements in this release:
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hKOEn03BZN2IUmWJ1Hho.png", alt="Show before and after comparison of new.target evaluation debugging.", width="800", height="499" %}
 - A `WeakRef` object lets you hold a weak reference to another object, without preventing that object from getting garbage-collected. DevTools now shows an inline preview for the value and evaluates the weak reference directly in the console during debugging. Previously, you had to explicitly call “deref” on them to resolve it.
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/M7DP4bI7pA07oY7M21wF.png", alt="Show before and after comparison of WeakRef evaluation during debugging.", width="800", height="453" %}
-- Fixed inline preview for shadowed variable. Previously, the display value was incorrect. 
+- Fixed inline preview for shadowed variable. Previously, the display value was incorrect.
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XHL8pnBxhZ65ni7zYV0Q.png", alt="Show before and after comparison inline preview for shadowed variable.", width="800", height="519" %}
 - Deobfuscate variable names in `Generator` and `async` functions in the **Scope** pane in the **Sources** panel.
 
@@ -100,7 +100,7 @@ These are some noteworthy fixes in this release:
 - Fixed syntax highlighting. It was not working properly since the recent [code editor](https://codemirror.net/) upgrade in DevTools. ([1290182](https://crbug.com//1290182))
 - Capture input change events properly after on blur event in the **Recorder**. ([1378488](https://crbug.com/1378488))
 - Update Puppeteer replay script on export for better debugging experience in the **Recorder**. ([1351649](https://crbug.com/1351649))
-- Support record and replay in the **Recorder** for remote debugging. ([1185727](https://crbug.com/1185727)) 
+- Support record and replay in the **Recorder** for remote debugging. ([1185727](https://crbug.com/1185727))
 - Fixed parsing of special CSS variable names in `var()`. Previously, DevTools didn't support parsing variables with escaped characters like `var(--fo\ o)`. , ([1378992](https://crbug.com/1378992))
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/d7bbaba2b82bb3b8c90e8d47c1f36fba2182c5e5 #}
@@ -131,7 +131,7 @@ Read the full changes in our [RFC (closed)](https://github.com/ChromeDevTools/rf
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ytfyl8qK5rkHQRTS3sXf.png", alt="Show Breakpoint pane before and after the redesign.", width="800", height="684" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f2140378e0bb1687b263c226de01b741487ff324 #}
-Chromium issues: [1346231](https://crbug.com/1346231), [1324904](https://crbug.com/1324904) 
+Chromium issues: [1346231](https://crbug.com/1346231), [1324904](https://crbug.com/1324904)
 
 
 ## [Experimental] Automatic in-place pretty print {: #pretty-print }

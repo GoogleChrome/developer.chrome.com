@@ -30,29 +30,31 @@ To inspect [HTTP cache][3] data, open the **Size** column of the **Network Log**
 
 To test back/forward cache, follow these steps:
 
-1. On your page, [open DevTools](/docs/devtools/open/), then navigate to **Application** > **Cache** > **Back/forward cache**.
+1. On your page, [open DevTools](/docs/devtools/open/), then navigate to **Application** > **Background services** > **Back/forward cache**.
 
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Rbo260mBWwD4MieKEJIn.png", alt="Back/forward cache tab", width="800", height="405" %}
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/s2M01xBJya7X8U1UkqF3.png", alt="Back/forward cache tab.", width="800", height="416" %}
 
-1. Click **Test back/forward cache**. Chrome automatically takes you to `chrome://terms/` and back to your page.
+1. Click **Test back/forward cache**. 
+   
+   Chrome automatically takes you to `chrome://terms/` and back to your page.
     
-    Alternatively, you can click the browser's back and forward buttons.
+   Alternatively, you can click the browser's back and forward buttons.
 
 If the back/forward cache works for your page with no issues, you'll see the following message:
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/kf5vmtKRZpe4SMV4Gp8G.png", alt="Successfully served from back/forward cache", width="800", height="405" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/kZOnCHXLWPt5u3OXF3lS.png", alt="Successfully served from back/forward cache.", width="800", height="416" %}
 
 Otherwise, you'll see a list of issues.
 
 To find out which issues affect which frames, expand the **Frames** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bJ1ZWs8NN8S0NaZnCHyQ.svg", alt="Expand icon.", width="24", height="24" %} section.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/tZ0xe08gxc7VKQywRRhS.png", alt="Expanded Frames section.", width="800", height="474" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/nHrFFbouxk8QkaLXPJPH.png", alt="Expanded Frames section.", width="800", height="647" %}
 
 ## Resolve issues that prevent caching {: #resolve-issues }
 
 If your page isn't eligible for back/forward caching, the **Back/forward cache** tab shows you a list with three types of causes:
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/vzkDhFw87Ra9vnpDTu0a.png", alt="Not eligible for back/forward cache.", width="800", height="667" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/3VKdnWq27QjYWT9ahhvY.png", alt="Not eligible for back/forward cache.", width="800", height="744" %}
 
 - **Actionable**. You can fix these issues to enable caching. For example, [stop using `unload` events](https://web.dev/bfcache/#never-use-the-unload-event).
 - **Pending Support**. Chrome doesn't support these features yet, so they prevent caching. However, once supported, Chrome removes these limitations.
@@ -60,7 +62,7 @@ If your page isn't eligible for back/forward caching, the **Back/forward cache**
 
 To find out which frame is the blocker, expand the corresponding section under the issue's description.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XFqCj82S8pAPaWlzJBfB.png", alt="Affected frames.", width="800", height="333" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/yH9zY9ktsbiQjEPxCFXO.png", alt="Blocking frames.", width="800", height="364" %}
 
 [1]: /docs/devtools
 [2]: https://developer.mozilla.org/docs/Web/API/Cache

@@ -21,11 +21,15 @@
     - url: /docs/extensions/mv3/single_purpose
 - title: i18n.docs.extensions.migrating
   sections:
-    - url: /docs/extensions/mv3/mv3-migration
-    - url: /docs/extensions/mv3/mv3-migration-checklist
-    - url: /docs/extensions/mv3/migrating_to_service_workers
-    - url: /docs/extensions/mv3/mv2-sunset
-    - url: /docs/extensions/mv3/known-issues/
+    - url: /docs/extensions/migrating/
+    - url: /docs/extensions/migrating/checklist
+    - url: /docs/extensions/migrating/manifest
+    - url: /docs/extensions/migrating/to-service-workers
+    - url: /docs/extensions/migrating/api-calls
+    - url: /docs/extensions/migrating/blocking-web-requests
+    - url: /docs/extensions/migrating/improve-security
+    - url: /docs/extensions/migrating/mv2-sunset
+    - url: /docs/extensions/migrating/known-issues
 - url: /docs/extensions/reference
 - url: https://github.com/GoogleChrome/chrome-extensions-samples
   title: i18n.docs.extensions.samples
@@ -59,6 +63,7 @@
     - url: /docs/extensions/mv3/tut_oauth
     - url: /docs/extensions/mv3/override
     - url: /docs/extensions/mv3/richNotifications
+    - url: /docs/extensions/mv3/nativeMessaging
 - title: i18n.docs.extensions.quality
   sections:
     - url: /docs/extensions/mv3/user_privacy

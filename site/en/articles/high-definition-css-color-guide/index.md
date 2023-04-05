@@ -1598,7 +1598,7 @@ This is often what I use when progressively enhancing colors to high definition:
 
 ### Debugging color with Chrome DevTools
 
-Chrome DevTools is updated and equipped with new tools to help developers
+[Chrome DevTools is updated](/blog/new-in-devtools-111/#color) and equipped with new tools to help developers
 create, convert and debug HD color.
 
 #### Updated color picker
@@ -1655,6 +1655,8 @@ to this clipping.
   width="800",
   height="204"
 %}
+
+Discover more CSS debugging feature in DevTools in their [recent announcement](/blog/new-in-devtools-111/#color).
 
 ## Conclusion
 
