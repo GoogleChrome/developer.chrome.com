@@ -6,14 +6,13 @@ authors:
   - jecelynyeen
 date: 2023-03-09
 description: ""
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GJvLUWB0oNIje3SXYusK.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/gctGASDKBFTUtOQqVq2H.png'
 alt: 'Recorder replay customization, CSS documentation, ignore-listing irrelevant scripts, enhanced logpoint debugging, and more.'
 tags:
   - new-in-devtools
   - devtools
   - chrome-112
 ---
-<!--image/dPDCek3EhZgLQPGtEG3y0fTn4v82/gctGASDKBFTUtOQqVq2H.png  -->
 
 {% Partial 'devtools/banner.md' %}
 
