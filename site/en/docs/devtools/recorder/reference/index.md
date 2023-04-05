@@ -415,7 +415,7 @@ To remove a timeout overwrite on a step, click the **Delete**{% Img src="image/N
 
 When you start a new recording, you can configure the following:
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/cFxRgfDJpKoznYtlYj2S.png", alt="Configuring a new recording.", width="800", height="546" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/anROVlnWFVhwL6qXXI0p.png", alt="Configuring a new recording.", width="800", height="554" %}
 
 - In the **Selector attribute** textbox, enter a [custom test attribute](#customize-selector). The **Recorder** will use this attribute to detect selectors instead of a list of [common test attributes](common-test-selector).
 - In the **Selector types to record** set of checkboxes, choose the types of selectors to detect automatically:
@@ -424,6 +424,7 @@ When you start a new recording, you can configure the following:
   - {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **ARIA**. Semantic selectors.
   - {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Text**. Selectors with the shortest unique text if available.
   - {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **XPath**. Selectors that use [XML Path Language](https://developer.mozilla.org/docs/Web/XPath).
+  - {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Pierce**. Selectors similar to the CSS ones but that [can pierce shadow DOM](https://pptr.dev/guides/query-selectors#pierce-selectors-pierce).
 
 {% Aside %}
 For more information, see [Syntactic vs. semantic selectors](/blog/puppetaria/#syntactic-vs-semantic-selectors) and [Selector priority](#selector-priority).
@@ -474,16 +475,16 @@ Fill in an email address and observe the selector value (`[data-automate=email-a
 
 ### Selector priority {: #selector-priority }
 
-The **Recorder** looks for selectors in the following order depending on if you specified a custom CSS selector attribute:
+The **Recorder** looks for selectors in the following order depending on if you specified a [custom CSS selector](#customize-selector) attribute:
 
 - If specified:
   1. CSS selector with your custom CSS attribute.
-  1. XPath selector.
+  1. XPath selectors.
   1. ARIA selector if found.
   1. A selector with the shortest unique text if found.
 - If not specified:
   1. ARIA selector if found.
-  1. One of CSS selectors with the following priority:
+  1. CSS selectors with the following priority:
      1. The most common attributes used for testing: {: #selectors }
          - `data-testid`
          - `data-test`
@@ -494,5 +495,11 @@ The **Recorder** looks for selectors in the following order depending on if you 
          - `data-testing`
      1. ID attributes, for example, `<div id="some_ID">`.
      1. Regular CSS selectors.
-  1. XPath selector.
+  1. XPath selectors.
+  1. Pierce selectors.
   1. A selector with the shortest unique text if found.
+
+There can be multiple regular CSS, XPath, and Pierce selectors. The **Recorder** captures:
+
+- Regular CSS and XPath selectors at every root level, that is, nested [shadow hosts](https://developer.mozilla.org/docs/Web/Web_Components/Using_shadow_DOM#high-level_view), if any.
+- Pierce selectors that are unique among all elements *within* all shadow roots.
