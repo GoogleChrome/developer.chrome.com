@@ -2,20 +2,27 @@ const path = require('path');
 const fs = require('fs').promises;
 const yaml = require('js-yaml');
 
+const RELATED_ARTICLES_PATH = path.join(
+  __dirname,
+  './deprecation-calendar/deprecation-articles.yml'
+);
+const DEPRECATIONS_FILE_PATH = path.join(
+  __dirname,
+  '../../external/data/deprecation-calendar.json'
+);
+
 /**
- * Pulls a list of deprecataion items
+ * Pulls a list of deprecation items
  *
  * @return {promise} A promise that resolves in an array containing all the deprecations
  */
 async function getDeprecationData() {
   let deprecations;
-  const deprecationsFile = path.join(
-    __dirname,
-    '../../external/data/deprecation-calendar.json'
-  );
 
   try {
-    deprecations = JSON.parse(await fs.readFile(deprecationsFile, 'utf-8'));
+    deprecations = JSON.parse(
+      await fs.readFile(DEPRECATIONS_FILE_PATH, 'utf-8')
+    );
   } catch (error) {
     console.error('Error reading Deprecations file', error);
   }
@@ -30,13 +37,9 @@ async function getDeprecationData() {
  */
 async function getArticles() {
   let articles;
-  const articlesFile = path.join(
-    __dirname,
-    './deprecation-calendar/deprecation-articles.yml'
-  );
 
   try {
-    const articlesYaml = await fs.readFile(articlesFile, 'utf-8');
+    const articlesYaml = await fs.readFile(RELATED_ARTICLES_PATH, 'utf-8');
     const articlesData = yaml.load(articlesYaml);
     if (articlesData) articles = articlesData;
   } catch (error) {
