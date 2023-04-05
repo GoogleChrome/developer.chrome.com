@@ -53,4 +53,6 @@ WebGPU is a significant technology, and we recommend the following resources to 
 - Read the official [explainer](https://gpuweb.github.io/gpuweb/explainer/) and [best practices](https://toji.dev/webgpu-best-practices/).
 - Learn about [GPU compute](/articles/gpu-compute/) and [more](https://surma.dev/things/webgpu/index.html).
 
+## Acknowledgments
+
 Many thanks to all Chromium contributors and especially to Intel folks for their invaluable support in making this possible.
