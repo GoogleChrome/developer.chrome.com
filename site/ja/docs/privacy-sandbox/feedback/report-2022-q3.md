@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc-post.njk
-title: Feedback Report   - 2022 Q3
+title: フィードバック レポート   - 2022 年第 3 四半期
 subhead: プライバシーサンドボックスの提案と Chrome の対応に関して受け取ったエコシステムのフィードバックをまとめた 2022 年第 3 四半期の四半期レポートです。
 description: プライバシーサンドボックスの提案と Chrome の対応に関して受け取ったエコシステムのフィードバックをまとめた 2022 年第 3 四半期の四半期レポートです。
 date: '2022-10-27'
@@ -20,28 +20,28 @@ CMA へのコミットメントの一環として、Google は、プライバシ
 
 {% Details %} {% DetailsSummary %}
 
-**Glossary of acronyms**
+**頭字語の用語集**
 
 {% endDetailsSummary %}
 
 <dl>
-<dt>W3C</dt>    <dd><p data-md-type="paragraph"><a href="https://www.w3.org/">World Wide Web Consortium</a></p></dd>
+<dt>W3C</dt>    <dd><p data-md-type="paragraph"><a href="https://www.w3.org/">ワールド・ワイド・ウェブ・コンソーシアム</a></p></dd>
 <dt>PatCG</dt>  <dd><p data-md-type="paragraph"><a href="https://www.w3.org/community/patcg/">プライベート広告技術コミュニティグループ</a></p></dd>
-<dt>IETF</dt>   <dd><p data-md-type="paragraph"><a href="https://www.ietf.org/">Internet Engineering Task Force</a></p></dd>
-<dt>DSP</dt>    <dd>Demand-side Platform</dd>
+<dt>IETF</dt>   <dd><p data-md-type="paragraph"><a href="https://www.ietf.org/">インターネット エンジニアリング タスク フォース</a></p></dd>
+<dt>DSP</dt>    <dd>デマンドサイド プラットフォーム</dd>
 <dt>SSP</dt>    <dd>サプライサイド プラットフォーム</dd>
-<dt>OT</dt>     <dd><p data-md-type="paragraph"><a href="/blog/origin-trials/">Origin Trial</a></p></dd>
-<dt>UA</dt>     <dd><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/user-agent/">User Agent string</a></p></dd>
+<dt>OT</dt>     <dd><p data-md-type="paragraph"><a href="/blog/origin-trials/">オリジントライアル</a></p></dd>
+<dt>UA</dt>     <dd><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/user-agent/">ユーザーエージェント文字列</a></p></dd>
 <dt>UA-CH</dt>  <dd><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/user-agent/">User-Agent Client Hints</a></p></dd>
-<dt>IP</dt>     <dd>Internet Protocol address</dd>
+<dt>IP</dt>     <dd>インターネット プロトコル アドレス</dd>
 <dt>WIPB</dt>   <dd><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/gnatcatcher/">Willful IP Blindness</a></p></dd>
 <dt>IAB</dt>    <dd><p data-md-type="paragraph"><a href="https://www.iab.com/">インタラクティブ広告協会</a></p></dd>
 <dt>openRTB</dt>
-<dd><p data-md-type="paragraph"><a href="https://iabtechlab.com/standards/openrtb/#:~:text=OpenRTB%20is%20the%20communication%20protocol,in%20the%20digital%20advertising%20industry.">Real-time bidding</a></p></dd>
+<dd><p data-md-type="paragraph"><a href="https://iabtechlab.com/standards/openrtb/#:~:text=OpenRTB%20is%20the%20communication%20protocol,in%20the%20digital%20advertising%20industry.">リアルタイム入札</a></p></dd>
 <dt>CHIPS</dt>  <dd><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/chips/">独立してパーティション化された状態を持つ Cookie</a></p></dd>
 <dt>FPS</dt>    <dd><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/first-party-sets/">First-Party Sets</a></p></dd>
 <dt>FedCM</dt>  <dd><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/fedcm/">Federated Credential Management</a></p></dd>
-<dt>IDP</dt>    <dd>Identity Provider</dd>
+<dt>IDP</dt>    <dd>ID プロバイダー</dd>
 </dl>
 
 {% endDetails %}
@@ -51,7 +51,7 @@ CMA へのコミットメントの一環として、Google は、プライバシ
 <table>
   <tr>
    <td>
-<strong>Feedback Theme </strong>
+<strong>フィードバックのテーマ</strong>
    </td>
    <td>
 <strong>要約</strong>
@@ -65,32 +65,32 @@ CMA へのコミットメントの一環として、Google は、プライバシ
 </td>
    <td>プライバシーサンドボックステクノロジーが大規模なデベロッパーに有利であり、ニッチ（小規模な）サイトが一般的な（大規模な）サイトよりも多くの貢献をしているという懸念。</td>
    <td>
-<em>Q3 Update:</em><p>Google は CMA に対し、プライバシー サンドボックスの提案を、Google 自身のビジネスを自己優先することによって競争を歪めない方法で設計および実装し、規模に関係なくデジタル広告における競争およびサイト運営者と広告主への影響を考慮に入れることを約束しました。私たちは、私たちの仕事がこれらのコミットメントに準拠していることを確認するために、CMA と緊密に協力し続けています。</p>
+<em>第 3 四半期の更新:</em><p>Google は CMA に対し、プライバシー サンドボックスの提案を、Google 自身のビジネスを自己優先することによって競争を歪めない方法で設計および実装し、規模に関係なくデジタル広告における競争およびサイト運営者と広告主への影響を考慮に入れることを約束しました。私たちは、私たちの仕事がこれらのコミットメントに準拠していることを確認するために、CMA と緊密に協力し続けています。</p>
 <p>プライバシー サンドボックスのテストが進むにつれて、私たちが評価する重要な質問の 1 つは、新しいテクノロジーがさまざまな種類の関係者に対してどのように機能するかということです。この点で、<a href="/docs/privacy-sandbox/feedback/">フィードバック</a>は非常に重要な役割を果たします。特に、技術設計をさらに改善するのに役立つ具体的で実用的なフィードバックが重要です。</p>
-<p> We have worked with the CMA to develop our approach to quantitative testing, and are supportive of the CMA publishing a note on experiment design to provide more information to market participants and an opportunity to comment on the proposed approaches.    </p>
+<p>私たちは CMA と協力して定量的テストへのアプローチを開発してきました。CMA が実験計画に関するメモを発行して、市場参加者により多くの情報を提供し、提案されたアプローチについてコメントする機会を提供することを支持しています。</p>
 </td>
   </tr>
   <tr>
-   <td>(Also reported in Q2) <p> Documentation requests    </p>
+   <td>（Q2にも報告）<p>資料請求</p>
 </td>
-   <td>Requests for more resources detailing how to manage testing, analysis, and implementation     </td>
+   <td>テスト、分析、および実装を管理する方法を詳述するリソースのリクエスト</td>
    <td>
-<em>Q3 Update:</em><p>開発者が現在の資料を参考してくれたことに感謝しており、新しいテクノロジーががどのように機能するかを開発者が理解できるように、今後数週間または数か月にわたってより多くの資料を提供することに引き続き取り組んでいます。</p>
+<em>第 3 四半期の更新:</em><p>開発者が現在の資料を参考してくれたことに感謝しており、新しいテクノロジーががどのように機能するかを開発者が理解できるように、今後数週間または数か月にわたってより多くの資料を提供することに引き続き取り組んでいます。</p>
 <p>また、ベストプラクティスとデモを共有するための公開デベロッパーオフィスアワーセッションや、ライブディスカッション/質疑応答を可能にするプロダクトリーダーやエンジニアリングリーダーとの Q&amp;A セッションも開催しました。</p>
 </td>
   </tr>
   <tr>
-   <td>Cross-browser support    </td>
+   <td>クロスブラウザのサポート</td>
    <td>プライバシー サンドボックス API を採用している他のブラウザベンダー。</td>
    <td>Apple、Mozilla、Microsoft などの他のブラウザベンダーは、プライバシーの原則とブラウザベースのアプローチが議論されている公開フォーラムに積極的に参加しています。私たちは、最近の W3C 年次 TPAC 会議や進行中の W3C PATCG フォーラムなど、収束の兆しが見られるフォーラムでの協力的な議論に励まされています。</td>
   </tr>
   <tr>
-   <td>Platform differences    </td>
+   <td>プラットフォームの違い</td>
    <td>移行に必要なリソースを削減するために、ウェブと Android の機能セットを可能な限り調整するようリクエストします。</td>
    <td>業界全体で混乱や分断が生じるのを避けるために、Chrome と Android でアプローチを調整するために懸命に取り組んでいます。私たちのアプローチの違いは主に、開発者がすでに考慮しているウェブとモバイルアプリ プラットフォーム間の必要な技術的な違いによるものです。</td>
   </tr>
   <tr>
-   <td>Resources to test Privacy Sandbox APIs    </td>
+   <td>プライバシー サンドボックス API をテストするためのリソース</td>
    <td>現在の経済的な逆風を考慮すると、<p>プライバシーサンドボックス API をテストするのに十分なリソースを割り当てられることが困難</p>
 </td>
    <td>Google は、複雑さを軽減し、API の採用を支援するために、テスターが利用できるドキュメントとサポートを継続的に改善しています。これらの取り組みには、API 固有のメーリング リスト、公開オフィスアワー、<a href="/">developers.chrome.com</a> での継続的な更新が含まれます。</td>
@@ -103,23 +103,23 @@ CMA へのコミットメントの一環として、Google は、プライバシ
   <tr>
    <td>（Q2 にも報告）<p>より明確なタイムライン</p>
 </td>
-   <td>Clearer, more detailed release schedules     </td>
+   <td>より明確で詳細なリリース スケジュール</td>
    <td>
-<em>Q3 Update:</em><p>以下の「フィードバックに応じた変更」セクションで説明されているように、Google は 7 月にプライバシー サンドボックスのタイムラインを更新し、予備テストとフィードバックを行う時間と、サードパーティ Cookie が廃止される前にプライバシーサンドボックス API が完全に公開されてからテストする時間を市場に追加提供しました。</p>
+<em>第 3 四半期の更新:</em><p>以下の「フィードバックに応じた変更」セクションで説明されているように、Google は 7 月にプライバシー サンドボックスのタイムラインを更新し、予備テストとフィードバックを行う時間と、サードパーティ Cookie が廃止される前にプライバシーサンドボックス API が完全に公開されてからテストする時間を市場に追加提供しました。</p>
 </td>
   </tr>
   <tr>
    <td>（Q2 にも報告）<p>サードパーティ Cookie の廃止スケジュール</p>
 </td>
-   <td>Requests to avoid further delay for 3rd party cookie deprecation    </td>
+   <td>サードパーティ Cookie の廃止に向けたさらなる遅延を回避するためのリクエスト</td>
    <td>
-<em>Q3 Update:</em><p>7 月、Chrome は、技術の複雑さとエコシステムに対するそれらの重要性を考慮し、責任を持って行動するという私たちのコミットメントを反映して、サードパーティの Cookie の廃止に関する最新のタイムラインを発表しました。規制当局や業界からのフィードバックは、この変更の前に考慮されており、すべての関係者との緊密な協力を続けています。</p>
+<em>第 3 四半期の更新:</em><p>7 月、Chrome は、技術の複雑さとエコシステムに対するそれらの重要性を考慮し、責任を持って行動するという私たちのコミットメントを反映して、サードパーティの Cookie の廃止に関する最新のタイムラインを発表しました。規制当局や業界からのフィードバックは、この変更の前に考慮されており、すべての関係者との緊密な協力を続けています。</p>
 </td>
   </tr>
   <tr>
-   <td>First-party cookies    </td>
+   <td>ファーストパーティ Cookie</td>
    <td>ファーストパーティ Cookie の制限も提案されていますか？その場合、長期的な安定性、予測不可能な今後のブラウザの変更によるリスク、およびそれによるエンジニアリングの取り組みが無駄になるという懸念があります。</td>
-   <td>We have not considered any first-party cookie restrictions. The Privacy Sandbox’s focus is on deprecating third-party cookies.    </td>
+   <td>ファーストパーティ Cookie の制限については考慮していません。プライバシー サンドボックスは、サードパーティの Cookie を廃止することに重点を置いています。</td>
   </tr>
 </table>
 
@@ -130,7 +130,7 @@ CMA へのコミットメントの一環として、Google は、プライバシ
 <table>
   <tr>
    <td>
-<strong>Feedback Theme </strong>
+<strong>フィードバックのテーマ</strong>
    </td>
    <td>
 <strong>要約</strong>
@@ -144,17 +144,17 @@ CMA へのコミットメントの一環として、Google は、プライバシ
 </td>
    <td>トラフィックのレベルやコンテンツの専門性によっては、サイトにとっての有用性について懸念が提起されています。</td>
    <td>
-<em>Q3 Update:</em><p>API の有用性は、テストを通じて調査されます。コミットメントの第 17.c.ii 項で義務付けられているように、Google はそのようなテストの結果を CMA と共有する意向です。Chrome では、テスト結果に基づいて分類法やその他のパラメータが進化することを期待しています。分類法またはパラメータの進化は、後方互換性のない変更を必要としない場合があります。さらに、サードパーティ Cookie の廃止後も、フィードバックが引き続き Topics API の進化に影響を与えることを Chrome は期待しています。</p>
+<em>第 3 四半期の更新:</em><p>API の有用性は、テストを通じて調査されます。コミットメントの第 17.c.ii 項で義務付けられているように、Google はそのようなテストの結果を CMA と共有する意向です。Chrome では、テスト結果に基づいて分類法やその他のパラメータが進化することを期待しています。分類法またはパラメータの進化は、後方互換性のない変更を必要としない場合があります。さらに、サードパーティ Cookie の廃止後も、フィードバックが引き続き Topics API の進化に影響を与えることを Chrome は期待しています。</p>
 </td>
   </tr>
   <tr>
-   <td>Privacy/Policy    </td>
+   <td>プライバシーポリシー</td>
    <td>呼び出し元ごとのトピック フィルタリング要件を削除するリクエスト</td>
    <td>プライバシー KOF、プライバシー擁護者、セキュリティ専門家、デジタル著作権グループ、およびエコシステム内の他の人々からのフィードバックに基づいて、Chrome はこの設計を選択し、他の方法ではそのようなアクセス権を持っていた人だけに情報へのアクセス権を付与しました。この理由には、段階的なクロスサイドのデータ漏えいを制限する、透明性と説明可能性を確保する、実装と説明が簡単なアプローチを採用する、フィンガープリンティングのリスクを制限することが含まれますが、これに限定されません。トピックを受け取るサイト運営者およびサード パーティは、自分のサイトでどのような情報を共有するかを自分で決めることができます。サードパーティがこの情報を共有する場合、Chrome では、そのような共有についてユーザーに透明性を持たせ、コントロールを提供することを強くお勧めします。</td>
   </tr>
   <tr>
-   <td>Miscategorized sites    </td>
-   <td>Sites are miscategorized to the wrong topic, which may result in inaccurate ads targeting.     </td>
+   <td>誤って分類されたサイト</td>
+   <td>サイトが間違ったトピックに誤って分類され、広告のターゲティングが不正確になる可能性があります。</td>
    <td>サイトは、最も人気のあるサイトを含む、人間が精選したオーバーライド リストと、オンデバイス ML モデルを組み合わせて分類されます。Chrome では、トピックの分類に貢献するサイトのオプションを引き続き評価しています。ユーティリティの改善は、プライバシーと悪用のリスクと比較検討する必要があります。たとえば、次のようなリスクがあります。<ul>
 <li>さまざまな（そして潜在的に機密性の高い）意味をトピックにエンコードする方法として自己ラベル付けを使用するサイト。</li>
 <li>金銭的利益のためにトピックを偽って伝えているサイト。</li>
@@ -164,32 +164,32 @@ CMA へのコミットメントの一環として、Google は、プライバシ
 </td>
   </tr>
   <tr>
-   <td>Access requirements    </td>
+   <td>アクセス要件</td>
    <td>アクセスするためのスクリプトまたは iframe としてのページ上の DOM エンティティに対する現在のトピック要件は、広告エコシステム内のプレーヤーによる望ましくない行動につながる可能性があります。</td>
    <td>
 <a href="https://github.com/patcg-individual-drafts/topics/pull/81">Github Explainer の変更</a>をマージしました。 HTTP ヘッダーで Topics をサポートする予定です。</td>
   </tr>
   <tr>
-   <td>Topics taxonomy not granular enough    </td>
-   <td>Current topics classifications are too broad, and does not include more granular topics, such as regional topics.    </td>
+   <td>トピックの分類が十分に細分化されていない</td>
+   <td>現在のトピックの分類は広すぎるため、地域のトピックなど、より詳細なトピックは含まれていません。</td>
    <td>分類法の改善は継続的な取り組みであり、エコシステムのテストと入力によって分類法が進化することを期待しています。<p>私たちは、エコシステムにとって最も役立つ分類法に関する<a href="https://github.com/patcg-individual-drafts/topics/issues/3">フィードバックを積極的に求めています</a>。トピックの数を増やすか、より詳細なトピックを含めるかを評価する際には、1）潜在的なプライバシーへの影響（たとえば、トピックが増えるとフィンガープリンティングのリスクが発生する可能性があります）、および 2）以前に観察されたトピックを取得する機能（たとえば、トピックがさらに増えると、アドテックが過去に選択したトピックを見た可能性が低くなる可能性があります）。2） をさらに展開して、Google は、ユーティリティとプライバシーの両方を達成することを目標に、既存のフィルタリング要件の範囲内で、以前に観察されたトピックを取得する呼び出し元の能力を最大化しようとしています。</p>
 </td>
   </tr>
   <tr>
-   <td>Topics limit    </td>
+   <td>トピックの制限</td>
    <td>ウェブサイトごとに 3 つのトピックでは、広告主が広告を配信するには情報が少なすぎます。</td>
    <td>API は、エコシステムからのフィードバック、特にオリジン トライアルのテスト結果の影響を受けながら、引き続き進化しています。Topics は、コンテキストなどの他のシグナルを補完して、訪問者に適した広告を見つけるのに役立つことが期待されていることに注意してください。そのため、トピック以外にも広告主が利用できる情報が増える可能性があります。</td>
   </tr>
   <tr>
    <td>（Q2 にも報告）<p>ユーザーコントロールと安全性</p>
 </td>
-   <td>Certain topics may be proxies for sensitive groups and users need more controls to prevent negative outcomes.    </td>
+   <td>特定のトピックは機密性の高いグループのプロキシである可能性があり、ユーザーは否定的な結果を防ぐためにより多くの制御を必要とします。</td>
    <td>
-<em>Q3 Update:</em><p>Topics のユーザーコントロールと透明性は、大きく前進しています。ユーザーは、トピックのオプトアウト、割り当てられたトピックの確認、トピックの削除、特定のページでトピックとやり取りしている企業の把握が可能です。さらに、ユーザーは、トピックの派生元であるブラウジング履歴を削除して Topics をクリアすることもできます。これらのコントロールは現在、デバイス レベルで Chrome ブラウザに実装されています。開発者によって提案されたものなど、より高度なユーザー コントロールに関する継続的な議論を歓迎します。ただし、発生した懸念に対処するために、新しい追加が適切に調整されており、断片的な変更が行われないようにする必要があります。</p>
+<em>第 3 四半期の更新:</em><p>Topics のユーザーコントロールと透明性は、大きく前進しています。ユーザーは、トピックのオプトアウト、割り当てられたトピックの確認、トピックの削除、特定のページでトピックとやり取りしている企業の把握が可能です。さらに、ユーザーは、トピックの派生元であるブラウジング履歴を削除して Topics をクリアすることもできます。これらのコントロールは現在、デバイス レベルで Chrome ブラウザに実装されています。開発者によって提案されたものなど、より高度なユーザー コントロールに関する継続的な議論を歓迎します。ただし、発生した懸念に対処するために、新しい追加が適切に調整されており、断片的な変更が行われないようにする必要があります。</p>
 </td>
   </tr>
   <tr>
-   <td>Impact on SEO    </td>
+   <td>SEOへの影響</td>
    <td>サイト運営者が、Topics をより適切に反映するようにウェブサイトのホスト名を調整すると、SEO に悪影響を与える可能性があります。</td>
    <td>サイトが Topics のためだけにホスト名を変更しないように警告しています。このようにすれば、割り当てられたトピックに影響を与えてしまうのは事実ですが、そうすることによるサイト運営者へのメリットはよくわかっていません。また、サイトが分類モデルを「操作」しようとすると、エコシステム全体のトピックの価値が損なわれることになります。トピックの割り当ても固定されていません。分類法は、テストと入力によって進化し続けると予想されます。このテストに関連して、誤って分類されている可能性のあるサイトの例を含め、<a href="/docs/privacy-sandbox/feedback/#feedback-routes">フィードバックをお寄せください</a>。</td>
   </tr>
@@ -215,7 +215,7 @@ CMA へのコミットメントの一環として、Google は、プライバシ
 <table>
   <tr>
    <td>
-<strong>Feedback Theme </strong>
+<strong>フィードバックのテーマ</strong>
    </td>
    <td>
 <strong>要約</strong>
@@ -233,7 +233,7 @@ CMA へのコミットメントの一環として、Google は、プライバシ
 </td>
   </tr>
   <tr>
-   <td>FLEDGE in nested Fenced Frames    </td>
+   <td>ネストされた Fenced Frame の FLEDGE</td>
    <td>Fenced Frames を使用すると、テストの制限を緩和できますが、不確定な未来により制限が加えられてしまいます。タイムラインが不明であることは、エコシステムにとって困難です。</td>
    <td>企業は今すぐ Fenced Frames で FLEDGE をテストできます。より簡単なオンボーディング オプションを提供するために、企業はまず FLEDGE を実装することを選択できます。FLEDGE を実装した後、Fenced Frame を FLEDGE 設計でテストできます。</td>
   </tr>
@@ -245,8 +245,8 @@ CMA へのコミットメントの一環として、Google は、プライバシ
 </td>
   </tr>
   <tr>
-   <td>Age policies    </td>
-   <td>How does Chrome ensure that audiences created by FLEDGE are complying with age restrictions?    </td>
+   <td>年齢に関するポリシー</td>
+   <td>Chrome では、FLEDGE によって作成されたオーディエンスが年齢制限に準拠していることをどのように確認していますか?</td>
    <td>サイト運営者と広告主は、FLEDGE を使用して作成したオーディエンスが適用法に準拠しているかどうかを評価するのに最適な立場にあります。ユーザーをさらに保護するため、Chrome にサインインしているユーザーのアカウントに関連付けられている年齢が 18 歳未満の場合、テスト期間中であってもプライバシー サンドボックス API は有効になりません。（ログアウトしているユーザーの場合は、Chrome は、ブラウザがユーザーの年齢を推測できるようにするプロファイル シグナルを収集しません）。</td>
   </tr>
   <tr>
@@ -256,9 +256,9 @@ CMA へのコミットメントの一環として、Google は、プライバシ
 </td>
   </tr>
   <tr>
-   <td>Testing    </td>
-   <td>Hard to test FLEDGE with Google Ads    </td>
-   <td>Refer to Google Ads <a href="https://developers.google.com/authorized-buyers/rtb/fledge-origin-trial">onboarding documentation</a> on how to best participate and test in the origin trial.    </td>
+   <td>テスト</td>
+   <td>Google 広告で FLEDGE をテストするのは難しい</td>
+   <td>オリジン トライアルに参加してテストする最適な方法については、Google 広告の<a href="https://developers.google.com/authorized-buyers/rtb/fledge-origin-trial">オンボーディング ドキュメント</a>を参照してください。</td>
   </tr>
   <tr>
    <td>Bidding and Auction Services API</td>
@@ -266,34 +266,34 @@ CMA へのコミットメントの一環として、Google は、プライバシ
    <td>現在の FLEDGE オンデバイス入札設計に引き続き取り組んでいきます。入札とオークションサービスは、デバイスの計算能力またはネットワーク速度が制限される可能性があるユース ケースをサポートするために可能なソリューションを探索するために提案されています。</td>
   </tr>
   <tr>
-   <td>Aggregate reporting    </td>
-   <td>Request to support aggregate reports based on all signals available to generateBid.    </td>
-   <td>We plan to publicly share more on this soon.    </td>
+   <td>集計レポート</td>
+   <td>generateBid で利用可能なすべてのシグナルに基づく集計レポートのサポートをリクエストします。</td>
+   <td>これについては、近日中に公開する予定です。</td>
   </tr>
   <tr>
-   <td>Contextual Ads    </td>
+   <td>コンテキスト広告</td>
    <td>FLEDGE でのコンテキスト広告の配信</td>
    <td>このオプションを検討しましたが、この<a href="https://github.com/WICG/turtledove/issues/260">ディスカッション</a>で説明した理由により、現時点ではコンテキスト広告に FLEDGE を使用することはお勧めしません。</td>
   </tr>
   <tr>
-   <td>Testing in real world    </td>
+   <td>実世界でのテスト</td>
    <td>実際のテストのために、FLEDGE をサードパーティ Cookie から分離する方法についてのガイダンス。</td>
-   <td>We are investigating ways to provide test populations. <p> We have worked with the CMA to develop our approach to quantitative testing, and are supportive of the CMA publishing a note on experiment design to provide more information for market participants and an opportunity to comment on the proposed approaches.    </p>
+   <td>テスト集団を提供する方法を検討しています。<p>私たちは CMA と協力して定量的テストへのアプローチを開発してきました。また、CMA が実験計画に関するメモを発行して、市場参加者により多くの情報を提供し、提案されたアプローチについてコメントする機会を提供することを支持しています。</p>
 </td>
   </tr>
   <tr>
-   <td>Testing FLEDGE and Attribution Reporting API    </td>
+   <td>FLEDGE と Attribution Reporting API のテスト</td>
    <td>FLEDGE で Attribution Reporting API を実装する最良の方法は何ですか？FLEDGE と Attribution を分離するか、一緒にテストすることをお勧めしますか？</td>
-   <td>We'll eventually support testing both FLEDGE and Attribution Reporting API as an integrated solution, but we encourage developers to first test Attribution Reporting API independently and then with FLEDGE when the integration is complete.    </td>
+   <td>最終的には、FLEDGE と Attribution Reporting API の両方を統合ソリューションとしてテストすることをサポートしますが、開発者にはまず Attribution Reporting API を個別にテストし、統合が完了したら FLEDGE でテストすることをお勧めします。</td>
   </tr>
   <tr>
-   <td>Bid price visibility    </td>
-   <td>Request to obfuscate bid prices.    </td>
+   <td>入札価格の可視性</td>
+   <td>入札価格の難読化のリクエスト。</td>
    <td>「generateBid()」または「scoreAd()」内にブレークポイントを設定すれば、DevTools から入札値にアクセスすることができます。Chrome チームは、FLEDGE に関するこのフィードバックで提起された狭い攻撃ベクトルを検討しました。ただし、Chrome のセキュリティ モデルとプライバシー モデルでは、ユーザーが自分のデバイス上の情報を使ってやりたいことを何でもできると信頼されていると見なされているため、要求に応じて入札データを非表示にする実現的な方法はありません。</td>
   </tr>
   <tr>
    <td>ドキュメントのリクエスト</td>
-   <td>Documentation and examples for testing in a live ecosystem.    </td>
+   <td>ライブ エコシステムでテストするためのドキュメントと例。</td>
    <td>開発者が現在の資料を参考にしてくれたことに監視しており、開発者が新しいテクノロジーがどのように機能するかを引き続き理解できるように、今後数週間または数か月にわたってより多くの資料を提供することに取り組んでいます。<p>また、外部開発者向けの公開オフィス アワーを開催して、Q&amp;A セッションをプロダクトリーダーやエンジニアリングリーダーとの Q&amp;A セッションとともにベスト プラクティスとデモを共有し、ライブ ディスカッション/質疑応答を実施しました。</p>
 </td>
   </tr>
@@ -303,23 +303,25 @@ CMA へのコミットメントの一環として、Google は、プライバシ
    <td>現時点で共有できる最新情報については、<a href="https://github.com/patcg-individual-drafts/private-aggregation-api#turtledovefledge-reporting">公開 Explainer</a> て提供されています。この API が開発され、ユース ケースが定義されるにつれて、より多くのドキュメントが提供される予定です。</td>
   </tr>
   <tr>
-   <td>Data latency    </td>
+   <td>データ遅延</td>
    <td>FLEDGE Key/Value サーバーのデータ取得はリアルタイムですか？</td>
-   <td>A small amount of staleness on the order of minutes, not hours may be expected before updated data can be returned by the server for queries, as explained <a href="https://github.com/WICG/turtledove/issues/290#issue-1207077195">in an open GitHub Issue</a>. We are also looking for <a href="https://github.com/WICG/turtledove/issues/290#issue-1207077195">developer feedback</a>.<a href="https://github.com/WICG/turtledove/issues/290#issue-1207077195"> </a>    </td>
+   <td>
+<a href="https://github.com/WICG/turtledove/issues/290#issue-1207077195">公開されている GitHub の問題 で</a>説明されているように、更新されたデータがサーバーによってクエリ用に返されるまでに、数時間ではなく数分の程度の少量の古い状態が予想される場合があります。<a href="https://github.com/WICG/turtledove/issues/290#issue-1207077195">開発者からのフィードバック</a>もお待ちしています。<a href="https://github.com/WICG/turtledove/issues/290#issue-1207077195"> </a>
+</td>
   </tr>
   <tr>
-   <td>Bidding and Auction services    </td>
+   <td>入札およびオークションサービス</td>
    <td>入札およびオークション（B&amp;A）サービスを使用する場合、入札価格は他のユーザーに非表示になっていますか？</td>
    <td>B&amp;A サーバー側アプローチの場合、入札リクエストは SSP オークション サービスから DSP オークション サービスに直接行われるため、個々の入札価格はユーザーには表示されず、ブラウザでは使用できなくなります。<p>ただし、落札価格は引き続きブラウザに表示されます (入札価格を難読化する要求については、上記で詳しく説明しています)。</p>
 </td>
   </tr>
   <tr>
-   <td>Bidding and Auction services    </td>
+   <td>入札およびオークションサービス</td>
    <td>入札とオークション サービスの負荷をどのように分散できますか？</td>
-   <td>We currently don't have any guidance on load balancing, but it is an important concern from the perspectives of both performance and privacy. We will provide more details in the future.    </td>
+   <td>現在、負荷分散に関するガイダンスはありませんが、パフォーマンスとプライバシーの両方の観点から重要な懸念事項です。詳細については、今後お知らせいたします。</td>
   </tr>
   <tr>
-   <td>FLEDGE limits    </td>
+   <td>FLEDGE 制限</td>
    <td>joinAdInterestGroup の期間上限を 30 日から 90 日に増やすリクエスト</td>
    <td>30 日間のデータ保持期間は、アトリビューション レポートの 30 日間の制限やトピックの 3 週間の振り返りなど、他のプライバシー サンドボックス広告 API と一致していると感じています。この時間枠は、アドテックのニーズとユーザーのプライバシーへの期待の両方に対応しています。<p>ただし、この問題については引き続き<a href="https://github.com/WICG/turtledove/issues/337">こちら</a>で議論するため、さらなるフィードバックをお待ちしております。</p>
 </td>
@@ -336,13 +338,13 @@ CMA へのコミットメントの一環として、Google は、プライバシ
   </tr>
   <tr>
    <td>ネストされた Fenced Frame の FLEDGE</td>
-   <td>Unable to report clicks via Fenced Frame Ads Reporting, if they happen on a nested Fenced Frame.    </td>
+   <td>ネストされた Fenced Frame でクリックが発生した場合、Fenced Frame Ads Reporting を介してクリックをレポートできません。</td>
    <td>このイシューを解決するための提案を<a href="https://docs.google.com/document/d/1nRkV8BEsU_JzGgq4-fXTVCeLWNxA_2Pdz2NCVpUD_W0/edit">こちら</a>に公開しました。</td>
   </tr>
   <tr>
-   <td>Measurement    </td>
-   <td>Need guidance on how to collect latency data on bidders in a FLEDGE auction.    </td>
-   <td>We are working to publish a performance measurement doc soon.    </td>
+   <td>測定</td>
+   <td>FLEDGE オークションで入札者のレイテンシ データを収集する方法についてのガイダンスが必要です。</td>
+   <td>パフォーマンス測定ドキュメントを近日中に公開する予定です。</td>
   </tr>
   <tr>
    <td>レポーティング</td>
@@ -357,17 +359,17 @@ CMA へのコミットメントの一環として、Google は、プライバシ
 </td>
   </tr>
   <tr>
-   <td>Performance    </td>
+   <td>パフォーマンス</td>
    <td>Bidding JS/WebAssembly コードはオークションごとにコンパイルされますか？</td>
    <td>Bidding JS/WebAssembly コードは、オークションごとに 1 回コンパイルされます。</td>
   </tr>
   <tr>
-   <td>Performance    </td>
+   <td>パフォーマンス</td>
    <td>biddingDurationMsec の範囲は何ですか？</td>
    <td>biddingDurationMsec には、スクリプトのコンパイル時間が含まれます。ダウンロード時間、wasm コンパイル時間、ネットワーク時間は含まれません。JS コンパイルの前に Key/Value サーバーなどから時間をフェッチします。</td>
   </tr>
   <tr>
-   <td>Customization    </td>
+   <td>カスタマイズ</td>
    <td>ユーザー向けにカスタマイズされるように adComponent を更新することは可能ですか？</td>
    <td>呼び出し元が joinInterestGroup を呼び出したとき、または Chrome が DailyUpdateURL を呼び出したときにインタレスト グループが更新されると、adComponent が更新されます。これにより、呼び出し元は、現在のサイトからのユーザーの知識に基づいて、または k-匿名情報に基づいて、それぞれ adComponent を更新できます。製品レベルの turtledove の元の提案は<a href="https://github.com/WICG/turtledove/blob/main/PRODUCT_LEVEL.md">こちら</a>にあります。これには、推奨ユース ケースのコア メトリクスへの影響に関する RTB House による分析が含まれています。</td>
   </tr>
@@ -378,9 +380,9 @@ CMA へのコミットメントの一環として、Google は、プライバシ
 </td>
   </tr>
   <tr>
-   <td>Performance    </td>
+   <td>パフォーマンス</td>
    <td>generateBid のパフォーマンスを測定するにはどうすればよいですか？</td>
-   <td>Compile and execute time can be measured with biddingDurationMsec. Download time can be measured with chrome://net-export. In recent versions of Chrome, compile and execute time will show up in the DevTools Performance tab.    </td>
+   <td>コンパイル時間と実行時間は、biddingDurationMsec で測定できます。ダウンロード時間は、chrome://net-export で測定できます。最近のバージョンの Chrome では、コンパイル時間と実行時間が DevTools の [パフォーマンス] タブに表示されます。</td>
   </tr>
   <tr>
    <td>インタレストグループの更新頻度</td>
@@ -388,25 +390,25 @@ CMA へのコミットメントの一環として、Google は、プライバシ
    <td>過去 24 時間更新されていないインタレストグループについては、navigator.updateAdInterestGroups() が呼び出されたとき、またはオークションに参加する機会があったときに、Chrome が更新を試みます。詳細については、<a href="https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md#interest-group-updating">こちら</a>の Explainer をご覧ください。</td>
   </tr>
   <tr>
-   <td>Aggregation Service Providers    </td>
+   <td>アグリゲーション サービス プロバイダー</td>
    <td>アグリゲーションサービスで他のクラウド プロバイダーがサポートされるのはいつですか？</td>
    <td>現在、特定の時間に関する更新はありませんが、更新され次第、さらに共有します。現在、アグリゲーションサービスのセキュリティ要件を満たしているのは AWS だけです。</td>
   </tr>
   <tr>
-   <td>FLEDGE Testing Timeline    </td>
+   <td>FLEDGE テストのタイムライン</td>
    <td>FLEDGE は BYOS でどのくらいの期間テストされますか？BYOS モデルから TEE ベースのモデルに切り替えるのに十分な時間はありますか？</td>
    <td>エコシステムがテストするのに十分な時間を確保するために、サードパーティ Cookie が廃止されるまで、TEE の使用を要求することはないと考えています。この移行が行われる前に、開発者がテストと採用を開始するように十分な通知を行います。現在、これ以上の更新はありませんが、更新が行われたらさらに共有します。最新情報は<a href="/blog/open-sourcing-fledge-key-value-service/">こちら</a>でご確認ください。</td>
   </tr>
   <tr>
-   <td>Data size limit    </td>
+   <td>データサイズ制限</td>
    <td>wasm の入札機能のデータサイズ制限は？</td>
    <td>
 <a href="https://github.com/WICG/turtledove/issues/228">こちら</a>で説明されているように、インタレスト グループの更新によってインタレスト グループが 50kb を超えることはできないという要件がありますが、wasm のデータ サイズ制限はまだ定義されていないため、このトピックに関する情報をお待ちしております。</td>
   </tr>
   <tr>
-   <td>Auction signals    </td>
+   <td>オークションシグナル</td>
    <td>オークションシグナルの標準化されたデータ構造はありますか？</td>
-   <td>This is not defined yet, but we are open to feedback.    </td>
+   <td>これはまだ定義されていませんが、フィードバックを受け付けています。</td>
   </tr>
   <tr>
    <td>アドテックサーバーのクエリ</td>
@@ -414,12 +416,12 @@ CMA へのコミットメントの一環として、Google は、プライバシ
    <td>いいえ、K/V サーバーは、ユーザー データの漏えいを避けるために「ネットワーク、ディスク アクセス、タイマー、またはログ記録なし」を強制する信頼モデルで実行されます。詳細については、<a href="https://github.com/privacysandbox/fledge-docs/blob/main/key_value_service_trust_model.md">こちら</a>の信頼モデルの説明をご覧ください。</td>
   </tr>
   <tr>
-   <td>Frequency of updating adComponents    </td>
+   <td>adComponents の更新頻度</td>
    <td>ユーザーの閲覧履歴による adComponents フィールド（現在は IG 設定のみ）の更新は現在不可能です。</td>
    <td>プライバシー サンドボックスは、クロスサイト トラッキングなしでウェブエコシステムのニーズをサポートすることを目的としています。つまり、ブラウジング履歴へのアクセスを防止します。Topics などの代替手段を使用することをお勧めします。</td>
   </tr>
   <tr>
-   <td>Auction results    </td>
+   <td>オークション結果</td>
    <td>アドテックがオークションの落札率を知る方法はありますか？</td>
    <td>オークションの結果は、セラーと落札したバイヤーがそれぞれ提供するオークション コードで reportResult() 関数と reportWin() 関数を呼び出すことによって報告されるため、それぞれにオークション結果に関するログとレポートを実行する機会があります。</td>
   </tr>
@@ -428,19 +430,19 @@ CMA へのコミットメントの一環として、Google は、プライバシ
 </td>
    <td>ユーザーがインタレスト グループに属していない場合にのみ広告を表示するネガティブ インタレスト グループ ターゲティングをサポートする API</td>
    <td>
-<em>Q3 Update</em>: <p> We have shared a new<a href="https://github.com/WICG/turtledove/issues/208#issuecomment-1238690890"> proposal </a>and are seeking feedback.    </p>
+<em>第 3 四半期の更新</em>:<p>新しい<a href="https://github.com/WICG/turtledove/issues/208#issuecomment-1238690890">提案を</a>共有し、フィードバックを求めています。</p>
 </td>
   </tr>
 </table>
 
-## Measuring Digital Ads
+## デジタル広告の測定
 
 ### Attribution Reporting（およびその他の API）
 
 <table>
   <tr>
    <td>
-<strong>Feedback Theme </strong>
+<strong>フィードバックのテーマ</strong>
    </td>
    <td>
 <strong>要約</strong>
@@ -450,48 +452,48 @@ CMA へのコミットメントの一環として、Google は、プライバシ
    </td>
   </tr>
   <tr>
-   <td>OT requirements    </td>
-   <td>Remove Permission-Policy restrictions during / for the OT only.    </td>
+   <td>OT 要件</td>
+   <td>OT のみの間または OT に対してのみ、アクセス許可ポリシーの制限を削除します。</td>
    <td>テスト中に<a href="https://groups.google.com/u/0/a/chromium.org/g/attribution-reporting-api-dev/c/uFmCrdaUjqw">発表されたアクセス許可ポリシーの変更</a>を参照してください。この変更によって対処される根本的な関係者の懸念は、DSP がより多くのクロスオリジン iframe で API をテストできるようにすることです。当初、DSP はサイト運営者/SSP と調整して、クロスオリジン iframe で API をテストするために適切なアクセス許可ポリシーが設定されていることを確認する必要がありましたが、この変更により、DSP はデフォルトで API を呼び出すことができ、SSP/サイト運営者はオリジントライアル中に必要に応じて API を無効にします。</td>
   </tr>
   <tr>
-   <td>Noise    </td>
-   <td>Feedback that the level of noise is too high and it is impacting the usefulness of the reporting.    </td>
-   <td>We <a href="/docs/privacy-sandbox/feedback/#feedback-routes">welcome feedback</a> regarding noise, which we will use to determine how to set certain noise related parameters. We are also looking to publish more resources, tools, and other docs to help testers with this.    </td>
+   <td>ノイズ</td>
+   <td>ノイズのレベルが高すぎて、レポートの有用性に影響を与えているというフィードバック。</td>
+   <td>ノイズに関する<a href="/docs/privacy-sandbox/feedback/#feedback-routes">フィードバックを歓迎します</a>。これを使用して、特定のノイズ関連パラメータを設定する方法を決定します。また、テスターがこれを行うのに役立つリソース、ツール、その他のドキュメントをさらに公開する予定です。</td>
   </tr>
   <tr>
-   <td>Cross-domain conversions    </td>
+   <td>クロスドメイン コンバージョン</td>
    <td>2 つ以上のリンク先など、クロスドメインのコンバージョンを追跡するにはどうすればよいですか？</td>
    <td>この質問については、<a href="https://github.com/WICG/attribution-reporting-api/issues/549">現在議論中であり、フィードバックを求めています</a>。</td>
   </tr>
   <tr>
-   <td>Debugging requirements    </td>
+   <td>デバッグ要件</td>
    <td>要約レポートの展開/テスト時に、開発者が残りのプライバシー予算を確認できるようにするリクエスト</td>
-   <td>You can track this<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1354635"> feature request here</a>.     </td>
+   <td>この<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1354635">機能のリクエストはこちら</a>で追跡できます。</td>
   </tr>
   <tr>
-   <td>API usage policies    </td>
-   <td>Feedback suggesting policies for who can use a given API based on restrictions for things like fingerprinting    </td>
+   <td>API 使用ポリシー</td>
+   <td>フィンガープリンティングなどの制限に基づいて、特定の API を使用できるユーザーに関するポリシーを提案するフィードバック</td>
    <td>これは非常に興味深いアイデアであり、他のブラウザプロバイダーとより広範なウェブエコシステムの両方とさらに協力したいと考えています。</td>
   </tr>
   <tr>
-   <td>Expiry setting in conversion report    </td>
-   <td>Request to support report filter / expiry for less than 24 hours.    </td>
+   <td>コンバージョン レポートの有効期限設定</td>
+   <td>24 時間未満のレポート フィルター/有効期限のサポートをリクエストします。</td>
    <td>時間レベルの有効期限は、ユーザーが広告主のサイトにアクセスした時間を正確に知ることができるため、プライバシー上の懸念の原因となります。日レベルの有効期限により、アドテックは、ユーザーがサイトにアクセスした時間を特定せずに、無効なインプレッションを除外できます。</td>
   </tr>
   <tr>
-   <td>OT token expiration    </td>
+   <td>OT トークンの有効期限</td>
    <td>運用上のオーバーヘッドを削減するために、既存の OT トークンの有効期間を延長することをリクエストします。</td>
    <td>トークンを更新する必要があることは認識しており、開発者が簡単に更新できるように取り組んでいます。追加の通知を提供する予定です。</td>
   </tr>
   <tr>
    <td>リージョンサポート</td>
    <td>現在、アグリゲーションサービスはすべてのリージョンをサポートしているわけではありません。</td>
-   <td>This is a current limitation for beta. We expect to support additional regions as testing progresses, but there isn’t yet a clear timeline for this.    </td>
+   <td>これはベータ版の現在の制限です。テストの進行に伴い、追加のリージョンをサポートする予定ですが、明確なタイムラインはまだありません。</td>
   </tr>
   <tr>
    <td>イベントレベルレポートの遅延</td>
-   <td>The delay of 2-30 days in event level reporting may be too long for certain use cases.    </td>
+   <td>イベント レベル レポートの 2 ～ 30 日の遅延は、特定のユース ケースでは長すぎる場合があります。</td>
    <td>イベント レベルのレポートが有効期限を介して送信されるタイミングをアドテックが制御できるようにするための提案を<a href="https://github.com/WICG/attribution-reporting-api/issues/522">こちら</a>に共有しました。デフォルトは 30 日ですが、これより短く設定することもできます。</td>
   </tr>
   <tr>
@@ -499,36 +501,36 @@ CMA へのコミットメントの一環として、Google は、プライバシ
 </td>
    <td>クロスデバイスやクロスアプリなどのマルチタッチ アトリビューションの許可</td>
    <td>
-<em>Q3 Update: </em><p>マルチタッチ アトリビューションの現在の方法では、さまざまなウェブサイトでのユーザーのインプレッション（したがってID）を決定論的に結び付ける必要があります。その結果、現在の形でのこの機能は、クロスサイト トラッキングなしで主要な広告のユースケースをサポートすることを目的としたプライバシーサンドボックスの目標と一致しません。</p>
+<em>第 3 四半期の更新:</em><p>マルチタッチ アトリビューションの現在の方法では、さまざまなウェブサイトでのユーザーのインプレッション（したがってID）を決定論的に結び付ける必要があります。その結果、現在の形でのこの機能は、クロスサイト トラッキングなしで主要な広告のユースケースをサポートすることを目的としたプライバシーサンドボックスの目標と一致しません。</p>
 </td>
   </tr>
   <tr>
-   <td>FLEDGE &amp; Attribution Reporting integration timeline    </td>
+   <td>FLEDGE とアトリビューション レポートの統合スケジュール</td>
    <td>FLEDGE とアトリビューション レポート API の統合のタイムラインは？</td>
    <td>現在、共有できる更新はありませんが、特定のタイムラインにコミットできるようになったら、さらに情報を公開します。</td>
   </tr>
   <tr>
-   <td>Multiple Trigger Types    </td>
-   <td>Request for more flexibility in trigger registration.     </td>
+   <td>複数のトリガー タイプ</td>
+   <td>トリガー登録の柔軟性を高めるように要求します。</td>
    <td>アドテックがイベント レベルの集計可能なレポートをより柔軟に制御できるようにするアグリゲート API の重複排除システムを<a href="https://github.com/WICG/attribution-reporting-api/pull/527">提案</a>しました。</td>
   </tr>
   <tr>
-   <td>Measurement    </td>
+   <td>測定</td>
    <td>広告枠がうまく機能しているかどうかの測定データを受信するリクエスト</td>
-   <td>We appreciate the feedback and are seeking additional clarity on the use case(s) for this request.     </td>
+   <td>フィードバックに感謝し、このリクエストのユースケースをさらに明確にするよう努めています。</td>
   </tr>
   <tr>
-   <td>Conversion expiry    </td>
-   <td>Request to support conversion expiry on trigger tag instead of just the source tag.    </td>
-   <td>We appreciate the feedback and are seeking additional clarity on the use case(s) for this request.    </td>
+   <td>コンバージョンの有効期限</td>
+   <td>ソースタグだけでなく、トリガータグでコンバージョンの有効期限をサポートするようリクエストします。</td>
+   <td>フィードバックに感謝し、このリクエストのユースケースをさらに明確にするよう努めています。</td>
   </tr>
   <tr>
-   <td>Batch reporting    </td>
-   <td>Request for additional measurement in batch reporting.    </td>
-   <td>We appreciate the feedback as we continue to think about the impact on aggregation service. We are interested in hearing how ad tech are thinking about batching reports and their expected frequency as well as any feedback on how batching strategy changes throughout the year.     </td>
+   <td>バッチ レポート</td>
+   <td>バッチ レポートでの追加測定の要求。</td>
+   <td>アグリゲーション サービスへの影響について引き続き検討しておりますので、フィードバックをお待ちしております。バッチ レポートとその予想される頻度についてアドテクがどのように考えているか、バッチ戦略が年間を通じてどのように変化するかについてのフィードバックをお待ちしております。</td>
   </tr>
   <tr>
-   <td>Epsilon    </td>
+   <td>イプシロン</td>
    <td>イプシロンの値はいつ決定されますか？</td>
    <td>イプシロンの値とそれを GA に実装する方法を最終決定するために、エコシステムのテスターと積極的に協力しています。この値は、値の決定につながった議論とともに公開されます。フィードバックがある場合は、この GH <a href="https://github.com/WICG/attribution-reporting-api/issues/485">イシュー</a>に投稿してください。</td>
   </tr>
@@ -541,7 +543,7 @@ CMA へのコミットメントの一環として、Google は、プライバシ
 <table>
   <tr>
    <td>
-<strong>Feedback Theme </strong>
+<strong>フィードバックのテーマ</strong>
    </td>
    <td>
 <strong>要約</strong>
@@ -556,7 +558,7 @@ CMA へのコミットメントの一環として、Google は、プライバシ
    <td>バージョン 101 以降の Chrome ユーザーの 100% に対してマイナーバージョン削減とも呼ばれる「フェーズ 4」をロールアウトしました。<a href="https://www.chromium.org/updates/ua-reduction/#updates">こちら</a>で更新をご覧ください。</td>
   </tr>
   <tr>
-   <td>Testing    </td>
+   <td>テスト</td>
    <td>メタからの User-Agent Reduction オリジントライアルの延長をリクエストします。</td>
    <td>
 <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/jjGeFtHhak4/m/oZTrYykHAwAJ">オリジントライアルを延長</a>し、より大規模なサイトに対応するためにトラフィック制限を削除する<a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/R0xKm1B7qoQ/m/EVTLoZDyBAAJ">許可を取得</a>しました。トラフィック制限の緩和は、大小を問わずすべてのサイトに適用されます。</td>
@@ -568,7 +570,7 @@ CMA へのコミットメントの一環として、Google は、プライバシ
 <table>
   <tr>
    <td>
-<strong>Feedback Theme </strong>
+<strong>フィードバックのテーマ</strong>
    </td>
    <td>
 <strong>要約</strong>
@@ -580,14 +582,14 @@ CMA へのコミットメントの一環として、Google は、プライバシ
   <tr>
    <td>（Q2 にも報告）<p>不正防止/悪用防止に関する懸念</p>
 </td>
-   <td>Certain features that might be lost via UA-CH: Click redirect tracker, and fraudulent clicks.    </td>
+   <td>UA-CH によって失われる可能性がある特定の機能: クリック リダイレクト トラッカー、および不正なクリック。</td>
    <td>
 <em>第 3 四半期の更新</em>:<p>企業から、不正防止パイプラインに悪影響が見られなかったという肯定的なフィードバックを受け取りました（結果は<a href="https://github.com/WICG/ua-client-hints/issues/315">こちら</a>と<a href="https://github.com/WICG/ua-client-hints/issues/314">こちら</a>）。</p>
 <p>チームは、不正防止および測定の関係者とともに、これらの潜在的なイシューを調査し続けています。</p>
 </td>
   </tr>
   <tr>
-   <td>Permission-Policy    </td>
+   <td>アクセス許可ポリシー</td>
    <td>アクセス許可ポリシーはキャッシュされますか？</td>
    <td>
 <a href="https://github.com/WICG/client-hints-infrastructure/issues/105#issuecomment-1100117730">この Github イシューで説明</a>されているように、アクセス許可ポリシーはキャッシュされません。</td>
@@ -599,7 +601,7 @@ CMA へのコミットメントの一環として、Google は、プライバシ
 <table>
   <tr>
    <td>
-<strong>Feedback Theme </strong>
+<strong>フィードバックのテーマ</strong>
    </td>
    <td>
 <strong>要約</strong>
@@ -609,9 +611,9 @@ CMA へのコミットメントの一環として、Google は、プライバシ
    </td>
   </tr>
   <tr>
-   <td>Geolocation use cases    </td>
+   <td>ジオロケーションのユースケース</td>
    <td>Gnatcatcher は、ジオロケーションに基づくコンテンツのパーソナル化など、正当なジオロケーションのユースケースを今後機能させなくなる可能性があります。</td>
-   <td>We are working with stakeholders to ensure that Chrome continues to support legitimate use-cases of IP addresses.    </td>
+   <td>Google は関係者と協力して、Chrome が引き続き IP アドレスの正当なユースケースをサポートできるようにしています。</td>
   </tr>
 </table>
 
@@ -622,7 +624,7 @@ CMA へのコミットメントの一環として、Google は、プライバシ
 <table>
   <tr>
    <td>
-<strong>Feedback Theme </strong>
+<strong>フィードバックのテーマ</strong>
    </td>
    <td>
 <strong>要約</strong>
@@ -632,8 +634,8 @@ CMA へのコミットメントの一環として、Google は、プライバシ
    </td>
   </tr>
   <tr>
-   <td>Policy    </td>
-   <td>Concern that FPS is not consistent with the CMA commitments’ provisions regarding "Applicable Data Protection Legislation," on the basis that GDPR does not impose a limit on the number of sites in a set while FPS envisages a limit of 3.    </td>
+   <td>ポリシー</td>
+   <td>FPS が 3 つの制限を想定しているのに対し、GDPR はセット内のサイト数に制限を課していないことに基づいて、FPS が「適用可能なデータ保護法」に関する CMA コミットメントの規定と一致していないという懸念。</td>
    <td>Google は、Google 自身のビジネスを自己優先することによって競争を歪めない方法でプライバシー サンドボックスの提案を設計および実装し、デジタル広告、サイト運営者、および広告主における競争への影響、および適用されるデータ保護法に定められていプライバシーの結果およびデータ保護原則の遵守への影響を考慮に入れることを CMA に約束しました。表明された懸念は、GDPRとの非互換性を開示するものではありません。Googleは、この仕事がこれらのコミットメントに準拠していることを確認するために、CMAと緊密に協力し続けます。</td>
   </tr>
   <tr>
@@ -657,49 +659,49 @@ CMA へのコミットメントの一環として、Google は、プライバシ
    <td>この<a href="http://github.com/WICG/first-party-sets/issues/110">提案</a>に対するご意見をお待ちしています。</td>
   </tr>
   <tr>
-   <td>Subdomains ownerships    </td>
+   <td>サブドメインの所有権</td>
    <td>異なるデータ管理者、異なるプライバシー ポリシー、または異なるエンティティによって運営されている異なるサブドメインは、同じ First-Party Sets の一部である必要がありますか？</td>
-   <td>Based on feedback, we plan to remove the common eTLD use case.     </td>
+   <td>フィードバックに基づいて、一般的な eTLD ユース ケースを削除する予定です。</td>
   </tr>
   <tr>
    <td>悪用の緩和</td>
    <td>悪用緩和対策の詳細についてのリクエスト</td>
-   <td>The management of the process is under consideration and more details will be shared in the coming months.    </td>
+   <td>プロセスの管理は検討中であり、詳細は今後数か月以内に共有されます。</td>
   </tr>
   <tr>
-   <td>Potential attack vector    </td>
+   <td>潜在的な攻撃ベクトル</td>
    <td>簡単に見つけられるページの欺瞞的な関連セットを使用して、独立を偽って表示する他のページに誘導できる可能性がある</td>
    <td>積極的に一般からの意見を集め、<a href="http://github.com/WICG/first-party-sets/issues/101">このイシュー</a>に対処する方法を調査しています。</td>
   </tr>
   <tr>
    <td>セットの検証</td>
-   <td>Validating the set via consented common policies.    </td>
+   <td>同意済みの共通ポリシーによるセットの検証。</td>
    <td>ウェブ標準コミュニティやより広範なエコシステムのさまざまなメンバーから、<a href="http://github.com/WICG/first-party-sets/issues/108">これは実現不可能であると指摘</a>されています。</td>
   </tr>
   <tr>
-   <td>Domain limit    </td>
-   <td>Request for expanding the number of associated domains.    </td>
+   <td>ドメイン制限</td>
+   <td>関連付けるドメイン数の拡大のリクエスト。</td>
    <td>FPS でのドメイン制限について積極的に議論しており、ユース ケースに必要な関連ドメインの数について、コミュニティからのフィードバックをお待ちしております。</td>
   </tr>
   <tr>
    <td>サブセット サービスの操作</td>
    <td>サービスと関連するサブセットの操作に関する懸念。</td>
-   <td>We appreciate the feedback and will look into making this more explicit in the future specs.    </td>
+   <td>フィードバックに感謝し、将来の仕様でこれをより明確にすることを検討します。</td>
   </tr>
   <tr>
    <td>（Q2 にも報告）<p>プライバシーの向上</p>
 </td>
    <td>同じセット内のサイトが多すぎると、サードパーティ Cookie と同様の結果になる可能性があります</td>
    <td>
-<em>Q3 Update:</em><p>最新の提案では、「関連付けられた」サブセットに対して 3 つのドメインの制限が提案されています（ccTLD とサービス ドメインは含まれません）。Chrome はエコシステムと積極的に連携して、この制限が適切かどうかを判断しています。</p>
+<em>第 3 四半期の更新:</em><p>最新の提案では、「関連付けられた」サブセットに対して 3 つのドメインの制限が提案されています（ccTLD とサービス ドメインは含まれません）。Chrome はエコシステムと積極的に連携して、この制限が適切かどうかを判断しています。</p>
 </td>
   </tr>
   <tr>
    <td>（Q2 にも報告）<p>一般的なプライバシー ポリシー要件</p>
 </td>
-   <td>It is infeasible to maintain a common privacy policy across all products, and jurisdictions that need to be part of the same set.    </td>
+   <td>すべての製品、および同じセットの一部である必要がある法域にわたって共通のプライバシー ポリシーを維持することは実行不可能です。</td>
    <td>
-<em>Q3 Update:</em><p>共通のプライバシー ポリシーは、同じセットの一部である必要はなくなりました。</p>
+<em>第 3 四半期の更新:</em><p>共通のプライバシー ポリシーは、同じセットの一部である必要はなくなりました。</p>
 </td>
   </tr>
 </table>
@@ -709,7 +711,7 @@ CMA へのコミットメントの一環として、Google は、プライバシ
 <table>
   <tr>
    <td>
-<strong>Feedback Theme </strong>
+<strong>フィードバックのテーマ</strong>
    </td>
    <td>
 <strong>要約</strong>
@@ -720,12 +722,12 @@ CMA へのコミットメントの一環として、Google は、プライバシ
   </tr>
   <tr>
    <td>なぜ iframe の属性ではなく新しい要素なのですか？</td>
-   <td>Question regarding proposal Frenced Frame instead of existing iFrame proposals.    </td>
+   <td>既存の iFrame の提案ではなく、Frenced Frame の提案に関する質問です。</td>
    <td>フィードバックを歓迎しています。<a href="https://github.com/WICG/fenced-frame/issues/50">こちら</a>で議論されているように、現状を収束させる方法についてのアイデアをお待ちしています。</td>
   </tr>
   <tr>
    <td>Fenced Frames 内の交差オブザーバー</td>
-   <td>Questions regarding the viewability of information inside a Fenced Frame.    </td>
+   <td>Fenced Frame 内の情報の視認性に関する質問。</td>
    <td>これについては活発な議論が行われており、<a href="https://docs.google.com/document/d/1qUzcup_BX9LNlv2Bw4QxWJaTo7nbwQEkPiLKfYbYsP0/edit">このドキュメント</a>と <a href="https://github.com/WICG/turtledove/issues/264">GitHub</a> ではコメント期間にあります。サポート方法をよりよく理解するために、パートナーからのユースケースの共有をお待ちしています。</td>
   </tr>
   <tr>
@@ -750,7 +752,7 @@ CMA へのコミットメントの一環として、Google は、プライバシ
 <table>
   <tr>
    <td>
-<strong>Feedback Theme </strong>
+<strong>フィードバックのテーマ</strong>
    </td>
    <td>
 <strong>要約</strong>
@@ -765,13 +767,13 @@ CMA へのコミットメントの一環として、Google は、プライバシ
    <td>現在はこれを追求していませんが、プライバシー保護を確実に維持できるのであれば、このアイデアを検討したいと考えています。関係者には、この提案が共有ストレージの <a href="https://github.com/WICG/shared-storage/issues">github リポジトリ</a>または FLEDGE の <a href="https://github.com/WICG/turtledove/issues">github リポジトリ</a>に、サポートできる可能性のあるユース ケースの提案を提出することをお勧めしています。</td>
   </tr>
   <tr>
-   <td>Data retention    </td>
+   <td>データ保持</td>
    <td>共有ストレージをクリアすると、有用性が減少します。保持期間の延長または個々のキー/値を削除する機能は、代替手段として検討されていますか？</td>
    <td>ユーザーのプライバシーと有用性のトレードオフのバランスを常に考えています。調整に関するフィードバックをお待ちしております。パートナーが共有ストレージをテストする際に、<a href="https://github.com/WICG/shared-storage/issues">より多くのフィードバックと詳細を提供する</a>ことをお勧めします。</td>
   </tr>
   <tr>
    <td>否定的なシグナル</td>
-   <td>Negative signal from Mozilla regarding the Shared Storage proposal.    </td>
+   <td>共有ストレージの提案に関する Mozilla からの否定的なシグナル。</td>
    <td>この提案を慎重に検討してくれた Mozilla に感謝します。近いうちにフィードバックに対応する予定です。</td>
   </tr>
 </table>
@@ -781,7 +783,7 @@ CMA へのコミットメントの一環として、Google は、プライバシ
 <table>
   <tr>
    <td>
-<strong>Feedback Theme </strong>
+<strong>フィードバックのテーマ</strong>
    </td>
    <td>
 <strong>要約</strong>
@@ -803,15 +805,15 @@ CMA へのコミットメントの一環として、Google は、プライバシ
   <tr>
    <td>Cookie のパーティション制限</td>
    <td>現在の 10 個の Cookie 制限では、特定のユース ケースに対応できない可能性があるという懸念</td>
-   <td>We’re moving away from a limit on the number of cookies to a 12kb memory limit. Doing so allows us to address concerns on the cookie limit while ensuring performance and browser memory footprint is not adversely impacted.    </td>
+   <td>Cookie 数の制限から 12kb のメモリ制限に移行しています。そうすることで、Cookie の制限に関する懸念に対処しながら、パフォーマンスとブラウザのメモリ フットプリントに悪影響が及ばないようにすることができます。</td>
   </tr>
   <tr>
    <td>オリジントライアルのタイムライン</td>
    <td>ホスト名の境界要件の削除に従って、OT を延長してほしい</td>
-   <td>We have extended the origin trial deadline following feedback from the ecosystem.    </td>
+   <td>エコシステムからのフィードバックを受けて、オリジン トライアルの期限を延長しました。</td>
   </tr>
   <tr>
-   <td>Testing limitations in Chrome    </td>
+   <td>Chrome でのテストの制限</td>
    <td>Chrome の現在の制限により、Firefox で CHIPS をテストできる可能性</td>
    <td>Firefox の実装はほぼ異なります。Chrome は Cookie の制限が低く、CHIPS はオプトイン メカニズムですが、Firefox はデフォルトでパーティション化されています。</td>
   </tr>
@@ -820,7 +822,7 @@ CMA へのコミットメントの一環として、Google は、プライバシ
 </td>
    <td>サインオン状態は CHIPS で保持されますか？</td>
    <td>
-<em>Q3 Update:</em><p>サインイン状態は現在保持されていませんが、CHIPS の意図したユースケースではありません。認証された埋め込みのユースケースを認識しており、解決策を模索しています。</p>
+<em>第 3 四半期の更新:</em><p>サインイン状態は現在保持されていませんが、CHIPS の意図したユースケースではありません。認証された埋め込みのユースケースを認識しており、解決策を模索しています。</p>
 </td>
   </tr>
 </table>
@@ -830,7 +832,7 @@ CMA へのコミットメントの一環として、Google は、プライバシ
 <table>
   <tr>
    <td>
-<strong>Feedback Theme </strong>
+<strong>フィードバックのテーマ</strong>
    </td>
    <td>
 <strong>要約</strong>
@@ -844,12 +846,12 @@ CMA へのコミットメントの一環として、Google は、プライバシ
 </td>
    <td>リンクデコレーションとタイミング攻撃による潜在的な攻撃ベクトル。</td>
    <td>
-<em>Q3 Update:</em><p>Mozilla と協力して、タイミング攻撃の問題に対処する方法について共通の理解に達しました。詳細は<a href="https://fedidcg.github.io/FedCM/#the-idp-sign-in-status-api">こちら</a>をご覧ください。現在、このアーキテクチャ変更のプロトタイプを作成しており、今後数四半期で実験を行う予定です。</p>
+<em>第 3 四半期の更新:</em><p>Mozilla と協力して、タイミング攻撃の問題に対処する方法について共通の理解に達しました。詳細は<a href="https://fedidcg.github.io/FedCM/#the-idp-sign-in-status-api">こちら</a>をご覧ください。現在、このアーキテクチャ変更のプロトタイプを作成しており、今後数四半期で実験を行う予定です。</p>
 </td>
   </tr>
   <tr>
-   <td>Identity providers    </td>
-   <td>Account chooser: single identity provider. Request to allow multiple identity providers.    </td>
+   <td>ID プロバイダー</td>
+   <td>アカウント チューザー: 単一の ID プロバイダー。複数の ID プロバイダーを許可するように要求します。</td>
    <td>複数の ID プロバイダーを許可する方法について、ブラウザベンダーおよび FedID CG と協力し、試してみる価値のある定式化に到達しました。提案の説明は<a href="https://github.com/fedidcg/FedCM/pull/351">こちら</a>にあります。今後数四半期でプロトタイプを開発し、実験を行う予定です。</td>
   </tr>
   <tr>
@@ -858,23 +860,23 @@ CMA へのコミットメントの一環として、Google は、プライバシ
    <td>FedID CG には、連携が<a href="https://github.com/fedidcg/use-case-library/wiki/Primitives-by-Use-Case">ここ</a>と<a href="https://github.com/fedidcg/use-case-library/wiki/Third-party-cookie-mitigations">ここ</a>で壊れるケースを列挙した作業項目があります。また、破損をウェブプラットフォーム API にマップするための意思決定マトリックスも<a href="https://github.com/fedidcg/use-case-library/wiki/User-Flow-Decision-Trees">こちら</a>に用意しています。</td>
   </tr>
   <tr>
-   <td>Nounce parameter    </td>
+   <td>通知パラメーター</td>
    <td>Nounce パラメーターはサインイン フローに影響しますか？</td>
-   <td>This could be considered cross-site tracking, but we are still gathering input and analyzing how to treat such cases.     </td>
+   <td>これはクロスサイト トラッキングと見なされる可能性がありますが、現在も情報を収集し、そのようなケースを処理する方法を分析しています。</td>
   </tr>
   <tr>
-   <td>User consent    </td>
+   <td>ユーザーの同意</td>
    <td>オリジンごとに異なる証明書利用者（RP）とユーザーの同意のリンク</td>
    <td>この仕様では、同じドメイン内のオリジンが Cookie を共有する方法を制御できません。この仕様では、IDP オリジンから RP オリジンへの idtoken を許可していますが、ユーザーのサインイン状態を、その単一のオリジンにロックされた Cookie に保存するか、同じドメイン内で同じオリジンと共有される Cookie に保存するかは、RP が選択します。</td>
   </tr>
   <tr>
    <td>IDP アカウント<p>移植性</p>
 </td>
-   <td>User option to migrate IDPs if they choose when transferring between two IDPs.    </td>
-   <td>That seems like something that the user would need to do directly in the sign up page of their new IDP of choice, not via the FedCM API.    </td>
+   <td>2 つの IDP 間で転送するときに選択した場合、IDP を移行するユーザー オプション。</td>
+   <td>これは、ユーザーが FedCM API 経由ではなく、選択した新しい IDP のサインアップ ページで直接行う必要があるように思えます。</td>
   </tr>
   <tr>
-   <td>Account deletion    </td>
+   <td>アカウントの削除</td>
    <td>IDP のアカウント削除による IDP 取り消し</td>
    <td>この<a href="http://github.com/fedidcg/FedCM/issues/313">機能リクエストは意見を受け付けており</a>、調査中です。</td>
   </tr>
@@ -886,7 +888,7 @@ CMA へのコミットメントの一環として、Google は、プライバシ
   <tr>
    <td>IDP リファーラルチェック</td>
    <td>IDP が RP のリファラーをチェックする。</td>
-   <td>Added mandatory IDP referrer check to spec. See <a href="https://github.com/fedidcg/FedCM/pull/338">pull request</a>.    </td>
+   <td>必須の IDP リファラー チェックを仕様に追加しました。<a href="https://github.com/fedidcg/FedCM/pull/338">プルリクエスト</a>を参照してください。</td>
   </tr>
   <tr>
    <td>サインインのフロー</td>
@@ -902,7 +904,7 @@ CMA へのコミットメントの一環として、Google は、プライバシ
 <table>
   <tr>
    <td>
-<strong>Feedback Theme </strong>
+<strong>フィードバックのテーマ</strong>
    </td>
    <td>
 <strong>要約</strong>
@@ -925,10 +927,10 @@ CMA へのコミットメントの一環として、Google は、プライバシ
   <tr>
    <td>不正と悪用</td>
    <td>トラスト トークンの発行者が引き換え者のリストを定義して、他の人がトークンを引き換えられないようにする方法はありますか？</td>
-   <td>Not at present, but the team is investigating this use case.    </td>
+   <td>現時点ではありませんが、チームはこのユース ケースを調査しています。</td>
   </tr>
   <tr>
-   <td>Timeline    </td>
+   <td>タイムライン</td>
    <td>Trust Token API はいつ一般提供されますか？</td>
    <td>タイムラインにコミットできるようになり次第、さらに情報を公開します。</td>
   </tr>
@@ -937,7 +939,7 @@ CMA へのコミットメントの一環として、Google は、プライバシ
 </td>
    <td>プロトコルバージョンがサポートされる期間が明確ではありません。</td>
    <td>
-<em>Q3 Update:</em><p>バージョン間の移行に猶予が与えられるように、複数の同時バージョンをサポートするための API の追加サポートが追加されているところですが、サポート/非推奨の時期はまだ検討中です。</p>
+<em>第 3 四半期の更新:</em><p>バージョン間の移行に猶予が与えられるように、複数の同時バージョンをサポートするための API の追加サポートが追加されているところですが、サポート/非推奨の時期はまだ検討中です。</p>
 </td>
   </tr>
 </table>
