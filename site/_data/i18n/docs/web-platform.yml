@@ -15,3 +15,6 @@ developer-trials:
 
 not-pursuing:
   en: 'No longer pursuing'
+
+webgpu:
+  en: 'WebGPU'
