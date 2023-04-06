@@ -127,7 +127,18 @@ Additionally, the text of [another setting](/docs/devtools/settings/preferences/
 
 Chromium issue: [1276960](https://crbug.com/1276960).
 
-## JavaScript Profiler deprecation: stage two {: # }
+## Command Menu prioritizes authored files {: #command-menu }
+
+The quick open dialog in the [**Command Menu**](/docs/devtools/command-menu/#open-files) now grays out the [ignore-listed](/docs/devtools/settings/ignore-list/) third-party files and shows you the files you author first.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/EfE7Ot5FCoqP7x9AOGTD.png", alt="Ignore-listed third-party script shown after the authored file in the quick open dialog.", width="800", height="499" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/193652e716a06bc74dfab994a5888362bb0b1ee7 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/b53684f84a066382502e291a769f3732256ed180 #}
+
+Chromium issue: [1424345](https://crbug.com/1424345).
+
+## JavaScript Profiler deprecation: stage two {: #js-profiler }
 
 As early as [Chrome 58](/blog/devtools-javascript-cpu-profile-migration-2/), the DevTools team planned to eventually deprecate the **JavaScript Profiler** and have Node.js and Deno developers use the **Performance** panel for profiling JavaScript CPU performance.
 
