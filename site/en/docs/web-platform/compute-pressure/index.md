@@ -9,7 +9,8 @@ description: >
 
 subhead: >
   Get informed about your system compute pressure.
-date: 2023-03-15
+date: 2021-06-07
+updated: 2023-04-06
 authors:
   - jeffposnick
   - kenchris
