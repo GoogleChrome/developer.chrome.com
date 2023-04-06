@@ -60,7 +60,7 @@ AnimationBuilder()
 
 Which code would you rather write or read? More importantly, `AnimationBuilder` adds no extra overhead to the animation as it is intended to simplify the creation of layer-based animations. Give it a try the next time you need to animate something.
 
-For additional help, email the [Chrome Views team](https://groups.google.com/a/google.com/g/chrome-views).
+For additional help, email [chromium-dev@chromium.org](mailto:chromium-dev@chromium.org).
 
 - [AnimationBuilder documentation](https://chromium.googlesource.com/chromium/src/+/main/docs/ui/animation_builder/animation_builder.md)
 - [Learning about Chromium UI](https://source.chromium.org/chromium/chromium/src/+/main:docs/ui/learn/index.md)
