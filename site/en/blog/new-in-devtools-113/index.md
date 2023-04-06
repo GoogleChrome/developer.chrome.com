@@ -25,9 +25,15 @@ tags:
 
 You can now override response headers in the **Network** panel. Previously, you needed access to the actual web server to experiment with HTTP response headers.
 
-To override a header, navigate to **Network** > **Headers** > **Response Headers**, hover over a header's value, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/k3WKQOAItcJ2pliOyD47.svg", alt="Edit.", width="24", height="24" %} and edit it. Watch the video to see, for example, how header overrides can help you debug CORS errors.
+With response header overrides, you can locally prototype fixes for various headers, including but not limited to:
 
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/HbUpozi5aGi4jMShhMkH.mp4", controls="true", muted="true", class="screenshot" %}
+- [Cross-Origin Resource Sharing (CORS) Headers](https://developer.mozilla.org/docs/Web/HTTP/CORS)
+- [Permissions-Policy Headers](https://developer.mozilla.org/docs/Web/HTTP/Headers/Permissions-Policy)
+- [Cross-Origin Isolation Headers](https://web.dev/coop-coep/)
+
+To override a header, navigate to **Network** > **Headers** > **Response Headers**, hover over a header's value, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/k3WKQOAItcJ2pliOyD47.svg", alt="Edit.", width="24", height="24" %} and edit it.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N0GUECvGcvFad0JFs72l.png", alt="CORS error fixed by a header override.", width="800", height="504" %}
 
 You can also add custom headers.
 
