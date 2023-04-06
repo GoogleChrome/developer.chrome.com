@@ -130,7 +130,7 @@ Chromium issue: [1276960](https://crbug.com/1276960).
 
 The quick open dialog in the [**Command Menu**](/docs/devtools/command-menu/#open-files) now grays out the [ignore-listed](/docs/devtools/settings/ignore-list/) third-party files and shows you the files you author first.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/EfE7Ot5FCoqP7x9AOGTD.png", alt="Ignore-listed third-party script shown after the authored file in the quick open dialog.", width="800", height="499" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/3J6ZeS9oaG7yFXMDmMgR.png", alt="An ignore-listed script in the quick open dialog before and after the change.", width="800", height="368" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/193652e716a06bc74dfab994a5888362bb0b1ee7 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/b53684f84a066382502e291a769f3732256ed180 #}
