@@ -16,9 +16,9 @@ tags:
 
 Using layer based animations in Views can improve performance and reduce jankiness, but they’re rather difficult to set up. The [`AnimationBuilder`](https://source.chromium.org/chromium/chromium/src/+/main:ui/views/animation/animation_builder.h;drc=c149c1657efb82884f21a3deea7678e66cfc422a;l=49) classes can vastly reduce complexity and improve readability for layer animations.
 
-Suppose you needed to animate a continuous cross-fade between the following two views.
+Suppose you needed to animate a continuous cross-fade between the following two views, such as in the following image.
 
-TO DO: image
+{% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/eb0572NgdLKbSg9axqz7.gif", alt="A button fading between two views.", width="344", height="164" %}
 
 Here is an example of how this could be done using the layer animation APIs directly.
 
