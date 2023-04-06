@@ -94,7 +94,7 @@ To help you diagnose [CSS issues](/docs/devtools/css/issues/) faster, the **Styl
 - An entire CSS declaration (property *and* value) in case the [CSS property is invalid](/docs/devtools/css/issues/#invalid).
 - Just the value in case the CSS property is valid but the value isn't.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9t11Ndt8GVz1KNFxfiaY.png", alt="Invalid property and invalid property value.", width="800", height="527" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/25gZlN9PjK8HosfW1ZGm.png", alt="Invalid property name and invalid property value.", width="800", height="582" %}
 
 The DevTools team would like to express gratitude to [Yisi](https://chromium.googlesource.com/devtools/devtools-frontend/+/b1e2495635a072b0eb814b0f683bb93b8f8d92e3) for landing this improvement.
 
@@ -117,7 +117,7 @@ You can now configure the DevTools **Console** to apply an autocomplete suggesti
 
 By default, to accept an autocomplete suggestion, you can press `Tab` or `Arrow right`. To also autocomplete with `Enter`, enable {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Console** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Accept autocomplete suggestion on Enter**.
 
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/yM8StJzP6O0p3uaREet6.mp4", autoplay="false", muted="true", loop="false", controls="true", class="screenshot" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/cSd1G0KukIMfbeQZjbnk.png", alt="The corresponding checkbox in Settings.", width="800", height="621" %}
 
 Additionally, the text of [another setting](/docs/devtools/settings/preferences/#console) is now more user-friendly: {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Treat code evaluation as user action**.
 
@@ -159,7 +159,7 @@ Chromium issue: [1354548](https://crbug.com/1354548).
 These are some noteworthy fixes in this release:
 
 - Fixed a bug that caused pretty-printing in the **Sources** panel to handle variable names with Unicode characters incorrectly ([1425055](https://crbug.com/1425055)).
-- The **Issues** panel added a new message for Autofill issues regarding non-standard HTML values ([1399414](https://crbug.com/1399414).
+- The **Issues** tab added a new message for Autofill issues regarding non-standard HTML values ([1399414](https://crbug.com/1399414).
 
 <!-- $contentEnd -->
 
