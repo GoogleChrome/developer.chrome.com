@@ -18,7 +18,10 @@ const {isGAEProd} = require('./env');
 const express = require('express');
 const compression = require('compression');
 const {renderHandler} = require('./render');
-const {notFoundHandler} = require('./not-found');
+const {
+  notFoundHandler,
+  internalServerErrorHandler,
+} = require('./handlers/errors');
 const {buildStaticHandler} = require('./handlers/static');
 
 const unknownDomainRedirectHandler = require('./unknown-domain');
@@ -75,6 +78,8 @@ app.use(express.urlencoded({extended: true}));
 app.post('/_render', renderHandler);
 
 app.use(...handlers);
+
+app.use(internalServerErrorHandler);
 
 const listener = app.listen(process.env.PORT || 8080, () => {
   console.log('The server is listening at:', listener.address());

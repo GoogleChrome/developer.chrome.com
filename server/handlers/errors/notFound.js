@@ -21,10 +21,10 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 
-const {doRedirect} = require('./env');
-const {defaultLocale} = require('../site/_filters/i18n');
+const {doRedirect} = require('../../env');
+const {defaultLocale} = require('../../../site/_filters/i18n');
 
-const ROOT_DIR = 'dist';
+const ROOT_DIR = path.join(__dirname, '../../../dist');
 
 /**
  * @param {string} originalPath The full URL path, which might include an i18n
