@@ -474,7 +474,7 @@ If you have the following common test selectors defined on your website, the **R
 - `data-qa-id`
 - `data-testing`
 
-For example, inspect the "Cappuccino" element on this [demo page](https://coffee-cart.netlify.app/) and see the test attributes:
+For example, inspect the "Cappuccino" element on this [demo page](https://coffee-cart.app/) and see the test attributes:
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/KsR7XKgLgEM0odQZHcKV.png", alt="Defined test selectors.", width="800", height="696" %}
 
