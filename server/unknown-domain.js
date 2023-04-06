@@ -60,12 +60,12 @@ const domainRedirectHandler = (req, res, next) => {
 
   try {
     const u = new URL(url, `https://${siteDomain}`);
-    return res.redirect(u.toString(), 301);
+    return res.redirect(301, u.toString());
   } catch (e) {
     // If the URL can't be parsed, because someone might try something rogue, like
     // using `//https%3A//example.com/..%2F` as path for example, then
     // just redirect to the root.
-    return res.redirect(new URL('/', `https://${siteDomain}`).toString(), 301);
+    return res.redirect(301, new URL('/', `https://${siteDomain}`).toString());
   }
 };
 
