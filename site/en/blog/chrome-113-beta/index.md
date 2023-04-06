@@ -99,6 +99,6 @@ This release of Chrome deprecates two features.
 
 Secure Payment Confirmation (SPC) is a Web API to support streamlined authentication during a payment transaction. It builds on top of WebAuthn to bring strong authentication to payment flows. In the initial spec and implementation of SPC, the output `CollectedClientAdditionalPaymentData` dictionary of the cryptogram contained a parameter named `rp`. This was renamed in the specification to `rpId` to align with WebAuthn, and Chrome is changing its implementation to match (that is, adding `rpId` and removing `rp`).
 
-### Deprecate the `document.domain` setter.
+### Deprecate the `document.domain` setter
 
 The `document.domain` setter allows developers to relax the same-origin policy, complicating the fundamental security boundary we aim to maintain. The `document.domain` setter will now be opt-in via [`Origin-keyed agent clusters`](https://chromestatus.com/features/5683766104162304). The setter will remain, but the origin remains unchanged.
