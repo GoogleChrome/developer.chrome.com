@@ -6,7 +6,7 @@ authors:
   - jecelynyeen
 date: 2023-04-28
 description: ""
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GJvLUWB0oNIje3SXYusK.jpg'
+hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/deVc0yGGerSjHtSI3Drw.jpg'
 alt: ''
 tags:
   - new-in-devtools
