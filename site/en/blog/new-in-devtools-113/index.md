@@ -141,7 +141,7 @@ Chromium issue: [1424345](https://crbug.com/1424345).
 
 As early as [Chrome 58](/blog/devtools-javascript-cpu-profile-migration-2/), the DevTools team planned to eventually deprecate the **JavaScript Profiler** and have Node.js and Deno developers use the **Performance** panel for profiling JavaScript CPU performance.
 
-This DevTools version (113) starts *phase two* of the [four-phase **JavaScript Profiler** deprecation](https://github.com/ChromeDevTools/rfcs/discussions/2#discussioncomment-5189668). During this phase, you can still open the panel but its UI is no longer available.
+DevTools version 113 starts *phase two* of the [four-phase **JavaScript Profiler** deprecation](https://github.com/ChromeDevTools/rfcs/discussions/2#discussioncomment-5189668). During this phase, you can still open the panel but its UI is no longer available.
 
 To profile CPU, click **Go to Performance panel**.
 
