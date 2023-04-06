@@ -143,7 +143,7 @@ As early as [Chrome 58](/blog/devtools-javascript-cpu-profile-migration-2/), the
 
 DevTools version 113 starts *phase two* of the [four-phase **JavaScript Profiler** deprecation](https://github.com/ChromeDevTools/rfcs/discussions/2#discussioncomment-5189668). During this phase, you can still open the panel but its UI is no longer available.
 
-To profile CPU, click **Go to Performance panel**.
+To profile CPU performance, click **Go to Performance panel**.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/1HHtEbstCweUkTAK6eYH.png", alt="JavaScript Profiler deprecation.", width="800", height="393" %}
 
