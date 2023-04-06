@@ -66,13 +66,18 @@ The DevTools team would like to express gratitude to the Nuxt, Vite, and Rollup 
 
 ## Assertions in Recorder {: #recorder }
 
-The **Recorder** panel now lets you add assertions right during recording, with all runtime data available to you.
+The **Recorder** panel now lets you add assertions right during recording, with all the runtime data available to you.
 
 To add an assertion, start a new recording, interact with your page, and click **Add assertion**. The **Recorder** inserts a step with the [`waitForElement` type](/docs/devtools/recorder/reference/#step-properties) that you can customize on the fly. Watch the video to see assertions in action on the [coffee cart demo](https://coffee-cart.app/).
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/oSTbA1gmxW9EIzZjma1W.mp4", controls="true", muted="true", class="screenshot" %}
 
-This video shows you how to assert HTML attributes (an element's `class`) and JavaScript properties (`.innerText`). Both are specified in JSON. You can also configure steps to assert, for example, conditional statements in JavaScript, number of node's children (`count`), element visibility, and more. For more information, see [Configure steps](/docs/devtools/recorder/reference/#configure-steps).
+This video shows you how to assert:
+
+- HTML attributes, for example, an element's `class`
+- JavaScript properties, for example, `.innerText`
+
+Both are specified in JSON. You can also configure steps to assert, for example, conditional statements in JavaScript, number of node's children (`count`), element visibility, and more. For more information, see [Configure steps](/docs/devtools/recorder/reference/#configure-steps).
 
 Additionally, the **Recorder** now remembers your preferred script format in the [side-by-side code view](/docs/devtools/recorder/reference/#inspect-code) and right-click step menu.
 
@@ -91,7 +96,7 @@ To help you diagnose [CSS issues](/docs/devtools/css/issues/) faster, the **Styl
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9t11Ndt8GVz1KNFxfiaY.png", alt="Invalid property and invalid property value.", width="800", height="527" %}
 
-The DevTools team would like to express gratitude to an [external contributor](https://chromium.googlesource.com/devtools/devtools-frontend/+/b1e2495635a072b0eb814b0f683bb93b8f8d92e3) for landing this improvement.
+The DevTools team would like to express gratitude to [Yisi](https://chromium.googlesource.com/devtools/devtools-frontend/+/b1e2495635a072b0eb814b0f683bb93b8f8d92e3) for landing this improvement.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/b1e2495635a072b0eb814b0f683bb93b8f8d92e3 #}
 
