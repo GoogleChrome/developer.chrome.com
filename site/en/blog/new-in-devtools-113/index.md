@@ -25,23 +25,17 @@ tags:
 
 You can now override response headers in the **Network** panel. Previously, you needed access to the actual web server to experiment with HTTP response headers.
 
-To override a header, navigate to **Network** > **Headers** > **Response Headers**, hover over a header's value, and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/k3WKQOAItcJ2pliOyD47.svg", alt="Edit.", width="24", height="24" %}.
+To override a header, navigate to **Network** > **Headers** > **Response Headers**, hover over a header's value, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/k3WKQOAItcJ2pliOyD47.svg", alt="Edit.", width="24", height="24" %} and edit it. Watch the video to see, for example, how header overrides can help you debug CORS errors.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ToaHmqIbeBcxFrsDru5r.png", alt="Hovering over a header's value.", width="800", height="600" %}
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/HbUpozi5aGi4jMShhMkH.mp4", controls="true", muted="true", class="screenshot" %}
 
-DevTools may prompt you to select a folder to store the overrides in. Select a folder and grant DevTools access to it. You can now edit the value.
+You can also add custom headers.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/FK0TTBTVcSEzQwVnAgE2.png", alt="Editing a header's value.", width="800", height="600" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/dRPqQCkvX4GT3KiFonaW.png", alt="Adding a custom header.", width="800", height="506" %}
 
-To add a custom header, scroll down to the end of the section and click **Add header**.
+To edit all overrides in a single place, edit the `.headers` file in **Sources** > **Overrides**. There, you can also click **Add override rule** to override multiple requests using wildcards (`*`).
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/BdMvlHGbQmtn6Vgs74PP.png", alt="Adding a custom header.", width="800", height="560" %}
-
-To edit all overrides in a single place, click **Header overrides** next to the **Response Headers** section. DevTools takes you to the `.headers` file.
-
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/8me5sql6VAIOfP9gHF9X.png", alt="Editing overrides.", width="800", height="471" %}
-
-There you can also click **Add override rule** to override multiple requests using wildcards (`*`).
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XSgXk86kVgdJTlEBplTc.png", alt="Editing all overrides.", width="800", height="431" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/102f7c4f25ffcdd66d800d8c4bf8dbcce7e29e79 #}
 
