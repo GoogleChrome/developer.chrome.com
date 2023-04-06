@@ -34,7 +34,6 @@ const ROOT_DIR = path.join(__dirname, '../../../dist');
  */
 const internalServerErrorHandler = (err, req, res) => {
   const locale = req.url.split(path.sep)[1];
-  console.log('internalServerErrorHandler', locale, req.url);
 
   // Properly log all errors to the console, including the stack trace
   // in order to have them debuggable in production. Downgrade known/uncritical
