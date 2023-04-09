@@ -8,11 +8,11 @@ date: 2023-03-09
 
 Manifest V3 changes how extensions handle modification of network requests. Instead of intercepting network requests and altering them at runtime with `chrome.webRequest`, your extension specifies rules that describe actions to perform when a given set of conditions is met. Do this using the [Declarative Net Request API](/docs/extensions/reference/declarativeNetRequest/).
 
-Use of the webRequest and declarativeNetRequest APIs is significantly different. Instead of replacing one function call with another, you need to rewrite your code in terms of use cases. This section walks you through that process.
+The Web Request API and the Declarative Net Request APIs are significantly different. Instead of replacing one function call with another, you need to rewrite your code in terms of use cases. This section walks you through that process.
 
 In Manifest V2, blocking web requests could significantly degrade both the performance of extensions and the performance of pages they work with. The [`webRequest` namespace](/docs/extensions/reference/webRequest) supports nine potentially blocking events, each of which takes an unlimited number of event handlers. To make matters worse, each web page is potentially blocked by multiple extensions, and the permissions required for this are invasive. Manifest V3 guards against this problem by replacing callbacks with declarative rules.
 
-This is the second of three sections describing changes needed for code that is not part of the extension service worker. It describes converting blocking web requests, used by Manifest V2, to declarative net requests, used by Manifest V3. The other two sections cover [update API calls](/docs/extensions/migrating/api-calls) needed for migrating to Manifest V3 and [improving security](/docs/extensions/migrating/improve-security).
+This is the second of three sections describing changes needed for code that is not part of the extension service worker. It describes converting blocking web requests, used by Manifest V2, to declarative net requests, used by Manifest V3. The other two sections cover [updating your code](/docs/extensions/migrating/api-calls) needed for migrating to Manifest V3 and [improving security](/docs/extensions/migrating/improve-security)..
 
 ## Update permissions {: #update-permissions }
 
@@ -37,7 +37,7 @@ The following sections describe common use cases for declarative net requests. T
 
 ### Block a single URL {: #block-a-single-url }
 
-A common use case in Manifest V2 was to block web requests using the `BeforeRequest` event in the background script. 
+A common use case in Manifest V2 was to block web requests using the `onBeforeRequest` event in the background script. 
 
 {% Compare 'worse', 'Manifest V2 background script' %}
 ```javascript
@@ -47,7 +47,7 @@ chrome.webRequest.onBeforeRequest.addListener((e) => {
 ```
 {% endCompare %}
 
-For Manifest V3, create a new declarativeNetRequest rule using the `"block"` action type. Notice the `"condition"` object in the example rule. Its `"urlFilter"` replaces the `urls` option passed to the `webRequest` listener. A `"resourceTypes"` array specifies the category of resources to block. This example blocks only the main HTML page, but you could, for example, block only fonts. 
+For Manifest V3, create a new `declarativeNetRequest` rule using the `"block"` action type. Notice the `"condition"` object in the example rule. Its `"urlFilter"` replaces the `urls` option passed to the `webRequest` listener. A `"resourceTypes"` array specifies the category of resources to block. This example blocks only the main HTML page, but you could, for example, block only fonts. 
 
 {% Compare 'better', 'Manifest V3 rule file' %}
 ```json/5-8
@@ -65,7 +65,7 @@ For Manifest V3, create a new declarativeNetRequest rule using the `"block"` act
 ```
 {% endCompare %}
 
-To make this work, you'll need to update the extension's permissions. In the `manifest.json` replace the `"webRequestBlocking"` permission with the `"declarativeNetRequest"` permission. Notice that the URL is removed from the `"permissions"` field because blocking content doesn't require host permissions. As shown above, the host or hosts that a declarative net request applies to is specified in the rule file.
+To make this work, you'll need to update the extension's permissions. In the `manifest.json` replace the `"webRequestBlocking"` permission with the `"declarativeNetRequest"` permission. Notice that the URL is removed from the `"permissions"` field because blocking content doesn't require host permissions. As shown above, the rule file specifies the host or hosts that a declarative net request applies to.
 
 If you want to try this, the code below is [available in our samples repo](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/declarativeNetRequest/url-blocker).
 
@@ -110,8 +110,6 @@ chrome.webRequest.onBeforeRequest.addListener((e) => {
 {% endCompare %}
 
 For Manifest V3, use the `"redirect"` action type. As before, `"urlFilter"` replaces the `url` option passed to the `webRequest` listener. Notice that for this example, the rule file's `"action"` object contains a `"redirect"` field containing the URL to return instead of the URL being filtered. 
-
-<!-- Redirecting for multiple URLs requires multiple rules. For an example of this see the [redirect migrate sample](). -->
 
 {% Compare 'better', 'Manifest V3 rule file' %}
 ```json/6
@@ -179,8 +177,6 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
 Manifest V3 also does this with a rule in a rule file. This time the action type is `"modifyHeaders"`. The file takes an array of `"requestHeaders"` objects specifying the headers to modify and how to modify them. Notice that the `"condition"` object only contains a `"resourceTypes"` array. It supports the same values as the previous examples.
 
 If you want to try this, the code below is [available in our samples repo](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/declarativeNetRequest/no-cookies).
-
-
 
 {% Compare 'better', 'Manifest V3 manifest.json' %}
 ```json/5-8,10

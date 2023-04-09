@@ -203,7 +203,7 @@ The [FLEDGE key/value service code](https://github.com/privacysandbox/fledge-key
 is now available. Check out the [announcement blog post](/blog/open-sourcing-fledge-key-value-service/) for the status update.
 
 For initial testing, a "[Bring Your Own Server](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#3-buyers-provide-ads-and-bidding-functions-byos-for-now)"
-model was introduced. In the long-term, adtechs will need to use the
+model was introduced. In the long-term, ad techs will need to use the
 open-source FLEDGE Key/Value services running in trusted execution
 environments.
 

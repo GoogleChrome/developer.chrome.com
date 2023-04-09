@@ -6,7 +6,7 @@ description: 'The first of three sections describing changes needed for code tha
 date: 2023-03-09
 ---
 
-This is the first of three sections describing changes needed for code that is not part of the extension service worker. This section is for required code changes that are unrelated to other issues. The next two sections cover [blocking web requests](/docs/extensions/migrating/blocking-web-requests) and [improving security](/docs/extensions/migrating/improve-security).
+This is the first of three sections describing changes needed for code that is not part of the extension service worker. This section is for required code changes that are unrelated to other issues. The next two sections cover [replacing blocking web requests](/docs/extensions/migrating/blocking-web-requests) and [improving security](/docs/extensions/migrating/improve-security).
 
 ## Replace tabs.executeScript() with scripting.executeScript() {: #replace-executescript }
 
@@ -17,8 +17,7 @@ For the `executeScript()` method you need:
 * The `"scripting"` permission.
 * Either host permissions or the `"activeTab"` permission.
 
-
-The `scripting.executeScript()` method is similar to how it worked with `tabs.executeScript()`. There are a few differences:
+The `scripting.executeScript()` method is similar to how it worked with `tabs.executeScript()`. There are a few differences.
 
 * While the old method could only take a single file, the new method can take an array of files. 
 * You also pass a [`ScriptInjection`](/docs/extensions/reference/scripting/#type-ScriptInjection) object instead of [`InjectDetails`](/docs/extensions/reference/extensionTypes/#type-InjectDetails). There are multiple differences between the two. For example, the `tabId` is now passed as a member of `ScriptInjection.target` instead of as a method argument.
@@ -107,7 +106,7 @@ In the extension service worker.
 
 ## Replace Browser Actions and Page Actions with Actions {: #replace-browser-page-actions }
 
-Browser actions and page actions were separate concepts in Manifest V2. Though they started with distinct roles, the differences between them decreased over time. In Manifest V3, these concepts are consolidated into the Action API. This requires changes in your `manifest.json` and extension code that is different from what you would have put in your Manifest V2 background script.
+Browser actions and page actions were separate concepts in Manifest V2. Though they started with distinct roles, the differences between them decreased over time. In Manifest V3, these concepts are consolidated into the [Action](/docs/extensions/reference/action/) API. This requires changes in your `manifest.json` and extension code that is different from what you would have put in your Manifest V2 background script.
 
 Actions in Manifest V3 most closely resemble browser actions; however, the `action` API does not provide `hide()` and `show()` as `pageAction` did. If you still need page actions, you can either [emulate them using declarative content](/docs/extensions/reference/action/#emulating-pageactions-with-declarativecontent) or call `enable()` or `disable()` with a tab ID. 
 

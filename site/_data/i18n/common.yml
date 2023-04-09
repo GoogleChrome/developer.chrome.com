@@ -292,5 +292,8 @@ outdated_banner:
   new_material:
     en: New material available
 
+filter_by:
+  en: 'Filter by'
+
 rss_feed:
   en: RSS feed

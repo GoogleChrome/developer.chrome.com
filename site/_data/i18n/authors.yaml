@@ -157,7 +157,7 @@ kenchris:
   title:
     en: 'Kenneth Christiansen'
   description:
-    en: 'Kenneth is an Engineer at Intel'
+    en: 'Kenneth a Principal Engineer at Intel'
 emilystark:
   title:
     en: 'Emily Stark'
@@ -1353,4 +1353,9 @@ georgiafranklin:
   title:
     en: Georgia Franklin
   description:
-    en: Product Manager, Privacy Sandbox	
+    en: Product Manager, Privacy Sandbox
+arskama:
+  title:
+    en: Arnaud (Arno) Mandy
+  description:
+    en: Arno is an Engineer at Intel
