@@ -9,7 +9,7 @@ description: >
   previously visited websites, designed so it cannot be used by
   third parties to track user browsing behavior across sites.
 date: 2022-01-27
-updated: 2022-11-01
+updated: 2023-03-14
 authors:
   - samdutton
   - kevinkiklee
@@ -22,6 +22,10 @@ This post is written for developers as a technical reference for the most
 recent iteration of the experimental FLEDGE API. A [demo](#demo) of a basic
 FLEDGE deployment is available, as are
 [API references for ad buyers and sellers](#api-reference).
+
+## Implementation status
+
+{% Partial 'privacy-sandbox/timeline/fledge.njk' %}
 
 ## What is FLEDGE? {: #what}
 
@@ -199,7 +203,7 @@ The [FLEDGE key/value service code](https://github.com/privacysandbox/fledge-key
 is now available. Check out the [announcement blog post](/blog/open-sourcing-fledge-key-value-service/) for the status update.
 
 For initial testing, a "[Bring Your Own Server](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#3-buyers-provide-ads-and-bidding-functions-byos-for-now)"
-model was introduced. In the long-term, adtechs will need to use the
+model was introduced. In the long-term, ad techs will need to use the
 open-source FLEDGE Key/Value services running in trusted execution
 environments.
 

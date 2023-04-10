@@ -46,7 +46,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 * [Miscellaneous highlights](/es/blog/new-in-devtools-110/#misc)
  #}
 
- 
+
 
 
 
@@ -134,7 +134,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 * [Mejorada previsualización de valor en línea durante la depuración](/es/blog/new-in-devtools-103/#inline-preview)
 * [Soporte para grandes bloques para autenticadores virtuales](/es/blog/new-in-devtools-103/#webauthn)
 * [Nuevos atajos de teclado en el panel Fuentes](/es/blog/new-in-devtools-103/#shortcuts)
-* [Mejoras en los sourcemaps](/es/blog/new-in-devtools-103/#sourcemaps)
+* [Mejoras en los source maps](/es/blog/new-in-devtools-103/#sourcemaps)
 
 
 ### Chrome 102 {: #chrome102 }

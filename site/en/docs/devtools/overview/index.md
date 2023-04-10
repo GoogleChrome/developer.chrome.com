@@ -59,10 +59,9 @@ seriously boost your productivity.
 Simulate mobile devices.
 
 - [Device Mode][9]
-- [Test Responsive and Device-specific Viewports][10]
 - [Emulate Sensors: Geolocation & Accelerometer][11]
 
-### Elements panel {: #elements }
+### Elements panel & CSS {: #elements }
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/UjVAPTnFGxLEc5RLDwBy.png", alt="Elements Panel", width="800", height="609" %}
 
@@ -73,8 +72,11 @@ View and change the DOM and CSS.
 - [Inspect and Tweak Your Pages][14]
 - [Edit Styles][15]
 - [Edit the DOM][16]
-- [Inspect Animations][17]
+- [Find invalid, overridden, inactive, and other CSS][51]
+- [Identify potential CSS improvements][53]
+- [Emulate light/dark themes, contrast, and other CSS media features][52]
 - [Find Unused CSS][18]
+- [Inspect Animations][17]
 
 ### Console panel {: #console }
 
@@ -113,13 +115,17 @@ View and debug network activity.
 - [Network Panel Reference][32]
 - [Inspect Resources][43]
 
+### Recorder panel {: #recorder }
+
+Record, replay, and measure user flows.
+
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XKjlKjhuoccuFPCQqQ05.png", alt="Recorder panel.", width="800", height="606" %}
+
+- [Get Started][54] 
+- [Explore extensions][55]
+- [Replay beyond Recorder][56]
+
 ### Performance panel {: #performance }
-
-{% Aside %}
-
-**Note:** In Chrome 58 the Timeline panel was renamed to the Performance panel.
-
-{% endAside %}
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/nCVPdzEUA2XIY5txAG1G.png", alt="Timeline Panel", width="800", height="649" %}
 
@@ -132,12 +138,6 @@ Find ways to improve load and runtime performance.
 - [Diagnose Forced Synchronous Layouts][37]
 
 ### Memory panel {: #memory }
-
-{% Aside %}
-
-**Note:** In Chrome 58 the Profiles panel was renamed to the Memory panel.
-
-{% endAside %}
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/oR8gZtwxxhRLj77xYsWd.png", alt="Profiles Panel", width="800", height="655" %}
 
@@ -179,8 +179,7 @@ For help with using DevTools, Stack Overflow is the best channel.
 
 [Stack Overflow][47]
 
-To file bugs or feature requests on the DevTools docs, open a GitHub issue on the Web Fundamentals
-repository.
+To file bugs or feature requests on the DevTools docs, open a GitHub issue.
 
 [Docs Issues][48]
 
@@ -197,8 +196,7 @@ DevTools also has a Slack channel, but the team doesn't monitor it consistently.
 [7]: /docs/devtools/speed/get-started
 [8]: /docs/devtools/network
 [9]: /docs/devtools/device-mode
-[10]: /docs/devtools/device-mode/#viewport
-[11]: /docs/devtools/device-mode/#geolocation
+[11]: /docs/devtools/sensors/
 [12]: /docs/devtools/dom
 [13]: /docs/devtools/css
 [14]: /docs/devtools/css/#view
@@ -235,6 +233,12 @@ DevTools also has a Slack channel, but the team doesn't monitor it consistently.
 [45]: https://crbug.com/new
 [46]: https://twitter.com/ChromeDevTools
 [47]: https://stackoverflow.com/questions/ask?tags=google-chrome-devtools
-[48]: https://github.com/google/webfundamentals/issues/new
+[48]: https://github.com/GoogleChrome/developer.chrome.com/issues/new/choose
 [49]: https://chromiumdev.slack.com/messages/devtools/
 [50]: /docs/web-platform/origin-trials/#devtools
+[51]: /docs/devtools/css/issues/
+[52]: /docs/devtools/rendering/emulate-css/
+[53]: /docs/devtools/css-overview/
+[54]: /docs/devtools/recorder/
+[55]: /docs/devtools/recorder/extensions/
+[56]: /blog/extend-recorder/

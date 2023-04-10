@@ -2,9 +2,9 @@
 layout: 'layouts/blog-post.njk'
 title: Longer extension service worker lifetimes
 description: >
-  Extension service workers can now stay alive as long as they're receiving events. This increases the reliability of extension services workers, but has a pitfall you should avoid. 
+  Extension service workers can now stay alive as long as they're receiving events. This increases the reliability of extension service workers, but has a pitfall you should avoid. 
 subhead: >
-  Extension service workers can now stay alive as long as they're receiving events. This increases the reliability of extension services workers, but has a pitfall you should avoid.
+  Extension service workers can now stay alive as long as they're receiving events. This increases the reliability of extension service workers, but has a pitfall you should avoid.
 date: 2023-01-27
 authors:
   - joemedley

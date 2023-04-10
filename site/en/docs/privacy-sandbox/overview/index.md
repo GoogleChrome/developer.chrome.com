@@ -128,6 +128,7 @@ and cover a wide variety of use cases and requirements.
 400+ participants have joined W3C groups to provide input including the
 [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants) and
 the [Privacy Community Group](https://www.w3.org/community/privacycg/participants).
+
 ## Where are the Privacy Sandbox APIs available?
 
 Five API implementations are currently available for testing in Chrome.
@@ -162,6 +163,58 @@ API has an implementation status in their documentation.
 
 We publish regular announcements on the [Chrome Developers blog](/tags/privacy/)
 as APIs move from proposal to experiment to scaled availability.
+
+## How can I try Privacy Sandbox APIs that aren't yet turned on by default?
+
+As an API progresses through development in Chrome, there are multiple ways it
+may be made available for testing.
+
+-  **For a single user via command line flags**  
+   Early features may often provide a specific command line flag to allow a
+   developer to launch the browser with the new feature enabled.
+-  **For a single user via `chrome://flags`**  
+   As a feature progresses, it's often made available via an experimental flag
+   within the more accessible `chrome://flags` interface.
+   `chrome://flags#enable-experimental-web-platform-features` bundles together
+   current experimental features.
+-  **For your users, in an origin trial**  
+   Once an iteration of a new feature is code-complete and relatively stable,
+   an [origin trial](/docs/web-platform/origin-trials/) may be provided to allow
+   individual sites to turn on the feature for Chrome users on their site. If
+   an [origin trial](/docs/web-platform/origin-trials/) is available for an API you
+   want to test with your users,
+   [register for the origin trial](/origintrials/#/trials/active) and provide
+   a valid trial token with every page load.
+-  **For users of early Chrome releases**  
+   When a feature is approved to ship in a given release, it will progress
+   through each [Chrome release channel](/docs/web-platform/chrome-release-channels/),
+   including Canary and Beta, before it reaches Stable. The feature will
+   be turned on by default for all users of those channels.
+
+{% Aside 'caution' %}  
+Chrome offers users the ability to opt-out of Privacy Sandbox trials in
+browser settings. Users who opt-out will not have Privacy Sandbox features
+turned on, even on pages which provide a valid origin trial token.  
+{% endAside%}  
+
+## Will `SameSite` become irrelevant after third-party cookies are deprecated?
+
+- `SameSite=Lax` is the current default. While it does not strictly *need* to
+   be included, it's good practice to specify it for cross-browser consistency.
+- `SameSite=Strict` continues to be a more restrictive option, for cookies that
+   must only be sent when the user is already on the site. This is and remains
+   a good security practice for cookies that are part of managing particularly
+   sensitive access.
+- `SameSite=None` should continue to be sent for cross-browser consistency. However,
+   Chrome's proposed change to phase out third-party cookies would result in those
+   cookies no longer being sent as is in cross-site contexts.
+
+The exception is cookies that are modified by either the
+[CHIPS](/docs/privacy-sandbox/chips/) or
+[First-Party Sets](/docs/privacy-sandbox/first-party-sets/) proposal.
+These allow for a subset of cross-site use cases. As these proposals are
+under active discussion, the final formats and functionality may change.
+
 
 ## Engage and share feedback
 

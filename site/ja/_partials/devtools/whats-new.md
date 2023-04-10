@@ -102,7 +102,7 @@
 * [実行時に WASM のデバッグ情報をアタッチ](/ja/blog/new-in-devtools-105/#wasm)
 * [デバッグ中のライブ編集をサポート](/ja/blog/new-in-devtools-105/#live-edit)
 * [Styles ペインで @scope at-rule の閲覧と編集](/ja/blog/new-in-devtools-105/#scope)
-* [Sourcemap の改善](/ja/blog/new-in-devtools-105/#sourcemaps)
+* [Source map の改善](/ja/blog/new-in-devtools-105/#sourcemaps)
 * [その他のハイライト](/ja/blog/new-in-devtools-105/#misc)
 
 ### Chrome 104 {: #chrome104 }

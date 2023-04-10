@@ -4,23 +4,23 @@ Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no"
 
 {# $content #}
 
-{# ### Chrome 112 {: #chrome112 }
+### Chrome 112 {: #chrome112 }
 
-* [Recorder updates](/pt/blog/new-in-devtools-112/#recorder)
-* [Recorder replay extensions](/pt/blog/new-in-devtools-112/#replay-extensions)
-* [Record with pierce selectors](/pt/blog/new-in-devtools-112/#pierce-selectors)
-* [Export recordings as Puppeteer scripts with Lighthouse analysis](/pt/blog/new-in-devtools-112/#puppeteer-lighthouse)
-* [Get extensions](/pt/blog/new-in-devtools-112/#get-extensions)
-* [Elements > Styles updates](/pt/blog/new-in-devtools-112/#elements-styles)
-* [CSS documentation in the Styles pane](/pt/blog/new-in-devtools-112/#css)
-* [CSS nesting support](/pt/blog/new-in-devtools-112/#nesting)
-* [Marking logpoints and conditional breakpoints in the Console](/pt/blog/new-in-devtools-112/#logpoint)
-* [Ignore irrelevant scripts during debugging](/pt/blog/new-in-devtools-112/#ignore-list)
-* [JavaScript Profiler deprecation started](/pt/blog/new-in-devtools-112/#js-profiler-deprecation)
-* [Emulate reduced contrast](/pt/blog/new-in-devtools-112/#reduced-contrast)
+* [Atualizações do Gravador](/pt/blog/new-in-devtools-112/#recorder)
+* [Extensões de replay no Gravador](/pt/blog/new-in-devtools-112/#replay-extensions)
+* [Gravação com seletores pierce](/pt/blog/new-in-devtools-112/#pierce-selectors)
+* [Exportar gravações como um script Puppeteer com análise Lighthouse](/pt/blog/new-in-devtools-112/#puppeteer-lighthouse)
+* [Obter extensões](/pt/blog/new-in-devtools-112/#get-extensions)
+* [Elementos > Atualizações de estilos](/pt/blog/new-in-devtools-112/#elements-styles)
+* [Documentação CSS no painel Estilos](/pt/blog/new-in-devtools-112/#css)
+* [Suporte de aninhamento de CSS](/pt/blog/new-in-devtools-112/#nesting)
+* [Destaque de logpoints e breakpoints condicionais no Console](/pt/blog/new-in-devtools-112/#logpoint)
+* [Ignorar scripts irrelevantes durante a depuração](/pt/blog/new-in-devtools-112/#ignore-list)
+* [Início da descontinuação do JavaScript Profiler](/pt/blog/new-in-devtools-112/#js-profiler-deprecation)
+* [Emulação de contraste reduzido](/pt/blog/new-in-devtools-112/#reduced-contrast)
 * [Lighthouse 10](/pt/blog/new-in-devtools-112/#lighthouse)
-* [Miscellaneous highlights](/pt/blog/new-in-devtools-112/#misc)
- #}
+* [Outras novidades](/pt/blog/new-in-devtools-112/#misc)
+
 
 
 ### Chrome 111 {: #chrome111 }
@@ -46,7 +46,7 @@ Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no"
 * [Outras novidades](/pt/blog/new-in-devtools-110/#misc)
 
 
-### Chrome 109 {: #chrome109 } 
+### Chrome 109 {: #chrome109 }
 
 * [Gravador: opção "copiar como" para etapas, reprodução na página, no menu de contexto da etapa](/pt/blog/new-in-devtools-109/#recorder)
 * [Mostra os nomes das funções reais nas gravações da performance](/pt/blog/new-in-devtools-109/#performance)
@@ -101,7 +101,7 @@ Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no"
 * [Anexar informações de depuração do Wasm em tempo de execução](/pt/blog/new-in-devtools-105/#wasm)
 * [Suporta edição ao vivo durante a depuração](/pt/blog/new-in-devtools-105/#live-edit)
 * [Visualize e edite @scope em regras no painel Estilos](/pt/blog/new-in-devtools-105/#scope)
-* [Melhorias no Sourcemap](/pt/blog/new-in-devtools-105/#sourcemaps)
+* [Melhorias no Source map](/pt/blog/new-in-devtools-105/#sourcemaps)
 * [Outras mudanças](/pt/blog/new-in-devtools-105/#misc)
 
 ### Chrome 104 {: #chrome104 }
@@ -116,7 +116,7 @@ Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no"
 * [Visualize valores de non-color ao preencher automaticamente as variáveis CSS](/pt/blog/new-in-devtools-104/#css-var)
 * [Identifique os quadros de bloqueio no painel de Back/forward cache](/pt/blog/new-in-devtools-104/#bfcache)
 * [Melhorias nas sugestões de autocomplete para objetos JavaScript](/pt/blog/new-in-devtools-104/#autocomplete)
-* [Melhorias em sourcemaps](/pt/blog/new-in-devtools-104/#sourcemaps)
+* [Melhorias em source maps](/pt/blog/new-in-devtools-104/#sourcemaps)
 * [Outras melhorias](/pt/blog/new-in-devtools-104/#misc)
 
 
@@ -131,7 +131,7 @@ Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no"
 * [Visualização aprimorada do valor inline durante a depuração](/pt/blog/new-in-devtools-103/#inline-preview)
 * [Suporte a blobs grandes para autenticadores virtuais](/pt/blog/new-in-devtools-103/#webauthn)
 * [Novos atalhos de teclado no painel Sources](/pt/blog/new-in-devtools-103/#shortcuts)
-* [Melhorias nos sourcemaps](/pt/blog/new-in-devtools-103/#sourcemaps)
+* [Melhorias nos source maps](/pt/blog/new-in-devtools-103/#sourcemaps)
 
 
 ### Chrome 102 {: #chrome102 }
@@ -174,7 +174,7 @@ Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no"
 * [Novo painel API de relatórios no painel Aplicativo](/pt/blog/new-in-devtools-99/#reporting-api)
 * [Suporte para esperar até que o elemento esteja visível/clicável no painel Gravação](/pt/blog/new-in-devtools-99/#recorder)
 * [Melhor estilização, formatação e filtragem no console](/pt/blog/new-in-devtools-99/#console)
-* [Debug de extensões do Chrome com arquivos de sourcemap](/pt/blog/new-in-devtools-99/#extension)
+* [Debug de extensões do Chrome com arquivos de source map](/pt/blog/new-in-devtools-99/#extension)
 * [Árvore de pastas aprimorada no painel Fontes](/pt/blog/new-in-devtools-99/#source-tree)
 * [Exibição arquivos fontes de workers no painel Origens](/pt/blog/new-in-devtools-99/#worker-sourcemap)
 * [Atualizações na funcionalidade de tema escuro automático do Chrome](/pt/blog/new-in-devtools-99/#auto-dark-mode)
