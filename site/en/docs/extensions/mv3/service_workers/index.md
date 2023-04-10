@@ -183,7 +183,7 @@ not have an equivalent event.
 [6]: /docs/extensions/reference/runtime#event-onInstalled
 [7]: /docs/extensions/reference/contextMenus
 [8]: /docs/extensions/reference/events#filtered
-[9]: /docs/extensions/reference/extensions/tabs#event-onUpdated
+[9]: /docs/extensions/reference/tabs/#event-onUpdated
 [10]: /docs/extensions/reference/webNavigation#event-onCompleted
 [11]: /docs/extensions/reference/storage
 [12]: /docs/extensions/mv3/messaging
