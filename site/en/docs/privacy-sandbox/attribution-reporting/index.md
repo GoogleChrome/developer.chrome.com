@@ -276,36 +276,19 @@ conversion on an advertiser site.
 
 Summary reports are generated as follows:
 
-*  When the user clicks or sees a specially configured ad, the browser—on the user's local device—records this event, alongside the attribution configuration data that was specified.<br>
-*  Later on, when the user converts, the browser matches this detailed clicks or views event ("attribution source event") with detailed conversion data ("attribution trigger data") defined by an ad tech company, following a specific logic that is defined by the ad tech. The output of this process is an aggregatable report.<br>
-*  Aggregatable reports are encrypted by the browser and sent to the ad tech server. From the ad tech server, the aggregatable reports are sent to the aggregation service to produce a summary report.<br>
+*  A user clicks or views a specially configured ad. The browser—on the user's local device—records this event, alongside pre-specified attribution configuration data.
+*  Later on, when the user converts, the browser matches this detailed click or view event (known as the _attribution source event_) with detailed conversion data (known as _attribution trigger data_). The dimensions of detail captured are pre-defined by an ad tech company, and the browser follows specific logic that is defined by the ad tech. The browser outputs this data in an _aggregatable report_.
+*  Aggregatable reports are encrypted by the browser and sent to an ad tech server. From the ad tech server, the aggregatable reports are sent to the [aggregation service](/docs/privacy-sandbox/aggregation-service/) to produce a summary report.
 *  Summary reports are then made available to the ad tech. Note that summary reports are not delayed to the same extent as event-level reports.
 
-
-{% Details %}
-{% DetailsSummary 'h3' %}
-How it works in detail: aggregate reports
-{% endDetailsSummary %}
-
-Ad links can be configured with attributes that are specific to ad conversions.
-
-When the user clicks or sees a specially configured ad, the browser—on the user's local
-device—records this event, alongside the attribution configuration data that was specified.
-
-Ad tech-defined code is then executed within a worklet to define contributions, namely joints of
-ad-side and conversion-side data.
-
-These contributions (raw reports) are sent encrypted to an ad tech server, and
-then over to aggregation services that will compute aggregate reports in a
-[privacy-preserving](#privacy) way.
-
-Note that aggregate reports are not be delayed to the same extent as event-level reports.
-
-{% endDetails %}
+Read more about [summary reports](/docs/privacy-sandbox/summary-reports/).
 
 ## Privacy
 
-### Overview
+Unlike third-party cookies, the Attribution Reporting API
+allows advertising companies to gain insights into
+conversions **without tracking an individual's activity
+across sites**.
 
 Let's take a person named Bob. Bob sees an ad while reading
 the news on `news.example`. One week later, Bob buys shoes on
@@ -324,22 +307,19 @@ include purchases, activity, and credit card information on
 ad conversions. But it hinders user privacy:
 Bob's activity is tracked across sites with a high level of detail.
 
-Unlike third-party cookies, the Attribution Reporting API
-allows advertising companies to gain insights into
-conversions **without tracking an individual's activity
-across sites**. A small amount of information is joined
-across sites&mdash;enough to measure conversions, but not
-enough to track Bob's activity across sites in detail. Bob's
-activity on `news.example` and on `shoes.example` remains
-separate.
-
 {% Img
   src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/aurePszyAGz9Osu3G0XN.jpg",
   alt="Side-by-side view of today's web (joined identity) and tomorrow's web (partitioned identity)",
   width="800", height="314"
 %}
 
-### In detail
+A small amount of information is joined
+across sites&mdash;enough to measure conversions, but not
+enough to track Bob's activity across sites in detail. Bob's
+activity on `news.example` and on `shoes.example` remains
+separate.
+
+### Protections in each report type
 
 **Event-level reports** link an ad-side identifier with a small amount of
 conversion-side data. While they do provide cross-site information about a
@@ -357,6 +337,7 @@ event-level and aggregate reports.
 <figure>
 {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/mDdo2XLyGLBCAlgH7MPZ.png", alt="", width="800", height="1237" %}
 </figure>
+
 {% Details %}
 {% DetailsSummary 'h3' %}
 In detail: event-level reports and privacy
