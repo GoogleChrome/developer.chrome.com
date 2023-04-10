@@ -78,7 +78,7 @@ Nesting can help with:
 * Reducing file size.
 * Refactoring.
 
-Checkout [this article](/articles/css-nesting/) for tips to make the most of CSS nesting and you can find the support for nesting in devtools [here](blog/new-in-devtools-112/#nesting).
+Checkout [this article](/articles/css-nesting/) for tips to make the most of CSS nesting and you can find the support for nesting in devtools [here](/blog/new-in-devtools-112/#nesting).
 
 ## Algorithm update for `<dialog>` initial focus. {: #dialog }
 
