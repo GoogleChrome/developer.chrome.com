@@ -150,4 +150,4 @@ Manifest V3 disallows certain content security policy values in the `"extension_
 Content security policy values for `sandbox` have no such new restrictions.
 
 
-[mdn-cdn]: https://developer.mozilla.org/en-US/docs/Glossary/CDN
+[mdn-cdn]: https://developer.mozilla.org/docs/Glossary/CDN
