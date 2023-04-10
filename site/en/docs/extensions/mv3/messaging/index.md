@@ -23,7 +23,7 @@ messages][section-external] section.
 ## Simple one-time requests {: #simple }
 
 If you only need to send a single message to another part of your extension (and optionally get a
-response back), use the simplified [runtime.sendMessage()][runtime-send-msg] method or [tabs.sendMessage()][tabs-send-msg]
+response back), use the simplified [`runtime.sendMessage()`][runtime-send-msg] method or [`tabs.sendMessage()`][tabs-send-msg]
 method. This lets you send a one-time JSON-serializable message from a content script to the
 extension, or vice versa. To handle the response, use the returned Promise. For backward
 compatibility, you can alternatively pass a callback as the last argument. You cannot use both a
@@ -313,7 +313,7 @@ chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
 });
 ```
 
-
+[mdn-promise]: https://developer.mozilla.org/docs/Learn/JavaScript/Asynchronous/Promises
 [native-client]: /docs/extensions/mv3/nativeMessaging/#native-messaging-client
 [native-host]: /docs/extensions/mv3/nativeMessaging/#native-messaging-host
 [native-messaging]: /docs/extensions/mv3/nativeMessaging/
