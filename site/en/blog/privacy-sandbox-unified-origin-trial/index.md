@@ -240,7 +240,7 @@ Check for the `attributionReporting` object in the `window` and
 the Permissions Policy for "attribution-reporting".
 
 ```javascript
-if ('attributionReporting' in window && document.featurePolicy.allowsFeature('attribution-reporting')) {
+if (document.featurePolicy.allowsFeature('attribution-reporting')) {
   // Attribution Reporting API enabled
 }
 ```
