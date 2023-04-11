@@ -91,7 +91,7 @@ Chromium issue: [1423624](https://crbug.com/1423624).
 
 ## CSS improvements in Elements > Styles {: #css }
 
-### Invalid CSS properties and values
+### Invalid CSS properties and values {: #invalid-css }
 
 To help you diagnose [CSS issues](/docs/devtools/css/issues/) faster, the **Styles** pane now crosses out:
 
@@ -104,7 +104,7 @@ The DevTools team would like to express gratitude to [Yisi](https://chromium.goo
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/b1e2495635a072b0eb814b0f683bb93b8f8d92e3 #}
 
-### Links to key frames in the animation shorthand property
+### Links to key frames in the animation shorthand property {: #animation-key-frames }
 
 The [`animation` shorthand CSS property](https://developer.mozilla.org/docs/Web/CSS/animation) now contains links to the corresponding [`@keyframes` at-rules](https://developer.mozilla.org/docs/Web/CSS/@keyframes), so you can navigate the **Styles** pane faster.
 
