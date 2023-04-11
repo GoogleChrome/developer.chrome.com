@@ -95,8 +95,8 @@ Chromium issue: [1423624](https://crbug.com/1423624).
 
 To help you diagnose [CSS issues](/docs/devtools/css/issues/) faster, the **Styles** pane now crosses out:
 
-- An entire CSS declaration (property *and* value) in case the [CSS property is invalid](/docs/devtools/css/issues/#invalid).
-- Just the value in case the CSS property is valid but the value isn't.
+- An entire CSS declaration (property *and* value) when the [CSS property is invalid](/docs/devtools/css/issues/#invalid).
+- Just the value when the CSS property is valid but the value is invalid.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/25gZlN9PjK8HosfW1ZGm.png", alt="Invalid property name and invalid property value.", width="800", height="582" %}
 
