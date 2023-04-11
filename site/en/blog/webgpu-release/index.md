@@ -39,7 +39,7 @@ WebGPU is currently a work-in-progress in [Firefox](https://hacks.mozilla.org/20
 ## Library support
 
 Many widely used WebGL libraries are already in the process of implementing WebGPU support or have already done so. This means that using WebGPU may only require making a single line change:
-- [Babylon.js](https://babylonjs.com/) has full WebGPU support already, see [demo](https://playground.babylonjs.com/#YX6IB8#73).
+- [Babylon.js](https://doc.babylonjs.com/setup/support/webGPU) has full WebGPU support already.
 - [PlayCanvas](https://blog.playcanvas.com/initial-webgpu-support-lands-in-playcanvas-engine-1-62/) announced initial WebGPU support.
 - [TensorFlow.js](https://www.npmjs.com/package/@tensorflow/tfjs-backend-webgpu) supports WebGPU-optimized versions of most operators.
 - [Three.js](https://threejs.org) WebGPU support is underway, see [examples](https://threejs.org/examples/?q=webgpu#webgpu_particles).
