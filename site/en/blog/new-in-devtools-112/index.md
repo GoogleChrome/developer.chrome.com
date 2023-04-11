@@ -15,8 +15,7 @@ tags:
 ---
 
 {% Partial 'devtools/banner.md' %}
-
-*No 'What's new in DevTools' video for this release. Check out the latest DevTools Tips video to learn [how to identify and fix CSS issues with the Styles pane](https://youtu.be/iuZx0kHS0Xs).*
+{% YouTube id='CrSmjooOEiE' %}
 
 <!-- $contentStart -->
 
