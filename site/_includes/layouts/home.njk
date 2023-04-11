@@ -31,10 +31,23 @@
         color: #fff;
         font-size: 2em;
       }
-
       .hero-card .material-button {
         color: #000;
         background-color: #ccc;
+      }
+
+      @media screen and (max-width: 859px) {
+        .hero-card { 
+          background-position: top center;
+          background-size: 80%;
+        }
+
+        .hero-card .hero-card__inner div:first-child:before {
+          content: "";
+          display: block;
+          width: 100%;
+          padding-top: 80%;
+        }
       }
      </style>
     {{ heroCard(
