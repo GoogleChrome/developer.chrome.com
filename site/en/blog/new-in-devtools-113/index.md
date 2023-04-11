@@ -4,7 +4,7 @@ title: "What's New in DevTools (Chrome 113)"
 authors:
   - sofiayem
   - jecelynyeen
-date: 2023-04-28
+date: 2023-04-11
 description: ""
 hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/deVc0yGGerSjHtSI3Drw.jpg'
 alt: ''
