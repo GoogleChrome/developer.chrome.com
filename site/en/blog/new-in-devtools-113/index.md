@@ -23,7 +23,7 @@ tags:
 
 ## Override network response headers {: #network }
 
-You can now override response headers in the **Network** panel. Previously, you needed access to the actual web server to experiment with HTTP response headers.
+You can now override response headers in the **Network** panel. Previously, you needed access to the web server to experiment with HTTP response headers.
 
 With response header overrides, you can locally prototype fixes for various headers, including but not limited to:
 
