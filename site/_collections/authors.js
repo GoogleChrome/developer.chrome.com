@@ -44,6 +44,7 @@ module.exports = collections => {
           authors[authorId].title = `i18n.authors.${authorId}.title`;
           authors[authorId].key = authorId;
           authors[authorId].url = `/authors/${authorId}/`;
+          authors[authorId].rss = `/authors/${authorId}/feed.xml`;
 
           authors[authorId].image =
             authorsData[authorId].image || site.defaultAvatarImg;
