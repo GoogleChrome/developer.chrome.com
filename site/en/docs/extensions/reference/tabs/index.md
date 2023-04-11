@@ -242,6 +242,20 @@ populates chrome.runtime.lastError is not unchecked.
   </web-tab>
 </web-tabs>
 
+### Pass a message to a selected tab's content script
+
+This example demonstrates how an extension's service worker can communicate with content scripts in specific browser tabs using `tabs.sendMessage`.
+
+```js
+function messagePasser(messageInfo) {
+const [tab] = await chrome.tabs.query({active: true, lastFocusedWindow: true});
+  const response = await chrome.tabs.sendMessage(tab.id, messageInfo);
+  // do something with response here, not outside the function
+  console.log(response);
+}
+```
+
+
 ## Extension examples {: #more-samples}
 
 For more Tabs API extensions demos, explore any of the following:
