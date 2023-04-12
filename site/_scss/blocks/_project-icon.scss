@@ -27,42 +27,35 @@
   justify-content: center;
   position: relative;
   transform-style: preserve-3d;  // only needed for Firefox
+  transition: transform 0.4s;
   width: 128px;
 
-  &::before,
-  &::after {
-    background-color: inherit;
-    border-radius: 6px;
-    bottom: 0;
-    content: '';
-    display: block;
+  &.cover-last,
+  &.cover-mid {
+    background-image: none;
     left: 0;
     position: absolute;
-    right: 0;
     top: 0;
-    transition: transform 0.4s;
   }
 
-  &::before {
-    filter: saturate(90%) contrast(0.9) brightness(1.4);
-    transform: translate3D(0, 0, -1rem) scale(0.95);
-    z-index: -1;
-  }
-
-  &::after {
+  &.cover-last {
     filter: saturate(50%) contrast(0.7) brightness(2);
     transform: translate3D(0, 0, -2rem) scale(0.9);
-    z-index: -2;
+  }
+
+  &.cover-mid {
+    filter: saturate(90%) contrast(0.9) brightness(1.4);
+    transform: translate3D(0, 0, -1rem) scale(0.95);
   }
 }
 
 .project-icon:hover {
   .project-icon__cover {
-    &::before {
+    &.cover-mid {
       transform: translate3D(0, 0, -0.25em) scale(1);
     }
 
-    &::after {
+    &.cover-last {
       transform: translate3D(0, 0, -0.5em) scale(1);
     }
   }
