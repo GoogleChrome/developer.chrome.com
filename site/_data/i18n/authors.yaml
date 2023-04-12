@@ -571,6 +571,16 @@ reillyg:
     pt: Engenheiro de software no Google Chrome com foco em APIs de hardware
     ru: Инженер-программист в команде Google Chrome, специализирующийся на API для работы с устройствами
     zh: 专注于硬件 API 的 Google Chrome 软件工程师
+nattestad:
+  title:
+    en: Thomas Nattestad
+  description:
+    en: Product Manager at Google
+adamzielinski:
+  title:
+    en: Adam Zieliński
+  description:
+    en: WordPress core committer at Automattic
 cwallez:
   title:
     en: Corentin Wallez
