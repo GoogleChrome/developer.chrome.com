@@ -71,7 +71,7 @@ To export a user flow:
     - **@puppeteer/replay**. Download the recording as a [Puppeteer Replay](https://github.com/puppeteer/replay) script.
     - **Puppeteer**. Download the recording as a [Puppeteer](/docs/puppeteer/) script.
     - **Puppeteer (including Lighthouse analysis)**. Download the recording as a [Puppeteer](/docs/puppeteer/) script with an embedded [Lighthouse](/docs/lighthouse/) analysis.
-    - One or more options provided by [Recorder Extensions](//docs/devtools/recorder/extensions/#export-extensions).
+    - One or more options provided by [Recorder Extensions](/docs/devtools/recorder/extensions/#export-extensions).
 1. Save the file.
 
 You can do the following with each default export option:
