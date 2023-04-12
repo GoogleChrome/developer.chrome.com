@@ -1,6 +1,6 @@
 ---
 layout: layouts/blog-post.njk
-title: Working with the industry to evolve CHIPS
+title: CHIPS の進化に向けた業界との共同作業
 subhead: |2
 
   Exploring two challenges that the Chrome team faced in implementing CHIPS and how community feedback played a key role in evolving the proposal design.
@@ -12,62 +12,59 @@ authors:
   - mihajlija
   - jney
 hero: image/udVScdcCFAdRjZwFdLk2jWAFQyr1/Rr2cBdWZprYKZQrJI8cw.png
-alt: |2
-
-  Working with the industry to evolve CHIPS.
+alt: CHIPS の進化に向けた業界との共同作業。
 ---
 
 [Cookies having Independent Partitioned State（CHIPS）](/docs/privacy-sandbox/chips/)は、開発者がトップレベル サイトごとに個別の Cookie ジャーを使用して、Cookie を「パーティション化された」ストレージにオプトインできるようにするプライバシー サンドボックス テクノロジーです。<br> CHIPS のユースケースの例には、サードパーティのチャット ウィジェット、マップの埋め込み、サブリソース CDN の負荷分散、ヘッドレス CMS プロバイダーなど、単一のトップレベル サイトでのユーザーのアクティビティを対象とするセッションまたは永続的な状態の概念がクロスサイト サブリソースに必要となるシナリオが含まれます。
 
-CHIPS is being developed with the goal to become an open web standard. It is under discussion in the PrivacyCG and has had an origin trial for 7 months during which the Chrome team has received helpful feedback. During development the team worked with key stakeholders to explore that feedback, resulting in an updated design that better serves the web ecosystem.
+CHIPS は、オープンな Web 標準になることを目標に開発されています。これは PrivacyCG で議論されており、Chrome チームは 7 か月に渡るオリジン トライアルの期間中に有益なフィードバックを集めています。開発では、主要関係者との協力を通じてそのフィードバックを調査し、ウェブエコシステムにより良いサービスを提供するようにデザインを更新しました。
 
-Let's explore two challenges that the Chrome team faced in implementing CHIPS and how community feedback played a key role in evolving the proposal design.
+では、Chrome チームが CHIPS を実装する際に直面した 2 つの課題と、提案のデザインを進化させる上でコミュニティからのフィードバックがどれほど重要な役割を果たしたかについて探ってみましょう。
 
-## Removing the host-prefix and no `Domain` requirement
+## host- プレフィックスと `Domain` 禁止要件の削除
 
-To encourage good security practices, CHIPS design requires that cookies only be set by and sent over secure protocols and that partitioned cookies must be set with `Secure`.
+適切なセキュリティ実践を促進するために、CHIPS の設計では、Cookie の設定と送信には安全なプロトコルのみを使用し、パーティション化された Cookie に `Secure` を設定することが要求されています。
 
-Along with these requirements, the initial proposal disallowed the `Domain` attribute on partitioned cookies. Omitting `Domain` on cookies prevented sharing them between different third-party subdomains within a partition.
+最初の提案では、これらの要件のほかに、パーティション化された Cookie の `Domain` 属性を許可していませんでした。Cookie で `Domain` を省略すると、パーティション内の異なるサードパーティ サブドメイン間で Cookie を共有できなくなっていました。
 
-During the origin trial, the Chrome team [heard from partners and other stakeholders](https://github.com/privacycg/CHIPS/issues/30) that the no-domain requirement made it difficult for sites with subdomains to implement CHIPS. For example, it would make it harder for `shop.example.com` and `pay.example.com` to share partitioned cookie jars. In other [cases, it made authentication flows difficult in embedded contexts](https://github.com/privacycg/CHIPS/issues/39).
+オリジン トライアル中、Chrome チームはパートナーやその他の関係者から、[Domain 禁止要件により、サブドメインを持つサイトで CHIPS を実装するのが難しくなったとの報告](https://github.com/privacycg/CHIPS/issues/30)を受けました。たとえば、`shop.example.com` と `pay.example.com` では、パーティション化された  Cookie ジャーの共有が困難になります。他には、[埋め込みのコンテキストでの認証フローが困難になったというケース](https://github.com/privacycg/CHIPS/issues/39)もありました。
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/P8OeJqoGqjW8oZLTWmr5.png", alt="Diagram showing sites pay.example.com and shop.example.com", width="800", height="224" %}
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/P8OeJqoGqjW8oZLTWmr5.png", alt="pay.example.com と shop.example.com サイトを示す図", width="800", height="224" %}
 
-The Chrome team evaluated this feedback and concluded that removing the no-domain requirement would not create privacy challenges, but it would improve usability. In response, the CHIPS product team opened a discussion on [GitHub](https://github.com/privacycg/CHIPS/issues/43), inviting more feedback about removing this requirement. Several companies that were testing CHIPS responded and commented publicly about the importance of this change for their use case.
+Chrome チームではこのフィードバックを評価し、Domain 禁止要件を削除してもプライバシーの問題は発生しないが、使いやすさが向上すると結論付けました。それに応じて、CHIPS プロダクトチームは [GitHub](https://github.com/privacycg/CHIPS/issues/43) でディスカッションを開始し、この要件の削除についてさらに多くのフィードバックを求めました。CHIPS をテストしていたいくつかの企業から、自社のユースケースにおけるこの変更の重要性についての回答と公式コメントをいただきました。
 
-Chrome took the feedback to the W3C's Privacy Community Group and presented the updated proposal–Firefox and Edge approved the change to and Safari didn't raise any concerns. The following day, the Chrome team updated [Blink-Dev](https://groups.google.com/a/chromium.org/g/blink-dev/c/kZRtetS8jsY/m/ppK4kDbqAwAJ?utm_medium=email&utm_source=footer) and presented the plan to remove the requirement on the [CHIPS Github repository](https://github.com/privacycg/CHIPS/issues/47).
+Chrome はこのフィードバックを W3C の Privacy Community Group に提出し、提案の更新を提示しました。Firefox と Edge は変更を承認し、Safari は何の懸念も提起しなかったため、翌日、Chrome チームは [Blink-Dev](https://groups.google.com/a/chromium.org/g/blink-dev/c/kZRtetS8jsY/m/ppK4kDbqAwAJ?utm_medium=email&utm_source=footer) を更新し、[CHIPS Github リポジトリ](https://github.com/privacycg/CHIPS/issues/47)でこの要件を削除する計画を提示しました。
 
-The CHIPS team initially proposed this requirement to guarantee that sites do not receive cross-site cookies from any malicious or compromised subdomains, and mitigate the possibility of using Domain cookies as a channel to leak data across subdomains.
+CHIPS チームは当初、悪意のあるサブドメインや侵害されたサブドメインからサイトがクロスサイト Cookie を受信しないことを保証し、Domain Cookie をチャンネルとして使用してサブドメイン間でデータ漏洩の可能性を軽減するために、この要件を提案しました。
 
-While this provided additional security benefits, [Tableau highlighted](https://github.com/privacycg/CHIPS/issues/30) that it presented challenges for the adoption of CHIPS because some current application architectures rely on sharing cookies between subdomains.
+この提案によってセキュリティ上のメリットがさらにもたらされましたが、一部の現在のアプリケーション アーキテクチャがサブドメイン間で Cookie を共有することに依存しているため、CHIPS の採用には課題があることを [Tableau が強調](https://github.com/privacycg/CHIPS/issues/30)しました。
 
-After Chrome made this change, Tableau, the company behind the visual analytics platform now owned by Salesforce, [shared](https://github.com/privacycg/CHIPS/issues/30#issuecomment-1104225686):
+Chrome がこの変更を行った後、現在 Salesforce が所有するビジュアル分析プラットフォームを提供する Tableau は次のように [述べています](https://github.com/privacycg/CHIPS/issues/30#issuecomment-1104225686)。
 
-{% Blockquote 'Lee Graber, Software Engineering Architect, Tableau' %} This removal of the naming change makes the requirement much more inline with the previous changes to add the `SameSite=None` attribute and so a more 'known' quantity. We appreciate Google hearing the feedback, looking through the implications, and making the change to help support easier transitions. {% endBlockquote %}
+{% Blockquote 'Lee Graber, Software Engineering Architect, Tableau' %} この命名変更の削除により、`SameSite=None` 属性を追加し、より「既知の」数量を追加するという以前の変更と要件がより一致するようになります。Google がフィードバックを聞き入れ、潜在的な影響を検討し、より簡単な移行をサポートするために変更してくれたことに感謝します。 {% endBlockquote %}
 
-Through this process, CHIPS was made easier to implement for stakeholders while preserving privacy for users.
+このプロセスを通じて、CHIPS は、ユーザーのプライバシーを保護しながら、関係者にとってより簡単に実装できるようになりました。
 
-## Moving from a static to dynamic cookie limit
+## 静的から動的への Cookie 制限の移行
 
-The other challenge in implementing CHIPS was the static cookie limit.
- To prevent a large memory footprint for cookies, the initial design proposed a numeric limit of 10 cookies per-site per-partition.
+CHIPS の実装におけるもう 1 つの課題は、静的 Cookie の制限でした。<br> Cookie のメモリ フットプリントが大きくなるのを防ぐために、最初の設計では、サイトごと、パーティションごとに 10 個の Cookie の数値制限が提案されていました。
 
-Akamai shared [public feedback](https://github.com/privacycg/CHIPS/issues/48) that the proposed limit for partitioned cookies may not be sufficient for services like CDNs that offer top-level domains to host their customers' content (such as customer.cdn.xyz). For example, customer1.cdn.xyz and customer2.cdn.xyz could both deliver third-party content and they could each set several of their own cookies. If multiple customer sites like this are embedded on another website, they may hit the 10 cookies per partition limit.
+Akamai は、顧客のコンテンツ（customer.cdn.xyz など）をホストするためのトップレベル ドメインを提供する CDN などのサービスには、提案されているパーティション化された Cookie の制限では不十分である可能性があるという[公開フィードバック](https://github.com/privacycg/CHIPS/issues/48)を提出しました。たとえば、customer1.cdn.xyz と customer2.cdn.xyz の両方はサードパーティコンテンツを配信し、それぞれが独自の Cookie を複数設定できます。このような複数の顧客サイトが別のウェブサイトに埋め込まれている場合、パーティションあたり 10 個の Cookie 数制限に達する可能性があります。
 
-The Chrome team heard similar feedback in other forums, across partner meetings and W3C discussions, so they considered the best ways to solve the challenge that the cookie limit presented in these use cases.
+Chrome チームは、他のフォーラム、パートナー ミーティング、W3C ディスカッションから同様のフィードバックを受け取ったことから、これらのユースケースで Cookie の制限がもたらす課題を解決する最善の方法を検討しました。
 
-<figure> {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/cLVE4czgWDZPY9lz1IcH.png", alt="Diagram showing the maximum number of SameSite=None cookies a single domain has on clients' machines", width="800", height="457" %}   <figcaption>Diagram showing the maximum number of SameSite=None cookies a single domain has on clients' machines</figcaption> </figure>
+<figure>{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/cLVE4czgWDZPY9lz1IcH.png", alt="単一のドメインがクライアントマシン上に持つ SameSite=None Cookie の最大数を示す図", width="800", height="457" %} <figcaption>単一のドメインがクライアントのマシン上に持つ SameSite=None Cookie の最大数を示す図</figcaption></figure>
 
-After considering how to incorporate community feedback, Chrome presented an updated idea at [TPAC 2022](https://drive.google.com/file/d/1wSUfOb7BIjtmsO6TdxyBMmw3RUQqCtGa/view), suggesting that CHIPS move from a *static* 10 cookie limit to a _dynamic _10 kb limit based on memory. The analysis showed that this change should cover 99% of use cases on the web and would uphold the privacy principles that Chrome was trying to achieve (limiting too much information shared about users cross sites) while still maintaining key uses.
+コミュニティのフィードバックを取り込む方法を検討した後、Chrome は [TPAC 2022](https://drive.google.com/file/d/1wSUfOb7BIjtmsO6TdxyBMmw3RUQqCtGa/view) で最新のアイデアを発表し、CHIPS が *静的*な 10 個の Cookie 制限からメモリに基づく _動的_ な 10 kb の制限に移行することを提案しました。分析では、この変更によってウェブ上のユースケースの 99% がカバーされるはずであり、主要な用途を維持したまま、Chrome が達成しようとしていたプライバシー原則（サイト間で共有されるユーザーに関する過度の情報を制限する）を支持するだろうということが分かりました。
 
-Other browser vendors [weighed in](https://github.com/privacycg/CHIPS/issues/48#issuecomment-1271611177) saying that they agreed with the updated solution, which was important for ensuring CHIPS maintained cross-browser support in the PrivacyCG.
+他のブラウザ ベンダーは、PrivacyCG で CHIPS がクロスブラウザ サポートを維持するために重要な、最新のソリューションに同意したと[述べています](https://github.com/privacycg/CHIPS/issues/48#issuecomment-1271611177)。
 
-As a result, Chrome [adopted](https://github.com/chromium/chromium/commit/8be338400e94964708796d2be6afe071233c0f6f) the new limit and incorporated the solution into the CHIPS design.
+その結果、Chrome は新しい制限を[採用](https://github.com/chromium/chromium/commit/8be338400e94964708796d2be6afe071233c0f6f)し、そのソリューションを CHIPS 設計に組み込むこととなりました。
 
 ## Working with the industry
 
-We've heard from many partners throughout the development of CHIPS and working together has been vital in the effort to improve privacy on the web.
+ウェブ上のプライバシーを改善する取り組みでは、CHIPS の開発を通じて多くのパートナーから意見を聞き、協力し合うことが不可欠です。
 
-{% Blockquote 'Martin Meyer, Senior Architect at Akamai Technologies' %} Akamai enjoys a cooperative relationship on several fronts with other industry leaders like Google. The feedback we provided in the case of the CHIPS program may seem like a minor detail, but the change will go a long way to ensuring minimal negative impact to good use cases while still achieving the end goal. Our respective organizations are working to make the internet faster and more secure in our own ways, and the entire internet is better off when we work together. {% endBlockquote %}
+{% Blockquote 'Martin Meyer, Senior Architect at Akamai Technologies' %} Akamai は、Google などの他の業界リーダーといくつかの面で協力関係を築いています。CHIPS プログラムについて提供したフィードバックは些細なことのように思えるかもしれませんが、この変更は、最終的な目標を達成しながら、優れたユースケースへの悪影響を最小限に抑えるのに大いに役立ちます。各組織が独自の方法でインターネットをより高速かつ安全にするために取り組んでいますが、共に協力することでインターネット全体をさらに良いものに作り上げることが可能です。 {% endBlockquote %}
 
-CHIPS has shown that feedback from the ecosystem is essential for improving technologies in the Privacy Sandbox. Open web conversations in GitHub, W3C meetings, and ongoing engagement with the Chrome team directly contributed to changes that have now been rolled out in Chrome stable. The Chrome team is eager to hear this feedback across a range of proposals, and it makes a huge difference for how technologies are developed and rolled out on the web.
+CHIPS は、プライバシー サンドボックスのテクノロジーを改善するには、エコシステムからのフィードバックが不可欠であることを示しました。GitHub でのオープンなウェブに関する対話、W3C ミーティング、および Chrome チームとの継続的なエンゲージメントが、現在 Chrome 安定版で展開されている変更に直接貢献しました。Chrome チームでは、さまざまな提案についてもこのようなフィードバックをお待ちしております。このフィードバックは、テクノロジーの開発方法とウェブ上での展開方法に大きく貢献します。
