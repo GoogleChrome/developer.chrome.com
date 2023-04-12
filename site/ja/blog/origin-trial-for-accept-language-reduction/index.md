@@ -15,7 +15,7 @@ Accept-Language の情報量削減は、[`Accept-Language`](https://developer.mo
 
 [Chrome 109](https://chromiumdash.appspot.com/schedule) ベータ版より、Accept-Language の情報量削減の[オリジントライアル](/origintrials/#/view_trial/-7166352907053301759)を開始し、削減された `Accept-Language` ヘッダーをサイトが受け取ることを選択できるようにします。これにより、削減された `Accept-Language` が Chrome の将来のリリースでデフォルトの動作になる前に、サイトがイシューを発見して修正できるようになります。安定したユーザー数に対して公開される前に機能をテストするには、Chrome 109 のリリース日（[現時点では 2023 年 1 月 10 日予定](https://chromiumdash.appspot.com/schedule)）の前に必ずオプトインしてテストしてください。
 
-Check out the examples of `Accept-Language` header before and after the reduction below.
+以下は削減前後の`Accept-Language`ヘッダーの例です。
 
 {% Compare 'worse', 'current' %}
 
@@ -35,68 +35,68 @@ Accept-Language: en-GB
 
 以下は、オリジントライアルの概要と今後の予定です。[Accept-Language の情報量削減 GitHub リポジトリ](https://github.com/Tanych/accept-language)で、この変更またはオリジントライアル中に見つかったイシューに関するフィードバックを共有できます。
 
-## What is Accept-Language?
+## Accept-Language とは？
 
-The [Accept-Language](https://developer.mozilla.org/docs/Web/HTTP/Headers/Accept-Language) string is shared on every HTTP request and exposed in JavaScript to all resources loaded by the browser. Currently, it contains all of the user's preferred languages.
+[Accept-Language](https://developer.mozilla.org/docs/Web/HTTP/Headers/Accept-Language) 文字列はすべての HTTP リクエストで共有され、ブラウザによって読み込まれたすべてのリソースに JavaScript で公開されます。現在、ユーザーの優先言語がすべて含まれています。
 
-## Why is Accept-Language being reduced?
+## Accept-Language が削減される理由
 
 Accept-Language の情報量削減は、Chrome ブラウザにおけるパッシブフィンガープリンティングの攻撃サーフェスを削減する取り組みです。
 
-Currently, the `Accept-Language` header is shared by default on every HTTP request and exposed in JavaScript to all resources loaded by the browser. It contains all language preferences of the user. Rather than the browser sending the full list of languages that the user has configured in case sites wish to provide multilingual content, we are introducing a new way for sites to indicate multilingual content and the browser will take responsibility to do the language negotiation and display the preferred language.
+現在、`Accept-Language` ヘッダーはデフォルトですべての HTTP リクエストで共有され、ブラウザによって読み込まれたすべてのリソースに JavaScript で公開されます。これには、ユーザーのすべての言語設定が含まれています。サイトが多言語コンテンツを提供する場合に、ブラウザがユーザー構成の完全な言語リストを送信するのではなく、サイトが多言語コンテンツを示し、ブラウザが言語ネゴシエーションを行って優先言語を表示するタスクを担当する、新しい手法を導入しています。
 
-Another reason is that many sites may not be using the `Accept-Language` headers for language negotiation at all (for example, [one study](https://wonderproxy.com/blog/accept-language/) indicates only 7.2% of the top 10,000 sites use `Accept-Language`). Chrome Incognito mode already reduced the `Accept-Language` to one.
+もう 1 つに、多くのサイトが言語ネゴシエーションに `Accept-Language` ヘッダーをまったく使用していない可能性があるという理由があります（たとえば、[ある調査](https://wonderproxy.com/blog/accept-language/)によると、上位 10,000 サイトの 7.2% のみが `Accept-Language` を使用していることがわかりました）。Chrome のシークレットモードでは、`Accept-Language` がすでに 1 つに減らされています。
 
-## What does this mean for web developers?
+## ウェブ開発者にとっての意味
 
-Sites that rely on `Accept-Language` to do language negotiation should prepare to receive reduced `Accept-Language` and consider participating in the origin trial. The reduced `Accept-Language` values will appear in:
+言語ネゴシエーションを `Accept-Language` に任せているサイトは、削減された `Accept-Language` を受け取る準備をし、オリジントライアルへの参加を検討することをお勧めします。削減された `Accept-Language` 値は以下のの場所に表示されます。
 
-- The `Accept-Language` HTTP request header.
+- `Accept-Language` HTTP リクエストヘッダー。
 - The `navigator.languages` JavaScript getter.
 
-The browser will take responsibility for language negotiation to select the user's preferred language to send to sites. To make this happen, sites need to add two headers [`Variants`](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-variants-06#section-2) (a new header indicates sites supporting languages) `Accept-Language` and [`Content-Language`](https://datatracker.ietf.org/doc/html/rfc3282) in the response header (see detailed example below).
+サイトに送信するユーザーの優先言語を選択するための言語ネゴシエーションは、ブラウザが担当するようになります。これを実現するには、サイトはレスポンスヘッダーに `Accept-Language` と [`Content-Language`](https://datatracker.ietf.org/doc/html/rfc3282) の 2 つのヘッダー [`Variants`](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-variants-06#section-2)（サイトがサポートする言語を示す新しいヘッダー）を追加する必要があります（詳細は以下の例をご覧ください）。
 
-The reduced `Accept-Language` plans currently don't include iOS and WebView, and those platforms will continue to get users' full list of `Accept-Language`. Support for these platforms is planned for a later date.
+削減された `Accept-Language` の計画には現在、iOS と WebView が含まれていません。これらのプラットフォームでは、ユーザーの完全な `Accept-Language` リストが引き続き取得されます。これらのプラットフォームは後日サポートされる予定です。
 
 ## Accept-Language の情報量削減のオリジントライアル
 
-An origin trial requires the participating site to provide a token in its response which tells the browser to enable the specified trial. However, this means that on the browser's initial request to the site it has no way of knowing if the site is participating in an origin trial. This means that *the initial request in a session will not send the reduced `Accept-Language header`*. Requests for subresources in that page, both same-origin and cross-origin, will receive the reduced `Accept-Language` header. Subsequent same-origin navigations will also receive the reduced `Accept-Language` header. Cross-origin navigations will revert to sending the full header, while the cross-origin requests within the page (such as third-party iframe requests) will still send the reduced `Accept-Language` header if the top-level frame request has a valid origin trial token.
+オリジントライアルでは、参加サイトがレスポンスでトークンを提供する必要があります。このトークンは、指定されたトライアルを有効にするようにブラウザに指示するものです。ただし、これは、サイトに対するブラウザの最初のリクエストにおいて、サイトがオリジントライアルに参加しているかどうかを確認する方法がないということになります。つまり、*セッションの最初のリクエストでは縮小された `Accept-Language header` は送信されません*。そのページのサブリソースのリクエストでは、同一オリジンやクロスオリジンに関係なく、縮小された `Accept-Language` ヘッダーが受け取られます。その後の同一オリジンの移動操作においても、縮小された `Accept-Language` ヘッダーが受け取られます。クロスオリジンの移動操作では完全なヘッダーの送信に戻りますが、ページ内のクロスオリジンリクエスト（サードパーティの iframe リクエストなど）では、トップレベルのフレームリクエストに有効なオリジントライアルトークンがある場合に、削減された `Accept-Language` ヘッダーが引き続き送信されます。
 
 これは User-Agent の情報量削減のオリジントライアルに似ています。Chromium 内部の実装についての詳細は、[削減された Accept-Language HTTP ヘッダーの実装](https://docs.google.com/document/d/1RkPDf7DNtcOj4KXeW8wNCuYfto-drnGYST_NvZe3GoY/)をご覧ください。
 
 ## Accept-Language の情報量削減オリジントライアルに参加する
 
-You can read further guidance in [Getting started with Chrome's origin trials](/docs/web-platform/origin-trials/), but the essential steps are shown below.
+[Chrome のオリジントライアルを開始する](/docs/web-platform/origin-trials/)で詳細なガイダンスを読むことができますが、基本的な手順を以下に示します。
 
-### Step 1
+### ステップ 1
 
 オリジントライアルに登録してドメインのトークンを取得するには、 [Accept-Language の情報量削減のトライアル](/origintrials/#/view_trial/-7166352907053301759)ページにアクセスしてください。
 
-### Step 2
+### ステップ 2
 
-Update your HTTP response headers:
+HTTP レスポンスヘッダーを以下のように更新します。
 
-1. Add `Origin-Trial: <ORIGIN TRIAL TOKEN>` to your HTTP response header, where &lt;`ORIGIN TRIAL TOKEN`&gt; contains the token you got when registering for the origin trial.
-2. Add `Content-Language` to your HTTP response header to indicate the language(s) intended for the audience.
-3. Add `Variants` to your HTTP response header to indicate sites supported languages.
-4. [Optional] Add `Vary: Accept-Language` to your HTTP response to create a cache key for content negotiation.
-5. Setting those headers will only trigger browser language negotiation (a potential restart for the initial request) for the given origin. To make sites display the correct language representation for the users, you also need to update sites sending the content based on the user's Accept-Language header (see example below).
+1. `Origin-Trial: <ORIGIN TRIAL TOKEN>` を HTTP レスポンスヘッダーに追加します。&lt;`ORIGIN TRIAL TOKEN`&gt; には、オリジントライアル登録時に取得したトークンが含まれています。
+2. `Content-Language` を HTTP レスポンスヘッダーに追加して、オーディエンス向けの言語を示します。
+3. `Variants` をHTTP レスポンスヘッダーに追加して、サイトがサポートする言語を示します。
+4. ［オプション］`Vary: Accept-Language` を HTTP レスポンスに追加して、コンテンツネゴシエーション用のキャッシュキーを作成します。
+5. これらのヘッダーを設定すると、指定されたオリジンのブラウザ言語ネゴシエーション（最初のリクエストでは再起動の可能性）のみがトリガーされます。サイトがユーザーに対して正しい言語表現を表示するようにするには、ユーザーの Accept-Language ヘッダーに基づいてコンテンツを送信するサイトを更新する必要もあります（以下の例を参照）。
 
-{% Aside %} If the response headers contain a valid `Origin-Trial` token, `Content-Language` and valid `Variants` header, then all subresource requests (for example, for images or stylesheets) and subnavigations (for example, iframes) will send the reduced Accept-Language string, even if the origins of those requests are not enrolled in the origin trial. {% endAside %}
+{% Aside %} レスポンスヘッダーに有効な `Origin-Trial` トークン、`Content-Language` ヘッダー、および有効な `Variants` ヘッダーが含まれている場合、すべてのサブリソースリクエスト（画像やスタイルシートなど）とサブナビゲーション（iframe など）は、これらのリクエストのオリジンがオリジントライアルに登録されていない場合でも、削減された Accept-Language 文字列を送信します。{% endAside %}
 
 ### Step 3
 
-Load your website in Chrome M109 Beta (or later) and start receiving the reduced Accept-Language string.
+ウェブサイトを Chrome M109 Beta（またはそれ以降）で読み込み、削減された Accept-Language 文字列の受信を開始します。
 
 イシューやフィードバックについては、Accept-Language の情報量削減の [GitHub リポジトリ](https://github.com/Tanych/accept-language)に送信してください。
 
 ## Demo
 
-For a demonstration of a multilingual site which opted-in the origin trial (along with the source code) see [https://reduce-accept-language.glitch.me/](https://reduce-accept-language.glitch.me/).
+オリジントライアルにオプトインした多言語サイトのデモ（およびソースコード）については、[https://reduce-accept-language.glitch.me/](https://reduce-accept-language.glitch.me/) をご覧ください。
 
-For a demonstration of opt-in and opt-out the origin trial (along with the source code) see [https://reduce-accept-language-ot.glitch.me/](https://reduce-accept-language-ot.glitch.me/).
+オリジントライアルのオプトインとオプトアウトのデモ（およびソースコード）については、[https://reduce-accept-language-ot.glitch.me/](https://reduce-accept-language-ot.glitch.me/) をご覧ください。
 
-For example, `example.com` supports `ja` (Japanese) and `en` (English). A request may be:
+たとえば、`example.com` では、`ja`（日本語）と `en`（英語）がサポートされています。リクエストは以下のようになります。
 
 ```text
 GET / HTTP/1.1
@@ -104,7 +104,7 @@ Host: example.com
 Accept-Language: en
 ```
 
-The site knows the user prefers content in English based on the user's accept-language. The response headers may include:
+サイトは、ユーザーの Accept-Language に基づいて、ユーザーが英語のコンテンツを優先することを認識しています。レスポンスヘッダーには以下が含まれる可能性があります。
 
 ```text
 HTTP/1.1 200 OK
@@ -113,7 +113,7 @@ Variants: Accept-Language=(en ja)
 Origin-Token: a-valid-token
 ```
 
-If user has a preference for Japanese language content, the request would be:
+ユーザーが日本語のコンテンツを優先する場合、リクエストは以下のようになります。
 
 ```text
 GET / HTTP/1.1
@@ -130,7 +130,7 @@ Variants: Accept-Language=(en ja)
 Origin-Token: a-valid-token
 ```
 
-On the server-side, the site may be looking for specific language support but falling back to a default if no support is detected:
+サーバー側では、サイトが特定の言語サポートを探しているにもかかわらず、サポートが検出されない場合は、デフォルトにフォールバックします。
 
 ```js
 if(accept_language == 'ja') {
@@ -141,35 +141,35 @@ else {
 }
 ```
 
-In the example above, `example.com` responds either `en` or `ja` based on the `Accept-Language` value, defaulting to `en` if none match.  In this case, the site can also provide redirects to corresponding language pages either `/en` or `/ja` based on the `Accept-Language` value.  See detailed examples related to redirects on [the implementation doc](https://docs.google.com/document/d/1RkPDf7DNtcOj4KXeW8wNCuYfto-drnGYST_NvZe3GoY/edit#bookmark=id.eml73ve0kywe).
+上記の例では、`example.com` は、`Accept-Language` 値に基づいて `en` または `ja` のいずれかを応答し、一致するものがなければデフォルトで `en` になります。この場合、サイトは、`Accept-Language` 値に基づいて、`/en` または `/ja` に対応する言語ページへのリダイレクトを提供することもできます。リダイレクトに関連する詳細な例については、[実装ドキュメント](https://docs.google.com/document/d/1RkPDf7DNtcOj4KXeW8wNCuYfto-drnGYST_NvZe3GoY/edit#bookmark=id.eml73ve0kywe)をご覧ください。
 
-## Third-party origin trial support
+## サードパーティオリジントライアルのサポート
 
-We currently don't support registering your domains as a [third-party for the trial](/docs/web-platform/third-party-origin-trials/). If you operate a service that is implemented as a subresource across origins (like ad serving or analytics), you will only receive the reduced `Accept-Language` header if the top-level site is participating in the origin trial.
+現在、[トライアル用のサードパーティ](/docs/web-platform/third-party-origin-trials/)としてドメインを登録することはサポートされていません。オリジン間でサブリソースとして実装されているサービス（広告配信や分析など）を運用している場合、トップレベルサイトがオリジントライアルに参加している場合にのみ、削減された `Accept-Language` ヘッダーを受け取ります。
 
-## Validate that the origin trial is working
+## オリジントライアルの動作状況の確認
 
-The guide to [troubleshooting Chrome's origin trials](/docs/web-platform/origin-trial-troubleshooting/) provides a full checklist for ensuring your token is correctly configured.
+[Chrome のオリジントライアルのトラブルシューティング](/docs/web-platform/origin-trial-troubleshooting/)ガイドでは、トークンが正しく構成されていることを確認するための完全なチェックリストを提供しています。
 
-You configure multiple languages and their priority from `chrome://settings/languages` or Settings → Languages. Consider selecting a language your site does **not** support and moving that to the top of the list to ensure that the additional renegotiation is triggered.
+`chrome://settings/languages` または［設定］→［言語］から、複数の言語とその優先度を構成します。サイトで**サポートされていない**言語を選択し、それをリストの一番上に移動して、追加のネゴシエーションが確実にトリガーされるようにすることを検討してください。
 
-The initial response's headers containing the origin trial token should look like:
+origin-trial トークンを含む最初のレスポンスヘッダーは以下のようになります。
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/9vMsKcqCF2wEQ7K4dxKT.png", alt="A screenshot of the request header with the reduce Accept-Language.", width="800", height="228" %}
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/9vMsKcqCF2wEQ7K4dxKT.png", alt="削減された Accept-Language を含むリクエストヘッダーのスクリーンショット", width="800", height="228" %}
 
-Subsequent request headers containing the reduced Accept-Language look like:
+削減された Accept-Language を含む後続のリクエストヘッダーは以下のようになります。
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/kdfphse1F4gscnY74UJi.png", alt="The initial response's headers containing the origin trial token.", width="800", height="257" %}
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/kdfphse1F4gscnY74UJi.png", alt="origin-trial トークンを含む最初のレスポンスのヘッダー。", width="800", height="257" %}
 
-## Stop participating in the origin trial
+## オリジントライアルへの参加を中止する
 
-At any given point in time during the trial, you can stop participating and receive the full list of user's Accept-Language. To stop participating:
+トライアル期間中の任意の時点で参加を中止すると、ユーザーの Accept-Language の全リストを受け取ることができます。参加を中止するには、以下のようにします。
 
 1. Accept-Language の情報量削減トライアルの `Origin-Trial` ヘッダーを HTTP レスポンスから削除します。
-2. [Optional] Remove `Variants` header which is added to opt-in the origin trial in your HTTP response if you are not interested in sending this header. You can also use `Variants` with an empty value to accomplish this.
-3. [Optional] Remove `Content-Language` header which is added to opt-in the origin trial in your HTTP response if you are not interested in sending this header.
+2. ［オプション］このヘッダーの送信に関心がない場合は、オリジントライアルにオプトインするために HTTP レスポンスに追加された `Variants` ヘッダーを削除します。また、`Variants` に空の値を使用しても、同じことを行えます。
+3. ［オプション］このヘッダーの送信に関心がない場合は、オリジントライアルにオプトインするために HTTP レスポンスに追加された `Content-Language` ヘッダーを削除します。
 
-## Origin trial duration
+## オリジントライアルの期間
 
 Accept-Language の情報量削減オリジントライアルは、少なくとも 6 か月間実施されます。これは、約 6 つの Chrome マイルストーンに対応する期間です。オリジントライアルは M109 で開始され、M114 （トライアルを使用できる最後の Chrome リリース）で終了します。この時点で、オリジントライアルからのフィードバックが評価され、その後 Chrome は削減された Accept-Language  文字列を段階的にロールアウトします（まず、削減された Accept-Language HTTP ヘッダーをロールアウトしてから、JS インターフェースを削減します）。サイトがテスト期間の延長を必要とする場合は、その後のデプリケーショントライアルにオプトインできます。これにより、少なくともさらに 6 か月間、完全な Accept-Language 文字列にアクセスすることが可能です。デプリケーショントライアルの詳細については、準備が整い次第公開します。
 
