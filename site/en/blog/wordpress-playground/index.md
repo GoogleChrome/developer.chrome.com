@@ -203,11 +203,10 @@ PHP internals like `php_select`. It's complex, but there's a reward. The
 Node.js-targeted PHP build can request web APIs, install composer packages, and
 even connect to a MySQL server.
 
-## Since it's just WebAssembly, WordPress can be used in even more places than the browser
+## WordPress can be used in even more places than the browser
 
-Since WordPress can now run on WebAssembly, it can actually be used in even more
-places than the browser. A Node.js server can now run WebAssembly WordPress
-since it's still the same V8 engine. Of course with StackBlitz you can also run
+Since WordPress can now run on WebAssembly, you could also run it in a Node.js
+server—it's the same V8 engine! Of course with StackBlitz you can also run
 Node.js directly in the browser, meaning that you could run WordPress and PHP
 compiled to WebAssembly, executing in Node.js, which is also compiled to
 WebAssembly running
