@@ -5,7 +5,7 @@ description: >
 subhead: >
   Your feedback is wanted on a proposed solution for the problem of layout methods arranging items in an order that is disconnected from the source of the document.
 layout: 'layouts/blog-post.njk'
-date: 2023-04-04
+date: 2023-04-12
 thumbnail: 'image/kheDArv5csY6rvQUJDbWRscckLr1/ohpYeFraXHgCYHzmKKQ0.jpg'
 alt: >
   Books, some displayed out of order and alignment.
@@ -101,7 +101,7 @@ In situations that create a randomized layout order, such as when using dense pa
 
 In some grid and flex layouts, the layout order is straightforward to understand. For example, in a flex layout that uses the `order` property to re-order items there is an obvious layout order dictated by the `order` property. In other layouts it is less clear what the ideal layout order is, there may be more than one possible choice. Therefore, when following non-randomized layouts, you will need to add the `grid-order-items` property to the container, with keyword values explaining your intention for the layout order.
 
-The following example shows a flex layout using row-reverse. The flex items have `reading-order: auto`, and the flex container `reading-order-items: flex flow` to indicate that we also want the reading order to follow the 'flex-flow' direction too, rather than following a visual order (which we could indicate with `flex visual`).
+The following example shows a flex layout using `row-reverse`. The flex items have `reading-order: auto`, and the flex container `reading-order-items: flex flow` to indicate that we also want the reading order to follow the `flex-flow` direction too, rather than following a visual order (which we could indicate with `flex visual`).
 
 ```css
 .cards {
