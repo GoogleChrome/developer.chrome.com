@@ -155,7 +155,7 @@ files, or populate the `php://stdin` stream. WordPress Playground had to build
 one from scratch. The WebAssembly binary comes with a
 [dedicated PHP API module](https://github.com/WordPress/wordpress-playground/blob/0d451c33936a8db5b7a158fa8aad288c19370a7d/packages/php-wasm/compile/build-assets/php_wasm.c)
 written in C and a
-[JavaScript PHP class ](https://github.com/WordPress/wordpress-playground/blob/da38192af57a95699d8731c855b82ac0222df61b/packages/php-wasm/common/src/lib/php.ts)that
+[JavaScript PHP class](https://github.com/WordPress/wordpress-playground/blob/da38192af57a95699d8731c855b82ac0222df61b/packages/php-wasm/common/src/lib/php.ts)that
 exposes methods like `writeFile()` or `run()`.
 
 Because every PHP version is just a static `.wasm` file, the PHP version
