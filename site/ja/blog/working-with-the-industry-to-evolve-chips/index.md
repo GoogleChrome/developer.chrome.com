@@ -3,10 +3,10 @@ layout: layouts/blog-post.njk
 title: CHIPS の進化に向けた業界との共同作業
 subhead: |2
 
-  Exploring two challenges that the Chrome team faced in implementing CHIPS and how community feedback played a key role in evolving the proposal design.
+  Chrome チームが CHIPS の実装で直面した 2 つの課題と、コミュニティからのフィードバックが提案デザインの進化にどのように重要な役割を果たしたかを探ります。
 description: |2
 
-  Exploring two challenges that the Chrome team faced in implementing CHIPS and how community feedback played a key role in evolving the proposal design.
+  Chrome チームが CHIPS の実装で直面した 2 つの課題と、コミュニティからのフィードバックが提案デザインの進化にどのように重要な役割を果たしたかを探ります。
 date: '2023-02-28'
 authors:
   - mihajlija
@@ -61,7 +61,7 @@ Chrome チームは、他のフォーラム、パートナー ミーティング
 
 その結果、Chrome は新しい制限を[採用](https://github.com/chromium/chromium/commit/8be338400e94964708796d2be6afe071233c0f6f)し、そのソリューションを CHIPS 設計に組み込むこととなりました。
 
-## Working with the industry
+## 業界との連携
 
 ウェブ上のプライバシーを改善する取り組みでは、CHIPS の開発を通じて多くのパートナーから意見を聞き、協力し合うことが不可欠です。
 
