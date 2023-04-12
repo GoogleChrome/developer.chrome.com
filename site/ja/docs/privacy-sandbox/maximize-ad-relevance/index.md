@@ -1,13 +1,9 @@
 ---
 layout: layouts/doc-post.njk
 title: サードパーティ Cookie 後の広告の関連性を最大化する
-subhead: |2-
-
-  広告エコシステムの未来を詳しく見てみましょう
-description: |2
-
-  広告エコシステムの未来を詳しく見てみましょう。
-date: '2022-12-13'
+subhead: 広告エコシステムの未来を詳しく見てみましょう
+description: 広告エコシステムの未来を詳しく見てみましょう。
+date: 2022-12-13
 authors:
   - joeytrotz
 ---
