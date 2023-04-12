@@ -6,7 +6,7 @@ description: |2-
   Accept-Language の情報量削減は、Chrome ブラウザにおけるパッシブフィンガープリンティングの攻撃サーフェスを削減するための取り組みです。
 date: '2022-12-01'
 tags:
-  - privacy
+  - プライバシー
 authors:
   - victortan
 ---
@@ -52,7 +52,7 @@ Accept-Language の情報量削減は、Chrome ブラウザにおけるパッシ
 言語ネゴシエーションを `Accept-Language` に任せているサイトは、削減された `Accept-Language` を受け取る準備をし、オリジントライアルへの参加を検討することをお勧めします。削減された `Accept-Language` 値は以下のの場所に表示されます。
 
 - `Accept-Language` HTTP リクエストヘッダー。
-- The `navigator.languages` JavaScript getter.
+- `navigator.languages` JavaScript ゲッター。
 
 サイトに送信するユーザーの優先言語を選択するための言語ネゴシエーションは、ブラウザが担当するようになります。これを実現するには、サイトはレスポンスヘッダーに `Accept-Language` と [`Content-Language`](https://datatracker.ietf.org/doc/html/rfc3282) の 2 つのヘッダー [`Variants`](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-variants-06#section-2)（サイトがサポートする言語を示す新しいヘッダー）を追加する必要があります（詳細は以下の例をご覧ください）。
 
@@ -84,13 +84,13 @@ HTTP レスポンスヘッダーを以下のように更新します。
 
 {% Aside %} レスポンスヘッダーに有効な `Origin-Trial` トークン、`Content-Language` ヘッダー、および有効な `Variants` ヘッダーが含まれている場合、すべてのサブリソースリクエスト（画像やスタイルシートなど）とサブナビゲーション（iframe など）は、これらのリクエストのオリジンがオリジントライアルに登録されていない場合でも、削減された Accept-Language 文字列を送信します。{% endAside %}
 
-### Step 3
+### ステップ 3
 
 ウェブサイトを Chrome M109 Beta（またはそれ以降）で読み込み、削減された Accept-Language 文字列の受信を開始します。
 
 イシューやフィードバックについては、Accept-Language の情報量削減の [GitHub リポジトリ](https://github.com/Tanych/accept-language)に送信してください。
 
-## Demo
+## デモ
 
 オリジントライアルにオプトインした多言語サイトのデモ（およびソースコード）については、[https://reduce-accept-language.glitch.me/](https://reduce-accept-language.glitch.me/) をご覧ください。
 
@@ -121,7 +121,7 @@ Host: example.com
 Accept-Language: ja
 ```
 
-In this case, the site responds with headers for Japanese content:
+この場合、サイトは日本語コンテンツのヘッダーで応答します。
 
 ```text
 HTTP/1.1 200 OK
@@ -173,6 +173,6 @@ origin-trial トークンを含む最初のレスポンスヘッダーは以下�
 
 Accept-Language の情報量削減オリジントライアルは、少なくとも 6 か月間実施されます。これは、約 6 つの Chrome マイルストーンに対応する期間です。オリジントライアルは M109 で開始され、M114 （トライアルを使用できる最後の Chrome リリース）で終了します。この時点で、オリジントライアルからのフィードバックが評価され、その後 Chrome は削減された Accept-Language  文字列を段階的にロールアウトします（まず、削減された Accept-Language HTTP ヘッダーをロールアウトしてから、JS インターフェースを削減します）。サイトがテスト期間の延長を必要とする場合は、その後のデプリケーショントライアルにオプトインできます。これにより、少なくともさらに 6 か月間、完全な Accept-Language 文字列にアクセスすることが可能です。デプリケーショントライアルの詳細については、準備が整い次第公開します。
 
-## Share feedback
+## フィードバックを共有する
 
 イシューやフィードバックについては、Accept-Language の情報量削減の [GitHub リポジトリ](https://github.com/Tanych/accept-language)に送信してください。
