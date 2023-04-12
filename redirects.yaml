@@ -695,7 +695,10 @@ redirects:
   to: /docs/extenions/migrating/mv2-sunset/
 
 - from: /docs/extenions/mv3/known-issues/
-  to: /docs/extenions/migrating/known-issues/
+  to: /docs/extenions/migrating/mv3-status/
+
+- from: /docs/extenions/migrating/known-issues/
+  to: /docs/extenions/migrating/mv3-status/
 
 # DO NOT REMOVE. This seems pointless but we rewrite "." to "_" inside our server's code, so if the
 # URL is fine for all but incorrect syntax, we'll fix it up.
