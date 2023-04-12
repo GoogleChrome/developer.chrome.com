@@ -67,7 +67,7 @@ The `submitJob()` method requires three things.
 * A `SubmitJobRequest` structure, which specifies the printer to use, and the file or date to print. This structure contains a reference to the `ticket` structure. 
 * A blob of the file or data to print.
 
-Calling `submitJob()` will trigger a dialog box asking the user to confirm printing. Use the [`PrintingAPIExtensionsAllowlist`](https://chromeenterprise.google/policies/#PrintingAPIExtensionsAllowlist") to bypass promting. 
+Calling `submitJob()` triggers a dialog box asking the user to confirm printing. Use the [`PrintingAPIExtensionsAllowlist`](https://chromeenterprise.google/policies/#PrintingAPIExtensionsAllowlist") to bypass confirmation. 
 
 This is a simplified version of the printing example. Notice that the `ticket` is attached to the `SubmitJobRequest` structure (line 8) and that the data to print is converted to a blob (line 10). Getting the ID of the printer (line 1) is more complicated [in the sample](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/printing)than is shown here. 
 
