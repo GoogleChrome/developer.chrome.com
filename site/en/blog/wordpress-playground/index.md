@@ -10,7 +10,9 @@ authors:
   - adamzielinski
   - nattestad
 date: 2023-04-12
-updated: 2023-04-12
+# updated: 2023-04-12
+hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/gaEAYfVaiHsMEz07wZSn.jpg
+alt: A developer with a WordPress t-shirt sitting in front of a computer.
 ---
 
 When you first see [WordPress Playground](http://wasm.wordpress.net/), it seems
