@@ -168,6 +168,14 @@ They can include JavaScript files, CSS files, or both. All auto-run content scri
         <a href="#injecting-in-related-frames">Injecting in related frames</a>.
       </td>
     </tr>
+    <tr id="world">
+      <td><code>world</code></td>
+      <td><a href="/docs/extensions/reference/scripting/#type-ExecutionWorld">ExecutionWorld</a></td>
+      <td>
+        <em>Optional.</em> The JavaScript world for a script to execute within. Defaults to <code>ISOLATED</code>. See also
+        <a href="#isolated_world">Work in isolated worlds</a>.
+      </td>
+    </tr>
   </tbody>
 </table>
 
