@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import './web-components/filtered-element';
 import './web-components/checkbox-group';
-import './web-components/enhanced-select';
 import {EnhancedSelect} from './web-components/enhanced-select';
 // eslint-disable-next-line no-unused-vars
 import {TagPillList} from './web-components/tag-pill-list';
