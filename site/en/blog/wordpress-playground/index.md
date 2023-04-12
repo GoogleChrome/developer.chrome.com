@@ -50,7 +50,7 @@ does. When you select, for example, the
 gets updated to point to
 [https://playground.wordpress.net/?theme=pendant&plugin=coblocks](https://playground.wordpress.net/?theme=pendant&plugin=coblocks).
 
-{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/lPMfWljMKZbMluoN4971.png", alt="WordPress Playground showcase", width="800", height="740" %}
+{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/lPMfWljMKZbMluoN4971.png", alt="WordPress Playground showcase.", width="800", height="740" %}
 
 The iframe is an easy way of getting started, but it's also limited to just the
 basic configuration option. If you need more than that, there is another, more
