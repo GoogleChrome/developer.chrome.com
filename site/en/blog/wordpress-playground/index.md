@@ -63,7 +63,7 @@ powerful API.
 You can control the entire WordPress site, including the filesystem and PHP,
 using the full API available via the
 [@wp-playground/client](https://www.npmjs.com/package/@wp-playground/client) npm
-package. The following example shows to use it–check
+package. The following example shows to use it—check
 [the interactive tutorial](https://adamadam.blog/2023/04/12/interactive-intro-to-wordpress-playground-public-api/)
 for even more examples:
 
