@@ -60,7 +60,7 @@ To help you pinpoint issues quicker during debugging, the enhanced stack trace n
 You can manually [disable ignore-listing](/docs/devtools/settings/ignore-list/#skip-third-party) in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Ignore List**](/docs/devtools/settings/ignore-list/).
 {% endAside %}
 
-To bring you these improvements, the DevTools, Nuxt, Vite, and Rollup teams collaborated to adopt the [`x_google_ignoreList` source map extension](/articles/ignore-list):
+To bring you these improvements, the DevTools, Nuxt, Vite, and Rollup teams collaborated to adopt the [`x_google_ignoreList` source map extension](/articles/x-google-ignore-list/):
 
 - [Nuxt 3.3 Release](https://nuxt.com/blog/v3-3#better-logging-in-browser-devtools)
 - [Vite Server Options](https://vitejs.dev/config/server-options.html#server-sourcemapignorelist)
