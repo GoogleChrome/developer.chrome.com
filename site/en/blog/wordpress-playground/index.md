@@ -96,9 +96,9 @@ WordPress Playground is not a monolith. WebAssembly PHP is released
 independently from WordPress and you can use it separately as well. For the web,
 you may use the [@php-wasm/web](https://www.npmjs.com/package/@php-wasm/web) npm
 package optimized for a low bundle size, and in Node.js you can lean
-on[ @php-wasm/node](https://www.npmjs.com/package/@php-wasm/node) which provides
+on [@php-wasm/node](https://www.npmjs.com/package/@php-wasm/node) which provides
 more PHP extensions. Adam used the former to add interactive PHP snippets
-to[ this WP_HTML_Tag_Processor tutorial](https://adamadam.blog/2023/02/16/how-to-modify-html-in-a-php-wordpress-plugin-using-the-new-tag-processor-api/).
+to [this WP_HTML_Tag_Processor tutorial](https://adamadam.blog/2023/02/16/how-to-modify-html-in-a-php-wordpress-plugin-using-the-new-tag-processor-api/).
 Here's a sneak peek of how to use it:
 
 ```js
@@ -183,10 +183,10 @@ that allows WordPress on SQLite to pass 99% of the WordPress unit test suite.
 In a regular WordPress, clicking on a link, say _Blog,_ would initiate an HTTP
 request to the remote backend to fetch the `blog` page. However, WordPress
 Playground has no remote backend. It has a
-[Service Worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
+[Service Worker](https://developer.mozilla.org/docs/Web/API/Service_Worker_API)
 that intercepts all the outgoing requests and passes them to an in-browser PHP
 instance running in a separate
-[Web Worker](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers).
+[Web Worker](https://developer.mozilla.org/docs/Web/API/Web_Workers_API/Using_web_workers).
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/EAYGDJ5cBGHFnQuFYjEw.png", alt="Flow diagram starting with an iframe pointing at the resource wp-admin, calls to which are intercepted by the service worker, rendered in the worker thread, and ultimately translated to a WordPress response by the in-browser server.", width="800", height="675" %}
 
