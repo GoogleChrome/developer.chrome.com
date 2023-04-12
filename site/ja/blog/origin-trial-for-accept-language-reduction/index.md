@@ -1,12 +1,10 @@
 ---
 layout: layouts/blog-post.njk
 title: Accept-Language の情報量削減のオリジントライアルに参加する
-description: |2-
-
-  Accept-Language の情報量削減は、Chrome ブラウザにおけるパッシブフィンガープリンティングの攻撃サーフェスを削減するための取り組みです。
+description: Accept-Language の情報量削減は、Chrome ブラウザにおけるパッシブフィンガープリンティングの攻撃サーフェスを削減するための取り組みです。
 date: 2022-12-01
 tags:
-  - プライバシー
+  - privacy
 authors:
   - victortan
 ---
