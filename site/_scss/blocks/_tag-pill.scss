@@ -1,5 +1,6 @@
 .tag-pill {
   padding: px-to-rem(4px) px-to-rem(12px);
+  margin-bottom: px-to-rem(8px);
 
   &[title] {
     cursor: help;
