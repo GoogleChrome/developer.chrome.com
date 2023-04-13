@@ -8,7 +8,7 @@ description: >
 subtitle: >
   Announcing a new developer enrollment process for the Privacy Sandbox
   relevance and measurement APIs, across Chrome and Android.
-date: 2023-04-12
+date: 2023-04-13
 hero: 'image/VbsHyyQopiec0718rMq2kTE1hke2/Y7LA3AUuZmhBjHfNlNsq.jpg'
 alt: >
   Enroll with the Privacy Sandbox.
@@ -26,7 +26,9 @@ The enrollment process will verify the entities calling the APIs, and gather dat
 Current [enrollment for Android APIs](https://developer.android.com/design-for-safety/privacy-sandbox/enroll) will be migrated to this new process. Testers who want to use the Android APIs should continue to sign up through the existing process until the new process is available in June 2023.
 {% endAside %}
 
-This article is an early preview of the developer enrollment plan, with more details to come.  We will provide a step-by-step guide for how to enroll before the new enrollment process goes live in June 2023.
+This article is an early preview of the developer enrollment plan, with more
+details to come. We'll provide a step-by-step guide for how to enroll before
+the new enrollment process goes live in June 2023.
 
 ## Why are we asking you to enroll?
 
@@ -70,10 +72,25 @@ If you use the [Attribution Reporting API](/docs/privacy-sandbox/attribution-rep
 
 ### Attestations
 
-To enroll, developers will need to agree to specific statements, also known as attestations, about their usage of the enrolled Privacy Sandbox APIs. This helps reduce the risk of these APIs being used improperly, beyond their intended purpose to enable key business use cases while limiting cross-site tracking. Additionally, attestations help improve public transparency on data collected and used with the Privacy Sandbox APIs. The attestations will be written to be understandable by users, focused on outcomes rather than implementation details. 
+To enroll, developers will need to agree to specific statements, also known as
+attestations, about their usage of the enrolled Privacy Sandbox APIs. This
+helps reduce the risk of these APIs being used improperly, beyond their
+intended purpose to enable key business use cases while limiting cross-site
+tracking.
 
-We'll provide details about the attestations before the unified enrollment period is available so developers can review the full process. Developers will have until August 2023 to complete their attestations as part of the enrollment process and make them publicly available for verification.
+Additionally, attestations help improve public transparency on data collected
+and used with the Privacy Sandbox APIs. The attestations will be written to be
+understandable by users, focused on outcomes rather than implementation
+details. 
+
+We'll provide details about the attestations before the unified enrollment
+period is available so developers can review the full process. Developers will
+have until August 2023 to complete their attestations as part of the enrollment
+process and make them publicly available for verification.
 
 ## Next steps
 
-We'll continue to update our blog as this process rolls out. In the meantime, you can refer to the [enrollment documentation](/docs/privacy-sandbox/enroll) where we'll detail step-by-step how to enroll your company and sites to use the Privacy Sandbox APIs.
+We'll continue to update our blog as this process rolls out. In the meantime,
+you can refer to the [enrollment documentation](/docs/privacy-sandbox/enroll)
+where we'll detail step-by-step how to enroll your company and sites to use the
+Privacy Sandbox APIs.

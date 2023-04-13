@@ -7,7 +7,7 @@ subhead: >
 description: >
   Verify identity and share configuration details for the Privacy Sandbox
   relevance and measurement APIs, across Chrome and Android.
-date: 2023-04-12
+date: 2023-04-13
 authors:
   - georgiafranklin
 ---
@@ -67,11 +67,21 @@ If you use the [Attribution Reporting API](/docs/privacy-sandbox/attribution-rep
 
 ### Attestations
 
-To enroll, developers will need to agree to specific statements, also known as attestations, about their usage of the enrolled Privacy Sandbox APIs. This helps reduce the risk of these APIs being used improperly, beyond their intended purpose to enable key business use cases while limiting cross-site tracking.
+To enroll, developers will need to agree to specific statements, also known as
+attestations, about their usage of the enrolled Privacy Sandbox APIs. This
+helps reduce the risk of these APIs being used improperly, beyond their
+intended purpose to enable key business use cases while limiting cross-site
+tracking.
 
-Additionally, attestations help improve public transparency on data collected and used with the Privacy Sandbox APIs. The attestations will be written to be understandable by users, focused on outcomes rather than implementation details. 
+Additionally, attestations help improve public transparency on data collected
+and used with the Privacy Sandbox APIs. The attestations will be written to be
+understandable by users, focused on outcomes rather than implementation
+details. 
 
-We'll provide details about the attestations before the unified enrollment period is available so developers can review the full process. Developers will have until August 2023 to complete their attestations as part of the enrollment process and make them publicly available for verification.
+We'll provide details about the attestations before the unified enrollment
+period is available so developers can review the full process. Developers will
+have until August 2023 to complete their attestations as part of the enrollment
+process and make them publicly available for verification.
 
 ## Next steps
 
