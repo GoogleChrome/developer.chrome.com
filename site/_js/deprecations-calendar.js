@@ -15,37 +15,8 @@
  */
 import './web-components/filtered-element';
 import './web-components/checkbox-group';
-import {EnhancedSelect} from './web-components/enhanced-select';
-// eslint-disable-next-line no-unused-vars
-import {TagPillList} from './web-components/tag-pill-list';
-
-let activeFilters = {};
-/** @type {TagPillList|null} */
-const activeFiltersList = document.querySelector('#active-filters');
-const selectFields = document.querySelectorAll('.deprecation-filter');
-const clearFilters = document.querySelector('.clear-filters');
-
-/**
- * Transforms the selected date range option in a date range starting from the current date
- *
- * @param {String} days The value of the date range filter
- * @returns {String}
- */
-function formatDateRange(days) {
-  const endDate = new Date();
-  endDate.setDate(endDate.getDate() + parseInt(days));
-
-  const startDate = new Date();
-  const startDateString = `${startDate.getDate()} ${startDate.toLocaleString(
-    'default',
-    {month: 'short'}
-  )}`;
-  const endDateString = `${endDate.getDate()} ${endDate.toLocaleString(
-    'default',
-    {month: 'short'}
-  )}`;
-  return `${startDateString} - ${endDateString}`;
-}
+import './web-components/enhanced-select';
+import './web-components/tag-pill-list';
 
 /**
  * Adds all the event listeners needed for the mobile UI
@@ -85,32 +56,7 @@ function addMobileListeners() {
   }
 }
 
-/**
- * Adds the listener to the "Clear Filters" tag pill
- *
- * @returns {void}
- */
-function addClarFilterListener() {
-  clearFilters?.addEventListener('click', () => {
-    selectFields.forEach(element => {
-      // @ts-ignore
-      element.value = [];
-      // @ts-ignore
-      element.options.forEach(option => {
-        option.selected = false;
-      });
-    });
-    document
-      .querySelectorAll('#mobile-filters input[type="checkbox"]:checked')
-      .forEach(checkbox => {
-        /** @type {HTMLInputElement } */ (checkbox).checked = false;
-      });
-    activeFilters = {};
-    clearFilters?.classList.add('hidden');
-  });
-}
 
 (() => {
   addMobileListeners();
-  addClarFilterListener();
 })();
