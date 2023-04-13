@@ -81,7 +81,6 @@ function addMobileListeners() {
   const opener = document.querySelector('#mobile-filters-opener');
   const done = document.getElementById('mobile-filters-done');
   const reset = document.getElementById('mobile-filters-reset');
-  const removalDates = document.querySelectorAll('input[name="removal-date"]');
 
   // @ts-ignore
   opener?.addEventListener('click', () => filters.showModal());
@@ -92,28 +91,6 @@ function addMobileListeners() {
   });
 
   done?.addEventListener('click', () => {
-    const selected = Array.from(
-      document.querySelectorAll(
-        '#mobile-filters input[type="checkbox"]:checked'
-      )
-    );
-
-    activeFilters = selected.reduce((payload, checkbox) => {
-      const name = checkbox.getAttribute('name');
-      const value = checkbox.getAttribute('value');
-
-      if (name === null) return payload;
-
-      if (typeof payload[name] === 'undefined') {
-        payload[name] = [value];
-        return payload;
-      }
-
-      payload[name].push(value);
-
-      return payload;
-    }, {});
-    updateTagPills();
     closeFiltersModal();
   });
 
