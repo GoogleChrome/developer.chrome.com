@@ -37,7 +37,7 @@ CHIPS チームは当初、悪意のあるサブドメインや侵害された�
 
 Chrome がこの変更を行った後、現在 Salesforce が所有するビジュアル分析プラットフォームを提供する Tableau は次のように [述べています](https://github.com/privacycg/CHIPS/issues/30#issuecomment-1104225686)。
 
-{% Blockquote 'Lee Graber, Software Engineering Architect, Tableau' %} この命名変更の削除により、`SameSite=None` 属性を追加し、より「既知の」数量を追加するという以前の変更と要件がより一致するようになります。Google がフィードバックを聞き入れ、潜在的な影響を検討し、より簡単な移行をサポートするために変更してくれたことに感謝します。 {% endBlockquote %}
+{% Blockquote 'Lee Graber, Software Engineering Architect, Tableau' %} この命名変更の削除により、 `SameSite=None` 属性を追加し、より「既知の」数量を追加するという以前の変更と要件がより一致するようになります。Google がフィードバックを聞き入れ、潜在的な影響を検討し、より簡単な移行をサポートするために変更してくれたことに感謝します。 {% endBlockquote %}
 
 このプロセスを通じて、CHIPS は、ユーザーのプライバシーを保護しながら、関係者にとってより簡単に実装できるようになりました。
 
