@@ -50,7 +50,7 @@ We intend for this process to be lightweight, so that developers can easily set 
 
 ### Site-based enrollment
 
-All API callers will need to enroll their [site](https://web.dev/same-site-same-origin/#public-suffix-list-and-etld).  Each enrollment will be based on the site, which provides the boundary that informs the Privacy Sandbox API’s privacy budgeting.
+All API callers will need to enroll their [site](https://web.dev/same-site-same-origin/#public-suffix-list-and-etld). A site provides a boundary that informs the Privacy Sandbox API's privacy budgeting.
 
 {% Aside %}
 Enrollment applies only to companies that will call one or more of the Privacy Sandbox relevance and measurement APIs. Publishers and/or other companies that are customers of ad techs do not need to enroll.

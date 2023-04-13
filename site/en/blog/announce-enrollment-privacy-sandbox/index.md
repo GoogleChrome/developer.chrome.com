@@ -34,9 +34,9 @@ It is of paramount importance to the Privacy Sandbox that we protect user privac
 
 To provide auditable transparency, enrollment information about the company will be made public. We will provide further details in a later update on how the public will be able to access this information. 
 
-To limit how much data an API caller can receive, we’ve already incorporated rate limits for each developer into the relevance and measurement APIs. Enrollment allows us to better enforce those rate limits by using an independent, third party verification service. We will use Dun & Bradstreet to verify your corporate identity and any potential corporate linkages. 
+To limit how much data an API caller can receive, we've already incorporated rate limits for each developer into the relevance and measurement APIs. Enrollment allows us to better enforce those rate limits by using an independent, third party verification service. We will use Dun & Bradstreet to verify your corporate identity and any potential corporate linkages. 
 
-This verification process will also help ensure that one developer can’t impersonate another developer and limit their usage of the APIs. Lastly, this effort brings the Privacy Sandbox Chrome and Android ecosystems to a shared enrollment process, which ensures you won’t have to duplicate verification efforts across platforms.
+This verification process will also help ensure that one developer can't impersonate another developer and limit their usage of the APIs. Lastly, this effort brings the Privacy Sandbox Chrome and Android ecosystems to a shared enrollment process, which ensures you won't have to duplicate verification efforts across platforms.
 
 ## How do I enroll?
 
@@ -55,7 +55,7 @@ We intend for this process to be lightweight, so that developers can easily set 
 
 ### Site-based enrollment
 
-All API callers will need to enroll their [site](https://web.dev/same-site-same-origin/#public-suffix-list-and-etld).  Each enrollment will be based on the site, which provides the boundary that informs the Privacy Sandbox API’s privacy budgeting.
+All API callers will need to enroll their [site](https://web.dev/same-site-same-origin/#public-suffix-list-and-etld). A site provides a boundary that informs the Privacy Sandbox API's privacy budgeting.
 
 {% Aside %}
 Enrollment applies only to companies that will call one or more of the Privacy Sandbox relevance and measurement APIs. Publishers and/or other companies that are customers of ad techs do not need to enroll.
