@@ -14,6 +14,8 @@
 - title: i18n.docs.privacy-sandbox.start
   sections:
     - url: /docs/privacy-sandbox/unified-origin-trial
+    - url: /docs/privacy-sandbox/enroll
+      title: i18n.docs.privacy-sandbox.enroll
     - url: /docs/privacy-sandbox/status
     - url: /docs/privacy-sandbox/feedback
 - title: i18n.docs.privacy-sandbox.strengthen-boundaries
