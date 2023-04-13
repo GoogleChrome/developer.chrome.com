@@ -125,16 +125,6 @@ function addMobileListeners() {
       });
   });
 
-  removalDates.forEach(checkbox => {
-    checkbox.addEventListener('click', () => {
-      removalDates.forEach(otherCheckbox => {
-        if (otherCheckbox !== checkbox) {
-          /** @type {HTMLInputElement } */ (otherCheckbox).checked = false;
-        }
-      });
-    });
-  });
-
   function closeFiltersModal() {
     // @ts-ignore
     filters?.close();
