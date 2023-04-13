@@ -8,41 +8,11 @@ date: 2023-03-29
 
 Extension service workers support both the [standard service worker](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope#events) events and many events available through the [extension APIs](/docs/extensions/reference/). This section describes what's available and provides tips for using them.
 
-## Service worker events
 
-Extension service workers support more than the lifecycle events [described elsewhere](link The service worker lifecycle). Some of those events require additional.
-
-### ServiceWorkerGlobal.fetch
-
-Fired when anything is retrieved from the extension package or when `fetch()` and `XMLHttpRequest()` are called from an extension script. In the latter cases, you will need to add the URLs of the pages you want to fetch to the `"host_permissions"` key in the `manifest.json`.
-
-### ServiceWorkerGlobal.message
-
-Service worker message passing is available in addition to extension [messaging passing](/docs/extensions/mv3/messaging/), but the two systems are not interoperable. That means that messages sent using `sendMessage()` (which is available from several extension APIs) aren't intercepted by service worker message handlers. Likewise, messages sent using `postMessage()` aren't intercepted by extension message handlers. Both types of message handlers—meaning both `ServiceWorkerGlobal.message` and `chrome.runtime.onMessage`—are supported in extension service workers. Extension service workers cannot send messages to popup or content scripts using `postMessage()`.
-
-To send a message to an extension service worker using `postMessage()`, use the service worker registration in any script. For example, you could implement the following code in a popup script.
-
-```javascript
-postMsgButton.addEventListener('click', async () => {
-  navigator.serviceWorker.ready.then((registration) => {
-    const msg = { greeting: "Hello, service worker." }
-    registration.active.postMessage(msg);
-  });
-});
-```
-
-And inside the service worker:
-
-```javascript
-this.addEventListener('message', (e) => {
-  const msg = `Service worker message handler called with:\n${e.data.greeting}`;
-  console.log(msg);
-});
-```
 
 ## Declaring extension events
 
-Event handlers in service workers need to be declared in the global scope, meaning they should be at the top level of the script and not be nested inside functions. This ensures that they are registered synchronously on initial script execution, which enables Chrome to events to the service worker as soon as it starts. For example:
+Event handlers in service workers need to be declared in the global scope, meaning they should be at the top level of the script and not be nested inside functions. This ensures that they are registered synchronously on initial script execution, which enables Chrome to dispatch events to the service worker as soon as it starts. For example:
 
 {% Compare 'worse', 'Not advised' %}
 ```js/2
@@ -106,4 +76,35 @@ const filter = {
 chrome.webNavigation.onCompleted.addListener(() => {
   console.info("The user has loaded my favorite website!");
 }, filter);
+```
+## Service worker events
+
+Extension service workers support more than the lifecycle events [described elsewhere](/docs/extensions/service-workers/lifecycle). Some of those events require additional.
+
+### ServiceWorkerGlobal.fetch
+
+Fired when anything is retrieved from the extension package or when `fetch()` and `XMLHttpRequest()` are called from an extension script. In the latter cases, you will need to add the URLs of the pages you want to fetch to the `"host_permissions"` key in the `manifest.json`.
+
+### ServiceWorkerGlobal.message
+
+Service worker message passing is available in addition to extension [messaging passing](/docs/extensions/mv3/messaging/), but the two systems are not interoperable. That means that messages sent using `sendMessage()` (which is available from several extension APIs) aren't intercepted by service worker message handlers. Likewise, messages sent using `postMessage()` aren't intercepted by extension message handlers. Both types of message handlers—meaning both `ServiceWorkerGlobal.message` and `chrome.runtime.onMessage`—are supported in extension service workers. Extension service workers cannot send messages to popup or content scripts using `postMessage()`.
+
+To send a message to an extension service worker using `postMessage()`, use the service worker registration in any script. For example, you could implement the following code in a popup script.
+
+```javascript
+postMsgButton.addEventListener('click', async () => {
+  navigator.serviceWorker.ready.then((registration) => {
+    const msg = { greeting: "Hello, service worker." }
+    registration.active.postMessage(msg);
+  });
+});
+```
+
+And inside the service worker:
+
+```javascript
+this.addEventListener('message', (e) => {
+  const msg = `Service worker message handler called with:\n${e.data.greeting}`;
+  console.log(msg);
+});
 ```

@@ -10,7 +10,7 @@ Extension service workers are installed and updated differently from web service
 
 ## Registering service workers
 
-To register an extension service worker, specify it in the `"background"` field of the `manifest.json` file. Use the `"service_worker"` key, which specifies a single JavaScript file.
+To register an extension service worker, specify it in the `"background"` field of the `manifest.json` file. Use the `"service_worker"` key, which specifies a single JavaScript file. Service workers in web pages or web apps register service workers by first feature-detecting for `serviceWorker` in `navigator` then calling `register()` inside feature detection. This does not work for Extensions.
 
 ```json
 {
@@ -23,8 +23,6 @@ To register an extension service worker, specify it in the `"background"` field 
 }
 
 ```
-
-Service workers in web pages or web apps register service workers by first feature-detecting for `serviceWorker` in `navigator` then calling `register()` inside feature detection. This does not work for Extensions.
 
 ## Importing scripts
 

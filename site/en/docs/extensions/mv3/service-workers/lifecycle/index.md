@@ -46,7 +46,7 @@ When a user or incognito profile starts, the [`chrome.runtime.onStartup`](/docs/
 
 Extension service workers are dormant unless an event fires. If the service worker has a handler for the fired event, it wakes up, executes it, then goes back to being idle. If the service worker is idle for at least 30 seconds it shuts down. Note that this can interrupt a service worker `fetch()` call if the response takes more than 30 seconds to arrive. Any new events reset the idle timer the moment they're fired. As with web service workers, extension service workers have no shutdown or deactivation events.
 
-Before Chrome 110, only running event handlers caused the idle time to reset. Any events that were queued, but for which a handler had not been called would not cause a reset. Extension service workers had a maximum lifetime of five minutes before Chrome shut them down. These behaviors cause service workers to shut down at unexpected times.
+Before Chrome 110, only running event handlers caused the idle time to reset. Any events that were queued, but for which a handler had not been called would not cause a reset. Also, extension service workers had a maximum lifetime of five minutes before Chrome shut them down. These behaviors cause service workers to shut down at unexpected times.
 
 Though Chrome 110 changed this you should not keep your service worker alive indefinitely, though you can. (We don't consider this a good programming practice.) You should test your extensions to ensure that they're not doing this unintentionally.
 
