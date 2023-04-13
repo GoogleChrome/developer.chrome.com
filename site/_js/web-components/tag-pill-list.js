@@ -62,7 +62,24 @@ export class TagPillList extends BaseElement {
     removeEntry(item.name, item);
   }
 
+  _onClickClearPills() {
+    for(const item of this.items){      
+      removeEntry(item.name, item)
+    }
+  }
+
   render() {
+    let clearPill = html``;
+    if (this.items.length > 0) {
+      clearPill = html`
+        <span
+          class="clear-filters tag-pill surface color-blue-medium hairline type--label display-inline-flex align-center"
+          @click="${() => this._onClickClearPills()}"
+        >
+          Clear filters
+        </span>
+      `;
+    }
     const items = this.items.map(
       item => html`
         <span
@@ -76,7 +93,7 @@ export class TagPillList extends BaseElement {
       `
     );
 
-    return html`${items}`;
+    return html`${clearPill}${items}`;
   }
 }
 
