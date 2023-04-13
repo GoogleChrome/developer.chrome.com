@@ -47,7 +47,7 @@ WordPress Playground in an `<iframe>` and configure it using the
 [query parameters API](https://wordpress.github.io/wordpress-playground/pages/embedding-wordpress-playground-on-other-websites.html).
 That's what the [official showcase](https://developer.wordpress.org/playground)
 does. When you select, for example, the
-[Pendant theme](https://wordpress.com/theme/pendant) and the
+[Pendant theme](https://wordpress.org/themes/pendant/) and the
 [Coblocks plugin](https://wordpress.org/plugins/coblocks/), the embedded iframe
 gets updated to point to
 [https://playground.wordpress.net/?theme=pendant&plugin=coblocks](https://playground.wordpress.net/?theme=pendant&plugin=coblocks).
