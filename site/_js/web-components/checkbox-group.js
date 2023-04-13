@@ -153,7 +153,7 @@ class CheckboxGroup extends BaseElement {
   _checkOption() {
     const checked = this.elements.checkboxes
       .filter(checkbox => checkbox.checked === true)
-      .map(checkbox => ({label:checkbox.value, value: checkbox.value}));
+      .map(checkbox => ({label: checkbox.value, value: checkbox.value}));
     console.log(this.elements.checkboxes);
     setFilter(this.name, checked);
   }

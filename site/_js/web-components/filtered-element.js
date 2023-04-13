@@ -20,7 +20,7 @@
  * has since been removed, and hardcoded vote counts are passed through instead.
  */
 import {BaseStateElement} from './base-state-element';
-import {html} from 'lit-element';
+//import {html} from 'lit-element';
 
 import {unsafeHTML} from 'lit-html/directives/unsafe-html';
 
@@ -54,7 +54,7 @@ export class FilteredElement extends BaseStateElement {
   onStateChanged(state) {
     const activeFilters = state.filters || {};
     for (const [name, value] of Object.entries(activeFilters)) {
-      const values = value.map((v) => v.value);
+      const values = value.map(v => v.value);
       if (!values.includes(this.filters[name])) {
         this.hidden = true;
         return;

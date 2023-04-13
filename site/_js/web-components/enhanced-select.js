@@ -110,12 +110,12 @@ export class EnhancedSelect extends BaseElement {
   /**
    * Checks if the app state contains entries for this select, and if so
    * sets the value to the entries.
-   * @param {*} state 
+   * @param {*} state
    */
   onStoreUpdate(state) {
     const filters = state.filters || {};
     const entries = filters[this.name] || [];
-    this.setValue(entries.map((entry) => entry.value));
+    this.setValue(entries.map(entry => entry.value));
   }
 
   disconnectedCallback() {
