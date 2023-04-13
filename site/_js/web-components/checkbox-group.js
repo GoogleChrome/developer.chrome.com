@@ -89,12 +89,16 @@ class CheckboxGroup extends BaseElement {
   onStoreUpdate(state) {
     const filters = state.filters || {};
     const entries = filters[this.name] || [];
+    
+
 
     for (const index in this.elements.checkboxes) {
       const checkbox = this.elements.checkboxes[index];
+      console.log(checkbox)
+      console.log(entries)
       checkbox.checked = entries.some(entry => entry.value === checkbox.value);
     }
-
+          
     this._computeAllSelected();
   }
 
