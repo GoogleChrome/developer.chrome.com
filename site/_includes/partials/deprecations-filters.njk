@@ -57,7 +57,6 @@
           <p class="type--h5 weight-medium gap-bottom-200">{{ 'i18n.deprecations_calendar.chrome_version' | i18n(locale) }}</p>
           <checkbox-group show="7" i18n='{"select_all":"Select all","reset":"Reset"}'>
             {% for i in range(110, 130) -%}
-              <option value="chrome-{{ i }}">Chrome {{ i }}</option>
               <label>
                 <input type="checkbox" name="chrome-version" value="chrome-{{ i }}"/> Chrome {{ i }}
               </label>
