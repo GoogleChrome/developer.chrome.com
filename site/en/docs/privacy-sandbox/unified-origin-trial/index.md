@@ -31,6 +31,97 @@ your configuration, and provides further resources for testing against the APIs.
 
 ## Check the status of the origin trial {: #status}
 
+### April 2023
+
+#### Private Aggregation 1% ramp-up in Stable
+
+[Private Aggregation API](/docs/privacy-sandbox/private-aggregation/) origin trial will be available at 1% of Chrome Stable unified experiment traffic from Monday April 17. The <code>[sendHistogramReport()](/docs/privacy-sandbox/private-aggregation/#sendhistogramreport)</code> function of Private Aggregation is available to be used in [FLEDGE](/docs/privacy-sandbox/fledge/) and [Shared Storage](/docs/privacy-sandbox/shared-storage/) worklets. 
+
+The traffic allocation will look like the following starting on Monday, April 17:
+
+<table>
+  <tr>
+   <td><strong>API</strong>
+   </td>
+   <td><strong>Traffic allocation</strong>
+   </td>
+   <td><strong>Status</strong>
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="2">Attribution Reporting 
+   </td>
+   <td>Unified - 5%
+   </td>
+   <td rowspan="2">6% of the Stable traffic starting from March 13, 2023
+   </td>
+  </tr>
+  <tr>
+   <td>Isolated - 1% - ARA only
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="3">Fenced Frames
+   </td>
+   <td>Unified - 5%
+   </td>
+   <td rowspan="3">7% of the Stable traffic starting from March 13, 2023
+   </td>
+  </tr>
+  <tr>
+   <td>Isolated - 1% - Shared Storage (URL Selection) + Fenced Frames only
+   </td>
+  </tr>
+  <tr>
+   <td>Isolated - 1% - FLEDGE + Fenced Frames only
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="2">FLEDGE 
+   </td>
+   <td>Unified - 5% 
+   </td>
+   <td rowspan="2">6% of the Stable traffic starting from March 13, 2023
+   </td>
+  </tr>
+  <tr>
+   <td>Isolated - 1% - FLEDGE + Fenced Frames only
+   </td>
+  </tr>
+  <tr>
+   <td>Private Aggregation
+   </td>
+   <td>Unified - 1% 
+   </td>
+   <td>1% of the Stable traffic starting from April 17, 2023
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="2">Shared Storage (URL Selection)
+   </td>
+   <td>Unified - 5%
+   </td>
+   <td rowspan="2">6% of the Stable traffic starting from March 13, 2023
+   </td>
+  </tr>
+  <tr>
+   <td>Isolated - 1% - Shared Storage (URL Selection) + Fenced Frames only
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="2">Topics
+   </td>
+   <td>Unified - 5%
+   </td>
+   <td rowspan="2">6% of the Stable traffic starting from March 13, 2023
+   </td>
+  </tr>
+  <tr>
+   <td>Isolated - 1% - Topics only
+   </td>
+  </tr>
+</table>
+
 ### March 2023
 
 #### Timeline update
