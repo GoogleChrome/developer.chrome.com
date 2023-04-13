@@ -26,29 +26,6 @@ const selectFields = document.querySelectorAll('.deprecation-filter');
 const clearFilters = document.querySelector('.clear-filters');
 
 /**
- * Formats the active filters values for the tag pills section
- *
- * @returns {Object}
- */
-function updateTagPills() {
-  if (!activeFiltersList) return;
-
-  activeFiltersList.items = Object.entries(activeFilters).flatMap(i => {
-    if (i[0] === 'removal-date') {
-      i[1] = [formatDateRange(i[1][0])];
-    }
-    const pills = i[1].map(value => ({key: i[0], value: value}));
-
-    clearFilters?.classList.remove('hidden');
-    if (pills.length === 0) {
-      clearFilters?.classList.add('hidden');
-    }
-
-    return pills;
-  });
-}
-
-/**
  * Transforms the selected date range option in a date range starting from the current date
  *
  * @param {String} days The value of the date range filter
@@ -129,43 +106,11 @@ function addClarFilterListener() {
         /** @type {HTMLInputElement } */ (checkbox).checked = false;
       });
     activeFilters = {};
-    updateTagPills();
     clearFilters?.classList.add('hidden');
   });
 }
 
-/**
- * Adds the listeners to the select inputs used on desktop/tablet
- *
- * @returns {void}
- */
-function addSelectListeners() {
-  selectFields.forEach(element => {
-    element.addEventListener('change', e => {
-      const t = e.target;
-
-      if (!(t instanceof EnhancedSelect)) {
-        return;
-      }
-      activeFilters[t.name] = t.value;
-      updateTagPills();
-    });
-  });
-  selectFields.forEach(element => {
-    element.addEventListener('change', e => {
-      const t = e.target;
-
-      if (!(t instanceof EnhancedSelect)) {
-        return;
-      }
-      activeFilters[t.name] = t.value;
-      updateTagPills();
-    });
-  });
-}
-
 (() => {
-  addSelectListeners();
   addMobileListeners();
   addClarFilterListener();
 })();
