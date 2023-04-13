@@ -63,8 +63,8 @@ export class TagPillList extends BaseElement {
   }
 
   _onClickClearPills() {
-    for(const item of this.items){      
-      removeEntry(item.name, item)
+    for (const item of this.items) {
+      removeEntry(item.name, item);
     }
   }
 

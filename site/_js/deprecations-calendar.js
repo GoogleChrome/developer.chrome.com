@@ -56,7 +56,6 @@ function addMobileListeners() {
   }
 }
 
-
 (() => {
   addMobileListeners();
 })();

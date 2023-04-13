@@ -89,14 +89,12 @@ class CheckboxGroup extends BaseElement {
   onStoreUpdate(state) {
     const filters = state.filters || {};
     const entries = filters[this.name] || [];
-    
-
 
     for (const index in this.elements.checkboxes) {
       const checkbox = this.elements.checkboxes[index];
       checkbox.checked = entries.some(entry => entry.value === checkbox.value);
     }
-          
+
     this._computeAllSelected();
   }
 
@@ -155,7 +153,10 @@ class CheckboxGroup extends BaseElement {
   _checkOption() {
     const checked = this.elements.checkboxes
       .filter(checkbox => checkbox.checked === true)
-      .map(checkbox => ({label: checkbox.nextSibling?.textContent, value: checkbox.value}));
+      .map(checkbox => ({
+        label: checkbox.nextSibling?.textContent,
+        value: checkbox.value,
+      }));
     setFilter(this.name, checked);
   }
 
