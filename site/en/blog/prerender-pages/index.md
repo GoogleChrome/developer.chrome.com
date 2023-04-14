@@ -7,7 +7,7 @@ description: |
 authors:
  - tunetheweb
 date: 2022-12-02
-updated: 2023-01-06
+updated: 2023-04-14
 hero: image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/eohdiqaZlxnWen7TT66M.jpg
 alt: City road at dusk with a long exposure of car lights giving impression of speed
 tags:
@@ -86,7 +86,7 @@ Chrome will continually update its predictors based on your typing and selection
 - For a greater than 50% confidence level (shown in amber), Chrome proactively preconnects to the domain, but does not prerender the page.
 - For a greater than 80% confidence level (shown in green), Chrome will prerender the URL.
 
-### Using the Speculation Rules API to prerender pages
+## The Speculation Rules API
 
 For the third prerender option, web developers can insert JSON instructions onto their pages to inform the browser about which URLs to prerender:
 
@@ -103,20 +103,35 @@ For the third prerender option, web developers can insert JSON instructions onto
 </script>
 ```
 
-The Speculation Rules API is planned to be expanded beyond this simple example with the addition of prefetch, [scores](https://github.com/WICG/nav-speculation/blob/main/triggers.md#scores) (for example, the likelihood of a navigation), and syntax to implement [document rules](https://github.com/WICG/nav-speculation/blob/main/triggers.md#document-rules) instead of `list` rules (for example, matching `href` patterns on the page), which can be combined to only prerender links on mouse down, for example.
+Speculation rules can also be used to just prefetch pages, without a full prerender. This can often be a good first step on the road to prerendering:
 
-For now, only the above syntax is supported in Chrome, which is a simple list of urls to prerender.
+```html
+<script type="speculationrules">
+{
+  "prefetch": [
+    {
+      "source": "list",
+      "urls": ["next.html", "next2.html"]
+    }
+  ]
+}
+</script>
+```
 
-For the initial launch in Chrome 108, prerender is restricted to same-origin pages, opened within the same tab. Chrome 109 plans expand this to allow [prerendering same-site cross-origin pages](https://chromestatus.com/feature/4899735257743360) (for example, `https://a.example.com` could prerender a page on `https://b.example.com`, where the other site has opted in to same-site, cross-origin prerendering). Future versions may also [enable prerendering in new tabs](https://bugs.chromium.org/p/chromium/issues/detail?id=1350676).
+{% Aside %}
+Unlike the older `<link rel="prefetch">` resource hint which just prefetched to the HTTP cache, documents loaded via speculation rules are processed in the same way that navigations are (but then not rendered) and are held in memory so will be available quicker to the browser once needed. Using speculation rules for prefetchs will also allow use of [future enhancements](#speculation-rules-restrictions-and-future-enhancements) as they are added to the API.
+
+[Only Chromium-based browsers support document prefetches](https://github.com/whatwg/html/issues/6723) via `<link rel="prefetch">`, so speculation rules should now be used for these going forward, with `<link rel="prefetch">` only used for prefetching subresources.
+{% endAside %}
 
 Speculation rules can be:
 
 * Statically included in the page's HTML. For example a news media site, or a blog may prerender the newest article, if that is often the next navigation for a large proportion of users.
-* Dynamically inserted into the page by JavaScript. This could be based on application logic, personalized to the user, or on certain user actions such as hovering over, or clicking down on a link—as many libraries have done in the past with `preconnect`, `prefetch`, or the older NoState Prefetch `prerender`. Those favoring dynamic insertion, are recommended to keep an eye on Speculation Rules support, as the document rules may make allow the browser to handle many of your use cases as this is introduced in the future.
+* Dynamically inserted into the page by JavaScript. This could be based on application logic, personalized to the user, or on certain user actions such as hovering over, or clicking down on a link—as many libraries have done in the past with `preconnect`, `prefetch`, or the older NoState Prefetch `prerender`. Those favoring dynamic insertion, are recommended to keep an eye on speculation rules support, as the document rules may make allow the browser to handle many of your use cases as this is introduced in the future.
 
 Speculation rules can be added in either the `<head>` or the `<body>` of in the main frame. Speculation rules in subframes are not acted upon, and speculation rules in prerendered pages are only acted upon once that page is activated.
 
-#### Multiple Speculation Rules
+### Multiple speculation rules
 
 Multiple speculation rules can also be added to the same page, and they append to the existing rules. Therefore, the following different ways all result in both `one.html` and `two.html` prerendering:
 
@@ -179,7 +194,25 @@ Multiple speculation rules can also be added to the same page, and they append t
 </script>
 ```
 
-#### Detecting of Speculation Rules API support
+### Speculation rules restrictions and future enhancements
+
+By default prerender is restricted to same-origin pages, opened within the same tab, but we are working to reduce those restrictions.
+
+{% Aside 'update' %}
+[Prerendering same-site cross-origin pages](https://chromestatus.com/feature/4899735257743360) (for example, `https://a.example.com` could prerender a page on `https://b.example.com`) is supported from Chrome 109.
+
+To use this the prerendered page (`https://b.example.com` in this example) needs to opt-in by including a `Supports-Loading-Mode: credentialed-prerender` HTTP header or Chrome will cancel the prerender.
+{% endAside %}
+
+Future versions may also [enable prerendering in new tabs](https://bugs.chromium.org/p/chromium/issues/detail?id=1176054) (where the site opts in with a `Supports-Loading-Mode: uncredentialed-prerender` HTTP header), and [enable prerendering in new tabs](https://bugs.chromium.org/p/chromium/issues/detail?id=1350676).
+
+The Speculation Rules API is planned to be expanded beyond this simple example with the addition of [scores](https://github.com/WICG/nav-speculation/blob/main/triggers.md#scores) (for example, the likelihood of a navigation), and syntax to implement [document rules](https://github.com/WICG/nav-speculation/blob/main/triggers.md#document-rules) instead of `list` rules (for example, matching `href` patterns on the page), which can be combined to only prerender links on mouse down, for example.
+
+{% Aside 'update' %}
+A number of [experiments](https://github.com/WICG/nav-speculation/blob/main/chrome-2023q1-experiment-overview.md) are currently being run in Chrome for some of these additional features. Sites can opt-in to via an [origin trials](https://developer.chrome.com/origintrials/#/view_trial/705939241590325249) to try out—and give feedback—on these potential future additions. [Learn more about origin trials](/docs/web-platform/origin-trials/).
+{% endAside %}
+
+### Detecting of Speculation Rules API support
 
 You can feature detect Speculation Rules API support with standard HTML checks:
 
@@ -189,7 +222,7 @@ if (HTMLScriptElement.supports && HTMLScriptElement.supports('speculationrules')
 }
 ```
 
-#### Adding Speculation Rules dynamically through JavaScript
+### Adding speculation rules dynamically through JavaScript
 
 Below is a simple example of adding a `prerender` speculation rule with JavaScript:
 
@@ -214,13 +247,13 @@ if (HTMLScriptElement.supports &&
 
 You can view a demo of Speculation Rules API prerendering, using JavaScript insertion, on [this demo page](https://prerender-demos.glitch.me/).
 
-#### Cancelling Speculation Rules
+### Cancelling speculation rules
 
-Removing Speculation Rules will result in the prerender being cancelled but, by the time this has happened, resources will likely have already been spent to initiate the prerender, so it is recommended not to prerender if there is a likelihood of needing to cancel the prerender.
+Removing speculation rules will result in the prerender being cancelled but, by the time this has happened, resources will likely have already been spent to initiate the prerender, so it is recommended not to prerender if there is a likelihood of needing to cancel the prerender.
 
-#### Speculation Rules and Content Security Policy
+### Speculation rules and Content Security Policy
 
-As Speculation Rules use a `<script>` element, even though they only contain JSON, they need to be included in the `script-src` [Content-Security-Policy](https://web.dev/csp/) if the site uses this—either using a hash or nonce. In future, a new `inline-speculation-rules` source will be supported in `script-src` allowing all `<script type="speculationrules">` elements on a page to be supported without the need of hashes or nonces.
+As speculation rules use a `<script>` element, even though they only contain JSON, they need to be included in the `script-src` [Content-Security-Policy](https://web.dev/csp/) if the site uses this—either using a hash or nonce. In future, a new `inline-speculation-rules` source will be supported in `script-src` allowing all `<script type="speculationrules">` elements on a page to be supported without the need of hashes or nonces.
 
 ## Detecting and disabling prerendering
 
