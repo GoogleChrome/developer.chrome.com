@@ -182,6 +182,7 @@ async function cleanUpGoogleCloud() {
   // and no instances except the default one, then we can exit early
   if (appEngineVersions.length === 1) {
     console.log('No app deployments found.');
+    return;
   }
 
   await cleanUpAppEngineVersions(appEngineVersions, staleDeployments);
