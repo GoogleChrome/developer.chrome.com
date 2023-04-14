@@ -17,7 +17,9 @@ tags:
 
 {% Partial 'devtools/banner.md' %}
 
-*No 'What's new in DevTools' video for this release. Check out the latest DevTools Tips video: [What are source maps?](https://youtu.be/FIYkjjFYvoI).*
+*There is no 'What's new in DevTools' video for this release, but you can watch this quick recap of the recent features.*
+
+{% YouTube id='CrSmjooOEiE' %}
 
 <!-- $contentStart -->
 
