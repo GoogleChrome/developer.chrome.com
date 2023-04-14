@@ -7,7 +7,7 @@ authors:
   - beaufortfrancois
 date: 2023-04-14
 hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/vMZWdUfClsmRYEwgCEv5.jpg
-alt: Person making face photo.
+alt: A person in sharp focus in front of a blurred background. 
 tags:
   - chrome-114
   - media
@@ -19,7 +19,7 @@ The Background Blur API brings background concealment capabilities to the web. T
 
 <figure>
   {% Img src="image/vvhSqZboQoZZN9wBvoXq72wzGAf1/6aOVvWweKJHipwWx3FZF.png", alt="Photo with background blur turned off and on.", width="800", height="367" %}
-  <figcaption>Photo with background blur turned off (left) and on ( right).</figcaption>
+  <figcaption>Photo with background blur turned off (left) and on (right).</figcaption>
 </figure>
 
 ## Enable the Background Blur API
