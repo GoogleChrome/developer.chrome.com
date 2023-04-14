@@ -43,7 +43,7 @@ const FALLBACK_DIRECTORY = 'main/';
 
 /**
  * The version name of the default App Engine version, which should
- * never be cleaned up (but also can't and would )
+ * never be cleaned up (but also can't and would make the job fail it tried)
  */
 const FALLBACK_VERSION = 'main';
 
