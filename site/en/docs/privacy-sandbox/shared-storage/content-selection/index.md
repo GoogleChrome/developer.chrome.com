@@ -26,9 +26,9 @@ with three different ad creatives. You want to sequence these creatives based
 on the user's interactions (view or click).
 
 <figure>
-{% Img
-  src="image/VbsHyyQopiec0718rMq2kTE1hke2/nQjmdUEetBV5Ialu6z4p.png", alt="Three ad creatives, which are shown to users based on their previous interaction.", width="744", height="124"
-%}
+  {% Img
+    src="image/VbsHyyQopiec0718rMq2kTE1hke2/IpZ9UTJTPctcnFzVY4yc.svg",  alt="Three ad creatives, which are shown to users based on their previous interaction.", width="443", height="128"
+    %}
 <figcaption>The first creative for a new viewer says, "Go on your next adventure." With just a view and no click, the user would see, "Explore weekend getaways." After viewing or clicking, the third creative encourages users to "Click to get your Hotel Discount." If the user clicks on the first ad, the next ad they would see is the thrid creative.</figcaption>
 </figure>
 
