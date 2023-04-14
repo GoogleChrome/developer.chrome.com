@@ -48,7 +48,7 @@ The Shared Storage API intends to support many use cases, replacing several exis
   </tr>
   </thead>
   <tr>
-   <td><strong><a href="/docs/privacy-sandbox/shared-storage/frequency-control/">Frequency Controls</a></strong>
+   <td><strong><a href="/docs/privacy-sandbox/shared-storage/creative-selection-by-frequency/">Frequency Controls</a></strong>
    </td>
    <td>The opposite side of the pendulum to effective frequency is oversaturation, showing users the same content too often leading to poor user experience.  To balance and control for the number of views, organizations can record a user’s view counts in shared storage and display different content once the user has reached a predefined and customizable limit. 
    </td>
@@ -148,7 +148,7 @@ This demo is constructed from the perspective of an advertiser, ad tech, content
 
 The demo contains use cases for URL selection and Private Aggregation.
 
-For the URL selection demo, [frequency control](/docs/privacy-sandbox/shared-storage/frequency-control), [creative rotation](/docs/privacy-sandbox/shared-storage/creative-rotation/), [known customer](/docs/privacy-sandbox/shared-storage/known-customer/), and [A/B testing](/docs/privacy-sandbox/shared-storage/ab-testing/) use cases are available.
+For the URL selection demo, [frequency control](/docs/privacy-sandbox/shared-storage/creative-selection-by-frequency), [creative rotation](/docs/privacy-sandbox/shared-storage/creative-rotation/), [known customer](/docs/privacy-sandbox/shared-storage/known-customer/), and [A/B testing](/docs/privacy-sandbox/shared-storage/ab-testing/) use cases are available.
 
 For the Private Aggregation demo, you can preview unique [reach measurement](/docs/privacy-sandbox/shared-storage/unique-reach), [demographics measurement](/docs/privacy-sandbox/shared-storage/user-demographics), and [K-frequency measurement](/docs/privacy-sandbox/shared-storage/k-freq-reach).
 
