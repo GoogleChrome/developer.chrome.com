@@ -6,7 +6,7 @@
 const path = require('path');
 const test = require('ava');
 
-const {getNonLocalizedURL} = require('../../server/not-found');
+const {getNonLocalizedURL} = require('../../server/handlers/errors/notFound');
 
 const ROOT_DIR = path.join(__dirname, 'fixtures');
 const DEFAULT_LOCALE = 'en';
