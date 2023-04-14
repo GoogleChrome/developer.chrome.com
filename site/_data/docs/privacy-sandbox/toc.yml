@@ -75,6 +75,7 @@
       sections:
         - url: /docs/privacy-sandbox/shared-storage/content-selection
         - url: /docs/privacy-sandbox/shared-storage/creative-rotation
+        - url: /docs/privacy-sandbox/shared-storage/creative-selection-by-frequency
         - url: /docs/privacy-sandbox/shared-storage/ab-testing
         - url: /docs/privacy-sandbox/shared-storage/known-customer
     - url: /docs/privacy-sandbox/maximize-ad-relevance

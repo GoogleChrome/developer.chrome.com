@@ -67,7 +67,7 @@ existing uses for third-party cookies. This includes:
    <td><strong><a href="/docs/privacy-sandbox/shared-storage/creative-rotation/">Creative rotation</a></strong></td>
    <td>You can store data, such as creative ID, view counts, and user interaction, to determine which creative users' see across different sites. This allows you to balance views and avoid oversaturation of ceratin content, which can help you avoid a negative user experience.</td>
    <td>Content selection</td>
-  </tr>
+   </tr>  
   <tr>
    <td><strong><a href="/docs/privacy-sandbox/shared-storage/ab-testing/">A/B testing</a></strong></td>
    <td>You can assign a user to an experiment group, then store that group in shared storage to be accessed cross-site.</td>
@@ -162,6 +162,7 @@ each use case. Visit the publisher's pages to see how the data is shared in a
 cross-site context.
 
 The demo contains use cases for content selection and Private Aggregation.
+
 
 For the content selection demo,
 [creative rotation](/docs/privacy-sandbox/shared-storage/creative-rotation/),
