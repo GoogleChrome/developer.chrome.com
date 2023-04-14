@@ -49,6 +49,11 @@ FLEDGE is the first experiment to be implemented in Chromium within the
 [Privacy Sandbox timeline](https://privacysandbox.com/timeline) provides implementation timing
 information for FLEDGE and other Privacy Sandbox proposals.
 
+### How does FLEDGE differ from Turtledove?
+
+The differences mostly pertain to separation of the on-device role
+of the ad buyer and seller. The sections below explain how FLEDGE works.
+
 ### FLEDGE in one minute {: #overview}
 
 For a more in-depth overview of FLEDGE, read the
@@ -189,9 +194,19 @@ and membership is removed when users clear their site data.
 Learn how you can [block access to the FLEDGE API](/docs/privacy-sandbox/fledge-api/opt-out),
 either as a site owner or as an individual user.
 
-{: #glossary}
+### Can users block an ad shown as the result of a FLEDGE auction? {: #ad-block }
+
+Users can [opt out of the Privacy Sandbox API](/docs/privacy-sandbox/fledge-api/opt-out/#opt-out-user).
+To opt out of a specific ad or ad selection technique, the appropriate party to
+provide those controls is the ad tech serving the ad.
+
+Developers can use multiple approaches to control which ads are eligible for
+bidding and serving, as well as recording a user's ad preferences. One
+technique is to call `leaveAdInterestGroup()` when a user asks to block a specific ad, for the winning interest group that provided the ad. This removes the user's browser from membership of the interest group and makes the group ineligible to bid in the future.
 
 ## Key concepts
+
+{: #glossary}
 
 Looking for more information on FLEDGE terminology? Refer to the [Privacy Sandbox glossary](/docs/privacy-sandbox/glossary/).
 
@@ -272,7 +287,11 @@ The table below provides examples of different types of FLEDGE interest group an
   </table>
 </div>
 
-<br>
+{: #interest-group-limits}
+
+Chrome allows up to 1000 interest groups per owner, and up to 1000 interest group
+owners. These limits are meant as guard rails, not to be hit in regular operation.
+
 
 {% endDetails %}
 
@@ -473,5 +492,7 @@ We've written an  [API developer guide](/docs/privacy-sandbox/fledge-api) and bu
 -  **Announcements**: Join or view past announcements on the [FLEDGE mailing list](https://groups.google.com/u/0/a/chromium.org/g/fledge-api-announce).
 -  **W3C**: Discuss industry use cases in the [Improving Web Advertising Business
    Group](https://www.w3.org/community/web-adv/participants).
--  **Developer support**: Ask questions and join discussions on the
+-  **Developer support**: Ask questions about implementation, and best practices, or join discussions on the
    [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
+-  **Current implementation**: For questions about the implementation currently available to test in
+   Chrome: [file a Chromium bug](https://bugs.chromium.org/p/chromium/issues/list?q=fledge).

@@ -157,7 +157,7 @@ kenchris:
   title:
     en: 'Kenneth Christiansen'
   description:
-    en: 'Kenneth is an Engineer at Intel'
+    en: 'Kenneth a Principal Engineer at Intel'
 emilystark:
   title:
     en: 'Emily Stark'
@@ -571,6 +571,16 @@ reillyg:
     pt: Engenheiro de software no Google Chrome com foco em APIs de hardware
     ru: Инженер-программист в команде Google Chrome, специализирующийся на API для работы с устройствами
     zh: 专注于硬件 API 的 Google Chrome 软件工程师
+nattestad:
+  title:
+    en: Thomas Nattestad
+  description:
+    en: Product Manager at Google
+adamzielinski:
+  title:
+    en: Adam Zieliński
+  description:
+    en: WordPress core committer at Automattic
 cwallez:
   title:
     en: Corentin Wallez
@@ -1264,6 +1274,11 @@ tristramsouthey:
     en: 'Tristram Southey'
   description:
     en: 'Product Manager, Google Chrome'
+kyraseevers:
+  title:
+    en: 'Kyra Seevers'
+  description:
+    en: 'Software Engineer, Google Chrome'
 jyasskin:
   title:
     en: 'Jeffrey Yasskin'
@@ -1318,3 +1333,34 @@ janicklasralphj:
     pt: Engenheiro de software da equipe Aurora no Chrome.
     ru: Инженер-программист в команде Aurora в Chrome.
     zh: Chrome 公司 Aurora 团队的软件工程师。
+mattreynolds:
+  title:
+    en: Matt Reynolds
+  description:
+    en: Matt is a software developer
+    es: Matt es un desarrollador de software
+    ja: Matt はソフトウェア開発者です
+    ko: Matt는 소프트웨어 개발자입니다.
+    pt: Matt é um desenvolvedor de software
+    ru: Мэтт — разработчик программного обеспечения
+    zh: Matt 是一名软件开发者
+pbirk:
+  title:
+    en: Peter Birk Pakkenberg
+  description:
+    en: Software Engineer, Android
+pjl:
+  title:
+    en: Philip Lee
+  description:
+    en: Software Engineer
+georgiafranklin:
+  title:
+    en: Georgia Franklin
+  description:
+    en: Product Manager, Privacy Sandbox
+arskama:
+  title:
+    en: Arnaud (Arno) Mandy
+  description:
+    en: Arno is an Engineer at Intel

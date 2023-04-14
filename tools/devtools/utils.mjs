@@ -19,7 +19,6 @@ export const locales = [
   {lang: 'en', isDefault: true},
   {lang: 'es'},
   {lang: 'ja'},
-  {lang: 'ko'},
   {lang: 'pt'},
   {lang: 'ru'},
   {lang: 'zh'},

@@ -4,7 +4,7 @@ title: SQLite Wasm in the browser backed by the Origin Private File System
 subhead: >
   Use SQLite to handle all your storage needs performantly on the web.
 date: 2023-01-11
-updated: 2023-01-11
+updated: 2023-03-28
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/l5kRHOrUI9mQmwOTJKr7.jpg
 alt: Library symbolizing a database.
 authors:
@@ -114,6 +114,10 @@ If you inspect the traffic with DevTools, you should find the following informat
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/5IwU6G8KyFjV3SP3f0lX.png", alt="The two headers mentioned above, Cross-Origin-Embedder-Policy and Cross-Origin-Opener-Policy, highlighted in Chrome DevTools.", width="377", height="249" %}
 
+### Speedtest
+
+The SQLite team have run some benchmarks on their WebAssembly implementation compared to the deprecated Web SQL. These benchmarks show that SQLite Wasm is generally about as fast as Web SQL. Sometimes it's a little slower, sometimes it's a little faster. See all details on the [results page](https://sqlite-wasm-opfs.glitch.me/speedtest.html).
+
 ### Getting started code sample
 
 As mentioned previously, SQLite Wasm with the Origin Private File System persistence backend needs
@@ -182,7 +186,7 @@ const start = function (sqlite3) {
     let i;
     for (i = 20; i <= 25; ++i) {
       db.exec({
-        sql: INSERT INTO t(a,b) VALUES (?,?)',
+        sql: 'INSERT INTO t(a,b) VALUES (?,?)',
         bind: [i, i * 2],
       });
     }

@@ -19,7 +19,7 @@ alt: Blowfish swarm swimming in the ocean.
     {% if hero %}
       {{ heroCard(
         "Project Fugu API Showcase",
-        "The Project Fugu API Showcase is a collection of apps that make use of APIs that were conceived in the context of Project Fugu.",
+        "The Project Fugu API Showcase is a collection of apps that make use of APIs that were conceived in the context of Project Fugu. You can learn more about Project Fugu on the [Capabilities](/capabilities/) landing page.",
         "Submit a new app",
         "https://docs.google.com/forms/d/e/1FAIpQLScNd1rClbmFWh6FcMmjUNrwg9RLz8Jk4BkHz_-EOpmkVd_-9g/viewform",
         hero,
@@ -46,7 +46,7 @@ alt: Blowfish swarm swimming in the ocean.
           {{ icon('close', {hidden: false}) }}
         </span>
       </div>
-      <label class="label lg:gap-left-500" for="api-select">{{ 'i18n.filter_sheet.filter_by' | i18n(locale) }}</label>
+      <label class="label lg:gap-left-500" for="api-select">{{ 'i18n.common.filter_by' | i18n(locale) }}</label>
       <enhanced-select id="api-select" label="{{ 'i18n.fugu_showcase.select_api' | i18n(locale) }}">
         <select name="api-select" multiple>
           {% for availableAPI in fuguShowcase.availableApis %}

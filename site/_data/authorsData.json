@@ -95,7 +95,9 @@
     "twitter": "williamdenniss"
   },
   "kenchris": {
-    "twitter": "kennethrohde"
+    "country": "DK",
+    "twitter": "kennethrohde",
+    "github": "kenchris"
   },
   "emilystark": {
     "homepage": "https://www.emilymstark.com/",
@@ -184,7 +186,8 @@
   },
   "rviscomi": {
     "github": "rviscomi",
-    "twitter": "rick_viscomi"
+    "twitter": "rick_viscomi",
+    "image": "image/STd8eW8CSiNp5B1bX0R6Dww2eH32/03cRovenlDpm0uyoUUkX.jpeg"
   },
   "ilyagrigorik": {
     "homepage": "https://igvita.com/",
@@ -510,10 +513,22 @@
     "github": "reillyeon",
     "image": "image/admin/C7kO2T8Q8jSZxU9xj3AC.jpg"
   },
+  "nattestad": {
+    "twitter": "fractorious",
+    "country": "US",
+    "image": "image/admin/UyUsatSDE2wdnfy3KHzO.jpg"
+  },
+  "adamzielinski": {
+    "twitter": "adamzielin",
+    "github": "adamziel",
+    "homepage": "https://adamadam.blog/",
+    "image": "image/8WbTDNrhLsU0El80frMBGE4eMCD3/qNsFHO1nZ3FxmYd3PwWL.webp"
+  },
   "cwallez": {
     "country": "FR",
     "twitter": "DaKangz",
     "github": "Kangz",
+    "mastodon": "https://mastodon.gamedev.place/@DaKangz",
     "image": "image/vvhSqZboQoZZN9wBvoXq72wzGAf1/mYkUaoNpythq50oIFiQh.jpeg"
   },
   "eladalon": {
@@ -1081,6 +1096,10 @@
     "country": "US",
     "image": "image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/yh2i5pJyWLqMz49B7qWq.jpeg"
   },
+  "kyraseevers": {
+    "country": "US",
+    "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/bAfyIJWEgdLfw1B3K8j0.jpg"
+  },
   "jyasskin": {
     "country": "US",
     "mastodon": "https://hachyderm.io/@jyasskin",
@@ -1105,5 +1124,27 @@
   "janicklasralphj": {
     "twitter": "Janicklas",
     "image": "image/IypihH3o5cSpEMVp5i08dp69otp2/XClrajjKMkDpS2XeK83c.jpg"
+  },
+  "mattreynolds": {
+    "github": "nondebug",
+    "image": "image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/T6iiWq4bxpNnhtksZITO.jpg"
+  },
+  "pbirk": {
+    "image": "image/VbsHyyQopiec0718rMq2kTE1hke2/OP7hHXskpMEc8q7wddG1.jpeg",
+    "github": "peterbn",
+    "linkedin": "peter-birk-pakkenberg"
+  },
+  "pjl": {
+    "country": "US",
+    "github": "pjl-google",
+    "linkedin": "philipjlee"
+  },
+  "georgiafranklin": {
+    "country": "US",
+    "image": "image/VbsHyyQopiec0718rMq2kTE1hke2/tFdVO9oa8ki55NO1Iwma.jpeg"
+  },
+  "arskama": {
+    "country": "FI",
+    "github": "arskama"
   }
 }
