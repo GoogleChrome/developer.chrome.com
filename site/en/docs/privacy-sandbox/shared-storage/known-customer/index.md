@@ -21,7 +21,7 @@ You can store whether the user has registered on your site into Shared Storage,
 then render a seperate element based on whether the user's stored status (is
 the user a "known" customer).
 
-## Try setting known customers
+## Set known customers
 
 To experiment with identifying known customers in Shared Storage, confirm
 you're using Chrome 104.0.5086.0 or later. Then enable the
