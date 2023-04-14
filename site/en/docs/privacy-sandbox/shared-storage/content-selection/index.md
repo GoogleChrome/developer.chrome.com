@@ -12,11 +12,11 @@ authors:
   - alexandrawhite
 ---
 
-
 With the [Shared Storage API](/docs/privacy-sandbox/shared-storage/), you can
 select content to be rendered into a fenced frame using cross-site data. Use
 JavaScript to read and write cross-site data, then select a URL from a provided
-list based on your stored data. You can render that content in a [fenced frame](/docs/privacy-sandbox/fenced-frame/).
+list based on your stored data. You can render that content in a
+[fenced frame](/docs/privacy-sandbox/fenced-frame/).
 
 Content selection can include any kind of content: ads, articles, images, HTML,
 calls-to-action (such as buttons), and more.
@@ -29,7 +29,9 @@ on the user's interactions (view or click).
   {% Img
     src="image/VbsHyyQopiec0718rMq2kTE1hke2/IpZ9UTJTPctcnFzVY4yc.svg",  alt="Three ad creatives, which are shown to users based on their previous interaction.", width="443", height="128"
     %}
-<figcaption>The first creative for a new viewer says, "Go on your next adventure." With just a view and no click, the user would see, "Explore weekend getaways." After viewing or clicking, the third creative encourages users to "Click to get your Hotel Discount." If the user clicks on the first ad, the next ad they would see is the thrid creative.</figcaption>
+<figcaption>
+  The first creative for a new viewer says, "Go on your next adventure." With just a view and no click, the user would see, "Explore weekend getaways." After viewing or clicking, the third creative encourages users to "Click to get your Hotel Discount." If the user clicks on the first ad, the next ad they would see is the thrid creative.
+</figcaption>
 </figure>
 
 When a user first observes a winning ad space, you can store an ID and click status for that creative in Shared Storage. This means when you win an ad auction on other sites that this user visits, you can display a different ad based on that data.
@@ -74,19 +76,24 @@ Content selection with Shared Storage supports the following use cases:
 
 ## Try content selection
 
-Content selection with the Shared Storage API is available for testing in Chrome Canary/Dev/Beta M105+.
+Content selection with the Shared Storage API is available for testing in
+Chrome Canary/Dev/Beta M105+.
 
-To test, you must enable the **Privacy Sandbox Ads APIs experiment** flag at `chrome://flags/#privacy-sandbox-ads-apis`.
+To test, you must enable the **Privacy Sandbox Ads APIs experiment** flag at
+`chrome://flags/#privacy-sandbox-ads-apis`.
 
+<figure class="screenshot">
 {% Img
 	src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/CWfgCMJQ5cYPOfjttF3k.png",
 	alt="Set Privacy Sandbox Ads APIs experiment to enabled to use these APIs",
 	width="744", height="124"
 %}
+</figure>
 
 ### Experiment with the demo
 
-A [demo is available](https://shared-storage-demo.web.app/), and you can review the code on [GitHub](https://github.com/GoogleChromeLabs/shared-storage-demo).
+A [demo is available](https://shared-storage-demo.web.app/), and you can review
+the code on [GitHub](https://github.com/GoogleChromeLabs/shared-storage-demo).
 
 This demo is constructed from the perspective of an advertiser, adtech, content
 distributor or other third-party service that wants to store information across
@@ -95,4 +102,3 @@ both Publisher A and Publisher B sites for each use case. Visit each
 publisher's page to see how the data is shared in a cross-site context.
 
 {% Partial 'privacy-sandbox/shared-storage-engage.md' %}
-
