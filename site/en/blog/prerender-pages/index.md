@@ -119,9 +119,9 @@ Speculation rules can also be used to just prefetch pages, without a full preren
 ```
 
 {% Aside %}
-Unlike the older `<link rel="prefetch">` resource hint which just prefetched to the HTTP cache, documents loaded via speculation rules are processed in the same way that navigations are (but then not rendered) and are held in memory so will be available quicker to the browser once needed. Using speculation rules for prefetchs will also allow use of [future enhancements](#speculation-rules-restrictions-and-future-enhancements) as they are added to the API.
+Unlike the older `<link rel="prefetch">` resource hint which just prefetched to the HTTP cache, documents loaded via speculation rules are processed in the same way that navigations are (but then not rendered) and are held in memory so will be available quicker to the browser once needed. Using speculation rules for prefetches will also allow use of [future enhancements](#speculation-rules-restrictions-and-future-enhancements) as they are added to the API.
 
-[Only Chromium-based browsers support document prefetches](https://github.com/whatwg/html/issues/6723) via `<link rel="prefetch">`, so speculation rules should now be used for these going forward, with `<link rel="prefetch">` only used for prefetching subresources.
+[Only Chromium-based browsers support document prefetches](https://github.com/whatwg/html/issues/6723) via `<link rel="prefetch">`, and given the above, it is recommended to use speculation rules for these going forward, with `<link rel="prefetch">` only used for prefetching subresources.
 {% endAside %}
 
 Speculation rules can be:
@@ -204,7 +204,7 @@ By default prerender is restricted to same-origin pages, opened within the same 
 To use this the prerendered page (`https://b.example.com` in this example) needs to opt-in by including a `Supports-Loading-Mode: credentialed-prerender` HTTP header or Chrome will cancel the prerender.
 {% endAside %}
 
-Future versions may also [enable prerendering in new tabs](https://bugs.chromium.org/p/chromium/issues/detail?id=1176054) (where the site opts in with a `Supports-Loading-Mode: uncredentialed-prerender` HTTP header), and [enable prerendering in new tabs](https://bugs.chromium.org/p/chromium/issues/detail?id=1350676).
+Future versions may also [allow prerender for cross-origins](https://bugs.chromium.org/p/chromium/issues/detail?id=1176054) (where the site opts in with a similar `Supports-Loading-Mode: uncredentialed-prerender` HTTP header), and [enable prerendering in new tabs](https://bugs.chromium.org/p/chromium/issues/detail?id=1350676).
 
 The Speculation Rules API is planned to be expanded beyond this simple example with the addition of [scores](https://github.com/WICG/nav-speculation/blob/main/triggers.md#scores) (for example, the likelihood of a navigation), and syntax to implement [document rules](https://github.com/WICG/nav-speculation/blob/main/triggers.md#document-rules) instead of `list` rules (for example, matching `href` patterns on the page), which can be combined to only prerender links on mouse down, for example.
 
