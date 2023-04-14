@@ -42,7 +42,7 @@ Unfortunately, this behavior did not apply to extension events. Extension events
 
 As of Chrome 110, all events reset the idle timer and the idle timeout will not occur if there are pending events. In other words, assuming there are no unexpected interruptions, extension service workers will now typically stay alive as long as they are actively processing events. In addition, calls to extension specific Chrome APIs, such as `chrome.storage.local.get()`, will reset the idle timeout. Be aware that:
 
-* The service worker will terminate after 30 seconds if there are no events.
+* The service worker will terminate after 30 seconds if there are no events for both synchronous and asynchronous calls.
 * The service worker will terminate after 5 minutes if a single request, such as an event or API call, takes longer than 5 minutes to process (with the exception of a native messaging connection).
 
 We are till working to ensure that extension service workers are terminated when possible, without shutting down long-running work. A resource-concious extension service workers should always yield when possible. Additionally, extensions should prepare for unexpected termination by persisting state. This ensures against unpredictable events like the browser being forcefully closed by the user.
