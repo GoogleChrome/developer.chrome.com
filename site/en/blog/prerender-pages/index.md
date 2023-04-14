@@ -209,7 +209,7 @@ Future versions may also [enable prerendering in new tabs](https://bugs.chromium
 The Speculation Rules API is planned to be expanded beyond this simple example with the addition of [scores](https://github.com/WICG/nav-speculation/blob/main/triggers.md#scores) (for example, the likelihood of a navigation), and syntax to implement [document rules](https://github.com/WICG/nav-speculation/blob/main/triggers.md#document-rules) instead of `list` rules (for example, matching `href` patterns on the page), which can be combined to only prerender links on mouse down, for example.
 
 {% Aside 'update' %}
-A number of [experiments](https://github.com/WICG/nav-speculation/blob/main/chrome-2023q1-experiment-overview.md) are currently being run in Chrome for some of these additional features. Sites can opt-in to via an [origin trials](https://developer.chrome.com/origintrials/#/view_trial/705939241590325249) to try out—and give feedback—on these potential future additions. [Learn more about origin trials](/docs/web-platform/origin-trials/).
+A number of [experiments](https://github.com/WICG/nav-speculation/blob/main/chrome-2023q1-experiment-overview.md) are currently being run in Chrome for some of these additional features. Sites can opt-in to via an [origin trial](/origintrials/#/view_trial/705939241590325249) to try out—and give feedback—on these potential future additions. [Learn more about origin trials](/docs/web-platform/origin-trials/).
 {% endAside %}
 
 ### Detecting of Speculation Rules API support
