@@ -1,4 +1,4 @@
-## Other use cases
+## Use cases
 
 These are only some of the possible use cases for Shared Storage. We'll
 continue to add examples as we
@@ -9,7 +9,7 @@ and discover new use cases.
 
 Select and display different content on different websites in
 [fenced frames](/docs/privacy-sandbox/fenced-frame/) based on information
-collected in Shared Storage.
+collected in Shared Storage. The output gate for these use cases is URL selection.
 
 * [**Creative rotation**](/docs/privacy-sandbox/shared-storage/creative-rotation):
   Store data, such as creative ID, view counts, and user interaction, to determine which creative users' see across different sites.
@@ -20,7 +20,7 @@ collected in Shared Storage.
 
 ### Generate summary reports
 
-Collect information with Shared Storage and report on your findings with the
+Collect information with Shared Storage and generated a noisy, aggregated summary report. The output gate for these use cases is the
 [Private Aggregation API](/docs/privacy-sandbox/private-aggregation/).
 
 * [**Unique reach measurement**](/docs/privacy-sandbox/shared-storage/unique-reach): 
