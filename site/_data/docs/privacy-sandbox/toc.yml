@@ -100,6 +100,8 @@
       sections:
         - url: /docs/privacy-sandbox/private-aggregation
         - url: /docs/privacy-sandbox/private-aggregation-fundamentals
+        - url: /docs/privacy-sandbox/private-aggregation-experiment
+          title: i18n.docs.privacy-sandbox.experiment-participate
         - url: /docs/privacy-sandbox/shared-storage/unique-reach
         - url: /docs/privacy-sandbox/shared-storage/user-demographics
         - url: /docs/privacy-sandbox/shared-storage/k-freq-reach
