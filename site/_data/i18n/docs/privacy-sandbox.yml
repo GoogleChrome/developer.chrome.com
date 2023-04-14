@@ -6,6 +6,8 @@ ondevice-auctions:
   en: 'On-device auctions for custom audiences'
 cross-site-storage:
   en: 'Secure cross-site storage'
+content-selection:
+  en: 'Cross-site content selection'
 fledge:
   en: 'FLEDGE'
 fledge-best-practices:
