@@ -21,6 +21,9 @@ redirects:
 
 # Simple redirects
 
+- from: /blog/wordpress-playground/
+  to: https://web.dev/wordpress-playground/
+
 - from: /blog/navigation-preload/
   to: https://web.dev/navigation-preload/
 

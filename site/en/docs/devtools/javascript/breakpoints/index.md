@@ -5,7 +5,7 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2017-02-03
-updated: 2023-03-07
+updated: 2023-04-03
 description: "Learn about all the ways you can pause your code in Chrome DevTools."
 tags:
   - javascript
@@ -22,7 +22,7 @@ inefficient to set, especially if you don't know exactly where to look, or if yo
 large codebase. You can save yourself time when debugging by knowing how and when to use the other
 types of breakpoints.
 
-<table><tbody><tr><th>Breakpoint Type</th><th>Use this when you want to ...</th></tr><tr><td><a href="#loc">Line-of-code</a></td><td>Pause on an exact region of code.</td></tr><tr><td><a href="#conditional-loc">Conditional line-of-code</a></td><td>Pause on an exact region of code, but only when some other condition is true.</td></tr><tr><td><a href="#log-loc">Logpoint</a></td><td>Log a message to the <b>Console</b> without pausing the execution.</td></tr><tr><td><a href="#dom">DOM</a></td><td>Pause on the code that changes or removes a specific DOM node, or its children.</td></tr><tr><td><a href="#xhr">XHR</a></td><td>Pause when an XHR URL contains a string pattern.</td></tr><tr><td><a href="#event-listeners">Event listener</a></td><td>Pause on the code that runs after an event, such as <code translate="no" dir="ltr">click</code>, is fired.</td></tr><tr><td><a href="#exceptions">Exception</a></td><td>Pause on the line of code that is throwing a caught or uncaught exception.</td></tr><tr><td><a href="#function">Function</a></td><td>Pause whenever a specific function is called.</td></tr></tbody></table>
+<table><tbody><tr><th>Breakpoint Type</th><th>Use this when you want to ...</th></tr><tr><td><a href="#loc">Line-of-code</a></td><td>Pause on an exact region of code.</td></tr><tr><td><a href="#conditional-loc">Conditional line-of-code</a></td><td>Pause on an exact region of code, but only when some other condition is true.</td></tr><tr><td><a href="#log-loc">Logpoint</a></td><td>Log a message to the <b>Console</b> without pausing the execution.</td></tr><tr><td><a href="#dom">DOM</a></td><td>Pause on the code that changes or removes a specific DOM node, or its children.</td></tr><tr><td><a href="#xhr">XHR</a></td><td>Pause when an XHR URL contains a string pattern.</td></tr><tr><td><a href="#event-listeners">Event listener</a></td><td>Pause on the code that runs after an event, such as <code translate="no" dir="ltr">click</code>, is fired.</td></tr><tr><td><a href="#exceptions">Exception</a></td><td>Pause on the line of code that is throwing a caught or uncaught exception.</td></tr><tr><td><a href="#function">Function</a></td><td>Pause whenever a specific function is called.</td></tr><tr><td><a href="#trusted-type">Trusted Type</a></td><td>Pause on <a href="https://www.w3.org/TR/trusted-types/">Trusted Type</a> violations.</td></tr></tbody></table>
 
 ## Line-of-code breakpoints {: #loc }
 
@@ -116,7 +116,7 @@ Use the **Breakpoints** pane to disable, edit, or remove line-of-code breakpoint
 The **Breakpoints** pane groups the breakpoints by file and orders them by line and column numbers. You can do the following with groups:
 
 - To collapse or expand a group, click its name.
-- To enable or disable a group or breakpoint individually, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} next to the group or the breakpoint. 
+- To enable or disable a group or breakpoint individually, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} next to the group or the breakpoint.
 - To remove a group, hover over it and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gtAWQj5HMLjKYPqU9dBP.svg", alt="Close.", width="24", height="24" %}.
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/UslK4pKSMUfuzuzE29gx.mp4", muted="true", controls="true", class="screenshot" %}
@@ -130,7 +130,7 @@ Groups have context menus. In the **Breakpoints** pane, right-click a group and 
 - Remove all breakpoints in file (group).
 - Disable all breakpoints in file.
 - Enable all breakpoints in file.
-- Remove all breakpoints (in all files). 
+- Remove all breakpoints (in all files).
 - Remove other breakpoints (in other groups).
 
 #### Edit breakpoints {: #edit-breakpoints }
@@ -245,7 +245,7 @@ Currently, in a Node.js debug session, you can pause on caught exceptions only i
 See [Chromium bug #1382762](https://crbug.com/1382762) for details.
 {% endAside %}
 
-In the **Breakpoints** pane of the **Sources** tab, enable one of the following options or both, then execute the code: 
+In the **Breakpoints** pane of the **Sources** tab, enable one of the following options or both, then execute the code:
 
 - Check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Pause on uncaught exceptions**.
 
@@ -300,6 +300,36 @@ Console. Here's one strategy:
 2.  Trigger the breakpoint.
 3.  Call `debug()` in the DevTools Console while the code is still paused on your line-of-code
     breakpoint.
+
+## Trusted Type breakpoints {: #trusted-type }
+
+The [Trusted Type API](https://developer.mozilla.org/docs/Web/API/Trusted_Types_API) provides protection against security
+exploits known as [cross-site scripting](https://owasp.org/www-community/attacks/xss/) (XSS) attacks.
+
+{% Aside 'key-term' %}
+DOM-based cross-site scripting happens when data from a user controlled
+_source_ (like username, or redirect URL taken from the URL fragment)
+reaches a _sink_, which is a function like `eval()` or a property setter like
+`.innerHTML`, that can execute arbitrary JavaScript code.
+{% endAside %}
+
+In the **Breakpoints** pane of the **Sources** tab, go to the **CSP Violation Breakpoints** section and enable one of the following options or both, then execute the code:
+
+- Check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Sink Violations**.
+
+  {% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/0XBZkraxRXNBOP7W82K8.png", alt="Paused on a sink violation when the corresponding checkbox is enabled.", width="800", height="687" %}
+
+  In this example, the execution is paused on a sink violation.
+
+- Check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Policy Violations**.
+
+  {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/n4ml9mus6jP2pl11HNeA.png", alt="Paused on a policy violation when the corresponding checkbox is enabled.", width="800", height="687" %}
+
+  In this example, the execution is paused on a policy violation. Trusted Type policies are set up using [`trustedTypes.createPolicy`](https://developer.mozilla.org/docs/Web/API/TrustedTypePolicyFactory/createPolicy).
+
+You can find more information about using the API:
+- To further your security aims, visit [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types/).
+- For debugging, visit [Implementing CSP and Trusted Types debugging in Chrome DevTools](/blog/csp-issues/#debugging-trusted-types-problems).
 
 [1]: /docs/devtools/javascript
 [2]: #loc
