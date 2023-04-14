@@ -110,7 +110,7 @@ module.exports = collection => {
       }
     }
 
-    const authors = [post.data.authors ?? []].flat();
+    const authors = [...new Set([post.data.authors ?? []].flat())];
     for (const author of authors) {
       // If author feed does not exist in feeds yet, create FeedsCollectionItem
       if (!authorsFeeds[author]) {
