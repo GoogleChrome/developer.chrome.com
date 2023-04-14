@@ -20,7 +20,6 @@
  */
 
 // eslint-disable-next-line no-unused-vars
-const express = require('express');
 const path = require('path');
 const {Storage} = require('@google-cloud/storage');
 
@@ -42,9 +41,6 @@ const subDomainPostfix = `-dot-${process.env.GOOGLE_CLOUD_PROJECT}.uc.r.appspot.
 
 const storage = new Storage();
 
-/**
- * @type {express.RequestHandler}
- */
 async function bucketHandler(req, res) {
   let filePath = req.path;
   let folder = defaultFolder;
