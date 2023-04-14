@@ -655,6 +655,11 @@ redirects:
 - from: /blog/fugu-showcase/
 - to: /fugu-showcase/
 
+# Redirect old platform documentation to MDN
+
+- from: /docs/web-platform/webgpu/
+  to: https://developer.mozilla.org/docs/Web/API/WebGPU_API
+
 # Generic
 
 - from: /...
