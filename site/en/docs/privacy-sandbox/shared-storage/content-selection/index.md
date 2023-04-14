@@ -66,7 +66,7 @@ Content selection with Shared Storage supports the following use cases:
   You can store data, such as creative ID and user interaction, to determine
   which creative users' see across different sites.
   * One use case of creative rotation is
-    [frequency](/docs/privacy-sandbox/shared-storage/creative-selection-by-frequency/index.md).
+    [frequency](/docs/privacy-sandbox/shared-storage/creative-selection-by-frequency/).
     Browser view counts can be stored in Shared Storage and used to decide
     which creative is shown to a user.
 * **[A/B testing](/docs/privacy-sandbox/shared-storage/ab-testing/)**: You can
