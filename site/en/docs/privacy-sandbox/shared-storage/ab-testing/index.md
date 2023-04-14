@@ -17,8 +17,8 @@ Sandbox proposal for general purpose, cross-site storage, which supports many
 possible use cases. One such example is A/B testing, which is available to test
 in Chrome 104.0.5086.0 and later.
 
-With URL selection, you can assign a user to an experiment group, then store
-that group in Shared Storage to be accessed in a cross-site environment. 
+You can assign a user to an experiment group, then store that group in Shared
+Storage to be accessed in a cross-site environment.
 
 ## Try A/B testing
 
