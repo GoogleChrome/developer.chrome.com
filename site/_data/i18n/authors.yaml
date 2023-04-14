@@ -581,6 +581,11 @@ cwallez:
     en: Corentin Wallez
   description:
     en: Graphics plumber at Google
+toji:
+  title:
+    en: Brandon Jones
+  description:
+    en: WebGPU/WebXR/WebGL Dev at Google
 eladalon:
   title:
     en: 'Elad Alon'
