@@ -16,6 +16,7 @@ description: |
   you get started with performing data-parallel computations using the GPU.
 tags:
   - capabilities
+  - webgpu
 feedback:
   - api
 stack_overflow_tag: webgpu

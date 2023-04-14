@@ -8,6 +8,8 @@ authors:
   - cwallez
 date: 2021-08-26
 updated: 2023-01-27
+tags:
+  - webgpu
 ---
 
 ## What is WebGPU? {: #what }
