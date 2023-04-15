@@ -198,7 +198,7 @@ Chromium issue: [883325](https://crbug.com/883325).
 ## JavaScript Profiler の非推奨化を開始 {: #js-profiler-deprecation }
 
 <!-- As early as [Chrome 58](/blog/devtools-javascript-cpu-profile-migration-2/), the DevTools team planned to eventually deprecate the **JavaScript Profiler** and have Node.js and Deno developers use the **Performance** panel for profiling JavaScript CPU performance. -->
-[Chrome 58](/blog/devtools-javascript-cpu-profile-migration-2/) の時点で、DevToolsチームは、最終的に **JavaScript Profiler** を廃止し、 Node.js および Deno 開発者がJavaScript CPU パフォーマンスのプロファイルに **Performance** パネルを使用してもらうことを計画していました。
+[Chrome 58](/blog/devtools-javascript-cpu-profile-migration-2/) の時点で、DevToolsチームは、最終的に **JavaScript Profiler** を廃止し、Node.js および Deno 開発者には **Performance** パネルを使用して JavaScript CPU パフォーマンスのプロファイルをしてもらうことを計画していました。
 
 <!-- This DevTools version (112) starts the [four-phase **JavaScript Profiler** deprecation](https://github.com/ChromeDevTools/rfcs/discussions/2#discussioncomment-5189668). The **JavaScript Profiler** panel now shows the corresponding warning banner. -->
 この DevTools バージョン(112)から、[4段階の **JavaScript Profiler** 非推奨化](https://github.com/ChromeDevTools/rfcs/discussions/2#discussioncomment-5189668)を開始します。 **JavaScript Profiler** パネルに対応する警告バナーが表示されるようになりました。
@@ -206,7 +206,7 @@ Chromium issue: [883325](https://crbug.com/883325).
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/v4S5YWGdBV3nbc3OkGZ3.png", alt="Profiler の上部にある非推奨を表示するバナー", width="800", height="712" %}
 
 <!-- Instead of the **Profiler**, use the [**Performance**](/docs/devtools/performance/reference/#main) panel to profile CPU. -->
-CPUのプロファイルは、 **Profiler** の代わりに [**Performance**](/docs/devtools/performance/reference/#main) パネルを使ってください。
+CPU のプロファイルは、 **Profiler** の代わりに [**Performance**](/docs/devtools/performance/reference/#main) パネルを使ってください。
 
 <!-- Learn more and provide feedback in the corresponding [RFC](https://github.com/ChromeDevTools/rfcs/discussions/2) and [crbug.com/1354548](https://crbug.com/1354548).  -->
 [RFC](https://github.com/ChromeDevTools/rfcs/discussions/2) および [crbug.com/1354548](https://crbug.com/1354548) で詳細を確認し、フィードバックしてください。
@@ -219,7 +219,7 @@ Chromium issue: [1417647](https://crbug.com/1417647).
 ## コントラスト低減をエミュレートする {: #reduced-contrast }
 
 <!-- The [**Rendering**](/docs/devtools/rendering/#open-rendering) tab adds a new option to the [Emulate vision deficiencies](/docs/devtools/rendering/apply-effects/#emulate-vision-deficiencies) list—**Reduced contrast**. With this option, you can discover how your website looks to people with reduced contrast sensitivity. -->
-[**Rendering**](/docs/devtools/rendering/#open-rendering) タブでは、 [Emulate vision deficiencies](/docs/devtools/rendering/apply-effects/#emulate-vision-deficiencies) に新しいオプション **Reduced contrast** を追加しました。このオプションを使用すると、コントラスト感度が低下している人にあなたのウェブサイトがどのように見えるかを発見することができます。
+[**Rendering**](/docs/devtools/rendering/#open-rendering) タブでは、 [Emulate vision deficiencies](/docs/devtools/rendering/apply-effects/#emulate-vision-deficiencies) に新しいオプション **Reduced contrast** を追加しました。このオプションを使用すると、コントラスト感度が低下している人にあなたのウェブサイトがどのように見えるかを確認できます。
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7qrlmuO7R47l5mytvoeQ.png", alt="Rendering > Emulate vision deficiencies でのコントラストを下げるオプション", width="800", height="574" %}
 
