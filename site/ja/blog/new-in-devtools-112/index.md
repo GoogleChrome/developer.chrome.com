@@ -37,7 +37,7 @@ tags:
 <!-- Try out the [example extension](https://github.com/puppeteer/replay/tree/main/examples/chrome-extension-replay). Select the new custom replay option to open the custom replay UI. -->
 [拡張機能の例](https://github.com/puppeteer/replay/tree/main/examples/chrome-extension-replay)を試してみてください。新しいカスタムリプレイオプションを選択し、カスタムリプレイのUIを開きましょう。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/CAQFVtHyds7ByB0YMZht.png", alt="Custom replay UI.", width="800", height="563" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/CAQFVtHyds7ByB0YMZht.png", alt="カスタムリプレイ UI", width="800", height="563" %}
 
 <!-- To customize the **Recorder** to your needs and integrate it with your tools, consider developing your own extension: explore the [chrome.devtools.recorder API](/docs/extensions/reference/devtools_recorder/) and check out more [extension examples](https://github.com/puppeteer/replay/tree/main/examples/). -->
 あなたのニーズに合わせて**Recorder**をカスタマイズし、あなたのツールと統合するために、独自の拡張機能を開発することを検討してみましょう: [chrome.devtools.recorder API](/docs/extensions/reference/devtools_recorder/) を調べて、[拡張機能の例] (https://github.com/puppeteer/replay/tree/main/examples/) をチェックしてみてください。
@@ -54,9 +54,9 @@ Chromium issue: [1400243](https://crbug.com/1400243).
 [カスタム、CSS、ARIA、テキスト、XPathセレクタ](/docs/devtools/recorder/reference/#selector)に加えて、[ピアスセレクタ](https://pptr.dev/guides/query-selectors#pierce-selectors-pierce)を使用して記録できるようになりました。これらのセレクタはCSSのセレクタと同じように振る舞いますが、シャドウルートを貫通することもできます。
 
 <!-- Start a new recording on a page with [shadow DOM](https://web.dev/shadowdom-v1/) and check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Pierce** in **Selector types to record**. Record your interaction with elements in the shadow DOM and inspect the corresponding step. -->
-[Shadow DOM](https://web.dev/shadowdom-v1/)が含まれるページで新規レコードを開始し、**記録するセレクタの種類**で {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Pierce** にチェックをつけます。Shadow DOMの中の要素とのインタラクションを記録し、対応するステップを検査します。
+[Shadow DOM](https://web.dev/shadowdom-v1/)が含まれるページで新規レコードを開始し、**Selector types to record**で {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Pierce** にチェックをつけます。Shadow DOMの中の要素とのインタラクションを記録し、対応するステップを検査します。
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Spqbf2DG3Fr0D2sc1kgC.png", alt="Setting the Recorder to use pierce selectors; Pierce selector in action.", width="800", height="534" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Spqbf2DG3Fr0D2sc1kgC.png", alt="ピアスセレクタを使った Recorder の設定; 作動中のピアスセレクタ", width="800", height="534" %}
 
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/a3968d1c01dd4d1a00b9aa13c50bfdc66995879e #}
 
@@ -71,12 +71,12 @@ Chromium issue: [1411188](https://crbug.com/1411188).
 <!-- Open your recording, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4dU9UXvsinS4zbgjd8rK.svg", alt="Export.", width="20", height="20" %} **Export**, select the new option, and save the `.js` file. -->
 記録を開き、{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4dU9UXvsinS4zbgjd8rK.svg", alt="Export.", width="20", height="20" %} をクリックします。**Export**で新しいオプションを選択し、`.js`ファイルを保存してください。
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ko6OD4tgGwUxqCJScYr9.png", alt="Export Puppeteer (including Lighthouse analysis).", width="800", height="584" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ko6OD4tgGwUxqCJScYr9.png", alt="(Lighthouse 解析結果を含む) Puppeteer スクリプトのエクスポート", width="800", height="584" %}
 
 <!-- [Run the Puppeteer script](/docs/puppeteer/get-started/) to get a Lighthouse report in a `flow.report.html` file. -->
 [Puppeteerスクリプトを実行](/docs/puppeteer/get-started/)し、Lighthouseのレポートを`flow.report.html`ファイルから取得します。
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/pfvZ3QX0XhhbDBxpsyBF.png", alt="The Lighthouse report opened in Chrome.", width="800", height="690" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/pfvZ3QX0XhhbDBxpsyBF.png", alt="Chrome で開いた Lighthouse のレポート", width="800", height="690" %}
 
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/fcaf72d9134e54140cab41c011b7520dd168a340 #}
 
@@ -84,12 +84,12 @@ Chromium issue: [1411188](https://crbug.com/1411188).
 ### 拡張機能を手に入れる {: #get-extensions }
 
 <!-- Explore options to customize your recorder experience, for example, with custom export options. Get extensions for the **Recorder** by clicking the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4dU9UXvsinS4zbgjd8rK.svg", alt="Export.", width="20", height="20" %} **Export** > **Get extensions** in a recording. -->
-カスタムエクスポートオプションなど、レコーダーの体験をカスタマイズする選択肢を探しましょう。**Recorder**の拡張機能を入手するには、{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4dU9UXvsinS4zbgjd8rK.svg", alt="Export.", width="20", height="20" %} **Export** > **Get extensions** をクリックします
+カスタムエクスポートオプションなど、レコーダーの体験をカスタマイズする選択肢を探しましょう。**Recorder**の拡張機能を入手するには、{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4dU9UXvsinS4zbgjd8rK.svg", alt="Export.", width="20", height="20" %} **Export** > **Get extensions** をクリックします。
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/vwgXoxR0FyArbCHvdvEY.png", alt="The Get extensions option in the Export drop-down menu.", width="800", height="649" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/vwgXoxR0FyArbCHvdvEY.png", alt="Export ドロップダウンメニュー内の Get extensions オプション", width="800", height="649" %}
 
 <!-- Feel free to [add your own extension](https://github.com/GoogleChrome/developer.chrome.com/edit/main/site/en/docs/devtools/recorder/extensions/index.md) to the list of [Recorder Extensions](/docs/devtools/recorder/extensions/). We look forward to seeing yours on the list! -->
-気軽に[Recorder の拡張機能](/docs/devtools/recorder/extensions/)のリストに、[自身の拡張機能を追加](https://github.com/GoogleChrome/developer.chrome.com/edit/main/site/en/docs/devtools/recorder/extensions/index.md)してください。みなさんのものがリストに載るのを楽しみにしています！
+気軽に[Recorder の拡張機能](/docs/devtools/recorder/extensions/)のリストに、[自身の拡張機能を追加](https://github.com/GoogleChrome/developer.chrome.com/edit/main/site/en/docs/devtools/recorder/extensions/index.md)してください。みなさんの拡張機能がリストに載るのを楽しみにしています！
 
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/21e3d3275c47df8b79c72d1a3e8f9d26cc11fc04 #}
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/b6d02827539eb54869cbb75d3705782bfd2c95ae #}
@@ -105,7 +105,7 @@ Chromium issues: [1417104](https://crbug.com/1417104), [1413168](https://crbug.c
 <!-- How many times a day do you look up documentation on CSS properties? The **Elements** > **Styles** pane now shows you a short description when you hover over a property. -->
 CSSのプロパティについて、1日に何回ドキュメントを調べていますか？ **Elements** > **Styles** ペインでプロパティにカーソルを合わせると、短い説明が表示されるようになりました。
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/v0joPkQg0NiMauy0bwwB.png", alt="The tooltip with documentation on a CSS property.", width="800", height="651" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/v0joPkQg0NiMauy0bwwB.png", alt="CSS プロパティ上でのドキュメントのツールチップ", width="800", height="651" %}
 
 <!-- The tooltip also has a **Learn more** link that takes you to an [MDN CSS Reference](https://developer.mozilla.org/docs/Web/CSS/Reference) on this property. -->
 ツールチップには、このプロパティに関する[MDN の CSS リファレンス](https://developer.mozilla.org/docs/Web/CSS/Reference)を参照するための **Learn more** リンクも表示されます。
@@ -149,7 +149,7 @@ Chromium issue: [1172985](https://crbug.com/1172985).
 - [条件付きブレークポイント](/docs/devtools/javascript/breakpoints/#conditional-loc) の中での `console.*` の呼び出しにはオレンジ色の疑問符 `?`
 - [ログポイント](/docs/devtools/javascript/breakpoints/#log-loc) メッセージにはピンクの2つのドット `..`
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/5udIX9W4LFcDb3H6DuDp.png", alt="Changes to how the Console now displays messages triggered by breakpoints: with icons and proper source link.", width="800", height="566" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/5udIX9W4LFcDb3H6DuDp.png", alt="Console がブレークポイントによってトリガーされたメッセージを表示する方法の変更: アイコンと適切なソースリンク", width="800", height="566" %}
 
 <!-- The **Console** now gives you proper anchor links to breakpoints in source files instead of `VM<number>` scripts that Chrome creates to run any piece of Javascript on [V8](https://v8.dev/). -->
 **Console** では、 Chrome が [V8](https://v8.dev/) 上で任意の Javascript を実行するために作成する `VM<number>` スクリプトではなく、ソースファイル内のブレークポイントへの適切なアンカーリンクが表示されるようになりました。
@@ -157,7 +157,7 @@ Chromium issue: [1172985](https://crbug.com/1172985).
 <!-- Click the link next to the breakpoint message to jump directly to the breakpoint editor. -->
 ブレークポイントメッセージの横にあるリンクをクリックすると、ブレークポイントエディタに直接ジャンプします。
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/8lAz0lb168HXKvhscP2Q.png", alt="The anchor link next to a logpoint message that opens the breakpoint editor.", width="800", height="811" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/8lAz0lb168HXKvhscP2Q.png", alt="ブレークポイントエディタを開くログポイントメッセージの横にあるアンカーリンク。", width="800", height="811" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/c845a441b0fe05c22f88cdb23463edee2b5985b7 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/9762db476cd7414d3ce351f32a0564421f66901f #}
@@ -176,12 +176,12 @@ Chromium issue: [1027458](https://crbug.com/1027458).
 <!-- Right-click any script or folder and select one of the ignore-related options. You may see options to add or remove the script or folder to and from the list. The [Debugger ignores scripts](/docs/devtools/javascript/reference/#show-ignore-listed-frames) added to the list and omits them in the call stack.  -->
 スクリプトまたはフォルダを右クリックし、無視関連のオプションのいずれかを選択します。スクリプトまたはフォルダーをリストに追加したり、リストから削除したりするオプションが表示される場合があります。デバッガーはリストに追加された[スクリプトを無視](/docs/devtools/javascript/reference/#show-ignore-listed-frames)し、コールスタックでそれらを省略します。
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/RrL7ZmzMjfhtH4gUW3ST.png", alt="Context menus of a folder and script with ignore-related options.", width="800", height="521" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/RrL7ZmzMjfhtH4gUW3ST.png", alt="無視に関連したオプションを持つフォルダやスクリプトのコンテキストメニュー", width="800", height="521" %}
 
 <!-- All ignore-listed scripts and folders are grayed out in the file tree. -->
 無視リストに登録されたスクリプトやフォルダは、ファイルツリーですべてグレーアウトされます。
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/DRI11RoakrLnwLZPOJPO.png", alt="Ignore-listed scripts and folders are grayed out, you can hide them with an experimental option in the More options drop-down menu.", width="800", height="542" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/DRI11RoakrLnwLZPOJPO.png", alt="無視リストのスクリプトとフォルダはグレー表示されます。More オプションドロップダウンメニューの実験的なオプションを使用してそれらを非表示にすることができます。", width="800", height="542" %}
 
 <!-- If you select an ignored script, the **Configure** button takes you to  -->
 <!-- {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Ignore List**](/docs/devtools/settings/ignore-list/). You can also hide ignored sources from the file tree with {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Three-dot menu.", width="24", height="24" %} > [**Hide ignore-listed sources**](/docs/devtools/javascript/reference/#hide-ignore-listed) {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XfSWf04g2cwpnFcmp40m.svg", alt="Experimental.", width="20", height="20" %}. -->
@@ -203,7 +203,7 @@ Chromium issue: [883325](https://crbug.com/883325).
 <!-- This DevTools version (112) starts the [four-phase **JavaScript Profiler** deprecation](https://github.com/ChromeDevTools/rfcs/discussions/2#discussioncomment-5189668). The **JavaScript Profiler** panel now shows the corresponding warning banner. -->
 この DevTools バージョン(112)から、[4段階の **JavaScript Profiler** 非推奨化](https://github.com/ChromeDevTools/rfcs/discussions/2#discussioncomment-5189668)を開始します。 **JavaScript Profiler** パネルに対応する警告バナーが表示されるようになりました。
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/v4S5YWGdBV3nbc3OkGZ3.png", alt="Deprecation banner at the top of the Profiler.", width="800", height="712" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/v4S5YWGdBV3nbc3OkGZ3.png", alt="Profiler の上部にある非推奨を表示するバナー", width="800", height="712" %}
 
 <!-- Instead of the **Profiler**, use the [**Performance**](/docs/devtools/performance/reference/#main) panel to profile CPU. -->
 CPUのプロファイルは、 **Profiler** の代わりに [**Performance**](/docs/devtools/performance/reference/#main) パネルを使ってください。
@@ -221,10 +221,10 @@ Chromium issue: [1417647](https://crbug.com/1417647).
 <!-- The [**Rendering**](/docs/devtools/rendering/#open-rendering) tab adds a new option to the [Emulate vision deficiencies](/docs/devtools/rendering/apply-effects/#emulate-vision-deficiencies) list—**Reduced contrast**. With this option, you can discover how your website looks to people with reduced contrast sensitivity. -->
 [**Rendering**](/docs/devtools/rendering/#open-rendering) タブでは、 [Emulate vision deficiencies](/docs/devtools/rendering/apply-effects/#emulate-vision-deficiencies) に新しいオプション **Reduced contrast** を追加しました。このオプションを使用すると、コントラスト感度が低下している人にあなたのウェブサイトがどのように見えるかを発見することができます。
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7qrlmuO7R47l5mytvoeQ.png", alt="The reduced contrast option on the Rendering > Emulate vision deficiencies.", width="800", height="574" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7qrlmuO7R47l5mytvoeQ.png", alt="Rendering > Emulate vision deficiencies でのコントラストを下げるオプション", width="800", height="574" %}
 
 <!-- Note that the list options have been updated to tell you what color insensitivity the options represent. -->
-なお、リストオプションが更新され、そのオプションがどのような色覚障害を表すかがわかるようになりました。
+なお、リストオプションが更新され、そのオプションがどのような色覚異常を表すかがわかるようになりました。
 
 <!-- With DevTools, you can find and fix all contrast issues at once. For more information, see [Make your website more readable](/docs/devtools/accessibility/contrast/). -->
 DevTools を使えば、すべてのコントラストの問題を一度に見つけて修正することができます。詳しくは、 [Make your website more readable](/docs/devtools/accessibility/contrast/) を参照してください。
@@ -241,7 +241,7 @@ Chromium issues: [1412719](https://crbug.com/1412719), [1412721](https://crbug.c
 **Lighthouse** パネルが [Lighthouse 10.0.1](/blog/lighthouse-10-0/) を実行するようになりました。詳しくは、 [Lighthouse 10.0.1の新機能](/blog/lighthouse-10-0/) をご覧ください。
 
 <!-- **Lighthouse** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ZtDyFg7cjkxacORB3GQn.svg", alt="Empty checkbox.", width="24", height="24" %} **Legacy navigation** is now disabled by default. This option uses legacy [Lighthouse configuration](https://github.com/GoogleChrome/lighthouse/blob/main/docs/configuration.md) in navigation mode. -->
-**Lighthouse** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ZtDyFg7cjkxacORB3GQn.svg", alt="Empty checkbox.", width="24", height="24" %} **Legacy navigation** はデフォルトで無効になっています。. このオプションは、ナビゲーションモードでレガシーな [Lighthouse 設定](https://github.com/GoogleChrome/lighthouse/blob/main/docs/configuration.md) を使用します。
+**Lighthouse** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ZtDyFg7cjkxacORB3GQn.svg", alt="Empty checkbox.", width="24", height="24" %} **Legacy navigation** はデフォルトで無効になっています。このオプションは、ナビゲーションモードでレガシーな [Lighthouse 設定](https://github.com/GoogleChrome/lighthouse/blob/main/docs/configuration.md) を使用します。
 
 <!-- {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/mYuX9d2TFaJuWBOYGN5R.png", alt="Disabled legacy navigation.", width="800", height="548" %} -->
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/mYuX9d2TFaJuWBOYGN5R.png", alt="レガシーナビゲーションを無効化", width="800", height="548" %}
