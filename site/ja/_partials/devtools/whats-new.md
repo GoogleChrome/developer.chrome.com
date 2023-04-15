@@ -8,7 +8,7 @@
 
 * [Recorder のアップデート](/ja/blog/new-in-devtools-112/#recorder)
 * [Recorder リプレイの拡張機能](/ja/blog/new-in-devtools-112/#replay-extensions)
-* [ピアスセレクターを使用した記録](/ja/blog/new-in-devtools-112/#pierce-selectors)
+* [ピアスセレクタを使用した記録](/ja/blog/new-in-devtools-112/#pierce-selectors)
 * [Lighthouse の解析結果を Puppeteer のスクリプトとして書き出す](/ja/blog/new-in-devtools-112/#puppeteer-lighthouse)
 * [拡張機能を手に入れる](/ja/blog/new-in-devtools-112/#get-extensions)
 * [Elements > Styles のアップデート](/ja/blog/new-in-devtools-112/#elements-styles)
