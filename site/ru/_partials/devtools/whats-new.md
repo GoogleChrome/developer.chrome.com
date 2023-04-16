@@ -5,23 +5,22 @@
 
 {# $content #}
 
-{# ### Chrome 112 {: #chrome112 }
+### Chrome 112 {: #chrome112 }
 
-* [Recorder updates](/ru/blog/new-in-devtools-112/#recorder)
-* [Recorder replay extensions](/ru/blog/new-in-devtools-112/#replay-extensions)
-* [Record with pierce selectors](/ru/blog/new-in-devtools-112/#pierce-selectors)
-* [Export recordings as Puppeteer scripts with Lighthouse analysis](/ru/blog/new-in-devtools-112/#puppeteer-lighthouse)
-* [Get extensions](/ru/blog/new-in-devtools-112/#get-extensions)
-* [Elements > Styles updates](/ru/blog/new-in-devtools-112/#elements-styles)
-* [CSS documentation in the Styles pane](/ru/blog/new-in-devtools-112/#css)
-* [CSS nesting support](/ru/blog/new-in-devtools-112/#nesting)
-* [Marking logpoints and conditional breakpoints in the Console](/ru/blog/new-in-devtools-112/#logpoint)
-* [Ignore irrelevant scripts during debugging](/ru/blog/new-in-devtools-112/#ignore-list)
-* [JavaScript Profiler deprecation started](/ru/blog/new-in-devtools-112/#js-profiler-deprecation)
-* [Emulate reduced contrast](/ru/blog/new-in-devtools-112/#reduced-contrast)
+* [Обновления Регистратора (Recorder)](/ru/blog/new-in-devtools-112/#recorder)
+* [Поддержка расширений воспроизведения](/ru/blog/new-in-devtools-112/#replay-extensions)
+* [Запись со сквозными селекторами](/ru/blog/new-in-devtools-112/#pierce-selectors)
+* [Экспорт скриптов для Puppeteer вместе со аналитикой Lighthouse](/ru/blog/new-in-devtools-112/#puppeteer-lighthouse)
+* [Показать расширения](/ru/blog/new-in-devtools-112/#get-extensions)
+* [Обновления вкладки Элементы > Стили](/ru/blog/new-in-devtools-112/#elements-styles)
+* [Документация CSS](/ru/blog/new-in-devtools-112/#css)
+* [Поддержка наследования CSS](/ru/blog/new-in-devtools-112/#nesting)
+* [Отметка точек логирования и условных точек останова в Консоли (Console)](/ru/blog/new-in-devtools-112/#logpoint)
+* [Игнорирование нерелевантных скриптов во время отладки](/ru/blog/new-in-devtools-112/#ignore-list)
+* [Начало постепенного удаления Профилировщика JavaScript](/ru/blog/new-in-devtools-112/#js-profiler-deprecation)
+* [Эмуляция пониженной контрастности](/ru/blog/new-in-devtools-112/#reduced-contrast)
 * [Lighthouse 10](/ru/blog/new-in-devtools-112/#lighthouse)
-* [Miscellaneous highlights](/ru/blog/new-in-devtools-112/#misc)
- #}
+* [Другие важные моменты](/ru/blog/new-in-devtools-112/#misc)
 
 {# ### Chrome 111 {: #chrome111 }
 
