@@ -313,6 +313,7 @@ chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
 });
 ```
 
+[doc-promises]: /docs/extensions/mv3/promises/
 [mdn-promise]: https://developer.mozilla.org/docs/Learn/JavaScript/Asynchronous/Promises
 [native-client]: /docs/extensions/mv3/nativeMessaging/#native-messaging-client
 [native-host]: /docs/extensions/mv3/nativeMessaging/#native-messaging-host
