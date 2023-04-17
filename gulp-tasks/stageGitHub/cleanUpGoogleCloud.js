@@ -82,6 +82,9 @@ async function getDeployedPullRequestsFromStorage() {
  */
 async function getOpenPullRequestsFromGitHub() {
   try {
+    // Note: this doesn't paginate, which should be okay as the job runs periodically
+    // and overflown items will be picked up with the next run and PRs will always be opened
+    // in a slower rate than the job runs.
     const apiResponse = await requestGitHubApi(
       'GET',
       'pulls?state=open&per_page=100'
