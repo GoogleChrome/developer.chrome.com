@@ -4,6 +4,7 @@ title: Update your code
 subhead: 'Updates that are unrelated to other issues'
 description: 'The first of three sections describing changes needed for code that is not part of the extension service worker.'
 date: 2023-03-09
+updated: 2023-04-17
 ---
 
 This is the first of three sections describing changes needed for code that is not part of the extension service worker. This section is for required code changes that are unrelated to other issues. The next two sections cover [replacing blocking web requests](/docs/extensions/migrating/blocking-web-requests) and [improving security](/docs/extensions/migrating/improve-security).
@@ -182,14 +183,17 @@ The methods and properties listed below need to change in Manifest V3.
 | Manifest V2 method or property        | Replace with                                         |
 |---------------------------------------|------------------------------------------------------|
 | `chrome.extension.connect()`          | `chrome.runtime.connect()`                           |
+| `chrome.extension.connectNative()`    | `chrome.runtime.connectNative()`                     |
 | `chrome.extension.getExtensionTabs()` | `chrome.extension.getViews()`                        |
 | `chrome.extension.getURL()`           | `chrome.runtime.getURL()`                            |
 | `chrome.extension.lastError`          | Where methods return promises, use `promise.catch()` |
 | `chrome.extension.onConnect`          | `chrome.runtime.onConnect`                           |
+| `chrome.extension.onConnectExternal`  | `chrome.runtime.onConnectExternal`                   |
 | `chrome.extension.onMessage`          | `chrome.runtime.onMessage`                           |
 | `chrome.extension.onRequest`          | `chrome.runtime.onRequest`                           |
 | `chrome.extension.onRequestExternal`  | `chrome.runtime.onMessageExternal`                   |
 | `chrome.extension.sendMessage()`      | `chrome.runtime.sendMessage()`                       |
+| `chrome.extension.sendNativeMessage() | `chrome.runtime.sendNativeMessage()                  |
 | `chrome.extension.sendRequest()`      | `chrome.runtime.sendMessage()`                       |
 | `chrome.runtime.onSuspend` (background scripts) | Not supported in extension service workers. Use the [`beforeunload`](https://developer.mozilla.org/docs/Web/API/Window/beforeunload_event) document event instead. |
 | `chrome.tabs.getAllInWindow()`        | `chrome.tabs.query()`                                |
