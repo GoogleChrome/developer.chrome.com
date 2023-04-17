@@ -47,6 +47,7 @@
     "@11ty/eleventy-cache-assets": "^2.3.0",
     "@11ty/eleventy-plugin-rss": "^1.1.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
+    "@google-cloud/appengine-admin": "2.1.2",
     "@google-cloud/cloudbuild": "^2.6.0",
     "@google-cloud/error-reporting": "^2.0.4",
     "@google-cloud/storage": "^6.7.0",
