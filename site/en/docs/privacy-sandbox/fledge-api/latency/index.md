@@ -11,6 +11,8 @@ authors:
   - pauljensen
 ---
 
+{% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
+
 It's in everyone's best interest to make sure FLEDGE operates efficiently.
 
 * People browsing the web want sites to load quickly. This means developers

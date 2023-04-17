@@ -14,6 +14,8 @@ authors:
   - kevinkiklee
 ---
 
+{% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
+
 As we move [FLEDGE](/docs/privacy-sandbox/fledge/) closer to general
 availability and approach third-party cookie deprecation in Chrome, you may be
 wondering about the availability of FLEDGE services and features. Here you'll
