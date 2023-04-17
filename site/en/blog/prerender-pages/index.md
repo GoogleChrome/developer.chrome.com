@@ -7,7 +7,7 @@ description: |
 authors:
  - tunetheweb
 date: 2022-12-02
-updated: 2023-04-14
+updated: 2023-04-17
 hero: image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/eohdiqaZlxnWen7TT66M.jpg
 alt: City road at dusk with a long exposure of car lights giving impression of speed
 tags:
@@ -196,7 +196,7 @@ Multiple speculation rules can also be added to the same page, and they append t
 
 ### Speculation rules restrictions and future enhancements
 
-By default prerender is restricted to same-origin pages, opened within the same tab, but we are working to reduce those restrictions.
+At present, speculation rules are restricted to pages opened within the same tab, but we are working to reduce that restrictions. By default prerender is restricted to same-origin pages.
 
 {% Aside 'update' %}
 [Prerendering same-site cross-origin pages](https://chromestatus.com/feature/4899735257743360) (for example, `https://a.example.com` could prerender a page on `https://b.example.com`) is supported from Chrome 109.
@@ -204,7 +204,7 @@ By default prerender is restricted to same-origin pages, opened within the same 
 To use this the prerendered page (`https://b.example.com` in this example) needs to opt-in by including a `Supports-Loading-Mode: credentialed-prerender` HTTP header or Chrome will cancel the prerender.
 {% endAside %}
 
-Future versions may also [allow prerender for cross-origins](https://bugs.chromium.org/p/chromium/issues/detail?id=1176054) (where the site opts in with a similar `Supports-Loading-Mode: uncredentialed-prerender` HTTP header), and [enable prerendering in new tabs](https://bugs.chromium.org/p/chromium/issues/detail?id=1350676).
+Future versions may also [allow prerender for cross-origin pages](https://bugs.chromium.org/p/chromium/issues/detail?id=1176054) (where the site opts in with a similar `Supports-Loading-Mode: uncredentialed-prerender` HTTP header), and [enable prerendering in new tabs](https://bugs.chromium.org/p/chromium/issues/detail?id=1350676).
 
 The Speculation Rules API is planned to be expanded beyond this simple example with the addition of [scores](https://github.com/WICG/nav-speculation/blob/main/triggers.md#scores) (for example, the likelihood of a navigation), and syntax to implement [document rules](https://github.com/WICG/nav-speculation/blob/main/triggers.md#document-rules) instead of `list` rules (for example, matching `href` patterns on the page), which can be combined to only prerender links on mouse down, for example.
 
@@ -253,7 +253,9 @@ Removing speculation rules will result in the prerender being cancelled but, by 
 
 ### Speculation rules and Content Security Policy
 
-As speculation rules use a `<script>` element, even though they only contain JSON, they need to be included in the `script-src` [Content-Security-Policy](https://web.dev/csp/) if the site uses this—either using a hash or nonce. In future, a new `inline-speculation-rules` source will be supported in `script-src` allowing all `<script type="speculationrules">` elements on a page to be supported without the need of hashes or nonces.
+As speculation rules use a `<script>` element, even though they only contain JSON, they need to be included in the `script-src` [Content-Security-Policy](https://web.dev/csp/) if the site uses this—either using a hash or nonce.
+
+A new `inline-speculation-rules` can be added to `script-src` allowing `<script type="speculationrules">` elements injected from hash/nonced scripts to be supported. At present, this only supports injected rules and does not support rules includes in the initial HTML.
 
 ## Detecting and disabling prerendering
 
@@ -305,7 +307,7 @@ When the page is activated by the user viewing the page, the `prerenderingchange
 Using these APIs, front-end JavaScript can detect and act upon prerendered pages appropriately.
 
 {% Aside 'warning' %}
-  At present the [`PerformanceNavigationTiming.type`](https://developer.mozilla.org/docs/Web/API/PerformanceNavigationTiming/type) is not using the `prerender` value, that was for the older, original `<link rel="prerender"...>` navigation type. This is liable to change in future but for now, clients should use the `document.prerendering` API to identify prerendering pages and a non-zero `PerformanceNavigationTiming.activationStart` field to identify prerendered pages that have since been activated.
+  At present, the [`PerformanceNavigationTiming.type`](https://developer.mozilla.org/docs/Web/API/PerformanceNavigationTiming/type) is not using the `prerender` value, that was for the older, original `<link rel="prerender"...>` navigation type. This is liable to change in future but for now, clients should use the `document.prerendering` API to identify prerendering pages and a non-zero `PerformanceNavigationTiming.activationStart` field to identify prerendered pages that have since been activated.
 {% endAside %}
 
 ## Impact on analytics
