@@ -2,13 +2,14 @@
 layout: 'layouts/blog-post.njk'
 title: Richer UI install available for desktop
 description: Mobile devices and app stores have changed how users discover, evaluate, and install software. Web apps now offer a surface for developers to highlight their apps at install time.
-date: 2023-03-27
+date: 2023-04-20
 authors:
   - ajara
 tags:
   - capabilities
   - progressive-web-apps
 hero: 'image/SeARmcA1EicLXagFnVOe0ou9cqK2/zedzgz8xUD3nFNv1HPQQ.jpg'
+alt: 'Person using a large screen device and a cup of coffee'
 ---
 
 Users typically get apps, especially platform apps, through app stores, or through downloading a package and installing it. Today even the desktop experience is shifting towards offering apps in centralized stores.
