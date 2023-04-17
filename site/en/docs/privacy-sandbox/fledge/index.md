@@ -194,9 +194,19 @@ and membership is removed when users clear their site data.
 Learn how you can [block access to the FLEDGE API](/docs/privacy-sandbox/fledge-api/opt-out),
 either as a site owner or as an individual user.
 
-{: #glossary}
+### Can users block an ad shown as the result of a FLEDGE auction? {: #ad-block }
+
+Users can [opt out of the Privacy Sandbox API](/docs/privacy-sandbox/fledge-api/opt-out/#opt-out-user).
+To opt out of a specific ad or ad selection technique, the appropriate party to
+provide those controls is the ad tech serving the ad.
+
+Developers can use multiple approaches to control which ads are eligible for
+bidding and serving, as well as recording a user's ad preferences. One
+technique is to call `leaveAdInterestGroup()` when a user asks to block a specific ad, for the winning interest group that provided the ad. This removes the user's browser from membership of the interest group and makes the group ineligible to bid in the future.
 
 ## Key concepts
+
+{: #glossary}
 
 Looking for more information on FLEDGE terminology? Refer to the [Privacy Sandbox glossary](/docs/privacy-sandbox/glossary/).
 

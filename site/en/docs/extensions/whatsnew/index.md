@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-03-24
+updated: 2023-04-07
 tags:
   - extensions-news
 
@@ -15,6 +15,12 @@ tags:
 
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about many of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).)
+
+### Chrome 113: New reasons for offscreen documents
+
+<p class="color-secondary-text type--caption">Posted on <time>April 7, 2023</time></p>
+
+We have added two new [reason types](/docs/extensions/reference/offscreen/#type-Reason) to the Offscreen Documents API. Use `LOCAL_STORAGE` to access the web platform's [localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) API. Use `WORKER` when creating web workers. 
 
 ### Google Analytics 4 now in the Developer Dashboard
 

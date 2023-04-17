@@ -186,7 +186,7 @@ const start = function (sqlite3) {
     let i;
     for (i = 20; i <= 25; ++i) {
       db.exec({
-        sql: INSERT INTO t(a,b) VALUES (?,?)',
+        sql: 'INSERT INTO t(a,b) VALUES (?,?)',
         bind: [i, i * 2],
       });
     }
