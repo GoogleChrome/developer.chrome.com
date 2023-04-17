@@ -77,7 +77,7 @@ chrome.webNavigation.onCompleted.addListener(() => {
   console.info("The user has loaded my favorite website!");
 }, filter);
 ```
-## Service worker events
+## Web service worker events
 
 Extension service workers support more than the lifecycle events [described elsewhere](/docs/extensions/service-workers/lifecycle). Some of those events require additional.
 
@@ -87,24 +87,6 @@ Fired when anything is retrieved from the extension package or when `fetch()` an
 
 ### ServiceWorkerGlobal.message
 
-Service worker message passing is available in addition to extension [messaging passing](/docs/extensions/mv3/messaging/), but the two systems are not interoperable. That means that messages sent using `sendMessage()` (which is available from several extension APIs) aren't intercepted by service worker message handlers. Likewise, messages sent using `postMessage()` aren't intercepted by extension message handlers. Both types of message handlers—meaning both `ServiceWorkerGlobal.message` and `chrome.runtime.onMessage`—are supported in extension service workers. Extension service workers cannot send messages to popup or content scripts using `postMessage()`.
+Service worker message passing is available in addition to extension [messaging passing](/docs/extensions/mv3/messaging/), but the two systems are not interoperable. That means that messages sent using `sendMessage()` (which is available from several extension APIs) aren't intercepted by service worker message handlers. Likewise, messages sent using `postMessage()` aren't intercepted by extension message handlers. Both types of message handlers—meaning both `ServiceWorkerGlobal.message` and `chrome.runtime.onMessage`—are supported in extension service workers.
 
-To send a message to an extension service worker using `postMessage()`, use the service worker registration in any script. For example, you could implement the following code in a popup script.
-
-```javascript
-postMsgButton.addEventListener('click', async () => {
-  navigator.serviceWorker.ready.then((registration) => {
-    const msg = { greeting: "Hello, service worker." }
-    registration.active.postMessage(msg);
-  });
-});
-```
-
-And inside the service worker:
-
-```javascript
-this.addEventListener('message', (e) => {
-  const msg = `Service worker message handler called with:\n${e.data.greeting}`;
-  console.log(msg);
-});
-```
+Extension service workers cannot send messages to popup or content scripts using `postMessage()`. You should prefer [extension messaging](/docs/extensions/mv3/messaging/) unless you have a specific reason for using service worker messaging.

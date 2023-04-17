@@ -52,7 +52,3 @@ importScripts('./locales.js');
 ## Updating
 
 To update the service worker, [publish a new version](/docs/webstore/publish/) of your extension to the Chrome Web Store. You cannot get around this by loading your extension from a server. For security reasons Manifest V3 [does not support](/docs/extensions/migrating/improve-security/#remove-remote-code) remotely-hosted code. Your service worker must be part of the extension package.
-
-## Event differences
-
-There are differences between how service workers events function on a web page versus how they function in an extension. These differences are covered in the next two sections, [The service worker lifecycle](/docs/extensions/service_workers/lifecycle) and [Supported extension events](/docs/extensions/service_workers/events).

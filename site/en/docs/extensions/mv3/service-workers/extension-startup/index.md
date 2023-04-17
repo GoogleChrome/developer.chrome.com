@@ -6,7 +6,7 @@ description: Extension service workers don't require a reload to be active.
 date: 2023-03-29
 ---
 
-Extension service workers respond to both the [standard service worker events](/docs/Web/API/ServiceWorkerGlobalScope#events) and to events in the [`chrome.runtime`](/docs/extensions/reference/runtime/) namespace. They are presented together because one type follows another during an extension's use.
+Extension service workers respond to both the [standard service worker events](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope#events) and to events in extension namespaces. They are presented together because often one type follows another during an extension's use.
 
 {% Aside %}
 If you're already familiar with service workers, please read [Extension service worker basics](/docs/extensions/service-workers/basics) before reading further. 
@@ -36,7 +36,7 @@ chrome.runtime.onInstalled.addListener(() => {
 ```
 ### ServiceWorkerRegistration.active
 
-Finally, the  service worker's [activate](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/activate_event) event is fired. Note that unlike web service workers, this event is fired on the first load of an extension because there is nothing comparable to a page reload in an extension.
+Finally, the  service worker's [activate](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/activate_event) event is fired. Note that unlike web service workers, this event is fired immediately after installation of an extension because there is nothing comparable to a page reload in an extension.
 
 ## Startup
 
@@ -44,9 +44,11 @@ When a user or incognito profile starts, the [`chrome.runtime.onStartup`](/docs/
 
 ## Idle and shutdown
 
-Extension service workers are dormant unless an event fires. If the service worker has a handler for the fired event, it wakes up, executes it, then goes back to being idle. If the service worker is idle for at least 30 seconds it shuts down. Note that this can interrupt a service worker `fetch()` call if the response takes more than 30 seconds to arrive. Any new events reset the idle timer the moment they're fired. As with web service workers, extension service workers have no shutdown or deactivation events.
+Extension service workers are dormant unless an event fires. If the service worker has a handler for the fired event, it wakes up, executes it, then goes back to being idle. If the service worker is idle for at least 30 seconds it shuts down. Note that this can interrupt a service worker `fetch()` call if the response takes more than 30 seconds to arrive.
 
-Before Chrome 110, only running event handlers caused the idle time to reset. Any events that were queued, but for which a handler had not been called would not cause a reset. Also, extension service workers had a maximum lifetime of five minutes before Chrome shut them down. These behaviors cause service workers to shut down at unexpected times.
+Any new events and calls to extension APIs reset the idle timer the moment they're fired. For example, when a service worker receives a `chrome.bookmarks.onCreated` event, the 30 second timeout is reset. The same is true when calling an extension API such as `chrome.storage.local.get()` which also resets the 30 second timeout. As with web service workers, extension service workers have no shutdown or deactivation events.
+
+Before Chrome 110, only running event handlers caused the idle time to reset. Any events that were queued, but for which a handler had not been called would not cause a reset. Also, extension service workers had a maximum lifetime of five minutes before Chrome shut them down. These behaviors caused service workers to shut down at unexpected times.
 
 Though Chrome 110 changed this you should not keep your service worker alive indefinitely, though you can. (We don't consider this a good programming practice.) You should test your extensions to ensure that they're not doing this unintentionally.
 
@@ -63,7 +65,7 @@ Any global variables you set will be lost if the service worker shuts down. Inst
 : A low-level API for client-side storage of structured data, including files and blobs. This API provides primitives for creating transactional data storage and retrieval. Although this API is often too complicated for simple use cases, a number of [third-party](https://developer.mozilla.org/docs/Web/API/IndexedDB_API#see_also) storage solutions are built on top of it.
 
 [CacheStorage API](https://developer.mozilla.org/docs/Web/API/CacheStorage)
-: A persistent storage mechanism for Request and Response object pairs. This API was designed specifically for web service workers and is used to retrieve data from an endpoint. There are a variety of ways to use this API depending on whether and how critical it is that users see up-to-date data. For more information, see [The Offline Cookbook](​​https://web.dev/offline-cookbook). We recommend using chrome.storage over the cache API for extensions.
+: A persistent storage mechanism for Request and Response object pairs. This API was designed specifically for web service workers and is used to retrieve data from an endpoint. There are a variety of ways to use this API depending on whether and how critical it is that users see up-to-date data. For more information, see [The Offline Cookbook](​​https://web.dev/offline-cookbook). Unless you're specifically proxying network requests via the fetch handler, you should use `chrome.storage`.
 
 ## Be careful with timeouts
 
