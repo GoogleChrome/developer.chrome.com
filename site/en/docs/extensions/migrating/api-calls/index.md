@@ -181,7 +181,7 @@ The methods and properties listed below need to change in Manifest V3.
 
 | Manifest V2 method or property        | Replace with                                         |
 |---------------------------------------|------------------------------------------------------|
-| `chrome.extension.connect()`          | `chrome.extension.connect()`                         |
+| `chrome.extension.connect()`          | `chrome.runtime.connect()`                           |
 | `chrome.extension.getExtensionTabs()` | `chrome.extension.getViews()`                        |
 | `chrome.extension.getURL()`           | `chrome.runtime.getURL()`                            |
 | `chrome.extension.lastError`          | Where methods return promises, use `promise.catch()` |
