@@ -15,6 +15,8 @@ authors:
   - kevinkiklee
 ---
 
+{% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
+
 For those new to FLEDGE, read the [FLEDGE overview](/docs/privacy-sandbox/fledge)
 for a high-level explanation of the proposal.
 
