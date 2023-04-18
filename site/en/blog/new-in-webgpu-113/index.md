@@ -1,7 +1,7 @@
 ---
 layout: "layouts/blog-post.njk"
 title: "What's New in WebGPU (Chrome&nbsp;113)"
-description: "WebGPU ships in Chrome with WebCodecs integration in origin trial"
+description: "WebGPU ships in Chrome with WebCodecs integration in origin trial."
 hero: "image/vvhSqZboQoZZN9wBvoXq72wzGAf1/CSlUvgWseW4EHsIDJhTD.png"
 alt: "What's new in WebGPU logo"
 date: 2023-04-17
