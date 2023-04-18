@@ -316,6 +316,9 @@ websocket:
 websocketstream:
   en: WebSocketStream
 
+test-automation:
+  en: Test automation
+
 service-worker:
   en: Service Worker
 
