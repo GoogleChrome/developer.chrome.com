@@ -542,6 +542,9 @@ redirects:
 - from: /blog/inside-oct-2022/...
   to: /blog/insider-oct-2022/...
 
+- from: /blog/webdriver-bidi/
+  to: /articles/webdriver-bidi/
+
 # Redirecting the intersection observer post from d.c.c. to web.dev
 - from: /intersectionobserver/
   to: https://web.dev/intersectionobserver/
