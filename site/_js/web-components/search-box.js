@@ -25,6 +25,7 @@ import searchIcon from '../../_includes/icons/search.svg';
 import {BaseElement} from './base-element';
 
 import {activateSearch, deactivateSearch} from '../actions/search';
+import striptags from 'striptags';
 
 const client = algoliasearch('0PPZV3EY55', 'dc0d3a2d53885be29eacc351026dcdcf');
 const index = client.initIndex('prod_developer_chrome');
@@ -286,6 +287,13 @@ export class SearchBox extends BaseElement {
       return;
     }
 
+    // todo: need help with displaying some sort of value for this.
+    if (this.query.length < 3) {
+      this.results = [];
+      this.categorisedResults = {};
+      return;
+    }
+
     try {
       const {hits: results} = await index.search(query, {
         hitsPerPage: 10,
@@ -426,6 +434,21 @@ export class SearchBox extends BaseElement {
   renderResults() {
     if (!this.active) {
       return;
+    }
+
+    if (this.query.length < 3) {
+      return html`
+        <div
+          id="search-box__results"
+          class="search-box__results"
+          role="listbox"
+          aria-label="${this.placeholder}"
+        >
+          <div class="search-box__result-heading type--label">
+            Please enter at least 3 characters for search suggestions.
+          </div>
+        </div>
+      `;
     }
 
     this.resultsCounter = -1;
