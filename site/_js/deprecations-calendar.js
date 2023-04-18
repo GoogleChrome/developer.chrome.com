@@ -14,48 +14,7 @@
  * limitations under the License.
  */
 import './web-components/filtered-element';
+import './web-components/mobile-filters';
 import './web-components/checkbox-group';
 import './web-components/enhanced-select';
 import './web-components/tag-pill-list';
-
-/**
- * Adds all the event listeners needed for the mobile UI
- *
- * @returns {void}
- */
-function addMobileListeners() {
-  /** @type {HTMLDialogElement|null} */
-  const filters = document.querySelector('#mobile-filters');
-  const opener = document.querySelector('#mobile-filters-opener');
-  const done = document.getElementById('mobile-filters-done');
-  const reset = document.getElementById('mobile-filters-reset');
-
-  // @ts-ignore
-  opener?.addEventListener('click', () => filters.showModal());
-
-  filters?.addEventListener('click', e => {
-    if (/** @type {HTMLElement} */ (e.target).nodeName === 'DIALOG')
-      closeFiltersModal();
-  });
-
-  done?.addEventListener('click', () => {
-    closeFiltersModal();
-  });
-
-  reset?.addEventListener('click', () => {
-    document
-      .querySelectorAll('#mobile-filters input[type="checkbox"]:checked')
-      .forEach(checkbox => {
-        /** @type {HTMLInputElement } */ (checkbox).checked = false;
-      });
-  });
-
-  function closeFiltersModal() {
-    // @ts-ignore
-    filters?.close();
-  }
-}
-
-(() => {
-  addMobileListeners();
-})();
