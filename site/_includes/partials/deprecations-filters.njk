@@ -21,6 +21,7 @@
   </enhanced-select>
 </div>
 
+<mobile-filters>
 <div class="deprecations-calendar__mobile-filters align-center">
   <dialog id="mobile-filters" class="scrollbar lg:display-none mobile-filters-dialog">
     <div class="filter-sheet display-flex direction-column">
@@ -30,7 +31,7 @@
       <div class="filter-sheet__filters">
         <section class="gap-bottom-500">
           <p class="type--h5 weight-medium gap-bottom-200">{{ 'i18n.deprecations_calendar.removal_date' | i18n(locale) }}</p>
-          <checkbox-group show="5">
+          <checkbox-group show="5" i18n='{"select_all":"Select all","reset":"Reset"}'>
             <label>
               <input type="checkbox" name="removal-date" value="7"/>
               {{ 'i18n.deprecations_calendar.next_7_days' | i18n(locale) }}
@@ -85,3 +86,4 @@
   <span class="clear-filters tag-pill surface color-blue-medium hairline type--label display-inline-flex align-center hidden">{{ 'i18n.filter_sheet.clear_filters' | i18n(locale) }}</span>
   <tag-pill-list id="active-filters"></tag-pill-list>
 </div>
+</mobile-filters>
