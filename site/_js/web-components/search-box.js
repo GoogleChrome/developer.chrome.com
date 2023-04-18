@@ -286,8 +286,7 @@ export class SearchBox extends BaseElement {
       return;
     }
 
-    // todo: need help with displaying some sort of value for this.
-    if (this.query.length < 3) {
+    if (this.query.length < 4) {
       this.results = [];
       this.categorisedResults = {};
       return;
@@ -444,7 +443,7 @@ export class SearchBox extends BaseElement {
           aria-label="${this.placeholder}"
         >
           <div class="search-box__result-heading type--label">
-            Please enter at least 3 characters for search suggestions.
+            Please enter at least 4 characters for search suggestions.
           </div>
         </div>
       `;
