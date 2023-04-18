@@ -43,7 +43,7 @@ The File Handler API is available for experimentation on ChromeOS in Canary for 
 To enable file handling:
 
 * Starting in 112, launch Chrome using the `--enable-features=ExtensionWebFileHandlers` flag, starting in 112 
-* Starting in 113, paste `chrome://flags/#extension-web-file-handlers` into the Chrome omnibox and select 'Enabled' from the dropdown menu. 
+* Starting in 113, paste `os://flags/#extension-web-file-handlers` into the Chrome omnibox and select 'Enabled' from the dropdown menu. 
 
 We hope to launch this feature in Chrome 115, in late June. Watch this space for updates.
 
