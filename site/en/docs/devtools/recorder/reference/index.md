@@ -71,7 +71,7 @@ To export a user flow:
     - **@puppeteer/replay**. Download the recording as a [Puppeteer Replay](https://github.com/puppeteer/replay) script.
     - **Puppeteer**. Download the recording as a [Puppeteer](/docs/puppeteer/) script.
     - **Puppeteer (including Lighthouse analysis)**. Download the recording as a [Puppeteer](/docs/puppeteer/) script with an embedded [Lighthouse](/docs/lighthouse/) analysis.
-    - One or more options provided by [Recorder Extensions](/docs/devtools/recorder/extensions/#export-extensions).
+    - One or more options provided by the Recorder's [Export extensions](/docs/devtools/recorder/extensions/#export-extensions).
 1. Save the file.
 
 You can do the following with each default export option:
@@ -92,39 +92,7 @@ You can do the following with each default export option:
 
 ### Export in a custom format by installing an extension {: #recorder-extension }
 
-{% Aside %}
-**Note**: This feature is available from Chrome version 104.
-{% endAside %}
-
-To integrate the **Recorder** with your tools, install extensions:
-
-1. Select {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4dU9UXvsinS4zbgjd8rK.svg", alt="File download.", width="20", height="20" %} **Export** > **Get extensions...** at the top of the **Recorder** panel or go to [Extensions](/docs/devtools/recorder/extensions/).
-1. Choose an extension and click its link.
-1. In Chrome Web Store, click **Add extension**.
-1. [Open DevTools](/docs/devtools/open/) in a new tab and find new custom options in the **Recorder**.
-
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/1yXSxuF798GRFI5Jmu9W.png", alt="Export and replay extensions.", width="800", height="406" %}
-
-Currently, there are two types of extensions: [Export](/docs/devtools/recorder/extensions/#export-extensions) and [Replay](/docs/devtools/recorder/extensions/#replay-extensions).
-
-#### Troubleshooting {: #extension-troubleshooting }
-
-If you don't see the export option after installing the extension, do the following:
-
-- The extension only works on web pages. For example, the export option is not available for `chrome://` pages like `chrome://extensions`.
-- Always open a new browser tab after installing the extension.
-- There is an [issue](https://crbug.com/1351416) in Chrome 104 and 105 that prevents the export option showing if you open the **Recorder** as the first DevTools panel. As a workaround, open another panel (for example, **Console**) first before opening the **Recorder**. The issue is fixed in Chrome 106.
-
-{% Aside 'gotchas' %} 
-**Advanced use case: Build an extension**
-
-To further customize the **Recorder** to your needs, you can build your own extension:
-
-1. Explore the [chrome.devtools.recorder](/docs/extensions/reference/devtools_recorder/) API.
-1. Check out [example extensions](https://github.com/puppeteer/replay/tree/main/examples).
-1. [Develop your extension](/docs/extensions/mv3/getstarted/) and publish it at [Chrome Web Store](/docs/webstore/about_webstore/).
-1. Feel free to [add it to the Extensions list](https://github.com/GoogleChrome/developer.chrome.com/edit/main/site/en/docs/devtools/recorder/extensions/index.md).
-{% endAside %}
+See [Recorder extensions](/docs/devtools/recorder/extensions).
 
 ### Import a user flow {: #import-flows }
 

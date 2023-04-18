@@ -21,6 +21,9 @@ redirects:
 
 # Simple redirects
 
+- from: /blog/wordpress-playground/
+  to: https://web.dev/wordpress-playground/
+
 - from: /blog/navigation-preload/
   to: https://web.dev/navigation-preload/
 
@@ -651,6 +654,11 @@ redirects:
 # Fugu redirects
 - from: /blog/fugu-showcase/
 - to: /fugu-showcase/
+
+# Redirect old platform documentation to MDN
+
+- from: /docs/web-platform/webgpu/
+  to: https://developer.mozilla.org/docs/Web/API/WebGPU_API
 
 # Generic
 

@@ -1,0 +1,25 @@
+# Runs in dcc-staging and cleans up stale instances and bucket items by comparing open
+# PRs to currently deployed instances/folders
+timeout: 2700s
+steps:
+  - id: 'install'
+    name: node:18
+    entrypoint: npm
+    args: ['ci']
+
+  - id: 'clean'
+    name: node:18
+    entrypoint: bash
+    args:
+      - '-c'
+      - |
+        npm run stage:github cleanUpGoogleCloud
+
+availableSecrets:
+  secretManager:
+    - versionName: projects/dcc-staging/secrets/GITHUB_APP_ID/versions/1
+      env: 'GITHUB_APP_ID'
+    - versionName: projects/dcc-staging/secrets/GITHUB_APP_KEY/versions/1
+      env: 'GITHUB_APP_KEY'
+    - versionName: projects/dcc-staging/secrets/GITHUB_APP_INSTALLATION_ID/versions/1
+      env: 'GITHUB_APP_INSTALLATION_ID'
