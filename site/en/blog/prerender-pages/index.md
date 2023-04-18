@@ -7,7 +7,7 @@ description: |
 authors:
  - tunetheweb
 date: 2022-12-02
-updated: 2023-04-17
+updated: 2023-04-18
 hero: image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/eohdiqaZlxnWen7TT66M.jpg
 alt: City road at dusk with a long exposure of car lights giving impression of speed
 tags:
@@ -255,7 +255,7 @@ Removing speculation rules will result in the prerender being cancelled but, by 
 
 As speculation rules use a `<script>` element, even though they only contain JSON, they need to be included in the `script-src` [Content-Security-Policy](https://web.dev/csp/) if the site uses this—either using a hash or nonce.
 
-A new `inline-speculation-rules` can be added to `script-src` allowing `<script type="speculationrules">` elements injected from hash/nonced scripts to be supported. At present, this only supports injected rules and does not support rules includes in the initial HTML.
+A new `inline-speculation-rules` can be added to `script-src` allowing `<script type="speculationrules">` elements injected from hash/nonced scripts to be supported. At present, this only supports injected rules and does not [yet support rules includes in the initial HTML](https://bugs.chromium.org/p/chromium/issues/detail?id=1433616).
 
 ## Detecting and disabling prerendering
 
