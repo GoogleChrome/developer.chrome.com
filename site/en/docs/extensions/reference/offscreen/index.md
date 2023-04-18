@@ -4,7 +4,7 @@ api: offscreen
 
 ## Manifest
 
-Offscreen documents are invisible webpages with their own DOM that can be created and managed using the `offscreen` API. Requesting this permission allows the extension to use DOM APIs without obtrusively opening new windows or tabs that interrupt the user experience. 
+Requesting this permission allows the extension to use DOM APIs without obtrusively opening new windows or tabs that interrupt the user experience. 
 
 You must declare the `"offscreen"` permission in the [extension manifest][doc-manifest] to use the Offscreen API. For example:
 
