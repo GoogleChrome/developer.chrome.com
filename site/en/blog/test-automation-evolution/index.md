@@ -18,7 +18,7 @@ tags:
 
 Let's rewind back to the 1990s when the web browser was born. Test automation didn't become a reality until the 2000s, with the emergence of [Selenium](https://www.selenium.dev/history/) and [WebDriver](https://www.selenium.dev/history/#:~:text=testing%20tool%20called-,WebDriver.,-It%20did%20not) projects to tackle cross-browser and multi-device testing challenges. 
 
-These two projects joined forces in 2011 as [Selenium WebDriver](https://www.selenium.dev/documentation/webdriver/) and became a [W3C standard](https://w3c.github.io/webdriver/) in 2018. We usually refer it as WebDriver or **WebDriver “Classic”**.
+These two projects joined forces in 2011 as [Selenium WebDriver](https://www.selenium.dev/documentation/webdriver/) and became a [W3C standard](https://w3c.github.io/webdriver/) in 2018. We usually refer to it as WebDriver or **WebDriver “Classic”**.
 
 <figure>
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5YPW7sdvnbo1urlNCujv.png", alt="The evolution of the Selenium WebDriver project.", width="800", height="235" %}
@@ -62,7 +62,7 @@ While it has excellent cross-browser support and its APIs are designed for testi
 <figcaption>WebDriver “Classic”</figcaption>
 </figure>
 
-For example, imagine you have a test script to click on an element `await coffee.click();` is translated into a series of HTTP requests.
+For example, imagine you have a test script that clicks on an element `await coffee.click();` and is translated into a series of HTTP requests.
 
 ```bash
 # WebDriver: Click on a coffee element

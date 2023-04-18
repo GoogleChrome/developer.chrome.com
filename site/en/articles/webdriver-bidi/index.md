@@ -59,7 +59,7 @@ The [WebDriver BiDi Working Group](https://www.w3.org/groups/wg/browser-tools-te
 <figcaption>The WebDriver BiDi Working Group</figcaption>
 </figure>
 
-The work is mostly done in the [GitHub repository](https://github.com/w3c/webdriver-bidi). There are monthly meetings with all major browser vendors reporting actual progress and discussing arguable and unknown specifics. The cross-company working group makes sure that decisions are aligned with all stakeholders.
+The work is mostly done in [this GitHub repository](https://github.com/w3c/webdriver-bidi). There are monthly meetings with all major browser vendors reporting actual progress and discussing arguable and unknown specifics. The cross-company working group makes sure that decisions are aligned with all stakeholders.
 
 Establishing and implementing a new protocol is no small feat. It requires concerted efforts from various vendors collaborating and working together. The process involves:
 
