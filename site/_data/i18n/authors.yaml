@@ -576,16 +576,16 @@ nattestad:
     en: Thomas Nattestad
   description:
     en: Product Manager at Google
-adamzielinski:
-  title:
-    en: Adam Zieliński
-  description:
-    en: WordPress core committer at Automattic
 cwallez:
   title:
     en: Corentin Wallez
   description:
     en: Graphics plumber at Google
+toji:
+  title:
+    en: Brandon Jones
+  description:
+    en: WebGPU/WebXR/WebGL Dev at Google
 eladalon:
   title:
     en: 'Elad Alon'

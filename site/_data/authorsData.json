@@ -518,18 +518,20 @@
     "country": "US",
     "image": "image/admin/UyUsatSDE2wdnfy3KHzO.jpg"
   },
-  "adamzielinski": {
-    "twitter": "adamzielin",
-    "github": "adamziel",
-    "homepage": "https://adamadam.blog/",
-    "image": "image/8WbTDNrhLsU0El80frMBGE4eMCD3/qNsFHO1nZ3FxmYd3PwWL.webp"
-  },
   "cwallez": {
     "country": "FR",
     "twitter": "DaKangz",
     "github": "Kangz",
     "mastodon": "https://mastodon.gamedev.place/@DaKangz",
     "image": "image/vvhSqZboQoZZN9wBvoXq72wzGAf1/mYkUaoNpythq50oIFiQh.jpeg"
+  },
+  "toji": {
+    "country": "US",
+    "twitter": "tojiro",
+    "github": "toji",
+    "mastodon": "https://mastodon.social/@tojiro",
+    "homepage": "https://toji.dev/",
+    "image": "image/vvhSqZboQoZZN9wBvoXq72wzGAf1/0OHajNUjLrRB7XsDWuFt.png"
   },
   "eladalon": {
     "country": "SE",

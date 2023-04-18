@@ -15,6 +15,8 @@ authors:
   - kevinkiklee
 ---
 
+{% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
+
 {% YouTube
   id='HkvmYKqnytw'
 %}

@@ -13,6 +13,8 @@ authors:
   - alexandrawhite
 ---
 
+{% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
+
 In this article, you'll find a technical reference for interest groups, as used
 in the current iteration of the experimental FLEDGE API.
 

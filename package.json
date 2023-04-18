@@ -47,6 +47,7 @@
     "@11ty/eleventy-cache-assets": "^2.3.0",
     "@11ty/eleventy-plugin-rss": "^1.1.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
+    "@google-cloud/appengine-admin": "2.1.2",
     "@google-cloud/cloudbuild": "^2.6.0",
     "@google-cloud/error-reporting": "^2.0.4",
     "@google-cloud/storage": "^6.7.0",
@@ -93,7 +94,7 @@
     "unistore": "^3.5.2",
     "uslug": "^1.0.4",
     "web-vitals": "^3.1.1",
-    "webdev-infra": "1.0.52",
+    "webdev-infra": "1.0.53",
     "xss": "^1.0.14"
   },
   "optionalDependencies": {
