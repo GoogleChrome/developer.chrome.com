@@ -24,6 +24,7 @@
     - url: /docs/privacy-sandbox/first-party-sets-integration
     - url: /docs/privacy-sandbox/first-party-sets-evolution
     - url: /docs/privacy-sandbox/chips
+    - url: /docs/privacy-sandbox/storage-partitioning/
     - url: /docs/privacy-sandbox/fenced-frame
     - title: i18n.docs.privacy-sandbox.cross-site-federation
       sections:
