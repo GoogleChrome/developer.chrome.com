@@ -4,6 +4,7 @@ title: Migrate to a service worker
 subhead: 'Replacing background or event pages with a service worker'
 description: 'A service worker enables extensions to run only when needed, saving resources.'
 date: 2023-03-09
+updated: 2023-04-14
 ---
 
 A service worker replaces the extension's background or event page to ensure that background code stays off the main thread. This enables extensions to run only when needed, saving resources. 
@@ -75,7 +76,7 @@ Replacing items in `"background.page"` will be dealt with in a later section.
 {% endCompare %}
 </div>
 
-The `"service_worker"` field takes a single string.  To use additional scripts in your service worker, declare the service worker as an [ES Module](https://web.dev/es-modules-in-sw/#static-imports-only) by specifying `"type": "module"` to use the [`import`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import) keyword.
+The `"service_worker"` field takes a single string. You will only need the `"type"` field if you use [ES modules](https://web.dev/es-modules-in-sw/#static-imports-only) (using the [`import`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import) keyword). Its value will always be `"module"`.
 
 ## Move DOM and window calls to an offscreen document {: #move-dom-and-window }
 
