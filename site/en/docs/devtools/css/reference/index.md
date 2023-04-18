@@ -44,6 +44,17 @@ There are many ways to select an element:
 
 ## View CSS {: #view }
 
+Use the **Elements** > **Styles** and **Computed** panes to view CSS rules and [diagnose CSS issues](/docs/devtools/css/issues/).
+
+### Navigate with links {: #links }
+
+In the **Styles** pane, click the link next to a CSS rule to open the external stylesheet that
+defines the rule.
+
+{% Img src="image/admin/DIRRbj70JvHO7EDpeSdC.svg", alt="Viewing the stylesheet where a rule is defined", width="800", height="488" %}
+
+If the stylesheet is minified, see [Make a minified file readable][3].
+
 ### View CSS documentation {: #view-docs }
 
 To see a tooltip with a short CSS description, hover over the property name in the **Styles** pane.
@@ -65,15 +76,6 @@ To turn them back on, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXi
 The **Styles** pane recognizes many kinds of CSS issues and highlights them in different ways.
 
 See [Understand CSS in the Styles pane](/docs/devtools/css/issues/#css-in-styles).
-
-### View the external stylesheet where a rule is defined {: #view-external }
-
-In the **Styles** pane, click the link next to a CSS rule to open the external stylesheet that
-defines the rule.
-
-{% Img src="image/admin/DIRRbj70JvHO7EDpeSdC.svg", alt="Viewing the stylesheet where a rule is defined", width="800", height="488" %}
-
-If the stylesheet is minified, see [Make a minified file readable][3].
 
 ### View only the CSS that's actually applied to an element {: #computed }
 
