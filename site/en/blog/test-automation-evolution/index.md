@@ -62,7 +62,7 @@ While it has excellent cross-browser support and its APIs are designed for testi
 <figcaption>WebDriver “Classic”</figcaption>
 </figure>
 
-For example, imagine you have a test script that clicks on an element `await coffee.click();` and is translated into a series of HTTP requests.
+For example, imagine you have a test script that clicks on an element `await coffee.click();`. It is translated into a series of HTTP requests.
 
 ```bash
 # WebDriver: Click on a coffee element
