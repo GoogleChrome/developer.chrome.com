@@ -81,7 +81,7 @@ To help you diagnose [CSS issues](/docs/devtools/css/issues/) faster, the **Styl
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/25gZlN9PjK8HosfW1ZGm.png", alt="Invalid property name and invalid property value.", width="800", height="582" %}
 
-The DevTools team would like to express gratitude to [Yisi](https://chromium.googlesource.com/devtools/devtools-frontend/+/b1e2495635a072b0eb814b0f683bb93b8f8d92e3) for landing this improvement.
+The DevTools team would like to express gratitude to [Yisi(一丝)](https://chromium.googlesource.com/devtools/devtools-frontend/+/b1e2495635a072b0eb814b0f683bb93b8f8d92e3) for landing this improvement.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/b1e2495635a072b0eb814b0f683bb93b8f8d92e3 #}
 
