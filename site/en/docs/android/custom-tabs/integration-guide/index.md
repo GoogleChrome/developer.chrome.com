@@ -124,7 +124,8 @@ public void onCreate(@Nullable Bundle savedInstanceState) {
     selectButton.setOnClickListener(new OnClickListener() {
         @Override
         public void onClick(View view) {
-            mCustomTabLauncher.launch(customTabsIntent.intent);
+            String url = "https://google.com/";
+            mCustomTabLauncher.launch(url);
         }
     });
 }
