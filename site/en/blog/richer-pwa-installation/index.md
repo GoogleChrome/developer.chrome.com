@@ -87,7 +87,7 @@ This feature is enabled on [squoosh.app](https://squoosh.app) and can be preview
 
 ## Implementation {: #implementation }
 
-To display the richer install ui dialog developers need to add at least one screenshot for the corresponding form factor in the `screenshots` array. The `description` field is not required but it is recommended,  the content dialog is built with the content of those two fields and make the experience more similar to app store install, helping users identify they are adding an app to their device and with more space available developers can provide specific context to their users at install time.
+To display the richer install UI dialog developers need to add at least one screenshot for the corresponding form factor in the `screenshots` array. The `description` field is not required but it is recommended. The content dialog is built using the content of the `screenshots` and `description` fields to make the experience more similar to an app store install. This UI helps users identify they are adding an app to their device, and with more space available developers can provide specific context to their users at install time.
 
 For example developers can use the `description` field to highlight the app’s features that incentivize the user to keep it in their devices, and with the `screenshots`  they can present the look and feel of the web app as a standalone, with all the easy access that platform apps have.
 
