@@ -60,7 +60,7 @@ of installed experiences.
 {% Column %}
 <figure>
   {% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/SpStAtUk8Zp5iwi9yqKP.jpg",
-alt="Richer Install UI Expanded", width="342", height="722" %}
+alt="Richer Install UI Expanded.", width="342", height="722" %}
   <figcaption>Richer Install UI Expanded.</figcaption>
 </figure>
 {% endColumn %}
