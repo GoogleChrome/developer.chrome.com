@@ -1,9 +1,8 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: Extension service worker basics
-subhead: TBD
 description: Extension service workers are installed and updated differently from web service workers.
-date: 2023-03-29
+date: 2023-04-19
 ---
 
 Extension service workers are installed and updated differently from web service workers. This page explains those differences.

@@ -1,14 +1,11 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: Events in service workers
-subhead: TBD
-description: Extension service workers respond to both the standard service worker events and to events in the <code>chrome.runtime</code> namespace.
-date: 2023-03-29
+description: Extension service workers respond to both standard service worker events and many events in the extension APIs.
+date: 2023-04-19
 ---
 
-Extension service workers support both the [standard service worker](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope#events) events and many events available through the [extension APIs](/docs/extensions/reference/). This section describes what's available and provides tips for using them.
-
-
+Extension service workers support both [standard service worker](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope#events) events and many events in the [extension APIs](/docs/extensions/reference/). This section describes what's available and provides tips for using them.
 
 ## Declaring extension events
 

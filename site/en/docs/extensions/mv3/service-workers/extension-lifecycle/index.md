@@ -1,9 +1,9 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: The service worker lifecycle
-subhead: TBD
-description: Extension service workers don't require a reload to be active. 
-date: 2023-03-29
+title: The extension lifecycle
+subhead: 
+description: Extension service workers respond to both standard service worker events and events in extension namespaces. They are presented together because often one type follows another during an extension's use.
+date: 2023-04-19
 ---
 
 Extension service workers respond to both the [standard service worker events](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope#events) and to events in extension namespaces. They are presented together because often one type follows another during an extension's use.
