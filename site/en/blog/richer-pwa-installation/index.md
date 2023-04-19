@@ -67,7 +67,7 @@ alt="Richer Install UI Expanded.", width="342", height="722" %}
 {% Column %}
 <figure>
   {% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/k7r4yKqrh6iOm2XyZHfw.jpg",
-alt="Richer Install UI Collapsed", width="342", height="722" %}
+alt="Richer Install UI Collapsed.", width="342", height="722" %}
   <figcaption>Richer Install UI Collapsed.</figcaption>
 </figure>
 {% endColumn %}
