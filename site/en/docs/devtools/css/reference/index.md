@@ -48,12 +48,20 @@ Use the **Elements** > **Styles** and **Computed** panes to view CSS rules and [
 
 ### Navigate with links {: #links }
 
-In the **Styles** pane, click the link next to a CSS rule to open the external stylesheet that
-defines the rule.
+The **Styles** pane displays links in various places to various other places, including but not limited to:
 
-{% Img src="image/admin/DIRRbj70JvHO7EDpeSdC.svg", alt="Viewing the stylesheet where a rule is defined", width="800", height="488" %}
+- Next to CSS rules, to stylesheets and CSS sources. Such links open the **Sources** panel. If the stylesheet is minified, see [Make a minified file readable][3].
+- In the **Inherited from ...** sections, to parent elements.
+- In `var()` calls, to [custom property](https://developer.mozilla.org/docs/Web/CSS/Using_CSS_custom_properties) declarations.
+- In `animation` shorthand properties, to `@keyframes`.
+- **Learn more** links in documentation tooltips.
+- And more.
 
-If the stylesheet is minified, see [Make a minified file readable][3].
+Here are some of them highlighted:
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VIXGDdosRVMxekn5PQip.png", alt="Various links highlighted.", width="800", height="648" %}
+
+Links may be styled differently. If you're not sure if something is a link, try clicking it to find out.
 
 ### View CSS documentation {: #view-docs }
 
