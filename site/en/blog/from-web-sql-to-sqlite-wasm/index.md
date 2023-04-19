@@ -4,7 +4,7 @@ title: 'From Web SQL to SQLite Wasm: the database migration guide'
 subhead: >
   With SQLite Wasm backed by the origin private file system, there is a versatile replacement for the deprecated Web SQL database technology. This article is a guide to migrating your data from Web SQL to SQLite Wasm.
 date: 2023-03-24
-# updated: 2023-03-24
+updated: 2023-04-19
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/l5kRHOrUI9mQmwOTJKr7.jpg
 alt: Library symbolizing a database.
 authors:
@@ -62,10 +62,10 @@ The outlined steps show the conceptual idea tested on a small database. For migr
 
 ### Importing the data into SQLite Wasm
 
-All that remains is executing these SQL commands in the context of SQLite Wasm. For all details regarding setting SQLite Wasm up, I refer you to the article [SQLite Wasm in the browser backed by the Origin Private File System](/blog/sqlite-wasm-in-the-browser-backed-by-the-origin-private-file-system/), but the gist is again below. Remember that this code needs to run in a Worker, with the [required HTTP headers](/blog/sqlite-wasm-in-the-browser-backed-by-the-origin-private-file-system/#setting-the-required-headers) set correctly.
+All that remains is executing these SQL commands in the context of SQLite Wasm. For all details regarding setting SQLite Wasm up, I refer you to the article [SQLite Wasm in the browser backed by the Origin Private File System](/blog/sqlite-wasm-in-the-browser-backed-by-the-origin-private-file-system/), but the gist is again below. Remember that this code needs to run in a Worker, with the [required HTTP headers](/blog/sqlite-wasm-in-the-browser-backed-by-the-origin-private-file-system/#setting-the-required-headers) set correctly. You can install the [`@sqlite.org/sqlite-wasm`](https://www.npmjs.com/package/@sqlite.org/sqlite-wasm) package from npm.
 
 ```js
-import { default as sqlite3InitModule } from './sqlite3.mjs';
+import sqlite3InitModule from '@sqlite.org/sqlite-wasm';
 
 const createSQLiteDatabase = (sqlite3, database, sql) => {
   let db;
