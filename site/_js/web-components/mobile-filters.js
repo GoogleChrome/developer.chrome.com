@@ -92,7 +92,25 @@ export class MobileFilters extends BaseElement {
   }
 
   render() {
-    return html` ${unsafeHTML(this.innerHTML)} `;
+    return html`
+      <template id="mobile-filters-template"> </template>
+      ${unsafeHTML(this.getNestedComponentsHtml())}
+    `;
+  }
+
+  getNestedComponentsHtml() {
+    const template = document.querySelector('#mobile-filters-template');
+    const content = template?.content?.cloneNode(true); // @ts-ignore
+    const nestedComponents = content.querySelectorAll('*');
+    let html = '';
+    nestedComponents.forEach(component => {
+      const tagName = component.tagName.toLowerCase();
+      const attributes = Array.from(component.attributes)
+        .map(attr => `${attr.nodeName}="${attr.nodeValue}"`)
+        .join(' ');
+      html += `<${tagName} ${attributes}></${tagName}>`;
+    });
+    return html;
   }
 }
 
