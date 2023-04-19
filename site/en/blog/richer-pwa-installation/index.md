@@ -81,7 +81,7 @@ and users' reaction.
 
 ## Previewing the UI {: #previewing }
 
-This UI works in M94 on Android, and [M108 on desktop](/blog/richer-install-ui-desktop/).
+This UI works from Chrome 94 on Android, and [Chrome 108 on desktop](/blog/richer-install-ui-desktop/).
 
 This feature is enabled on [squoosh.app](https://squoosh.app) and can be previewed there.
 
