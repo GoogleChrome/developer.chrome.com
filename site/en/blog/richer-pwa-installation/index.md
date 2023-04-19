@@ -47,7 +47,7 @@ description and screenshots to their manifest file and have it appear in a botto
 within Chrome for Android.
 
 <figure>
-  {% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/RoQRxu3CPkKvAtkxYsAQ.jpeg", alt="Example of bottomsheet UI in Chrome", width="360", height="720" %}
+  {% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/RoQRxu3CPkKvAtkxYsAQ.jpeg", alt="Example of bottomsheet UI in Chrome.", width="360", height="720" %}
   <figcaption>Example of bottomsheet UI in Chrome.</figcaption>
 </figure>
 
