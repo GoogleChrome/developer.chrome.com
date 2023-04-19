@@ -53,15 +53,28 @@ export class FilteredElement extends BaseStateElement {
 
   onStateChanged(state) {
     const activeFilters = state.filters || {};
-    for (const [name, value] of Object.entries(activeFilters)) {
-      const values = value.map(v => v.value);
-      if (!values.includes(this.filters[name])) {
-        this.hidden = true;
-        return;
+
+    // Remove any empty filter arrays
+    for (const key in activeFilters) {
+      if (
+        activeFilters.hasOwnProperty(key) &&
+        activeFilters[key].length === 0
+      ) {
+        delete activeFilters[key];
       }
     }
 
-    this.hidden = false;
+    // Check for matches
+    if (Object.keys(activeFilters).length === 0) {
+      // Show all elements when no filters are active
+      this.hidden = false;
+    } else {
+      // Hide elements that don't match the active filters
+      this.hidden = !Object.keys(activeFilters).every(filter => {
+        const values = activeFilters[filter].map(value => value.value);
+        return values.includes(this.filters[filter]);
+      });
+    }
   }
 
   render() {
