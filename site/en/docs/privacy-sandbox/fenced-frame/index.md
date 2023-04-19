@@ -129,7 +129,7 @@ publisher&mdash;aren't available in fenced frames.
 
 Fenced frames behave like a [top-level browsing
 context](https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context)
-(such as a browser tab). Although a fenced frame in [certain modes](https://github.com/WICG/fenced-frame/blob/master/explainer/modes.md#fenced-frame-modes)
+(such as a browser tab). Although a fenced frame in [certain use cases](https://github.com/WICG/fenced-frame/blob/master/explainer/use_cases.md)
 (such as `opaque-ads`) can contain cross-site data (such as a FLEDGE interest
 group), the frame cannot access unpartitioned storage or cookies. An
 `opaque-ads` fenced frame can access a unique, nonce-based cookie and storage
@@ -175,7 +175,7 @@ to existing iframe features.
    <tr>
       <td>URLs (<code>http://example.com</code>) </td>
       <td>Yes</td>
-      <td>Yes (<a href="https://github.com/WICG/fenced-frame/blob/master/explainer/modes.md">mode-dependent</a>)</td>
+      <td>Yes (<a href="https://github.com/WICG/fenced-frame/blob/master/explainer/use_cases.md">dependent on use case</a>)</td>
    </tr>
    <tr>
       <td>Browser-managed opaque source (<code>urn:uuid</code>)</td>
@@ -185,7 +185,7 @@ to existing iframe features.
    <tr>
       <td>Access to cross-site data </td>
       <td>No</td>
-      <td>Yes (mode-dependent)</td>
+      <td>Yes (dependent on use case)</td>
    </tr>
 </tbody></table>
   
@@ -214,13 +214,13 @@ Current candidates for this combination include:
    Measurement](https://github.com/w3c/web-advertising/blob/main/support_for_advertising_use_cases.md#conversion-lift-measurement)
    using [Shared Storage](https://github.com/pythagoraskitty/shared-storage).
 * Another option is to allow fenced frames to be
-   [read-only](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/modes.md#read-only)
+   [read-only](https://github.com/WICG/fenced-frame/blob/master/explainer/use_cases.md#read-only)
    or [access unpartitioned
-   storage](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/modes.md#unpartitioned-storage).
+   storage](https://github.com/WICG/fenced-frame/blob/master/explainer/use_cases.md#unpartitioned-storage).
 
 
 For more details, refer to the [Fenced Frames
-explainer](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/modes.md).
+use cases explainer](https://github.com/WICG/fenced-frame/blob/master/explainer/use_cases.md).
 
 
 ### Examples
