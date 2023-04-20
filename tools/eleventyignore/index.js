@@ -51,6 +51,17 @@ if (!isProduction || isCI) {
     return !!value;
   };
 
+  if (process.env.ELEVENTY_PARTIAL_DIR) {
+    const includeDirs = [
+      process.env.PARTIAL_DIR,
+      '_partials'
+    ]
+    const all = fs.readdirSync(`site/en/`)
+      .map(dir => !includeDirs.includes(dir) ? `site/*/${dir}/**/*` : '')
+      .filter(entry => !!entry);
+    ignores = [...ignores, ...all];
+  }
+
   // Ignore translated documents
   if (!isTruthy(process.env.ELEVENTY_INCLUDE_TRANSLATED)) {
     console.log(warning('Ignoring TRANSLATED docs.'));
