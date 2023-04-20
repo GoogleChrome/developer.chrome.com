@@ -9,20 +9,20 @@ description: Step-by-step instructions on how to debug Chrome Extensions.
 
 ## Overview {: #overview }
 
-Extensions can access the same debugging tools as web pages in [Chrome DevTools][chrome-devtools]. However, to become an expert in debugging extensions, you need to know how the different parts of an extension work together and where to find logs and errors for each component. This tutorial provides developers with basic concepts and techniques to debug their extensions.
+Extensions can access the same [Chrome DevTools][chrome-devtools] as web pages. To become an expert in debugging extensions, you will need to know how to locate logs and errors of the different extension components. This tutorial provides fundamental techniques to debug your extension.
 
 ## Before you begin {: #prereq }
 
 This guide assumes that you have basic web development experience. We recommend checking out
 [Development Basics][doc-dev-basics] for an introduction to the extension development workflow and [Architecture overview][doc-arch] to learn about the different extension components.
 
-## Debugging extensions {: #locate_logs }
+## Breaking the extension {: #locate_logs }
 
-Start by downloading the [Broken Background Color][gh-broken-color]. The following sections break one component of the extension at a time. Remember to correct these errors before moving on to the next section.
+This tutorial will break one extension component and then demonstrate how to fix it. Remember to undo the bugs we introduce before continuing to the next section. Start by downloading the [Broken Color sample][gh-broken-color] on Github.
 
 ### Debug the manifest {: #debug-manifest}
 
-Open the manifest file and change the `"version"` key to `"versions"`
+First let's break the manifest file by changing the `"version"` key to `"versions"` and save.
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -36,16 +36,16 @@ Open the manifest file and change the `"version"` key to `"versions"`
 }
 ```
 
-Follow the instructions to [Load an unpacked extension][dev-basic-unpacked]. When a manifest key is invalid, the extension will fail to load. You will see a message pointing to the problem: 
+Now let's try [loading the extension locally][dev-basic-unpacked]. You will see a error dialog pointing to the problem: 
 
 <figure>
-  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/acjM7iQ73yXZJO90eeuR.png", alt="TBD", width="600", height="347", class="screenshot" %}
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/acjM7iQ73yXZJO90eeuR.png", alt="An extension with an invalid manifest key triggering an error dialog when attempting to load.", width="500", height="347", class="screenshot" %}
   <figcaption>
-    TBD
+    An invalid manifest key error dialog when attempting to load it locally.
   </figcaption>
 </figure>
 
-After correcting the previous error, change the `"activeTab"` permission to `"activetab"`:
+When a manifest key is invalid the extension will fail to load, but Chrome will give you a hint of how to fix the problem. Undo that change and let's ente an invalid permission to see what happens. Change the `"activeTab"` permission to lowercase `"activetab"`:
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -58,55 +58,55 @@ After correcting the previous error, change the `"activeTab"` permission to `"ac
 }
 ```
 
-Save the extension and load it again. After the extension is loaded, it should have three buttons: **Details**, **Remove** and **Errors** in red letters. Click on the **Errors** button to locate the error.
+Save the extension and try loading it again. It should load successfully this time. You will see three buttons: **Details**, **Remove** and **Errors**. The **Errors** button letters will turn red if there's an error. Click on the **Errors** button to see the following error:
+
+```text
+Permission 'activetab' is unknown or URL pattern is malformed.
+```
 
 <figure>
-  {% Video src="video/BhuKGJaIeLNPW9ehns59NfwqKxF2/MklSHq3NqtDYvvXHLTmk.mp4", width="800", height="714", autoplay="true", loop="true", muted="true" %}
-  <figcaption>
-    TBD
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/Kpp5AWbtXMmTj8AOpMMe.gif", alt="Error button is clicked and displays an error", width="700", height="360" %}
+    Finding an error message by clicking on the Errors button
   </figcaption>
 </figure>
 
-Before moving on, change the permission back, click the **Clear all** button in the upper right-hand corner, then reload the extension.
+Before moving on, change the permission back, click the **Clear all** button in the upper right-hand corner to clear the logs, and reload the extension.
 
 <figure>
-  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/8U43Q83u7Tr8fRR6TFHv.png", alt="ALT_TEXT_HERE", width="600", height="574", class="screenshot" %}
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/8U43Q83u7Tr8fRR6TFHv.png", alt="Clear all button", width="600", height="574", class="screenshot" %}
   <figcaption>
-    TBD
-  </figcaption>
-</figure>
-
-{% Aside 'success' %}
-
-Using a [manifest schema][manifest-schema] in your code editor is a way to ensure that the manifest has the proper formatting and required fields.
-
-{% endAside %}
-
-## Debug the service worker {: #debug-bg } 
-
-The service worker initializes the default color to storage and logs it to the console.
-
-### Locating logs {: #sw-logs }
-
-To view service worker logs, open the Chrome DevTools panel for the service worker by selecting the
-blue link next to **Inspect views**.
-
-<figure>
-  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/H48asatrNaKDVVBluWTT.png", alt="ALT_TEXT_HERE", width="650", height="333", class='screenshot' %}
-  <figcaption>
-    TBD
+    How to clear extension errors.
   </figcaption>
 </figure>
 
 {% Aside 'important' %}
 
-Inspecting the service worker this way will keep it active. To make sure that your extension behaves correctly when your service worker is terminated, remember to close the DevTools. 
+Using a [manifest schema][manifest-schema] in your code editor is a way to ensure that the manifest has the proper formatting and required fields.
 
 {% endAside %}
 
-### Locating errors {: #sw-errors }
+### Debug the service worker {: #debug-bg } 
 
-Let's break the extension by changing `onInstalled` to lowercase `oninstalled`.
+#### Locating logs {: #sw-logs }
+
+The service worker sets the default color to storage and logs it to the console. To view this log, open the Chrome DevTools panel by selecting the blue link next to **Inspect views**.
+
+<figure>
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/H48asatrNaKDVVBluWTT.png", alt="Opening the DevTools for the extension service worker.", width="650", height="333", class='screenshot' %}
+  <figcaption>
+    Service worker logs in the Chrome DevTools panel.
+  </figcaption>
+</figure>
+
+{% Aside 'caution' %}
+
+Inspecting the service worker will keep it **active**. To ensure your extension behaves correctly when your service worker is terminated, remember to close the DevTools. 
+
+{% endAside %}
+
+#### Locating errors {: #sw-errors }
+
+Let's break the service worker by changing `onInstalled` to lowercase `oninstalled`:
 
 {% Label %}service-worker.js:{% endLabel %}
 
@@ -121,88 +121,101 @@ chrome.runtime.oninstalled.addListener(() => {
 });
 ```
 
-Refresh and click the **Errors** button to view the error log. The first error will let you know that the service worker failed to register. This means something went wrong during the initiation. 
+Refresh and click the **Errors** button to view the error log. The first error will let you know that the service worker failed to register. This means something went wrong during initiation. 
 
 <figure>
   {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/5Vq0jbo4AGUp1P9MoU3v.png", alt="ALT_TEXT_HERE", width="800", height="418" %}
   <figcaption>
-  TBD  
+  Service worker registration error message.  
   </figcaption>
 </figure>
 
-When the service worker fails to register, you can't access the devTools until you fix the registration bugs. 
+{% Aside %}
 
-Another way it fails to register is if there is an error when importing other modules. See [SW tutorial TDB](TDB) for an example. 
+Try inspecting the service worker registration fails, you can't access the Chrome DevTools until you fix the registration bugs. 
 
-The second is the following TypeError:
+{% endAside %}
+
+The second is a is a TypeError:
 
 <figure>
   {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/LauDnPFrNyExahWz3RF1.png", alt="ALT_TEXT_HERE", width="800", height="528" %}
   <figcaption>
-    TBD
+  Uncaught TypeError message.
   </figcaption>
 </figure>
 
 Update the code to reflect the correct call, click the **Clear all** button in the upper right-hand corner, then reload the extension.
 
-### Check the service worker status {: #sw-stats }
+#### Check the service worker status {: #sw-status }
+
+Identify when the service worker wakes up to perform tasks
 
 1. Open your manifest file in the browser. For example:
-  ```text
-  chrome-extension://EXTENSION_ID/manifest.json
-  ``` 
+    ```text
+    chrome-extension://EXTENSION_ID/manifest.json
+    ``` 
 2. Inspect the file.
-3. Navigate to the **Application panel**.
-4. Go to the **Service worker** side panel.
-5. Select the extension's service worker.
+3. Navigate to the **Application** panel.
+4. Go to the **Service worker** pane.
 
+You can start or stop the service worker using the links next to the **Status** to test
+your code.
 
+<figure>
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/i1w015KXe7EzN3chRojv.png", alt="ALT_TEXT_HERE", width="800", height="453", class="screenshot" %}
+  <figcaption>
+    Service worker status in the Application panel
+  </figcaption>
+</figure>
 
+Also, if you have made changes to the the service worker code, you can use the **Update** button and **skipWaiting** to apply the changes immediately. Note that this will not refresh the other extension components.
+
+<figure>
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/mJISZTRN34bmSbENQpVq.png", alt="TBD", width="800", height="523", class="screenshot" %}
+  <figcaption>
+    TBD
+  </figcaption>
+</figure>
 
 ### Popup {: #debug_popup }
 
-Now that the extension initializes correctly, other components can be tested. Refresh this page, or
-open a new tab and navigate to any page on developer.chrome.com, open the popup and click the green
-square. And... nothing happens.
+Now that the extension initializes correctly, other components can be tested. Start by commenting out the highlighted lines below:
+
+```js/5,12
+...
+changeColorButton.addEventListener('click', (event) => {
+  const color = event.target.value;
+
+  // Query the active tab before injecting the content script
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    // Use the Scripting API to execute a script
+    chrome.scripting.executeScript({
+      target: { tabId: tabs[0].id },
+      args: [color],
+      func: setColor
+    });
+  });
+});
+```
 
 Navigate back to the Extensions Management Page, the **Errors** button has reappeared. Click it to
 view the new log.
 
-`Uncaught ReferenceError: tabs is not defined`
+```text
+Uncaught ReferenceError: tabs is not defined
+```
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ygCnLz4Dst4mktOQhj4S.png",
-       alt="Extensions Management Page displaying popup error", height="559", width="642" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/M9gIgE8AgIIDYkN2BF58.png", 
+alt="Extensions Management Page displaying popup error", width="800", height="588" %}
 
-Popup errors can also be viewed by inspecting the popup.
+You can open the popup's devTools by inspecting the popup.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/PTfS6FEsE6vkbtDVMcsM.png",
-       alt="DevTools displaying popup error", height="189", width="499" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/bnigtWyfrWdtIhNnwQ8r.png", 
+alt="DevTools displaying popup error.", width="800", height="207" %}
 
 The error, `tabs is undefined`, says the extension doesn't know where to inject the content script.
 This can be corrected by calling the [`tabs.query()`][tabs-query] method, then selecting the active tab.
-
-```js/8-12
-  let changeColor = document.getElementById('changeColor');
-
-  chrome.storage.sync.get(['color'], ({color}) => {
-    changeColor.style.backgroundColor = color;
-    changeColor.setAttribute('value', color);
-  });
-
-  changeColor.addEventListener('click', () =>
-    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-      chrome.scripting.executeScript(
-          tabs[0].id,
-          { function: setColor });
-    });
-  );
-  
-  async function setColor() {
-    let {color} = await chrome.storage.sync.get(['color']);
-    document.body.style.backgroundColor = color;
-  };
-
-```
 
 Update the code, click the **Clear all** button in the upper right-hand corner, and then reload the
 extension.
@@ -215,8 +228,7 @@ button. The likely culprit is the content script, which runs inside the web page
 
 Open the DevTools panel of the web page the extension is trying to alter.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/q6cdFK0h7JEfaQKUMDg0.png",
-       alt="Extension error displayed in web page console", height="292", width="515" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/bnigtWyfrWdtIhNnwQ8r.png", alt="Extension error displayed in web page console", width="800", height="207" %}
 
 Only runtime errors, `console.warning` and `console.error` will be recorded on the Extensions
 Management Page.
@@ -224,14 +236,19 @@ Management Page.
 To use DevTools from within the content script, click the dropdown arrow next to **top** and select
 the extension.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/uo8osbvVkG5HcJS00bAR.png",
-       alt="Uncaught ReferenceError: tabs is not defined", height="129", width="521" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/T3fBKwpznjRBEpXOrkzT.png", alt="caught ReferenceError: colors is not defined", width="800", height="362" %}
 
 The error says `color` is not defined. The extension must not be passing the variable correctly.
 Correct the injected script to pass the color variable into the code.
 
-```js
-  document.body.style.backgroundColor = "' + color + '";
+```js/4/5
+...
+function setColor(color) {
+  // There's a typo in the line below;
+  // ❌ colors should be ✅ color.
+  document.body.style.backgroundColor = color;
+  document.body.style.backgroundColor = colors;
+}  
 ```
 
 ### Extension tabs {: #extension_tabs }
@@ -296,12 +313,16 @@ Learn more about [Chrome Devtools][chrome-devtools] by reading the documentation
 [api-storage]: /docs/extensions/reference/storage
 [api-tabs]: /docs/extensions/reference/tabs
 [chrome-devtools]: https://developers.google.com/web/tools/chrome-devtools/
+[doc-arch]: /docs/extensions/mv3/architecture-overview/
 [doc-chrome-apis]: /docs/extensions/reference
+[doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics/
+[dev-basic-unpacked]: /docs/extensions/mv3/getstarted/development-basics/#load-unpacked
 [doc-manifest]: /docs/extensions/mv3/manifest
 [doc-options]: /docs/extensions/mv3/options#full_page
 [doc-override]: /docs/extensions/mv3/override
 [doc-perms]: /docs/extensions/mv3/declare_permissions/
 [doc-xhr]: /docs/extensions/mv3/xhr
-[gh-broken-color]: https://github.com/GoogleChrome/chrome-extensions-samples/
+[gh-broken-color]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.broken-color
 [runtime-oninstalled]: /docs/extensions/reference/runtime#event-onInstalled
 [tabs-query]: /docs/extensions/reference/tabs#method-query
+[manifest-schema]: https://json.schemastore.org/chrome-manifest
