@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How the new breakpoint sidebar pane helps you to get things done faster
+title: "How the new breakpoint sidebar pane helps you to get things done faster"
 authors:
   - kimanh, vaatika
 description: Breakpoints are at the heart of debugging. To ease common actions such as removing or disabling breakpoints, we’ve redesigned the breakpoint sidebar pane to allow actions to be achievable via one click.
@@ -23,7 +23,7 @@ Providing a **better overview** on all breakpoints that are set.
 Making common user workflows with breakpoints **easier to access** and **more intuitive**.
 Making **cool existing breakpoint features visible**.
 
-This post assumes that you are already familiar with debugging using breakpoints. If you haven’t used breakpoints before, head over to [this overview on breakpoints](https://developer.chrome.com/docs/devtools/javascript/breakpoints/) and learn more about how you can use breakpoints to debug your code.
+This post assumes that you are already familiar with debugging using breakpoints. If you haven’t used breakpoints before, head over to [this overview on breakpoints](/docs/devtools/javascript/breakpoints/) and learn more about how you can use breakpoints to debug your code.
 
 Now, let’s have a look at what the redesign offers, and how you can make use of the new sidebar! Note that the redesign concentrates on making *existing features* more intuitive to use and easier to access, instead of adding new features.
 
@@ -74,7 +74,7 @@ To enable or disable all breakpoints in a file, hover over the breakpoint group 
 ## Make use of these lesser known breakpoint features: conditional breakpoints and logpoints
 
 {% Aside 'key-term' %}
-If you want to know more about the differences between regular breakpoints, conditional breakpoints, and logpoints, head over to our [documentation on breakpoint types](https://developer.chrome.com/docs/devtools/javascript/breakpoints/#loc) which explains how you can use these different breakpoint types to debug your code.
+If you want to know more about the differences between regular breakpoints, conditional breakpoints, and logpoints, head over to our [documentation on breakpoint types](/docs/devtools/javascript/breakpoints/#loc) which explains how you can use these different breakpoint types to debug your code.
 
  **TLDR**: conditional breakpoints stop execution only if a *condition* that you specify is true. Logpoints, on the other hand, are the counterpart of using `console.log`, but in Chrome DevTools.
 {% endAside %}
@@ -88,7 +88,7 @@ Alternatively, select the line of the breakpoint in the code editor and type in 
 
 You can also quickly double-check your condition or logpoint log by hovering over the breakpoint in the sidebar:
 
-{% Img src="image/3ILBH0X0aDOqDIm6SgH3OTHT8832/7yEtQaz5qDVnIyii4BFa.png", alt="ALT_TEXT_HERE", width="800", height="566" %}
+{% Img src="image/3ILBH0X0aDOqDIm6SgH3OTHT8832/7yEtQaz5qDVnIyii4BFa.png", alt="View condition or logpoint log.", width="800", height="566" %}
 
 ## Conclusion
 
