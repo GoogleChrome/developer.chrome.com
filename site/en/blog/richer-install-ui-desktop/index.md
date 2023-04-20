@@ -53,7 +53,7 @@ The older style of install prompt provided little information and context. This 
 
 Richer installs let you create experiences more like those on operating systems.
 
-You can build your own by following the example from the Squoosh app [manifest file](https://squoosh.app/manifest.json) and you can try the dialog live at: https://squoosh.app/.
+You can build your own by following the example from the Squoosh app [manifest file](https://squoosh.app/manifest.json) and you can try the dialog live at: [https://squoosh.app/](https://squoosh.app/).
 
 Feedback
 We're considering other options for richer installs including categories and app ratings. To make that decision, we need your feedback.
