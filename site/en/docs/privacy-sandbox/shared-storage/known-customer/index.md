@@ -69,10 +69,12 @@ async function injectButton() {
   });
 
   // Run the URL selection operation to choose the button based on the user status
-  const opaqueURL = await window.sharedStorage.selectURL('known-customer', BUTTON_URLS);
+  const fencedFrameConfig = await window.sharedStorage.selectURL('known-customer', BUTTON_URLS, {
+    resolveToConfig: true
+  });
 
   // Render the opaque URL into a fenced frame
-  document.getElementById('button-slot').src = opaqueURL;
+  document.getElementById('button-slot').src = fencedFrameConfig;
 }
 
 injectButton();
