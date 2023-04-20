@@ -177,7 +177,7 @@ to `"xyz"` when the prerendered page becomes the active page.
 
 <figure>
   {% Img src="image/zKrSUSkPboWMTTSEkowJbqw5Egi2/p0ulwify9TGLuLh6RJpW.png", alt="The documentId changes when the prerendered page becomes the active page", width="350", height="463" %}
-  <figcaption>The `documentId` changes when the prerendered page becomes the
+  <figcaption>The <code>documentId</code> changes when the prerendered page becomes the
   active page.</figcaption>
 </figure>
 
