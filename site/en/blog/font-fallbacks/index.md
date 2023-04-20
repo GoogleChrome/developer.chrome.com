@@ -111,7 +111,7 @@ For example, these are the font metric overrides for the [Poppins](https://fonts
 ```css
 /*
 Poppins font metrics:
-ascent = 1000
+ascent = 1050
 descent = 350
 line-gap = 100
 UPM: 1000
@@ -421,7 +421,7 @@ body {
 
 /*
 Poppins font metrics:
-- ascent = 1000
+- ascent = 1050
 - descent = 350
 - line-gap = 100
 - UPM: 1000
