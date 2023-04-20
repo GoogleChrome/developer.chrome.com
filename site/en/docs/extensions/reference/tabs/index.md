@@ -152,7 +152,7 @@ can usually be thought of as the user's current tab.
 </web-tabs>
 
 
-### Mute the specified tab
+### Mute the specified tab {: #mute }
 
 This example shows how an extension can toggle the muted state for a given tab.
 
@@ -184,7 +184,7 @@ This example shows how an extension can toggle the muted state for a given tab.
   </web-tab>
 </web-tabs>
 
-### Move the current tab to the first position when clicked
+### Move the current tab to the first position when clicked {: #move }
 
 This example shows how to move a tab while a drag may or may not be in progress. While this example
 uses `chrome.tabs.move`, you can use the same waiting pattern for other calls that modify tabs while
@@ -242,7 +242,7 @@ populates chrome.runtime.lastError is not unchecked.
   </web-tab>
 </web-tabs>
 
-### Pass a message to a selected tab's content script
+### Pass a message to a selected tab's content script {: #messaging }
 
 This example demonstrates how an extension's service worker can communicate with content scripts in specific browser tabs using `tabs.sendMessage`.
 
