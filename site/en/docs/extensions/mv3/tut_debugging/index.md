@@ -18,11 +18,11 @@ This guide assumes that you have basic web development experience. We recommend 
 
 ## Breaking the extension {: #locate_logs }
 
-This tutorial will break one extension component and then demonstrate how to fix it. Remember to undo the bugs we introduce before continuing to the next section. Start by downloading the [Broken Color sample][gh-broken-color] on Github.
+This tutorial will break one extension component at a time and then demonstrate how to fix it. Remember to undo the bugs we introduce before continuing to the next section. Start by downloading the [Broken Color sample][gh-broken-color] on Github.
 
 ### Debug the manifest {: #debug-manifest}
 
-First let's break the manifest file by changing the `"version"` key to `"versions"` and save.
+First let's break the manifest file by changing the `"version"` key to `"versions"`:
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -41,11 +41,15 @@ Now let's try [loading the extension locally][dev-basic-unpacked]. You will see 
 <figure>
   {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/acjM7iQ73yXZJO90eeuR.png", alt="An extension with an invalid manifest key triggering an error dialog when attempting to load.", width="500", height="347", class="screenshot" %}
   <figcaption>
-    An invalid manifest key error dialog when attempting to load it locally.
+    An invalid manifest key error dialog.
   </figcaption>
 </figure>
 
-When a manifest key is invalid the extension will fail to load, but Chrome will give you a hint of how to fix the problem. Undo that change and let's ente an invalid permission to see what happens. Change the `"activeTab"` permission to lowercase `"activetab"`:
+When a manifest key is invalid the extension will fail to load, but Chrome will give you a hint of
+how to fix the problem. 
+
+Undo that change and let's enter an invalid permission to see what happens.
+Change the `"activeTab"` permission to lowercase `"activetab"`:
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -58,7 +62,10 @@ When a manifest key is invalid the extension will fail to load, but Chrome will 
 }
 ```
 
-Save the extension and try loading it again. It should load successfully this time. You will see three buttons: **Details**, **Remove** and **Errors**. The **Errors** button letters will turn red if there's an error. Click on the **Errors** button to see the following error:
+Save the extension and try loading it again. It should load successfully this time. In the extension
+Management page you will see three buttons: **Details**, **Remove** and **Errors**. The **Errors**
+button letters will turn red if there's an error. Click on the **Errors** button to see the
+following error:
 
 ```text
 Permission 'activetab' is unknown or URL pattern is malformed.
@@ -66,6 +73,7 @@ Permission 'activetab' is unknown or URL pattern is malformed.
 
 <figure>
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/Kpp5AWbtXMmTj8AOpMMe.gif", alt="Error button is clicked and displays an error", width="700", height="360" %}
+  <figcaption>
     Finding an error message by clicking on the Errors button
   </figcaption>
 </figure>
@@ -132,7 +140,7 @@ Refresh and click the **Errors** button to view the error log. The first error w
 
 {% Aside %}
 
-Try inspecting the service worker registration fails, you can't access the Chrome DevTools until you fix the registration bugs. 
+If the service worker fails to register, you will not be able to access the Chrome DevTools until you fix the registration bug. 
 
 {% endAside %}
 
@@ -184,7 +192,7 @@ Note that this will not reload any other extension components.
 
 ### Debug the popup {: #debug_popup }
 
-Now that the extension initializes correctly, other components can be tested. Start by commenting out the highlighted lines below:
+Now that the extension initializes correctly, let's break the popup by commenting out the highlighted lines below:
 
 {% Label %}popup.js:{% endLabel %}
 
@@ -215,7 +223,7 @@ Uncaught ReferenceError: tabs is not defined
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/M9gIgE8AgIIDYkN2BF58.png", 
 alt="Extensions Management Page displaying popup error", width="800", height="588" %}
 
-You can open the popup's devTools by inspecting the popup.
+You can open the popup's DevTools by inspecting the popup.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/bnigtWyfrWdtIhNnwQ8r.png", 
 alt="DevTools displaying popup error.", width="800", height="207" %}
@@ -235,7 +243,7 @@ you can find logs by inspecting the page or on the extensions management page.
 
 ### Debug content scripts {: #debug_cs }
 
-Let's break the content script by changing the variable "color" to "colors":
+Now let's break the content script by changing the variable "color" to "colors":
 
 {% Label %}content.js:{% endLabel %}
 
@@ -254,7 +262,7 @@ Refresh the page, open the popup and click the green box. Nothing happens...
 If you go to Extensions Management page the **Errors** button will not appear. This is because only runtime errors, `console.warning` and, 
 `console.error` are recorded on the Extensions Management Page.
 
-Content scripts run inside a website, so to find these logs we must inspect the web page the extension is trying to alter.
+[Content scripts][doc-cs] run inside a website, so to find these logs we must inspect the web page the extension is trying to alter.
 
 <figure>
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/xdbCjXTm5wWv3Yaa2jM9.png", alt="Extension error displayed in web page console", width="600", height="207", class="screenshot" %}
@@ -315,17 +323,17 @@ Learn more about [Chrome Devtools][chrome-devtools] by reading the documentation
 [api-storage]: /docs/extensions/reference/storage
 [api-tabs]: /docs/extensions/reference/tabs
 [chrome-devtools]: https://developers.google.com/web/tools/chrome-devtools/
-[doc-match-patt]: /docs/extensions/mv3/match_patterns
+[dev-basic-unpacked]: /docs/extensions/mv3/getstarted/development-basics/#load-unpacked
 [doc-arch]: /docs/extensions/mv3/architecture-overview/
 [doc-chrome-apis]: /docs/extensions/reference
+[doc-cs]: /docs/extensions/mv3/content_scripts
 [doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics/
-[dev-basic-unpacked]: /docs/extensions/mv3/getstarted/development-basics/#load-unpacked
 [doc-manifest]: /docs/extensions/mv3/manifest
+[doc-match-patt]: /docs/extensions/mv3/match_patterns
 [doc-options]: /docs/extensions/mv3/options#full_page
 [doc-override]: /docs/extensions/mv3/override
 [doc-perms]: /docs/extensions/mv3/declare_permissions/
-[doc-xhr]: /docs/extensions/mv3/xhr
 [gh-broken-color]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.broken-color
+[manifest-schema]: https://json.schemastore.org/chrome-manifest
 [runtime-oninstalled]: /docs/extensions/reference/runtime#event-onInstalled
 [tabs-query]: /docs/extensions/reference/tabs#method-query
-[manifest-schema]: https://json.schemastore.org/chrome-manifest
