@@ -25,6 +25,7 @@
     "lint:scss": "stylelint **/*.scss",
     "lint:types": "tsc --noEmit",
     "lint": "npm-run-all lint:js lint:scss lint:md lint:types",
+    "cms-build": "NODE_ENV=production CI=true ELEVENTY_PARTIAL_DIR=shorts npm run setup && NODE_ENV=production npm run eleventy -- --quiet",
     "production": "NODE_ENV=production npm run setup && NODE_ENV=production npm run eleventy -- --quiet",
     "snapshots": "percy snapshot ./dist",
     "rollup:watch": "chokidar \"site/**/*.js\" -c \"npx rollup -c\"",
