@@ -11,6 +11,36 @@
     margin-top: get-size(300);
   }
 
+  a {
+    color: currentColor;
+    text-decoration-color: currentColor;
+
+    &:focus {
+      outline-color: currentColor;
+    }
+  }
+
+  &__icon,
+  svg {
+    width: 1.2em;
+    height: 1.2em;
+  }
+
+  /// Blocks usually shouldn't control spacing, but
+  /// the aside is often found in `.flow` contexts
+  /// so we need to make sure the space above and below
+  /// is consistent
+  &,
+  & + * {
+    @include apply-utility('flow-space', 'size-2');
+  }
+
+  /// Now, we want to make sure all spacing inside the
+  /// element stays consistent too
+  > * {
+    @include apply-utility('flow-space', 'base');
+  }
+
   // This duplicates the above ".aside" for users who just want colors.
   &--default {
     --link-color: var(--color-blue-darkest);
@@ -27,7 +57,7 @@
     background-color: var(--color-yellow-lightest);
     color: var(--color-yellow-darkest);
   }
-  
+
   &--warning {
     --link-color: var(--color-red-darkest);
     --link-visited-color: var(--color-red-darkest);
@@ -35,7 +65,7 @@
     background-color: var(--color-red-lightest);
     color: var(--color-red-darkest);
   }
-  
+
   &--success {
     --link-color: var(--color-green-darkest);
     --link-visited-color: var(--color-green-darkest);
@@ -43,7 +73,7 @@
     background-color: var(--color-green-lightest);
     color: var(--color-green-darkest);
   }
-  
+
   &--important {
     --link-color: var(--color-purple-darkest);
     --link-visited-color: var(--color-purple-darkest);
@@ -51,7 +81,7 @@
     background-color: var(--color-purple-lightest);
     color: var(--color-purple-darkest);
   }
-  
+
   &--key-term {
     --link-color: var(--color-pink-darkest);
     --link-visited-color: var(--color-pink-darkest);
@@ -59,7 +89,7 @@
     background-color: var(--color-pink-lightest);
     color: var(--color-pink-darkest);
   }
-  
+
   &--codelab,
   &--example {
     --link-color: var(--color-cyan-darkest);
@@ -67,26 +97,5 @@
     --link-rgb-background: var(--rgb-cyan-darkest);
     background-color: var(--color-cyan-lightest);
     color: var(--color-cyan-darkest);
-  }
-}
-
-
-// The .aside__label is added by _transforms/asides.js
-.aside__label {
-  align-items: center;
-  display: flex;
-
-  > svg {
-    fill: currentColor;
-  }
-
-  > span {
-    @extend %type--headline;
-    @include apply-utility('weight', 'medium');
-    @include font-setup(16px, 28px);
-  }
-
-  > * + * {
-    margin-left: px-to-rem(12px);
   }
 }

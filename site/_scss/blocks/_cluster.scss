@@ -23,19 +23,9 @@
 // }
 
 .cluster {
-  /* ↓ Suppress horizontal scrolling caused by
-  the negative margin in some circumstances */
-  overflow: hidden;
-}
-
-.cluster > * {
   display: flex;
   flex-wrap: wrap;
-  /* ↓ multiply by -1 to negate the halved value */
-  margin: calc(var(--flow-space) / 2 * -1);
-}
-
-.cluster > * > * {
-  /* ↓ half the value, because of the 'doubling up' */
-  margin: calc(var(--flow-space) / 2);
+  gap: 0.5rem;
+  justify-content: flex-start;
+  align-items: center;
 }
