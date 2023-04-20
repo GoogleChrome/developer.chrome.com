@@ -1,5 +1,5 @@
 ---
-layout: 'layouts/blog-post.njk'
+layout: 'layouts/short-post.njk'
 pagination:
   alias: post
   data: shortPosts
@@ -8,7 +8,4 @@ pagination:
 eleventyComputed:
   title: '{{ post.title }}'
   description: '{{ post.description }}'
-
 ---
-
-{{ post.content | md | safe }}

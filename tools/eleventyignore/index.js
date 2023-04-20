@@ -52,12 +52,13 @@ if (!isProduction || isCI) {
   };
 
   if (process.env.ELEVENTY_PARTIAL_DIR) {
-    const includeDirs = [
-      process.env.PARTIAL_DIR,
-      '_partials'
-    ]
-    const all = fs.readdirSync(`site/en/`)
-      .map(dir => !includeDirs.includes(dir) ? `site/*/${dir}/**/*` : '')
+    console.log(
+      warning(`Ignoring ALL afart from ${process.env.ELEVENTY_PARTIAL_DIR}.`)
+    );
+    const includeDirs = [process.env.ELEVENTY_PARTIAL_DIR, '_partials'];
+    const all = fs
+      .readdirSync('site/en/')
+      .map(dir => (!includeDirs.includes(dir) ? `site/*/${dir}/**/*` : ''))
       .filter(entry => !!entry);
     ignores = [...ignores, ...all];
   }

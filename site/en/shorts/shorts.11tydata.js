@@ -1,4 +1,4 @@
-const locale= 'en';
+const locale = 'en';
 
 module.exports = {
   locale,
@@ -7,12 +7,10 @@ module.exports = {
     return `/${locale}/blog/${data.post.slug}/index.html`;
   },
   eleventyComputed: {
-    authors: data => {
-      return data.post.authors
-    },
+    authors: data => data.post.authors,
     date: data => new Date(data.post.date),
     updated: data => new Date(data.post.updated),
     hero: data => data.post.hero,
-    alt: data => 'some alt',
-  }
+    alt: 'some alt',
+  },
 };
