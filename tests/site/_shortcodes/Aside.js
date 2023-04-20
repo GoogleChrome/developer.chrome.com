@@ -1,6 +1,6 @@
 const test = require('ava');
 const cheerio = require('cheerio');
-const {Aside} = require('../../../site/_shortcodes/Aside');
+const {Aside} = require('webdev-infra/shortcodes/Aside');
 
 test('creates a default aside', t => {
   const thisToBind = {ctx: {locale: 'en'}};
