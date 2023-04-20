@@ -1,11 +1,11 @@
 ---
-layout: post
+layout: "layouts/blog-post.njk"
 title: "How the new breakpoint sidebar pane helps you to get things done faster"
 authors:
   - kimanh
   - vaatika
 description: Breakpoints are at the heart of debugging. To ease common actions such as removing or disabling breakpoints, we’ve redesigned the breakpoint sidebar pane to allow actions to be achievable via one click.
-date: 2023-04-11
+date: 2023-05-02
 hero: 'image/tech-writer-will-create-one'
 alt: ''
 tags:
