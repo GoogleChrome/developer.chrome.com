@@ -66,16 +66,19 @@ async function injectContent() {
   });
 
   // Run the URL selection operation
-  const opaqueURL = await window.sharedStorage.selectURL(
+  const fencedFrameConfig = await window.sharedStorage.selectURL(
     'ab-testing',
     [
       { url: `https://your-server.example/content/default-content.html` },
       { url: `https://your-server.example/content/experiment-content-a.html` }
-    ]
+    ],
+    {
+      resolveToConfig: true
+    }
   );
 
   // Render the chosen URL into a fenced frame
-  document.getElementById('content-slot').src = opaqueURL;
+  document.getElementById('content-slot').config = fencedFrameConfig;
 }
 
 injectContent();
