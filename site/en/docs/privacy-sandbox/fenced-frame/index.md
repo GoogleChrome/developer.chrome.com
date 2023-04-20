@@ -32,10 +32,6 @@ may [require select documents to render within a fenced frame](#use-cases).
 Similarly, any first-party data in the embedding context cannot be shared with
 the fenced frame.
 
-```html
-<fencedframe src="https://3rd.party.example"></fencedframe>
-```
-
 For example, let's say `news.example` (the embedding context) embeds an ad from
 `shoes.example` in a fenced frame. `news.example` cannot exfiltrate data from
 the `shoes.example` ad, and `shoes.example` cannot learn first-party data from
@@ -98,28 +94,9 @@ in the frame. The publisher could not access this information.
 
 ## How do fenced frames work?
 
-A fenced frame will be created from the winner of the FLEDGE API ad auction. The
-information retrieved from FLEDGE API isn't the URL of the ads itself, but will
-be an [opaque
-source](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/opaque_src.md).
+Fenced frames use the `FencedFrameConfig` object for navigation. This object can be returned from a FLEDGE auction or Shared Storage’s URL selection operation. Then, the config object is set as the `config` attribute on the fenced frame element. This differs from an iframe where a URL or opaque [URN](https://en.wikipedia.org/wiki/Uniform_Resource_Name) is assigned to the `src` attribute. The `FencedFrameConfig` object has a read-only `url` property; however, since the current use-cases require the actual URL of the internal resource to be hidden, this property returns the string `opaque` when read.
 
-{% Aside 'key-term' %}
-An _opaque source_ is represented by a [Uniform Resource Name (URN) for
-UUIDs](https://datatracker.ietf.org/doc/html/rfc4122). So, instead of
-`http://example.com` (a URL), an opaque source is represented as
-`urn:uuid:c36973b5-e5d9-de59-e4c4-364f137b3c7a`. URN schemes are persistent,
-location-independent identifiers, which means they cannot be used to locate a
-resource (such as an ad creative).
-{% endAside %}
-
-Opaque sources allow your site to display ads on a site without revealing the ad
-source URL to the site owner.
-
-It's not enough to just be able to display ads. If the ad can `postMessage` to
-the publisher's site, like in an iframe, it may leak the content of the
-displayed ad. So unlike iframes, fenced frames don't allow usage of the
-[postMessage](https://developer.mozilla.org/docs/Web/API/Window/postMessage) to
-communicate with the top-level site.
+A fenced frame can't use `postMessage` to communicate with its embedder. However, a fenced frame can use `postMessage` with iframes inside the fenced frame.
 
 Fenced frames will be isolated from the publisher in other ways. For instance
 the publisher won't have access to the DOM inside of a fenced frame, and the
@@ -222,47 +199,113 @@ Current candidates for this combination include:
 For more details, refer to the [Fenced Frames
 use cases explainer](https://github.com/WICG/fenced-frame/blob/master/explainer/use_cases.md).
 
-
 ### Examples
 
-Embedded content inside the `<fencedframe>` will be described by the `src`
-attribute.
+To obtain a fenced frame `config` object, you must pass in `resolveToConfig: true` to FLEDGE’s `runAdAuction()` call or Shared Storage’s `selectURL()` call. If the property is not added (or is set to `false`), the resulting promise will resolve to a URN that can only be used in an iframe.
 
-```html
-<fencedframe src="demo_fenced_frame.html"></fencedframe>
+{% Compare 'better', 'Get fenced frame config from FLEDGE auction' %}
+```js
+const frameConfig = await navigator.runAdAuction({
+  // ...auction configuration
+  resolveToConfig: true
+});
 ```
+{% endCompare %}
 
-Browsers may generate an opaque URL for the fenced frame `src`, as requested by
-certain use case APIs. For example, if a FLEDGE ad auction is run, the browser
-can generate an `urn:uuid` which maps back to the URL for the winning ad
-creative. That `urn:uuid` could then be used in a fenced frame to display the
-winning ad.
-
-```html
-<fencedframe src="urn:uuid:c36973b5-e5d9-de59-e4c4-364f137b3c7a" mode="opaque-ads" ></fencedframe>
+{% Compare 'better', 'Get fenced frame config from Shared Storage URL Selection' %}
+```js
+const frameConfig = await sharedStorage.selectURL('operation-name', {
+  resolveToConfig: true
+});
 ```
+{% endCompare %}
 
-Remember, a fenced frame can't use `postMessage` to communicate with its parent
-element. However, a fenced frame can use `postMessage` with iframes that are
-children of the fenced frame, because fenced frames behave like top-level
-browsing contexts.
+Once you have obtained the config, you can assign it to a fenced frame's `config` attribute to navigate the frame to the resource represented by the config. Older versions of Chrome don’t support the `resolveToConfig` property, so you must still confirm that the promise resolved to a `FencedFrameConfig` before navigating:
 
-Browsers will set `Sec-Fetch-Dest: fencedframe` for requests made from fenced
-frames and iframes that are embedded within a fenced frame.
+{% Compare 'better', 'Set config to the fenced frame attribute' %}
+```js
+if (window.FencedFrameConfig && frameConfig instanceof FencedFrameConfig) {
+  const frame = document.createElement('fencedframe');
+  frame.config = frameConfig;
+}
+```
+{% endCompare %}
 
-```http
+To learn more, see the [Fenced Frame](https://github.com/WICG/fenced-frame/tree/master/explainer) and [Fenced Frame config](https://github.com/WICG/fenced-frame/blob/master/explainer/fenced_frame_config.md) explainers.
+
+### Headers
+
+Browsers will set `Sec-Fetch-Dest: fencedframe` for requests made from fenced frames and iframes that are embedded within a fenced frame.
+
+```text
 Sec-Fetch-Dest: fencedframe
 ```
 
-#### Server opt-in
+The server must set the `Supports-Loading-Mode: fenced-frame` response header for a document to be loaded in a fenced frame. The header must be present for any iframes inside of a fenced frame, as well.
 
-The server must set the `Supports-Loading-Mode: fenced-frame` response header
-for a document to be loaded in a fenced frame. The header must be present for
-any iframes inside of a fenced frame, as well.
-
-```http
+```text
 Supports-Loading-Mode: fenced-frame
 ```
+
+### Shared Storage context
+
+You may want to use Private Aggregation to report event-level data in fenced frames associated with contextual data from the embedder. By using the `fencedFrameConfig.setSharedStorageContext()` method, you can pass some contextual data, such as an event ID, from the embedder to shared storage worklets initiated by FLEDGE.
+
+In the following example, we store some data available on the embedder page and some data available in the fenced frame in shared storage. From the embedder page, a mock event ID is set as the shared storage context. From the fenced frame, the frame event data is passed in.
+
+From the embedder page, you can set contextual data as the shared storage context:
+
+```js
+const frameConfig = await navigator.runAdAuction({ resolveToConfig: true });
+
+// Data from the embedder that you want to pass to the shared storage worklet
+frameConfig.setSharedStorageContext('some-event-id');
+
+const frame = document.createElement('fencedframe');
+frame.config = frameConfig;
+```
+
+From the fenced frame, you can pass in event-level data from the frame into the shared storage worklet (unrelated to the contextual data from the embedder above):
+
+```js
+const frameData = {
+  // Data available only inside the fenced frame
+}
+
+await window.sharedStorage.worklet.addModule('reporting-worklet.js');
+
+await window.sharedStorage.run('send-report', {
+  data: { 
+    frameData
+  },
+});
+```
+
+You can read the embedder’s contextual information from `sharedStorage.context` and the frame’s event-level data from the `data` object, then report them through Private Aggregation:
+
+```js
+class ReportingOperation {
+  convertEventIdToBucket(eventId) { ... }
+  convertEventPayloadToValue(info) { ... }
+
+  async run(data) {
+    // Data from the embedder
+    const eventId = sharedStorage.context;
+
+    // Data from the fenced frame
+    const eventPayload = data.frameData;
+
+    privateAggregation.sendHistogramReport({
+      bucket: convertEventIdToBucket(eventId),
+      value: convertEventPayloadToValue(eventPayload)
+    });
+  }
+}
+
+register('send-report', ReportingOperation);
+```
+
+To learn more about the embedder’s context in a fenced frame config object, see the [explainer](https://github.com/WICG/fenced-frame/blob/master/explainer/fenced_frame_config_context.md). 
 
 ## Try fenced frames
 
@@ -294,6 +337,13 @@ To determine if fenced frames are defined:
 ```js
 if (window.HTMLFencedFrameElement) {
   // The fenced frame element is defined
+}
+```
+
+To determine if the fenced frame config is available:
+```js
+if (window.FencedFrameConfig && frameConfig instanceof FencedFrameConfig) {
+   // The fenced frame config is available
 }
 ```
 

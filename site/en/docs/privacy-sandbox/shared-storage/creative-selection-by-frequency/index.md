@@ -84,10 +84,12 @@ async function injectAd() {
   });
 
   // Run the URL selection operation to choose an ad based on the frequency count in shared storage.
-  const opaqueURL = await window.sharedStorage.selectURL('creative-selection-by-frequency', CONTENT_URLS);
+  const fencedFrameConfig = await window.sharedStorage.selectURL('creative-selection-by-frequency', CONTENT_URLS, {
+    resolveToConfig: true
+  });
 
   // Render the opaque URL into a fenced frame
-  document.getElementById('content-slot').src = opaqueURL;
+  document.getElementById('content-slot').config = fencedFrameConfig;
 }
 
 injectAd();
