@@ -149,7 +149,7 @@ Update the code to reflect the correct call, click the **Clear all** button in t
 
 #### Check the service worker status {: #sw-status }
 
-Identify when the service worker wakes up to perform tasks
+You can identify when the service worker wakes up to perform tasks by following these steps:
 
 1. Open your manifest file in the browser. For example:
     ```text
@@ -163,24 +163,30 @@ You can start or stop the service worker using the links next to the **Status** 
 your code.
 
 <figure>
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/i1w015KXe7EzN3chRojv.png", alt="ALT_TEXT_HERE", width="800", height="453", class="screenshot" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/i1w015KXe7EzN3chRojv.png", alt="Service worker status in the Application panel", width="800", height="453", class="screenshot" %}
   <figcaption>
     Service worker status in the Application panel
   </figcaption>
 </figure>
 
-Also, if you have made changes to the the service worker code, you can use the **Update** button and **skipWaiting** to apply the changes immediately. Note that this will not refresh the other extension components.
+Also, if you have made changes to the the service worker code, you can use the **Update** button and **skipWaiting** to apply the changes immediately.
 
 <figure>
-  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/mJISZTRN34bmSbENQpVq.png", alt="TBD", width="800", height="523", class="screenshot" %}
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/mJISZTRN34bmSbENQpVq.png", alt="Refreshing the service worker in the Application panel", width="800", height="523", class="screenshot" %}
   <figcaption>
-    TBD
+    Refreshing the service worker in the Application panel
   </figcaption>
 </figure>
 
-### Popup {: #debug_popup }
+{% Aside %}
+Note that this will not reload any other extension components.
+{% endAside %}
+
+### Debug the popup {: #debug_popup }
 
 Now that the extension initializes correctly, other components can be tested. Start by commenting out the highlighted lines below:
+
+{% Label %}popup.js:{% endLabel %}
 
 ```js/5,12
 ...
@@ -220,26 +226,18 @@ This can be corrected by calling the [`tabs.query()`][tabs-query] method, then s
 Update the code, click the **Clear all** button in the upper right-hand corner, and then reload the
 extension.
 
-### Content script {: #debug_cs }
+{% Aside %}
 
-Refresh the page, open the popup and click the green box. And... nope, the background still hasn't
-changed colors! Navigate back to the Extensions Management Page and... there is no **Errors**
-button. The likely culprit is the content script, which runs inside the web page.
+For other extension pages displayed as a tab, such as [override pages][doc-override] and [full-page options][doc-options],
+you can find logs by inspecting the page or on the extensions management page.  
+  
+{% endAside %}
 
-Open the DevTools panel of the web page the extension is trying to alter.
+### Debug content scripts {: #debug_cs }
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/bnigtWyfrWdtIhNnwQ8r.png", alt="Extension error displayed in web page console", width="800", height="207" %}
+Let's break the content script by changing the variable "color" to "colors":
 
-Only runtime errors, `console.warning` and `console.error` will be recorded on the Extensions
-Management Page.
-
-To use DevTools from within the content script, click the dropdown arrow next to **top** and select
-the extension.
-
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/T3fBKwpznjRBEpXOrkzT.png", alt="caught ReferenceError: colors is not defined", width="800", height="362" %}
-
-The error says `color` is not defined. The extension must not be passing the variable correctly.
-Correct the injected script to pass the color variable into the code.
+{% Label %}content.js:{% endLabel %}
 
 ```js/4/5
 ...
@@ -251,10 +249,31 @@ function setColor(color) {
 }  
 ```
 
-### Extension tabs {: #extension_tabs }
+Refresh the page, open the popup and click the green box. Nothing happens... 
 
-Logs for extension pages displayed as a tab, such as [override pages][doc-override] and [full-page options][doc-options],
-can be found in the web page console and on the extensions management page.
+If you go to Extensions Management page the **Errors** button will not appear. This is because only runtime errors, `console.warning` and, 
+`console.error` are recorded on the Extensions Management Page.
+
+Content scripts run inside a website, so to find these logs we must inspect the web page the extension is trying to alter.
+
+<figure>
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/xdbCjXTm5wWv3Yaa2jM9.png", alt="Extension error displayed in web page console", width="600", height="207", class="screenshot" %}
+  <figcaption>
+    Extension error displayed in web page console
+  </figcaption>
+</figure>
+
+To use DevTools from within the content script, click the dropdown arrow next to **top** and select the extension.
+
+<figure>
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/T3fBKwpznjRBEpXOrkzT.png", alt="Uncaught ReferenceError: colors is not defined", width="600", height="362", class="screenshot"%}
+  <figcaption>
+    Uncaught ReferenceError: colors is not defined
+  </figcaption>
+</figure>
+
+The error says `colors` is not defined. The extension must not be passing the variable correctly.
+Correct the injected script to pass the color variable into the code.
 
 ## Monitor network requests {: #network_requests }
 
@@ -267,45 +286,28 @@ reload the popup without closing the DevTools panel.
 
 ## Declare permissions {: #declare_permission }
 
-While extensions have similar capabilities as web pages they often need permission to use certain
-features, such as [cookies][api-cookies], [storage][api-storage] and [Fetch][9]. Refer to the
-[permissions article][doc-perms] and the available [Chrome APIs][doc-chrome-apis] to ensure an extension is requesting
-the correct permissions in its [manifest][doc-manifest].
+What makes extensions more powerful than a web app is their access to Chrome APIs. Some of the APIs
+require permissions. Refer to the [permissions article][doc-perms] and the available [Chrome
+APIs][doc-chrome-apis] to ensure an extension is requesting the correct permissions in its manifest.
 
-```json/4-8
+```json/4-6
   {
     "name": "Broken Background Color",
-    "version": "1.0",
-    "description": "Fix an Extension!",
+    ...
     "permissions": [
       "activeTab",
       "declarativeContent",
       "storage"
     ],
-    "options_page": "options.html",
-    "background": {
-      "service_worker": "background.js"
-    },
-    "action": {
-      "default_popup": "popup.html",
-      "default_icon": {
-        "16": "images/get_started16.png",
-        "32": "images/get_started32.png",
-        "48": "images/get_started48.png",
-        "128": "images/get_started128.png"
-      }
-    },
-    "icons": {
-      "16": "images/get_started16.png",
-      "32": "images/get_started32.png",
-      "48": "images/get_started48.png",
-      "128": "images/get_started128.png"
-    },
-    "manifest_version": 3
+  ...
   }
 ```
 
-## Next steps {: #next }
+{% Aside 'important' %}
+To make fetch calls to an external server, you must declare the URL as a [host permission][doc-match-patt].  
+{% endAside %}
+
+## Further reading {: #next }
 
 Learn more about [Chrome Devtools][chrome-devtools] by reading the documentation.
 
@@ -313,6 +315,7 @@ Learn more about [Chrome Devtools][chrome-devtools] by reading the documentation
 [api-storage]: /docs/extensions/reference/storage
 [api-tabs]: /docs/extensions/reference/tabs
 [chrome-devtools]: https://developers.google.com/web/tools/chrome-devtools/
+[doc-match-patt]: /docs/extensions/mv3/match_patterns
 [doc-arch]: /docs/extensions/mv3/architecture-overview/
 [doc-chrome-apis]: /docs/extensions/reference
 [doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics/
