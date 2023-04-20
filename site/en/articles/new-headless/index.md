@@ -20,6 +20,10 @@ alt: ''
 
 Chrome’s Headless mode just got a whole lot better! This article presents an overview of recent engineering efforts to make Headless more useful for developers by bringing Headless closer to Chrome’s regular “headful” mode.
 
+{% Aside 'caution' %}
+Take care to read the information in this section **very carefully** before you decide to deploy HSTS! Botching an HSTS deployment can result in serious problems for users!
+{% endAside %}
+
 ## Background
 
 [Back in 2017](/blog/headless-chrome/), Chrome 59 introduced the so-called Headless mode, which lets you run the browser in an unattended environment without any visible UI. Essentially, running Chrome without chrome!
@@ -98,7 +102,6 @@ await driver.get('https://developer.chrome.com/');
 
 await driver.quit();
 ```
-
 
 See [the Selenium team’s blog post](https://www.selenium.dev/blog/2023/headless-is-going-away/#what-are-the-two-headless-modes) for more information, including examples using other language bindings.
 
