@@ -6,6 +6,8 @@ description: 'The second of three sections describing changes needed for code th
 date: 2023-03-09
 ---
 
+{% Partial 'extensions/mv3-support.md' %}
+
 Manifest V3 changes how extensions handle modification of network requests. Instead of intercepting network requests and altering them at runtime with `chrome.webRequest`, your extension specifies rules that describe actions to perform when a given set of conditions is met. Do this using the [Declarative Net Request API](/docs/extensions/reference/declarativeNetRequest/).
 
 The Web Request API and the Declarative Net Request APIs are significantly different. Instead of replacing one function call with another, you need to rewrite your code in terms of use cases. This section walks you through that process.
