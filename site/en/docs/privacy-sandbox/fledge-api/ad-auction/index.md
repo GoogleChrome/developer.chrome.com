@@ -188,7 +188,8 @@ desirability score.
       <tr>
         <td style="vertical-align: top;"><code>decisionLogicUrl</code></td>
         <td style="vertical-align: top;">Required</td>
-        <td style="vertical-align: top;"><code>'https://ssp.example/auction-decision-logic.js'</code></td>
+        <td style="vertical-align: top;"><pre>'https://ssp.example/auction-
+        decision-logic.js'</pre></td>
         <td style="vertical-align: top;">URL for auction worklet JavaScript.</td>
       </tr>
       <tr>
