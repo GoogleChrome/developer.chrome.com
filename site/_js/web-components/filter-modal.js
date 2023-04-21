@@ -33,19 +33,18 @@ export class FilterModal extends BaseElement {
   connectedCallback() {
     super.connectedCallback();
     store.subscribe(this.onStoreUpdate.bind(this));
-    this.addEventListener('click', this.openMobileFilters);
-    this.addEventListener('click', this.closeMobileFilters);
-    this.addEventListener('click', this.resetFilters);
+    this.addEventListener('click', this.onClick);
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
-    this.removeEventListener('click', this.openMobileFilters);
-    this.removeEventListener('click', this.closeMobileFilters);
+    this.removeEventListener('click', this.onClick);
   }
 
-  openMobileFilters(event) {
+  onClick(event) {
     const target = event.target;
+
+    // Open menu button
     if (target.classList.contains('mobile-filters-btn')) {
       /** @type {HTMLDialogElement|null} */
       const dialog = document.querySelector('#mobile-filters');
@@ -53,14 +52,25 @@ export class FilterModal extends BaseElement {
         dialog.showModal();
       }
     }
+
+    // Filters reset
+    if (target.id === 'mobile-filters-reset') {
+     this.resetFilters()
+    }
+
+    // Filters
+    if (target.id === 'mobile-filters-done' || target.nodeName === 'DIALOG') {
+      /** @type {HTMLDialogElement|null} */
+      const dialog = document.querySelector('#mobile-filters');
+      if (dialog) {
+        dialog.close();
+      }
+    }
   }
 
-  resetFilters(event) {
-    const target = event.target;
-    if (target.id === 'mobile-filters-reset') {
-      for (const item of this.items) {
-        removeEntry(item.name, item);
-      }
+  resetFilters() {
+    for (const item of this.items) {
+      removeEntry(item.name, item);
     }
   }
 
@@ -78,18 +88,6 @@ export class FilterModal extends BaseElement {
     }
     this.items = items;
   }
-
-  closeMobileFilters(event) {
-    const target = event.target;
-    if (target.id === 'mobile-filters-done' || target.nodeName === 'DIALOG') {
-      /** @type {HTMLDialogElement|null} */
-      const dialog = document.querySelector('#mobile-filters');
-      if (dialog) {
-        dialog.close();
-      }
-    }
-  }
-
 }
 
 customElements.define('filter-modal', FilterModal);
