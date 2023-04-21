@@ -94,6 +94,32 @@ Use the success aside to describe a successful action or an error-free status.
 Use the success aside to describe a successful action or an error-free status.
 {% endAside %}
 
+### Celebration asides
+
+```text
+{% raw %}&#123;% Aside 'celebration' %&#125;
+Use the celebration aside to celebrate events like a cross-browser launch.
+&#123;% endAside %&#125;{% endraw %}
+```
+
+{% Aside 'celebration' %}
+Use the celebration aside to celebrate events like a cross-browser launch.
+{% endAside %}
+
+### Objective asides
+
+```text
+{% raw %}&#123;% Aside 'objective' %&#125;
+Use the objective aside to define the goal of a process described in the body
+copy.
+&#123;% endAside %&#125;{% endraw %}
+```
+
+{% Aside 'objective' %}
+Use the objective aside to define the goal of a process described in the body
+copy.
+{% endAside %}
+
 ### Important asides
 
 ```md
@@ -134,6 +160,20 @@ Use the codelab aside to link to an associated codelab.
 
 {% Aside 'codelab' %}
 Get started: [Measure your page performance with Lighthouse](#).
+{% endAside %}
+
+### Update asides
+
+```text
+{% raw %}&#123;% Aside 'update' %&#125;
+Use the update aside in select cases where updates concerning a developing
+situation around a certain API or metric can be effectively communicated.
+&#123;% endAside %&#125;{% endraw %}
+```
+
+{% Aside 'update' %}
+Use the update aside in select cases where updates concerning a developing
+situation around a certain API or metric can be effectively communicated.
 {% endAside %}
 
 ### Example asides
