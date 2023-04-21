@@ -20,7 +20,7 @@
 import {BaseElement} from './base-element';
 
 import {store} from '../store';
-import {removeEntry} from '../actions/filter';
+import {removeEntry, clearFilters} from '../actions/filter';
 
 export class FilterModal extends BaseElement {
   constructor() {
@@ -67,9 +67,7 @@ export class FilterModal extends BaseElement {
   }
 
   resetFilters() {
-    for (const item of this.items) {
-      removeEntry(item.name, item);
-    }
+    clearFilters();
   }
 
   onStoreUpdate(state) {

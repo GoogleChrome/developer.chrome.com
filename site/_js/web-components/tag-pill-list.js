@@ -24,7 +24,7 @@ import {unsafeSVG} from 'lit-html/directives/unsafe-svg';
 import closeIcon from '../../_includes/icons/close.svg';
 
 import {store} from '../store';
-import {removeEntry} from '../actions/filter';
+import {removeEntry, clearFilters} from '../actions/filter';
 
 export class TagPillList extends BaseElement {
   static get properties() {
@@ -63,9 +63,7 @@ export class TagPillList extends BaseElement {
   }
 
   _onClickClearPills() {
-    for (const item of this.items) {
-      removeEntry(item.name, item);
-    }
+    clearFilters();
   }
 
   render() {
