@@ -2,9 +2,9 @@
 api: offscreen
 ---
 
-## Manifest
+Service workers do not have DOM access, and many websites have content security policies that limit the functionality of content scripts. Requesting this permission in the manifest allows the extension to use DOM APIs via an offscreen document without obtrusively opening new windows or tabs that interrupt the user experience. 
 
-Requesting this permission allows the extension to use DOM APIs without obtrusively opening new windows or tabs that interrupt the user experience. 
+## Manifest
 
 You must declare the `"offscreen"` permission in the [extension manifest][doc-manifest] to use the Offscreen API. For example:
 
