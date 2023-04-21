@@ -8,10 +8,6 @@ date: 2023-04-19
 
 Extension service workers respond to both the [standard service worker events](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope#events) and to events in extension namespaces. They are presented together because often one type follows another during an extension's use.
 
-{% Aside %}
-If you're already familiar with service workers, please read [Extension service worker basics](/docs/extensions/service-workers/basics) before reading further. 
-{% endAside %}
-
 ## Installation
 
 Installation occurs when the user installs or updates a service worker from the Chrome Web Store or when they load or update an unpacked extension using the `chrome://extensions` page. Three events occur in the order below. 
@@ -58,7 +54,7 @@ For all of these reasons, you need to guard against unexpected termination of th
 Persist data rather than using global variables
 Any global variables you set will be lost if the service worker shuts down. Instead of using global variables, save values to storage. Your options are listed below. Note that the Web Storage API is not available for extension service workers.
 
-[`chrome.storage` API](/docs/extensions/reference/storage/)
+[chrome.storage API](/docs/extensions/reference/storage/)
 : An extension API that offers multiple types of storage; local, session, managed (domain), and sync. This API stores JSON objects identified and retrieved with developer-defined keys. This type of storage will not be removed when a user clears the web cache.
 
 [IndexedDB API](https://developer.mozilla.org/docs/Web/API/IndexedDB_API)
@@ -69,6 +65,4 @@ Any global variables you set will be lost if the service worker shuts down. Inst
 
 ## Be careful with timeouts
 
-If an operation takes more than 30 seconds to complete, the service worker can shut down. An example is the `fetch()` call described above. The fetch fails if the service worker shuts down before the [`response`](https://developer.mozilla.org/docs/Web/API/Response) is received. 
-
-Guard against long-running operations failing by implementing a timeout mechanism. You can use either [`setTimeout()`](https://developer.mozilla.org/docs/Web/API/setTimeout) or the [`setInterval()`](https://developer.mozilla.org/docs/Web/API/setInterval) methods for this. Be aware that these methods also have a 30 second time limit. Usually the intent is not to keep something alive indefinitely, but to inform the user that something has gone wrong. Using these methods with an interval less than 30 seconds will allow you to do that. In cases where you need more than thirty seconds, use the [Alarms](/docs/extensions/reference/alarms/) API.
+If an operation takes more than 30 seconds to complete, the service worker can shut down. An example is the `fetch()` call described above. The fetch fails if the service worker shuts down before the [`response`](https://developer.mozilla.org/docs/Web/API/Response) is received.
