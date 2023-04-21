@@ -169,17 +169,17 @@ The only required properties for interest groups are `owner` and `name`:
 The remaining properties are optional:
 
 <dl>
-    <dt><code>biddingLogicUrl</code><sup>1, 2</sup></dt>
+    <dt><code>biddingLogicUrl</code><sup><a href="#first-ref">1</a>, <a href="#second-ref">2</a></sup></dt>
         <dd>Example: <code>https://dsp.example/bid/custom-bikes/bid.js</code></dd>
         <dd>Role: URL for bidding JavaScript run in worklet.</dd>
-    <dt><code>biddingWasmHelperUrl</code><sup>1, 2</sup></dt>
+    <dt><code>biddingWasmHelperUrl</code><sup><a href="#first-ref">1</a>, <a href="#second-ref">2</a></sup></dt>
         <dd>Example: <code>https://dsp.example/bid/custom-bikes/bid.wasm</code></dd>
         <dd>Role: URL for WebAssembly code driven from <code>biddingLogicUrl</code>.</dd>
-    <dt><code>dailyUpdateUrl</code><sup>2</sup></dt>
+    <dt><code>dailyUpdateUrl</code><sup><a href="#second-ref">2</a></sup></dt>
         <dd>Example: <code>https://dsp.example/bid/custom-bikes/update</code></dd>
         <dd>Role: URL that returns JSON to update interest group attributes.
         (See <a href="#update-interest-group">Update the interest group</a>.)</dd>
-    <dt><code>trustedBiddingSignalsUrl</code><sup>2</sup></dt>
+    <dt><code>trustedBiddingSignalsUrl</code><sup><a href="#second-ref">2</a></sup></dt>
         <dd>Example: <code>https://dsp.example/trusted/bidding-signals</code></dd>
         <dd>Role: Base URL for key-value requests to bidder's trusted server.</dd>
     <dt><code>trustedBiddingSignalsKeys</code></dt>
@@ -188,7 +188,7 @@ The remaining properties are optional:
     <dt><code>userBiddingSignals</code></dt>
         <dd>Example: <code>{...}</code></dd>
         <dd>Role: Additional metadata the owner can use during bidding.</dd>
-    <dt><code>ads</code><sup>1</sup></dt>
+    <dt><code>ads</code><sup><a href="#first-ref">1</a></sup></dt>
         <dd>Example: <code>[bikeAd1, bikeAd2, bikeAd3]</code></dd>
         <dd>Role: Ads that might be rendered for this interest group.</dd>
     <dt><code>adComponents</code></dt>
@@ -198,10 +198,10 @@ The remaining properties are optional:
 
    
     <caption style="text-align:left">
-    <p><sup>1</sup> The `biddingLogicUrl` and `ads` properties are optional, but
+    <p id="first-ref"><sup>1</sup> The `biddingLogicUrl` and `ads` properties are optional, but
     required to participate in an auction. There may be use cases for creating an interest group without these properties: for example, an interest group owner might want to add a browser to an interest group for a campaign that isn't running yet, or for some other future use, or they may temporarily have run out of advertising budget.</p>
 
-    <p><sup>2</sup> In the current implementation of FLEDGE, `biddingLogicUrl`,
+    <p id="second-ref"><sup>2</sup> In the current implementation of FLEDGE, `biddingLogicUrl`,
     `biddingWasmHelperUrl`, `dailyUpdateUrl` and `trustedBiddingSignalsUrl` must
     have the same origin as owner. That may not be a long-term constraint, and
     the `ads` and `adComponents` URLs have no such constraint.</p>

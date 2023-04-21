@@ -188,7 +188,7 @@ desirability score.
         <dd>Optional</dd>
         <dd>Example: <code>'https://ssp.example/scoring-signals'</code></dd>
         <dd>Role: URL of seller's trusted server.</dd>
-    <dt><code>interestGroupBuyers*</code></dt>
+    <dt><code>interestGroupBuyers</code></dt>
         <dd>Required</dd>
         <dd>Example: <code>['https://dsp.example', 'https://buyer2.example', ...]</code></dd>
         <dd>Role: Origins of all interest group owners asked to bid in the auction.</dd>
@@ -291,6 +291,15 @@ beat the contextual winner.
     </tbody>
   </table>
 </div>
+
+## Frequently asked questions
+
+{% Details %}
+{% DetailsSummary %}
+### How is the auction winner decided and who picks them?
+{% endDetailsSummary %}
+The seller provides the scoring logic to determine the desirability score of each ad, and the browser selects the highest score as the winning ad. The seller provides the scoring logic in the scoreAd() function, and the browser executes it in a worklet that is limited in its communication with code outside of it. The browser does not score the ads, and is only involved in executing the scoring logic, then selecting the highest score.
+{% endDetails %}
 
 ## All FLEDGE API references
 
