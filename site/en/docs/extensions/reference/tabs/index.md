@@ -247,11 +247,10 @@ populates chrome.runtime.lastError is not unchecked.
 This example demonstrates how an extension's service worker can communicate with content scripts in specific browser tabs using `tabs.sendMessage`.
 
 ```js
-function messagePasser(messageInfo) {
+function sendMessageToActiveTab(messageInfo) {
 const [tab] = await chrome.tabs.query({active: true, lastFocusedWindow: true});
   const response = await chrome.tabs.sendMessage(tab.id, messageInfo);
   // TODO: Do something with the response.
-  console.log(response);
 }
 ```
 
