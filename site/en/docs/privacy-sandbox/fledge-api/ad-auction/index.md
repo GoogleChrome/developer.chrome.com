@@ -168,96 +168,63 @@ desirability score.
 
 #### `auctionConfig` properties
 
-<div class="w-table-wrapper">
-  <table class="w-table--top-align">
-    <thead>
-      <tr>
-        <th style="font-weight: bold; text-align: left;">Property</th>
-        <th style="font-weight: bold; text-align: left;">Required</th>
-        <th style="font-weight: bold; text-align: left;">Example</th>
-        <th style="font-weight: bold; text-align: left;">Role</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="vertical-align: top;"><code>seller</code></td>
-        <td style="vertical-align: top;">Required</td>
-        <td style="vertical-align: top;"><code>'https://ssp.example'</code></td>
-        <td style="vertical-align: top;">Origin of the seller.</td>
-      </tr>
-      <tr>
-        <td style="vertical-align: top;"><code>decisionLogicUrl</code></td>
-        <td style="vertical-align: top;">Required</td>
-        <td style="vertical-align: top;"><pre>'https://ssp.example/auction-
-        decision-logic.js'</pre></td>
-        <td style="vertical-align: top;">URL for auction worklet JavaScript.</td>
-      </tr>
-      <tr>
-        <td style="vertical-align: top;"><code>trustedScoringSignalsUrl</code></td>
-        <td style="vertical-align: top;">Optional</td>
-        <td style="vertical-align: top;"><code>'https://ssp.example/scoring-signals'</code></td>
-        <td style="vertical-align: top;">URL of seller's trusted server.</td>
-      </tr>
-      <tr>
-        <td style="vertical-align: top;"><code>interestGroupBuyers*</code></td>
-        <td style="vertical-align: top;">Required</td>
-        <td style="vertical-align: top;"><code>['https://dsp.example', 'https://buyer2.example', ...]</code></td>
-        <td style="vertical-align: top;">Origins of all interest group owners asked to bid in the auction.</td>
-      </tr>
-      <tr>
-        <td style="vertical-align: top;"><code>auctionSignals</code></td>
-        <td style="vertical-align: top;">Optional</td>
-        <td style="vertical-align: top;"><code>{...}</code></td>
-        <td style="vertical-align: top;">Seller information about page context, type of auction, etc.</td>
-      </tr>
-      <tr>
-        <td style="vertical-align: top;"><code>sellerSignals</code></td>
-        <td style="vertical-align: top;">Optional</td>
-        <td style="vertical-align: top;"><code>{...}</code></td>
-        <td style="vertical-align: top;">Information based on publisher settings, making a contextual ad request, etc.</td>
-      </tr>
-      <tr>
-        <td style="vertical-align: top;"><code>sellerTimeout</code></td>
-        <td style="vertical-align: top;">Optional</td>
-        <td style="vertical-align: top;"><code>100</code></td>
-        <td style="vertical-align: top;">Maximum runtime (ms) of seller's <code>scoreAd()</code> script.</td>
-      </tr>
-      <tr>
-        <td style="vertical-align: top;"><code>perBuyerSignals</code></td>
-        <td style="vertical-align: top;">Optional</td>
-        <td style="vertical-align: top;"><code>{'https://dsp.example': {...},<br>
-          &nbsp;&nbsp;'https://another-buyer.example': {...},<br>
-          ...}</code></td>
-        <td style="vertical-align: top;">Contextual signals about the page for each specific buyer, from their server.</td>
-      </tr>
-      <tr>
-        <td style="vertical-align: top;"><code>perBuyerTimeouts</code></td>
-        <td style="vertical-align: top;">Optional</td>
-        <td style="vertical-align: top;"><code>50</code></td>
-        <td style="vertical-align: top;">Maximum runtime (ms) of particular buyer's <code>generateBid()</code> scripts.</td>
-      </tr>
-      <tr>
-        <td style="vertical-align: top;"><code>componentAuctions</code></td>
-        <td style="vertical-align: top;">Optional</td>
-        <td style="vertical-align: top;"><code>[{'seller': 'https://www.some-other-ssp.com',<br>
-          &nbsp;&nbsp;'decisionLogicUrl': ..., ...},<br>
-          &nbsp;&nbsp;...]</code></td>
-        <td style="vertical-align: top;">Additional configurations for <a href="/blog/fledge-api/#:~:text=componentauctions">component auctions</a>.</td>
-      </tr>
-    </tbody>
-    <caption style="text-align:left">
-      \* The seller may specify `interestGroupBuyers: '*'` to permit all interest groups to bid.
-      Ads are then accepted or rejected based on criteria other than inclusion of the interest group owner.
-      For example, the seller may review ad creatives to confirm compliance with their policies.
-
-      \*\* `additionalBids` is not supported in the current implementation of FLEDGE. Read the [Auction
+{% Aside %}
+`additionalBids` is not supported in the current implementation of FLEDGE. Read the [Auction
       Participants](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#22-auction-participants) section in the
       FLEDGE explainer for more information.
-    </caption>
-  </table>
-</div>
+{% endAside %}
+
+
+<dl>
+    <dt><code>seller</code></dt>
+        <dd>Required</dd>
+        <dd>Example: <code>'https://ssp.example'</code></dd>
+        <dd>Role: Origin of the seller.</dd>
+    <dt><code>decisionLogicUrl</code></dt>
+        <dd>Required</dd>
+        <dd>Example: <code>'https://ssp.example/auction-decision-logic.js'</code></dd>
+        <dd>Role: URL for auction worklet JavaScript.</dd>
+    <dt><code>trustedScoringSignalsUrl</code></dt>
+        <dd>Optional</dd>
+        <dd>Example: <code>'https://ssp.example/scoring-signals'</code></dd>
+        <dd>Role: URL of seller's trusted server.</dd>
+    <dt><code>interestGroupBuyers*</code></dt>
+        <dd>Required</dd>
+        <dd>Example: <code>['https://dsp.example', 'https://buyer2.example', ...]</code></dd>
+        <dd>Role: Origins of all interest group owners asked to bid in the auction.</dd>
+        <dd>Notes: The seller may specify <code>interestGroupBuyers:</code> to permit all interest groups to bid. Ads are then accepted or rejected based on criteria other than inclusion of the interest group owner. For example, the seller may review ad creatives to confirm compliance with their policies.</dd>
+    <dt><code>auctionSignals</code></dt>
+        <dd>Optional</dd>
+        <dd>Example: <code>{...}</code></dd>
+        <dd>Role: Seller information about page context, type of auction, etc.</dd>
+    <dt><code>sellerSignals</code></dt>
+        <dd>Optional</dd>
+        <dd>Example: <code>{...}</code></dd>
+        <dd>Role: Information based on publisher settings, making a contextual ad request, etc.</dd>
+     <dt><code>sellerTimeout</code></dt>
+        <dd>Optional</dd>
+        <dd>Example: <code>100</code></dd>
+        <dd>Role: Maximum runtime (ms) of seller's <code>scoreAd()</code> script.</dd>
+    <dt><code>perBuyerSignals</code></dt>
+        <dd>Optional</dd>
+        <dd>Example: 
+        <pre>{'https://dsp.example': {...}, 'https://another-buyer.example': {...}, ... }</pre></dd>
+        <dd>Role: Contextual signals about the page for each specific buyer, from their server.</dd>
+    <dt><code>perBuyerTimeouts</code></dt>
+        <dd>Optional</dd>
+        <dd>Example: <code>50</code></dd>
+        <dd>Role: Maximum runtime (ms) of particular buyer's <code>generateBid()</code> scripts.</dd>
+    <dt><code>componentAuctions</code></dt>
+        <dd>Optional</dd>
+        <dd>Example:
+        <pre>[{'seller': 'https://www.some-other-ssp.com', 'decisionLogicUrl': ..., ...}, ...]</pre></dd>
+        <dd>Role: Additional configurations for <a href="/blog/fledge-api/#:~:text=componentauctions">component auctions</a>.</dd>
+    </dl><br>
+<p>
+
 
 ### `decisionLogicUrl`
+
 
 The `decisionLogicUrl` is a property of the auction configuration object,
 passed to `runAdAuction()`. This URL must include a script for the
@@ -328,3 +295,4 @@ beat the contextual winner.
 ## All FLEDGE API references
 
 {% Partial 'privacy-sandbox/fledge-api-reference.njk' %}
+
