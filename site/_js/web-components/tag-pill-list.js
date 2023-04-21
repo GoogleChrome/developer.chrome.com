@@ -69,31 +69,30 @@ export class TagPillList extends BaseElement {
   }
 
   render() {
-    let clearPill = html``;
-    if (this.items.length > 0) {
-      clearPill = html`
-        <span
-          class="clear-filters tag-pill surface color-blue-medium hairline type--label display-inline-flex align-center"
-          @click="${() => this._onClickClearPills()}"
-        >
-          Clear filters
-        </span>
-      `;
-    }
-    const items = this.items.map(
-      item => html`
-        <span
-          class="surface color-blue-medium hairline rounded-lg tag-pill type--label display-inline-flex align-center "
-          data-name="${item.name}"
-          data-value="${item.value}"
-          @click="${() => this._onClickPill(item)}"
-        >
-          ${item.label} ${unsafeSVG(closeIcon)}
-        </span>
-      `
-    );
-
-    return html`${clearPill}${items}`;
+    return [
+      this.items.length > 0
+        ? html`
+            <span
+              class="clear-filters tag-pill surface color-blue-medium hairline type--label display-inline-flex align-center"
+              @click="${() => this._onClickClearPills()}"
+            >
+              Clear filters
+            </span>
+          `
+        : '',
+      this.items.map(
+        item => html`
+          <span
+            class="surface color-blue-medium hairline rounded-lg tag-pill type--label display-inline-flex align-center "
+            data-name="${item.name}"
+            data-value="${item.value}"
+            @click="${() => this._onClickPill(item)}"
+          >
+            ${item.label} ${unsafeSVG(closeIcon)}
+          </span>
+        `
+      ),
+    ];
   }
 }
 
