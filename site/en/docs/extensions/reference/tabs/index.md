@@ -250,7 +250,7 @@ This example demonstrates how an extension's service worker can communicate with
 function messagePasser(messageInfo) {
 const [tab] = await chrome.tabs.query({active: true, lastFocusedWindow: true});
   const response = await chrome.tabs.sendMessage(tab.id, messageInfo);
-  // do something with response here, not outside the function
+  // TODO: Do something with the response.
   console.log(response);
 }
 ```
