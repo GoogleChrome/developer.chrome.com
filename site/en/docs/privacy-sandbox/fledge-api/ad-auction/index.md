@@ -298,7 +298,9 @@ beat the contextual winner.
 {% DetailsSummary %}
 ### How is the auction winner decided and who picks them?
 {% endDetailsSummary %}
-The seller provides the scoring logic to determine the desirability score of each ad, and the browser selects the highest score as the winning ad. The seller provides the scoring logic in the scoreAd() function, and the browser executes it in a worklet that is limited in its communication with code outside of it. The browser does not score the ads, and is only involved in executing the scoring logic, then selecting the highest score.
+The seller provides the scoring logic to determine the desirability score of each ad, and the browser selects the highest score as the winning ad. 
+
+The seller includes logic in the `scoreAd()` function, and the browser executes the function in a worklet that has limited communication with code outside of it. The browser itself does not score the ads. The browser is exclusively responsible to execute the scoring logic and select the bid with the highest score.
 {% endDetails %}
 
 ## All FLEDGE API references
