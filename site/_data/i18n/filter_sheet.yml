@@ -12,3 +12,9 @@ clear_filters:
 
 done:
   en: 'Done'
+
+select_all:
+  en: 'Select all'
+
+reset:
+  en: 'reset'

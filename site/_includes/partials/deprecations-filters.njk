@@ -31,7 +31,7 @@
         <div class="filter-sheet__filters">
           <section class="gap-bottom-500">
             <p class="type--h5 weight-medium gap-bottom-200">{{ 'i18n.deprecations_calendar.removal_date' | i18n(locale) }}</p>
-            <checkbox-group show="5" i18n='{"select_all":"Select all","reset":"Reset"}'>
+            <checkbox-group show="5" i18n='{"select_all":"{{ "i18n.filter_sheet.select_all" | i18n(locale) }}", "reset":"{{ "i18n.filter_sheet.reset" | i18n(locale) }}"}'>
               <label>
                 <input type="checkbox" name="removal-date" value="7"/>
                 {{ 'i18n.deprecations_calendar.next_7_days' | i18n(locale) }}
@@ -56,7 +56,7 @@
           </section>
           <section class="gap-bottom-500">
             <p class="type--h5 weight-medium gap-bottom-200">{{ 'i18n.deprecations_calendar.chrome_version' | i18n(locale) }}</p>
-            <checkbox-group show="7" i18n='{"select_all":"Select all","reset":"Reset"}'>
+           <checkbox-group show="7" i18n='{"select_all":"{{ "i18n.filter_sheet.select_all" | i18n(locale) }}", "reset":"{{ "i18n.filter_sheet.reset" | i18n(locale) }}"}'>
               {% for i in range(110, 130) -%}
                 <label>
                   <input type="checkbox" name="chrome-version" value="chrome-{{ i }}"/> Chrome {{ i }}
