@@ -7,6 +7,8 @@ date: 2023-03-09
 updated: 2023-04-17
 ---
 
+{% Partial 'extensions/mv3-support.md' %}
+
 This is the first of three sections describing changes needed for code that is not part of the extension service worker. This section is for required code changes that are unrelated to other issues. The next two sections cover [replacing blocking web requests](/docs/extensions/migrating/blocking-web-requests) and [improving security](/docs/extensions/migrating/improve-security).
 
 ## Replace tabs.executeScript() with scripting.executeScript() {: #replace-executescript }

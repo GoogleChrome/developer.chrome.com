@@ -7,6 +7,8 @@ date: 2023-03-09
 updated: 2023-04-14
 ---
 
+{% Partial 'extensions/mv3-support.md' %}
+
 This section helps you upgrade an extension from Manifest V2 to Manifest V3, the newest version of the Chrome Extensions platform. Migration work is broadly divided into the categories below. To help you track your work, we've provided a [checklist](/docs/extensions/migrating/checklist/) summarizing the contents of these documents. You can access the content via the checklist, or dive into the content. Both paths end with an upgraded extension. 
 
 * [Update the manifest](/docs/extensions/migrating/manifest/)&mdash;The `manifest.json` must be specific to V3. Changes that can be made on their own are described in this section. Manifest changes related to code are described with the code changes they support.

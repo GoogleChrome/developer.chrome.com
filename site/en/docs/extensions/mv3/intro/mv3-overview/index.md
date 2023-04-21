@@ -8,6 +8,8 @@ date: 2020-11-09
 updated: 2023-02-22
 ---
 
+{% Partial 'extensions/mv3-support.md' %}
+
 Manifest V3 is a major step towards our
 [vision for the extensions platform](/docs/extensions/mv3/intro/platform-vision/).
 Manifest V3 focuses on the three pillars of that vision: privacy, security, and

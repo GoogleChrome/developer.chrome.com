@@ -6,6 +6,8 @@ description: 'The last of three sections describing changes needed for code that
 date: 2023-03-08
 ---
 
+{% Partial 'extensions/mv3-support.md' %}
+
 This is the last of three sections describing changes needed for code that is not part of the extension service worker. It describes changes required to improve the security of extensions. The other two sections cover [updating your code](/docs/extensions/migrating/api-calls) needed for upgrading to Manifest V3 and [replacing blocking web requests](/docs/extensions/migrating/blocking-web-requests).
 
 ## Remove execution of arbitrary strings {: #remove-execution-of-strings }
