@@ -48,7 +48,7 @@
   sections:
     - url: /docs/extensions/mv3/service-workers
     - url: /docs/extensions/mv3/service-workers/basics
-    - url: /docs/extensions/mv3/service-workers/extension-starup
+    - url: /docs/extensions/mv3/service-workers/service-worker-lifecycle
     - url: /docs/extensions/mv3/service-workers/events
 - title: i18n.docs.extensions.indepth-core
   sections:

@@ -44,7 +44,7 @@ When a user or incognito profile starts, the [`chrome.runtime.onStartup`](/docs/
 
 ## Idle and shutdown
 
-Extension service workers are dormant unless an event fires. If the service worker has a handler for the fired event, it wakes up, executes it, then goes back to being idle. If the service worker is idle for at least 30 seconds it shuts down. Note that this can interrupt a service worker `fetch()` call if the response takes more than 30 seconds to arrive.
+Extension service workers are dormant unless an event fires. If the service worker has a handler for the fired event, it wakes up, executes it, then goes back to being idle. If the service worker is idle for at least 30 seconds it shuts down. You should design your service worker to be resilient against unexpected termination, since not all activity keeps the service worker alive. For example, this can interrupt a service worker `fetch()` call if the response takes more than 30 seconds to arrive.
 
 Any new events and calls to extension APIs reset the idle timer the moment they're fired. For example, when a service worker receives a `chrome.bookmarks.onCreated` event, the 30 second timeout is reset. The same is true when calling an extension API such as `chrome.storage.local.get()` which also resets the 30 second timeout. As with web service workers, extension service workers have no shutdown or deactivation events.
 
