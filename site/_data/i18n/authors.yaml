@@ -157,7 +157,7 @@ kenchris:
   title:
     en: 'Kenneth Christiansen'
   description:
-    en: 'Kenneth is an Engineer at Intel'
+    en: 'Kenneth a Principal Engineer at Intel'
 emilystark:
   title:
     en: 'Emily Stark'
@@ -571,11 +571,21 @@ reillyg:
     pt: Engenheiro de software no Google Chrome com foco em APIs de hardware
     ru: Инженер-программист в команде Google Chrome, специализирующийся на API для работы с устройствами
     zh: 专注于硬件 API 的 Google Chrome 软件工程师
+nattestad:
+  title:
+    en: Thomas Nattestad
+  description:
+    en: Product Manager at Google
 cwallez:
   title:
     en: Corentin Wallez
   description:
     en: Graphics plumber at Google
+toji:
+  title:
+    en: Brandon Jones
+  description:
+    en: WebGPU/WebXR/WebGL Dev at Google
 eladalon:
   title:
     en: 'Elad Alon'
@@ -1348,4 +1358,14 @@ georgiafranklin:
   title:
     en: Georgia Franklin
   description:
-    en: Product Manager, Privacy Sandbox	
+    en: Product Manager, Privacy Sandbox
+arskama:
+  title:
+    en: Arnaud (Arno) Mandy
+  description:
+    en: Arno is an Engineer at Intel
+vaatika:
+  title:
+    en: Vaatika Dabra Groth
+  description:
+    en: UX Designer at Google

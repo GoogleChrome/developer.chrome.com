@@ -46,6 +46,7 @@ The classifier model for mapping hostnames to topics is publicly available, and 
 
 Only sites that include code that calls the Topics API are included in the browsing history eligible for topic frequency calculations, and API callers only receive topics they've observed. In other words, sites are not eligible for topic frequency calculations without the site or an embedded service callingß the API.
 
+{: #caller}
 {% Aside 'key-term' %}
 
 A Topics API _caller_ is the entity that observes and requests topics with
@@ -220,29 +221,22 @@ The list of topics returned will be empty if:
 
 The explainer [provides more detail about privacy goals](https://github.com/jkarlin/topics#meeting-the-privacy-goals) and how the API seeks to address them.
 
-You can opt out of topic calculation for specific pages on your site by including the `Permissions-Policy: browsing-topics=()` [Permissions-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy) header on a page to prevent topics calculation for all users on that page only. Subsequent visits to other pages on your site will not be affected. If you set a policy to block the Topics API on one page, this won't affect other pages.
+{: #opt-out }
 
-You can also control which third parties have access to topics on your page by using the Permission Policy header to control third-party access to the Topics API.
+### Site opt out
 
-Use `self` and any domains you would like to allow access to the API as parameters.
-
-For example, to completely disable use of the Topics API within all browsing contexts except for your own origin and those whose origin is `https://example.com`, set the following HTTP response header: 
-
-```text
-Permissions-Policy: geolocation=(self "https://example.com")
-```
+In addition to the user's ability to opt out, you can opt out of Topics for your site or pages on it. The [Developer guide](/docs/privacy-sandbox/topics/#site-opt-out) explains how.
 
 ## Using the Topics API on websites with `prebid.js`
 
 As noted in the release of [Prebid 7](https://prebid.org/blog/the-release-of-prebid-7-0/), 
-the community is actively developing an integration with the Topics API via a new module. 
-However, as of November 2022, the Topics Module has not yet been completed. To stay abreast with the 
-development, we recommend the following:
+the community actively developed an integration with the Topics API via a new module. 
+This module was merged in December 2022.
 
-- Follow [Prebid PR #8947: Topics module: Initial Topics iframe implementation](https://github.com/prebid/Prebid.js/pull/8947), which is the PR to create the Prebid Topics Module.
-- Follow [Prebid Issue #8741: Enhancements to Topics module](https://github.com/prebid/Prebid.js/pull/8741), which has an active discussion on the Prebid Topics module's intended workflow.
-- If this is a high dependency, reach out to Prebid.js to check in on status updates and timelines, 
-through whatever standard channel they offer.
+Learn more here:
+
+- Read Prebid's [Topics API module documentation](https://docs.prebid.org/dev-docs/modules/topicsFpdModule.html).
+- For more information, reach out to Prebid.js through whatever standard channel they offer.
 
 
 ## Next steps

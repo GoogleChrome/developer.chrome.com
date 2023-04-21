@@ -59,6 +59,9 @@ module.exports = collection => {
   /** @type FeedsCollection */
   const tagsFeeds = {};
 
+  /** @type FeedsCollection */
+  const authorsFeeds = {};
+
   /** @type {EleventyCollectionItem[]} */
   const all = [];
 
@@ -106,6 +109,21 @@ module.exports = collection => {
         tagsFeeds[tag].items.push(post);
       }
     }
+
+    const authors = post.data.authors ?? [];
+    for (const author of authors) {
+      // If author feed does not exist in feeds yet, create FeedsCollectionItem
+      if (!authorsFeeds[author]) {
+        authorsFeeds[author] = {
+          items: [],
+          permalink: `/authors/${author}/feed.xml`,
+          title: i18n(`i18n.authors.${author}.title`),
+          url: `/authors/${author}`,
+        };
+      }
+
+      authorsFeeds[author].items.push(post);
+    }
   }
 
   // We write these feeds out in their own object so it's obvious that they will "win" over any
@@ -130,5 +148,5 @@ module.exports = collection => {
     },
   };
 
-  return {...tagsFeeds, ...specialFeeds};
+  return {...tagsFeeds, ...authorsFeeds, ...specialFeeds};
 };

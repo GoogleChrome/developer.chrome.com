@@ -13,6 +13,8 @@ authors:
   - alexandrawhite
 ---
 
+{% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
+
 In this article, you'll find a technical reference for interest groups, as used
 in the current iteration of the experimental FLEDGE API.
 
@@ -490,6 +492,16 @@ You can also use a first-party cookie to store click information. When the ad is
 A user's browsing history for the site that called `joinAdInterestGroup()` can be updated in `userBiddingSignals`, which can be used during on-device bidding. See the [product-level TURTLEDOVE](https://github.com/WICG/turtledove/blob/main/PRODUCT_LEVEL.md) original proposal which includes some analysis by RTB House on the impact of core metrics for recommendation use case adoption.
 
 `dailyUpdateUrl` provides a mechanism to periodically update the attributes of the interest group, but this update is not based on the user's browsing history. 
+{% endDetails %}
+
+{% Details %}
+{% DetailsSummary %}
+### What's the maximum number of interest groups per group owner for a single user?
+{% endDetailsSummary %}
+
+Chrome allows up to 1000 interest groups per owner, and up to 1000 interest group
+owners. These limits are meant as guard rails, not to be hit in regular operation.
+
 {% endDetails %}
 
 ## All FLEDGE API references

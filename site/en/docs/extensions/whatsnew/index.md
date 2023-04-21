@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-03-14
+updated: 2023-04-14
 tags:
   - extensions-news
 
@@ -15,6 +15,37 @@ tags:
 
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about many of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).)
+
+### New instructions for the Extension Manifest Converter
+
+<p class="color-secondary-text type--caption">Posted on <time>April 14, 2023</time></p>
+
+We've rewritten the README for the [Extension Manifest Converter](https://github.com/GoogleChromeLabs/extension-manifest-converter) to make it easier to see what you need to do after running the tool. The converter helps helps migrate extensions built on Manifest V2 to Manifest V3. The new README describes what the tool does using words that closely match those in the [migration guide's checklist](/docs/extensions/migrating/checklist/). The converter doesn't do everything, but it does eliminate many tasks that don't require a human judgement call. 
+
+### Chrome 113: New reasons for offscreen documents
+
+<p class="color-secondary-text type--caption">Posted on <time>April 7, 2023</time></p>
+
+We have added two new [reason types](/docs/extensions/reference/offscreen/#type-Reason) to the Offscreen Documents API. Use `LOCAL_STORAGE` to access the web platform's [localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) API. Use `WORKER` when creating web workers. 
+
+### Google Analytics 4 now in the Developer Dashboard
+
+<p class="color-secondary-text type--caption">Posted on <time>March 30, 2023</time></p>
+
+The Chrome Web Store Developer Dashboard now supports Google Analytics 4 (GA4). We've simplified setting up Google Analytics and made access management for group publishers more straightforward. If you previously used Google Universal Analytics to track your store listing activity, you will need to take action by July 1, 2023 to ensure that you continue receiving data about your store listing. For more information, see the [post on the Chromium Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/JpzTRHBXDok/m/0F93f7FyBQAJ).
+
+### The File Handling API comes to ChromeOS
+
+<p class="color-secondary-text type--caption">Posted on <time>March 24, 2023</time></p>
+
+The File Handler API is available for experimentation on ChromeOS in Canary for versions 112 and 113. It lets extensions on ChromeOS open files with specified MIME types and file extensions. To implement file handling add a set of rules to the `manifest.json`. This feature works the same as for Progressive web apps. For more information, see [the article](/articles/file-handling/) elsewhere on this site.
+
+To enable file handling:
+
+* Starting in 112, launch Chrome using the `--enable-features=ExtensionWebFileHandlers` flag, starting in 112 
+* Starting in 113, paste `os://flags/#extension-web-file-handlers` into the Chrome omnibox and select 'Enabled' from the dropdown menu. 
+
+We hope to launch this feature in Chrome 115, in late June. Watch this space for updates.
 
 ### New Samples: dynamic declarations and programmatic injection {: #dynamic-dec-prog-inject }
 

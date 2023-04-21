@@ -377,7 +377,7 @@ View user interactions on the **Interactions** track to track down potential res
 
 To view interactions:
 
-1. [Open DevTools](/docs/devtools/open/), for example, on this [demo page](https://coffee-cart.netlify.app/?ad=1).
+1. [Open DevTools](/docs/devtools/open/), for example, on this [demo page](https://coffee-cart.app/?ad=1).
 1. Open the **Performance** panel and [start a recording](/docs/devtools/evaluate-performance/#record).
 1. Click an element (coffee) and stop the recording.
 1. Find the **Interactions** track in the timeline.
