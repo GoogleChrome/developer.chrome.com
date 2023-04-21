@@ -7,6 +7,8 @@ date: 2023-03-09
 updated: 2023-04-14
 ---
 
+{% Partial 'extensions/mv3-support.md' %}
+
 A service worker replaces the extension's background or event page to ensure that background code stays off the main thread. This enables extensions to run only when needed, saving resources. 
 
 Background pages have been a fundamental component of extensions since their introduction. To put it simply, background pages provide an environment that lives independent of any other window or tab. This allows extensions to observe and act in response to events.
