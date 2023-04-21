@@ -188,7 +188,7 @@ desirability score.
         <dd>Optional</dd>
         <dd>Example: <code>'https://ssp.example/scoring-signals'</code></dd>
         <dd>Role: URL of seller's trusted server.</dd>
-    <dt><code>interestGroupBuyers*</code></dt>
+    <dt><code>interestGroupBuyers</code></dt>
         <dd>Required</dd>
         <dd>Example: <code>['https://dsp.example', 'https://buyer2.example', ...]</code></dd>
         <dd>Role: Origins of all interest group owners asked to bid in the auction.</dd>
