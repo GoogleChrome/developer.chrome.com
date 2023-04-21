@@ -18,8 +18,6 @@
  * @fileoverview handles the events for a modal containing filters
  */
 import {BaseElement} from './base-element';
-import {html} from 'lit-element';
-import {unsafeHTML} from 'lit-html/directives/unsafe-html';
 
 import {store} from '../store';
 import {removeEntry} from '../actions/filter';
@@ -45,23 +43,23 @@ export class FilterModal extends BaseElement {
     const target = event.target;
 
     // Open menu button
-    if (target.classList.contains('mobile-filters-btn')) {
+    if (target.classList.contains('filter-modal__opener')) {
       /** @type {HTMLDialogElement|null} */
-      const dialog = document.querySelector('#mobile-filters');
+      const dialog = document.querySelector('#filter-modal');
       if (dialog) {
         dialog.showModal();
       }
     }
 
     // Filters reset
-    if (target.id === 'mobile-filters-reset') {
-     this.resetFilters()
+    if (target.id === 'filter-modal__reset') {
+      this.resetFilters();
     }
 
     // Filters
-    if (target.id === 'mobile-filters-done' || target.nodeName === 'DIALOG') {
+    if (target.id === 'filter-modal__done' || target.nodeName === 'DIALOG') {
       /** @type {HTMLDialogElement|null} */
-      const dialog = document.querySelector('#mobile-filters');
+      const dialog = document.querySelector('#filter-modal');
       if (dialog) {
         dialog.close();
       }
