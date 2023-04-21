@@ -152,6 +152,18 @@ might impact advertising performance. It's helpful to examine these
 concepts since they underlie several of the Privacy Sandbox APIs.
 {% endAside %}
 
+### Tip asides
+
+```md
+{% raw %}{% Aside 'tip' %}
+Use the tip aside to give a tip to users
+{% endAside %}{% endraw %}
+```
+
+{% Aside 'tip' %}
+Optimize images and other media: Use compressed images and videos to reduce the file size and decrease the loading time of the website.
+{% endAside %}
+
 ## Blockquotes
 Use blockquotes to emphasize a quotation that's important to
 the main idea of a post. (For example, in a case study you might include
