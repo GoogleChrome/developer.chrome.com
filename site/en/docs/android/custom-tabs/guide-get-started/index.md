@@ -1,0 +1,53 @@
+---
+layout: "layouts/doc-post.njk"
+title: Getting started 
+seoTitle: "Guide: getting started with Custom Tabs"
+date: 2023-04-21
+description: How to launch a Custom Tab from your Android app.
+authors:
+  - sebastianbenz
+---
+
+The first step for a Custom Tabs integration is adding the [AndroidX Browser Library](https://developer.android.com/jetpack/androidx/releases/browser#declaring_dependencies) to your project. Open the app/build.gradle file and add the browser library to the dependencies section.
+
+```java
+dependencies {
+   …
+   implementation 'androidx.browser:browser:1.5.0'
+}
+```
+
+{% Aside %}
+Checkout the [Android Custom Tab Sample app on Github](https://github.com/GoogleChrome/android-browser-helper/tree/dc788207822576f6c867ff28d470ec51ad06d178/demos/custom-tabs-example-app) for a working example.
+{% endAside %}
+
+## Open a link in a custom tab
+
+With the browser helper library installed, you can use the [CustomTabsIntent.Builder](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder) to create a [CustomTabsIntent](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent) and launch the Custom Tab by calling [launchUrl()](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent#launchUrl(android.content.Context,android.net.Uri)) and passing an [Uri](https://developer.android.com/reference/android/net/Uri):
+
+```java
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+    findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            String url = "https://developers.android.com";
+            CustomTabsIntent intent = new CustomTabsIntent.Builder()
+                    .build();
+            intent.launchUrl(MainActivity.this, Uri.parse(url));
+        }
+    });
+}
+```
+
+Clicking the button will now open a fullscreen Custom Tab activity as seen on the following screenshot.
+
+{% Img src="image/6hHqS5auVgWhN0cQNQztaJx5w4M2/slw7FNNob6P1zwEkJMZa.png", alt="The default Custom Tabs experience.", width="400", height="866", class="screenshot screenshot--filled" %}
+
+{% Aside 'gotchas' %}
+What happens if the user's default browser does not support Custom Tab? Custom Tabs are supported by most Android browsers, but if no browser that supports Custom Tabs is installed, the CustomTabIntent will open the user's default browser instead. This works, as the CustomTabsIntent uses the [ACTION\_VIEW Intent](https://developer.android.com/reference/android/content/Intent#ACTION_VIEW) with key Extras to customize the UI.
+{% endAside %}
+
+Next up: [learn how to customize the look and feel of your Custom Tab.](/docs/android/custom-tabs/guide-customization/).
