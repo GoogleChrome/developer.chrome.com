@@ -15,8 +15,7 @@
  */
 
 /**
- * @fileoverview Given a key-value array, renders
- * a list of tag-pills
+ * @fileoverview handles the events for a modal containing filters
  */
 import {BaseElement} from './base-element';
 import {html} from 'lit-element';
@@ -25,7 +24,7 @@ import {unsafeHTML} from 'lit-html/directives/unsafe-html';
 import {store} from '../store';
 import {removeEntry} from '../actions/filter';
 
-export class MobileFilters extends BaseElement {
+export class FilterModal extends BaseElement {
   constructor() {
     super();
     this.items = [];
@@ -114,4 +113,4 @@ export class MobileFilters extends BaseElement {
   }
 }
 
-customElements.define('mobile-filters', MobileFilters);
+customElements.define('filter-modal', FilterModal);
