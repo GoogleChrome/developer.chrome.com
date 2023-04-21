@@ -47,7 +47,7 @@ To display the Richer Install UI dialog developers need to add at least one scre
 
 For example developers can use the `description` field to highlight the app’s features that incentivize the user to keep it in their devices. With the `screenshots` they can present the look and feel of the web app as a standalone, with all the easy access that platform apps have.
 
-For a detailed specification and a guide to add them to your app visit the [Richer Install UI pattern].
+For a detailed specification and a guide to add them to your app visit the [Richer Install UI pattern](https://web.dev/patterns/advanced-apps/richer-install-ui/).
 
 The older style of install prompt provided little information and context. This didn't match users' expectations of what installation means and could leave them confused about what happened. Many declined the install request entirely, which was also bad for the businesses that built them.
 
