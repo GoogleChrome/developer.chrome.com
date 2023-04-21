@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: The extension lifecycle
+title: The extension service worker lifecycle
 subhead: 
 description: Extension service workers respond to both standard service worker events and events in extension namespaces. They are presented together because often one type follows another during an extension's use.
 date: 2023-04-19
@@ -38,7 +38,7 @@ chrome.runtime.onInstalled.addListener(() => {
 
 Finally, the  service worker's [activate](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/activate_event) event is fired. Note that unlike web service workers, this event is fired immediately after installation of an extension because there is nothing comparable to a page reload in an extension.
 
-## Startup
+## Extension startup
 
 When a user or incognito profile starts, the [`chrome.runtime.onStartup`](/docs/extensions/reference/runtime/#event-onStartup) event fires but no service worker events are invoked.
 

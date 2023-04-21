@@ -34,7 +34,7 @@ chrome.storage.local.get(["badgeText"], ({ badgeText }) => {
 
 ## Available events
 
-Extension service workers support events in specific APIs as described below. Note that some of these APIs require permissions to use and others are not available in all versions of Chrome. See the linked API documentation for details.
+Extension service workers support events in specific APIs as described below. Note that some of these APIs require permissions to use and others may have events, methods, or properties that are not available in all versions of Chrome. For details, see the linked API documentation, particularly the events, methods, or properties you want to use.
 
 [`chrome.action`](/docs/extensions/reference/action/)
 : Fired in response to a user interaction with your extension's toolbar icon, whether that action be for a specific page (tab) or for the whole extension.
@@ -59,7 +59,7 @@ Extension service workers support events in specific APIs as described below. No
 
 ## Filters
 
-To restrict users to specific use case, or eliminate unnecessary event calls, use APIs that support [event filters](/docs/extensions/reference/events#filtered). For example, consider an extension listening for the [`tabs.onUpdated`](/docs/extensions/reference/extensions/tabs#event-onUpdated) event to detect when a user navigates to a specific website. This event will be called on every navigation on every tab. Instead, use [`webNavigation.onCompleted`](/docs/extensions/reference/webNavigation/#event-onCompleted) with a filter. For example:
+To restrict events to specific use case, or eliminate unnecessary event calls, use APIs that support [event filters](/docs/extensions/reference/events#filtered). For example, consider an extension listening for the [`tabs.onUpdated`](/docs/extensions/reference/extensions/tabs#event-onUpdated) event to detect when a user navigates to a specific website. This event will be called on every navigation on every tab. Instead, use [`webNavigation.onCompleted`](/docs/extensions/reference/webNavigation/#event-onCompleted) with a filter. For example:
 
 ```js
 const filter = {
