@@ -306,7 +306,7 @@ These changes will not affect your existing origin trial token setup, and you wi
 
 ### January 2023
 
-As part of a Chrome regression investigation, we will temporarily reduce FLEDGE origin trial traffic from 5% to 4% of Chrome Stable, from January 26th 2023. We estimate the investigation will take about a month, and we will notify you when the traffic is ramped back up.  
+As part of a Chrome regression investigation, we will temporarily reduce FLEDGE origin trial traffic from 5% to 4% of Chrome Stable, from January 26th 2023. Origin trial traffic for Canary, Dev, and Beta will not be affected. We estimate the investigation will take about a month, and we will notify you when the traffic is ramped back up.  
 
 This change will happen automatically, and will not impact your existing origin trial tokens. For the users in the 1% traffic that will ramp down, the interest groups will remain in their browsers. The same users will be part of the ramp back up, and their interest groups can be reused. However, the interest groups expire in 30 days, and the regression investigation may take longer than that. 
 
