@@ -74,6 +74,7 @@
     - url: /docs/devtools/storage/websql/
     - url: /docs/devtools/application/cookies/
     - url: /docs/devtools/storage/cache/
+    - url: /docs/devtools/storage/private-state-tokens/
     - url: /docs/devtools/application/back-forward-cache/
     - url: /docs/devtools/javascript/background-services/
     - url: /docs/devtools/storage/applicationcache/
@@ -111,7 +112,7 @@
     - url: /docs/devtools/accessibility/reference/
     - url: /docs/devtools/accessibility/contrast/
     - url: /docs/devtools/accessibility/navigation/
-    - url: /docs/devtools/accessibility/focus/ 
+    - url: /docs/devtools/accessibility/focus/
 - url: /docs/devtools/customize/
 - title: i18n.docs.devtools.settings
   sections:

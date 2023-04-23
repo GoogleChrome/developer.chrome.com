@@ -104,6 +104,17 @@ Enable the rulers in one of two ways:
 
 The sizing unit of the rulers is pixels.
 
+### Preview images {: #preview-images }
+
+Hold the cursor over an image URL in the DOM to preview it with a modal window containing several fields of information.
+This includes the rendered and [intrinsic](https://developer.mozilla.org/docs/Glossary/Intrinsic_Size) ratio and size of the resource,
+and a small, icon-sized preview of the image.
+
+{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/TPMnf9KYhsZuTO405FwQ.png", alt="DevTools DOM image previewed using hover.", width="800", height="429" %}
+
+For more information about the properties of images in the DOM, use the [**Elements > Properties** panel](/docs/devtools/dom/properties/).
+You can also use the [**Sources** panel](/docs/devtools/sources/#files) to preview images.
+
 ### Search for nodes {: #search }
 
 You can search the DOM Tree by string, CSS selector, or XPath selector.
@@ -244,7 +255,7 @@ You can force nodes to remain in states like `:active`, `:hover`, `:focus`,
 
 1. Hover over **The Lord of the Flies** below. The background color becomes orange.
 
-     <ul> 
+     <ul>
        <li class="demo--hover">The Lord of the Flies</li>
        <li>Crime and Punishment</li>
        <li>Moby Dick</li>
@@ -295,7 +306,7 @@ JavaScript references to them.
 ### Reference the currently-selected node with $0 {: #current }
 
 When you inspect a node, the `== $0` text next to the node means that you can reference this
-node in the Console with the variable `$0`. 
+node in the Console with the variable `$0`.
 
 1. Right-click **The Left Hand of Darkness** below and select **Inspect**.
 
