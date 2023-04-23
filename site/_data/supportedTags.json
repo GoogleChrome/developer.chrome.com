@@ -71,6 +71,9 @@
   "media": {
     "title": "i18n.tags.media"
   },
+  "webgpu": {
+    "title": "i18n.tags.webgpu"
+  },
   "new-in-chrome": {
     "title": "i18n.tags.new-in-chrome"
   },

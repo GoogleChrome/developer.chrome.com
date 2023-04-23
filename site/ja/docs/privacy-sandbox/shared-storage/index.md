@@ -55,7 +55,7 @@ Shared Storage API は、サードパーティ Cookie の既存のいくつか�
   </thead>
   <tr>
    <td>
-<strong><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/shared-storage/frequency-control/">フリークエンシーコントロール</a></p></strong>
+<strong><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/shared-storage/creative-selection-by-frequency/">フリークエンシーコントロール</a></p></strong>
    </td>
    <td>効果的なフリークエンシーの振り子の反対側は過飽和状態になっており、ユーザーに同じコンテンツが頻繁に表示されれば、ユーザーエクスペリエンスが低下してしまいます。ビュー数のバランスを取って制御するために、組織はユーザーのビュー数を共有ストレージに記録し、ユーザーが事前定義されたカスタマイズ可能な制限に達したら、別のコンテンツを表示するようにできます。</td>
    <td>URL の選択</td>
@@ -144,7 +144,7 @@ URL の選択出力ゲートとプライベート集計出力ゲートの Shared
 
 デモには、URL の選択とプライベート集計のユースケースが含まれています。
 
-URL の選択のデモでは、[フリークエンシーコントロール](/docs/privacy-sandbox/shared-storage/frequency-control)、[クリエイティブローテーション](/docs/privacy-sandbox/shared-storage/creative-rotation/)、[既知の顧客](/docs/privacy-sandbox/shared-storage/known-customer/)、[A/B テスト](/docs/privacy-sandbox/shared-storage/ab-testing/)のユース ケースを利用できます。
+URL の選択のデモでは、[フリークエンシーコントロール](/docs/privacy-sandbox/shared-storage/creative-selection-by-frequency)、[クリエイティブローテーション](/docs/privacy-sandbox/shared-storage/creative-rotation/)、[既知の顧客](/docs/privacy-sandbox/shared-storage/known-customer/)、[A/B テスト](/docs/privacy-sandbox/shared-storage/ab-testing/)のユース ケースを利用できます。
 
 プライベート集計のデモでは、ユニーク[リーチの測定](/docs/privacy-sandbox/shared-storage/unique-reach)、[人口統計の測定](/docs/privacy-sandbox/shared-storage/user-demographics)、[K-フリークエンシーの測定](/docs/privacy-sandbox/shared-storage/k-freq-reach)をプレビューできます。
 

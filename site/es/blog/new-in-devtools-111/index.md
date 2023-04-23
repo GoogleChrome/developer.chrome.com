@@ -17,6 +17,7 @@ draft: true
 *Gracias por la traducción [Miguel Ángel](https://midu.dev) y por la revisión [Carlos Caballero](https://carloscaballero.io).*
 
 {% Partial 'devtools/banner.md' %}
+{% YouTube id='CrSmjooOEiE' %}
 
 <!-- Translation instructions:
   1. Remove the "draft: true" tag above when submitting PR

@@ -128,6 +128,9 @@ html:
 media:
   en: Media
 
+webgpu:
+  en: WebGPU
+
 new-in-chrome:
   en: New in Chrome
   es: Qué hay de nuevo en Chrome
@@ -312,6 +315,9 @@ websocket:
 
 websocketstream:
   en: WebSocketStream
+
+test-automation:
+  en: Test automation
 
 service-worker:
   en: Service Worker

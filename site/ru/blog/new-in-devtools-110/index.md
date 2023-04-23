@@ -16,6 +16,7 @@ tags:
 *Переводы предоставлены [Alena Batitskaia](https://twitter.com/ABatickaya). Редактор — [Maxim Salnikov](https://twitter.com/webmaxru).*
 
 {% Partial 'devtools/banner.md' %}
+{% YouTube id='CrSmjooOEiE' %}
 
 <!-- Translation instructions:
   +1. Remove the "draft: true" tag above when submitting PR

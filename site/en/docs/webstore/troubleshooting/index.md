@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Troubleshooting Chrome Web Store violations"
 date: 2020-11-16
-updated: 2022-05-26
+updated: 2023-04-21
 description: >
   Guidelines for understanding why an item was rejected or removed from the Chrome Web Store
   and how to fix the problem.
@@ -1154,6 +1154,92 @@ Code Readability Requirements:
   - Shortening of variable and function names
   - Collapsing files together
 
+{% endAside %}
+
+## Minimum Functionality
+
+Corresponds to notification ID: `Yellow Potassium`
+
+The intent of this policy is to ensure all extensions in the Chrome Web Store are providing a basic
+degree of functionality and utility for users. Extensions should provide users with benefits and
+enrich their browsing experience.
+
+### Common reasons for removal/rejection
+
+- Your submitted extension contained no files other than a manifest.
+- The extension did not provide discernable value or utility to its users.
+- A feature listed in the item's description was not provided directly by the item and instead
+  simply linked to an external service.
+- The extension metadata contained click-baity content designed to attract the attention of
+  users and entice them to install.
+
+### How can you rectify this?
+
+- Ensure that your extension has a defined functionality which provides value.
+- Ensure that any claimed functionality of your item is performed directly by the item itself
+  and not achieved by linking users to an external source.
+
+### Relevant policy
+
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store
+[developer program policies](/docs/webstore/program-policies/minimum-functionality/):
+
+{% Aside %}
+**Building Quality Products - Minimum Functionality**
+
+Extensions must provide a basic degree of functionality and utility that provide value to the
+catalog of the Chrome Web Store. Some examples of common violations include:
+
+- Extensions with no functionality or utility.
+- Extensions with functionality that is not directly provided by the extension (e.g. file
+  converters which only link to other file conversion services).
+- Click-baity template extensions that only vary slightly in functionality with negligible
+  utility (e.g. a "Word of the Day" extension and a "Daily Inspirational Quotes" extension, 
+  which use the same general extension template).
+{% endAside %}
+
+## Affiliate Ads
+
+Corresponds to notification ID: `Grey Titanium`
+
+The intent of this policy is to ensure users are aware of extensions using affiliate links or codes
+for monetization, and to give them some amount of control by requiring user action before
+inclusion.
+
+### Common reasons for removal/rejection
+
+- Your extension uses affiliate marketing links, codes, or cookies without properly
+  disclosing their use in the item's description and user interface.
+- No related user action is required before inclusion of affiliate codes, links, or cookies.
+
+### How can you rectify this?
+
+- Modify your item's description and UI to properly inform users that you are using affiliate
+  programs.
+- Inclusion of affiliate codes must be preceded by a relevant action taken by the user. This
+  action must be related to the affiliated platform such that a reasonable user would understand
+  and consent to the inclusion of said codes.
+
+### Relevant policy
+
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store
+[developer program policies](/docs/webstore/program-policies/affiliate-ads/):
+
+{% Aside %}
+**Ensuring Responsible Marketing and Monetization - Affiliate Ads**
+
+- Any affiliate program must be described prominently in the product's Chrome Web Store page,
+ user interface, and before installation.
+- Related user action is required before the inclusion of each affiliate code, link, or
+  cookie. Some example violations include:
+  - An extension that updates a shopping-related cookie without the user's knowledge
+    while the user is browsing shopping sites.
+  - An extension that appends an affiliate code to the URL or replaces an existing
+    affiliate code in the URL without the user's explicit knowledge or related user action.
+  - An extension that applies or replaces affiliate promo codes without the user's
+    explicit knowledge or related user action.
 {% endAside %}
 
 [api-action]: /docs/extensions/reference/action

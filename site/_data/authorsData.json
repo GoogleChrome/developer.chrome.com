@@ -513,12 +513,25 @@
     "github": "reillyeon",
     "image": "image/admin/C7kO2T8Q8jSZxU9xj3AC.jpg"
   },
+  "nattestad": {
+    "twitter": "fractorious",
+    "country": "US",
+    "image": "image/admin/UyUsatSDE2wdnfy3KHzO.jpg"
+  },
   "cwallez": {
     "country": "FR",
     "twitter": "DaKangz",
     "github": "Kangz",
     "mastodon": "https://mastodon.gamedev.place/@DaKangz",
     "image": "image/vvhSqZboQoZZN9wBvoXq72wzGAf1/mYkUaoNpythq50oIFiQh.jpeg"
+  },
+  "toji": {
+    "country": "US",
+    "twitter": "tojiro",
+    "github": "toji",
+    "mastodon": "https://mastodon.social/@tojiro",
+    "homepage": "https://toji.dev/",
+    "image": "image/vvhSqZboQoZZN9wBvoXq72wzGAf1/0OHajNUjLrRB7XsDWuFt.png"
   },
   "eladalon": {
     "country": "SE",
@@ -1140,5 +1153,10 @@
   "arskama": {
     "country": "FI",
     "github": "arskama"
+  },
+  "vaatika": {
+    "country": "DE",
+    "twitter": "vaatika",
+    "image": "image/3ILBH0X0aDOqDIm6SgH3OTHT8832/Ryt5ICGoMplYcTgLtKev.jpg"
   }
 }

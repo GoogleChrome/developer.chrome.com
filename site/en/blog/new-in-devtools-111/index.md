@@ -14,8 +14,7 @@ tags:
 ---
 
 {% Partial 'devtools/banner.md' %}
-
-*No video for this release.*
+{% YouTube id='CrSmjooOEiE' %}
 
 <!-- $contentStart -->
 

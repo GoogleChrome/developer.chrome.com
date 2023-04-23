@@ -13,6 +13,7 @@ hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/DV3geEz9FsEc3JiFPSY2.png
 alt: Battle damaged Sci-fi helmet rendered with WebGPU.
 tags:
   - chrome-113
+  - webgpu
 ---
 
 The Chrome team is thrilled to announce that WebGPU is now available by default in Chrome&nbsp;113, which is currently in the Beta channel. WebGPU is a new web graphics API that offers significant benefits such as greatly reduced JavaScript workload for the same graphics and more than three times improvements in machine learning model inferences. This is possible due to more flexible GPU programming and access to advanced capabilities that WebGL does not provide.
@@ -39,7 +40,7 @@ WebGPU is currently a work-in-progress in [Firefox](https://hacks.mozilla.org/20
 ## Library support
 
 Many widely used WebGL libraries are already in the process of implementing WebGPU support or have already done so. This means that using WebGPU may only require making a single line change:
-- [Babylon.js](https://babylonjs.com/) has full WebGPU support already, see [demo](https://playground.babylonjs.com/#YX6IB8#73).
+- [Babylon.js](https://doc.babylonjs.com/setup/support/webGPU) has full WebGPU support already.
 - [PlayCanvas](https://blog.playcanvas.com/initial-webgpu-support-lands-in-playcanvas-engine-1-62/) announced initial WebGPU support.
 - [TensorFlow.js](https://www.npmjs.com/package/@tensorflow/tfjs-backend-webgpu) supports WebGPU-optimized versions of most operators.
 - [Three.js](https://threejs.org) WebGPU support is underway, see [examples](https://threejs.org/examples/?q=webgpu#webgpu_particles).
