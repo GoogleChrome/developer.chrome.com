@@ -470,7 +470,7 @@ beginner tutorials:
 | [Tabs Manager][tut-tabs-manager] | To create a popup that manages browser tabs.                   |
 | [Focus Mode][tut-focus-mode]     | To run code on the current page after clicking on the extension action. |
 
-## Continue exploring
+## Continue exploring {: #explore }
 
 To continue your extension service worker learning path, we recommend exploring the following articles:
 
