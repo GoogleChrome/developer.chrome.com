@@ -168,69 +168,45 @@ The only required properties for interest groups are `owner` and `name`:
 
 The remaining properties are optional:
 
-<div class="w-table-wrapper">
-  <table class="w-table--top-align width-full">
-    <thead>
-      <tr>
-        <th style="font-weight: bold; text-align: left;">Property</th>
-        <th style="font-weight: bold; text-align: left;">Example</th>
-        <th style="font-weight: bold; text-align: left;">Role</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="vertical-align: top;"><code>biddingLogicUrl</code><sup>1, 2</sup></td>
-        <td style="vertical-align: top;"><code>https://dsp.example/bid/custom-bikes/bid.js</code></td>
-        <td style="vertical-align: top;">URL for bidding JavaScript run in worklet.</td>
-      </tr>
-      <tr>
-        <td style="vertical-align: top;"><code>biddingWasmHelperUrl</code><sup>1, 2</sup></td>
-        <td style="vertical-align: top;"><code>https://dsp.example/bid/custom-bikes/bid.wasm</code></td>
-        <td style="vertical-align: top;">URL for WebAssembly code driven from <code>biddingLogicUrl</code>.</td>
-      </tr>
-      <tr>
-        <td style="vertical-align: top;"><code>dailyUpdateUrl</code><sup>2</sup></td>
-        <td style="vertical-align: top;"><code>https://dsp.example/bid/custom-bikes/update</code></td>
-        <td style="vertical-align: top;">URL that returns JSON to update interest group attributes.
-        (See <a href="#update-interest-group">Update the interest group</a>.)</td>
-      </tr>
-      <tr>
-        <td style="vertical-align: top;"><code>trustedBiddingSignalsUrl</code><sup>2</sup></td>
-        <td style="vertical-align: top;"><code>https://dsp.example/trusted/bidding-signals</code></td>
-        <td style="vertical-align: top;">Base URL for key-value requests to bidder's trusted server.</td>
-      </tr>
-      <tr>
-        <td style="vertical-align: top;"><code>trustedBiddingSignalsKeys</code></td>
-        <td style="vertical-align: top;"><code>['key1', 'key2' ...]</code></td>
-        <td style="vertical-align: top;">Keys for requests to key-value trusted server.</td>
-      </tr>
-      <tr>
-        <td style="vertical-align: top;"><code>userBiddingSignals</code></td>
-        <td style="vertical-align: top;"><code>{...}</code></td>
-        <td style="vertical-align: top;">Additional metadata the owner can use during bidding.</td>
-      </tr>
-      <tr>
-        <td style="vertical-align: top;"><code>ads</code><sup>1</sup></td>
-        <td style="vertical-align: top;"><code>[bikeAd1, bikeAd2, bikeAd3]</code></td>
-        <td style="vertical-align: top;">Ads that might be rendered for this interest group.</td>
-      </tr>
-      <tr>
-        <td style="vertical-align: top;"><code>adComponents</code></td>
-        <td style="vertical-align: top;"><code>[customBike1, customBike2, bikePedal, bikeFrame1, bikeFrame2]</code></td>
-        <td style="vertical-align: top;">Components for <a href="https://github.com/WICG/turtledove/blob/main/FLEDGE.md#34-ads-composed-of-multiple-pieces">ads composed of multiple pieces</a>.</td>
-      </tr>
-    </tbody>
+<dl>
+    <dt><code>biddingLogicUrl</code><sup><a href="#first-ref">1</a>, <a href="#second-ref">2</a></sup></dt>
+        <dd>Example: <code>https://dsp.example/bid/custom-bikes/bid.js</code></dd>
+        <dd>Role: URL for bidding JavaScript run in worklet.</dd>
+    <dt><code>biddingWasmHelperUrl</code><sup><a href="#first-ref">1</a>, <a href="#second-ref">2</a></sup></dt>
+        <dd>Example: <code>https://dsp.example/bid/custom-bikes/bid.wasm</code></dd>
+        <dd>Role: URL for WebAssembly code driven from <code>biddingLogicUrl</code>.</dd>
+    <dt><code>dailyUpdateUrl</code><sup><a href="#second-ref">2</a></sup></dt>
+        <dd>Example: <code>https://dsp.example/bid/custom-bikes/update</code></dd>
+        <dd>Role: URL that returns JSON to update interest group attributes.
+        (See <a href="#update-interest-group">Update the interest group</a>.)</dd>
+    <dt><code>trustedBiddingSignalsUrl</code><sup><a href="#second-ref">2</a></sup></dt>
+        <dd>Example: <code>https://dsp.example/trusted/bidding-signals</code></dd>
+        <dd>Role: Base URL for key-value requests to bidder's trusted server.</dd>
+    <dt><code>trustedBiddingSignalsKeys</code></dt>
+        <dd>Example: <code>['key1', 'key2' ...]</code></dd>
+        <dd>Role: Keys for requests to key-value trusted server.</dd>
+    <dt><code>userBiddingSignals</code></dt>
+        <dd>Example: <code>{...}</code></dd>
+        <dd>Role: Additional metadata the owner can use during bidding.</dd>
+    <dt><code>ads</code><sup><a href="#first-ref">1</a></sup></dt>
+        <dd>Example: <code>[bikeAd1, bikeAd2, bikeAd3]</code></dd>
+        <dd>Role: Ads that might be rendered for this interest group.</dd>
+    <dt><code>adComponents</code></dt>
+        <dd>Example: <code>[customBike1, customBike2, bikePedal, bikeFrame1, bikeFrame2]</code></dd>
+        <dd>Role: Components for <a href="https://github.com/WICG/turtledove/blob/main/FLEDGE.md#34-ads-composed-of-multiple-pieces">ads composed of multiple pieces</a>.</dd>
+</dl>
+
+   
     <caption style="text-align:left">
-    <p><sup>1</sup> The `biddingLogicUrl` and `ads` properties are optional, but
+    <p id="first-ref"><sup>1</sup> The `biddingLogicUrl` and `ads` properties are optional, but
     required to participate in an auction. There may be use cases for creating an interest group without these properties: for example, an interest group owner might want to add a browser to an interest group for a campaign that isn't running yet, or for some other future use, or they may temporarily have run out of advertising budget.</p>
 
-    <p><sup>2</sup> In the current implementation of FLEDGE, `biddingLogicUrl`,
+    <p id="second-ref"><sup>2</sup> In the current implementation of FLEDGE, `biddingLogicUrl`,
     `biddingWasmHelperUrl`, `dailyUpdateUrl` and `trustedBiddingSignalsUrl` must
     have the same origin as owner. That may not be a long-term constraint, and
     the `ads` and `adComponents` URLs have no such constraint.</p>
     </caption>
-  </table>
-</div>
+
 
 #### Update attributes {: #update-interest-group}
 
