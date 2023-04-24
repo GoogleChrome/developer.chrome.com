@@ -35,7 +35,7 @@ Does your code throw an exception? Fret not! Chrome DevTools allows you to pause
 
 {% Aside 'caution' %}
 For Node debugging, pausing on caught exceptions with Chrome 113 is only possible if also pausing on uncaught exceptions. This is a dependency that previously existed and needs to be kept for Node LTS compatibility reasons. As soon as Node LTS release 18 is no longer supported, we will also allow independent pausing for Node. Follow [crbug/1382762](https://crbug.com/1382762) for updates.
-{% endAside' %}
+{% endAside %}
 
 ## Manage your breakpoints: expand relevant breakpoint groups, and collapse others to focus on what’s relevant
 {% Img src="image/3ILBH0X0aDOqDIm6SgH3OTHT8832/IXPxkcj2J8xBpPkfdixb.png", alt="Collapse and expand breakpoint groups.", width="800", height="563" %}
