@@ -14,7 +14,7 @@ tags:
 ---
 
 <!--header banner, do not remove-->
-{% include 'partials/devtools/en/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% Img src="image/3ILBH0X0aDOqDIm6SgH3OTHT8832/UH8qvUJgBfTJgLLvCYHf.png", alt="The old and new breakpoint sidebar pane side-by-side.", width="800", height="542" %}
 
@@ -98,5 +98,5 @@ Our goal behind the redesign of the breakpoint sidebar was to make debugging wit
 If you have suggestions for further improvements, let us know by [filing a bug](https://crbug.com/new)!
 
 <!--footer message, do not remove-->
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/engineering-blog.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/engineering-blog.md' %}
