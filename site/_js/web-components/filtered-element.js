@@ -34,7 +34,6 @@ export class FilteredElement extends BaseStateElement {
   constructor() {
     super();
     this.hidden = false;
-    this.filters = {};
   }
 
   connectedCallback() {
@@ -58,7 +57,7 @@ export class FilteredElement extends BaseStateElement {
     // Remove any empty filter arrays
     for (const key in activeFilters) {
       if (
-        !Object.prototype.hasOwnProperty.call(activeFilters, key) &&
+        activeFilters.hasOwnProperty(key) &&
         activeFilters[key].length === 0
       ) {
         delete activeFilters[key];
@@ -73,7 +72,7 @@ export class FilteredElement extends BaseStateElement {
       // Hide elements that don't match the active filters
       this.hidden = !Object.keys(activeFilters).every(filter => {
         const values = activeFilters[filter].map(value => value.value);
-        return values.includes(this.filters[filter].value);
+        return values.includes(this.filters[filter]);
       });
     }
   }
