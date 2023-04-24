@@ -16,7 +16,7 @@ pages using the omnibox. You will learn how to:
 
 - Register your service worker and import modules.
 - Debug your extension service worker.
-- Manage state and handling events.
+- Manage state and handle events.
 - Trigger periodic events.
 - Communicate with content scripts.
 
@@ -24,11 +24,14 @@ pages using the omnibox. You will learn how to:
 
 ## Before you start {: #prereq }
 
-This guide assumes that you have basic web development experience. We recommend reviewing [Extensions 101][doc-ext-101] and [Development Basics][doc-dev-basics] for an introduction to extension development.
+This guide assumes that you have basic web development experience. We recommend reviewing
+[Extensions 101][doc-ext-101] and [Development Basics][doc-dev-basics] for an introduction to
+extension development.
 
 ## Build the extension {: #build }
 
-Start by creating a new directory called `quick-api-reference` to hold the extension files, or download the source code from our [GitHub samples][github-quick-api] repo.
+Start by creating a new directory called `quick-api-reference` to hold the extension files, or
+download the source code from our [GitHub samples][github-quick-api] repo.
 
 ### Step 1: Register the service worker {: #step-1 }
 
@@ -52,8 +55,7 @@ Create the [manifest][doc-manifest] file in the root of the project and add the 
 ```
 
 Extensions register their service worker in the manifest, which only takes a single JavaScript file.
-There's no need to call `navigator.serviceWorker.register()`, like you would in a web app. Learn about the
-[differences between extension and web service workers](tbd).
+There's no need to call `navigator.serviceWorker.register()`, like you would in a web app.
 
 Create an `images` folder then [download the icons][github-quick-api-icons] into it.
 
@@ -104,7 +106,7 @@ console.log("sw-tips.js")
 
 {% endColumns %}
 
-See [Importing scripts](tbd) to learn about other ways to import multiple files in a service worker.
+See [Importing scripts](/docs/extensions/mv3/service-workers/basics/#importing-scripts) to learn about other ways to import multiple files in a service worker.
 
 {% Aside 'important' %}
 
@@ -116,7 +118,7 @@ Remember to set `type.module` when using a modern module bundler framework, such
 
 Let's quickly go over how to find the service worker logs and know when it has terminated. First, follow the instructions to [Load an unpacked extension][doc-dev-basics-unpacked]. 
 
-After 30 seconds you will see "service worker(inactive)" which means the service worker has terminated. Click on the "service worker(inactive)" hyperlink to inspect it. See example below.
+After 30 seconds you will see "service worker(inactive)" which means the service worker has terminated. Click on the "service worker(inactive)" hyperlink to inspect it. See the example below.
 
 {% Video src="video/BhuKGJaIeLNPW9ehns59NfwqKxF2/D1XRaA6q4xn9Ylwe1u1N.mp4", width="800", height="314", autoplay="true", muted="true", loop="true" %}
 
@@ -175,7 +177,7 @@ Service workers do not have direct access to the [window object][mdn-window], th
 they get terminated repeatedly throughout a user's browser session, which makes it incompatible with
 global variables.  Instead, we use [`chrome.storage.local`][api-storage-local] which stores data on the local machine.
 
-See [Saving state](TBD) to learn about other storage options for extension service workers.
+See [Saving state](/docs/extensions/mv3/service-workers/service-worker-lifecycle/#idle-and-shutdown) to learn about other storage options for extension service workers.
 
 ### Step 5: Register your events {: #step-5 }
 
@@ -258,7 +260,7 @@ async function updateHistory(input) {
 
 {% Aside 'important' %}
 
-Extension service workers can use both web APIs and Chrome APIs, with a few exceptions. For more information, see [Service Workers events](tbd).
+Extension service workers can use both web APIs and Chrome APIs, with a few exceptions. For more information, see [Service Workers events](/docs/extensions/mv3/service-workers/events/).
 
 {% endAside %}
 
@@ -317,7 +319,7 @@ chrome.alarms.onAlarm.addListener(updateTip);
 
 {% Aside 'important' %}
 
-All [Chrome API][doc-apis] event listeners and methods restart the service worker's 30 second termination timer. For more information, see the [Extension service worker lifecycle](tbd).
+All [Chrome API][doc-apis] event listeners and methods restart the service worker's 30-second termination timer. For more information, see the [Extension service worker lifecycle](/docs/extensions/mv3/service-workers/service-worker-lifecycle/).
 
 {% endAside %}
 
@@ -435,13 +437,13 @@ Click the Tip button located on the navigation bar to open the extension tip.
 
 {% Details %}
 {% DetailsSummary %}
-**Popover API available now in Canary behind a flag**
+**The Popover API is available now in Canary behind a flag**
 {% endDetailsSummary %}
 
-The Popover API is planned for [launch in Chrome 114][popover-chrome-status], available in stable in early May 2023. But you can start using it now by following these steps:
+The Popover API is scheduled to [launch in Chrome 114][popover-chrome-status], available in stable in early May 2023. But you can start using it now by following these steps:
 
-1. Download Canary
-1. Go to chrome://flags
+1. Download [Canary](https://www.google.com/chrome/canary/)
+1. Go to `chrome://flags`
 1. Enable the "Experimental Web Platform features" flag.
 1. Restart the browser
 
@@ -460,28 +462,31 @@ Based on what you’ve learned today, try to accomplish any of the following:
 ## Keep building! {: #continue }
 
 Congratulations on finishing this tutorial 🎉. Continue leveling up your skills by completing other
-tutorials on this series:
+beginner tutorials:
 
 | Extension                        | What you will learn                                            |
 |----------------------------------|----------------------------------------------------------------|
 | [Reading time][tut-reading-time] | To insert an element on a specific set of pages automatically. |
 | [Tabs Manager][tut-tabs-manager] | To create a popup that manages browser tabs.                   |
+| [Focus Mode][tut-focus-mode]     | To run code on the current page after clicking on the extension action. |
 
 ## Continue exploring
 
 To continue your extension service worker learning path, we recommend exploring the following articles:
 
-- TBD
-- TBD
-- TBD
+- About [extension service workers](/docs/extensions/mv3/service-workers/).
+- The [extension service worker lifecycle](/docs/extensions/mv3/service-workers/service-worker-lifecycle/).
+- [Events in service workers](/docs/extensions/mv3/service-workers/events/)
 
 [api-alarms]: /docs/extensions/reference/alarms
 [api-omnibox]: /docs/extensions/reference/omnibox
 [api-scripting]: /docs/extensions/reference/scripting/
+[api-storage-local]: /docs/extensions/reference/storage/#property-local
 [api-storage]: /docs/extensions/reference/storage
 [crxjs-vite]: https://crxjs.dev/vite-plugin
 [doc-apis]: /docs/extensions/reference
 [doc-content]: /docs/extensions/mv3/content_scripts/
+[doc-debug-ext]: /docs/extensions/mv3/tut_debugging/#debug_bg
 [doc-dev-basics-unpacked]: /docs/extensions/mv3/getstarted/development-basics#load-unpacked
 [doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics
 [doc-devguide]: /docs/extensions/mv3/devguide/
@@ -500,17 +505,16 @@ To continue your extension service worker learning path, we recommend exploring 
 [mdn-local-storage]: https://developer.mozilla.org/docs/Web/API/Window/localStorage
 [mdn-window]: https://developer.mozilla.org/docs/Web/API/Window
 [omnibox-input-changed]: /docs/extensions/reference/omnibox/#event-onInputChanged
+[omnibox-input-changed]: /docs/extensions/reference/omnibox/#event-onInputChanged
 [omnibox-input-entered]: /docs/extensions/reference/omnibox/#event-onInputEntered
 [omnibox-suggest]: /docs/extensions/reference/omnibox/#type-SuggestResult
 [popover-chrome-status]: https://chromestatus.com/feature/5463833265045504
-[popover-explainer]: https://open-ui.org/components/popover.research.explainer/
 [popover-chromium-issue]: https://bugs.chromium.org/p/chromium/issues/detail?id=1307772
+[popover-explainer]: https://open-ui.org/components/popover.research.explainer/
 [popover-html-spec]: https://html.spec.whatwg.org/multipage/popover.html
 [runtime-oninstalled]: /docs/extensions/reference/runtime/#event-onInstalled
+[tut-focus-mode]: /docs/extensions/mv3/getstarted/tut-focus-mode
 [tut-reading-time-step1]: /docs/extensions/mv3/getstarted/tut-reading-time#step-1
 [tut-reading-time-step2]: /docs/extensions/mv3/getstarted/tut-reading-time#step-2
 [tut-reading-time]: /docs/extensions/mv3/getstarted/tut-reading-time
 [tut-tabs-manager]: /docs/extensions/mv3/getstarted/tut-tabs-manager
-[doc-debug-ext]: /docs/extensions/mv3/tut_debugging/#debug_bg
-[api-storage-local]: /docs/extensions/reference/storage/#property-local
-[omnibox-input-changed]: /docs/extensions/reference/omnibox/#event-onInputChanged
