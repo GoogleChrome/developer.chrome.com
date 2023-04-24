@@ -1,10 +1,10 @@
 ---
 layout: "layouts/blog-post.njk"
-title: “How the new Breakpoints sidebar helps you debug faster”
+title: How the new Breakpoints sidebar helps you debug faster
 authors:
   - kimanh
   - vaatika
-description: “To make it easier to perform common actions such as deleting or disabling breakpoints, we've redesigned the breakpoints sidebar so that you can perform them with a single click.”
+description: To make it easier to perform common actions such as deleting or disabling breakpoints, we've redesigned the breakpoints sidebar so that you can perform them with a single click.
 date: 2023-04-11
 hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/SY5h3eWJ9kamVHVWE67H.jpg'
 alt: 'Have a break during debugging with the new Breakpoints sidebar.'
