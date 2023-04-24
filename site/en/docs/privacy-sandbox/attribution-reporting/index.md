@@ -367,9 +367,11 @@ event-level and aggregate reports.
 {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/mDdo2XLyGLBCAlgH7MPZ.png", alt="", width="800", height="1237" %}
 </figure>
 
+{: #event-level-noise }
+
 {% Details %}
 {% DetailsSummary 'h3' %}
-In detail: event-level reports and privacy
+In detail: Event-level reports and privacy
 {% endDetailsSummary %}
 
 Event-level reports provide conversion insights without tracking users across
@@ -394,7 +396,7 @@ sites, by following the following privacy mechanisms:
 
 {% Details %}
 {% DetailsSummary 'h3' %}
-In detail: summary reports and privacy
+In detail: Summary reports and privacy
 {% endDetailsSummary %}
  
 Summary reports associate a click or view event with detailed conversion data.
