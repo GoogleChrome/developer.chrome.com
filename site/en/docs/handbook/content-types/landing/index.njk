@@ -117,6 +117,7 @@ useCaseLandingSection:
 {% from 'macros/landing-section-expanded.njk' import landingSectionExpanded with context %}
 {% from 'macros/landing-section-explore.njk' import landingSectionExplore with context %}
 {% from 'macros/landing-section-usecases.njk' import landingSectionUseCases with context %}
+{% from 'macros/youtube-playlist.njk' import youTubePlaylist with context %}
 
 {{ heroCardWide(
   "A sample landing page",
@@ -266,6 +267,8 @@ useCaseLandingSection:
   useCaseLandingSection.use_case_2_additional
   )
 }}
+
+{{ youTubePlaylist("PLNYkxOF6rcIC3BwCw--jvZNN7obH4QUlH") }}
 
 <div class="landing-section rounded-lg width-full hairline display-grid gap-top-500">
   {{ landingDeco(

@@ -1,0 +1,143 @@
+.playlist {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+
+  @include media-query('lg-max') {
+    max-height: unset;
+  }
+
+  &__details {
+    flex-basis: px-to-rem(365px);
+    min-width: px-to-rem(365px);
+    padding: 1rem 2.5rem 1rem 1rem;
+
+    @include media-query('lg-max') {
+      margin-bottom: 0;
+      min-width: 100%;
+      padding: 0;
+    }
+
+    @media (min-width:800px) and (max-width: 991px) {
+      min-width: unset;
+      padding: 1rem 2.5rem 1rem 1rem;
+    }
+  }
+
+  &__details-inner {
+    background-color: var(--color-red-lighter);
+    padding: px-to-rem(24px);
+
+    @include media-query('lg-max') {
+      border-radius: unset;
+    }
+
+    @media (min-width:800px) and (max-width: 991px) {
+      border-radius: 0.75rem;
+    }
+  }
+
+
+  &__thumbnail {
+    position: relative;  
+  }
+
+  &__thumbnail img {
+    @include media-query('lg-max') {
+      width: 100%;
+    }
+  } 
+
+  &__name {
+    @media (min-width:800px) and (max-width: 991px) {
+      height: px-to-rem(64px);
+    }
+  }
+
+  &__meta {
+    color: var(--color-secondary-text);
+    padding-bottom: 1.5rem;
+  }
+
+  &__decorations {
+    align-items: center;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjU5IiBoZWlnaHQ9IjEzNCIgdmlld0JveD0iMCAwIDI1OSAxMzQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxjaXJjbGUgY3g9IjIxNyIgY3k9IjkyIiByPSI0MiIgZmlsbD0iI0ZBRDJDRiIvPgo8Y2lyY2xlIGN4PSIyOCIgY3k9IjkzIiByPSIyOCIgZmlsbD0iI0ZBRDJDRiIvPgo8Y2lyY2xlIGN4PSIxMjQuNSIgY3k9IjYyLjUiIHI9IjYyLjUiIGZpbGw9IiNEOTMwMjUiLz4KPHBhdGggZD0iTTE1MC4wOTcgNTAuMDIzOUMxNDkuNDg4IDQ3Ljc0ODUgMTQ3LjY4OSA0NS45NDkzIDE0NS40MTQgNDUuMzQwN0MxNDEuMjg2IDQ0LjIyOTUgMTI0Ljc1IDQ0LjIyOTUgMTI0Ljc1IDQ0LjIyOTVDMTI0Ljc1IDQ0LjIyOTUgMTA4LjIxMyA0NC4yMjk1IDEwNC4wODYgNDUuMzQwN0MxMDEuODEgNDUuOTQ5MyAxMDAuMDExIDQ3Ljc0ODUgOTkuNDAyOCA1MC4wMjM5Qzk4LjI5MTUgNTQuMTUxNCA5OC4yOTE1IDYyLjc1MDMgOTguMjkxNSA2Mi43NTAzQzk4LjI5MTUgNjIuNzUwMyA5OC4yOTE1IDcxLjM0OTMgOTkuNDAyOCA3NS40NzY4QzEwMC4wMTEgNzcuNzUyMiAxMDEuODEgNzkuNTUxNCAxMDQuMDg2IDgwLjE1OTlDMTA4LjIxMyA4MS4yNzEyIDEyNC43NSA4MS4yNzEyIDEyNC43NSA4MS4yNzEyQzEyNC43NSA4MS4yNzEyIDE0MS4yODYgODEuMjcxMiAxNDUuNDE0IDgwLjE1OTlDMTQ3LjY4OSA3OS41NTE0IDE0OS40ODggNzcuNzUyMiAxNTAuMDk3IDc1LjQ3NjhDMTUxLjIwOCA3MS4zNDkzIDE1MS4yMDggNjIuNzUwMyAxNTEuMjA4IDYyLjc1MDNDMTUxLjIwOCA2Mi43NTAzIDE1MS4yMDggNTQuMTUxNCAxNTAuMDk3IDUwLjAyMzlaTTExOS40NTggNzAuNjg3OFY1NC44MTI4TDEzMy4yMTcgNjIuNzUwM0wxMTkuNDU4IDcwLjY4NzhaIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjgiLz4KPC9zdmc+Cg==');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    height: 7rem;
+    justify-content: center;
+    margin-top: 2.5rem;
+    padding: 1rem;
+    position: relative;
+
+    @media (max-width:799px) {
+      display: none;
+    }
+  }
+
+  &__play-all {
+    background-color: var(--color-text);
+    border-radius: 0 0 0.75rem 0.75rem;
+    bottom: 0;
+    opacity: 0.9;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+        
+    a {
+      color: var(--color-bg);
+      display: inline-block;
+      font-size: px-to-rem(14px);
+      padding: 0.3rem 0;
+      text-decoration: none;
+      width: 100%;
+    }
+  }
+
+  &__channel {
+    align-items: center;
+    border-top: 1px solid get-color('grey-400');
+    display: flex;
+    height: px-to-rem(56px);
+    justify-content: space-between;
+    padding-top: px-to-rem(24px);
+  }
+
+  &__channel-details {
+    align-items: space-between;
+    display: flex;
+  }
+
+  &__channel-icon {
+    flex-basis: 56px;
+    margin-right: px-to-rem(8px);
+    min-width: 56px;
+    min-width: 56px;
+    mix-blend-mode: multiply;
+  }
+
+  &__channel-name {
+    line-height: px-to-rem(22px);
+    margin: 0;
+  }
+
+  &__videos {
+    flex-basis: calc(100% - #{px-to-rem(365px)});
+    max-height: px_to_rem(627px);
+    overflow: scroll;
+
+    @include media-query('lg-max') {
+      flex-basis: 100%;
+      max-height: unset;
+    }
+
+    @media (min-width:800px) and (max-width: 991px) {
+      flex-basis: calc(100% - #{px-to-rem(377px)});
+      max-height: px_to_rem(617px);
+      overflow: auto;
+    }
+  }
+}
+

@@ -1,3 +1,4 @@
 dist/*
 types/*
 tests/**/dist/*
+node_modules/*
