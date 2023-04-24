@@ -1,10 +1,29 @@
+{% set contentItems = null %}
+{% set contentType = "" %}
+
+{% if page.url | getContentType === 'articles' %}
+  {% set contentItems = collections.articles %}
+{% endif %}
+
+{% if page.url | getContentType === 'blog' %}
+  {% set contentItems = collections.blogPosts %}
+{% endif %}
+
+{% set currentPostIndex = contentItems | indexOfPostByUrl(page.url) %}
+{% set previousPost = contentItems[currentPostIndex - 1] %}
+{% set nextPost = contentItems[currentPostIndex + 1] %}
+
 <div class="post-navigation">
     <div class="post-navigation__prev">
-      <a href="{{ prev.url }}" class="post-navigation__link">Previous</a>
-      <p>SPA view transitions land in Chrome 111</p>
-    </div>
+      {% if previousPost %}
+        <a href="{{ previousPost.url }}" class="post-navigation__link">Previous</a>
+        <p>{{previousPost.data.title}}</p>
+      {% endif %}
+   </div>
    <div class="post-navigation__next">
-      <a href="{{ next.url }}" class="post-navigation__link">Next</a>
-      <p>Improving user privacy by requiring opt-in to send X-Requested-With header from WebView</p>
+      {% if nextPost %}
+        <a href="{{ nextPost.url }}" class="post-navigation__link">Next</a>
+        <p>{{nextPost.data.title}}</p>
+      {% endif %}
     </div>
 </div>
