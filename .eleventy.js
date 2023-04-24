@@ -18,6 +18,8 @@ const {ensureUniqueHrefInProduction} = require('./site/_filters/ensureUniqueHref
 const {toc} = require('./site/_filters/toc');
 const {updateSvgForInclude} = require('webdev-infra/filters/svg');
 const {minifyHtml} = require('webdev-infra/filters/minifyHtml');
+const {getContentType} = require ('./site/_filters/getContentType');
+const {indexOfPostByUrl} = require('./site/_filters/indexOfPostByUrl');
 
 // Shortcodes
 const {Blockquote} = require('webdev-infra/shortcodes/Blockquote');
@@ -62,6 +64,8 @@ const feedsCollection = require('./site/_collections/feeds');
 const tagsCollection = require('./site/_collections/tags');
 const directoryCollection = require('./site/_collections/directory');
 const extensionsReferenceCollection = require('./site/_collections/reference');
+const articlesCollection = require('./site/_collections/articles');
+const blogPostsCollection = require('./site/_collections/blog-posts');
 const { pastEvents, currentEvents, eventTags } = require('./site/_collections/events');
 
 // Create a helpful environment flags
@@ -105,6 +109,8 @@ module.exports = eleventyConfig => {
   eleventyConfig.addCollection('authors', authors);
   eleventyConfig.addCollection('feeds', feedsCollection);
   eleventyConfig.addCollection('tags', tagsCollection);
+  eleventyConfig.addCollection('articles', articlesCollection);
+  eleventyConfig.addCollection('blogPosts', blogPostsCollection);
   eleventyConfig.addCollection('reference', extensionsReferenceCollection);
   eleventyConfig.addCollection('partials', (collections) => {
     return collections
@@ -128,6 +134,8 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('updateSvgForInclude', updateSvgForInclude);
   eleventyConfig.addFilter('slugify', slugify);
   eleventyConfig.addFilter('toc', toc);
+  eleventyConfig.addFilter('getContentType', getContentType);
+  eleventyConfig.addFilter('indexOfPostByUrl', indexOfPostByUrl);
   eleventyConfig.addFilter('ensureUniqueHrefInProduction', ensureUniqueHrefInProduction);
   eleventyConfig.addFilter('typeof', x => typeof x);
   eleventyConfig.addNunjucksAsyncFilter('minifyHtml', minifyHtml);
