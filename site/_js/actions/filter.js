@@ -27,6 +27,6 @@ export const removeEntry = store.action((state, name, entry) => {
   return state;
 });
 
-export const clearFilters = store.action(state => {
+export const clearFilters = store.action(() => {
   return {filters: {}};
 });

@@ -20,7 +20,7 @@
 import {BaseElement} from './base-element';
 
 import {store} from '../store';
-import {removeEntry, clearFilters} from '../actions/filter';
+import {clearFilters} from '../actions/filter';
 
 export class FilterModal extends BaseElement {
   constructor() {
