@@ -2,8 +2,21 @@ const BlocksToMarkdown = require('@sanity/block-content-to-markdown');
 const groq = require('groq');
 const client = require('../sanity/sanityClient.js');
 const serializers = require('../sanity/serializers');
-// const overlayDrafts = require('../sanity/overlayDrafts')
 // const hasToken = !!client.config().token
+
+function overlayDrafts(docs) {
+  const reducer = (acc, curr, i, collection) => {
+    // If draft, add it to array
+    if (/^drafts\..*/.test(curr._id) || !collection.find(({_id}) => _id === `drafts.${curr._id}`)) {
+      return [
+        ...acc, curr
+      ]
+    }
+    return acc
+  }
+  return docs.reduce(reducer, []);
+}
+
 
 function generatePost(post) {
   return {
@@ -39,9 +52,7 @@ async function getPosts() {
   const query = [filter, projection].join(' ');
   const docs = await client.fetch(query).catch(err => console.error(err));
 
-  // const reducedDocs = overlayDrafts(hasToken, docs)
-  // const preparePosts = reducedDocs.map(generatePost)
-  const preparePosts = docs.map(generatePost);
+  const preparePosts = overlayDrafts(docs).map(generatePost);
   return preparePosts;
 }
 
