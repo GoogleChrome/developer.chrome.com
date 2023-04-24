@@ -32,6 +32,10 @@
     </div>
   {% endif %}
 
+  {% if pd.source %}
+    <p class="type--caption gap-bottom-100"> Source: {{ pd.source }} </p>
+  {% endif %}
+
   <h2 class="type--h5">
     <a class="surface display-inline-flex color-text" href="{{ post.url }}">
       {{ pd.title | md | safe }}
@@ -40,7 +44,7 @@
 
 {% if not thumbnail %}
   <p class="type--caption gap-top-200">
-     {{ pd.description | md | safe }}
+     {{ pd.description | safe }}
   </p>
 {% endif %}
 

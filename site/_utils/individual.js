@@ -18,8 +18,19 @@
  * Reusable hooks for generating single pages for collections, e.g. authors.
  */
 
+
+const path = require('path');
+const fs = require('fs');
+
 const addPagination = require('../_utils/add-pagination');
 const filterByLocale = require('../_filters/filter-by-locale');
+const {defaultLocale} = require('../_data/site.json');
+
+const authorsDataFile = path.join(
+  __dirname,
+  '../../external/data/external-posts.json'
+);
+const authorsFeeds = JSON.parse(fs.readFileSync(authorsDataFile, 'utf-8'));
 
 /**
  * @param {VirtualCollectionItem[]} items
@@ -29,11 +40,31 @@ const filterByLocale = require('../_filters/filter-by-locale');
 const individual = (items, locale) => {
   /** @type PaginatedPage[] */
   let paginated = [];
-  for (const item of items) {
-    if (item.elements?.length > 0) {
-      paginated = paginated.concat(
-        addPagination(filterByLocale(item.elements, locale), item)
-      );
+  for (const item in items) {
+    authorsFeeds.map(authorFeeds => {
+      for (const author in authorFeeds) {
+        if (items[item].key === author) {
+          items[item] = items[item] || {};
+          const feeds = authorFeeds[author];
+
+          feeds.forEach((feed) => {
+            const element = {
+              title: feed.title,
+              description: feed.summary,
+              source: feed.source,
+              locale: defaultLocale,
+              date: new Date(feed.date),
+              url: feed.url,
+            };
+            (items[item].elements = items[item].elements || []).push(element);
+          });
+        }
+      }
+    });
+
+    if (items[item].elements?.length > 0) {
+      const posts = filterByLocale(items[item].elements, locale);
+      paginated = paginated.concat(addPagination(posts, items[item]));
     }
   }
   return paginated;
