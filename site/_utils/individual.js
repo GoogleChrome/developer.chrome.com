@@ -18,7 +18,6 @@
  * Reusable hooks for generating single pages for collections, e.g. authors.
  */
 
-
 const path = require('path');
 const fs = require('fs');
 
@@ -47,7 +46,7 @@ const individual = (items, locale) => {
           items[item] = items[item] || {};
           const feeds = authorFeeds[author];
 
-          feeds.forEach((feed) => {
+          feeds.forEach(feed => {
             const element = {
               title: feed.title,
               description: feed.summary,
