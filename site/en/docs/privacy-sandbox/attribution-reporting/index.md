@@ -169,12 +169,13 @@ Other features proposed in this API include:
   see or click an ad on mobile and convert on desktop.
 
 {% Aside %}
-In a future without third-party cookies, this API would be combined with other privacy-preserving
-ads APIs to cover end-to-end use cases:
+
+In a future without third-party cookies, this API would be combined with other privacy-preserving ads APIs to cover end-to-end use cases:
 
 - Remarketing: see [FLEDGE](/docs/privacy-sandbox/fledge/)
 - Interest-based ad selection: see [Topics](/docs/privacy-sandbox/topics/)
-  {% endAside %}
+
+{% endAside %}
 
 ## Browser support
 
@@ -260,10 +261,16 @@ an ad, with a subsequent conversion on an advertiser site.
 {: #billing }
 
 {% Aside %}
-The Attribution Reporting API may not be suited for cost-per-conversion billing needs, because of the noise added to event-level and [summary reports](/docs/privacy-sandbox/aggregation-service/#noise-scale).
 
-You can share any feedback regarding the impact on various billing models by the Attribution Reporting API on [GitHub](https://github.com/WICG/attribution-reporting-api/issues).
-{% endAsid %}
+The Attribution Reporting API may not be suited for cost-per-conversion billing
+needs, because of the noise added to event-level and
+[summary reports](/docs/privacy-sandbox/aggregation-service/#noise-scale).
+
+You can share any feedback regarding the impact on various billing models by
+the Attribution Reporting API on
+[GitHub](https://github.com/WICG/attribution-reporting-api/issues).
+
+{% endAside %}
 
 ### Event-level reports
 
