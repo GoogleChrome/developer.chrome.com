@@ -204,7 +204,7 @@ Most notably, with the Attribution Reporting API proposed by Chrome:
 
 {% endDetails %}
 
-## What browser configuration is available? {: #browser-configuration }
+### Browser configuration {: #browser-configuration }
 
 - Users can opt out of the API via the user settings at `chrome://settings/privacySandbox`.
 - The API is not active in **Incognito** mode.
@@ -253,9 +253,17 @@ Permissions-Policy: attribution-reporting=()
 
 ## How does the Attribution Reporting API work?
 
-The Attribution Reporting API enables the measurement of two events that are linked together: an
-event on a publisher's website, such as a user viewing or clicking an ad, with a subsequent
-conversion on an advertiser site.
+The Attribution Reporting API enables measureing two events that are linked
+together: an event on a publisher's website, such as a user viewing or clicking
+an ad, with a subsequent conversion on an advertiser site.
+
+{: #billing }
+
+{% Aside %}
+The Attribution Reporting API may not be suited for cost-per-conversion billing needs, because of the noise added to event-level and [summary reports](/docs/privacy-sandbox/aggregation-service/#noise-scale).
+
+You can share any feedback regarding the impact on various billing models by the Attribution Reporting API on [GitHub](https://github.com/WICG/attribution-reporting-api/issues).
+{% endAsid %}
 
 ### Event-level reports
 
