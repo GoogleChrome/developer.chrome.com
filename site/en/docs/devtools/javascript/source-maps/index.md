@@ -13,6 +13,8 @@ description: "Keep your client-side code readable and debuggable even after you'
 Keep your client-side code readable and debuggable even after you've combined, minified or compiled
 it. Use source maps to map your source code to your compiled code in the **Sources** panel.
 
+{% YouTube id='SkUcO4ML5U0' %}
+
 ## Get started with preprocessors {: #get_started_with_preprocessors }
 
 Source maps from preprocessors cause DevTools to load your original files in addition to your minified ones.
@@ -44,6 +46,10 @@ In {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt
 {% Aside %}
 You might also want to check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable CSS source maps**.
 {% endAside %}
+
+## Check if source maps load sucessfully {: #developer-resources }
+
+See [Developer Resources: View and load source maps manually](/docs/devtools/developer-resources).
 
 ## Debugging with source maps {: #debugging_with_source_maps }
 
