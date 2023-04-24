@@ -6,6 +6,8 @@ description: The manifest.json file requires a slightly different format for Man
 date: 2023-03-09
 ---
 
+{% Partial 'extensions/mv3-support.md' %}
+
 The `manifest.json` file requires a slightly different format for Manifest V3 than for Manifest V2. This page describes changes that only affect the `manifest.json` file. But many of the changes to scripts and pages also require changes to the manifest. Those changes are covered with the migration tasks that require them.
 
 ## Change the manifest version number {: #change-version }

@@ -95,10 +95,13 @@ async function injectAd() {
 
   // Run the URL selection operation to determine the next content rendered.
   const urls = DEMO_CONTENT_CONFIG.map(({ url }) => ({ url }));
-  const opaqueURL = await window.sharedStorage.selectURL('content-rotation', urls, { data: DEMO_CONTENT_CONFIG });
+  const fencedFrameConfig = await window.sharedStorage.selectURL('content-rotation', urls, { 
+    data: DEMO_CONTENT_CONFIG,
+    resolveToConfig: true
+  });
 
   // Render the opaque URL into a fenced frame
-  document.getElementById('content-slot').src = opaqueURL;
+  document.getElementById('content-slot').config = fencedFrameConfig;
 }
 
 injectAd();

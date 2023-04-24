@@ -6,6 +6,8 @@ description: A quick reference for upgrading your extensions from Manifest V2 to
 date: 2023-03-09
 ---
 
+{% Partial 'extensions/mv3-support.md' %}
+
 The checklists below are here to help you keep track of your migration work. They define tasks that must be completed with links to instructions. Migration work is broadly divided into five categories as described in the [Migration summary](). 
 
 {% Details  'open' %}

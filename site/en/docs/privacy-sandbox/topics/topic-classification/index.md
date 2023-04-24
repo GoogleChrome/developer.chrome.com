@@ -230,14 +230,13 @@ In addition to the user's ability to opt out, you can opt out of Topics for your
 ## Using the Topics API on websites with `prebid.js`
 
 As noted in the release of [Prebid 7](https://prebid.org/blog/the-release-of-prebid-7-0/), 
-the community is actively developing an integration with the Topics API via a new module. 
-However, as of November 2022, the Topics Module has not yet been completed. To stay abreast with the 
-development, we recommend the following:
+the community actively developed an integration with the Topics API via a new module. 
+This module was merged in December 2022.
 
-- Follow [Prebid PR #8947: Topics module: Initial Topics iframe implementation](https://github.com/prebid/Prebid.js/pull/8947), which is the PR to create the Prebid Topics Module.
-- Follow [Prebid Issue #8741: Enhancements to Topics module](https://github.com/prebid/Prebid.js/pull/8741), which has an active discussion on the Prebid Topics module's intended workflow.
-- If this is a high dependency, reach out to Prebid.js to check in on status updates and timelines, 
-through whatever standard channel they offer.
+Learn more here:
+
+- Read Prebid's [Topics API module documentation](https://docs.prebid.org/dev-docs/modules/topicsFpdModule.html).
+- For more information, reach out to Prebid.js through whatever standard channel they offer.
 
 
 ## Next steps

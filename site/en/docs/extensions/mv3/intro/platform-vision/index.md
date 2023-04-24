@@ -21,6 +21,8 @@ date: 2020-11-09
 
 ---
 
+{% Partial 'extensions/mv3-support.md' %}
+
 Chrome extensions are one of the most-loved and most-used features of the
 Chrome browser.  Extensions can solve a myriad of use cases for a diverse set
 of users, and in one form or another they are becoming a staple feature of most
