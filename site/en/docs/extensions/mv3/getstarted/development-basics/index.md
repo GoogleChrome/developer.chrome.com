@@ -95,7 +95,7 @@ alt="Pinning the extension", width="358", height="248", class="screenshot" %}
   </figcaption>
 </figure>
 
-Click on the extension’s action icon(toolbar icon); you should see a popup.
+Click on the extension’s action icon (toolbar icon); you should see a popup.
 
 <figure>
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/xjKRmWMgwMm7Kdf72bkj.png", 
