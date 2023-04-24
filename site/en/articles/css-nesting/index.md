@@ -283,7 +283,7 @@ elements must have both classes present in order to be selected.
 
 ```css
 .demo .lg.triangle,
-.demo .lg.square {
+.demo .lg.circle {
   opacity: .25;
   filter: blur(25px);
 }
