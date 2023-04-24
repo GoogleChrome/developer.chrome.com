@@ -5,18 +5,18 @@ const serializers = require('../sanity/serializers');
 // const hasToken = !!client.config().token
 
 function overlayDrafts(docs) {
-  const reducer = (acc, curr, i, collection) => {
+  const reducer = (acc, curr, _i, collection) => {
     // If draft, add it to array
-    if (/^drafts\..*/.test(curr._id) || !collection.find(({_id}) => _id === `drafts.${curr._id}`)) {
-      return [
-        ...acc, curr
-      ]
+    if (
+      /^drafts\..*/.test(curr._id) ||
+      !collection.find(({_id}) => _id === `drafts.${curr._id}`)
+    ) {
+      return [...acc, curr];
     }
-    return acc
-  }
+    return acc;
+  };
   return docs.reduce(reducer, []);
 }
-
 
 function generatePost(post) {
   return {
