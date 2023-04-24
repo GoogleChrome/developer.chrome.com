@@ -1,13 +1,13 @@
 ---
 layout: "layouts/blog-post.njk"
-title: "How the new breakpoint sidebar pane helps you to get things done faster"
+title: “How the new Breakpoints sidebar helps you debug faster”
 authors:
   - kimanh
   - vaatika
-description: Breakpoints are at the heart of debugging. To ease common actions such as removing or disabling breakpoints, we’ve redesigned the breakpoint sidebar pane to allow actions to be achievable via one click.
-date: 2023-05-02
-hero: 'image/tech-writer-will-create-one'
-alt: ''
+description: “To make it easier to perform common actions such as deleting or disabling breakpoints, we've redesigned the breakpoints sidebar so that you can perform them with a single click.”
+date: 2023-04-11
+hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/SY5h3eWJ9kamVHVWE67H.jpg'
+alt: 'Have a break during debugging with the new Breakpoints sidebar.'
 tags:
     - devtools-engineering
     - devtools
