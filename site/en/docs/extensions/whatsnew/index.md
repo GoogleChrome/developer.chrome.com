@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-04-14
+updated: 2023-04-24
 tags:
   - extensions-news
 
@@ -15,6 +15,12 @@ tags:
 
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about many of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).)
+
+### More troubleshooting tips for Web Store violations
+
+<p class="color-secondary-text type--caption">Posted on <time>April 24, 2023</time></p>
+
+To help with Chrome Web Store publishing, we added new guidance in two areas. Guidance for [minimum functionality](/docs/webstore/troubleshooting/#minimum-functionality) centers around providing users with benefits and enriching their browsing experience. Guidance for [affiliate ads](/docs/webstore/troubleshooting/#affiliate-ads) is about making users are aware of extensions using affiliate links or codes for monetization, and giving them some amount of control by requiring user action before inclusion.
 
 ### New instructions for the Extension Manifest Converter
 
