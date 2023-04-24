@@ -17,6 +17,7 @@ draft: true
 *이 게시글의 번역에는 [최원영](https://www.linkedin.com/in/toruchoi)님이 참여하셨으며, [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님과 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다.*
 
 {% Partial 'devtools/banner.md' %}
+{% YouTube id='CrSmjooOEiE' %}
 
 <!-- Translation instructions:
   1. Remove the "draft: true" tag above when submitting PR
@@ -83,7 +84,7 @@ Chromium issue: [1381971](https://crbug.com/1381971)
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/0b9c42efb6065c8a697eaf3acd656cb87e3d4f54 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/b6bddcbabb2d977b620758ac20785675053a4db9  #}
 
-Chromium issues: [1383453](https://crbug.com/1383453), [1382752](https://crbug.com/1382752), [1382397](https://crbug.com/1382397) 
+Chromium issues: [1383453](https://crbug.com/1383453), [1382752](https://crbug.com/1382752), [1382397](https://crbug.com/1382397)
 
 
 <!-- ## Better syntax highlight and inline preview for Vue, SCSS and more {: #highlight } -->
@@ -96,9 +97,9 @@ Chromium issues: [1383453](https://crbug.com/1383453), [1382752](https://crbug.c
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/uLxVoWz3yyxYvOkgCq7t.png", alt="Inline preview for Vue.", width="800", height="700" %}
 
-<!-- Apart from that, DevTools now shows the sourcemap of a stylesheet in the **Sources** panel. For instance, when you open a SCSS file, you can access the related CSS file by clicking on the sourcemap link. -->
+<!-- Apart from that, DevTools now shows the source map of a stylesheet in the **Sources** panel. For instance, when you open a SCSS file, you can access the related CSS file by clicking on the sourcemap link. -->
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/bK6TMGR8c6285bUlrIbx.png", alt="Sourcemap link for SASS.", width="800", height="745" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/bK6TMGR8c6285bUlrIbx.png", alt="Source map link for SASS.", width="800", height="745" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/c9af6b86b85bf23f9ed07d68b2d58b45910426de #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/4f330a0d5cef6e74b5b73f258e55cc0960769bca #}

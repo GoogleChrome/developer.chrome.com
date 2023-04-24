@@ -21,9 +21,7 @@ tags:
 
 ## Implementation status
 
-- [Origin trial](/origintrials/#/view_trial/1239615797433729025) available from Chrome 100 to 106
-- [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/_dJFNJpf91U) 
-- [Chrome Platform Status](https://chromestatus.com/feature/5179189105786880)
+{% Partial 'privacy-sandbox/timeline/chips.njk' %}
 
 ## What is CHIPS
 

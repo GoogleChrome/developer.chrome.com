@@ -20,7 +20,7 @@ A topic, in the Topics API, is a subject a user is interested in as evidenced by
 
 Topics are a signal to help ad tech platforms select relevant ads. Unlike third-party cookies, this information is shared without revealing further information about the user themself or the user's browsing activity.
 
-The Topics API allows third parties, such as ad tech platforms, to observe and then access topics of interest to a user. For example, the API might suggest the topic "Fiber & Textile Arts" for a user who visits the website `knitting.example`. 
+The Topics API allows third parties, such as ad tech platforms, to observe and then access topics of interest to a user. For example, the API might suggest the topic "Fiber &amp; Textile Arts" for a user who visits the website `knitting.example`. 
 
 The list of topics used by the Topics API is public, human-curated, human-readable, and designed to avoid sensitive categories. This is [the current list](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md), which will expand over time. The list is structured as a _taxonomy_. The topics can be high-level or more specific. For example, `Food & Drink` is a broad category, with a subcategory of `Cooking & Recipes`. Subcategories may be further divided into additional subcategories.
 
@@ -46,6 +46,7 @@ The classifier model for mapping hostnames to topics is publicly available, and 
 
 Only sites that include code that calls the Topics API are included in the browsing history eligible for topic frequency calculations, and API callers only receive topics they've observed. In other words, sites are not eligible for topic frequency calculations without the site or an embedded service callingß the API.
 
+{: #caller}
 {% Aside 'key-term' %}
 
 A Topics API _caller_ is the entity that observes and requests topics with
@@ -63,12 +64,6 @@ caller must observe and request topics from the same origin.
 {% endAside %}
 
 In addition, a caller can only receive topics that their code has "seen." So if another caller's code registered a topic, say `/Autos & Vehicles/Motor Vehicles (By Type)/Hatchbacks`, for a user's browser and your code did not cause that topic to be registered for that user's browser, you will not be able to learn of that topic of interest for that user's browser when you call the API from your embedded code.
-
-Sites can block topic calculation for their visitors with the following [Permissions-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy) header:
-
-```text
-Permissions-Policy: browsing-topics=()
-```
 
 ## The classifier model {: #classifier-model}
 
@@ -133,9 +128,9 @@ The table below outlines an example (though unrealistically small) of a hypothet
 <table class="with-heading-tint">
   <thead>
   <tr>
-  <th><strong>Site</strong></th>
-  <th><strong>Topics</strong></th>
-  <th><strong>API callers on site</strong></th>
+  <th>Site</th>
+  <th>Topics</th>
+  <th>API callers on site</th>
   </tr>
   </thead>
   <tbody>
@@ -151,12 +146,12 @@ The table below outlines an example (though unrealistically small) of a hypothet
     </tr>
     <tr>
     <td>hiking-holiday.example</td>
-    <td>Fitness, Travel & Transportation</td>
+    <td>Fitness, Travel &amp; Transportation</td>
     <td>adtech2.example</td>
     </tr>
     <tr>
     <td>diy-clothing.example</td>
-    <td>Crafts, Fashion & Style</td>
+    <td>Crafts, Fashion &amp; Style</td>
     <td>[none]</td>
     </tr>
   </tbody>
@@ -165,19 +160,19 @@ The table below outlines an example (though unrealistically small) of a hypothet
 At the end of the epoch (currently proposed to be one week) the Topics API generates the browser's top topics for the week.
 
 - adtech1.example is now eligible to receive the "Fitness" and "Crafts" topics, since it observed them on yoga.example and also on knitting.example.
-- adtech1.example is not eligible to receive the "Travel & Transportation" topic for this user as it is not present on any sites the user visited recently that are associated with that topic.
-- adtech2.example has seen the "Fitness" and "Travel & Transportation" topics, but has not seen the "Crafts" topic.
+- adtech1.example is not eligible to receive the "Travel &amp; Transportation" topic for this user as it is not present on any sites the user visited recently that are associated with that topic.
+- adtech2.example has seen the "Fitness" and "Travel &amp; Transportation" topics, but has not seen the "Crafts" topic.
 
-The user visited diy-clothing.example, which has the "Fashion & Style" topic, but there were no calls to the Topics API on that site. At this point, this means the "Fashion & Style" topic would not be returned by the API for any caller.
+The user visited diy-clothing.example, which has the "Fashion &amp; Style" topic, but there were no calls to the Topics API on that site. At this point, this means the "Fashion &amp; Style" topic would not be returned by the API for any caller.
 
 In week two, the user visits another site:
 
 <table class="with-heading-tint">
   <thead>
     <tr>
-    <th><strong>Site</strong></th>
-    <th><strong>Topics</strong></th>
-    <th><strong>API callers on site</strong></th>
+    <th>Site</th>
+    <th>Topics</th>
+    <th>API callers on site</th>
     </tr>
   </thead>
   <tbody>
@@ -194,23 +189,23 @@ In addition, code from adtech2.example is added to diy-clothing.example:
 <table class="with-heading-tint">
   <thead>
     <tr>
-    <th><strong>Site</strong></th>
-    <th><strong>Topics</strong></th>
-    <th><strong>API callers on site</strong></th>
+    <th>Site</th>
+    <th>Topics</th>
+    <th>API callers on site</th>
     </tr>
   </thead>
   <tbody>
     <tr>
     <td>diy-clothing.example</td>
-    <td>Crafts, Fashion & Style</td>
+    <td>Crafts, Fashion &amp; Style</td>
     <td>adtech2.example</td>
     </tr>
   </tbody>
 </table>
 
-As well as "Fitness" and "Travel & Transportation" from week 1, this means that adtech2.example will now be able to receive the "Crafts" and "Fashion & Style" topic — but not until the following epoch, week 3. This ensures that third parties can't learn more about a user's past (in this case, an interest in fashion) than they could with cookies.
+As well as "Fitness" and "Travel &amp; Transportation" from week 1, this means that adtech2.example will now be able to receive the "Crafts" and "Fashion &amp; Style" topic — but not until the following epoch, week 3. This ensures that third parties can't learn more about a user's past (in this case, an interest in fashion) than they could with cookies.
 
-After another two weeks, "Fitness" and "Travel & Transportation" may drop out of adtech2.example's list of eligible topics if the user doesn't visit any sites with those topics that include code from adtech2.example.
+After another two weeks, "Fitness" and "Travel &amp; Transportation" may drop out of adtech2.example's list of eligible topics if the user doesn't visit any sites with those topics that include code from adtech2.example.
 
 ## User controls, transparency, and opting out {: #opt-out}
 
@@ -225,6 +220,24 @@ The list of topics returned will be empty if:
 - The browser is in Incognito mode.
 
 The explainer [provides more detail about privacy goals](https://github.com/jkarlin/topics#meeting-the-privacy-goals) and how the API seeks to address them.
+
+{: #opt-out }
+
+### Site opt out
+
+In addition to the user's ability to opt out, you can opt out of Topics for your site or pages on it. The [Developer guide](/docs/privacy-sandbox/topics/#site-opt-out) explains how.
+
+## Using the Topics API on websites with `prebid.js`
+
+As noted in the release of [Prebid 7](https://prebid.org/blog/the-release-of-prebid-7-0/), 
+the community actively developed an integration with the Topics API via a new module. 
+This module was merged in December 2022.
+
+Learn more here:
+
+- Read Prebid's [Topics API module documentation](https://docs.prebid.org/dev-docs/modules/topicsFpdModule.html).
+- For more information, reach out to Prebid.js through whatever standard channel they offer.
+
 
 ## Next steps
 

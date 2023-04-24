@@ -18,6 +18,8 @@ tags:
 	.type figcaption {text-align:left;}
 </style>
 
+{% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
+
 FLEDGE ([Android](https://developer.android.com/design-for-safety/ads/fledge),
 [Chrome](/docs/privacy-sandbox/fledge/#overview)) is a Privacy Sandbox proposal
 to let marketers target ads to custom audiences, based on audience members'

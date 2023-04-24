@@ -53,3 +53,4 @@ An organization may have different top-level domains for:
 -   [Chrome Platform Status](https://chromestatus.com/feature/5640066519007232)
 -   [Chromium Projects](https://www.chromium.org/updates/first-party-sets)
 -   [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)
+-   [Create an issue](https://github.com/privacycg/first-party-sets/issues) on the proposal repo for questions about the proposal.

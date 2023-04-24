@@ -96,6 +96,15 @@ important:
   ru: 'Важный'
   zh: '重要的'
 
+update:
+  en: Update
+  es: Actualizar
+  ja: 更新
+  ko: 업데이트
+  pt: Atualizar
+  ru: Обновлять
+  zh: 更新
+
 key-term:
   en: 'Key Term'
   es: 'Término Clave'
@@ -291,6 +300,9 @@ outdated_banner:
     en: This content is outdated and no longer accurate.
   new_material:
     en: New material available
+
+filter_by:
+  en: 'Filter by'
 
 rss_feed:
   en: RSS feed

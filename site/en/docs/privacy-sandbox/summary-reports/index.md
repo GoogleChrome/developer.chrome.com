@@ -27,10 +27,10 @@ sites.
 
 Summary reports are created in two contexts:
 
-* **Ads measurement**: adtechs can generate summary reports with
+* **Ads measurement**: ad techs can generate summary reports with
   [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting-introduction/), to
   measure when an ad click or view leads to a conversion on an advertiser site,
-  such as a sale or a sign-up. Adtechs can also generate summary reports for
+  such as a sale or a sign-up. Ad techs can also generate summary reports for
   [FLEDGE auctions with Private Aggregation](/docs/privacy-sandbox/private-aggregation/#with-fledge).
 * **General cross-site reporting**: developers capture cross-site data in
   Shared Storage, and can report on that data with

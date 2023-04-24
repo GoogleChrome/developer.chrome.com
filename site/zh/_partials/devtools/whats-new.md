@@ -101,7 +101,7 @@
 * [在运行时附加 Wasm 调试信息](/zh/blog/new-in-devtools-105/#wasm)
 * [调试时支持实时编辑](/zh/blog/new-in-devtools-105/#live-edit)
 * [在样式窗格的规则中查看和编辑@scope](/zh/blog/new-in-devtools-105/#scope)
-* [Sourcemap 改进](/zh/blog/new-in-devtools-105/#sourcemaps)
+* [Source map 改进](/zh/blog/new-in-devtools-105/#sourcemaps)
 * [其他的更新](/zh/blog/new-in-devtools-105/#misc)
 
 
@@ -117,7 +117,7 @@
 * [在自动填充层叠样式表（CSS）时预览非颜色数值的值](/zh/blog/new-in-devtools-104/#css-var)
 * [识别退后/前进缓存面板中的阻塞帧](/zh/blog/new-in-devtools-104/#bfcache)
 * [优化 JavaScript 对象的自动填充建议功能](/zh/blog/new-in-devtools-104/#autocomplete)
-* [优化 Sourcemaps 功能](/zh/blog/new-in-devtools-104/#sourcemaps)
+* [优化 Source maps 功能](/zh/blog/new-in-devtools-104/#sourcemaps)
 * [其他的更新](/zh/blog/new-in-devtools-104/#misc)
 
 
@@ -132,7 +132,7 @@
 * [改进调试期间的 inline 值预览问题](/zh/blog/new-in-devtools-103/#inline-preview)
 * [Virtual authenticators 支持大型 blob](/zh/blog/new-in-devtools-103/#webauthn)
 * [Sources 面板支持新的键盘快捷键](/zh/blog/new-in-devtools-103/#shortcuts)
-* [Sourcemaps 改进](/zh/blog/new-in-devtools-103/#sourcemaps)
+* [Source maps 改进](/zh/blog/new-in-devtools-103/#sourcemaps)
 
 
 ### Chrome 102 {: #chrome102 }
@@ -175,7 +175,7 @@
 * [应用面板里面的 报告 API（Reportng API）新边栏](/zh/blog/new-in-devtools-99/#reporting-api)
 * [支持 Recorder 面板一直处于等待状态，直到元素可见或可点击](/zh/blog/new-in-devtools-99/#recorder)
 * [更好的控制台样式，格式化和过滤](/zh/blog/new-in-devtools-99/#console)
-* [使用 sourcemap 文件来调试 Chrome 扩展](/zh/blog/new-in-devtools-99/#extension)
+* [使用 source map 文件来调试 Chrome 扩展](/zh/blog/new-in-devtools-99/#extension)
 * [优化 Sources 面板里面源文件夹树的显示问题](/zh/blog/new-in-devtools-99/#source-tree)
 * [Sources 面板里面显示 Worker 源文件](/zh/blog/new-in-devtools-99/#worker-sourcemap)
 * [Chrome 自动深色模式的更新](/zh/blog/new-in-devtools-99/#auto-dark-mode)

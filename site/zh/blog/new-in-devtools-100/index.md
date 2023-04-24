@@ -153,8 +153,8 @@ Chromium 议题: [1261130](https://crbug.com/1261130)
 为[模拟的设备](/docs/devtools/device-mode/#device)更新了 iPhone 的用户代理字符串。所有 iPhone 5 之后的版本都会带有 iPhone OS 13_2_3 的用户代理字符串。([1289553](https://crbug.com/1289553))
 <!-- - You can now save [snippet](/docs/devtools/javascript/snippets/) as a JavaScript file directly. Previously, you needed to append `.js` file extension manually. ([1137218](https://crbug.com/1137218)) -->
 您现在可以将[代码段](/docs/devtools/javascript/snippets/)直接存为一个 JavaScript 文件。在此之前，您需要手动添加 `.js` 文件名后缀。([1137218](https://crbug.com/1137218))
-<!-- - The **Sources** panel now correctly displays scope variable names when debugging with sourcemap. Previously, the **Sources** panel displays minified scope variable names despite sourcemap being provided. ([1294682](https://crbug.com/1294682))  -->
-**来源**面板现在在调试带有来源映射（sourcemap）的代码时，可以正确展示作用域变量名了。在此之前，**来源**面板即使在有来源映射的情况下，还是会展示压缩之后的作用域变量名。([1294682](https://crbug.com/1294682))
+<!-- - The **Sources** panel now correctly displays scope variable names when debugging with source map. Previously, the **Sources** panel displays minified scope variable names despite sourcemap being provided. ([1294682](https://crbug.com/1294682))  -->
+**来源**面板现在在调试带有来源映射（source map）的代码时，可以正确展示作用域变量名了。在此之前，**来源**面板即使在有来源映射的情况下，还是会展示压缩之后的作用域变量名。([1294682](https://crbug.com/1294682))
 <!-- - The **Sources** panel now restores scroll position correctly on page load. Previously, the position was not restored correctly causing inconvenience in debugging. ([1294422](https://crbug.com/1294422))  -->
 **来源**面板现在可以在页面重加载后正确恢复滚动位置。在此之前，滚动位置没有正确恢复，造成了调试的不便。
 

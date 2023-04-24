@@ -6,18 +6,16 @@ authors:
   - jecelynyeen
 date: 2023-03-09
 description: ""
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GJvLUWB0oNIje3SXYusK.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/gctGASDKBFTUtOQqVq2H.png'
 alt: 'Recorder replay customization, CSS documentation, ignore-listing irrelevant scripts, enhanced logpoint debugging, and more.'
 tags:
   - new-in-devtools
   - devtools
   - chrome-112
 ---
-<!--image/dPDCek3EhZgLQPGtEG3y0fTn4v82/gctGASDKBFTUtOQqVq2H.png  -->
 
 {% Partial 'devtools/banner.md' %}
-
-*No 'What's new in DevTools' video for this release. Check out the latest DevTools Tips video to learn [how to identify and fix CSS issues with the Styles pane](https://youtu.be/iuZx0kHS0Xs).*
+{% YouTube id='CrSmjooOEiE' %}
 
 <!-- $contentStart -->
 
@@ -189,6 +187,8 @@ Chromium issues: [1412719](https://crbug.com/1412719), [1412721](https://crbug.c
 
 The **Lighthouse** panel now runs [Lighthouse 10.0.1](/blog/lighthouse-10-0/). For more details, see [What's new in Lighthouse 10.0.1](/blog/lighthouse-10-0/).
 
+To learn the basics of using the **Lighthouse** panel in DevTools, see [Lighthouse: Optimize website speed](/docs/devtools/lighthouse/).
+
 **Lighthouse** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ZtDyFg7cjkxacORB3GQn.svg", alt="Empty checkbox.", width="24", height="24" %} **Legacy navigation** is now disabled by default. This option uses legacy [Lighthouse configuration](https://github.com/GoogleChrome/lighthouse/blob/main/docs/configuration.md) in navigation mode.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/mYuX9d2TFaJuWBOYGN5R.png", alt="Disabled legacy navigation.", width="800", height="548" %}
@@ -203,6 +203,16 @@ Lighthouse 10 now uses Moto G Power as the [default emulation device](https://gi
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/24e50e4e50bc6e19930df75385c316ba866e9588 #}
 
 Chromium issue: [772558](https://crbug.com/772558).
+
+## A Console warning to remove your no-op service worker fetch handler {: #no-op-fetch-warning }
+
+Chrome 112 [skips no-op (no operation) service worker fetch handlers](/blog/chrome-112-beta/#skip-service-worker-no-op-fetch-handler) because they may slow down navigation but don't serve a purpose. Such handlers are no longer required for your website to quialify as a [Progressive Web App](https://web.dev/learn/pwa/).
+
+The **Console** now shows a warning if it finds a no-op fetch handler on your website. Consider removing it.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/iUIdhYydmTLHbF9xpM3p.png", alt="A no-op fetch handler and the corresponding warning in the Console.", width="800", height="539" %}
+
+Chromium issue: [1347319](https://crbug.com/1347319).
 
 ## Miscellaneous highlights {: #misc }
 
