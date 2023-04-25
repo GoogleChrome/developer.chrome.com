@@ -14,11 +14,17 @@
  * limitations under the License.
  */
 
-function indexOfPostByUrl(collection, url) {
-  if(collection){
-  return collection.findIndex(element => element.url === url);
-  }else{
-    return -1
+/**
+ * Returns the position of the post in the collection
+ * @param {string} postUrl
+ * @param {EleventyCollectionItem[]} collection
+ * @return {number}
+ */
+function indexOfPostByUrl(collection, postUrl) {
+  if (collection) {
+    return collection.findIndex(element => element.url === postUrl);
+  } else {
+    return -1;
   }
 }
 

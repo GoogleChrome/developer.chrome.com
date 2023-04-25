@@ -14,8 +14,13 @@
  * limitations under the License.
  */
 
-function getContentType(pageUrl) {
-  return pageUrl.split('/')[2];
+/**
+ * From the url of the post returns the content type (blog, articles, doc)
+ * @param {string} postUrl
+ * @return {string}
+ */
+function getContentType(postUrl) {
+  return postUrl.split('/')[2];
 }
 
 module.exports = {
