@@ -16,6 +16,7 @@ tags:
 *翻訳者の [yoichiro](https://github.com/yoichiro) さん、レビュアーの [technohippy](https://github.com/technohippy) さん、 [lacolaco](https://github.com/lacolaco) さん、 [yoshiko-pg](https://github.com/yoshiko-pg) さんに感謝いたします。*
 
 {% Partial 'devtools/banner.md' %}
+{% YouTube id='CrSmjooOEiE' %}
 
 ## 再読み込み時の Performance パネルのクリア {: #perf }
 
@@ -97,7 +98,7 @@ Chromium issues: [1383453](https://crbug.com/1383453), [1382752](https://crbug.c
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/uLxVoWz3yyxYvOkgCq7t.png", alt="Vue のインラインプレビュー", width="800", height="700" %}
 
-<!-- Apart from that, DevTools now shows the sourcemap of a stylesheet in the **Sources** panel. For instance, when you open a SCSS file, you can access the related CSS file by clicking on the sourcemap link. -->
+<!-- Apart from that, DevTools now shows the source map of a stylesheet in the **Sources** panel. For instance, when you open a SCSS file, you can access the related CSS file by clicking on the sourcemap link. -->
 それとは別に、DevTools は **Sources** パネルにスタイルシートのソースマップを表示するようになりました。具体的には、SCSS ファイルを開いてソースマップリンクをクリックすることで、関連する CSS ファイルにアクセスできます。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/bK6TMGR8c6285bUlrIbx.png", alt="SASS のソースマップリンク", width="800", height="745" %}

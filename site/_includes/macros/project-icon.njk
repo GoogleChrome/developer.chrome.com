@@ -4,6 +4,8 @@
   <div class="project-icon">
     {% set styles = (project_key | embededDoc(docs)).styles %}
     {% set color = styles.project_icon_color %}
+    <div class="project-icon__cover cover-last"{% if color %} style="color: var(--{{color}})"{% endif %}></div>
+    <div class="project-icon__cover cover-mid"{% if color %} style="color: var(--{{color}})"{% endif %}></div>
     <div class="project-icon__cover"{% if color %} style="color: var(--{{color}})"{% endif %}>
       {# svg() looks in "_includes", so find the project image in the parent directory #}
       {{ svg('../_static/images/project/' + project_key | replace("/", "-") + '.svg', {hidden: true}) }}

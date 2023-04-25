@@ -45,6 +45,10 @@ There are two ways to try the Topics API as a single user; you'll need to be run
     --enable-features=BrowsingTopics,PrivacySandboxAdsAPIsOverride,OverridePrivacySandboxSettingsLocalTesting
     ```
 
+{% Aside %}
+Before starting Chrome using flags, quit any Chrome running processes or use "force quit."
+{% endAside %}
+
 ## The Topics API demo
 
 The [Topics demo](https://topics-demo.glitch.me/) shows how to use additional flags to adjust settings, such as epoch length. If you access the Topics API by running Chrome with command-line flags, don't set `chrome://flags`, as these can override command-line settings.
@@ -55,7 +59,7 @@ The [Topics demo](https://topics-demo.glitch.me/) shows how to use additional fl
 
 The demo at [topics-fetch-demo.glitch.me](https://topics-fetch-demo.glitch.me/) shows how to use `fetch()` request and response headers to access topics and mark them as observed.
 
-### Access the `Sec-Browsing-Topics` request header
+### Access the `Sec-Browsing-Topics` request header {: #headers}
 
 Instead of using `document.browsingTopics()` from an iframe to view topics for a user, API callers can access observed topics from the `Sec-Browsing-Topics` request header of a [fetch() request](https://developer.mozilla.org/docs/Web/API/fetch) that includes `{browsingTopics: true}` in its options parameter—or from the same header of an [XHR request](https://developer.mozilla.org/docs/Web/API/fetch) that sets the `deprecatedBrowsingTopics` attribute to `true`.
 

@@ -4,6 +4,7 @@ title: Migrate to a service worker
 subhead: 'Replacing background or event pages with a service worker'
 description: 'A service worker enables extensions to run only when needed, saving resources.'
 date: 2023-03-09
+updated: 2023-04-14
 ---
 
 A service worker replaces the extension's background or event page to ensure that background code stays off the main thread. This enables extensions to run only when needed, saving resources. 
@@ -20,7 +21,7 @@ Service workers has a number of differences with background pages.
 
 - They function off the main thread, meaning they don't interfere with extension content.
 - They have special capabilities such as intercepting fetch events on the extension's origin, such as those from a toolbar popup.
-- They can communicate and interact with other contexts via the [Clients interface](https://developer.mozilla.org/docs/Web/API/Clients)
+- They can communicate and interact with other contexts via the [Clients interface](https://developer.mozilla.org/docs/Web/API/Clients).
 
 ### Changes you'll need to make
 
@@ -75,7 +76,7 @@ Replacing items in `"background.page"` will be dealt with in a later section.
 {% endCompare %}
 </div>
 
-The `"service_worker"` field takes a single string.  To use additional scripts in your service worker, use [importScripts](https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/importScripts) or you can declare the service worker as an [ES Module](https://web.dev/es-modules-in-sw/#static-imports-only) by specifying `"type": "module"` to use the [`import`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import) keyword.
+The `"service_worker"` field takes a single string. You will only need the `"type"` field if you use [ES modules](https://web.dev/es-modules-in-sw/#static-imports-only) (using the [`import`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import) keyword). Its value will always be `"module"`.
 
 ## Move DOM and window calls to an offscreen document {: #move-dom-and-window }
 
@@ -100,7 +101,7 @@ textEl.select();
 document.execCommand('copy');
 ```
 
-Communicate between offscreen documents and extension service workers using  [message passing](/docs/extensions/mv3/messaging/).
+Communicate between offscreen documents and extension service workers using [message passing](/docs/extensions/mv3/messaging/).
 
 ## Register listeners synchronously {: #register-listeners }
 
@@ -113,7 +114,7 @@ chrome.storage.local.get(["badgeText"], ({ badgeText }) => {
 });
 ``` 
 
-This works with a persistent background page because the page is constantly running and never reinitialized. In MV3, the service worker will be reinitialized when the event is dispatched. This means that when the event fires, the listeners will not be registered (since they are added asynchronously), and the event will be missed.
+This works with a persistent background page because the page is constantly running and never reinitialized. In Manifest V3, the service worker will be reinitialized when the event is dispatched. This means that when the event fires, the listeners will not be registered (since they are added asynchronously), and the event will be missed.
 
 Instead, move the event listener registration to the top level of your script. This ensures that Chrome will be able to immediately find and invoke your action's click handler, even if your extension hasn't finished executing its startup logic.
 

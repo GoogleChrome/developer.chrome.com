@@ -4,6 +4,18 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 
 {# $content #}
 
+### Chrome 113 {: #chrome113 }
+
+* [Override network response headers](/blog/new-in-devtools-113/#network)
+* [Nuxt, Vite, and Rollup debugging improvements](/blog/new-in-devtools-113/#debug)
+* [CSS improvements in Elements > Styles](/blog/new-in-devtools-113/#css)
+* [Invalid CSS properties and values](/blog/new-in-devtools-113/#invalid-css)
+* [Links to key frames in the animation shorthand property](/blog/new-in-devtools-113/#animation-key-frames)
+* [New Console setting: Autocomplete on Enter](/blog/new-in-devtools-113/#console)
+* [Command Menu emphasizes authored files](/blog/new-in-devtools-113/#command-menu)
+* [JavaScript Profiler deprecation: Stage two](/blog/new-in-devtools-113/#js-profiler)
+* [Miscellaneous highlights](/blog/new-in-devtools-113/#misc)
+
 ### Chrome 112 {: #chrome112 }
 
 * [Recorder updates](/blog/new-in-devtools-112/#recorder)
@@ -20,7 +32,6 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 * [Emulate reduced contrast](/blog/new-in-devtools-112/#reduced-contrast)
 * [Lighthouse 10](/blog/new-in-devtools-112/#lighthouse)
 * [Miscellaneous highlights](/blog/new-in-devtools-112/#misc)
-
 
 ### Chrome 111 {: #chrome111 }
 
@@ -101,7 +112,7 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 * [Attach Wasm debugging information at runtime](/blog/new-in-devtools-105/#wasm)
 * [Support live edit during debugging](/blog/new-in-devtools-105/#live-edit)
 * [View and edit @scope at rules in the Styles pane](/blog/new-in-devtools-105/#scope)
-* [Sourcemap improvements](/blog/new-in-devtools-105/#sourcemaps)
+* [Source map improvements](/blog/new-in-devtools-105/#sourcemaps)
 * [Miscellaneous highlights](/blog/new-in-devtools-105/#misc)
 
 
@@ -117,7 +128,7 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 * [Preview non-color value when autocompleting CSS variables](/blog/new-in-devtools-104/#css-var)
 * [Identify blocking frames in the Back/forward cache pane](/blog/new-in-devtools-104/#bfcache)
 * [Improved autocomplete suggestions for JavaScript objects](/blog/new-in-devtools-104/#autocomplete)
-* [Sourcemaps improvements](/blog/new-in-devtools-104/#sourcemaps)
+* [Source maps improvements](/blog/new-in-devtools-104/#sourcemaps)
 * [Miscellaneous highlights](/blog/new-in-devtools-104/#misc)
 
 
@@ -132,7 +143,7 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 * [Improved inline value preview during debugging](/blog/new-in-devtools-103/#inline-preview)
 * [Support large blobs for virtual authenticators](/blog/new-in-devtools-103/#webauthn)
 * [New keyboard shortcuts in the Sources panel](/blog/new-in-devtools-103/#shortcuts)
-* [Sourcemaps improvements](/blog/new-in-devtools-103/#sourcemaps)
+* [Source maps improvements](/blog/new-in-devtools-103/#sourcemaps)
 
 ### Chrome 102 {: #chrome102 }
 
@@ -175,7 +186,7 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 * [New Reporting API pane in the Application panel](/blog/new-in-devtools-99/#reporting-api)
 * [Support wait until element is visible/clickable in the Recorder panel](/blog/new-in-devtools-99/#recorder)
 * [Better console styling, formatting and filtering](/blog/new-in-devtools-99/#console)
-* [Debug Chrome extension with sourcemap files](/blog/new-in-devtools-99/#extension)
+* [Debug Chrome extension with source map files](/blog/new-in-devtools-99/#extension)
 * [Improved source folder tree in the Sources panel](/blog/new-in-devtools-99/#source-tree)
 * [Display worker source files in the Sources panel](/blog/new-in-devtools-99/#worker-sourcemap)
 * [Chrome’s Auto Dark Theme updates](/blog/new-in-devtools-99/#auto-dark-mode)
