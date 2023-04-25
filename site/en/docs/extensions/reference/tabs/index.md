@@ -248,7 +248,7 @@ This example demonstrates how an extension's service worker can communicate with
 
 ```js
 function sendMessageToActiveTab(message) {
-  const [tab] = await chrome.tabs.query({active: true, lastFocusedWindow: true });
+  const [tab] = await chrome.tabs.query({ active: true, lastFocusedWindow: true });
   const response = await chrome.tabs.sendMessage(tab.id, message);
   // TODO: Do something with the response.
 }
