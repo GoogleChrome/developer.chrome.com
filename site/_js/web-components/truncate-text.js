@@ -23,7 +23,6 @@ import truncateString from '../utils/truncate-string';
 export class TruncateText extends BaseElement {
   constructor() {
     super();
-    this.fullText = '';
     this.truncatedText = '';
     this.onClick = this.onClick.bind(this);
   }
@@ -31,6 +30,7 @@ export class TruncateText extends BaseElement {
   static get properties() {
     return {
       maxLength: {type: Number, reflect: true},
+      fullText: {type: String, reflect: true},
     };
   }
 
@@ -38,9 +38,9 @@ export class TruncateText extends BaseElement {
     super.connectedCallback();
 
     this.maxLength = this.maxLength ?? 200;
-    this.fullText = this.innerText;
+    this.fullText = this.fullText || '';
 
-    if (this.fullText.length === 0 || this.fullText.length <= this.maxLength)
+    if (!this.fullText || this.fullText.length === 0 || this.fullText.length <= this.maxLength)
       return;
 
     this.truncatedText = truncateString(this.fullText, this.maxLength);
