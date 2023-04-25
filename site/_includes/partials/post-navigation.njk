@@ -16,13 +16,13 @@
 <div class="post-navigation">
     <div class="post-navigation__prev">
       {% if previousPost %}
-        <a href="{{ previousPost.url }}" class="post-navigation__link">Previous</a>
+        <a href="{{ previousPost.url }}" class="post-navigation__link">{{ 'i18n.nav.post_nav.back' | i18n(locale) }}</a>
         <p><a href="{{ previousPost.url }}" class="post-navigation__title">{{previousPost.data.title}}</a></p>
       {% endif %}
    </div>
    <div class="post-navigation__next">
       {% if nextPost %}
-        <a href="{{ nextPost.url }}" class="post-navigation__link">Next</a>
+        <a href="{{ nextPost.url }}" class="post-navigation__link">{{ 'i18n.nav.post_nav.next' | i18n(locale) }}</a>
         <p><a href="{{ nextPost.url }}" class="post-navigation__title">{{nextPost.data.title}}</a></p>
       {% endif %}
     </div>
