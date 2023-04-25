@@ -14,16 +14,20 @@
 {% set nextPost = contentItems[currentPostIndex + 1] %}
 
 <div class="post-navigation">
+  <a href="{{ previousPost.url }}" class="post-navigation__link">
     <div class="post-navigation__prev">
       {% if previousPost %}
-        <a href="{{ previousPost.url }}" class="post-navigation__link">{{ 'i18n.nav.post_nav.back' | i18n(locale) }}</a>
-        <p><a href="{{ previousPost.url }}" class="post-navigation__title">{{previousPost.data.title}}</a></p>
-      {% endif %}
-   </div>
-   <div class="post-navigation__next">
-      {% if nextPost %}
-        <a href="{{ nextPost.url }}" class="post-navigation__link">{{ 'i18n.nav.post_nav.next' | i18n(locale) }}</a>
-        <p><a href="{{ nextPost.url }}" class="post-navigation__title">{{nextPost.data.title}}</a></p>
+        <span class="post-navigation__label">{{ 'i18n.nav.post_nav.back' | i18n(locale) }}</span>
+        <p class="post-navigation__title">{{previousPost.data.title}}</p>
       {% endif %}
     </div>
+  </a>
+  <a href="{{ nextPost.url }}" class="post-navigation__link">
+    <div class="post-navigation__next" class="post-navigation__link">
+      {% if nextPost %}
+        <span class="post-navigation__label">{{ 'i18n.nav.post_nav.next' | i18n(locale) }}</span>
+        <p class="post-navigation__title">{{nextPost.data.title}}</p>
+      {% endif %}
+    </div>
+  </a>
 </div>
