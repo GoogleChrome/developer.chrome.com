@@ -16,17 +16,18 @@
     display: block;
     text-decoration: none;
     width: 50%;
+
+    @include media-query('md-max') {
+      width: 100%; 
+    }
   }
 
   &__next,
   &__prev {
     font-size: px-to-rem(20px);
+    height: 100%;
     line-height: px-to-rem(28px);
     padding: px-to-rem(40px);
-
-    @include media-query('md-max') {
-      width: 100%; 
-    }
 
     @include media-query('lg-max') {
       padding: px-to-rem(40px) px-to-rem(24px); 
