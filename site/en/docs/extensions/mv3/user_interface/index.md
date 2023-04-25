@@ -7,7 +7,6 @@ updated: 2022-04-27
 description: UI and design guidelines for Chrome Extensions.
 ---
 
-<!-- TODO: Extension sample links need to be updated, once the samples are approved -->
 Like Chrome's user interface (UI), an extension UI should be purposeful and minimal. Extensions
 should allow users to customize or enhance the user's browsing experience without distracting
 from it. 
@@ -241,6 +240,45 @@ chrome.storage.local.get('signed_in', (data) => {
   }
 });
 ```
+
+### Side panel {: #side-panel } 
+
+An extension side panel is an HTML file that provides additional functionality alongside the main content of a webpage. The [side panel dictionary example](TBD) displays the same side panel on every page.
+<!-- TODO: Screenshot of dictionary-->
+The side panel is registered under the `“side_panel”` key:
+
+{% Label %}manifest.json:{% endLabel %}
+
+```json
+{
+  "manifest_version": 3,
+  "name": "1 - BLUE Side panel example",
+  "version": "1.0",
+  "description": "Sidepanel declared only in the manifest visible to all sites",
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "permissions": ["sidePanel"]
+}
+```
+<!-- Switch code to dictionary code if simple -->
+{% Label %}sidepanel.html:{% endLabel %}
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Sidepanel</title>
+  </head>
+  <body>
+    <h1>All sites sidepanel extension</h1>
+    <p>This side panel is enabled on all sites</p>
+    <script src="sidepanel.js"></script>
+  </body>
+</html>
+```
+
+For more samples and use cases, see the [SidePanel API][api-sidepanel] reference page.
 
 ### Tooltip {: #tooltip }
 
@@ -608,6 +646,7 @@ capabilities.
 [api-messages]: /docs/extensions/mv3/i18n-messages
 [api-notif]: /docs/extensions/reference/notifications
 [api-omnibox]: /docs/extensions/reference/omnibox
+[api-sidepanel]: /docs/extensions/reference/sidePanel
 [commands-oncommand]: /docs/extensions/reference/commands#event-onCommand
 [contextmenu-create]: /docs/extensions/reference/contextMenus#method-create
 [docs-background]: /docs/extensions/mv3/background_pages
