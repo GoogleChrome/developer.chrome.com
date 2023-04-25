@@ -74,6 +74,8 @@ attribution-reporting-system:
   en: 'Attribution Reporting end-to-end'
 attribution-reporting-summary:
   en: 'Summary reports'
+maximize-relevence:
+  en: 'Maximize ad relevance'
 private-aggregation:
   en: 'Private Aggregation API'
 tracking-prevention:
