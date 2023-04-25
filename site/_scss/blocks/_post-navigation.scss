@@ -2,7 +2,7 @@
   border-top: 1px solid var(--color-hairline);
   display: flex;
   font-family: 'Google Sans';
-  justify-content: center;
+  justify-content: space-between;
   margin-bottom: px-to-rem(-72px);
   margin-top: px-to-rem(80px);
   width: 100%;
@@ -14,12 +14,15 @@
   > div {
     font-size: px-to-rem(20px);
     line-height: px-to-rem(28px);
-    max-width: px-to-rem(680px);
     padding: px-to-rem(40px);
     width: 50%;
 
     @include media-query('md-max') {
       width: 100%; 
+    }
+
+    @include media-query('lg-max') {
+      padding: px-to-rem(40px) px-to-rem(24px); 
     }
   }
 
