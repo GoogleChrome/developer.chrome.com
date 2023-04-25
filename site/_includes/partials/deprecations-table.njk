@@ -6,13 +6,7 @@
         <div>{{ 'i18n.deprecations_calendar.chrome_version' | i18n(locale) }}</div>
         <div>{{ 'i18n.deprecations_calendar.article' | i18n(locale) }}</div>
     </div>
-    {% set items = [
-        {chromeVersion: 'chrome-112', removalDate: 30},
-        {chromeVersion: 'chrome-113', removalDate: 180},
-        {chromeVersion: 'chrome-119', removalDate: 30},
-        {chromeVersion: 'chrome-113', removalDate: 90},
-        {chromeVersion: 'chrome-120', removalDate: 90}
-    ] %}
+
     {% for item in deprecationsCalendar %}
     <filtered-element class="deprecations-calendar__row" data-filter-chrome-version="chrome-{{ item.version }}" data-filter-removal-date="{{item.date | dateRange}}">
         <div>
