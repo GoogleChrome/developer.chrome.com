@@ -40,7 +40,7 @@ export class TruncateText extends BaseElement {
     this.maxLength = this.maxLength ?? 200;
     this.fullText = this.fullText || '';
 
-    if (!this.fullText || this.fullText.length === 0 || this.fullText.length <= this.maxLength)
+    if (this.fullText.length === 0 || this.fullText.length <= this.maxLength)
       return;
 
     this.truncatedText = truncateString(this.fullText, this.maxLength);
