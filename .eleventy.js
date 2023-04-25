@@ -15,6 +15,7 @@ const {namespaceToPath} = require('./site/_filters/namespace');
 const mdFilters = require('./site/_filters/md');
 const {slugify} = require('./site/_filters/slugify');
 const {ensureUniqueHrefInProduction} = require('./site/_filters/ensureUniqueHrefInProduction');
+const {dateRange} = require('./site/_filters/date-range');
 const {toc} = require('./site/_filters/toc');
 const {updateSvgForInclude} = require('webdev-infra/filters/svg');
 const {minifyHtml} = require('webdev-infra/filters/minifyHtml');
@@ -129,6 +130,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('slugify', slugify);
   eleventyConfig.addFilter('toc', toc);
   eleventyConfig.addFilter('ensureUniqueHrefInProduction', ensureUniqueHrefInProduction);
+  eleventyConfig.addFilter('dateRange', dateRange);
   eleventyConfig.addFilter('typeof', x => typeof x);
   eleventyConfig.addNunjucksAsyncFilter('minifyHtml', minifyHtml);
 
