@@ -240,7 +240,7 @@ including region specific. </td>
 <br>
 Improvements to the taxonomy are an ongoing effort, and in Q2 we will announce an updated taxonomy for the Topics API. To craft this new taxonomy, we worked closely with companies from across the ecosystem. 
 
-We are actively seeking feedback on the taxonomy that would be  most useful for the ecosystem. In evaluating whether to expand the number of topics or include more granular topics, there are a few considerations including 1) potential privacy implications (e.g. more topics may introduce fingerprinting risk) and 2) ability to retrieve previously observed topics (e.g. with more topics, there may be less of a chance that an ad-tech has seen the chosen topic in the past).
+We are actively seeking feedback on the taxonomy that would be  most useful for the ecosystem. In evaluating whether to expand the number of topics or include more granular topics, there are a few considerations including 1) potential privacy implications (e.g. more topics may introduce fingerprinting risk) and 2) ability to retrieve previously observed topics (e.g. with more topics, there may be less of a chance that an ad tech has seen the chosen topic in the past).
 </td>
     </tr>
     <tr>
