@@ -38,6 +38,12 @@ First let's break the manifest file by changing the `"version"` key to `"version
 
 Now let's try [loading the extension locally][dev-basic-unpacked]. You will see a error dialog pointing to the problem: 
 
+```text
+Failed to load extension
+Required value version is missing or invalid. It must be between 1-4 dot-separated integers each between 0 and 65536.
+Could not load manifest.
+```
+
 <figure>
   {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/acjM7iQ73yXZJO90eeuR.png", alt="An extension with an invalid manifest key triggering an error dialog when attempting to load.", width="500", height="347", class="screenshot" %}
   <figcaption>
@@ -131,8 +137,12 @@ chrome.runtime.oninstalled.addListener(() => {
 
 Refresh and click the **Errors** button to view the error log. The first error will let you know that the service worker failed to register. This means something went wrong during initiation. 
 
+```text
+Service worker registration failed. Status code: 15.
+```
+
 <figure>
-  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/5Vq0jbo4AGUp1P9MoU3v.png", alt="ALT_TEXT_HERE", width="800", height="418" %}
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/5Vq0jbo4AGUp1P9MoU3v.png", alt="Service worker registration failed. Status code: 15 error message", width="800", height="418" %}
   <figcaption>
   Service worker registration error message.  
   </figcaption>
@@ -144,16 +154,18 @@ If the service worker fails to register, you will not be able to access the Chro
 
 {% endAside %}
 
-The second is a is a TypeError:
+```text
+Uncaught TypeError: Cannot read properties of undefined (reading 'addListener')
+```
 
 <figure>
-  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/LauDnPFrNyExahWz3RF1.png", alt="ALT_TEXT_HERE", width="800", height="528" %}
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/LauDnPFrNyExahWz3RF1.png", alt="Uncaught TypeError: Cannot read properties of undefined error message", width="800", height="528" %}
   <figcaption>
   Uncaught TypeError message.
   </figcaption>
 </figure>
 
-Update the code to reflect the correct call, click the **Clear all** button in the upper right-hand corner, then reload the extension.
+Undo the bug we introduced, click the **Clear all** button in the upper right-hand corner, and reload the extension.
 
 #### Check the service worker status {: #sw-status }
 
@@ -177,7 +189,7 @@ your code.
   </figcaption>
 </figure>
 
-Also, if you have made changes to the the service worker code, you can use the **Update** button and **skipWaiting** to apply the changes immediately.
+Also, if you have made changes to the service worker code, you can use the **Update** button and **skipWaiting** to apply the changes immediately.
 
 <figure>
   {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/mJISZTRN34bmSbENQpVq.png", alt="Refreshing the service worker in the Application panel", width="800", height="523", class="screenshot" %}
@@ -259,10 +271,14 @@ function setColor(color) {
 
 Refresh the page, open the popup and click the green box. Nothing happens... 
 
-If you go to Extensions Management page the **Errors** button will not appear. This is because only runtime errors, `console.warning` and, 
+If you go to the Extensions Management page the **Errors** button will not appear. This is because only runtime errors, `console.warning` and, 
 `console.error` are recorded on the Extensions Management Page.
 
-[Content scripts][doc-cs] run inside a website, so to find these logs we must inspect the web page the extension is trying to alter.
+[Content scripts][doc-cs] run inside a website, so to find these error we must inspect the web page the extension is trying to alter.
+
+```text
+Uncaught ReferenceError: colors is not defined
+```
 
 <figure>
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/xdbCjXTm5wWv3Yaa2jM9.png", alt="Extension error displayed in web page console", width="600", height="207", class="screenshot" %}
@@ -295,8 +311,8 @@ reload the popup without closing the DevTools panel.
 ## Declare permissions {: #declare_permission }
 
 What makes extensions more powerful than a web app is their access to Chrome APIs. Some of the APIs
-require permissions. Refer to the [permissions article][doc-perms] and the available [Chrome
-APIs][doc-chrome-apis] to ensure an extension is requesting the correct permissions in its manifest.
+require permissions. Refer to the [permissions][doc-perms] article and the available [Chrome
+APIs][doc-chrome-apis] to ensure an extension is requesting the correct permissions in the [manifest][doc-manifest].
 
 ```json/4-6
   {
