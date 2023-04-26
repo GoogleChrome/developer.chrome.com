@@ -38,9 +38,9 @@ that matches the already installed PWA, it will treat that as the installed PWA.
 
 ## Browser support
 
-Support for the `id` property is expected to land in desktop Chromium-based
-browsers starting with version 96. Support for mobile (which currently uses
-the manifest url as the unique id) should land in the first half of 2022.
+Starting with version 96, the `id` property is supported on desktop and
+mobile Chromium-based browsers and on Firefox beginning with version 95.
+{% BrowserCompat 'html.manifest.id' %}
 
 ## What should I do today?
 
@@ -86,7 +86,7 @@ DevTools.
 browser will generate an `id` if there is not one in the manifest. On desktop,
 it will be calculated based on the `start_url` in the web app manifest.
 
-In the future, adding an `id`  to the web app manifest will make it possible
+In the future, adding an `id` to the web app manifest will make it possible
 to change the `start_url` and the manifest path, because the browser will
 identify the PWA based on the specified `id`, rather than the `start_url` or
 manifest path.
@@ -115,9 +115,9 @@ these steps:
 
 ## Additional resources
 
-* [Explainer][explainer]
-* [Design doc][design-doc]
-* [`id` property in Editor's draft of the Manifest spec][draft-spec]
+- [Explainer][explainer]
+- [Design doc][design-doc]
+- [`id` property in Editor's draft of the Manifest spec][draft-spec]
 
 [draft-spec]: https://w3c.github.io/manifest/#id-member
 [explainer]: https://github.com/philloooo/pwa-unique-id/blob/main/explainer.md
