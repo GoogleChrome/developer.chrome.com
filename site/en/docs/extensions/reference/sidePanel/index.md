@@ -47,13 +47,21 @@ The side panel can optionally be set initially from the `“default_path”` pro
   }
   ...
 }
- 
 ```
 
 {% Label %}sidepanel.html:{% endLabel %}
 
 ```html
-//TODO
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Sidepanel</title>
+</head>
+<body>
+  <h1>Global side panel extension</h1>
+  <p>This side panel is enabled on all sites</p>
+  </body>
+</html>
 ```
 
 ### Enable a side panel on a specific site {: #by-site }
@@ -75,7 +83,7 @@ An extension can enable the side panel when the user is on a specific site by us
 
 When the user navigates to a site where the side panel is not enabled, the side panel will close and not be displayed on the drop-down menu.
 
-### Switch from one panel to another {: #multi-panels }
+### Switch to a different panel {: #multi-panels }
 
 Another way to switch between different side panels is by using `sidepanel.getOptions()` to retrieve the current side panel. The following example sets a welcome side panel, then when the user navigates to a different tab, it replaces it with the main side panel.
 
@@ -84,6 +92,8 @@ Another way to switch between different side panels is by using `sidepanel.getOp
 ```js
 
 ```
+
+Download the [complete extension](TBD) in the GitHub samples-repo.
 
 ### Use the action icon to open the side panel {: #open-action-icon } 
 
@@ -115,7 +125,7 @@ Each side panel displays the extension's icon in the side panel menu. Otherwise,
 
 Developers can also allow users to open the side panel [using the action icon](#open-action-icon).
 
-## Extension samples
+## Extension samples {: #examples }
 // TODO: Links to GH repo samples
 
 
