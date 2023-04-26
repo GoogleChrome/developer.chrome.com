@@ -49,12 +49,11 @@ is to check the value calculated by Chrome.
 
 1. Using Chrome 96 or higher, open the **Manifest** pane of the **Application**
    panel in DevTools.
-1. Hover your mouse over the `(!)` icon next to the **App Id** property. The
-   `(!)` tooltip icon will only appear when the `id` is **not** specified in
-   the web app manifest file.
-1. Note the `id` value shown in the tooltip (see screenshot below).
+1. Check the **Note** below the **Computed App Id** property. The note will
+   only appear when the `id` is **not** specified in the web app manifest file.
+1. Check the suggested `id` value shown in the note (see screenshot below).
 1. Add an `id` property to the web app manifest using the `id` value shown in
-   the tooltip.
+   the note.
 
 {% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/7vo2XUpQxz0RWfWBuLDa.png", class="screenshot", alt="Tooltip showing 'id' value.", width="800", height="175" %}
 
@@ -76,7 +75,7 @@ DevTools.
 ## What if I don't set an `id`?
 
 **Don't worry, nothing will break**. Starting in Chrome 96 on desktop, the
-browser will generate an `id` if there is not one in the manifest. On desktop,
+browser generates an `id` if there is not one in the manifest. On desktop,
 it will be calculated based on the `start_url` in the web app manifest.
 
 Adding an `id` to the web app manifest makes it possible to change the
