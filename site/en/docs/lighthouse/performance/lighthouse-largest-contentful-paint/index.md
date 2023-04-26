@@ -62,7 +62,7 @@ The table below shows how to interpret your LCP score:
 ## How to improve your LCP score
 
 If the LCP is an image, the timing can be broken down into four phases.
-Knowing which phases take the longest can help you [optimize your LCP](improve).
+Knowing which phases take the longest can help you [optimize your LCP][improve].
 Lighthouse will display the LCP element along with the phase breakdown in the "Largest Contentful Paint element" diagnostic.
 
 | LCP phase                 | Description |
