@@ -83,9 +83,9 @@ a considered Chrome response.
 <table>
   <thead>
     <tr>
-      <th><strong>Feedback Theme </strong></th>
-      <th><strong>Summary</strong></th>
-      <th><strong>Chrome Response</strong></th>
+      <th>Feedback Theme </th>
+      <th>Summary</th>
+      <th>Chrome Response</th>
     </tr>
   </thead>
   <tbody>
@@ -197,9 +197,9 @@ a user, this would not align with our privacy principles.</td>
 <table>
   <thead>
     <tr>
-      <th><strong>Feedback Theme </strong></th>
-      <th><strong>Summary</strong></th>
-      <th><strong>Chrome Response</strong></th>
+      <th>Feedback Theme </th>
+      <th>Summary</th>
+      <th>Chrome Response</th>
     </tr>
   </thead>
   <tbody>
@@ -338,9 +338,9 @@ requests</a>.</td>
 <table>
   <thead>
     <tr>
-      <th><strong>Feedback Theme </strong></th>
-      <th><strong>Summary</strong></th>
-      <th><strong>Chrome Response</strong></th>
+      <th>Feedback Theme </th>
+      <th>Summary</th>
+      <th>Chrome Response</th>
     </tr>
   </thead>
   <tbody>
@@ -741,9 +741,9 @@ explainer</a> for more information.</td>
 <table>
   <thead>
     <tr>
-      <th><strong>Feedback Theme </strong></th>
-      <th><strong>Summary</strong></th>
-      <th><strong>Chrome Response</strong></th>
+      <th>Feedback Theme </th>
+      <th>Summary</th>
+      <th>Chrome Response</th>
     </tr>
   </thead>
   <tbody>
@@ -890,9 +890,9 @@ information.</td>
 <table>
   <thead>
     <tr>
-      <th><strong>Feedback Theme </strong></th>
-      <th><strong>Summary</strong></th>
-      <th><strong>Chrome Response</strong></th>
+      <th>Feedback Theme </th>
+      <th>Summary</th>
+      <th>Chrome Response</th>
     </tr>
   </thead>
   <tbody>
@@ -955,9 +955,9 @@ be available in the origin trial vs in GA.</td>
 <table>
   <thead>
     <tr>
-      <th><strong>Feedback Theme </strong></th>
-      <th><strong>Summary</strong></th>
-      <th><strong>Chrome Response</strong></th>
+      <th>Feedback Theme </th>
+      <th>Summary</th>
+      <th>Chrome Response</th>
     </tr>
   </thead>
   <tbody>
@@ -996,9 +996,9 @@ the existing bound to a ten-minute window with a larger daily bound.
 <table>
   <thead>
     <tr>
-      <th><strong>Feedback Theme </strong></th>
-      <th><strong>Summary</strong></th>
-      <th><strong>Chrome Response</strong></th>
+      <th>Feedback Theme </th>
+      <th>Summary</th>
+      <th>Chrome Response</th>
     </tr>
   </thead>
   <tbody>
@@ -1052,9 +1052,9 @@ project will need to add support for UA-CH before they can be enabled
 <table>
   <thead>
     <tr>
-      <th><strong>Feedback Theme </strong></th>
-      <th><strong>Summary</strong></th>
-      <th><strong>Chrome Response</strong></th>
+      <th>Feedback Theme </th>
+      <th>Summary</th>
+      <th>Chrome Response</th>
     </tr>
   </thead>
   <tbody>
@@ -1127,9 +1127,9 @@ originating from previously flagged IP addresses.</td>
 <table>
   <thead>
     <tr>
-      <th><strong>Feedback Theme </strong></th>
-      <th><strong>Summary</strong></th>
-      <th><strong>Chrome Response</strong></th>
+      <th>Feedback Theme </th>
+      <th>Summary</th>
+      <th>Chrome Response</th>
     </tr>
   </thead>
   <tbody>
@@ -1219,9 +1219,9 @@ confident that we can optimize the memory footprint.</td>
 <table>
   <thead>
     <tr>
-      <th><strong>Feedback Theme </strong></th>
-      <th><strong>Summary</strong></th>
-      <th><strong>Chrome Response</strong></th>
+      <th>Feedback Theme </th>
+      <th>Summary</th>
+      <th>Chrome Response</th>
     </tr>
   </thead>
   <tbody>
@@ -1266,9 +1266,9 @@ href="https://github.com/WICG/fenced-frame/issues">additional feedback</a>.</td>
 <table>
   <thead>
     <tr>
-      <th><strong>Feedback Theme </strong></th>
-      <th><strong>Summary</strong></th>
-      <th><strong>Chrome Response</strong></th>
+      <th>Feedback Theme </th>
+      <th>Summary</th>
+      <th>Chrome Response</th>
     </tr>
   </thead>
   <tbody>
@@ -1337,9 +1337,9 @@ No feedback received this quarter.
 <table>
   <thead>
     <tr>
-      <th><strong>Feedback Theme </strong></th>
-      <th><strong>Summary</strong></th>
-      <th><strong>Chrome Response</strong></th>
+      <th>Feedback Theme</th>
+      <th>Summary</th>
+      <th>Chrome Response</th>
     </tr>
   </thead>
   <tbody>
@@ -1381,9 +1381,9 @@ welcome additional feedback.</td>
 <table>
   <thead>
     <tr>
-      <th><strong>Feedback Theme </strong></th>
-      <th><strong>Summary</strong></th>
-      <th><strong>Chrome Response</strong></th>
+      <th>Feedback Theme </th>
+      <th>Summary</th>
+      <th>Chrome Response</th>
     </tr>
   </thead>
   <tbody>
