@@ -19,7 +19,7 @@ instead.
 
 First Meaningful Paint (FMP) is one of six metrics
 tracked in the **Performance** section of the Lighthouse report.
-Each metric captures some aspect of page load speed.
+Each metric captures somon te aspect of page load speed.
 
 Lighthouse displays FMP in seconds:
 
