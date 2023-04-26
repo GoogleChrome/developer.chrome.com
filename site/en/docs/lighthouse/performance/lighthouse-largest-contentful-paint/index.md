@@ -61,7 +61,16 @@ The table below shows how to interpret your LCP score:
 
 ## How to improve your LCP score
 
-See [How to improve Largest Contentful Paint on your site][improve].
+If the LCP is an image, the timing can be broken down into four phases.
+Knowing which phases take the longest can help you [optimize your LCP](improve).
+Lighthouse will display the LCP element along with the phase breakdown in the "Largest Contentful Paint element" diagnostic.
+
+| LCP phase                 | Description |
+| ------------------------- | ----------- |
+| Time to first byte (TTFB) |	The time from when the user initiates loading the page until when the browser receives the first byte of the HTML document response. [Learn more about TTFB](https://web.dev/ttfb/). |
+| Load delay	              | The delta between TTFB and when the browser starts loading the LCP resource. |
+| Load time	                | The time it takes to load the LCP resource itself. |
+| Render delay	            | The delta between when the LCP resource finishes loading until the LCP element is fully rendered. |
 
 ## Resources
 
@@ -72,4 +81,4 @@ See [How to improve Largest Contentful Paint on your site][improve].
 
 [definition]: https://web.dev/lcp/#what-is-lcp
 [launch]: /blog/new-in-chrome-77/#lcp
-[improve]: https://web.dev/lcp/#how-to-improve-lcp
+[improve]: https://web.dev/optimize-lcp/
