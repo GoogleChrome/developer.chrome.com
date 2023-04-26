@@ -8,7 +8,7 @@ date: 2023-04-26
 description: "Use the Developer Resources drawer tab to check if source maps load successfully and load them manually."
 ---
 
-Use the **Developer Resources** drawer tab to check if DevTools loads source maps successfully. If required, you can load them manually.
+Use the **Developer Resources** tab to check if DevTools loads source maps successfully. If required, you can load them manually.
 
 {% YouTube id='SkUcO4ML5U0' %}
 
