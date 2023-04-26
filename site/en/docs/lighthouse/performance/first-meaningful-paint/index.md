@@ -8,7 +8,7 @@ date: 2019-05-02
 updated: 2019-11-05
 ---
 
-{% Aside 'caution' %}x
+{% Aside 'caution' %}
 First Meaningful Paint (FMP) is deprecated in Lighthouse 6.0. In practice FMP
 has been overly sensitive to small differences in the page load, leading to inconsistent
 (bimodal) results. Additionally, the metric's definition relies on browser-specific
