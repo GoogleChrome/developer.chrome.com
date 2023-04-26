@@ -10,7 +10,7 @@ is_outdated: true
 ---
 
 {% Aside 'caution' %}
-This audit was removed from [v10.0.0 Lighthouse](https://github.com/GoogleChrome/lighthouse/releases/tag/v10.0.0) on February 9th 2023. For more information about why this audit was removed, see the relevant [GitHub PR](https://github.com/GoogleChrome/lighthouse/pull/14194).
+This audit was removed from [Lighthouse v10.0.0](https://github.com/GoogleChrome/lighthouse/releases/tag/v10.0.0) on February 9th 2023. For more information about why this audit was removed, see the relevant [GitHub PR](https://github.com/GoogleChrome/lighthouse/pull/14194).
 {% endAside %}
 
 Intruders have automated web crawlers that can scan your site
