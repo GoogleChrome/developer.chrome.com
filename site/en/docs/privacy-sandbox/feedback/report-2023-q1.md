@@ -918,8 +918,8 @@ reports, which have the same shared ID, were already processed?</td>
       <td style="vertical-align: top";>We have <a
 href="https://github.com/WICG/attribution-reporting-api/issues/724">shared
 a proposal</a> on adding extra report delay to aggregatable
-reports' shared info and the definition of shared ID for the Aggregattion
-API to partially address the <a
+reports' shared info and the definition of shared ID for the Aggregation Service
+to partially address the <a
 href="https://github.com/WICG/attribution-reporting-api/issues/724">impact
 of delay loss on aggregate API</a>. We welcome any feedback on the <!-- still don't have answer -->
 proposal.</td>
