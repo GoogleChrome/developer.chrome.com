@@ -72,7 +72,7 @@ find a list of the scoped FLEDGE features and when they'll be supported.
   </tr>
 </table>
 
-## Additional feature support
+### Additional features
 
 <table class="with-heading-tint with-borders width-full">
   <thead>
