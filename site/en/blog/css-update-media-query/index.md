@@ -5,7 +5,7 @@ description: >
   Adapt your UI to the screen's refresh rate capabilities.
 subhead: >
   Adapt your UI to the screen's refresh rate capabilities.
-date: 2023-04-25
+date: 2023-04-26
 authors:
   - argyle
 tags:
