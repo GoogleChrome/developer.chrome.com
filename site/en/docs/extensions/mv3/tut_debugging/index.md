@@ -21,8 +21,7 @@ This guide assumes that you have basic web development experience. We recommend 
 This tutorial will break one extension component at a time and then demonstrate how to fix it. Remember to undo the bugs we introduce before continuing to the next section. Start by downloading the [Broken Color sample][gh-broken-color] on Github.
 
 ### Debug the manifest {: #debug-manifest}
-
-First let's break the manifest file by changing the `"version"` key to `"versions"`:
+First, let's break the manifest file by changing the `"version"` key to `"versions"`:
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -173,7 +172,7 @@ You can identify when the service worker wakes up to perform tasks by following 
 
 1. Copy your extension ID located above "Inspect views"
     <figure>
-      {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ISfNxTUOrO6IGEyHt1m0.png", alt="Extension ID in the extension management page", width="459", height="251" %}
+      {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ISfNxTUOrO6IGEyHt1m0.png", alt="Extension ID in the Extensions Management page", width="459", height="251" %}
       <figcaption>
         Extension ID
       </figcaption>
@@ -232,7 +231,7 @@ changeColorButton.addEventListener('click', (event) => {
 });
 ```
 
-Navigate back to the Extensions Management Page, the **Errors** button has reappeared. Click it to
+Navigate back to the Extensions Management page, the **Errors** button has reappeared. Click it to
 view the new log.
 
 ```text
@@ -240,7 +239,7 @@ Uncaught ReferenceError: tabs is not defined
 ```
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/M9gIgE8AgIIDYkN2BF58.png", 
-alt="Extensions Management Page displaying popup error", width="800", height="588" %}
+alt="Extensions Management page displaying popup error", width="800", height="588" %}
 
 You can open the popup's DevTools by inspecting the popup.
 
@@ -256,7 +255,7 @@ extension.
 {% Aside %}
 
 For other extension pages displayed as a tab, such as [override pages][doc-override] and [full-page options][doc-options],
-you can find logs by inspecting the page or on the extensions management page.  
+you can find logs by inspecting the page or on the Extensions Management page.  
   
 {% endAside %}
 
@@ -279,7 +278,7 @@ function setColor(color) {
 Refresh the page, open the popup and click the green box. Nothing happens... 
 
 If you go to the Extensions Management page the **Errors** button will not appear. This is because only runtime errors, `console.warning` and, 
-`console.error` are recorded on the Extensions Management Page.
+`console.error` are recorded on the Extensions Management page.
 
 [Content scripts][doc-cs] run inside a website, so to find these error we must inspect the web page the extension is trying to alter.
 
@@ -357,7 +356,6 @@ Learn more about [Chrome Devtools][chrome-devtools] by reading the documentation
 [doc-override]: /docs/extensions/mv3/override
 [doc-perms]: /docs/extensions/mv3/declare_permissions/
 [gh-broken-color]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.broken-color
-[img-app-panel]: https://wd.imgix.net/image/BhuKGJaIeLNPW9ehns59NfwqKxF2/oUBqsxTuf3S7AexIDzfg.png?auto=format&w=845
 [manifest-schema]: https://json.schemastore.org/chrome-manifest
 [runtime-oninstalled]: /docs/extensions/reference/runtime#event-onInstalled
 [tabs-query]: /docs/extensions/reference/tabs#method-query
