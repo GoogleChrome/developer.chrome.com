@@ -85,12 +85,9 @@ based on the specified `id`, rather than the `start_url` or manifest path.
 
 ## How do I test this?
 
-To test the behaviour before Chrome 96 is available as stable, follow
-these steps:
+To test the behaviour, follow these steps:
 
-1. Using Chrome 96 or later (currently Chrome Canary), enable the
-   `#enable-desktop-pwas-manifest-id` flag, then restart the browser.
-1. Install the PWA.
+1. Open Chrome 96 or later and install the PWA.
 1. Open `about://web-app-internals/` and check the `unhashed_app_id` and
    `start_url` property for the installed PWA.
 1. Add an `id` property to your web app manifest following the steps in
