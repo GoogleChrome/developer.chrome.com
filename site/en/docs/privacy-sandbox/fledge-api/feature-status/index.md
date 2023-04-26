@@ -21,7 +21,7 @@ availability and approach third-party cookie deprecation in Chrome, you may be
 wondering about the availability of FLEDGE services and features. Here you'll
 find a list of the scoped FLEDGE features and when they'll be supported. 
 
-## Main features
+## Feature availability timeline
 
 <table class="with-heading-tint with-borders width-full">
   <thead>
