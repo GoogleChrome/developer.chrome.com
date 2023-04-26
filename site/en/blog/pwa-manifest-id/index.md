@@ -79,10 +79,9 @@ DevTools.
 browser will generate an `id` if there is not one in the manifest. On desktop,
 it will be calculated based on the `start_url` in the web app manifest.
 
-In the future, adding an `id` to the web app manifest will make it possible
-to change the `start_url` and the manifest path, because the browser will
-identify the PWA based on the specified `id`, rather than the `start_url` or
-manifest path.
+Adding an `id` to the web app manifest makes it possible to change the
+`start_url` and the manifest path, because the browser identifies the PWA
+based on the specified `id`, rather than the `start_url` or manifest path.
 
 ## How do I test this today?
 
