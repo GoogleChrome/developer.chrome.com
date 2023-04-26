@@ -1,17 +1,17 @@
 {% set contentItems = null %}
-{% set contentType = "" %}
 
 {% if page.url | getContentType === 'articles' %}
-  {% set contentItems = collections.articles %}
+  {% set collectionName = 'articles-' + locale %}
 {% endif %}
 
 {% if page.url | getContentType === 'blog' %}
-  {% set contentItems = collections.blogPosts %}
+  {% set collectionName = 'blog-' + locale %}
 {% endif %}
 
-{% set currentPostIndex = contentItems | indexOfPostByUrl(page.url) %}
-{% set previousPost = contentItems[currentPostIndex - 1] %}
-{% set nextPost = contentItems[currentPostIndex + 1] %}
+{% if collections[collectionName] %}
+  {% set previousPost = collections[collectionName]  | getPreviousCollectionItem(page) %}
+  {% set nextPost = collections[collectionName]  | getNextCollectionItem(page) %}
+{% endif %}
 
 <div class="post-navigation">
   <a href="{{ previousPost.url }}" class="post-navigation__link">
