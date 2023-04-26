@@ -8,7 +8,6 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 
 * [Override network response headers](/blog/new-in-devtools-113/#network)
 * [Nuxt, Vite, and Rollup debugging improvements](/blog/new-in-devtools-113/#debug)
-* [Assertions in Recorder](/blog/new-in-devtools-113/#recorder)
 * [CSS improvements in Elements > Styles](/blog/new-in-devtools-113/#css)
 * [Invalid CSS properties and values](/blog/new-in-devtools-113/#invalid-css)
 * [Links to key frames in the animation shorthand property](/blog/new-in-devtools-113/#animation-key-frames)

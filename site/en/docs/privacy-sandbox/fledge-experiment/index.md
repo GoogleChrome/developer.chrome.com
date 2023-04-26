@@ -11,6 +11,8 @@ authors:
   - samdutton
 ---
 
+{% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
+
 ## Learn the essentials
 
 * If you're a developer or software engineer, the [FLEDGE API Developer Guide](/blog/fledge-api)

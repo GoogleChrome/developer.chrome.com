@@ -56,6 +56,11 @@
               {{ icon('linkedin', {hidden: true}) }}
             </a>
           {% endif %}
+          {% if paged.rss  %}
+            <a rel="me" href="{{ paged.rss }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="RSS">
+              {{ icon('rss-author', {hidden: true}) }}
+            </a>
+          {% endif %}
         </div>
       </div>
     </div>

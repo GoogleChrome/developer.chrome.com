@@ -17,8 +17,8 @@ Sandbox proposal for general purpose, cross-site storage, which supports many
 possible use cases. One such example is A/B testing, which is available to test
 in Chrome 104.0.5086.0 and later.
 
-With URL selection, you can assign a user to an experiment group, then store
-that group in Shared Storage to be accessed in a cross-site environment. 
+You can assign a user to an experiment group, then store that group in Shared
+Storage to be accessed in a cross-site environment.
 
 ## Try A/B testing
 
@@ -66,16 +66,19 @@ async function injectContent() {
   });
 
   // Run the URL selection operation
-  const opaqueURL = await window.sharedStorage.selectURL(
+  const fencedFrameConfig = await window.sharedStorage.selectURL(
     'ab-testing',
     [
       { url: `https://your-server.example/content/default-content.html` },
       { url: `https://your-server.example/content/experiment-content-a.html` }
-    ]
+    ],
+    {
+      resolveToConfig: true
+    }
   );
 
   // Render the chosen URL into a fenced frame
-  document.getElementById('content-slot').src = opaqueURL;
+  document.getElementById('content-slot').config = fencedFrameConfig;
 }
 
 injectContent();
