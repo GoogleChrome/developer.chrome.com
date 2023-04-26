@@ -1,6 +1,10 @@
 {% from 'macros/icon.njk' import icon with context %}
-<div class="deprecations-calendar__rows">
-    <div class="deprecations-calendar__row deprecations-calendar__header">
+<filtered-table>
+  <div class="deprecations-calendar__rows">
+    <div class="deprecations-calendar__row filtered__empty" hidden>
+        Sorry, we couldn't find any results that match your selected filters. 
+    </div>
+    <div class="deprecations-calendar__row deprecations-calendar__header filtered__header">
         <div>{{ 'i18n.deprecations_calendar.removal_date' | i18n(locale) }}</div>
         <div>{{ 'i18n.deprecations_calendar.name' | i18n(locale) }}</div>
         <div>{{ 'i18n.deprecations_calendar.chrome_version' | i18n(locale) }}</div>
@@ -28,4 +32,5 @@
         </div>
     </filtered-element>
     {% endfor %}
-</div>
+  </div>
+</filtered-table>

@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 import './web-components/filtered-element';
+import './web-components/filtered-table';
 import './web-components/filter-modal';
 import './web-components/checkbox-group';
 import './web-components/enhanced-select';
