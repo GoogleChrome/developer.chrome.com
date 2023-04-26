@@ -238,19 +238,10 @@ Topics taxonomy not granular enough</td>
 including region specific. </td>
       <td style="vertical-align: top";>Q1 Update: <br>
 <br>
-We recently announced an <a
-href="https://developer.chrome.com/blog/topics-enhancements/">updated taxonomy</a> for the Topics API. To craft this new taxonomy,
-we worked closely with companies from across the ecosystem. The new
-version of the taxonomy removes categories we've heard are less
-useful in favor of categories that we expect to better match
-advertiser interests, while maintaining our commitment to exclude
-potentially sensitive topics. We have added over 291 commercially
-focused categories, such as "Athletic Apparel," "Mortgages," and "Luxury
-Travel," while removing 166 categories including topics such as "Civil
-Engineering" and "Equestrian," which don't appear to add much
-commercial value for ad selection on most sites. We chose to limit
-the taxonomy to 472 categories to minimize data use and protect
-against re-identification risk.</td>
+Improvements to the taxonomy are an ongoing effort, and in Q2 we will announce an updated taxonomy for the Topics API. To craft this new taxonomy, we worked closely with companies from across the ecosystem. 
+
+We are actively seeking feedback on the taxonomy that would be  most useful for the ecosystem. In evaluating whether to expand the number of topics or include more granular topics, there are a few considerations including 1) potential privacy implications (e.g. more topics may introduce fingerprinting risk) and 2) ability to retrieve previously observed topics (e.g. with more topics, there may be less of a chance that an ad-tech has seen the chosen topic in the past).
+</td>
     </tr>
     <tr>
       <td style="vertical-align: top";>(Also reported in Q4 2022)<br>
@@ -284,19 +275,10 @@ Miscategorized sites</td>
       <td style="vertical-align: top";>Ads targeting when topics are miscategorized for a given site</td>
       <td style="vertical-align: top";>Q1 Update: <br>
 <br>
-We recently announced an <a
-href="https://developer.chrome.com/blog/topics-enhancements/">updated
-classifier</a> for the Topics API. The updated classifier will
-consider a page's title, in addition to the hostname, when
-determining a user's topics. The page title is an HTML element,
-containing a short description of the page, and is commonly used to
-describe the page to users and search engines. With the updated
-classifier, a page on news.example with a page title related to
-sports and another related to cars may be classified as "Sports" and
-"Autos & Vehicles," respectively. This change allows for a more
-accurate and diverse set of top topics to be returned, yet is
-still limited to the human-curated topics taxonomy that protects
-against revealing sensitive information.</td>
+n Q2 we will announce an updated classifier for the Topics API and look forward to engaging with the ecosystem on it. 
+
+In response to the current feedback, sites are classified through a combination of a human-curated override list, containing the most popular sites, and an on-device ML model. Chrome continues to evaluate options for sites to contribute to Topics classification. Any utility improvements must be weighed against the privacy and abuse risks. For example, a few of the risks include: sites using self-labeling as a method to encode different (and potentially sensitive) meanings into topics; sites misrepresenting their topics for financial gain; sites attacking topics in order to blunt its usefulness for others (e.g., spamming the user's topics with meaningless noise).
+The public can inspect these components, with tooling available via <code>chrome://topics-internals</code> or this <a href="https://colab.research.google.com/drive/1hIVoz8bRCTpllYvads51MV7YS3zi3prn?usp=sharing">colab</a>. Through testing, we expect classification to improve over time, and we <a href="https://developer.chrome.com/docs/privacy-sandbox/feedback/#feedback-routes">welcome feedback</a> of examples of sites that may be miscategorized.</td>
     </tr>
     <tr>
       <td style="vertical-align: top";>Topics Classifier</td>
