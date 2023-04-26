@@ -1006,7 +1006,7 @@ the existing bound to a ten-minute window with a larger daily bound.
       <td style="vertical-align: top";>UA-R adoption</td>
       <td style="vertical-align: top";>Of the top 10,000 sites in the UK, only 1% of sites using
 programmatic advertising are sending HTTP client hints. DSPs who have
-not migrated may have an impact to anti-fraud capabilities.</td>
+not migrated may have an impact on anti-fraud capabilities.</td>
       <td style="vertical-align: top";>After running an analysis on the same data set, we have found that if
 you account for UA-CH usage via HTML &lt;meta> tag, and the JavaScript
 APIs, the number of sites using UA-CH is significantly higher than
@@ -1345,7 +1345,7 @@ No feedback received this quarter.
   <tbody>
     <tr>
       <td style="vertical-align: top";>Identity assertion endpoint</td>
-      <td style="vertical-align: top";>Explicitly allow arbitrary request to the identity assertion
+      <td style="vertical-align: top";>Explicitly allow arbitrary requests to the identity assertion
 endpoint.</td>
       <td style="vertical-align: top";>We have been <a
 href="https://github.com/fedidcg/FedCM/pull/436">collaborating with Mozilla</a> on this <a
