@@ -187,21 +187,21 @@ You can identify when the service worker wakes up to perform tasks by following 
 1. Go to the **Service Workers** pane.
 
 You can start or stop the service worker using the links next to the **Status** to test
-your code. See a larger [screenshot here][img-app-panel].
+your code.
 
 <figure>
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/i1w015KXe7EzN3chRojv.png", alt="Service worker status in the Application panel", width="800", height="453", class="screenshot" %}
+    <a href="https://wd.imgix.net/image/BhuKGJaIeLNPW9ehns59NfwqKxF2/i1w015KXe7EzN3chRojv.png"><img src="https://wd.imgix.net/image/BhuKGJaIeLNPW9ehns59NfwqKxF2/i1w015KXe7EzN3chRojv.png?auto=format&w=845" alt="Service worker status in the Application panel"></a>
   <figcaption>
-    Service worker status in the Application panel
+  Service worker status in the Application panel (Click to see enlarged image)
   </figcaption>
 </figure>
 
 Also, if you have made changes to the service worker code, you can use the **Update** button and **skipWaiting** to apply the changes immediately.
 
 <figure>
-  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/mJISZTRN34bmSbENQpVq.png", alt="Refreshing the service worker in the Application panel", width="800", height="523", class="screenshot" %}
+    <a href="https://wd.imgix.net/image/BhuKGJaIeLNPW9ehns59NfwqKxF2/mJISZTRN34bmSbENQpVq.png"><img src="https://wd.imgix.net/image/BhuKGJaIeLNPW9ehns59NfwqKxF2/mJISZTRN34bmSbENQpVq.png?auto=format&w=845" alt="Service worker status in the Application panel"></a>
   <figcaption>
-    Refreshing the service worker in the Application panel
+  Refreshing the service worker in the Application panel (Click to see enlarged image)
   </figcaption>
 </figure>
 
