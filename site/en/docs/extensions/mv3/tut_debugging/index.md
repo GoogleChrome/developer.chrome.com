@@ -171,16 +171,23 @@ Undo the bug we introduced, click the **Clear all** button in the upper right-ha
 
 You can identify when the service worker wakes up to perform tasks by following these steps:
 
+1. Copy your extension ID located above "Inspect views"
+    <figure>
+      {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ISfNxTUOrO6IGEyHt1m0.png", alt="Extension ID in the extension management page", width="459", height="251" %}
+      <figcaption>
+        Extension ID
+      </figcaption>
+    </figure>
 1. Open your manifest file in the browser. For example:
     ```text
-    chrome-extension://EXTENSION_ID/manifest.json
+    chrome-extension://YOUR_EXTENSION_ID/manifest.json
     ``` 
-2. Inspect the file.
-3. Navigate to the **Application** panel.
-4. Go to the **Service worker** pane.
+1. Inspect the file.
+1. Navigate to the **Application** panel.
+1. Go to the **Service Workers** pane.
 
 You can start or stop the service worker using the links next to the **Status** to test
-your code.
+your code. See a larger [screenshot here][img-app-panel].
 
 <figure>
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/i1w015KXe7EzN3chRojv.png", alt="Service worker status in the Application panel", width="800", height="453", class="screenshot" %}
@@ -350,6 +357,7 @@ Learn more about [Chrome Devtools][chrome-devtools] by reading the documentation
 [doc-override]: /docs/extensions/mv3/override
 [doc-perms]: /docs/extensions/mv3/declare_permissions/
 [gh-broken-color]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.broken-color
+[img-app-panel]: https://wd.imgix.net/image/BhuKGJaIeLNPW9ehns59NfwqKxF2/oUBqsxTuf3S7AexIDzfg.png?auto=format&w=845
 [manifest-schema]: https://json.schemastore.org/chrome-manifest
 [runtime-oninstalled]: /docs/extensions/reference/runtime#event-onInstalled
 [tabs-query]: /docs/extensions/reference/tabs#method-query
