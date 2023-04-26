@@ -76,7 +76,7 @@ DevTools.
 
 **Don't worry, nothing will break**. Starting in Chrome 96 on desktop, the
 browser generates an `id` if there is not one in the manifest. On desktop,
-it will be calculated based on the `start_url` in the web app manifest.
+it is calculated based on the `start_url` in the web app manifest.
 
 Adding an `id` to the web app manifest makes it possible to change the
 `start_url` and the manifest path, because the browser identifies the PWA
