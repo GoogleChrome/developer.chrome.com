@@ -38,8 +38,8 @@ that matches the already installed PWA, it will treat that as the installed PWA.
 
 ## Browser support
 
-Starting with version 96, the `id` property is supported on desktop and
-mobile Chromium-based browsers and on Firefox beginning with version 95.
+The `id` property is supported on desktop and mobile Chromium-based browsers
+starting with version 96 and on Firefox starting with version 95.
 {% BrowserCompat 'html.manifest.id' %}
 
 ## How do I determine and set my `id`? {: #determine-id }
