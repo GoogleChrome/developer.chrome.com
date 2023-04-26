@@ -9,6 +9,10 @@ updated: 2023-04-26
 is_outdated: true
 ---
 
+{% Aside 'caution' %}
+This audit was removed from [v10.0.0 Lighthouse](https://github.com/GoogleChrome/lighthouse/releases/tag/v10.0.0) on February 9th 2023. For more information about why this audit was removed, see the relevant [GitHub PR](https://github.com/GoogleChrome/lighthouse/pull/14194).
+{% endAside %}
+
 Intruders have automated web crawlers that can scan your site
 for known security vulnerabilities.
 When the web crawler detects a vulnerability,
