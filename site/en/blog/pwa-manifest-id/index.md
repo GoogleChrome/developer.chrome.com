@@ -55,7 +55,7 @@ is to check the value calculated by Chrome.
 1. Add an `id` property to the web app manifest using the `id` value shown in
    the note.
 
-{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/7vo2XUpQxz0RWfWBuLDa.png", class="screenshot", alt="Tooltip showing 'id' value.", width="800", height="175" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/7vo2XUpQxz0RWfWBuLDa.png", class="screenshot", alt="Note showing 'id' value.", width="800", height="175" %}
 
 ```json
 {
