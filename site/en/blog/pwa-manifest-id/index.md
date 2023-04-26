@@ -42,13 +42,6 @@ Starting with version 96, the `id` property is supported on desktop and
 mobile Chromium-based browsers and on Firefox beginning with version 95.
 {% BrowserCompat 'html.manifest.id' %}
 
-## What should I do today?
-
-Today, there is **nothing you need to do**, and nothing will break if you
-don't add an `id` to your web app manifest (as long as the `start_url` and
-the manifest path remains the same). To future-proof your PWA, you can add
-an `id` property to your web app manifest.
-
 ## How do I determine and set my `id`? {: #determine-id }
 
 The safest, and the most accurate, way to determine the `id` for a PWA
