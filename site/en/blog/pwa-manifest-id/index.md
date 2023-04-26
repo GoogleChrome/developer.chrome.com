@@ -83,7 +83,7 @@ Adding an `id` to the web app manifest makes it possible to change the
 `start_url` and the manifest path, because the browser identifies the PWA
 based on the specified `id`, rather than the `start_url` or manifest path.
 
-## How do I test this today?
+## How do I test this?
 
 To test the behaviour before Chrome 96 is available as stable, follow
 these steps:
