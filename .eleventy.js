@@ -64,8 +64,6 @@ const feedsCollection = require('./site/_collections/feeds');
 const tagsCollection = require('./site/_collections/tags');
 const directoryCollection = require('./site/_collections/directory');
 const extensionsReferenceCollection = require('./site/_collections/reference');
-const articlesCollection = require('./site/_collections/articles');
-const blogPostsCollection = require('./site/_collections/blog-posts');
 const { pastEvents, currentEvents, eventTags } = require('./site/_collections/events');
 
 // Create a helpful environment flags
@@ -109,8 +107,6 @@ module.exports = eleventyConfig => {
   eleventyConfig.addCollection('authors', authors);
   eleventyConfig.addCollection('feeds', feedsCollection);
   eleventyConfig.addCollection('tags', tagsCollection);
-  eleventyConfig.addCollection('articles', articlesCollection);
-  eleventyConfig.addCollection('blogPosts', blogPostsCollection);
   eleventyConfig.addCollection('reference', extensionsReferenceCollection);
   eleventyConfig.addCollection('partials', (collections) => {
     return collections
