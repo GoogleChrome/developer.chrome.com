@@ -134,7 +134,7 @@ chrome.runtime.oninstalled.addListener(() => {
 });
 ```
 
-Refresh and click the **Errors** button to view the error log. The first error will let you know that the service worker failed to register. This means something went wrong during initiation. 
+Refresh and click the **Errors** button to view the error log. The first error will let you know that the service worker failed to register. This means something went wrong during initiation: 
 
 ```text
 Service worker registration failed. Status code: 15.
@@ -153,6 +153,7 @@ If the service worker fails to register, you will not be able to access the Chro
 
 {% endAside %}
 
+The actual error comes after:
 ```text
 Uncaught TypeError: Cannot read properties of undefined (reading 'addListener')
 ```
@@ -232,7 +233,7 @@ changeColorButton.addEventListener('click', (event) => {
 ```
 
 Navigate back to the Extensions Management page, the **Errors** button has reappeared. Click it to
-view the new log.
+view the new log. It will show the following error message:
 
 ```text
 Uncaught ReferenceError: tabs is not defined
@@ -280,7 +281,7 @@ Refresh the page, open the popup and click the green box. Nothing happens...
 If you go to the Extensions Management page the **Errors** button will not appear. This is because only runtime errors, `console.warning` and, 
 `console.error` are recorded on the Extensions Management page.
 
-[Content scripts][doc-cs] run inside a website, so to find these error we must inspect the web page the extension is trying to alter.
+[Content scripts][doc-cs] run inside a website, so to find these error we must inspect the web page the extension is trying to alter:
 
 ```text
 Uncaught ReferenceError: colors is not defined
