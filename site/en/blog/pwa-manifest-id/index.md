@@ -47,12 +47,12 @@ mobile Chromium-based browsers and on Firefox beginning with version 95.
 The safest, and the most accurate, way to determine the `id` for a PWA
 is to check the value calculated by Chrome.
 
-1. Using Chrome 96 or higher (currently available as Chrome Canary), open the
-   **Manifest** pane of the **Application** panel in DevTools.
+1. Using Chrome 96 or higher, open the **Manifest** pane of the **Application**
+   panel in DevTools.
 1. Hover your mouse over the `(!)` icon next to the **App Id** property. The
    `(!)` tooltip icon will only appear when the `id` is **not** specified in
    the web app manifest file.
-1. Note the `id` value shown in the tool tip (see screenshot below).
+1. Note the `id` value shown in the tooltip (see screenshot below).
 1. Add an `id` property to the web app manifest using the `id` value shown in
    the tooltip.
 
