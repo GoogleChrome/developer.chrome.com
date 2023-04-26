@@ -28,15 +28,13 @@ In order to use the SidePanel API, you must include the `"sidePanel"` permission
 }
 ```
 
-The side panel can optionally be set initially from the `“default_path”` property in the `“side_panel”` key of the manifest (See [Display on every site](#every-site)). This should point to a relative path within the extension directory.
-
 ## Use cases {: #use-cases }
 
-The following sections demonstrate some common use cases for the SidePanel API.
+The following sections demonstrate some common use cases for the SidePanel API. For complete extension samples, skip to [examples](#examples).
 
 ### Display the same side panel on every site {: #every-site }
 
-You can display the same side panel on every site by declaring the `sidepanel.html` file in the manifest. For this, you will need the following files:
+The side panel can optionally be set initially from the `“default_path”` property in the `“side_panel”` key of the manifest to display the same side panel on every site. This should point to a relative path within the extension directory.
 
 {% Label %}manifest.json:{% endLabel %}
 
