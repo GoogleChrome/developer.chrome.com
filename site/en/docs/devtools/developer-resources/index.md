@@ -10,7 +10,7 @@ description: "Use the Developer Resources drawer tab to check if source maps loa
 
 Use the **Developer Resources** tab to check if DevTools loads source maps successfully. If required, you can load them manually.
 
-{% YouTube id='SkUcO4ML5U0' %}
+{% YouTube id='SkUcO4ML5U0', startTime=139 %}
 
 {% Aside 'important' %}
 To learn how source maps can make debugging easier for you, see [Debug your original code instead of deployed with source maps](/docs/devtools/javascript/source-maps/).

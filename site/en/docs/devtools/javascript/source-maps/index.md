@@ -62,7 +62,7 @@ With source maps [ready](#use_a_supported_preprocessor) and [enabled](#enable_so
 1. [Open your website's sources](/docs/devtools/javascript/#sources-ui) in the **Sources** panel.
 1. To focus only on the code you author, [group authored and deployed files in the file tree](/docs/devtools/javascript/reference/#group-authored-and-deployed). Then expand the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/KIgoYfQUdaCtgDLdYKSE.svg", alt="Authored.", width="24", height="24" %} **Authored** section and open your original source file in the **Editor**.
 
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/RjxMoAjP106QbqZziwaZ.png", alt="The original file opened in the Authored section.", width="800", height="450" %}
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/aMQH5hz1wtyvZ6m9iwIS.png", alt="The original file opened in the Authored section.", width="800", height="467" %}
 
 1. [Set a breakpoint](/docs/devtools/javascript/breakpoints/) as you normally would. For example, a [logpoint](/docs/devtools/javascript/breakpoints/#log-loc). Then run the code.
 
