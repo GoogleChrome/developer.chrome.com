@@ -19,7 +19,6 @@ const {toc} = require('./site/_filters/toc');
 const {updateSvgForInclude} = require('webdev-infra/filters/svg');
 const {minifyHtml} = require('webdev-infra/filters/minifyHtml');
 const {getContentType} = require ('./site/_filters/getContentType');
-const {indexOfPostByUrl} = require('./site/_filters/indexOfPostByUrl');
 
 // Shortcodes
 const {Blockquote} = require('webdev-infra/shortcodes/Blockquote');
@@ -131,7 +130,6 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('slugify', slugify);
   eleventyConfig.addFilter('toc', toc);
   eleventyConfig.addFilter('getContentType', getContentType);
-  eleventyConfig.addFilter('indexOfPostByUrl', indexOfPostByUrl);
   eleventyConfig.addFilter('ensureUniqueHrefInProduction', ensureUniqueHrefInProduction);
   eleventyConfig.addFilter('typeof', x => typeof x);
   eleventyConfig.addNunjucksAsyncFilter('minifyHtml', minifyHtml);
