@@ -93,7 +93,7 @@ An example rule:
   "action" : { "type" : "block" },
   "condition" : {
     "urlFilter" : "abc",
-    "domains" : ["foo.com"],
+    "initiatorDomains" : ["foo.com"],
     "resourceTypes" : ["script"]
   }
 }
