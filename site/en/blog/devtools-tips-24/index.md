@@ -22,7 +22,7 @@ tags:
 Watch this video to learn how to:
 
 - [Enable source maps](/docs/devtools/javascript/source-maps/#enable_source_maps_in_settings).
-- Use [**Developer Resources**](/docs/devtools/developer-resources/) drawer tab to check if source maps loaded successfully.
+- Use [**Developer Resources**](/docs/devtools/developer-resources/) tab to check if source maps loaded successfully.
 - If required, [load source maps manually](/docs/devtools/developer-resources/#load).
 - [Debug your (mapped) original code](/docs/devtools/javascript/source-maps/#debugging_with_source_maps) instead of deployed as you normally would.
 - [Group the files you author](/docs/devtools/javascript/reference/#group-authored-and-deployed) to navigate the file tree in **Sources** easier.
