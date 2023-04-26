@@ -5,7 +5,8 @@ description: |
   Learn how to make your page more secure by replacing JavaScript libraries
   that have known vulnerabilities.
 date: 2019-05-02
-updated: 2020-06-04
+updated: 2023-04-26
+is_outdated: true
 ---
 
 Intruders have automated web crawlers that can scan your site
