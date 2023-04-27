@@ -67,15 +67,16 @@ export class FilteredElement extends BaseStateElement {
     if (Object.keys(activeFilters).length === 0) {
       // Show all elements when no filters are active
       this.hidden = false;
-    } else {
-      // Hide elements that don't match the active filters
-      this.hidden = true;
+      return;
+    }
+     
+    // Hide elements that don't match the active filters
+    this.hidden = true;
 
-      for (const [filter, filterValues] of Object.entries(activeFilters)) {
-        const values = filterValues.map(value => value.value);
-        if (values.includes(this.filters[filter])) {
-          this.hidden = false;
-        }
+    for (const [filter, filterValues] of Object.entries(activeFilters)) {
+      const values = filterValues.map(value => value.value);
+      if (values.includes(this.filters[filter])) {
+        this.hidden = false;
       }
     }
   }
