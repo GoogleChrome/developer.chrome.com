@@ -41,8 +41,6 @@ const individual = (items, locale) => {
   let paginated = [];
   for (const item in items) {
     const authorKey = items[item].key;
-
-    // use filter instead
     const authorFeeds = authorsFeeds.find(authorFeeds => {
       return Object.keys(authorFeeds)[0] === authorKey;
     });

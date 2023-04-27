@@ -5,9 +5,9 @@
 
 .feed-card {
   border: 1px solid var(--color-hairline);
+  break-inside: avoid-column;
   max-width: $blog-card-size;
   padding-top: 0;
-  break-inside: avoid-column;
 }
 
 .feed-card__source {
