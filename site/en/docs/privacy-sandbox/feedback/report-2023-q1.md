@@ -289,7 +289,7 @@ developers, as they work to integrate Topics API into their systems.
 However, by exposing additional information (such as the reason why
 no Topics were returned), we may inadvertently share information that
 enables parties to uncover additional details (for example, if a user is in
-incognito mode, has disabled the API, etc.) beyond what is intended,
+incognito mode, has disabled the API, and so forth) beyond what is intended,
 harming user privacy. While we don't plan to provide additional
 debugging tools at this time, we are open to feedback about which
 tools would be valuable.</td>
@@ -329,7 +329,7 @@ requests</a>.</td>
     <tr>
       <td style="vertical-align: top";>FLEDGE feature availability</td>
       <td style="vertical-align: top";>Clarification on timelines for testing and implementation for FLEDGE
-features such as Fenced Frame enforcement, K-Anonymity, etc.</td>
+features such as Fenced Frame enforcement, K-Anonymity, and so forth.</td>
       <td style="vertical-align: top";>We have <a
 href="https://developer.chrome.com/docs/privacy-sandbox/fledge-api/feature-status/">shared
 a blog post</a> on various scoped FLEDGE features and when they will
