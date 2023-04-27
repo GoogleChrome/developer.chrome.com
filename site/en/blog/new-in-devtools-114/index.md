@@ -56,6 +56,32 @@ To learn the basics of using the **Lighthouse** panel in DevTools, see [Lighthou
 
 Chromium issue: [772558](https://crbug.com/772558).
 
+## Performance
+
+### `profile()` command populates the Performance panel {: #performance }
+
+The [`profile()` and `profileEnd()` commands](/docs/devtools/console/utilities/#profile-function) in the **Console** now start and stop CPU profiling in the [**Main** thread](/docs/devtools/performance/reference/#main) of the **Performance** panel.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/WPSIhGfU4uO1X2t71poK.png", alt="The console() command creates a profile in the Performance panel.", width="800", height="591" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/f8fc1cc8b2c26c46e22b7af16b42122acccc13f6 #}
+
+Chromium issue: [1429191](https://crbug.com/1429191).
+
+### JavaScript Profiler deprecation: Phase three {: #js-profiler }
+
+As early as [Chrome 58](/blog/devtools-javascript-cpu-profile-migration-2/), the DevTools team planned to eventually deprecate the **JavaScript Profiler** and have Node.js and Deno developers use the **Performance** panel for profiling JavaScript CPU performance.
+
+DevTools version 114 starts *phase three* of the [four-phase **JavaScript Profiler** deprecation](https://github.com/ChromeDevTools/rfcs/discussions/2#discussioncomment-5189668). During this phase, the **JavaScript Profiler** panel is removed from DevTools but you can still temporarily enable it via {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Experiments**](/docs/devtools/settings/experiments/) and open it from the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Three-dot menu.", width="24", height="24" %} three-dot menu.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/iEkxGNsTwKYYMP2nCxfY.png", alt="JavaScript profiler checkbox in Settings > Experiments.", width="800", height="507" %}
+
+To profile CPU performance, use the **Performance** panel.
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/fecc2e9a652f3b4cb830555c9d991b66ecf3ddf0 #}
+
+Chromium issue: [1428026](https://crbug.com/1428026).
+
 ## Miscellaneous highlights {: #misc }
 
 These are some noteworthy fixes in this release:
