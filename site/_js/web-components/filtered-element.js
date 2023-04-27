@@ -69,7 +69,7 @@ export class FilteredElement extends BaseStateElement {
       this.hidden = false;
       return;
     }
-     
+
     // Hide elements that don't match the active filters
     this.hidden = true;
 
