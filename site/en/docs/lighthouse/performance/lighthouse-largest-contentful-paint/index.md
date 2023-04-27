@@ -27,8 +27,7 @@ details on how LCP is determined.
 
 ## How Lighthouse determines your LCP score
 
-Browser support for LCP launched in [Chrome 77][launch]. Lighthouse extracts LCP data from
-[Chrome's tracing tool](https://www.chromium.org/developers/how-tos/trace-event-profiling-tool).
+Lighthouse extracts LCP data from [Chrome's tracing tool](https://www.chromium.org/developers/how-tos/trace-event-profiling-tool).
 
 The table below shows how to interpret your LCP score:
 
@@ -77,8 +76,6 @@ Lighthouse will display the LCP element along with the phase breakdown in the "L
 - [Source code for **Largest Contentful Paint** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/metrics/largest-contentful-paint.js)
 - [Largest Contentful Paint](https://web.dev/lcp/)
 - [Largest Contentful Paint API](https://wicg.github.io/largest-contentful-paint/)
-- [New in Chrome 77: Largest Contentful Paint][launch]
 
 [definition]: https://web.dev/lcp/#what-is-lcp
-[launch]: /blog/new-in-chrome-77/#lcp
 [improve]: https://web.dev/optimize-lcp/
