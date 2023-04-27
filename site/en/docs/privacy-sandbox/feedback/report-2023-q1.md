@@ -1411,3 +1411,230 @@ developing a plan to carefully transition to it.</td>
     </tr>
   </tbody>
 </table>
+
+<!--        -->
+
+Google Roadmap for Effectiveness Testing of the Privacy Sandbox Proposals
+As we continue to approach the deprecation of third-party cookies, efforts to
+invest in testing the effectiveness of the APIs are increasingly becoming a
+priority. The Privacy Sandbox Team is planning to publish in consultation with
+the CMA a proposal for facilitating tests of the Privacy Sandbox Proposals in
+the course of May 2023.
+
+For its part, Google Ads is beginning to undertake initial testing to road test
+the APIs and provide feedback to the CMA and the ecosystem. Google is conscious
+of the importance of transparency for the ecosystem, so that they can plan their
+investments and forecast participation in future tests, and as such has included
+Google Ads' testing plans below:
+
+## Topics API for Interest-based Advertising
+
+-   During Q1 2023, Google Ads completed running an Interest-based
+    Advertising experiment on Origin Trial Chrome Desktop + Mobile Web traffic,
+    utilizing a combination of privacy-preserving signals including contextual
+    information, the
+    [Topics API](https://blog.google/products/chrome/get-know-new-topics-api-privacy-sandbox/)
+    from the Privacy Sandbox and first-party identifiers such as
+    [Publisher Provided IDs](https://blog.google/products/admanager/new-ways-publishers-activate-first-party-data/).
+-   In consultation with the CMA, Google Ads  has published a
+    [whitepaper](https://github.com/google/ads-privacy/blob/master/Testing%20IBA%20with%20Privacy%20Preserving%20Signals.pdf)
+    that outlines the methodology and shares the results of this experiment.
+
+## Measurement APIs
+
+-   In Q2, Google Ads envisages publishing API integration guidance for
+    third-party ad tech on how the Event and Aggregate-level APIs could be combined
+-   In Q3, Google Ads envisages publishing guidance on how ad-tech could
+    improve the performance of the Event and Aggregate-level APIs via API-based
+    mitigations.
+
+Google's long term testing timeline, along with registration details for
+Chrome's Origin Trials and details of the APIs, is available at the
+[privacysandbox.com](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline)
+site.
+
+Updates on User-Agent Reduction
+
+## Rollout of User-Agent Reduction
+
+During this reporting period Google has provided the CMA and the ecosystem with
+information regarding its efforts to limit passively shared browser data through
+User-Agent Reduction ("UAR"). In an effort to increase transparency, Google has
+coordinated with the CMA to publish these updates.
+
+In particular, as announced in the
+[blink-dev email thread](https://groups.google.com/a/chromium.org/g/blink-dev/c/zVOEHwgyyu4/m/FHEZALFGBgAJ),
+Google started gradually rolling-out UAR during Q1 2023. While progressing with
+implementation of UAR, in line with Google's cautious approach regarding latency
+and ecosystem dynamics, we initially limited the March 21 increase of Phase 6
+User Agent Reduction to 5%, rather than 10%. As we move forward with the
+implementation, we will continue updating the ecosystem and the CMA on any
+relevant developments, particularly in cases where there would be a justified
+reason to delay rollout compared to the envisaged timeline.
+
+The current envisaged timeline for the roll-out of User-Agent Reduction Phase 6
+stands as follows:
+
+- **Stable 1% [Completed]**: Feb 21, 2023
+
+- **Stable 5% [Completed]**: Mar 21, 2023
+
+- **Stable 10% [Completed]**: Apr 4, 2023
+
+- **Stable 50%**: Apr 25, 2023
+
+- **Stable 100%**: May 9, 2023
+
+This updated timeline and all other timeline updates can be found on the
+[blink-dev email thread](https://groups.google.com/a/chromium.org/g/blink-dev/c/zVOEHwgyyu4/m/8f9RZSFqCgAJ).
+
+## Latency impact measurement**
+
+As part of the broader evaluation of the gradual rollout of UAR, Google has
+been asked by the CMA to measure certain aspects of the latency impact on the
+ecosystem. We investigated whether sites that use the Critical-CH response
+header incurred a meaningful latency impact by measuring and comparing the First
+Contentful Paint (FCP) metric against a local build of Chrome with the feature
+enabled and another with the feature disabled.
+
+We tested 60 sites (randomly selected) with an automation framework to load the
+sites hundreds of times. In aggregate, the first page load across all sites
+appeared to incur an additional ~100ms in its FCP. This aggregate figure should
+however be read with caution, as it is not representative of real usage, each
+site's architecture will have a different influence on latency, and, because of
+this great variance, the aggregate analysis is not necessarily meaningful. We
+think that a more representative figure can be established when looking at a
+site in isolation. When taking this perspective, the latency impact figure is
+cut in half to ~50ms. On any subsequent navigation or visit, the FCP delta was
+merely ~3.5ms. Based on this result, we suspect this figure is more
+representative of real usage, especially for users across the globe visiting
+sites making use of edge caching or other CDN strategies.
+
+## Google's Interactions with the CMA
+
+Efforts to identify and resolve concerns quickly
+Paragraph 15 of the Commitments provides for Google to engage with the CMA in an
+open, constructive and continuous dialogue in relation to the development and
+implementation of the Privacy Sandbox proposals, in the context of which
+paragraph 17(a) envisages efforts to identify and resolve concerns quickly.
+
+The intensive discussions between Google and the CMA set out below have focused
+on ensuring that the CMA is fully informed of developments in the Privacy
+Sandbox proposals, and of the underlying thinking. Google continues to respond
+to a continuous sequence of detailed questions in this respect. As part of this,
+Google and the CMA continue to operate a joint process by which the CMA
+carefully reviews relevant Google announcements before they are published.
+
+We engaged closely with the CMA and with a variety of representative
+stakeholders across the industry as part of the process of updating the
+taxonomy. The results of our engagement has so far given us positive
+expectations about the improved utility for the ecosystem, but we look forward
+to hearing more comments on the revised taxonomy and we'll continue engaging
+with feedback throughout the upcoming months. Both Google and the CMA continue
+to ensure that design updates like these are in line with the Commitments.
+
+CMA concerns
+
+The CMA has not during the relevant period expressed concerns for resolution
+pursuant to paragraph 17(a)(ii), or notified any such concerns pursuant to
+paragraph 17(a)(iii) of the Commitments. However, the CMA has continued to raise
+detailed questions about how the Privacy Sandbox APIs would address the
+Development and Implementation Criteria set out in the Commitments, based on its
+own assessment and reacting to stakeholder concerns as set out below.
+
+Stakeholder concerns
+
+The CMA has shared with Google certain concerns expressed by stakeholders:
+
+**First-Party Sets **- The CMA has shared with Google that some stakeholders
+believe that there is ambiguity in Google communications around FPS. To clarify,
+Google's intent is to have three associated domains in addition to the primary
+domain (four total). This requirement, and further details on the submissions
+process, can be found in the
+[Submissions Guidelines](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md)
+and the
+[Chrome Developer Blog](https://developer.chrome.com/blog/first-party-sets-testing-instructions/).
+Google will continue to work with the CMA and the ecosystem to improve the
+readability and clarity of these resources.
+
+**Topics** - Google has recently announced some important updates to the Topics
+API, particularly the
+[publication of an improved taxonomy](https://developer.chrome.com/blog/topics-enhancements/)
+compared to the one originally launched for testing. The taxonomy is the list of
+available topics that may be returned by the API. We repeatedly received
+[feedback](https://github.com/patcg-individual-drafts/topics/issues/3) that the
+testing taxonomy did not represent the topics that the advertising industry
+cared most about, and that's why we decided to add some important categories and
+remove ones with lower utility, reflecting Google's own internal assessment as
+well as feedback from the ecosystem.
+
+One of the key issues that we have considered as we worked on the revised
+taxonomy is the granularity, which has been the focus of stakeholder feedback
+also in the past quarter. The CMA shared that some ecosystem participants feel
+that Topics should not be made any more granular due to privacy concerns,
+whereas others conversely would encourage more granularity. We are conscious of
+the importance of these various considerations, and we look forward to receiving
+feedback on the improved taxonomy, which hopefully contributes to addressing the
+views expressed by both groups of stakeholders.
+
+**User-Agent Reduction **-** **The CMA has continued to highlight concerns
+related to User-Agent Reduction, and in particular latency metrics. Google is in
+regular communication with the CMA concerning its plans for the Phase 6 Rollout,
+see the section above for further details.
+
+**Standards Development** - The CMA has shared that some stakeholders expressed
+the view that W3C is an unfamiliar venue for publishers, and it is not able to
+facilitate non-technical "policy" discussions. This wider issue concerning
+requests for additional forums for non-technical ecosystem players has been
+addressed in the feedback tables under General Feedback.
+
+**Timeline** - The CMA shared that some stakeholders are still uncertain as to
+whether Google will meet the announced timeline for the phasing out of
+third-party cookies. Google is committed to third-party cookie deprecation and
+is investing significant time and resources into the APIs to ensure they meet
+the ecosystem's expectations as effective alternatives to third-party cookies
+while satisfying the Development and Implementation Criteria set out in the
+Commitments. The development of the Privacy Sandbox APIs is progressing at pace.
+The Privacy Sandbox APIs are already available in Origin Trial for testing and
+will be generally available for 100% of Chrome traffic this summer.
+
+**Alternatives** - The CMA has shared that some stakeholders are keen to ensure
+that Google's technologies do not close off legitimate alternatives to Privacy
+Sandbox. Google's efforts are focused on developing the Privacy Sandbox
+proposals in such a way that they comply with the Development and Implementation
+Criteria set out in the Commitments, and achieve the purpose of protecting
+privacy while replacing use cases critical to a thriving web ecosystem. Google
+welcomes efforts to develop alternative privacy-preserving technologies to
+support ads targeting and measurement. While encouraging the development and
+testing of such technologies, Google will always keep in mind the privacy,
+safety, and security of its users.
+
+### Status Meetings
+
+The Commitments provide for Google and the CMA to schedule regular meetings at
+least once a month (before the Removal of Third-Party Cookies), to discuss
+progress on the Privacy Sandbox proposals. Currently, Google and the CMA
+typically have one substantial technical meeting a month, updating on progress
+and addressing an agreed agenda of testing, targeting, measurement, boundaries
+and user control topics to assist the CMA to carry out the regulatory scrutiny
+and oversight foreseen in the Commitments, as well as one legal status meeting
+focusing on legal, procedural, and competition considerations. Google and the
+CMA collaborate on the agendas for each meeting to ensure that adequate
+attention is given to each topic. Additional meetings are held to discuss
+specific issues when the need arises.
+
+In addition to synchronous meetings, Google and the CMA typically engage with
+each other on at least a weekly basis. These engagements range from emails to
+formal written responses, and consist of questions and answers, the sharing of
+information, and the like.
+
+### Standstill 
+
+Paragraph 21 of the Commitments on notification of concerns during the
+Standstill is not yet applicable, as Google has not entered the Standstill
+Period.
+
+### Compliance statement
+
+The compliance statement provided for at paragraph 32(a) of the Commitments is
+attached.
