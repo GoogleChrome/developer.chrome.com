@@ -273,8 +273,8 @@ evaluating.</td>
 Miscategorized sites</td>
       <td style="vertical-align: top";>Ads targeting when topics are miscategorized for a given site</td>
       <td style="vertical-align: top";>Q1 Update: <br>
-<br>
-n Q2 we will announce an updated classifier for the Topics API and look forward to engaging with the ecosystem on it. 
+
+In Q2 we will announce an updated classifier for the Topics API and look forward to engaging with the ecosystem on it. 
 <br>
 In response to the current feedback, sites are classified through a combination of a human-curated override list, containing the most popular sites, and an on-device ML model. Chrome continues to evaluate options for sites to contribute to Topics classification. Any utility improvements must be weighed against the privacy and abuse risks. For example, a few of the risks include: sites using self-labeling as a method to encode different (and potentially sensitive) meanings into topics; sites misrepresenting their topics for financial gain; sites attacking topics in order to blunt its usefulness for others (for example spamming the user's topics with meaningless noise).
 The public can inspect these components, with tooling available via <code>chrome://topics-internals</code> or this <a href="https://colab.research.google.com/drive/1hIVoz8bRCTpllYvads51MV7YS3zi3prn?usp=sharing">colab</a>. Through testing, we expect classification to improve over time, and we <a href="https://developer.chrome.com/docs/privacy-sandbox/feedback/#feedback-routes">welcome feedback</a> of examples of sites that may be miscategorized.</td>
@@ -336,20 +336,16 @@ we continue to develop FLEDGE.</td>
     </tr>
     <tr>
       <td style="vertical-align: top";>Product rendering restrictions</td>
-      <td style="vertical-align: top";>Request to loosen Ads Composed of Multiple Pieces restrictions for
-FLEDGE Fenced Frames</td>
+      <td style="vertical-align: top";>Request to loosen Ads Composed of Multiple Pieces restrictions for FLEDGE Fenced Frames</td>
       <td style="vertical-align: top";>As we <a
-href="https://developer.chrome.com/docs/privacy-sandbox/fledge-api/feature-status/">announced
-in February</a>, usage of Fenced Frames will remain optional until at
+href="https://developer.chrome.com/docs/privacy-sandbox/fledge-api/feature-status/">announced in February</a>, usage of Fenced Frames will remain optional until at
 least 2026, and iframes behavior will be supported by urn-iframes. We
 welcome further discussion on this topic.</td>
     </tr>
     <tr>
       <td style="vertical-align: top";>Scalability issues</td>
       <td style="vertical-align: top";>FLEDGE performance as usage scales</td>
-      <td style="vertical-align: top";>We are actively following up on the feedback and understanding more
-context so that we may propose actionable solutions. The first step was
-to separate the feedback into two categories, which we did:<br>
+      <td style="vertical-align: top";>We are actively following up on the feedback and understanding more context so that we may propose actionable solutions. The first step was to separate the feedback into two categories, which we did:<br>
 <ol><li> SSP-driven filtering to optimize queries-per-second (QPS) load on
 both a) themselves and b) the DSPs.</li>
 <li>Interest group DailyUpdate logic to optimize QPS load on DSPs.</li></ol></td>
