@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Debugging extensions"
 seoTitle: "Chrome Extensions Tutorial: Debugging extensions"
 date: 2012-09-18
-updated: 2022-04-03
+updated: 2023-04-28
 description: Step-by-step instructions on how to debug Chrome Extensions.
 ---
 
