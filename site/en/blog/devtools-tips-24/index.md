@@ -19,7 +19,7 @@ tags:
 
 {% YouTube id='SkUcO4ML5U0' %}
 
-Watch this video to learn how to:
+Watch this video to learn how to work with source maps in DevTools:
 
 - [Enable source maps](/docs/devtools/javascript/source-maps/#enable_source_maps_in_settings).
 - Use [**Developer Resources**](/docs/devtools/developer-resources/) tab to check if source maps loaded successfully.
