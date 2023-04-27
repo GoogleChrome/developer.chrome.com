@@ -76,10 +76,6 @@ if something is missing!
 
 {% Partial 'privacy-sandbox/glossary-entries/clickthrough-rate.njk' %}
 
-## Contribution budget {: #contribution-budget }
-
-{% Partial 'privacy-sandbox/glossary-entries/contribution-budget.njk' %} 
-
 ## Conversion {: #conversion }
 
 {% Partial 'privacy-sandbox/glossary-entries/conversion.njk' %} 
