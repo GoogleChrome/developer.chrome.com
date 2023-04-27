@@ -56,7 +56,7 @@ To learn the basics of using the **Lighthouse** panel in DevTools, see [Lighthou
 
 Chromium issue: [772558](https://crbug.com/772558).
 
-## Performance panel enhancements {: #performance }
+## Performance enhancements {: #performance }
 
 ### `performance.mark()` shows timing on hover in Performance > Timings {: #mark }
 
@@ -68,7 +68,7 @@ The [performance.mark() method](https://developer.mozilla.org/docs/Web/API/Perfo
 
 Chromium issue: [1426762](https://crbug.com/1426762).
 
-### `profile()` command populates Performance {: #profile }
+### `profile()` command populates Performance > Main {: #profile }
 
 The [`profile()` and `profileEnd()` commands](/docs/devtools/console/utilities/#profile-function) in the **Console** now start and stop CPU profiling in the [**Main** thread](/docs/devtools/performance/reference/#main) of the **Performance** panel.
 
