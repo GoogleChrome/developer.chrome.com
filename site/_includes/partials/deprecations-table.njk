@@ -1,38 +1,35 @@
 {% from 'macros/icon.njk' import icon with context %}
 <filtered-table>
-  <div class="deprecations-calendar__rows">
-
-    <div class="deprecations-calendar__row deprecations-calendar__header filtered__header">
-        <div>{{ 'i18n.deprecations_calendar.removal_date' | i18n(locale) }}</div>
-        <div>{{ 'i18n.deprecations_calendar.name' | i18n(locale) }}</div>
-        <div>{{ 'i18n.deprecations_calendar.chrome_version' | i18n(locale) }}</div>
-        <div>{{ 'i18n.deprecations_calendar.article' | i18n(locale) }}</div>
+    <div class='filtered-item' filtered-table-header>
+        <div class='deprecations-calendar__date'>{{ 'i18n.deprecations_calendar.removal_date' | i18n(locale) }}</div>
+        <div class='deprecations-calendar__name'>{{ 'i18n.deprecations_calendar.name' | i18n(locale) }}</div>
+        <div class='deprecations-calendar__version'>{{ 'i18n.deprecations_calendar.chrome_version' | i18n(locale) }}</div>
+        <div class='deprecations-calendar__article'>{{ 'i18n.deprecations_calendar.article' | i18n(locale) }}</div>
     </div>
 
-    <div class="deprecations-calendar__row" empty-state-placeholder hidden>
+    <div class="filtered-item" empty-state-placeholder hidden>
         {{ 'i18n.deprecations_calendar.empty' | i18n(locale) }}
     </div>
 
     {% for item in deprecationsCalendar %}
-    <filtered-element class="deprecations-calendar__row" data-filter-chrome-version="chrome-{{ item.version }}" data-filter-removal-date="{{item.date | dateRange}}">
-        <div>
-            <span class='deprecations-calendar__mobile-label'>{{ 'i18n.deprecations_calendar.removal_date' | i18n(locale) }}</span>{{ item.date }}</div>
-        <div>
+    <filtered-element class="filtered-item" data-filter-chrome-version="chrome-{{ item.version }}" data-filter-removal-date="{{item.date | dateRange}}">
+        <div class='deprecations-calendar__date'>
+            <span class='filtered-item__mobile-label'>{{ 'i18n.deprecations_calendar.removal_date' | i18n(locale) }}</span>{{ item.date }}</div>
+        <div class='deprecations-calendar__name'>
             <a href='https://chromestatus.com/feature/{{item.id}}' class='link no-visited'>
                 {{ item.name }}
             </a>
         </div>
-        <div>
-            <span class='deprecations-calendar__mobile-label'>{{ 'i18n.deprecations_calendar.chrome_version' | i18n(locale) }}</span>
+        <div class='deprecations-calendar__version'>
+            <span class='filtered-item__mobile-label'>{{ 'i18n.deprecations_calendar.chrome_version' | i18n(locale) }}</span>
             <a href='https://chromestatus.com/features#milestone%3D{{item.version}}' class='link no-visited'>{{ item.version }}</a>
         </div>
-        <div>
+        <div class='deprecations-calendar__article'>
             {% if item.article %}
-            <a href='{{item.article}}' class='deprecations-calendar__article link no-visited'>{{ icon('articles') }}<span class='deprecations-calendar__mobile-label'>{{ 'i18n.deprecations_calendar.read_article' | i18n(locale) }}</span>
+            <a href='{{item.article}}' class='deprecations-calendar__article-link link no-visited'>{{ icon('articles') }}<span class='filtered-item__mobile-label'>{{ 'i18n.deprecations_calendar.read_article' | i18n(locale) }}</span>
             </a>
             {% endif %}
         </div>
     </filtered-element>
     {% endfor %}
-  </div>
 </filtered-table>

@@ -3,35 +3,7 @@
     max-width: 1200px;
   }
 
-  &__rows {
-
-    @include media-query('md-max') {
-      margin-top: 1.5rem;
-    }
-  }
-
-  &__row {
-    align-items: center;
-    color: var(--color-secondary-text);
-    display: flex;
-    font-family: 'Google Sans';
-    font-size: 1rem;
-    padding: 1rem 0;
-
-    @include media-query('md-max') {
-      background-color: var(--color-footer-bg);
-      border-radius: 0.75rem;
-      flex-wrap: wrap;
-      margin-bottom: 1.5rem;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-  }
-
-  &__row > div:first-child {
+  &__date {
     padding-left: 1rem;
     width: 16%;
     
@@ -42,9 +14,9 @@
       padding: 0 1.5rem;
       width: 50%;
     }
-  }
+  } 
 
-  &__row > div:nth-child(2) {
+  &__name {
     width: 60%;
 
     @include media-query('md-max') {
@@ -57,7 +29,7 @@
     }
   }
 
-  &__row > div:nth-child(3) {
+  &__version {
     text-align: center;
     width: 12%;
 
@@ -75,7 +47,7 @@
     }
   }
 
-  &__row > div:nth-child(4) {
+  &__article {
     padding-right: 1rem;
     text-align: center;
     width: 12%;
@@ -89,34 +61,8 @@
       width: 100%;
     }
   }
-
-  &__row:nth-child(even) {
-    background-color: var(--color-footer-bg);
-    border-radius: 4px;
-
-    @include media-query('md-max') {
-      border-radius: 0.75rem;
-    }
-  }
-
-  &__header {
-    font-weight: 500;
-
-    @include media-query('md-max') {
-      display: none;
-    }
-
-  }
-
-  &__mobile-label {
-    display: none;
-
-    @include media-query('md-max') {
-      display: block;
-    }
-  }
-
-  &__article {
+  
+  &__article-link {
     align-items: center;
     display: flex;
     justify-content: center;
@@ -135,7 +81,6 @@
     svg {
       margin-right: 8px;
     }
-
   }
 
   .hero-card {
