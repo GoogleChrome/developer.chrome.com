@@ -58,7 +58,7 @@ Chromium issue: [772558](https://crbug.com/772558).
 
 ## Performance panel enhancements {: #performance }
 
-## `performance.mark()` shows timing on hover in Performance > Timings {: #mark }
+### `performance.mark()` shows timing on hover in Performance > Timings {: #mark }
 
 The [performance.mark() method](https://developer.mozilla.org/docs/Web/API/Performance/mark) now shows its timing when you hover over the corresponding mark in **Performance** > **Timings**. The timing here is a timestamp relative to the previous navigation event.
 
@@ -77,6 +77,19 @@ The [`profile()` and `profileEnd()` commands](/docs/devtools/console/utilities/#
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f8fc1cc8b2c26c46e22b7af16b42122acccc13f6 #}
 
 Chromium issue: [1429191](https://crbug.com/1429191).
+
+### Warning for slow user interactions {: #slow-interaction-warning }
+
+User interactions longer than 200 ms get an [Interaction to Next Pain (INP)](https://web.dev/inp/) warning in the **Performance** > **Summary** tab.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/wrFaZ26nYCuprtCSNB5C.png", alt="The INP warning.", width="800", height="685" %}
+
+Additionally, the ID of the interaction has been moved from the tooltip to **Summary**.
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/e73984213b6dfdc2f858ed1edfe323d7755d757f #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/7e33a26c738bcd848aacd140248d285b9db31704 #}
+
+Chromium issues: [1432512](https://crbug.com/1432512), [1432509](https://crbug.com/1432509).
 
 ### JavaScript Profiler deprecation: Phase three {: #js-profiler }
 
