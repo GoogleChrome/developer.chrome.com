@@ -23,7 +23,6 @@ import {BaseStateElement} from './base-state-element';
 export class FilteredTable extends BaseStateElement {
   connectedCallback() {
     super.connectedCallback();
-    this.headerRow = this.querySelector('.filtered__header');
     this.placeholder = this.querySelector('[empty-state-placeholder]');
   }
 
@@ -31,11 +30,9 @@ export class FilteredTable extends BaseStateElement {
     requestAnimationFrame(() => {
       const rows = this.querySelectorAll('filtered-element:not([hidden])');
       if (rows.length === 0) {
-        this.headerRow?.setAttribute('hidden', '');
         this.placeholder?.removeAttribute('hidden');
         return;
       }
-      this.headerRow?.removeAttribute('hidden');
       this.placeholder?.setAttribute('hidden', '');
     });
   }
