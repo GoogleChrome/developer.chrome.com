@@ -203,11 +203,10 @@ a user, this would not align with our privacy principles.</td>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td style="vertical-align: top";>TAG Design Review</td>
-      <td style="vertical-align: top";>TAG released Early Design Review of Topics.</td>
-      <td style="vertical-align: top";>We remain committed to Topics and have shared an update on our
-commitment to Topics <a
+<tr>
+<td style="vertical-align: top";>TAG Design Review</td>
+<td style="vertical-align: top";>TAG released Early Design Review of Topics.</td>
+<td style="vertical-align: top";>We remain committed to Topics and have shared an update on our commitment to Topics <a
 href="https://developer.chrome.com/docs/privacy-sandbox/topics/latest/#chromes-commitment-to-topics">on the latest updates page</a>
 and <a
 href="https://github.com/w3ctag/design-reviews/issues/726#issuecomment-1424728951">in this issue</a>.
@@ -239,7 +238,7 @@ including region specific. </td>
       <td style="vertical-align: top";>Q1 Update: <br>
 <br>
 Improvements to the taxonomy are an ongoing effort, and in Q2 we will announce an updated taxonomy for the Topics API. To craft this new taxonomy, we worked closely with companies from across the ecosystem. 
-
+<br>
 We are actively seeking feedback on the taxonomy that would be  most useful for the ecosystem. In evaluating whether to expand the number of topics or include more granular topics, there are a few considerations including 1) potential privacy implications (more topics may introduce fingerprinting risk) and 2) ability to retrieve previously observed topics (such as with more topics, there may be less of a chance that an ad tech has seen the chosen topic in the past).
 </td>
     </tr>
@@ -276,7 +275,7 @@ Miscategorized sites</td>
       <td style="vertical-align: top";>Q1 Update: <br>
 <br>
 n Q2 we will announce an updated classifier for the Topics API and look forward to engaging with the ecosystem on it. 
-
+<br>
 In response to the current feedback, sites are classified through a combination of a human-curated override list, containing the most popular sites, and an on-device ML model. Chrome continues to evaluate options for sites to contribute to Topics classification. Any utility improvements must be weighed against the privacy and abuse risks. For example, a few of the risks include: sites using self-labeling as a method to encode different (and potentially sensitive) meanings into topics; sites misrepresenting their topics for financial gain; sites attacking topics in order to blunt its usefulness for others (for example spamming the user's topics with meaningless noise).
 The public can inspect these components, with tooling available via <code>chrome://topics-internals</code> or this <a href="https://colab.research.google.com/drive/1hIVoz8bRCTpllYvads51MV7YS3zi3prn?usp=sharing">colab</a>. Through testing, we expect classification to improve over time, and we <a href="https://developer.chrome.com/docs/privacy-sandbox/feedback/#feedback-routes">welcome feedback</a> of examples of sites that may be miscategorized.</td>
     </tr>
@@ -331,8 +330,7 @@ requests</a>.</td>
       <td style="vertical-align: top";>Clarification on timelines for testing and implementation for FLEDGE
 features such as Fenced Frame enforcement, K-Anonymity, and so forth.</td>
       <td style="vertical-align: top";>We have <a
-href="https://developer.chrome.com/docs/privacy-sandbox/fledge-api/feature-status/">shared
-a blog post</a> on various scoped FLEDGE features and when they will
+href="https://developer.chrome.com/docs/privacy-sandbox/fledge-api/feature-status/">shared a blog post</a> on various scoped FLEDGE features and when they will
 be supported. We welcome additional feedback on the announcement as
 we continue to develop FLEDGE.</td>
     </tr>
