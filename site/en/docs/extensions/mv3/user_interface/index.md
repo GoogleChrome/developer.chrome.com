@@ -243,40 +243,21 @@ chrome.storage.local.get('signed_in', (data) => {
 
 ### Side panel {: #side-panel } 
 
-An extension side panel is an HTML file that provides additional functionality alongside the main content of a webpage. The [side panel dictionary example](TBD) displays the same side panel on every page.
-<!-- TODO: Screenshot of dictionary-->
-The side panel is registered under the `“side_panel”` key:
+An extension side panel is an HTML file that provides additional functionality alongside the main content of a webpage. The [Dictionary side panel][sample-dictionary-sidepanel] example allows users to right-click on a word and see the definition on the side panel.
 
-{% Label %}manifest.json:{% endLabel %}
+<figure>
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/9QJK3CNx71t67M3MlIUY.png", alt="Selecting the Dictionary side panel", width="379", height="386" %}
+  <figcaption>
+    Dictionary side panel extension.
+  </figcaption>
+</figure>
 
-```json
-{
-  "manifest_version": 3,
-  "name": "1 - BLUE Side panel example",
-  "version": "1.0",
-  "description": "Sidepanel declared only in the manifest visible to all sites",
-  "side_panel": {
-    "default_path": "sidepanel.html"
-  },
-  "permissions": ["sidePanel"]
-}
-```
-<!-- Switch code to dictionary code if simple -->
-{% Label %}sidepanel.html:{% endLabel %}
-
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>My Sidepanel</title>
-  </head>
-  <body>
-    <h1>All sites sidepanel extension</h1>
-    <p>This side panel is enabled on all sites</p>
-    <script src="sidepanel.js"></script>
-  </body>
-</html>
-```
+<figure>
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/aC3zkJDPliNLXdvfugeU.png", alt="Dictionary side panel right-clicking on the word extensions", width="800", height="393" %}
+  <figcaption>
+    Using the Dictionary extension to define the word "Extensions".
+  </figcaption>
+</figure>
 
 For more samples and use cases, see the [SidePanel API][api-sidepanel] reference page.
 
@@ -662,7 +643,9 @@ capabilities.
 [sample-context-menu]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/contextMenus/global_context_search
 [sample-drink]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.water_alarm_notification
 [sample-new-tab-search]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/omnibox/new-tab-search
+[sample-dictionary-sidepanel]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.sidepanel-dictionary
 [sample-tab-flipper]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/default_command_override
 [section-onclick]: #click
 [section-popup]: #popup
 [notifications-create]: /docs/extensions/reference/notifications#method-create
+
