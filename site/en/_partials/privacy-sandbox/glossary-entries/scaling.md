@@ -1,0 +1,1 @@
+[Scaling](/docs/privacy-sandbox/private-aggregation-fundamentals/#noise-and-scaling) refers to multiplying your aggregatable value by a number you choose to adjust the impact of noise. It impacts the effect of noise and the use of your contribution budget.

@@ -224,6 +224,10 @@ if something is missing!
 
 {% Partial 'privacy-sandbox/glossary-entries/reporting-origin.njk' %}
 
+## Scaling {: #scaling }
+
+{% Partial 'privacy-sandbox/glossary-entries/scaling.njk' %}
+
 ## Seller {: #seller }
 
 {% Partial 'privacy-sandbox/glossary-entries/seller.njk' %}
