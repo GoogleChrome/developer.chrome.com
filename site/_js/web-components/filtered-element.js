@@ -15,9 +15,8 @@
  */
 
 /**
- * @fileoverview A component for displaying a "like" icon. While this previously
- * used LocalStorage and Firebase to persist voting data, that functionality
- * has since been removed, and hardcoded vote counts are passed through instead.
+ * @fileoverview A component for displaying items on a table that can be filtered. If the filter
+ * selection doesn't match the filter data specified the component results hidden
  */
 import {BaseStateElement} from './base-state-element';
 //import {html} from 'lit-element';
