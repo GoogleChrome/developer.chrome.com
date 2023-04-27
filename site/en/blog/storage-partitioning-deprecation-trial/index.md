@@ -122,10 +122,10 @@ deprecation trials. For more detailed instructions, visit
     visiting the following:
     1.  For a top-level site to unpartition storage, service workers,
         and communication APIs in its third-party embedded content:
-        `[DisableThirdPartyStoragePartitioning](/origintrials/#/view_trial/-8517432795264450559)`
+        [`DisableThirdPartyStoragePartitioning`](/origintrials/#/view_trial/-8517432795264450559)
     1.  For a top-level site to unpartition sessionStorage across
         navigations:
-        `[DisableThirdPartySessionStoragePartitioningAfterGeneralPartitioning](/origintrials/#/view_trial/3444127815031586817)`
+        [`DisableThirdPartySessionStoragePartitioningAfterGeneralPartitioning`](/origintrials/#/view_trial/3444127815031586817)
 1.  Add an origin trial token to your page:
     1. For the `DisableThirdPartySessionStoragePartitioningAfterGeneralPartitioning` trial you may add an `Origin-Trial: <DEPRECATION TRIAL TOKEN>` to         your top-level site’s HTTP response header, where `<DEPRECATION TRIAL TOKEN>` contains the token you got when registering for the deprecation             trial. You can also do this via HTML `<meta> tag.
     1. For the `DisableThirdPartyStoragePartitioning` trial, the token must be given via an HTML `<meta>` tag. The HTTP header method is not supported.

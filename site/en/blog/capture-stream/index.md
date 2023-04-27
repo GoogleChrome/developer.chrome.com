@@ -10,7 +10,7 @@ updated: 2016-10-20
 ---
 
 
-The `[captureStream()](https://w3c.github.io/mediacapture-fromelement/#dfn-capturestream)` method makes
+The [`captureStream()`](https://w3c.github.io/mediacapture-fromelement/#dfn-capturestream) method makes
 it possible to capture a `MediaStream` from a `<canvas>`,
 `<audio>` or `<video>` element.
 
