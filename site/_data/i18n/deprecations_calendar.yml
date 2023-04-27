@@ -30,3 +30,6 @@ next_6_months:
 
 next_12_months:
   en: 'Next 12 months'
+
+empty:
+  en: "Sorry, we couldn't find any results that match your selected filters."
