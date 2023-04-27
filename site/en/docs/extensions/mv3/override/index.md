@@ -8,10 +8,10 @@ description: >
   How to override the Chrome bookmark manager, history, and new tab
   pages from your Chrome Extension.
 ---
+{% Partial 'extensions/mv2-legacy-page.md' %}
 
-
-Override pages are a way to substitute an HTML file from your extension for a page that Google
-Chrome normally provides. In addition to HTML, an override page usually has CSS and JavaScript code.
+Override pages are a way to substitute a HTML file from your extension for a page that Google
+Chrome normally provides like New Tab page. In addition to HTML, an override page usually has CSS and JavaScript code.
 
 An extension can replace any one of the following pages:
 
@@ -44,6 +44,7 @@ Register an override page in the [extension manifest][3] like this:
 
 ```json/4-6
 {
+  "manifest_version": 3,
   "name": "My extension",
   ...
 
