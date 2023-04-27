@@ -24,7 +24,7 @@ export class FilteredTable extends BaseStateElement {
   connectedCallback() {
     super.connectedCallback();
     this.headerRow = this.querySelector('.filtered__header');
-    this.placeholder = this.querySelector('.filtered__empty');
+    this.placeholder = this.querySelector('[empty-state-placeholder]');
   }
 
   onStateChanged() {

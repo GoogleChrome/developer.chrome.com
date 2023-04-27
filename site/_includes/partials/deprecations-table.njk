@@ -1,8 +1,8 @@
 {% from 'macros/icon.njk' import icon with context %}
 <filtered-table>
   <div class="deprecations-calendar__rows">
-    <div class="deprecations-calendar__row filtered__empty" hidden>
-        Sorry, we couldn't find any results that match your selected filters. 
+    <div class="deprecations-calendar__row" empty-state-placeholder hidden>
+        {{ 'i18n.deprecations_calendar.empty' | i18n(locale) }}
     </div>
     <div class="deprecations-calendar__row deprecations-calendar__header filtered__header">
         <div>{{ 'i18n.deprecations_calendar.removal_date' | i18n(locale) }}</div>
