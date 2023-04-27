@@ -98,8 +98,8 @@ begins</td>
 They are already available in Origin Trial for testing and will be
 generally available for 100% of traffic this summer. <br>
 <br>
-Additionally, we have clarified timelines for certain features (e.g.
-FLEDGE event level reporting, FLEDGE rendering with iFrames) that
+Additionally, we have clarified timelines for certain features (such as 
+FLEDGE event-level reporting, FLEDGE rendering with iframes) that
 will not be impacted sooner than 2026.<br>
 <br>
 We encourage the ecosystem to test the APIs and provide feedback to
@@ -128,7 +128,7 @@ event the browser is compromised</td>
 href="https://github.com/WICG/turtledove/blob/main/FLEDGE.md">FLEDGE
 explainer</a> makes it evident that one ad tech's data is only shared
 with that same ad tech (either with their worklets or their trusted
-servers) or when explicitly shared by that ad tech (e.g. a buyer
+servers) or when explicitly shared by that ad tech (such as a buyer
 shows a seller the ad URL they want to display). The one exception
 being that the k-anonymity check must be done by a global centralized
 server, which is an area we continue to devote significant resources
@@ -240,7 +240,7 @@ including region specific. </td>
 <br>
 Improvements to the taxonomy are an ongoing effort, and in Q2 we will announce an updated taxonomy for the Topics API. To craft this new taxonomy, we worked closely with companies from across the ecosystem. 
 
-We are actively seeking feedback on the taxonomy that would be  most useful for the ecosystem. In evaluating whether to expand the number of topics or include more granular topics, there are a few considerations including 1) potential privacy implications (e.g. more topics may introduce fingerprinting risk) and 2) ability to retrieve previously observed topics (e.g. with more topics, there may be less of a chance that an ad tech has seen the chosen topic in the past).
+We are actively seeking feedback on the taxonomy that would be  most useful for the ecosystem. In evaluating whether to expand the number of topics or include more granular topics, there are a few considerations including 1) potential privacy implications (more topics may introduce fingerprinting risk) and 2) ability to retrieve previously observed topics (such as with more topics, there may be less of a chance that an ad tech has seen the chosen topic in the past).
 </td>
     </tr>
     <tr>
@@ -277,7 +277,7 @@ Miscategorized sites</td>
 <br>
 n Q2 we will announce an updated classifier for the Topics API and look forward to engaging with the ecosystem on it. 
 
-In response to the current feedback, sites are classified through a combination of a human-curated override list, containing the most popular sites, and an on-device ML model. Chrome continues to evaluate options for sites to contribute to Topics classification. Any utility improvements must be weighed against the privacy and abuse risks. For example, a few of the risks include: sites using self-labeling as a method to encode different (and potentially sensitive) meanings into topics; sites misrepresenting their topics for financial gain; sites attacking topics in order to blunt its usefulness for others (e.g., spamming the user's topics with meaningless noise).
+In response to the current feedback, sites are classified through a combination of a human-curated override list, containing the most popular sites, and an on-device ML model. Chrome continues to evaluate options for sites to contribute to Topics classification. Any utility improvements must be weighed against the privacy and abuse risks. For example, a few of the risks include: sites using self-labeling as a method to encode different (and potentially sensitive) meanings into topics; sites misrepresenting their topics for financial gain; sites attacking topics in order to blunt its usefulness for others (for example spamming the user's topics with meaningless noise).
 The public can inspect these components, with tooling available via <code>chrome://topics-internals</code> or this <a href="https://colab.research.google.com/drive/1hIVoz8bRCTpllYvads51MV7YS3zi3prn?usp=sharing">colab</a>. Through testing, we expect classification to improve over time, and we <a href="https://developer.chrome.com/docs/privacy-sandbox/feedback/#feedback-routes">welcome feedback</a> of examples of sites that may be miscategorized.</td>
     </tr>
     <tr>
