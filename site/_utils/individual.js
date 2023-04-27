@@ -40,26 +40,29 @@ const individual = (items, locale) => {
   /** @type PaginatedPage[] */
   let paginated = [];
   for (const item in items) {
-    authorsFeeds.map(authorFeeds => {
-      for (const author in authorFeeds) {
-        if (items[item].key === author) {
-          items[item] = items[item] || {};
-          const feeds = authorFeeds[author];
+    const authorKey = items[item].key;
 
-          feeds.forEach(feed => {
-            const element = {
-              title: feed.title,
-              description: feed.summary,
-              source: feed.source,
-              locale: defaultLocale,
-              date: new Date(feed.date),
-              url: feed.url,
-            };
-            (items[item].elements = items[item].elements || []).push(element);
-          });
-        }
-      }
+    // use filter instead
+    const authorFeeds = authorsFeeds.find(authorFeeds => {
+      return Object.keys(authorFeeds)[0] === authorKey;
     });
+
+    if (authorFeeds) {
+      const feeds = authorFeeds[authorKey];
+      items[item] = items[item] || {};
+
+      feeds.forEach(feed => {
+        const element = {
+          title: feed.title,
+          description: feed.summary,
+          source: feed.source,
+          locale: defaultLocale,
+          date: new Date(feed.date),
+          url: feed.url,
+        };
+        (items[item].elements = items[item].elements || []).push(element);
+      });
+    }
 
     if (items[item].elements?.length > 0) {
       const posts = filterByLocale(items[item].elements, locale);

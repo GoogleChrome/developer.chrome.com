@@ -1,4 +1,4 @@
-{% from 'macros/cards/blog-card.njk' import blogCard with context %}
+{% from 'macros/cards/feed-card.njk' import feedCard with context %}
 {% from 'macros/icon.njk' import icon with context %}
 
 {% extends "layouts/base.njk" %}
@@ -66,8 +66,8 @@
     </div>
   </div>
 
-  <div class="measure-1280 width-full center-margin pad-left-400 pad-right-400">
-    <div class="blog-grid">
+  <div class="measure-1280 width-full center-margin gap-top-500">
+    <div class="feed-grid">
       {% for item in paged.pagination.items %}
         {% set post = {
           data: {
@@ -82,7 +82,7 @@
           },
           url: item.url
         } %}
-        {{ blogCard(post) }}
+        {{ feedCard(post) }}
       {% endfor %}
     </div>
     {% include 'partials/pagination.njk' %}

@@ -1,0 +1,27 @@
+.feed-grid {
+  column-count: 3;
+  column-gap: get-size(0);
+}
+
+.feed-card {
+  border: 1px solid var(--color-hairline);
+  max-width: $blog-card-size;
+  padding-top: 0;
+  break-inside: avoid-column;
+}
+
+.feed-card__source {
+  background-color: var(--color-code-bg);
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+
+.feed-card__thumbnail {
+  img {
+    height: 100%;
+  }
+
+  a {
+    aspect-ratio: 1.57/1;
+  }
+}
