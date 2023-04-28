@@ -27,7 +27,7 @@ A similar type of scroll-driven animation is **an animation that is linked to an
 
 @TODO: video of an image reveal
 
-The classic way to achieve these kinds of effects is to respond to scroll events on [the main thread](https://developer.mozilla.org/en-US/docs/Glossary/Main_thread). This makes creating performant scroll-driven animations that are in-sync with scrolling impossible or very difficult.
+The classic way to achieve these kinds of effects is to respond to scroll events on [the main thread](https://developer.mozilla.org/docs/Glossary/Main_thread). This makes creating performant scroll-driven animations that are in-sync with scrolling impossible or very difficult.
 
 Coming to Chrome is a new set of APIs and concepts that work in conjunction with the existing [Web Animations API (WAAPI)](https://drafts.csswg.org/web-animations-1/) and [CSS Animations API](https://drafts.csswg.org/css-animations-1/) to enable declarative scroll-driven animations.
 
@@ -64,7 +64,7 @@ For example, here’s an animation that scales up an element on the X-axis while
 
 ### Animations on the web with JavaScript
 
-On the JavaScript side of things, the Web Animations API can be used to achieve exactly the same. You can do this by either creating new `Animation` and `KeyFrameEffect` instances, or us the much shorter [`Element` `animate()` method](https://developer.mozilla.org/en-US/docs/Web/API/Element/animate).
+On the JavaScript side of things, the Web Animations API can be used to achieve exactly the same. You can do this by either creating new `Animation` and `KeyFrameEffect` instances, or us the much shorter [`Element` `animate()` method](https://developer.mozilla.org/docs/Web/API/Element/animate).
 
 ```js
 document.querySelector('#progressbar').animate(
@@ -85,7 +85,7 @@ This visual result of the JavaScript snippet above is identical to the CSS versi
 
 ## Animation Timelines
 
-By default, an animation attached to an element runs on the [document timeline](https://developer.mozilla.org/en-US/docs/Web/API/DocumentTimeline). Its origin time starts at 0 when the page loads, and starts ticking forwards as clock time progresses. This is the default animation timeline and, until now, was the only animation timeline you had access to.
+By default, an animation attached to an element runs on the [document timeline](https://developer.mozilla.org/docs/Web/API/DocumentTimeline). Its origin time starts at 0 when the page loads, and starts ticking forwards as clock time progresses. This is the default animation timeline and, until now, was the only animation timeline you had access to.
 
 The [Scroll-driven Animations Specification](https://drafts.csswg.org/scroll-animations-1/) defines two new types of timelines that you can use:
 
@@ -107,7 +107,7 @@ A Scroll Progress Timeline is often abbreviated to simply “Scroll Timeline”.
 
 This type of timeline is linked to the relative progress of a particular element within a scroll container. Just like a Scroll Progress Timeline, a scroller’s scroll offset is tracked. Unlike a Scroll Progress Timeline, it’s **the relative position of a subject within that scroller that determines the progress**.
 
-This is somewhat comparable to how [`IntersectionObserver`](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) works, which can track how much an element is visible in the scroller. If the element is not visible in the scroller, it is not intersecting. If it is visible inside the scroller–even for the smallest part–it is intersecting.
+This is somewhat comparable to how [`IntersectionObserver`](https://developer.mozilla.org/docs/Web/API/Intersection_Observer_API) works, which can track how much an element is visible in the scroller. If the element is not visible in the scroller, it is not intersecting. If it is visible inside the scroller–even for the smallest part–it is intersecting.
 
 A View Progress Timeline begins from the moment a subject starts intersecting with the scroller and ends when the subject stops intersecting the scroller. In the following visualization, you can see that the progress starts counting up from 0% when the subject enters the scroll container and reaches 100% at the very moment the subject has left the scroll container.
 
