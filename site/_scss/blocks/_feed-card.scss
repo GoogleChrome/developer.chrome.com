@@ -1,13 +1,28 @@
 .feed-grid {
-  column-count: 3;
+  column-count: 1;
   column-gap: get-size(0);
+
+  @media screen and (min-width: 992px) and (max-width: 1230px) {
+    column-count: 2;
+    column-gap: get-size(500);
+  }
+
+  @include media-query('xl') {
+    column-count: 3;
+  }
 }
 
 .feed-card {
   border: 1px solid var(--color-hairline);
   break-inside: avoid-column;
+  margin-left: auto;
+  margin-right: auto;
   max-width: $blog-card-size;
   padding-top: 0;
+
+  @media screen and (min-width: 992px) and (max-width: 1230px) {
+    max-width: 100%;
+  }
 }
 
 .feed-card__source {
