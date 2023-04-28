@@ -26,7 +26,7 @@ if something is missing!
 
 {% Partial 'privacy-sandbox/glossary-entries/ad-creative.njk' %}
 
-## Ad exchange {: #ad-exchange }
+## Ad exchange
 
 {% Partial 'privacy-sandbox/glossary-entries/ad-exchange.njk' %}
 
@@ -40,31 +40,31 @@ if something is missing!
 
 {% Partial 'privacy-sandbox/glossary-entries/ad-platform.njk' %}
 
-## Advertiser {: #advertiser }
+## Advertiser
 
 {% Partial 'privacy-sandbox/glossary-entries/advertiser.njk' %}
 
-## Aggregatable reports {: #aggragatable-reports }
+## Aggregatable reports
 
 {% Partial 'privacy-sandbox/glossary-entries/aggregatable-reports.njk' %}
 
-## Attestation {: #attestation }
+## Attestation
 
 {% Partial 'privacy-sandbox/glossary-entries/attestation.njk' %}
 
-## Attribution {: #attribution }
+## Attribution
 
 {% Partial 'privacy-sandbox/glossary-entries/attribution.njk' %}
 
-## Blink {: #blink }
+## Blink
 
 {% Partial 'privacy-sandbox/glossary-entries/blink.njk' %}
 
-## Buyer {: #buyer }
+## Buyer
 
 {% Partial 'privacy-sandbox/glossary-entries/buyer.njk' %}
 
-## Chromium {: #chromium }
+## Chromium
 
 {% Partial 'privacy-sandbox/glossary-entries/chromium.njk' %}
 
@@ -76,19 +76,19 @@ if something is missing!
 
 {% Partial 'privacy-sandbox/glossary-entries/clickthrough-rate.njk' %}
 
-## Conversion {: #conversion }
+## Conversion
 
 {% Partial 'privacy-sandbox/glossary-entries/conversion.njk' %} 
 
-## Cookie {: #cookie }
+## Cookie
 
 {% Partial 'privacy-sandbox/glossary-entries/cookie.njk' %}
 
-## Coordinator {: #coordinator }
+## Coordinator
 
 {% Partial 'privacy-sandbox/glossary-entries/coordinator.njk' %}
 
-## Coarse data {: #course-data }
+## Coarse data
 
 {% Partial 'privacy-sandbox/glossary-entries/course-data.njk' %}
 
@@ -100,19 +100,19 @@ if something is missing!
 
 {% Partial 'privacy-sandbox/glossary-entries/demand-side-platform.njk' %}
 
-## Differential privacy {: #differential-privacy }
+## Differential privacy
 
 {% Partial 'privacy-sandbox/glossary-entries/differential-privacy.njk' %}
 
-## Domain {: #domain }
+## Domain
 
 {% Partial 'privacy-sandbox/glossary-entries/domain.njk' %}
 
-## Entropy {: #entropy }
+## Entropy
 
 {% Partial 'privacy-sandbox/glossary-entries/entropy.njk' %}
 
-## Epoch {: #epoch }
+## Epoch
 
 {% Partial 'privacy-sandbox/glossary-entries/epoch.njk' %}
 
@@ -120,7 +120,7 @@ if something is missing!
 
 {% Partial 'privacy-sandbox/glossary-entries/etld-etld1.njk' %}
 
-## Event-level report {: #event-level-report }
+## Event-level report
 
 {% Partial 'privacy-sandbox/glossary-entries/event-level.njk' %}
 
@@ -136,79 +136,79 @@ if something is missing!
 
 {% Partial 'privacy-sandbox/glossary-entries/fenced-frame.njk' %}
 
-## Fingerprinting {: #fingerprinting }
+## Fingerprinting
 
 {% Partial 'privacy-sandbox/glossary-entries/fingerprinting.njk' %}
 
-## Fingerprinting surface {: #fingerprinting-surface }
+## Fingerprinting surface
 
 {% Partial 'privacy-sandbox/glossary-entries/fingerprinting-surface.njk' %}
 
-## First-party {: #first-party }
+## First-party
 
 {% Partial 'privacy-sandbox/glossary-entries/first-party.njk' %}
 
-## First-party cookie {: #first-party-cookie } 
+## First-party cookie
 
 {% Partial 'privacy-sandbox/glossary-entries/first-party-cookie.njk' %}
 
-## I2E {: #i2e }
+## I2E
 
 {% Partial 'privacy-sandbox/glossary-entries/i2e.njk' %}
 
-## I2EE {: #i2ee }
+## I2EE
 
 {% Partial 'privacy-sandbox/glossary-entries/i2ee.njk' %}
 
-## I2P {: #i2p }
+## I2P
 
 {% Partial 'privacy-sandbox/glossary-entries/i2p.njk' %}
 
-## I2S {: #i2s }
+## I2S
 
 {% Partial 'privacy-sandbox/glossary-entries/i2s.njk' %}
 
-## Impression {: #impression }
+## Impression
 
 {% Partial 'privacy-sandbox/glossary-entries/impression.njk' %}
 
-## Interest group {: #interest-group }
+## Interest group
 
 {% Partial 'privacy-sandbox/glossary-entries/interest-group.njk' %}
 
-## Inventory {: #inventory}
+## Inventory
 
 {% Partial 'privacy-sandbox/glossary-entries/inventory.njk' %}
 
-## k-anonymity {: #k-anonymity }
+## k-anonymity
 
 {% Partial 'privacy-sandbox/glossary-entries/k-anonymity.njk' %}
 
-## Nonce {: #nonce }
+## Nonce
 
 {% Partial 'privacy-sandbox/glossary-entries/nonce.njk' %}
 
-## Origin {: #origin }
+## Origin
 
 {% Partial 'privacy-sandbox/glossary-entries/origin.njk' %}
 
-## Origin trial {: #origin-trial}
+## Origin trial
 
 {% Partial 'privacy-sandbox/glossary-entries/origin-trial.njk' %}
 
-## Passive surface {: #passive-surface }
+## Passive surface
 
 {% Partial 'privacy-sandbox/glossary-entries/passive-surface.njk' %}
 
-## Protected Audience API {: #protected-audience-api }
+## Protected Audience API
 
 {% Partial 'privacy-sandbox/glossary-entries/protected-audience.njk' %}
 
-## Publisher {: #publisher }
+## Publisher
 
 {% Partial 'privacy-sandbox/glossary-entries/publisher.njk' %}
 
-## Reach {: #reach }
+## Reach
 
 {% Partial 'privacy-sandbox/glossary-entries/reach.njk' %}
 
@@ -216,27 +216,27 @@ if something is missing!
 
 {% Partial 'privacy-sandbox/glossary-entries/real-time-bidding.njk' %}
 
-## Remarketing {: #remarketing }
+## Remarketing
 
 {% Partial 'privacy-sandbox/glossary-entries/remarketing.njk' %}
 
-## Reporting origin {: #reporting-origin }
+## Reporting origin
 
 {% Partial 'privacy-sandbox/glossary-entries/reporting-origin.njk' %}
 
-## Scaling {: #scaling }
+## Scaling
 
 {% Partial 'privacy-sandbox/glossary-entries/scaling.njk' %}
 
-## Seller {: #seller }
+## Seller
 
 {% Partial 'privacy-sandbox/glossary-entries/seller.njk' %}
 
-## Site {: #site }
+## Site
 
 {% Partial 'privacy-sandbox/glossary-entries/site.njk' %}
 
-## Storage partitioning {: #storage-partitioning }
+## Storage partitioning
 
 {% Partial 'privacy-sandbox/glossary-entries/storage-partitioning.njk' %}
 
@@ -248,15 +248,15 @@ if something is missing!
 
 {% Partial 'privacy-sandbox/glossary-entries/supply-side-platform.njk' %}
 
-## Surface {: #surface }
+## Surface
 
 {% Partial 'privacy-sandbox/glossary-entries/surface.njk' %}
 
-## Third-party {: #third-party }
+## Third-party
 
 {% Partial 'privacy-sandbox/glossary-entries/third-party.njk' %}
 
-## Third-party cookie {: #third-party-cookie}
+## Third-party cookie
 
 {% Partial 'privacy-sandbox/glossary-entries/third-party-cookie.njk' %}
 
@@ -280,6 +280,6 @@ if something is missing!
 
 {% Partial 'privacy-sandbox/glossary-entries/well-known.njk' %}
 
-## Worklet {: #worklet }
+## Worklet
 
 {% Partial 'privacy-sandbox/glossary-entries/worklet.njk' %}
