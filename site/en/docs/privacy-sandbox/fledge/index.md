@@ -104,7 +104,7 @@ and whose owners have been invited to bid.
 Bidding code is retrieved from the URL provided in the configuration
 information for the interest group. This code is passed data about the interest
 group and information from the seller, along with contextual data about the
-page and from the browser. <!-- what does this mean --> 
+page and from the browser.
 
 Each bidder is also known as a buyer.
 
