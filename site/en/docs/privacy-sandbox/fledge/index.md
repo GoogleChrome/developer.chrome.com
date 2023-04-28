@@ -235,7 +235,7 @@ relevant to the interest group, and a URL for JavaScript used in bidding. Intere
 
 Interest groups are stored in the browser and can make bids in FLEDGE
 in-browser auctions, but aren't programmatically 'readable.' In other words,
-there's no `navigator.getAdInterestGroups()`, as this would expose cross-site
+there's nothing like navigator.getAdInterestGroups(), as this would expose cross-site
 identity.
 
 {% endAside %}
