@@ -94,3 +94,5 @@ public void onCreate(@Nullable Bundle savedInstanceState) {
     });
 }
 ```
+
+Next up: learn how to [measure user engagement in your Custom Tabs](/docs/android/custom-tabs/guide-engagement-signals/).

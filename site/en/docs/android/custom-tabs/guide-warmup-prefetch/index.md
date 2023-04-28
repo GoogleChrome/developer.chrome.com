@@ -95,7 +95,7 @@ protected void onCreate(Bundle savedInstanceState) {
 }
 ```
 
-{% Aside Gotcha %}
+{% Aside "caution" %}
 A Custom Tabs service connection might fail while your activity is running. If your app requires an active service connection, there are two strategies to ensure a working service connection:
 
 1. When eagerly connecting to the CustomTabsService during `onCreate`, reconnect to the service  if your activity gets disconnected and the `onServiceDisconnected` callback gets invoked.

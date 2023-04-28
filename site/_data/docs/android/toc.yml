@@ -8,6 +8,7 @@
         - url: /docs/android/custom-tabs/guide-interactivity
         - url: /docs/android/custom-tabs/guide-warmup-prefetch
         - url: /docs/android/custom-tabs/guide-partial-custom-tabs
+        - url: /docs/android/custom-tabs/guide-engagement-signals
     - title: i18n.docs.android.howtos
       sections:
         - url: /docs/android/custom-tabs/best-practices
