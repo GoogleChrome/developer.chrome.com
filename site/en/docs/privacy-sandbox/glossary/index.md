@@ -132,7 +132,7 @@ if something is missing!
 
 {% Partial 'privacy-sandbox/glossary-entries/federated-identity.njk' %}
 
-## Fenced frame {: #fenced-framee }
+## Fenced frame
 
 {% Partial 'privacy-sandbox/glossary-entries/fenced-frame.njk' %}
 
