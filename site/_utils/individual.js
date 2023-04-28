@@ -41,15 +41,12 @@ const individual = (items, locale) => {
   let paginated = [];
   for (const item in items) {
     const authorKey = items[item].key;
-    const authorFeeds = authorsFeeds.find(authorFeeds => {
-      return Object.keys(authorFeeds)[0] === authorKey;
-    });
+    const authorsFeedsObj = Object.assign({}, ...authorsFeeds);
+    const feeds = authorsFeedsObj[authorKey];
 
-    if (authorFeeds) {
-      const feeds = authorFeeds[authorKey];
+    if (feeds) {
       items[item] = items[item] || {};
-
-      feeds.forEach(feed => {
+      for (const feed of feeds) {
         const element = {
           title: feed.title,
           description: feed.summary,
@@ -58,8 +55,13 @@ const individual = (items, locale) => {
           date: new Date(feed.date),
           url: feed.url,
         };
-        (items[item].elements = items[item].elements || []).push(element);
-      });
+
+        if (!items[item].elements) {
+          items[item].elements = [];
+        }
+
+        items[item].elements.push(element);
+      }
     }
 
     if (items[item].elements?.length > 0) {
