@@ -174,7 +174,7 @@ implemented and what's still in progress.
 Users can adjust their participation for Privacy Sandbox trials in Chrome by
 enabling or disabling the top-level setting in
 `chrome://settings/privacySandbox`. During initial testing, users can opt out of FLEDGE using the
-Privacy Sandbox. 
+Privacy Sandbox settings. 
 
 Chrome plans to allow users to see and manage the list of interest groups
 they've been added to across the sites they've visited. As with the Privacy
