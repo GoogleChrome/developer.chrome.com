@@ -1,10 +1,10 @@
 {% set contentItems = null %}
 
-{% if page.url | getContentType === 'articles' %}
+{% if type === 'article' %}
   {% set collectionName = 'articles-' + locale %}
 {% endif %}
 
-{% if page.url | getContentType === 'blog' %}
+{% if type === 'blogPost' %}
   {% set collectionName = 'blog-' + locale %}
 {% endif %}
 
