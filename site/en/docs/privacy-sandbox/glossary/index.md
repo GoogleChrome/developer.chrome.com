@@ -224,7 +224,7 @@ if something is missing!
 
 {% Partial 'privacy-sandbox/glossary-entries/reporting-origin.njk' %}
 
-## Scaling
+## Scaling factor
 
 {% Partial 'privacy-sandbox/glossary-entries/scaling.njk' %}
 
