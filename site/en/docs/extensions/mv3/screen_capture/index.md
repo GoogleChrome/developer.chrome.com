@@ -7,14 +7,14 @@ updated: 2023-04-14
 description: How to record audio or video from a tab, window or screen
 ---
 
-APIs such as [chrome.tabCapture][tabCapture] and [getDisplayMedia][getDisplayMedia] provide a
+APIs such as [chrome.tabCapture][tabcapture] and [getDisplayMedia][get-display-media] provide a
 variety of ways to monitor and record audio and video from a tab, window or screen.
 
 ## Common Use Cases
 
 ### Screen Recording {: #screen-recording}
 
-For screen recording, use the [getDisplayMedia][getDisplayMedia] API. This provides the user with
+For screen recording, use the [getDisplayMedia][get-display-media] API. This provides the user with
 the ability to select which tab, window or screen they wish to share and provides a clear indication
 that recording is taking place.
 
@@ -35,7 +35,9 @@ asking the user what they would like to share.
 
 #### Audio and video (single page)
 
-If your recording does not need to persist across navigations, use [chrome.tabCapture.getMediaStreamId][tabCapture-media-stream-id] to get a stream ID in the popup, and then pass that ID to a content script. Make sure to set the `consumerTabId` property to allow the tab to access this stream:
+If your recording does not need to persist across navigations, use [chrome.tabCapture.getMediaStreamId][tabcapture-media-stream-id] to get a stream ID in the popup, and then pass that ID to a content script. Make sure to set the `consumerTabId` property to allow the tab to access this stream.
+
+In your popup:
 
 ```js
 chrome.tabs.query({ active: true, lastFocusedWindow: true }, ([{ id: tabId }]) => {
@@ -64,6 +66,11 @@ chrome.runtime.onMessage.addListener(async (msg) => {
         },
       },
     });
+
+    // Continue to play the captured audio to the user.
+    const output = new AudioContext();
+    const source = output.createMediaStreamSource(media);
+    source.connect(output.destination);
   }
 });
 ```
@@ -76,13 +83,37 @@ In the future, we may support passing a media stream ID to an [offscreen documen
 
 {% endAside %}
 
-To record audio and video across navigations, you can open an extension page in a new tab or window, and directly obtain a stream. Set the `targetTabId` property to capture the correct tab:
+To record audio and video across navigations, you can open an extension page in a new tab or window, and directly obtain a stream. Set the `targetTabId` property to capture the correct tab.
+
+In your popup:
 
 ```js
-chrome.tabs.query({ active: true, lastFocusedWindow: true }, ([{ id: tabId }]) => {
-  chrome.tabCapture.getMediaStreamId({ targetTabId: tabId }, async (id) => {
-    chrome.tabs.sendMessage(tabId, { name: "media-id", data: id });
+chrome.windows.create({ url: chrome.runtime.getURL("recorder.html") });
+```
+
+Then, in your extension page:
+
+```js
+chrome.tabCapture.getMediaStreamId({ targetTabId: tabId }, async (id) => {
+  const media = await navigator.mediaDevices.getUserMedia({
+    audio: {
+      mandatory: {
+        chromeMediaSource: "tab",
+        chromeMediaSourceId: id,
+      },
+    },
+    video: {
+      mandatory: {
+        chromeMediaSource: "tab",
+        chromeMediaSourceId: id,
+      },
+    },
   });
+
+  // Continue to play the captured audio to the user.
+  const output = new AudioContext();
+  const source = output.createMediaStreamSource(media);
+  source.connect(output.destination);
 });
 ```
 
@@ -90,7 +121,7 @@ Alternatively, consider using the [screen recording](#screen-recording) approach
 
 #### Audio only
 
-If you only need to record audio, you can directly obtain a stream in the extension popup using [chrome.tabCapture.capture][tabCapture-capture]. When the popup closes, recording will be stopped.
+If you only need to record audio, you can directly obtain a stream in the extension popup using [chrome.tabCapture.capture][tabcapture-capture]. When the popup closes, recording will be stopped.
 
 ```js
 chrome.tabCapture.capture({ audio: true }, (stream) => {
@@ -107,11 +138,10 @@ chrome.tabCapture.capture({ audio: true }, (stream) => {
 
 For more information on how to record a stream, see the [MediaRecorder][media-recorder] API.
 
-[tabCapture]: /docs/extensions/reference/tabCapture
-[tabCapture-focus-bug]: https://bugs.chromium.org/p/chromium/issues/detail?id=1434258
-[tabCapture-capture]: /docs/extensions/reference/tabCapture/#method-capture
-[tabCapture-media-stream-id]: /docs/extensions/reference/tabCapture/#method-getMediaStreamId
-[getDisplayMedia]: https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia
+[tabcapture]: /docs/extensions/reference/tabCapture
+[tabcapture-capture]: /docs/extensions/reference/tabCapture/#method-capture
+[tabcapture-media-stream-id]: /docs/extensions/reference/tabCapture/#method-getMediaStreamId
+[get-display-media]: https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia
 [offscreen-documents]: /blog/Offscreen-Documents-in-Manifest-v3/
 [feedback-mailing-list]: https://groups.google.com/a/chromium.org/g/chromium-extensions/c/Ef08XtOOyoI/m/L5HM7yPsBAAJ
-[media-recorder]: https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder
+[media-recorder]: https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorders
