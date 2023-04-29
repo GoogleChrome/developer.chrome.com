@@ -223,7 +223,7 @@ If wanted, you can combine `scroll-timeline-name` and `scroll-timeline-axis` in 
 scroll-timeline: --my-scroller inline;
 ```
 
-{% Aside 'important' %} Note that even for named Scroll Timelines **the lookup from the subject to the scroller happens across ancestors only**. How to target a non-parent element, such as a sibling element, is currently being specified at the CSS WG and will be possible soon. {% endAside %}
+{% Aside 'important' %} Note that even for named Scroll Timelines **the lookup from the subject to the scroller happens across ancestors only**. How to target a non-ancestor element, such as a sibling element, is covered further down this article in the [“Attaching to a non-ancestor Scroll Timeline”](#attaching-to-a-non-ancestor-scroll-timeline) section. {% endAside %}
 
 #### Demo: Horizontal Carousel Step Indicator
 
@@ -534,6 +534,37 @@ As the keyframes contain the range information, you don’t need to specify the 
 The result is exactly the same as it was before:
 
 <iframe src="https://scroll-driven-animations.style/demos/contact-list/css/?embed" frameborder="0" sandbox="allow-scripts allow-forms allow-top-navigation" width="500" height="600" style="height: 600px; width: 100%; border: 1px solid #333;"></iframe>
+
+## Attaching to a non-ancestor’s Scroll Timeline
+
+{% Aside %} The exact syntax for this feature is still under discussion. The name of the properties might still change. {% endAside %}
+
+The lookup mechanism for named Scroll Timelines and named View Timelines is limited to scroll ancestors only. Very often though, the element that needs to be animated is not a child of the scroller that needs to be tracked.
+
+To make this work, the `scroll-timeline-root` and `view-timeline-root` properties come into play. You use these to declare a timeline with that name, giving it a broader scope. In practice, you do this on a shared parent element so that a child scroller’s timeline can attach to it.
+
+For example:
+
+```css
+.parent {
+  scroll-timeline-root: --tl;
+}
+.parent .scroller {
+  scroll-timeline: --tl;
+}
+.parent .scroller ~ .subject {
+  animation: animate linear;
+  animation-timeline: --tl;
+}
+```
+
+In this snippet:
+
+- The `.parent` element declares a Scroll Timeline with the name `--tl`. Any child of it can find and use it as a value for the `animation-timeline` property.
+- The `.scroller` element actually defines a Scroll Timeline with the name `--tl`. By default it would only be visible to its children but because `.parent` has it set as the `scroll-timeline-root`, it attaches to it.
+- The `.subject` element uses the `--tl` timeline. It walks up its ancestor tree and finds `--tl` on the `.parent`. With the `--tl` on the `.parent` pointing to the `--tl` of `.scroller`, the `.subject` will essentially track the `.scroller`’s Scroll Progress Timeline.
+
+Put differently, you can use `scroll-timeline-root` and `view-timeline-root` to move a Scroll Timeline up to an ancestor (aka _hoisting_), so that all children of the ancestor can access it.
 
 ## More demos and resources
 
