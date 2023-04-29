@@ -487,7 +487,7 @@ Let’s take a look at this contact list demo:
 
 In this demo, two scroll-driven animations are attached to each element. As the element enters the scrollport from the bottom it slides+fades in, and as it enters it slides+fades out. Both these animations are driven by the same View Timeline that tracks the element as it crosses its scrollport. The `animate-in` animation is attached to the `entry` range, and the `animate-out` animation to the `exit` range.
 
-```
+```css
 @keyframes animate-in {
   0% { opacity: 0; transform: translateY(100%); }
   100% { opacity: 1; transform: translateY(0); }
