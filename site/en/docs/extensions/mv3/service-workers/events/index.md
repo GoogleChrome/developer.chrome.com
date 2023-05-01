@@ -2,7 +2,7 @@
 layout: 'layouts/doc-post.njk'
 title: Events in service workers
 description: Extension service workers respond to both standard service worker events and many events in the extension APIs.
-date: 2023-04-19
+date: 2023-05-01
 ---
 
 Extension service workers support both [standard service worker](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope#events) events and many events in the [extension APIs](/docs/extensions/reference/). This section describes what's available and provides tips for using them.
@@ -32,9 +32,9 @@ chrome.storage.local.get(["badgeText"], ({ badgeText }) => {
 ```
 {% endCompare %}
 
-## Available events
+## Common events
 
-Extension service workers support events in specific APIs as described below. Note that some of these APIs require permissions to use and others may have events, methods, or properties that are not available in all versions of Chrome. For details, see the linked API documentation, particularly the events, methods, or properties you want to use.
+Extension service workers support events in specific APIs. A few common ones are described below. Note that some of these APIs require permissions to use and others may have events, methods, or properties that are not available in all versions of Chrome. For details, see the linked API documentation, particularly the events, methods, or properties you want to use.
 
 [`chrome.action`](/docs/extensions/reference/action/)
 : Fired in response to a user interaction with your extension's toolbar icon, whether that action be for a specific page (tab) or for the whole extension.
