@@ -244,7 +244,7 @@ populates chrome.runtime.lastError is not unchecked.
 
 ### Pass a message to a selected tab's content script {: #messaging }
 
-This example demonstrates how an extension's service worker can communicate with content scripts in specific browser tabs using `tabs.sendMessage`.
+This example demonstrates how an extension's service worker can communicate with content scripts in specific browser tabs using `tabs.sendMessage()`.
 
 ```js
 function sendMessageToActiveTab(message) {
