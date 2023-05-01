@@ -31,7 +31,7 @@ Chrome やその他のエコシステムの関係者は、これまでに 30 件
 
 提案には、[Web 標準](https://www.w3.org/standards/)になるまでに、最大 3 つのフェーズ（ディスカッション、テスト、大規模な採用）のライフサイクルがあります。開発者や業界のリーダーからフィードバックを受けて、幅広いユーティリティと堅牢なプライバシー保護をユーザーに提供する耐久性のあるウェブ機能を確実に作成することが重要です。提案のライフサイクルについて詳しくは、こちらをご覧ください。
 
-Several key proposals are listed below.
+いくつかの主要な提案を以下に示します。
 
 ### サイト間プライバシーの境界の強化
 
@@ -56,8 +56,8 @@ Several key proposals are listed below.
 ### 隠されたトラッキングの防止
 
 - [**ユーザー エージェントの削減と User-Agent Client Hints**](/docs/privacy-sandbox/user-agent/): 受動的に共有されるブラウザー データを制限して、フィンガープリンティングにつながる機密情報の量を減らします。クライアント ヒントを使用すると、開発者は、ユーザーのデバイスまたは状態について必要な情報のみを積極的に要求できます。
-- [**IP Protection**](/docs/privacy-sandbox/ip-protection/): Improve user privacy by protecting their IP address from being used for tracking.
-- [**Bounce tracking mitigations**](/docs/privacy-sandbox/bounce-tracking-mitigations/): A proposal to reduce or eliminate the ability of bounce tracking to recognize people across contexts.
+- [**IP 保護**](/docs/privacy-sandbox/ip-protection/): IP アドレスが追跡に使用されないように保護することで、ユーザーのプライバシーを向上させます。
+- [**バウンス トラッキングの軽減策**](/docs/privacy-sandbox/bounce-tracking-mitigations/): コンテキスト全体で人を認識するバウンス トラッキングの機能を削減または排除する提案。
 - [**プライバシー予算**](/docs/privacy-sandbox/privacy-budget/):<br>隠されたトラッキングを防ぐために、サイトに公開される個々のユーザー データの量を制限する提案です。
 
 ### ウェブのスパムや詐欺への対抗
@@ -72,7 +72,7 @@ Chrome やその他のブラウザ ベンダー、広告会社やその他の関
 
 ## プライバシー サンドボックス API はどこで提供されていますか？
 
-Five API implementations are currently available for testing in Chrome.
+現在、Chrome でのテスト用に 5 つの API 実装を利用できます。
 
 API は、Chrome の作成に使用されるオープンソース ブラウザである [Chromium](https://en.wikipedia.org/wiki/Chromium_(web_browser)) に実装されています。プライバシー サンドボックス API のコードには、[Chromium Code Search](https://source.chromium.org/search?q=floc) からアクセスできます。
 
@@ -92,7 +92,7 @@ API が提案から実験、拡大提供に移行する過程で、[Chrome 開�
 
 ## デフォルトで有効になっていないプライバシー サンドボックス API を試すには？
 
-As an API progresses through development in Chrome, there are multiple ways it may be made available for testing.
+Chrome で API の開発が進むにつれて、API をテストに使用できるようにする方法は複数あります。
 
 - **コマンドラインフラグを介した単一ユーザーの場合**<br>初期の機能では、開発者が新機能を有効にしてブラウザーを起動できるように、特定のコマンドラインフラグが提供されることがよくあります。
 - **`chrome://flags` 経由の単一ユーザーの場合**<br> 機能が進歩するにつれて、よりアクセスしやすい `chrome://flags` インターフェース内の実験的フラグを介して提供されることがよくあります。`chrome://flags#enable-experimental-web-platform-features` は現在の実験的機能にバンドルされています。
@@ -135,7 +135,7 @@ As an API progresses through development in Chrome, there are multiple ways it m
 - 関連する [W3C グループ](https://www.w3.org/groups/)に参加して、提案の詳細について話し合う定期的な会議に参加してください。
 - 実装の変更に関する更新をメールで受け取るには、[Chrome プラットフォームステータス](https://chromestatus.com)に関連するエントリに星を付けてください。
 
-### Get involved
+### 参加する
 
 - API のインキュベーション、テスト、改良に参加する:<br> [プライバシーサンドボックスイニシアチブに参加するには](/blog/privacy-sandbox-participate/)
 - 開発者は、以下のディスカッションに参加し、質問を投稿できます:<br> [Privacy Sandbox Developer Support](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)
