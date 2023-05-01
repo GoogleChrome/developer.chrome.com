@@ -51,8 +51,7 @@ APIs&mdash;and whose expertise is critical to this initiative.
 There have been dozens of [privacy-preserving
 proposals](https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo)
 offered by Chrome and others over the last few of years. You can read these
-proposals, ask questions, offer ideas to improve them and see what others are
-saying. 
+proposals, ask questions, offer ideas to improve them and see what others say.
 
 There are a number of W3C groups you can join or monitor, depending on the use
 cases you're interested in:
