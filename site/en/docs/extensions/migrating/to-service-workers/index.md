@@ -4,7 +4,7 @@ title: Migrate to a service worker
 subhead: 'Replacing background or event pages with a service worker'
 description: 'A service worker enables extensions to run only when needed, saving resources.'
 date: 2023-03-09
-updated: 2023-04-14
+updated: 2023-05-01
 ---
 
 {% Partial 'extensions/mv3-support.md' %}
@@ -104,6 +104,13 @@ document.execCommand('copy');
 ```
 
 Communicate between offscreen documents and extension service workers using [message passing](/docs/extensions/mv3/messaging/).
+
+## Convert localStorage to chrome.storage.local {: #convert-localstorage }
+
+The web platform's [`Storage`](https://developer.mozilla.org/docs/Web/API/Storage) interface (accessible from `window.localStorage`) cannot be used in a service worker. To address this:
+
+1. Move its calls to an [offscreen document](/docs/extensions/reference/offscreen/).
+1. (Optional) Replace it with calls to the [`chrome.storage.local`](/docs/extensions/reference/storage/#property-local) namespace. For details, see [the instructions](/docs/extensions/reference/storage/#can-extensions-use-storage).
 
 ## Register listeners synchronously {: #register-listeners }
 
