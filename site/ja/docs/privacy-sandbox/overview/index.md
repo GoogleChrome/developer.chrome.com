@@ -1,12 +1,10 @@
 ---
 layout: layouts/doc-post.njk
 title: プライバシーサンドボックスとは？
-subhead: |2-
-
-  サードパーティ Cookie やその他のトラッキングメカニズムを使用せずに、クロスサイトのユースケースを満たすための一連の提案です。
+subhead: サードパーティ Cookie やその他のトラッキングメカニズムを使用せずに、クロスサイトのユースケースを満たすための一連の提案です。
 description: 内容、目的、および貢献方法について。
-date: '2021-05-18'
-updated: '2023-02-27'
+date: 2021-05-18
+updated: 2023-02-27
 authors:
   - samdutton
   - alexandrawhite
