@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc-post.njk
-title: API status and feature releases
+title: API のステータスと機能のリリース
 subhead: |2-
 
   Chrome プラットフォームのステータス、リソース、機能リリースのタイムラインをご覧ください。
@@ -15,7 +15,7 @@ authors:
 
 プライバシー サンドボックスの各提案は、開発プロセスのさまざまな段階にあります。それぞれの提案には、予想される可用性が異なる機能が個別に存在します。
 
-To review the latest information on any proposal or API, visit the respective overview documentation and the [Privacy Sandbox timeline](https://privacysandbox.com/open-web/).
+提案または API に関する最新情報を確認するには、それぞれの概要ドキュメントと[プライバシー サンドボックス タイムライン](https://privacysandbox.com/open-web/)にアクセスしてください。
 
 ## Attribution Reporting
 
@@ -75,7 +75,7 @@ To review the latest information on any proposal or API, visit the respective ov
 
 {% Partial 'privacy-sandbox/timeline/ua-ch.njk' %}
 
-## Shared Storage
+## 共有ストレージ
 
 {% Partial 'privacy-sandbox/timeline/shared-storage.njk' %}
 
@@ -83,7 +83,7 @@ To review the latest information on any proposal or API, visit the respective ov
 
 {% Details %} {% DetailsSummary %}
 
-## Closed proposals
+## 終了した提案
 
 {% endDetailsSummary %}
 
@@ -91,7 +91,7 @@ To review the latest information on any proposal or API, visit the respective ov
 
 [Topics API](#topics) に置き換えられました。
 
-- [Chrome Platform Status](https://www.chromestatus.com/features/5710139774468096).
+- [Chrome プラットフォームのステータス](https://www.chromestatus.com/features/5710139774468096)。
 - 最初の[オリジントライアル](https://groups.google.com/a/chromium.org/g/blink-dev/c/MmijXrmwrJs)は終了しました。最新情報については、<a>Intent to Experiment</a> をご覧ください。
 - [Blink のステータス](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=floc)。
 - [API の提案](https://github.com/WICG/floc)は、[WICG](https://www.w3.org/community/wicg/)、インタレストグループと検討されました。
