@@ -80,8 +80,7 @@ companies, in the same solution space. Through continued collaboration, we hope
 to define a path forward.
 
 [Testing for FLEDGE](/docs/privacy-sandbox/fledge-experiment/) and other APIs
-have been made available behind a Chrome flag, so developers can access them
-early.
+is available behind a Chrome flag, so developers can access them early.
 
 Not every proposal goes through such an intense incubation period as
 FLEDGE&mdash;some will move much more quickly&mdash;but there is a lot of
