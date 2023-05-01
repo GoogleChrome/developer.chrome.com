@@ -1,13 +1,15 @@
 ---
 layout: layouts/blog-post.njk
 title: パーティション分割されていないサードパーティ ストレージ、サービス ワーカー、通信 API の非推奨トライアルに参加する
-description: Chrome 113 から段階的に、ストレージ、サービス ワーカー、通信 API がサードパーティのコンテキストに分割されます。この新しい機能に適応する時間が必要なサイトの場合、これらの非推奨のトライアルにより、サードパーティのストレージ、サービス ワーカー、および通信 API を一時的にパーティション分割されていない状態に保つことができます。
+description: |2
+
+  Chrome 113 から段階的に、ストレージ、サービス ワーカー、通信 API がサードパーティのコンテキストに分割されます。この新しい機能に適応する時間が必要なサイトの場合、これらの非推奨のトライアルにより、サードパーティのストレージ、サービス ワーカー、および通信 API を一時的にパーティション分割されていない状態に保つことができます。
 authors:
   - arichiv
   - kyraseevers
-date: 2023-03-09
+date: '2023-03-09'
 tags:
-  - privacy
+  - プライバシー
 ---
 
 [Chrome 113](https://chromiumdash.appspot.com/schedule)から徐々に、ストレージ、サービス ワーカー、通信 API が[サードパーティ コンテキストに分割され](/docs/privacy-sandbox/storage-partitioning/)ます。サードパーティ コンテキストで使用される影響を受ける API は、同一生成元ポリシーによって分離されるだけでなく、最上位コンテキストのサイトによっても分離されます。サード パーティのストレージ パーティショニングのサポートを実装する時間がなかったサイトは、非推奨トライアルに参加して、一時的にパーティショニング**を解除し**(同一オリジン ポリシーによる分離を継続しますが、最上位サイトによる分離を削除します)、ストレージの以前の動作を復元することができます。サービス ワーカー、およびサイトに埋め込まれたコンテンツ内の通信 API。
@@ -29,7 +31,7 @@ tags:
 
 `DisableThirdPartyStoragePartitioning`非推奨トライアルに最上位サイトを登録すると、次の API はサードパーティのコンテキストでパーティション分割されないままになります: [Storage API](https://github.com/wanderview/quota-storage-partitioning/blob/main/explainer.md#storage-apis) (localStorage、sessionStorage、IndexedDB、Quota など)、 [Communication API](https://github.com/wanderview/quota-storage-partitioning/blob/main/explainer.md#communication-apis) (BroadcastChannel、SharedWorkers など) 、および WebLocks)、および[ServiceWorker API](https://github.com/wanderview/quota-storage-partitioning/blob/main/explainer.md#serviceworker-api) 。
 
-{% 'caution' はさておき %} この`DisableThirdPartyStoragePartitioning`トライアルでは、 `Origin-Trial` HTTP ヘッダーではなく、HTML `<meta>`タグを介してオリジン トライアル トークンを含める必要があります。 {% endAside %}
+{% Aside 'caution' %} この`DisableThirdPartyStoragePartitioning`トライアルでは、 `Origin-Trial` HTTP ヘッダーではなく、HTML `<meta>`タグを介してオリジン トライアル トークンを含める必要があります。 {% endAside %}
 
 例：
 
@@ -41,7 +43,7 @@ tags:
 
 `DisableThirdPartySessionStoragePartitioningAfterGeneralPartitioning`推奨トライアルに登録すると、タブを登録済みのオリジンに移動すると、同じオリジンのすべてのクロスサイト iframe が、 `Window.sessionStorage`およびその特定のタブの存続期間のみパーティション分割されないままになります。 `DisableThirdPartyStoragePartitioning`非推奨トライアルは、登録されたオリジン内に埋め込まれたすべてのサードパーティ コンテキストに影響しますが、 `DisableThirdPartySessionStoragePartitioningAfterGeneralPartitioning`非推奨トライアルは、代わりに、サード パーティ コンテキストに埋め込まれたときに、パーティション分割されていないアクセスを受け取る特定のオリジンを登録します。
 
-{% 余談 %} `DisableThirdPartySessionStoragePartitioningAfterGeneralPartitioning`トライアルは、HTML `<meta>`または`Origin-Trial` HTTP ヘッダーを介して機能します。 {% endAside %}
+{% Aside %} `DisableThirdPartySessionStoragePartitioningAfterGeneralPartitioning`トライアルは、HTML `<meta>`または`Origin-Trial` HTTP ヘッダーを介して機能します。 {% endAside %}
 
 例：
 
