@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Publish in the Chrome Web Store"
 date: 2014-02-28
-updated: 2022-12-02
+updated: 2023-05-01
 description: >
   How to publish a new extension or theme to the Chrome Web Store.
 ---
@@ -138,7 +138,7 @@ detail about how to fill in each tab.
   Store.
 - The [Privacy][privacy] tab is where you include declarations about how your item uses privacy and
   security related features.
-- The [Payment and Distribution][distribution] tab lets you control which countries will list your item and
+- The [Distribution][distribution] tab lets you control which countries will list your item and
   which set of users will see it.
 
 ### To publish your item: {: #publish-item}
