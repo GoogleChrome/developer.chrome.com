@@ -8,7 +8,7 @@ updated: '2023-02-16'
 thumbnail: image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/TxiweGXhJ3d2RTsH8sZh.png
 alt: First-Party Sets を示す図。
 tags:
-  - privacy
+  - プライバシー
 authors:
   - helencho
   - kaustubhag
@@ -32,13 +32,13 @@ First-Party Sets（FPS）は、Chrome における[サードパーティ Cookie 
 
 ブラウザは現在、サイトレベルの境界に基づいて「ファーストパーティ」と「サードーティ」を解釈しているため、組織が管理する可能性のあるドメインの範囲を説明するには、この技術的な境界をより微妙な定義に置き換えることが適切であると思われました。
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/ZqDPMagkFqvX7UDjQj9v.png", alt="Diagram of a site with an embedded iframe", width="512", height="335" %}
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/ZqDPMagkFqvX7UDjQj9v.png", alt="iframe が埋め込まれたサイトの図", width="512", height="335" %}
 
 2021 年当初、Chrome は、サイトが「同一パーティ」内のサイトから発信された Cookie を定義できるように、First-Party Sets の `SameParty` Cookie 属性を提案しました。「同一パーティ」を構成するものの定義に使用されたのは、[ユーザーエージェントポリシー](https://github.com/WICG/first-party-sets/blob/main/archive/ua_policy_proposal.md)です。このポリシー定義は、「パーティ」の既存のフレームワーク（[W3C DNT 仕様](https://www.w3.org/TR/tracking-compliance/#party)など）に基づく構築を試み、関連するプライバシーに関する議論（2012 年の連邦取引委員会報告書: [「Protecting Consumer Privacy in an Era of Rapid Change（急速な変化の時代における消費者のプライバシーの保護）」](https://www.ftc.gov/sites/default/files/documents/reports/federal-trade-commission-report-protecting-consumer-privacy-era-rapid-change-recommendations/120326privacyreport.pdf)など）からの推奨事項が組み込まれました。
 
 当時、このアプローチは、さまざまな業界の多種多様な組織に十分な柔軟性を提供すると同時に、サードパーティ Cookie による広範なトラッキングが最小限に抑えられるという基本的な目標にも準拠していると感じられました。
 
-## Feedback on the initial proposal
+## 最初の提案に対するフィードバック
 
 ウェブエコシステムの関係者との多くの会話を通じて、この初期設計には限界があることがわかりました。
 
@@ -48,11 +48,11 @@ First-Party Sets（FPS）は、Chrome における[サードパーティ Cookie 
 
 ブラウザ間でのウェブ相互運用性を追求し、プライバシーの利点を改善するために、この方向に進むことにしました。
 
-### Implementation challenges with the proposed policy
+### 提案されたポリシーの実装上の課題
 
 元のポリシーでは、ドメインを 1 つのセットにするための 3 つの要件が提案されていました。それは、「共有権」、「共通プライバシー ポリシー」、および「共通グループアイデンティティ」です。
 
-From the broader ecosystem, we found the feedback we received on the policy to follow four main themes.
+より広範なエコシステムから、ポリシーに関して受け取ったフィードバックは 4 つの主なテーマに従うことがわかりました。
 
 #### 共有権は制限的すぎる
 
@@ -72,15 +72,15 @@ From the broader ecosystem, we found the feedback we received on the policy to f
 
 特定の要件の主観的な性質（「共通グループ ID」など）と、他の要件の例外または特殊なケース（[「共通プライバシーポリシー」に関して](https://github.com/WICG/first-party-sets/issues/72#issuecomment-1043250162)）をカバーする必要があることを考慮して、より詳細なガイドラインを求める多くのリクエストを受け取りました。
 
-To ensure the policy was applied equitably and consistently, Chrome would have had to provide site authors with much more specific guidelines. We determined that attempting to create stricter guidelines could be exclusive to the detriment of the ecosystem.
+ポリシーが公平かつ一貫して適用されるようにするために、Chrome はサイト作成者にもっと具体的なガイドラインを提供する必要がありました。より厳格なガイドラインを作成しようとすると、エコシステムに損害を与える可能性があると判断しました.
 
-While we had initially proposed that an independent enforcement entity take on the role of investigating and enforcing compliance with policy, in the current ecosystem, finding an independent enforcement entity with the appropriate expertise to carry out these responsibilities in an impartial manner was challenging. Instead, we strived to pivot to a policy that could be technically enforced to ensure that implementation could be applied consistently and objectively.
+当初、独立した施行機関がポリシーの遵守を調査および施行する役割を担うことを提案していましたが、現在のエコシステムでは、これらの責任を公平な方法で実行するための適切な専門知識を持つ独立した施行機関を見つけることは困難でした。代わりに、実装を一貫して客観的に適用できるようにするために、技術的に実施できるポリシーに方向転換するよう努めました。
 
-## The evolution
+## 進化
 
-In response to feedback, we redesigned FPS. We returned to the specific problems we were trying to address, and decided to more directly frame the proposal around specific use cases we were solving for.
+フィードバックに応えて、FPS を再設計しました。私たちは対処しようとしていた特定の問題に戻り、解決しようとしている特定のユース ケースを中心に提案をより直接的に組み立てることにしました。
 
-### Solving for key use cases
+### 主なユースケースの解決
 
 Chrome は、ウェブでの主要なユースケースに対応するために、3 つの異なる専用の「サブセット」を開発しました。サブセット アプローチは、よりプライベートであり、より具体的であり、一貫して実施しやすいという点において、以前のアプローチから改善されています。
 
@@ -98,7 +98,7 @@ Chrome は、ウェブでの主要なユースケースに対応するために�
 
 Chrome は、ウェブ プラットフォームの健全性を維持するために、他のブラウザとの相互運用性を促進することに奮って取り組んでいます。現在 Safari、Firefox、Edge などの他のブラウザが [Storage Access API](https://developer.mozilla.org/docs/Web/API/Storage_Access_API)（SAA）を使用してアクティブな Cookie リクエストを容易にしていることから、Chrome でも SAA を利用し、受け取った重要なフィードバックに対処するためだけでなく、ウェブの相互運用性をサポートすることにしました。
 
-To provide more flexibility for developers and address [known limitations](https://github.com/WICG/first-party-sets/#providing-capabilities-beyond-the-storage-access-api) of SAA, we have also proposed the [`requestStorageAccessForOrigin`](https://github.com/privacycg/requestStorageAccessForOrigin) API.
+開発者により多くの柔軟性を提供し、SAA の[既知の制限](https://github.com/WICG/first-party-sets/#providing-capabilities-beyond-the-storage-access-api)に対処するために、 [`requestStorageAccessForOrigin`](https://github.com/privacycg/requestStorageAccessForOrigin) API も提案しました。
 
 ### Storage Access API と FPS を併用する機会
 
@@ -119,11 +119,11 @@ FPS を使用すると、開発者は、主要なユースケースを提供し�
 ご協力の際は、以下のリソースを確認してください。
 
 - [WICG](https://github.com/WICG/first-party-sets/issues) でのインキュベーション
-- [FPS testing instructions](/blog/first-party-sets-testing-instructions/)
+- [FPS テスト手順](/blog/first-party-sets-testing-instructions/)
 - [First-Party Sets: 統合ガイド](/docs/privacy-sandbox/first-party-sets-integration/)
-- [FPS Submission Guidelines](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md)
+- [FPS 提出ガイドライン](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md)
 
-## Working with the ecosystem
+## エコシステムとの連携
 
 Salesforce や CafeMedia などの企業が First-Party Sets の主なフィードバックや開発に取り組んでいるのは素晴らしいことです。これらの企業は技術の進歩に貢献してきました。他の数社も、First-Party Sets と、ウェブ エコシステムと連携する Chrome の取り組みについての意見を共有しています。
 
