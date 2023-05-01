@@ -6,7 +6,9 @@ description: "\nFastly との提携を通じて FLEDGE の \U0001D458 匿名性�
 authors:
   - pjl
 thumbnail: image/udVScdcCFAdRjZwFdLk2jWAFQyr1/abKfeo2FNt2HFX46in1l.jpg
-alt: "\nImage for blog post. \n"
+alt: |2
+
+  ブログ投稿用の画像。
 date: '2023-03-15'
 ---
 
