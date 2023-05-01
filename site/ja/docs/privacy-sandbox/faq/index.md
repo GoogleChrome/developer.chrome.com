@@ -3,8 +3,8 @@ layout: layouts/doc-post.njk
 title: よくある質問
 subhead: プライバシー サンドボックスは、サードパーティの Cookie や他のトラッキング メカニズムを使用せずに、複数のサイトにまたがるユースケースに対応するための提案をまとめたものです。
 description: プライバシーサンドボックスに関するよくある質問
-date: '2021-09-21'
-updated: '2022-11-11'
+date: 2021-09-21
+updated: 2022-11-11
 authors:
   - samdutton
 ---
