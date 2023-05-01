@@ -7,16 +7,16 @@ date: 2023-04-19
 
 Extension service workers are installed and updated differently from web service workers. This page explains those differences.
 
-## Registering service workers
+## Registering service workers {: #register }
 
-To register an extension service worker, specify it in the `"background"` field of the `manifest.json` file. Use the `"service_worker"` key, which specifies a single JavaScript file. Service workers in web pages or web apps register service workers by first feature-detecting for `serviceWorker` in `navigator` then calling `register()` inside feature detection. This does not work for Extensions.
+To register an extension service worker, specify it in the `"background"` field of the `manifest.json` file. Use the `"service_worker"` key, which specifies a single JavaScript file. Service workers in web pages or web apps register service workers by first feature-detecting for `serviceWorker` in `navigator` then calling `register()` inside feature detection. This does not work for extensions.
 
 ```json
 {
   "name": "Awesome Test Extension",
   ...
   "background": {
-    "service_worker": "serice-worker.js"
+    "service_worker": "service-worker.js"
   },
   ...
 }
@@ -25,13 +25,13 @@ To register an extension service worker, specify it in the `"background"` field 
 
 ## Importing scripts
 
-There are two methods of importing scripts into a service worker: the [`import`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import) statement and the [`importScripts()`](https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/importScripts) method. Note that `import()`, often called a dynamic import, is not supported.
+There are two methods of importing scripts into a service worker: the [`import`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import) statement and the [`importScripts()`](https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/importScripts) method. Note that [`import()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/import), often called a dynamic import, is not supported.
 
 To use the `import` statement, add the `"type" field to your manifest and specify `"module"`. For example:
 
 ```json/2
   "background": {
-    "service_worker": "background.js",
+    "service_worker": "service-worker.js",
     "type": "module"
   }
 ```
@@ -45,7 +45,7 @@ import { tldLocales } from './locales.js';
 Use `importScripts()` as you would in a web service worker.
 
 ```javascript
-importScripts('./locales.js');
+importScripts('locales.js');
 ```
 
 ## Updating

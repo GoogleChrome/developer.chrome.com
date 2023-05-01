@@ -18,7 +18,7 @@ The first event fired during installation is  a web service worker's [install](h
 
 ### chrome.runtime.onInstalled
 
-Next is the extension's `oninstalled` event, which is fired when the extension (not the service worker) is first installed, when the extension is updated to a new version, and when Chrome is updated to a new version. Use this
+Next is the extension's [`onInstalled`](https://developer.chrome.com/docs/extensions/reference/runtime/#event-onInstalled) event, which is fired when the extension (not the service worker) is first installed, when the extension is updated to a new version, and when Chrome is updated to a new version. Use this
 event to set a state or for one-time initialization, such as a [context menu](/docs/extensions/reference/contextMenus/).
 
 ```js

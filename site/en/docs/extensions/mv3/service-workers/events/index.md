@@ -14,8 +14,8 @@ Event handlers in service workers need to be declared in the global scope, meani
 {% Compare 'worse', 'Not advised' %}
 ```js/2
 chrome.storage.local.get(["badgeText"], ({ badgeText }) => {
-  chrome.browserAction.setBadgeText({ text: badgeText });
-  chrome.browserAction.onClicked.addListener(handleActionClick);
+  chrome.action.setBadgeText({ text: badgeText });
+  chrome.action.onClicked.addListener(handleActionClick);
 });
 
 ```
@@ -76,7 +76,7 @@ chrome.webNavigation.onCompleted.addListener(() => {
 ```
 ## Web service worker events
 
-Extension service workers support more than the lifecycle events [described elsewhere](/docs/extensions/service-workers/lifecycle). Some of those events require additional.
+Extension service workers support more than the lifecycle events [described elsewhere](/docs/extensions/mv3/service-workers/service-worker-lifecycle/). Some of those events require additional.
 
 ### ServiceWorkerGlobal.fetch
 
