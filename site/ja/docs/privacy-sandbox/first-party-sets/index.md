@@ -1,14 +1,10 @@
 ---
 layout: layouts/doc-post.njk
 title: First-Party Sets
-subhead: |2-
-
-  First-Party Sets（FPS）は、企業がサイト間の関係を宣言し、ブラウザが特定の目的で限定的なサードパーティ Cookie を許可できるようにする方法です。
-description: |2-
-
-  First-Party Sets（FPS）は、企業がサイト間の関係を宣言し、ブラウザが特定の目的で限定的なサードパーティ Cookie を許可できるようにする方法です。
+subhead: First-Party Sets（FPS）は、企業がサイト間の関係を宣言し、ブラウザが特定の目的で限定的なサードパーティ Cookie を許可できるようにする方法です。
+description: First-Party Sets（FPS）は、企業がサイト間の関係を宣言し、ブラウザが特定の目的で限定的なサードパーティ Cookie を許可できるようにする方法です。
 hero: image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/OLx3AXkweLjAiDzoDslb.png
-date: '2023-03-07'
+date: 2023-03-07
 authors:
   - mihajlija
 ---
