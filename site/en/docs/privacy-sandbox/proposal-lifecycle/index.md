@@ -226,7 +226,7 @@ It's important that developers have ample time to transition their websites to
 adopt new standards. If it turns out your site needs extra time, you'll be able
 to opt-in to keep using the User-Agent string as-is through March 2023.
 
-## Wrap up and feedback  {: #wrap-up-feedback}
+## Share your feedback  {: #wrap-up-feedback}
 
 We'll continue to explain what's happening, provide as much forward visibility
 as we can, encourage your involvement, and hear your input.
