@@ -1,19 +1,15 @@
 ---
 layout: layouts/blog-post.njk
 title: プライバシー サンドボックスの開発者登録
-description: |2-
-
-  開発者のアイデンティティを確認し、Chrome と Android におけるプライバシーサンドボックスの関連性と測定 API の構成情報を収集するための新しいプロセスについて。
+description: 開発者のアイデンティティを確認し、Chrome と Android におけるプライバシーサンドボックスの関連性と測定 API の構成情報を収集するための新しいプロセスについて。
 subtitle: Chrome と Android におけるプライバシーサンドボックスの関連性と測定 API への新しい開発者登録プロセスを発表します。
-date: '2023-04-13'
+date: 2023-04-13
 hero: image/VbsHyyQopiec0718rMq2kTE1hke2/Y7LA3AUuZmhBjHfNlNsq.jpg
-alt: |2-
-
-  プライバシー サンドボックスへの登録。
+alt: プライバシー サンドボックスへの登録。
 authors:
   - georgiafranklin
 tags:
-  - プライバシー
+  - privacy
 ---
 
 Attribution Reporting、FLEDGE、Topics、Private Aggregation、Shared Storage といったプライバシーサンドボックスの関連性と測定 API の一般提供を計画するに際し、これらのテクノロジーが意図したとおりに透明性を持って使用されることを保証したいと考えています。本日、Chrome と Android でのプライバシーサンドボックスの関連性と測定 API の新しい開発者登録プロセスを発表しました。このプロセスは、現在のプライバシーサンドボックスの Android 登録プロセスに置き換わります。
