@@ -19,7 +19,7 @@ authors:
 
 休暇の予約を支援する会社を想像してみてください。この会社には、`fly-brandx.com` と `drive-brandx.com` という 2 つの関連サイトがあり、フライトとレンタカーを分けています。1 つの旅行を予約する過程で、これらのサイト間を移動してさまざまなオプションを選択できます。ショッピング カートには、これらのサイト全体での選択が記憶されていると期待できます。
 
-Related sites like these often rely on cookies to keep you signed in or show you personalized content.
+このような関連サイトは、多くの場合、Cookie を使用してログイン状態を維持したり、パーソナライズされたコンテンツを表示したりします。
 
 ウェブのプライバシーを改善するために、[Chrome はサードパーティ Cookie をブロックする方向に転換している](https://blog.chromium.org/2020/01/building-more-private-web-path-towards.html)ため、こういったエクスペリエンスの機能には新しいメカニズムが必要です。
 
@@ -42,7 +42,7 @@ First-Party Sets は、組織が異なるトップレベルサイト間でなん
 - **ブランドドメイン**: `fly-brandx.com、drive-brandx.com`
 - **アプリドメイン**: `calendar-brandx.com、mail-brandx.com`
 - ローカリゼーションを有効にするための**国固有のドメイン**: `brandx.co.uk`、`brandx.rs`
-- **Service domains** that users never directly interact with, but provide services across the same organization's sites: `brandx-assets.com`
+- ユーザーが直接やり取りすることはないが、同じ組織のサイト全体でサービスを提供する**サービス ドメイン**: `brandx-assets.com`
 - ユーザーが直接操作することはないが、セキュリティ上の理由から存在する**サンドボックスドメイン**: `brandx-usercontent.com`
 
 ## 詳細
