@@ -12,7 +12,7 @@ tags:
 authors:
   - helencho
   - kaustubhag
-  - Johnnhof
+  - johannhof
   - jney
 ---
 
