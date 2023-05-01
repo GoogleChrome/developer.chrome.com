@@ -64,8 +64,8 @@ tags:
 1. Chrome バージョン 112 (またはそれ以降) を起動し、 [`ThirdPartyStoragePartitioning`](/blog/storage-partitioning-dev-trial/)フラグが有効になっていることを確認します。
 2. 最上位サイトに埋め込まれたサードパーティ コンテンツの動作が、ストレージのパーティショニングによって壊れていることを確認します (そうでない場合は、廃止トライアルに参加する必要はありません)。
 3. 以下にアクセスして、非推奨トライアルに登録し、ドメインのトークンを取得します。
-    1. For a top-level site to unpartition storage, service workers, and communication APIs in its third-party embedded content: [`DisableThirdPartyStoragePartitioning`](/origintrials/#/view_trial/-8517432795264450559)
-    2. For a top-level site to unpartition sessionStorage across navigations: [`DisableThirdPartySessionStoragePartitioningAfterGeneralPartitioning`](/origintrials/#/view_trial/3444127815031586817)
+    1. サードパーティの埋め込みコンテンツでストレージ、サービスワーカー、および通信 API のパーティション化を解除するトップレベルサイトの場合: [`DisableThirdPartyStoragePartitioning`](/origintrials/#/view_trial/-8517432795264450559)
+    2. ナビゲーション間で sessionStorage のパーティション化を解除するトップレベルサイトの場合: [`DisableThirdPartySessionStoragePartitioningAfterGeneralPartitioning`](/origintrials/#/view_trial/3444127815031586817)
 4. オリジン トライアル トークンをページに追加します。
     1. `DisableThirdPartySessionStoragePartitioningAfterGeneralPartitioning`トライアルの場合、最上位サイトの HTTP 応答ヘッダーに`Origin-Trial: <DEPRECATION TRIAL TOKEN>`を追加できます。 `<DEPRECATION TRIAL TOKEN>`には、非推奨トライアルに登録したときに取得したトークンが含まれます。これは HTML 経由でも実行できます `<meta>鬼ごっこ。
     2. `DisableThirdPartyStoragePartitioning`トライアルの場合、トークンは HTML の`<meta>`タグで指定する必要があります。 HTTP ヘッダー メソッドはサポートされていません。
