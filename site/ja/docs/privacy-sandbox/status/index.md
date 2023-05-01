@@ -1,14 +1,10 @@
 ---
 layout: layouts/doc-post.njk
 title: API のステータスと機能のリリース
-subhead: |2-
-
-  Chrome プラットフォームのステータス、リソース、機能リリースのタイムラインをご覧ください。
-description: |2-
-
-  Chrome プラットフォームのステータス、リソース、機能リリースのタイムラインをご覧ください。
-date: '2021-05-18'
-updated: '2023-03-16'
+subhead: Chrome プラットフォームのステータス、リソース、機能リリースのタイムラインをご覧ください。
+description: Chrome プラットフォームのステータス、リソース、機能リリースのタイムラインをご覧ください。
+date: 2021-05-18
+updated: 2023-03-16
 authors:
   - alexandrawhite
 ---
