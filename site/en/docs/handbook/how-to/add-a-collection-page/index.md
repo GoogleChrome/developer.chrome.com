@@ -14,7 +14,7 @@ or [create a new one](/docs/handbook/how-to/add-a-tag/).
 
 ### Tag content
 
-Make sure all posts / articles / docs that will be bart of the collection are
+Make sure all posts / articles / docs that will be part of the collection are
 tagged with the chosen tag.
 
 ```yaml

@@ -9,9 +9,11 @@ authors:
   - samdutton
 ---
 
-If you have questions about any parts of the Privacy Sandbox, please see the relevant sections of the documentation.
+If you have questions about any parts of the Privacy Sandbox, refer to the
+relevant sections of the documentation.
 
-Your questions are welcome. If you have a Privacy Sandbox question that is not answered in the documentation, you can:
+Your questions are welcome. If you have a Privacy Sandbox question that is not
+answered in the documentation, you can:
 
 -  File an issue on the explainer repo for the proposal you're asking about.
    Links to these are provided below, and are available from the

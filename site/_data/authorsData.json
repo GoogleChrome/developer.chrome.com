@@ -95,7 +95,9 @@
     "twitter": "williamdenniss"
   },
   "kenchris": {
-    "twitter": "kennethrohde"
+    "country": "DK",
+    "twitter": "kennethrohde",
+    "github": "kenchris"
   },
   "emilystark": {
     "homepage": "https://www.emilymstark.com/",
@@ -184,7 +186,8 @@
   },
   "rviscomi": {
     "github": "rviscomi",
-    "twitter": "rick_viscomi"
+    "twitter": "rick_viscomi",
+    "image": "image/STd8eW8CSiNp5B1bX0R6Dww2eH32/03cRovenlDpm0uyoUUkX.jpeg"
   },
   "ilyagrigorik": {
     "homepage": "https://igvita.com/",
@@ -510,11 +513,25 @@
     "github": "reillyeon",
     "image": "image/admin/C7kO2T8Q8jSZxU9xj3AC.jpg"
   },
+  "nattestad": {
+    "twitter": "fractorious",
+    "country": "US",
+    "image": "image/admin/UyUsatSDE2wdnfy3KHzO.jpg"
+  },
   "cwallez": {
     "country": "FR",
     "twitter": "DaKangz",
     "github": "Kangz",
+    "mastodon": "https://mastodon.gamedev.place/@DaKangz",
     "image": "image/vvhSqZboQoZZN9wBvoXq72wzGAf1/mYkUaoNpythq50oIFiQh.jpeg"
+  },
+  "toji": {
+    "country": "US",
+    "twitter": "tojiro",
+    "github": "toji",
+    "mastodon": "https://mastodon.social/@tojiro",
+    "homepage": "https://toji.dev/",
+    "image": "image/vvhSqZboQoZZN9wBvoXq72wzGAf1/0OHajNUjLrRB7XsDWuFt.png"
   },
   "eladalon": {
     "country": "SE",
@@ -1127,5 +1144,26 @@
   "georgiafranklin": {
     "country": "US",
     "image": "image/VbsHyyQopiec0718rMq2kTE1hke2/tFdVO9oa8ki55NO1Iwma.jpeg"
+  },
+  "arskama": {
+    "country": "FI",
+    "github": "arskama"
+  },
+  "robertyang": {
+  "image": "image/RtQlPaM9wdhEJGVKR8boMPkWf443/In0YoXtpVY8pwm7Pcj33.jpeg",
+  "twitter": "yangrob",
+  "linkedin": "robertyanghk"
+},
+  "vaatika": {
+    "country": "DE",
+    "twitter": "vaatika",
+    "image": "image/3ILBH0X0aDOqDIm6SgH3OTHT8832/vL2uGtk2NKGT9two4PWy.jpg"
+  },
+  "dmengelt": {
+    "country": "CH",
+    "twitter": "dmengelt",
+    "github": "dmengelt",
+    "mastodon": "https://mastodon.online/@dmengelt",
+    "image": "image/UIt9DNJ5rxYg42rqjqkKmCmAYXg1/KJcni8LUMhCip3LIJljm.jpeg"
   }
 }

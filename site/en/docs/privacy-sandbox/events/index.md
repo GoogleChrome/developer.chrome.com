@@ -25,7 +25,7 @@ Subscribe to the following mailing lists to be notified of other events:
 
 ## Ongoing events
 
-### W3C WICG calls
+### W3C group calls
 
 Make sure to join the [W3C](https://www.w3.org/participate/) and [WICG](https://www.w3.org/community/wicg/) 
 if you plan on participating.
@@ -33,6 +33,7 @@ if you plan on participating.
 * [FLEDGE](https://github.com/WICG/turtledove/tree/main/meetings)
 * [Attribution Reporting](https://github.com/WICG/attribution-reporting-api/tree/main/meetings): 
 announcements are also made on [this issue](https://github.com/WICG/attribution-reporting-api/issues/80)
+* [Topics](https://github.com/patcg-individual-drafts/topics/issues/115#issue-1442748960)
 
 ## Past events
 

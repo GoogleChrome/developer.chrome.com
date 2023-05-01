@@ -24,7 +24,7 @@ const md = require('markdown-it')();
  * Render content as markdown.
  *
  * @param {string?} content
- * @return {string|undefined}
+ * @return {string|null}
  * @this {any}
  */
 function render(content) {
@@ -35,7 +35,7 @@ function render(content) {
  * Render content as inline markdown.
  *
  * @param {string?} content
- * @return {string|undefined}
+ * @return {string|null}
  * @this {any}
  */
 function renderInline(content) {

@@ -45,7 +45,7 @@ This feature is available only in Chrome, not Chromium.
 
 ## Introduction {: #intro }
 
-We will be using this [coffee ordering](https://coffee-cart.netlify.app/) demo page. Checkout is a common user flow among shopping websites.
+We will be using this [coffee ordering](https://coffee-cart.app/) demo page. Checkout is a common user flow among shopping websites.
 
 In the next sections, we will walk you through how to record, replay and audit the following checkout flow with the **Recorder** panel:
 
@@ -62,7 +62,7 @@ In the next sections, we will walk you through how to record, replay and audit t
 
 ## Record a user flow {: #record }
 
-1. Open this [demo](https://coffee-cart.netlify.app/) page. Click on the **Start new recording** button to begin.
+1. Open this [demo](https://coffee-cart.app/) page. Click on the **Start new recording** button to begin.
 1. Enter "coffee checkout" in the **Recording name** textbox.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/MTIDldRAYMHBnnKSmnVy.png", alt="Start a new recording.", width="800", height="529" %}
    {% Aside %}

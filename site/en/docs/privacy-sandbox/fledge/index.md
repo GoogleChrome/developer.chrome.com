@@ -15,6 +15,8 @@ authors:
   - kevinkiklee
 ---
 
+{% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
+
 {% YouTube
   id='HkvmYKqnytw'
 %}
@@ -194,9 +196,19 @@ and membership is removed when users clear their site data.
 Learn how you can [block access to the FLEDGE API](/docs/privacy-sandbox/fledge-api/opt-out),
 either as a site owner or as an individual user.
 
-{: #glossary}
+### Can users block an ad shown as the result of a FLEDGE auction? {: #ad-block }
+
+Users can [opt out of the Privacy Sandbox API](/docs/privacy-sandbox/fledge-api/opt-out/#opt-out-user).
+To opt out of a specific ad or ad selection technique, the appropriate party to
+provide those controls is the ad tech serving the ad.
+
+Developers can use multiple approaches to control which ads are eligible for
+bidding and serving, as well as recording a user's ad preferences. One
+technique is to call `leaveAdInterestGroup()` when a user asks to block a specific ad, for the winning interest group that provided the ad. This removes the user's browser from membership of the interest group and makes the group ineligible to bid in the future.
 
 ## Key concepts
+
+{: #glossary}
 
 Looking for more information on FLEDGE terminology? Refer to the [Privacy Sandbox glossary](/docs/privacy-sandbox/glossary/).
 
@@ -405,9 +417,7 @@ privacy) the seller and the winning bidder can report the auction result.
    [Key/Value service](#key-value-service-detail) for real-time data.  Before
    an auction starts, the seller finds the best contextual ad for the available
    ad slot. 
-5. The winning ad is returned as an opaque value, which displays in a
-   [fenced frame](/docs/privacy-sandbox/fenced-frame/). Both the seller and
-   publisher will be unable to view this value.
+5. The winning ad is returned as a fenced frame config object when `resolveToConfig` flag is set in the auction config. The config is used to navigate the fenced frame to the ad creative, and the URL of the creative is hidden from both the seller and the publisher. If the `resolveToConfig` flag is set to `false` or not passed in, the winning ad is returned as an opaque [URN](https://en.wikipedia.org/wiki/Uniform_Resource_Name) that can be used to render the ad in an iframe. Fenced frame config object is available starting from M114.
 6. The auction is reported to the seller and winning buyers. 
     {% Aside %}
     The seller's `reportResult()` and buyer's `reportWin()` can include a call to `sendReportTo()`. This is available [temporarily](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#5-event-level-reporting-for-now), until aggregate reporting is available with [Private Aggregation](/docs/privacy-sandbox/private-aggregation).

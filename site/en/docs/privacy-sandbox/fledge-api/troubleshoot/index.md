@@ -11,6 +11,8 @@ authors:
   - alexandrawhite
 ---
 
+{% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
+
 From Chrome Canary 98.0.4718.0, it's possible to debug FLEDGE and FLEDGE
 worklets in Chrome DevTools.
 

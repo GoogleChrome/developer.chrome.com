@@ -44,6 +44,22 @@ There are many ways to select an element:
 
 ## View CSS {: #view }
 
+### View CSS documentation {: #view-docs }
+
+To see a tooltip with a short CSS description, hover over the property name in the **Styles** pane.
+
+{% Aside %}
+DevTools pulls the descriptions for tooltips from [VS Code Custom Data](https://github.com/microsoft/vscode-custom-data).
+{% endAside %}
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/v0joPkQg0NiMauy0bwwB.png", alt="The tooltip with documentation on a CSS property.", width="800", height="651" %}
+
+Click **Learn more** to go to an [MDN CSS Reference](https://developer.mozilla.org/docs/Web/CSS/Reference) on this property.
+
+To turn the tooltips off, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Don't show**.
+
+To turn them back on, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Preferences** > **Elements**](/docs/devtools/settings/preferences/#elements) > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show CSS documentation tooltip**.
+
 ### View invalid, overridden, inactive, and other CSS {: #css-issues }
 
 The **Styles** pane recognizes many kinds of CSS issues and highlights them in different ways.

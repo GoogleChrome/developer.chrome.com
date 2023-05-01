@@ -4,7 +4,7 @@ title: 'From Web SQL to SQLite Wasm: the database migration guide'
 subhead: >
   With SQLite Wasm backed by the origin private file system, there is a versatile replacement for the deprecated Web SQL database technology. This article is a guide to migrating your data from Web SQL to SQLite Wasm.
 date: 2023-03-24
-# updated: 2023-03-24
+updated: 2023-04-19
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/l5kRHOrUI9mQmwOTJKr7.jpg
 alt: Library symbolizing a database.
 authors:
@@ -20,6 +20,10 @@ The post [Deprecating and removing Web SQL](/blog/deprecating-web-sql/) announce
 ## Migrating your databases
 
 The following four steps demonstrate the conceptual idea of migrating a Web SQL database over to SQLite Wasm, with the SQLite database backed by the origin private file system. This can serve as the foundation for your own code customized to _your_ Web SQL migration needs.
+
+{% Aside 'success' %}
+The SQLite team have run some benchmarks on their WebAssembly implementation compared to the deprecated Web SQL. These benchmarks show that SQLite Wasm is generally about as fast as Web SQL. Sometimes it's a little slower, sometimes it's a little faster. See all details on the [results page](https://sqlite-wasm-opfs.glitch.me/speedtest.html).
+{% endAside %}
 
 ### The to-be-migrated Web SQL database(s)
 The baseline assumption of this migration guide is that you have one (or several) existing Web SQL databases that hold data relevant to your app. In the screenshot below, you see an example database called _mydatabase_ with a rainstorms table that maps moods to severities. Chrome DevTools allow you to [view Web SQL databases for debugging](/docs/devtools/storage/websql/#view), as shown in the following screenshot.
@@ -58,10 +62,10 @@ The outlined steps show the conceptual idea tested on a small database. For migr
 
 ### Importing the data into SQLite Wasm
 
-All that remains is executing these SQL commands in the context of SQLite Wasm. For all details regarding setting SQLite Wasm up, I refer you to the article [SQLite Wasm in the browser backed by the Origin Private File System](/blog/sqlite-wasm-in-the-browser-backed-by-the-origin-private-file-system/), but the gist is again below. Remember that this code needs to run in a Worker, with the [required HTTP headers](/blog/sqlite-wasm-in-the-browser-backed-by-the-origin-private-file-system/#setting-the-required-headers) set correctly.
+All that remains is executing these SQL commands in the context of SQLite Wasm. For all details regarding setting SQLite Wasm up, I refer you to the article [SQLite Wasm in the browser backed by the Origin Private File System](/blog/sqlite-wasm-in-the-browser-backed-by-the-origin-private-file-system/), but the gist is again below. Remember that this code needs to run in a Worker, with the [required HTTP headers](/blog/sqlite-wasm-in-the-browser-backed-by-the-origin-private-file-system/#setting-the-required-headers) set correctly. You can install the [`@sqlite.org/sqlite-wasm`](https://www.npmjs.com/package/@sqlite.org/sqlite-wasm) package from npm.
 
 ```js
-import { default as sqlite3InitModule } from './sqlite3.mjs';
+import sqlite3InitModule from '@sqlite.org/sqlite-wasm';
 
 const createSQLiteDatabase = (sqlite3, database, sql) => {
   let db;
