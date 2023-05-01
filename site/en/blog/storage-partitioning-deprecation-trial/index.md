@@ -2,7 +2,7 @@
 layout: "layouts/blog-post.njk"
 title: "Participate in deprecation trial for unpartitioned third-party storage, Service Workers, and Communication APIs"
 description: >
-  Beginning gradually in Chrome 113, storage, service workers, and communication APIs will be partitioned in third-party contexts. For sites that need time to adjust to this new feature, these deprecation trials will allow them to temporarily keep their third-party storage, service workers, and communication APIs unpartitioned.
+  Beginning gradually in Chrome 115, storage, service workers, and communication APIs will be partitioned in third-party contexts. For sites that need time to adjust to this new feature, these deprecation trials will allow them to temporarily keep their third-party storage, service workers, and communication APIs unpartitioned.
 authors:
   - arichiv
   - kyraseevers
@@ -11,7 +11,7 @@ tags:
   - privacy
 ---
 
-Beginning gradually in [Chrome 113](https://chromiumdash.appspot.com/schedule),
+Beginning gradually in [Chrome 115](https://chromiumdash.appspot.com/schedule),
 storage, service workers, and communication APIs will be
 [partitioned in third-party contexts](/docs/privacy-sandbox/storage-partitioning/).
 In addition to being isolated by the same-origin policy, the affected APIs used
@@ -41,7 +41,7 @@ open up two deprecation trials:
     allows a site to unpartition sessionStorage across navigations.
 
 These will enable sites to discover and fix problems before third-party
-partitioning begins its rollout process in Chrome 113.
+partitioning begins its rollout process in Chrome 115.
 
 Below is an overview of the deprecation trial and what to expect. If you have
 feedback to share or you experience any issues throughout this trial let us know
