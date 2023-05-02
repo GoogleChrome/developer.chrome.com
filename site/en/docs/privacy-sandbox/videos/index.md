@@ -151,7 +151,7 @@ Recorded December 15, 2022 in Privacy Sandbox office hours.Description, date, li
 {% endColumn %}
 {% endColumns %}
 
-## FLEDGE
+## FLEDGE (Protected Audience API)
 
 {% Columns %}
 {% Column %}
