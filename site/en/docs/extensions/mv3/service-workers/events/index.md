@@ -76,7 +76,7 @@ chrome.webNavigation.onCompleted.addListener(() => {
 ```
 ## Web service worker events {: #web-events}
 
-Extension service workers support more than the lifecycle events [described elsewhere](/docs/extensions/mv3/service-workers/service-worker-lifecycle/). Some of those events require additional.
+Extension service workers support more than the lifecycle events [described elsewhere](/docs/extensions/mv3/service-workers/service-worker-lifecycle/).
 
 ### ServiceWorkerGlobal.fetch {: #fetch }
 
