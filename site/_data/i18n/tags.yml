@@ -66,6 +66,9 @@ sourcemap:
 storage:
   en: Storage
 
+network:
+  en: Network
+
 dom:
   en: DOM
 
