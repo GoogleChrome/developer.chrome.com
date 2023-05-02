@@ -19,19 +19,24 @@ tags:
 
 ## Scroll-driven animations
 
-Scroll-driven animations are a common UX pattern on the web. These are **animations that are linked to the scroll position of a scroll container**. This means that as you scroll up or down, the linked animation scrubs forward or backward in direct response. Think of interesting effects such as parallax background images or reading indicators which move as you scroll.
+Scroll-driven animations are a common UX pattern on the web. A scroll-driven animation is linked to the scroll position of a scroll container. This means that as you scroll up or down, the linked animation scrubs forward or backward in direct response. Examples of this are effects such as parallax background images or reading indicators which move as you scroll.
 
 @TODO: video of a reading indicator
 
-A similar type of scroll-driven animation is **an animation that is linked to an element's position within its scroll container**. With it, for example, elements can fade-in as they come into view.
+A similar type of scroll-driven animation is an animation that is linked to an element's position within its scroll container. With it, for example, elements can fade-in as they come into view.
 
 @TODO: video of an image reveal
 
-The classic way to achieve these kinds of effects is to respond to scroll events on [the main thread](https://developer.mozilla.org/docs/Glossary/Main_thread). This makes creating performant scroll-driven animations that are in-sync with scrolling impossible or very difficult.
+The classic way to achieve these kinds of effects is to respond to scroll events on [the main thread](https://developer.mozilla.org/docs/Glossary/Main_thread), which leads to two main problems:
+
+- Modern browsers perform scrolling on a separate process and therefore deliver scroll events asynchronously.
+- Main thread animations are [subject to jank](https://developer.chrome.com/blog/inside-browser-part3/#updating-rendering-pipeline-is-costly).
+
+This makes creating performant scroll-driven animations that are in-sync with scrolling impossible or very difficult.
 
 Coming to Chrome is a new set of APIs and concepts that work in conjunction with the existing [Web Animations API (WAAPI)](https://drafts.csswg.org/web-animations-1/) and [CSS Animations API](https://drafts.csswg.org/css-animations-1/) to enable declarative scroll-driven animations.
 
-By having scroll-driven animations integrate with these two existing APIs, can benefit from all advantages these APIs bring. That includes the ability to have these animations run off the main thread. Yes, read that correctly: **you can now have silky smooth animations, driven by scroll, running off the main thread … and all that with just a few lines of extra code** – What's not to like?!
+Integrating scroll-driven animations with two existing APIs, means that they benefit from the  advantages of these APIs. That includes the ability to have these animations run off the main thread. Yes, read that correctly: you can now have silky smooth animations, driven by scroll, running off the main thread, with just a few lines of extra code. What's not to like?!
 
 {% Aside %} If you can’t wait to check out some demos go visit [https://scroll-driven-animations.style](https://scroll-driven-animations.style), a site packed with demos and tools to check out. {% endAside %}
 
@@ -64,7 +69,7 @@ For example, here’s an animation that scales up an element on the X-axis while
 
 ### Animations on the web with JavaScript
 
-On the JavaScript side of things, the Web Animations API can be used to achieve exactly the same. You can do this by either creating new `Animation` and `KeyFrameEffect` instances, or us the much shorter [`Element` `animate()` method](https://developer.mozilla.org/docs/Web/API/Element/animate).
+In JavaScript, the Web Animations API can be used to achieve exactly the same. You can do this by either creating new `Animation` and `KeyFrameEffect` instances, or us the much shorter [`Element` `animate()` method](https://developer.mozilla.org/docs/Web/API/Element/animate).
 
 ```js
 document.querySelector('#progressbar').animate(
@@ -80,22 +85,22 @@ document.querySelector('#progressbar').animate(
 );
 ```
 
-This visual result of the JavaScript snippet above is identical to the CSS version that was mentioned earlier.
+This visual result of the JavaScript snippet above is identical to the previous CSS version.
 
 
-## Animation Timelines
+## Animation timelines
 
 By default, an animation attached to an element runs on the [document timeline](https://developer.mozilla.org/docs/Web/API/DocumentTimeline). Its origin time starts at 0 when the page loads, and starts ticking forwards as clock time progresses. This is the default animation timeline and, until now, was the only animation timeline you had access to.
 
 The [Scroll-driven Animations Specification](https://drafts.csswg.org/scroll-animations-1/) defines two new types of timelines that you can use:
 
 
-- Scroll Progress Timeline: a timeline that is linked to the scroll position of a scroll container along a particular axis.
-- View Progress Timeline: a timeline that is linked to the relative position of a particular element within its scroll container.
+- **Scroll Progress Timeline**: a timeline that is linked to the scroll position of a scroll container along a particular axis.
+- **View Progress Timeline**: a timeline that is linked to the relative position of a particular element within its scroll container.
 
 ### Scroll Progress Timeline
 
-A Scroll Progress Timeline is an animation timeline that is linked to progress in the scroll position of a scroll container–also called _scrollport_ or _scroller_–along a particular axis. **It converts a position in a scroll range into a percentage of progress**.
+A Scroll Progress Timeline is an animation timeline that is linked to progress in the scroll position of a scroll container–also called _scrollport_ or _scroller_–along a particular axis. It converts a position in a scroll range into a percentage of progress.
 
 The starting scroll position represents 0% progress and the ending scroll position represents 100% progress. In the following visualization, you can see that the progress counts up from 0% to 100% as you scroll the scroller from top to bottom.
 
@@ -105,7 +110,7 @@ A Scroll Progress Timeline is often abbreviated to simply “Scroll Timeline”.
 
 ### View Progress Timeline
 
-This type of timeline is linked to the relative progress of a particular element within a scroll container. Just like a Scroll Progress Timeline, a scroller’s scroll offset is tracked. Unlike a Scroll Progress Timeline, it’s **the relative position of a subject within that scroller that determines the progress**.
+This type of timeline is linked to the relative progress of a particular element within a scroll container. Just like a Scroll Progress Timeline, a scroller’s scroll offset is tracked. Unlike a Scroll Progress Timeline, it’s the relative position of a subject within that scroller that determines the progress.
 
 This is somewhat comparable to how [`IntersectionObserver`](https://developer.mozilla.org/docs/Web/API/Intersection_Observer_API) works, which can track how much an element is visible in the scroller. If the element is not visible in the scroller, it is not intersecting. If it is visible inside the scroller–even for the smallest part–it is intersecting.
 
@@ -116,10 +121,10 @@ A View Progress Timeline begins from the moment a subject starts intersecting wi
 A View Progress Timeline is often abbreviated to simply “View Timeline”. It is possible to target specific parts of a View Timeline based on the subject’s size, but more on that later.
 
 
-## Getting Practical with Scroll Progress Timelines
+## Getting practical with Scroll Progress Timelines
 
 
-### Creating an Anonymous Scroll Progress Timeline in CSS
+### Creating an anonymous Scroll Progress Timeline in CSS
 
 The easiest way to create a Scroll Timeline in CSS is to use the `scroll()` function. This creates an anonymous Scroll Timeline that you can set as the value for the new `animation-timeline` property.
 
@@ -137,21 +142,21 @@ Example:
 The `scroll()` function accepts a `<scroller>` and an `<axis>` argument.
 
 Accepted values for the `<scroller>` argument are the following:
-- `nearest`. Uses the nearest ancestor scroll container _(default)_.
-- `root`. Uses the document viewport as the scroll container.
-- `self`. Uses the element itself as the scroll container.
+- `nearest`: Uses the nearest ancestor scroll container _(default)_.
+- `root`: Uses the document viewport as the scroll container.
+- `self`: Uses the element itself as the scroll container.
 
 Accepted values for the `<axis>` argument are the following:
-- `block`. Uses the measure of progress along the block axis of the scroll container _(default)_.
-- `inline`. Uses the measure of progress along the inline axis of the scroll container.
-- `y`. Uses the measure of progress along the y axis of the scroll container.
-- `x`. Uses the measure of progress along the x axis of the scroll container.
+- `block`: Uses the measure of progress along the block axis of the scroll container _(default)_.
+- `inline`: Uses the measure of progress along the inline axis of the scroll container.
+- `y`: Uses the measure of progress along the y axis of the scroll container.
+- `x`: Uses the measure of progress along the x axis of the scroll container.
 
 For example, to bind an animation to the root scroller on the block axis, the values to pass into `scroll()` are `root` and `block`. Put together, the value is `scroll(root block)`.
 
 {% Aside 'important' %} Because an `animation-duration` set in seconds does not make sense when using a Scroll Progress Timeline, you must set `animation-duration` to `auto`. Alternatively, as done in the code snippet above, omit the `animation-duration` from the `animation` shorthand as it will then use its default value which is `auto`. {% endAside %}
 
-#### Demo: Reading Progress Indicator
+#### Demo: Reading progress indicator
 
 @TODO: video
 
@@ -223,13 +228,13 @@ If wanted, you can combine `scroll-timeline-name` and `scroll-timeline-axis` in 
 scroll-timeline: --my-scroller inline;
 ```
 
-{% Aside 'important' %} Note that even for named Scroll Timelines **the lookup from the subject to the scroller happens across ancestors only**. How to target a non-ancestor element, such as a sibling element, is covered further down this article in the [“Attaching to a non-ancestor Scroll Timeline”](#attaching-to-a-non-ancestor-scroll-timeline) section. {% endAside %}
+{% Aside 'important' %} Note that even for named Scroll Timelines the lookup from the subject to the scroller happens across ancestors only. How to target a non-ancestor element, such as a sibling element, is covered further down this article in the [“Attaching to a non-ancestor Scroll Timeline”](#attaching-to-a-non-ancestor-scroll-timeline) section. {% endAside %}
 
-#### Demo: Horizontal Carousel Step Indicator
+#### Demo: Horizontal carousel step indicator
 
 @TODO: video
 
-This demo features a step indicator shown above each image carousel. When a carousel contains three images, the indicator bar starts at 33% width to indicate you are currently looking at image 1 of 3. When the last image is in view–determined by the scroller having scrolled to the end–the indicator takes up the full width of the scroller.
+This demo features a step indicator shown above each image carousel. When a carousel contains three images, the indicator bar starts at 33% width to indicate you are currently looking at image one of three. When the last image is in view–determined by the scroller having scrolled to the end–the indicator takes up the full width of the scroller.
 
 <iframe src="https://scroll-driven-animations.style/demos/horizontal-carousel/css/?embed" frameborder="0" sandbox="allow-scripts allow-forms" width="500" height="600" style="height: 600px; width: 100%; border: 1px solid #333;"></iframe>
 
@@ -290,8 +295,8 @@ Expressed in more technical terms, the lookup walks up [the containing block cha
 
 To create a Scroll Timeline in JavaScript, create a new instance of the `ScrollTimeline` class. Pass in a property bag with the `source` and `axis` that you want to track.
 
-- `source` is a reference to the element whose scroller that you want to track. Use `document.documentElement` to target the root scroller.
-- `axis` determines which axis to track. Similar to the CSS variant, accepted values are `block`, `inline`, `x`, and `y`.
+- `source`: A reference to the element whose scroller that you want to track. Use `document.documentElement` to target the root scroller.
+- `axis`: Determines which axis to track. Similar to the CSS variant, accepted values are `block`, `inline`, `x`, and `y`.
 
 ```js
 const tl = new ScrollTimeline({
@@ -309,9 +314,9 @@ $el.animate({
 });
 ```
 
-#### Demo: Reading Progress Indicator, revisited
+#### Demo: Reading progress indicator, revisited
 
-Recreating the reading progress indicator with JavaScript, while using the same markup, the resulting JavaScript code looks like this:
+To recreate the reading progress indicator with JavaScript, while using the same markup, use the following JavaScript code:
 
 
 ```js
@@ -342,11 +347,11 @@ The visual result is identical in the CSS version: the created `timeline` tracks
 To create a View Progress Timeline, use the `view()` function. Its accepted arguments are `<axis>` and `<view-timeline-inset>`.
 
 - The `<axis>` is the same as from the Scroll Progress Timeline and defines which axis to track. The default value is `block`.
-- With <view-timeline-inset>, you can specify an offset _(positive or negative)_ to adjust the bounds when an element is considered to be in view or not. The value must be a percentage or `auto`, with `auto` being the default value.
+- With `<view-timeline-inset>`, you can specify an offset _(positive or negative)_ to adjust the bounds when an element is considered to be in view or not. The value must be a percentage or `auto`, with `auto` being the default value.
 
 For example, to bind an animation to an element intersecting with its scroller on the block axis, use `view(block)`. Similar to `scroll()`, set this as the value for the `animation-timeline` property and don’t forget to set the `animation-duration` to `auto`.
 
-Using the code below, every `img` will fade-in as it crosses the viewport while you scroll.
+Using the following code, every `img` will fade-in as it crosses the viewport while you scroll.
 
 ```css
 @keyframes reveal {
@@ -364,7 +369,7 @@ img {
 
 ### Intermezzo: View Timeline Ranges
 
-By default, an animation linked to the View Timeline attaches to the entire range of it. This starts from the moment the subject is about to enter the scrollport and ends when the subject has left the scrollport entirely.
+By default, an animation linked to the View Timeline attaches to the entire timeline range. This starts from the moment the subject is about to enter the scrollport and ends when the subject has left the scrollport entirely.
 
 It is also possible to link it to a specific part of the View Timeline by specifying the range that it should attach to. This can be, for example, only when the subject is entering the scroller. In the following visualization, the progress starts counting up from 0% when the subject enters the scroll container but already reaches 100% from the moment it is entirely intersecting.
 
@@ -372,14 +377,14 @@ It is also possible to link it to a specific part of the View Timeline by specif
 
 The possible View Timeline ranges that you can target are the following:
 
-- `cover`. Represents the full range of the view progress timeline.
-- `entry`. Represents the range during which the principal box is entering the view progress visibility range.
-- `exit`. Represents the range during which the principal box is exiting the view progress visibility range.
-- `entry-crossing`. Represents the range during which the principal box crosses the end border edge.
-- `exit-crossing`. Represents the range during which the principal box crosses the start border edge.
-- `contain`. Represents the range during which the principal box is either fully contained by, or fully covers, its view progress visibility range within the scrollport. This depends on whether the subject is taller or shorter than the scroller.
+- `cover`: Represents the full range of the view progress timeline.
+- `entry`: Represents the range during which the principal box is entering the view progress visibility range.
+- `exit`: Represents the range during which the principal box is exiting the view progress visibility range.
+- `entry-crossing`: Represents the range during which the principal box crosses the end border edge.
+- `exit-crossing`: Represents the range during which the principal box crosses the start border edge.
+- `contain`: Represents the range during which the principal box is either fully contained by, or fully covers, its view progress visibility range within the scrollport. This depends on whether the subject is taller or shorter than the scroller.
 
-To define a range, you must set a range-start and range-end. Each consists of range-name _(see list above)_ and a percentage to determine the position within that range-name.
+To define a range, you must set a range-start and range-end. Each consists of range-name _(see list above)_ and a range-offset to determine the position within that range-name. The range-offset is typically a percentage ranging from `0%` to `100%` but you can also specify a fixed length such as `20em`.
 
 For example, if you want to run an animation from the moment a subject is entering, choose `entry 0%` as the range-start. To have it finished by the time the subject has entered, choose `entry 100%` as a value for the range-end. In CSS, you set this using the `animation-range` property. Example:
 
@@ -399,7 +404,7 @@ As you might notice while playing around with this View Timeline Ranges tools, s
 
 When the range-start and range-end target the same range-name and span the entire range–from 0% up to 100%–you can shorten the value to simply the range name. For example, `animation-range: entry 0% entry 100%;` can be rewritten to the much shorter `animation-range: entry`.
 
-{% Aside 'important' %} Note that these ranges are derived from the untransformed _“principal box”_ of the subject. That means that transformations such as `scale` and `translate` are not taken into account when deriving the ranges. This is a good thing, as this allows you to scale a subject during scroll without affecting the available scroll estate. If the transformed box were used, attached animations would flicker because they would constantly need to be recalculated in response to a change in scroll estate. {% endAside %}
+{% Aside 'important' %} Note that these ranges are derived from the untransformed _principal box_ of the subject. That means that transformations such as `scale` and `translate` are not taken into account when deriving the ranges. This is a good thing, as this allows you to scale a subject during scroll without affecting the available scroll estate. If the transformed box were used, attached animations would flicker because they would constantly need to be recalculated in response to a change in scroll estate. {% endAside %}
 
 #### Demo: Image Reveal
 
@@ -430,7 +435,7 @@ Similar to how Scroll Timelines have named versions, you can also create named V
 
 The same type of values apply, and the same rules for looking up a named timeline apply.
 
-#### Demo: Image Reveal, revisited
+#### Demo: Image reveal, revisited
 
 Reworking the image reveal demo from earlier, the revised code looks like this:
 
@@ -455,9 +460,9 @@ The visual output, is exactly the same as before:
 
 To create a View Timeline in JavaScript, create a new instance of the `ViewTimeline` class. Pass in a property bag with the `subject` that you want to track, `axis`, and `inset`.
 
-- `subject` is a reference to the element that you want to track within its own scroller.
-- `axis` determines which axis to track. Similar to the CSS variant, accepted values are `block`, `inline`, `x`, and `y`.
-- `inset` specifies an inset _(positive)_ or outset _(negative)_ adjustment of the scrollport when determining whether the box is in view.
+- `subject`: A reference to the element that you want to track within its own scroller.
+- `axis`: The axis to track. Similar to the CSS variant, accepted values are `block`, `inline`, `x`, and `y`.
+- `inset`: An inset _(positive)_ or outset _(negative)_ adjustment of the scrollport when determining whether the box is in view.
 
 ```js
 const tl = new ViewTimeline({
@@ -537,7 +542,7 @@ The result is exactly the same as it was before:
 
 ## Attaching to a non-ancestor’s Scroll Timeline
 
-{% Aside %} The exact syntax for this feature is still under discussion. The name of the properties might still change. {% endAside %}
+{% Aside %} The exact syntax for this feature is [still under discussion](https://github.com/w3c/csswg-drafts/issues/7759). The name of the properties might still change. {% endAside %}
 
 The lookup mechanism for named Scroll Timelines and named View Timelines is limited to scroll ancestors only. Very often though, the element that needs to be animated is not a child of the scroller that needs to be tracked.
 
@@ -578,10 +583,15 @@ The website includes extra demos such as this album cover effect:
 
 Or this stacking cards demo that leverage `position: sticky`:
 
-
 @TODO: Video
 
 <iframe src="https://scroll-driven-animations.style/demos/stacking-cards/css/?embed" frameborder="0" sandbox="allow-scripts allow-forms allow-top-navigation" width="500" height="600" style="height: 600px; width: 100%; border: 1px solid #333;"></iframe>
+
+Or this cover page that transforms to a sticky header:
+
+@TODO: Video
+
+<iframe src="https://scroll-driven-animations.style/demos/parallax-cover/css/?embed" frameborder="0" sandbox="allow-scripts allow-forms allow-top-navigation" width="500" height="600" style="height: 600px; width: 100%; border: 1px solid #333;"></iframe>
 
 Hit the ℹ️ icon on each demo page to get an explanation of how it works.
 
