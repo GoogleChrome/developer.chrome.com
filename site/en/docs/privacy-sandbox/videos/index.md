@@ -5,11 +5,9 @@ subhead: >
   Privacy Sandbox videos and demos
 description: >
   Privacy Sandbox videos and demos
-date: 2022-01-27
-updated: 2023-03-14
+date: 2023-05-14
 authors:
   - samdutton
-  - kevinkiklee
 ---
 
 ## Videos
