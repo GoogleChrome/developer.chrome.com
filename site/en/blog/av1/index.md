@@ -20,7 +20,7 @@ Videoconferencing brings us together, even when we're thousands of miles apart. 
 
 State of the art video codecs such as [AV1](https://en.wikipedia.org/wiki/AV1) can dramatically improve video call quality, while using less bandwidth to transmit higher quality video.  We're now seeing AV1 hardware encoders in desktops and laptops, but what about users who have older devices?
 
-The Chrome Open Media team has worked for the last 18 months to make the AV1 software encoder (libaom) much faster, unlocking better quality AV1 video calling on all devices. Chrome 113 includes libaom v3.6.0, which greatly improves real-time communications performance—both speed and quality-for speeds 6 through 10. In particular we added a "Speed 10" setting for devices with limited CPU capabilities. 
+The Chrome Open Media team has worked for the last 18 months to make the AV1 software encoder (libaom) much faster, unlocking better quality AV1 video calling on all devices. Chrome 113 includes libaom v3.6.0, which greatly improves real-time communications performance—both speed and quality—for speeds 6 through 10. In particular we added a "Speed 10" setting for devices with limited CPU capabilities. 
 
 Google Meet has tested AV1 successfully in extremely low bandwidth conditions—down to 40 kbps—which unlocks video calling to users whose poor Internet connections previously prevented them from making video calls.  Users with better Internet connectivity get improved video calls.  Compared to VP9 speed 7, AV1 Speed 10 provides 12% better quality at the same bandwidth, while running 25% faster on desktops.
 
