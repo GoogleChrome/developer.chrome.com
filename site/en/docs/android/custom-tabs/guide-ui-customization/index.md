@@ -26,7 +26,7 @@ Dark mode
 
 {% endColumns %}
 
-First, customizing the Custom Tab’s address bar to be consistent with your app's theme. The snippet below changes the default toolbar color by setting `setDefaultColorSchemeParams`. If your app also supports a dark color scheme, set it via `.setColorSchemeParams(CustomTabsIntent.COLOR_SCHEME_DARK, …)` .
+First, customizing the Custom Tab’s address bar to be consistent with your app's theme. The snippet below changes the default toolbar color by setting [setDefaultColorSchemeParams](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder?cmdf=setDefaultColorSchemeParams%20custom%20tabs#setDefaultColorSchemeParams(androidx.browser.customtabs.CustomTabColorSchemeParams)). If your app also supports a dark color scheme, set it via [.setColorSchemeParams(CustomTabsIntent.COLOR_SCHEME_DARK, …)](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#setColorSchemeParams(int,androidx.browser.customtabs.CustomTabColorSchemeParams)).
 
 ```java
 // get the current toolbar background color (this might work differently in your app)

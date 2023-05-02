@@ -39,7 +39,7 @@ Here is the full code:
 private CustomTabsClient mClient;
 private CustomTabsSession mSession;
 
-private CustomTabsServiceConnection mConnection= new CustomTabsServiceConnection() {
+private CustomTabsServiceConnection mConnection = new CustomTabsServiceConnection() {
     @Override
     public void onCustomTabsServiceConnected(
             @NonNull ComponentName name,

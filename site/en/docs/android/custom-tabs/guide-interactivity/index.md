@@ -53,7 +53,7 @@ public class ShareBroadcastReceiver extends BroadcastReceiver {
 }
 ```
 
-Now, create a PendingIntent for ShareBroadcast and register it via [setActionButton](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#setActionButton(android.graphics.Bitmap,java.lang.String,android.app.PendingIntent)). Pass the pending intent together with the icon and the description. 
+Now, create a PendingIntent for ShareBroadcast and register it via [`setActionButton`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#setActionButton(android.graphics.Bitmap,java.lang.String,android.app.PendingIntent)). Pass the pending intent together with the icon and the description. 
 
 ```java
 String shareDescription = getString(R.string.label_action_share);

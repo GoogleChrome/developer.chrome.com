@@ -26,23 +26,13 @@ Checkout the [Android Custom Tab Sample app on Github](https://github.com/Google
 With the browser helper library installed, you can use the [CustomTabsIntent.Builder](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder) to create a [CustomTabsIntent](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent) and launch the Custom Tab by calling [launchUrl()](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent#launchUrl(android.content.Context,android.net.Uri)) and passing an [Uri](https://developer.android.com/reference/android/net/Uri):
 
 ```java
-@Override
-protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_main);
-    findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            String url = "https://developers.android.com";
-            CustomTabsIntent intent = new CustomTabsIntent.Builder()
-                    .build();
-            intent.launchUrl(MainActivity.this, Uri.parse(url));
-        }
-    });
-}
+String url = "https://developers.android.com";
+CustomTabsIntent intent = new CustomTabsIntent.Builder()
+        .build();
+intent.launchUrl(MainActivity.this, Uri.parse(url));
 ```
 
-Clicking the button will now open a fullscreen Custom Tab activity as seen on the following screenshot.
+This will open a fullscreen Custom Tab activity as seen on the following screenshot.
 
 {% Img src="image/6hHqS5auVgWhN0cQNQztaJx5w4M2/slw7FNNob6P1zwEkJMZa.png", alt="The default Custom Tabs experience.", width="400", height="866", class="screenshot screenshot--filled" %}
 
