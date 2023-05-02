@@ -1026,7 +1026,7 @@ features resulting in more Intent messages._**
 
 #### Bounce tracking mitigations
 
-_Reduce or eliminate the ability of bounce tracking to recognize people across contexts. [Learn more about bounce tracking mitigations](https://developer.chrome.com/docs/privacy-sandbox/bounce-tracking-mitigations/)._
+_Reduce or eliminate the ability of bounce tracking to recognize people across contexts. [Learn more about bounce tracking mitigations](/docs/privacy-sandbox/bounce-tracking-mitigations/)._
 
 <table class="width-full">
   <tr>
