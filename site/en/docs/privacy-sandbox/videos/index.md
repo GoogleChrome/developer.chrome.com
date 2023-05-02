@@ -19,7 +19,7 @@ authors:
 
 https://drive.google.com/file/d/18RGEx_mrhDJuMsLUK1BZ0cK5FSZRAAqh/view
 
-<iframe src="https://drive.google.com/file/d/18RGEx_mrhDJuMsLUK1BZ0cK5FSZRAAqh/preview" width="640" height="480" allow="autoplay"></iframe>
+<iframe src="https://drive.google.com/file/d/18RGEx_mrhDJuMsLUK1BZ0cK5FSZRAAqh/preview" width="320" height="240" allow="autoplay"></iframe>
 
 [Open full-size video](https://drive.google.com/file/d/18RGEx_mrhDJuMsLUK1BZ0cK5FSZRAAqh/preview)
 
