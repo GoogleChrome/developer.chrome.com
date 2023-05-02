@@ -125,6 +125,12 @@ Chromium issue: [1428026](https://crbug.com/1428026).
 
 These are some noteworthy fixes in this release:
 
+- The [Color Picker](/docs/devtools/css/color/) now detects HWB values that are [out of gamut](/docs/devtools/css/color/#convert-colors) when clipped ([1429271](https://crbug.com/1429271)).
+- The **Sources** panel:
+  - Enabled JSON syntax highlighting for source maps ([1385374](https://crbug.com/1385374)).
+  - Stopped showing "Source map detected" messages when you manually [disable source maps](/docs/devtools/javascript/source-maps/#enable_source_maps_in_settings) ([1423718](https://crbug.com/1423718)).
+- The **Console** now lets you evaluate incomplete JavaScript expressions with <kbd>Ctrl</kbd> + <kbd>Enter</kbd> and outputs syntax errors ([1314700](https://crbug.com/1314700)).
+- The [Breakpoint editing dialog](/docs/devtools/javascript/breakpoints/#edit-breakpoints) now has a close button. Previously, you had to press <kbd>Enter</kbd> or unfocus the dialog ([1412980](https://crbug.com/1412980)).
 
 <!-- $contentEnd -->
 
