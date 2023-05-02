@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-04-24
+updated: 2023-05-03
 tags:
   - extensions-news
 
@@ -15,6 +15,12 @@ tags:
 
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about many of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).)
+
+### New extension service worker section
+
+<p class="color-secondary-text type--caption">Posted on <time>May 3, 2023</time></p>
+
+Extension service workers aren't exactly like web services workers; they're more. In addition to web service worker features, they intercept events from extension APIs, and they're available as soon as their loaded. Our new [Service workers](/docs/extensions/mv3/service_workers/) desribes these details. We'll be expanding this section in the coming months.
 
 ### More troubleshooting tips for Web Store violations
 
