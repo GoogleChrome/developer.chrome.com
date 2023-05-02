@@ -1031,7 +1031,7 @@ _Reduce or eliminate the ability of bounce tracking to recognize people across c
 <table class="width-full">
   <tr>
     <td><strong>Feedback</strong></td>
-    <td><a href="[https://github.com/bslassey/ip-blindness/issues](https://github.com/privacycg/nav-tracking-mitigations/issues)">privacycg/nav-tracking-mitigations</a></td>
+    <td><a href="https://github.com/privacycg/nav-tracking-mitigations/issues">privacycg/nav-tracking-mitigations</a></td>
   </tr>
   <tr>
     <td><strong>Intents</strong></td>
