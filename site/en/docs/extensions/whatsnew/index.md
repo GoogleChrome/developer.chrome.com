@@ -20,7 +20,7 @@ and related policy or other changes. You'll find other notices posted on the [Ex
 
 <p class="color-secondary-text type--caption">Posted on <time>May 3, 2023</time></p>
 
-Extension service workers aren't exactly like web services workers; they're more. In addition to web service worker features, they intercept events from extension APIs, and they're available as soon as their loaded. A [new tutorial](/docs/extensions/mv3/getstarted/tut-quick-reference/) gives you basics for registering, debugging, and more. Our new [Service workers](/docs/extensions/mv3/service_workers/) desribes these details. We'll be expanding this section in the coming months.
+Service Workers are an integral part of Chrome Extensions. We just published a [new tutorial](/docs/extensions/mv3/getstarted/tut-quick-reference/)  explaining you the basic of registering, debugging, and interacting with Service Workers. If you want to learn more, we've also added a new [Service worker guide](/docs/extensions/mv3/service_workers/) explaining important concepts in more detail. We'll be expanding this section in the coming months.
 
 ### More troubleshooting tips for Web Store violations
 
