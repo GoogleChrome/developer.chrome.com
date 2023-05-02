@@ -44,6 +44,25 @@ There are many ways to select an element:
 
 ## View CSS {: #view }
 
+Use the **Elements** > **Styles** and **Computed** panes to view CSS rules and [diagnose CSS issues](/docs/devtools/css/issues/).
+
+### Navigate with links {: #links }
+
+The **Styles** pane displays links in various places to various other places, including but not limited to:
+
+- Next to CSS rules, to stylesheets and CSS sources. Such links open the **Sources** panel. If the stylesheet is minified, see [Make a minified file readable][3].
+- In the **Inherited from ...** sections, to parent elements.
+- In `var()` calls, to [custom property](https://developer.mozilla.org/docs/Web/CSS/Using_CSS_custom_properties) declarations.
+- In `animation` shorthand properties, to `@keyframes`.
+- **Learn more** links in documentation tooltips.
+- And more.
+
+Here are some of them highlighted:
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VIXGDdosRVMxekn5PQip.png", alt="Various links highlighted.", width="800", height="648" %}
+
+Links may be styled differently. If you're not sure if something is a link, try clicking it to find out.
+
 ### View CSS documentation {: #view-docs }
 
 To see a tooltip with a short CSS description, hover over the property name in the **Styles** pane.
@@ -65,15 +84,6 @@ To turn them back on, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXi
 The **Styles** pane recognizes many kinds of CSS issues and highlights them in different ways.
 
 See [Understand CSS in the Styles pane](/docs/devtools/css/issues/#css-in-styles).
-
-### View the external stylesheet where a rule is defined {: #view-external }
-
-In the **Styles** pane, click the link next to a CSS rule to open the external stylesheet that
-defines the rule.
-
-{% Img src="image/admin/DIRRbj70JvHO7EDpeSdC.svg", alt="Viewing the stylesheet where a rule is defined", width="800", height="488" %}
-
-If the stylesheet is minified, see [Make a minified file readable][3].
 
 ### View only the CSS that's actually applied to an element {: #computed }
 
