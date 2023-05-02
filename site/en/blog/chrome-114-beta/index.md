@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6, blockquote {
 
 In addition to the `text-wrap` property, the `white-space-collapse` property is also supported, and the `white-space` property becomes a shorthand of these properties. 
 
-Learn more in [CSS `text-wrap: balance`](https://developer.chrome.com/blog/css-text-wrap-balance/).
+Learn more in [CSS `text-wrap: balance`](/blog/css-text-wrap-balance/).
 
 
 
