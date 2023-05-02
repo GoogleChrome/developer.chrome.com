@@ -112,6 +112,9 @@ redirects:
 
 - from: /docs/privacy-sandbox/attribution-reporting-changes-january-2022/
   to: /blog/attribution-reporting-jan-2022-updates/
+  
+- from: /docs/privacy-sandbox/maximize-ad-relevance/
+  to: https://privacysandbox.com/news/maximize-ad-relevance-after-third-party-cookies
 
 - from: /blog/capture-handle/
   to: /docs/web-platform/capture-handle/
@@ -541,6 +544,9 @@ redirects:
 
 - from: /blog/inside-oct-2022/...
   to: /blog/insider-oct-2022/...
+
+- from: /blog/webdriver-bidi/
+  to: /articles/webdriver-bidi/
 
 # Redirecting the intersection observer post from d.c.c. to web.dev
 - from: /intersectionobserver/

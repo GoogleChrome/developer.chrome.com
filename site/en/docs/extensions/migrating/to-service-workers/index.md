@@ -4,7 +4,10 @@ title: Migrate to a service worker
 subhead: 'Replacing background or event pages with a service worker'
 description: 'A service worker enables extensions to run only when needed, saving resources.'
 date: 2023-03-09
+updated: 2023-05-01
 ---
+
+{% Partial 'extensions/mv3-support.md' %}
 
 A service worker replaces the extension's background or event page to ensure that background code stays off the main thread. This enables extensions to run only when needed, saving resources. 
 
@@ -75,7 +78,7 @@ Replacing items in `"background.page"` will be dealt with in a later section.
 {% endCompare %}
 </div>
 
-The `"service_worker"` field takes a single string.  To use additional scripts in your service worker, declare the service worker as an [ES Module](https://web.dev/es-modules-in-sw/#static-imports-only) by specifying `"type": "module"` to use the [`import`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import) keyword.
+The `"service_worker"` field takes a single string. You will only need the `"type"` field if you use [ES modules](https://web.dev/es-modules-in-sw/#static-imports-only) (using the [`import`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import) keyword). Its value will always be `"module"`.
 
 ## Move DOM and window calls to an offscreen document {: #move-dom-and-window }
 
@@ -101,6 +104,13 @@ document.execCommand('copy');
 ```
 
 Communicate between offscreen documents and extension service workers using [message passing](/docs/extensions/mv3/messaging/).
+
+## Convert localStorage to chrome.storage.local {: #convert-localstorage }
+
+The web platform's [`Storage`](https://developer.mozilla.org/docs/Web/API/Storage) interface (accessible from `window.localStorage`) cannot be used in a service worker. To address this:
+
+1. Move its calls to an [offscreen document](/docs/extensions/reference/offscreen/).
+1. (Optional) Replace it with calls to the [`chrome.storage.local`](/docs/extensions/reference/storage/#property-local) namespace. For details, see [the instructions](/docs/extensions/reference/storage/#can-extensions-use-storage).
 
 ## Register listeners synchronously {: #register-listeners }
 
