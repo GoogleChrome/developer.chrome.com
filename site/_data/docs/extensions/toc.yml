@@ -41,14 +41,20 @@
     - url: /docs/extensions/mv3/manifest
     - url: /docs/extensions/mv3/architecture-overview
     - url: /docs/extensions/mv3/declare_permissions
+    - url: /docs/extensions/mv3/service_workers
     - url: /docs/extensions/mv3/user_interface
     - url: /docs/extensions/mv3/tut_debugging
     - url: /docs/extensions/mv3/samples
+- title: i18n.docs.extensions.service_workers
+  sections:
+    - url: /docs/extensions/mv3/service_workers
+    - url: /docs/extensions/mv3/service_workers/basics
+    - url: /docs/extensions/mv3/service_workers/service-worker-lifecycle
+    - url: /docs/extensions/mv3/service_workers/events
 - title: i18n.docs.extensions.indepth-core
   sections:
     - url: /docs/extensions/mv3/messaging
     - url: /docs/extensions/mv3/content_scripts
-    - url: /docs/extensions/mv3/service_workers
     - url: /docs/extensions/mv3/match_patterns
     - url: /docs/extensions/mv3/promises
     - url: /docs/extensions/mv3/cross-origin-isolation
