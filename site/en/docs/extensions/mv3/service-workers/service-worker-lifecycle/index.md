@@ -30,7 +30,7 @@ chrome.runtime.onInstalled.addListener(() => {
   });
 });
 ```
-### ServiceWorkerRegistration.active
+### ServiceWorkerRegistration.active {: #active }
 
 Finally, the  service worker's [activate](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/activate_event) event is fired. Note that unlike web service workers, this event is fired immediately after installation of an extension because there is nothing comparable to a page reload in an extension.
 
