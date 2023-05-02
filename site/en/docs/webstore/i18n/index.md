@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Internationalize your extension
 date: 2017-08-30
-updated: 2021-11-08
+updated: 2023-05-01
 description: How to internationalize your Chrome Web Store extension.
 ---
 
@@ -222,7 +222,7 @@ the next language.
 
 By default, your extension is listed in all regions that can use the Chrome Web Store. If you don't
 want your extension to be listed in a particular region, unselect that region from the following
-list in the **Regions** section of the [Payments and Distribution][distribution] tab.
+list in the **Regions** section of the [Distribution][distribution] tab.
 
 - Australia
 - Austria

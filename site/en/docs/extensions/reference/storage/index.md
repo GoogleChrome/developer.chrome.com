@@ -4,7 +4,7 @@ api: storage
 
 ## Overview {: #overview }
 
-The Storage API provides an extension-specific way to persist user data and state. It's similar to the web platform's storage APIs ([IndexedDB][mdn-indexeddb], and [localStorage][mdn-localstorage]), but was designed to meet the storage needs of extensions. The following are a few key features: 
+The Storage API provides an extension-specific way to persist user data and state. It's similar to the web platform's storage APIs ([IndexedDB][mdn-indexeddb], and [Storage][mdn-storage]), but was designed to meet the storage needs of extensions. The following are a few key features: 
 
 - All extension contexts, including the extension service worker and content scripts have access to the Storage API.
 - The JSON serializable values are stored as object properties.
@@ -15,14 +15,21 @@ The Storage API provides an extension-specific way to persist user data and stat
 
 {% Details %}
 {% DetailsSummary %}
-💡 Can extensions use the WebStorage API?
+💡 Can extensions use the Storage API?
 {% endDetailsSummary %}
 
-Even though extensions can access [`Window.localStorage`][mdn-localstorage] in some contexts (popup and other HTML pages), it is not recommended for the following reasons:
+Even though extensions can use the [`Storage`][mdn-storage] interface (accessible from `window.localStorage`) in some contexts (popup and other HTML pages), it is not recommended for the following reasons:
 
-- The extension's service worker cannot access `Window.localStorage`.
-- Content scripts share the `Window.localStorage` of the host page.
-- Data saved to `Window.localStorage` is lost when the user clears their browsing history.
+- Extension's service worker cannot access `Storage`.
+- Content scripts share storage with the host page.
+- Data saved using the `Storage` interface is lost when the user clears their browsing history.
+
+
+1. Create an offscreen document with a conversion routine and an [`onMessage`][on-message] handler.
+1. Add a conversion routine to an offscreen document.
+1. In the extension service worker check `chrome.storage` for your data.
+1. If your data isn't found, [create][create-offscreen] an offscreen document and call [`sendMessage()`][send-message] to start the conversion routine.
+1. Inside the offscreen document's `onMessage` handler, call the conversion routine.
 
 {% endDetails %}
 
@@ -238,16 +245,20 @@ To see other demos of the Storage API, explore any of the following examples:
 - [Global search extension][gh-global-context-search].
 - [Water alarm extension][gh-water-alarm].
 
+[create-offscreen]: /docs/extensions/reference/offscreen/#method-createDocument
 [doc-manifest]: /docs/extensions/mv3/manifest
 [gh-global-context-search]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/17956f44b6f04d28407a4b7eee428611affd4fab/api/contextMenus/global_context_search
 [gh-water-alarm]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/17956f44b6f04d28407a4b7eee428611affd4fab/examples/water_alarm_notification
 [incognito]: /docs/extensions/mv2/manifest/incognito
 [manifest-storage]: /docs/extensions/mv3/manifest/storage
 [mdn-indexeddb]: https://developer.mozilla.org/docs/Web/API/Window/indexeddb
-[mdn-localstorage]: https://developer.mozilla.org/docs/Web/API/Window/localStorage
+[mdn-storage]: https://developer.mozilla.org/docs/Web/API/Storage
 [method-access-level]: #method-StorageArea-setAccessLevel
+[offscreen-document]: /docs/extensions/reference/offscreen/
+[on-message]: /docs/extensions/reference/runtime/#event-onMessage
 [options-page]: https://developer.chrome.com/docs/extensions/mv3/options/
 [prop-local]: #property-local
 [prop-sync]: #property-sync
 [prop-session]: #property-session
 [prop-managed]: #property-managed
+[send-message]: /docs/extensions/reference/runtime/#method-sendMessage

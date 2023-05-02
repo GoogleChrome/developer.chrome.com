@@ -1149,6 +1149,11 @@
     "country": "FI",
     "github": "arskama"
   },
+  "robertyang": {
+  "image": "image/RtQlPaM9wdhEJGVKR8boMPkWf443/In0YoXtpVY8pwm7Pcj33.jpeg",
+  "twitter": "yangrob",
+  "linkedin": "robertyanghk"
+},
   "vaatika": {
     "country": "DE",
     "twitter": "vaatika",
@@ -1160,5 +1165,14 @@
     "github": "dmengelt",
     "mastodon": "https://mastodon.online/@dmengelt",
     "image": "image/UIt9DNJ5rxYg42rqjqkKmCmAYXg1/KJcni8LUMhCip3LIJljm.jpeg"
+  },
+  "yunqingwang": {
+    "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/6Cx9HnGJfUJv7ustH6sN.jpeg"
+  },
+  "roshanbaliga": {
+    "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/WinvDg4wrHb2WCqNhoBC.jpeg"
+  },
+  "marcopaniconi": {
+    "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/sCdEdscRuD8KSRYpvTXI.png"
   }
 }
