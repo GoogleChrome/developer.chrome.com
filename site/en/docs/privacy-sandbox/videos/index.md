@@ -10,6 +10,8 @@ authors:
   - samdutton
 ---
 
+If you're looking for Privacy Sandbox resources, check out the videos below. Some are recorded Privacy Sandbox office hours. You can find upcoming office hours on the [events page](/docs/privacy-sandbox/events/).
+
 ## What is the Privacy Sandbox?
 
 {% Columns %}
