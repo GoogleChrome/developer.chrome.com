@@ -25,6 +25,17 @@ Description, date, link to docs... sed do eiusmod tempor incididunt ut labore et
 
 {% Columns %}
 {% Column %}
+<iframe width="280" height="158" src="https://www.youtube.com/watch?v=7AQFDm7STmw&list=RDCMUCnUYZLuoy1rq1aVMwx4aTzw&index=11" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% endColumn %}
+{% Column %}
+Description, date, link to docs... sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+{% endColumn %}
+{% endColumns %}
+
+<!-- https://www.youtube.com/watch?v=5t83ebP71Yw&list=RDCMUCnUYZLuoy1rq1aVMwx4aTzw&index=26 -->
+
+{% Columns %}
+{% Column %}
 <iframe width="280" height="158" src="https://www.youtube.com/embed/Gv2H3cUz_DM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 {% endColumn %}

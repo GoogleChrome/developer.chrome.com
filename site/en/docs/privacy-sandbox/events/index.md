@@ -13,7 +13,7 @@ authors:
 ---
 
 Learn about forthcoming events, and get access to resources for events that have
-already taken place.
+already taken place. For recordings of past office hours, visit the [videos page](/docs/privacy-sandbox/videos/).
 
 ## Future events
 
