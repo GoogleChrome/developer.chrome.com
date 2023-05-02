@@ -19,9 +19,24 @@ tags:
 
 *There is no 'What's new in DevTools' video for this release, but you can watch this quick recap of the recent features.*
 
-{% YouTube id='...' %}
+{% YouTube id='CrSmjooOEiE' %}
 
 <!-- $contentStart -->
+
+## Debug Autofill using the Elements panel and Issues tab {: #autofill }
+
+[Chrome Autofill](https://support.google.com/chrome/answer/142893) fills in forms automatically with saved information, like your addresses or payment information. To let you easily debug Autofill-related issues, the **Elements** panel can now highlight them with red curly underlines.
+
+To check out this feature, enable {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Experiments** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Highlights a violating node or attribute in the Elements panel DOM tree** and inspect this [demo page](http://form-problems.glitch.me/).
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VNEcEhKsc243YE218B7R.png", alt="Autofill issues highlighted in the Elements panel and reported by the Issues panel.", width="800", height="762" %}
+
+Hover over a highlighted issue in the DOM tree and click **View issue** to open the **Issues** tab that lists all detected issues and provides clues on what went wrong.
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/0461387468dc7258322216206391b925542b1207 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/7faa8cda6e13cd7bf4a7b199d90006dcab574b42 #}
+
+Chromium issue: [1399414](https://crbug.com/1399414).
 
 ## Assertions in Recorder {: #recorder }
 
@@ -40,8 +55,9 @@ Both are specified in JSON. You can also configure steps to assert, for example,
 
 Additionally, the **Recorder** now remembers your preferred script format in the [side-by-side code view](/docs/devtools/recorder/reference/#inspect-code) and right-click step menu.
 
-Chromium issue: [1423624](https://crbug.com/1423624).
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/67b9e72b50d50c5e959ccfebe202b486a3417736 #}
+
+Chromium issue: [1423624](https://crbug.com/1423624).
 
 ## Lighthouse 10.1.1 {: #lighthouse }
 
