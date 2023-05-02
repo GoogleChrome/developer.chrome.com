@@ -1,5 +1,3 @@
-{% set contentItems = null %}
-
 {% if type === 'article' %}
   {% set collectionName = 'articles-' + locale %}
 {% endif %}
@@ -10,24 +8,27 @@
 
 {% if collections[collectionName] %}
   {% set previousPost = collections[collectionName]  | getPreviousCollectionItem(page) %}
-  {% set nextPost = collections[collectionName]  | getNextCollectionItem(page) %}
+  {% set nextPost = collections[collectionName]  |  getNextCollectionItem(page) %}
 {% endif %}
 
 <div class="post-navigation">
-  <a href="{{ previousPost.url }}" class="post-navigation__link">
+  
     <div class="post-navigation__prev">
       {% if previousPost %}
-        <span class="post-navigation__label">{{ 'i18n.common.back' | i18n(locale) }}</span>
-        <p class="post-navigation__title">{{previousPost.data.title}}</p>
+        <a href="{{ previousPost.url }}" class="post-navigation__link">
+          <span class="post-navigation__label">{{ 'i18n.common.back' | i18n(locale) }}</span>
+          <p class="post-navigation__title">{{previousPost.data.title}}</p>
+        </a>
       {% endif %}
     </div>
-  </a>
-  <a href="{{ nextPost.url }}" class="post-navigation__link">
+ 
     <div class="post-navigation__next" class="post-navigation__link">
       {% if nextPost %}
+       <a href="{{ nextPost.url }}" class="post-navigation__link">
         <span class="post-navigation__label">{{ 'i18n.common.next' | i18n(locale) }}</span>
         <p class="post-navigation__title">{{nextPost.data.title}}</p>
+          </a>
       {% endif %}
     </div>
-  </a>
+
 </div>
