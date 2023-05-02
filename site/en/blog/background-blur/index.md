@@ -5,7 +5,7 @@ description: >
   A new origin trial from Chrome that allows web developers to control camera background blur.
 authors:
   - beaufortfrancois
-date: 2023-04-14
+date: 2023-05-02
 hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/vMZWdUfClsmRYEwgCEv5.jpg
 alt: A person in sharp focus in front of a blurred background. 
 tags:
