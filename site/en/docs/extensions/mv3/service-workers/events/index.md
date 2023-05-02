@@ -78,7 +78,7 @@ chrome.webNavigation.onCompleted.addListener(() => {
 
 Extension service workers support more than the lifecycle events [described elsewhere](/docs/extensions/mv3/service-workers/service-worker-lifecycle/). Some of those events require additional.
 
-### ServiceWorkerGlobal.fetch
+### ServiceWorkerGlobal.fetch {: #fetch }
 
 Fired when anything is retrieved from the extension package or when `fetch()` and `XMLHttpRequest()` are called from an extension script. In the latter cases, you will need to add the URLs of the pages you want to fetch to the `"host_permissions"` key in the `manifest.json`.
 
