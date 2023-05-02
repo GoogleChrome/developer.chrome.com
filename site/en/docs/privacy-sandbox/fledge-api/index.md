@@ -586,4 +586,3 @@ as a site owner or an individual user.
   (every   second week). Everyone is welcome to join&mdash;to participate,
   first make sure to [join the WICG](https://www.w3.org/community/wicg/). You
   can actively participate or just listen in!
-  
