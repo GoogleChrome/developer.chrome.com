@@ -34,7 +34,7 @@ chrome.runtime.onInstalled.addListener(() => {
 
 Finally, the  service worker's [activate](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/activate_event) event is fired. Note that unlike web service workers, this event is fired immediately after installation of an extension because there is nothing comparable to a page reload in an extension.
 
-## Extension startup
+## Extension startup {: #startup }
 
 When a user or incognito profile starts, the [`chrome.runtime.onStartup`](/docs/extensions/reference/runtime/#event-onStartup) event fires but no service worker events are invoked.
 
