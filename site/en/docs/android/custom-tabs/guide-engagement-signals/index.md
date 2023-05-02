@@ -11,7 +11,7 @@ authors:
 {% Video src="video/6hHqS5auVgWhN0cQNQztaJx5w4M2/m3WWGlZ2fFVZLgYjX9QV.mp4", controls="true", width="400", height="866", class="screenshot screenshot--filled" %}
 
 {% Aside "caution" %}
-This feature requires the latest version of Chrome and needs to be enabled via [`chrome://flags/#cct-real-time-engagement-signals`](chrome://flags/#cct-real-time-engagement-signals). You also need to install the latest alpha version of the `androidx.browser/browser` library:
+This feature requires the latest version of Chrome. You also need to install the latest alpha version of the `androidx.browser/browser` library:
 
 ```groovy
 dependencies {
@@ -66,8 +66,8 @@ private CustomTabsCallback mCustomTabsCallback = new CustomTabsCallback() {
 The `EngagementSignalsCallback` receives three different events:
 
 1. `onVerticalScrollEvent`: the Custom Tab fires this event every time the user changes the scroll direction, where `isDirectionUp` indicates the direction.
-1. `onGreatestScrollPercentageIncreased`: the Custom Tab fires the current scroll depth in 5% intervals. The value is reset with every new navigation. 
-1. `onSessionEnded`: the Custom Tab fires this event when the user hides the Custom Tab. `didUserInteract` will be true if the user interacted with the page in any way (scrolling, button click, ...).
+1. `onGreatestScrollPercentageIncreased`: the Custom Tab fires the current scroll depth in 5% intervals whenever the user stop scrolling. The value is reset with every new navigation. 
+1. `onSessionEnded`: the Custom Tab fires this event when it stops sending engagement signals (for example, after the user has closed the Custom Tab). `didUserInteract` will be true if the user interacted with the page in any way (scrolling, button click, ...).
 
 ```java
 private EngagementSignalsCallback mEngagementSignalsCallback = new EngagementSignalsCallback() {
