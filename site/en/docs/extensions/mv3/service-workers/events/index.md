@@ -7,7 +7,7 @@ date: 2023-05-01
 
 Extension service workers support both [standard service worker](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope#events) events and many events in the [extension APIs](/docs/extensions/reference/). This section describes what's available and provides tips for using them.
 
-## Declaring extension events
+## Declaring extension events {: #declare-events }
 
 Event handlers in service workers need to be declared in the global scope, meaning they should be at the top level of the script and not be nested inside functions. This ensures that they are registered synchronously on initial script execution, which enables Chrome to dispatch events to the service worker as soon as it starts. For example:
 
@@ -32,7 +32,7 @@ chrome.storage.local.get(["badgeText"], ({ badgeText }) => {
 ```
 {% endCompare %}
 
-## Common events
+## Common events {: #events }
 
 Extension service workers support events in specific APIs. A few common ones are described below. Note that some of these APIs require permissions to use and others may have events, methods, or properties that are not available in all versions of Chrome. For details, see the linked API documentation, particularly the events, methods, or properties you want to use.
 
@@ -80,7 +80,7 @@ Extension service workers support more than the lifecycle events [described else
 
 ### ServiceWorkerGlobal.fetch {: #fetch }
 
-Fired when anything is retrieved from the extension package or when `fetch()` and `XMLHttpRequest()` are called from an extension script. In the latter cases, you will need to add the URLs of the pages you want to fetch to the `"host_permissions"` key in the `manifest.json`.
+Fired when anything is retrieved from the extension package or when `fetch()` and `XMLHttpRequest()` are called from a content or popup script. In the latter cases, you will need to add the URLs of the pages you want to fetch to the `"host_permissions"` key in the `manifest.json`.
 
 ### ServiceWorkerGlobal.message {: #message }
 

@@ -12,11 +12,11 @@ Extension service workers respond to both the [standard service worker events](h
 
 Installation occurs when the user installs or updates a service worker from the Chrome Web Store or when they [load or update an unpacked extension](/docs/extensions/mv3/getstarted/development-basics/#load-unpacked) using the `chrome://extensions` page. Three events occur in the order below. 
 
-### ServiceWorkerRegistration.install
+### ServiceWorkerRegistration.install {: #install }
 
 The first event fired during installation is  a web service worker's [install](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/install_event) event.
 
-### chrome.runtime.onInstalled
+### chrome.runtime.onInstalled {: #oninstalled }
 
 Next is the extension's [`onInstalled`](/docs/extensions/reference/runtime/#event-onInstalled) event, which is fired when the extension (not the service worker) is first installed, when the extension is updated to a new version, and when Chrome is updated to a new version. Use this
 event to set a state or for one-time initialization, such as a [context menu](/docs/extensions/reference/contextMenus/).
