@@ -443,7 +443,7 @@ document.querySelector("#abortButton").onclick = event => {
 Using `write()` then `scan()` with the `[AbortController]`
 primitive makes it possible to read an NFC tag after writing a message to it.
 The example below shows you how to write a text message to an NFC tag and read
-the new message in the NFC tag. It stops scanning after 3 seconds.
+the new message in the NFC tag. It stops scanning after three seconds.
 
 ```js
 // Waiting for user to tap NFC tag to write to it...
