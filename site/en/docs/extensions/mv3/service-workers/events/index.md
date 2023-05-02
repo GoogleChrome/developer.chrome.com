@@ -82,7 +82,7 @@ Extension service workers support more than the lifecycle events [described else
 
 Fired when anything is retrieved from the extension package or when `fetch()` and `XMLHttpRequest()` are called from an extension script. In the latter cases, you will need to add the URLs of the pages you want to fetch to the `"host_permissions"` key in the `manifest.json`.
 
-### ServiceWorkerGlobal.message
+### ServiceWorkerGlobal.message {: #message }
 
 Service worker message passing is available in addition to extension [messaging passing](/docs/extensions/mv3/messaging/), but the two systems are not interoperable. That means that messages sent using `sendMessage()` (which is available from several extension APIs) aren't intercepted by service worker message handlers. Likewise, messages sent using `postMessage()` aren't intercepted by extension message handlers. Both types of message handlers—meaning both `ServiceWorkerGlobal.message` and `chrome.runtime.onMessage`—are supported in extension service workers.
 
