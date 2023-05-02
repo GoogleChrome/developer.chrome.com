@@ -57,7 +57,7 @@ You can also read [FLEDGE ad auction latency best practices](/docs/privacy-sandb
 
 ### FLEDGE demo {: #demo}
 
-A walk through of a basic FLEDGE deployment across advertiser and publisher
+A walk-through of a basic FLEDGE deployment across advertiser and publisher
 sites is available at [fledge-demo.glitch.me](https://fledge-demo.glitch.me/).
 
 <figure>
@@ -261,7 +261,7 @@ Features of FLEDGE will be added over time as work on implementation progresses.
 %}
 </figure>
 
-Imagine that a user visits the website of a custom bike maker (the advertiser) 
+Imagine that a user visits the website of a custom bike maker (the advertiser)
 in this example) and spends some time on the product page for a handmade steel
 bike. This provides the bike maker with a
 [remarketing](/docs/privacy-sandbox/glossary#remarketing) opportunity.

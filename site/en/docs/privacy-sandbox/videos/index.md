@@ -12,7 +12,7 @@ https://drive.google.com/file/d/18RGEx_mrhDJuMsLUK1BZ0cK5FSZRAAqh/view
 
 [Open full-size video](https://drive.google.com/file/d/18RGEx_mrhDJuMsLUK1BZ0cK5FSZRAAqh/preview)
 
-### Attribution Reporting Demo - August 11, 2022
+## Attribution Reporting Demo - August 11, 2022
 
 <iframe src="https://drive.google.com/file/d/1hmHoM3xyU4eLTJ1dM7_E8x-u6nZgim1O/preview" width="640" height="480" allow="autoplay"></iframe>
 
