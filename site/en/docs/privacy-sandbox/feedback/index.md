@@ -1024,6 +1024,33 @@ features resulting in more Intent messages._**
   </tr>
 </table>
 
+#### Bounce tracking mitigations
+
+_Reduce or eliminate the ability of bounce tracking to recognize people across contexts. [Learn more about bounce tracking mitigations](https://developer.chrome.com/docs/privacy-sandbox/bounce-tracking-mitigations/)._
+
+<table class="width-full">
+  <tr>
+    <td><strong>Feedback</strong></td>
+    <td><a href="[https://github.com/bslassey/ip-blindness/issues](https://github.com/privacycg/nav-tracking-mitigations/issues)">privacycg/nav-tracking-mitigations</a></td>
+  </tr>
+  <tr>
+    <td><strong>Intents</strong></td>
+    <td><a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/vwQ2x1lByqc/m/re5WEH84CAAJ">I2P 2022/09</a></td>
+  </tr>
+  <tr>
+    <td><strong>Chromium component</strong></td>
+    <td><a href="https://bugs.chromium.org/p/chromium/issues/list?q=component:Privacy%3ENavTracking">Privacy>NavTracking</a></td>
+  </tr>
+  <tr>
+    <td><strong>Mailing list</strong></td>
+    <td>[optional]</td>
+  </tr>
+    <tr>
+    <td><strong>Standards groups</strong></td>
+    <td><a href="https://www.w3.org/groups/cg/privacycg">Privacy Community Group</a></td>
+  </tr>
+</table>
+
 #### Gnatcatcher
 
 _Gnatcatcher explores methods to mask a user's IP address from sites. Masking
