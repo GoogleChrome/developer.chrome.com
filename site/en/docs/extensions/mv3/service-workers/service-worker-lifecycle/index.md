@@ -52,7 +52,7 @@ Though it's difficult to catch in a code review, we suggest you guard against it
 
 For all of these reasons, you need to guard against unexpected termination of the service worker.
 
-### Persist data rather than using global variables
+### Persist data rather than using global variables {: #persist-data }
 
 Any global variables you set will be lost if the service worker shuts down. Instead of using global variables, save values to storage. Your options are listed below. Note that the Web Storage API is not available for extension service workers.
 
