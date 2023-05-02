@@ -45,12 +45,12 @@
     - url: /docs/extensions/mv3/user_interface
     - url: /docs/extensions/mv3/tut_debugging
     - url: /docs/extensions/mv3/samples
-- title: i18n.docs.extensions.service-workers
+- title: i18n.docs.extensions.service_workers
   sections:
-    - url: /docs/extensions/mv3/service-workers
-    - url: /docs/extensions/mv3/service-workers/basics
-    - url: /docs/extensions/mv3/service-workers/service-worker-lifecycle
-    - url: /docs/extensions/mv3/service-workers/events
+    - url: /docs/extensions/mv3/service_workers
+    - url: /docs/extensions/mv3/service_workers/basics
+    - url: /docs/extensions/mv3/service_workers/service-worker-lifecycle
+    - url: /docs/extensions/mv3/service_workers/events
 - title: i18n.docs.extensions.indepth-core
   sections:
     - url: /docs/extensions/mv3/messaging
