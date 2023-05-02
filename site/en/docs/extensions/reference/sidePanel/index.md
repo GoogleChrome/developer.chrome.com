@@ -4,16 +4,16 @@ api: sidePanel
 
 ## Overview {: #overview }
 
-Chrome features a built-in side panel that allows users to view more information alongside the main content of a webpage. The SidePanel API allows extensions to add their own panels to the Chrome browser. Some features include:
+Chrome features a built-in side panel that enables users to view more information alongside the main content of a webpage. The SidePanel API allows extensions to add their own panels to the Chrome browser. Some features include:
 
-- The side panel is displayed on the right side of the page.
-- It remains open when navigating between tabs (if set to do so).
-- The side panel can be enabled only on specific websites.
+- The side panel remains open when navigating between tabs (if set to do so).
+- It can be available only on specific websites.
 - As an extension page, side panels have access to all Chrome APIs.
+- Users can choose which side to display the panel under Chrome settings.
 
 ## Manifest {: #manifest }
 
-In order to use the SidePanel API, you must include the `"sidePanel"` permission in the extension manifest. For example:
+To use the SidePanel API, add the `"sidePanel"` permission in the extension [manifest][doc-manifest] file:
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -24,17 +24,16 @@ In order to use the SidePanel API, you must include the `"sidePanel"` permission
   "permissions": [
     "sidePanel"
   ]
-  ...
 }
 ```
 
 ## Use cases {: #use-cases }
 
-The following sections demonstrate some common use cases for the SidePanel API. For complete extension samples, skip to [examples](#examples).
+The following sections demonstrate some common use cases for the SidePanel API. See [Extension samples](#examples) for complete extension examples.
 
 ### Display the same side panel on every site {: #every-site }
 
-The side panel can optionally be set initially from the `“default_path”` property in the `“side_panel”` key of the manifest to display the same side panel on every site. This should point to a relative path within the extension directory.
+The side panel can be set initially from the `“default_path”` property in the `“side_panel”` key of the manifest to display the same side panel on every site. This should point to a relative path within the extension directory.
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -54,79 +53,150 @@ The side panel can optionally be set initially from the `“default_path”` pro
 ```html
 <!DOCTYPE html>
 <html>
-<head>
-  <title>My Sidepanel</title>
-</head>
-<body>
-  <h1>Global side panel extension</h1>
-  <p>This side panel is enabled on all sites</p>
+  <head>
+    <title>My Sidepanel</title>
+  </head>
+  <body>
+    <h1>All sites sidepanel extension</h1>
+    <p>This side panel is enabled on all sites</p>
   </body>
 </html>
 ```
 
 ### Enable a side panel on a specific site {: #by-site }
 
-An extension can enable the side panel when the user is on a specific site by using `sidepanel.setOptions()`. The following example enables the side panel only on www.google.com. 
+An extension can use [`sidepanel.setOptions()`][sidepanel-setoptions] to enable a side panel on a specific site. This example uses [`chrome.tabs.onUpdated()`][tabs-onupdated] to listen for any updates made to the tab. It checks if the URL is [www.google.com](https://www.google.com) and enables the side panel. Otherwise, it disables it. 
 
-{% Label %}sidepanel.html:{% endLabel %}
-
-```html
-
-```
-
-
-{% Label %}sidepanel.js:{% endLabel %}
+{% Label %}service-worker.js:{% endLabel %}
 
 ```js
+const googleURL = 'https://www.google.com';
 
+chrome.tabs.onUpdated.addListener((tabId, info, tab) => {
+  if (!tab.url) return;
+  const url = new URL(tab.url);
+  // Enables the side panel on google.com
+  if (url.origin === googleURL) {
+    chrome.sidePanel.setOptions({
+      tabId,
+      path: 'sidepanel.html',
+      enabled: true
+    });
+  // Disables the side panel on all other sites
+  } else {
+    chrome.sidePanel.setOptions({
+      tabId,
+      enabled: false
+    });
+  }
+});
 ```
 
-When the user navigates to a site where the side panel is not enabled, the side panel will close and not be displayed on the drop-down menu.
+When the user navigates to a site where the side panel is not enabled, the side panel will close and not be available on the side panel drop-down menu.
 
-### Switch to a different panel {: #multi-panels }
+For a complete example, see the[Tab-specific side panel][sample-sp-google] sample. 
 
-Another way to switch between different side panels is by using `sidepanel.getOptions()` to retrieve the current side panel. The following example sets a welcome side panel, then when the user navigates to a different tab, it replaces it with the main side panel.
+### Enable the action icon to open the side panel {: #open-action-icon } 
 
-{% Label %}sidepanel.js:{% endLabel %}
-
-```js
-
-```
-
-Download the [complete extension](TBD) in the GitHub samples-repo.
-
-### Use the action icon to open the side panel {: #open-action-icon } 
+Developers can allow users to open the side panel when they click on the action toolbar icon with [`sidePanel.setPanelBehavior()`][sidepanel-set-behavior]. First, declare the `"action"` key in the manifest:
 
 {% Label %}manifest.json:{% endLabel %}
 
-```json
+```json/3-5
 {
   "name": "My side panel extension",
   ...
-  "permissions": [
-    "sidePanel"
-  ],
-  "action":{},
+   "action": {
+    "default_title": "Click to open panel"
+  },
   ...
 }
 ```
 
-{% Label %}sidepanel.js:{% endLabel %}
+Now, let's add this functionality to the previous example:
 
-```js
-chrome.sidePanel.setPanelBehavior({openPanelOnActionClick: true})
+{% Label %}service-worker.js:{% endLabel %}
+
+```js/3-3
+const googleURL = 'https://www.google.com';
+
+// Allows users to open the side panel by clicking on the action toolbar icon
+chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true });
+...
 ```
 
-## How to open a side panel {: #user-experience }
+{% Aside 'success' %}
+With `openPanelOnActionClick()` enabled, you can also open the side panel using a keyboard shortcut by specifying an [action command][action-commands] in the manifest as featured in the [Tab-specific side panel][sample-sp-google] sample.
+{% endAside %}
 
-Users can view the available panels on the Side panel menu <image here>. Then they can choose a side panel from the drop-down menu. Chrome displays the built-in side panels first.
+### Switch to a different panel {: #multi-panels }
 
-Each side panel displays the extension's icon in the side panel menu. Otherwise, it will show a placeholder icon with the first letter of the extension's name. 
+Extensions can use [`sidepanel.getOptions()`][sidepanel-getoptions] to retrieve the current side panel. The following example sets a welcome side panel on [`runtime.onInstalled()`][runtime-oninstalled]. Then when the user navigates to a different tab, it replaces it with the main side panel.
 
-Developers can also allow users to open the side panel [using the action icon](#open-action-icon).
+{% Label %}service-worker.js:{% endLabel %}
+
+```js
+const welcomePage = 'sidepanels/welcome-sp.html';
+const mainPage = 'sidepanels/main-sp.html';
+
+chrome.runtime.onInstalled.addListener(() => {
+  chrome.sidePanel.setOptions({ path: welcomePage });
+});
+
+chrome.tabs.onActivated.addListener(async ({ tabId }) => {
+  const { path } = await chrome.sidePanel.getOptions({ tabId });
+  if (path === welcomePage) {
+    chrome.sidePanel.setOptions({ path: mainPage });
+  }
+});
+```
+
+See the [Multiple side panels][sample-sp-multiple] for a complete sample.
+
+## Side panel user experience {: #user-experience }
+
+Users will see Chrome's built-in side panels first. Each side panel displays the extension's icon in the side panel menu. If no icons are included, it will show a placeholder icon with the first letter of the extension's name.
+
+### Opening the side panel {: #open }
+
+Navigating to the side panel menu
+: Users can find available side panels on the side panel menu. Then, they can choose an extension from the drop-down menu.
+
+<figure>
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/2uFG8qxM7cqyMuXWlD9R.png", alt="Side panel drop-down menu", width="291", height="366" %}
+  <figcaption>
+    Chrome browser side panel UI.
+  </figcaption>
+</figure>
+
+Using the action toolbar icon
+: Users can open the side panel by clicking on [the action icon](#open-action-icon) if it's enabled.
+
+Using a keyboard shortcut
+: Users can open the side panel by pressing a keyboard shortcut if the [action command][action-commands] and the [action icon](#open-action-icon) are enabled.
+
 
 ## Extension samples {: #examples }
-// TODO: Links to GH repo samples
+
+For more SidePanel API extensions demos, explore any of the following extensions:
+
+- [Site-specific side panel][sample-sp-google].
+- [Multiple side panels][sample-sp-multiple].
+- [Global side panel][sample-sp-global].
+- [Dictionary side panel][sample-sp-dictionary].
+
+[action-commands]: /docs/extensions/reference/commands/#action-commands
+[api-action]: /docs/extensions/reference/action/
+[doc-manifest]: /docs/extensions/mv3/manifest/
+[runtime-oninstalled]: /docs/extensions/reference/runtime/#event-onInstalled
+[sample-sp-dictionary]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.sidepanel-dictionary
+[sample-sp-global]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.sidepanel-global
+[sample-sp-google]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.sidepanel-action
+[sample-sp-multiple]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.sidepanel-multiple
+[sidepanel-getoptions]:#method-getOptions
+[sidepanel-set-behavior]: #method-setPanelBehavior
+[sidepanel-setoptions]: #method-setOptions
+[tabs-onupdated]: /docs/extensions/reference/tabs/#event-onUpdated
 
 
 
