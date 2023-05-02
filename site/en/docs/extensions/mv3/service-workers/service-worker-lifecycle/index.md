@@ -38,7 +38,7 @@ Finally, the  service worker's [activate](https://developer.mozilla.org/docs/Web
 
 When a user or incognito profile starts, the [`chrome.runtime.onStartup`](/docs/extensions/reference/runtime/#event-onStartup) event fires but no service worker events are invoked.
 
-## Idle and shutdown
+## Idle and shutdown {: #idle-shutdown }
 
 Extension service workers are dormant unless an event fires. If the service worker has a handler for the fired event, it wakes up, executes it, then goes back to being idle. If the service worker is idle for at least 30 seconds it shuts down. You should design your service worker to be resilient against unexpected termination, since not all activity keeps the service worker alive. For example, this can interrupt a service worker [`fetch()`](https://developer.mozilla.org/docs/Web/API/fetch) call if the response takes more than 30 seconds to arrive.
 
