@@ -1,7 +1,18 @@
 ---
-layout: 'layouts/project-landing.njk'
-title: 'The Privacy Sandbox'
-description: 'The Privacy Sandbox is a series of proposals to satisfy cross-site use cases without third-party cookies or other tracking mechanisms.'
+layout: 'layouts/doc-post.njk'
+title: 'FLEDGE API: developer guide'
+subhead: >
+  Developer guide for on-device ad auctions to serve remarketing and custom audiences,
+  without cross-site third-party tracking.
+description: >
+  Developer guide for on-device ad auctions to choose relevant ads from
+  previously visited websites, designed so it cannot be used by
+  third parties to track user browsing behavior across sites.
+date: 2022-01-27
+updated: 2023-03-14
+authors:
+  - samdutton
+  - kevinkiklee
 ---
 
 - [Topics API overview](https://drive.google.com/file/d/1831_uKSlTwnSzYNjpp9pkDEniDA_Q9lF/edit) September 6, 2022
