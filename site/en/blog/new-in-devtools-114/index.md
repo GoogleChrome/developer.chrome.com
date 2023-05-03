@@ -43,7 +43,9 @@ Chromium issue: [1414289](https://crbug.com/1414289).
 
 ### Improved stepping behavior in Wasm apps {: #wasm-step }
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/FBSJosXk2J6rXbRE0baL.svg", alt="Step over.", width="20", height="20" %} **Step over** in your original code now continues stepping if the step would cause a pause in disassembly (`.wasm` file). Automatic stepping also ends when it lands outside of the function it started in, for example, after returning from the function.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/FBSJosXk2J6rXbRE0baL.svg", alt="Step over.", width="20", height="20" %} **Step over** in your original code now avoids pausing in disassembly (`.wasm` file). Previously, it would pause there.
+
+However, stepping ends when it lands outside of the function it started in, for example, after returning from the function.
 
 This behavior is enabled by default in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Preferences** > **Sources**](/docs/devtools/settings/preferences/#sources).
 
