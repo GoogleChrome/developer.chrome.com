@@ -4,7 +4,7 @@ api: sidePanel
 
 ## Overview {: #overview }
 
-Chrome features a built-in side panel that enables users to view more information alongside the main content of a webpage. The SidePanel API allows extensions to add their own panels to the Chrome browser. Some features include:
+Chrome features a built-in side panel that enables users to view more information alongside the main content of a webpage. The Side Panel API allows extensions to add their own panels to the Chrome browser. Some features include:
 
 - The side panel remains open when navigating between tabs (if set to do so).
 - It can be available only on specific websites.
@@ -13,7 +13,7 @@ Chrome features a built-in side panel that enables users to view more informatio
 
 ## Manifest {: #manifest }
 
-To use the SidePanel API, add the `"sidePanel"` permission in the extension [manifest][doc-manifest] file:
+To use the Side Panel API, add the `"sidePanel"` permission in the extension [manifest][doc-manifest] file:
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -29,7 +29,7 @@ To use the SidePanel API, add the `"sidePanel"` permission in the extension [man
 
 ## Use cases {: #use-cases }
 
-The following sections demonstrate some common use cases for the SidePanel API. See [Extension samples](#examples) for complete extension examples.
+The following sections demonstrate some common use cases for the Side Panel API. See [Extension samples](#examples) for complete extension examples.
 
 ### Display the same side panel on every site {: #every-site }
 
@@ -70,13 +70,13 @@ An extension can use [`sidepanel.setOptions()`][sidepanel-setoptions] to enable 
 {% Label %}service-worker.js:{% endLabel %}
 
 ```js
-const googleURL = 'https://www.google.com';
+const GOOGLE_ORIGIN = 'https://www.google.com';
 
 chrome.tabs.onUpdated.addListener((tabId, info, tab) => {
   if (!tab.url) return;
   const url = new URL(tab.url);
   // Enables the side panel on google.com
-  if (url.origin === googleURL) {
+  if (url.origin === GOOGLE_ORIGIN) {
     chrome.sidePanel.setOptions({
       tabId,
       path: 'sidepanel.html',
@@ -118,7 +118,7 @@ Now, let's add this functionality to the previous example:
 {% Label %}service-worker.js:{% endLabel %}
 
 ```js/3-3
-const googleURL = 'https://www.google.com';
+const GOOGLE_ORIGIN = 'https://www.google.com';
 
 // Allows users to open the side panel by clicking on the action toolbar icon
 chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true });
@@ -178,7 +178,7 @@ Using a keyboard shortcut
 
 ## Extension samples {: #examples }
 
-For more SidePanel API extensions demos, explore any of the following extensions:
+For more Side Panel API extensions demos, explore any of the following extensions:
 
 - [Site-specific side panel][sample-sp-google].
 - [Multiple side panels][sample-sp-multiple].
@@ -191,7 +191,7 @@ For more SidePanel API extensions demos, explore any of the following extensions
 [runtime-oninstalled]: /docs/extensions/reference/runtime/#event-onInstalled
 [sample-sp-dictionary]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.sidepanel-dictionary
 [sample-sp-global]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.sidepanel-global
-[sample-sp-google]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.sidepanel-action
+[sample-sp-google]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.sidepanel-site-specific
 [sample-sp-multiple]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.sidepanel-multiple
 [sidepanel-getoptions]:#method-getOptions
 [sidepanel-set-behavior]: #method-setPanelBehavior

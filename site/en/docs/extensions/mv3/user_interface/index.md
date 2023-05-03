@@ -259,7 +259,7 @@ An extension side panel is an HTML file that provides additional functionality a
   </figcaption>
 </figure>
 
-For more samples and use cases, see the [SidePanel API][api-sidepanel] reference page.
+For more samples and use cases, see the [Side Panel API][api-sidepanel] reference page.
 
 ### Tooltip {: #tooltip }
 
