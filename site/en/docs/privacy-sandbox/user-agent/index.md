@@ -18,7 +18,7 @@ authors:
 ## What is User-Agent reduction?
 
 User-Agent (UA) reduction minimizes the identifying information
-shared in the User-Agent string which may be [used for passive
+shared in the User-Agent string, which may be [used for passive
 fingerprinting](https://www.w3.org/2001/tag/doc/unsanctioned-tracking/#unsanctioned-tracking-tracking-without-user-control).
 Now that these changes have been rolled
 out for scaled availability, all resource requests have a reduced `User-Agent` header. As a result,
@@ -37,7 +37,7 @@ User-Agent reduction.
 
 {% Aside 'key-term' %}
 The [`User-Agent` string](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent)
-is an HTTP request header which allows servers and networks to identify the
+is an HTTP request header that allows servers and networks to identify the
 application, operating system (OS), vendor, and / or version of a user agent.
 Historically, the `User-Agent` was shared on every HTTP request and exposed in
 JavaScript.
@@ -46,7 +46,7 @@ JavaScript.
 ### User-Agent Client Hints (UA-CH)
 
 [User-Agent Client Hints](https://wicg.github.io/ua-client-hints/) allow access
-to the full set of user-agent data, but only when servers actively declare an
+to the full set of User-Agent data, but only when servers actively declare an
 explicit need for specific pieces of data.
 
 By removing passively exposed user data, we better measure and reduce the
@@ -55,7 +55,7 @@ JavaScript APIs, and other mechanisms.
 
 ## Why do we need reduced UA and UA-CH?
 
-Historically, the User-Agent string broadcast a large string of data about a
+Historically, the User-Agent string would broadcast a large string of data about a
 user's browser, operating system, and version with every HTTP request. This was
 problematic for two reasons:
 
@@ -162,7 +162,7 @@ Or the equivalent JavaScript interface:
 - Tablet pattern: `navigator.userAgentData.platform === 'Android' && navigator.userAgentData.mobile === false`
 
 For hardware-specific use cases, the device model name can be requested via
-the high entropy `Sec-CH-UA-Model` hint.
+the high-entropy `Sec-CH-UA-Model` hint.
 
 ## How do I use and test reduced UA? {: #prepare-and-test}
 
@@ -199,16 +199,14 @@ There are a couple of methods to test the reduced User-Agent locally:
       {% Img src="image/admin/9FiBHFCzfPgP8sy6LMx7.png", alt="", width="30", height="32" %}
       **Toggle Device Toolbar** to open the DevTools UI to emulate a device.
 * Launch Chrome with the `--user-agent="Custom string here"`.
-    * Use this [command line
-      flag](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
-      to run Chrome with a custom user-agent string.
+    * Use this command-line flag to run Chrome with a custom User-Agent string. More on [command-line flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags) here.
 
 ### Transform the string in your site's code
 
 If you process the existing Chrome `user-agent` string in your client-side or
 server-side code, you can transform that string to the new format to test
 compatibility. You can test by either overriding and replacing the string, or
-generating the new version and test side-by-side.
+generating the new version and test side by side.
 
 Review these [User-Agent reduction
 snippets](/docs/privacy-sandbox/user-agent/snippets/) for example regular
@@ -218,11 +216,11 @@ expressions.
 
 There are three [default Client Hints](https://web.dev/migrate-to-ua-ch/#are-you-only-using-basic-user-agent-data)
 returned to the server, including browser name and major version, a boolean
-which indicates if the browser is on a mobile device, and the operating system
+that indicates if the browser is on a mobile device, and the operating system
 name. These are sent after the Transport Layer Security protocol (TLS) handshake. These are already available and
 supported in your browser.
 
-However, there may be some times when you need to retrieve critical information
+However, there may be times when you need to retrieve critical information
 for your site to render.
 
 ### Optimize critical hints
@@ -270,7 +268,7 @@ If you need to use critical hints, refer to our guide on
 ### How long will hints specified via the `Accept-CH` header be sent?
 
 Hints specified via the `Accept-CH` header will be sent for the duration of the
-browser session or until a different set of hints are specified.
+browser session or until a different set of hints is specified.
 
 ### Does UA-CH work with HTTP/2 and HTTP/3?
 
@@ -280,7 +278,7 @@ UA-CH works with both HTTP/2 and HTTP/3 connections.
 Client Hints are only sent over secure connections, so make sure your uses HTTPS.
 {% endAside %}
 
-### Do subdomains (and CNAMEs) require a top-level page `Permissions-Policy` to access high entropy UA-CH?
+### Do subdomains (and CNAMEs) require a top-level page `Permissions-Policy` to access high-entropy UA-CH?
 
 High-entropy UA-CH on request headers are restricted on cross-origin requests
 regardless of how that origin is defined on the DNS side. Delegation must be
@@ -289,18 +287,18 @@ via JavaScript that executes in the cross-origin context.
 
 ### How does User-Agent reduction affect bot detection?
 
-Chrome's change to its user-agent string does not directly impact the
-user-agent string that a bot chooses to send.
+Chrome's change to its User-Agent string does not directly impact the
+User-Agent string that a bot chooses to send.
 
 Bots may choose to update their own strings to reflect the reduced
 information Chrome sends, but that is entirely their implementation
-choice. Chrome is still sending the same user-agent format, and bots
-that append their own identifier to the end of a Chrome user-agent
+choice. Chrome is still sending the same User-Agent format, and bots
+that append their own identifier to the end of a Chrome User-Agent
 string can continue to do so.
 
 For any concerns with specific bots, it may be worth reaching out
 directly to the owners to ask if they have any plans to change their
-user-agent string.
+User-Agent string.
 
 ## Engage and share feedback
 
@@ -318,6 +316,6 @@ user-agent string.
 *  [Migrate from UA string to UA-CH](https://web.dev/migrate-to-ua-ch/): a
    tutorial for web developers
 *  [User-Agent snippets](/docs/privacy-sandbox/user-agent/snippets/): code
-  snippets to transform the current user-agent string to the reduced format for
+  snippets to transform the current User-Agent string to the reduced format for
   testing
 *  [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
