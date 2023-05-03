@@ -12,7 +12,7 @@ This guide explains how to add custom interactivity to Custom Tabs.
 
 ## Enable the default share action 
 
-If you don't provide a custom share action, it is a good idea to enable the browser's default share action in the overflow menu, to make it easier for users to share a link to the content they are seeing:
+If you don't provide a custom share action, it is a good idea to enable the browser's default share action in the overflow menu to make it easier for users to share a link to the content they are seeing:
 
 ```java
     CustomTabsIntent.Builder intentBuilder = new CustomTabsIntent.Builder();
