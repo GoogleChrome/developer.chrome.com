@@ -60,6 +60,8 @@ This event gives developers clarity on when a scroll has completed (including bo
 
 An API that can be used to build transient user interface (UI) elements that are displayed on top of all other web app UI. These include user-interactive elements like action menus, form element suggestions, content pickers, and teaching UI. This API uses a new `popover` content attribute to enable any element to be displayed in the top layer. This is similar to the `<dialog>` element, but has several important differences, including light-dismiss behavior, popover interaction management, and event support, and the lack of a "modal" mode.
 
+[Learn more about the Popover API](https://developer.mozilla.org/docs/Web/API/Popover_API).
+
 ### Web Bluetooth `exclusionFilters` option in `requestDevice()`
 
 The [`exclusionFilters`](/articles/bluetooth/#exclusion-filters) option in `navigator.bluetooth.requestDevice()` allows web developers to exclude some devices from the browser picker. It can be used to exclude devices that match a broader filter but are unsupported.
