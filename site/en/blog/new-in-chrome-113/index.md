@@ -14,7 +14,7 @@ tags:
   - chrome-113
 ---
 
-{% YouTube id='KGMe4OyXYEc' %}
+{% YouTube id='o6V1Le8GS7s' %}
 
 Here's what you need to know:
 
