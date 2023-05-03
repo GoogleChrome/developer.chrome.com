@@ -696,20 +696,20 @@ redirects:
 
 # Redirects from old to new Extensions migration guide
 
-- from: /docs/extenions/mv3/mv3-migration/
-  to: /docs/extenions/migrating/
+- from: /docs/extensions/mv3/mv3-migration/
+  to: /docs/extensions/migrating/
 
-- from: /docs/extenions/mv3/mv3-migration-checklist/
-  to: /docs/extenions/migrating/checklist/
+- from: /docs/extensions/mv3/mv3-migration-checklist/
+  to: /docs/extensions/migrating/checklist/
 
-- from: /docs/extenions/mv3/migrating_to_service_workers/
-  to: /docs/extenions/migrating/to-service-workers/
+- from: /docs/extensions/mv3/migrating_to_service_workers/
+  to: /docs/extensions/migrating/to-service-workers/
 
-- from: /docs/extenions/mv3/mv2-sunset/
-  to: /docs/extenions/migrating/mv2-sunset/
+- from: /docs/extensions/mv3/mv2-sunset/
+  to: /docs/extensions/migrating/mv2-sunset/
 
-- from: /docs/extenions/mv3/known-issues/
-  to: /docs/extenions/migrating/known-issues/
+- from: /docs/extensions/mv3/known-issues/
+  to: /docs/extensions/migrating/known-issues/
 
 # DO NOT REMOVE. This seems pointless but we rewrite "." to "_" inside our server's code, so if the
 # URL is fine for all but incorrect syntax, we'll fix it up.
