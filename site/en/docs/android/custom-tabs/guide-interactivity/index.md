@@ -113,7 +113,7 @@ The bottom toolbar is a very flexible way to add more functionality to a custom 
 
 By passing a [`RemoteViews`](https://developer.android.com/reference/android/widget/RemoteViews?cmdf=android+remoteviews) object to [CustomTabIntent.Builder.setSecondaryToolbarViews()](https://developer.android.com/reference/android/support/customtabs/CustomTabsIntent.Builder.html#setSecondaryToolbarViews(android.widget.RemoteViews,%20int[],%20android.app.PendingIntent)), the bottom toolbar can be fully customized and dynamically updated.
 
-First, declare a toolbar layout by creating a new layout file `res/layout/custom_tab_toolbar.xml`:
+First, declare a toolbar layout by creating a new layout file, `res/layout/custom_tab_toolbar.xml`:
 
 ```xml
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
