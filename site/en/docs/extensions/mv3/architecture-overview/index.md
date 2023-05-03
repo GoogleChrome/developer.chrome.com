@@ -67,7 +67,7 @@ An extension can have different HTML pages depending on the design. All extensio
 : The options page (`options.html`) provides a way for users to customize an extension, such as choosing which sites the extension will run on. Users can access the options page in several ways as described in [Finding the options page][doc-options-view].
 
 [Side panels][api-sidepanel]
-: Extensions can also use side panels (`sidepanel.html`) to provide additional functionality alongside the main content of a site. Users can open side panels by navigating to Chrome’s built-in sidebar menu or by clicking the extension toolbar icon. Side panels can be displayed only on specific sites.
+: Extensions can also provide UI to appear in the side panel (`sidepanel.html`) to provide additional functionality alongside the main content of a site. Users can open these by opening the side panel in Chrome or by clicking the extension toolbar icon. Side panels can be configured to only be displayed on specific sites.
 
 Other extension HTML pages include [Chrome override pages][doc-override], [sandbox pages][doc-sandbox] or any custom page included for a specific purpose like onboarding the user.
 

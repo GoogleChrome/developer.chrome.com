@@ -9,7 +9,7 @@ Chrome features a built-in side panel that enables users to view more informatio
 - The side panel remains open when navigating between tabs (if set to do so).
 - It can be available only on specific websites.
 - As an extension page, side panels have access to all Chrome APIs.
-- Users can choose which side to display the panel under Chrome settings.
+- Users can choose which side to display the panel on within Chrome's settings.
 
 ## Manifest {: #manifest }
 
@@ -33,7 +33,7 @@ The following sections demonstrate some common use cases for the Side Panel API.
 
 ### Display the same side panel on every site {: #every-site }
 
-The side panel can be set initially from the `“default_path”` property in the `“side_panel”` key of the manifest to display the same side panel on every site. This should point to a relative path within the extension directory.
+The side panel can be set initially from the `"default_path"` property in the `"side_panel"` key of the manifest to display the same side panel on every site. This should point to a relative path within the extension directory.
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -65,7 +65,7 @@ The side panel can be set initially from the `“default_path”` property in th
 
 ### Enable a side panel on a specific site {: #by-site }
 
-An extension can use [`sidepanel.setOptions()`][sidepanel-setoptions] to enable a side panel on a specific site. This example uses [`chrome.tabs.onUpdated()`][tabs-onupdated] to listen for any updates made to the tab. It checks if the URL is [www.google.com](https://www.google.com) and enables the side panel. Otherwise, it disables it. 
+An extension can use [`sidepanel.setOptions()`][sidepanel-setoptions] to enable a side panel on a specific tab. This example uses [`chrome.tabs.onUpdated()`][tabs-onupdated] to listen for any updates made to the tab. It checks if the URL is [www.google.com](https://www.google.com) and enables the side panel. Otherwise, it disables it. 
 
 {% Label %}service-worker.js:{% endLabel %}
 
@@ -92,9 +92,11 @@ chrome.tabs.onUpdated.addListener((tabId, info, tab) => {
 });
 ```
 
-When the user navigates to a site where the side panel is not enabled, the side panel will close and not be available on the side panel drop-down menu.
+When a user temporarily switches to a tab where the side panel is not enabled, the side panel will be hidden. It will automatically show again when the user switches to a tab where it was previously open.
 
-For a complete example, see the[Tab-specific side panel][sample-sp-google] sample. 
+When the user navigates to a site where the side panel is not enabled, the side panel will close and the extension will not show in the side panel drop-down menu.
+
+For a complete example, see the [Tab-specific side panel][sample-sp-google] sample. 
 
 ### Enable the action icon to open the side panel {: #open-action-icon } 
 
