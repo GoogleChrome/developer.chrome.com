@@ -2,6 +2,10 @@
 api: sidePanel
 ---
 
+{% Aside 'important' %}
+The Side Panel API will launch on [Chrome 114](https://chromiumdash.appspot.com/schedule), available in stable in late May 2023
+{% endAside %}
+
 ## Overview {: #overview }
 
 Chrome features a built-in side panel that enables users to view more information alongside the main content of a webpage. The Side Panel API allows extensions to display their own UI in the side panel. 
