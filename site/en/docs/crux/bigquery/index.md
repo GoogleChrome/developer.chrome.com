@@ -104,7 +104,7 @@ The raw tables for each country and the `all` dataset have the following schema:
     - permission
         - notifications
     - time_to_first_byte
-    - responsiveness
+    - interaction_to_next_paint
     - popularity
 
 ## Materialized table schema {: #schema-materialized }

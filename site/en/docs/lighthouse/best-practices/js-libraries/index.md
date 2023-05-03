@@ -17,10 +17,6 @@ updated: 2019-08-28
 
 This audit simply lists all the front-end JavaScript libraries your page uses.
 
-Lighthouse also reports
-[front-end JavaScript libraries with known security risks](/docs/lighthouse/best-practices/no-vulnerable-libraries).
-Make sure to update any insecure libraries.
-
 ## Resources
 
 [Source code for **Detected JavaScript libraries** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/dobetterweb/js-libraries.js)

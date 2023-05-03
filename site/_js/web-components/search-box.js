@@ -96,6 +96,7 @@ export class SearchBox extends BaseElement {
   }
 
   clearSearch() {
+    this.input.blur();
     this.active = false;
     this.input.value = '';
     this.search('');
