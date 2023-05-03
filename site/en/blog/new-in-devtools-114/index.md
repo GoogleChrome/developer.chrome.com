@@ -25,7 +25,7 @@ tags:
 
 ## WebAssembly debugging {: #wasm }
 
-DevTools enables {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Experiments** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **WebAssembly Debugging: Enable DWARF support** by default. For more information, see [Debugging WebAssembly with modern tools](https://developer.chrome.com/blog/wasm-debugging-2020/).
+DevTools enables {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Experiments** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **WebAssembly Debugging: Enable DWARF support** by default. For more information, see [Debugging WebAssembly with modern tools](/blog/wasm-debugging-2020/).
 
 This experiment lets you pause execution and debug C and C++ code in Wasm apps, with all the debugging information available to you:
 
