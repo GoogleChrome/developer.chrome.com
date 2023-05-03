@@ -20,6 +20,7 @@
 
 const authorsData = require('../_data/authorsData.json');
 const site = require('../_data/site.json');
+const {i18n} = require('../_filters/i18n');
 
 // There is an author 'example' used for example, demo and testing
 // content, which should not get a author-individual.njk page rendered
@@ -54,6 +55,15 @@ module.exports = collections => {
           authors[authorId].glitch = authorsData[authorId].glitch;
           authors[authorId].mastodon = authorsData[authorId].mastodon;
           authors[authorId].linkedin = authorsData[authorId].linkedin;
+          authors[authorId].webdev = authorsData[authorId].webdev;
+
+          try {
+            authors[authorId].bio = i18n(`i18n.authors.${authorId}.bio`);
+          } catch (err) {
+            // There are some authors which has no bio key.
+            // Thus, return an empty string in the case of no i18n result.
+            authors[authorId].bio = '';
+          }
 
           const element = {
             title: item.data.title,

@@ -8,62 +8,98 @@
 {% endblock %}
 
 {% block content %}
-<div class="gap-top-300 lg:gap-top-400 pad-left-400 pad-right-400">
-  <div class="center-margin project-hero text-align-center">
-    {% Img
-      src=paged.image,
-      alt=paged.title | i18n(locale),
-      height="192",
-      width="192",
-      class="rounded-full display-inline-block",
-      sizes="(min-width: 481px) 192px, 128px",
-      options={minWidth: 128},
-      fetchpriority="high"
-    %}
-    <h1 class="lg:gap-top-400 type--h4">{{ paged.title | i18n(locale) }}</h1>
-    <p class="type gap-top-300">{{ paged.description | i18n(locale) }}</p>
+<div class="author gap-top-300 lg:gap-top-400 pad-left-500 pad-right-500">
+  <div class="switcher gap-top-600 gap-bottom-600">
+    <div class="author-hero">
+      <div class="switcher align-center">
+        {% if paged.image %}
+          {% Img
+            src=paged.image,
+            alt=paged.title | i18n(locale),
+            height="192",
+            width="192",
+            class="rounded-full display-inline-block avatar",
+            sizes="192px, 128px",
+            fetchpriority="high"
+          %}
+        {% endif %}
+        <div class="flow">
+          <h1 class="type--h4">{{ paged.title | i18n(locale) }}</h1>
+          <p class="type gap-top-200">{{ paged.description | i18n(locale) | md | safe }}</p>
+        </div>
+      </div>
 
-    <div class="pad-top-300 pad-bottom-600 pad-left-400 pad-right-400 lg:pad-left-0 lg:pad-right-0">
-      <div class="display-flex direction-column align-center">
-        <div class="display-flex color-secondary-text gap-top-300 lg:gap-top-0">
+      <div class="lg:pad-top-600 lg:pad-bottom-600 pad-top-300 pad-bottom-300 display-flex direction-column">
+        <div class="display-flex gap-top-400 md:gap-bottom-200 gap-bottom-500 lg:gap-top-0 author-hero__social">
           {% if paged.homepage %}
-            <a rel="me" href="{{ paged.homepage }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="{{ 'i18n.common.website' | i18n(locale) }}">
+            <a rel="me" href="{{ paged.homepage }}" aria-label="{{ 'i18n.common.website' | i18n(locale) }}" target="_blank" class="color-secondary-text social-icon">
               {{ icon('world', {hidden: true}) }}
             </a>
           {% endif %}
-          {% if paged.twitter %}
-            <a rel="me" href="https://twitter.com/{{ paged.twitter }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="Twitter">
-              {{ icon('twitter', {hidden: true}) }}
+          {% if paged.linkedin  %}
+            <a rel="me" href="https://www.linkedin.com/in/{{ paged.linkedin }}" target="_blank" class="color-secondary-text social-icon" aria-label="LinkedIn">
+              {{ icon('linkedin', {hidden: true}) }}
+            </a>
+          {% endif %}
+          {% if paged.mastodon  %}
+            <a rel="me" href="{{ paged.mastodon }}" target="_blank" class="color-secondary-text social-icon" aria-label="Mastodon">
+              {{ icon('mastodon', {hidden: true}) }}
+            </a>
+          {% endif %}
+          {% if paged.webdev  %}
+            <a rel="me" href="https://web.dev/authors/{{ paged.webdev }}" target="_blank" class="color-secondary-text social-icon" aria-label="Webdev" target="_blank">
+              {{ icon('webdev', {hidden: true}) }}
             </a>
           {% endif %}
           {% if paged.github %}
-            <a rel="me" href="https://github.com/{{ paged.github }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="GitHub">
+            <a rel="me" href="https://github.com/{{ paged.github }}" target="_blank" class="color-secondary-text social-icon" aria-label="GitHub">
               {{ icon('github', {hidden: true}) }}
             </a>
           {% endif %}
           {% if paged.glitch  %}
-            <a rel="me" href="https://glitch.com/@{{ paged.glitch }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="Glitch">
+            <a rel="me" href="https://glitch.com/@{{ paged.glitch }}" target="_blank" class="color-secondary-text social-icon" aria-label="Glitch">
               {{ icon('glitch', {hidden: true}) }}
             </a>
           {% endif %}
-          {% if paged.mastodon  %}
-            <a rel="me" href="{{ paged.mastodon }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="Mastodon">
-              {{ icon('mastodon', {hidden: true}) }}
-            </a>
-          {% endif %}
-          {% if paged.linkedin  %}
-            <a rel="me" href="https://www.linkedin.com/in/{{ paged.linkedin }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="LinkedIn">
-              {{ icon('linkedin', {hidden: true}) }}
+          {% if paged.twitter %}
+            <a rel="me" href="https://twitter.com/{{ paged.twitter }}" target="_blank" class="color-secondary-text social-icon" aria-label="Twitter">
+              {{ icon('twitter', {hidden: true}) }}
             </a>
           {% endif %}
           {% if paged.rss  %}
-            <a rel="me" href="{{ paged.rss }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="RSS">
+            <a rel="me" href="{{ paged.rss }}" class="color-secondary-text social-icon" aria-label="RSS">
               {{ icon('rss-author', {hidden: true}) }}
             </a>
           {% endif %}
         </div>
+
+        {% macro renderBio(bio) %}
+          {% if bio is string %}
+            <p class="gap-top-300 color-secondary-text">{{ bio }}</p>
+          {% else %}
+            {% for paragraph in bio %}
+              <p class="gap-top-500 color-secondary-text">{{ paragraph }}</p>
+            {% endfor %}
+          {% endif %}
+        {% endmacro %}
+
+        {% if paged.bio %} 
+          {% set bio = paged.bio %}
+          {% if bio %}
+            <div class="author-hero__bio"> {{ renderBio(bio) }} </div>
+
+            {% Details %}
+            {% DetailsSummary %}
+              <p>Bio</p>
+            {% endDetailsSummary %}
+            {{ renderBio(bio) }}
+            {% endDetails %}
+          {% endif %}
+        {% endif %}
       </div>
     </div>
+
+    <div class="author-featured"></div>
   </div>
 
   <div class="measure-1280 width-full center-margin pad-left-400 pad-right-400">
