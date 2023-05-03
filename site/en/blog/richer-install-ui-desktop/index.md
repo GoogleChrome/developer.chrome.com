@@ -17,14 +17,14 @@ Users typically get apps, especially platform apps, through app stores, or throu
 For web apps the model is different: users don’t have to visit a centralized app depot to get a web app, by design, not all web experiences are installable, installing an app can differ between platforms and browsers, browsers even have different menus and surfaces to install the app. Once the user clicks on that install option the default dialog doesn’t include any extra information, as shown below:
 
 <figure>
-{% Img src="image/SeARmcA1EicLXagFnVOe0ou9cqK2/yshUdzH27Gm1Rzdj9s8O.png", alt="The browser default install dialog for desktop.", width="385", height="676" %}
+{% Img src="image/SeARmcA1EicLXagFnVOe0ou9cqK2/y5sNbIN19bPNbqni3xay.png", alt="The browser default install dialog for desktop.", width="556", height="781" %}
  <figcaption>
     Default install dialog on desktop.
   </figcaption>
 </figure>
 
 <figure>
-{% Img src="image/SeARmcA1EicLXagFnVOe0ou9cqK2/y5sNbIN19bPNbqni3xay.png", alt="The  browser default install dialog for mobile.", width="556", height="781" %}
+{% Img src="image/SeARmcA1EicLXagFnVOe0ou9cqK2/yshUdzH27Gm1Rzdj9s8O.png", alt="The  browser default install dialog for mobile.", width="385", height="676" %}
  <figcaption>
     Default install dialog on mobile.
   </figcaption>
@@ -47,7 +47,7 @@ To display the Richer Install UI dialog developers need to add at least one scre
 
 For example developers can use the `description` field to highlight the app’s features that incentivize the user to keep it in their devices. With the `screenshots` they can present the look and feel of the web app as a standalone, with all the easy access that platform apps have.
 
-For a detailed specification and a guide to add them to your app visit the [Richer Install UI pattern].
+For a detailed specification and a guide to add them to your app visit the [Richer Install UI pattern](https://web.dev/patterns/advanced-apps/richer-install-ui/).
 
 The older style of install prompt provided little information and context. This didn't match users' expectations of what installation means and could leave them confused about what happened. Many declined the install request entirely, which was also bad for the businesses that built them.
 
