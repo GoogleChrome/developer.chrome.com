@@ -18,7 +18,7 @@ This guide explains how to measure engagement signals for Chrome Custom tabs. If
 </figure>
 
 {% Aside "caution" %}
-This feature is available in requires `androidx.browser:browser` version `1.6.0-alpha01` or higher.
+This feature requires `androidx.browser:browser:1.6.0-alpha01` or higher.
 
 ```groovy
 dependencies {
