@@ -9,7 +9,7 @@
 
 {% block content %}
 <div class="author gap-top-300 lg:gap-top-400 pad-left-500 pad-right-500">
-  <div class="switcher gap-top-600 gap-bottom-600">
+  <div class="switcher gap-top-600 gap-bottom-800">
     <div class="author-hero">
       <div class="switcher align-center">
         {% if paged.image %}
@@ -99,7 +99,38 @@
       </div>
     </div>
 
-    <div class="author-featured"></div>
+    <div class="author-featured lg:gap-top-0 gap-top-400">
+      {% if paged.featuredPost %}
+        {% set featured = paged.featuredPost %}
+        {% set post = helpers.findByUrl(collections.all, featured.url, 'en') %}
+
+        {% if post %}
+          {% set eyebrowIcon = featured.eyebrowIcon or 'star' %}
+          {% set eyebrowText = featured.eyebrowText or 'Featured' %}
+          {% set thumbnail = featured.thumbnail or post.data.hero %}
+          {% set alt = featured.alt or post.data.alt or '' %}
+          {% set theme = featured.theme or 'quaternary' %}
+
+          <a href="{{ featured.url or post.url }}" class="card bg-{{theme}}">
+            <div class="content">
+              <div class="card__eyebrow flow">
+                {{ icon(eyebrowIcon) }}
+                <span class="color-mid-text">{{ eyebrowText }}</span>
+              </div>
+
+              <div class="card__content flow">
+                <h3 class="type--h4 gap-bottom-300">
+                  {{ featured.title or post.data.title }}
+                </h3>
+                <p class="text-size-1 color-mid-text">{{ featured.summary or post.data.description }}</p>
+              </div>
+            </div>
+
+            {% Img src=thumbnail, alt=alt, width="800", height="450", class="card__hero" %}
+          </a>
+        {% endif %}
+      {% endif %}
+    </div>
   </div>
 
   <div class="measure-1280 width-full center-margin pad-left-400 pad-right-400">

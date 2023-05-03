@@ -56,6 +56,7 @@ module.exports = collections => {
           authors[authorId].mastodon = authorsData[authorId].mastodon;
           authors[authorId].linkedin = authorsData[authorId].linkedin;
           authors[authorId].webdev = authorsData[authorId].webdev;
+          authors[authorId].featuredPost = authorsData[authorId].featuredPost;
 
           try {
             authors[authorId].bio = i18n(`i18n.authors.${authorId}.bio`);
