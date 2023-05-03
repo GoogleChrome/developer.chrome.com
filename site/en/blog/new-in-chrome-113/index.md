@@ -74,7 +74,7 @@ Check out [this article](/blog/new-in-devtools-113/) for instructions on how to 
 
 ## First-Party Sets is rolling out. {: #first-party-sets }
 
-[First-Party Sets (FPS)](https://developer.chrome.com/en/docs/privacy-sandbox/first-party-sets/) is starting to roll out to stable. First Party Sets is part of the [Privacy Sandbox](https://privacysandbox.com/). It is a way for organizations to declare relationships among sites, so that browsers allow limited third-party cookie access for specific purposes.
+[First-Party Sets (FPS)](/docs/privacy-sandbox/first-party-sets/) is starting to roll out to stable. First Party Sets is part of the [Privacy Sandbox](https://privacysandbox.com/). It is a way for organizations to declare relationships among sites, so that browsers allow limited third-party cookie access for specific purposes.
 
 {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/OLx3AXkweLjAiDzoDslb.png", alt="Diagram showing brandx.com, fly-brandx.com and drive-brandx.com as one group and example.com, example.rs, example.co.uk as another group.", width="800", height="348" %}
 
