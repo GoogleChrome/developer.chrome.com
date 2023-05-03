@@ -3,6 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: Events in service workers
 description: Extension service workers respond to both standard service worker events and many events in the extension APIs.
 date: 2023-05-02
+updated: 2023-05-03
 ---
 
 Extension service workers support both [standard service worker](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope#events) events and many events in the [extension APIs](/docs/extensions/reference/). This section describes what's available and provides tips for using them.
@@ -80,10 +81,12 @@ Extension service workers support more than the lifecycle events [described else
 
 ### ServiceWorkerGlobal.fetch {: #fetch }
 
-Fired when anything is retrieved from the extension package or when `fetch()` and `XMLHttpRequest()` are called from a content or popup script. In the latter cases, you will need to add the URLs of the pages you want to fetch to the `"host_permissions"` key in the `manifest.json`.
+Fired when anything is retrieved from the extension package or when `fetch()` and `XMLHttpRequest()` are called from an extension or popup script. In the latter cases, you will need to add the URLs of the pages you want to fetch to the `"host_permissions"` key in the `manifest.json`.
+
+There are a few things to note about this. First, content scripts cannot call `fetch()` since they run in a host page's origin. Also, only use the `fetch()` method for calling web services, static resources, or any use case that doesn't download code. Downloaded code is [not allowed in Manifest V3](/docs/extensions/migrating/improve-security/#remove-remote-code). 
 
 ### ServiceWorkerGlobal.message {: #message }
 
 Service worker message passing is available in addition to extension [messaging passing](/docs/extensions/mv3/messaging/), but the two systems are not interoperable. That means that messages sent using `sendMessage()` (which is available from several extension APIs) aren't intercepted by service worker message handlers. Likewise, messages sent using `postMessage()` aren't intercepted by extension message handlers. Both types of message handlers—meaning both `ServiceWorkerGlobal.message` and `chrome.runtime.onMessage`—are supported in extension service workers.
 
-Extension service workers cannot send messages to popup or content scripts using `postMessage()`. You should prefer [extension messaging](/docs/extensions/mv3/messaging/) unless you have a specific reason for using service worker messaging.
+You should prefer [extension messaging](/docs/extensions/mv3/messaging/) unless you have a specific reason for using service worker messaging.
