@@ -8,7 +8,7 @@ authors:
   - sebastianbenz
 ---
 
-One advantage of Custom Tabs is that it can be seamlessly integrated into your app. In this part of the Custom Tabs guide, you will learn how to change the appearance and behavior of a Custom Tab to match your app.
+One advantage of Custom Tabs is that they can be seamlessly integrated into your app. In this part of the Custom Tabs guide, you will learn how to change the appearance and behavior of a Custom Tab to match your app.
 
 ## Set the color of the toolbar
 
@@ -48,13 +48,13 @@ CustomTabsIntent intent = new CustomTabsIntent.Builder()
 The toolbar now has custom background and foreground colors.
 
 {% Aside 'gotchas' %}
-The Custom Tab protocol does [not support changing the color of the status bar](https://b.corp.google.com/issues/37083468).
+The Custom Tab protocol [does not support changing the color of the status bar](https://b.corp.google.com/issues/37083468).
 {% endAside %}
 
 ## Configure custom enter and exit animation
 
 {% Video src="video/6hHqS5auVgWhN0cQNQztaJx5w4M2/GzQ4Bl5U3ssDtS8W6C7G.mp4", width="320", height="692", controls="true", class="screenshot screenshot--filled" %}
-Next, you can make launching (and leaving) a Custom Tab experience in your app more seamless, by defining  custom start and exit animations using <code>[setStartAnimation](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#setStartAnimations(android.content.Context,int,int))</code> and <code>[setExitAnimation](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#setExitAnimations(android.content.Context,int,int))</code>:
+Next, you can make launching (and leaving) a Custom Tab experience in your app more seamless, by defining custom start and exit animations using <code>[setStartAnimation](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#setStartAnimations(android.content.Context,int,int))</code> and <code>[setExitAnimation](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#setExitAnimations(android.content.Context,int,int))</code>:
 
 ```java
 CustomTabsIntent intent = new CustomTabsIntent.Builder()
@@ -86,7 +86,7 @@ CustomTabsIntent intent = new CustomTabsIntent.Builder()
   .build();
 ```
 
-## Optional: setting a custom referrer
+## Setting a custom referrer
 
 You can set your app as the referrer when launching your Custom Tab. This way you can let websites know where their traffic is coming from.
 

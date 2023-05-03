@@ -23,7 +23,7 @@ Checkout the [Android Custom Tab Sample app on Github](https://github.com/Google
 
 ## Open a link in a custom tab
 
-With the browser helper library installed, you can use the [`CustomTabsIntent.Builder`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder) to create a [`CustomTabsIntent`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent) and launch the Custom Tab by calling [`launchUrl()`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent#launchUrl(android.content.Context,android.net.Uri)) and passing an [Uri](https://developer.android.com/reference/android/net/Uri):
+With the `androidx.browser/browser` library  installed, you can use the [`CustomTabsIntent.Builder`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder) to create a [`CustomTabsIntent`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent) and launch the Custom Tab by calling [`launchUrl()`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent#launchUrl(android.content.Context,android.net.Uri)) and passing an [Uri](https://developer.android.com/reference/android/net/Uri):
 
 ```java
 String url = "https://developers.android.com";
@@ -37,7 +37,7 @@ This will open a fullscreen Custom Tab activity as seen on the following screens
 {% Img src="image/6hHqS5auVgWhN0cQNQztaJx5w4M2/slw7FNNob6P1zwEkJMZa.png", alt="The default Custom Tabs experience.", width="400", height="866", class="screenshot screenshot--filled" %}
 
 {% Aside 'gotchas' %}
-What happens if the user's default browser does not support Custom Tabs? Custom Tabs are supported by most Android browsers, but if no browser that supports Custom Tabs is installed, the `CustomTabIntent` will open the user's default browser instead. This works, as the `CustomTabsIntent` uses the [`ACTION\_VIEW` Intent](https://developer.android.com/reference/android/content/Intent#ACTION_VIEW) with key Extras to customize the UI.
+What happens if the user's default browser does not support Custom Tabs? Custom Tabs are supported by most Android browsers, but if no browser that supports Custom Tabs is installed, the `CustomTabIntent` will open the user's default browser instead. This works, as the `CustomTabsIntent` uses the [`ACTION\_VIEW` Intent](https://developer.android.com/reference/android/content/Intent#ACTION_VIEW) with `Extras` key to customize the UI.
 {% endAside %}
 
-Next up: [learn how to customize the look and feel of your Custom Tab.](/docs/android/custom-tabs/guide-customization/).
+Next up: [learn how to customize the look and feel of your Custom Tab.](/docs/android/custom-tabs/guide-ui-customization/).

@@ -8,11 +8,11 @@ authors:
   - sebastianbenz
 ---
 
-Now that we’ve customized the look and feel of your Custom Tabs, let’s focus in the second part of this tutorial on adding custom interactivity to Custom Tabs.
+This guide explains how to add custom interactivity to Custom Tabs.
 
 ## Enable the default share action 
 
-If you don't provide a custom share action, it is a good idea to enable the Share Action in the overflow menu, to enable users to share a link to the content they are seeing:
+If you don't provide a custom share action, it is a good idea to enable the browser's default share action in the overflow menu, to make it easier for users to share a link to the content they are seeing:
 
 ```java
     CustomTabsIntent.Builder intentBuilder = new CustomTabsIntent.Builder();
@@ -21,11 +21,11 @@ If you don't provide a custom share action, it is a good idea to enable the Shar
 
 ## Add a custom action button 
 
-For a prominent action, the Custom Tab toolbar lets you integrate a custom action button, which can either have a custom icon. The icon should be 24dp in height and 24-48 dp in width. 
+For important actions, the Custom Tab toolbar lets you integrate a custom action button, which can either have a text label or a custom icon. The icon should be 24dp in height and 24-48 dp in width. 
 
 {% Img src="image/6hHqS5auVgWhN0cQNQztaJx5w4M2/tYLvVrgICxyrpXlkzqkZ.png", alt="Custom Tab with a custom share action", width="400", height="866", class="screenshot screenshot--filled" %}
 
-For example, you can add a custom share action to the toolbar. To do this, create a [BroadcastReceiver](https://developer.android.com/guide/components/broadcasts#receiving-broadcasts) which gets called when the user clicks on the share action in the Custom Tab. 
+For example, you can add a custom share action to the toolbar. To do this, create a [`BroadcastReceiver`](https://developer.android.com/guide/components/broadcasts#receiving-broadcasts) which gets called when the user clicks on the share action in the Custom Tab. 
 
 Register the `BroadCastReceiver` in the `AndroidManifest.xml` file:
 
@@ -81,8 +81,8 @@ You can access your custom actions via the three dot menu in the top right corne
 
 {% Img src="image/6hHqS5auVgWhN0cQNQztaJx5w4M2/3WXYfUUMRMqzNwgIT1Ao.png", alt="Custom Tab with five custom menu items.", width="320", height="693", class="screenshot screenshot--filled" %}
 
+To add a menu item, call [`CustomTabsIntent.Builder#addMenuItem`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#addMenuItem(java.lang.String,android.app.PendingIntent)) with title and a [`PendingIntent`](https://developer.android.com/reference/android/app/PendingIntent). When the user taps on a menu item, the browser will fire the `PendingIntent`.
 
-A menu item is added by calling [CustomTabsIntent.Builder#addMenuItem](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#addMenuItem(java.lang.String,android.app.PendingIntent)) with title and a [PendingIntent](https://developer.android.com/reference/android/app/PendingIntent) that browser will call on your behalf when the user taps the item are passed as parameters.
 
 ```java
 CustomTabsIntent intent = new CustomTabsIntent.Builder()
@@ -113,7 +113,7 @@ The bottom toolbar is a very flexible way to add more functionality to a custom 
 
 By passing a [`RemoteViews`](https://developer.android.com/reference/android/widget/RemoteViews?cmdf=android+remoteviews) object to [CustomTabIntent.Builder.setSecondaryToolbarViews()](https://developer.android.com/reference/android/support/customtabs/CustomTabsIntent.Builder.html#setSecondaryToolbarViews(android.widget.RemoteViews,%20int[],%20android.app.PendingIntent)), the bottom toolbar can be fully customized and dynamically updated.
 
-First we need to declare our toolbar layout. Create a new layout file `res/layout/custom_tab_toolbar.xml`:
+First, declare a toolbar layout by creating a new layout file `res/layout/custom_tab_toolbar.xml`:
 
 ```xml
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -143,7 +143,7 @@ First we need to declare our toolbar layout. Create a new layout file `res/layou
 ```
 
 {% Aside 'gotchas' %}
-The Custom Tab color scheme does not apply here, you need to manually style the toolbar. If your app provides a light and a dark scheme, you need to configure two different toolbars, one for each color scheme.
+The [Custom Tab's color scheme](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder?cmdf=custom%20tabs%20intent%20builder#setDefaultColorSchemeParams(androidx.browser.customtabs.CustomTabColorSchemeParams)) does not apply here. You need to manually style the toolbar. If your app provides a light and a dark scheme, you need to configure two different toolbars, one for each color scheme.
 {% endAside %}
 
 The next step is to register a [`BroadcastReceiver`](https://developer.android.com/guide/components/broadcasts#receiving-broadcasts), which handles toolbar interactions, in the `AndroidManifest.xml` file:
@@ -194,4 +194,4 @@ CustomTabsIntent intent = new CustomTabsIntent.Builder()
 ```
 
 
-Next up: [Learn how to speed up loading web content in a Custom Tab](/docs/android/custom-tabs/warmup-prefetch/).
+Next up: [Learn how to speed up loading web content in a Custom Tab](/docs/android/custom-tabs/guide-warmup-prefetch/).

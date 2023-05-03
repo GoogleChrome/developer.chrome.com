@@ -11,7 +11,7 @@ authors:
 {% Video src="video/6hHqS5auVgWhN0cQNQztaJx5w4M2/m3WWGlZ2fFVZLgYjX9QV.mp4", controls="true", width="400", height="866", class="screenshot screenshot--filled" %}
 
 {% Aside "caution" %}
-This feature requires the latest version of Chrome. You also need to install the latest alpha version of the `androidx.browser/browser` library:
+This feature requires `androidx.browser/browser version 1.6.0-alpha01 or higher.
 
 ```groovy
 dependencies {
@@ -21,14 +21,14 @@ dependencies {
 ```
 {% endAside %}
 
-Custom Tabs support two ways to measure user engagement: 
+Custom Tabs provide two different callbacks for measuring user engagement: 
 
 * [`CustomTabsCallback`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsCallback) for tracking basic navigation events, such as `"NAVIGATION_STARTED"` or `"NAVIGATION_FINISHED"`.
 * [`EngagementSignalsCallback`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsCallback) for tracking page specific user engagement, such as scroll direction or scroll percentage.
 
 Both require an active [`CustomTabsServiceConnection`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsServiceConnection). See the [previous `CustomTabsService` guide](/docs/android/custom-tabs/guide-warmup-prefetch/) for details on how to connect to a `CustomTabsService`.
 
-First you need to create a `CustomTabsCallback` and an `EngagementSignalsCallback`. The `CustomTabsCallback` receives a `navigationEvent` constant describing which kind of navigation happened:
+To measure user engagement, first create a `CustomTabsCallback` and an `EngagementSignalsCallback` instance. The `CustomTabsCallback` receives a `navigationEvent` constant describing which kind of navigation happened:
 
 ```java
 private CustomTabsCallback mCustomTabsCallback = new CustomTabsCallback() {
@@ -67,7 +67,7 @@ The `EngagementSignalsCallback` supports three different callbacks:
 
 `onVerticalScrollEvent()`
 : Called every time the user changes the scroll direction, where `isDirectionUp` (the first argument) indicates the direction.
-1. `onGreatestScrollPercentageIncreased`: the Custom Tab fires the current scroll depth in 5% intervals whenever the user stop scrolling. The value is reset with every new navigation. 
+1. `onGreatestScrollPercentageIncreased`: the Custom Tab signals scroll depth in 5% intervals up to 100% when the user has reached the bottom of the page. The callback is only invoked once the user stops scrolling. The value is reset to 0% with every new navigation. 
 1. `onSessionEnded`: the Custom Tab fires this event when it stops sending engagement signals (for example, after the user has closed the Custom Tab). `didUserInteract` will be true if the user interacted with the page in any way (scrolling, button click, etc.).
 
 ```java
@@ -93,7 +93,7 @@ private EngagementSignalsCallback mEngagementSignalsCallback = new EngagementSig
 ```
 
 {% Aside "important" %}
-For the `onGreatestScrollPercentageIncreased` event to reset, a new navigation needs to happen on the main frame and to a new document. In other words, scroll depth will **not** be reset for navigations inside a single page application or on navigation to an anchor.
+For the `onGreatestScrollPercentageIncreased` event to reset, a new navigation needs to happen on the main frame to a new document. In other words, scroll depth will **not** be reset for navigations inside a single page application or on navigation to an anchor.
 {% endAside %}
 
 Both `CustomTabsCallback` and `EngagementSignalsCallback` require an active Custom Tab service connection. Once the service is connected, you can create a new `CustomTabsSession` by calling [`CustomTabsClient.newSession()`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsClient#newSession(androidx.browser.customtabs.CustomTabsCallback)) and passing the `CustomTabsCallback`.
@@ -138,6 +138,12 @@ The only thing left to do is binding the `CustomTabsService`:
 
 
 ```java
+@Override
+protected void onStart() {
+    super.onStart();
+    bindCustomTabsService();
+}
+
 private void bindCustomTabsService() {
     String packageName = CustomTabsHelper.getPackageNameToUse(this);
     if (packageName == null) return;

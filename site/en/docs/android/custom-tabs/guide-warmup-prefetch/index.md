@@ -1,16 +1,16 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Warm-up and pre-fetching: using the Custom Tabs Service"
-seoTitle: "Guide: warm-up and pre-fetching - using the Custom Tabs Service"
+title: "Warm-up and pre-fetch: using the Custom Tabs Service"
+seoTitle: "Guide: warm-up and pre-fetch - using the Custom Tabs Service"
 date: 2023-04-21
 description: Learn how to make sure that your Custom Tabs start as quickly as possible.
 authors:
   - sebastianbenz
 ---
 
-The third part of this guide focuses on warming up the browser process via [`warmup()`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsClient#warmup(long)) and prefetching web pages via [`mayLaunchUrl()`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsSession#mayLaunchUrl(android.net.Uri,android.os.Bundle,java.util.List%3Candroid.os.Bundle%3E)). Warming up the browser process can save up to 700ms when opening a link. Pre-rendering content via `mayLaunchUrl()` will make external content open instantly. Together both APIs can greatly improve the user experience of a Custom Tabs integration and are highly recommended.
+The third part of this guide focuses on speeding up the browser startup via [`warmup()`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsClient#warmup(long)) and prefetching web pages via [`mayLaunchUrl`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsSession#mayLaunchUrl(android.net.Uri,android.os.Bundle,java.util.List%3Candroid.os.Bundle%3E))(). Warming up the browser process can save up to 700ms when opening a link. Pre-rendering content via `mayLaunchUrl` will make external content open instantly. Together both APIs can greatly improve the user experience of a Custom Tabs integration and are highly recommended.
 
-The basic steps are:
+The required steps are:
 
 1. Check via [`CustomTabsClient`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsClient).[`getPackageName()`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsClient#getPackageName(android.content.Context,java.util.List%3Cjava.lang.String%3E)) If the default browser supports Custom Tabs. If yes, bind to the CustomTabsService via [`CustomTabsClient.bindCustomTabsService()`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsClient#bindCustomTabsService(android.content.Context,java.lang.String,androidx.browser.customtabs.CustomTabsServiceConnection)).
 2. Once connected to the CustomTabsService, in the [`CustomTabsServiceConnection.onCustomTabsServiceConnected()`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsServiceConnection#onCustomTabsServiceConnected(android.content.ComponentName,androidx.browser.customtabs.CustomTabsClient)) callback, do:
@@ -35,7 +35,8 @@ When targeting API level 30, [`CustomTabsClient`](https://developer.android.com/
 </manifest>
 ```
 
-Here is the full code:
+Here is a full example for how to connect to a Custom Tabs service:
+
 
 ```java
 private CustomTabsClient mClient;
@@ -52,7 +53,7 @@ private CustomTabsServiceConnection mConnection = new CustomTabsServiceConnectio
         mClient.warmup(0 /* placeholder for future use */);
         // Create a new browser session
         mSession = mClient.newSession(new CustomTabsCallback());
-        // Optional: pre-render pages the user is likely to visit
+        // Pre-render pages the user is likely to visit
         // you can do this any time while the service is connected
         mSession.mayLaunchUrl("https://developers.android.com", null, null);
     }
@@ -101,7 +102,7 @@ protected void onCreate(Bundle savedInstanceState) {
 A Custom Tabs service connection might fail while your activity is running. If your app requires an active service connection, there are two strategies to ensure a working service connection:
 
 1. When eagerly connecting to the `CustomTabsService` during `onCreate()`, reconnect to the service  if your activity gets disconnected and the `onServiceDisconnected()` callback gets invoked.
-2. Wait until the user hits a button, establish the service connection and then launch the custom tab.
+2. Wait until the user triggers a Custom Tab, then establish the service connection and launch the custom tab.
 
 {% endAside %}
 

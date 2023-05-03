@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: Resizing with partial Custom Tabs
 seoTitle: "Guide: resize a Custom Tab with Partial Custom Tabs"
 date: 2023-04-21
-description: Learn how to you use partial Custom Tabs for letting your users interact with your app while viewing web content. 
+description: Learn how to you use partial Custom Tabs to let your users interact with your app while viewing web content. 
 authors:
   - sebastianbenz
 ---
@@ -34,8 +34,8 @@ Furthermore, you need to either:
 Combine both approaches if you want to guarantee a fast startup in case the service connection has not been established yet. 
 
 {% Aside 'gotchas' %}
-* Specifying the initial activity height will not have an effect if the default browser does not support resizing the Custom Tab. In this case, the intent extra will be ignored and the Custom Tab will span the complete display height.
-* Custom Tabs will inherit the host app's color scheme for the user interface properties above. You will be responsible for ensuring visual consistency for these properties before launching a Custom Tab. This means the `CustomTabColorScheme.navigationBarColor` and `CustomTabColorScheme.navigationBarDividerColor` properties do not work when building an intent for a partial Custom Tab.
+* Specifying the initial activity height will not have an effect if the default browser does not support partial Custom Tabs. In this case, the intent extra will be ignored and the Custom Tab will span the complete display height.
+* `CustomTabColorScheme.navigationBarColor` and `CustomTabColorScheme.navigationBarDividerColor` properties do not work when building an intent for a partial Custom Tab. This is because they inherit the host app's color scheme for the user interface properties above. You will be responsible for ensuring visual consistency for these properties before launching a Custom Tab.
 {% endAside %}
 
 ## Launch a partial Custom Tab with an existing session
@@ -54,9 +54,7 @@ CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder(customTabsSessi
 customTabsIntent.launchUrl(context, Uri.parse(url))
 ```
 
-
 ## Launch a partial Custom Tab via startActivityForResult
-
 
 ```java
 private ActivityResultLauncher<String> mCustomTabLauncher = registerForActivityResult(new ActivityResultContract<String, Integer>() {
