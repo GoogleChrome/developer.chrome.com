@@ -4,7 +4,16 @@ api: sidePanel
 
 ## Overview {: #overview }
 
-Chrome features a built-in side panel that enables users to view more information alongside the main content of a webpage. The Side Panel API allows extensions to add their own panels to the Chrome browser. Some features include:
+Chrome features a built-in side panel that enables users to view more information alongside the main content of a webpage. The Side Panel API allows extensions to display their own UI in the side panel. 
+
+<figure>
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/2uFG8qxM7cqyMuXWlD9R.png", alt="Side panel drop-down menu", width="291", height="366" %}
+  <figcaption>
+    Chrome browser side panel UI.
+  </figcaption>
+</figure>
+
+Some features include:
 
 - The side panel remains open when navigating between tabs (if set to do so).
 - It can be available only on specific websites.

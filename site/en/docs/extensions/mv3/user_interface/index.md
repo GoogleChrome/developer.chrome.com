@@ -253,9 +253,9 @@ An extension side panel is an HTML file that provides additional functionality a
 </figure>
 
 <figure>
-  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/aC3zkJDPliNLXdvfugeU.png", alt="Dictionary side panel right-clicking on the word extensions", width="800", height="393" %}
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/aC3zkJDPliNLXdvfugeU.png", alt="Dictionary side panel context menu choosing the word extensions", width="800", height="393" %}
   <figcaption>
-    Using the Dictionary extension to define the word "Extensions".
+    Dictionary extension to defining the word "Extensions".
   </figcaption>
 </figure>
 
