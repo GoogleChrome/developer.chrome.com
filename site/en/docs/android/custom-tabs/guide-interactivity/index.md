@@ -23,7 +23,7 @@ If you don't provide a custom share action, it is a good idea to enable the brow
 
 For important actions, the Custom Tab toolbar lets you integrate a custom action button, which can either have a text label or a custom icon. The icon should be 24dp in height and 24-48 dp in width. 
 
-{% Img src="image/6hHqS5auVgWhN0cQNQztaJx5w4M2/tYLvVrgICxyrpXlkzqkZ.png", alt="Custom Tab with a custom share action", width="400", height="866", class="screenshot screenshot--filled" %}
+{% Img src="image/6hHqS5auVgWhN0cQNQztaJx5w4M2/9eJW75CRW22UVx7FYnqs.png", alt="Custom Tab with a custom share action", width="800", height="460", class="screenshot screenshot--filled" %}
 
 For example, you can add a custom share action to the toolbar. To do this, create a [`BroadcastReceiver`](https://developer.android.com/guide/components/broadcasts#receiving-broadcasts) which gets called when the user clicks on the share action in the Custom Tab. 
 
