@@ -10,7 +10,7 @@ description: >
 authors:
   - thomassteiner
 date: 2022-08-31
-updated: 2023-01-12
+updated: 2023-05-03
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/yUp8lfaCt4EmxmVei3lj.jpg
 alt: Filing cabinet symbolizing a database.
 tags:
@@ -19,7 +19,7 @@ tags:
 ---
 
 {% Aside %} This is a living post that will be updated as the deprecation steps outlined below
-happen. {% endAside %}
+happen. The current target version to remove Web SQL is **Chromium&nbsp;119** ({% ChromeDate '119' %}). {% endAside %}
 
 The [Web SQL Database API](https://www.w3.org/TR/webdatabase/), which allows you to store data in a
 structured manner on the user's computer (internally based on the SQLite database engine), was
@@ -63,9 +63,12 @@ and outperforms Web SQL in many cases.
 
 - [📍 We are here.] Web SQL access in **insecure contexts** is no longer available as of
   **Chromium&nbsp;110** ({% ChromeDate '110' %}). An **enterprise policy** to keep using the feature is available from
-  **Chromium&nbsp;110** ({% ChromeDate '110' %}) to **Chromium&nbsp;111** ({% ChromeDate '111' %}).
-- [🔮 In the future.] The final step will be to remove Web SQL completely **in all contexts**, but
-  no date has been set for this step yet.
+  **Chromium&nbsp;110** ({% ChromeDate '110' %}) to **Chromium&nbsp;123** ({% ChromeDate '123' %}).
+- [🔮 In the future.] Web SQL access in **all contexts** is deprecated as of **Chromium&nbsp;115** ({% ChromeDate '115' %})
+  and a warning message is shown in the Chrome DevTools Issue panel.
+- [🔮 In the future.] Web SQL access in **all contexts** is no longer available in **Chromium&nbsp;119** ({% ChromeDate '119' %})
+- [🔮 In the future.] A [deprecation trial](/docs/web-platform/origin-trials/#deprecation-trials) to keep using Web SQL is
+  available from **Chromium&nbsp;118** ({% ChromeDate '118' %}) to **Chromium&nbsp;123** ({% ChromeDate '123' %}).
 
 ## Where to go from here
 
