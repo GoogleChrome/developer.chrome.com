@@ -18,7 +18,7 @@ Unless otherwise noted, changes described below apply to the newest Chrome beta 
 
 ## CSS
 
-This release adds one new CSS feature.
+This release adds two new CSS features.
 
 ### CSS headline balancing
 
@@ -34,8 +34,9 @@ In addition to the `text-wrap` property, the `white-space-collapse` property is 
 
 Learn more in [CSS `text-wrap: balance`](/blog/css-text-wrap-balance/).
 
+### Alias `overflow: overlay` to `overflow: auto`
 
-
+Chrome 114 removes the `overflow: overlay` scrolling mode, and makes `overlay` a legacy alias of `auto`. Using `overflow: overlay` is the same as `overflow: auto`, except that it does not prevent content from extending into the scrollbar gutter, in cases where non-overlay OS scrollbars are present. (If overlay scrollbars are present, there is no effect.)
 
 ## Web APIs
 
@@ -74,16 +75,17 @@ Chrome 114 implements the [WebAssembly extended constant proposal](https://githu
 
 In Chrome 114 you can opt into the following new [origin trials](/docs/web-platform/origin-trials/). 
 
-### Cross App and Web Attribution Measurement
+### Cross App and Web Attribution measurement
 
 Extends the Attribution Reporting API to allow attributing conversions that happen on the web to events that happen off the browser, within other applications. The proposal here takes advantage of OS-level support for attribution. In particular, it gives the developer an option to allow events on the mobile web to be joinable with events in Android’s Privacy Sandbox, although support for other platforms could also be implemented. 
+
+[Register for the Cross App and Web Attribution measurement trial](/origintrials/#/view_trial/151996487423754241)
 
 ### The Background Blur API
 
 The [Background Blur API](/blog/background-blur/) allows web developers to use the native platform's API for camera background segmentation. As background blur has become one of the most used features on video conferencing apps, we want web apps to leverage the same platform APIs without having to rely on ML frameworks like TensorFlow.js, Mediapipe, WASM libraries, or cloud based solutions.
 
 [Register for the Background Blur origin trial](/origintrials/#/register_trial/2228155915641552897).
-
 
 ## Deprecations and removals
 
