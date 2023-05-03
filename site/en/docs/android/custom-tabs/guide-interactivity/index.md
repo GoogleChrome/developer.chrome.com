@@ -81,7 +81,7 @@ You can access your custom actions via the three dot menu in the top right corne
 
 {% Img src="image/6hHqS5auVgWhN0cQNQztaJx5w4M2/3WXYfUUMRMqzNwgIT1Ao.png", alt="Custom Tab with five custom menu items.", width="320", height="693", class="screenshot screenshot--filled" %}
 
-To add a menu item, call [`CustomTabsIntent.Builder#addMenuItem`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#addMenuItem(java.lang.String,android.app.PendingIntent)) with title and a [`PendingIntent`](https://developer.android.com/reference/android/app/PendingIntent). When the user taps on a menu item, the browser will fire the `PendingIntent`.
+To add a menu item, call [`CustomTabsIntent.Builder.addMenuItem()`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#addMenuItem(java.lang.String,android.app.PendingIntent)) with title and a [`PendingIntent`](https://developer.android.com/reference/android/app/PendingIntent). When the user taps on a menu item, the browser will fire the `PendingIntent`.
 
 
 ```java
