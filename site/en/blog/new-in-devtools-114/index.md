@@ -29,13 +29,13 @@ DevTools enables {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI
 
 This experiment lets you pause execution and debug C and C++ code in Wasm apps, with all the debugging information available to you:
 
-- Your original source code, mapped using [DWARF](https://dwarfstd.org/) information.
+- Your original source code, mapped using [DWARF](https://dwarfstd.org/) debugging information.
 - Understandable function names in call stack.
 - Breakpoints support, and more.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/8COHSVU8nn1m9qjHH15z.png", alt="A Wasm application paused in the Debugger.", width="800", height="762" %}
 
-To test Wasm debugging, install the [C/C++ DevTools Support (DWARF)](goo.gle/wasm-debugging-extension) extension and step through the code in the [Mandelbrot demo](https://emscripten-dbg-stories.netlify.app/mandelbrot.html).
+To test Wasm debugging, install the [C/C++ DevTools Support (DWARF) extension](goo.gle/wasm-debugging-extension) and step through the code in the [Mandelbrot demo](https://emscripten-dbg-stories.netlify.app/mandelbrot.html).
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/abb3f72ab0c637a1da69fd663c380333e5b6a003 #}
 
@@ -43,9 +43,9 @@ Chromium issue: [1414289](https://crbug.com/1414289).
 
 ### Improved stepping behavior in Wasm apps {: #wasm-step }
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/FBSJosXk2J6rXbRE0baL.svg", alt="Step over.", width="20", height="20" %} **Step over** in your original code now continues stepping even if the step would cause a pause in disassembly (`.wasm` file). Automatic stepping also ends when it lands outside of the function it started in, for example, after returning from the function.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/FBSJosXk2J6rXbRE0baL.svg", alt="Step over.", width="20", height="20" %} **Step over** in your original code now continues stepping if the step would cause a pause in disassembly (`.wasm` file). Automatic stepping also ends when it lands outside of the function it started in, for example, after returning from the function.
 
-This behavior enabled by default in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Preferences** > **Sources**](/docs/devtools/settings/preferences/#sources).
+This behavior is enabled by default in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Preferences** > **Sources**](/docs/devtools/settings/preferences/#sources).
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/jhEckqLwOGILepWT8QRN.png", alt="The new setting in Preferences > Sources.", width="800", height="516" %}
 
