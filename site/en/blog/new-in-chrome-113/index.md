@@ -88,7 +88,7 @@ Of course there's plenty more.
 
 * The unprefixed [image-set](https://developer.mozilla.org/docs/Web/CSS/image/image-set) type is now available so authors don't need to use `-webkit-image-set` and it is up to date to the current spec.
 * The [`overflow-inline`](https://developer.mozilla.org/docs/Web/CSS/@media/overflow-inline) and [`overflow-block`](https://developer.mozilla.org/docs/Web/CSS/@media/overflow-block) media features are now supported.
-* There is an origin trial for [WebGPU WebCodecs integration](https://developer.chrome.com/origintrials/#/view_trial/1705738358866575361).
+* There is an origin trial for [WebGPU WebCodecs integration](/origintrials/#/view_trial/1705738358866575361).
 
 ## Further reading
 
