@@ -130,7 +130,7 @@ Critical-CH: Device-Memory
 ```
 
 If, after processing the `Accept-CH header`, the client would send a critical
-hint, the client retries the request. <!--  ? -->
+hint, the client retries the request.
 
 In summary, `Accept-CH` requests all values you'd like for the page, while `Critical-CH`
 requests only the subset of values you must have on-load to properly load the
@@ -179,7 +179,7 @@ increasing in complexity.
 
 Scaled availability for User-Agent reduction means the fully reduced UA string
 shipped on all Chrome devices. Reduction is planned to begin with a Chrome
-minor release in Q2 of 2022. <!--  -->
+minor release in Q2 of 2022.
 
 ### Test the string locally {: #test-locally}
 
