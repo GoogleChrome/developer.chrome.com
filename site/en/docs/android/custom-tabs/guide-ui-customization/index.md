@@ -26,7 +26,7 @@ Dark mode
 
 {% endColumns %}
 
-First, customizing the Custom Tab’s address bar to be consistent with your app's theme. The snippet below changes the default toolbar color by setting [setDefaultColorSchemeParams](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder?cmdf=setDefaultColorSchemeParams%20custom%20tabs#setDefaultColorSchemeParams(androidx.browser.customtabs.CustomTabColorSchemeParams)). If your app also supports a dark color scheme, set it via [.setColorSchemeParams(CustomTabsIntent.COLOR_SCHEME_DARK, …)](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#setColorSchemeParams(int,androidx.browser.customtabs.CustomTabColorSchemeParams)).
+First, customizing the Custom Tab’s address bar to be consistent with your app's theme. The snippet below changes the default toolbar color by calling [`setDefaultColorSchemeParams()`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder?cmdf=setDefaultColorSchemeParams%20custom%20tabs#setDefaultColorSchemeParams(androidx.browser.customtabs.CustomTabColorSchemeParams)). If your app also supports a dark color scheme, set it via [`.setColorSchemeParams(CustomTabsIntent.COLOR_SCHEME_DARK, …)`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#setColorSchemeParams(int,androidx.browser.customtabs.CustomTabColorSchemeParams)).
 
 ```java
 // get the current toolbar background color (this might work differently in your app)
@@ -70,9 +70,9 @@ CustomTabsIntent intent = new CustomTabsIntent.Builder()
 
 There are a few more things you can do to adjust the UI of a Custom Tab to your needs.
 
-1. Hide the URL bar on scroll to give the user more space to explore web content using <code>[setUrlBarHidingEnabled](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#setUrlBarHidingEnabled(boolean))(true)</code>
-2. Show the document title instead of the URL via <code>[setShowTitle](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#setShowTitle(boolean))(true)</code>.
-3. Customize the close button to match the user flow in your app, for example, by showing a back arrow instead of the default <code>X</code> icon):   <code>[setCloseButtonIcon](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#setCloseButtonIcon(android.graphics.Bitmap))(myCustomCloseIcon)</code>.
+* Hide the URL bar on scroll to give the user more space to explore web content using <code>[setUrlBarHidingEnabled()](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#setUrlBarHidingEnabled(boolean))(true)</code>
+* Show the document title instead of the URL via <code>[setShowTitle()](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#setShowTitle(boolean))(true)</code>.
+* Customize the close button to match the user flow in your app, for example, by showing a back arrow instead of the default <code>X</code> icon):   <code>[setCloseButtonIcon()](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#setCloseButtonIcon(android.graphics.Bitmap))(myCustomCloseIcon)</code>.
 
 These are all optional, but they can improve the Custom Tab experience in your app.
 

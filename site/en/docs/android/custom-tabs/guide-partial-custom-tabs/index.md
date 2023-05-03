@@ -12,7 +12,7 @@ By default, Custom Tabs launch as a full-window activity. Starting in Chrome 107
 
 {% Img src="image/6AZNJBRnkpQUWTKPzig99lQY8jT2/iMTvWNK7aEqqxHEHEXuv.png", alt="Example Partial Tab", width="320", height="640", class="screenshot screenshot--filled" %}
 
-To turn a Custom Tab into a partial Custom Tab, define the initial launch height in pixels by calling the  CustomTabBuilder’s [setInitialActivityHeightPx](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#setInitialActivityHeightPx(int)) method. By default, the partial Custom Tab is resizable, but you can pass [ACTIVITY\_HEIGHT\_FIXED](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent#ACTIVITY_HEIGHT_FIXED()) to disable this behavior:
+To turn a Custom Tab into a partial Custom Tab, define the initial launch height in pixels by calling the  `CustomTabBuilder` class’s [`setInitialActivityHeightPx()`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#setInitialActivityHeightPx(int)) method. By default, the partial Custom Tab is resizable, but you can pass [`ACTIVITY\_HEIGHT\_FIXED`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent#ACTIVITY_HEIGHT_FIXED()) to disable this behavior:
 
 ```java
 new CustomTabsBuilder().setInitialActivityHeightPx(
@@ -22,14 +22,14 @@ new CustomTabsBuilder().setInitialActivityHeightPx(
 ```
 
 {% Aside 'gotchas' %}
-The minimum partial custom tab height is 50% of the screen height, if the screen height is set to a value less than 50% of the screen height, Chrome automatically adjusts the Custom Tab to 50% of the screen height. 
+The minimum partial custom tab height is 50% of the screen height. If the screen height is set to a value less than 50% of the screen height, Chrome automatically adjusts the Custom Tab to 50% of the screen height. 
 {% endAside %}
 
 Furthermore, you need to either:
 
-1. [start a new browser session via a `CustomTabsServiceConnection`](/docs/android/custom-tabs/integration-guide/#connect-to-the-custom-tabs-service) and pass it to the Custom Tabs intent or
+* [start a new browser session via a `CustomTabsServiceConnection`](/docs/android/custom-tabs/integration-guide/#connect-to-the-custom-tabs-service) and pass it to the Custom Tabs intent or
 
-2. start the Custom Tab activity via [`startActivityForResult`](https://developer.android.com/reference/android/app/Activity#startActivityForResult(android.content.Intent,%20int)).
+* start the Custom Tab activity via [`startActivityForResult()`](https://developer.android.com/reference/android/app/Activity#startActivityForResult(android.content.Intent,%20int)).
 
 Combine both approaches if you want to guarantee a fast startup in case the service connection has not been established yet. 
 
