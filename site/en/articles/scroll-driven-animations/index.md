@@ -406,7 +406,7 @@ img {
 
 {% Aside 'important' %} It is not possible to determine the `<scroller>` of a View Timeline, as it always tracks the subject within its nearest parent scroller. {% endAside %}
 
-### Intermezzo: View Timeline Ranges
+### Intermezzo: View Timeline ranges
 
 By default, an animation linked to the View Timeline attaches to the entire timeline range. This starts from the moment the subject is about to enter the scrollport and ends when the subject has left the scrollport entirely.
 
