@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: Events in service workers
 description: Extension service workers respond to both standard service worker events and many events in the extension APIs.
 date: 2023-05-02
-updated: 2023-05-03
+updated: 2023-05-04
 ---
 
 Extension service workers support both [standard service worker](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope#events) events and many events in the [extension APIs](/docs/extensions/reference/). This section describes what's available and provides tips for using them.
@@ -81,9 +81,7 @@ Extension service workers support more than the lifecycle events [described else
 
 ### ServiceWorkerGlobal.fetch {: #fetch }
 
-Fired when anything is retrieved from the extension package or when `fetch()` and `XMLHttpRequest()` are called from an extension or popup script. In the latter cases, you will need to add the URLs of the pages you want to fetch to the `"host_permissions"` key in the `manifest.json`.
-
-There are a few things to note about this. First, content scripts cannot call `fetch()` since they run in a host page's origin. Also, only use the `fetch()` method for calling web services, static resources, or any use case that doesn't download code. Downloaded code is [not allowed in Manifest V3](/docs/extensions/migrating/improve-security/#remove-remote-code). 
+Fired when anything is retrieved from the extension package or when `fetch()` and `XMLHttpRequest()` are called from an extension or popup script. (Calls from content scripts are not intercepted by the service worker `fetch` handler.) In the latter cases, you will need to add the URLs of the pages you want to fetch to the `"host_permissions"` key in the `manifest.json`.
 
 ### ServiceWorkerGlobal.message {: #message }
 
