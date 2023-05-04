@@ -267,4 +267,4 @@ jobs:
 
       - name: Check Links
         if: ${{ steps.changes.outputs.frontend == 'true' }}
-        run: npm run check-links
+        run: npx gulp checkLinks
