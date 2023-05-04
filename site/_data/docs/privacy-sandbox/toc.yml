@@ -95,7 +95,6 @@
           title: i18n.docs.privacy-sandbox.attribution-reporting-chrome-shipping
         - title: i18n.docs.privacy-sandbox.attribution-reporting-debugging-resources
           sections:
-            - url: docs/privacy-sandbox/attribution-reporting-debugging
             - url: /docs/privacy-sandbox/attribution-reporting-debugging/part-1/
             - url: /docs/privacy-sandbox/attribution-reporting-debugging/part-2/
             - url: /docs/privacy-sandbox/attribution-reporting-debugging/part-3/
