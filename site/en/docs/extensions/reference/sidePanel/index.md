@@ -8,7 +8,7 @@ The Side Panel API will launch in [Chrome 114](https://chromiumdash.appspot.com/
 
 ## Overview {: #overview }
 
-Chrome features a built-in side panel that enables users to view more information alongside the main content of a webpage. The Side Panel API allows extensions to display their own UI in the side panel. 
+Chrome features a built-in side panel that enables users to view more information alongside the main content of a webpage. The Side Panel API allows extensions to display their own UI in the side panel, enabling persistent experiences that complement the user's browsing journey. 
 
 <figure>
   {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/2uFG8qxM7cqyMuXWlD9R.png", alt="Side panel drop-down menu", width="291", height="366" %}
