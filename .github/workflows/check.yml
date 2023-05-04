@@ -227,7 +227,7 @@ jobs:
         run: npm run snapshots
 
 
-  check-links:
+  links:
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -237,16 +237,7 @@ jobs:
         with:
           filters: |
             frontend:
-              - 'package.json'
-              - 'site/_filters/**.js'
-              - 'site/_includes/**'
-              - 'site/_js/**.js'
-              - 'site/_plugins/**.js'
-              - 'site/_scss/**.scss'
-              - 'site/_shortcodes/**.js'
-              - 'site/_transforms/**.js'
-              - 'site/_utils/**.js'
-              - 'site/en/content-types/**'
+              - 'site/**/*.md'
 
       - name: Cloning repository
         uses: actions/checkout@v3
