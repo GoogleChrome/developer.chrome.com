@@ -310,7 +310,7 @@
 
   {% elif type.type === 'literal' %}
     {# Literal value, e.g., 123 or '"foo"' #}
-    <span class="code-sections__value">{{ type.value }}</span> <br> <span class="type--xsmall" style='white-space: initial'>{{description}}<span>
+    <span class="code-sections__value">{{ type.value }}</span> <br> <span class="type--xsmall" style="white-space: initial">{{description | mdInline | safe }}<span>
 
   {% elif type.type === 'reflection' and type.declaration.signatures %}
     {# A reflection which has signatures, i.e., a function. #}
