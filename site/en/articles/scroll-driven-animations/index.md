@@ -9,7 +9,7 @@ description: >
   Learn how to work with Scroll Timelines and View Timelines to create scroll-driven animations in a declarative way.
 date: 2023-05-10
 hero: image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/iDNlcxHa6axrfgHi4aoU.png
-alt: "Illustration with the words “Scroll-driven Animations” on it."
+alt: "Illustration to introduce “Scroll-driven Animations”. It pictures a mouse and an arrow indicating scroll movement."
 tags:
   - css
   - chrome-115
@@ -23,7 +23,7 @@ Scroll-driven animations are a common UX pattern on the web. A scroll-driven ani
 
 <figure>
   {% Video src="video/AeNB0cHNDkYPUYzDuv8gInYA9rY2/HiTavHlNjHFrA3NLLDZq.mp4", width="800", height="800", controls="true", playsinline="true" %}
-  <figcaption>A reading indicator atop a document, linked to scroll.</figcaption>
+  <figcaption>A reading indicator atop a document, driven by scroll.</figcaption>
 </figure>
 
 A similar type of scroll-driven animation is an animation that is linked to an element's position within its scroll container. With it, for example, elements can fade-in as they come into view.
@@ -71,11 +71,11 @@ For example, here’s an animation that scales up an element on the X-axis while
 }
 ```
 
-{% Aside %} To learn more about CSS Animations, visit [https://web.dev/learn/css/animations/](https://web.dev/learn/css/animations/) {% endAside %}
+{% Aside %} To learn more about CSS Animations, visit [Learn CSS Animations](https://web.dev/learn/css/animations/) {% endAside %}
 
 ### Animations on the web with JavaScript
 
-In JavaScript, the Web Animations API can be used to achieve exactly the same. You can do this by either creating new `Animation` and `KeyFrameEffect` instances, or us the much shorter [`Element` `animate()` method](https://developer.mozilla.org/docs/Web/API/Element/animate).
+In JavaScript, the Web Animations API can be used to achieve exactly the same. You can do this by either creating new `Animation` and `KeyFrameEffect` instances, or use the much shorter [`Element` `animate()` method](https://developer.mozilla.org/docs/Web/API/Element/animate).
 
 ```js
 document.querySelector('#progressbar').animate(
@@ -428,7 +428,7 @@ When the range-start and range-end target the same range-name and span the entir
 
 {% Aside 'important' %} Note that these ranges are derived from the untransformed _principal box_ of the subject. That means that transformations such as `scale` and `translate` are not taken into account when deriving the ranges. This is a good thing, as this allows you to scale a subject during scroll without affecting the available scroll estate. If the transformed box were used, attached animations would flicker because they would constantly need to be recalculated in response to a change in scroll estate. {% endAside %}
 
-#### Demo: Image Reveal
+#### Demo: Image reveal
 
 <figure>
   {% Video src="video/AeNB0cHNDkYPUYzDuv8gInYA9rY2/eV0R7BXHO7ieTFVBfTEE.mp4", width="800", height="800", controls="true", playsinline="true" %}
