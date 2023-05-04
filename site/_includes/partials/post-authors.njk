@@ -1,7 +1,12 @@
+{% from "macros/post-authors.njk" import postAuthors with context %}
 {% from "macros/post-author.njk" import postAuthor with context %}
 
+{% if authors.length < 3 %}
 <div class="post-authors">
   {% for item in authors %}
     {{ postAuthor(item, locale) }}
   {% endfor %}
 </div>
+{% else %}
+  {{ postAuthors(authors, locale) }}
+{% endif %}
