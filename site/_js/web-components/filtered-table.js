@@ -27,14 +27,12 @@ export class FilteredTable extends BaseStateElement {
   }
 
   onStateChanged() {
-    requestAnimationFrame(() => {
-      const rows = this.querySelectorAll('filtered-element:not([hidden])');
-      if (rows.length === 0) {
-        this.placeholder?.removeAttribute('hidden');
-        return;
-      }
-      this.placeholder?.setAttribute('hidden', '');
-    });
+    const rows = this.querySelectorAll('filtered-element:not([hidden])');
+    if (rows.length === 0) {
+      this.placeholder?.removeAttribute('hidden');
+      return;
+    }
+    this.placeholder?.setAttribute('hidden', '');
   }
 }
 customElements.define('filtered-table', FilteredTable);
