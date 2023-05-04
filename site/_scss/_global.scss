@@ -9,8 +9,24 @@
 @import 'globals/theme';
 @import 'globals/reset';
 @import 'globals/typography';
-@import 'block-groups/common';
 
+@import 'blocks/stack';
+@import 'blocks/search-box';
+@import 'blocks/logo';
+@import 'blocks/top-nav';
+@import 'blocks/footer';
+@import 'blocks/scaffold';
+@import 'blocks/navigation-rail';
+@import 'blocks/announcement-banner';
+@import 'blocks/cookie-banner';
+@import 'blocks/banner';
+@import 'blocks/button';
+@import 'blocks/link';
+@import 'blocks/icon';
+@import 'blocks/cluster';
+@import 'blocks/select';
+@import 'blocks/side-nav';
+@import 'blocks/skip-link';
 
 :root {
   --flow-space: #{get-size(500)};
