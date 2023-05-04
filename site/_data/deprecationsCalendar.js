@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs').promises;
 const yaml = require('js-yaml');
+const locale = require('../en/en.11tydata').locale;
 
 const RELATED_ARTICLES_PATH = path.join(
   __dirname,
@@ -66,8 +67,30 @@ function addArticles(deprecations, articles) {
   return deprecations;
 }
 
+/**
+ * Converts the deprecation date in a full written format
+ *
+ * @param {object[]} deprecations
+ * @return {object[]} An array of deprecations with the date correctly formatted
+ */
+function formatDate(deprecations) {
+  for (const deprecation of deprecations) {
+    if (deprecation.date !== 'N/A') {
+      const date = new Date(deprecation.date);
+      deprecation.date = date.toLocaleDateString(locale, {
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric',
+      });
+    }
+  }
+
+  return deprecations;
+}
+
 module.exports = async () => {
-  const deprecationData = await getDeprecationData();
+  let deprecationData = await getDeprecationData();
+  deprecationData = formatDate(deprecationData);
   const articlesData = await getArticles();
   const data = addArticles(deprecationData, articlesData);
 
