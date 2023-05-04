@@ -7,7 +7,6 @@ updated: 2022-04-27
 description: UI and design guidelines for Chrome Extensions.
 ---
 
-<!-- TODO: Extension sample links need to be updated, once the samples are approved -->
 Like Chrome's user interface (UI), an extension UI should be purposeful and minimal. Extensions
 should allow users to customize or enhance the user's browsing experience without distracting
 from it. 
@@ -241,6 +240,26 @@ chrome.storage.local.get('signed_in', (data) => {
   }
 });
 ```
+
+### Side panel {: #side-panel } 
+
+An extension side panel is an HTML file that provides additional functionality alongside the main content of a webpage. The [Dictionary side panel][sample-dictionary-sidepanel] example allows users to right-click on a word and see the definition on the side panel.
+
+<figure>
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/9QJK3CNx71t67M3MlIUY.png", alt="Selecting the Dictionary side panel", width="379", height="386" %}
+  <figcaption>
+    Dictionary side panel extension.
+  </figcaption>
+</figure>
+
+<figure>
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/aC3zkJDPliNLXdvfugeU.png", alt="Dictionary side panel context menu choosing the word extensions", width="800", height="393" %}
+  <figcaption>
+    Dictionary extension to defining the word "Extensions".
+  </figcaption>
+</figure>
+
+For more samples and use cases, see the [Side Panel API][api-sidepanel] reference page.
 
 ### Tooltip {: #tooltip }
 
@@ -608,6 +627,7 @@ capabilities.
 [api-messages]: /docs/extensions/mv3/i18n-messages
 [api-notif]: /docs/extensions/reference/notifications
 [api-omnibox]: /docs/extensions/reference/omnibox
+[api-sidepanel]: /docs/extensions/reference/sidePanel
 [commands-oncommand]: /docs/extensions/reference/commands#event-onCommand
 [contextmenu-create]: /docs/extensions/reference/contextMenus#method-create
 [docs-background]: /docs/extensions/mv3/background_pages
@@ -623,6 +643,7 @@ capabilities.
 [sample-context-menu]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/contextMenus/global_context_search
 [sample-drink]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.water_alarm_notification
 [sample-new-tab-search]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/omnibox/new-tab-search
+[sample-dictionary-sidepanel]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.sidepanel-dictionary
 [sample-tab-flipper]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/default_command_override
 [section-onclick]: #click
 [section-popup]: #popup
