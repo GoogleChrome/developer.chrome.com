@@ -1,10 +1,19 @@
 - title: i18n.docs.android.customtabs
   sections:
     - url: /docs/android/custom-tabs
-    - url: /docs/android/custom-tabs/integration-guide
-    - url: /docs/android/custom-tabs/best-practices
-    - url: /docs/android/custom-tabs/headers
-    - url: /docs/android/custom-tabs/low-level-api
+    - title: i18n.docs.android.guides
+      sections:
+        - url: /docs/android/custom-tabs/guide-get-started
+        - url: /docs/android/custom-tabs/guide-ui-customization
+        - url: /docs/android/custom-tabs/guide-interactivity
+        - url: /docs/android/custom-tabs/guide-warmup-prefetch
+        - url: /docs/android/custom-tabs/guide-partial-custom-tabs
+        - url: /docs/android/custom-tabs/guide-engagement-signals
+    - title: i18n.docs.android.howtos
+      sections:
+        - url: /docs/android/custom-tabs/best-practices
+        - url: /docs/android/custom-tabs/headers
+        - url: /docs/android/custom-tabs/low-level-api
 - title: i18n.docs.android.trustedwebactivity
   sections:
     - url: /docs/android/trusted-web-activity

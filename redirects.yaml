@@ -711,6 +711,9 @@ redirects:
 - from: /docs/web-platform/pop-up-api/
   to: https://developer.mozilla.org/docs/Web/API/Popover_API
 
+- from: /docs/android/custom-tabs/integration-guide/ 
+  to: /docs/android/custom-tabs/guide-get-started/
+
 # DO NOT REMOVE. This seems pointless but we rewrite "." to "_" inside our server's code, so if the
 # URL is fine for all but incorrect syntax, we'll fix it up.
 - from: /...
