@@ -10,9 +10,9 @@ If you want to know whether the default browser or any browser on a device suppo
 
 ```java
 String packageName = CustomTabsClient.getPackageName(
-                            context, 
-                            Collections.emptyList()
-                     );
+        context, 
+        Collections.emptyList()
+);
 if (packageName == null) {
     // Custom Tabs are not supported by the default browser
 }
@@ -23,10 +23,10 @@ You can also check if any browser on the device suports Custom Tabs:
 ```java
 
 String packageName = CustomTabsClient.getPackageName(
-                            context, 
-                            Collections.emptyList(), 
-                            true /* ignore default */
-                    );
+        context, 
+        Collections.emptyList(), 
+        true /* ignore default */
+);
 if (packageName == null) {
     // Custom Tabs are not supported by any browser on the device
 }

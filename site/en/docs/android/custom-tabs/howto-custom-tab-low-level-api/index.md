@@ -1,9 +1,9 @@
 ---
 layout: "layouts/doc-post.njk"
-title: How to use the Custom Tab low level API
+title: Using the Custom Tab low level API
 date: 2020-02-04
 updated: 2023-05-03
-description: 
+description: Although the recommended method to integrate your application with Custom Tabs is using the AndroidX Browser Library, a low level implementation is also available.
 ---
 
 Although the recommended method to integrate your application with Custom Tabs is using the

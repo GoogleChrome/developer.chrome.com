@@ -37,9 +37,18 @@ static boolean launchNativeApi30(Context context, Uri uri) {
 ```
 
 ## Before Android 11
+
 Even though the application may target Android 11, or API level 30, previous Android versions will
-not understand the `FLAG_ACTIVITY_REQUIRE_NON_BROWSER` flag, so we need to resort to querying the
-Package Manager in those cases:
+not understand the `FLAG_ACTIVITY_REQUIRE_NON_BROWSER` flag. To support those devices, we can query the Package Manager. Our approach is to  query the Package Manager for applications that support a generic "http" intent. Those applications are likely browsers.
+
+Then, query for applications that handle intents for the specific URL we want to launch. This will
+return both browsers and native applications setup to handle that URL.
+
+Now, remove all browsers found on the first list from the second list, and we'll be left only with
+native apps.
+
+If the list is empty, we know there are no native handlers and return false. Otherwise, we launch
+the intent for the native handler.
 
 ```java
 private static boolean launchNativeBeforeApi30(Context context, Uri uri) {
@@ -75,21 +84,10 @@ private static boolean launchNativeBeforeApi30(Context context, Uri uri) {
 }
 ```
 
-The approach used here is to query the Package Manager for applications that support a generic
-"http" intent. Those applications are likely browsers.
-
-Then, query for applications that handle intents for the specific URL we want to launch. This will
-return both browsers and native applications setup to handle that URL.
-
-Now, remove all browsers found on the first list from the second list, and we'll be left only with
-native apps.
-
-If the list is empty, we know there are no native handlers and return false. Otherwise, we launch
-the intent for the native handler.
 
 ### Putting it all together
 
-We need to ensure using the right method for each occasion: 
+We need to ensure we are using the right method for each occasion: 
 
 ```java
 static void launchUri(Context context, Uri uri) {
@@ -106,9 +104,9 @@ static void launchUri(Context context, Uri uri) {
 ```
 
 `Build.VERSION.SDK_INT` provides the information we need. If it's equal or larger than 30, Android
-knows the `FLAG_ACTIVITY_REQUIRE_NON_BROWSER` and we can try launching a nativa app with the new
+knows the `FLAG_ACTIVITY_REQUIRE_NON_BROWSER` and we can try launching a native app with the new
 approach. Otherwise, we try launching with the old approach.
 
-If launching a native app fails, we then launch a Custom Tabs.
+If launching a native app fails, we then launch a Custom Tab.
 
 [1]: https://developer.android.com/reference/android/content/Intent#FLAG_ACTIVITY_REQUIRE_NON_BROWSER
