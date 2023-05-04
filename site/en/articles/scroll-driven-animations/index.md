@@ -412,7 +412,10 @@ By default, an animation linked to the View Timeline attaches to the entire time
 
 It is also possible to link it to a specific part of the View Timeline by specifying the range that it should attach to. This can be, for example, only when the subject is entering the scroller. In the following visualization, the progress starts counting up from 0% when the subject enters the scroll container but already reaches 100% from the moment it is entirely intersecting.
 
-@TODO: video of view progress timeline set to entry
+<figure>
+  {% Video src="video/AeNB0cHNDkYPUYzDuv8gInYA9rY2/p952qt9FVzv2v3zP0o9Q.mp4", width="800", height="800", controls="true", playsinline="true" %}
+  <figcaption>A View Timeline set to track the entry range of the subject. The animation only runs while the subject is entering the scrollport.</figcaption>
+</figure>
 
 The possible View Timeline ranges that you can target are the following:
 
