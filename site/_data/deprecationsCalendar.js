@@ -77,7 +77,7 @@ function formatDate(deprecations) {
   for (const deprecation of deprecations) {
     if (deprecation.date !== 'N/A') {
       const date = new Date(deprecation.date);
-      deprecation.date = date.toLocaleDateString(locale, {
+      deprecation.dateFormatted = date.toLocaleDateString(locale, {
         month: 'short',
         day: 'numeric',
         year: 'numeric',

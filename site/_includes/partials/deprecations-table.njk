@@ -14,8 +14,7 @@
     {% for item in deprecationsCalendar %}
     <filtered-element class="filtered-item" data-filter-chrome-version="chrome-{{ item.version }}" data-filter-removal-date="{{item.date | dateRange}}">
         <div class='deprecations-calendar__date'>
-            {% set deprecationDate = item.date %}
-            <span class='filtered-item__mobile-label'>{{ 'i18n.deprecations_calendar.removal_date' | i18n(locale) }}</span>{{ deprecationDate }}</div>
+            <span class='filtered-item__mobile-label'>{{ 'i18n.deprecations_calendar.removal_date' | i18n(locale) }}</span>{{item.dateFormatted }}</div>
         <div class='deprecations-calendar__name'>
             <a href='https://chromestatus.com/feature/{{item.id}}' class='link no-visited'>
                 {{ item.name }}
