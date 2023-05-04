@@ -7,8 +7,8 @@ updated: 2023-04-14
 description: How to record audio or video from a tab, window or screen
 ---
 
-APIs such as [chrome.tabCapture][tabcapture] and [getDisplayMedia][get-display-media] provide a
-variety of ways to monitor and record audio and video from a tab, window or screen.
+This guide explains different approaches for recording audio and video from a tab, window or
+screen using APIs such as [chrome.tabCapture][tabcapture] or [getDisplayMedia][get-display-media].
 
 ## Common Use Cases
 
@@ -18,6 +18,8 @@ For screen recording, use the [getDisplayMedia][get-display-media] API. This pro
 the ability to select which tab, window or screen they wish to share and provides a clear indication
 that recording is taking place.
 
+{% Img src="image/wVNVUJS8Z8O04i1tJKSdsp6nkRQ2/Q78okJG9DlfNwzyf2mly.png", alt="Screen share dialog for example.com", width="728", height="610" %}
+
 ```js
 // User will be prompted to select what they would like to share.
 const stream = await navigator.mediaDevices.getDisplayMedia({ audio: true, video: true });
@@ -25,17 +27,21 @@ const stream = await navigator.mediaDevices.getDisplayMedia({ audio: true, video
 
 If called within a content script, recording will automatically end when the user navigates to a new
 page. To record in the background and across navigations, use an
-[offscreen document][offscreen-documents] with the <code>DISPLAY_MEDIA</code> reason.
+[offscreen document][offscreen-documents] with the `DISPLAY_MEDIA` reason.
 
 ### Tab capture based on user gesture
 
-Some use cases need to capture the current tab following a user interaction
-with the extension's action icon. In these cases, it is not desirable to show a secondary dialog
-asking the user what they would like to share.
+In some use cases, the user invokes your extension for a specific tab by clicking on the action
+icon. In these cases, it is not desirable to show a secondary dialog asking the user what they would
+like to share.
 
 #### Audio and video (single page)
 
-If your recording does not need to persist across navigations, use [chrome.tabCapture.getMediaStreamId][tabcapture-media-stream-id] to get a stream ID in the popup, and then pass that ID to a content script. Make sure to set the `consumerTabId` property to allow the tab to access this stream.
+If your recording does not need to persist across navigations, encourage the user to open your
+extension's popup to start recording. Then, use
+[chrome.tabCapture.getMediaStreamId][tabcapture-media-stream-id] in the popup to get a stream ID,
+and pass that ID to a content script. Make sure to set the `consumerTabId` property to allow the tab
+to access this stream.
 
 In your popup:
 
@@ -47,7 +53,7 @@ chrome.tabs.query({ active: true, lastFocusedWindow: true }, ([{ id: tabId }]) =
 });
 ```
 
-Then, in the content script, obtain a stream from the ID:
+In the content script, obtain a stream from the ID:
 
 ```js
 chrome.runtime.onMessage.addListener(async (msg) => {
@@ -117,7 +123,9 @@ chrome.tabCapture.getMediaStreamId({ targetTabId: tabId }, async (id) => {
 });
 ```
 
-Alternatively, consider using the [screen recording](#screen-recording) approach which allows you to record in the background using an offscreen document.
+Alternatively, consider using the [screen recording](#screen-recording) approach which allows you to
+record in the background using an offscreen document, but shows the user a dialog to select a tab,
+window or screen to record from.
 
 #### Audio only
 
