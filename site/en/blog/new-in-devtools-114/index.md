@@ -128,7 +128,7 @@ Chromium issue: [1429191](https://crbug.com/1429191).
 
 ### Warning for slow user interactions {: #slow-interaction-warning }
 
-User interactions longer than 200 milliseconds get an [Interaction to Next Pain (INP)](https://web.dev/inp/) warning in the **Performance** > **Summary** tab.
+User interactions longer than 200 milliseconds get an [Interaction to Next Paint (INP)](https://web.dev/inp/) warning in the **Performance** > **Summary** tab.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/wrFaZ26nYCuprtCSNB5C.png", alt="The INP warning.", width="800", height="685" %}
 
