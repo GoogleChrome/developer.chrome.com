@@ -10,17 +10,17 @@
 }
 ---
 <html><head>
-<style>.responsive-table{padding-bottom:6rem}table{border-collapse: collapse;}table a {text-decoration: none;writing-mode: vertical-rl;white-space:nowrap}th {transform: rotate(180deg);padding: 3.5rem 0 1rem;};td {padding: 0.25rem 0.5rem;border-color: black;color: white;cursor: help;}td[data-compat] {text-align: center;background: var(--wdi-success-bg-color, #efefef);color: #aaa;}td[data-compat="yes"] {background: var(--wdi-success-bg-color, #e9f6ed);color: var(--wdi-success-color, #0d652d);}td[data-compat="bug"] {background: var(--wdi-success-bg-color, #fff5e3);color: var(--wdi-success-color, #c34900);}td[data-compat="no"] {background-color: var(--wdi-error-bg-color, #fce8e8);color: var(--wdi-error-color, #a50e0e);}th[data-browser] {background-repeat: no-repeat;background-size: 65%;background-position: center 0.5rem;vertical-align:top}th[data-browser="chrome"] {background-image: url(https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/4hnfEFkV8QU9yzzMF5qB.svg);}th[data-browser="firefox"] {background-image: url(https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/JSYT1LByw7VZ6iLfGR7A.svg);}th[data-browser="microsoft_edge"] {background-image: url(https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/v7nFHkLoNVnEBDeG2Iii.svg) }th[data-browser="opera"] {background-image: url(https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/gfezxnkKP5JQEI8uDqzi.svg);background-size: 60%;}th[data-browser="samsung_internet"] {background-image: url(https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/gJktLzbNjho50k9Oiy0w.svg) }th[data-browser="brave"] {background-image: url(https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/pUkpUAT1GxEfNKsh27vt.svg) }th[data-browser="tor"] {background-image: url(https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/PXKd6rfAOrPJw6aGzvmp.svg) }th[data-browser="uc"] {background-image: url(https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/IP0DZ19HEP1ViwwwZWYV.svg);background-size: 60%;}article>.stack--block>p:first-of-type{margin-top:0}</style>
+<style>.responsive-table{padding-bottom:6rem}table{border-collapse: collapse;}table a {text-decoration: none;writing-mode: vertical-rl;white-space:nowrap}th {transform: rotate(180deg);padding: 3.5rem 0 1rem;}td{padding: 0.25rem 0.5rem;border-color: black;color: white;cursor: help;}td[data-compat] {text-align: center;background: var(--wdi-success-bg-color, #efefef);color: #aaa;}td[data-compat="yes"] {background: var(--wdi-success-bg-color, #e9f6ed);color: var(--wdi-success-color, #0d652d);}td[data-compat="bug"] {background: var(--wdi-success-bg-color, #fff5e3);color: var(--wdi-success-color, #c34900);}td[data-compat="no"] {background-color: var(--wdi-error-bg-color, #fce8e8);color: var(--wdi-error-color, #a50e0e);}th[data-browser] {background-repeat: no-repeat;background-size: 65%;background-position: center 0.5rem;vertical-align:top}th[data-browser="chrome"] {background-image: url(https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/4hnfEFkV8QU9yzzMF5qB.svg);}th[data-browser="firefox"] {background-image: url(https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/JSYT1LByw7VZ6iLfGR7A.svg);}th[data-browser="microsoft_edge"] {background-image: url(https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/v7nFHkLoNVnEBDeG2Iii.svg) }th[data-browser="opera"] {background-image: url(https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/gfezxnkKP5JQEI8uDqzi.svg);background-size: 60%;}th[data-browser="samsung_internet"] {background-image: url(https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/gJktLzbNjho50k9Oiy0w.svg) }th[data-browser="brave"] {background-image: url(https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/pUkpUAT1GxEfNKsh27vt.svg) }th[data-browser="tor"] {background-image: url(https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/PXKd6rfAOrPJw6aGzvmp.svg) }th[data-browser="uc"] {background-image: url(https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/IP0DZ19HEP1ViwwwZWYV.svg);background-size: 60%;}article>.stack--block>p:first-of-type{margin-top:0}</style>
 </head><body>
-<p>Custom Tabs are a great option for creating a customized browser experience directly within your app, but they are not a singular thing. Built ontop of the <a href="https://developer.android.com/guide/components/intents-filters">Intent system</a>, Custom Tabs are a collection of configurable option requests that are sent to the end user&#39;s preferred browser. It is up to each browser to implement the various options. The availability of CustomTabs features can vary between Android browsers due to differences in implementation.</p>
-<p>What follows is a comparison of <em>some</em> of the browsers in the android ecosystem. A vast majority of browsers on Androd have some level of support. The tables are not not meant to be exhaustive, but illustrative of the level of support you are likely to see. You should do research on the default browsers of the people using <em>your</em> app, and make sure you are coding defensively.</p>
+<p>Custom Tabs are a great option for creating a customized browser experience directly within your app, but they are not a singular thing. Built ontop of the <a href="https://developer.android.com/guide/components/intents-filters">Intent system</a>, Custom Tabs are a collection of configurable option requests that are sent to the end user&#39;s preferred browser. It is up to each browser to implement the various options. The availability of CustomTabs features can vary between Android browsers due to implementation differences.</p>
+<p>What follows is a comparison of <em>some</em> browsers in the android ecosystem. A vast majority of browsers on Androd have some level of support. The tables are not not meant to be exhaustive, but illustrative of the level of support you are likely to see. You should do research on the default browsers of the people using <em>your</em> app, and make sure you are coding defensively.</p>
 
 <div class="aside aside--caution"><div class="aside__label gap-bottom-300"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-2h2v2h-2zm0-10v6h2V7h-2z"></path></svg><span>Caution</span></div>
 <p>It is currently not possible to check if a specific feature is available or not.  While most features are progressive enhancements, if you require a particular feature you must manually confirm if the user's default browser and browser version support it.</p>
 </div>
 
 <h2 id="customtabsintent-builder">CustomTabsIntent.Builder</h2>
-<p>CustomTabsIntent.Builder is the class you will use to create your Custom Tabs. You have a number of ways to configure the your Custom Tab to help it blend as seamlessly as posible with your app, via a collection of built in methods. These include</p>
+<p>CustomTabsIntent.Builder is the class you will use to create your Custom Tabs. You have a number of ways to configure your Custom Tab to help it blend as seamlessly as posible with your app, via a collection of built in methods. These include</p>
 <h3 id="addDefaultShareMenuItem">addDefaultShareMenuItem</h3>
 <div class="aside aside--warning"><div class="aside__label gap-bottom-300"><svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path d="M23 21L12 2 1 21h22zm-12-3v-2h2v2h-2zm0-4h2v-4h-2v4z" fill-rule="evenodd" clip-rule="evenodd"></path></svg><span>Warning</span></div>
 <p>This method is deprecated. Instead, you should use <a href="#setShareState"><code>setShareState</code></a>.</p>
@@ -662,7 +662,7 @@ This method is deprecated. Instead, you should use <a href="#setShareState"><cod
     </tbody>
   </table>
   <h3 id="setInitialActivityHeightPx">setInitialActivityHeightPx</h3>
-<p>Sets the Custom Tab Activity's initial height in pixels with default resize behavior. The Custom Tab will behave as a bottom sheet. This is often reffered to as a partial Custom Tab.</p>
+<p>Sets the Custom Tab Activity's initial height in pixels with default resize behavior. The Custom Tab will behave as a bottom sheet. This is often referred to as a partial Custom Tab.</p>
   <img alt="a phone showing an app that used setInitialActivityHeightPx on the left, and a phone showing the same phone without using that api" decoding="async" height="407" loading="lazy" sizes="(min-width: 800px) 800px, calc(100vw - 48px)" src="https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/zCfOlWJ7wiMcS7l023aS.png?auto=format" srcset="https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/zCfOlWJ7wiMcS7l023aS.png?auto=format&amp;w=200 200w,  https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/zCfOlWJ7wiMcS7l023aS.png?auto=format&amp;w=228 228w,  https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/zCfOlWJ7wiMcS7l023aS.png?auto=format&amp;w=260 260w,  https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/zCfOlWJ7wiMcS7l023aS.png?auto=format&amp;w=296 296w,  https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/zCfOlWJ7wiMcS7l023aS.png?auto=format&amp;w=338 338w,  https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/zCfOlWJ7wiMcS7l023aS.png?auto=format&amp;w=385 385w,  https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/zCfOlWJ7wiMcS7l023aS.png?auto=format&amp;w=439 439w,  https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/zCfOlWJ7wiMcS7l023aS.png?auto=format&amp;w=500 500w,  https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/zCfOlWJ7wiMcS7l023aS.png?auto=format&amp;w=571 571w,  https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/zCfOlWJ7wiMcS7l023aS.png?auto=format&amp;w=650 650w,  https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/zCfOlWJ7wiMcS7l023aS.png?auto=format&amp;w=741 741w,  https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/zCfOlWJ7wiMcS7l023aS.png?auto=format&amp;w=845 845w,  https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/zCfOlWJ7wiMcS7l023aS.png?auto=format&amp;w=964 964w,  https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/zCfOlWJ7wiMcS7l023aS.png?auto=format&amp;w=1098 1098w,  https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/zCfOlWJ7wiMcS7l023aS.png?auto=format&amp;w=1252 1252w,  https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/zCfOlWJ7wiMcS7l023aS.png?auto=format&amp;w=1428 1428w,  https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/zCfOlWJ7wiMcS7l023aS.png?auto=format&amp;w=1600 1600w" width="800">
   <table>
     <thead>
@@ -705,58 +705,6 @@ This method is deprecated. Instead, you should use <a href="#setShareState"><cod
 
           <td data-browser="tor"  data-compat="no" aria-label="Unsupported">
             <span title="setInitialActivityHeightPx unsupported as of Tor version 102.2.1-Release (12)">✗</span>
-          </td>
-
-          <td data-browser="uc"  data-compat="na" aria-label="Custom Tabs Unimplemented">
-            <span title="CustomTabs are not supported in general as of UC version 13.4.0.1306">—</span>
-          </td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="setInstantAppsEnabled">setInstantAppsEnabled</h3>
-<p>Sets whether <a href="https://developer.android.com/topic/google-play-instant" rel="nofollow">Instant Apps</a> is enabled for this Custom Tab.</p>
-  
-  <table>
-    <thead>
-      <tr>
-         <th title="Chrome" data-browser="chrome"> <a href="https://play.google.com/store/apps/details?id=com.android.chrome" rel="nofollow">Chrome</a> </th> 
- <th title="Microsoft Edge" data-browser="microsoft_edge"> <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx" rel="nofollow">Microsoft Edge</a> </th> 
- <th title="Firefox" data-browser="firefox"> <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox" rel="nofollow">Firefox</a> </th> 
- <th title="Opera" data-browser="opera"> <a href="https://play.google.com/store/apps/details?id=com.opera.browser" rel="nofollow">Opera</a> </th> 
- <th title="Samsung Internet" data-browser="samsung_internet"> <a href="https://play.google.com/store/apps/details?id=com.sec.android.app.sbrowser" rel="nofollow">Samsung Internet</a> </th> 
- <th title="Brave" data-browser="brave"> <a href="https://play.google.com/store/apps/details?id=com.brave.browser" rel="nofollow">Brave</a> </th> 
- <th title="Tor" data-browser="tor"> <a href="https://play.google.com/store/apps/details?id=org.torproject.torbrowser" rel="nofollow">Tor</a> </th> 
- <th title="UC" data-browser="uc"> <a href="https://play.google.com/store/apps/details?id=com.UCMobile.intl" rel="nofollow">UC</a> </th> 
-      </tr>
-    </thead>
-    <tbody>
-      <tr> 
-          <td data-browser="chrome"  data-compat="no" aria-label="">
-            <span title="">✗</span>
-          </td>
-
-          <td data-browser="microsoft_edge"  data-compat="no" aria-label="">
-            <span title="">✗</span>
-          </td>
-
-          <td data-browser="firefox"  data-compat="no" aria-label="">
-            <span title="">✗</span>
-          </td>
-
-          <td data-browser="opera"  data-compat="na" aria-label="Custom Tabs Unimplemented">
-            <span title="CustomTabs are not supported in general as of Opera version 72.4.3767.69265">—</span>
-          </td>
-
-          <td data-browser="samsung_internet"  data-compat="no" aria-label="">
-            <span title="">✗</span>
-          </td>
-
-          <td data-browser="brave"  data-compat="no" aria-label="">
-            <span title="">✗</span>
-          </td>
-
-          <td data-browser="tor"  data-compat="no" aria-label="">
-            <span title="">✗</span>
           </td>
 
           <td data-browser="uc"  data-compat="na" aria-label="Custom Tabs Unimplemented">
@@ -924,110 +872,6 @@ This method is deprecated. Instead, you should use <a href="#setDefaultColorSche
 
           <td data-browser="tor"  data-compat="no" aria-label="Unsupported">
             <span title="setSecondaryToolbarColor unsupported as of Tor version 102.2.1-Release (12)">✗</span>
-          </td>
-
-          <td data-browser="uc"  data-compat="na" aria-label="Custom Tabs Unimplemented">
-            <span title="CustomTabs are not supported in general as of UC version 13.4.0.1306">—</span>
-          </td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="setSecondaryToolbarViews">setSecondaryToolbarViews</h3>
-<p>Sets the remote views displayed in the secondary toolbar in a custom tab.</p>
-  
-  <table>
-    <thead>
-      <tr>
-         <th title="Chrome" data-browser="chrome"> <a href="https://play.google.com/store/apps/details?id=com.android.chrome" rel="nofollow">Chrome</a> </th> 
- <th title="Microsoft Edge" data-browser="microsoft_edge"> <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx" rel="nofollow">Microsoft Edge</a> </th> 
- <th title="Firefox" data-browser="firefox"> <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox" rel="nofollow">Firefox</a> </th> 
- <th title="Opera" data-browser="opera"> <a href="https://play.google.com/store/apps/details?id=com.opera.browser" rel="nofollow">Opera</a> </th> 
- <th title="Samsung Internet" data-browser="samsung_internet"> <a href="https://play.google.com/store/apps/details?id=com.sec.android.app.sbrowser" rel="nofollow">Samsung Internet</a> </th> 
- <th title="Brave" data-browser="brave"> <a href="https://play.google.com/store/apps/details?id=com.brave.browser" rel="nofollow">Brave</a> </th> 
- <th title="Tor" data-browser="tor"> <a href="https://play.google.com/store/apps/details?id=org.torproject.torbrowser" rel="nofollow">Tor</a> </th> 
- <th title="UC" data-browser="uc"> <a href="https://play.google.com/store/apps/details?id=com.UCMobile.intl" rel="nofollow">UC</a> </th> 
-      </tr>
-    </thead>
-    <tbody>
-      <tr> 
-          <td data-browser="chrome"  data-compat="no" aria-label="">
-            <span title="">✗</span>
-          </td>
-
-          <td data-browser="microsoft_edge"  data-compat="no" aria-label="">
-            <span title="">✗</span>
-          </td>
-
-          <td data-browser="firefox"  data-compat="no" aria-label="">
-            <span title="">✗</span>
-          </td>
-
-          <td data-browser="opera"  data-compat="na" aria-label="Custom Tabs Unimplemented">
-            <span title="CustomTabs are not supported in general as of Opera version 72.4.3767.69265">—</span>
-          </td>
-
-          <td data-browser="samsung_internet"  data-compat="no" aria-label="">
-            <span title="">✗</span>
-          </td>
-
-          <td data-browser="brave"  data-compat="no" aria-label="">
-            <span title="">✗</span>
-          </td>
-
-          <td data-browser="tor"  data-compat="no" aria-label="">
-            <span title="">✗</span>
-          </td>
-
-          <td data-browser="uc"  data-compat="na" aria-label="Custom Tabs Unimplemented">
-            <span title="CustomTabs are not supported in general as of UC version 13.4.0.1306">—</span>
-          </td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="setSession">setSession</h3>
-<p>Associates the Intent with the given CustomTabsSession.</p>
-  
-  <table>
-    <thead>
-      <tr>
-         <th title="Chrome" data-browser="chrome"> <a href="https://play.google.com/store/apps/details?id=com.android.chrome" rel="nofollow">Chrome</a> </th> 
- <th title="Microsoft Edge" data-browser="microsoft_edge"> <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx" rel="nofollow">Microsoft Edge</a> </th> 
- <th title="Firefox" data-browser="firefox"> <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox" rel="nofollow">Firefox</a> </th> 
- <th title="Opera" data-browser="opera"> <a href="https://play.google.com/store/apps/details?id=com.opera.browser" rel="nofollow">Opera</a> </th> 
- <th title="Samsung Internet" data-browser="samsung_internet"> <a href="https://play.google.com/store/apps/details?id=com.sec.android.app.sbrowser" rel="nofollow">Samsung Internet</a> </th> 
- <th title="Brave" data-browser="brave"> <a href="https://play.google.com/store/apps/details?id=com.brave.browser" rel="nofollow">Brave</a> </th> 
- <th title="Tor" data-browser="tor"> <a href="https://play.google.com/store/apps/details?id=org.torproject.torbrowser" rel="nofollow">Tor</a> </th> 
- <th title="UC" data-browser="uc"> <a href="https://play.google.com/store/apps/details?id=com.UCMobile.intl" rel="nofollow">UC</a> </th> 
-      </tr>
-    </thead>
-    <tbody>
-      <tr> 
-          <td data-browser="chrome"  data-compat="no" aria-label="">
-            <span title="">✗</span>
-          </td>
-
-          <td data-browser="microsoft_edge"  data-compat="no" aria-label="">
-            <span title="">✗</span>
-          </td>
-
-          <td data-browser="firefox"  data-compat="no" aria-label="">
-            <span title="">✗</span>
-          </td>
-
-          <td data-browser="opera"  data-compat="na" aria-label="Custom Tabs Unimplemented">
-            <span title="CustomTabs are not supported in general as of Opera version 72.4.3767.69265">—</span>
-          </td>
-
-          <td data-browser="samsung_internet"  data-compat="no" aria-label="">
-            <span title="">✗</span>
-          </td>
-
-          <td data-browser="brave"  data-compat="no" aria-label="">
-            <span title="">✗</span>
-          </td>
-
-          <td data-browser="tor"  data-compat="no" aria-label="">
-            <span title="">✗</span>
           </td>
 
           <td data-browser="uc"  data-compat="na" aria-label="Custom Tabs Unimplemented">
