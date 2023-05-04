@@ -115,6 +115,11 @@ The starting scroll position represents 0% progress and the ending scroll positi
   <figcaption>Visualization of a Scroll Progress Timeline. As you scroll down to the bottom of the scroller, the progress value counts up from 0% to 100%.</figcaption>
 </figure>
 
+{% Details %}
+{% DetailsSummary %}✨ Try it for yourself{% endDetailsSummary %}
+<iframe src="https://scroll-driven-animations.style/tools/scroll-timeline/progress/?embed" frameborder="0" sandbox="allow-scripts allow-forms allow-top-navigation" width="500" height="500" style="height: 500px; width: 100%; border: 1px solid #333;"></iframe>
+{% endDetails %}
+
 A Scroll Progress Timeline is often abbreviated to simply “Scroll Timeline”.
 
 ### View Progress Timeline
@@ -129,6 +134,11 @@ A View Progress Timeline begins from the moment a subject starts intersecting wi
   {% Video src="video/AeNB0cHNDkYPUYzDuv8gInYA9rY2/rvPTFW2277KBTuWiZFj1.mp4", width="800", height="800", controls="true", playsinline="true" %}
   <figcaption>Visualization of a View Progress Timeline. The progress counts up from 0% to 100% as the subject (green box) crosses the scroller.</figcaption>
 </figure>
+
+{% Details %}
+{% DetailsSummary %}✨ Try it for yourself{% endDetailsSummary %}
+<iframe src="https://scroll-driven-animations.style/tools/view-timeline/progress/?embed" frameborder="0" sandbox="allow-scripts allow-forms allow-top-navigation" width="500" height="500" style="height: 500px; width: 100%; border: 1px solid #333;"></iframe>
+{% endDetails %}
 
 A View Progress Timeline is often abbreviated to simply “View Timeline”. It is possible to target specific parts of a View Timeline based on the subject’s size, but more on that later.
 
@@ -166,19 +176,21 @@ Accepted values for the `<axis>` argument are the following:
 
 For example, to bind an animation to the root scroller on the block axis, the values to pass into `scroll()` are `root` and `block`. Put together, the value is `scroll(root block)`.
 
-{% Aside 'important' %} Because an `animation-duration` set in seconds does not make sense when using a Scroll Progress Timeline, you must set `animation-duration` to `auto`. Alternatively, as done in the code snippet above, omit the `animation-duration` from the `animation` shorthand as it will then use its default value which is `auto`. {% endAside %}
+{% Aside 'important' %} Because an `animation-duration` set in seconds does not make sense when using a Scroll Progress Timeline, you must set `animation-duration` to `auto`. Alternatively, as done in the code snippet above, you can omit the `animation-duration` from the `animation` shorthand as it will then use its default value which is `auto`. {% endAside %}
 
 #### Demo: Reading progress indicator
 
+This demo has a reading progress indicator fixed to the top of the viewport. As you scroll down the page, the progress bar grows until it takes up the full viewport width upon reaching the end of the document. An anonymous Scroll Progress Timeline is used to drive the animation.
+
 <figure>
   {% Video src="video/AeNB0cHNDkYPUYzDuv8gInYA9rY2/HiTavHlNjHFrA3NLLDZq.mp4", width="800", height="800", controls="true", playsinline="true" %}
-  <figcaption>Recording of the Reading progress indicator demo.</figcaption>
+  <figcaption>Demo: <a href="https://scroll-driven-animations.style/demos/progress-bar/css/scroll-defaults.html">Reading progress indicator</a>.</figcaption>
 </figure>
 
-This demo has a reading progress indicator fixed to the top of the viewport. As you scroll down the page, the progress bar grows until it takes up the full viewport width upon reaching the end of the document.
-
-<iframe src="https://scroll-driven-animations.style/demos/progress-bar/css/scroll-defaults.html?embed" frameborder="0" sandbox="allow-scripts allow-forms" width="500" height="600" style="height: 600px; width: 100%; border: 1px solid #333;"></iframe>
-
+{% Details %}
+{% DetailsSummary %}✨ Try it for yourself{% endDetailsSummary %}
+<iframe src="https://scroll-driven-animations.style/demos/progress-bar/css/scroll-defaults.html?embed" frameborder="0" sandbox="allow-scripts allow-forms allow-top-navigation" width="500" height="600" style="height: 600px; width: 100%; border: 1px solid #333;"></iframe>
+{% endDetails %}
 
 The reading progress indicator is positioned at the top of the page using position fixed. To leverage composited animations, not the `width` is being animated but the element is scaled down on the x-axis using a `transform`.
 
@@ -247,14 +259,18 @@ scroll-timeline: --my-scroller inline;
 
 #### Demo: Horizontal carousel step indicator
 
+This demo features a step indicator shown above each image carousel. When a carousel contains three images, the indicator bar starts at 33% width to indicate you are currently looking at image one of three. When the last image is in view–determined by the scroller having scrolled to the end–the indicator takes up the full width of the scroller. A named Scroll Progress Timeline is used to drive the animation.
+
 <figure>
   {% Video src="video/AeNB0cHNDkYPUYzDuv8gInYA9rY2/5ln4aDkZ625xlM9jZXPl.mp4", width="800", height="800", controls="true", playsinline="true" %}
-  <figcaption>Recording of the Horizontal carousel step indicator demo.</figcaption>
+  <figcaption>Demo: <a href="https://scroll-driven-animations.style/demos/horizontal-carousel/css/">Horizontal carousel step indicator</a>.</figcaption>
 </figure>
 
-This demo features a step indicator shown above each image carousel. When a carousel contains three images, the indicator bar starts at 33% width to indicate you are currently looking at image one of three. When the last image is in view–determined by the scroller having scrolled to the end–the indicator takes up the full width of the scroller.
+{% Details %}
+{% DetailsSummary %}✨ Try it for yourself{% endDetailsSummary %}
+<iframe src="https://scroll-driven-animations.style/demos/horizontal-carousel/css/?embed" frameborder="0" sandbox="allow-scripts allow-forms allow-top-navigation" width="500" height="600" style="height: 600px; width: 100%; border: 1px solid #333;"></iframe>
+{% endDetails %}
 
-<iframe src="https://scroll-driven-animations.style/demos/horizontal-carousel/css/?embed" frameborder="0" sandbox="allow-scripts allow-forms" width="500" height="600" style="height: 600px; width: 100%; border: 1px solid #333;"></iframe>
 
 The base markup for a gallery is this:
 
@@ -356,7 +372,12 @@ $progressbar.animate(
 
 The visual result is identical in the CSS version: the created `timeline` tracks the root scroller and scale the `#progress` up on the x-axis from 0% to 100% as you scroll the page.
 
-<iframe src="https://scroll-driven-animations.style/demos/progress-bar/waapi/?embed" frameborder="0" sandbox="allow-scripts allow-forms" width="500" height="600" style="height: 600px; width: 100%; border: 1px solid #333;"></iframe>
+
+{% Details %}
+{% DetailsSummary %}✨ Try it for yourself{% endDetailsSummary %}
+<iframe src="https://scroll-driven-animations.style/demos/progress-bar/waapi/?embed" frameborder="0" sandbox="allow-scripts allow-forms allow-top-navigation" width="500" height="600" style="height: 600px; width: 100%; border: 1px solid #333;"></iframe>
+{% endDetails %}
+
 
 ## Getting practical with View Progress Timeline
 
@@ -413,14 +434,14 @@ animation-range: entry 0% entry 100%;
 Use the tool embedded below to see what each range-name represents and how the percentages affect the start and end positions. Try to set the range-start to `entry 0%` and the range-end to `cover 50%`, and then drag the scrollbar to see the animation result.
 
 <figure>
-  {% Video src="video/AeNB0cHNDkYPUYzDuv8gInYA9rY2/x6SLvlnns26zNGeJOCuS.mp4", width="800", height="800", controls="true", playsinline="true" %}
-  <figcaption>Recording of the ranges visualization tool.</figcaption>
-</figure>
-
-<figure>
   <iframe src="https://scroll-driven-animations.style/tools/view-timeline/ranges/?embed" frameborder="0" sandbox="allow-scripts allow-forms allow-top-navigation" width="500" height="600" style="height: 600px; width: 100%; border: 1px solid #333;"></iframe>
   <figcaption>The View Timeline Ranges Visualizer, available at <a href="https://goo.gle/view-timeline-range-tool">https://goo.gle/view-timeline-range-tool</a></figcaption>
 </figure>
+
+{% Details %}
+{% DetailsSummary %}Watch a recording{% endDetailsSummary %}
+{% Video src="video/AeNB0cHNDkYPUYzDuv8gInYA9rY2/x6SLvlnns26zNGeJOCuS.mp4", width="800", height="800", controls="true", playsinline="true" %}
+{% endDetails %}
 
 As you might notice while playing around with this View Timeline Ranges tools, some ranges can be targeted by two different range-name + range-offset combinations. For example, `entry 0%`, `entry-crossing 0%`, and `cover 0%` all target the same area.
 
@@ -430,14 +451,17 @@ When the range-start and range-end target the same range-name and span the entir
 
 #### Demo: Image reveal
 
-<figure>
-  {% Video src="video/AeNB0cHNDkYPUYzDuv8gInYA9rY2/eV0R7BXHO7ieTFVBfTEE.mp4", width="800", height="800", controls="true", playsinline="true" %}
-  <figcaption>Recording of the “image reveal” demo.</figcaption>
-</figure>
-
 This demo fades in the images as they enter the scrollport. This is done using an Anonymous View Timeline. The animation range has been tweaked so that each image is at full opacity when it is halfway the scroller.
 
+<figure>
+  {% Video src="video/AeNB0cHNDkYPUYzDuv8gInYA9rY2/eV0R7BXHO7ieTFVBfTEE.mp4", width="800", height="800", controls="true", playsinline="true" %}
+  <figcaption>Demo: <a href="https://scroll-driven-animations.style/demos/image-reveal/css/anonymous.html">Image reveal</a></figcaption>
+</figure>
+
+{% Details %}
+{% DetailsSummary %}✨ Try it for yourself{% endDetailsSummary %}
 <iframe src="https://scroll-driven-animations.style/demos/image-reveal/css/anonymous.html?embed" frameborder="0" sandbox="allow-scripts allow-forms allow-top-navigation" width="500" height="600" style="height: 600px; width: 100%; border: 1px solid #333;"></iframe>
+{% endDetails %}
 
 The expanding effect is achieved by using a clip-path that is animated. The CSS used for this effect is this:
 
@@ -475,11 +499,12 @@ Reworking the image reveal demo from earlier, the revised code looks like this:
 }
 ```
 
-Using `view-timeline-name: revealing-image`, the element will be tracked within its nearest scroller. The same value is then used as the value for the `animation-timeline` property.
+Using `view-timeline-name: revealing-image`, the element will be tracked within its nearest scroller. The same value is then used as the value for the `animation-timeline` property. The visual output is exactly the same as before.
 
-The visual output, is exactly the same as before:
-
+{% Details %}
+{% DetailsSummary %}✨ Try it for yourself{% endDetailsSummary %}
 <iframe src="https://scroll-driven-animations.style/demos/image-reveal/css/?embed" frameborder="0" sandbox="allow-scripts allow-forms allow-top-navigation" width="500" height="600" style="height: 600px; width: 100%; border: 1px solid #333;"></iframe>
+{% endDetails %}
 
 ### Creating a View Progress Timeline in JavaScript
 
@@ -507,18 +532,23 @@ $el.animate({
 
 {% Aside %} The animated element `$el` and the `subject` do not need to be the same element. This means that you can track an element in its scroller while animating a distant element somewhere else in the DOM tree. {% endAside %}
 
-## Attaching to multiple View Timeline ranges with one set of keyframes
+## More things to try out
 
-Let’s take a look at this contact list demo:
+### Attaching to multiple View Timeline ranges with one set of keyframes
+
+Let’s take a look at this contact list demo where the list entries are animated. As a list entry enters the scrollport from the bottom it slides+fades in, and as it exits the scrollport at the top it slides+fades out.
 
 <figure>
   {% Video src="video/AeNB0cHNDkYPUYzDuv8gInYA9rY2/edztzaUNSuQsUVUzF9vr.mp4", width="800", height="800", controls="true", playsinline="true" %}
-  <figcaption>Recording of the “contact list” demo.</figcaption>
+  <figcaption>Demo: <a href="https://scroll-driven-animations.style/demos/contact-list/css/multiple-animations.html">Contact list</a></figcaption>
 </figure>
 
+{% Details %}
+{% DetailsSummary %}✨ Try it for yourself{% endDetailsSummary %}
 <iframe src="https://scroll-driven-animations.style/demos/contact-list/css/multiple-animations.html?embed" frameborder="0" sandbox="allow-scripts allow-forms allow-top-navigation" width="500" height="600" style="height: 600px; width: 100%; border: 1px solid #333;"></iframe>
+{% endDetails %}
 
-In this demo, two scroll-driven animations are attached to each element. As an element enters the scrollport from the bottom it slides+fades in, and as it exits the scrollport at the top it slides+fades out. Each element gets decorated with a View Timeline that tracks the element as it crosses its scrollport. The `animate-in` animation is attached to the `entry` range of the timeline, and the `animate-out` animation to the `exit` range of the timeline.
+For this demo, each element gets decorated with one View Timeline that tracks the element as it crosses its scrollport yet two scroll-driven animations are attached to it. The `animate-in` animation is attached to the `entry` range of the timeline, and the `animate-out` animation to the `exit` range of the timeline.
 
 ```css
 @keyframes animate-in {
@@ -562,13 +592,14 @@ Instead of running two different animations attached to two different ranges, it
 }
 ```
 
-As the keyframes contain the range information, you don’t need to specify the `animation-range`.
+As the keyframes contain the range information, you don’t need to specify the `animation-range`. The result is exactly the same as it was before.
 
-The result is exactly the same as it was before:
-
+{% Details %}
+{% DetailsSummary %}✨ Try it for yourself{% endDetailsSummary %}
 <iframe src="https://scroll-driven-animations.style/demos/contact-list/css/?embed" frameborder="0" sandbox="allow-scripts allow-forms allow-top-navigation" width="500" height="600" style="height: 600px; width: 100%; border: 1px solid #333;"></iframe>
+{% endDetails %}
 
-## Attaching to a non-ancestor Scroll Timeline
+### Attaching to a non-ancestor Scroll Timeline
 
 {% Aside %} The exact syntax for this feature is [still under discussion](https://github.com/w3c/csswg-drafts/issues/7759). The name of the properties might still change. {% endAside %}
 
@@ -601,27 +632,32 @@ Put differently, you can use `scroll-timeline-root` and `view-timeline-root` to 
 
 ## More demos and resources
 
-All demos covered in this article on [the scroll-driven-animations.style mini-site](https://scroll-driven-animations.style/).
+All demos covered in this article on [the scroll-driven-animations.style mini-site](https://scroll-driven-animations.style/). The website includes many more demos to highlight what is possible with Scroll-driven animations.
 
-The website includes extra demos such as this album cover effect:
+One of the additional demos is this list of album covers. Each cover rotates in 3D as it takes the center spotlight.
 
 <figure>
   {% Video src="video/AeNB0cHNDkYPUYzDuv8gInYA9rY2/hiItR1vueBVTJbgOAwHp.mp4", width="800", height="800", controls="true", playsinline="true" %}
-  <figcaption>Recording of a ”cover flow” implementation. The albums rotate in 3D as they take the center spotlight.</figcaption>
+  <figcaption>Demo: <a href="https://scroll-driven-animations.style/demos/cover-flow/css/">Cover Flow</a></figcaption>
 </figure>
 
+{% Details %}
+{% DetailsSummary %}✨ Try it for yourself{% endDetailsSummary %}
 <iframe src="https://scroll-driven-animations.style/demos/cover-flow/css/?embed" frameborder="0" sandbox="allow-scripts allow-forms allow-top-navigation" width="500" height="600" style="height: 600px; width: 100%; border: 1px solid #333;"></iframe>
+{% endDetails %}
 
-Or this stacking cards demo that leverage `position: sticky`:
+Or this stacking cards demo that leverage `position: sticky`. As the cards stack, the already stuck cards scale down, creating a nice depth effect. In the end, the entire stack slides out of view as a group.
+
 
 <figure>
   {% Video src="video/AeNB0cHNDkYPUYzDuv8gInYA9rY2/dyy4rOs0WsWOAuxS9sBG.mp4", width="800", height="800", controls="true", playsinline="true" %}
-  <figcaption>Recording of a ”stacking cards” demo. As the cards stack, the already stuck cards scale down. In the end, the entire stack slides out of view as a group.</figcaption>
+  <figcaption>Demo: <a href="https://scroll-driven-animations.style/demos/stacking-cards/css/">Stacking cards<a>.</figcaption>
 </figure>
 
+{% Details %}
+{% DetailsSummary %}✨ Try it for yourself{% endDetailsSummary %}
 <iframe src="https://scroll-driven-animations.style/demos/stacking-cards/css/?embed" frameborder="0" sandbox="allow-scripts allow-forms allow-top-navigation" width="500" height="600" style="height: 600px; width: 100%; border: 1px solid #333;"></iframe>
-
-Hit the ℹ️ icon on each demo page to get an explanation of how it works.
+{% endDetails %}
 
 Also featured on [scroll-driven-animations.style](https://scroll-driven-animations.style/) is a collection of tools such as the View Timeline Range Progress visualization that was included earlier in this post.
 
