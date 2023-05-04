@@ -4,12 +4,16 @@ title: Migrate to a service worker
 subhead: 'Replacing background or event pages with a service worker'
 description: 'A service worker enables extensions to run only when needed, saving resources.'
 date: 2023-03-09
-updated: 2023-04-14
+updated: 2023-05-01
 ---
+
+{% Partial 'extensions/mv3-support.md' %}
 
 A service worker replaces the extension's background or event page to ensure that background code stays off the main thread. This enables extensions to run only when needed, saving resources. 
 
 Background pages have been a fundamental component of extensions since their introduction. To put it simply, background pages provide an environment that lives independent of any other window or tab. This allows extensions to observe and act in response to events.
+
+This page describes tasks for converting background pages to extension service workers. For more information on extension service workers generally, see the tutorial [Handle events with service workers](/docs/extensions/mv3/getstarted/tut-quick-reference/) and the section [About extension service workers](/docs/extensions/mv3/service_workers/).
 
 ## Differences between background scripts and extension service workers {: #differences-with-sws }
 
@@ -76,7 +80,7 @@ Replacing items in `"background.page"` will be dealt with in a later section.
 {% endCompare %}
 </div>
 
-The `"service_worker"` field takes a single string. You will only need the `"type"` field if you use [ES modules](https://web.dev/es-modules-in-sw/#static-imports-only) (using the [`import`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import) keyword). Its value will always be `"module"`.
+The `"service_worker"` field takes a single string. You will only need the `"type"` field if you use [ES modules](https://web.dev/es-modules-in-sw/#static-imports-only) (using the [`import`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import) keyword). Its value will always be `"module"`. For more information, see [Extension service worker basics](/docs/extensions/mv3/service_workers/basics/#import-scripts)
 
 ## Move DOM and window calls to an offscreen document {: #move-dom-and-window }
 
@@ -102,6 +106,13 @@ document.execCommand('copy');
 ```
 
 Communicate between offscreen documents and extension service workers using [message passing](/docs/extensions/mv3/messaging/).
+
+## Convert localStorage to another type {: #convert-localstorage }
+
+The web platform's [`Storage`](https://developer.mozilla.org/docs/Web/API/Storage) interface (accessible from `window.localStorage`) cannot be used in a service worker. To address this do one of the following:
+
+* Move its calls to an [offscreen document](/docs/extensions/reference/offscreen/).
+* Replace it with calls to another storage mechanism. The [`chrome.storage.local`](/docs/extensions/reference/storage/#property-local) namespace will serve most use cases. [Other options](/docs/extensions/mv3/service_workers/service-worker-lifecycle/#persist-data) are available.
 
 ## Register listeners synchronously {: #register-listeners }
 

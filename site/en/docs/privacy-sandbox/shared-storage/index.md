@@ -35,7 +35,7 @@ leakage.
 
 You can [use Shared Storage](#how-does-shared-storage-work) data in two ways:
 
-* [Cross-site content selection](/docs/privacy-sandbox/shared-storage/url-selection/).
+* [Cross-site content selection](/docs/privacy-sandbox/shared-storage/content-selection/).
 * Noisy aggregation of cross-site data with the [Private Aggregation API](/docs/privacy-sandbox/private-aggregation/)
 
 ### Who is this for?
@@ -162,7 +162,6 @@ each use case. Visit the publisher's pages to see how the data is shared in a
 cross-site context.
 
 The demo contains use cases for content selection and Private Aggregation.
-
 
 For the content selection demo,
 [creative rotation](/docs/privacy-sandbox/shared-storage/creative-rotation/),
