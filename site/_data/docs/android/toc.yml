@@ -1,6 +1,7 @@
 - title: i18n.docs.android.customtabs
   sections:
     - url: /docs/android/custom-tabs
+    - url: /docs/android/custom-tabs/browser-support
     - title: i18n.docs.android.guides
       sections:
         - url: /docs/android/custom-tabs/guide-get-started
