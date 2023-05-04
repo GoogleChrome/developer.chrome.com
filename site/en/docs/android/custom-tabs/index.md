@@ -37,32 +37,28 @@ are accustomed already.
 Quite a bit! Custom Tabs give you fine grained control over a lot of the browser
 chrome and user experience. Within your app, you launch a Custom Tab via an [Intent](7).
 When this Intent is called, you can add a number of attributes to the
-[CustomTabIntent](8) to get the exact experience you want. This includes 
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!! TODO: add links to entries for each feature, and screenshots !!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[CustomTabIntent](8) to get the exact experience you want. This includes
 
 Custom Entrance and Exit animations to match the rest of your app
 
-{% Video src="video/DXqUldooyJOUnj3qXSYLHbUgUI93/sIeKPXwrHXdCXtGRrv2Q.mp4" width="544", height="1136" %}
+{% Video src="video/DXqUldooyJOUnj3qXSYLHbUgUI93/sIeKPXwrHXdCXtGRrv2Q.mp4", width="544", height="1136" %}
 
 Modifing the toolbar color to match your apps branding
 
-{% Video src="video/DXqUldooyJOUnj3qXSYLHbUgUI93/kQ0LUuUdcWFM34IPg5I6.mp4" width="544", height="1136" %}
+{% Video src="video/DXqUldooyJOUnj3qXSYLHbUgUI93/kQ0LUuUdcWFM34IPg5I6.mp4", width="544", height="1136" %}
 
 And that color consistency can stay with your app, even if they switch between Light and Dark themes
 
-{% Video src="video/DXqUldooyJOUnj3qXSYLHbUgUI93/YBinAgwhx0kFizQWrrEr.mp4" width="640", height="1336" %}
+{% Video src="video/DXqUldooyJOUnj3qXSYLHbUgUI93/YBinAgwhx0kFizQWrrEr.mp4", width="640", height="1336" %}
 
 You can add custom actions and entries to the browser's toolbar, and menus
 
-{% Video src="video/DXqUldooyJOUnj3qXSYLHbUgUI93/QFiyUPGANEvjVqfsujF4.mp4" width="544", height="1136" %}
+{% Video src="video/DXqUldooyJOUnj3qXSYLHbUgUI93/QFiyUPGANEvjVqfsujF4.mp4", width="544", height="1136" %}
 
 You can even control the launch height of the Custom Tab, enabling things like
 streaming your videos while interacting with your web store.
 
-{% Video src="video/DXqUldooyJOUnj3qXSYLHbUgUI93/lsyAKIKYdD87QjSiSQOw.mp4" width="544", height="1136" %}
+{% Video src="video/DXqUldooyJOUnj3qXSYLHbUgUI93/lsyAKIKYdD87QjSiSQOw.mp4", width="544", height="1136" %}
 
 That is far from everything - Custom Tabs are very powerful, and under active development. Each browser needs to add support for these features as they become available. While nearly all have some level of support, it is important to know what may or may not be available in your user's browsers. We created a [feature comparison table](TODO) to quickly check the availability of the different features across popular Android browsers.
 
