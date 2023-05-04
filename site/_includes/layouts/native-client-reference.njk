@@ -1,5 +1,10 @@
 {% extends "layouts/base.njk" %}
 
+
+{% block css %}
+{% InlineCss '/css/main.css' %}
+{% endblock %}
+
 {#
   Native Client docs rely on the old prettify.js project for syntax
   highlighting.

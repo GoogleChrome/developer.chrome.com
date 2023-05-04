@@ -1,37 +1,28 @@
 // Globals
-@import 'globals/functions';
-@import 'globals/colors';
-@import 'globals/vars';
-@import 'globals/mixins';
-@import 'globals/gorko';
-@import 'globals/extends';
-
-@import 'fonts';
-@import 'theme';
-@import 'reset';
-@import 'global';
-@import 'typography';
+@import '../global';
 
 //blocks
-@import 'blocks/event-card';
-@import 'blocks/events-hero';
-@import 'blocks/events-list';
-@import 'blocks/checkbox-group';
-@import 'blocks/filter-sheet';
-@import 'blocks/enhanced-select';
-@import 'blocks/tag-pill-list';
+@import '../blocks/event-card';
+@import '../blocks/events-hero';
+@import '../blocks/events-list';
+@import '../blocks/checkbox-group';
+@import '../blocks/filter-sheet';
+@import '../blocks/enhanced-select';
+@import '../blocks/tag-pill';
+@import '../blocks/tag-pill-list';
+@import '../blocks/tabs';
 
 // Utilities
-@import 'utilities/center-margin';
-@import 'utilities/center-images';
-@import 'utilities/floats';
-@import 'utilities/elevation';
-@import 'utilities/hairline';
-@import 'utilities/colors';
-@import 'utilities/scrollbars';
-@import 'utilities/surface';
-@import 'utilities/visually-hidden';
-@import 'utilities/wrapper';
+@import '../utilities/center-margin';
+@import '../utilities/center-images';
+@import '../utilities/floats';
+@import '../utilities/elevation';
+@import '../utilities/hairline';
+@import '../utilities/colors';
+@import '../utilities/scrollbars';
+@import '../utilities/surface';
+@import '../utilities/visually-hidden';
+@import '../utilities/wrapper';
 
 .events-container {
   max-width: calc(1290px + 3rem);
