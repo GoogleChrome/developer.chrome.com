@@ -64,6 +64,8 @@ experiment-participate:
   en: 'Experiment and participate'
 attribution-reporting-debugging:
   en: 'Debugging Attribution Reporting'
+attribution-reporting-debugging-resources:
+  en: 'Attribution Reporting Debug Resources'
 attribution-reporting-changing:
   en: 'API updates'
 attribution-reporting-handbook:

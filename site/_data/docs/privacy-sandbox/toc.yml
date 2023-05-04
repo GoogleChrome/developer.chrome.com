@@ -93,13 +93,12 @@
           title: i18n.docs.privacy-sandbox.experiment-participate
         - url: /docs/privacy-sandbox/attribution-reporting/chrome-shipping
           title: i18n.docs.privacy-sandbox.attribution-reporting-chrome-shipping
-        - url: /docs/privacy-sandbox/attribution-reporting-debugging
-            - title: i18n.docs.privacy-sandbox.cross-site-federation
-              sections:
-                - url: docs/privacy-sandbox/attribution-reporting-debugging
-                - url: /docs/privacy-sandbox/attribution-reporting-debugging/part-1/
-                - url: /docs/privacy-sandbox/attribution-reporting-debugging/part-2/
-                - url: /docs/privacy-sandbox/attribution-reporting-debugging/part-3/
+        - title: i18n.docs.privacy-sandbox.attribution-reporting-debugging-resources
+          sections:
+            - url: docs/privacy-sandbox/attribution-reporting-debugging
+            - url: /docs/privacy-sandbox/attribution-reporting-debugging/part-1/
+            - url: /docs/privacy-sandbox/attribution-reporting-debugging/part-2/
+            - url: /docs/privacy-sandbox/attribution-reporting-debugging/part-3/
         - url: https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/view?usp=sharing
           title: i18n.docs.privacy-sandbox.attribution-reporting-handbook
         - url: /docs/privacy-sandbox/attribution-reporting-updates
