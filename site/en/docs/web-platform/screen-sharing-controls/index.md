@@ -7,7 +7,7 @@ authors:
   - beaufortfrancois
   - eladalon
 date: 2022-09-29
-updated: 2023-02-07
+updated: 2023-03-14
 hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/5VpvNzrvEM3qSxasqP1j.jpeg
 alt: toddler holding her lips photo
 tags:
@@ -76,9 +76,9 @@ const stream = await navigator.mediaDevices.getDisplayMedia({
 
 ### The `selfBrowserSurface` option {: #selfBrowserSurface }
 
-By default, [`getDisplayMedia()`] offers sharing any tab. In video conferencing scenarios, users often make the mistake of selecting the video conferencing tab itself, leading to a "hall of mirrors" effect, howling and general confusion.
+In video conferencing scenarios, users often make the mistake of selecting the video conferencing tab itself, leading to a "hall of mirrors" effect, howling and general confusion.
 
-To protect users from themselves, video conferencing web apps can now set [`selfBrowserSurface`] to `"exclude"`. Chrome will then exclude the current tab from the list of tabs offered to the user.
+To protect users from themselves, video conferencing web apps can now set [`selfBrowserSurface`] to `"exclude"`. Chrome will then exclude the current tab from the list of tabs offered to the user. To include it, set it to `"include"`. Presently, the default value for `selfBrowserSurface` is `"exclude"`, but web apps are encouraged to set it explicitly, as the default may change in the future.
 
 ```js
 const stream = await navigator.mediaDevices.getDisplayMedia({
@@ -94,9 +94,8 @@ const stream = await navigator.mediaDevices.getDisplayMedia({
   </figcaption>
 </figure>
 
-Presently, the default value for `selfBrowserSurface` is `"exclude"`, but web apps are encouraged to set it explicitly, as the default may change in the future.
 
-Note that `selfBrowserSurface: "exclude"` is mutually exclusive with [`preferCurrentTab: true`].
+Note that an explicit `selfBrowserSurface: "exclude"` is mutually exclusive with [`preferCurrentTab: true`].
 
 ### The `systemAudio` option {: #systemAudio }
 

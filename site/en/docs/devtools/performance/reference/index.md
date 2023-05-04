@@ -129,7 +129,7 @@ profiler][8].
 
 ### Emulate hardware concurrency {: #hardware-concurrency }
 
-To test application performance with different numbers of processor cores, you can configure the value reported by the [`navigator.hardwareConcurrency`](https://developer.mozilla.org/docs/Web/API/Navigator/hardwareConcurrency) property. Some applications use this property to control the degree of parallelism of their application, for example, to control Emscripten pthread pool size. 
+To test application performance with different numbers of processor cores, you can configure the value reported by the [`navigator.hardwareConcurrency`](https://developer.mozilla.org/docs/Web/API/Navigator/hardwareConcurrency) property. Some applications use this property to control the degree of parallelism of their application, for example, to control Emscripten pthread pool size.
 
 To emulate hardware concurrency:
 
@@ -266,7 +266,7 @@ perspective on the activities:
 
 Each tabular view in the **Performance** panel shows links for activities such as functions calls.
 To help you debug, DevTools finds the corresponding function declarations in source files.
-Additionally, if the appropriate [sourcemaps](/blog/sourcemaps/) are present and enabled, DevTools automatically finds the original files.
+Additionally, if the appropriate [source maps](/blog/sourcemaps/) are present and enabled, DevTools automatically finds the original files.
 
 Click a link to open a source file in the **Sources** panel.
 
@@ -377,7 +377,7 @@ View user interactions on the **Interactions** track to track down potential res
 
 To view interactions:
 
-1. [Open DevTools](/docs/devtools/open/), for example, on this [demo page](https://coffee-cart.netlify.app/?ad=1).
+1. [Open DevTools](/docs/devtools/open/), for example, on this [demo page](https://coffee-cart.app/?ad=1).
 1. Open the **Performance** panel and [start a recording](/docs/devtools/evaluate-performance/#record).
 1. Click an element (coffee) and stop the recording.
 1. Find the **Interactions** track in the timeline.
@@ -592,7 +592,7 @@ See [Frame rendering stats](/docs/devtools/rendering#frame-rendering-stats).
 
 ### View painting events in real time with Paint Flashing {: #paint-flash }
 
-Use **Paint Flashing** to get a real time view of all paint events on the page. 
+Use **Paint Flashing** to get a real time view of all paint events on the page.
 
 See [Paint flashing](/docs/devtools/rendering#paint-flashing).
 

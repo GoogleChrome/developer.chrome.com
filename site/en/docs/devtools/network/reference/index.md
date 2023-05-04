@@ -156,6 +156,10 @@ To manually clear browser cookies at any time, right-click anywhere in the **Req
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4mVbTicUyxwkmd5TB1HS.png", alt="Selecting Clear Browser Cookies.", width="800", height="497" %}
 
+### Override HTTP response headers {: #override-headers }
+
+See [Override files and HTTP response headers locally](/docs/devtools/overrides/#override-headers).
+
 ### Override the user agent {: #user-agent }
 
 To manually override the user agent:

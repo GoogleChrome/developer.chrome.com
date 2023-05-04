@@ -21,7 +21,7 @@ You can store whether the user has registered on your site into Shared Storage,
 then render a seperate element based on whether the user's stored status (is
 the user a "known" customer).
 
-## Try setting known customers
+## Set known customers
 
 To experiment with identifying known customers in Shared Storage, confirm
 you're using Chrome 104.0.5086.0 or later. Then enable the
@@ -69,10 +69,12 @@ async function injectButton() {
   });
 
   // Run the URL selection operation to choose the button based on the user status
-  const opaqueURL = await window.sharedStorage.selectURL('known-customer', BUTTON_URLS);
+  const fencedFrameConfig = await window.sharedStorage.selectURL('known-customer', BUTTON_URLS, {
+    resolveToConfig: true
+  });
 
   // Render the opaque URL into a fenced frame
-  document.getElementById('button-slot').src = opaqueURL;
+  document.getElementById('button-slot').src = fencedFrameConfig;
 }
 
 injectButton();

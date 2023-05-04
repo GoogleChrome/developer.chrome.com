@@ -99,8 +99,8 @@ Anteriormente, o stack trace incluía também os scripts de terceiros como `zone
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GQ9B11tKBcFc1BxQYW9z.png", alt="Ignorar os scripts de terceiros conhecidos automaticamente", width="800", height="425" %}
 
-<!-- Behind the scenes, DevTools ignores third-party scripts based on the new `x_google_ignoreList` property in sourcemaps. Frameworks and bundlers need to supply this information. See [Case Study: Better Angular Debugging with DevTools](/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular).  -->
-Por baixo do capô, o DevTools ignora esses scripts baseados na nova propriedade `x_google_ignoreList` nos sourcemaps. Os frameworks e bundlers precisam prover essa informação. Veja o [Estudo de caso: Melhor debug com Angular e DevTools](/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular).
+<!-- Behind the scenes, DevTools ignores third-party scripts based on the new `x_google_ignoreList` property in source maps. Frameworks and bundlers need to supply this information. See [Case Study: Better Angular Debugging with DevTools](/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular).  -->
+Por baixo do capô, o DevTools ignora esses scripts baseados na nova propriedade `x_google_ignoreList` nos source maps. Os frameworks e bundlers precisam prover essa informação. Veja o [Estudo de caso: Melhor debug com Angular e DevTools](/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular).
 
 <!-- Optionally, if you prefer to always view full stack traces, you can disable the setting via **Settings** > **Ignore list** > **Automatically add known third-party scripts to ignore list**. -->
 Opcionalmente, se você preferir sempre ver os stack traces completos, você pode desabilitar essa cofiguração através do caminho **Configurações** > **Lista de ignorados** > **Adicionar scripts de terceiros conhecidos na lista automaticamente**
@@ -119,7 +119,7 @@ Issue do Chromium: [1323199](https://crbug.com/1323199)
 Com a configuração **Adicionar scripts de terceiros conhecidos na lista automaticamente**, a call stack agora só vai mostrar frames que forem relevantes para o seu código.
 
 <!-- Open this [demo](https://ng-devtools.netlify.app/) and set a breakpoint at the `increment()` function in `app.component.ts`. Click the increment button on the page to trigger the breakpoint. The call stack shows only frames from your code (e.g.  `app.component.ts` and `button.component.ts`).  -->
-Abra essa [demo](https://ng-devtools.netlify.app/) e crie um breakpoint na função `increment()` dentro de `app.component.ts`. Clique no botão de incremento para ativar esse breakpoint. A call stack agora só mostra os frames do seu código (`app.component.ts` e `button.component.ts`). 
+Abra essa [demo](https://ng-devtools.netlify.app/) e crie um breakpoint na função `increment()` dentro de `app.component.ts`. Clique no botão de incremento para ativar esse breakpoint. A call stack agora só mostra os frames do seu código (`app.component.ts` e `button.component.ts`).
 
 <!-- To view all frames, enable **Show ignore-listed frames**. Previously, DevTools displayed all frames by default.  -->
 Para ver todos os frames, ative a configuração **Mostrar frames na lista de ignorados**. Anteriormente, o DevTools mostrava todos os frames por padrão.

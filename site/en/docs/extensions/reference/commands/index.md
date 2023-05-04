@@ -61,7 +61,7 @@ Standard key strings
 
 Modifier key strings
 
-: `Ctrl`, `Alt`, `Shift`, `MacCtrl` (macOS only), `Command` (macOS only), `Search` (ChromeOS only)
+: `Ctrl`, `Alt` (`Option` on macOS), `Shift`, `MacCtrl` (macOS only), `Command` (macOS only), `Search` (ChromeOS only)
 
 {% Aside 'note' %}
 

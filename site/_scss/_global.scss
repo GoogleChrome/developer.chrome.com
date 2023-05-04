@@ -25,6 +25,10 @@ body {
   // when calculating min-content intrinsic sizes.
   overflow-wrap: break-word;
   transition: background 500ms ease-in-out, color 200ms ease;
+
+  &:has(dialog[open]) {
+    overflow: hidden;
+  }
 }
 
 a:not([class]) {

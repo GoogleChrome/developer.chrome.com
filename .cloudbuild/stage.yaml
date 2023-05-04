@@ -1,12 +1,12 @@
 timeout: 2700s # Set build timeout to 45 mins
 steps:
   - id: 'install'
-    name: node:18
+    name: node:16
     entrypoint: npm
     args: ['ci']
 
   - id: 'prepare'
-    name: node:18
+    name: node:16
     entrypoint: bash
     args:
       - '-c'
@@ -15,7 +15,7 @@ steps:
         npm run stage:github announceDeploymentStart
 
   - id: 'build'
-    name: node:18
+    name: node:16
     env:
       - 'CI=true'
       - 'NODE_OPTIONS="--max_old_space_size=8192"'
@@ -52,7 +52,7 @@ steps:
         fi
 
   - id: 'finalize'
-    name: node:18
+    name: node:16
     entrypoint: bash
     args:
       - '-c'

@@ -4,14 +4,32 @@
 
 {# $content #}
 
+{# ### Chrome 112 {: #chrome112 }
+
+* [Recorder のアップデート](/ja/blog/new-in-devtools-112/#recorder)
+* [Recorder リプレイの拡張機能](/ja/blog/new-in-devtools-112/#replay-extensions)
+* [ピアスセレクタを使用した記録](/ja/blog/new-in-devtools-112/#pierce-selectors)
+* [Lighthouse の解析結果を Puppeteer のスクリプトとして書き出す](/ja/blog/new-in-devtools-112/#puppeteer-lighthouse)
+* [拡張機能を手に入れる](/ja/blog/new-in-devtools-112/#get-extensions)
+* [Elements > Styles のアップデート](/ja/blog/new-in-devtools-112/#elements-styles)
+* [Styles ペインでの CSS ドキュメントの表示](/ja/blog/new-in-devtools-112/#css)
+* [CSS ネスティングのサポート](/ja/blog/new-in-devtools-112/#nesting)
+* [Console でログポイントや条件付きブレークポイントをマークする](/ja/blog/new-in-devtools-112/#logpoint)
+* [デバッグ時に無関係なスクリプトを無視する](/ja/blog/new-in-devtools-112/#ignore-list)
+* [JavaScript Profiler の非推奨化の開始](/ja/blog/new-in-devtools-112/#js-profiler-deprecation)
+* [コントラスト低減をエミュレート](/ja/blog/new-in-devtools-112/#reduced-contrast)
+* [Lighthouse 10](/ja/blog/new-in-devtools-112/#lighthouse)
+* [その他のハイライト](/ja/blog/new-in-devtools-112/#misc)
+ #}
+
 {# ### Chrome 111 {: #chrome111 }
 
-* [Debugging HD color with the Styles pane](/ja/blog/new-in-devtools-111/#color)
-* [Enhanced breakpoint UX](/ja/blog/new-in-devtools-111/#breakpoint-redesign)
-* [Customizable Recorder shortcuts](/ja/blog/new-in-devtools-111/#recorder)
-* [Better syntax highlight for Angular](/ja/blog/new-in-devtools-111/#syntax)
-* [Reorganize caches in the Application panel](/ja/blog/new-in-devtools-111/#cache)
-* [Miscellaneous highlights](/ja/blog/new-in-devtools-111/#misc)
+* [Styles ペインで高精細色をデバッグする](/ja/blog/new-in-devtools-111/#color)
+* [強化されたブレークポイントの UX](/ja/blog/new-in-devtools-111/#breakpoint-redesign)
+* [カスタマイズ可能な Recorder ショートカット](/ja/blog/new-in-devtools-111/#recorder)
+* [Angular のシンタックスハイライトの改善](/ja/blog/new-in-devtools-111/#syntax)
+* [キャッシュを Application パネルで再整理する](/ja/blog/new-in-devtools-111/#cache)
+* [その他のハイライト](/ja/blog/new-in-devtools-111/#misc)
  #}
 
 
@@ -84,7 +102,7 @@
 * [実行時に WASM のデバッグ情報をアタッチ](/ja/blog/new-in-devtools-105/#wasm)
 * [デバッグ中のライブ編集をサポート](/ja/blog/new-in-devtools-105/#live-edit)
 * [Styles ペインで @scope at-rule の閲覧と編集](/ja/blog/new-in-devtools-105/#scope)
-* [Sourcemap の改善](/ja/blog/new-in-devtools-105/#sourcemaps)
+* [Source map の改善](/ja/blog/new-in-devtools-105/#sourcemaps)
 * [その他のハイライト](/ja/blog/new-in-devtools-105/#misc)
 
 ### Chrome 104 {: #chrome104 }

@@ -2,11 +2,11 @@
 layout: 'layouts/doc-post.njk'
 title: 'Creative rotation'
 subhead: >
-  Use a Shared Storage worklet to rotate creatives across sites.
+  Use a Shared Storage to determine what creative a user sees across sites.
 description: >
-  Use a Shared Storage worklet to rotate creatives across sites.
+  Use a Shared Storage to determine what creative a user sees across sites.
 date: 2022-10-14
-updated: 2022-11-08
+updated: 2023-04-14
 authors:
   - alexandrawhite
   - kevinkiklee
@@ -17,8 +17,13 @@ Sandbox proposal for general purpose, cross-site storage, which supports many
 possible use cases. One such example is creative rotation, which is available
 to test in Chrome 104.0.5086.0 and later.
 
-With creative rotation, you can store the creative rotation mode and other
-metadata to rotate a creative seen by users across different sites. 
+With creative rotation, you can store data, such as creative ID, view
+counts, and user interaction, to determine which creative users' see across
+different sites.
+
+Run a Shared Storage worklet to select a URL from a provided list, based on the
+stored data, and then render that creative in a fenced frame. This can be used
+to select new ads or other content. 
 
 ## Try creative rotation
 
@@ -41,9 +46,13 @@ for the given use cases. These are not meant to be used in production.
 
 {% endAside %}
 
-An advertiser or a content producer may want to apply different strategies to a campaign, and rotate the contents or creatives to increase effectiveness.  Shared storage can be used to run different rotation strategies, such as sequential rotation and evenly-distributed rotation, across different sites.
+An advertiser or a content producer may want to apply different strategies to a
+campaign, and rotate the contents or creatives to increase effectiveness. 
+Shared storage can be used to run different rotation strategies, such as
+sequential rotation and evenly-distributed rotation, across different sites.
 
 In this example:
+
 *   `creative-rotation.js` is embedded in a frame. This script sets which ads are the most important ( weight), and calls to the worklet to determine which content should be displayed.
 *   `creative-rotation-worklet.js`  is the shared storage worklet that determines the weighted distribution for the contents and returns which should be displayed.
 
@@ -86,10 +95,13 @@ async function injectAd() {
 
   // Run the URL selection operation to determine the next content rendered.
   const urls = DEMO_CONTENT_CONFIG.map(({ url }) => ({ url }));
-  const opaqueURL = await window.sharedStorage.selectURL('content-rotation', urls, { data: DEMO_CONTENT_CONFIG });
+  const fencedFrameConfig = await window.sharedStorage.selectURL('content-rotation', urls, { 
+    data: DEMO_CONTENT_CONFIG,
+    resolveToConfig: true
+  });
 
   // Render the opaque URL into a fenced frame
-  document.getElementById('content-slot').src = opaqueURL;
+  document.getElementById('content-slot').config = fencedFrameConfig;
 }
 
 injectAd();
@@ -129,8 +141,9 @@ class SelectURLOperation {
        */
       case 'weighted-distribution':
         
-        // Sum the weights cumulatively, and find the first URL where the sum exceeds
-        // the random number. The array is sorted in descending order first.
+        // Sum the weights cumulatively, and find the first URL where the
+        // sum exceeds the random number. The array is sorted in
+        // descending order first.
         let weightSum = 0;
         const { url } = data
           .sort((a, b) => b.weight - a.weight)
@@ -145,7 +158,6 @@ class SelectURLOperation {
       default:
         index = 0;
     }
-
     return index;
   }
 }
