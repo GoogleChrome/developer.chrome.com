@@ -75,10 +75,9 @@ streaming your videos while interacting with your web store.
   <figcaption>A partial Custom Tab opening with a set height</figcaption>
 </figure>
 
-That is far from everything - Custom Tabs are very powerful, and under active development. Each browser needs to add support for these features as they become available. While nearly all have some level of support, it is important to know what may or may not be available in your user's browsers. We created a [feature comparison table](TODO) to quickly check the availability of the different features across popular Android browsers.
+That is far from everything - Custom Tabs are very powerful, and under active development. Each browser needs to add support for these features as they become available. While nearly all have some level of support, it is important to know what may or may not be available in your user's browsers. We created a [feature comparison table](/docs/android/custom-tabs/browser-support) to quickly check the availability of the different features across popular Android browsers.
 
-In addition to customizing the look and feel of the web content, Custom Tabs also allow the developer to pre-start the browser and pre-fetch
-content for faster loading.
+In addition to customizing the look and feel of the web content, Custom Tabs also allow the developer to warmup the browser process and pre-fetch content for faster loading.
 
 {% Img src="image/Vww75TFpThOgTNuASFM6UYfBAp53/mExXXCgjE1Hm0VDxskRw.gif", alt="Perfomance comparison between opening a browser, the WebView and Custom Tabs.", width="640", height="360" %}
 
@@ -87,10 +86,11 @@ You can test this now with our [sample][1] on GitHub.
 ## When should I use Custom Tabs?
 
 There is no single "correct" way to load web content. In certain situations,
-WebView is going to be the right thing to use. One example would be if you are
-exclusively hosting your own content inside your app. If your app directs people
-to URLs outside domains, the built in shared state in Custom Tabs means they
-are likely a better choice. Other strengths of Custom Tabs include
+WebView is going to be the right thing to use. For example, if you are
+exclusively hosting your own content inside your app, or if you need to inject
+javascript directly from your app. If your app directs people to URLs outside
+domains, the built in shared state in Custom Tabs means they are likely a
+better choice. Other strengths of Custom Tabs include
 
 1. Security: Custom Tabs use Google's Safe Browsing to protect the user and the
 device from dangerous sites.
@@ -126,7 +126,7 @@ issues on [crbug.com][3] and ask questions to our Twitter account
 
 ## Getting Started
 
-If you are getting started with Custom Tabs, checkout the [Implementation Guide][11] and the
+If you are getting started with Custom Tabs, checkout the [How-To section][11] and the
 [GitHub Demo][1].
 
 For questions, check the [chrome-custom-tabs][5] tag on StackOverflow.
