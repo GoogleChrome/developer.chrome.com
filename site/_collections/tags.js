@@ -38,8 +38,6 @@ module.exports = function (collections) {
     .reverse()
     .filter(filterOutDrafts);
 
-  // console.log(allSorted[0]);
-
   // The i18n for this file exposes top-level object keys of valid tags.
   const supportedTags = /** @type {{[tag: string]: unknown}} */ (
     YAML.load(
