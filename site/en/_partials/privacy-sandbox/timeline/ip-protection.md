@@ -1,0 +1,2 @@
+*  The [IP Protection proposal](https://github.com/GoogleChrome/ip-protection) has entered [public discussion](https://github.com/GoogleChrome/ip-protection/issues).
+*  This proposal has not been implemented in any browser.

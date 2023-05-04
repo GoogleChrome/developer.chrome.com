@@ -1,6 +1,9 @@
 # The top-level keys in this file are used to generate tag pages under /tags/<tag>, presuming
 # they have at least one matching post.
 
+example:
+  en: Example
+
 memory:
   en: Memory
 
@@ -16,6 +19,9 @@ accessibility:
 
 amp:
   en: AMP
+
+automation:
+  en: Browser Automation
 
 autoplay:
   en: Autoplay
@@ -54,8 +60,14 @@ test:
 performance:
   en: Performance
 
+sourcemap:
+  en: source map
+
 storage:
   en: Storage
+
+network:
+  en: Network
 
 dom:
   en: DOM
@@ -110,11 +122,17 @@ graphics:
 houdini:
   en: Houdini
 
+headless:
+  en: Chrome’s Headless mode
+
 html:
   en: HTML
 
 media:
   en: Media
+
+webgpu:
+  en: WebGPU
 
 new-in-chrome:
   en: New in Chrome
@@ -300,6 +318,9 @@ websocket:
 
 websocketstream:
   en: WebSocketStream
+
+test-automation:
+  en: Test automation
 
 service-worker:
   en: Service Worker

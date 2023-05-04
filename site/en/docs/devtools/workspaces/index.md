@@ -60,7 +60,7 @@ on Stack Overflow][6] to share your knowledge with the rest of the DevTools comm
 
 ## Related feature: Local Overrides {: #overrides }
 
-[Local Overrides][7] is another DevTools feature that is similar to Workspaces. Use Local Overrides
+[Local overrides][7] is another DevTools feature that is similar to Workspaces. Use local overrides
 when you want to experiment with changes to a page, and you need to see those changes across page
 loads, but you don't care about mapping your changes to the page's source code.
 
@@ -241,7 +241,7 @@ Next, learn how to use DevTools to [change CSS](/docs/devtools/css/) and [debug 
 [4]: http://blog.teamtreehouse.com/introduction-source-maps
 [5]: https://groups.google.com/forum/#!forum/google-chrome-developer-tools
 [6]: https://stackoverflow.com/questions/ask?tags=google-chrome-devtools
-[7]: /blog/new-in-devtools-65/#overrides
+[7]: /docs/devtools/overrides/
 [8]: https://glitch.com/edit/#!/remix/workspaces
 [9]: https://en.wikipedia.org/wiki/Port_(computer_networking)#Use_in_URLs
 [10]: #elements

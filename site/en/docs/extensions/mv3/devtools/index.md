@@ -271,7 +271,7 @@ extensionPanel.onShown.addListener(function (extPanelWindow) {
 
 ### Messaging from content scripts to the DevTools page {: #content-script-to-devtools }
 
-Messaging between the DevTools page and content scripts is indirect, by way of the serice worker.
+Messaging between the DevTools page and content scripts is indirect, by way of the service worker.
 
 When sending a message _to_ a content script, the service worker can use the
 [`tabs.sendMessage()`][api-scripting-sendmessage] method, which directs a message to the content

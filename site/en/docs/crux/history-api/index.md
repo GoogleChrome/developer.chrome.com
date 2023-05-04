@@ -22,7 +22,7 @@ date: 2023-02-07
 
 # Optional
 # Include an updated date when you update your post
-# updated: 2023-02-07
+updated: 2023-02-27
 
 # Optional
 # How to add a new author
@@ -585,7 +585,7 @@ A bin's start and end values are given in the value type of the metric it repres
 
 #### UrlNormalization {: #api-response-urlnormalization }
 
-Object representing the normalization actions taken to normalize a url to achieve a higher chance of successful lookup. These are simple automated changes that are taken when looking up the provided `url_patten` would be known to fail. Complex actions like following redirects are not handled.
+Object representing the normalization actions taken to normalize a url to achieve a higher chance of successful lookup. These are simple automated changes that are taken when looking up the provided `url_pattern` would be known to fail. Complex actions like following redirects are not handled.
 
 ```json
 {
@@ -621,3 +621,7 @@ Object representing the normalization actions taken to normalize a url to achiev
     </tr>
   </tbody>
 </table>
+
+## Rate limits
+
+The CrUX History API shares the same limit with the [CrUX API](/docs/crux/api) for 150 queries per minute per Google Cloud project for either API, which is offered free of charge. This limit, and your current usage, can be seen in the [Google Cloud Console](https://console.cloud.google.com/apis/api/chromeuxreport.googleapis.com/quotas). This generous quota should be sufficient for the vast majority of use cases and at present it is not possible to pay for an increased quota.

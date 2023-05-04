@@ -6,26 +6,23 @@ subhead: >
 description: >
   An API to convey a limited amount of information from one browsing context to another (for example, across sites) to help combat fraud, without passive tracking.
 date: 2021-05-18
-updated: 2022-10-06
+updated: 2023-03-14
 authors:
   - samdutton
 ---
 
 {% Aside %}
-This article previously referred to Private State Tokens as "Trust Tokens". The Trust
-Token API has been renamed to the Private State Token API to better showcase its
-privacy and utility benefits.
+This article previously referred to Private State Tokens as "Trust Tokens". The
+Trust Token API has been renamed to the Private State Token API to better
+showcase its privacy and utility benefits.
 
-Check out [Trust Tokens renamed Private State Tokens](/blog/rename-trust-tokens)
+Read [Trust Tokens renamed Private State Tokens](/blog/rename-trust-tokens)
 for more information.
 {% endAside %}
 
 ## Implementation status
 
-* [In origin trial](https://web.dev/origin-trials/) Chrome 84 to 101: [now closed](/origintrials/#/view_trial/2479231594867458049).
-* [Demo](https://trust-token-demo.glitch.me/): this no longer works, as the origin trial is closed. You can still view the code.
-* [Chrome DevTools integration](/blog/new-in-devtools-89/#trust-token).
-* [Chrome Platform Status](https://www.chromestatus.com/feature/5078049450098688).
+{% Partial 'privacy-sandbox/timeline/private-state-tokens.njk' %}
 
 ## What are Private State Tokens?
 
@@ -112,6 +109,16 @@ that the user is trusted by the issuer to be a real human.
 For more detail about the JavaScript calls in this example, see [Sample API usage](https://web.dev/trust-tokens/#sample-api-usage).
 {% endAside %}
 
+## Is tooling available for Privacy State Tokens?
+
+Chrome DevTools turns on inspection from the Network and Application tabs. Read more about this [DevTools integration](/blog/new-in-devtools-89/#trust-token) and about [Private State Tokens](/docs/privacy-sandbox/trust-tokens/).
+
+## How do publishers handle tokens from multiple trusted issuers?
+
+The publisher can check a user's browser for valid tokens with `document.hasTrustToken()` for one issuer at a time. If this returns `true` and a token is available, the publisher can redeem the token and stop looking for other tokens.
+
+The publisher must decide which token issuers to check and in what order.
+
 ---
 
 ## Engage and share feedback
@@ -125,6 +132,7 @@ follow discussion](https://github.com/WICG/trust-token-api/issues).
 [Privacy&nbsp;Pass&nbsp;working group](https://datatracker.ietf.org/wg/privacypass/about/).
 * **Developer support**: Ask questions and join discussions on the
 [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
+* **Origin trial questions**: [file a Chromium bug](https://bugs.chromium.org/p/chromium/issues/list?q=trust%20tokens) or respond to the feedback form that is sent to you as an origin trial participant. 
 
 
 ## Find out more

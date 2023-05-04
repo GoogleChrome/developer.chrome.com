@@ -8,6 +8,8 @@ date: 2020-11-09
 updated: 2022-09-28
 ---
 
+{% Partial 'extensions/mv3-support.md' %}
+
 This site introduces Manifest V3, short for Manifest Version 3, which is the latest iteration of the Chrome extension platform. It shares the background and reasons for introducing Manifest V3 and the vision for the platform's future, along with resources on how to migrate.
 
 ## What is a manifest? {: #what-is-a-manifest }
@@ -49,7 +51,7 @@ We're excited about the improvements that Manifest V3 brings to the platform. Lo
 [doc-new]: /docs/extensions/whatsnew/
 [manifest-version]: /docs/extensions/mv3/manifest/manifest_version/
 [mv2-sunset]: /docs/extensions/mv3/mv2-sunset/
-[mv3-checklist]: /docs/extensions/mv3/mv3-migration-checklist/
-[mv3-migration]: /docs/extensions/mv3/intro/mv3-migration/
+[mv3-checklist]: /docs/extensions/migrating/checklist/
+[mv3-migration]: /docs/extensions/migrating/
 [mv3-overview]: /docs/extensions/mv3/intro/mv3-overview/
 [mv3-platform]: /docs/extensions/mv3/intro/platform-vision/

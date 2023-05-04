@@ -2,13 +2,13 @@
 layout: "layouts/doc-post.njk"
 title: Fill out the privacy fields
 date: 2020-06-12
-updated: 2021-08-13
+updated: 2023-05-01
 description: >
-  Use the privacy tab to help the Chrome Web Store team review your extension as quickly
+  Use the privacy practices tab to help the Chrome Web Store team review your extension as quickly
   as possible.
 ---
 
-The privacy tab for an extension lets you state what the extension is for and list/justify its
+The Privacy practices tab for an extension lets you state what the extension is for and list/justify its
 permissions. Providing accurate information in these fields helps us review your extension as
 quickly as possible.
 
