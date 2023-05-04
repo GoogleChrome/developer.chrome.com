@@ -21,7 +21,7 @@
 import {BaseElement} from './base-element';
 import {html} from 'lit-element';
 import {unsafeSVG} from 'lit-html/directives/unsafe-svg';
-import closeIcon from '../../_includes/icons/close.svg';
+import closeIcon from '../../_includes/icons/close-tag-pill.svg';
 
 import {store} from '../store';
 import {removeEntry, clearFilters} from '../actions/filter';
