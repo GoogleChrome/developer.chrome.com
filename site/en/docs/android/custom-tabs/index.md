@@ -72,7 +72,7 @@ streaming your videos while interacting with your web store.
 
 <figure>
 {% Video loop=true, playsinline=true, autoplay=true, src="video/DXqUldooyJOUnj3qXSYLHbUgUI93/lsyAKIKYdD87QjSiSQOw.mp4", width="350", height="730", class="screenshot"  %}
-  <figcaption>A partial Custom Tab opening with a set height</figcaption>
+  <figcaption>A partial Custom Tab opening with a set height.</figcaption>
 </figure>
 
 That is far from everything. Custom Tabs are very powerful, and under active development. Each browser needs to add support for these features as they become available. While nearly all have some level of support, it is important to know what may or may not be available in your user's browsers. We created a [feature comparison table](/docs/android/custom-tabs/browser-support) to quickly check the availability of the different features across popular Android browsers.
