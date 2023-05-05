@@ -22,7 +22,7 @@ Some features include:
 - The side panel remains open when navigating between tabs (if set to do so).
 - It can be available only on specific websites.
 - As an extension page, side panels have access to all Chrome APIs.
-- Users can choose which side to display the panel on within Chrome's settings.
+- Within Chrome's settings, users can specify which side the panel should be displayed on.
 
 ## Manifest {: #manifest }
 
