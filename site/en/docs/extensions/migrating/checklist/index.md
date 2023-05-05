@@ -4,7 +4,10 @@ title: "Manifest V3 migration checklist"
 subhead: Keep track of your migration progress
 description: A quick reference for upgrading your extensions from Manifest V2 to Manifest V3.
 date: 2023-03-09
+updated: 2023-03-15
 ---
+
+{% Partial 'extensions/mv3-support.md' %}
 
 The checklists below are here to help you keep track of your migration work. They define tasks that must be completed with links to instructions. Migration work is broadly divided into five categories as described in the [Migration summary](). 
 
@@ -33,6 +36,7 @@ Before beginning, read about the [differences between background scripts and ext
 
 * [Update the "background" field in the manifest](/docs/extensions/migrating/to-service-workers/#update-bg-field)
 * [Move DOM and window calls to an offscreen document](/docs/extensions/migrating/to-service-workers/#move-dom-and-window)
+* [Convert localStorage to chrome.storage.local](/docs/extensions/migrating/to-service-workers/#convert-localstorage)
 * [Register listeners synchronously](/docs/extensions/migrating/to-service-workers/#register-listeners)
 * [Replace calls to `XMLHttpRequest()` with global `fetch()`](/docs/extensions/migrating/to-service-workers/#replace-xmlhttprequest).
 * [Persist states](/docs/extensions/migrating/to-service-workers/#persist-states)

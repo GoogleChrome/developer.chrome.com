@@ -13,6 +13,7 @@ hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/DV3geEz9FsEc3JiFPSY2.png
 alt: Battle damaged Sci-fi helmet rendered with WebGPU.
 tags:
   - chrome-113
+  - webgpu
 ---
 
 The Chrome team is thrilled to announce that WebGPU is now available by default in Chrome&nbsp;113, which is currently in the Beta channel. WebGPU is a new web graphics API that offers significant benefits such as greatly reduced JavaScript workload for the same graphics and more than three times improvements in machine learning model inferences. This is possible due to more flexible GPU programming and access to advanced capabilities that WebGL does not provide.

@@ -9,6 +9,12 @@ alt: Blowfish swarm swimming in the ocean.
 ---
 
 {% extends "layouts/base.njk" %}
+
+{% block css %}
+{% InlineCss '/css/fugu-showcase.css' %}
+{% endblock %}
+
+
 {% from 'macros/cards/hero-card.njk' import heroCard with context %}
 {% from 'macros/icon.njk' import icon with context %}
 

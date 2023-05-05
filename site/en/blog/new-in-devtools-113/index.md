@@ -6,8 +6,8 @@ authors:
   - jecelynyeen
 date: 2023-04-11
 description: ""
-hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/deVc0yGGerSjHtSI3Drw.jpg'
-alt: ''
+hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bsIj8hnuo30II0TuROsn.png'
+alt: 'Network response header overrides, better debugging in Nuxt, new settings in the Console, and more.'
 tags:
   - new-in-devtools
   - devtools
@@ -17,7 +17,9 @@ tags:
 
 {% Partial 'devtools/banner.md' %}
 
-*No 'What's new in DevTools' video for this release. Check out the latest DevTools Tips video: [What are source maps?](https://youtu.be/FIYkjjFYvoI).*
+*There is no 'What's new in DevTools' video for this release, but you can watch this quick recap of the recent features.*
+
+{% YouTube id='CrSmjooOEiE' %}
 
 <!-- $contentStart -->
 
@@ -68,27 +70,6 @@ To bring you these improvements, the DevTools, Nuxt, Vite, and Rollup teams coll
 
 The DevTools team would like to express gratitude to the Nuxt, Vite, and Rollup teams for making this possible. We appreciate your efforts and collaboration, which were essential to the success of this implementation. Thank you again for your contributions!
 
-## Assertions in Recorder {: #recorder }
-
-The **Recorder** panel now lets you add assertions right during recording, with all the runtime data available to you.
-
-To add an assertion, start a new recording, interact with your page, and click **Add assertion**. The **Recorder** inserts a step with the [`waitForElement` type](/docs/devtools/recorder/reference/#step-properties) that you can customize on the fly. Watch the video to see assertions in action on the [coffee cart demo](https://coffee-cart.app/).
-
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/oSTbA1gmxW9EIzZjma1W.mp4", controls="true", muted="true", class="screenshot" %}
-
-This video shows you how to assert:
-
-- HTML attributes, for example, an element's `class`
-- JavaScript properties, for example, `.innerText`
-
-Both are specified in JSON. You can also configure steps to assert, for example, conditional statements in JavaScript, number of node's children (`count`), element visibility, and more. For more information, see [Configure steps](/docs/devtools/recorder/reference/#configure-steps).
-
-Additionally, the **Recorder** now remembers your preferred script format in the [side-by-side code view](/docs/devtools/recorder/reference/#inspect-code) and right-click step menu.
-
-Chromium issue: [1423624](https://crbug.com/1423624).
-
-{# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/67b9e72b50d50c5e959ccfebe202b486a3417736 #}
-
 ## CSS improvements in Elements > Styles {: #css }
 
 ### Invalid CSS properties and values {: #invalid-css }
@@ -100,7 +81,7 @@ To help you diagnose [CSS issues](/docs/devtools/css/issues/) faster, the **Styl
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/25gZlN9PjK8HosfW1ZGm.png", alt="Invalid property name and invalid property value.", width="800", height="582" %}
 
-The DevTools team would like to express gratitude to [Yisi](https://chromium.googlesource.com/devtools/devtools-frontend/+/b1e2495635a072b0eb814b0f683bb93b8f8d92e3) for landing this improvement.
+The DevTools team would like to express gratitude to [Yisi(一丝)](https://chromium.googlesource.com/devtools/devtools-frontend/+/b1e2495635a072b0eb814b0f683bb93b8f8d92e3) for landing this improvement.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/b1e2495635a072b0eb814b0f683bb93b8f8d92e3 #}
 

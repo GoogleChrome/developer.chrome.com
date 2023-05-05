@@ -18,7 +18,7 @@ find code samples to help you get started.
 
 The following features are available to test in Chrome 104:
 
-*  [**Frequency control**](/docs/privacy-sandbox/shared-storage/frequency-control):
+*  [**Creative selection by frequency**](/docs/privacy-sandbox/shared-storage/creative-selection-by-frequency):
    run a worklet script to select a URL from a provided list, based on the
    stored data, and then render that URL in a fenced frame. This has many
    possible uses, such as selecting new content when a frequency cap is reached.

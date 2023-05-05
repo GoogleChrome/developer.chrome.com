@@ -11,6 +11,8 @@ authors:
   - alexandrawhite
 ---
 
+{% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
+
 You can block access to the FLEDGE API, as a [site owner](#opt-out-site) or as an [individual user](#opt-out-user).
 
 ## Site owners {: #opt-out-site}
