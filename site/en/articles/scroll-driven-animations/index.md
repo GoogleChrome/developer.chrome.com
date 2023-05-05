@@ -9,7 +9,7 @@ description: >
   Learn how to work with Scroll Timelines and View Timelines to create scroll-driven animations in a declarative way.
 date: 2023-05-10
 hero: image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/iDNlcxHa6axrfgHi4aoU.png
-alt: "Illustration to introduce “Scroll-driven Animations”. It pictures a mouse and an arrow indicating scroll movement."
+alt: "A computer mouse and an arrow indicating scroll movement."
 tags:
   - css
   - chrome-115
