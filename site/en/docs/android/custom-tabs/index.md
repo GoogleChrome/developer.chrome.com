@@ -75,7 +75,7 @@ streaming your videos while interacting with your web store.
   <figcaption>A partial Custom Tab opening with a set height</figcaption>
 </figure>
 
-That is far from everything - Custom Tabs are very powerful, and under active development. Each browser needs to add support for these features as they become available. While nearly all have some level of support, it is important to know what may or may not be available in your user's browsers. We created a [feature comparison table](/docs/android/custom-tabs/browser-support) to quickly check the availability of the different features across popular Android browsers.
+That is far from everything. Custom Tabs are very powerful, and under active development. Each browser needs to add support for these features as they become available. While nearly all have some level of support, it is important to know what may or may not be available in your user's browsers. We created a [feature comparison table](/docs/android/custom-tabs/browser-support) to quickly check the availability of the different features across popular Android browsers.
 
 You can test this now with our [sample][1] on GitHub.
 
