@@ -32,6 +32,8 @@
 }
 
 .code-sections__icon {
+  margin-bottom: 1.5rem;
+
   &::before {
     // By default, we show the 'object' icon.
     // The 1.25em used for width/height resolves to 15px.

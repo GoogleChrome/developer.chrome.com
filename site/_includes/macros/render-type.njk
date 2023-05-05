@@ -241,7 +241,7 @@
       <p>
         {% for t in types %}
           {% if loop.last and not loop.first %}or{% endif %}
-          <span style="white-space: nowrap">{{ renderSingleIconType(t, node) | trim }}{% if not loop.last %}<br>{% endif %}</span>
+          <span style="white-space: nowrap;">{{ renderSingleIconType(t, node) | trim }}</span>
         {% endfor %}
       </p>
     </div>
