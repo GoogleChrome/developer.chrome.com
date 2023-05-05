@@ -12,6 +12,11 @@ authors:
 
 If you're looking for Privacy Sandbox resources, check out the videos below. Some are recorded Privacy Sandbox office hours. You can find upcoming office hours on the [events page](/docs/privacy-sandbox/events/).
 
+Keep in mind that unlike documentation, which can easily be updated, videos can have some content that has become out of date. While the concepts discussed in these videos are still relelvant, some technical details and code will have changed.
+
+Refer to the linked documentation for the latest details.
+
+
 ## What is the Privacy Sandbox?
 
 {% Columns %}
@@ -20,6 +25,8 @@ If you're looking for Privacy Sandbox resources, check out the videos below. Som
 {% endColumn %}
 {% Column %}
 <strong>May 12, 2022. Run time: 16:16</strong>
+
+<strong>Latest docs:</strong> [What is the Privacy sandbox?](/docs/privacy-sandbox/overview/)
 
 At Google I/O 2022, Rowan Merewood from the Chrome team spoke about the Privacy Sandbox, the pros and cons of third-party content, and how the Privacy Sandbox addresses these issues. Finally, he detailed how this model applies to cookies so you can prepare for upcoming changes.
 {% endColumn %}
