@@ -76,14 +76,14 @@ The **Recorder** panel now lets you add assertions right during recording, with 
 
 To add an assertion, start a new recording, interact with your page, and click **Add assertion**. The **Recorder** inserts a step with the [`waitForElement` type](/docs/devtools/recorder/reference/#step-properties) that you can customize on the fly. Watch the video to see assertions in action on the [coffee cart demo](https://coffee-cart.app/).
 
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/oSTbA1gmxW9EIzZjma1W.mp4", controls="true", muted="true", class="screenshot" %}
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/BNpFsEc4rzFsLVPE5EH2.mp4", controls="true", muted="true", class="screenshot" %}
 
 This video shows you how to assert:
 
 - HTML attributes, for example, an element's `class`
-- JavaScript properties, for example, `.innerText`
+- JavaScript properties in JSON, for example, `.innerText`
 
-Both are specified in JSON. You can also configure steps to assert, for example, conditional statements in JavaScript, number of node's children (`count`), element visibility, and more. For more information, see [Configure steps](/docs/devtools/recorder/reference/#configure-steps).
+You can also configure steps to assert, for example, conditional statements in JavaScript, number of node's children (`count`), element visibility, and more. For more information, see [Configure steps](/docs/devtools/recorder/reference/#configure-steps).
 
 Additionally, the **Recorder** now remembers your preferred script format in the [side-by-side code view](/docs/devtools/recorder/reference/#inspect-code) and right-click step menu.
 
