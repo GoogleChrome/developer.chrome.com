@@ -664,4 +664,4 @@ Or this stacking cards demo that leverage `position: sticky`. As the cards stack
 
 Also featured on [scroll-driven-animations.style](https://scroll-driven-animations.style/) is a collection of tools such as the View Timeline Range Progress visualization that was included earlier in this post.
 
-Scroll-driven animations are also covered in [What’s new in Web Animations](https://io.google/2023/program/170b44dc-47f0-409f-92fe-b5c70aab4569/) at Google I/O ’23. There is also [a Codelab available](https://codelabs.developers.google.com/scroll-driven-animations).
+Scroll-driven animations are also covered in [What’s new in Web Animations](https://io.google/2023/program/170b44dc-47f0-409f-92fe-b5c70aab4569/) at Google I/O ’23.
