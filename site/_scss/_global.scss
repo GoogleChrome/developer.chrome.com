@@ -58,3 +58,7 @@ main:focus {
 video {
   width: 100%;
 }
+
+video[width][height] {
+  height: auto;
+}
