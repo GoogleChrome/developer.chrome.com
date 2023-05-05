@@ -117,7 +117,7 @@
     "gts": "^3.1.0",
     "html-escaper": "^2.0.2",
     "husky": "^4.3.0",
-    "lint-staged": "^13.2.2",
+    "lint-staged": "13.2.2",
     "micromatch": "4.0.5",
     "mvdir": "^1.0.21",
     "nyc": "^15.1.0",
