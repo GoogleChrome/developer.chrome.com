@@ -11,7 +11,7 @@ authors:
 
 Custom Tabs are a great option for creating a customized browser experience directly within your app, but they are not a singular thing. Built ontop of the [Intent system](https://developer.android.com/guide/components/intents-filters), Custom Tabs are a collection of configurable option requests that are sent to the end user's preferred browser. It is up to each browser to implement the various options. The availability of CustomTabs features can vary between Android browsers due to implementation differences.
 
-What follows is a comparison of _some_ browsers in the android ecosystem. A vast majority of browsers on Androd have some level of support. The tables are not not meant to be exhaustive, but illustrative of the level of support you are likely to see. You should do research on the default browsers of the people using _your_ app, and make sure you are coding defensively.
+What follows is a comparison of _some_ browsers in the Android ecosystem. A vast majority of browsers on Android have some level of support. The tables are not not meant to be exhaustive, but illustrative of the level of support you are likely to see. You should research the default browsers of the people using _your_ app, and make sure you are coding defensively.
 
 {% Aside 'caution' %}
     It is currently not possible to check if a specific feature is available or not.  While most features are progressive enhancements, if you require a particular feature you must manually confirm if the user's default browser and browser version support it.
