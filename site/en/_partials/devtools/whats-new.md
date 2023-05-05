@@ -4,7 +4,7 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 
 {# $content #}
 
-### Chrome 114 {: #chrome113 }
+### Chrome 114 {: #chrome114 }
 
 * [WebAssembly debugging support](/blog/new-in-devtools-114/#wasm)
 * [Improved stepping behavior in Wasm apps](/blog/new-in-devtools-114/#wasm-step)
