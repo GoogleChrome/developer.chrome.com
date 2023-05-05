@@ -49,7 +49,7 @@ navigator.mediaDevices.getUserMedia({
 });
 ```
 
-## Learn More
+## Learn more
 
 To learn more about how to use the `chrome.tabCapture` API, see
 [Audio recording and screen capture][audio-recording-screen-capture]. This demonstrates how to use

@@ -7,21 +7,24 @@ description: How to record audio or video from a tab, window, or screen
 ---
 
 This guide explains different approaches for recording audio and video from a tab, window, or
-screen using APIs such as [`chrome.tabCapture`][tabcapture] or [`getDisplayMedia()`][get-display-media].
+screen using APIs such as [`chrome.tabCapture`][tabcapture] or
+[`getDisplayMedia()`][get-display-media].
 
 ## Common use cases
 
-### Screen Recording {: #screen-recording}
+### Screen recording {: #screen-recording}
 
-For screen recording, call [`getDisplayMedia()`][get-display-media], which triggers the dialog box shown below. This provides the user with
-the ability to select which tab, window or screen they wish to share and provides a clear indication
-that recording is taking place.
+For screen recording, call [`getDisplayMedia()`][get-display-media], which triggers the dialog box
+shown below. This provides the user with the ability to select which tab, window or screen they wish
+to share and provides a clear indication that recording is taking place.
 
 <figure data-size="full">
   {% Img src="image/wVNVUJS8Z8O04i1tJKSdsp6nkRQ2/Q78okJG9DlfNwzyf2mly.png", alt="Screen share dialog for example.com", width="728", height="610" %}
   <figcaption>Screen share dialog for example.com.</figcaption>
 </figure>
+
 The following example requests access to record both audio and video.
+
 ```js
 const stream = await navigator.mediaDevices.getDisplayMedia({ audio: true, video: true });
 ```
@@ -33,8 +36,8 @@ page. To record in the background and across navigations, use an
 ### Tab capture based on user gesture
 
 In some use cases, the user invokes your extension for a specific tab by clicking on the action
-icon. In these cases, it is not desirable to show a secondary dialog box asking the user what they would
-like to share.
+icon. In these cases, it is not desirable to show a secondary dialog box asking the user what they
+would like to share.
 
 #### Audio and video (single page)
 
@@ -86,11 +89,14 @@ chrome.runtime.onMessage.addListener(async (msg) => {
 
 {% Aside %}
 
-In the future, we may support passing a media stream ID to an [offscreen document][offscreen-documents] so recording can more easily persist across navigations. We are collecting feedback in the [chromium-extensions mailing list][feedback-mailing-list].
+In the future, we may support passing a media stream ID to an
+[offscreen document][offscreen-documents] so recording can more easily persist across navigations.
+We are collecting feedback in the [chromium-extensions mailing list][feedback-mailing-list].
 
 {% endAside %}
 
-To record audio and video across navigations, you can open an extension page in a new tab or window, and directly obtain a stream. Set the `targetTabId` property to capture the correct tab.
+To record audio and video across navigations, you can open an extension page in a new tab or window,
+and directly obtain a stream. Set the `targetTabId` property to capture the correct tab.
 
 In your popup:
 
@@ -130,7 +136,8 @@ window or screen to record from.
 
 #### Audio only
 
-If you only need to record audio, you can directly obtain a stream in the extension popup using [chrome.tabCapture.capture][tabcapture-capture]. When the popup closes, recording will be stopped.
+If you only need to record audio, you can directly obtain a stream in the extension popup using
+[chrome.tabCapture.capture][tabcapture-capture]. When the popup closes, recording will be stopped.
 
 ```js
 chrome.tabCapture.capture({ audio: true }, (stream) => {
@@ -143,7 +150,7 @@ chrome.tabCapture.capture({ audio: true }, (stream) => {
 });
 ```
 
-## Other Considerations
+## Other considerations
 
 For more information on how to record a stream, see the [MediaRecorder][media-recorder] API.
 
@@ -153,4 +160,4 @@ For more information on how to record a stream, see the [MediaRecorder][media-re
 [get-display-media]: https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia
 [offscreen-documents]: /blog/Offscreen-Documents-in-Manifest-v3/
 [feedback-mailing-list]: https://groups.google.com/a/chromium.org/g/chromium-extensions/c/Ef08XtOOyoI/m/L5HM7yPsBAAJ
-[media-recorder]: https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorders
+[media-recorder]: https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder
