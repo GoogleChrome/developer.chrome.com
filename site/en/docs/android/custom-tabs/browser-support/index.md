@@ -14,7 +14,7 @@ Custom Tabs are a great option for creating a customized browser experience dire
 What follows is a comparison of _some_ browsers in the Android ecosystem. A vast majority of browsers on Android have some level of support. The tables are not not meant to be exhaustive, but illustrative of the level of support you are likely to see. You should research the default browsers of the people using _your_ app, and make sure you are coding defensively.
 
 {% Aside 'caution' %}
-    It is currently not possible to check if a specific feature is available or not.  While most features are progressive enhancements, if you require a particular feature you must manually confirm if the user's default browser and browser version support it.
+It is currently not possible to check if a specific feature is available. While most features are progressive enhancements, if you require a particular feature you must manually confirm if the user's default browser and browser version support it.
 {% endAside %}
 
 ## CustomTabsIntent.Builder
