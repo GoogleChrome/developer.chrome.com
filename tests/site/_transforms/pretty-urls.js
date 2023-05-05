@@ -9,8 +9,8 @@ const {
  * @param {string} outputPath
  * @param {string} locale
  */
-const prettyUrls = ($, outputPath, locale) => {
-  prettyUrlsRaw($, outputPath, locale);
+const prettyUrls = ($, locale) => {
+  prettyUrlsRaw($, locale);
   return $;
 };
 
