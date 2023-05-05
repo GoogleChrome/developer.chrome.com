@@ -3,7 +3,7 @@ api: sidePanel
 ---
 
 {% Aside 'important' %}
-The Side Panel API will launch in [Chrome 114](https://chromiumdash.appspot.com/schedule), currently in beta and available in stable in late May 2023.
+The Side Panel API is currently available in [Chrome Canary](https://www.google.com/chrome/canary/).
 {% endAside %}
 
 ## Overview {: #overview }
