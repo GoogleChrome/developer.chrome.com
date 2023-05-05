@@ -64,7 +64,7 @@ You can add custom actions and entries to the browser's toolbar, and menus.
 
 <figure>
 {% Video loop=true, playsinline=true, autoplay=true, src="video/DXqUldooyJOUnj3qXSYLHbUgUI93/QFiyUPGANEvjVqfsujF4.mp4", width="350", height="730", class="screenshot"  %}
-  <figcaption>A Custom Tab showing its menu, with custom entries</figcaption>
+  <figcaption>A Custom Tab showing its menu, with custom entries.</figcaption>
 </figure>
 
 You can even control the launch height of the Custom Tab, enabling things like
