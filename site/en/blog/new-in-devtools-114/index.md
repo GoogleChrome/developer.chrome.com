@@ -4,10 +4,10 @@ title: "What's New in DevTools (Chrome 114)"
 authors:
   - sofiayem
   - jecelynyeen
-date: 2023-04-26
+date: 2023-05-05
 description: ""
-hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/X0Yn0Nb5tjoK3cdWcmHy.jpg'
-alt: ''
+hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/fy7JKyzJt0EPZd1g8hwl.jpg'
+alt: 'WebAssembly debugging, Autofill debugging, better assertions in Recorder, Performance panel enhancements, Lighthouse 10.1.1, and more.'
 tags:
   - new-in-devtools
   - devtools
@@ -23,7 +23,7 @@ tags:
 
 <!-- $contentStart -->
 
-## WebAssembly debugging {: #wasm }
+## WebAssembly debugging support {: #wasm }
 
 DevTools enables {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Experiments** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **WebAssembly Debugging: Enable DWARF support** by default. For more information, see [Debugging WebAssembly with modern tools](/blog/wasm-debugging-2020/).
 
