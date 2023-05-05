@@ -7,7 +7,7 @@ subhead: >
   Learn how to work with Scroll Timelines and View Timelines to create scroll-driven animations in a declarative way.
 description: >
   Learn how to work with Scroll Timelines and View Timelines to create scroll-driven animations in a declarative way.
-date: 2023-05-10
+date: 2023-05-05
 hero: image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/iDNlcxHa6axrfgHi4aoU.png
 alt: "A computer mouse and an arrow indicating scroll movement."
 tags:
