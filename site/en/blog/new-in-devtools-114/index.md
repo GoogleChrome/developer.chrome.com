@@ -80,8 +80,8 @@ To add an assertion, start a new recording, interact with your page, and click *
 
 This video shows you how to assert:
 
-- HTML attributes, for example, an element's `class`
-- JavaScript properties in JSON, for example, `.innerText`
+- HTML attributes, for example, an element's `class`.
+- JavaScript properties in JSON, for example, `.innerText`.
 
 You can also configure steps to assert, for example, conditional statements in JavaScript, number of node's children (`count`), element visibility, and more. For more information, see [Configure steps](/docs/devtools/recorder/reference/#configure-steps).
 
