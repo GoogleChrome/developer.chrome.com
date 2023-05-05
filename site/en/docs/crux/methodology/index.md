@@ -310,6 +310,14 @@ Most metrics are represented as a histogram aggregation, allowing visualization 
 <cite><a href="https://developer.mozilla.org/docs/Web/Events/load">MDN</a></cite>
 {% endAside %}
 
+### Cumulative Layout Shift {: #cls-metric }
+
+{% Aside %}
+"Cumulative Layout Shift (CLS) is an important, user-centric metric for measuring visual stability because it helps quantify how often users experience unexpected layout shifts — a low CLS helps ensure that the page is delightful."
+
+<cite><a href="https://web.dev/cls/">web.dev/cls/</a></cite>
+{% endAside %}
+
 ### First Input Delay {: #fid-metric }
 
 {% Aside %}
@@ -318,12 +326,12 @@ Most metrics are represented as a histogram aggregation, allowing visualization 
 <cite><a href="https://web.dev/fid/">web.dev/fid/</a></cite>
 {% endAside %}
 
-### Cumulative Layout Shift {: #cls-metric }
+### Interaction to Next Paint {: #inp-metric}
 
 {% Aside %}
-"Cumulative Layout Shift (CLS) is an important, user-centric metric for measuring visual stability because it helps quantify how often users experience unexpected layout shifts — a low CLS helps ensure that the page is delightful."
+"Interaction to Next Paint (INP) is a field metric that assesses [responsiveness](https://web.dev/user-centric-performance-metrics/#types-of-metrics). INP logs the latency of all interactions throughout the entire page lifecycle. The highest value of those interactions—or close to the highest for pages with many interactions—is recorded as the page's INP. A low INP ensures that the page will be reliably responsive at all times."
 
-<cite><a href="https://web.dev/cls/">web.dev/cls/</a></cite>
+<cite><a href="https://web.dev/inp/">web.dev/inp/</a></cite>
 {% endAside %}
 
 ### Experimental metrics {: #experimental-metrics }
@@ -340,15 +348,11 @@ Experimental metrics are available in the CrUX dataset via [BigQuery](/docs/crux
 
 TTFB is only collected on full page loads, unlike other timers (such as [LCP](#lcp-metric)) which are also collected on back-forward navigations and pre-rendering. As such, the sample size of TTFB can be smaller than other metrics and may not necessarily be compared directly with them.
 
-#### Interaction to Next Paint {: #inp-metric}
+#### Interaction to Next Paint (deprecated){: #inp-metric-experimental}
 
-{% Aside %}
-"Interaction to Next Paint (INP) is an experimental field metric that assesses [responsiveness](https://web.dev/user-centric-performance-metrics/#types-of-metrics). INP logs the latency of all interactions throughout the entire page lifecycle. The highest value of those interactions—or close to the highest for pages with many interactions—is recorded as the page's INP. A low INP ensures that the page will be reliably responsive at all times."
-
-<cite><a href="https://web.dev/inp/">web.dev/inp/</a></cite>
+{% Aside 'important' %}
+The Interaction to Next Paint (INP) metric is available both with and without the experimental prefix. The experimental prefix should now be considered deprecated and will be removed in August 2023. The non-prefixed schema should be used going forward.
 {% endAside %}
-
-Interaction to Next Paint (INP) was added to the CrUX dataset in [February 2022](/docs/crux/release-notes/#202202). This new metric captures the end-to-end latency of individual events and offers a more holistic picture of the overall responsiveness of a page throughout its lifetime.
 
 #### Popularity {: #popularity-metric}
 
