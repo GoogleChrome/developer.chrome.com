@@ -60,7 +60,7 @@ And that color consistency can stay with your app, even if they switch between L
   <figcaption>And that color consistency can stay with your app, even if they switch between Light and Dark themes</figcaption>
 </figure>
 
-You can add custom actions and entries to the browser's toolbar, and menus
+You can add custom actions and entries to the browser's toolbar, and menus.
 
 <figure>
 {% Video loop=true, playsinline=true, autoplay=true, src="video/DXqUldooyJOUnj3qXSYLHbUgUI93/QFiyUPGANEvjVqfsujF4.mp4", width="350", height="730", class="screenshot"  %}
