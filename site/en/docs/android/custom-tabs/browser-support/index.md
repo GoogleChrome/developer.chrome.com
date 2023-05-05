@@ -19,7 +19,7 @@ It is currently not possible to check if a specific feature is available. While 
 
 ## CustomTabsIntent.Builder
 
-CustomTabsIntent.Builder is the class you will use to create your Custom Tabs. You have a number of ways to configure your Custom Tab to help it blend as seamlessly as posible with your app, via a collection of built in methods. These include
+`CustomTabsIntent.Builder` creates Custom Tabs. You have a number of ways to configure your custom tab to help it blend as seamlessly as possible with your app via a collection of built in methods. These include
 
 ### addDefaultShareMenuItem
 
