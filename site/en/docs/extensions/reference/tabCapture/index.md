@@ -13,7 +13,7 @@ otherwise triggering the extension's action button, similar to the behavior of t
 ## Preserving system audio
 
 When a [MediaStream][media-stream] is obtained for a tab, audio in that tab will no longer be played
-to the user. This is similar to the behavior of the [get-display-media][getDisplayMedia] API when
+to the user. This is similar to the behavior of the [`getDisplayMedia()`][get-display-media] function when
 the [`suppressLocalAudioPlayback`][supress-playback] flag is set to true.
 
 To continue playing audio to the user, use the following:
@@ -24,7 +24,7 @@ const source = output.createMediaStreamSource(stream);
 source.connect(output.destination);
 ```
 
-This creates a new AudioContext and connects the audio of the tab's MediaStream to the default
+This creates a new `AudioContext` and connects the audio of the tab's `MediaStream` to the default
 destination.
 
 ## Stream IDs

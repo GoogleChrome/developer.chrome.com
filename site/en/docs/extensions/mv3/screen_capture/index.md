@@ -3,25 +3,26 @@ layout: "layouts/doc-post.njk"
 title: "Audio recording and screen capture"
 seoTitle: "Chrome Extensions: Audio recording and screen capture"
 date: 2023-04-14
-updated: 2023-04-14
-description: How to record audio or video from a tab, window or screen
+description: How to record audio or video from a tab, window, or screen
 ---
 
-This guide explains different approaches for recording audio and video from a tab, window or
-screen using APIs such as [chrome.tabCapture][tabcapture] or [getDisplayMedia][get-display-media].
+This guide explains different approaches for recording audio and video from a tab, window, or
+screen using APIs such as [`chrome.tabCapture`][tabcapture] or [`getDisplayMedia()`][get-display-media].
 
-## Common Use Cases
+## Common use cases
 
 ### Screen Recording {: #screen-recording}
 
-For screen recording, use the [getDisplayMedia][get-display-media] API. This provides the user with
+For screen recording, call [`getDisplayMedia()`][get-display-media], which triggers the dialog box shown below. This provides the user with
 the ability to select which tab, window or screen they wish to share and provides a clear indication
 that recording is taking place.
 
-{% Img src="image/wVNVUJS8Z8O04i1tJKSdsp6nkRQ2/Q78okJG9DlfNwzyf2mly.png", alt="Screen share dialog for example.com", width="728", height="610" %}
-
+<figure data-size="full">
+  {% Img src="image/wVNVUJS8Z8O04i1tJKSdsp6nkRQ2/Q78okJG9DlfNwzyf2mly.png", alt="Screen share dialog for example.com", width="728", height="610" %}
+  <figcaption>Screen share dialog for example.com.</figcaption>
+</figure>
+The following example requests access to record both audio and video.
 ```js
-// User will be prompted to select what they would like to share.
 const stream = await navigator.mediaDevices.getDisplayMedia({ audio: true, video: true });
 ```
 
@@ -32,7 +33,7 @@ page. To record in the background and across navigations, use an
 ### Tab capture based on user gesture
 
 In some use cases, the user invokes your extension for a specific tab by clicking on the action
-icon. In these cases, it is not desirable to show a secondary dialog asking the user what they would
+icon. In these cases, it is not desirable to show a secondary dialog box asking the user what they would
 like to share.
 
 #### Audio and video (single page)
