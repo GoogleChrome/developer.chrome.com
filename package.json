@@ -25,7 +25,6 @@
     "lint:scss": "stylelint **/*.scss",
     "lint:types": "tsc --noEmit",
     "lint": "npm-run-all lint:js lint:scss lint:md lint:types",
-    "lint-staged": "lint-staged",
     "production": "NODE_ENV=production npm run setup && NODE_ENV=production npm run eleventy -- --quiet",
     "snapshots": "percy snapshot ./dist",
     "rollup:watch": "chokidar \"site/**/*.js\" -c \"npx rollup -c\"",
