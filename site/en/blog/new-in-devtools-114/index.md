@@ -93,7 +93,7 @@ Chromium issue: [1423624](https://crbug.com/1423624).
 
 ## Lighthouse 10.1.1 {: #lighthouse }
 
-The **Lighthouse** panel now runs Lighthouse 10.1.1, with a notable change introduced in [10.1.0](https://github.com/GoogleChrome/lighthouse/releases/tag/v10.1.0). All audits that deal with URLs are now grouped by entity and aggregate numerical statistics such as size or duration.
+The **Lighthouse** panel now runs Lighthouse 10.1.1, with a notable change introduced in [10.1.0](https://github.com/GoogleChrome/lighthouse/releases/tag/v10.1.0). All audits that deal with URLs are now grouped by entity and aggregate numerical statistics such as size or duration. Popular third parties are also tagged with their category so it's easier to identify their purpose on the page.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/mKXh4UJb8OBM9rCNQv5M.png", alt="Grouped audits by entity.", width="800", height="736" %}
 
