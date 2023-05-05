@@ -139,7 +139,7 @@ Additionally, the ID of the interaction has been moved from the tooltip to **Sum
 
 Chromium issues: [1432512](https://crbug.com/1432512), [1432509](https://crbug.com/1432509).
 
-### JavaScript Profiler deprecation: Phase three {: #js-profiler }
+## JavaScript Profiler deprecation: Phase three {: #js-profiler }
 
 As early as [Chrome 58](/blog/devtools-javascript-cpu-profile-migration-2/), the DevTools team planned to eventually deprecate the **JavaScript Profiler** and have Node.js and Deno developers use the **Performance** panel for profiling JavaScript CPU performance.
 
