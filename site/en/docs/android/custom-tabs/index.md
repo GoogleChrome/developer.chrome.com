@@ -41,37 +41,37 @@ When this Intent is called, you can add a number of attributes to the
 
 Custom Entrance and Exit animations to match the rest of your app
 
-<figure class="screenshot">
-{% Video preload=true, loop=true, playsinline=true, autoplay=true, src="video/DXqUldooyJOUnj3qXSYLHbUgUI93/sIeKPXwrHXdCXtGRrv2Q.mp4", width="350", height="730", caption="" %}
+<figure>
+{% Video preload=true, loop=true, playsinline=true, autoplay=true, src="video/DXqUldooyJOUnj3qXSYLHbUgUI93/sIeKPXwrHXdCXtGRrv2Q.mp4", width="350", height="730", class="screenshot" %}
   <figcaption>A mobile browser, transiting between screens, ending with a web site loaded in a Custom Tab</figcaption>
 </figure>
 
 Modifing the toolbar color to match your apps branding
 
-<figure class="screenshot">
-{% Video loop=true, playsinline=true, autoplay=true, src="video/DXqUldooyJOUnj3qXSYLHbUgUI93/kQ0LUuUdcWFM34IPg5I6.mp4", width="350", height="730" %}
+<figure>
+{% Video loop=true, playsinline=true, autoplay=true, src="video/DXqUldooyJOUnj3qXSYLHbUgUI93/kQ0LUuUdcWFM34IPg5I6.mp4", width="350", height="730", class="screenshot"  %}
   <figcaption>A mobile browser, transitioning to a Custom Tab with matching colors to the website</figcaption>
 </figure>
 
 And that color consistency can stay with your app, even if they switch between Light and Dark themes
 
-<figure class="screenshot">
-{% Video loop=true, playsinline=true, autoplay=true, src="video/DXqUldooyJOUnj3qXSYLHbUgUI93/YBinAgwhx0kFizQWrrEr.mp4", width="350", height="730" %}
+<figure>
+{% Video loop=true, playsinline=true, autoplay=true, src="video/DXqUldooyJOUnj3qXSYLHbUgUI93/YBinAgwhx0kFizQWrrEr.mp4", width="350", height="730", class="screenshot"  %}
   <figcaption>And that color consistency can stay with your app, even if they switch between Light and Dark themes</figcaption>
 </figure>
 
 You can add custom actions and entries to the browser's toolbar, and menus
 
-<figure class="screenshot">
-{% Video loop=true, playsinline=true, autoplay=true, src="video/DXqUldooyJOUnj3qXSYLHbUgUI93/QFiyUPGANEvjVqfsujF4.mp4", width="350", height="730" %}
+<figure>
+{% Video loop=true, playsinline=true, autoplay=true, src="video/DXqUldooyJOUnj3qXSYLHbUgUI93/QFiyUPGANEvjVqfsujF4.mp4", width="350", height="730", class="screenshot"  %}
   <figcaption>A Custom Tab showing its menu, with custom entries</figcaption>
 </figure>
 
 You can even control the launch height of the Custom Tab, enabling things like
 streaming your videos while interacting with your web store.
 
-<figure class="screenshot">
-{% Video loop=true, playsinline=true, autoplay=true, src="video/DXqUldooyJOUnj3qXSYLHbUgUI93/lsyAKIKYdD87QjSiSQOw.mp4", width="350", height="730" %}
+<figure>
+{% Video loop=true, playsinline=true, autoplay=true, src="video/DXqUldooyJOUnj3qXSYLHbUgUI93/lsyAKIKYdD87QjSiSQOw.mp4", width="350", height="730", class="screenshot"  %}
   <figcaption>A partial Custom Tab opening with a set height</figcaption>
 </figure>
 
@@ -122,8 +122,33 @@ issues on [crbug.com][3] and ask questions to our Twitter account
 
 ## Getting Started
 
-If you are getting started with Custom Tabs, checkout the [How-To section][11] and the
-[GitHub Demo][1].
+In addition to the [GitHub Demo][1], we have a number of guides to help you get started with Custom Tabs.
+
+
+<ul>
+{% for item in docs.android.toc %}
+    {% if item.title == 'i18n.docs.android.customtabs' %}
+        {% for section in item.sections %}
+            {% if section.title == 'i18n.docs.android.guides' %}
+              {% for item in section.sections %}
+                  {% set post = helpers.findByUrl(collections.all, item.url, locale) %}
+                  {% if not post %}
+                    {% set post = helpers.findByUrl(collections.all, item.url, 'en') %}
+                  {% endif %}
+                  {% if post %}
+                    {% if item.title %}
+                      {% set articleTitle = item.title | i18n(locale) %}
+                    {% else %}
+                       {% set articleTitle = post.data.title %}
+                    {% endif %}
+                     <li>[{{articleTitle}}]({{ post.url }})</li>
+                  {% endif %}
+              {% endfor %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endfor %}
+</ul>
 
 For questions, check the [chrome-custom-tabs][5] tag on StackOverflow.
 
