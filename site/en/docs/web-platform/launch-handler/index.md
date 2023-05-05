@@ -7,7 +7,7 @@ description: >
 subhead: >
   Control how your app is launched.
 date: 2021-12-14
-updated: 2022-08-04
+updated: 2023-03-17
 authors:
   - thomassteiner
 ---
@@ -23,37 +23,29 @@ the File Handing API, this also enqueues a `LaunchParams` object in the launched
 | Step                                     | Status                   |
 | ---------------------------------------- | ------------------------ |
 | 1. Create explainer                      | [Complete][explainer]    |
-| 2. Create initial draft of specification | Not started              |
-| 3. Gather feedback & iterate on design   | [In progress](#feedback) |
-| 4. **Origin trial**                      | [**Started**][ot]        |
-| 5. Launch                                | Not started              |
+| 2. Create initial draft of specification | [Complete][spec]         |
+| 3. Gather feedback & iterate on design   | Complete                 |
+| 4. Origin trial.                         | Complete                 |
+| 5. **Launch**                            | **Complete**             |
 
 </div>
 
-### Try out the Launch Handler API
+## Using the Launch Handler API
 
-During the trial phase you can test the API by one of two methods.
+### Browser support
 
-#### Local testing
+Launch Handler is only available on ChromeOS.
 
-To experiment with the Launch Handler API locally, without an origin trial token, enable the
-`#enable-desktop-pwas-launch-handler` flag in `about://flags`.
+{% BrowserCompat 'html.manifest.launch_handler' %}
 
-#### Register for the origin trial
-
-Starting in Chromium 98, the Launch Handler API is available as an
-[origin trial](/docs/web-platform/origin-trials/) in Chromium. The origin trial is expected to end
-in Chromium 106 (October&nbsp;26, 2022).
-[Register here](https://developers.chrome.com/origintrials/#/trials/active).
-
-## Interfaces
+### Interfaces
 
 The Launch Handler API defines two new interfaces.
 
 `LaunchParams` : An object containing the `targetURL` to be handled by the consumer.
 `LaunchQueue` : Queues launches until they are handled by the specified consumer.
 
-## The `launch_handler` manifest member
+#### The `launch_handler` manifest member
 
 To declaratively specify the launch behavior of your app, add the `launch_handler` manifest member
 to your manifest. It has one sub-field called `client_mode`. It lets you control whether a new or an
@@ -92,31 +84,25 @@ For example, if the hypothetical value `"focus-matching-url"` were added, sites 
 `"client_mode": ["focus-matching-url", "navigate-existing"]` to continue to control the
 behavior of older browsers that did not support `"focus-matching-url"`.
 
-## Examples
-
-### Is the Launch Handler API supported?
-
-```js
-if ('launchQueue' in window && 'targetURL' in LaunchParams.prototype) {
-  // The Launch Handler API is supported.
-}
-```
-
-### Using window.launchQueue
+#### Using window.launchQueue
 
 In the following code, the function `extractSongID()` extracts a `songID` from the URL
 passed on launch. This is used to play a song in a music player PWA.
 
 ```js
-launchQueue.setConsumer((launchParams) => {
-  const songID = extractSongId(launchParams.targetURL);
-  if (songID) {
-    playSong(songID);
-  }
-});
+if ('launchQueue' in window) {
+  launchQueue.setConsumer((launchParams) => {
+    if (launchParams.targetURL) {
+      const songID = extractSongId(launchParams.targetURL);
+      if (songID) {
+        playSong(songID);
+      }
+    }
+  });
+}
 ```
 
-### Demo
+## Demo
 
 You can see a demo of the Launch Handler API in action in the
 [PWA Launch Handler Demo](https://launch-handler.glitch.me/). Be sure to check out the
@@ -162,6 +148,7 @@ let us know where and how you are using it.
 ## Helpful links {: #helpful }
 
 - [Public explainer][explainer]
+- [Draft spec][spec]
 - [Launch Handler API Demo][demo] | [Launch Handler API Demo source][demo-source]
 - [Chromium tracking bug][cr-bug]
 - [ChromeStatus.com entry][cr-status]
@@ -173,10 +160,10 @@ let us know where and how you are using it.
 [demo]: https://launch-handler.glitch.me/
 [demo-source]: https://glitch.com/edit/#!/launch-handler
 [explainer]: https://github.com/WICG/sw-launch/blob/main/launch_handler.md
+[spec]: https://wicg.github.io/web-app-launch/
 [cr-bug]: https://bugs.chromium.org/p/chromium/issues/detail?id=1231886
 [cr-status]: https://www.chromestatus.com/feature/5722383233056768
 [blink-component]: https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EAppManifest
 [cr-dev-twitter]: https://twitter.com/ChromiumDev
 [powerful-apis]:
   https://chromium.googlesource.com/chromium/src/+/lkgr/docs/security/permissions-for-powerful-web-platform-features.md
-[ot]: https://developer.chrome.com/origintrials/#/view_trial/2978005253598740481

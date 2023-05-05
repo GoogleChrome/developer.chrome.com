@@ -5,7 +5,7 @@ authors:
   - sofiayem
   - jecelynyeen
 date: 2022-06-30
-#updated: YYYY-MM-DD
+updated: 2023-03-19
 description: "Learn how to use Chrome DevTools to inspect, modify, and debug CSS container queries."
 tags:
   - prototype-fixes
@@ -17,10 +17,6 @@ This guide shows you how to inspect and debug CSS container queries in the **Ele
 {% YouTube id='X4TYXlvbb2E' %}
 
 [CSS container queries][3] allow you to manipulate the element's styles based on its parent container properties. This capability shifts the concept of [responsive web design][2] from page-based to [container-based](https://web.dev/new-responsive/).
-
-{% Aside %}
-CSS container queries is an experimental feature. To enable its support in DevTools, under [`chrome://flags`](chrome://flags), set the `Enable CSS Container Queries` experiment to `Enabled`.
-{% endAside %}
 
 The screenshots in this guide are taken from [this demo page](https://jec.fyi/demo/css-cq-coffee).
 

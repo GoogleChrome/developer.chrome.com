@@ -9,6 +9,7 @@
   - url: /docs/extensions/mv3/getstarted/tut-reading-time
   - url: /docs/extensions/mv3/getstarted/tut-focus-mode
   - url: /docs/extensions/mv3/getstarted/tut-tabs-manager
+  - url: /docs/extensions/mv3/getstarted/tut-quick-reference
 - title: i18n.docs.extensions.mv3
   sections:
     - url: /docs/extensions/mv3/intro
@@ -21,11 +22,15 @@
     - url: /docs/extensions/mv3/single_purpose
 - title: i18n.docs.extensions.migrating
   sections:
-    - url: /docs/extensions/mv3/mv3-migration
-    - url: /docs/extensions/mv3/mv3-migration-checklist
-    - url: /docs/extensions/mv3/migrating_to_service_workers
-    - url: /docs/extensions/mv3/mv2-sunset
-    - url: /docs/extensions/mv3/known-issues/
+    - url: /docs/extensions/migrating/
+    - url: /docs/extensions/migrating/checklist
+    - url: /docs/extensions/migrating/manifest
+    - url: /docs/extensions/migrating/to-service-workers
+    - url: /docs/extensions/migrating/api-calls
+    - url: /docs/extensions/migrating/blocking-web-requests
+    - url: /docs/extensions/migrating/improve-security
+    - url: /docs/extensions/migrating/mv2-sunset
+    - url: /docs/extensions/migrating/known-issues
 - url: /docs/extensions/reference
 - url: https://github.com/GoogleChrome/chrome-extensions-samples
   title: i18n.docs.extensions.samples
@@ -36,14 +41,20 @@
     - url: /docs/extensions/mv3/manifest
     - url: /docs/extensions/mv3/architecture-overview
     - url: /docs/extensions/mv3/declare_permissions
+    - url: /docs/extensions/mv3/service_workers
     - url: /docs/extensions/mv3/user_interface
     - url: /docs/extensions/mv3/tut_debugging
     - url: /docs/extensions/mv3/samples
+- title: i18n.docs.extensions.service_workers
+  sections:
+    - url: /docs/extensions/mv3/service_workers
+    - url: /docs/extensions/mv3/service_workers/basics
+    - url: /docs/extensions/mv3/service_workers/service-worker-lifecycle
+    - url: /docs/extensions/mv3/service_workers/events
 - title: i18n.docs.extensions.indepth-core
   sections:
     - url: /docs/extensions/mv3/messaging
     - url: /docs/extensions/mv3/content_scripts
-    - url: /docs/extensions/mv3/service_workers
     - url: /docs/extensions/mv3/match_patterns
     - url: /docs/extensions/mv3/promises
     - url: /docs/extensions/mv3/cross-origin-isolation
@@ -59,6 +70,7 @@
     - url: /docs/extensions/mv3/tut_oauth
     - url: /docs/extensions/mv3/override
     - url: /docs/extensions/mv3/richNotifications
+    - url: /docs/extensions/mv3/nativeMessaging
 - title: i18n.docs.extensions.quality
   sections:
     - url: /docs/extensions/mv3/user_privacy

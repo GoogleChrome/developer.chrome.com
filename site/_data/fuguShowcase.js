@@ -21,7 +21,7 @@
 const path = require('path');
 const fs = require('fs');
 
-module.exports = () => {
+module.exports = (() => {
   const fuguShowcaseFile = path.join(
     __dirname,
     '../../external/data/fugu-showcase.json'
@@ -36,9 +36,12 @@ module.exports = () => {
   });
 
   return {
-    fuguItems,
+    fuguItems: fuguItems.sort(
+      (a, b) =>
+        new Date(b.timestamp).valueOf() - new Date(a.timestamp).valueOf()
+    ),
     availableApis: Array.from(availableAPIs.keys()).sort((a, b) =>
       a.toLowerCase().localeCompare(b.toLowerCase())
     ),
   };
-};
+})();

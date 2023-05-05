@@ -262,7 +262,7 @@ You can also set network throttling from the **Performance** panel. Click **Capt
 
 Use the **Sensors** tab to override geolocation, simulate device orientation, force touch, and emulate idle state.
 
-The sections below provice a quick look on how to override geolocation and set device orientation. For a complete list of featrues, see [Emulate device sensors](/docs/devtools/sensors/).
+The sections below provide a quick look on how to override geolocation and set device orientation. For a complete list of featrues, see [Emulate device sensors](/docs/devtools/sensors/).
 
 ### Override geolocation {: #geolocation }
 

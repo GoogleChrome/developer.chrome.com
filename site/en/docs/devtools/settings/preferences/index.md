@@ -14,7 +14,13 @@ To set preferences, open {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/IFH59J9W2RT4nDN2miTU.png", alt="The Appearance section in the Preferences tab.", width="800", height="812" %}
 
-To find out what each setting does, search this page for the setting's name and expand its description. Some options are checkboxes indicated by {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} icons, others are drop-down lists indicated by {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} icons.
+To find out what each setting does, search this page for the setting's name and expand its description.
+
+This reference indicates different settings with the following icons:
+
+- {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} Checkboxes
+- Drop-down lists {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %}
+- {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/E7duEXTRnleJ5OOJ0f0C.svg", alt="Deprecated.", width="24", height="24" %} Deprecated
 
 To restore default preferences, scroll down to the end of the **Preferences** tab and click **Restore defaults and reload**.
 
@@ -60,11 +66,19 @@ Affects **Elements** > **Styles** and sister tabs, and the **Sources** > **Debug
 </fieldset>
 {% endDetails %}
 
+
 {% Details %}
 
+
 {% DetailsSummary %}
-**Color format** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} sets the format of CSS color values in **Elements** > **Styles**.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/E7duEXTRnleJ5OOJ0f0C.svg", alt="Deprecated.", width="24", height="24" %} **Color format** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} sets the format of CSS color values in **Elements** > **Styles**.
 {% endDetailsSummary %}
+
+{% Aside %}
+**Deprecated**: This settings is disabled to make room for [HD color spaces](/docs/devtools/css/color/).
+
+To re-enable it, clear the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Experiments**](/docs/devtools/settings/experiments/) > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Disable the deprecated Color Format setting** checkbox.
+{% endAside %}
 
 DevTools automatically converts any valid color value to the chosen format.
 
@@ -402,6 +416,16 @@ This video first shows that DOM nodes aren't selected in the DOM tree. Then when
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/kYLQC0rNON8sAdCSJTpu.png", alt="Rulers shown in viewport.", width="800", height="531" %}
 {% endDetails %}
 
+{% Details %}
+{% DetailsSummary %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show CSS documentation tooltip** displays a tooltip with a short description when you hover over a property in the **Styles** pane.
+{% endDetailsSummary %}
+
+The **Learn more** link takes you an [MDN CSS Reference](https://developer.mozilla.org/docs/Web/CSS/Reference) on the property.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/v0joPkQg0NiMauy0bwwB.png", alt="The tooltip with documentation on a CSS property.", width="800", height="651" %}
+{% endDetails %}
+
 ## Network
 
 This section lists options that customize the **Network** panel. Most of the options are the same as in the panel's settings.
@@ -490,7 +514,7 @@ This example shows both scroll and zoom mouse wheel actions on a flame chart in 
 
 This section lists options that customize the **Console**. Most of the options are the same as in [Console Settings](/docs/devtools/console/reference/#settings).
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/2W5sU2YKs7YDKdW4q18n.png", alt="Similar options in Console and in Settings.", width="800", height="425" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/SXLYnxuqs3l2Z45JPMRp.png", alt="Similar options in Console and in Settings.", width="800", height="434" %}
 
 {% Details %}
 {% DetailsSummary %}
@@ -539,6 +563,15 @@ You can find the same option in [Console > Settings](/docs/devtools/console/refe
 
 {% Details %}
 {% DetailsSummary %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Accept autocomplete suggestion on Enter** makes the **Console** accept the selected suggestion from the autocomplete drop-down when you press <kbd>Enter</kbd>.
+{% endDetailsSummary %}
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/yM8StJzP6O0p3uaREet6.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+This video shows what happens when you press <kbd>Enter</kbd> before and after enabling this option.
+{% endDetails %}
+
+{% Details %}
+{% DetailsSummary %}
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Group similar messages in console** makes the **Console** group similar messages together.
 {% endDetailsSummary %}
 
@@ -570,13 +603,22 @@ This video shows various output previews.
 
 {% Details %}
 {% DetailsSummary %}
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Evaluate triggers user activation** turns any command you run in the **Console** into user interaction. In other words, it sets [`navigator.userActivation.isActive`](https://developer.mozilla.org/docs/Web/API/Navigator/userActivation) to `true` upon evaluation.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Treat code evaluation as user action** turns any command you run in the **Console** into user interaction.
 {% endDetailsSummary %}
 
-You can find the same option in [Console > Settings](/docs/devtools/console/reference/#trigger-user-activation).
+In other words, it sets [`navigator.userActivation.isActive`](https://developer.mozilla.org/docs/Web/API/Navigator/userActivation) to `true` upon evaluation. You can find the same option in [Console > Settings](/docs/devtools/console/reference/#trigger-user-activation).
 
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/Wfwxdk8XSvqR665dVEAr.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
-This video shows how to enable this option both in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="22", height="22" %} **Settings** and [Console > Settings](/docs/devtools/console/reference/#trigger-user-activation).
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/BRgg3ck0UVpTbYPmJsyV.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+This video shows the evaluation result of `navigator.userActivation.isActive` before and after enabling this option.
+{% endDetails %}
+
+{% Details %}
+{% DetailsSummary %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Automatically expand console.trace() messages** makes the **Console** display expanded `console.trace()` messages when it logs them.
+{% endDetailsSummary %}
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/cbD03Bo9vkRelkn9g8Y4.png", alt="An expanded console.trace() message in the Console.", width="800", height="648" %}
+
 {% endDetails %}
 
 {% Details %}

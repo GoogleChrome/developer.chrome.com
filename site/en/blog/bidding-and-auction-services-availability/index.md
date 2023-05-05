@@ -12,6 +12,8 @@ tags:
   - privacy
 ---
 
+{% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
+
 As FLEDGE adoption continues to grow and scale, we recently launched a collection of new optimizations to help improve on-device auction latency. In addition to these improvements, we will be expanding support for the [Bidding and Auction services](https://github.com/privacysandbox/fledge-docs/blob/main/bidding_auction_services_api.md) to the web platform. 
 
 The Bidding and Auction services integrate with existing FLEDGE designs and offload bid computation and scoring to a cloud-based trusted execution environment. This was proposed back in 2022 and, after careful consideration, both Chrome and Android plan to provide support for Bidding and Auction services.

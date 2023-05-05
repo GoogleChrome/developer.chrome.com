@@ -116,8 +116,13 @@ Sending and receiving messages to and from a native application is very similar 
 messaging. The main difference is that [`runtime.connectNative`][connect-native] is used instead of
 [`runtime.connect`][connect], and [`runtime.sendNativeMessage`][send-native-message] is used instead of
 [`runtime.sendMessage`][send-message].
+
 To use these methods, the "nativeMessaging" permission must be [declared][declare-permissions] in your
 extensions's manifest file.
+
+These methods are not available inside content scripts, only inside your extension's pages and service worker. If you
+wish to communicate from a content script to the native application, send the message to your background context
+or service worker, and have it pass it along to the native application.
 
 The following example creates a [`runtime.Port`][port] object that's connected to native messaging host
 `com.my_company.my_application`, starts listening for messages from that port and sends one outgoing

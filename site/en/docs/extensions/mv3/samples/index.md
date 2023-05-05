@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Samples"
 seoTitle: "Chrome Extension examples"
 date: 2020-12-11
-updated: 2022-12-16
+updated: 2023-02-03
 description: Intro to extension examples GitHub repository 
 ---
 
@@ -18,7 +18,7 @@ APIs. Use these to learn how extensions work or as a starting point for building
 The examples are currently located under the following directories:
 
 [api-samples/][gh-api]
-: Extensions designed to demonstrate the capabilities of a specific API. For example, the [Action API example][gh-action] showcases extension IU elements such as the popup, tooltip, and badges among others. 
+: Extensions designed to demonstrate the capabilities of a specific API. For example, the [Action API example][gh-action] showcases extension UI elements such as the popup, tooltip, and badges among others. 
 
 [functional-samples/sample...][gh-functional-samples]
 : Complete extensions that implement all the basic features for a given purpose.
@@ -55,7 +55,7 @@ To test these examples in your local machine, follow these steps:
 1. Navigate to the directory of the extension you want to try.
 1. [Load your extension locally][dev-basics-locally].
 
-Each extension example includes a `README.md` with instructions on how the extension works.
+Many samples have a `README.md` with instructions on how the extension works. (We are working to add READMEs to all samples.)
 Read the instructions carefully; each extension is different. For example, some extensions run by clicking on the extension icon, while others run automatically but only run on specific sites. 
 
 ## Contributing samples {: #collaborating }

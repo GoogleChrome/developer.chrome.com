@@ -1,0 +1,115 @@
+:root,
+::backdrop {
+  // Set theme aliases
+  --color-mode: 'light';
+  --color-bg: #{get-color('white')};
+  --color-inverse: #{get-color('black')};
+  --color-bg-shade: #{get-color('grey-100')};
+  --color-text: #{get-color('grey-900')};
+  --color-secondary-text: #{get-color('grey-800')};
+  --color-primary: #{get-color('blue-600')};
+  --rgb-primary: 26, 115, 232;
+  --color-primary-shade: #{get-color('blue-700')};
+  --color-secondary: #{get-color('blue-50')};
+  --color-hairline: #{get-color('grey-300')};
+
+  --color-footer-bg: #{get-color('grey-50')};
+
+  --color-side-nav-hover: #{get-color('grey-100')};
+  --color-side-nav-active: #{get-color('blue-600')};
+
+  --color-link-default-visited: #{get-color('purple-900')};
+  --rgb-link-default-visited: 103, 29, 168;
+
+  // This corresponds too the color grey-800.
+  // We use the actual RGB values here so we can use it with rgba() elsewhere.
+  --rgb-button-overlay: 60, 64, 67;
+
+  --color-code-bg: #{get-color('grey-50')};
+  --color-code-comment: #{get-color('blue-900')};
+  --color-code-string: #{get-color('blue-900')};
+  --color-code-tag: #{get-color('green-600')};
+  --color-code-number: #{get-color('blue-700')};
+  --color-code-attr: #{get-color('pink-700')};
+  --color-code-highlight: #{get-color('yellow-200')};
+  --color-code-add: #{get-color('green-200')};
+  --color-code-remove: #{get-color('red-200')};
+
+  --color-project-default: #{get-color('blue-700')};
+  --color-project-handbook: #{get-color('red-700')};
+  --color-project-workbox: #{get-color('orange-400')};
+  --color-project-lighthouse: #06f;
+
+  --color-meettheteam-bg: #{get-color('yellow-50')};
+
+  --color-grey-medium: #{get-color('grey-700')};
+
+  --color-blue-lightest: #{rgb(get-color('blue-50'), 0.4)};
+  --color-blue-lighter: #{get-color('blue-100')};
+  --color-blue-medium: #{get-color('blue-700')};
+  --color-blue-darkest: #{get-color('blue-900')};
+  --rgb-blue-darkest: 23, 78, 166;
+
+  --color-yellow-lightest: #{rgb(get-color('yellow-50'), 0.3)};
+  --color-yellow-lighter: #{get-color('yellow-100')};
+  --color-yellow-medium: #{get-color('yellow-700')};
+  --color-yellow-darkest: #{darken(get-color('yellow-900'), 1%)}; // darken to meet a11y contrast
+  --rgb-yellow-darkest: 227, 117, 0;
+
+  --color-red-lightest: #{rgb(get-color('red-50'), 0.4)};
+  --color-red-lighter: #{rgb(get-color('red-50'), 0.5)};
+  --color-red-medium: #{get-color('red-700')};
+  --color-red-darkest: #{get-color('red-900')};
+  --rgb-red-darkest: 165, 14, 14;
+
+  --color-green-lightest: #{rgb(get-color('green-50'), 0.4)};
+  --color-green-lighter: #{get-color('green-100')};
+  --color-green-medium: #{get-color('green-700')};
+  --color-green-darkest: #{get-color('green-900')};
+  --rgb-green-darkest: 13, 101, 45;
+
+  --color-purple-lightest: #{rgb(get-color('purple-50'), 0.4)};
+  --color-purple-lighter: #{rgb(get-color('purple-50'), 0.5)};
+  --color-purple-medium: #{get-color('purple-700')};
+  --color-purple-darkest: #{get-color('purple-900')};
+  --rgb-purple-darkest: 104, 29, 168;
+
+  --color-pink-lightest: #{rgb(get-color('pink-50'), 0.4)};
+  --color-pink-lighter: #{rgb(get-color('pink-50'), 0.5)};
+  --color-pink-medium: #{get-color('pink-700')};
+  --color-pink-darkest: #{get-color('pink-900')};
+  --rgb-pink-darkest: 156, 22, 107;
+
+  --color-cyan-lightest: #{rgb(get-color('cyan-50'), 0.4)};
+  --color-cyan-lighter: #{rgb(get-color('cyan-50'), 0.5)};
+  --color-cyan-medium: #{get-color('cyan-700')};
+  --color-cyan-darkest: #{get-color('cyan-900')};
+  --rgb-cyan-darkest: 0, 122, 131;
+}
+
+// @mixin dark-mode() {
+//   --color-bg: #{get-color('grey-900')};
+//   --color-text: #{get-color('grey-200')};
+//   --color-secondary-text: #{get-color('grey-500')};
+//   --color-hairline: #{get-color('grey-700')};
+//   --color-primary: #{get-color('blue-600')};
+// }
+
+// Default to showing the dark mode theme if the user has enabled
+// prefers-color-scheme.
+// But, give the user the option to override the media query by clicking a
+// button to toggle the data-user-color-scheme attribute.
+// https://hankchizljaw.com/wrote/create-a-user-controlled-dark-or-light-mode/
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --color-mode: 'dark';
+//   }
+
+//   :root:not([data-user-color-scheme]) {
+//     @include dark-mode();
+//   }
+// }
+
+// [data-user-color-scheme='dark'] {
+//   @include dark-mode();
+// }

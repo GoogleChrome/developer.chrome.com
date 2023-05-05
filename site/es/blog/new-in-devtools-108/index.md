@@ -88,8 +88,8 @@ Transpiladores y minificadores pueden convertir el código anterior en expresion
 function bar(){return foo(),foo(),42}
 ```
 
-<!-- This creates confusion during debugging because the stepping behavior is different between minified and authored code. It is even more confusing when using sourcemaps to debug the minified code in terms of the original code, as the developer is then looking at semicolons (which were under the hood turned into commas by the toolchain) but the debugger doesn't stop on them. -->
-Esto crea confusión durante la depuración porque el comportamiento paso a paso es diferente entre el código minificado y el creado. Es aún más confuso cuando se utilizan sourcemaps para depurar el código minimizado en términos del código original, ya que el desarrollador está mirando los puntos y comas (que se convirtieron en comas por la cadena de herramientas), pero el depurador no se detiene en ellos.
+<!-- This creates confusion during debugging because the stepping behavior is different between minified and authored code. It is even more confusing when using source maps to debug the minified code in terms of the original code, as the developer is then looking at semicolons (which were under the hood turned into commas by the toolchain) but the debugger doesn't stop on them. -->
+Esto crea confusión durante la depuración porque el comportamiento paso a paso es diferente entre el código minificado y el creado. Es aún más confuso cuando se utilizan source maps para depurar el código minimizado en términos del código original, ya que el desarrollador está mirando los puntos y comas (que se convirtieron en comas por la cadena de herramientas), pero el depurador no se detiene en ellos.
 
 {# https://chromium.googlesource.com/v8/v8/+/ade6d191c8566e3fe7331d2ef37e43760c7cb363 #}
 

@@ -6,6 +6,8 @@ ondevice-auctions:
   en: 'On-device auctions for custom audiences'
 cross-site-storage:
   en: 'Secure cross-site storage'
+content-selection:
+  en: 'Cross-site content selection'
 fledge:
   en: 'FLEDGE'
 fledge-best-practices:
@@ -15,7 +17,7 @@ topics-api:
 topics-latest:
   en: 'Latest updates to the Topics API'
 glossary:
-  en: 'Privacy Sandbox glossary'
+  en: 'Glossary and key concepts'
   ja: 'プライバシー サンドボックスの用語集'
 guiding-principles:
   en: 'Guiding principles'
@@ -48,6 +50,8 @@ events:
 blog:
   en: 'Blog'
   ja: 'ブログ'
+developer-guide:
+  en: 'Developer guide'
 measure-ads:
   en: 'Measure ad conversions with Attribution Reporting'
 measure-cross-site:
@@ -56,7 +60,7 @@ attribution-reporting-overview:
   en: 'Attribution Reporting overview'
 attribution-reporting-chrome-shipping:
   en: 'Why Chrome plans to ship the Attribution Reporting API'
-attribution-reporting-experiment:
+experiment-participate:
   en: 'Experiment and participate'
 attribution-reporting-debugging:
   en: 'Debugging Attribution Reporting'
@@ -70,6 +74,8 @@ attribution-reporting-system:
   en: 'Attribution Reporting end-to-end'
 attribution-reporting-summary:
   en: 'Summary reports'
+maximize-relevence:
+  en: 'Maximize ad relevance'
 private-aggregation:
   en: 'Private Aggregation API'
 tracking-prevention:
@@ -99,14 +105,14 @@ feedback:
   en: 'Feedback'
 faq:
   en: 'FAQ'
+enroll:
+  en: 'Enroll your site'
 topics-experiment:
   en: 'Topics API: experiment and participate'
 fledge-experiment:
   en: 'FLEDGE: experiment and participate'
 fledge-overview:
   en: 'FLEDGE overview'
-developer-guide:
-  en: 'Developer guides'
 first-party-sets:
   en: 'First-Party Sets'
 gnatcatcher:

@@ -5,11 +5,11 @@ description: >
   sourceMappingURL and sourceURL syntax changed
 authors:
   - paulirish
-date: 2013-06-12 
+date: 2013-06-12
 updated: 2019-03-09
 ---
 
-If you use either sourcemaps or sourceURL (both covered in the [HTML5 Rocks Primer on Sourcemaps](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)), then you may see a warning in Chrome console like `"/*@ sourceMappingURL=" source mapping URL declaration is deprecated, "/*# sourceMappingURL=" declaration should be used instead.`
+If you use either source maps or sourceURL (both covered in the [HTML5 Rocks Primer on Sourcemaps](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)), then you may see a warning in Chrome console like `"/*@ sourceMappingURL=" source mapping URL declaration is deprecated, "/*# sourceMappingURL=" declaration should be used instead.`
 
 <figure>
 {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/xoBTCsMxY6TknjLbS2P4.png", alt="Sourcemapping Devtools screenshot", width="702", height="101" %}
