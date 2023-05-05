@@ -7,7 +7,99 @@ authors:
 - patrickkettner
 ---
 
-<style>.responsive-table{padding-bottom:6rem}table{border-collapse: collapse;}table a {text-decoration: none;writing-mode: vertical-rl;white-space:nowrap}th {transform: rotate(180deg);padding: 3.5rem 0 1rem;}td{padding: 0.25rem 0.5rem;border-color: black;color: white;cursor: help;}td[data-compat] {text-align: center;background: var(--wdi-success-bg-color, #efefef);color: #aaa;}td[data-compat="yes"] {background: var(--wdi-success-bg-color, #e9f6ed);color: var(--wdi-success-color, #0d652d);}td[data-compat="bug"] {background: var(--wdi-success-bg-color, #fff5e3);color: var(--wdi-success-color, #c34900);}td[data-compat="no"] {background-color: var(--wdi-error-bg-color, #fce8e8);color: var(--wdi-error-color, #a50e0e);}th[data-browser] {background-repeat: no-repeat;background-size: 65%;background-position: center 0.5rem;vertical-align:top}th[data-browser="chrome"] {background-image: url(https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/4hnfEFkV8QU9yzzMF5qB.svg);}th[data-browser="firefox"] {background-image: url(https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/JSYT1LByw7VZ6iLfGR7A.svg);}th[data-browser="edge"] {background-image: url(https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/v7nFHkLoNVnEBDeG2Iii.svg) }th[data-browser="opera"] {background-image: url(https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/gfezxnkKP5JQEI8uDqzi.svg);background-size: 60%;}th[data-browser="samsung"] {background-image: url(https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/gJktLzbNjho50k9Oiy0w.svg) }th[data-browser="brave"] {background-image: url(https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/pUkpUAT1GxEfNKsh27vt.svg) }th[data-browser="tor"] {background-image: url(https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/PXKd6rfAOrPJw6aGzvmp.svg) }th[data-browser="uc"] {background-image: url(https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/IP0DZ19HEP1ViwwwZWYV.svg);background-size: 60%;}article>.stack--block>p:first-of-type{margin-top:0}</style>
+<style>
+    .responsive-table {
+      padding-bottom: 6rem
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    table a {
+      text-decoration: none;
+      white-space: nowrap;
+      writing-mode: vertical-rl;
+    }
+
+    th {
+      padding: 3.5rem 0 1rem;
+      transform: rotate(180deg);
+    }
+
+    td {
+      border-color: black;
+      color: white;
+      cursor: help;
+      padding: 0.25rem 0.5rem;
+    }
+
+    td[data-compat] {
+      background: var(--wdi-success-bg-color, #efefef);
+      color: #aaa;
+      text-align: center;
+    }
+
+    td[data-compat="bug"] {
+      background: var(--wdi-success-bg-color, #fff5e3);
+      color: var(--wdi-success-color, #c34900);
+    }
+
+    td[data-compat="no"] {
+      background-color: var(--wdi-error-bg-color, #fce8e8);
+      color: var(--wdi-error-color, #a50e0e);
+    }
+
+    td[data-compat="yes"] {
+      background: var(--wdi-success-bg-color, #e9f6ed);
+      color: var(--wdi-success-color, #0d652d);
+    }
+
+    th[data-browser] {
+      background-position: center 0.5rem;
+      background-repeat: no-repeat;
+      background-size: 65%;
+      vertical-align: top
+    }
+
+    th[data-browser="chrome"] {
+      background-image: url("https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/4hnfEFkV8QU9yzzMF5qB.svg");
+    }
+
+    th[data-browser="firefox"] {
+      background-image: url("https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/JSYT1LByw7VZ6iLfGR7A.svg");
+    }
+
+    th[data-browser="edge"] {
+      background-image: url("https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/v7nFHkLoNVnEBDeG2Iii.svg")
+    }
+
+    th[data-browser="opera"] {
+      background-image: url("https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/gfezxnkKP5JQEI8uDqzi.svg");
+      background-size: 60%;
+    }
+
+    th[data-browser="samsung"] {
+      background-image: url("https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/gJktLzbNjho50k9Oiy0w.svg")
+    }
+
+    th[data-browser="brave"] {
+      background-image: url("https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/pUkpUAT1GxEfNKsh27vt.svg")
+    }
+
+    th[data-browser="tor"] {
+      background-image: url("https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/PXKd6rfAOrPJw6aGzvmp.svg")
+    }
+
+    th[data-browser="uc"] {
+      background-image: url("https://wd.imgix.net/image/DXqUldooyJOUnj3qXSYLHbUgUI93/IP0DZ19HEP1ViwwwZWYV.svg");
+      background-size: 60%;
+    }
+
+    article > .stack--block > p:first-of-type {
+      margin-top: 0
+    }
+</style>
 
 Custom Tabs are a great option for creating a customized browser experience directly within your app, but they are not a singular thing. Built ontop of the [Intent system](https://developer.android.com/guide/components/intents-filters), Custom Tabs are a collection of configurable option requests that are sent to the end user's preferred browser. It is up to each browser to implement the various options. The availability of CustomTabs features can vary between Android browsers due to implementation differences.
 
