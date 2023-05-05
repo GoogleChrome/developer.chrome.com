@@ -12,10 +12,11 @@ authors:
 
 If you're looking for Privacy Sandbox resources, check out the videos below. Some are recorded Privacy Sandbox office hours. You can find upcoming office hours on the [events page](/docs/privacy-sandbox/events/).
 
+{% Aside 'caution' %}
 Keep in mind that unlike documentation, which can easily be updated, videos can have some content that has become out of date. While the concepts discussed in these videos are still relelvant, some technical details and code will have changed.
 
 Refer to the linked documentation for the latest details.
-
+{% endAside %}
 
 ## What is the Privacy Sandbox?
 
