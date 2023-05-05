@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: How to add extra HTTP Request Headers 
+title: Add extra HTTP Request Headers 
 seoTitle: How to add extra HTTP Request Headers to Android Custom Tabs
 date: 2020-08-12
 updated: 2022-10-25

@@ -7,17 +7,17 @@ updated: 2023-05-03
 description: Learn how to open links in either a native app or a Custom Tab.
 ---
 
-On Android URLs can be handled by native applications. If the user has the Twitter app installed and
+On Android, URLs can be handled by native applications. If the user has the Twitter app installed and
 clicks on a link to a tweet, they usually prefer that the Twitter application will be opened instead of the browser.
 When using Custom Tabs, you can support this use case by checking if a native app can handle a link, before opening a Custom Tab.
 
 ## On Android 11 and above
 
-Android 11 introduces a new intent flag, [`FLAG_ACTIVITY_REQUIRE_NON_BROWSER`][1], which is the
+Android 11 introduces a new intent flag, [`Intent.FLAG_ACTIVITY_REQUIRE_NON_BROWSER`][1], which is the
 recommended way to try opening a native app, as it doesn't require the app to declare any package
 manager queries.
 
-The approach is to try to launch an intent and use `FLAG_ACTIVITY_REQUIRE_NON_BROWSER` to ask
+The approach is to try to launch an intent and use `Intent.FLAG_ACTIVITY_REQUIRE_NON_BROWSER` to ask
 Android to avoid browsers when launching. If a native app that is capable of handling this Intent is not found, an
 `ActivityNotFoundException` will be thrown.
 
@@ -39,15 +39,13 @@ static boolean launchNativeApi30(Context context, Uri uri) {
 ## Before Android 11
 
 Even though the application may target Android 11, or API level 30, previous Android versions will
-not understand the `FLAG_ACTIVITY_REQUIRE_NON_BROWSER` flag. To support those devices, we can query the Package Manager. Our approach is to  query the Package Manager for applications that support a generic "http" intent. Those applications are likely browsers.
+not understand the `FLAG_ACTIVITY_REQUIRE_NON_BROWSER` flag. To support those devices:
 
-Then, query for applications that handle intents for the specific URL we want to launch. This will
-return both browsers and native applications setup to handle that URL.
-
-Now, remove all browsers found on the first list from the second list, and we'll be left only with
-native apps.
-
-If the list is empty, we know there are no native handlers and return false. Otherwise, we launch
+1. Use the [PackageManager](https://developer.android.com/reference/android/content/pm/PackageManager?cmdf=android+packagemanager) to query for applications supporting a generic "http" intent. Those applications are likely browsers.
+2. Then, query for applications that handle intents for the specific URL you want to launch. This will
+return both browsers and native applications set up to handle that URL.
+3. Now, remove all browsers found on the first list from the second list. The resulting list only includes native apps.
+4. If the list is empty, there are no native handlers and return false. Otherwise, launch
 the intent for the native handler.
 
 ```java
