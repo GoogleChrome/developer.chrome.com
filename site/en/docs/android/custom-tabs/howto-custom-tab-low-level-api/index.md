@@ -3,11 +3,10 @@ layout: "layouts/doc-post.njk"
 title: Using the Custom Tab low level API
 date: 2020-02-04
 updated: 2023-05-03
-description: Although the recommended method to integrate your application with Custom Tabs is using the AndroidX Browser Library, a low level implementation is also available.
+description: This guide explains how to use a Custom Tab without the androidx browser support library.
 ---
 
-Although the recommended method to integrate your application with Custom Tabs is using the
-AndroidX Browser Library, a low level implementation is also available.
+The recommended way to integrate your application with Custom Tabs is using the AndroidX Browser Library, but you can also start a Custom Tab without the support library. This guide gives an overview on how to achieve this.
 
 The complete implementation of the Support Library is available on [GitHub][1] and an be used as a
 start point. It also contains the [AIDL files][2] required to connect to the service, as the ones
