@@ -527,3 +527,57 @@ Set whether the url bar should hide as the user scrolls down on the page.
  uc="ct_unimplemented@13.4.0.1306"
 %}
 
+
+## CustomTabsSession
+
+[`CustomTabsSession`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsSession) is an optional class you can provide to an instance of `CustomTabsIntent.Builder()`. When used, you can use this class to handle any communication with the Custom Tab.
+
+### setEngagementSignalsCallback
+
+Sets an `[EngagementSignalsCallback](https://developer.android.com//reference/androidx/browser/customtabs/EngagementSignalsCallback)` to receive callbacks for events related to the user's engagement with webpage within the tab.
+
+{% AndroidBrowserSupportTable
+ _method="setDefaultColorSchemeParams",
+ chrome="y@108.0.5359.79",
+ edge="n@107.0.1418.62",
+ firefox="n@107.2.0",
+ opera="ct_unimplemented@72.4.3767.69265",
+ samsung="n@19.0.3.12",
+ brave="n@1.46.138",
+ tor="n@102.2.1-Release (12)",
+ uc="ct_unimplemented@13.4.0.1306"
+%}
+
+
+### setEngagementSignalsCallback
+
+Sets an `[EngagementSignalsCallback](https://developer.android.com//reference/androidx/browser/customtabs/EngagementSignalsCallback)` to receive callbacks for events related to the user's engagement with webpage within the tab.
+
+{% AndroidBrowserSupportTable
+ _method="setDefaultColorSchemeParams",
+ chrome="y@108.0.5359.79",
+ edge="n@107.0.1418.62",
+ firefox="n@107.2.0",
+ opera="ct_unimplemented@72.4.3767.69265",
+ samsung="n@19.0.3.12",
+ brave="n@1.46.138",
+ tor="n@102.2.1-Release (12)",
+ uc="ct_unimplemented@13.4.0.1306"
+%}
+
+
+### isEngagementSignalsApiAvailable
+
+Returns whether the Engagement Signals API is available. The availability of the Engagement Signals API may change at runtime.
+
+{% AndroidBrowserSupportTable
+ _method="isEngagementSignalsApiAvailable",
+ chrome="y@108.0.5359.79",
+ edge="n@107.0.1418.62",
+ firefox="n@107.2.0",
+ opera="ct_unimplemented@72.4.3767.69265",
+ samsung="n@19.0.3.12",
+ brave="n@1.46.138",
+ tor="n@102.2.1-Release (12)",
+ uc="ct_unimplemented@13.4.0.1306"
+%}
