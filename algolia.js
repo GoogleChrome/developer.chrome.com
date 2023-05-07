@@ -49,7 +49,7 @@ async function index() {
   const indexedOn = new Date();
 
   if (!process.env.ALGOLIA_APP_ID || !process.env.ALGOLIA_API_KEY) {
-    console.warn('Missing Algolia environment variables, skipping indexing.');
+    console.warn('Missing Algolia environment , skipping indexing.');
     return;
   }
 
