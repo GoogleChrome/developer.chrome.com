@@ -47,7 +47,7 @@ are **synchronous as of Chromium&nbsp;108**.
 - `getSize()`: Returns the size of the file associated with the access handle in bytes.
 - `flush()`: Ensures that the contents of the file associated with the access handle contain all the
   modifications done through `write()`.
-- `close()`: Flushes the access handle and then closes it. Closing an access handle disables any
+- `close()`: Closing an access handle disables any
   further operations on it and releases the lock on the entry associated with the access handle.
 
 ```js
