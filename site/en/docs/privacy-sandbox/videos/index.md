@@ -21,41 +21,18 @@ Refer to the linked documentation for the latest details.
 ## What is the Privacy Sandbox?
 
 {% Partial 'privacy-sandbox/videos/ps-may-22.njk' %} 
-{# May 12, 2022. At Google I/O PS overview #}
+{# May 12, 2022 at Google I/O PS overview #}
 
 {% Partial 'privacy-sandbox/videos/ps-feb-23.njk' %}
+{# February 2023 Danny Rojas PS overview #}
 
-<!-- https://www.youtube.com/watch?v=5t83ebP71Yw&list=RDCMUCnUYZLuoy1rq1aVMwx4aTzw&index=26 -->
-
-<!--
-{% Columns %}
-{% Column %}
-<iframe width="280" height="158" src="https://www.youtube.com/embed/Gv2H3cUz_DM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-{% endColumn %}
-{% Column %}
-<strong>Spring 2022. Run time: 30:48</strong>
-
-Description, date, link to docs... sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-{% endColumn %}
-{% endColumns %}
--->
 
 ## Attribution reporting
 
-{% Columns %}
-{% Column %}
-<iframe width="280" height="158" src="https://www.youtube.com/embed/UGA74CIcom8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-<br>
-As some details may have changed, refer to the latest docs:
-<a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting API</a>
-{% endColumn %}
-{% Column %}
-<strong>May 2022. Run time: 6:15</strong> 
+{% Partial 'privacy-sandbox/videos/ara-may-22.njk' %}
+{# May 2022 Sam Dutton the Attribution Reporting API high level #}
 
-Sam Dutton of the Chrome team discusses the Attribution Reporting API at a high level. He covers the two types of reports in the API Event-level reports and Summary reports, what data is reported, and how.
-{% endColumn %}
-{% endColumns %}
+
 
 {% Columns %}
 {% Column %}
@@ -67,23 +44,13 @@ As some details may have changed, refer to the latest docs:
 
 {% endColumn %}
 {% Column %}
-<strong>Aug. 11, 2022 Run time: 43:58</strong>
+<strong>Aug. 11, 2022 Run time: 43:58. Part 1.</strong>
 
-Summary reports walkthrough by Maud Nalpas of the Chrome team. A discussion of noise, how to set up and get summary reports. Robert goes through the server side.
+In the August 2022 Privacy Sandbox office hours, Maud Nalpas of the Chrome team discusses the Attribution Reporting API. Maud presents a walkthrough of Summary reports and discusses how to generte aggregatable reports in the browser. Maud touched on noise, how to set up and get summary reports. 
 {% endColumn %}
 {% endColumns %}
 
-{% Columns %}
-{% Column %}
-<iframe src="https://drive.google.com/file/d/1EVCw6MTz3JIdkno2lICN6q7gNrmZBYGf/preview" width="280" height="210" allow="autoplay"></iframe>
 
-<!-- [Open full-size video](https://drive.google.com/file/d/1EVCw6MTz3JIdkno2lICN6q7gNrmZBYGf/preview) -->
-
-{% endColumn %}
-{% Column %}
-Description, date, link to docs... sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-{% endColumn %}
-{% endColumns %}
 
 {% Columns %}
 {% Column %}
@@ -93,7 +60,24 @@ Description, date, link to docs... sed do eiusmod tempor incididunt ut labore et
 
 {% endColumn %}
 {% Column %}
-Description, date, link to docs... sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+<strong>Aug. 11, 2022 Run time: 29:34. Part 2.</strong>
+
+In part 2 of the August 2022 Privacy Sandbox office hours, Robert Kubis discusses the server side of Attribution Reporting. He demonstrates how to collect aggregatable reports from the browser, grouping the reports to generate summary reports, generating debug reports, and how the Aggregation Service generates reports.
+{% endColumn %}
+{% endColumns %}
+
+
+{% Columns %}
+{% Column %}
+<iframe src="https://drive.google.com/file/d/1EVCw6MTz3JIdkno2lICN6q7gNrmZBYGf/preview" width="280" height="210" allow="autoplay"></iframe>
+
+<!-- [Open full-size video](https://drive.google.com/file/d/1EVCw6MTz3JIdkno2lICN6q7gNrmZBYGf/preview) -->
+
+{% endColumn %}
+{% Column %}
+<strong>June 30, 2022. Run time: 23:29</strong>
+
+The Chrome team presents a high-level overview of the Attribution Reporting API and why it's important with the coming deprecation of third-party cookies.
 {% endColumn %}
 {% endColumns %}
 

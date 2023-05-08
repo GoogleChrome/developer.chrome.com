@@ -73,7 +73,6 @@ as well as a Q&A session with DevRel, Product and Engineering leads.
 
 * June 30, 2022
 * [Video of presentation](https://drive.google.com/file/d/1EVCw6MTz3JIdkno2lICN6q7gNrmZBYGf/view?pli=1)
-* [Find out more](https://groups.google.com/u/2/a/chromium.org/g/attribution-reporting-api-dev/c/NLbPwiwj3BE)
 
 ### Learn about Chrome origin trials {: #oh01}
 
