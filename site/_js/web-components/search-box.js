@@ -443,7 +443,7 @@ export class SearchBox extends BaseElement {
           aria-label="${this.placeholder}"
         >
           <div class="search-box__result-heading type--label">
-            Please enter at least 4 characters for search suggestions.
+            Please enter at least 3 characters for search suggestions.
           </div>
         </div>
       `;
