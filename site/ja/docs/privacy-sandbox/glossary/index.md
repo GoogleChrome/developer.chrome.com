@@ -3,8 +3,8 @@ layout: layouts/doc-post.njk
 title: プライバシーサンドボックスの用語集
 subhead: プライバシーサンドボックスの記事とドキュメントでは、プライバシー、広告、ウェブ開発の概念を理解していることを前提としています。 この用語集では、重要な用語について説明します。
 description: 重要な概念の簡単な説明。
-date: '2021-05-18'
-updated: '2022-04-04'
+date: 2021-05-18
+updated: 2022-04-04
 authors:
   - samdutton
   - alexandrawhite
