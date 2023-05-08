@@ -17,7 +17,7 @@ authors:
 
 {% Partial 'privacy-sandbox/glossary-entries/ad-auction.njk' %}
 
-## Ad creative, creative {: #ad-creative}
+## 広告クリエイティブ、クリエイティブ {: #ad-creative}
 
 {% Partial 'privacy-sandbox/glossary-entries/ad-creative.njk' %}
 
@@ -95,7 +95,7 @@ authors:
 
 {% Partial 'privacy-sandbox/glossary-entries/demand-side-platform.njk' %}
 
-## 差分プライバシー  {: #differential-privacy }
+## 差分プライバシー {: #differial-privacy }
 
 {% Partial 'privacy-sandbox/glossary-entries/differential-privacy.njk' %}
 
@@ -163,7 +163,7 @@ authors:
 
 {% Partial 'privacy-sandbox/glossary-entries/inventory.njk' %}
 
-## k-anonymity
+## k-匿名性
 
 {% Partial 'privacy-sandbox/glossary-entries/k-anonymity.njk' %}
 
@@ -195,7 +195,7 @@ authors:
 
 {% Partial 'privacy-sandbox/glossary-entries/real-time-bidding.njk' %}
 
-## サーフェス
+## リマーケティング
 
 {% Partial 'privacy-sandbox/glossary-entries/remarketing.njk' %}
 
@@ -207,7 +207,7 @@ authors:
 
 {% Partial 'privacy-sandbox/glossary-entries/seller.njk' %}
 
-## Site
+## サイト
 
 {% Partial 'privacy-sandbox/glossary-entries/site.njk' %}
 
@@ -251,6 +251,6 @@ authors:
 
 {% Partial 'privacy-sandbox/glossary-entries/well-known.njk' %}
 
-## Worklet
+## ワークレット
 
 {% Partial 'privacy-sandbox/glossary-entries/worklet.njk' %}
