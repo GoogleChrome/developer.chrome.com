@@ -12,10 +12,10 @@ authors:
 ---
 
 {% Aside %} If you're not familiar with the API, head over to [Introduction to Attribution
-Reporting (Conversion Measurement)](/docs/privacy-sandbox/attribution-reporting-introduction/)
+Reporting (Conversion Measurement)](/docs/privacy-sandbox/attribution-reporting/)
 before reading this post. {% endAside %}
 
-The [Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting-introduction/) makes it
+The [Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/) makes it
 possible to measure when an ad click leads to a conversion on an advertiser site, such as a sale or
 a sign-up. The API offers a privacy-preserving approach to measuring ad conversions. It doesn't rely
 on third-party cookies or mechanisms that can be used to identify individual users across sites.
@@ -24,14 +24,14 @@ generated and stored on the user's device; later, the browser sends these report
 endpoint.
 
 Sites have experimented with the Attribution Reporting API in Chrome, via an [origin
-trial](/docs/privacy-sandbox/attribution-reporting-introduction/#status).
+trial](/docs/privacy-sandbox/attribution-reporting/#status).
 
 One of the insights
-provided by these early experiments is the impact of **user-initiated data clearing, such as browser history clearing,** on the data advertisers and adtech companies get from the API. [Aggregate Chrome statistics](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/5Ppe0cL-l1Y)
+provided by these early experiments is the impact of **user-initiated data clearing, such as browser history clearing,** on the data advertisers and ad tech companies get from the API. [Aggregate Chrome statistics](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/5Ppe0cL-l1Y)
 were recently published. This post adresses answering common questions on the impact of
 user-initiated data clearing on attribution reports.
 
-{% Aside %} Numbers and statements in this blogpost are correct at the time of its
+{% Aside %} Numbers and statements in this blog post are correct at the time of its
 publication. They're subject to change as the API evolves. {% endAside %}
 
 ## How does user-initiated data clearing impact attribution reports?
@@ -71,7 +71,7 @@ list for developers](https://groups.google.com/u/0/a/chromium.org/g/attribution-
 **With cookies**, some percentage of conversions aren't reported due to post-click pre-conversion
 data clearing. Because cookies have been cleared, there's no cookie to attach to a request at
 conversion time, thus that conversion can't be measured. The exact percentage of conversions that
-aren't reported due to user-initiated data clearing isn't known. It varies across adtech companies
+aren't reported due to user-initiated data clearing isn't known. It varies across ad tech companies
 (or advertisers).
 
 <figure>
@@ -95,20 +95,20 @@ conversions, and the reports for these conversions won't be sent if the sources 
 For a **10%** conversion rate, assuming a total of **1000** clicks and without taking other errors
 into consideration:
 
-- If users were never clearing any data: an adtech company would observe **100** conversions.
+- If users were never clearing any data: an ad tech company would observe **100** conversions.
 - Considering data clearing:
   - With cookies: data clearing occurring after a click and before a conversion causes some
     percentage of conversions to not be attributed to certain click events, since there is no cookie
-    to map the click and the conversion. With our example, an adtech company would observe **less than 100** conversions.
+    to map the click and the conversion. With our example, an ad tech company would observe **less than 100** conversions.
   - With Attribution Reporting: data clearing occurring after a click and before a conversion caused
     **1.6%** of reports that signified a conversion to be cleared (16% of 10% = 1.6%) in the first
-    origin trial. Without taking other errors into consideration, an adtech company would receive **84**
+    origin trial. Without taking other errors into consideration, an ad tech company would receive **84**
     reports that signal a conversion, instead of **100**.
 
 ### Data clearing occurring after a conversion
 
 **With cookies**, post-conversion data clearing has no effect, because conversions are reported
-immediately to the adtech company.
+immediately to the ad tech company.
 
 <figure>
   {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/7H4tlmi9nsa1LRNRkGlV.png", alt="User-initiated data clearing after a conversion doesn't impact cookie-based measurement.", width="800", height="195" %}
@@ -119,7 +119,7 @@ immediately to the adtech company.
 in order to honor user choice—such as a user clearing browser history, or deleting site data.
 Because the API doesn't send the reports immediately but with a delay in order to protect user
 privacy, this means that the browser storage is already empty when the scheduled time comes from the
-browser to send the report to the predefined endpoint—typically an adtech company.
+browser to send the report to the predefined endpoint—typically an ad tech company.
 
 <figure>
   {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/IeZewxklxPft41cQFtFh.png", alt="User-initiated data clearing after a conversion impacts measurement based on the Attribution Reporting API.", width="800", height="280" %}
@@ -209,6 +209,6 @@ they were scheduled to be sent soon.
 
 ## Attribution Reporting: all resources
 
-See [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting-introduction).
+See [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/).
 
-{% include 'content/privacysandbox-partials/ar-get-updates.njk' %}
+{% Partial 'privacy-sandbox/ar-get-updates.njk' %}

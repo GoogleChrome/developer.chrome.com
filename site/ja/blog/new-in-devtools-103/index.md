@@ -16,7 +16,7 @@ tags:
 
 *翻訳者の [yoichiro](https://github.com/yoichiro) さん、レビュアーの [lacolaco](https://github.com/lacolaco) さん、 [technohippy](https://github.com/technohippy) さん、 [yoshiko-pg](https://github.com/yoshiko-pg) さんに感謝いたします。*
 
-{% include 'partials/devtools/ja/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='LyMts4yfQu8' %}
 
@@ -189,7 +189,7 @@ Chromium issue: [1321803](https://crbug.com/1321803)
 Chromium issues: [1226363](https://crbug.com/1226363)
 
 
-<!-- ## Sourcemaps improvements {: #sourcemaps } -->
+<!-- ## Source maps improvements {: #sourcemaps } -->
 ## ソースマップの改善 {: #sourcemaps }
 
 <!-- Previously, developers experience random failure during: -->
@@ -202,7 +202,7 @@ Chromium issues: [1226363](https://crbug.com/1226363)
 - [Codepen](https://codepen.io/) の例にてパフォーマンスの問題に関するソースの場所の特定
 - [React DevTools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) が有効になっているが **Component** タブがない
 
-<!-- Here are a few fixes on sourcemaps to improve the overall debugging experience: -->
+<!-- Here are a few fixes on source maps to improve the overall debugging experience: -->
 全体的なデバッグ体験を向上させるためのソースマップのいくつかの修正を次に示します:
 
 <!-- - Correct mapping between location and offset for inline scripts and source location
@@ -218,5 +218,5 @@ Chromium issues: [1226363](https://crbug.com/1226363)
 
 Chromium issues: [1319828](https://crbug.com/1319828), [1318635](https://crbug.com/1318635), [1305475](https://crbug.com/1305475)
 
-{% include 'partials/devtools/ja/reach-out.md' %}
-{% include 'partials/devtools/ja/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

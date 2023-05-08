@@ -27,7 +27,7 @@ Lighthouse 使用以下过程来识别可能影响滚动性能的事件监听器
 
 Lighthouse 会筛选掉来自不同主机的监听器，因为您可能无法控制这些脚本。可能存在损害页面滚动性能的第三方脚本，但这些脚本未在您的 Lighthouse 报告中列出。
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## 如何使事件监听器被动以提高滚动性能
 

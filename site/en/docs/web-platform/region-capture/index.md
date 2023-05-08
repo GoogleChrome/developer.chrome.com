@@ -7,7 +7,7 @@ authors:
   - beaufortfrancois
   - eladalon
 date: 2022-06-21
-updated: 2022-08-04
+updated: 2022-11-14
 hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/05M2IjnWmaeFbIDWaznm.jpeg
 alt: A woman holding her hands up and making a frame with her fingers. Above her the sky is blue with a few clouds.
 tags:
@@ -84,10 +84,7 @@ if ("CropTarget" in self && "fromElement" in CropTarget) {
 
 ### Deriving a CropTarget
 
-Let's focus on the Element called `mainContentArea`. To derive a `CropTarget` from it, call `CropTarget.fromElement(mainContentArea)`. The returned Promise will be resolved with a new `CropTarget` object if successful. Otherwise it will be rejected if either:
-
-- The type for `mainContentArea` is not supported. (At the time of writing, Chrome has only implemented support for `<div>` and iframes. As a workaround, put the element in a `<div>`. In [Chrome 105], you can turn on experimental support for all `HTMLElement`s  by enabling the `about:flags/#region-capture-experimental-subtypes` flag.)
-- You have minted an unreasonable number of `CropTarget` objects.
+Let's focus on the Element called `mainContentArea`. To derive a `CropTarget` from it, call `CropTarget.fromElement(mainContentArea)`. The returned Promise will be resolved with a new `CropTarget` object if successful. Otherwise it will be rejected if you have minted an unreasonable number of `CropTarget` objects.
 
 ```js
 const mainContentArea = document.querySelector("#mainContentArea");
@@ -95,6 +92,10 @@ const cropTarget = await CropTarget.fromElement(mainContentArea);
 ```
 
 Unlike an `Element`, a `CropTarget` object is [serializable]. It can be passed to another document using [`Window.postMessage()`], for instance.
+
+{% Aside %}
+Prior to Chrome&nbsp;106, `CropTarget.fromElement(mainContentArea)` would reject if the type for `mainContentArea` was not `<div>` or iframe.
+{% endAside %}
 
 ### Cropping
 
@@ -171,7 +172,6 @@ At the time of writing, Region Capture is available in Chrome&nbsp;104 on deskto
 
 Here's a sneak peek of what to expect in the near future that will improve screen sharing on the web:
 
-- Region Capture will support all Element types.
 - Region Capture will support captures of other tabs.
 - [Conditional Focus] will allow the capturing web app to instruct the browser to either switch focus to the captured display surface, or to avoid such a focus change.
 - An [Element-level Capture API] might be provided.
@@ -212,7 +212,6 @@ Thanks to [Joe Medley] for reviewing this article.
 
 [`element`]: https://developer.mozilla.org/docs/Web/API/Element
 [bounding box]: https://developer.mozilla.org/docs/Glossary/bounding_box
-[chrome 105]: https://chromiumdash.appspot.com/commit/a27db816fd0765161dd7c501983251ef5f777666
 [serializable]: https://developer.mozilla.org/docs/Glossary/Serializable_object
 [`window.postmessage()`]: https://developer.mozilla.org/docs/Web/API/Window/postMessage
 [`browsercapturemediastreamtrack`]: https://w3c.github.io/mediacapture-region/#browser-capture-media-stream-track

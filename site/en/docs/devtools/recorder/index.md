@@ -5,17 +5,19 @@ authors:
   - jecelynyeen
   - sofiayem
 date: 2021-11-02
-updated: 2022-03-25
+updated: 2023-01-09
 description: "Record, replay, measure user flows, and edit their steps with the Recorder panel."
 tags:
   - test
   - performance
+anchorRedirects:
+  selector: /docs/devtools/recorder/reference/#selector
 ---
 
 Take a glance at the new **Recorder** panel (preview feature) with the video below.
 
 {% YouTube id='rMUayh1QPYs' %}
-<!-- {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/jDJpU85zWj1dipsUPrMr.mp4", autoplay="true", muted="false", loop="true",  class="screenshot" %} -->
+<!-- {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/jDJpU85zWj1dipsUPrMr.mp4", autoplay="true", muted="false", loop="true", controls="true",  class="screenshot" %} -->
 
 Complete this tutorial to learn how to use the **Recorder** panel to record, replay, and measure user flows.
 
@@ -24,6 +26,10 @@ This is a preview feature in Chrome 97. Our team is actively working on this fea
 {% endAside %}
 
 For more information on how to share the recorded user flows, edit them and their steps, see the [Recorder features reference](/docs/devtools/recorder/reference/).
+
+{% Aside 'note' %}
+This feature is available only in Chrome, not Chromium.
+{% endAside %}
 
 ## Open the Recorder panel {: #open }
 
@@ -39,11 +45,11 @@ For more information on how to share the recorded user flows, edit them and thei
 
 ## Introduction {: #intro }
 
-We will be using this [coffee ordering](https://coffee-cart.netlify.app/) demo page. Checkout is a common user flow among shopping websites.
+We will be using this [coffee ordering](https://coffee-cart.app/) demo page. Checkout is a common user flow among shopping websites.
 
 In the next sections, we will walk you through how to record, replay and audit the following checkout flow with the **Recorder** panel:
 
-{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/UcCr4JgWqpJm2n8Y5Q8W.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/UcCr4JgWqpJm2n8Y5Q8W.mp4", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
 
 1. Add a coffee to the cart.
 2. Add another coffee to the cart.
@@ -56,12 +62,13 @@ In the next sections, we will walk you through how to record, replay and audit t
 
 ## Record a user flow {: #record }
 
-1. Open this [demo](https://coffee-cart.netlify.app/) page. Click on the **Start new recording** button to begin.
+1. Open this [demo](https://coffee-cart.app/) page. Click on the **Start new recording** button to begin.
 1. Enter "coffee checkout" in the **Recording name** textbox.
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/EnRcThJpdtY6c91ZTRMT.png", alt="Start a new recording.", width="800", height="520" %}
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/MTIDldRAYMHBnnKSmnVy.png", alt="Start a new recording.", width="800", height="529" %}
    {% Aside %}
-   The **Selector attribute** textbox is optional. Leave it blank as it is. For more information, see [Customize the recording's selector](/docs/devtools/recorder/reference/#customize-selector).
+   The **Selector attribute** textbox and **Selector types to record** checkboxes are optional. For this tutorial, leave the defaults as they are.
 
+   For more information, see [Understand selectors](/docs/devtools/recorder/reference/#selector).
    {% endAside %}
 1. Click on the **Start a new recording** button. The recording is started. The panel is showing **Recording...** indicating the recording is in progress.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fpPKdjSY4lK7cZ5HhZ72.png", alt="recording in progress.", width="800", height="528" %} 
@@ -78,14 +85,17 @@ In the next sections, we will walk you through how to record, replay and audit t
 1. In the payment details form, fill in the *Name* and *Email* textboxes, and check the *I would like to receive order updates and promotional messages.* checkbox.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/UOewwKwP99GldzuTtIL7.png", alt="Payment details form.", width="800", height="519" %}
 1. Click on the *Submit* button to complete the checkout process.
-1. In the **Recorder** panel. Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/atK0ZIkmafgOnagKckde.svg", alt="End recording.", width="20", height="20" %} **End recording** button to end the recording.
+   {% Aside 'gotchas' %}
+   You can manually [edit steps](#edit-steps) even before you end the recording.
+   {% endAside %}
+1. In the **Recorder** panel, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/atK0ZIkmafgOnagKckde.svg", alt="End recording.", width="20", height="20" %} **End recording** button to end the recording.
 
 
 ## Replay a user flow {: #replay }
 
 After recording a user flow, you can replay it by clicking on the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Replay.", width="20", height="20" %}**Replay** button.
 
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/DZDWWSq8muswhFL2hAng.mp4" , autoplay="true", muted="true", loop="true", class="screenshot" %}
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/DZDWWSq8muswhFL2hAng.mp4" , autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
 
 You can see the user flow replay on the page. The replay progress is shown in the **Recorder** panel as well.
 
@@ -108,7 +118,7 @@ More settings might be supported in the future. [Share with us](https://goo.gle/
 
 You can measure the performance of a user flow by clicking on the **Measure performance** button. For example, checkout is a critical user flow of a shopping website. With the **Recorder** panel, you can record the checkout flow once and measure it regularly.
 
-{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/RfznQY25Sut04RjOfAZQ.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/RfznQY25Sut04RjOfAZQ.mp4", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
 
 Clicking on the **Measure performance** button will first trigger a replay of the user flow, then open the performance trace in the **Performance** panel.
 
@@ -120,7 +130,7 @@ Learn how to [analyze your page's runtime performance](/devtools/evaluate-perfor
 
 Let's walk through the basic options to edit the steps within the recorded workflow.
 
-For a comprehensive list of editing options, see [Edit steps](/docs/devtools/recorder/reference/##edit-steps) in features reference.
+For a comprehensive list of editing options, see [Edit steps](/docs/devtools/recorder/reference/#edit-steps) in features reference.
 
 ### Expand steps {: #expand-step }
 
@@ -149,7 +159,7 @@ The **selector** is editable too.  For example, if you want to select *Mocha* in
 
    Alternatively, click the **Select**{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ihbO22H4EA0HfrNX6gV1.png", alt="Select button.", width="24", height="22" %} button and then click *Mocha* on the page.
 
-   {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/ab7PcmmkoYnoR3RRZ8M1.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
+   {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/ab7PcmmkoYnoR3RRZ8M1.mp4", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
 
 1. [Replay](#replay) the flow now, it should select *Mocha* instead of *Cappuccino*.
 
@@ -157,21 +167,22 @@ The **selector** is editable too.  For example, if you want to select *Mocha* in
 
 ### Add and remove steps {: #add-and-remove-steps }
 
-There are options to add and remove steps too. This is useful if you want to add an extra step or remove an accidentally added step. Instead of re-recording the user flow, you can just edit it. Click on the **3-dot** kebab menu next to the step to open the menu. 
+There are options to add and remove steps too. This is useful if you want to add an extra step or remove an accidentally added step. Instead of re-recording the user flow, you can just edit it:
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/rs8gfXvOFh0Jrnw3F15j.png", alt="DevTools UI for coffee cart, including the menu for the Scroll event expanded to reveal three options: Add step before, add step after, and remove step.", width="800", height="663" %}
+1. Right-click the step you want to edit or click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N7wEDmtW9lnrSxPRupMa.svg", alt="Three-dot menu.", width="24", height="24" %} three-dot icon next to it. 
 
-1. For example, the *Scroll* event after the *Mocha* step is not necessary. You can select **Remove step** to remove it.
-2. Say you want to **wait until the 9 coffees** display on the page before performing any steps.
-3. In the *Mocha* step menu, select **Add step before**.
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/jEOHv9iiVfqMQvKRbueR.png", alt="A new step named Assert Element was added and can now be edited.", width="800", height="663" %} 
-5. In *Assert Element*, edit the new step with the following details:
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/V0sAMnmcK2cheOc26e1y.png", alt="The drop-down menu of a step with options to remove and add a steps before or after.", width="800", height="863" %}
+
+1. You can select **Remove step** to remove it. For example, the *Scroll* event after the *Mocha* step is not necessary.
+1. Say, you want to **wait until the 9 coffees** display on the page before performing any steps. In the *Mocha* step menu, select **Add step before**.
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/jEOHv9iiVfqMQvKRbueR.png", alt="A new step named Assert Element was added and can now be edited.", width="800", height="663" %}
+1. In *Assert Element*, edit the new step with the following details:
     - type: **waitForElement**
     - selector #1: **.cup**
     - operator: **==** (click **add operator** button)
     - count: **9** (click **add count** button)
    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/zeK91O21jvc5OD9HuovR.png", alt="The new step for coffee checkout has been updated with the aforementioned details.", width="800", height="663" %}
-6. {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Replay.", width="20", height="20" %}[Replay](#replay) the flow now to see the changes.
+1. {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Replay.", width="20", height="20" %}[Replay](#replay) the flow now to see the changes.
 
 ## Next steps {: #next }
 

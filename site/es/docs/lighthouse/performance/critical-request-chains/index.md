@@ -16,7 +16,7 @@ updated: 2020-04-29
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/apWYFAWSuxf9tQHuogSN.png", alt="Una captura de pantalla de la auditoría de Minimización de profundidad de solicitudes críticas de Lighthouse", width="800", height="452" %}</figure>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Cómo identifica Lighthouse las cadenas de solicitudes críticas
 

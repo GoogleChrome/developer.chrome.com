@@ -15,6 +15,8 @@ sections:
       description: How we collaborate with stakeholders to discuss, test, and adopt privacy-preserving technologies.
     - url: /docs/privacy-sandbox/status
   intro_related:
+    - url: /docs/privacy-sandbox/unified-origin-trial
+      title: Privacy Sandbox unified origin trial
     - url: /docs/privacy-sandbox/faq
       title: Frequently Asked Questions
     - url: /docs/privacy-sandbox/feedback
@@ -23,11 +25,13 @@ sections:
     - url: /docs/privacy-sandbox/user-agent
     - url: /docs/privacy-sandbox/user-agent/snippets
   prevent_covert_tracking:
-    - url: /docs/privacy-sandbox/gnatcatcher
+    - url: /docs/privacy-sandbox/ip-protection
     - url: /docs/privacy-sandbox/privacy-budget
+    - url: /docs/privacy-sandbox/bounce-tracking-mitigations	
   show_relevant_content_topics:
     - url: /docs/privacy-sandbox/topics
     - url: /docs/privacy-sandbox/topics-experiment
+    - url: /docs/privacy-sandbox/topics/latest/
   show_relevant_content_fledge:
     - url: /docs/privacy-sandbox/fledge
       title: Overview
@@ -52,19 +56,34 @@ sections:
       title: API updates
       description: A quick reference to how the proposal has changed to address community feedback.
   related_measurement:
-    - url: /docs/privacy-sandbox/attribution-reporting/summary-reports
+    - url: /docs/privacy-sandbox/summary-reports
       title: Summary reports overview
+    - url: /docs/privacy-sandbox/aggregation-service
+      title: Aggregation service
     - url: /docs/privacy-sandbox/attribution-reporting-data-clearing
       title: Impact of user-initiated data clearing
+    - url: /docs/privacy-sandbox/attribution-reporting-debugging/
+      title: Debug Attribution Reporting
   strengthen_privacy_boundaries:
     - url: /docs/privacy-sandbox/chips
     - url: /docs/privacy-sandbox/permissions-policy
     - url: /docs/privacy-sandbox/fedcm
     - url: /docs/privacy-sandbox/first-party-sets
     - url: /docs/privacy-sandbox/fenced-frame
-    - url: /docs/privacy-sandbox/shared-storage
-    - url: /docs/privacy-sandbox/use-shared-storage
     - url: /docs/privacy-sandbox/storage-partitioning
+  storage_cross_site:
+    - url: /docs/privacy-sandbox/storage-partitioning
+    - url: /docs/privacy-sandbox/shared-storage
+    - url: /docs/privacy-sandbox/private-aggregation
+      title: Private Aggregation API
+      description: Measure Shared Storage data and generate a noisy summary report.
+  related_storage_usecases:
+    - url: /docs/privacy-sandbox/shared-storage/creative-selection-by-frequency
+    - url: /docs/privacy-sandbox/shared-storage/creative-rotation
+    - url: /docs/privacy-sandbox/shared-storage/known-customer
+    - url: /docs/privacy-sandbox/shared-storage/ab-testing
+    - url: /docs/privacy-sandbox/shared-storage/k-freq-reach
+    - url: /docs/privacy-sandbox/shared-storage/unique-reach
   fight_spam:
     - url: /docs/privacy-sandbox/trust-tokens
 ---
@@ -174,6 +193,23 @@ sections:
   250,
   124,
   "image/VbsHyyQopiec0718rMq2kTE1hke2/tCE6xv0QdnKWNSEJQUbA.svg"
+  )
+}}
+
+{{ landingSectionExpanded(
+  "Secure cross-site storage",
+  "Prevent fraud, run A/B testing, rotate creatives, and support other use cases, while protecting user privacy.",
+  sections.storage_cross_site,
+  "green",
+  "top-3",
+  true,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/g0sHuyvPENgBaLhY6uJA.svg",
+  "Analytics icon.",
+  250,
+  124,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/g0sHuyvPENgBaLhY6uJA.svg",
+  "Explore use cases",
+  sections.related_storage_usecases
   )
 }}
 

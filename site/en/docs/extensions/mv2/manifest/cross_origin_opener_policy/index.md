@@ -6,6 +6,8 @@ date: 2021-08-03
 description: Reference documentation for the cross_origin_opener_policy property of manifest.json.
 ---
 
+{% Partial 'extensions/mv2-legacy-page.md' %}
+
 The `cross_origin_opener_policy` manifest key lets extensions specify a value for the
 [Cross-Origin-Opener-Policy][mdn-coop] (COOP) response header for requests to the extension's
 origin. This includes the extension's background context (service worker or background page), popup,

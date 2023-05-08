@@ -6,16 +6,27 @@ authors:
   - lyf
 description: Chrome is deprecating access to private network endpoints from non-secure public websites in Chrome 94 as part of the Private Network Access specification. Read on for recommended actions.
 date: 2021-08-26
-updated: 2022-08-12
+updated: 2023-03-23
 hero: image/YLflGBAPWecgtKJLqCJHSzHqe2J2/dwtN0NkxkBmIz1EyhzAm.jpg
 alt: A private sign in German
 tags:
   - chrome-94
+  - chrome-109
+  - chrome-113
+  - chrome-116
+  - chrome-117
+  - security
 ---
 
 **Updates**
 
-- **August 12, 2022**: The  timeline has been updated, and deprecation
+- **March 23, 2023**: The timeline has been updated, and deprecation will not
+  occur until Chrome 117.
+
+- **January 19, 2023**: The timeline has been updated, and deprecation
+   will not occur until Chrome 114.
+
+- **August 12, 2022**: The timeline has been updated, and deprecation
    will not occur until Chrome 109.
 
 - **February 10, 2022**: An updated article is published at [Private Network
@@ -37,7 +48,7 @@ Chrome will introduce the following changes:
 * Blocking requests to private networks from insecure public websites starting in
   Chrome 94.
 * Introducing a [deprecation trial](#whats-deprecation-trial) which will end in Chrome
-  109. It will allow developers to request a time extension for chosen origins,
+  117. It will allow developers to request a time extension for chosen origins,
   which will not be affected during the deprecation trial.
 * Introducing a Chrome policy which will allow managed Chrome deployments to
   bypass the deprecation permanently. Available in Chrome 92.
@@ -75,9 +86,15 @@ strategies:
   for the deprecation trial.
 * September 2021: Chrome 94 rolls out to Stable. Web developers should have signed
   up for the deprecation trial and deployed trial tokens to production.
-* December 2022: Chrome 109 rolls out to Beta.
-* February 2023: Chrome 109 rolls out to Stable. The deprecation trial ends. Chrome
-  blocks all private network requests from public, non-secure contexts.
+* December 2022: Origin trial survey sent and feedback received. The deprecation
+  trial is extended to Chrome 113.
+* March 2023: The deprecation trial is extended to Chrome 116, and set to
+  end in Chrome 117. A [permission-based alternative mechanism](https://chromestatus.com/feature/5954091755241472)
+  is in development, targeting initial release in Chrome 114.
+* May 2023 (tentative): The permisssion-based mechanism rolls out in Chrome 114.
+  Websites can use it to exit the deprecation trial.
+* September 2023: Chrome 117 rolls out to Stable, ending the deprecation trial.
+  Chrome blocks all private network requests from public, non-secure contexts.
 
 ## What is Private Network Access 
 
@@ -141,7 +158,7 @@ still mention the earlier milestone.
 
 This deprecation is accompanied by a deprecation trial, allowing web developers
 whose websites make use of the deprecated feature to continue using it until
-Chrome 109 by registering for tokens. See [below](#register-deprecation-trial)
+Chrome 116 by registering for tokens. See [below](#register-deprecation-trial)
 for instructions on how to register and enable the trial on your website.
 
 A pair of [Chrome policies](#policies) can be leveraged to disable the
@@ -149,7 +166,7 @@ deprecation either entirely or on specific origins, indefinitely. This allows
 managed Chrome installations, for example, those in corporate settings, to
 avoid breakage.
 
-### Chrome 109
+### Chrome 117
 
 The deprecation trial ends. All websites must be migrated off of the deprecated
 feature, or their users' policies configured to continue enabling the feature.
@@ -164,15 +181,20 @@ the circumstances of each affected website.
 
 ### Register for the deprecation trial {: #register-deprecation-trial}
 
-First, register for the "Private Network Access from non-secure contexts" trial
-using [the web developers
-console](/origintrials/#/view_trial/4081387162304512001),
-and obtain a trial token for each affected origin. Then configure your web
-servers to attach the origin-specific `Origin-Trial: $token` header on
-responses. Note that this header need only be set on main resource and
-navigation responses, and then only when the resulting document will make use of
-the deprecated feature. It is useless (though harmless) to attach this header to
-subresource responses.
+{% Aside %}
+To participate with multiple origins (such as `examplepetstore.com` and
+`example-pet-store.com`), repeat these steps for each origin.
+{% endAside %}
+
+1. Click [**Register**](/origintrials/#/view_trial/4081387162304512001) for the
+   Private Network Access from non-secure contexts origin trial to obtain a
+   trial token for the participating origin.
+2. Add the origin-specific `Origin-Trial: $token` to your
+   [response header](https://developer.mozilla.org/docs/Glossary/Response_header).
+   This response header need only be set on main resource and navigation
+   responses when the resulting document makes use of the deprecated feature.
+   It is useless (though harmless) to attach this header to subresource
+   responses.
 
 Since this trial must be enabled or disabled before a document is allowed to
 make any requests, it *cannot* be enabled through a `<meta>` tag. Such tags are
@@ -257,7 +279,7 @@ You can bypass the lack of a valid TLS certificate signed by a trusted CA by
 using [WebTransport](https://w3c.github.io/webtransport) and its [certificate
 pinning
 mechanism](https://w3c.github.io/webtransport/#dom-webtransportoptions-servercertificatefingerprints).
-This allows establishing secure connections to local devices that might have a
+This allows establishing secure connections to private devices that might have a
 self-signed certificate for example. WebTransport connections allow
 bidirectional data transfer, but not fetch requests. You can combine this
 approach with a service worker to transparently proxy HTTP requests over the

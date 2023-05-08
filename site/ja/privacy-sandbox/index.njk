@@ -9,6 +9,7 @@ sections:
     - url: /docs/privacy-sandbox/proposal-lifecycle
     - url: /docs/privacy-sandbox/status
   intro_related:
+    - url: /docs/privacy-sandbox/unified-origin-trial
     - url: /docs/privacy-sandbox/faq
     - url: /docs/privacy-sandbox/feedback
   prevent_covert_tracking_useragent:
@@ -17,6 +18,7 @@ sections:
   prevent_covert_tracking:
     - url: /docs/privacy-sandbox/gnatcatcher
     - url: /docs/privacy-sandbox/privacy-budget
+    - url: /docs/privacy-sandbox/bounce-tracking-mitigations	
   show_relevant_content_topics:
     - url: /docs/privacy-sandbox/topics
     - url: /docs/privacy-sandbox/topics-experiment
@@ -38,8 +40,16 @@ sections:
     - url: /docs/privacy-sandbox/fedcm
     - url: /docs/privacy-sandbox/first-party-sets
     - url: /docs/privacy-sandbox/fenced-frame
+    - url: /docs/privacy-sandbox/storage-partitioning
+  storage_cross_site:
+    - url: /docs/privacy-sandbox/storage-partitioning
     - url: /docs/privacy-sandbox/shared-storage
-    - url: /docs/privacy-sandbox/use-shared-storage
+    - url: /docs/privacy-sandbox/private-aggregation
+  related_storage_usecases:
+    - url: /docs/privacy-sandbox/shared-storage/creative-selection-by-frequency
+    - url: /docs/privacy-sandbox/shared-storage/creative-rotation
+    - url: /docs/privacy-sandbox/shared-storage/known-customer
+    - url: /docs/privacy-sandbox/shared-storage/ab-testing
   fight_spam:
     - url: /docs/privacy-sandbox/trust-tokens
 ---
@@ -149,6 +159,23 @@ sections:
   250,
   124,
   "image/VbsHyyQopiec0718rMq2kTE1hke2/tCE6xv0QdnKWNSEJQUbA.svg"
+  )
+}}
+
+{{ landingSectionExpanded(
+  "Secure cross-site storage",
+  "Prevent fraud, run A/B testing, rotate creatives, and support other use cases, while protecting user privacy.",
+  sections.storage_cross_site,
+  "green",
+  "top-3",
+  true,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/g0sHuyvPENgBaLhY6uJA.svg",
+  "Analytics icon.",
+  250,
+  124,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/g0sHuyvPENgBaLhY6uJA.svg",
+  "Explore use cases",
+  sections.related_storage_usecases
   )
 }}
 

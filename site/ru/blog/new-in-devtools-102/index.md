@@ -16,7 +16,7 @@ tags:
 
 *Переводы предоставлены [Alena Batitskaia](https://twitter.com/ABatickaya). Редактор — [Maxim Salnikov](https://twitter.com/webmaxru).*
 
-{% include 'partials/devtools/ru/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='0V_ph7PA_aw' %}
 
@@ -237,5 +237,5 @@ DevTools теперь применяет политику безопасност
 
 Задача в трекере Chromium: [1245191](https://crbug.com/1245191)
 
-{% include 'partials/devtools/ru/reach-out.md' %}
-{% include 'partials/devtools/ru/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

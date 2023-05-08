@@ -14,7 +14,7 @@ updated: 2019-08-28
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/l6IEjHdtgCa45QimENjb.png", alt="Lighthouse 审核显示缺少文档类型", width="800", height="76" %}</figure>
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## 如何添加文档类型声明
 

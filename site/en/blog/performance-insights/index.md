@@ -13,7 +13,7 @@ tags:
   - devtools
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 In [Chrome 102](/blog/new-in-devtools-102/) you’ll notice a new experimental panel, [Performance Insights](/docs/devtools/performance-insights/), in your DevTools. In this post we’ll discuss not only why we’ve been working on a new panel, but also the technical challenges that faced us and the decisions we’ve made along the way.
 
@@ -118,5 +118,5 @@ Building the new Performance Insights panel has been a very enjoyable, education
 To learn more about the Performance Insights panel, see [Performance insights: Get actionable insights on your website's performance](/docs/devtools/performance-insights/).
 
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/engineering-blog.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/engineering-blog.md' %}

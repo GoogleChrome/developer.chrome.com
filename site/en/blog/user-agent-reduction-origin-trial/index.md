@@ -45,7 +45,7 @@ Chrome 95 ([currently scheduled](https://chromiumdash.appspot.com/schedule) for
 October 19th, 2021).
 
 Below is an overview of the origin trial and what to expect, and as always, we
-welcome feedback or any issues throughout this trial in the UA Reduction [Github
+welcome feedback or any issues throughout this trial in the UA Reduction [GitHub
 repository](https://github.com/miketaylr/user-agent-reduction/issues).
 
 ## What is the User-Agent?
@@ -138,7 +138,7 @@ provided that the [permissions policy](/docs/privacy-sandbox/permissions-policy/
         enrolled in the origin trial.
 1.  Load your website in Chrome M95 (or later) and start receiving the
     reduced UA string. 
-1.  Submit any issues or feedback to the UA Reduction [Github
+1.  Submit any issues or feedback to the UA Reduction [GitHub
     repository](https://github.com/miketaylr/user-agent-reduction/issues).
 1.  See [https://uar-ot.glitch.me/](https://uar-ot.glitch.me/) for a simple
     demonstration of the origin trial (along with the source code).
@@ -221,5 +221,5 @@ months. We will publish more details on the deprecation trial when it's ready.
 
 ## How do I share feedback for the User-Agent Reduction origin trial?
 
-Submit any issues or feedback to the UA Reduction [Github
+Submit any issues or feedback to the UA Reduction [GitHub
 repository](https://github.com/miketaylr/user-agent-reduction/issues).

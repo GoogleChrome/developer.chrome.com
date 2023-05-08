@@ -20,14 +20,15 @@
 
 const fs = require('fs');
 const path = require('path');
-const groupTypes = require('../_utils/group-types.js');
 
-const workboxModules = fs
-  .readdirSync(path.join(__dirname, '../en/docs/workbox/modules'), {
-    withFileTypes: true,
-  })
-  .filter(d => d.isDirectory())
-  .map(d => d.name);
+const workboxModules = process.env.ELEVENTY_IGNORE_EXTENSIONS
+  ? fs
+      .readdirSync(path.join(__dirname, '../en/docs/workbox/modules'), {
+        withFileTypes: true,
+      })
+      .filter(d => d.isDirectory())
+      .map(d => d.name)
+  : [];
 
 module.exports = () => {
   if (process.env.ELEVENTY_IGNORE_EXTENSIONS) {
@@ -38,7 +39,7 @@ module.exports = () => {
     __dirname,
     '../../external/data/workbox-types.json'
   );
-
+  const groupTypes = require('../_utils/group-types.js');
   const workboxTypes = groupTypes(workboxTypesFile);
 
   for (const key in workboxTypes) {

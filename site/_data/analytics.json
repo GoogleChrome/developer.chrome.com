@@ -5,5 +5,5 @@
     "NAVIGATION_TYPE": "dimension2",
     "WEB_VITALS_DEBUG": "dimension3"
   },
-  "TRACKING_VERSION": "3.0"
+  "version": 4
 }

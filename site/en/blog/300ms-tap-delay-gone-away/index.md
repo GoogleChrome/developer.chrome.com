@@ -6,7 +6,7 @@ description: >
 authors:
   - jakearchibald
 date: 2013-12-12
-updated: 2019-01-16 
+updated: 2022-10-21
 ---
 
 {% YouTube id="AjUpiwvIa5A" %}
@@ -19,13 +19,13 @@ Ever since the first release of Chrome for Android, this delay was removed if pi
 The performance difference is huge!
 
 
-Having a UI that responds instantly means the user can quickly press each button with confidence, rather than pausing and waiting for a response. Find out more about the impact of human reaction times and web performance in our [introduction to RAIL](https://developers.google.com/web/tools/chrome-devtools/profile/evaluate-performance/rail).
+Having a UI that responds instantly means the user can quickly press each button with confidence, rather than pausing and waiting for a response. Find out more about the impact of human reaction times and web performance in our [introduction to RAIL](https://web.dev/rail/).
 
 To remove the 300-350ms tap delay, all you need is the following in the `<head>` of your page:
 
 ```html
 <meta name="viewport" content="width=device-width">
-```    
+```
 
 This sets the viewport width to the same as the device, and is generally a best-practice for mobile-optimized sites. With this tag, browsers assume you've made text readable on mobile, and the double-tap-to-zoom feature is dropped in favour of faster clicks.
 
@@ -37,7 +37,7 @@ html {
 }
 ```
 
-This technique isn't supported in Firefox, so the viewport tag is much preferred.
+This technique [isn't supported in Safari](https://caniuse.com/?search=touch-action), so the viewport tag is much preferred.
 
 ## Is losing double-tap-to-zoom an accessibility concern?
 

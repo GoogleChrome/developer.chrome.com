@@ -13,7 +13,7 @@ tags:
   - devtools
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 ## Puppeteer and its approach to selectors {: .intro }
 
@@ -134,7 +134,7 @@ The following figure compares the total runtime of querying four elements 1000 t
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/c7Lhh6it37eo2fLMbfDx.svg", alt="Benchmark: Total runtime of querying four elements 1000 times", width="779", height="390" %}
 
-It is quite clear that there is a considerable performance gap between the CDP-backed querying mechanism and the two others implemented solely in Puppeteer, and the relative difference seems to increase dramatically with the page size. It is somewhat interesting to see that the JS DOM traversal prototype responds so well to enabling accessibility caching. With caching disabled, the  accessibility tree is computed on demand and discards the tree after each interaction if the domain is diabled. Enabling the domain makes Chromium cache the computed tree instead.
+It is quite clear that there is a considerable performance gap between the CDP-backed querying mechanism and the two others implemented solely in Puppeteer, and the relative difference seems to increase dramatically with the page size. It is somewhat interesting to see that the JS DOM traversal prototype responds so well to enabling accessibility caching. With caching disabled, the  accessibility tree is computed on demand and discards the tree after each interaction if the domain is disabled. Enabling the domain makes Chromium cache the computed tree instead.
 
 For the JS DOM traversal we ask for the accessible name and role for every element during the traversal, so if caching is disabled, Chromium computes and discards the accessibility tree for every element we visit. For the CDP based approaches, on the other hand, the tree is only discarded between each call to CDP, i.e. for every query. These approaches also benefit from enabling caching, as the accessibility tree is then persisted across CDP calls, but the performance boost is therefore comparatively smaller. 
 
@@ -166,5 +166,5 @@ Now, with the CDP endpoint in place, we implemented the query handler on [the Pu
 ## What's next? {: .whats-next }
 The new `aria` handler shipped with [Puppeteer v5.4.0](https://github.com/puppeteer/puppeteer/releases/tag/v5.4.0) as a built-in query handler. We are looking forward to seeing how users adopt it into their test scripts, and we cannot wait to hear your ideas on how we can make this even more useful!
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/engineering-blog.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/engineering-blog.md' %}

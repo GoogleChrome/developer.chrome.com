@@ -6,6 +6,8 @@ updated: 2018-04-26
 description: Reference documentation for the default_locale property of manifest.json.
 ---
 
+{% Partial 'extensions/mv2-legacy-page.md' %}
+
 Specifies the subdirectory of `_locales` that contains the default strings for this extension. This
 field is **required** in extensions that have a `_locales` directory; it **must be absent** in
 extensions that have no `_locales` directory. For details, see [Internationalization][1].

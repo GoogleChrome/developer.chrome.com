@@ -33,7 +33,7 @@ Lighthouse 使用 DOM 树标记页面：
 - 当 body 元素有超过约 800 个节点时发出警告。
 - 当 body 元素有超过约 1400 个节点时出错。
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## 如何优化 DOM 大小
 

@@ -99,7 +99,7 @@ event-level reports will be generated.
 
 The debug key should now be set in the source and trigger headers, instead of
 with separate headers. Learn more about [how to debug
-reports](https://docs.google.com/document/d/1PawakBkknAJQSGa-R8LyxLOwqGX4JDa5GZ5r6M-_E74/edit#heading=h.fvp017tkgw79).
+reports](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit#heading=h.fvp017tkgw79).
 
 ### Register attribution sources
 

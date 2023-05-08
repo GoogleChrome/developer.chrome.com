@@ -732,7 +732,7 @@ apps to write to this descriptor. Apps should instead use the
 [4]: /docs/extensions/reference/bluetoothSocket
 [5]: /docs/extensions/reference/bluetoothLowEnergy
 [6]: http://www.bluetooth.org
-[7]: https://developers.google.com/web/updates/2015/07/interact-with-ble-devices-on-the-web
+[7]: /articles/bluetooth/
 [8]: /docs/apps/manifest/bluetooth/
 [9]: /docs/extensions/reference/bluetooth/#method-getAdapterState
 [10]: /docs/extensions/reference/bluetooth/#event-onAdapterStateChanged

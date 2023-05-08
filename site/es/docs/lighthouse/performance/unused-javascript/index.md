@@ -18,7 +18,7 @@ El JavaScript que no se utiliza puede reducir la velocidad de carga de la págin
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/jYbX7CFrcOaaqMHaHa6f.jpg", alt="Una captura de pantalla de la auditoría", width="800", height="332" %} <figcaption> Haga clic en el valor de la columna <b>URL</b> para abrir el código fuente del script en una nueva pestaña. </figcaption></figure>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Cómo eliminar el JavaScript que no se utiliza
 

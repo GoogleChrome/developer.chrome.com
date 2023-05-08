@@ -17,7 +17,7 @@ tags:
 
 *Переводы предоставлены [Alena Batitskaia](https://twitter.com/ABatickaya). Редактор — [Maxim Salnikov](https://twitter.com/webmaxru).*
 
-{% include 'partials/devtools/ru/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='zFVWeOKZBHs' %}
 
@@ -86,7 +86,7 @@ tags:
 ## Улучшенный внешний вид, форматирование и фильтрация в консоли {: #console }
 
 <!-- ### Properly style log messages with ANSI escape code {: #console-styling }  -->
-### Правильная стилизация сообщений в логах с использованием ANSI {: #console-styling } 
+### Правильная стилизация сообщений в логах с использованием ANSI {: #console-styling }
 
 <!-- You can now use the [ANSI escape sequences](https://en.wikipedia.org/wiki/ANSI_escape_code) to properly style console messages. Previously, DevTools console had very limited (and partly broken) support for ANSI escape sequences. -->
 Теперь вы можете использовать [управляющие символы ANSI](https://ru.wikipedia.org/wiki/Управляющие_последовательности_ANSI) для стилизации сообщений в логах. Раньше консоль DevTools имела очень ограниченную (и частично нарушенную) поддержку управляющих символов ANSI.
@@ -138,14 +138,14 @@ tags:
 Задача в трекере Chromium: [1068788](https://crbug.com/1068788)
 
 
-<!-- ## Sourcemaps improvements {: #sourcemap } -->
+<!-- ## Source maps improvements {: #sourcemap } -->
 ## Улучшение карты источников {: #sourcemap }
 
-<!-- ### Debug Chrome extension with sourcemap files {: #extension } -->
+<!-- ### Debug Chrome extension with source map files {: #extension } -->
 ### Отладка расширений Chrome с помощью карта источников {: #extension }
 
-<!-- You can now [debug Chrome extension](/docs/extensions/mv3/getstarted/#unpacked) with sourcemap files. Previously, DevTools only supported inline sourcemap for Chrome extension debugging. -->
-Теперь вы можете [отлаживать расширения для Chrome](/docs/extensions/mv3/getstarted/#unpacked) с использованием карта источников. Ранее DevTools поддерживал только встроенную карту источников для отладки расширений Chrome. 
+<!-- You can now [debug Chrome extension](/docs/extensions/mv3/getstarted/#unpacked) with source map files. Previously, DevTools only supported inline sourcemap for Chrome extension debugging. -->
+Теперь вы можете [отлаживать расширения для Chrome](/docs/extensions/mv3/getstarted/#unpacked) с использованием карта источников. Ранее DevTools поддерживал только встроенную карту источников для отладки расширений Chrome.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/lnRa954ROl0MSSExlBl7.png", alt="Отладка расширений Chrome с помощью карта источников", width="800", height="518" %}
 
@@ -157,7 +157,7 @@ tags:
 <!-- ### Improved source folder tree in the Sources panel {: #source-tree } -->
 ### Улучшено дерево папок источников во вкладке Источники (Sources) {: #source-tree }
 
-<!-- The source folder tree in the **Sources** panel is now improved with less clutter in the folder structures and naming (e.g. “../”, “./”, etc). Under the hood, this is the result of normalizing the absolute source URLs in the sourcemaps. -->
+<!-- The source folder tree in the **Sources** panel is now improved with less clutter in the folder structures and naming (e.g. “../”, “./”, etc). Under the hood, this is the result of normalizing the absolute source URLs in the source maps. -->
 Дерево папок источников во вкладке **Источники** (Sources) теперь улучшено, с меньшим беспорядком в структуре папок и именовании (например, "../", "./" и т.д.). Под капотом это результат нормализации абсолютных URL-адресов источников в картах источников.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Wl1pPVfQ51NaCtpp3KuY.png", alt="Улучшенное дерево папок источников во вкладке Источники", width="800", height="444" %}
@@ -240,5 +240,5 @@ Chrome 96 анонсировал [ранний доступ](/blog/origin-trials
 - Больше не нужна перезагрузка при [переключении светлой/тёмной темы](/docs/devtools/customize/dark-theme/) в DevTools. ([1278738](https://crbug.com/1278738))
 
 
-{% include 'partials/devtools/ru/reach-out.md' %}
-{% include 'partials/devtools/ru/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

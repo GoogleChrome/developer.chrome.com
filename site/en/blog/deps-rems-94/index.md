@@ -13,7 +13,7 @@ tags:
   - chrome-94
 ---
 
-{% include 'partials/see-all-dep-rem.md' %}
+{% Partial 'see-all-dep-rem.md' %}
 
 Chrome 94 beta was released on August 26, 2021 and is expected to become the
 stable version in late September, 2021.
@@ -50,4 +50,4 @@ For this opt-in to have any meaning, the servers need to be able to ensure that
 the client origin is authenticated. To that end, only secure contexts are
 empowered to make external requests.
 
-{% include 'partials/deprecations-policy.md' %}
+{% Partial 'deprecations-policy.md' %}

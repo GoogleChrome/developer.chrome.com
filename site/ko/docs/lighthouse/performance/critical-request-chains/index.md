@@ -12,7 +12,7 @@ updated: 2020-04-29
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/apWYFAWSuxf9tQHuogSN.png", alt="Lighthouse 최소화 중요 요청 깊이를 보여주는 스크린샷", width="800", height="452" %}</figure>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Lighthouse가 중요한 요청 연결을 식별하는 방법
 

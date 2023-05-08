@@ -16,7 +16,7 @@ O [Lighthouse](https://developers.google.com/web/tools/lighthouse/) relata solic
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/apWYFAWSuxf9tQHuogSN.png", alt="Uma captura de tela da auditoria do Lighthouse Minimizar profundidade de solicitação crítica", width="800", height="452" %}</figure>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Como o Lighthouse identifica cadeias de solicitações críticas
 

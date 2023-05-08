@@ -59,7 +59,7 @@ This table shows how to interpret your TBT score:
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## How to improve your TBT score
 
@@ -81,11 +81,11 @@ Unnecessary JavaScript loading, parsing, or execution is usually a much bigger o
 on most sites.
 {% endAside %}
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## Resources
 
-- [Source code for **Total Blocking Time** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/total-blocking-time.js)
+- [Source code for **Total Blocking Time** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/metrics/total-blocking-time.js)
 - [Are long JavaScript tasks delaying your Time to Interactive?][long tasks]
 - [Optimize First Input Delay][optimize fid]
 - [First Contentful Paint][fcp]

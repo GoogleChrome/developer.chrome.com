@@ -37,6 +37,7 @@ async function fetchAndPrepare(packages, targetDir) {
   /** @type {childProcess.ExecFileSyncOptions} */
   const options = {cwd: targetDir, stdio: 'inherit'};
 
+  childProcess.execFileSync('npm', ['init', '--yes'], options);
   childProcess.execFileSync('npm', ['install', ...packages], options);
 
   const versionData = Object.fromEntries(
@@ -56,7 +57,7 @@ async function run() {
   try {
     // webpack is a peerDependency of workbox-webpack-plugin, and needs to be
     // manually installed.
-    childProcess.execFileSync('npm', ['install', 'webpack'], {
+    childProcess.execFileSync('npm', ['install', 'webpack@5.75.0'], {
       cwd: t.name,
       stdio: 'inherit',
     });

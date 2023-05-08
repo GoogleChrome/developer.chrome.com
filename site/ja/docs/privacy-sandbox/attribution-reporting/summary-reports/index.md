@@ -49,7 +49,7 @@ _集計データ_ は、コンバージョンされたユーザー数など、�
 
 ## ユーザーデータの収集と集計方法
 
-{% include 'content/privacysandbox-partials/feedback-aside.njk' %}
+{% Partial 'privacy-sandbox/feedback-aside.njk' %}
 
 Attribution Reporting API を使用すると、サイト間の個々のユーザーの詳細なアクティビティや、場合によってはユーザーの ID が、ユーザーのデバイス上のブラウザーに非公開で維持されます。 このデータは集計可能なレポートで収集でき、各レポートはさまざまなパーティが基盤データにアクセスできないように暗号化されます。
 
@@ -147,7 +147,7 @@ TEE のコードは、集計サービスで生のレポートにアクセスで�
 
 アドテクは要約レポートを使用して入札の通知と自社顧客へのレポート提供を行えます。 [JSON エンコードされたスキーム](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md#aggregate-attribution-reports)は、要約レポート用に提案されている形式です。
 
-{% include 'content/privacysandbox-partials/ar-engage.njk' %}
+{% Partial 'privacy-sandbox/ar-engage.njk' %}
 
 ## 詳細について
 

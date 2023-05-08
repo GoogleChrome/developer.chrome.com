@@ -25,7 +25,7 @@ tags:
 
 *Gracias [Miguel Ángel](https://midu.dev) por la traducción y [Carlos Caballero](https://carloscaballero.io) por la revisión.*
 
-{% include 'partials/devtools/es/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='cGotLGL1-Ko' %}
 
@@ -111,5 +111,5 @@ Esta nueva función es experimental en este momento, el equipo está activamente
 
 Chromium issue: [1245541](https://crbug.com/1245541)
 
-{% include 'partials/devtools/es/reach-out.md' %}
-{% include 'partials/devtools/es/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

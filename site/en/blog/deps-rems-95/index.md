@@ -13,7 +13,7 @@ tags:
   - chrome-95
 ---
 
-{% include 'partials/see-all-dep-rem.md' %}
+{% Partial 'see-all-dep-rem.md' %}
 
 Chrome 95 beta was released on September 23, 2021 and is expected to become the
 stable version in late October, 2021.
@@ -115,4 +115,4 @@ end on July 26, 2022.
 Beta expected in late June 2022, stable in early August. The  U2F API will
 be fully removed.
 
-{% include 'partials/deprecations-policy.md' %}
+{% Partial 'deprecations-policy.md' %}

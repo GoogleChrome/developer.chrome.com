@@ -1,0 +1,340 @@
+---
+noindex: true
+layout: 'layouts/landing.njk'
+title: Sample landing page
+description: A sample landing page used for visual testing
+landingSectionItems:
+  - url: https://developer.chrome.com
+    title: Item 1
+    description: If you pass an array of urls to a landing section. They'll surface like this.
+  - url: https://developer.chrome.com
+    title: Item 2
+    description: Each item should consist of an url, title and description
+  - url: https://developer.chrome.com
+    title: Item 3
+    description: Or you can pass a single internal URL which will surface as per the following item.
+  - url: /content-types/landing/
+expandedLandingSection:
+  links:
+    - url: https://developer.chrome.com
+      title: A custom link
+      description: You can add custom links as with the standard landingSection macro.
+    - url: /content-types/landing/
+    - url: /content-types/blog-post/
+  additional_links:
+    - url: /
+      title: A custom title
+      important: true
+    - url: /content-types/landing/
+      title: A custom title
+    - url: /content-types/blog-post/
+      title: A custom title
+exploreLandingSection:
+  links:
+    - url: https://developer.chrome.com
+      title: A custom link
+      icon: error
+    - url: /content-types/landing/
+      title: A custom link
+      icon: done
+    - url: /content-types/blog-post/
+      title: A custom link
+      icon: home
+    - url: https://developer.chrome.com
+      title: A custom link
+      icon: blog
+    - url: https://developer.chrome.com
+      title: A custom link
+      icon: star
+    - url: https://developer.chrome.com
+      title: A custom link
+      icon: lightbulb-outline
+useCaseLandingSection:
+  learn_more:
+    link: https://developer.chrome.com
+  links:
+    - title: A custom link
+      description: A custom link for this use case
+      url: /content-types/landing/
+    - title: A custom link
+      description: A custom link for this use case
+      url: /content-types/landing/
+    - title: A custom link
+      description: A custom link for this use case
+      url: /content-types/landing/
+  use_case_1:
+    - title: Use case 1 resource
+      description: A custom link for this use case
+      url: /content-types/landing/
+    - title:  Use case 1 resource
+      description: A custom link for this use case
+      url: /content-types/landing/
+    - title:  Use case 1 resource
+      description: A custom link for this use case
+      url: /content-types/landing/
+  use_case_1_additional:
+    title: More documents
+    items:
+      - title: An additional document
+        description: A custom link for this use case
+        url: /content-types/landing/
+        important: true
+      - title: An additional document
+        description: A custom link for this use case
+        url: /content-types/landing/
+      - title: An additional document
+        description: A custom link for this use case
+        url: /content-types/landing/
+  use_case_2:
+    - title: Use case 2 resource
+      description: A custom link for this use case
+      url: /content-types/landing/
+    - title:  Use case 2 resource
+      description: A custom link for this use case
+      url: /content-types/landing/
+    - title:  Use case 2 resource
+      description: A custom link for this use case
+      url: /content-types/landing/
+  use_case_2_additional:
+    items:
+      - title: An additional document
+        description: A custom link for this use case
+        url: /content-types/landing/
+        important: true
+      - title: An additional document
+        description: A custom link for this use case
+        url: /content-types/landing/
+        important: true
+      - title: An additional document
+        description: A custom link for this use case
+        url: /content-types/landing/
+---
+
+{% from 'macros/cards/hero-card-wide.njk' import heroCardWide with context %}
+{% from 'macros/icon.njk' import icon with context %}
+{% from 'macros/landing-section.njk' import landingSection with context %}
+{% from 'macros/landing-deco.njk' import landingDeco with context %}
+{% from 'macros/landing-section-expanded.njk' import landingSectionExpanded with context %}
+{% from 'macros/landing-section-explore.njk' import landingSectionExplore with context %}
+{% from 'macros/landing-section-usecases.njk' import landingSectionUseCases with context %}
+
+{{ heroCardWide(
+  "A sample landing page",
+  "This page is used for visual testing of the landing layout and also showcases it's capabilities",
+  "",
+  "",
+  "image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/hktLGMLoCB1ipj9U37Du.png",
+  "Alt",
+  "",
+  ""
+) }}
+
+<div class="gap-top-500">
+  {{ heroCardWide(
+    "Another hero block",
+    "You can add such blocks using the heroCardWide macro. The macro supports multiple layouts as demostrated by this block and the one above",
+    "Do something",
+    "/content-types/landing",
+    "",
+    "",
+    "",
+    "image/VbsHyyQopiec0718rMq2kTE1hke2/i1wLexi7cwRpdfIkBYAX.svg"
+  ) }}
+</div>
+
+<div class="gap-top-500">
+  {{ landingSectionExplore(
+      "Explore use cases",
+      "blue",
+      exploreLandingSection.links
+  ) }}
+</div>
+
+{{ landingSection(
+  'This is a landing section',
+  'Such blocks can be added using the landingSection macro. The three blocks beneath are also landingSections; they showcase the various layouts that can be achieved with the macro',
+  landingSectionItems,
+  'green',
+  'top-3',
+  true,
+  'image/8WbTDNrhLsU0El80frMBGE4eMCD3/lauDAddiUZqlgicYTyYV.svg',
+  '',
+  333,
+  165,
+  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kdPhkPXy7R0mmcJaKyoi.svg',
+  'section-id'
+  )
+}}
+
+{{ landingSection(
+  'Landing section 2',
+  'Ut morbi tincidunt augue interdum velit euismod. Scelerisque felis imperdiet proin fermentum leo vel orci. Pulvinar elementum integer enim neque.',
+  landingSectionItems,
+  'blue',
+  'top-2',
+  true,
+  'image/8WbTDNrhLsU0El80frMBGE4eMCD3/8FZcBmFowbDKWxpkOytx.jpg',
+  'Lorem ipsum dolor.',
+  964,
+  289,
+  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kdPhkPXy7R0mmcJaKyoi.svg'
+)
+}}
+
+{{ landingSection(
+  'Landing section 3',
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  landingSectionItems,
+  'yellow',
+  'left',
+  true,
+  'image/8WbTDNrhLsU0El80frMBGE4eMCD3/AZza6zt6XdpzWKySovAb.jpg',
+  'Arcu non sodales neque sodales ut etiam sit.',
+  400,
+  600,
+  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kdPhkPXy7R0mmcJaKyoi.svg'
+)
+}}
+
+{{ landingSection(
+  'Landing section 4',
+  'Ut morbi tincidunt augue interdum velit euismod. Scelerisque felis imperdiet proin fermentum leo vel orci. Pulvinar elementum integer enim neque.',
+  landingSectionItems,
+  'blue',
+  'right',
+  true,
+  'image/8WbTDNrhLsU0El80frMBGE4eMCD3/j5ZqHuEoD6OlA5gRK3IF.svg',
+  '',
+  150,
+  150,
+  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kdPhkPXy7R0mmcJaKyoi.svg'
+)
+}}
+
+{{ landingSectionExpanded(
+  'An expanded landing section',
+  "If you need to add an additional set of links to a landing section you can use the landingSectionExpanded macro",
+  expandedLandingSection.links,
+  'yellow',
+  'top-3',
+  true,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/tCE6xv0QdnKWNSEJQUbA.svg",
+  "Fence icon.",
+  250,
+  124,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/tCE6xv0QdnKWNSEJQUbA.svg",
+  "You can add additional links:",
+  expandedLandingSection.additional_links
+)
+}}
+
+{{ landingSectionExpanded(
+  "Expanded landing section - 2",
+  "The layout/style of the expanded landing section can be modified as per the standard landingSection",
+  expandedLandingSection.links,
+  "green",
+  "top-2",
+  true,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/cT27jgN3G7aYl9ftM0lt.svg",
+  "Analytics icon",
+  250,
+  124,
+  "image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kdPhkPXy7R0mmcJaKyoi.svg",
+  "You can add additional links:",
+  expandedLandingSection.additional_links
+)
+}}
+
+{{ landingSectionUseCases(
+  "Use case landing section",
+  "Proposals to prevent third-parties from fingerprinting or collecting unlimited sensitive data.",
+  "Use Case 1",
+  useCaseLandingSection.use_case_1,
+  "Use Case 2",
+  useCaseLandingSection.use_case_2,
+  useCaseLandingSection.links,
+  "green",
+  "right",
+  true,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/yrsJmUfAnqDIDxjVYhXq.svg",
+  "Click icon.",
+  429,
+  278,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/yrsJmUfAnqDIDxjVYhXq.svg",
+  useCaseLandingSection.learn_more,
+  useCaseLandingSection.use_case_1_additional,
+  useCaseLandingSection.use_case_2_additional
+  )
+}}
+
+<div class="landing-section rounded-lg width-full hairline display-grid gap-top-500">
+  {{ landingDeco(
+    'Landing deco',
+    'You can add banners like this using the landingDeco macro. Be sure to wrap it using landing-section class to keep padding consistent with the other blocks',
+    'yellow',
+    "image/VbsHyyQopiec0718rMq2kTE1hke2/YSCPsUMCff5dlVbBCf7b.svg",
+    "Shield",
+    250,
+    124,
+    "image/VbsHyyQopiec0718rMq2kTE1hke2/YSCPsUMCff5dlVbBCf7b.svg"
+  ) }}
+</div>
+
+<div class="landing-section landing-section--boxes rounded-lg width-full display-grid gap-top-500">
+  {{ landingDeco(
+    'Landing deco 2',
+    'You can also add banners like the one above to the grid. On desktop, it will always float to the right and span two rows.',
+    'yellow',
+    'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/RzvgX7vWeDEwkA1IojgU.svg',
+    '',
+    50,
+    50,
+    'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/d7PJT7aAzObC0ij7EDIJ.svg'
+  )
+  }}
+
+  <div class="rounded-lg pad-300 md:pad-400 width-full hairline display-flex direction-column">
+    <h2 class="type--h4">
+      <a class="surface display-inline-flex color-text" href="/">
+        Landing section box 1
+      </a>
+    </h2>
+    <p class="flex-1">Using the landing-section--boxes class you can add a grid of boxes like this</p>
+  </div>
+
+  <div class="rounded-lg pad-300 md:pad-400 width-full hairline display-flex direction-column">
+    <h2 class="type--h4">
+      <a class="surface display-inline-flex color-text" href="/">
+        Landing section box 2
+      </a>
+    </h2>
+    <p class="flex-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+  </div>
+
+  <div class="rounded-lg pad-300 md:pad-400 width-full hairline display-flex direction-column">
+    <h2 class="type--h4">
+      <a class="surface display-inline-flex color-text" href="/">
+        Landing section box 3
+      </a>
+    </h2>
+    <p class="flex-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+  </div>
+
+  <div class="rounded-lg pad-300 md:pad-400 width-full hairline display-flex direction-column">
+    <h2 class="type--h4">
+      <a class="surface display-inline-flex color-text" href="/">
+        Landing section box 4
+      </a>
+    </h2>
+    <p class="flex-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+  </div>
+
+  <div class="rounded-lg pad-300 md:pad-400 width-full hairline display-flex direction-column">
+    <h2 class="type--h4">
+      <a class="surface display-inline-flex color-text" href="/">
+        Landing section box 5
+      </a>
+    </h2>
+    <p class="flex-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+  </div>
+</div>

@@ -6,6 +6,8 @@ updated: 2021-11-10
 description: Overview of cross-origin isolation for extensions
 ---
 
+{% Partial 'extensions/mv2-legacy-page.md' %}
+
 [Cross-origin isolation][web-coi-guide] enables a web page to use powerful features such as
 [`SharedArrayBuffer`][mdn-sharedarraybuffer]. An extension can opt into cross-origin isolation by
 specifying the appropriate values for the [`cross_origin_embedder_policy`][doc-coep] and

@@ -16,12 +16,6 @@ To make matters even worse there's very little you can do about it: Chrome trigg
 
 The good news is, however, that there's a potential fix: **`history.scrollRestoration`**. It takes two string values: `auto`, which keeps everything as it is today (and is its default value), and `manual`, which means that you as the developer will take ownership of any scroll changes that may be required when a user traverses the app's history. If you need to, you can keep track of the scroll position as you push history entries with `history.pushState()`.
 
-Here's a quick video showing the difference between `auto` and `manual` values:
-
-
-{% YouTube id="DFBXl8NNQyk" %}
-
-
 The feature is new and experimental (though totally awesome), so be sure to check it's available before using it:
 
 ```js

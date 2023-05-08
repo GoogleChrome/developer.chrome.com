@@ -14,7 +14,7 @@ updated: 2019-09-19
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/CKrrTDSCZ0XLZ7ABKlZt.png", alt="Lighthouse 감사 표시 사이트가 커스텀 스플래시 스크린에 대해 구성되지 않았습니다.", width="800", height="98" %}</figure>
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## 커스텀 스플래시 스크린을 만드는 방법
 

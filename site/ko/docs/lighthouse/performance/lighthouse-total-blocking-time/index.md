@@ -49,7 +49,7 @@ TBT 점수는 모바일 장치에 로드되었을 때의 페이지 TBT 시간과
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## TBT 점수를 높이는 방법
 
@@ -62,7 +62,7 @@ Chrome DevTools의 성능 패널로 긴 작업의 근본 원인을 진단하는 
 
 {% Aside %} 불필요한 JavaScript 로드, 구문 분석 또는 실행은 일반적으로 대부분의 사이트에서 개선할 수 있는 훨씬 더 큰 기회입니다. {% endAside %}
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## 참고 자료
 

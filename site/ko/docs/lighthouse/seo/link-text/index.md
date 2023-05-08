@@ -28,7 +28,7 @@ Lighthouse는 다음의 일반적인 링크 텍스트에 플래그를 지정합�
 - `더 보기`
 - `더 알아보기`
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% Partial 'lighthouse-seo/scoring.njk' %}
 
 ## 설명 링크 텍스트를 추가하는 방법
 

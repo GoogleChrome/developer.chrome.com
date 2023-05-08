@@ -134,7 +134,7 @@ Here is a quick summary of the level of support for Early Hints among popular OS
 -  **Apache:** [supported](https://httpd.apache.org/docs/2.4/howto/http2.html#earlyhints) via mod_http2.
 -  **H2O:** [supported](https://github.com/h2o/h2o/pull/1767).
 -  **NGINX:** [experimental module](https://github.com/nginx-modules/ngx_http_early_hints).
--  **Node:** not yet supported by core. Available as a [draft plugin for Fastify](https://www.npmjs.com/package/fastify-early-hints).
+-  **Node:** supported since [18.11.0](https://nodejs.org/en/blog/release/v18.11.0/) for [http](https://nodejs.org/api/http.html#responsewriteearlyhintshints-callback) and [http2](https://nodejs.org/api/http2.html#responsewriteearlyhintslinks)
 
 ## Enabling Early Hints, the easy way
 

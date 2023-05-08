@@ -6,6 +6,8 @@ updated: 2018-04-26
 description: Reference documentation for the homepage_url property of manifest.json.
 ---
 
+{% Partial 'extensions/mv2-legacy-page.md' %}
+
 The URL of the homepage for this extension. The extensions management page (chrome://extensions)
 will contain a link to this URL. This field is particularly useful if you [host the extension on
 your own site][1]. If you distribute your extension using the [Chrome Web Store][2], the homepage

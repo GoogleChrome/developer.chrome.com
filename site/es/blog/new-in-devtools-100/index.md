@@ -16,7 +16,7 @@ tags:
 
 _Gracias [Carlos Caballero](https://carloscaballero.io) por la traducción y [Miguel Ángel](https://midu.dev) por la revisión._
 
-{% include 'partials/devtools/es/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='DAD72grzDDc' %}
 
@@ -188,7 +188,7 @@ Estas son algunas correcciones notables en esta versión:
 - Ahora puede guardar [fragmento de código fuente](/docs/devtools/javascript/snippets/) como un archivo JavaScript directamente. Anteriormente, necesitaba agregar la extensión de archivo `.js` manualmente. ([1137218](https://crbug.com/1137218))
 
 
-<!-- - The **Sources** panel now correctly displays scope variable names when debugging with sourcemap. Previously, the **Sources** panel displays minified scope variable names despite sourcemap being provided. ([1294682](https://crbug.com/1294682))  -->
+<!-- - The **Sources** panel now correctly displays scope variable names when debugging with source map. Previously, the **Sources** panel displays minified scope variable names despite source map being provided. ([1294682](https://crbug.com/1294682))  -->
 
 - El panel **Fuentes** ahora muestra correctamente los nombres de las variables del ámbito al depurar con el mapa fuente. Anteriormente, el panel **Fuentes** mostraba nombres de variables del ámbito minimizados a pesar de que se proporcionaba un mapa fuente. ([1294682](https://crbug.com/1294682))
 
@@ -196,5 +196,5 @@ Estas son algunas correcciones notables en esta versión:
 
 - El panel **Fuentes** ahora restaura la posición de desplazamiento correctamente al cargar la página. Anteriormente, la posición no se restauraba correctamente, lo que generaba inconvenientes en la depuración. ([1294422](https://crbug.com/1294422))
 
-{% include 'partials/devtools/es/reach-out.md' %}
-{% include 'partials/devtools/es/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

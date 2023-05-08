@@ -16,7 +16,7 @@ tags:
 
 _Gracias [Miguel Ángel](https://midu.dev) por la traducción y [Carlos Caballero](https://carloscaballero.io) por la revisión._
 
-{% include 'partials/devtools/es/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='u9GRAliBrM8' %}
 
@@ -138,5 +138,5 @@ Cada modo tiene sus propios casos de uso, beneficios y limitaciones. Por favor, 
 
 Chromium issue: [772558](https://crbug.com/772558)
 
-{% include 'partials/devtools/es/reach-out.md' %}
-{% include 'partials/devtools/es/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

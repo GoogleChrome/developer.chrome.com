@@ -2,13 +2,13 @@
 layout: "layouts/doc-post.njk"
 title: Fill out the privacy fields
 date: 2020-06-12
-updated: 2021-08-13
+updated: 2023-05-01
 description: >
-  Use the privacy tab to help the Chrome Web Store team review your extension as quickly
+  Use the privacy practices tab to help the Chrome Web Store team review your extension as quickly
   as possible.
 ---
 
-The privacy tab for an extension lets you state what the extension is for and list/justify its
+The Privacy practices tab for an extension lets you state what the extension is for and list/justify its
 permissions. Providing accurate information in these fields helps us review your extension as
 quickly as possible.
 
@@ -90,7 +90,7 @@ If you haven't done so yet, complete your listing by
 -  Filling out your [store listing][listing]
 
 [distribution]: /docs/webstore/cws-dashboard-distribution/
-[extension-policies]: /docs/webstore/program_policies/#extensions
+[extension-policies]: /docs/webstore/program-policies/#extensions
 [listing]: /docs/webstore/cws-dashboard-listing/
 [minimum-permissions]: /docs/extensions/mv3/security/#permissions
 [remote-code]: /docs/extensions/mv3/intro/mv3-overview/#remotely-hosted-code

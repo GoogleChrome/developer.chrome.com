@@ -17,7 +17,7 @@ tags:
 
 *Переводы предоставлены [Alena Batitskaia](https://twitter.com/ABatickaya). Редактор — [Maxim Salnikov](https://twitter.com/webmaxru).*
 
-{% include 'partials/devtools/ru/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='DAD72grzDDc' %}
 
@@ -127,7 +127,7 @@ tags:
 ## Частично представленные фреймы во вкладке Производительность (Performance) {: #perf }
 
 <!-- Performance recording now displays a new frame category "Partially presented frames" in the **Frames** timeline.  -->
-На записи производительности на временной шкале **Фреймы** (Frames) теперь отображается новая категория фреймов – «Частичный показ фрейма». 
+На записи производительности на временной шкале **Фреймы** (Frames) теперь отображается новая категория фреймов – «Частичный показ фрейма».
 
 <!-- Previously, the **Frames** timeline visualizes any frames with delayed main-thread work as "dropped frames". However, there are cases where some frames may still produce visual updates (e.g. scrolling) driven by the compositor thread. -->
 Раньше на временной шкале **Фреймы** (Frames) любые фреймы с отложенной работой по основному потоку отображались как «отмененные фреймы». Однако есть случаи, когда некоторые фреймы могут продолжать производить визуальные обновления (например, при скролле), управляемые потоком компоновки.
@@ -155,11 +155,11 @@ tags:
 - Обновили строки юзер агента для [режима эмуляции](/docs/devtools/device-mode/#device). Все iPhone версии 5 и выше теперь показывают строку iPhone OS 13_2_3 в качестве юзер агента. ([1289553](https://crbug.com/1289553))
 <!-- - You can now save [snippet](/docs/devtools/javascript/snippets/) as a JavaScript file directly. Previously, you needed to append `.js` file extension manually. ([1137218](https://crbug.com/1137218)) -->
 - Теперь вы можете сохранить [сниппет](/docs/devtools/javascript/snippets/) как JavaScript файл. Раньше нужно было вручную добавлять файлу расширение `.js`. ([1137218](https://crbug.com/1137218))
-<!-- - The **Sources** panel now correctly displays scope variable names when debugging with sourcemap. Previously, the **Sources** panel displays minified scope variable names despite sourcemap being provided. ([1294682](https://crbug.com/1294682))  -->
-- На вкладке **Источники** (Sources) теперь корректно отображаются имена переменных области видимости при отладке с картой источников. Ранее на панели **Источники** (Sources) отображались минифицированные имена переменных области видимости, несмотря на предоставленную карту источников. ([1294682](https://crbug.com/1294682)) 
+<!-- - The **Sources** panel now correctly displays scope variable names when debugging with source map. Previously, the **Sources** panel displays minified scope variable names despite sourcemap being provided. ([1294682](https://crbug.com/1294682))  -->
+- На вкладке **Источники** (Sources) теперь корректно отображаются имена переменных области видимости при отладке с картой источников. Ранее на панели **Источники** (Sources) отображались минифицированные имена переменных области видимости, несмотря на предоставленную карту источников. ([1294682](https://crbug.com/1294682))
 <!-- - The **Sources** panel now restores scroll position correctly on page load. Previously, the position was not restored correctly causing inconvenience in debugging. ([1294422](https://crbug.com/1294422))  -->
-- Вкладка **Источники** (Sources) теперь корректно восстанавливает положение прокрутки при загрузке страницы. Ранее положение восстанавливалось некорректно, что вызывало неудобства при отладке. ([1294422](https://crbug.com/1294422)) 
+- Вкладка **Источники** (Sources) теперь корректно восстанавливает положение прокрутки при загрузке страницы. Ранее положение восстанавливалось некорректно, что вызывало неудобства при отладке. ([1294422](https://crbug.com/1294422))
 
 
-{% include 'partials/devtools/ru/reach-out.md' %}
-{% include 'partials/devtools/ru/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

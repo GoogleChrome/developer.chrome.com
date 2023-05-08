@@ -73,6 +73,24 @@ console.countReset();
 console.countReset('coffee');
 ```
 
+## console.createTask(name) {: #createtask }
+
+{% Aside 'gotchas' %}
+This method is known as the Async Stack Tagging API. If you use a framework or abstraction for scheduling and async execution that already uses this API under the hood, you don't need to call this API directly.
+{% endAside %}
+
+Returns a `Task` instance that associates the current stack trace with the created `task` object. You can later use this `task` object to run a function (`f` in the following example). The `task.run(f)` executes an arbitrary payload and forwards the return value back to the caller.
+
+```js
+// Task creation
+const task = console.createTask(name);
+
+// Task execution
+task.run(f); // instead of f();
+```
+
+The `task` forms a link between the creation context and the context of the async function. This link lets DevTools show better stack traces for async operations. For more information, see [Linked Stack Traces](/blog/devtools-modern-web-debugging/#linked-stack-traces).
+
 ## console.debug(object \[, object, ...\]) {: #debug }
 
 [Log level][9]: `Verbose`

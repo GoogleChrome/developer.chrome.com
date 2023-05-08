@@ -24,7 +24,7 @@ updated: 2019-08-20
 
 Lighthouse*不会*检查 `width` 是否等于 `device-width`，也不会检查 `initial-scale` 键值对。但是，您仍然需要同时包含这两个信息，才能让页面正确呈现在移动设备上。
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## 如何添加 viewport meta 标记
 

@@ -17,7 +17,7 @@ alt: A hand and several hanging chains, symbolizing links.
 {% Aside 'caution' %} Declarative Link Capturing was part of the
 [capabilities project](/blog/fugu-status/). The engineering team has decided that Declarative Link
 Capturing will _not_ launch with its current design. Instead, the feature has been redesigned as
-described in [Control how your app is launched](/docs/launch-handler/). If your app implements the
+described in [Control how your app is launched](/docs/web-platform/launch-handler/). If your app implements the
 Declarative Link Capturing API, you should
 [transition to the replacement Launch Handler API](#migration). {% endAside %}
 
@@ -71,7 +71,6 @@ Examples of sites that may use this API include:
   - Apps for which it make sense to have only one instance running (e.g., a music player, a game).
   - Apps that include multi-document management within a single instance (e.g., an HTML-implemented
     tab strip).
-
 
 ### Enabling via about://flags
 
@@ -133,7 +132,7 @@ site to navigate an existing window to a new page, overriding the default HTML n
 ## Migrate to Launch Handler API {: #migration }
 
 The Declarative Link Capturing API
-[origin trial](/origintrials/#/view_trial/4285175045443026945) 
+[origin trial](/origintrials/#/view_trial/4285175045443026945)
 [expired on March&nbsp;30, 2022](https://groups.google.com/a/chromium.org/g/blink-dev/c/2c4bul4V3GQ/m/Anluh1txBQAJ)
 for Chromium&nbsp;97 and below. It will be replaced by a set of
 [new features and APIs](https://docs.google.com/document/d/1w9qHqVJmZfO07kbiRMd9lDQMW15DeK5o-p-rZyL7twk/edit)
@@ -232,6 +231,5 @@ Cutter, and [Shunya Shishido](https://github.com/sisidovski). Hero image by
 [explainer]: https://github.com/WICG/sw-launch/blob/main/declarative_link_capturing.md
 [issues]: https://github.com/WICG/sw-launch/issues/
 [spec]: https://github.com/w3c/manifest/issues/764
-[powerful-apis]:
-  https://chromium.googlesource.com/chromium/src/+/lkgr/docs/security/permissions-for-powerful-web-platform-features.md
+[powerful-apis]: https://chromium.googlesource.com/chromium/src/+/lkgr/docs/security/permissions-for-powerful-web-platform-features.md
 [cr-dev-twitter]: https://twitter.com/ChromiumDev

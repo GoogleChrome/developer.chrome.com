@@ -12,7 +12,7 @@ tags:
   - chrome-106
 ---
 
-{% include 'partials/see-all-dep-rem.md' %}
+{% Partial 'see-all-dep-rem.md' %}
 
 Chrome 106 beta was released on September 1, 2022 and is expected to become the stable version in late September, 2022.
 
@@ -34,4 +34,4 @@ The `window.PERSISTENT` quota type in `webkitRequestFileSystem()` [is now deprec
 
 Support for the `PERSISTENT` quota type contributes some amount of complexity to the quota system, but `webkitRequestFileSystem()` is the only consumer, and it's a form of storage that never caught on and is very seldom used.
 
-{% include 'partials/deprecations-policy.md' %}
+{% Partial 'deprecations-policy.md' %}

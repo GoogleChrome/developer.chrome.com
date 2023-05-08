@@ -19,7 +19,7 @@ updated: 2020-04-29
 - 图像被设置为与源图像尺寸不同的显式宽度和高度值。
 - 图像的宽度和高度被设为可变大小容器的百分比。
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## 确保图像以正确的纵横比显示
 

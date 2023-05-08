@@ -74,7 +74,7 @@ this for a bunch of DOM nodes, say, every `<h1>` title of a blog as the user scr
 
 **Why JS is not ideal**
 
-In general, scroll handlers are never a good idea. [Folks](hhttps://johnresig.com/blog/learning-from-twitter/) tend to do too much work and wonder why their UI is janky.
+In general, scroll handlers are never a good idea. [Folks](https://johnresig.com/blog/learning-from-twitter/) tend to do too much work and wonder why their UI is janky.
 
 Something else to consider is that more and more browsers are implementing hardware accelerated scrolling to improve performance. The problem with this is that on JS scroll handlers are in play, browsers may fall back into a slower (software) mode. Now we're no longer running on the GPU. Instead, we're back on the CPU. The result? User's perceive more jank when scrolling your page.
 

@@ -3,7 +3,8 @@ layout: 'layouts/doc-post.njk'
 title: 既知のセキュリティ脆弱性を持つフロントエンド JavaScript ライブラリが含まれる
 description: 既知の脆弱性が含まれる JavaScript ライブラリを置き換えることでページをより安全にする方法を学びます。
 date: 2019-05-02
-updated: 2020-06-04
+updated: 2023-04-26
+is_outdated: true
 ---
 
 侵入者は自動化された Web クローラーを使用してサイトをスキャンし、既知のセキュリティの脆弱性を見つけ出すことができます。Web クローラーが脆弱性を検出すると侵入者に通知することができるため、侵入者はサイトの脆弱性を悪用する方法を探ることができます。
@@ -19,7 +20,7 @@ updated: 2020-06-04
 - [Chrome 用 Library Detector](https://www.npmjs.com/package/js-library-detector) を実行します。
 - 検出されたライブラリのリストを [snyk の Vulnerability DB](https://snyk.io/vuln?packageManager=all) と照合します。
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## セキュリティで保護されていない JavaScript ライブラリの使用をやめる
 

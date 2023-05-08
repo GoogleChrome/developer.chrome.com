@@ -6,6 +6,8 @@ updated: 2018-11-01
 description: How to use the activeTab permission in your Chrome Extension.
 ---
 
+{% Partial 'extensions/mv2-legacy-page.md' %}
+
 The `activeTab` permission gives an extension temporary access to the currently active tab when the
 user _invokes_ the extension - for example by clicking its [browser action][1]. Access to the tab
 lasts while the user is on that page, and is revoked when the user navigates away or closes the tab.

@@ -1,9 +1,10 @@
 ---
 layout: "layouts/doc-post.njk"
 title: Overview
+seoTitle: Android Custom Tabs Overview
 date: 2020-02-04
-updated: 2021-02-02
-description: An overview of Custom Tabs
+updated: 2022-10-25
+description: Learn when best to use Android Custom Tabs for opening an URL in your Android app.
 ---
 
 App developers face a choice when a user taps a URL to either launch a
@@ -26,6 +27,7 @@ Tabs](https://blog.chromium.org/2021/01/better-content-sharing-with-custom-tabs.
 Custom Tabs allow an app to customize how the browser looks and feels. An app
 can change things like:
 
+- Initial launch height
 - Toolbar color
 - Enter and exit animations
 - Add custom actions to the browser toolbar, overflow menu and bottom toolbar
@@ -47,11 +49,14 @@ that you use Custom Tabs for these reasons:
 - Simple to implement. No need to build code to manage requests, permission
 	grants or cookie stores.
 - UI customization:
-  - Toolbar color
+	- Initial launch height
+  	- Toolbar color
 	- Action button
 	- Custom menu items
 	- Custom in/out animations
 	- Bottom toolbar
+	- Close button position
+	- Corner radii
 - Navigation awareness: the browser delivers a callback to the application upon
 an external navigation.
 - Security: the browser uses Google's Safe Browsing to protect the user and the device from

@@ -23,7 +23,7 @@ date: 2020-05-06
 
 {% Aside 'caution' %} Lighthouse는 마스크 가능 아이콘으로 지정된 이미지를 검사하지 않습니다. 이미지가 잘 표시되는지 수동으로 확인해야 합니다. {% endAside %}
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## PWA에 마스크 가능 아이콘 지원을 추가하는 방법
 

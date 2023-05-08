@@ -8,6 +8,8 @@
       <h1 class="type--h1 color-{{color}}-darkest">
         {% if titleIcon %}
           <div class="project-icon gap-right-300">
+            <div class="project-icon__cover cover-last" style="color: var(--title-icon-color)"></div>
+            <div class="project-icon__cover cover-mid" style="color: var(--title-icon-color)"></div>
             <div class="project-icon__cover" style="color: var(--title-icon-color)">
               {# image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/TvE0fdJmcXI8fuPc8R7A.svg #}
               {% Img
@@ -20,10 +22,10 @@
             </div>
           </div>
         {% endif %}
-        {{ title }}
+        {{ title | md | safe }}
       </h1>
       <p class="gap-top-300">
-        {{ text }}
+        {{ text | md | safe }}
       </p>
       {% if actionText %}
         <a href="{{ actionLink }}" class="material-button button-filled button-round display-inline-flex color-bg bg-{{color}}-medium gap-top-400">

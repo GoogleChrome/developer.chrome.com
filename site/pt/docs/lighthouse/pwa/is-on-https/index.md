@@ -22,7 +22,7 @@ O [Lighthouse](https://developers.google.com/web/tools/lighthouse/) sinaliza pá
 
 O Lighthouse aguarda um evento do [Protocolo de depuração remota do Chrome](https://github.com/ChromeDevTools/devtools-protocol) indicando que a página está sendo executada em uma conexão segura. Se o evento não for ouvido em 10 segundos, a auditoria falhará.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## Como migrar seu site para HTTPS
 

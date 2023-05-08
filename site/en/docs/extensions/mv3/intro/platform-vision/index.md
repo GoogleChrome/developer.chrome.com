@@ -21,6 +21,8 @@ date: 2020-11-09
 
 ---
 
+{% Partial 'extensions/mv3-support.md' %}
+
 Chrome extensions are one of the most-loved and most-used features of the
 Chrome browser.  Extensions can solve a myriad of use cases for a diverse set
 of users, and in one form or another they are becoming a staple feature of most
@@ -192,7 +194,7 @@ The initial steps in this area have already launched:
 * The ability to modify an extension's host access (see [Trustworthy Chrome Extensions,
   by Default](https://blog.chromium.org/2018/10/trustworthy-chrome-extensions-by-default.html)).
 * Moving extensions out of the right-click menu and into a button on the extensions menu
-  (see [A new home for your extensions](https://blog.google/products/chrome/more-intuitive-privacy-and-security-controls-chrome/)).
+  (see [A new home for your extensions](https://blog.google/products/chrome/more-intuitive-privacy-and-security-controls-chrome/#:~:text=A%20new%20home%20for%20your%20extensions)).
 
 ### Future related changes
 

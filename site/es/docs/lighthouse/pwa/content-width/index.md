@@ -16,7 +16,7 @@ La ventana gráfica es la parte de la ventana del navegador en la que se ve el c
 
 La auditoría falla si `window.innerWidth` no es igual a `window.outerWidth`.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## Cómo hacer que tu página se ajuste a las pantallas de los dispositivos móviles
 

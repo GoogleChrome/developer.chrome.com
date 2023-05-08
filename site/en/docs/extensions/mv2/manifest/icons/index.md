@@ -6,6 +6,8 @@ updated: 2018-04-26
 description: Reference documentation for the icons property of manifest.json.
 ---
 
+{% Partial 'extensions/mv2-legacy-page.md' %}
+
 One or more icons that represent the extension, app, or theme. You should always provide a 128x128
 icon; it's used during installation and by the Chrome Web Store. Extensions should also provide a
 48x48 icon, which is used in the extensions management page (chrome://extensions). You can also

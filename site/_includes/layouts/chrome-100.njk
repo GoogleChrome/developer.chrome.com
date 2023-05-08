@@ -1,10 +1,11 @@
 {% extends "layouts/base.njk" %}
 
-{% block chromescss %}
-  <link rel="stylesheet" href="/css/chrome-main.css">
+{% block css %}
+{% InlineCss '/css/single-post.css' %}
+{% InlineCss '/css/chrome-main.css' %}
 {% endblock %}
 
-{% block chromescripts %}
+{% block scripts %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>

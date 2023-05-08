@@ -8,10 +8,10 @@ layout: "layouts/blog-post.njk"
 authors:
   - dotproto
 date: 2021-06-23
-hero: 'image/WlD8wC6g8khYWPJUsQceQkhXSlv1/95SnF7CbCqSWiV03WjVF.png'
+hero: 'image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/cAjp0aky7GBuS3ZK9sXB.png'
 alt: ''
 tags:
-  - extensions
+  - extensions-news
 ---
 
 Since the launch of Chrome extensions, the platform has allowed developers to expose extension

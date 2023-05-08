@@ -2,12 +2,11 @@
 layout: "layouts/blog-post.njk"
 title: "Storage Partitioning"
 subhead: >
-  To prevent certain types of side-channel cross-site tracking, Chrome is
-  partitioning storage and communications APIs in third-party contexts.
+  Separate storage from communication APIs in third-party contexts to
+  prevent certain types of side-channel cross-site tracking.
 description: >
-  Without storage partitioning, a site can join data across different sites to track the
-  user across the web. To prevent certain types of side-channel cross-site tracking, Chrome is
-  partitioning storage and communications APIs in third-party contexts.
+  Separate storage from communication APIs in third-party contexts to
+  prevent certain types of side-channel cross-site tracking.
 authors:
  - kevinkiklee
 date: 2022-08-24
@@ -15,10 +14,23 @@ tags:
  - privacy
 ---
  
+## Implementation status
+
+- [Storage Partitioning proposal](https://github.com/privacycg/storage-partitioning) is open for discussion.
+- [Chrome Platform Status](https://chromestatus.com/feature/5723617717387264)
+- Available for testing in Chrome Beta version 105.0.5195.17 and later.
+
+The feature launch is planned for early 2023, depending on the stability and
+compatibility. Testing third-party storage partitioning now in an Origin Trial
+and filing bugs will help uncover any potential issues and resolve them before
+the General Availability rollout.
+ 
 ## What is storage partitioning?
  
 To prevent certain types of side-channel cross-site tracking, Chrome is
-partitioning storage and communications APIs in third-party contexts. Without
+partitioning storage and communications APIs in third-party contexts.
+
+Without
 storage partitioning, a site can join data across different sites to track the
 user across the web. Also, it allows the embedded site to infer specific states
 about the user in the top-level site using side-channel techniques such as
@@ -31,27 +43,40 @@ iframe from `example.com` is embedded on `a.com` and `b.com`, it could learn
 about your browsing habits for those two sites by storing and successfully
 retrieving an ID from storage. With third-party storage partitioning enabled,
 storage for `example.com` exists in two different partitions, one for `a.com`
-and the other for `b.com`. Partitioning generally means that data stored by
-storage APIs like local storage and IndexedDB by an iframe will no longer be
-accessible to all contexts in the same origin. Instead, the data will only be
-available to contexts with the same origin and same top-level site.
+and the other for `b.com`.
+
+Partitioning generally means that data stored by storage APIs like local
+storage and IndexedDB by an iframe will no longer be accessible to all contexts
+in the same origin. Instead, the data will only be available to contexts with
+the same origin and same top-level site.
  
+ {% Columns %}
+
+ {% Column %}
+
 ### Before
- 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/wOagNNjLO8LHJUn6p1iM.png", alt="Diagram of storage APIs without partitioning.", width="793", height="415" %}
- 
+
+<figure>
+ {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/wOagNNjLO8LHJUn6p1iM.png", alt="Diagram of storage APIs without partitioning.", width="793", height="415" %}
+   <figcaption>
+     Before storage partitioning, a.com and b.com can share data.<br/><a href="https://wd.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/wOagNNjLO8LHJUn6p1iM.png">View full size diagram</a>.
+   </figcaption>
+</figure>
+ {% endColumn %}
+
+ {% Column %}
+
 ### After
  
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/X8tExxdcoVSE4P1bUKQJ.png", alt="Diagram of storage APIs with partitioning.", width="800", height="553" %}
- 
- 
-The feature launch is planned for  early 2023, depending on the stability and
-compatibility. Testing third-party storage partitioning now in an Origin Trial
-and filing bugs will help uncover any potential issues and resolve them before
-the General Availability rollout.
- 
-Starting in Chrome Beta version 105.0.5195.17 and later, storage partitioning
-is available for testing.
+<figure>
+  {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/X8tExxdcoVSE4P1bUKQJ.png", alt="Diagram of storage APIs with partitioning.", width="800", height="553" %}
+    <figcaption>
+      After storage partitioning, b.com cannot access a.com's storage.<br/><a href="https://wd.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/X8tExxdcoVSE4P1bUKQJ.png">View full size diagram</a>.
+    </figcaption>
+</figure>
+ {% endColumn %}
+
+{% endColumns %}
  
 ## How to test storage partitioning
  
@@ -70,7 +95,6 @@ development and are not available for testing yet.
 ## Updated APIs
 
 ### Storage APIs
-
 
    [Quota system](https://web.dev/storage-for-the-web/#how-much)
    :   The quota system is used to determine how much disk space is
@@ -151,14 +175,15 @@ to communicate with its same-origin context:
  
 ### Service Worker API
  
-[Service Worker API](https://developer.mozilla.org/docs/Web/API/Service_Worker_API)
+The [Service Worker API](https://developer.mozilla.org/docs/Web/API/Service_Worker_API)
 provides the interface for conducting tasks in the background. Sites create
 persistent registrations that create new worker context to respond to events,
-and that worker can communicate with any same-origin context. Also,
-ServiceWorker API can change the timing of navigation requests leading to the
+and that worker can communicate with any same-origin context. Also, the
+Service Worker API can change the timing of navigation requests leading to the
 potential for cross-site information leaks such as
 [history sniffing](https://www.ndss-symposium.org/wp-content/uploads/ndss2021_1C-2_23104_paper.pdf).
-Therefore, Service Workers registered from a third party context will be
+
+Therefore, Service Workers registered from a third-party context will be
 partitioned.
  
 ### Extension APIs
@@ -168,16 +193,20 @@ that customize the browsing experience for the user. With Manifest V2,
 extensions can create
 [background pages](/docs/extensions/mv2/background_pages/)
 that have the extension's origin, but can embed iframes with web content's
-origins. Because partitioning the storage will break some use cases, a
+origins.
+
+Because partitioning the storage will break some use cases, a
 mitigation will be provided. If the extension has
 [host_permissions](/docs/extensions/mv2/runtime_host_permissions/)
 for the iframe origin, then the iframe will be treated as the top-level frame
 and not the extension page.
- 
-Note that Manifest V2 has been
+
+{% Aside %} 
+Manifest V2 has been
 [deprecated](/docs/extensions/mv3/mv2-sunset/) and
 will be removed. It is recommended to
 [migrate to Manifest V3](/docs/extensions/mv3/intro/mv3-migration/).
+{% endAside %} 
  
 ## Engage and share feedback
  

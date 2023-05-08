@@ -10,7 +10,7 @@ updated: 2015-05-19
 ---
 
 <figure>
-{% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/mcIwVmL8QGFVDI0rvGCA.gif", alt="Automatically pause on any exception", width="614", height="390" %}
+{% Video src="video/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/H1R5IacxVM5FEY0Fs1sF.mp4", autoplay="true", muted="true", loop="true", alt="Automatically pause on any exception", width="614", height="390" %}
 </figure>
 
 In DevTools, you can automatically pause on any exception (especially useful for __uncaught__ exceptions). Just enable 'Pause on exceptions' within the Sources Panel. Optionally, you can also pause on __caught__ exceptions.

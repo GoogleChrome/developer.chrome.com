@@ -157,7 +157,7 @@ kenchris:
   title:
     en: 'Kenneth Christiansen'
   description:
-    en: 'Kenneth is an Engineer at Intel'
+    en: 'Kenneth a Principal Engineer at Intel'
 emilystark:
   title:
     en: 'Emily Stark'
@@ -197,7 +197,7 @@ chriswilson:
   title:
     en: 'Chris Wilson'
   description:
-    en: 'Chris is a contributor to Chrome Developers'
+    en: 'Chrome Web Standards Lead'
 renatomangini:
   title:
     en: 'Renato Mangini'
@@ -238,16 +238,11 @@ johannes:
     en: 'Johannes Henkel'
   description:
     en: 'Software Engineer working on the Chrome User Experience Report at Google.'
-maudnalpas:
+jasmineyan:
   title:
-    en: 'Maud Nalpas'
+    en: 'Jasmine Yan'
   description:
-    en: 'Developer advocate at Google, working on Chrome privacy and security'
-rowanmerewood:
-  title:
-    en: 'Rowan Merewood'
-  description:
-    en: 'Rowan is a Developer Advocate'
+    en: 'Software Engineer working on Chrome Tooling.'
 emilaeklund:
   title:
     en: 'Emil Eklund'
@@ -373,6 +368,11 @@ afuchs:
     en: 'Andy Fuchs'
   description:
     en: 'Technical Writer, Chrome Extensions'
+patrickbrosset:
+  title:
+    en: 'Patrick Brosset'
+  description:
+    en: 'Our latest news, updates, and stories by Patrick Brosset'
 dotproto:
   title:
     en: 'Simeon Vincent'
@@ -514,7 +514,7 @@ yoavweiss:
   title:
     en: 'Yoav Weiss'
   description:
-    en: 'Our latest news, updates, and stories by Yoav Weiss.'
+    en: 'Software engineer at Google working on web performance.'
 solomonkinard:
   title:
     en: 'Solomon Kinard'
@@ -549,17 +549,43 @@ maudn:
   title:
     en: 'Maud Nalpas'
   description:
-    en: 'Developer Advocate for Chrome and web'
+    en: 'Developer Relations Engineer for security/privacy, Chrome and web'
+maudnalpas:
+  title:
+    en: 'Maud Nalpas'
+  description:
+    en: 'Developer Relations Engineer for security/privacy, Chrome and web'
 beaufortfrancois:
   title:
     en: 'François Beaufort'
   description:
     en: 'Dives into Chromium source code'
+reillyg:
+  title:
+    en: Reilly Grant
+  description:
+    en: Software Engineer on Google Chrome focusing on hardware APIs
+    es: Ingeniero de software en Google Chrome centrado en las API de hardware
+    ja: ハードウェア API に関心を持つ Google Chrome のソフトウェアエンジニア
+    ko: 하드웨어 API에 중점을 둔 Chrome의 소프트웨어 엔지니어
+    pt: Engenheiro de software no Google Chrome com foco em APIs de hardware
+    ru: Инженер-программист в команде Google Chrome, специализирующийся на API для работы с устройствами
+    zh: 专注于硬件 API 的 Google Chrome 软件工程师
+nattestad:
+  title:
+    en: Thomas Nattestad
+  description:
+    en: Product Manager at Google
 cwallez:
   title:
     en: Corentin Wallez
   description:
     en: Graphics plumber at Google
+toji:
+  title:
+    en: Brandon Jones
+  description:
+    en: WebGPU/WebXR/WebGL Dev at Google
 eladalon:
   title:
     en: 'Elad Alon'
@@ -739,7 +765,7 @@ sofiayem:
   title:
     en: 'Sofia Emelianova'
   description:
-    en: "Technical Writer, Google Chrome"
+    en: 'Technical Writer, Google Chrome'
 kevinkiklee:
   title:
     en: 'Kevin K. Lee'
@@ -770,13 +796,6 @@ twifkak:
 jheyy:
   title:
     en: 'Jhey Tompkins'
-    es: 'Jhey Tompkins'
-    it: 'Jhey Tompkins'
-    ja: 'Jhey Tompkins'
-    ko: 'Jhey Tompkins'
-    pt: 'Jhey Tompkins'
-    ru: 'Jhey Tompkins'
-    zh: 'Jhey Tompkins'
   description:
     en: 'Whimsy Dev Supreme! Developer Relations Engineer @ Google'
     es: '¡Extravagante Dev Supremo! Ingeniero de Relaciones con los Desarrolladores @ Google'
@@ -795,7 +814,7 @@ simonhearne:
   title:
     en: 'Simon Hearne'
   description:
-    en: "Simon is an independent web performance consultant"
+    en: 'Simon is an independent web performance consultant'
 jarhar:
   title:
     en: 'Joey Arhar'
@@ -874,12 +893,6 @@ miriamsuzanne:
 tunetheweb:
   title:
     en: Barry Pollard
-    es: Barry Pollard
-    ja: Barry Pollard
-    ko: Barry Pollard
-    pt: Barry Pollard
-    ru: Barry Pollard
-    zh: Barry Pollard
   description:
     en: Web Performance Developer Advocate for Google
     es: Rendimiento web aesarrollador partidario para Google
@@ -893,6 +906,16 @@ barbsmith:
     en: Barb Smith
   description:
     en: Barb leads Chrome's Privacy Sandbox Partnerships team
+cilvento:
+  title:
+    en: Christina Ilvento
+  description:
+    en: Group Product Manager on Chrome
+csharrison:
+  title:
+    en: Charlie Harrison
+  description:
+    en: Software Engineer for the Privacy Sandbox
 crystalwang:
   title:
     en: Crystal Wang
@@ -916,12 +939,6 @@ jney:
 bramus:
   title:
     en: Bramus
-    es: Bramus
-    ja: Bramus
-    ko: Bramus
-    pt: Bramus
-    ru: Bramus
-    zh: Bramus
   description:
     en: Developer Advocate for CSS, UI, and DevTools at Chrome
     es: Desarrollador partidario para CSS, UI y DevTools en Chrome
@@ -938,12 +955,6 @@ victorporof:
 leenasohoni:
   title:
     en: Leena Sohoni
-    es: Leena Sohoni
-    ja: Leena Sohoni
-    ko: Leena Sohoni
-    pt: Leena Sohoni
-    ru: Leena Sohoni
-    zh: Leena Sohoni
   description:
     en: Freelance technical analyst and writer
     es: Analista técnica / escritora independiente
@@ -955,12 +966,6 @@ leenasohoni:
 karaerickson:
   title:
     en: Kara Erickson
-    es: Kara Erickson
-    ja: Kara Erickson
-    ko: Kara Erickson
-    pt: Kara Erickson
-    ru: Kara Erickson
-    zh: Kara Erickson
   description:
     en: Software Engineer on the Aurora team at Chrome.
     es: Ingeniera de software en el equipo de Aurora en Chrome.
@@ -972,12 +977,6 @@ karaerickson:
 mgechev:
   title:
     en: Minko Gechev
-    es: Minko Gechev
-    ja: Minko Gechev
-    ko: Minko Gechev
-    pt: Minko Gechev
-    ru: Minko Gechev
-    zh: Minko Gechev
   description:
     en: Our latest news, updates, and stories by Minko Gechev.
     es: Consulte las últimas noticias, actualizaciones e historias publicadas por Minko Gechev.
@@ -989,12 +988,6 @@ mgechev:
 alexcastle:
   title:
     en: Alex Castle
-    es: Alex Castle
-    ja: Alex Castle
-    ko: Alex Castle
-    pt: Alex Castle
-    ru: Alex Castle
-    zh: Alex Castle
   description:
     en: Software Engineer on the Aurora team at Chrome.
     es: Ingeniero de software en el equipo de Aurora en Chrome.
@@ -1006,12 +999,6 @@ alexcastle:
 shubhie:
   title:
     en: Shubhie Panicker
-    es: Shubhie Panicker
-    ja: Shubhie Panicker
-    ko: Shubhie Panicker
-    pt: Shubhie Panicker
-    ru: Shubhie Panicker
-    zh: Shubhie Panicker
   description:
     en: Tech Lead Manager on the Chrome Web Platform team
     es: Gerente principal de tecnología de la plataforma web de Chrome
@@ -1023,12 +1010,6 @@ shubhie:
 keenyeeliau:
   title:
     en: Keen Yee Liau
-    es: Keen Yee Liau
-    ja: Keen Yee Liau
-    ko: Keen Yee Liau
-    pt: Keen Yee Liau
-    ru: Keen Yee Liau
-    zh: Keen Yee Liau
   description:
     en: Software Engineer on the Aurora team at Chrome.
     es: Ingeniera de software en el equipo de Aurora en Chrome.
@@ -1037,7 +1018,7 @@ keenyeeliau:
     pt: Engenheiro de software da equipe Aurora no Chrome.
     ru: Инженер-программист в команде Aurora в Chrome.
     zh: Chrome 公司 Aurora 团队的软件工程师。
-arthursonzogni: 
+arthursonzogni:
   title:
     en: Arthur Sonzogni
   description:
@@ -1047,3 +1028,374 @@ michalpitr:
     en: 'Michal Pitr'
   description:
     en: 'Software Engineering Intern on the Chrome DevTools team'
+patmeenan:
+  title:
+    en: 'Patrick Meenan'
+  description:
+    en: 'Web performance @googlechrome'
+anniesullie:
+  title:
+    en: 'Annie Sullivan'
+  description:
+    en: 'Senior Staff Software Engineer at Google'
+mmocny:
+  title:
+    en: 'Michal Mocny'
+  description:
+    en: 'Web Vitals, Speed Metrics and Web performance at Google'
+ianclelland:
+  title:
+    en: 'Ian Clelland'
+  description:
+    en: 'Software Engineer at Google'
+roydeepanjan:
+  title:
+    en: 'Deep Roy'
+  description:
+    en: 'Software Engineer at Google'
+diklla:
+  title:
+    en: 'Dikla Cohen'
+  description:
+    en: 'Web consultant at Google'
+gilberto_cocchi:
+  title:
+    en: 'Gilberto Cocchi'
+  description:
+    en: 'Web Ecosystem Technical Consultant at Google'
+harrytheodoulou:
+  title:
+    en: 'Harry Theodoulou'
+  description:
+    en: 'Web Ecosystem Consultant at Google'
+gbmonaco:
+  title:
+    en: Gerald Monaco
+  description:
+    en: Software Engineer on the Chrome team.
+greenido:
+  title:
+    en: Ido Green
+  description:
+    en: 'Senior technology leader and entrepreneur at heart'
+christianliebel:
+  title:
+    en: Christian Liebel
+  description:
+    en: 'Consultant, Thinktecture AG'
+jonathangarbee:
+  title:
+    en: Jonathan Garbee
+  description:
+    en: 'Front-end engineer with a passion for usability and accessibility'
+noraoneill:
+  title:
+    en: "Nora O'Neill"
+  description:
+    en: 'Product Marketing Manager, Chrome.'
+amysteam:
+  title:
+    en: 'Amy Steam'
+  description:
+    en: 'Amy writes about Chrome extensions 🧩.'
+milutinkristofic:
+  title:
+    en: 'Milutin Kristofic'
+  description:
+    en: 'Software Engineer at Google'
+marcdoerrenhaus:
+  title:
+    en: 'Marc Doerrenhaus'
+  description:
+    en: 'Google Cloud, Sales Operations, Strategy & Operations Manager at Google'
+ergunsh:
+  title:
+    en: Ergün Erdogmus
+  description:
+    en: 'Software Engineer at Google'
+markallenthompson:
+  title:
+    en: Mark Thompson
+  description:
+    en: 'Sr. Developer Relations Engineer at Google'
+rouslan:
+  title:
+    en: 'Rouslan Solomakhin'
+  description:
+    en: 'Software Engineer on the Chrome team.'
+chrisdavidmills:
+  title:
+    en: 'Chris Mills'
+  description:
+    en: 'Independent tech writer specializing in web platform docs.'
+leeronisrael:
+  title:
+    en: 'Leeron Israel'
+  description:
+    en: 'Product Manager, Privacy Sandbox'
+joeytrotz:
+  title:
+    en: 'Joey Trotz'
+  description:
+    en: 'Director of Product for Privacy Sandbox Ecosystems'
+samuelgoto:
+  title:
+    en: 'Sam Goto'
+  description:
+    en: 'Software Engineer on the Chrome team'
+zachmastromatto:
+  title:
+    en: Zach Mastromatto
+  description:
+    en: Privacy Sandbox Partnerships
+akashnadan:
+  title:
+    en: Akash Nadan
+  description:
+    en: Product Manager
+andreeacucu:
+  title:
+    en: Andreea Cucu
+  description:
+    en: Privacy Web Ecosystem Consultant
+adamsilverstein:
+  title:
+    en: 'Adam Silverstein'
+  description:
+    en: 'Developer Relations Engineer at Google'
+djuffin:
+  title:
+    en: Eugene Zemtsov
+  description:
+    en: Our latest news, updates, and stories by Eugene Zemtsov.
+    es: Consulte las últimas noticias, actualizaciones e historias publicadas por Eugene Zemtsov.
+    ja: Eugene Zemtsov による最新のニュース、アップデート情報、記事などをご紹介します。
+    ko: Eugene Zemtsov의 최신 뉴스, 업데이트 및 스토리.
+    pt: Nossas últimas notícias, atualizações e histórias por Eugene Zemtsov.
+    ru: Последние новости и статьи от Eugene Zemtsov.
+    zh: Eugene Zemtsov 撰写我们的最新资讯、动态和故事。
+nateschloss:
+  title:
+    en: Nate Schloss
+  description:
+    en: Our latest news, updates, and stories by Nate Schloss.
+    es: Consulte las últimas noticias, actualizaciones e historias publicadas por Nate Schloss.
+    ja: Nate Schloss による最新のニュース、アップデート情報、記事などをご紹介します。
+    ko: Nate Schloss의 최신 뉴스, 업데이트 및 스토리.
+    pt: Nossas últimas notícias, atualizações e histórias por Nate Schloss.
+    ru: Последние новости и статьи от Nate Schloss.
+    zh: Nate Schloss 撰写我们的最新资讯、动态和故事。
+andrewcomminos:
+  title:
+    en: Andrew Comminos
+  description:
+    en: Our latest news, updates, and stories by Andrew Comminos.
+    es: Consulte las últimas noticias, actualizaciones e historias publicadas por Andrew Comminos.
+    ja: Andrew Comminos による最新のニュース、アップデート情報、記事などをご紹介します。
+    ko: Andrew Comminos의 최신 뉴스, 업데이트 및 스토리.
+    pt: Nossas últimas notícias, atualizações e histórias por Andrew Comminos.
+    ru: Последние новости и статьи от Andrew Comminos.
+    zh: Andrew Comminos 撰写我们的最新资讯、动态和故事。
+alexshalamov:
+  title:
+    en: Alex Shalamov
+  description:
+    en: Alex is an Engineer at Intel
+    es: Alex es un ingeniero en Intel
+    ja: Alex は Intel のエンジニアです
+    ko: Alex는 Intel의 엔지니어입니다.
+    pt: Alex é engenheiro na Intel
+    ru: Алекс — инженер в компании Intel
+    zh: Alex 是 Intel 的一名工程师
+pozdnyakov:
+  title:
+    en: Mikhail Pozdnyakov
+  description:
+    en: Mikhail is an Engineer at Intel
+    es: Mikhail es un ingeniero en Intel
+    ja: Mikhail は Intel のエンジニアです
+    ko: Mikhail은 Intel의 엔지니어입니다.
+    pt: Mikhail é engenheiro na Intel
+    ru: Михаил — инженер в компании Intel
+    zh: Mikhail 是 Intel 的一名工程师
+mstensho:
+  title:
+    en: Morten Stenshorne
+  description:
+    en: Morten is a layout engineer on the Blink team at Google.
+example:
+  title:
+    en: Example author
+  description:
+    en: Used for testing purposes, no real author.
+sarino:
+  title:
+    en: Sarino Grasso
+  description:
+    en: Sarino is a Web Ecosystem Consultant at Google
+ianstanion:
+  title:
+    en: Ian Stanion
+  description:
+    en: 'Ian is a technical content developer at Google.'
+exterkamp:
+  title:
+    en: Shane Exterkamp
+  description:
+    en: Shane is a SWE on Lighthouse
+    es: Shane es un Ingeniero de software en Lighthouse
+    ja: Shane は Lighthouse の開発に取り組むソフトウェアエンジニアです
+    ko: Shane은 Lighthouse의 SWE입니다.
+    pt: Shane é engenheiro de software na empresa Lighthouse
+    ru: Шейн — инженер-программист в команде Lighthouse
+    zh: Shane 是一名负责 Lighthouse 的软件工程师
+helencho:
+  title:
+    en: Helen Cho
+  description:
+    en: 'Helen is a product manager at Google.'
+kaustubhag:
+  title:
+    en: Kaustubha Govind
+  description:
+    en: 'Kaustubha is a software engineering manager at Google.'
+johannhof:
+  title:
+    en: Johann Hofmann
+  description:
+    en: 'Johann is a software engineer at Google.'
+priyankachatterjee:
+  title:
+    en: Priyanka Chatterjee
+  description:
+    en: Software Engineer, Privacy Sandbox
+tristramsouthey:
+  title:
+    en: 'Tristram Southey'
+  description:
+    en: 'Product Manager, Google Chrome'
+kyraseevers:
+  title:
+    en: 'Kyra Seevers'
+  description:
+    en: 'Software Engineer, Google Chrome'
+jyasskin:
+  title:
+    en: 'Jeffrey Yasskin'
+  description:
+    en: 'Chrome Web Standards Lead'
+peterkvitek:
+  title:
+    en: Peter Kvitek
+  description:
+    en: 'Software engineer'
+developit:
+  title:
+    en: Jason Miller
+  description:
+    en: Jason is a Web DevRel focused on speed and the JS ecosystem.
+    es: Jason es un Web DevRel centrado en la velocidad y en el ecosistema de JS.
+    ja: Jason は、スピードと JS のエコシステムに関心を持つ Web DevRel チームのメンバーです。
+    ko: Jason은 속도와 JS 생태계에 중점을 둔 Web DevRel입니다.
+    pt: Jason é Web DevRel focado na velocidade e no ecossistema JS.
+    ru: Джейсон — DevRel по вопросам веб-технологий, специализирующийся на оптимизации скорости и экосистеме JS.
+    zh: Jason 是网络开发者关系团队成员，专注于速度和 JS 生态系统。
+masonfreed:
+  title:
+    en: Mason Freed
+  description:
+    en: Developer on the Chrome team
+    es: Desarrollador en el equipo de Chrome
+    ja: Chrome チームに所属する開発者
+    ko: Chrome 팀 개발자
+    pt: Desenvolvedor na equipe do Chrome
+    ru: Разработчик в команде Chrome
+    zh: Chrome 团队的开发者
+uskay:
+  title:
+    en: Yusuke Utsunomiya
+  description:
+    en: Tech consultant for Web, Chrome & AMP
+    es: Consultor técnico para Web, Chrome y AMP
+    ja: Web、Chrome、AMP を対象とした技術コンサルタント
+    ko: Web, Chrome 및 AMP 기술 컨설턴트
+    pt: Consultor técnico para a web, Chrome e AMP
+    ru: Технический консультант по веб-разработке, Chrome и AMP
+    zh: 网络、Chrome 和 AMP 技术顾问
+janicklasralphj:
+  title:
+    en: Janicklas Ralph James
+  description:
+    en: Software Engineer on the Aurora team at Chrome.
+    es: Ingeniera de software en el equipo de Aurora en Chrome.
+    ja: ChromeのAuroraチームのソフトウェアエンジニア。
+    ko: Chrome에서 Aurora 팀의 소프트웨어 엔지니어입니다.
+    pt: Engenheiro de software da equipe Aurora no Chrome.
+    ru: Инженер-программист в команде Aurora в Chrome.
+    zh: Chrome 公司 Aurora 团队的软件工程师。
+mattreynolds:
+  title:
+    en: Matt Reynolds
+  description:
+    en: Matt is a software developer
+    es: Matt es un desarrollador de software
+    ja: Matt はソフトウェア開発者です
+    ko: Matt는 소프트웨어 개발자입니다.
+    pt: Matt é um desenvolvedor de software
+    ru: Мэтт — разработчик программного обеспечения
+    zh: Matt 是一名软件开发者
+pbirk:
+  title:
+    en: Peter Birk Pakkenberg
+  description:
+    en: Software Engineer, Android
+pjl:
+  title:
+    en: Philip Lee
+  description:
+    en: Software Engineer
+georgiafranklin:
+  title:
+    en: Georgia Franklin
+  description:
+    en: Product Manager, Privacy Sandbox
+arskama:
+  title:
+    en: Arnaud (Arno) Mandy
+  description:
+    en: Arno is an Engineer at Intel
+robertyang:
+  title:
+    en: Robert Yang
+  description:
+    en: Robert is a Senior Partner Technology Manager at Google
+vaatika:
+  title:
+    en: Vaatika Dabra Groth
+  description:
+    en: UX Designer at Google
+dmengelt:
+  title:
+    en: Dominik Mengelt
+  description:
+    en: Developer Relations Engineer Payments, Google
+roshanbaliga:
+  title:
+    en: Roshan Baliga
+  description:
+    en: Group Product Manager, Chrome Open Media
+marcopaniconi:
+  title:
+    en: Marco Paniconi
+  description:
+    en: Senior Staff Software Engineer, Chrome Open Media
+yunqingwang:
+  title:
+    en: Yunqing Wang
+  description:
+    en: Senior Staff Software Engineer, Chrome Open Media
+sebastianbenz:
+  title:
+    en: 'Sebastian Benz'
+  description:
+    en: 'Sebastian is a Developer Relations Engineer'

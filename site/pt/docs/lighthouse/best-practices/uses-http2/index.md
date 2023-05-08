@@ -16,7 +16,7 @@ O [Lighthouse](https://developers.google.com/web/tools/lighthouse/) lista todos 
 
 O Lighthouse reúne todos os recursos solicitados pela página e verifica a versão do protocolo HTTP de cada um. Existem alguns casos em que as solicitações não HTTP/2 serão ignoradas nos resultados da auditoria. [Veja a implementação](https://github.com/GoogleChrome/lighthouse/blob/9fad007174f240982546887a7e97f452e0eeb1d1/lighthouse-core/audits/dobetterweb/uses-http2.js#L138) para mais detalhes.
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## Como passar nesta auditoria
 

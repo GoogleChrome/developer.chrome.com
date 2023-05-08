@@ -26,11 +26,11 @@ updated: 2020-06-10
 
 Lighthouse は、[Chrome Remote Debugging Protocol (Chrome リモートデバッグプロトコル)](https://github.com/ChromeDevTools/devtools-protocol) がサービスワーカーのバージョンを返すかどうかを確認します。返されない場合に監査は失敗します。
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## サービスワーカーの登録方法
 
-{% include 'content/reliable/workbox.njk' %}
+{% Partial 'reliable/workbox.njk' %}
 
 サービスワーカーは、わずか数行のコードで登録できますが、サービスワーカーを使用する唯一の理由は、上述した PWA の機能の 1 つを実装できるようにするためです。実際にそうした機能を実装するには、さらに多くの作業が必要になります。
 

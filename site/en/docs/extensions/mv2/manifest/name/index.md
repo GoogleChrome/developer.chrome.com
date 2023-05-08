@@ -6,6 +6,8 @@ updated: 2018-04-26
 description: Reference documentation for the name and short_name properties of manifest.json.
 ---
 
+{% Partial 'extensions/mv2-legacy-page.md' %}
+
 The `name` and `short_name` manifest properties are short, plain text strings that identify the
 extension. You can specify locale-specific strings for both fields; see [Internationalization][1]
 for details.

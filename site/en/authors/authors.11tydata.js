@@ -14,11 +14,17 @@
  * limitations under the License.
  */
 
-const {index} = require('../../_data/postsDataHooks/authors');
 const {locale} = require('../en.11tydata');
+const {i18n} = require('../../_filters/i18n');
 
 module.exports = {
   pagination: {
-    before: authors => index(authors, locale),
+    before: authors => {
+      return authors.sort((a, b) =>
+        i18n(`i18n.authors.${a}.title`, locale).localeCompare(
+          i18n(`i18n.authors.${b}.title`, locale)
+        )
+      );
+    },
   },
 };

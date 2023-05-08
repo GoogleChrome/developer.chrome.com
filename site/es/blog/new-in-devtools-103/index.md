@@ -16,7 +16,7 @@ tags:
 
 _Gracias  por la traducción [Miguel Ángel](https://midu.dev) y [Carlos Caballero](https://carloscaballero.io) por la revisión._
 
-{% include 'partials/devtools/es/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='LyMts4yfQu8' %}
 
@@ -188,8 +188,8 @@ Dos nuevos atajos de teclado están disponibles en el panel **Fuentes**:
 Chromium issues: [1226363](https://crbug.com/1226363)
 
 
-<!-- ## Sourcemaps improvements {: #sourcemaps } -->
-## Mejoras en los sourcemaps {: #sourcemaps }
+<!-- ## Source maps improvements {: #sourcemaps } -->
+## Mejoras en los source maps {: #sourcemaps }
 
 <!-- Previously, developers experience random failure during: -->
 Previamente, la experiencia de los desarrolladores se veía afectada de forma aleatoria por:
@@ -201,8 +201,8 @@ Previamente, la experiencia de los desarrolladores se veía afectada de forma al
 - Identificar la ubicación de origen de un problema de rendimiento en un ejemplo [Codepen](https://codepen.io/)
 - Falta de la pestaña **Componente** cuando [React DevTools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) está habilitado
 
-<!-- Here are a few fixes on sourcemaps to improve the overall debugging experience: -->
-Aquí hay algunos arreglos en los sourcemaps para mejorar la experiencia general de depuración:
+<!-- Here are a few fixes on source maps to improve the overall debugging experience: -->
+Aquí hay algunos arreglos en los source maps para mejorar la experiencia general de depuración:
 
 <!-- - Correct mapping between location and offset for inline scripts and source location
 - Use fallback information for frame’s text location
@@ -217,5 +217,5 @@ Aquí hay algunos arreglos en los sourcemaps para mejorar la experiencia general
 
 Chromium issues: [1319828](https://crbug.com/1319828), [1318635](https://crbug.com/1318635), [1305475](https://crbug.com/1305475)
 
-{% include 'partials/devtools/es/reach-out.md' %}
-{% include 'partials/devtools/es/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

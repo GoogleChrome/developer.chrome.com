@@ -30,7 +30,7 @@ updated: 2019-09-19
 
 {% Aside 'caution' %}要使您的应用可安装，Web 应用清单是*必需\*\*的，但这还不够*。要了解如何满足可安装性的所有要求，请参阅[了解可安装性](https://web.dev/progressive-web-apps/)帖子。 {% endAside %}
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## 如何使您的 PWA 可安装
 

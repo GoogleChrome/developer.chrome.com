@@ -18,7 +18,7 @@ updated: 2020-05-29
 
 По [данным Интернет-архива](https://httparchive.org/reports/state-of-the-web?start=latest#bytesTotal), медианная нагрузка на сеть составляет от 1700 до 1900 КиБ. Чтобы помочь выявить самые тяжеловесные нагрузки на сеть, Lighthouse отмечает страницы, чей общий объем сетевых запросов превышает 5000 КиБ.
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Как уменьшить размер нагрузки на сеть
 

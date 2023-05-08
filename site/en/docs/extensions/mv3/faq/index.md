@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Frequently asked questions"
+seoTitle: "Chrome Extensions: Frequently asked questions"
 date: 2014-02-28
 updated: 2020-11-20
 description: Frequently asked questions about Chrome Extensions.

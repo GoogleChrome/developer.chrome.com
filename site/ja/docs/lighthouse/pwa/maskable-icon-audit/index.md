@@ -21,7 +21,7 @@ date: 2020-05-06
 
 {% Aside 'caution' %} Lighthouse は、マスカブルアイコンとして指定された画像を検査しません。画像が適切に表示されることは、自分で確認する必要があります。{% endAside %}
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## PWA にマスカブルアイコンのサポートを追加する方法
 

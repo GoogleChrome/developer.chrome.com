@@ -12,16 +12,22 @@ tags:
   - test
 ---
 
+{% YouTube id='f7kokNyRe7U' %}
+
 Use Device Mode to approximate how your page looks and performs on a mobile device.
 
-Device Mode is the name for the loose collection of features in Chrome DevTools that help you
+Device Mode is the name for a collection of features in Chrome DevTools that help you
 simulate mobile devices. These features include:
 
 - [Simulating a mobile viewport][1]
-- [Throttling the network][2]
 - [Throttling the CPU][3]
-- [Simulating geolocation][4]
-- [Setting orientation][5]
+- [Throttling the network][2]
+  {% Aside 'gotchas' %}
+  Alternatively, you can [throttle connection speed](/docs/devtools/network/reference/#throttling) in the **Network** panel.
+  {% endAside %}
+- Additionally, in the [**Sensors** tab](/docs/devtools/sensors/):
+  - [Simulating geolocation][4]
+  - [Setting orientation][5]
 
 ## Limitations {: #limitations }
 
@@ -53,17 +59,71 @@ in the width and height boxes. In this example, the width is set to `480` and th
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bzTz5dEpOUIjRCrpdw5C.png", alt="The handles for changing the viewport's dimensions when in Responsive Viewport Mode.", width="800", height="567" %}
 
-#### Show media queries {: #queries }
+Alternatively, use the width presets bar to set the width with a click to one of the following:
 
-To show media query breakpoints above your viewport, click **More options** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="More options.", width="20", height="20" %} > **Show media queries**.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/rvOX3mx1WcP2kSvoUFNY.png", alt="The width presets bar.", width="800", height="578" %}
+
+<table>
+<thead>
+  <tr>
+    <th>Mobile S</th>
+    <th>Mobile M</th>
+    <th>Mobile L</th>
+    <th>Tablet</th>
+    <th>Laptop</th>
+    <th>Laptop L</th>
+    <th>4K</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>320px</td>
+    <td>375px</td>
+    <td>425px</td>
+    <td>768px</td>
+    <td>1024px</td>
+    <td>1440px</td>
+    <td>2560px</td>
+  </tr>
+</tbody>
+</table>
+
+### Show media queries {: #queries }
+
+To show media query breakpoints above your viewport, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="More options.", width="20", height="20" %} **More options** > **Show media queries**.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Y8OPepQNYdD6of4QC8if.png", alt="Show media queries.", width="800", height="567" %}
 
-Click a breakpoint to change the viewport's width so that the breakpoint gets triggered.
+DevTools now displays two additional bars above the viewport:
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/LrAt7IjFKPoDpjF2Go3Q.png", alt="Click a breakpoint to change the viewport's width.", width="800", height="494" %}
+- The <span style="background-color:lightskyblue">blue</span> bar with `max-width` breakpoints.
+- The <span style="background-color:orange">orange</span> bar with `min-width` breakpoints.
 
-#### Set the device type {: #type }
+Click between breakpoints to change the viewport's width so that the breakpoint gets triggered.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/TL943bgHrNVpZwBQGCWo.png", alt="Click between breakpoints to change the viewport's width.", width="800", height="447" %}
+
+To find the corresponding `@media` declaration, right-click between breakpoints and select **Reveal in source code**. DevTools opens the **Sources** panel at the corresponding line in the **Editor**.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/rhOtkyEwDf0bJE3TAEjF.png", alt="Reveal in source code drop-down menu.", width="800", height="447" %}
+
+### Set device pixel ratio {: #dpr }
+
+[Device pixel ratio (DPR)](https://developer.mozilla.org/docs/Web/API/Window/devicePixelRatio) is the ratio between physical pixels on the hardware screen and logical (CSS) pixels. In other words, DPR tells Chrome how many screen pixels to use to draw a CSS pixel. Chrome uses the DPR value when drawing on HiDPI (High Dots Per Inch) displays.
+
+To set a DPR value:
+
+1. Click **More options** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="More options.", width="20", height="20" %} > **Add device pixel ratio**.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lhWacswryP5MHsaesMQe.png", alt="Add device pixel ratio.", width="800", height="489" %}
+
+1. In the action bar at the top of the viewport, select a DPR value from the new **DPR** drop-down menu.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/EtjNHXY7QFAQythiNtCw.png", alt="Setting the DPR value.", width="800", height="489" %}
+
+
+
+### Set the device type {: #type }
 
 Use the **Device Type** list to simulate a mobile device or desktop device.
 
@@ -86,7 +146,7 @@ To simulate the dimensions of a specific mobile device, select the device from t
 
 For more information, see [Add a custom mobile device](#custom).
 
-#### Rotate the viewport to landscape orientation {: #landscape }
+### Rotate the viewport to landscape orientation {: #landscape }
 
 Click **Rotate** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/CjWGNTZnTdtOPPEnZjEk.svg", alt="Rotate.", width="24", height="24" %} to rotate the viewport to landscape orientation.
 
@@ -98,7 +158,7 @@ Note that the **Rotate** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/CjWGNTZn
 
 See also [Set orientation][8].
 
-#### Show device frame {: #frame }
+### Show device frame {: #frame }
 
 When simulating the dimensions of a specific mobile device like a Nest Hub, select **More options** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="More options.", width="20", height="20" %} > **Show device frame** to show the physical device frame around the viewport.
 
@@ -115,7 +175,7 @@ In this example, DevTools shows the frame for the Nest Hub.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/DsjFEajcQnpTGxuStqax.png", alt="The device frame for the Nest Hub.", width="800", height="516" %}
 
-#### Add a custom mobile device {: #custom }
+### Add a custom mobile device {: #custom }
 
 To add a custom device:
 
@@ -143,11 +203,21 @@ DevTools shows rulers above and to the left of the viewport.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/R7cckrDXSPs0NJBxQ2GB.png", alt="Rulers above and to the left of the viewport.", width="800", height="546" %}
 
+Click the rulers at specific marks to set the viewport's width and height.
+
 ### Zoom the viewport {: #zoom }
 
 Use the **Zoom** list to zoom in or out.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JFYPAyC2AO5mExJ8p1Je.png", alt="Zoom.", width="800", height="546" %}
+
+### Capture a screenshot {: #screenshot }
+
+To capture a screenshot of what you currently see in the viewport, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="More options.", width="20", height="20" %} **More options** > **Capture screenshot**.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/x2EqWnDtfdjjuGnyDmdq.png", alt="The Capture screenshot option in the More options menu.", width="800", height="626" %}
+
+To capture a screenshot of the whole page including the content that isn't currently visible in the viewport, select **Capture a full size screenshot** from the same menu.
 
 ## Throttle the network and CPU {: #throttle }
 
@@ -188,7 +258,13 @@ You can also set network throttling from the **Performance** panel. Click **Capt
 
 {% Img src="image/admin/DVa1oLS5wWMY07WXe0K1.png", alt="Setting network throttling from the Performance panel.", width="800", height="656" %}
 
-## Override geolocation {: #geolocation }
+## Emulate sensors {: #emulate-sensors }
+
+Use the **Sensors** tab to override geolocation, simulate device orientation, force touch, and emulate idle state.
+
+The sections below provide a quick look on how to override geolocation and set device orientation. For a complete list of featrues, see [Emulate device sensors](/docs/devtools/sensors/).
+
+### Override geolocation {: #geolocation }
 
 To open the geolocation overriding UI, click **Customize and control DevTools**
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Customize and control DevTools.", width="20", height="20" %} and then select **More tools** > **Sensors**.
@@ -206,7 +282,7 @@ geolocation is in an error state.
 
 {% Img src="image/admin/VaU4wIpuUsjgsDHjOw6x.png", alt="Geolocation", width="800", height="602" %}
 
-## Set orientation {: #orientation }
+### Set orientation {: #orientation }
 
 To open the orientation UI, click **Customize and control DevTools**
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Customize and control DevTools.", width="20", height="20" %} and then select **More tools** > **Sensors**.

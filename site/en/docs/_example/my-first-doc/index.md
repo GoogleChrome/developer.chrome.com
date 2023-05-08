@@ -5,6 +5,12 @@ layout: 'layouts/doc-post.njk'
 # Required
 title: My first doc
 
+# Optional, but recommended
+# This will be used for the <title> tag of your page. Use if the title does not
+# work standalone (e.g. title: "Overview" => seoTitle: "Custom Tabs Overview")
+# Also see the official guidance: https://developers.google.com/search/docs/appearance/title-link
+seoTitle: My first doc's title in search results
+
 # Required
 # This appears in the ToC of the project landing page at
 # /docs/[project-name]/. It also appears in the <meta description> used in 
@@ -23,6 +29,14 @@ date: 2020-10-15
 # Optional
 # Include an updated date when you update your post
 updated: 2020-10-16
+
+# Optional
+# Indicate this content is outdated and no longer accurate
+is_outdated: true
+
+# Optional
+# Include a new material URL when this content is outdated and no longer accurate
+new_available_content_url: /docs/handbook/how-to/add-a-blog-post/
 
 # Optional
 # How to add a new author

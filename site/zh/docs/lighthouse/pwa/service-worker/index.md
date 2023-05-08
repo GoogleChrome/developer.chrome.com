@@ -26,11 +26,11 @@ updated: 2020-06-10
 
 Lighthouse 检查 [Chrome 远程调试协议](https://github.com/ChromeDevTools/devtools-protocol)是否返回一个服务工作进程版本。如果不返回，则审计失败。
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## 如何注册服务工作进程
 
-{% include 'content/reliable/workbox.njk' %}
+{% Partial 'reliable/workbox.njk' %}
 
 注册服务工作进程只需几行代码，但使用服务工作进程的唯一原因是可以实现上述 PWA 特性之一。实际上，实现这些特性需要更多工作：
 

@@ -15,13 +15,14 @@ description: >
 # https://developer.chrome.com/docs/handbook/how-to/add-an-author/
 authors:
   - johannes
+  - tunetheweb
 
 # Required
 date: 2021-03-09
 
 # Optional
 # Include an updated date when you update your post
-updated: 2022-07-19
+updated: 2022-11-08
 
 # Optional
 # How to add a new tag
@@ -31,12 +32,9 @@ updated: 2022-07-19
 
 ---
 
-Starting with the [February 2021
-dataset](/docs/crux/release-notes/#202101),
-we’re adding an experimental metric to the [CrUX report in
-BigQuery](/docs/crux/bigquery/)
-which distinguishes the popularity of origins by orders of magnitude: The top 1k
-origins, top 10k, top 100k, top 1M, ... Let’s see how this looks in practice:
+Starting with the [February 2021 dataset](/docs/crux/release-notes/#202101), we’re adding an experimental metric to the [CrUX report in BigQuery](/docs/crux/bigquery/) which distinguishes the popularity of origins by orders of magnitude: The top 1k origins, top 10k, top 100k, top 1M, ...
+
+Let’s see how this looks in practice:
 
 ```sql
 SELECT
@@ -59,31 +57,33 @@ ORDER BY
       <th>num_origins</th>
     </tr>
   </thead>
-  <tr>
-    <td>1</td>
-    <td>1000</td>
-    <td>1000</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>10000</td>
-    <td>9000</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>100000</td>
-    <td>90000</td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>1000000</td>
-    <td>900000</td>
-  </tr>
-  <tr>
-    <td>15</td>
-    <td>10000000</td>
-    <td>7264371</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td style="text-align: right;">1</td>
+      <td style="text-align: right;">1,000</td>
+      <td style="text-align: right;">1,000</td>
+    </tr>
+    <tr>
+      <td style="text-align: right;">2</td>
+      <td style="text-align: right;">10,000</td>
+      <td style="text-align: right;">9,000</td>
+    </tr>
+    <tr>
+      <td style="text-align: right;">3</td>
+      <td style="text-align: right;">100,000</td>
+      <td style="text-align: right;">90,000</td>
+    </tr>
+    <tr>
+      <td style="text-align: right;">4</td>
+      <td style="text-align: right;">1,000,000</td>
+      <td style="text-align: right;">900,000</td>
+    </tr>
+    <tr>
+      <td style="text-align: right;">15</td>
+      <td style="text-align: right;">10,000,000</td>
+      <td style="text-align: right;">7,264,371</td>
+    </tr>
+  </tbody>
 </table>
 
 For the February 2021 global data set, we get 5 buckets. As expected, in row 1,
@@ -134,32 +134,108 @@ on:
       <th>Percentage of FCP < 1s, averaged over origins</th>
     </tr>
   </thead>
-  <tr>
-    <td>1000 </td>
-    <td>53.6%</td>
-  </tr>
-  <tr>
-    <td>10,000</td>
-    <td>49.6%</td>
-  </tr>
-  <tr>
-    <td>100,000</td>
-    <td>45.9%</td>
-  </tr>
-  <tr>
-    <td>1,000,000 </td>
-    <td>43.2% </td>
-  </tr>
-  <tr>
-    <td>10,000,000</td>
-    <td>39.9%</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td style="text-align: right;">1.000 </td>
+      <td style="text-align: right;">53.6%</td>
+    </tr>
+    <tr>
+      <td style="text-align: right;">10,000</td>
+      <td style="text-align: right;">49.6%</td>
+    </tr>
+    <tr>
+      <td style="text-align: right;">100,000</td>
+      <td style="text-align: right;">45.9%</td>
+    </tr>
+    <tr>
+      <td style="text-align: right;">1,000,000 </td>
+      <td style="text-align: right;">43.2% </td>
+    </tr>
+    <tr>
+      <td style="text-align: right;">10,000,000</td>
+      <td style="text-align: right;">39.9%</td>
+    </tr>
+  </tbody>
 </table>
 
 This indicates that a faster user experience on the web is correlated with being more popular.
 
-Learn more about [using CrUX on
-BigQuery](https://web.dev/chrome-ux-report-bigquery/) and [browse the CrUX
-Cookbook](https://github.com/GoogleChrome/CrUX/tree/main/sql) for more example
-queries. Share your queries if you like, and let us know what you find.
+In the [October 2022 dataset](/docs/crux/release-notes/#202210) this was further split out by half-rank steps. Rerunning the first query for this dataset shows the half-steps and the number of origins in each rank magnitude::
+
+```sql
+SELECT
+  experimental.popularity.rank AS rank_magnitude,
+  COUNT(DISTINCT origin) AS num_origins
+FROM
+  `chrome-ux-report.all.202210`
+GROUP BY
+  rank_magnitude
+ORDER BY
+  rank_magnitude
+```
+
+<table>
+  <thead>
+    <tr>
+      <th>Row</th>
+      <th>rank_magnitude</th>
+      <th>num_origins</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: right;">1</td>
+      <td style="text-align: right;">1,000</td>
+      <td style="text-align: right;">1,000</td>
+    </tr>
+    <tr>
+      <td style="text-align: right;">2</td>
+      <td style="text-align: right;">5,000</td>
+      <td style="text-align: right;">4,000</td>
+    </tr>
+    <tr>
+      <td style="text-align: right;">3</td>
+      <td style="text-align: right;">10,000</td>
+      <td style="text-align: right;">5,000</td>
+    </tr>
+    <tr>
+      <td style="text-align: right;">4</td>
+      <td style="text-align: right;">50,000</td>
+      <td style="text-align: right;">40,000</td>
+    </tr>
+    <tr>
+      <td style="text-align: right;">5</td>
+      <td style="text-align: right;">100,000</td>
+      <td style="text-align: right;">50,000</td>
+    </tr>
+    <tr>
+      <td style="text-align: right;">6</td>
+      <td style="text-align: right;">500,000</td>
+      <td style="text-align: right;">400,000</td>
+    </tr>
+    <tr>
+      <td style="text-align: right;">7</td>
+      <td style="text-align: right;">1,000,000</td>
+      <td style="text-align: right;">500,000</td>
+    </tr>
+    <tr>
+      <td style="text-align: right;">8</td>
+      <td style="text-align: right;">5,000,000</td>
+      <td style="text-align: right;">4,000,000</td>
+    </tr>
+    <tr>
+      <td style="text-align: right;">9</td>
+      <td style="text-align: right;">10,000,000</td>
+      <td style="text-align: right;">5,000,000</td>
+    </tr>
+    <tr>
+      <td style="text-align: right;">10</td>
+      <td style="text-align: right;">50,000,000</td>
+      <td style="text-align: right;">7,637,195</td>
+    </tr>
+  </tbody>
+</table>
+
+
+Learn more about [using CrUX on BigQuery](/docs/crux/bigquery/) and [browse the CrUX Cookbook](https://github.com/GoogleChrome/CrUX/tree/main/sql) for more example queries. Share your queries if you like, and let us know what you find.
 

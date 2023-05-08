@@ -2,6 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Trader/Non-Trader developer identification"
 date: 2022-05-26
+updated: 2023-01-19
 description:  "Developer’s requirement to disclose their trader/non-trader status."
 subhead:  "Developer’s requirement to disclose their trader/non-trader status."
 ---
@@ -24,14 +25,16 @@ dealing with a professional trader and would be able to benefit from consumer ri
 
 The European Commission defines traders and non-traders as follows:
 
-Trader : Any natural person or any legal person, who is acting for purposes relating to his trade,
+Trader
+: Any natural person or any legal person, who is acting for purposes relating to his trade,
 business, craft or profession in relation to contracts on this marketplace.
 
-Non-trader : Any natural person or any legal person, who is acting for purposes which are outside of
+Non-trader
+: Any natural person or any legal person, who is acting for purposes which are outside of
 his trade, business, craft or profession in relation to contracts on this marketplace.
 
 If you are a non-trader, the consumer will be informed that consumer rights stemming from consumer
-protection laws may not apply to any contracts between you and the consumer.  Please note that it is
+protection laws do not apply to any contracts between you and the consumer.  Please note that it is
 the developer’s responsibility to accurately self-declare their trader/non-trader status.
 
 ## For more information on the EU New Deal 

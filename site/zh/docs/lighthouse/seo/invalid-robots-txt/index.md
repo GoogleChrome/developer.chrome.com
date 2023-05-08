@@ -33,7 +33,7 @@ updated: 2020-05-29
 
 Lighthouse 不检查您的 `robots.txt` 文件是否位于正确的位置。该文件必须位于您的域或子域的根目录中，才能正常运行。
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% Partial 'lighthouse-seo/scoring.njk' %}
 
 ## 如何解决 `robots.txt` 的问题
 

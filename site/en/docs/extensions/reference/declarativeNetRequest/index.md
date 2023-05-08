@@ -7,7 +7,7 @@ has_warning: One or more of these permissions <a href="/docs/extensions/mv3/perm
 
 ---
 
-## Manifest
+## Manifest {: #manifest }
 
 Extensions must declare either the `declarativeNetRequest` or the
 `declarativeNetRequestWithHostAccess` (available since **Chrome 96**) permission in the extension
@@ -42,36 +42,61 @@ a list containing dictionaries of type [Ruleset][4], as shown below.
   "permissions": [
     "declarativeNetRequest",
     "declarativeNetRequestFeedback",
-    "*://example.com/*"
+  ],
+  "host_permissions": [
+    "http://www.blogger.com/*",
+    "http://*.google.com/*"
   ],
   ...
 }
 ```
 
-## Rule Resources
+### Rule Resources {: #manifest-rule-resources }
 
-An extension can specify up to [MAX_NUMBER_OF_STATIC_RULESETS][5] [rulesets][6] as part of the
-`"rule_resources"` manifest key. Only [MAX_NUMBER_OF_ENABLED_STATIC_RULESETS][18] of these rulesets
-can be enabled at a time, assuming static rule limits are not exceeded.
+Rules are specified in JSON files referenced under the `"rule_resources"` manifest key.
 
-An extension is allowed to enable at least [GUARANTEED_MINIMUM_STATIC_RULES][7] static rules.
-Additional static rulesets may or may not be enabled depending on the available
-[global static rule limit][8].
+Each file should contain an array of [rules](#rules) as in the [example](#example).
 
 **Note:** Errors and warnings about invalid static rules are only displayed for unpacked extensions.
 Invalid static rules in packed extensions are ignored. It's therefore important to verify that your
 static rulesets are valid by testing with an unpacked version of your extension.
 
-## Global Static Rule Limit
+## Limits {: #limits }
 
-In addition to the [GUARANTEED_MINIMUM_STATIC_RULES][9] static rules guaranteed for each extension,
+There is a performance overhead to loading and evaluating rules in the browser, and so a number of
+limits apply when using the API.
+
+### Rulesets {: #limits-rulesets }
+
+An extension can specify up to **50** static [rulesets][6] as part of the `"rule_resources"`
+manifest key. Only **10** of these rulesets can be enabled at a time, assuming static rule limits
+are not exceeded.
+
+### Rules {: #limits-rules }
+
+An extension is allowed to enable at least **30,000** static rules. Additional static rules may or
+may not be enabled depending on the available [global static rule limit][8].
+
+### Global Static Rule Limit {: #limits-global-static-rule-limit }
+
+In addition to the [`GUARANTEED_MINIMUM_STATIC_RULES`][9] static rules guaranteed for each extension,
 extensions can enable additional static rulesets depending on the available global static rule
 limit. This global limit is shared between all extensions and can be used by extensions on a
 first-come, first-served basis. Extensions shouldn't depend on the global limit having a specific
-value and should instead use the [getAvailableStaticRuleCount][10] API method to find the additional
+value and should instead use the [`getAvailableStaticRuleCount()`][10] API method to find the additional
 rule limit available to them.
 
-## Rules
+### Constants {: #limits-constants }
+
+These values are also defined as constants that can be accessed at runtime.
+
+The limits on results are defined by the [`MAX_NUMBER_OF_STATIC_RULESETS`][5] and
+[`MAX_NUMBER_OF_ENABLED_STATIC_RULESETS`][18] constants.
+
+This limits on results are defined by the [`GUARANTEED_MINIMUM_STATIC_RULES`][7] constant.
+
+
+## Rules {: #rules }
 
 A single declarative [Rule][11] consists of four fields: `id`, `priority`, `condition`, and
 `action`. There are the following kinds of rules:
@@ -90,7 +115,7 @@ An example rule:
   "action" : { "type" : "block" },
   "condition" : {
     "urlFilter" : "abc",
-    "domains" : ["foo.com"],
+    "initiatorDomains" : ["foo.com"],
     "resourceTypes" : ["script"]
   }
 }
@@ -138,30 +163,34 @@ examples of URL filters:
     </tbody>
 </table>
 
-## Dynamic and session-scoped rules
+## Dynamic and session-scoped rules {: #dynamic-and-session-rules }
 
-An extension can add or remove rules dynamically using the [updateDynamicRules][12] and the [updateSessionRules][17] API methods.
-- Rules added using the [updateDynamicRules][12] API method are persisted across both sessions and extension updates.
-- Rules added using the [updateSessionRules][17] API method are not persisted across Chrome sessions. These rules are backed in memory by Chrome.
-- The number of dynamic and session-scoped rules that an an extension can add is bounded by the [MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES][13] constant.
+An extension can add or remove rules dynamically using the [`updateDynamicRules()`][12] and the [`updateSessionRules()`][17] API methods.
+- Rules added using the [`updateDynamicRules()`][12] API method are persisted across both sessions and extension updates.
+- Rules added using the [`updateSessionRules()`][17] API method are not persisted across Chrome sessions. These rules are backed in memory by Chrome.
+- The number of dynamic and session-scoped rules that an an extension can add is bounded by the [`MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES`][13] constant.
 
-## Updating enabled rulesets
+## Updating enabled rulesets {: #update-enabled-rulesets }
 
-An extension can update the set of enabled static rulesets using the [updateEnabledRulesets][14] API
+An extension can update the set of enabled static rulesets using the [`updateEnabledRulesets()`][14]
 method.
 
 - The number of static rulesets which are enabled at one time must not exceed
-  [MAX_NUMBER_OF_ENABLED_STATIC_RULESETS][18].
+  [`MAX_NUMBER_OF_ENABLED_STATIC_RULESETS`][18].
 - The number of rules across enabled static rulesets across all extensions must not exceed the
-  [global limit][15]. Calling [getAvailableStaticRuleCount][10] is recommended to check the number
+  [global limit][15]. Calling [`getAvailableStaticRuleCount()`][10] is recommended to check the number
   of rules an extension can still enable before the global limit is reached.
 - The set of enabled static rulesets is persisted across sessions but not across extension updates.
-  The `rule_resources` manifest key will determine the set of enabled static rulesets on initial
+  The `"rule_resources"` manifest key will determine the set of enabled static rulesets on initial
   extension install and on each subsequent extension update.
 
-## Implementation details
+## Implementation details {: #implementation }
 
-### Matching algorithm
+### web_accessible_resources {: #implementation-web-accessible-resources }
+
+When an extension uses declarativeNetRequest APIs to redirect a public resource request to a resource that is not web accessible, it is blocked and will result in an error. The above holds true even if the resource that is not web accessible is owned by the redirecting extension. To declare resources for use with declarativeNetRequest APIs, populate the [`"web_accessible_resources"`](/docs/extensions/mv3/manifest/web_accessible_resources/) array.
+
+### Matching algorithm {: #implementation-matching-algorithm }
 
 Before the request is sent, each extension is queried for an action to take. The following actions
 are considered at this stage:
@@ -196,29 +225,13 @@ is determined based on the priority of each rule and the operations specified.
   `append` rules from the same extension.
 - If a rule has removed a header, then lower priority rules cannot further modify the header.
 
-### Comparison with the [webRequest][16] API
+### Interaction with cached pages {: #implementation-cached-pages }
 
-- The declarativeNetRequest API allows for evaluating network requests in the browser itself. This
-  makes it more performant than the webRequest API, where each network request is evaluated in
-  JavaScript in the extension process.
-- Because the requests are not intercepted by the extension process, declarativeNetRequest removes
-  the need for extensions to have a background page; resulting in less memory consumption.
-- Unlike the webRequest API, blocking or upgrading requests using the declarativeNetRequest API
-  requires no host permissions when used with the `declarativeNetRequest` permission.
-- The declarativeNetRequest API provides better privacy to users because extensions can't actually
-  read the network requests made on the user's behalf.
-- Unlike the webRequest API, any images or iframes blocked using the declarativeNetRequest API are
-  automatically collapsed in the DOM.
-- While deciding whether a request is to be blocked or redirected, the declarativeNetRequest API is
-  given priority over the webRequest API because it allows for synchronous interception. Similarly,
-  any headers removed through declarativeNetRequest API are not made visible to web request
-  extensions.
-- The webRequest API is more flexible as compared to the declarativeNetRequest API because it allows
-  extensions to evaluate a request programmatically.
+When rules are applied to browsers with pages in the service worker's cached storage, the browser may ignore the set rule for those specific pages until the cached storage is cleared. This is because cached storage is intended to be persistent, and many features like offline use do not expect the cache to be cleared without also clearing a service worker's registration as well. For cases when extensions utilizing declarativeNetRequest must be enabled and disabled repeatedly, the [`chrome.browsingData`](/docs/extensions/reference/browsingData/) API may be used to clear the cache to guarantee proper functionality.
 
-## Example
+## Example {: #example }
 
-**manifest.json**
+{% Label %}manifest.json:{% endLabel %}
 
 ```json
 {
@@ -232,18 +245,20 @@ is determined based on the priority of each rule and the operations specified.
     }]
   },
   "permissions": [
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
     "*://*.google.com/*",
     "*://*.abcd.com/*",
     "*://*.example.com/*",
     "https://*.xyz.com/*",
     "*://*.headers.com/*",
-    "declarativeNetRequest"
   ],
-  "manifest_version": 2
+  "manifest_version": 3
 }
 ```
 
-**rules.json**
+{% Label %}rules.json:{% endLabel %}
 
 ```json
 [

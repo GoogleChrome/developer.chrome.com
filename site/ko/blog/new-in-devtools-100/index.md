@@ -16,7 +16,7 @@ tags:
 
 *이 게시글의 번역에는 [최원영](https://www.linkedin.com/in/toruchoi)님이 참여하였으며, [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님과 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다.*
 
-{% include 'partials/devtools/ko/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='DAD72grzDDc' %}
 
@@ -158,11 +158,11 @@ Chromium issue: [1261130](https://crbug.com/1261130)
 <!-- - You can now save [snippet](/docs/devtools/javascript/snippets/) as a JavaScript file directly. Previously, you needed to append `.js` file extension manually. ([1137218](https://crbug.com/1137218)) -->
 - 이제 [스니펫](/docs/devtools/javascript/snippets/)을 직접적으로 자바스크립트 파일에 저장할 수 있습니다. 이전에는 여러분이 직접 `.js` 파일 확장자를 추가해 주어야 했습니다.([1137218](https://crbug.com/1137218))
 
-<!-- - The **Sources** panel now correctly displays scope variable names when debugging with sourcemap. Previously, the **Sources** panel displays minified scope variable names despite sourcemap being provided. ([1294682](https://crbug.com/1294682))  -->
+<!-- - The **Sources** panel now correctly displays scope variable names when debugging with source map. Previously, the **Sources** panel displays minified scope variable names despite sourcemap being provided. ([1294682](https://crbug.com/1294682))  -->
 - 소스맵을 이용해 디버깅 시 스코프 변수 이름이 **소스** 패널에 정확하게 표시되도록 개선되었습니다. 이전 버전에서는 소스맵이 제공되었음에도, **소스** 패널이 오직 간소화된 스코프 변수 이름을 표시하고 있었습니다. ([1294682](https://crbug.com/1294682))
 
 <!-- - The **Sources** panel now restores scroll position correctly on page load. Previously, the position was not restored correctly causing inconvenience in debugging. ([1294422](https://crbug.com/1294422))  -->
 - 페이지 로딩 시 **소스** 패널이 현재 스크롤 위치를 정확하게 되돌리도록 개선되었습니다. 이전 버전에서는 스크롤 위치가 정확하게 복원되지 않아 디버깅 시 불편함을 야기하는 문제가 있었습니다. ([1294422](https://crbug.com/1294422))
 
-{% include 'partials/devtools/ko/reach-out.md' %}
-{% include 'partials/devtools/ko/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

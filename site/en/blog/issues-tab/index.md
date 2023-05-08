@@ -14,7 +14,7 @@ tags:
   - devtools
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 In the last quarter of 2019, the Chrome DevTools team started improving the developer experience in DevTools around cookies. This was particularly important because Google Chrome and other browsers had begun to change their default cookie behavior. 
 
@@ -123,5 +123,5 @@ To keep issues actionable, we want to make it easier to discover which part of a
 
 If you have any suggestions to improve the Issues tab, let us know by filing a [bug](https://crbug.com/new)!
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/engineering-blog.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/engineering-blog.md' %}

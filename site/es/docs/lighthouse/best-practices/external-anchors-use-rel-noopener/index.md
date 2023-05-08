@@ -30,7 +30,7 @@ Lighthouse utiliza el siguiente proceso para identificar enlaces como inseguros:
 
 Debido a que Lighthouse filtra los enlaces del mismo host, existe una situación limítrofe que debe tener en cuenta si está trabajando en un sitio grande: si una página contiene un enlace `target="_blank"` a otra página de su sitio sin usar `rel="noopener"`, las implicaciones de rendimiento de esta auditoría aún se aplican. Sin embargo, no verá estos enlaces en los resultados de Lighthouse.
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## Cómo mejorar el rendimiento de su sitio y prevenir vulnerabilidades de seguridad
 

@@ -16,7 +16,7 @@ Una pantalla de presentación personalizada hace que su [aplicación web progres
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/CKrrTDSCZ0XLZ7ABKlZt.png", alt="Auditoría Lighthouse que muestra que el sitio no está configurado para una pantalla de presentación personalizada", width="800", height="98" %}</figure>
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## Cómo crear una pantalla de bienvenida personalizada
 

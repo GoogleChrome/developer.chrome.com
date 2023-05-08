@@ -30,7 +30,7 @@ Lighthouseは、次のプロセスを使用して、リンクを安全でない�
 
 Lighthouseは同じホストのリンクを除外するため、大型のサイトで作業している場合には注意すべき事項があります。1つのページに、同一サイト上の別のページへの`target="_blank"`リンクが`rel="noopener"`を使用せずに含まれている場合でも、この監査のパフォーマンスに関する影響が適用されますが、Lighthouseの結果には、これらのリンクが表示されません。
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## サイトのパフォーマンスを改善し、セキュリティの脆弱性を防ぐには
 

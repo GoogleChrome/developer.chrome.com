@@ -6,7 +6,7 @@ updated: 2014-05-21
 description: An overview of the valid values for the permissions property in manifest.json.
 ---
 
-{% include 'partials/extensions/mv2-legacy-page.md' %}
+{% Partial 'extensions/mv2-legacy-page.md' %}
 
 To use most chrome.\* APIs, your extension or app must declare its intent in the "permissions" field
 of the [manifest][1]. Each permission can be either one of a list of known strings (such as
@@ -222,7 +222,7 @@ The following table lists the currently available permissions:
     </tr>
     <tr id="nativeMessaging">
       <td><code>"nativeMessaging"</code></td>
-      <td>Gives your extension access to the <a href="/docs/apps/nativeMessaging/">native messaging API</a>.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/mv3/nativeMessaging/">native messaging API</a>.</td>
     </tr>
     <tr id="notifications">
       <td><code>"notifications"</code></td>

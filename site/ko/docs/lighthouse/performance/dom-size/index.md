@@ -35,7 +35,7 @@ Lighthouse는 다음과 같은 DOM 트리가 있는 페이지에 플래그를 �
 - body 요소에 ~800개 이상의 노드가 있는 경우 경고합니다.
 - body 요소에 ~1,400개 이상의 노드가 있는 경우 오류가 발생합니다.
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## DOM 크기를 최적화하는 방법
 

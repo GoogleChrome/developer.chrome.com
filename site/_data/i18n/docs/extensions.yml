@@ -1,3 +1,5 @@
+get-started:
+  en: 'Getting Started Guides'
 samples:
   en: 'Samples'
 samples_description:
@@ -23,13 +25,15 @@ indepth-security:
   en: 'In depth: security'
 indepth-other:
   en: 'In depth: more topics'
-modernize:
-  en: 'Modernize your extensions'
+migrating:
+  en: 'Migrate from Manifest V2 to Manifest V3'
 obsolete:
   en: 'Obsolete topics'
 mv3:
-  en: 'Introducing Manifest V3'
+  en: 'Manifest V3'
 mv2:
   en: 'Manifest V2'
 apps:
   en: 'Develop Chrome Apps'
+service_workers:
+  en: 'Service workers'

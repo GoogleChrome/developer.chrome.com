@@ -14,7 +14,7 @@ tags:
   - chrome-68
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 New to DevTools in Chrome 68:
 
@@ -164,8 +164,8 @@ The **Show timestamps** checkbox previously in **Console Settings**
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/jYHojXbVbXa7SfX2r5zA.png", alt="The Console Settings button", width="28", height="28" %} has moved to [Settings][15].
 
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}
 
 [1]: #eagerevaluation
 [2]: #hints

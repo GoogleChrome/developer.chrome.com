@@ -16,7 +16,7 @@ tags:
 
 *翻訳者の [technohippy](https://github.com/technohippy) さん、レビュアーの [yoichiro](https://github.com/yoichiro) さん、 [lacolaco](https://github.com/lacolaco) さん、 [yoshiko-pg](https://github.com/yoshiko-pg) さんに感謝いたします。*
 
-{% include 'partials/devtools/ja/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='bHw_56RiVsg' %}
 
@@ -223,20 +223,20 @@ CSS `@scope` は現在開発中です。この機能を確認するには、`chr
 Chromium issue: [1337777](https://crbug.com/1337777)
 
 
-<!-- ## Sourcemap improvements {: #sourcemaps } -->
-## Sourcemap の改善 {: #sourcemaps }
+<!-- ## Source map improvements {: #sourcemaps } -->
+## Source map の改善 {: #sourcemaps }
 
-<!-- Here are a few fixes on sourcemaps to improve the overall debugging experience: -->
+<!-- Here are a few fixes on source maps to improve the overall debugging experience: -->
 デバッグ体験全体を改善するためにソースマップにいくつかの修正が加えられました。
 
-<!-- - DevTools now properly resolves sourcemap identifiers with punctuation. Some modern minifiers (for example, [esbuild](https://esbuild.github.io/)) produce sourcemaps that merge identifiers with subsequent punctuation (comma, parentheses, semicolon).  -->
+<!-- - DevTools now properly resolves source map identifiers with punctuation. Some modern minifiers (for example, [esbuild](https://esbuild.github.io/)) produce sourcemaps that merge identifiers with subsequent punctuation (comma, parentheses, semicolon).  -->
 - 句読点を含むソースマップの識別子を DevTools で適切に解決できるようになりました。いくつかのモダンなミニファイア（例、[esbuild](https://esbuild.github.io/)）は識別子を連続した句読点（カンマ、括弧、セミコロン）で結合したソースマップを生成します。
 
-<!-- - DevTools now resolves sourcemap names for constructors with a `super` call. -->
+<!-- - DevTools now resolves source map names for constructors with a `super` call. -->
 - DevTools は `super` 呼び出しを含むコンストラクタのソースマップ名を解決できます。
 
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/6djFfkrtPzXuNYq5m8Vk.png", alt="Sourcemap の改善", width="800", height="441" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/6djFfkrtPzXuNYq5m8Vk.png", alt="Source map の改善", width="800", height="441" %}
 
 <!-- - Fixed source map URL indexing for duplicate canonical URLs. Previously, breakpoints were not activated in some files because of duplicate canonical URLs. -->
 - 重複したカノニカル URL のソースマップでの URL インデクシングの修正。これまでは重複したカノニカル URL が原因でブレークポイントがいくつかのファイルで有効にならないことがありました。
@@ -247,7 +247,7 @@ Chromium issue: [1335338](https://crbug.com/1335338), [1333411](https://crbug.co
 
 <!-- ## Miscellaneous highlights {: #misc } -->
 ## その他のハイライト {: #misc }
- 
+
 <!-- These are some noteworthy fixes in this release: -->
 今回のリリースの目立った改善点には次のようなものがあります。
 
@@ -257,10 +257,10 @@ Chromium issue: [1335338](https://crbug.com/1335338), [1333411](https://crbug.co
 - **Sources** パネルで CSS ファイルを閲覧するときにカラープレビューが正しく表示されるようになりました。
 これまでは、間違った位置に表示されていました。（[1340062](https://crbug.com/1340062)）
 <!-- - Consistently display the CSS flex and grid items in the **Layout** pane, as well as display them as badges in the **Elements** panel. Previously, the flex and grid items were randomly missing in both places. ([1340441](https://crbug.com/1340441), [1273992](https://crbug.com/1273992)) -->
-- 
+-
 **Elements** パネルでのバッジ表示と合わせて、**Layout** ペインで CSS の flex と grid アイテムの表示が一貫したものになりました。これまでは、flex と grid アイテムはいずれの場所でもときどき表示されないことがありました。（[1340441](https://crbug.com/1340441)、[1273992](https://crbug.com/1273992)）
 <!-- - A new **Creator Ad Script** link is available for [ad frames](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker) if DevTools found the script that caused the frame to be labeled as an ad. You can open a frame via **Application** > **Frames**. ([1217041](https://crbug.com/1217041)) -->
 - DevTools が広告としてラベル付けされるフレームの原因となるスクリプトを見つけると、[ad frames](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker) のために、**Creator Ad Script** リンクが新しく利用できるようになりました。**Application** > **Frames** からフレームを開くことができます。（[1217041](https://crbug.com/1217041)）
 
-{% include 'partials/devtools/ja/reach-out.md' %}
-{% include 'partials/devtools/ja/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

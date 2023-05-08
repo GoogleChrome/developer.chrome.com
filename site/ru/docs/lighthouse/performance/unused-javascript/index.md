@@ -16,7 +16,7 @@ date: 2020-07-07
 
 <figure>{% Img src = "image/tcFciHGuF3MxnTr1y5ue01OGLBn2/jYbX7CFrcOaaqMHaHa6f.jpg", alt = "Скриншот проверки.", width = "800", height = "332"%}<figcaption> Щелкните значение в столбце <b>URL</b>, чтобы открыть исходный код сценария в новой вкладке.</figcaption></figure>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Как удалить неиспользуемый JavaScript
 

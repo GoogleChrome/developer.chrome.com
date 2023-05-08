@@ -19,7 +19,7 @@ tags:
 
 *Переводы предоставлены [Alena Batitskaya](https://github.com/solarrust). Редактор — [Maxim Salnikov](https://twitter.com/webmaxru).*
 
-{% include 'partials/devtools/ru/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id="1VaPAnUGRz8" %}
 
@@ -235,5 +235,5 @@ https://chromium.googlesource.com/devtools/devtools-frontend/+/250c88b4d02da283c
 
 Задача в трекере Chromium: [998674](https://crbug.com/998674)
 
-{% include 'partials/devtools/ru/reach-out.md' %}
-{% include 'partials/devtools/ru/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

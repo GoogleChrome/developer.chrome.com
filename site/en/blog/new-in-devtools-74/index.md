@@ -16,7 +16,7 @@ tags:
   - chrome-74
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 Welcome back! Here's what's new.
 
@@ -163,8 +163,8 @@ Check out [Get Started With Viewing And Changing The DOM][11] for a hands-on tou
 features.
 
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}
 
 [1]: https://web.dev/tap-targets
 [2]: https://developers.google.com/web/tools/lighthouse

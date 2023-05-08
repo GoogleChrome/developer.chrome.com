@@ -30,7 +30,7 @@ updated: 2019-09-19
 
 {% Aside 'caution' %} アプリをインストール可能にするには、ウェブアプリマニフェストが*必要*ですが、それだけでは*不十分*です。インストール可能性の全要件を満たす方法については、[Discover what it takes to be installable (インストール可能にする方法について)](/docs/lighthouse/pwa/) と題した記事を参照してください。{% endAside %}
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## PWA をインストール可能にする方法
 

@@ -33,7 +33,7 @@ updated: 2020-05-29
 
 Lighthouse は、`robots.txt` ファイルが正しい場所にあることを確認しません。正しく機能するには、ファイルがドメインまたはサブドメインのルートにある必要があります。
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% Partial 'lighthouse-seo/scoring.njk' %}
 
 ## `robots.txt` の問題を修正する方法
 

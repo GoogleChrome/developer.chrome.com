@@ -16,7 +16,7 @@ tags:
 
 *Tradução realizada por [Lucas Santos](https://lsantos.dev). Revisão por [Alvaro Camillo Neto](https://www.linkedin.com/in/alvarocamillont/).*
 
-{% include 'partials/devtools/pt/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='LyMts4yfQu8' %}
 
@@ -184,7 +184,7 @@ Issues relacionadas: [1226363](https://crbug.com/1226363)
 
 
 <!-- ## Sourcemaps improvements {: #sourcemaps } -->
-## Melhorias nos sourcemaps  {: #sourcemaps }
+## Melhorias nos source maps  {: #sourcemaps }
 <!-- Previously, developers experience random failure during: -->
 Anteriormente, os desenvolvedores apresentavam falhas aleatórias durante:
 
@@ -195,7 +195,7 @@ Anteriormente, os desenvolvedores apresentavam falhas aleatórias durante:
 - Identificando o local de origem dos problemas de desempenho em um exemplo do [Codepen](https://codepen.io/)
 - Falta a guia **Component** quando [React DevTools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) está ativado
 
-<!-- Here are a few fixes on sourcemaps to improve the overall debugging experience: -->
+<!-- Here are a few fixes on source maps to improve the overall debugging experience: -->
 Aqui estão algumas correções nos sourcesmaps para melhorar a experiência geral de depuração:
 
 <!-- - Correct mapping between location and offset for inline scripts and source location
@@ -212,5 +212,5 @@ Aqui estão algumas correções nos sourcesmaps para melhorar a experiência ger
 
 Issues relacionadas: [1319828](https://crbug.com/1319828), [1318635](https://crbug.com/1318635), [1305475](https://crbug.com/1305475)
 
-{% include 'partials/devtools/pt/reach-out.md' %}
-{% include 'partials/devtools/pt/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

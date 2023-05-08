@@ -18,7 +18,7 @@ As mensagens registradas no console vêm dos desenvolvedores da web que criaram 
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/AjfKRZm8E4ZUi2QvQtL3.png", alt="Auditoria do Lighthouse mostrando erros do navegador no console", width="800", height="247" %}</figure>
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## Como corrigir erros do navegador
 

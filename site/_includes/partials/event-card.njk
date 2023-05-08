@@ -1,0 +1,257 @@
+{% from 'macros/icon.njk' import icon with context %}
+
+{% set buttonLabel =  'i18n.events.see_details' | i18n if event.isPastEvent else 'i18n.events.see_whos_joining' | i18n %}
+
+<enhanced-event-card>
+  <article id="{{ event.id }}"
+           class="event-card pad-400 lg:pad-500 no-js"
+           tabindex="0"
+           show-details="">
+    <div class="display-flex">
+      <figure class="event-card__desktop-image gap-right-500 flex-shrink-none">
+        {% Img src=event.image, alt=event.title, width=400, height=400 %}
+      </figure>
+
+      <div class="event-card__overview display-flex direction-column justify-content-between">
+        <div>
+          <div class="event-card__title">
+            <figure class="event-card__image gap-right-200 flex-shrink-none">
+              {% Img src=event.image, alt=event.title, width=400, height=400 %}
+            </figure>
+
+            <a href="{{ event.externalUrl }}"
+               class="decoration-none"
+               target="_blank">
+              {{ event.title }}
+            </a>
+          </div>
+
+          <p>
+            {{ event.summary }}
+          </p>
+
+          <div class="event-card__meta display-flex gap-bottom-400">
+            <p class="display-flex align-center gap-right-500">
+              <svg class="icon"
+                   aria-hidden="true"
+                   width="14"
+                   height="20"
+                   viewBox="0 0 14 20"
+                   xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="#pinIcon" />
+              </svg>
+
+              {{ event.location }}
+            </p>
+
+            <p class="display-flex align-center">
+              <svg class="icon"
+                   aria-hidden="true"
+                   width="18"
+                   height="20"
+                   viewBox="0 0 18 20"
+                   xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="#calendarIcon" />
+              </svg>
+
+              {{ helpers.formatDateShort(event.date, locale) }}
+            </p>
+          </div>
+        </div>
+
+        <button class="material-button button-filled button-round">
+          {{ buttonLabel }}
+        </button>
+      </div>
+    </div>
+    <div class="event-card__details gap-top-400 grid-cols-1 grid-gap-400 lg:grid-cols-2">
+      {% for session in event.sessions %}
+        {% if session.type === 'speaker' %}
+          {% set alt = session.speaker.title | i18n or session.title %}
+          {% set sessionImage = session.speaker.image %}
+          {% set sessionTitle = session.speaker.title | i18n %}
+
+          <article class="event-session-card bg-bg">
+            <a
+              href="{{ event.externalUrl }}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="event-card__title decoration-none gap-bottom-300 display-flex align-center justify-content-between"
+            >
+              <span class="display-flex align-center">
+                {% Img
+                  src=sessionImage,
+                  alt=alt,
+                  width=40,
+                  height=40,
+                  class='flex-shrink-none height-600 width-600 rounded-full gap-right-300' %}
+
+                {{ sessionTitle }}
+              </span>
+
+              <svg class="icon"
+                   aria-hidden="true"
+                   width="24"
+                   height="24"
+                   viewBox="0 0 24 24"
+                   xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="#launchIcon" />
+              </svg>
+            </a>
+
+            <p class="event-card__sub-title gap-bottom-200">
+              {{ 'i18n.events.talk_title' | i18n }}
+            </p>
+
+            <p class="gap-bottom-300">{{ session.title }}</p>
+
+            {% if session.description|length %}
+              <p class="event-card__sub-title gap-bottom-200">
+                {{ 'i18n.events.details' | i18n }}
+              </p>
+
+              <div class="gap-bottom-300">
+                <p>
+                  <truncate-text maxLength="100" fullText="{{ session.description }}">{{ session.description }}</truncate-text>
+                </p>
+              </div>
+            {% endif %}
+
+            {% if session.slidesUrl|length or session.videoUrl|length %}
+              <div class="event-card__sub-title gap-bottom-100">Link to Talk</div>
+
+              <div class="event-card__links display-flex gap-bottom-300">
+                {% if session.slidesUrl|length %}
+                  <a
+                    href="{{ session.slidesUrl }}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="display-flex align-center gap-right-300 decoration-none"
+                  >
+                    <svg class="icon"
+                         aria-hidden="true"
+                         width="24"
+                         height="24"
+                         viewBox="0 0 24 24"
+                         xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="#slidesIcon" />
+                    </svg>
+
+                    {{ 'i18n.events.slides' | i18n }}
+                  </a>
+                {% endif %}
+
+                {% if session.videoUrl|length %}
+                  <a
+                    href="{{ session.videoUrl }}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="display-flex align-center decoration-none"
+                  >
+                    <svg class="icon"
+                         aria-hidden="true"
+                         width="24"
+                         height="24"
+                         viewBox="0 0 24 24"
+                         xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="#videoIcon" />
+                    </svg>
+
+                    {{ 'i18n.events.video' | i18n }}
+                  </a>
+                {% endif %}
+              </div>
+            {% endif %}
+
+            {% for topic in session.topics %}
+              {% include 'partials/event-card-tag.njk' %}
+            {% endfor %}
+          </article>
+        {% endif %}
+      {% endfor %}
+
+      {% for session in event.sessions %}
+        {% if session.type === 'participant' %}
+          {% set sessionTitle = session.participants[0].title | i18n if session.participants.length === 1 else 'i18n.events.multiple_participants' | i18n  %}
+          {% set sessionImage = session.participants[0].image if session.participants.length === 1 else site.chromeImg %}
+
+          <article class="event-session-card bg-bg">
+            <a
+              href="{{ event.externalUrl }}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="event-card__title decoration-none gap-bottom-300 display-flex align-center justify-content-between"
+            >
+              <span class="display-flex align-center">
+                {% Img
+                  src=sessionImage,
+                  alt=sessionTitle,
+                  width=40,
+                  height=40,
+                  class='flex-shrink-none height-600 width-600 rounded-full gap-right-300' %}
+
+                {{ sessionTitle }}
+              </span>
+
+              <svg class="icon"
+                   aria-hidden="true"
+                   width="24"
+                   height="24"
+                   viewBox="0 0 24 24"
+                   xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="#launchIcon" />
+              </svg>
+            </a>
+
+            <p class="event-card__sub-title gap-bottom-200">
+              {{ 'i18n.events.participant_details' | i18n }}
+            </p>
+
+            {% if session.description|length %}
+              <div class="gap-bottom-300">
+                <p>
+                  <truncate-text maxLength="100" fullText="{{ session.description }}">{{ session.description }}</truncate-text>
+                </p>
+              </div>
+            {% endif %}
+
+            {% if session.participants|length %}
+              <p class="event-card__sub-title gap-bottom-200">
+                {{ 'i18n.events.participants' | i18n }}
+              </p>
+              <p class="gap-bottom-300">
+                {% for participant in session.participants %}
+                  {% set participantTitle =  participant.title |i18n %}
+
+                  {% set participantHtml %}
+                    {% if participant.twitter %}
+                      <a
+                        href="https://twitter.com/{{ participant.twitter }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >{{ participantTitle }}</a>
+                    {% elseif participant.linkedin %}
+                      <a
+                        href="{{ participant.linkedin }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >{{ participantTitle }}</a>
+                    {% else %}
+                      {{ participantTitle }}
+                    {% endif %}
+                  {% endset %}
+
+                  {{ participantHtml|safe|trim }}{% if loop.last === false %},{% endif %}
+                {% endfor %}
+              </p>
+            {% endif %}
+
+            {% for topic in session.topics %}
+              {% include 'partials/event-card-tag.njk' %}
+            {% endfor %}
+          </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </article>
+</enhanced-event-card>

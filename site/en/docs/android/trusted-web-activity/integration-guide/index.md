@@ -1,9 +1,10 @@
 ---
 layout: "layouts/doc-post.njk"
 title: Integration Guide
+seoTitle: Android Trusted Web Activity integration guide
 date: 2020-02-04
 updated: 2020-02-04
-description: Trusted Web Activity Integration Guide
+description: Learn how to use Trusted Web Activities in your Android app.
 authors:
   - andreban
 ---

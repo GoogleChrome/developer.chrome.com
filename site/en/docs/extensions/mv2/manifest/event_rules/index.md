@@ -6,6 +6,8 @@ updated: 2015-06-15
 description: Reference documentation for the event_rules property of manifest.json.
 ---
 
+{% Partial 'extensions/mv2-legacy-page.md' %}
+
 The `event_rules` manifest property provides a mechanism to add rules that intercept, block, or
 modify web requests in-flight using [declarativeWebRequest][1] or take actions depending on the
 content of a page, without requiring permission to read the page's content using

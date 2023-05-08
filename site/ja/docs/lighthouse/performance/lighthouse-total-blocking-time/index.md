@@ -49,7 +49,7 @@ TBTは、マウスのクリック、画面のタップ、キーボードの押�
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## TBTスコアを改善する方法
 
@@ -62,7 +62,7 @@ Chrome DevToolsのパフォーマンスパネルを使用して長いタスク�
 
 {% Aside %}JavaScriptによる不要な読み込みや解析、実行を見つければ、多くのサイトでは改善につなげる大きなチャンスとなります。{% endAside %}
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## リソース
 

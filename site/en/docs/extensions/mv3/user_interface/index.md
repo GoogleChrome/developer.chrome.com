@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Design the user interface"
+seoTitle: "Chrome Extensions: Design the user interface"
 date: 2018-03-16
 updated: 2022-04-27
 description: UI and design guidelines for Chrome Extensions.
@@ -504,17 +505,17 @@ Once the permission is declared, you can display a notification by calling
 ```js
 // background.js
 function showStayHydratedNotification() {
-	  chrome.notifications.create({
-	    type: 'basic',
-	    iconUrl: 'stay_hydrated.png',
-	    title: 'Time to Hydrate',
-	    message: 'Everyday I\'m Guzzlin\'!',
-	    buttons: [
-	      { title: 'Keep it Flowing.' }
-	    ],
-	    priority: 0
-	  });
-	}
+  chrome.notifications.create({
+    type: 'basic',
+    iconUrl: 'stay_hydrated.png',
+    title: 'Time to Hydrate',
+    message: 'Everyday I\'m Guzzlin\'!',
+    buttons: [
+      { title: 'Keep it Flowing.' }
+    ],
+    priority: 0
+  });
+}
 ```
 
 <figure>
@@ -541,6 +542,7 @@ following code localizes the tooltip:
 {% Column %}
 
 Located in  `_locales/en/messages.json`:
+
 ```json
 {
   "__MSG_tooltip__": {
@@ -616,12 +618,12 @@ capabilities.
 [manifest-file]:/docs/extensions/mv3/manifest/
 [omnibox-inputentered]: /docs/extensions/reference/omnibox#event-onInputEntered
 [runtime-oninstalled]: /docs/extensions/reference/runtime#event-onInstalled
-[sample-action-api]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/action
-[sample-action]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/action
-[sample-context-menu]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/contextMenus/global_context_search
-[sample-drink]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/examples/water_alarm_notification
-[sample-new-tab-search]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/omnibox/new-tab-search
-[sample-tab-flipper]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/default_command_override
+[sample-action-api]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/action
+[sample-action]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/action
+[sample-context-menu]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/contextMenus/global_context_search
+[sample-drink]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.water_alarm_notification
+[sample-new-tab-search]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/omnibox/new-tab-search
+[sample-tab-flipper]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/default_command_override
 [section-onclick]: #click
 [section-popup]: #popup
 [notifications-create]: /docs/extensions/reference/notifications#method-create

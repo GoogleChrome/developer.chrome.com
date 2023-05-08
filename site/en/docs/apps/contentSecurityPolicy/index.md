@@ -86,7 +86,7 @@ external web pages][6]).
 
 [1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
-[3]: http://www.html5rocks.com/en/tutorials/security/content-security-policy/
-[4]: app_external#sandboxing
-[5]: app_external#external
-[6]: app_external#webview
+[3]: https://web.dev/csp/
+[4]: /apps/app_external#sandboxing
+[5]: /apps/app_external#external
+[6]: /apps/app_external#webview

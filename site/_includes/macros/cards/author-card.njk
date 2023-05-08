@@ -1,13 +1,16 @@
-{% from 'macros/card-authors.njk' import cardAuthors with context %}
+{% macro authorCard(authorId) %}
 
-{% macro authorCard(author) %}
+{% set authorTitle = ('i18n.authors.' + authorId + '.title') | i18n(locale) %}
+{% set authorDescription = ('i18n.authors.' + authorId + '.description') | i18n(locale) %}
+{% set authorImage = authorsData[authorId].image %}
+
 <div class="blog-card rounded-lg pad-300 md:pad-400 width-full text-align-center">
-  {% if author.image %}
+  {% if authorImage %}
     <div class="gap-bottom-300">
-      <a translate="no" class="display-block" href="{{ author.url }}">
+      <a translate="no" class="display-block" href="/authors/{{ authorId }}/">
         {% Img
-          src=author.image,
-          alt=author.title | i18n(locale),
+          src=authorImage,
+          alt=authorTitle,
           height="192",
           width="192",
           class="rounded-full display-inline-block",
@@ -19,13 +22,13 @@
   {% endif %}
 
   <h2 class="type--h5">
-    <a translate="no" class="surface display-inline-flex color-text" href="{{ author.url }}">
-      {{ author.title | i18n(locale) }}
+    <a translate="no" class="surface display-inline-flex color-text" href="/authors/{{ authorId }}">
+      {{ authorTitle  }}
     </a>
   </h2>
 
   <p class="type--caption gap-top-200">
-    {{ author.description | i18n(locale) }}
+    {{ authorDescription | md | safe }}
   </p>
 </div>
 {% endmacro %}

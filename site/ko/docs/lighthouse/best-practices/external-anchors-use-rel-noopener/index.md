@@ -28,7 +28,7 @@ Lighthouse는 다음 프로세스를 사용하여 링크를 안전하지 않은 
 
 Lighthouse는 동일 호스트 링크를 걸러내기 때문에 대규모 사이트에서 작업하는 경우 주의해야 하는 경우가 있습니다. `rel="noopener"`를 사용하지 않고 사이트의 다른 페이지에 대한 `target="_blank"` 링크를 포함하는 페이지가 있는 경우, 이 감사의 성능 문제가 적용됩니다. 그러나 Lighthouse 결과에서는 이러한 링크를 볼 수 없습니다.
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## 사이트 성능을 개선하고 보안 취약점을 방지하는 방법
 

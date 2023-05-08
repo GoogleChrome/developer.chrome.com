@@ -21,7 +21,7 @@ Existem duas causas comuns para uma proporção de imagem incorreta:
 - Uma imagem é definida para valores explícitos de largura e altura que diferem das dimensões da imagem de origem.
 - Uma imagem é definida para uma largura e altura como uma porcentagem de um contêiner de tamanho variável.
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## Certifique-se de que as imagens sejam exibidas com a proporção correta
 

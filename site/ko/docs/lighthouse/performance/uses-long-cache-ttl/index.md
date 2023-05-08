@@ -43,7 +43,7 @@ Lighthouse는 다음 조건이 모두 충족되는 경우 리소스를 캐시 �
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## HTTP 캐싱을 사용하여 정적 리소스를 캐시하는 방법
 

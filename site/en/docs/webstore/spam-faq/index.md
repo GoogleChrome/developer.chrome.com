@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Spam policy FAQ"
 date: 2020-05-01
-updated: 2021-09-28
+updated: 2022-11-30
 description: Frequently asked questions about Chrome Web Store's spam policy.
 ---
 
@@ -153,9 +153,10 @@ not call out the word _puzzle_ more than five times in the description.
 
 ### Can the extension's short description be repeated in the extension's description? {: #short-description-repetition }
 
-No, the short description included in the extension's manifest.json should not be repeated in its
-Chrome Web Store's description. This string is automatically included above the description in the
-Chrome Web Store listing.
+We advise developers to not repeat the short description included in the extension's
+`manifest.json` in its Chrome Web Store's description because the short description is
+automatically included above the extension’s description on the Chrome Web Store listing.
+However, this would not be considered a violation. 
 
 ## User ratings, reviews, and installs {: #ratings-and-reviews }
 
@@ -186,5 +187,5 @@ be the single purpose of the extension.
 
 [complaint-faq]: /docs/webstore/complaint-faq
 [cws-support-form]: https://support.google.com/chrome_webstore/contact/one_stop_support
-[spam-policy]: /docs/webstore/program_policies#spam
+[spam-policy]: /docs/webstore/program-policies/spam-and-abuse
 [test-accounts]: /docs/webstore/cws-dashboard-distribution#private-visibility-trusted-testers

@@ -7,7 +7,8 @@ description: |2
 
   que têm vulnerabilidades conhecidas.
 date: 2019-05-02
-updated: 2020-06-04
+updated: 2023-04-26
+is_outdated: true
 ---
 
 Os invasores têm rastreadores da web automatizados que podem varrer seu site em busca de vulnerabilidades de segurança conhecidas. Quando o rastreador da web detecta uma vulnerabilidade, ele alerta o intruso. A partir daí, o invasor só precisa descobrir como explorar a vulnerabilidade em seu site.
@@ -23,7 +24,7 @@ Para detectar bibliotecas vulneráveis, o Lighthouse:
 - Executa o [detector de biblioteca para o Chrome](https://www.npmjs.com/package/js-library-detector).
 - Verifica a lista de bibliotecas detectadas no [banco de dados de vulnerabilidade do snyk](https://snyk.io/vuln?packageManager=all).
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## Pare de usar bibliotecas JavaScript inseguras
 

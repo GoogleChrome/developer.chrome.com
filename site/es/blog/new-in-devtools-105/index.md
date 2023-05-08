@@ -16,7 +16,7 @@ tags:
 
 _Gracias  por la traducción [Miguel Ángel](https://midu.dev) y por la revisión [Carlos Caballero](https://carloscaballero.io)._
 
-{% include 'partials/devtools/es/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 {% YouTube id='bHw_56RiVsg' %}
 
 <!-- start: translation instructions -->
@@ -149,7 +149,7 @@ Chromium issue: [1313690](https://crbug.com/1313690)
 <!-- ## Attach Wasm debugging information at runtime {: #wasm } -->
 ## Enlazar información de depuración de WASM al momento de ejecutar {: #wasm }
 
-<!-- You can now attach DWARF debugging information for wasm during runtime. Previously, the **Sources** panel only supported attaching sourcemaps to JavaScript and Wasm files. -->
+<!-- You can now attach DWARF debugging information for wasm during runtime. Previously, the **Sources** panel only supported attaching source maps to JavaScript and Wasm files. -->
 Ahora puede enlazar la información de depuración DWARF para WASM durante el tiempo de ejecución. Antes, el panel **Fuentes** solo admitía enlazar mapas de origen a archivos JavaScript y WASM.
 
 <!-- Open a Wasm file in the **Sources** panel. Right-click in the editor and select **Add DWARF debugging info…**  to attach debugging information on demand.  -->
@@ -210,15 +210,15 @@ La regla de CSS `@scope` está actualmente en desarrollo. Para probar esta carac
 Chromium issue: [1337777](https://crbug.com/1337777)
 
 
-<!-- ## Sourcemap improvements {: #sourcemaps } -->
+<!-- ## Source map improvements {: #sourcemaps } -->
 ## Mejoras en los mapas de código fuente {: #sourcemaps }
 
-<!-- Here are a few fixes on sourcemaps to improve the overall debugging experience: -->
+<!-- Here are a few fixes on source maps to improve the overall debugging experience: -->
 Aquí hay algunos arreglos en los mapas de código fuente que mejoran la experiencia de depuración general:
 
-<!-- - DevTools now properly resolves sourcemap identifiers with punctuation. Some modern minifiers (for example, [esbuild](https://esbuild.github.io/)) produce sourcemaps that merge identifiers with subsequent punctuation (comma, parentheses, semicolon).  -->
+<!-- - DevTools now properly resolves source map identifiers with punctuation. Some modern minifiers (for example, [esbuild](https://esbuild.github.io/)) produce sourcemaps that merge identifiers with subsequent punctuation (comma, parentheses, semicolon).  -->
 - DevTools ahora resuelve correctamente los identificadores de mapas de código fuente con signos de puntuación. Algunos *minificadores* modernos (por ejemplo, [esbuild](https://esbuild.github.io/)) producen mapas de código fuente que fusionan identificadores con signos de puntuación (coma, paréntesis, punto y coma).
-<!-- - DevTools now resolves sourcemap names for constructors with a `super` call. -->
+<!-- - DevTools now resolves source map names for constructors with a `super` call. -->
 - DevTools ahora resuelve correctamente los nombres de mapas de código fuente para los constructores con una llamada a `super`.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/6djFfkrtPzXuNYq5m8Vk.png", alt="Devtools resuelve correctamente los nombres de mapas de código fuente", width="800", height="441" %}
@@ -229,7 +229,7 @@ Aquí hay algunos arreglos en los mapas de código fuente que mejoran la experie
 Chromium issue: [1335338](https://crbug.com/1335338), [1333411](https://crbug.com/1333411)
 
 <!-- ## Miscellaneous highlights {: #misc } -->
-## Otros detalles destacados {: #misc }
+## Otros detalles destacados {: #misc }
 <!-- These are some noteworthy fixes in this release: -->
 Estos son algunos arreglos destacados en esta versión:
 <!-- - Properly remove a local storage key value pair from the table in the **Application** > **Local Storage** pane when it is deleted. ([1339280](https://crbug.com/1339280)) -->
@@ -241,5 +241,5 @@ Estos son algunos arreglos destacados en esta versión:
 <!-- - A new **Creator Ad Script** link is available for [ad frames](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker) if DevTools found the script that caused the frame to be labeled as an ad. You can open a frame via **Application** > **Frames**. ([1217041](https://crbug.com/1217041)) -->
 - Un nuevo enlace de **Script de anunciante** está disponible para los ([marcos de anuncios](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker) si DevTools encontró el script que causó que el marco fuera etiquetado como un anuncio). Puede abrir un marco mediante **Aplicación** > **Marcos**. ([1217041](https://crbug.com/1217041))
 
-{% include 'partials/devtools/es/reach-out.md' %}
-{% include 'partials/devtools/es/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

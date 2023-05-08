@@ -16,7 +16,7 @@ tags:
 
 _Gracias [Miguel Ángel](https://midu.dev) por la traducción y [Carlos Caballero](https://carloscaballero.io) por la revisión._
 
-{% include 'partials/devtools/es/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='zFVWeOKZBHs' %}
 
@@ -124,13 +124,13 @@ Además, si un mensaje de consola se muestra, el grupo (o el grupo ascendente) a
 Chromium issue: [1068788](https://crbug.com/1068788)
 
 
-<!-- ## Sourcemaps improvements {: #sourcemap } -->
+<!-- ## Source maps improvements {: #sourcemap } -->
 ## Mejoras en los mapas de código fuente {: #sourcemap }
 
-<!-- ### Debug Chrome extension with sourcemap files {: #extension } -->
+<!-- ### Debug Chrome extension with source map files {: #extension } -->
 ### Depuración de extensiones de Chrome con archivos de mapa de código fuente {: #extension }
 
-<!-- You can now [debug Chrome extension](/docs/extensions/mv3/getstarted/#unpacked) with sourcemap files. Previously, DevTools only supported inline sourcemap for Chrome extension debugging. -->
+<!-- You can now [debug Chrome extension](/docs/extensions/mv3/getstarted/#unpacked) with source map files. Previously, DevTools only supported inline sourcemap for Chrome extension debugging. -->
 Ahora puedes [depurar extensiones de Chrome](/docs/extensions/mv3/getstarted/#unpacked) con archivos de mapa de código fuente. Antes, DevTools sólo soportaba mapa de código fuente en línea para depurar extensiones de Chrome.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/lnRa954ROl0MSSExlBl7.png", alt="Depuración de extensiones de Chrome con archivos de mapa de código fuente", width="800", height="518" %}
@@ -143,7 +143,7 @@ Chromium issue: [212374](https://crbug.com/212374)
 <!-- ### Improved source folder tree in the Sources panel {: #source-tree } -->
 ### Mejorado árbol de carpetas de fuente en el panel de Fuentes {: #source-tree }
 
-<!-- The source folder tree in the **Sources** panel is now improved with less clutter in the folder structures and naming (e.g. “../”, “./”, etc). Under the hood, this is the result of normalizing the absolute source URLs in the sourcemaps. -->
+<!-- The source folder tree in the **Sources** panel is now improved with less clutter in the folder structures and naming (e.g. “../”, “./”, etc). Under the hood, this is the result of normalizing the absolute source URLs in the source maps. -->
 El árbol de carpetas de fuente en el panel de **Fuentes** ha sido mejorado con menos ruido en las estructuras de carpetas y nombres (ej. “../”, “./”, etc). Bajo el capó, esto es el resultado de normalizar las URL absolutas de fuente en los mapas de fuente.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Wl1pPVfQ51NaCtpp3KuY.png", alt="Mejorado árbol de carpetas de fuente en el panel de Fuentes", width="800", height="444" %}
@@ -224,5 +224,5 @@ Estos son algunos arreglos destacados en esta versión:
 <!-- - No reload required when [switching light/dark theme](/docs/devtools/customize/dark-theme/) in DevTools. ([1278738](https://crbug.com/1278738)) -->
 - No se requiere recargar cuando cambias el tema [claro/oscuro](/docs/devtools/customize/dark-theme/) en DevTools. ([1278738](https://crbug.com/1278738))
 
-{% include 'partials/devtools/es/reach-out.md' %}
-{% include 'partials/devtools/es/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

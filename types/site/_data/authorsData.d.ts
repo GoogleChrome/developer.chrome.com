@@ -23,9 +23,16 @@ declare global {
     image?: string;
     twitter?: string;
   };
+
   export interface AuthorsData {
     [key: string]: AuthorsDataItem;
   };
+
+  export interface AuthorsItem extends VirtualCollectionItem, AuthorsDataItem {}
+
+  export interface Authors {
+    [key: string]: AuthorsItem;
+  }
 }
 
 // empty export to keep file a module

@@ -16,7 +16,7 @@ tags:
 
 *感谢 [流浪大法师 @liuliangsir](https://github.com/liuliangsir) 提供的翻译*。
 
-{% include 'partials/devtools/zh/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='LyMts4yfQu8' %}
 
@@ -199,8 +199,8 @@ Chromium 议题：[1321803](https://crbug.com/1321803)
 Chromium 议题：[1226363](https://crbug.com/1226363)
 
 
-<!-- ## Sourcemaps improvements {: #sourcemaps } -->
-## Sourcemaps 改进 {: #sourcemaps }
+<!-- ## Source maps improvements {: #sourcemaps } -->
+## Source maps 改进 {: #sourcemaps }
 
 <!-- Previously, developers experience random failure during: -->
 在此之前，开发者会随机遇到以下问题：
@@ -212,8 +212,8 @@ Chromium 议题：[1226363](https://crbug.com/1226363)
 - 在定位 [Codepen](https://codepen.io/) 示例所出现性能问题的过程中，会遇到一些问题
 - 在启用 [React DevTools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) 的前提下，出现丢失 **Component** 选项卡的情况
 
-<!-- Here are a few fixes on sourcemaps to improve the overall debugging experience: -->
-这里有几个对 sourcemaps 的改进，旨在提高整体调试体验：
+<!-- Here are a few fixes on source maps to improve the overall debugging experience: -->
+这里有几个对 source maps 的改进，旨在提高整体调试体验：
 
 <!-- - Correct mapping between location and offset for inline scripts and source location
 - Use fallback information for frame’s text location
@@ -229,5 +229,5 @@ Chromium 议题：[1226363](https://crbug.com/1226363)
 Chromium 议题：[1319828](https://crbug.com/1319828), [1318635](https://crbug.com/1318635), [1305475](https://crbug.com/1305475)
 
 
-{% include 'partials/devtools/zh/reach-out.md' %}
-{% include 'partials/devtools/zh/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

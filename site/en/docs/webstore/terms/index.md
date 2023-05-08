@@ -80,7 +80,7 @@ Products, including any intellectual property rights which subsist in those appl
 
 4.2 You agree to use the Web Store only for purposes that are permitted by (a) this Agreement and
 the Google Chrome Web Store Program Policies
-[https://developer.chrome.com/docs/webstore/program_policies][program-policies] and (b) any applicable law,
+[https://developer.chrome.com/docs/webstore/program-policies][program-policies] and (b) any applicable law,
 regulation or generally accepted practices or guidelines in the relevant jurisdictions (including
 any laws regarding the export of data or software to and from the United States or other relevant
 countries).
@@ -436,6 +436,6 @@ Please print and retain a copy of this document and any linked documents for you
 [google-terms]: https://policies.google.com/terms
 [mediation]: http://g.co/help/mediation
 [one-stop]: https://support.google.com/chrome_webstore/contact/one_stop_support
-[program-policies]: /docs/webstore/program_policies
+[program-policies]: /docs/webstore/program-policies
 [rating]: /docs/webstore/rating
 [user-data]: /docs/webstore/user_data

@@ -12,7 +12,8 @@ updated: 2021-08-04
 hero: image/SHhb2PDKzXTggPGAYpv8JgR81pX2/xfq9HeQEyYWIuxsuTQOh.jpg
 alt: The Roman aqueduct at Segovia, Spain
 tags:
-  - extensions
+  - extensions-news
+  - cws
 
 ---
 

@@ -1,0 +1,124 @@
+{% extends "layouts/base.njk" %}
+
+{% block css %}
+  {% InlineCss '/css/meet-the-team.css' %}
+{% endblock %}
+
+{% block content %}
+  {% set checkboxGroupI18n = {
+    reset: 'i18n.common.checkbox_group.reset'|i18n,
+    select_all: 'i18n.common.checkbox_group.select_all'|i18n
+  } %}
+
+  {% set topicLabel = 'i18n.events.topic' | i18n  %}
+  {% set locationLabel = 'i18n.events.location' | i18n  %}
+  {% set googlerLabel = 'i18n.events.googler' | i18n  %}
+
+  <div class="events-container width-full pad-400">
+    {% include 'partials/events-hero.njk' %}
+
+      <div class="events-container__filters align-center">
+        <span class="color-secondary-text type--eyebrow">
+          {{ 'i18n.common.filter_by' | i18n }}:
+        </span>
+
+        <enhanced-select class="gap-right-300 events-filter"
+                         label="{{ topicLabel }}"
+                         fixedLabel>
+          <select name="topics" multiple>
+            {% for topic in collections.eventTags.topics %}
+              <option value="{{ topic }}">{{ topic }}</option>
+            {% endfor %}
+          </select>
+        </enhanced-select>
+        <enhanced-select class="gap-right-300 events-filter"
+                         label="{{ locationLabel }}"
+                         fixedLabel>
+          <select name="locations" multiple>
+            {% for location in collections.eventTags.locations %}
+              <option value="{{ location }}">{{ location }}</option>
+            {% endfor %}
+          </select>
+        </enhanced-select>
+
+        <enhanced-select class="events-filter"
+                         label="{{ googlerLabel }}"
+                         fixedLabel>
+          <select name="googlers" multiple>
+            {% for googler in collections.eventTags.googlers %}
+              <option value="{{ googler.handle }}">{{ googler.title | i18n }}</option>
+            {% endfor %}
+          </select>
+        </enhanced-select>
+      </div>
+
+      <dialog id="mobile-filters" class="scrollbar lg:display-none">
+        <div class="filter-sheet display-flex direction-column">
+          <p class="filter-sheet__title type--xsmall weight-medium case-upper">
+            {{ 'i18n.common.filter_by' | i18n(locale) }}
+          </p>
+
+          <div class="filter-sheet__filters">
+            <section class="gap-bottom-500">
+              <p class="type--h5 weight-medium gap-bottom-200">{{ topicLabel }}</p>
+
+              <checkbox-group show="4" i18n='{{ checkboxGroupI18n|dump|safe }}'>
+                {% for topic in collections.eventTags.topics %}
+                  <label>
+                    <input type="checkbox" name="topics" value="{{ topic }}" />
+                    {{ topic }}
+                  </label>
+                {% endfor %}
+              </checkbox-group>
+            </section>
+
+            <section class="gap-bottom-500">
+              <p class="type--h5 weight-medium gap-bottom-200">{{ locationLabel}}</p>
+
+              <checkbox-group show="4" i18n='{{ checkboxGroupI18n|dump|safe }}'>
+                {% for location in collections.eventTags.locations %}
+                  <label>
+                    <input type="checkbox" name="locations" value="{{ location }}" />
+                    {{ location }}
+                  </label>
+                {% endfor %}
+              </checkbox-group>
+            </section>
+
+            <section class="gap-bottom-500">
+              <p class="type--h5 weight-medium gap-bottom-200">{{ googlerLabel }}</p>
+
+              <checkbox-group show="4" i18n='{{ checkboxGroupI18n|dump|safe }}'>
+                {% for googler in collections.eventTags.googlers %}
+                  <label>
+                    <input type="checkbox" name="googler" value="{{ googler.handle }}" />
+                    {{ googler.title | i18n }}
+                  </label>
+                {% endfor %}
+              </checkbox-group>
+            </section>
+          </div>
+
+          <div
+            class="filter-sheet__buttons display-flex align-center justify-content-end"
+          >
+            <button id="mobile-filters-reset"
+                    class="material-button button-filled color-primary bg-white">
+              {{ 'i18n.common.checkbox_group.reset'|i18n }}
+            </button>
+
+            <button id="mobile-filters-done"
+                    class="material-button button-filled color-bg bg-primary">
+              {{ 'i18n.events.done'|i18n }}
+            </button>
+          </div>
+        </div>
+      </dialog>
+
+      {% include 'partials/events-list.njk' %}
+  </div>
+{% endblock %}
+
+{% block scripts %}
+  <script type="module" src="{{ helpers.hashForProd('/js/events.js') }}"></script>
+{% endblock %}

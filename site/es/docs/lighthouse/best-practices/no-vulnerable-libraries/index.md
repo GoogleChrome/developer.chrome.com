@@ -5,7 +5,8 @@ description: |2-
 
   Obtenga información sobre cómo hacer que su página sea más segura al reemplazar las bibliotecas de JavaScript que tienen vulnerabilidades conocidas.
 date: 2019-05-02
-updated: 2020-06-04
+updated: 2023-04-26
+is_outdated: true
 ---
 
 Los intrusos tienen rastreadores web automatizados que pueden escanear su sitio en busca de vulnerabilidades de seguridad conocidas. Cuando el rastreador web detecta una vulnerabilidad, alerta al intruso. A partir de ahí, el intruso solo necesita descubrir cómo explotar la vulnerabilidad en su sitio.
@@ -21,7 +22,7 @@ Para detectar bibliotecas vulnerables, Lighthouse:
 - Ejecuta el [detector de bibliotecas para Chrome](https://www.npmjs.com/package/js-library-detector).
 - Compara la lista de bibliotecas detectadas con la [base de datos de vulnerabilidades de Snyk](https://snyk.io/vuln?packageManager=all).
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## Deje de usar bibliotecas JavaScript inseguras
 

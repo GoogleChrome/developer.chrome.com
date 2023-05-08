@@ -2,17 +2,15 @@
 api: scripting
 ---
 
-## Manifest
+## Manifest {: #manifest }
 
-In order to use the `chrome.scripting` API, you need to specify a
-`"manifest_version"` of `3` or higher and include the `"scripting"` permission
-in your [manifest file][manifest].
+To use the `chrome.scripting` API, declare the `"scripting"` permission in the [manifest][manifest] plus the host permissions for the pages to inject scripts into. Use the [`"host_permissions"`][match-patterns] key or the [activeTab][activetab] permission, which grants temporary host permissions. The following example uses the activeTab permission.
 
 ```json
 {
   "name": "Scripting Extension",
   "manifest_version": 3,
-  "permissions": ["scripting"],
+  "permissions": ["scripting", "activeTab"],
   ...
 }
 ```
@@ -20,9 +18,9 @@ in your [manifest file][manifest].
 ## Usage
 
 You can use the `chrome.scripting` API to inject JavaScript and CSS into
-websites. This is similar to what you can do with
-[content scripts][contentscripts], but by using the `chrome.scripting` API,
-extensions can make decisions at runtime.
+websites. This is similar to what you can do with [content
+scripts][contentscripts]. But by using the [`chrome.scripting`](/docs/extensions/reference/scripting/) namespace, extensions
+can make decisions at runtime.
 
 ### Injection targets
 
@@ -33,45 +31,49 @@ The only required field is `tabId`. By default, an injection will run in the
 main frame of the specified tab.
 
 ```js
-const tabId = getTabId();
-chrome.scripting.executeScript(
-    {
-      target: {tabId: tabId},
-      files: ['script.js'],
-    },
-    () => { ... });
+function getTabId() { ... }
+
+chrome.scripting
+    .executeScript({
+      target : {tabId : getTabId()},
+      files : [ "script.js" ],
+    })
+    .then(() => console.log("script injected"));
 ```
 
 To run in all frames of the specified tab, you can set the `allFrames` boolean
 to `true`.
 
 ```js
-const tabId = getTabId();
-chrome.scripting.executeScript(
-    {
-      target: {tabId: tabId, allFrames: true},
-      files: ['script.js'],
-    },
-    () => { ... });
+function getTabId() { ... }
+
+chrome.scripting
+    .executeScript({
+      target : {tabId : getTabId(), allFrames : true},
+      files : [ "script.js" ],
+    })
+    .then(() => console.log("script injected in all frames"));
 ```
 
 You can also inject into specific frames of a tab by specifying individual frame
-IDs. For more information on frame IDs, see the
-[webNavigation API][webnavigation].
+IDs. For more information on frame IDs, see the [`chrome.webNavigation`
+API][webnavigation].
 
 ```js
-const tabId = getTabId();
-const frameIds = [frameId1, frameId2];
-chrome.scripting.executeScript(
-    {
-      target: {tabId: tabId, frameIds: frameIds},
-      files: ['script.js'],
-    },
-    () => { ... });
+function getTabId() { ... }
+
+chrome.scripting
+    .executeScript({
+      target : {tabId : getTabId(), frameIds : [ frameId1, frameId2 ]},
+      files : [ "script.js" ],
+    })
+    .then(() => console.log("script injected on target frames"));
 ```
 
 {% Aside %}
+
 You cannot specify both the `frameIds` and `allFrames` properties.
+
 {% endAside %}
 
 ### Injected code
@@ -86,13 +88,14 @@ directory. The following code will inject the file `script.js` into the main
 frame of the tab.
 
 ```js
-const tabId = getTabId();
-chrome.scripting.executeScript(
-    {
-      target: {tabId: tabId},
-      files: ['script.js'],
-    },
-    () => { ... });
+function getTabId() { ... }
+
+chrome.scripting
+    .executeScript({
+      target : {tabId : getTabId()},
+      files : [ "script.js" ],
+    })
+    .then(() => console.log("injected script file"));
 ```
 
 #### Runtime functions
@@ -102,54 +105,49 @@ function to be executed instead of a file. This function should be a function
 variable available to the current extension context.
 
 ```js
-function getTitle() {
-  return document.title;
-}
-const tabId = getTabId();
-chrome.scripting.executeScript(
-    {
-      target: {tabId: tabId},
-      func: getTitle,
-    },
-    () => { ... });
+function getTabId() { ... }
+function getTitle() { return document.title; }
+
+chrome.scripting
+    .executeScript({
+      target : {tabId : getTabId()},
+      func : getTitle,
+    })
+    .then(() => console.log("injected a function"));
 ```
 
-This function will be executed in the context of injection target. However,
-this will not carry over any of the current execution context of the function.
-As such, bound parameters (including the `this` object) and
-externally-referenced variables will result in errors.  For instance, the
-following code will not work, and will throw a ReferenceError because `color`
-is undefined when the function executes:
-
 ```js
-const color = getUserColor();
+function getTabId() { ... }
+function getUserColor() { ... }
+
 function changeBackgroundColor() {
-  document.body.style.backgroundColor = color;
+  document.body.style.backgroundColor = getUserColor();
 }
-const tabId = getTabId();
-chrome.scripting.executeScript(
-    {
-      target: {tabId: tabId},
-      func: changeBackgroundColor,
-    },
-    () => { ... });
+
+chrome.scripting
+    .executeScript({
+      target : {tabId : getTabId()},
+      func : changeBackgroundColor,
+    })
+    .then(() => console.log("injected a function"));
 ```
 
 You can work around this by using the `args` property:
 
 ```js
-const color = getUserColor();
+function getTabId() { ... }
+function getUserColor() { ... }
 function changeBackgroundColor(backgroundColor) {
   document.body.style.backgroundColor = backgroundColor;
 }
-const tabId = getTabId();
-chrome.scripting.executeScript(
-    {
-      target: {tabId: tabId},
-      func: changeBackgroundColor,
-      args: [color],
-    },
-    () => { ... });
+
+chrome.scripting
+    .executeScript({
+      target : {tabId : getTabId()},
+      func : changeBackgroundColor,
+      args : [ getUserColor() ],
+    })
+    .then(() => console.log("injected a function"));
 ```
 
 #### Runtime strings
@@ -159,36 +157,36 @@ If injecting CSS within a page, you can also specify a string to be used in the
 can't execute a string using `scripting.executeScript()`.
 
 ```js
-const css = 'body { background-color: red; }';
-const tabId = getTabId();
-chrome.scripting.insertCSS(
-    {
-      target: {tabId: tabId},
-      css: css,
-    },
-    () => { ... });
+function getTabId() { ... }
+const css = "body { background-color: red; }";
+
+chrome.scripting
+    .insertCSS({
+      target : {tabId : getTabId()},
+      css : css,
+    })
+    .then(() => console.log("CSS injected"));
 ```
 
 ### Handling results
 
-The results of executing JavaScript are passed to the extension. A single
-result is included per-frame. The main frame is guaranteed to be the first
-index in the resulting array; all other frames are in a non-deterministic
-order.
+The results of executing JavaScript are passed to the extension. A single result
+is included per-frame. The main frame is guaranteed to be the first index in the
+resulting array; all other frames are in a non-deterministic order.
 
 ```js
-function getTitle() {
-  return document.title;
-}
-const tabId = getTabId();
-chrome.scripting.executeScript(
-    {
-      target: {tabId: tabId, allFrames: true},
-      func: getTitle,
-    },
-    (injectionResults) => {
-      for (const frameResult of injectionResults)
-        console.log('Frame Title: ' + frameResult.result);
+function getTabId() { ... }
+function getTitle() { return document.title; }
+
+chrome.scripting
+    .executeScript({
+      target : {tabId : getTabId(), allFrames : true},
+      func : getTitle,
+    })
+    .then(injectionResults => {
+      for (const {frameId, result} of injectionResults) {
+        console.log(`Frame ${frameId} result:`, result);
+      }
     });
 ```
 
@@ -200,31 +198,64 @@ If the resulting value of the script execution is a promise, Chrome will wait
 for the promise to settle and return the resulting value.
 
 ```js
+function getTabId() { ... }
 async function addIframe() {
-  const iframe = document.createElement('iframe');
-  const loadComplete = new Promise((resolve) => {
-    iframe.addEventListener('load', resolve);
-  });
-  iframe.src = 'https://example.com';
+  const iframe = document.createElement("iframe");
+  const loadComplete =
+      new Promise(resolve => iframe.addEventListener("load", resolve));
+  iframe.src = "https://example.com";
   document.body.appendChild(iframe);
   await loadComplete;
   return iframe.contentWindow.document.title;
 }
 
-const tabId = getTabId();
-chrome.scripting.executeScript(
-    {
-      target: {tabId: tabId, allFrames: true},
-      func: addIframe,
-    },
-    (injectionResults) => {
-      for (const frameResult of injectionResults)
-        console.log('Iframe Title: ' + frameResult.result);
+chrome.scripting
+    .executeScript({
+      target : {tabId : getTabId(), allFrames : true},
+      func : addIframe,
+    })
+    .then(injectionResults => {
+      for (const frameResult of injectionResults) {
+        const {frameId, result} = frameResult;
+        console.log(`Frame ${frameId} result:`, result);
+      }
     });
 ```
 
-[manifest]: /docs/extensions/mv3/manifest
+## Examples
+
+### Unregister all dynamic content scripts
+
+The following snippet contains a function that unregisters all dynamic content
+scripts the extension has previously registered.
+
+```js
+async function unregisterAllDynamicContentScripts() {
+  try {
+    const scripts = await chrome.scripting.getRegisteredContentScripts();
+    const scriptIds = scripts.map(script => script.id);
+    return chrome.scripting.unregisterContentScripts(scriptIds);
+  } catch (error) {
+    const message = [
+      "An unexpected error occurred while",
+      "unregistering dynamic content scripts.",
+    ].join(" ");
+    throw new Error(message, {cause : error});
+  }
+}
+```
+
+{% Aside 'important' %}
+
+Unregistering content scripts will not remove scripts or styles that have
+already been injected.
+
+{% endAside %}
+
+[activetab]: /docs/extensions/mv3/manifest/activeTab/
 [contentscripts]: /docs/extensions/mv3/content_scripts
-[webnavigation]: /docs/extensions/reference/webNavigation
-[storage]: /docs/extensions/reference/storage
+[manifest]: /docs/extensions/mv3/manifest
+[match-patterns]: /docs/extensions/mv3/match_patterns
 [messaging]: /docs/extensions/mv3/messaging
+[storage]: /docs/extensions/reference/storage
+[webnavigation]: /docs/extensions/reference/webNavigation

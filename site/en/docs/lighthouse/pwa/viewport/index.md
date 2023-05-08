@@ -18,7 +18,7 @@ width and scaling of the viewport so that it's sized correctly on all devices.
 
 ## How the Lighthouse viewport meta tag audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) flags pages
+[Lighthouse](/docs/lighthouse/overview/) flags pages
 without a viewport meta tag:
 
 <figure>
@@ -34,7 +34,7 @@ Lighthouse _doesn't_ check that `width` equals `device-width`. It also doesn't
 check for an `initial-scale` key-value pair. However, you still need to include
 both for your page to render correctly on mobile devices.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## How to add a viewport meta tag
 
@@ -58,6 +58,6 @@ Here's what each key-value pair does:
 
 ## Resources
 
-- [Source code for **Has a `<meta name="viewport">` tag with `width` or `initial-scale`** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/viewport.js)
-- [Responsive Web Design Basics](https://developers.google.com/web/fundamentals/design-and-ux/responsive/#set-the-viewport)
+- [Source code for **Has a `<meta name="viewport">` tag with `width` or `initial-scale`** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/viewport.js)
+- [Responsive Web Design Basics](https://web.dev/responsive-web-design-basics/#viewport)
 - [Using the viewport meta tag to control layout on mobile browsers](https://developer.mozilla.org/docs/Web/HTML/Viewport_meta_tag)

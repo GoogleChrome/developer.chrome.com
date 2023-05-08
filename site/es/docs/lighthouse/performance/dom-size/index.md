@@ -33,7 +33,7 @@ Lighthouse marca páginas con árboles DOM que:
 - Advierte cuando el elemento body tiene más de ~800 nodos.
 - Se producen errores cuando el elemento body tiene más de ~1,400 nodos.
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Cómo optimizar el tamaño del DOM
 

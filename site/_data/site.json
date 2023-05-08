@@ -4,7 +4,7 @@
   "url": "https://developer.chrome.com",
   "imgixDomain": "wd.imgix.net",
   "bucket": "web-dev-uploads",
-  "repo": "https://github.com/GoogleChrome/developer.chrome.com/",
+  "repo": "https://github.com/GoogleChrome/developer.chrome.com",
   "locales": [
     "en",
     "es",
@@ -18,6 +18,8 @@
   ],
   "defaultLocale": "en",
   "cookiesCtaUrl": "https://policies.google.com/technologies/cookies",
-  "defaultSocialImage": "image/foR0vJZKULb5AGJExlazy1xYDgI2/xvNiBdV0ZwwLUE4SEdbf.png",
+  "defaultSocialImage": "image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/iGPiWTtoy7iF932Xday1.png",
+  "defaultAvatarImg": "image/tcFciHGuF3MxnTr1y5ue01OGLBn2/PFaMfvDZoPorronbpdU8.svg",
+  "chromeImg": "image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/NLdnaqMpBEjPaCtVEfcJ.svg",
   "paginationCount": 24
 }

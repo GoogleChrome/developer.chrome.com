@@ -32,6 +32,9 @@ Regular updates for each Privacy Sandbox API are published on this site. In
 particular, these updates will cover a summary of common feedback themes per
 API.
 
+ * [Feedback report for 2023 Q1](/docs/privacy-sandbox/feedback/report-2023-q1/)
+ * [Feedback report for 2022 Q4](/docs/privacy-sandbox/feedback/report-2022-q4/)
+ * [Feedback report for 2022 Q3](/docs/privacy-sandbox/feedback/report-2022-q3/)
  * [Feedback report for 2022 Q2](/docs/privacy-sandbox/feedback/report-2022-q2/)
  * [Feedback report for 2022 Q1](/docs/privacy-sandbox/feedback/report-2022-q1/)
 
@@ -168,7 +171,7 @@ section](#proposals).
 
 {% Details %} {% DetailsSummary %}
 
-### Raise and track feature issues 
+### Raise and track feature issues
 
 **_As implementation continues, issues with the feature behavior can be raised
 in the Chromium issue tracker._**
@@ -722,7 +725,7 @@ _The HTTP cache previously provided a single point where it was possible for one
 site to determine if its resources had been loading another—effectively leaking
 cross-site information. Partitioning the cache ensures that activity is
 restricted to a single site. [Learn more about HTTP Cache
-Partitioning](https://developers.google.com/web/updates/2020/10/http-cache-partitioning)._
+Partitioning](/blog/http-cache-partitioning/)._
 
 **_Last updated 2022/02: HTTP cache partitioning has fully shipped_**
 
@@ -1018,6 +1021,33 @@ features resulting in more Intent messages._**
    </td>
    <td><a href="https://www.w3.org/community/wicg/">Web Platform Incubator Community Group (WICG)</a>
    </td>
+  </tr>
+</table>
+
+#### Bounce tracking mitigations
+
+_Reduce or eliminate the ability of bounce tracking to recognize people across contexts. [Learn more about bounce tracking mitigations](/docs/privacy-sandbox/bounce-tracking-mitigations/)._
+
+<table class="width-full">
+  <tr>
+    <td><strong>Feedback</strong></td>
+    <td><a href="https://github.com/privacycg/nav-tracking-mitigations/issues">privacycg/nav-tracking-mitigations</a></td>
+  </tr>
+  <tr>
+    <td><strong>Intents</strong></td>
+    <td><a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/vwQ2x1lByqc/m/re5WEH84CAAJ">I2P 2022/09</a></td>
+  </tr>
+  <tr>
+    <td><strong>Chromium component</strong></td>
+    <td><a href="https://bugs.chromium.org/p/chromium/issues/list?q=component:Privacy%3ENavTracking">Privacy>NavTracking</a></td>
+  </tr>
+  <tr>
+    <td><strong>Mailing list</strong></td>
+    <td>[optional]</td>
+  </tr>
+    <tr>
+    <td><strong>Standards groups</strong></td>
+    <td><a href="https://www.w3.org/groups/cg/privacycg">Privacy Community Group</a></td>
   </tr>
 </table>
 

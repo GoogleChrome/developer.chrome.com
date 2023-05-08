@@ -26,6 +26,18 @@ compare_old:
 compare_new:
   en: 'New'
 
+compare_before:
+  en: 'Before'
+
+compare_after:
+  en: 'After'
+
+compare_current:
+  en: 'Current'
+
+compare_proposed:
+  en: 'Proposed'
+
 menu:
   en: 'menu'
   es: 'menu'
@@ -69,6 +81,29 @@ success:
 gotchas:
   en: 'Gotchas'
   es: 'Gotchas'
+  ja: '注意事項'
+  ko: '주의사항'
+  pt: 'Gotchas'
+  ru: 'Особенности'
+  zh: '注意事项'
+
+important:
+  en: 'Important'
+  es: 'Importante'
+  ja: '重要'
+  ko: '중요한'
+  pt: 'Importante'
+  ru: 'Важный'
+  zh: '重要的'
+
+update:
+  en: Update
+  es: Actualizar
+  ja: 更新
+  ko: 업데이트
+  pt: Atualizar
+  ru: Обновлять
+  zh: 更新
 
 key-term:
   en: 'Key Term'
@@ -77,6 +112,15 @@ key-term:
 codelab:
   en: 'Codelab'
   es: 'Codelab'
+
+example:
+  en: 'Example'
+  es: 'Ejemplo'
+  ja: '例'
+  ko: '예'
+  pt: 'Exemplo'
+  ru: 'Пример'
+  zh: '例子'
 
 objective:
   en: 'Objective'
@@ -97,6 +141,7 @@ follow:
 toc:
   en: 'Table of contents'
   es: 'Tabla de contenido'
+  ja: '目次'
 
 tags:
   en: 'Tags'
@@ -161,12 +206,15 @@ release_beta:
 
 translated_to:
   en: 'Translated to:'
+  ja: '翻訳先言語：'
 
 published_on:
   en: 'Published on'
+  ja: '公開日'
 
 updated_on:
   en: 'Updated on'
+  ja: '更新日'
 
 authors:
   en: 'Authors'
@@ -177,3 +225,84 @@ website:
 
 featured:
   en: Featured
+
+launch_app:
+  en: 'Launch app'
+
+download_app:
+  en: 'Download app'
+
+view_source:
+  en: 'View source'
+
+load_more:
+  en: 'Load more'
+
+improve_article:
+  en: 'Improve article'
+  zh: '改进文章'
+  ja: '記事を改善する'
+
+featured_cards:
+  gdg:
+    title:
+      en: Google Developer Groups
+    body:
+      en: |
+        Connect with fellow developers and startups in your area,
+        hear from industry experts, share your skills, and learn.
+    cta:
+      en: Find your local group
+
+cookie_banner:
+  explainer:
+    en: |
+      We serve cookies on this site to analyze traffic, remember your preferences,
+      and optimize your experience.
+  learn_more:
+    en: More details
+  accept:
+    en: Ok, Got it.
+
+draft_warning:
+  en: This page is a draft and will not be published with the rest of the site.
+
+bug_report:
+  category:
+    en: Docs
+  title:
+    en: How to report a Chrome bug
+  verify:
+    en: Verify the bug
+  search:
+    en: Search the bug base
+  test:
+    en: Create a test case
+  report:
+    en: Report the bug
+  image_alt:
+    en: A green bug on a stylized report card with a speech bubble tip
+  learn_more:
+    en: Learn more
+  learn_more_hint:
+    en: about reporting a bug.
+  report_cta:
+    en: Report a bug.
+
+checkbox_group:
+  reset:
+    en: Reset
+  select_all:
+    en: Select all
+
+outdated_banner:
+  content:
+    en: This content is outdated and no longer accurate.
+  new_material:
+    en: New material available
+
+filter_by:
+  en: 'Filter by'
+
+rss_feed:
+  en: RSS feed

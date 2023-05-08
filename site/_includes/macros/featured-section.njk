@@ -1,0 +1,39 @@
+{% from 'macros/cards/featured-post-card.njk' import featuredPostCard with context %}
+{% from 'macros/cards/featured-card.njk' import featuredCard with context %}
+
+{% macro featuredSection(options) %}
+
+<section class="featured-section rounded-lg width-full display-grid  {{ options.utilities }} justify-items-center grid-gap-400 gap-top-400">
+  {% for card in options.cards %}
+    {% if card.postUrl %}
+      {% set post = helpers.findByUrl(collections.all, card.postUrl, locale) %}
+      {% if post %}
+        {{ featuredPostCard(post, {
+          icon: 'star',
+          actionText: card.actionText,
+          actionUrl: card.actionUrl
+        }) }}
+      {% else %}
+        {% set blog = 'blog-' + locale %}
+        {% set index =  loop.index  %}
+        {{ featuredPostCard(collections[blog][index], {
+          title: 'i18n.nav.side_nav.blog' | i18n(locale),
+          actionText: 'i18n.common.see_all_articles' | i18n(locale),
+          actionUrl: '/blog'
+        }) }}
+      {% endif %}
+    {% endif %}
+    {% if card.customPost %}
+      {{ featuredCard({
+        title: card.customPost.title, 
+        description: card.customPost.description, 
+        imgSrc: card.customPost.imgSrc, 
+        imgAlt: card.customPost.imgAlt, 
+        actionUrl: card.actionUrl, 
+        actionText: card.actionText
+      }) }}
+    {% endif %}
+  {% endfor %}
+</section>
+
+{% endmacro %}

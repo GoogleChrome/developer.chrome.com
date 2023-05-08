@@ -174,7 +174,7 @@ The item won't appear in the web store until it has successfully completed the r
 details, see [Chrome Web Store Review Times][cws-review-times].
 
 Extensions which are published to the same domain as the publisher address may be approved more
-quickly. Learn more about [enterprise publishing][enterprise].
+quickly. Learn more about [enterprise publishing][cws-enterprise].
 
 ### How can I remove my listing from the store? {: #faq-listing-03 }
 
@@ -324,7 +324,7 @@ Business related issues by contacting [CWS support][cws-support].
 [complaint-handling]: /docs/webstore/complaint-faq
 [comply-policies]: /docs/webstore/manage/#comply-with-chrome-web-store-policies
 [cws-distribution]: /docs/webstore/cws-dashboard-distribution/
-[cws-enterprise]: /docs/webstore/cws-dashboard-enterprise/
+[cws-enterprise]: /docs/webstore/cws-enterprise/
 [cws-images]: /docs/webstore/images/
 [cws-register]: /docs/webstore/register
 [cws-review]: /docs/webstore/review-process/
@@ -334,7 +334,6 @@ Business related issues by contacting [CWS support][cws-support].
 [dev-dashboard]: https://chrome.google.com/webstore/developer/dashboard
 [faq-localize-description]: #faq-gen-20
 [faq-localize-screenshots]: #faq-gen-21
-[enterprise]: /docs/webstore/cws-enterprise
 [ext]: /docs/extensions/
 [extension-faq]: /docs/extensions/mv3/faq
 [google-groups]: https://groups.google.com
@@ -342,7 +341,7 @@ Business related issues by contacting [CWS support][cws-support].
 [internationalize]: /docs/webstore/i18n
 [malware-policy]: https://www.google.com/about/company/unwanted-software-policy.html
 [manifest-version]: /docs/extensions/mv3/manifestVersion
-[program-policies]: /docs/webstore/program_policies
+[program-policies]: /docs/webstore/program-policies
 [region-distribution]: /docs/webstore/cws-dashboard-distribution/#setting-the-geographic-distribution
 [stackoverflow-extensions]: https://stackoverflow.com/questions/tagged/google-chrome-extension
 [support-url]: /docs/webstore/cws-dashboard-listing/#support-url

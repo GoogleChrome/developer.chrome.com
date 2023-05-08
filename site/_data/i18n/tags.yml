@@ -1,6 +1,9 @@
 # The top-level keys in this file are used to generate tag pages under /tags/<tag>, presuming
 # they have at least one matching post.
 
+example:
+  en: Example
+
 memory:
   en: Memory
 
@@ -17,11 +20,20 @@ accessibility:
 amp:
   en: AMP
 
+automation:
+  en: Browser Automation
+
 autoplay:
   en: Autoplay
 
 capabilities:
   en: Capabilities
+
+case-study:
+  en: Case study
+
+fugu-case-study:
+  en: Fugu case study
 
 # DevTools-related tags
 css:
@@ -48,8 +60,14 @@ test:
 performance:
   en: Performance
 
+sourcemap:
+  en: source map
+
 storage:
   en: Storage
+
+network:
+  en: Network
 
 dom:
   en: DOM
@@ -83,6 +101,9 @@ encryption:
 extensions:
   en: Extensions
 
+extensions-news:
+  en: Extensions News
+
 fonts:
   en: Fonts
 
@@ -101,14 +122,21 @@ graphics:
 houdini:
   en: Houdini
 
+headless:
+  en: Chrome’s Headless mode
+
 html:
   en: HTML
 
 media:
   en: Media
 
+webgpu:
+  en: WebGPU
+
 new-in-chrome:
   en: New in Chrome
+  es: Qué hay de nuevo en Chrome
 
 privacy:
   en: Privacy
@@ -215,6 +243,15 @@ chrome69:
 chrome70:
   en: Chrome 70
 
+chrome109:
+  en: Chrome 109
+
+chrome110:
+  en: Chrome 110
+
+beta:
+  en: Beta
+
 insider:
   en: Chrome Dev Insider
 
@@ -254,3 +291,63 @@ spc:
 
 webauthn:
   en: WebAuthn
+
+passkeys:
+  en: Passkeys
+
+monitoring:
+  en: Monitoring
+
+web-app-manifest:
+  en: Web app manifest
+
+cors:
+  en: CORS
+
+video:
+  en: Video
+
+idle-detection:
+  en: Idle detection
+
+backpressure:
+  en: Backpressure
+
+websocket:
+  en: Web Socket
+
+websocketstream:
+  en: WebSocketStream
+
+test-automation:
+  en: Test automation
+
+service-worker:
+  en: Service Worker
+
+caching:
+  en: Caching
+
+feedback:
+  en: Feedback
+
+api:
+  en: API
+
+notification-triggers:
+  en: Notification triggers
+
+contacts:
+  en: Contacts
+
+shape-detection:
+  en: Shape detection
+
+wake-lock:
+  en: Wake Lock
+
+notifications:
+  en: Notifications
+
+sensors:
+  en: Sensors

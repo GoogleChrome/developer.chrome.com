@@ -1,8 +1,9 @@
 ---
 layout: "layouts/doc-post.njk"
 title: Best Practices
+seoTitle: Android Custom Tabs best practices
 date: 2020-07-02
-description: Custom Tabs best practices
+description: Learn how to build a great Custom Tabs integration for your app.
 authors:
   - andreban
 ---

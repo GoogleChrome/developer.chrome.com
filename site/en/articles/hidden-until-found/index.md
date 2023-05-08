@@ -8,8 +8,7 @@ date: 2022-04-28
 authors:
   - jarhar
 hero: 'image/kheDArv5csY6rvQUJDbWRscckLr1/KjF2oAvuvbZ1rCQkCXX4.jpg'
-alt: >
-  A cat hiding behind a curtain.
+alt: A cat hiding behind a curtain.
 tags:
   - chrome
   - html

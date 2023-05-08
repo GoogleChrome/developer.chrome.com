@@ -16,7 +16,7 @@ tags:
 
 *Tradução realizada por [Alvaro Camillo Neto](https://www.linkedin.com/in/alvarocamillont/). Revisão por [Lucas Santos](https://lsantos.dev)*
 
-{% include 'partials/devtools/pt/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='DAD72grzDDc' %}
 
@@ -29,7 +29,7 @@ tags:
 <!-- end: translation instructions -->
 
 <!-- ## Chrome 100  {: #m100 } -->
-## Chrome 100  {: #m100 } 
+## Chrome 100  {: #m100 }
 <!-- Here’s to the 100th Chrome version! Chrome DevTools will continue to provide reliable tools for developers to build on the web. Take a moment to click around in the **What’s New** tab to celebrate the milestones. -->
 Aqui está a 100ª versão do Chrome! O Chrome DevTools continuará a fornecer ferramentas confiáveis para os desenvolvedores criarem na web. Reserve um momento para clicar na guia **O que há de novo** para comemorar os marcos.
 <!-- As usual, you can watch the latest [What’s New in DevTools video](https://goo.gle/devtools-youtube) by clicking on the image. -->
@@ -90,7 +90,7 @@ Por exemplo, esta [página de demonstração](https://jec.fyi/demo/recorder) usa
 
 
 <!-- ### Rename a recording {: #recorder-rename } -->
-### Renomeação de gravação {: #recorder-rename } 
+### Renomeação de gravação {: #recorder-rename }
 <!-- You can now rename a recording in the [Recorder](/docs/devtools/recorder/) panel with the edit button (pencil icon) next to the recording’s title. -->
 Agora você pode renomear uma gravação no painel [Gravador](/docs/devtools/gravador/) com o botão de edição (ícone de lápis) ao lado do título da gravação.
 
@@ -111,7 +111,7 @@ Issue relacionada: [1049947](https://crbug.com/1049947)
 
 
 <!-- ## Partially presented frames in the Performance panel {: #perf } -->
-## Quadros parcialmente apresentados no painel Desempenho {: #perf } 
+## Quadros parcialmente apresentados no painel Desempenho {: #perf }
 <!-- Performance recording now displays a new frame category "Partially presented frames" in the **Frames** timeline.  -->
 A gravação de desempenho agora exibe uma nova categoria de quadro "Quadros parcialmente apresentados" na linha do tempo **Frames**.
 <!-- Previously, the **Frames** timeline visualizes any frames with delayed main-thread work as "dropped frames". However, there are cases where some frames may still produce visual updates (e.g. scrolling) driven by the compositor thread. -->
@@ -136,10 +136,10 @@ Estas são algumas correções dignas de nota nesta versão:
 - Strings de agente do usuário do iPhone atualizadas para [dispositivos emulados](/docs/devtools/device-mode/#device). Todas as versões do iPhone após a 5 têm uma string user-agent com o iPhone OS 13_2_3. ([1289553](https://crbug.com/1289553))
 <!-- - You can now save [snippet](/docs/devtools/javascript/snippets/) as a JavaScript file directly. Previously, you needed to append `.js` file extension manually. ([1137218](https://crbug.com/1137218)) -->
 - Agora você pode salvar [snippet](/docs/devtools/javascript/snippets/) diretamente como um arquivo JavaScript. Anteriormente, você precisava anexar a extensão de arquivo `.js` manualmente. ([1137218](https://crbug.com/1137218))
-<!-- - The **Sources** panel now correctly displays scope variable names when debugging with sourcemap. Previously, the **Sources** panel displays minified scope variable names despite sourcemap being provided. ([1294682](https://crbug.com/1294682))  -->
-- O painel **Sources** agora exibe corretamente os nomes das variáveis de escopo ao depurar com o mapa de origem. Anteriormente, o painel **Sources** exibia nomes de variáveis de escopo reduzidos, apesar do sourcemap ser fornecido. ([1294682](https://crbug.com/1294682))
+<!-- - The **Sources** panel now correctly displays scope variable names when debugging with source map. Previously, the **Sources** panel displays minified scope variable names despite sourcemap being provided. ([1294682](https://crbug.com/1294682))  -->
+- O painel **Sources** agora exibe corretamente os nomes das variáveis de escopo ao depurar com o mapa de origem. Anteriormente, o painel **Sources** exibia nomes de variáveis de escopo reduzidos, apesar do source map ser fornecido. ([1294682](https://crbug.com/1294682))
 <!-- - The **Sources** panel now restores scroll position correctly on page load. Previously, the position was not restored correctly causing inconvenience in debugging. ([1294422](https://crbug.com/1294422))  -->
 - O painel **Sources** agora restaura a posição de rolagem corretamente no carregamento da página. Anteriormente, a posição não era restaurada corretamente causando transtornos na depuração. ([1294422](https://crbug.com/1294422))
 
-{% include 'partials/devtools/pt/reach-out.md' %}
-{% include 'partials/devtools/pt/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

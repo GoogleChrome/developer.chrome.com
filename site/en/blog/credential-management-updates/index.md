@@ -3,7 +3,7 @@ layout: 'layouts/blog-post.njk'
 title:  Latest updates to the credential management API
 description: >
      Latest updates to the credential management API
-authors: 
+authors:
   - agektmr
 date: 2017-06-12
 updated: 2018-03-14
@@ -18,12 +18,12 @@ Some of the updates described here are explained in the Google I/O session,
 ## Chrome 57
 
 Chrome 57 introduced this important change to the
-[Credential Management API](https://developers.google.com/web/fundamentals/security/credential-management).
+[Credential Management API](https://web.dev/security-credential-management/).
 
-### Credentials can be shared from a different subdomain 
+### Credentials can be shared from a different subdomain
 
 Chrome can now retrieve a credential stored in a different subdomain using the
-[Credential Management API](https://developers.google.com/web/fundamentals/security/credential-management).
+[Credential Management API](https://web.dev/security-credential-management/).
 For example, if a password is stored in `login.example.com`,
 a script on `www.example.com` can show it as one of account items in account chooser dialog.
 
@@ -48,7 +48,7 @@ is visible to `m.aliexpress.com` and available for the user to choose from:
 ## Chrome 60
 
 Chrome 60 introduces several important changes to the
-[Credential Management API](https://developers.google.com/web/fundamentals/security/credential-management):
+[Credential Management API](https://web.dev/security-credential-management/):
 
 * [`PasswordCredential` object now includes a password.](#password)
 
@@ -81,7 +81,7 @@ website on browsers supporting
 [WebAuthn](https://www.w3.org/TR/webauthn/)(PublicKeyCredential) but not all
 credential types (`PasswordCredential` and `FederatedCredential`) defined by the
 Credential Management API. [Learn
-more](https://developers.google.com/web/updates/2018/03/webauthn-credential-management).
+more](https://web.dev/webauthn-credential-management/).
 
 ### `PasswordCredential` object now includes password {: #password}
 
@@ -124,7 +124,7 @@ navigator.credentials.get({
         body: form
     });
     } else {
-    
+
     // Fallback to sign-in form
     }
 }).then(res => {

@@ -30,15 +30,10 @@ pagination:
     <id>{{ absolutePostUrl }}</id>
     {% if item.data.authors.length %}
       {% for authorId in item.data.authors %}
-      {% set author = postsData.authors[authorId] %}
+      {% set authorTitle = 'i18n.authors.' + authorId + '.title' %}
       <author>
-        <name>
-          {%- if author -%}
-            {{ author.title | i18n(locale) }}
-          {%- else -%}
-            {{ authorId }}
-          {%- endif -%}
-        </name>
+        <name>{{ authorTitle | i18n(locale) }}</name>
+        <uri>{{ site.url }}/authors/{{ authorId }}/</uri>
       </author>
       {% endfor %}
     {% else %}

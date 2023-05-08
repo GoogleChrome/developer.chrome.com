@@ -6,8 +6,14 @@ banner:
   action: 'Got it'
   type: 'info'
 ---
-
 {% extends 'layouts/base.njk' %}
+
+{% from 'macros/icon.njk' import icon with context %}
+
+{% block css %}
+{% InlineCss '/css/single-post.css' %}
+{% InlineCss '/css/styleguide.css' %}
+{% endblock %}
 
 {% block content %}
 <article class="stack wrapper type">
@@ -50,6 +56,11 @@ banner:
   {% endAside %}
 
   {% Aside 'gotchas' %}
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. In, culpa quas
+  ratione quidem inventore id.
+  {% endAside %}
+
+  {% Aside 'update' %}
   Lorem ipsum dolor sit amet consectetur adipisicing elit. In, culpa quas
   ratione quidem inventore id.
   {% endAside %}
@@ -404,6 +415,52 @@ line-height: 160%;
       </select>
     </p>
     <p>
+      <label for="example-enhanced-select">Enhanced select</label>
+
+      <enhanced-select>
+        <select name="example-enhanced-select">
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3" selected>Three</option>
+          <option value="4">Four</option>
+          <option value="5">Five</option>
+        </select>
+      </enhanced-select>
+    </p>
+
+    <p>
+      <label for="example-enhanced-select">Enhanced multi select</label>
+
+      <enhanced-select label="Select some items">
+        <select name="example-enhanced-select" multiple>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+          <option value="4">Four</option>
+          <option value="5">Five</option>
+        </select>
+      </enhanced-select>
+    </p>
+
+    <p>
+      <label for="example-enhanced-select">Enhanced select with fixed label</label>
+
+      <enhanced-select label="Label" fixedLabel>
+        <select name="example-enhanced-select">
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+          <option value="4">Four</option>
+          <option value="5">Five</option>
+          <option value="6">Six</option>
+          <option value="7">Seven</option>
+          <option value="8">Eight</option>
+          <option value="9">Nine</option>
+          <option value="10">Ten</option>
+        </select>
+      </enhanced-select>
+    </p>
+    <p>
       <label for="example-textarea">Example textarea</label>
       <textarea id="example-textarea" rows="3"></textarea>
     </p>
@@ -453,5 +510,100 @@ line-height: 160%;
     {% Img src='image/BrQidfK9jaQyIHwdw91aVpkPiib2/TDNgfhI9byR4eeGQ0Xxv.png', alt='Screenshot', height="302", width="770", class="screenshot screenshot--filled" %}
   </div>
 
+  {% set checkboxGroupI18n = {
+    reset: 'i18n.common.checkbox_group.reset'|i18n,
+    select_all: 'i18n.common.checkbox_group.select_all'|i18n
+  } %}
+  <checkbox-group show="4" i18n='{{ checkboxGroupI18n|dump|safe }}''>
+    <label><input type="checkbox" /> Option 1</label>
+    <label><input type="checkbox" /> Option 2</label>
+    <label><input type="checkbox" disabled /> Option 3</label>
+    <label><input type="checkbox" /> Option 4</label>
+    <label><input type="checkbox" /> Option 5</label>
+    <label><input type="checkbox" /> Option 6</label>
+    <label><input type="checkbox" /> Option 7</label>
+    <label><input type="checkbox" /> Option 8</label>
+    <label><input type="checkbox" /> Option 9</label>
+  </checkbox-group>
+
+  <div class="pad-500" style="background:rgba(0,0,0,0.48); height: 500px;">
+    <div class="filter-sheet display-flex direction-column">
+      <p class="filter-sheet__title type--xsmall weight-medium case-upper">
+        {{ 'i18n.common.filter_by' | i18n(locale) }}
+      </p>
+
+      <div class="filter-sheet__filters">
+        <section class="gap-bottom-500">
+          <p class="type--h5 weight-medium gap-bottom-200">Section</p>
+
+          <p><label><input type="checkbox" /> Option 1</label></p>
+
+          <p><label><input type="checkbox" /> Option 2</label></p>
+
+          <p><label><input type="checkbox" /> Option 3</label></p>
+        </section>
+
+        <section class="gap-bottom-500">
+          <p class="type--h5 weight-medium gap-bottom-200">Location</p>
+
+          <p><label><input type="checkbox" /> Option 1</label></p>
+
+          <p><label><input type="checkbox" /> Option 2</label></p>
+
+          <p><label><input type="checkbox" /> Option 3</label></p>
+        </section>
+
+        <section class="gap-bottom-500">
+          <p class="type--h5 weight-medium gap-bottom-200">Googler</p>
+
+          <p><label><input type="checkbox" /> Option 1</label></p>
+
+          <p><label><input type="checkbox" /> Option 2</label></p>
+
+          <p><label><input type="checkbox" /> Option 3</label></p>
+        </section>
+      </div>
+
+      <div
+        class="filter-sheet__buttons display-flex align-center justify-content-end"
+      >
+        <button class="material-button button-filled color-primary bg-white">
+          Sample button 1
+        </button>
+
+        <button class="material-button button-filled color-bg bg-primary">
+          Sample button 2
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="tag-pill-demo">
+    {% set tagPillListItems = [
+      {
+        "key": "googlers",
+        "value": "adamsilverstein"
+      },
+      {
+        "key": "locations",
+        "value": "Amsterdam, Netherlands"
+      },
+      {
+        "key": "topics",
+        "value": "Advanced Apps and Project Fugu"
+      }
+    ] %}
+
+    <p class="type--h4 gap-bottom-300">Tag pill list:</p>
+
+    <tag-pill-list class="gap-bottom-300" items='{{ tagPillListItems | dump | safe }}'></tag-pill-list>
+
+    <button>Add an item</button>
+  </div>
+
 </article>
+{% endblock %}
+
+{% block scripts %}
+  <script type="module" src="{{ helpers.hashForProd('/js/styleguide.js') }}"></script>
 {% endblock %}

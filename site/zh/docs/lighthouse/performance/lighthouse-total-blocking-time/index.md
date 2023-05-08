@@ -49,7 +49,7 @@ TBT 测量页面被阻止响应用户输入（例如鼠标点击、屏幕点击�
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## 如何提高您的 TBT 分数
 
@@ -62,7 +62,7 @@ TBT 测量页面被阻止响应用户输入（例如鼠标点击、屏幕点击�
 
 {% Aside %}在大多数网站上，通常有很大的空间改进不必要的 JavaScript 加载、解析或执行。 {% endAside %}
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## 资源
 

@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: Add an IFrame
-description: 'Add an IFrame to a post.'
+title: Add an iframe
+description: 'Add an iframe to a post.'
 date: 2020-11-23
 ---
 

@@ -21,7 +21,7 @@ date: 2020-05-06
 
 {% Aside 'caution' %} Lighthouse 不会检查指定为可屏蔽图标的图像。您需要手动验证图像是否显示良好。 {% endAside %}
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## 如何向 PWA 添加可屏蔽图标支持
 

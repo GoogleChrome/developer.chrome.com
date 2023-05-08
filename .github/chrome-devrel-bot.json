@@ -10,7 +10,11 @@
           "heyawhite",
           "jpmedley",
           "mihajlija",
-          "sofiayem"
+          "sofiayem",
+          "AaronForinton",
+          "anusmitaray",
+          "IanStanion-google",
+          "AmySteam"
         ],
         "paths" : [
           "site/**/*.md"
@@ -21,7 +25,7 @@
         "teams" : [],
         "users" : [
           "PaulKinlan",
-          "jeffposnick",
+          "matthiasrohmer",
           "devnook"
         ],
         "paths" : [
@@ -48,13 +52,25 @@
           "heyawhite",
           "jpmedley",
           "mihajlija",
-          "sofiayem"
+          "sofiayem",
+          "AaronForinton",
+          "matthiasrohmer"
         ],
         "paths" : [
           "site/_data/**.yml",
           "site/_data/**.yaml",
           "site/_data/**.json",
           "redirects.yaml"
+        ]
+      },
+      {
+        "check_name" : "Content (es) team approval",
+        "teams" : [],
+        "users" : [
+          "tropicadri"
+        ],
+        "paths" : [
+          "site/es/**/*.md"
         ]
       }
     ]

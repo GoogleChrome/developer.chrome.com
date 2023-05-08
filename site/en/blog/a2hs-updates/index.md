@@ -18,7 +18,7 @@ that goal.
 
 {% Aside %}
 Chrome 68 is out of beta. See the
-[Add to Home Screen](https://developers.google.com/web/fundamentals/app-install-banners/) docs for the
+[Add to Home Screen](https://web.dev/customize-install/) docs for the
 current behavior.
 {% endAside %}
 
@@ -131,7 +131,7 @@ towards creating a consistent experience across all platforms that includes
 an install button into the omnibox.
 
 
-## Triggering the add to home screen dialog 
+## Triggering the add to home screen dialog
 
 <figure class="float-left">
   {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/iunkMrPGl00ZXgv8mzuL.png", alt="Install button on a desktop progressive web app.", width="491", height="550", class="screenshot" %}

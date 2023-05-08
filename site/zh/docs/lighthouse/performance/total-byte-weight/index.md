@@ -18,7 +18,7 @@ updated: 2020-05-29
 
 根据 [HTTP Archive 上的数据](https://httparchive.org/reports/state-of-the-web?start=latest#bytesTotal)，网络有效负载的中位数在 1700 到 1900 KiB 之间。为了筛选出最高的有效负载，Lighthouse 会标记总网络请求超过 5000 KiB 的页面。
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## 如何减少有效负载大小
 

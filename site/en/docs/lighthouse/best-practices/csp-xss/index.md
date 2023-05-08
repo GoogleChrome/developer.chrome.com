@@ -7,7 +7,7 @@ date: 2021-06-16
 #updated: 2021-06-02
 ---
 
-A Content Security Policy (CSP) helps to ensure any content loaded in the page is trusted by the site owner. CSPs mitigate cross-site scripting (XSS) attacks because they can block unsafe scripts injected by attackers. However, the CSP can easily be bypassed if it is not strict enough.  Check out [Mitigate cross-site scripting (XSS) with a strict Content Security Policy (CSP)](https://web.dev/strict-csp/) for more information. Lighthouse collects CSPs enforced on the main document, and reports issues from [CSP Evaluator](https://csp-evaluator.withgoogle.com/) if they can be bypassed.
+A Content Security Policy (CSP) helps to ensure any content loaded in the page is trusted by the site owner. CSPs mitigate cross-site scripting (XSS) attacks because they can block unsafe scripts injected by attackers. However, the CSP can easily be bypassed if it is not strict enough. Check out [Mitigate cross-site scripting (XSS) with a strict Content Security Policy (CSP)](https://web.dev/strict-csp/) for more information. Lighthouse collects CSPs enforced on the main document, and reports issues from [CSP Evaluator](https://csp-evaluator.withgoogle.com/) if they can be bypassed.
 
 <figure>
 {% Img src="image/9B7J9oWjgsWbuE84mmxDaY37Wpw2/EFTWlPiCrPOn6ETCRiGr.png",
@@ -56,7 +56,7 @@ Implement the following practices for added security and compatibility. If the C
 
 ### Configure CSP reporting
 
-[Configuring a reporting destination](https://developers.google.com/web/updates/2018/09/reportingapi) will help monitor for any breakages. You can set the reporting destination by using the `report-uri` or `report-to` directives. `report-to` is not currently supported by all modern browsers so it is recommended to use both or just `report-uri`.
+[Configuring a reporting destination](/articles/reporting-api/) will help monitor for any breakages. You can set the reporting destination by using the `report-uri` or `report-to` directives. `report-to` is not currently supported by all modern browsers so it is recommended to use both or just `report-uri`.
 
 If any content violates the CSP, the browser will send a report to the configured destination. Make sure you have an application configured at this destination handling these reports.
 

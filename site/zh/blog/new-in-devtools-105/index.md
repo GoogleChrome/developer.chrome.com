@@ -1,4 +1,4 @@
----	
+---
 layout: "layouts/blog-post.njk"
 title: "DevTools 新功能（Chrome 105）"
 authors:
@@ -17,7 +17,7 @@ tags:
 
 *感谢 [Poong Zui Yong](https://www.linkedin.com/in/zui-yong-poong-1b507b14/) 提供的翻译*。
 
-{% include 'partials/devtools/zh/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 {% YouTube id='bHw_56RiVsg' %}
 
 <!-- start: translation instructions -->
@@ -123,7 +123,7 @@ Chromium 议题: [1313690](https://crbug.com/1313690)
 
 <!-- ## Attach Wasm debugging information at runtime {: #wasm } -->
 ## 在运行时附加 Wasm 调试信息 {: #wasm }
-<!-- You can now attach DWARF debugging information for wasm during runtime. Previously, the **Sources** panel only supported attaching sourcemaps to JavaScript and Wasm files. -->
+<!-- You can now attach DWARF debugging information for wasm during runtime. Previously, the **Sources** panel only supported attaching source maps to JavaScript and Wasm files. -->
 您现在可以在运行时为 wasm 附加 DWARF 调试信息。 之前，**Sources** 面板仅支持将源映射附加到 JavaScript 和 Wasm 文件。
 <!-- Open a Wasm file in the **Sources** panel. Right-click in the editor and select **Add DWARF debugging info…**  to attach debugging information on demand.  -->
 在 **Sources** 面板中打开一个 Wasm 文件。 在编辑器中右键单击并选择 **Add DWARF debugging info…** 以按需附加调试信息。
@@ -173,14 +173,14 @@ CSS `@scope` 目前正在开发中。 要测试此功能，请通过 `chrome://f
 Chromium 议题: [1337777](https://crbug.com/1337777)
 
 
-<!-- ## Sourcemap improvements {: #sourcemaps } -->
-## Sourcemap 改进 {: #sourcemaps }
-<!-- Here are a few fixes on sourcemaps to improve the overall debugging experience: -->
-以下是对 sourcemaps 的一些修复，以改善整体调试体验：
-<!-- - DevTools now properly resolves sourcemap identifiers with punctuation. Some modern minifiers (for example, [esbuild](https://esbuild.github.io/)) produce sourcemaps that merge identifiers with subsequent punctuation (comma, parentheses, semicolon).  -->
-DevTools 现在可以正确解析带有标点符号的 sourcemaps 标识符。 一些现代缩小器（例如，[esbuild](https://esbuild.github.io/)） 生成 sourcemaps 时将标识符与后续标点符号（逗号、括号、分号）合并。
-<!-- - DevTools now resolves sourcemap names for constructors with a `super` call. -->
-DevTools 现在使用 `super` 调用解析构造函数的 sourcemap 名称。
+<!-- ## Source map improvements {: #sourcemaps } -->
+## Source map 改进 {: #sourcemaps }
+<!-- Here are a few fixes on source maps to improve the overall debugging experience: -->
+以下是对 source maps 的一些修复，以改善整体调试体验：
+<!-- - DevTools now properly resolves source map identifiers with punctuation. Some modern minifiers (for example, [esbuild](https://esbuild.github.io/)) produce sourcemaps that merge identifiers with subsequent punctuation (comma, parentheses, semicolon).  -->
+DevTools 现在可以正确解析带有标点符号的 source maps 标识符。 一些现代缩小器（例如，[esbuild](https://esbuild.github.io/)） 生成 sourcemaps 时将标识符与后续标点符号（逗号、括号、分号）合并。
+<!-- - DevTools now resolves source map names for constructors with a `super` call. -->
+DevTools 现在使用 `super` 调用解析构造函数的 source map 名称。
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/6djFfkrtPzXuNYq5m8Vk.png", alt="ALT_TEXT_HERE", width="800", height="441" %}
 <!-- - Fixed source map URL indexing for duplicate canonical URLs. Previously, breakpoints were not activated in some files because of duplicate canonical URLs. -->
 修复了重复的规范 URL 的 source map URL 索引。 以前，由于重复的规范 URL ,在某些文件中没有激活断点。
@@ -201,5 +201,5 @@ Chromium 议题: [1335338](https://crbug.com/1335338), [1333411](https://crbug.c
 <!-- - A new **Creator Ad Script** link is available for [ad frames](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker) if DevTools found the script that caused the frame to be labeled as an ad. You can open a frame via **Application** > **Frames**. ([1217041](https://crbug.com/1217041)) -->
 - [广告框架] (https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker)里新增 **Creator Ad Script** 链接。 当 DevTools 搜索到了导致框架被标记为广告的脚本时，您可以通过 **Application** > **Frames** 打开框架。 ([1217041](https://crbug.com/1217041))
 
-{% include 'partials/devtools/zh/reach-out.md' %}
-{% include 'partials/devtools/zh/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

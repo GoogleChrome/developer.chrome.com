@@ -6,6 +6,8 @@ updated: 2018-05-14
 description: Reference documentation for the web_accessible_resources property of manifest.json.
 ---
 
+{% Partial 'extensions/mv2-legacy-page.md' %}
+
 An array of strings specifying the paths of packaged resources that are expected to be usable in the
 context of a web page. These paths are relative to the package root, and may contain wildcards. For
 example, an extension that injects a content script with the intention of building up some custom

@@ -82,7 +82,7 @@ generateSW({
 }).then(({count, size, warnings}) => {
   if (warnings.length > 0) {
     console.warn(
-      'Warnings encountered while generating a service worker:'
+      'Warnings encountered while generating a service worker:',
       warnings.join('\n')
     );
   }
@@ -115,7 +115,7 @@ injectManifest({
 }).then(({count, size, warnings}) => {
   if (warnings.length > 0) {
     console.warn(
-      'Warnings encountered while injecting the manifest:'
+      'Warnings encountered while injecting the manifest:',
       warnings.join('\n')
     );
   }
@@ -152,7 +152,7 @@ getManifest({
 }).then(({manifestEntries, count, size, warnings}) => {
   if (warnings.length > 0) {
     console.warn(
-      'Warnings encountered while getting the manifest:'
+      'Warnings encountered while getting the manifest:',
       warnings.join('\n')
     );
   }

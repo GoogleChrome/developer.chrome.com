@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Inspect CSS grid"
+title: "Inspect CSS grid layouts"
 authors:
   - jecelynyeen
   - sofiayem

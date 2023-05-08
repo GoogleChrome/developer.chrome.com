@@ -86,7 +86,7 @@ Chrome で API を試している方は、**現在**実装されているすべ�
 - イベントレベルのレポート、クリックのみ:
 
     - [ライブ デモ](https://goo.gle/sppi-devrel-eventlevel)。
-    - このデモの[ソース コード](https://github.com/GoogleChromeLabs/trust-safety-demo/tree/main/conversion-measurement)。必要に応じて[フォークしてカスタマイズできます。](https://github.com/GoogleChromeLabs/trust-safety-demo/tree/main/conversion-measurement#fork-and-customize)
+    - このデモの[ソース コード](https://github.com/GoogleChromeLabs/trust-safety-demo/tree/main/attribution-reporting)。必要に応じて[フォークしてカスタマイズできます。](https://github.com/GoogleChromeLabs/trust-safety-demo/tree/main/attribution-reporting#fork-and-customize)
 
 ## ユース ケースと機能
 

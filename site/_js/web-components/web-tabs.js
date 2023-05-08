@@ -31,7 +31,7 @@ export class WebTabs extends BaseElement {
   connectedCallback() {
     super.connectedCallback();
     this._id = `tabs-${generateIdSalt('tabs-')}`;
-    this._selected = 0;
+    this._selected = this._getSelectedTabIndex();
   }
 
   onSelect(e) {
@@ -88,9 +88,36 @@ export class WebTabs extends BaseElement {
     });
   }
 
+  _getSelectedTabIndex() {
+    const hash = window.location.hash;
+
+    if (!hash) {
+      return 0;
+    }
+
+    const targetElement = this.querySelector(hash);
+
+    if (!targetElement) {
+      return 0;
+    }
+
+    const tab = targetElement.closest('web-tab');
+
+    if (!tab) {
+      return 0;
+    }
+
+    return Array.from(this.children).indexOf(tab);
+  }
+
   render() {
+    if ('resolved' in this.dataset) {
+      return Array.from(this.children);
+    }
+
     this._tabPanels = Array.from(this.children);
     const tabs = this._formatTabs();
+
     return html`
       <div role="tablist">${tabs}</div>
       ${this._tabPanels}

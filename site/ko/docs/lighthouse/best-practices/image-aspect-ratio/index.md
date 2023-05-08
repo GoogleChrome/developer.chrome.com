@@ -21,7 +21,7 @@ updated: 2020-04-29
 - 이미지가 원본 이미지의 크기와 다른 명시적 너비 및 높이 값으로 설정됩니다.
 - 이미지가 가변 크기 컨테이너의 백분율 너비와 높이로 설정됩니다.
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## 이미지가 올바른 종횡비로 표시되는지 확인하기
 

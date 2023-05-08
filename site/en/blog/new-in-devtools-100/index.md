@@ -16,7 +16,7 @@ tags:
 
 <!-- image/dPDCek3EhZgLQPGtEG3y0fTn4v82/dzxqvpHgEBlwfnfW0osP.jpg -->
 
-{% include 'partials/devtools/en/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='DAD72grzDDc' %}
 
@@ -32,7 +32,7 @@ As usual, you can watch the latest [What’s New in DevTools video](https://goo.
 ## View and edit @supports at rules in the Styles pane {: #supports }
 
 You can now view and edit the CSS `@supports` at-rules in the **Styles** pane. These changes make it easier to experiment with the at-rules in real time.
-Open this [demo page](https://jec.fyi/demo/at-support), [inspect](/docs/devtools/dom/#inspect) the `<div class=”box”>` element, view the `@supports` at-rules in the **Styles** pane. Click on the rule’s declaration to edit it. 
+Open this [demo page](https://jec.fyi/demo/at-support), [inspect](/docs/devtools/dom/#inspect) the `<div class=”box”>` element, view the `@supports` at-rules in the **Styles** pane. Click on the rule’s declaration to edit it.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/vnokX5Hswmbvlb5weusO.png", alt="View and edit @supports at rules", width="800", height="502" %}
 
@@ -55,7 +55,7 @@ When determining an unique selector during recording, the [Recorder](/docs/devto
 - data-qa-id
 - data-testing
 
-The attributes above are common selectors used in test automation. 
+The attributes above are common selectors used in test automation.
 
 For example, [start a new recording](/docs/devtools/recorder/#record) with this [demo page](https://jec.fyi/demo/recorder). Fill in an email address and observe the selector value.
 
@@ -96,11 +96,11 @@ Chromium issue: [1049947](https://crbug.com/1049947)
 
 ## Partially presented frames in the Performance panel {: #perf }
 
-Performance recording now displays a new frame category "Partially presented frames" in the **Frames** timeline. 
+Performance recording now displays a new frame category "Partially presented frames" in the **Frames** timeline.
 
 Previously, the **Frames** timeline visualizes any frames with delayed main-thread work as "dropped frames". However, there are cases where some frames may still produce visual updates (e.g. scrolling) driven by the compositor thread.
 
-This leads to user confusion because the screenshots of these “Dropped frames” are still reflecting visual updates. 
+This leads to user confusion because the screenshots of these “Dropped frames” are still reflecting visual updates.
 
 The new "Partially presented frames" aims to indicate more intuitively that although some content is not presented timely in the frame, but the issue is not so severe as to block visual updates altogether.
 
@@ -117,9 +117,9 @@ These are some noteworthy fixes in this release:
 
 - Updated iPhone user agent strings for [emulated devices](/docs/devtools/device-mode/#device). All iPhone versions after 5 have a user-agent string with iPhone OS 13_2_3. ([1289553](https://crbug.com/1289553))
 - You can now save [snippet](/docs/devtools/javascript/snippets/) as a JavaScript file directly. Previously, you needed to append `.js` file extension manually. ([1137218](https://crbug.com/1137218))
-- The **Sources** panel now correctly displays scope variable names when debugging with sourcemap. Previously, the **Sources** panel displays minified scope variable names despite sourcemap being provided. ([1294682](https://crbug.com/1294682)) 
-- The **Sources** panel now restores scroll position correctly on page load. Previously, the position was not restored correctly causing inconvenience in debugging. ([1294422](https://crbug.com/1294422)) 
+- The **Sources** panel now correctly displays scope variable names when debugging with source map. Previously, the **Sources** panel displays minified scope variable names despite source map being provided. ([1294682](https://crbug.com/1294682))
+- The **Sources** panel now restores scroll position correctly on page load. Previously, the position was not restored correctly causing inconvenience in debugging. ([1294422](https://crbug.com/1294422))
 
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

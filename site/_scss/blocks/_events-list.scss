@@ -1,0 +1,63 @@
+.events-list {
+  @include media-query('lg') {
+    margin-top: get-size(600);
+  }
+
+  &[data-active-filters] {
+    margin-top: calc(#{get-size(200)} - 1px);
+
+    .events-list__selected-filters {
+      margin-bottom: calc(#{get-size(200)} - 1px);
+    }
+  }
+
+  [role=tab] {
+    cursor: pointer;
+    font-family: #{$font-google-sans};
+    font-size: 1.125rem;
+    font-weight: 500;
+    padding: 0 get-size(300);
+
+    @include media-query('lg') {
+      flex: 0 0 auto;
+      font-size: 2rem;
+      height: auto;
+    }
+
+    &[aria-selected='true'] {
+      color: get-color('grey-900');
+      cursor: initial;
+    }
+  }
+
+  [role=tablist] {
+    margin-bottom: get-size(400);
+
+    @include media-query('lg') {
+      display: inline-flex;
+      width: auto;
+    }
+  }
+
+  .load-more__button {
+    margin-top: var(--flow-space);
+  }
+
+  .load-more__items {
+    display: grid;
+    gap: get-size(400);
+  }
+}
+
+.mobile-filters-btn {
+  @include media-query('lg') {
+    display: none;
+  }
+
+  &.tag-pill {
+    .icon {
+      margin-left: 0;
+      margin-right: get-size(200);
+    }
+  }
+}

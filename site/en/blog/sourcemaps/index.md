@@ -5,29 +5,37 @@ authors:
   - ryanseddon
 date: 2012-03-21
 #updated: 2013-10-29
+is_outdated: true
+new_available_content_url: https://web.dev/source-maps/
 ---
 
-p>Have you ever found yourself wishing you could keep your client-side code readable and more importantly debuggable even after you've combined and minified it, without impacting performance? Well now you can through the magic of [source maps](https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k/edit?hl=en_US&amp;pli=1&amp;pli=1).
+{% Aside 'warning' %}
+[Source map specification](https://bit.ly/sourcemap) has been updated and this article is no longer up to date. Refer to [What are source maps?](https://web.dev/source-maps) for the latest information.
+{% endAside %}
 
-Basically it's a way to map a combined/minified file back to an unbuilt state. When you build for production, along with minifying and combining your JavaScript files, you generate a source map which holds information about your original files. When you query a certain line and column number in your generated JavaScript you can do a lookup in the source map which returns the original location. Developer tools (currently WebKit nightly builds, Google Chrome, or Firefox 23+) can parse the source map automatically and make it appear as though you're running unminified and uncombined files.
+Have you ever wished you could keep your client-side code readable and more importantly debuggable even after you've combined and minified it, without impacting performance? Well now you can through the magic of [source maps](https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k/edit?hl=en_US&amp;pli=1&amp;pli=1).
 
-[Demo: Get original location](http://www.thecssninja.com/demo/source_mapping/)
+Source maps are a way to map a combined/minified file back to an unbuilt state. When you build for production, along with minifying and combining your JavaScript files, you generate a source map which holds information about your original files. When you query a certain line and column number in your generated JavaScript you can do a lookup in the source map which returns the original location. Developer tools (currently WebKit nightly builds, Google Chrome, or Firefox 23+) can parse the source map automatically and make it appear as though you're running unminified and uncombined files.
 
-The above demo allows you to right click anywhere in the textarea containing the generated source. Select "Get original location" will query the source map by passing in the generated line and column number, and return the position in the original code. Make sure your console is open so you can see the output.
+{% Aside 'codelab' %}
+Demo: [Get original location](http://www.thecssninja.com/demo/source_mapping/).
+{% endAside %}
+
+The demo allows you to right click anywhere in the textarea containing the generated source. Select "Get original location" will query the source map by passing in the generated line and column number, and return the position in the original code. Make sure your console is open so you can see the output.
 
 <figure>
-{% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/qhQfTJG9LNTum6qH5lDT.png", alt="xample of the Mozilla JavaScript source map library in action", width="609", height="155" %}
+{% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/qhQfTJG9LNTum6qH5lDT.png", alt="Example of the Mozilla JavaScript source map library in action.", width="609", height="155" %}
 </figure>
 
 ## Real world
 
-Before you view the following real world implementation of Source Maps make sure you've enabled the source maps feature in either Chrome Canary or WebKit nightly by clicking the settings cog in the dev tools panel and checking the "Enable source maps" option. See screenshot below.
+Before you view the following real world implementation of Source Maps make sure you've enabled the source maps feature in either Chrome Canary or WebKit nightly by clicking the settings cog in the dev tools panel and checking the "Enable source maps" option.
 
 <figure>
 {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/EVrHHO6vHUsmYUlO2lWX.png", alt="How to enable source maps in WebKit dev tools.", width="609", height="232" %}
 </figure>
 
-Firefox 23+ has source maps enabled by default in the built in dev tools. See screenshot below.
+Firefox 23+ has source maps enabled by default in the built in dev tools.
 
 <figure>
 {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/zBVmQq2jpigsAanmtWA2.png", alt="How to enable source maps in Firefox dev tools.", width="609", height="224" %}
@@ -48,21 +56,26 @@ Take a look at this screencast of CoffeeScript being debugged in an experimental
 
 {% YouTube id="2aQw1dSIYko", startTime="625" %}
 
-The Google Web Toolkit (GWT) has recently added [support for Source Maps](http://code.google.com/p/google-web-toolkit/wiki/SourceMaps) and Ray Cromwell of the GWT team did an awesome screencast showing source map support in action.
+The Google Web Toolkit (GWT) has recently added [support for Source Maps](http://code.google.com/p/google-web-toolkit/wiki/SourceMaps).
+Ray Cromwell of the GWT team did an awesome screencast showing source map support in action.
 
 {% YouTube id="-xJl22Kvgjg" %}
 
-Another example I've put together uses Google's [Traceur](http://code.google.com/p/traceur-compiler/) library which allows you to write ES6 (ECMAScript 6 or Next) and compile it to ES3 compatible code. The Traceur compiler also generates a source map. Take a look at this [demo](http://www.thecssninja.com/demo/source_mapping/ES6/) of ES6 traits and classes being used like they're supported natively in the browser, thanks to the source map. The textarea in the demo also allows you to write ES6 which will be compiled on the fly and generate a source map plus the equivalent ES3 code.
+Another example I've put together uses Google's [Traceur](http://code.google.com/p/traceur-compiler/) library which allows you to write ES6 (ECMAScript 6 or Next) and compile it to ES3 compatible code. The Traceur compiler also generates a source map. Take a look at this [demo](http://www.thecssninja.com/demo/source_mapping/ES6/) of ES6 traits and classes being used like they're supported natively in the browser, thanks to the source map.
+
+The textarea in the demo also allows you to write ES6 which will be compiled on the fly and generate a source map plus the equivalent ES3 code.
 
 <figure>
-{% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/JAzGjkmTopkHZXIoTzyf.png", alt="Traceur ES6 debugging using source maps", width="609", height="263" %}
+{% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/JAzGjkmTopkHZXIoTzyf.png", alt="Traceur ES6 debugging using source maps.", width="609", height="263" %}
 </figure>
 
 [Demo: Write ES6, debug it, view source mapping in action](http://www.thecssninja.com/demo/source_mapping/ES6/)
 
 ## How does the source map work?
 
-The only JavaScript compiler/minifier that has support, at the moment, for source map generation is the Closure compiler. (I'll explain how to use it later.) Once you've combined and minified your JavaScript, alongside it will exist a sourcemap file. Currently, the Closure compiler doesn't add the special comment at the end that is required to signify to a browsers dev tools that a source map is available:
+The only JavaScript compiler/minifier that has support, at the moment, for source map generation is the Closure compiler. (I'll explain how to use it later.) Once you've combined and minified your JavaScript, alongside it will exist a source map file.
+
+Currently, the Closure compiler doesn't add the special comment at the end that is required to signify to a browsers dev tools that a source map is available:
 
 
 ```js
@@ -87,7 +100,7 @@ The source map file will only be downloaded if you have source maps enabled and 
 
 ## How do I generate a source map?
 
-Like I mentioned above you'll need to use the [Closure compiler](https://developers.google.com/closure/compiler/) to minify, concat and generate a source map for your JavaScript files. The command is as follows:
+You'll need to use the [Closure compiler](https://developers.google.com/closure/compiler/) to minify, concat and generate a source map for your JavaScript files. The command is as follows:
 
 ```shell
 java -jar compiler.jar \
@@ -101,7 +114,7 @@ The two important command flags are `--create_source_map` and `--source_map_form
 
 ## The anatomy of a source map
 
-In order to better understand a source map we'll take a small example of a source map file that would be generated by the Closure compiler and dive into more detail on how the "mappings" section works. The following example is a slight variation from the [V3 spec](https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k/edit?hl=en_US&amp;pli=1&amp;pli=1)example.
+To better understand a source map, we'll take a small example of a source map file that would be generated by the Closure compiler and dive into more detail on how the "mappings" section works. The following example is a slight variation from the [V3 spec](https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k/edit?hl=en_US&amp;pli=1&amp;pli=1) example.
 
 ```json
 {
@@ -123,26 +136,27 @@ Above you can see that a source map is an object literal containing lots of juic
 - names contains all variable/method names that appear throughout your code.
 - Lastly the mappings property is where the magic happens using Base64 VLQ values. The real space saving is done here.
 
-
 ## Base64 VLQ and keeping the source map small
 
-Originally the source map spec had a very verbose output of all the mappings and resulted in the sourcemap being about 10 times the size of the generated code. Version two reduced that by around 50% and version three reduced it again by another 50%, so for a 133kB file you end up with a ~300kB source map. So how did they reduce the size while still maintaining the complex mappings?
+Originally, the source map spec had a very verbose output of all the mappings and resulted in the source map being about 10 times the size of the generated code. Version two reduced that by around 50% and version three reduced it again by another 50%, so for a 133kB file you end up with a ~300kB source map.
+
+So how did they reduce the size while still maintaining the complex mappings?
 
 [VLQ](http://en.wikipedia.org/wiki/Variable-length_quantity) (Variable Length Quantity) is used along with encoding the value into a Base64 value. The mappings property is a super big string. Within this string are semicolons (;) that represent a line number within the generated file. Within each line there are commas (,) that represent each segment within that line. Each of these segments is either 1, 4 or 5 in variable length fields. Some may appear longer but these contain continuation bits. Each segment builds upon the previous, which helps reduce the file size as each bit is relative to its previous segments.
 
 <figure>
-{% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/s9OBEzuUo3o5HLyKsnc7.png", alt="Break down of a segment within the source map JSON file", width="609", height="300" %}
+{% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/s9OBEzuUo3o5HLyKsnc7.png", alt="Breakdown of a segment within the source map JSON file.", width="609", height="300" %}
 </figure>
 
-Like I mentioned above each segment can be 1, 4 or 5 in variable length. This diagram is considered a variable length of four with one continuation bit (g). We'll break down this segment and show you how the source map works out the original location. The values shown above are purely the Base64 decoded values, there is some more processing to get their true values. Each segment usually works out five things:
+As mentioned above, each segment can be 1, 4 or 5 in variable length. This diagram is considered a variable length of four with one continuation bit (g). We'll break down this segment and show you how the source map works out the original location.
 
+The values shown above are purely the Base64 decoded values, there is some more processing to get their true values. Each segment usually works out five things:
 
 - Generated column
 - Original file this appeared in
 - Original line number
-- Original column 
-- And if available original name. 
-
+- Original column
+- And, if available, original name
 
 Not every segment has a name, method name or argument, so segments throughout will switch between four and five variable length. The g value in the segment diagram above is what's called a continuation bit this allows for further optimisation in the Base64 VLQ decoding stage. A continuation bit allows you to build on a segment value so you can store big numbers without having to store a big number, a very clever space saving technique that has its roots in the midi format.
 
@@ -150,7 +164,7 @@ The above diagram `AAgBC` once processed further would return 0, 0, 32, 16, 1 - 
 
 To show how the segments get decoded I will be referencing Mozilla's [Source Map JavaScript library](https://github.com/mozilla/source-map/). You can also look at the WebKit dev tools [source mapping code](http://code.google.com/codesearch#OAMlx_jo-ck/src/third_party/WebKit/Source/WebCore/inspector/front-end/CompilerSourceMapping.js), also written in JavaScript.
 
-In order to properly understand how we get the value 16 from B we need to have a basic understanding of bitwise operators and how the spec works for source mapping. The preceding digit, g, gets flagged as a continuation bit by comparing the digit (32) and the [VLQ_CONTINUATION_BIT](https://github.com/mozilla/source-map/blob/master/lib/source-map/base64-vlq.js#L32)</a> (binary 100000 or 32) by using the bitwise AND (&) operator.
+To properly understand how we get the value 16 from B, we need to have a basic understanding of bitwise operators and how the spec works for source mapping. The preceding digit, g, gets flagged as a continuation bit by comparing the digit (32) and the [VLQ_CONTINUATION_BIT](https://github.com/mozilla/source-map/blob/master/lib/source-map/base64-vlq.js#L32)</a> (binary 100000 or 32) by using the bitwise AND (&) operator.
 
 ```js
 32 & 32 = 32
@@ -190,7 +204,7 @@ So there we have it: that is how you turn 1 into 16. This may seem an over compl
 
 ## Potential XSSI issues
 
-The spec mentions cross site script inclusion issues that could arise from the consumption of a source map. To mitigate this it's recommended that you prepend the first line of your source map with "`)]}`" to deliberately invalidate JavaScript so a syntax error will be thrown. The WebKit dev tools can handle this already.
+The spec mentions cross site script inclusion issues that could arise from the consumption of a source map. To mitigate this, it's recommended that you prepend the first line of your source map with "`)]}`" to deliberately invalidate JavaScript so a syntax error will be thrown. The WebKit dev tools can handle this already.
 
 ```js
 if (response.slice(0, 3) === ")]}") {
@@ -218,7 +232,9 @@ The first helper looks very similar to the `//# sourceMappingURL` property and i
 
 The other helper allows you to name anonymous functions by using the `displayName` property available on the current context of the anonymous function. Profile the [following demo](http://www.thecssninja.com/demo/source_mapping/displayName.html) to see the `displayName` property in action.
 
+{% Aside 'codelab' %}
 [Demo: Named anon functions via displayName (Webkit Nightly only)](http://www.thecssninja.com/demo/source_mapping/displayName.html)
+{% endAside %}
 
 ```js
 btns[0].addEventListener("click", function(e) {
@@ -233,7 +249,7 @@ btns[0].addEventListener("click", function(e) {
 ```
 
 <figure>
-{% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/SIuBvK0nTE33cm3yYChS.png", alt="Example showing the displayName property in action", width="611", height="149" %}
+{% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/SIuBvK0nTE33cm3yYChS.png", alt="Showing the displayName property in action.", width="611", height="149" %}
 </figure>
 
 When profiling your code within the dev tools the `displayName` property will be shown rather than something like `(anonymous)`. However displayName is pretty much dead in the water and won't be making it into Chrome. But all hope isn't lost and a much better proposal has been suggested called [debugName](http://code.google.com/p/chromium/issues/detail?id=116220).
@@ -252,7 +268,7 @@ The more tools available to us that can generate a source maps the better off we
 
 ## It's not perfect
 
-One thing Source Maps doesn't cater for right now is watch expressions. The problem is that trying to inspect an argument or variable name within the current execution context won't return anything as it doesn't really exist. This would require some sort of reverse mapping to lookup the real name of the argument/variable you wish to inspect compared to the actual argument/variable name in your compiled JavaScript.
+One thing source maps doesn't cater for right now is watch expressions. The problem is that trying to inspect an argument or variable name within the current execution context won't return anything as it doesn't really exist. This would require some sort of reverse mapping to lookup the real name of the argument/variable you wish to inspect compared to the actual argument/variable name in your compiled JavaScript.
 
 This of course is a solvable problem and with more attention on source maps we can start seeing some amazing features and better stability.
 
@@ -266,7 +282,6 @@ This has since [been addressed](https://groups.google.com/forum/#!topic/mozilla.
 
 Here's some further resources and tools you should check out:
 
-
 - Nick Fitzgerald has a fork of [UglifyJS](https://github.com/fitzgen/UglifyJS/tree/source-maps) with source map support
 - Paul Irish has a handy little [demo](http://dl.dropbox.com/u/39519/sourcemapapp/index.html) showing off source maps
 - Check out the WebKit changeset of when this [dropped](http://trac.webkit.org/changeset/103541)
@@ -277,5 +292,6 @@ Here's some further resources and tools you should check out:
 - You can check out the [Closure Compilers source](http://code.google.com/p/closure-compiler/source/browse/trunk/src/com/google/debugging/sourcemap/SourceMapGeneratorV3.java) for creating source maps
 - There are some screenshots and talk of support for [GWT source maps](https://plus.google.com/110412141990454266397/posts/iqXo5AyHkyd)
 
+Source maps are a very powerful utility in a developer's tool set. It's super useful to be able to keep your web app lean but easily debuggable. It's also a very powerful learning tool for newer developers to see how experienced devs structure and write their apps without having to wade through unreadable minified code.
 
-Source maps are a very powerful utility in a developer's tool set. It's super useful to be able to keep your web app lean but easily debuggable. It's also a very powerful learning tool for newer developers to see how experienced devs structure and write their apps without having to wade through unreadable minified code. What are you waiting for? Start generating source maps for all projects now!
+What are you waiting for? Start generating source maps for all projects now!

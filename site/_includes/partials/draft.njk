@@ -1,6 +1,5 @@
 {% if draft %}
   <div class="aside aside--warning">
-    This page is a draft and will not be published with the rest of
-    the site.
+    {{ 'i18n.common.draft_warning' | i18n(locale) }}
   </div>
 {% endif %}

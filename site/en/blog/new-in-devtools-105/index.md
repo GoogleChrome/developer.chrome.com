@@ -14,7 +14,7 @@ tags:
   - chrome-105
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='bHw_56RiVsg' %}
 
@@ -35,11 +35,11 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 
 ## Support mouse over event in the Recorder panel {: #recorder-hover }
 
-The **Recorder** now supports adding a mouse over (hover) step manually in a recording. 
+The **Recorder** now supports adding a mouse over (hover) step manually in a recording.
 
 [This demo](https://jec.fyi/demo/menu-hover) shows a pop up menu on hover. Try to record a user flow and click a menu item.
 
-If you replay the user flow now, it will fail because the **Recorder** doesn’t capture mouse over events automatically during recording. To resolve this, [add a step manually](/docs/devtools/recorder/reference/#add-and-remove-steps) to hover over the selector before clicking the menu item. 
+If you replay the user flow now, it will fail because the **Recorder** doesn’t capture mouse over events automatically during recording. To resolve this, [add a step manually](/docs/devtools/recorder/reference/#add-and-remove-steps) to hover over the selector before clicking the menu item.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GY1ZkqEU3zbGmhEKoblN.png", alt="Support mouse over event in the Recorder", width="800", height="488" %}
 
@@ -65,7 +65,7 @@ The **Performance insights** panel now detects [flash of invisible text (FOIT) a
 
 To view the potential root causes of a layout shift, click on a screenshot in the **Layout shifts** track.
 
-See [Optimize WebFont loading and rendering](https://web.dev/optimize-webfont-loading/) to learn the technique to prevent layout shifts. 
+See [Optimize WebFont loading and rendering](https://web.dev/optimize-webfont-loading/) to learn the technique to prevent layout shifts.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AMN5oD5hlKhPhnq98sIB.png", alt="FOUT in the Performance insights panel", width="800", height="497" %}
 
@@ -80,7 +80,7 @@ The URL protocol handler registration lets installed PWAs handle links that use 
 
 Navigate to the **Protocol Handlers** section via the **Application** > **Manifest** pane. You can view and test all the available protocols here.
 
-For example, install [this demo PWA](https://protocol-handler.glitch.me/). In the **Protocol Handlers** section, type “americano” and click **Test protocol** to open the coffee page in the PWA. 
+For example, install [this demo PWA](https://protocol-handler.glitch.me/). In the **Protocol Handlers** section, type “americano” and click **Test protocol** to open the coffee page in the PWA.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/DuH2YwkYGPpYjnUKln8m.png", alt="Protocol handlers in the Manifest pane", width="800", height="402" %}
 
@@ -92,13 +92,13 @@ Chromium issues: [1300613](https://crbug.com/1300613)
 
 ## Top layer badge in the Elements panel {: #top-layer }
 
-Use the [top layer badge](/blog/top-layer-devtools/#top-layer-support-design-in-devtools) to understand the concept of the top layer and visualize how the top layer content changes. 
+Use the [top layer badge](/blog/top-layer-devtools/#top-layer-support-design-in-devtools) to understand the concept of the top layer and visualize how the top layer content changes.
 
-The [`<dialog>` element](https://web.dev/building-a-dialog-component/) has recently become stable across browsers. When you open a dialog, it is put into a [top layer](/blog/top-layer-devtools/). Top level content renders on top of all the other content. 
+The [`<dialog>` element](https://web.dev/building-a-dialog-component/) has recently become stable across browsers. When you open a dialog, it is put into a [top layer](/blog/top-layer-devtools/). Top level content renders on top of all the other content.
 
-In this [demo](https://jec.fyi/demo/dialog), click **Open dialog**. 
+In this [demo](https://jec.fyi/demo/dialog), click **Open dialog**.
 
-To help visualize the top layer elements, DevTools adds a top layer container (`#top-layer`) to the DOM tree. It resides after the closing `</html>` tag.  
+To help visualize the top layer elements, DevTools adds a top layer container (`#top-layer`) to the DOM tree. It resides after the closing `</html>` tag.
 
 To jump from the top layer container element to the top layer tree element, click the **reveal** button next to the element or its backdrop in the top layer container.
 
@@ -113,9 +113,9 @@ Chromium issue: [1313690](https://crbug.com/1313690)
 
 ## Attach Wasm debugging information at runtime {: #wasm }
 
-You can now attach DWARF debugging information for wasm during runtime. Previously, the **Sources** panel only supported attaching sourcemaps to JavaScript and Wasm files.
+You can now attach DWARF debugging information for wasm during runtime. Previously, the **Sources** panel only supported attaching source maps to JavaScript and Wasm files.
 
-Open a Wasm file in the **Sources** panel. Right-click in the editor and select **Add DWARF debugging info…**  to attach debugging information on demand. 
+Open a Wasm file in the **Sources** panel. Right-click in the editor and select **Add DWARF debugging info…**  to attach debugging information on demand.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/i5DMV6DFNGRYkrXyBtlg.png", alt="ALT_TEXT_HERE", width="800", height="559" %}
 
@@ -128,7 +128,7 @@ Chromium issue: [1341255](https://crbug.com/1341255)
 
 You can now edit the top-most function on the stack without restarting the debugger.
 
-In Chrome 104, DevTools brings back the [restart frame](/blog/new-in-devtools-104/) feature. However, you weren't able to edit the function you are currently paused in. It is common for developers to break in a function and then edit that function while paused. 
+In Chrome 104, DevTools brings back the [restart frame](/blog/new-in-devtools-104/) feature. However, you weren't able to edit the function you are currently paused in. It is common for developers to break in a function and then edit that function while paused.
 
 With this update, the debugger automatically restarts the function with the following restrictions:
 
@@ -144,7 +144,7 @@ Chromium issue: [1334484](https://crbug.com/1334484)
 
 ## View and edit @scope at rules in the Styles pane {: #scope }
 
-You can now view and edit the [CSS `@scope` at-rules](https://drafts.csswg.org/css-cascade-6/#scope-atrule) in the **Styles** pane. 
+You can now view and edit the [CSS `@scope` at-rules](https://drafts.csswg.org/css-cascade-6/#scope-atrule) in the **Styles** pane.
 
 The `@scope` at rules is part of the [CSS Cascading and Inheritance Level 6 specification](https://drafts.csswg.org/css-cascade-6/). These rules allow developers to scope style rules in CSS.
 
@@ -161,13 +161,13 @@ The CSS `@scope` is currently under development. To test this feature, enable th
 Chromium issue: [1337777](https://crbug.com/1337777)
 
 
-## Sourcemap improvements {: #sourcemaps }
+## Source map improvements {: #sourcemaps }
 
-Here are a few fixes on sourcemaps to improve the overall debugging experience:
+Here are a few fixes on source maps to improve the overall debugging experience:
 
-- DevTools now properly resolves sourcemap identifiers with punctuation. Some modern minifiers (for example, [esbuild](https://esbuild.github.io/)) produce sourcemaps that merge identifiers
-with subsequent punctuation (comma, parentheses, semicolon). 
-- DevTools now resolves sourcemap names for constructors with a `super` call.
+- DevTools now properly resolves source map identifiers with punctuation. Some modern minifiers (for example, [esbuild](https://esbuild.github.io/)) produce source maps that merge identifiers
+with subsequent punctuation (comma, parentheses, semicolon).
+- DevTools now resolves source map names for constructors with a `super` call.
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/6djFfkrtPzXuNYq5m8Vk.png", alt="ALT_TEXT_HERE", width="800", height="441" %}
 - Fixed source map URL indexing for duplicate canonical URLs. Previously, breakpoints were not activated in some files because of duplicate canonical URLs.
 
@@ -176,13 +176,13 @@ Chromium issue: [1335338](https://crbug.com/1335338), [1333411](https://crbug.co
 
 
 ## Miscellaneous highlights {: #misc }
- 
+
 These are some noteworthy fixes in this release:
 
 - Properly remove a local storage key value pair from the table in the **Application** > **Local Storage** pane when it is deleted. ([1339280](https://crbug.com/1339280))
 - The color previews are now correctly displayed when viewing CSS files in the **Sources** panel. Previously, their positions were misplaced. ([1340062](https://crbug.com/1340062))
 - Consistently display the CSS flex and grid items in the **Layout** pane, as well as display them as badges in the **Elements** panel. Previously, the flex and grid items were randomly missing in both places. ([1340441](https://crbug.com/1340441), [1273992](https://crbug.com/1273992))
 - A new **Creator Ad Script** link is available for [ad frames](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker) if DevTools found the script that caused the frame to be labeled as an ad. You can open a frame via **Application** > **Frames**. ([1217041](https://crbug.com/1217041))
- 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

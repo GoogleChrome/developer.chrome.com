@@ -16,7 +16,7 @@ tags:
   - chrome-67
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 New features and major changes coming to DevTools in Chrome 67 include:
 
@@ -228,8 +228,8 @@ each process so that you can see the total work that each process is causing.
 **Figure 13**. Per-process flame charts in a Performance recording
 
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}
 
 [1]: #network-search
 [2]: #vars

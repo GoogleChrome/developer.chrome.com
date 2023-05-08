@@ -30,7 +30,7 @@ Si el manifiesto de una página no incluye las siguientes propiedades, la audito
 
 {% Aside 'caution' %} Un manifiesto de aplicación web es *necesario* para que su aplicación sea instalable, pero no es *suficiente*. Para saber cómo cumplir con todos los requisitos de instalación, consulte la publicación [Descubra lo que se necesita para sea instalable](/es/docs/lighthouse/pwa/#instalable). {% endAside %}
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## Cómo hacer que su PWA sea instalable
 

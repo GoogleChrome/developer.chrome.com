@@ -6,6 +6,8 @@ updated: 2014-10-31
 description: Reference documentation for the externally_connectable property of manifest.json.
 ---
 
+{% Partial 'extensions/mv2-legacy-page.md' %}
+
 The `externally_connectable` manifest property declares which extensions, apps, and web pages can
 connect to your extension via [runtime.connect][1] and [runtime.sendMessage][2].
 

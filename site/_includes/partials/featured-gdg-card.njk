@@ -4,17 +4,17 @@
   <div class="card-title-bar color-blue-medium">
     {{ icon('gdg', {hidden: true}) }}
     <span class="gap-left-300 flex-1 user-select-none">
-      Google Developer Groups
+      {{ 'i18n.common.featured_cards.gdg.title' | i18n(locale) }}
     </span>
   </div>
 
   <p class="gap-top-200">
-    Connect with fellow developers and startups in your area, hear from industry experts, share your skills, and learn. 
+    {{ 'i18n.common.featured_cards.gdg.body' | i18n(locale) }} 
   </p>
 
   <div class="gap-top-400">
     <a href="https://developers.google.com/community/gdg" class="material-button button-text display-inline-flex color-primary">
-      Find your local group
+      {{ 'i18n.common.featured_cards.gdg.cta' | i18n(locale) }} 
     </a>
   </div>
 </div>

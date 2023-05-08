@@ -1,13 +1,16 @@
 - url: /docs/lighthouse/overview/
-- url: /docs/lighthouse/seo/
-  title: i18n.docs.seo.intro
-  description: i18n.docs.seo.overview
-- url: /docs/lighthouse/best-practices/
-  title: i18n.docs.best-practices.intro
-  description: i18n.docs.best-practices.overview
 - url: /docs/lighthouse/performance/
   title: i18n.docs.performance.intro
-  description: i18n.docs.performance.overview
+  description: i18n.docs.performance.intro_description
+- url: /docs/lighthouse/accessibility/
+  title: i18n.docs.lighthouse-accessibility.intro
+  description: i18n.docs.lighthouse-accessibility.intro_description
+- url: /docs/lighthouse/best-practices/
+  title: i18n.docs.best-practices.intro
+  description: i18n.docs.best-practices.intro_description
+- url: /docs/lighthouse/seo/
+  title: i18n.docs.seo.intro
+  description: i18n.docs.seo.intro_description
 - url: /docs/lighthouse/pwa/
   title: i18n.docs.pwa.intro
-  description: i18n.docs.pwa.overview
+  description: i18n.docs.pwa.intro_description

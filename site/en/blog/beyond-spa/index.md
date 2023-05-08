@@ -75,7 +75,7 @@ the context of a multi-page app.
 You've heard me (and countless others) use the phrase "progressive web
 app", or PWA. You might already be familiar with some of the background
 material, [elsewhere on this
-site](https://developers.google.com/web/progressive-web-apps/).
+site](https://web.dev/progressive-web-apps/).
 
 You can think of a PWA as a web app that provides a first-class user experience,
 and that truly earns a place on the user's home screen. The acronym "**FIRE**",
@@ -105,9 +105,9 @@ network conditions.
 
 PWAs introduce a high bar for speed and resilience. Fortunately, the web
 platform offers some building blocks to make that type of performance a reality.
-I'm referring to [service workers](https://developers.google.com/web/fundamentals/primers/service-workers/)
+I'm referring to [service workers](/docs/workbox/service-worker-overview)
 and the [Cache Storage
-API](https://developers.google.com/web/fundamentals/instant-and-offline/web-storage/cache-api).
+API](https://web.dev/cache-api-quick-guide/).
 
 You can build a service worker that listens for incoming requests, passing some
 on to the network, and storing a copy of the response for future use, via the
@@ -334,7 +334,7 @@ app.get(routes.get('index'), async (req, res) => {
 So that's a brief tour of my server setup. Users who visit my web app for the
 first time will always get a response from the server, but when a visitor
 returns to my web app, my [service
-worker](https://developers.google.com/web/fundamentals/primers/service-workers/) will start responding. Let's
+worker](/docs/workbox/service-worker-overview) will start responding. Let's
 dive in there.
 
 ## The service worker
@@ -352,8 +352,8 @@ and just like my server did, it uses a combination of routing and
 templating logic to figure out how to respond.
 
 The approach is the same as before, but with different low-level primitives,
-like [`fetch()`](https://developers.google.com/web/updates/2015/03/introduction-to-fetch) and the [Cache
-Storage API](https://developers.google.com/web/fundamentals/instant-and-offline/web-storage/cache-api). I use
+like [`fetch()`](https://web.dev/introduction-to-fetch/) and the [Cache
+Storage API](https://web.dev/cache-api-quick-guide/). I use
 those data sources to construct the HTML response, which the service worker
 passes back to the web app.
 
@@ -361,7 +361,7 @@ passes back to the web app.
 
 Rather than starting from scratch with low-level primitives, I'm going to
 build my service worker on top of a set of high-level libraries called
-[Workbox](https://developers.google.com/web/tools/workbox/). It provides a solid
+[Workbox](/docs/workbox). It provides a solid
 foundation for any service worker's caching, routing, and response generation
 logic.
 
@@ -378,7 +378,7 @@ making use of a helpful library called
 [`regexparam`](https://github.com/lukeed/regexparam). Once that translation is
 performed, I can take advantage of Workbox's built-in support for [regular
 expression
-routing](https://developers.google.com/web/tools/workbox/modules/workbox-routing#how_to_register_a_regular_expression_route).
+routing](/docs/workbox/modules/workbox-routing/#how-to-register-a-regular-expression-route).
 
 After importing the module that has the regular expressions, I register each
 regular expression with Workbox's router. Inside each route I'm able to provide
@@ -399,9 +399,9 @@ workbox.routing.registerRoute(
 
 One key part of the templating story is making sure that my partial HTML
 templates are locally available via the Cache Storage API, and are kept up to
-date when I deploy changes to the web app. Cache maintenance can be error prone
+date when I deploy changes to the web app. Cache maintenance can be error-prone
 when done by hand, so I turn to Workbox to handle
-[precaching](https://developers.google.com/web/tools/workbox/modules/workbox-precaching) as part of my build
+[precaching](/docs/workbox/modules/workbox-precaching/) as part of my build
 process.
 
 I tell Workbox which URLs to precache using a [configuration
@@ -442,9 +442,9 @@ workbox.precaching.precacheAndRoute([
 ```
 
 For folks who use a more complex build process, Workbox has both a [`webpack`
-plugin](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin) and a [generic node
-module](https://developers.google.com/web/tools/workbox/modules/workbox-build), in addition to its [command
-line interface](https://developers.google.com/web/tools/workbox/modules/workbox-cli).
+plugin](/docs/workbox/modules/workbox-webpack-plugin) and a [generic node
+module](/docs/workbox/modules/workbox-build), in addition to its [command
+line interface](/docs/workbox/modules/workbox-cli).
 
 ### Streaming
 
@@ -494,7 +494,7 @@ everyone. Rather than parse through this logic, let's talk about my approach
 to service worker streaming.
 
 I'm using a brand new, high-level wrapper,
-[`workbox-streams`](https://developers.google.com/web/tools/workbox/reference-docs/latest/workbox.streams).
+[`workbox-streams`](/docs/workbox/reference/workbox-streams/).
 With it, I can pass it in a mix of streaming sources, both from caches and
 runtime data that might come from the network. Workbox takes care of
 coordinating the individual sources and stitching them together into a single,
@@ -511,7 +511,7 @@ Let's check out how my [service
 worker](https://github.com/GoogleChromeLabs/so-pwa/blob/main/src/service-worker.mjs)
 deals with runtime data, from the Stack Exchange API. I'm making use of
 Workbox's built-in support for a [stale-while-revalidate caching
-strategy](https://developers.google.com/web/tools/workbox/reference-docs/latest/workbox.strategies#stalewhilerevalidate),
+strategy](/docs/workbox/reference/workbox-strategies/#type-StaleWhileRevalidate),
 along with expiration to ensure that the web app's storage doesn't grow
 unbounded.
 
@@ -748,7 +748,7 @@ quickly as possible.
 
 For best performance, you should precache all of your site's critical static
 resources. You should also set up runtime caching logic to handle dynamic
-content, like API requests. Using [Workbox](https://developers.google.com/web/tools/workbox/) means that you
+content, like API requests. Using [Workbox](/docs/workbox) means that you
 can build on top of well-tested, production-ready strategies instead of
 implementing it all from scratch.
 

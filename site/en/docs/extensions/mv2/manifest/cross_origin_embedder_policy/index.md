@@ -6,6 +6,8 @@ date: 2021-08-03
 description: Reference documentation for the cross_origin_embedder_policy property of manifest.json.
 ---
 
+{% Partial 'extensions/mv2-legacy-page.md' %}
+
 The `cross_origin_embedder_policy` manifest key lets the extension to specify a value for the
 [Cross-Origin-Embedder-Policy][mdn-coep] (COEP) response header for requests to the extension's
 origin.  This includes the extension's background context (service worker or background page),

@@ -51,7 +51,7 @@ Lighthouse отображает индекс скорости в секунда�
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Как улучшить свой индекс скорости
 
@@ -61,7 +61,7 @@ Lighthouse отображает индекс скорости в секунда�
 - [Уменьшение времени выполнения JavaScript](/docs/lighthouse/performance/bootup-time/)
 - [Убедитесь, что текст остается видимым во время загрузки веб-шрифта](https://web.dev/font-display/)
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## Ресурсы
 

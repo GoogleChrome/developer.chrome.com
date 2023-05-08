@@ -55,7 +55,7 @@ TTI 점수는 [HTTP 아카이브의 데이터](https://httparchive.org/reports/l
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## TTI 점수를 높이는 방법
 
@@ -68,11 +68,11 @@ TTI에 특히 큰 영향을 미칠 수 있는 한 가지 개선 사항은 불필
 
 ## 실제 사용자의 장치에서 TTI 추적
 
-TTI가 실제로 사용자의 기기에서 발생하는 시점을 측정하는 방법을 알아보려면 Google의 [사용자 중심 성능 메트릭](https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics) 페이지를 참조하세요. [TTI 추적](https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#tracking_tti) 섹션에서는 프로그래밍 방식으로 TTI 데이터에 액세스하고 이를 Google Analytics에 제출하는 방법을 설명합니다.
+TTI가 실제로 사용자의 기기에서 발생하는 시점을 측정하는 방법을 알아보려면 Google의 [사용자 중심 성능 메트릭](https://web.dev/user-centric-performance-metrics/) 페이지를 참조하세요. [TTI 추적](https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#tracking_tti) 섹션에서는 프로그래밍 방식으로 TTI 데이터에 액세스하고 이를 Google Analytics에 제출하는 방법을 설명합니다.
 
 {% Aside %} TTI는 실제 상황에서 추적하기 어려울 수 있습니다. [첫 번째 입력 지연](https://developers.google.com/web/updates/2018/05/first-input-delay)을 추적하면 TTI를 간접적으로 가늠해볼 수 있습니다. {% endAside %}
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## 리소스
 

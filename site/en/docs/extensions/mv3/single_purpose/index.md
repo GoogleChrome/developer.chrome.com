@@ -1,6 +1,7 @@
 ---
-layout: "layouts/doc-post.njk"
 title: "Extensions quality guidelines FAQ"
+layout: "layouts/doc-post.njk"
+seoTitle: "Chrome Extensions quality guidelines FAQ"
 date: 2014-05-09
 updated: 2021-07-22
 description: Frequently asked questions about the single purpose policy.
@@ -81,15 +82,15 @@ before it can be restored.
 In order to minimize disruption for users, we recommend that you take a moment to carefully review
 your extensions and make necessary updates as soon as possible.
 
-## 6) Can my extension make changes to the start page, homepage, and new tab settings? {: #six }
+## 6) Can my extension make changes to the start page, home page, and new tab settings? {: #six }
 
 Yes. If the purpose of your extension is to modify one narrow function of the browser (either the
-start page, homepage or new tab page, for example), and it does only that, then it would be
+start page, home page or new tab page, for example), and it does only that, then it would be
 compliant with the single-purpose policy. Additionally, if the purpose of your extension is limited
 to one focus area or subject matter, then you can have various functions related to that one area or
-subject matter, including changes to the start page, homepage and new tab page.
+subject matter, including changes to the start page, home page and new tab page.
 
-As of July 1, 2017, however, the only way to programmatically change the startup page, the homepage,
+As of July 1, 2017, however, the only way to programmatically change the startup page, the home page,
 or the search provider settings in Chrome on Windows and Mac is via the Settings Overrides API. If
 your extension modifies one of these functions, it must use the Settings Overrides API.
 
@@ -101,7 +102,7 @@ before.
 In addition, if you want to publish an extension that modifies Chrome settings, you must either
 control any domains you wish to set in any changed browser settings or redistribute an extension
 created by the entity that controls those domains. For example, you could distribute an extension
-that changes the homepage to wikipedia.org if the Wikimedia Foundation originally created and
+that changes the home page to wikipedia.org if the Wikimedia Foundation originally created and
 published the extension in the Chrome Web Store, and gave you the right to distribute it.
 
 ## 7) Can my extension make changes to the default search settings? {: #seven }
@@ -134,9 +135,9 @@ extension.
 
 All Chrome settings changed by an extension will be reverted when that extension is disabled.
 
-## 11) Will users' existing homepage, search provider or startup pages be affected by the introduction of the Settings Override API? {: #eleven }
+## 11) Will users' existing home page, search provider or startup pages be affected by the introduction of the Settings Override API? {: #eleven }
 
-No. A user's existing homepage, search provider or startup settings will remain unchanged by the
+No. A user's existing home page, search provider or startup settings will remain unchanged by the
 introduction of Settings Override API. Following the launch of the Settings Override API, only
 extensions can programmatically change these settings and only through the Settings Override API.
 
@@ -198,7 +199,16 @@ button, however, cannot introduce any additional functionality or content. If an
 purpose is a narrow subject matter or focus area, then the functionality and content of the browser
 action button must likewise fall within that narrow purpose.
 
-{# section #nineteen has been removed #}
+## 19) Why does Chrome display a confirmation prompt for some extensions? {: #nineteen }
+
+Chrome makes it easy for users to retain agency over their preferred search settings. Modifying
+search settings should be a purpose on its own, and when bundled with other functionalities, users
+may experience an unpleasant surprise. For these reasons, search extensions that stretch their
+functionality beyond a clear single purpose will trigger a confirmation dialog. Search extensions
+that are limited to the single purpose of overriding search settings will not trigger a confirmation
+dialog. 
+
+{# A former section #nineteen has been removed #}
 
 ## Appendix: Examples of extensions that comply with the quality guidelines {: #appendix }
 
@@ -229,7 +239,7 @@ to the narrow subject matter of search.
 [3]: http://blog.chromium.org/2014/03/protecting-user-settings-on-windows.html
 [4]: https://security.googleblog.com/2017/03/expanding-protection-for-chrome-users.html
 [5]: http://blog.chromium.org/2013/12/keeping-chrome-extensions-simple.html
-[6]: /docs/webstore/program_policies?csw=1#extensions
+[6]: /docs/webstore/program-policies?csw=1#extensions
 [9]: /docs/extensions/mv3/override
 [10]: /docs/webstore/money
 [11]: #three

@@ -343,7 +343,7 @@ Please only open one support request per enforcement action. Multiple support re
 difficult for the agents assisting you to find and keep track of all of the relevant information
 about your issue.
 
-[doc-dpp]: /docs/webstore/program_policies
+[doc-dpp]: /docs/webstore/program-policies
 [doc-host-perms]: /docs/extensions/mv3/declare_permissions/
 [doc-lifecycle]: /docs/webstore/manage/#about-the-lifecycle-of-an-item-in-the-chrome-web-store
 [header-basics]: #basics

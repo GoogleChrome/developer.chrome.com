@@ -16,7 +16,7 @@ tags:
 
 *翻訳者の [yoichiro](https://github.com/yoichiro) さん、レビュアーの [technohippy](https://github.com/technohippy) さん、 [lacolaco](https://github.com/lacolaco) さん、 [yoshiko-pg](https://github.com/yoshiko-pg) さんに感謝いたします。*
 
-{% include 'partials/devtools/ja/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='DAD72grzDDc' %}
 
@@ -145,10 +145,10 @@ Chromium issue: [1261130](https://crbug.com/1261130)
 - [エミュレートされたデバイス](/docs/devtools/device-mode/#device) の iPhone ユーザエージェント文字列が変更されました。 5 以降の全ての iPhone バージョンでは、 iPhone OS 13_2_3 を user-agent 文字列に含みます。 ([1289553](https://crbug.com/1289553))
 <!-- - You can now save [snippet](/docs/devtools/javascript/snippets/) as a JavaScript file directly. Previously, you needed to append `.js` file extension manually. ([1137218](https://crbug.com/1137218)) -->
 - [スニペット](/docs/devtools/javascript/snippets/) を JavaScript ファイルとして直接保存できるようになりました。以前は、手動で `.js` ファイル拡張子を追加する必要がありました。 ([1137218](https://crbug.com/1137218))
-<!-- - The **Sources** panel now correctly displays scope variable names when debugging with sourcemap. Previously, the **Sources** panel displays minified scope variable names despite sourcemap being provided. ([1294682](https://crbug.com/1294682))  -->
+<!-- - The **Sources** panel now correctly displays scope variable names when debugging with source map. Previously, the **Sources** panel displays minified scope variable names despite source map being provided. ([1294682](https://crbug.com/1294682))  -->
 - ソースマップを使ってデバッグするときに、 **Sources** パネルに正しくスコープ変数名が表示されるようになりました。以前は、ソースマップが提供されているにも関わらず、 **Sources** パネルには短縮されたスコープ変数名が表示されていました。 ([1294682](https://crbug.com/1294682))
 <!-- - The **Sources** panel now restores scroll position correctly on page load. Previously, the position was not restored correctly causing inconvenience in debugging. ([1294422](https://crbug.com/1294422))  -->
 - **Sources** パネルは、ページの読み込み時にスクロール位置を正しく復元するようになりました。以前は、位置が正しく復元されなかったために、デバッグ時に不便さがありました。 ([1294682](https://crbug.com/1294682))
 
-{% include 'partials/devtools/ja/reach-out.md' %}
-{% include 'partials/devtools/ja/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

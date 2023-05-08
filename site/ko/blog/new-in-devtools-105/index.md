@@ -16,7 +16,7 @@ tags:
 
 *이 게시글의 번역에는 [최원영](https://www.linkedin.com/in/toruchoi)님이 참여하셨으며, [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님과 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다.*
 
-{% include 'partials/devtools/ko/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 {% YouTube id='bHw_56RiVsg' %}
 
 <!-- start: translation instructions -->
@@ -45,7 +45,7 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 <!-- ## Support mouse over event in the Recorder panel {: #recorder-hover } -->
 ## Recorder 패널에서 마우스 오버 이벤트 기능 지원 {: #recorder-hover }
 <!-- The **Recorder** now supports adding a mouse over (hover) step manually in a recording.  -->
-**Recorder** 기능에서 레코딩 시에 마우스 오버 (호버) 단계를 수동으로 추가하는 것이 가능해졌습니다. 
+**Recorder** 기능에서 레코딩 시에 마우스 오버 (호버) 단계를 수동으로 추가하는 것이 가능해졌습니다.
 <!-- [This demo](https://jec.fyi/demo/menu-hover) shows a pop up menu on hover. Try to record a user flow and click a menu item. -->
 [데모](https://jec.fyi/demo/menu-hover)에서 볼 수 있듯이, 마우스 호버 시에 팝업 메뉴가 표출됩니다. 유저 플로우의 녹화 및 메뉴 아이템 클릭을 시도해 보세요.
 <!-- If you replay the user flow now, it will fail because the **Recorder** doesn’t capture mouse over events automatically during recording. To resolve this, [add a step manually](/docs/devtools/recorder/reference/#add-and-remove-steps) to hover over the selector before clicking the menu item.  -->
@@ -134,7 +134,7 @@ Chromium issue: [1313690](https://crbug.com/1313690)
 
 <!-- ## Attach Wasm debugging information at runtime {: #wasm } -->
 ## 런타임에 Wasm 디버깅 정보 연결하기 {: #wasm }
-<!-- You can now attach DWARF debugging information for wasm during runtime. Previously, the **Sources** panel only supported attaching sourcemaps to JavaScript and Wasm files. -->
+<!-- You can now attach DWARF debugging information for wasm during runtime. Previously, the **Sources** panel only supported attaching source maps to JavaScript and Wasm files. -->
 여러분은 이제 런타임에 wasm 에 대한 DWARF 디버깅 정보를 연결할 수 있습니다. 이전에는 **소스** 패널만이 소스맵을 자바스크립트와 Wasm 파일에 연결할 수 있었습니다.
 
 <!-- Open a Wasm file in the **Sources** panel. Right-click in the editor and select **Add DWARF debugging info…**  to attach debugging information on demand.  -->
@@ -187,13 +187,13 @@ CSS `@scope` 는 현재 개발중이므로, `chrome://flags/#enable-experimental
 Chromium issue: [1337777](https://crbug.com/1337777)
 
 
-<!-- ## Sourcemap improvements {: #sourcemaps } -->
+<!-- ## Source map improvements {: #sourcemaps } -->
 ## 소스맵 개선 {: #sourcemaps }
-<!-- Here are a few fixes on sourcemaps to improve the overall debugging experience: -->
+<!-- Here are a few fixes on source maps to improve the overall debugging experience: -->
 전반적인 디버깅 경험을 개선하기 위한 소스맵에 대한 몇 가지 수정 사항입니다:
-<!-- - DevTools now properly resolves sourcemap identifiers with punctuation. Some modern minifiers (for example, [esbuild](https://esbuild.github.io/)) produce sourcemaps that merge identifiers with subsequent punctuation (comma, parentheses, semicolon).  -->
+<!-- - DevTools now properly resolves source map identifiers with punctuation. Some modern minifiers (for example, [esbuild](https://esbuild.github.io/)) produce sourcemaps that merge identifiers with subsequent punctuation (comma, parentheses, semicolon).  -->
 DevTools는 현재 구두점을 통해 소스맵 식별자를 적절하게 해결합니다. 몇몇 모던한 축소자는 일부 현대식 축소자(예: [esbuild](https://esbuild.github.io/)) 는 식별자를 후속 구두점과 병합하는 소스맵을 생성합니다.
-<!-- - DevTools now resolves sourcemap names for constructors with a `super` call. -->
+<!-- - DevTools now resolves source map names for constructors with a `super` call. -->
 DevTools는 현재 `super`를 호출하는 생성자에 대한 소스맵 이름 문제를 해결합니다.
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/6djFfkrtPzXuNYq5m8Vk.png", alt="ALT_TEXT_HERE", width="800", height="441" %}
 <!-- - Fixed source map URL indexing for duplicate canonical URLs. Previously, breakpoints were not activated in some files because of duplicate canonical URLs. -->
@@ -214,5 +214,5 @@ Chromium issue: [1335338](https://crbug.com/1335338), [1333411](https://crbug.co
 - **레이아웃** 창에서 CSS Flex 와 grid item 을 일관되게 표시하고 이들을 **요소**패널에 배지로서 표시합니다. 이전에는 flex item과 grid item 이 양쪽 모두에서 무작위로 누락되었습니다. ([1340441](https://crbug.com/1340441), [1273992](https://crbug.com/1273992))
 <!-- - A new **Creator Ad Script** link is available for [ad frames](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker) if DevTools found the script that caused the frame to be labeled as an ad. You can open a frame via **Application** > **Frames**. ([1217041](https://crbug.com/1217041)) -->
 - DevTools 가 특정 프레임을 광고로서 표시하도록 하는 스크립트를 발견한 경우, [ad frames](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker)에 대해 새로운 **Creator Ad Script** 링크가 이용가능해집니다. 여러분은 **애플리케이션** > **프레임** 을 통해 프레임을 열 수 있습니다. ([1217041](https://crbug.com/1217041))
-{% include 'partials/devtools/ko/reach-out.md' %}
-{% include 'partials/devtools/ko/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

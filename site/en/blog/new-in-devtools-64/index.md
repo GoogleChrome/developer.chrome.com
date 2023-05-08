@@ -14,7 +14,7 @@ tags:
   - chrome-64
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 Welcome back! New features coming to DevTools in Chrome 64 include:
 
@@ -123,8 +123,8 @@ out [Local Overrides][11] to learn more. If you're on Windows or Mac, you can tr
 downloading [Chrome Canary][12].
 
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}
 
 [1]: #perf-monitor
 [2]: #console-sidebar

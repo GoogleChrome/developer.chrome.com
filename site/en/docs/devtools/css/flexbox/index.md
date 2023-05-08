@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Inspect and Debug CSS Flexbox Layouts"
+title: "Inspect and debug CSS flexbox layouts"
 authors:
   - jecelynyeen
 date: 2022-02-08
@@ -57,7 +57,7 @@ Try changing the value to `justify-content: flex-end`. The overlay is changed ac
 
 The icons in the **flex editor** are context-aware. It will change according to the layout direction. For example, when you change the `flex-direction` to `column`, the icons in the **flex editor** are rotated accordingly. The overlay is updated immediately too.
 
-{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/yQv7pWSi87eatl5uiJEN.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/yQv7pWSi87eatl5uiJEN.mp4", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
 
 ## Adjust the flexbox overlay color {: #layout } 
 
@@ -73,7 +73,7 @@ Apart from that, you can change the color of the overlay by clicking on the colo
 
 To navigate to a flexbox element in the DOM tree, you can click on the selector icon next to it. 
 
-{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/DskcBFYnUc8zBocvXgdg.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/DskcBFYnUc8zBocvXgdg.mp4", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
 
 
 

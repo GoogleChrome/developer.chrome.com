@@ -17,7 +17,7 @@ tags:
 
 *感谢 [流浪大法师 @liuliangsir](https://github.com/liuliangsir) 提供的翻译*。
 
-{% include 'partials/devtools/zh/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='zFVWeOKZBHs' %}
 
@@ -137,16 +137,16 @@ Chromium 议题: [1277944](https://crbug.com/1277944), [1282076](https://crbug.c
 Chromium 议题: [1068788](https://crbug.com/1068788)
 
 
-<!-- ## Sourcemaps improvements {: #sourcemap } -->
-## 改进 Sourcemaps {: #sourcemap }
+<!-- ## Source maps improvements {: #sourcemap } -->
+## 改进 Source maps {: #sourcemap }
 
-<!-- ### Debug Chrome extension with sourcemap files {: #extension } -->
-### 使用 sourcemap 文件来调试 Chrome 扩展 {: #extension }
+<!-- ### Debug Chrome extension with source map files {: #extension } -->
+### 使用 source map 文件来调试 Chrome 扩展 {: #extension }
 
-<!-- You can now [debug Chrome extension](/docs/extensions/mv3/getstarted/#unpacked) with sourcemap files. Previously, DevTools only supported inline sourcemap for Chrome extension debugging. -->
-您现在可以使用 sourcemap 文件来[调试 Chrome 扩展](/docs/extensions/mv3/getstarted/#unpacked)。在此之前，DevTools 只支持内联 sourcemap。
+<!-- You can now [debug Chrome extension](/docs/extensions/mv3/getstarted/#unpacked) with source map files. Previously, DevTools only supported inline sourcemap for Chrome extension debugging. -->
+您现在可以使用 source map 文件来[调试 Chrome 扩展](/docs/extensions/mv3/getstarted/#unpacked)。在此之前，DevTools 只支持内联 sourcemap。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/lnRa954ROl0MSSExlBl7.png", alt="使用 sourcemap 文件来调试 Chrome 扩展", width="800", height="518" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/lnRa954ROl0MSSExlBl7.png", alt="使用 source map 文件来调试 Chrome 扩展", width="800", height="518" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/1e73eb62955de7c4b0920575c7b374d47dab6a65 #}
 
@@ -157,7 +157,7 @@ Chromium 议题: [212374](https://crbug.com/212374)
 ### 优化 Sources 面板里面源文件夹树的显示问题 {: #source-tree }
 
 <!-- The source folder tree in the **Sources** panel is now improved with less clutter in the folder structures and naming (e.g. “../”, “./”, etc). Under the hood, this is the result of normalizing the absolute source URLs in the sourcemaps. -->
-现在，**Sources** 面板里面的源文件夹树变得更加简洁，并且命名更加易读（例如：“../”、“./”等）。这项功能的实现得益于规范化 sourcemaps 里面的绝对源 URL。
+现在，**Sources** 面板里面的源文件夹树变得更加简洁，并且命名更加易读（例如：“../”、“./”等）。这项功能的实现得益于规范化 source maps 里面的绝对源 URL。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Wl1pPVfQ51NaCtpp3KuY.png", alt="优化 Sources 面板里面源文件夹树的显示", width="800", height="444" %}
 
@@ -239,5 +239,5 @@ Chromium 议题: [1284245](https://crbug.com/1284245), [1284995](https://crbug.c
 - 在 DevTools 里面切换 [浅色/深色主题](/docs/devtools/customize/dark-theme/)，不需要重新加载 DevTools。([1278738](https://crbug.com/1278738))
 
 
-{% include 'partials/devtools/zh/reach-out.md' %}
-{% include 'partials/devtools/zh/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

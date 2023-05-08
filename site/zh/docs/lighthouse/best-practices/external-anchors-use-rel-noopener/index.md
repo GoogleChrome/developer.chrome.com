@@ -30,7 +30,7 @@ Lighthouse 使用以下过程将链接识别为不安全：
 
 因为 Lighthouse 会过滤掉同主机链接，所以如果您在大型站点上工作，您应该注意一种边缘情况：如果一个页面包含指向您站点上另一个页面的 `target="_blank"` 链接，而未使用 `rel="noopener"`，此审计对性能的影响仍然适用。 但是，您不会在 Lighthouse 结果中看到这些链接。
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## 如何提高站点性能并防止安全漏洞
 

@@ -6,6 +6,7 @@ description: >
   you can test and give feedback to shape the future of the APIs.
 layout: 'layouts/blog-post.njk'
 date: 2022-07-27
+updated: 2023-01-05
 authors:
   - rowan_m
   - barbsmith
@@ -15,6 +16,11 @@ alt: >
 tags:
   - privacy
 ---
+
+{% Aside %}
+**See updated guidance for the [Relevance and measurement unified origin
+trial](/docs/privacy-sandbox/unified-origin-trial/).**
+{% endAside %}
 
 Today we shared an [updated plan and timeline for Privacy Sandbox for the
 web](https://blog.google/products/chrome/update-testing-privacy-sandbox-web/)

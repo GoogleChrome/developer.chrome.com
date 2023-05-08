@@ -123,64 +123,64 @@ filled optional parameters.
 
 ### Performance
 
-To achieve maximum performance, you should keep the following guidelines in mind:
+To achieve maximum performance, you should keep the following guidelines in mind.
 
-- Register and unregister rules in bulk. After each registration or unregistration, Chrome needs to
-  update internal data structures. This update is an expensive operation.
+**Register and unregister rules in bulk.** After each registration or unregistration, Chrome needs to
+update internal data structures. This update is an expensive operation.
 
-  Instead of
+Instead of:
 
-  ```js
-  var rule1 = {...};
-  var rule2 = {...};
-  chrome.declarativeWebRequest.onRequest.addRules([rule1]);
-  chrome.declarativeWebRequest.onRequest.addRules([rule2]);
-  ```
+```js
+var rule1 = {...};
+var rule2 = {...};
+chrome.declarativeWebRequest.onRequest.addRules([rule1]);
+chrome.declarativeWebRequest.onRequest.addRules([rule2]);
+```
 
-  prefer to write
+prefer:
 
-  ```js
-  var rule1 = {...};
-  var rule2 = {...};
-  chrome.declarativeWebRequest.onRequest.addRules([rule1, rule2]);
-  ```
+```js
+var rule1 = {...};
+var rule2 = {...};
+chrome.declarativeWebRequest.onRequest.addRules([rule1, rule2]);
+```
 
-- Prefer substring matching over matching using regular expressions in a [events.UrlFilter][16].
-  Substring based matching is extremely fast.
+**Prefer substring matching over regular expressions in an [events.UrlFilter][16].**
+Substring based matching is extremely fast.
 
-  Instead of
+Instead of:
 
-  ```js
-  var match = new chrome.declarativeWebRequest.RequestMatcher({
-      url: {urlMatches: "example.com/[^?]*foo" } });
-  ```
+```js
+var match = new chrome.declarativeWebRequest.RequestMatcher({
+    url: {urlMatches: "example.com/[^?]*foo" } });
+```
 
-  prefer to write
+prefer:
 
-  ```js
-  var match = new chrome.declarativeWebRequest.RequestMatcher({
-      url: {hostSuffix: "example.com", pathContains: "foo"} });
-  ```
+```js
+var match = new chrome.declarativeWebRequest.RequestMatcher({
+    url: {hostSuffix: "example.com", pathContains: "foo"} });
+```
 
-- If you have many rules that all share the same actions, you may merge the rules into one because
-  rules trigger their actions as soon as a single condition is fulfilled. This speeds up the
-  matching and reduces memory consumption for duplicate action sets.
+If many rules that share the same actions, merge the rules into one.
+Rules trigger their actions as soon as a single condition is fulfilled. This speeds up the
+matching and reduces memory consumption for duplicate action sets.
 
-  Instead of
+Instead of:
 
-  ```js
-  var condition1 = new chrome.declarativeWebRequest.RequestMatcher({
-      url: { hostSuffix: 'example.com' } });
-  var condition2 = new chrome.declarativeWebRequest.RequestMatcher({
-      url: { hostSuffix: 'foobar.com' } });
-  var rule1 = { conditions: [condition1],
-                actions: [new chrome.declarativeWebRequest.CancelRequest()]};
-  var rule2 = { conditions: [condition2],
-                actions: [new chrome.declarativeWebRequest.CancelRequest()]};
-  chrome.declarativeWebRequest.onRequest.addRules([rule1, rule2]);
-  ```
+```js
+var condition1 = new chrome.declarativeWebRequest.RequestMatcher({
+    url: { hostSuffix: 'example.com' } });
+var condition2 = new chrome.declarativeWebRequest.RequestMatcher({
+    url: { hostSuffix: 'foobar.com' } });
+var rule1 = { conditions: [condition1],
+              actions: [new chrome.declarativeWebRequest.CancelRequest()]};
+var rule2 = { conditions: [condition2],
+              actions: [new chrome.declarativeWebRequest.CancelRequest()]};
+chrome.declarativeWebRequest.onRequest.addRules([rule1, rule2]);
+```
 
-  prefer to write
+  prefer:
 
   ```js
   var rule = { conditions: [condition1, condition2],
@@ -191,8 +191,8 @@ To achieve maximum performance, you should keep the following guidelines in mind
 ## Filtered events {: #filtered }
 
 Filtered events are a mechanism that allows listeners to specify a subset of events that they are
-interested in. A listener that makes use of a filter won't be invoked for events that don't pass the
-filter, which makes the listening code more declarative and efficient - a [service worker][17] need
+interested in. A listener that uses a filter won't be invoked for events that don't pass the
+filter, which makes the listening code more declarative and efficient. A [service worker][17] need
 not be woken up to handle events it doesn't care about.
 
 Filtered events are intended to allow a transition from manual filtering code like this:

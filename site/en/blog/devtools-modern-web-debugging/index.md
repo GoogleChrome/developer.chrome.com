@@ -15,6 +15,8 @@ tags:
   - devtools-engineering
 ---
 
+{% YouTube id='5gBqTXctxO8' %}
+
 ## Introduction
 
 Today, authors can use many abstractions to build their Web applications. Instead of directly interfacing with the lower-level APIs that the Web Platform provides, many authors leverage frameworks, build tools and compilers to write their applications from a higher-level perspective.
@@ -65,7 +67,7 @@ The Chrome DevTools team plans to enable this experiment by default soon. Send u
 
 When using dependencies or building on top of a framework, the third party files can get in your way. Most of the time you only want to see just your code, not that of some third-party library tucked away in the `node_modules` folder.
 
-To make up for it, DevTools has an extra setting enabled by default: **Automatically add known third-party scripts to ignore list**. You can find it in **DevTools** > **Settings** > **Ignore List**.
+To make up for it, DevTools has an extra setting enabled by default: **Automatically add known third-party scripts to ignore list**. You can find it in **DevTools** > **Settings** > **[Ignore List](/docs/devtools/settings/ignore-list/)**.
 
 {% Img src="image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/vxWNHcsRUh95fSq6tGd4.png", alt="Screenshot of DevTools’s Settings.", width="800", height="529" %}
 

@@ -4,7 +4,8 @@ title: 유효한 apple-touch-icon을 제공하지 않음
 description: Progressive Web App이 iOS 홈 화면에 표시할 아이콘을 지정하는 방법을 알아봅니다.
 codelabs: codelab-apple-touch-icon
 date: 2019-08-27
-updated: 2019-09-19
+updated: 2023-03-24
+is_outdated: true
 ---
 
 iOS Safari 사용자가 홈 화면에 [PWA(Progressive Web App)](https://web.dev/progressive-web-apps/)를 추가하는 경우에 나타나는 아이콘을 *Apple 터치 아이콘*이라고 합니다. 페이지의 `<head>`에 `<link rel="apple-touch-icon" href="/example.png">` 태그를 포함시켜 앱에서 사용해야 하는 아이콘을 지정할 수 있습니다. 페이지에 이 링크 태그가 없으면 iOS가 페이지 콘텐츠의 스크린샷을 찍어 아이콘을 생성합니다. 즉, iOS에 아이콘을 다운로드하도록 지시하면 보다 세련된 사용자 경험을 얻을 수 있습니다.
@@ -19,7 +20,7 @@ iOS Safari 사용자가 홈 화면에 [PWA(Progressive Web App)](https://web.dev
 
 Lighthouse는 아이콘이 실제로 존재하는지, 또는 아이콘이 올바른 크기인지 확인하지 않습니다.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## Apple 터치 아이콘을 추가하는 방법
 

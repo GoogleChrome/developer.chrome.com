@@ -18,6 +18,8 @@ tags:
 	.type figcaption {text-align:left;}
 </style>
 
+{% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
+
 FLEDGE ([Android](https://developer.android.com/design-for-safety/ads/fledge),
 [Chrome](/docs/privacy-sandbox/fledge/#overview)) is a Privacy Sandbox proposal
 to let marketers target ads to custom audiences, based on audience members'
@@ -58,7 +60,10 @@ offloads bidding and ad auctions from the client into the cloud, while
 preserving privacy of the ad auction and bidding service.  We welcome feedback
 on the merits of the new Bidding and auction service idea versus the current
 on-device design, especially from testers who have already gained experience as
-part of the ongoing Chrome ads relevance and measurement origin trial.
+part of the ongoing Chrome ads relevance and measurement origin trial. This
+proposal is in the [discussion phase of the proposal life
+cycle](/docs/privacy-sandbox/proposal-lifecycle/). The Bidding and auction
+service is not in scope for a "Bring Your Own Server" model.
 
 ### Key/Value service {: #key-value-service }
 
@@ -81,7 +86,19 @@ The TEE-based [FLEDGE Key/Value service](https://github.com/WICG/turtledove/blob
 
 ### Bidding and auction service proposal {: #bidding-auction-service }
 
-The initial proposal for FLEDGE proposes ad bidding and auction execution to happen on-device.
+{% Aside %}
+This is a brand new proposal under discussion, and the
+**current on-device bidding and auction approach for FLEDGE has not changed**.
+The Bidding and auction service is a complementary proposal to offload bidding
+and auction computation to a trusted execution environment if and when useful.
+
+We want to hear [your feedback](#engage-and-share-feedback), and we
+especially hope to hear from our testers participating in the
+[ads relevance and measurement origin trial](/blog/privacy-sandbox-unified-origin-trial/).
+{% endAside %}
+
+The proposal for FLEDGE proposes ad bidding and auction execution to happen
+on-device.
 
 FLEDGE bidding and auction processes may be compute intensive and involve
 several calls over the network. Migrating these computations to the cloud can
@@ -92,12 +109,8 @@ With the [Bidding and auction service](https://github.com/privacysandbox/fledge-
 ad space buyers and sellers can offload the execution of ad bidding and
 auctions to services running in trusted execution environments in the cloud.
 
-{% Aside %}
-This is a brand new proposal for a cloud service, which
-[needs your feedback](#engage-and-share-feedback).
-We especially hope to hear from our testers participating in the
-[ads relevance and measurement origin trial](/blog/privacy-sandbox-unified-origin-trial/).
-{% endAside %}
+Unlike the Key/Value service, the Bidding and auction service is not in scope
+for a "Bring Your Own Server" model. 
 
 ## Infrastructure for FLEDGE services
 
@@ -110,9 +123,10 @@ perform their tasks.
 * **[Clients](https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#clients)**
   (Android devices and the Chrome browser) send encrypted requests to the
   FLEDGE service.
-* A **[cloud platform](https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#cloud-platform)**
+* A **[cloud platform](https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#cloud-platform)**,
   hosts FLEDGE services in virtual machines backed by a trusted execution
-  environment (TEE), which prevents services from sharing information with third-parties.
+  environment (TEE), which prevents FLEDGE services from sharing information
+  with third-parties.
 * **[Key management systems](https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#key-management-systems)**
   include services and databases that generate and distribute public and
   private keys to ensure end-to-end encryption of client-service communication.

@@ -7,32 +7,34 @@
     If there's no data for the author, just renders their ID.
   #}
   {% if authors.length < 3 %}
-    {% for authorId in authors %}
-      {% set author = postsData.authors[authorId] %}
-      {% if author.image %}
-      <a href="{{ author.url }}" translate="no" class="card-authors__image">
-        {% Img
-          class="flex-shrink-none width-600 height-600",
-          src=author.image,
-          alt=author.title | i18n(locale),
-          width="40",
-          height="40",
-          sizes="40px",
-          options={minWidth: 40, maxWidth: 120}
-        %}
-      </a>
-      {% endif %}
-    {% endfor %}
+  {% for authorId in authors %}
+  {% set authorTitle = 'i18n.authors.' + authorId + '.title' %}
+  {% set authorImage = authorsData[authorId].image or site.defaultAvatarImg %}
+  {% if authorImage %}
+  <a href="/authors/{{authorId}}/" translate="no" class="card-authors__image">
+    {% Img
+      class="flex-shrink-none width-600 height-600",
+      src=authorImage,
+      alt=authorTitle | i18n(locale),
+      width="40",
+      height="40",
+      sizes="40px",
+      options={minWidth: 40, maxWidth: 120}
+    %}
+  </a>
+  {% endif %}
+  {% endfor %}
   {% endif %}
 
   <div class="card-authors__meta">
     <p class="type--small">
       {% set sep = joiner(', ') %}
       {%- for authorId in authors -%}
-        {%- set author = postsData.authors[authorId] -%}
         {{- sep() -}}
-        {%- if author -%}
-          <a href="{{ author.url }}" translate="no" class="surface display-inline-flex color-text">{{ author.title | i18n(locale) }}</a>
+        {%- if authorsData[authorId] -%}
+          {% set authorTitle = 'i18n.authors.' + authorId + '.title' %}
+          {% set authorImage = authorsData[authorId].image or site.avatarPlaceholderImg %}
+          <a href="/authors/{{authorId}}/" translate="no" class="surface display-inline-flex color-text">{{ authorTitle | i18n(locale) }}</a>
         {%- else -%}
           {{ authorId }}
         {%- endif -%}

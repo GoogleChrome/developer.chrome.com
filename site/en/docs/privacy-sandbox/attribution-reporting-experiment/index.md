@@ -2,16 +2,17 @@
 layout: 'layouts/doc-post.njk'
 title: 'Attribution Reporting: experiment and participate'
 date: 2022-03-31
-updated: 2022-06-23
+updated: 2022-12-15
 authors:
   - maudn
   - alexandrawhite
 ---
 
-## Learn the essentials
+Read [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) to
+see the use cases and key concepts for this API and check the most recent [updates](/docs/privacy-sandbox/attribution-reporting-updates/).
 
-Read [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting) and
-check the most recent [updates](/docs/privacy-sandbox/attribution-reporting-updates/).
+Learn why we plan to [ship the Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/chrome-shipping)
+in the first half of 2023.
 
 ## Try the API
 
@@ -28,11 +29,10 @@ check the most recent [updates](/docs/privacy-sandbox/attribution-reporting-upda
      * [Handbook](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/):
        Demo, detailed code examples and (local) debugging tips.
 4. Experiment with [summary
-   reports](/docs/privacy-sandbox/attribution-reporting/summary-reports).
-   *  Adtechs can generate summary reports with the aggregation service. Learn
-	how to set it up for
-	[local testing](https://github.com/google/trusted-execution-aggregation-service/#set-up-local-testing)
-	or [test in production with Amazon Web Services](https://github.com/google/trusted-execution-aggregation-service/#test-on-aws-with-support-for-encrypted-reports) (AWS) :
+   reports](/docs/privacy-sandbox/summary-reports).
+   *  Ad techs can generate summary reports with the [aggregation service](/docs/privacy-sandbox/aggregation-service). Set up
+      [local testing](https://github.com/google/trusted-execution-aggregation-service/#set-up-local-testing)
+      or [test in production with Amazon Web Services](https://github.com/google/trusted-execution-aggregation-service/#test-on-aws-with-support-for-encrypted-reports) (AWS) :
         *  Create or have an [AWS account](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html) available.
         *  [Register](/origintrials/#/view_trial/771241436187197441) for the
 	      Privacy Sandbox Relevance and Measurement origin trial (OT).
@@ -63,6 +63,6 @@ If you notice any unexpected behavior:
 To ask more general questions on how to cover your use cases with the API, see [Discuss the
 API](#discuss-the-api).
 
-{% include 'content/privacysandbox-partials/ar-join-discussion-long.njk' %}
+{% Partial 'privacy-sandbox/ar-join-discussion-long.njk' %}
 
-{% include 'content/privacysandbox-partials/ar-get-updates.njk' %}
+{% Partial 'privacy-sandbox/ar-get-updates.njk' %}

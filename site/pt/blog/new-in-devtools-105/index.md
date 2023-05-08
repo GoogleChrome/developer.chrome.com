@@ -16,7 +16,7 @@ tags:
 
 *Tradução realizada por [Alvaro Camillo Neto](https://www.linkedin.com/in/alvarocamillont/) . Revisão por [Lucas Santos](https://lsantos.dev).*
 
-{% include 'partials/devtools/pt/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 {% YouTube id='bHw_56RiVsg' %}
 
 <!-- start: translation instructions -->
@@ -28,7 +28,7 @@ tags:
 
 
 <!-- ## Step-by-step replay in the Recorder {: #recorder } -->
-## Replay passo a passo no Recorder {: #recorder } 
+## Replay passo a passo no Recorder {: #recorder }
 <!-- You can now set a breakpoint and replay a user flow step by step in the **Recorder** panel. -->
 Agora você pode definir um breakpoint e reproduzir um fluxo de usuário passo a passo no painel **Recorder**.
 <!-- To set a breakpoint, click on the blue dot next to a step. Replay your user flow, the replay will pause before executing the step. From here, you can continue the replay, execute a step, or cancel the replay. -->
@@ -58,7 +58,7 @@ Issue relacionada: [1257499](https://crbug.com/1257499)
 
 
 <!-- ## Largest Contentful Paint (LCP) in the Performance insights panel {: #lcp } -->
-## Largest Contentful Paint (LCP) no painel de insights de desempenho {: #lcp } 
+## Largest Contentful Paint (LCP) no painel de insights de desempenho {: #lcp }
 <!-- LCP is an important, user-centric metric for measuring [perceived load speed](https://web.dev/user-centric-performance-metrics/#types-of-metrics). You can now find out the critical paths and root causes of a [Largest Contentful Paint (LCP)](https://web.dev/lcp/). -->
 O LCP é uma métrica importante e centrada no usuário para medir a [velocidade de carga percebida](https://web.dev/user-centric-performance-metrics/#types-of-metrics). Agora você pode descobrir os caminhos críticos e as causas-raiz de uma [Largest Contentful Paint (LCP)](https://web.dev/lcp/).
 <!-- In a [performance recording](/docs/devtools/performance-insights/#record), click on the LCP badge in the **Timeline**. In the **Details** pane, you can view the LCP score, learn how to fix resources that slow down the LCP and see the critical path for the LCP resource. -->
@@ -127,8 +127,8 @@ Issue relacionada: [1313690](https://crbug.com/1313690)
 
 <!-- ## Attach Wasm debugging information at runtime {: #wasm } -->
 ## Anexar informações de depuração do Wasm em tempo de execução {: #wasm }
-<!-- You can now attach DWARF debugging information for wasm during runtime. Previously, the **Sources** panel only supported attaching sourcemaps to JavaScript and Wasm files. -->
-Agora você pode anexar informações de depuração DWARF para wasm durante o tempo de execução. Anteriormente, o painel **Fontes** só suportava anexar sourcemaps a arquivos JavaScript e Wasm.
+<!-- You can now attach DWARF debugging information for wasm during runtime. Previously, the **Sources** panel only supported attaching source maps to JavaScript and Wasm files. -->
+Agora você pode anexar informações de depuração DWARF para wasm durante o tempo de execução. Anteriormente, o painel **Fontes** só suportava anexar source maps a arquivos JavaScript e Wasm.
 <!-- Open a Wasm file in the **Sources** panel. Right-click in the editor and select **Add DWARF debugging info…**  to attach debugging information on demand.  -->
 Abra um arquivo Wasm no painel **Fontes**. Clique com o botão direito do mouse no editor e selecione **Adicionar informações de depuração DWARF…** para anexar informações de depuração sob demanda.
 
@@ -180,18 +180,18 @@ O CSS `@scope` está atualmente em desenvolvimento. Para testar esse recurso, at
 Issue relacionada: [1337777](https://crbug.com/1337777)
 
 
-<!-- ## Sourcemap improvements {: #sourcemaps } -->
-## Melhorias no Sourcemap  {: #sourcemaps }
-<!-- Here are a few fixes on sourcemaps to improve the overall debugging experience: -->
-Aqui estão algumas correções nos sourcemaps para melhorar a experiência geral de depuração:
-<!-- - DevTools now properly resolves sourcemap identifiers with punctuation. Some modern minifiers (for example, [esbuild](https://esbuild.github.io/)) produce sourcemaps that merge identifiers with subsequent punctuation (comma, parentheses, semicolon).  -->
-- O DevTools agora resolve corretamente os identificadores do sourcemap  com pontuação. Alguns minifiers modernos (por exemplo, [esbuild](https://esbuild.github.io/)) produzemsourcemap  que mesclam identificadores com pontuação subsequente (vírgula, parênteses, ponto e vírgula).
-<!-- - DevTools now resolves sourcemap names for constructors with a `super` call. -->
-- DevTools agora resolve nomes de sourcemap  para construtores com uma chamada  de método `super`.
+<!-- ## Source map improvements {: #sourcemaps } -->
+## Melhorias no Source map  {: #sourcemaps }
+<!-- Here are a few fixes on source maps to improve the overall debugging experience: -->
+Aqui estão algumas correções nos source maps para melhorar a experiência geral de depuração:
+<!-- - DevTools now properly resolves source map identifiers with punctuation. Some modern minifiers (for example, [esbuild](https://esbuild.github.io/)) produce sourcemaps that merge identifiers with subsequent punctuation (comma, parentheses, semicolon).  -->
+- O DevTools agora resolve corretamente os identificadores do source map  com pontuação. Alguns minifiers modernos (por exemplo, [esbuild](https://esbuild.github.io/)) produzemsourcemap  que mesclam identificadores com pontuação subsequente (vírgula, parênteses, ponto e vírgula).
+<!-- - DevTools now resolves source map names for constructors with a `super` call. -->
+- DevTools agora resolve nomes de source map  para construtores com uma chamada  de método `super`.
 
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/6djFfkrtPzXuNYq5m8Vk.png", alt="ALT_TEXT_HERE", width="800", height="441" %}
 <!-- - Fixed source map URL indexing for duplicate canonical URLs. Previously, breakpoints were not activated in some files because of duplicate canonical URLs. -->
-- Indexação de URL do sourcemap corrigida para URLs canônicos duplicados. Anteriormente, os breakpoints não eram ativados em alguns arquivos devido a URLs canônicos duplicados.
+- Indexação de URL do source map corrigida para URLs canônicos duplicados. Anteriormente, os breakpoints não eram ativados em alguns arquivos devido a URLs canônicos duplicados.
 
 Issue relacionada: [1335338](https://crbug.com/1335338), [1333411](https://crbug.com/1333411)
 
@@ -208,6 +208,6 @@ Estas são algumas correções dignas de nota nesta versão:
 - Exiba consistentemente os itens de grade e flex CSS no painel **Layout**, bem como exiba-os como emblemas no painel **Elementos**. Anteriormente, os itens flex e grid estavam ausentes aleatoriamente em ambos os lugares. ([1340441](https://crbug.com/1340441), [1273992](https://crbug.com/1273992))
 <!-- - A new **Creator Ad Script** link is available for [ad frames](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker) if DevTools found the script that caused the frame to be labeled as an ad. You can open a frame via **Application** > **Frames**. ([1217041](https://crbug.com/1217041)) -->
 - Um novo link **Creator Ad Script** está disponível para [ad frames](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker) se o DevTools encontrar o script que fez com que o frame fosse rotulado como um anúncio. Você pode abrir um frame em **Aplicativo** > **Frames**. ([1217041](https://crbug.com/1217041))
-  
-{% include 'partials/devtools/pt/reach-out.md' %}
-{% include 'partials/devtools/pt/whats-new.md' %}
+
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

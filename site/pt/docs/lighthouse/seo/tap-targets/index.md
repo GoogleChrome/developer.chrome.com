@@ -39,7 +39,7 @@ Os destinos menores que 48 x 48 pixels ou mais próximos do que 8 pixels entre e
   </table>
 </div>
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% Partial 'lighthouse-seo/scoring.njk' %}
 
 ## Como corrigir seus pontos de toque
 

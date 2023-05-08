@@ -16,7 +16,7 @@ Uma tela inicial personalizada torna seu [Progressive Web App (PWA)](https://web
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/CKrrTDSCZ0XLZ7ABKlZt.png", alt="Auditoria do Lighthouse mostrando que o site não está configurado para ter uma tela inicial personalizada", width="800", height="98" %}</figure>
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## Como criar uma tela inicial personalizada
 

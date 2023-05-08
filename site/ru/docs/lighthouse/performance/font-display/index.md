@@ -14,7 +14,7 @@ updated: 2020-04-29
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/251Gbh9tn89GDJY289zZ.png", alt="Скриншот проверки Lighthouse «Убедитесь, что текст остается видимым во время загрузки веб-шрифтов»", width="800", height="430" %}</figure>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Как избежать отображения невидимого текста
 

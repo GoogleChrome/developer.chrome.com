@@ -15,6 +15,8 @@ tags:
   - devtools-engineering
 ---
 
+{% YouTube id='5gBqTXctxO8' %}
+
 ## An improved debugging experience
 
 Over the past few months the Chrome DevTools team collaborated with the Angular team to launch improvements to the debugging experience in Chrome DevTools. People from both teams worked together and took steps towards [enabling developers to debug and profile web applications from the **authoring perspective**](/blog/devtools-modern-web-debugging): in terms of their source language and project structure, with access to information that is familiar and relevant to them.

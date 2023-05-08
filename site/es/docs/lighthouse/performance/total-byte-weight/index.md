@@ -20,7 +20,7 @@ Las grandes cargas útiles de red están altamente correlacionadas con tiempos d
 
 Según los datos de [HTTP Archive](https://httparchive.org/reports/state-of-the-web?start=latest#bytesTotal), la carga útil media de la red está entre 1,700 y 1,900 KiB. Para ayudar a que aparezcan las cargas útiles más altas, Lighthouse marca las páginas cuyas solicitudes de red totales superan los 5.000 KiB.
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Cómo reducir el tamaño de la carga útil
 

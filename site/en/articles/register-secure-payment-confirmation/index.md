@@ -6,6 +6,7 @@ description: >
 authors:
   - agektmr
 date: 2022-05-27
+updated: 2023-03-09
 tags:
   - payments
   - webauthn
@@ -23,7 +24,7 @@ to implement SPC registration. The user experience is further explained in the
 
 ## How does Secure Payment Confirmation registration work?
 
-SPC is built as an extension to the WebAuthn standard. 
+SPC is built as an extension to the WebAuthn standard.
 
 As of April 2022, SPC only supports User Verifying Platform Authenticators
 (UVPA) on desktop. This means the customer needs to be on a desktop or laptop
@@ -130,6 +131,11 @@ accounts for the user to sign in with upon authentication. This UX is not
 currently actively used, but is required for future compatibility.
 {% endAside %}
 
+{% Aside %}
+For versions M109, M110, and M111 of Chrome Android, `authenticatorSelection.residentKey` needs to be set to `preferred`
+instead of `required` due to a [technical limitation](https://bugs.chromium.org/p/chromium/issues/detail?id=1393662). From Chrome Android M112 onwards, `required` can be used as with other platforms.
+{% endAside %}
+
 In addition, specify a "payment" extension with `isPayment: true`. Specifying
 this extension without meeting the above requirements will throw an exception
 
@@ -158,7 +164,7 @@ Example registration code:
 const options = {
   challenge: new Uint8Array([21...]),
   rp: {
-    id: "rp.example", 
+    id: "rp.example",
     name: "Fancy Bank",
   },
   user: {
@@ -226,8 +232,8 @@ indirectly, from within an iframe.
 
 <figure class="screenshot">
 {% Img
-   src="image/VbsHyyQopiec0718rMq2kTE1hke2/J0oIPcNBfDwVSxMh2dA5.svg", 
-   alt="Workflow of registration on a merchant website during payment.", 
+   src="image/VbsHyyQopiec0718rMq2kTE1hke2/J0oIPcNBfDwVSxMh2dA5.svg",
+   alt="Workflow of registration on a merchant website during payment.",
    width="800", height="462"
 %}
 </figure>
@@ -244,7 +250,7 @@ There are two approaches for the merchant to allow registration:
    ```html
    <iframe name="iframe" allow="payment https://spc-rp.glitch.me"></iframe>
    ```
-   
+
    Make sure the `allow` attribute contains `payment` and the RP origin that invokes WebAuthn registration.
 
 2. The parent frame document (served from the merchant domain) is sent with a `Permissions-Policy` HTTP header:

@@ -5,7 +5,7 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2015-04-13
-updated: 2022-07-07
+updated: 2022-12-05
 description: "A comprehensive reference of Chrome DevTools Network panel features."
 ---
 
@@ -40,7 +40,7 @@ on the **Network** panel to clear all requests from the **Requests** table.
 To save requests across page loads, check the **Preserve log** checkbox on the **Network** panel.
 DevTools saves all requests until you disable **Preserve log**.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/MPcVmmemtEEDURBN6lGK.png", alt="The Preserve Log checkbox.", width="800", height="470" %}
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/JrR2GlPhEO8LgHd3X9mS.mp4", autoplay="false", controls="true", muted="true", class="screenshot"%}
 
 ### Capture screenshots during page load {: #screenshots }
 
@@ -120,13 +120,12 @@ In addition to presets, such as slow or fast 3G, you can also add your own
 custom throttling profiles:
 
 1. Open the **Throttling** menu and select **Custom** > **Add...**.
-1. In **Settings** > **Throttling** > **Network Throttling Profiles**, click **Add custom profile**.
-1. Name the profile, specify the upload and download speeds and latency, and click **Add**.
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/swLlVq9sVpQr5GwXWH9z.png", alt="Custom network throttling profile.", width="800", height="426" %}
+1. Set up a new throttling profile as described in [**Settings** > **Throttling**](/docs/devtools/settings/#throttling).
 1. Back on the **Network** panel, select your new profile from the **Throttling** drop-down menu.
 
-DevTools displays a warning icon next to the **Network** panel to remind you that throttling is
-enabled.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/UnSmIJe1OEp98TkLFlUE.png", alt="A custom profile selected from the throttling menu. The Network panel displays a warning icon.", width="800", height="464" %}
+
+DevTools displays a {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/jsbv7jCK4GsRjL6e8RcF.svg", alt="Warning.", width="24", height="24" %} warning icon next to the **Network** panel to remind you that throttling is enabled.
 
 #### Throttle WebSocket connections {: #throttle-websocket}
 
@@ -156,6 +155,10 @@ To manually clear browser cookies at any time, right-click anywhere in the **Req
 **Clear browser cookies**.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4mVbTicUyxwkmd5TB1HS.png", alt="Selecting Clear Browser Cookies.", width="800", height="497" %}
+
+### Override HTTP response headers {: #override-headers }
+
+See [Override files and HTTP response headers locally](/docs/devtools/overrides/#override-headers).
 
 ### Override the user agent {: #user-agent }
 
@@ -208,6 +211,8 @@ Below is a complete list of supported properties.
 - `priority`. Show resources whose priority level matches the specified value.
 - `resource-type`. Show resources of a resource type, e.g. image. DevTools populates the
   autocomplete drop-down with all resource types it has encountered.
+- `response-header-set-cookie`. Show raw Set-Cookie headers in the Issues tab. Malformed cookies
+  with incorrect `Set-Cookie` headers will be flagged in the Network panel.
 - `scheme`. Show resources retrieved over unprotected HTTP (`scheme:http`) or protected HTTPS
   (`scheme:https`).
 - `set-cookie-domain`. Show the resources that have a `Set-Cookie` header with a `Domain` attribute
@@ -300,7 +305,10 @@ hovering over requests reveals more information about them.
 The Requests table displays the following columns by default:
 
 - **Name**. The filename of, or an identifier for, the resource.
-- **Status**. The HTTP status code.
+- **Status**. This column can show the following values:
+  - HTTP status code, for example, `200` or `404`.
+  - [`CORS error`](https://developer.mozilla.org/docs/Web/HTTP/CORS/Errors) for requests failed due to Cross-Origin Resource Sharing (CORS).
+  - Generic `(failed)` or `(blocked:origin)` for other requests.
 - **Type**. The MIME type of the requested resource.
 - **Initiator**. The following objects or processes can initiate requests:
   - **Parser**. Chrome's HTML parser.
@@ -329,6 +337,16 @@ To add a custom column to the **Requests** table:
 1. In the dialog window, click **Add custom header**, enter its name, and click **Add**.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/sCXdKBGzlfwQBBeyNdta.png", alt="Adding a custom column to the Requests table.", width="800", height="563" %}
+
+### Group requests by inline frames {: #group-by-frames }
+
+If inline frames on a page initiate a lot of requests, you can make the request log frendlier by grouping them.
+
+To group requests by iframes, open **Settings** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} inside the **Network** panel and check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Group by frame**.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/QgdViJaRvfWo8suAE6a6.png", alt="The network request log with requests grouped by iframes.", width="800", height="702" %}
+
+To view a request initiated by an inline frame, expand it in the request log.
 
 ### View the timing of requests in relation to one another {: #waterfall }
 
@@ -542,7 +560,7 @@ other requests occurred before DevTools was opened, those requests aren't counte
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/2oSUzbdlzdwgvsgeRQr6.png", alt="The total size of transferred and loaded resources.", width="800", height="428" %}
 
-See [View the uncompressed size of a resource][25] to see how large resources are after the browser uncompresses them. 
+See [View the uncompressed size of a resource][25] to see how large resources are after the browser uncompresses them.
 
 ### View the stack trace that caused a request {: #initiator-stack-trace }
 
@@ -564,17 +582,27 @@ In this example, the compressed size of the `www.google.com` document that was s
 
 ### Save all network requests to a HAR file {: #save-as-har }
 
-To save all network requests to a HAR file:
+[HAR (HTTP Archive)][26] is a file format used by several HTTP session tools to export the captured data. The format is a JSON object with a particular set of fields.
 
-1.  Right-click any request in the **Requests** table.
-2.  Select **Save all as HAR with content**. DevTools saves all requests that have occurred since you
-    opened DevTools to the HAR file. There is no way to filter requests, or to save just a single
-    request.
+You can save all network requests to a HAR file in two ways:
 
-Once you've got a HAR file, you can import it back into DevTools for analysis. Just drag-and-drop
-the HAR file into the **Requests** table. See also [HAR Analyzer][26].
+- Right-click any request in the **Requests** table and select **Save all as HAR with content**.
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/X4lTWJrOAasUtZwD20BT.png", alt="Selecting Save all as HAR with content.", width="800", height="455" %}
+- Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XEd84LBN4Rjoj6WUnpg2.svg", alt="Export.", width="24", height="24" %} **Export HAR** in the action bar at the top of the **Network** panel.
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JaytyulU4VllFs9yH5B0.png", alt="The Export HAR button in the action bar at the top.", width="800", height="528" %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/X4lTWJrOAasUtZwD20BT.png", alt="Selecting Save all as HAR with content.", width="800", height="455" %}
+{% Aside %}
+**Note**: DevTools exports all requests that have occurred since you opened DevTools to the HAR file. You can't filter requests to export. To save a single request, see [Copy one or more requests to the clipboard](#copy).
+{% endAside %}
+
+Once you have a HAR file, you can import it back into DevTools for [analysis][26] in two ways:
+
+- Drag-and-drop the HAR file into the **Requests** table.
+- Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/oiUyFA6HRhsKOpUyaq0g.svg", alt="Import.", width="24", height="24" %} **Import HAR** in the action bar at the top of the **Network** panel.
+
+{% Aside %}
+**Note**: The **Network** panel reads and shows [initiators](/docs/devtools/network/reference/#requests) for the requests imported from HAR files.
+{% endAside %}
 
 ### Copy one or more requests to the clipboard {: #copy }
 

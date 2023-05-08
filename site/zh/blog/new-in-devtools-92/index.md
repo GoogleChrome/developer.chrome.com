@@ -19,7 +19,7 @@ tags:
 
 
 <!-- lint disable no-smart-quotes -->
-{% include 'partials/devtools/zh/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id="2baY3JpCxpo" %}
 
@@ -235,5 +235,5 @@ Chromium 议题: [1204004](https://crbug.com/1204004), [1204466](https://crbug.c
 
 Chromium 议题: [1199787](https://crbug.com/1199787)
 
-{% include 'partials/devtools/zh/reach-out.md' %}
-{% include 'partials/devtools/zh/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

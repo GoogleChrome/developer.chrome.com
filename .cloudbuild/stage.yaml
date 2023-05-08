@@ -1,0 +1,79 @@
+timeout: 2700s # Set build timeout to 45 mins
+steps:
+  - id: 'install'
+    name: node:16
+    entrypoint: npm
+    args: ['ci']
+
+  - id: 'prepare'
+    name: node:16
+    entrypoint: bash
+    args:
+      - '-c'
+      - |
+        npm run stage:github determineDeploymentType &&
+        npm run stage:github announceDeploymentStart
+
+  - id: 'build'
+    name: node:16
+    env:
+      - 'CI=true'
+      - 'NODE_OPTIONS="--max_old_space_size=8192"'
+      - 'ELEVENTY_IGNORE_NACL=true'
+    entrypoint: bash
+    args:
+      - '-c'
+      - |
+        npm run stage:github buildStaticSite
+
+  - id: 'deploy'
+    name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: bash
+    args:
+      - '-c'
+      # Copy, /en/ to root of /dist, to be able to serve English from /
+      # without further redirects, remove the leftovers and upload everything
+      # to Cloud Storage, remove afterwards to not include it in the instance image
+      - |
+
+        echo "Starting deployment ..."
+        cat gulp-tasks/stageGitHub/tmp/deploymentType.txt
+        if [ ! -z "$(cat gulp-tasks/stageGitHub/tmp/deploymentType.txt)" ]; then
+          cp -rf dist/en/* dist/ &&
+          rm -rf dist/en &&
+          echo "Uploading files ..."
+          gsutil -m rsync -r dist gs://static-dcc-staging/pr-$_PR_NUMBER
+          echo "Done uploading!"
+          rm -rf dist
+        fi
+
+        if [[ "$(cat gulp-tasks/stageGitHub/tmp/deploymentType.txt)" = "app" ]]; then
+          gcloud app deploy --version pr-$_PR_NUMBER-app --no-promote --project dcc-staging
+        fi
+
+  - id: 'finalize'
+    name: node:16
+    entrypoint: bash
+    args:
+      - '-c'
+      - |
+        npm run stage:github announceDeploymentFinished
+
+options:
+  machineType: 'E2_HIGHCPU_32'
+  env:
+    - 'BRANCH_NAME=$BRANCH_NAME'
+    - 'HEAD_REPO_URL=$_HEAD_REPO_URL'
+    - 'REPO_NAME=$REPO_NAME'
+    - 'COMMIT_SHA=$COMMIT_SHA'
+    - 'PR_NUMBER=$_PR_NUMBER'
+  secretEnv: ['GITHUB_APP_ID', 'GITHUB_APP_KEY', 'GITHUB_APP_INSTALLATION_ID']
+
+availableSecrets:
+  secretManager:
+    - versionName: projects/dcc-staging/secrets/GITHUB_APP_ID/versions/1
+      env: 'GITHUB_APP_ID'
+    - versionName: projects/dcc-staging/secrets/GITHUB_APP_KEY/versions/1
+      env: 'GITHUB_APP_KEY'
+    - versionName: projects/dcc-staging/secrets/GITHUB_APP_INSTALLATION_ID/versions/1
+      env: 'GITHUB_APP_INSTALLATION_ID'

@@ -14,65 +14,15 @@
  * limitations under the License.
  */
 
-const yaml = require('js-yaml');
-const get = require('lodash.get');
-const fs = require('fs');
 const path = require('path');
+
+const {I18nFilter} = require('webdev-infra/filters/i18n');
 
 const defaultLocale = 'en';
 
-/**
- * Recursively walk a directory and create an object out of the file tree.
- * For example: _data/i18n/foo/bar/baz.yml would produce:
- * {foo: {bar: baz: { ... }}}
- * @param {string} dir A directory
- * @return {object}
- */
-const walk = dir => {
-  const results = {};
-  const files = fs.readdirSync(dir);
-  files
-    .filter(file => {
-      // Only allow directories and yaml files.
-      const ext = path.extname(file);
-      // !ext implies a directory
-      if (!ext || ext === '.yaml' || ext === '.yml') {
-        return true;
-      }
-
-      return false;
-    })
-    .forEach(file => {
-      file = path.join(dir, file);
-      const ext = path.extname(file);
-      const name = path.basename(file, ext);
-      const stat = fs.statSync(file);
-      if (stat && stat.isDirectory()) {
-        /* Recurse into a subdirectory */
-        results[name] = walk(file);
-      } else {
-        /* Is a file */
-        results[name] = yaml.load(fs.readFileSync(file, 'utf-8'));
-      }
-    });
-  return results;
-};
-
-// Scan the _data/i18n directory and create a nested i18n data object
-const data = {i18n: walk(path.join(__dirname, '..', '_data', 'i18n'))};
-
-/**
- * Looks for the i18n string that matches the path and locale.
- * @param {string} pth A dot separated path
- * @param {string} locale A locale prefix (example: 'en', 'pl')
- * @return {string}
- */
-const i18n = (pth, locale = 'en') => {
-  try {
-    return get(data, pth)[locale] || get(data, pth)[defaultLocale];
-  } catch (err) {
-    throw new Error(`Could not find i18n result for ${pth}`);
-  }
-};
+const i18n = new I18nFilter().configure({
+  defaultLocale,
+  dictPaths: [path.join(__dirname, '..', '_data', 'i18n')],
+});
 
 module.exports = {defaultLocale, i18n};

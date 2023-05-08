@@ -228,10 +228,10 @@ Reports are removed after a while, whether or not they're successfully sent.
 [3]: #sync
 [4]: #notifications
 [5]: #push
-[6]: https://developers.google.com/web/updates/2018/12/background-fetch
+[6]: /blog/background-fetch
 [7]: https://web.dev/service-workers-cache-storage/
 [8]: /docs/devtools/open
-[9]: https://developers.google.com/web/updates/2015/12/background-sync
+[9]: /blog/background-sync
 [10]: https://web.dev/service-workers-cache-storage/
 [11]: /docs/devtools/open
 [12]: https://web.dev/service-workers-cache-storage/

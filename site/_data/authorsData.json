@@ -63,7 +63,10 @@
     "github": "schuay"
   },
   "dtapuska": {
-    "twitter": "dtapuska"
+    "twitter": "dtapuska",
+    "github": "dtapuska",
+    "image": "image/zKrSUSkPboWMTTSEkowJbqw5Egi2/PMKyfQoKPntnI4amz8LD.jpeg",
+    "country": "CA"
   },
   "bokan": {
     "twitter": "david_bokan"
@@ -92,7 +95,9 @@
     "twitter": "williamdenniss"
   },
   "kenchris": {
-    "twitter": "kennethrohde"
+    "country": "DK",
+    "twitter": "kennethrohde",
+    "github": "kenchris"
   },
   "emilystark": {
     "homepage": "https://www.emilymstark.com/",
@@ -116,7 +121,8 @@
     "twitter": "aerotwist"
   },
   "chriswilson": {
-    "twitter": "cwilso"
+    "twitter": "cwilso",
+    "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/YwzRFxyI5YWUTUCIp3W1.jpeg"
   },
   "renatomangini": {
     "homepage": "http://www.renatomangini.com/",
@@ -150,15 +156,14 @@
     "twitter": "mikewest"
   },
   "johannes": {
-    "github": "powdercloud"
+    "github": "powdercloud",
+    "twitter": "powdercloud",
+    "mastodon": "https://mastodon.social/@powdercloud",
+    "image": "image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/okZMIdTu1wPPE4YqqKDX.jpeg"
   },
-  "maudnalpas": {
-    "twitter": "maudnals",
-    "github": "maudnals"
-  },
-  "rowanmerewood": {
-    "twitter": "rowan_m",
-    "github": "rowan-m"
+  "jasmineyan": {
+    "github": "jazyan",
+    "image": "image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/fBUEuHdxeM0oGVbrelgI.png"
   },
   "housseindjirdeh": {
     "homepage": "https://houssein.me/",
@@ -181,7 +186,8 @@
   },
   "rviscomi": {
     "github": "rviscomi",
-    "twitter": "rick_viscomi"
+    "twitter": "rick_viscomi",
+    "image": "image/STd8eW8CSiNp5B1bX0R6Dww2eH32/03cRovenlDpm0uyoUUkX.jpeg"
   },
   "ilyagrigorik": {
     "homepage": "https://igvita.com/",
@@ -190,7 +196,8 @@
   "philipwalton": {
     "homepage": "https://philipwalton.com/",
     "twitter": "philwalton",
-    "github": "philipwalton"
+    "github": "philipwalton",
+    "image": "image/admin/ovBM8MF9rYDxVVHUVlcG.jpg"
   },
   "hongchanchoi": {
     "homepage": "https://hoch.io/",
@@ -219,7 +226,9 @@
   },
   "paulkinlan": {
     "homepage": "https://paul.kinlan.me/",
-    "twitter": "paul_kinlan"
+    "twitter": "paul_kinlan",
+    "mastodon": "https://status.kinlan.me/@paul",
+    "image": "image/T4FyVKpzu4WKF1kBNvXepbi08t52/0O1ZGr2P0l9oTKabyUK5.jpeg"
   },
   "joemedley": {
     "github": "jpmedley",
@@ -253,6 +262,7 @@
     "twitter": "petele",
     "github": "petele",
     "glitch": "petele",
+    "mastodon": "https://techhub.social/@petele",
     "image": "image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/9l19VVp1vBxCnEA75HwX.jpg"
   },
   "pjmclachlan": {
@@ -294,7 +304,7 @@
   },
   "justinschuh": {
     "country": "US",
-    "github": "https://github.com/jschuh",
+    "github": "jschuh",
     "twitter": "justinschuh",
     "image": "image/80mq7dk16vVEg8BBhsVe42n6zn82/Cv4qmh8vnXhcHPgCzbpb.jpg"
   },
@@ -302,6 +312,7 @@
     "country": "US",
     "homepage": "https://una.im",
     "twitter": "una",
+    "mastodon": "https://front-end.social/@una",
     "image": "image/HodOHWjMnbNw56hvNASHWSgZyAf2/gTvIXYVFxXMYjBiZxysB.jpg"
   },
   "surma": {
@@ -318,6 +329,7 @@
     "twitter": "andreban",
     "glitch": "andreban",
     "github": "andreban",
+    "mastodon": "https://mastodon.social/@andreban",
     "image": "image/Vww75TFpThOgTNuASFM6UYfBAp53/JEp8KytgeB3nYFintp4W.jpg"
   },
   "peconn": {
@@ -325,6 +337,10 @@
     "twitter": "petereconn",
     "github": "PEConn",
     "image": "image/Vww75TFpThOgTNuASFM6UYfBAp53/bphnrZBppE6u1ZqNnhKU.jpg"
+  },
+  "peterkvitek": {
+    "country": "US",
+    "image": "image/ZQjEes3OsyYCDLE5837FjNRQ1Gw2/62sncQPT61F2Irw5MJRI.jpg"
   },
   "pavoldrotar": {
     "country": "UK",
@@ -335,6 +351,7 @@
   },
   "adrianajara": {
     "country": "US",
+    "mastodon": "https://indieweb.social/@tropicadri",
     "image": "image/Vww75TFpThOgTNuASFM6UYfBAp53/tIuTcnxqlspZFyklJYHG.jpg"
   },
   "agektmr": {
@@ -342,6 +359,7 @@
     "twitter": "agektmr",
     "github": "agektmr",
     "glitch": "agektmr",
+    "mastodon": "https://infosec.exchange/@agektmr",
     "image": "image/YLflGBAPWecgtKJLqCJHSzHqe2J2/r7YL1q3afKza6VUTF4QN.jpg"
   },
   "titouan": {
@@ -398,6 +416,7 @@
     "country": "DE",
     "twitter": "mathias",
     "github": "mathiasbynens",
+    "homepage": "https://mathiasbynens.be/",
     "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/abpvpv7lyW7ECZNEJ7wb.jpg"
   },
   "jackfranklin": {
@@ -469,6 +488,7 @@
     "twitter": "sw12",
     "github": "samdutton",
     "glitch": "samdutton",
+    "mastodon": "https://techhub.social/@samdutton",
     "image": "image/80mq7dk16vVEg8BBhsVe42n6zn82/F3Df3SeugXYQEUUiMslu.jpg"
   },
   "maudn": {
@@ -477,20 +497,46 @@
     "github": "maudnals",
     "image": "image/O2RNUyVSLubjvENAT3e7JSdqSOx1/bpoFTthopZevDRDPPo3r.jpg"
   },
+  "maudnalpas": {
+    "country": "DE",
+    "twitter": "maudnals",
+    "github": "maudnals",
+    "image": "image/O2RNUyVSLubjvENAT3e7JSdqSOx1/9ORwve80jFiyYnPvNcWF.jpg"
+  },
   "beaufortfrancois": {
     "country": "FR",
     "github": "beaufortfrancois",
     "image": "image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/8SV7KI2QNVXph2L5Cga2.jpeg"
   },
+  "reillyg": {
+    "twitter": "reillyeon",
+    "github": "reillyeon",
+    "image": "image/admin/C7kO2T8Q8jSZxU9xj3AC.jpg"
+  },
+  "nattestad": {
+    "twitter": "fractorious",
+    "country": "US",
+    "image": "image/admin/UyUsatSDE2wdnfy3KHzO.jpg"
+  },
   "cwallez": {
     "country": "FR",
     "twitter": "DaKangz",
     "github": "Kangz",
+    "mastodon": "https://mastodon.gamedev.place/@DaKangz",
     "image": "image/vvhSqZboQoZZN9wBvoXq72wzGAf1/mYkUaoNpythq50oIFiQh.jpeg"
+  },
+  "toji": {
+    "country": "US",
+    "twitter": "tojiro",
+    "github": "toji",
+    "mastodon": "https://mastodon.social/@tojiro",
+    "homepage": "https://toji.dev/",
+    "image": "image/vvhSqZboQoZZN9wBvoXq72wzGAf1/0OHajNUjLrRB7XsDWuFt.png"
   },
   "eladalon": {
     "country": "SE",
     "github": "eladalon1983",
+    "linkedin": "elad-alon",
     "image": "image/vvhSqZboQoZZN9wBvoXq72wzGAf1/EAFBslJDQgJynWlS3Hp8.jpeg"
   },
   "atotic": {
@@ -509,6 +555,7 @@
     "twitter": "tomayac",
     "github": "tomayac",
     "glitch": "tomayac",
+    "mastodon": "https://toot.cafe/@tomayac",
     "country": "DE",
     "image": "image/8WbTDNrhLsU0El80frMBGE4eMCD3/TbY7HP8KuTtQ6Y1186nt.jpg"
   },
@@ -560,9 +607,10 @@
   },
   "rowan_m": {
     "country": "UK",
-    "twitter": "rowan_m",
-    "github": "rowan-m",
+    "mastodon": "https://mastodon.social/@rowan_m",
     "glitch": "rowan-m",
+    "github": "rowan-m",
+    "twitter": "rowan_m",
     "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/36DbfIY65yZEBUfN0VZ3.jpeg"
   },
   "danielcheng": {
@@ -633,6 +681,7 @@
     "country": "US",
     "github": "heyawhite",
     "twitter": "heyawhite",
+    "mastodon": "https://mstdn.social/@alexandrawhite",
     "image": "image/VbsHyyQopiec0718rMq2kTE1hke2/tKKMrgVB852NNd1UMRzN.png"
   },
   "aaronhk": {
@@ -672,7 +721,6 @@
     "country": "US",
     "twitter": "kevinkiklee",
     "github": "kevinkiklee",
-    "glitch": "kevinkiklee",
     "image": "image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/8bRRaZVXzJKCDu0RlK1Y.jpg"
   },
   "stefanzager": {
@@ -684,6 +732,7 @@
     "twitter": "rachelandrew",
     "github": "rachelandrew",
     "homepage": "https://rachelandrew.co.uk",
+    "mastodon": "https://front-end.social/@rachelandrew",
     "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/DbljY0AD921j6PKWl6JC.jpeg"
   },
   "bgalbs": {
@@ -700,8 +749,9 @@
     "country": "UK",
     "twitter": "jh3yy",
     "github": "jh3y",
-    "linkedin": "https://www.linkedin.com/in/jheytompkins/",
+    "linkedin": "jheytompkins",
     "homepage": "https://jhey.dev/links",
+    "mastodon": "https://front-end.social/@jhey",
     "image": "image/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/JjwUlxDMTmjyFEvBC8wG.jpeg"
   },
   "mariahhart": {
@@ -712,14 +762,14 @@
     "country": "UK",
     "twitter": "SimonHearne",
     "github": "SimonHearne",
-    "linkedin": "https://www.linkedin.com/in/simonhearne/",
+    "linkedin": "simonhearne",
     "homepage": "https://simonhearne.com"
   },
   "jarhar": {
     "country": "US",
     "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/xHYktxBPGfDHbzmEufy9.jpeg",
-    "github": "https://github.com/josepharhar",
-    "twitter": "https://twitter.com/josepharhar"
+    "github": "josepharhar",
+    "twitter": "josepharhar"
   },
   "emmatwersky": {
     "country": "US",
@@ -735,11 +785,11 @@
   "sbc": {
     "country": "US",
     "github": "sbc100"
-   },
-   "ericsl": {
-     "country": "DE",
-     "github": "ericsl"
-   },
+  },
+  "ericsl": {
+    "country": "DE",
+    "github": "ericsl"
+  },
   "rkochman": {
     "country": "US",
     "twitter": "rkochman",
@@ -804,11 +854,21 @@
     "twitter": "tunetheweb",
     "github": "tunetheweb",
     "homepage": "https://www.tunetheweb.com",
+    "mastodon": "https://webperf.social/@tunetheweb",
     "image": "image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/FzCdsVVLfgdqxfgs6BDc.jpeg"
   },
   "barbsmith": {
     "country": "US",
     "image": "image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/CFDMEqVwcngFoi1NCxTF.png"
+  },
+  "cilvento": {
+    "country": "US",
+    "image": "image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/wZV82yyQSeklFCQj7Nd2.jpeg"
+  },
+  "csharrison": {
+    "country": "US",
+    "github": "csharrison",
+    "image": "image/O2RNUyVSLubjvENAT3e7JSdqSOx1/yoQ5f3zvzz50fjMyb0ac.jpeg"
   },
   "crystalwang": {
     "country": "US",
@@ -825,6 +885,7 @@
   },
   "jney": {
     "country": "US",
+    "homepage": "https://www.jeremybney.com",
     "twitter": "jeremybney",
     "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/TAnCBPCUpoC4X3jwXN7Y.webp"
   },
@@ -832,6 +893,7 @@
     "homepage": "https://www.bram.us/",
     "twitter": "bramus",
     "github": "bramus",
+    "mastodon": "https://front-end.social/@bramus",
     "country": "BE",
     "image": "image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/CQMqvg5UkY4weDnJij3b.jpeg"
   },
@@ -847,7 +909,7 @@
     "country": "US"
   },
   "leenasohoni": {
-    "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/VXCjCzLEGWApTkZkNZkR.JPG",
+    "image": "image/lKgJZH2YLpV46uAKAtfp4jfvXhx2/oALg7ACRUlSyXj7xGbOR.jpeg",
     "twitter": "leena_sohoni",
     "country": "US"
   },
@@ -878,8 +940,246 @@
   "michalpitr": {
     "image": "image/Pd9q3xrQ8jTnoXTXNDT1eN6CWLJ3/mioFNQIt6Z4uohUwczfV.jpg",
     "github": "michalpitr",
-    "linkedin": "https://www.linkedin.com/in/michal-pitr-a7156b127",
-    "twiter": "pitrmichal"
+    "linkedin": "michal-pitr-a7156b127",
+    "twitter": "pitrmichal"
+  },
+  "patmeenan": {
+    "twitter": "patmeenan",
+    "country": "US"
+  },
+  "anniesullie": {
+    "twitter": "anniesullie",
+    "country": "US"
+  },
+  "mmocny": {
+    "twitter": "mmocny",
+    "country": "CA"
+  },
+  "ianclelland": {
+    "linkedin": "clelland",
+    "country": "CA"
+  },
+  "roydeepanjan": {
+    "twitter": "roydeepanjan",
+    "country": "CA"
+  },
+  "diklla": {
+    "twitter": "diklla",
+    "country": "UK"
+  },
+  "gilberto_cocchi": {
+    "twitter": "gilberto_cocchi",
+    "country": "IT"
+  },
+  "harrytheodoulou": {
+    "linkedin": "harrytheo",
+    "country": "UK"
+  },
+  "milutinkristofic": {
+    "linkedin": "kristofic",
+    "country": "DE"
+  },
+  "marcdoerrenhaus": {
+    "linkedin": "marc-doerrenhaus-12356758",
+    "country": "US"
+  },
+  "gbmonaco": {
+    "twitter": "devknoll",
+    "github": "devknoll",
+    "image": "image/HodOHWjMnbNw56hvNASHWSgZyAf2/hDqTBczSpBYv3BZkYRFz.jpeg"
+  },
+  "ergunsh": {
+    "twitter": "ergunsh",
+    "image": "image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/9RHGPqIpZciJHKPrj0Us.jpg",
+    "country": "DE"
+  },
+  "noraoneill": {
+    "image": "image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/ZE14LKBqoE48mMOUUFcH.jpg"
+  },
+  "amysteam": {
+    "github": "amysteam",
+    "linkedin": "amysteam",
+    "image": "image/BhuKGJaIeLNPW9ehns59NfwqKxF2/INt7a8DM3w72flwcElRV.jpg"
+  },
+  "markallenthompson": {
+    "linkedin": "markallenthompson",
+    "country": "US"
+  },
+  "rouslan": {
+    "github": "rsolomakhin",
+    "image": "image/YLflGBAPWecgtKJLqCJHSzHqe2J2/dZOnFhReaU2NKpk1Rr9f.jpg"
+  },
+  "chrisdavidmills": {
+    "github": "chrisdavidmills",
+    "twitter": "chrisdavidmills",
+    "linkedin": "chris-mills-4471711",
+    "image": "image/nkovDlvelCQoTyX9N57xf85AR9T2/jlh9RMlHQcyL1oQ7tP7z.jpg"
+  },
+  "leeronisrael": {
+    "github": "leeronisrael",
+    "twitter": "leeronisrael",
+    "linkedin": "leeronisrael",
+    "image": "image/80mq7dk16vVEg8BBhsVe42n6zn82/E02nz219ZjKaoyuRFtdb.jpg"
+  },
+  "joeytrotz": {
+    "linkedin": "joeytrotz",
+    "image": "image/80mq7dk16vVEg8BBhsVe42n6zn82/lDjPb6DT7O39Tz40VEum.jpg"
+  },
+  "samuelgoto": {
+    "github": "samuelgoto",
+    "twitter": "samuelgoto",
+    "image": "image/YLflGBAPWecgtKJLqCJHSzHqe2J2/ucaanCmRv31SNr3mp6cA.jpg"
+  },
+
+  "zachmastromatto": {
+    "image": "image/O2RNUyVSLubjvENAT3e7JSdqSOx1/bKxprIw5dh9Z8LFcj6Pw.jpeg"
+  },
+  "akashnadan": {
+    "image": "image/EvKqfXr4ercavLaApW41d8uGXN72/FRxVlVGiws1DaBkBTnv3.jpeg"
+  },
+  "andreeacucu": {
+    "image": "image/O2RNUyVSLubjvENAT3e7JSdqSOx1/wLLL41WUJUT8wnqNwERJ.jpeg"
+  },
+  "adamsilverstein": {
+    "github": "adamsilverstein",
+    "twitter": "adamsilverstein",
+    "image": "image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/a58pQb092GyDr5S7vOeg.webp"
+  },
+  "djuffin": {
+    "github": "djuffin",
+    "image": "image/admin/MWYHP293xzaBdw30G3Ts.jpg"
+  },
+  "nateschloss": {
+    "github": "n8schloss",
+    "twitter": "n8schloss",
+    "image": "image/admin/BS9rSjcVynuKi2SX5Whu.jpg"
+  },
+  "andrewcomminos": {
+    "github": "acomminos",
+    "twitter": "acomminos",
+    "image": "image/admin/ykAIcNpbomeiulF6Kw7P.jpg"
+  },
+  "smcgruer": {
+    "github": "stephenmcgruer",
+    "image": "image/YLflGBAPWecgtKJLqCJHSzHqe2J2/QAh4CYAgpGaIc0JjgpAw.jpg"
+  },
+  "mstensho": {
+    "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/FN095pMGAh4KlMLXT3hT.jpeg"
+  },
+  "example": {
+    "twitter": "ChromiumDev"
+  },
+  "sarino": {
+    "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/9vzh9pyZ3U1P2zxrzGaS.jpg"
+  },
+  "ianstanion": {
+    "image": "image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/x4tksWHlknXbJ0xQc957.jpg"
+  },
+  "exterkamp": {
+    "country": "US",
+    "twitter": "shane_exterkamp",
+    "github": "exterkamp",
+    "image": "image/admin/yPytekIqH5VnoqMx3jj2.jpg"
+  },
+  "helencho": {
+    "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/XAQGcTjOZYDZuupT6DIx.jpeg"
+  },
+  "kaustubhag": {
+    "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/Uva1hZaQBRpV8k1tJr7R.jpeg"
+  },
+  "johannhof": {
+    "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/U6iZ9cAgFDT7v4cmIxEP.jpeg"
+  },
+  "priyankachatterjee": {
+    "country": "US",
+    "image": "image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/Q9SoxqpDiTGCSfZul60a.jpeg"
+  },
+  "tristramsouthey": {
+    "country": "US",
+    "image": "image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/yh2i5pJyWLqMz49B7qWq.jpeg"
+  },
+  "kyraseevers": {
+    "country": "US",
+    "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/bAfyIJWEgdLfw1B3K8j0.jpg"
+  },
+  "jyasskin": {
+    "country": "US",
+    "mastodon": "https://hachyderm.io/@jyasskin",
+    "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/I9TmKizOlEBpFNDmT8qp.jpeg"
+  },
+  "developit": {
+    "homepage": "https://jasonformat.com",
+    "twitter": "_developit",
+    "github": "developit",
+    "image": "image/admin/bPCYfhUgxdCpXhKAWc9X.jpg"
+  },
+  "masonfreed": {
+    "twitter": "Mfreed777",
+    "github": "mfreed7",
+    "image": "image/admin/t7E3inN3orEPpDUXSkXR.jpg"
+  },
+  "uskay": {
+    "homepage": "https://blog.uskay.io/",
+    "twitter": "uskay",
+    "image": "image/admin/ztcrpMPYTd84oPTN4GdY.jpg"
+  },
+  "janicklasralphj": {
+    "twitter": "Janicklas",
+    "image": "image/IypihH3o5cSpEMVp5i08dp69otp2/XClrajjKMkDpS2XeK83c.jpg"
+  },
+  "mattreynolds": {
+    "github": "nondebug",
+    "image": "image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/T6iiWq4bxpNnhtksZITO.jpg"
+  },
+  "pbirk": {
+    "image": "image/VbsHyyQopiec0718rMq2kTE1hke2/OP7hHXskpMEc8q7wddG1.jpeg",
+    "github": "peterbn",
+    "linkedin": "peter-birk-pakkenberg"
+  },
+  "pjl": {
+    "country": "US",
+    "github": "pjl-google",
+    "linkedin": "philipjlee"
+  },
+  "georgiafranklin": {
+    "country": "US",
+    "image": "image/VbsHyyQopiec0718rMq2kTE1hke2/tFdVO9oa8ki55NO1Iwma.jpeg"
+  },
+  "arskama": {
+    "country": "FI",
+    "github": "arskama"
+  },
+  "robertyang": {
+    "image": "image/RtQlPaM9wdhEJGVKR8boMPkWf443/In0YoXtpVY8pwm7Pcj33.jpeg",
+    "twitter": "yangrob",
+    "linkedin": "robertyanghk"
+  },
+  "vaatika": {
+    "country": "DE",
+    "twitter": "vaatika",
+    "image": "image/3ILBH0X0aDOqDIm6SgH3OTHT8832/vL2uGtk2NKGT9two4PWy.jpg"
+  },
+  "dmengelt": {
+    "country": "CH",
+    "twitter": "dmengelt",
+    "github": "dmengelt",
+    "mastodon": "https://mastodon.online/@dmengelt",
+    "image": "image/UIt9DNJ5rxYg42rqjqkKmCmAYXg1/KJcni8LUMhCip3LIJljm.jpeg"
+  },
+  "yunqingwang": {
+    "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/6Cx9HnGJfUJv7ustH6sN.jpeg"
+  },
+  "roshanbaliga": {
+    "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/WinvDg4wrHb2WCqNhoBC.jpeg"
+  },
+  "marcopaniconi": {
+    "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/sCdEdscRuD8KSRYpvTXI.png"
+  },
+  "sebastianbenz": {
+    "country": "DE",
+    "twitter": "sebabenz",
+    "github": "sebastianbenz",
+    "mastodon": "https://mastodon.cloud/@sebabenz",
+    "image": "image/6hHqS5auVgWhN0cQNQztaJx5w4M2/aHVsNAzlN0L0oqVacct3.jpg"
   }
-  
 }

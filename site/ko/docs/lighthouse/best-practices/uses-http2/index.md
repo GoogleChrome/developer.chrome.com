@@ -16,7 +16,7 @@ HTTP/2는 유선을 통해 이동하는 데이터를 줄여 페이지 리소스�
 
 Lighthouse는 페이지에서 요청한 모든 리소스를 수집하고 각각의 HTTP 프로토콜 버전을 확인합니다. 비 HTTP/2 요청이 감사 결과에서 무시되는 경우가 있습니다. 자세한 내용은 [구현을 참조](https://github.com/GoogleChrome/lighthouse/blob/9fad007174f240982546887a7e97f452e0eeb1d1/lighthouse-core/audits/dobetterweb/uses-http2.js#L138)하세요.
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## 이 감사를 통과하는 방식
 

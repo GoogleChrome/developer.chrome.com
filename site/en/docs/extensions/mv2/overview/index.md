@@ -6,7 +6,7 @@ updated: 2018-02-25
 description: An overview of the purpose of Chrome Extensions and how they're developed.
 ---
 
-{% include 'partials/extensions/mv2-legacy-page.md' %}
+{% Partial 'extensions/mv2-legacy-page.md' %}
 
 Extensions are small software programs that customize the browsing experience. They enable users to
 tailor Chrome functionality and behavior to individual needs or preferences. They are built on web
@@ -122,7 +122,7 @@ or by pressing `Ctrl+Shift+F` on your keyboard.
 [4]: https://chrome.google.com/webstore/developer/dashboard
 [5]: https://chrome.google.com/webstore
 [6]: /docs/webstore
-[7]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/mv2-archive/tutorials/hello_extensions
+[7]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/_archive/mv2/tutorials/hello_extensions
 [8]: /docs/extensions/reference/browserAction
 [9]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/gmKIT88Ha1z8VBMJFOOH.png
 [10]: /docs/extensions/mv2/getstarted

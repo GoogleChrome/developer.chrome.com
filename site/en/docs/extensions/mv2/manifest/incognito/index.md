@@ -6,6 +6,8 @@ updated: 2015-09-25
 description: Reference documentation for the incognito property of manifest.json.
 ---
 
+{% Partial 'extensions/mv2-legacy-page.md' %}
+
 Use the `"incognito"` manifest key with either `"spanning"` or `"split"` to specify how this
 extension will behave if allowed to run in incognito mode. Using `"not_allowed"` to prevent this
 extension from being enabled in incognito mode.

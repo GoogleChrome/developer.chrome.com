@@ -23,7 +23,7 @@ A auditoria falha se:
 
 O Lighthouse não avalia a qualidade da sua descrição.
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% Partial 'lighthouse-seo/scoring.njk' %}
 
 ## Como adicionar uma meta description
 

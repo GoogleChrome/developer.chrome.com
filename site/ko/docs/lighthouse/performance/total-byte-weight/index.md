@@ -18,7 +18,7 @@ updated: 2020-05-29
 
 [HTTP 아카이브 데이터](https://httparchive.org/reports/state-of-the-web?start=latest#bytesTotal)를 기반으로 하는 중간 네트워크 페이로드는 1,700~1,900KiB입니다. 가장 높은 페이로드가 표시되도록 지원하기 위해 Lighthouse는 전체 네트워크 요청이 5,000KiB를 초과하는 페이지에 플래그를 지정합니다.
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## 페이로드 크기를 줄이는 방법
 

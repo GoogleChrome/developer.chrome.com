@@ -12,7 +12,7 @@ updated: 2020-04-29
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/apWYFAWSuxf9tQHuogSN.png", alt="Lighthouseのクリティカル要求深度の最小化監査のスクリーンショット", width="800", height="452" %}</figure>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Lighthouseがクリティカル要求チェーンを識別する方法
 

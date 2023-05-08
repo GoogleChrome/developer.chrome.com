@@ -16,8 +16,8 @@ There are loads of tools available in the browser for debugging and troubleshoot
 
 Chrome (and [recent versions of Edge based on the Blink engine](https://en.wikipedia.org/wiki/Microsoft_Edge#Anaheim_(2019%E2%80%93present))) have a robust set of developer tools. Some of those tools&mdash;specifically in Chrome's DevTools&mdash;were [touched upon earlier in this documentation](/docs/workbox/improving-development-experience/), but there's more to discover:
 
-- [Debug Progressive Web Apps](https://developers.google.com/web/tools/chrome-devtools/progressive-web-apps)
-- [Inspect Network Activity in Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/network)
+- [Debug Progressive Web Apps](/docs/devtools/progressive-web-apps/)
+- [Inspect Network Activity in Chrome DevTools](/docs/devtools/network/)
 - Video: [Debugging Service Workers in Chrome](https://www.youtube.com/watch?v=tuRPSaSiK_c)
 - Codelab: [Debugging Service Workers](https://codelabs.developers.google.com/codelabs/debugging-service-workers/index.html)
 
@@ -87,4 +87,4 @@ One advantage of this approach is that it's completely independent of your bundl
 
 ## Further information
 
-If you're still struggling to figure out what's going on in a buggy service worker and the logging just isn't enough, try posting a question to [Stack Overflow with the `workbox` tag](https://stackoverflow.com/questions/ask?tags=workbox). If you can't find an answer there, [file a Github issue](https://github.com/GoogleChrome/workbox/issues) (after reading [the contributing guidelines](https://github.com/GoogleChrome/workbox/blob/v6/CONTRIBUTING.md)). This not only allows a wide audience of developers to read and answer your questions, but the answer to your question may help someone in the same situation later on.
+If you're still struggling to figure out what's going on in a buggy service worker and the logging just isn't enough, try posting a question to [Stack Overflow with the `workbox` tag](https://stackoverflow.com/questions/ask?tags=workbox). If you can't find an answer there, [file a GitHub issue](https://github.com/GoogleChrome/workbox/issues) (after reading [the contributing guidelines](https://github.com/GoogleChrome/workbox/blob/v6/CONTRIBUTING.md)). This not only allows a wide audience of developers to read and answer your questions, but the answer to your question may help someone in the same situation later on.
