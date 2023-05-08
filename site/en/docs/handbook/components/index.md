@@ -363,12 +363,12 @@ const config = {
 
 ## Comments
 
-Write comments using `{# comment #}`. Comments are stripped out during rendering.
+Write comments using <code>{# comment #}</code>. Comments are stripped out during rendering.
 
-```md
+<pre>
 {# Loop through all the users #}
 {% for user in users %}...{% endfor %}
-```
+</pre>
 
 ## Compare
 
