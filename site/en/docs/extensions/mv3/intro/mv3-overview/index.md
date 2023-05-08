@@ -8,6 +8,8 @@ date: 2020-11-09
 updated: 2023-02-22
 ---
 
+{% Partial 'extensions/mv3-support.md' %}
+
 Manifest V3 is a major step towards our
 [vision for the extensions platform](/docs/extensions/mv3/intro/platform-vision/).
 Manifest V3 focuses on the three pillars of that vision: privacy, security, and
@@ -129,10 +131,10 @@ extensions, see [our own article][doc-promises].
 There are a number of other changes introduced in Manifest V3:
 
 * [Action API consolidation][mig-action]:
-  The Browser Action and Page Action APIs are unified into a single Action API.
+  The Browser Action and Page Action APIs are unified into a single [Action API][doc-action].
 * [Web accessible resources][mig-war]: These resources are now available only to specified sites and extensions.
 * [Content security policy (CSP)][mig-csp]: You now specify separate CSP for different execution contexts in a single object, and certain policies are disallowed.
-* [`executeScript()` changes][mig-code]: Extensions can no longer execute arbitrary strings. Only script files and functions. This method is also migrating from the Tabs API to the new Scripting API.
+* [`executeScript()` changes][mig-code]: Extensions can no longer execute arbitrary strings. Only script files and functions. This method is also migrating from the Tabs API to the new [Scripting API][doc-scripting].
 * [A new in-memory `StorageArea`][storage-session]: Extensions can store values in-memory across service worker restarts.
 * [Dynamic content scripts][cs-runtime]: You can now register and unregister content scripts at runtime using the new [Scripting API][doc-scripting].
 * [New favicon API][doc-favicon]: Extensions can retrieve a website's favicon.
@@ -143,6 +145,7 @@ Look for [announcements][whats-new] of new Manifest V3 features as they become a
 [doc-favicon]: /docs/extensions/mv3/favicon/
 [doc-promises]: /docs/extensions/mv3/promises#compare-to-callback
 [doc-scripting]: /docs/extensions/reference/scripting/
+[doc-action]: /docs/extensions/reference/action/
 [mdn-promise]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
 [mig-action]: /docs/extensions/mv3/intro/mv3-migration#action-api-unification
 [mig-code]: /docs/extensions/mv3/intro/mv3-migration#executing-arbitrary-strings

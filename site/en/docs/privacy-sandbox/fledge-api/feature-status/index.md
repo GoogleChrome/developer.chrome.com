@@ -14,10 +14,14 @@ authors:
   - kevinkiklee
 ---
 
+{% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
+
 As we move [FLEDGE](/docs/privacy-sandbox/fledge/) closer to general
 availability and approach third-party cookie deprecation in Chrome, you may be
 wondering about the availability of FLEDGE services and features. Here you'll
 find a list of the scoped FLEDGE features and when they'll be supported. 
+
+## Feature availability timeline
 
 <table class="with-heading-tint with-borders width-full">
   <thead>
@@ -32,15 +36,58 @@ find a list of the scoped FLEDGE features and when they'll be supported.
    </td>
     <td>Now</td>
     <td><p>Supported until at least 2026.</p>
-      <p>This feature is intended to make the transition to FLEDGE reporting from third-party cookie reporting easier. Thus, this reporting will not be supported after adtechs have had time to update their reporting mechanisms.</p>
+      <p>This feature is intended to make the transition to FLEDGE reporting from third-party cookie reporting easier. Thus, this reporting will not be supported after ad techs have had time to update their reporting mechanisms.</p>
     </td>
   </tr>
   <tr>
+    <td><a href="https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#trusted-execution-environment">Trusted Execution Environment (TEE)</a> usage for Key/Value service</td>
+    <td>Now</td>
+    <td>Required no sooner than Q3 2025.</td>
+  </tr>
+  <tr>
+    <td><a href="/docs/privacy-sandbox/fenced-frame/">Fenced frames</a>
+   </td>
+    <td>Now
+   </td>
+    <td>Required no sooner than 2026.</td>
+  </tr>
+  <tr>
+    <td>Improved FLEDGE + <a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a> integration.</td>
+    <td>2023 Q2</td>
+    <td>Available for testing in Chrome Stable M112+.</td>
+  </tr>
+ <tr>
+    <td><a href="https://github.com/WICG/turtledove/blob/main/FLEDGE_k_anonymity_server.md">K-anonymity</a>
+   </td>
+    <td>Later in 2023 Q3
+   </td>
+    <td>For rendering creatives, the k-anonymity threshold of “a crowd of 50 users per creative over 7 days” must be met. 
+   </td>
+  </tr>
+    <tr>
+    <td><a href="/blog/fledge-service-overview/#bidding-auction-service">Bidding and Auction services</a>
+   </td>
+    <td>Targeted for testing in H2 2023.</td>
+    <td>In development.</td>
+  </tr>
+</table>
+
+### Additional features
+
+<table class="with-heading-tint with-borders width-full">
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Available for testing</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+    <tr>
     <td>Event-level user bidding signals for modeling (<a href="https://github.com/WICG/turtledove/issues/435">Github Issue</a>)</td>
     <td>Later in 2023</td>
     <td>Expected in Chrome for origin trial in Q2 2023.</td>
   </tr>
-  <tr>
+    <tr>
     <td><a href="https://github.com/WICG/turtledove/issues/299">Per-Buyer Latency Reporting</a></td>
     <td>Later in 2023</td>
     <td>Expected in Chrome for origin trial in Q1 2023</td>
@@ -55,7 +102,7 @@ find a list of the scoped FLEDGE features and when they'll be supported.
     <td>Later in 2023</td>
     <td>Expected in Chrome for origin trial in Q2 2023.</td>
   </tr>
-  <tr>
+    <tr>
     <td><a href="https://github.com/WICG/turtledove/issues/441">Direct seller destination support</a></td>
     <td>Later in 2023</td>
     <td>Expected in Chrome for origin trial in Q1 2023.</td>
@@ -71,38 +118,8 @@ find a list of the scoped FLEDGE features and when they'll be supported.
     <td>Later in 2023</td>
     <td>Expected in Chrome for origin trial in Q2 2023</td>
   </tr>
-  <tr>
-    <td><a href="https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#trusted-execution-environment">Trusted Execution Environment (TEE)</a> usage for Key/Value service</td>
-    <td>Now</td>
-    <td>Required no sooner than Q3 2025.</td>
-  </tr>
-  <tr>
-    <td><a href="/docs/privacy-sandbox/fenced-frame/">Fenced frames</a>
-   </td>
-    <td>Now
-   </td>
-    <td>Required no sooner than 2026.</td>
-  </tr>
-  <tr>
-    <td><a href="https://github.com/WICG/turtledove/blob/main/FLEDGE_k_anonymity_server.md">K-anonymity</a>
-   </td>
-    <td>Later in 2023 Q3
-   </td>
-    <td>For rendering creatives, the k-anonymity threshold of “a crowd of 50 users per creative over 7 days” must be met. 
-   </td>
-  </tr>
-  <tr>
-    <td>Improved FLEDGE + <a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a> integration.</td>
-    <td>2023 Q2</td>
-    <td>Available for testing in Chrome Stable M112+.</td>
-  </tr>
-  <tr>
-    <td><a href="/blog/fledge-service-overview/#bidding-auction-service">Bidding and Auction services</a>
-   </td>
-    <td>Targeted for testing in H2 2023.</td>
-    <td>In development.</td>
-  </tr>
-</table>
+   
+  </table>
 
 ## Event-level auction win reporting
 

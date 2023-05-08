@@ -3,6 +3,10 @@
 
 {% extends "layouts/base.njk" %}
 
+{% block css %}
+{% InlineCss '/css/overview.css' %}
+{% endblock %}
+
 {% block title_bar %}
 {% include 'partials/breadcrumbs-author.njk' %}
 {% endblock %}
@@ -54,6 +58,11 @@
           {% if paged.linkedin  %}
             <a rel="me" href="https://www.linkedin.com/in/{{ paged.linkedin }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="LinkedIn">
               {{ icon('linkedin', {hidden: true}) }}
+            </a>
+          {% endif %}
+          {% if paged.rss  %}
+            <a rel="me" href="{{ paged.rss }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="RSS">
+              {{ icon('rss-author', {hidden: true}) }}
             </a>
           {% endif %}
         </div>
