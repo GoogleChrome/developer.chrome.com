@@ -89,7 +89,7 @@ async function getOpenPullRequestsFromGitHub() {
       'GET',
       'pulls?state=open&per_page=100'
     );
-    const pullRequests = apiResponse.map(item => item.number);
+    const pullRequests = apiResponse.data.map(item => item.number);
     return pullRequests;
   } catch (e) {
     console.error(e);
@@ -109,7 +109,7 @@ async function cleanUpCloudStorage(prNumbers) {
   // a single request for every single object/file to be deleted
   for (const prNumber of prNumbers) {
     const prefix = `pr-${prNumber}/`;
-    console.log(`Removing files with prefix ${prefix} ...}`);
+    console.log(`Removing files with prefix ${prefix} ...`);
     // Be patient: as of 01/2023, cleaning up one version can take up
     // to 3 minutes following the constraints mentioned above.
     await storage.bucket(BUCKET_NAME).deleteFiles({prefix});
