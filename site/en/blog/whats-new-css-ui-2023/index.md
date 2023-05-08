@@ -129,6 +129,8 @@ But this API isn’t limited to parent selection. You can also style any childre
 To prevent rendering performance slowdowns in large DOM trees, we recommend that you scope this selector as closely as possible. For example, using `:has()` to check for matches on the root html element would be slower than checking for matches in a nav bar or in a card element with a smaller tree.
 {% endAside %}
 
+Learn more and explore some more demos, check out [this blog post](/blog/has-m105/) all about `:has()`.
+
 ### nth-of syntax
 
 {% BrowserCompat 'css.selectors.nth-of-type' %}
@@ -241,11 +243,12 @@ Dynamic viewport units change in value when the additional dynamic browser toolb
   height="2250"
 %}
 
-For more information about these new units, read [The large, small, and dynamic viewport units](https://web.dev/viewport-units/).
-
 {% Aside %} 
 Note that the dynamic viewport units do not take the presence of the Virtual Keyboard into account. From Chrome 108 you can [set a meta-tag to change this behavior](/blog/viewport-resize-behavior/#opting-in-to-a-different-behavior). 
 {% endAside %}
+
+
+For more information about these new units, read [The large, small, and dynamic viewport units](https://web.dev/viewport-units/).
 
 ### Wide-gamut color spaces
 
