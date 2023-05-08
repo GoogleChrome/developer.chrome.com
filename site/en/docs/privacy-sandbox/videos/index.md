@@ -20,37 +20,9 @@ Refer to the linked documentation for the latest details.
 
 ## What is the Privacy Sandbox?
 
-{% Columns %}
-{% Column %}
-<iframe width="280" height="158" src="https://www.youtube.com/embed/VVgtGkRtVPU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-<br>
-As some details may have changed, refer to the latest docs: <a href="/docs/privacy-sandbox/overview/">What is the Privacy sandbox?</a>
-{% endColumn %}
-{% Column %}
-<strong>May 12, 2022. Run time: 16:16</strong>
+{% Partial 'privacy-sandbox/videos/ps-may-22.njk' %}
 
-<strong>Latest docs:</strong> [What is the Privacy sandbox?](/docs/privacy-sandbox/overview/)
-
-At Google I/O 2022, Rowan Merewood from the Chrome team spoke about the Privacy Sandbox, the pros and cons of third-party content, and how the Privacy Sandbox addresses these issues. Finally, he detailed how this model applies to cookies so you can prepare for upcoming changes.
-{% endColumn %}
-{% endColumns %}
-
-
-{% Columns %}
-{% Column %}
-<iframe width="280" height="158" src="https://www.youtube.com/embed/7AQFDm7STmw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-<br>
-As some details may have changed, refer to the latest docs:
-<a href="/docs/privacy-sandbox/topics/">Topics API</a>, 
-<a href="/docs/privacy-sandbox/fledge/">Protected Audience API</a>, 
-<a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a>
-{% endColumn %}
-{% Column %}
-<strong>February 2023. Run time: 11:08</strong>
-
-Danny Rojas of the Products Parnerships team discusses the Privacy Sandbox ads APIs from a high level and for a wider audience. He briefly describes the [Topics API](/docs/privacy-sandbox/topics/), the [Protected Audience API](/docs/privacy-sandbox/fledge/) (formerly FLEDGE), and [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/), some of the community feedback, and provides a general timeline for the Privacy Sandbox releases. He also briefly covers common use cases.
-{% endColumn %}
-{% endColumns %}
+{% Partial 'privacy-sandbox/videos/ps-feb-23.njk' %}
 
 <!-- https://www.youtube.com/watch?v=5t83ebP71Yw&list=RDCMUCnUYZLuoy1rq1aVMwx4aTzw&index=26 -->
 
@@ -73,21 +45,30 @@ Description, date, link to docs... sed do eiusmod tempor incididunt ut labore et
 {% Columns %}
 {% Column %}
 <iframe width="280" height="158" src="https://www.youtube.com/embed/UGA74CIcom8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<br>
+As some details may have changed, refer to the latest docs:
+<a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting API</a>
 {% endColumn %}
 {% Column %}
-Description, date, link to docs... sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+<strong>May 2022. Run time: 6:15</strong> 
+
+Sam Dutton of the Chrome team discusses the Attribution Reporting API at a high level. He covers the two types of reports in the API Event-level reports and Summary reports, what data is reported, and how.
 {% endColumn %}
 {% endColumns %}
 
 {% Columns %}
 {% Column %}
 <iframe src="https://drive.google.com/file/d/18RGEx_mrhDJuMsLUK1BZ0cK5FSZRAAqh/preview" width="280" height="210" allow="autoplay"></iframe>
-
+<br>
+As some details may have changed, refer to the latest docs:
+<a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a>
 <!-- [Open full-size video](https://drive.google.com/file/d/18RGEx_mrhDJuMsLUK1BZ0cK5FSZRAAqh/preview) -->
 
 {% endColumn %}
 {% Column %}
-Description, date, link to docs... sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+<strong>Aug. 11, 2022 Run time: 43:58</strong>
+
+Summary reports walkthrough by Maud Nalpas of the Chrome team. A discussion of noise, how to set up and get summary reports. Robert goes through the server side.
 {% endColumn %}
 {% endColumns %}
 
@@ -146,9 +127,13 @@ Description, date, link to docs... sed do eiusmod tempor incididunt ut labore et
 {% Column %}
 <iframe width="280" height="158" src="https://www.youtube.com/embed/hEBzWuXjeTQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+<br>
+Refer to <a href="https://topics-demo.glitch.me/">the demo</a> discussed in the video.
 {% endColumn %}
 {% Column %}
-Description, date, link to docs... sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+<strong>November 2022. Run time: 13:22</strong>
+
+Sam Dutton from the Chrome team discusses the Topics taxonomy, walks through the Topics API demo, and shows the API in acton. For the latest details and more in-depth information, refer to <a href="/docs/privacy-sandbox/topics/"> the Topics API</a>.
 {% endColumn %}
 {% endColumns %}
 
