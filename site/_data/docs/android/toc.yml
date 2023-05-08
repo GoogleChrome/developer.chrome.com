@@ -17,7 +17,6 @@
         - url: /docs/android/custom-tabs/howto-custom-tab-check
         - url: /docs/android/custom-tabs/howto-custom-tab-low-level-api
         - url: /docs/android/custom-tabs/howto-custom-tab-request-headers
-    - url: /docs/android/custom-tabs/browser-support
 - title: i18n.docs.android.trustedwebactivity
   sections:
     - url: /docs/android/trusted-web-activity
