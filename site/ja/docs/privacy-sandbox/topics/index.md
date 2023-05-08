@@ -1,14 +1,10 @@
 ---
 layout: layouts/doc-post.njk
 title: Topics API 開発者ガイド
-subhead: |2
-
-  テスト用の Chrome フラグの使用方法など、API の操作方法を学びます。
-description: |2
-
-  テスト用の Chrome フラグの使用方法など、API の操作方法を学びます。
-date: '2022-01-25'
-updated: '2023-03-29'
+subhead: テスト用の Chrome フラグの使用方法など、API の操作方法を学びます。
+description: テスト用の Chrome フラグの使用方法など、API の操作方法を学びます。
+date: 2022-01-25
+updated: 2023-03-29
 authors:
   - samdutton
 ---
