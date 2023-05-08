@@ -6,7 +6,7 @@ description: >
 subhead: >
   Extension service workers can now stay alive as long as they're receiving events. This increases the reliability of extension services workers, but has a pitfall you should avoid.
 date: 2023-01-27
-updated: 2023-04-14
+updated: 2023-05-08
 authors:
   - joemedley
 tags:
@@ -18,7 +18,7 @@ alt: >
 ---
 
 {% Aside %}
-This post has been updated since we originally published it in January. TBD -summary of changes.
+This post has been updated since we originally published it in January. We've added text indicating that calls to extension APIs reset the service worker's timeout clock, and clarified exactly when service worker timeouts will ocurr.
 {% endAside %}
 
 Starting in Chrome 110 (in beta as of February 7, 2023), extension service workers stay alive as long as they're receiving events. This corrects a timing problem in the previous implementation of extension service workers. It was possible for timeouts to occur when new events were in the event queue and for the timeouts to truncate asynchronous work. This improvement removes the hard five-minute maximum lifetime for extension service workers. 
@@ -40,10 +40,12 @@ Unfortunately, this behavior did not apply to extension events. Extension events
 
 ## What's changed
 
-As of Chrome 110, all events reset the idle timer and the idle timeout will not occur if there are pending events. In other words, assuming there are no unexpected interruptions, extension service workers will now typically stay alive as long as they are actively processing events. In addition, calls to extension specific Chrome APIs, such as `chrome.storage.local.get()`, will reset the idle timeout. Be aware that:
+As of Chrome 110, all events reset the idle timer and the idle timeout will not occur if there are pending events. In other words, assuming there are no unexpected interruptions, extension service workers will now typically stay alive as long as they are actively processing events. In addition, calls to extension specific Chrome APIs, such as `chrome.storage.local.get()`, will reset the idle timeout. Specifically:
 
-* The service worker will terminate after 30 seconds if there are no events for both synchronous and asynchronous calls.
-* The service worker will terminate after 5 minutes if a single request, such as an event or API call, takes longer than 5 minutes to process (with the exception of a native messaging connection).
+* The service worker terminates after 30 seconds of inactivity. (Receiving an event or calling an extension API resets this timer).
+* The service worker terminates if a single request, such as an event or API call, takes longer than 5 minutes to process.
+
+Some APIs like native messaging provide a strong keep-alive which cancel both of these timers.
 
 We are till working to ensure that extension service workers are terminated when possible, without shutting down long-running work. A resource-concious extension service workers should always yield when possible. Additionally, extensions should prepare for unexpected termination by persisting state. This ensures against unpredictable events like the browser being forcefully closed by the user.
 
