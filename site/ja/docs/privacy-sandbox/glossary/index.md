@@ -211,7 +211,7 @@ authors:
 
 {% Partial 'privacy-sandbox/glossary-entries/site.njk' %}
 
-## Summary report {: #aggregate-report}
+## 要約レポート {: #aggregate-report}
 
 {% Partial 'privacy-sandbox/glossary-entries/summary-report.njk' %}
 
@@ -219,7 +219,7 @@ authors:
 
 {% Partial 'privacy-sandbox/glossary-entries/supply-side-platform.njk' %}
 
-## Surface
+## サーフェス
 
 {% Partial 'privacy-sandbox/glossary-entries/surface.njk' %}
 
@@ -227,7 +227,7 @@ authors:
 
 {% Partial 'privacy-sandbox/glossary-entries/third-party.njk' %}
 
-## サードパーティ Cookie {: #third-party-cookie}
+## サードパーティサービスが保存する Cookie。
 
 {% Partial 'privacy-sandbox/glossary-entries/third-party-cookie.njk' %}
 
