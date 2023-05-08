@@ -324,9 +324,7 @@ color-mix(in xyz, blue, white);
 
 The `color-mix()` function provides a long-requested capability: the ability to preserve opaque color values while adding some transparency to them. Now, you can use your brand color variables while creating variations of those colors at different opacities. The way to do this is to mix a color with transparent. When you mix your brand color blue with 10% transparent, you get a 90% opaque brand color. You can see how this enables you to quickly build color systems.
 
-
-– @TODO codepen / demo –
-
+{% Codepen { user: 'web-dot-dev', id: 'BaqryZm' } %}
 
 You can see this in action in Chrome DevTools today with a really nice preview venn diagram icon.
 
