@@ -7,7 +7,7 @@ updated: 2023-03-25
 description: Learn when best to use Android Custom Tabs for opening an URL in your Android app.
 ---
 
-Custom Tabs are a feature in modern Android browsers that gives app developers
+Custom Tabs are a feature in Android browsers that gives app developers
 a way to add a customized browser experience directly within their app.
 
 Loading web content has been a part of mobile apps since the early days of
@@ -19,16 +19,16 @@ state with the browser and add maintenance overhead.
 Custom Tabs offer a better user experience than simply opening an external
 browser. They allow users to remain within the app while browsing, increasing
 engagement and reducing the risk of users abandoning the app. They accomplish
-this by by being powered directly by the user's preferred browser, automatically
+this by by being powered directly by the user's preferred browser, and automatically
 sharing the state and features offered by it. You don't need to write custom
-code to manage requests, permission grants or cookie stores.
+code to manage requests, permission grants, or cookie stores.
 
 
 ## What can Custom Tabs do?
 
 By using a Custom Tab, your web content will load in whatever rendering engine
 powers your user's preferred browser. Any API or web platform feature is
-available there, will be available in your Custom Tab. Their browsing session,
+available there, and will be available in your Custom Tab. Their browsing session,
 saved passwords, payment methods, and addresses will all show up just like they
 are accustomed already.
 
@@ -39,25 +39,25 @@ chrome and user experience. Within your app, you launch a Custom Tab via an [Int
 When this Intent is called, you can add a number of attributes to the
 [CustomTabIntent](8) to get the exact experience you want. This includes
 
-Custom Entrance and Exit animations to match the rest of your app
+Custom entrance and exit animations to match the rest of your app
 
 <figure>
 {% Video preload=true, loop=true, playsinline=true, autoplay=true, src="video/DXqUldooyJOUnj3qXSYLHbUgUI93/sIeKPXwrHXdCXtGRrv2Q.mp4", width="350", height="730", class="screenshot" %}
   <figcaption>A mobile browser, transiting between screens, ending with a web site loaded in a Custom Tab</figcaption>
 </figure>
 
-Modifing the toolbar color to match your apps branding
+Modifing the toolbar color to match your app's branding
 
 <figure>
 {% Video loop=true, playsinline=true, autoplay=true, src="video/DXqUldooyJOUnj3qXSYLHbUgUI93/kQ0LUuUdcWFM34IPg5I6.mp4", width="350", height="730", class="screenshot"  %}
-  <figcaption>A mobile browser, transitioning to a Custom Tab with matching colors to the website</figcaption>
+  <figcaption>A mobile browser, transitioning to a Custom Tab with colors matching a website</figcaption>
 </figure>
 
-And that color consistency can stay with your app, even if they switch between Light and Dark themes
+And that color consistency can stay with your app, even if they switch between light and dark themes.
 
 <figure>
 {% Video loop=true, playsinline=true, autoplay=true, src="video/DXqUldooyJOUnj3qXSYLHbUgUI93/YBinAgwhx0kFizQWrrEr.mp4", width="350", height="730", class="screenshot"  %}
-  <figcaption>And that color consistency can stay with your app, even if they switch between Light and Dark themes</figcaption>
+  <figcaption>And that color consistency can stay with your app, even if they switch between light and dark themes.</figcaption>
 </figure>
 
 You can add custom actions and entries to the browser's toolbar, and menus.
