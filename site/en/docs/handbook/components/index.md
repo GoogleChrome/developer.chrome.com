@@ -361,6 +361,15 @@ const config = {
 
 {% endColumns %}
 
+## Comments
+
+Write comments using `{# comment #}`. Comments are stripped out during rendering.
+
+```md
+{# Loop through all the users #}
+{% for user in users %}...{% endfor %}
+```
+
 ## Compare
 
 ```md
