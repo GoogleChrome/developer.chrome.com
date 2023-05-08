@@ -12,6 +12,8 @@ hero: image/kheDArv5csY6rvQUJDbWRscckLr1/DMxr4JF97yMFDHABu8nY.png
 alt: ''
 ---
 
+{% YouTube id="eoQvRAaIvqM" %}
+
 I/O is just a few days away and we couldn't be more excited to share the latest updates across Google's developer products, solutions, and technologies. From keynotes to technical sessions and hands-on workshops, these announcements aim to help you build smarter and ship faster. 
 
 Here are some helpful tips to maximize your experience online.
