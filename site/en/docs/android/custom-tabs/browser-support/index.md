@@ -123,14 +123,14 @@ This method is deprecated. Instead, you should use [`setShareState`](#setShareSt
 
 {% AndroidBrowserSupportTable
  _method="addDefaultShareMenuItem",
- chrome="y@108.0.5359.79",
- edge="y@107.0.1418.62",
- firefox="y@107.2.0",
- opera="ct_unimplemented@72.4.3767.69265",
- samsung="n@19.0.3.12",
- brave="y@1.46.138",
+ chrome="y@113.0.5672.76",
+ edge="y@112.0.1722.59",
+ firefox="y@112.2.0",
+ opera="ct_unimplemented@74.3.3922.71982",
+ samsung="n@20.0.6.5",
+ brave="y@1.51.110",
  tor="y@102.2.1-Release (12)",
- uc="ct_unimplemented@13.4.0.1306"
+ uc="ct_unimplemented@13.4.2.1307"
 %}
 
 
@@ -142,14 +142,14 @@ Adds a menu item.
 
 {% AndroidBrowserSupportTable
  _method="addMenuItem",
- chrome="y@108.0.5359.79",
- edge="y@107.0.1418.62",
- firefox="y@107.2.0",
- opera="ct_unimplemented@72.4.3767.69265",
- samsung="y@19.0.3.12",
- brave="y@1.46.138",
+ chrome="y@113.0.5672.76",
+ edge="y@112.0.1722.59",
+ firefox="y@112.2.0",
+ opera="ct_unimplemented@74.3.3922.71982",
+ samsung="y@20.0.6.5",
+ brave="y@1.51.110",
  tor="y@102.2.1-Release (12)",
- uc="ct_unimplemented@13.4.0.1306"
+ uc="ct_unimplemented@13.4.2.1307"
 %}
 
 
@@ -165,14 +165,14 @@ Adds an action button to the custom tab. Multiple buttons can be added via this 
 
 {% AndroidBrowserSupportTable
  _method="addToolbarItem",
- chrome="y@108.0.5359.79",
- edge="y@107.0.1418.62",
- firefox="n@107.2.0",
- opera="ct_unimplemented@72.4.3767.69265",
- samsung="y@19.0.3.12",
- brave="y@1.46.138",
+ chrome="y@113.0.5672.76",
+ edge="y@112.0.1722.59",
+ firefox="n@112.2.0",
+ opera="ct_unimplemented@74.3.3922.71982",
+ samsung="y@20.0.6.5",
+ brave="y@1.51.110",
  tor="n@102.2.1-Release (12)",
- uc="ct_unimplemented@13.4.0.1306"
+ uc="ct_unimplemented@13.4.2.1307"
 %}
 
 ### enableUrlBarHiding
@@ -185,14 +185,14 @@ Enables the url bar to hide as the user scrolls down on the page.
 
 {% AndroidBrowserSupportTable
  _method="enableUrlBarHiding",
- chrome="n@108.0.5359.79",
- edge="n@107.0.1418.62",
- firefox="n@107.2.0",
- opera="ct_unimplemented@72.4.3767.69265",
- samsung="n@19.0.3.12",
- brave="n@1.46.138",
+ chrome="n@113.0.5672.76",
+ edge="n@112.0.1722.59",
+ firefox="n@112.2.0",
+ opera="ct_unimplemented@74.3.3922.71982",
+ samsung="n@20.0.6.5",
+ brave="n@1.51.110",
  tor="n@102.2.1-Release (12)",
- uc="ct_unimplemented@13.4.0.1306"
+ uc="ct_unimplemented@13.4.2.1307"
 %}
 
 
@@ -206,14 +206,14 @@ Sets the action button that is displayed in the Toolbar with default tinting beh
 
 {% AndroidBrowserSupportTable
  _method="setActionButton",
- chrome="y@108.0.5359.79",
- edge="y@107.0.1418.62",
- firefox="y@107.2.0",
- opera="ct_unimplemented@72.4.3767.69265",
- samsung="y@19.0.3.12",
- brave="y@1.46.138",
+ chrome="y@113.0.5672.76",
+ edge="y@112.0.1722.59",
+ firefox="y@112.2.0",
+ opera="ct_unimplemented@74.3.3922.71982",
+ samsung="y@20.0.6.5",
+ brave="y@1.51.110",
  tor="y@102.2.1-Release (12)",
- uc="ct_unimplemented@13.4.0.1306"
+ uc="ct_unimplemented@13.4.2.1307"
 %}
 
 
@@ -225,14 +225,14 @@ Sets the action button that is displayed in the Toolbar.
 
 {% AndroidBrowserSupportTable
  _method="setCloseButtonIcon",
- chrome="y@108.0.5359.79",
- edge="y@107.0.1418.62",
- firefox="y@107.2.0",
- opera="ct_unimplemented@72.4.3767.69265",
- samsung="y@19.0.3.12",
- brave="y@1.46.138",
+ chrome="y@113.0.5672.76",
+ edge="y@112.0.1722.59",
+ firefox="y@112.2.0",
+ opera="ct_unimplemented@74.3.3922.71982",
+ samsung="y@20.0.6.5",
+ brave="y@1.51.110",
  tor="y@102.2.1-Release (12)",
- uc="ct_unimplemented@13.4.0.1306"
+ uc="ct_unimplemented@13.4.2.1307"
 %}
 
 ### setCloseButtonPosition
@@ -243,14 +243,14 @@ Sets the Close button icon for the custom tab.
 
 {% AndroidBrowserSupportTable
  _method="setCloseButtonPosition",
- chrome="y@108.0.5359.79",
- edge="n@107.0.1418.62",
- firefox="n@107.2.0",
- opera="ct_unimplemented@72.4.3767.69265",
- samsung="n@19.0.3.12",
- brave="y@1.46.138",
+ chrome="y@113.0.5672.76",
+ edge="n@112.0.1722.59",
+ firefox="n@112.2.0",
+ opera="ct_unimplemented@74.3.3922.71982",
+ samsung="n@20.0.6.5",
+ brave="y@1.51.110",
  tor="n@102.2.1-Release (12)",
- uc="ct_unimplemented@13.4.0.1306"
+ uc="ct_unimplemented@13.4.2.1307"
 %}
 
 
@@ -262,14 +262,14 @@ Sets the color scheme that should be applied to the user interface in the custom
 
 {% AndroidBrowserSupportTable
  _method="setColorScheme",
- chrome="y@108.0.5359.79",
- edge="y@107.0.1418.62",
- firefox="n@107.2.0",
- opera="ct_unimplemented@72.4.3767.69265",
- samsung="n@19.0.3.12",
- brave="y@1.46.138",
+ chrome="y@113.0.5672.76",
+ edge="y@112.0.1722.59",
+ firefox="n@112.2.0",
+ opera="ct_unimplemented@74.3.3922.71982",
+ samsung="n@20.0.6.5",
+ brave="y@1.51.110",
  tor="n@102.2.1-Release (12)",
- uc="ct_unimplemented@13.4.0.1306"
+ uc="ct_unimplemented@13.4.2.1307"
 %}
 
 
@@ -281,14 +281,14 @@ Sets the color scheme that should be applied to the user interface in the custom
 
 {% AndroidBrowserSupportTable
  _method="setColorSchemeParams",
- chrome="y@108.0.5359.79",
- edge="y@107.0.1418.62",
- firefox="y@107.2.0",
- opera="ct_unimplemented@72.4.3767.69265",
- samsung="y@19.0.3.12",
- brave="y@1.46.138",
+ chrome="y@113.0.5672.76",
+ edge="y@112.0.1722.59",
+ firefox="y@112.2.0",
+ opera="ct_unimplemented@74.3.3922.71982",
+ samsung="y@20.0.6.5",
+ brave="y@1.51.110",
  tor="y@102.2.1-Release (12)",
- uc="ct_unimplemented@13.4.0.1306"
+ uc="ct_unimplemented@13.4.2.1307"
 %}
 
 ### setDefaultColorSchemeParams
@@ -299,14 +299,14 @@ Sets [`CustomTabColorSchemeParams()`](https://developer.android.com/reference/an
 
 {% AndroidBrowserSupportTable
  _method="setDefaultColorSchemeParams",
- chrome="y@108.0.5359.79",
- edge="status bar gets color, app bar does not@107.0.1418.62",
- firefox="y@107.2.0",
- opera="ct_unimplemented@72.4.3767.69265",
- samsung="broken in dark mode@19.0.3.12",
- brave="y@1.46.138",
+ chrome="y@113.0.5672.76",
+ edge="status bar gets color, app bar does not@112.0.1722.59",
+ firefox="y@112.2.0",
+ opera="ct_unimplemented@74.3.3922.71982",
+ samsung="broken in dark mode@20.0.6.5",
+ brave="y@1.51.110",
  tor="n@102.2.1-Release (12)",
- uc="ct_unimplemented@13.4.0.1306"
+ uc="ct_unimplemented@13.4.2.1307"
 %}
 
 ### setDefaultShareMenuItemEnabled
@@ -319,14 +319,14 @@ Set whether a default share item is added to the menu.
 
 {% AndroidBrowserSupportTable
  _method="setDefaultColorSchemeParams",
- chrome="y@108.0.5359.79",
- edge="y@107.0.1418.62",
- firefox="y@107.2.0",
- opera="ct_unimplemented@72.4.3767.69265",
- samsung="share is always enabled@19.0.3.12",
- brave="y@1.46.138",
+ chrome="y@113.0.5672.76",
+ edge="y@112.0.1722.59",
+ firefox="y@112.2.0",
+ opera="ct_unimplemented@74.3.3922.71982",
+ samsung="share is always enabled@20.0.6.5",
+ brave="y@1.51.110",
  tor="y@102.2.1-Release (12)",
- uc="ct_unimplemented@13.4.0.1306"
+ uc="ct_unimplemented@13.4.2.1307"
 %}
 
 ### setExitAnimations
@@ -335,14 +335,14 @@ Sets any exit animations.
 
 {% AndroidBrowserSupportTable
  _method="setDefaultColorSchemeParams",
- chrome="y@108.0.5359.79",
- edge="y@107.0.1418.62",
- firefox="y@107.2.0",
- opera="ct_unimplemented@72.4.3767.69265",
- samsung="y@19.0.3.12",
- brave="y@1.46.138",
+ chrome="y@113.0.5672.76",
+ edge="y@112.0.1722.59",
+ firefox="y@112.2.0",
+ opera="ct_unimplemented@74.3.3922.71982",
+ samsung="y@20.0.6.5",
+ brave="y@1.51.110",
  tor="y@102.2.1-Release (12)",
- uc="ct_unimplemented@13.4.0.1306"
+ uc="ct_unimplemented@13.4.2.1307"
 %}
 
 ### setInitialActivityHeightPx
@@ -353,14 +353,14 @@ Sets the Custom Tab Activity's initial height in pixels with default resize beha
 
 {% AndroidBrowserSupportTable
  _method="setDefaultColorSchemeParams",
- chrome="y@108.0.5359.79",
- edge="n@107.0.1418.62",
- firefox="n@107.2.0",
- opera="ct_unimplemented@72.4.3767.69265",
- samsung="n@19.0.3.12",
- brave="n@1.46.138",
+ chrome="y@113.0.5672.76",
+ edge="y@112.0.1722.59",
+ firefox="n@112.2.0",
+ opera="ct_unimplemented@74.3.3922.71982",
+ samsung="n@20.0.6.5",
+ brave="n@1.51.110",
  tor="n@102.2.1-Release (12)",
- uc="ct_unimplemented@13.4.0.1306"
+ uc="ct_unimplemented@13.4.2.1307"
 %}
 
 
@@ -374,14 +374,14 @@ Sets the navigation bar color. Has no effect on API versions below L.
 
 {% AndroidBrowserSupportTable
  _method="setDefaultColorSchemeParams",
- chrome="y@108.0.5359.79",
- edge="y@107.0.1418.62",
- firefox="n@107.2.0",
- opera="ct_unimplemented@72.4.3767.69265",
- samsung="n@19.0.3.12",
- brave="y@1.46.138",
+ chrome="y@113.0.5672.76",
+ edge="y@112.0.1722.59",
+ firefox="n@112.2.0",
+ opera="ct_unimplemented@74.3.3922.71982",
+ samsung="n@20.0.6.5",
+ brave="y@1.51.110",
  tor="y@102.2.1-Release (12)",
- uc="ct_unimplemented@13.4.0.1306"
+ uc="ct_unimplemented@13.4.2.1307"
 %}
 
 ### setNavigationBarDividerColor
@@ -392,14 +392,14 @@ This method is deprecated. Instead, you should use [`setDefaultColorSchemeParams
 
 {% AndroidBrowserSupportTable
  _method="setDefaultColorSchemeParams",
- chrome="y@108.0.5359.79",
- edge="y@107.0.1418.62",
- firefox="n@107.2.0",
- opera="ct_unimplemented@72.4.3767.69265",
- samsung="n@19.0.3.12",
- brave="y@1.46.138",
+ chrome="y@113.0.5672.76",
+ edge="y@112.0.1722.59",
+ firefox="n@112.2.0",
+ opera="ct_unimplemented@74.3.3922.71982",
+ samsung="n@20.0.6.5",
+ brave="y@1.51.110",
  tor="n@102.2.1-Release (12)",
- uc="ct_unimplemented@13.4.0.1306"
+ uc="ct_unimplemented@13.4.2.1307"
 %}
 
 ### setSecondaryToolbarColor
@@ -412,14 +412,14 @@ Sets the color of the secondary toolbar.
 
 {% AndroidBrowserSupportTable
  _method="setDefaultColorSchemeParams",
- chrome="y@108.0.5359.79",
- edge="y@107.0.1418.62",
- firefox="n@107.2.0",
- opera="ct_unimplemented@72.4.3767.69265",
- samsung="n@19.0.3.12",
- brave="y@1.46.138",
+ chrome="y@113.0.5672.76",
+ edge="y@112.0.1722.59",
+ firefox="n@112.2.0",
+ opera="ct_unimplemented@74.3.3922.71982",
+ samsung="n@20.0.6.5",
+ brave="y@1.51.110",
  tor="n@102.2.1-Release (12)",
- uc="ct_unimplemented@13.4.0.1306"
+ uc="ct_unimplemented@13.4.2.1307"
 %}
 
 ### setShareState
@@ -430,14 +430,14 @@ Sets the share state that should be applied to the custom tab.
 
 {% AndroidBrowserSupportTable
  _method="setShareState",
- chrome="y@108.0.5359.79",
- edge="y@107.0.1418.62",
- firefox="y@107.2.0",
- opera="ct_unimplemented@72.4.3767.69265",
- samsung="there is always a default share@19.0.3.12",
- brave="y@1.46.138",
+ chrome="y@113.0.5672.76",
+ edge="y@112.0.1722.59",
+ firefox="y@112.2.0",
+ opera="ct_unimplemented@74.3.3922.71982",
+ samsung="there is always a default share@20.0.6.5",
+ brave="y@1.51.110",
  tor="y@102.2.1-Release (12)",
- uc="ct_unimplemented@13.4.0.1306"
+ uc="ct_unimplemented@13.4.2.1307"
 %}
 
 ### setShowTitle
@@ -448,14 +448,14 @@ Sets whether the title should be shown in the custom tab.
 
 {% AndroidBrowserSupportTable
  _method="setShowTitle",
- chrome="y@108.0.5359.79",
- edge="y@107.0.1418.62",
- firefox="always shows the title@107.2.0",
- opera="ct_unimplemented@72.4.3767.69265",
- samsung="y@19.0.3.12",
- brave="y@1.46.138",
+ chrome="y@113.0.5672.76",
+ edge="y@112.0.1722.59",
+ firefox="always shows the title@112.2.0",
+ opera="ct_unimplemented@74.3.3922.71982",
+ samsung="y@20.0.6.5",
+ brave="y@1.51.110",
  tor="always shows the title@102.2.1-Release (12)",
- uc="ct_unimplemented@13.4.0.1306"
+ uc="ct_unimplemented@13.4.2.1307"
 %}
 
 ### setStartAnimations
@@ -465,14 +465,14 @@ Sets the start animations.
 
 {% AndroidBrowserSupportTable
  _method="setStartAnimations",
- chrome="y@108.0.5359.79",
- edge="y@107.0.1418.62",
- firefox="y@107.2.0",
- opera="ct_unimplemented@72.4.3767.69265",
- samsung="y@19.0.3.12",
- brave="y@1.46.138",
+ chrome="y@113.0.5672.76",
+ edge="y@112.0.1722.59",
+ firefox="y@112.2.0",
+ opera="ct_unimplemented@74.3.3922.71982",
+ samsung="y@20.0.6.5",
+ brave="y@1.51.110",
  tor="y@102.2.1-Release (12)",
- uc="ct_unimplemented@13.4.0.1306"
+ uc="ct_unimplemented@13.4.2.1307"
 %}
 
 ### setToolbarColor
@@ -485,14 +485,14 @@ Sets the toolbar color. On Android L and above, this color is also applied to th
 
 {% AndroidBrowserSupportTable
  _method="setDefaultColorSchemeParams",
- chrome="y@108.0.5359.79",
- edge="status bar gets color, app bar does not@107.0.1418.62",
- firefox="y@107.2.0",
- opera="ct_unimplemented@72.4.3767.69265",
- samsung="broken in dark mode@19.0.3.12",
- brave="y@1.46.138",
+ chrome="y@113.0.5672.76",
+ edge="status bar gets color, app bar does not@112.0.1722.59",
+ firefox="y@112.2.0",
+ opera="ct_unimplemented@74.3.3922.71982",
+ samsung="broken in dark mode@20.0.6.5",
+ brave="y@1.51.110",
  tor="n@102.2.1-Release (12)",
- uc="ct_unimplemented@13.4.0.1306"
+ uc="ct_unimplemented@13.4.2.1307"
 %}
 
 ### setToolbarCornerRadiusDp
@@ -501,14 +501,14 @@ Sets the toolbar's top corner radii in dp.
 
 {% AndroidBrowserSupportTable
  _method="setToolbarCornerRadiusDp",
- chrome="y@108.0.5359.79",
- edge="n@107.0.1418.62",
- firefox="n@107.2.0",
- opera="ct_unimplemented@72.4.3767.69265",
- samsung="n@19.0.3.12",
- brave="n@1.46.138",
+ chrome="y@113.0.5672.76",
+ edge="y@112.0.1722.59",
+ firefox="n@112.2.0",
+ opera="ct_unimplemented@74.3.3922.71982",
+ samsung="n@20.0.6.5",
+ brave="n@1.51.110",
  tor="n@102.2.1-Release (12)",
- uc="ct_unimplemented@13.4.0.1306"
+ uc="ct_unimplemented@13.4.2.1307"
 %}
 
 ### setUrlBarHidingEnabled
@@ -517,14 +517,14 @@ Set whether the url bar should hide as the user scrolls down on the page.
 
 {% AndroidBrowserSupportTable
  _method="setUrlBarHidingEnabled",
- chrome="y@108.0.5359.79",
- edge="y@107.0.1418.62",
- firefox="y@107.2.0",
- opera="ct_unimplemented@72.4.3767.69265",
- samsung="y@19.0.3.12",
- brave="y@1.46.138",
+ chrome="y@113.0.5672.76",
+ edge="y@112.0.1722.59",
+ firefox="y@112.2.0",
+ opera="ct_unimplemented@74.3.3922.71982",
+ samsung="y@20.0.6.5",
+ brave="y@1.51.110",
  tor="n@102.2.1-Release (12)",
- uc="ct_unimplemented@13.4.0.1306"
+ uc="ct_unimplemented@13.4.2.1307"
 %}
 
 
@@ -537,32 +537,15 @@ Set whether the url bar should hide as the user scrolls down on the page.
 Sets an `[EngagementSignalsCallback](https://developer.android.com//reference/androidx/browser/customtabs/EngagementSignalsCallback)` to receive callbacks for events related to the user's engagement with webpage within the tab.
 
 {% AndroidBrowserSupportTable
- _method="setDefaultColorSchemeParams",
- chrome="y@108.0.5359.79",
- edge="n@107.0.1418.62",
- firefox="n@107.2.0",
- opera="ct_unimplemented@72.4.3767.69265",
- samsung="n@19.0.3.12",
- brave="n@1.46.138",
+ _method="setEngagementSignalsCallback",
+ chrome="y@113.0.5672.76",
+ edge="n@112.0.1722.59",
+ firefox="n@112.2.0",
+ opera="ct_unimplemented@74.3.3922.71982",
+ samsung="n@20.0.6.5",
+ brave="n@1.51.110",
  tor="n@102.2.1-Release (12)",
- uc="ct_unimplemented@13.4.0.1306"
-%}
-
-
-### setEngagementSignalsCallback
-
-Sets an `[EngagementSignalsCallback](https://developer.android.com//reference/androidx/browser/customtabs/EngagementSignalsCallback)` to receive callbacks for events related to the user's engagement with webpage within the tab.
-
-{% AndroidBrowserSupportTable
- _method="setDefaultColorSchemeParams",
- chrome="y@108.0.5359.79",
- edge="n@107.0.1418.62",
- firefox="n@107.2.0",
- opera="ct_unimplemented@72.4.3767.69265",
- samsung="n@19.0.3.12",
- brave="n@1.46.138",
- tor="n@102.2.1-Release (12)",
- uc="ct_unimplemented@13.4.0.1306"
+ uc="ct_unimplemented@13.4.2.1307"
 %}
 
 
@@ -572,12 +555,12 @@ Returns whether the Engagement Signals API is available. The availability of the
 
 {% AndroidBrowserSupportTable
  _method="isEngagementSignalsApiAvailable",
- chrome="y@108.0.5359.79",
- edge="n@107.0.1418.62",
- firefox="n@107.2.0",
- opera="ct_unimplemented@72.4.3767.69265",
- samsung="n@19.0.3.12",
- brave="n@1.46.138",
- tor="n@102.2.1-Release (12)",
- uc="ct_unimplemented@13.4.0.1306"
+ chrome="y@113.0.5672.76",
+ edge="n@112.0.1722.59",
+ firefox="n@112.2.0",
+ opera="ct_unimplemented@74.3.3922.71982",
+ samsung="n@20.0.6.5",
+ brave="n@1.51.110",
+ tor="n@102.2.1-Release (12.0.5)",
+ uc="ct_unimplemented@13.4.2.1307"
 %}
