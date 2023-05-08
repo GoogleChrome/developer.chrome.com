@@ -37,7 +37,8 @@ are accustomed already.
 Quite a bit! Custom Tabs give you fine grained control over a lot of the browser
 chrome and user experience. Within your app, you launch a Custom Tab via an [Intent](7).
 When this Intent is called, you can add a number of attributes to the
-[CustomTabIntent](8) to get the exact experience you want. This includes
+[CustomTabIntent](8) to get the exact experience you want. Some of the customizations
+that you are able to add are listed below.
 
 Custom entrance and exit animations to match the rest of your app
 
@@ -53,22 +54,21 @@ Modifing the toolbar color to match your app's branding
   <figcaption>A mobile browser, transitioning to a Custom Tab with colors matching a website</figcaption>
 </figure>
 
-And that color consistency can stay with your app, even if they switch between light and dark themes.
+Color consistency that can stay with your app, even if they switch between light and dark themes.
 
 <figure>
 {% Video loop=true, playsinline=true, autoplay=true, src="video/DXqUldooyJOUnj3qXSYLHbUgUI93/YBinAgwhx0kFizQWrrEr.mp4", width="350", height="730", class="screenshot"  %}
   <figcaption>And that color consistency can stay with your app, even if they switch between light and dark themes.</figcaption>
 </figure>
 
-You can add custom actions and entries to the browser's toolbar, and menus.
+Custom actions and entries to the browser's toolbar, and menus.
 
 <figure>
 {% Video loop=true, playsinline=true, autoplay=true, src="video/DXqUldooyJOUnj3qXSYLHbUgUI93/QFiyUPGANEvjVqfsujF4.mp4", width="350", height="730", class="screenshot"  %}
   <figcaption>A Custom Tab showing its menu, with custom entries.</figcaption>
 </figure>
 
-You can even control the launch height of the Custom Tab, enabling things like
-streaming your videos while interacting with your web store.
+Control the launch height of the Custom Tab, enabling things like streaming your videos while interacting with your web store.
 
 <figure>
 {% Video loop=true, playsinline=true, autoplay=true, src="video/DXqUldooyJOUnj3qXSYLHbUgUI93/lsyAKIKYdD87QjSiSQOw.mp4", width="350", height="730", class="screenshot"  %}
