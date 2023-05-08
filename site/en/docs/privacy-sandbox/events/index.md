@@ -22,6 +22,7 @@ Subscribe to the following mailing lists to be notified of other events:
 * [Attribution Reporting](https://groups.google.com/u/2/a/chromium.org/g/attribution-reporting-api-dev)
 * [FLEDGE](https://groups.google.com/u/2/a/chromium.org/g/fledge-api-announce)
 * [Topics](https://groups.google.com/u/2/a/chromium.org/g/topics-api-announce)
+* [Shared Storage](https://groups.google.com/a/chromium.org/g/shared-storage-api-announcements)
 
 ## Ongoing events
 
