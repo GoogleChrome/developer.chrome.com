@@ -1,14 +1,12 @@
 ---
 layout: "layouts/doc-post.njk"
-title: Low level API 
-seoTitle: Custom Tabs low level API 
+title: Using the Custom Tab low level API
 date: 2020-02-04
-updated: 2020-06-17
-description: Learn how to control a Custom Tab without using a support library.
+updated: 2023-05-03
+description: Learn how to use a Custom Tab without the androidx browser support library.
 ---
 
-Although the recommended method to integrate your application with Custom Tabs is using the
-AndroidX Browser Library, a low level implementation is also available.
+The recommended way to integrate your application with Custom Tabs is using the AndroidX Browser Library, but you can also start a Custom Tab without the support library. This guide gives an overview on how to achieve this.
 
 The complete implementation of the Support Library is available on [GitHub][1] and an be used as a
 start point. It also contains the [AIDL files][2] required to connect to the service, as the ones
@@ -52,7 +50,7 @@ intent.putExtra(EXTRA_CUSTOM_TABS_TOOLBAR_COLOR, colorInt);
 The Custom Tabs service can be used in the same way other Android Services are. The interface is
 created with AIDL and automatically creates a proxy service class for you.
 
-Use the methods on the proxy service to warm-up, create sessions and pre-fetch
+Use the methods on the proxy service to warm-up, create sessions and pre-fetch:
 
 ```java
 // Package name for the Chrome channel the client wants to connect to. This

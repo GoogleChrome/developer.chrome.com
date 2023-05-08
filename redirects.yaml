@@ -77,6 +77,15 @@ redirects:
 - from: /multidevice/android/customtabs/
   to: /docs/android/custom-tabs/overview
 
+- from: /docs/android/custom-tabs/low-level-api/
+  to: /docs/android/custom-tabs/howto-custom-tab-low-level-api/
+
+- from: /docs/android/custom-tabs/headers/
+  to: /docs/android/custom-tabs/howto-request-headers/
+
+- from: /docs/android/custom-tabs/best-practices/
+  to: /docs/android/#how-tos
+
 - from: /docs/webstore/overview/
   to: /docs/webstore/about_webstore/
 
