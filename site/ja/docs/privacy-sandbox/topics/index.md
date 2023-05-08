@@ -3,10 +3,10 @@ layout: layouts/doc-post.njk
 title: Topics API 開発者ガイド
 subhead: |2
 
-  Learn how to work with the API, including how to use Chrome flags for testing.
+  テスト用の Chrome フラグの使用方法など、API の操作方法を学びます。
 description: |2
 
-  Learn how to work with the API, including how to use Chrome flags for testing.
+  テスト用の Chrome フラグの使用方法など、API の操作方法を学びます。
 date: '2022-01-25'
 updated: '2023-03-29'
 authors:
@@ -34,7 +34,7 @@ Topics API のデモは [topics-demo.glitch.me](https://topics-demo.glitch.me/) 
 
 Topics、[FLEDGE](/docs/privacy-sandbox/unified-origin-trial/)、および [アトリビューション レポート](/docs/privacy-sandbox/fledge/)の API に関するプライバシーサンドボックスの関連性と測定の[オリジントライアル](/docs/privacy-sandbox/attribution-reporting/)が、デスクトップ版 Chrome Beta 101.0.4951.26 以降で利用できるようになりました。
 
-## Get and set topics {: #epoch}
+## トピックの取得と設定 {: #epoch}
 
 The Topics JavaScript API JavaScript API には、トピックの取得と設定に使用される `document.browsingTopics()` という 1 つのメソッドがあります。これは、ランダムな順序で、最新の 3 つのエポックごとに 1 つずつ、最大 3 つのトピックの配列に解決される promise を返します。エポックとは期間であり、現在 1 週間に設定されています。
 
@@ -48,7 +48,7 @@ The Topics JavaScript API JavaScript API には、トピックの取得と設定
 
 この記事で説明するパラメーターと API の詳細 (分類サイズ、1 週間に計算されるトピック数、呼び出しごとに返されるトピック数など) は、エコシステムのフィードバックを取り入れ、API に反映させることを繰り返すため、変更される可能性があります。
 
-### Detect support for document.browsingTopics
+### document.browsingTopics のサポートを検出する
 
 APIを使用する前に、API がブラウザでサポートされており利用可能であるかを、ドキュメントで確認してください。
 
@@ -107,8 +107,8 @@ const creative = await response.json();
 
 - **`fetch()`**: `fetch()` リクエストが広告サーバーに対して行われたときに、ヘッダーを使用してトピックを呼び出します。この手法の詳細については、[デモ](/docs/privacy-sandbox/topics/demo#the-topics-api-headers-demo)をご覧ください。
 - **iframe attributes**: `browsingtopics` 属性を iframe に追加するか、同等の IDL 属性 `iframe.browsingTopics = true` を使用して、ドキュメント リクエストと共にリクエストにヘッダーを送信します。iframe ソースは、トピック観測用の登録可能なドメインである必要があります。
-    - For example: `<iframe src="https://example.com" browsingtopics></iframe>`
-    - This is available from Chrome M114 and onward.
+    - 例: `<iframe src="https://example.com" browsingtopics></iframe>`
+    - これは、Chrome M114 以降で利用できます。
 
 ヘッダーに関するその他の注意事項:
 
@@ -157,9 +157,9 @@ Topics API の現在の実装では、トピックはホスト名のみから推
 --enable-features=BrowsingTopics:time_period_per_epoch/15s,PrivacySandboxAdsAPIsOverride,PrivacySandboxSettings3,OverridePrivacySandboxSettingsLocalTesting
 ```
 
-Each parameter, its default value, and its purpose is explained in the list below.
+各パラメーター、そのデフォルト値、およびその目的について、以下のリストで説明します。
 
-#### Chrome flags {: #feature-flags}
+#### Chrome フラグ {: #feature-flags}
 
 <dl>
 <dt>
@@ -201,70 +201,70 @@ Each parameter, its default value, and its purpose is explained in the list belo
       </dt>
 <dd><code>BrowsingTopics:number_of_epochs_to_expose</code></dd>
       <dd>
-<strong>Default value:</strong> 3</dd>
+<strong>デフォルト値:</strong> 3</dd>
       <dd>要求しているコンテキストに与えるトピックを計算する場所からのエポックの数。ブラウザは内部で最大 N+1 個のエポックを維持します。</dd>
     <br>
     <dt>
       </dt>
 <dd><code>BrowsingTopics:time_period_per_epoch</code></dd>
       <dd>
-<strong>Default value:</strong> 7d-0h-0m-0s</dd>
+<strong>デフォルト値:</strong> 7d-0h-0m-0s</dd>
       <dd>各<a href="https://developer.chrome.com/docs/privacy-sandbox/topics/#:~:text=epoch">エポック</a>の期間。デバッグの場合、これをデフォルトの 7 日ではなく、（たとえば）15 秒に設定すると便利な場合があります。</dd>
     <br>
     <dt>
       </dt>
 <dd><code>BrowsingTopics:number_of_top_topics_per_epoch</code></dd>
       <dd>
-<strong>Default value:</strong> 5</dd>
+<strong>デフォルト値:</strong> 5</dd>
       <dd>エポックごとに計算されたトピックの数。</dd>
     <br>
     <dt>
       </dt>
 <dd><code>BrowsingTopics:use_random_topic_probability_percent</code></dd>
       <dd>
-<strong>Default value:</strong> 5</dd>
+<strong>デフォルト値:</strong> 5</dd>
       <dd>エポック内の個々のトピックが、トピックの<a href="https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md">分類</a>全体からランダムに返されるトピックである確率。ランダム性は、エポックとサイトに対してスティッキーです。</dd>
     <br>
     <dt>
       </dt>
 <dd><code>BrowsingTopics:number_of_epochs_of_observation_data_to_use_for_filtering</code></dd>
       <dd>
-<strong>Default value:</strong> 3</dd>
+<strong>デフォルト値:</strong> 3</dd>
       <dd>呼び出し元のコンテキストに対してトピックをフィルタリングするために使用される API 使用状況データ（トピックの観測）のエポック数。</dd>
     <br>
     <dt>
       </dt>
 <dd><code>BrowsingTopics:max_number_of_api_usage_context_domains_to_keep_per_topic</code></dd>
       <dd>
-<strong>Default value:</strong> 1000</dd>
+<strong>デフォルト値:</strong> 1000</dd>
       <dd>上位トピックごとに保持する、observed-by コンテキストドメインの最大数。使用中のメモリを制限するのが目的です。</dd>
     <br>
     <dt>
       </dt>
 <dd><code>BrowsingTopics:max_number_of_api_usage_context_entries_to_load_per_epoch</code></dd>
       <dd>
-<strong>Default value:</strong> 100000</dd>
+<strong>デフォルト値:</strong> 100000</dd>
       <dd>API 使用状況コンテキストのクエリごとにデータベースから取得できるエントリの最大数。クエリは、トピックの計算時にエポックごとに 1 回発生します。ピークメモリ使用量を制限するのが目的です。</dd>
     <br>
     <dt>
       </dt>
 <dd><code>BrowsingTopics:max_number_of_api_usage_context_domains_to_store_per_page_load</code></dd>
       <dd>
-<strong>Default value:</strong> 30</dd>
+<strong>デフォルト値:</strong> 30</dd>
       <dd>ページの読み込みごとに保存できる API 使用状況コンテキストドメインの最大数。</dd>
     <br>
     <dt>
       </dt>
 <dd><code>BrowsingTopics:config_version</code></dd>
       <dd>
-<strong>Default value:</strong> 1</dd>
+<strong>デフォルト値:</strong> 1</dd>
       <dd>Topics API 構成パラメーターをエンコードします。各バージョン番号は、1 つの構成セットにのみマッピングする必要があります。<code>config_version</code> を更新せずに構成パラメーターを更新することは、通常、ローカル テストでは問題ありませんが、状況によっては、ブラウザが一貫性のない状態のままになったり、ブラウザがクラッシュしたりする可能性があります（<code>number_of_top_topics_per_epoch</code> の更新時など）。</dd>
     <br>
     <dt>
       </dt>
 <dd><code>BrowsingTopics:taxonomy_version</code></dd>
       <dd>
-<strong>Default value:</strong> 1</dd>
+<strong>デフォルト値:</strong> 1</dd>
       <dd>API が使用する<a href="https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md">分類</a>バージョン。</dd>
     <br>
 </dl>
@@ -283,7 +283,7 @@ Each parameter, its default value, and its purpose is explained in the list belo
 Permissions-Policy: geolocation=(self "https://example.com")
 ```
 
-## Next steps
+## 次のステップ
 
 - [トピックの概要と仕組み](/docs/privacy-sandbox/topics/topic-classification)について学習します。<!-- トピック分類ページ、およびデモとトライアルへのリンク -->
 - [デモ](/docs/privacy-sandbox/topics/demo)を試すか、[オリジントライアル](/docs/web-platform/origin-trials/)に参加します。
