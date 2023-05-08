@@ -7,6 +7,13 @@ updated: 2023-03-25
 description: Learn when best to use Android Custom Tabs for opening an URL in your Android app.
 ---
 
+<style>
+video {
+    max-width: calc(var(--vid-width) * 1px);
+    max-height: calc(var(--vid-height) * 1px);
+}
+</style>
+
 Custom Tabs are a feature in Android browsers that gives app developers
 a way to add a customized browser experience directly within their app.
 
