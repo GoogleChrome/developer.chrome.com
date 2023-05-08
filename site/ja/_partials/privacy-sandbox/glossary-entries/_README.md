@@ -8,4 +8,4 @@
 {% Partial 'privacy-sandbox/glossary-entries/ad-exchange.njk' %}
 ```
 
-These partials don't have line spacing before the content, thus the line space between the header and the partial reference is necessary, as above.
+これらのパーシャルにはコンテンツの前に行間がないため、上記のようにヘッダーと部分参照の間に行間が必要です。
