@@ -31,9 +31,11 @@
   margin-right: 0.5ch;
 }
 
-.code-sections__icon {
+.code-sections__enum {
   margin-bottom: 1rem;
+}
 
+.code-sections__icon {
   &::before {
     // By default, we show the 'object' icon.
     // The 1.25em used for width/height resolves to 15px.

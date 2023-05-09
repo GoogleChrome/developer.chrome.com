@@ -215,7 +215,7 @@
   {% endfor %}
 
   {# Note that we avoid whitespace below, and instead set margins in CSS. #}
-  <p class="code-sections__icon code-sections__icon--{{ iconType }}">{{ renderSingleType(type, description) | trim | safe }}
+  <p class="code-sections__icon code-sections__icon--{{ iconType }} {% if node._enums %}code-sections__enum{% endif %}">{{ renderSingleType(type, description) | trim | safe }}
     {%- if node.flags.isOptional -%}
       &nbsp;<span class="code-sections__optional">optional</span>
     {%- endif -%}
