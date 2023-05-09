@@ -201,7 +201,7 @@ Enables the url bar to hide as the user scrolls down on the page.
 Sets the action button that is displayed in the Toolbar with default tinting behavior.
 
 
-{% Img src="image/DXqUldooyJOUnj3qXSYLHbUgUI93/s8J5BjPObKYTaaMtikom.png", alt="phone showing an app that used setActionButton the left, and a separate phone without using that api on the right", width="800", height="407" %}
+{% Img src="image/DXqUldooyJOUnj3qXSYLHbUgUI93/s8J5BjPObKYTaaMtikom.png", alt="phone showing an app that used setActionButton on the left, and a separate phone without using that api on the right", width="800", height="407" %}
 
 
 {% AndroidBrowserSupportTable
