@@ -622,6 +622,9 @@ redirects:
 - from: /docs/extensions/mv3/known-issues/
   to: /docs/extensions/migrating/known-issues/
 
+- from: /docs/extensions/whatsnew/#m112-storage-session-quota
+  to: /docs/extensions/whatsnew/#m114-storage-session-quota
+
 # Redirects for docs now on MDN
 
 - from: /docs/web-platform/popover-api/backdrop-pseudo-element
