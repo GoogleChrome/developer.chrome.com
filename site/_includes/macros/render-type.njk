@@ -240,7 +240,6 @@
     <div class="code-sections__overline code-sections__label">
       <p>
         {% for t in types %}
-          {% if loop.last and not loop.first %}or{% endif %}
           <span style="white-space: nowrap;">{{ renderSingleIconType(t, node) | trim }}</span>
         {% endfor %}
       </p>
