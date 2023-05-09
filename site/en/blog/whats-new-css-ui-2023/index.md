@@ -51,8 +51,15 @@ Let’s get started with some new responsive design capabilities. New platform f
 
 [Container queries](https://developer.mozilla.org/docs/Web/CSS/CSS_Container_Queries) recently became stable across all modern browsers. They allow you to query a parent element’s size and style to determine the styles which should be applied to any of its children. Media queries can only access and leverage information from the viewport, which means they can only work on a macro view of a page layout. Container queries, on the other hand, are a more precise tool that can support any number of layouts or layouts within layouts.
 
-
 In the following inbox example, the **Primary Inbox** and **Favorites** sidebar are both containers. The emails within them adjust their grid layout and show or hide the email timestamp based on available space. This is the exact same component within the page, just appearing in different views
+
+{% Video
+  src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/qwUww2sok7ITgC2JyRCg.mp4",
+  autoplay="true",
+  loop="true",
+  muted="true",
+  controls="true"
+%}
 
 Because we have a container query, the styles of these components are dynamic. If you adjust the page size and layout, the components respond to their individually allocated space. The sidebar becomes a top bar with more space, and we see the layout look more like the primary inbox. When there is less space, they both display in a condensed format.
 
@@ -62,15 +69,6 @@ Because we have a container query, the styles of these components are dynamic. I
   height: 550,
   tab: 'result'
 } %}
-
-
-{% Video
-  src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/qwUww2sok7ITgC2JyRCg.mp4",
-  autoplay="true",
-  loop="true",
-  muted="true",
-  controls="true"
-%}
 
 Learn more about container queries and building logical components [in this post](/blog/has-with-cq-m105/).
 
@@ -114,16 +112,11 @@ You can learn more and see more demos in our [blog post on style queries](/blog/
 
 Speaking of powerful, dynamic features, the [:has() selector](/blog/has-m105/) is one of the most powerful new CSS capabilities landing in modern browsers. With `:has()`, you can apply styles by checking to see if a parent element contains the presence of specific children, or if those children are in a specific state. This means, we essentially now have a parent selector. 
 
-Building on the container query example, you can use `:has()` to make the components even more dynamic. The next demo uses the `:has()` selector to give an item with a "star" element a gray background, and an item with a checked checkbox a blue background.
+Building on the container query example, you can use `:has()` to make the components even more dynamic. In it, an item with a "star" element gets a gray background applied to it, and an item with a checked checkbox a blue background.
 
-{% Codepen {
-  user: 'web-dot-dev',
-  id: 'eYPEOOr',
-  height: 550,
-  tab: 'result'
-} %}
+{% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/fRti6b8x7r7wgLVre1G8.png", alt="Screenshot of demo", width="684", height="186" %}
 
-But this API isn’t limited to parent selection. You can also style any children within the parent. For example, you could make the title bold when the item has the star element present, or apply some styling to a `::before` pseudo-element. Using the `:has()` selector gives you access to parent elements, child elements, and even sibling elements using existing combinators, making this a really flexible API, with new use cases popping up every day.
+But this API isn’t limited to parent selection. You can also style any children within the parent. For example, the title is bold when the item has the star element present. This is accomplished with `.item:has(.star) .title`. Using the `:has()` selector gives you access to parent elements, child elements, and even sibling elements, making this a really flexible API, with new use cases popping up every day.
 
 {% Aside %}
 To prevent rendering performance slowdowns in large DOM trees, we recommend that you scope this selector as closely as possible. For example, using `:has()` to check for matches on the root html element would be slower than checking for matches in a nav bar or in a card element with a smaller tree.
@@ -135,7 +128,7 @@ Learn more and explore some more demos, check out [this blog post](/blog/has-m10
 
 {% BrowserCompat 'css.selectors.nth-child.of_syntax' %}
 
-The web platform now has more advanced nth-child selection. The advanced nth-child syntax gives a new keyword (“of”), which lets you use the existing micro syntax of An+B, with a more specific subset within which to search.
+The web platform now has more advanced nth-child selection. The advanced nth-child syntax gives a new keyword ("of"), which lets you use the existing micro syntax of An+B, with a more specific subset within which to search.
 
 If you use regular nth-child, such as `:nth-child(2)` on the special class, the browser will select the element that has the class special applied to it, and also is the second child. This is in contrast to `:nth-child(2 of .special)` which will first pre-filter all `.special` elements, and then pick the second one from that list.
 
@@ -145,8 +138,6 @@ If you use regular nth-child, such as `:nth-child(2)` on the special class, the 
   height: 550,
   tab: 'result'
 } %}
-
-{% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/6fgfP4KuLvy0aGkKtriv.png", alt="Screenshot of the codepen above", width="800", height="682" %}
 
 Explore this feature further in our [article on nth-of syntax](/articles/css-nth-child-of-s/).
 
@@ -198,7 +189,7 @@ Learn more about it in [this article](/blog/css-text-wrap-balance/).
 
 ### `initial-letter`
 
-{% BrowserCompat 'css.??' %}
+{% BrowserCompat 'css.properties.initial-letter' %}
 
 Another nice improvement to web typography is `initial-letter`. This CSS property gives you better control for inset drop cap styling.
 
@@ -209,6 +200,7 @@ The letter’s block-offset, or “sink”, for where the letter will sit.
 {% Video {
     controls: true,
     loop: true,
+    autoplay: true,
     src: "video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/JlF90JWm0DXgkS6ZiBpD.mp4"
   }
 %}
@@ -229,6 +221,8 @@ Learn more about using `intial-letter` [here](](/blog/control-your-drop-caps-wit
 
 One common problem web developers face today is accurate and consistent full-viewport sizing, especially on mobile devices. As a developer you want `100vh` (100% of the viewport height) to mean “be as tall as the viewport”, but the `vh` unit doesn’t account for things like retracting navigation bars on mobile, so sometimes it ends up too long and causes scroll.
 
+{% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/uhcpJi4cZjgCoyPc9hiF.png", alt="Showing too many scrollbars", width="800", height="488" %}
+
 To resolve this issue, we now have new unit values on the web platform, including: 
 - Small viewport height and width (or `svh` and `svw`), which represent the smallest active viewport size.
 - Large viewport height and width (`lvh` and `lvw`), which represent the largest size. 
@@ -236,12 +230,7 @@ To resolve this issue, we now have new unit values on the web platform, includin
 
 Dynamic viewport units change in value when the additional dynamic browser toolbars, such as the address at the top or tab bar at the bottom, are visible and when they are not.
 
-{% Img
-  src="image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/ScGKMyzS1WyS7ByoVvn8.png",
-  alt="A visual comparison of svh and lvh.",
-  width="4001",
-  height="2250"
-%}
+{% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/nJ8JpRlThr7O631TWmu8.png", alt="New viewport units visualized", width="800", height="315" %}
 
 {% Aside %} 
 Note that the dynamic viewport units do not take the presence of the Virtual Keyboard into account. From Chrome 108 you can [set a meta-tag to change this behavior](/blog/viewport-resize-behavior/#opting-in-to-a-different-behavior). 
@@ -313,22 +302,23 @@ color-mix(in xyz, blue, white);
 
 <figure>
   {% Img
-    src="image/vS06HQ1YTsbMKSFTIPl2iogUQP73/iaoqyLqPgCpCZp54NUpY.png",
-    alt="7 color spaces (srgb, linear-srgb, lch, oklch, lab, oklab, xyz) each show their results of mixing black and white. Roughly 5 different shades are shown, demonstrating that each color space will even mix to a gray differently.",
+    src="image/vS06HQ1YTsbMKSFTIPl2iogUQP73/aWCQ92ujrmxmaEqM5N2J.png",
+    alt="7 color spaces (srgb, linear-srgb, lch, oklch, lab, oklab, xyz) each shown having different results. Many are pink or purple, few are actually still blue.",
     width="800",
-    height="752"
+    height="449"
   %}
 
-  <figcaption><a href="https://codepen.io/web-dot-dev/pen/poZKLdw">Try the demo</a>.</figcaption>
+  <figcaption><a href="https://codepen.io/web-dot-dev/pen/eYjKMVV">Try the demo</a></figcaption>
 </figure>
 
 The `color-mix()` function provides a long-requested capability: the ability to preserve opaque color values while adding some transparency to them. Now, you can use your brand color variables while creating variations of those colors at different opacities. The way to do this is to mix a color with transparent. When you mix your brand color blue with 10% transparent, you get a 90% opaque brand color. You can see how this enables you to quickly build color systems.
 
 {% Codepen { user: 'web-dot-dev', id: 'BaqryZm' } %}
 
-You can see this in action in Chrome DevTools today with a really nice preview venn diagram icon.
+You can see this in action in Chrome DevTools today with a really nice preview venn diagram icon in the [styles pane](/docs/devtools/css/color/#change-colors).
 
-{% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/32TJVNvRbpwJamkFCBOo.png", alt="DevTools screenshot with the venn diagram color-mix icon", width="800", height="113" %}
+
+{% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/8ASHZjF18gBUbmRToVJk.png", alt="DevTools screenshot with the venn diagram color-mix icon", width="800", height="217" %}
 
 See more examples and details in our [blog post on color-mix](/blog/css-color-mix/) or try out this color-mix() [playground](https://color-mix.style).
 
@@ -396,15 +386,25 @@ Learn more about how to use cascade layers [in this article](/blog/cascade-layer
 {% BrowserCompat 'css.at-rules.scope' %}
 
 
-CSS scoped styles allow developers to specify the boundaries for which specific styles apply, essentially creating native namespacing in CSS. Before, developers relied on 3rd party scripting to rename classes, or specific naming conventions to prevent style collision, but now, you can use @scope. 
+CSS scoped styles allow developers to specify the boundaries for which specific styles apply, essentially creating native namespacing in CSS. Before, developers relied on 3rd party scripting to rename classes, or specific naming conventions to prevent style collision, but soon, you can use `@scope`. 
 
-Here, we’re scoping a .title element to a card. This would prevent that title element from conflicting with any other elements on the page that have a class of title, like a blog post title or other heading.
+Here, we’re scoping a `.title` element to a `.card`. This would prevent that title element from conflicting with any other `.title` elements on the page, like a blog post title or other heading.
 
-Example -
+```css
+@scope (.card) {
+  .title { 
+    font-weight: bold;
+  }
+}
+```
 
-You could also use scope for theming and creating link styles based on the page’s theme value, making this even more useful.
+You can see `@scope` with scoping limits together with `@layer` in this live demo:
 
-Example -
+{% Codepen { user: 'web-dot-dev', id: 'MWPVGPL', height: 600, tab: 'result' } %}
+
+{% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/Sb39C4sVSMpg4nK4ig8S.png", alt="Screenshot of the card from the demo", width="567", height="629" %}
+
+Learn more about `@scope` in the [css-cascade-6 specification](https://www.w3.org/TR/css-cascade-6/#scoped-styles).
 
 ### Trigonometric functions
 
@@ -422,7 +422,7 @@ See our [article on trigonometric functions](https://web.dev/css-trig-functions/
 
 {% BrowserCompat 'css.properties.translate' %}
 
-And finally, developer ergonomics continues to improve with individual transform functions. Since the last time we held I/O, individual transforms went stable across all modern browsers.
+Developer ergonomics continue to improve with individual transform functions. Since the last time we held I/O, individual transforms went stable across all modern browsers.
 
 In the past, you would rely on the transform function to apply sub-functions to scale, rotate, and translate a UI element. This involved a lot of repetition, and was especially frustrating when applying multiple transforms at different times in the animation.
 
@@ -455,7 +455,7 @@ With this, changes in translation, rotation, or scale can happen simultaneously 
 See this [post on individual transform functions](https://web.dev/css-individual-transform-properties/) for more information.
 
 ## Customizable Components
-To  make sure we’re resolving some of the key developer needs through the web platform, we’re working with the OpenUI community group and have identified three solutions to start with:
+To  make sure we’re resolving some of the key developer needs through the web platform, we’re working with the [OpenUI community group](http://open-ui.com/) and have identified three solutions to start with:
 
 1. Built-in popup functionality with event handlers, a declarative DOM structure, and accessible defaults.
 2. A CSS API to tether two elements to each other to enable anchor positioning.
@@ -483,7 +483,17 @@ The DOM structure for popover is declarative and can be written as clearly as gi
 <button popovertarget="event-popup">Create New Event</button> 
 ```
 
-This is the default, or `auto` popover, but there is also a `manual` popover: `popover=auto` elements force-close other popovers when opened, receive focus when opened, and can light-dismiss. Conversely, `popover=manual` elements do not force-close any other element type, do not receive focus immediately, and do not light-dismiss. They close via a toggle or other close action.
+`popover` is a shorthand for `popover=auto`. An element with `popover=auto` will force-close other popovers when opened, receive focus when opened, and can light-dismiss. Conversely, `popover=manual` elements do not force-close any other element type, do not receive focus immediately, and do not light-dismiss. They close via a toggle or other close action.
+
+
+{% Codepen { user: 'web-dot-dev', id: 'mdzpGwq', height: 400, tab: 'result' } %}
+
+{% Video 
+  src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/cgHE50lFjDLze9JSeHtH.mp4", autoplay="true",
+  loop="true",
+  muted="true",
+  controls="true"
+%}
 
 The most up-to-date documentation on popovers can currently be found [on MDN](https://developer.mozilla.org/docs/Web/HTML/Global_attributes/popover).
 
@@ -497,31 +507,46 @@ But what happens if the popover doesn’t fit in the viewport based on the way y
 
 {% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/wlIsaOjCC0lVKzMp2fCF.png", alt="popover popping out of viewport", width="800", height="544" %}
 
-To solve for this, the anchor positioning API includes fallback positions that you can customize. The following example creates a fallback position called “flip”.The browser will first try to position the tooltip at the top, and if that doesn’t fit in the viewport, the browser would then position it under the anchoring element, on the bottom. 
+To solve for this, the anchor positioning API includes fallback positions that you can customize. The following example creates a fallback position called "top-then-bottom". The browser will first try to position the tooltip at the top, and if that doesn’t fit in the viewport, the browser would then position it under the anchoring element, on the bottom. 
 
 ```css
 .center-tooltip {
-  position: absolute;
-  position-fallback: --flip;
+  position-fallback: --top-then-bottom;
+  translate: -50% 0;
 }
 
-@position-fallback --flip {
+@position-fallback --top-then-bottom {
   @try {
-    top: calc(.5em + anchor(--foo bottom));
-    bottom: auto;
+    bottom: calc(anchor(top) + 0.5rem);
+    left: anchor(center);
   }
+
   @try {
-    top: auto;
-    bottom: calc(.5em + anchor(--foo top));
+    top: calc(anchor(bottom) + 0.5rem);
+    left: anchor(center);
   }
 }
 ```
 
-- @TODO DEMO here and video -
+{% Video 
+  src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/yZCqhUqmqci63y9V7EFU.mp4", autoplay="true",
+  loop="true",
+  muted="true",
+  controls="true"
+%}
+
+{% Codepen {
+  user: 'web-dot-dev',
+  id: 'PoyRaZe',
+  height: 400,
+  tab: 'result'
+} %}
 
 {% Aside %}
 You can get really granular here, which may get verbose, but it’s also an opportunity for libraries and design systems to write the positioning logic and for you to reuse it everywhere.
 {% endAside %}
+
+Learn more about anchor positioning [in this blog post](/blog/tether-elements-to-each-other-with-css-anchor-positioning/).
 
 ### `<selectmenu>`
 
@@ -552,10 +577,17 @@ To build that left-most `selectmenu` example, with colored dots corresponding to
 
 {% Codepen {
   user: 'web-dot-dev',
-  id: 'XWqNBRm',
-  height: 400,
+  id: 'xxyWzJr',
+  height: 500,
   tab: 'result'
 } %}
+
+
+{% Video src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/eqMcXvc64Jkg5WuUfNUJ.mp4", autoplay="true",
+  loop="true",
+  muted="true",
+  controls="true"
+%}
 
 ### Discrete property transitions
 
@@ -587,6 +619,10 @@ The following popover demo, animates popovers in and out using `:popover-open` f
   transition: transform 0.5s, opacity 0.5s, display 0.5s;
 }
 ```
+{% Video src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/hAoQAy9WSwOCmYaPeHxi.mp4", autoplay="true",
+  loop="true",
+  muted="true",
+  controls="true" %}
 
 {% Codepen {
   user: 'web-dot-dev',
@@ -598,8 +634,6 @@ The following popover demo, animates popovers in and out using `:popover-open` f
 {% Aside 'caution' %}
 This is currently an experimental API, and the syntax for `@initial` might change before going stable.
 {% endAside %}
-
-- @TODO VIDEO -
 
 ## Interactions
 
@@ -667,3 +701,7 @@ What the transition should look like is controlled via CSS
 As demonstrated in [this wonderful demo](https://live-transitions.netlify.app/) by [Maxi Ferreira](https://twitter.com/charca), other page interactions, such as a playing video, keep working while a View Transition is happening.
 
 View Transitions currently work with Single-Page Apps (SPAs) from Chrome 111. Multiple-page app support is being worked on. For more, check out our full [view transitions guide](/docs/web-platform/view-transitions/) to walk you through it all.
+
+## Conclusion
+
+Keep up with all the latest landings in CSS and HTML right here on [developer.chrome.com](/).
