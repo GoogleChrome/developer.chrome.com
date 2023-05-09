@@ -113,13 +113,13 @@ It is currently not possible to programmatically check on an Android device, if 
 
 `CustomTabsIntent.Builder` creates Custom Tabs. You have a number of ways to configure your custom tab to help it blend as seamlessly as possible with your app via a collection of built in methods. These include
 
-### addDefaultShareMenuItem
+### addDefaultShareMenuItem()
 
 {% Aside 'warning' %}
 This method is deprecated. Instead, you should use [`setShareState`](#setShareState).
 {% endAside %}
 
-[addDefaultShareMenuItem](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#addDefaultShareMenuItem()) adds a default share button to the Custom Tabs toolbar, allowing the user to share the current web page via various apps on their device
+[addDefaultShareMenuItem()](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#addDefaultShareMenuItem()) adds a default share button to the Custom Tabs toolbar, allowing the user to share the current web page via various apps on their device
 
 {% AndroidBrowserSupportTable
  _method="addDefaultShareMenuItem",
@@ -134,11 +134,11 @@ This method is deprecated. Instead, you should use [`setShareState`](#setShareSt
 %}
 
 
-### addMenuItem
+### addMenuItem()
 
 Adds a menu item.
 
-{% Img src="image/DXqUldooyJOUnj3qXSYLHbUgUI93/i6ReSS7xCTars2Tg2mOy.png", alt="phone showing an app that used addMenuItem on the left, and a separate phone without using that api on the right", width="800", height="407" %}
+{% Img src="image/DXqUldooyJOUnj3qXSYLHbUgUI93/i6ReSS7xCTars2Tg2mOy.png", alt="On the left, a phone showing an app using addMenuItem(), and on the right a separate phone without the API", width="800", height="407" %}
 
 {% AndroidBrowserSupportTable
  _method="addMenuItem",
@@ -154,7 +154,7 @@ Adds a menu item.
 
 
 
-### addToolbarItem
+### addToolbarItem()
 
 {% Aside 'warning' %}
 This method is deprecated. Instead, you should use [`setSecondaryToolbarViews`](#setSecondaryToolbarViews).
@@ -175,7 +175,7 @@ Adds an action button to the custom tab. Multiple buttons can be added via this 
  uc="ct_unimplemented@13.4.2.1307"
 %}
 
-### enableUrlBarHiding
+### enableUrlBarHiding()
 
 {% Aside 'warning' %}
 This method is deprecated. Instead, you should use [`setUrlBarHidingEnabled`](#setUrlBarHidingEnabled).
@@ -196,12 +196,12 @@ Enables the url bar to hide as the user scrolls down on the page.
 %}
 
 
-### setActionButton
+### setActionButton()
 
-Sets the action button that is displayed in the Toolbar with default tinting behavior.
+Sets the action button that is displayed in the toolbar with default tinting behavior.
 
 
-{% Img src="image/DXqUldooyJOUnj3qXSYLHbUgUI93/s8J5BjPObKYTaaMtikom.png", alt="phone showing an app that used setActionButton on the left, and a separate phone without using that api on the right", width="800", height="407" %}
+{% Img src="image/DXqUldooyJOUnj3qXSYLHbUgUI93/s8J5BjPObKYTaaMtikom.png", alt="On the left, a phone showing an app using setActionButton()(), and on the right a separate phone without the API", width="800", height="407" %}
 
 
 {% AndroidBrowserSupportTable
@@ -217,11 +217,11 @@ Sets the action button that is displayed in the Toolbar with default tinting beh
 %}
 
 
-### setCloseButtonIcon
+### setCloseButtonIcon()
 
-Sets the action button that is displayed in the Toolbar.
+Sets the action button that is displayed in the toolbar.
 
-{% Img src="image/DXqUldooyJOUnj3qXSYLHbUgUI93/fsSLnl8YWCSd3qkxJrxM.png", alt="phone showing an app that used setCloseButtonIcon the left, and a separate phone without using that api on the right", width="800", height="407" %}
+{% Img src="image/DXqUldooyJOUnj3qXSYLHbUgUI93/fsSLnl8YWCSd3qkxJrxM.png", alt="On the left, a phone showing an app using setCloseButtonIcon(), and on the right a separate phone without the API", width="800", height="407" %}
 
 {% AndroidBrowserSupportTable
  _method="setCloseButtonIcon",
@@ -235,11 +235,11 @@ Sets the action button that is displayed in the Toolbar.
  uc="ct_unimplemented@13.4.2.1307"
 %}
 
-### setCloseButtonPosition
+### setCloseButtonPosition()
 
 Sets the Close button icon for the custom tab.
 
-{% Img src="image/DXqUldooyJOUnj3qXSYLHbUgUI93/fsSLnl8YWCSd3qkxJrxM.png", alt="phone showing an app that used setCloseButtonPosition the left, and a separate phone without using that api on the right", width="800", height="407" %}
+{% Img src="image/DXqUldooyJOUnj3qXSYLHbUgUI93/fsSLnl8YWCSd3qkxJrxM.png", alt="On the left, a phone showing an app using setCloseButtonPosition(), and on the right a separate phone without the API", width="800", height="407" %}
 
 {% AndroidBrowserSupportTable
  _method="setCloseButtonPosition",
@@ -254,11 +254,11 @@ Sets the Close button icon for the custom tab.
 %}
 
 
-### setColorScheme
+### setColorScheme()
 
 Sets the color scheme that should be applied to the user interface in the custom tab.
 
-{% Img src="image/DXqUldooyJOUnj3qXSYLHbUgUI93/r5FBaq1CCKcfSelCaYpZ.png", alt="phone showing an app that used setColorScheme the left, and a separate phone without using that api on the right", width="800", height="407" %}
+{% Img src="image/DXqUldooyJOUnj3qXSYLHbUgUI93/r5FBaq1CCKcfSelCaYpZ.png", alt="On the left, a phone showing an app using setColorScheme(), and on the right a separate phone without the API", width="800", height="407" %}
 
 {% AndroidBrowserSupportTable
  _method="setColorScheme",
@@ -273,11 +273,11 @@ Sets the color scheme that should be applied to the user interface in the custom
 %}
 
 
-### setColorSchemeParams
+### setColorSchemeParams()
 
 Sets the color scheme that should be applied to the user interface in the custom tab.
 
-{% Img src="image/DXqUldooyJOUnj3qXSYLHbUgUI93/BuqodeL1SyDBhwDNmEYi.png", alt="phone showing an app that used setColorSchemeParams the left, and a separate phone without using that api on the right", width="800", height="407" %}
+{% Img src="image/DXqUldooyJOUnj3qXSYLHbUgUI93/BuqodeL1SyDBhwDNmEYi.png", alt="On the left, a phone showing an app using setColorSchemeParams(), and on the right a separate phone without the API", width="800", height="407" %}
 
 {% AndroidBrowserSupportTable
  _method="setColorSchemeParams",
@@ -291,11 +291,11 @@ Sets the color scheme that should be applied to the user interface in the custom
  uc="ct_unimplemented@13.4.2.1307"
 %}
 
-### setDefaultColorSchemeParams
+### setDefaultColorSchemeParams()
 
 Sets [`CustomTabColorSchemeParams()`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabColorSchemeParams) for the given color scheme. This allows specifying two different toolbar colors for light and dark schemes.
 
-{% Img src="image/DXqUldooyJOUnj3qXSYLHbUgUI93/SmsTCHYkNQ689xJSVTIJ.png", alt="phone showing an app that used setDefaultColorSchemeParams the left, and a separate phone without using that api on the right", width="800", height="407" %}
+{% Img src="image/DXqUldooyJOUnj3qXSYLHbUgUI93/SmsTCHYkNQ689xJSVTIJ.png", alt="On the left, a phone showing an app using setDefaultColorSchemeParams(), and on the right a separate phone without the API", width="800", height="407" %}
 
 {% AndroidBrowserSupportTable
  _method="setDefaultColorSchemeParams",
@@ -309,7 +309,7 @@ Sets [`CustomTabColorSchemeParams()`](https://developer.android.com/reference/an
  uc="ct_unimplemented@13.4.2.1307"
 %}
 
-### setDefaultShareMenuItemEnabled
+### setDefaultShareMenuItemEnabled()
 
 {% Aside 'warning' %}
 This method is deprecated. Instead, you should use [`setShareState`](#setShareState).
@@ -329,7 +329,7 @@ Set whether a default share item is added to the menu.
  uc="ct_unimplemented@13.4.2.1307"
 %}
 
-### setExitAnimations
+### setExitAnimations()
 
 Sets any exit animations.
 
@@ -345,11 +345,11 @@ Sets any exit animations.
  uc="ct_unimplemented@13.4.2.1307"
 %}
 
-### setInitialActivityHeightPx
+### setInitialActivityHeightPx()
 
 Sets the Custom Tab Activity's initial height in pixels with default resize behavior. The Custom Tab will behave as a bottom sheet. This is often referred to as a partial Custom Tab.
 
-{% Img src="image/DXqUldooyJOUnj3qXSYLHbUgUI93/fo0GuqgV3TrjFkdf6P63.png", alt="phone showing an app that used setInitialActivityHeightPx the left, and a separate phone without using that api on the right", width="800", height="815" %}
+{% Img src="image/DXqUldooyJOUnj3qXSYLHbUgUI93/fo0GuqgV3TrjFkdf6P63.png", alt="On the left, a phone showing an app using setInitialActivityHeightPx(), and on the right a separate phone without the API", width="800", height="815" %}
 
 {% AndroidBrowserSupportTable
  _method="setDefaultColorSchemeParams",
@@ -364,7 +364,7 @@ Sets the Custom Tab Activity's initial height in pixels with default resize beha
 %}
 
 
-### setNavigationBarColor
+### setNavigationBarColor()
 
 {% Aside 'warning' %}
 This method is deprecated. Instead, you should use [`setDefaultColorSchemeParams`](#setDefaultColorSchemeParams).
@@ -384,7 +384,7 @@ Sets the navigation bar color. Has no effect on API versions below L.
  uc="ct_unimplemented@13.4.2.1307"
 %}
 
-### setNavigationBarDividerColor
+### setNavigationBarDividerColor()
 
 {% Aside 'warning' %}
 This method is deprecated. Instead, you should use [`setDefaultColorSchemeParams`](#setDefaultColorSchemeParams).
@@ -402,7 +402,7 @@ This method is deprecated. Instead, you should use [`setDefaultColorSchemeParams
  uc="ct_unimplemented@13.4.2.1307"
 %}
 
-### setSecondaryToolbarColor
+### setSecondaryToolbarColor()
 
 {% Aside 'warning' %}
 This method is deprecated. Instead, you should use [`setDefaultColorSchemeParams`](#setDefaultColorSchemeParams).
@@ -422,11 +422,11 @@ Sets the color of the secondary toolbar.
  uc="ct_unimplemented@13.4.2.1307"
 %}
 
-### setShareState
+### setShareState()
 
 Sets the share state that should be applied to the custom tab.
 
-{% Img src="image/DXqUldooyJOUnj3qXSYLHbUgUI93/EwVScHq2f7zOPdXDgv1C.png", alt="phone showing an app that used setShareState the left, and a separate phone without using that api on the right", width="800", height="407" %}
+{% Img src="image/DXqUldooyJOUnj3qXSYLHbUgUI93/EwVScHq2f7zOPdXDgv1C.png", alt="On the left, a phone showing an app using setShareState(), and on the right a separate phone without the API", width="800", height="407" %}
 
 {% AndroidBrowserSupportTable
  _method="setShareState",
@@ -440,11 +440,11 @@ Sets the share state that should be applied to the custom tab.
  uc="ct_unimplemented@13.4.2.1307"
 %}
 
-### setShowTitle
+### setShowTitle()
 
 Sets whether the title should be shown in the custom tab.
 
-{% Img src="image/DXqUldooyJOUnj3qXSYLHbUgUI93/zrnugxD43mR9UH5kqWkv.png", alt="phone showing an app that used setShowTitle the left, and a separate phone without using that api on the right", width="800", height="407" %}
+{% Img src="image/DXqUldooyJOUnj3qXSYLHbUgUI93/zrnugxD43mR9UH5kqWkv.png", alt="On the left, a phone showing an app using setShowTitle(), and on the right a separate phone without the API", width="800", height="407" %}
 
 {% AndroidBrowserSupportTable
  _method="setShowTitle",
@@ -458,7 +458,7 @@ Sets whether the title should be shown in the custom tab.
  uc="ct_unimplemented@13.4.2.1307"
 %}
 
-### setStartAnimations
+### setStartAnimations()
 
 Sets the start animations.
 
@@ -475,7 +475,7 @@ Sets the start animations.
  uc="ct_unimplemented@13.4.2.1307"
 %}
 
-### setToolbarColor
+### setToolbarColor()
 
 {% Aside 'warning' %}
 This method is deprecated. Instead, you should use [`setDefaultColorSchemeParams`](#setDefaultColorSchemeParams).
@@ -495,7 +495,7 @@ Sets the toolbar color. On Android L and above, this color is also applied to th
  uc="ct_unimplemented@13.4.2.1307"
 %}
 
-### setToolbarCornerRadiusDp
+### setToolbarCornerRadiusDp()
 
 Sets the toolbar's top corner radii in dp.
 
@@ -511,7 +511,7 @@ Sets the toolbar's top corner radii in dp.
  uc="ct_unimplemented@13.4.2.1307"
 %}
 
-### setUrlBarHidingEnabled
+### setUrlBarHidingEnabled()
 
 Set whether the url bar should hide as the user scrolls down on the page.
 
@@ -532,7 +532,7 @@ Set whether the url bar should hide as the user scrolls down on the page.
 
 [`CustomTabsSession`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsSession) is an optional class you can provide to an instance of `CustomTabsIntent.Builder()`. When used, you can use this class to handle any communication with the Custom Tab.
 
-### setEngagementSignalsCallback
+### setEngagementSignalsCallback()
 
 Sets an `[EngagementSignalsCallback](https://developer.android.com//reference/androidx/browser/customtabs/EngagementSignalsCallback)` to receive callbacks for events related to the user's engagement with webpage within the tab.
 
@@ -549,7 +549,7 @@ Sets an `[EngagementSignalsCallback](https://developer.android.com//reference/an
 %}
 
 
-### isEngagementSignalsApiAvailable
+### isEngagementSignalsApiAvailable()
 
 Returns whether the Engagement Signals API is available. The availability of the Engagement Signals API may change at runtime.
 
