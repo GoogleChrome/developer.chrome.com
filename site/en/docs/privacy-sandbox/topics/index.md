@@ -32,36 +32,32 @@ You can also run the Topics [colab](/docs/privacy-sandbox/topics/colab/) to try 
 
 A Privacy Sandbox Relevance and Measurement [origin trial](/docs/privacy-sandbox/unified-origin-trial/) has been made available in Chrome Beta 101.0.4951.26 and above on desktop for the Topics, [FLEDGE](/docs/privacy-sandbox/fledge/), and [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) APIs.
 
-{% Details %}
-
-{% DetailsSummary %}
-Provide an origin trial token
-{% endDetailsSummary %}
+#### Provide an origin trial token
 
 To take part in the origin trial, you can provide a valid trial token
 [programmatically, in a header, or in a meta tag](/docs/web-platform/origin-trials/#take-part-in-an-origin-trial).
-Whichever method you choose to provide a trial token, and whichever way you use the Topics API, you
-must provide a valid token **before** calling the API, and the token must be registered for the
+Whichever method you choose to provide a trial token, and [whichever way you use the Topics API](#access-topics),
+you must provide a valid token **before** calling the API, and the token must be registered for the
 appropriate origin.
 
 <table>
   <thead>
     <tr>
-      <th>API usage</th>
-      <th>Token origin</th>
+      <th style="text-align: left;">API usage</th>
+      <th style="text-align: left;">Trial token origin</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>&nbsp;`fetch()`</td>
+      <td><code>fetch()</code></td>
       <td>Origin of the code making the call.</td>
     </tr>
     <tr>
-      <td>`document.browsingTopics()`</td>
+      <td><code>document.browsingTopics()</code></td>
       <td>Origin of the code making the call.</td>
     </tr>
     <tr>
-      <td>`&lt;iframe browsingtopics ...&gt;`</td>
+      <td style="vertical-align: top; white-space: nowrap"><code>&lt;iframe browsingtopics&nbsp;...&gt;</code></td>
       <td>The token is required in the document that embeds the iframe: a token must be provided
       that has been registered for the same origin as the code that creates the iframe.</td>
     </tr>
@@ -76,10 +72,7 @@ src="https://adtech.example/js/topics.js">`, which would provide a token registe
 page in an iframe (as opposed to a script included from a different origin) a trial token must be
 provided in the page, registered for its origin.
 
-Always do [feature detection](/blog/privacy-sandbox-unified-origin-trial/#topics) before attempting
-to use an origin trial API.
-
-{% endDetails %}
+Always do [feature detection](#feature-detection) before attempting to use an origin trial API.
 
 ## Get and set topics {: #epoch}
 
@@ -95,7 +88,7 @@ Each topic object in the array returned by `document.browsingTopics()` will have
 
 The parameters described in this article, and details of the API (such as taxonomy size, the number of topics calculated per week and the number of topics returned per call) are subject to change as we incorporate ecosystem feedback and iterate on the API.
 
-### Detect support for document.browsingTopics
+### Detect support for document.browsingTopics {: #feature-detection}
 
 Before using the API, check if it's supported by the browser and available in the document:
 
