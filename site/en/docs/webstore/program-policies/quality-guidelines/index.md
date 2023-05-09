@@ -2,7 +2,6 @@
 layout: "layouts/doc-post.njk"
 title: "Quality Guidelines"
 date: 2022-11-01
-updated: 2023-05-10
 ---
 
 1. An extension must have a single purpose that is narrow and easy to understand. Do not create an extension that requires users to accept bundles of unrelated functionality. If two pieces of functionality are clearly separate, they should be put into two different extensions, and users should have the ability to install and uninstall them separately. Common violations include:
@@ -15,11 +14,6 @@ updated: 2023-05-10
 
     1. PDF converters which also aim to change a user’s default search engine.
 
-2. When designing an extension, it's important to ensure it functions as a helpful companion to users' browsing experiences by providing complementary functionality. If utilizing a persistent user interface, extensions should actively enhance the user's current task while causing minimal distractions. Some common violations include:
-
-    1. Side panel extensions which hijack a user’s browsing or search experience. 
-    1. Extensions with the primary purpose of serving ads.
-
 See [this FAQ][faq] for more information.
 
-[faq]: /docs/extensions/mv3/single_purpose/
+[faq]: /docs/extensions/mv2/single_purpose/
