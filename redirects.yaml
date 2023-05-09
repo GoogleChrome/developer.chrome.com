@@ -21,6 +21,9 @@ redirects:
 
 # Simple redirects
 
+- from: /articles/multi-screen-window-placement/
+  to: articles/window-management/
+
 - from: /blog/wordpress-playground/
   to: https://web.dev/wordpress-playground/
 
@@ -121,7 +124,7 @@ redirects:
 
 - from: /docs/privacy-sandbox/attribution-reporting-changes-january-2022/
   to: /blog/attribution-reporting-jan-2022-updates/
-  
+
 - from: /docs/privacy-sandbox/maximize-ad-relevance/
   to: https://privacysandbox.com/news/maximize-ad-relevance-after-third-party-cookies
 
@@ -720,7 +723,7 @@ redirects:
 - from: /docs/web-platform/pop-up-api/
   to: https://developer.mozilla.org/docs/Web/API/Popover_API
 
-- from: /docs/android/custom-tabs/integration-guide/ 
+- from: /docs/android/custom-tabs/integration-guide/
   to: /docs/android/custom-tabs/guide-get-started/
 
 # DO NOT REMOVE. This seems pointless but we rewrite "." to "_" inside our server's code, so if the
