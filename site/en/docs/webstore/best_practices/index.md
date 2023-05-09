@@ -40,7 +40,7 @@ intuitive, and seamless user experience while also respecting the end user's pri
 
 Persistent UI
 : When designing a side panel for your extension, make sure it enhances the user's browsing or
-search experience by providing relevant and useful functionality. A side panel should help the user
+search experience by providing relevant and useful functionality. A side panel should help users
 accomplish tasks with as little distraction as possible.
 
 Store listing
