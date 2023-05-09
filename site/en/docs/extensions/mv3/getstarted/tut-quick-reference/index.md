@@ -344,7 +344,7 @@ Start by declaring the content script in the manifest and add the match pattern 
 
 ```
 
-Create a new content file. The following code sends a message to the service worker requesting the tip. Then, adds a button that will open a popover containing the extension tip. This code uses the new web platform [Popover API][popover-chrome-status] (see the [HTML spec][popover-html-spec] for more details). 
+Create a new content file. The following code sends a message to the service worker requesting the tip. Then, adds a button that will open a popover containing the extension tip. This code uses the new web platform [Popover API][popover-mdn] (see the [HTML spec][popover-html-spec] for more details). 
 
 {% Label %}content.js:{% endLabel %}
 
@@ -435,21 +435,11 @@ Click the Tip button located on the navigation bar to open the extension tip.
   </figcaption>
 </figure>
 
-{% Details %}
-{% DetailsSummary %}
-**The Popover API is available now in Canary behind a flag**
-{% endDetailsSummary %}
+{% Aside %}
 
-The Popover API is scheduled to [launch in Chrome 114][popover-chrome-status], available in stable in early May 2023. But you can start using it now by following these steps:
+The Popover API [launched in Chrome 114][popover-chrome-status] in early May 2023.
 
-1. Download [Canary](https://www.google.com/chrome/canary/)
-1. Go to `chrome://flags`
-1. Enable the "Experimental Web Platform features" flag.
-1. Restart the browser
-
-It is enabled by default in Chrome Canary for local testing.
-
-{% endDetails %}
+{% endAside %}
 
 ## 🎯 Potential enhancements {: #challenge }
 
@@ -508,7 +498,7 @@ To continue your extension service worker learning path, we recommend exploring 
 [omnibox-input-changed]: /docs/extensions/reference/omnibox/#event-onInputChanged
 [omnibox-input-entered]: /docs/extensions/reference/omnibox/#event-onInputEntered
 [omnibox-suggest]: /docs/extensions/reference/omnibox/#type-SuggestResult
-[popover-chrome-status]: https://chromestatus.com/feature/5463833265045504
+[popover-mdn]: https://developer.mozilla.org/docs/Web/API/Popover_API
 [popover-chromium-issue]: https://bugs.chromium.org/p/chromium/issues/detail?id=1307772
 [popover-explainer]: https://open-ui.org/components/popover.research.explainer/
 [popover-html-spec]: https://html.spec.whatwg.org/multipage/popover.html
