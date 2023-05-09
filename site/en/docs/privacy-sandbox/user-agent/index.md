@@ -129,7 +129,7 @@ Vary: Device-Memory, Viewport-Width
 Critical-CH: Device-Memory
 ```
 
-If the original request included a `Critical-CH`, after processing the `Accept-CH header`, the  client retries the request.
+If the browser requires a critical hint (`Critical-CH`) to properly render the webpage, then the server can ask for this additional information with the `Accept-CH` header. Then, the browser can send a new request for the page, including the critical hint.
 
 In summary, `Accept-CH` requests all values you'd like for the page, while `Critical-CH`
 requests only the subset of values you must have on-load to properly load the
