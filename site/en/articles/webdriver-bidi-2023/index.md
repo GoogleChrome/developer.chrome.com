@@ -23,7 +23,7 @@ Chromium also has its own proprietary browser automation protocol: the Chrome De
 
 There are some fundamental differences between these two protocols: WebDriver is an interoperable standard, but the protocol is less efficient and lacks features that CDP has. In contrast, CDP is more efficient and powerful, but less interoperable.
 
-That’s why in 2020, [the W3C Browser Testing and Tools Working Group](https://www.w3.org/groups/wg/browser-tools-testing) began work on [WebDriver BiDi](https://w3c.github.io/webdriver-bidi/), a new standard browser automation protocol that bridges the gap between the WebDriver “Classic” and CDP protocols. The best of both worlds! Read [_“A look back in time: the evolution of test automation”_](/blog/test-automation-evolution/) and [_“WebDriver BiDi — the future of cross-browser automation”_](/articles/webdriver-bidi/) for more background.
+That’s why in 2020, [the W3C Browser Testing and Tools Working Group](https://www.w3.org/groups/wg/browser-tools-testing) began work on [WebDriver BiDi](https://w3c.github.io/webdriver-bidi/), a new standard browser automation protocol that bridges the gap between the WebDriver Classic and CDP protocols. The best of both worlds! Read [A look back in time: the evolution of test automation](/blog/test-automation-evolution/) and [WebDriver BiDi — the future of cross-browser automation](/articles/webdriver-bidi/) for more background.
 
 The WebDriver BiDi effort involves standardization work, the creation of Web Platform Tests, and implementations for different browser engines.
 
