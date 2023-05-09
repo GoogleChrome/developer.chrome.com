@@ -133,7 +133,7 @@ Learn more and explore some more demos, check out [this blog post](/blog/has-m10
 
 ### nth-of syntax
 
-{% BrowserCompat 'css.selectors.nth-of-type' %}
+{% BrowserCompat 'css.selectors.nth-child.of_syntax' %}
 
 The web platform now has more advanced nth-child selection. The advanced nth-child syntax gives a new keyword (“of”), which lets you use the existing micro syntax of An+B, with a more specific subset within which to search.
 
@@ -148,7 +148,7 @@ If you use regular nth-child, such as `:nth-child(2)` on the special class, the 
 
 {% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/6fgfP4KuLvy0aGkKtriv.png", alt="Screenshot of the codepen above", width="800", height="682" %}
 
-Explore this feature further in our [article on nth-of syntax](](/articles/css-nth-child-of-s/)).
+Explore this feature further in our [article on nth-of syntax](/articles/css-nth-child-of-s/).
 
 ### `text-wrap: balance`
 
@@ -225,14 +225,14 @@ Learn more about using `intial-letter` [here](](/blog/control-your-drop-caps-wit
 
 ### Dynamic viewport units 
 
-{% BrowserCompat 'css.types.length.dvh' %}
+{% BrowserCompat 'css.types.length.viewport_percentage_units_large' %}
 
-One common problem web developers face today is accurate and consistent full-viewport sizing, especially on mobile devices. As a developer you want 100vh (100% of the viewport height) to mean “be as tall as the viewport”, but the vh unit doesn’t account for things like retracting navigation bars on mobile, so sometimes it ends up too long and causes scroll.
+One common problem web developers face today is accurate and consistent full-viewport sizing, especially on mobile devices. As a developer you want `100vh` (100% of the viewport height) to mean “be as tall as the viewport”, but the `vh` unit doesn’t account for things like retracting navigation bars on mobile, so sometimes it ends up too long and causes scroll.
 
 To resolve this issue, we now have new unit values on the web platform, including: 
-Small viewport height and width (or svh and svw), which represent the smallest active viewport size.
-Large viewport height and width (lvh and lvw), which represent the largest size. 
-Dynamic viewport height and width (dvh and dvw).
+- Small viewport height and width (or `svh` and `svw`), which represent the smallest active viewport size.
+- Large viewport height and width (`lvh` and `lvw`), which represent the largest size. 
+- Dynamic viewport height and width (`dvh` and `dvw`).
 
 Dynamic viewport units change in value when the additional dynamic browser toolbars, such as the address at the top or tab bar at the bottom, are visible and when they are not.
 
@@ -340,7 +340,7 @@ Building new capabilities that have clear user wins is one part of the equation,
 
 ### Nesting
 
-{% BrowserCompat 'css.at-rules.nest' %}
+{% BrowserCompat 'css.selectors.nesting' %}
 
 CSS nesting, something folks love from Sass, and one of the top CSS developer requests for years, is finally landing on the web platform. Nesting allows developers to write in a more succinct, grouped format that reduces redundancy.
 
