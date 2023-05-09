@@ -47,6 +47,7 @@ export class FilterModal extends BaseElement {
       /** @type {HTMLDialogElement|null} */
       const dialog = document.querySelector('#filter-modal');
       if (dialog) {
+        // @ts-ignore
         dialog.showModal();
       }
     }
@@ -61,6 +62,7 @@ export class FilterModal extends BaseElement {
       /** @type {HTMLDialogElement|null} */
       const dialog = document.querySelector('#filter-modal');
       if (dialog) {
+        // @ts-ignore
         dialog.close();
       }
     }
