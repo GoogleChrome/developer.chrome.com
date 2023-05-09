@@ -24,43 +24,39 @@ Recently, we announced changes to the Manifest V2 deprecation timeline, and whil
 
 We are committed to closing the following gaps before announcing a new MV2 deprecation timeline:
 
-1. **User Script support:**  Allow registering content scripts with arbitrary code by adding new functionality to the scripting API (see [our proposal](https://github.com/w3c/webextensions/blob/main/proposals/user-scripts-api.md) for more detail).
+1. **User Script support:** Allow registering content scripts with arbitrary code by adding new functionality to the scripting API (see [our proposal](https://github.com/w3c/webextensions/blob/main/proposals/user-scripts-api.md) for more detail).
 1. Further **Service Worker lifecycle enhancement:** 
-    1. Additional strong Service Worker keepalives for operations taking longer than 5 minutes.
-    1. Extend service worker lifetimes while there are active WebSocket connections.
+    * Additional strong Service Worker keepalives for operations taking longer than 5 minutes.
+    * Extend service worker lifetimes while there are active WebSocket connections.
 1. **Increase the number of static and enabled rulesets** for Declarative Net Request (DNR).
 1. Extend **[Offscreen document](/docs/extensions/reference/offscreen/) functionality** to support more reasons for using an Offscreen document.
 1. Improving **support for the `chrome.tabCapture` API**:
-    1. Support calling `getMediaStreamId` from a service worker.
-    1. Support obtaining a MediaStream from a stream ID in an offscreen document.
+    * Support calling `getMediaStreamId` from a service worker.
+    * Support obtaining a MediaStream from a stream ID in an offscreen document.
 1. **Support File Handling API on ChromeOS** as a replacement for `chrome.fileBrowserHandler`.
 
 These issues have been collected based on feedback from partners, bug reports and developers. In addition to these, we will continue our ongoing work to address stability issues and improve the overall performance. 
 
 ## MV3 FAQ 
 
-*   **Q: Do we plan to support persistent Service Workers?**
+**Q: Do we plan to support persistent Service Workers?**\
+**A:** One of the key reasons for migrating from background scripts to Service Workers is the more memory efficient event-driven programming model which comes from the ephemeral nature of Service Workers. Consequently, we are not planning to support persistent service workers. However, to address the specific needs of extension developers, we are continuing to make many improvements to Service Workers. In particular:
 
-    **A:** One of the key reasons for migrating from background scripts to Service Workers is the more memory efficient event-driven programming model which comes from the ephemeral nature of Service Workers. Consequently, we are not planning to support persistent service workers. However, to address the specific needs of extension developers, we are continuing to make many improvements to Service Workers. In particular:
+* All extension events and API calls will extend the [ServiceWorker lifetime](/docs/extensions/mv3/service_workers/service-worker-lifecycle/). 
+* Selected use cases such as native messaging will keep extensions service workers alive for longer than 5 min. 
 
-    *   All extension events and API calls will extend the [ServiceWorker lifetime](/docs/extensions/mv3/service_workers/service-worker-lifecycle/). 
-    *   Selected use cases such as native messaging will keep extensions service workers alive for longer than 5 min. 
+**Q: Is there a way to access DOM in ServiceWorkers?**\
+**A:** We follow the approach taken by the Web Platform of not including DOM access in web workers (which includes service workers). To support use cases requiring background DOM access from service workers we’ve introduced the possibility to delegate background work to short-lived [Offscreen documents](/docs/extensions/reference/offscreen/) which provide full DOM access.
 
-*   **Q: Is there a way to access DOM in ServiceWorkers?**
+**Q: will there be a way to support remote code in MV3?**\
+**A:** To make Chrome Extensions more secure, we will continue to disallow executing arbitrary remotely hosted code in Chrome extensions. However, this does **not** mean we disallow all kinds of dynamic code execution. We still support different options of dynamically executing code in Chrome extensions:
 
-    **A:** We follow the approach taken by the Web Platform of not including DOM access in web workers (which includes service workers). To support use cases requiring background DOM access from service workers we’ve introduced the possibility to delegate background work to short-lived [Offscreen documents](/docs/extensions/reference/offscreen/) which provide full DOM access.
+* [Support for `eval` in DevTools extensions](/docs/extensions/reference/devtools_inspectedWindow/#method-eval) 
+* Support for [user scripts](https://github.com/w3c/webextensions/blob/main/proposals/user-scripts-api.md).
+* [Executing remote hosted code in sandboxed iframes](/docs/extensions/mv3/sandboxingEval/) 
+* Remote hosted configuration files which can be interpreted at runtime in the extension package. However, possible execution paths need to be predetermined. 
 
-*   **Q: will there be a way to support remote code in MV3?**
-
-    **A:** To make Chrome Extensions more secure, we will continue to disallow executing arbitrary remotely hosted code in Chrome extensions. However, this does **not** mean we disallow all kinds of dynamic code execution. We still support different options of dynamically executing code in Chrome extensions:
-
-    *   [Support for `eval` in DevTools extensions](/docs/extensions/reference/devtools_inspectedWindow/#method-eval) 
-    *   Support for [user scripts](https://github.com/w3c/webextensions/blob/main/proposals/user-scripts-api.md).
-    *   [Executing remote hosted code in sandboxed iframes](/docs/extensions/mv3/sandboxingEval/) 
-    *   Remote hosted configuration files which can be interpreted at runtime in the extension package. However, possible execution paths need to be predetermined. 
-
-*   **Q: My MV2 extension relies on `webRequestBlocking` which is not supported in MV3.  How can I continue to provide the same functionality in MV3?**
-
-    **A:** We are confident that most request blocking use cases can be solved with the new [declarativeNetRequest API](/docs/extensions/reference/declarativeNetRequest/), which has the added benefit of avoiding the performance overhead of interprocess communication, executing code on every request, or requiring an active extension process at the time of the request. However, for complex [enterprise (or education) use cases](https://support.google.com/chrome/a/answer/9296680?hl=en), dynamic request blocking is still supported.
+**Q: My MV2 extension relies on `webRequestBlocking` which is not supported in MV3. How can I continue to provide the same functionality in MV3?**\
+**A:** We are confident that most request blocking use cases can be solved with the new [declarativeNetRequest API](/docs/extensions/reference/declarativeNetRequest/), which has the added benefit of avoiding the performance overhead of interprocess communication, executing code on every request, or requiring an active extension process at the time of the request. However, for complex [enterprise (or education) use cases](https://support.google.com/chrome/a/answer/9296680?hl=en), dynamic request blocking is still supported.
 
 **Did we miss something?** [Please let us know](https://groups.google.com/a/chromium.org/g/chromium-extensions)!
