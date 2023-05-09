@@ -177,7 +177,7 @@ data you expect from the User-Agent. There are three ways to test, each
 increasing in complexity.
 
 Scaled availability for User-Agent reduction means the fully reduced UA string
-shipped on all Chrome devices. Reduction is planned to begin with a Chrome
+shipped on all Chrome devices. Reduction began with a Chrome
 minor release in Q2 of 2022.
 
 ### Test the string locally {: #test-locally}
