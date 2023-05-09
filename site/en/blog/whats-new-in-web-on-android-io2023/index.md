@@ -44,7 +44,7 @@ The next topic is testing. If you are a web developer, and your websites receive
 
 2. It is now much easier to install WebView Beta. We highly recommend testing your website using the WebView Beta channel to make sure that your website works well in upcoming WebView versions. To do this, join the [WebView Beta testing program on the Google Play Store](https://play.google.com/apps/testing/com.google.android.webview), and your device will automatically be enrolled.
 
-{% Img src="image/6hHqS5auVgWhN0cQNQztaJx5w4M2/63KraC4Xb1iOtm0hpcm3.png", alt="Screenshot of the website for joining the WebView beta program", width="393", height="851" %}
+{% Img src="image/6hHqS5auVgWhN0cQNQztaJx5w4M2/63KraC4Xb1iOtm0hpcm3.png", alt="Screenshot of the website for joining the WebView beta program.", width="393", height="851" %}
 
 ### Large screen device support{: #large-screen-device}
 Our goal is to make WebView work well on large screen devices. One step in this direction is that WebView now supports image drag and drop. For example, in split screen view mode, you can drag an image from a WebView into a different app. 
