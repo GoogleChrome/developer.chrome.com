@@ -6,8 +6,8 @@ has_warning: This permission <a href="/docs/extensions/mv3/permission_warnings/#
 ## Overview
 
 The chrome.tabCapture API allows you to access a [MediaStream][media-stream] containing video and
-audio of the current tab. It can only be called after the user invokes an extension by clicking or
-otherwise triggering the extension's action button, similar to the behavior of the
+audio of the current tab. It can only be called after the user invokes an extension, such as by
+clicking the extension's action button. This is similar to the behavior of the
 [activeTab][active-tab] permission.
 
 ## Preserving system audio

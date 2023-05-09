@@ -35,9 +35,10 @@ page. To record in the background and across navigations, use an
 
 ### Tab capture based on user gesture
 
-In some use cases, the user invokes your extension for a specific tab by clicking on the action
-icon. In these cases, it is not desirable to show a secondary dialog box asking the user what they
-would like to share.
+Calling [`getDisplayMedia()`][get-display-media] results in the browser showing a dialog which asks
+the user what they would like to share. However, in some cases the user has just clicked on the
+action button to invoke your extension for a specific tab, and you would like to immediately start
+capturing the tab without this prompt.
 
 #### Audio and video (single page)
 
