@@ -47,7 +47,7 @@ As of Chrome 110, all events reset the idle timer and the idle timeout will not 
 
 Some APIs like native messaging provide a strong keep-alive which cancel both of these timers.
 
-We are till working to ensure that extension service workers are terminated when possible, without shutting down long-running work. A resource-concious extension service workers should always yield when possible. Additionally, extensions should prepare for unexpected termination by persisting state. This ensures against unpredictable events like the browser being forcefully closed by the user.
+We are still working to ensure that extension service workers are terminated when possible, without shutting down long-running work. Resource-concious extension service workers should always yield when possible. Additionally, extensions should prepare for unexpected termination by persisting state. This guards against unpredictable events like the browser being forcefully closed by the user.
 
 <p>Photo by <a href="https://unsplash.com/@pguerreiro?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Paula Guerreiro</a> on <a href="https://unsplash.com/photos/W2atfIRHDIk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
   
