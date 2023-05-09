@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-05-02
+updated: 2023-05-09
 tags:
   - extensions-news
 
@@ -15,6 +15,12 @@ tags:
 
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about many of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).)
+
+### Chrome 114: Increased storage.session quota {: #m114-storage-session-quota }
+
+<p class="color-secondary-text type--caption">Posted on <time>May 9, 2023</time></p>
+
+We have increased the quota for the [`storage.local`](/docs/extensions/reference/storage/#property-local) property to approximately 10 MB. This was [agreed to in the Web Extensions Community Group](https://github.com/w3c/webextensions/issues/351#issuecomment-1514420881). This brings `storage.local` in line with [`storage.session`](/docs/extensions/reference/storage/#property-session) which was changed in Chrome 112.
 
 ### New extension service worker tutorial and help
 
@@ -71,7 +77,7 @@ We've built a [new sample](https://github.com/GoogleChrome/chrome-extensions-sam
 
 [Three new samples](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/declarativeNetRequest) are available demonstrating the [Declarative Net Request API](/docs/extensions/reference/declarativeNetRequest/). Each demonstrates implementation of a single use case. The first shows how to block cookies. The remaining two demonstrate blocking and redirecting URLs.
 
-### Chrome 112: Increased storage.session quota {: #m112-storage-session-quota}
+### Chrome 112: Increased storage.session quota {: #m112-storage-session-quota }
 
 <p class="color-secondary-text type--caption">Posted on <time>March 3, 2023</time></p>
 
