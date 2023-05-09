@@ -33,7 +33,7 @@ In 2022, both [Chrome/ChromeDriver 106](https://crbug.com/chromedriver/4016) and
 
 Since then, WebDriver BiDi gained adoption in popular frameworks, addressing top developer pain points by unlocking highly requested features such as [logging support](https://www.selenium.dev/documentation/webdriver/bidirectional/bidirectional_w3c/log/).
 
-## Logging powered by WebDriver BiDi
+### Logging powered by WebDriver BiDi
 
 A common use case is to automatically verify that a web page loads without any console logs, warnings, or errors and without any uncaught JavaScript exceptions. Another use case is that you may wish to write an automated test to check that a web page logs a warning or throws an exception when intended. These problems can’t be solved using WebDriver Classic because [it’s not bidirectional](/blog/test-automation-evolution/#what-are-the-low-level-controls). WebDriver BiDi now makes this possible.
 
@@ -91,11 +91,11 @@ await browser.close();
 
 The same functionality is available via other abstractions such as [WebdriverIO](https://webdriver.io/blog/2022/12/01/webdriverio-v8-released/#webdriver-bidi-support).
 
-## A shared public roadmap
+### A shared public roadmap
 
 We’re still fleshing out the WebDriver BiDi specification in collaboration with other browser vendors and industry stakeholders who participate in the W3C Working Group. The group recently agreed on [a shared roadmap](https://github.com/w3c/webdriver-bidi/blob/HEAD/roadmap.md), aligning the upcoming specification and implementation work around clear user-facing end-to-end use cases.
 
-## Interoperability
+### Interoperability
 
 As the Working Group collectively specifies more features, we also create [Web Platform Tests](https://github.com/web-platform-tests/wpt/tree/master/webdriver/tests/bidi) for the WebDriver BiDi protocol. This shared test suite helps us verify correctness and interoperability of implementations. You can view the latest test results for various browsers on [the WPT Dashboard](https://wpt.fyi/results/webdriver/tests/bidi).
 
