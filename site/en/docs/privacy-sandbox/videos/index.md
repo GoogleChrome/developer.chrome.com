@@ -26,10 +26,20 @@ Refer to the linked documentation for the latest details.
 {% Partial 'privacy-sandbox/videos/ps-feb-23.njk' %}
 {# February 2023 Danny Rojas PS overview #}
 
+{% Columns %}
+{% Column %}
+<iframe width="280" height="210" src="https://www.youtube.com/embed/w-b-2i7Sk7c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% endColumn %}
+{% Column %}
+<strong>Mar 3, 2023  Run time: 11:58</strong>
+
+In this video, Jeremy Ney explains the new technologies within the Privacy Sandbox which help websites preserve important user-facing functionality and combat fraud. 
+{% endColumn %}
+{% endColumns %}
 
 ## Attribution reporting
 
-{% Partial 'privacy-sandbox/videos/ara-may-22.njk' %}
+{% Partial 'privacy-sandbox/videos/ara-aug-21.njk' %}
 {# May 2022 Sam Dutton the Attribution Reporting API high level #}
 
 
@@ -57,6 +67,10 @@ In the August 2022 Privacy Sandbox office hours, Maud Nalpas of the Chrome team 
 <iframe src="https://drive.google.com/file/d/1hmHoM3xyU4eLTJ1dM7_E8x-u6nZgim1O/preview" width="280" height="210" allow="autoplay"></iframe>
 
 <!-- [Open full-size video](https://drive.google.com/file/d/1hmHoM3xyU4eLTJ1dM7_E8x-u6nZgim1O/preview) -->
+
+<br>
+As some details may have changed, refer to the latest docs:
+<a href="/docs/privacy-sandbox/attribution-reporting/system-overview/">Attribution Reporting: full system overview</a>
 
 {% endColumn %}
 {% Column %}
