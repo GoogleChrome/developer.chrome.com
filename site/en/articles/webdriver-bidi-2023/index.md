@@ -35,7 +35,7 @@ Since then, WebDriver BiDi gained adoption in popular frameworks, addressing top
 
 ## Logging powered by WebDriver BiDi
 
-A common use case is to automatically verify that a web page loads without any console logs, warnings, or errors and without any uncaught JavaScript exceptions. Another use case is that you may wish to write an automated test to check that a web page logs a warning or throws an exception when intended. These problems can’t be solved using WebDriver “Classic” because [it’s not bidirectional](/blog/test-automation-evolution/#what-are-the-low-level-controls). WebDriver BiDi now makes this possible.
+A common use case is to automatically verify that a web page loads without any console logs, warnings, or errors and without any uncaught JavaScript exceptions. Another use case is that you may wish to write an automated test to check that a web page logs a warning or throws an exception when intended. These problems can’t be solved using WebDriver Classic because [it’s not bidirectional](/blog/test-automation-evolution/#what-are-the-low-level-controls). WebDriver BiDi now makes this possible.
 
 Here’s an example implementation of the second use case using [Selenium](https://www.selenium.dev/)’s JavaScript language bindings:
 
