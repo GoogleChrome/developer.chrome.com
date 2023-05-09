@@ -1364,8 +1364,43 @@ arskama:
     en: Arnaud (Arno) Mandy
   description:
     en: Arno is an Engineer at Intel
+robertyang:
+  title:
+    en: Robert Yang
+  description:
+    en: Robert is a Senior Partner Technology Manager at Google
 vaatika:
   title:
     en: Vaatika Dabra Groth
   description:
     en: UX Designer at Google
+dmengelt:
+  title:
+    en: Dominik Mengelt
+  description:
+    en: Developer Relations Engineer Payments, Google
+roshanbaliga:
+  title:
+    en: Roshan Baliga
+  description:
+    en: Group Product Manager, Chrome Open Media
+marcopaniconi:
+  title:
+    en: Marco Paniconi
+  description:
+    en: Senior Staff Software Engineer, Chrome Open Media
+yunqingwang:
+  title:
+    en: Yunqing Wang
+  description:
+    en: Senior Staff Software Engineer, Chrome Open Media
+sebastianbenz:
+  title:
+    en: 'Sebastian Benz'
+  description:
+    en: 'Sebastian is a Developer Relations Engineer'
+harleenbatra:
+  title:
+    en: Harleen Batra
+  description:
+    en: 'Developer Marketing for Chrome'

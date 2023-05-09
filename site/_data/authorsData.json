@@ -1149,9 +1149,41 @@
     "country": "FI",
     "github": "arskama"
   },
+  "robertyang": {
+    "image": "image/RtQlPaM9wdhEJGVKR8boMPkWf443/In0YoXtpVY8pwm7Pcj33.jpeg",
+    "twitter": "yangrob",
+    "linkedin": "robertyanghk"
+  },
   "vaatika": {
     "country": "DE",
     "twitter": "vaatika",
-    "image": "image/3ILBH0X0aDOqDIm6SgH3OTHT8832/Ryt5ICGoMplYcTgLtKev.jpg"
+    "image": "image/3ILBH0X0aDOqDIm6SgH3OTHT8832/vL2uGtk2NKGT9two4PWy.jpg"
+  },
+  "dmengelt": {
+    "country": "CH",
+    "twitter": "dmengelt",
+    "github": "dmengelt",
+    "mastodon": "https://mastodon.online/@dmengelt",
+    "image": "image/UIt9DNJ5rxYg42rqjqkKmCmAYXg1/KJcni8LUMhCip3LIJljm.jpeg"
+  },
+  "yunqingwang": {
+    "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/6Cx9HnGJfUJv7ustH6sN.jpeg"
+  },
+  "roshanbaliga": {
+    "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/WinvDg4wrHb2WCqNhoBC.jpeg"
+  },
+  "marcopaniconi": {
+    "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/sCdEdscRuD8KSRYpvTXI.png"
+  },
+  "sebastianbenz": {
+    "country": "DE",
+    "twitter": "sebabenz",
+    "github": "sebastianbenz",
+    "mastodon": "https://mastodon.cloud/@sebabenz",
+    "image": "image/6hHqS5auVgWhN0cQNQztaJx5w4M2/aHVsNAzlN0L0oqVacct3.jpg"
+  },
+  "harleenbatra": {
+    "country": "US",
+    "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/g0IPLJlZgBcLH8Yvvn78.png"
   }
 }

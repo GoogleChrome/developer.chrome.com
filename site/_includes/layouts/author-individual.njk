@@ -3,6 +3,10 @@
 
 {% extends "layouts/base.njk" %}
 
+{% block css %}
+{% InlineCss '/css/overview.css' %}
+{% endblock %}
+
 {% block title_bar %}
 {% include 'partials/breadcrumbs-author.njk' %}
 {% endblock %}

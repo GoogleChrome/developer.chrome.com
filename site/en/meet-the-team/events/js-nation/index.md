@@ -34,4 +34,14 @@ sessions:
     type: speaker
     slidesUrl: null
     videoUrl: null
+  - speaker: tunetheweb
+    title: Top Core Web Vitals Recommendations for 2023
+    description: >-
+      The Google Core Web Vitals team understand the amount of web performance recommendations is overwhelming and many don't know where to start. We've been working on identifying the 9 key recommendations (3 per Core Web Vital), which we think will have the most impact and which we recommend sites look at first. This talk will explain what they are, and why they are our top 2023 recommendations.
+    topics:
+      - Performance
+      - Core Web Vitals
+    type: speaker
+    slidesUrl: null
+    videoUrl: null
 ---

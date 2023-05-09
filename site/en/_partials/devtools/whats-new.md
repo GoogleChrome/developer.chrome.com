@@ -4,6 +4,20 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 
 {# $content #}
 
+### Chrome 114 {: #chrome114 }
+
+* [WebAssembly debugging support](/blog/new-in-devtools-114/#wasm)
+* [Improved stepping behavior in Wasm apps](/blog/new-in-devtools-114/#wasm-step)
+* [Debug Autofill using the Elements panel and Issues tab](/blog/new-in-devtools-114/#autofill)
+* [Assertions in Recorder](/blog/new-in-devtools-114/#recorder)
+* [Lighthouse 10.1.1](/blog/new-in-devtools-114/#lighthouse)
+* [Performance enhancements](/blog/new-in-devtools-114/#performance)
+* [performance.mark() shows timing on hover in Performance > Timings](/blog/new-in-devtools-114/#mark)
+* [profile() command populates Performance > Main](/blog/new-in-devtools-114/#profile)
+* [Warning for slow user interactions](/blog/new-in-devtools-114/#slow-interaction-warning)
+* [JavaScript Profiler deprecation: Phase three](/blog/new-in-devtools-114/#js-profiler)
+* [Miscellaneous highlights](/blog/new-in-devtools-114/#misc)
+
 ### Chrome 113 {: #chrome113 }
 
 * [Override network response headers](/blog/new-in-devtools-113/#network)

@@ -1,5 +1,10 @@
 {% extends "layouts/base.njk" %}
 
+
+{% block css %}
+{% InlineCss '/css/single-post.css' %}
+{% endblock %}
+
 {# Update "content" with additional headings and so forth, so we can pass it
    through the toc filter. #}
 {% set content %}
