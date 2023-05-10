@@ -14,8 +14,9 @@ The required steps are:
 
 1. Check via [`CustomTabsClient`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsClient).[`getPackageName()`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsClient#getPackageName(android.content.Context,java.util.List%3Cjava.lang.String%3E)) If the default browser supports Custom Tabs. If yes, bind to the CustomTabsService via [`CustomTabsClient.bindCustomTabsService()`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsClient#bindCustomTabsService(android.content.Context,java.lang.String,androidx.browser.customtabs.CustomTabsServiceConnection)).
 2. Once connected to the CustomTabsService, in the [`CustomTabsServiceConnection.onCustomTabsServiceConnected()`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsServiceConnection#onCustomTabsServiceConnected(android.content.ComponentName,androidx.browser.customtabs.CustomTabsClient)) callback, do:
+
     a. Warmup the browser process via [`CustomTabsClient.warmup()`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsClient#warmup(long)).
-    a. Create a new [`CustomTabsSession`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsSession) via [`CustomTabsClient.newSession()`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsClient#newSession(androidx.browser.customtabs.CustomTabsCallback,int)).
+    b. Create a new [`CustomTabsSession`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsSession) via [`CustomTabsClient.newSession()`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsClient#newSession(androidx.browser.customtabs.CustomTabsCallback,int)).
 3. Optionally, prefetch web pages the user is likely to visit via [`CustomTabsSession.mayLaunchUrl()`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsSession#mayLaunchUrl(android.net.Uri,android.os.Bundle,java.util.List%3Candroid.os.Bundle%3E)).
 4. When launching a new Custom Tab, pass the [`CustomTabsSession`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsSession) to the [CustomTabsIntent.Builder](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder) via the constructor `new CustomTabsIntent.Builder(session)`.
 
@@ -102,8 +103,8 @@ protected void onCreate(Bundle savedInstanceState) {
 A Custom Tabs service connection might fail while your activity is running. If your app requires an active service connection, there are two strategies to ensure a working service connection:
 
 1. When eagerly connecting to the `CustomTabsService` during `onCreate()`, reconnect to the service  if your activity gets disconnected and the `onServiceDisconnected()` callback gets invoked.
-2. Wait until the user triggers a Custom Tab, then establish the service connection and launch the custom tab.
+2. Wait until the user triggers a Custom Tab, then establish the service connection and launch the Custom Tab.
 
 {% endAside %}
 
-Next up: [Learn how to resize the Custom Tabs experience](/docs/android/custom-tabs/partial-custom-tabs/).
+Next up: [Learn how to resize the Custom Tabs experience](/docs/android/custom-tabs/guide-partial-custom-tabs/).
