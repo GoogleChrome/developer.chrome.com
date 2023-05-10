@@ -3,14 +3,14 @@ api: tabCapture
 has_warning: This permission <a href="/docs/extensions/mv3/permission_warnings/#permissions_with_warnings">triggers a warning</a>.
 ---
 
-## Overview
+## Overview {: #overview }
 
 The chrome.tabCapture API allows you to access a [MediaStream][media-stream] containing video and
 audio of the current tab. It can only be called after the user invokes an extension, such as by
-clicking the extension's action button. This is similar to the behavior of the
+clicking the extension's [action button][action-button]. This is similar to the behavior of the
 [activeTab][active-tab] permission.
 
-## Preserving system audio
+## Preserving system audio {: #preserving-system-audio }
 
 When a [MediaStream][media-stream] is obtained for a tab, audio in that tab will no longer be played
 to the user. This is similar to the behavior of the [`getDisplayMedia()`][get-display-media] function when
@@ -27,7 +27,7 @@ source.connect(output.destination);
 This creates a new `AudioContext` and connects the audio of the tab's `MediaStream` to the default
 destination.
 
-## Stream IDs
+## Stream IDs {: #stream-ids }
 
 Calling [chrome.tabCapture.getMediaStreamId][get-media-stream-id] will return a stream ID. To later
 access a [MediaStream][media-stream] from the ID, use the following:
@@ -49,7 +49,7 @@ navigator.mediaDevices.getUserMedia({
 });
 ```
 
-## Learn more
+## Learn more {: #learn-more }
 
 To learn more about how to use the `chrome.tabCapture` API, see
 [Audio recording and screen capture][audio-recording-screen-capture]. This demonstrates how to use
@@ -61,3 +61,4 @@ To learn more about how to use the `chrome.tabCapture` API, see
 [get-display-media]: https://developer.mozilla.org/docs/Web/API/MediaDevices/getDisplayMedia
 [supress-playback]: https://developer.mozilla.org/docs/Web/API/MediaTrackSupportedConstraints/suppressLocalAudioPlayback
 [audio-recording-screen-capture]: /docs/extensions/mv3/screen_capture/
+[action-button]: /docs/extensions/mv3/user_interface/#action
