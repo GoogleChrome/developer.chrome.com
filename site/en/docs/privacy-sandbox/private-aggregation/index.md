@@ -2,9 +2,11 @@
 layout: 'layouts/doc-post.njk'
 title: 'Private Aggregation API'
 subhead: >
-   Generate noisy summary reports with cross-site data in a privacy-preserving manner
+   Generate aggregate data reports using data from Protected Audience and cross-site
+   data from Shared Storage.
 description: >
-   Generate noisy summary reports with cross-site data in a privacy-preserving manner
+   Generate aggregate data reports using data from Protected Audience and cross-site
+   data from Shared Storage.
 date: 2022-10-11
 updated: 2023-03-14
 authors:
@@ -17,17 +19,20 @@ privacy-preserving manner.
 
 ## Implementation status
 
-This document outlines a new proposal for cross-site measurement.
-
 {% Partial 'privacy-sandbox/timeline/private-aggregation.njk' %}
 
 ## What is the Private Aggregation API
 
-The Private Aggregation API enables aggregate data collection from worklets
-with access to cross-site data such as [FLEDGE](/docs/privacy-sandbox/fledge/)
-and [Shared Storage](/docs/privacy-sandbox/shared-storage/). 
+The Private Aggregation API allows developers to generate aggregate data reports
+with data from [Protected Audience](/docs/privacy-sandbox/fledge/) and
+cross-site data from [Shared Storage](/docs/privacy-sandbox/shared-storage/). 
 
-This API proposal provides one operation, `sendHistogramReport()`, but more may be supported in the future. The histogram operation allows you to aggregate data across users in each bucket (known in the API as an aggregation key) you define. Your histogram call accumulates values and returns a noised aggregated result in the form of a summary report. For instance, the report might show the number of sites each user has seen your content on, or come across a bug in your third-party script. This operation is performed within another API’s worklet.
+This API currently provides one operation, `sendHistogramReport()`, but more may be
+supported in the future. The histogram operation allows you to aggregate data
+across users in each bucket (known in the API as an aggregation key) you define.
+Your histogram call accumulates values and returns a noised aggregated result in
+the form of a summary report. For instance, the report might show the number of
+sites each user has seen your content on, or come across a bug in your third-party script. This operation is performed within another API’s worklet.
 
 {% Aside 'key-term' %}
 A _[worklet](https://developer.mozilla.org/docs/Web/API/Worklet)_ allows you to run specific JavaScript functions and return information back to the requester. Within a worklet, you can execute JavaScript but you cannot interact or communicate with the outside page.
