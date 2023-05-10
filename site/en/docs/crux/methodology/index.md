@@ -326,6 +326,16 @@ Most metrics are represented as a histogram aggregation, allowing visualization 
 <cite><a href="https://web.dev/cls/">web.dev/cls/</a></cite>
 {% endAside %}
 
+### Interaction to Next Paint {: #inp-metric}
+
+{% Aside %}
+"Interaction to Next Paint (INP) is a field metric that assesses [responsiveness](https://web.dev/user-centric-performance-metrics/#types-of-metrics). INP logs the latency of all interactions throughout the entire page lifecycle. The highest value of those interactions—or close to the highest for pages with many interactions—is recorded as the page's INP. A low INP ensures that the page will be reliably responsive at all times."
+
+<cite><a href="https://web.dev/inp/">web.dev/inp/</a></cite>
+{% endAside %}
+
+Interaction to Next Paint (INP) was added to the CrUX dataset in [February 2022](/docs/crux/release-notes/#202202). This new metric captures the end-to-end latency of individual events and offers a more holistic picture of the overall responsiveness of a page throughout its lifetime.
+
 ### Experimental metrics {: #experimental-metrics }
 
 Experimental metrics are available in the CrUX dataset via [BigQuery](/docs/crux/bigquery/), with some also available in the [CrUX API](/docs/crux/api/). These metrics are likely to change regularly as they evolve based on user feedback. Check the [release notes](/docs/crux/release-notes/) to keep up to date on the latest changes.
@@ -339,16 +349,6 @@ Experimental metrics are available in the CrUX dataset via [BigQuery](/docs/crux
 {% endAside %}
 
 TTFB is only collected on full page loads, unlike other timers (such as [LCP](#lcp-metric)) which are also collected on back-forward navigations and pre-rendering. As such, the sample size of TTFB can be smaller than other metrics and may not necessarily be compared directly with them.
-
-#### Interaction to Next Paint {: #inp-metric}
-
-{% Aside %}
-"Interaction to Next Paint (INP) is an experimental field metric that assesses [responsiveness](https://web.dev/user-centric-performance-metrics/#types-of-metrics). INP logs the latency of all interactions throughout the entire page lifecycle. The highest value of those interactions—or close to the highest for pages with many interactions—is recorded as the page's INP. A low INP ensures that the page will be reliably responsive at all times."
-
-<cite><a href="https://web.dev/inp/">web.dev/inp/</a></cite>
-{% endAside %}
-
-Interaction to Next Paint (INP) was added to the CrUX dataset in [February 2022](/docs/crux/release-notes/#202202). This new metric captures the end-to-end latency of individual events and offers a more holistic picture of the overall responsiveness of a page throughout its lifetime.
 
 #### Popularity {: #popularity-metric}
 
