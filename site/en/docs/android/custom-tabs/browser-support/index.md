@@ -101,7 +101,7 @@ authors:
     }
 </style>
 
-Custom Tabs are a great option for creating a customized browser experience directly within your app, but they are not a singular thing. Built ontop of the [Intent system](https://developer.android.com/guide/components/intents-filters), Custom Tabs are a collection of configurable option requests that are sent to the end user's preferred browser. It is up to each browser to implement the various options. The availability of CustomTabs features can vary between Android browsers due to implementation differences.
+Custom Tabs are a great option for creating a customized browser experience directly within your app, but they are not a singular thing. Built on top of the [Intent system](https://developer.android.com/guide/components/intents-filters), Custom Tabs are a collection of configurable option requests that are sent to the end user's preferred browser. It is up to each browser to implement the various options. The availability of Custom Tabs features can vary between Android browsers due to implementation differences.
 
 What follows is a comparison of _some_ browsers in the Android ecosystem. A vast majority of browsers on Android have some level of support. The tables are not not meant to be exhaustive, but illustrative of the level of support you are likely to see. You should research the default browsers of the people using _your_ app, and make sure you are coding defensively.
 
@@ -111,7 +111,7 @@ It is currently not possible to programmatically check on an Android device, if 
 
 ## CustomTabsIntent.Builder
 
-`CustomTabsIntent.Builder` creates Custom Tabs. You have a number of ways to configure your custom tab to help it blend as seamlessly as possible with your app via a collection of built in methods. These include
+`CustomTabsIntent.Builder` creates Custom Tabs. You have a number of ways to configure your custom tab to help it blend as seamlessly as possible with your app via a collection of built in methods, which are listed below.
 
 ### addDefaultShareMenuItem()
 
@@ -119,7 +119,7 @@ It is currently not possible to programmatically check on an Android device, if 
 This method is deprecated. Instead, you should use [`setShareState`](#setShareState).
 {% endAside %}
 
-[addDefaultShareMenuItem()](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#addDefaultShareMenuItem()) adds a default share button to the Custom Tabs toolbar, allowing the user to share the current web page via various apps on their device
+[addDefaultShareMenuItem()](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#addDefaultShareMenuItem()) adds a default share button to the Custom Tabs toolbar, allowing the user to share the current web page via various apps on their device.
 
 {% AndroidBrowserSupportTable
  _method="addDefaultShareMenuItem",
@@ -219,7 +219,7 @@ Sets the action button that is displayed in the toolbar with default tinting beh
 
 ### setCloseButtonIcon()
 
-Sets the action button that is displayed in the toolbar.
+Sets custom close button that is displayed in the toolbar.
 
 {% Img src="image/DXqUldooyJOUnj3qXSYLHbUgUI93/fsSLnl8YWCSd3qkxJrxM.png", alt="On the left, a phone showing an app using setCloseButtonIcon(), and on the right a separate phone without the API", width="800", height="407" %}
 

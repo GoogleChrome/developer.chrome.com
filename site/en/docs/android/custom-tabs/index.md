@@ -18,7 +18,7 @@ Custom Tabs are a feature in Android browsers that gives app developers
 a way to add a customized browser experience directly within their app.
 
 Loading web content has been a part of mobile apps since the early days of
-smartphones, but older options can present challenges for devs. Launching the
+smartphones, but older options can present challenges for developers. Launching the
 actual browser is a heavy context switch for users that isn't customizable,
 while WebViews [don't support][6] all features of the web platform, don't share
 state with the browser and add maintenance overhead.
@@ -26,7 +26,7 @@ state with the browser and add maintenance overhead.
 Custom Tabs offer a better user experience than simply opening an external
 browser. They allow users to remain within the app while browsing, increasing
 engagement and reducing the risk of users abandoning the app. They accomplish
-this by by being powered directly by the user's preferred browser, and automatically
+this by being powered directly by the user's preferred browser, and automatically
 sharing the state and features offered by it. You don't need to write custom
 code to manage requests, permission grants, or cookie stores.
 
@@ -37,7 +37,7 @@ By using a Custom Tab, your web content will load in whatever rendering engine
 powers your user's preferred browser. Any API or web platform feature is
 available there, and will be available in your Custom Tab. Their browsing session,
 saved passwords, payment methods, and addresses will all show up just like they
-are accustomed already.
+are accustomed to already.
 
 ## What can I customize in a Custom Tab?
 
@@ -54,7 +54,7 @@ Custom entrance and exit animations to match the rest of your app
   <figcaption>A mobile browser, transiting between screens, ending with a web site loaded in a Custom Tab</figcaption>
 </figure>
 
-Modifing the toolbar color to match your app's branding
+Modifing the toolbar color to match your app's branding.
 
 <figure>
 {% Video loop=true, playsinline=true, autoplay=true, src="video/DXqUldooyJOUnj3qXSYLHbUgUI93/kQ0LUuUdcWFM34IPg5I6.mp4", width="350", height="730", class="screenshot"  %}
@@ -89,11 +89,11 @@ You can test this now with our [sample][1] on GitHub.
 ## When should I use Custom Tabs?
 
 There is no single "correct" way to load web content. In certain situations,
-WebView is going to be the right thing to use. For example, if you are
+WebView is going to be the right technology to use. For example, if you are
 exclusively hosting your own content inside your app, or if you need to inject
 javascript directly from your app. If your app directs people to URLs outside
 domains, the built in shared state in Custom Tabs means they are likely a
-better choice. Other strengths of Custom Tabs include
+better choice. Other strengths of Custom Tabs include:
 
 1. Security: Custom Tabs use Google's Safe Browsing to protect the user and the
 device from dangerous sites.
@@ -117,7 +117,7 @@ But, instead of providing a customized UI, it allows developers to open a browse
 any UI at all. It is recommended for developers who want to open their own
 [Progressive Web App][10], in full screen, inside their own Android app.
 
-## Where is Custom Tabs available?
+## Where are Custom Tabs available?
 
 Custom Tabs is a feature supported by browsers on the Android platform. It was originally
 introduced by [Chrome][2], on version 45. The protocol is supported by most Android
