@@ -3,10 +3,8 @@ layout: 'layouts/blog-post.njk'
 title: "First-Party Sets: developer guide"
 date: 2023-01-12
 updated: 2023-12-05
-thumbnail: 'image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/JL7L7S2qKI53pTWACfcv.jpg'
-alt: A diagram with one First-Party Set that contains domains example.com,
-  example.rs, and example.co.uk. The other contains brandx.site,
-  fly-brandx.site, and drive-brandx.site.
+thumbnail: 'image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/SV7SXAQRcVnBZEgjgxYc.png'
+alt: A diagram showing an embedded site calling requestStorageAccess.
 tags: 
   - privacy
 authors:
