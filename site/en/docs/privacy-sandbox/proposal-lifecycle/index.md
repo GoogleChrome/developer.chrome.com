@@ -33,7 +33,7 @@ from developers and industry leaders (with and without web technology
 knowledge) to ensure we create durable web features with broad utility and
 robust privacy protections for users.
 
-Chromium (the open source platform behind many modern browsers) has written
+Chromium (the open source project behind many modern browsers) has written
 about the [feature development process](https://www.chromium.org/blink/launching-features/)
 for all technologies which aim to become a web standard. Because of the
 critical nature of privacy and security on the web, we expect and encourage
@@ -50,7 +50,7 @@ APIs&mdash;and whose expertise is critical to this initiative.
 
 There have been dozens of [privacy-preserving
 proposals](https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo)
-offered by Chrome and others over the last few of years. You can read these
+offered by Chrome and others over the last few years. You can read these
 proposals, ask questions, offer ideas to improve them and see what others say.
 
 There are a number of W3C groups you can join or monitor, depending on the use
@@ -72,7 +72,7 @@ With input from privacy advocates and many industry stakeholders, FLEDGE has
 evolved from two previous proposals (PIGIN and TURTLEDOVE). More than 100 have
 joined [W3C meetings](https://github.com/WICG/turtledove/issues/88) to help
 refine the current version, plus over
-[200 online discussion threads](https://github.com/WICG/turtledove/issues).
+[300 online discussion threads](https://github.com/WICG/turtledove/issues).
 
 There have also been more than half a dozen other proposals offered by other
 companies, in the same solution space. Through continued collaboration, we hope
@@ -88,21 +88,22 @@ them right.
 
 ### Developers test and share feedback {: #testing}
 
-We rely on developer testing to receive
-[feedback](/docs/privacy-sandbox/feedback/), both on how to improve these
-technologies and to share issues which require more work. Many of the Privacy
-Sandbox technologies are available for testing, with a variety of options.
+We rely on developers to provide [feedback](/docs/privacy-sandbox/feedback/) on
+improvements to these technologies and to share issues which may require
+changes to the API design and implementation. Many of the Privacy Sandbox
+technologies are available for testing, with various options.
 
-Testing in Chrome usually starts with a feature behind a flag for developers to
-test locally, without that feature being live. This means developers need to
-turn it on in the browser to try it out. This code is often very fresh, so you
-can expect to find issues.
+Often, Chrome engineers implement [features behind flags](/docs/web-platform/chrome-flags/)
+to allow for local testing, without the feature being available by default
+across browsers. Developers must enable a feature to try it, and the feature
+implementation will be. This means developers can expect to encounter some
+issues.
 
-We also run origin trials, each of which run for a limited time with a limited
-population of Chrome users. Origin trials are public and open to all
-developers—you just need to register to opt in your site or service. This is
-your opportunity to try the feature on production traffic and provide feedback
-on real-world experience.
+[Chrome origin trials](/docs/web-platform/origin-trials/) allow developers to
+enable a feature for a limited population of Chrome users. To participate,
+developers can register to opt in your site or service. This provides you an
+opportunity to try the feature on production traffic and provide feedback on
+real-world experience.
 
 <figure>
 {% Img
@@ -237,6 +238,3 @@ as we can, encourage your involvement, and hear your input.
    Twitter](https://twitter.com/ChromiumDev).
 *  Submit Issues to the [developer support
    repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
-
-_Much of this content was originally shared as a part of the [2021 Chrome
-Developer Summit recap](/docs/privacy-sandbox/cds21-update/)._
