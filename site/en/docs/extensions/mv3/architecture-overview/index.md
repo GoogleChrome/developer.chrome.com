@@ -67,7 +67,7 @@ An extension can have different HTML pages depending on the design. All extensio
 : The options page (`options.html`) provides a way for users to customize an extension, such as choosing which sites the extension will run on. Users can access the options page in several ways as described in [Finding the options page][doc-options-view].
 
 [Side panels][api-sidepanel]
-: Extensions can also provide UI to appear in the side panel (`sidepanel.html`) to provide additional functionality alongside the main content of a site. Users can open these by opening the side panel in Chrome or by clicking the extension toolbar icon. Side panels can be configured to only be displayed on specific sites.
+: A side panel (`sidepanel.html`) can be used to assist users throughout their browsing journey by providing relevant functionality with minimal distractions. Users can find extension side panels by navigating to Chrome's side panel UI or by clicking the extension toolbar icon. Side panels can be configured to only be displayed on specific sites.
 
 Other extension HTML pages include [Chrome override pages][doc-override], [sandbox pages][doc-sandbox] or any custom page included for a specific purpose like onboarding the user.
 
@@ -112,8 +112,8 @@ Now that you have completed the [Getting Started guides][doc-gs] and understand 
 [api-sidepanel]: /docs/extensions/reference/sidePanel
 [api-storage]: /docs/extensions/reference/storage
 [cs-isolated]: /docs/extensions/mv3/content_scripts/#isolated_world
-[cws]: https://chrome.google.com/webstore/
 [cws-mv3-req]: /docs/webstore/program-policies/mv3-requirements/
+[cws]: https://chrome.google.com/webstore/
 [dev-basics-structure]: /docs/extensions/mv3/getstarted/development-basics/#structure
 [doc-content-scripts]: /docs/extensions/mv3/content_scripts
 [doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics
@@ -121,8 +121,8 @@ Now that you have completed the [Getting Started guides][doc-gs] and understand 
 [doc-ext-101]: /docs/extensions/mv3/getstarted/extensions-101
 [doc-gs]: /docs/extensions/mv3/getstarted
 [doc-manifest-examples]: /docs/extensions/mv3/manifest#manifest-examples
-[doc-match]: /docs/extensions/mv3/match_patterns/
 [doc-manifest]: /docs/extensions/mv3/manifest
+[doc-match]: /docs/extensions/mv3/match_patterns/
 [doc-messages]: /docs/extensions/mv3/messaging
 [doc-options-view]: /docs/extensions/mv3/options#view_page
 [doc-options]: /docs/extensions/mv3/options
