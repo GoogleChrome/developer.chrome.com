@@ -33,7 +33,7 @@ should consider using promises in situations such as the following:
 
 ## Converting a callback to a promise {: #compare-to-callback}
 
-As previously mentioned, a method cannot both take a callback and return a promise. To convert from a callback to a promise, remove the callback and handle the returned promise. The example below is taken from the [optional permissions sample](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.optional_permissions), `newtab.js` specifically. The callback version shows what the sample's call to `request()` would look like with a callback. Note that the promise version could be rewritten with async and await.
+As previously mentioned, a method cannot both take a callback and return a promise. To convert from a callback to a promise, remove the callback and handle the returned promise. The example below is taken from the [optional permissions sample](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.optional_permissions), `newtab.js` specifically. The callback version shows what the sample's call to `request()` would look like with a callback. Note that the promise version uses `async` and `await`.
 
 <div class="switcher">
 {% Compare 'worse', 'Callback' %}
@@ -52,14 +52,12 @@ chrome.permissions.request(newPerms, (granted) => {
 {% Compare 'better', 'Promise' %}
 ```js
 const newPerms = { permissions: ['topSites'] };
-chrome.permissions.request(newPerms)
-.then((granted) => {
-  if (granted) {
-    console.log('granted');
-  } else {
-    console.log('not granted');
-  }
-});
+const granted = chrome.permissions.request(newPerms)
+if (granted) {
+  console.log('granted');
+} else {
+  console.log('not granted');
+}
 
 ```
 {% endCompare %}
