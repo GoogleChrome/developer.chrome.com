@@ -139,10 +139,10 @@ showing an issue with the for attribute of a form element.", width="800", height
 
 As you can see, this form is a mess! There are:
 
-* Input fields without an `id` or `name` attribute
-* Elements with duplicate IDs
-* A `<label>` with a `for` attribute that doesn't match an element ID
-* A field with an empty `autocomplete` attribute
+* Input fields without an `id` or `name` attribute.
+* Elements with duplicate IDs.
+* A `<label>` with a `for` attribute that doesn't match an element ID.
+* A field with an empty `autocomplete` attribute.
 
 Hover over a highlighted element in the DOM tree and click **View issue** to learn more.
 
