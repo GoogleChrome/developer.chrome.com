@@ -20,7 +20,7 @@ and related policy or other changes. You'll find other notices posted on the [Ex
 
 <p class="color-secondary-text type--caption">Posted on <time>May 9, 2023</time></p>
 
-We've updated the [know issues section of our MV3 migration guidance](/docs/extensions/migrating/known-issues/), with a updated list of extension platform gaps that we intent to close before announcing a new MV2 deprecation timeline.
+We've updated the [known issues section of our MV3 migration guidance](/docs/extensions/migrating/known-issues/) with an updated list of extension platform gaps that we intend to close before announcing a new MV2 deprecation timeline.
 
 ### Chrome 114: Increased storage.local quota {: #m114-storage-local-quota }
 
