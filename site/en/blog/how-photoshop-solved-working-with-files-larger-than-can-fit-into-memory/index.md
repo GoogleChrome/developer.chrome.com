@@ -19,6 +19,9 @@ tags:
 
 ## Introduction
 
+(This article is also available in form of a video.)
+
+{% YouTube id="Y40vMQap9fs", startTime="695" %}
 In 2021, Adobe, together with Chrome engineering, [brought a version of Photoshop to the web](https://web.dev/ps-on-the-web/). The software makes innovative use of WebAssembly with features like [SIMD](https://v8.dev/features/simd), high performance storage in the [origin private file system](/articles/file-system-access/#accessing-the-origin-private-file-system), the [P3 color space](https://developer.mozilla.org/docs/Web/API/HTMLCanvasElement/getContext#colorspace) for canvas, and Web Components with [Lit](https://lit.dev/). In this article, we want to focus on how Adobe Photoshop engineering solved working with files larger than can fit into memory. And, in the case of WebAssembly, how Photoshop works with files larger than the 32-bit address space of wasm32.
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/O6HxMybFxb42HZEdcc7Q.png", alt="The Photoshop app while editing an image of the Project Fugu logo.", width="800", height="568" %}
