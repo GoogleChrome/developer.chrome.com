@@ -16,6 +16,12 @@ tags:
   - fugu-case-study
 ---
 
+## Introduction
+
+(This article is also available in form of a video.)
+
+{% YouTube id="Y40vMQap9fs", startTime="269" %}
+
 [Photopea](https://www.photopea.com/) is a free online image editor developed by [Ivan Kutskir](https://blog.ivank.net/). Ivan started working on the app in 2012, and maintains a [blog](https://blog.photopea.com/) sharing the major features he adds to Photopea. Photopea can work with PSD (Adobe Photoshop), XCF (GIMP), Sketch (Sketch App), XD (Adobe XD), and CDR (CorelDRAW) formats.
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/m3t2Hh7UCspDdSm7tWIp.png", alt="The Photopea app.", width="800", height="450" %}
