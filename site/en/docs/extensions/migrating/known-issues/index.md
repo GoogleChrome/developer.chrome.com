@@ -15,7 +15,7 @@ tags:
 
 {% endAside %}
 
-Recently, we announced changes to the Manifest V2 (MV2) deprecation timeline, and while we remain firmly committed to Manifest V3 (MV3) we acknowledge there is more work to do on our part including: 
+Recently, we announced changes to the Manifest V2 (MV2) deprecation timeline, and while we remain firmly committed to Manifest V3 (MV3) we acknowledge there is more work to do on our part.
 
 *   Before announcing a new timeline for deprecation, we will finish addressing prioritized platform gaps and closing critical bugs that are documented on this page.
 *   We will give developers time to build, guaranteeing at least 6 months between a timeline announcement and any experiments removing support for MV2.
