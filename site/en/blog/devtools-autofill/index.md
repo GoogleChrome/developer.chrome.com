@@ -147,7 +147,7 @@ As you can see, this form is a mess! There are:
 Hover over a highlighted element in the DOM tree and click **View issue** to learn more.
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/zzcgmJCvGW9KNeES8HBH.png", alt="Expanded issue in
-Chrome DevTools: Incorrect use of label for attribute", width="800", height="513" %}
+Chrome DevTools: Incorrect use of label for attribute.", width="800", height="513" %}
 
 Click **Violating node** to view the affected resources for each issue. This form has eight labels
 with a `for` attribute that doesn't match the `id` of a form field.
