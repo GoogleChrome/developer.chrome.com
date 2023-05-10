@@ -13,6 +13,8 @@
 @import 'typography';
 
 // Blocks
+@import 'node_modules/webdev-infra/shortcodes/Aside/styles';
+@import 'blocks/aside';
 @import 'blocks/details';
 @import 'blocks/link';
 @import 'blocks/button';
@@ -83,7 +85,6 @@
 @import 'blocks/fugu-showcase';
 @import 'blocks/enhanced-select';
 @import 'node_modules/webdev-infra/shortcodes/BrowserCompat/styles';
-@import 'node_modules/webdev-infra/shortcodes/Aside/styles';
 
 // Utilities
 @import 'utilities/center-margin';
