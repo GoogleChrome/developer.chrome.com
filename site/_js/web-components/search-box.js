@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -435,7 +435,10 @@ export class SearchBox extends BaseElement {
       return;
     }
 
-    if (this.query.length < 3) {
+    // check if the query length is less than two
+    // if it is, then prompt the user to search for at
+    // least three characters
+    if (this.query.length <= 2) {
       return html`
         <div
           id="search-box__results"
