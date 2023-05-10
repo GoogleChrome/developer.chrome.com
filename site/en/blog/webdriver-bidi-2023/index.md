@@ -6,13 +6,16 @@ layout: layouts/blog-post.njk
 authors:
   - mathiasbynens
 date: 2023-05-09
-updated: 2023-05-09
+updated: 2023-05-11
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/nrI18Gn6bcbje10UnJBj.jpg'
 alt: ''
 tags:
   - test-automation
   - devtools
 ---
+
+{% YouTube id='6oXic6dcn9w', startTime='550' %}
+
 This article gives an overview of what’s new in WebDriver BiDi in 2023.
 
 ## What is WebDriver BiDi?
