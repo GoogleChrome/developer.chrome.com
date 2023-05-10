@@ -16,11 +16,11 @@ tags:
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about many of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).)
 
-### Updated MV3 migration guidance 
+### Updated Manifest V3 migration guidance 
 
-<p class="color-secondary-text type--caption">Posted on <time>May 9, 2023</time></p>
+<p class="color-secondary-text type--caption">Posted on <time>May 10, 2023</time></p>
 
-We've updated the [known issues section of our MV3 migration guidance](/docs/extensions/migrating/known-issues/) with an updated list of extension platform gaps that we intend to close before announcing a new MV2 deprecation timeline.
+We've updated the [Known Issues](/docs/extensions/migrating/known-issues/) section of our [Manifest V3 migration guidance](/docs/extensions/migrating/) with an updated list of extension platform gaps that we intend to close before announcing a new Manifest V2 deprecation timeline.
 
 ### Chrome 114: Increased storage.local quota {: #m114-storage-local-quota }
 
