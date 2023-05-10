@@ -27,7 +27,7 @@ To register an extension service worker, specify it in the `"background"` field 
 
 There are two methods of importing scripts into a service worker: the [`import`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import) statement and the [`importScripts()`](https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/importScripts) method. Note that [`import()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/import), often called a dynamic import, is not supported.
 
-To use the `import` statement, add the `"type" field to your manifest and specify `"module"`. For example:
+To use the `import` statement, add the `"type"` field to your manifest and specify `"module"`. For example:
 
 ```json/2
   "background": {
