@@ -21,6 +21,9 @@ redirects:
 
 # Simple redirects
 
+- from: /en/articles/multi-screen-window-placement/
+  to: /articles/window-management/
+
 - from: /articles/multi-screen-window-placement/
   to: articles/window-management/
 
