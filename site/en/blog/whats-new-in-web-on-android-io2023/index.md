@@ -167,7 +167,7 @@ A couple of advantages of wrapping your web app using TWA are:
 Having access to the [Play Billing API](/docs/android/trusted-web-activity/play-billing/), which allows developers to manage digital goods sales in their apps, making it easier to set up products, sales, subscriptions, and more.
 Delegating notifications and geolocation permissions to the Android app instead of the website.
 
-Check [this article](link to this article) to learn more about how ContactsDirect has used TWA to benefit their users and tripled their conversion rates.
+Check [this article](https://www.thinkwithgoogle.com/intl/it-it/futuro-del-marketing/digital-transformation/essilorluxottica-velocita-siti-web/) to learn more about how ContactsDirect has used TWA to benefit their users and tripled their conversion rates.
 
 ## Conclusion
 
