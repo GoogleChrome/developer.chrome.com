@@ -8,10 +8,16 @@ authors:
   - sebastianbenz
 ---
 
+<style>
+video {
+  max-width: 400px;
+}
+</style>
+
 This guide explains how to measure engagement signals for Chrome Custom tabs. If your app regularly surfaces links to web content to its users, for example in a news feed, it can be important to know which links users find valuable and which not. In Custom Tabs, you can measure session specific user engagement via the number of navigations, scroll direction changes and scroll depth.
 
 <figure>
-  {% Video src="video/6hHqS5auVgWhN0cQNQztaJx5w4M2/m3WWGlZ2fFVZLgYjX9QV.mp4", controls="true", width="400", height="866", class="screenshot screenshot--filled" %}
+  {% Video src="video/6hHqS5auVgWhN0cQNQztaJx5w4M2/m3WWGlZ2fFVZLgYjX9QV.mp4", controls="true", width="400", height="866", class="screenshot" %}
   <figcaption>
     Custom Tab engagement signals demo.
   </figcaption>

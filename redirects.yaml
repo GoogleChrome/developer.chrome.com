@@ -21,6 +21,9 @@ redirects:
 
 # Simple redirects
 
+- from: /articles/multi-screen-window-placement/
+  to: articles/window-management/
+
 - from: /blog/wordpress-playground/
   to: https://web.dev/wordpress-playground/
 
@@ -38,6 +41,9 @@ redirects:
 
 - from: /apps/about_apps
   to: /docs/apps/overview/
+
+- from: /docs/extensions/mv3/known-issues/
+  to: /docs/extensions/migrating/known-issues/
 
 - from: /docs/extensions/mv3/background_migration
   to: /docs/extensions/migrating/to-service-workers
@@ -77,6 +83,15 @@ redirects:
 - from: /multidevice/android/customtabs/
   to: /docs/android/custom-tabs/overview
 
+- from: /docs/android/custom-tabs/low-level-api/
+  to: /docs/android/custom-tabs/howto-custom-tab-low-level-api/
+
+- from: /docs/android/custom-tabs/headers/
+  to: /docs/android/custom-tabs/howto-request-headers/
+
+- from: /docs/android/custom-tabs/best-practices/
+  to: /docs/android/#how-tos
+
 - from: /docs/webstore/overview/
   to: /docs/webstore/about_webstore/
 
@@ -112,7 +127,7 @@ redirects:
 
 - from: /docs/privacy-sandbox/attribution-reporting-changes-january-2022/
   to: /blog/attribution-reporting-jan-2022-updates/
-  
+
 - from: /docs/privacy-sandbox/maximize-ad-relevance/
   to: https://privacysandbox.com/news/maximize-ad-relevance-after-third-party-cookies
 
@@ -711,7 +726,7 @@ redirects:
 - from: /docs/web-platform/pop-up-api/
   to: https://developer.mozilla.org/docs/Web/API/Popover_API
 
-- from: /docs/android/custom-tabs/integration-guide/ 
+- from: /docs/android/custom-tabs/integration-guide/
   to: /docs/android/custom-tabs/guide-get-started/
 
 # DO NOT REMOVE. This seems pointless but we rewrite "." to "_" inside our server's code, so if the

@@ -361,6 +361,10 @@ const config = {
 
 {% endColumns %}
 
+## Comments
+
+If you want comments that are stripped out during rendering, you can place your comment text between {&num; and  &num;}.
+
 ## Compare
 
 ```md

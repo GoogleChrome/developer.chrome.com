@@ -1,14 +1,14 @@
 ---
 layout: "layouts/doc-post.njk"
-title: Resizing with partial Custom Tabs
-seoTitle: "Guide: resize a Custom Tab with Partial Custom Tabs"
+title: Multi-tasking with Partial Custom Tabs
+seoTitle: "Guide: Multi-tasking with Partial Custom Tabs"
 date: 2023-04-21
 description: Learn how to you use partial Custom Tabs to let your users interact with your app while viewing web content. 
 authors:
   - sebastianbenz
 ---
 
-By default, Custom Tabs launch as a full-window activity. Starting in Chrome 107, you can use partial Custom Tabs to specify a different launch height in portrait mode such that users can interact with your app while viewing web content. Users can expand the Custom Tab to full-screen by dragging the toolbar handle up and restoring the initial launch height by dragging the handle down.
+By default, Custom Tabs launch as a full-window activity. Starting in Chrome 107, you can use partial Custom Tabs to specify a different launch height in portrait mode such that users can multitask by interacting with your app while viewing web content. Users can expand the Custom Tab to full-screen by dragging the toolbar handle up and restoring the initial launch height by dragging the handle down.
 
 {% Img src="image/6AZNJBRnkpQUWTKPzig99lQY8jT2/iMTvWNK7aEqqxHEHEXuv.png", alt="Example Partial Tab", width="320", height="640", class="screenshot screenshot--filled" %}
 
