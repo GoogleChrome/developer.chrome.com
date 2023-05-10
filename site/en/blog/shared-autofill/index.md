@@ -52,7 +52,7 @@ From the browser perspective, this means there are common and legitimate use cas
 forms, which raises questions about the security model for forms. For users, multi-frame forms can
 lead to a poor autofill experience, like the following example:
 
-{% Video src="video/80mq7dk16vVEg8BBhsVe42n6zn82/92KrdGAvChT0kKXhpxp9.mov", width="800", height="634" %}
+{% Video src="video/80mq7dk16vVEg8BBhsVe42n6zn82/92KrdGAvChT0kKXhpxp9.mov", width="800", height="634", controls="true" %}
 
 The same-origin policy is a solid baseline for autofilling across frames, but does not provide
 sufficient granularity for the browser to differentiate between trusted and untrusted frames for
@@ -74,7 +74,7 @@ shared-autofill, Chrome successfully fills the credit card number cross-origin:
 
 This can result in a better autofill experience for the user:
 
-{% Video src="video/80mq7dk16vVEg8BBhsVe42n6zn82/kKtdEP8mn8dZVBgSrKzp.mov", width="800", height="634" %}
+{% Video src="video/80mq7dk16vVEg8BBhsVe42n6zn82/kKtdEP8mn8dZVBgSrKzp.mov", width="800", height="634", controls="true" %}
 
 ## Try shared-autofill locally
 
