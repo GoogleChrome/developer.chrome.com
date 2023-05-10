@@ -30,7 +30,7 @@ We are committed to closing the following gaps before announcing a new MV2 depre
     * Extend service worker lifetimes while there are active WebSocket connections.
 1. **Increase the number of static and enabled rulesets** for Declarative Net Request (DNR).
 1. Extend **[Offscreen document](/docs/extensions/reference/offscreen/) functionality** to support more reasons for using an Offscreen document.
-1. Improving **support for the `chrome.tabCapture` API**:
+1. Improving **support for the [`chrome.tabCapture`](/docs/extensions/reference/tabCapture/) API**:
     * Support calling `getMediaStreamId` from a service worker.
     * Support obtaining a MediaStream from a stream ID in an offscreen document.
 1. **Support File Handling API on ChromeOS** as a replacement for [`chrome.fileBrowserHandler`](/docs/extensions/reference/fileBrowserHandler/).
