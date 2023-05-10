@@ -33,7 +33,7 @@ We are committed to closing the following gaps before announcing a new MV2 depre
 1. Improving **support for the `chrome.tabCapture` API**:
     * Support calling `getMediaStreamId` from a service worker.
     * Support obtaining a MediaStream from a stream ID in an offscreen document.
-1. **Support File Handling API on ChromeOS** as a replacement for `chrome.fileBrowserHandler`.
+1. **Support File Handling API on ChromeOS** as a replacement for [`chrome.fileBrowserHandler`](/docs/extensions/reference/fileBrowserHandler/).
 
 These issues have been collected based on feedback from partners, bug reports and developers. In addition to these, we will continue our ongoing work to address stability issues and improve the overall performance. 
 
