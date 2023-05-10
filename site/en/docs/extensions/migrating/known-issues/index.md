@@ -26,7 +26,7 @@ We are committed to closing the following gaps before announcing a new MV2 depre
 
 1. **User Script support:** Allow registering content scripts with arbitrary code by adding new functionality to the scripting API (see [our proposal](https://github.com/w3c/webextensions/blob/main/proposals/user-scripts-api.md) for more detail).
 1. Further **Service Worker lifecycle enhancement:** 
-    * Additional strong Service Worker keepalives for operations taking longer than 5 minutes.
+    * Additional strong Service Worker keepalives for certain operations taking longer than 5 minutes.
     * Extend service worker lifetimes while there are active WebSocket connections.
 1. **Increase the number of static and enabled rulesets** for Declarative Net Request (DNR).
 1. Extend **[Offscreen document](/docs/extensions/reference/offscreen/) functionality** to support more reasons for using an Offscreen document.
