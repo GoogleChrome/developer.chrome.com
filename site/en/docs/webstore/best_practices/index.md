@@ -39,8 +39,7 @@ User experience
 intuitive, and seamless user experience while also respecting the end user's privacy.
 
 Persistent UI
-: When designing a side panel for your extension, make sure it enhances the user's browsing or search experience by providing relevant information and useful functionality. A side panel should help users accomplish tasks with as little distraction as possible.
-
+: When designing a side panel for your extension, make sure it enhances the user's browsing experience by providing relevant information and useful functionality. A side panel should help users accomplish tasks with as little distraction as possible.
 
 Store listing
 : The extension's [Chrome Web Store listing][completing-listing] should set the user's
