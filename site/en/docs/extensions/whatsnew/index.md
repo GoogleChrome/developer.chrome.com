@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-05-09
+updated: 2023-05-10
 tags:
   - extensions-news
 
@@ -15,6 +15,12 @@ tags:
 
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about many of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).)
+
+### Recording audio and video with Manifest V3 {: #screen-audio-capture }
+
+<p class="color-secondary-text type--caption">Posted on <time>May 10, 2023</time></p>
+
+We've just published a new article called [Audio recording and screen capture](/docs/extensions/mv3/screen_capture/), which covers recording audio or video from a tab, window, or screen in Manifest V3. This article describes multiple approaches to recording involving the [`chrome.tabCapture`](/docs/extensions/reference/tabCapture/) API and the [`getDisplayMedia()`](https://developer.mozilla.org/docs/Web/API/MediaDevices/getDisplayMedia) function.
 
 ### Chrome 114: Increased storage.local quota {: #m114-storage-local-quota }
 
