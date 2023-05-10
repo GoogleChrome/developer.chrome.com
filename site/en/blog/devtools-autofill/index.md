@@ -81,7 +81,7 @@ browser. Instead, it's just a `name` attribute of `n300`.
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/IGVcerAd9GMHuaOHa37D.png", alt="Chrome DevTools
 showing information about the unstructured data in a form, as shown in the previous example: a
-single input that only has the attributes type=text and name=n300", width="800", height="489" %}
+single input that only has the attributes type=text and name=n300.", width="800", height="489" %}
 
 The field doesn't correspond to a value in a set of structured data that would make it appropriate
 for Chrome Autofill, but Chrome can still help the user if it encounters a field with this name in
