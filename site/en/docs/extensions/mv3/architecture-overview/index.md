@@ -36,7 +36,7 @@ The manifest (`manifest.json`) is the configuration file of a Chrome extension. 
 - The [Chrome API][api-ref] keys and [permissions][doc-perms] that the extension needs.
 - The files assigned as the extension service worker, the popup HTML file, the options page, the content scripts, etc.
 
-The [Manifest keys][doc-manifest] article contains the complete list of default and optional keys. For copy-paste-ready code samples, check out the [Manifest examples][doc-manifest-examples].
+The [Manifest keys][doc-manifest] article contains the complete list of default and optional keys. For ready to use code samples, check out the [Manifest examples][doc-manifest-examples].
 
 ### The extension service worker {: #background_script }
 
