@@ -310,20 +310,20 @@ Most metrics are represented as a histogram aggregation, allowing visualization 
 <cite><a href="https://developer.mozilla.org/docs/Web/Events/load">MDN</a></cite>
 {% endAside %}
 
-### First Input Delay {: #fid-metric }
-
-{% Aside %}
-"First Input Delay (FID) is an important, user-centric metric for measuring load responsiveness because it quantifies the experience users feel when trying to interact with unresponsive pages—a low FID helps ensure that the page is usable."
-
-<cite><a href="https://web.dev/fid/">web.dev/fid/</a></cite>
-{% endAside %}
-
 ### Cumulative Layout Shift {: #cls-metric }
 
 {% Aside %}
 "Cumulative Layout Shift (CLS) is an important, user-centric metric for measuring visual stability because it helps quantify how often users experience unexpected layout shifts — a low CLS helps ensure that the page is delightful."
 
 <cite><a href="https://web.dev/cls/">web.dev/cls/</a></cite>
+{% endAside %}
+
+### First Input Delay {: #fid-metric }
+
+{% Aside %}
+"First Input Delay (FID) is an important, user-centric metric for measuring load responsiveness because it quantifies the experience users feel when trying to interact with unresponsive pages—a low FID helps ensure that the page is usable."
+
+<cite><a href="https://web.dev/fid/">web.dev/fid/</a></cite>
 {% endAside %}
 
 ### Interaction to Next Paint {: #inp-metric}
@@ -349,6 +349,12 @@ Experimental metrics are available in the CrUX dataset via [BigQuery](/docs/crux
 {% endAside %}
 
 TTFB is only collected on full page loads, unlike other timers (such as [LCP](#lcp-metric)) which are also collected on back-forward navigations and pre-rendering. As such, the sample size of TTFB can be smaller than other metrics and may not necessarily be compared directly with them.
+
+#### Interaction to Next Paint (deprecated){: #inp-metric-experimental}
+
+{% Aside 'important' %}
+The Interaction to Next Paint (INP) metric is available both with and without the experimental prefix. The experimental prefix should now be considered deprecated and will be removed in August 2023. The non-prefixed schema should be used going forward.
+{% endAside %}
 
 #### Popularity {: #popularity-metric}
 
