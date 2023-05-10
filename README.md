@@ -137,3 +137,9 @@ to create a pull request yet, or if you need to stage something private.
 The site will build and deploy the `main` branch automatically every hour,
 Mon–Fri. If you've just merged an article then it should go live at the top
 of the next hour.
+
+### Despliegues automáticos
+
+El sitio creará e implementará la rama "principal" automáticamente cada hora,
+lunes a viernes Si acaba de fusionar un artículo, debería publicarse en la parte superior
+de la próxima hora.
