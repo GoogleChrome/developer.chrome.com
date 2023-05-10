@@ -28,7 +28,7 @@ For developers looking to make their code investments go further, [WebAssembly's
 
 ## 3. Baseline brings more clarity and predictability to the web 
 
-Working in the W3C WebDX community group, we're establishing [Baseline](http://web.dev/introducing-baseline) as the core set of features that are fully supported by the current and previous versions of all major browsers—Chrome, Edge, Firefox and Safari. By partnering with key players like MDN and caniuse.com, we will bring this common language and label directly into your workflow. And every year, we'll introduce Baseline 23, 24, 25…which will be a "cut" of everything that's new, and compatible across all browsers. Like an annual release, for the entire web ecosystem. Follow along [here](http://web.dev/baseline).
+Working in the W3C WebDX community group, we're establishing [Baseline](http://web.dev/introducing-baseline/) as the core set of features that are fully supported by the current and previous versions of all major browsers—Chrome, Edge, Firefox and Safari. By partnering with key players like MDN and caniuse.com, we will bring this common language and label directly into your workflow. And every year, we'll introduce Baseline 23, 24, 25…which will be a "cut" of everything that's new, and compatible across all browsers. Like an annual release, for the entire web ecosystem. Follow along [here](http://web.dev/baseline).
 
 ## 4. Chrome Extensions developers get more support 
 
