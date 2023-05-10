@@ -42,6 +42,9 @@ redirects:
 - from: /apps/about_apps
   to: /docs/apps/overview/
 
+- from: /docs/extensions/mv3/known-issues/
+  to: /docs/extensions/migrating/known-issues/
+
 - from: /docs/extensions/mv3/background_migration
   to: /docs/extensions/migrating/to-service-workers
 
