@@ -16,7 +16,6 @@ tags:
   - fugu-case-study
 ---
 
-
 ## Introduction
 
 (This article is also available in form of a video.)
