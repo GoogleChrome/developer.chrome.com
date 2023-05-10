@@ -24,7 +24,7 @@ Recently, we announced changes to the Manifest V2 deprecation timeline, and whil
 
 We are committed to closing the following gaps before announcing a new Manifest V2 deprecation timeline:
 
-1. **User Script support:** Allow registering content scripts with arbitrary code by adding new functionality to the scripting API (see [our proposal](https://github.com/w3c/webextensions/blob/main/proposals/user-scripts-api.md) for more detail).
+1. **User Script support:** Allow registering content scripts with arbitrary code by adding new functionality to the scripting API. (See [our proposal](https://github.com/w3c/webextensions/blob/main/proposals/user-scripts-api.md) for details.)
 1. Further **Service Worker lifecycle enhancements:** 
     * Additional strong Service Worker keepalives for certain operations taking longer than 5 minutes.
     * Extending service worker lifetimes while there are active WebSocket connections.
