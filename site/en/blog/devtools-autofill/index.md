@@ -24,6 +24,8 @@ form Autofill works, and why it sometimes fails:
 This article outlines the new features in Chrome DevTools, and explains how you can test them and
 provide feedback.
 
+{% YouTube id='Rb-LALxgsfY' %}
+
 ## What is Autofill?
 
 Chrome helps users manage address, payment and login information, by securely storing sets of data
