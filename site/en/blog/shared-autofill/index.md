@@ -1,6 +1,6 @@
 ---  
 layout: "layouts/blog-post.njk"  
-title: "Shared autofill across iframes. An initial proposal."  
+title: "Shared autofill across iframes: an initial proposal"
 authors:  
   - dmengelt  
   - samdutton  
@@ -25,7 +25,7 @@ compliance) to be loaded from a third-party origin such as a payment service pro
 In the following example, the cardholder name and expiration date are in the top-level page (or main
 frame), but the credit card number and verification code are in iframes from a PSP.
 
-``` html
+```html
 <!-- Top-level document URL: https://merchant.com/... -->
 <form>
   Cardholder name:    <input id="name">
@@ -34,6 +34,10 @@ frame), but the credit card number and verification code are in iframes from a P
   CVC:                <iframe src="https://psp.com/..."><input id="cvc"></iframe>
 </form>
 ```
+
+The following diagram represents the structure of the form:
+
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/Du9ie9yEfUwciL25TOz7.png", alt="Tree diagram showing how different fields are in different frames in a payment form", width="800", height="362" %}
 
 For merchants, this design combines security and flexibility:
 
@@ -48,11 +52,7 @@ From the browser perspective, this means there are common and legitimate use cas
 forms, which raises questions about the security model for forms. For users, multi-frame forms can
 lead to a poor autofill experience, like the following example:
 
-Placeholder image for the actual screencast  
-[https://screencast.googleplex.com/cast/NDc3NzkxNTEyNTMzNDAxNnw5ZTJkYzVmNS1mNg](https://screencast.googleplex.com/cast/NDc3NzkxNTEyNTMzNDAxNnw5ZTJkYzVmNS1mNg)
-
-{% Video src="video/80mq7dk16vVEg8BBhsVe42n6zn82/92KrdGAvChT0kKXhpxp9.mov" width="800", height="634"
-%}
+{% Video src="video/80mq7dk16vVEg8BBhsVe42n6zn82/92KrdGAvChT0kKXhpxp9.mov", width="800", height="634" %}
 
 The same-origin policy is a solid baseline for autofilling across frames, but does not provide
 sufficient granularity for the browser to differentiate between trusted and untrusted frames for
@@ -62,7 +62,7 @@ To allow a better autofill experience while maintaining the safety of user data,
 working on a proposal allowing autofill into a cross-origin iframe. If the form is changed to use
 shared-autofill, Chrome successfully fills the credit card number cross-origin:
 
-``` html
+```html
 <!-- Top-level document URL: https://merchant.com/... -->
 <form>
   Cardholder name:    <input id="name">
@@ -74,27 +74,32 @@ shared-autofill, Chrome successfully fills the credit card number cross-origin:
 
 This can result in a better autofill experience for the user:
 
-{% Video src="video/80mq7dk16vVEg8BBhsVe42n6zn82/kKtdEP8mn8dZVBgSrKzp.mov" width="800", height="634"
-%}
-
-{% Aside 'caution' %}  
-This proposal is being made available for testing and feedback behind a flag, but is subject to
-change and may not be implemented in its current form for general availability.  
-{% endAside %}
+{% Video src="video/80mq7dk16vVEg8BBhsVe42n6zn82/kKtdEP8mn8dZVBgSrKzp.mov", width="800", height="634" %}
 
 ## Try shared-autofill locally
 
-You can test shared-autofill for a single user in Chrome 93.0.4577.0 and above on desktop and mobile
-by
-[setting flags from the command line](https://www.chromium.org/developers/how-tos/run-chromium-with-flags).
+{% Aside 'caution' %}
+This proposal is being made available for testing and feedback behind a flag, but is subject to
+change and may not be implemented in its current form for general availability.
+{% endAside %}
 
-undefined
+You can test shared-autofill for a single user in Chrome 93.0.4577.0 and above on desktop and mobile
+by [setting flags from the command line](https://www.chromium.org/developers/how-tos/run-chromium-with-flags).
+
+```shell
+--flag-switches-begin --enable-features=AutofillAcrossIframes,AutofillSharedAutofill
+```
 
 ## Detect feature support
 
 Use the following code to detect whether the `shared-autofill` property is available:
 
-undefined
+```javascript
+if (document.featurePolicy && document.featurePolicy
+      .features().includes('shared-autofill')) {
+  console.log('shared-autofill available!');
+}
+```
 
 ## What's next?
 
@@ -104,7 +109,7 @@ with other browser vendors to get the proposal reviewed. Further proposals on ho
 user experience for autofill across iframes are also in discussion.
 
 We'll continue to provide updates as we make progress with this proposal. In the meantime, if you
-have a checkout page where the sensitive <input> fields (credit card number, cvc) are embedded from
+have a checkout page where the sensitive &lt;input&gt; fields (credit card number, cvc) are embedded from
 a third-party provider, [reach out to us](mailto:payments-autofill-feedback@google.com). We would
 love to hear if shared-autofill across iframes could potentially improve your users' autofill
 experience during the checkout process.
@@ -113,8 +118,7 @@ experience during the checkout process.
 
 -  [Current proposal](https://github.com/schwering/shared-autofill)
 -  [W3C TAG review](https://github.com/w3ctag/design-reviews/issues/831)
--  [Source](https://github.com/dmengelt/gpay-web-tester/blob/main/cc-autofill.html) of the demo
-    used in this blog post
+-  [Payment form example used in this post](https://github.com/dmengelt/gpay-web-tester/blob/main/cc-autofill.html)
 -  [What are Chrome flags?](/docs/web-platform/chrome-flags/)
 
 <hr>
@@ -122,4 +126,4 @@ experience during the checkout process.
 Photo by <a
 href="https://unsplash.com/@jruscello?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jessica
 Ruscello</a> on <a
-href="https://unsplash.com/photos/-GUyf8ZCTHM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+href="https://unsplash.com/photos/-GUyf8ZCTHM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.
