@@ -6,7 +6,7 @@ subhead: >
 description: >
   Learn how to work with the API, including how to use Chrome flags for testing.
 date: 2022-01-25
-updated: 2023-05-09
+updated: 2023-03-29
 authors:
   - samdutton
 ---
@@ -31,55 +31,6 @@ You can also run the Topics [colab](/docs/privacy-sandbox/topics/colab/) to try 
 ### Test Topics in an origin trial {: #origin-trial}
 
 A Privacy Sandbox Relevance and Measurement [origin trial](/docs/privacy-sandbox/unified-origin-trial/) has been made available in Chrome Beta 101.0.4951.26 and above on desktop for the Topics, [FLEDGE](/docs/privacy-sandbox/fledge/), and [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) APIs.
-
-{% Details %}
-
-{% DetailsSummary %}
-Provide an origin trial token
-{% endDetailsSummary %}
-
-To take part in the origin trial, you can provide a valid trial token
-[programmatically, in a header, or in a meta tag](/docs/web-platform/origin-trials/#take-part-in-an-origin-trial).
-Whichever method you choose to provide a trial token, and whichever way you use the Topics API, you
-must provide a valid token **before** calling the API, and the token must be registered for the
-appropriate origin.
-
-<table>
-  <thead>
-    <tr>
-      <th>API usage</th>
-      <th>Token origin</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>&nbsp;`fetch()`</td>
-      <td>Origin of the code making the call.</td>
-    </tr>
-    <tr>
-      <td>`document.browsingTopics()`</td>
-      <td>Origin of the code making the call.</td>
-    </tr>
-    <tr>
-      <td>`&lt;iframe browsingtopics ...&gt;`</td>
-      <td>The token is required in the document that embeds the iframe: a token must be provided
-      that has been registered for the same origin as the code that creates the iframe.</td>
-    </tr>
-  </tbody>
-</table>
-
-When using the `fetch()` or `document.browsingTopics()` approach in a third-party context, the API
-caller must provide a token registered for the origin of the code making the call. That origin will
-be the same wherever the code is embedded. For example, multiple sites might include `<script
-src="https://adtech.example/js/topics.js">`, which would provide a token registered for
-`https://adtech.com` before making an API call. If the Topics API is used from a script element in a
-page in an iframe (as opposed to a script included from a different origin) a trial token must be
-provided in the page, registered for its origin.
-
-Always do [feature detection](/blog/privacy-sandbox-unified-origin-trial/#topics) before attempting
-to use an origin trial API.
-
-{% endDetails %}
 
 ## Get and set topics {: #epoch}
 
