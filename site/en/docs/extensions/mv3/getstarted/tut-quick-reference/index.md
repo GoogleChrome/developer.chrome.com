@@ -437,7 +437,7 @@ Click the Tip button located on the navigation bar to open the extension tip.
 
 {% Aside %}
 
-The Popover API was [launched in Chrome 114][popover-chrome-status].
+The Popover API was launched in Chrome 114.
 
 {% endAside %}
 
