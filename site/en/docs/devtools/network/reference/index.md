@@ -199,7 +199,8 @@ Below is a complete list of supported properties.
 - `has-response-header`. Show the resources that contain the specified HTTP response header.
   DevTools populates the autocomplete drop-down with all of the response headers that it has
   encountered.
-- `is`. Use `is:running` to find `WebSocket` resources.
+- `is`. Use `is:running` to find `WebSocket` resources. Use `is:from-cache` to find resources loaded
+  from local cache. `is:service-worker-initiated` shows only requests prompted by a service worker
 - `larger-than`. Show resources that are larger than the specified size, in bytes. Setting a value
   of `1000` is equivalent to setting a value of `1k`.
 - `method`. Show resources that were retrieved over a specified HTTP method type. DevTools populates
