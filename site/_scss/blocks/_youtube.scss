@@ -4,6 +4,19 @@
   width: 100%;
 }
 
+.youtube-fallback {
+  align-items: center;
+  aspect-ratio: 16 / 9;
+  background-color: var(--color-bg-shade);
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+  padding: 1em;
+  text-decoration: none;
+}
+
 lite-youtube {
   height: 100%;
   left: 50%;
