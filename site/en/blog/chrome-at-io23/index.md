@@ -24,7 +24,7 @@ This newly-available API [unlocks the power of GPU hardware](/blog/webgpu-io2023
 
 ## 2. WebAssembly brings Android apps to the web 
 
-For developers looking to make their code investments go further, [WebAssembly's support for managed-memory languages](https://developers.googleblog.com/2023/05/bringing-kotlin-to-web.html) like Kotlin and Dart unlocks a huge opportunity to reuse their existing codebase and reach users not only through their native apps but also on the web. Thanks to some early work by Jetbrains, Android developers building with Kotlin can now write their app features once, then use WebAssembly to deploy it to the web.
+For developers looking to make their code investments go further, [WebAssembly's support for managed-memory languages](https://developers.googleblog.com/2023/05/bringing-kotlin-to-web.html) like Kotlin and Dart unlocks a huge opportunity to reuse their existing codebase and reach users not only through their native apps but also on the web. Thanks to some early work by JetBrains, Android developers building with Kotlin can now write their app features once, then use WebAssembly to deploy it to the web.
 
 ## 3. Baseline brings more clarity and predictability to the web 
 
