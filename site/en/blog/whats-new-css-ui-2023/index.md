@@ -163,7 +163,7 @@ Selectors and style queries aren’t the only places that we can embed logic wit
   </figcaption>
 </figure>
 
-This feature uses [Knuth’s Tex algorithm](https://en.wikipedia.org/wiki/TeX) to identify the most visually balanced position for the text in a headline, creating a more even effect. It works for any language too!
+To balance the text, the browser effectively performs a binary search for the smallest width which doesn't cause any additional lines, stopping at one CSS pixel (not display pixel). To further minimize steps in the binary search the browser starts with 80% of the average line width.
 
 <figure>
   {% Video
