@@ -501,7 +501,7 @@ The most up-to-date documentation on popovers can currently be found [on MDN](ht
 
 Popovers are also frequently used in elements such as dialogs and tooltips, which typically need to be anchored to specific elements. Take this event example. When you click on a calendar event, a dialog appears near the event you’ve clicked on. The calendar item is the anchor, and the popover is the dialog which shows the event details.
 
-You can create a centered tooltip with the `anchor()` function, using the width from the anchor to position the tooltip at 50% the anchor’s x position. Then, use existing positioning values to apply the rest of the placement styles.
+You can create a centered tooltip with the `anchor()` function, using the width from the anchor to position the tooltip at 50% of the anchor’s x position. Then, use existing positioning values to apply the rest of the placement styles.
 
 But what happens if the popover doesn’t fit in the viewport based on the way you’ve positioned it?
 
