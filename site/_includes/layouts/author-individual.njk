@@ -71,23 +71,34 @@
   </div>
 
   <div class="measure-1280 width-full center-margin pad-left-400 pad-right-400">
+    {% include 'partials/feeds-filter.njk' %}
+  
     <div class="feed-grid gap-top-500 gap-bottom-500">
-      {% for item in paged.pagination.items %}
-        {% set post = {
-          data: {
-            thumbnail: item.thumbnail,
-            title: item.title,
-            alt: item.title,
-            description: item.description,
-            tags: item.tags,
-            authors: item.authors,
-            source: item.source,
-            date: item.date
-          },
-          url: item.url
-        } %}
-        {{ feedCard(post) }}
-      {% endfor %}
+        {% for item in paged.pagination.items %}
+          {% set source = item.source or 'dcc'%}
+          <filtered-element
+            class="filtered-item"
+            data-filter-source="{{ source }}"
+            data-filter-type="{{ item.type }}"
+            data-filter-credit="author"
+          >
+            {% set post = {
+              data: {
+                thumbnail: item.thumbnail,
+                title: item.title,
+                alt: item.title,
+                description: item.description,
+                tags: item.tags,
+                type: item.type,
+                authors: item.authors,
+                source: item.source,
+                date: item.date
+              },
+              url: item.url
+            } %}
+            {{ feedCard(post) }}
+          </filtered-element>
+        {% endfor %}
     </div>
     {% include 'partials/pagination.njk' %}
   </div>

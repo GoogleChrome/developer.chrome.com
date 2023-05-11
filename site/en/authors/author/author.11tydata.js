@@ -14,10 +14,25 @@
  * limitations under the License.
  */
 
-const {individual} = require('../../../_utils/individual');
+const {individual, availableFilters} = require('../../../_utils/individual');
 const {locale} = require('../../en.11tydata');
 
 module.exports = {
+  availableFilters,
+  eleventyComputed: {
+    availableSources: author => {
+      const filter = availableFilters.find(
+        filter => filter.key === author.paged.key
+      );
+      return filter.sources;
+    },
+    availableTypes: author => {
+      const filter = availableFilters.find(
+        filter => filter.key === author.paged.key
+      );
+      return filter.types;
+    },
+  },
   pagination: {
     before: authors => {
       return individual(authors, locale);

@@ -15,7 +15,7 @@
  */
 
 declare global {
-  export type PostTypes = 'article' | 'blogPost' | 'doc' | 'landing' | 'release';
+  export type PostTypes = 'article' | 'blogPost' | 'doc' | 'landing' | 'release' | 'rssFeed';
 }
 
 // empty export to keep file a module

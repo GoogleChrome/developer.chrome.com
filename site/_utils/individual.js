@@ -24,12 +24,70 @@ const fs = require('fs');
 const addPagination = require('../_utils/add-pagination');
 const filterByLocale = require('../_filters/filter-by-locale');
 const {defaultLocale} = require('../_data/site.json');
+const {isExternalLink} = require('../_data/helpers.js');
 
 const authorsDataFile = path.join(
   __dirname,
   '../../external/data/external-posts.json'
 );
 const authorsFeeds = JSON.parse(fs.readFileSync(authorsDataFile, 'utf-8'));
+const availableFilters = [];
+let availableSources;
+let availableTypes;
+
+/**
+ * @param {object[]} availableList
+ * @return {void}
+ */
+const addAvailableItem = (availableList, item) => {
+  if (!availableList.length) {
+    availableList.push(item);
+    return;
+  }
+
+  const itemsFiltered = availableList.filter(availableItem => {
+    return availableItem.value === item.value;
+  });
+
+  if (!itemsFiltered.length) {
+    availableList.push(item);
+  }
+};
+
+/**
+ * @param {string} url
+ * @return {PostTypes}
+ */
+const getFeedType = url => {
+  if (isExternalLink(url)) {
+    addAvailableItem(availableTypes, {name: 'RSS feed', value: 'rssFeed'});
+    return 'rssFeed';
+  }
+
+  const pathnameList = url.split('/');
+  if (pathnameList.includes('articles')) {
+    addAvailableItem(availableTypes, {name: 'Articles', value: 'article'});
+    return 'article';
+  }
+
+  addAvailableItem(availableTypes, {name: 'Blogs', value: 'blogPost'});
+  return 'blogPost';
+};
+
+/**
+ * @param {string} source
+ */
+const addAvailableSource = source => {
+  let sourceTitle = source;
+
+  if (source === 'webdev') {
+    sourceTitle = 'web.dev';
+  } else if (source === 'dcc') {
+    sourceTitle = 'developer.chrome.com';
+  }
+
+  addAvailableItem(availableSources, {name: sourceTitle, value: source});
+};
 
 /**
  * @param {VirtualCollectionItem[]} items
@@ -44,6 +102,9 @@ const individual = (items, locale) => {
     const authorsFeedsObj = Object.assign({}, ...authorsFeeds);
     const feeds = authorsFeedsObj[authorKey];
 
+    availableSources = [];
+    availableTypes = [];
+
     if (feeds) {
       items[item] = items[item] || {};
       for (const feed of feeds) {
@@ -52,6 +113,7 @@ const individual = (items, locale) => {
           description: feed.summary,
           source: feed.source,
           locale: defaultLocale,
+          type: getFeedType(feed.url),
           date: new Date(feed.date),
           url: feed.url,
         };
@@ -61,17 +123,33 @@ const individual = (items, locale) => {
         }
 
         items[item].elements.push(element);
+
+        addAvailableSource(feed.source);
       }
     }
 
     if (items[item].elements?.length > 0) {
+      for (const element of items[item].elements) {
+        element.type = getFeedType(element.url);
+      }
+
       const posts = filterByLocale(items[item].elements, locale);
       paginated = paginated.concat(addPagination(posts, items[item]));
+
+      const internalSource = 'dcc';
+      addAvailableSource(internalSource);
     }
+
+    availableFilters.push({
+      key: authorKey,
+      sources: availableSources,
+      types: availableTypes,
+    });
   }
   return paginated;
 };
 
 module.exports = {
+  availableFilters,
   individual,
 };
