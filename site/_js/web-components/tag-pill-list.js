@@ -21,46 +21,76 @@
 import {BaseElement} from './base-element';
 import {html} from 'lit-element';
 import {unsafeSVG} from 'lit-html/directives/unsafe-svg';
-import closeIcon from '../../_includes/icons/close.svg';
+import closeIcon from '../../_includes/icons/close-tag-pill.svg';
+
+import {store} from '../store';
+import {removeEntry, clearFilters} from '../actions/filter';
 
 export class TagPillList extends BaseElement {
-  constructor() {
-    super();
-
-    this.items = [];
-  }
-
   static get properties() {
     return {
       items: {type: Array, reflect: true},
     };
   }
 
-  _handleClick(item) {
-    this.items = this.items.filter(i => i !== item);
+  constructor() {
+    super();
+    this.items = [];
+  }
 
-    const event = new CustomEvent('removed-pill', {
-      detail: item,
-    });
+  connectedCallback() {
+    super.connectedCallback();
+    store.subscribe(this.onStoreUpdate.bind(this));
+  }
 
-    this.dispatchEvent(event);
+  onStoreUpdate(state) {
+    const filters = state.filters || {};
+    const items = [];
+    for (const [name, entries] of Object.entries(filters)) {
+      for (const item of entries) {
+        items.push({
+          name: name,
+          value: item.value,
+          label: item.label,
+        });
+      }
+    }
+    this.items = items;
+  }
+
+  _onClickPill(item) {
+    removeEntry(item.name, item);
+  }
+
+  _onClickClearPills() {
+    clearFilters();
   }
 
   render() {
-    const items = this.items.map(
-      item => html`
-        <span
-          class="surface color-blue-medium hairline rounded-lg tag-pill type--label display-inline-flex align-center "
-          data-key="${item.key}"
-          data-value="${item.value}"
-          @click="${() => this._handleClick(item)}"
-        >
-          ${item.value} ${unsafeSVG(closeIcon)}
-        </span>
-      `
-    );
-
-    return html`${items}`;
+    return [
+      this.items.length > 0
+        ? html`
+            <span
+              class="clear-filters tag-pill surface hairline type--label display-inline-flex align-center"
+              @click="${() => this._onClickClearPills()}"
+            >
+              Clear filters
+            </span>
+          `
+        : '',
+      this.items.map(
+        item => html`
+          <span
+            class="surface hairline rounded-lg tag-pill type--label display-inline-flex align-center "
+            data-name="${item.name}"
+            data-value="${item.value}"
+            @click="${() => this._onClickPill(item)}"
+          >
+            ${item.label} ${unsafeSVG(closeIcon)}
+          </span>
+        `
+      ),
+    ];
   }
 }
 

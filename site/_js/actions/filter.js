@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,6 +14,19 @@
  * limitations under the License.
  */
 
-export * from './side-nav';
-export * from './search';
-export * from './filter';
+import {store} from '../store';
+
+export const setFilter = store.action((state, name, entry) => {
+  const filters = Object.assign({}, state.filters || {}, {[name]: entry});
+  return {filters};
+});
+
+export const removeEntry = store.action((state, name, entry) => {
+  const entries = state.filters[name];
+  state.filters[name] = entries.filter(e => e.value !== entry.value);
+  return state;
+});
+
+export const clearFilters = store.action(() => {
+  return {filters: {}};
+});
