@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Design the user interface"
 seoTitle: "Chrome Extensions: Design the user interface"
 date: 2018-03-16
-updated: 2022-04-27
+updated: 2023-05-24
 description: UI and design guidelines for Chrome Extensions.
 ---
 
@@ -255,7 +255,7 @@ An extension side panel is an HTML file that provides additional functionality a
 <figure>
   {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/aC3zkJDPliNLXdvfugeU.png", alt="Dictionary side panel context menu choosing the word extensions", width="800", height="393" %}
   <figcaption>
-    Dictionary extension to defining the word "Extensions".
+    Dictionary extension defining the word "Extensions".
   </figcaption>
 </figure>
 
