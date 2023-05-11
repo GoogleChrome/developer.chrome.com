@@ -10,11 +10,10 @@ tags:
   - capabilities
   - progressive-web-apps
   - android
-hero: image/6hHqS5auVgWhN0cQNQztaJx5w4M2/FC4a4vxoHf1XTuMYCvrc.jpg
+hero_youtube_id: 'sLn3wszcnGU'
+thumbnail: image/6hHqS5auVgWhN0cQNQztaJx5w4M2/FC4a4vxoHf1XTuMYCvrc.jpg
 alt: ''
 ---
-
-{% YouTube id="sLn3wszcnGU" %}
 
 There are many reasons for developers to [bring the web to Android](https://developer.android.com/develop/ui/views/layout/webapps): maybe reusing a web widget in an Android app, incorporating first-party or third-party content, even bringing their entire web app to the platform. Whatever the use case, Android has many tools to make it possible. 
 
