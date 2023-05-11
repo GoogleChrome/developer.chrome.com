@@ -704,4 +704,10 @@ View Transitions currently work with Single-Page Apps (SPAs) from Chrome 111. Mu
 
 ## Conclusion
 
-Keep up with all the latest landings in CSS and HTML right here on [developer.chrome.com](/).
+Keep up with all the latest landings in CSS and HTML right here on [developer.chrome.com](/) and check out the [I/O videos](https://www.youtube.com/playlist?list=PLOU2XLYxmsIJGxIV8Lt8gF_79Z334LQ6h) for more web landings.
+
+{% YouTube id='buChHSdsF9A' %}
+
+{% YouTube id='oDcb3fvtETs' %}
+
+{% YouTube id='JiVQBqAkkac' %}
