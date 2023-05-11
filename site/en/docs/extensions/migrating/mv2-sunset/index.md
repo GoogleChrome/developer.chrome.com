@@ -16,7 +16,7 @@ tags:
 
 {% endAside %}
 
-As Manifest V3 approaches full feature parity with Manifest V2, we'll be progressively phasing out Manifest V2. This page specifies the timetable for this deprecation and describes the meaning of each milestone.
+As Manifest V3 approaches full feature parity with Manifest V2, we'll be progressively phasing out Manifest V2. See [Migrating to Manifest V3](https://developer.chrome.com/docs/extensions/migrating/) for instructions on how to convert your extension. This page specifies the timetable for this deprecation and describes the meaning of each milestone.
 
 <figure data-size="full">
   {% Img src="image/WlD8wC6g8khYWPJUsQceQkhXSlv1/txfDeyLhratHCO1P3wvc.jpg", alt="Summary of the Manifest V2 support timeline.", width="800", height="263", class="screenshot" %}
