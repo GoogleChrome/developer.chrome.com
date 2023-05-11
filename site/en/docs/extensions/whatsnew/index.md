@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-05-02
+updated: 2023-05-10
 tags:
   - extensions-news
 
@@ -16,11 +16,23 @@ tags:
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about many of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).)
 
-### Chrome 114: New SidePanel API for Manifest V3 {: #m114-side-panel}
+### Updated Manifest V3 migration guidance 
 
-<p class="color-secondary-text type--caption">Posted on <time>May 5, 2023</time></p>
+<p class="color-secondary-text type--caption">Posted on <time>May 10, 2023</time></p>
 
-Manifest V3 extensions can now add their own side panel to Chrome’s built-in side panel UI. See the [SidePanel API](/docs/extensions/reference/sidePanel) reference for usage and examples.
+We've updated the [Known Issues](/docs/extensions/migrating/known-issues/) section of our [Manifest V3 migration guidance](/docs/extensions/migrating/) with an updated list of extension platform gaps that we intend to close before announcing a new Manifest V2 deprecation timeline.
+
+### Recording audio and video with Manifest V3 {: #screen-audio-capture }
+
+<p class="color-secondary-text type--caption">Posted on <time>May 10, 2023</time></p>
+
+We've just published a new article called [Audio recording and screen capture](/docs/extensions/mv3/screen_capture/), which covers recording audio or video from a tab, window, or screen in Manifest V3. This article describes multiple approaches to recording involving the [`chrome.tabCapture`](/docs/extensions/reference/tabCapture/) API and the [`getDisplayMedia()`](https://developer.mozilla.org/docs/Web/API/MediaDevices/getDisplayMedia) function.
+
+### Chrome 114: Increased storage.local quota {: #m114-storage-local-quota }
+
+<p class="color-secondary-text type--caption">Posted on <time>May 9, 2023</time></p>
+
+We have increased the quota for the [`storage.local`](/docs/extensions/reference/storage/#property-local) property to approximately 10 MB. This was [agreed to in the Web Extensions Community Group](https://github.com/w3c/webextensions/issues/351#issuecomment-1514420881). This brings `storage.local` in line with [`storage.session`](/docs/extensions/reference/storage/#property-session) which was changed in Chrome 112.
 
 ### New extension service worker tutorial and help
 
@@ -77,7 +89,7 @@ We've built a [new sample](https://github.com/GoogleChrome/chrome-extensions-sam
 
 [Three new samples](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/declarativeNetRequest) are available demonstrating the [Declarative Net Request API](/docs/extensions/reference/declarativeNetRequest/). Each demonstrates implementation of a single use case. The first shows how to block cookies. The remaining two demonstrate blocking and redirecting URLs.
 
-### Chrome 112: Increased storage.session quota {: #m112-storage-session-quota}
+### Chrome 112: Increased storage.session quota {: #m112-storage-session-quota }
 
 <p class="color-secondary-text type--caption">Posted on <time>March 3, 2023</time></p>
 
