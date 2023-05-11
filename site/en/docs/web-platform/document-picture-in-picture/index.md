@@ -127,7 +127,7 @@ pipButton.addEventListener('click', async () => {
 
 ### Set the size of the Picture-in-Picture window
 
-To set the size of the Pictire-in-Picture window, set the `width` and `height` options of `documentPictureInPicture.requestWindow()` to the desired Picture-in-Picture window size. Chrome may clamp those options values if they are too large or too small to fit a user-friendly window size.
+To set the size of the Picture-in-Picture window, set the `width` and `height` options of `documentPictureInPicture.requestWindow()` to the desired Picture-in-Picture window size. Chrome may clamp the option values if they are too large or too small to fit a user-friendly window size.
 
 ```js
 pipButton.addEventListener("click", async () => {
