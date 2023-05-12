@@ -14,5 +14,5 @@ updated: 2023-05-24
 1.	Verify that your contact information is correct to ensure you receive important communications for the Chrome Web Store.
 1.	Include detailed information in the single purpose field regarding your extension’s primary functionality.
 1.	Provide meaningful customer support for your extension.
-1.	Chrome Web Store policies are subject to change: Google may update the policies at any time, and developers are responsible for keeping up-to-date with any changes and complying with the updated policies. Updates to our policies will be announced via email to the address listed in your developer account. 
+1.	Chrome Web Store policies are subject to change. Google may update the policies at any time, and developers are responsible for keeping up-to-date with any changes and complying with the updated policies. Updates to our policies will be announced via email to the address listed in your developer account. 
 

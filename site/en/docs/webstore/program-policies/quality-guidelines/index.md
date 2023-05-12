@@ -16,9 +16,10 @@ updated: 2023-05-24
     1. PDF converters which also aim to change a user’s default search engine.
 
 2. When designing an extension, it's important to ensure it functions as a helpful companion to users' browsing experiences by providing complementary functionality. If utilizing a persistent user interface, extensions should actively enhance the user's current task while causing minimal distractions. Some common violations include:
-    1. Side panel extensions which hijack a user’s browsing or search experience. 
-    1. Extensions with the primary purpose of serving ads.
 
+    1. Side panel extensions which hijack a user’s browsing or search experience. 
+
+    1. Extensions with the primary purpose of serving ads.
 
 See [this FAQ][faq] for more information.
 
