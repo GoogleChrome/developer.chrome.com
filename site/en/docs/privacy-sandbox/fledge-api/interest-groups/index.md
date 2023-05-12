@@ -480,6 +480,6 @@ owners. These limits are meant as guard rails, not to be hit in regular operatio
 
 {% endDetails %}
 
-## All Protected Audience API API references
+## All Protected Audience API references
 
 {% Partial 'privacy-sandbox/fledge-api-reference.njk' %}

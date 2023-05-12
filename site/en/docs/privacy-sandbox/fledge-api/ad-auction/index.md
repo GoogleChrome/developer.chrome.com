@@ -303,7 +303,7 @@ The seller provides the scoring logic to determine the desirability score of eac
 The seller includes logic in the `scoreAd()` function, and the browser executes the function in a worklet that has limited communication with code outside of it. The browser itself does not score the ads. The browser is exclusively responsible to execute the scoring logic and select the bid with the highest score.
 {% endDetails %}
 
-## All Protected Audience API API references
+## All Protected Audience API references
 
 {% Partial 'privacy-sandbox/fledge-api-reference.njk' %}
 

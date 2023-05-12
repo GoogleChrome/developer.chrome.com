@@ -83,7 +83,7 @@ API on pages that provide a valid trial token. For example, to ask
 the browser to [join one or more interest groups](#joinadinterestgroup),
 and then to run an ad auction to select and display an ad.
 
-Provide a trial token for every page on which you would like to run Protected Audience API API code:
+Provide a trial token for every page on which you would like to run Protected Audience API code:
 
 *  As a meta tag in the `<head>`:
   ```html
@@ -235,7 +235,7 @@ privacy, there is no way to check for this programmatically.
 
 {% endAside %}
 
-## How does the Protected Audience API API work? {: #how}
+## How does the Protected Audience API work? {: #how}
 
 In this example, a user browses the website of a custom bike maker, then later
 visits a news website and is shown an ad for a new bike from the bike maker.
@@ -243,7 +243,7 @@ visits a news website and is shown an ad for a new bike from the bike maker.
 {% Aside 'warning' %}
 
 Not all features described in this post have been implemented (or fully
-implemented) in the version of the Protected Audience API API currently being tested in Chrome.
+implemented) in the version of the Protected Audience API currently being tested in Chrome.
 [Test with feature flags](#flags) explains what Protected Audience API features are currently
 available for testing in Chrome run from the command line.
 
@@ -407,7 +407,7 @@ Fenced frame config object is available starting from M114. For more on the `Fen
 ### 7. The auction result is reported
 
 The long-term plan is to allow the browser to report auction results for the
-seller and buyers using the [Private Aggregation API APIs](/docs/privacy-sandbox/private-aggregation).
+seller and buyers using the [Private Aggregation APIs](/docs/privacy-sandbox/private-aggregation).
 
 As a temporary event-level reporting mechanism, the code implementing
 `reportResult()` for the seller, and `reportWin()` for the winning bidder, can
@@ -499,7 +499,7 @@ Protected Audience API does not yet prevent a website's ad network from learning
 {% Details %}
 
 {% DetailsSummary %}
-### Can the Topics API be used with the Protected Audience API API? 
+### Can the Topics API be used with the Protected Audience API? 
 
 {% endDetailsSummary %}
 Yes. An observed topic for the current user, provided by the [Topics API](/docs/privacy-sandbox/topics/), could be used as 
@@ -556,7 +556,7 @@ documentation:
    repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
    Select the issue template for Protected Audience API.
 * **Chrome implementation**: for bugs or issues with Chrome's implementation of
-  the Protected Audience API API, you can [view existing issues](https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EInterestGroups)
+  the Protected Audience API, you can [view existing issues](https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EInterestGroups)
   or [raise a new issue](https://crbug.com/new).
 
 For more general questions about meeting your needs with Protected Audience API, 
@@ -570,7 +570,7 @@ to share feedback privately with the Chrome team outside of public forums.
 #### Opt-out {: #opt-out}
 
 Want to opt-out of Protected Audience API? Learn how to
-[block access to the Protected Audience API API](/docs/privacy-sandbox/fledge-api/opt-out/),
+[block access to the Protected Audience API](/docs/privacy-sandbox/fledge-api/opt-out/),
 as a site owner or an individual user.
 
 ### Get updates
