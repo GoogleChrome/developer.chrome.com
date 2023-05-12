@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'FLEDGE API: developer guide'
+title: 'Protected Audience API: developer guide'
 subhead: >
   Developer guide for on-device ad auctions to serve remarketing and custom audiences,
   without cross-site third-party tracking.
@@ -17,47 +17,47 @@ authors:
 
 {% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
 
-For those new to FLEDGE, read the [FLEDGE overview](/docs/privacy-sandbox/fledge)
+For those new to Protected Audience API, read the [Protected Audience API overview](/docs/privacy-sandbox/fledge)
 for a high-level explanation of the proposal.
 
 This post is written for developers as a technical reference for the most
-recent iteration of the experimental FLEDGE API. A [demo](#demo) of a basic
-FLEDGE deployment is available, as are
+recent iteration of the experimental Protected Audience API. A [demo](#demo) of a basic
+Protected Audience API deployment is available, as are
 [API references for ad buyers and sellers](#api-reference).
 
 ## Implementation status
 
 {% Partial 'privacy-sandbox/timeline/fledge.njk' %}
 
-## What is FLEDGE? {: #what}
+## What is Protected Audience API? {: #what}
 
-FLEDGE is a [Privacy Sandbox](/docs/privacy-sandbox/overview) proposal to serve
+Protected Audience API is a [Privacy Sandbox](/docs/privacy-sandbox/overview) proposal to serve
 [remarketing](/docs/privacy-sandbox/fledge#remarketing) and custom audience use
 cases, designed so that it cannot be used by third parties to track user
 browsing behavior across sites. The API enables on-device auctions by
 the browser, to choose relevant ads for websites the user has previously visited.
 
-FLEDGE is the first experiment to be implemented in Chromium within the
+Protected Audience API is the first experiment to be implemented in Chromium within the
 [TURTLEDOVE](https://github.com/WICG/turtledove) family of proposals.
 
-## Try FLEDGE {: #try-fledge}
+## Try Protected Audience API {: #try-fledge}
 
 ### Available API reference {: #api-reference }
 
-This document serves as an overview of the FLEDGE API. If you're looking for specific API methods and parameters:
+This document serves as an overview of the Protected Audience API. If you're looking for specific API methods and parameters:
 
 * Buyers guide for [`joinAdInterestGroup()` and `generateBid()`](/docs/privacy-sandbox/fledge-api/interest-groups).
-* Seller's guide for the FLEDGE
+* Seller's guide for the Protected Audience API
   [`runAdAuction()`](/docs/privacy-sandbox/fledge-api/ad-auction)
 * Buyers guide to [`reportWin()`](/docs/privacy-sandbox/fledge-api/reports) and
   sellers guide to [`reportResult()`](/docs/privacy-sandbox/fledge-api/reports)
-* [Troubleshoot FLEDGE API](/docs/privacy-sandbox/fledge-api/troubleshoot)
+* [Troubleshoot Protected Audience API](/docs/privacy-sandbox/fledge-api/troubleshoot)
 
-You can also read [FLEDGE ad auction latency best practices](/docs/privacy-sandbox/fledge-api/latency).
+You can also read [Protected Audience API ad auction latency best practices](/docs/privacy-sandbox/fledge-api/latency).
 
-### FLEDGE demo {: #demo}
+### Protected Audience API demo {: #demo}
 
-A walk-through of a basic FLEDGE deployment across advertiser and publisher
+A walk-through of a basic Protected Audience API deployment across advertiser and publisher
 sites is available at [fledge-demo.glitch.me](https://fledge-demo.glitch.me/).
 
 <figure>
@@ -65,7 +65,7 @@ sites is available at [fledge-demo.glitch.me](https://fledge-demo.glitch.me/).
   id='znDD0gkdJyM'
 %}
 <figcaption>
-  Watch this end-to-end deployment to learn how the FLEDGE demo code works and how to use Chrome DevTools for debugging.
+  Watch this end-to-end deployment to learn how the Protected Audience API demo code works and how to use Chrome DevTools for debugging.
 </figcaption>
 </figure>
 
@@ -73,17 +73,17 @@ sites is available at [fledge-demo.glitch.me](https://fledge-demo.glitch.me/).
 
 The [Privacy Sandbox Relevance and Measurement origin trial](/docs/privacy-sandbox/unified-origin-trial)
 has been made available in Chrome Beta 101.0.4951.26 and above on desktop for
-the FLEDGE, [Topics](/docs/privacy-sandbox/topics/), and
+the Protected Audience API, [Topics](/docs/privacy-sandbox/topics/), and
 [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) APIs.
 
 To take part, [register for an origin trial token](/origintrials/#/view_trial/771241436187197441).
 
-Once you have successfully enrolled in the trial, you can try out the FLEDGE
+Once you have successfully enrolled in the trial, you can try out the Protected Audience API
 API on pages that provide a valid trial token. For example, to ask
 the browser to [join one or more interest groups](#joinadinterestgroup),
 and then to run an ad auction to select and display an ad.
 
-Provide a trial token for every page on which you would like to run FLEDGE API code:
+Provide a trial token for every page on which you would like to run Protected Audience API API code:
 
 *  As a meta tag in the `<head>`:
   ```html
@@ -104,11 +104,11 @@ Provide a trial token for every page on which you would like to run FLEDGE API c
   document.head.append(otMeta);
   ```
 
-An iframe running FLEDGE code—such as a
+An iframe running Protected Audience API code—such as a
 [`navigator.joinAdInterestGroup()`](#joinadinterestgroup)
 call by an interest group owner—will need to provide a token that matches its origin.
 
-[Proposed First FLEDGE Origin Trial Details](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md)
+[Proposed First Protected Audience API Origin Trial Details](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md)
 provides more details about the goals of the first trial and explains what
 features are supported.
 
@@ -125,12 +125,12 @@ trial feature is available before attempting to use it.
 
 ### Test with `chrome://flags` or feature flags {: #flags}
 
-You can test FLEDGE for a single user in Chrome Beta 101.0.4951.26 and above on
+You can test Protected Audience API for a single user in Chrome Beta 101.0.4951.26 and above on
 desktop:
 
 * Enable `chrome://flags/#privacy-sandbox-ads-apis`.
 * [Set flags from the command line](https://www.chromium.org/developers/how-tos/run-chromium-with-flags).
-  The full list of available FLEDGE flags can be found in
+  The full list of available Protected Audience API flags can be found in
   [Chromium Code Search](https://source.chromium.org/chromium/chromium/src/+/main:chrome/browser/about_flags.cc;l=7135;drc=e50bce9adfbbac13d8ec1017f9239fe1ae06cc72).
 
 #### Render ads in iframes or fenced frames
@@ -156,18 +156,18 @@ Include the `BiddingAndScoringDebugReportingAPI` flag to enable
 
 {% Aside %}
 
-This is an in-progress version of FLEDGE for early testing. It shouldn't be
-considered complete or indicative of the final implementation. FLEDGE progress
+This is an in-progress version of Protected Audience API for early testing. It shouldn't be
+considered complete or indicative of the final implementation. Protected Audience API progress
 and status are discussed in the regular WICG meetings.
 
-The [Privacy Sandbox timeline](https://privacysandbox.com/timeline) provides implementation timing for FLEDGE and other Privacy Sandbox proposals.
+The [Privacy Sandbox timeline](https://privacysandbox.com/timeline) provides implementation timing for Protected Audience API and other Privacy Sandbox proposals.
 
 {% endAside %}
 
 ## Supported features
 
-FLEDGE behind feature flags in Chromium is a first experiment to test the
-following features of the FLEDGE proposal:
+Protected Audience API behind feature flags in Chromium is a first experiment to test the
+following features of the Protected Audience API proposal:
 
 -  **Interest groups**: stored by the browser, with associated metadata to
    configure ad bidding and rendering.
@@ -179,11 +179,11 @@ following features of the FLEDGE proposal:
    network access and logging allowed for ad rendering.
 
 Read more about feature support and constraints in the 
-[FLEDGE API explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#summary).
+[Protected Audience API explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#summary).
 
 ### Interest group permissions
 
-The default for the current implementation of FLEDGE is to allow calling
+The default for the current implementation of Protected Audience API is to allow calling
 [`joinAdInterestGroup()`](/docs/privacy-sandbox/fledge-api/interest-groups)
 from anywhere in a page, even from cross-domain iframes.
 
@@ -193,23 +193,23 @@ plan is to disallow calls from cross-domain iframes.
 
 ### Key/Value service
 
-To support the FLEDGE ad auction, the browser can access a
+To support the Protected Audience API ad auction, the browser can access a
 [key/value service](https://github.com/WICG/turtledove/blob/main/FLEDGE_Key_Value_Server_API.md)
-to retrieve real-time information which supports the FLEDGE ad auction.  This
+to retrieve real-time information which supports the Protected Audience API ad auction.  This
 information could be used in a number ways:
 
 *  Buyers may want to calculate the remaining budget in an ad campaign.
 *  Sellers may be required to check ad creatives against publisher policies.
 
-The [FLEDGE key/value service code](https://github.com/privacysandbox/fledge-key-value-service)
+The [Protected Audience API key/value service code](https://github.com/privacysandbox/fledge-key-value-service)
 is now available. Check out the [announcement blog post](/blog/open-sourcing-fledge-key-value-service/) for the status update.
 
 For initial testing, a "[Bring Your Own Server](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#3-buyers-provide-ads-and-bidding-functions-byos-for-now)"
 model was introduced. In the long-term, ad techs will need to use the
-open-source FLEDGE Key/Value services running in trusted execution
+open-source Protected Audience API Key/Value services running in trusted execution
 environments.
 
-Refer to the [FLEDGE services blog post](/blog/fledge-service-overview/#timeline)
+Refer to the [Protected Audience API services blog post](/blog/fledge-service-overview/#timeline)
 for timeline updates. We'll provide substantial notice for developers to begin
 testing and adoption before this transition takes place.
 
@@ -235,7 +235,7 @@ privacy, there is no way to check for this programmatically.
 
 {% endAside %}
 
-## How does the FLEDGE API work? {: #how}
+## How does the Protected Audience API API work? {: #how}
 
 In this example, a user browses the website of a custom bike maker, then later
 visits a news website and is shown an ad for a new bike from the bike maker.
@@ -243,13 +243,13 @@ visits a news website and is shown an ad for a new bike from the bike maker.
 {% Aside 'warning' %}
 
 Not all features described in this post have been implemented (or fully
-implemented) in the version of the FLEDGE API currently being tested in Chrome.
-[Test with feature flags](#flags) explains what FLEDGE features are currently
+implemented) in the version of the Protected Audience API API currently being tested in Chrome.
+[Test with feature flags](#flags) explains what Protected Audience API features are currently
 available for testing in Chrome run from the command line.
 
 {% endAside %}
 
-Features of FLEDGE will be added over time as work on implementation progresses.
+Features of Protected Audience API will be added over time as work on implementation progresses.
 
 ### 1. A user visits an advertiser site
 
@@ -279,10 +279,10 @@ The advertiser's demand-side platform (DSP) (or the advertiser itself) calls
 to the list of groups the browser is a member of.
 
 In this example, the group is named `custom-bikes`, and the owner is `dsp.example`. The interest group owner (in this case, the DSP) will be a buyer
-in the FLEDGE ad auction. Interest group membership is stored by the browser,
+in the Protected Audience API ad auction. Interest group membership is stored by the browser,
 on the user's device, and is not shared with the browser vendor or anyone else.
 
-* **Read the FLEDGE explainer**: [Browsers Record Interest Groups](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#1-browsers-record-interest-groups).
+* **Read the Protected Audience API explainer**: [Browsers Record Interest Groups](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#1-browsers-record-interest-groups).
 * **Read the API guide**: buyers and DSPs, learn how to
   [`joinAdInterestGroup()`](/docs/privacy-sandbox/fledge-api/interest-groups) and generate bids.
 
@@ -328,7 +328,7 @@ real-time bidding.
 
 <figure>
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/fP9qHtCjfk8IwrJLtOpo.png",
-  alt="A person views a news website in a browser on their laptop. A FLEDGE ad auction is run to pick an ad for the available ad space.", width="400", height="182" %}
+  alt="A person views a news website in a browser on their laptop. A Protected Audience API ad auction is run to pick an ad for the available ad space.", width="400", height="182" %}
 </figure>
 
 The ad auction is likely to be run by the publisher's supply-side provider
@@ -338,7 +338,7 @@ auction takes into account the interest groups the browser is a member of,
 along with data from ad-space buyers and the sellers from the
 [Key/Value services](#keyvalue-service).
 
-* **Read the FLEDGE explainer**: [Sellers Run On-Device Auctions](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#2-sellers-run-on-device-auctions)
+* **Read the Protected Audience API explainer**: [Sellers Run On-Device Auctions](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#2-sellers-run-on-device-auctions)
 * **Read the API guide**: sellers can learn more about
   [`runAdAuction()`](/docs/privacy-sandbox/fledge-api/ad-auction/) and the [ad auction latency best practices](/docs/privacy-sandbox/fledge-api/latency).
 
@@ -347,7 +347,7 @@ along with data from ad-space buyers and the sellers from the
 <figure>
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/rn0slzXLZNSzGHMm6w7Y.png",
   alt="The user views a news website in a browser on their laptop. An ad
-  auction using the FLEDGE API is taking place, with a participant getting data from the Key/Value service.", width="400", height="126" %}
+  auction using the Protected Audience API is taking place, with a participant getting data from the Key/Value service.", width="400", height="126" %}
 </figure>
 
 During an ad auction, the seller can request real-time data about specific ad
@@ -375,11 +375,11 @@ https://kv-service.example/getvalues?hostname=publisher.example&keys=key1,key2
 The response to this request is a JSON object providing values for each of the
 keys.
 
-* **Read the FLEDGE explainer**: [Fetching Real-Time Data from the FLEDGE Key/Value service](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#31-fetching-real-time-data-from-a-trusted-server).
-* Read **[open sourcing the FLEDGE Key/Value service](/blog/open-sourcing-fledge-key-value-service/)**.
+* **Read the Protected Audience API explainer**: [Fetching Real-Time Data from the Protected Audience API Key/Value service](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#31-fetching-real-time-data-from-a-trusted-server).
+* Read **[open sourcing the Protected Audience API Key/Value service](/blog/open-sourcing-fledge-key-value-service/)**.
 
 {% Aside 'gotchas' %}
-While in the initial experimental phase of testing FLEDGE,
+While in the initial experimental phase of testing Protected Audience API,
 `trustedBiddingSignalsUrl` must have the same origin as the interest group
 owner. Learn more in [Bring Your Own Server](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#:~:text=bring%20your%20own%20server).
 {% endAside %}
@@ -402,7 +402,7 @@ The `FencedFrameConfig` object is returned only when the flag `resolveToConfig` 
 
 Fenced frame config object is available starting from M114. For more on the `FencedFrameConfig` object, see the [Chrome blog article](/docs/privacy-sandbox/fenced-frame). 
 
-* **Read the FLEDGE explainer**: [browsers render the winning ad](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#4-browsers-render-the-winning-ad)
+* **Read the Protected Audience API explainer**: [browsers render the winning ad](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#4-browsers-render-the-winning-ad)
 
 ### 7. The auction result is reported
 
@@ -436,11 +436,11 @@ how this might work, see [Fenced Frames Ads Reporting](https://github.com/WICG/t
 
 <figure class="w-figure">
   {% Img
-    src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/M8lyXt6JbwFncB16mTb0.png", alt="An overview of each stage of a FLEDGE ad auction",
+    src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/M8lyXt6JbwFncB16mTb0.png", alt="An overview of each stage of a Protected Audience API ad auction",
   width="800", height="481"
   %}
   <figcaption>
-    This diagram outlines each stage of a FLEDGE auction. <a href="https://wd.imgix.net/image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/M8lyXt6JbwFncB16mTb0.png?auto=format&w=1600"
+    This diagram outlines each stage of a Protected Audience API auction. <a href="https://wd.imgix.net/image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/M8lyXt6JbwFncB16mTb0.png?auto=format&w=1600"
       target="_blank">View a larger version</a>.
    </figcaption>
 </figure>
@@ -448,14 +448,14 @@ how this might work, see [Fenced Frames Ads Reporting](https://github.com/WICG/t
 {% Details %}
 
 {% DetailsSummary %}
-### What is the difference between FLEDGE and TURTLEDOVE?
+### What is the difference between Protected Audience API and TURTLEDOVE?
 
 {% endDetailsSummary %}
 
-FLEDGE is the first experiment to be implemented in Chromium within the
+Protected Audience API is the first experiment to be implemented in Chromium within the
 TURTLEDOVE family of proposals.
 
-FLEDGE follows TURTLEDOVE's high-level principles. Some online advertising has
+Protected Audience API follows TURTLEDOVE's high-level principles. Some online advertising has
 been based on showing an ad to a potentially-interested person who has
 previously interacted with the advertiser or ad network. Historically this has
 worked by the advertiser recognizing a specific person as they browse across
@@ -470,16 +470,16 @@ while offering some key privacy advances:
   interest with other information about a person&mdash;in particular, who they
   are or what page they are visiting.
 
-FLEDGE grew out of TURTLEDOVE and a collection of related proposals for
+The Protected Audience API grew out of TURTLEDOVE and a collection of related proposals for
 modifications to better served the developers who would be using the API:
 
 -   In [SPARROW](https://github.com/WICG/sparrow):
    [Criteo](https://www.admonsters.com/what-is-sparrow/) proposed the addition
-   of a ("Gatekeeper") service model running in a [trusted execution environment (TEE)](https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#trusted-execution-environment). FLEDGE includes a more limited use of TEEs, for real-time data lookup and aggregated reporting.
+   of a ("Gatekeeper") service model running in a [trusted execution environment (TEE)](https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#trusted-execution-environment). The Protected Audience API includes a more limited use of TEEs, for real-time data lookup and aggregated reporting.
 -  NextRoll's [TERN](https://github.com/WICG/turtledove/blob/main/TERN.md) and
   Magnite's [PARRROT](https://github.com/prebid/identity-gatekeeper/blob/master/proposals/PARRROT.md)
   proposals described the different roles that buyers and sellers had in the
-  on-device auction. FLEDGE's ad bidding/scoring flow is based on this work.
+  on-device auction. The Protected Audience API's ad bidding/scoring flow is based on this work.
 -  RTB House's [Outcome-based](https://github.com/WICG/turtledove/blob/main/OUTCOME_BASED.md)
   and [Product-level](https://github.com/WICG/turtledove/blob/main/PRODUCT_LEVEL.md)
   TURTLEDOVE modifications improved the anonymity model and personalization
@@ -488,18 +488,18 @@ modifications to better served the developers who would be using the API:
    Microsoft's proposal for a TURTLEDOVE-like ad service that relies on a proxy
    server running in a TEE between the browser and the ad tech providers, to
    anonymize ad requests and enforce privacy
-   properties.  FLEDGE has not adopted this proxying model.  We are bringing
-   the JavaScript APIs for PARAKEET and FLEDGE into alignment, in support of
+   properties.  Protected Audience API has not adopted this proxying model.  We are bringing
+   the JavaScript APIs for PARAKEET and Protected Audience API into alignment, in support of
    future work to further combine the best features of both proposals.
 
-FLEDGE does not yet prevent a website's ad network from learning which ads a person sees. We expect to modify the API to become more private over time.
+Protected Audience API does not yet prevent a website's ad network from learning which ads a person sees. We expect to modify the API to become more private over time.
 
 {% endDetails %}
 
 {% Details %}
 
 {% DetailsSummary %}
-### Can the Topics API be used with the FLEDGE API? 
+### Can the Topics API be used with the Protected Audience API API? 
 
 {% endDetailsSummary %}
 Yes. An observed topic for the current user, provided by the [Topics API](/docs/privacy-sandbox/topics/), could be used as 
@@ -523,14 +523,14 @@ enabling or disabling the top-level setting in
 `chrome://settings/privacySandbox`.
 
 During initial testing, people will be able to use this high-level Privacy
-Sandbox setting to opt-out of FLEDGE. Chrome plans to allow users to see and
+Sandbox setting to opt-out of Protected Audience API. Chrome plans to allow users to see and
 manage the list of interest groups that they have been added to across the web
 sites they have visited. As with the Privacy Sandbox technologies themselves,
 user settings may evolve with feedback from users, regulators and others.
 
-We'll continue to update the available settings in Chrome as the FLEDGE
+We'll continue to update the available settings in Chrome as the Protected Audience API
 proposal progresses, [based on tests and feedback](/docs/privacy-sandbox/proposal-lifecycle/#collaborate).
-In the future, we plan to offer more granular settings to manage FLEDGE and
+In the future, we plan to offer more granular settings to manage Protected Audience API and
 associated data.
 
 API callers can't access group membership when users browse in Incognito mode,
@@ -554,12 +554,12 @@ documentation:
 *  **Developer support**: Ask questions and join discussions on the
    [Privacy Sandbox Developer Support 
    repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
-   Select the issue template for FLEDGE.
+   Select the issue template for Protected Audience API.
 * **Chrome implementation**: for bugs or issues with Chrome's implementation of
-  the FLEDGE API, you can [view existing issues](https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EInterestGroups)
+  the Protected Audience API API, you can [view existing issues](https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EInterestGroups)
   or [raise a new issue](https://crbug.com/new).
 
-For more general questions about meeting your needs with FLEDGE, 
+For more general questions about meeting your needs with Protected Audience API, 
 [file an issue on the proposal repository](https://github.com/WICG/turtledove/issues/new).
 You can also discuss industry use cases in the W3C's
 [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants).
@@ -569,8 +569,8 @@ to share feedback privately with the Chrome team outside of public forums.
 
 #### Opt-out {: #opt-out}
 
-Want to opt-out of FLEDGE? Learn how to
-[block access to the FLEDGE API](/docs/privacy-sandbox/fledge-api/opt-out/),
+Want to opt-out of Protected Audience API? Learn how to
+[block access to the Protected Audience API API](/docs/privacy-sandbox/fledge-api/opt-out/),
 as a site owner or an individual user.
 
 ### Get updates
@@ -582,7 +582,7 @@ as a site owner or an individual user.
   account](https://docs.github.com/get-started/signing-up-for-github/signing-up-for-a-new-github-account).
 - To get overall updates on the Privacy Sandbox, subscribe to the RSS feed
   [Progress in the Privacy Sandbox](/tags/progress-in-the-privacy-sandbox/).
-- [Join the scheduled calls for FLEDGE](https://github.com/WICG/turtledove/issues/88)
+- [Join the scheduled calls for Protected Audience API](https://github.com/WICG/turtledove/issues/88)
   (every   second week). Everyone is welcome to join&mdash;to participate,
   first make sure to [join the WICG](https://www.w3.org/community/wicg/). You
   can actively participate or just listen in!

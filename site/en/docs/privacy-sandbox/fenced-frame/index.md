@@ -71,13 +71,13 @@ which suggests top-level sites should partition data. Many Privacy Sandbox
 proposals aim to satisfy cross-site use cases without third-party cookies or
 other tracking mechanisms. For example:
 
-*  [FLEDGE](/docs/privacy-sandbox/fledge/) allows for interest-based ad serving
+*  [Protected Audience API](/docs/privacy-sandbox/fledge/) allows for interest-based ad serving
    in a privacy-preserving manner.
 *  [Shared Storage](https://github.com/pythagoraskitty/shared-storage) allows
    access to unpartitioned cross-site data in a secure environment.
 
 Let's consider how fenced frames could work with the
-[FLEDGE](/docs/privacy-sandbox/fledge/) proposal. With FLEDGE, a user's interests
+[Protected Audience API](/docs/privacy-sandbox/fledge/) proposal. With Protected Audience API, a user's interests
 are registered on an advertiser's site in [interest
 groups](/docs/privacy-sandbox/fledge/#interest-group-detail), along with ads that
 may be of interest to the user. Then, on a separate site (known as a
@@ -94,7 +94,7 @@ in the frame. The publisher could not access this information.
 
 ## How do fenced frames work?
 
-Fenced frames use the `FencedFrameConfig` object for navigation. This object can be returned from a FLEDGE auction or Shared Storage’s URL selection operation. Then, the config object is set as the `config` attribute on the fenced frame element. This differs from an iframe where a URL or opaque [URN](https://en.wikipedia.org/wiki/Uniform_Resource_Name) is assigned to the `src` attribute. The `FencedFrameConfig` object has a read-only `url` property; however, since the current use-cases require the actual URL of the internal resource to be hidden, this property returns the string `opaque` when read.
+Fenced frames use the `FencedFrameConfig` object for navigation. This object can be returned from a Protected Audience API auction or Shared Storage’s URL selection operation. Then, the config object is set as the `config` attribute on the fenced frame element. This differs from an iframe where a URL or opaque [URN](https://en.wikipedia.org/wiki/Uniform_Resource_Name) is assigned to the `src` attribute. The `FencedFrameConfig` object has a read-only `url` property; however, since the current use-cases require the actual URL of the internal resource to be hidden, this property returns the string `opaque` when read.
 
 A fenced frame can't use `postMessage` to communicate with its embedder. However, a fenced frame can use `postMessage` with iframes inside the fenced frame.
 
@@ -107,7 +107,7 @@ publisher&mdash;aren't available in fenced frames.
 Fenced frames behave like a [top-level browsing
 context](https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context)
 (such as a browser tab). Although a fenced frame in [certain use cases](https://github.com/WICG/fenced-frame/blob/master/explainer/use_cases.md)
-(such as `opaque-ads`) can contain cross-site data (such as a FLEDGE interest
+(such as `opaque-ads`) can contain cross-site data (such as a Protected Audience API interest
 group), the frame cannot access unpartitioned storage or cookies. An
 `opaque-ads` fenced frame can access a unique, nonce-based cookie and storage
 partition.
@@ -187,7 +187,7 @@ Potential APIs are currently in discussion.
 Current candidates for this combination include:
 
 * From the [TURTLEDOVE API](https://github.com/WICG/turtledove) family (which is
-   the basis for FLEDGE), fenced frames could work with [Conversion Lift
+   the basis for Protected Audience API), fenced frames could work with [Conversion Lift
    Measurement](https://github.com/w3c/web-advertising/blob/main/support_for_advertising_use_cases.md#conversion-lift-measurement)
    using [Shared Storage](https://github.com/pythagoraskitty/shared-storage).
 * Another option is to allow fenced frames to be
@@ -201,9 +201,9 @@ use cases explainer](https://github.com/WICG/fenced-frame/blob/master/explainer/
 
 ### Examples
 
-To obtain a fenced frame `config` object, you must pass in `resolveToConfig: true` to FLEDGE’s `runAdAuction()` call or Shared Storage’s `selectURL()` call. If the property is not added (or is set to `false`), the resulting promise will resolve to a URN that can only be used in an iframe.
+To obtain a fenced frame `config` object, you must pass in `resolveToConfig: true` to Protected Audience API’s `runAdAuction()` call or Shared Storage’s `selectURL()` call. If the property is not added (or is set to `false`), the resulting promise will resolve to a URN that can only be used in an iframe.
 
-{% Compare 'better', 'Get fenced frame config from FLEDGE auction' %}
+{% Compare 'better', 'Get fenced frame config from Protected Audience API auction' %}
 ```js
 const frameConfig = await navigator.runAdAuction({
   // ...auction configuration
@@ -249,7 +249,7 @@ Supports-Loading-Mode: fenced-frame
 
 ### Shared Storage context
 
-You may want to use Private Aggregation to report event-level data in fenced frames associated with contextual data from the embedder. By using the `fencedFrameConfig.setSharedStorageContext()` method, you can pass some contextual data, such as an event ID, from the embedder to shared storage worklets initiated by FLEDGE.
+You may want to use Private Aggregation to report event-level data in fenced frames associated with contextual data from the embedder. By using the `fencedFrameConfig.setSharedStorageContext()` method, you can pass some contextual data, such as an event ID, from the embedder to shared storage worklets initiated by Protected Audience API.
 
 In the following example, we store some data available on the embedder page and some data available in the fenced frame in shared storage. From the embedder page, a mock event ID is set as the shared storage context. From the fenced frame, the frame event data is passed in.
 
