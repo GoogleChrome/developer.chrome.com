@@ -10,7 +10,7 @@ authors:
   - alexandrawhite
 ---
 
-If you've used any of our demos before and can't quite remember where you found it, here's a list.
+If you've used any of our demos before and can't quite remember where you found them, here's a list.
 
 Most of them will need background information that's found in the documentation, so if 
 you haven't read it or have questions, take a look at the docs for each API, listed with the demos below.
