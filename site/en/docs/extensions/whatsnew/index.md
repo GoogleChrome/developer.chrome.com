@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-05-10
+updated: 2023-05-12
 tags:
   - extensions-news
 
@@ -13,8 +13,13 @@ tags:
 <!--lint disable no-duplicate-headings-->
 <!--lint disable first-heading-level-->
 
-Check this page often to learn about changes to the Chrome extensions platform, its documentation,
-and related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about many of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).)
+Check this page often to learn about changes to the Chrome extensions platform, its documentation, and related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about many of the topics mentioned here. (It even has [an RSS feed](/feeds/extensions-news.xml).) The [Chrome schedule](https://chromiumdash.appspot.com/schedule) lists stable and beta release dates.
+
+### Chrome 114: Long-lived messages extend service worker lifetimes
+
+<p class="color-secondary-text type--caption">Posted on <time>May 12, 2023</time></p>
+
+Long-lived messages now extend the lifetime of an extension service worker. Extension service workers are terminated after 30 seconds of inactivity, but starting in Chrome 114, calls to long-lived message channels, specifically [`chrome.runtime.connect()`](/docs/extensions/reference/runtime/#method-connect) and []`chrome.tabs.connect()`](/docs/extensions/reference/tabs/#method-connect), will keep the service worker alive. Watch this space for a forthcoming article.
 
 ### Updated Manifest V3 migration guidance 
 
