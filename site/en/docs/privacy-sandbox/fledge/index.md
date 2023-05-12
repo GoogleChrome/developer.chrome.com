@@ -27,7 +27,7 @@ This article covers the basics of Protected Audience API and explains some under
 concepts, but doesn't go into much technical detail.
 
 * If you work in **advertising or ad tech**, you'll get an overview of [how Protected Audience API works](#overview).
-* If you're a **developer or software engineer**, the [Protected Audience API API Developer Guide](/docs/privacy-sandbox/fledge-api) provides more in-depth technical detail about the proposal and the [Intent to prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI)
+* If you're a **developer or software engineer**, the [Protected Audience API Developer Guide](/docs/privacy-sandbox/fledge-api) provides more in-depth technical detail about the proposal and the [Intent to prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI)
   offers the latest conversation about Protected Audience API status in the browser.
 * [The Protected Audience API demo](/docs/privacy-sandbox/fledge-api#demo) provides a walkthrough of a basic Protected Audience API deployment.
 
@@ -142,7 +142,7 @@ information about what that person is interested in.
 
 Not all features described here have been implemented (in part or in full) in
 the version of the Protected Audience API currently being tested in Chrome. The
-[Protected Audience API API developer guide](/docs/privacy-sandbox/fledge-api#try-fledge) explains which Protected Audience API
+[Protected Audience API developer guide](/docs/privacy-sandbox/fledge-api#try-fledge) explains which Protected Audience API
 features are currently available for testing in Chrome run from the command line
 using [feature flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags).
 
@@ -154,7 +154,7 @@ implemented and what's still in progress.
 
 ## How can I try Protected Audience API? {: #try-fledge}
 
-* The [Protected Audience API API developer guide](/docs/privacy-sandbox/fledge-api#try-fledge) describes how to
+* The [Protected Audience API developer guide](/docs/privacy-sandbox/fledge-api#try-fledge) describes how to
   take part in the Privacy Sandbox Relevance and Measurement origin trial and
   how to try out Protected Audience API for a single user by setting Chrome flags.
 
@@ -193,7 +193,7 @@ and membership is removed when users clear their site data.
 
 ### Can I opt out of Protected Audience API? {: #opt-out}
 
-Learn how you can [block access to the Protected Audience API API](/docs/privacy-sandbox/fledge-api/opt-out),
+Learn how you can [block access to the Protected Audience API](/docs/privacy-sandbox/fledge-api/opt-out),
 either as a site owner or as an individual user.
 
 ### Can users block an ad shown as the result of a Protected Audience API auction? {: #ad-block }
@@ -476,7 +476,7 @@ To ensure that the ecosystem has sufficient time to test, we don’t expect to r
 ## Find out more
 
 For a more in-depth overview of Protected Audience API, read the
-[Protected Audience API API developer guide](/docs/privacy-sandbox/fledge-api/).
+[Protected Audience API developer guide](/docs/privacy-sandbox/fledge-api/).
 
 ### Developers
 
