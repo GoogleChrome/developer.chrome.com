@@ -70,7 +70,7 @@ An [**origin**](https://developer.mozilla.org/docs/Glossary/Origin) represents a
 1. [Publicly discoverable](#discoverability-eligibility)
 2. [Sufficiently popular](#popularity-eligibility)
 
-You can verify that your origin is discoverable by running a [Lighthouse audit](https://web.dev/measure/) with the SEO category enabled. Your site is not discoverable if your root page fails the [_Page is blocked from indexing_](https://web.dev/is-crawable/) or [_Page has unsuccessful HTTP status code_](https://web.dev/http-status-code/) audits.
+You can verify that your origin is discoverable by running a [Lighthouse audit](https://pagespeed.web.dev/) and looking at the SEO category results. Your site is not discoverable if your root page fails the [_Page is blocked from indexing_](https://web.dev/is-crawable/) or [_Page has unsuccessful HTTP status code_](https://web.dev/http-status-code/) audits.
 
 If an origin is determined to be publicly discoverable, eligible user experiences on _all_ of that origin's pages are aggregated at the origin-level, regardless of individual page discoverability. All of these experiences count towards the origin's popularity requirement.
 
@@ -83,7 +83,7 @@ The requirements for a **page** to be included in the CrUX dataset are the same 
 1. [Publicly discoverable](#discoverability-eligibility)
 2. [Sufficiently popular](#popularity-eligibility)
 
-You can verify that a page is discoverable by running a [Lighthouse audit](https://web.dev/measure/) with the SEO category enabled. Your page is not discoverable if it fails the [_Page is blocked from indexing_](https://web.dev/is-crawable/) or [_Page has unsuccessful HTTP status code_](https://web.dev/http-status-code/) audits.
+You can verify that a page is discoverable by running a [Lighthouse audit](https://pagespeed.web.dev/) and looking at the SEO category results. Your page is not discoverable if it fails the [_Page is blocked from indexing_](https://web.dev/is-crawable/) or [_Page has unsuccessful HTTP status code_](https://web.dev/http-status-code/) audits.
 
 Pages commonly have additional identifiers in their URL including query string parameters like `?utm_medium=email` and fragments like `#main`. These identifiers are stripped from the URL in the CrUX dataset so that all user experiences on the page are aggregated together. This is useful for pages that would otherwise not meet the popularity threshold if there were many disjointed URL variations for the same page. Note that in rare cases this may unexpectedly group experiences for distinct pages together; for example if parameters `?productID=101` and `?productID=102` represent different pages.
 
