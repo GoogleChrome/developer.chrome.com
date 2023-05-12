@@ -40,7 +40,7 @@
 
   {% elif type.type === 'union' %}
     {# Type that contains many string (probably) options, basically an enum. #}
-    {{ renderIconTypesArray(type.types, 'Type', node) }}
+    {{ renderIconTypesArray(type.types, 'Enum', node) }}
 
   {% elif type.type and not node._event %}
     {# Reference to another type (and not an Event). #}
@@ -215,7 +215,7 @@
   {% endfor %}
 
   {# Note that we avoid whitespace below, and instead set margins in CSS. #}
-  <p class="code-sections__icon code-sections__icon--{{ iconType }} {% if node._enums %}code-sections__enum{% endif %}">{{ renderSingleType(type, description) | trim | safe }}
+  <p class="code-sections__icon code-sections__icon--{{ iconType }} {% if node.type.type == 'union' %}code-sections__enum{% endif %}">{{ renderSingleType(type, description) | trim | safe }}
     {%- if node.flags.isOptional -%}
       &nbsp;<span class="code-sections__optional">optional</span>
     {%- endif -%}
@@ -309,7 +309,7 @@
 
   {% elif type.type === 'literal' %}
     {# Literal value, e.g., 123 or '"foo"' #}
-    <span class="code-sections__value">{{ type.value }}</span> <br> <span class="type--xsmall" style="white-space: initial">{{description | mdInline | safe }}<span>
+    <span class="code-sections__value">{{ type.value | dump }}</span> <br> <span class="type--xsmall" style="white-space: initial">{{description | mdInline | safe }}</span>
 
   {% elif type.type === 'reflection' and type.declaration.signatures %}
     {# A reflection which has signatures, i.e., a function. #}
