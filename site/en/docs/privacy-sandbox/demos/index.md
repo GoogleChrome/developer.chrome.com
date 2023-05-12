@@ -2,12 +2,10 @@
 layout: 'layouts/doc-post.njk'
 title: 'Privacy Sandbox demos'
 subhead: >
-  Deploy and manage this service to produce summary reports for the
-  Attribution Reporting API or the Private Aggregation API.
+  Demos and colabs walk you through the Privacy Sandbox APIs.
 description: >
-  Deploy and manage this service to produce summary reports for the
-  Attribution Reporting API or the Private Aggregation API.
-date: 2022-11-29
+  Demos and colabs walk you through the Privacy Sandbox APIs.
+date: 2023-05-29
 authors:
   - alexandrawhite
 ---
