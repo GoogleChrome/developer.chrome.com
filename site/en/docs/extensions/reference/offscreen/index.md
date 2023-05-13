@@ -40,7 +40,7 @@ Use `chrome.offscreen.createDocument()` and `chrome.offscreen.closeDocument()` f
 
 ```js
 chrome.offscreen.createDocument({
-  url: chrome.runtime.getURL('off_screen.html'),
+  url: 'off_screen.html',
   reasons: ['CLIPBOARD'],
   justification: 'reason for needing the document',
 });
@@ -48,36 +48,46 @@ chrome.offscreen.createDocument({
 chrome.offscreen.closeDocument()
 ```
 
-The following example shows how to check for existing offscreen documents. The `hasOffscreenDocument()` function uses [clients.matchAll()](https://developer.mozilla.org/docs/Web/API/Clients/matchAll) to find existing offscreen documents. Please note: the function assumes that your extension uses a single offscreen document. 
+The following example shows how to ensure that offscreen documents have already been created. The `setupOffscreenDocument()` function uses [clients.matchAll()](https://developer.mozilla.org/docs/Web/API/Clients/matchAll) to find existing offscreen documents. If no existing offscreen documents, create it. Please note: the function assumes that your extension uses a single offscreen document. 
 
 ```js
-async function hasOffscreenDocument(path) {
+let creating; // A global promise to avoid concurrency issues
+async function setupOffscreenDocument(path) {
   // Check all windows controlled by the service worker to see if one 
   // of them is the offscreen document with the given path
+  let exist = false;
   const offscreenUrl = chrome.runtime.getURL(path);
   const matchedClients = await clients.matchAll();
   for (const client of matchedClients) {
     if (client.url === offscreenUrl) {
-      return true;
+      exist = true;
+      break;
     }
   }
-  return false;
+  
+  // create offscreen document if it's not existing
+  if (!exist) {
+    if (creating) {
+      await creating;
+    } else {
+      creating = chrome.offscreen.createDocument({
+        url: path,
+        reasons: ['CLIPBOARD'],
+        justification: 'reason for needing the document',
+      });
+      await creating;
+      creating = null;
+    }
+  }
 }
 ```
 
-Before trying to create a new offscreen document, call `hasOffscreenDocument()` to make sure that there is no existing offscreen document, as demonstrated in the following example. 
+Before sending message to offscreen document, call `setupOffscreenDocument()` to make sure that there is existing offscreen document, as demonstrated in the following example. 
 
 ```js
 chrome.action.onClicked.addListener(async () => {
-  const offscreenDocumentPath = 'off_screen.html'
-  // create offscreen document if it's not open already
-  if (!(await hasOffscreenDocument(offscreenDocumentPath))) {
-    await chrome.offscreen.createDocument({
-      url: chrome.runtime.getURL(offscreenDocumentPath),
-      reasons: ['CLIPBOARD'],
-      justification: 'reason for needing the document',
-    });
-  }
+  await setupOffscreenDocument('off_screen.html');
+
   // Send message to offscreen document
   chrome.runtime.sendMessage({
     type: '...',
