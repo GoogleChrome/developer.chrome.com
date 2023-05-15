@@ -13,17 +13,17 @@ authors:
 
 {% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
 
-In this article, you'll find a technical reference for generating reports for
+This article is a technical reference for generating reports for
 Protected Audience API auction wins, as used in the current iteration of the experimental
 Protected Audience API.
 
 Read the [developer guide](/docs/privacy-sandbox/fledge-api) for the full life
-cycle of Protected Audience API, and refer to the Protected Audience API explainer for an in-depth proposal of
+cycle of the Protected Audience API, and refer to the Protected Audience API explainer for an in-depth proposal of
 [event-level reporting (temporary)](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#5-event-level-reporting-for-now).
 
 Not a developer? Refer to the [Protected Audience API API overview](/docs/privacy-sandbox/fledge).
 
-## What does Protected Audience API report?
+## What does the Protected Audience API report?
 
 There are two available Protected Audience API reports:
 
@@ -98,7 +98,7 @@ reportWin(auctionSignals, perBuyerSignals, sellerSignals, browserSignals) {
 
 {% Aside %}
 
-The current implementation of Protected Audience API in Chrome will warn if `reportWin()` is
+The current implementation of the Protected Audience API in Chrome will warn if `reportWin()` is
 not defined.
 
 {% endAside %}
@@ -148,7 +148,7 @@ be generated.
 
 These methods are available by default in Chrome if
 `chrome://flags/#privacy-sandbox-ads-apis` is enabled. But, if you're running
-Chrome with command line flags to enable Protected Audience API, you'll need to
+Chrome with command line flags to enable the Protected Audience API, you'll need to
 explicitly enable the methods by including the
 `BiddingAndScoringDebugReportingAPI` flag. If the flag is not enabled, the
 methods will still be available but do nothing.
