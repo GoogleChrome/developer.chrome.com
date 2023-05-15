@@ -114,17 +114,17 @@ depending on the use cases you're interested in:
 
 The discussion stage can be highly involved.
 
-For example, [FLEDGE](https://github.com/WICG/turtledove/blob/main/FLEDGE.md)
+For example, [Protected Audience API](https://github.com/WICG/turtledove/blob/main/Protected Audience API.md)
 is a proposal to support interest-based advertising without cross-site
 tracking. With input from privacy advocates and many industry stakeholders,
-FLEDGE has evolved from two previous proposals (PIGIN and TURTLEDOVE). More
+Protected Audience API has evolved from two previous proposals (PIGIN and TURTLEDOVE). More
 than one hundred organizations have joined
 [W3C meetings](https://github.com/WICG/turtledove/issues/88) to help refine the
 current version, plus over
 [200 online discussion threads](https://github.com/WICG/turtledove/issues).
 
 {% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/Rg4lEQVzb1v6CZTyzFTE.png",
-alt="In 2019 we proposed PIGIN, followed by TURTLEDOVE in 2020 and FLEDGE in 2021.",
+alt="In 2019 we proposed PIGIN, followed by TURTLEDOVE in 2020 and Protected Audience API in 2021.",
 width="800", height="169" %}
 
 There have also been more than half a dozen other proposals offered by other
@@ -132,10 +132,10 @@ companies, in the same solution space. Through continued collaboration, we hope
 to define a path forward. 
 
 At the same time, we're starting [developer testing](/docs/privacy-sandbox/fledge/) for the
-initial version of FLEDGE behind a flag in Chrome so developers can get their
+initial version of Protected Audience API behind a flag in Chrome so developers can get their
 hands on it.
 
-Not every proposal will go through such an intense incubation period as FLEDGE
+Not every proposal will go through such an intense incubation period as Protected Audience API
 &ndash; some will move much more quickly &ndash; but there is a lot of
 innovation happening. These are new ideas and it can take a lot of work to get
 them right.
