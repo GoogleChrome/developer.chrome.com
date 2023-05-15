@@ -5,7 +5,7 @@ description: >
   The Storage Standard defines an API for persistent storage and quota estimates, and the platform storage architecture. We're experimenting with an API for making persistent storage eviction under heavy memory pressure more predictable. Try the Storage Buckets API in an origin trial that runs from Chrome 115 to Chrome 118.
 subhead: >
   Optimize persistent storage eviction under heavy memory pressure.
-date: 2021-05-15
+date: 2023-05-15
 # updated: 2021-01-28
 authors:
   - thomassteiner
