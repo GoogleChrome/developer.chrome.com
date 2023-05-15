@@ -139,7 +139,7 @@ Running the Key/Value service in a TEE will not be required until sometime after
 
 ## Fenced frames
 
-[Fenced frames](/docs/privacy-sandbox/fenced-frame/) are a new HTML element that limits communication between the content and the embedder, and is used for rendering content based on cross-site data. Protected Audience API will render content into a fenced frame.
+[Fenced frames](/docs/privacy-sandbox/fenced-frame/) are a new HTML element that limits communication between the content and the embedder, and is used for rendering content based on cross-site data. The Protected Audience API will render content into a fenced frame.
 
 After working closely with various stakeholders and examining the significant effort to accommodate this change, Chrome will not mandate fenced frames until at least 2026 to maintain ecosystem inclusivity,and Chrome will provide significant advanced notice. Until then, if fenced frames are not used, you will need to use an iframe to render the [opaque URN](https://github.com/WICG/fenced-frame/blob/master/explainer/opaque_src.md). Also, it should be noted that sellers could still require the use of Fenced Frames.
 
@@ -156,13 +156,13 @@ around the integration of the
 [Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/) and
 Protected Audience API, especially where fenced frames are involved. 
 
-For event-level reporting with Protected Audience API, we have a proposed set of initial
+For event-level reporting with the Protected Audience API, we have a proposed set of initial
 improvements to make this integration easier which you can learn more about in
 the [explainer](https://github.com/WICG/turtledove/blob/main/Fenced_Frames_Ads_Reporting.md#support-for-attribution-reporting).
 The integration will be available for both fenced frames and iFrames.
 Event-level reporting will be available for testing in Chrome Stable M112+.
 
-For those who need [Attribution Reporting with Protected Audience API](https://github.com/WICG/turtledove/issues/289),
+For those who need [Attribution Reporting with the Protected Audience API](https://github.com/WICG/turtledove/issues/289),
 we are working on more flexible solutions to capture more bidding signals with
 aggregatable reports, and we will publish a proposal once it is ready. 
 
