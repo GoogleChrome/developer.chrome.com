@@ -142,7 +142,7 @@ feature, but the third-party script injecting the token must be evaluated in the
 top-level frame before the third-party iframe that won't have partitioning applied
 is loaded. The `DisableThirdPartySessionStoragePartitioningAfterGeneralPartitioning`
 deprecation trial does not support third-party origin trials as the enrollee
-must have been the top-level site at some point in the lifetime of  given tab. The guide to
+must have been the top-level site at some point in the lifetime of the given tab. The guide to
 [troubleshooting Chrome's origin trials](/docs/web-platform/origin-trial-troubleshooting/)
 provides a full checklist for ensuring your token is correctly configured.
 
