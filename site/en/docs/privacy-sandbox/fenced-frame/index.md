@@ -77,7 +77,7 @@ other tracking mechanisms. For example:
    access to unpartitioned cross-site data in a secure environment.
 
 Let's consider how fenced frames could work with the
-[Protected Audience API](/docs/privacy-sandbox/fledge/) proposal. With Protected Audience API, a user's interests
+[Protected Audience API](/docs/privacy-sandbox/fledge/) proposal. With the Protected Audience API, a user's interests
 are registered on an advertiser's site in [interest
 groups](/docs/privacy-sandbox/fledge/#interest-group-detail), along with ads that
 may be of interest to the user. Then, on a separate site (known as a
@@ -187,7 +187,7 @@ Potential APIs are currently in discussion.
 Current candidates for this combination include:
 
 * From the [TURTLEDOVE API](https://github.com/WICG/turtledove) family (which is
-   the basis for Protected Audience API), fenced frames could work with [Conversion Lift
+   the basis for the Protected Audience API), fenced frames could work with [Conversion Lift
    Measurement](https://github.com/w3c/web-advertising/blob/main/support_for_advertising_use_cases.md#conversion-lift-measurement)
    using [Shared Storage](https://github.com/pythagoraskitty/shared-storage).
 * Another option is to allow fenced frames to be
@@ -249,7 +249,7 @@ Supports-Loading-Mode: fenced-frame
 
 ### Shared Storage context
 
-You may want to use Private Aggregation to report event-level data in fenced frames associated with contextual data from the embedder. By using the `fencedFrameConfig.setSharedStorageContext()` method, you can pass some contextual data, such as an event ID, from the embedder to shared storage worklets initiated by Protected Audience API.
+You may want to use Private Aggregation to report event-level data in fenced frames associated with contextual data from the embedder. By using the `fencedFrameConfig.setSharedStorageContext()` method, you can pass some contextual data, such as an event ID, from the embedder to shared storage worklets initiated by the Protected Audience API.
 
 In the following example, we store some data available on the embedder page and some data available in the fenced frame in shared storage. From the embedder page, a mock event ID is set as the shared storage context. From the fenced frame, the frame event data is passed in.
 
