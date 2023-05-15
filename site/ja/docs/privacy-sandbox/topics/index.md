@@ -28,11 +28,11 @@ Topics は現在、Chrome のどのバージョンでもデフォルトでは利
 
 Topics API のデモは [topics-demo.glitch.me](https://topics-demo.glitch.me/) にあり、単一ユーザー向けに API を試してデバッグする方法について説明されています。
 
-You can also run the Topics [colab](/docs/privacy-sandbox/topics/colab/) to try out the Topics [classifier model](/docs/privacy-sandbox/topics/topic-classification/#classifier-model).
+また、Topics [colab](/docs/privacy-sandbox/topics/colab/) を実行して、Topics の[分類器モデル](/docs/privacy-sandbox/topics/topic-classification/#classifier-model)を試すこともできます。
 
 ### オリジントライアルで Topics をテストする {: #origin-trial}
 
-A Privacy Sandbox Relevance and Measurement [origin trial](/docs/privacy-sandbox/unified-origin-trial/) has been made available in Chrome Beta 101.0.4951.26 and above on desktop for the Topics, [FLEDGE](/docs/privacy-sandbox/fledge/), and [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) APIs.
+Topics、[FLEDGE](/docs/privacy-sandbox/unified-origin-trial/)、および [アトリビューション レポート](/docs/privacy-sandbox/fledge/)の API に関するプライバシーサンドボックスの関連性と測定の[オリジントライアル](/docs/privacy-sandbox/attribution-reporting/)が、デスクトップ版 Chrome Beta 101.0.4951.26 以降で利用できるようになりました。
 
 ## Get and set topics {: #epoch}
 
@@ -97,7 +97,7 @@ const creative = await response.json();
 
 [リクエスト](https://developer.mozilla.org/docs/Web/API/Request/headers)ヘッダーと[レスポンス](https://developer.mozilla.org/docs/Web/API/Response/headers)ヘッダーを使用してトピックにアクセスし、それを観測できます。ヘッダーは、JavaScript API を呼び出すよりもはるかに効率的な場合があります。
 
-Topics can be accessed from the `Sec-Browsing-Topics` header of a [`fetch()`](https://developer.mozilla.org/docs/Web/API/fetch) or [`XHR`](https://developer.mozilla.org/docs/Glossary/XHR_(XMLHttpRequest)) request.
+トピックには、`fetch()` または <code>XHR</code> リクエストの `Sec-Browsing-Topics` ヘッダーからアクセスできます。
 
 {% Aside %} `XHR` リクエストにトピックヘッダーを含めることは一時的にのみ利用可能であり、サポートは今後削除される予定です。{% endAside %}
 
