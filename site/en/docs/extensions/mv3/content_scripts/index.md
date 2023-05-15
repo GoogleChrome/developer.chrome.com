@@ -190,7 +190,7 @@ methods in the [`chrome.scripting` namespace](/docs/extensions/reference/scripti
 [manifest.json][doc-manifest]. The Scripting API also allows extension developers
 to:
 
-- [registering][api-register-cs] content scripts.
+- [Register][api-register-cs] content scripts.
 - [Get a list of][api-get-registered-cs] registered content scripts.
 - [Update][api-update-cs] the list of registered content scripts.
 - [Remove][api-unregister-cs] registered content scripts.
