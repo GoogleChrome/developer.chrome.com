@@ -3,8 +3,8 @@ layout: layouts/blog-post.njk
 title: Chrome による First-Party Sets 提案の展開
 subheading: ユーザーのプライバシーと開発者のウェブ相互運用性を向上させる First-Party Sets の進化。
 description: ユーザーのプライバシーと開発者のウェブ相互運用性を向上させる First-Party Sets の進化。
-date: 2023-02-13
-updated: 2023-02-16
+date: '2023-02-13'
+updated: '2023-02-16'
 thumbnail: image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/TxiweGXhJ3d2RTsH8sZh.png
 alt: First-Party Sets を示す図。
 tags:
