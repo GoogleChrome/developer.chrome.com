@@ -3,8 +3,8 @@ layout: layouts/doc-post.njk
 title: API のステータスと機能のリリース
 subhead: Chrome プラットフォームのステータス、リソース、機能リリースのタイムラインをご覧ください。
 description: Chrome プラットフォームのステータス、リソース、機能リリースのタイムラインをご覧ください。
-date: 2021-05-18
-updated: 2023-03-16
+date: '2021-05-18'
+updated: '2023-03-16'
 authors:
   - alexandrawhite
 ---
@@ -13,7 +13,7 @@ authors:
 
 提案または API に関する最新情報を確認するには、それぞれの概要ドキュメントと[プライバシー サンドボックス タイムライン](https://privacysandbox.com/open-web/)にアクセスしてください。
 
-## Attribution Reporting
+## アトリビューション レポート
 
 {% Partial 'privacy-sandbox/timeline/attribution-reporting.njk' %}
 
@@ -49,7 +49,7 @@ authors:
 
 {% Partial 'privacy-sandbox/timeline/fledge-features.njk' %}
 
-## IP の保護
+## IP 保護
 
 {% Partial 'privacy-sandbox/timeline/ip-protection.njk' %}
 
