@@ -253,9 +253,10 @@ function logPrerenders() {
   // Only log prerender attempts if supported
   // and not in datasaver mode
   if (
+    // prettier-ignore
     !(
-      HTMLScriptElement.supports &&
-      HTMLScriptElement.supports('speculationrules')
+      // @ts-ignore
+      HTMLScriptElement.supports && HTMLScriptElement.supports('speculationrules')
     ) ||
     navigator.connection?.saveData
   ) {

@@ -19,7 +19,7 @@ declare global {
     inert: boolean;
   }
   export interface HTMLScriptElement extends HTMLScriptElement {
-    supports(type: string): boolean;
+    supports: (type:string) => boolean;
   }
 }
 
