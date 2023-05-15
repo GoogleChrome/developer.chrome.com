@@ -3,8 +3,8 @@ layout: layouts/doc-post.njk
 title: プライバシーサンドボックスとは？
 subhead: サードパーティ Cookie やその他のトラッキングメカニズムを使用せずに、クロスサイトのユースケースを満たすための一連の提案です。
 description: 内容、目的、および貢献方法について。
-date: 2021-05-18
-updated: 2023-02-27
+date: '2021-05-18'
+updated: '2023-02-27'
 authors:
   - samdutton
   - alexandrawhite
@@ -36,9 +36,9 @@ Chrome やその他のエコシステムの関係者は、これまでに 30 件
 - [**CHIPS**](/docs/privacy-sandbox/chips/): トップレベル サイトごとに個別の Cookie ジャーを使用して、開発者がパーティション化されたストレージに Cookie をオプトインできるようにします。
 - [**First-Party Sets**](/docs/privacy-sandbox/first-party-sets): 同じエンティティが所有する関連ドメイン名が、同じファーストパーティに属していることを宣言できるようにします。
 - [**共有ストレージ**](/docs/privacy-sandbox/shared-storage/): サイトがパーティション化されていないクロスサイトデータを保存してアクセスできる汎用 API を作成します。このデータは、漏えいを防ぐために安全な環境で読み取る必要があります。
-- [**ストレージパーティショニング**](https://github.com/privacycg/storage-partitioning): `localStorage` または Cookie など、あらゆる形態の[ユーザーエージェントステート](https://github.com/privacycg/storage-partitioning#user-agent-state)を、単一のオリジンまたはサイトではなく、トップレベルサイトと読み込まれるリソースのオリジンによってダブルキーで使用できるようにします。
+- [**ストレージパーティション**](https://github.com/privacycg/storage-partitioning): `localStorage` または Cookie など、あらゆる形態の[ユーザーエージェントステート](https://github.com/privacycg/storage-partitioning#user-agent-state)を、単一のオリジンまたはサイトではなく、トップレベルサイトと読み込まれるリソースのオリジンによってダブルキーで使用できるようにします。
 - [**Fenced Frames**](/docs/privacy-sandbox/fenced-frame): クロスサイトデータを共有することなく、ページにコンテンツを安全に埋め込みます。
-- [**ネットワークの状態のパーティショニング**](https://github.com/MattMenke2/Explainer---Partition-Network-State): リソースの再利用の際に一致する必要のあるネットワークパーティションキーをリクエストごとに提供し、ブラウザネットワークリソースがファーストパーティのコンテキストで共有されないようにします。
+- [**ネットワークの状態のパーティション**](https://github.com/MattMenke2/Explainer---Partition-Network-State): リソースの再利用の際に一致する必要のあるネットワークパーティションキーをリクエストごとに提供し、ブラウザネットワークリソースがファーストパーティのコンテキストで共有されないようにします。
 - [**Federated Credential Management（FedCM）**](/docs/privacy-sandbox/fedcm/): ユーザーが明示的に同意しない限り、ユーザーのメールアドレスやその他の識別情報をサードパーティのサービスやウェブサイトと共有することなく、ID 連携をサポートします。
 
 ### 関連するコンテンツと広告の表示
@@ -48,7 +48,7 @@ Chrome やその他のエコシステムの関係者は、これまでに 30 件
 
 ### デジタル広告の測定
 
-- [**Attribution Reporting**{/a0: 広告のクリックまたは広告の表示をコンバージョンと関連付けます。アドテックは、イベントレベルまたは](/docs/privacy-sandbox/attribution-reporting)[要約レポート](/docs/privacy-sandbox/summary-reports)を生成できます。
+- [**アトリビューション レポート**](/docs/privacy-sandbox/attribution-reporting): 広告のクリックまたは広告の表示をコンバージョンと関連付けます。アドテックは、イベントレベルまたは[要約レポート](/docs/privacy-sandbox/summary-reports)を生成できます。
 - [**Private Aggregation API**](/docs/privacy-sandbox/private-aggregation/): クロスサイトデータを使用してノイズを含む要約レポートを生成します。
 
 ### 隠されたトラッキングの防止
@@ -56,11 +56,11 @@ Chrome やその他のエコシステムの関係者は、これまでに 30 件
 - [**ユーザー エージェントの削減と User-Agent Client Hints**](/docs/privacy-sandbox/user-agent/): 受動的に共有されるブラウザー データを制限して、フィンガープリンティングにつながる機密情報の量を減らします。クライアント ヒントを使用すると、開発者は、ユーザーのデバイスまたは状態について必要な情報のみを積極的に要求できます。
 - [**IP 保護**](/docs/privacy-sandbox/ip-protection/): IP アドレスが追跡に使用されないように保護することで、ユーザーのプライバシーを向上させます。
 - [**バウンス トラッキングの軽減策**](/docs/privacy-sandbox/bounce-tracking-mitigations/): コンテキスト全体で人を認識するバウンス トラッキングの機能を削減または排除する提案。
-- [**プライバシー予算**](/docs/privacy-sandbox/privacy-budget/):<br>隠されたトラッキングを防ぐために、サイトに公開される個々のユーザー データの量を制限する提案です。
+- [**プライバシー バジェット**](/docs/privacy-sandbox/privacy-budget/):<br>隠されたトラッキングを防ぐために、サイトに公開される個々のユーザー データの量を制限する提案です。
 
 ### ウェブのスパムや詐欺への対抗
 
-- [**Private State Tokens**](/docs/privacy-sandbox/trust-tokens): ウェブサイトが、ある閲覧コンテキストから別の閲覧コンテキスト（サイト間など）に限定された量の情報を伝達できるようにして、受動的なトラッキングを行わずに詐欺に対抗できるようにします。
+- [**プライベートステートトークン**](/docs/privacy-sandbox/trust-tokens): ウェブサイトが、ある閲覧コンテキストから別の閲覧コンテキスト（サイト間など）に限定された量の情報を伝達できるようにして、受動的なトラッキングを行わずに詐欺に対抗できるようにします。
 
 ## プライバシー サンドボックスは誰が担当していますか？
 
