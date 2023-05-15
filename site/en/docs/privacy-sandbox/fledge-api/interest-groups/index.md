@@ -19,7 +19,7 @@ In this article, you'll find a technical reference for interest groups, as used
 in the current iteration of the experimental Protected Audience API.
 
 Read the [developer guide](/docs/privacy-sandbox/fledge-api) for the full life
-cycle of Protected Audience API, and refer to the Protected Audience API explainer for an in-depth proposal of
+cycle of the Protected Audience API, and refer to the Protected Audience API explainer for an in-depth proposal of
 how [browsers record interest groups](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#1-browsers-record-interest-groups).
 
 Not a developer? Refer to the
@@ -79,7 +79,7 @@ permissions policy that allows calls to `joinAdInterestGroup()` from
 cross-origin iframes.
 
 {% Aside %}
-The default in the current implementation of Protected Audience API is to allow calls to
+The default in the current implementation of the Protected Audience API is to allow calls to
 `joinAdInterestGroup()` from anywhere in a page, even from cross-origin iframes.
 
 In the future, once site owners have had time to adjust their permissions
@@ -129,7 +129,7 @@ previously stored values.
 
 All URLs used as parameters for Protected Audience API methods must be from secure origins:
 all resources must be served over HTTPS URLs. [How to use HTTPS for local development](https://web.dev/how-to-use-local-https/)
-explains how to do this when running Protected Audience API locally.
+explains how to do this when running the Protected Audience API locally.
 
 In addition, `biddingLogicUrl`, `decisionLogicUrl`, and `trustedBiddingSignals` 
 require an `X-Allow-FLEDGE: true` HTTP response header.
@@ -201,7 +201,7 @@ The remaining properties are optional:
     <p id="first-ref"><sup>1</sup> The `biddingLogicUrl` and `ads` properties are optional, but
     required to participate in an auction. There may be use cases for creating an interest group without these properties: for example, an interest group owner might want to add a browser to an interest group for a campaign that isn't running yet, or for some other future use, or they may temporarily have run out of advertising budget.</p>
 
-    <p id="second-ref"><sup>2</sup> In the current implementation of Protected Audience API, `biddingLogicUrl`,
+    <p id="second-ref"><sup>2</sup> In the current implementation of the Protected Audience API, `biddingLogicUrl`,
     `biddingWasmHelperUrl`, `dailyUpdateUrl` and `trustedBiddingSignalsUrl` must
     have the same origin as owner. That may not be a long-term constraint, and
     the `ads` and `adComponents` URLs have no such constraint.</p>
