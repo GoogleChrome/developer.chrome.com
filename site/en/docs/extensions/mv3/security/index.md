@@ -40,6 +40,11 @@ Limiting an extensions privileges limits what a potential attacker can exploit.
 
 ### Cross-origin fetch() {: #xhr }
 
+{% Aside 'warning' %}
+In Manifest V3, `XMLHttpRequest` is not supported in Service Workers.
+Please consider using its modern replacement, `fetch()`.
+{% endAside %}
+
 An extension can only use `fetch()` or [XMLHttpRequest][6] to get resources from itself and from domains
 specified in the permissions.
 
