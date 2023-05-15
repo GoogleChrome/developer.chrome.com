@@ -534,7 +534,7 @@ Set whether the url bar should hide as the user scrolls down on the page.
 
 ### setEngagementSignalsCallback()
 
-Sets an `[EngagementSignalsCallback](https://developer.android.com//reference/androidx/browser/customtabs/EngagementSignalsCallback)` to receive callbacks for events related to the user's engagement with webpage within the tab.
+Sets an [`EngagementSignalsCallback`](https://developer.android.com//reference/androidx/browser/customtabs/EngagementSignalsCallback) to receive callbacks for events related to the user's engagement with webpage within the tab.
 
 {% AndroidBrowserSupportTable
  _method="setEngagementSignalsCallback",
