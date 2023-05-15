@@ -13,10 +13,10 @@ authors:
 
 {% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
 
-It's in everyone's best interest to make sure Protected Audience API operates efficiently.
+It's in everyone's best interest to make sure the Protected Audience API operates efficiently.
 
 * People browsing the web want sites to load quickly. This means developers
-  should build with Protected Audience API efficiently as to not overutilize limited device
+  should build with the Protected Audience API efficiently as to not overutilize limited device
   resources, like compute or network resources, that are necessary to load
   sites and their embedded ads.
 * Publishers want their sites to load quickly, providing users an efficient and
@@ -25,7 +25,7 @@ It's in everyone's best interest to make sure Protected Audience API operates ef
 * Advertisers and ad techs want their ads to display quickly to provide the
   greatest utility.
 
-This document outlines some best practices for Protected Audience API implementation, to ensure
+This document outlines some best practices for a Protected Audience API implementation, to ensure
 your site operates at maximum efficiency.
 
 ## Buyer (bidder) best practices
@@ -55,13 +55,13 @@ environment, and parsing and loading the `generateBid()` code.
 
 * Interest groups that represent users who aren't the current target of and
   active advertising campaign should have empty ad creative lists. This prevents
-  Protected Audience API from executing `generateBid()` for interest groups without relevant
+  the Protected Audience API from executing `generateBid()` for interest groups without relevant
   ads.
 * Combining similar interest groups will decrease the number of times
   `generateBid()` must be run. An interest group's `userBiddingSignals`
   property can be used to store additional metadata about the user, so fewer
   interest groups doesn't have to mean less effective targeting.
-* Currently, Protected Audience API supports seller-specified limits on the numbers of interest
+* Currently, the Protected Audience API supports seller-specified limits on the numbers of interest
   groups, and an API for buyers to specify the relative priority of their
   interest groups. These limits can be used to significantly reduce the number
   of bidding scripts to run.
@@ -132,7 +132,7 @@ producing viable bids or excessive bidding with unapproved creatives.
 
 Bidding scripts that take excessive time can slow the Protected Audience API auction down for everyone involved.
 
-* **Use timeouts**. Protected Audience API includes some default time-outs for bidding scripts,
+* **Use timeouts**. The Protected Audience API includes some default time-outs for bidding scripts,
   but `perBuyerTimeouts` can be adjusted to ensure that no bidders
   participating in the auction are using excessive computation time. 
   * Consider participating in future timeouts and limits discussions, as
