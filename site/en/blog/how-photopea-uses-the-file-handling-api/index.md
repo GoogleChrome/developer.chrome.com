@@ -3,8 +3,8 @@ layout: 'layouts/blog-post.njk'
 title: 'How the image editing app Photopea uses the File Handling API to let users open files from their file explorer'
 subhead: >
   The File Handling API allows web applications to register themselves as a file handler for file formats the application can support. Learn how the image editing application Photopea makes use of this API.
-date: 2023-01-31
-# updated: 2023-01-31
+date: 2023-05-15
+# updated: 2023-05-15
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/IRV9bhPXJnRUXrFWfYE5.png
 alt: Photopea logo pattern
 authors:
