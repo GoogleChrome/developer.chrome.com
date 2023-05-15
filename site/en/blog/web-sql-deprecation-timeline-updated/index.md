@@ -6,7 +6,7 @@ description: >
 subhead: >
   The current target version to remove Web SQL is Chromium 119.
 date: 2023-05-15
-updated: 2023-05-15
+# updated: 2023-05-15
 authors:
   - thomassteiner
 tags:
