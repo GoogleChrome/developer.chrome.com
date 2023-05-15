@@ -1,10 +1,10 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Protected Audience API: experiment and participate'
+title: 'The Protected Audience API: experiment and participate'
 subhead: >
   Quick guide to implement and test the API. Set up privacy-preserving ad auctions to serve remarketing and custom audience use cases.
 description: >
-  Protected Audience API is a Privacy Sandbox proposal to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites. The API enables on-device auctions by the browser, to choose relevant ads from websites the user has previously visited.
+  The Protected Audience API is a Privacy Sandbox proposal to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites. The API enables on-device auctions by the browser, to choose relevant ads from websites the user has previously visited.
 date: 2022-03-31
 updated: 2022-08-12
 authors:
@@ -63,7 +63,7 @@ about **your implementation**, about the **demo**, or about the
 
 *  [Open a new issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/issues/new/choose)
    on the Privacy Sandbox Dev Support repository. Make sure to select the
-   Issue template for Protected Audience API.
+   Issue template for the Protected Audience API.
 *  Raise an issue on the [demo code repo on
    GitHub](https://github.com/JackJey/fledge-demo).
 *  For more general questions about how to meet your **use cases** with the
@@ -88,7 +88,7 @@ Like other Privacy Sandbox proposals, this API is documented and discussed publi
 *  Join the conversation about [existing issues](https://github.com/WICG/turtledove/issues).
 *  [Open a new issue](https://github.com/WICG/turtledove/issues/new) to ask a question, propose a
 feature, or discuss a use case.
-*  [Join the scheduled calls for Protected Audience API](https://github.com/WICG/turtledove/issues/88) (every
+*  [Join the scheduled calls for the Protected Audience API](https://github.com/WICG/turtledove/issues/88) (every
   second week). Everyone is welcome to join&mdash;to participate, first make sure to [join the
   WICG](https://www.w3.org/community/wicg/). You can actively participate or just listen in!
 
