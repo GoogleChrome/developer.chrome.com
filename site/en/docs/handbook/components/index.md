@@ -378,9 +378,7 @@ const config = {
 If you want comments that are stripped out during rendering, you can place your comment text between {&num; and  &num;}.
 
 ```md
-{% raw %}
-{% your comment here %}
-{% endraw %}
+{% raw %}{% your comment here %}{% endraw %}
 ```
 
 ## Compare
