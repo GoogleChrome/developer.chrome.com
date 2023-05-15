@@ -7,6 +7,7 @@ authors:
   - arichiv
   - kyraseevers
 date: 2023-03-09
+updated: 2023-05-16
 tags:
   - privacy
 ---
@@ -96,7 +97,7 @@ Example:
 Sites should audit their usage of unpartitioned storage, service worker, and
 communication APIs in third-party contexts, and, if needed, prepare for
 third-party partitioning before these deprecation trials expire. **The intent is
-to expire these deprecation trials with Chrome 123, ending on May 2, 2024.**
+to expire these deprecation trials with the release of Chrome 127 on August 6, 2024.**
 
 To instruct the browser to unpartition storage in third-party content embedded
 on its pages, top-level sites need to register for one or both of the
@@ -135,13 +136,13 @@ deprecation trials. For more detailed instructions, visit
 1.  To stop participating in the deprecation trial simply remove the header
     you added in step 2.
 
-These deprecation trials do not support the
+The `DisableThirdPartyStoragePartitioning` deprecation trial does support the
 [third-party origin trials](/docs/web-platform/third-party-origin-trials/)
-feature. The enrollee must be the top-level site for
-`DisableThirdPartyStoragePartitioning`, and for
-`DisableThirdPartySessionStoragePartitioningAfterGeneralPartitioning` the
-enrollee must have been the top-level site at some point in the lifetime of a
-given tab. The guide to
+feature, but the third-party script injecting the token must be evaluated in the
+top-level frame before the third-party iframe that won't have partitioning applied
+is loaded. The `DisableThirdPartySessionStoragePartitioningAfterGeneralPartitioning`
+deprecation trial does not support third-party origin trials as the engollee
+must have been the top-level site at some point in the lifetime of  given tab. The guide to
 [troubleshooting Chrome's origin trials](/docs/web-platform/origin-trial-troubleshooting/)
 provides a full checklist for ensuring your token is correctly configured.
 
