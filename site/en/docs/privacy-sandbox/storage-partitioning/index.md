@@ -24,7 +24,7 @@ tags:
 
 The feature is rolling out to a small percentage of users starting in Chrome 113. 
 Depending on the stability and compatibility, it will be made fully available in
-Chrome Stable by the end of June 2023. Testing third-party storage partitioning now
+Chrome Stable mid-year 2023. Testing third-party storage partitioning now
 and filing bugs will help uncover any potential issues and resolve them before
 the full rollout.
  
