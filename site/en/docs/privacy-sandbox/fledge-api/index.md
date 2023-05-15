@@ -17,7 +17,7 @@ authors:
 
 {% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
 
-For those new to Protected Audience API, read the [Protected Audience API overview](/docs/privacy-sandbox/fledge)
+For those new to the Protected Audience API, read the [Protected Audience API overview](/docs/privacy-sandbox/fledge)
 for a high-level explanation of the proposal.
 
 This post is written for developers as a technical reference for the most
@@ -29,18 +29,18 @@ Protected Audience API deployment is available, as are
 
 {% Partial 'privacy-sandbox/timeline/fledge.njk' %}
 
-## What is Protected Audience API? {: #what}
+## What is the Protected Audience API? {: #what}
 
-Protected Audience API is a [Privacy Sandbox](/docs/privacy-sandbox/overview) proposal to serve
+The Protected Audience API is a [Privacy Sandbox](/docs/privacy-sandbox/overview) proposal to serve
 [remarketing](/docs/privacy-sandbox/fledge#remarketing) and custom audience use
 cases, designed so that it cannot be used by third parties to track user
 browsing behavior across sites. The API enables on-device auctions by
 the browser, to choose relevant ads for websites the user has previously visited.
 
-Protected Audience API is the first experiment to be implemented in Chromium within the
+The Protected Audience API is the first experiment to be implemented in Chromium within the
 [TURTLEDOVE](https://github.com/WICG/turtledove) family of proposals.
 
-## Try Protected Audience API {: #try-fledge}
+## Try the Protected Audience API {: #try-fledge}
 
 ### Available API reference {: #api-reference }
 
@@ -51,7 +51,7 @@ This document serves as an overview of the Protected Audience API. If you're loo
   [`runAdAuction()`](/docs/privacy-sandbox/fledge-api/ad-auction)
 * Buyers guide to [`reportWin()`](/docs/privacy-sandbox/fledge-api/reports) and
   sellers guide to [`reportResult()`](/docs/privacy-sandbox/fledge-api/reports)
-* [Troubleshoot Protected Audience API](/docs/privacy-sandbox/fledge-api/troubleshoot)
+* [Troubleshoot the Protected Audience API](/docs/privacy-sandbox/fledge-api/troubleshoot)
 
 You can also read [Protected Audience API ad auction latency best practices](/docs/privacy-sandbox/fledge-api/latency).
 
@@ -125,7 +125,7 @@ trial feature is available before attempting to use it.
 
 ### Test with `chrome://flags` or feature flags {: #flags}
 
-You can test Protected Audience API for a single user in Chrome Beta 101.0.4951.26 and above on
+You can test the Protected Audience API for a single user in Chrome Beta 101.0.4951.26 and above on
 desktop:
 
 * Enable `chrome://flags/#privacy-sandbox-ads-apis`.
@@ -156,7 +156,7 @@ Include the `BiddingAndScoringDebugReportingAPI` flag to enable
 
 {% Aside %}
 
-This is an in-progress version of Protected Audience API for early testing. It shouldn't be
+This is an in-progress version of the Protected Audience API for early testing. It shouldn't be
 considered complete or indicative of the final implementation. Protected Audience API progress
 and status are discussed in the regular WICG meetings.
 
@@ -183,7 +183,7 @@ Read more about feature support and constraints in the
 
 ### Interest group permissions
 
-The default for the current implementation of Protected Audience API is to allow calling
+The default for the current implementation of the Protected Audience API is to allow calling
 [`joinAdInterestGroup()`](/docs/privacy-sandbox/fledge-api/interest-groups)
 from anywhere in a page, even from cross-domain iframes.
 
@@ -249,7 +249,7 @@ available for testing in Chrome run from the command line.
 
 {% endAside %}
 
-Features of Protected Audience API will be added over time as work on implementation progresses.
+Features of the Protected Audience API will be added over time as work on implementation progresses.
 
 ### 1. A user visits an advertiser site
 
@@ -379,7 +379,7 @@ keys.
 * Read **[open sourcing the Protected Audience API Key/Value service](/blog/open-sourcing-fledge-key-value-service/)**.
 
 {% Aside 'gotchas' %}
-While in the initial experimental phase of testing Protected Audience API,
+While in the initial experimental phase of testing the Protected Audience API,
 `trustedBiddingSignalsUrl` must have the same origin as the interest group
 owner. Learn more in [Bring Your Own Server](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#:~:text=bring%20your%20own%20server).
 {% endAside %}
@@ -448,14 +448,14 @@ how this might work, see [Fenced Frames Ads Reporting](https://github.com/WICG/t
 {% Details %}
 
 {% DetailsSummary %}
-### What is the difference between Protected Audience API and TURTLEDOVE?
+### What is the difference between the Protected Audience API and TURTLEDOVE?
 
 {% endDetailsSummary %}
 
-Protected Audience API is the first experiment to be implemented in Chromium within the
+The Protected Audience API is the first experiment to be implemented in Chromium within the
 TURTLEDOVE family of proposals.
 
-Protected Audience API follows TURTLEDOVE's high-level principles. Some online advertising has
+The Protected Audience API follows TURTLEDOVE's high-level principles. Some online advertising has
 been based on showing an ad to a potentially-interested person who has
 previously interacted with the advertiser or ad network. Historically this has
 worked by the advertiser recognizing a specific person as they browse across
@@ -488,11 +488,11 @@ modifications to better served the developers who would be using the API:
    Microsoft's proposal for a TURTLEDOVE-like ad service that relies on a proxy
    server running in a TEE between the browser and the ad tech providers, to
    anonymize ad requests and enforce privacy
-   properties.  Protected Audience API has not adopted this proxying model.  We are bringing
-   the JavaScript APIs for PARAKEET and Protected Audience API into alignment, in support of
+   properties. The Protected Audience API has not adopted this proxying model.  We are bringing
+   the JavaScript APIs for PARAKEET and the Protected Audience API into alignment, in support of
    future work to further combine the best features of both proposals.
 
-Protected Audience API does not yet prevent a website's ad network from learning which ads a person sees. We expect to modify the API to become more private over time.
+The Protected Audience API does not yet prevent a website's ad network from learning which ads a person sees. We expect to modify the API to become more private over time.
 
 {% endDetails %}
 
@@ -523,14 +523,14 @@ enabling or disabling the top-level setting in
 `chrome://settings/privacySandbox`.
 
 During initial testing, people will be able to use this high-level Privacy
-Sandbox setting to opt-out of Protected Audience API. Chrome plans to allow users to see and
+Sandbox setting to opt-out of the Protected Audience API. Chrome plans to allow users to see and
 manage the list of interest groups that they have been added to across the web
 sites they have visited. As with the Privacy Sandbox technologies themselves,
 user settings may evolve with feedback from users, regulators and others.
 
 We'll continue to update the available settings in Chrome as the Protected Audience API
 proposal progresses, [based on tests and feedback](/docs/privacy-sandbox/proposal-lifecycle/#collaborate).
-In the future, we plan to offer more granular settings to manage Protected Audience API and
+In the future, we plan to offer more granular settings to manage the Protected Audience API and
 associated data.
 
 API callers can't access group membership when users browse in Incognito mode,
@@ -554,12 +554,12 @@ documentation:
 *  **Developer support**: Ask questions and join discussions on the
    [Privacy Sandbox Developer Support 
    repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
-   Select the issue template for Protected Audience API.
+   Select the issue template for the Protected Audience API.
 * **Chrome implementation**: for bugs or issues with Chrome's implementation of
   the Protected Audience API, you can [view existing issues](https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EInterestGroups)
   or [raise a new issue](https://crbug.com/new).
 
-For more general questions about meeting your needs with Protected Audience API, 
+For more general questions about meeting your needs with the Protected Audience API, 
 [file an issue on the proposal repository](https://github.com/WICG/turtledove/issues/new).
 You can also discuss industry use cases in the W3C's
 [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants).
@@ -569,7 +569,7 @@ to share feedback privately with the Chrome team outside of public forums.
 
 #### Opt-out {: #opt-out}
 
-Want to opt-out of Protected Audience API? Learn how to
+Want to opt-out of the Protected Audience API? Learn how to
 [block access to the Protected Audience API](/docs/privacy-sandbox/fledge-api/opt-out/),
 as a site owner or an individual user.
 
@@ -582,7 +582,7 @@ as a site owner or an individual user.
   account](https://docs.github.com/get-started/signing-up-for-github/signing-up-for-a-new-github-account).
 - To get overall updates on the Privacy Sandbox, subscribe to the RSS feed
   [Progress in the Privacy Sandbox](/tags/progress-in-the-privacy-sandbox/).
-- [Join the scheduled calls for Protected Audience API](https://github.com/WICG/turtledove/issues/88)
+- [Join the scheduled calls for the Protected Audience API](https://github.com/WICG/turtledove/issues/88)
   (every   second week). Everyone is welcome to join&mdash;to participate,
   first make sure to [join the WICG](https://www.w3.org/community/wicg/). You
   can actively participate or just listen in!
