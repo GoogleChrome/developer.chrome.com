@@ -23,10 +23,10 @@ authors:
 
 ## Who is this article for?
 
-This article covers the basics of Protected Audience API and explains some underlying
+This article covers the basics of the Protected Audience API and explains some underlying
 concepts, but doesn't go into much technical detail.
 
-* If you work in **advertising or ad tech**, you'll get an overview of [how Protected Audience API works](#overview).
+* If you work in **advertising or ad tech**, you'll get an overview of [how the Protected Audience API works](#overview).
 * If you're a **developer or software engineer**, the [Protected Audience API Developer Guide](/docs/privacy-sandbox/fledge-api) provides more in-depth technical detail about the proposal and the [Intent to prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI)
   offers the latest conversation about Protected Audience API status in the browser.
 * [The Protected Audience API demo](/docs/privacy-sandbox/fledge-api#demo) provides a walkthrough of a basic Protected Audience API deployment.
@@ -37,28 +37,28 @@ Refer to the [glossary](/docs/privacy-sandbox/glossary/) for terms used across P
 
 At the end of this article is a link to [engage and share feedback](#engage).
 
-## What is Protected Audience API? {: #what}
+## What is the Protected Audience API? {: #what}
 
-Protected Audience API is a [Privacy Sandbox](/docs/privacy-sandbox/overview) proposal to serve
+The Protected Audience API is a [Privacy Sandbox](/docs/privacy-sandbox/overview) proposal to serve
 [remarketing](/docs/privacy-sandbox/glossary/#remarketing) and custom audience
 use cases, designed so third parties cannot track user browsing behavior across sites.
 
 The API enables on-device auctions by the browser, to choose relevant ads from
 websites the user has previously visited.
 
-Protected Audience API is the first experiment to be implemented in Chromium within the
+The Protected Audience API is the first experiment to be implemented in Chromium within the
 [TURTLEDOVE](https://github.com/WICG/turtledove) family of proposals. The
 [Privacy Sandbox timeline](https://privacysandbox.com/timeline) provides implementation timing
-information for Protected Audience API and other Privacy Sandbox proposals.
+information for the Protected Audience API and other Privacy Sandbox proposals.
 
-### How does Protected Audience API differ from Turtledove?
+### How does the Protected Audience API differ from Turtledove?
 
-The differences between Protected Audience API and Turtledove pertain mostly to separation of the on-device role
-of the ad buyer and seller. The sections below explain how Protected Audience API works.
+The differences between the Protected Audience API and Turtledove pertain mostly to separation of the on-device role
+of the ad buyer and seller. The sections below explain how the Protected Audience API works.
 
 ### Protected Audience API in one minute {: #overview}
 
-For a more in-depth overview of Protected Audience API, read the
+For a more in-depth overview of the Protected Audience API, read the
 [Protected Audience API developer guide](/docs/privacy-sandbox/fledge-api/).
 
 <figure class="w-figure">
@@ -69,7 +69,7 @@ For a more in-depth overview of Protected Audience API, read the
   </figcaption>
 </figure>
 
-Protected Audience API uses [interest groups](#interest-group-detail) to enable sites to
+The Protected Audience API uses [interest groups](#interest-group-detail) to enable sites to
 display ads that are relevant to their users.
 
 For example, when a user visits a website that wants to advertise its products,
@@ -95,7 +95,7 @@ There are other use cases for interest groups; see the [examples of owners and t
 Later, when the user visits a site that sells ad space, the ad space seller
 (most likely the site's 
 [SSP](/docs/privacy-sandbox/glossary/#ssp), or the site itself) can use
-Protected Audience API to run an ad auction to select the most appropriate ads to display to the user. The seller
+the Protected Audience API to run an ad auction to select the most appropriate ads to display to the user. The seller
 calls the `navigator.runAdAuction()` function, which provides a list of interest group owners who are invited to bid.
 
 Bidding code is only run for interest groups that the browser is a member of,
@@ -123,7 +123,7 @@ report their wins (`reportWin()`).
 
 Learn how to [generate reports of the Protected Audience API auction results](/docs/privacy-sandbox/fledge-api/reports/).
 
-## Why do we need Protected Audience API? {: #why}
+## Why do we need the Protected Audience API? {: #why}
 
 Understanding user interests can enable more relevant ads than simply choosing
 ads based on site content (contextual targeting) or by using information that
@@ -146,17 +146,17 @@ the version of the Protected Audience API currently being tested in Chrome. The
 features are currently available for testing in Chrome run from the command line
 using [feature flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags).
 
-Features of Protected Audience API will be added over time. While the [origin trial](/docs/privacy-sandbox/unified-origin-trial/)
+Features of the Protected Audience API will be added over time. While the [origin trial](/docs/privacy-sandbox/unified-origin-trial/)
 is active, we'll regularly update a list of which features are already
 implemented and what's still in progress.
 
 {% endAside %}
 
-## How can I try Protected Audience API? {: #try-fledge}
+## How can I try the Protected Audience API? {: #try-fledge}
 
 * The [Protected Audience API developer guide](/docs/privacy-sandbox/fledge-api#try-fledge) describes how to
   take part in the Privacy Sandbox Relevance and Measurement origin trial and
-  how to try out Protected Audience API for a single user by setting Chrome flags.
+  how to try out the Protected Audience API for a single user by setting Chrome flags.
 
 * [fledge-demo.glitch.me](https://fledge-demo.glitch.me/) provides a
   walkthrough of a basic Protected Audience API deployment across advertiser and publisher
@@ -173,7 +173,7 @@ implemented and what's still in progress.
 
 Users can adjust their participation for Privacy Sandbox trials in Chrome by
 enabling or disabling the top-level setting in
-`chrome://settings/privacySandbox`. During initial testing, users can opt out of Protected Audience API using the
+`chrome://settings/privacySandbox`. During initial testing, users can opt out of the Protected Audience API using the
 Privacy Sandbox settings. 
 
 Chrome plans to allow users to see and manage the list of interest groups
@@ -183,7 +183,7 @@ regulators, and others.
 
 We'll update the available settings in Chrome as the Protected Audience API proposal
 progresses, [based on tests and feedback](/docs/privacy-sandbox/proposal-lifecycle/#testing).
-In the future, we'll offer more granular settings to manage Protected Audience API and
+In the future, we'll offer more granular settings to manage the Protected Audience API and
 associated data.
 
 API callers can't access group membership when users browse in Incognito mode,
@@ -191,7 +191,7 @@ and membership is removed when users clear their site data.
 
 {: #opt-out-site}
 
-### Can I opt out of Protected Audience API? {: #opt-out}
+### Can I opt out of the Protected Audience API? {: #opt-out}
 
 Learn how you can [block access to the Protected Audience API](/docs/privacy-sandbox/fledge-api/opt-out),
 either as a site owner or as an individual user.
@@ -306,7 +306,7 @@ owners. These limits are meant as guard rails, not to be hit in regular operatio
 ### What is a buyer?
 {% endDetailsSummary %}
 
-In Protected Audience API, a buyer is a party that owns an [interest group](#interest-group-detail) and bids in an ad auction.
+In the Protected Audience API, a buyer is a party that owns an [interest group](#interest-group-detail) and bids in an ad auction.
 
 For example:
 
@@ -351,7 +351,7 @@ For example:
 * **[Supply-side platform](/docs/privacy-sandbox/glossary/#ssp)** (SSP): working with the publisher and providing other services.
 * **Third-party script**: acting for a publisher, to enable participation in ad auctions.
 
-With Protected Audience API, an ad space [seller](/docs/privacy-sandbox/glossary/#seller) has three jobs:
+With the Protected Audience API, an ad space [seller](/docs/privacy-sandbox/glossary/#seller) has three jobs:
 
 * Enforce publisher rules: stating which buyers and which bids are eligible.
 * Run auction logic: JavaScript run in
@@ -387,12 +387,12 @@ title="Click to view a larger version of image" target="_blank">view a larger ve
 
 <br>
 
-In Protected Audience API, an ad auction is a collection of small JavaScript programs the browser runs on the user's
+In the Protected Audience API, an ad auction is a collection of small JavaScript programs the browser runs on the user's
 device to choose an ad. To preserve privacy, all ad auction code from the seller and buyers is run
 in isolated JavaScript [worklets](/docs/privacy-sandbox/glossary/#worklet) that can't talk to the outside world.
 
 A seller (a publisher or a [supply-side platform](/docs/privacy-sandbox/glossary/#ssp))
-initiates a Protected Audience API ad auction on a site that sells ad space (such as a news
+initiates a Protected Audience ad auction on a site that sells ad space (such as a news
 site). The seller chooses buyers to participate in the auction,
 indicates what space is for sale, and provides additional criteria for the ad. Each buyer is the
 owner of an interest group.
@@ -436,7 +436,7 @@ privacy), the seller and the winning bidder can report the auction result.
 ### What is a Protected Audience API Key/Value service?
 {% endDetailsSummary %}
 
-Protected Audience API Key/Value service allows ad techs to query for real-time data when a bid is made by the buyer, and for sellers to score ads while preserving privacy. You can read about the Protected Audience API Key/Value service and others in [Protected Audience API services](/blog/fledge-service-overview/). 
+The Protected Audience API Key/Value service allows ad techs to query for real-time data when a bid is made by the buyer, and for sellers to score ads while preserving privacy. You can read about the Protected Audience API Key/Value service and others in [Protected Audience API services](/blog/fledge-service-overview/). 
 
 The Key/Value service is deployed to the ad tech's own cloud infrastructure, and the service runs in a [trusted execution environment](/docs/privacy-sandbox/glossary/#trusted-execution-environment). A request to a Key/Value service cannot result in event-level logging or have other side effects. The Key/Value service will also support [user-defined functions (UDFs)](https://github.com/WICG/turtledove/blob/main/FLEDGE_Key_Value_Server_trust_model.md#support-for-user-defined-functions-udfs) that allow ad techs to execute their own custom logic within the Key/Value service. 
 
@@ -463,7 +463,7 @@ The [buyers](#buyer-detail) or [seller](#seller-detail) in an ad auction may nee
 data. For example, bidders may want to calculate the remaining budget in an ad campaign, or the
 seller may be required to check ad creatives against publisher policies.
 
-To meet the privacy requirements of Protected Audience API, real-time data required during an ad auction is provided by the [Key/Value service](#key-value-service-detail). When each buyer calls `navigator.joinAdInterestGroup()`, the buyer specifies a Key/Value service URL and specifies the keys to be queried to the service during an auction. Likewise, when the seller runs an ad auction by calling `navigator.runAdAuction()`, the seller provides a URL for its Key/Value service. The seller's Key/Value service will be queried with the render URL of the creative.
+To meet the privacy requirements of the Protected Audience API, real-time data required during an ad auction is provided by the [Key/Value service](#key-value-service-detail). When each buyer calls `navigator.joinAdInterestGroup()`, the buyer specifies a Key/Value service URL and specifies the keys to be queried to the service during an auction. Likewise, when the seller runs an ad auction by calling `navigator.runAdAuction()`, the seller provides a URL for its Key/Value service. The seller's Key/Value service will be queried with the render URL of the creative.
 
 For initial testing, the ["Bring Your Own Server"](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#3-buyers-provide-ads-and-bidding-functions-byos-for-now) model is used. In the long term, ad techs will need to use the open-source Protected Audience API Key/Value services running in [trusted execution environments](https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#trusted-execution-environment) for retrieving real-time data.
 
@@ -475,12 +475,12 @@ To ensure that the ecosystem has sufficient time to test, we don’t expect to r
 
 ## Find out more
 
-For a more in-depth overview of Protected Audience API, read the
+For a more in-depth overview of the Protected Audience API, read the
 [Protected Audience API developer guide](/docs/privacy-sandbox/fledge-api/).
 
 ### Developers
 
-If you're ready to start working with Protected Audience API, read
+If you're ready to start working with the Protected Audience API, read
 [experiment and participate](/docs/privacy-sandbox/fledge-experiment/).
 
 We've written an  [API developer guide](/docs/privacy-sandbox/fledge-api) and built a [Protected Audience API demo](https://fledge-demo.glitch.me), which offers a walkthrough of a basic Protected Audience API deployment. The [Protected Audience API demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv) explains how the demo code works, and shows how to use Chrome DevTools for Protected Audience API debugging.
