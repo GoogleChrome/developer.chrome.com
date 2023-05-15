@@ -5,7 +5,7 @@ import {
   onLCP,
   onTTFB,
   onINP,
-} from 'web-vitals/attribution';
+} from 'web-vitals/dist/web-vitals.attribution';
 import {version} from '../_data/analytics.json';
 
 // A function that should be called once all all analytics code has been
@@ -136,7 +136,7 @@ function addClickEventListener() {
      * @param {WMouseEvent} e
      */
     e => {
-      const clickableEl = e.target.closest('a[href], .gc-analytics-event');
+      const clickableEl = e?.target?.closest('a[href], .gc-analytics-event');
       if (!clickableEl) {
         return;
       }
@@ -172,7 +172,7 @@ function addPageShowEventListener() {
     e => {
       if (e.persisted) {
         window.dataLayer.push({navigation_type: 'back-forward-cache'});
-        logEvent('page_view');
+        logEvent('page_view', {});
       }
     }
   );
@@ -180,6 +180,9 @@ function addPageShowEventListener() {
 
 // Set up a promise for when the page is activated,
 // which is needed for prerendered pages.
+/**
+ * @type {Promise<void>}
+ */
 const whenPageActivated = new Promise(resolve => {
   if (document.prerendering) {
     document.addEventListener('prerenderingchange', () => resolve());
@@ -207,7 +210,7 @@ function getNavigationType() {
 
   if (navEntry) {
     // Prerendered pages have an activationStart time after activation
-    if (navEntry.activationStart > 0) {
+    if (navEntry.activationStart && navEntry.activationStart > 0) {
       return 'prerender';
     } else if (
       // For the document speculation rules origin trial
@@ -232,7 +235,7 @@ function getPrerenderRules() {
   return [...document.querySelectorAll('script[type=speculationrules]')]
     .map(s => {
       try {
-        return JSON.parse(s.textContent).prerender;
+        return JSON.parse(s.textContent || '').prerender;
       } catch {
         // Ignore parse errors.
       }
@@ -282,7 +285,8 @@ function logPrerenders() {
  */
 function getMeta(name) {
   const meta = document.querySelector(`meta[name="${name}"]`);
-  return meta && meta.content;
+  if (meta instanceof HTMLMetaElement) return meta.content;
+  return;
 }
 
 /**
@@ -298,7 +302,6 @@ export function setConfig() {
   window.gtag = function () {
     window.dataLayer.push(arguments);
   };
-  window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({measurement_version: version});
   window.dataLayer.push({navigation_type: getNavigationType()});
   window.dataLayer.push({page_path: location.pathname});
@@ -318,7 +321,7 @@ export function setConfig() {
   const cookiePreference = localStorage.getItem('user-cookies');
   window.dataLayer.push({cookiePreference: cookiePreference});
 
-  logEvent('dcc_analytics_configed');
+  logEvent('dcc_analytics_configed', {});
 }
 
 async function initAnalytics() {

@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,20 +15,12 @@
  */
 
 declare global {
-  export interface PerformanceEntry extends PerformanceEntry {
-    deliveryType: string;
-    activationStart: number;
-    type: string;
+  interface Document extends Document {
+    wasDiscarded: boolean;
+    prerendering: boolean;
   }
-  export interface PerformanceNavigationTiming extends PerformanceNavigationTiming {
-    deliveryType: string;
-    activationStart: number;
-  }
-  interface Navigator extends Navigator {
-    connection: NetworkInformation;
-  }
-  export interface NetworkInformation extends NetworkInformation {
-    saveData: boolean;
+  interface Window extends Window {
+    dataLayer: Record<string, any>[];
   }
 }
 
