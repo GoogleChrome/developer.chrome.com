@@ -46,4 +46,4 @@ removal in insecure contexts and eventually all contexts is planned for Chromium
   keep using Web SQL is available from **Chromium&nbsp;118**
   ({% ChromeDate '118' %}) to **Chromium&nbsp;123** ({% ChromeDate '123' %}).
 
-  See the post [Deprecating and removing Web SQL](/blog/deprecating-web-sql/) for all details on this deprecation.
+See the post [Deprecating and removing Web SQL](/blog/deprecating-web-sql/) for all details on this deprecation.
