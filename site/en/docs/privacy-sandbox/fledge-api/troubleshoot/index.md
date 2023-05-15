@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Troubleshoot Protected Audience API'
+title: 'Troubleshoot the Protected Audience API'
 subhead: >
   Troubleshoot worklets and observe Protected Audience API events.
 description: >
@@ -13,10 +13,10 @@ authors:
 
 {% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
 
-From Chrome Canary 98.0.4718.0, it's possible to debug Protected Audience API and Protected Audience API
+From Chrome Canary 98.0.4718.0, it's possible to debug the Protected Audience API and Protected Audience API
 worklets in Chrome DevTools.
 
-Read the [developer guide](/blog/fledge-api) for the full life cycle of Protected Audience API. 
+Read the [developer guide](/blog/fledge-api) for the full life cycle of the Protected Audience API. 
 Not a developer? Refer to the
 [Protected Audience API overview](/docs/privacy-sandbox/fledge).
 
@@ -52,7 +52,7 @@ From the Application panel in Chrome DevTools, you can observe Protected Audienc
 group and auction events.
 
 If you visit the [Protected Audience API demo shopping site](https://shopping-fledge-demo.glitch.me/advertiser/shopping.html)
-in a browser with Protected Audience API enabled, DevTools will display information about the `join` event.
+in a browser with the Protected Audience API enabled, DevTools will display information about the `join` event.
 
 <figure>
 {% Img
@@ -63,7 +63,7 @@ in a browser with Protected Audience API enabled, DevTools will display informat
 
 Now, if you visit the
 [Protected Audience API demo publisher site](https://publisher-fledge-demo.glitch.me/publisher/index.html?fencedframe)
-in a browser with Protected Audience API enabled, DevTools displays information about the `bid`
+in a browser with the Protected Audience API enabled, DevTools displays information about the `bid`
 and `win` events.
 
 {% Img
