@@ -1,5 +1,5 @@
 パッシブ サーフェスは、ユーザー エージェント文字列、IP アドレス、Accept-Language ヘッダーなどの[フィンガープリンティング サーフェス](#fingerprinting-surface)であり、サイトが要求するかどうかにかかわらず、すべての Web サイトで使用できます。
 
-Passive surfaces can easily consume a site's privacy budget.
+パッシブサーフェスは、サイトのプライバシーバジェットを簡単に消費する可能性があります。
 
-The Privacy Sandbox initiative proposes replacing passive surfaces with active ways to get specific information, for example using Client Hints a single time to get the user's language rather than having an Accept-Language header for every response to every server.
+プライバシーサンドボックスイニシアチブは、すべてのサーバーへのすべてのレスポンスに対して Accept-Language ヘッダーを使用するのではなく、Client Hints を 1 回使用してユーザー言語を取得するなど、パッシブサーフェスの代わりとなる、積極的に特定の情報を取得できる方法を提案しています。
