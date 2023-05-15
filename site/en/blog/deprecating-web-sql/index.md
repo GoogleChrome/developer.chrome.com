@@ -6,9 +6,8 @@ description: >
   never implemented it and WebKit removed it in 2019. Web SQL was removed for
   third-party contexts in Chromium 97. Chromium 105 deprecated Web SQL in
   insecure contexts and showed a warning in the DevTools Issue panel when the
-  feature is used. Chromium 110 removes Web SQL in insecure contexts. Complete
-  removal in insecure contexts and eventually all contexts is planned for later
-  Chromium releases.
+  feature is used. Chromium 110 removed Web SQL in insecure contexts. Complete
+  removal in insecure contexts and eventually all contexts is planned for Chromium 119.
 authors:
   - thomassteiner
 date: 2022-08-31
