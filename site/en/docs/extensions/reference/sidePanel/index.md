@@ -3,7 +3,7 @@ api: sidePanel
 ---
 
 {% Aside 'important' %}
-The Side Panel API is currently available in [Chrome Canary](https://www.google.com/chrome/canary/).
+The Side Panel API is currently available in [Chrome Beta 114](https://www.google.com/chrome/beta/).
 {% endAside %}
 
 ## Overview {: #overview }
