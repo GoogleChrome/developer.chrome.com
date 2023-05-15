@@ -47,13 +47,9 @@ on your desktop.
 If you're using a modern framework, it probably transforms your source code from a format that's
 easy for you to maintain into a format that's optimized to run as quickly as possible. Workspaces is
 usually able to map the optimized code back to your original source code with the help of [source
-maps][4]. But there's a lot of variation between frameworks over how they use source maps. Devtools
-simply can't support all the variations.
+maps][4].
 
-Workspaces is known to not work with these frameworks:
-
-- Create React App
-
+The DevTools community works to support the capabilities provided by source maps across a [variety of frameworks and tools](/docs/devtools/javascript/source-maps/#use_a_supported_preprocessor).
 If you run into issues while using Workspaces with your framework of choice, or you get it working
 after some custom configuration, please [start a thread in the mailing list][5] or [ask a question
 on Stack Overflow][6] to share your knowledge with the rest of the DevTools community.
@@ -238,7 +234,7 @@ Next, learn how to use DevTools to [change CSS](/docs/devtools/css/) and [debug 
 [1]: https://developer.mozilla.org/docs/Learn/Getting_started_with_the_web
 [2]: /docs/devtools/css
 [3]: https://developer.mozilla.org/docs/Learn/Common_questions/set_up_a_local_testing_server#Running_a_simple_local_HTTP_server
-[4]: http://blog.teamtreehouse.com/introduction-source-maps
+[4]: https://web.dev/source-maps/
 [5]: https://groups.google.com/forum/#!forum/google-chrome-developer-tools
 [6]: https://stackoverflow.com/questions/ask?tags=google-chrome-devtools
 [7]: /docs/devtools/overrides/
