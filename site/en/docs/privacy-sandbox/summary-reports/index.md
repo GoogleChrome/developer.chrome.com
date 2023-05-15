@@ -31,7 +31,7 @@ Summary reports are created in two contexts:
   [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting-introduction/), to
   measure when an ad click or view leads to a conversion on an advertiser site,
   such as a sale or a sign-up. Ad techs can also generate summary reports for
-  [FLEDGE auctions with Private Aggregation](/docs/privacy-sandbox/private-aggregation/#with-fledge).
+  [Protected Audience API auctions with Private Aggregation](/docs/privacy-sandbox/private-aggregation/#with-fledge).
 * **General cross-site reporting**: developers capture cross-site data in
   Shared Storage, and can report on that data with
   [Private Aggregation](/docs/privacy-sandbox/private-aggregation/#with-shared-storage).

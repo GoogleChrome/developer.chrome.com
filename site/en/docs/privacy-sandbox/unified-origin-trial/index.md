@@ -2,10 +2,10 @@
 layout: 'layouts/doc-post.njk'
 title: 'Relevance and measurement unified origin trial'
 subhead: >
-   Run unified experiments across Attribution Reporting, FLEDGE,
+   Run unified experiments across Attribution Reporting, Protected Audience API,
    Topics, Fenced Frames, and Shared Storage.
 description: >
-   Run unified experiments across Attribution Reporting, FLEDGE,
+   Run unified experiments across Attribution Reporting, Protected Audience API,
    Topics, Fenced Frames, and Shared Storage.
 date: 2022-09-08
 updated: 2023-03-13
@@ -22,10 +22,10 @@ and provide feedback on new web technologies through real-world testing. The
 [Privacy Sandbox Relevance and
 Measurement](/origintrials/#/view_trial/771241436187197441) origin trial
 provides a single trial allowing sites to run unified experiments across
-Attribution Reporting, FLEDGE, Topics, Fenced Frames, and Shared Storage.
+Attribution Reporting, Protected Audience API, Topics, Fenced Frames, and Shared Storage.
 
 Developers can sign up for this single origin trial that allows you to test
-across the Topics, FLEDGE, and Attribution Reporting APIs. This guide takes you
+across the Topics, Protected Audience API, and Attribution Reporting APIs. This guide takes you
 through the configuration steps to access the APIs, tells you how to validate
 your configuration, and provides further resources for testing against the APIs.
 
@@ -35,7 +35,7 @@ your configuration, and provides further resources for testing against the APIs.
 
 #### Private Aggregation 1% ramp-up in Stable
 
-[Private Aggregation API](/docs/privacy-sandbox/private-aggregation/) origin trial will be available at 1% of Chrome Stable unified experiment traffic from Monday April 17. The <code>[sendHistogramReport()](/docs/privacy-sandbox/private-aggregation/#sendhistogramreport)</code> function of Private Aggregation is available to be used in [FLEDGE](/docs/privacy-sandbox/fledge/) and [Shared Storage](/docs/privacy-sandbox/shared-storage/) worklets. 
+[Private Aggregation API](/docs/privacy-sandbox/private-aggregation/) origin trial will be available at 1% of Chrome Stable unified experiment traffic from Monday April 17. The <code>[sendHistogramReport()](/docs/privacy-sandbox/private-aggregation/#sendhistogramreport)</code> function of Private Aggregation is available to be used in [Protected Audience API](/docs/privacy-sandbox/fledge/) and [Shared Storage](/docs/privacy-sandbox/shared-storage/) worklets. 
 
 The traffic allocation will look like the following starting on Monday, April 17:
 
@@ -73,11 +73,11 @@ The traffic allocation will look like the following starting on Monday, April 17
    </td>
   </tr>
   <tr>
-   <td>Isolated - 1% - FLEDGE + Fenced Frames only
+   <td>Isolated - 1% - Protected Audience API + Fenced Frames only
    </td>
   </tr>
   <tr>
-   <td rowspan="2">FLEDGE 
+   <td rowspan="2">Protected Audience API 
    </td>
    <td>Unified - 5% 
    </td>
@@ -85,7 +85,7 @@ The traffic allocation will look like the following starting on Monday, April 17
    </td>
   </tr>
   <tr>
-   <td>Isolated - 1% - FLEDGE + Fenced Frames only
+   <td>Isolated - 1% - Protected Audience API + Fenced Frames only
    </td>
   </tr>
   <tr>
@@ -126,17 +126,17 @@ The traffic allocation will look like the following starting on Monday, April 17
 
 #### Timeline update
 
-We initially communicated that we will begin the isolated experiments on Monday, March 13, 2023, but the new experiments will now begin on Thursday, March 16, 2023 due to the additional time needed for setting up the experiments. The 1% FLEDGE ramp back up from 4% to 5% will also occur on Thursday, March 16, 2023.
+We initially communicated that we will begin the isolated experiments on Monday, March 13, 2023, but the new experiments will now begin on Thursday, March 16, 2023 due to the additional time needed for setting up the experiments. The 1% Protected Audience API ramp back up from 4% to 5% will also occur on Thursday, March 16, 2023.
 
-#### FLEDGE 1% ramp back up
+#### Protected Audience API 1% ramp back up
 
-Last month, we [temporarily reduced FLEDGE origin trial traffic](/docs/privacy-sandbox/unified-origin-trial/#january-2023) from 5% to 4% of Chrome stable for testing. The initial testing has concluded, and we plan to ramp FLEDGE back up to 5% from 4% for the unified experiment on Thursday, March 16, 2023.
+Last month, we [temporarily reduced Protected Audience API origin trial traffic](/docs/privacy-sandbox/unified-origin-trial/#january-2023) from 5% to 4% of Chrome stable for testing. The initial testing has concluded, and we plan to ramp Protected Audience API back up to 5% from 4% for the unified experiment on Thursday, March 16, 2023.
 
 The ramped-up users will be the same set of users that were ramped down. However, their previous interest groups have expired, since more than 30 days have passed since the ramp-down. 
 
 #### Isolated experiments
 
-To improve our testing process and continue observing the metrics of origin trial APIs, we're creating isolated experiments for each API, in addition to the existing unified experiment. New experiments will be created for Attribution Reporting, Topics, a combination of FLEDGE and Fenced Frames, and a combination of Shared Storage’s URL Selection operation and Fenced Frames. In each isolated experiment, only the assigned APIs will be available for the users in that group.
+To improve our testing process and continue observing the metrics of origin trial APIs, we're creating isolated experiments for each API, in addition to the existing unified experiment. New experiments will be created for Attribution Reporting, Topics, a combination of Protected Audience API and Fenced Frames, and a combination of Shared Storage’s URL Selection operation and Fenced Frames. In each isolated experiment, only the assigned APIs will be available for the users in that group.
 
 <table class="with-heading-tint">
     <thead>
@@ -155,7 +155,7 @@ To improve our testing process and continue observing the metrics of origin tria
    </td>
   </tr>
   <tr>
-   <td>FLEDGE + Fenced Frames
+   <td>Protected Audience API + Fenced Frames
    </td>
    <td>1%
    </td>
@@ -203,7 +203,7 @@ The current unified origin trials traffic allocation as of Tuesday, February 28,
    </td>
   </tr>
   <tr>
-   <td>FLEDGE
+   <td>Protected Audience API
    </td>
    <td>4%
    </td>
@@ -222,7 +222,7 @@ The current unified origin trials traffic allocation as of Tuesday, February 28,
   </tr></tbody>
 </table>
 
-The traffic allocation will look like the following starting on Thursday, March 16, after FLEDGE is ramped back up, and the new isolated experiments begin:
+The traffic allocation will look like the following starting on Thursday, March 16, after Protected Audience API is ramped back up, and the new isolated experiments begin:
 
 <table class="with-heading-tint">
     <thead>
@@ -261,11 +261,11 @@ The traffic allocation will look like the following starting on Thursday, March 
    </td>
   </tr>
   <tr>
-   <td>Isolated - 1% - FLEDGE + Fenced Frames only
+   <td>Isolated - 1% - Protected Audience API + Fenced Frames only
    </td>
   </tr>
   <tr>
-   <td rowspan="2">FLEDGE 
+   <td rowspan="2">Protected Audience API 
    </td>
    <td>Unified - 5% (4% current allocation + 1% ramp back up)
    </td>
@@ -273,7 +273,7 @@ The traffic allocation will look like the following starting on Thursday, March 
    </td>
   </tr>
   <tr>
-   <td>Isolated - 1% - FLEDGE + Fenced Frames only
+   <td>Isolated - 1% - Protected Audience API + Fenced Frames only
    </td>
   </tr>
   <tr>
@@ -306,7 +306,7 @@ These changes will not affect your existing origin trial token setup, and you wi
 
 ### January 2023
 
-As part of a Chrome regression investigation, we will temporarily reduce FLEDGE origin trial traffic from 5% to 4% of Chrome Stable, from January 26th 2023. We estimate the investigation will take about a month, and we will notify you when the traffic is ramped back up.  
+As part of a Chrome regression investigation, we will temporarily reduce Protected Audience API origin trial traffic from 5% to 4% of Chrome Stable, from January 26th 2023. We estimate the investigation will take about a month, and we will notify you when the traffic is ramped back up.  
 
 This change will happen automatically, and will not impact your existing origin trial tokens. For the users in the 1% traffic that will ramp down, the interest groups will remain in their browsers. The same users will be part of the ramp back up, and their interest groups can be reused. However, the interest groups expire in 30 days, and the regression investigation may take longer than that. 
 
@@ -332,7 +332,7 @@ Also, Shared Storage’s URL Selection API origin trial will be increasing to 5%
    </td>
   </tr>
   <tr>
-   <td><a href="/docs/privacy-sandbox/fledge/">FLEDGE</a>
+   <td><a href="/docs/privacy-sandbox/fledge/">Protected Audience API</a>
    </td>
    <td>Available in Stable, temporarily decreasing to 4% from January 26th 2023.
    </td>
@@ -363,7 +363,7 @@ trial](https://groups.google.com/a/chromium.org/g/blink-dev/c/Vi-Rj37aZLs/m/wXlB
 at 1% of Chrome Stable traffic from November 9th. As previously announced in the
 [Increasing the Privacy Sandbox Relevance and Measurement origin trial to
 5%](/blog/privacy-sandbox-origin-trial-increase/) blog post, Attribution
-Reporting and Topics are now at 5% with FLEDGE and Fenced Frames also following
+Reporting and Topics are now at 5% with Protected Audience API and Fenced Frames also following
 on November 9th.
 
 <table class="with-heading-tint">
@@ -387,7 +387,7 @@ on November 9th.
    </td>
   </tr>
   <tr>
-   <td><a href="/docs/privacy-sandbox/fledge/">FLEDGE</a>
+   <td><a href="/docs/privacy-sandbox/fledge/">Protected Audience API</a>
    </td>
    <td>Available in Stable, increasing to 5% from November 9th.
    </td>
@@ -408,10 +408,10 @@ on November 9th.
 
 #### October 2022: 5% increase
 
-Attribution Reporting, Topics, FLEDGE, and Fenced Frames are all currently
+Attribution Reporting, Topics, Protected Audience API, and Fenced Frames are all currently
 available in Chrome Stable and will be part of the increased traffic. We will
 start increasing traffic for Attribution Reporting and Topics from this week,
-FLEDGE and Fenced Frames will increase from November 9th. Read more in the
+Protected Audience API and Fenced Frames will increase from November 9th. Read more in the
 [Increasing the Privacy Sandbox Relevance and Measurement origin trial to
 5%](/blog/privacy-sandbox-origin-trial-increase/) blog post.
 
@@ -436,7 +436,7 @@ FLEDGE and Fenced Frames will increase from November 9th. Read more in the
    </td>
   </tr>
   <tr>
-   <td><a href="/docs/privacy-sandbox/fledge/">FLEDGE</a>
+   <td><a href="/docs/privacy-sandbox/fledge/">Protected Audience API</a>
    </td>
    <td>Available in Stable, increasing to 5% from November 9th.
    </td>
@@ -495,7 +495,7 @@ guide for the origin trial</a>.</td>
     <tr>
       <td>
 <a
-href="/docs/privacy-sandbox/fledge/">FLEDGE</a></td>
+href="/docs/privacy-sandbox/fledge/">Protected Audience API</a></td>
       <td>
 <a
 href="/docs/privacy-sandbox/fledge-experiment/">Developer
@@ -516,7 +516,7 @@ guide for the origin trial</a>.</td>
 href="/docs/privacy-sandbox/fenced-frame/">Fenced
 Frames</a></td>
       <td>
-See the FLEDGE guidance for origin trial usage.</td>
+See the Protected Audience API guidance for origin trial usage.</td>
     </tr>
     <tr>
       <td>
@@ -568,7 +568,7 @@ guide for the origin trial</a>.</td>
     <tr>
       <td>
 <a
-href="/docs/privacy-sandbox/fledge-experiment/">FLEDGE</a></td>
+href="/docs/privacy-sandbox/fledge-experiment/">Protected Audience API</a></td>
       <td>
 <a
 href="/docs/privacy-sandbox/fledge-experiment/">Developer
@@ -590,7 +590,7 @@ origin trial due to a <a href="https://bugs.chromium.org/p/chromium/issues/detai
 href="/docs/privacy-sandbox/fenced-frame/">Fenced
 Frames</a></td>
       <td>
-Fenced Frames added to the origin trial. See the FLEDGE guidance
+Fenced Frames added to the origin trial. See the Protected Audience API guidance
 for experiment usage.</td>
     </tr>
   </tbody>
@@ -626,11 +626,11 @@ an individual origin trial.</td>
     <tr>
       <td>
 <a
-href="/docs/privacy-sandbox/fledge-experiment/">FLEDGE</a></td>
+href="/docs/privacy-sandbox/fledge-experiment/">Protected Audience API</a></td>
       <td>
 Individual <a
 href="https://groups.google.com/a/chromium.org/g/blink-dev/c/0VmMSsDWsFg/m/_0T5qleqCgAJ">Intent
-to Experiment (I2E)</a> post. FLEDGE available on desktop only with a
+to Experiment (I2E)</a> post. Protected Audience API available on desktop only with a
 <a
 href="https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md">subset
 of functionality</a>.</td>
@@ -678,7 +678,7 @@ Origin-Trial: TOKEN_GOES_HERE
 
 ### Configure with an iframe
 
-If you're using origin trial features within an iframe (such as FLEDGE's
+If you're using origin trial features within an iframe (such as Protected Audience API's
 `joinAdInterestGroup()`), then the token needs to be provided within the iframe
 and match the iframe's origin.
 
@@ -868,7 +868,7 @@ in the origin trial over that period.
 For specific guidance on local developer testing, see:
 
 -  [Topics](/docs/privacy-sandbox/topics-experiment/)
--  [FLEDGE](/docs/privacy-sandbox/fledge-experiment/)
+-  [Protected Audience API](/docs/privacy-sandbox/fledge-experiment/)
 -  [Attribution
    Reporting](/docs/privacy-sandbox/attribution-reporting-experiment/)
 

@@ -1,10 +1,10 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Improve FLEDGE auction latency'
+title: 'Improve Protected Audience API auction latency'
 subhead: >
-  Review a collection of best practices to improve FLEDGE auction latency.
+  Review a collection of best practices to improve Protected Audience API auction latency.
 description: >
-  Review a collection of best practices to improve FLEDGE auction latency.
+  Review a collection of best practices to improve Protected Audience API auction latency.
 date: 2022-06-27
 updated: 2022-07-04
 authors:
@@ -13,10 +13,10 @@ authors:
 
 {% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
 
-It's in everyone's best interest to make sure FLEDGE operates efficiently.
+It's in everyone's best interest to make sure Protected Audience API operates efficiently.
 
 * People browsing the web want sites to load quickly. This means developers
-  should build with FLEDGE efficiently as to not overutilize limited device
+  should build with Protected Audience API efficiently as to not overutilize limited device
   resources, like compute or network resources, that are necessary to load
   sites and their embedded ads.
 * Publishers want their sites to load quickly, providing users an efficient and
@@ -25,17 +25,17 @@ It's in everyone's best interest to make sure FLEDGE operates efficiently.
 * Advertisers and ad techs want their ads to display quickly to provide the
   greatest utility.
 
-This document outlines some best practices for FLEDGE implementation, to ensure
+This document outlines some best practices for Protected Audience API implementation, to ensure
 your site operates at maximum efficiency.
 
 ## Buyer (bidder) best practices
 
-To make sure you're optimizing for FLEDGE auction efficiency, follow these best
+To make sure you're optimizing for Protected Audience API auction efficiency, follow these best
 practices.
 
 ### Fewer interest group owners
 
-To protect FLEDGE bidders in the same way that the browser protects different
+To protect Protected Audience API bidders in the same way that the browser protects different
 origins on the web using [site isolation](https://www.chromium.org/Home/chromium-security/site-isolation/),
 the browser uses expensive resources (like operating system processes) to
 protect individual interest group owners.
@@ -55,13 +55,13 @@ environment, and parsing and loading the `generateBid()` code.
 
 * Interest groups that represent users who aren't the current target of and
   active advertising campaign should have empty ad creative lists. This prevents
-  FLEDGE from executing `generateBid()` for interest groups without relevant
+  Protected Audience API from executing `generateBid()` for interest groups without relevant
   ads.
 * Combining similar interest groups will decrease the number of times
   `generateBid()` must be run. An interest group's `userBiddingSignals`
   property can be used to store additional metadata about the user, so fewer
   interest groups doesn't have to mean less effective targeting.
-* Currently, FLEDGE supports seller-specified limits on the numbers of interest
+* Currently, Protected Audience API supports seller-specified limits on the numbers of interest
   groups, and an API for buyers to specify the relative priority of their
   interest groups. These limits can be used to significantly reduce the number
   of bidding scripts to run.
@@ -109,7 +109,7 @@ the interest group and updated via the daily updates.
 
 ## Seller best practices
 
-Make sure you're monitoring and optimizing for FLEDGE auction efficiency.
+Make sure you're monitoring and optimizing for Protected Audience API auction efficiency.
 
 ### Monitor your auctions
 
@@ -130,9 +130,9 @@ producing viable bids or excessive bidding with unapproved creatives.
 
 ### Protect against slow bid scripts
 
-Bidding scripts that take excessive time can slow the FLEDGE auction down for everyone involved.
+Bidding scripts that take excessive time can slow the Protected Audience API auction down for everyone involved.
 
-* **Use timeouts**. FLEDGE includes some default time-outs for bidding scripts,
+* **Use timeouts**. Protected Audience API includes some default time-outs for bidding scripts,
   but `perBuyerTimeouts` can be adjusted to ensure that no bidders
   participating in the auction are using excessive computation time. 
   * Consider participating in future timeouts and limits discussions, as
