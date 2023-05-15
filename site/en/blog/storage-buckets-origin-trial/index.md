@@ -18,6 +18,6 @@ alt: >
 
 The [Storage Standard](https://storage.spec.whatwg.org/) defines an API for persistent storage and
 quota estimates, and the platform storage architecture.
-We're experimenting with an API for making persistent storage eviction under heavy
-memory pressure more predictable.
-Try the Storage Buckets API by [participating in the Storage Buckets origin trial](/origintrials/#/view_trial/2674012278751232001). The origin trial runs from Chrome&nbsp;115 (stable date): {% ChromeDate 115 %} to Chrome&nbsp;118 (stable date): {% ChromeDate 118 %}. For all details on the Storage Bucket API, see the article [Not all storage is created equal: introducing Storage Buckets](/blog/storage-buckets/).
+The experimental [Storage Buckets API](/blog/storage-buckets/) is our attempt to make persistent storage eviction under heavy memory pressure more predictable.
+
+Try the Storage Buckets API by [participating in the Storage Buckets origin trial](/origintrials/#/view_trial/2674012278751232001). The origin trial runs from Chrome&nbsp;115 (stable date): {% ChromeDate 115 %} to Chrome&nbsp;118 (stable date): {% ChromeDate 118 %}. 
