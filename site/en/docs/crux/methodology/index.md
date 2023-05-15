@@ -22,7 +22,7 @@ date: 2022-06-23
 
 # Optional
 # Include an updated date when you update your post
-updated: 2022-11-10
+updated: 2023-04-19
 
 # Optional
 # How to add a new author
@@ -70,7 +70,7 @@ An [**origin**](https://developer.mozilla.org/docs/Glossary/Origin) represents a
 1. [Publicly discoverable](#discoverability-eligibility)
 2. [Sufficiently popular](#popularity-eligibility)
 
-You can verify that your origin is discoverable by running a [Lighthouse audit](https://web.dev/measure/) with the SEO category enabled. Your site is not discoverable if your root page fails the [_Page is blocked from indexing_](https://web.dev/is-crawable/) or [_Page has unsuccessful HTTP status code_](https://web.dev/http-status-code/) audits.
+You can verify that your origin is discoverable by running a [Lighthouse audit](https://pagespeed.web.dev/) and looking at the SEO category results. Your site is not discoverable if your root page fails the [_Page is blocked from indexing_](https://web.dev/is-crawable/) or [_Page has unsuccessful HTTP status code_](https://web.dev/http-status-code/) audits.
 
 If an origin is determined to be publicly discoverable, eligible user experiences on _all_ of that origin's pages are aggregated at the origin-level, regardless of individual page discoverability. All of these experiences count towards the origin's popularity requirement.
 
@@ -83,9 +83,11 @@ The requirements for a **page** to be included in the CrUX dataset are the same 
 1. [Publicly discoverable](#discoverability-eligibility)
 2. [Sufficiently popular](#popularity-eligibility)
 
-You can verify that a page is discoverable by running a [Lighthouse audit](https://web.dev/measure/) with the SEO category enabled. Your page is not discoverable if it fails the [_Page is blocked from indexing_](https://web.dev/is-crawable/) or [_Page has unsuccessful HTTP status code_](https://web.dev/http-status-code/) audits.
+You can verify that a page is discoverable by running a [Lighthouse audit](https://pagespeed.web.dev/) and looking at the SEO category results. Your page is not discoverable if it fails the [_Page is blocked from indexing_](https://web.dev/is-crawable/) or [_Page has unsuccessful HTTP status code_](https://web.dev/http-status-code/) audits.
 
 Pages commonly have additional identifiers in their URL including query string parameters like `?utm_medium=email` and fragments like `#main`. These identifiers are stripped from the URL in the CrUX dataset so that all user experiences on the page are aggregated together. This is useful for pages that would otherwise not meet the popularity threshold if there were many disjointed URL variations for the same page. Note that in rare cases this may unexpectedly group experiences for distinct pages together; for example if parameters `?productID=101` and `?productID=102` represent different pages.
+
+Pages in CrUX are measured based on the top-level page. Pages included as iframes are not reported on separately in CrUX, but do contribute to the metrics of the top-level page. For example, if `https://www.example.com/page.html` embeds `https://www.example.com/frame.html` in an iframe, then `page.html` _will be_ represented in CrUX (subject to the other eligibility criteria) but `frame.html` _will not_. And if `frame.html` has poor [CLS](#cls-metric) then the CLS will be included when measuring the CLS for `page.html`. CrUX is the Chrome _User Experience_ Report and a user may not even be aware this is an iframe. Therefore, the experience is measured at the top level page—as per how the user sees this.
 
 A website's architecture may complicate how its data is represented in CrUX. For example, single page apps (SPAs) may use a JavaScript-based _route transition_ scheme to move between pages, as opposed to traditional anchor-based page navigations. These transitions appear as new page views to the user, but to Chrome and the underlying platform APIs the entire experience is attributed to the initial page view. This is a limitation of the native web platform APIs on which CrUX is built, see [How SPA architectures affect Core Web Vitals](https://web.dev/vitals-spa-faq/) on web.dev for more information.
 
@@ -137,7 +139,7 @@ The CrUX dataset is made available through a variety of tools maintained by Goog
 <td>Monthly <a href="#footnote-1"><sup>1</sup></a></td>
 <td>All metrics</td>
 <td>All dimensions</td>
-<td>Since 2017 <a href="#footnote-3"><sup>3</sup></a></td>
+<td>Since 2017 <a href="#footnote-5"><sup>5</sup></a></td>
 <td>Origin</td>
 </tr>
 <tr>
@@ -145,7 +147,7 @@ The CrUX dataset is made available through a variety of tools maintained by Goog
 <td>Monthly <a href="#footnote-1"><sup>1</sup></a></td>
 <td>All metrics</td>
 <td>No country dimension</td>
-<td>Since 2017 <a href="#footnote-3"><sup>3</sup></a></td>
+<td>Since 2017 <a href="#footnote-5"><sup>5</sup></a></td>
 <td>Origin</td>
 </tr>
 <tr>
@@ -154,6 +156,14 @@ The CrUX dataset is made available through a variety of tools maintained by Goog
 <td>Subset of key metrics  <a href="#footnote-4"><sup>4</sup></a></td>
 <td>No country dimension</td>
 <td>No</td>
+<td>Origin &amp; Page</td>
+</tr>
+<tr>
+<td><a href="#tool-crux-history-api">CrUX History API</a></td>
+<td>Weekly <a href="#footnote-3"><sup>3</sup></a></td>
+<td>Subset of key metrics  <a href="#footnote-4"><sup>4</sup></a></td>
+<td>No country dimension</td>
+<td>Previous 25 weeks</td>
 <td>Origin &amp; Page</td>
 </tr>
 <tr>
@@ -178,7 +188,7 @@ The CrUX dataset is made available through a variety of tools maintained by Goog
 <td>Core web vitals</td>
 <td>No dimensions</td>
 <td>Three months</td>
-<td>Page Group <a href="#footnote-5"><sup>5</sup></a></td>
+<td>Page Group <a href="#footnote-6"><sup>6</sup></a></td>
 </tr>
 </tbody>
 </table></div>
@@ -186,16 +196,17 @@ The CrUX dataset is made available through a variety of tools maintained by Goog
 <p>
 <a id="footnote-1"><sup>1</sup></a> Monthly data is released on the second Tuesday after each monthly collection period. The last 28 days of each month period are included.<br>
 <a id="footnote-2"><sup>2</sup></a> 28-day rolling average data is updated daily, based on the aggregated data from the previous 28 days.<br>
-<a id="footnote-3"><sup>3</sup></a> Not all metrics are available in all monthly tables, see the <a href="/docs/crux/release-notes">release notes</a> for details.<br>
+<a id="footnote-3"><sup>3</sup></a> Weekly historical data is released every Monday, containing the 25 most recent 28 day collection periods that end on Saturdays.<br>
 <a id="footnote-4"><sup>4</sup></a> The web vital metrics are available in all tools.<br>
-<a id="footnote-5"><sup>5</sup></a> Search Console <a href="https://support.google.com/webmasters/answer/9205520#page_groups">groups URLs</a> that provide similar experiences, Core Web Vitals data are shown aggregated by these page groups.
+<a id="footnote-5"><sup>5</sup></a> Not all metrics are available in all monthly tables, see the <a href="/docs/crux/release-notes">release notes</a> for details.<br>
+<a id="footnote-6"><sup>6</sup></a> Search Console <a href="https://support.google.com/webmasters/answer/9205520#page_groups">groups URLs</a> that provide similar experiences, Core Web Vitals data are shown aggregated by these page groups.
 </p>
 
 The following sections briefly summarize each tool and how the data can be used.
 
 ### CrUX on BigQuery {: #tool-bigquery}
 
-Origin-level CrUX data is available for public querying via [BigQuery](https://cloud.google.com/bigquery). Read the guide on [Using the Chrome UX Report](https://web.dev/chrome-ux-report-bigquery/).
+Origin-level CrUX data is available for public querying via [BigQuery](https://cloud.google.com/bigquery). Read the guide on [Using the Chrome UX Report](/blog/chrome-ux-report-bigquery/).
 
 [CrUX on BigQuery](/docs/crux/bigquery/) provides a publicly accessible database of all origin-level data collected by CrUX. It is possible to query any and all origins for which data is collected, analyze any metric that CrUX supports and filter by all available dimensions. Full metric histograms are stored in the BigQuery tables allowing for visualization of performance distributions, including experimental metrics.
 
@@ -215,11 +226,19 @@ The CrUX Dashboard does not support the country dimension, so all global data is
 
 The [CrUX API](/docs/crux/api/) provides programmatic access to CrUX data by page or origin, and can be further filtered by form factor, effective connection type and metrics.
 
-The API provides [Web Vitals](https://web.dev/vitals/) metrics both by origin and at page-level and the data is updated daily. The only values provided for metrics are calculated from the previous 28 days as a rolling window, no historical data is available via the API.
+The API provides [Web Vitals](https://web.dev/vitals/) metrics both by origin and at page-level and the data is updated daily. The only values provided for metrics are calculated from the previous 28 days as a rolling window. Historical data is available via the separate [History API](#tool-crux-history-api).
 
 The CrUX API returns more quickly than the [PageSpeed Insights API](#tool-psi-api) but does not include the additional [Lighthouse data](https://developers.google.com/search/blog/2018/11/pagespeed-insights-now-powered-by) provided by PageSpeed Insights.
 
-[Read more in the API documentation](/crux/docs/api/).
+[Read more in the API documentation](/docs/crux/api/).
+
+### CrUX History API {: #tool-crux-history-api}
+
+The [CrUX History API](/docs/crux/historical-api/) provides programmatic access to CrUX historical data by page or origin, and can be further filtered by form factor, effective connection type and metrics.
+
+The API provides [Web Vitals](https://web.dev/vitals/) metrics both by origin and at page-level and the data is updated weekly. The only values provided for metrics are calculated from the past 25 weekly collection periods of 28 days as a rolling window.
+
+[Read more in the History API documentation](/docs/crux/history-api/).
 
 ### PageSpeed Insights {: #tool-psi}
 
@@ -291,6 +310,14 @@ Most metrics are represented as a histogram aggregation, allowing visualization 
 <cite><a href="https://developer.mozilla.org/docs/Web/Events/load">MDN</a></cite>
 {% endAside %}
 
+### Cumulative Layout Shift {: #cls-metric }
+
+{% Aside %}
+"Cumulative Layout Shift (CLS) is an important, user-centric metric for measuring visual stability because it helps quantify how often users experience unexpected layout shifts — a low CLS helps ensure that the page is delightful."
+
+<cite><a href="https://web.dev/cls/">web.dev/cls/</a></cite>
+{% endAside %}
+
 ### First Input Delay {: #fid-metric }
 
 {% Aside %}
@@ -299,13 +326,15 @@ Most metrics are represented as a histogram aggregation, allowing visualization 
 <cite><a href="https://web.dev/fid/">web.dev/fid/</a></cite>
 {% endAside %}
 
-### Cumulative Layout Shift {: #cls-metric }
+### Interaction to Next Paint {: #inp-metric}
 
 {% Aside %}
-"Cumulative Layout Shift (CLS) is an important, user-centric metric for measuring visual stability because it helps quantify how often users experience unexpected layout shifts — a low CLS helps ensure that the page is delightful."
+"Interaction to Next Paint (INP) is a field metric that assesses [responsiveness](https://web.dev/user-centric-performance-metrics/#types-of-metrics). INP logs the latency of all interactions throughout the entire page lifecycle. The highest value of those interactions—or close to the highest for pages with many interactions—is recorded as the page's INP. A low INP ensures that the page will be reliably responsive at all times."
 
-<cite><a href="https://web.dev/cls/">web.dev/cls/</a></cite>
+<cite><a href="https://web.dev/inp/">web.dev/inp/</a></cite>
 {% endAside %}
+
+Interaction to Next Paint (INP) was added to the CrUX dataset in [February 2022](/docs/crux/release-notes/#202202). This new metric captures the end-to-end latency of individual events and offers a more holistic picture of the overall responsiveness of a page throughout its lifetime.
 
 ### Experimental metrics {: #experimental-metrics }
 
@@ -321,15 +350,11 @@ Experimental metrics are available in the CrUX dataset via [BigQuery](/docs/crux
 
 TTFB is only collected on full page loads, unlike other timers (such as [LCP](#lcp-metric)) which are also collected on back-forward navigations and pre-rendering. As such, the sample size of TTFB can be smaller than other metrics and may not necessarily be compared directly with them.
 
-#### Interaction to Next Paint {: #inp-metric}
+#### Interaction to Next Paint (deprecated){: #inp-metric-experimental}
 
-{% Aside %}
-"Interaction to Next Paint (INP) is an experimental field metric that assesses [responsiveness](https://web.dev/user-centric-performance-metrics/#types-of-metrics). INP logs the latency of all interactions throughout the entire page lifecycle. The highest value of those interactions—or close to the highest for pages with many interactions—is recorded as the page's INP. A low INP ensures that the page will be reliably responsive at all times."
-
-<cite><a href="https://web.dev/inp/">web.dev/inp/</a></cite>
+{% Aside 'important' %}
+The Interaction to Next Paint (INP) metric is available both with and without the experimental prefix. The experimental prefix should now be considered deprecated and will be removed in August 2023. The non-prefixed schema should be used going forward.
 {% endAside %}
-
-Interaction to Next Paint (INP) was added to the CrUX dataset in [February 2022](/docs/crux/release-notes/#202202). This new metric captures the end-to-end latency of individual events and offers a more holistic picture of the overall responsiveness of a page throughout its lifetime.
 
 #### Popularity {: #popularity-metric}
 

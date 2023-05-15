@@ -21,7 +21,7 @@ date: 2017-10-01
 
 # Optional
 # Include an updated date when you update your post
-updated: 2022-12-13
+updated: 2023-05-10
 
 # Optional
 # How to add a new author
@@ -42,6 +42,65 @@ In the list below, we've curated some release notes for each monthly dataset. Su
 The CrUX dataset on BigQuery is generally updated on the second Tuesday of every month. Each release is numbered according to the year and calendar month of the data collection period, for example 201912 corresponds to the UX data collected during December 2019 and would be released on the second Tuesday of January 2020 after the data collection period has ended.
 
 In the list below, we've curated some release notes for each monthly dataset. Subscribe to our [CrUX Announce](https://groups.google.com/a/chromium.org/forum/#!forum/chrome-ux-report-announce) mailing list or follow [@ChromeUXReport](https://twitter.com/ChromeUXReport) on Twitter for release Announcements.
+
+## 202304
+
+[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/_1ja3Bg-3Ow)
+
+Publication date
+ : May 10, 2023
+
+What's new
+
+We’re seeing a slight decrease in pass rates for the Core Web Vitals, especially for LCP due in part to [a change in LCP to ignore low-entropy images](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/speed/metrics_changelog/2023_04_lcp.md). We also see a decrease in FCP pass rates [due to correction in paint timing](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/speed/metrics_changelog/2023_03_lcp_fcp.md) (which also affects LCP but to a lesser extent).
+
+On a more positive note [INP](https://web.dev/inp/) continues to improve with a further improvement of 0.2%. This is especially important as we are [moving this metric from an Experimental metric to a Pending metric](https://web.dev/inp-cwv/), and it will join the reset of the Core Web Vitals next year.
+
+From this release, the INP metric is available in the [CrUX BigQuery](/docs/crux/bigquery/), [API](/docs/crux/api/), and [History API](/docs/crux/history-api/) both with and without the experimental prefix. We encourage users to move to the non-prefixed field as the experimental prefix fields should now be considered deprecated and will be removed in 90 days.
+
+Notable stats
+ : - 18,406,973 origins
+ : - 43.5% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+
+## 202303
+
+[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/1hHxnk9ZOCk)
+
+Publication date
+ : Apri 11, 2023
+
+Notable stats
+ : - 18,495,210 origins
+ : - 44.2% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+
+## 202302
+
+[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/1im_J9824AU)
+
+Publication date
+ : March 14, 2023
+
+What's new
+ : - We're seeing further improvements to the good [INP](https://web.dev/inp) rate which has increased by 2.3% to 77.3% of origins due to [the improvement in the Chrome scheduler](https://bugs.chromium.org/p/chromium/issues/detail?id=853771) mentioned last month, which was still rolling out during February.
+
+Notable stats
+ : - 18,184,396 origins
+ : - 43.1% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+
+## 202301
+
+[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/ImlvxIZ8Jss)
+
+Publication date
+ : February 14, 2023
+
+What's new
+ : - Good [INP](https://web.dev/inp) increased by 4.3% to 75.6% of origins, primarily due to [an improvement in the Chrome scheduler](https://bugs.chromium.org/p/chromium/issues/detail?id=853771). The next frame is now scheduled with highest priority after discrete input events, which shortens the lag between input event and visual update.
+ : - This month we've launched a [CrUX History API](/docs/crux/history-api/), which provides 25 weeks of historical data at both origin and URL level. We've [written a post](/blog/chrome-ux-report-history-api/) detailing how to use this new API, and a [Colab](https://colab.sandbox.google.com/github/GoogleChrome/CrUX/blob/main/colab/crux-history-api.ipynb) showing you an example of how to plot this historical data in various graphs.
+
+Notable stats
+ : - 18,203,637 origins
+ : - 43.0% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
 
 ## 202212
 

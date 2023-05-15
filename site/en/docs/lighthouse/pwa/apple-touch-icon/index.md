@@ -5,7 +5,8 @@ description: |
   Learn how to specify what icon your Progressive Web App displays on iOS home screens.
 codelabs: codelab-apple-touch-icon
 date: 2019-08-27
-updated: 2019-09-19
+updated: 2023-03-24
+is_outdated: true
 ---
 
 When iOS Safari users add [Progressive Web Apps (PWAs)](https://web.dev/progressive-web-apps/#make-it-installable) to

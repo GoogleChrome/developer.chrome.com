@@ -36,7 +36,7 @@ compare_current:
   en: 'Current'
 
 compare_proposed:
-  en: 'Proposed' 
+  en: 'Proposed'
 
 menu:
   en: 'menu'
@@ -81,9 +81,29 @@ success:
 gotchas:
   en: 'Gotchas'
   es: 'Gotchas'
+  ja: '注意事項'
+  ko: '주의사항'
+  pt: 'Gotchas'
+  ru: 'Особенности'
+  zh: '注意事项'
 
 important:
   en: 'Important'
+  es: 'Importante'
+  ja: '重要'
+  ko: '중요한'
+  pt: 'Importante'
+  ru: 'Важный'
+  zh: '重要的'
+
+update:
+  en: Update
+  es: Actualizar
+  ja: 更新
+  ko: 업데이트
+  pt: Atualizar
+  ru: Обновлять
+  zh: 更新
 
 key-term:
   en: 'Key Term'
@@ -92,6 +112,15 @@ key-term:
 codelab:
   en: 'Codelab'
   es: 'Codelab'
+
+example:
+  en: 'Example'
+  es: 'Ejemplo'
+  ja: '例'
+  ko: '예'
+  pt: 'Exemplo'
+  ru: 'Пример'
+  zh: '例子'
 
 objective:
   en: 'Objective'
@@ -197,6 +226,18 @@ website:
 featured:
   en: Featured
 
+launch_app:
+  en: 'Launch app'
+
+download_app:
+  en: 'Download app'
+
+view_source:
+  en: 'View source'
+
+load_more:
+  en: 'Load more'
+
 improve_article:
   en: 'Improve article'
   zh: '改进文章'
@@ -249,7 +290,19 @@ bug_report:
     en: Report a bug.
 
 checkbox_group:
-  reset: 
+  reset:
     en: Reset
   select_all:
     en: Select all
+
+outdated_banner:
+  content:
+    en: This content is outdated and no longer accurate.
+  new_material:
+    en: New material available
+
+filter_by:
+  en: 'Filter by'
+
+rss_feed:
+  en: RSS feed
