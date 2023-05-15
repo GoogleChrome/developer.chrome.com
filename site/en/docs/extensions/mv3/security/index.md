@@ -38,9 +38,9 @@ websites they depend on. Arbitrary code should be kept to a minimum.
 
 Limiting an extensions privileges limits what a potential attacker can exploit.
 
-### Cross-origin XMLHttpRequest {: #xhr }
+### Cross-origin fetch() {: #xhr }
 
-An extension can only use [XMLHttpRequest][6] to get resources from itself and from domains
+An extension can only use `fetch()` or [XMLHttpRequest][6] to get resources from itself and from domains
 specified in the permissions.
 
 ```json
@@ -162,7 +162,7 @@ Avoid using `eval()` whenever possible to prevent attacks, as `eval()` will exec
 into it, which may be malicious.
 
 ```js
-var xhr = new XMLHttpRequest();
+var xhr = new fetch();
 xhr.open("GET", "https://api.example.com/data.json", true);
 xhr.onreadystatechange = function() {
   if (xhr.readyState == 4) {
@@ -177,7 +177,7 @@ xhr.send();
 Instead, prefer safer, and faster, methods such as `JSON.parse()`
 
 ```js
-var xhr = new XMLHttpRequest();
+var xhr = new fetch();
 xhr.open("GET", "https://api.example.com/data.json", true);
 xhr.onreadystatechange = function() {
   if (xhr.readyState == 4) {
