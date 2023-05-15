@@ -5,5 +5,7 @@
     * Chrome Stable M112+
   * The `reportContributionForEvent()` function is available in
     * Chrome Canary and Dev M113+
+  * Supplying a context ID via Shared Storage for report verification is available in
+    * Chrome Canary, Dev, Beta, and Stable M114+
   * See the [Privacy Sandbox origin trial](/docs/privacy-sandbox/unified-origin-trial/#status) page to see the latest traffic allocation
 * See the [Chrome platform status page](https://chromestatus.com/feature/5743412790689792) page to see the API’s current stage.

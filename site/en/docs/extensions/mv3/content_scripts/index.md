@@ -187,10 +187,10 @@ not well known or when content scripts should not always be injected on known ho
 Introduced in Chrome 96, dynamic declarations are similar to [static
 declarations][header-cs-static], but the content script object is registered with Chrome using
 methods in the [`chrome.scripting` namespace](/docs/extensions/reference/scripting/) rather than in
-[manifest.json][doc-manifest]. In addition to
-[registering][api-register-cs] content scripts, the Scripting API also allows extension developers
+[manifest.json][doc-manifest]. The Scripting API also allows extension developers
 to:
 
+- [Register][api-register-cs] content scripts.
 - [Get a list of][api-get-registered-cs] registered content scripts.
 - [Update][api-update-cs] the list of registered content scripts.
 - [Remove][api-unregister-cs] registered content scripts.
