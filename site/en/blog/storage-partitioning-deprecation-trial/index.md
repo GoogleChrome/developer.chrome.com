@@ -31,7 +31,7 @@ This trial is available due to a need for some sites to migrate their Firebase
 
 ## Available deprecation trials
 
-Starting in [Chrome 112 Beta](https://chromiumdash.appspot.com/schedule), we'll
+Starting in [Chrome 115](https://chromiumdash.appspot.com/schedule), we'll
 open up two deprecation trials:
 
 1.  [`DisableThirdPartyStoragePartitioning`](/origintrials/#/view_trial/-8517432795264450559):
@@ -113,7 +113,7 @@ The following is a brief overview of how to participate in one or both of the
 deprecation trials. For more detailed instructions, visit
 [Get started with origin trials](/docs/web-platform/origin-trials).
 
-1.  Launch Chrome version 112 (or later) and ensure the
+1.  Launch Chrome version 115 (or later) and ensure the
     [`ThirdPartyStoragePartitioning`](/blog/storage-partitioning-dev-trial/)
     flag is enabled.
 1.  Verify that the behavior of third-party content embedded in your
@@ -130,7 +130,7 @@ deprecation trials. For more detailed instructions, visit
 1.  Add an origin trial token to your page:
     1. For the `DisableThirdPartySessionStoragePartitioningAfterGeneralPartitioning` trial you may add an `Origin-Trial: <DEPRECATION TRIAL TOKEN>` to         your top-level site’s HTTP response header, where `<DEPRECATION TRIAL TOKEN>` contains the token you got when registering for the deprecation             trial. You can also do this via HTML `<meta> tag.
     1. For the `DisableThirdPartyStoragePartitioning` trial, the token must be given via an HTML `<meta>` tag. The HTTP header method is not supported.
-1.  Load your website in Chrome 112 Beta (or later) with
+1.  Load your website in Chrome 115 (or later) with
     `ThirdPartyStoragePartitioning` still enabled and verify that any
     partitioning related issues have been properly mitigated.
 1.  To stop participating in the deprecation trial simply remove the header
