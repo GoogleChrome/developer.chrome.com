@@ -24,7 +24,7 @@ memory pressure more predictable. It's available behind the
 `#enable-experimental-web-platform-features` flag in Chromium&nbsp;106, and we'd love your feedback.
 
 {% Aside %}
-You can try the Storage Buckets API by [participating in the Storage Buckets origin trial](https://developer.chrome.com/origintrials/#/view_trial/2674012278751232001). The origin trial runs from Chrome&nbsp;115 (stable date): {% ChromeDate 115 %} to Chrome&nbsp;118 (stable date): {% ChromeDate 118 %}
+You can try the Storage Buckets API by [participating in the Storage Buckets origin trial](https://developer.chrome.com/origintrials/#/view_trial/2674012278751232001). The origin trial runs from Chrome&nbsp;115 (stable date): {% ChromeDate 115 %} to Chrome&nbsp;118 (stable date): {% ChromeDate 118 %}.
 {% endAside %}
 
 ## What problem does the storage standard aim to solve?
