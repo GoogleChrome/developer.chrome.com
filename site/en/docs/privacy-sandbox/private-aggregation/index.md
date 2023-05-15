@@ -24,7 +24,7 @@ This document outlines a new proposal for cross-site measurement.
 ## What is the Private Aggregation API
 
 The Private Aggregation API enables aggregate data collection from worklets
-with access to cross-site data such as [Protected Audience API](/docs/privacy-sandbox/fledge/)
+with access to cross-site data such as [the Protected Audience API](/docs/privacy-sandbox/fledge/)
 and [Shared Storage](/docs/privacy-sandbox/shared-storage/). 
 
 This API proposal provides one operation, `sendHistogramReport()`, but more may be supported in the future. The histogram operation allows you to aggregate data across users in each bucket (known in the API as an aggregation key) you define. Your histogram call accumulates values and returns a noised aggregated result in the form of a summary report. For instance, the report might show the number of sites each user has seen your content on, or come across a bug in your third-party script. This operation is performed within another API’s worklet.
@@ -45,7 +45,7 @@ See the [Private Aggregation API fundamentals](/docs/privacy-sandbox/private-agg
 
 ### Differences from Attribution Reporting
 
-The Private Aggregation API shares many similarities with the [Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/). Attribution Reporting is a standalone API designed to measure conversions, whereas Private Aggregation is built for cross-site measurements in conjunction with APIs like Protected Audience API and Shared Storage. Both APIs produce aggregatable reports that are consumed by the Aggregation Service back-end to generate summary reports. 
+The Private Aggregation API shares many similarities with the [Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/). Attribution Reporting is a standalone API designed to measure conversions, whereas Private Aggregation is built for cross-site measurements in conjunction with APIs such as the Protected Audience API and Shared Storage. Both APIs produce aggregatable reports that are consumed by the Aggregation Service back-end to generate summary reports. 
 
 Attribution Reporting associates data gathered from an impression event and a conversion event, which happen at different times. Private Aggregation measures a single, cross-site event. 
 
@@ -67,7 +67,7 @@ Read more about testing in [experiment and participate](/docs/privacy-sandbox/pr
 
 The demo of Private Aggregation API for Shared Storage can be accessed at [goo.gle/shared-storage-demo](http://goo.gle/shared-storage-demo), and the code is available on [GitHub](https://github.com/GoogleChromeLabs/shared-storage-demo). The demo implements the client-side operations and produces an aggregatable report that is sent to your server. 
 
-A demo of Private Aggregation API for Protected Audience API will be published in the future. 
+A demo of Private Aggregation API for the Protected Audience API will be published in the future. 
 
 ## Use cases
 
@@ -95,11 +95,11 @@ You may want to measure the number of users who have seen a piece of content or 
 
 Private Aggregation can provide an answer such as "Approximately 89 users have seen the Content ID 581 at least 3 times." A counter can be incremented in Shared Storage from different sites and can be read within a worklet. When the count has reached K, a report can be submitted via Private Aggregation. 
 
-### With Protected Audience API
+### With the Protected Audience API
 
-Protected Audience API enables retargeting and custom audience use cases, and Private Aggregation allows you to report events from buyer and seller worklets. The API can be used for tasks such as measuring the distribution of auction bids.
+The Protected Audience API enables retargeting and custom audience use cases, and Private Aggregation allows you to report events from buyer and seller worklets. The API can be used for tasks such as measuring the distribution of auction bids.
 
-From a Protected Audience API worklet, you can aggregate your data directly using `sendHistogramReport()` and report your data based on a trigger using `reportContributionForEvent()`, which is a special extension for Protected Audience API.
+From a Protected Audience API worklet, you can aggregate your data directly using `sendHistogramReport()` and report your data based on a trigger using `reportContributionForEvent()`, which is a special extension for the Protected Audience API.
 
 ## Available functions
 
