@@ -55,34 +55,30 @@ let creating; // A global promise to avoid concurrency issues
 async function setupOffscreenDocument(path) {
   // Check all windows controlled by the service worker to see if one 
   // of them is the offscreen document with the given path
-  let exist = false;
   const offscreenUrl = chrome.runtime.getURL(path);
   const matchedClients = await clients.matchAll();
   for (const client of matchedClients) {
     if (client.url === offscreenUrl) {
-      exist = true;
-      break;
+      return;
     }
   }
-  
-  // create offscreen document if it's not existing
-  if (!exist) {
-    if (creating) {
-      await creating;
-    } else {
-      creating = chrome.offscreen.createDocument({
-        url: path,
-        reasons: ['CLIPBOARD'],
-        justification: 'reason for needing the document',
-      });
-      await creating;
-      creating = null;
-    }
+
+  // create offscreen document
+  if (creating) {
+    await creating;
+  } else {
+    creating = chrome.offscreen.createDocument({
+      url: path,
+      reasons: ['CLIPBOARD'],
+      justification: 'reason for needing the document',
+    });
+    await creating;
+    creating = null;
   }
 }
 ```
 
-Before sending message to offscreen document, call `setupOffscreenDocument()` to make sure that there is existing offscreen document, as demonstrated in the following example. 
+Before sending a message to an offscreen document, call `setupOffscreenDocument()` to make sure that there is existing offscreen document, as demonstrated in the following example. 
 
 ```js
 chrome.action.onClicked.addListener(async () => {
