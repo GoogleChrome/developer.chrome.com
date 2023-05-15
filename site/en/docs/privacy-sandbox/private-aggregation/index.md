@@ -193,6 +193,14 @@ privateAggregation.enableDebugMode({ debug_key: BigInt(1234) });
 
 Within FLEDGE worklets only, we provide a trigger-based mechanism for sending a report only if a certain event occurs. This function also allows for the bucket and value to depend on signals that are not yet available at that point in the auction (for example, the value of the winning bid in `generateBid()`). More detail is available in the [explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE_extended_PA_reporting.md).
 
+## Report verification
+
+For Shared Storage, you can verify the aggregatable reports you received are legitimate by [adding a context ID](https://github.com/patcg-individual-drafts/private-aggregation-api/blob/main/report_verification.md#shared-storage) to the shared storage operation call. The ID will be attached to the sent report, and at a later time, you can use that ID to verify that the report was sent from your shared storage operation.
+
+The feature is available for testing in Chrome M114+. Report verification for the Protected Audience API is not yet available for testing.
+
+To learn more, see the [report verification explainer](https://github.com/patcg-individual-drafts/private-aggregation-api/blob/main/report_verification.md#shared-storage). 
+
 ## Engage and share feedback
 
 The Private Aggregation API proposal is under active discussion and subject to change in the future. If you try this API and have feedback, we'd love to hear it.
