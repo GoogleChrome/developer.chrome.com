@@ -41,7 +41,7 @@ outside world.
 title="View a larger version of image." target="_blank">view a larger version</a>.</figcaption>
 </figure>
 
-1. A user visits a site which displays ads. While Protected Audience API is in an origin trial,
+1. A user visits a site which displays ads. While the Protected Audience API is in an origin trial,
    the site must have an available and valid origin trial token. The user must
    be in an experimental group (such as Finch).
 2. The seller's code executes `navigator.runAdAuction()`. This specifies which
@@ -93,7 +93,7 @@ For example:
 * **[Supply-side platform (SSP)](/docs/privacy-sandbox/glossary/#ssp)**: working with the publisher and providing other services.
 * **Third-party script**: acting for a publisher, to enable participation in ad auctions.
 
-With Protected Audience API, a seller has three jobs:
+With the Protected Audience API, a seller has three jobs:
 
 * Enforce publisher rules: which buyers and which bids are eligible.
 * Run auction logic: JavaScript run in
@@ -169,7 +169,7 @@ desirability score.
 #### `auctionConfig` properties
 
 {% Aside %}
-`additionalBids` is not supported in the current implementation of Protected Audience API. Read the [Auction
+`additionalBids` is not supported in the current implementation of the Protected Audience API. Read the [Auction
       Participants](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#22-auction-participants) section in the
       Protected Audience API explainer for more information.
 {% endAside %}
