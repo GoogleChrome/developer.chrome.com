@@ -1,10 +1,10 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Opt-out of Protected Audience API'
+title: 'Opt-out of the Protected Audience API'
 subhead: >
-  For developers and users who want to opt-out of Protected Audience API.
+  For developers and users who want to opt-out of the Protected Audience API.
 description: >
-  For developers and users who want to opt-out of Protected Audience API.
+  For developers and users who want to opt-out of the Protected Audience API.
 date: 2022-10-29
 authors:
   - samdutton
@@ -17,8 +17,8 @@ You can block access to the Protected Audience API, as a [site owner](#opt-out-s
 
 ## Site owners {: #opt-out-site}
 
-Protected Audience API will eventually require sites to set a [Permissions Policy](/docs/privacy-sandbox/permissions-policy/)
-to allow Protected Audience API functionality to be available. This will help ensure that
+The Protected Audience API will eventually require sites to set a [Permissions Policy](/docs/privacy-sandbox/permissions-policy/)
+to allow the Protected Audience API functionality to be available. This will help ensure that
 arbitrary third parties can't use the API without a site's knowledge. However,
 to facilitate testing during [the first origin trial](/blog/privacy-sandbox-unified-origin-trial),
 this requirement is [waived by default](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md#permissions-policy).
@@ -31,7 +31,7 @@ are two Protected Audience API permissions policies that can be set independentl
   interest groups
 * `run-ad-auction` enables/disables functionality to run an on-device auction
 
-Access to Protected Audience API s can be disabled completely in first-party contexts by
+Access to Protected Audience APIs can be disabled completely in first-party contexts by
 specifying the following permissions policy in an HTTP response header:
 
 ``` text
