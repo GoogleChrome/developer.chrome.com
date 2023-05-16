@@ -11,7 +11,6 @@ tags:
 hero: image/0SXGYLkliuPQY3aSy3zWvdv7RqG2/KvZQXFKIGKEzAjxzf5bF.jpg
 alt: >
   Night sky
-
 ---
 
 Chrome's Aurora initiative is a collaboration between Chrome and open-source Javascript frameworks and tooling to improve user experience on the web. If Aurora is new to you, take a look at our [introduction post](/blog/introducing-aurora/) to learn more about our mission and methodology.
