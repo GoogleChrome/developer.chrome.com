@@ -318,7 +318,6 @@ export function setConfig() {
   if (location.hostname === 'localhost') {
     window.dataLayer.push({debug_mode: true});
   }
-  // checkIfUserAcceptsCookies();
   const cookiePreference = localStorage.getItem('user-cookies');
   window.dataLayer.push({cookiePreference: cookiePreference});
 
