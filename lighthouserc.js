@@ -32,7 +32,7 @@ module.exports = {
         /**
          * Gtag and GA used unused JS but out of our control, so reduce to warning if only 2
          */
-        'unused-javascript': ['warn', {maxLength: 2}],
+        'unused-javascript': ['error', {maxLength: 2}],
 
         /**
          * We don't care about preconnect to Analytics and friends.
