@@ -95,7 +95,7 @@ In the coming year, we will be focused on the following:
 
 * **Angular SSR and hydration developer experience**: We have been working closely with the Angular team on the [SSR and hydration project](https://angular.io/guide/hydration). Our focus has been to upgrade the developer experience of using SSR, allowing more applications to take advantage of the LCP benefits. Stay tuned for an official RFC around SSR DOM manipulation features.
 
-* **Angular image directive and `nuxt/image` features**: We have a number of exciting features planned for Angular, such as automatic preconnect hint generation, migration tools to aid the transition from basic `<img>` tags, picture tag support, and placeholders. We will also be consulting with the Nuxt team on a number of new features for `nuxt/image`.
+* **Angular image directive and `nuxt/image` features**: We have a number of exciting features planned for Angular, such as automatic preconnect hint generation, migration tools to aid the transition from basic `<img>` elements, `<picture>` element support, and placeholders. We will also be consulting with the Nuxt team on a number of new features for `nuxt/image`.
 
 * **INP research (cross-framework)**: As [Interaction to Next Paint (INP)](https://web.dev/inp/) will be replacing [First Input Delay (FID)](https://web.dev/fid/) in 2024, we are ramping up support for improving INP in frameworks. This will involve analysis of the root causes for INP issues in frameworks and creating built-in solutions for framework users where possible.
 
