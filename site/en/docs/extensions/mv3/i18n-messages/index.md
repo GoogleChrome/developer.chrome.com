@@ -152,6 +152,7 @@ the first three substitution strings passed into `getMessage()`:
 
 {% Label %}messages.json:{% endLabel %}
 
+
 ```json
 "message": "Params: $1, $2, $3"
 ```
