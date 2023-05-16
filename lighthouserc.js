@@ -30,9 +30,10 @@ module.exports = {
         'tap-targets': 'off',
 
         /**
-         * Gtag and GA used unused JS but out of our control, so reduce to warning if only 2
+         * Gtag and GA used unused JS but out of our control, so only error
+         * if over 2 resources with lots of unused-javascript
          */
-        'unused-javascript': ['error', {maxLength: 2}],
+        'unused-javascript': ['error', {maxLength: 1}],
 
         /**
          * We don't care about preconnect to Analytics and friends.
