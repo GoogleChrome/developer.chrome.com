@@ -101,7 +101,7 @@ In the coming year, we will be focused on the following:
 
 * **Speedometer 3**: We are also helping to implement the next generation of the benchmarking tool [Speedometer](https://browserbench.org/Speedometer2.0/) to represent the modern web framework landscape of 2023. 
 
-## Stay up-to-date
+## Stay up to date
 
 Bookmark [our landing page](/aurora) to stay up-to-date with the latest news, tech talks, and blog posts from the Aurora team. You can also follow us on Twitter:
 
