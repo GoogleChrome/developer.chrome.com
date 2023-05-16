@@ -180,7 +180,7 @@ permissions][9]. Moreover, only the following schemes are accessible: `http://`,
 `chrome-extension://`. In addition, even certain requests with URLs using one of the above schemes
 are hidden. These include `chrome-extension://other_extension_id` where `other_extension_id` is not
 the ID of the extension to handle the request, `https://www.google.com/chrome`, and other sensitive
-requests core to browser functionality. Also synchronous `fetch()` requests from your extension are
+requests core to browser functionality. Also synchronous XMLHttpRequests from your extension are
 hidden from blocking event handlers in order to prevent deadlocks. Note that for some of the
 supported schemes the set of available events might be limited due to the nature of the
 corresponding protocol. For example, for the file: scheme, only `onBeforeRequest`,
