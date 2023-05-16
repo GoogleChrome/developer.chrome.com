@@ -46,7 +46,7 @@ was originally introduced with the initial launch of Chrome, providing isolation
 
 An extension may run in a web page with code similar to the example below.
 
-{% Label %}Web page{% endLabel %}
+{% Label %}webPage.html{% endLabel %}
 
 ```html
 <html>
@@ -64,7 +64,7 @@ An extension may run in a web page with code similar to the example below.
 That extension could inject the following content script using one of the techniques outlined in the
 [Inject scripts][31] section.
 
-{% Label %}Content Script{% endLabel %}
+{% Label %}content-script.js{% endLabel %}
 
 ```js
 var greeting = "hola, ";
@@ -197,7 +197,7 @@ to:
 
 Like static declarations, dynamic declarations can include JavaScript files, CSS files, or both.
 
-{% Label %}Service Worker{% endLabel %}
+{% Label %}service-worker.js{% endLabel %}
 
 ```js
 chrome.scripting
@@ -212,7 +212,7 @@ chrome.scripting
   .catch((err) => console.warn("unexpected error", err))
 ```
 
-{% Label %}Service Worker{% endLabel %}
+{% Label %}service-worker.js{% endLabel %}
 
 ```js
 chrome.scripting
@@ -223,7 +223,7 @@ chrome.scripting
   .then(() => console.log("registration updated"));
 ```
 
-{% Label %}Service Worker{% endLabel %}
+{% Label %}service-worker.js{% endLabel %}
 
 ```js
 chrome.scripting
@@ -231,7 +231,7 @@ chrome.scripting
   .then(scripts => console.log("registered content scripts", scripts));
 ```
 
-{% Label %}Service Worker{% endLabel %}
+{% Label %}service-worker.js{% endLabel %}
 
 ```js
 chrome.scripting
@@ -279,7 +279,7 @@ Content scripts can be injected as files…
 document.body.style.backgroundColor = "orange";
 ```
 
-{% Label %}background.js:{% endLabel %}
+{% Label %}service-worker.js:{% endLabel %}
 
 ```js
 chrome.action.onClicked.addListener((tab) => {
@@ -292,7 +292,7 @@ chrome.action.onClicked.addListener((tab) => {
 
 …or a function body can be injected and executed as a content script.
 
-{% Label %}background.js:{% endLabel %}
+{% Label %}service-worker.js:{% endLabel %}
 
 ```js
 function injectedFunction() {
@@ -314,7 +314,7 @@ script to throw a [`ReferenceError`][ref-error].
 
 When injecting as a function, you can also pass arguments to the function.
 
-{% Label %}Service Worker{% endLabel %}
+{% Label %}service-worker.js{% endLabel %}
 
 ```js
 function injectedFunction(color) {
@@ -395,7 +395,7 @@ but not into **https://www.nytimes.com/ business** .
 }
 ```
 
-{% Label %}Service Worker{% endLabel %}
+{% Label %}service-worker.js{% endLabel %}
 
 ```js/2-3
 chrome.scripting.registerContentScripts([{
@@ -508,7 +508,7 @@ values.
 }
 ```
 
-{% Label %}Service Worker{% endLabel %}
+{% Label %}service-worker.js{% endLabel %}
 
 ```js/3
 chrome.scripting.registerContentScripts([{
@@ -580,7 +580,7 @@ tab.
 }
 ```
 
-{% Label %}Service Worker{% endLabel %}
+{% Label %}service-worker.js{% endLabel %}
 
 ```js/3
 chrome.scripting.registerContentScripts([{
@@ -672,7 +672,7 @@ content script, or with the extension via the content script, it must do so thro
 
 An example can be accomplished using [`window.postMessage`][27]:
 
-{% Label %}Content Scriptx{% endLabel %}
+{% Label %}content-script.js{% endLabel %}
 
 ```js
 var port = chrome.runtime.connect();
@@ -690,7 +690,7 @@ window.addEventListener("message", (event) => {
 }, false);
 ```
 
-{% Label %}Content Script{% endLabel %}
+{% Label %}content-script.js{% endLabel %}
 
 ```js
 document.getElementById("theButton").addEventListener("click", () => {
@@ -709,7 +709,7 @@ similar means.
 To access an extension file from a content script, you can call
 [`chrome.runtime.getURL()`][api-get-url] to get the _absolute URL_ of your extension asset as shown in the following example (`content.js`):
 
-{% Label %}content.js{% endLabel %}
+{% Label %}content-script.js{% endLabel %}
 
 ```js
 let image = chrome.runtime.getURL("images/my_image.png")
@@ -766,7 +766,7 @@ disallowed in Manifest V3:
 
 {% Compare 'worse' %}
 
-{% Label %}Content Script{% endLabel %}
+{% Label %}content-script.js{% endLabel %}
 
 ```js
 const data = document.getElementById("json-data");
@@ -777,7 +777,7 @@ const parsed = eval("(" + data + ")");
 
 {% Compare 'worse' %}
 
-{% Label %}Content Script{% endLabel %}
+{% Label %}content-script.js{% endLabel %}
 
 ```js
 const elmt_id = ...
@@ -790,7 +790,7 @@ Instead, prefer safer APIs that do not run scripts:
 
 {% Compare 'better' %}
 
-{% Label %}Content Script{% endLabel %}
+{% Label %}content-script.js{% endLabel %}
 
 ```js
 const data = document.getElementById("json-data")
@@ -801,7 +801,7 @@ const parsed = JSON.parse(data);
 
 {% Compare 'better' %}
 
-{% Label %}Content Script{% endLabel %}
+{% Label %}content-script.js{% endLabel %}
 
 ```js
 const elmt_id = ...
