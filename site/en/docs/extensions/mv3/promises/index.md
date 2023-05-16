@@ -52,7 +52,7 @@ chrome.permissions.request(newPerms, (granted) => {
 {% Compare 'better', 'Promise' %}
 ```js
 const newPerms = { permissions: ['topSites'] };
-const granted = chrome.permissions.request(newPerms)
+const granted = await chrome.permissions.request(newPerms)
 if (granted) {
   console.log('granted');
 } else {
