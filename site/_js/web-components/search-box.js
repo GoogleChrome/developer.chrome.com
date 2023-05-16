@@ -92,7 +92,7 @@ export class SearchBox extends BaseElement {
     this.searchIcon = unsafeSVG(searchIcon);
 
     this.renderResult = this.renderResult.bind(this);
-    this.search = debounce(this.search.bind(this), 500);
+    this.search = debounce(this.search.bind(this), 1000);
   }
 
   clearSearch() {
