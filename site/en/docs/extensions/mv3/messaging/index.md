@@ -31,7 +31,7 @@ promise and a callback.
 
 Sending a request from a content script looks like this:
 
-{% Label %}Content Script:{% endLabel %}
+{% Label %}content-script.js:{% endLabel %}
 
 ```js
 (async () => {
@@ -45,7 +45,7 @@ Sending a request from the extension to a content script is similar, except that
 specify which tab to send it to. This example demonstrates sending a message to the content script
 in the selected tab.
 
-{% Label %}Service Worker{% endLabel %}
+{% Label %}service-worker.js{% endLabel %}
 
 ```js
 (async () => {
@@ -59,7 +59,7 @@ in the selected tab.
 On the receiving end, you need to set up an [runtime.onMessage][runtime-on-msg] event listener to handle the
 message. This looks the same from a content script or extension page.
 
-{% Label %}Content Script or Service Worker:{% endLabel %}
+{% Label %}content-script.js or service-worker.js:{% endLabel %}
 
 ```js
 chrome.runtime.onMessage.addListener(
@@ -108,7 +108,7 @@ sending and receiving messages through that connection.
 
 Here is how you open a channel from a content script, and send and listen for messages:
 
-{% Label %}Content Sript:{% endLabel %}
+{% Label %}content-script.js:{% endLabel %}
 
 ```js
 var port = chrome.runtime.connect({name: "knockknock"});
@@ -131,7 +131,7 @@ extension calls `connect()`, this event is fired, along with the [runtime.Port][
 use to send and receive messages through the connection. Here's what it looks like to respond to
 incoming connections:
 
-{% Label %}Service Worker:{% endLabel %}
+{% Label %}service-worker.js:{% endLabel %}
 
 ```js
 chrome.runtime.onConnect.addListener(function(port) {
@@ -183,7 +183,7 @@ Listening for incoming requests and connections is similar to the internal case,
 [runtime.onMessageExternal][runtime-on-msg-ext] or [runtime.onConnectExternal][runtime-on-connect-ext] methods. Here's an example of
 each:
 
-{% Label %}Service Worker{% endLabel %}
+{% Label %}service-worker.js{% endLabel %}
 
 ```js
 // For simple requests:
@@ -211,7 +211,7 @@ Likewise, sending a message to another extension is similar to sending one withi
 The only difference is that you must pass the ID of the extension you want to communicate with. For
 example:
 
-{% Label %}Service Worker{% endLabel %}
+{% Label %}service-worker.js{% endLabel %}
 
 ```js
 // The ID of the extension we want to talk to.
@@ -250,7 +250,7 @@ pattern must contain at least a [second-level domain][wiki-second-level]; that i
 [runtime.sendMessage()][runtime-send-msg] or [runtime.connect()][runtime-connect] APIs to send a message to a specific app or
 extension. For example:
 
-{% Label %}Website{% endLabel %}
+{% Label %}webpage.js{% endLabel %}
 
 ```js
 // The ID of the extension we want to talk to.
@@ -268,7 +268,7 @@ From your extension, you may listen to messages from web pages via the
 [runtime.onMessageExternal][runtime-on-msg-ext] or [runtime.onConnectExternal][runtime-on-connect-ext] APIs, similar to [cross-extension
 messaging][section-external]. Only the web page can initiate a connection. Here is an example:
 
-{% Label %}Service Worker{% endLabel %}
+{% Label %}service-worker.js{% endLabel %}
 
 ```js
 chrome.runtime.onMessageExternal.addListener(
@@ -303,7 +303,7 @@ not to fall victim to [cross-site scripting][wiki-cross-site]. This advice appli
 extension background page as well as to content scripts running inside other web origins.
 Specifically, avoid using dangerous APIs such as the ones below:
 
-{% Label %}Service Worker or Content Script{% endLabel %}
+{% Label %}content-script.js or service-worker.js{% endLabel %}
 
 ```js
 chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
@@ -312,7 +312,7 @@ chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
 });
 ```
 
-{% Label %}Service Worker or Content Script{% endLabel %}
+{% Label %}content-script.js or service-worker.js{% endLabel %}
 
 ```js
 chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
@@ -323,7 +323,7 @@ chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
 
 Instead, prefer safer APIs that do not run scripts:
 
-{% Label %}Service Worker or Content Script{% endLabel %}
+{% Label %}content-script.js or service-worker.js{% endLabel %}
 
 ```js
 chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
@@ -332,7 +332,7 @@ chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
 });
 ```
 
-{% Label %}Service Worker or Content Script{% endLabel %}
+{% Label %}content-script.js or service-worker.js{% endLabel %}
 
 ```js
 chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
