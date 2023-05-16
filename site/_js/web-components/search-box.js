@@ -29,13 +29,7 @@ import {activateSearch, deactivateSearch} from '../actions/search';
 const client = algoliasearch('0PPZV3EY55', 'dc0d3a2d53885be29eacc351026dcdcf');
 const index = client.initIndex('prod_developer_chrome');
 
-const blockedQueries = [
-  /downl?o?/,
-  /par?ral?lel/,
-  /automate ?b?e/,
-  /vpn/,
-  /xxx/,
-];
+const blockedQueries = [/dow?nl?o?/, /par?ral?/, /automate be/, /vpn/, /xxx/];
 
 export class SearchBox extends BaseElement {
   static get properties() {
