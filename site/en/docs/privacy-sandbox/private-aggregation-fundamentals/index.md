@@ -162,11 +162,11 @@ For testing purposes, the “Send Selected Reports” button can be used to send
 The browser sends the aggregatable reports to the origin of the worklet containing the call to the Private Aggregation API, using the listed well-known path:
 
 *   For Shared Storage: `/.well-known/private-aggregation/report-shared-storage`
-*   For FLEDGE: `/.well-known/private-aggregation/report-fledge`
+*   For Protected Audience: `/.well-known/private-aggregation/report-protected-audience`
 
 At these endpoints, you will need to operate a server — acting as a collector — that receives the aggregatable reports sent from the clients.
 
-The server should then batch reports and send the batch to the Aggregation Service.  Create batches based on the information available in the unencrypted payload of the aggregatable report, such as the `shared\_info` field. Ideally, the batches should contain 100 or more reports per batch. 
+The server should then batch reports and send the batch to the Aggregation Service.  Create batches based on the information available in the unencrypted payload of the aggregatable report, such as the `shared_info` field. Ideally, the batches should contain 100 or more reports per batch. 
 
 You may decide to batch on a daily or weekly basis. This strategy is flexible, and you can change your batching strategy for specific events where you expect more volume—for example, days of the year when more impressions are expected. Batches should include reports from the same API version, reporting origin, and schedule report time. 
 
