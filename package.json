@@ -100,9 +100,9 @@
   "optionalDependencies": {
     "@types/cheerio": "^0.22.22",
     "@types/express": "^4.17.13",
-    "@types/google.analytics": "^0.0.40",
+    "@types/gtag.js": "^0.0.12",
     "@types/js-yaml": "^4.0.3",
-    "@types/node": "16.11.7",
+    "@types/node": "20.1.4",
     "@types/node-fetch": "^2.5.12",
     "@types/nunjucks": "3.2.1",
     "@types/tmp": "^0.2.0",

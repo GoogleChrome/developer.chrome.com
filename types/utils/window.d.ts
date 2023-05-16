@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,11 +15,12 @@
  */
 
 declare global {
-  export interface HTMLElement extends HTMLElement {
-    inert: boolean;
+  interface Document extends Document {
+    wasDiscarded: boolean;
+    prerendering: boolean;
   }
-  export interface HTMLScriptElement extends HTMLScriptElement {
-    supports: (type:string) => boolean;
+  interface Window extends Window {
+    dataLayer: Record<string, any>[];
   }
 }
 

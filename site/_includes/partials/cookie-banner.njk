@@ -3,14 +3,17 @@
 <announcement-banner class="cookie-banner hairline-top" storage-key="user-cookies">
   <div class="type--small">
     {{ 'i18n.common.cookie_banner.explainer' | i18n(locale) }}
-  </div>
-  <div class="cookie-banner__controls">
     <a class="material-button button-text color-blue-medium display-inline-flex align-center"
        href="{{ site.cookiesCtaUrl }}">
           {{ 'i18n.common.cookie_banner.learn_more' | i18n(locale) }} {{ icon('external-link', {label: 'i18n.common.external_link' | i18n(locale), className: 'gap-left-200'}) }}
     </a>
-    <button class="material-button button-filled color-bg bg-primary" data-banner-close-btn>
+  </div>
+  <div class="cookie-banner__controls">
+    <button class="material-button button-filled color-bg bg-primary" data-banner-close-btn storage-value="accepts">
       {{ 'i18n.common.cookie_banner.accept' | i18n(locale) }}
+    </button>
+    <button class="material-button button-filled color-bg bg-primary" data-banner-close-btn storage-value="rejects">
+      {{ 'i18n.common.cookie_banner.reject' | i18n(locale) }}
     </button>
   </div>
 </announcement-banner>
