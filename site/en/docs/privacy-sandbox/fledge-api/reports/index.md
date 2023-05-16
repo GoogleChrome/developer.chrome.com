@@ -11,6 +11,8 @@ authors:
   - alexandrawhite
 ---
 
+{% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
+
 In this article, you'll find a technical reference for generating reports for
 FLEDGE auction wins, as used in the current iteration of the experimental
 FLEDGE API.

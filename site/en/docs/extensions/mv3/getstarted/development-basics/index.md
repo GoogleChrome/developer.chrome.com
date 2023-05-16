@@ -44,7 +44,7 @@ Next, create a new file in this directory called `manifest.json` and add the fol
 ```
 
 This JSON object describes the extension's capabilities and configuration. For example, the `"action"` key 
-declares the image Chrome should use as the action's icon and the HTML page to show in a popup when the action is clicked. [Download the icon][hello-icon] to your directory, and be sure to change its name to match what's in the `"default_icon"` key. 
+declares the image Chrome should use as the extension's action icon and the HTML page to show in a popup when the extension's action icon is clicked. [Download the icon][hello-icon] to your directory, and be sure to change its name to match what's in the `"default_icon"` key. 
 
 For the popup, create a file named `hello.html`, and add the following code:
 
@@ -56,7 +56,7 @@ For the popup, create a file named `hello.html`, and add the following code:
 </html>
 ```
 
-The extension now displays a popup when the extension action (toolbar icon) is clicked. Let's test
+The extension now displays a popup when the extension's action icon (toolbar icon) is clicked. Let's test
 it in Chrome by loading it locally. Ensure all files are saved.
 
 ## Loading an unpacked extension {: #load-unpacked }
@@ -95,7 +95,7 @@ alt="Pinning the extension", width="358", height="248", class="screenshot" %}
   </figcaption>
 </figure>
 
-Click on the extension’s action (toolbar icon); you should see a popup.
+Click on the extension’s action icon (toolbar icon); you should see a popup.
 
 <figure>
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/xjKRmWMgwMm7Kdf72bkj.png", 
@@ -164,25 +164,24 @@ console.log("This is a popup!")
 
 To see this message logged in the Console:
 
-  1. Refresh the extension.
-  2. Open the popup.
-  3. Right-click on the popup.
-  4. Select **Inspect**. 
+  1. Open the popup.
+  2. Right-click on the popup.
+  3. Select **Inspect**. 
       <figure> 
       {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/vHGHW1o4J0kZgUkAteRQ.png", 
-      alt="Inspecting the popup", width="322", height="262", class="screenshot" %}
+      alt="Inspecting the popup.", width="322", height="262", class="screenshot" %}
         <figcaption>
-        Inspecting a popup 
+        Inspecting a popup. 
         </figcaption>
       </figure>
-  5. In the [DevTools][dev-tools], navigate to the **Console** panel.
+  4. In the [DevTools][dev-tools], navigate to the **Console** panel.
     <figure>
     {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/1ZrcBEYcbMxW1c9UvBy9.png", 
     alt="DevTools Code Panel", width="400", height="374", class="screenshot" %}
       <figcaption>
-      DevTools Console Panel 
+      Inspecting a popup 
       </figcaption>
-    </figure>
+    </figure>   
 
 ### Error logs {: #errors }
 
@@ -219,7 +218,7 @@ package [chrome-types][npm-chrome-types] to take advantage of auto-completion fo
 API][doc-apis]. This npm package is updated automatically when the Chromium source code
 changes.
 
-{% Aside  'gotchas' %}
+{% Aside  'important' %}
 
 Update this npm package frequently to work with the latest Chromium version.
 

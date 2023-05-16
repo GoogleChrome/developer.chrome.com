@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,6 +28,18 @@ import {activateSearch, deactivateSearch} from '../actions/search';
 
 const client = algoliasearch('0PPZV3EY55', 'dc0d3a2d53885be29eacc351026dcdcf');
 const index = client.initIndex('prod_developer_chrome');
+
+const blockedQueries = [
+  /add? ?bloc?k?/,
+  /d(a|o|u)w?nl?o?/,
+  /p(a|e)r?r(a|e)?/,
+  /automate be/,
+  /roblox/,
+  /ublock/,
+  /vpn/,
+  /porn/,
+  /xxx/,
+];
 
 export class SearchBox extends BaseElement {
   static get properties() {
@@ -92,10 +104,11 @@ export class SearchBox extends BaseElement {
     this.searchIcon = unsafeSVG(searchIcon);
 
     this.renderResult = this.renderResult.bind(this);
-    this.search = debounce(this.search.bind(this), 500);
+    this.search = debounce(this.search.bind(this), 1000);
   }
 
   clearSearch() {
+    this.input.blur();
     this.active = false;
     this.input.value = '';
     this.search('');
@@ -280,7 +293,20 @@ export class SearchBox extends BaseElement {
 
   async search(query) {
     this.query = query.trim();
+
+    for (const blockedQuery of blockedQueries) {
+      if (this.query.match(blockedQuery)) {
+        return;
+      }
+    }
+
     if (this.query === '') {
+      this.results = [];
+      this.categorisedResults = {};
+      return;
+    }
+
+    if (this.query.length < 4) {
       this.results = [];
       this.categorisedResults = {};
       return;
@@ -426,6 +452,24 @@ export class SearchBox extends BaseElement {
   renderResults() {
     if (!this.active) {
       return;
+    }
+
+    // check if the query length is less than two
+    // if it is, then prompt the user to search for at
+    // least three characters
+    if (this.query.length <= 2) {
+      return html`
+        <div
+          id="search-box__results"
+          class="search-box__results"
+          role="listbox"
+          aria-label="${this.placeholder}"
+        >
+          <div class="search-box__result-heading type--label">
+            Please enter at least 3 characters for search suggestions.
+          </div>
+        </div>
+      `;
     }
 
     this.resultsCounter = -1;

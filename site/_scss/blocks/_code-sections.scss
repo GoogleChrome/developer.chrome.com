@@ -31,6 +31,10 @@
   margin-right: 0.5ch;
 }
 
+.code-sections__enum {
+  margin-bottom: 1rem;
+}
+
 .code-sections__icon {
   &::before {
     // By default, we show the 'object' icon.

@@ -17,6 +17,7 @@ The following code shows the supported fields for `messages.json`. Only the "_na
 fields are required.
 
 {% Label %}messages.json:{% endLabel %}
+
 ```json
 {
   "name": {
@@ -40,6 +41,7 @@ Here's a `messages.json` file that defines three messages named "prompt_for_name
 "bye":
 
 {% Label %}messages.json:{% endLabel %}
+
 ```json
 {
   "prompt_for_name": {
@@ -101,6 +103,7 @@ include the following characters:
 Here are three examples of names, taken from the [Example][8] section:
 
 {% Label %}messages.json:{% endLabel %}
+
 ```json
 "prompt_for_name": {
   ...
@@ -124,6 +127,7 @@ refer to a placeholder named "our_site" as `$our_site$`, `$OUR_SITE$`, or `$oUR_
 Here are three examples of messages, taken from the [Example][8] section:
 
 {% Label %}messages.json:{% endLabel %}
+
 ```json
 "message": "What's your name?"
 ...
@@ -136,6 +140,7 @@ To put a dollar sign (`$`) into the string, use `$$`. For example, use the follo
 the message **Amount (in \$)**:
 
 {% Label %}messages.json:{% endLabel %}
+
 ```json
 "message": "Amount (in $$)"
 ```
@@ -146,6 +151,8 @@ to substitution strings directly within the message. For example, the following 
 the first three substitution strings passed into `getMessage()`:
 
 {% Label %}messages.json:{% endLabel %}
+
+
 ```json
 "message": "Params: $1, $2, $3"
 ```
@@ -163,6 +170,7 @@ make the best possible translation.
 Here are three examples of descriptions, taken from the [Example][8] section:
 
 {% Label %}messages.json:{% endLabel %}
+
 ```json
 "description": "Ask for the user's name"
 ...
@@ -200,6 +208,7 @@ contains two placeholders named "our_site" and "user". The "our_site" placeholde
 item because its value is obvious from the "content" field.
 
 {% Label %}messages.json:{% endLabel %}
+
 ```json
 "placeholders": {
   "our_site": {

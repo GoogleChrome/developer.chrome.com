@@ -176,6 +176,14 @@ They can include JavaScript files, CSS files, or both. All auto-run content scri
         <a href="#injecting-in-related-frames">Injecting in related frames</a>.
       </td>
     </tr>
+    <tr id="world">
+      <td><code>world</code></td>
+      <td><a href="/docs/extensions/reference/scripting/#type-ExecutionWorld">ExecutionWorld</a></td>
+      <td>
+        <em>Optional.</em> The JavaScript world for a script to execute within. Defaults to <code>ISOLATED</code>. See also
+        <a href="#isolated_world">Work in isolated worlds</a>.
+      </td>
+    </tr>
   </tbody>
 </table>
 
@@ -187,10 +195,10 @@ not well known or when content scripts should not always be injected on known ho
 Introduced in Chrome 96, dynamic declarations are similar to [static
 declarations][header-cs-static], but the content script object is registered with Chrome using
 methods in the [`chrome.scripting` namespace](/docs/extensions/reference/scripting/) rather than in
-[manifest.json][doc-manifest]. In addition to
-[registering][api-register-cs] content scripts, the Scripting API also allows extension developers
+[manifest.json][doc-manifest]. The Scripting API also allows extension developers
 to:
 
+- [Register][api-register-cs] content scripts.
 - [Get a list of][api-get-registered-cs] registered content scripts.
 - [Update][api-update-cs] the list of registered content scripts.
 - [Remove][api-unregister-cs] registered content scripts.
@@ -810,7 +818,7 @@ window.setTimeout(() => animate(elmt_id), 200);
 ```
 {% endCompare %}
 
-[1]: https://www.w3.org/TR/DOM-Level-2-HTML/
+[1]: https://developer.mozilla.org/docs/Web/API/Document_Object_Model
 [2]: /docs/extensions/mv3/messaging
 [3]: /docs/extensions/reference/i18n
 [4]: /docs/extensions/reference/storage

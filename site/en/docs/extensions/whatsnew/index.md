@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-03-14
+updated: 2023-05-10
 tags:
   - extensions-news
 
@@ -13,8 +13,68 @@ tags:
 <!--lint disable no-duplicate-headings-->
 <!--lint disable first-heading-level-->
 
-Check this page often to learn about changes to the Chrome extensions platform, its documentation,
-and related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about many of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).)
+Check this page often to learn about changes to Chrome extensions, extensions documentation, or related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about some of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).) The [Chrome schedule](https://chromiumdash.appspot.com/schedule) lists stable and beta release dates.
+
+### Updated Manifest V3 migration guidance 
+
+<p class="color-secondary-text type--caption">Posted on <time>May 10, 2023</time></p>
+
+We've updated the [Known Issues](/docs/extensions/migrating/known-issues/) section of our [Manifest V3 migration guidance](/docs/extensions/migrating/) with an updated list of extension platform gaps that we intend to close before announcing a new Manifest V2 deprecation timeline.
+
+### Recording audio and video with Manifest V3 {: #screen-audio-capture }
+
+<p class="color-secondary-text type--caption">Posted on <time>May 10, 2023</time></p>
+
+We've just published a new article called [Audio recording and screen capture](/docs/extensions/mv3/screen_capture/), which covers recording audio or video from a tab, window, or screen in Manifest V3. This article describes multiple approaches to recording involving the [`chrome.tabCapture`](/docs/extensions/reference/tabCapture/) API and the [`getDisplayMedia()`](https://developer.mozilla.org/docs/Web/API/MediaDevices/getDisplayMedia) function.
+
+### Chrome 114: Increased storage.local quota {: #m114-storage-local-quota }
+
+<p class="color-secondary-text type--caption">Posted on <time>May 9, 2023</time></p>
+
+We have increased the quota for the [`storage.local`](/docs/extensions/reference/storage/#property-local) property to approximately 10 MB. This was [agreed to in the Web Extensions Community Group](https://github.com/w3c/webextensions/issues/351#issuecomment-1514420881). This brings `storage.local` in line with [`storage.session`](/docs/extensions/reference/storage/#property-session) which was changed in Chrome 112.
+
+### New extension service worker tutorial and help
+
+<p class="color-secondary-text type--caption">Posted on <time>May 3, 2023</time></p>
+
+Service Workers are an integral part of Chrome Extensions. We just [published a tutorial](/docs/extensions/mv3/getstarted/tut-quick-reference/) explaining the basics of registering, debugging, and interacting with Service Workers. We've also added a new [Service worker guide](/docs/extensions/mv3/service_workers/) explaining important concepts in more detail. We'll be expanding this section in the coming months.
+
+### More troubleshooting tips for Web Store violations
+
+<p class="color-secondary-text type--caption">Posted on <time>April 24, 2023</time></p>
+
+To help with Chrome Web Store publishing, we added new guidance in two areas. Guidance for [minimum functionality](/docs/webstore/troubleshooting/#minimum-functionality) centers around providing users with benefits and enriching their browsing experience. Guidance for [affiliate ads](/docs/webstore/troubleshooting/#affiliate-ads) is about making users are aware of extensions using affiliate links or codes for monetization, and giving them some amount of control by requiring user action before inclusion.
+
+### New instructions for the Extension Manifest Converter
+
+<p class="color-secondary-text type--caption">Posted on <time>April 14, 2023</time></p>
+
+We've rewritten the README for the [Extension Manifest Converter](https://github.com/GoogleChromeLabs/extension-manifest-converter) to make it easier to see what you need to do after running the tool. The converter helps helps migrate extensions built on Manifest V2 to Manifest V3. The new README describes what the tool does using words that closely match those in the [migration guide's checklist](/docs/extensions/migrating/checklist/). The converter doesn't do everything, but it does eliminate many tasks that don't require a human judgement call. 
+
+### Chrome 113: New reasons for offscreen documents
+
+<p class="color-secondary-text type--caption">Posted on <time>April 7, 2023</time></p>
+
+We have added two new [reason types](/docs/extensions/reference/offscreen/#type-Reason) to the Offscreen Documents API. Use `LOCAL_STORAGE` to access the web platform's [localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) API. Use `WORKER` when creating web workers. 
+
+### Google Analytics 4 now in the Developer Dashboard
+
+<p class="color-secondary-text type--caption">Posted on <time>March 30, 2023</time></p>
+
+The Chrome Web Store Developer Dashboard now supports Google Analytics 4 (GA4). We've simplified setting up Google Analytics and made access management for group publishers more straightforward. If you previously used Google Universal Analytics to track your store listing activity, you will need to take action by July 1, 2023 to ensure that you continue receiving data about your store listing. For more information, see the [post on the Chromium Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/JpzTRHBXDok/m/0F93f7FyBQAJ).
+
+### The File Handling API comes to ChromeOS
+
+<p class="color-secondary-text type--caption">Posted on <time>March 24, 2023</time></p>
+
+The File Handler API is available for experimentation on ChromeOS in Canary for versions 112 and 113. It lets extensions on ChromeOS open files with specified MIME types and file extensions. To implement file handling add a set of rules to the `manifest.json`. This feature works the same as for Progressive web apps. For more information, see [the article](/articles/file-handling/) elsewhere on this site.
+
+To enable file handling:
+
+* Starting in 112, launch Chrome using the `--enable-features=ExtensionWebFileHandlers` flag, starting in 112 
+* Starting in 113, paste `os://flags/#extension-web-file-handlers` into the Chrome omnibox and select 'Enabled' from the dropdown menu. 
+
+We hope to launch this feature in Chrome 115, in late June. Watch this space for updates.
 
 ### New Samples: dynamic declarations and programmatic injection {: #dynamic-dec-prog-inject }
 
@@ -28,7 +88,7 @@ We've built a [new sample](https://github.com/GoogleChrome/chrome-extensions-sam
 
 [Three new samples](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/declarativeNetRequest) are available demonstrating the [Declarative Net Request API](/docs/extensions/reference/declarativeNetRequest/). Each demonstrates implementation of a single use case. The first shows how to block cookies. The remaining two demonstrate blocking and redirecting URLs.
 
-### Chrome 112: Increased storage.session quota {: #m112-storage-session-quota}
+### Chrome 112: Increased storage.session quota {: #m112-storage-session-quota }
 
 <p class="color-secondary-text type--caption">Posted on <time>March 3, 2023</time></p>
 

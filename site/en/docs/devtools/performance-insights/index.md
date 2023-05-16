@@ -54,7 +54,7 @@ This tutorial teaches you how to measure and understand your page load performan
 
 The **Performance insights** panel can record general and use-case-driven (for example, page load) performance.
 
-1. [Open this demo page](https://coffee-cart.netlify.app/?ad=1) in a new tab and, on the page, [open the Performance insights panel](#open).
+1. [Open this demo page](https://coffee-cart.app/?ad=1) in a new tab and, on the page, [open the Performance insights panel](#open).
 2. You can throttle the network and CPU while recording. For this tutorial, check **Disable cache** and set **CPU** to **4x slowdown** in the drop-down menu:
 
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ZcatuTY8eettWFRbBxVf.png", alt="Throttling.", width="800", height="489" %}

@@ -1,4 +1,33 @@
 // Global styles start
+@import 'globals/functions';
+@import 'globals/colors';
+@import 'globals/vars';
+@import 'globals/mixins';
+@import 'globals/gorko';
+@import 'globals/extends';
+@import 'globals/fonts';
+@import 'globals/theme';
+@import 'globals/reset';
+@import 'globals/typography';
+
+@import 'blocks/stack';
+@import 'blocks/search-box';
+@import 'blocks/logo';
+@import 'blocks/top-nav';
+@import 'blocks/footer';
+@import 'blocks/scaffold';
+@import 'blocks/navigation-rail';
+@import 'blocks/announcement-banner';
+@import 'blocks/cookie-banner';
+@import 'blocks/banner';
+@import 'blocks/button';
+@import 'blocks/link';
+@import 'blocks/icon';
+@import 'blocks/cluster';
+@import 'blocks/select';
+@import 'blocks/side-nav';
+@import 'blocks/skip-link';
+
 :root {
   --flow-space: #{get-size(500)};
 }
@@ -12,6 +41,10 @@ body {
   // when calculating min-content intrinsic sizes.
   overflow-wrap: break-word;
   transition: background 500ms ease-in-out, color 200ms ease;
+
+  &:has(dialog[open]) {
+    overflow: hidden;
+  }
 }
 
 a:not([class]) {
@@ -24,4 +57,8 @@ main:focus {
 
 video {
   width: 100%;
+}
+
+video[width][height] {
+  height: auto;
 }

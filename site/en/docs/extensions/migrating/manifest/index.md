@@ -2,11 +2,13 @@
 layout: 'layouts/doc-post.njk'
 title: Update the manifest
 subhead: Convert a V2 manifest to a V3 manifest
-description: The manifest.json file requires a slightly different format for V3 than for V2.
+description: The manifest.json file requires a slightly different format for Manifest V3 than for Manifest V2.
 date: 2023-03-09
 ---
 
-The `manifest.json` file requires a slightly different format for V3 than for V2. This page describes changes that only affect the `manifest.json` file. But many of the changes to scripts and pages also require changes to the manifest. Those changes are covered with the migration tasks that require them.
+{% Partial 'extensions/mv3-support.md' %}
+
+The `manifest.json` file requires a slightly different format for Manifest V3 than for Manifest V2. This page describes changes that only affect the `manifest.json` file. But many of the changes to scripts and pages also require changes to the manifest. Those changes are covered with the migration tasks that require them.
 
 ## Change the manifest version number {: #change-version }
 
@@ -88,13 +90,13 @@ Host permissions in Manifest V3 are a separate field; you don't specify them in 
 
 ## Update web accessible resources {: #update-wa-resources }
 
-Web-accessible resources are files inside an extension that can be accessed by web pages or other extensions. As implemented in Manifest V2, the `"web_accessible_resources"` field made extensions detectable by websites and attackers if the extension chose to expose resources. This created opportunities for fingerprinting or unintentional resource access. 
+Web accessible resources are files inside an extension that can be accessed by web pages or other extensions. As implemented in Manifest V2, the `"web_accessible_resources"` field made extensions detectable by websites and attackers if the extension chose to expose resources. This created opportunities for fingerprinting or unintentional resource access. 
 
-Manifest V3 limits exposure by restricting which web sites and extensions can access resources in your extension. Instead of providing a list of files as before, you now provide an **array of objects**, each of which maps a set of resources to a set of URLs or extension IDs.
+Manifest V3 limits exposure by restricting which web sites and extensions can access resources in your extension. Instead of providing a list of files as before, you now provide an *array of objects*, each of which maps a set of resources to a set of URLs or extension IDs.
 
 The example below compares web accessible resources between Manifest V2 and Manifest V3. In Manifest V2, the specified resources were accessible to all web sites by default. In the Manifest V3 code shown below, these resources are only available to `https://example.com`, while only certain images are available to all web sites.
 
-For more information, see [Web Accessible Resources](/docs/extensions/mv3/manifest/web_accessible_resources/) and [Match Patterns](/docs/extensions/mv3/match_patterns/).
+For more information, see [Web accessible resources](/docs/extensions/mv3/manifest/web_accessible_resources/) and [Match patterns](/docs/extensions/mv3/match_patterns/).
 
 <div class="switcher">
 {% Compare 'worse', 'Manifest V2' %}

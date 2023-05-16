@@ -21,6 +21,15 @@ redirects:
 
 # Simple redirects
 
+- from: /en/articles/multi-screen-window-placement/
+  to: /articles/window-management/
+
+- from: /articles/multi-screen-window-placement/
+  to: articles/window-management/
+
+- from: /blog/wordpress-playground/
+  to: https://web.dev/wordpress-playground/
+
 - from: /blog/navigation-preload/
   to: https://web.dev/navigation-preload/
 
@@ -36,9 +45,12 @@ redirects:
 - from: /apps/about_apps
   to: /docs/apps/overview/
 
+- from: /docs/extensions/mv3/known-issues/
+  to: /docs/extensions/migrating/known-issues/
+
 - from: /docs/extensions/mv3/background_migration
   to: /docs/extensions/migrating/to-service-workers
-  
+
 - from: /docs/extensions/mv3/migrating_to_service_workers
   to: /docs/extensions/migrating/to-service-workers
 
@@ -73,6 +85,15 @@ redirects:
 
 - from: /multidevice/android/customtabs/
   to: /docs/android/custom-tabs/overview
+
+- from: /docs/android/custom-tabs/low-level-api/
+  to: /docs/android/custom-tabs/howto-custom-tab-low-level-api/
+
+- from: /docs/android/custom-tabs/headers/
+  to: /docs/android/custom-tabs/howto-request-headers/
+
+- from: /docs/android/custom-tabs/best-practices/
+  to: /docs/android/#how-tos
 
 - from: /docs/webstore/overview/
   to: /docs/webstore/about_webstore/
@@ -109,6 +130,9 @@ redirects:
 
 - from: /docs/privacy-sandbox/attribution-reporting-changes-january-2022/
   to: /blog/attribution-reporting-jan-2022-updates/
+
+- from: /docs/privacy-sandbox/maximize-ad-relevance/
+  to: https://privacysandbox.com/news/maximize-ad-relevance-after-third-party-cookies
 
 - from: /blog/capture-handle/
   to: /docs/web-platform/capture-handle/
@@ -539,90 +563,12 @@ redirects:
 - from: /blog/inside-oct-2022/...
   to: /blog/insider-oct-2022/...
 
+- from: /blog/webdriver-bidi/
+  to: /articles/webdriver-bidi/
+
 # Redirecting the intersection observer post from d.c.c. to web.dev
 - from: /intersectionobserver/
   to: https://web.dev/intersectionobserver/
-
-# Renaming of Pop-up API attribute from popup to popover
-- from: /docs/web-platform/popup-api/
-  to: /docs/web-platform/popover-api/
-
-- from: /docs/web-platform/popup-api/hidepopup-method/
-  to: /docs/web-platform/popover-api/hidepopover-method/
-
-- from: /docs/web-platform/popup-api/showpopup-method/
-  to: /docs/web-platform/popover-api/showpopover-method/
-
-- from: /docs/web-platform/popup-api/popup-attribute/
-  to: /docs/web-platform/popover-api/popover-attribute/
-
-- from: /docs/web-platform/popup-api/popup-property/
-  to: /docs/web-platform/popover-api/popover-property/
-
-- from: /docs/web-platform/popup-api/popuphide-event/
-  to: /docs/web-platform/popover-api/popoverhide-event/
-
-- from: /docs/web-platform/popup-api/popuphidetarget-attribute/
-  to: /docs/web-platform/popover-api/popoverhidetarget-attribute/
-
-- from: /docs/web-platform/popup-api/popuphidetarget-property/
-  to: /docs/web-platform/popover-api/popoverhidetarget-property/
-
-- from: /docs/web-platform/popup-api/popupshow-event/
-  to: /docs/web-platform/popover-api/popovershow-event/
-
-- from: /docs/web-platform/popup-api/popupshowtarget-attribute/
-  to: /docs/web-platform/popover-api/popovershowtarget-attribute/
-
-- from: /docs/web-platform/popup-api/popupshowtarget-property/
-  to: /docs/web-platform/popover-api/popovershowtarget-property/
-
-- from: /docs/web-platform/popup-api/popuptoggletarget-attribute/
-  to: /docs/web-platform/popover-api/popovertoggletarget-attribute/
-
-- from: /docs/web-platform/popup-api/popuptoggletarget-property/
-  to: /docs/web-platform/popover-api/popovertoggletarget-property/
-
-# Renaming of pop-up-api to popover-api
-
-- from: /docs/web-platform/pop-up-api/
-  to: /docs/web-platform/popover-api/
-
-- from: /docs/web-platform/pop-up-api/hidepopover-method/
-  to: /docs/web-platform/popover-api/hidepopover-method/
-
-- from: /docs/web-platform/pop-up-api/showpopover-method/
-  to: /docs/web-platform/popover-api/showpopover-method/
-
-- from: /docs/web-platform/pop-up-api/popover-attribute/
-  to: /docs/web-platform/popover-api/popover-attribute/
-
-- from: /docs/web-platform/pop-up-api/popover-property/
-  to: /docs/web-platform/popover-api/popover-property/
-
-- from: /docs/web-platform/pop-up-api/popoverhide-event/
-  to: /docs/web-platform/popover-api/popoverhide-event/
-
-- from: /docs/web-platform/pop-up-api/popoverhidetarget-attribute/
-  to: /docs/web-platform/popover-api/popoverhidetarget-attribute/
-
-- from: /docs/web-platform/pop-up-api/popoverhidetarget-property/
-  to: /docs/web-platform/popover-api/popoverhidetarget-property/
-
-- from: /docs/web-platform/pop-up-api/popovershow-event/
-  to: /docs/web-platform/popover-api/popovershow-event/
-
-- from: /docs/web-platform/pop-up-api/popovershowtarget-attribute/
-  to: /docs/web-platform/popover-api/popovershowtarget-attribute/
-
-- from: /docs/web-platform/pop-up-api/popovershowtarget-property/
-  to: /docs/web-platform/popover-api/popovershowtarget-property/
-
-- from: /docs/web-platform/pop-up-api/popovertoggletarget-attribute/
-  to: /docs/web-platform/popover-api/popovertoggletarget-attribute/
-
-- from: /docs/web-platform/pop-up-api/popovertoggletarget-property/
-  to: /docs/web-platform/popover-api/popovertoggletarget-property/
 
 # Lighthouse redirects
 - from: /docs/lighthouse/best-practices/password-inputs-can-be-pasted-into/
@@ -631,6 +577,11 @@ redirects:
 # Fugu redirects
 - from: /blog/fugu-showcase/
 - to: /fugu-showcase/
+
+# Redirect old platform documentation to MDN
+
+- from: /docs/web-platform/webgpu/
+  to: https://developer.mozilla.org/docs/Web/API/WebGPU_API
 
 # Generic
 
@@ -662,20 +613,124 @@ redirects:
 
 # Redirects from old to new Extensions migration guide
 
-- from: /docs/extenions/mv3/mv3-migration/
-  to: /docs/extenions/migrating/
+- from: /docs/extensions/mv3/mv3-migration/
+  to: /docs/extensions/migrating/
 
-- from: /docs/extenions/mv3/mv3-migration-checklist/
-  to: /docs/extenions/migrating/checklist/
+- from: /docs/extensions/mv3/mv3-migration-checklist/
+  to: /docs/extensions/migrating/checklist/
 
-- from: /docs/extenions/mv3/migrating_to_service_workers/
-  to: /docs/extenions/migrating/to-service-workers/
+- from: /docs/extensions/mv3/migrating_to_service_workers/
+  to: /docs/extensions/migrating/to-service-workers/
 
-- from: /docs/extenions/mv3/mv2-sunset/
-  to: /docs/extenions/migrating/mv2-sunset/
+- from: /docs/extensions/mv3/mv2-sunset/
+  to: /docs/extensions/migrating/mv2-sunset/
 
-- from: /docs/extenions/mv3/known-issues/
-  to: /docs/extenions/migrating/known-issues/
+- from: /docs/extensions/mv3/known-issues/
+  to: /docs/extensions/migrating/known-issues/
+
+# Redirects for docs now on MDN
+
+- from: /docs/web-platform/popover-api/backdrop-pseudo-element
+  to: https://developer.mozilla.org/docs/Web/CSS/::backdrop
+
+- from: /docs/web-platform/popover-api/hidepopover-method/
+  to: https://developer.mozilla.org/docs/Web/API/HTMLElement/hidePopover
+
+- from: /docs/web-platform/pop-up-api/hidepopover-method/
+  to: https://developer.mozilla.org/docs/Web/API/HTMLElement/hidePopover
+
+- from: /docs/web-platform/popover-api/open-pseudo-class
+  to: https://developer.mozilla.org/docs/Web/CSS/:popover-open
+
+- from: /docs/web-platform/popover-api/popover-attribute
+  to: https://developer.mozilla.org/docs/Web/HTML/Global_attributes/popover
+
+- from: /docs/web-platform/pop-up-api/popover-property/
+  to: https://developer.mozilla.org/docs/Web/API/Popover_API
+
+- from: /docs/web-platform/popover-api/popover-property/
+  to: https://developer.mozilla.org/docs/Web/API/Popover_API
+
+- from: /docs/web-platform/popover-api/popoverhide-event/
+  to: https://developer.mozilla.org/docs/Web/API/HTMLElement/toggle_event
+
+- from: /docs/web-platform/popover-api/popovershow-event/
+  to: https://developer.mozilla.org/docs/Web/API/HTMLElement/toggle_event
+
+- from: /docs/web-platform/pop-up-api/popoverhide-event/
+  to: https://developer.mozilla.org/docs/Web/API/HTMLElement/toggle_event
+
+- from: /docs/web-platform/pop-up-api/popovershow-event/
+  to: https://developer.mozilla.org/docs/Web/API/HTMLElement/toggle_event
+
+- from: /docs/web-platform/popover-api/popovertargetaction-hide-attribute/
+  to: https://developer.mozilla.org/docs/Web/HTML/Element/button#popovertargetaction
+
+- from: /docs/web-platform/popover-api/popovertargetaction-hide-property/
+  to: https://developer.mozilla.org/docs/Web/API/HTMLButtonElement/popoverTargetAction
+
+- from: /docs/web-platform/popover-api/popovertargetaction-show-attribute/
+  to: https://developer.mozilla.org/docs/Web/HTML/Element/button#popovertargetaction
+
+- from: /docs/web-platform/popover-api/popovertargetaction-show-property/
+  to: https://developer.mozilla.org/docs/Web/API/HTMLButtonElement/popoverTargetAction
+
+- from: /docs/web-platform/popover-api/popovertargetaction-toggle-attribute/
+  to: https://developer.mozilla.org/docs/Web/HTML/Element/button#popovertargetaction
+
+- from: /docs/web-platform/popover-api/popovertargetaction-toggle-property/
+  to: https://developer.mozilla.org/docs/Web/API/HTMLButtonElement/popoverTargetAction
+
+- from: /docs/web-platform/pop-up-api/popoverhidetarget-attribute/
+  to: https://developer.mozilla.org/docs/Web/HTML/Element/button#popovertargetaction
+
+- from: /docs/web-platform/pop-up-api/popoverhidetarget-property/
+  to: https://developer.mozilla.org/docs/Web/API/HTMLButtonElement/popoverTargetAction
+
+- from: /docs/web-platform/pop-up-api/popovershowtarget-attribute/
+  to: https://developer.mozilla.org/docs/Web/HTML/Element/button#popovertargetaction
+
+- from: /docs/web-platform/pop-up-api/popovershowtarget-property/
+  to: https://developer.mozilla.org/docs/Web/API/HTMLButtonElement/popoverTargetAction
+
+- from: /docs/web-platform/pop-up-api/popovertoggletarget-attribute/
+  to: https://developer.mozilla.org/docs/Web/HTML/Element/button#popovertargetaction
+
+- from: /docs/web-platform/pop-up-api/popovertoggletarget-property/
+  to: https://developer.mozilla.org/docs/Web/API/HTMLButtonElement/popoverTargetAction
+
+- from: /docs/web-platform/popover-api/popoverhidetarget-attribute/
+  to: https://developer.mozilla.org/docs/Web/HTML/Element/button#popovertargetaction
+
+- from: /docs/web-platform/popover-api/popoverhidetarget-property/
+  to: https://developer.mozilla.org/docs/Web/API/HTMLButtonElement/popoverTargetAction
+
+- from: /docs/web-platform/popover-api/popovershowtarget-attribute/
+  to: https://developer.mozilla.org/docs/Web/HTML/Element/button#popovertargetaction
+
+- from: /docs/web-platform/popover-api/popovershowtarget-property/
+  to: https://developer.mozilla.org/docs/Web/API/HTMLButtonElement/popoverTargetAction
+
+- from: /docs/web-platform/popover-api/popovertoggletarget-attribute/
+  to: https://developer.mozilla.org/docs/Web/HTML/Element/button#popovertargetaction
+
+- from: /docs/web-platform/popover-api/popovertoggletarget-property/
+  to: https://developer.mozilla.org/docs/Web/API/HTMLButtonElement/popoverTargetAction
+
+- from: /docs/web-platform/popover-api/showpopover-method/
+  to: https://developer.mozilla.org/docs/Web/API/HTMLElement/showPopover
+
+- from: /docs/web-platform/pop-up-api/popover-attribute/
+  to: https://developer.mozilla.org/docs/Web/API/HTMLElement/showPopover
+
+- from: /docs/web-platform/popover-api/
+  to: https://developer.mozilla.org/docs/Web/API/Popover_API
+
+- from: /docs/web-platform/pop-up-api/
+  to: https://developer.mozilla.org/docs/Web/API/Popover_API
+
+- from: /docs/android/custom-tabs/integration-guide/
+  to: /docs/android/custom-tabs/guide-get-started/
 
 # DO NOT REMOVE. This seems pointless but we rewrite "." to "_" inside our server's code, so if the
 # URL is fine for all but incorrect syntax, we'll fix it up.

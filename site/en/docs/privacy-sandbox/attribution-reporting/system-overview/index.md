@@ -16,7 +16,7 @@ authors:
 	.type figcaption {text-align:left;}
 </style>
 
-The Attribution Reporting API allows adtechs and advertisers to measure when an
+The Attribution Reporting API allows ad techs and advertisers to measure when an
 ad click or view leads to a conversion, such as a purchase. This API relies on
 a combination of client-side and server-side integrations, depending on your
 business needs.
