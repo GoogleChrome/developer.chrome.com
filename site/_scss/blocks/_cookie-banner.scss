@@ -26,7 +26,8 @@
     margin-top: 0;
   }
 
-  > *:last-child {
-    margin-left: get-size(300);
+  > button {
+    margin-bottom: get-size(300);
+    min-width: 8rem;
   }
 }
