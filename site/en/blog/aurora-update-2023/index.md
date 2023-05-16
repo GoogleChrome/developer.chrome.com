@@ -77,7 +77,7 @@ Read more in our blog post, [Optimizing third-party script loading in Next.js](/
 
 ### Miscellaneous
 
-Our partnerships with framework developers doesn't end at improving Core Web Vitals. We're also working to leverage more of what's new, and make it even easier for developers to start using bleeding-edge web platform features.
+Our partnerships with framework developers don't end at improving Core Web Vitals. We're also working to leverage more of what's new, and make it even easier for developers to start using bleeding-edge web platform features.
 
 #### Container queries polyfill
 
