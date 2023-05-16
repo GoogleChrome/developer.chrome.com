@@ -37,7 +37,6 @@ We published a [stable image directive](https://angular.io/guide/image-directive
 
 Read more about the directive in our blog post, [Optimizing Images with the Angular image directive](/blog/angular-image-directive/).
 
-
 #### Revamped `next/image`
 
 We also worked with the Next.js team to update the [image component](https://nextjs.org/docs/app/building-your-application/optimizing/images) to use new browser features like native lazy loading and HTML `fetchpriority`. The new version is available by default from Next 13. 
