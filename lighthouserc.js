@@ -30,6 +30,11 @@ module.exports = {
         'tap-targets': 'off',
 
         /**
+         * Gtag and GA used unused JS but out of our control, so reduce to warning if only 2
+         */
+        'unused-javascript': ['warn', {maxLength: 2}],
+
+        /**
          * We don't care about preconnect to Analytics and friends.
          */
         'uses-rel-preconnect': 'off',
