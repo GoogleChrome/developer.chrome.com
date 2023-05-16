@@ -26,7 +26,18 @@
     margin-top: 0;
   }
 
-  > *:last-child {
-    margin-left: get-size(300);
+  @include media-query('md-max') {
+    > button {
+      margin-top: initial;
+    }
+
+    > *:last-child {
+      margin-left: get-size(300);
+    }
+  }
+
+  > button {
+    margin-top: get-size(300);
+    min-width: 10rem;
   }
 }
