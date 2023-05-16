@@ -30,11 +30,14 @@ const client = algoliasearch('0PPZV3EY55', 'dc0d3a2d53885be29eacc351026dcdcf');
 const index = client.initIndex('prod_developer_chrome');
 
 const blockedQueries = [
-  /add? bloc?k/,
-  /d(a|o)w?nl?o?/,
-  /^p(a|e)r?r(a|e)?/,
+  /add? ?bloc?k?/,
+  /d(a|o|u)w?nl?o?/,
+  /p(a|e)r?r(a|e)?/,
   /automate be/,
+  /roblox/,
+  /ublock/,
   /vpn/,
+  /porn/,
   /xxx/,
 ];
 
