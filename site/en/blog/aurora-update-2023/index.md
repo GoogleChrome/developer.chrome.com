@@ -19,7 +19,7 @@ Given that we haven't published a roadmap since 2021, we'd like to share what we
 
 ## Recent project highlights
 
-For the past few years, we've been partnering with frameworks like Next.js, Angular, and Nuxt to optimize [Core Web Vitals](https://web.dev/vitals/).  Here are some highlights since our last update.
+For the past few years, we've been partnering with frameworks like Next.js, Angular, and Nuxt to optimize [Core Web Vitals](https://web.dev/vitals/). Here are some highlights since our last update.
 
 ### Images
 
