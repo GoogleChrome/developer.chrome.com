@@ -27,7 +27,7 @@ Images are often a source of performance issues. The following are some of the m
 
 #### Angular image directive
 
-We published a [stable image directive](https://angular.io/guide/image-directive) for the Angular framework, available in Angular 15 and specially backported to 13.4 and 14.3. This directive enables [native lazy loading](http://el-image-lazy-loading/) by default, adds [`fetchpriority` hints](https://web.dev/fetch-priority/) to priority images, and automatically generates appropriate `srcset` attributes for responsive images.
+We published a [stable image directive](https://angular.io/guide/image-directive) for the Angular framework, available in Angular 15 and specially backported to 13.4 and 14.3. This directive enables [native lazy loading](https://web.dev/browser-level-image-lazy-loading/) by default, adds [`fetchpriority` hints](https://web.dev/fetch-priority/) to priority images, and automatically generates appropriate `srcset` attributes for responsive images.
 
 **The impact**: [Lighthouse lab testing](https://philipwalton.com/articles/my-challenge-to-the-web-performance-community/) was performed on [Land's End's](https://www.landsend.com/) QA environment before and after using the image directive. On desktop, their median [Largest Contentful Paint (LCP)](https://web.dev/lcp/) decreased from 12.0s to 3.0s, a 75% improvement in LCP.
 
