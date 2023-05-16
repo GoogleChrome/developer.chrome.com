@@ -35,7 +35,7 @@ Use the `"activeTab"` permission
 
 During development, when you [load an extension locally][doc-load-unpacked], no permission warnings are displayed. To view an extension's permission warnings, you have the following options:
 
-{% Details %}
+{% Details 'open' %}
 {% DetailsSummary %}
 
 ### Use the {: #view-library }
@@ -46,7 +46,7 @@ The blah blah allows developers to
 
 {% endDetails %}
 
-{% Details %}
+{% Details 'open' %}
 {% DetailsSummary %}
 
 ### Pack your extension {: #view-packing }
@@ -124,7 +124,7 @@ a warning on the management page.
 To check if your extension will be disabled, you have the following options:
 
 
-{% Details %}
+{% Details 'open' %}
 {% DetailsSummary %}
 
 ### Use the {: #view-library }
@@ -135,7 +135,8 @@ The blah blah allows developers to
 
 {% endDetails %}
 
-{% Details %}
+
+{% Details 'open' %}
 {% DetailsSummary %}
 
 ### Pack your extension {: #view-packing }
