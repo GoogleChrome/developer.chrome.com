@@ -97,7 +97,7 @@ Example:
 Sites should audit their usage of unpartitioned storage, service worker, and
 communication APIs in third-party contexts, and, if needed, prepare for
 third-party partitioning before these deprecation trials expire. **The intent is
-to expire these deprecation trials with the release of Chrome 127 on August 6, 2024.**
+to expire these deprecation trials with the release of Chrome 127 on September 3, 2024.**
 
 To instruct the browser to unpartition storage in third-party content embedded
 on its pages, top-level sites need to register for one or both of the
