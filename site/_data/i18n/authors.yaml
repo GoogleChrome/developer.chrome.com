@@ -412,7 +412,7 @@ pavoldrotar:
   title:
     en: 'Pavol Drotar'
   description:
-    en: 'I am a Software Engineer Intern wroking on the Web Platform.'
+    en: 'I am a Software Engineer Intern working on the Web Platform.'
 adrianajara:
   title:
     en: 'Adriana Jara'
@@ -1404,3 +1404,8 @@ harleenbatra:
     en: Harleen Batra
   description:
     en: 'Developer Marketing for Chrome'
+patrickkettner:
+  title:
+    en: 'Patrick Kettner'
+  description:
+    en: 'Developer Advocate for Chrome Extensions'

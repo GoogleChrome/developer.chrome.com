@@ -70,7 +70,7 @@ An [**origin**](https://developer.mozilla.org/docs/Glossary/Origin) represents a
 1. [Publicly discoverable](#discoverability-eligibility)
 2. [Sufficiently popular](#popularity-eligibility)
 
-You can verify that your origin is discoverable by running a [Lighthouse audit](https://web.dev/measure/) with the SEO category enabled. Your site is not discoverable if your root page fails the [_Page is blocked from indexing_](https://web.dev/is-crawable/) or [_Page has unsuccessful HTTP status code_](https://web.dev/http-status-code/) audits.
+You can verify that your origin is discoverable by running a [Lighthouse audit](https://pagespeed.web.dev/) and looking at the SEO category results. Your site is not discoverable if your root page fails the [_Page is blocked from indexing_](https://web.dev/is-crawable/) or [_Page has unsuccessful HTTP status code_](https://web.dev/http-status-code/) audits.
 
 If an origin is determined to be publicly discoverable, eligible user experiences on _all_ of that origin's pages are aggregated at the origin-level, regardless of individual page discoverability. All of these experiences count towards the origin's popularity requirement.
 
@@ -83,7 +83,7 @@ The requirements for a **page** to be included in the CrUX dataset are the same 
 1. [Publicly discoverable](#discoverability-eligibility)
 2. [Sufficiently popular](#popularity-eligibility)
 
-You can verify that a page is discoverable by running a [Lighthouse audit](https://web.dev/measure/) with the SEO category enabled. Your page is not discoverable if it fails the [_Page is blocked from indexing_](https://web.dev/is-crawable/) or [_Page has unsuccessful HTTP status code_](https://web.dev/http-status-code/) audits.
+You can verify that a page is discoverable by running a [Lighthouse audit](https://pagespeed.web.dev/) and looking at the SEO category results. Your page is not discoverable if it fails the [_Page is blocked from indexing_](https://web.dev/is-crawable/) or [_Page has unsuccessful HTTP status code_](https://web.dev/http-status-code/) audits.
 
 Pages commonly have additional identifiers in their URL including query string parameters like `?utm_medium=email` and fragments like `#main`. These identifiers are stripped from the URL in the CrUX dataset so that all user experiences on the page are aggregated together. This is useful for pages that would otherwise not meet the popularity threshold if there were many disjointed URL variations for the same page. Note that in rare cases this may unexpectedly group experiences for distinct pages together; for example if parameters `?productID=101` and `?productID=102` represent different pages.
 
@@ -310,6 +310,14 @@ Most metrics are represented as a histogram aggregation, allowing visualization 
 <cite><a href="https://developer.mozilla.org/docs/Web/Events/load">MDN</a></cite>
 {% endAside %}
 
+### Cumulative Layout Shift {: #cls-metric }
+
+{% Aside %}
+"Cumulative Layout Shift (CLS) is an important, user-centric metric for measuring visual stability because it helps quantify how often users experience unexpected layout shifts — a low CLS helps ensure that the page is delightful."
+
+<cite><a href="https://web.dev/cls/">web.dev/cls/</a></cite>
+{% endAside %}
+
 ### First Input Delay {: #fid-metric }
 
 {% Aside %}
@@ -318,13 +326,15 @@ Most metrics are represented as a histogram aggregation, allowing visualization 
 <cite><a href="https://web.dev/fid/">web.dev/fid/</a></cite>
 {% endAside %}
 
-### Cumulative Layout Shift {: #cls-metric }
+### Interaction to Next Paint {: #inp-metric}
 
 {% Aside %}
-"Cumulative Layout Shift (CLS) is an important, user-centric metric for measuring visual stability because it helps quantify how often users experience unexpected layout shifts — a low CLS helps ensure that the page is delightful."
+"Interaction to Next Paint (INP) is a field metric that assesses [responsiveness](https://web.dev/user-centric-performance-metrics/#types-of-metrics). INP logs the latency of all interactions throughout the entire page lifecycle. The highest value of those interactions—or close to the highest for pages with many interactions—is recorded as the page's INP. A low INP ensures that the page will be reliably responsive at all times."
 
-<cite><a href="https://web.dev/cls/">web.dev/cls/</a></cite>
+<cite><a href="https://web.dev/inp/">web.dev/inp/</a></cite>
 {% endAside %}
+
+Interaction to Next Paint (INP) was added to the CrUX dataset in [February 2022](/docs/crux/release-notes/#202202). This new metric captures the end-to-end latency of individual events and offers a more holistic picture of the overall responsiveness of a page throughout its lifetime.
 
 ### Experimental metrics {: #experimental-metrics }
 
@@ -340,15 +350,11 @@ Experimental metrics are available in the CrUX dataset via [BigQuery](/docs/crux
 
 TTFB is only collected on full page loads, unlike other timers (such as [LCP](#lcp-metric)) which are also collected on back-forward navigations and pre-rendering. As such, the sample size of TTFB can be smaller than other metrics and may not necessarily be compared directly with them.
 
-#### Interaction to Next Paint {: #inp-metric}
+#### Interaction to Next Paint (deprecated){: #inp-metric-experimental}
 
-{% Aside %}
-"Interaction to Next Paint (INP) is an experimental field metric that assesses [responsiveness](https://web.dev/user-centric-performance-metrics/#types-of-metrics). INP logs the latency of all interactions throughout the entire page lifecycle. The highest value of those interactions—or close to the highest for pages with many interactions—is recorded as the page's INP. A low INP ensures that the page will be reliably responsive at all times."
-
-<cite><a href="https://web.dev/inp/">web.dev/inp/</a></cite>
+{% Aside 'important' %}
+The Interaction to Next Paint (INP) metric is available both with and without the experimental prefix. The experimental prefix should now be considered deprecated and will be removed in August 2023. The non-prefixed schema should be used going forward.
 {% endAside %}
-
-Interaction to Next Paint (INP) was added to the CrUX dataset in [February 2022](/docs/crux/release-notes/#202202). This new metric captures the end-to-end latency of individual events and offers a more holistic picture of the overall responsiveness of a page throughout its lifetime.
 
 #### Popularity {: #popularity-metric}
 

@@ -1,0 +1,1 @@
+The [Protected Audience API](/docs/privacy-sandbox/fledge/) is the new name for the FLEDGE API.

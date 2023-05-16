@@ -8,8 +8,8 @@ description: Learn how to use a Custom Tab without the androidx browser support 
 
 The recommended way to integrate your application with Custom Tabs is using the AndroidX Browser Library, but you can also start a Custom Tab without the support library. This guide gives an overview on how to achieve this.
 
-The complete implementation of the Support Library is available on [GitHub][1] and an be used as a
-start point. It also contains the [AIDL files][2] required to connect to the service, as the ones
+The complete implementation of the Support Library is available on [GitHub][1] and can be used as a
+starting point. It also contains the [AIDL files][2] required to connect to the service, as the ones
 contained in the Chromium repository are not directly usable with Android Studio.
 
 ## Basics for Launching Custom Tabs using the Low Level API

@@ -80,7 +80,7 @@ CustomTabsIntent intent = new CustomTabsIntent.Builder()
 
 There are a few more things you can do to adjust the UI of a Custom Tab to your needs.
 
-* Hide the URL bar on scroll to give the user more space to explore web content using <code>[setUrlBarHidingEnabled()](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#setUrlBarHidingEnabled(boolean))(true)</code>
+* Hide the URL bar on scroll to give the user more space to explore web content using <code>[setUrlBarHidingEnabled()](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#setUrlBarHidingEnabled(boolean))(true)</code>.
 * Show the document title instead of the URL via <code>[setShowTitle()](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#setShowTitle(boolean))(true)</code>.
 * Customize the close button to match the user flow in your app, for example, by showing a back arrow instead of the default <code>X</code> icon):   <code>[setCloseButtonIcon()](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#setCloseButtonIcon(android.graphics.Bitmap))(myCustomCloseIcon)</code>.
 

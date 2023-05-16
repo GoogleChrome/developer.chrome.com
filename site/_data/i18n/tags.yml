@@ -20,6 +20,9 @@ accessibility:
 amp:
   en: AMP
 
+android:
+  en: Android
+
 automation:
   en: Browser Automation
 

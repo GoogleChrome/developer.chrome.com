@@ -34,7 +34,7 @@ from Chrome 86 onwards | approvelisted, non-approvelisted when a digital asset l
 
 This article shows how to set up a verified connection between the server and client and use that
 to send approvelisted as well as non-approvelisted http headers. You can skip to
-[Adding Extra Headers to CustomTab Intents](#adding-extra-headers) for the code.
+[Adding Extra Headers to Custom Tab Intents](#adding-extra-headers) for the code.
 
 ## Background
 
@@ -95,10 +95,10 @@ The supported way of including non-approvelisted headers in custom tabs is to fi
 cross-origin connection using a digital access link. The next section shows how to set these
 up and launch a Custom Tabs intent with the required headers. 
 
-## Adding Extra Headers to CustomTab Intents {: #adding-extra-headers }
+## Adding Extra Headers to Custom Tab Intents {: #adding-extra-headers }
 
 ### Set up digital asset links
-To allow non-approvelisted headers to be passed through custom tab intents, it is necessary to set
+To allow non-approvelisted headers to be passed through Custom Tab intents, it is necessary to set
 up a digital asset link between the android and web application that verifies that the author
 owns both applications.
 
@@ -107,7 +107,7 @@ Follow the [official guide][10] to set up a digital asset link. For the link rel
 origin once the link is verified.
 
 ### Create Custom Tab Intent with Extra Headers
-There are multiple ways for creating a [custom tabs intent][11]. You can use the builder available
+There are multiple ways to create a [Custom Tabs intent][11]. You can use the builder available
 in androidX by adding the library to the build dependencies:
 
 ```groovy
