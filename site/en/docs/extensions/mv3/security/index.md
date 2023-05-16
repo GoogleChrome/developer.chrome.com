@@ -167,30 +167,19 @@ Avoid using `eval()` whenever possible to prevent attacks, as `eval()` will exec
 into it, which may be malicious.
 
 ```js
-var xhr = new fetch();
-xhr.open("GET", "https://api.example.com/data.json", true);
-xhr.onreadystatechange = function() {
-  if (xhr.readyState == 4) {
-    // WARNING! Might be evaluating an evil script!
-    var resp = eval("(" + xhr.responseText + ")");
-    ...
-  }
-}
-xhr.send();
+const fetchValue = await fetch("https://api.example.com/data.json");
+const jsonData = await fetchValue.json();
+// WARNING! Might be evaluating an evil script!
+const result = eval(jsonData);
 ```
 
 Instead, prefer safer, and faster, methods such as `JSON.parse()`
 
 ```js
-var xhr = new fetch();
-xhr.open("GET", "https://api.example.com/data.json", true);
-xhr.onreadystatechange = function() {
-  if (xhr.readyState == 4) {
-    // JSON.parse does not evaluate the attacker's scripts.
-    var resp = JSON.parse(xhr.responseText);
-  }
-}
-xhr.send();
+const fetchValue = await fetch("https://api.example.com/data.json");
+const jsonData = await fetchValue.json();
+// JSON.parse does not evaluate the attacker's scripts.
+const result = JSON.parse(jsonData);
 ```
 
 ## Use content scripts carefully {: #content_scripts }
