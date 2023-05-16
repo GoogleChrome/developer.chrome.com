@@ -48,7 +48,7 @@ chrome.offscreen.createDocument({
 chrome.offscreen.closeDocument()
 ```
 
-The following example shows how to ensure that offscreen documents have already been created. The `setupOffscreenDocument()` function uses [clients.matchAll()](https://developer.mozilla.org/docs/Web/API/Clients/matchAll) to find existing offscreen documents. If no existing offscreen documents, create it. Please note: the function assumes that your extension uses a single offscreen document. 
+The following example shows how to ensure that the offscreen document has already been created. The `setupOffscreenDocument()` function calls [`clients.matchAll()`](https://developer.mozilla.org/docs/Web/API/Clients/matchAll) to find the existing offscreen document or creates it if it doesn't already exist. Note that an extension can only have one offscreen document.
 
 ```js
 let creating; // A global promise to avoid concurrency issues
@@ -78,7 +78,7 @@ async function setupOffscreenDocument(path) {
 }
 ```
 
-Before sending a message to an offscreen document, call `setupOffscreenDocument()` to make sure that there is existing offscreen document, as demonstrated in the following example. 
+Before sending a message to an offscreen document, call `setupOffscreenDocument()` to make sure that there is an existing offscreen document, as demonstrated in the following example. 
 
 ```js
 chrome.action.onClicked.addListener(async () => {
