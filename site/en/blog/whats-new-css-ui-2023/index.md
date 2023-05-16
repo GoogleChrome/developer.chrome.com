@@ -213,7 +213,7 @@ The letter’s block-offset, or “sink”, for where the letter will sit.
   }
 %}
 
-Learn more about using `intial-letter` [here](](/blog/control-your-drop-caps-with-css-initial-letter/)).
+Learn more about using `intial-letter` [here](](/blog/control-your-drop-caps-with-css-initial-letter/).
 
 ### Dynamic viewport units 
 
