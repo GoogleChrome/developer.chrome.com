@@ -23,45 +23,13 @@
 /* eslint-disable no-undef */
 // @ts-nocheck
 (function () {
-  window.ga =
-    window.ga ||
-    function () {
-      (ga.q = ga.q || []).push(arguments);
-    };
-  ga.l = +new Date();
-  ga('create', '{{ analytics.id }}');
-  ga('set', 'transport', 'beacon');
-  ga('set', 'page', window.location.pathname);
-  // nb. Analytics requires dimension values to be strings.
-  ga(
-    'set',
-    '{{ analytics.dimensions.TRACKING_VERSION }}',
-    '{{ analytics.version }}'
-  );
-  try {
-    // For the document speculation rules origin trial
-    // overwrite the navigation type
-    const navEntry = performance.getEntriesByType('navigation')[0];
-    const navigationType =
-      navEntry.type === 'navigate' &&
-      navEntry.deliveryType === 'navigational-prefetch'
-        ? 'navigational-prefetch'
-        : navEntry.type.replace(/_/g, '-');
-    ga('set', '{{ analytics.dimensions.NAVIGATION_TYPE }}', navigationType);
-  } catch (error) {
-    ga('set', '{{ analytics.dimensions.NAVIGATION_TYPE }}', '(not set)');
-  }
-
-  ga('send', 'pageview');
-
   // Check if the user has accepted cookies. If so, set an attribute on
   // the html element which will hide the banner.
   try {
-    const cookiesCtaUrl = '{{ site.cookiesCtaUrl }}';
-    const savedCookiesCtaUrl = localStorage.getItem('user-cookies');
+    const savedCookiesValue = localStorage.getItem('user-cookies');
 
-    if (savedCookiesCtaUrl === cookiesCtaUrl) {
-      document.documentElement.setAttribute('data-cookies-accepted', '');
+    if (savedCookiesValue === 'accepts' || savedCookiesValue === 'rejects') {
+      document.documentElement.setAttribute('data-cookies-answered', '');
     }
   } catch (e) {
     // ignore

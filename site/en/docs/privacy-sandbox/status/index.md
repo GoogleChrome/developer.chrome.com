@@ -47,7 +47,7 @@ To review the latest information on any proposal or API, visit the respective ov
 
 {% Partial 'privacy-sandbox/timeline/first-party-sets.njk' %}
 
-## FLEDGE
+## Protected Audience API
 
 Descendant of [TURTLEDOVE](https://github.com/WICG/turtledove).
 

@@ -17,6 +17,8 @@ tags:
   - webgpu
 ---
 
+{% YouTube id="m6T-Mq1BPXg" %}
+
 The new [WebGPU API](https://gpuweb.github.io/gpuweb/) unlocks massive performance gains in graphics and machine learning workloads. This article explores how WebGPU is an improvement over the current solution of WebGL, with a sneak peek at future developments. But first, let’s provide some context for why WebGPU was developed.
 
 ## Context on WebGPU

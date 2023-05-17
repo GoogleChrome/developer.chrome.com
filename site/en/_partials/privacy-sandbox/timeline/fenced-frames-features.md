@@ -21,14 +21,14 @@
     </td>
   </tr>
   <tr>
-    <td>FLEDGE Fenced Frames support for event-level reports with Attribution Reporting
+    <td>Protected Audience API Fenced Frames support for event-level reports with Attribution Reporting
 </br>
 <a href="https://github.com/WICG/turtledove/issues/289">Github Issue</a>
     </td>
     <td>Expected in Chrome for origin trial in Q1 2023</td>
   </tr>
   <tr>
-    <td>FLEDGE, Fenced Frames, and Private Aggregation API support <code>urn-iframes</code>and <code>reportEvent</code>
+    <td>Protected Audience API, Fenced Frames, and Private Aggregation API support <code>urn-iframes</code>and <code>reportEvent</code>
     </br>
     <a href="https://github.com/WICG/turtledove/issues/309">Github Issue</a>
     </td>
@@ -36,7 +36,7 @@
     </td>
   </tr>
   <tr>
-    <td>FLEDGE component ads reporting</br>
+    <td>Protected Audience API component ads reporting</br>
 <a href="https://github.com/WICG/turtledove/issues/332">Github Issue</a>
     </td>
     <td>Expected in Chrome for origin trial in Q1 2023

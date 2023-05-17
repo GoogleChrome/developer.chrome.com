@@ -10,7 +10,8 @@ tags:
   - capabilities
   - progressive-web-apps
   - android
-hero: image/6hHqS5auVgWhN0cQNQztaJx5w4M2/FC4a4vxoHf1XTuMYCvrc.jpg
+hero_youtube_id: 'sLn3wszcnGU'
+thumbnail: image/6hHqS5auVgWhN0cQNQztaJx5w4M2/FC4a4vxoHf1XTuMYCvrc.jpg
 alt: ''
 ---
 

@@ -15,11 +15,6 @@
  */
 
 declare module 'webdev_analytics' {
-  export declare const id: string;
-  export declare const dimensions: {
-    TRACKING_VERSION: 'dimension1';
-    NAVIGATION_TYPE: 'dimension2';
-    WEB_VITALS_DEBUG: 'dimension3';
-  };
-  export declare const version: number;
+  export const id: string;
+  export const version: number;
 }

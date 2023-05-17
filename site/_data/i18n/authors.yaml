@@ -606,6 +606,16 @@ thomassteiner:
     en: 'Thomas Steiner'
   description:
     en: 'Tom is a Developer Advocate'
+jannispetersen:
+  title:
+    en: Jannis Petersen
+  description:
+    en: Creator of Blockbench
+ivankutskir:
+  title:
+    en: 'Ivan Kutskir'
+  description:
+    en: 'Computer Programmer, creator of Photopea'
 ajara:
   title:
     en: 'Adriana Jara'

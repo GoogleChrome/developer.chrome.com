@@ -21,6 +21,6 @@
     <td>Prevent invalid Private Aggregation API reports with report verification for Shared Storage</br>
       <a href="https://github.com/patcg-individual-drafts/private-aggregation-api/blob/main/report_verification.md">Explainer</a>
     </td>
-    <td>Expected in Chrome for origin trial in Q2 2023</td>
+    <td>Available for origin trial in Q2 2023</td>
   </tr>
 </table>

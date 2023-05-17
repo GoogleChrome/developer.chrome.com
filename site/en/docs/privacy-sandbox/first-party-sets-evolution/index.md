@@ -35,7 +35,7 @@ continuing to support the ecosystem.
 
 Sites often rely on access to their cookies in a third-party context to deliver
 seamless and tailored experiences to users. In addition to the
-[Privacy Preserving Ads APIs (Topics, FLEDGE, and Attribution)](/docs/privacy-sandbox/maximize-ad-relevance/),
+[Privacy Preserving Ads APIs (Topics, Protected Audience API, and Attribution)](/docs/privacy-sandbox/maximize-ad-relevance/),
 the Chrome team sought to understand the scope of scenarios in which third-party
 cookies were used, beyond ads personalization or measurement purposes, to
 provide enhanced browsing experiences for users.
