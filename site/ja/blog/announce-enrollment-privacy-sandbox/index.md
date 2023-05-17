@@ -3,7 +3,7 @@ layout: layouts/blog-post.njk
 title: プライバシー サンドボックスの開発者登録
 description: 開発者のアイデンティティを確認し、Chrome と Android におけるプライバシーサンドボックスの関連性と測定 API の構成情報を収集するための新しいプロセスについて。
 subtitle: Chrome と Android におけるプライバシーサンドボックスの関連性と測定 API への新しい開発者登録プロセスを発表します。
-date: '2023-04-13'
+date: 2023-04-13
 hero: image/VbsHyyQopiec0718rMq2kTE1hke2/Y7LA3AUuZmhBjHfNlNsq.jpg
 alt: プライバシー サンドボックスへの登録。
 authors:
