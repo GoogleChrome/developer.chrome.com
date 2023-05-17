@@ -20,7 +20,7 @@ tags:
 The
 [LEGO® Education SPIKE™ Prime Set](https://education.lego.com/en-us/products/lego-education-spike-prime-set/45678#spike%E2%84%A2-prime)
 is a STEAM (science, technology, engineering, arts and mathematics) learning
-tool for grade 6–8 students. Combining colorful LEGO building elements,
+tool for students in grades six through eight (about 11 to 13 years). Combining colorful LEGO building elements,
 easy-to-use hardware, and an intuitive drag-and-drop coding language based on
 [Scratch](https://scratch.mit.edu/) and Python, SPIKE Prime continuously engages
 students through playful learning activities to think critically and solve
