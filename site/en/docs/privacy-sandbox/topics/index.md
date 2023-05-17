@@ -30,7 +30,7 @@ You can also run the Topics [colab](/docs/privacy-sandbox/topics/colab/) to try 
 
 ### Test Topics in an origin trial {: #origin-trial}
 
-A Privacy Sandbox Relevance and Measurement [origin trial](/docs/privacy-sandbox/unified-origin-trial/) has been made available in Chrome Beta 101.0.4951.26 and above on desktop for the Topics, [FLEDGE](/docs/privacy-sandbox/fledge/), and [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) APIs.
+A Privacy Sandbox Relevance and Measurement [origin trial](/docs/privacy-sandbox/unified-origin-trial/) has been made available in Chrome Beta 101.0.4951.26 and above on desktop for the Topics, [Protected Audience](/docs/privacy-sandbox/fledge/), and [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) APIs.
 
 ## Get and set topics {: #epoch}
 
@@ -202,7 +202,7 @@ Each parameter, its default value, and its purpose is explained in the list belo
     <dt>
       <dd><code>PrivacySandboxAdsAPIsOverride</code></dd>
       <dd><strong>Default value:</strong> enabled</dd>
-      <dd>Enables ads APIs: Attribution Reporting, FLEDGE, Topics, Fenced Frames.</dd>
+      <dd>Enables ads APIs: Attribution Reporting, Protected Audience, Topics, Fenced Frames.</dd>
     </dt><br />
     <dt>
       <dd><code>PrivacySandboxSettings3</code></dd>

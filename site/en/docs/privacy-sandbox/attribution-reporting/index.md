@@ -180,7 +180,7 @@ Other features proposed for this API include:
 
 In a future without third-party cookies, this API would be combined with other privacy-preserving ads APIs to cover end-to-end use cases:
 
-- Remarketing: see [FLEDGE](/docs/privacy-sandbox/fledge/)
+- Remarketing: see [Protected Audience API](/docs/privacy-sandbox/fledge/)
 - Interest-based ad selection: see [Topics](/docs/privacy-sandbox/topics/)
 
 {% endAside %}

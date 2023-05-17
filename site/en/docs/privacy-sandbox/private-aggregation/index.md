@@ -24,7 +24,7 @@ This document outlines a new proposal for cross-site measurement.
 ## What is the Private Aggregation API
 
 The Private Aggregation API enables aggregate data collection from worklets
-with access to cross-site data such as [FLEDGE](/docs/privacy-sandbox/fledge/)
+with access to cross-site data such as [the Protected Audience API](/docs/privacy-sandbox/fledge/)
 and [Shared Storage](/docs/privacy-sandbox/shared-storage/). 
 
 This API proposal provides one operation, `sendHistogramReport()`, but more may be supported in the future. The histogram operation allows you to aggregate data across users in each bucket (known in the API as an aggregation key) you define. Your histogram call accumulates values and returns a noised aggregated result in the form of a summary report. For instance, the report might show the number of sites each user has seen your content on, or come across a bug in your third-party script. This operation is performed within another API’s worklet.
@@ -45,7 +45,7 @@ See the [Private Aggregation API fundamentals](/docs/privacy-sandbox/private-agg
 
 ### Differences from Attribution Reporting
 
-The Private Aggregation API shares many similarities with the [Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/). Attribution Reporting is a standalone API designed to measure conversions, whereas Private Aggregation is built for cross-site measurements in conjunction with APIs like FLEDGE and Shared Storage. Both APIs produce aggregatable reports that are consumed by the Aggregation Service back-end to generate summary reports. 
+The Private Aggregation API shares many similarities with the [Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/). Attribution Reporting is a standalone API designed to measure conversions, whereas Private Aggregation is built for cross-site measurements in conjunction with APIs such as the Protected Audience API and Shared Storage. Both APIs produce aggregatable reports that are consumed by the Aggregation Service back-end to generate summary reports. 
 
 Attribution Reporting associates data gathered from an impression event and a conversion event, which happen at different times. Private Aggregation measures a single, cross-site event. 
 
@@ -67,11 +67,11 @@ Read more about testing in [experiment and participate](/docs/privacy-sandbox/pr
 
 The demo of Private Aggregation API for Shared Storage can be accessed at [goo.gle/shared-storage-demo](http://goo.gle/shared-storage-demo), and the code is available on [GitHub](https://github.com/GoogleChromeLabs/shared-storage-demo). The demo implements the client-side operations and produces an aggregatable report that is sent to your server. 
 
-A demo of Private Aggregation API for FLEDGE will be published in the future. 
+A demo of Private Aggregation API for the Protected Audience API will be published in the future. 
 
 ## Use cases
 
-Private Aggregation is a general purpose API for cross-site measurement, and it’s available to be used in [Shared Storage](/docs/privacy-sandbox/shared-storage/) and [FLEDGE](/docs/privacy-sandbox/fledge/) worklets. The first step is to decide specifically what information you want to collect. Those data points are the basis of your aggregation keys.
+Private Aggregation is a general purpose API for cross-site measurement, and it’s available to be used in [Shared Storage](/docs/privacy-sandbox/shared-storage/) and [Protected Audience API](/docs/privacy-sandbox/fledge/) worklets. The first step is to decide specifically what information you want to collect. Those data points are the basis of your aggregation keys.
 
 ### With Shared storage
 
@@ -95,15 +95,15 @@ You may want to measure the number of users who have seen a piece of content or 
 
 Private Aggregation can provide an answer such as "Approximately 89 users have seen the Content ID 581 at least 3 times." A counter can be incremented in Shared Storage from different sites and can be read within a worklet. When the count has reached K, a report can be submitted via Private Aggregation. 
 
-### With FLEDGE
+### With the Protected Audience API
 
-FLEDGE enables retargeting and custom audience use cases, and Private Aggregation allows you to report events from buyer and seller worklets. The API can be used for tasks such as measuring the distribution of auction bids.
+The Protected Audience API enables retargeting and custom audience use cases, and Private Aggregation allows you to report events from buyer and seller worklets. The API can be used for tasks such as measuring the distribution of auction bids.
 
-From a FLEDGE worklet, you can aggregate your data directly using `sendHistogramReport()` and report your data based on a trigger using `reportContributionForEvent()`, which is a special extension for FLEDGE.
+From a Protected Audience API worklet, you can aggregate your data directly using `sendHistogramReport()` and report your data based on a trigger using `reportContributionForEvent()`, which is a special extension for the Protected Audience API.
 
 ## Available functions
 
-The following functions are available in the `privateAggregation` object available in Shared Storage and FLEDGE worklets. To learn how to run your code in a worklet, refer to the [Shared Storage code samples](/docs/privacy-sandbox/use-shared-storage/). 
+The following functions are available in the `privateAggregation` object available in Shared Storage and Protected Audience API worklets. To learn how to run your code in a worklet, refer to the [Shared Storage code samples](/docs/privacy-sandbox/use-shared-storage/). 
 
 ### sendHistogramReport()
 
@@ -191,7 +191,7 @@ privateAggregation.enableDebugMode({ debug_key: BigInt(1234) });
 
 ### reportContributionForEvent()
 
-Within FLEDGE worklets only, we provide a trigger-based mechanism for sending a report only if a certain event occurs. This function also allows for the bucket and value to depend on signals that are not yet available at that point in the auction (for example, the value of the winning bid in `generateBid()`). More detail is available in the [explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE_extended_PA_reporting.md).
+Within Protected Audience API worklets only, we provide a trigger-based mechanism for sending a report only if a certain event occurs. This function also allows for the bucket and value to depend on signals that are not yet available at that point in the auction (for example, the value of the winning bid in `generateBid()`). More detail is available in the [explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE_extended_PA_reporting.md).
 
 ## Report verification
 
@@ -207,4 +207,4 @@ The Private Aggregation API proposal is under active discussion and subject to c
 
 *  **GitHub**: Read the [proposal](https://github.com/patcg-individual-drafts/private-aggregation-api), [raise questions and participate in discussion](https://github.com/patcg-individual-drafts/private-aggregation-api/issues).
 *  **Developer support**: Ask questions and join discussions on the [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
-*  Join the [Shared Storage API group](https://groups.google.com/a/chromium.org/g/shared-storage-api-announcements) and the [FLEDGE API group](https://groups.google.com/a/chromium.org/g/fledge-api-announce/) for the latest announcements related to Private Aggregation. 
+*  Join the [Shared Storage API group](https://groups.google.com/a/chromium.org/g/shared-storage-api-announcements) and the [Protected Audience API group](https://groups.google.com/a/chromium.org/g/fledge-api-announce/) for the latest announcements related to Private Aggregation. 

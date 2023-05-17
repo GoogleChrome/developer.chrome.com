@@ -4,4 +4,4 @@ interest groups.
 
 Publishers make [ad inventory](#ad-inventory) available through marketplaces called ad exchanges, and buyers compete in real time through a [DSP](#dsp) for the opportunity to place their advertisement.
 
-Learn about [ad space buyers in FLEDGE](/docs/privacy-sandbox/fledge/#buyer-detail).
+Learn about [ad space buyers in the Protected Audience API](/docs/privacy-sandbox/fledge/#buyer-detail).
