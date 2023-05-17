@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-05-10
+updated: 2023-05-17
 tags:
   - extensions-news
 
@@ -14,6 +14,12 @@ tags:
 <!--lint disable first-heading-level-->
 
 Check this page often to learn about changes to Chrome extensions, extensions documentation, or related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about some of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).) The [Chrome schedule](https://chromiumdash.appspot.com/schedule) lists stable and beta release dates.
+
+### New Samples: WASM in extensions
+
+<p class="color-secondary-text type--caption">Posted on <time>May 17, 2023</time></p>
+
+We've release two samples demonstrating how to use WASM in an extension. [Using WASM in Manifest V3](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.wasm-helloworld-print-nomodule) shows the general method for including a WASM module. [Using WASM as a module in Manifest V3](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.wasm-helloworld-print) shows how to use it in a module.
 
 ### Updated Manifest V3 migration guidance 
 
