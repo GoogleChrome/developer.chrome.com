@@ -86,7 +86,7 @@ fputs("Some text\n", f);
 fclose(f);
 ```
 
-If you need the fastest possible file operations and/or you deal with [WebAssembly](https://developer.mozilla.org/es/docs/WebAssembly), skip down to [Using the origin private file system in a Web Worker](https://example.com). Else, you can read on.
+If you need the fastest possible file operations and/or you deal with [WebAssembly](https://developer.mozilla.org/es/docs/WebAssembly), skip down to [Using the origin private file system in a Web Worker](#using-the-origin-private-file-system-in-a-web-worker). Else, you can read on.
 
 ## Using the origin private file system on the main thread
 
