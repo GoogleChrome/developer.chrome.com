@@ -3,8 +3,8 @@ layout: 'layouts/blog-post.njk'
 title: 'How the 3D model editor Blockbench uses the EyeDropper API to let users choose colors from everywhere'
 subhead: >
   The EyeDropper API provides a mechanism for creating an eyedropper tool that lets users sample colors from their screens, including outside of the browser window. Learn how the 3D model editor Blockbench uses this API in their codebase.
-date: 2023-01-31
-# updated: 2023-01-31
+date: 2023-05-17
+# updated: 2023-05-17
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/6fIc5QdWayhjyXmIFEi6.png
 alt: Computer created with Blockbench.
 authors:
