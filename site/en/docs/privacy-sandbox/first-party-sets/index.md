@@ -2,121 +2,55 @@
 layout: 'layouts/doc-post.njk'
 title: 'First-Party Sets'
 subhead: >
-  Allow related domain names owned and operated by the same entity to declare themselves as belonging to the same first party.
+  First-Party Sets (FPS) is a way for a company to declare relationships among sites, so that browsers allow limited third-party cookie access for specific purposes.
 description: >
-  First-Party Sets enables related domain names owned and operated by the same entity to declare themselves as belonging to the same first party.
-date: 2021-05-18
-updated: 2022-08-04
+  First-Party Sets (FPS) is a way for a company to declare relationships among sites, so that browsers allow limited third-party cookie access for specific purposes.
+hero: image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/OLx3AXkweLjAiDzoDslb.png
+date: 2023-03-07
 authors:
-  - samdutton
+  - mihajlija
 ---
 
-{% Aside 'caution' %}
-First-Party Sets proposal is being updated with a [new design based on use case specific definition and 
-the Storage Access API](https://github.com/WICG/first-party-sets/issues/92). You can [follow the discussion in the repo](https://github.com/WICG/first-party-sets/issues)
-and we will update this content as the work progresses.
+Many organizations have related sites with different domain names, such as `brandx.com` and `fly-brandx.com`—or domains for different countries such as `example.com`, `example.rs`, `example.co.uk` and so on.
+
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/OLx3AXkweLjAiDzoDslb.png", alt="Diagram showing brandx.com, fly-brandx.com and drive-brandx.com as one group and example.com, example.rs, example.co.uk as another group.", width="800", height="348" %}
+
+
+Imagine a company that helps you book a vacation. The company has two related sites: `fly-brandx.com` and `drive-brandx.com` to separate flights and car hire. Over the course of booking one journey, you can go between these sites to select their different options and you'd expect your shopping cart to remember your choices across these sites.
+
+Related sites like these often rely on cookies to keep you signed in or show you personalized content.
+
+As [Chrome moves towards blocking third-party cookies](https://blog.chromium.org/2020/01/building-more-private-web-path-towards.html) to improve privacy on the web, new mechanisms are needed to enable these experiences to work.
+
+{% Aside %}
+Cookies set by the site you visit—the one shown in the URL bar—are first-party cookies. A site you visit can embed content from other sites, for example, images, ads, and text. Cookies coming from sites other than the current site are [third-party cookies](https://web.dev/samesite-cookie-recipes/#use-cases-for-cross-site-or-third-party-cookies).
 {% endAside %}
 
+## Defining related sites with First-Party Sets
 
-## Implementation status
+First-Party Sets (FPS) is a way for a company to declare relationships among sites, so that browsers allow limited third-party cookie access for specific [purposes](#first-party-sets-use-cases). Chrome will use these declared relationships to decide when to allow or deny a site access to their cookies when in a third-party context.
 
-* First-Party Sets [design change proposal, July 2022](https://github.com/WICG/first-party-sets/issues/92).
-* The initial [origin trial](/origintrials/#/view_trial/988540118207823873) 
-for First-Party Sets and SameParty was available in Chrome from versions 89 to 93 and is now closed.
-* [Chrome Platform Status](https://chromestatus.com/feature/5640066519007232).
-* [Chromium Projects](https://www.chromium.org/updates/first-party-sets).
+At a high level, a First-Party Set is a collection of domains, for which there is a single "set primary" and potentially multiple "set members".
 
+Site authors need to [submit their domains to a set](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md). Set members can include a range of different domain types with [subsets based on use cases](https://github.com/WICG/first-party-sets#defining-a-set-through-use-case-based-subsets).
 
-## Why do we need First-Party Sets?
+## First-Party Sets use cases
 
-{% YouTube
-  id='cNJ8mZ-J3F8' 
-%}
+First-Party Sets are a good match for cases when an organization needs a form of shared identity across different top-level sites. Shared identity in this case means anything from a full single sign-on solution to just needing a shared preference across sites.
 
-Web pages are composed of content from multiple [origins](/docs/privacy-sandbox/glossary#origin).
-Some content is first-party and comes from the top-level site the user is visiting. Other content
-may come from third parties, such as ads, embedded media, or shared resources such as JavaScript
-libraries from [CDNs](https://www.cloudflare.com/en-gb/learning/cdn/what-is-a-cdn/). Third parties
-may also want to correlate user activity across different sites by using mechanisms such as
-[cookies](/docs/privacy-sandbox/glossary#origin).
+An organization may have different top-level domains for:
 
-Browsers are proposing privacy models that restrict access to user identity within a cross-site
-context. However, many organizations have related sites with different domain names, such as domains
-for different countries (`example.com` and `example.co.uk`, for example). It should be possible to
-allow related domain names with an appropriate relationship, perhaps common ownership, to declare
-themselves as belonging to the same first party, so browsers treat those domains as first-party in
-situations where first party and third party are treated differently.
-
-Any solution would also need to prevent abuse of the system. For example, it should not be possible
-to declare organizations that include unrelated sites with different owners, in order to gain
-first-party privileges.
-
-## How do First-Party Sets work?
-
-A website can declare that it is a member (or owner) of a set of web domains by serving a manifest
-file that defines its relationship to the other domains: a JSON file at a
-`.well-known/first-party-set` address.
-
-Suppose `a.example`, `b.example`, and `c.example` wish to form a first-party set owned by
-`a.example`. The sites would then serve the following resources:
-
-```json
-// https://a.example/.well-known/first-party-set
-{
-  "owner": "a.example",
-  "members": ["b.example", "c.example"],
-  ...
-}
-
-// https://b.example/.well-known/first-party-set
-{
-	"owner": "a.example"
-}
-
-// https://c.example/.well-known/first-party-set
-{
-	"owner": "a.example"
-}
-```
-
-The owner domain hosts a manifest file that lists its member domains. A browser can ask a member
-website to specify its owner, and then check the owner's manifest to verify the relationship.
-
-Browser policies are expected to prevent abuse or misuse. For example, First-Party Sets must not
-enable the exchange of user information across unrelated sites, or the grouping of sites that are
-not owned by the same entity. One possible way for a site to register could be for the site to submit
-their proposed group of domains to a public tracker (such as a dedicated GitHub repository) along
-with information needed to satisfy browser policy. Verification of the owner’s control over member
-domains may also require a challenge to be served at a `.well-known` URL on each of the domains in
-the set.
-
-The complementary proposal to First-Party Sets is the `SameParty` cookie attribute. Specifying the
-`SameParty` attribute on a cookie instructs the browser to include the cookie when its context is
-part of the same First-Party Set as the top-level context.
-
-For example, for the First-Party Set described above, a.example can set the following cookie:
-
-```Set-Cookie: session=123; Secure; SameSite=Lax; SameParty```
-
-This means that when a visitor on b.example or c.example makes a request to a.example, the `session`
-cookie is included on that request.
-
-
----
-
-## Engage and share feedback
-
-* **Origin trial**: The initial [origin trial](/origintrials/#/view_trial/988540118207823873) 
-for First-Party Sets and SameParty was available in Chrome from versions 89 to 93 and is now closed.
-* **GitHub**: Read the [proposal](https://github.com/privacycg/first-party-sets), [raise questions and
-follow discussion](https://github.com/privacycg/first-party-sets/issues).
-* **Developer support**: Ask questions and join discussions on the
-[Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
-
+-   **Branded domains**: `fly-brandx.com, drive-brandx.com`
+-   **App domains**: `calendar-brandx.com, mail-brandx.com`
+-   **Country-specific domains** to enable localization: `brandx.co.uk`, `brandx.rs`
+-   **Service domains** that users never directly interact with, but provide services across the same organization's sites: `brandx-assets.com`
+-   **Sandbox domains** that users never directly interact with, but exist for security reasons: `brandx-usercontent.com`
 
 ## Find out more
 
-* [First-Party Sets and the SameParty attribute](/blog/first-party-sets-sameparty/)
-* [First-Party Sets technical explainer](https://github.com/WICG/first-party-sets#introduction)
-* [Chrome Platform Status](https://chromestatus.com/feature/5640066519007232)
-* [Chromium Projects](https://www.chromium.org/updates/first-party-sets)
+-   [First-Party testing instructions](/blog/first-party-sets-testing-instructions/)
+-   [First-Party Sets technical explainer](https://github.com/WICG/first-party-sets#introduction)
+-   [Chrome Platform Status](https://chromestatus.com/feature/5640066519007232)
+-   [Chromium Projects](https://www.chromium.org/updates/first-party-sets)
+-   [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)
+-   [Create an issue](https://github.com/privacycg/first-party-sets/issues) on the proposal repo for questions about the proposal.

@@ -3,14 +3,13 @@ layout: "layouts/doc-post.njk"
 title: "OAuth2: Authenticate users with Google"
 seoTitle: "Chrome Extensions Tutorial: OAuth2 - Authenticate users with Google"
 date: 2012-09-18
-updated: 2021-11-08
+updated: 2023-02-06
 description: >
   Step-by-step instructions on how to build an extension that accesses
   a user's Google contacts via the Google People API, the Chrome Identity API,
   and OAuth2.
 ---
 
-{% Partial 'extensions/mv2page-in-mv3.md' %}
 
 [OAuth2][oauth2] is the industry-standard protocol for authorization. It provides a mechanism for users
 to grant web and desktop applications access to private information without sharing their username,
@@ -90,7 +89,7 @@ Navigate to the [Google API console][google-console] and create a new project. O
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/iC6LC1PYreTxndYmLEWN.png",
        alt="Create credentials for extension", height="478", width="800" %}
 
-On the Create client ID page, select **Chrome App**. Fill out the name of the extension and place
+On the Create client ID page, select **Chrome Extension**. Fill out the name of the extension and place
 the extension ID at the end of the URL in the Application ID field.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/CwgbnssSgeRtqHGxRbpd.png",

@@ -15,6 +15,8 @@ authors:
   - kevinkiklee
 ---
 
+{% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
+
 {% YouTube
   id='HkvmYKqnytw'
 %}
@@ -24,7 +26,7 @@ authors:
 This article covers the basics of FLEDGE and explains some underlying
 concepts, but doesn't go into much technical detail.
 
-* If you work in **advertising or adtech**, you'll get an overview of [how FLEDGE works](#overview).
+* If you work in **advertising or ad tech**, you'll get an overview of [how FLEDGE works](#overview).
 * If you're a **developer or software engineer**, the [FLEDGE API Developer Guide](/docs/privacy-sandbox/fledge-api) provides more in-depth technical detail about the proposal and the [Intent to prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI)
   offers the latest conversation about FLEDGE status in the browser.
 * [The FLEDGE demo](/docs/privacy-sandbox/fledge-api#demo) provides a walkthrough of a basic FLEDGE deployment.
@@ -33,7 +35,7 @@ concepts, but doesn't go into much technical detail.
 Refer to the [glossary](/docs/privacy-sandbox/glossary/) for terms used across FLEDGE documentation.
 {% endAside %}
 
-At the end of this article, you can learn how to [engage and share feedback](#engage).
+At the end of this article is a link to [engage and share feedback](#engage).
 
 ## What is FLEDGE? {: #what}
 
@@ -48,6 +50,11 @@ FLEDGE is the first experiment to be implemented in Chromium within the
 [TURTLEDOVE](https://github.com/WICG/turtledove) family of proposals. The
 [Privacy Sandbox timeline](https://privacysandbox.com/timeline) provides implementation timing
 information for FLEDGE and other Privacy Sandbox proposals.
+
+### How does FLEDGE differ from Turtledove?
+
+The differences between FLEDGE and Turtledove pertain mostly to separation of the on-device role
+of the ad buyer and seller. The sections below explain how FLEDGE works.
 
 ### FLEDGE in one minute {: #overview}
 
@@ -75,13 +82,13 @@ successful, the browser records:
 * The **name** of the interest group: for example, 'custom-bikes'.
 * The **owner** of the interest group: for example, 'https://dsp.example'.
 * Interest group **configuration information** to enable the browser to access
-  bidding code, ad code, and realtime data, if the group's owner is invited to
+  bidding code, ad code, and real-time data, if the group's owner is invited to
   bid in an online ad auction. This information can be updated later by the
   interest group owner.
 
 {% Aside %}
 
-There are other use cases for interest groups: see the [examples of owners and types](#interest-group-types).
+There are other use cases for interest groups; see the [examples of owners and types](#interest-group-types).
 
 {% endAside %}
 
@@ -89,7 +96,7 @@ Later, when the user visits a site that sells ad space, the ad space seller
 (most likely the site's 
 [SSP](/docs/privacy-sandbox/glossary/#ssp), or the site itself) can use
 FLEDGE to run an ad auction to select the most appropriate ads to display to the user. The seller
-calls the `navigator.runAdAuction() `function, which provides a list of interest group owners who are invited to bid.
+calls the `navigator.runAdAuction()` function, which provides a list of interest group owners who are invited to bid.
 
 Bidding code is only run for interest groups that the browser is a member of,
 and whose owners have been invited to bid.
@@ -97,7 +104,7 @@ and whose owners have been invited to bid.
 Bidding code is retrieved from the URL provided in the configuration
 information for the interest group. This code is passed data about the interest
 group and information from the seller, along with contextual data about the
-page and from the browser. 
+page and from the browser.
 
 Each bidder is also known as a buyer.
 
@@ -124,18 +131,18 @@ the user provided to the site on which the ad appears (first-party data targetin
 
 Traditionally, ad platforms have learned about user interests by tracking their
 behavior across sites. Browsers need a way to enable ad platforms to select
-relevant ads, so content publishers can get ad revenue, without cross-site
+relevant ads, so content publishers can get ad revenue without cross-site
 tracking.
 
 The FLEDGE experiment aims to move the web platform closer to a state where the
-user's browser, on their device—not the advertiser or adtech platforms—holds
+user's browser, on their device, not the advertiser or ad tech platforms, holds
 information about what that person is interested in.
 
 {% Aside 'warning' %}
 
 Not all features described here have been implemented (in part or in full) in
 the version of the FLEDGE API currently being tested in Chrome. The
-[FLEDGE API developer guide](/docs/privacy-sandbox/fledge-api#try-fledge) explains what FLEDGE
+[FLEDGE API developer guide](/docs/privacy-sandbox/fledge-api#try-fledge) explains which FLEDGE
 features are currently available for testing in Chrome run from the command line
 using [feature flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags).
 
@@ -147,7 +154,7 @@ implemented and what's still in progress.
 
 ## How can I try FLEDGE? {: #try-fledge}
 
-* [FLEDGE API developer guide](/docs/privacy-sandbox/fledge-api#try-fledge) describes how to
+* The [FLEDGE API developer guide](/docs/privacy-sandbox/fledge-api#try-fledge) describes how to
   take part in the Privacy Sandbox Relevance and Measurement origin trial and
   how to try out FLEDGE for a single user by setting Chrome flags.
 
@@ -166,11 +173,11 @@ implemented and what's still in progress.
 
 Users can adjust their participation for Privacy Sandbox trials in Chrome by
 enabling or disabling the top-level setting in
-`chrome://settings/privacySandbox`. During initial testing, people can use the
-Privacy Sandbox setting to opt out of FLEDGE. 
+`chrome://settings/privacySandbox`. During initial testing, users can opt out of FLEDGE using the
+Privacy Sandbox settings. 
 
-Chrome plans to allow users to see and manage the list of interest groups that
-they've been added to, across the sites they've visited.  As with the Privacy
+Chrome plans to allow users to see and manage the list of interest groups
+they've been added to across the sites they've visited. As with the Privacy
 Sandbox technologies, user settings may evolve with feedback from users,
 regulators, and others.
 
@@ -189,9 +196,19 @@ and membership is removed when users clear their site data.
 Learn how you can [block access to the FLEDGE API](/docs/privacy-sandbox/fledge-api/opt-out),
 either as a site owner or as an individual user.
 
-{: #glossary}
+### Can users block an ad shown as the result of a FLEDGE auction? {: #ad-block }
+
+Users can [opt out of the Privacy Sandbox API](/docs/privacy-sandbox/fledge-api/opt-out/#opt-out-user).
+To opt out of a specific ad or ad selection technique, the appropriate party to
+provide those controls is the ad tech serving the ad.
+
+Developers can use multiple approaches to control which ads are eligible for
+bidding and serving and record a user's ad preferences. One
+technique is to call `leaveAdInterestGroup()` when a user asks to block a specific ad, for the winning interest group that provided the ad. This removes the user's browser from membership in the interest group and makes the group ineligible to bid in the future.
 
 ## Key concepts
+
+{: #glossary}
 
 Looking for more information on FLEDGE terminology? Refer to the [Privacy Sandbox glossary](/docs/privacy-sandbox/glossary/).
 
@@ -217,15 +234,15 @@ relevant to the interest group, and a URL for JavaScript used in bidding. Intere
 {% Aside %}
 
 Interest groups are stored in the browser and can make bids in FLEDGE
-in-browser auctions, but aren't programmatically 'readable'. In other words
-there's no `navigator.getAdInterestGroups()`, as this would expose cross-site
+in-browser auctions, but aren't programmatically 'readable.' In other words,
+there's nothing like navigator.getAdInterestGroups(), as this would expose cross-site
 identity.
 
 {% endAside %}
 
 {: #interest-group-types}
 
-The table below provides examples of different types of FLEDGE interest group and owner.
+The table below provides examples of different types of FLEDGE interest groups and owners.
 
 <div class="w-table-wrapper">
   <table class="w-table--top-align">
@@ -259,20 +276,24 @@ The table below provides examples of different types of FLEDGE interest group an
           audience.</td>
       </tr>
       <tr>
-        <td style="vertical-align: top;">Adtech</td>
+        <td style="vertical-align: top;">Ad tech</td>
         <td style="vertical-align: top;">DSP</td>
         <td style="vertical-align: top;">Category of products</td>
         <td style="vertical-align: top;">People who showed an interest in cycling gear.</td>
-        <td style="vertical-align: top;">An adtech company might create and manage an interest group
+        <td style="vertical-align: top;">An ad tech company might create and manage an interest group
           of people they believe are in the market for some category of item. This interest group
           could then be used to advertise products on sites that sell things in that category (and
-          who work with the adtech company).</td>
+          who work with the ad tech company).</td>
       </tr>
     </tbody>
   </table>
 </div>
 
-<br>
+{: #interest-group-limits}
+
+Chrome allows up to 1000 interest groups per owner, and up to 1000 interest group
+owners. These limits are meant as guard rails, not to be hit in regular operation.
+
 
 {% endDetails %}
 
@@ -285,7 +306,7 @@ The table below provides examples of different types of FLEDGE interest group an
 ### What is a buyer?
 {% endDetailsSummary %}
 
-In FLEDGE, a party that owns an [interest group](#interest-group-detail) and bids in an ad auction.
+In FLEDGE, a buyer is a party that owns an [interest group](#interest-group-detail) and bids in an ad auction.
 
 For example:
 
@@ -308,7 +329,7 @@ JavaScript function `navigator.joinAdInterestGroup()`) the buyer provides the br
 * Potentially, URLs for [ad creatives](/docs/privacy-sandbox/glossary/#creative) for the interest group. (Ad URLs may be added
 later via an update.)
 * A list of data [keys](#key-value) to be queried, and the URL of the buyer's [Key/Value service](#key-value-service-detail),
-to enable bidding code to get realtime data during an auction.
+to enable bidding code to get real-time data during an auction.
 
 The buyer's code can also include a `reportWin()` function to report the auction outcome.
 
@@ -332,13 +353,13 @@ For example:
 
 With FLEDGE, an ad space [seller](/docs/privacy-sandbox/glossary/#seller) has three jobs:
 
-* Enforce publisher rules: which buyers and which bids are eligible.
+* Enforce publisher rules: stating which buyers and which bids are eligible.
 * Run auction logic: JavaScript run in
   [worklets](/docs/privacy-sandbox/glossary/#worklet) to calculate a
   desirability score for each bid.
 * Report the auction outcome.
 
-These jobs are done programmatically, in code provided by the seller when it instigates an ad
+These jobs are done programmatically, in code provided by the seller when it initiates an ad
 auction by calling the JavaScript function `navigator.runAdAuction()`.
 
 {% endDetails %}
@@ -381,7 +402,7 @@ The seller provides the browser with code to score bids, which includes each bid
 code from buyers and bid-scoring code from the seller can receive data from their
 [Key/Value services](#key-value-service-detail). Once an ad is chosen and
 displayed (in a [fenced frame](/docs/privacy-sandbox/fenced-frame/) to preserve
-privacy) the seller and the winning bidder can report the auction result.
+privacy), the seller and the winning bidder can report the auction result.
 
 1. A user visits a site which displays ads.
 2. The seller's code starts an auction. The seller specifies which ad space is
@@ -391,14 +412,12 @@ privacy) the seller and the winning bidder can report the auction result.
    such as the remaining ad campaign budget, from the buyer's [Key/Value
    service](#key-value-service-detail).
 4. The seller's code scores each bid and selects a winner. This logic uses the
-   bid value and other data return a bid's desirability and reject an ad that
+   bid value and other data to return a bid's desirability and reject an ad that
    can't beat the contextual ad winner. The seller can use their own
    [Key/Value service](#key-value-service-detail) for real-time data.  Before
    an auction starts, the seller finds the best contextual ad for the available
    ad slot. 
-5. The winning ad is returned as an opaque value, which displays in a
-   [fenced frame](/docs/privacy-sandbox/fenced-frame/). Both the seller and
-   publisher will be unable to view this value.
+5. The winning ad is returned as a fenced frame config object when the `resolveToConfig` flag is set in the auction config. The config is used to navigate the fenced frame to the ad creative, and the URL of the creative is hidden from both the seller and the publisher. If the `resolveToConfig` flag is set to `false` or not passed in, the winning ad is returned as an opaque [URN](https://en.wikipedia.org/wiki/Uniform_Resource_Name) that can be used to render the ad in an iframe. The fenced frame config object is available starting from M114.
 6. The auction is reported to the seller and winning buyers. 
     {% Aside %}
     The seller's `reportResult()` and buyer's `reportWin()` can include a call to `sendReportTo()`. This is available [temporarily](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#5-event-level-reporting-for-now), until aggregate reporting is available with [Private Aggregation](/docs/privacy-sandbox/private-aggregation).
@@ -417,9 +436,9 @@ privacy) the seller and the winning bidder can report the auction result.
 ### What is a FLEDGE Key/Value service?
 {% endDetailsSummary %}
 
-FLEDGE Key/Value service allows adtechs to query for realtime data when a bid is made by the buyer, and for sellers to score ads while preserving privacy. FLEDGE Key/Value service is one of the [FLEDGE services](/blog/fledge-service-overview/). 
+FLEDGE Key/Value service allows ad techs to query for real-time data when a bid is made by the buyer, and for sellers to score ads while preserving privacy. You can read about the FLEDGE Key/Value service and others in [FLEDGE services](/blog/fledge-service-overview/). 
 
-The Key/Value service is deployed to the adtech's own cloud infrastructure, and the service runs on a [trusted execution environment](/docs/privacy-sandbox/glossary/#trusted-execution-environment). A request to a Key/Value service cannot result in event-level logging or have other side effects. The Key/Value service will also support [user-defined functions (UDFs)](https://github.com/WICG/turtledove/blob/main/FLEDGE_Key_Value_Server_trust_model.md#support-for-user-defined-functions-udfs) that allow adtechs to execute their own custom logic within the Key/Value service. 
+The Key/Value service is deployed to the ad tech's own cloud infrastructure, and the service runs in a [trusted execution environment](/docs/privacy-sandbox/glossary/#trusted-execution-environment). A request to a Key/Value service cannot result in event-level logging or have other side effects. The Key/Value service will also support [user-defined functions (UDFs)](https://github.com/WICG/turtledove/blob/main/FLEDGE_Key_Value_Server_trust_model.md#support-for-user-defined-functions-udfs) that allow ad techs to execute their own custom logic within the Key/Value service. 
 
 {: #key-value}
 
@@ -437,18 +456,18 @@ and the [trust model explainer](https://github.com/privacysandbox/fledge-docs/bl
 {% Details %}
 
 {% DetailsSummary %}
-### How is realtime data incorporated into auctions?
+### How is real-time data incorporated into auctions?
 {% endDetailsSummary %}
 
-The [buyers](#buyer-detail) or [seller](#seller-detail) in an ad auction may need access to realtime
+The [buyers](#buyer-detail) or [seller](#seller-detail) in an ad auction may need access to real-time
 data. For example, bidders may want to calculate the remaining budget in an ad campaign, or the
 seller may be required to check ad creatives against publisher policies.
 
-To meet the privacy requirements of FLEDGE, realtime data required during an ad auction is provided by the [Key/Value service](#key-value-service-detail). When each buyer calls `navigator.joinAdInterestGroup()`,the buyer specifies a Key/Value service URL and specifies the keys to be queried to the service during an auction. Likewise, when the seller runs an ad auction by calling `navigator.runAdAuction()`, the seller provides a URL for its Key/Value service. The seller's Key/Value service will be queried with the render URL of the creative.
+To meet the privacy requirements of FLEDGE, real-time data required during an ad auction is provided by the [Key/Value service](#key-value-service-detail). When each buyer calls `navigator.joinAdInterestGroup()`, the buyer specifies a Key/Value service URL and specifies the keys to be queried to the service during an auction. Likewise, when the seller runs an ad auction by calling `navigator.runAdAuction()`, the seller provides a URL for its Key/Value service. The seller's Key/Value service will be queried with the render URL of the creative.
 
-For initial testing, ["Bring Your Own Server"](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#3-buyers-provide-ads-and-bidding-functions-byos-for-now) model is used. In the long-term, adtechs will need to use the open-source FLEDGE Key/Value services running in [trusted execution environments](https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#trusted-execution-environment) for retrieving real-time data.
+For initial testing, the ["Bring Your Own Server"](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#3-buyers-provide-ads-and-bidding-functions-byos-for-now) model is used. In the long term, ad techs will need to use the open-source FLEDGE Key/Value services running in [trusted execution environments](https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#trusted-execution-environment) for retrieving real-time data.
 
-To ensure that the ecosystem has sufficient time to test, we don’t expect to require the use of the open-source Key/Value services or TEEs until sometime after third-party cookie deprecation. We will provide substantial notice for developers to begin testing and adoption before this transition takes place.
+To ensure that the ecosystem has sufficient time to test, we don’t expect to require the use of the open-source Key/Value services or trusted execution environments until sometime after third-party cookie deprecation. We will provide substantial notice for developers to begin testing and adoption before this transition takes place.
 
 {% endDetails %}
 
@@ -464,13 +483,16 @@ For a more in-depth overview of FLEDGE, read the
 If you're ready to start working with FLEDGE, read
 [experiment and participate](/docs/privacy-sandbox/fledge-experiment/).
 
-We've written an  [API developer guide](/docs/privacy-sandbox/fledge-api) and built a [FLEDGE demo](https://fledge-demo.glitch.me) which offers a walkthrough of a basic FLEDGE deployment. The [FLEDGE demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv) explains how the demo code works, and shows how to use Chrome DevTools for FLEDGE debugging.
+We've written an  [API developer guide](/docs/privacy-sandbox/fledge-api) and built a [FLEDGE demo](https://fledge-demo.glitch.me), which offers a walkthrough of a basic FLEDGE deployment. The [FLEDGE demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv) explains how the demo code works, and shows how to use Chrome DevTools for FLEDGE debugging.
 
 ## Engage and share feedback
 
 -  **GitHub**: Read the [proposal](https://github.com/WICG/turtledove/blob/master/FLEDGE.md),
    [raise questions and follow discussion](https://github.com/WICG/turtledove/issues).
+-  **Announcements**: Join or view past announcements on the [FLEDGE mailing list](https://groups.google.com/u/0/a/chromium.org/g/fledge-api-announce).
 -  **W3C**: Discuss industry use cases in the [Improving Web Advertising Business
    Group](https://www.w3.org/community/web-adv/participants).
--  **Developer support**: Ask questions and join discussions on the
+-  **Developer support**: Ask questions about implementation and best practices, or join discussions on the
    [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
+-  **Current implementation**: For questions about the implementation currently available to test in
+   Chrome: [file a Chromium bug](https://bugs.chromium.org/p/chromium/issues/list?q=fledge).

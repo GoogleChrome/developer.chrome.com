@@ -9,11 +9,13 @@ description: >
   previously visited websites, designed so it cannot be used by
   third parties to track user browsing behavior across sites.
 date: 2022-01-27
-updated: 2022-11-01
+updated: 2023-03-14
 authors:
   - samdutton
   - kevinkiklee
 ---
+
+{% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
 
 For those new to FLEDGE, read the [FLEDGE overview](/docs/privacy-sandbox/fledge)
 for a high-level explanation of the proposal.
@@ -22,6 +24,10 @@ This post is written for developers as a technical reference for the most
 recent iteration of the experimental FLEDGE API. A [demo](#demo) of a basic
 FLEDGE deployment is available, as are
 [API references for ad buyers and sellers](#api-reference).
+
+## Implementation status
+
+{% Partial 'privacy-sandbox/timeline/fledge.njk' %}
 
 ## What is FLEDGE? {: #what}
 
@@ -199,7 +205,7 @@ The [FLEDGE key/value service code](https://github.com/privacysandbox/fledge-key
 is now available. Check out the [announcement blog post](/blog/open-sourcing-fledge-key-value-service/) for the status update.
 
 For initial testing, a "[Bring Your Own Server](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#3-buyers-provide-ads-and-bidding-functions-byos-for-now)"
-model was introduced. In the long-term, adtechs will need to use the
+model was introduced. In the long-term, ad techs will need to use the
 open-source FLEDGE Key/Value services running in trusted execution
 environments.
 
@@ -388,10 +394,13 @@ owner. Learn more in [Bring Your Own Server](https://github.com/WICG/turtledove/
 %}
 </figure>
 
-The promise returned by [`runAdAuction()`](/docs/privacy-sandbox/fledge-api/ad-auction)
-resolves to a Uniform Resource Identifier (URN). This URN is embedded on the
-site in a [fenced frame](/docs/privacy-sandbox/fenced-frame) and renders the
-winning ad.
+The promise returned by [runAdAuction()](/docs/privacy-sandbox/fledge-api/ad-auction/) resolves to a fenced frame config object (`FencedFrameConfig`) when the`resolveToConfig` flag is set to `true` in the auction config. The frame config is used by a fenced frame to navigate the frame to the winning ad, but the URL of the ad is not visible to the frame embedder.
+
+{% Aside ‘important’ %}
+The `FencedFrameConfig` object is returned only when the flag `resolveToConfig` is set to `true` in the auction config. If the flag is not set, or is `false`, an opaque [URN](https://en.wikipedia.org/wiki/Uniform_Resource_Name) will be returned which can only be rendered in an iframe.
+{% endAside %} 
+
+Fenced frame config object is available starting from M114. For more on the `FencedFrameConfig` object, see the [Chrome blog article](/docs/privacy-sandbox/fenced-frame). 
 
 * **Read the FLEDGE explainer**: [browsers render the winning ad](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#4-browsers-render-the-winning-ad)
 
@@ -477,7 +486,7 @@ modifications to better served the developers who would be using the API:
   capabilities of the on-device auction
 -  [PARAKEET](https://github.com/WICG/privacy-preserving-ads/blob/main/Parakeet.md) is
    Microsoft's proposal for a TURTLEDOVE-like ad service that relies on a proxy
-   server running in a TEE between the browser and the adtech providers, to
+   server running in a TEE between the browser and the ad tech providers, to
    anonymize ad requests and enforce privacy
    properties.  FLEDGE has not adopted this proxying model.  We are bringing
    the JavaScript APIs for PARAKEET and FLEDGE into alignment, in support of
@@ -489,11 +498,23 @@ FLEDGE does not yet prevent a website's ad network from learning which ads a per
 
 {% Details %}
 
-{: #user-controls}
-
 {% DetailsSummary %}
+### Can the Topics API be used with the FLEDGE API? 
 
-### Available browser configuration
+{% endDetailsSummary %}
+Yes. An observed topic for the current user, provided by the [Topics API](/docs/privacy-sandbox/topics/), could be used as 
+contextual information by a seller or bidder. A topic could be included in
+the following properties:
+
+*  `auctionSignals`, a property of the auction configuration object passed to `navigator.runAdAuction()`
+*  `userBiddingSignals`, a property of the interest group configuration
+   object passed to `navigator.joinAdInterestGroup()`
+   
+{% endDetails %}
+
+{% Details %}
+{% DetailsSummary %}
+### Available browser configuration {: #user-controls}
 
 {% endDetailsSummary %}
 

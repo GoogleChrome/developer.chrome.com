@@ -1,0 +1,1 @@
+[Scaling factor](/docs/privacy-sandbox/private-aggregation-fundamentals/#noise-and-scaling), in the context of the Attribution Reporting API, refers an amount by which you choose to multiply an aggregatable value. Scaling impacts the effect of noise and your contribution budget.

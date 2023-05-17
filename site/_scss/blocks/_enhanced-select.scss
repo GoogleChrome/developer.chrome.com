@@ -30,7 +30,7 @@
     padding: 1.125rem 0;
     position: absolute;
     transform: translateY(100%);
-    z-index: 1;
+    z-index: 10;
 
     &::-webkit-scrollbar-thumb {
       background: get-color('grey-200');
@@ -45,8 +45,8 @@
       font-family: 'Google Sans', sans-serif;
       font-size: 0.875rem;
       font-weight: 500;
-      line-height: 3rem;
-      padding: 0 2.75rem;
+      line-height: 1.2rem;
+      padding: 1rem 2.75rem;
       text-align: left;
     }
 
@@ -58,6 +58,10 @@
     li:hover:not([selected]) {
       background: get-color('blue-50');
       color: get-color('blue-700');
+    }
+
+    li:first-child {
+      margin-top: 0;
     }
 
     li:last-child {
@@ -93,9 +97,13 @@
 
 enhanced-select {
   align-items: center;
-  display: inline-flex;
+  display: none;
   height: 2.5rem;
   position: relative;
+
+  &:defined {
+    display: inline-flex;
+  }
 
   select {
     max-height: 100%;

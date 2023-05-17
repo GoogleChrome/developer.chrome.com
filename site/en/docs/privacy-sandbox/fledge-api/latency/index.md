@@ -11,6 +11,8 @@ authors:
   - pauljensen
 ---
 
+{% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
+
 It's in everyone's best interest to make sure FLEDGE operates efficiently.
 
 * People browsing the web want sites to load quickly. This means developers
@@ -20,7 +22,7 @@ It's in everyone's best interest to make sure FLEDGE operates efficiently.
 * Publishers want their sites to load quickly, providing users an efficient and
   responsive experience. Publishers also want effective advertising to maximize
   their revenue.
-* Advertisers and adtechs want their ads to display quickly to provide the
+* Advertisers and ad techs want their ads to display quickly to provide the
   greatest utility.
 
 This document outlines some best practices for FLEDGE implementation, to ensure

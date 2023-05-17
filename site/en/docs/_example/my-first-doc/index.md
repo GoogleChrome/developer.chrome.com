@@ -31,6 +31,14 @@ date: 2020-10-15
 updated: 2020-10-16
 
 # Optional
+# Indicate this content is outdated and no longer accurate
+is_outdated: true
+
+# Optional
+# Include a new material URL when this content is outdated and no longer accurate
+new_available_content_url: /docs/handbook/how-to/add-a-blog-post/
+
+# Optional
 # How to add a new author
 # https://developer.chrome.com/docs/handbook/how-to/add-an-author/
 authors:

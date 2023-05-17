@@ -4,6 +4,7 @@ title: 'Debugging cookbook'
 subhead: Part 3 of 3 on debugging Attribution Reporting. Find instructions for how to use debug reports.
 description: Part 3 of 3 on debugging Attribution Reporting. Find instructions for how to use debug reports.
 date: 2022-12-13
+updated: 2023-03-02
 authors:
   - maudn
   - alexandrawhite
@@ -28,6 +29,7 @@ In this cookbook, you’ll find instructions for how to use debug reports for va
 
 1. Set up your system to generate **success debug reports**. See how in [Part 2: Set up Debug reports](/docs/privacy-sandbox/attribution-reporting-debugging/part-2/).
 1. Whenever you deploy Attribution Reporting code, check in real time if you're receiving some success debug reports on your endpoint. If so, your Attribution Reporting setup is working.
+1. Success debug reports are only sent when a conversion takes place. Instead, you may want to check that your integration is properly set up regardless of conversions—that is, you want to check that sources are successfully registered. To achieve this, you can rely on _source registration success_ **verbose debug reports**. See how to set them up in [Part 2: Set up Debug reports](/docs/privacy-sandbox/attribution-reporting-debugging/part-2/).
 
 {% Aside 'caution' %}
 This is only a basic check. Your implementation may still contain bugs, and other factors will cause measurement data loss. For more advanced checks, review the other use cases.
@@ -46,13 +48,19 @@ Use the debug keys (`<source_debug_key, trigger_debug_key>` pair) to map cookie 
 
 **If yes**: for all of these success debug reports, you can expect to receive an attribution report later—with a few exceptions. **Review the [Success debug report scenario](#success-debug-report) for details.**
 
-**If not**: this means that the conversion didn’t register with Attribution Reporting. Use the `<source_debug_key, trigger_debug_key>` pair (or source debug key if the trigger debug key is absent) to map cookie conversion to verbose debug reports. **For each of these conversions, did you at some point (source or trigger time) receive a corresponding verbose debug report?**
+**If not**: this means that the conversion didn’t register with Attribution Reporting. Use the `<source_debug_key, trigger_debug_key>` pair (or source debug key if the trigger debug key is absent) to map cookie conversions to verbose debug reports. **For each of these conversions, did you at some point (source or trigger time) receive a corresponding verbose debug report?**
 
-- If you did receive a verbose debug report: look at the `type` field of each verbose report. It indicates the reason why a source or trigger has not been registered, and hence why the corresponding attribution report will be missing. Depending on the `type` of a verbose debug report, you may want to just take this information as a loss analysis data point (in other words, no action for you), or you may want to file a bug or troubleshoot your implementation. **Review the [verbose debug report scenario](#verbose-debug-report) for details.**
 - If you did not receive a verbose debug report: this may be due to user behavior or to an integration issue. **Review the [no debug report scenario](#no-debug-reports) for details.**
 
+- If you did receive a verbose debug report, look at its `type` field.
+
+  - If its `type` is `source-success`: this means the source was successfully registered, but the trigger wasn't. To narrow down the reason why the success debug report is missing, look for a corresponding verbose debug report of any other type⏤that report will indicate an issue on the trigger side.
+
+  - If its `type` is anything else: the source or trigger has not been registered. `type` tells you why. The corresponding attribution report (and success debug report) will be missing. Depending on the `type` of a verbose debug report, you may want to just take this information as a loss analysis data point (in other words, no action for you), or you may want to file a bug or troubleshoot your implementation. **Review the [verbose debug report scenario](#verbose-debug-report) for details.**
+
 {% Aside 'gotchas' %}
-Success debug reports are sent when the browser successfully generates the event-level report or aggregatable report. Verbose debug reports are sent in case of a source or trigger not registered. Therefore, you'll never receive both a success debug report and a verbose debug report for a given event.
+_Success debug reports_ are sent when the browser successfully generates the event-level report or aggregatable report.
+Most _verbose debug reports_, on the other hand, are sent when a source or trigger is not registered successfully—except for the _source registration success verbose debug report_.
 {% endAside %}
 
 {% Aside %}
@@ -65,7 +73,7 @@ However, you may be in a testing phase where you want to solely focus on elimina
 
 #### Success debug report
 
-If for a given cookie conversion, you received a success debug report (and no verbose debug report), this means that this conversion was successfully registered with Attribution Reporting.
+If for a given cookie conversion, you received a success debug report, this means that this conversion was successfully registered with Attribution Reporting.
 
 **You can expect to receive later an attribution report for this conversion**⏤with a few exceptions:
 
@@ -77,9 +85,19 @@ If for a given cookie conversion, you received a success debug report (and no ve
 When the browser tries to send a report but fails because of network issues, it retries twice before eventually giving up.
 {% endAside %}
 
-#### Verbose debug report
+#### Verbose debug report of type `source-success`
 
-If for a given cookie conversion, you received a verbose debug report (hence no success debug report, and later no attribution report), this means that a reportable failure took place. Something prevented source registration, trigger registration, report generation or report sending. Possible causes:
+If for the source of a given cookie conversion, you received a verbose debug report of type `source-success`, this means that the source registration was successful. Depending on whether trigger registration is also later successful, you may or may not receive a report for that conversion.
+
+There is one caveat to this:
+
+{% Aside 'gotchas' %}
+The source registration success verbose debug report is sent even if the unattributed reporting origin limit is reached. It's sent for security reasons, even though the source registration isn't actually successful in that case.
+{% endAside %}
+
+#### Verbose debug report of any other type
+
+If for a given cookie conversion, you received a verbose debug report of any other type, you won't receive a success debug report, and hence later no attribution report⏤because a verbose report means that a reportable failure took place. Something prevented source registration, trigger registration, report generation or report sending. Possible causes:
 
 - Privacy limits
 - Storage limits
@@ -112,6 +130,17 @@ Each verbose debug report has a `type` field that captures the reason why the co
 {% Aside %}
 If a verbose report's `type` starts with `trigger-event`, it can only be generated for source or trigger events that are associated with event-level reports. If a verbose report's `type` starts with `trigger-aggregate`, it can only be generated for source or trigger events that are associated with aggregatable reports.
 In all other cases, it's for either an event-level or an aggregatable report.
+{% endAside %}
+
+### Source registration success
+
+A source is successfully registered.
+
+`source-success`
+: [Details and report body](https://github.com/WICG/attribution-reporting-api/blob/main/verbose_debugging_reports.md#source-success)
+
+{% Aside 'gotchas' %}
+The source registration success verbose debug report is sent even if the unattributed reporting origin limit is reached. It's sent for security reasons, even though the source registration isn't actually successful in that case.
 {% endAside %}
 
 ### Privacy limitations reports

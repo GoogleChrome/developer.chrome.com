@@ -4,7 +4,7 @@ title: Page is blocked from indexing
 description: |
   Learn about the "Page is blocked from indexing" Lighthouse audit.
 date: 2019-05-02
-updated: 2019-08-21
+updated: 2023-02-01
 ---
 
 Search engines can only show pages in their search results if those pages don't
@@ -39,11 +39,12 @@ X-Robots-Tag: noindex
 You might also have `<meta>` elements that block specific crawlers, such as:
 
 ```html
-<meta name="AdsBot-Google" content="noindex"/>
+<meta name="Googlebot" content="noindex"/>
 ```
 
-Lighthouse doesn't check for crawler-specific directives like this, but they can
-still make your page harder to discover, so use them with caution.
+Lighthouse doesn't fail the audit for crawler-specific directives like this, but they can
+still make your page harder to discover, so use them with caution. Lighthouse will emit a
+warning if a crawler-specific directive is blocking a common indexing bot.
 
 {% Partial 'lighthouse-seo/scoring.njk' %}
 
@@ -71,7 +72,7 @@ X-Robots-Tag: noindex
 <meta name="robots" content="noindex">
 ```
 
-- Remove meta tags that block specific crawlers if these tags are present in the
+- Avoid meta tags that block specific crawlers if these tags are present in the
   head of the page. For example:
 
 ```html

@@ -6,25 +6,21 @@ subhead: >
 description: >
   A web platform API that allows users to login to websites with their federated accounts in a manner compatible with improvements to browser privacy.
 date: 2022-04-25
-updated: 2022-11-28
+updated: 2023-02-27
 authors:
   - agektmr
 ---
 
+## What is FedCM?
+
+FedCM (Federated Credential Management) is a proposal for a privacy-preserving
+approach to federated identity services (such as "Sign in with...")  where
+users can log into sites without sharing their personal information with the
+identity service or the site.
+
 ## Implementation status
 
-This document outlines a new proposal for identity federation: the Federated
-Credential Management API (FedCM).
-
-*  The [FedCM proposal](https://github.com/fedidcg/FedCM) is open for [public
-   discussion](https://github.com/fedidcg/FedCM/issues).
-*  FedCM is shipped in Chrome 108.
-*  FedCM isn't supported in other browsers yet, but Mozilla is [implementing a
-   prototype](https://bugzilla.mozilla.org/show_bug.cgi?id=1782066) to Firefox,
-   while the [Apple has expressed general
-   support](https://lists.webkit.org/pipermail/webkit-dev/2022-March/032162.html)
-   and interest in working together on the FedCM proposal.
-*  [Chrome Platform Status](https://chromestatus.com/feature/6438627087220736)
+{% Partial 'privacy-sandbox/timeline/fedcm.njk' %}
 
 Moving forward, we plan to introduce [a number of new features](#roadmap) based
 on the feedback we received from identity providers (IdP), relying parties (RP)
@@ -42,7 +38,6 @@ currently have two recommendations for identity providers:
   API is maturing, and to discourage RPs from self-hosting SDKs. This will
   ensure IdPs can make changes as the API evolves, without having to ask all of
   their relying parties to redeploy.
-
 
 ## Why do we need FedCM?
 
@@ -143,22 +138,12 @@ instructions.
 
 ### You're affected by the third-party cookie phase out {: #unaffected-by-3p-cookies }
 
-<figure class="float-right">
-{%
-   Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/GMv2zAgNt8dG62JnoSEC.png", alt="Simulate third-party cookie phase-out by configuring Chrome to block them", width="800", height="908"
-%}
-   <figcaption>Simulate third-party cookie phase-out by configuring Chrome to block them</figcaption>
-</figure>
-
 You should only use FedCM if your current integration is affected by the
 third-party cookie phase out.
 
 If you're unsure if your identity federation will continue to work after
-Chrome's third-party cookie phase out, you can test the effect on a website
-with your integration in [Incognito
-mode](https://support.google.com/chrome/answer/95464). Alternatively, you
-can block third-party cookies on desktop at `chrome://settings/cookies` or
-on mobile by navigating to **Settings** > **Site settings** > **Cookies**.
+Chrome's third-party-cookie phase-out, you can test the effect on a website by
+[blocking third-party cookies on Chrome](#block-third-party-cookies).
 
 If there is no discoverable impact on your identity federation without
 third-party cookies, you can continue using your current integration without
@@ -336,6 +321,31 @@ You can use DevTools on desktop to debug Chrome on Android by following the
 instructions at [Remote debug Android
 devices](/docs/devtools/remote-debugging/).
 
+### Block third-party cookies on Chrome {: #block-third-party-cookies}
+
+<figure class="float-right">
+{%
+   Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/GMv2zAgNt8dG62JnoSEC.png", alt="Simulate third-party cookie phase-out by configuring Chrome to block them", width="800", height="908"
+%}
+   <figcaption>Simulate third-party cookie phase-out by configuring Chrome to block them</figcaption>
+</figure>
+
+You can test how FedCM works without third-party cookies on Chrome before it's
+actually enforced.
+
+To block third-party cookies, use [Incognito
+mode](https://support.google.com/chrome/answer/95464), or choose "Block
+third-party cookies" in your desktop settings at `chrome://settings/cookies` or on
+mobile by navigating to **Settings** > **Site settings** > **Cookies**.
+
+{% Aside 'caution' %}
+
+FedCM is temperarily disabled when third-party cookies are blocked. Starting
+from Chrome 110, you can force enable it with the Chrome flag:
+`chrome://flags/#fedcm-without-third-party-cookies`.
+
+{% endAside %}
+
 ## Use the FedCM API {: #use-api }
 
 You integrate with FedCM by creating [a well-known file](#well-known-file),
@@ -395,10 +405,10 @@ const { token } = credential;
 
 Specify a full URL of the IdP config file location as a `configURL`. When
 [`navigator.credentials.get()` is called](#sign-into-rp) on the RP, the browser
-fetches the config file with a `GET` request without the `Referer` header. The
-request doesn't have cookies and doesn't follow redirects. This effectively
-prevents the IdP from learning who made the request and which RP is attempting
-to connect. For example:
+fetches the config file with a `GET` request without the `Origin` header or the
+`Referer` header. The request doesn't have cookies and doesn't follow redirects.
+This effectively prevents the IdP from learning who made the request and which
+RP is attempting to connect. For example:
 
 ```http
 GET /config.json HTTP/1.1
@@ -514,8 +524,9 @@ currently signed in on the IdP. If the IdP supports multiple accounts, this
 endpoint will return all signed in accounts.
 
 The browser sends a `GET` request with cookies, but without a `client_id`
-parameter or the `Referer` header. This effectively prevents the IdP from
-learning which RP the user is trying to sign in to. For example:
+parameter, the `Origin` header or the `Referer` header. This effectively
+prevents the IdP from learning which RP the user is trying to sign in to. For
+example:
 
 ```http
 GET /accounts.php HTTP/1.1
@@ -602,7 +613,7 @@ The browser sends a `GET` request using the `client_id`
 ```http
 GET /client_metadata.php?client_id=1234 HTTP/1.1
 Host: accounts.idp.example
-Referer: https://rp.example/
+Origin: https://rp.example/
 Accept: application/json
 Sec-Fetch-Dest: webidentity
 ```
@@ -676,7 +687,7 @@ Example HTTP header:
 ```http
 POST /assertion.php HTTP/1.1
 Host: accounts.idp.example
-Referer: https://rp.example/
+Origin: https://rp.example/
 Content-Type: application/x-www-form-urlencoded
 Cookie: 0x23223
 Sec-Fetch-Dest: webidentity
@@ -687,14 +698,14 @@ On the server, the IdP should confirm that:
 
 1. The claimed account ID matches the ID for the account that is already
    signed in. 
-2. The `Referer` header matches the origin the RP, registered in advance
-   for the given client ID.
+2. The `Origin` header matches the origin the RP, registered in advance for the
+   given client ID.
 
 {% Aside 'warning' %}
 
 Since the domain verification on OAuth or OpenID Connect relies on a browser
-redirect, it's critical in FedCM that the IdP server checks a `Referer` header value
-matches the RP's registered origin.
+redirect, it's critical in FedCM that the IdP server checks an `Origin` header
+value matches the RP's registered origin.
 
 {% endAside %}
 
@@ -837,6 +848,27 @@ non-problematic.
 
 Once the token is validated by the RP server, the RP may register the user or
 let them sign-in and start a new session.
+
+### Call FedCM from within a cross-origin iframe
+
+FedCM can be invoked from within a cross-origin iframe using an `identity-credentials-get` permissions policy, if the parent frame allows it. To do so, append the `allow="identity-credentials-get"` attribute to the iframe tag as follows:
+
+```html
+<iframe src="https://fedcm-cross-origin-iframe.glitch.me" allow="identity-credentials-get"></iframe>
+```
+
+You can see it in action in [an example](https://fedcm-top-frame.glitch.me/).
+
+Optionally, if the parent frame wants to restrict the origins to call FedCM,
+send a `Permissions-Policy` header with a list of allowed origins.
+
+```http
+Permissions-Policy: identity-credentials-get=(self "https://fedcm-cross-origin-iframe.glitch.me")
+```
+
+You can learn more about how the Permissions Policy works at [Controlling
+browser features with Permissions
+Policy](/docs/privacy-sandbox/permissions-policy/).
 
 ## Engage and share feedback {: #share-feedback}
 

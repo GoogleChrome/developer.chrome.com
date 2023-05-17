@@ -9,10 +9,9 @@ const fakeOrigin = `https://fake-does-not-exist-${Math.random()}.localhost`;
  * Which url style to use is inferred from the outputPath's locale.
  * @param {cheerio.Selector} $ A cheerio representation of the page. This object will be
  * modified in place.
- * @param {string} outputPath The destination for the file.
  * @param {string} locale The locale for the file.
  */
-const prettyUrls = ($, outputPath, locale) => {
+const prettyUrls = ($, locale) => {
   /** @type {(href: string|undefined) => string|undefined} */
   const prettyHref = href => {
     if (!href) {
@@ -76,9 +75,6 @@ const prettyUrls = ($, outputPath, locale) => {
 
     const href = $link.attr('href');
     if (!href && !$link.attr('id')) {
-      console.warn(
-        `Found <a> in ${outputPath} with no href/id (text=\`${$link.text()}\`)`
-      );
       return;
     }
 

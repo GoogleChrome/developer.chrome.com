@@ -4,17 +4,61 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 
 {# $content #}
 
-{# ### Chrome 109 {: #chrome109 }
+{# ### Chrome 112 {: #chrome112 }
 
-* [Recorder: Copy as options for steps, in-page replay, step’s context menu](/es/blog/new-in-devtools-109/#recorder)
-* [Show actual function names in performance’s recordings](/es/blog/new-in-devtools-109/#performance)
-* [New keyboard shortcuts in the Console & Sources panel](/es/blog/new-in-devtools-109/#keyboard-shortcuts)
-* [Improved JavaScript debugging](/es/blog/new-in-devtools-109/#debugging)
-* [Miscellaneous highlights](/es/blog/new-in-devtools-109/#misc)
-* [[Experimental] Enhanced UX in managing breakpoints](/es/blog/new-in-devtools-109/#breakpoint-redesign)
-* [[Experimental] Automatic in-place pretty print](/es/blog/new-in-devtools-109/#pretty-print)
+* [Recorder updates](/es/blog/new-in-devtools-112/#recorder)
+* [Recorder replay extensions](/es/blog/new-in-devtools-112/#replay-extensions)
+* [Record with pierce selectors](/es/blog/new-in-devtools-112/#pierce-selectors)
+* [Export recordings as Puppeteer scripts with Lighthouse analysis](/es/blog/new-in-devtools-112/#puppeteer-lighthouse)
+* [Get extensions](/es/blog/new-in-devtools-112/#get-extensions)
+* [Elements > Styles updates](/es/blog/new-in-devtools-112/#elements-styles)
+* [CSS documentation in the Styles pane](/es/blog/new-in-devtools-112/#css)
+* [CSS nesting support](/es/blog/new-in-devtools-112/#nesting)
+* [Marking logpoints and conditional breakpoints in the Console](/es/blog/new-in-devtools-112/#logpoint)
+* [Ignore irrelevant scripts during debugging](/es/blog/new-in-devtools-112/#ignore-list)
+* [JavaScript Profiler deprecation started](/es/blog/new-in-devtools-112/#js-profiler-deprecation)
+* [Emulate reduced contrast](/es/blog/new-in-devtools-112/#reduced-contrast)
+* [Lighthouse 10](/es/blog/new-in-devtools-112/#lighthouse)
+* [Miscellaneous highlights](/es/blog/new-in-devtools-112/#misc)
  #}
 
+{# ### Chrome 111 {: #chrome111 }
+
+* [Debugging HD color with the Styles pane](/es/blog/new-in-devtools-111/#color)
+* [Enhanced breakpoint UX](/es/blog/new-in-devtools-111/#breakpoint-redesign)
+* [Customizable Recorder shortcuts](/es/blog/new-in-devtools-111/#recorder)
+* [Better syntax highlight for Angular](/es/blog/new-in-devtools-111/#syntax)
+* [Reorganize caches in the Application panel](/es/blog/new-in-devtools-111/#cache)
+* [Miscellaneous highlights](/es/blog/new-in-devtools-111/#misc)
+ #}
+
+
+{# ### Chrome 110 {: #chrome110 }
+
+* [Clearing Performance Panel on reload](/es/blog/new-in-devtools-110/#perf)
+* [Recorder updates](/es/blog/new-in-devtools-110/#recorder)
+* [View and highlight the code of your user flow in the Recorder](/es/blog/new-in-devtools-110/#recorder-code)
+* [Customize selector types of a recording](/es/blog/new-in-devtools-110/#recorder-selector)
+* [Edit user flow while recording](/es/blog/new-in-devtools-110/#recorder-edit)
+* [Automatic in-place pretty print](/es/blog/new-in-devtools-110/#pretty-print)
+* [Better syntax highlight and inline preview for Vue, SCSS and more](/es/blog/new-in-devtools-110/#highlight)
+* [Ergonomic and consistent Autocomplete in the Console](/es/blog/new-in-devtools-110/#console)
+* [Miscellaneous highlights](/es/blog/new-in-devtools-110/#misc)
+ #}
+
+
+
+
+
+### Chrome 109 {: #chrome109 }
+
+* [Recorder: Copia como opciones para los pasos, reproducción en la página, menú contextual del paso](/es/blog/new-in-devtools-109/#recorder)
+* [Muestra los nombres reales de las funciones en las grabaciones de rendimiento](/es/blog/new-in-devtools-109/#performance)
+* [Nuevos atajos de teclado en el panel Consola y Fuentes](/es/blog/new-in-devtools-109/#keyboard-shortcuts)
+* [Mejoras en la depuración de JavaScript {: #debugging](/es/blog/new-in-devtools-109/#debugging)
+* [Otros aspectos destacados](/es/blog/new-in-devtools-109/#misc)
+* [[Experimental] Mejorada la UX para la gestión de puntos de interrupción](/es/blog/new-in-devtools-109/#breakpoint-redesign)
+* [[Experimental] Formatea automáticamente el código para una mejor lectura](/es/blog/new-in-devtools-109/#pretty-print)
 
 
 ### Chrome 108 {: #chrome108 }
@@ -90,7 +134,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 * [Mejorada previsualización de valor en línea durante la depuración](/es/blog/new-in-devtools-103/#inline-preview)
 * [Soporte para grandes bloques para autenticadores virtuales](/es/blog/new-in-devtools-103/#webauthn)
 * [Nuevos atajos de teclado en el panel Fuentes](/es/blog/new-in-devtools-103/#shortcuts)
-* [Mejoras en los sourcemaps](/es/blog/new-in-devtools-103/#sourcemaps)
+* [Mejoras en los source maps](/es/blog/new-in-devtools-103/#sourcemaps)
 
 
 ### Chrome 102 {: #chrome102 }

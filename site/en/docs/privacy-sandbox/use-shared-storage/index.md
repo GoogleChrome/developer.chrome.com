@@ -18,7 +18,7 @@ find code samples to help you get started.
 
 The following features are available to test in Chrome 104:
 
-*  [**Frequency control**](/docs/privacy-sandbox/shared-storage/frequency-control):
+*  [**Creative selection by frequency**](/docs/privacy-sandbox/shared-storage/creative-selection-by-frequency):
    run a worklet script to select a URL from a provided list, based on the
    stored data, and then render that URL in a fenced frame. This has many
    possible uses, such as selecting new content when a frequency cap is reached.
@@ -75,9 +75,9 @@ testing use cases.
 
 ### Not recommended: user consent status {: #user-content-status }
 
-Adtech companies often have cross-site consent statuses that they need to keep
-track of. For example, an adtech company may want to store if a user consents
-to an adtech's terms or service or policies related to regulations, such as
+Ad tech companies often have cross-site consent statuses that they need to keep
+track of. For example, an ad tech company may want to store if a user consents
+to an ad tech's terms or service or policies related to regulations, such as
 GDPR.  
 
 **Shared storage is not recommended for this use case**. This is because:

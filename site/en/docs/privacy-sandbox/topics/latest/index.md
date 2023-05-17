@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Topics API: latest updates'
+title: 'Topics API latest updates'
 subhead: >
  Updates and enhancements to the design and implementation of the API.
 description: >
@@ -135,7 +135,7 @@ effectively assign topics for sites with diverse sets of content.
 
 ### Topics ranking
 
-The top five topics for an [epoch](/docs/privacy-sandbox/topics-api/#how-does-the-topics-api-work)
+The top five topics for an [epoch](/docs/privacy-sandbox/topics/topic-classification/#how-the-users-top-five-topics-are-selected)
 are selected based on frequency. That is, the browser selects the five topics that appeared most
 frequently in a user's browsing history for a given week. Some stakeholders have shared alternative
 approaches to calculating the top topics, including variables such as inverse document frequency

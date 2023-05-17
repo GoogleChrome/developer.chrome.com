@@ -8,3 +8,16 @@
   display: flex;
   gap: get-size(200);
 }
+
+.post-authors__image > img {
+  border: 2px solid var(--color-bg);
+  border-radius: 100%;
+  box-sizing: content-box;
+  height: 50px;
+  max-width: 50px;
+  width: 50px;
+}
+
+.post-authors__image:not(:first-of-type) {
+  margin-left: -#{get-size(200)};
+}

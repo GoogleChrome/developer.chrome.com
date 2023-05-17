@@ -89,7 +89,7 @@ alt="Clicked Disabled extension", width="252", height="180", class="screenshot" 
 ## Provide the extension icons
 
 An extension requires at least one icon to represent it. Provide icons in PNG format for the best
-visual results, although any raster format supported by Blink including BMP, GIF, ICO, and JPEG is
+visual results, although any raster format supported by Chrome including BMP, GIF, ICO, and JPEG is
 accepted.
 
 {% Aside 'caution' %}
@@ -618,12 +618,12 @@ capabilities.
 [manifest-file]:/docs/extensions/mv3/manifest/
 [omnibox-inputentered]: /docs/extensions/reference/omnibox#event-onInputEntered
 [runtime-oninstalled]: /docs/extensions/reference/runtime#event-onInstalled
-[sample-action-api]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/action
-[sample-action]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/action
-[sample-context-menu]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/contextMenus/global_context_search
-[sample-drink]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/examples/water_alarm_notification
-[sample-new-tab-search]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/omnibox/new-tab-search
-[sample-tab-flipper]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/default_command_override
+[sample-action-api]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/action
+[sample-action]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/action
+[sample-context-menu]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/contextMenus/global_context_search
+[sample-drink]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.water_alarm_notification
+[sample-new-tab-search]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/omnibox/new-tab-search
+[sample-tab-flipper]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/default_command_override
 [section-onclick]: #click
 [section-popup]: #popup
 [notifications-create]: /docs/extensions/reference/notifications#method-create

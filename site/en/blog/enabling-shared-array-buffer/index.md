@@ -12,12 +12,18 @@ description: >
 origin_trial:
   url: /origintrials/#/view_trial/303992974847508481
 date: 2021-01-18
-updated: 2022-11-29
+updated: 2023-04-21
 hero: image/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/tWnZEOnNmBeFcZxuR9Dx.jpg
 alt: A collection of padlocks.
 ---
 
 {% Aside %}
+
+**Update, Apr 2023**
+
+To secure more time to reliably relax the requirement to enable cross-origin
+isolation, the deprecation trial of `SharedArrayBuffer`
+on desktop will be extended until Chrome 121. 
 
 **Update, Nov 2022**
 
