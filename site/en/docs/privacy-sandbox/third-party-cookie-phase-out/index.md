@@ -128,7 +128,7 @@ Declaring your sites as part of a First-Party Set will allow you to use [Storage
 
 The sets are declared in JSON format–in the example below, the primary domain is `travel.site`, and `air-travel.site` is in the list of associated sites.
 
-```JavaScript
+```json
 {
  "primary": "https://travel.site",
  "associatedSites": ["https://air-travel.site"]
@@ -137,7 +137,7 @@ The sets are declared in JSON format–in the example below, the primary domain 
 
 Top-level sites can request storage access on behalf of specific origins with [`Document.requestStorageAccessFor()`](https://privacycg.github.io/requestStorageAccessFor/) (rSAFor).
 
-```JavaScript
+```js
 document.requestStorageAccessFor('https://target.site')
 ```
 
