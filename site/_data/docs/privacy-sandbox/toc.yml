@@ -20,6 +20,7 @@
     - url: /docs/privacy-sandbox/feedback
 - title: i18n.docs.privacy-sandbox.strengthen-boundaries
   sections:
+    - url: /docs/privacy-sandbox/third-party-cookie-phase-out
     - url: /docs/privacy-sandbox/first-party-sets
     - url: /docs/privacy-sandbox/first-party-sets-integration
     - url: /docs/privacy-sandbox/first-party-sets-evolution
