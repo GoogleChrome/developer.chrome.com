@@ -15,7 +15,7 @@ performance, security, and user experience, as summarized by the following guide
 
 ## Compliance {: #compliance }
 
-Extensions hosted in the Chrome Web Store must comply with our [developer program policies][program policies]. Some examples are extensions should have a single-purpose, should not used deceptive 
+Extensions hosted in the Chrome Web Store must comply with our [developer program policies][program policies]. Some examples are the single-purpose policy, spam, deceptive instalation,
 
 To explore common reasons for policy violations and how to rectify them, see [Troubleshooting Chrome Web Store violations][cws-violations].
 
@@ -83,7 +83,7 @@ number of queries to the license server, reducing quota usage and traffic.
 ## Store listing {: #store-listing } 
 
 The purpose of an extension's [Chrome Web Store store listing][completing-listing] is to set the user's
-expectations. It should be helpful and clearly communicate what the extension does. 
+expectations. It should be clearly communicate what the extension does. See [Listing Requirements](/docs/webstore/program-policies/listing-requirements/) for store listing polocy violations.
 
 ### Create a compelling store listing {: #great-listing}
 
@@ -95,8 +95,7 @@ designing its logo, keep in mind Google's [Branding Guidelines][cws-branding].
 ### Provide great images {: #images }
 
 All image assets (icon, tile, marquee, and screenshots) [should be provided][supplying-images].
-Images should not be blurry or too busy, as described in [Images of a quality
-listing](/docs/webstore/best_listing/#images). 
+Images should not be blurry or too busy, as described in [Images of a high-quality listing](/docs/webstore/best_listing/#images). 
 
 ### Choose your extension's category well {: #categories }
 
