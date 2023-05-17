@@ -7,6 +7,7 @@ description: >
   First-Party Sets (FPS) is a way for a company to declare relationships among sites, so that browsers allow limited third-party cookie access for specific purposes.
 hero: image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/OLx3AXkweLjAiDzoDslb.png
 date: 2023-03-07
+updated: 2023-05-16
 authors:
   - mihajlija
 ---
@@ -48,7 +49,7 @@ An organization may have different top-level domains for:
 
 ## Find out more
 
--   [First-Party testing instructions](/blog/first-party-sets-testing-instructions/)
+-   [First-Party developer guide](/docs/first-party-sets-integration/)
 -   [First-Party Sets technical explainer](https://github.com/WICG/first-party-sets#introduction)
 -   [Chrome Platform Status](https://chromestatus.com/feature/5640066519007232)
 -   [Chromium Projects](https://www.chromium.org/updates/first-party-sets)
