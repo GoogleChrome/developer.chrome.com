@@ -13,50 +13,48 @@ authors:
   - alexandrawhite
 ---
 
-The Privacy Sandbox proposals are the first of many steps necessary in the
-creation of web standards.
+The Privacy Sandbox proposals are the first of many steps required to create
+web standards.
 
-Web standards are technical documents&mdash;known as specifications or
-specs&mdash;which detail exactly how web technology should work. These specs are
-for developers to implement the technologies. For example, the [Accessible Rich
-Internet Applications (WAI-ARIA) standard](https://www.w3.org/TR/wai-aria-1.1/)
-(commonly known as just "ARIA") defines technical ways to make the web more
+Web standards are technical documents, known as specifications or
+specs, which detail exactly how web technology should work. Specs are
+written for developers to implement the technologies. For example, the
+[Accessible Rich Internet Applications (WAI-ARIA) standard](https://www.w3.org/TR/wai-aria-1.1/)
+(commonly known as "ARIA") defines technical ways to make the web more
 accessible to those with disabilities. These specs are developed for and by the
 [World Wide Web Consortium (W3C)](https://www.w3.org/Consortium/), an
 international community with full-time staff, member organizations, and feedback
 from the general public.
 
 After [discussion](#discussion), [testing](#testing), and [scaled
-adoption](#scaled-adoption), some proposals will become specs. It's critical we
-[receive feedback](/docs/privacy-sandbox/feedback/) from developers and industry
-leaders (with and without web technology knowledge) to ensure we create durable
-web features with broad utility and robust privacy protections for users.
+adoption](#scaled-adoption), some Privacy Sandbox proposals and APIs will
+become specs. It's critical we [receive feedback](/docs/privacy-sandbox/feedback/)
+from developers and industry leaders (with and without web technology
+knowledge) to ensure we create durable web features with broad utility and
+robust privacy protections for users.
 
-Chromium (the open source platform behind many modern browsers) has written
-about the [feature development
-process](https://www.chromium.org/blink/launching-features/) for all
-technologies which aim to become a web standard. Because of the critical nature
-of privacy and security on the web, we expect and encourage large amounts of
-discussion and feedback before testing begins.
+Chromium (the open source project behind many modern browsers) has written
+about the [feature development process](https://www.chromium.org/blink/launching-features/)
+for all technologies which aim to become a web standard. Because of the
+critical nature of privacy and security on the web, we expect and encourage
+large amounts of discussion and feedback before testing begins.
 
 ## From proposal to web standard
 
-There is a large amount of ecosystem input shaping this work, at every stage of
-development. This process may be familiar to web developers, but may be new to
-other industry stakeholders who will use these purpose-built APIs&mdash;and
-whose expertise is critical to this initiative.
+At every stage of development, the ecosystem gives critical feedback which
+shapes the Privacy Sandbox. This process may be familiar to web developers, but
+may be new to other industry stakeholders who will use these purpose-built
+APIs&mdash;and whose expertise is critical to this initiative.
 
 ### Start with discussion {: #discussion}
 
 There have been dozens of [privacy-preserving
 proposals](https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo)
-offered by Chrome and others over the last couple of years. You can read these
-proposals, ask questions, offer ideas to improve them and see what others are
-saying. 
+offered by Chrome and others over the last few years. You can read these
+proposals, ask questions, offer ideas to improve them and see what others say.
 
-To find conversations where the proposed solutions are being discussed and
-debated together, there are a number of W3C groups you can join or monitor,
-depending on the use cases you're interested in:
+There are a number of W3C groups you can join or monitor, depending on the use
+cases you're interested in:
 
 * [Improving Web Advertising Business
   Group](https://www.w3.org/community/web-adv/)
@@ -68,43 +66,44 @@ depending on the use cases you're interested in:
 
 The discussion stage can be highly involved.
 
-For example, [FLEDGE](https://github.com/WICG/turtledove/blob/main/FLEDGE.md) is
+For example, [the Protected Audience API](https://github.com/WICG/turtledove/blob/main/FLEDGE.md) is
 a proposal to support interest-based advertising without cross-site tracking.
-With input from privacy advocates and many industry stakeholders, FLEDGE has
-evolved from two previous proposals (PIGIN and TURTLEDOVE). More than one
-hundred organizations have joined [W3C
-meetings](https://github.com/WICG/turtledove/issues/88) to help refine the
-current version, plus over [200 online discussion
-threads](https://github.com/WICG/turtledove/issues).
+With input from privacy advocates and many industry stakeholders, the Protected Audience API has
+evolved from two previous proposals (PIGIN and TURTLEDOVE). More than 100 have
+joined [W3C meetings](https://github.com/WICG/turtledove/issues/88) to help
+refine the current version, plus over
+[300 online discussion threads](https://github.com/WICG/turtledove/issues).
 
 There have also been more than half a dozen other proposals offered by other
 companies, in the same solution space. Through continued collaboration, we hope
 to define a path forward.
 
-At the same time, [testing for FLEDGE](/docs/privacy-sandbox/fledge-experiment/) was made available behind a Chrome flag so developers can access it early.
+[Testing for the Protected Audience API](/docs/privacy-sandbox/fledge-experiment/) and other APIs
+is available behind a Chrome flag, so developers can access them early.
 
-Not every proposal will go through such an intense incubation period as
-FLEDGE&mdash;some will move much more quickly&mdash;but there is a lot of
+Not every proposal goes through such an intense incubation period as
+the Protected Audience API&mdash;some will move much more quickly&mdash;but there is a lot of
 innovation happening. These are new ideas and it can take a lot of work to get
 them right.
 
 ### Developers test and share feedback {: #testing}
 
-Testing is critical because it provides an early opportunity to [provide
-feedback](/docs/privacy-sandbox/feedback/) on improvements or issues that
-require more work. A growing number of Privacy Sandbox proposals are available
-for testing now with a variety of options available to you.
+We rely on developers to provide [feedback](/docs/privacy-sandbox/feedback/) on
+improvements to these technologies and to share issues which may require
+changes to the API design and implementation. Many of the Privacy Sandbox
+technologies are available for testing, with various options.
 
-Testing in Chrome usually starts with a feature behind a flag for developers to
-test locally, without that feature being live. This means developers need to
-turn it on in the browser to try it out. This code is often very fresh, so you
-can expect to find issues.
+Often, Chrome engineers implement [features behind flags](/docs/web-platform/chrome-flags/)
+to allow for local testing, without the feature being available by default
+across browsers. Developers must enable a feature to try it, and the feature
+implementation will be. This means developers can expect to encounter some
+issues.
 
-We also run origin trials, each of which run for a limited time with a limited
-population of Chrome users. Origin trials are public and open to all
-developers—you just need to register to opt in your site or service. This is
-your opportunity to try the feature on production traffic and provide feedback
-on real-world experience.
+[Chrome origin trials](/docs/web-platform/origin-trials/) allow developers to
+enable a feature for a limited population of Chrome users. To participate,
+developers can register to opt in your site or service. This provides you an
+opportunity to try the feature on production traffic and provide feedback on
+real-world experience.
 
 <figure>
 {% Img
@@ -135,20 +134,18 @@ As development progresses and the features become more stable, the focus shifts
 to wider scale **effectiveness or utility testing.** The aim of utility testing
 is to understand the performance of the feature against its intended use cases,
 at scale. At this stage, the population of Chrome users included in the
-experiment is increased in order to obtain a larger, more representative sample.
+experiment is increased to obtain a larger, more representative sample.
 During this phase, we hope to see sites running longer term tests over a larger
 portion of their own traffic to validate the feature against their business
 needs.
 
-Success throughout this process depends both on developers doing hands-on
-testing and being willing to share what they learn. We will also be carrying out
-our own testing through these phases and sharing the results with you through
-the various individual project channels with regular summaries across the
-project in our [Progress in the Privacy Sandbox blog
-series](/tags/progress-in-the-privacy-sandbox/) and [quarterly feedback
-reports](/docs/privacy-sandbox/feedback/#reports) as part of [our commitments
-agreed with the
-CMA](https://blog.google/around-the-globe/google-europe/path-forward-privacy-sandbox/).
+Success in this process depends on developers performing these tests, then
+sharing what they learn. We're also testing, simultaneously throughout each
+phase, and we share the results through the various individual project channels
+with regular summaries across the project in our
+[Progress in the Privacy Sandbox blog series](/tags/progress-in-the-privacy-sandbox/)
+and [quarterly feedback reports](/docs/privacy-sandbox/feedback/#reports) as
+part of [our commitments with the CMA](https://blog.google/around-the-globe/google-europe/path-forward-privacy-sandbox/).
 
 {% Aside 'example' %}
 
@@ -228,19 +225,16 @@ It's important that developers have ample time to transition their websites to
 adopt new standards. If it turns out your site needs extra time, you'll be able
 to opt-in to keep using the User-Agent string as-is through March 2023.
 
-## Wrap up and feedback  {: #wrap-up-feedback}
+## Share your feedback  {: #wrap-up-feedback}
 
 We'll continue to explain what's happening, provide as much forward visibility
 as we can, encourage your involvement, and hear your input.
 
-*  Learn about the many ways in which you can [provide
-   feedback](/docs/privacy-sandbox/feedback/).
+*  Learn about the many ways you can
+   [provide feedback](/docs/privacy-sandbox/feedback/).
 *  Read the technical details and [implementation
    guidelines](/docs/privacy-sandbox/).
 *  Share your feedback with [@ChromiumDev on
    Twitter](https://twitter.com/ChromiumDev).
 *  Submit Issues to the [developer support
    repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
-
-_Much of this content was originally shared as a part of the [2021 Chrome
-Developer Summit recap](/docs/privacy-sandbox/cds21-update/)._

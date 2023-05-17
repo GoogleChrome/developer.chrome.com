@@ -1,5 +1,9 @@
 {% extends "layouts/base.njk" %}
 
+{% block css %}
+{% InlineCss '/css/single-post.css' %}
+{% endblock %}
+
 {% block title_bar %}
   {% set sharingEnabled = true %}
   {% include 'partials/breadcrumbs.njk' %}
@@ -58,9 +62,12 @@
 
         {% include 'partials/tags.njk' %}
         {% include 'partials/updated.njk' %}
+        
       </article>
-
+      
       {% include 'partials/toc-side.njk' %}
     </div>
+    
   </div>
+  {% include 'partials/post-navigation.njk' %}
 {% endblock %}

@@ -4,7 +4,7 @@ title: SQLite Wasm in the browser backed by the Origin Private File System
 subhead: >
   Use SQLite to handle all your storage needs performantly on the web.
 date: 2023-01-11
-updated: 2023-03-28
+updated: 2023-04-29
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/l5kRHOrUI9mQmwOTJKr7.jpg
 alt: Library symbolizing a database.
 authors:
@@ -54,12 +54,14 @@ this project include:
 
 ## Using SQLite Wasm with the Origin Private File System persistence backend
 
-### Downloading the library
+### Installing the library from npm
 
-Download the official Wasm build from the
-[SQLite homepage](https://sqlite.org//download.html#:~:text=WebAssembly%20%26%20JavaScript). Be sure
-to download the right build. The description needs to mention `sqlite3.wasm`. After the download has
-finished, extract the archive.
+Install the [@sqlite.org/sqlite-wasm](https://www.npmjs.com/package/@sqlite.org/sqlite-wasm) package
+from npm with the following command:
+
+```bash
+npm install @sqlite.org/sqlite-wasm
+```
 
 ### The Origin Private File System
 
@@ -124,11 +126,6 @@ As mentioned previously, SQLite Wasm with the Origin Private File System persist
 to run from a Worker context. So to use it, in the main thread, you need to create the worker and
 listen to messages from it.
 
-{% Aside %} When using SQLite Wasm in production, be sure to also check out its
-[Worker1 Promiser API](https://sqlite.org/wasm/doc/trunk/api-worker1.md#promiser), which hides the
-worker logic behind an abstraction. The example below uses a more classic Worker setup for the sake
-of clarity. {% endAside %}
-
 ```js
 const logHtml = function (cssClass, ...args) {
   const ln = document.createElement('div');
@@ -139,7 +136,7 @@ const logHtml = function (cssClass, ...args) {
   document.body.append(ln);
 };
 
-const worker = new Worker('worker.js?sqlite3.dir=jswasm');
+const worker = new Worker('worker.js');
 worker.onmessage = function ({ data }) {
   switch (data.type) {
     case 'log':
@@ -155,6 +152,8 @@ After that, in the worker thread, you can then set up the communication with the
 initialize the Wasm module, and finally start working with SQLite and execute queries.
 
 ```js
+import sqlite3InitModule from '@sqlite.org/sqlite-wasm';
+
 const logHtml = function (cssClass, ...args) {
   postMessage({
     type: 'log',
@@ -186,7 +185,7 @@ const start = function (sqlite3) {
     let i;
     for (i = 20; i <= 25; ++i) {
       db.exec({
-        sql: INSERT INTO t(a,b) VALUES (?,?)',
+        sql: 'INSERT INTO t(a,b) VALUES (?,?)',
         bind: [i, i * 2],
       });
     }
@@ -204,26 +203,18 @@ const start = function (sqlite3) {
 };
 
 log('Loading and initializing sqlite3 module...');
-let sqlite3Js = 'sqlite3.js';
-const urlParams = new URL(self.location.href).searchParams;
-if (urlParams.has('sqlite3.dir')) {
-  sqlite3Js = urlParams.get('sqlite3.dir') + '/' + sqlite3Js;
-}
-importScripts(sqlite3Js);
-
-self
-  .sqlite3InitModule({
-    print: log,
-    printErr: error,
-  })
-  .then(function (sqlite3) {
-    log('Done initializing. Running demo...');
-    try {
-      start(sqlite3);
-    } catch (e) {
-      error('Exception:', e.message);
-    }
-  });
+sqlite3InitModule({
+  print: log,
+  printErr: error,
+})
+.then(function (sqlite3) {
+  log('Done initializing. Running demo...');
+  try {
+    start(sqlite3);
+  } catch (e) {
+    error('Exception:', e.message);
+  }
+});
 ```
 
 ### Demo

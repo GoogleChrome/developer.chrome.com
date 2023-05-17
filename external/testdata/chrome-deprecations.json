@@ -1,0 +1,478 @@
+[
+  {
+    "id": 6239658726391808,
+    "version": 119,
+    "name": "Deprecate non-standard `shadowroot` attribute for declarative shadow DOM",
+    "date": "2023-11-07"
+  },
+  {
+    "id": 4631626228695040,
+    "version": 117,
+    "name": "[WebRTC] Callback-based legacy getStats()",
+    "date": "2023-09-12"
+  },
+  {
+    "id": 5080569152536576,
+    "version": 115,
+    "name": "Deprecate module size limit for WebAssembly.Module()",
+    "date": "2023-07-18"
+  },
+  {
+    "id": 5428079583297536,
+    "version": 115,
+    "name": "Deprecate the `document.domain` setter.",
+    "date": "2023-07-18"
+  },
+  {
+    "id": 5182904243585024,
+    "version": 113,
+    "name": "Remove WebGPU limit maxFragmentCombinedOutputResources",
+    "date": "2023-05-02"
+  },
+  {
+    "id": 5187711071158272,
+    "version": 113,
+    "name": "Remove support for Web Push Notifications using FCM Sender IDs",
+    "date": "2023-05-02"
+  },
+  {
+    "id": 5203057325899776,
+    "version": 113,
+    "name": "Secure Payment Confirmation: Rename rp --> rpId in CollectedClientAdditionalPaymentData",
+    "date": "2023-05-02"
+  },
+  {
+    "id": 5099285054488576,
+    "version": 111,
+    "name": "Deprecate and remove PaymentInstruments",
+    "date": "2023-03-07"
+  },
+  {
+    "id": 6286595631087616,
+    "version": 111,
+    "name": "Deprecate and remove: connect-src CSP bypass in Web Payment API",
+    "date": "2023-03-07"
+  },
+  {
+    "id": 5190978431352832,
+    "version": 111,
+    "name": "Merchant identity in \"canmakepayment\" event",
+    "date": "2023-03-07"
+  },
+  {
+    "id": 5175124599767040,
+    "version": 110,
+    "name": "Deprecate and remove WebSQL in non-secure contexts",
+    "date": "2023-02-07"
+  },
+  {
+    "id": 5659629104136192,
+    "version": 110,
+    "name": "Features: Remove window.webkitStorageInfo",
+    "date": "2023-02-07"
+  },
+  {
+    "id": 5726124632965120,
+    "version": 109,
+    "name": "Deprecate Event.path",
+    "date": "2023-01-10"
+  },
+  {
+    "id": 4906826915643392,
+    "version": 108,
+    "name": "Deprecate and remove window.defaultStatus and window.defaultstatus",
+    "date": "2022-11-29"
+  },
+  {
+    "id": 4560781148946432,
+    "version": 108,
+    "name": "Deprecate and remove ImageDecoderInit.premultiplyAlpha.",
+    "date": "2022-11-29"
+  },
+  {
+    "id": 5029730789621760,
+    "version": 108,
+    "name": "Removal of navigateEvent.restoreScroll()",
+    "date": "2022-11-29"
+  },
+  {
+    "id": 5169970311856128,
+    "version": 108,
+    "name": "Removal of navigateEvent.transitionWhile()",
+    "date": "2022-11-29"
+  },
+  {
+    "id": 5184046454800384,
+    "version": 108,
+    "name": "[WebRTC] Deprecate and Remove mediaConstraint's googIPv6",
+    "date": "2022-11-29"
+  },
+  {
+    "id": 6244547273687040,
+    "version": 107,
+    "name": "Expect-CT",
+    "date": "2022-10-25"
+  },
+  {
+    "id": 5534966262792192,
+    "version": 106,
+    "name": "Deprecate non-ASCII characters in cookie domain attributes",
+    "date": "2022-09-27"
+  },
+  {
+    "id": 5176235376246784,
+    "version": 106,
+    "name": "Deprecate Persistent Quota",
+    "date": "2022-09-27"
+  },
+  {
+    "id": 6302414934114304,
+    "version": 106,
+    "name": "Remove HTTP/2 push",
+    "date": "2022-09-27"
+  },
+  {
+    "id": 5096490737860608,
+    "version": 105,
+    "name": "CSS default keyword is disallowed in custom identifiers",
+    "date": "2022-08-30"
+  },
+  {
+    "id": 5166018807726080,
+    "version": 105,
+    "name": "Gesture Scroll DOM events",
+    "date": "2022-08-30"
+  },
+  {
+    "id": 5816343679991808,
+    "version": 104,
+    "name": "Block iframe contexts navigating to filesystem: URLs",
+    "date": "2022-08-02"
+  },
+  {
+    "id": 5694492182052864,
+    "version": 104,
+    "name": "Removing Legacy Client Hint Mode",
+    "date": "2022-08-02"
+  },
+  {
+    "id": 5759004926017536,
+    "version": 104,
+    "name": "U2F Security Key API removal (Cryptotoken Component Extension)",
+    "date": "2022-08-02"
+  },
+  {
+    "id": 4878376799043584,
+    "version": 103,
+    "name": "Remove Battery Status API on Insecure Origins",
+    "date": "2022-06-21"
+  },
+  {
+    "id": 5823036655665152,
+    "version": 102,
+    "name": "[WebRTC] Deprecate and Remove Plan B",
+    "date": "2022-05-24"
+  },
+  {
+    "id": 5948593429020672,
+    "version": 102,
+    "name": "Calling PaymentRequest.show without user activation",
+    "date": "2022-05-24"
+  },
+  {
+    "id": 5684870116278272,
+    "version": 101,
+    "name": "Deprecate and remove WebSQL in third-party contexts",
+    "date": "2022-04-26"
+  },
+  {
+    "id": 5730051011117056,
+    "version": 100,
+    "name": "The \"basic-card\" method of PaymentRequest API",
+    "date": "2022-03-29"
+  },
+  {
+    "id": 5667793157488640,
+    "version": 99,
+    "name": "Deprecating minor WebCodecs spec violations",
+    "date": "2022-03-01"
+  },
+  {
+    "id": 5639265565278208,
+    "version": 99,
+    "name": "Remove font-family -webkit-standard",
+    "date": "2022-03-01"
+  },
+  {
+    "id": 5695324321480704,
+    "version": 98,
+    "name": "Remove SDES key exchange for WebRTC",
+    "date": "2022-02-01"
+  },
+  {
+    "id": 5679790780579840,
+    "version": 95,
+    "name": "Deprecate support for URLs with non-IPv4 hostnames ending in numbers",
+    "date": "2021-10-19"
+  },
+  {
+    "id": 5650158039597056,
+    "version": 95,
+    "name": "WebAssembly cross-origin module sharing",
+    "date": "2021-10-19"
+  },
+  {
+    "id": 6246151319715840,
+    "version": 95,
+    "name": "Remove FTP support",
+    "date": "2021-10-19"
+  },
+  {
+    "id": 6192449487634432,
+    "version": 94,
+    "name": "Application Cache",
+    "date": "2021-09-21"
+  },
+  {
+    "id": 6678134168485888,
+    "version": 93,
+    "name": "Remove 3DES in TLS",
+    "date": "2021-08-31"
+  },
+  {
+    "id": 5717324021628928,
+    "version": 92,
+    "name": "Payment handlers for standardized payment method identifiers.",
+    "date": "2021-07-20"
+  },
+  {
+    "id": 4735675582644224,
+    "version": 91,
+    "name": "Remove webkitBeforeTextInserted & webkitEditableContentChanged JS events",
+    "date": "2021-05-25"
+  },
+  {
+    "id": 5742693948850176,
+    "version": 90,
+    "name": "Remove Content Security Policy directive 'plugin-types'",
+    "date": "2021-04-13"
+  },
+  {
+    "id": 4925917174431744,
+    "version": 89,
+    "name": "Remove prefixed events for <link rel=prerender>",
+    "date": "2021-03-02"
+  },
+  {
+    "id": 5740835259809792,
+    "version": 89,
+    "name": "Comma separator in iframe allow attribute",
+    "date": "2021-03-02"
+  },
+  {
+    "id": 5643527180517376,
+    "version": 88,
+    "name": "Flash Player Support",
+    "date": "2021-01-19"
+  },
+  {
+    "id": 5759116003770368,
+    "version": 84,
+    "name": "TLS 1.0 and TLS 1.1",
+    "date": "2020-07-14"
+  },
+  {
+    "id": 5691978677223424,
+    "version": 84,
+    "name": "Blocking insecure downloads from secure (HTTPS) contexts",
+    "date": "2020-07-14"
+  },
+  {
+    "id": 5021976655560704,
+    "version": 78,
+    "name": "XSS Auditor",
+    "date": "2019-10-22"
+  },
+  {
+    "id": 6750456638341120,
+    "version": 63,
+    "name": "Shadow-Piercing descendant combinator, '/deep/'",
+    "date": "2017-12-05"
+  },
+  {
+    "id": 5718547946799104,
+    "version": 55,
+    "name": "Block the load of cross-origin, parser-blocking scripts inserted via document.write() for users on 2G",
+    "date": "2016-11-29"
+  },
+  {
+    "id": 5652436521844736,
+    "version": null,
+    "name": "Block the load of cross-origin, parser-blocking scripts inserted via document.write() for users on slow connections",
+    "date": "N/A"
+  },
+  {
+    "id": 5436853517811712,
+    "version": null,
+    "name": "Restrict \"private network requests\" for subresources from public websites to secure contexts. ",
+    "date": "N/A"
+  },
+  {
+    "id": 5148698084376576,
+    "version": null,
+    "name": "Remove alert(), confirm(), and prompt for cross origin iframes",
+    "date": "N/A"
+  },
+  {
+    "id": 5698580851458048,
+    "version": null,
+    "name": "Remove special handling of localhost6 and localhost6.localdomain6 hosts",
+    "date": "N/A"
+  },
+  {
+    "id": 5668106045227008,
+    "version": null,
+    "name": "Special handling of localhost.localdomain host",
+    "date": "N/A"
+  },
+  {
+    "id": 5769608873115648,
+    "version": null,
+    "name": "Remove SpeechRecognitionEvent's interpretation and emma attributes",
+    "date": "N/A"
+  },
+  {
+    "id": 5686951464140800,
+    "version": null,
+    "name": "Text encoding detection for XHR JSON response",
+    "date": "N/A"
+  },
+  {
+    "id": 5196871120191488,
+    "version": null,
+    "name": "Remove font-family -webkit-<generic-name>",
+    "date": "N/A"
+  },
+  {
+    "id": 5171427683598336,
+    "version": null,
+    "name": "Deprecated and remove font-family: -webkit-pictograph",
+    "date": "N/A"
+  },
+  {
+    "id": 5778154275733504,
+    "version": null,
+    "name": "Remove author access to :-internal-autofill-previewed and :-internal-autofill-selected",
+    "date": "N/A"
+  },
+  {
+    "id": 5668230711476224,
+    "version": null,
+    "name": "Human-readable names for Bluetooth assigned numbers",
+    "date": "N/A"
+  },
+  {
+    "id": 5632429577469952,
+    "version": null,
+    "name": "Remove support for loading media via filesystem:// URLs on Android",
+    "date": "N/A"
+  },
+  {
+    "id": 5157284681351168,
+    "version": null,
+    "name": "Deprecate <param>'s ability to specify URLs to <object>",
+    "date": "N/A"
+  },
+  {
+    "id": 6283184588193792,
+    "version": null,
+    "name": "Deprecate <param> element's functionality",
+    "date": "N/A"
+  },
+  {
+    "id": 5160086884843520,
+    "version": null,
+    "name": "Removal of X-Requested-With in WebView",
+    "date": "N/A"
+  },
+  {
+    "id": 5141814818897920,
+    "version": null,
+    "name": "Remove -webkit-perspective-origin-[x,y]",
+    "date": "N/A"
+  },
+  {"id": 5182546583748608, "version": null, "name": "test 1", "date": "N/A"},
+  {"id": 5171075833397248, "version": null, "name": "Test 1", "date": "N/A"},
+  {
+    "id": 5129184450445312,
+    "version": null,
+    "name": "Remove  ImageEncodeOptions colorSpace and pixelFormat",
+    "date": "N/A"
+  },
+  {
+    "id": 5128825141198848,
+    "version": null,
+    "name": "data: URL in SVGUseElement",
+    "date": "N/A"
+  },
+  {
+    "id": 5090735022407680,
+    "version": null,
+    "name": "Calling getDisplayMedia() without user activation",
+    "date": "N/A"
+  },
+  {
+    "id": 5087526916718592,
+    "version": null,
+    "name": "Remove Prefetch 5-minute Rule",
+    "date": "N/A"
+  },
+  {
+    "id": 6539024213213184,
+    "version": null,
+    "name": "Deprecate and remove client hint User-Agent full version",
+    "date": "N/A"
+  },
+  {
+    "id": 5134293578285056,
+    "version": null,
+    "name": "Deprecate and Remove WebSQL",
+    "date": "N/A"
+  },
+  {
+    "id": 5199363708551168,
+    "version": null,
+    "name": "Block-all-mixed-content CSP directive",
+    "date": "N/A"
+  },
+  {
+    "id": 5137018030391296,
+    "version": null,
+    "name": "Deprecate and remove \"window-placement\" alias for permission and permission policy \"window-management\"",
+    "date": "N/A"
+  },
+  {
+    "id": 5198065940561920,
+    "version": null,
+    "name": "[WebRTC] Unship deprecated \"track\" and \"stream\" stats from getStats()",
+    "date": "N/A"
+  },
+  {
+    "id": 4832850040324096,
+    "version": null,
+    "name": "Deprecate TLS SHA-1 server signatures",
+    "date": "N/A"
+  },
+  {
+    "id": 5287151366832128,
+    "version": null,
+    "name": "JSON comments in importmap and webbundle scripts",
+    "date": "N/A"
+  },
+  {
+    "id": 5066630972833792,
+    "version": null,
+    "name": "Remove non-standard -webkit-appearance keywords",
+    "date": "N/A"
+  }
+]

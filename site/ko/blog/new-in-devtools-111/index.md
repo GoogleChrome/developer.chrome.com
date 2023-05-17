@@ -17,6 +17,7 @@ draft: true
 *이 게시글의 번역에는 [최원영](https://www.linkedin.com/in/toruchoi)님이 참여하셨으며, [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님과 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다.*
 
 {% Partial 'devtools/banner.md' %}
+{% YouTube id='CrSmjooOEiE' %}
 
 <!-- Translation instructions:
   1. Remove the "draft: true" tag above when submitting PR

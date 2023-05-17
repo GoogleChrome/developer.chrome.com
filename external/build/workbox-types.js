@@ -57,7 +57,7 @@ async function run() {
   try {
     // webpack is a peerDependency of workbox-webpack-plugin, and needs to be
     // manually installed.
-    childProcess.execFileSync('npm', ['install', 'webpack'], {
+    childProcess.execFileSync('npm', ['install', 'webpack@5.75.0'], {
       cwd: t.name,
       stdio: 'inherit',
     });

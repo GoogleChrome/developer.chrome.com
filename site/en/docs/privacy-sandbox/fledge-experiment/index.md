@@ -1,23 +1,25 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'FLEDGE: experiment and participate'
+title: 'The Protected Audience API: experiment and participate'
 subhead: >
   Quick guide to implement and test the API. Set up privacy-preserving ad auctions to serve remarketing and custom audience use cases.
 description: >
-  FLEDGE is a Privacy Sandbox proposal to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites. The API enables on-device auctions by the browser, to choose relevant ads from websites the user has previously visited.
+  The Protected Audience API is a Privacy Sandbox proposal to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites. The API enables on-device auctions by the browser, to choose relevant ads from websites the user has previously visited.
 date: 2022-03-31
 updated: 2022-08-12
 authors:
   - samdutton
 ---
 
+{% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
+
 ## Learn the essentials
 
 * If you're a developer or software engineer, the
-  [FLEDGE API Developer Guide](/docs/privacy-sandbox/fledge-api/) provides an
+  [Protected Audience API Developer Guide](/docs/privacy-sandbox/fledge-api/) provides an
   in-depth technical reference for the proposal.
-* [The FLEDGE API](/docs/privacy-sandbox/fledge) offers a higher level overview
-  for those who work in advertiser and ad tech, who are new to the Privacy
+* The [Protected Audience API overview](/docs/privacy-sandbox/fledge) offers a higher level
+  explanation for those who work in advertiser and ad tech, who are new to the Privacy
   Sandbox.
 
 ## Try the API
@@ -33,27 +35,27 @@ to learn how to determine if a feature is available before attempting to use it.
 
 {% endAside %}
 
-1. Learn how to use the FLEDGE API.
-   * Review the [FLEDGE API Developer Guide](/docs/privacy-sandbox/fledge-api/).
+1. Learn how to use the Protected Audience API.
+   * Review the [Protected Audience API Developer Guide](/docs/privacy-sandbox/fledge-api/).
      This guide offers a reference for API methods and parameters.
-   * Read about [FLEDGE services](/blog/fledge-service-overview/). For example,
+   * Read about [Protected Audience services](/blog/fledge-service-overview/). For example,
      the Key/Value service offers real-time information to buyers and sellers
      during the ad auction.
 2. Try the [demo](https://fledge-demo.glitch.me).
    * Review the [source code](https://github.com/JackJey/fledge-demo).
-   * Watch the [FLEDGE demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv) to learn how the demo code works and how to use Chrome DevTools for FLEDGE debugging.
+   * Watch the [Protected Audience demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv) to learn how the demo code works and how to use Chrome DevTools for FLEDGE debugging.
 3. Experiment with the API.
    * Sign up for the [origin trial](/docs/privacy-sandbox/fledge-api/#origin-trial)
    * Try out FLEDGE for a single user by enabling
      `chrome://flags/#privacy-sandbox-ads-apis` or by running Chrome from the
-     command line with [FLEDGE feature flags](/docs/privacy-sandbox/fledge-api/#flags).
-   * [Troubleshoot FLEDGE worklets](/docs/privacy-sandbox/fledge-api/troubleshoot/) with Chrome DevTools. Learn how to debug FLEDGE bidding and auction code.
-4. Review the [FLEDGE status](/docs/privacy-sandbox/status/#fledge) for updates
+     command line with [Protected Audience feature flags](/docs/privacy-sandbox/fledge-api/#flags).
+   * [Troubleshoot Protected Audience worklets](/docs/privacy-sandbox/fledge-api/troubleshoot/) with Chrome DevTools. Learn how to debug FLEDGE bidding and auction code.
+4. Review the [Protected Audience status](/docs/privacy-sandbox/status/#fledge) for updates
    on the implementation of the FLEDGE API. Review the
-   [pending FLEDGE capabilities](/docs/privacy-sandbox/fledge-api/feature-status/)
+   [pending Protected Audience capabilities](/docs/privacy-sandbox/fledge-api/feature-status/)
    for more details.
 
-The [FLEDGE API explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#summary)
+The [Protected Audience API explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#summary)
 provides more detail about feature support and constraints.
 
 ## Get support
@@ -63,13 +65,13 @@ about **your implementation**, the **demo**, or the **documentation**:
 
 *  [Open a new Issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/issues/new/choose)
    on the Privacy Sandbox Dev Support repository. Make sure to select the
-   Issue template for FLEDGE.
+   Issue template for the Protected Audience API.
 *  Raise an issue on the [demo code repo on
    GitHub](https://github.com/JackJey/fledge-demo).
 *  For more general questions about how to meet your **use cases** with the
    API, [file an issue on the proposal repository](https://github.com/WICG/turtledove/issues/new).
 
-For bugs and issues with the implementation of the FLEDGE API in Chrome:
+For bugs and issues with the implementation of the Protected Audience API in Chrome:
 
 *  [View existing issues](https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EInterestGroups)
    reported for the API.
@@ -77,7 +79,7 @@ For bugs and issues with the implementation of the FLEDGE API in Chrome:
 
 ## Join the discussion
 
-Everyone is welcome to join in discussion of the FLEDGE proposal. In 
+Everyone is welcome to join in discussion of the Protected Audience API proposal. In 
 particular, if you're experimenting with the API, your feedback is essential.
 
 ### Discuss the API
@@ -88,9 +90,10 @@ Like other Privacy Sandbox proposals, this API is documented and discussed publi
 *  Join the conversation about [existing issues](https://github.com/WICG/turtledove/issues).
 *  [Open a new issue](https://github.com/WICG/turtledove/issues/new) to ask a
    question, propose a feature, or discuss a use case.
-*  [Join the scheduled calls for FLEDGE](https://github.com/WICG/turtledove/issues/88) (every
-  second week). Everyone is welcome to join&mdash;to participate, first make sure to [join the
-  WICG](https://www.w3.org/community/wicg/). You can actively participate or just listen in!
+*  [Join the scheduled calls for Protected Audience](https://github.com/WICG/turtledove/issues/88)
+   (every second week). Everyone is welcome to join&mdash;to participate,
+   first make sure to [join the WICG](https://www.w3.org/community/wicg/).
+   You can actively participate or just listen in!
 
 ### Discuss related topics
 
