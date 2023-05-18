@@ -32,9 +32,7 @@ Cookies are associated with the site that set them and they can be sent on HTTP 
 ### First-party cookies
 
 If your cookie is never used on a third-party site, for example if you set a cookie to manage the session on your site and it's never used in a cross-site iframe, that cookie is always used in a first-party context.
-
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/Xu5akgN0BOtTwI4JG3jd.png", alt="Diagram showing a first-party cookie.", width="800", height="761", params={maxHeight: 400} %}
-
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/ArhVqaVr6O2X0mE0YYxp.png", alt="Diagram showing a first-party cookie.", width="800", height="653" %}
 To identify your first-party or same-site cookies, look for:
 
 -   Cookies set without any `SameSite` attribute.
@@ -67,9 +65,7 @@ For more details, check out [Recipes for first-party cookies](https://web.dev/fi
 ### Third-party cookies
 
 Cookies that are sent in cross-site contexts, like iframes or subresource requests, are generally referred to as third-party cookies.
-
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/HmVPAfQQ97ID7fqG4tbb.png", alt="Diagram showing a third-party cookie.", width="800", height="500" %}
-
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/NJLl1qG9AN8tD9GwR2jp.png", alt="Diagram showing a third-party cookie.", width="800", height="646" %}
 [Some use cases for third-party cookies](https://web.dev/samesite-cookie-recipes/#use-cases-for-cross-site-or-third-party-cookies) include:
 
 -   Embedded content shared from other sites, such as videos, maps, code samples, and social posts.
