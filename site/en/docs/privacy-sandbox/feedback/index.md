@@ -385,7 +385,7 @@ _FLoC provided a high-level view of a user's interests by grouping them in
 cohorts with thousands of similar browsers. [Learn more about
 FLoC](/docs/privacy-sandbox/floc/)._
 
-**_Last updated 2022/02: FLoC has been superseded by Topics API, links are for
+**_Last updated 2022/02: FLoC has been superseded by the Topics API, links are for
 historical reference_**
 
 <table class="width-full">
@@ -421,12 +421,13 @@ historical reference_**
   </tr>
 </table>
 
-#### FLEDGE API
+#### Protected Audience API
 
-_FLEDGE enables remarketing and custom audience use cases, as in advertising
+_The Protected Audience API enables remarketing and custom audience use cases, as in advertising
 that can make use of sites or products previously visited, but without relying
-on an individual identifier. [Learn more about
-FLEDGE](/docs/privacy-sandbox/fledge/)._
+on an individual identifier. [Learn more about the Protected Audience API ](/docs/privacy-sandbox/fledge/)._
+
+{% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
 
 **_Last updated 2022/03: FLEDGE is preparing for origin trial_**
 
