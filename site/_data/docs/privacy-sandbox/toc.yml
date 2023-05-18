@@ -13,6 +13,7 @@
       title: i18n.docs.privacy-sandbox.blog
 - title: i18n.docs.privacy-sandbox.start
   sections:
+    - url: /docs/privacy-sandbox/chrome-testing
     - url: /docs/privacy-sandbox/unified-origin-trial
     - url: /docs/privacy-sandbox/enroll
       title: i18n.docs.privacy-sandbox.enroll
