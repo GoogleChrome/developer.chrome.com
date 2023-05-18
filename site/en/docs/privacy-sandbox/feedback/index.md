@@ -425,7 +425,7 @@ historical reference_**
 
 _The Protected Audience API enables remarketing and custom audience use cases, as in advertising
 that can make use of sites or products previously visited, but without relying
-on an individual identifier. [Learn more about the Protected Audience API ](/docs/privacy-sandbox/fledge/)._
+on an individual identifier. [Learn more about the Protected Audience API](/docs/privacy-sandbox/fledge/)._
 
 {% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
 
