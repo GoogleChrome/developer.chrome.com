@@ -212,7 +212,7 @@ has Privacy Sandbox relevance and measurement APIs disabled. Other APIs, like
 First-Party Sets, CHIPS, FedCM, and so on, will not be disabled. We anticipate
 that this combination will be helpful to establish a baseline of
 performance without third-party cookies, and we're seeking
-[feedback](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) on
+[feedback](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/labels/chrome-testing) on
 an appropriate fraction of traffic to devote to this subset of testing.
 
 We plan to deprecate 1% of third party cookies in Q1 2024, and we'll work
