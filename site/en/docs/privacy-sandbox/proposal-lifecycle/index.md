@@ -8,17 +8,18 @@ description: >
   How we collaborate with stakeholders to discuss, test, and adopt
   privacy-preserving technologies.
 date: 2022-03-30
-updated: 2022-05-17
+updated: 2023-05-18
 authors:
   - alexandrawhite
 ---
 
 The Privacy Sandbox proposals are the first of many steps required to create
-web standards.
+web platform features.
 
-Web standards are technical documents, known as specifications or
-specs, which detail exactly how web technology should work. Specs are
-written for developers to implement the technologies. For example, the
+These web platform features may become web standards (also known as
+specifications or specs), which are technical documents that detail exactly how
+web technology should work and define how engineers should implement the
+technologies in web browsers. For example, the
 [Accessible Rich Internet Applications (WAI-ARIA) standard](https://www.w3.org/TR/wai-aria-1.1/)
 (commonly known as "ARIA") defines technical ways to make the web more
 accessible to those with disabilities. These specs are developed for and by the
@@ -32,6 +33,13 @@ become specs. It's critical we [receive feedback](/docs/privacy-sandbox/feedback
 from developers and industry leaders (with and without web technology
 knowledge) to ensure we create durable web features with broad utility and
 robust privacy protections for users.
+
+<figure>
+  {% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/pZjqJnZFFrVBci1HL49M.png", alt="", width="800", height="223" %}
+  <figcaption>
+    Features progress through a timeline of development and testing through to general availability. The intents are hard boundaries, which are required before certain actions can take place. For example, testing cannot begin until an Intent to Experiment has been posted and received approvals. Learn more about these <a href="https://www.chromium.org/blink/guidelines/api-owners/procedures/">requirements</a>,
+  </figcaption>
+</figure>
 
 Chromium (the open source project behind many modern browsers) has written
 about the [feature development process](https://www.chromium.org/blink/launching-features/)
@@ -47,6 +55,10 @@ may be new to other industry stakeholders who will use these purpose-built
 APIs&mdash;and whose expertise is critical to this initiative.
 
 ### Start with discussion {: #discussion}
+
+<figure class="float-right">
+  {% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/YqWVuPhY40KbtMcBkpde.png", alt="An Intent to Prototype starts the conversation.", width="205", height="274" %}
+</figure>
 
 There have been dozens of [privacy-preserving
 proposals](https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo)
@@ -66,7 +78,9 @@ cases you're interested in:
 
 The discussion stage can be highly involved.
 
-For example, [the Protected Audience API](https://github.com/WICG/turtledove/blob/main/FLEDGE.md) is
+For example,
+[Protected Audience](https://github.com/WICG/turtledove/blob/main/FLEDGE.md)
+(formerly known as FLEDGE) is
 a proposal to support interest-based advertising without cross-site tracking.
 With input from privacy advocates and many industry stakeholders, the Protected Audience API has
 evolved from two previous proposals (PIGIN and TURTLEDOVE). More than 100 have
@@ -78,26 +92,37 @@ There have also been more than half a dozen other proposals offered by other
 companies, in the same solution space. Through continued collaboration, we hope
 to define a path forward.
 
-[Testing for the Protected Audience API](/docs/privacy-sandbox/fledge-experiment/) and other APIs
-is available behind a Chrome flag, so developers can access them early.
+[Testing for Protected Audience](/docs/privacy-sandbox/fledge-experiment/) and
+other APIs is available behind a Chrome flag, so developers can access them
+early.
 
 Not every proposal goes through such an intense incubation period as
-the Protected Audience API&mdash;some will move much more quickly&mdash;but there is a lot of
-innovation happening. These are new ideas and it can take a lot of work to get
-them right.
+Protected Audience&mdash;some will move much more quickly&mdash;but each API
+receives input from across the ecosystem. These are new ideas and it can take a
+lot of work to get them right.
 
 ### Developers test and share feedback {: #testing}
+
+<figure class="float-right">
+  {% Img
+    src="image/VbsHyyQopiec0718rMq2kTE1hke2/LOVctE33BzfAxj6MZl2O.png",
+    alt="Intent to Experiments are for functional and scaled testing",
+    width="530", height="274"
+  %}
+</figure>
 
 We rely on developers to provide [feedback](/docs/privacy-sandbox/feedback/) on
 improvements to these technologies and to share issues which may require
 changes to the API design and implementation. Many of the Privacy Sandbox
-technologies are available for testing, with various options.
+technologies are available for testing, with various options. For example, to
+test the Topics API, you can set the
+[epoch length and other parameters](/docs/privacy-sandbox/topics/#feature-flags) with Chrome flags.
 
 Often, Chrome engineers implement [features behind flags](/docs/web-platform/chrome-flags/)
 to allow for local testing, without the feature being available by default
-across browsers. Developers must enable a feature to try it, and the feature
-implementation will be. This means developers can expect to encounter some
-issues.
+across browsers. Developers must enable a feature to try it and availability is
+is dependent on Chrome version. Developers can expect to encounter some issues
+as development continues.
 
 [Chrome origin trials](/docs/web-platform/origin-trials/) allow developers to
 enable a feature for a limited population of Chrome users. To participate,
@@ -105,22 +130,11 @@ developers can register to opt in your site or service. This provides you an
 opportunity to try the feature on production traffic and provide feedback on
 real-world experience.
 
-<figure>
-{% Img
-  src="image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/gSDnOdAhjtUa5XnBFVI7.png",
-  alt="Proposals move through discussion to functional testing,
-  effectiveness and scaled testing, to general availability. At each
-  stage, Chromium publishes Intent documents.",
-  width="800", height="231"
-%}
-<figcaption>
-Features progress through a timeline of development and testing through to
-general availability. These individual phases are not hard boundaries, but
-represent a change in focus as a feature moves from discussing a potential
-functionality through to testing real behavior in a browser. The diagram shows
-some terms and artefacts you will see through a proposal's progress.
-</figcaption>
-</figure>
+The Privacy Sandbox has been running a
+[unified origin trial](/docs/privacy-sandbox/unified-origin-trial/) for the
+relevance and measurement APIs, which is still open for sign ups. We anticipate
+this origin trial will close when these
+[APIs enter general availability](/blog/shipping-privacy-sandbox/). 
 
 When a feature is initially made available for testing, the focus is generally
 on **functional or technical testing**. With new code, there is an expectation
@@ -177,53 +191,70 @@ impact advertising performance.
 
 ### Launch for scaled adoption {: #scaled-adoption}
 
+<figure class="float-right">
+  {% Img
+    src="image/VbsHyyQopiec0718rMq2kTE1hke2/OhdrhlSPu18pDYFeqsyT.png",
+    alt="An Intent to Ship indicates an request to make an API available for scaled adoption.", width="302", height="272"
+    %}
+</figure>
+
 Once an API is tested and ready for general use in Chrome, we announce the
 launch and make sure public documentation is ready for scaled ecosystem
 adoption.
 
-[User-Agent Client Hints](https://web.dev/user-agent-client-hints/) (UA-CH)
-launched in Chrome in 2021. It's part of the Privacy Sandbox work stream to
-reduce covert tracking such as browser fingerprinting.
+We've already shipped a number of significant milestones, with many more to
+come. The following technologies are now available:
 
-Like cookies, the User-Agent (UA) string is an early web feature. By default, it
-provides a lot of information about the user's browser and device, making it a
-readily available surface for fingerprinting. It also has a format that can be a
-headache to parse.
+* [User-Agent reduction](/docs/privacy-sandbox/user-agent/): Limit passively
+  shared browser data to reduce the volume of sensitive information which leads
+  to fingerprinting. We began reduction of these values in May 2022 and plan to
+  complete in May 2023.
+* [CHIPS](/docs/privacy-sandbox/chips/): Allow developers to opt-in a cookie to
+  partitioned storage, with a separate cookie jar per top-level site. CHIPS
+  became available in Stable in February 2023.
+* [First-Party Sets](/docs/privacy-sandbox/first-party-sets/): Declare
+  relationships among sites to allow for limited cross-site cookie access using
+  the Storage Access API. First-Party Sets is slowly rolling out with Chrome
+  Stable version 113, this week.
+* [Federated Credential Management (FedCM)](/docs/privacy-sandbox/fedcm/):
+  Support federated identity without sharing the user's email address or other
+  identifying information with a third-party service or website, unless the
+  user explicitly agrees to do so. FedCM shipped in November 2022.
 
-<figure>
-{% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/AVzbV9HF0T0bm3buFjV6.jpg",
-   alt="Full User-Agent string, highlighting the platform version, device model, and full chrome version.", width="800", height="464"
-%}
-<figcaption>For example, 'User-Agent: Mozilla/5.0 (Linux; Android 10; Pixel 3)
-   AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4076.0 Mobile
-   Safari/537.36' is very long and offers specific details used for
-   fingerprinting, such as the exact device model, platform version, and full
-   Chrome version.</figcaption>
-</figure>
+In July 2023, the relevance and measurement APIs will be
+[available for scaled adoption](/blog/shipping-privacy-sandbox/). This means
+these APIs will be available by default in Chrome. Developers will be able to
+use these technologies without browser flags or participation in origin trials.
 
-The reduced User-Agent includes the browser's brand and a significant version,
-where the request came from (desktop or mobile), and the platform. In the
-future, you’ll need to use UA-CH if you need to access more data in the future,
-such as specific information about the user's device or conditions.
+In short, these APIs will be ready for use, at-scale, in a production
+environment.
 
-In other words, the User-Agent data is moving from an "available by default"
-model to an "on request" model. This is a good privacy practice today, and the
-pattern we want to set for the future.
+#### Phased launches
 
-{% Img
-  src="image/VbsHyyQopiec0718rMq2kTE1hke2/ZsumGF9jzVb5yYL4QD3i.png",
-  alt="", width="800", height="338"
-%}
+Some technologies are made available gradually. This allows our team and
+developers to monitor and address potential issues. And, full availability
+doesn't mean 100% of traffic has the APIs enabled.
 
-In April 2022, gradual UA string reduction will begin in Chrome. UA-CH launched
-and was ready for scaled adoption starting in March of 2021&mdash;you can begin
-testing and migrating to it now. [Participate in an origin
-trial](/origintrials/#/view_trial/-7123568710593282047) to opt-in to the reduced
-UA string so you can see what the future state looks like.
+For example, the User-Agent Client Hints (UA-CH) phased launch in Chrome began
+in 2021. [User-Agent reduction](/docs/privacy-sandbox/user-agent/) began in
+April 2022 and completed in March 2023. This allowed developers ample time to
+transition how their sites relied on the User-Agent string.
 
-It's important that developers have ample time to transition their websites to
-adopt new standards. If it turns out your site needs extra time, you'll be able
-to opt-in to keep using the User-Agent string as-is through March 2023.
+#### API controls
+
+Some APIs, like the relevance and measurement APIs, have configuration options
+for the user. This includes the ability to enable and disable these APIs.
+
+It's important to build the appropriate
+[feature detection](https://developer.mozilla.org/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection).
+Feature detection can help determine whether a browser supports certain code
+and allow you to provide alternative code. This ensures that your site
+continues to behave as-expected, even if an API has been turned off by a user
+or the user is in a browser without support for a particular technology.
+
+Consider using a
+[Permissions Policy](/docs/privacy-sandbox/permissions-policy/) to control
+first-party and third-party access to browser features.
 
 ## Share your feedback  {: #wrap-up-feedback}
 
