@@ -37,7 +37,7 @@ robust privacy protections for users.
 <figure>
   {% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/pZjqJnZFFrVBci1HL49M.png", alt="", width="800", height="223" %}
   <figcaption>
-    Features progress through a timeline of development and testing through to general availability. The intents are hard boundaries, which are required before certain actions can take place. For example, testing cannot begin until an Intent to Experiment has been posted and received approvals. Learn more about these [requirements](https://www.chromium.org/blink/guidelines/api-owners/procedures/).
+    Features progress through a timeline of development and testing through to general availability. The intents are hard boundaries, which are required before certain actions can take place. For example, testing cannot begin until an Intent to Experiment has been posted and received approvals. Learn more about these <a href="https://www.chromium.org/blink/guidelines/api-owners/procedures/">requirements</a>,
   </figcaption>
 </figure>
 
