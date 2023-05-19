@@ -1,16 +1,16 @@
 ---
 layout: "layouts/blog-post.njk"
 title: "Introducing the popover API"
-description: "TBD"
+description: "Learn how to build tooltips, menus, and more with the new popover API."
 authors:
   - unakravets
 tags:
   - css
   - html
-date: 2023-05-24
+date: 2023-05-23
 hero: 'image/HodOHWjMnbNw56hvNASHWSgZyAf2/xy3BEDAAn4GXMDudViTN.png'
 alt: >
-  Examples of some popovers throughout the article
+  Examples of some popovers demoed throughout the article.
 ---
 
 Popovers are everywhere on the web. You can see them in menus, toggletips, and dialogs, which could manifest as account settings, disclosure widgets, and product card previews. Despite how prevalent these components are, building them in browsers is still surprisingly cumbersome. You need to add scripting to manage focus, open and close states, accessible hooks into the components, keyboard bindings to enter and exit the experience, and that’s all even before you start building the useful, unique, core functionality of your popover.
