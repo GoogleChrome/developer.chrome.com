@@ -22,6 +22,18 @@ Refer to the linked documentation for the latest details.
 
 {% Columns %}
 {% Column %}
+<iframe width="280" src="https://www.youtube.com/embed/NKz5oT6kXI4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% endColumn %}
+{% Column %}
+<strong>May 12, 2023  Run time: 23:43</strong>
+
+
+The Privacy Sandbox initiative is an industry-wide effort to make Android and the web private. It introduces a set of privacy-preserving APIs that give both developers and entrepreneurs the tools they need to build thriving digital businesses and protect people's privacy online. Hear from a panel of Privacy Sandbox team members to hear answers to popular questions. Walk away with a better understanding of the long term vision, including similarities and differences between Chrome and Android implementation.
+{% endColumn %}
+{% endColumns %}
+
+{% Columns %}
+{% Column %}
 <iframe width="280" src="https://www.youtube.com/embed/gm8O8-b2B8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 {% endColumn %}
 {% Column %}
