@@ -346,7 +346,7 @@ the steps in [Viewing Warnings](#view_warnings).
     <tr id="history">
       <td><code>"history"</code></td>
       <td>Grants access to the <a href="/docs/extensions/reference/history">chrome.history</a> API.</td>
-      <td><strong>Read and change your browsing history</strong></td>
+      <td><strong>Read and change your browsing history on all signed-in devices</strong></td>
     </tr>
     <tr id="identity.email">
       <td><code>"identity.email"</code></td>
