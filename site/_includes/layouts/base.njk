@@ -46,7 +46,7 @@
     {# Exclude the /articles/ section as a control #}
     <script type="speculationrules">
     {
-      "prefetch": [
+      "prerender": [
         {
           "source": "document",
           "where": {
@@ -61,7 +61,8 @@
                 }
               }
             ]
-          }
+          },
+          "eagerness": "moderate"
         }
       ]
     }
