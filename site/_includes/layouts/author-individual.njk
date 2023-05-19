@@ -112,7 +112,7 @@
           {% set alt = featured.alt or post.data.alt or '' %}
           {% set theme = featured.theme or 'quaternary' %}
 
-          <a href="{{ featured.url or post.url }}" class="card bg-{{theme}}">
+          <a href="{{ featured.url or post.url }}" class="card center-margin bg-{{theme}}">
             <div class="content">
               <div class="card__eyebrow flow">
                 {{ icon(eyebrowIcon) }}
@@ -137,6 +137,11 @@
   <div class="measure-1280 width-full center-margin pad-left-400 pad-right-400">
     <div class="blog-grid">
       {% for item in paged.pagination.items %}
+        {% if item.authors.length == 1 %}
+        {% set authors = [] %}
+        {% else %}
+        {% set authors = item.authors %}
+        {% endif %}
         {% set post = {
           data: {
             thumbnail: item.thumbnail,
@@ -144,7 +149,7 @@
             alt: item.title,
             description: item.description,
             tags: item.tags,
-            authors: item.authors,
+            authors: authors,
             date: item.date
           },
           url: item.url
