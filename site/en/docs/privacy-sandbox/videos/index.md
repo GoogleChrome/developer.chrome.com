@@ -1,10 +1,10 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Privacy Sandbox videos'
+title: 'Privacy Sandbox video library'
 subhead: >
   Privacy Sandbox videos and demos
 description: >
-  Privacy Sandbox videos and demos
+  Privacy Sandbox video library
 date: 2023-05-14
 authors:
   - samdutton
