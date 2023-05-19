@@ -125,3 +125,5 @@ fenced-frame:
   en: 'Fenced Frames'
 fledge-api:
   en: 'Developer guide'
+paapi-walkthrough:
+  en: 'Protected Audience API walkthrough'

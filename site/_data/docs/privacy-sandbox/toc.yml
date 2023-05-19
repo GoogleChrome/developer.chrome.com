@@ -74,6 +74,8 @@
             - url: /docs/privacy-sandbox/fledge-api/reports
             - url: /docs/privacy-sandbox/fledge-api/troubleshoot
         - url: /docs/privacy-sandbox/fledge-api/feature-status
+        - url: https://docs.google.com/document/d/16U6nCs5-RTpYDF5nuUVopvUXKzDgH6yDKaYbzY3ouiI/view
+          title: i18n.docs.privacy-sandbox.paapi-walkthrough
     - title: i18n.docs.privacy-sandbox.content-selection
       sections:
         - url: /docs/privacy-sandbox/shared-storage/content-selection
