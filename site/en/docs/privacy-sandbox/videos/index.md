@@ -28,7 +28,7 @@ Refer to the linked documentation for the latest details.
 <strong>May 12, 2023  Run time: 23:43</strong>
 
 
-The Privacy Sandbox initiative is an industry-wide effort to make Android and the web private. It introduces a set of privacy-preserving APIs that give both developers and entrepreneurs the tools they need to build thriving digital businesses and protect people's privacy online. Hear from a panel of Privacy Sandbox team members to hear answers to popular questions. Walk away with a better understanding of the long term vision, including similarities and differences between Chrome and Android implementation.
+The Privacy Sandbox introduces a set of privacy-preserving APIs that give you the tools you need to protect people's privacy online. Privacy Sandbox team members provide answers to common questions in this talk. After watching, you'll have a better understanding of the long-term vision, including similarities and differences between Chrome and Android implementations.
 {% endColumn %}
 {% endColumns %}
 
@@ -39,7 +39,7 @@ The Privacy Sandbox initiative is an industry-wide effort to make Android and th
 {% Column %}
 <strong>May 10, 2023  Run time: 15:52</strong>
 
-Chrome is on the path to phasing out third-party cookies and this impacts a wide range of use cases. Updates to cookie functionality like CHIPS and First-Party Sets enable you to restrict cross-site cookies on your site in a more secure and private manner. Learn how to audit your code to look for third-party cookies and what action you can take to ensure you're all set for the end of third-party cookies.
+Chrome is on the path to phasing out third-party cookies and this impacts a wide range of use cases. Updates to cookie functionality like CHIPS and First-Party Sets enable you to restrict cross-site cookies on your site in a more secure and private manner. Learn what action you can take to ensure you're all set for the end of third-party cookies.
 {% endColumn %}
 {% endColumns %}
 
@@ -57,7 +57,7 @@ Chrome is on the path to phasing out third-party cookies and this impacts a wide
 {% Column %}
 <strong>Mar 3, 2023  Run time: 11:58</strong>
 
-In this video, Jeremy Ney explains the new technologies within the Privacy Sandbox which help websites preserve important user-facing functionality and combat fraud. 
+In this video, Jeremy Ney explains the new technologies within the Privacy Sandbox that help websites preserve important user-facing functionality and combat fraud. 
 {% endColumn %}
 {% endColumns %}
 
@@ -70,7 +70,7 @@ In this video, Jeremy Ney explains the new technologies within the Privacy Sandb
 {% Column %}
 <strong>May 10, 2023 Run time: 19:51</strong>
 
-Learn more about the Privacy Sandbox effort, with a deep dive into Attribution Reporting across Chrome and Android and how to get involved and start implementing solutions.
+Learn more about the Privacy Sandbox effort, with a deep dive into Attribution Reporting across Chrome and Android and discover how to get involved and start implementing solutions.
 {% endColumn %}
 {% endColumns %}
 
