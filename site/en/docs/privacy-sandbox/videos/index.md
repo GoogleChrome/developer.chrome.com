@@ -27,7 +27,7 @@ Refer to the linked documentation for the latest details.
 {% Column %}
 <strong>May 10, 2023  Run time: 15:52</strong>
 
-Chrome is on the path to phasing out third-party cookies and this impacts a wide range of use cases from embedded content, APIs, widgets, single sign-on, analytics, and advertising. Updates to cookie functionality like CHIPS and First-Party Sets enable you to restrict cross-site cookies on your site in a more secure and private manner. Learn how to audit your code to look for third-party cookies and what action you can take to ensure you're all set for the end of third-party cookies.
+Chrome is on the path to phasing out third-party cookies and this impacts a wide range of use cases. Updates to cookie functionality like CHIPS and First-Party Sets enable you to restrict cross-site cookies on your site in a more secure and private manner. Learn how to audit your code to look for third-party cookies and what action you can take to ensure you're all set for the end of third-party cookies.
 {% endColumn %}
 {% endColumns %}
 
@@ -50,6 +50,8 @@ In this video, Jeremy Ney explains the new technologies within the Privacy Sandb
 {% endColumns %}
 
 ## Attribution reporting
+
+<iframe width="280" src="https://www.youtube.com/embed/mYVi3yL-GNI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 {% Partial 'privacy-sandbox/videos/ara-aug-21.njk' %}
 {# May 2022 Sam Dutton the Attribution Reporting API high level #}
