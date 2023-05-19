@@ -3,7 +3,7 @@ layout: 'layouts/blog-post.njk'
 title: What's New with Aurora?
 description: >
   Learn what the Chrome Aurora team has been up to lately and their roadmap for 2023.
-date: 2023-05-16
+date: 2023-05-19
 authors:
   - karaerickson
 tags:
