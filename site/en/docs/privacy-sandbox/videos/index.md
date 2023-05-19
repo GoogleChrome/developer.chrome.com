@@ -68,7 +68,7 @@ In this video, Jeremy Ney explains the new technologies within the Privacy Sandb
 <iframe width="280" src="https://www.youtube.com/embed/mYVi3yL-GNI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 {% endColumn %}
 {% Column %}
-<strong>May 10, 2023 Run time: 18:51</strong>
+<strong>May 10, 2023 Run time: 19:51</strong>
 
 Learn more about the Privacy Sandbox effort, with a deep dive into Attribution Reporting across Chrome and Android and how to get involved and start implementing solutions.
 {% endColumn %}
