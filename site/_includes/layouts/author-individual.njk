@@ -9,7 +9,7 @@
 
 {% block content %}
 <div class="author gap-top-300 lg:gap-top-400 pad-left-500 pad-right-500">
-  <div class="switcher gap-top-600 gap-bottom-800">
+  <div class="measure-1280 center-margin switcher gap-top-600 gap-bottom-800">
     <div class="author-hero">
       <div class="switcher align-center">
         {% if paged.image %}
@@ -31,6 +31,12 @@
 
       <div class="lg:pad-top-600 lg:pad-bottom-600 pad-top-300 pad-bottom-300 display-flex direction-column">
         <div class="display-flex gap-top-400 md:gap-bottom-200 gap-bottom-500 lg:gap-top-0 author-hero__social">
+          {% if paged.webdev  %}
+            <a rel="me" href="https://web.dev/authors/{{ paged.webdev }}" target="_blank" class="color-secondary-text social-icon" aria-label="Webdev" target="_blank">
+              {{ icon('webdev', {hidden: true}) }}
+            </a>
+          {% endif %}
+
           {% if paged.homepage %}
             <a rel="me" href="{{ paged.homepage }}" aria-label="{{ 'i18n.common.website' | i18n(locale) }}" target="_blank" class="color-secondary-text social-icon">
               {{ icon('world', {hidden: true}) }}
@@ -44,11 +50,6 @@
           {% if paged.mastodon  %}
             <a rel="me" href="{{ paged.mastodon }}" target="_blank" class="color-secondary-text social-icon" aria-label="Mastodon">
               {{ icon('mastodon', {hidden: true}) }}
-            </a>
-          {% endif %}
-          {% if paged.webdev  %}
-            <a rel="me" href="https://web.dev/authors/{{ paged.webdev }}" target="_blank" class="color-secondary-text social-icon" aria-label="Webdev" target="_blank">
-              {{ icon('webdev', {hidden: true}) }}
             </a>
           {% endif %}
           {% if paged.github %}
