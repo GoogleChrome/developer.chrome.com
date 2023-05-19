@@ -3,190 +3,237 @@ layout: 'layouts/doc-post.njk'
 title: 'Permission warning guidelines'
 seoTitle: 'Declare permissions and warn users in Chrome extensions'
 date: 2012-09-18
-updated: 2023-05-19
+updated: 2023-05-23
 description: >
   How permission warnings work in Chrome extensions.
 anchorRedirects:
-  activeTab_permission: /docs/extensions/mv3/manifest/activeTab/,
-  optional_events: /docs/extensions/reference/permissions#step-2-declare-optional-permissions-in-the-manifest,
   declare_manifest: /docs/extensions/mv3/declare_permissions#manifest
-  required_permissions: /docs/extensions/mv3/declare_permissions#best-practices
   understanding_permissions: /docs/extensions/mv3/declare_permissions
 ---
 
 ## Overview {: overview }
 
-Chrome extensions enhance the user's browser experience. To do this extensions use [Chrome APIs][chrome-apis] that require certain permissions. Some permissions are less intrusive and do not display a warning. Other permissions trigger a warning that users have to allow. When a new permission that [triggers a warning](#permissions_with_warnings) is added, the extension will be disabled until the user accepts the new permission. Learn more about [Updating permissions](#update_permissions).
+Chrome extensions enhance the user's browser experience. To do this extensions use [Chrome
+APIs][doc-apis] that require certain permissions. Some permissions are less intrusive and do not
+display a warning. Other permissions trigger a warning that users have to allow. 
+
+<figure>
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/NcPZYfAhQMtpW78sT26K.png", 
+  alt="Example of permission warnings are displayed when the user adds a new extension", 
+  width="433", height="279", class='screenshot'%}
+  <figcaption>
+    Example of permission warnings that are displayed on installation. 
+  </figcaption>
+</figure>
+
+When a new permission that [triggers a warning](#permissions_with_warnings) is added, the extension
+will be disabled until the user accepts the new permission. Learn more about [Updating
+permissions](#update_permissions).
 
 ## Best practices {: #best-practices }
 
-Permission warnings exist to describe the capabilities granted by an API, but some warnings can be harder to understand than others. Users are more likely to install an extension that follows these best practices:
+Permission warnings describe the capabilities an API grants, but some warnings are
+harder to understand than others. Users are more likely to install extensions that follow these
+guidelines:
 
-Limit permissions to support core functionality
-: Extensions are required to fulfill a [single purpose](www.tba.com). Request only the permissions that support the extension's main functionality. This also allows your extension to comply with the [Use of permissions][cws-perms] policy.
+### Request relevant permissions {: #required_permissions }
 
-Use optional permissions to offer additional features
-: Declaring optional permissions improves the user onboarding experience by explaining why a particular permission is required. It also allows users to further customize their experience. See [Permissions API][api-optional-perms] for instructions on implementing optional permissions.
+Extensions are required to fulfill a [single purpose](/docs/extensions/mv3/single_purpose/) and
+comply with the [Use of permissions](/docs/webstore/program-policies/permissions/) policy. Ensure you only
+request permissions that support the extension's main functionality.
 
-Use the `"activeTab"` permission
-: This permission does **_not_** display a permission warning. It grants temporary host permission to the site the user is on. For more details, see [Understanding the activeTab permission][doc-activetab].
+### Use optional permissions {: #optional_events }
 
-## Viewing warnings {: #view_warnings }
+Improve the onboarding experience by requesting permissions at runtime. This allows you to provide more context
+around a particular permission and lets users choose which features they want to enable. See
+[Permissions API][api-optional-perms] for implementation details.
 
-During development, when you [load an extension locally][doc-load-unpacked], no permission warnings are displayed. To view an extension's permission warnings, you have the following options:
+### Use the `"activeTab"` permission {: #activeTab_permission }
 
-{% Details 'open' %}
+This permission does **_not_** display a permission warning. It grants temporary host permission to
+the site the user is on. For more details, see [Understanding the activeTab
+permission][doc-activetab].
+
+### Onboard users to allow access {: #allow_access }
+ 
+If your extension needs to run on `file://` URLs or needs to operate in incognito mode, show users
+how to enable access on the extension's details page. 
+
+
+{% Details %}
 {% DetailsSummary %}
 
-### Use the {: #view-library }
+#### How to allow access to file URLs and incognito pages
 
 {% endDetailsSummary %}
 
-The blah blah allows developers to
+1. Right-click on the extension icon in Chrome.
+2. Choose **Manage Extension**.
+
+    <figure>
+    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/hZZMDG0SEoCaHWkfwqbY.png", alt="ALT_TEXT_HERE", width="363", height="334", class='screenshot' %}
+    <figcaption>
+    Extension menu
+    </figcaption>
+  </figure>
+
+3. Scroll down to enable access to file URLs or incognito mode.
+
+    <figure>
+      {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/CXSHPxG4giUkzfGR67mY.png",
+          alt="Allow file URLs and incognito mode on the extension detail page", height="137", width="674", class="screenshot" %}
+      <figcaption>
+      Access enabled to file URLs and incognito mode.
+      </figcaption>
+    </figure>
+
+{% endDetails %}
+
+To detect if the user has allowed access, use [`extension.isAllowedIncognitoAccess()`][incognito-allow] or 
+[`extension.isAllowedFileSchemeAccess()`][file-scheme-allow].
+
+## Viewing and updating warnings {: #view-update-warnings }
+
+When you [load an extension locally][doc-load-unpacked], you won't see any permission warnings. This
+section explains how to view permission warnings and what users will experience when you add a new
+[permission that triggers a warning][section-warnings].
+
+### View warnings {: #view_warnings }
+
+To view an extension's permission warnings, you have the following options:
+
+{% Details %}
+{% DetailsSummary %}
+
+#### Automatically test with the TBD library {: #view-library }
+
+{% endDetailsSummary %}
+
+Descript and instructions go here. 
 
 {% endDetails %}
 
 {% Details 'open' %}
 {% DetailsSummary %}
 
-### Pack your extension {: #view-packing }
+#### Pack your extension manually {: #view-packing }
 
 {% endDetailsSummary %}
 
-Navigate to `chrome://extensions`, ensure developer mode is enabled
-and click **PACK EXTENSION**.
+1. Navigate to `chrome://extensions`
+2. Enable developer mode
+3. Click **Pack Extension**.
+    <figure>
+      {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/u6HOe2mbOK4O133iLrlP.png", alt="Pack extension", width="800", height="589", class='screenshot' %}
+      <figcaption>
+      Developer mode enabled in the Extension management page  
+      </figcaption>
+    </figure>
+4. Specify the path to the extension's folder in the extension root directory field. Ignore the **Private key** field for a first-time package.
+5. Click the **Pack Extension** button.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Jvm8mGpe3j0j0aydcRnR.png",
-       alt="Developer Mode is Checked then Click Pack Extension", height="120", width="642" %}
+    <figure>
+      {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/vVw89rdJOdXFYxvgM9Sj.png",
+          alt="Specify Extension Path then Click Pack Extension", height="307", width="524" %}
+      <figcaption>
+        Specifying Extension Path
+      </figcaption>
+    </figure>
 
-Specify the path to the extension's folder in the Extension root directory field then click the
-**Pack Extension** button. Ignore the **Private key** field for a first-time package.
+6. Chrome will create two files, a `.crx` file and a `.pem` file. The `.pem` file contains the private key used to sign the extension. Make sure you remember which directory these files were saved.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/vVw89rdJOdXFYxvgM9Sj.png",
-       alt="Specify Extension Path then Click Pack Extension", height="307", width="524" %}
+    <figure>
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/GLrVd51VTUF86K8gUxu8.png",
+          alt="Packaged Extension Files", height="288", width="521" %}  
+      <figcaption>
+        Packaged Extension Files
+      </figcaption>
+    </figure>
 
-Chrome will create two files, a `.crx` file and a `.pem` file. The `.pem` file contain the private key used to sign the extension.
+7. Keep the `.pem` file in a secret and secure place; it will be needed to [update](#update_permissions) the extension.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/GLrVd51VTUF86K8gUxu8.png",
-       alt="Packaged Extension Files", height="288", width="521" %}
+8. Install the `.crx` file by dropping it into the Extension's Management page.
 
-**Do not lose the private key!** Keep the `.pem` file in a secret and secure place; it will be
-needed to [update](#update_permissions) the extension.
+    <figure>
+      {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/KXm9vTnv5VRNZJ9e2AJt.png",
+          alt="Drop File to Install", height="420", width="427" %}
+      <figcaption>
+        Drop file to install
+      </figcaption>
+    </figure>
 
-Install the `.crx` file by dropping it into the Chrome Extension's Management page.
-
-<figure>
-  {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/KXm9vTnv5VRNZJ9e2AJt.png",
-       alt="Drop File to Install", height="420", width="427" %}
-  <figcaption>
-    Drop file to install
-  </figcaption>
-</figure>
-
-After dropping the `.crx` file the browser will ask if the extension can be added and display
+9. After dropping the `.crx` file the browser will ask if the extension can be added and display
 warnings.
 
-<figure>
-  {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/4vOB4X8ZNbdk321eAzKS.png",
-       alt="Warning for New Tab Extension", height="150", width="481" %}
-  <figcaption>
-    Warning for New Tab extension
-  </figcaption>
-</figure>
+    <figure>
+      {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/4vOB4X8ZNbdk321eAzKS.png",
+          alt="Warning for New Tab Extension", height="150", width="481" %}
+      <figcaption>
+        Warning for New Tab extension
+      </figcaption>
+    </figure>
 
 {% endDetails %}
 
-## Updating permissions {: #update_permissions }
+### Updating permissions {: #update_permissions }
 
-When an extension updates an extension that includes a new permission that [triggers a warning][section-warnings] it may temporarily disable it. The user will have to
-re-enable it after agreeing to any new warnings.
+When an extension adds a new permission that [triggers a warning][section-warnings] it may
+temporarily disable it. The extension will be re-enabled only after the user agrees to accept the
+new permission.
 
-If the user manually updates an extension that now includes the [tabs][api-tabs] permission, they will get
-a warning on the management page.
-
-<figure>
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/usZSh31pGiJxhhuKmM8B.png",
-  alt="Extension has been disabled", height="398", width="297" %}
-  
-  <figcaption>
-    Disabled extension warning
-  </figcaption>
-</figure>
-
-<figure>
-  {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ZxRaaibQJSuZ6MZBvmmo.png",
-       alt="Agree to permissions", height="159", width="286" %}
-  <figcaption>
-    Requesting new permission dialog
-  </figcaption>
-</figure>
-
-To check if your extension will be disabled, you have the following options:
+To check if your extension will be disabled when adding a new permission, you have the following options:
 
 
 {% Details 'open' %}
 {% DetailsSummary %}
 
-### Use the {: #view-library }
+#### Use the TBD library {: #update-library }
 
 {% endDetailsSummary %}
 
-The blah blah allows developers to
+Description goes here. 
 
 {% endDetails %}
-
 
 {% Details 'open' %}
 {% DetailsSummary %}
 
-### Pack your extension {: #view-packing }
+#### Pack your extension {: #update-packing }
 
 {% endDetailsSummary %}
 
-Navigate to `chrome://extensions`, ensure developer mode is enabled
-and click **PACK EXTENSION**.
+1. Find the `.crx` file you just created in [View Warnings](#view-package).
+1. Rename it or delete it.
+1. Open your `manifest.json` and add any [permission that triggers a warning](#permissions_with_warnings).
+1. Go to chrome://extensions. **Do not remove the previously installed package**.
+1. Pack the extension again, but this time add the pem file in the second input.
+    <figure>
+     {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/Z9V6Q2TOabWTEUTEI6bo.png", 
+     alt="ALT_TEXT_HERE", width="800", height="456", class='screenshot' %}
+      <figcaption>
+        TBD - CHANGE THIS IMG
+      </figcaption>
+    </figure>
+1. Drag the new packaged extension to the Extension Management page.
+1. You will see a dialog that prompts the user to accept the new permissions.
+    <figure>
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/usZSh31pGiJxhhuKmM8B.png",
+      alt="Extension has been disabled", height="398", width="297" %}
+      
+      <figcaption>
+        Disabled extension warning
+      </figcaption>
+    </figure>
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Jvm8mGpe3j0j0aydcRnR.png",
-       alt="Developer Mode is Checked then Click Pack Extension", height="120", width="642" %}
-
-Specify the path to the extension's folder in the Extension root directory field then click the
-**Pack Extension** button. Ignore the **Private key** field for a first-time package.
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/vVw89rdJOdXFYxvgM9Sj.png",
-       alt="Specify Extension Path then Click Pack Extension", height="307", width="524" %}
-
-Chrome will create two files, a `.crx` file and a `.pem` file. The `.pem` file contain the private key used to sign the extension.
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/GLrVd51VTUF86K8gUxu8.png",
-       alt="Packaged Extension Files", height="288", width="521" %}
-
-**Do not lose the private key!** Keep the `.pem` file in a secret and secure place; it will be
-needed to [update](#update_permissions) the extension.
-
-Install the `.crx` file by dropping it into the Chrome Extension's Management page.
-
-<figure>
-  {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/KXm9vTnv5VRNZJ9e2AJt.png",
-       alt="Drop File to Install", height="420", width="427" %}
-  <figcaption>
-    Drop file to install
-  </figcaption>
-</figure>
-
-After dropping the `.crx` file the browser will ask if the extension can be added and display
-warnings.
-
-<figure>
-  {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/4vOB4X8ZNbdk321eAzKS.png",
-       alt="Warning for New Tab Extension", height="150", width="481" %}
-  <figcaption>
-    Warning for New Tab extension
-  </figcaption>
-</figure>
+    <figure>
+      {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ZxRaaibQJSuZ6MZBvmmo.png",
+          alt="Agree to permissions", height="159", width="286" %}
+      <figcaption>
+        Requesting new permission dialog
+      </figcaption>
+    </figure>
 
 {% endDetails %}
-
-
 
 ## Permissions warnings list {: #permissions_with_warnings }
 
@@ -376,24 +423,12 @@ the steps in [Viewing Warnings](#view_warnings).
   </tbody>
 </table>
 
-## Allowing access {: #allow_access }
-
-If your extension needs to access `file://` URLs or operate in incognito mode, you will need to show your users how to enable access for those features inside the extension's detail page at chrome://extensions.
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/CXSHPxG4giUkzfGR67mY.png",
-       alt="Allow file URLs and incognito mode on the extension detail page", height="137", width="674" %}
-
-You can detect if the user has enabled incognito mode by calling
-[`extension.isAllowedIncognitoAccess()`][incognito-allow] or able run on `file://` URLs with
-[`extension.isAllowedFileSchemeAccess()`][file-scheme-allow].
 
 [api-optional-perms]: /docs/extensions/reference/permissions#step-2-declare-optional-permissions-in-the-manifest
 [api-storage]: /docs/extensions/reference/storage
 [api-tabs]: /docs/extensions/reference/tabs
 [api-top-sites]: /docs/extensions/reference/topSites
 [chromium-perms]: https://chromium.googlesource.com/chromium/src/+/main/chrome/common/extensions/permissions/chrome_permission_message_rules.cc#:~:text=chromepermissionmessagerule%3A%3Agetallrules()
-[chromium-perms]: https://chromium.googlesource.com/chromium/src/+/main/chrome/common/extensions/permissions/chrome_permission_message_rules.cc#:~:text=chromepermissionmessagerule%3A%3Agetallrules()
-[cws-perm]: /docs/webstore/program-policies/permissions/
 [doc-activetab]: /docs/extensions/mv3/manifest/activeTab/
 [doc-apis]: /docs/extensions/reference/
 [doc-load-unpacked]: /docs/extensions/mv3/getstarted/development-basics/#load-unpacked
@@ -406,5 +441,3 @@ You can detect if the user has enabled incognito mode by calling
 [section-update]: #update_permissions
 [section-view-warnings]: #view_warnings
 [section-warnings]: #permissions_with_warnings
-[cws-perm]: /docs/webstore/program-policies/permissions/
-[doc-activetab]: /docs/extensions/mv3/manifest/activeTab/
