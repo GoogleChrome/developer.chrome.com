@@ -48,6 +48,14 @@
   <meta property="og:description" content="{{ description }}" />
 {% endif %}
 
+{% if authors %}
+  <meta name="authors" content="{{ authors | sort }}" />
+{% endif %}
+
+{% if tags %}
+  <meta name="tags" content="{{ tags | sort }}" />
+{% endif %}
+
 <link rel="apple-touch-icon" sizes="180x180" href="/images/meta/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/meta/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/images/meta/favicon-16x16.png">

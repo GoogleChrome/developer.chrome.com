@@ -63,7 +63,7 @@ attribution-reporting-chrome-shipping:
 experiment-participate:
   en: 'Experiment and participate'
 attribution-reporting-debugging:
-  en: 'Debugging Attribution Reporting'
+  en: 'Debug Attribution Reporting'
 attribution-reporting-debugging-resources:
   en: 'Generate debug reports'
 attribution-reporting-changing:
@@ -110,11 +110,11 @@ faq:
 enroll:
   en: 'Enroll your site'
 topics-experiment:
-  en: 'Topics API: experiment and participate'
+  en: 'Topics API: Experiment and participate'
 fledge-experiment:
-  en: 'FLEDGE: experiment and participate'
+  en: 'Protected Audience: Experiment and participate'
 fledge-overview:
-  en: 'FLEDGE overview'
+  en: 'Protected Audience overview'
 first-party-sets:
   en: 'First-Party Sets'
 gnatcatcher:

@@ -13,6 +13,7 @@
       title: i18n.docs.privacy-sandbox.blog
 - title: i18n.docs.privacy-sandbox.start
   sections:
+    - url: /docs/privacy-sandbox/chrome-testing
     - url: /docs/privacy-sandbox/unified-origin-trial
     - url: /docs/privacy-sandbox/enroll
       title: i18n.docs.privacy-sandbox.enroll
@@ -20,6 +21,7 @@
     - url: /docs/privacy-sandbox/feedback
 - title: i18n.docs.privacy-sandbox.strengthen-boundaries
   sections:
+    - url: /docs/privacy-sandbox/third-party-cookie-phase-out
     - url: /docs/privacy-sandbox/first-party-sets
     - url: /docs/privacy-sandbox/first-party-sets-integration
     - url: /docs/privacy-sandbox/first-party-sets-evolution

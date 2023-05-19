@@ -13,7 +13,7 @@ authors:
 
 提案または API に関する最新情報を確認するには、それぞれの概要ドキュメントと[プライバシー サンドボックス タイムライン](https://privacysandbox.com/open-web/)にアクセスしてください。
 
-## Attribution Reporting
+## アトリビューション レポート
 
 {% Partial 'privacy-sandbox/timeline/attribution-reporting.njk' %}
 
@@ -49,7 +49,7 @@ authors:
 
 {% Partial 'privacy-sandbox/timeline/fledge-features.njk' %}
 
-## IP の保護
+## IP 保護
 
 {% Partial 'privacy-sandbox/timeline/ip-protection.njk' %}
 
