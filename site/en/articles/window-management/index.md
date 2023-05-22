@@ -1,12 +1,12 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: Managing several displays with the Multi-Screen Window Placement API
+title: Managing several displays with the Window Management API
 subhead: Get information about connected displays and position windows relative to those displays.
 authors:
   - thomassteiner
-description: The Multi-Screen Window Placement API allows you to enumerate the displays connected to your machine and to place windows on specific screens.
+description: The Window Management API allows you to enumerate the displays connected to your machine and to place windows on specific screens.
 date: 2020-09-14
-updated: 2022-11-01
+updated: 2023-05-09
 tags:
   - capabilities
 hero: image/admin/9wQYJACMKOM6aUA0BPsW.jpg
@@ -14,18 +14,20 @@ alt: Simulated trading desk showing multiple fake cryptocurrencies and their pri
 feedback:
   - api
 ---
-{% Aside 'success' %} The Multi-Screen Window Placement API was part of the
+{% Aside 'success' %} The Window Management API was part of the
 [capabilities project](/blog/fugu-status/) and is now available from Chrome 100. {% endAside %}
 
-## Multi-Screen Window Placement API
+## Window Management API
 
-The Multi-Screen Window Placement API allows you to enumerate the displays connected to your machine
+The Window Management API allows you to enumerate the displays connected to your machine
 and to place windows on specific screens.
 
-{% Aside %} The Multi-Screen Window Placement API is distinct from the proposed
+{% Aside %} The Window Management API is distinct from the proposed
 [Viewport Segments Property](https://github.com/WICG/visual-viewport/blob/gh-pages/segments-explainer/SEGMENTS-EXPLAINER.md),
 which is concerned with the representation of the regions of the window that reside on separate
 (adjacent) displays, for example, on foldable devices. {% endAside %}
+
+{% Aside %} The Window Management API was formerly known as the Multi-Screen Window Placement API. {% endAside %}
 
 ### Suggested use cases {: #use-cases }
 
@@ -40,7 +42,7 @@ Examples of sites that may use this API include:
   external projector.
 
 
-## How to use the Multi-Screen Window Placement API {: #use }
+## How to use the Window Management API {: #use }
 
 ### The problem
 
@@ -99,7 +101,7 @@ iPad into a second screen.
 </figure>
 
 If I want to take advantage of the bigger screen, I can put the popup from the
-[code sample](/articles/multi-screen-window-placement/#the-problem) above on to the second screen. I do it
+[code sample](/articles/window-management/#the-problem) above on to the second screen. I do it
 like this:
 
 ```js
@@ -111,15 +113,15 @@ from `window.screen` only covers the built-in screen, but not the iPad screen. T
 of the built-in screen was `1680` pixels, so moving to `2500` pixels _might_ work to shift the
 window over to the iPad, since _I_ happen to know that it is located on the right of my MacBook. How
 can I do this in the general case? Turns out, there is a better way than guessing. That way is the
-Multi-Screen Window Placement API.
+Window Management API.
 
 ### Feature detection
 
-To check if the Multi-Screen Window Placement API is supported, use:
+To check if the Window Management API is supported, use:
 
 ```js
 if ('getScreenDetails' in window) {
-  // The Multi-Screen Window Placement API is supported.
+  // The Window Management API is supported.
 }
 ```
 
@@ -130,7 +132,7 @@ In earlier versions of the API, the permission was called `window-placement`. Se
 [crbug/1328581](https://crbug.com/1328581) for details.
 {% endAside %}
 
-Before I can use the Multi-Screen Window Placement API, I must ask the user for permission to do so.
+Before I can use the Window Management API, I must ask the user for permission to do so.
 The `window-management` permission can be queried with the
 [Permissions API](https://developer.mozilla.org/docs/Web/API/Permissions_API) like so:
 
@@ -180,7 +182,7 @@ document.querySelector("button").addEventListener("click", async () => {
 ```
 
 The browser
-[can](https://webscreens.github.io/window-placement/#usage-overview-screen-information:~:text=This%20method%20may%20prompt%20the%20user%20for%20permission)
+[can](https://w3c.github.io/window-management/#:~:text=This%20method%20may%20prompt%20the%20user%20for%20permission.)
 choose to show the permission prompt dynamically on the first attempt to use any of the methods of
 the new API. Read on to learn more.
 
@@ -325,7 +327,7 @@ method. The method takes an `options` parameter where you can pass
 [`FullscreenOptions`](https://developer.mozilla.org/docs/Web/API/FullscreenOptions). So far,
 its only property has been
 [`navigationUI`](https://developer.mozilla.org/docs/Web/API/FullscreenOptions/navigationUI).
-The Multi-Screen Window Placement API adds a new `screen` property that allows you to determine
+The Window Management API adds a new `screen` property that allows you to determine
 which screen to start the fullscreen view on. For example, if you want to make the primary screen
 fullscreen:
 
@@ -340,7 +342,7 @@ try {
 
 ### Polyfill
 
-It is not possible to polyfill the Multi-Screen Window Placement API, but you can shim its shape so
+It is not possible to polyfill the Window Management API, but you can shim its shape so
 you can code exclusively against the new API:
 
 ```js
@@ -388,16 +390,16 @@ You can play with the [demo][demo] embedded below, or see its [source code][demo
 <div class="glitch-embed-wrap" style="height: 800px; width: 100%;">
   <iframe src="https://window-placement.glitch.me/"
     title="window-placement on Glitch"
-    allow="fullscreen; window-placement" sandbox="allow-modals allow-popups allow-popups-to-escape-sandbox allow-scripts"
+    allow="fullscreen; window-placement; window-management" sandbox="allow-modals allow-popups allow-popups-to-escape-sandbox allow-scripts"
     style="height: 100%; width: 100%; border: 0;">
   </iframe>
 </div>
 
 ## Security and permissions
 
-The Chrome team has designed and implemented the Multi-Screen Window Placement API using the core
+The Chrome team has designed and implemented the Window Management API using the core
 principles defined in [Controlling Access to Powerful Web Platform Features][powerful-apis],
-including user control, transparency, and ergonomics. The Multi-Screen Window Placement API exposes
+including user control, transparency, and ergonomics. The Window Management API exposes
 new information about the screens connected to a device, increasing the fingerprinting surface of
 users, especially those with multiple screens consistently connected to their devices. As one
 mitigation of this privacy concern, the exposed screen properties are limited to the minimum needed
@@ -413,14 +415,14 @@ the browser.
 
 ### Enterprise control
 
-Chrome Enterprise users can control several aspects of the Multi-Screen Window Placement API as
+Chrome Enterprise users can control several aspects of the Window Management API as
 outlined in the relevant section of the
-[Atomic Policy Groups](https://chromeenterprise.google/policies/atomic-groups/#:~:text=Window%20Placement%20settings)
+[Atomic Policy Groups](https://chromeenterprise.google/policies/atomic-groups/#:~:text=Window%20Management%20settings)
 settings.
 
 ### Transparency
 
-The fact whether the permission to use the Multi-Screen Window Placement API has been granted is
+The fact whether the permission to use the Window Management API has been granted is
 exposed in the browser's site information and is also queryable via the Permissions API.
 
 ### Permission persistence
@@ -430,7 +432,7 @@ information.
 
 ## Feedback {: #feedback }
 
-The Chrome team wants to hear about your experiences with the Multi-Screen Window Placement API.
+The Chrome team wants to hear about your experiences with the Window Management API.
 
 ### Tell us about the API design
 
@@ -451,12 +453,12 @@ Did you find a bug with Chrome's implementation? Or is the implementation differ
 
 ### Show support for the API
 
-Are you planning to use the Multi-Screen Window Placement API? Your public support helps the Chrome
+Are you planning to use the Window Management API? Your public support helps the Chrome
 team to prioritize features and shows other browser vendors how critical it is to support them.
 
 - Share how you plan to use it on the [WICG Discourse thread][wicg-discourse].
 - Send a tweet to [@ChromiumDev][cr-dev-twitter] using the hashtag
-  [`#WindowPlacement`](https://twitter.com/search?q=%23WindowPlacement&src=typed_query&f=live) and
+  [`#WindowManagement`](https://twitter.com/search?q=%23WindowManagement&src=typed_query&f=live) and
   let us know where and how you are using it.
 - Ask other browser vendors to implement the API.
 
@@ -464,7 +466,7 @@ team to prioritize features and shows other browser vendors how critical it is t
 
 - [Spec draft][spec]
 - [Public explainer][explainer]
-- [Multi-Screen Window Placement API demo][demo] | [Multi-Screen Window Placement API demo
+- [Window Management API demo][demo] | [Window Management API demo
   source][demo-source]
 - [Chromium tracking bug][cr-bug]
 - [ChromeStatus.com entry][cr-status]
@@ -474,7 +476,7 @@ team to prioritize features and shows other browser vendors how critical it is t
 
 ## Acknowledgements
 
-The Multi-Screen Window Placement API spec was edited by
+The Window Management API spec was edited by
 [Victor Costan](https://www.linkedin.com/in/pwnall),
 [Joshua Bell](https://www.linkedin.com/in/joshuaseanbell), and
 [Mike Wasserman](https://www.linkedin.com/in/mike-wasserman-9900a079/).
@@ -484,11 +486,11 @@ The API was implemented by
 [Joe Medley](https://github.com/jpmedley), [François Beaufort](https://github.com/beaufortfrancois),
 and [Kayce Basques](https://github.com/kaycebasques). Thanks to Laura Torrent Puig for the photos.
 
-[spec]: https://webscreens.github.io/window-placement/
-[issues]: https://github.com/webscreens/window-placement/issues
+[spec]: https://w3c.github.io/window-management/
+[issues]: https://w3c.github.io/window-management/issues
 [demo]: https://window-placement.glitch.me/
 [demo-source]: https://glitch.com/edit/#!/window-placement
-[explainer]: https://github.com/webscreens/window-placement/blob/main/EXPLAINER.md
+[explainer]: https://github.com/w3c/window-management/blob/main/EXPLAINER.md
 [wicg-discourse]:
 https://discourse.wicg.io/t/proposal-supporting-window-placement-on-multi-screen-devices/3948
 [cr-bug]: https://crbug.com/897300

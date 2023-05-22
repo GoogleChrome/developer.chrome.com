@@ -22,7 +22,7 @@ date: 2023-02-07
 
 # Optional
 # Include an updated date when you update your post
-updated: 2023-02-27
+updated: 2023-05-10
 
 # Optional
 # How to add a new author
@@ -265,12 +265,17 @@ Page-level data is available through the API by passing a `url` property in the 
 
 If the `metrics` property is not set then all available metrics will be returned:
 
-- `largest_contentful_paint`
 - `cumulative_layout_shift`
-- `experimental_interaction_to_next_paint`
-- `experimental_time_to_first_byte`
 - `first_contentful_paint`
 - `first_input_delay`
+- `interaction_to_next_paint`
+- `largest_contentful_paint`
+- `experimental_interaction_to_next_paint`
+- `experimental_time_to_first_byte`
+
+{% Aside 'important' %}
+The `interaction_to_next_paint` metric is available both with and without the experimental prefix. The experimental prefix should now be considered deprecated and will be removed in August 2023. The non-prefixed schema should be used going forward.
+{% endAside %}
 
 If no `formFactor` value is provided then the values will be aggregated across all form factors.
 

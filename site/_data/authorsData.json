@@ -228,7 +228,14 @@
     "homepage": "https://paul.kinlan.me/",
     "twitter": "paul_kinlan",
     "mastodon": "https://status.kinlan.me/@paul",
-    "image": "image/T4FyVKpzu4WKF1kBNvXepbi08t52/0O1ZGr2P0l9oTKabyUK5.jpeg"
+    "github": "PaulKinlan",
+    "glitch": "PaulKinlan",
+    "webdev": "paulkinlan",
+    "linkedin": "paulkinlan",
+    "image": "image/T4FyVKpzu4WKF1kBNvXepbi08t52/0O1ZGr2P0l9oTKabyUK5.jpeg",
+    "featuredPost": {
+      "url": "/blog/insider-dec-22"
+    }
   },
   "joemedley": {
     "github": "jpmedley",
@@ -558,6 +565,16 @@
     "mastodon": "https://toot.cafe/@tomayac",
     "country": "DE",
     "image": "image/8WbTDNrhLsU0El80frMBGE4eMCD3/TbY7HP8KuTtQ6Y1186nt.jpg"
+  },
+  "jannispetersen": {
+    "twitter": "JannisX11",
+    "github": "JannisX11",
+    "image": "image/8WbTDNrhLsU0El80frMBGE4eMCD3/uqPYkreeongLP7Mz0uu0.jpg"
+  },
+  "ivankutskir": {
+    "twitter": "ivankutskir",
+    "github": "photopea",
+    "image": "image/8WbTDNrhLsU0El80frMBGE4eMCD3/awfIXN2jciHkQWrA6fqS.png"
   },
   "ajara": {
     "twitter": "tropicadri",
@@ -1185,5 +1202,17 @@
   "harleenbatra": {
     "country": "US",
     "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/g0IPLJlZgBcLH8Yvvn78.png"
+  },
+  "patrickkettner": {
+    "country": "US",
+    "image": "image/DXqUldooyJOUnj3qXSYLHbUgUI93/kke0lg2QSqHJKdAPp9uO.jpeg",
+    "github": "patrickkettner",
+    "twitter": "patrickkettner",
+    "linkedin": "patrickkettner"
+  },
+  "jakobdamjensen": {
+    "image": "image/8WbTDNrhLsU0El80frMBGE4eMCD3/P4d5Q4zt2CBsLwKUHour.jpg",
+    "twitter": "jdj_dk",
+    "linkedin": "jakobdamjensen"
   }
 }
