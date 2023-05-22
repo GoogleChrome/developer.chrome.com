@@ -12,6 +12,15 @@
   &__social {
     .social-icon {
       padding: 0 10px;
+
+      &.web {
+        filter: grayscale(100%);
+        transition: filter 0.2s ease;
+
+        &:hover {
+          filter: grayscale(0%);
+        }
+      }
     }
 
     .social-icon:first-child {

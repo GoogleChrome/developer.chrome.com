@@ -32,7 +32,7 @@
       <div class="lg:pad-top-600 lg:pad-bottom-600 pad-top-300 pad-bottom-300 display-flex direction-column">
         <div class="display-flex gap-top-400 md:gap-bottom-200 gap-bottom-500 lg:gap-top-0 author-hero__social">
           {% if paged.webdev  %}
-            <a rel="me" href="https://web.dev/authors/{{ paged.webdev }}" target="_blank" class="color-secondary-text social-icon" aria-label="Webdev" target="_blank">
+            <a rel="me" href="https://web.dev/authors/{{ paged.webdev }}" target="_blank" class="web color-secondary-text social-icon" aria-label="Webdev" target="_blank">
               {{ icon('webdev', {hidden: true}) }}
             </a>
           {% endif %}
@@ -108,7 +108,7 @@
         {% if post %}
           {% set eyebrowIcon = featured.eyebrowIcon or 'star' %}
           {% set eyebrowText = featured.eyebrowText or 'Featured' %}
-          {% set thumbnail = featured.thumbnail or post.data.hero %}
+          {% set thumbnail = featured.thumbnail or post.data.hero or helpers.randomThumbnail() %}
           {% set alt = featured.alt or post.data.alt or '' %}
           {% set theme = featured.theme or 'quaternary' %}
 
@@ -137,11 +137,6 @@
   <div class="measure-1280 width-full center-margin pad-left-400 pad-right-400">
     <div class="blog-grid">
       {% for item in paged.pagination.items %}
-        {% if item.authors.length == 1 %}
-        {% set authors = [] %}
-        {% else %}
-        {% set authors = item.authors %}
-        {% endif %}
         {% set post = {
           data: {
             thumbnail: item.thumbnail,
@@ -149,7 +144,7 @@
             alt: item.title,
             description: item.description,
             tags: item.tags,
-            authors: authors,
+            authors: item.authors,
             date: item.date
           },
           url: item.url

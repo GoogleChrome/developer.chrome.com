@@ -69,7 +69,9 @@ module.exports = collections => {
           const element = {
             title: item.data.title,
             description: item.data.description,
-            authors: item.data.authors,
+            // If there is only one author, don't show it in the list, as it's
+            // the one the author page is for
+            authors: item.data.authors?.length === 1 ? [] : item.data.authors,
             date: item.date,
             updated: item.data.updated,
             tags: item.data.tags,
