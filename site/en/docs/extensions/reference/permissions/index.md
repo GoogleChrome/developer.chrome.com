@@ -128,7 +128,7 @@ Most Chrome extension permissions can be specified as optional, with the followi
   </tbody>
 </table>
 
-View [Declare Permissions and Warn Users][17] for further information on available permissions and
+View [Declare Permissions and Warn Users][4] for further information on available permissions and
 their warnings.
 
 ### Step 3: Request optional permissions
@@ -153,7 +153,7 @@ document.querySelector('#my-button').addEventListener('click', (event) => {
 });
 ```
 
-Chrome prompts the user if adding the permissions results in different [warning messages][18] than
+Chrome prompts the user if adding the permissions results in different [warning messages][5] than
 the user has already seen and accepted. For example, the previous code might result in a prompt like
 this:
 
@@ -197,7 +197,7 @@ chrome.permissions.remove({
 ```
 
 [1]: /docs/extensions/mv3/manifest
-[2]: /docs/extensions/mv2/declare_permissions#manifest
+[2]: /docs/extensions/mv3/declare_permissions
 [3]: #property-Permissions-origins
 [4]: /docs/extensions/debugger
 [5]: /devtools/docs/debugger-protocol

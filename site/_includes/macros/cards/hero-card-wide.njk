@@ -2,12 +2,14 @@
 
 {% macro heroCardWide(title, text, actionText, actionLink, imgSrc, imgAlt, color, titleIcon) %}
   {% set color = color or 'blue' %}
-<div class="hero-card width-full rounded-lg bg-{{color}}-lightest pad-400 masonry:pad-right-500 masonry:pad-top-1000 masonry:pad-bottom-1000 masonry:pad-left-500">
+<div class="hero-card width-full rounded-lg bg-{{color}}-lightest pad-400 masonry:pad-right-500 masonry:pad-top-700 masonry:pad-left-500 masonry:pad-bottom-500">
   <div class="hero-card__inner hero-card__inner-wide">
     <div>
       <h1 class="type--h1 color-{{color}}-darkest">
         {% if titleIcon %}
           <div class="project-icon gap-right-300">
+            <div class="project-icon__cover cover-last"></div>
+            <div class="project-icon__cover cover-mid"></div>
             <div class="project-icon__cover">
               {# image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/TvE0fdJmcXI8fuPc8R7A.svg #}
               {% Img

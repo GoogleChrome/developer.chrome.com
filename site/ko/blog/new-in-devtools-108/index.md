@@ -28,7 +28,7 @@ tags:
 
 
 <!-- ## Hints for inactive CSS properties {: #css-hint } -->
-## 비활성화된 CSS 프로퍼티에 대한 힌트 {: #css-hint } 
+## 비활성화된 CSS 프로퍼티에 대한 힌트 {: #css-hint }
 <!-- DevTools now identifies CSS styles that are valid but have no visible effect. In the **Styles** pane, DevTools fades out the inactive properties. Hover over the icon next to it to understand why the rule has no visible effect.  -->
 이제 DevTools는 유효하지만 시각적 효과를 가지고 있지 않은 CSS 스타일들을 식별합니다. **Style** 창에서 DevTools는 비활성화된 프로퍼티들을 페이드아웃시킵니다. 규칙이 시각적 효과가 없는 이유를 이해하기 위해서 그 옆의 아이콘 위로 마우스를 가져가 보세요.
 
@@ -76,9 +76,9 @@ function bar() {
 트랜스파일러와 미니파이어가 이들을 쉼표로 구분된 표현식으로 바꿀지도 모릅니다.
 ```js
 function bar(){return foo(),foo(),42}
-``` 
+```
 
-<!-- This creates confusion during debugging because the stepping behavior is different between minified and authored code. It is even more confusing when using sourcemaps to debug the minified code in terms of the original code, as the developer is then looking at semicolons (which were under the hood turned into commas by the toolchain) but the debugger doesn't stop on them. -->
+<!-- This creates confusion during debugging because the stepping behavior is different between minified and authored code. It is even more confusing when using source maps to debug the minified code in terms of the original code, as the developer is then looking at semicolons (which were under the hood turned into commas by the toolchain) but the debugger doesn't stop on them. -->
 이렇게 하면 축소된 코드와 작성된 코드 간에 동작이 다르기 때문에 디버깅 중에 혼란을 야기합니다. 소스 맵을 사용하여 축소된 코드를 원래 코드와 관련지어 디버깅할 때 개발자가 세미콜론(툴체인에 의해 쉼표로 바뀐 후드 아래에 있음)을 보고 있음에도 디버거가 멈추지 않기 때문에 훨씬 혼란을 가중시킵니다.
 
 

@@ -6,6 +6,10 @@
 
 {% extends 'layouts/base.njk' %}
 
+{% block css %}
+{% InlineCss '/css/overview.css' %}
+{% endblock %}
+
 {% block title_bar %}
   {% set headingBreadcrumb = true %}
   {% include 'partials/breadcrumbs.njk' %}

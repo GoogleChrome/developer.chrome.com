@@ -100,8 +100,8 @@ installed. The following example shows how to do this.
 {% Label %}background.js:{% endLabel %}
 
 ```js
-chrome.runtime.onInstalled.addListener((reason) => {
-  if (reason === chrome.runtime.OnInstalledReason.INSTALL) {
+chrome.runtime.onInstalled.addListener(({reason}) => {
+  if (reason === 'install') {
     chrome.tabs.create({
       url: "onboarding.html"
     });
@@ -152,7 +152,7 @@ can usually be thought of as the user's current tab.
 </web-tabs>
 
 
-### Mute the specified tab
+### Mute the specified tab {: #mute }
 
 This example shows how an extension can toggle the muted state for a given tab.
 
@@ -184,7 +184,7 @@ This example shows how an extension can toggle the muted state for a given tab.
   </web-tab>
 </web-tabs>
 
-### Move the current tab to the first position when clicked
+### Move the current tab to the first position when clicked {: #move }
 
 This example shows how to move a tab while a drag may or may not be in progress. While this example
 uses `chrome.tabs.move`, you can use the same waiting pattern for other calls that modify tabs while
@@ -242,6 +242,19 @@ populates chrome.runtime.lastError is not unchecked.
   </web-tab>
 </web-tabs>
 
+### Pass a message to a selected tab's content script {: #messaging }
+
+This example demonstrates how an extension's service worker can communicate with content scripts in specific browser tabs using `tabs.sendMessage()`.
+
+```js
+function sendMessageToActiveTab(message) {
+  const [tab] = await chrome.tabs.query({ active: true, lastFocusedWindow: true });
+  const response = await chrome.tabs.sendMessage(tab.id, message);
+  // TODO: Do something with the response.
+}
+```
+
+
 ## Extension examples {: #more-samples}
 
 For more Tabs API extensions demos, explore any of the following:
@@ -254,8 +267,8 @@ For more Tabs API extensions demos, explore any of the following:
 [doc-match]: /docs/extensions/mv3/match_patterns/
 [doc-perms]: /docs/extensions/mv3/permission_warnings/
 [doc-promises]: /docs/extensions/mv3/promises/
-[mv2-tabs-samples]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/tabs/
-[mv3-tabs-manager]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/tabs-manager
+[mv2-tabs-samples]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/_archive/mv2/api/tabs/
+[mv3-tabs-manager]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.tabs-manager
 [samples-repo]: https://github.com/GoogleChrome/chrome-extensions-samples
 [section-manifest]: #manifest
 [tab]: #type-Tab

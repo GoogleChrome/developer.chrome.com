@@ -13,7 +13,7 @@ changes to them, and pass information to their parent extension.
 
 ## Understand content script capabilities {: #capabilities }
 
-Content scripts can access Chrome APIs used by their parent extension by exchanging [messages][2]. They can [access extension files][section-files] after declaring them as web-accessible resources.
+Content scripts can access Chrome APIs used by their parent extension by exchanging [messages][2]. They can [access extension files][section-files] after declaring them as [web-accessible resources][34].
 
 Additionally, content scripts can access the following chrome APIs directly:
 
@@ -46,6 +46,8 @@ was originally introduced with the initial launch of Chrome, providing isolation
 
 An extension may run in a web page with code similar to the example below.
 
+{% Label %}webPage.html{% endLabel %}
+
 ```html
 <html>
   <button id="mybutton">click me</button>
@@ -61,6 +63,8 @@ An extension may run in a web page with code similar to the example below.
 
 That extension could inject the following content script using one of the techniques outlined in the
 [Inject scripts][31] section.
+
+{% Label %}content-script.js{% endLabel %}
 
 ```js
 var greeting = "hola, ";
@@ -96,6 +100,8 @@ Statically declared scripts are registered in the manifest under the `"content_s
 They can include JavaScript files, CSS files, or both. All auto-run content scripts must specify
 [match patterns][18].
 
+{% Label %}manifest.json{% endLabel %}
+
 ```json/3-9
 {
  "name": "My extension",
@@ -109,6 +115,8 @@ They can include JavaScript files, CSS files, or both. All auto-run content scri
  ],
  ...
 }
+
+
 ```
 
 <table class="simple">
@@ -168,6 +176,14 @@ They can include JavaScript files, CSS files, or both. All auto-run content scri
         <a href="#injecting-in-related-frames">Injecting in related frames</a>.
       </td>
     </tr>
+    <tr id="world">
+      <td><code>world</code></td>
+      <td><a href="/docs/extensions/reference/scripting/#type-ExecutionWorld">ExecutionWorld</a></td>
+      <td>
+        <em>Optional.</em> The JavaScript world for a script to execute within. Defaults to <code>ISOLATED</code>. See also
+        <a href="#isolated_world">Work in isolated worlds</a>.
+      </td>
+    </tr>
   </tbody>
 </table>
 
@@ -179,15 +195,17 @@ not well known or when content scripts should not always be injected on known ho
 Introduced in Chrome 96, dynamic declarations are similar to [static
 declarations][header-cs-static], but the content script object is registered with Chrome using
 methods in the [`chrome.scripting` namespace](/docs/extensions/reference/scripting/) rather than in
-[manifest.json][doc-manifest]. In addition to
-[registering][api-register-cs] content scripts, the Scripting API also allows extension developers
+[manifest.json][doc-manifest]. The Scripting API also allows extension developers
 to:
 
+- [Register][api-register-cs] content scripts.
 - [Get a list of][api-get-registered-cs] registered content scripts.
 - [Update][api-update-cs] the list of registered content scripts.
 - [Remove][api-unregister-cs] registered content scripts.
 
 Like static declarations, dynamic declarations can include JavaScript files, CSS files, or both.
+
+{% Label %}service-worker.js{% endLabel %}
 
 ```js
 chrome.scripting
@@ -202,6 +220,8 @@ chrome.scripting
   .catch((err) => console.warn("unexpected error", err))
 ```
 
+{% Label %}service-worker.js{% endLabel %}
+
 ```js
 chrome.scripting
   .updateContentScripts([{
@@ -211,15 +231,19 @@ chrome.scripting
   .then(() => console.log("registration updated"));
 ```
 
+{% Label %}service-worker.js{% endLabel %}
+
 ```js
 chrome.scripting
   .getRegisteredContentScripts()
   .then(scripts => console.log("registered content scripts", scripts));
 ```
 
+{% Label %}service-worker.js{% endLabel %}
+
 ```js
 chrome.scripting
-  .unregisterContentScript(["session-script"])
+  .unregisterContentScripts({ ids: ["session-script"] })
   .then(() => console.log("un-registration complete"));
 ```
 
@@ -237,27 +261,33 @@ Below we'll look at different versions of an activeTab-based extension.
 
 {% Label %}manifest.json:{% endLabel %}
 
-```json/4-6
+```json/4
 {
   "name": "My extension",
   ...
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "scripting"
   ],
   "background": {
     "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Action Button"
   }
 }
 ```
 
 Content scripts can be injected as files…
 
+{% Label %}content-script.js{% endLabel %}
+
 ```js
-//// content-script.js ////
+
 document.body.style.backgroundColor = "orange";
 ```
 
-{% Label %}background.js:{% endLabel %}
+{% Label %}service-worker.js:{% endLabel %}
 
 ```js
 chrome.action.onClicked.addListener((tab) => {
@@ -270,7 +300,7 @@ chrome.action.onClicked.addListener((tab) => {
 
 …or a function body can be injected and executed as a content script.
 
-{% Label %}background.js:{% endLabel %}
+{% Label %}service-worker.js:{% endLabel %}
 
 ```js
 function injectedFunction() {
@@ -280,7 +310,7 @@ function injectedFunction() {
 chrome.action.onClicked.addListener((tab) => {
   chrome.scripting.executeScript({
     target : {tabId : tab.id},
-    function : injectedFunction,
+    func : injectedFunction,
   });
 });
 ```
@@ -290,8 +320,9 @@ Be aware that the injected function is a copy of the function referenced in the
 body must be self contained; references to variables outside of the function will cause the content
 script to throw a [`ReferenceError`][ref-error].
 
-{% if false %}
 When injecting as a function, you can also pass arguments to the function.
+
+{% Label %}service-worker.js{% endLabel %}
 
 ```js
 function injectedFunction(color) {
@@ -301,12 +332,11 @@ function injectedFunction(color) {
 chrome.action.onClicked.addListener((tab) => {
   chrome.scripting.executeScript({
     target : {tabId : tab.id},
-    function : injectedFunction,
-    arguments : [ "orange" ],
+    func : injectedFunction,
+    args : [ "orange" ],
   });
 });
 ```
-{% endif %}
 
 ### Exclude matches and globs {: #matchAndGlob }
 
@@ -356,7 +386,9 @@ can only be used to limit which pages will be affected.
 The following extension injects the content script into **https://www.nytimes.com/ health**
 but not into **https://www.nytimes.com/ business** .
 
-```json/6
+{% Label %}manifest.json{% endLabel %}
+
+```json/5-6
 {
   "name": "My extension",
   ...
@@ -370,13 +402,16 @@ but not into **https://www.nytimes.com/ business** .
   ...
 }
 ```
-```js/2
-chrome.scripting.registerContentScript({
-  id : 1,
+
+{% Label %}service-worker.js{% endLabel %}
+
+```js/2-3
+chrome.scripting.registerContentScripts([{
+  id : "test",
   matches : [ "https://*.nytimes.com/*" ],
-  exclude_matches : [ "*://*/*business*" ],
+  excludeMatches : [ "*://*/*business*" ],
   js : [ "contentScript.js" ],
-});
+}]);
 ```
 
 Glob properties follow a different, more flexible syntax than [match patterns][24]. Acceptable glob
@@ -399,6 +434,8 @@ This extension injects the content script into **https://www.nytimes.com/arts/in
 **https://www.nytimes.com/jobs/index.html**, but not into
 **https://www.nytimes.com/sports/index.html**:
 
+{% Label %}manifest.json{% endLabel %}
+
 ```json/6
 {
   "name": "My extension",
@@ -413,18 +450,12 @@ This extension injects the content script into **https://www.nytimes.com/arts/in
   ...
 }
 ```
-```js/3
-chrome.scripting.registerContentScript({
-  id : 1,
-  matches : [ "https://*.nytimes.com/*" ],
-  include_globs : [ "*nytimes.com/???s/*" ],
-  js : [ "contentScript.js" ],
-});
-```
 
 This extension injects the content script into **https://history.nytimes.com** and
 **https://.nytimes.com/history**, but not into **https://science.nytimes.com** or
 **https://www.nytimes.com/science**:
+
+{% Label %}manifest.json{% endLabel %}
 
 ```json/6
 {
@@ -440,16 +471,10 @@ This extension injects the content script into **https://history.nytimes.com** a
   ...
 }
 ```
-```js/3
-chrome.scripting.registerContentScript({
-  id : 1,
-  matches : [ "https://*.nytimes.com/*" ],
-  exclude_globs : [ "*science*" ],
-  js : [ "contentScript.js" ],
-});
-```
 
 One, all, or some of these can be included to achieve the correct scope.
+
+{% Label %}manifest.json{% endLabel %}
 
 ```json/6-8
 {
@@ -467,21 +492,14 @@ One, all, or some of these can be included to achieve the correct scope.
   ...
 }
 ```
-```js/2-4
-chrome.scripting.registerContentScript({
-  matches : [ "https://*.nytimes.com/*" ],
-  exclude_matches : [ "*://*/*business*" ],
-  include_globs : [ "*nytimes.com/???s/*" ],
-  exclude_globs : [ "*science*" ],
-  js : [ "contentScript.js" ],
-});
-```
 
 ### Run time {: #run_time }
 
 The `run_at` field controls when JavaScript files are injected into the web page. The preferred and
 default value is `"document_idle"`. See the [RunAt][api-runat] type for other possible
 values.
+
+{% Label %}manifest.json{% endLabel %}
 
 ```json/6
 {
@@ -498,12 +516,15 @@ values.
 }
 ```
 
-```js/2
-chrome.scripting.registerContentScript({
+{% Label %}service-worker.js{% endLabel %}
+
+```js/3
+chrome.scripting.registerContentScripts([{
+  id : "test",
   matches : [ "https://*.nytimes.com/*" ],
   runAt : "document_idle",
   js : [ "contentScript.js" ],
-});
+}]);
 ```
 
 <table class="simple">
@@ -550,6 +571,8 @@ The `"all_frames"` field allows the extension to specify if JavaScript and CSS f
 injected into all frames matching the specified URL requirements or only into the topmost frame in a
 tab.
 
+{% Label %}manifest.json{% endLabel %}
+
 ```json/6
 {
   "name": "My extension",
@@ -564,12 +587,16 @@ tab.
   ...
 }
 ```
-```js/2
-chrome.scripting.registerContentScript({
+
+{% Label %}service-worker.js{% endLabel %}
+
+```js/3
+chrome.scripting.registerContentScripts([{
+  id: "test",
   matches : [ "https://*.nytimes.com/*" ],
-  all_frames : true,
+  allFrames : true,
   js : [ "contentScript.js" ],
-});
+}]);
 ```
 
 <table class="simple">
@@ -607,6 +634,8 @@ However, these frames can still be associated with the creating frame.
 To inject into these frames, extensions can specify the
 `"match_origin_as_fallback"` property on a content script specification in the
 manifest.
+
+{% Label %}manifest.json{% endLabel %}
 
 ```json
 {
@@ -651,6 +680,8 @@ content script, or with the extension via the content script, it must do so thro
 
 An example can be accomplished using [`window.postMessage`][27]:
 
+{% Label %}content-script.js{% endLabel %}
+
 ```js
 var port = chrome.runtime.connect();
 
@@ -666,6 +697,8 @@ window.addEventListener("message", (event) => {
   }
 }, false);
 ```
+
+{% Label %}content-script.js{% endLabel %}
 
 ```js
 document.getElementById("theButton").addEventListener("click", () => {
@@ -684,11 +717,15 @@ similar means.
 To access an extension file from a content script, you can call
 [`chrome.runtime.getURL()`][api-get-url] to get the _absolute URL_ of your extension asset as shown in the following example (`content.js`):
 
+{% Label %}content-script.js{% endLabel %}
+
 ```js
 let image = chrome.runtime.getURL("images/my_image.png")
 ```
 
 To use fonts or images in a CSS file, you can use [`@@extension_id`][i18n-extid] to construct a URL as shown in the following example (`content.css`):
+
+{% Label %}content.css{% endLabel %}
 
 ```css
 body {
@@ -704,6 +741,8 @@ body {
 ```
 
 All assets must be declared as [Web Accessible Resources][manifest-war] in the `manifest.json` file:
+
+{% Label %}manifest.json{% endLabel %}
 
 ```json
 {
@@ -726,7 +765,7 @@ All assets must be declared as [Web Accessible Resources][manifest-war] in the `
 
 While isolated worlds provide a layer of protection, using content scripts can create
 vulnerabilities in an extension and the web page. If the content script receives content from a
-separate website, such as making an [`XMLHttpRequest`][28], be careful to filter content
+separate website, such as making a fetch() request, be careful to filter content
 [cross-site scripting][29] attacks before injecting it. Only communicate over HTTPS in order to
 avoid ["man-in-the-middle"][30] attacks.
 
@@ -734,6 +773,9 @@ Be sure to filter for malicious web pages. For example, the following patterns a
 disallowed in Manifest V3:
 
 {% Compare 'worse' %}
+
+{% Label %}content-script.js{% endLabel %}
+
 ```js
 const data = document.getElementById("json-data");
 // WARNING! Might be evaluating an evil script!
@@ -742,6 +784,9 @@ const parsed = eval("(" + data + ")");
 {% endCompare %}
 
 {% Compare 'worse' %}
+
+{% Label %}content-script.js{% endLabel %}
+
 ```js
 const elmt_id = ...
 // WARNING! elmt_id might be '); ... evil script ... //'!
@@ -752,6 +797,9 @@ window.setTimeout("animate(" + elmt_id + ")", 200);
 Instead, prefer safer APIs that do not run scripts:
 
 {% Compare 'better' %}
+
+{% Label %}content-script.js{% endLabel %}
+
 ```js
 const data = document.getElementById("json-data")
 // JSON.parse does not evaluate the attacker's scripts.
@@ -760,6 +808,9 @@ const parsed = JSON.parse(data);
 {% endCompare %}
 
 {% Compare 'better' %}
+
+{% Label %}content-script.js{% endLabel %}
+
 ```js
 const elmt_id = ...
 // The closure form of setTimeout does not evaluate scripts.
@@ -767,7 +818,7 @@ window.setTimeout(() => animate(elmt_id), 200);
 ```
 {% endCompare %}
 
-[1]: https://www.w3.org/TR/DOM-Level-2-HTML/
+[1]: https://developer.mozilla.org/docs/Web/API/Document_Object_Model
 [2]: /docs/extensions/mv3/messaging
 [3]: /docs/extensions/reference/i18n
 [4]: /docs/extensions/reference/storage
@@ -796,6 +847,7 @@ window.setTimeout(() => animate(elmt_id), 200);
 [30]: https://en.wikipedia.org/wiki/Man-in-the-middle_attack
 [31]: #functionality
 [33]: /docs/extensions/reference/permissions
+[34]: /docs/extensions/mv3/manifest/web_accessible_resources/
 
 [api-get-registered-cs]: /docs/extensions/reference/scripting/#method-getRegisteredContentScripts
 [api-register-cs]: /docs/extensions/reference/scripting/#method-registerContentScripts

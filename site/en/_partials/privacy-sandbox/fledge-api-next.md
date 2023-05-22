@@ -11,4 +11,4 @@ Like other Privacy Sandbox proposals, this API is documented and
 ### Experiment with the API
 
 You can [experiment and participate](/docs/privacy-sandbox/fledge-experiment/)
-in conversation about the FLEDGE API.
+in conversation about the Protected Audience API.

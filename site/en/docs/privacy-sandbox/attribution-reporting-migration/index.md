@@ -20,7 +20,7 @@ ask your question.
 Following the [API proposal](https://github.com/WICG/conversion-measurement-api)'s changes
 in the first months of 2021, the API implementation in Chrome is evolving. Here's what changing:
 
-- The API name, and the feature policy name.
+- The API name, and the permissions policy name.
 - The HTML attribute names and `.well-known` URLs.
 - The format of the reports. Reports are now sent as JSON in the request body.
 - The content of the reports: `credit` has been removed, along with reports that would have had 0 credit.
@@ -60,7 +60,7 @@ options:
 
 You can see a migration example for a small demo app in this [pull request (draft)](https://github.com/GoogleChromeLabs/trust-safety-demo/pull/4/files).
 
-### Update your feature policy code
+### Update your permissions policy code
 
 <table class="simple width-full fixed-table with-heading-tint">
 <thead>

@@ -22,7 +22,7 @@ date: 2022-11-10
 
 # Optional
 # Include an updated date when you update your post
-#updated: 2022-11-09
+updated: 2023-03-20
 
 # Optional
 # How to add a new author
@@ -41,11 +41,80 @@ The CrUX Dashboard is a [Looker Studio](https://cloud.google.com/looker-studio) 
 
 ## Accessing the CrUX Dashboard
 
-To use the existing CrUX Dashboard you need to [lauch the dashboard, passing the origin as a query param](https://datastudio.google.com/u/0/reporting/bbc5698d-57bb-4969-9e07-68810b9fa348/page/keDQB?params=%7B%22origin%22:%22wwww.example.com%22%7D). To make this easier–since the origin nees to be URL encoded—you can use [Rick Viscomi](https://twitter.com/rick_viscomi)'s [CrUX Dash Launcher](https://rviscomi.github.io/crux-dash-launcher/) which takes the URL as an input and constructs the dashboard URL.
+To launch the CrUX Dashboard, enter an origin or URL:
+
+<style>
+  form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+  }
+  #origin {
+    width: 100%;
+    font-size: 2em;
+    line-height: 1.3em;
+    text-align: center;
+  }
+  #origin[aria-invalid=true] {
+    border: red dashed 2px;
+  }
+  #origin-submit {
+    line-height: 2.25em;
+  }
+</style>
+
+<form id="form">
+  <input id="origin" aria-label="Origin" type="text" placeholder="https://developer.chrome.com" required>
+  <input id="formatted-origin" aria-label="Formatted Origin" type="url" hidden>
+  <button id="origin-submit" class="bg-primary button-filled color-bg material-button">Go</button>
+</form>
+
+*Note: if the protocol (`http` or `https`) is not provided, then `https` will be assumed. Paths will be stripped as the CrUX Dashboard only provides data at an origins level.*
+
+<script>
+var form = document.getElementById('form');
+var origin = document.getElementById('origin');
+form.addEventListener('submit', function(e) {
+  try {
+    origin.removeAttribute('aria-invalid');
+    e.preventDefault();
+    var url = origin.value.trim();
+    // Do some basic checks to ensure it's a valid external URL (of the format
+    // (xxx.yyy). Later we'll use `new URL()` to do more thorough validation
+    // but it allows single word URLs like http://localhost or http://test
+    // which are not valid external URLs that CrUX needs.
+    if (!(url.indexOf('.') > 0)) throw new TypeError('Invalid URL');
+    if (url.endsWith('.')) throw new TypeError('Invalid URL');
+    // Add default scheme of https if needed
+    if (!url.startsWith('http')) url = 'https://' + url;
+    // Check it's a valid URL
+    var url = new URL(url);
+    var encoded_origin = encodeURIComponent(url.origin);
+    var url =
+      'https://lookerstudio.google.com/reporting/bbc5698d-57bb-4969-9e07-68810b9fa348/page/keDQB?params=%7B%22origin%22:%22' +
+      encoded_origin +
+      '%22%7D';
+    window.location = url;
+  } catch {
+    origin.setAttribute('aria-invalid',true);
+  }
+});
+</script>
 
 The dashboard URL can then be shared and bookmarked for easy reference.
 
-A better way, for those frequently visiting different domains, is to set up a custom Search Engine in Chrome. To do this go into Chrome Settings using the three dots menu in the top right of Chrome. Once in Settings choose the "Search engine" option.
+## Does it work for all websites?
+
+No. If your origin is not included in the CrUX dataset, there will be no data to display. There are over 15 million origins in the dataset, but the one you want may not have sufficient data to be included.
+
+Some common issues with origins are providing the wrong protocol, for example `http://` instead of `https://`, and omitting the subdomain when needed. Some websites include redirects, so if `http://example.com` redirects to `https://www.example.com`, then you should use the latter, which is the canonical version of the origin. As a rule of thumb, use whichever origin users see in the URL bar.
+
+## Using a Custom Search Engine to access the Dashboard
+
+An alternative way, for those frequently visiting different domains, is to set up a custom Search Engine in Chrome which allows you to access pass a search term—the origin in this case—to a URL. To do this go into Chrome Settings using the three dots menu in the top right of Chrome. Once in Settings choose the "Search engine" option.
 
 {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/QFmABBH8qJJuyA25QXqc.png", alt="Chrome settings for Search Engines", width="800", height="243" %}
 
@@ -53,21 +122,17 @@ From here expand the "Manage search engines and site search", scroll down to "Si
 
 - Search engine: `CrUX`
 - Shortcut: `crux`
-- URL with %s in place of query: `https://datastudio.google.com/c/u/0/reporting/bbc5698d-57bb-4969-9e07-68810b9fa348/page/keDQB?params=%7B%22origin%22:%22%s%22%7D`
+- URL with %s in place of query: `https://lookerstudio.google.com/c/u/0/reporting/bbc5698d-57bb-4969-9e07-68810b9fa348/page/keDQB?params=%7B%22origin%22:%22%s%22%7D`
 
 {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/uMyipuu95G78aQ7hdn9u.png", alt="Chrome 'Add search engine' dialog", width="600", height="422" %}
 
-After this, when you type `crux` and press `tab` in the search bar you will now be able to enter an origin, and Chrome will navigate to the preconfigured CrUX Dashboard.
+After this, when you type `crux` and press `tab` in the search bar you will now be able to enter an origin, and Chrome will navigate to the CrUX Dashboard for that origin.
 
 {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/O2sQwX4JwVRxcb24Mfw1.png", alt="Using a custom search engine in Chrome Omnibox", width="400", height="138" %}
 
 If you omit the protocol, HTTPS is assumed. Subdomains matter, for example `https://developers.google.com` and `https://www.google.com` are considered to be different origins.
 
-If your origin is not included in the CrUX dataset, there will be no data to display. There are over 15 million origins in the dataset, but the one you want may not have sufficient data to be included.
-
-Some common issues with origins are providing the wrong protocol, for example `http://` instead of `https://`, and omitting the subdomain when needed. Some websites include redirects, so if `http://example.com` redirects to `https://www.example.com`, then you should use the latter, which is the canonical version of the origin. As a rule of thumb, use whichever origin users see in the URL bar.
-
-If the origin exists, you'll be taken to the dashboard, populated with the CrUX data for this origin:
+If the origin exists in CrUX, you'll be taken to the dashboard, populated with the CrUX data for this origin:
 
 {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/9vSp9trQYMwC5kw2DZPJ.png", alt="Example CrUX Dashboard", width="800", height="565" %}
 
@@ -149,4 +214,4 @@ The CrUX Dashboard also trades away some of the versatility of the raw data on B
 
 ### How can I customize the dashboard
 
-The page details how to access a read-only version of the CrUX Dashboard maintained by the CrUX team. If you wish to create your own copy of the dashboard, so you can edit it to show different visualizations, then [see this user guide](https://web.dev/chrome-ux-report-data-studio-dashboard/) for more info. Note that by creating you own copy, you will need to update the month manually and also will not benefit from any additions added to the official dashboard—for example new metrics, or other information.
+The page details how to access a read-only version of the CrUX Dashboard maintained by the CrUX team. If you wish to create your own copy of the dashboard, so you can edit it to show different visualizations, then [see this user guide](/blog/chrome-ux-report-looker-studio-dashboard/) for more info. Note that by creating you own copy, you will need to update the month manually and also will not benefit from any additions added to the official dashboard—for example new metrics, or other information.

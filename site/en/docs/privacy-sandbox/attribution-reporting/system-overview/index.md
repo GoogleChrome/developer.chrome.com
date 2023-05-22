@@ -16,7 +16,7 @@ authors:
 	.type figcaption {text-align:left;}
 </style>
 
-The Attribution Reporting API allows adtechs and advertisers to measure when an
+The Attribution Reporting API allows ad techs and advertisers to measure when an
 ad click or view leads to a conversion, such as a purchase. This API relies on
 a combination of client-side and server-side integrations, depending on your
 business needs.
@@ -33,7 +33,7 @@ If you come across unfamiliar terms, refer to the
 
 You should read this article if:
 
-*  You're an adtech or advertiser's **technical decision-maker**. You may work
+*  You're an ad tech or advertiser's **technical decision-maker**. You may work
    in operations, DevOps, data science, IT, marketing, or another role where
    you make technical implementation decisions. You're wondering how the many
    proposals for Attribution Reporting systems work together to build a tool
@@ -122,7 +122,7 @@ While this API is in testing, your code must confirm the API is available and se
 ### Attribution sources (publisher's website) {: #attribution-sources}
 
 An _[attribution source](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit#heading=h.dmy7iuqnhvby)_
-is an ad-related event (a click or view), to which an adtech can attach the
+is an ad-related event (a click or view), to which an ad tech can attach the
 following kinds of information:
 
 *  Contextual reporting data, such as the ad creative ID, information about the
@@ -169,7 +169,7 @@ priority.
 ## Data collection
 
 Together, an attribution trigger matched to a corresponding source, are sent as
-a report by the browser to a reporting endpoint on an adtech-owned server
+a report by the browser to a reporting endpoint on an ad tech-owned server
 (sometimes referred to as a collection endpoint or collection service). These
 reports can be event-level reports or aggregatable reports.
 
@@ -177,7 +177,7 @@ _[Aggregatable reports](https://github.com/WICG/conversion-measurement-api/blob/
 are used to generate summary reports. An aggregatable report is a combination
 of data gathered from the ad (on a publisher's site) and conversion data (from
 the advertiser's site) which is generated and encrypted by the browser on a
-user's device before it's collected by the adtech.
+user's device before it's collected by the ad tech.
 
 Event-level reports are delayed between 2 and 30 days. Aggregatable reports are
 sent with a random delay within one hour and the events must fit within the
@@ -192,15 +192,15 @@ you'll need to process the aggregatable reports with an additional service.
 
 To generate summary reports, you'll use the
 [Aggregation Service](https://github.com/google/trusted-execution-aggregation-service)
-(operated by the adtech) to process the aggregatable reports. The Aggregation
+(operated by the ad tech) to process the aggregatable reports. The Aggregation
 Service adds noise to protect user privacy and returns the final summary report.
 
 <figure class="screenshot">
-	{% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/ZBF0uMoXBDww805XVctQ.png", alt="Aggregatable reports are collected, batched, and sent to the adtech environtment.", width="800", height="464" %}
+	{% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/ZBF0uMoXBDww805XVctQ.png", alt="Aggregatable reports are collected, batched, and sent to the ad tech environtment.", width="800", height="464" %}
 	<figcaption>
 		<strong>Figure 2</strong>. This diagram represents the asynchronous flow
 		of data from the collection endpoint, batching reports, through
-		processing on the adtech-owned Aggregation Service.<br /><br />
+		processing on the ad tech-owned Aggregation Service.<br /><br />
 		After batching the collected aggregatable reports the batch is processed
 		by the Aggregation Service. A
 		<a href="https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md#attestation-and-the-coordinator">coordinator</a>

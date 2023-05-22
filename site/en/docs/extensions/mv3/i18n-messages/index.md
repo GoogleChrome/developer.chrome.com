@@ -16,6 +16,8 @@ how to internationalize and localize, see the [Internationalization][1] page.
 The following code shows the supported fields for `messages.json`. Only the "_name_" and "message"
 fields are required.
 
+{% Label %}messages.json:{% endLabel %}
+
 ```json
 {
   "name": {
@@ -37,6 +39,8 @@ fields are required.
 
 Here's a `messages.json` file that defines three messages named "prompt_for_name", "hello", and
 "bye":
+
+{% Label %}messages.json:{% endLabel %}
 
 ```json
 {
@@ -98,6 +102,8 @@ include the following characters:
 
 Here are three examples of names, taken from the [Example][8] section:
 
+{% Label %}messages.json:{% endLabel %}
+
 ```json
 "prompt_for_name": {
   ...
@@ -120,6 +126,8 @@ refer to a placeholder named "our_site" as `$our_site$`, `$OUR_SITE$`, or `$oUR_
 
 Here are three examples of messages, taken from the [Example][8] section:
 
+{% Label %}messages.json:{% endLabel %}
+
 ```json
 "message": "What's your name?"
 ...
@@ -131,6 +139,8 @@ Here are three examples of messages, taken from the [Example][8] section:
 To put a dollar sign (`$`) into the string, use `$$`. For example, use the following code to specify
 the message **Amount (in \$)**:
 
+{% Label %}messages.json:{% endLabel %}
+
 ```json
 "message": "Amount (in $$)"
 ```
@@ -139,6 +149,9 @@ Although placeholders such as `$USER$` are the preferred way of referring to _su
 (strings specified using the _substitutions_ parameter of [i18n.getMessage][12]) you can also refer
 to substitution strings directly within the message. For example, the following message refers to
 the first three substitution strings passed into `getMessage()`:
+
+{% Label %}messages.json:{% endLabel %}
+
 
 ```json
 "message": "Params: $1, $2, $3"
@@ -155,6 +168,8 @@ _Optional._ A description of the message, intended to give context or details to
 make the best possible translation.
 
 Here are three examples of descriptions, taken from the [Example][8] section:
+
+{% Label %}messages.json:{% endLabel %}
 
 ```json
 "description": "Ask for the user's name"
@@ -191,6 +206,8 @@ appears to the end user. For example, a placeholder for a dollar amount should h
 The following snippet, taken from the [Example][8] section, shows a "placeholders" item that
 contains two placeholders named "our_site" and "user". The "our_site" placeholder has no "example"
 item because its value is obvious from the "content" field.
+
+{% Label %}messages.json:{% endLabel %}
 
 ```json
 "placeholders": {

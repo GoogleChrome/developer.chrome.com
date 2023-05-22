@@ -17,6 +17,9 @@
   "capabilities": {
     "title": "i18n.tags.capabilities"
   },
+  "case-study": {
+    "title": "i18n.tags.case-study"
+  },
   "chrome": {
     "title": "i18n.tags.chrome"
   },
@@ -47,6 +50,9 @@
   "file-system": {
     "title": "i18n.tags.file-system"
   },
+  "fugu-case-study": {
+    "title": "i18n.tags.fugu-case-study"
+  },
   "games": {
     "title": "i18n.tags.games"
   },
@@ -64,6 +70,9 @@
   },
   "media": {
     "title": "i18n.tags.media"
+  },
+  "webgpu": {
+    "title": "i18n.tags.webgpu"
   },
   "new-in-chrome": {
     "title": "i18n.tags.new-in-chrome"
@@ -91,5 +100,8 @@
   },
   "devtools-architecture": {
     "title": "i18n.tags.devtools-architecture"
+  },
+  "example": {
+    "title": "i18n.tags.example"
   }
 }

@@ -3,16 +3,14 @@ layout: "layouts/doc-post.njk"
 title: "Overriding Chrome pages"
 seoTitle: "Chrome Extensions: Overriding Chrome pages"
 date: 2012-09-18
-updated: 2015-05-11
+updated: 2023-02-06
 description: >
   How to override the Chrome bookmark manager, history, and new tab
   pages from your Chrome Extension.
 ---
 
-{% Partial 'extensions/mv2page-in-mv3.md' %}
-
 Override pages are a way to substitute an HTML file from your extension for a page that Google
-Chrome normally provides. In addition to HTML, an override page usually has CSS and JavaScript code.
+Chrome normally provides like New Tab page. In addition to HTML, an override page usually has CSS and JavaScript code.
 
 An extension can replace any one of the following pages:
 
@@ -45,6 +43,7 @@ Register an override page in the [extension manifest][3] like this:
 
 ```json/4-6
 {
+  "manifest_version": 3,
   "name": "My extension",
   ...
 
@@ -75,8 +74,7 @@ For an effective override page, follow these guidelines:
   The address bar always gets the focus first when the user creates a new tab.
 - **Don't try to emulate the default New Tab page.**
   The APIs necessary to create a slightly modified version of the default New Tab page—with top
-  pages, recently closed pages, tips, a theme background image, and so on—don't exist yet. Until
-  they do, you're better off trying to make something completely different.
+  pages, recently closed pages, tips, a theme background image, and so on—don't exist.
 
 ## Examples {: #examples }
 

@@ -30,7 +30,7 @@ const domTransformer = async (content, outputPath) => {
 
   // Pipe the page through transforms.
   // These transforms mutate the cheerio object.
-  prettyUrls($, outputPath, locale);
+  prettyUrls($, locale);
   tables($);
 
   // Return the final html.

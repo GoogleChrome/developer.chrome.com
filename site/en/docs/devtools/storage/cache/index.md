@@ -1,11 +1,12 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "View Cache data"
+title: "View cache data"
 authors:
   - kaycebasques
+  - sofiayem
 date: 2019-03-25
-#updated: YYYY-MM-DD
-description: "How to view Cache data from the Application panel of Chrome DevTools."
+updated: 2023-03-07
+description: "How to view cache data from the Application panel of Chrome DevTools."
 tags:
   - storage
 ---
@@ -17,85 +18,69 @@ column of the **Network Log** has the information you're looking for. See [Log n
 
 ## View cache data {: #view }
 
-1.  Click the **Application** tab to open the **Application** panel.
-    Expand the **Cache Storage** section to view available caches.
+1. [Open DevTools](/docs/devtools/open/) > **Application** > **Storage**.
 
-    {% Img src="image/admin/4h1B7kXmeAtOpE2RIiWX.png", alt="Available caches.", width="800", height="573" %}
+1. To view available caches, expand {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bJ1ZWs8NN8S0NaZnCHyQ.svg", alt="Expand.", width="20", height="20" %} **Cache Storage**. 
 
-    **Figure 1**. Available caches.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/CFQacZHmo8JXJYkQu8Zt.png", alt="Available caches.", width="800", height="486" %}
 
-2.  Click a cache to view its contents.
+1. Click a cache to view its contents.
 
-    {% Img src="image/admin/meUW7vB4HHJ2Jtm3MOSo.png", alt="Viewing a cache's contents.", width="800", height="408" %}
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/PyO7Sj97pIqTrMhg2Chj.png", alt="Viewing a cache's contents.", width="800", height="626" %}
 
-    **Figure 2**. Viewing the **airhorner-0.6.11** cache.
+1. Click a resource to view its HTTP headers in the section below the table.
 
-3.  Click a resource to view its HTTP headers in the section below the table.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/NO1AvJbmgbHV61MRgMFB.png", alt="Viewing a resource's HTTP headers.", width="800", height="730" %}
 
-    {% Img src="image/admin/7KpwTx6x1vZmknjLdt0o.png", alt="Viewing a resource's HTTP headers.", width="800", height="521" %}
+1. Open the **Preview** tab to view a resource's content.
 
-    **Figure 3**. Viewing the HTTP headers of the **/index.html** resource.
-
-4.  Click **Preview** to view a resource's content.
-
-    {% Img src="image/admin/hsgw21Df0XNW29lHwbXz.png", alt="Viewing a resource's content.", width="800", height="477" %}
-
-    **Figure 4**. Viewing the content of the **/scripts.comlink.global.js** resource.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/u4QXSTPy6MFV0yjpx6YF.png", alt="Viewing a resource's content.", width="800", height="677" %}
 
 ## Refresh a resource {: #refresh }
 
 1.  [View a cache's data][5].
-2.  Click the resource that you want to refresh. DevTools highlights it blue to indicate that it's
+1.  Select the resource that you want to refresh. DevTools highlights it blue to indicate that it's
     selected.
 
-    {% Img src="image/admin/CnT5LMGVd696SCltMJdW.png", alt="Selecting a resource.", width="800", height="488" %}
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/QOrkZLZsHeaQ0OO2Eayj.png", alt="Selecting a resource.", width="800", height="677" %}
 
-    **Figure 5**. Selecting the **/styles/main.css** resource.
-
-3.  Click **Refresh** {% Img src="image/admin/b55bnqwzTUDyXdgIP7pd.png", alt="Refresh", width="24", height="25" %}.
+3.  Click **Refresh** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/sX65QEDYhwBFHCM24BtV.svg", alt="Refresh.", width="22", height="22" %}.
 
 ## Filter resources {: #filter }
 
-1.  [View a cache's data][6].
-2.  Use the **Filter by Path** text box to filter out any resources that do not match the path that
+1.  [View a cache's data][5].
+1.  Use the **Filter by Path** text box to filter out any resources that do not match the path that
     you provide.
 
-    {% Img src="image/admin/RiYDO2lVWdbXNLRSOMM8.png", alt="Filtering out resources that do not match the specified path.", width="800", height="382" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Lx2djKo3ZYnP2l6anlhT.png", alt="Filtering out resources that do not match the specified path.", width="800", height="444" %}
 
-    **Figure 6**. Filtering out resources that do not match the `/script` path.
+This example filters out resources that don't contain `script` in their path.
 
 ## Delete a resource {: #deleteresource }
 
-1.  [View a cache's data][7].
-2.  Click the resource that you want to delete. DevTools highlights it blue to indicate that it's
+1.  [View a cache's data][5].
+1.  Click the resource that you want to delete. DevTools highlights it blue to indicate that it's
     selected.
 
-    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/3MLpzyWtyg9MyCsBKr0T.png", alt="Selecting a resource.", width="800", height="488" %}
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/l7MuPSPJvm3ARanTwUgs.png", alt="Selecting a resource to delete.", width="800", height="506" %}
 
-    **Figure 7**. Selecting the **/styles/main.css** resource.
-
-3.  Click **Delete Selected**
-    {% Img src="image/admin/7n8KigaAtonB8ZzKDrkj.png", alt="Delete Selected", width="20", height="20" %}.
+1.  Click **Delete Selected** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/w9Vbnqf9cVz7YeqMkAi0.svg", alt="Delete selected.", width="24", height="24" %}.
 
 ## Delete all cache data {: #deletecache }
 
-1.  Open **Application** > **Clear Storage**.
-2.  Make sure that the **Cache Storage** checkbox is enabled.
+1.  Open **Application** > **Storage**.
+1.  In the **Cache** section, make sure {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Cache Storage** is enabled.
 
-    {% Img src="image/admin/f7eXNmgoU2BqwR8Jxfvg.png", alt="The Cache Storage checkbox.", width="800", height="572" %}
+1.  Click **Clear site data**.
 
-    **Figure 8**. The **Cache Storage** checkbox.
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/IAbkEFrH95USyQXHSwpi.png", alt="The Cache Storage checkbox and the Clear site data button.", width="800", height="654" %}
 
-3.  Click **Clear site data**.
-
-    {% Img src="image/admin/C0MQhJ0YhFIuKudvcghG.png", alt="The Clear Site Data button.", width="800", height="572" %}
-
-    **Figure 9**. The **Clear Site Data** button.
+    {% Aside %}
+    **Tip**: Next to **Clear site data**, enable {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **including third-party cookies** to clear those as well.
+    {% endAside %}
 
 [1]: /docs/devtools
 [2]: https://developer.mozilla.org/docs/Web/API/Cache
 [3]: https://developer.mozilla.org/docs/Web/HTTP/Caching
 [4]: /docs/devtools/network#load
 [5]: #view
-[6]: #view
-[7]: #view

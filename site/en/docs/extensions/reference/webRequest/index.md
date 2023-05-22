@@ -20,12 +20,13 @@ extension needs to have access to both the requested URL and its initiator. For 
 }
 ```
 
-If you are building policy-installed extensions for enterprises, and want to use the web request API
-in a blocking fashion, you need to request the `"webRequestBlocking"` permission.
-
 As of Chrome 108, you can asynchronously supply credentials for [`onAuthRequired`
 events](#event-onAuthRequired) if you use the `"webRequest"` and `"webRequestAuthProvider"`
 permissions.
+
+{% Aside %}
+As of Manifest V3, the `"webRequestBlocking"` permission is no longer available for most extensions. Consider `"declarativeNetRequest"`, which enables use of the [declarativeNetRequest API](/docs/extensions/reference/declarativeNetRequest/). Aside from `"webRequestBlocking"`, the webRequest API will be unchanged and available for normal use. Policy installed extensions can continue to use `"webRequestBlocking"`.
+{% endAside %}
 
 ## Life cycle of requests
 
@@ -285,6 +286,10 @@ if explicitly requested.
 
 Several implementation details can be important to understand when developing an extension that uses
 the web request API:
+
+### web_accessible_resources
+
+When an extension uses webRequest APIs to redirect a public resource request to a resource that is not web accessible, it is blocked and will result in an error. The above holds true even if the resource that is not web accessible is owned by the redirecting extension. To declare resources for use with declarativeWebRequest APIs, the `"web_accessible_resources"` array must be declared and populated in the manifest as documented [here](/docs/extensions/mv3/manifest/web_accessible_resources/).
 
 ### Conflict resolution
 
