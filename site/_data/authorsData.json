@@ -228,7 +228,14 @@
     "homepage": "https://paul.kinlan.me/",
     "twitter": "paul_kinlan",
     "mastodon": "https://status.kinlan.me/@paul",
-    "image": "image/T4FyVKpzu4WKF1kBNvXepbi08t52/0O1ZGr2P0l9oTKabyUK5.jpeg"
+    "github": "PaulKinlan",
+    "glitch": "PaulKinlan",
+    "webdev": "paulkinlan",
+    "linkedin": "paulkinlan",
+    "image": "image/T4FyVKpzu4WKF1kBNvXepbi08t52/0O1ZGr2P0l9oTKabyUK5.jpeg",
+    "featuredPost": {
+      "url": "/blog/insider-dec-22"
+    }
   },
   "joemedley": {
     "github": "jpmedley",
