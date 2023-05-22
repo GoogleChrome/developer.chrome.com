@@ -161,27 +161,6 @@ function constructDOM() {
 }
 ```
 
-### eval() {: #eval }
-
-Avoid using `eval()` whenever possible to prevent attacks, as `eval()` will execute any code passed
-into it, which may be malicious.
-
-```js
-const fetchValue = await fetch("https://api.example.com/data.json");
-const jsonData = await fetchValue.json();
-// WARNING! Might be evaluating an evil script!
-const result = eval(jsonData);
-```
-
-Instead, prefer safer, and faster, methods such as `JSON.parse()`
-
-```js
-const fetchValue = await fetch("https://api.example.com/data.json");
-const jsonData = await fetchValue.json();
-// JSON.parse does not evaluate the attacker's scripts.
-const result = JSON.parse(jsonData);
-```
-
 ## Use content scripts carefully {: #content_scripts }
 
 While [content scripts][11] live in an [isolated world][12], they are not immune from attacks:
