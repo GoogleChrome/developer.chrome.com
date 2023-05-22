@@ -12,19 +12,19 @@
   &__social {
     .social-icon {
       padding: 0 10px;
-
-      &.web {
-        filter: grayscale(100%);
-        transition: filter 0.2s ease;
-
-        &:hover {
-          filter: grayscale(0%);
-        }
-      }
     }
 
     .social-icon:first-child {
       padding-left: 0;
+    }
+  }
+
+  .web {
+    filter: grayscale(100%);
+    transition: filter 0.2s ease;
+
+    &:hover {
+      filter: grayscale(0%);
     }
   }
 
