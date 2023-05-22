@@ -4,7 +4,7 @@ title: Smooth and simple transitions with the View Transitions API
 authors:
   - jakearchibald
 description: >
-  The View Transition API allows page transitions within single-page apps, and will later include multi-page apps.
+  The View Transitions API allows page transitions within single-page apps, and will later include multi-page apps.
 date: 2021-08-17
 updated: 2023-03-24
 ---
@@ -13,7 +13,7 @@ updated: 2023-03-24
 This feature was previously called "Shared Element Transitions", and is sometimes referred to as "page transitions".
 {% endAside %}
 
-The View Transition API makes it easy to change the DOM in a single step, while creating an animated transition between the two states. It's available in Chrome 111+.
+The View Transitions API makes it easy to change the DOM in a single step, while creating an animated transition between the two states. It's available in Chrome 111+.
 
 <style>
   .video-full-demo {
@@ -31,7 +31,7 @@ The View Transition API makes it easy to change the DOM in a single step, while 
     muted="true",
     controls="true"
   %}
-  <figcaption>Transitions created with the View Transition API. <a href="https://http203-playlist.netlify.app/">Try the demo site</a> – Requires Chrome 111+.</figcaption>
+  <figcaption>Transitions created with the View Transitions API. <a href="https://http203-playlist.netlify.app/">Try the demo site</a> – Requires Chrome 111+.</figcaption>
 </figure>
 
 ## Why do we need this feature?
@@ -849,7 +849,7 @@ This example uses `transition.ready`, a promise that resolves once the transitio
 
 ## Transitions as an enhancement
 
-The View Transition API is designed to 'wrap' a DOM change and create a transition for it. However, the transition should be treated as an enhancement, as in, your app shouldn't enter an 'error' state if the DOM change succeeds, but the transition fails. Ideally the transition shouldn't fail, but if it does, it shouldn't break the rest of the user experience.
+The View Transitions API is designed to 'wrap' a DOM change and create a transition for it. However, the transition should be treated as an enhancement, as in, your app shouldn't enter an 'error' state if the DOM change succeeds, but the transition fails. Ideally the transition shouldn't fail, but if it does, it shouldn't break the rest of the user experience.
 
 In order to treat transitions as an enhancement, take care not to use transition promises in a way that would cause your app to throw if the transition fails.
 
@@ -1019,7 +1019,7 @@ Instance members of `ViewTransition`:
 `viewTransition.updateCallbackDone`
 : A promise that fulfills when the promise returned by `updateCallback` fulfills, or rejects when it rejects.
 
-    The View Transition API wraps a DOM change and creates a transition. However, sometimes you don't care about the success/failure of the transition animation, you just want to know if and when the DOM change happens. `updateCallbackDone` is for that use-case.
+    The View Transitions API wraps a DOM change and creates a transition. However, sometimes you don't care about the success/failure of the transition animation, you just want to know if and when the DOM change happens. `updateCallbackDone` is for that use-case.
 
     {% Aside %}
     `updateCallbackDone` was previously `domUpdated`. It was renamed in Chrome 111.
