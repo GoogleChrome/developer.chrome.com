@@ -60,7 +60,7 @@ Now that you have this prioritized list of landing pages, the next step consists
 {% Aside 'important' %}
 What you decide to `preconnect` or `preload` as Early Hints may differ from what you have traditionally used these directives for in your HTML.
 
-When using these in HTML you typically want to `preconnect` or `preload` resources that the [Preload Scanner](https://web.dev/preload-scanner/) will not discover in the HTML—for example, fonts, or background images that would otherwise be discovered late. For Early Hints you will not have the HTML and so want to `preconnect` to critical domains or `preload` critical resources that perhaps _would_ be discovered early in the HTML—for example, preloading `main.css` or `app.js`.
+When using these in HTML you typically want to `preconnect` or `preload` resources that the [Preload Scanner](https://web.dev/preload-scanner/) will not discover in the HTML—for example, fonts, or background images that would otherwise be discovered late. For Early Hints you will not have the HTML and so you may want to instead `preconnect` to critical domains or `preload` critical resources that perhaps _would_ otherwise be discovered early in the HTML—for example, preloading `main.css` or `app.js`.
 
 Niavely copying the `preconnect` and `preload` directives from HTML to Early Hints [may not be optimal](https://www.youtube.com/watch?v=0kKdMqIhvZs&t=2285s).
 {% endAside %}
