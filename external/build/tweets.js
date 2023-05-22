@@ -13,7 +13,6 @@ const url = `https://api.twitter.com/1.1/statuses/user_timeline.json?user_id=113
 
 async function run() {
   // Temporarily disable Twitter feeds fetch.
-
   return;
   // eslint-disable-next-line no-unreachable
   if (!process.env.TWITTER_BEARER) {
