@@ -27,11 +27,14 @@ Sometimes, you'll see your new CSS in the **Elements** > **Styles** pane but you
 
 The **Styles** pane recognizes many kinds of CSS issues and highlights them in different ways.
 
-### Invalid {: #invalid }
+### Invalid values and declarations {: #invalid }
 
-The **Styles** pane crosses out properties with invalid syntax and displays {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hJxGejygnlBfMvhMtcCX.svg", alt="Warning.", width="24", height="24" %} warning icons next to them.
+The **Styles** pane crosses out and displays {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hJxGejygnlBfMvhMtcCX.svg", alt="Warning.", width="24", height="24" %} warning icons next to the following:
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/HSQATBEOt6MholSjoji2.png", alt="Invalid CSS properties.", width="800", height="542" %}
+- An entire CSS declaration (property and value) when the CSS property is invalid or unknown.
+- Just the value when the CSS property is valid but the value is invalid.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/DN3BUNcp4jhpNvYgUmWD.png", alt="Invalid property name and invalid property value.", width="800", height="401" %}
 
 ### Overridden {: #overridden }
 

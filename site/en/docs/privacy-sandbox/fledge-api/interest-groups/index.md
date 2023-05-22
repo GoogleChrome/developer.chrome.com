@@ -3,10 +3,10 @@ layout: 'layouts/doc-post.njk'
 title: 'Buyer guide: join interest groups and generate bids'
 subhead: >
   Buyer API guide and references to join remarketing lists and bid
-  in FLEDGE auctions.
+  in Protected Audience API auctions.
 description: >
   Buyer API guide and references to join remarketing lists and bid
-  in FLEDGE auctions.
+  in Protected Audience API auctions.
 date: 2022-11-01
 authors:
   - samdutton
@@ -16,29 +16,29 @@ authors:
 {% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
 
 In this article, you'll find a technical reference for interest groups, as used
-in the current iteration of the experimental FLEDGE API.
+in the current iteration of the experimental Protected Audience API.
 
 Read the [developer guide](/docs/privacy-sandbox/fledge-api) for the full life
-cycle of FLEDGE, and refer to the FLEDGE explainer for an in-depth proposal of
+cycle of the Protected Audience API, and refer to the Protected Audience API explainer for an in-depth proposal of
 how [browsers record interest groups](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#1-browsers-record-interest-groups).
 
 Not a developer? Refer to the
-[FLEDGE overview](/docs/privacy-sandbox/fledge).
+[Protected Audience API overview](/docs/privacy-sandbox/fledge).
 
-## FLEDGE interest groups
+## Protected Audience API interest groups
 
-A FLEDGE interest group represents a group of people with a common interest,
+A Protected Audience API interest group represents a group of people with a common interest,
 corresponding to a [remarketing](/docs/privacy-sandbox/glossary/#remarketing)
-list. Every FLEDGE interest group has an
+list. Every Protected Audience API interest group has an
 [owner](/docs/privacy-sandbox/fledge#interest-group-types).
 
-Interest group owners act as the buyer in the FLEDGE ad auction. Interest group
+Interest group owners act as the buyer in the Protected Audience API ad auction. Interest group
 membership is stored by the browser, on the user's device, and is not shared
 with the browser vendor or anyone else.
 
-## Bid in a FLEDGE ad auction
+## Bid in a Protected Audience API ad auction
 
-Owners of FLEDGE interest groups can be invited to [bid in FLEDGE ad auctions](#generatebid).
+Owners of Protected Audience API interest groups can be invited to [bid in Protected Audience API ad auctions](#generatebid).
 
 ## API functions
 
@@ -79,7 +79,7 @@ permissions policy that allows calls to `joinAdInterestGroup()` from
 cross-origin iframes.
 
 {% Aside %}
-The default in the current implementation of FLEDGE is to allow calls to
+The default in the current implementation of the Protected Audience API is to allow calls to
 `joinAdInterestGroup()` from anywhere in a page, even from cross-origin iframes.
 
 In the future, once site owners have had time to adjust their permissions
@@ -127,9 +127,9 @@ previously stored values.
 
 {% Aside 'gotchas' %}
 
-All URLs used as parameters for FLEDGE API methods must be from secure origins:
+All URLs used as parameters for Protected Audience API methods must be from secure origins:
 all resources must be served over HTTPS URLs. [How to use HTTPS for local development](https://web.dev/how-to-use-local-https/)
-explains how to do this when running FLEDGE locally.
+explains how to do this when running the Protected Audience API locally.
 
 In addition, `biddingLogicUrl`, `decisionLogicUrl`, and `trustedBiddingSignals` 
 require an `X-Allow-FLEDGE: true` HTTP response header.
@@ -201,7 +201,7 @@ The remaining properties are optional:
     <p id="first-ref"><sup>1</sup> The `biddingLogicUrl` and `ads` properties are optional, but
     required to participate in an auction. There may be use cases for creating an interest group without these properties: for example, an interest group owner might want to add a browser to an interest group for a campaign that isn't running yet, or for some other future use, or they may temporarily have run out of advertising budget.</p>
 
-    <p id="second-ref"><sup>2</sup> In the current implementation of FLEDGE, `biddingLogicUrl`,
+    <p id="second-ref"><sup>2</sup> In the current implementation of the Protected Audience API, `biddingLogicUrl`,
     `biddingWasmHelperUrl`, `dailyUpdateUrl` and `trustedBiddingSignalsUrl` must
     have the same origin as owner. That may not be a long-term constraint, and
     the `ads` and `adComponents` URLs have no such constraint.</p>
@@ -480,6 +480,6 @@ owners. These limits are meant as guard rails, not to be hit in regular operatio
 
 {% endDetails %}
 
-## All FLEDGE API references
+## All Protected Audience API references
 
 {% Partial 'privacy-sandbox/fledge-api-reference.njk' %}

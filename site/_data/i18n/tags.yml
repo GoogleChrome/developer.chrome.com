@@ -20,6 +20,9 @@ accessibility:
 amp:
   en: AMP
 
+android:
+  en: Android
+
 automation:
   en: Browser Automation
 
@@ -65,6 +68,9 @@ sourcemap:
 
 storage:
   en: Storage
+
+network:
+  en: Network
 
 dom:
   en: DOM

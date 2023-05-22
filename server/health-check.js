@@ -24,7 +24,8 @@ const express = require('express');
 const healthCheckHandler = (req, res, next) => {
   if (req.url === '/_check') {
     res.send('Ok');
-    return res.end();
+    res.end();
+    return;
   }
   return next();
 };

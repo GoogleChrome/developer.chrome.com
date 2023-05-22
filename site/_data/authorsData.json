@@ -566,6 +566,16 @@
     "country": "DE",
     "image": "image/8WbTDNrhLsU0El80frMBGE4eMCD3/TbY7HP8KuTtQ6Y1186nt.jpg"
   },
+  "jannispetersen": {
+    "twitter": "JannisX11",
+    "github": "JannisX11",
+    "image": "image/8WbTDNrhLsU0El80frMBGE4eMCD3/uqPYkreeongLP7Mz0uu0.jpg"
+  },
+  "ivankutskir": {
+    "twitter": "ivankutskir",
+    "github": "photopea",
+    "image": "image/8WbTDNrhLsU0El80frMBGE4eMCD3/awfIXN2jciHkQWrA6fqS.png"
+  },
   "ajara": {
     "twitter": "tropicadri",
     "github": "tropicadri",
@@ -1157,10 +1167,10 @@
     "github": "arskama"
   },
   "robertyang": {
-  "image": "image/RtQlPaM9wdhEJGVKR8boMPkWf443/In0YoXtpVY8pwm7Pcj33.jpeg",
-  "twitter": "yangrob",
-  "linkedin": "robertyanghk"
-},
+    "image": "image/RtQlPaM9wdhEJGVKR8boMPkWf443/In0YoXtpVY8pwm7Pcj33.jpeg",
+    "twitter": "yangrob",
+    "linkedin": "robertyanghk"
+  },
   "vaatika": {
     "country": "DE",
     "twitter": "vaatika",
@@ -1172,5 +1182,37 @@
     "github": "dmengelt",
     "mastodon": "https://mastodon.online/@dmengelt",
     "image": "image/UIt9DNJ5rxYg42rqjqkKmCmAYXg1/KJcni8LUMhCip3LIJljm.jpeg"
+  },
+  "yunqingwang": {
+    "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/6Cx9HnGJfUJv7ustH6sN.jpeg"
+  },
+  "roshanbaliga": {
+    "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/WinvDg4wrHb2WCqNhoBC.jpeg"
+  },
+  "marcopaniconi": {
+    "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/sCdEdscRuD8KSRYpvTXI.png"
+  },
+  "sebastianbenz": {
+    "country": "DE",
+    "twitter": "sebabenz",
+    "github": "sebastianbenz",
+    "mastodon": "https://mastodon.cloud/@sebabenz",
+    "image": "image/6hHqS5auVgWhN0cQNQztaJx5w4M2/aHVsNAzlN0L0oqVacct3.jpg"
+  },
+  "harleenbatra": {
+    "country": "US",
+    "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/g0IPLJlZgBcLH8Yvvn78.png"
+  },
+  "patrickkettner": {
+    "country": "US",
+    "image": "image/DXqUldooyJOUnj3qXSYLHbUgUI93/kke0lg2QSqHJKdAPp9uO.jpeg",
+    "github": "patrickkettner",
+    "twitter": "patrickkettner",
+    "linkedin": "patrickkettner"
+  },
+  "jakobdamjensen": {
+    "image": "image/8WbTDNrhLsU0El80frMBGE4eMCD3/P4d5Q4zt2CBsLwKUHour.jpg",
+    "twitter": "jdj_dk",
+    "linkedin": "jakobdamjensen"
   }
 }

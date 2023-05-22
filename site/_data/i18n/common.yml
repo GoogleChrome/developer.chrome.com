@@ -257,12 +257,16 @@ featured_cards:
 cookie_banner:
   explainer:
     en: |
-      We serve cookies on this site to analyze traffic, remember your preferences,
-      and optimize your experience.
+        This site uses cookies to deliver and enhance the quality of its services
+        and to analyze traffic. If you agree, cookies are also used to serve
+        advertising and to personalize the content and advertisements that you
+        see.
   learn_more:
-    en: More details
+    en: Learn more about our use of cookies.
   accept:
-    en: Ok, Got it.
+    en: Agree
+  reject:
+    en: No Thanks
 
 draft_warning:
   en: This page is a draft and will not be published with the rest of the site.

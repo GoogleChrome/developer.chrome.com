@@ -417,7 +417,7 @@ pavoldrotar:
   title:
     en: 'Pavol Drotar'
   description:
-    en: 'I am a Software Engineer Intern wroking on the Web Platform.'
+    en: 'I am a Software Engineer Intern working on the Web Platform.'
 adrianajara:
   title:
     en: 'Adriana Jara'
@@ -611,6 +611,16 @@ thomassteiner:
     en: 'Thomas Steiner'
   description:
     en: 'Tom is a Developer Advocate'
+jannispetersen:
+  title:
+    en: Jannis Petersen
+  description:
+    en: Creator of Blockbench
+ivankutskir:
+  title:
+    en: 'Ivan Kutskir'
+  description:
+    en: 'Computer Programmer, creator of Photopea'
 ajara:
   title:
     en: 'Adriana Jara'
@@ -972,7 +982,7 @@ karaerickson:
   title:
     en: Kara Erickson
   description:
-    en: Software Engineer on the Aurora team at Chrome.
+    en: Staff Software Engineer on the Aurora team at Chrome.
     es: Ingeniera de software en el equipo de Aurora en Chrome.
     ja: ChromeのAuroraチームのソフトウェアエンジニア。
     ko: Chrome에서 Aurora 팀의 소프트웨어 엔지니어입니다.
@@ -1384,3 +1394,38 @@ dmengelt:
     en: Dominik Mengelt
   description:
     en: Developer Relations Engineer Payments, Google
+roshanbaliga:
+  title:
+    en: Roshan Baliga
+  description:
+    en: Group Product Manager, Chrome Open Media
+marcopaniconi:
+  title:
+    en: Marco Paniconi
+  description:
+    en: Senior Staff Software Engineer, Chrome Open Media
+yunqingwang:
+  title:
+    en: Yunqing Wang
+  description:
+    en: Senior Staff Software Engineer, Chrome Open Media
+sebastianbenz:
+  title:
+    en: 'Sebastian Benz'
+  description:
+    en: 'Sebastian is a Developer Relations Engineer'
+harleenbatra:
+  title:
+    en: Harleen Batra
+  description:
+    en: 'Developer Marketing for Chrome'
+patrickkettner:
+  title:
+    en: 'Patrick Kettner'
+  description:
+    en: 'Developer Advocate for Chrome Extensions'
+jakobdamjensen:
+  title:
+    en: Jakob Dam Jensen
+  description:
+    en: Software Product Manager at LEGO® Education
