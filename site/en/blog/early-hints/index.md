@@ -83,7 +83,7 @@ Link: </main.abcd100.css>; rel=preload; as=style
 [...]
 ```
 
-A few moments later, the webpage, including the linked CSS is served. Unfortunately, this CSS resource is frequently updated, and the main resource is already five versions ahead (`abcd105`) of the predicted CSS resource (`abcd100)`.
+A few moments later, the webpage, including the linked CSS is served. Unfortunately, this CSS resource is frequently updated, and the main resource is already five versions ahead (`abcd105`) of the predicted CSS resource (`abcd100`).
 
 ```shell
 200 OK
