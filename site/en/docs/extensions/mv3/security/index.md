@@ -46,8 +46,7 @@ Use its modern replacement, `fetch()`.
 {% endAside %}
 
 An extension can only use `fetch()` or [XMLHttpRequest][6] to get resources from itself and from domains
-specified in the permissions.
-
+specified in the permissions, as both API's use the same [fetch handler][27] in the service worker.
 ```json
 {
   "name": "Very Secure Extension",
@@ -251,4 +250,4 @@ function sanitizeInput(input) {
 [24]: /docs/extensions/reference/runtime#type-MessageSender
 [25]: /docs/extensions/mv3/content_scripts
 [26]: /docs/extensions/mv3/security#avoid
-
+[27]: https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/handled
