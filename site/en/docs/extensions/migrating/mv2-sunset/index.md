@@ -5,7 +5,7 @@ subhead: 'Understand when Manifest V2 will stop working for extensions'
 description: 'Details of the Manifest V2 phase-out and end of life.'
 layout: 'layouts/doc-post.njk'
 date: 2021-09-23
-updated: 2022-12-13
+updated: 2023-05-23
 tags:
   - extensions-news
 ---
@@ -61,7 +61,7 @@ Check this page for any updates and for more specific dates as these milestones 
     </td>
   </tr>
   <tr align="left" valign="top">
-    <td><s><strong>January&nbsp;2023</strong></s><br><a href="https://groups.google.com/u/1/a/chromium.org/g/chromium-extensions/c/zQ77HkGmK9E">Postponed</a></td>
+    <td><s>January&nbsp;2023</s><br><strong><a href="https://groups.google.com/a/chromium.org/g/chromium-extensions/c/zQ77HkGmK9E/m/HjaaCIG-BQAJ">Postponed</a></strong></td>
     <td><ul>
       <li>Manifest V3 will become a prerequisite for the <a href="https://blog.google/products/chrome/find-great-extensions-new-chrome-web-store-badges/">Featured badge</a>.</li></ul>
     </td>
@@ -74,7 +74,7 @@ Check this page for any updates and for more specific dates as these milestones 
     </td>
   </tr>
   <tr align="left" valign="top">
-    <td><s><strong>June&nbsp;2023</strong></s><br>Under review</td>
+    <td><s>June&nbsp;2023</s><br><strong><a href="https://groups.google.com/a/chromium.org/g/chromium-extensions/c/zQ77HkGmK9E/m/HjaaCIG-BQAJ">Postponed</a></strong></td>
     <td>
       <ul>
         <li>All existing Manifest V2 items with visibility set to Public at that time will have their visibility changed to Unlisted.</li>
@@ -85,7 +85,7 @@ Check this page for any updates and for more specific dates as these milestones 
     </td>
   </tr>
   <tr align="left" valign="top">
-    <td><s><strong>January&nbsp;2024</strong></s><br>Under review</td>
+    <td><s>January&nbsp;2024</s><br><strong><a href="https://groups.google.com/a/chromium.org/g/chromium-extensions/c/zQ77HkGmK9E/m/HjaaCIG-BQAJ">Postponed</a></strong></td>
     <td>
       <ul>
         <li>Chrome Web Store stops accepting updates to existing Manifest V2 extensions</li>
@@ -99,5 +99,3 @@ Check this page for any updates and for more specific dates as these milestones 
     </td>
   </tr>
 </table>
-
-[dec-2022-update]: #TODO
