@@ -23,7 +23,7 @@ create a [summary report](/docs/privacy-sandbox/summary-report/).
 * The [Aggregation Service proposal](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md)
   is available for discussion.
 * The [Aggregation Service can be tested](#test) with the
-  Attribution Reporting API and the Private Aggegration API for FLEDGE and Shared Storage.
+  Attribution Reporting API and the Private Aggegration API for Protected Audience API and Shared Storage.
 
 The proposal outlines
 [key terms](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md#key-terms),

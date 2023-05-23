@@ -6,7 +6,7 @@ authors:
   - jecelynyeen
 date: 2023-04-11
 description: ""
-hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/X0Yn0Nb5tjoK3cdWcmHy.jpg'
+hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bsIj8hnuo30II0TuROsn.png'
 alt: 'Network response header overrides, better debugging in Nuxt, new settings in the Console, and more.'
 tags:
   - new-in-devtools

@@ -17,7 +17,7 @@ The checklists below are here to help you keep track of your migration work. The
 ## Update the manifest {: update-manifest }
 {% endDetailsSummary %}
 
-The `manifest.json` file requires a slightly different format for Manoifest V3 than for Manifest V2. This page describes changes that only affect the `manifest.json` file. But many of the changes to scripts and pages also require changes to the manifest. Those changes are covered with the migration tasks that require them.
+The `manifest.json` file requires a slightly different format for Manifest V3 than for Manifest V2. This page describes changes that only affect the `manifest.json` file. But many of the changes to scripts and pages also require changes to the manifest. Those changes are covered with the migration tasks that require them.
 
 * [Change the manifest version number](/docs/extensions/migrating/manifest/#change-version).
 * [Update host permissions](/docs/extensions/migrating/manifest/#update-host-permissions).

@@ -13,6 +13,7 @@
       title: i18n.docs.privacy-sandbox.blog
 - title: i18n.docs.privacy-sandbox.start
   sections:
+    - url: /docs/privacy-sandbox/chrome-testing
     - url: /docs/privacy-sandbox/unified-origin-trial
     - url: /docs/privacy-sandbox/enroll
       title: i18n.docs.privacy-sandbox.enroll
@@ -20,6 +21,7 @@
     - url: /docs/privacy-sandbox/feedback
 - title: i18n.docs.privacy-sandbox.strengthen-boundaries
   sections:
+    - url: /docs/privacy-sandbox/third-party-cookie-phase-out
     - url: /docs/privacy-sandbox/first-party-sets
     - url: /docs/privacy-sandbox/first-party-sets-integration
     - url: /docs/privacy-sandbox/first-party-sets-evolution
@@ -72,6 +74,8 @@
             - url: /docs/privacy-sandbox/fledge-api/reports
             - url: /docs/privacy-sandbox/fledge-api/troubleshoot
         - url: /docs/privacy-sandbox/fledge-api/feature-status
+        - url: https://docs.google.com/document/d/16U6nCs5-RTpYDF5nuUVopvUXKzDgH6yDKaYbzY3ouiI/view
+          title: i18n.docs.privacy-sandbox.paapi-walkthrough
     - title: i18n.docs.privacy-sandbox.content-selection
       sections:
         - url: /docs/privacy-sandbox/shared-storage/content-selection
@@ -93,8 +97,11 @@
           title: i18n.docs.privacy-sandbox.experiment-participate
         - url: /docs/privacy-sandbox/attribution-reporting/chrome-shipping
           title: i18n.docs.privacy-sandbox.attribution-reporting-chrome-shipping
-        - url: /docs/privacy-sandbox/attribution-reporting-debugging
-          title: i18n.docs.privacy-sandbox.attribution-reporting-debugging
+        - title: i18n.docs.privacy-sandbox.attribution-reporting-debugging-resources
+          sections:
+            - url: /docs/privacy-sandbox/attribution-reporting-debugging/part-1/
+            - url: /docs/privacy-sandbox/attribution-reporting-debugging/part-2/
+            - url: /docs/privacy-sandbox/attribution-reporting-debugging/part-3/
         - url: https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/view?usp=sharing
           title: i18n.docs.privacy-sandbox.attribution-reporting-handbook
         - url: /docs/privacy-sandbox/attribution-reporting-updates

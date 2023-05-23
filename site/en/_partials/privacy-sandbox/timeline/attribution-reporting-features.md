@@ -26,7 +26,7 @@
       Prevent invalid aggregatable reports via report verification<br />
       <a href="https://github.com/WICG/attribution-reporting-api/blob/main/trigger_attestation.md">Explainer</a>
      </td>
-     <td>Available in Chrome for origin trial in Q1 2023</td>
+     <td>Available in Chrome for origin trial in Q2 2023</td>
   </tr>
   <tr>
      <td>

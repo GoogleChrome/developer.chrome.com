@@ -7,13 +7,15 @@ authors:
   - jecelynyeen
   - sadym
 date: 2021-07-29
-updated: 2023-04-18
+updated: 2023-05-11
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/nrI18Gn6bcbje10UnJBj.jpg'
 alt: ''
 tags:
   - test-automation
   - devtools
 ---
+
+{% YouTube id='6oXic6dcn9w', startTime='443' %}
 
 In our [earlier article](/blog/test-automation-evolution), we examined the existing automation protocols, namely WebDriver "Classic" and Chrome DevTools Protocol (CDP), along with their respective advantages and constraints. 
 

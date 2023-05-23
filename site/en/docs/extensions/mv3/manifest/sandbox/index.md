@@ -49,7 +49,7 @@ Note that you only need to list pages that you expect to be loaded in windows or
 used by sandboxed pages (e.g. stylesheets or JavaScript source files) do not need to appear in the
 `pages` list because they will use the sandbox of the frame that embeds them.
 
-["Using eval in Chrome Extensions. Safely."][4] goes into more detail about implementing a
+["Using eval in Chrome Extensions"][4] goes into more detail about implementing a
 sandboxing workflow that enables the use of libraries that would otherwise have issues executing under
 extension's [default Content Security Policy][doc-csp].
 

@@ -4,6 +4,7 @@ title: The extension service worker lifecycle
 subhead: 
 description: Extension service workers respond to both standard service worker events and events in extension namespaces. They are presented together because often one type follows another during an extension's use.
 date: 2023-05-02
+updated: 2023-05-03
 ---
 
 Extension service workers respond to both the [standard service worker events](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope#events) and to events in extension namespaces. They are presented together because often one type follows another during an extension's use.
@@ -14,7 +15,7 @@ Installation occurs when the user installs or updates a service worker from the 
 
 ### ServiceWorkerRegistration.install {: #install }
 
-The first event fired during installation is  a web service worker's [install](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/install_event) event.
+The first event fired during installation is a web service worker's [install](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/install_event) event.
 
 ### chrome.runtime.onInstalled {: #oninstalled }
 
@@ -36,7 +37,7 @@ Finally, the  service worker's [activate](https://developer.mozilla.org/docs/Web
 
 ## Extension startup {: #startup }
 
-When a user or incognito profile starts, the [`chrome.runtime.onStartup`](/docs/extensions/reference/runtime/#event-onStartup) event fires but no service worker events are invoked.
+When a user profile starts, the [`chrome.runtime.onStartup`](/docs/extensions/reference/runtime/#event-onStartup) event fires but no service worker events are invoked.
 
 ## Idle and shutdown {: #idle-shutdown }
 

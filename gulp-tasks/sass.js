@@ -4,20 +4,40 @@ const sassProcessor = require('sass');
 
 const entrypoints = [
   {
-    src: './site/_scss/main.scss',
+    src: './site/_scss/layouts/main.scss',
     dest: './dist/css/main.css',
   },
   {
-    src: './site/_scss/chrome-main.scss',
+    src: './site/_scss/layouts/chrome-100.scss',
     dest: './dist/css/chrome-main.css',
   },
   {
-    src: './site/_scss/events-main.scss',
-    dest: './dist/css/events-main.css',
+    src: './site/_scss/layouts/meet-the-team.scss',
+    dest: './dist/css/meet-the-team.css',
   },
   {
-    src: './site/_scss/styleguide-main.scss',
-    dest: './dist/css/styleguide-main.css',
+    src: './site/_scss/layouts/styleguide.scss',
+    dest: './dist/css/styleguide.css',
+  },
+  {
+    src: './site/_scss/layouts/home.scss',
+    dest: './dist/css/home.css',
+  },
+  {
+    src: './site/_scss/layouts/fugu-showcase.scss',
+    dest: './dist/css/fugu-showcase.css',
+  },
+  {
+    src: './site/_scss/layouts/landing.scss',
+    dest: './dist/css/landing.css',
+  },
+  {
+    src: './site/_scss/layouts/overview.scss',
+    dest: './dist/css/overview.css',
+  },
+  {
+    src: './site/_scss/layouts/single-post.scss',
+    dest: './dist/css/single-post.css',
   },
 ];
 

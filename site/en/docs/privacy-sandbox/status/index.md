@@ -8,7 +8,7 @@ description: >
   Review Chrome platform status, resources, and feature release
   timelines.
 date: 2021-05-18
-updated: 2023-03-16
+updated: 2023-05-18
 authors:
   - alexandrawhite
 ---
@@ -47,14 +47,6 @@ To review the latest information on any proposal or API, visit the respective ov
 
 {% Partial 'privacy-sandbox/timeline/first-party-sets.njk' %}
 
-## FLEDGE
-
-Descendant of [TURTLEDOVE](https://github.com/WICG/turtledove).
-
-{% Partial 'privacy-sandbox/timeline/fledge.njk' %}
-
-{% Partial 'privacy-sandbox/timeline/fledge-features.njk' %}
-
 ## IP Protection
 
 {% Partial 'privacy-sandbox/timeline/ip-protection.njk' %}
@@ -67,6 +59,21 @@ Descendant of [TURTLEDOVE](https://github.com/WICG/turtledove).
 
 {% Partial 'privacy-sandbox/timeline/private-state-tokens.njk' %}
 
+## Protected Audience
+
+Descendant of [TURTLEDOVE](https://github.com/WICG/turtledove). Formerly
+named FLEDGE.
+
+{% Partial 'privacy-sandbox/timeline/fledge.njk' %}
+
+{% Partial 'privacy-sandbox/timeline/fledge-features.njk' %}
+
+## Shared Storage
+
+{% Partial 'privacy-sandbox/timeline/shared-storage.njk' %}
+
+{% Partial 'privacy-sandbox/timeline/shared-storage-features.njk' %}
+
 ## Topics API
 
 {% Partial 'privacy-sandbox/timeline/topics.njk' %}
@@ -77,12 +84,6 @@ Limit passively shared browser data to reduce the volume of sensitive
 information which leads to fingerprinting.
 
 {% Partial 'privacy-sandbox/timeline/ua-ch.njk' %}
-
-## Shared Storage
-
-{% Partial 'privacy-sandbox/timeline/shared-storage.njk' %}
-
-{% Partial 'privacy-sandbox/timeline/shared-storage-features.njk' %}
 
 {% Details %}
 {% DetailsSummary %}
