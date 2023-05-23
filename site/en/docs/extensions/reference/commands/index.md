@@ -2,10 +2,6 @@
 api: commands
 ---
 
-## Manifest
-
-You must have a `"manifest_version"` of at least `2` to use this API.
-
 ## Usage
 
 The Commands API allows extension developers to define specific commands, and bind them to a default
@@ -123,7 +119,7 @@ Key combinations that involve `Ctrl+Alt` are not permitted in order to avoid con
 }
 ```
 
-In your background page, you can bind a handler to each of the commands defined in the manifest
+In your service worker, you can bind a handler to each of the commands defined in the manifest
 using `onCommand.addListener`. For example:
 
 ```js
@@ -134,10 +130,8 @@ chrome.commands.onCommand.addListener((command) => {
 
 ### Action commands
 
-The `_execute_action` (Manifest V3), `_execute_browser_action` (Manifest V2), and
-`_execute_page_action` (Manifest V2) commands are reserved for the action of trigger your action,
-browser action, or page action respectively. These commands do not dispatch
-[command.onCommand][event-oncommand] events like standard commands.
+The `_execute_action` command is reserved for triggering your action,
+it does not dispatch [command.onCommand][event-oncommand] events like standard commands.
 
 If you need to take action based on your popup opening, consider listening for a
 [DOMContentLoaded][html-dcl] event inside your popup's JavaScript.
@@ -198,7 +192,7 @@ registration as shown in the following example.
   "version": "1.0",
   "manifest_version": 3,
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "service-worker.js"
   },
   "commands": {
     "inject-script": {
@@ -210,7 +204,7 @@ registration as shown in the following example.
 ```
 
 ```js
-// background.js
+// service-worker.js
 chrome.commands.onCommand.addListener((command) => {
   console.log(`Command "${command}" triggered`);
 });
@@ -230,7 +224,7 @@ keyboard shortcut.
   "version": "1.0",
   "manifest_version": 3,
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "service-worker.js"
   },
   "permissions": ["activeTab", "scripting"],
   "action": {},
@@ -246,7 +240,7 @@ keyboard shortcut.
 ```
 
 ```js
-// background.js
+// service-worker.js
 chrome.action.onClicked.addListener((tab) => {
   chrome.scripting.executeScript({
     target: {tabId: tab.id},
@@ -279,7 +273,7 @@ of commands returned by `commands.getAll()`.
 {% endAside %}
 
 ```js
-// background.js
+// service-worker.js
 chrome.runtime.onInstalled.addListener((reason) => {
   if (reason === chrome.runtime.OnInstalledReason.INSTALL) {
     checkCommandShortcuts();
