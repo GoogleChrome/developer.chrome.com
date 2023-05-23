@@ -20,6 +20,8 @@ The ability to query a parent’s inline size, and container query unit values r
 
 However, the [containment spec](https://www.w3.org/TR/css-contain-3/) includes more than just size queries; it also enables querying a parent's style values. From Chromium 111, you’ll be able to apply style containment for custom property values and query a parent element for the value of a custom property. 
 
+{% BrowserCompat 'css.at-rules.container.style_queries_for_custom_properties' %}
+
 This means that we have even more logical control of styles in CSS, and enables  better separation of an application’s logic and data layer from its styles.
 
 The CSS Containment Module Level 3 spec, which covers size and style queries, allows for any styles to be queried from a parent, including property and value pairs such as `font-weight: 800`. However, in the rollout of this feature, style queries currently only work with CSS custom property values. This is still very useful for combining styles and separating data from design. Let’s take a look at how you use style queries with CSS custom properties:
