@@ -3,14 +3,13 @@ layout: "layouts/doc-post.njk"
 title: "Cross-origin embedder policy"
 seoTitle: "Chrome Extensions: cross_origin_embedder_policy"
 date: 2021-08-03
-#updated:
+updated:
 description: Reference documentation for the cross_origin_embedder_policy property of manifest.json.
 ---
 
 The `cross_origin_embedder_policy` manifest key lets the extension specify a value for the
 [Cross-Origin-Embedder-Policy][mdn-coep] (COEP) response header for requests to the extension's
-origin.  This includes the extension's background context (service worker or background page),
-popup, options page, tabs that are open to an extension resource, etc.
+origin.  This includes the extension's service worker, popup, options page, tabs that are open to an extension resource, etc.
 
 Together with [cross_origin_opener_policy][doc-coop], this key allows the extension to opt
 into [cross-origin isolation][doc-coi].
@@ -23,8 +22,8 @@ This key was introduced in Chrome 93.
 
 {% endAside %}
 
-The `cross_origin_embedder_policy` manifest key takes an object. This object should only contain one
-property named `value` with a string value. Chrome uses this string as the value of the
+The `cross_origin_embedder_policy` manifest key takes an object with one
+property named `value` that takes a string. Chrome uses this string as the value of the
 `Cross-Origin-Embedder-Policy` header when serving resources from the extension's origin. For
 example:
 
