@@ -15,6 +15,6 @@ An optional manifest key used to specify a javascript file as the extension serv
       "service_worker": "service-worker.js",
       "type": "module"
     },
-  // ...
+  ...
 }
 ```
