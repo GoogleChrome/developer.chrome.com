@@ -1,18 +1,13 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Cross-origin XMLHttpRequest"
-seoTitle: "Chrome Extensions: Cross-origin XMLHttpRequest"
+title: "Cross-origin Network Requests"
+seoTitle: "Chrome Extensions: Cross-origin Network Requests"
 date: 2012-09-18
-updated: 2020-03-09
-description: How to implement cross-origin XHR in your Chrome Extension.
+updated: 2023-05-23
+description: How to implement cross-origin network requests in your Chrome Extension.
 ---
 
-{% Aside 'warning' %}
-In Manifest V3, `XMLHttpRequest` is not supported in background pages (provided by Service Workers).
-Please consider using its modern replacement, `fetch()`.
-{% endAside %}
-
-Regular web pages can use the [`XMLHttpRequest`][1] object to send and receive data from remote
+Regular web pages can use the [`XMLHttpRequest`][1] or [fetch()][13] objects to send and receive data from remote
 servers, but they're limited by the [same origin policy][2]. [Content scripts][3] initiate requests
 on behalf of the web origin that the content script has been injected into and therefore content
 scripts are also subject to the [same origin policy][4]. (Content scripts have been subject to [CORB
@@ -23,15 +18,13 @@ its origin, as long as the extension requests cross-origin permissions.
 ## Extension origin {: #extension-origin }
 
 Each running extension exists within its own separate security origin. Without requesting additional
-privileges, the extension can use `XMLHttpRequest` to get resources within its installation. For
+privileges, the extension can use `fetch()` to get resources within its installation. For
 example, if an extension contains a JSON configuration file called `config.json`, in a
 `config_resources` folder, the extension can retrieve the file's contents like this:
 
 ```js
-var xhr = new XMLHttpRequest();
-xhr.onreadystatechange = handleStateChange; // Implemented elsewhere.
-xhr.open("GET", chrome.extension.getURL('/config_resources/config.json'), true);
-xhr.send();
+const response = await fetch('/config_resources/config.json');
+const jsonData =  await response.json();
 ```
 
 If the extension attempts to use a security origin other than itself, say https://www.google.com,
@@ -86,56 +79,31 @@ When using resources retrieved via `XMLHttpRequest`, your background page should
 fall victim to [cross-site scripting][9]. Specifically, avoid using dangerous APIs such as the
 below:
 
-```js
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "https://api.example.com/data.json", true);
-xhr.onreadystatechange = function() {
-  if (xhr.readyState == 4) {
-    // WARNING! Might be evaluating an evil script!
-    var resp = eval("(" + xhr.responseText + ")");
-    ...
-  }
-}
-xhr.send();
-```
 
 ```js
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "https://api.example.com/data.json", true);
-xhr.onreadystatechange = function() {
-  if (xhr.readyState == 4) {
+const response = await fetch("https://api.example.com/data.json");
+const jsonData = await response.json();
     // WARNING! Might be injecting a malicious script!
-    document.getElementById("resp").innerHTML = xhr.responseText;
+    document.getElementById("resp").innerHTML = jsonData;
     ...
-  }
-}
-xhr.send();
 ```
 
 Instead, prefer safer APIs that do not run scripts:
 
 ```js
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "https://api.example.com/data.json", true);
-xhr.onreadystatechange = function() {
-  if (xhr.readyState == 4) {
+const response = await fetch("https://api.example.com/data.json");
+const jsonData = await response.json();
     // JSON.parse does not evaluate the attacker's scripts.
-    var resp = JSON.parse(xhr.responseText);
-  }
-}
-xhr.send();
+    let resp = JSON.parse(jsonData);
+
 ```
 
 ```js
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "https://api.example.com/data.json", true);
-xhr.onreadystatechange = function() {
-  if (xhr.readyState == 4) {
+const response = await fetch("https://api.example.com/data.json");
+const jsonData = response.json();
     // textContent does not let the attacker inject HTML elements.
-    document.getElementById("resp").textContent = xhr.responseText;
-  }
-}
-xhr.send();
+    document.getElementById("resp").textContent = jsonData;
+
 ```
 
 ### Limiting content script access to cross-origin requests {: #xhr-vs-content-scripts }
@@ -183,7 +151,7 @@ Instead, design message handlers that limit the resources that can be fetched. B
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
       if (request.contentScriptQuery == 'queryPrice') {
-        var url = 'https://another-site.com/price-query?itemId=' +
+        const url = 'https://another-site.com/price-query?itemId=' +
             encodeURIComponent(request.itemId);
         fetch(url)
             .then(response => response.text())
@@ -226,3 +194,4 @@ be careful when explicitly adding either the `connect-src` or `default-src` dire
 [10]: /docs/extensions/mv3/security#content_scripts
 [11]: https://en.wikipedia.org/wiki/Man-in-the-middle_attack
 [12]: /docs/extensions/mv3/intro/mv3-migration/#content-security-policy
+[13]: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
