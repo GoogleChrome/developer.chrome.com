@@ -595,13 +595,13 @@ In order for all of this to transition popovers in and out smoothly, the web nee
 
 As a part of the work to enable nice transitions for popovers, selectmenus, and even existing elements like dialogs or custom components, browsers are enabling new plumbing to support these animations.
 
-The following popover demo, animates popovers in and out using `:popover-open` for the open state, `@initial` for the before-open state, and applies a transform value to the element directly for the after-open-is-closed state. To make this all work with display, it needs adding to the `transition` property, like so:
+The following popover demo, animates popovers in and out using `:popover-open` for the open state, `@starting-style` for the before-open state, and applies a transform value to the element directly for the after-open-is-closed state. To make this all work with display, it needs adding to the `transition` property, like so:
 
 ```css
 .settings-popover {
   &:popover-open {
     /*   0. before-change   */
-    @initial {
+    @starting-style {
       transform: translateY(20px);
       opacity: 0;
     }
@@ -630,10 +630,6 @@ The following popover demo, animates popovers in and out using `:popover-open` f
   height: 500,
   tab: 'result'
 } %}
-
-{% Aside 'caution' %}
-This is currently an experimental API, and the syntax for `@initial` might change before going stable.
-{% endAside %}
 
 ## Interactions
 
