@@ -12,7 +12,8 @@ An optional manifest key used to specify a javascript file as the extension serv
 {
   // ...
    "background": {
-      "service_worker": "service-worker.js"
+      "service_worker": "service-worker.js",
+      "type": "module"
     },
   // ...
 }
