@@ -213,7 +213,7 @@ chrome.commands.onCommand.addListener((command) => {
 ### Action command
 
 As described in the [Usage][header-usage] section, you can also map a command to an extension's
-action, browser action, or page action. The following example injects a content script that shows an
+action. The following example injects a content script that shows an
 alert on the current page when the user either clicks the extension's action or triggers the
 keyboard shortcut.
 
