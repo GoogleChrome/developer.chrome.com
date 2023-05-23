@@ -152,6 +152,7 @@ let us know where and how you are using it.
 - [Launch Handler API Demo][demo] | [Launch Handler API Demo source][demo-source]
 - [Chromium tracking bug][cr-bug]
 - [ChromeStatus.com entry][cr-status]
+- [TypeScript definitions][typescript]
 - Blink Component: [`Blink>AppManifest`][blink-component]
 - [TAG Review](https://github.com/w3ctag/design-reviews/issues/683)
 - [Intent to Prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/8tNe2jrJ78A)
@@ -167,3 +168,4 @@ let us know where and how you are using it.
 [cr-dev-twitter]: https://twitter.com/ChromiumDev
 [powerful-apis]:
   https://chromium.googlesource.com/chromium/src/+/lkgr/docs/security/permissions-for-powerful-web-platform-features.md
+[typescript]: https://www.npmjs.com/package/@types/wicg-web-app-launch
