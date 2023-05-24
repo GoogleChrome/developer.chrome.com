@@ -7,6 +7,7 @@ description: |
 date: 2019-05-02
 updated: 2021-06-04
 ---
+{% Aside 'caution' %} Time to Interactive was [deprecated in Lighthouse 8.0](https://github.com/GoogleChrome/lighthouse/blob/main/docs/v8-perf-faq.md) and [removed in Lighthouse 10.0](https://developer.chrome.com/blog/lighthouse-10-0).  Largest Contentful Paint (LCP) and Speed Index are usually better heuristics. {% endAside %}
 
 Time to Interactive (TTI) is one of six metrics
 tracked in the **Performance** section of the Lighthouse report.
