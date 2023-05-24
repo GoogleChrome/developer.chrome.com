@@ -32,7 +32,7 @@ There are two new samples available that demonstrate how to use WASM in an exten
 - [Using WASM in Manifest V3](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.wasm-helloworld-print-nomodule) shows the general method for including a WASM module. 
 - [Using WASM as a module in Manifest V3](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.wasm-helloworld-print) shows how to use it in a module.
 
-Special thanks to Github contributor [@daidr](https://github.com/daidr) for these samples.
+Special thanks to GitHub contributor [@daidr](https://github.com/daidr) for these samples.
 
 ### Updated Manifest V3 migration guidance {: #doc-mv3-migration }
 
