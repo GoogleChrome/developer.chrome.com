@@ -7,7 +7,7 @@ description: >
 subhead: >
   Find out how your server can send hints to the browser about critical sub-resources.
 date: 2022-06-23
-updated: 2023-10-22
+updated: 2023-05-23
 authors:
   - kenjibaheux
 tags:
