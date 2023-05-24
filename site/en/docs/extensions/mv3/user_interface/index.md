@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Design the user interface"
 seoTitle: "Chrome Extensions: Design the user interface"
 date: 2018-03-16
-updated: 2022-04-27
+updated: 2023-05-24
 description: UI and design guidelines for Chrome Extensions.
 ---
 
@@ -339,11 +339,11 @@ The 16x16 icon is displayed next to the new menu entry.
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/jpA0DLCg2sEnwIf4FkLp.png", alt="Context Menu Icon",
 height="300", width="300", class="screenshot" %}
 
-Create a context menu by calling [`contextMenus.create()`][contextmenu-create] in the background
-script. This should be done under the [`runtime.onInstalled`][runtime-oninstalled] listener event.
+Create a context menu by calling [`contextMenus.create()`][contextmenu-create] in the service worker. This should be done under the [`runtime.onInstalled`][runtime-oninstalled] listener event.
+
+{% Label %}service-worker.js:{% endLabel %}
 
 ```js
-// background.js
 chrome.runtime.onInstalled.addListener(async () => {
   for (let [tld, locale] of Object.entries(tldLocales)) {
     chrome.contextMenus.create({
@@ -411,11 +411,12 @@ one or more shortcuts in the manifest under the `"commands"` key.
 
 Commands can be used to provide new or alternative browser shortcuts. The [Tab
 Flipper][sample-tab-flipper] sample extension listens to the
-[`commands.onCommand`][commands-oncommand] event in the [background script][docs-background] and
+[`commands.onCommand`][commands-oncommand] event in the [service worker][docs-background] and
 defines functionality for each registered combination.
 
+{% Label %}service-worker.js:{% endLabel %}
+
 ```js
-// background.js 
 
 chrome.commands.onCommand.addListener(command => {
   // command will be "flip-tabs-forward" or "flip-tabs-backwards"
@@ -485,8 +486,10 @@ system tray.
 To use the [Notifications API][api-notif], you must declare the `"notifications"` permission in
 the manifest.
 
+{% Label %}manifest.json:{% endLabel %}
+
 ```json/5
-// manifest.json
+
 { 
   "name": "Drink Water Event Popup",
 ...
@@ -502,8 +505,9 @@ the manifest.
 Once the permission is declared, you can display a notification by calling
 [`notifications.create()`][notifications-create].
 
+{% Label %}service-worker.js:{% endLabel %}
+
 ```js
-// background.js
 function showStayHydratedNotification() {
   chrome.notifications.create({
     type: 'basic',
@@ -574,8 +578,9 @@ Located in `_locales/es/messages.json`:
 Specify the name of the message in the `"default_title"` field of the manifest. The
 `"default_locale"` field must be defined.
 
+{% Label %}manifest.json:{% endLabel %}
+
 ```json
-// manifest.json
 {
   "name": "Tab Flipper",
   ...
