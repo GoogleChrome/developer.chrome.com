@@ -48,6 +48,24 @@ To configure linear timings, click the linear picker button. To add a control po
 
 Chromium issue: [1421241](https://crbug.com/1421241).
 
+## Application > Bounce Tracking Mitigations {: #bounce-tracking }
+
+[Bounce Tracking Mitigations](https://privacycg.github.io/nav-tracking-mitigations/#bounce-tracking-mitigations) experiment in Chrome lets you identify and delete the states of sites that appear to perform cross-site tracking using the bounce tracking technique. The **Application** > **Background Services** pane gets a new **Bounce Tracking Mitigations** tab that lists the sites with deleted states.
+
+Check out this security feature:
+
+1. [Block third-party cookies in Chrome](https://support.google.com/chrome/answer/95647?hl=en&co=GENIE.Platform%3DAndroid&sjid=2048967673261319866-EU#zippy=%2Callow-or-block-cookies). Navigate to and enable {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N7wEDmtW9lnrSxPRupMa.svg", alt="Three-dot menu.", width="24", height="24" %} > **Settings** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JbhmMshze0QJJVcmDr30.svg", alt="Security.", width="24", height="24" %} **Privacy and security** > **Cookies and other site data** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gV2vW2PQXfBqvQEJ4sF0.svg", alt="Radio button checked.", width="24", height="24" %} **Block third-party cookies**.
+1. In `chrome://flags`, set the **Bounce Tracking Mitigations** experiment to **Enabled With Deletion**.
+1. Open DevTools on this [demo page](https://bounce-tracking-demo.glitch.me/). In **Application** > **Background Services** > **Bounce Tracking Mitigations**, click a bounce link on the demo page, and wait for Chrome to delete the state. It takes 10 seconds.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/PJ8FUFF64ogdBNyFNPuB.png", alt="Bounce Tracking Mitigations lists a state deletion.", width="800", height="701" %}
+
+Additionally, the **Issues** tab warns you about the upcoming state deletion.
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/ace8e94508b6f0f63aa25fe40f65d675d3c98f81 #}
+
+Chromium issue: [1432303](https://crbug.com/1432303).
+
 ##  {: #content-script }
 
 ##  {: #breakpoint }
