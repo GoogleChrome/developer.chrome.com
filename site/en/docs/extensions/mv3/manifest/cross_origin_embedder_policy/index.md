@@ -2,8 +2,8 @@
 layout: "layouts/doc-post.njk"
 title: "Cross-origin embedder policy"
 seoTitle: "Chrome Extensions: cross_origin_embedder_policy"
-date: 2023-05-24
-updated:
+date: 2021-08-03
+updated: 2023-05-24
 description: Reference documentation for the cross_origin_embedder_policy property of manifest.json.
 ---
 
