@@ -77,7 +77,7 @@ document.body.appendChild(svg);
 
 ## Live examples
 
-[This page](https://dbratell.github.io/svg-use-icons/) has live exmaples for the alternaives explained.
+[This page](https://shhnjk.github.io/svg-use-icons/) has live exmaples for the alternaives explained.
 
 I hope these resources will make your migration smooth and easier!
 Thank you for your help in making the Web more secure and compatible place!
