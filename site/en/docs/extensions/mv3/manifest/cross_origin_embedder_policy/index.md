@@ -22,7 +22,7 @@ This key was introduced in Chrome 93.
 
 {% endAside %}
 
-The `cross_origin_embedder_policy` manifest key takes an object with one
+The `cross_origin_embedder_policy` manifest key contains an object with one
 property named `value` that takes a string. Chrome uses this string as the value of the
 `Cross-Origin-Embedder-Policy` header when serving resources from the extension's origin. For
 example:
