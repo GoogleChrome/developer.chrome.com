@@ -224,7 +224,7 @@ You set up an anchor by giving it an `id` (in this example, `#menu-toggle`), and
 
 ```css
 #menu-items {
-  bottom: calc(anchor(bottom));
+  bottom: anchor(bottom);
   left: anchor(center);
   translate: -50% 0;
 }
