@@ -17,15 +17,22 @@ Check this page often to learn about changes to Chrome extensions, extensions do
 
 ### Chrome 114: New Side Panel API {: #side-panel-launch }
 
+<p class="color-secondary-text type--caption">Posted on <time>May 24, 2023</time></p>
+
 Introducing the new Side Panel API - a companion surface that allows users to access tools alongside the content they are browsing. To learn more, visit the [Side Panel API reference](/docs/extensions/reference/sidePanel/). Additionally, we've added many side panel samples to our [GitHub sample repository](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples). We also share more about side panels in the new blog post [Designing a Superior User Experience with the New Side Panel API](/blog/extension-side-panel-launch). Our [quality guidelines policy](/docs/webstore/program-policies/quality-guidelines/) and [best practices](/docs/webstore/best_practices/#design-a-high-quality-extension) have also been reviewed to provide further guidance on creating high-quality side panel extensions. 
 
-Your feedback is important in crafting this API; please share your thoughts and features requests in the [chromium-groups](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/cJmdMLmpbjg/m/zYGc54AaAQAJ). Stay tuned for new updates as we continue to enhance the Side Panel API.
+Your feedback is important in crafting this API; please share your thoughts and feature requests in the [chromium-groups](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/cJmdMLmpbjg/m/zYGc54AaAQAJ). Stay tuned for new updates as we continue to enhance the Side Panel API.
 
 ### New Samples: WASM in extensions {: #samples-wasm }
 
 <p class="color-secondary-text type--caption">Posted on <time>May 17, 2023</time></p>
 
-We've release two samples demonstrating how to use WASM in an extension. [Using WASM in Manifest V3](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.wasm-helloworld-print-nomodule) shows the general method for including a WASM module. [Using WASM as a module in Manifest V3](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.wasm-helloworld-print) shows how to use it in a module.
+There are two new samples available that demonstrate how to use WASM in an extension: 
+
+- [Using WASM in Manifest V3](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.wasm-helloworld-print-nomodule) shows the general method for including a WASM module. 
+- [Using WASM as a module in Manifest V3](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.wasm-helloworld-print) shows how to use it in a module.
+
+Special thanks to Github contributor [@daidr](https://github.com/daidr) for these samples.
 
 ### Updated Manifest V3 migration guidance {: #doc-mv3-migration }
 
