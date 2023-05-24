@@ -153,3 +153,5 @@ Available in DevTools is support to visualize and edit the result of `linear()`.
 </figure>
 
 This DevTools feature is available in DevTools shipping with Chrome 114.
+
+_Photo by [Howie Mapson](https://unsplash.com/@howiehowei) on [Unsplash](https://unsplash.com/photos/lG6sv7jnBZk)_
