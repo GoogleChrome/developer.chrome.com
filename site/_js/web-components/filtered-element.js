@@ -21,8 +21,6 @@
 import {BaseStateElement} from './base-state-element';
 //import {html} from 'lit-element';
 
-import {unsafeHTML} from 'lit-html/directives/unsafe-html';
-
 export class FilteredElement extends BaseStateElement {
   static get properties() {
     return {
@@ -55,10 +53,7 @@ export class FilteredElement extends BaseStateElement {
 
     // Remove any empty filter arrays
     for (const key in activeFilters) {
-      if (
-        Object.prototype.hasOwnProperty.call(activeFilters, key) &&
-        activeFilters[key].length === 0
-      ) {
+      if (activeFilters[key] && activeFilters[key].length === 0) {
         delete activeFilters[key];
       }
     }
@@ -71,18 +66,15 @@ export class FilteredElement extends BaseStateElement {
     }
 
     // Hide elements that don't match the active filters
-    this.hidden = true;
+    this.hidden = false;
 
-    for (const [filter, filterValues] of Object.entries(activeFilters)) {
-      const values = filterValues.map(value => value.value);
-      if (this.filters && values.includes(this.filters[filter])) {
-        this.hidden = false;
+    for (const [filterName, filterInput] of Object.entries(activeFilters)) {
+      const values = filterInput.map(input => input.value);
+      console.log(filterName, values);
+      if (this.filters && !values.includes(this.filters[filterName])) {
+        this.hidden = true;
       }
     }
-  }
-
-  render() {
-    return unsafeHTML(this.content);
   }
 }
 customElements.define('filtered-element', FilteredElement);

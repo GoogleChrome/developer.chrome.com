@@ -71,7 +71,7 @@ export class TagPillList extends BaseElement {
       this.items.length > 0
         ? html`
             <span
-              class="clear-filters tag-pill surface hairline type--label display-inline-flex align-center"
+              class="clear-filters tag-pill surface hairline type--small display-inline-flex align-center"
               @click="${() => this._onClickClearPills()}"
             >
               Clear filters
@@ -81,7 +81,7 @@ export class TagPillList extends BaseElement {
       this.items.map(
         item => html`
           <span
-            class="surface hairline rounded-lg tag-pill type--label display-inline-flex align-center "
+            class="surface hairline rounded-lg tag-pill type--small display-inline-flex align-center "
             data-name="${item.name}"
             data-value="${item.value}"
             @click="${() => this._onClickPill(item)}"

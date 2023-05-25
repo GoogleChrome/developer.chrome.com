@@ -1,27 +1,21 @@
 {% from 'macros/icon.njk' import icon with context %}
 
 <div class="filters align-center">
-  <span class="color-secondary-text">
+  <span class="label color-secondary-text">
     {{ 'i18n.filter_sheet.filter_by' | i18n(locale) }}:
   </span>
   <enhanced-select id="feed-source" class="deprecations-filter gap-right-300" label="Source" fixedLabel multiple>
     <select name="source" >
-      {% for source in availableSources %}
-        <option value="{{ source.value }}">{{ source.name }}</option>
+      {% for source in author.sources %}
+        <option value="{{ source }}">{{ source }}</option>
       {% endfor %}
     </select>
   </enhanced-select>
   <enhanced-select id="feed-type" class="deprecations-filter gap-right-300" label="Type" fixedLabel multiple>
     <select name="type">
-      {% for type in availableTypes %}
-        <option value="{{ type.value }}">{{ type.name }}</option>
-      {% endfor %}
-    </select>
-  </enhanced-select>
-  <enhanced-select id="feed-credit" class="deprecations-filter gap-right-300" label="Credit" fixedLabel multiple>
-    <select name="credit">
-      <option value="author">Author</option>
-      <option value="editor">Editor</option>
+      <option value="blogPost">{{ 'i18n.common.blog_post' | i18n(locale) }}</option>
+      <option value="article">{{ 'i18n.common.article' | i18n(locale) }}</option>
+      <option value="external">{{ 'i18n.common.external_post' | i18n(locale) }}</option>
     </select>
   </enhanced-select>
 </div>
@@ -37,10 +31,10 @@
           <section class="gap-bottom-500">
             <p class="type--h5 weight-medium gap-bottom-200">Source</p>
             <checkbox-group show="5" i18n='{"select_all":"{{ "i18n.filter_sheet.select_all" | i18n(locale) }}", "reset":"{{ "i18n.filter_sheet.reset" | i18n(locale) }}"}'>
-              {% for source in availableSources %}
+              {% for source in author.sources %}
                 <label>
-                  <input type="checkbox" name="source" value="{{ source.value }}"/>
-                  {{ source.name }}
+                  <input type="checkbox" name="source" value="{{ source }}"/>
+                  {{ source }}
                 </label>
               {% endfor %}
             </checkbox-group>
@@ -49,25 +43,14 @@
             <p class="type--h5 weight-medium gap-bottom-200">Type</p>
            <checkbox-group show="5" i18n='{"select_all":"{{ "i18n.filter_sheet.select_all" | i18n(locale) }}", "reset":"{{ "i18n.filter_sheet.reset" | i18n(locale) }}"}'>
               <label>
-                <input type="checkbox" name="type" value="articles"/> Articles
+                <input type="checkbox" name="type" value="blogPost"/> {{ 'i18n.common.blog_post' | i18n(locale) }}
               </label>
               <label>
-                <input type="checkbox" name="type" value="blogs"/> Blogs
+                <input type="checkbox" name="type" value="article"/> {{ 'i18n.common.article' | i18n(locale) }}
               </label>
               <label>
-                <input type="checkbox" name="type" value="rss"/> RSS feed
+                <input type="checkbox" name="type" value="external"/> {{ 'i18n.common.external_post' | i18n(locale) }}
               </label>
-            </checkbox-group>
-          </section>
-          <section class="gap-bottom-500">
-            <p class="type--h5 weight-medium gap-bottom-200">Credit</p>
-           <checkbox-group show="5" i18n='{"select_all":"{{ "i18n.filter_sheet.select_all" | i18n(locale) }}", "reset":"{{ "i18n.filter_sheet.reset" | i18n(locale) }}"}'>
-              {% for type in availableTypes %}
-                <option value="{{ type.value }}">{{ type.name }}</option>
-                <label>
-                  <input type="checkbox" name="credit" value="{{ type.value }}"/> {{ type.name }}
-                </label>
-              {% endfor %}
             </checkbox-group>
           </section>
         </div>
@@ -88,7 +71,6 @@
       class="filter-modal__opener surface color-blue-medium hairline rounded-lg tag-pill">
       {{ icon('filters') }}{{ 'i18n.filter_sheet.filters' | i18n(locale) }}
     </span>
-    <span class="clear-filters tag-pill surface hairline type--label display-inline-flex align-center" hidden>{{ 'i18n.filter_sheet.clear_filters' | i18n(locale) }}</span>
     <tag-pill-list id="active-filters"></tag-pill-list>
   </div>
 </filter-modal>

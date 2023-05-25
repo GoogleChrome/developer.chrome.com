@@ -235,7 +235,19 @@
     "image": "image/T4FyVKpzu4WKF1kBNvXepbi08t52/0O1ZGr2P0l9oTKabyUK5.jpeg",
     "featuredPost": {
       "url": "/blog/insider-dec-22"
-    }
+    },
+    "external": [
+      {
+        "label": "paul.kinlan.me",
+        "type": "rss",
+        "url": "https://paul.kinlan.me/index.xml"
+      },
+      {
+        "label": "web.dev",
+        "type": "rss",
+        "url": "https://web.dev/authors/paulkinlan/feed.xml"
+      }
+    ]
   },
   "joemedley": {
     "github": "jpmedley",
@@ -912,7 +924,14 @@
     "github": "bramus",
     "mastodon": "https://front-end.social/@bramus",
     "country": "BE",
-    "image": "image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/CQMqvg5UkY4weDnJij3b.jpeg"
+    "image": "image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/CQMqvg5UkY4weDnJij3b.jpeg",
+    "external": [
+      {
+        "label": "web.dev",
+        "type": "rss",
+        "url": "https://web.dev/authors/bramus/feed.xml"
+      }
+    ]
   },
   "victorporof": {
     "image": "image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/ltT5ZFZLzSdlecQmoxMK.jpg",

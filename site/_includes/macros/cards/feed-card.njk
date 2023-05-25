@@ -24,12 +24,6 @@
         </a>
       </h2>
 
-    {% if pd.description %}
-      <p class="type--caption gap-top-300">
-        {{ pd.description | safe }}
-      </p>
-    {% endif %}
-
     {% if thumbnail %}
       <div class="feed-card__thumbnail gap-top-400">
         <a class="display-block" href="{{ post.url }}" {% if not alt %}aria-hidden="true" tabindex="-1"{% endif %}>
@@ -44,6 +38,21 @@
         </a>
       </div>
     {% endif %}
+
+    {% if pd.description %}
+      <p class="type--caption gap-top-300">
+        {{ pd.description | safe }}
+      </p>
+    {% endif %}
+
+    {% set tags = pd.tags %}
+    {% include 'partials/tags.njk' %}
+
+    {# Always render "authors" even with zero authors, as this renders the date #}
+    <div class="gap-top-300">
+      {{ cardAuthors(pd.authors, pd.date) }}
+    </div>
+
     </div>
   </div>
 {% endmacro %}

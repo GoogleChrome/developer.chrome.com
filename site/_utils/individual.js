@@ -21,135 +21,99 @@
 const path = require('path');
 const fs = require('fs');
 
-const addPagination = require('../_utils/add-pagination');
 const filterByLocale = require('../_filters/filter-by-locale');
 const {defaultLocale} = require('../_data/site.json');
 const {isExternalLink} = require('../_data/helpers.js');
 
-const authorsDataFile = path.join(
-  __dirname,
-  '../../external/data/external-posts.json'
+const externalPosts = JSON.parse(
+  fs.readFileSync(
+    path.join(__dirname, '../../external/data/external-posts.json'),
+    'utf-8'
+  )
 );
-const authorsFeeds = JSON.parse(fs.readFileSync(authorsDataFile, 'utf-8'));
-const availableFilters = [];
-let availableSources;
-let availableTypes;
 
-/**
- * @param {object[]} availableList
- * @return {void}
- */
-const addAvailableItem = (availableList, item) => {
-  if (!availableList.length) {
-    availableList.push(item);
-    return;
-  }
-
-  const itemsFiltered = availableList.filter(availableItem => {
-    return availableItem.value === item.value;
-  });
-
-  if (!itemsFiltered.length) {
-    availableList.push(item);
-  }
-};
+const DEFAULT_SOURCE = 'developer.chrome.com';
 
 /**
  * @param {string} url
- * @return {PostTypes}
+ * @return {string}
  */
-const getFeedType = url => {
+const getPostType = url => {
   if (isExternalLink(url)) {
-    addAvailableItem(availableTypes, {name: 'RSS feed', value: 'rssFeed'});
-    return 'rssFeed';
+    return 'external';
   }
 
   const pathnameList = url.split('/');
   if (pathnameList.includes('articles')) {
-    addAvailableItem(availableTypes, {name: 'Articles', value: 'article'});
     return 'article';
   }
 
-  addAvailableItem(availableTypes, {name: 'Blogs', value: 'blogPost'});
   return 'blogPost';
 };
 
 /**
- * @param {string} source
- */
-const addAvailableSource = source => {
-  let sourceTitle = source;
-
-  if (source === 'webdev') {
-    sourceTitle = 'web.dev';
-  } else if (source === 'dcc') {
-    sourceTitle = 'developer.chrome.com';
-  }
-
-  addAvailableItem(availableSources, {name: sourceTitle, value: source});
-};
-
-/**
- * @param {VirtualCollectionItem[]} items
+ * @param {VirtualCollectionItem[]} authors
  * @param {string} [locale]
- * @return {PaginatedPage[]}
+ * @return {VirtualCollectionItem[]}
  */
-const individual = (items, locale) => {
-  /** @type PaginatedPage[] */
-  let paginated = [];
-  for (const item in items) {
-    const authorKey = items[item].key;
-    const authorsFeedsObj = Object.assign({}, ...authorsFeeds);
-    const feeds = authorsFeedsObj[authorKey];
+const individual = (authors, locale) => {
+  const authorsWithExternalPosts = [];
+  for (const author of authors) {
+    author.sources = new Set();
+    author.postTypes = new Set();
 
-    availableSources = [];
-    availableTypes = [];
+    if (author.elements?.length > 0) {
+      author.sources.add(DEFAULT_SOURCE);
+      for (const element of author.elements) {
+        const postType = getPostType(element.url);
+        element.source = DEFAULT_SOURCE;
+        element.type = postType;
+      }
+    }
 
-    if (feeds) {
-      items[item] = items[item] || {};
-      for (const feed of feeds) {
-        const element = {
-          title: feed.title,
-          description: feed.summary,
-          source: feed.source,
+    const authorExternalPosts = externalPosts[author.key];
+    if (authorExternalPosts) {
+      for (const externalPost of authorExternalPosts) {
+        const postType = getPostType(externalPost.url);
+        author.postTypes.add(postType);
+
+        author.sources.add(externalPost.source);
+
+        // Prepare a structure that is compatible with the existing
+        // `author.posts` structure, coming from 11ty data.
+        const postDetails = {
+          title: externalPost.title,
+          description: externalPost.summary,
+          source: externalPost.source,
+          // Assume all external posts are in English.
           locale: defaultLocale,
-          type: getFeedType(feed.url),
-          date: new Date(feed.date),
-          url: feed.url,
+          type: postType,
+          date: new Date(externalPost.date),
+          url: externalPost.url,
         };
 
-        if (!items[item].elements) {
-          items[item].elements = [];
+        if (!author.elements) {
+          author.elements = [];
         }
 
-        items[item].elements.push(element);
-
-        addAvailableSource(feed.source);
+        author.elements.push(postDetails);
       }
     }
 
-    if (items[item].elements?.length > 0) {
-      for (const element of items[item].elements) {
-        element.type = getFeedType(element.url);
-      }
+    // This not just filters by locale but also sorts by date.
+    author.elements = filterByLocale(author.elements, locale);
 
-      const posts = filterByLocale(items[item].elements, locale);
-      paginated = paginated.concat(addPagination(posts, items[item]));
+    // Convert sources and types to arrays, to make them easier to work with
+    // in Nunjucks.
+    author.sources = Array.from(author.sources);
+    author.postTypes = Array.from(author.postTypes);
 
-      const internalSource = 'dcc';
-      addAvailableSource(internalSource);
-    }
-
-    availableFilters.push({
-      key: authorKey,
-      sources: availableSources,
-      types: availableTypes,
-    });
+    authorsWithExternalPosts.push(author);
   }
-  return paginated;
+
+  return authorsWithExternalPosts;
 };
 
 module.exports = {
-  availableFilters,
   individual,
 };

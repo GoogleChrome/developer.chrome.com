@@ -1,14 +1,18 @@
 .feed-grid {
-  column-count: 1;
-  column-gap: get-size(0);
+  align-items: start;
+  display: grid;
+  gap: get-size(400);
+  grid-template-columns: 1fr;
+  justify-content: center;
+  justify-items: center;
 
-  @media screen and (min-width: 992px) and (max-width: 1230px) {
-    column-count: 2;
-    column-gap: get-size(500);
+  filtered-element {
+    width: 100%;
   }
 
-  @include media-query('xl') {
-    column-count: 3;
+  @include media-query('md') {
+    gap: get-size(500);
+    grid-template-columns: repeat(auto-fit, $blog-card-size);
   }
 }
 

@@ -8,11 +8,9 @@
     display: none;
   }
 
-  > span {
+  .label {
     font-size: 1rem;
-    font-weight: 500;
     margin-right: 1rem;
-    text-transform: uppercase;
   }
 
   .enhanced-select__wrapper {

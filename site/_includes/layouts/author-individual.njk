@@ -16,10 +16,10 @@
   <div class="measure-1280 center-margin switcher gap-top-600 gap-bottom-800">
     <div class="author-hero">
       <div class="switcher align-center">
-        {% if paged.image %}
+        {% if author.image %}
           {% Img
-            src=paged.image,
-            alt=paged.title | i18n(locale),
+            src=author.image,
+            alt=author.title | i18n(locale),
             height="192",
             width="192",
             class="rounded-full display-inline-block avatar",
@@ -28,51 +28,51 @@
           %}
         {% endif %}
         <div class="flow">
-          <h1 class="type--h4">{{ paged.title | i18n(locale) }}</h1>
-          <p class="type gap-top-200">{{ paged.description | i18n(locale) | md | safe }}</p>
+          <h1 class="type--h4">{{ author.title | i18n(locale) }}</h1>
+          <p class="type gap-top-200">{{ author.description | i18n(locale) | md | safe }}</p>
         </div>
       </div>
 
       <div class="lg:pad-top-600 lg:pad-bottom-600 pad-top-300 pad-bottom-300 display-flex direction-column">
         <div class="display-flex gap-top-400 md:gap-bottom-200 gap-bottom-500 lg:gap-top-0 author-hero__social">
-          {% if paged.webdev  %}
-            <a rel="me" href="https://web.dev/authors/{{ paged.webdev }}" target="_blank" class="web color-secondary-text social-icon" aria-label="Webdev" target="_blank">
+          {% if author.webdev  %}
+            <a rel="me" href="https://web.dev/authors/{{ author.webdev }}" target="_blank" class="web color-secondary-text social-icon" aria-label="Webdev" target="_blank">
               {{ icon('webdev', {hidden: true}) }}
             </a>
           {% endif %}
 
-          {% if paged.homepage %}
-            <a rel="me" href="{{ paged.homepage }}" aria-label="{{ 'i18n.common.website' | i18n(locale) }}" target="_blank" class="color-secondary-text social-icon">
+          {% if author.homepage %}
+            <a rel="me" href="{{ author.homepage }}" aria-label="{{ 'i18n.common.website' | i18n(locale) }}" target="_blank" class="color-secondary-text social-icon">
               {{ icon('world', {hidden: true}) }}
             </a>
           {% endif %}
-          {% if paged.linkedin  %}
-            <a rel="me" href="https://www.linkedin.com/in/{{ paged.linkedin }}" target="_blank" class="color-secondary-text social-icon" aria-label="LinkedIn">
+          {% if author.linkedin  %}
+            <a rel="me" href="https://www.linkedin.com/in/{{ author.linkedin }}" target="_blank" class="color-secondary-text social-icon" aria-label="LinkedIn">
               {{ icon('linkedin', {hidden: true}) }}
             </a>
           {% endif %}
-          {% if paged.mastodon  %}
-            <a rel="me" href="{{ paged.mastodon }}" target="_blank" class="color-secondary-text social-icon" aria-label="Mastodon">
+          {% if author.mastodon  %}
+            <a rel="me" href="{{ author.mastodon }}" target="_blank" class="color-secondary-text social-icon" aria-label="Mastodon">
               {{ icon('mastodon', {hidden: true}) }}
             </a>
           {% endif %}
-          {% if paged.github %}
-            <a rel="me" href="https://github.com/{{ paged.github }}" target="_blank" class="color-secondary-text social-icon" aria-label="GitHub">
+          {% if author.github %}
+            <a rel="me" href="https://github.com/{{ author.github }}" target="_blank" class="color-secondary-text social-icon" aria-label="GitHub">
               {{ icon('github', {hidden: true}) }}
             </a>
           {% endif %}
-          {% if paged.glitch  %}
-            <a rel="me" href="https://glitch.com/@{{ paged.glitch }}" target="_blank" class="color-secondary-text social-icon" aria-label="Glitch">
+          {% if author.glitch  %}
+            <a rel="me" href="https://glitch.com/@{{ author.glitch }}" target="_blank" class="color-secondary-text social-icon" aria-label="Glitch">
               {{ icon('glitch', {hidden: true}) }}
             </a>
           {% endif %}
-          {% if paged.twitter %}
-            <a rel="me" href="https://twitter.com/{{ paged.twitter }}" target="_blank" class="color-secondary-text social-icon" aria-label="Twitter">
+          {% if author.twitter %}
+            <a rel="me" href="https://twitter.com/{{ author.twitter }}" target="_blank" class="color-secondary-text social-icon" aria-label="Twitter">
               {{ icon('twitter', {hidden: true}) }}
             </a>
           {% endif %}
-          {% if paged.rss  %}
-            <a rel="me" href="{{ paged.rss }}" class="color-secondary-text social-icon" aria-label="RSS">
+          {% if author.rss  %}
+            <a rel="me" href="{{ author.rss }}" class="color-secondary-text social-icon" aria-label="RSS">
               {{ icon('rss-author', {hidden: true}) }}
             </a>
           {% endif %}
@@ -88,8 +88,8 @@
           {% endif %}
         {% endmacro %}
 
-        {% if paged.bio %} 
-          {% set bio = paged.bio %}
+        {% if author.bio %} 
+          {% set bio = author.bio %}
           {% if bio %}
             <div class="author-hero__bio"> {{ renderBio(bio) }} </div>
 
@@ -105,8 +105,8 @@
     </div>
 
     <div class="author-featured lg:gap-top-0 gap-top-400">
-      {% if paged.featuredPost %}
-        {% set featured = paged.featuredPost %}
+      {% if author.featuredPost %}
+        {% set featured = author.featuredPost %}
         {% set post = helpers.findByUrl(collections.all, featured.url, 'en') %}
 
         {% if post %}
@@ -138,37 +138,35 @@
     </div>
   </div>
 
-  <div class="measure-1280 width-full center-margin pad-left-400 pad-right-400">
+  <div class="measure-1280 width-full center-margin">
     {% include 'partials/feeds-filter.njk' %}
   
     <div class="feed-grid gap-top-500 gap-bottom-500">
-        {% for item in paged.pagination.items %}
-          {% set source = item.source or 'dcc'%}
+        {% for post in author.elements %}
+          {% set source = post.source or 'dcc'%}
           <filtered-element
-            class="filtered-item"
             data-filter-source="{{ source }}"
-            data-filter-type="{{ item.type }}"
+            data-filter-type="{{ post.type }}"
             data-filter-credit="author"
           >
-            {% set post = {
+            {% set postDetails = {
               data: {
-                thumbnail: item.thumbnail,
-                title: item.title,
-                alt: item.title,
-                description: item.description,
-                tags: item.tags,
-                type: item.type,
-                authors: item.authors,
-                source: item.source,
-                date: item.date
+                thumbnail: post.thumbnail,
+                title: post.title,
+                alt: post.title,
+                description: post.description,
+                tags: post.tags,
+                type: post.type,
+                authors: post.authors,
+                source: post.source,
+                date: post.date
               },
-              url: item.url
+              url: post.url
             } %}
-            {{ feedCard(post) }}
+            {{ feedCard(postDetails) }}
           </filtered-element>
         {% endfor %}
     </div>
-    {% include 'partials/pagination.njk' %}
   </div>
 </div>
 {% endblock %}
