@@ -56,11 +56,6 @@ Is the design consistent with the rest of my extension?
 How do users discover my side panel?
 : Let new users know how to use your side panel by providing sufficient documentation or training within the extension. This will help you retain users and avoid bad reviews in your store listing. Remember, you can start to teach users before they install the extension by including a YouTube video that shows how your extension works in your store listing!
 
-* **How does my side panel help the user?:** The single-purpose policy also applies to your side panel. Make sure that your side panel provides functionality that directly relates to the rest of your extension and what the user is trying to achieve.
-* **Does my side panel only appear when it’s helpful?:** The Side Panel API lets you choose which sites your users will see the side panel on. This way you can avoid showing it when it isn’t relevant to the user.
-* **Is the design consistent with the rest of my extension?:** Your side panel should have a visually appealing design that matches the logo, colors, icons, and fonts of your extension and store listing. This provides users a consistent, recognisable experience wherever they are using your extension.
-* **How do users discover my side panel?:** Let new users know how to use your side panel by providing sufficient documentation or training within the extension. This will help you retain users and avoid bad reviews. Remember, you can start to teach users before they install the extension by including a [YouTube video][cws-graphics] that shows how your extension works in your store listing!
-
 We’ve also updated our [Program Policies](/docs/webstore/program-policies/), with updates to our [Best Practices](/docs/webstore/program-policies/best-practices/) and [Quality Guidelines](/docs/webstore/program-policies/quality-guidelines/) sections to reflect some of these considerations. These changes highlight that your side panel should act as a helpful companion to users' browsing experiences by providing complementary functionality. They also make it clear that your side panel shouldn’t have unnecessary distractions.
 
 ## An overview of the API {: #overview }
