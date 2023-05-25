@@ -97,7 +97,7 @@ The icon for your side panel will be taken from your [extension’s icon][manife
 
 ## Extra capabilities {: #capabilities }
 
-You can also link the side panel to your action icon, so it can be easily opened by users at any time:
+You can link the side panel to your action icon, so it can be easily opened at any time:
 
 {% Label %}service-worker.js:{% endLabel %}
 
@@ -105,7 +105,8 @@ You can also link the side panel to your action icon, so it can be easily opened
 await chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true });
 ```
 
-And if you’d only like your side panel to show up on specific pages, you can do that too:
+If you’d only like your side panel to show up on specific pages, you can control that, and prevent
+it from appearing elsewhere where it is not relevant to the user:
 
 {% Label %}service-worker.js:{% endLabel %}
 
