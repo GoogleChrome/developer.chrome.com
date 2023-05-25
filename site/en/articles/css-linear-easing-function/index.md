@@ -6,7 +6,7 @@ authors:
 subhead: >
   Introducing `linear()`, an easing function in CSS that interpolates linearly between its points, allowing you to recreate bounce and spring effects.
 description: >
-  Introducing `linear()`, an easing function in CSS that interpolates linearly between its points, allowing you to recreate bounce and spring effects.
+  Introducing linear(), an easing function in CSS that interpolates linearly between its points, allowing you to recreate bounce and spring effects.
 date: 2023-05-25
 hero: "image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/tlphA8yFApB07mM9Oxe2.jpg"
 alt: "Birds in the sky, forming a line as they fly."
