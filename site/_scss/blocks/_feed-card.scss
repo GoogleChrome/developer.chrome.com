@@ -6,13 +6,13 @@
   justify-content: center;
   justify-items: center;
 
-  filtered-element {
-    width: 100%;
-  }
-
   @include media-query('md') {
     gap: get-size(500);
     grid-template-columns: repeat(auto-fit, $blog-card-size);
+  }
+
+  filtered-element {
+    width: 100%;
   }
 }
 
