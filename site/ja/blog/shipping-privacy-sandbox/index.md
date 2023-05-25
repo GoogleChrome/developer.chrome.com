@@ -14,7 +14,7 @@ tags:
   - origin-trials
 ---
 
-プライバシーサンドボックスプロジェクトは、関連性と測定 API を Chrome 安全版に出荷する準備を進めています。[ウェブのプロジェクトタイムライン](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline)では、Chrome での有効化が 2023 年第 3 四半期に始まることが示されています。具体的には、 [Chrome 安定版 115](https://chromiumdash.appspot.com/schedule) をターゲットにする予定です。つまり、2023 年 7 月下旬から API の有効化を開始することになります。
+プライバシーサンドボックスプロジェクトは、関連性と測定 API を Chrome 安全版に出荷する準備を進めています。[ウェブのプロジェクトタイムライン](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline)では、Chrome での提供が 2023 年第 3 四半期に始まることが示されています。具体的には、 [Chrome 安定版 115](https://chromiumdash.appspot.com/schedule) をターゲットにする予定です。つまり、2023 年 7 月下旬から API の提供を開始することになります。
 
 この記事では、今回のリリースに関わる次の内容について確認します。
 
