@@ -4,17 +4,11 @@ title: プライバシーサンドボックスの関連性と測定 API の出�
 authors:
   - rowan_m
   - alexandrawhite
-description: |2-
-
-  これらの API の Chrome での有効化は、7 月下旬の Chrome 安定版 115 で開始されます。
-subtitle: |2-
-
-  これらの API の Chrome での有効化は、7 月下旬の Chrome 安定版 115 で開始されます。
-date: '2023-05-18'
+description: これらの API の Chrome での有効化は、7 月下旬の Chrome 安定版 115 で開始されます。
+subtitle:  これらの API の Chrome での有効化は、7 月下旬の Chrome 安定版 115 で開始されます。
+date: 2023-05-18
 hero: image/VbsHyyQopiec0718rMq2kTE1hke2/tcYqpA0B5VEJXN27w0ZW.png
-alt: |2-
-
-  ロゴ付きのプライバシーサンドボックス。
+alt: ロゴ付きのプライバシーサンドボックス。
 tags:
   - privacy
   - origin-trials
