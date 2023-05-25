@@ -29,7 +29,7 @@ There are several keywords available as presets in CSS, namely `linear`, `ease`,
   tab: 'result'
 } %}
 
-{%Aside%}Learn more about these easing keywords and functions at [https://web.dev/learn/css/animations/](https://web.dev/learn/css/animations/#animation-timing-function){%endAside%}
+{%Aside%}Learn more about these easing keywords and functions in [Learn CSS: Animations](https://web.dev/learn/css/animations/#animation-timing-function).{%endAside%}
 
 When used appropriately, easings give an animated element a sense of weight as it appears to gather momentum.
 
