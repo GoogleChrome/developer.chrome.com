@@ -27,7 +27,7 @@ tags:
 - **出荷内容**。公開予定の関連性と測定 API は、Topics、Protected Audience、アトリビューション レポート、Private Aggregation、共有ストレージ、および Fenced Frames です。これらの API は、潜在的なイシューを監視するために段階的に利用可能になる予定です。
 - **正式な公開プロセス**。各 API は標準の Chrome 公開プロセスをたどります。このプロセスには、blink-dev メーリングリストに承認を得る目的で公開される個別の「Intent to Ship」メッセージが含まれます。
 - **ユーザーコントロールの更新**。ユーザーは、API を管理するための広告プライバシーコントロールを利用できます。
-- **Status of the origin trial**. The origin trial will continue to be available through to Stable release.
+- **オリジントライアルのステータス**。オリジントライアルは安定版リリースまで引き続き利用可能です。
 - **登録**。登録は 6 月に開始され、8 月には関連性 API と測定 API にアクセスできる必要があります。
 - **Chrome を使用したテスト**。開発者がサードパーティ Cookie データを使用せずに API をテストできるオプションを準備しています。
 
@@ -40,7 +40,7 @@ Chrome での有効化が近づきましたら、改めてお知らせいたし�
 
 これらは、[関連性と測定のオリジントライアル](/docs/privacy-sandbox/unified-origin-trial/)でテスト用に提供されている API と同じセットです。テスト中にエコシステムから受け取ったフィードバックは、重要なユースケースに合わせてこの機能を形成する上で不可欠でした。テストの実施、イシューの報告、関係者との結果の共有にご協力いただいた皆さんに感謝します。これこそが共同の取り組みです。
 
-{: #included-apis }
+{: #include-apis }
 
 ## 出荷内容
 
@@ -82,13 +82,13 @@ API は、安定版リリースを使用するすべてのブラウザインス�
 
 <figure class="screenshot">{% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/K7udJ3mRsR3ltLwZVJnL.png", alt="Chrome でのプライバシーコントロールのプレビュー。", width="800", height="509" %}</figure>
 
-## Origin trial
+## オリジントライアル
 
 [プライバシーサンドボックスの関連性と測定のオリジントライアル](/docs/privacy-sandbox/unified-origin-trial/)では、アトリビューション レポート、Protected Audience、Topics、Fenced Frames、および共有ストレージをサイトで総合的に実験することができます。このオリジントライアルは Chrome 安定版 115 まで継続される予定です。オリジントライアルに参加しているテスターは、安定版の展開に伴い、可用性や API からのデータにギャップを体験する可能性があります。テスターがこの移行を管理するのに役立つ追加のガイダンスと詳細を提供します。
 
 進捗に合わせて[ドキュメント](/docs/privacy-sandbox/unified-origin-trial/)を更新する予定です。
 
-## Enrollment and next steps {: #enrollment }
+## 登録と次のステップ {: #enrollment }
 
 Chrome での有効化と並行して、これらの API が意図どおりに透明性をもって使用されるようにしたいと考えています。 Chrome と Android にわたるプライバシー サンドボックスの関連性と測定 API のための新しい[開発者登録プロセス](/blog/announce-enrollment-privacy-sandbox/)を発表しました。更新情報と手順については、[登録ドキュメント](/docs/privacy-sandbox/enroll/)で共有します。
 
@@ -103,7 +103,7 @@ Chrome を利用したテストには 2 つのモードが用意される予定�
 - **モード A**: アドテックは、トラフィックの一部でコントロールラベルと実験ラベルを受け取り、これらを使用してテストと実験を実施できます。
 - **モード B**: Chrome は、全 Chrome ユーザーの一部に対してサードパーティ Cookie をグローバルに無効にします。
 
-These details are not final, and we'll publish further implementation guidance as we progress in Q3 2023. The current proposals are as follows.
+これらの詳細は最終的なものではなく、2023 年第 3 四半期の進捗に合わせてさらなる実装ガイダンスを公開する予定です。現在の提案は次のとおりです。
 
 ### モード A: オプトインテスト {: #mode-a }
 
