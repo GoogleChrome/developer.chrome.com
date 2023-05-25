@@ -6,7 +6,7 @@ layout: 'layouts/blog-post.njk'
 date: 2023-05-30
 authors:
   - ajara
-hero: ‘image/SeARmcA1EicLXagFnVOe0ou9cqK2/kYS3DlJai8qJioFUduBI.png’
+hero: 'image/SeARmcA1EicLXagFnVOe0ou9cqK2/kYS3DlJai8qJioFUduBI.png'
 alt: >
   New in Chrome hero logo
 tags:
