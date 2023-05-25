@@ -97,7 +97,15 @@ Additionally, the checkboxes in **Ignore List** got clearer text.
 
 Chromium issues: [1440958](https://crbug.com/1440958), [1364501](https://crbug.com/1364501).
 
-##  {: #breakpoint }
+## Shortcut to set conditional breakpoints {: #breakpoint }
+
+You can now set [conditional breakpoints](/docs/devtools/javascript/breakpoints/#conditional-loc) faster with a shortcut. To open the breakpoint dialog, hold <kbd>Command</kbd> (MacOS) or <kbd>Control</kbd> (Windows / Linux) and click the line number in the left column of the **Sources** > **Editor**.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7bRF2xDUGpwfvY6HIkgo.png", alt="The line number in the left column and the breakpoint dialog.", width="800", height="611" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/3d8f4d718804e1bc7b1d7916014c8c5b6a62c0b3 #}
+
+Chromium issue: [1405767](https://crbug.com/1405767).
 
 ## Miscellaneous highlights {: #misc }
 
