@@ -78,7 +78,24 @@ To learn the basics of using the **Lighthouse** panel in DevTools, see [Lighthou
 
 Chromium issue: [772558](https://crbug.com/772558).
 
-##  {: #content-script }
+## Ignore content scripts by default {: #content-script }
+
+The {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Ignore List**](/docs/devtools/settings/ignore-list/) > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Content scripts injected by extensions** is now enabled by default.
+
+With this setting enabled:
+
+- The **Debugger** ignores such scripts and doesn't stop on exceptions thrown by them.
+- The **Sources** > **Call Stack** pane skips ignored frames. To turn the skipping off here, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Show ignore-listed frames**](/docs/devtools/javascript/reference/#show-ignore-listed-frames).
+- The **Console** [collapses ignored frames](/docs/devtools/console/reference/#show-third-party) in stack traces. Click **Show N more frames** to expand, and **Show less** to collapse again.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bQYJDFHrl0bi28jsBEmW.png", alt="The Settings > Ignore List > Content scripts injected by extensions enabled by default.", width="800", height="611" %}
+
+Additionally, the checkboxes in **Ignore List** got clearer text.
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/e434ba21ef503af0f5b303a2ba7b2058dd21869c #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/88fd441c2f7e483db02f4ab5e78a401fcf97cf8d #}
+
+Chromium issues: [1440958](https://crbug.com/1440958), [1364501](https://crbug.com/1364501).
 
 ##  {: #breakpoint }
 
