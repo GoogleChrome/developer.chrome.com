@@ -50,7 +50,7 @@ How does my side panel help the user?
 Does my side panel only appear when it’s helpful?
 : The Side Panel API lets you choose which sites your users will see the side panel on. This way you can avoid showing it when it isn’t relevant to the user.
 
-Is the design consistent with the rest of my extension?
+Is the design of my side panel consistent with the rest of my extension?
 : Your side panel should have a visually appealing design that matches the logo, colors, icons, and fonts of your extension and store listing. This provides users a consistent, recognizable experience wherever they are using your extension.
 
 How do users discover my side panel?
