@@ -1,7 +1,7 @@
 ---
 title: Nuevo en Chrome 114
 description: >
- ¡Chrome 114 ya está disponible! ¡Chrome 114 ya se está implementando! Con ajuste de texto: equilibrio para mejorar los diseños de texto, las cookies que tienen un estado particionado independiente están aquí, la nueva API Popover hace que los popovers sean más fáciles que nunca y hay mucho más.
+ ¡Chrome 114 ya está disponible! Con ajuste de text-wrap: balance para mejorar los diseños de texto, las cookies que tienen un estado particionado independiente están aquí, la nueva API Popover hace que los popovers sean más fáciles que nunca y hay mucho más.
 layout: 'layouts/blog-post.njk'
 date: 2023-05-30
 authors:
@@ -25,13 +25,13 @@ Yo soy Adriana Jara. Profundicemos y veamos qué hay de nuevo para los desarroll
 ## `text-wrap: balance`. {: #text-wrap-balance}
 Puedes usar `text-wrap: balance` para mejorar los diseños de texto. La animación a continuación muestra la diferencia que puedes hacer con esta línea.
 
-<figura>
-  {% Video
+<figure>
+{% Video
     src="video/vS06HQ1YTsbMKSFTIPl2iogUQP73/qJKWQGssebOIDGVBtLpo.mp4",
-    reproducción automática="verdadero",
-    bucle="verdadero",
-    silenciado="verdadero",
-    controles = "verdadero"
+    autoplay="true",
+    loop="true",
+    muted="true",
+    controls="true"
   %}
 
   <figcaption>
@@ -39,11 +39,11 @@ Puedes usar `text-wrap: balance` para mejorar los diseños de texto. La animaci�
       Pruebe una demostración
     </a>
   </figcaption>
-</figura>
+</figure>
 
 Como desarrollador, no conoces el tamaño final, el tamaño de fuente o incluso el idioma del texto. Todas ellas variables necesarias para un tratamiento eficaz del ajuste de texto. Dado que el navegador sí conoce todos los factores, con `text-wrap:balance` puedes solicitar al navegador que descubra la mejor solución de ajuste de línea equilibrada
 
-{% img src="image/vS06HQ1YTsbMKSFTIPl2iogUQP73/lnGFtchLIPk9RnHSurHg.png", alt="Los dos anteriores ejemplos se muestran juntos, uno está marcado como desequilibrado y el otro como equilibrado.", width="800", height="371" %}
+{% Img src="image/vS06HQ1YTsbMKSFTIPl2iogUQP73/lnGFtchLIPk9RnHSurHg.png", alt="Los dos anteriores ejemplos se muestran juntos, uno está marcado como desequilibrado y el otro como equilibrado.", width="800", height="371" %}
 
 El bloque de texto equilibrado es más agradable a la vista de un lector ya que  llama mejor la atención y, en general, es más fácil de leer.
 
@@ -51,25 +51,25 @@ Equilibrar los titulares será y debería ser el principal caso de uso para `tex
 
 Consulte [este artículo](/blog/css-text-wrap-balance/) con ejemplos y más detalles para mejorar sus diseños de texto.
 
-##CHIPS: Cookies con estado particionado independiente.{:#chips }
+## CHIPS: Cookies con estado particionado independiente.{:#chips }
 
-[CHIPS (cookies con estado de partición independiente, por sus siglas en inglés)](/docs/privacy-sandbox/chips/), permite optar por cookies de terceros particionados por el sitio de nivel superior utilizando el nuevo atributo de cookie `Partitioned`.
+[CHIPS (cookies con estado particionado independiente, por sus siglas en inglés)](/docs/privacy-sandbox/chips/), permite optar por cookies de terceros particionados por el sitio de nivel superior utilizando el nuevo atributo de cookie `Partitioned`.
 
 Antes de CHIPS, cuando un usuario visitaba el sitio A, el sitio C incrustado podía establecer una cookie en la máquina del usuario. Si el usuario luego visita el sitio B que también incrusta el sitio C, el sitio C podría acceder a la misma cookie que se configuró en el sitio A. Esto permite que el sitio C recopile la actividad de navegación de un usuario en el sitio A, B y cada sitio en el que está incrustado.
 
-{% img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/4eKoilhldt8qdmiEvEDo.jpg", alt="Diagrama que muestra sitios y almacenamiento con cookies sin particiones.", width="800", height="450" ​​%}
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/4eKoilhldt8qdmiEvEDo.jpg", alt="Diagrama con sitios y storage sin particionar.", width="800", height="450" %}
 
 Si bien el seguimiento entre sitios es un problema, existen necesidades válidas de cookies entre sitios que se pueden lograr preservando la privacidad con la partición de cookies.
 
 Con CHIPS, cuando un usuario visita el sitio A y el contenido incrustado del sitio C establece una cookie con el atributo `Partitioned`, la cookie se guarda en un contenedor particionado solo para las cookies que establece el sitio C cuando está incrustado en el sitio A. El navegador solo enviaría esa cookie cuando el sitio de nivel superior es A.
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/zbeLi9FbtJVhLXiCiRig.png", alt="Diagrama que muestra solo los sitios dentro del mismo First-Party Set accediendo a las cookies de los demás, mientras que al tercer sitio se le niega el acceso.", width="800", altura="452" %}
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/zbeLi9FbtJVhLXiCiRig.png", alt="Diagrama que muestra solo los sitios dentro del mismo First-Party Set accediendo a las cookies de los demás, mientras que al tercer sitio se le niega el acceso.", width="800", height="452" %}
 
 Cuando el usuario visita un nuevo sitio, por ejemplo, el sitio B, el sitio C no recibiría la cookie que se configuró cuando C se incrustó en el sitio A.
 
 Consulta [este artículo](/docs/privacy-sandbox/third-party-cookie-phase-out/) para obtener más detalles sobre el proceso para eliminar gradualmente las cookies de terceros.
 
-## La API de ventana emergente.{:#popover-api }
+## Popover API.{:#popover-api }
 
 Con [Popover API](https://developer.mozilla.org/docs/Web/API/Popover_API) es más fácil crear elementos de interfaz de usuario (UI) transitorios que se muestran encima de todas las demás UI de aplicaciones web.
 
