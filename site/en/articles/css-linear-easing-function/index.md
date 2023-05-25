@@ -15,6 +15,8 @@ tags:
   - chrome-113
 ---
 
+{% YouTube id="oDcb3fvtETs", startTime="704" %}
+
 ## Easings in CSS
 
 When animating or transitioning elements in CSS, you control the rate at which a value changes with an easing function using the `animation-timing-function` and `transition-timing-function` properties.
