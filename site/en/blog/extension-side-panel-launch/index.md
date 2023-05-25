@@ -5,7 +5,7 @@ layout: "layouts/blog-post.njk"
 authors:
   - oliverdunk
   - amysteam
-date: 2023-05-24
+date: 2023-05-26
 hero: 'image/BhuKGJaIeLNPW9ehns59NfwqKxF2/UnBAJwan7EQbuFS3xHwW.jpg'
 alt: 'A side panel extension open on Side Panel reference page'
 tags:
@@ -74,7 +74,7 @@ For your extension to appear in the side panel, just request the `"sidePanel"` p
   ...
   "side_panel": {
     "default_path": "sidepanel.html"
-    },
+  },
   "permissions": [
     "sidePanel"
   ]
