@@ -27,7 +27,7 @@ tags:
 
 Chrome での提供が近づきましたら、改めてお知らせいたします。今のところ、開発者がすぐにできる唯一のアクションは、情報を入手することです。これから起こる変更を理解しておくことで、サイトの準備を確実に行うことができます。
 
-「Chrome での有効化」とは、ブラウザのフラグやオリジントライアルへの参加を必要とせずに、デフォルトの Chrome で API をで利用できることを意味します。ただし、100% すべての Chrome ブラウザで API がすぐに有効になるということではありません。API は段階的に公開され、API がアクティブであるかどうかはユーザーがいつでも制御できます。立ち上げが完了すると、エコシステムは本番環境で API を使用できるようになります。
+「Chrome での提供」とは、ブラウザのフラグやオリジントライアルへの参加を必要とせずに、デフォルトの Chrome で API をで利用できることを意味します。ただし、100% すべての Chrome ブラウザで API がすぐに有効になるということではありません。API は段階的に公開され、API がアクティブであるかどうかはユーザーがいつでも制御できます。立ち上げが完了すると、エコシステムは本番環境で API を使用できるようになります。
 
 <figure class="screenshot">
   <p data-md-type="paragraph"><a href="https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline"> {% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/ywbyok1JNTBh5B9Xb8xP.png", alt="プライバシーサンドボックスのウェブのタイムライン。", width="800", height="562" %} </a></p></figure>
