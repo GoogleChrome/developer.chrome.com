@@ -124,8 +124,6 @@ chrome.tabs.onUpdated.addListener((tabId, info, tab) => {
 });
 ```
 
-If your side panel is only needed on certain sites, this is a great way to prevent it from appearing elsewhere. When the user switches tabs away from one where it is enabled, the side panel will be hidden, freeing up space for the user. When the user switches back, they’ll be right back where they left off, with the side panel open in the same state it was left in.
-
 ## Learn more {: #explore }
 
 We’ve already updated the [Side Panel API][api-sidepanel] documentation. We’ve also added [a number of samples][gh-sidepanel-samples] to the chrome-extensions-samples repository, which is a great place to see how the API can be used in practice.
