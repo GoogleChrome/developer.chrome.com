@@ -84,7 +84,7 @@ API は、安定版リリースを使用するすべてのブラウザインス�
 
 ## 登録と次のステップ {: #enrollment }
 
-Chrome での有効化と並行して、これらの API が意図どおりに透明性をもって使用されるようにしたいと考えています。 Chrome と Android にわたるプライバシー サンドボックスの関連性と測定 API のための新しい[開発者登録プロセス](/blog/announce-enrollment-privacy-sandbox/)を発表しました。更新情報と手順については、[登録ドキュメント](/docs/privacy-sandbox/enroll/)で共有します。
+Chrome での提供と並行して、これらの API が意図どおりに透明性をもって使用されるようにしたいと考えています。 Chrome と Android にわたるプライバシー サンドボックスの関連性と測定 API のための新しい[開発者登録プロセス](/blog/announce-enrollment-privacy-sandbox/)を発表しました。更新情報と手順については、[登録ドキュメント](/docs/privacy-sandbox/enroll/)で共有します。
 
 ## Chrome が提供するテスト モード {: #testing }
 
