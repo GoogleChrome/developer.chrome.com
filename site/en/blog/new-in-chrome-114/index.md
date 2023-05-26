@@ -63,7 +63,7 @@ While cross-site tracking is an issue, there are valid cross-site cookie needs w
 
 With CHIPS when a user visits site A and embedded content from site C sets a cookie with the Partitioned attribute, the cookie is saved in a partitioned jar only for cookies that site C sets when it's embedded on site A. The browser would only send that cookie when the top-level site is A.
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/zbeLi9FbtJVhLXiCiRig.png", alt="Diagram showing only sites within the same First-Party Set accessing each other's cookies, while the third site is denied access.", width="800", height="452" %}
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/Myb2Km4gEVROgCi5NZFQ.png", alt="Diagram showing sites and paritioned storage with cookies.", width="800", height="393" %}
 
 When the user visits a new site, for example site B, site C would not receive the cookie that was set when C was embedded in site A.
 

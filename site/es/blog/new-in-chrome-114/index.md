@@ -63,7 +63,7 @@ Si bien el seguimiento entre sitios es un problema, existen necesidades válidas
 
 Con CHIPS, cuando un usuario visita el sitio A y el contenido incrustado del sitio C establece una cookie con el atributo `Partitioned`, la cookie se guarda en un contenedor particionado solo para las cookies que establece el sitio C cuando está incrustado en el sitio A. El navegador solo enviaría esa cookie cuando el sitio de nivel superior es A.
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/zbeLi9FbtJVhLXiCiRig.png", alt="Diagrama que muestra solo los sitios dentro del mismo First-Party Set accediendo a las cookies de los demás, mientras que al tercer sitio se le niega el acceso.", width="800", height="452" %}
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/Myb2Km4gEVROgCi5NZFQ.png", alt="Diagrama mostrando sitios y almacenamiento particionado", width="800", height="393" %}
 
 Cuando el usuario visita un nuevo sitio, por ejemplo, el sitio B, el sitio C no recibiría la cookie que se configuró cuando C se incrustó en el sitio A.
 
