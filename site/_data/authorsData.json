@@ -873,6 +873,11 @@
         "label": "web.dev",
         "type": "rss",
         "url": "https://web.dev/authors/thomassteiner/feed.xml"
+      },
+      {
+        "label": "Blogccasion",
+        "type": "rss",
+        "url": "https://blog.tomayac.com/feed/feed.xml"
       }
     ]
   },
