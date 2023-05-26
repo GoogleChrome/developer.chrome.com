@@ -8,7 +8,7 @@ description: >
    Generate aggregate data reports using data from Protected Audience and cross-site
    data from Shared Storage.
 date: 2022-10-11
-updated: 2023-03-14
+updated: 2023-05-26
 authors:
    - kevinkiklee
 ---
@@ -112,9 +112,9 @@ From a Protected Audience API worklet, you can aggregate your data directly usin
 
 The following functions are available in the `privateAggregation` object available in Shared Storage and Protected Audience API worklets. To learn how to run your code in a worklet, refer to the [Shared Storage code samples](/docs/privacy-sandbox/use-shared-storage/). 
 
-### sendHistogramReport()
+### contributeToHistogram()
 
-You can call `privateAggregation.sendHistogramReport({ bucket: <bucket>, value: <value> })`, where the aggregation key is `bucket` and the aggregatable value as `value`. For the `bucket` parameter, a `BigInt` is required. For the `value` parameter, an integer Number is required.
+You can call `privateAggregation.contributeToHistogram({ bucket: <bucket>, value: <value> })`, where the aggregation key is `bucket` and the aggregatable value as `value`. For the `bucket` parameter, a `BigInt` is required. For the `value` parameter, an integer Number is required.
 
 Here is an example of how it may be called in Shared Storage for reach measurement: 
 
@@ -165,7 +165,7 @@ class ReachMeasurementOperation {
     // Set the aggregation key in `bucket`
     // Bucket examples: 54153254n or BigInt(54153254)
     // Set the scaled aggregatable value in `value`
-    privateAggregation.sendHistogramReport({
+    privateAggregation.contributeToHistogram({
       bucket: convertContentIdToBucket(data.contentId), 
       value: 1 * SCALE_FACTOR 
     });
@@ -186,17 +186,17 @@ While third-party cookies are still available, we'll provide a temporary mechani
 
 Calling `privateAggregation.enableDebugMode()` in the worklet enables the debug mode which causes aggregatable reports to include the unencrypted (cleartext) payload. You can then process these payloads with the Aggregation Service [local testing tool](https://github.com/google/trusted-execution-aggregation-service#set-up-local-testing). 
 
-You can also set the debug key by calling `privateAggregation.enableDebugMode({ <debug_key: debug_key> })` where a BigInt can be used as a debug key. The debug key can be used to associate data from a cookie-based measurement and data from Private Aggregation measurement. These can be called only once per context. Any subsequent calls will be ignored.
+You can also set the debug key by calling `privateAggregation.enableDebugMode({ <debugKey: debugKey> })` where a `BigInt` can be used as a debug key. The debug key can be used to associate data from a cookie-based measurement and data from Private Aggregation measurement. These can be called only once per context. Any subsequent calls will be ignored.
 
 ```js
 // Enables debug mode
 privateAggregation.enableDebugMode();
 
 // Enables debug mode and sets a debug key
-privateAggregation.enableDebugMode({ debug_key: BigInt(1234) });
+privateAggregation.enableDebugMode({ debugKey: BigInt(1234) });
 ```
 
-### reportContributionForEvent()
+### contributeToHistogramOnEvent()
 
 Within Protected Audience API worklets only, we provide a trigger-based mechanism for sending a report only if a certain event occurs. This function also allows for the bucket and value to depend on signals that are not yet available at that point in the auction (for example, the value of the winning bid in `generateBid()`). More detail is available in the [explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE_extended_PA_reporting.md).
 
