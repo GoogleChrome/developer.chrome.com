@@ -71,7 +71,7 @@ export class TagPillList extends BaseElement {
       this.items.length > 0
         ? html`
             <span
-              class="clear-filters tag-pill surface hairline type--small display-inline-flex align-center"
+              class="clear-filters tag-pill rounded-lg surface hairline type--small display-inline-flex align-center"
               @click="${() => this._onClickClearPills()}"
             >
               Clear filters
