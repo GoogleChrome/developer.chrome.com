@@ -10,7 +10,7 @@
   {% endif %}
 
   <div class="feed-card rounded-lg width-full gap-bottom-500">
-    {% if pd.source %}
+    {% if pd.source and author.sources > 1 %}
       <p class="type--caption feed-card__source color-secondary-text pad-left-300 pad-right-300 
       pad-top-200 pad-bottom-200 md:pad-left-400 md:pad-right-400 gap-bottom-100"> 
         {{ pd.source }} 

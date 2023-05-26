@@ -13,9 +13,9 @@
 
 {% block content %}
 <div class="author gap-top-300 lg:gap-top-400 pad-left-500 pad-right-500">
-  <div class="measure-1280 center-margin switcher gap-top-600 gap-bottom-800">
+  <div class="measure-1280 center-margin switcher gap-top-600 gap-bottom-600">
     <div class="author-hero">
-      <div class="switcher align-center">
+      <div class="switcher align-center measure-980">
         {% if author.image %}
           {% Img
             src=author.image,
@@ -33,7 +33,7 @@
         </div>
       </div>
 
-      <div class="lg:pad-top-600 lg:pad-bottom-600 pad-top-300 pad-bottom-300 display-flex direction-column">
+      <div class="lg:pad-top-600 lg:pad-bottom-600 pad-top-300 pad-bottom-300 display-flex direction-column measure-960">
         <div class="display-flex gap-top-400 md:gap-bottom-200 gap-bottom-500 lg:gap-top-0 author-hero__social">
           {% if author.webdev  %}
             <a rel="me" href="https://web.dev/authors/{{ author.webdev }}" target="_blank" class="web color-secondary-text social-icon" aria-label="Webdev" target="_blank">
@@ -104,8 +104,8 @@
       </div>
     </div>
 
+    {% if author.featuredPost %}
     <div class="author-featured lg:gap-top-0 gap-top-400">
-      {% if author.featuredPost %}
         {% set featured = author.featuredPost %}
         {% set post = helpers.findByUrl(collections.all, featured.url, 'en') %}
 
@@ -134,8 +134,8 @@
             {% Img src=thumbnail, alt=alt, width="800", height="450", class="card__hero" %}
           </a>
         {% endif %}
-      {% endif %}
     </div>
+    {% endif %}
   </div>
 
   <div class="measure-1280 width-full center-margin">
