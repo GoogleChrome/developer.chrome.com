@@ -364,6 +364,11 @@
         "label": "web.dev",
         "type": "rss",
         "url": "https://web.dev/authors/paulkinlan/feed.xml"
+      },
+      {
+        "label": "paul.kinlan.me",
+        "type": "rss",
+        "url": "https://paul.kinlan.me/index.xml"
       }
     ]
   },

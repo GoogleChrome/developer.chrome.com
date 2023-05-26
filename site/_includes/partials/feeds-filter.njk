@@ -4,7 +4,7 @@
   <span class="label color-secondary-text">
     {{ 'i18n.filter_sheet.filter_by' | i18n(locale) }}:
   </span>
-  {% if author.sources > 1 %}
+  {% if author.sources.length > 1 %}
   <enhanced-select id="feed-source" class="deprecations-filter gap-right-300" label="Source" fixedLabel multiple>
     <select name="source" >
       {% for source in author.sources %}
@@ -17,7 +17,7 @@
     <select name="type">
       <option value="blogPost">{{ 'i18n.common.blog_post' | i18n(locale) }}</option>
       <option value="article">{{ 'i18n.common.article' | i18n(locale) }}</option>
-      {% if author.sources > 1 %}
+      {% if author.sources.length > 1 %}
       <option value="external">{{ 'i18n.common.external_post' | i18n(locale) }}</option>
       {% endif %}
     </select>
@@ -32,7 +32,7 @@
           {{ 'i18n.filter_sheet.filter_by' | i18n(locale) }}:
         </p>
         <div class="filter-sheet__filters">
-          {% if author.sources > 1 %}
+          {% if author.sources.length > 1 %}
           <section class="gap-bottom-500">
             <p class="type--h5 weight-medium gap-bottom-200">Source</p>
             <checkbox-group show="5" i18n='{"select_all":"{{ "i18n.filter_sheet.select_all" | i18n(locale) }}", "reset":"{{ "i18n.filter_sheet.reset" | i18n(locale) }}"}'>
@@ -54,7 +54,7 @@
               <label>
                 <input type="checkbox" name="type" value="article"/> {{ 'i18n.common.article' | i18n(locale) }}
               </label>
-              {% if author.sources > 1 %}
+              {% if author.sources.length > 1 %}
               <label>
                 <input type="checkbox" name="type" value="external"/> {{ 'i18n.common.external_post' | i18n(locale) }}
               </label>
