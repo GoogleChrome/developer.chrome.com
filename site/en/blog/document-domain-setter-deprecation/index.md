@@ -38,7 +38,7 @@ Note that this change will be rolled out progressively.
 We expect other browsers to eventually deprecate and remove this functionality. Review the [browser compatibility](#browser-compatibility) section for details.
 
 
-### Why make document.domain immutable?
+### Why make `document.domain` immutable?
 
 [`document.domain`](https://developer.mozilla.org/docs/Web/API/Document/domain)
 was designed to get or set the origin's hostname. Many websites set
@@ -56,7 +56,7 @@ specification that [warns users to avoid using it](https://html.spec.whatwg.org/
 **In detail: Why make document.domain immutable?**
 {% endDetailsSummary %}
 
-#### How document.domain is used today
+#### How `document.domain` is used today
 
 Many websites set `document.domain` to allow communication between [same-site
 but cross-origin](https://web.dev/same-site-same-origin/) pages.
@@ -105,7 +105,7 @@ DOM tree, and vice versa.
 
 This is a convenient technique, however it introduces a security risk.
 
-#### Security concerns with document.domain
+#### Security concerns with `document.domain`
 
 Security concerns around `document.domain` have led to a change in the
 [specification that warns users to avoid using it](https://html.spec.whatwg.org/multipage/origin.html#relaxing-the-same-origin-restriction).
@@ -163,7 +163,7 @@ all versions of all browsers. But this may require substantial re-work of an
 application, so it's worth to also look at alternatives that continue to support
 cross-origin accesses.
 
-### Use postMessage() or Channel Messaging API instead of `document.domain`
+### Use `postMessage()` or Channel Messaging API instead of `document.domain`
 
 In most use cases, cross-origin 
 [`postMessage()`](https://developer.mozilla.org/docs/Web/API/Window/postMessage)
