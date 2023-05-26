@@ -5,7 +5,7 @@ import {
   onLCP,
   onTTFB,
   onINP,
-} from 'web-vitals/dist/web-vitals.attribution';
+} from 'web-vitals/attribution';
 import {version} from '../_data/analytics.json';
 
 // A function that should be called once all all analytics code has been
