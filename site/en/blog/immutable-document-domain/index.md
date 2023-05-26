@@ -18,6 +18,8 @@ alt: >
 
 **Updates**
 
+- **May 30, 2023**: we've [announced](/blog/document-domain-setter-deprecation) that
+  the deprecation of `document.domain` setter will be effective in Chrome 115.
 - **April 7, 2023**: We've identified [an issue](https://crbug.com/1429587)
   before shipping this change in Chrome 112. `document.domain` setter to be
   removed by default is currently suspended and the new shipping milestone is
