@@ -107,6 +107,21 @@ You can now set [conditional breakpoints](/docs/devtools/javascript/breakpoints/
 
 Chromium issue: [1405767](https://crbug.com/1405767).
 
+## Network > Response improvements {: #network }
+
+The **Network** > **Response** pane now pretty-prints minified response bodies by default, similar to [the **Sources** panel](/blog/new-in-devtools-110/#pretty-print).
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/6v8sGp3FbOJF2hoWj0YB.png", alt="Enabled pretty-printing in Network > Response.", width="800", height="446" %}
+
+Additionally, SVG files get syntax highlighting.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/zNnzIWvccp8Ndz2AOy8P.png", alt="SVG syntax highlighting.", width="800", height="379" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/f7eb6fdc4c780d046fd73e0182efbddec4f0535b #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/00bca2313807f054bede3febf6dd37e1519ba084  #}
+
+Chromium issues: [1382752](https://crbug.com/1382752), [1385374](https://crbug.com/1385374).
+
 ## Miscellaneous highlights {: #misc }
 
 These are some noteworthy fixes in this release:
