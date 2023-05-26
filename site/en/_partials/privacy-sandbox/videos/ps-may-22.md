@@ -9,6 +9,6 @@ As some details may have changed, refer to the latest docs: <a href="/docs/priva
 
 <strong>Latest docs:</strong> [What is the Privacy sandbox?](/docs/privacy-sandbox/overview/)
 
-At Google I/O 2022, Rowan Merewood from the Chrome team spoke about the Privacy Sandbox, the pros and cons of third-party content, and how the Privacy Sandbox addresses these issues. Finally, he detailed how this model applies to cookies so you can prepare for upcoming changes.
+At Google I/O 2022, Rowan Merewood from the Chrome team spoke about the Privacy Sandbox, the pros and cons of third-party content, and how the Privacy Sandbox addresses these issues.
 {% endColumn %}
 {% endColumns %}

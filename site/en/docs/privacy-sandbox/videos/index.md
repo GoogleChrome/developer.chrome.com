@@ -27,8 +27,7 @@ Refer to the linked documentation for the latest details.
 {% Column %}
 <strong>May 12, 2023  Run time: 23:43</strong>
 
-
-The Privacy Sandbox introduces a set of privacy-preserving APIs that give you the tools you need to protect people's privacy online. Privacy Sandbox team members provide answers to common questions in this talk. After watching, you'll have a better understanding of the long-term vision, including similarities and differences between Chrome and Android implementations.
+Privacy Sandbox team members provide answers to common questions in this talk. After watching, you'll have a better understanding of the long-term vision, including similarities and differences between Chrome and Android implementations.
 {% endColumn %}
 {% endColumns %}
 
@@ -39,7 +38,7 @@ The Privacy Sandbox introduces a set of privacy-preserving APIs that give you th
 {% Column %}
 <strong>May 10, 2023  Run time: 15:52</strong>
 
-Chrome is on the path to phasing out third-party cookies and this impacts a wide range of use cases. Updates to cookie functionality like CHIPS and First-Party Sets enable you to restrict cross-site cookies on your site in a more secure and private manner. Learn what action you can take to ensure you're all set for the end of third-party cookies.
+Chrome is on the path to phasing out third-party cookies. Updates to cookie functionality like CHIPS and First-Party Sets enable you to restrict cross-site cookies on your site in a more secure and private manner. Learn how they can help.
 {% endColumn %}
 {% endColumns %}
 
@@ -49,6 +48,7 @@ Chrome is on the path to phasing out third-party cookies and this impacts a wide
 
 {% Partial 'privacy-sandbox/videos/ps-feb-23.njk' %}
 {# February 2023 Danny Rojas PS overview #}
+
 
 {% Columns %}
 {% Column %}
@@ -78,7 +78,6 @@ Learn more about the Privacy Sandbox effort, with a deep dive into Attribution R
 {# May 2022 Sam Dutton the Attribution Reporting API high level #}
 
 
-
 {% Columns %}
 {% Column %}
 <iframe src="https://drive.google.com/file/d/18RGEx_mrhDJuMsLUK1BZ0cK5FSZRAAqh/preview" width="280" height="210" allow="autoplay"></iframe>
@@ -91,10 +90,9 @@ As some details may have changed, refer to the latest docs:
 {% Column %}
 <strong>Aug. 11, 2022 Run time: 43:58. Part 1.</strong>
 
-In the August 2022 Privacy Sandbox office hours, Maud Nalpas of the Chrome team discusses the Attribution Reporting API. Maud presents a walkthrough of Summary reports and discusses how to generte aggregatable reports in the browser. Maud touched on noise, how to set up and get summary reports. 
+In the August 2022 Privacy Sandbox office hours, Maud Nalpas of the Chrome team discusses the Attribution Reporting API. Maud presents a walkthrough of Summary reports and discusses how to generte aggregatable reports in the browser. Maud touched on noise, and how to set up and get summary reports. 
 {% endColumn %}
 {% endColumns %}
-
 
 
 {% Columns %}
@@ -178,7 +176,9 @@ Sam Dutton from the Chrome team discusses the Topics taxonomy, walks through the
 <iframe width="280" height="158"  src="https://www.youtube.com/embed/cNJ8mZ-J3F8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 {% endColumn %}
 {% Column %}
-Description, date, link to docs... sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+<strong>Aug 11, 2021 Run time: 5:47</strong>
+
+First-Party Sets is a proposal to allow related domain names owned and operated by the same entity to declare themselves as belonging to the same first party.
 {% endColumn %}
 {% endColumns %}
 
@@ -202,7 +202,8 @@ Recorded December 15, 2022 in Privacy Sandbox office hours.Description, date, li
 
 {% endColumn %}
 {% Column %}
-Description, date, link to docs... sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+<strong>Sep 8, 2021 Run time: 5:51</strong>
+Sam Dutton of the Chrome team explains how the Protected Audience API provides a solution for remarketing use cases, and how it's designed so it cannot be used by third parties to track user browsing behaviour across sites.
 {% endColumn %}
 {% endColumns %}
 
@@ -212,7 +213,10 @@ Description, date, link to docs... sed do eiusmod tempor incididunt ut labore et
 
 {% endColumn %}
 {% Column %}
-Description, date, link to docs... sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+<strong>Mar 18, 2022 Run time: 6:15</strong>
+
+
+Sam Dutton of the Chrome team picks up where he left off in the Protected Audience API video to provide a walkthough of the demo available for the API.
 {% endColumn %}
 {% endColumns %}
 
@@ -225,7 +229,10 @@ Description, date, link to docs... sed do eiusmod tempor incididunt ut labore et
 <iframe width="280" height="158" src="https://www.youtube.com/embed/bXB1Iwq6Eq4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 {% endColumn %}
 {% Column %}
-Description, date, link to docs... sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+<strong>Jul 28, 2021 Run time: 8:17</strong>
+
+Trust Tokens is a new API to help combat fraud and distinguish bots from real humans, without passive tracking. 
+In this video you'll learn why the web needs trust tokens, and how they work.
 {% endColumn %}
 {% endColumns %}
 
@@ -236,6 +243,8 @@ Description, date, link to docs... sed do eiusmod tempor incididunt ut labore et
 <iframe width="280" height="158" src="https://www.youtube.com/embed/v_gI8wcsPUA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 {% endColumn %}
 {% Column %}
-Description, date, link to docs... sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+<strong>Aug 17, 2022 Run time: 6:19</strong> 
+
+Origin trials are a way to test a new or experimental web platform feature. A third-party origin trial makes it possible for providers of embedded content to try out a new feature across multiple sites.
 {% endColumn %}
 {% endColumns %}

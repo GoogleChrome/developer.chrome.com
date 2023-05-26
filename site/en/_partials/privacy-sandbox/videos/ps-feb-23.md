@@ -10,6 +10,6 @@ As some details may have changed, refer to the latest docs:
 {% Column %}
 <strong>February 2023. Run time: 11:08</strong>
 
-Danny Rojas of the Products Parnerships team discusses the Privacy Sandbox ads APIs from a high level and for a wider audience. He briefly describes the [Topics API](/docs/privacy-sandbox/topics/), the [Protected Audience API](/docs/privacy-sandbox/fledge/) (formerly FLEDGE), and [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/), some of the community feedback, and provides a general timeline for the Privacy Sandbox releases. He also briefly covers common use cases.
+Danny Rojas of the Products Parnerships team provides a high-level view of the Privacy Sandbox ads APIs. He briefly describes the [Topics API](/docs/privacy-sandbox/topics/), the [Protected Audience API](/docs/privacy-sandbox/fledge/) (formerly FLEDGE), and [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/), along with some common use cases.
 {% endColumn %}
 {% endColumns %}
