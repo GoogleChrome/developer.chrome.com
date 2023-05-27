@@ -18,6 +18,12 @@ in Chrome 119, scheduled to ship in November 2023.
 The SVG spec was [recently updated](https://github.com/w3c/svgwg/pull/901) to remove support for `data:` URLs in SVG `<use>` element.
 This improves security of the Web platform as well as compatibility between browsers as Webkit does not support `data:` URLs in SVG `<use>` element.
 
+## Reason for the removal
+ 
+SVG `<use>` element can fetch external SVG images and clone it into the current document. This is a powerful capability, and therefore it is restricted to same-origin SVG images.
+However, `data:` URLs are treated as same-origin resources. Which caused several security bugs, such as bypasses of [Trusted Types](https://github.com/w3c/trusted-types/issues/357) and [Sanitizer API](https://bugs.chromium.org/p/chromium/issues/detail?id=1306450#c10).
+This led to a discussion of the best approach to resolve these security bugs. And we came to a concensus among browser vendors (from [Mozilla](https://github.com/mozilla/standards-positions/issues/718) and [Apple](https://github.com/WebKit/standards-positions/issues/108)) that the best way forward is to remove support for `data:` URLs in SVG `<use>` element.
+
 For sites which use `data:` URLs in SVG `<use>` element, there are several alternatives.
 
 ## Use same-origin SVG images
@@ -78,13 +84,6 @@ document.body.appendChild(svg);
 ## Live examples
 
 [This page](https://shhnjk.github.io/svg-use-icons/) has live exmaples for the alternaives explained.
-
-## Reason for the removal
- 
-SVG `<use>` element can fetch external SVG images and clone it into current document. This is a powerful capability, and therefore it is restricted to same-origin SVG images.
-However, `data:` URLs are treated as same-origin resources. Which caused several security bugs, such as bypasses of [Trusted Types](https://github.com/w3c/trusted-types/issues/357) and [Sanitizer API](https://bugs.chromium.org/p/chromium/issues/detail?id=1306450#c10).
-This led to a discussion of the best approach to resolve these security bugs. And we came to a concensus among browser vendors and security researchers that the best way forward is to remove support for `data:` URLs in SVG `<use>` element.
-
 
 I hope these resources will make your migration smooth and easier!
 Thank you for your help in making the Web more secure and compatible place!
