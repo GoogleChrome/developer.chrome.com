@@ -3,7 +3,7 @@ layout: 'layouts/blog-post.njk'
 title: Migrate away from data URLs in SVG <use> element
 description: >
   Support for data: URLs in SVG <use> element will be removed. We recommended to migrate to alternatives.
-date: 2023-05-25
+date: 2023-05-29
 authors:
   - shhnjk
 tags:
