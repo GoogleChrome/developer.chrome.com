@@ -19,7 +19,7 @@ Check this page often to learn about changes to Chrome extensions, extensions do
 
 <p class="color-secondary-text type--caption">Posted on <time>May 17, 2023</time></p>
 
-We've release two samples demonstrating how to use WASM in an extension. [Using WASM in Manifest V3](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.wasm-helloworld-print-nomodule) shows the general method for including a WASM module. [Using WASM as a module in Manifest V3](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.wasm-helloworld-print) shows how to use it in a module.
+We've released two samples demonstrating how to use WASM in an extension. [Using WASM in Manifest V3](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.wasm-helloworld-print-nomodule) shows the general method for including a WASM module. [Using WASM as a module in Manifest V3](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.wasm-helloworld-print) shows how to use it in a module.
 
 ### Updated Manifest V3 migration guidance 
 
