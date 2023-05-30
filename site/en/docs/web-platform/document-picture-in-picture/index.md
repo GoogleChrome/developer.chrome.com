@@ -6,6 +6,7 @@ description: >
 authors:
   - beaufortfrancois
 date: 2023-02-02
+updated: 2023-05-11
 hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/l8xW8V85N60e4dmwUwmE.jpg
 alt: Person holding outdoor lounge chairs.
 tags:
@@ -62,6 +63,10 @@ A website can provide a Picture-in-Picture video experience with the existing [P
 
 It is common for users to leave the browser tab during a video conferencing session for various reasons (for example, presenting another tab to the call or multitasking) while still wishing to see the call, so it's a prime use case for Picture-in-Picture. Once again, the current experience a video conferencing website can provide via the [Picture-in-Picture API for `<video>`] is limited in style and input. With a full Document in Picture-in-Picture, the website can easily combine multiple video streams into a single PiP window without having to rely on [canvas hacks] and provide custom controls such as sending a message, muting another user, or raising a hand.
 
+### Productivity
+ 
+Research has shown that users need more ways to be productive on the web. Document in Picture-in-Picture gives web apps the flexibility to accomplish more. Whether it's text editing, note-taking, task lists, messaging and chat, or design and development tools, web apps can now keep their content always accessible.
+
 ## Interface
 
 ### Properties
@@ -75,9 +80,6 @@ It is common for users to leave the browser tab during a video conferencing sess
 : Returns a promise that resolves when a Picture-in-Picture window is opened.
   The promise rejects if it's called without a user gesture.
   The `options` dictionary contains the optional following members:
-
-  `initialAspectRatio`
-  : Sets the initial aspect ratio of the Picture-in-Picture window.
 
   `width`
   : Sets the initial width of the Picture-in-Picture window.
@@ -125,30 +127,21 @@ pipButton.addEventListener('click', async () => {
 
 ### Set the size of the Picture-in-Picture window
 
-To set an aspect ratio, set the `initialAspectRatio` option of `documentPictureInPicture.requestWindow()` to the desired Picture-in-Picture window aspect ratio.
+To set the size of the Picture-in-Picture window, set the `width` and `height` options of `documentPictureInPicture.requestWindow()` to the desired Picture-in-Picture window size. Chrome may clamp the option values if they are too large or too small to fit a user-friendly window size.
 
 ```js
 pipButton.addEventListener("click", async () => {
   const player = document.querySelector("#player");
 
-  // Open a Picture-in-Picture window whose aspect ratio is
+  // Open a Picture-in-Picture window whose size is
   // the same as the player's.
   const pipWindow = await documentPictureInPicture.requestWindow({
-    initialAspectRatio: player.clientWidth / player.clientHeight,
+    width: player.clientWidth,
+    height: player.clientHeight,
   });
 
   // Move the player to the Picture-in-Picture window.
   pipWindow.document.body.append(player);
-});
-```
-
-The `width` and `height` options can also be used to set the desired Picture-in-Picture window size. Chrome may clamp those options values if they are too large or too small to fit a user-friendly window size.
-
-```js
-// Set player's width and height as the Picture-in-Picture window size.
-const pipWindow = await documentPictureInPicture.requestWindow({
-  width: player.clientWidth,
-  height: player.clientHeight,
 });
 ```
 

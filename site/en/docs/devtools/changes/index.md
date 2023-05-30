@@ -4,7 +4,7 @@ title: "Changes: Track your HTML, CSS, and JavaScript changes"
 authors:
   - sofiayem
 date: 2022-04-26
-#updated: YYYY-MM-DD
+updated: 2023-01-02
 description:
   "Track changes to HTML, CSS, and JavaScript."
 tags:
@@ -37,7 +37,7 @@ To open the **Changes** tab:
 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/iMMEfImU6TnblWJKLln2.png", alt="Run the Show Changes command", width="800", height="349" %}
 
-Alternatively, in the upper right corner, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="More", width="17", height="17" %} **Customize and control DevTools** > **More tools** > **Changes**.
+Alternatively, in the upper right corner, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N7wEDmtW9lnrSxPRupMa.svg", alt="", width="24", height="24" %} **Customize and control DevTools** > **More tools** > **Changes**.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4eQAS6Jv4bh37Q8yODjA.png", alt="More tools > Changes", width="800", height="460" %}
 

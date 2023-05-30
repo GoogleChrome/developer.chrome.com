@@ -1,10 +1,10 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Fetching favicons"
-seoTitle: "Fetching with favicons in Chrome extensions"
+seoTitle: "Fetching favicons in Chrome extensions"
 date: 2023-01-11
 # updated: 2023-02-14
-description: How to get a website's favicon in a Chrome extension.
+description: How to get a website's favicon.
 ---
 
 ## Overview {: #overview }
@@ -27,7 +27,7 @@ chrome-extension://EXTENSION_ID/_favicon/?pageUrl=EXAMPLE_URL&size=FAV_SIZE
 : The URL of the favicon's website.
 
 `FAV_SIZE`
-: The size of the favicon. For example: 16, 32, or 64.
+: The size of the favicon. The most common size is 16 x 16 pixels.
 
 The following steps describe how to construct this URL in a Chrome extension:  
 
@@ -47,7 +47,7 @@ First, you must request the `"favicon"` permission in the [manifest][doc-manifes
 
 {% Aside 'caution' %}
 
-The `"favicon"` permission [triggers a warning][doc-perms-warn] unless other similar permissions are already requested, such as `"tabs"` or host permission. 
+The `"favicon"` permission only [triggers a warning][doc-perms-warn] if the `"tabs"` permission or [host permissions][doc-match] have not already been requested. 
 
 {% endAside %}
 
@@ -107,10 +107,11 @@ There are two favicon examples in the [chrome-extension-samples][gh-samples] rep
 
 [doc-cs]: /docs/extensions/mv3/content_scripts/
 [doc-manifest]: /docs/extensions/mv3/manifest/
+[doc-match]: /docs/extensions/mv3/match_patterns/
 [doc-perms-warn]: /docs/extensions/mv3/permission_warnings/#permissions_with_warnings
 [doc-war]: /docs/extensions/mv3/manifest/web_accessible_resources/
-[gh-favicon-api]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/favicon
-[gh-favicon-cs]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/examples/favicon-cs
+[gh-favicon-api]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/favicon
+[gh-favicon-cs]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.favicon-cs
 [gh-samples]: https://github.com/GoogleChrome/chrome-extensions-samples/
 [mdn-favicon]: https://developer.mozilla.org/docs/Glossary/Favicon
 [runtime-geturl]: /docs/extensions/reference/runtime/#method-getURL

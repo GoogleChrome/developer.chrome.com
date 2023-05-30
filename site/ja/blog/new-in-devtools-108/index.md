@@ -82,9 +82,9 @@ function bar() {
 
 ```js
 function bar(){return foo(),foo(),42}
-``` 
+```
 
-<!-- This creates confusion during debugging because the stepping behavior is different between minified and authored code. It is even more confusing when using sourcemaps to debug the minified code in terms of the original code, as the developer is then looking at semicolons (which were under the hood turned into commas by the toolchain) but the debugger doesn't stop on them. -->
+<!-- This creates confusion during debugging because the stepping behavior is different between minified and authored code. It is even more confusing when using source maps to debug the minified code in terms of the original code, as the developer is then looking at semicolons (which were under the hood turned into commas by the toolchain) but the debugger doesn't stop on them. -->
 こうなるとミニファイされたコードと 書かれたコードの間でステップ実行の動作が異なることになるため、デバッグ時に混乱が生じます。ソースマップを使用して、オリジナルのコードを見ながらミニファイされたコードをデバッグする場合は、さらに混乱します。開発者にはセミコロン (ツールチェーンではカンマに変換されていた) が見えていますが、デバッガーはセミコロンで停止しないためです。
 
 {# https://chromium.googlesource.com/v8/v8/+/ade6d191c8566e3fe7331d2ef37e43760c7cb363 #}

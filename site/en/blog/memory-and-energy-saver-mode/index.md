@@ -51,7 +51,7 @@ These are the worst times to store state because these events are completely unr
 You can refer to the [Page Lifecycle event diagram](/blog/page-lifecycle-api/#overview-of-page-lifecycle-states-and-events) to see what events are expected to fire as a page is being discarded. As you can see from that diagram, a tab can get from the "hidden" state to the "discarded" state without any events firing.
 
 <figure>
-  <a href="https://wd.imgix.net/image/eqprBhZUGfb8WYnumQ9ljAxRrA72/1mN2saGWo57O6vIOdcGy.svg">
+  <a href="https://wd.imgix.net/image/eqprBhZUGfb8WYnumQ9ljAxRrA72/KCIeOsJ0lCWMthBSSBrn.svg">
     {% Img
       src="image/eqprBhZUGfb8WYnumQ9ljAxRrA72/KCIeOsJ0lCWMthBSSBrn.svg",
       alt="Page Lifecycle API state and event flow. A visual representation of the state and event flow described throughout this document.",

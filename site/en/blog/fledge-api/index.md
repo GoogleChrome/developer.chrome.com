@@ -552,9 +552,7 @@ In addition, `biddingLogicUrl`, `decisionLogicUrl`, and `trustedBiddingSignals` 
    want to add a browser to an interest group for a campaign that isn't running yet, or for some
    other future use, or they may temporarily have run out of advertising budget.
 
-\*\* In the current implementation of FLEDGE, `biddingLogicUrl`, `biddingWasmHelperUrl`,
-`dailyUpdateUrl` and `trustedBiddingSignalsUrl` must have the same origin as owner. That may not be
-a long-term constraint, and the `ads` and `adComponents` URLs have no such constraint.
+\*\* The `biddingLogicUrl`, `biddingWasmHelperUrl`, `dailyUpdateUrl` and `trustedBiddingSignalsUrl` URLs must have the same origin as owner. The `ads` and `adComponents` URLs have no such constraint.
 
 #### Update interest group attributes {: #update-interest-group}
 
@@ -614,7 +612,7 @@ metadata that can be used at bidding time. For example:
 #### How do buyers make bids? {: #generatebid}
 
 The script at `biddingLogicUrl` provided by an interest group owner must include a `generateBid()`
-function. When [an ad-space seller calls `navigator.runAdAuction()`]](#ad-auction), the `generatedBid()`
+function. When [an ad-space seller calls `navigator.runAdAuction()`](#ad-auction), the `generatedBid()`
 function is called once for each of the interest groups the browser is a member of, if the interest
 group's owner is invited to bid. In other words, `generateBid()` is called once for each candidate
 ad. The seller provides a `decisionLogicUrl` property on the auction configuration parameter passed

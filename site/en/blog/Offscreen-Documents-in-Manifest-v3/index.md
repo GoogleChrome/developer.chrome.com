@@ -14,14 +14,14 @@ alt: >
   A picture of laptop with the screen off.
 ---
 
-To replace functionality in the transition from background pages to extension service workers, developers can use the [`chrome.offscreen`](/docs/extensions/reference/offscreen/) API and manifest permission starting in Chrome 109. Requesting this permission allows for the creation of off-screen documents to use DOM APIs without obtrusively opening new windows or tabs that interrupt the user experience. The `chrome.offscreen` API documentation is now available in chrome extensions. 
+To replace functionality in the transition from background pages to extension service workers, developers can use the [`chrome.offscreen`](/docs/extensions/reference/offscreen/) API and manifest permission starting in Chrome 109. Requesting this permission allows for the creation of off-screen documents to use DOM APIs without obtrusively opening new windows or tabs that interrupt the user experience. The `chrome.offscreen` API is now available in chrome extensions. 
 
 In Chromium, Manifest V3 extensions are service worker-based, but service workers don't provide support for the same APIs and mechanisms that full document-based pages (which include background and event pages) do. Additionally, using content scripts to access DOM APIs on web pages leaves the extension at the mercy of different content security policies on a page-to-page basis. To help solve this, we're introducing Offscreen Documents to support DOM-related features and APIs by allowing Manifest V3 extensions to open minimal, scoped, and relatively un-permissioned offscreen documents at runtime through a dedicated API. 
 
 ## Feature Information
-Since offscreen documents are specifically designed to handle use cases that are not supported in service workers (for example, audio playback), the lifetime of this page, and the permissions it will be granted are separate from that of the extension worker.
+Since offscreen documents are specifically designed to handle use cases that are not supported in service workers (for example, audio playback), the lifetime of this page, and the permissions it will be granted are separate from that of the extension service worker.
 The page will have a lifetime mechanism similar to event pages in Manifest V2, in that it will be torn down when it stops performing actions. Additionally, the user agent may place further restrictions on the lifetime specific to the purpose specified. 
-Offscreen documents are designed to fill gaps from APIs that are only accessible to DOM APIs; because of this, extension APIs don't need to be exposed directly in this context. To reduce the likelihood of extensions using these as a "background page replacement", only the chrome.runtime messaging APIs will be exposed to the offscreen document.  (Developers may also use web messaging by claiming the offscreen document as a [Client](https://developer.mozilla.org/docs/Web/API/Client) via their service worker.)
+Offscreen documents are designed to fill gaps from APIs that are only accessible to DOM APIs; because of this, extension APIs don't need to be exposed directly in this context. To reduce the likelihood of extensions using these as a "background page replacement", only the [`chrome.runtime` messaging APIs](/docs/extensions/mv3/messaging/) are exposed to the offscreen document.  (Developers may also use web messaging by claiming the offscreen document as a [Client](https://developer.mozilla.org/docs/Web/API/Client) via their service worker.)
 Because some use cases - in particular, site scraping - require access to cross-origin frames, we allow these documents to embed cross-origin frames following the same rules that extension pages have today. In offscreen documents, content scripts specified by the extension are able to run in these frames in order to scrape any necessary content, as they would for any normal web page. 
 
 ## Reasons, and requiring a purpose
@@ -47,7 +47,8 @@ async function addToClipboard(value) {
 
 
 // Solution 2 – Once extension service workers can use the Clipboard API,
-// replace the offscreen document based implementation with something like this async function addToClipboardV2(value) {
+// replace the offscreen document based implementation with something like this
+async function addToClipboardV2(value) {
   navigator.clipboard.writeText(value);
 }
 ```

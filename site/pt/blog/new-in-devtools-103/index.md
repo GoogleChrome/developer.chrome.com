@@ -35,8 +35,8 @@ O painel **Gravação** agora pode capturar eventos de clique duplo e clique com
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/qsleBCUrr2twMujW0R94.png", alt="Captura de eventos de clique duplo e clique com o botão direito do mouse no painel Gravação", width="800", height="572" %}
 
-<!-- In this [example](https://jec.fyi/demo/dbl-right-click), start a [recording](/docs/devtools/recorder/#record) and try to perform the following steps:  -->
-Neste [exemplo](https://jec.fyi/demo/dbl-click direito), inicie uma [gravação](/docs/devtools/recorder/#record) e tente executar as seguintes etapas:
+<!-- In this [example](https://jec.fish/demo/dbl-right-click), start a [recording](/docs/devtools/recorder/#record) and try to perform the following steps:  -->
+Neste [exemplo](https://jec.fish/demo/dbl-click direito), inicie uma [gravação](/docs/devtools/recorder/#record) e tente executar as seguintes etapas:
 <!-- - Double-click the card to enlarge it
 - Right-click the card and select an action from the context menu -->
 - Clique duas vezes no cartão para ampliá-lo
@@ -184,7 +184,7 @@ Issues relacionadas: [1226363](https://crbug.com/1226363)
 
 
 <!-- ## Sourcemaps improvements {: #sourcemaps } -->
-## Melhorias nos sourcemaps  {: #sourcemaps }
+## Melhorias nos source maps  {: #sourcemaps }
 <!-- Previously, developers experience random failure during: -->
 Anteriormente, os desenvolvedores apresentavam falhas aleatórias durante:
 
@@ -195,7 +195,7 @@ Anteriormente, os desenvolvedores apresentavam falhas aleatórias durante:
 - Identificando o local de origem dos problemas de desempenho em um exemplo do [Codepen](https://codepen.io/)
 - Falta a guia **Component** quando [React DevTools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) está ativado
 
-<!-- Here are a few fixes on sourcemaps to improve the overall debugging experience: -->
+<!-- Here are a few fixes on source maps to improve the overall debugging experience: -->
 Aqui estão algumas correções nos sourcesmaps para melhorar a experiência geral de depuração:
 
 <!-- - Correct mapping between location and offset for inline scripts and source location

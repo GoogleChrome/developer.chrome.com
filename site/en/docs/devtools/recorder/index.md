@@ -17,7 +17,7 @@ anchorRedirects:
 Take a glance at the new **Recorder** panel (preview feature) with the video below.
 
 {% YouTube id='rMUayh1QPYs' %}
-<!-- {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/jDJpU85zWj1dipsUPrMr.mp4", autoplay="true", muted="false", loop="true",  class="screenshot" %} -->
+<!-- {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/jDJpU85zWj1dipsUPrMr.mp4", autoplay="true", muted="false", loop="true", controls="true",  class="screenshot" %} -->
 
 Complete this tutorial to learn how to use the **Recorder** panel to record, replay, and measure user flows.
 
@@ -45,11 +45,11 @@ This feature is available only in Chrome, not Chromium.
 
 ## Introduction {: #intro }
 
-We will be using this [coffee ordering](https://coffee-cart.netlify.app/) demo page. Checkout is a common user flow among shopping websites.
+We will be using this [coffee ordering](https://coffee-cart.app/) demo page. Checkout is a common user flow among shopping websites.
 
 In the next sections, we will walk you through how to record, replay and audit the following checkout flow with the **Recorder** panel:
 
-{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/UcCr4JgWqpJm2n8Y5Q8W.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/UcCr4JgWqpJm2n8Y5Q8W.mp4", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
 
 1. Add a coffee to the cart.
 2. Add another coffee to the cart.
@@ -62,7 +62,7 @@ In the next sections, we will walk you through how to record, replay and audit t
 
 ## Record a user flow {: #record }
 
-1. Open this [demo](https://coffee-cart.netlify.app/) page. Click on the **Start new recording** button to begin.
+1. Open this [demo](https://coffee-cart.app/) page. Click on the **Start new recording** button to begin.
 1. Enter "coffee checkout" in the **Recording name** textbox.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/MTIDldRAYMHBnnKSmnVy.png", alt="Start a new recording.", width="800", height="529" %}
    {% Aside %}
@@ -76,7 +76,7 @@ In the next sections, we will walk you through how to record, replay and audit t
 1. Click on *Americano* to add it to the cart. Notice that the **Recorder** shows the steps that you have performed so far.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/UGb19uKQ7X9bkVIhTcwt.png", alt="Steps in the Recorder panel.", width="800", height="519" %}
 1. Go to the cart page and remove *Americano* from the cart.
-   {% Aside 'gotchas' %}
+   {% Aside %}
    Optionally, you can remove *Americano* on the menu page by hovering over the **Total** button and clicking **-** next to *Americano* in the pop-up menu.
 
    However, you'll have to [add the hover step manually](/docs/devtools/recorder/reference/#add-steps) after you finish the recording because the **Recorder** doesn't automatically capture hover events.
@@ -85,14 +85,17 @@ In the next sections, we will walk you through how to record, replay and audit t
 1. In the payment details form, fill in the *Name* and *Email* textboxes, and check the *I would like to receive order updates and promotional messages.* checkbox.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/UOewwKwP99GldzuTtIL7.png", alt="Payment details form.", width="800", height="519" %}
 1. Click on the *Submit* button to complete the checkout process.
-1. In the **Recorder** panel. Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/atK0ZIkmafgOnagKckde.svg", alt="End recording.", width="20", height="20" %} **End recording** button to end the recording.
+   {% Aside %}
+   You can manually [edit steps](#edit-steps) and [add assertions](/docs/devtools/recorder/reference/#add-assertions) even before you end the recording.
+   {% endAside %}
+1. In the **Recorder** panel, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/atK0ZIkmafgOnagKckde.svg", alt="End recording.", width="20", height="20" %} **End recording** button to end the recording.
 
 
 ## Replay a user flow {: #replay }
 
 After recording a user flow, you can replay it by clicking on the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Replay.", width="20", height="20" %}**Replay** button.
 
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/DZDWWSq8muswhFL2hAng.mp4" , autoplay="true", muted="true", loop="true", class="screenshot" %}
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/DZDWWSq8muswhFL2hAng.mp4" , autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
 
 You can see the user flow replay on the page. The replay progress is shown in the **Recorder** panel as well.
 
@@ -115,7 +118,7 @@ More settings might be supported in the future. [Share with us](https://goo.gle/
 
 You can measure the performance of a user flow by clicking on the **Measure performance** button. For example, checkout is a critical user flow of a shopping website. With the **Recorder** panel, you can record the checkout flow once and measure it regularly.
 
-{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/RfznQY25Sut04RjOfAZQ.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/RfznQY25Sut04RjOfAZQ.mp4", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
 
 Clicking on the **Measure performance** button will first trigger a replay of the user flow, then open the performance trace in the **Performance** panel.
 
@@ -127,7 +130,7 @@ Learn how to [analyze your page's runtime performance](/devtools/evaluate-perfor
 
 Let's walk through the basic options to edit the steps within the recorded workflow.
 
-For a comprehensive list of editing options, see [Edit steps](/docs/devtools/recorder/reference/##edit-steps) in features reference.
+For a comprehensive list of editing options, see [Edit steps](/docs/devtools/recorder/reference/#edit-steps) in features reference.
 
 ### Expand steps {: #expand-step }
 
@@ -156,7 +159,7 @@ The **selector** is editable too.  For example, if you want to select *Mocha* in
 
    Alternatively, click the **Select**{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ihbO22H4EA0HfrNX6gV1.png", alt="Select button.", width="24", height="22" %} button and then click *Mocha* on the page.
 
-   {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/ab7PcmmkoYnoR3RRZ8M1.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
+   {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/ab7PcmmkoYnoR3RRZ8M1.mp4", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
 
 1. [Replay](#replay) the flow now, it should select *Mocha* instead of *Cappuccino*.
 

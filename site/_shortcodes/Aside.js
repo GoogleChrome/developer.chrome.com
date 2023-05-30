@@ -22,10 +22,11 @@ const icons = {
   warning: loadIcon('warning'),
   success: loadIcon('done'),
   objective: loadIcon('done'),
-  gotchas: loadIcon('lightbulb-outline'),
   important: loadIcon('lightbulb-outline'),
   'key-term': loadIcon('ink-highlighter'),
   codelab: loadIcon('code'),
+  example: loadIcon('graph'),
+  update: loadIcon('update'),
 };
 
 /**
@@ -37,6 +38,12 @@ function Aside(content, type = 'note') {
   // @ts-ignore: `this` has type of `any`
   const locale = this.ctx.locale || defaultLocale;
   let text;
+
+  // implement backwards compatibility for old "gotchas" type, rewrite to "important" type
+  if (type === 'gotchas') {
+    type = 'important';
+  }
+
   if (type !== 'note') {
     text = i18n(`i18n.common.${type}`, locale);
   }

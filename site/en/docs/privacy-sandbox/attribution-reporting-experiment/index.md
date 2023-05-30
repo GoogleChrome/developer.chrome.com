@@ -16,7 +16,7 @@ in the first half of 2023.
 
 ## Try the API
 
-1. Try the [demo](https://goo.gle/attribution-reporting-demo/).
+1. Try the [demo](https://goo.gle/attribution-reporting-demo).
 2. Check the [API status](/docs/privacy-sandbox/attribution-reporting/#status) to learn about ways
    you can experiment with the API today.
 3. Experiment with the API.
@@ -30,7 +30,7 @@ in the first half of 2023.
        Demo, detailed code examples and (local) debugging tips.
 4. Experiment with [summary
    reports](/docs/privacy-sandbox/summary-reports).
-   *  Adtechs can generate summary reports with the [aggregation service](/docs/privacy-sandbox/aggregation-service). Set up
+   *  Ad techs can generate summary reports with the [aggregation service](/docs/privacy-sandbox/aggregation-service). Set up
       [local testing](https://github.com/google/trusted-execution-aggregation-service/#set-up-local-testing)
       or [test in production with Amazon Web Services](https://github.com/google/trusted-execution-aggregation-service/#test-on-aws-with-support-for-encrypted-reports) (AWS) :
         *  Create or have an [AWS account](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html) available.

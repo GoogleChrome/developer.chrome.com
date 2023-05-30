@@ -40,7 +40,7 @@ on the **Network** panel to clear all requests from the **Requests** table.
 To save requests across page loads, check the **Preserve log** checkbox on the **Network** panel.
 DevTools saves all requests until you disable **Preserve log**.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/MPcVmmemtEEDURBN6lGK.png", alt="The Preserve Log checkbox.", width="800", height="470" %}
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/JrR2GlPhEO8LgHd3X9mS.mp4", autoplay="false", controls="true", muted="true", class="screenshot"%}
 
 ### Capture screenshots during page load {: #screenshots }
 
@@ -120,13 +120,12 @@ In addition to presets, such as slow or fast 3G, you can also add your own
 custom throttling profiles:
 
 1. Open the **Throttling** menu and select **Custom** > **Add...**.
-1. In **Settings** > **Throttling** > **Network Throttling Profiles**, click **Add custom profile**.
-1. Name the profile, specify the upload and download speeds and latency, and click **Add**.
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/swLlVq9sVpQr5GwXWH9z.png", alt="Custom network throttling profile.", width="800", height="426" %}
+1. Set up a new throttling profile as described in [**Settings** > **Throttling**](/docs/devtools/settings/#throttling).
 1. Back on the **Network** panel, select your new profile from the **Throttling** drop-down menu.
 
-DevTools displays a warning icon next to the **Network** panel to remind you that throttling is
-enabled.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/UnSmIJe1OEp98TkLFlUE.png", alt="A custom profile selected from the throttling menu. The Network panel displays a warning icon.", width="800", height="464" %}
+
+DevTools displays a {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/jsbv7jCK4GsRjL6e8RcF.svg", alt="Warning.", width="24", height="24" %} warning icon next to the **Network** panel to remind you that throttling is enabled.
 
 #### Throttle WebSocket connections {: #throttle-websocket}
 
@@ -156,6 +155,10 @@ To manually clear browser cookies at any time, right-click anywhere in the **Req
 **Clear browser cookies**.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4mVbTicUyxwkmd5TB1HS.png", alt="Selecting Clear Browser Cookies.", width="800", height="497" %}
+
+### Override HTTP response headers {: #override-headers }
+
+See [Override files and HTTP response headers locally](/docs/devtools/overrides/#override-headers).
 
 ### Override the user agent {: #user-agent }
 
@@ -335,6 +338,16 @@ To add a custom column to the **Requests** table:
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/sCXdKBGzlfwQBBeyNdta.png", alt="Adding a custom column to the Requests table.", width="800", height="563" %}
 
+### Group requests by inline frames {: #group-by-frames }
+
+If inline frames on a page initiate a lot of requests, you can make the request log frendlier by grouping them.
+
+To group requests by iframes, open **Settings** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} inside the **Network** panel and check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Group by frame**.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/QgdViJaRvfWo8suAE6a6.png", alt="The network request log with requests grouped by iframes.", width="800", height="702" %}
+
+To view a request initiated by an inline frame, expand it in the request log.
+
 ### View the timing of requests in relation to one another {: #waterfall }
 
 Use the **Waterfall** to view the timing of requests in relation to one another. By default, the
@@ -417,7 +430,7 @@ Sometimes the **Headers** tab shows the `Provisional headers are shown...` warni
 - The request wasn't sent over the network but was served from a local cache, which doesn't store the original request headers. In this case, you can [disable caching](#disable-cache) to see the full request headers.
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AQfq69qS2Ig6lT9Y7vcc.png", alt="Provisional headers warning message.", width="800", height="517" %}
 
-- The network resource isn't valid. For example, execute `fetch("https://jec.fyi.com/unknown-url/")` in the **Console**.
+- The network resource isn't valid. For example, execute `fetch("https://jec.fish.com/unknown-url/")` in the **Console**.
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xMKUHQxXLiRDiiUTol5J.png", alt="Provisional headers warning message.", width="800", height="517" %}
 
 DevTools can also display only provisional headers due to security reasons.

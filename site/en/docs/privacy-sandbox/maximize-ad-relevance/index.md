@@ -45,8 +45,8 @@ As third-party cookies are phased out, ad tech solutions for interest-based
 advertising should evolve to take advantage of privacy-friendly signals to show
 relevant ads. These include first-party data, contextual signals, and
 platform-provided privacy-preserving APIs, such as the
-[Topics API](/docs/privacy-sandbox/topics/),
-[FLEDGE API](/docs/privacy-sandbox/fledge/), and
+[Topics API](/docs/privacy-sandbox/topics/overview/),
+[Protected Audience API](/docs/privacy-sandbox/fledge/), and
 [Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/),
 which help support critical use cases for the ad industry while protecting
 against cross-site tracking.
@@ -124,9 +124,9 @@ privacy-preserving APIs including:
 
 * **Topics API**: This API offers a standardized taxonomy of interests and a publicly-known methodology for the on-device classification of interests for a given user based on the types of websites recently visited. Ad tech can call the Topics API to get interests for a given user. The API protects privacy by limiting: the length of browsing history considered, the parties who can access a given topic, the number of categories returned, and more. This API is particularly useful for ad tech without direct publisher relationships or contextual optimization capabilities.
 * **Topics API with contextual data**: A more advanced method involves comparing a user's topics and the context of a page, to estimate additional affinities for users. For example, an ad tech solution may learn that people interested in a particular set of topics (such as outdoor activities) may over-index on visiting specific categories of pages (such as sites about grilling). Ad tech can train a machine learning model to predict that a visitor to an "outdoor activity" website could be interested in grilling even if "BBQ & Grilling" is not returned as a topic through the Topics API. This method is particularly useful for a buy-side ad tech if it has contextual optimization capabilities.
-* **FLEDGE API**: This API enables ad tech to create audience segments by labeling visitors of a web page as members of a particular segment, such as "interested in family adventures." If the ad tech provider has other websites in its partner network that pertain to "family adventures," they can also add visitors for those sites to this same segment.
+* **Protected Audience API**: This API enables ad tech to create audience segments by labeling visitors of a web page as members of a particular segment, such as "interested in family adventures." If the ad tech provider has other websites in its partner network that pertain to "family adventures," they can also add visitors for those sites to this same segment.
 
-FLEDGE protects user privacy by keeping assignment to audience segments
+Protected Audience API protects user privacy by keeping assignment to audience segments
 on-device, and not sharing back to ad tech whether the same user
 belongs to multiple interest groups. This limits cross-site tracking. This API
 is particularly useful for an ad tech with a network of site partnerships.
@@ -158,7 +158,7 @@ different consideration cycles ranging from days to months, making this API
 useful for advertisers whose customer purchase cycle aligns with the Topic's
 lookback window.
 
-* **FLEDGE API**: As with the affinity use case, this API gives ad tech platforms the ability to create their own segments, such as "in-market auto buyers." If the ad tech provider has other websites in its partner network that pertain to "in-market auto buyers," they can also add visitors for those sites to this same segment while maintaining cross-site user privacy. FLEDGE is particularly useful for an ad tech provider when there is a direct publisher/advertiser relationship that allows data partnership, and a need for greater customization than Topics would allow.
+* **Protected Audience API**: As with the affinity use case, this API gives ad tech platforms the ability to create their own segments, such as "in-market auto buyers." If the ad tech provider has other websites in its partner network that pertain to "in-market auto buyers," they can also add visitors for those sites to this same segment while maintaining cross-site user privacy. Protected Audience API is particularly useful for an ad tech provider when there is a direct publisher/advertiser relationship that allows data partnership, and a need for greater customization than Topics would allow.
 * **Topics API + Attribution Reporting API**: By combining Topics and the Attribution Reporting API, you can expand the lists of topics that map to specific conversions (such as purchases), which creates additional ways to reach an in-market audience.
 
 For example, analysis or machine learning systems may uncover that users who
@@ -193,9 +193,9 @@ create different remarketing segments for a given website based on user
 activities taken throughout the website.
 
 Without third-party cookies, ad tech providers will be able to use the
-FLEDGE API to support remarketing use cases:
+Protected Audience API to support remarketing use cases:
 
-* **FLEDGE API**: Ad tech providers can create customized remarketing segments for a site by creating interest groups dependent on user activity. In prior use cases with FLEDGE, ad tech providers were building very large audiences from multiple websites. In this use case, only one website is trying to re-engage a past visitor, and without the privacy protections built into FLEDGE, this use case might lead websites to single out individuals. While allowing effective audience remarketing, this API protects individual privacy by setting [k-anonymity](/docs/privacy-sandbox/glossary/#k-anonymity) thresholds to ensure a sufficient number of individuals are eligible to see the ad.
+* **Protected Audience API**: Ad tech providers can create customized remarketing segments for a site by creating interest groups dependent on user activity. In prior use cases with Protected Audience API, ad tech providers were building very large audiences from multiple websites. In this use case, only one website is trying to re-engage a past visitor, and without the privacy protections built into Protected Audience API, this use case might lead websites to single out individuals. While allowing effective audience remarketing, this API protects individual privacy by setting [k-anonymity](/docs/privacy-sandbox/glossary/#k-anonymity) thresholds to ensure a sufficient number of individuals are eligible to see the ad.
 
 Even without third-party cookies, the Privacy Sandbox enables advertisers to
 use their first-party data for remarketing at scale, across third-party
@@ -216,10 +216,10 @@ Audience extension is also used when an advertiser wants to increase awareness
 of their products by reaching consumers when they shop on a retailer's website
 and elsewhere on the web.
 
-Ad tech providers can use the FLEDGE API to extend audiences for publishers
+Ad tech providers can use the Protected Audience API to extend audiences for publishers
 without third-party cookies:
 
--   **FLEDGE API**: Ad tech providers can create custom audience extension segments for a site by creating interest groups dependent on user activity such as reading a particular section of a website (e.g. travel section).  This process is effectively similar to remarketing and offers the same privacy protections. It makes sense for advertisers who value the 1P audience data of a publisher but cannot get enough ad inventory on that publisher website for that audience.
+-   **Protected Audience API**: Ad tech providers can create custom audience extension segments for a site by creating interest groups dependent on user activity such as reading a particular section of a website (e.g. travel section).  This process is effectively similar to remarketing and offers the same privacy protections. It makes sense for advertisers who value the 1P audience data of a publisher but cannot get enough ad inventory on that publisher website for that audience.
 
 ## How can machine learning maximize performance using privacy-safe signals?
 
@@ -292,7 +292,7 @@ support the industry throughout this transition.
 
 Moving forward, we encourage you to:
 
-1. Invest in integrating privacy-preserving APIs such as Topics, FLEDGE, and
+1. Invest in integrating privacy-preserving APIs such as Topics, Protected Audience API, and
    Attribution Reporting into your ad tech solutions, to support common
    interest-based advertising use cases after third-party cookies go away.
 1. Test Privacy Sandbox APIs in conjunction with other privacy-safe signals,

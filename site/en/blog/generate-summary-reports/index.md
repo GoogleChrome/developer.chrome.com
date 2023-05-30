@@ -49,7 +49,7 @@ before learning about the aggregation service set up.
 The [aggregation service
 proposal](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md)
 asks each adtech provider to operate their own instance of the aggregation
-service in a Trusted Execution Environment (TEE) deployed on a cloud service
+service in a trusted execution environment (TEE) deployed on a cloud service
 that supports needed security features.
 
 For the initial implementation and origin trial, adtechs can set up

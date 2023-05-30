@@ -1,5 +1,6 @@
 .event-card {
   background: get-color('grey-50');
+  border-radius: 12px;
 
   &[show-details='show-details'] {
     .event-card__details {

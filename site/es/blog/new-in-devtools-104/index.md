@@ -27,13 +27,13 @@ _Gracias  por la traducción [Carlos Caballero](https://carloscaballero.io) y  p
 <!-- + 5. Update the whats-new.md file -->
 
 <!-- ## Restart frame during debugging {: #restart-frame } -->
-## Reiniciar el marco durante la depuración {: #restart-frame } 
+## Reiniciar el marco durante la depuración {: #restart-frame }
 
 <!-- The **Restart frame** feature is back! You can re-run the preceding code when paused somewhere in a function. Previously, this feature was deprecated and removed in Chrome 92 due to stability issues.  -->
 ¡Vuelve la función **Reiniciar marco**! Puede volver a ejecutar el código anterior cuando esté en pausa en cualquier lugar de una función. Anteriormente, esta función quedó obsoleta y se eliminó en Chrome 92 debido a problemas de estabilidad.
 
-<!-- In this [example](https://jec.fyi/), the debugger initially paused at the breakpoint (line 343) near the end of the `toggleColorScheme` function. To restart the debugging from the beginning of the `toggleColorScheme` function, expand the **Call stack** section in the **Debugger** pane, right click on `toggleColorScheme` and select **Restart frame**.  -->
-En este [ejemplo](https://jec.fyi/), el depurador inicialmente se detuvo en el punto de interrupción (línea 343) cerca del final de la función `toggleColorScheme`. Para reiniciar la depuración desde el principio de la función `toggleColorScheme`, expanda la sección **Pila de llamadas** en el panel **Depurador**, haga clic derecho en `toggleColorScheme` y seleccione **Reiniciar marco**
+<!-- In this [example](https://jec.fish/), the debugger initially paused at the breakpoint (line 343) near the end of the `toggleColorScheme` function. To restart the debugging from the beginning of the `toggleColorScheme` function, expand the **Call stack** section in the **Debugger** pane, right click on `toggleColorScheme` and select **Restart frame**.  -->
+En este [ejemplo](https://jec.fish/), el depurador inicialmente se detuvo en el punto de interrupción (línea 343) cerca del final de la función `toggleColorScheme`. Para reiniciar la depuración desde el principio de la función `toggleColorScheme`, expanda la sección **Pila de llamadas** en el panel **Depurador**, haga clic derecho en `toggleColorScheme` y seleccione **Reiniciar marco**
 
 
 
@@ -60,7 +60,7 @@ Chromium issue: [1306756](https://crbug.com/1306756)
 
 
 <!-- ## Build an extension for the Recorder panel {: #recorder-extension } -->
-## Cree una extensión para el panel de la grabadora {: #recorder-extension } 
+## Cree una extensión para el panel de la grabadora {: #recorder-extension }
 
 <!-- You can now build or install a Chrome extension to export replay scripts in your favorite format. See [Recorder extension API](/docs/extensions/reference/devtools_recorder/) documentation to learn how to build one. -->
 Ahora puede crear o instalar una extensión de Chrome para exportar secuencias de comandos de reproducción en su formato favorito. Consulte la documentación de [API de extensión de grabadora](/docs/extensions/reference/devtools_recorder/) para obtener información sobre cómo crear una.
@@ -83,19 +83,19 @@ Habilite la nueva opción **Agrupar archivos por Autor/Implementado** para organ
 
 <!-- With this checkbox, you can group files into 2 categories for quicker file search: -->
 Con esta casilla de verificación, puede agrupar archivos en 2 categorías para una búsqueda de archivos más rápida:
- 
-<!-- - **Authored**. Similar to the source files you view in your IDE. DevTools generates these files based on sourcemaps (provided by your build tools).
+
+<!-- - **Authored**. Similar to the source files you view in your IDE. DevTools generates these files based on source maps (provided by your build tools).
 - **Deployed**. The actual files that the browser reads. Usually these files are minified. -->
 - **Autor**. Similar a los archivos fuente que ve en su IDE. DevTools genera estos archivos en función de los mapas de origen (proporcionados por sus herramientas de compilación).
 - **Desplegada**. Los archivos reales que lee el navegador. Por lo general, estos archivos se minimizan.
- 
+
 <!-- Try it yourself with this [React demo](https://reactjs.org/)! -->
 ¡Pruébelo usted mismo con esta [demostración de React](https://reactjs.org/)!
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5E1qbkl0Gx1REx7FdqEr.png", alt="Agrupar archivos por Autoría/Implementación en el panel Orígenes", width="800", height="521" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/6bc65d0595702fc826ca87e2cfe519a134b62d90 #}
- 
+
 Chromium issue: [960909](https://crbug.com/960909)
 
 
@@ -106,8 +106,8 @@ Chromium issue: [960909](https://crbug.com/960909)
 <!-- Visualize `performance.measure()` marks in your recording with the new **User Timings** track in the **Performance insights** panel. -->
 Visualice las marcas `performance.measure()` en su grabación con la nueva pista **User Timings** en el panel **Performance insights**.
 
-<!-- For example, this [web page](https://jec.fyi/demo/perf-measure) uses the [`performance.measure()`](https://web.dev/usertiming/#calculating-measurements-with-measure()) method to calculate the elapsed time of text loading. -->
-Por ejemplo, esta [página web](https://jec.fyi/demo/perf-measure) utiliza [`performance.measure()`](https://web.dev/usertiming/#calculating-measurements- with-measure()) método para calcular el tiempo transcurrido de carga de texto.
+<!-- For example, this [web page](https://jec.fish/demo/perf-measure) uses the [`performance.measure()`](https://web.dev/usertiming/#calculating-measurements-with-measure()) method to calculate the elapsed time of text loading. -->
+Por ejemplo, esta [página web](https://jec.fish/demo/perf-measure) utiliza [`performance.measure()`](https://web.dev/usertiming/#calculating-measurements- with-measure()) método para calcular el tiempo transcurrido de carga de texto.
 
 <!-- When you start [measuring the page load](/docs/devtools/performance-insights/#record), the **User Timings** track shows in the recording. Click on the timings item to view its details on the side pane. -->
 Cuando comienzas a [medir la carga de la página](/docs/devtools/performance-insights/#record), la pista **Tiempos de usuario** se muestra en la grabación. Haga clic en el elemento de tiempos para ver sus detalles en el panel lateral.
@@ -117,7 +117,7 @@ Cuando comienzas a [medir la carga de la página](/docs/devtools/performance-ins
 
 Chromium issue: [1322808](https://crbug.com/1322808)
 
- 
+
 <!-- ## Reveal assigned slot of an element {: #slot } -->
 ## Revelar el slot asignado de un elemento
 
@@ -139,19 +139,19 @@ Chromium issue: [1018906](https://crbug.com/1018906)
 
 
 <!-- ## Simulate hardware concurrency for Performance recordings {: #simulate } -->
-## Simule la concurrencia de hardware en las grabaciones de rendimiento {: #simulate } 
- 
+## Simule la concurrencia de hardware en las grabaciones de rendimiento {: #simulate }
+
 <!-- The new **Hardware concurrency** setting in the **Performance** panel allows developers to configure the value reported by `navigator.hardwareConcurrency`. -->
 La nueva configuración de **Simultaneidad de hardware** en el panel **Rendimiento** permite a los desarrolladores configurar el valor informado por `navigator.hardwareConcurrency`.
 
 <!-- Some applications use `navigator.hardwareConcurrency` to control the degree of parallelism of their application, for example, to control Emscripten pthread pool size. With this feature, developers can test their application performance with different core counts. -->
 Algunas aplicaciones usan `navigator.hardwareConcurrency` para controlar el grado de paralelismo de su aplicación, por ejemplo, para controlar el tamaño del conjunto de subprocesos de Emscripten. Con esta función, los desarrolladores pueden probar el rendimiento de su aplicación con diferentes recuentos de núcleos.
 
- 
+
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/PyykGRv29FZbBKJAwWOW.png", alt="Simule la concurrencia de hardware para grabaciones de rendimiento", width="800", height="536" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/b26de259d74a45e700d989ad9178c5e3a8b73145 #}
- 
+
 Chromium issue: [1297439](https://crbug.com/1297439)
 
 
@@ -168,7 +168,7 @@ Al completar automáticamente las variables CSS, DevTools ahora completa la vari
 
 Chromium issue: [1285091](https://crbug.com/1285091)
 
-        
+
 <!-- ## Identify blocking frames in the Back/forward cache pane {: #bfcache } -->
 ## Identifique los marcos de bloqueo en el panel de caché Atrás/Adelante {: #bfcache }
 
@@ -178,14 +178,14 @@ El panel [Caché atrás/adelante](/docs/devtools/application/back-forward-cache/
 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/UaRYEoYYoXhjSIn9seYK.png", alt="Identifique los marcos de bloqueo en el panel de caché Atrás/Adelante", width="800", height="486" %}
- 
+
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/897799b24fff0639d483111dd2d957288ba2bd06 #}
- 
-Chromium issue: [1288158](https://crbug.com/1288158) 
- 
- 
+
+Chromium issue: [1288158](https://crbug.com/1288158)
+
+
 <!-- ## Improved autocomplete suggestions for JavaScript objects {: #autocomplete } -->
-## Sugerencias de autocompletado mejoradas para objetos de JavaScript{: #autocomplete } 
+## Sugerencias de autocompletado mejoradas para objetos de JavaScript{: #autocomplete }
 
 <!-- The the autocompletion for JavaScript object properties now display based on this order: -->
 Las propiedades de autocompletado para objetos de JavaScript ahora se muestran según este orden:
@@ -205,14 +205,14 @@ Anteriormente, a los desarrolladores les resultaba más difícil encontrar propi
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/IvFTcOWrBOTTMRHqn8u4.png", alt="Sugerencias de autocompletado mejoradas para objetos de JavaScript", width="800", height="563" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/cee5205ae93c95b1dce49e220b9ebfa8c998d5a6 #}
- 
+
 Chromium issue: [1299241](https://crbug.com/1299241)
 
- 
-<!-- ## Sourcemaps improvements {: #sourcemaps } -->
+
+<!-- ## Source maps improvements {: #sourcemaps } -->
 ## Mejoras en los mapas de origen {: #sourcemaps }
 
-<!-- Here are a few fixes on sourcemaps to improve the overall debugging experience: -->
+<!-- Here are a few fixes on source maps to improve the overall debugging experience: -->
  Aquí hay algunas correcciones en los mapas de origen para mejorar la experiencia general de depuración:
 
 <!-- - Breakpoints now work in inline `<script>` with sourceURL annotations. -->
@@ -230,8 +230,8 @@ Chromium issue: [1299241](https://crbug.com/1299241)
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/CZk0xjwMQAqknkW5G4Xf.png", alt="Resuelve variables en funciones de flecha", width="800", height="479" %}
 
 Chromium issues: [1329113](https://crbug.com/1329113), [1322115](https://crbug.com/1322115)
- 
- 
+
+
 <!-- ## Miscellaneous highlights {: #misc } -->
 ## Destacados varios {: #misc }
 
@@ -252,7 +252,7 @@ Estas son algunas correcciones notables en esta versión:
 <!-- - The **Performance insights** panel now detects iframes as potential causes for layout shifts. You can view the iframe details in the **Details** pane. ([1328873](https://crbug.com/1328873)) -->
 - El panel **Perspectivas de rendimiento** ahora detecta iframes como posibles causas de cambios de diseño. Puede ver los detalles del iframe en el panel **Detalles**. ([1328873](https://crbug.com/1328873))
 
-<!-- - When [open file](/docs/devtools/resources/#open) in the **Command menu**, the authored files (files generated by sourcemaps) are now ranked higher so they appear above similarly named deployed scripts. ([1312929](https://crbug.com/1312929))  -->
+<!-- - When [open file](/docs/devtools/resources/#open) in the **Command menu**, the authored files (files generated by source maps) are now ranked higher so they appear above similarly named deployed scripts. ([1312929](https://crbug.com/1312929))  -->
 
 - Cuando [abrir archivo](/docs/devtools/resources/#open) en el **Menú de comandos**, los archivos creados (archivos generados por mapas de origen) ahora se clasifican más alto para que aparezcan encima de los scripts implementados con nombres similares. ([1312929](https://crbug.com/1312929))
 

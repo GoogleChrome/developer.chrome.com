@@ -110,7 +110,7 @@ list of changes.
 New audits in Lighthouse 6.4:
 
 - **Preload fonts**. Validates if all fonts that use`font-display: optional` were preloaded.
-- **Valid sourcemaps**. Audits if a page has valid sourcemaps for large, first-party JavaScript.
+- **Valid source maps**. Audits if a page has valid source maps for large, first-party JavaScript.
 - **\[Experimental\] Large JavaScript library**. Large JavaScript libraries can lead to poor
   performance. This audit suggests cheaper alternatives to common, large JavaScript libraries like
   `moment.js`.
@@ -250,7 +250,7 @@ Chromium issue: [174309][28]
 [22]: https://youtu.be/XLNJYhjA-0c
 [23]: https://crbug.com/1051466
 [24]: https://crbug.com/1121312
-[25]: https://jec.fyi/demo/accessible-color-multi
+[25]: https://jec.fish/demo/accessible-color-multi
 [26]: /blog/new-in-devtools-86#accessible-color
 [27]: https://crbug.com/1120316
 [28]: https://crbug.com/174309

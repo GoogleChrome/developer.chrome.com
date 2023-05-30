@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Samples"
 seoTitle: "Chrome Extension examples"
 date: 2020-12-11
-updated: 2022-12-16
+updated: 2023-02-03
 description: Intro to extension examples GitHub repository 
 ---
 
@@ -17,14 +17,20 @@ APIs. Use these to learn how extensions work or as a starting point for building
 
 The examples are currently located under the following directories:
 
-[api/][gh-api]
-: Extensions designed to demonstrate the capabilities of a specific API. For example, the [Action API example][gh-action] showcases extension IU elements such as the popup, tooltip, and badges among others. 
+[api-samples/][gh-api]
+: Extensions designed to demonstrate the capabilities of a specific API. For example, the [Action API example][gh-action] showcases extension UI elements such as the popup, tooltip, and badges among others. 
 
-[examples/][gh-examples]
+[functional-samples/sample...][gh-functional-samples]
 : Complete extensions that implement all the basic features for a given purpose.
 
-[tutorials/][gh-tutorials]
+[functional-samples/tutorial...][gh-functional-samples]
 : Examples covered in the [tutorials][gs-tutorials]. A few examples include [Tabs manager][tut-tabs-man], [Focus mode][tut-fm], and [Reading time][tut-rt].
+
+[functional-samples/cookbook...][gh-functional-samples]
+: Examples demonstrating a particular concept.
+
+[functional-samples/reference...][gh-functional-samples]
+: Examples linked to documentation on this site.
 
 {% Details %}
 {% DetailsSummary %}
@@ -49,7 +55,7 @@ To test these examples in your local machine, follow these steps:
 1. Navigate to the directory of the extension you want to try.
 1. [Load your extension locally][dev-basics-locally].
 
-Each extension example includes a `README.md` with instructions on how the extension works.
+Many samples have a `README.md` with instructions on how the extension works. (We are working to add READMEs to all samples.)
 Read the instructions carefully; each extension is different. For example, some extensions run by clicking on the extension icon, while others run automatically but only run on specific sites. 
 
 ## Contributing samples {: #collaborating }
@@ -57,13 +63,12 @@ Read the instructions carefully; each extension is different. For example, some 
 If you encounter any problems with an example, let us know by [posting an issue][gh-issues]. If you want to submit a new extension, check out the [Contributing Guide][gh-contributing] to find out how to submit a new example to this collection.
 
 [dev-basics-locally]: /docs/extensions/mv3/getstarted/development-basics/
-[gh-action]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/action
-[gh-api]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api
+[gh-action]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/action
+[gh-api]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples
 [gh-contributing]: https://github.com/GoogleChrome/chrome-extensions-samples/blob/main/CONTRIBUTING.md
-[gh-examples]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/examples
 [gh-issues]: https://github.com/GoogleChrome/chrome-extensions-samples/issues
 [gh-samples]: https://github.com/GoogleChrome/chrome-extensions-samples
-[gh-tutorials]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials
+[gh-functional-samples]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples
 [gs-tutorials]: /docs/extensions/mv3/getstarted/#tutorial
 [tut-fm]: /docs/extensions/mv3/getstarted/tut-focus-mode/
 [tut-rt]: /docs/extensions/mv3/getstarted/tut-reading-time/

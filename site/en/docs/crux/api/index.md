@@ -22,7 +22,7 @@ date: 2022-06-23
 
 # Optional
 # Include an updated date when you update your post
-updated: 2022-11-01
+updated: 2023-05-10
 
 # Optional
 # How to add a new author
@@ -46,7 +46,7 @@ The CrUX API allows for the querying of user experience metrics for a specific U
 
 Using the CrUX API requires a Google Cloud API key. You can create one in the [Credentials](https://console.developers.google.com/apis/credentials) page and provision it for `Chrome UX Report API` usage.
 
-After you have an API key, your application can append the query parameter `key=[YOUR_API_KEY]` to all request URLs.
+After you have an API key, your application can append the query parameter `key=[YOUR_API_KEY]` to all request URLs. See the [Example queries](#example-queries) below.
 
 The API key is safe for embedding in URLs; it doesn't need any encoding.
 
@@ -67,7 +67,7 @@ Identifiers specify what records should be looked up. In CrUX these identifiers 
 When the identifier is an origin all data present for all pages in that origin are aggregated together. For example, say the `http://www.example.com` origin had pages as laid out by this sitemap:
 
 ```text
-http://www.example.com
+http://www.example.com/
 http://www.example.com/foo.html
 http://www.example.com/bar.html
 ```
@@ -79,7 +79,7 @@ This would mean that when querying the Chrome UX Report with the origin set to `
 When the identifier is a URL, only data for that specific URL will be returned. Looking again to the `http://www.example.com` origin sitemap:
 
 ```text
-http://www.example.com
+http://www.example.com/
 http://www.example.com/foo.html
 http://www.example.com/bar.html
 ```
@@ -88,7 +88,7 @@ If the identifier is set to URL with the value of `http://www.example.com/foo.ht
 
 ### Dimensions
 
-Dimensions identify a specific group of data that a record is being aggregated against, for example a form factor of Mobile indicates that the record contains information about loads that took place on a mobile device. Each dimension will have a certain number of values, and implicitly the lack of specifying that dimension will mean that the dimension is aggregated over all values. For example, specifying no form factor indicates that record contains information about loads that took place on any form factor.
+Dimensions identify a specific group of data that a record is being aggregated against, for example a form factor of `PHONE` indicates that the record contains information about loads that took place on a mobile device. Each dimension will have a certain number of values, and implicitly the lack of specifying that dimension will mean that the dimension is aggregated over all values. For example, specifying no form factor indicates that record contains information about loads that took place on any form factor.
 
 #### Form Factor
 
@@ -125,9 +125,9 @@ A simple three bin histogram for an example metric looks like this:
 }
 ```
 
-This data indicates that 38.2% of users experience the example metric value between 0ms and 1,000ms. The units of the metric are not contained in this histogram, in this case we will assume milliseconds.
+This data indicates that 38.179% of users experience the example metric value between 0ms and 1,000ms. The units of the metric are not contained in this histogram, in this case we will assume milliseconds.
 
-Additionally, 49.9% of users experience the example metric value between 1,000ms and 3,000ms, and 11.9% of users experience a value greater than 3,000ms.
+Additionally, 49.905% of users experience the example metric value between 1,000ms and 3,000ms, and 11.916% of users experience a value greater than 3,000ms.
 
 Metrics will also contain percentiles that can be useful for additional analysis.
 
@@ -159,22 +159,16 @@ Note: The values for each percentile are synthetically derived, it does not impl
 </thead>
 <tbody>
 <tr>
-<td><code>first_contentful_paint</code></td>
-<td>int</td>
-<td>milliseconds</td>
-<td><a href="https://web.dev/fcp/">fcp</a></td>
-</tr>
-<tr>
-<td><code>largest_contentful_paint</code></td>
-<td>int</td>
-<td>milliseconds</td>
-<td><a href="https://web.dev/lcp/">lcp</a></td>
-</tr>
-<tr>
 <td><code>cumulative_layout_shift</code></td>
 <td>double encoded as string</td>
 <td>unitless</td>
 <td><a href="https://web.dev/cls/">cls</a></td>
+</tr>
+<tr>
+<td><code>first_contentful_paint</code></td>
+<td>int</td>
+<td>milliseconds</td>
+<td><a href="https://web.dev/fcp/">fcp</a></td>
 </tr>
 <tr>
 <td><code>first_input_delay</code></td>
@@ -183,19 +177,35 @@ Note: The values for each percentile are synthetically derived, it does not impl
 <td><a href="https://web.dev/fid/">fid</a></td>
 </tr>
 <tr>
+<td><code>interaction_to_next_paint</code></td>
+<td>int</td>
+<td>milliseconds</td>
+<td><a href="https://web.dev/inp/">inp</a></td>
+</tr>
+<tr>
+<td><code>largest_contentful_paint</code></td>
+<td>int</td>
+<td>milliseconds</td>
+<td><a href="https://web.dev/lcp/">lcp</a></td>
+</tr>
+<tr>
 <td><code>experimental_time_to_first_byte</code></td>
 <td>int</td>
 <td>milliseconds</td>
 <td><a href="https://web.dev/ttfb/">ttfb</a></td>
 </tr>
 <tr>
-<td><code>experimental_interaction_to_next_paint</code></td>
+<td><code>experimental_interaction_to_next_paint</code> (deprecated)</td>
 <td>int</td>
 <td>milliseconds</td>
 <td><a href="https://web.dev/inp/">inp</a></td>
 </tr>
 </tbody>
 </table></div>
+
+{% Aside 'important' %}
+The `interaction_to_next_paint` metric is available both with and without the experimental prefix. The experimental prefix should now be considered deprecated and will be removed in August 2023. The non-prefixed schema should be used going forward.
+{% endAside %}
 
 #### BigQuery metric name mapping
 
@@ -209,33 +219,37 @@ Note: The values for each percentile are synthetically derived, it does not impl
 </thead>
 <tbody>
 <tr>
-<td><code>first_contentful_paint</code></td>
-<td><code>first_contentful_paint</code></td>
-</tr>
-<tr>
-<td><code>largest_contentful_paint</code></td>
-<td><code>largest_contentful_paint</code></td>
-</tr>
-<tr>
 <td><code>cumulative_layout_shift</code></td>
 <td><code>layout_instability.cumulative_layout_shift</code></td>
+</tr>
+<tr>
+<td><code>first_contentful_paint</code></td>
+<td><code>first_contentful_paint</code></td>
 </tr>
 <tr>
 <td><code>first_input_delay</code></td>
 <td><code>first_input.delay</code></td>
 </tr>
 <tr>
+<td><code>interaction_to_next_paint</code></td>
+<td><code>interaction_to_next_paint</code></td>
+</tr>
+<tr>
+<td><code>largest_contentful_paint</code></td>
+<td><code>largest_contentful_paint</code></td>
+</tr>
+<tr>
 <td><code>experimental_time_to_first_byte</code></td>
 <td><code>experimental.time_to_first_byte</code></td>
 </tr>
 <tr>
-<td><code>experimental_interaction_to_next_paint</code></td>
-<td><code>experimental.interaction_to_next_paint</code></td>
+<td><code>experimental_interaction_to_next_paint</code> (deprecated)</td>
+<td><code>experimental.interaction_to_next_paint</code> (deprecated)</td>
 </tr>
 </tbody>
 </table></div>
 
-### Collection Period
+### Collection period
 
 As of October 2022, the CrUX API contains a `collectionPeriod` object with `firstDate` and `endDate` fields representing the beginning and end dates of the aggregation window. An example is provided below:
 
@@ -302,16 +316,17 @@ Page-level data is available through the API by passing a `url` property in the 
 
 If the `metrics` property is not set then all available metrics will be returned:
 
-- `largest_contentful_paint`
 - `cumulative_layout_shift`
-- `experimental_interaction_to_next_paint`
-- `experimental_time_to_first_byte`
 - `first_contentful_paint`
 - `first_input_delay`
+- `interaction_to_next_paint`
+- `largest_contentful_paint`
+- `experimental_interaction_to_next_paint`
+- `experimental_time_to_first_byte`
 
 If no `formFactor` value is provided then the values will be aggregated across all form factors.
 
-See [Using the Chrome UX Report API on web.dev](https://web.dev/chrome-ux-report-api/) for more example queries.
+See [Using the Chrome UX Report API](/blog/chrome-ux-report-api/) for more example queries.
 
 ## Data pipeline
 
@@ -377,21 +392,25 @@ The request body should contain data with the following structure:
       <td><code translate="no" dir="ltr">effectiveConnectionType</code></td>
       <td>
         <p><strong><code class="apitype" translate="no" dir="ltr">string</code></strong></p>
-        <p>The effective connection type is a query dimension that specifies the effective network class that the record's data should belong to. This field uses the values ["offline", "slow-2G", "2G", "3G", "4G"] as specified in: <a href="https://wicg.github.io/netinfo/#effective-connection-types">https://wicg.github.io/netinfo/#effective-connection-types</a></p><p>Note: If no effective connection type is specified, then a special record with aggregated data over all effective connection types will be returned.</p>
+        <p>The effective connection type is a query dimension that specifies the effective network class that the record's data should belong to.</p>
+        <p>This field uses the values <code>["offline", "slow-2G", "2G", "3G", "4G"]</code> as specified in the <a href="https://wicg.github.io/netinfo/#effective-connection-types">Network Information API specification</a></p>
+        <p>Note: If no effective connection type is specified, then a special record with aggregated data over all effective connection types will be returned.</p>
       </td>
     </tr>
     <tr>
       <td><code translate="no" dir="ltr">formFactor</code></td>
       <td>
         <p><strong><code class="apitype" translate="no" dir="ltr">enum (<a href="#form-factor">FormFactor</a></code>)</code></strong></p>
-        <p>The form factor is a query dimension that specifies the device class that the record's data should belong to.</p><p>Note: If no form factor is specified, then a special record with aggregated data over all form factors will be returned.</p>
+        <p>The form factor is a query dimension that specifies the device class that the record's data should belong to.</p>
+        <p>This field uses the values <code>DESKTOP</code> or <code>PHONE</code>.</p>
+        <p>Note: If no form factor is specified, then a special record with aggregated data over all form factors will be returned.</p>
       </td>
     </tr>
     <tr>
       <td><code translate="no" dir="ltr">metrics[]</code></td>
       <td>
         <p><strong><code class="apitype" translate="no" dir="ltr">string</code></strong></p>
-        <p>The metrics that should be included in the response. If none are specified then any metrics found will be returned.</p><p>Allowed values: ["first_contentful_paint", "first_input_delay", "largest_contentful_paint", "cumulative_layout_shift", "experimental_time_to_first_byte", "experimental_interaction_to_next_paint"]</p>
+        <p>The metrics that should be included in the response. If none are specified then any metrics found will be returned.</p><p>Allowed values: <code>["cumulative_layout_shift", "first_contentful_paint", "first_input_delay", "interaction_to_next_paint", "largest_contentful_paint", "experimental_time_to_first_byte", "experimental_interaction_to_next_paint"]</code></p>
       </td>
     </tr>
     <tr>
@@ -401,14 +420,14 @@ The request body should contain data with the following structure:
       <td><code translate="no" dir="ltr">origin</code></td>
       <td>
         <p><strong><code class="apitype" translate="no" dir="ltr">string</code></strong></p>
-        <p>The url pattern "origin" refers to a url pattern that is the origin of a website.</p><p>Examples: "https://example.com", "https://cloud.google.com"</p>
+        <p>The url pattern "origin" refers to a url pattern that is the origin of a website.</p><p>Examples: <code>"https://example.com"</code>, <code>"https://cloud.google.com"</code></p>
       </td>
     </tr>
     <tr>
       <td><code translate="no" dir="ltr">url</code></td>
       <td>
         <p><strong><code class="apitype" translate="no" dir="ltr">string</code></strong></p>
-        <p>The url pattern "url" refers to a url pattern that is any arbitrary url.</p><p>Examples: "https://example.com/",  "https://cloud.google.com/why-google-cloud/"</p>
+        <p>The url pattern "url" refers to a url pattern that is any arbitrary url.</p><p>Examples: <code>"https://example.com/</code>, <code>https://cloud.google.com/why-google-cloud/"</code></p>
       </td>
     </tr>
   </tbody>
@@ -720,3 +739,7 @@ Object representing the normalization actions taken to normalize a url to achiev
     </tr>
   </tbody>
 </table>
+
+## Rate limits
+
+The CrUX API is limited to 150 queries per minute per Google Cloud project, which is offered free of charge. This limit, and your current usage, can be seen in the [Google Cloud Console](https://console.cloud.google.com/apis/api/chromeuxreport.googleapis.com/quotas). This generous quota should be sufficient for the vast majority of use cases and at present it is not possible to pay for an increased quota.

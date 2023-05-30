@@ -6,7 +6,9 @@ description: >
 subhead: >
   If your website relies on setting `document.domain`, your action is required.
 date: 2022-01-11
-updated: 2023-01-14
+updated: 2023-04-07
+is_outdated: true
+new_available_content_url: /blog/document-domain-setter-deprecation
 authors:
   - agektmr
 tags:
@@ -14,16 +16,25 @@ tags:
 hero: 'image/YLflGBAPWecgtKJLqCJHSzHqe2J2/grGMzuhOjsGhN150dONe.jpg'
 alt: >
   A dog in disguise.
+
 ---
 
 **Updates**
 
+- **May 30, 2023**: we've [announced](/blog/document-domain-setter-deprecation) that
+  the deprecation of `document.domain` setter will be effective in Chrome 115.
+- **April 7, 2023**: We've identified [an issue](https://crbug.com/1429587)
+  before shipping this change in Chrome 112. `document.domain` setter to be
+  removed by default is currently suspended and the new shipping milestone is
+  not determined yet. Please check back on this blog post or subscribe to
+  [blink-dev](https://groups.google.com/a/chromium.org/g/blink-dev/) and [this
+  thread](https://groups.google.com/a/chromium.org/g/blink-dev/c/nrLl0IxSxSI/).
 - **January 20, 2023**: Updated timeline—`document.domain` setter will be
-    removed by default starting from Chrome 112. Also, [a mention about
-    enterprise policy](#enterprise-policy) to control the `document.domain`
-    behavior is added.
+  removed by default starting from Chrome 112. Also, [a mention about enterprise
+  policy](#enterprise-policy) to control the `document.domain` behavior is
+  added.
 - **July 25, 2022**: Updated timeline—`document.domain` setter will be removed
-    by default starting from Chrome 109.
+  by default starting from Chrome 109.
 - **February 4, 2022**: Updated with the new timeline - we'll show a warning in
   the Issues panel starting from Chrome 100, removing `document.domain` setter
   by default starting from Chrome 106.
@@ -223,12 +234,10 @@ even after it becomes immutable by default.
 
 ### Configure `OriginAgentClusterDefaultEnabled` for enterprise policy {: #enterprise-policy}
 
-Optionally, if you are using [Chrome
-Enterprise](https://chromeenterprise.google/), your admin can configure
-`OriginAgentClusterDefaultEnabled` policy to `false` to make `document.domain`
-settable by default on Chrome instances across your organization. To learn more,
-read [Chrome Enterprise Policy List & Management |
-Documentation](https://chromeenterprise.google/policies/#OriginAgentClusterDefaultEnabled)
+Optionally, your admin can configure `OriginAgentClusterDefaultEnabled` policy
+to `false` to make `document.domain` settable by default on Chrome instances
+across your organization. To learn more, read [Chrome Enterprise Policy List &
+Management | Documentation](https://chromeenterprise.google/policies/#OriginAgentClusterDefaultEnabled).
 
 ## Browser compatibility
 

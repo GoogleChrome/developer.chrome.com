@@ -207,7 +207,7 @@ while (true) {
     frame.close();
   } else {
     frameCounter++;
-    const keyframe = frameCounter % 150 == 0;
+    const keyFrame = frameCounter % 150 == 0;
     encoder.encode(frame, { keyFrame });
     frame.close();
   }

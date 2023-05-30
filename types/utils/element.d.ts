@@ -18,6 +18,9 @@ declare global {
   export interface HTMLElement extends HTMLElement {
     inert: boolean;
   }
+  export interface HTMLScriptElement extends HTMLScriptElement {
+    supports: (type:string) => boolean;
+  }
 }
 
 // empty export to keep file a module

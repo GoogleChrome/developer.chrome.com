@@ -25,6 +25,9 @@ import arrowDownIcon from '../../_includes/icons/arrow-down.svg';
 import {generateIdSalt} from '../utils/salt';
 import closeIcon from '../../_includes/icons/close.svg';
 
+import {store} from '../store';
+import {setFilter} from '../actions/filter';
+
 const keyReg = new RegExp('^(Key|Digit|Numpad)', 'i');
 
 export class EnhancedSelect extends BaseElement {
@@ -35,8 +38,12 @@ export class EnhancedSelect extends BaseElement {
   constructor() {
     super();
 
-    // @ts-ignore
-    this.internals = this.attachInternals();
+    try {
+      // @ts-ignore
+      this.internals = this.attachInternals();
+    } catch (e) {
+      console.warn('ElementInternals not supported');
+    }
 
     this.handleLabelClick = this.handleLabelClick.bind(this);
     this.handleLabelKeydown = this.handleLabelKeydown.bind(this);
@@ -95,6 +102,22 @@ export class EnhancedSelect extends BaseElement {
     return this.options.find(option => option.value === this.value[0]).label;
   }
 
+  connectedCallback() {
+    super.connectedCallback();
+    store.subscribe(this.onStoreUpdate.bind(this));
+  }
+
+  /**
+   * Checks if the app state contains entries for this select, and if so
+   * sets the value to the entries.
+   * @param {*} state
+   */
+  onStoreUpdate(state) {
+    const filters = state.filters || {};
+    const entries = filters[this.name] || [];
+    this.setValue(entries.map(entry => entry.value));
+  }
+
   disconnectedCallback() {
     super.disconnectedCallback();
 
@@ -117,11 +140,18 @@ export class EnhancedSelect extends BaseElement {
   setValue(value) {
     this.value = value;
 
+    this.options.forEach(o => (o.selected = value.includes(o.value)));
+
     const data = new FormData();
 
     value.forEach(value => data.append(this.name, value));
 
-    this.internals.setFormValue(data);
+    // ElementInternals are not yet supported in Safari, but would
+    // also only be used in a <form> context, where we currently
+    // don't use it.
+    if (this.internals) {
+      this.internals.setFormValue(data);
+    }
 
     this.dispatchEvent(new Event('change', {bubbles: true, cancelable: true}));
   }
@@ -404,12 +434,20 @@ export class EnhancedSelect extends BaseElement {
    * @param {{id:string, label: string, value: string, selected: boolean}} option
    */
   selectOption(option) {
-    this.multiple
-      ? (option.selected = !option.selected)
-      : this.options.map(o => (o.selected = o === option));
+    if (this.multiple) {
+      this.setValue(
+        this.options
+          .filter(o => (o === option ? !o.selected : o.selected))
+          .map(o => o.value)
+      );
+    } else {
+      this.setValue([option.value]);
+    }
 
-    this.setValue(this.getSelectedValues());
-
+    setFilter(
+      this.name,
+      this.options.filter(o => o.selected)
+    );
     this.open = this.multiple;
   }
 
