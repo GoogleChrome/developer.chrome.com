@@ -256,7 +256,7 @@ View GPU activity in the **GPU** track. The GPU track is hidden by default. To e
 
 To get custom performance measures, you can use [User Timing](https://www.w3.org/TR/user-timing/) and visualize your timings with the **Timing** track. For more information, see the [User timing API](https://web.dev/usertiming/).
 
-Check out [this demo page](https://jec.fyi/demo/perf-measure) that calculates the elapsed time of text loading. 
+Check out [this demo page](https://jec.fish/demo/perf-measure) that calculates the elapsed time of text loading. 
 
 To view user timings:
 

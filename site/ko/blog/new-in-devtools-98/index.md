@@ -71,8 +71,8 @@ Chromium issues: [1238818](https://crbug.com/1238818), [1268754](https://crbug.c
 <!-- You can now adjust the **Timeout** settings in the [Recorder](/docs/devtools/recorder/) for all steps or a specific step. This is useful especially for pages with slow network requests and lengthy animation. -->
 이제 여러분들은 [Recorder](/docs/devtools/recorder/)에서 모든 단계 혹은 특정한 단계에서의 **타임아웃** 설정을 조정할 수 있게 됐습니다. 이 기능은 느린 네트워크 요청과 긴 애니메이션이 포함된 페이지에서 유용하게 사용될 것입니다.
 
-<!-- For example, I [recorded a user flow](/docs/devtools/recorder/#record) on this [demo page](https://jec.fyi/demo/pup-slow-result) to load and click on the menu item. However, the loading of the menu items is slow (it takes 6 seconds). The [replay](/docs/devtools/recorder/#replay) of this user flow failed because it exceeds 5 seconds  (the default timeout). -->
-예를 들어, [데모 페이지](https://jec.fyi/demo/pup-slow-result)에서 [유저 플로우 녹화](/docs/devtools/recorder/#record) 를 시작하고 메뉴 항목을 클릭하여 로드합니다. 그러나 메뉴를 불러들이는 것이 6초가 걸렸습니다. 로딩 시간이 5초를 초과-기본 타임아웃-했기 때문에 이 유저 플로우의 [다시보기](/docs/devtools/recorder/#replay)는 정상적으로 동작하지 않았습니다.
+<!-- For example, I [recorded a user flow](/docs/devtools/recorder/#record) on this [demo page](https://jec.fish/demo/pup-slow-result) to load and click on the menu item. However, the loading of the menu items is slow (it takes 6 seconds). The [replay](/docs/devtools/recorder/#replay) of this user flow failed because it exceeds 5 seconds  (the default timeout). -->
+예를 들어, [데모 페이지](https://jec.fish/demo/pup-slow-result)에서 [유저 플로우 녹화](/docs/devtools/recorder/#record) 를 시작하고 메뉴 항목을 클릭하여 로드합니다. 그러나 메뉴를 불러들이는 것이 6초가 걸렸습니다. 로딩 시간이 5초를 초과-기본 타임아웃-했기 때문에 이 유저 플로우의 [다시보기](/docs/devtools/recorder/#replay)는 정상적으로 동작하지 않았습니다.
 
 <!-- We can use the new **Timeout** settings to fix this. Expand the step which we click on the menu item. [Edit the step](/docs/devtools/recorder/#edit-steps) by  **Add timeout** and set it to **6000** milliseconds (equal to 6s). -->
 

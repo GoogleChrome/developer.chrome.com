@@ -36,8 +36,8 @@ tags:
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/qsleBCUrr2twMujW0R94.png", alt="Запись событий двойного клика и клика правой кнопкой мыши во вкладке Recorder", width="800", height="572" %}
 
-<!-- In this [example](https://jec.fyi/demo/dbl-right-click), start a [recording](/docs/devtools/recorder/#record) and try to perform the following steps:  -->
-На этой [тестовой странице](https://jec.fyi/demo/dbl-right-click) начните [запись](/docs/devtools/recorder/#record) и выполните следующие действия:
+<!-- In this [example](https://jec.fish/demo/dbl-right-click), start a [recording](/docs/devtools/recorder/#record) and try to perform the following steps:  -->
+На этой [тестовой странице](https://jec.fish/demo/dbl-right-click) начните [запись](/docs/devtools/recorder/#record) и выполните следующие действия:
 
 <!-- - Double-click the card to enlarge it
 - Right-click the card and select an action from the context menu -->

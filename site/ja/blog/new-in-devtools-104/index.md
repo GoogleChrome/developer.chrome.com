@@ -33,8 +33,8 @@ tags:
 <!-- The **Restart frame** feature is back! You can re-run the preceding code when paused somewhere in a function. Previously, this feature was deprecated and removed in Chrome 92 due to stability issues.  -->
 **Restart frame** 機能が復活しました! 関数のどこかで一時停止したときに、直前のコードを再実行することができます。以前は、この機能は非推奨で、安定性の問題から Chrome 92 で削除されました。
 
-<!-- In this [example](https://jec.fyi/), the debugger initially paused at the breakpoint (line 343) near the end of the `toggleColorScheme` function. To restart the debugging from the beginning of the `toggleColorScheme` function, expand the **Call stack** section in the **Debugger** pane, right click on `toggleColorScheme` and select **Restart frame**.  -->
-この [例](https://jec.fyi/) では、デバッガーは最初 `toggleColorScheme` 関数の末尾近くのブレークポイント (343行目) で一時停止しています。デバッグを `toggleColorScheme` 関数の先頭から再開するには、**Debugger** ペインの **Call stack** セクションを展開し、 `toggleColorScheme` を右クリックして **Restart frame** を選択してください。
+<!-- In this [example](https://jec.fish/), the debugger initially paused at the breakpoint (line 343) near the end of the `toggleColorScheme` function. To restart the debugging from the beginning of the `toggleColorScheme` function, expand the **Call stack** section in the **Debugger** pane, right click on `toggleColorScheme` and select **Restart frame**.  -->
+この [例](https://jec.fish/) では、デバッガーは最初 `toggleColorScheme` 関数の末尾近くのブレークポイント (343行目) で一時停止しています。デバッグを `toggleColorScheme` 関数の先頭から再開するには、**Debugger** ペインの **Call stack** セクションを展開し、 `toggleColorScheme` を右クリックして **Restart frame** を選択してください。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/uBcTkuIaoHHTgJCiGNED.png", alt="デバッグ中のフレーム再起動", width="800", height="499" %}
 
@@ -101,8 +101,8 @@ Chromium issue: [960909](https://crbug.com/960909)
 <!-- Visualize `performance.measure()` marks in your recording with the new **User Timings** track in the **Performance insights** panel. -->
 **Performance insights** パネルの新しい **User Timings** トラックで、 計測中の `performance.measure()` マークを視覚化します。
 
-<!-- For example, this [web page](https://jec.fyi/demo/perf-measure) uses the [`performance.measure()`](https://web.dev/usertiming/#calculating-measurements-with-measure()) method to calculate the elapsed time of text loading. -->
-たとえば、この [Web ページ](https://jec.fyi/demo/perf-measure)では、 [`performance.measure()`](https://web.dev/usertiming/#calculating-measurements-with-measure()) メソッドを用いて、テキストの読み込み経過時間を算出しています。
+<!-- For example, this [web page](https://jec.fish/demo/perf-measure) uses the [`performance.measure()`](https://web.dev/usertiming/#calculating-measurements-with-measure()) method to calculate the elapsed time of text loading. -->
+たとえば、この [Web ページ](https://jec.fish/demo/perf-measure)では、 [`performance.measure()`](https://web.dev/usertiming/#calculating-measurements-with-measure()) メソッドを用いて、テキストの読み込み経過時間を算出しています。
 
 <!-- When you start [measuring the page load](/docs/devtools/performance-insights/#record), the **User Timings** track shows in the recording. Click on the timings item to view its details on the side pane. -->
 [ページ読み込みの計測](/docs/devtools/performance-insights/#record)を開始すると、 **User Timings** トラックが計測結果に表示されるようになります。タイミング項目をクリックすると、サイドペインにその詳細が表示されます。
