@@ -98,17 +98,6 @@ You can now set [conditional breakpoints](/docs/devtools/javascript/breakpoints/
 
 Chromium issue: [1405767](https://crbug.com/1405767).
 
-### <kbd>Alt</kbd> / <kbd>Ctrl</kbd> + <kbd>Arrow</kbd> shortcut is back {: #alt-arrow-shortcut }
-
-The familiar shortcut that moves the cursor one word at at time is restored for CSS files in **Sources** > **Editor**:
-
-- MacOS: <kbd>Alt</kbd> + <kbd>Arrow</kbd>
-- Windows/Linux: <kbd>Ctrl</kbd> + <kbd>Arrow</kbd>
-
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/8e95348459baaf6bb8be32ee21724ae5645befaa #}
-
-Chromium issue: [1241848](https://crbug.com/1241848).
-
 ## Application > Bounce Tracking Mitigations {: #bounce-tracking }
 
 [Bounce Tracking Mitigations](https://privacycg.github.io/nav-tracking-mitigations/#bounce-tracking-mitigations) experiment in Chrome lets you identify and delete the state of sites that appear to perform cross-site tracking using the bounce tracking technique. The **Application** > **Background Services** pane gets a new **Bounce Tracking Mitigations** tab that lets you manually force tracking mitigations and lists the sites whose states were deleted.
@@ -186,6 +175,10 @@ These are some noteworthy fixes and improvements in this release:
 - **Performance**: Fixed incorrect display of the expandable **Interactions** track ([1432510](https://crbug.com/1432510)).
 - **Elements**: Stylesheets that failed to load are now underscored with wavy lines ([1440626](https://crbug.com/1440626)).
 - The **Debugger** doesn't automatically step in WebAssembly Apps when there is no plugin ([1443342](https://crbug.com/1443342)).
+- The shortcut that moves the cursor one word at at time is restored for CSS files in **Sources** > **Editor** ([1241848](https://crbug.com/1241848)):
+  - MacOS: <kbd>Alt</kbd> + <kbd>Arrow</kbd>
+  - Windows/Linux: <kbd>Ctrl</kbd> + <kbd>Arrow</kbd>
+
 
 <!-- $contentEnd -->
 
