@@ -190,6 +190,7 @@ suggestions and questions.
 
 The hero image was created by Robert Anasch on
 [Unsplash](https://unsplash.com/photos/-C7IKRBZHrg).
+This article was reviewed by [Rachel Andrew](/authors/rachelandrew/) and [Thomas Steiner](/authors/thomassteiner).
 
 [specs]: https://w3c.github.io/compute-pressure/
 [demo]: https://w3c.github.io/compute-pressure/demo/
