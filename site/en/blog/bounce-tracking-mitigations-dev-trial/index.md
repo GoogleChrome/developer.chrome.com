@@ -20,13 +20,13 @@ Bounce tracking is a technique that allows a third-party site to store a cookie 
 Bounce tracking can either be done as a "bounce back" or as a "bounce through".
 
 <figure>
-{% Img src="image/udVScdcCFAdRjZwFdLk2jWAFQyr1/fr3NNSkHF6x6r2i8NwqR.png", alt="Shows an example of a "bounce back" where site1.example redirects to tracker.example, cookies are accessed, and then redirects back to the original site." %}
+{% Img src="image/udVScdcCFAdRjZwFdLk2jWAFQyr1/fr3NNSkHF6x6r2i8NwqR.png", alt="Shows an example of a bounce back where site1.example redirects to tracker.example, cookies are accessed, and then redirects back to the original site." %}
 <figcaption>
   <p>Bounce Back Tracking.</p>
 </figure>
 
 <figure>
-{% Img src="image/udVScdcCFAdRjZwFdLk2jWAFQyr1/HbRv8UEXhcWPyMbxTLOJ.png", alt="Shows an example of "bounce through" where site1.example redirects to tracking.example. cookies are accessed, and then redirects to site2.example." %}
+{% Img src="image/udVScdcCFAdRjZwFdLk2jWAFQyr1/HbRv8UEXhcWPyMbxTLOJ.png", alt="Shows an example of bounce through where site1.example redirects to tracking.example. cookies are accessed, and then redirects to site2.example." %}
 <figcaption>
   <p>Bounce Through Tracking.</p>
 </figure>
