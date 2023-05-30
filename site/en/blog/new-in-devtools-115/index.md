@@ -3,7 +3,7 @@ layout: 'layouts/blog-post.njk'
 title: "What's New in DevTools (Chrome 115)"
 authors:
   - sofiayem
-date: 2023-05-29
+date: 2023-05-30
 description: ""
 hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/fy7JKyzJt0EPZd1g8hwl.jpg'
 alt: ''
@@ -22,7 +22,9 @@ tags:
 
 <!-- $contentStart -->
 
-##  New CSS subgrid badge in the Elements panel {: #subgrid }
+## Elements > Styles improvements {: #elements }
+
+### New CSS subgrid badge {: #subgrid }
 
 The **Elements** panel gets a new `subgrid` badge for [nested grids](https://developer.mozilla.org/docs/Web/CSS/CSS_Grid_Layout/Subgrid).
 
@@ -36,7 +38,7 @@ For the list of all badges in the **Elements** panel, see the [Badges reference]
 
 Chromium issue: [1442536](https://crbug.com/1442536).
 
-## Linear timing support in Elements > Styles > Easing Editor {: #linear }
+### Linear timing support in the Easing Editor {: #linear }
 
 The {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/U0vVF9a5jrj948Gegu6o.png", alt="Easing Editor.", width="22", height="22" %} [**Easing Editor**](/docs/devtools/css/reference/#edit-easing) in **Elements** > **Styles** lets you adjust [`transition-timing-function`](https://developer.mozilla.org/docs/Web/CSS/transition-timing-function) and [`animation-timing-function`](https://developer.mozilla.org/docs/Web/CSS/animation-timing-function) values with a click. In this version, the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/U0vVF9a5jrj948Gegu6o.png", alt="Easing Editor.", width="22", height="22" %} **Easing Editor** gets the linear timing function support.
 
@@ -47,6 +49,43 @@ To configure linear timings, click the linear picker button. To add a control po
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/670222516a187b5102ad78828cff1e2d5861aeec #}
 
 Chromium issue: [1421241](https://crbug.com/1421241).
+
+## Sources improvements {: #sources }
+
+### CSS syntax highlighting in Sources {: #css }
+
+The **Sources** panel gets the following:
+
+- New version of SASS, SCSS, and LESS syntax highlighting.
+- Inline editors support, for example, [**Color Picker**](/docs/devtools/css/color/) and [**Easing Editor**](/docs/devtools/css/reference/#edit-easing).
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/kaJILu31mesFmq7eZUQy.png", alt="Improved CSS syntax highlighting and inline editors support in Sources.", width="800", height="689" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/ab3adf62fb280aa4a598f5a3fd9f27dd24ad0ba6 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/906a69dfd1d94765cce5215bcee179dff3117998 #}
+
+Chromium issues: [1302261](https://crbug.com/1302261), [1392085](https://crbug.com/1392085s).
+
+### Shortcut to set conditional breakpoints {: #breakpoint }
+
+You can now set [conditional breakpoints](/docs/devtools/javascript/breakpoints/#conditional-loc) faster with a shortcut. To open the breakpoint dialog, hold <kbd>Command</kbd> (MacOS) or <kbd>Control</kbd> (Windows / Linux) and click the line number in the left column of the **Sources** > **Editor**.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7bRF2xDUGpwfvY6HIkgo.png", alt="The line number in the left column and the breakpoint dialog.", width="800", height="611" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/3d8f4d718804e1bc7b1d7916014c8c5b6a62c0b3 #}
+
+Chromium issue: [1405767](https://crbug.com/1405767).
+
+### <kbd>Alt</kbd> / <kbd>Ctrl</kbd> + <kbd>Arrow</kbd> shortcut is back {: #alt-arrow-shortcut }
+
+The familiar shortcut that moves the cursor one word at at time is restored for CSS files in **Sources** > **Editor**:
+
+- MacOS: <kbd>Alt</kbd> + <kbd>Arrow</kbd>
+- Windows/Linux: <kbd>Ctrl</kbd> + <kbd>Arrow</kbd>
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/8e95348459baaf6bb8be32ee21724ae5645befaa #}
+
+Chromium issue: [1241848](https://crbug.com/1241848).
 
 ## Application > Bounce Tracking Mitigations {: #bounce-tracking }
 
@@ -96,16 +135,6 @@ Additionally, the checkboxes in **Ignore List** got clearer text.
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/88fd441c2f7e483db02f4ab5e78a401fcf97cf8d #}
 
 Chromium issues: [1440958](https://crbug.com/1440958), [1364501](https://crbug.com/1364501).
-
-## Shortcut to set conditional breakpoints {: #breakpoint }
-
-You can now set [conditional breakpoints](/docs/devtools/javascript/breakpoints/#conditional-loc) faster with a shortcut. To open the breakpoint dialog, hold <kbd>Command</kbd> (MacOS) or <kbd>Control</kbd> (Windows / Linux) and click the line number in the left column of the **Sources** > **Editor**.
-
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7bRF2xDUGpwfvY6HIkgo.png", alt="The line number in the left column and the breakpoint dialog.", width="800", height="611" %}
-
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/3d8f4d718804e1bc7b1d7916014c8c5b6a62c0b3 #}
-
-Chromium issue: [1405767](https://crbug.com/1405767).
 
 ## Network > Response improvements {: #network }
 
