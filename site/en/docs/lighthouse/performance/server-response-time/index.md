@@ -1,19 +1,19 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: Reduce server response times (TTFB)
+title: Reduce server response times
 description: |
-  Learn about the time-to-first-byte audit.
+  Learn about the server-response-time audit.
 date: 2019-05-02
-updated: 2019-10-04
+updated: 2023-05-30
 ---
 
 The Opportunities section of your Lighthouse report
-reports Time to First Byte,
+reports Server Response Time,
 the time that it takes for a user's browser
 to receive the first byte of page content:
 
 <figure>
-  {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/V0P3MeqXSwGIL7fJbBRj.png", alt="A screenshot of the Lighthouse Server response times are low (TTFB) audit", width="800", height="95" %}
+  {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/Nc4yOYetwgmU6y6Ovcrx.png", alt="A screenshot of the Lighthouse Server response times are low audit", width="800", height="118" %}
 </figure>
 
 ## Slow server response times affect performance
@@ -22,6 +22,12 @@ This audit fails when the browser waits more than 600&nbsp;ms
 for the server to respond to the main document request.
 Users dislike when pages take a long time to load.
 Slow server response times are one possible cause for long page loads.
+
+{% Aside 'important' %}
+Lighthouse usually measures _Server Response Time_, rather than the full [Time to First Byte (TTFB)](https://web.dev/ttfb/). As well as including the Server Response Time, TTFB can often include redirects (for example if the final slash is omitted, or the www subdomain or https protocol is omitted, or for URL shorteners or Ads that redirect via several domains). Most Lighthouse tools will test the actual URL only, missing the redirect part.
+
+For this reason, Lighthouse also has a smaller limit (600&nbsp;ms) to the [Core Web Vitals TTFB recommended time](https://web.dev/ttfb/#what-is-a-good-ttfb-score) (800&nbsp;ms).
+{% endAside %}
 
 When users navigate to a URL in their web browser,
 the browser makes a network request to fetch that content.
@@ -44,6 +50,8 @@ There are many possible causes of slow server responses, and therefore many poss
 - Optimize the server's application logic to prepare pages faster. If you use a server framework, the framework may have recommendations on how to do this.
 - Optimize how your server queries databases, or migrate to faster database systems.
 - Upgrade your server hardware to have more memory or CPU.
+
+See the [Optimize TTFB](https://web.dev/optimize-ttfb/) guide for more details.
 
 ## Stack-specific guidance
 
@@ -76,4 +84,5 @@ optimization plugin, and/or upgrading your server.
 ## Resources
 
 - [Source code for **Reduce server response times (TTFB)** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/server-response-time.js)
-- [Adaptive Serving with Network Information API](https://web.dev/adaptive-serving-based-on-network-quality/)
+- [Time to First Byte documentation](https://web.dev/ttfb/)
+- [Optimizing TTFB guide](https://web.dev/optimize-ttfb/)

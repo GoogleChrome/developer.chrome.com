@@ -573,6 +573,8 @@ redirects:
 # Lighthouse redirects
 - from: /docs/lighthouse/best-practices/password-inputs-can-be-pasted-into/
   to: /docs/lighthouse/best-practices/paste-preventing-inputs/
+- from: /docs/lighthouse/performance/time-to-first-byte
+  to: /docs/lighthouse/performance/server-response-time
 
 # Fugu redirects
 - from: /blog/fugu-showcase/

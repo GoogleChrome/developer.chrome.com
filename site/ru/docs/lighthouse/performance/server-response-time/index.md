@@ -8,7 +8,7 @@ updated: 2019-10-04
 
 В разделе Opportunities (Возможности) отчета Lighthouse указана метрика TTFB (Время ответа сервера) — это время, которое требуется браузеру пользователя на получение первого байта содержимого страницы.
 
-<figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/V0P3MeqXSwGIL7fJbBRj.png", alt="Скриншот поверки Lighthouse «Сократите время ответа сервера (TTFB)»", width="800", height="95" %}</figure>
+<figure>{% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/Nc4yOYetwgmU6y6Ovcrx.png", alt="Скриншот поверки Lighthouse «Сократите время ответа сервера (TTFB)»", width="800", height="118" %}</figure>
 
 ## Медленное время ответа сервера влияет на производительность
 

@@ -8,7 +8,7 @@ updated: 2019-10-04
 
 A seção Oportunidades de seu relatório Lighthouse informa o tempo até o primeiro byte (Time to First Byte), o tempo que leva para o navegador de um usuário receber o primeiro byte do conteúdo da página:
 
-<figure>   {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/V0P3MeqXSwGIL7fJbBRj.png", alt="Uma captura de tela da auditoria Lighthouse Tempos de resposta do servidor são baixos (TTFB)", width="800", height="95" %}</figure>
+<figure>   {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/Nc4yOYetwgmU6y6Ovcrx.png", alt="Uma captura de tela da auditoria Lighthouse Tempos de resposta do servidor são baixos (TTFB)", width="800", height="118" %}</figure>
 
 ## Tempos de resposta lentos do servidor afetam o desempenho
 
