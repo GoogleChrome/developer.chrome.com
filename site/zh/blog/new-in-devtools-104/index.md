@@ -30,7 +30,7 @@ tags:
 
 **帧重启** 功能回归了! 您可以在调试时的函数中途从头开始重启当前代码行之前的代码。这个功能曾经因为稳定性问题在 Chrome 92 版本被弃用。  
 
-在这个 [例子](https://jec.fyi/), 调试器暂停在这个靠近`toggleColorScheme`函数尾端的断点（343 行) 。 在函数 `toggleColorScheme`开始处重启调试器, 扩展在**调试器**面板中的 **调用** 部分, 在`toggleColorScheme`上右点击并选取**帧重启**。  
+在这个 [例子](https://jec.fish/), 调试器暂停在这个靠近`toggleColorScheme`函数尾端的断点（343 行) 。 在函数 `toggleColorScheme`开始处重启调试器, 扩展在**调试器**面板中的 **调用** 部分, 在`toggleColorScheme`上右点击并选取**帧重启**。  
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/uBcTkuIaoHHTgJCiGNED.png", alt="在调试时进行帧重启", width="800", height="499" %}
 
@@ -83,7 +83,7 @@ Chromium 议题: [960909](https://crbug.com/960909)
 
 您现在可以透过 **Performance insights** 面板新增的**用户计时**轨道来查看您 performance recording 的 `performance.measure()` 标记。 
 
-例如, 这个 [网页](https://jec.fyi/demo/perf-measure) 使用 [`performance.measure()`](https://web.dev/usertiming/#calculating-measurements-with-measure())方法进行文字载入耗时的计算。
+例如, 这个 [网页](https://jec.fish/demo/perf-measure) 使用 [`performance.measure()`](https://web.dev/usertiming/#calculating-measurements-with-measure())方法进行文字载入耗时的计算。
 
 当您开始 [测量页面载入](/docs/devtools/performance-insights/#record), **用户计时** 追踪显示在录制中。在旁侧面板中点击计时物件检视计时细节. 
 

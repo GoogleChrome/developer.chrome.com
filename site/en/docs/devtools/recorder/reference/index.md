@@ -192,7 +192,7 @@ Sometimes, you may need to add steps manually. For example, the **Recorder** doe
 
 To manually add a step:
 
-1. Open this [demo page](https://jec.fyi/demo/menu-hover) and start a new recording.
+1. Open this [demo page](https://jec.fish/demo/menu-hover) and start a new recording.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/m1wPaIzCZFOpxF2kViEh.png", alt="Start a recording to capture a hover event.", width="800", height="570" %}
 1. Hover over the element in the viewport. An action menu pops up.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/RP5HSO8LhXBIfWqDMw5Y.png", alt="Hovering over the element.", width="800", height="570" %}
@@ -454,7 +454,7 @@ Record a click on "Cappuccino", expand the corresponding step in the recording, 
 
 You can customize the selector of a recording if the common test selectors don't work for you.
 
-For example, this [demo page](https://jec.fyi/demo/recorder) uses the `data-automate` attribute as the selector. [Start a new recording](/docs/devtools/recorder/reference/#record) and enter the `data-automate` as the selector attribute.
+For example, this [demo page](https://jec.fish/demo/recorder) uses the `data-automate` attribute as the selector. [Start a new recording](/docs/devtools/recorder/reference/#record) and enter the `data-automate` as the selector attribute.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/2PPPt9tOC2ZEz1l9F9AK.png", alt="Customize the recording's selector.", width="800", height="524" %}
 
