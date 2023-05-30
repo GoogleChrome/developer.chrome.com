@@ -552,9 +552,7 @@ In addition, `biddingLogicUrl`, `decisionLogicUrl`, and `trustedBiddingSignals` 
    want to add a browser to an interest group for a campaign that isn't running yet, or for some
    other future use, or they may temporarily have run out of advertising budget.
 
-\*\* In the current implementation of FLEDGE, `biddingLogicUrl`, `biddingWasmHelperUrl`,
-`dailyUpdateUrl` and `trustedBiddingSignalsUrl` must have the same origin as owner. That may not be
-a long-term constraint, and the `ads` and `adComponents` URLs have no such constraint.
+\*\* The `biddingLogicUrl`, `biddingWasmHelperUrl`, `dailyUpdateUrl` and `trustedBiddingSignalsUrl` URLs must have the same origin as owner. The `ads` and `adComponents` URLs have no such constraint.
 
 #### Update interest group attributes {: #update-interest-group}
 

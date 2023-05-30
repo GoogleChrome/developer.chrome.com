@@ -11,7 +11,8 @@ banner:
 {% from 'macros/icon.njk' import icon with context %}
 
 {% block css %}
-{% InlineCss '/css/styleguide-main.css' %}
+{% InlineCss '/css/single-post.css' %}
+{% InlineCss '/css/styleguide.css' %}
 {% endblock %}
 
 {% block content %}
@@ -55,6 +56,11 @@ banner:
   {% endAside %}
 
   {% Aside 'gotchas' %}
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. In, culpa quas
+  ratione quidem inventore id.
+  {% endAside %}
+
+  {% Aside 'update' %}
   Lorem ipsum dolor sit amet consectetur adipisicing elit. In, culpa quas
   ratione quidem inventore id.
   {% endAside %}

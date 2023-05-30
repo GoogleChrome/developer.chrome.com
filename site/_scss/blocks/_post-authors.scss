@@ -1,10 +1,22 @@
 .post-authors {
   display: grid;
-  gap: get-size(500);
+  gap: get-size(300);
   grid-template-columns: repeat(auto-fit, minmax(px-to-rem(220px), 1fr));
 }
 
-.post-authors-social {
-  display: flex;
-  gap: get-size(200);
+.post-authors-social > a {
+  margin-inline-end: get-size(100);
+}
+
+.post-authors__image > img {
+  border: 2px solid var(--color-bg);
+  border-radius: 100%;
+  box-sizing: content-box;
+  height: 50px;
+  max-width: 50px;
+  width: 50px;
+}
+
+.post-authors__image:not(:first-of-type) {
+  margin-left: -#{get-size(200)};
 }

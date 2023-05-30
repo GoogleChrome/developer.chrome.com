@@ -2,9 +2,9 @@
 layout: 'layouts/doc-post.njk'
 title: 'Topics API overview'
 subhead: >
-  Learn about this privacy-preserving API to enable interest-based advertising without third-party tracking.
+  The Topics API enables interest-based advertising (IBA) without having to resort to tracking the sites a user visits.
 description: >
-  Learn about this privacy-preserving API to enable interest-based advertising without third-party tracking.
+  The Topics API enables interest-based advertising (IBA) without having to resort to tracking the sites a user visits.
 date: 2022-01-25
 updated: 2023-03-08
 authors:

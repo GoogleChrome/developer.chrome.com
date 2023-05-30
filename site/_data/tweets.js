@@ -129,10 +129,17 @@ const formatEntities = tweet => {
  * @return {Promise<TwitterTweet[]>}
  */
 module.exports = async () => {
-  const tweetsFile = path.join(__dirname, '../../external/data/tweets.json');
-  let tweets = /** @type {TwitterTweet[]} */ (
-    JSON.parse(fs.readFileSync(tweetsFile, 'utf-8'))
-  );
+  let tweets = [];
+  try {
+    const tweetsFile = path.join(__dirname, '../../external/data/tweets.json');
+    tweets = /** @type {TwitterTweet[]} */ (
+      JSON.parse(fs.readFileSync(tweetsFile, 'utf-8'))
+    );
+  } catch (e) {
+    console.warn(
+      'Error reading tweets.json. Maybe it does not exist? See https://github.com/GoogleChrome/developer.chrome.com/pull/6384'
+    );
+  }
 
   // Remove polls
   tweets = tweets.filter(tweet => !tweet.entities.polls);

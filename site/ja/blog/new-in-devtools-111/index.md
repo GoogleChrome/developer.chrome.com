@@ -16,6 +16,7 @@ tags:
 *翻訳者の [yoshiko-pg](https://github.com/yoshiko-pg) さん、レビュアーの [yoichiro](https://github.com/yoichiro) さん、 [lacolaco](https://github.com/lacolaco) さん、 [technohippy](https://github.com/technohippy) さんに感謝いたします。*
 
 {% Partial 'devtools/banner.md' %}
+{% YouTube id='CrSmjooOEiE' %}
 
 <!-- Translation instructions:
   1. Remove the "draft: true" tag above when submitting PR

@@ -44,7 +44,7 @@ Next, create a new file in this directory called `manifest.json` and add the fol
 ```
 
 This JSON object describes the extension's capabilities and configuration. For example, the `"action"` key 
-declares the image Chrome should use as the action's icon and the HTML page to show in a popup when the action is clicked. [Download the icon][hello-icon] to your directory, and be sure to change its name to match what's in the `"default_icon"` key. 
+declares the image Chrome should use as the extension's action icon and the HTML page to show in a popup when the extension's action icon is clicked. [Download the icon][hello-icon] to your directory, and be sure to change its name to match what's in the `"default_icon"` key. 
 
 For the popup, create a file named `hello.html`, and add the following code:
 
@@ -56,7 +56,7 @@ For the popup, create a file named `hello.html`, and add the following code:
 </html>
 ```
 
-The extension now displays a popup when the extension action (toolbar icon) is clicked. Let's test
+The extension now displays a popup when the extension's action icon (toolbar icon) is clicked. Let's test
 it in Chrome by loading it locally. Ensure all files are saved.
 
 ## Loading an unpacked extension {: #load-unpacked }
@@ -95,7 +95,7 @@ alt="Pinning the extension", width="358", height="248", class="screenshot" %}
   </figcaption>
 </figure>
 
-Click on the extension’s action (toolbar icon); you should see a popup.
+Click on the extension’s action icon (toolbar icon); you should see a popup.
 
 <figure>
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/xjKRmWMgwMm7Kdf72bkj.png", 

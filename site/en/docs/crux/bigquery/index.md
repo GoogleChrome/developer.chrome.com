@@ -22,7 +22,7 @@ date: 2022-06-23
 
 # Optional
 # Include an updated date when you update your post
-updated: 2022-11-10
+updated: 2023-05-10
 
 # Optional
 # How to add a new author
@@ -100,12 +100,17 @@ The raw tables for each country and the `all` dataset have the following schema:
     - delay
 - layout_instability
     - cumulative_layout_shift
+- interaction_to_next_paint
 - experimental
     - permission
         - notifications
     - time_to_first_byte
-    - responsiveness
+    - interaction_to_next_paint (deprecated)
     - popularity
+
+{% Aside 'important' %}
+The `interaction_to_next_paint` metric is available both with and without the experimental prefix. The experimental prefix should now be considered deprecated and will be removed in August 2023. The non-prefixed schema should be used going forward.
+{% endAside %}
 
 ## Materialized table schema {: #schema-materialized }
 

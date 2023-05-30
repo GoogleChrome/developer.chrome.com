@@ -112,7 +112,7 @@
 
               <div class="gap-bottom-300">
                 <p>
-                  <truncate-text maxLength="100">{{ session.description }}</truncate-text>
+                  <truncate-text maxLength="100" fullText="{{ session.description }}">{{ session.description }}</truncate-text>
                 </p>
               </div>
             {% endif %}
@@ -210,7 +210,7 @@
             {% if session.description|length %}
               <div class="gap-bottom-300">
                 <p>
-                  <truncate-text maxLength="100">{{ session.description }}</truncate-text>
+                  <truncate-text maxLength="100" fullText="{{ session.description }}">{{ session.description }}</truncate-text>
                 </p>
               </div>
             {% endif %}

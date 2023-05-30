@@ -6,6 +6,8 @@ ondevice-auctions:
   en: 'On-device auctions for custom audiences'
 cross-site-storage:
   en: 'Secure cross-site storage'
+content-selection:
+  en: 'Cross-site content selection'
 fledge:
   en: 'FLEDGE'
 fledge-best-practices:
@@ -61,7 +63,9 @@ attribution-reporting-chrome-shipping:
 experiment-participate:
   en: 'Experiment and participate'
 attribution-reporting-debugging:
-  en: 'Debugging Attribution Reporting'
+  en: 'Debug Attribution Reporting'
+attribution-reporting-debugging-resources:
+  en: 'Generate debug reports'
 attribution-reporting-changing:
   en: 'API updates'
 attribution-reporting-handbook:
@@ -72,6 +76,8 @@ attribution-reporting-system:
   en: 'Attribution Reporting end-to-end'
 attribution-reporting-summary:
   en: 'Summary reports'
+maximize-relevence:
+  en: 'Maximize ad relevance'
 private-aggregation:
   en: 'Private Aggregation API'
 tracking-prevention:
@@ -101,12 +107,14 @@ feedback:
   en: 'Feedback'
 faq:
   en: 'FAQ'
+enroll:
+  en: 'Enroll your site'
 topics-experiment:
-  en: 'Topics API: experiment and participate'
+  en: 'Topics API: Experiment and participate'
 fledge-experiment:
-  en: 'FLEDGE: experiment and participate'
+  en: 'Protected Audience: Experiment and participate'
 fledge-overview:
-  en: 'FLEDGE overview'
+  en: 'Protected Audience overview'
 first-party-sets:
   en: 'First-Party Sets'
 gnatcatcher:
@@ -117,3 +125,5 @@ fenced-frame:
   en: 'Fenced Frames'
 fledge-api:
   en: 'Developer guide'
+paapi-walkthrough:
+  en: 'Protected Audience API walkthrough'

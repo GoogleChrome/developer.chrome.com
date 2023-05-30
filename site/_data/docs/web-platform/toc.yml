@@ -25,14 +25,13 @@
   sections:
     - url: /docs/web-platform/document-picture-in-picture
     - url: /docs/web-platform/launch-handler
-    - url: /docs/web-platform/webgpu
     - url: /docs/web-platform/popup-api
     - url: /docs/web-platform/bfcache-notrestoredreasons
     - url: /blog/soft-navigations-experiment/
+    - url: /docs/web-platform/compute-pressure
 
 - title: i18n.docs.web-platform.developer-trials
   sections:
-    - url: /docs/web-platform/compute-pressure
 
 - title: i18n.docs.web-platform.not-pursuing
   sections:

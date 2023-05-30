@@ -6,13 +6,15 @@ description: 'The second of three sections describing changes needed for code th
 date: 2023-03-09
 ---
 
+{% Partial 'extensions/mv3-support.md' %}
+
 Manifest V3 changes how extensions handle modification of network requests. Instead of intercepting network requests and altering them at runtime with `chrome.webRequest`, your extension specifies rules that describe actions to perform when a given set of conditions is met. Do this using the [Declarative Net Request API](/docs/extensions/reference/declarativeNetRequest/).
 
 The Web Request API and the Declarative Net Request APIs are significantly different. Instead of replacing one function call with another, you need to rewrite your code in terms of use cases. This section walks you through that process.
 
 In Manifest V2, blocking web requests could significantly degrade both the performance of extensions and the performance of pages they work with. The [`webRequest` namespace](/docs/extensions/reference/webRequest) supports nine potentially blocking events, each of which takes an unlimited number of event handlers. To make matters worse, each web page is potentially blocked by multiple extensions, and the permissions required for this are invasive. Manifest V3 guards against this problem by replacing callbacks with declarative rules.
 
-This is the second of three sections describing changes needed for code that is not part of the extension service worker. It describes converting blocking web requests, used by Manifest V2, to declarative net requests, used by Manifest V3. The other two sections cover [update API calls](/docs/extensions/migrating/api-calls) needed for migrating to Manifest V3 and [improving security](/docs/extensions/migrating/improve-security).
+This is the second of three sections describing changes needed for code that is not part of the extension service worker. It describes converting blocking web requests, used by Manifest V2, to declarative net requests, used by Manifest V3. The other two sections cover [updating your code](/docs/extensions/migrating/api-calls) needed for migrating to Manifest V3 and [improving security](/docs/extensions/migrating/improve-security)..
 
 ## Update permissions {: #update-permissions }
 

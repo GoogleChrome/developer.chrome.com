@@ -91,6 +91,17 @@ messages][15] for a hands-on walkthrough.
 [Open Console Settings][16] and disable **Group similar** to disable the Console's default message
 grouping behavior. See [Log XHR and Fetch requests][17] for an example.
 
+### View messages from breakpoints {: #view-breakpoints }
+
+The **Console** marks messages triggered by breakpoints in the following way:
+
+- `console.*` calls in [conditional breakpoints](/docs/devtools/javascript/breakpoints/#conditional-loc) with an orange question mark `?`
+- [Logpoint](/docs/devtools/javascript/breakpoints/#log-loc) messages with pink two dots `..`
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/aii8m7RVxpX6DhSCxpb7.png", alt="The Console marks messages created by conditional breakpoints and logpoints.", width="800", height="710" %}
+
+To jump to the [inline breakpoint editor](/docs/devtools/javascript/breakpoints/#edit-breakpoints) in the **Sources** panel, click the anchor link next to the breakpoint message.
+
 ### View stack traces {: #view-stack-traces }
 
 The **Console** automatically captures stack traces for errors and warnings. A stack trace is a history of function calls (frames) that led to the error or warning. The **Console** shows them in reverse order: the latest frame is at the top.

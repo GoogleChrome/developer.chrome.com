@@ -28,8 +28,8 @@ tags:
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/qsleBCUrr2twMujW0R94.png", alt="Recorder パネルでのダブルクリックイベントや右クリックイベントのキャプチャ", width="800", height="572" %}
 
-<!-- In this [example](https://jec.fyi/demo/dbl-right-click), start a [recording](/docs/devtools/recorder/#record) and try to perform the following steps:  -->
-この [例](https://jec.fyi/demo/dbl-right-click) では、以下の手順を行うために、 [レコーディング](/docs/devtools/recorder/#record) を開始しています。
+<!-- In this [example](https://jec.fish/demo/dbl-right-click), start a [recording](/docs/devtools/recorder/#record) and try to perform the following steps:  -->
+この [例](https://jec.fish/demo/dbl-right-click) では、以下の手順を行うために、 [レコーディング](/docs/devtools/recorder/#record) を開始しています。
 
 <!-- - Double-click the card to enlarge it
 - Right-click the card and select an action from the context menu -->

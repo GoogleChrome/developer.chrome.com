@@ -5,7 +5,7 @@ subhead: Reading and writing to NFC tags is now possible.
 authors:
   - beaufortfrancois
 date: 2020-02-12
-updated: 2022-01-27
+updated: 2023-05-02
 hero: image/admin/TqG3qb5MiLGNTnAgKtqO.jpg
 thumbnail: image/admin/8tWkeYbKLxSd2YgTUSGv.jpg
 alt: A photo of NFC tags
@@ -436,6 +436,32 @@ await ndef.makeReadOnly({ signal: abortController.signal });
 document.querySelector("#abortButton").onclick = event => {
   abortController.abort();
 };
+```
+
+### Read after write
+
+Using `write()` then `scan()` with the <code>[AbortController]</code>
+primitive makes it possible to read an NFC tag after writing a message to it.
+The example below shows you how to write a text message to an NFC tag and read
+the new message in the NFC tag. It stops scanning after three seconds.
+
+```js
+// Waiting for user to tap NFC tag to write to it...
+const ndef = new NDEFReader();
+await ndef.write("Hello world");
+// Success! Message has been written.
+
+// Now scanning for 3 seconds...
+const abortController = new AbortController();
+await ndef.scan({ signal: abortController.signal });
+const message = await new Promise((resolve) => {
+  ndef.onreading = (event) => resolve(event.message);
+});
+// Success! Message has been read.
+
+await new Promise((r) => setTimeout(r, 3000));
+abortController.abort();
+// Scanning is now stopped.
 ```
 
 ### Read and write a text record

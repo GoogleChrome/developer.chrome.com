@@ -89,7 +89,7 @@ alt="Clicked Disabled extension", width="252", height="180", class="screenshot" 
 ## Provide the extension icons
 
 An extension requires at least one icon to represent it. Provide icons in PNG format for the best
-visual results, although any raster format supported by Blink including BMP, GIF, ICO, and JPEG is
+visual results, although any raster format supported by Chrome including BMP, GIF, ICO, and JPEG is
 accepted.
 
 {% Aside 'caution' %}
