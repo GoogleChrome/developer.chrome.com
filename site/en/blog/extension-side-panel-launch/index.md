@@ -17,7 +17,7 @@ A year ago, in May 2022, we added the side panel to Chrome. This is a new compan
 <figure>
   {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/OU9486fAP8Dqgrs83L39.png", alt="A dictionary extension that shows the definition of a selected word", width="800", height="537", class="screenshot" %}
   <figcaption>
-  A dictionary extension that shows the definition of a selected word.
+  A dictionary extension that shows the definition of a selected word. See the <a href="https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.sidepanel-dictionary">code</a> in the chrome-extensions-samples repository.
   </figcaption>
 </figure>
 
