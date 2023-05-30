@@ -22,7 +22,7 @@ tags:
 
 <!-- $contentStart -->
 
-## Elements > Styles improvements {: #elements }
+## Elements improvements {: #elements }
 
 ### New CSS subgrid badge {: #subgrid }
 
@@ -49,6 +49,28 @@ To configure linear timings, click the linear picker button. To add a control po
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/670222516a187b5102ad78828cff1e2d5861aeec #}
 
 Chromium issue: [1421241](https://crbug.com/1421241).
+
+### Selector specificity in tooltips {: #specificity }
+
+In **Elements** > **Styles**, hover over a selector name to see its [specificity weight](https://developer.mozilla.org/docs/Web/CSS/Specificity) in a tooltip.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/eQt4wClGtnVpFsYSC5NH.png", alt="A tooltip with specificity weight of a selector.", width="800", height="509" %}
+
+{# https://chromium-review.googlesource.com/c/devtools/devtools-frontend/+/4431863 #}
+
+Chromium issue: [1204932](https://crbug.com/1204932).
+
+### Values of custom CSS properties in tooltips {: #css-variable-values }
+
+In **Elements** > **Styles**, hover over a custom CSS property name to see its value in a tooltip.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7StcARknd7VTSOFhlWnX.png", alt="The tooltip with a value of the custom CSS property.", width="800", height="429" %}
+
+The DevTools team would like to express gratitude to [一丝 and Suyan](https://chromium-review.googlesource.com/c/devtools/devtools-frontend/+/3992726) for landing this improvement.
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/a74458f6bf953e146f531309c39fd6842f6ece88 #}
+
+Chromium issue: [1380779](https://crbug.com/1380779).
 
 ## Sources improvements {: #sources }
 
@@ -163,7 +185,7 @@ These are some noteworthy fixes and improvements in this release:
 - Stylesheets that failed to load are now hidden from the navigator tree ([1386059](https://crbug.com/1386059)).
 - **Performance**: Fixed incorrect display of the expandable **Interactions** track ([1432510](https://crbug.com/1432510)).
 - **Elements**: Stylesheets that failed to load are now underscored with wavy lines ([1440626](https://crbug.com/1440626)).
-- The **Debugger** doesn't automatically step in WebAssembly Apps when there is no plugin ([1443342](https://crbug.com/1443342))
+- The **Debugger** doesn't automatically step in WebAssembly Apps when there is no plugin ([1443342](https://crbug.com/1443342)).
 
 <!-- $contentEnd -->
 
