@@ -3,8 +3,8 @@ layout: 'layouts/blog-post.njk'
 title: 'How the game editor Construct 3 uses the File System Access API to let users save their games'
 subhead: >
   The File System Access API allows read, write, and file management capabilities. Learn how Construct 3 makes use of this API.
-date: 2023-02-02
-# updated: 2023-02-02
+date: 2023-05-30
+# updated: 2023-05-30
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/p3aRD2yAMa9JUUFZRqEE.png
 alt: Four direction bomber man clone.
 authors:
