@@ -44,7 +44,7 @@ should consider:
 How does my side panel help the user?
 : The [single-purpose][policy-single-purpose] policy also applies to your side panel. Make sure that your side panel provides functionality that directly relates to the rest of your extension and what the user is trying to achieve.
 
-Does my side panel only appear when it’s relevant?
+Does my side panel only appear when it's relevant?
 : The [Side Panel API][sp-by-site] lets you choose which sites your users will see the side panel on. This way you can avoid showing it when it isn’t relevant to the user or it isn’t related to the content the user is browsing.
 
 Is the design consistent with the rest of my extension?
