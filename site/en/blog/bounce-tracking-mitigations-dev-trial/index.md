@@ -37,7 +37,7 @@ In both instances, users may be unaware they have visited `tracker.example`. The
 
 Chrome intends to protect users from bounce tracking by periodically deleting state for these tracking sites. The process will work as follows:
 
-1. Chrome will monitor navigations and internally flag sites that are part of a "stateful bounce". This means a navigation redirected through the site, and that the site accessed state during the redirection. This includes both server-initiated redirections and client-side redirections where JavaScript programmatically triggers a navigation. Accessing state includes both cookies and other types of storage; e.g. localstorage, indexedDB, etc.
+1. Chrome will monitor navigations and internally flag sites that are part of a "stateful bounce". This means a navigation redirected through the site, and that the site accessed state during the redirection. This includes both server-initiated redirections and client-side redirections where JavaScript programmatically triggers a navigation. Accessing state includes both cookies and other types of storage; for example, localstorage, indexedDB, etc.
 1. Chrome will periodically examine the list of flagged sites and check to see if the user has actively used the site by interacting with it within the last 45 days. This interaction can occur before, during, or after the bounce was detected.
 1. If the site does not have any user interaction and third-party cookies are blocked, then its state will be deleted.
 
@@ -57,14 +57,14 @@ The user interaction check is intended to protect non-tracking sites from deleti
 
 ## How can I tell if my site is impacted?
 
-Bounce tracking mitigations are available to test with feature flags from Chrome version 115 (currently the latest [canary](https://www.google.com/chrome/canary/)):
+Bounce tracking mitigations are available to test with feature flags from Chrome version 115 (currently the latest [Canary](https://www.google.com/chrome/canary/)):
 
 1. Create a [new Chrome profile](https://support.google.com/chrome/answer/2364824). An existing profile that you have used for web development might have interactions logged on the bounce site that your typical website users may not experience.
 1. Set the [flag](/docs/web-platform/chrome-flags/#chromeflags) at `chrome://flags/#bounce-tracking-mitigations` to "Enabled With Deletion".
 1. Enable third-party cookie blocking in `chrome://settings/cookies` by selecting "Block third-party cookies".
 1. Perform your workflow that involves redirections.
 1. Open the Chrome DevTools [Issues tab](/docs/devtools/issues/) and look for a message titled "Chrome may soon delete state for intermediate websites in a recent navigation chain".
-1. Force the bounce tracking deletion check to occur by going to the DevTools Application Panel, clicking on Bounce Tracking Mitigations under Background Services, and then pressing Force Run.  Alternatively, you can wait up to two hours for the deletion to occur.
+1. Force the bounce tracking deletion check to occur by going to the DevTools Application Panel, clicking on **Bounce Tracking Mitigations** under **Background Services**, and then pressing **Force Run**.  Alternatively, you can wait up to two hours for the deletion to occur.
 1. Perform your workflow that would expect to have state present on the site bounced through.
 
 For example, if in step (4) you visited [this demo page](https://bounce-tracking-demo.glitch.me/) and clicked the "bounce me" link, then you would expect to see a devtool issues like:
