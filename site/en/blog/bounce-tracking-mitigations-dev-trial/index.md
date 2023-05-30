@@ -21,10 +21,14 @@ Bounce tracking can either be done as a "bounce back" or as a "bounce through".
 
 <figure>
 {% Img src="image/udVScdcCFAdRjZwFdLk2jWAFQyr1/fr3NNSkHF6x6r2i8NwqR.png", alt="Shows an example of a "bounce back" where site1.example redirects to tracker.example, cookies are accessed, and then redirects back to the original site." %}
+<figcaption>
+  <p>Bounce Back Tracking.</p>
 </figure>
 
 <figure>
 {% Img src="image/udVScdcCFAdRjZwFdLk2jWAFQyr1/HbRv8UEXhcWPyMbxTLOJ.png", alt="Shows an example of "bounce through" where site1.example redirects to tracking.example. cookies are accessed, and then redirects to site2.example." %}
+<figcaption>
+  <p>Bounce Through Tracking.</p>
 </figure>
 
 In both instances, users may be unaware they have visited `tracker.example`. They may believe they have only visited `site1.example` or tried to navigate to `site2.example`.
@@ -66,13 +70,17 @@ Bounce tracking mitigations are available to test with feature flags from Chrome
 For example, if in step (4) you visited [this demo page](https://bounce-tracking-demo.glitch.me/) and clicked the "bounce me" link, then you would expect to see a devtool issues like:
 
 <figure>
-{% Img src="image/udVScdcCFAdRjZwFdLk2jWAFQyr1/YtP70APBL2ZSbBVa2EYX.png", alt="A screenshot of the devtools issue indicating bounce-tracking-demo-tracker.glitch.me is at risk of being deleted." %}
+{% Img src="image/udVScdcCFAdRjZwFdLk2jWAFQyr1/YtP70APBL2ZSbBVa2EYX.png", alt="A screenshot of the DevTools issue indicating bounce-tracking-demo-tracker.glitch.me is at risk of being deleted." %}
+<figcaption>
+  <p>Screenshot of the DevTools issue.</p>
 </figure>
 
 Then in step 6 you can force the deletion to occur immediately by using the DevTools Application Panel:
 
 <figure>
-{% Img src="image/udVScdcCFAdRjZwFdLk2jWAFQyr1/6QPd7ZS0s5F1uDXZberP.png", alt="" %}
+{% Img src="image/udVScdcCFAdRjZwFdLk2jWAFQyr1/6QPd7ZS0s5F1uDXZberP.png", alt="A screenshot of the DevTools issue showing that bounce-tracking-demo-tracker.glitch.me has been deleted." %}
+<figcaption>
+  <p>Screenshot of the deleted tracking website as shown on DevTools.</p>
 </figure>
 
 If you then revisit the [demo](https://bounce-tracking-demo.glitch.me/) and perform the bounce, you should see a new identifier produced because the state was cleared.
