@@ -7,6 +7,8 @@ subhead: >
   If your website relies on setting `document.domain`, your action is required.
 date: 2022-01-11
 updated: 2023-04-07
+is_outdated: true
+new_available_content_url: /blog/document-domain-setter-deprecation
 authors:
   - agektmr
 tags:
@@ -14,10 +16,13 @@ tags:
 hero: 'image/YLflGBAPWecgtKJLqCJHSzHqe2J2/grGMzuhOjsGhN150dONe.jpg'
 alt: >
   A dog in disguise.
+
 ---
 
 **Updates**
 
+- **May 30, 2023**: we've [announced](/blog/document-domain-setter-deprecation) that
+  the deprecation of `document.domain` setter will be effective in Chrome 115.
 - **April 7, 2023**: We've identified [an issue](https://crbug.com/1429587)
   before shipping this change in Chrome 112. `document.domain` setter to be
   removed by default is currently suspended and the new shipping milestone is
