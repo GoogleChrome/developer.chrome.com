@@ -12,12 +12,7 @@ tags:
   - extensions-news
 ---
 
-A year ago, in May 2022, we added the side panel to Chrome. This is a new companion surface that
-allows users to use tools like the reading list and bookmarks alongside the content they are
-browsing. Today, we’re excited to announce that your extension can start showing content in the side
-panel, beginning in Chrome 114.
-
-## Better for users, easier for developers {: #experience }
+A year ago, in May 2022, we added the side panel to Chrome. This is a new companion surface that allows users to use tools alongside the content they are browsing. Today, we’re excited to announce that your extension can start showing content in the side panel, beginning in Chrome 114.
 
 <figure>
   {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/OU9486fAP8Dqgrs83L39.png", alt="A dictionary extension that shows the definition of a selected word", width="800", height="537", class="screenshot" %}
@@ -25,6 +20,8 @@ panel, beginning in Chrome 114.
   A dictionary extension that shows the definition of a selected word.
   </figcaption>
 </figure>
+
+## Better for users, easier for developers {: #experience }
 
 We’ve already seen many developers implement sidebar-like experiences into their extension, which is
 why we're thrilled to make it a platform standard. With the new [Side Panel API][api-sidepanel], you
@@ -45,22 +42,22 @@ mind: how are you assisting users to complete tasks across the web? Here are a f
 should consider:
 
 How does my side panel help the user?
-: The single-purpose policy also applies to your side panel. Make sure that your side panel provides functionality that directly relates to the rest of your extension and what the user is trying to achieve.
+: The [single-purpose][policy-single-purpose] policy also applies to your side panel. Make sure that your side panel provides functionality that directly relates to the rest of your extension and what the user is trying to achieve.
 
-Does my side panel only appear when it’s helpful?
-: The Side Panel API lets you choose which sites your users will see the side panel on. This way you can avoid showing it when it isn’t relevant to the user.
+Does my side panel only appear when it’s relevant?
+: The [Side Panel API][sp-by-site] lets you choose which sites your users will see the side panel on. This way you can avoid showing it when it isn’t relevant to the user or it isn’t related to the content the user is browsing.
 
-Is the design of my side panel consistent with the rest of my extension?
+Is the design consistent with the rest of my extension?
 : Your side panel should have a visually appealing design that matches the logo, colors, icons, and fonts of your extension and store listing. This provides users a consistent, recognizable experience wherever they are using your extension.
 
 How do users discover my side panel?
-: Let new users know how to use your side panel by providing sufficient documentation or training within the extension. This will help you retain users and avoid bad reviews in your store listing. Remember, you can start to teach users before they install the extension by including a YouTube video that shows how your extension works in your store listing!
+: Let new users know how to use your side panel by providing sufficient documentation or training within the extension. This will help you retain users and avoid bad reviews in your store listing. Remember, you can start to teach users before they install the extension by including a [YouTube video][cws-graphics] that shows how your extension works in your store listing!
 
-We’ve also updated our [Program Policies](/docs/webstore/program-policies/), with updates to our [Best Practices](/docs/webstore/program-policies/best-practices/) and [Quality Guidelines](/docs/webstore/program-policies/quality-guidelines/) sections to reflect some of these considerations. These changes highlight that your side panel should act as a helpful companion to users' browsing experiences by providing complementary functionality. They also make it clear that your side panel shouldn’t have unnecessary distractions.
+We’ve also updated our [Program Policies][cws-policies], with updates to our [Best Practices][cws-best-practices] and [Quality Guidelines][cws-quality] sections to reflect some of these considerations. These changes highlight that your side panel should act as a helpful companion to users' browsing experiences by providing complementary functionality. They also make it clear that your side panel shouldn’t have unnecessary distractions.
 
 ## An overview of the API {: #overview }
 
-For your extension to appear in the side panel, just request the `"sidePanel"` permission in your manifest, and add the `"side_panel"` key with a `"default_path"` pointing to a page within your extension:
+For your extension to appear in the side panel, just request the `"sidePanel"` permission in your [manifest][doc-manifest], and add the `"side_panel"` key with a `"default_path"` pointing to a page within your extension:
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -77,18 +74,7 @@ For your extension to appear in the side panel, just request the `"sidePanel"` p
 }
 ```
 
-Load your extension, open the side panel UI, and switch to your extension. Your extension page is loaded and you can use all of the extension APIs you’re used to!
-
-<figure>
-
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/8ouLbMVMtv2KA0GT2NcR.gif", alt="Opening side panel dictionary extension", width="800", height="541", class='screenshot' %}
-  
-  <figcaption>
-    Opening side panel dictionary extension
-  </figcaption>
-</figure>
-
-The icon for your side panel will be taken from your [extension’s icon][manifest-icon] - don’t forget to set that for an extra bit of polish.
+On a side panel page, you can load scripts and call extension APIs as you would on any other extension page. The icon for your side panel will be taken from your [extension’s icon][manifest-icon] - don’t forget to set that for an extra bit of polish.
 
 ## Extra capabilities {: #capabilities }
 
@@ -132,11 +118,19 @@ You can keep up with Chrome extensions news by visiting our [What's new page][wh
 _Photo by [Vardan Papikyan][unsplash-vardan] on [Unsplash][unsplash]_
   
 [api-sidepanel]: /docs/extensions/reference/sidepanel
-[cws-graphics]: /docs/webstore/cws-dashboard-listing/#graphic-assets
-[whats-new]: /docs/extensions/whatsnew/
 [chromium-groups]: https://groups.google.com/a/chromium.org/g/chromium-extensions
-[gh-sidepanel-samples]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/
+[cws-best-practices]: /docs/webstore/program-policies/best-practices/
+[cws-graphics]: /docs/webstore/cws-dashboard-listing/#graphic-assets
+[cws-policies]: /docs/webstore/program-policies/
+[cws-quality]: /docs/webstore/program-policies/quality-guidelines/
+[doc-manifest]: /docs/extensions/mv3/manifest/
 [gh-sidepanel-dictionary]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.sidepanel-dictionary
+[gh-sidepanel-samples]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/
 [manifest-icon]: /docs/extensions/mv3/manifest/icons/
+[policy-single-purpose]: /docs/extensions/mv3/single_purpose/
+[sp-by-site]: https://developer.chrome.com/docs/extensions/reference/sidePanel/#by-site
 [unsplash-vardan]: https://unsplash.com/@timberfoster?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 [unsplash]: https://unsplash.com/photos/lSegRSDBMLw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+[whats-new]: /docs/extensions/whatsnew/
+
+
