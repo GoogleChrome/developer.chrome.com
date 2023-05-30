@@ -78,9 +78,9 @@ For example, if in step (4) you visited [this demo page](https://bounce-tracking
 Then in step 6 you can force the deletion to occur immediately by using the DevTools Application Panel:
 
 <figure>
-{% Img src="image/udVScdcCFAdRjZwFdLk2jWAFQyr1/6QPd7ZS0s5F1uDXZberP.png", alt="A screenshot of the DevTools issue showing that bounce-tracking-demo-tracker.glitch.me has been deleted." %}
+{% Img src="image/udVScdcCFAdRjZwFdLk2jWAFQyr1/6QPd7ZS0s5F1uDXZberP.png", alt="A screenshot of the devtools application tab with the bounce tracking mitigations panel selected.  The panel shows that the force run operation has been used and storage has been deleted for the demo site." %}
 <figcaption>
-  <p>Screenshot of the deleted tracking website as shown on DevTools.</p>
+  <p>DevTools bounce tracking mitigations panel.</p>
 </figure>
 
 If you then revisit the [demo](https://bounce-tracking-demo.glitch.me/) and perform the bounce, you should see a new identifier produced because the state was cleared.
