@@ -20,13 +20,13 @@ Bounce tracking is a technique that allows a third-party site to store a cookie 
 Bounce tracking can either be done as a "bounce back" or as a "bounce through".
 
 <figure>
-{% Img src="image/udVScdcCFAdRjZwFdLk2jWAFQyr1/fr3NNSkHF6x6r2i8NwqR.png", alt="Shows an example of a bounce back where site1.example redirects to tracker.example, cookies are accessed, and then redirects back to the original site." %}
+{% Img src="image/udVScdcCFAdRjZwFdLk2jWAFQyr1/fr3NNSkHF6x6r2i8NwqR.png", alt="Shows an example of a bounce back where site1.example redirects to tracker.example, cookies are accessed, and then redirects back to the original site.", width="528", height="203" %}
 <figcaption>
   <p>Bounce Back Tracking.</p>
 </figure>
 
 <figure>
-{% Img src="image/udVScdcCFAdRjZwFdLk2jWAFQyr1/HbRv8UEXhcWPyMbxTLOJ.png", alt="Shows an example of bounce through where site1.example redirects to tracking.example. cookies are accessed, and then redirects to site2.example." %}
+{% Img src="image/udVScdcCFAdRjZwFdLk2jWAFQyr1/HbRv8UEXhcWPyMbxTLOJ.png", alt="Shows an example of bounce through where site1.example redirects to tracking.example. cookies are accessed, and then redirects to site2.example.", width="586", height="211" %}
 <figcaption>
   <p>Bounce Through Tracking.</p>
 </figure>
@@ -70,7 +70,7 @@ Bounce tracking mitigations are available to test with feature flags from Chrome
 For example, if in step (4) you visited [this demo page](https://bounce-tracking-demo.glitch.me/) and clicked the "bounce me" link, then you would expect to see a devtool issues like:
 
 <figure>
-{% Img src="image/udVScdcCFAdRjZwFdLk2jWAFQyr1/YtP70APBL2ZSbBVa2EYX.png", alt="A screenshot of the DevTools issue indicating bounce-tracking-demo-tracker.glitch.me is at risk of being deleted." %}
+{% Img src="image/udVScdcCFAdRjZwFdLk2jWAFQyr1/YtP70APBL2ZSbBVa2EYX.png", alt="A screenshot of the DevTools issue indicating bounce-tracking-demo-tracker.glitch.me is at risk of being deleted.", width="800", height="218" %}
 <figcaption>
   <p>Screenshot of the DevTools issue.</p>
 </figure>
@@ -78,7 +78,7 @@ For example, if in step (4) you visited [this demo page](https://bounce-tracking
 Then in step 6 you can force the deletion to occur immediately by using the DevTools Application Panel:
 
 <figure>
-{% Img src="image/udVScdcCFAdRjZwFdLk2jWAFQyr1/6QPd7ZS0s5F1uDXZberP.png", alt="A screenshot of the devtools application tab with the bounce tracking mitigations panel selected.  The panel shows that the force run operation has been used and storage has been deleted for the demo site." %}
+{% Img src="image/udVScdcCFAdRjZwFdLk2jWAFQyr1/6QPd7ZS0s5F1uDXZberP.png", alt="A screenshot of the devtools application tab with the bounce tracking mitigations panel selected.  The panel shows that the force run operation has been used and storage has been deleted for the demo site.", width="800", height="273" %}
 <figcaption>
   <p>DevTools bounce tracking mitigations panel.</p>
 </figure>
