@@ -37,8 +37,8 @@ tags:
 <!-- You can now view and edit the CSS `@supports` at-rules in the **Styles** pane. These changes make it easier to experiment with the at-rules in real time. -->
 **Styles** ペインにて、CSS の `@supports` アットルールを表示および編集することができるようになりました。これらの変更によって、アットルールをリアルタイムで簡単に試すことができます。
 
-<!-- Open this [demo page](https://jec.fyi/demo/at-support), [inspect](/docs/devtools/dom/#inspect) the `<div class=”box”>` element, view the `@supports` at-rules in the **Styles** pane. Click on the rule’s declaration to edit it.  -->
-この [デモページ](https://jec.fyi/demo/at-support) を開いて、 `<div class=”box”>` 要素を [inspect](/docs/devtools/dom/#inspect) すると、 **Styles** ペインの中で `@supports` アットルールが表示されます。編集するには、そのルールの宣言をクリックしてください。
+<!-- Open this [demo page](https://jec.fish/demo/at-support), [inspect](/docs/devtools/dom/#inspect) the `<div class=”box”>` element, view the `@supports` at-rules in the **Styles** pane. Click on the rule’s declaration to edit it.  -->
+この [デモページ](https://jec.fish/demo/at-support) を開いて、 `<div class=”box”>` 要素を [inspect](/docs/devtools/dom/#inspect) すると、 **Styles** ペインの中で `@supports` アットルールが表示されます。編集するには、そのルールの宣言をクリックしてください。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/vnokX5Hswmbvlb5weusO.png", alt="@supports アットルールの表示と編集", width="800", height="502" %}
 
@@ -67,8 +67,8 @@ Chromium issues: [1222574](https://crbug.com/1222574), [1222573](https://crbug.c
 <!-- The attributes above are common selectors used in test automation.  -->
 上記の属性は、テストの自動化で使用される一般的なセレクタです。
 
-<!-- For example, [start a new recording](/docs/devtools/recorder/#record) with this [demo page](https://jec.fyi/demo/recorder). Fill in an email address and observe the selector value. -->
-例えば、この [デモページ](https://jec.fyi/demo/recorder) で [新規にレコーディングを開始](/docs/devtools/recorder/#record) します。 メールアドレスを入力して、セレクタの値を確認してみてください。
+<!-- For example, [start a new recording](/docs/devtools/recorder/#record) with this [demo page](https://jec.fish/demo/recorder). Fill in an email address and observe the selector value. -->
+例えば、この [デモページ](https://jec.fish/demo/recorder) で [新規にレコーディングを開始](/docs/devtools/recorder/#record) します。 メールアドレスを入力して、セレクタの値を確認してみてください。
 
 <!-- Since the email element has `data-testid` defined, it’s used as the selector automatically instead of the `id` or `class` attributes. -->
 email 要素には `data-testid` が定義されているので、 `id` や `class` 属性の代わりに、自動的にセレクタとして使用されます。
@@ -82,8 +82,8 @@ email 要素には `data-testid` が定義されているので、 `id` や `cla
 <!-- You can customize the selector of a recording if you are not using the [common selectors](/docs/devtools/recorder/#selector). -->
 [一般的なセレクタ](/docs/devtools/recorder/#selector) を使用していない場合は、レコーディングのセレクタをカスタマイズできます。
 
-<!-- For example, this [demo page](https://jec.fyi/demo/recorder) uses the `data-automate` attribute as the selector. [start a new recording](/docs/devtools/recorder/#record) and enter the `data-automate` as the selector attribute. Fill in an email address and observe the selector value (`[data-automate=email-address]`). -->
-例えば、この [デモページ](https://jec.fyi/demo/recorder) は、セレクタとして `data-automate` 属性を使用しています。 [新規にレコーディングを開始](/docs/devtools/recorder/#record) して、セレクタとして `data-automate` と入力します。メールアドレスを入力して、セレクタの値 ( `[data-automate=email-address]` ) を確認してみてください。
+<!-- For example, this [demo page](https://jec.fish/demo/recorder) uses the `data-automate` attribute as the selector. [start a new recording](/docs/devtools/recorder/#record) and enter the `data-automate` as the selector attribute. Fill in an email address and observe the selector value (`[data-automate=email-address]`). -->
+例えば、この [デモページ](https://jec.fish/demo/recorder) は、セレクタとして `data-automate` 属性を使用しています。 [新規にレコーディングを開始](/docs/devtools/recorder/#record) して、セレクタとして `data-automate` と入力します。メールアドレスを入力して、セレクタの値 ( `[data-automate=email-address]` ) を確認してみてください。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/2PPPt9tOC2ZEz1l9F9AK.png", alt="レコーディングのセレクタをカスタマイズする", width="800", height="524" %}
 

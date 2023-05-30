@@ -5,7 +5,7 @@ subhead: >
   For its programmable SPIKE™ kits, LEGO® Education uses the power of the web to
   make connecting the LEGO models to the computer as simple as possible.
 date: 2023-05-22
-# updated: 2023-05-22
+updated: 2023-05-26
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/XDqpoF5gXT6DdADGPGCq.png
 alt: Kids playing with the LEGO Education SPIKE kit.
 authors:
@@ -140,6 +140,12 @@ the lesson material needed in classrooms. After downloading this material, the
 size increases by almost 1 GB. On the web app, the lesson content is streamed,
 which enables the user to always have the latest version and only download the
 exact lesson they are looking at.
+
+Apart from these technical reasons, simplicity of classroom use is another strong
+argument for going web-first. Students don't need to install an app and keep it
+updated. Instead, they just follow a link and always work with the most recent
+version. From LEGO's end, content updates are always possible, independent from app
+store review processes.
 
 ## Tinkering with LEGO on the web
 

@@ -35,8 +35,8 @@ O painel **Gravação** agora pode capturar eventos de clique duplo e clique com
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/qsleBCUrr2twMujW0R94.png", alt="Captura de eventos de clique duplo e clique com o botão direito do mouse no painel Gravação", width="800", height="572" %}
 
-<!-- In this [example](https://jec.fyi/demo/dbl-right-click), start a [recording](/docs/devtools/recorder/#record) and try to perform the following steps:  -->
-Neste [exemplo](https://jec.fyi/demo/dbl-click direito), inicie uma [gravação](/docs/devtools/recorder/#record) e tente executar as seguintes etapas:
+<!-- In this [example](https://jec.fish/demo/dbl-right-click), start a [recording](/docs/devtools/recorder/#record) and try to perform the following steps:  -->
+Neste [exemplo](https://jec.fish/demo/dbl-click direito), inicie uma [gravação](/docs/devtools/recorder/#record) e tente executar as seguintes etapas:
 <!-- - Double-click the card to enlarge it
 - Right-click the card and select an action from the context menu -->
 - Clique duas vezes no cartão para ampliá-lo
