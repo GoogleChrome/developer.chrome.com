@@ -19,7 +19,7 @@ tags:
 Here's what you need to know:
 
 * CSS [`text-wrap: balance`] (#text-wrap-balance) is available to improve text layouts.
-* Cookies partitioned by top level site ([CHIPS](#chips))are here.
+* Cookies partitioned by top level site ([CHIPS](#chips)) are here.
 * Popovers are easier than even with the [Popover API](#popover-api).
 * And there’s plenty [more](#more).
 
@@ -49,7 +49,7 @@ As a developer, you don’t know the final size, font size, or even language of 
 
 The balanced text block is more pleasing to the eye of a reader. It grabs attention better and is overall easier to read.
 
-Balancing headlines will and should be the primary use case for `text-wrap: balance` . There is a performance cost to balance the text, so to mitigate the cost it only works for up to four lines.
+Balancing headlines will and should be the primary use case for `text-wrap: balance`. There is a performance cost to balance the text, so to mitigate the cost it only works for up to four lines.
 
 Check out [this article](/blog/css-text-wrap-balance/) with samples and more details to improve your text layouts.
 
