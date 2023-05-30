@@ -43,7 +43,7 @@ Use `text-wrap-balance` to improve text layouts. The animation below shows the d
   </figcaption>
 </figure>
 
-As a developer, you don’t know the final size, font size, or even language of text. All variables“are“needed for an effective treatment of text wrapping. Since the browser does know all the factors, with text-wrap:balance you can request the browser to figure out the best balanced line wrapping solution.
+As a developer, you don’t know the final size, font size, or even language of text. All variables are needed for an effective treatment of text wrapping. Since the browser does know all the factors, with text-wrap:balance you can request the browser to figure out the best balanced line wrapping solution.
 
 {% Img src="image/vS06HQ1YTsbMKSFTIPl2iogUQP73/lnGFtchLIPk9RnHSurHg.png", alt="The two previous examples are shown together, one is marked as unbalanced and the other as balanced.", width="800", height="371" %}
 
