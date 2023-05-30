@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Architecture overview"
 seoTitle: "Chrome Extensions architecture overview"
 date: 2012-09-18
-updated: 2023-05-24
+updated: 2023-05-30
 description: A high-level explanation of the architecture of Chrome Extensions.
 subhead: A high-level explanation of the structure of a Chrome Extension.
 anchorRedirects:

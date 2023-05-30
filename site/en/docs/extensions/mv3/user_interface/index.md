@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Design the user interface"
 seoTitle: "Chrome Extensions: Design the user interface"
 date: 2018-03-16
-updated: 2023-05-24
+updated: 2023-05-30
 description: UI and design guidelines for Chrome Extensions.
 ---
 
