@@ -12,7 +12,7 @@ tags:
   - extensions-news
 ---
 
-A year ago, in May 2022, we added the side panel to Chrome. This is a new companion surface that allows users to use tools alongside the content they are browsing. Today, we’re excited to announce that your extension can start showing content in the side panel, beginning in Chrome 114.
+A year ago, in May 2022, we added the side panel to Chrome. This is a new companion surface that allows users to use tools alongside the content they are browsing. Today, we're excited to announce that your extension can start showing content in the side panel, beginning in Chrome 114.
 
 <figure>
   {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/OU9486fAP8Dqgrs83L39.png", alt="A dictionary extension that shows the definition of a selected word", width="800", height="537", class="screenshot" %}
@@ -23,7 +23,7 @@ A year ago, in May 2022, we added the side panel to Chrome. This is a new compan
 
 ## Better for users, easier for developers {: #experience }
 
-We’ve already seen many developers implement sidebar-like experiences into their extension, which is
+We've already seen many developers implement sidebar-like experiences into their extension, which is
 why we're thrilled to make it a platform standard. With the new [Side Panel API][api-sidepanel], you
 can now offer a persistent UI that opens alongside a page that the user is visiting. Users will
 benefit from consistent positioning and layout between extensions. In addition, the ability to show
@@ -45,7 +45,7 @@ How does my side panel help the user?
 : The [single-purpose][policy-single-purpose] policy also applies to your side panel. Make sure that your side panel provides functionality that directly relates to the rest of your extension and what the user is trying to achieve.
 
 Does my side panel only appear when it's relevant?
-: The [Side Panel API][sp-by-site] lets you choose which sites your users will see the side panel on. This way you can avoid showing it when it isn’t relevant to the user or it isn’t related to the content the user is browsing.
+: The [Side Panel API][sp-by-site] lets you choose which sites your users will see the side panel on. This way you can avoid showing it when it isn't relevant to the user or it isn't related to the content the user is browsing.
 
 Is the design consistent with the rest of my extension?
 : Your side panel should have a visually appealing design that matches the logo, colors, icons, and fonts of your extension and store listing. This provides users a consistent, recognizable experience wherever they are using your extension.
@@ -53,7 +53,7 @@ Is the design consistent with the rest of my extension?
 How do users discover my side panel?
 : Let new users know how to use your side panel by providing sufficient documentation or training within the extension. This will help you retain users and avoid bad reviews in your store listing. Remember, you can start to teach users before they install the extension by including a [YouTube video][cws-graphics] that shows how your extension works in your store listing!
 
-We’ve also updated our [Program Policies][cws-policies], with updates to our [Best Practices][cws-best-practices] and [Quality Guidelines][cws-quality] sections to reflect some of these considerations. These changes highlight that your side panel should act as a helpful companion to users' browsing experiences by providing complementary functionality. They also make it clear that your side panel shouldn’t have unnecessary distractions.
+We've also updated our [Program Policies][cws-policies], with updates to our [Best Practices][cws-best-practices] and [Quality Guidelines][cws-quality] sections to reflect some of these considerations. These changes highlight that your side panel should act as a helpful companion to users' browsing experiences by providing complementary functionality. They also make it clear that your side panel shouldn't have unnecessary distractions.
 
 ## An overview of the API {: #overview }
 
@@ -74,7 +74,7 @@ For your extension to appear in the side panel, just request the `"sidePanel"` p
 }
 ```
 
-On a side panel page, you can load scripts and call extension APIs as you would on any other extension page. The icon for your side panel will be taken from your [extension’s icon][manifest-icon] - don’t forget to set that for an extra bit of polish.
+On a side panel page, you can load scripts and call extension APIs as you would on any other extension page. The icon for your side panel will be taken from your [extension's icon][manifest-icon] - don't forget to set that for an extra bit of polish.
 
 ## Extra capabilities {: #capabilities }
 
@@ -86,7 +86,7 @@ You can link the side panel to your action icon, so it can be easily opened at a
 await chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true });
 ```
 
-If you’d only like your side panel to show up on specific pages, you can control that, and prevent
+If you'd only like your side panel to show up on specific pages, you can control that, and prevent
 it from appearing elsewhere where it is not relevant to the user:
 
 {% Label %}service-worker.js:{% endLabel %}
@@ -107,7 +107,7 @@ chrome.tabs.onUpdated.addListener((tabId, info, tab) => {
 
 ## Learn more {: #explore }
 
-We’ve published the [Side Panel API][api-sidepanel] documentation which you can start reading today. We’ve also added [samples][gh-sidepanel-samples] to the chrome-extensions-samples repository, which is a great place to see how the API can be used in practice.
+We've published the [Side Panel API][api-sidepanel] documentation which you can start reading today. We've also added [samples][gh-sidepanel-samples] to the chrome-extensions-samples repository, which is a great place to see how the API can be used in practice.
 
 As mentioned, our policy pages and best practices have also been revised to share more about how to build a side panel that provides the best experience for your users.
 
@@ -132,5 +132,3 @@ _Photo by [Vardan Papikyan][unsplash-vardan] on [Unsplash][unsplash]_
 [unsplash-vardan]: https://unsplash.com/@timberfoster?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 [unsplash]: https://unsplash.com/photos/lSegRSDBMLw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 [whats-new]: /docs/extensions/whatsnew/
-
-
