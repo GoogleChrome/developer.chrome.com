@@ -5,6 +5,7 @@ description: >
   We plan to launch mitigations to limit tracking from a particular technique called "bounce tracking" later this year.
   We would like to invite developers to test this new feature with feature flags and provide feedback.
 authors:
+  - wanderview
   - anusmitaray
 date: 2023-05-30
 ---
