@@ -57,7 +57,7 @@ We've also updated our [Program Policies][cws-policies], with updates to our [Be
 
 ## An overview of the API {: #overview }
 
-For your extension to appear in the side panel, just request the `"sidePanel"` permission in your [manifest][doc-manifest], and add the `"side_panel"` key with a `"default_path"` pointing to a page within your extension:
+For your extension to appear in the side panel, request the `"sidePanel"` permission in your [manifest][doc-manifest], and add the `"side_panel"` key with a `"default_path"` pointing to a page within your extension:
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -74,7 +74,9 @@ For your extension to appear in the side panel, just request the `"sidePanel"` p
 }
 ```
 
-On a side panel page, you can load scripts and call extension APIs as you would on any other extension page. The icon for your side panel will be taken from your [extension's icon][manifest-icon] - don't forget to set that for an extra bit of polish.
+On a side panel page, you can load scripts and call extension APIs as you would on any other
+extension page. The icon for your side panel will be taken from your [extension's
+icon][manifest-icon] - don't forget to set that for an extra bit of polish.
 
 ## Extra capabilities {: #capabilities }
 
@@ -97,7 +99,7 @@ chrome.tabs.onUpdated.addListener((tabId, info, tab) => {
 
   const url = new URL(tab.url);
 
-  if (url.origin === 'https://google.com') {
+  if (url.origin === 'https://example.com') {
     chrome.sidePanel.setOptions({ tabId, path: 'sidepanel.html', enabled: true });
   } else {
     chrome.sidePanel.setOptions({ tabId, enabled: false });
@@ -111,7 +113,8 @@ We've published the [Side Panel API][api-sidepanel] documentation which you can 
 
 As mentioned, our policy pages and best practices have also been revised to share more about how to build a side panel that provides the best experience for your users.
 
-You can keep up with Chrome extensions news by visiting our [What's new page][whats-new], and if have questions or need help with the Side Panel API you can visit the [Chromium extensions][chromium-groups] Google Group.
+You can keep up with Chrome extension news by visiting our [What's new page][whats-new], and if you have questions or need help with the Side Panel API, you can visit the [Chromium extensions][chromium-groups] Google Group.
+
 
 ---
 
