@@ -8,7 +8,7 @@ The Private Aggregation API will contain the following breaking changes in the M
 
 You must update your code to ensure that the Private Aggregation API continues to work with the Protected Audience API. Users in an outdated Chrome instance will still send their report to the legacy endpoint, so you should ensure backward compatibility to collect all reports. We recommend using feature detection with `if ('contributeToHistogram' in privateAggregation))`.
 
-These changes will be possible for testing during the week of Monday, May 22nd in Canary and Dev channels. 
+These changes will be possible for testing from the week of Monday, May 22nd in Canary and Dev channels. 
 {% endAside %}
 
 * The [Private Aggregation API](https://github.com/patcg-individual-drafts/private-aggregation-api/) has entered [public discussion](https://github.com/patcg-individual-drafts/private-aggregation-api/issues).

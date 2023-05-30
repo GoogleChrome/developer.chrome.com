@@ -8,7 +8,7 @@ description: >
    Generate aggregate data reports using data from Protected Audience and cross-site
    data from Shared Storage.
 date: 2022-10-11
-updated: 2023-05-26
+updated: 2023-05-30
 authors:
    - kevinkiklee
 ---
