@@ -7,8 +7,8 @@ subhead: >
   If your website relies on setting document.domain, your action is required.
 date: 2023-05-30
 authors:
-  - agektmr
   - maudn
+  - agektmr
 tags:
   - security
 hero: 'image/O2RNUyVSLubjvENAT3e7JSdqSOx1/5gX4Rd9jWgF8ks7kKsBQ.jpg'
