@@ -5,7 +5,7 @@ layout: "layouts/blog-post.njk"
 authors:
   - oliverdunk
   - amysteam
-date: 2023-05-26
+date: 2023-05-30
 hero: 'image/BhuKGJaIeLNPW9ehns59NfwqKxF2/UnBAJwan7EQbuFS3xHwW.jpg'
 alt: 'A side panel extension open on Side Panel reference page'
 tags:
