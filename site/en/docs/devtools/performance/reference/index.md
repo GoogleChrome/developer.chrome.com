@@ -5,7 +5,7 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2017-05-08
-updated: 2023-01-09
+updated: 2023-05-30
 description: "A reference on all the ways to record and analyze performance in Chrome DevTools."
 tags:
   - performance
@@ -247,6 +247,8 @@ light green. Calls from another script are colored beige. The darker yellow repr
 activity, and the purple event represents rendering activity. These darker yellow and purple events
 are consistent across all recordings.
 
+Additionally, the **Main** section shows information on CPU profiles started and stopped with [`profile()` and `profileEnd()`](/docs/devtools/console/utilities/#profile-function) console functions.
+
 See [Disable JavaScript samples][11] if you want to hide the detailed flame chart of JavaScript
 calls. When JS samples are disabled, you only see high-level events such as `Event (click)` and
 `Function Call (script_foot_closure.js:53)`.
@@ -371,6 +373,21 @@ the **Duration** menu is set to **All**, meaning all activities are shown.
 Disable the **Loading**, **Scripting**, **Rendering**, or **Painting** checkboxes to filter out all
 activities from those categories.
 
+### View timings {: #timings }
+
+On the **Timings** track, view important markers such as:
+
+- [First Paint (FP)](https://developer.mozilla.org/docs/Glossary/First_paint)
+- [First Contentful Paint (FCP)](https://web.dev/fcp/)
+- [Largest Contentful Paint (LCP)](https://web.dev/lcp/)
+- [DOMContentLoaded Event (DCL)](https://developer.mozilla.org/docs/Web/API/Window/DOMContentLoaded_event)
+- [Onload Event (L)](https://developer.mozilla.org/docs/Web/API/Window/load_event)
+- Your custom [`performance.mark()`](https://developer.mozilla.org/docs/Web/API/Performance/mark) calls
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7aTG6FO3T8Tz1kkWgKKy.png", alt="Markers in the Timings track.", width="800", height="578" %}
+
+To see more details in the **Summary** tab, select a marker. To see the marker's timestamp, hover over it on the **Timings** track.
+
 ### View interactions {: #interactions }
 
 View user interactions on the **Interactions** track to track down potential responsiveness issues.
@@ -385,6 +402,10 @@ To view interactions:
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/QtXDPyOntOBbcFwI5QUY.png", alt="The Interactions track.", width="800", height="459" %}
 
 In the example above, the **Interactions** track shows two interactions. Both have the same IDs, indicating that the interactions are triggered by the same user action.
+
+The **Interactions** track also shows [Interaction to Next Paint (INP)](https://web.dev/inp/) warnings for interactions longer than 200 milliseconds in the **Summary** tab.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/wrFaZ26nYCuprtCSNB5C.png", alt="The INP warning.", width="800", height="685" %}
 
 ### View GPU activity {: #gpu }
 
