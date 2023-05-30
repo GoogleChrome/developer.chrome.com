@@ -74,7 +74,7 @@ Chromium issue: [1380779](https://crbug.com/1380779).
 
 ## Sources improvements {: #sources }
 
-### CSS syntax highlighting in Sources {: #css }
+### CSS syntax highlighting {: #css }
 
 The **Sources** panel gets the following:
 
