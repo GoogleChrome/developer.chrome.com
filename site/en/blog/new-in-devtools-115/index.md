@@ -153,8 +153,17 @@ Chromium issues: [1382752](https://crbug.com/1382752), [1385374](https://crbug.c
 
 ## Miscellaneous highlights {: #misc }
 
-These are some noteworthy fixes in this release:
+These are some noteworthy fixes and improvements in this release:
 
+- {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Devices**](/docs/devtools/settings/devices/): Added **Facebook for Android v407 on Pixel 6** to the list of agent strings.
+- [Network](/docs/devtools/shortcuts/#network): Added the **Clear network log** shortcut ([1444991](https://crbug.com/1444991)):
+  - MacOS: <kbd>Command</kbd> + <kbd>K</kbd>
+  - Windows/Linux: <kbd>Control</kbd> + <kbd>L</kbd>
+- Removed the **Recorder** > **Recording N** > **Performance insights panel** drop-down option ([1414773](https://crbug.com/1414773)).
+- Stylesheets that failed to load are now hidden from the navigator tree ([1386059](https://crbug.com/1386059)).
+- **Performance**: Fixed incorrect display of the expandable **Interactions** track ([1432510](https://crbug.com/1432510)).
+- **Elements**: Stylesheets that failed to load are now underscored with wavy lines ([1440626](https://crbug.com/1440626)).
+- The **Debugger** doesn't automatically step in WebAssembly Apps when there is no plugin ([1443342](https://crbug.com/1443342))
 
 <!-- $contentEnd -->
 
