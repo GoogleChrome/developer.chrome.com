@@ -6,13 +6,15 @@ layout: 'layouts/blog-post.njk'
 date: 2023-05-30
 authors:
   - ajara
-hero: 'image/SeARmcA1EicLXagFnVOe0ou9cqK2/kYS3DlJai8qJioFUduBI.png'
+hero: 'image/SeARmcA1EicLXagFnVOe0ou9cqK2/hY1Jhm9rglpkrvoegKyu.jpg'
 alt: >
   New in Chrome hero logo
 tags:
   - new-in-chrome
   - chrome-114
 ---
+
+{% YouTube id='qqTnAWL7-v0' %}
 
 Esto es lo que necesitas saber:
 
