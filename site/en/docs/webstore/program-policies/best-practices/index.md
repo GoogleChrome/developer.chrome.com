@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Best Practices and Guidelines"
 date: 2022-11-01
-updated: 2023-05-24
+updated: 2023-05-30
 ---
 
 1.	Research and understand the Chrome Web Store policies. Before developing a Chrome extension, it is important to review the Chrome Web Store Developer Program Policies and ensure your extension complies with all guidelines and requirements.
