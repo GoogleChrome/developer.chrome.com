@@ -24,7 +24,7 @@ Users dislike when pages take a long time to load.
 Slow server response times are one possible cause for long page loads.
 
 {% Aside 'important' %}
-Lighthouse usually measures _Server Response Time_, rather than the full [Time to First Byte (TTFB)](https://web.dev/ttfb/). As well as including the Server Response Time, TTFB can often include redirects (for example if the final slash is omitted, or the www subdomain or https protocol is omitted, or for URL shorteners or Ads that redirect via several domains). Most Lighthouse tools will test the actual URL only, missing the redirect part.
+Lighthouse usually measures _Server Response Time_, rather than the full [Time to First Byte (TTFB)](https://web.dev/ttfb/). As well as including the Server Response Time, TTFB can often include DNS lookups and redirects (for example, if the final slash or the www subdomain or https protocol is omitted then the server might redirect to the correct URL, or for URL shorteners or Ads that redirect via several domains). Most Lighthouse tools will test the end URL only, missing the DNS and redirect parts.
 
 For this reason, Lighthouse also has a smaller limit (600&nbsp;ms) to the [Core Web Vitals TTFB recommended time](https://web.dev/ttfb/#what-is-a-good-ttfb-score) (800&nbsp;ms).
 {% endAside %}
