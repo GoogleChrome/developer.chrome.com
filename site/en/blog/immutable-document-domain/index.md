@@ -7,6 +7,8 @@ subhead: >
   If your website relies on setting `document.domain`, your action is required.
 date: 2022-01-11
 updated: 2023-04-07
+is_outdated: true
+new_available_content_url: /blog/document-domain-setter-deprecation
 authors:
   - agektmr
 tags:
@@ -14,6 +16,7 @@ tags:
 hero: 'image/YLflGBAPWecgtKJLqCJHSzHqe2J2/grGMzuhOjsGhN150dONe.jpg'
 alt: >
   A dog in disguise.
+
 ---
 
 **Updates**
