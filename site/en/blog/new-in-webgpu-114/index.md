@@ -4,7 +4,7 @@ title: "What's New in WebGPU (Chrome&nbsp;114)"
 description: "JavaScript optimization and more."
 hero: "image/vvhSqZboQoZZN9wBvoXq72wzGAf1/znYgV4QdntjZKrQLE1Zv.png"
 alt: "What's new in WebGPU logo"
-date: 2023-05-30
+date: 2023-05-31
 #updated: YYYY-MM-DD
 authors:
   - beaufortfrancois
