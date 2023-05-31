@@ -15,7 +15,7 @@ tags:
 
 ## Optimizing JavaScript
 
-The Chrome team has sped up WebGPU performance for [`GPUComputePassEncoder`](https://developer.mozilla.org/docs/Web/API/GPUComputePassEncoder), [`GPURenderPassEncoder`](https://developer.mozilla.org/docs/Web/API/GPURenderPassEncoder), and [`GPUCommandEncoder`](https://developer.mozilla.org/docs/Web/API/GPUCommandEncoder) methods by reducing the overhead of making calls from generated code in V8 JavaScript engine to C++ handlers in Blink rendering engine. See [chromium:1417558 issue](https://bugs.chromium.org/p/chromium/issues/detail?id=1417558).
+Chromium contributors sped up WebGPU performance for [`GPUComputePassEncoder`](https://developer.mozilla.org/docs/Web/API/GPUComputePassEncoder), [`GPURenderPassEncoder`](https://developer.mozilla.org/docs/Web/API/GPURenderPassEncoder), and [`GPUCommandEncoder`](https://developer.mozilla.org/docs/Web/API/GPUCommandEncoder) methods by reducing the overhead of making calls from generated code in V8 JavaScript engine to C++ handlers in Blink rendering engine. See [issue chromium:1417558](https://bugs.chromium.org/p/chromium/issues/detail?id=1417558).
 
 The following microbenchmark shows CPU time of calls from JavaScript decreasing from around 0.5 ms per 10K draws to around 0.3 ms per 10K draws, which is a 40% improvement.
 
@@ -28,7 +28,7 @@ The following microbenchmark shows CPU time of calls from JavaScript decreasing 
 
 ## getCurrentTexture() on unconfigured canvas throws InvalidStateError
 
-Calling `GPUCanvasContext` `getCurrentTexture()` method on an unconfigured canvas now throws `InvalidStateError` instead of `OperationError` according to the [WebGPU spec](https://gpuweb.github.io/gpuweb/#dom-gpucanvascontext-getcurrenttexture). See [chromium:1424461 issue](https://bugs.chromium.org/p/chromium/issues/detail?id=1424461).
+Calling `GPUCanvasContext` `getCurrentTexture()` method on an unconfigured canvas now throws `InvalidStateError` instead of `OperationError` according to the [WebGPU spec](https://gpuweb.github.io/gpuweb/#dom-gpucanvascontext-getcurrenttexture). See [issue chromium:1424461](https://bugs.chromium.org/p/chromium/issues/detail?id=1424461).
 
 ```js
 const context = document.querySelector("canvas").getContext("webgpu");
@@ -37,7 +37,7 @@ context.getCurrentTexture(); // Throws InvalidStateError
 
 ## WGSL updates
 
-Zero-filled vectors of [AbstractInt](https://gpuweb.github.io/gpuweb/wgsl/#abstractint) can now be written as `vec2()`, `vec3()`, and `vec4()`. See [tint:1892 issue](https://bugs.chromium.org/p/tint/issues/detail?id=1892). For example:
+Zero-filled vectors of [AbstractInt](https://gpuweb.github.io/gpuweb/wgsl/#abstractint) can now be written as `vec2()`, `vec3()`, and `vec4()`. See [issue tint:1892](https://bugs.chromium.org/p/tint/issues/detail?id=1892). For example:
 
 - `vec2()` is `vec2(0,0)`
 - `vec3()` is `vec3(0,0,0)`
@@ -47,8 +47,8 @@ Zero-filled vectors of [AbstractInt](https://gpuweb.github.io/gpuweb/wgsl/#abstr
 
 ### Improving error messages
 
-Descriptor labels for invalid objects are not being dropped anymore so that you can see them in error messages. See [dawn:1771 issue](https://bugs.chromium.org/p/dawn/issues/detail?id=1771).
+Descriptor labels for invalid objects are not being dropped anymore so that you can see them in error messages. See [issue dawn:1771](https://bugs.chromium.org/p/dawn/issues/detail?id=1771).
 
 ### Add missing APIs for Node.js
 
-The `GPUAdapter::requestAdapterInfo()` and `GPUBuffer::getMapState()` methods are now implemented for Node.js. See [dawn:1761 issue](https://bugs.chromium.org/p/dawn/issues/detail?id=1761).
+The `GPUAdapter::requestAdapterInfo()` and `GPUBuffer::getMapState()` methods are now implemented for Node.js. See [issue dawn:1761](https://bugs.chromium.org/p/dawn/issues/detail?id=1761).
