@@ -83,4 +83,4 @@ document.body.appendChild(svg);
 
 ## Live examples
 
-You can find [live examples for the above mentioned alternatives on GitHub](https://shhnjk.github.io/svg-use-icons/).
+You can find [live examples for these alternatives on GitHub](https://shhnjk.github.io/svg-use-icons/).
