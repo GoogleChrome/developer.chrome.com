@@ -15,43 +15,43 @@ authors:
 
 広告関連 API の[一般提供](/blog/shipping-privacy-sandbox/)を準備する中で、サードパーティ Cookie のない世界でサイトがどのように動作するかを有意義にプレビューできるように、Chrome を利用したテストを提供する予定です。これにより、より効果的な API テストを実行できるようになり、エコシステム内でサードパーティ Cookie の段階的廃止への対応に確信をもてるようになります。
 
-We have worked with the CMA to ensure these testing modes align with the testing framework (and timeline) for third parties laid out in its note on *[Quantitative testing of Google's Privacy Sandbox technologies](https://assets.publishing.service.gov.uk/media/6363b00de90e0705a8c3544d/CMA_Experiments_note.pdf)*. As a result, the CMA anticipates that the results from testing in these modes can be used in its assessment of the Privacy Sandbox.
+Google は CMA との連携により、これらのテストモードが *[Google のプライバシーサンドボックステクノロジーの定量的テスト](https://assets.publishing.service.gov.uk/media/6363b00de90e0705a8c3544d/CMA_Experiments_note.pdf)* に関するメモに記載されているサードパーティ向けのテストフレームワーク（およびタイムライン）と一致していることを確認してきました。その結果、CMA は、これらのモードでのテストの結果がプライバシーサンドボックスの評価に使用できると考えています。
 
 We plan to have two modes of Chrome-facilitated testing:
 
-- **Mode A**: Ad techs can receive control and experiment labels on a portion of traffic and use these to conduct testing and experiments.
-- **Mode B**: Chrome globally disables third-party cookies for some portion of all Chrome users.
+- **モード A**: アドテックは、トラフィックの一部でコントロールラベルと実験ラベルを受け取り、これらを使用してテストと実験を実施できます。
+- **モード B**: Chrome は、全 Chrome ユーザーの一部に対してサードパーティ Cookie をグローバルに無効にします。
 
 These details are not final, and we'll publish further implementation guidance as we progress in Q3 2023. The current proposals are as follows.
 
-## Mode A: Opt-in testing {: #mode-a }
+## モード A: オプトインテスト {: #mode-a }
 
 アドテックは、Chrome トラフィックの一部について実験ラベルを受け取ることができます。アドテックは、他のアドテックと連携して、たとえば、一貫した実験グループに対してサードパーティ Cookie を使用せずに [Protected Audience](/docs/privacy-sandbox/fledge/) オークションを実行することを選択できます。アドテックは、これらのラベルを独自の実験やテストに使用することもできます。
 
-Chrome will not modify the state of third-party cookies for users in Mode A. Chrome only provides the labels, as to ensure that ad techs can experiment with consistent control and experiment groups. This means that a publisher's site could still receive third-party cookie data for the publisher's own usage, even if their ad tech partners are participating in the experiment.
+Chrome は、モード A のユーザーのサードパーティ Cookie の状態を変更しません。Chrome は、アドテックが一貫したコントロールグループと実験グループを使用して実験できるように、ラベルを提供するだけです。つまり、アドテックパートナーが実験に参加している場合でも、サイト運営者自身が使用する目的でサイト運営者のサイトがサードパーティ Cookie データを受け取る可能性があるということになります。
 
-We expect this to allow for meaningful experimentation, where all involved sites and services can coordinate to ensure third-party cookies are not used at any point within the process. We anticipate providing labels for up to 10% of Chrome browsers via a new request header and low-entropy client hint. We encourage anyone interested in testing to provide [feedback](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/issues) from the ecosystem on the method for accessing labels and the granularity of labels.
+これにより、関係するすべてのサイトとサービスが連携して、プロセス内のどの時点でもサードパーティ Cookie が使用されないようにすることができる、有意義な実験が可能になると期待しています。新しいリクエストヘッダーと低エントロピーのクライアント ヒントを介して、最大 10% の Chrome ブラウザにラベルが提供される予定です。テストに関心のある方は、ラベルへのアクセス方法とラベルの粒度についてエコシステムからの[フィードバック](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/issues)を提供することをお勧めします。
 
-We plan to make the opt-in testing mode available starting in Q4 2023, and we'll continue this mode until third-party cookie deprecation.
+オプトインテストモードは 2023 年第 4 四半期から利用可能になる予定で、サードパーティ Cookie が廃止されるまでこのモードは継続されます。
 
-## Mode B: 1% third-party cookie deprecation {: #mode-b }
+## モード B: サードパーティ Cookie の 1% 廃止 {: #mode-b }
 
-Chrome will deprecate third-party cookies for up to 1% of browsers. There is no opt-in for this mode, as it will be applied globally. There is, of course, the possibility that some site features may be impacted if the site hasn't yet adopted an alternative solution, such as [CHIPS](/docs/privacy-sandbox/chips/) or [First-Party Sets](/docs/privacy-sandbox/first-party-sets/).
+Chrome は最大 1% のブラウザに対してサードパーティ Cookie を廃止します。このモードはグローバルに適用されるため、オプトインはありません。もちろん、サイトが [CHIPS](/docs/privacy-sandbox/chips/) や [First-Party Sets](/docs/privacy-sandbox/first-party-sets/) などの代替ソリューションをまだ採用していない場合、一部のサイト機能が影響を受ける可能性があります。
 
 {% Aside %}
 
-If you rely on third-party cookie data for site functionality, read our [guide to prepare for third-party cookie phase-out](/docs/privacy-sandbox/third-party-cookie-phase-out/) to understand if CHIPS or First-Party Sets can address your needs. We've launched a [public issue tracker](https://goo.gle/report-3pc-broken), where you can report site issues resulting from third-party cookie deprecation.
+サイトの機能としてサードパーティ Cookie データに依存している場合は、[サードパーティ Cookie の段階的廃止に備えるためのガイド](/docs/privacy-sandbox/third-party-cookie-phase-out/)を読んで、CHIPS または First-Party Sets がニーズに対応できるかどうかを理解してください。サードパーティ Cookie の廃止に起因するサイトの問題を報告できる[公開イシュートラッカー](https://goo.gle/report-3pc-broken)を開始しました。
 
 {% endAside %}
 
-We're working on mitigations to detect, address, and proactively alert site owners of issues that impact user experience during this phase.
+私たちは、この段階でユーザーエクスペリエンスに影響を与えるイシューを検出し、対処し、サイト所有者に積極的に警告するための緩和策に取り組んでいます。
 
 さらに、プライバシーサンドボックスの広告関連 API が無効になっているモード B 内のトラフィックのごく一部を提供する予定です。First-Party Sets、CHIPS、FedCM などの他の API は無効になりません。この組み合わせは、サードパーティ Cookie を使用しないパフォーマンスのベースラインを確立するのに役立つと予想されており、このサブセットのテストに充てるトラフィックの適切な部分に関する[フィードバック](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/labels/chrome-testing)を求めています。
 
 We plan to deprecate 1% of third party cookies in Q1 2024, and we'll work closely with the CMA before taking further steps to expand deprecation.
 
-## Engage and share feedback
+## 貢献とフィードバックの共有
 
-Feedback from a diverse set of stakeholders across the web ecosystem is critical to the Privacy Sandbox initiative. The dedicated [feedback section](/docs/privacy-sandbox/feedback/) provides an overview of the existing public channels, where you can follow or contribute to discussion, along with a feedback form to ensure you can always reach the Chrome team directly.
+ウェブエコシステム全体の多様な関係者からのフィードバックは、プライバシーサンドボックスイニシアチブにとって非常に重要です。専用の[フィードバックセクション](/docs/privacy-sandbox/feedback/)には、フォローしたりディスカッションに参加したりできる既存の公開チャンネルの概要と、いつでも Chrome チームに直接連絡できるフィードバックフォームが用意されています。
 
-If you're a developer, you can ask questions and join discussions in the [Privacy Sandbox Developer Support repository](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) on GitHub.
+開発者は、GitHub の [Privacy Sandbox Developer Support リポジトリ](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)で質問したり、ディスカッションに参加したりできます。
