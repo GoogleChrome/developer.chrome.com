@@ -18,14 +18,16 @@ tags:
 
 Here's what you need to know:
 
-* CSS [`text-wrap: balance`] (#text-wrap-balance) is available to improve text layouts.
+* CSS [`text-wrap: balance`](#text-wrap-balance) is available to improve text layouts.
 * Cookies partitioned by top level site ([CHIPS](#chips))are here.
 * Popovers are easier than even with the [Popover API](#popover-api).
 * And there’s plenty [more](#more).
 
 I’m Adriana Jara. Let’s dive in and see what’s new for developers in Chrome 114.
+
 ## `text-wrap:balance`. {: #text-wrap-balance}
-Use `text-wrap-balance` to improve text layouts. The animation below shows the difference you can make with this one line.
+
+Use `text-wrap: balance` to improve text layouts. The animation below shows the difference you can make with this one line.
 
 <figure>
   {% Video
@@ -71,7 +73,7 @@ When the user visits a new site, for example site B, site C would not receive th
 
 Checkout [this article](/docs/privacy-sandbox/third-party-cookie-phase-out/)  for more details about the process to phase out third party cookies.
 
-       ## The Popover API. {: #popover-api }
+## The Popover API. {: #popover-api }
 
 With the [Popover API](https://developer.mozilla.org/docs/Web/API/Popover_API) it is easier to  build transient user interface (UI) elements that are displayed on top of all other web app UI.
 
@@ -87,7 +89,7 @@ Checkout [this article](/blog/introducing-popover-api) for more information.
 
 Of course there’s plenty more.
 
-* Devtools lets you pause and debug C and C++ code in WebAssembly apps with [DWARF support](/blog/new-in-devtools-114/#wasm).
+* DevTools lets you pause and debug C and C++ code in WebAssembly apps with [DWARF support](/blog/new-in-devtools-114/#wasm).
 * The `exclusionFilters` option in [`navigator.bluetooth.requestDevice()`](https://developer.mozilla.org/docs/Web/API/Bluetooth/requestDevice) allows web developers to exclude some devices from the browser picker..
 * There is an origin trial for [Background Blur](/origintrials/#/view_trial/2228155915641552897).
 
