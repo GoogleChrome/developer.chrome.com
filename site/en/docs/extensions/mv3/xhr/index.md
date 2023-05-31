@@ -75,7 +75,7 @@ non-secure HTTP access to a given host or set of hosts, it must declare the perm
 
 ### Avoiding cross-site scripting vulnerabilities {: #xss }
 
-When using resources retrieved via `fetch()`, your background page should be careful not to
+When using resources retrieved via `fetch()`, your extension service worker should be careful not to
 fall victim to [cross-site scripting][9]. Specifically, avoid using dangerous APIs such as the
 below:
 
