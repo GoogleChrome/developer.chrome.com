@@ -19,8 +19,6 @@ Google Search Console) by the same developer account publishing the extension. N
 verify ownership for a domain (for example, https://example.com) you can use any subdomain or page 
 (for example, https://app.example.com or https://example.com/page.html) within your extension.
 
-Using the settings override permission while also requesting any additional capabilities or permissions is inconsistent with our single purpose policy. When Chrome detects that an item is potentially violating our single purpose policy, a confirmation dialog is shown to the user. Extensions that limit themselves to only modifying a single setting without seeking additional capabilities or permissions do not get a confirmation dialog.
-
 This applies to Chrome 107 and later.
 
 ```json
