@@ -32,7 +32,7 @@ Chrome 115 supports `style()` container queries without a declaration value, onl
 
 ### Scroll-driven animations
 
-`ScrollTimeline` and `ViewTimeline` are an extension to the Web Animations spec which allow developers to use the position of a scroller or the position of an element within a scroller as an input 'time' rather than the default monotonic clock time. This enables acclerated scroll-based animations, such as a shrinking navigation bar, without requiring user script execution. They can be declared and instantiated both via CSS and JavaScript used in CSS animations and Web Animations.
+`ScrollTimeline` and `ViewTimeline` are an extension to the Web Animations spec which allow developers to use the position of a scroller or the position of an element within a scroller as an input 'time' rather than the default monotonic clock time. This enables accelerated scroll-based animations, such as a shrinking navigation bar, without requiring user script execution. They can be declared and instantiated both via CSS and JavaScript used in CSS animations and Web Animations.
 
 See [Animate elements on scroll with Scroll-driven animations](/articles/scroll-driven-animations/) for more details.
 
@@ -122,3 +122,5 @@ Visit [Chrome disables modifying document.domain](/blog/document-domain-setter-d
 ### Deprecate mutation events
 
 Mutation Events, including `DOMSubtreeModified`, `DOMNodeInserted`, `DOMNodeRemoved`, `DOMNodeRemovedFromDocument`, `DOMNodeInsertedIntoDocument` were deprecated from [the specification](https://w3c.github.io/uievents/#legacy-event-types) in 2011, and were replaced in 2012 by the Mutation Observer API. Usage of the obsolete mutation events must be migrated to Mutation Observer before removal in Chrome 127 (July 20, 2024).
+
+Learn more about the [deprecation of mutation events](/blog/mutation-events-deprecation/).
