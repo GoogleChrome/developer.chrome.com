@@ -134,8 +134,7 @@ chrome.commands.onCommand.addListener((command) => {
 
 ### Action commands
 
-The `_execute_action` command is reserved for triggering your action,
-it does not dispatch [`command.onCommand`][event-oncommand] events as do standard commands.
+The `_execute_action` (Manifest V3), `_execute_browser_action` (Manifest V2), and `_execute_page_action` (Manifest V2) commands are reserved for the action of trigger your action, browser action, or page action respectively. These commands do not dispatch [command.onCommand][event-oncommand] events like standard commands.
 
 If you need to take action based on your popup opening, consider listening for a
 [DOMContentLoaded][html-dcl] event inside your popup's JavaScript.
