@@ -55,8 +55,8 @@ Chromium 议题: [1257499](https://crbug.com/1257499)
 <!-- [Cascade layers](/blog/cascade-layers/) enable more explicit control of your CSS files to prevent style-specificity conflicts. This is particularly useful for large codebases, design systems, and when managing third party styles in applications. -->
 [级联层（Cascade layers）](/blog/cascade-layers/)允许您显式控制自己的 CSS 文件，从而达到避免样式冲突的目的。这对于大型代码库、设计系统、以及需要在应用中管理第三方样式的情况来说非常有用。
 
-<!-- In this [example](https://jec.fyi/demo/cascade-layer), there are 3 cascade layers defined: `page`, `component` and `base`. In the **Styles** pane, you can view each layer and its styles. -->
-在这个[示例](https://jec.fyi/demo/cascade-layer)里面，定义了 3 个级联层（Cascade layers）：`page`、`component` 和 `base`。在**样式**边栏那里，您可以查看每个层以及层里面所包含的样式。
+<!-- In this [example](https://jec.fish/demo/cascade-layer), there are 3 cascade layers defined: `page`, `component` and `base`. In the **Styles** pane, you can view each layer and its styles. -->
+在这个[示例](https://jec.fish/demo/cascade-layer)里面，定义了 3 个级联层（Cascade layers）：`page`、`component` 和 `base`。在**样式**边栏那里，您可以查看每个层以及层里面所包含的样式。
 
 <!-- Click on the layer name to view the layer order. The `page` layer has the highest specificity, therefore the `box` background is green.  -->
 点击层名称可以查看层顺序。由于 `page` 层的权重最高，因此 `box` 背景是绿色的。

@@ -50,8 +50,8 @@ Issue relacionada: [1257499](https://crbug.com/1257499)
 ## Visualize cascade layers no painel Estilos {: #layer }
 <!-- [Cascade layers](/blog/cascade-layers/) enable more explicit control of your CSS files to prevent style-specificity conflicts. This is particularly useful for large codebases, design systems, and when managing third party styles in applications. -->
 [Cascade Layers](/blog/cascade-layers/) permitem um controle mais explícito de seus arquivos CSS para evitar conflitos de especificidade de estilo. Isso é particularmente útil para grandes bases de código, sistemas de design e ao gerenciar estilos de terceiros em aplicativos.
-<!-- In this [example](https://jec.fyi/demo/cascade-layer), there are 3 cascade layers defined: `page`, `component` and `base`. In the **Styles** pane, you can view each layer and its styles. -->
-Neste [exemplo](https://jec.fyi/demo/cascade-layer), existem 3 camadas em cascata definidas: `page`, `component` e `base`. No painel **Estilos**, você pode visualizar cada camada e seus estilos.
+<!-- In this [example](https://jec.fish/demo/cascade-layer), there are 3 cascade layers defined: `page`, `component` and `base`. In the **Styles** pane, you can view each layer and its styles. -->
+Neste [exemplo](https://jec.fish/demo/cascade-layer), existem 3 camadas em cascata definidas: `page`, `component` e `base`. No painel **Estilos**, você pode visualizar cada camada e seus estilos.
 <!-- Click on the layer name to view the layer order. The `page` layer has the highest specificity, therefore the `box` background is green.  -->
 Clique no nome da camada para ver a ordem das camadas. A camada `page` tem a maior especificidade, portanto o fundo `box` é verde.
 

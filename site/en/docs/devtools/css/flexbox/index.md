@@ -77,5 +77,5 @@ To navigate to a flexbox element in the DOM tree, you can click on the selector 
 
 
 
-[1]: http://jec.fyi/demo/css-flexbox
+[1]: http://jec.fish/demo/css-flexbox
 [2]: /docs/devtools/open
