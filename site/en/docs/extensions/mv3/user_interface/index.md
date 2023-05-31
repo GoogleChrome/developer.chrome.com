@@ -430,7 +430,7 @@ one or more shortcuts in the manifest under the `"commands"` key.
 
 Commands can be used to provide new or alternative browser shortcuts. The [Tab
 Flipper][sample-tab-flipper] sample extension listens to the
-[`commands.onCommand`][commands-oncommand] event in the [service worker][docs-background] and
+[`commands.onCommand`][commands-oncommand] event in the [service worker][docs-service-worker] and
 defines functionality for each registered combination.
 
 {% Label %}service-worker.js:{% endLabel %}
@@ -653,3 +653,4 @@ capabilities.
 [section-onclick]: #click
 [section-popup]: #popup
 [notifications-create]: /docs/extensions/reference/notifications#method-create
+[docs-service-worker]: /docs/extensions/mv3/service_workers/basics/
