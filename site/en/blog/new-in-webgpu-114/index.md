@@ -15,7 +15,7 @@ tags:
 
 ## Optimizing JavaScript
 
-The Chrome team has sped up WebGPU performance for [`GPUComputePassEncoder`](https://developer.mozilla.org/docs/Web/API/GPUComputePassEncoder), [`GPURenderPassEncoder`](https://developer.mozilla.org/docs/Web/API/GPURenderPassEncoder), and [`GPUCommandEncoder`](https://developer.mozilla.org/docs/Web/API/GPUCommandEncoder) methods by reducing the overhead of making calls from generated code in V8 JavaScript engine to C++ handlers in Blink rendering engine. See [chromium:1417558 issue](https://bugs.chromium.org/p/chromium/issues/detail?id=1417558).
+Chromium contributors sped up WebGPU performance for [`GPUComputePassEncoder`](https://developer.mozilla.org/docs/Web/API/GPUComputePassEncoder), [`GPURenderPassEncoder`](https://developer.mozilla.org/docs/Web/API/GPURenderPassEncoder), and [`GPUCommandEncoder`](https://developer.mozilla.org/docs/Web/API/GPUCommandEncoder) methods by reducing the overhead of making calls from generated code in V8 JavaScript engine to C++ handlers in Blink rendering engine. See [issue chromium:1417558](https://bugs.chromium.org/p/chromium/issues/detail?id=1417558).
 
 The following microbenchmark shows CPU time of calls from JavaScript decreasing from around 0.5 ms per 10K draws to around 0.3 ms per 10K draws, which is a 40% improvement.
 
