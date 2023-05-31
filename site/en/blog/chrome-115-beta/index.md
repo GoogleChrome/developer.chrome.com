@@ -20,7 +20,7 @@ Unless otherwise noted, changes described below apply to the newest Chrome beta 
 
 This release adds three new CSS features.
 
-### Multiple values of the 'display' property
+### Multiple values of the `display` property
 
 The CSS `display` property now accepts multiple keywords as a value, besides the legacy precomposed keywords. The first two keywords represent the outer and inner values of display, there are optional flags for `list-item`, internal values such as `table-cell`, and the box values of `contents` and `none`.
 
@@ -36,13 +36,13 @@ Chrome 115 supports `style()` container queries without a declaration value, onl
 
 See [Animate elements on scroll with Scroll-driven animations](/articles/scroll-driven-animations/) for more details.
 
-### Fix to regression where elements with display: contents were no longer shown in the accessibility tree
+### Fix to regression where elements with `display: contents` were no longer shown in the accessibility tree
 
 A regression was introduced that caused elements with `display: contents` to lose semantic information, and no longer be represented correctly in the accessibility tree. Chrome 115 includes [a fix for this issue](https://bugs.chromium.org/p/chromium/issues/detail?id=1448706).
 
 ## Web APIs
 
-### Increasing the maximum size of a WebAssembly.Module() on the main thread to 8 MB
+### Increasing the maximum size of a `WebAssembly.Module()` on the main thread to 8 MB
 
 The [WebAssembly.Module()](https://developer.mozilla.org/docs/WebAssembly/JavaScript_interface/Module) constructor compiles a binary WebAssembly module synchronously, which can block the main thread. To avoid this, the maximum size of a WebAssembly module that can be compiled with this constructor is limited to 8 MB. Larger modules can be compiled asynchronously on the main thread with `WebAssembly.compile()`, or synchronously on a worker thread. The 8 MB limit is an extension of the original limit of 4 KB. This extension is possible thanks to improvements in the WebAssembly runtime V8. The 8 MB limit has been determined through performance measurements on a Google Pixel 1 phone, which is currently considered a representative low-end phone. Future developments in V8 or in hardware may allow further extensions of the limit.
 
