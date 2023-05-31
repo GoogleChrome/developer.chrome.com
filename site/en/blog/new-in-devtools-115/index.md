@@ -5,7 +5,7 @@ authors:
   - sofiayem
 date: 2023-05-30
 description: ""
-hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/fy7JKyzJt0EPZd1g8hwl.jpg'
+hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/s7ZpM4wjhbRf5K6Vspk3.jpg'
 alt: ''
 tags:
   - new-in-devtools
