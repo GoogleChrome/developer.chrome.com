@@ -32,7 +32,7 @@ Chrome 115 supports `style()` container queries without a declaration value, onl
 
 ### Scroll-driven animations
 
-`ScrollTimeline` and `ViewTimeline` are an extension to the Web Animations spec which allow developers to use the position of a scroller or the position of an element within a scroller as an input 'time' rather than the default monotonic clock time. This enables accelerated scroll-based animations, such as a shrinking navigation bar, without requiring user script execution. They can be declared and instantiated both via CSS and JavaScript used in CSS animations and Web Animations.
+`ScrollTimeline` and `ViewTimeline` are an extension to the Web Animations specification which allow developers to use the position of a scroller or the position of an element within a scroller as an input 'time' rather than the default monotonic clock time. This enables accelerated scroll-based animations, such as a shrinking navigation bar, without requiring user script execution. They can be declared and instantiated both via CSS and JavaScript used in CSS animations and Web Animations.
 
 See [Animate elements on scroll with Scroll-driven animations](/articles/scroll-driven-animations/) for more details.
 
@@ -49,7 +49,7 @@ The [WebAssembly.Module()](https://developer.mozilla.org/docs/WebAssembly/JavaSc
 
 ### FedCM: Support credential management mediation requirements for auto re-authentication
 
-Supports ["Credential Management Mediation Requirements"](https://w3c.github.io/webappsec-credential-management/#mediation-requirements) to provide streamlined re-authentication UX for users who have created federated accounts on websites with the FedCM API. 
+Supports [Credential Management Mediation Requirements](https://w3c.github.io/webappsec-credential-management/#mediation-requirements) to provide streamlined re-authentication UX for users who have created federated accounts on websites with the FedCM API. 
 
 ### HTTPS upgrades
 
