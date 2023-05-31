@@ -462,7 +462,7 @@ caches.open('artwork-cache-v1')
   up an `<audio>` element as the input source to the Web Audio API. Hopefully,
   the proposed [Web AudioFocus API] will improve the situation in the
   near future.
-- Media Mession calls will affect media notifications only if they come from
+- Media Session calls will affect media notifications only if they come from
   the same frame as the media resource. See the snippet below.
 
 ```html
