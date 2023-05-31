@@ -422,7 +422,7 @@ CMA へのコミットメントの一環として、Google は、プライバシ
 
 ## デジタル広告の測定
 
-### Attribution Reporting (and other APIs)
+### アトリビューション レポート（およびその他の API）
 
 <table>
   <thead>
@@ -512,7 +512,7 @@ CMA へのコミットメントの一環として、Google は、プライバシ
   </tbody>
 </table>
 
-### Aggregation Service
+### 集計サービス
 
 <table>
   <thead>
@@ -546,7 +546,7 @@ CMA へのコミットメントの一環として、Google は、プライバシ
     </tr>
     <tr>
       <td style="vertical-align: top;">オリジントライアルの制限事項</td>
-      <td style="vertical-align: top;">Clarify the scope of the Aggregation Service such as the "no duplicates rule" which is not currently applied in the origin trial.</td>
+      <td style="vertical-align: top;">現在オリジントライアルでは適用されていない「重複禁止ルール」など、集計サービスの範囲を明確にする。</td>
       <td style="vertical-align: top;">私たちは、オリジントライアルと GA で利用できるものを明確にするためにドキュメントを更新することを検討しています。</td>
     </tr>
   </tbody>
@@ -564,7 +564,7 @@ CMA へのコミットメントの一環として、Google は、プライバシ
   </thead>
   <tbody>
     <tr>
-      <td style="vertical-align: top;">Private Aggregation Contribution Budget</td>
+      <td style="vertical-align: top;">プライベート集計のコントリビューションバジェット</td>
       <td style="vertical-align: top;">L1 コントリビューションバジェットは制限が多すぎます。</td>
       <td style="vertical-align: top;">Private Aggregation API への各呼び出しはコントリビューションと呼ばれます。ユーザーのプライバシーを保護するため、個人から集められるコントリビューションの数は制限されています。<br>すべての集計キーにわたるすべての集計可能な値を合計する場合、その合計はコントリビューションバジェット未満である必要があります。<br><br>現在の設計では、過去 24 時間以内の特定のレポート作成元に対するコントリビューションに制限を設定しています（ローリング ウィンドウとして）。それがフィードバックで言及されている L1 コントリビューションバジェットです。開発者には、予想される量に基づいてコントリビューション値を調整することをお勧めします（つまり、値 1 を単に使用するのではありません）。したがって、予算を使い果たさないように、より一般的なイベントには小さい値を使用することが合理的である可能性があります。<br><br>現在、Private Aggregation API の<a href="https://github.com/patcg-individual-drafts/private-aggregation-api/issues/23">コントリビューションバジェット</a>について、数値境界と範囲の両方についてフィードバックを求めています。スコープをオリジンごとからサイトごとに移動し、既存の境界を 10 分のウィンドウに移動し、より大きな日次境界を設定することを検討しています。</td>
     </tr>
