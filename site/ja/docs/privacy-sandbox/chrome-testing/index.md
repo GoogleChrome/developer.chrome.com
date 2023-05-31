@@ -1,12 +1,12 @@
 ---
 layout: layouts/doc-post.njk
-title: Chrome-facilitated testing
+title: Chrome を利用したテスト
 subhead: |2
 
-  Test your sites with third-party cookies disabled.
+  サードパーティ Cookie を無効にしてサイトをテストします。
 description: |2
 
-  Test your sites with third-party cookies disabled.
+  サードパーティ Cookie を無効にしてサイトをテストします。
 date: '2023-05-18'
 authors:
   - alexandrawhite
@@ -17,12 +17,12 @@ authors:
 
 Google は CMA との連携により、これらのテストモードが *[Google のプライバシーサンドボックステクノロジーの定量的テスト](https://assets.publishing.service.gov.uk/media/6363b00de90e0705a8c3544d/CMA_Experiments_note.pdf)* に関するメモに記載されているサードパーティ向けのテストフレームワーク（およびタイムライン）と一致していることを確認してきました。その結果、CMA は、これらのモードでのテストの結果がプライバシーサンドボックスの評価に使用できると考えています。
 
-We plan to have two modes of Chrome-facilitated testing:
+Chrome を利用したテストには 2 つのモードを用意する予定です。
 
 - **モード A**: アドテックは、トラフィックの一部でコントロールラベルと実験ラベルを受け取り、これらを使用してテストと実験を実施できます。
 - **モード B**: Chrome は、全 Chrome ユーザーの一部に対してサードパーティ Cookie をグローバルに無効にします。
 
-These details are not final, and we'll publish further implementation guidance as we progress in Q3 2023. The current proposals are as follows.
+これらの詳細は最終的なものではなく、2023 年第 3 四半期の進捗に合わせてさらなる実装ガイダンスを公開する予定です。現在の提案は次のとおりです。
 
 ## モード A: オプトインテスト {: #mode-a }
 
@@ -48,7 +48,7 @@ Chrome は最大 1% のブラウザに対してサードパーティ Cookie を�
 
 さらに、プライバシーサンドボックスの広告関連 API が無効になっているモード B 内のトラフィックのごく一部を提供する予定です。First-Party Sets、CHIPS、FedCM などの他の API は無効になりません。この組み合わせは、サードパーティ Cookie を使用しないパフォーマンスのベースラインを確立するのに役立つと予想されており、このサブセットのテストに充てるトラフィックの適切な部分に関する[フィードバック](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/labels/chrome-testing)を求めています。
 
-We plan to deprecate 1% of third party cookies in Q1 2024, and we'll work closely with the CMA before taking further steps to expand deprecation.
+2024 年第 1 四半期にサードパーティ Cookie の 1% を廃止する予定であり、廃止範囲を拡大するためのさらなる措置を講じる前に CMA と緊密に連携します。
 
 ## 貢献とフィードバックの共有
 
