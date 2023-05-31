@@ -336,6 +336,11 @@ the steps in [Viewing Warnings](#view_warnings).
       <td>Grants access to the <a href="/docs/extensions/reference/ttsEngine">chrome.ttsEngine</a> API.</td>
       <td><strong>Read all text spoken using synthesized speech</strong></td>
     </tr>
+    <tr id="webAuthenticationProxy">
+      <td><code>"webAuthenticationProxy"</code></td>
+      <td>Grants access to the <a href="/docs/extensions/reference/webAuthenticationProxy">chrome.webAuthenticationProxy</a> API.</td>
+      <td><strong>Read and change all your data on all websites</strong></td>
+    </tr>
     <tr id="webNavigation">
       <td><code>"webNavigation"</code></td>
       <td>Grants access to the <a href="/docs/extensions/reference/webNavigation">chrome.webNavigation</a> API.</td>
@@ -348,8 +353,6 @@ the steps in [Viewing Warnings](#view_warnings).
 
 When an extension is updated to include a new permission that [triggers a warning][section-warnings] it may temporarily disable it. The user will have to
 re-enable it after agreeing to any new warnings.
-
-
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/usZSh31pGiJxhhuKmM8B.png",
        alt="Extension has been disabled", height="398", width="297" %}

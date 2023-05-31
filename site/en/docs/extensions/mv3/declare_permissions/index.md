@@ -380,6 +380,10 @@ The following table lists the currently available permissions:
       <td><code>"wallpaper"</code></td>
       <td>Gives access to the <a href="/docs/extensions/reference/wallpaper/">chrome.wallpaper</a> API.</td>
     </tr>
+    <tr id="webAuthenticationProxy">
+      <td><code>"webAuthenticationProxy"</code></td>
+      <td>Gives access to the <a href="/docs/extensions/reference/webAuthenticationProxy/">chrome.webAuthenticationProxy</a> API.</td>
+    </tr>
     <tr id="webNavigation">
       <td><code>"webNavigation"</code></td>
       <td>Gives access to the <a href="/docs/extensions/reference/webNavigation/">chrome.webNavigation</a> API.</td>
