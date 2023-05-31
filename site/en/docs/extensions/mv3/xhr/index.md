@@ -7,7 +7,7 @@ updated: 2023-05-23
 description: How to implement cross-origin network requests in your Chrome Extension.
 ---
 
-Regular web pages can use the [`XMLHttpRequest`][1] or [fetch()][13] objects to send and receive data from remote
+Regular web pages can use the [fetch()][13] or [`XMLHttpRequest`][1] APIs to send and receive data from remote
 servers, but they're limited by the [same origin policy][2]. [Content scripts][3] initiate requests
 on behalf of the web origin that the content script has been injected into and therefore content
 scripts are also subject to the [same origin policy][4]. (Content scripts have been subject to [CORB
@@ -75,7 +75,7 @@ non-secure HTTP access to a given host or set of hosts, it must declare the perm
 
 ### Avoiding cross-site scripting vulnerabilities {: #xss }
 
-When using resources retrieved via `XMLHttpRequest`, your background page should be careful not to
+When using resources retrieved via `fetch()`, your background page should be careful not to
 fall victim to [cross-site scripting][9]. Specifically, avoid using dangerous APIs such as the
 below:
 
@@ -83,8 +83,8 @@ below:
 ```js
 const response = await fetch("https://api.example.com/data.json");
 const jsonData = await response.json();
-    // WARNING! Might be injecting a malicious script!
-    document.getElementById("resp").innerHTML = jsonData;
+// WARNING! Might be injecting a malicious script!
+document.getElementById("resp").innerHTML = jsonData;
     ...
 ```
 
@@ -93,16 +93,16 @@ Instead, prefer safer APIs that do not run scripts:
 ```js
 const response = await fetch("https://api.example.com/data.json");
 const jsonData = await response.json();
-    // JSON.parse does not evaluate the attacker's scripts.
-    let resp = JSON.parse(jsonData);
+// JSON.parse does not evaluate the attacker's scripts.
+let resp = JSON.parse(jsonData);
 
 ```
 
 ```js
 const response = await fetch("https://api.example.com/data.json");
 const jsonData = response.json();
-    // textContent does not let the attacker inject HTML elements.
-    document.getElementById("resp").textContent = jsonData;
+// textContent does not let the attacker inject HTML elements.
+document.getElementById("resp").textContent = jsonData;
 
 ```
 
