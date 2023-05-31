@@ -185,7 +185,7 @@ be careful when explicitly adding either the `connect-src` or `default-src` dire
 ### What about XMLHttpRequest?
 
 The `XMLHttpRequest()` (XHR) API is supported for backwards compatability, but new work should favor the use of `fetch()` wherever possible. The `fetch()` API allows you to make network requests similar to XMLHttpRequest, but has the additional benefit of performing asynchronously via promises. 
-In Manifest V3, calling XHR will trigger the service-worker's fetch handler.
+In Manifest V3, calling `XMLHttpRequest()` will trigger the service worker's fetch handler.
 
 
 
