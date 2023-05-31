@@ -1,13 +1,9 @@
 ---
 layout: layouts/doc-post.njk
 title: Chrome を利用したテスト
-subhead: |2
-
-  サードパーティ Cookie を無効にしてサイトをテストします。
-description: |2
-
-  サードパーティ Cookie を無効にしてサイトをテストします。
-date: '2023-05-18'
+subhead: サードパーティ Cookie を無効にしてサイトをテストします。
+description: サードパーティ Cookie を無効にしてサイトをテストします。
+date: 2023-05-18
 authors:
   - alexandrawhite
   - rowan_m
