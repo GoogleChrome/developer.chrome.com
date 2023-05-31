@@ -27,7 +27,7 @@ I’m Adriana Jara. Let’s dive in and see what’s new for developers in Chrom
 
 ## `text-wrap:balance`. {: #text-wrap-balance}
 
-Use `text-wrap-balance` to improve text layouts. The animation below shows the difference you can make with this one line.
+Use `text-wrap: balance` to improve text layouts. The animation below shows the difference you can make with this one line.
 
 <figure>
   {% Video
