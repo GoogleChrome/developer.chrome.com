@@ -24,7 +24,7 @@ example, if an extension contains a JSON configuration file called `config.json`
 
 ```js
 const response = await fetch('/config_resources/config.json');
-const jsonData =  await response.json();
+const jsonData = await response.json();
 ```
 
 If the extension attempts to use a security origin other than itself, say https://www.google.com,
