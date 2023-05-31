@@ -4,6 +4,22 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 
 {# $content #}
 
+### Chrome 115 {: #chrome115 }
+
+* [Elements improvements](/blog/new-in-devtools-115/#elements)
+* [New CSS subgrid badge](/blog/new-in-devtools-115/#subgrid)
+* [Linear timing support in the Easing Editor](/blog/new-in-devtools-115/#linear)
+* [Selector specificity in tooltips](/blog/new-in-devtools-115/#specificity)
+* [Values of custom CSS properties in tooltips](/blog/new-in-devtools-115/#css-variable-values)
+* [Sources improvements](/blog/new-in-devtools-115/#sources)
+* [CSS syntax highlighting](/blog/new-in-devtools-115/#css)
+* [Shortcut to set conditional breakpoints](/blog/new-in-devtools-115/#breakpoint)
+* [Application > Bounce Tracking Mitigations](/blog/new-in-devtools-115/#bounce-tracking)
+* [Lighthouse 10.2.0](/blog/new-in-devtools-115/#lighthouse)
+* [Ignore content scripts by default](/blog/new-in-devtools-115/#content-script)
+* [Network > Response improvements](/blog/new-in-devtools-115/#network)
+* [Miscellaneous highlights](/blog/new-in-devtools-115/#misc)
+
 ### Chrome 114 {: #chrome114 }
 
 * [WebAssembly debugging support](/blog/new-in-devtools-114/#wasm)
