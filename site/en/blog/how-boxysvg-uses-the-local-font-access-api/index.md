@@ -3,8 +3,8 @@ layout: 'layouts/blog-post.njk'
 title: 'How vector image editing app Boxy SVG uses the Local Font Access API to let users pick their favorite local fonts'
 subhead: >
   The Local Font Access API provides a mechanism to access the user's locally installed font data, including higher-level details such as names, styles, and families, as well as the raw bytes of the underlying font files. Learn how the SVG editing app Boxy SVG makes use of this API.
-date: 2023-01-31
-# updated: 2023-01-31
+date: 2023-06-01
+# updated: 2023-06-01
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/81OfVmaxz3gTsqVIXu5i.png
 alt: Boxy SVG icon pattern.
 authors:
