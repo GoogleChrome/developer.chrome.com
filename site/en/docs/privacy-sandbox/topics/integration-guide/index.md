@@ -172,7 +172,7 @@ Check if the Topics API is supported and available on this device through featur
   console.log('document.browsingTopics() is not supported on this page');
 ```
 
-Call the Topics API from within that frame:
+Call the Topics API from within that iframe:
 
 ```javascript
 const topics = await document.browsingTopics();
