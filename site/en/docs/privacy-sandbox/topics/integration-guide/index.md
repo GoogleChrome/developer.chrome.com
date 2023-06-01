@@ -2,9 +2,9 @@
 layout: 'layouts/doc-post.njk'
 title: 'Topics API integration guide'
 subhead: >
-  Learn how to work with the API, from end-to-end.
+  Learn how to work with the API, from end to end.
 description: >
-  Learn how to work with the API, from end-to-end.
+  Learn how to work with the API, from end to end.
 date: 2023-06-01
 authors:
   - thiagodiogo
