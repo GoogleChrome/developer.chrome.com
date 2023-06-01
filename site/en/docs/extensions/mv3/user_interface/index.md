@@ -612,7 +612,7 @@ function showStayHydratedNotification() {
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/e5S112AtwfnA5o64JrGg.png", 
 alt="Mac OS notification", width="500", height="150", class="screenshot" %}
   <figcaption>
-    Notification on Mac OS.
+    Notification on macOS.
   </figcaption>
 </figure>
 
