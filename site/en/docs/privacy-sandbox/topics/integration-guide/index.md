@@ -118,7 +118,7 @@ More on how topics are selected is availble in [Topics classification](/docs/pri
 
 The Topics API gives access to topics of interest observed for a user, without having to resort to tracking the sites a user visits, or exposing their navigation history. 
 
-The Topics API _caller_ is the entity that calls the[`document.browsingTopics()` JavaScript method](/docs/privacy-sandbox/topics/#access-topics), or observes and accesses topics [using HTTP request headers](/docs/privacy-sandbox/topics/#headers). Your code, and the origin it's called from, in this instance, is the caller. When you call the Topics API, you're instructing the user's browser to observe the topics of interest when the user visits a website. This visit is then considered in the topics calculation for the next epoch.
+The Topics API _caller_ is the entity that calls the[`document.browsingTopics()` JavaScript method](/docs/privacy-sandbox/topics/#access-topics), or observes and accesses topics [using HTTP request headers](/docs/privacy-sandbox/topics/#use-headers-to-access-and-observe-topics). Your code, and the origin it's called from, in this instance, is the caller. When you call the Topics API, you're instructing the user's browser to observe the topics of interest when the user visits a website. This visit is then considered in the topics calculation for the next epoch.
 
 The Topics API is designed to [filter results](/docs/privacy-sandbox/topics/topic-classification/#how-the-api-decides-which-callers-see-which-topics) per-caller or per-origin of the context. In other words, the origin of the iframe (when using the JavaScript API) or the URL of the fetch request (when using headers) is considered the caller, and topics are calculated according to that caller. Topics generated for one caller are unique and never shared with other callers.
 
@@ -128,7 +128,7 @@ The following diagram illustrates this approach:
 
 **In this diagram**:
 
-1. A user opens Chrome and visits multiple websites (customerA.example, customerB.example.br, etc) which include your ad tech's iframe (source [iframe.adtech.example](iframe.adtech.example)) or the fetch call passing headers.
+1. A user opens Chrome and visits multiple websites (customerA.example, customerB.example.br, etc) which include your ad tech's iframe (source:  iframe.adtech.example) or the fetch call passing headers.
     * Chrome will record topics of interest of this user.
 2. After seven days navigating, with topics of interest being observed by the Topics API, the same user on the same device visits a target website (publisher-e.example). The Topics API returns a list of topics and in this specific example, one topic calculated from the previous week of observations of this user will be returned.
     * Only browsers of users who visited sites which adtech.example has observed in Step 1 will be returning topics results in Step 2 (we call this observation filtering—you can't see topics of users you never saw before).
@@ -153,7 +153,7 @@ If you are planning to use Topics data in a real-time bidding context (such as G
 
 ### Implement with JavaScript and iframes
 
-We recommend you fork the [Topics API demo](https://glitch.com/edit/#!/topics-demo?path=README.md%3A1%3A0)and use it as a starting point for your code.
+We recommend you fork the [Topics API demo](https://glitch.com/edit/#!/topics-demo?path=README.md%3A1%3A0) and use it as a starting point for your code.
 
 You can include an `<iframe>` element in HTML or add an iframe dynamically with JavaScript. One way to dynamically create an iframe is with the following JavaScript:
 
@@ -164,7 +164,6 @@ document.body.appendChild(iframe);
 ```
 
 Check if the Topics API is supported and available on this device through feature detection:
-
 
 ```javascript
 'browsingTopics' in document && document.featurePolicy.allowsFeature('browsing-topics') ?
@@ -345,8 +344,9 @@ fetch('<topics_caller_origin_URL>', {browsingTopics: true})
  })
 ```
 
-NOTE: Given that the origin trial token has to be generated for the same origin as the code, it is recommended   that publishers use a script owned by the ad tech. This way, multiple sites can include the same script (as shown in the example below) which provides a third-party token registered for the ad tech origin (https://adtech.com).
-
+{% Aside %}
+Given that the origin trial token has to be generated for the same origin as the code, it is recommended   that publishers use a script owned by the ad tech. This way, multiple sites can include the same script (as shown in the example below) which provides a third-party token registered for the ad tech origin (https://adtech.com).
+{% endAside %}
 
 ```html
 <script src="https://adtech.com/js/topics.js">
@@ -355,7 +355,7 @@ NOTE: Given that the origin trial token has to be generated for the same origin 
 ## Build and deploy
 
 1. Collect topics by observing users in production—not scaled yet (Estimated time: ~1 week)
-    1. Understand your options: [iframe & JavaScript](/docs/privacy-sandbox/topics/#access-topics) OR [HTTP headers](/docs/privacy-sandbox/topics/#use-a-header-to-access-topics)
+    1. Understand your options: [iframe & JavaScript](/docs/privacy-sandbox/topics/#access-topics) OR [HTTP headers](/docs/privacy-sandbox/topics/#use-headers-to-access-and-observe-topics)
     1. Define the domain of the iframe
     1. Build the JavaScript code, using the [demo app](https://topics-demo.glitch.me/) as a code reference — or implement the headers option
     1. Deploy Topics to your controlled environment (some production sites)
