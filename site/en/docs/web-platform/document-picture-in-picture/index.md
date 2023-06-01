@@ -6,7 +6,7 @@ description: >
 authors:
   - beaufortfrancois
 date: 2023-02-02
-updated: 2023-05-11
+updated: 2023-06-01
 hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/l8xW8V85N60e4dmwUwmE.jpg
 alt: Person holding outdoor lounge chairs.
 tags:
@@ -18,7 +18,6 @@ The [Document Picture-in-Picture API][spec] makes it possible to open an always-
 The Picture-in-Picture window in the Document Picture-in-Picture API is similar to a blank same-origin window opened via [`window.open()`], with some differences:
 - The Picture-in-Picture window floats on top of other windows.
 - The Picture-in-Picture window never outlives the opening window.
-- The Picture-in-Picture window cannot open additional windows.
 - The Picture-in-Picture window cannot be navigated.
 - The Picture-in-Picture window position cannot be set by the website.
 
