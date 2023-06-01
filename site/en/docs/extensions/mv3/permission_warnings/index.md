@@ -71,7 +71,7 @@ how to enable access on the extension's details page.
 2. Choose **Manage Extension**.
 
     <figure>
-    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/hZZMDG0SEoCaHWkfwqbY.png", alt="ALT_TEXT_HERE", width="363", height="334", class='screenshot' %}
+    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/hZZMDG0SEoCaHWkfwqbY.png", alt="Extension context menu", width="363", height="334", class='screenshot' %}
     <figcaption>
     Extension menu
     </figcaption>
@@ -229,9 +229,9 @@ These steps assume you followed the [Using the Extension Update Testing Tool](#v
 1. Pack the extension again, but this time add the pem file in the second input.
     <figure>
      {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/Z9V6Q2TOabWTEUTEI6bo.png", 
-     alt="ALT_TEXT_HERE", width="800", height="456", class='screenshot' %}
+     alt="Pem file added when packing extension", width="800", height="456", class='screenshot' %}
       <figcaption>
-        TBD - CHANGE THIS IMG
+        Packing extension dialog with pem file included.
       </figcaption>
     </figure>
 1. Drag the new packaged extension to the Extension Management page.
