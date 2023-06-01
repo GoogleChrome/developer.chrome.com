@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-05-30
+updated: 2023-06-05
 tags:
   - extensions-news
 
@@ -14,6 +14,12 @@ tags:
 <!--lint disable first-heading-level-->
 
 Check this page often to learn about changes to Chrome extensions, extensions documentation, or related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about some of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).) The [Chrome schedule](https://chromiumdash.appspot.com/schedule) lists stable and beta release dates.
+
+### New tool: New Side Panel API {: #side-panel-launch }
+
+<p class="color-secondary-text type--caption">Posted on <time>June 5, 2023</time></p>
+
+We've just released the [Extension Update Testing Tool](https://github.com/GoogleChromeLabs/extension-update-testing-tool), a local extension update server that can be used for testing updates to Chrome Extensions during local development, including permission grants. Additionally, the tool shows: the user's update flow, including keeping an extension disabled until a user grants permissions; a migration flow that's similar to what users see when updating form the Chrome Web Store. This tool is also useful for simulating the permission changes requested when updatng an extension from Manifest V2 to Manifest V3.
 
 ### Chrome 114: New Side Panel API {: #side-panel-launch }
 
