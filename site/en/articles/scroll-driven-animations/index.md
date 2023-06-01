@@ -15,7 +15,7 @@ tags:
   - chrome-115
 ---
 
-{% Aside %} This feature is available in Chrome 115 with “Experimental Web Platform Features” enabled. {% endAside %}
+{% Aside %} This feature is available in Chrome 115. {% endAside %}
 
 {% YouTube id="oDcb3fvtETs", startTime="335" %}
 
