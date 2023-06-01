@@ -14,8 +14,8 @@ We're still working on the timeline of the MV2 phase-out plan, so keep an eye ou
 coming months. We will provide at least 6 months between a timeline announcement and any experiments
 deprecating MV2 features.
 
-Before announcing a new timeline, we will address prioritized platform gaps and close critical bugs.
-You can track these on the [Known Issues][known-issues] page.
+Before announcing a new timeline, we are addressing prioritized platform gaps and closing critical
+bugs. You can track these on the [Known Issues][known-issues] page.
 
 For more information, see our [most recent post][mailing-list-update] on the chromium-extensions
 mailing list.
