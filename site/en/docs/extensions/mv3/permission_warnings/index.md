@@ -102,18 +102,30 @@ section explains how to view permission warnings and what users will experience 
 
 To view an extension's permission warnings, you have the following options:
 
-{% Details %}
+{% Details 'open' %}
 {% DetailsSummary %}
 
-#### Automatically test with the TBD library {: #view-library }
+#### View using the Extension Update Testing Tool {: #view-tool }
 
 {% endDetailsSummary %}
 
-Description and instructions go here. 
+**Before you begin**
+
+1. Install [Node.js](https://nodejs.org/) and NPM.
+1. Install [Chromium][dl-chromium].
+1. Clone the [extension-update-testing-tool][gh-permission-tool] repository.
+1. Run `npm install` in the root of the repository.
+
+**Using the tool**
+
+1. Run `npm start`.
+1. Open the local server at http://localhost:8080 in Chromium.
+1. Drag an unpacked extension (folder or .zip file) to the page.
+1. Follow the instructions under "Install manually"  to download and install the extension.
 
 {% endDetails %}
 
-{% Details 'open' %}
+{% Details %}
 {% DetailsSummary %}
 
 #### Pack your extension manually {: #view-packing }
@@ -187,25 +199,33 @@ To check if your extension will be disabled when adding a new permission, you ha
 {% Details 'open' %}
 {% DetailsSummary %}
 
-#### Use the TBD library {: #update-library }
+#### Update using the Extension Update Testing Tool {: #update-tool }
 
 {% endDetailsSummary %}
 
-Description goes here. 
+These steps assume you followed the [Using the Extension Update Testing Tool](#view-tool) instructions to start the server.
+
+**Using the tool**
+
+1. Add a new [permission with warning][section-view-warnings].
+1. Increase the extension [version number][manifest-version].
+1. Drag the unpacked extension (folder or .zip file) to the page.
+1. Go to `chrome://extensions`.
+1. Click on the **Update** button.
 
 {% endDetails %}
 
-{% Details 'open' %}
+{% Details %}
 {% DetailsSummary %}
 
-#### Pack your extension {: #update-packing }
+#### Update your extension manually {: #update-packing }
 
 {% endDetailsSummary %}
 
 1. Find the `.crx` file you just created in [View Warnings](#view-package).
 1. Rename it or delete it.
 1. Open your `manifest.json` and add any [permission that triggers a warning](#permissions_with_warnings).
-1. Go to chrome://extensions. **Do not remove the previously installed package**.
+1. Go to `chrome://extensions`. **Do not remove the previously installed package**.
 1. Pack the extension again, but this time add the pem file in the second input.
     <figure>
      {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/Z9V6Q2TOabWTEUTEI6bo.png", 
@@ -440,6 +460,7 @@ the steps in [Viewing Warnings](#view_warnings).
 [api-tabs]: /docs/extensions/reference/tabs
 [api-top-sites]: /docs/extensions/reference/topSites
 [chromium-perms]: https://chromium.googlesource.com/chromium/src/+/main/chrome/common/extensions/permissions/chrome_permission_message_rules.cc#:~:text=chromepermissionmessagerule%3A%3Agetallrules()
+[dl-chromium]: https://download-chromium.appspot.com/
 [doc-activetab]: /docs/extensions/mv3/manifest/activeTab/
 [doc-apis]: /docs/extensions/reference/
 [doc-load-unpacked]: /docs/extensions/mv3/getstarted/development-basics/#load-unpacked
@@ -448,8 +469,10 @@ the steps in [Viewing Warnings](#view_warnings).
 [doc-perms]: /docs/extensions/mv3/declare_permissions
 [file-scheme-allow]: /docs/extensions/reference/extension#method-isAllowedFileSchemeAccess
 [gh-opt-perms]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.optional_permissions
+[gh-permission-tool]: https://github.com/GoogleChromeLabs/extension-update-testing-tool
 [incognito-allow]: /docs/extensions/reference/extension#method-isAllowedIncognitoAccess
-[tabs-tab]: /docs/extensions/reference/tabs/#type-Tab
+[manifest-version]: /docs/extensions/mv3/manifest/version/
 [section-update]: #update_permissions
 [section-view-warnings]: #view_warnings
 [section-warnings]: #permissions_with_warnings
+[tabs-tab]: /docs/extensions/reference/tabs/#type-Tab
