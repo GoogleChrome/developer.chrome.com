@@ -28,8 +28,8 @@ tags:
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/qsleBCUrr2twMujW0R94.png", alt="Recorder パネルでのダブルクリックイベントや右クリックイベントのキャプチャ", width="800", height="572" %}
 
-<!-- In this [example](https://jec.fyi/demo/dbl-right-click), start a [recording](/docs/devtools/recorder/#record) and try to perform the following steps:  -->
-この [例](https://jec.fyi/demo/dbl-right-click) では、以下の手順を行うために、 [レコーディング](/docs/devtools/recorder/#record) を開始しています。
+<!-- In this [example](https://jec.fish/demo/dbl-right-click), start a [recording](/docs/devtools/recorder/#record) and try to perform the following steps:  -->
+この [例](https://jec.fish/demo/dbl-right-click) では、以下の手順を行うために、 [レコーディング](/docs/devtools/recorder/#record) を開始しています。
 
 <!-- - Double-click the card to enlarge it
 - Right-click the card and select an action from the context menu -->
@@ -189,7 +189,7 @@ Chromium issue: [1321803](https://crbug.com/1321803)
 Chromium issues: [1226363](https://crbug.com/1226363)
 
 
-<!-- ## Sourcemaps improvements {: #sourcemaps } -->
+<!-- ## Source maps improvements {: #sourcemaps } -->
 ## ソースマップの改善 {: #sourcemaps }
 
 <!-- Previously, developers experience random failure during: -->
@@ -202,7 +202,7 @@ Chromium issues: [1226363](https://crbug.com/1226363)
 - [Codepen](https://codepen.io/) の例にてパフォーマンスの問題に関するソースの場所の特定
 - [React DevTools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) が有効になっているが **Component** タブがない
 
-<!-- Here are a few fixes on sourcemaps to improve the overall debugging experience: -->
+<!-- Here are a few fixes on source maps to improve the overall debugging experience: -->
 全体的なデバッグ体験を向上させるためのソースマップのいくつかの修正を次に示します:
 
 <!-- - Correct mapping between location and offset for inline scripts and source location

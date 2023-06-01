@@ -1,5 +1,9 @@
 {% extends "layouts/base.njk" %}
 
+{% block css %}
+{% InlineCss '/css/home.css' %}
+{% endblock %}
+
 {% from 'macros/cards/hero-card.njk' import heroCard with context %}
 {% from 'macros/cards/featured-post-card.njk' import featuredPostCard with context %}
 {% from 'macros/cards/featured-docs-card.njk' import featuredDocsCard with context %}
@@ -9,22 +13,63 @@
 {% block content %}
   <div class="home-container width-full center-margin pad-400">
 
-    {{ heroCard(
+    {# {{ heroCard(
         'Welcome!',
         "This is Chrome's official site to help you build Extensions, publish on the Chrome Web Store, optimize your website, and more.",
         "Start building",
          "/docs/",
         "image/QMjXarRXcMarxQddwrEdPvHVM242/uyy9OtWHTcxH5sK5VuRA.png",
         "Construction crane lifting a resource into a Chrome tab"
+        ) }} #}
+    {# Temporary IO styles #}
+    <style>
+      .hero-card {
+        background-color: rgb(32,33,37);
+        background-image: url(https://wd.imgix.net/image/kheDArv5csY6rvQUJDbWRscckLr1/9vEv78Fi4j2VBL19yCZL.svg);
+        background-repeat: no-repeat;
+        background-position: 90% 50%;
+        background-size: contain;
+        color: #fff;
+      }
+      .hero-card h1 {
+        color: #fff;
+        font-size: 2em;
+      }
+      .hero-card .material-button {
+        color: #000;
+        background-color: #ccc;
+      }
+
+      @media screen and (max-width: 859px) {
+        .hero-card { 
+          background-position: top center;
+          background-size: 80%;
+        }
+
+        .hero-card .hero-card__inner div:first-child:before {
+          content: "";
+          display: block;
+          width: 100%;
+          padding-top: 80%;
+        }
+      }
+     </style>
+    {{ heroCard(
+        "Thank you for tuning in to Google I/O.",
+        "Check out the top web things that we are investing in to help you work smarter, ship faster, and stay inspired.",
+        "Watch now",
+         "https://www.youtube.com/watch?v=gkAYHomO5Hg&list=PLOU2XLYxmsIJGxIV8Lt8gF_79Z334LQ6h",
+        null,
+        "A colorful Google propeller hat."
         ) }}
     <div class="gap-top-500 grid-gap-500 display-flex direction-column masonry:direction-row align-center masonry:align-start">
       <div class="display-flex direction-column grid-gap-500">
-        {% set post = helpers.findByUrl(collections.all, '/blog/insider-dec-22', 'en') %}
+        {% set post = helpers.findByUrl(collections.all, '/blog/chrome-at-io23', 'en') %}
         {% if post %}
         {{ featuredPostCard(post, {
           icon: 'star',
           actionText: 'Discover',
-          actionUrl: '/blog/insider-dec-22/'
+          actionUrl: '/blog/chrome-at-io23/'
         }) }}
         {% endif %}
         {% set blog = 'blog-' + locale %}

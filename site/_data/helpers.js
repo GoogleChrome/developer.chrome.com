@@ -13,6 +13,7 @@ const {
   formatDateNumeric,
 } = require('./lib/date');
 const {buildBreadcrumbs} = require('./lib/breadcrumbs');
+const {randomThumbnail} = require('./lib/randomThumbnail');
 
 module.exports = {
   join,
@@ -28,4 +29,5 @@ module.exports = {
   formatDateShort,
   formatDateNumeric,
   buildBreadcrumbs,
+  randomThumbnail,
 };

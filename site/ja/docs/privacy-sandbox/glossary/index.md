@@ -1,6 +1,6 @@
 ---
-layout: 'layouts/doc-post.njk'
-title: 'プライバシーサンドボックスの用語集'
+layout: layouts/doc-post.njk
+title: プライバシーサンドボックスの用語集
 subhead: プライバシーサンドボックスの記事とドキュメントでは、プライバシー、広告、ウェブ開発の概念を理解していることを前提としています。 この用語集では、重要な用語について説明します。
 description: 重要な概念の簡単な説明。
 date: 2021-05-18
@@ -8,254 +8,249 @@ updated: 2022-04-04
 authors:
   - samdutton
   - alexandrawhite
+  - mihajlija
 ---
 
+{% Aside %} 何か不足している場合は[お知らせください](https://github.com/GoogleChrome/developer.chrome.com/issues/new?assignees=&labels=feature+request&template=feature_request.md&title=)。 {% endAside %}
 
-{% Aside %}
-不足しているものがあれば[お知らせください](https://github.com/GoogleChrome/developer.chrome.com/issues/new?assignees=&labels=feature+request&template=feature_request.md&title=)！
-{% endAside %}
+## 広告オークション（FLEDGE）
 
-## 広告プラットフォーム（アドテク）{: #adtech }
+{% Partial 'privacy-sandbox/glossary-entries/ad-auction.njk' %}
 
-広告を配信するサービスを提供する会社。
+## 広告クリエイティブ、クリエイティブ {: #ad-creative}
+
+{% Partial 'privacy-sandbox/glossary-entries/ad-creative.njk' %}
+
+## アドエクスチェンジ
+
+{% Partial 'privacy-sandbox/glossary-entries/ad-exchange.njk' %}
+
+{: #ad-space }
+
+## 広告枠、広告スペース {: #ad-inventory }
+
+{% Partial 'privacy-sandbox/glossary-entries/ad-inventory-space.njk' %}
+
+## アドプラットフォーム（アドテック） {: #adtech }
+
+{% Partial 'privacy-sandbox/glossary-entries/ad-platform.njk' %}
 
 ## 広告主 {: #advertiser }
 
-自社商品を宣伝するために支払う会社。
+{% Partial 'privacy-sandbox/glossary-entries/advertiser.njk' %}
 
 ## 集計可能なレポート
 
-個々のユーザーデバイスから送信される暗号化されたレポート。 これらのレポートには、サイト間のユーザーの行動とコンバージョンに関するデータが含まれます。 コンバージョン（「アトリビューショントリガーイベント」と呼ばれることもあります）および関連する指標は、広告主またはアドテクによって定義されます。 各レポートは、さまざまなパーティが基盤のデータにアクセスできないように暗号化されます。
+{% Partial 'privacy-sandbox/glossary-entries/aggregatable-reports.njk' %}
 
-## アテステーション
+## 構成証明
 
-ソフトウェアのアイデンティティを認証する仕組み。通常、[暗号化ハッシュ](https://en.wikipedia.org/wiki/Cryptographic_hash_function)または署名によって行われます。 集計サービス提案の場合、アテステーションでは、アドテクが運用する集計サービスで実行するコードとオープンソースコードが照合されます。
+{% Partial 'privacy-sandbox/glossary-entries/attestation.njk' %}
 
 ## アトリビューション {: #attribution }
 
-結果に貢献するユーザーアクションの識別。
-
-たとえば、広告のクリック数またはビュー数と[コンバージョン数](#conversion)の相関関係です。
+{% Partial 'privacy-sandbox/glossary-entries/attribution.njk' %}
 
 ## Blink {: #blink }
 
-[Chromium](#chromium) プロジェクトの一環として開発された、Chrome が使用する[レンダリングエンジン](https://en.wikipedia.org/wiki/Browser_engine)。
+{% Partial 'privacy-sandbox/glossary-entries/blink.njk' %}
+
+## バイヤー
+
+{% Partial 'privacy-sandbox/glossary-entries/buyer.njk' %}
 
 ## Chromium {: #chromium }
 
-オープンソースの Web ブラウザプロジェクト。 Chrome、Microsoft Edge、Opera、およびその他のブラウザはChromium を基盤としています。
+{% Partial 'privacy-sandbox/glossary-entries/chromium.njk' %}
 
-## クリック率（CTR）{: #ctr }
+## クリックスルーコンバージョン（CTC） {: #ctc }
 
-広告を表示してそれをクリックしたユーザーの比率。
+{% Partial 'privacy-sandbox/glossary-entries/clickthrough-conversion.njk' %}
 
-「[インプレッション](#impression)」も参照してください。
+## クリックスルー率（CTR）{: #ctr }
 
-## クリックスルーコンバージョン（CTC）{: #ctc }
-
-「クリック」された広告に起因するコンバージョン。
-
-## 粗粒データ
-
-Attribution Reporting API のイベントレベルレポートによって提供される限定的な情報。 これは、クリックに対する 3 つのコンバージョンデータとビューに対する 1 つのデータに制限されます。 特定の詳細なコンバージョンデータ（アイテムの具体的な価格やタイムスタンプなど）は含まれません。
+{% Partial 'privacy-sandbox/glossary-entries/clickthrough-rate.njk' %}
 
 ## コンバージョン
 
-ユーザーのアクションによって、ある望ましい目標が完了すること。
-
-たとえば、広告主のサイトにリンクしている広告をクリックした後に商品の購入やニュースレターの購読登録が行われた場合に、コンバージョンが発生します。
+{% Partial 'privacy-sandbox/glossary-entries/conversion.njk' %}
 
 ## Cookie
 
-ウェブサイトがユーザーのブラウザに保存できる小さなテキストデータ。 Cookie は、ユーザーが Web を移動するときに、ウェブサイトがユーザーに関連付けられた情報（またはウェブサイトのバックエンドサーバーに保存されているデータへの参照）を保存するために使用されます。
-
-たとえば、ユーザーがログインしていない場合でもオンラインストアのショッピングカートの詳細を保持したり、ユーザーの閲覧アクティビティをサイトに記録したりできます。 「[ファーストパーティ Cookie](#first-party-cookie)」と「[サードパーティ Cookie](#third-party-cookie)」を参照してください。
+{% Partial 'privacy-sandbox/glossary-entries/cookie.njk' %}
 
 ## コーディネーター
 
-キーの管理と集計可能なレポートの集計・報告を担当するエンティティ。 コーディネーターは、承認された集計サービス構成のハッシュのリストを管理し、復号化キーへのアクセスを構成します。
+{% Partial 'privacy-sandbox/glossary-entries/coordinator.njk' %}
 
-## 差分プライバシー  {: #differential-privacy }
+## 粗データ
 
-個人に関する機密情報や、個人がデータセットに属しているかを明らかにすることなく、データセットに関する情報を共有して行動のパターンを明らかにできる手法。
+{% Partial 'privacy-sandbox/glossary-entries/course-data.njk' %}
+
+## データ管理プラットフォーム（DMP）{: #dmp }
+
+{% Partial 'privacy-sandbox/glossary-entries/data-management-platform.njk' %}
+
+## デマンドサイドプラットフォーム（DSP）{: #dsp }
+
+{% Partial 'privacy-sandbox/glossary-entries/demand-side-platform.njk' %}
+
+## 差分プライバシー {: #differial-privacy }
+
+{% Partial 'privacy-sandbox/glossary-entries/differential-privacy.njk' %}
 
 ## ドメイン
 
-「[トップレベルドメイン](#tld)」と「[eTLD](#etld)」を参照してください。
-
-## eTLD、eTLD+1 {: #etld }
-
-Effective Top-Level Domains（有効なトップレベルドメイン）の略。[Public Suffix List（パブリックサフィックスリスト）](https://publicsuffix.org/list/)で定義されます。
-
-たとえば、以下が該当します。
-
-```text
-co.uk
-github.io
-glitch.me
-```
-
-有効な TLD は、`foo.appspot.com` と `bar.appspot.com` を異なるサイトにすることができます。 この場合の eTLD は `appspot.com` であり、 のサイト名全体（`foo.appspot.com`、`bar.appspot.com`）は eTLD+1 として知られます。
-
-「[トップレベルドメイン](#tld)」も参照してください。
+{% Partial 'privacy-sandbox/glossary-entries/domain.njk' %}
 
 ## エントロピー
 
-データ項目が個人のアイデンティティをどれだけ明らかにしているかを示す尺度です。
+{% Partial 'privacy-sandbox/glossary-entries/entropy.njk' %}
 
-データエントロピーはビット単位で測定されます。 データがアイデンティティをより明らかにするほど、そのエントロピー値が高くなります。
+## eTLD、eTLD+1 {: #etld }
 
-データを組み合わせて個人を特定することはできますが、新しいデータがエントロピーに追加されるかどうかを判断するのは難しい場合があります。 たとえば、あるユーザーがカンガルー島出身であることをすでに知っている場合、そのユーザーがオーストラリアからアクセスしていることがわかってもエントロピーは減少しません。
-
-## フェデレーション ID（ID連携）{: #federated-identity }
-
-ウェブサイトが独自のアイデンティティサービスを実装することなく、ユーザーがそのサイトにサインインできるようにするサードパーティプラットフォーム。
+{% Partial 'privacy-sandbox/glossary-entries/etld-etld1.njk' %}
 
 ## Federated Credential Management API（FedCM）{: #fedcm }
 
-Federated Credential Management API は、フェデレーション ID サービスに対するプライバシーを保護するためのアプローチの提案です。 これにより、ユーザーはアイデンティティサービスまたはサイトと個人情報を共有せずにサイトにログインできるようになります。
+{% Partial 'privacy-sandbox/glossary-entries/federated-credential-management.njk' %}
 
-FedCM は以前は WebID として知られていました。[W3C](https://github.com/wicg/fedcm) において現在でも開発中となっています。
+## ID 連携（ログイン連携）{: #federated-identity }
+
+{% Partial 'privacy-sandbox/glossary-entries/federated-identity.njk' %}
+
+## Fenced Frame
+
+{% Partial 'privacy-sandbox/glossary-entries/fenced-frame.njk' %}
 
 ## フィンガープリンティング {: #fingerprinting }
 
-個々のユーザーの行動を識別して追跡する手法。
-
-フィンガープリンティングは、ユーザーが認識しない制御不能な仕組みを使用しています。 [Panopticlick](https://panopticlick.eff.org) や [amiunique.org](https://amiunique.org/) などのサイトでは、フィンガープリントデータを組み合わせて個人としてユーザーを識別する方法を示しています。
+{% Partial 'privacy-sandbox/glossary-entries/fingerprinting.njk' %}
 
 ## フィンガープリンティングサーフェス {: #fingerprinting-surface }
 
-特定のユーザーまたはデバイスを識別するために（おそらく他のサーフェスと組み合わせて）使用できるもの。
-
-たとえば、 `navigator.userAgent ()` JavaScript メソッドと `User-Agent` HTTP リクエストヘッダーは、フィンガープリンティングサーフェス（User-Agent 文字列）へのアクセスを提供します。
+{% Partial 'privacy-sandbox/glossary-entries/fingerprinting-surface.njk' %}
 
 ## ファーストパーティ {: #first-party }
 
-アクセスしているサイトのリソース。
+{% Partial 'privacy-sandbox/glossary-entries/first-party.njk' %}
 
-たとえば、閲覧しているページは `developer.chrome.com` というサイトにあり、このサイトが要求するリソースが含まれます。 これらのファーストパーティリソースに対するリクエストは「ファーストパーティリクエスト」と呼ばれます。 このサイトを閲覧中に保存される `developer.chrome.com` の [Cookie](#cookie) は、[ファーストパーティ Cookie](#first-party-cookie) と呼ばれます。
+## ファーストパーティ cookie {: #first-party-cookie }
 
-「[サードパーティ](#third-party)」も参照してください。
+{% Partial 'privacy-sandbox/glossary-entries/first-party-cookie.njk' %}
 
-## ファーストパーティクッキー {: #first-party-cookie }
+## I2E {: #i2e }
 
-[Cookie](#cookie) ユーザーがサイト自体にいる間にウェブサイトによって保存されます。
+{% Partial 'privacy-sandbox/glossary-entries/i2e.njk' %}
 
-たとえば、オンラインストアは、ログインしていないユーザーのショッピングカートの詳細を保持するために、ブラウザにCookieを保存するように要求する場合があり 。 「[サードパーティ](#third-party-cookie)」も参照してください。
+## I2EE {: #i2ee }
+
+{% Partial 'privacy-sandbox/glossary-entries/i2ee.njk' %}
+
+## I2P {: #i2p }
+
+{% Partial 'privacy-sandbox/glossary-entries/i2p.njk' %}
+
+## I2S {: #i2s }
+
+{% Partial 'privacy-sandbox/glossary-entries/i2s.njk' %}
 
 ## インプレッション {: #impression }
 
-以下のいずれかを言及します。
-
-*  広告のビュー。 「[クリック率](#ctr)」も参照してください。
-*  広告スロット: 広告が表示される、ウェブページ上の HTML マークアップ（通常 `<div>` タグ）。 広告スロットは[広告枠](#inventory)を構成します。
+{% Partial 'privacy-sandbox/glossary-entries/impression.njk' %}
 
 ## 広告枠 {: #inventory}
 
-サイトで利用可能な広告スロット。 広告スロットは、広告が表示される、ウェブページ上の HTML マークアップ（通常 `<div>` タグ）です。
+{% Partial 'privacy-sandbox/glossary-entries/inventory.njk' %}
 
 ## k-匿名性
 
-データセット内の匿名性の尺度。 匿名性が _k_ の場合、データセット内の他の _k-1_ の個人と区別されません。 言い換えれば、_k_ 人の個人（あなたを含む）が同じ情報を持つことになります。
+{% Partial 'privacy-sandbox/glossary-entries/k-anonymity.njk' %}
 
 ## Nonce
 
-暗号通信で一度だけ使用される任意の番号。
+{% Partial 'privacy-sandbox/glossary-entries/nonce.njk' %}
 
 ## オリジン
 
-スキーム（プロトコル）、ホスト名（ドメイン）、およびそれへのアクセスに使用される URL のポートによって定義されます。
-
-例: `https://developer.chrome.com`
+{% Partial 'privacy-sandbox/glossary-entries/origin.njk' %}
 
 ## オリジントライアル {: #origin-trial}
 
-トライアルでは、新しい機能または実験的な機能がすべての人に公開される前に、ユーザーが限定期間、それらの機能にアクセスして、ユーザーが試すことのできる機能を構築できます。
-
-Chrome が機能のオリジントライアルを提供している場合、トライアルに[オリジン](#origin)を登録すると、そのオリジンのすべてのユーザーはフラグを切り替えたり、Chrome の代替ビルドに切り替えたりすることなく、その機能を使用することができます（Chrome のアップグレードが必要な場合があります）。 オリジントライアルを使用することにより、開発者は新しい機能を使用してデモやプロトタイプをビルドすることができます。 このトライアルは、Chrome エンジニアが新機能の使用方法や他のウェブテクノロジーとの相互作用を理解するのに役立ちます。
-
-詳細は、「[Getting started with Chrome's origin trials](https://web.dev/origin-trials/)」（Chromeのオリジントライアル入門）を参照してください。
+{% Partial 'privacy-sandbox/glossary-entries/origin-trial.njk' %}
 
 ## パッシブサーフェス {: #passive-surface }
 
-User-Agent 文字列、IP アドレス、Accept-Language ヘッダーなど、サイトが要求するかどうかに関係なくすべてのウェブサイトで利用できる[フィンガープリンティングサーフェス](#fingerprinting-surface)。
-
-パッシブサーフェスは、サイトのプライバシーバジェットを簡単に消費する可能性があります。
-
-プライバシーサンドボックスイニシアチブは、すべてのサーバーへのすべてのレスポンスに対して Accept-Language ヘッダーを使用するのではなく、クライアントヒントを 1 回使用してユーザー言語を取得するなど、パッシブサーフェスの代わりとなる、積極的に特定の情報を取得できる方法を提案しています。
+{% Partial 'privacy-sandbox/glossary-entries/passive-surface.njk' %}
 
 ## サイト運営者
 
-プライバシーサンドボックスのコンテキストで、広告を表示するサイト。
+{% Partial 'privacy-sandbox/glossary-entries/publisher.njk' %}
 
 ## リーチ
 
-広告を閲覧した、または広告を表示するウェブページにアクセスしたユーザーの合計数。
+{% Partial 'privacy-sandbox/glossary-entries/reach.njk' %}
+
+## リアルタイム入札（RTB）{: #rtb}
+
+{% Partial 'privacy-sandbox/glossary-entries/real-time-bidding.njk' %}
 
 ## リマーケティング
 
-以前にサイトを訪問したことのある他のサイトのユーザーにリーチすること。
-
-たとえば、オンラインストアは、以前にそのサイトで玩具を閲覧したことのあるユーザーに、玩具の販売広告を表示できます。
+{% Partial 'privacy-sandbox/glossary-entries/remarketing.njk' %}
 
 ## レポートオリジン
 
-集計可能なレポートを受け取るエンティティ。つまり、Attribution Reporting API を呼び出したアドテク。 集計可能なレポートは、ユーザーデバイスからレポートオリジンに関連付けられた [well-known](#well-known) URL に送信されます。
+{% Partial 'privacy-sandbox/glossary-entries/reporting-origin.njk' %}
+
+## セラー
+
+{% Partial 'privacy-sandbox/glossary-entries/seller.njk' %}
 
 ## サイト
 
-「[トップレベルドメイン](#tld)」と「[eTLD](#etld)」を参照してください。
+{% Partial 'privacy-sandbox/glossary-entries/site.njk' %}
 
 ## 要約レポート {: #aggregate-report}
 
-Attribution Reporting API のレポートタイプ。 [要約レポート](/docs/privacy-sandbox/attribution-reporting/summary-reports/)には、集計可能なレポートに適用されたノイズを含む集計から得られる集計済みのユーザーデータと詳細なコンバージョンデータが含まれます。 要約には、集計済みのユーザーデータと詳細なコンバージョンデータが含まれます。
+{% Partial 'privacy-sandbox/glossary-entries/summary-report.njk' %}
 
-要約レポートは、以前は集計レポートと呼ばれていました。
+## サプライサイドプラットフォーム、セルサイドプラットフォーム {: #ssp}
+
+{% Partial 'privacy-sandbox/glossary-entries/supply-side-platform.njk' %}
 
 ## サーフェス
 
-「[フィンガープリンティングサーフェス](#fingerprinting-surface)」と「[パッシブサーフェス](#passive-surface)」を参照してください。
+{% Partial 'privacy-sandbox/glossary-entries/surface.njk' %}
 
 ## サードパーティ {: #third-party }
 
-アクセスしているウェブサイトとは異なるドメインから配信されるリソース。
+{% Partial 'privacy-sandbox/glossary-entries/third-party.njk' %}
 
-たとえば、`foo.com` というウェブサイトは、`google-analytics.com` のアナリティクスコード（JavaScript 経由）、`use.typekit.net` のフォント（link 要素経由）、および `vimeo.com` の動画（iframe）を使用している場合があります。 「[ファーストパーティ](#first-party)」も参照してください。
+## サードパーティサービスが保存する Cookie。
 
-## サードパーティ Cookie {: #third-party-cookie}
-
-サードパーティサービスが保存する [Cookie](#cookie)。
-
-たとえば、動画サイトは、動画サイトへの移動を強制せずに、ユーザーのウィッシュリストに動画を追加できる **Watch Later**（後で見る）ボタンを埋め込みプレーヤーに含めることがあります。
-
-「[ファーストパーティ Cookie](#first-party-cookie)」も参照してください。
+{% Partial 'privacy-sandbox/glossary-entries/third-party-cookie.njk' %}
 
 ## トップレベルドメイン（TLD） {: #tld }
 
-.com や.org などのトップレベルドメインは、[Root Zone Database](https://www.iana.org/domains/root/db)（ルートゾーンデータベース）に掲載されています。
-
-「サイト」には、実際には単なるサブドメインであるサイトもあることに注意してください。 たとえば、 `translate.google.com` と `maps.google.com` は `google.com` のサブドメインです。 これらのサブドメインは [eTLD+1](#etld) です。
+{% Partial 'privacy-sandbox/glossary-entries/top-level-domain.njk' %}
 
 ## 信頼できる実行環境（TEE）{: #tee }
 
-外部パーティがコンピューターで実行されているソフトウェアの正確なバージョンを確認できるようにする、コンピューターのハードウェアとソフトウェアの特別な構成です。 TEE を使用すると、外部パーティは、ソフトウェアがソフトウェアメーカーが主張していることを過不足なく正確に実行していることを確認できます。
-
-## User-Agent 文字列 {: #user-agent }
-
-アプリケーション、オペレーティングシステム、ベンダー、またはユーザーエージェントのバージョンに関する識別情報を要求するために、サーバーとネットワークピアによって使用される HTTP ヘッダー。 User-Agent 文字列は、大量のデータ文字列をブロードキャストするため、ユーザーのプライバシーに問題を生じる可能性があります。 機密情報を取り除き、パッシブフィンガープリンティングを減らすために、[User-Agent の削減](/docs/privacy-sandbox/user-agent/)が提案されています。
+{% Partial 'privacy-sandbox/glossary-entries/trusted-execution-environment.njk' %}
 
 ## User-Agent Client Hints（UA-CH）{: #ua-ch }
 
-明示的なリクエストに応じて、User-Agent 文字列の特定の部分を提供します。 これにより、ユーザー ID または秘密追跡につながる可能性のある User-Agent 文字列の[パッシブサーフェス](#passive-surface)を減らすことができます。
+{% Partial 'privacy-sandbox/glossary-entries/user-agent-client-hints.njk' %}
 
-UA-CH は「クライアントヒント」と呼ばれることもあります。
+## User-Agent 文字列 {: #user-agent }
+
+{% Partial 'privacy-sandbox/glossary-entries/user-agent-string.njk' %}
 
 ## .well-known {: #well-known }
 
-標準化された URL からウェブサイトへのリダイレクトを追加するために使用されるファイル。
+{% Partial 'privacy-sandbox/glossary-entries/well-known.njk' %}
 
-たとえば、パスワードマネージャーは、ウェブサイトが `/.wellknown/change-password` からそのサイトのパスワード変更ページへのリダイレクトを設定すると、ユーザーがパスワードを更新しやすくすることができます。
+## ワークレット
 
-さらに、リクエストを発行する _前に_ 、ホストに関するポリシーやその他の情報にアクセスすると便利です。 たとえば、`robots.txt` は、アクセスするページと無視するページをウェブクローラに指示します。 IETF [RFC8615](https://tools.ietf.org/html/rfc8615) には、サイト全体のメタデータを `/.well-known/` サブディレクトリの標準的な場所でアクセスできるようにするための標準化された方法が概説されています。
-
-`.well-known` の推奨リストについては、[iana.org/assignments/well-known-uris/well-known-uris.xhtml](https://www.iana.org/assignments/well-known-uris/well-known-uris.xhtml) を参照してください。
+{% Partial 'privacy-sandbox/glossary-entries/worklet.njk' %}

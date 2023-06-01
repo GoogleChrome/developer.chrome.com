@@ -29,7 +29,7 @@ tags:
 Теперь вы можете установить точку останова и пошагово воспроизвести пользовательский сценарий во вкладке **Recorder**.
 
 <!-- To set a breakpoint, click on the blue dot next to a step. Replay your user flow, the replay will pause before executing the step. From here, you can continue the replay, execute a step, or cancel the replay. -->
-Чтобы установить точку останова, кликните на синюю точку рядом с шагом. Воспроизведите пользовательский сценарий, проигрывание остановится перед выполнением отмеченного шага. С этого места вы можете продолжить воспроизведение, выполнить шаг или отменить воспроизведение. 
+Чтобы установить точку останова, кликните на синюю точку рядом с шагом. Воспроизведите пользовательский сценарий, проигрывание остановится перед выполнением отмеченного шага. С этого места вы можете продолжить воспроизведение, выполнить шаг или отменить воспроизведение.
 
 <!-- With this feature, you can fully visualize and debug your user flow with ease. -->
 С помощью этой функции вы можете полностью визуализировать и с легкостью отлаживать пользовательский сценарий.
@@ -46,10 +46,10 @@ tags:
 ## Поддержка события mouse over во вкладке Recorder {: #recorder-hover }
 
 <!-- The **Recorder** now supports adding a mouse over (hover) step manually in a recording.  -->
-**Recorder** теперь поддерживает добавление в запись шага mouse over (hover). 
+**Recorder** теперь поддерживает добавление в запись шага mouse over (hover).
 
-<!-- [This demo](https://jec.fyi/demo/menu-hover) shows a pop up menu on hover. Try to record a user flow and click a menu item. -->
-В [демо](https://jec.fyi/demo/menu-hover) появляется всплывающее меню при наведении. Попробуйте записать пользовательский сценарий и во время записи кликните на пункт меню.
+<!-- [This demo](https://jec.fish/demo/menu-hover) shows a pop up menu on hover. Try to record a user flow and click a menu item. -->
+В [демо](https://jec.fish/demo/menu-hover) появляется всплывающее меню при наведении. Попробуйте записать пользовательский сценарий и во время записи кликните на пункт меню.
 
 <!-- If you replay the user flow now, it will fail because the **Recorder** doesn’t capture mouse over events automatically during recording. To resolve this, [add a step manually](/docs/devtools/recorder/reference/#add-and-remove-steps) to hover over the selector before clicking the menu item.  -->
 Если вы воспроизведёте запись сейчас, она проиграется с ошибкой, потому что **Recorder** не ловит событие наведения мыши автоматически во время записи. Чтобы решить эту проблему, [вручную добавьте шаг](/docs/devtools/recorder/reference/#add-and-remove-steps), чтобы имитировать наведение курсора на пункт меню перед кликом.
@@ -69,7 +69,7 @@ LCP – это важная, ориентированная на пользов�
 В [записи производительности](/docs/devtools/performance-insights/#record) кликните на значок LPC в **Таймлайне** (Timeline). В панели **Details** вы можете увидеть оценку LCP, узнать как поправить ресурсы, которые замедляют LPC, и посмотреть критический путь для ресурса LCP.
 
 <!-- See [Performance Insights](/docs/devtools/performance-insights/) to learn how to get actionable insights and improve your website’s performance with the panel. -->
-Изучите документацию [Performance Insights](/docs/devtools/performance-insights/), чтобы узнать, как получить полезные сведения и улучшить производительность вашего сайта с помощью вкладки. 
+Изучите документацию [Performance Insights](/docs/devtools/performance-insights/), чтобы узнать, как получить полезные сведения и улучшить производительность вашего сайта с помощью вкладки.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/NZZJ1FzXxqj2U2NR0U53.png", alt="LCP во вкладке Performance Insights", width="800", height="751" %}
 
@@ -100,7 +100,7 @@ LCP – это важная, ориентированная на пользов�
 Теперь вы можете использовать DevTools для тестирования [регистрации обработчика протокола URL](https://web.dev/url-protocol-handler/) для [прогрессивных веб-приложений (PWA)](https://web.dev/learn/pwa/).
 
 <!-- The URL protocol handler registration lets installed PWAs handle links that use a specific protocol (e.g. [`magnet`](https://wikipedia.org/wiki/Magnet_URI_scheme), `web+example`) for a more integrated experience. -->
-Регистрация обработчика протокола URL позволяет установленным PWA обрабатывать ссылки, использующие определённый протокол (например [`magnet`](https://wikipedia.org/wiki/Magnet_URI_scheme), `web+example`), для более полноценного опыта использования. 
+Регистрация обработчика протокола URL позволяет установленным PWA обрабатывать ссылки, использующие определённый протокол (например [`magnet`](https://wikipedia.org/wiki/Magnet_URI_scheme), `web+example`), для более полноценного опыта использования.
 
 <!-- Navigate to the **Protocol Handlers** section via the **Application** > **Manifest** pane. You can view and test all the available protocols here. -->
 Перейдите в раздел **Обработчики протоколов** (Protocol Handlers) в панели **Приложение** (Application) > **Манифест** (Manifest). Здесь вы можете просмотреть и протестировать все доступные протоколы.
@@ -123,10 +123,10 @@ LCP – это важная, ориентированная на пользов�
 Используйте [значок верхнего слоя](/blog/top-layer-devtools/#top-layer-support-design-in-devtools), чтобы понять концепцию верхнего слоя и визуализировать, как меняется его контент.
 
 <!-- The [`<dialog>` element](https://web.dev/building-a-dialog-component/) has recently become stable across browsers. When you open a dialog, it is put into a [top layer](/blog/top-layer-devtools/). Top level content renders on top of all the other content.  -->
-Элемент [`<dialog>`](https://web.dev/building-a-dialog-component/) недавно стал стабилен во всех браузерах. Когда вы открываете диалог, он помещается в [верхний слой](/blog/top-layer-devtools/). Контент верхнего уровня отображается поверх всего остального контента. 
+Элемент [`<dialog>`](https://web.dev/building-a-dialog-component/) недавно стал стабилен во всех браузерах. Когда вы открываете диалог, он помещается в [верхний слой](/blog/top-layer-devtools/). Контент верхнего уровня отображается поверх всего остального контента.
 
-<!-- In this [demo](https://jec.fyi/demo/dialog), click **Open dialog**.  -->
-В этом [демо](https://jec.fyi/demo/dialog) кликните на **Open dialog**.
+<!-- In this [demo](https://jec.fish/demo/dialog), click **Open dialog**.  -->
+В этом [демо](https://jec.fish/demo/dialog) кликните на **Open dialog**.
 
 <!-- To help visualize the top layer elements, DevTools adds a top layer container (`#top-layer`) to the DOM tree. It resides after the closing `</html>` tag.   -->
 Чтобы помочь визуализировать элементы верхнего слоя, DevTools добавляет контейнер верхнего слоя (`#top-layer`) в DOM-дерево. Он размещен после закрывающего тега `</html>`.
@@ -147,7 +147,7 @@ LCP – это важная, ориентированная на пользов�
 <!-- ## Attach Wasm debugging information at runtime {: #wasm } -->
 ## Прикрепление сведений для отладки Wasm во время исполнения {: #wasm }
 
-<!-- You can now attach DWARF debugging information for wasm during runtime. Previously, the **Sources** panel only supported attaching sourcemaps to JavaScript and Wasm files. -->
+<!-- You can now attach DWARF debugging information for wasm during runtime. Previously, the **Sources** panel only supported attaching source maps to JavaScript and Wasm files. -->
 Теперь вы можете прикрепить отладочную информацию DWARF для wasm во время исполнения файла. Раньше на вкладке **Источники** (Sources) можно было прикрепить только карту источников для файлов JavaScript и Wasm.
 
 <!-- Open a Wasm file in the **Sources** panel. Right-click in the editor and select **Add DWARF debugging info…**  to attach debugging information on demand.  -->
@@ -208,16 +208,16 @@ LCP – это важная, ориентированная на пользов�
 Задача в трекере Chromium: [1337777](https://crbug.com/1337777)
 
 
-<!-- ## Sourcemap improvements {: #sourcemaps } -->
+<!-- ## Source map improvements {: #sourcemaps } -->
 ## Улучшения карты источников {: #sourcemaps }
 
-<!-- Here are a few fixes on sourcemaps to improve the overall debugging experience: -->
+<!-- Here are a few fixes on source maps to improve the overall debugging experience: -->
 Вот несколько исправлений в картах источников для улучшения общего опыта отладки:
 
-<!-- - DevTools now properly resolves sourcemap identifiers with punctuation. Some modern minifiers (for example, [esbuild](https://esbuild.github.io/)) produce sourcemaps that merge identifiers with subsequent punctuation (comma, parentheses, semicolon).  -->
+<!-- - DevTools now properly resolves source map identifiers with punctuation. Some modern minifiers (for example, [esbuild](https://esbuild.github.io/)) produce sourcemaps that merge identifiers with subsequent punctuation (comma, parentheses, semicolon).  -->
 - DevTools теперь правильно распознает идентификаторы карт источников с пунктуацией. Некоторые современные минификаторы (например, [esbuild](https://esbuild.github.io/)) создают карты источников, объединяющие идентификаторы с помощью знаков препинания (запятая, круглые скобки, точка с запятой).
-<!-- - DevTools now resolves sourcemap names for constructors with a `super` call. -->
-- DevTools теперь распознает имена карт источников для конструкторов с вызовом `super`. 
+<!-- - DevTools now resolves source map names for constructors with a `super` call. -->
+- DevTools теперь распознает имена карт источников для конструкторов с вызовом `super`.
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/6djFfkrtPzXuNYq5m8Vk.png", alt="Правильное распознание вызова super", width="800", height="441" %}
 <!-- - Fixed source map URL indexing for duplicate canonical URLs. Previously, breakpoints were not activated in some files because of duplicate canonical URLs. -->
 - Исправлено индексирование URL карт источников при дублирующихся канонических URL. Ранее точки останова не активировались в некоторых файлах из-за дублирования канонических URL.
@@ -227,8 +227,8 @@ LCP – это важная, ориентированная на пользов�
 
 
 <!-- ## Miscellaneous highlights {: #misc } -->
-## Другие важные моменты {: #misc } 
- 
+## Другие важные моменты {: #misc }
+
 <!-- These are some noteworthy fixes in this release: -->
 Вот несколько заслуживающих внимания исправлений в этом выпуске:
 

@@ -94,6 +94,9 @@ ELEVENTY_IGNORE_WORKBOX=true
 ELEVENTY_IGNORE_BLOG=true
 ```
 
+To build only a specific component, start with the above `.env` file and change the value for the
+component you wish to build. You can comment it out, or set it to `0` or `false`.
+
 ### Start a local server to preview the site
 
 ```bash

@@ -25,7 +25,7 @@ CSS preprocessors or
 channels.
 
 {% Compare 'worse', 'Before with SCSS' %}
-```js
+```css
 .color-mixing-with-sass {
   /* Sass: equally mix red with white */
   --red-white-mix: color.mix(red, white);
@@ -39,7 +39,7 @@ a real way to mix colors in CSS. To get close you need to do math of partial
 color values. Here's a reduced example of how CSS may simulate mixing today:
 
 {% Compare 'worse', 'Before with HSL' %}
-```js
+```css
 .color-mixing-with-vanilla-css-before {
   --lightness: 50%;
   --red: hsl(0 50% var(--lightness));
@@ -57,7 +57,7 @@ ability to mix colors to CSS. Developers can choose which color space they mix
 in and how dominant each color should be in the mix.
 
 {% Compare 'better', 'after' %}
-```js
+```css
 .color-mixing-after {
   /* equally mix red with white */
   --red-white-mix: color-mix(in oklab, red, white);
@@ -72,7 +72,10 @@ That's what we want. Flexibility, power and fully featured APIs. Love it.
 
 ## Mixing colors in CSS
 
-CSS exists in a multiple color space and color gamut world, and because of this it's not optional to specify the color space for mixing. Furthermore, different color spaces can drastically change the results of a mix, so knowing the effects of a color space will help you get the results you need.
+CSS exists in a [multiple color space and color gamut world](/articles/high-definition-css-color-guide/#meet-the-new-web-color-spaces), and because of this
+it's not optional to specify the color space for mixing. Furthermore, different
+color spaces can drastically change the results of a mix, so knowing the effects
+of a color space will help you get the results you need.
 
 For an interactive introduction, try this `color-mix()` tool:
 - Explore the effects of each color space.
@@ -86,7 +89,7 @@ For an interactive introduction, try this `color-mix()` tool:
 
 ### Mixing in the various color spaces
 
-The default color space for mixing (and gradients) is `oklab`. It provides
+The default color space for mixing (and [gradients](/articles/high-definition-css-color-guide/#gradients-in-different-color-spaces)) is `oklab`. It provides
 consistent results. You can specify alternative color spaces too, to tailor the
 mix to your needs.
 
@@ -144,8 +147,10 @@ color-mix(in xyz, blue, white);
 </figure>
 
 Learning the effects of a color space with `color-mix()` is great knowledge for
-making gradients too. Color 4 syntax also allows gradients to specify the color
-space, where a gradient shows the mix over an area of space.
+[making
+gradients](/articles/high-definition-css-color-guide/#gradients-in-different-color-spaces)
+too. Color 4 syntax also allows gradients to specify the color space, where a
+gradient shows the mix over an area of space.
 
 ```css
 .black-to-white-gradient-in-each-space {
@@ -194,7 +199,7 @@ both produce a vibrant result, while srgb and oklab produce unsaturated colors.
   <figcaption><a href="https://codepen.io/web-dot-dev/pen/VwBdxGm">Try the demo</a></figcaption>
 </figure>
 
-If you want consistency and subtly, use oklab. In the following demo which mixes
+If you want consistency and subtlety, use oklab. In the following demo which mixes
 blue and black, hsl and hwb produce overly vibrant and hue shifted colors while
 srgb and oklab produce a darker blue.
 
@@ -217,11 +222,11 @@ potentials in our user interfaces.
 
 #### Adjusting the hue interpolation method
 
-If you've chosen to mix in a cylindrical color space, essentially any color space with a `h` hue channel that accepts an angle, you can specify if the interpolation goes `shorter`, `longer`, `decreasing`, and `increasing`.
-
-<!-- todo: link to HD color guide
-This is covered well in this HD Color Guide if you want to learn more.
- -->
+If you've chosen to mix in a cylindrical color space, essentially any color
+space with a `h` hue channel that accepts an angle, you can specify if the
+interpolation goes `shorter`, `longer`, `decreasing`, and `increasing`. This is
+covered well in this [HD Color
+Guide](/articles/high-definition-css-color-guide/) if you want to learn more.
 
 {% Aside %}
 The `color-mix()` playground will add an additional select dropdown if the color space is cylindrical. You can play there to see the effects on the mix.

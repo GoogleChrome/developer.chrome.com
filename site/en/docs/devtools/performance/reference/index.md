@@ -5,7 +5,7 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2017-05-08
-updated: 2023-01-09
+updated: 2023-05-30
 description: "A reference on all the ways to record and analyze performance in Chrome DevTools."
 tags:
   - performance
@@ -40,8 +40,8 @@ opposed to running.
 
 1.  Go to the page that you want to analyze.
 2.  Open the **Performance** panel of DevTools.
-3.  Click **Reload page**
-    {% Img src="image/admin/LLUc63dXLxWMXnoL8kyr.png", alt="Reload Page.", width="24", height="25" %}. DevTools
+3.  Click **Start profiling and reload page**
+    {% Img src="image/admin/LLUc63dXLxWMXnoL8kyr.png", alt="Start profiling and reload page.", width="20", height="20" %}. DevTools first navigates to `about:blank` to clear any remaining screenshots and traces. Then DevTools
     records performance metrics while the page reloads and then automatically stops the recording a
     couple seconds after the load finishes.
 
@@ -129,7 +129,7 @@ profiler][8].
 
 ### Emulate hardware concurrency {: #hardware-concurrency }
 
-To test application performance with different numbers of processor cores, you can configure the value reported by the [`navigator.hardwareConcurrency`](https://developer.mozilla.org/docs/Web/API/Navigator/hardwareConcurrency) property. Some applications use this property to control the degree of parallelism of their application, for example, to control Emscripten pthread pool size. 
+To test application performance with different numbers of processor cores, you can configure the value reported by the [`navigator.hardwareConcurrency`](https://developer.mozilla.org/docs/Web/API/Navigator/hardwareConcurrency) property. Some applications use this property to control the degree of parallelism of their application, for example, to control Emscripten pthread pool size.
 
 To emulate hardware concurrency:
 
@@ -247,6 +247,8 @@ light green. Calls from another script are colored beige. The darker yellow repr
 activity, and the purple event represents rendering activity. These darker yellow and purple events
 are consistent across all recordings.
 
+Additionally, the **Main** section shows information on CPU profiles started and stopped with [`profile()` and `profileEnd()`](/docs/devtools/console/utilities/#profile-function) console functions.
+
 See [Disable JavaScript samples][11] if you want to hide the detailed flame chart of JavaScript
 calls. When JS samples are disabled, you only see high-level events such as `Event (click)` and
 `Function Call (script_foot_closure.js:53)`.
@@ -266,7 +268,7 @@ perspective on the activities:
 
 Each tabular view in the **Performance** panel shows links for activities such as functions calls.
 To help you debug, DevTools finds the corresponding function declarations in source files.
-Additionally, if the appropriate [sourcemaps](/blog/sourcemaps/) are present and enabled, DevTools automatically finds the original files.
+Additionally, if the appropriate [source maps](/blog/sourcemaps/) are present and enabled, DevTools automatically finds the original files.
 
 Click a link to open a source file in the **Sources** panel.
 
@@ -371,13 +373,28 @@ the **Duration** menu is set to **All**, meaning all activities are shown.
 Disable the **Loading**, **Scripting**, **Rendering**, or **Painting** checkboxes to filter out all
 activities from those categories.
 
+### View timings {: #timings }
+
+On the **Timings** track, view important markers such as:
+
+- [First Paint (FP)](https://developer.mozilla.org/docs/Glossary/First_paint)
+- [First Contentful Paint (FCP)](https://web.dev/fcp/)
+- [Largest Contentful Paint (LCP)](https://web.dev/lcp/)
+- [DOMContentLoaded Event (DCL)](https://developer.mozilla.org/docs/Web/API/Window/DOMContentLoaded_event)
+- [Onload Event (L)](https://developer.mozilla.org/docs/Web/API/Window/load_event)
+- Your custom [`performance.mark()`](https://developer.mozilla.org/docs/Web/API/Performance/mark) calls
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7aTG6FO3T8Tz1kkWgKKy.png", alt="Markers in the Timings track.", width="800", height="578" %}
+
+To see more details in the **Summary** tab, select a marker. To see the marker's timestamp, hover over it on the **Timings** track.
+
 ### View interactions {: #interactions }
 
 View user interactions on the **Interactions** track to track down potential responsiveness issues.
 
 To view interactions:
 
-1. [Open DevTools](/docs/devtools/open/), for example, on this [demo page](https://coffee-cart.netlify.app/?ad=1).
+1. [Open DevTools](/docs/devtools/open/), for example, on this [demo page](https://coffee-cart.app/?ad=1).
 1. Open the **Performance** panel and [start a recording](/docs/devtools/evaluate-performance/#record).
 1. Click an element (coffee) and stop the recording.
 1. Find the **Interactions** track in the timeline.
@@ -385,6 +402,10 @@ To view interactions:
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/QtXDPyOntOBbcFwI5QUY.png", alt="The Interactions track.", width="800", height="459" %}
 
 In the example above, the **Interactions** track shows two interactions. Both have the same IDs, indicating that the interactions are triggered by the same user action.
+
+The **Interactions** track also shows [Interaction to Next Paint (INP)](https://web.dev/inp/) warnings for interactions longer than 200 milliseconds in the **Summary** tab.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/wrFaZ26nYCuprtCSNB5C.png", alt="The INP warning.", width="800", height="685" %}
 
 ### View GPU activity {: #gpu }
 
@@ -592,7 +613,7 @@ See [Frame rendering stats](/docs/devtools/rendering#frame-rendering-stats).
 
 ### View painting events in real time with Paint Flashing {: #paint-flash }
 
-Use **Paint Flashing** to get a real time view of all paint events on the page. 
+Use **Paint Flashing** to get a real time view of all paint events on the page.
 
 See [Paint flashing](/docs/devtools/rendering#paint-flashing).
 

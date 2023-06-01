@@ -1,0 +1,3 @@
+In the Protected Audience API, formerly FLEDGE, an interest group represents a group of people with a common interest, corresponding to a remarketing list.
+
+Every [interest group](/docs/privacy-sandbox/fledge/#what-is-an-interest-group:~:text=Sandbox%20glossary.-,What,-is%20an%20interest) has an owner. Different types of owners will create different types of interest groups with different use cases.

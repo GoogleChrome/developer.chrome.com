@@ -33,28 +33,34 @@ permits, to provide users with informed control over access to resources and dat
 See the [platform vision][vision-optperms] to better understand this recommendation.
 {% endAside %}
 
-If an API requires you to declare a permission in the manifest, then its documentation tells you how
+If an API requires you to declare a permission in the [manifest][doc-manifest], then its documentation tells you how
 to do so. For example, the [Storage][api-storage] page shows how to declare the `"storage"` permission.
 
 Here's an example of the permissions part of a manifest file:
 
+{% Label %}manifest.json:{% endLabel %}
+
 ```json
-"permissions": [
-  "tabs",
-  "bookmarks",
-  "unlimitedStorage"
-],
-"optional_permissions": [
-  "unlimitedStorage"
-],
-"host_permissions": [
-  "https://www.blogger.com/",
-  "https://*.google.com/"
-],
-"optional_host_permissions": [
-  "https://*/*",
-  "http://*/*"
-],
+{
+  ...
+  "permissions": [
+    "tabs",
+    "bookmarks",
+    "unlimitedStorage"
+  ],
+  "optional_permissions": [
+    "unlimitedStorage"
+  ],
+  "host_permissions": [
+    "https://www.blogger.com/",
+    "https://*.google.com/"
+  ],
+  "optional_host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+  ...
+}
 ```
 
 The following table lists the currently available permissions:
@@ -131,8 +137,12 @@ The following table lists the currently available permissions:
     </tr>
     <tr id="declarativeNetRequest">
       <td><code>"declarativeNetRequest"</code></td>
-      <td>Gives access to the <a href="/docs/extensions/reference/declarativeNetRequest/">chrome.declarativeNetRequest</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/declarativeNetRequest/">chrome.declarativeNetRequest</a> API. Some operations may require host permissions to perform.</td>
     </tr>
+     <tr id="declarativeNetRequestWithHostAccess">
+      <td><code>"declarativeNetRequestWithHostAccess"</code></td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/declarativeNetRequest/">chrome.declarativeNetRequest</a> API, but requires host permissions to the request URL and initiator to act on a request.</td>
+      </tr>
     <tr id="declarativeNetRequestFeedback">
       <td><code>"declarativeNetRequestFeedback"</code></td>
       <td>Gives access to events and methods within the <a
@@ -247,12 +257,16 @@ The following table lists the currently available permissions:
     </tr>
     <tr id="nativeMessaging">
       <td><code>"nativeMessaging"</code></td>
-      <td>Gives access to the <a href="/docs/apps/nativeMessaging/">native messaging API</a>.</td>
+      <td>Gives access to the <a href="/docs/extensions/mv3/nativeMessaging/">native messaging API</a>.</td>
     </tr>
     <tr id="notifications">
       <td><code>"notifications"</code></td>
       <td>Gives access to the <a href="/docs/extensions/reference/notifications/">chrome.notifications</a> API.</td>
     </tr>
+    <tr id="offscreen">
+      <td><code>"offscreen"</code></td>
+      <td>Gives access to the <a href="/docs/extensions/reference/offscreen/"><code>chrome.offscreen</code></a> API. 
+    </tr>    
     <tr id="pageCapture">
       <td><code>"pageCapture"</code></td>
       <td>Gives access to the <a href="/docs/extensions/reference/pageCapture/">chrome.pageCapture</a> API.</td>
@@ -301,6 +315,10 @@ The following table lists the currently available permissions:
       <td><code>"sessions"</code></td>
       <td>Gives access to the <a href="/docs/extensions/reference/sessions/">chrome.sessions</a> API.</td>
     </tr>
+    <tr id="sidePanel">
+      <td><code>"sidePanel"</code></td>
+      <td>Gives access to the <a href="/docs/extensions/reference/sidePanel/">chrome.sidePanel</a> API.</td>
+    </tr>
     <tr id="storage">
       <td><code>"storage"</code></td>
       <td>Gives access to the <a href="/docs/extensions/reference/storage/">chrome.storage</a> API.</td>
@@ -337,9 +355,6 @@ The following table lists the currently available permissions:
         many circumstances your extension will not need to declare the <code>"tabs"</code> permission to make use of
         these APIs.</td>
     </tr>
-    <tr id="offscreen">
-      <td><code>"offscreen"</code></td>
-      <td>Gives access to the <a href="/docs/extensions/reference/offscreen/"><code>chrome.offscreen</code></a> API, allowing developers to create off-screen documents to use DOM APIs without obtrusively opening new windows or tabs that interrupt the user experience. Offscreen documents do not have the same API access as the rest of the extension, but have access to the [`chrome.runtime`](/docs/extensions/reference/runtime/) messaging API to communicate with the service worker. 
     <tr id="topSites">
       <td><code>"topSites"</code></td>
       <td>Gives access to the <a href="/docs/extensions/reference/topSites/">chrome.topSites</a> API.</td>
@@ -368,6 +383,10 @@ The following table lists the currently available permissions:
     <tr id="wallpaper">
       <td><code>"wallpaper"</code></td>
       <td>Gives access to the <a href="/docs/extensions/reference/wallpaper/">chrome.wallpaper</a> API.</td>
+    </tr>
+    <tr id="webAuthenticationProxy">
+      <td><code>"webAuthenticationProxy"</code></td>
+      <td>Gives access to the <a href="/docs/extensions/reference/webAuthenticationProxy/">chrome.webAuthenticationProxy</a> API.</td>
     </tr>
     <tr id="webNavigation">
       <td><code>"webNavigation"</code></td>

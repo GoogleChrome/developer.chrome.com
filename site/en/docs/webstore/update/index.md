@@ -5,7 +5,7 @@ description: >
   How to update an extension or theme ("item") that you previously
   published on the Chrome Web Store.
 date: 2020-12-03
-updated: 2021-11-23
+updated: 2023-05-01
 ---
 
 This page describes how to update an extension or theme ("item") that you previously published on
@@ -71,11 +71,11 @@ If you're changing anything about the Chrome Web Store listing for your item, it
 details of your privacy policy, you must update the information on the developer dashboard. You
 update this information on the same tabs used for creating a new item:
 
-- The [Listing][cws-listing] tab contains details of your listing and how it should display in the Chrome Web
+- The [Store listing][cws-listing] tab contains details of your listing and how it should display in the Chrome Web
   Store.
-- The [Privacy][cws-privacy] tab is where you include declarations about how your item uses privacy and
+- The [Privacy practices][cws-privacy] tab is where you include declarations about how your item uses privacy and
   security related features.
-- The [Payment and Distribution][cws-distribution] tab lets you declare in-app purchases and control which countries will list your item and
+- The [Distribution][cws-distribution] tab lets you declare in-app purchases and control which countries will list your item and
   which set of users will see it.
 
 ### Set partial rollout percentage {: #partial-rollout }

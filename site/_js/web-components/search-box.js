@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,6 +28,18 @@ import {activateSearch, deactivateSearch} from '../actions/search';
 
 const client = algoliasearch('0PPZV3EY55', 'dc0d3a2d53885be29eacc351026dcdcf');
 const index = client.initIndex('prod_developer_chrome');
+
+const blockedQueries = [
+  /add? ?bloc?k?/,
+  /d(a|o|u)w?nl?o?/,
+  /p(a|e)r?r(a|e)?/,
+  /automate be/,
+  /roblox/,
+  /ublock/,
+  /vpn/,
+  /porn/,
+  /xxx/,
+];
 
 export class SearchBox extends BaseElement {
   static get properties() {
@@ -70,6 +82,7 @@ export class SearchBox extends BaseElement {
     this._active = false;
     this.buttonLabel = 'open search';
     this.docsLabel = 'Documentation';
+    this.overviewLabel = 'Overview';
     this.articlesLabel = 'Articles';
     this.blogLabel = 'Blog';
     this.locale = 'en';
@@ -77,10 +90,8 @@ export class SearchBox extends BaseElement {
     this.query = '';
     /** @type AlgoliaCollectionItem[] */
     this.results = [];
-    /** @type AlgoliaCollectionItem[] */
-    this.docsResults = [];
-    /** @type AlgoliaCollectionItem[] */
-    this.blogResults = [];
+    /** @type {Object<string, AlgoliaCollectionItem[]>} */
+    this.categorisedResults = {};
     // Used when rendering categorized results. The counter helps ensure that
     // each result has a unique id that corresponds to its rendered order in
     // the list.
@@ -93,10 +104,11 @@ export class SearchBox extends BaseElement {
     this.searchIcon = unsafeSVG(searchIcon);
 
     this.renderResult = this.renderResult.bind(this);
-    this.search = debounce(this.search.bind(this), 500);
+    this.search = debounce(this.search.bind(this), 1000);
   }
 
   clearSearch() {
+    this.input.blur();
     this.active = false;
     this.input.value = '';
     this.search('');
@@ -281,10 +293,22 @@ export class SearchBox extends BaseElement {
 
   async search(query) {
     this.query = query.trim();
+
+    for (const blockedQuery of blockedQueries) {
+      if (this.query.match(blockedQuery)) {
+        return;
+      }
+    }
+
     if (this.query === '') {
       this.results = [];
-      this.docsResults = [];
-      this.blogResults = [];
+      this.categorisedResults = {};
+      return;
+    }
+
+    if (this.query.length < 4) {
+      this.results = [];
+      this.categorisedResults = {};
       return;
     }
 
@@ -322,10 +346,38 @@ export class SearchBox extends BaseElement {
         return r;
       });
 
-      // Further categorize results into docs and blog posts.
-      this.docsResults = this.results.filter(r => r.type === 'doc');
-      this.articlesResults = this.results.filter(r => r.type === 'article');
-      this.blogResults = this.results.filter(r => r.type === 'blogPost');
+      // Further categorize results into docs, articles, blog and the remaining posts.
+      /** @type {AlgoliaCollectionItem[] & {
+       *   filterMutate?: (predicate: (item: AlgoliaCollectionItem) => boolean) => AlgoliaCollectionItem[]
+       * }}
+       */
+      const mutableResults = [...this.results];
+      mutableResults.filterMutate = predicate => {
+        const results = [];
+        let i = 0;
+        while (i < mutableResults.length) {
+          if (predicate(mutableResults[i])) {
+            results.push(mutableResults.splice(i, 1)[0]);
+          } else {
+            i++;
+          }
+        }
+
+        return results;
+      };
+
+      this.categorisedResults = {
+        [this.overviewLabel]: [],
+        [this.docsLabel]: mutableResults.filterMutate(r => r.type === 'doc'),
+        [this.articlesLabel]: mutableResults.filterMutate(
+          r => r.type === 'article'
+        ),
+        [this.blogLabel]: mutableResults.filterMutate(
+          r => r.type === 'blogPost'
+        ),
+      };
+
+      this.categorisedResults[this.overviewLabel] = mutableResults;
     } catch (err) {
       console.error(err);
       console.error(/** @type {any} */ (err).debugData);
@@ -402,8 +454,23 @@ export class SearchBox extends BaseElement {
       return;
     }
 
-    this.blogResults = this.blogResults || [];
-    this.docsResults = this.docsResults || [];
+    // check if the query length is less than two
+    // if it is, then prompt the user to search for at
+    // least three characters
+    if (this.query.length <= 2) {
+      return html`
+        <div
+          id="search-box__results"
+          class="search-box__results"
+          role="listbox"
+          aria-label="${this.placeholder}"
+        >
+          <div class="search-box__result-heading type--label">
+            Please enter at least 3 characters for search suggestions.
+          </div>
+        </div>
+      `;
+    }
 
     this.resultsCounter = -1;
     return html`
@@ -413,30 +480,16 @@ export class SearchBox extends BaseElement {
         role="listbox"
         aria-label="${this.placeholder}"
       >
-        ${this.blogResults.length
-          ? html`
-              <div class="search-box__result-heading type--label">
-                ${this.blogLabel.toUpperCase()}
-              </div>
-              ${this.blogResults.map(this.renderResult)}
-            `
-          : ''}
-        ${this.articlesResults?.length
-          ? html`
-              <div class="search-box__result-heading type--label">
-                ${this.articlesLabel.toUpperCase()}
-              </div>
-              ${this.articlesResults.map(this.renderResult)}
-            `
-          : ''}
-        ${this.docsResults.length
-          ? html`
-              <div class="search-box__result-heading type--label">
-                ${this.docsLabel.toUpperCase()}
-              </div>
-              ${this.docsResults.map(this.renderResult)}
-            `
-          : ''}
+        ${Object.entries(this.categorisedResults).map(([label, results]) =>
+          results.length
+            ? html`
+                <div class="search-box__result-heading type--label">
+                  ${label.toUpperCase()}
+                </div>
+                ${results.map(this.renderResult)}
+              `
+            : ''
+        )}
       </div>
     `;
   }

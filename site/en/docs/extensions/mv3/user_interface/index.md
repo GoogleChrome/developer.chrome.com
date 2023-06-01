@@ -3,11 +3,10 @@ layout: "layouts/doc-post.njk"
 title: "Design the user interface"
 seoTitle: "Chrome Extensions: Design the user interface"
 date: 2018-03-16
-updated: 2022-04-27
+updated: 2023-05-30
 description: UI and design guidelines for Chrome Extensions.
 ---
 
-<!-- TODO: Extension sample links need to be updated, once the samples are approved -->
 Like Chrome's user interface (UI), an extension UI should be purposeful and minimal. Extensions
 should allow users to customize or enhance the user's browsing experience without distracting
 from it. 
@@ -89,7 +88,7 @@ alt="Clicked Disabled extension", width="252", height="180", class="screenshot" 
 ## Provide the extension icons
 
 An extension requires at least one icon to represent it. Provide icons in PNG format for the best
-visual results, although any raster format supported by Blink including BMP, GIF, ICO, and JPEG is
+visual results, although any raster format supported by Chrome including BMP, GIF, ICO, and JPEG is
 accepted.
 
 {% Aside 'caution' %}
@@ -242,6 +241,26 @@ chrome.storage.local.get('signed_in', (data) => {
 });
 ```
 
+### Side panel {: #side-panel } 
+
+An extension side panel is an HTML file that provides additional functionality alongside the main content of a webpage. The [Dictionary side panel][sample-dictionary-sidepanel] example allows users to right-click on a word and see the definition on the side panel.
+
+<figure>
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/9QJK3CNx71t67M3MlIUY.png", alt="Selecting the Dictionary side panel", width="379", height="386" %}
+  <figcaption>
+    Dictionary side panel extension.
+  </figcaption>
+</figure>
+
+<figure>
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/aC3zkJDPliNLXdvfugeU.png", alt="Dictionary side panel context menu choosing the word extensions", width="800", height="393" %}
+  <figcaption>
+    Dictionary extension defining the word "Extensions".
+  </figcaption>
+</figure>
+
+For more samples and use cases, see the [Side Panel API][api-sidepanel] reference page.
+
 ### Tooltip {: #tooltip }
 
 Use a tooltip to give short descriptions or instructions to users when hovering over the action
@@ -339,11 +358,11 @@ The 16x16 icon is displayed next to the new menu entry.
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/jpA0DLCg2sEnwIf4FkLp.png", alt="Context Menu Icon",
 height="300", width="300", class="screenshot" %}
 
-Create a context menu by calling [`contextMenus.create()`][contextmenu-create] in the background
-script. This should be done under the [`runtime.onInstalled`][runtime-oninstalled] listener event.
+Create a context menu by calling [`contextMenus.create()`][contextmenu-create] in the service worker. This should be done under the [`runtime.onInstalled`][runtime-oninstalled] listener event.
+
+{% Label %}service-worker.js:{% endLabel %}
 
 ```js
-// background.js
 chrome.runtime.onInstalled.addListener(async () => {
   for (let [tld, locale] of Object.entries(tldLocales)) {
     chrome.contextMenus.create({
@@ -411,11 +430,12 @@ one or more shortcuts in the manifest under the `"commands"` key.
 
 Commands can be used to provide new or alternative browser shortcuts. The [Tab
 Flipper][sample-tab-flipper] sample extension listens to the
-[`commands.onCommand`][commands-oncommand] event in the [background script][docs-background] and
+[`commands.onCommand`][commands-oncommand] event in the [service worker][docs-service-worker] and
 defines functionality for each registered combination.
 
+{% Label %}service-worker.js:{% endLabel %}
+
 ```js
-// background.js 
 
 chrome.commands.onCommand.addListener(command => {
   // command will be "flip-tabs-forward" or "flip-tabs-backwards"
@@ -485,8 +505,10 @@ system tray.
 To use the [Notifications API][api-notif], you must declare the `"notifications"` permission in
 the manifest.
 
+{% Label %}manifest.json:{% endLabel %}
+
 ```json/5
-// manifest.json
+
 { 
   "name": "Drink Water Event Popup",
 ...
@@ -502,8 +524,9 @@ the manifest.
 Once the permission is declared, you can display a notification by calling
 [`notifications.create()`][notifications-create].
 
+{% Label %}service-worker.js:{% endLabel %}
+
 ```js
-// background.js
 function showStayHydratedNotification() {
   chrome.notifications.create({
     type: 'basic',
@@ -574,8 +597,9 @@ Located in `_locales/es/messages.json`:
 Specify the name of the message in the `"default_title"` field of the manifest. The
 `"default_locale"` field must be defined.
 
+{% Label %}manifest.json:{% endLabel %}
+
 ```json
-// manifest.json
 {
   "name": "Tab Flipper",
   ...
@@ -608,6 +632,7 @@ capabilities.
 [api-messages]: /docs/extensions/mv3/i18n-messages
 [api-notif]: /docs/extensions/reference/notifications
 [api-omnibox]: /docs/extensions/reference/omnibox
+[api-sidepanel]: /docs/extensions/reference/sidePanel
 [commands-oncommand]: /docs/extensions/reference/commands#event-onCommand
 [contextmenu-create]: /docs/extensions/reference/contextMenus#method-create
 [docs-background]: /docs/extensions/mv3/background_pages
@@ -618,12 +643,14 @@ capabilities.
 [manifest-file]:/docs/extensions/mv3/manifest/
 [omnibox-inputentered]: /docs/extensions/reference/omnibox#event-onInputEntered
 [runtime-oninstalled]: /docs/extensions/reference/runtime#event-onInstalled
-[sample-action-api]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/action
-[sample-action]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/action
-[sample-context-menu]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/contextMenus/global_context_search
-[sample-drink]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/examples/water_alarm_notification
-[sample-new-tab-search]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/omnibox/new-tab-search
-[sample-tab-flipper]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/default_command_override
+[sample-action-api]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/action
+[sample-action]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/action
+[sample-context-menu]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/contextMenus/global_context_search
+[sample-drink]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.water_alarm_notification
+[sample-new-tab-search]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/omnibox/new-tab-search
+[sample-dictionary-sidepanel]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.sidepanel-dictionary
+[sample-tab-flipper]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/default_command_override
 [section-onclick]: #click
 [section-popup]: #popup
 [notifications-create]: /docs/extensions/reference/notifications#method-create
+[docs-service-worker]: /docs/extensions/mv3/service_workers/basics/
