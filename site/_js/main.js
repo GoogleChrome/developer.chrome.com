@@ -36,3 +36,9 @@ import './web-components/toc-active';
 import './web-components/select-loader';
 
 import 'webdev-infra/web-components/YouTube';
+
+import './web-components/filter-modal';
+import './web-components/filtered-element';
+import './web-components/checkbox-group';
+import './web-components/enhanced-select';
+import './web-components/tag-pill-list';

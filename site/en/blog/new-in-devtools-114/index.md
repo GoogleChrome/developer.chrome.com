@@ -6,7 +6,7 @@ authors:
   - jecelynyeen
 date: 2023-05-05
 description: ""
-hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/fy7JKyzJt0EPZd1g8hwl.jpg'
+hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/WHNGhOa6BbgiUAQU0JnY.png'
 alt: 'WebAssembly debugging, Autofill debugging, better assertions in Recorder, Performance panel enhancements, Lighthouse 10.1.1, and more.'
 tags:
   - new-in-devtools

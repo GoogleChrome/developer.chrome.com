@@ -55,8 +55,8 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 <!-- [Cascade layers](/blog/cascade-layers/) enable more explicit control of your CSS files to prevent style-specificity conflicts. This is particularly useful for large codebases, design systems, and when managing third party styles in applications. -->
 [カスケードレイヤー](/blog/cascade-layers/)は、スタイル固有の競合を防ぐために、CSSファイルをより明示的に制御できるようにします。これは、大規模なコードベース、デザインシステム、およびアプリケーションのサードパーティのスタイルを管理する場合に特に便利です。
 
-<!-- In this [example](https://jec.fyi/demo/cascade-layer), there are 3 cascade layers defined: `page`, `component` and `base`. In the **Styles** pane, you can view each layer and its styles. -->
-この[サンプル](https://jec.fyi/demo/cascade-layer)では、3つのカスケードレイヤー `page`、`component`、`base` が定義されています。**Styles** ペインでは、各レイヤーとそのスタイルを確認することができます。
+<!-- In this [example](https://jec.fish/demo/cascade-layer), there are 3 cascade layers defined: `page`, `component` and `base`. In the **Styles** pane, you can view each layer and its styles. -->
+この[サンプル](https://jec.fish/demo/cascade-layer)では、3つのカスケードレイヤー `page`、`component`、`base` が定義されています。**Styles** ペインでは、各レイヤーとそのスタイルを確認することができます。
 
 <!-- Click on the layer name to view the layer order. The `page` layer has the highest specificity, therefore the `box` background is green.  -->
 レイヤー名をクリックすると、レイヤーの順番が表示されます。 `page` レイヤーが最も高い詳細度を持つので、 `box` の背景は緑色になっています。

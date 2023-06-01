@@ -23,6 +23,9 @@ import {debounce} from '../utils/debounce';
 import {unsafeSVG} from 'lit-html/directives/unsafe-svg';
 import caretIcon from '../../_includes/icons/caret-down.svg';
 
+import {store} from '../store';
+import {setFilter} from '../actions/filter';
+
 /**
  * @type {HTMLElement}
  */
@@ -32,6 +35,7 @@ class CheckboxGroup extends BaseElement {
 
     this._handleMassSelect = this._handleMassSelect.bind(this);
     this._handleShowMore = this._handleShowMore.bind(this);
+    this._checkOption = this._checkOption.bind(this);
     this._computeAllSelected = debounce(
       this._computeAllSelected.bind(this),
       10
@@ -44,6 +48,7 @@ class CheckboxGroup extends BaseElement {
       checkboxes: this._getCheckboxes(),
     };
 
+    this.name = this._getName();
     this.show = 4;
     this.i18n = {};
   }
@@ -58,6 +63,7 @@ class CheckboxGroup extends BaseElement {
 
   connectedCallback() {
     super.connectedCallback();
+    store.subscribe(this.onStoreUpdate.bind(this));
 
     this.elements.massSelectButton = this.querySelector(
       '.checkbox-group__mass-select'
@@ -68,8 +74,26 @@ class CheckboxGroup extends BaseElement {
     );
 
     this.elements.checkboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', this._checkOption);
       checkbox.addEventListener('change', this._computeAllSelected);
     });
+
+    this._computeAllSelected();
+  }
+
+  /**
+   * Checks if the app state contains entries for this select, and if so
+   * sets the value to the entries.
+   * @param {*} state
+   */
+  onStoreUpdate(state) {
+    const filters = state.filters || {};
+    const entries = filters[this.name] || [];
+
+    for (const index in this.elements.checkboxes) {
+      const checkbox = this.elements.checkboxes[index];
+      checkbox.checked = entries.some(entry => entry.value === checkbox.value);
+    }
 
     this._computeAllSelected();
   }
@@ -126,6 +150,16 @@ class CheckboxGroup extends BaseElement {
     this.allSelected = checked === undefined;
   }
 
+  _checkOption() {
+    const checked = this.elements.checkboxes
+      .filter(checkbox => checkbox.checked === true)
+      .map(checkbox => ({
+        label: checkbox.nextSibling?.textContent,
+        value: checkbox.value,
+      }));
+    setFilter(this.name, checked);
+  }
+
   /**
    * @param {MouseEvent } e
    */
@@ -163,6 +197,14 @@ class CheckboxGroup extends BaseElement {
    */
   _getCheckboxes() {
     return Array.from(this.querySelectorAll('input[type="checkbox"]'));
+  }
+
+  /**
+   * @returns {string}
+   * @private
+   */
+  _getName() {
+    return this.elements.checkboxes[0].name;
   }
 }
 

@@ -446,6 +446,11 @@ the steps in [Viewing Warnings](#view_warnings).
       <td>Grants access to the <a href="/docs/extensions/reference/ttsEngine">chrome.ttsEngine</a> API.</td>
       <td><strong>Read all text spoken using synthesized speech</strong></td>
     </tr>
+    <tr id="webAuthenticationProxy">
+      <td><code>"webAuthenticationProxy"</code></td>
+      <td>Grants access to the <a href="/docs/extensions/reference/webAuthenticationProxy">chrome.webAuthenticationProxy</a> API.</td>
+      <td><strong>Read and change all your data on all websites</strong></td>
+    </tr>
     <tr id="webNavigation">
       <td><code>"webNavigation"</code></td>
       <td>Grants access to the <a href="/docs/extensions/reference/webNavigation">chrome.webNavigation</a> API.</td>
@@ -453,7 +458,6 @@ the steps in [Viewing Warnings](#view_warnings).
     </tr>
   </tbody>
 </table>
-
 
 [api-optional-perms]: /docs/extensions/reference/permissions#step-2-declare-optional-permissions-in-the-manifest
 [api-storage]: /docs/extensions/reference/storage
