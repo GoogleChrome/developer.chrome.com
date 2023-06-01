@@ -27,6 +27,12 @@ Sometimes, you'll see your new CSS in the **Elements** > **Styles** pane but you
 
 The **Styles** pane recognizes many kinds of CSS issues and highlights them in different ways.
 
+### Matched and unmatched selectors {: #selectors }
+
+The **Styles** pane shows matched selectors in regular text and unmatched ones in <span style="opacity: 60%;">pale text</span>. Hover over a selector to see a tooltip with its [specificity](https://developer.mozilla.org/docs/Web/CSS/Specificity) weight.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/uzY4LvyHgWhD8LEPrXju.png", alt="The tooltip with specificity weight of a matched selector.", width="800", height="451" %}
+
 ### Invalid values and declarations {: #invalid }
 
 The **Styles** pane crosses out and displays {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hJxGejygnlBfMvhMtcCX.svg", alt="Warning.", width="24", height="24" %} warning icons next to the following:
