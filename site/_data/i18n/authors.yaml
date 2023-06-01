@@ -1454,3 +1454,8 @@ wanderview:
     en: 'Ben Kelly'
   description:
     en: 'Software Engineer'
+alispivak:
+  title:
+    en: 'Ali Spivak'
+  description:
+    en: 'Developer Relations Lead for Chrome Extensions'
