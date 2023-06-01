@@ -109,7 +109,7 @@ To view an extension's permission warnings, you have the following options:
 
 {% endDetailsSummary %}
 
-Descript and instructions go here. 
+Description and instructions go here. 
 
 {% endDetails %}
 
