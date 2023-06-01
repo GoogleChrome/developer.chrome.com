@@ -33,8 +33,8 @@ tags:
 <!-- The **Restart frame** feature is back! You can re-run the preceding code when paused somewhere in a function. Previously, this feature was deprecated and removed in Chrome 92 due to stability issues.  -->
 Функция **Перезапустить фрейм** (Restart frame) вернулась! Вы можете повторно выполнить предшествующий код до места остановки в функции. Эта функция была удалена в Chrome 92 из-за проблем со стабильностью.
 
-<!-- In this [example](https://jec.fyi/), the debugger initially paused at the breakpoint (line 343) near the end of the `toggleColorScheme` function. To restart the debugging from the beginning of the `toggleColorScheme` function, expand the **Call stack** section in the **Debugger** pane, right click on `toggleColorScheme` and select **Restart frame**.  -->
-В этом [примере](https://jec.fyi) отладчик изначально остановился на точке останова (строка 343) ближе к концу функции `toggleColorScheme`. Чтобы перезапустить отладку с начала функции `toggleColorScheme`, разверните раздел **Стек вызовов** (Call stack) в панели **Отладчик** (Debugger), нажмите правой клавишей мыши на `toggleColorScheme` и выберите **Перезапустить фрейм** (Restart frame).
+<!-- In this [example](https://jec.fish/), the debugger initially paused at the breakpoint (line 343) near the end of the `toggleColorScheme` function. To restart the debugging from the beginning of the `toggleColorScheme` function, expand the **Call stack** section in the **Debugger** pane, right click on `toggleColorScheme` and select **Restart frame**.  -->
+В этом [примере](https://jec.fish) отладчик изначально остановился на точке останова (строка 343) ближе к концу функции `toggleColorScheme`. Чтобы перезапустить отладку с начала функции `toggleColorScheme`, разверните раздел **Стек вызовов** (Call stack) в панели **Отладчик** (Debugger), нажмите правой клавишей мыши на `toggleColorScheme` и выберите **Перезапустить фрейм** (Restart frame).
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/uBcTkuIaoHHTgJCiGNED.png", alt="Перезапуск фрейма во время отладки", width="800", height="499" %}
 
@@ -101,8 +101,8 @@ tags:
 <!-- Visualize `performance.measure()` marks in your recording with the new **User Timings** track in the **Performance insights** panel. -->
 Визуализируйте метки `performance.measure()` в вашей записи с новым треком **User Timings** во вкладке **Performance insights**.
 
-<!-- For example, this [web page](https://jec.fyi/demo/perf-measure) uses the [`performance.measure()`](https://web.dev/usertiming/#calculating-measurements-with-measure()) method to calculate the elapsed time of text loading. -->
-Например, на [этой странице](https://jec.fyi/demo/perf-measure) используется метод [`performance.measure()`](https://web.dev/usertiming/#calculating-measurements-with-measure()) для подсчёта времени, затраченного на загрузку текста.
+<!-- For example, this [web page](https://jec.fish/demo/perf-measure) uses the [`performance.measure()`](https://web.dev/usertiming/#calculating-measurements-with-measure()) method to calculate the elapsed time of text loading. -->
+Например, на [этой странице](https://jec.fish/demo/perf-measure) используется метод [`performance.measure()`](https://web.dev/usertiming/#calculating-measurements-with-measure()) для подсчёта времени, затраченного на загрузку текста.
 
 <!-- When you start [measuring the page load](/docs/devtools/performance-insights/#record), the **User Timings** track shows in the recording. Click on the timings item to view its details on the side pane. -->
 Когда вы запускаете [измерение загрузки страницы](/docs/devtools/performance-insights/#record), трек **User Timings** отображается в записи. Кликните на элемент хронометража, чтообы увидеть подробности о нём в боковой панели.

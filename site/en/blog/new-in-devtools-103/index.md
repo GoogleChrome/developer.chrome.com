@@ -24,7 +24,7 @@ The **Recorder** panel can now capture double-click and right-click events.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/qsleBCUrr2twMujW0R94.png", alt="Capture double-click and right-click events in the Recorder panel", width="800", height="572" %}
 
-In this [example](https://jec.fyi/demo/dbl-right-click), start a [recording](/docs/devtools/recorder/#record) and try to perform the following steps:
+In this [example](https://jec.fish/demo/dbl-right-click), start a [recording](/docs/devtools/recorder/#record) and try to perform the following steps:
 
 - Double-click the card to enlarge it
 - Right-click the card and select an action from the context menu

@@ -143,4 +143,4 @@ Learn more:
 [12]: https://www.w3.org/WAI/WCAG21/quickref/#contrast-minimum
 [13]: https://www.w3.org/WAI/WCAG21/quickref/#contrast-enhanced
 [14]: https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk
-[15]: https://jec.fyi/demo/cds-quest-cvd
+[15]: https://jec.fish/demo/cds-quest-cvd

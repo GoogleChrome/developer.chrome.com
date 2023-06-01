@@ -606,17 +606,17 @@ As the keyframes contain the range information, you don’t need to specify the 
 
 ### Attaching to a non-ancestor Scroll Timeline
 
-{% Aside %} The exact syntax for this feature is [still under discussion](https://github.com/w3c/csswg-drafts/issues/7759). The name of the properties might still change. {% endAside %}
+{% Aside %} The feature described in this section is not supported in Chrome 115. To try it out, use Chrome 116 with the Experimental Web Platform Features flag enabled. {% endAside %}
 
 The lookup mechanism for named Scroll Timelines and named View Timelines is limited to scroll ancestors only. Very often though, the element that needs to be animated is not a child of the scroller that needs to be tracked.
 
-To make this work, the `scroll-timeline-root` and `view-timeline-root` properties come into play. You use these to declare a timeline with that name, giving it a broader scope. In practice, you do this on a shared parent element so that a child scroller’s timeline can attach to it.
+To make this work, the `timeline-scope` property comes into play. You use this property to declare a timeline with that name without actually creating it. This gives the timeline with that name a broader scope. In practice, you use the `timeline-scope` property on a shared parent element so that a child scroller’s timeline can attach to it.
 
 For example:
 
 ```css
 .parent {
-  scroll-timeline-root: --tl;
+  timeline-scope: --tl;
 }
 .parent .scroller {
   scroll-timeline: --tl;
@@ -629,11 +629,13 @@ For example:
 
 In this snippet:
 
-- The `.parent` element declares a Scroll Timeline with the name `--tl`. Any child of it can find and use it as a value for the `animation-timeline` property.
+- The `.parent` element declares a timeline with the name `--tl`. Any child of it can find and use it as a value for the `animation-timeline` property.
 - The `.scroller` element actually defines a Scroll Timeline with the name `--tl`. By default it would only be visible to its children but because `.parent` has it set as the `scroll-timeline-root`, it attaches to it.
 - The `.subject` element uses the `--tl` timeline. It walks up its ancestor tree and finds `--tl` on the `.parent`. With the `--tl` on the `.parent` pointing to the `--tl` of `.scroller`, the `.subject` will essentially track the `.scroller`’s Scroll Progress Timeline.
 
-Put differently, you can use `scroll-timeline-root` and `view-timeline-root` to move a Scroll Timeline up to an ancestor (aka _hoisting_), so that all children of the ancestor can access it.
+Put differently, you can use `timeline-root` to move a timeline up to an ancestor (aka _hoisting_), so that all children of the ancestor can access it.
+
+The `timeline-scope` property can be used with both both Scroll Timelines and View Timelines.
 
 ## More demos and resources
 
