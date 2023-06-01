@@ -29,9 +29,9 @@ The **Styles** pane recognizes many kinds of CSS issues and highlights them in d
 
 ### Matched and unmatched selectors {: #selectors }
 
-The **Styles** pane shows matched selectors in regular text and unmatched ones in <span style="opacity: 60%;">pale text</span>. Hover over a selector to see a tooltip with its [specificity](https://developer.mozilla.org/docs/Web/CSS/Specificity) weight.
+The **Styles** pane shows matched selectors in regular text and unmatched ones in <span style="opacity: 60%;">pale text</span>.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/uzY4LvyHgWhD8LEPrXju.png", alt="The tooltip with specificity weight of a matched selector.", width="800", height="451" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/f1ByDQYIm6cZ04CXX69h.png", alt="Matched selector in regular text and unmatched selectors in pale text.", width="800", height="645" %}
 
 ### Invalid values and declarations {: #invalid }
 
@@ -106,7 +106,10 @@ The **Styles** pane displays properties that can't be edited in *italic text*. F
 
 ## Inspect an element that still isn't styled the way you think  {: #computed }
 
-To get a hint at what goes wrong, open the **Computed** pane to see the "final" [CSS applied to an element](/docs/devtools/css/reference/#computed) and compare to that you declared.
+To try to find what goes wrong, you may want to check:
+
+- [CSS documentation](/docs/devtools/css/reference/#view-docs) and [selector specificity](/docs/devtools/css/reference/#selector-specificity) in the tooltips in the **Styles** pane.
+- The **Computed** pane to see the "final" [CSS applied to an element](/docs/devtools/css/reference/#computed) and compare to that you declared.
 
 The **Elements** > **Styles** pane displays the exact set of CSS rules as they are written in various stylesheets. On the other hand, the **Elements** > **Computed** pane lists resolved CSS values that Chrome uses to render an element:
 

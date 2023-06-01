@@ -63,7 +63,9 @@ Here are some of them highlighted:
 
 Links may be styled differently. If you're not sure if something is a link, try clicking it to find out.
 
-### View CSS documentation {: #view-docs }
+### View tooltips with CSS documentation, specificity, and custom property values {: #tooltips }
+
+#### View CSS documentation {: #view-docs }
 
 To see a tooltip with a short CSS description, hover over the property name in the **Styles** pane.
 
@@ -78,6 +80,18 @@ Click **Learn more** to go to an [MDN CSS Reference](https://developer.mozilla.o
 To turn the tooltips off, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Don't show**.
 
 To turn them back on, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Preferences** > **Elements**](/docs/devtools/settings/preferences/#elements) > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show CSS documentation tooltip**.
+
+#### View selector specificity {: #selector-specificity }
+
+Hover over a selector to see a tooltip with its [specificity](https://developer.mozilla.org/docs/Web/CSS/Specificity) weight.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/uzY4LvyHgWhD8LEPrXju.png", alt="The tooltip with specificity weight of a matched selector.", width="800", height="451" %}
+
+#### View the values of custom properties {: #custom-css }
+
+Hover over a [`--custom-property`](https://developer.mozilla.org/docs/Web/CSS/--*) to see its value in a tooltip.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7cUcqUfywnS2KQdQqWes.png", alt="The value of a custom property in a tooltip.", width="800", height="645" %}
 
 ### View invalid, overridden, inactive, and other CSS {: #css-issues }
 
