@@ -574,7 +574,7 @@ permission in the manifest.
 
 {% Label %}manifest.json:{% endLabel %}
 
-```json/6
+```json/5
 { 
   "name": "Drink Water Event Popup",
 ...
