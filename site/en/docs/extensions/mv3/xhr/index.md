@@ -182,11 +182,9 @@ If you modify the default [Content Security Policy][12] for your extension by ad
 you'd like to connect are allowed. While the default policy doesn't restrict connections to hosts,
 be careful when explicitly adding either the `connect-src` or `default-src` directives.
 
-### What about XMLHttpRequest?
+### Using  Fetch() vs. XMLHttpRequest()
 
-The `XMLHttpRequest()` (XHR) API is supported for backwards compatability, but new work should favor the use of `fetch()` wherever possible. The `fetch()` API allows you to make network requests similar to XMLHttpRequest, but has the additional benefit of performing asynchronously via promises. 
-In Manifest V3, calling `XMLHttpRequest()` will trigger the service worker's fetch handler.
-
+`fetch()` was created specifically for service workers and follows a broader web trend away from synchronous operations. The `XMLHttpRequest()` API is supported, but calling `XMLHttpRequest()` will trigger the service worker's fetch handler. New work should favor the use of `fetch()` wherever possible.
 
 
 [1]: https://www.w3.org/TR/XMLHttpRequest/
