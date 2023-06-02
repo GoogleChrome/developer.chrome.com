@@ -462,7 +462,6 @@ the steps in [Viewing Warnings](#view_warnings).
 [api-optional-perms]: /docs/extensions/reference/permissions#step-2-declare-optional-permissions-in-the-manifest
 [api-storage]: /docs/extensions/reference/storage
 [api-tabs]: /docs/extensions/reference/tabs
-[api-top-sites]: /docs/extensions/reference/topSites
 [chromium-perms]: https://chromium.googlesource.com/chromium/src/+/main/chrome/common/extensions/permissions/chrome_permission_message_rules.cc#:~:text=chromepermissionmessagerule%3A%3Agetallrules()
 [dl-chromium]: https://download-chromium.appspot.com/
 [doc-activetab]: /docs/extensions/mv3/manifest/activeTab/

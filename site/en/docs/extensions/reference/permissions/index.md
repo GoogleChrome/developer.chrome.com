@@ -196,6 +196,7 @@ chrome.permissions.remove({
 ```
 
 [api-storage]: /docs/extensions/reference/storage
+[api-top-sites]: /docs/extensions/reference/topSites
 [doc-manifest]: /docs/extensions/mv3/manifest
 [doc-permissions]: /docs/extensions/mv3/declare_permissions
 [doc-warnings]: /docs/extensions/mv3/permission_warnings/#overview
