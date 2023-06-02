@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: 'Topics API integration guide'
 subhead: Learn how to use the Topics API to meet specific ad tech use cases.
 description: Learn how to use the Topics API to meet specific ad tech use cases.
-date: 2023-06-01
+date: 2023-06-02
 authors:
   - thiagodiogo
   - andreeacucu
