@@ -87,7 +87,7 @@ It's important to remember that if **chrome://flags/#privacy-sandbox-ads-apis** 
 
 You can get visibility into the underlying Topics API mechanics locally by using the [chrome://topics-internals](/docs/privacy-sandbox/topics/#debug) tools. 
 
-{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/4LysAisUZpkryMHwk18f.png", alt="Take a look inside the Topics API at chrome://topics-internals", width="768", height="669" %}
+{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/4LysAisUZpkryMHwk18f.png", alt="Take a look inside the Topics API at chrome://topics-internals.", width="768", height="669" %}
 
 Use the Topics API Internals tool to locally test the classifier based on the sites you visit. 
 
