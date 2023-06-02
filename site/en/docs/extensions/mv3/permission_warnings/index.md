@@ -20,15 +20,17 @@ display a warning. Other permissions trigger a warning that users have to allow.
 <figure>
   {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/NcPZYfAhQMtpW78sT26K.png", 
   alt="Example of permission warnings are displayed when the user adds a new extension", 
-  width="433", height="279", class='screenshot'%}
+  width="333", height="179", class='screenshot'%}
   <figcaption>
-    Example of permission warnings that are displayed on installation. 
+    Permission warnings dialog displayed on installation. 
   </figcaption>
 </figure>
 
 When a new permission that [triggers a warning](#permissions_with_warnings) is added, the extension
-will be disabled until the user accepts the new permission. Learn more about [Updating
-permissions](#update_permissions).
+will be disabled until the user accepts the new permission. See [Updating
+permissions](#update_permissions) to learn how to test this behavior. Some permissions may not display warnings when paired
+with other permissions. For example, the `"tabs"` warning will not show if the extension also
+requests `"<all_urls>"`.
 
 ## Best practices {: #best-practices }
 
@@ -56,7 +58,7 @@ permission][doc-activetab].
 
 To view an extension's permission warnings, you have the following options:
 
-{% Details 'open' %}
+{% Details %}
 {% DetailsSummary %}
 
 #### View using the Extension Update Testing Tool {: #view-tool }
@@ -150,7 +152,7 @@ new permission.
 To check if your extension will be disabled when adding a new permission, you have the following options:
 
 
-{% Details 'open' %}
+{% Details %}
 {% DetailsSummary %}
 
 #### Update using the Extension Update Testing Tool {: #update-tool }
@@ -210,10 +212,6 @@ These steps assume you followed the [Using the Extension Update Testing Tool](#v
 {% endDetails %}
 
 ## Permissions warnings list {: #permissions_with_warnings }
-
-Some permissions may not display warnings when paired
-with other permissions. For example, the `"tabs"` warning will not show if the extension also
-requests `"<all_urls>"`.
 
 The permissions warning table is updated on a best-effort basis and may contain slight discrepancies
 with the [current warnings][chromium-perms]. To verify the most recent warnings shown for extension permissions, follow
