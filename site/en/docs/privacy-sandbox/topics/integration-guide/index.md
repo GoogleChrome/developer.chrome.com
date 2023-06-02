@@ -1,14 +1,20 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: 'Topics API integration guide'
-subhead: Learn how to work with the API, from end to end.
-description: Learn how to work with the API, from end to end.
+subhead: Learn how to use the Topics API to meet specific ad tech use cases.
+description: Learn how to use the Topics API to meet specific ad tech use cases.
 date: 2023-06-01
 authors:
   - thiagodiogo
   - andreeacucu
   - samdutton
 ---
+
+{% Aside %}
+We'd love to know how this article could be improved!
+
+Follow the [Improve article](https://github.com/GoogleChrome/developer.chrome.com/blob/main/site/en/docs/privacy-sandbox/topics/integration-guide/index.md) link to make suggestions.
+{% endAside %}
 
 ## Goals
 
@@ -28,7 +34,6 @@ If interest-based advertising is important to your business, we want you to test
 * Become an observer to establish a Topics API footprint. The Topics API is a new signal, so you should update your site to start using the Topics API. To consistently retrieve topics for a user, sites must use the API to observe topics for that user at least once per [epoch](/docs/privacy-sandbox/glossary/#epoch) (once each week). It takes up to four epochs to get the maximum number of topics (three topics) to send with your ad requests.
 * Include data from the Topics API in your ad requests. For each ad request, start sharing your Topics data with buy-side partners. The Topics API is designed to supplement other signals (such as contextual signals) to help select an appropriate advertisement for a given site visitor.
 * Collaborate on a mechanism for sharing topics with your buy-side partners. The Topics API needs each ad tech to work with downstream partners to agree on how Topics API data is shared.
-
 
 ### For buy-side ad techs
 

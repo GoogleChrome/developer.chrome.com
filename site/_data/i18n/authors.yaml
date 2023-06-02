@@ -1444,23 +1444,23 @@ oliverdunk:
     en: 'Oliver Dunk'
   description:
     en: 'Developer Relations Engineer for Chrome Extensions'
-wanderview:
-  title:
-    en: 'Ben Kelly'
-  description:
-    en: 'Software Engineer'
-thiagodiogo:
-  title:
-    en: Thiago Diogo
-  description:
-    en:  Staff Technical Solutions Consultant
 shhnjk:
   title:
     en: 'Jun Kokatsu'
   description:
     en: 'Security Engineer for the Web'
+wanderview:
+  title:
+    en: 'Ben Kelly'
+  description:
+    en: 'Software Engineer'
 alispivak:
   title:
     en: 'Ali Spivak'
   description:
     en: 'Developer Relations Lead for Chrome Extensions'
+thiagodiogo:
+  title:
+    en: 'Thiago Diogo'
+  description:
+    en:  'Staff Technical Solutions Consultant'
