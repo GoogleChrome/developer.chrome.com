@@ -93,9 +93,9 @@ Use the Topics API Internals tool to locally test the classifier based on the si
 
 With this tool, you can review:
 
-* Topics State: Display topics observed for the current user.
-* Classifier: Preview topics inferred for hostnames.
-* Features and Parameters: View API parameter values to check that feature flags are working as intended.
+* **Topics State:** Display topics observed for the current user.
+* **Classifier:** Preview topics inferred for hostnames.
+* **Features and Parameters:** View API parameter values to check that feature flags are working as intended.
 
 Learn how to [debug Topics with the Internals tool](/docs/privacy-sandbox/topics/#debug).
 
