@@ -184,7 +184,7 @@ be careful when explicitly adding either the `connect-src` or `default-src` dire
 
 ### Using  Fetch() vs. XMLHttpRequest()
 
-`fetch()` was created specifically for service workers and follows a broader web trend away from synchronous operations. The `XMLHttpRequest()` API is supported, but calling `XMLHttpRequest()` will trigger the service worker's fetch handler. New work should favor the use of `fetch()` wherever possible.
+`fetch()` was created specifically for service workers and follows a broader web trend away from synchronous operations. The `XMLHttpRequest` API is supported in extensions outside of the service worker, and calling `XMLHttpRequest` will trigger the service worker's fetch handler. New work should favor the use of `fetch()` wherever possible.
 
 
 [1]: https://www.w3.org/TR/XMLHttpRequest/
