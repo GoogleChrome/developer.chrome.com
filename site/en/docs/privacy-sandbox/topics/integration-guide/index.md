@@ -359,16 +359,16 @@ Given that the origin trial token has to be generated for the same origin as the
 
 ## Build and deploy
 
-1. Collect topics by observing users in production—not scaled yet (Estimated time: ~1 week)
+1. Collect topics by observing users in production—not scaled yet (Estimated time: approximately 1 week)
     1. Understand your options: [iframe & JavaScript](/docs/privacy-sandbox/topics/#access-topics) OR [HTTP headers](/docs/privacy-sandbox/topics/#use-headers-to-access-and-observe-topics)
-    1. Define the domain of the iframe
-    1. Build the JavaScript code, using the [demo app](https://topics-demo.glitch.me/) as a code reference — or implement the headers option
-    1. Deploy Topics to your controlled environment (some production sites)
-    1. Register for the origin trial
-    1. Add the Topics implementation to some target sites (no more than five sites at this time)
-    1. Functional testing and validation
-2. [Optional] Use Topics data as a contextual signal (with URLs, tags, etc.) (Estimated time: around 3 days)
-    1. After receiving the list of topics, you can send it to your back end with other contextual signals
+    1. Define the domain of the iframe.
+    1. Build the JavaScript code, using the [demo app](https://topics-demo.glitch.me/) as a code reference — or implement the headers option.
+    1. Deploy Topics to your controlled environment (some production sites).
+    1. Register for the origin trial.
+    1. Add the Topics implementation to some target sites (no more than five sites at this time).
+    1. Functional testing and validation.
+2. [Optional] Use Topics data as a contextual signal (with URLs, tags, etc.) (Estimated time: around 3 days).
+    1. After receiving the list of topics, you can send it to your back end with other contextual signals.
 
 
 ### Deploy to some target sites
@@ -389,15 +389,15 @@ We recommend that you pick target websites that:
 When calling the Topics API in this limited environment you can expect:
 
 * An empty array of topics [] if this is the first call of this device, for this site and caller in the last seven days.
-* A list from zero to three topics, representing the interests of this user
+* A list from zero to three topics, representing the interests of this user.
 * After seven days of observation you should receive:
-    * One topic representing the interest of that user calculated from the navigation history of that week
+    * One topic representing the interest of that user calculated from the navigation history of that week.
         * One important detail: if not enough topics have been observed by you for a user for the Topics API to calculate the top five topics of that week, then Topics will add as many random topics as necessary to arrive at the total number of five: [more details](https://github.com/patcg-individual-drafts/topics#specific-details).
-* A new topic entry replacing one of the three if you are calling it after four weeks of observation
+* A new topic entry replacing one of the three if you are calling it after four weeks of observation.
     * This happens because the Topics API will be stable for the following weeks, not exposing too many of the user's interests. Find [more details in the API proposal](https://github.com/patcg-individual-drafts/topics#specific-details).
 * If you have not observed topics for the user for more than three weeks, then the Topics API will return an empty array `[]` again.
 
-Measure the performance and metrics of your user experience
+Measure the performance and metrics of your user experience.
 
 * The run time of the JavaScript calls to the Topics API inside a cross-origin iframe should be measured to be used in future performance analysis—make sure to collect and store telemetry data properly in your back end.
     * The time taken to create an iframe and `postMessage()` topics, after topics are received, is also another possible metric to be calculated.
@@ -428,7 +428,7 @@ When using the JavaScript API, the origin trial token must be added to your ifra
 
 ### Key recommendations
 
-1. Test your front-end code to make sure your JavaScript is working as expected
+1. Test your front-end code to make sure your JavaScript is working as expected.
     1. It's important to make sure your origin trial token is valid and can be used in your context. We highly recommend you use the Chrome DevTools (Application tab) to troubleshoot and validate that your origin trial token is being used correctly. More details can be found in the  [origin trials troubleshooting guide](/docs/web-platform/origin-trial-troubleshooting/#use-chrome-devtools-to-check-tokens).
 1. Test your back end to receive the topics results.
     1. Remember to make sure data types and back-end API parameters are configured correctly.
