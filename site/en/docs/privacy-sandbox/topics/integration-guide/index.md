@@ -367,7 +367,7 @@ Given that the origin trial token has to be generated for the same origin as the
     1. Register for the origin trial
     1. Add the Topics implementation to some target sites (no more than five sites at this time)
     1. Functional testing and validation
-2. [Optional] Use Topics data as a contextual signal (with URLs, tags, etc.) (Estimated time: ~3 days)
+2. [Optional] Use Topics data as a contextual signal (with URLs, tags, etc.) (Estimated time: around 3 days)
     1. After receiving the list of topics, you can send it to your back end with other contextual signals
 
 
