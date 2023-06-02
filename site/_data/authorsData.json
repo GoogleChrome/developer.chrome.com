@@ -1382,6 +1382,11 @@
         "label": "web.dev",
         "type": "rss",
         "url": "https://web.dev/authors/bramus/feed.xml"
+      },
+      {
+        "label": "bram.us",
+        "type": "rss",
+        "url": "https://www.bram.us/category/original-content/feed/"
       }
     ]
   },
