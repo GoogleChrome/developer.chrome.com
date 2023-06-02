@@ -76,6 +76,48 @@ Users are more likely to trust an extension with limited warnings or when permis
 to them. Consider implementing optional permissions or a less powerful API to avoid alarming
 warnings. For a complete list of best practices, see [Permission warnings guidelines][doc-warning].
 
+## Allow access {: #allow_access }
+ 
+If your extension needs to run on `file://` URLs or needs to operate in incognito mode, users will have to give the extension access on the extension's details page. 
+
+{% Details %}
+{% DetailsSummary %}
+
+### How to allow access to file URLs and incognito pages
+
+{% endDetailsSummary %}
+
+1. Right-click on the extension icon in Chrome.
+2. Choose **Manage Extension**.
+
+    <figure>
+    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/hZZMDG0SEoCaHWkfwqbY.png", alt="Extension context menu", width="363", height="334", class='screenshot' %}
+    <figcaption>
+    Extension menu
+    </figcaption>
+  </figure>
+
+3. Scroll down to enable access to file URLs or incognito mode.
+
+    <figure>
+      {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/CXSHPxG4giUkzfGR67mY.png",
+          alt="Allow file URLs and incognito mode on the extension detail page", height="137", width="674", class="screenshot" %}
+      <figcaption>
+      Access enabled to file URLs and incognito mode.
+      </figcaption>
+    </figure>
+
+{% endDetails %}
+
+To detect if the user has allowed access, you can use [`extension.isAllowedIncognitoAccess()`][incognito-allow] or 
+[`extension.isAllowedFileSchemeAccess()`][file-scheme-allow].
+
+## Viewing and updating warnings {: #view-update-warnings }
+
+When you [load an extension locally][doc-load-unpacked], you won't see any permission warnings. This
+section explains how to view permission warnings and what users will experience when you add a new
+[permission that triggers a warning][section-warnings].
+
 ## Permissions list {: #permissions }
 
 The following table lists the currently available permissions. For a list of permission warnings, see the [Permission warnings][doc-warning-table] table.

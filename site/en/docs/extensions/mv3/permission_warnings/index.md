@@ -36,67 +36,21 @@ Permission warnings describe the capabilities an API grants, but some warnings a
 harder to understand than others. Users are more likely to install extensions that follow these
 guidelines:
 
-### Request relevant permissions {: #required_permissions }
-
-Extensions are required to fulfill a [single purpose](/docs/extensions/mv3/single_purpose/) and
+Request relevant permissions
+: Extensions are required to fulfill a [single purpose](/docs/extensions/mv3/single_purpose/) and
 comply with the [Use of permissions](/docs/webstore/program-policies/permissions/) policy. Ensure you only
 request permissions that support the extension's main functionality.
 
-### Use optional permissions {: #optional_events }
-
-Improve the onboarding experience by requesting permissions at runtime. This allows you to provide more context
+Use optional permissions
+: Improve the onboarding experience by requesting permissions at runtime. This allows you to provide more context
 around a particular permission and lets users choose which features they want to enable. See
 [Permissions API][api-optional-perms] for implementation details.
 
-### Use the `"activeTab"` permission {: #activeTab_permission }
-
-This permission does **_not_** display a permission warning. It grants temporary host permission to
+Use the `"activeTab"` permission
+: This permission does **_not_** display a permission warning. It grants temporary host permission to
 the site the user is on. For more details, see [Understanding the activeTab
 permission][doc-activetab].
 
-### Onboard users to allow access {: #allow_access }
- 
-If your extension needs to run on `file://` URLs or needs to operate in incognito mode, show users
-how to enable access on the extension's details page. 
-
-
-{% Details %}
-{% DetailsSummary %}
-
-#### How to allow access to file URLs and incognito pages
-
-{% endDetailsSummary %}
-
-1. Right-click on the extension icon in Chrome.
-2. Choose **Manage Extension**.
-
-    <figure>
-    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/hZZMDG0SEoCaHWkfwqbY.png", alt="Extension context menu", width="363", height="334", class='screenshot' %}
-    <figcaption>
-    Extension menu
-    </figcaption>
-  </figure>
-
-3. Scroll down to enable access to file URLs or incognito mode.
-
-    <figure>
-      {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/CXSHPxG4giUkzfGR67mY.png",
-          alt="Allow file URLs and incognito mode on the extension detail page", height="137", width="674", class="screenshot" %}
-      <figcaption>
-      Access enabled to file URLs and incognito mode.
-      </figcaption>
-    </figure>
-
-{% endDetails %}
-
-To detect if the user has allowed access, use [`extension.isAllowedIncognitoAccess()`][incognito-allow] or 
-[`extension.isAllowedFileSchemeAccess()`][file-scheme-allow].
-
-## Viewing and updating warnings {: #view-update-warnings }
-
-When you [load an extension locally][doc-load-unpacked], you won't see any permission warnings. This
-section explains how to view permission warnings and what users will experience when you add a new
-[permission that triggers a warning][section-warnings].
 
 ### View warnings {: #view_warnings }
 
