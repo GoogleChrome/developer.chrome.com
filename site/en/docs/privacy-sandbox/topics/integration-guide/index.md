@@ -65,7 +65,7 @@ The first step is to familiarize yourself with the Topics API and services.
 This section describes how to try out the Topics API as an individual developer. 
 [Participate in the origin trial](#participate-in-the-origin-trial) explains how to test at scale with your users by taking part in the origin trial.
 
-1. Local testing and deployment (Estimated time: ~2 days)
+1. Local testing and deployment (Estimated time: around 2 days)
     1. Enable the API with your local browser from the command line with [feature flags](/docs/privacy-sandbox/topics/#feature-flags). Test the [header](/docs/privacy-sandbox/topics/#demo-1) and [JavaScript API](https://topics-demo.glitch.me/) demos to see Topics in action ([walkthrough video](https://www.youtube.com/watch?v=hEBzWuXjeTQ)).
     1. Run the [Topics colab](/docs/privacy-sandbox/topics/colab/) to test topic inference using the Topics machine learning model.
 
