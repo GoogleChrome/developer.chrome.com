@@ -5,7 +5,7 @@ subhead: 'Understand when Manifest V2 will stop working for extensions'
 description: 'Details of the Manifest V2 phase-out and end of life.'
 layout: 'layouts/doc-post.njk'
 date: 2021-09-23
-updated: 2023-06-01
+updated: 2023-06-02
 tags:
   - extensions-news
 ---
