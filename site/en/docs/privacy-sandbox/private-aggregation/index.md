@@ -8,7 +8,7 @@ description: >
    Generate aggregate data reports using data from Protected Audience and cross-site
    data from Shared Storage.
 date: 2022-10-11
-updated: 2023-05-30
+updated: 2023-06-01
 authors:
    - kevinkiklee
 ---
@@ -180,6 +180,30 @@ register('reach-measurement', ReachMeasurementOperation);
 
 The above code example will call Private Aggregation whenever the cross-site iframe content is loaded. The iframe code loads the worklet, and the worklet calls the Private Aggregation API with the content ID converted to an aggregation key (bucket). 
 
+
+### contributeToHistogramOnEvent()
+
+Within Protected Audience API worklets only, we provide a trigger-based mechanism for sending a report only if a certain event occurs. This function also allows for the bucket and value to depend on signals that are not yet available at that point in the auction.
+
+The `privateAggregation.reportContributionForEvent(eventType, contribution)` method takes an `eventType` that specifies the triggering event, and the `contribution` to be submitted when the event is triggered. The triggering event can come from the auction itself after the auction ends, such as an auction win or loss event, or it can come from a fenced frame that rendered the ad. To send a report for auction events, you can use two reserved keywords, `reserved.win`, `reserved.loss`, and `reserved.always`. To submit a report triggered by an event from a fenced frame, define a custom event type. To trigger the event from a fenced frame, use the [`fence.reportEvent()`](https://github.com/WICG/turtledove/blob/main/Fenced_Frames_Ads_Reporting.md#reportevent) method available from the [Fenced Frames Ads Reporting API](https://github.com/WICG/turtledove/blob/main/Fenced_Frames_Ads_Reporting.md). 
+
+The following example sends an impression report when the auction win event is triggered, and sends a click report if a `click` event is triggered from the fenced frame that rendered the ad. These two values can be used to calculate the clickthrough rate. 
+
+```js
+function generateBid(interestGroup, auctionSignals, perBuyerSignals, trustedBiddingSignals, browserSignals) {
+  // …
+  privateAggregation.contributeToHistogramOnEvent(“reserved.win”, {
+      bucket: getImpressionReportBucket(),
+      value: 1
+  });
+  privateAggregation.contributeToHistogramOnEvent("click", {
+      bucket: getClickReportBuckets(), // 128-bit integer as BigInt
+      value: 1
+  });
+```
+
+See the [Extended Private Aggregation Reporting explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE_extended_PA_reporting.md) to learn more. 
+
 ### enableDebugMode()
 
 While third-party cookies are still available, we'll provide a temporary mechanism that allows easier debugging and testing by enabling the debug mode. A debug report is useful in comparing your cookie-based measurements with your Private Aggregation measurements, and also allows you to quickly validate your API integration. 
@@ -195,10 +219,6 @@ privateAggregation.enableDebugMode();
 // Enables debug mode and sets a debug key
 privateAggregation.enableDebugMode({ debugKey: BigInt(1234) });
 ```
-
-### contributeToHistogramOnEvent()
-
-Within Protected Audience API worklets only, we provide a trigger-based mechanism for sending a report only if a certain event occurs. This function also allows for the bucket and value to depend on signals that are not yet available at that point in the auction (for example, the value of the winning bid in `generateBid()`). More detail is available in the [explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE_extended_PA_reporting.md).
 
 ## Report verification
 
