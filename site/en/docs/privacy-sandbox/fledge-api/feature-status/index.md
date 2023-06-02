@@ -138,7 +138,7 @@ Event-level auction win reporting will be supported until at least 2026, and we 
 Auction loss reporting will continue to be supported through the
 [Private Aggregation API](https://github.com/WICG/turtledove/blob/main/FLEDGE_extended_PA_reporting.md).
 
-# Trigger-based aggregate reporting
+## Trigger-based aggregate reporting
 During a Protected Audience auction, you can send an aggregatable report when triggered by an event using [Private Aggregation API](/docs/privacy-sandbox/private-aggregation/)’s `contributeToHistogramOnEvent()` method. The triggering event can come from the auction itself, such as an auction win or loss, which allows you to generate an auction loss report. The event can also come from a fenced frame outside of the auction using [Fenced Frame Ads Reporting API](https://github.com/WICG/turtledove/blob/main/Fenced_Frames_Ads_Reporting.md)’s `window.fenced.reportEvent()` to trigger the aggregatable report submission. 
 
 See the [`contributeToHistogramOnEvent()` section of the Private Aggregation page](/docs/privacy-sandbox/private-aggregation/#contributetohistogramonevent) to learn more. 
