@@ -450,7 +450,7 @@ Section step-by-step summary:
 
 1. Scale the implementation (production).
     1. Add the iframe to multiple publisher's websites.
-1. Process and use topics data (Estimated time: ~4 weeks).
+1. Process and use topics data (Estimated time: around 4 weeks).
     1. Incorporate topics data as an additive signal alongside other data.
     1. Source real-time-bidding testing partners.
     1. Run utility testing with topics as an additive signal to your other data.
