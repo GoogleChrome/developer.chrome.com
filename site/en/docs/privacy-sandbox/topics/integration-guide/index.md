@@ -13,7 +13,7 @@ authors:
 {% Aside %}
 We'd love to know how this article could be improved!
 
-Follow the [Improve article](https://github.com/GoogleChrome/developer.chrome.com/blob/main/site/en/docs/privacy-sandbox/topics/integration-guide/index.md) link to make suggestions.
+You can [make article suggestions here](https://github.com/GoogleChrome/developer.chrome.com/blob/main/site/en/docs/privacy-sandbox/topics/integration-guide/index.md), and provide API feedback at the bottom of this page.
 {% endAside %}
 
 ## Goals
