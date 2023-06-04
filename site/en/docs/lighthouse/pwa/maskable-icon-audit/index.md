@@ -38,7 +38,7 @@ In order to pass the audit:
 
 1. Use [Maskable.app Editor][editor] to convert an existing icon to a maskable icon.
 1. Add the `purpose` property to one of the `icons` objects in your [web app manifest][manifest].
-   Set the value of `purpose` to `maskable` or `any maskable`. See [Values][values].
+   Set the value of `purpose` to `maskable`. See [Values][values].
 
    ```json/8
    {
@@ -49,7 +49,7 @@ In order to pass the audit:
          "src": "path/to/maskable_icon.png",
          "sizes": "196x196",
          "type": "image/png",
-         "purpose": "any maskable"
+         "purpose": "maskable"
        }
      ]
      …
