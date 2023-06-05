@@ -1,7 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Cross-origin Network Requests"
-seoTitle: "Chrome Extensions: Cross-origin Network Requests"
+title: "Cross-origin network requests"
+seoTitle: "Chrome Extensions: cross-origin network requests"
 date: 2012-09-18
 updated: 2023-05-23
 description: How to implement cross-origin network requests in your Chrome Extension.
