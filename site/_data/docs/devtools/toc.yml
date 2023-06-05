@@ -44,7 +44,9 @@
     - url: /docs/devtools/javascript/
     - url: /docs/devtools/javascript/breakpoints/
     - url: /docs/devtools/javascript/snippets/
+    - url: /docs/devtools/javascript/source-maps/
     - url: /docs/devtools/workspaces/
+    - url: /docs/devtools/overrides/
     - url: /docs/devtools/javascript/reference/
 - title: i18n.docs.devtools.network
   sections:
@@ -71,7 +73,7 @@
     - url: /docs/devtools/storage/sessionstorage/
     - url: /docs/devtools/storage/indexeddb/
     - url: /docs/devtools/storage/websql/
-    - url: /docs/devtools/storage/cookies/
+    - url: /docs/devtools/application/cookies/
     - url: /docs/devtools/storage/cache/
     - url: /docs/devtools/application/back-forward-cache/
     - url: /docs/devtools/javascript/background-services/
@@ -80,6 +82,7 @@
 - url: /docs/devtools/css/animations/
 - url: /docs/devtools/changes/
 - url: /docs/devtools/coverage/
+- url: /docs/devtools/developer-resources/
 - url: /docs/devtools/css-overview/
 - url: /docs/devtools/issues/
 - url: /docs/devtools/media-panel/

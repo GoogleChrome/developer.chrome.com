@@ -12,7 +12,7 @@ authors:
 
 ## Who is this article for?
 
-The [Private Aggregation API]( /docs/privacy-sandbox/private-aggregation) enables aggregate data collection from worklets with access to cross-site data. The concepts shared here are important for developers building reporting functions within Shared Storage and FLEDGE.
+The [Private Aggregation API]( /docs/privacy-sandbox/private-aggregation) enables aggregate data collection from worklets with access to cross-site data. The concepts shared here are important for developers building reporting functions within Shared Storage and Protected Audience API.
 
 *   If you're a **developer** building a reporting system for cross-site measurement. 
 *   If you're a **marketer**, **data scientist**, or other **summary report consumer**, understanding these mechanisms will help you make design decisions to retrieve an optimized summary report.
@@ -82,7 +82,7 @@ If a dimension has available key space for multiple digits, but the value has fe
 
 The aggregation key can also be generated with a hashing mechanism, such as SHA-256. For example, the string `“WidgetID=3276;CountryID=67”` can be converted to a hex string `c002f0033c108abf3ae0ec654fe38a1792186bfd582380b24ea93ebdeb6395be` which is equivalent to the BigInt `86849257128445315549261263548129498923703362729078813106545648910309959898558n`. 
 
-Some important web APIs that are required to generate a hash, like [`crypto`](https://developer.mozilla.org/docs/Web/API/Web_Crypto_API), are not currently available within Shared Storage worklets or FLEDGE worklets. As these worklets cannot communicate outside of itself, if you want to create hashes, you need to pre-generate one or more hashes outside the worklet then pass it in.
+Some important web APIs that are required to generate a hash, like [`crypto`](https://developer.mozilla.org/docs/Web/API/Web_Crypto_API), are not currently available within Shared Storage worklets or Protected Audience API worklets. As these worklets cannot communicate outside of itself, if you want to create hashes, you need to pre-generate one or more hashes outside the worklet then pass it in.
 
 {% Aside %}
 Although the concepts are similar, the key is constructed differently for the Private Aggregation API than the Attribution Reporting API. For Private Aggregation, the complete key is specified at the one time, in the JavaScript call.
@@ -125,7 +125,7 @@ For this example, we increment the value by 1 for each user who sees the widget.
 
 Each call to the Private Aggregation API is called a _contribution_. To protect user privacy, the number of contributions which can be collected from an individual are limited.
 
-When you sum all aggregatable values across all aggregation keys, the sum must be less than the contribution budget. The budget is scoped per-worklet [origin](https://web.dev/same-site-same-origin/#origin), per-day, and is separate for FLEDGE and Shared Storage worklets. A rolling window of approximately the last 24 hours is used for the day. If a new aggregatable report would cause the budget to be exceeded, the report is not created.
+When you sum all aggregatable values across all aggregation keys, the sum must be less than the contribution budget. The budget is scoped per-worklet [origin](https://web.dev/same-site-same-origin/#origin), per-day, and is separate for Protected Audience API and Shared Storage worklets. A rolling window of approximately the last 24 hours is used for the day. If a new aggregatable report would cause the budget to be exceeded, the report is not created.
 
 The _contribution budget_ is represented by the parameter `L<sub>1</sub>`, and for the current Privacy Sandbox Origin Trial, the contribution budget has been set to 2<sup>16</sup> = 65,536.  The value of the contribution budget is arbitrary where noise is scaled to it, and you can use this budget to maximize signal-to-noise ratio on the summary values (discussed more below in the [Noise and scaling](#noise-and-scaling) section below). 
 
@@ -148,7 +148,7 @@ An example aggregatable report with [debug mode](/docs/privacy-sandbox/private-a
     }
   ],
   "debug_key": "777",
-  "shared_info": "{\"api\":\"private-aggregation\",\"debug_mode\":\"enabled\",\"report_id\":\"5bc74ea5-7656-43da-9d76-5ea3ebb5fca5\",\"reporting_origin\":\"https://localhost:4437\",\"scheduled_report_time\":\"1664907229\",\"version\":\"0.1\"}"
+  "shared_info": "{\"api\":\"shared-storage\",\"debug_mode\":\"enabled\",\"report_id\":\"5bc74ea5-7656-43da-9d76-5ea3ebb5fca5\",\"reporting_origin\":\"https://localhost:4437\",\"scheduled_report_time\":\"1664907229\",\"version\":\"0.1\"}"
 ```
 
 The aggregatable reports can be inspected from the `chrome://private-aggregation-internals` page: 
@@ -162,11 +162,11 @@ For testing purposes, the “Send Selected Reports” button can be used to send
 The browser sends the aggregatable reports to the origin of the worklet containing the call to the Private Aggregation API, using the listed well-known path:
 
 *   For Shared Storage: `/.well-known/private-aggregation/report-shared-storage`
-*   For FLEDGE: `/.well-known/private-aggregation/report-fledge`
+*   For Protected Audience: `/.well-known/private-aggregation/report-protected-audience`
 
 At these endpoints, you will need to operate a server — acting as a collector — that receives the aggregatable reports sent from the clients.
 
-The server should then batch reports and send the batch to the Aggregation Service.  Create batches based on the information available in the unencrypted payload of the aggregatable report, such as the `shared\_info` field. Ideally, the batches should contain 100 or more reports per batch. 
+The server should then batch reports and send the batch to the Aggregation Service.  Create batches based on the information available in the unencrypted payload of the aggregatable report, such as the `shared_info` field. Ideally, the batches should contain 100 or more reports per batch. 
 
 You may decide to batch on a daily or weekly basis. This strategy is flexible, and you can change your batching strategy for specific events where you expect more volume—for example, days of the year when more impressions are expected. Batches should include reports from the same API version, reporting origin, and schedule report time. 
 
@@ -223,4 +223,4 @@ The Private Aggregation API proposal is under active discussion and subject to c
 
 *   **GitHub**: Read the [proposal](https://github.com/patcg-individual-drafts/private-aggregation-api), [raise questions and participate in discussion](https://github.com/patcg-individual-drafts/private-aggregation-api/issues).
 *   **Developer support**: Ask questions and join discussions on the [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
-*   Join the [Shared Storage API group](https://groups.google.com/a/chromium.org/g/shared-storage-api-announcements) and the [FLEDGE API group](https://groups.google.com/a/chromium.org/g/fledge-api-announce/) for the latest announcements related to Private Aggregation. 
+*   Join the [Shared Storage API group](https://groups.google.com/a/chromium.org/g/shared-storage-api-announcements) and the [Protected Audience API group](https://groups.google.com/a/chromium.org/g/fledge-api-announce/) for the latest announcements related to Private Aggregation. 

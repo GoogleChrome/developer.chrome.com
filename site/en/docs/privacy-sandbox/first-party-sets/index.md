@@ -7,6 +7,7 @@ description: >
   First-Party Sets (FPS) is a way for a company to declare relationships among sites, so that browsers allow limited third-party cookie access for specific purposes.
 hero: image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/OLx3AXkweLjAiDzoDslb.png
 date: 2023-03-07
+updated: 2023-05-16
 authors:
   - mihajlija
 ---
@@ -34,14 +35,6 @@ At a high level, a First-Party Set is a collection of domains, for which there i
 
 Site authors need to [submit their domains to a set](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md). Set members can include a range of different domain types with [subsets based on use cases](https://github.com/WICG/first-party-sets#defining-a-set-through-use-case-based-subsets).
 
-## What does 'sharded' mean in the context of First-Party Sets?
-
-The registrable domains, or "First-Party Set," is not joined across domains.
-
-For example, `a.example`, `b.example`, and `c.example` are not inherently part
-of a first-party set owned by any one domain. The owner domain must serve a
-manifest file which defines the relationship to other domains.
-
 ## First-Party Sets use cases
 
 First-Party Sets are a good match for cases when an organization needs a form of shared identity across different top-level sites. Shared identity in this case means anything from a full single sign-on solution to just needing a shared preference across sites.
@@ -56,7 +49,7 @@ An organization may have different top-level domains for:
 
 ## Find out more
 
--   [First-Party testing instructions](/blog/first-party-sets-testing-instructions/)
+-   [First-Party developer guide](/docs/first-party-sets-integration/)
 -   [First-Party Sets technical explainer](https://github.com/WICG/first-party-sets#introduction)
 -   [Chrome Platform Status](https://chromestatus.com/feature/5640066519007232)
 -   [Chromium Projects](https://www.chromium.org/updates/first-party-sets)

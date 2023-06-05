@@ -20,6 +20,9 @@ accessibility:
 amp:
   en: AMP
 
+android:
+  en: Android
+
 automation:
   en: Browser Automation
 
@@ -60,8 +63,14 @@ test:
 performance:
   en: Performance
 
+sourcemap:
+  en: source map
+
 storage:
   en: Storage
+
+network:
+  en: Network
 
 dom:
   en: DOM
@@ -124,6 +133,9 @@ html:
 
 media:
   en: Media
+
+webgpu:
+  en: WebGPU
 
 new-in-chrome:
   en: New in Chrome
@@ -309,6 +321,9 @@ websocket:
 
 websocketstream:
   en: WebSocketStream
+
+test-automation:
+  en: Test automation
 
 service-worker:
   en: Service Worker

@@ -6,12 +6,13 @@ subhead: >
 description: >
   Learn how to work with the API, including how to use Chrome flags for testing.
 date: 2022-01-25
-updated: 2023-03-08
+updated: 2023-03-29
 authors:
   - samdutton
 ---
 
 ## Implementation status
+
 {% Partial 'privacy-sandbox/ps-implementation-status.njk' %}
 
 ## Try the Topics API
@@ -21,17 +22,17 @@ Topics is not currently available by default in any version of Chrome, but you c
 -   The Topics API demo allows you to try it out as a single user.
 -   The Topics origin trial allows you to try the API at scale with your website users.
 
-### Try the demo
+### Try the demo {: #demo}
 
 The demo of the Topics API is at [topics-demo.glitch.me](https://topics-demo.glitch.me/). It explains how to try out and debug the API for a single user.
 
 You can also run the Topics [colab](/docs/privacy-sandbox/topics/colab/) to try out the Topics [classifier model](/docs/privacy-sandbox/topics/topic-classification/#classifier-model).
 
-### Test Topics in an origin trial
+### Test Topics in an origin trial {: #origin-trial}
 
-A Privacy Sandbox Relevance and Measurement [origin trial](/docs/privacy-sandbox/unified-origin-trial/) has been made available in Chrome Beta 101.0.4951.26 and above on desktop for the Topics, [FLEDGE](/docs/privacy-sandbox/fledge/), and [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) APIs.
+A Privacy Sandbox Relevance and Measurement [origin trial](/docs/privacy-sandbox/unified-origin-trial/) has been made available in Chrome Beta 101.0.4951.26 and above on desktop for the Topics, [Protected Audience](/docs/privacy-sandbox/fledge/), and [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) APIs.
 
-## Get and set topics
+## Get and set topics {: #epoch}
 
 The Topics JavaScript API has one method: `document.browsingTopics()`, which is used to get and set Topics. It returns a promise that resolves to an array of up to three topics, one for each of the three most recent epochs, in random order. An epoch is a period of time currently set to one week.
 
@@ -58,14 +59,10 @@ Before using the API, check if it's supported by the browser and available in th
 {% Aside 'caution' %}
 
 Feature support on the current page isn't a guarantee that an API is usable: the user may have disabled the API via browser settings, or they may have other settings that prevent the API from being used. To protect user privacy, there is no way to check for these other settings programmatically.
+
 {% endAside %}
 
-### Access topics without modifying state
-
-From Chrome 108, the `document.browsingTopics()` method can be passed an optional argument: `{skipObservation:true}`.
-This allows the method to return topics without causing the browser to record a topic observation. By default, it does. In other words, the call will not cause the current page to be included in the weekly epoch calculation, nor will it update the list of topics observed for the caller.
-
-### Access topics with the JavaScript API
+### Access topics with the JavaScript API {: #access-topics}
 
 Here is a basic example of possible API usage to access topics for the current user. To keep it simple, there's no error handling.
 
@@ -88,33 +85,60 @@ const creative = await response.json();
 // Display ad.
 ```
 
-{% Aside 'warning' %}
-This snippet of code above is provided only to show how the Topics JavaScript API might be used. API design is subject to change.
-{% endAside %}
+### Access topics without modifying state {: #skipobservation}
+
+By default,  `document.browsingTopics()` records a topic observation whenever
+it returns topics. From Chrome 108, the `document.browsingTopics()` method can
+be passed an optional argument to skip this recording: `{skipObservation:true}`.
+
+In other words, the call will not cause the current page to be included in the
+weekly epoch calculation, nor will it update the list of topics observed for
+the caller.
 
 ### Use headers to access and observe topics
 
-Rather than using the Topics JavaScript API from an iframe, topics can be accessed and marked as observed by using [request](https://developer.mozilla.org/docs/Web/API/Request/headers) and [response](https://developer.mozilla.org/docs/Web/API/Response/headers) headers:
+You can access and observe topics with the help of
+[request](https://developer.mozilla.org/docs/Web/API/Request/headers) and
+[response](https://developer.mozilla.org/docs/Web/API/Response/headers) headers.
+Headers can be much more performant than calling the JavaScript API.
 
--   Topics can be accessed from the `Sec-Browsing-Topics` header of a [`fetch()`](https://developer.mozilla.org/docs/Web/API/fetch) or [`XHR`](https://developer.mozilla.org/docs/Glossary/XHR_(XMLHttpRequest)) request.
--   Topics that were provided in a request header can be marked as observed by setting an `Observe-Browsing-Topics: ?1` header on the response to the request. The browser will then use those topics (that were included in the request header) for calculating topics of interest for a user.
+Topics can be accessed from the `Sec-Browsing-Topics` header of a [`fetch()`](https://developer.mozilla.org/docs/Web/API/fetch) or [`XHR`](https://developer.mozilla.org/docs/Glossary/XHR_(XMLHttpRequest)) request.
 
-Using request and response headers to access topics and mark them as observed can be much more performant than using the JavaScript API from an iframe. For example, the header mechanism could be used when a `fetch()` request is made to an ad server. No iframe required! For more on this technique, check out the [demo](/docs/privacy-sandbox/topics/demo#the-topics-api-headers-demo).
+{% Aside %}
+Inclusion of the Topics header in `XHR` requests is only available temporarily, and support will be removed in the future.
+{% endAside %}
 
-#### Notes
+You can mark topics provided by request headers as observed by setting an
+`Observe-Browsing-Topics: ?1` header on the response to the request. The
+browser will then use those topics included in the request header to calculate
+topics of interest for a user.
+
+Topics can be accessed and observed with HTTP Headers in two ways:
+
+* **`fetch()`**: Use headers to call topics when the `fetch()` request is
+  made to an ad server. For more on this technique, check out the
+  [demo](/docs/privacy-sandbox/topics/demo#the-topics-api-headers-demo).
+* **iframe attributes**: Send request headers with document requests by either
+  adding the `browsingtopics` attribute to an iframe or with the equivalent IDL
+  attribute: `iframe.browsingTopics = true`. The iframe source should be the
+  registrable domain for topic observation.
+  * For example: `<iframe src="https://example.com" browsingtopics></iframe>`
+  * This is available from Chrome M114 and onward.
+
+Some additional notes about headers:
 
 -   Redirects will be followed, and the topics sent in the redirect request will be specific to the redirect URL.
 -   The request header will not modify state for the caller unless there is a corresponding response header. That is, the topic of the page won't be considered observed, nor will it affect the user's topic calculation for the next epoch.
 -   The response header is only honored if the corresponding request included the topics header (or would have included the header, if the request wasn't empty).
 -   The URL of the request provides the registrable domain used for topic observation.
 
-## Debug your API implementation
+## Debug your API implementation {: #debug}
 
-The `chrome://topics-internals` page is available in Chrome on desktop once [you enable the Topics API](#feature-flags). This displays topics for the current user, topics inferred for hostnames, and technical information about the API implementation.
+The `chrome://topics-internals` page is available in Chrome on desktop once [you enable the Topics API](/docs/privacy-sandbox/topics/demo/#feature-flags). This displays topics for the current user, topics inferred for hostnames, and technical information about the API implementation.
 
 The `chrome://topics-internals` page is new. The design and functionality are still under discussion. We're currently iterating and improving the design based on developer feedback. Add your feedback at [bugs.chromium.org](https://bugs.chromium.org/p/chromium/issues/entry?template=Defect+report+from+developer&components=Blink%3ETopicsAPI).
 
-### View topics calculated for your browser
+### View topics calculated for your browser {: #observed-topics}
 
 Users can view information about topics observed for their browser during the current and previous epochs by viewing `chrome://topics-internals`.
 
@@ -130,7 +154,7 @@ In this example, recently visited sites include topics-demo-cats.glitch.me and c
 
 The **Observed-by context domains (hashed)** column provides the hashed value of a hostname for which a topic was observed.
 
-### View topics inferred for hostnames
+### View topics inferred for hostnames {: #view-inferred-topics}
 
 You can also view the topics inferred by the Topics [classifier model](https://github.com/patcg-individual-drafts/topics#:~:text=classifier%20model) for one or more hostnames in `chrome://topics-internals`.
 
@@ -145,7 +169,7 @@ The current implementation of the Topics API infers topics from hostnames only; 
 
 Use hostnames only (without protocol or path) to view inferred topics from the `chrome://topics-internals` Classifier. `chrome://topics-internals` will display an error if you attempt to include a "/" in the Host field.
 
-### View Topics API information
+### View Topics API information {: #view-api-information}
 
 You can find information about the Topics API implementation and settings, such as the [taxonomy](https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md) version and epoch duration, in `chrome://topics-internals`. These values reflect default settings for the API or parameters successfully set [from the command line](#feature-flags). This may be helpful to confirm that command line flags have worked as expected.
 
@@ -178,7 +202,7 @@ Each parameter, its default value, and its purpose is explained in the list belo
     <dt>
       <dd><code>PrivacySandboxAdsAPIsOverride</code></dd>
       <dd><strong>Default value:</strong> enabled</dd>
-      <dd>Enables ads APIs: Attribution Reporting, FLEDGE, Topics, Fenced Frames.</dd>
+      <dd>Enables ads APIs: Attribution Reporting, Protected Audience, Topics, Fenced Frames.</dd>
     </dt><br />
     <dt>
       <dd><code>PrivacySandboxSettings3</code></dd>
@@ -264,6 +288,20 @@ href="https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md">taxonomy</a>
 version used by the API.</dd>
     </dt><br />
 </dl>
+
+## Opt out your site {: #site-opt-out}
+
+You can opt out of topic calculation for specific pages on your site by including the `Permissions-Policy: browsing-topics=()` [Permissions-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy) header on a page to prevent topics calculation for all users on that page only. Subsequent visits to other pages on your site will not be affected. If you set a policy to block the Topics API on one page, this won't affect other pages.
+
+You can also control which third parties have access to topics on your page by using the Permission Policy header to control third-party access to the Topics API.
+
+Use `self` and any domains you would like to allow access to the API as parameters.
+
+For example, to completely disable use of the Topics API within all browsing contexts except for your own origin and those whose origin is `https://example.com`, set the following HTTP response header: 
+
+```text
+Permissions-Policy: geolocation=(self "https://example.com")
+```
 
 ## Next steps
 

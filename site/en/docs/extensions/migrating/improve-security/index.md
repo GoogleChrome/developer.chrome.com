@@ -6,7 +6,9 @@ description: 'The last of three sections describing changes needed for code that
 date: 2023-03-08
 ---
 
-This is the last of three sections describing changes needed for code that is not part of the extension service worker. It describes changes required to improve the security of extensions. The other two sections cover [update API calls](/docs/extensions/upgrading/api-calls) needed for upgrading to Manifest V3 and [blocking web requests](/docs/extensions/upgrading/blocking-web-requests).
+{% Partial 'extensions/mv3-support.md' %}
+
+This is the last of three sections describing changes needed for code that is not part of the extension service worker. It describes changes required to improve the security of extensions. The other two sections cover [updating your code](/docs/extensions/migrating/api-calls) needed for upgrading to Manifest V3 and [replacing blocking web requests](/docs/extensions/migrating/blocking-web-requests).
 
 ## Remove execution of arbitrary strings {: #remove-execution-of-strings }
 
@@ -16,11 +18,11 @@ You can no longer [execute external logic](/docs/extensions/mv3/intro/mv3-overvi
 - Update script and style references to load resources from the extension bundle.
 - Use [`chrome.runtime.getURL()`](/docs/extensions/reference/runtime/#method-getURL) to build resource URLs at runtime.
 
-The `executeScript()` method is now in the [`scripting`](/docs/extensions/reference/scripting/) namespace rather than the `tabs` namespace. For information on updating callsites, see [Move executeScript()](/docs/extensions/upgrade-to-mv3/update-code#move-executescript).
+The `executeScript()` method is now in the [`scripting`](/docs/extensions/reference/scripting/) namespace rather than the `tabs` namespace. For information on updating calls, see [Move executeScript()](/docs/extensions/upgrade-to-mv3/update-code#move-executescript).
 
 ## Remove remotely hosted code {: #remove-remote-code }
 
-In Manifest V3, all of your extension's logic must be part of the extension package. You can no longer load and execute a remotely hosted file. Examples include:
+In Manifest V3, all of your extension's logic must be part of the extension package. You can no longer load and execute remotely hosted files. Examples include:
 
 - JavaScript files pulled from the developer's server.
 - Any library hosted on a [CDN][mdn-cdn].
@@ -41,13 +43,11 @@ Bundle third-party libraries
 <link href="./bootstrap.min.css" rel="stylesheet">
 ```
 
-To include a library in a service worker, you have two options:
-- For a standard service worker, use `importScripts()`.
-- To use static import statements, set the `"background.type"` to `"module"` in the manifest.
+To include a library in a service worker set the `"background.type"` to `"module"` in the manifest and use an `import` statement.
 
 ### Use external libraries in tab-injected scripts {: #use-external-libraries }
 
-External libraries may no longer be loaded remotely. They must be part of your extension bundle. Load them at run time by adding them to the `files` array when calling `executeScript()`.
+External libraries may no longer be loaded remotely. They must be part of your extension bundle. Load them at runtime by adding them to the `files` array when calling `executeScript()`. You can still load data remotely at runtime.
 
 ```js
 chrome.scripting.executeScript({
@@ -98,11 +98,11 @@ In the background service worker.
 {% endCompare %}
 </div>
 
-The [Chrome Extension Samples repo](https://github.com/GoogleChrome/chrome-extensions-samples.git) contains a [function injection example](https://github.com/GoogleChrome/chrome-extensions-samples/blob/main/reference/mv3/intro/mv3-migration/content-scripts/popup.js) you can step through. An [example of `getCurrentTab()`](/docs/extensions/reference/tabs/#get-the-current-tab) is in the API reference.
+The [Chrome Extension Samples repo](https://github.com/GoogleChrome/chrome-extensions-samples.git) contains a [function injection example](https://github.com/GoogleChrome/chrome-extensions-samples/blob/main/reference/mv3/intro/mv3-migration/content-scripts/popup.js) you can step through. An example of `getCurrentTab()` is in the [reference](/docs/extensions/reference/tabs/#get-the-current-tab) for that function.
 
 ## Update the content security policy {: #update-csp }
 
-The `"content_security_policy"` has not been removed from the `manifest.json` file, but it is now a dictionary that supports two properties: `"extension_pages"` and `"sandbox"`.
+The `"content_security_policy"` has not been removed from the `manifest.json` file, but it is now a dictionary that supports two properties: `"extension_pages"` and [`"sandbox"`](/docs/extensions/mv3/manifest/sandbox/).
 
 <div class="switcher">
 {% Compare 'worse', 'Manifest V2' %}
@@ -142,7 +142,7 @@ These page types are served from the `chrome-extension://` protocol. For instanc
 
 ## Remove unsupported content security policies {: #remove-unsupported-csv }
 
-Manifest V3 disallows certain content security policy values that would allow remote code execution in the `"extension_pages"` field, which were permitted in Manifest V2. The `script-src,` `object-src`, and `worker-src` directives may only have the following values:
+Manifest V3 disallows certain content security policy values in the `"extension_pages"` field that were allowed in Manifest V2. Specifically Manifest V3 disallows those that allow remote code execution. The `script-src,` `object-src`, and `worker-src` directives may only have the following values:
 
 *   `self`
 *   `none`
@@ -152,3 +152,4 @@ Manifest V3 disallows certain content security policy values that would allow re
 Content security policy values for `sandbox` have no such new restrictions.
 
 
+[mdn-cdn]: https://developer.mozilla.org/docs/Glossary/CDN

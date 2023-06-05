@@ -2,7 +2,21 @@
 api: permissions
 ---
 
-## Implementing optional permissions
+## Overview {: #overview }
+
+Permission warnings exist to describe the capabilities granted by an API, but some of these warnings may not be obvious. The Permissions API allows developers to explain permission warnings and introduce new features gradually which gives users a risk-free introduction to the extension. This way, users can specify how much access they are willing to grant and which features they want to enable.
+
+For example, the [optional permissions extension's][gh-optional-perms] core functionality is overriding the new tab page. One feature is displaying the user's goal of the day. This feature only requires the [storage][api-storage] permission, which does not include a warning. The extension has an additional feature, that users can enable by clicking the following button: 
+
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/wtbjayBDYDyKZe2x580P.png",
+       alt="Extension button that enables additional features", height="350", width="395" %}
+
+Displaying the user's top sites requires the [topSites][api-top-sites] permission, which has the following warning.
+
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/5edHzqeUOJ8V6XHkjNBM.png",
+       alt="Extension warning for topSites API", height="173", width="480" %}
+
+## Implementing optional permissions 
 
 ### Step 1: Decide which permissions are required and which are optional
 
@@ -27,8 +41,8 @@ Advantages of _optional_ permissions:
 
 ### Step 2: Declare optional permissions in the manifest
 
-Declare optional permissions in your [extension manifest][1] with the `optional_permissions` key,
-using the same format as the [permissions][2] field:
+Declare optional permissions in your [extension manifest][doc-manifest] with the `optional_permissions` key,
+using the same format as the [permissions][doc-permissions] field:
 
 ```json
 {
@@ -40,7 +54,7 @@ using the same format as the [permissions][2] field:
 }
 ```
 
-If you want to request hosts that you only discover at runtime, include `"https://*/*"` in your extension's `optional_host_permissions` field. This lets you specify any origin in [Permissions.origins][3] as long as it has a matching
+If you want to request hosts that you only discover at runtime, include `"https://*/*"` in your extension's `optional_host_permissions` field. This lets you specify any origin in [Permissions.origins][perm-origins] as long as it has a matching
 scheme.
 
 **Permissions that can _not_ be specified as optional**
@@ -113,7 +127,7 @@ Most Chrome extension permissions can be specified as optional, with the followi
   </tbody>
 </table>
 
-View [Declare Permissions and Warn Users][17] for further information on available permissions and
+View [Declare Permissions and Warn Users][doc-warnings] for further information on available permissions and
 their warnings.
 
 ### Step 3: Request optional permissions
@@ -138,7 +152,7 @@ document.querySelector('#my-button').addEventListener('click', (event) => {
 });
 ```
 
-Chrome prompts the user if adding the permissions results in different [warning messages][18] than
+Chrome prompts the user if adding the permissions results in different [warning messages][doc-warnings] than
 the user has already seen and accepted. For example, the previous code might result in a prompt like
 this:
 
@@ -181,21 +195,11 @@ chrome.permissions.remove({
 });
 ```
 
-[1]: /docs/extensions/mv3/manifest
-[2]: /docs/extensions/mv2/declare_permissions#manifest
-[3]: #property-Permissions-origins
-[4]: /docs/extensions/debugger
-[5]: /devtools/docs/debugger-protocol
-[6]: /docs/extensions/declarativeNetRequest
-[7]: /docs/extensions/mv2/devtools
-[8]: https://tools.google.com/dlpage/chromesxs
-[9]: https://www.chromium.org/getting-involved/dev-channel
-[10]: /docs/extensions/experimental
-[11]: https://w3c.github.io/geolocation-api/
-[12]: /docs/extensions/mdns
-[13]: /docs/extensions/mdns
-[14]: /docs/extensions/tts
-[15]: /docs/extensions/reference/ttsEngine
-[16]: /docs/extensions/reference/ttsEngine
-[17]: /docs/extensions/mv2/permission_warnings
-[18]: /docs/extensions/mv2/permission_warnings
+[api-storage]: /docs/extensions/reference/storage
+[api-top-sites]: /docs/extensions/reference/topSites
+[doc-manifest]: /docs/extensions/mv3/manifest
+[doc-permissions]: /docs/extensions/mv3/declare_permissions
+[doc-warnings]: /docs/extensions/mv3/permission_warnings/#overview
+[gh-optional-perms]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.optional_permissions
+[perm-origins]: #property-Permissions-origins
+[warning-msg]: /docs/extensions/mv3/permission_warnings/#overview

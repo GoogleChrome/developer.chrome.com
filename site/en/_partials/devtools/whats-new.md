@@ -4,6 +4,32 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 
 {# $content #}
 
+### Chrome 114 {: #chrome114 }
+
+* [WebAssembly debugging support](/blog/new-in-devtools-114/#wasm)
+* [Improved stepping behavior in Wasm apps](/blog/new-in-devtools-114/#wasm-step)
+* [Debug Autofill using the Elements panel and Issues tab](/blog/new-in-devtools-114/#autofill)
+* [Assertions in Recorder](/blog/new-in-devtools-114/#recorder)
+* [Lighthouse 10.1.1](/blog/new-in-devtools-114/#lighthouse)
+* [Performance enhancements](/blog/new-in-devtools-114/#performance)
+* [performance.mark() shows timing on hover in Performance > Timings](/blog/new-in-devtools-114/#mark)
+* [profile() command populates Performance > Main](/blog/new-in-devtools-114/#profile)
+* [Warning for slow user interactions](/blog/new-in-devtools-114/#slow-interaction-warning)
+* [JavaScript Profiler deprecation: Phase three](/blog/new-in-devtools-114/#js-profiler)
+* [Miscellaneous highlights](/blog/new-in-devtools-114/#misc)
+
+### Chrome 113 {: #chrome113 }
+
+* [Override network response headers](/blog/new-in-devtools-113/#network)
+* [Nuxt, Vite, and Rollup debugging improvements](/blog/new-in-devtools-113/#debug)
+* [CSS improvements in Elements > Styles](/blog/new-in-devtools-113/#css)
+* [Invalid CSS properties and values](/blog/new-in-devtools-113/#invalid-css)
+* [Links to key frames in the animation shorthand property](/blog/new-in-devtools-113/#animation-key-frames)
+* [New Console setting: Autocomplete on Enter](/blog/new-in-devtools-113/#console)
+* [Command Menu emphasizes authored files](/blog/new-in-devtools-113/#command-menu)
+* [JavaScript Profiler deprecation: Stage two](/blog/new-in-devtools-113/#js-profiler)
+* [Miscellaneous highlights](/blog/new-in-devtools-113/#misc)
+
 ### Chrome 112 {: #chrome112 }
 
 * [Recorder updates](/blog/new-in-devtools-112/#recorder)
@@ -20,7 +46,6 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 * [Emulate reduced contrast](/blog/new-in-devtools-112/#reduced-contrast)
 * [Lighthouse 10](/blog/new-in-devtools-112/#lighthouse)
 * [Miscellaneous highlights](/blog/new-in-devtools-112/#misc)
-
 
 ### Chrome 111 {: #chrome111 }
 

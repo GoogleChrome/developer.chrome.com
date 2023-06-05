@@ -40,7 +40,7 @@
 
   {% elif type.type === 'union' %}
     {# Type that contains many string (probably) options, basically an enum. #}
-    {{ renderIconTypesArray(type.types, 'Type') }}
+    {{ renderIconTypesArray(type.types, 'Enum', node) }}
 
   {% elif type.type and not node._event %}
     {# Reference to another type (and not an Event). #}
@@ -206,8 +206,16 @@
     {% set iconType = type.type %}
   {% endif %}
 
+   
+  {% set description = "" %}
+  {% for enum in node._enums %}
+    {% if enum.value == type.value %}
+      {% set description = enum.description %}
+    {% endif %}
+  {% endfor %}
+
   {# Note that we avoid whitespace below, and instead set margins in CSS. #}
-  <p class="code-sections__icon code-sections__icon--{{ iconType }}">{{ renderSingleType(type, node) | trim | safe }}
+  <p class="code-sections__icon code-sections__icon--{{ iconType }} {% if node.type.type == 'union' %}code-sections__enum{% endif %}">{{ renderSingleType(type, description) | trim | safe }}
     {%- if node.flags.isOptional -%}
       &nbsp;<span class="code-sections__optional">optional</span>
     {%- endif -%}
@@ -223,8 +231,7 @@
 {#
   Renders an optional list of types, e.g., for an enum.
 #}
-{% macro renderIconTypesArray(types, label) %}
-
+{% macro renderIconTypesArray(types, label, node) %}
   <div class="code-sections">
     {% if label %}
       <h4 class="type--label code-sections__mode">{{ label }}</h4>
@@ -233,8 +240,7 @@
     <div class="code-sections__overline code-sections__label">
       <p>
         {% for t in types %}
-          {% if loop.last and not loop.first %}or{% endif %}
-          <span style="white-space: nowrap">{{ renderSingleIconType(t) | trim }}{% if not loop.last %},{% endif %}</span>
+          <span style="white-space: nowrap;">{{ renderSingleIconType(t, node) | trim }}</span>
         {% endfor %}
       </p>
     </div>
@@ -283,7 +289,7 @@
 
   The node (a ReflectionDeclaration) is optional.
 #}
-{% macro renderSingleType(type, node) %}
+{% macro renderSingleType(type, description) %}
 
   {% if node._event %}
     {# This is an event function on a class or interface. #}
@@ -303,7 +309,7 @@
 
   {% elif type.type === 'literal' %}
     {# Literal value, e.g., 123 or '"foo"' #}
-    <span class="code-sections__value">{{ type.value | dump }}</span>
+    <span class="code-sections__value">{{ type.value | dump }}</span> <br> <span class="type--xsmall" style="white-space: initial">{{description | mdInline | safe }}</span>
 
   {% elif type.type === 'reflection' and type.declaration.signatures %}
     {# A reflection which has signatures, i.e., a function. #}

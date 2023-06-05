@@ -16,7 +16,7 @@ for the Private Aggregation API.
 
 1. Try the [demo](http://goo.gle/shared-storage-demo). The code is available on
    [GitHub](https://github.com/GoogleChromeLabs/shared-storage-demo).
-2. Experiment with the API. The API is available in the [Privacy Sandbox unified origin trial](/docs/privacy-sandbox/unified-origin-trial/) on Chrome Canary and Dev M107 or later.
+2. Experiment with the API. The API is available in the [Privacy Sandbox unified origin trial](/docs/privacy-sandbox/unified-origin-trial/) on Chrome Canary, Dev, and Beta M107 or later.
    * Learn how you can register for a [third-party origin trial](/docs/web-platform/third-party-origin-trials/).
 3. Generate summary reports with the [Aggregation Service](/docs/privacy-sandbox/aggregation-service).
    *  Set up
@@ -31,7 +31,7 @@ demo, or about the documentation:
 
 * [Open a new issue on the privacy-sandbox-dev-support
   repository](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/issues/new/choose).
-*  Join the [Shared Storage API group](https://groups.google.com/a/chromium.org/g/shared-storage-api-announcements) and the [FLEDGE API group](https://groups.google.com/a/chromium.org/g/fledge-api-announce/) for the latest announcements related to Private Aggregation. 
+*  Join the [Shared Storage API group](https://groups.google.com/a/chromium.org/g/shared-storage-api-announcements) and the [Protected Audience API group](https://groups.google.com/a/chromium.org/g/fledge-api-announce/) for the latest announcements related to Private Aggregation. 
 
 If you notice any unexpected behavior: 
 

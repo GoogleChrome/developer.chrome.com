@@ -2,9 +2,9 @@
 layout: 'layouts/doc-post.njk'
 title: 'Topics API overview'
 subhead: >
-  Learn about this privacy-preserving API to enable interest-based advertising without third-party tracking.
+  The Topics API enables interest-based advertising (IBA) without having to resort to tracking the sites a user visits.
 description: >
-  Learn about this privacy-preserving API to enable interest-based advertising without third-party tracking.
+  The Topics API enables interest-based advertising (IBA) without having to resort to tracking the sites a user visits.
 date: 2022-01-25
 updated: 2023-03-08
 authors:
@@ -46,9 +46,11 @@ The Topics API has three main tasks:
 
 The Topics API provides human-readable, easily understandable topics, so it's possible to provide meaningful controls to users.
 
-### How topics are curated and selected
+### How topics are curated and selected {: #manually-curated}
 
 Topics are selected from a [taxonomy](https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md) consisting of hierarchical categories such as [/Arts & Entertainment/Music & Audio/Soul & R&B](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md#:~:text=/Arts%20%26%20Entertainment/Music%20%26%20Audio/Soul%20%26%20R%26B) and [/Business & Industrial/Agriculture & Forestry](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md#:~:text=106-,/Business%20%26%20Industrial/Agriculture%20%26%20Forestry,-107). These topics have been curated by Chrome for initial testing, but with the goal that the taxonomy becomes a resource maintained by trusted ecosystem contributors. The taxonomy needs to be small enough that many users' browsers will be associated with each topic. Currently the number of topics is 349, but we expect the final number of topics to be between a few hundred and a few thousand.
+
+{: #sensitive-topics}
 
 To avoid sensitive categories, topics must be public, human-curated, and remain up to date. The initial taxonomy proposed for testing by Chrome has been human-curated [to exclude categories generally considered sensitive](https://github.com/patcg-individual-drafts/topics#meeting-the-privacy-goals:~:text=of%20a%20page.-,The,-topics%20revealed%20by), such as ethnicity or sexual orientation.
 
