@@ -234,7 +234,7 @@ groups** column of the tables in the [**Proposals** section](#proposals).
 
 {% endDetailsSummary %}
 
-If you rely on third-party cookie data for site functionality, we've launched a [public issue tracker](https://goo.gle/report-3pc-broken), where you can report site issues resulting from third-party cookie deprecation.
+If you rely on third-party cookie data for site functionality, you can now report site issues resulting from third-party cookie deprecation in the [public issue tracker](https://goo.gle/report-3pc-broken).
 
 Additionally, Chrome will deprecate 1% of third party cookies in Q1 2024, and we'll work closely with the CMA before taking further steps to expand deprecation. You can provide [feedback on GitHub](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/labels/chrome-testing) as to the appropriate fraction of traffic to devote to this subset of [Chrome-facilitated testing](/docs/privacy-sandbox/chrome-testing/).
 
