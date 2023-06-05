@@ -2,7 +2,7 @@
 layout: 'layouts/doc-post.njk'
 title: About extension service workers
 description: Extension service workers are an extension's central event handler. That makes them different from web service workers. 
-date: 2023-06-03
+date: 2023-05-03
 ---
 
 This section explains what you need to know to use service workers in extensions. You should read this section whether you're familiar with service workers or not. Extension service workers are an extension's central event handler. That makes them just different enough from web service workers that the mountains of service worker articles around the web may or may not be useful. 
