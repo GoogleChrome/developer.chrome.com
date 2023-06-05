@@ -26,7 +26,7 @@ tags:
 
 ### New CSS subgrid badge {: #subgrid }
 
-The **Elements** panel gets a new `subgrid` badge for [nested grids](https://developer.mozilla.org/docs/Web/CSS/CSS_Grid_Layout/Subgrid).
+The **Elements** panel gets a new `subgrid` badge for [subgrid](https://developer.mozilla.org/docs/Web/CSS/CSS_Grid_Layout/Subgrid). This feature is currently experimental in Chrome Canary.
 
 To inspect and debug a nested grid that is a subgrid, and therefore inheriting the number and size of tracks from its parent, click the badge. It toggles an overlay that shows columns, rows, and their numbers on top of the element in the viewport.
 
