@@ -3,8 +3,8 @@ layout: 'layouts/blog-post.njk'
 title: 'How Photoshop solved working with files larger than can fit into memory'
 subhead: >
   Learn how Adobe managed to let users edit even the biggest files on the web version of its iconic Photoshop app.
-date: 2023-03-23
-# updated: 2023-03-21
+date: 2023-06-05
+# updated: 2023-06-05
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/pYiISdhsJe3oEL871Dqp.png
 alt: A part of Photoshop's user interface.
 thumbnail: image/8WbTDNrhLsU0El80frMBGE4eMCD3/tTlvAYtbWrg8xLqXdjua.png
