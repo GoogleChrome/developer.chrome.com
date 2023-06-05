@@ -135,7 +135,7 @@ data to local storage, so it can later be matched with an attribution trigger.
 ### Attribution triggers (advertiser's website)
 
 The _[attribution trigger](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATE.md#attribution-trigger-registration)_
-is the event which tells the browser to capture conversions. 
+is the event that tells the browser to capture conversions. 
 
 We recommend capturing the conversions that are most important to the
 advertiser, such as purchases. Multiple conversion types and metadata can be
