@@ -412,7 +412,7 @@ The traffic allocation will look like the following starting on Thursday, March 
 
 These changes will not affect your existing origin trial token setup, and you will not have to renew or generate a new origin trial token. 
 
-### January 2023
+#### January 2023
 
 As part of a Chrome regression investigation, we will temporarily reduce Protected Audience API origin trial traffic from 5% to 4% of Chrome Stable, from January 26th 2023. We estimate the investigation will take about a month, and we will notify you when the traffic is ramped back up.  
 
