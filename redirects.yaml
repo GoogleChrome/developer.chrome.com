@@ -37,7 +37,7 @@ redirects:
   to: https://web.dev/maskable-icon/
 
 - from: /activeTab
-  to: /docs//docsreference/activeTab
+  to: /docs/extensions/reference/activeTab
 
 - from: /android/overview
   to: /docs/multidevice/android/overview/
