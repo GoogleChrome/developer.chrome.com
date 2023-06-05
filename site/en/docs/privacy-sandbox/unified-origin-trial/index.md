@@ -29,7 +29,7 @@ across the Topics, Protected Audience API, and Attribution Reporting APIs. This 
 through the configuration steps to access the APIs, tells you how to validate
 your configuration, and provides further resources for testing against the APIs.
 
-{% Aside %}
+{% Aside 'key-term' %}
 Note: The term "traffic" is used to refer to the percentage of Chrome browser instances included in the trial, not the percentage of requests made to individual sites.
 {% endAside %}
 
