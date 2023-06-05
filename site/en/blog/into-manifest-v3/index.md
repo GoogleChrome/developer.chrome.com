@@ -1,5 +1,5 @@
 ---
-title: "A Deeper Dive into Manifest V3"
+title: "A deeper dive into Manifest V3"
 description: ""  
 layout: "layouts/blog-post.njk"
 authors:
@@ -23,7 +23,7 @@ As a quick refresher, in 2019, when Manifest V3 was proposed, it acknowledged th
 
 So, exactly what is changing in Manifest V3? There are three key, large changes plus several smaller adjustments to the platform. We’ll cover the main changes first, then discuss some additional adjustments and a few new API’s.
 
-## No More Remotely Hosted Code
+## No more remotely hosted code
 
 Manifest V3 removes the ability for an extension to use [remotely hosted code](/docs/extensions/migrating/improve-security/#remove-remote-code), which presents security risks by allowing unreviewed code to be executed in extensions. With this change, an extension can only execute JavaScript that is included within its package and subject to review by the Chrome Web Store. Not allowing unreviewed code helps us better protect extension users.
 
@@ -33,7 +33,7 @@ Application logic which needs to change frequently can alternatively be moved to
 
 And If you are using a popular framework like React or Bootstrap which you were previously loading from an external server, you can download the minified files, add them to your project and import them locally.
 
-## Moving to Service Workers
+## Moving to service workers
 
 Another big change is replacing background pages with extension service workers to improve performance and better manage resources.
 
@@ -47,12 +47,25 @@ One critical change was to [remove a mandatory 5 minute timeout](/blog/longer-es
 
 One area where service workers are different from full document-based pages is that they lack support for DOM APIs (and while DOM APIs can be used in [content scripts](/docs/extensions/mv3/content_scripts/), this leaves extensions at the mercy of different content security policies on a page-to-page basis). To address this, the [Offscreen Documents API](/docs/extensions/reference/offscreen/) was released in Chrome 109. This API allows extensions to open minimal, scoped, and relatively un-permissioned offscreen documents at runtime through a dedicated API, which gives extensions using service workers access to the DOM.
 
+```json
+{
+  "name": "Offscreen API - DOM Parsing",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {},
+  "permissions": ["offscreen"]
+}
+```
+
 We plan to continue to refine extension service worker APIs to expand their ability to address additional use cases, and we will update Offscreen Documents as needed. For example we recently added two new [reason](/docs/extensions/reference/offscreen/#type-Reason) values, LOCAL_STORAGE and WORKER.
 
 For more information, check out our recently updated extension service worker [documentation](/docs/extensions/mv3/service_workers/) and a new [tutorial](/docs/extensions/mv3/getstarted/tut-quick-reference/).
 
 
-## Changes to Network Request Modification
+## Changes to network request modification
 
 The way that extensions modify network requests also changed in Manifest V3. The [Declarative Net Request API](/docs/extensions/reference/declarativeNetRequest/) replaces the blocking version of the Web Request API, and while the [Web Request](/docs/extensions/reference/webRequest/) API continues to be supported, we are evaluating ways to give users more control over the access they grant.
 
@@ -64,19 +77,12 @@ To help users make these choices, in the coming year we plan to launch some impr
 
 An in-the-works, updated extension menu will better highlight page-level permissions and allow users to easily toggle those permissions on or off as they browse the web. We’re currently fine-tuning the design and experience, but did preview some ideas for the menu in the “[What’s New in Chrome Extensions](https://www.youtube.com/watch?v=QYd2XiUYNlE)” session recording from Google I/O 2023. 
 
-
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 <figure>
   {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/UrejhjXZ6OlZ6rLzYEdL.png", alt="Design exploration for the new permissions menu. It's a work in progress.", width="800", height="817" %}
-  <figcaption>Design exploration for the new permissions menu. This work is in preliminary stages, so the final version may be different.</figcaption>
+  <figcaption>Preliminary design exploration for the new permissions menu. The final version may differ.</figcaption>
 </figure>
 
 Of course, privacy control should also be possible at extension install. That’s why we’re also exploring how to make toggling host permissions at install clearer and easier, so if a user wants to block an extension from accessing their data on their banking site but will allow it anywhere else, they can. Our goal is to make sure the user is informed and in control of what information they’re giving up over the entirety of their extension journey. 
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 <figure>
   {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/RPRcMNuWjPlGUSjNhjWe.png", alt="Design explorations for improvements to setting host permissions at install", width="800", height="450" %}
@@ -91,8 +97,20 @@ Our solution is to replace Web Request Blocking with Declarative Net Request. Wi
 
 By using rules to specify how the browser handles requests, the Declarative Net Request API can support many of the same use cases as Web Request Blocking. Collections of rules ([rulesets](/docs/extensions/reference/declarativeNetRequest/#type-Ruleset)) may be bundled and distributed with a specific version of an extension. 
 
-Here is a sample rule: \
+Here is a sample rule:
 
+```json
+{
+  "id" : 1,
+  "priority": 1,
+  "action" : { "type" : "block" },
+  "condition" : {
+    "urlFilter" : "abc",
+    "domains" : ["foo.com"],
+    "resourceTypes" : ["script"]
+  }
+}
+```
 
 There are three types of rulesets; static, dynamic, and session. Static rulesets are packaged as part of your extension. The current limits for static rules guarantee at least 30,000 per extension. Extensions may be allowed more, subject to a global limit of 300,000 static rules across all of your extensions.
 
