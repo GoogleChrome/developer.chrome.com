@@ -123,9 +123,9 @@ More on how topics are selected is availble in [Topics classification](/docs/pri
 
 The Topics API gives access to topics of interest observed for a user, without having to resort to tracking the sites a user visits, or exposing their navigation history. 
 
-The Topics API _caller_ is the entity that calls the[`document.browsingTopics()` JavaScript method](/docs/privacy-sandbox/topics/#access-topics), or observes and accesses topics [using HTTP request headers](/docs/privacy-sandbox/topics/#use-headers-to-access-and-observe-topics). Your code, and the origin it's called from, in this instance, is the caller. When you call the Topics API, you're instructing the user's browser to observe the topics of interest when the user visits a website. This visit is then considered in the topics calculation for the next epoch.
+The Topics API _caller_ is the entity that calls the[`document.browsingTopics()` JavaScript method](/docs/privacy-sandbox/topics/#access-topics), or observes and accesses topics [using HTTP request headers](/docs/privacy-sandbox/topics/#use-headers-to-access-and-observe-topics). Your code, and the eTLD+1 it's called from, in this instance, is the caller. When you call the Topics API, you're instructing the user's browser to observe the topics of interest when the user visits a website. This visit is then considered in the topics calculation for the next epoch.
 
-The Topics API is designed to [filter results](/docs/privacy-sandbox/topics/topic-classification/#how-the-api-decides-which-callers-see-which-topics) per-caller or per-origin of the context. In other words, the origin of the iframe (when using the JavaScript API) or the URL of the fetch request (when using headers) is considered the caller, and topics are calculated according to that caller. Topics generated for one caller are unique and never shared with other callers.
+The Topics API is designed to [filter results](/docs/privacy-sandbox/topics/topic-classification/#how-the-api-decides-which-callers-see-which-topics) per-caller or per-eTLD+1 of the context. In other words, the origin of the iframe (when using the JavaScript API) or the URL of the fetch request (when using headers) is considered the caller, and topics are calculated according to that caller.
 
 The following diagram illustrates this approach:
 
@@ -150,7 +150,7 @@ There are two ways to observe and access the topics for a user. You can use
     * Fetch **(which is recommended)** or XHR (which is only available during origin trial and not recommended):
         * You can access topics from the `Sec-Browsing-Topics` header in requests to the ad tech back end. This is the most performant option (low latency to observe topics of one specific user).
     * Using an iframe tag with the `browsingtopics` attribute:
-        * You can add an iframe with a `browsingtopics` attribute and Chrome will include topics (observed for origin of the iframe) in the `Sec-Browsing-Topics` header on the request for the iframe.
+        * You can add an iframe with a `browsingtopics` attribute and Chrome will include topics (observed for the eTLD+1  of the iframe) in the `Sec-Browsing-Topics` header on the request for the iframe.
 
 {% Aside %}
 If you are planning to use Topics data in a real-time bidding context (such as GAM or Prebid), we strongly recommend the Headers Option since it is the most performant one (lower latency). 
@@ -231,7 +231,7 @@ t=(), p=P000000000000000000000000000
 On the publisher page, add your code for the fetch request, being sure to include `{browsingTopics: true}`.
 
 ```javascript
-fetch('<topics_caller_origin_URL>', {browsingTopics: true})
+fetch('<topics_caller_eTLD+1_URL>', {browsingTopics: true})
     .then((response) => {
         // Process the response
  })
@@ -244,14 +244,14 @@ In browsers that support the API, the fetch request will include a `Sec-Browsing
 Similarly to a fetch request, the `Sec-Browsing-Topics` header will be sent when using the `browsingtopics` attribute on an iframe.
 
 ```html
-<iframe src="<topics_caller_origin_URL>" browsingtopics></iframe>
+<iframe src="<topics_caller_eTLD+1_URL>" browsingtopics></iframe>
 ```
 
-In this case, the <code><topics_caller_origin_URL></code> will be the caller, similar to the fetch call.
+In this case, the <code><topics_caller_eTLD+1_URL></code> will be the caller, similar to the fetch call.
 
 #### Server side—identical for all cases
 
-To have the topics in the `Sec-Browsing-Topics` request header marked by the browser as observed, the server's response has to include `Observe-Browsing-Topics: ?1`. 
+To have the topics in the `Sec-Browsing-Topics` request header marked by the browser as observed, but also to include the current page visit in the user’s next epoch top topic calculation. the server’s response has to include `Observe-Browsing-Topics: ?1`.
 
 JavaScript example:
 
@@ -325,7 +325,7 @@ A first-party token can be provided in a meta tag, an HTTP header, or [programma
 For example, in a page in an iframe that includes code (from the same origin) that calls `document.browsingTopics()`:
 
 ```html
-<meta http-equiv="origin-trial" content="OT_FOR_<topics_caller_origin_URL>">
+<meta http-equiv="origin-trial" content="OT_FOR_<topics_caller_eTLD+1_URL>">
 ```
 
 #### Provide a third-party origin trial token
@@ -343,7 +343,7 @@ To use Topics with fetch headers, a third-party origin trial token must be provi
   document.head.append(otMeta);
 }
 
-fetch('<topics_caller_origin_URL>', {browsingTopics: true})
+fetch('<topics_caller_eTLD+1_URL>', {browsingTopics: true})
     .then((response) => {
         // Process the response
  })
