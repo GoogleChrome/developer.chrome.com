@@ -28,7 +28,7 @@ tags:
 
 The **Elements** panel gets a new `subgrid` badge for [nested grids](https://developer.mozilla.org/docs/Web/CSS/CSS_Grid_Layout/Subgrid).
 
-To inspect and debug a nested grid, click the badge. It toggles an overlay that shows columns, rows, and their numbers on top of the element in the viewport.
+To inspect and debug a nested grid that is a subgrid, and therefore inheriting the number and size of tracks from its parent, click the badge. It toggles an overlay that shows columns, rows, and their numbers on top of the element in the viewport.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YdYYo1t21cwTUVEW2bgS.png", alt="The subgrid badge and the overlay in the viewport.", width="800", height="549" %}
 
