@@ -15,7 +15,7 @@ tags:
 
 Check this page often to learn about changes to Chrome extensions, extensions documentation, or related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about some of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).) The [Chrome schedule](https://chromiumdash.appspot.com/schedule) lists stable and beta release dates.
 
-### New tool: New Side Panel API {: #side-panel-launch }
+### New tool: Extension Update Testing Tool {: #update-testing-tool }
 
 <p class="color-secondary-text type--caption">Posted on <time>June 5, 2023</time></p>
 
