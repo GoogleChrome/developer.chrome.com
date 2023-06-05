@@ -594,7 +594,7 @@ automatically by Noise Lab, to allow individuals to "hide in the crowd," or in
 other words, protects these limited individuals' privacy with a larger amount
 of added noise.
 
-A low noise indicates that the data setup was designed in such
+A low noise value indicates that the data setup was designed in such
 a way that already allows individuals to "hide in the crowd." This means the
 buckets contain contributions from a sufficient number of events to ensure that
 individual user privacy is protected.
