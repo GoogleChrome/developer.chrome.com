@@ -23,6 +23,8 @@ As we've [announced in January 2022](/blog/immutable-document-domain/), we are d
 same-origin policy via `document.domain`, your immediate
 action is required.
 
+Note that intending to set `document.domain` will fail silently.
+
 Continue to read more about why this is changing or skip to [alternative code](#alternatives) you can implement.
 
 {% endAside %}
@@ -133,8 +135,14 @@ read the ["Document.domain" page on MDN](https://developer.mozilla.org/docs/Web/
 
 ## How do I know if my site is affected?
 
+{% Aside 'warning' %}
+
+Setting `document.domain` will fail silently. No error will be thrown (as [specified](https://html.spec.whatwg.org/multipage/browsers.html#dom-document-domain)).
+
+{% endAside %}
+
 If your website is affected by this change, Chrome warns you in the DevTools
-Issues panel — this warning has been added in 2022. \
+Issues panel — this warning has been added in 2022.
 Notice the yellow flag in the upper right of DevTools.
 
 {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/HIqzEZLIDAIPgY9y39X1.png", alt="Screenshot of the issue warning in DevTools", width="800", height="255" %}
