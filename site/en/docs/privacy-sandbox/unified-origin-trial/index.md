@@ -30,7 +30,7 @@ through the configuration steps to access the APIs, tells you how to validate
 your configuration, and provides further resources for testing against the APIs.
 
 {% Aside 'key-term' %}
-Note: The term "traffic" is used to refer to the percentage of Chrome browser instances included in the trial, not the percentage of requests made to individual sites.
+_Traffic_ refers to the percentage of Chrome browser instances included in the trial, not the percentage of requests made to individual sites.
 {% endAside %}
 
 ## Check the status of the origin trial {: #status}
