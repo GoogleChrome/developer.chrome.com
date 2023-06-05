@@ -13,6 +13,10 @@ tags:
   - capabilities
 ---
 
+{% Aside 'celebration' %}
+The origin private file system allows web apps to store and manipulate files in their very own origin-specific virtual filesystem, including low-level file manipulation, byte-by-byte access, and file streaming. The origin private file system is supported across all major browsers.
+{% endAside %}
+
 ## Motivation
 
 When you think of files on your computer, you probably think about a file hierarchy: files organized in folders that you can explore with your operating system's file explorer. For example, on Windows, for a user called Tom, their To Do list might live in `C:\Users\Tom\Documents\ToDo.txt`. In this example, `ToDo.txt` is the file name, and `Users`, `Tom`, and `Documents` are folder names. `C:\` on Windows  represents the root directory of the drive.
