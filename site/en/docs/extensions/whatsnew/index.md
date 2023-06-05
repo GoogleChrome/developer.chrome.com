@@ -19,7 +19,7 @@ Check this page often to learn about changes to Chrome extensions, extensions do
 
 <p class="color-secondary-text type--caption">Posted on <time>June 5, 2023</time></p>
 
-We've just released the [Extension Update Testing Tool](https://github.com/GoogleChromeLabs/extension-update-testing-tool), a local extension update server that can be used for testing updates to Chrome Extensions during local development, including permission grants. Additionally, the tool shows: the user's update flow, including keeping an extension disabled until a user grants permissions; a migration flow that's similar to what users see when updating form the Chrome Web Store. This tool is also useful for simulating the permission changes requested when updatng an extension from Manifest V2 to Manifest V3.
+We've just released the [Extension Update Testing Tool](https://github.com/GoogleChromeLabs/extension-update-testing-tool), a local extension update server that can be used for testing updates to Chrome Extensions during local development, including permission grants. The tool shows the user's update flow, including keeping an extension disabled until a user grants any newly requested permissions. This tool is particularly useful for simulating the permission changes requested when updating an extension from Manifest V2 to Manifest V3.
 
 ### Chrome 114: New Side Panel API {: #side-panel-launch }
 
