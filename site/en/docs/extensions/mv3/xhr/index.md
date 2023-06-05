@@ -71,6 +71,10 @@ non-secure HTTP access to a given host or set of hosts, it must declare the perm
 ]
 ```
 
+## Fetch() vs. XMLHttpRequest()
+
+`fetch()` was created specifically for service workers and follows a broader web trend away from synchronous operations. The `XMLHttpRequest` API is supported in extensions outside of the service worker, and calling `XMLHttpRequest` will trigger the service worker's fetch handler. New work should favor the use of `fetch()` wherever possible. 
+
 ## Security considerations {: #security-considerations }
 
 ### Avoiding cross-site scripting vulnerabilities {: #xss }
@@ -181,11 +185,6 @@ If you modify the default [Content Security Policy][12] for your extension by ad
 `content_security_policy` attribute to your manifest, you'll need to ensure that any hosts to which
 you'd like to connect are allowed. While the default policy doesn't restrict connections to hosts,
 be careful when explicitly adding either the `connect-src` or `default-src` directives.
-
-### Using  Fetch() vs. XMLHttpRequest()
-
-`fetch()` was created specifically for service workers and follows a broader web trend away from synchronous operations. The `XMLHttpRequest` API is supported in extensions outside of the service worker, and calling `XMLHttpRequest` will trigger the service worker's fetch handler. New work should favor the use of `fetch()` wherever possible.
-
 
 [1]: https://www.w3.org/TR/XMLHttpRequest/
 [2]: https://en.wikipedia.org/wiki/Same_origin_policy
