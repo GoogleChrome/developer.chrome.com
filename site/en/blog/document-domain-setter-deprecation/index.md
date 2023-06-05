@@ -19,11 +19,11 @@ alt: >
 
 {% Aside 'warning' %}
 
-As we've [announced in January 2022](/blog/immutable-document-domain/), we are deprecating the `document.domain` setter in [Chrome 115](https://chromiumdash.appspot.com/schedule). If your website relies on relaxing the
+As we've [announced in January 2022](/blog/immutable-document-domain/), we are deprecating the `document.domain` setter starting in [Chrome 115](https://chromiumdash.appspot.com/schedule). If your website relies on relaxing the
 same-origin policy via `document.domain`, your immediate
 action is required.
 
-Note that intending to set `document.domain` will fail silently.
+Note that using the `document.domain` setter (`document.domain = ...`) will not throw an exception. It will only cease to have an effect.
 
 Continue to read more about why this is changing or skip to [alternative code](#alternatives) you can implement.
 
@@ -137,7 +137,7 @@ read the ["Document.domain" page on MDN](https://developer.mozilla.org/docs/Web/
 
 {% Aside 'warning' %}
 
-Setting `document.domain` will fail silently. No error will be thrown (as [specified](https://html.spec.whatwg.org/multipage/browsers.html#dom-document-domain)).
+Note that starting in Chrome 115, using the `document.domain` setter will not throw an exception, as per the [specification](https://html.spec.whatwg.org/multipage/browsers.html#dom-document-domain). It will only cease to have an effect. 
 
 {% endAside %}
 
