@@ -11,9 +11,9 @@ tags:
   - extensions-news
 ---
 
-As covered in our [technical session at Google I/O 2023](https://www.youtube.com/watch?v=QYd2XiUYNlE), Google has been working over the last several years to adapt the extensions platform and the Chrome Web Store to set a higher bar for performance, data access, privacy, and security. 
+As covered in the [technical session at Google I/O 2023](https://www.youtube.com/watch?v=QYd2XiUYNlE), Google has been working over the last several years to adapt the extensions platform and the Chrome Web Store to set a higher bar for performance, data access, privacy, and security. 
 
-Many of the platform changes that raise these standards for extensions are incorporated into Manifest V3. This post will take a look at the motivations for MV3 and some of the changes that are incorporated into it.
+Many of the platform changes that raise these standards for extensions are incorporated into Manifest V3. This post will summarize the motivations for moving to MV3 and examine some of the changes that are incorporated into it.
 
 Manifest V2 deprecation timelines are currently under review and there is no official timeline for when we will begin experiments to remove support in Chrome. For more information on deprecation, read our most recent update in the [chromium-extensions](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/zQ77HkGmK9E) Google Group or check out the [Manifest V3 Known Issues page](/docs/extensions/migrating/known-issues/). This post will share some additional context on the migration but does not include any updates on the timeline, which we will share as separate updates in the future.
 
@@ -78,7 +78,7 @@ To help users make these choices, in the coming year we plan to launch some impr
 An in-the-works, updated extension menu will better highlight page-level permissions and allow users to easily toggle those permissions on or off as they browse the web. We’re currently fine-tuning the design and experience, but did preview some ideas for the menu in the “[What’s New in Chrome Extensions](https://www.youtube.com/watch?v=QYd2XiUYNlE)” session recording from Google I/O 2023. 
 
 <figure>
-  {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/UrejhjXZ6OlZ6rLzYEdL.png", alt="Design exploration for the new permissions menu. It's a work in progress.", width="800", height="817" %}
+  {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/hKybdlq1HHzQ9QAQD84C.png", alt="Design exploration for the new permissions menu. It's a work in progress.", width="800", height="698" %}
   <figcaption>Preliminary design exploration for the new permissions menu. The final version may differ.</figcaption>
 </figure>
 
