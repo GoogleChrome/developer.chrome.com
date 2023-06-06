@@ -432,18 +432,6 @@ When using the JavaScript API from an iframe, a common mistake is to add an orig
     1. HTTP errors on topics calls;
 1. Try to limit changes to your implementation during the initial three weeks.
 
-## Scale to production
-
-Here's a step-by-step summary of how you can scale to production. The steps are explained below.
-
-1. Scale the implementation (production) This is described below.
-    1. Add the iframe to multiple publisher's websites.
-1. Process and use topics data (Estimated time: around 4 weeks).
-    1. Incorporate topics data as an additive signal alongside other data.
-    1. Source real-time-bidding testing partners.
-    1. Run utility testing with topics as an additive signal to your other data.
-
-
 ## Scale your implementation
 
 At this point you should have topics data being collected from some sites in a controlled environment, with a higher level of confidence about the whole solution.
