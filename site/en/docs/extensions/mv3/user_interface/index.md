@@ -4,15 +4,15 @@ title: "Design the user interface"
 seoTitle: "Chrome Extensions: Design the user interface"
 date: 2018-03-16
 updated: 2023-05-30
-description: UI and design guidelines for Chrome Extensions.
+description: User interface and design guidelines for Chrome Extensions.
 ---
 
-Like Chrome's user interface (UI), an extension UI should be purposeful and minimal. Extensions
+Like Chrome's user interface, an extension user interface should be purposeful and minimal. Extensions
 should allow users to customize or enhance the user's browsing experience without distracting
 from it. 
 
 This guide explores required and optional user interface features. Use it to understand how and when
-to implement different UI elements within an extension.
+to implement different user interface elements within an extension.
 
 ## The extension action {: #action }
 
@@ -31,19 +31,21 @@ order.
 
 {% Column %} 
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/iouvm1a3lsQWGyg6fSMS.png", alt="Unpinned extension",
+<figure>
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/iouvm1a3lsQWGyg6fSMS.png", alt="Unpinned extension",
 width="400", height="374", class="screenshot" %}
-
-**Unpinned extension** 
+  <figcaption>Unpinned extension.</figcaption>
+</figure>
 
 {% endColumn %}
 
 {% Column %} 
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/KS09fVoCj3YWuIoH5EFn.png", alt="Pinned extension",
+<figure>
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/KS09fVoCj3YWuIoH5EFn.png", alt="Pinned extension",
 width="400", height="382", class="screenshot" %}
-
-**Pinned extension** 
+  <figcaption>Pinned extension.</figcaption>
+</figure>
 
 {% endColumn %}
 
@@ -53,6 +55,8 @@ width="400", height="382", class="screenshot" %}
 
 To use the Action API, the extension's [manifest][manifest-file] must contain an `"action"`
 key. This informs the browser that the extension will customize the action.
+
+{% Label %}manifest.json:{% endLabel %}
 
 ```json
 {
@@ -65,13 +69,13 @@ key. This informs the browser that the extension will customize the action.
 }
 ```
 
-See the [manifest section][action-manifest] of the Action API docs for a full description on the
+See the [manifest section][action-manifest] of the Action API docs for a full description of the
 optional properties of this field.
 
 ###  Activate the action conditionally  {: #activate_pages }
 
 The [DeclarativeContent API][api-declarativecontent] allows you to enable the extension's action
-based on the page URL or if the CSS selectors match the elements on the page.
+based on the page URL or when the CSS selectors match the elements on the page.
 
 When an extension is disabled, the icon is grayed out. If the user clicks the disabled extension,
 the extension's context menu will appear.
@@ -88,8 +92,8 @@ alt="Clicked Disabled extension", width="252", height="180", class="screenshot" 
 ## Provide the extension icons
 
 An extension requires at least one icon to represent it. Provide icons in PNG format for the best
-visual results, although any raster format supported by Chrome including BMP, GIF, ICO, and JPEG is
-accepted.
+visual results, although any raster format supported by Chrome is accepted. This includes BMP,
+GIF, ICO, and JPEG.
 
 {% Aside 'caution' %}
 
@@ -102,8 +106,10 @@ Ensure your icon follows the [extension icon best practices][docs-icon-guideline
 ### Designate action icons {: #icons }
 
 Icons specific to the toolbar are registered in the `"default_icon"` field under
-[`action`][api-action] in the manifest. Including multiple sizes is encouraged to scale for the
+[`"action"`][api-action] in the manifest. Including multiple sizes is encouraged to scale for the
 16-dip space. At minimum, 16x16 and 32x32 sizes are recommended.
+
+{% Label %}manifest.json:{% endLabel %}
 
 ```json
 {
@@ -136,6 +142,8 @@ Include additional icons in the following sizes for uses outside of the toolbar.
 
 Register icons in the manifest under the `"icons"` field.
 
+{% Label %}manifest.json:{% endLabel %}
+
 ```json
 {
   "name": "My Awesome Extension",
@@ -150,7 +158,7 @@ Register icons in the manifest under the `"icons"` field.
 }
 ```
 
-## Additional UI features {: #additional_features }
+## Additional user interface features {: #additional_features }
 
 ### Action badge {: #badge }
 
@@ -163,17 +171,31 @@ the extension is idle. Badges can contain up to 4 characters.
 
 {% Columns %}
 
-{% Column %} 
+{% Column %}
 
+<figure>
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/nXwAHSWLBEgT8099ITT0.png", alt="Badge On",
-       height="72", width="72" %}
+       height="72", width="72" %}  
+<figcaption>
+    An action icon with a badge.
+  </figcaption>
+</figure>
+
+
 
 {% endColumn %}
 
 {% Column %} 
 
+<figure>
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/pNz8UgfTBMmcf7fE9wja.png", alt="Badge Off",
-       height="72", width="72" %}
+       height="72", width="72" %}  
+<figcaption>
+    An action icon without a badge.
+  </figcaption>
+</figure>
+
+
 
 {% endColumn %}
 
@@ -183,6 +205,8 @@ You can set the text of the badge by calling [`chrome.action.setBadgeText()`][ac
 the banner color by calling
 [`chrome.action.setBadgeBackgroundColor()`][action-setbadgebackgroundcolor].
 
+{% Label %}service-worker.js:{% endLabel %}
+
 ```js
 chrome.action.setBadgeText({text: 'ON'});
 chrome.action.setBadgeBackgroundColor({color: '#4688F1'});
@@ -191,14 +215,20 @@ chrome.action.setBadgeBackgroundColor({color: '#4688F1'});
 ### Popup {: #popup }
 
 A popup is an HTML file that is displayed in a special window when the user clicks the action icon.
-A popup works very similarly to a web page; it can contain links to stylesheets and script tags, but
+A popup works similarly to a web page; it can contain links in style and script tags, but
 does not allow inline JavaScript.
 
 The [Drink Water Event][sample-drink] example popup displays available timer options. Users set an
 alarm by clicking one of the provided buttons.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/JVduBMXnyUorfNjFZmue.png", alt="Popup sample
-screenshot", height="361", width="213", class="screenshot" %}
+<figure>
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/JVduBMXnyUorfNjFZmue.png", alt="The Drink Water popup", height="361", width="213", class="screenshot" %}  
+<figcaption>
+    The Drink Water popup.
+  </figcaption>
+</figure>
+
+{% Label %}popup.html:{% endLabel %}
 
 ```html
 <html>
@@ -218,6 +248,8 @@ screenshot", height="361", width="213", class="screenshot" %}
 
 The popup is registered in the manifest under the `"action"` key.
 
+{% Label %}manifest.json:{% endLabel %}
+
 ```json
 {
   "name": "Drink Water Event",
@@ -229,7 +261,9 @@ The popup is registered in the manifest under the `"action"` key.
 }
 ```
 
-Popups can also be set dynamically by calling [`action.setPopup`][action-setpopup].
+Popups can also be set dynamically by calling [`action.setPopup()`][action-setpopup].
+
+{% Label %}???:{% endLabel %}
 
 ```js
 chrome.storage.local.get('signed_in', (data) => {
@@ -243,7 +277,7 @@ chrome.storage.local.get('signed_in', (data) => {
 
 ### Side panel {: #side-panel } 
 
-An extension side panel is an HTML file that provides additional functionality alongside the main content of a webpage. The [Dictionary side panel][sample-dictionary-sidepanel] example allows users to right-click on a word and see the definition on the side panel.
+An extension side panel is an HTML file that provides additional functionality alongside the main content of a web page. The [Dictionary side panel][sample-dictionary-sidepanel] example allows users to right-click on a word and see the definition in the side panel.
 
 <figure>
   {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/9QJK3CNx71t67M3MlIUY.png", alt="Selecting the Dictionary side panel", width="379", height="386" %}
@@ -263,13 +297,20 @@ For more samples and use cases, see the [Side Panel API][api-sidepanel] referenc
 
 ### Tooltip {: #tooltip }
 
-Use a tooltip to give short descriptions or instructions to users when hovering over the action
+Use a tooltip to give short descriptions or instructions to users when they hover over the action
 icon. By default, the tootip displays the name of the extension.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Go8aQg0vd0f2hkOFElLK.png", alt="A screenshot of an
+<figure>
+  {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Go8aQg0vd0f2hkOFElLK.png", alt="An
 example tooltip", height="157", width="419", class="screenshot" %}
+  <figcaption>
+    An example tooltip.
+  </figcaption>
+</figure>
 
 Tooltips are registered in the `"default_title"` field under the `"action"` key in the manifest.
+
+{% Label %}manifest.json:{% endLabel %}
 
 ```json
 {
@@ -282,16 +323,18 @@ Tooltips are registered in the `"default_title"` field under the `"action"` key 
 }
 ```
 
-Tooltips can also be set or updated by calling [`action.setTitle`][action-settitle].
+Tooltips can also be set or updated by calling [`action.setTitle()`][action-settitle].
 
 ### Click Event {: #click}
 
-It's possible to register an [OnClicked handler][action-onclicked] for when the user clicks the action
+It's possible to register an [`OnClicked` handler][action-onclicked] for when the user clicks the action
 item. However, this won't fire if the action has a popup (default or otherwise).
 
+{% Label %}service-worker.js:{% endLabel %}
+
 ```js
-chrome.action.onClicked.addListener(function(tab) {
-  chrome.action.setTitle({tabId: tab.id, title: "You are on tab:" + tab.id});
+chrome.action.onClicked.addListener((tab) => {
+  chrome.action.setTitle({tabId: tab.id, title: `You are on tab: ${tab.id}`});
 });
 ```
 
@@ -300,6 +343,8 @@ chrome.action.onClicked.addListener(function(tab) {
 Users can invoke extension functionality through the [Omnibox API][api-omnibox]. Include the `"omnibox"`
 field in the manifest and designate a keyword. The [Omnibox New Tab Search][sample-new-tab-search]
 sample extension uses <kbd>nt</kbd> as the keyword.
+
+{% Label %}manifest.json:{% endLabel %}
 
 ```json/3
 {
@@ -317,16 +362,22 @@ sample extension uses <kbd>nt</kbd> as the keyword.
 When the user types "nt" into the omnibox, it activates the extension. To signal this to the user,
 it grayscales the provided 16x16 icon and includes it in the omnibox next to the extension name.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/T0jCZDUVfuEANigPV6bY.png", alt="Active Omnibox
-Extension", height="70", width="476", class="screenshot" %}
+<figure>
+  {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/T0jCZDUVfuEANigPV6bY.png", alt="An example of Omnibox functionality", height="70", width="476", class="screenshot" %}
+  <figcaption>
+    An example of Omnibox functionality.
+  </figcaption>
+</figure>
 
 The extension listens to the [`omnibox.onInputEntered`][omnibox-inputentered] event. After it's
 triggered, the extension opens a new tab containing a Google search for the user's entry.
 
+{% Label %}service-worker.js:{% endLabel %}
+
 ```js
-chrome.omnibox.onInputEntered.addListener(function(text) {
+chrome.omnibox.onInputEntered.addListener((text) => {
   // Encode user input for special characters , / ? : @ & = + $ #
-  const newURL = 'https://www.google.com/search?q=' + encodeURIComponent(text);
+  const newURL = `https://www.google.com/search?q=${encodeURIComponent(text)`;
   chrome.tabs.create({ url: newURL });
 });
 ```
@@ -335,6 +386,8 @@ chrome.omnibox.onInputEntered.addListener(function(text) {
 
 You can use the [ContextMenus API][api-context-menu] by granting the `"contextMenus"` permission in the
 manifest.
+
+{% Label %}manifest.json:{% endLabel %}
 
 ```json/4
 {
@@ -355,10 +408,15 @@ manifest.
 
 The 16x16 icon is displayed next to the new menu entry.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/jpA0DLCg2sEnwIf4FkLp.png", alt="Context Menu Icon",
+<figure>
+  {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/jpA0DLCg2sEnwIf4FkLp.png", alt="A context menu icon",
 height="300", width="300", class="screenshot" %}
+  <figcaption>
+    A context menu icon.
+  </figcaption>
+</figure>
 
-Create a context menu by calling [`contextMenus.create()`][contextmenu-create] in the service worker. This should be done under the [`runtime.onInstalled`][runtime-oninstalled] listener event.
+Create a context menu by calling [`contextMenus.create()`][contextmenu-create] in the service worker. Do this in the [`runtime.onInstalled`][runtime-oninstalled] event listener.
 
 {% Label %}service-worker.js:{% endLabel %}
 
@@ -374,6 +432,8 @@ chrome.runtime.onInstalled.addListener(async () => {
   }
 });
 ```
+
+{% Label %}locals.js:{% endLabel %}
 
 ```js
 const tldLocales = {
@@ -392,17 +452,25 @@ const tldLocales = {
 };
 ```
 
-The [Global Google Search context menu example][sample-context-menu] creates multiple options from the list in
-`locales.js`. When an extension contains more than one context menu, Chrome automatically
-collapses them into a single parent menu.
+The [Global Google Search context menu example][sample-context-menu] provides multiple context menu options based on the list in
+`locales.js` (see above). When an extension contains more than one context menu, Chrome automatically
+collapses them into a single parent menu (see below).
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/LhrliaEhN82maJmeNp7f.png", alt="Multiple Context
-Menus will Collapse", height="306", width="500", class="screenshot" %}
+<figure>
+  {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/LhrliaEhN82maJmeNp7f.png", alt="Multiple context
+menus will collapse", height="306", width="500", class="screenshot" %}
+  <figcaption>
+    Multiple context menus will collapse.
+  </figcaption>
+</figure>
+
 
 ### Commands {: #commands }
 
-Extensions can define specific [Commands API][api-commands] and bind them to a key combination. Register
+Use the [Commands API][api-commands] to define commands and bind them to a key combination. Register
 one or more shortcuts in the manifest under the `"commands"` key.
+
+{% Label %}manifest.json:{% endLabel %}
 
 ```json
 {
@@ -428,7 +496,7 @@ one or more shortcuts in the manifest under the `"commands"` key.
 }
 ```
 
-Commands can be used to provide new or alternative browser shortcuts. The [Tab
+Use commands to provide new or alternative browser shortcuts. The [Tab
 Flipper][sample-tab-flipper] sample extension listens to the
 [`commands.onCommand`][commands-oncommand] event in the [service worker][docs-service-worker] and
 defines functionality for each registered combination.
@@ -437,7 +505,7 @@ defines functionality for each registered combination.
 
 ```js
 
-chrome.commands.onCommand.addListener(command => {
+chrome.commands.onCommand.addListener((command) => {
   // command will be "flip-tabs-forward" or "flip-tabs-backwards"
 
   chrome.tabs.query({currentWindow: true}, tabs => {
@@ -458,17 +526,16 @@ chrome.commands.onCommand.addListener(command => {
 
 ### Override pages {: #override }
 
-An extension can [override][docs-override] and replace the History, New Tab, or Bookmarks page
-with a custom HTML file. Like a [popup][section-popup], it can include specialized logic and style,
-but does not allow inline JavaScript. 
+An extension can [override][docs-override] _one_ of thee possible pages:
 
-{% Aside %}
+* History
+* New tab
+* Bookmarks
 
-A single extension is limited to overriding **only one** of the three possible pages.
+Use a custom HTML file to do this. As with a [popup][section-popup], it can include specialized logic and style,
+but does not allow inline JavaScript. Register it in the manifest under the `"chrome_url_overrides"` field.
 
-{% endAside %}
-
-Register an override page in the manifest under the `"chrome_url_overrides"` field.
+{% Label %}manifest.json:{% endLabel %}
 
 ```json
 {
@@ -485,6 +552,8 @@ Register an override page in the manifest under the `"chrome_url_overrides"` fie
 The `"newtab"` field should be replaced with `"bookmarks"` or `"history"` when overriding those
 pages.
 
+{% Label %}override_page.html:{% endLabel %}
+
 ```html
 <html>
   <head>
@@ -500,15 +569,12 @@ pages.
 ### Notifications
 
 You can communicate relevant information to users by displaying notifications directly in their
-system tray.
-
-To use the [Notifications API][api-notif], you must declare the `"notifications"` permission in
-the manifest.
+system tray. To use the [Notifications API][api-notif], you must declare the `"notifications"`
+permission in the manifest.
 
 {% Label %}manifest.json:{% endLabel %}
 
 ```json/5
-
 { 
   "name": "Drink Water Event Popup",
 ...
@@ -545,11 +611,11 @@ function showStayHydratedNotification() {
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/e5S112AtwfnA5o64JrGg.png", 
 alt="Mac OS notification", width="500", height="150", class="screenshot" %}
   <figcaption>
-    Notification in Mac OS
+    Notification on macOS.
   </figcaption>
 </figure>
 
-## Internationalize the UI {: #localize }
+## Internationalize the user interface {: #localize }
 
 You can use the [I18n API][api-i18n] to internationalize your extension. Create directories
 to house language specific messages within a folder called `_locales/`, like this:
@@ -564,7 +630,7 @@ following code localizes the tooltip:
 
 {% Column %}
 
-Located in  `_locales/en/messages.json`:
+{% Label %}_locales/en/messages.json:{% endLabel %}
 
 ```json
 {
@@ -579,7 +645,7 @@ Located in  `_locales/en/messages.json`:
 
 {% Column %}
 
-Located in `_locales/es/messages.json`:
+{% Label %}_locales/es/messages.json:{% endLabel %}
 
 ```json
 {
