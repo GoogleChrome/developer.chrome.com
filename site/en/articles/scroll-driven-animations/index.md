@@ -15,11 +15,11 @@ tags:
   - chrome-115
 ---
 
-{% Aside %} This feature is available in Chrome 115 with “Experimental Web Platform Features” enabled. {% endAside %}
-
 {% YouTube id="oDcb3fvtETs", startTime="335" %}
 
 ## Scroll-driven animations
+
+{% BrowserCompat 'css.properties.animation-timeline' %}
 
 Scroll-driven animations are a common UX pattern on the web. A scroll-driven animation is linked to the scroll position of a scroll container. This means that as you scroll up or down, the linked animation scrubs forward or backward in direct response. Examples of this are effects such as parallax background images or reading indicators which move as you scroll.
 

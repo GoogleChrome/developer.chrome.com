@@ -63,6 +63,9 @@ redirects:
 - from: /docs/extensions/mv3/mv2-sunset/
   to: /docs/extensions/migrating/mv2-sunset/
 
+- from: /docs/extensions/mv3/xhr
+  to: /docs/extensions/mv3/network-requests
+
 - from: /blog/fedcm-origin-trial
   to: /docs/privacy-sandbox/fedcm
 
