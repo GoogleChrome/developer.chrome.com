@@ -24,7 +24,7 @@ The first step is to familiarize yourself with the Topics API and services.
 1. Review developer docs: 
     1. Begin by reading the [overview](/docs/privacy-sandbox/topics/overview.) to get up to speed with the Topics API and its capabilities.
     1. Watch the [Topics demo walkthrough](https://www.youtube.com/watch?v=hEBzWuXjeTQ) (video).
-    1. Try the Topics [header](/docs/privacy-sandbox/topics/#demo-1) and [JavaScript API](https://topics-demo.glitch.me/) demos.
+    1. Try the Topics [header](https://topics-fetch-demo.glitch.me/) and [JavaScript API](https://topics-demo.glitch.me/) demos.
     1. Fork the demos (they both provide links to their code) and run them from your own site.
     1. Read the API [explainer](https://github.com/patcg-individual-drafts/topics) to understand more of the details.
 1. Check the [implementation status](/docs/privacy-sandbox/topics/#implementation-status) and the [timeline](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline) of the Topics API.
@@ -42,7 +42,7 @@ This section describes how to try out the Topics API as an individual developer.
 [Participate in the origin trial](#participate-in-the-origin-trial) explains how to test at scale with your users by taking part in the origin trial.
 
 1. Local testing and deployment (Estimated time: around 2 days)
-    1. Enable the API with your local browser from the command line with [feature flags](/docs/privacy-sandbox/topics/#feature-flags). Test the [header](/docs/privacy-sandbox/topics/#demo-1) and [JavaScript API](https://topics-demo.glitch.me/) demos to see Topics in action ([walkthrough video](https://www.youtube.com/watch?v=hEBzWuXjeTQ)).
+    1. Enable the API with your local browser from the command line with [feature flags](/docs/privacy-sandbox/topics/#feature-flags). Test the [header](https://topics-fetch-demo.glitch.me/) and [JavaScript API](https://topics-demo.glitch.me/) demos to see Topics in action ([walkthrough video](https://www.youtube.com/watch?v=hEBzWuXjeTQ)).
     1. Run the [Topics colab](/docs/privacy-sandbox/topics/colab/) to test topic inference using the Topics machine learning model.
 
 
@@ -120,7 +120,7 @@ How the API observes and accesses topics. <a href="https://wd.imgix.net/image/Rt
 2. After seven days navigating, with topics of interest being observed by the Topics API, the same user on the same device visits a target website (publisher-e.example). The Topics API returns a list of topics and in this specific example, one topic calculated from the previous week of observations of this user will be returned.
     * Only browsers of users who visited sites that adtech.example has observed in Step 1 will be returning topics results in Step 2 (we call this observation filtering—you can't see topics of users you never saw before).
 3. With this list (of one topic for now) you can call your back-end API (ads.adtech.example/topics-backend) to use topics data as part of your contextual dataset.
-4. Now, depending on your use case, you can create a more personalised experience for this user by accessing the topics of interest you have observed for them during the last weeks.
+4. Now, depending on your use case, you can create a more personalized experience for this user by accessing the topics of interest you have observed for them during the last weeks.
 
 ### Call the Topics API
 
@@ -137,7 +137,7 @@ There are two ways to observe and access the topics for a user. You can use
 
 ### Implement with JavaScript and iframes
 
-We recommend you fork the [Topics API demo](https://glitch.com/edit/#!/topics-demo?path=README.md%3A1%3A0) and use it as a starting point for your code.
+We recommend you fork either the Topics [JavaScript API demo](https://glitch.com/edit/#!/topics-demo) or the [header demo](https://glitch.com/edit/#!/topics-demo) and use one of these as a starting point for your code.
 
 You can include an `<iframe>` element in HTML or add an iframe dynamically with JavaScript. One way to dynamically create an iframe is with the following JavaScript:
 
@@ -174,7 +174,7 @@ Here's an example of what the API returns:
 ```
 
 * **configVersion**: a string identifying the current configuration.
-* **modelVersion**: a string identifying the machine-learning classifier used to infer site.
+* **modelVersion**: a string identifying the machine-learning classifier used to infer topics.
 * **taxonomyVersion**: a string identifying the set of topics currently in use by the browser.
 * **topic**: a number identifying the topic in the taxonomy.
 * **version**: a string combining the `configVersion` and the `modelVersion`.
@@ -411,10 +411,7 @@ If you are calling the Topics API within the first week of observing a user, the
 <dd>
 Make sure your origin trial configuration is correct. <a href="/docs/web-platform/origin-trial-troubleshooting/">Troubleshoot Chrome origin trials</a> provides a checklist to help fix origin trial problems.
 
-When using the JavaScript API from an iframe, a common mistake is to add an origin trial token to the target site (top level site). 
-<br>
-
-**When using the JavaScript API, the origin trial token must be added to your iframe instead.**
+When using the JavaScript API from an iframe, a common mistake is to add an origin trial token to the target site (top level site). Instead, the origin trial token must be provided from your iframe.
 
 </dd>
 </dl>
@@ -431,7 +428,7 @@ When using the JavaScript API from an iframe, a common mistake is to add an orig
     1. It depends on the device being selected to participate in this origin trial .
     1. Users can explicitly disable the Topics API.
     1. Publisher's pages can control permissions policy. Refer to ([opt-out](/docs/privacy-sandbox/topics/#site-opt-out)) in the Topics API developer guide.
-    1. Check [https://chromestatus.com/](https://chromestatus.com/) for more details.
+    1. Check [chromestatus.com](https://chromestatus.com/) for more details.
 1. Add metrics and observability to this environment: you'll need them to analyze the first results. Example metrics include:
     1. Latency of calls;
     1. HTTP errors on topics calls;
