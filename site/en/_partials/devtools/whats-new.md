@@ -8,7 +8,6 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 
 * [Elements improvements](/blog/new-in-devtools-115/#elements)
 * [New CSS subgrid badge](/blog/new-in-devtools-115/#subgrid)
-* [Linear timing support in the Easing Editor](/blog/new-in-devtools-115/#linear)
 * [Selector specificity in tooltips](/blog/new-in-devtools-115/#specificity)
 * [Values of custom CSS properties in tooltips](/blog/new-in-devtools-115/#css-variable-values)
 * [Sources improvements](/blog/new-in-devtools-115/#sources)
