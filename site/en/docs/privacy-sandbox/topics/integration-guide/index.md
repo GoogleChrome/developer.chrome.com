@@ -22,7 +22,7 @@ You can [make article suggestions here](https://github.com/GoogleChrome/develope
 The first step is to familiarize yourself with the Topics API and services.
 
 1. Review developer docs: 
-    1. Begin by reading the [overview](/docs/privacy-sandbox/topics/overview.) to get up to speed with the Topics API and its capabilities.
+    1. Begin by reading the [overview](/docs/privacy-sandbox/topics/overview/) to get up to speed with the Topics API and its capabilities.
     1. Watch the [Topics demo walkthrough](https://www.youtube.com/watch?v=hEBzWuXjeTQ) (video).
     1. Try the Topics [header](https://topics-fetch-demo.glitch.me/) and [JavaScript API](https://topics-demo.glitch.me/) demos.
     1. Fork the demos (they both provide links to their code) and run them from your own site.
