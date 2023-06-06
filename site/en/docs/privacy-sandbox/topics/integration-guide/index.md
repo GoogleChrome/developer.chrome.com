@@ -110,7 +110,7 @@ The following diagram illustrates this approach:
 
 {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/VVymEStTvzIonqoYlAUr.png", alt="The steps the Topics API takes as users visit sites that use the API.", width="800", height="382" %}
 <figcaption>
-How the API observes and accesses topics. <a href="https://wd.imgix.net/image/RtQlPaM9wdhEJGVKR8boMPkWf443/VVymEStTvzIonqoYlAUr.png?auto=format&w=650" target="blank">View a larger version</a>.
+How the API observes and accesses topics. 
 </figcaption>
 
 **In this diagram**:
@@ -189,7 +189,6 @@ Topics can be accessed from the `Sec-Browsing-Topics` header of a fetch()/XHR re
 {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/8kXFG5e0AnZJvwNEb7yB.png", alt="Request and Response headers for setting and retrieving topics.", width="800", height="382" %}
 <figcaption>
 Headers for iframe and <code>fetch()</code>. 
-<a href="https://wd.imgix.net/image/RtQlPaM9wdhEJGVKR8boMPkWf443/8kXFG5e0AnZJvwNEb7yB.png?auto=format&w=650" target="blank">View a larger version</a>.
 </figcaption>
 
 You can mark topics provided by request headers as observed by setting an `Observe-Browsing-Topics: ?1` header on the response to the request. The browser will then use those topics to calculate topics of interest for a user.
@@ -298,7 +297,6 @@ You can register multiple tokens for the same eTLD+1 if necessary—both first- 
 
     {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/cgWSN3o9pUqFq8ZtRB3e.png", alt="Decision tree to help you determine the type of token you need.", width="800", height="455" %}
     <figcaption>Determining which token you need. 
-    <a href="https://wd.imgix.net/image/RtQlPaM9wdhEJGVKR8boMPkWf443/gJbUnelS717NwYGd7zYR.png" target="blank">View a larger version</a>.
     </figcaption>
 
 1. **Register as a third party**. This is recommended when you are not implementing the Topics API directly into your application and are relying on another partner to test it for you. [Learn about third-party origin trials](/docs/web-platform/third-party-origin-trials/).
