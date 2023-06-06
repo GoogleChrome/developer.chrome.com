@@ -35,7 +35,7 @@ This experiment lets you pause execution and debug C and C++ code in Wasm apps, 
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/8COHSVU8nn1m9qjHH15z.png", alt="A Wasm application paused in the Debugger.", width="800", height="762" %}
 
-To test Wasm debugging, install the [C/C++ DevTools Support (DWARF) extension](goo.gle/wasm-debugging-extension) and step through the code in the [Mandelbrot demo](https://emscripten-dbg-stories.netlify.app/mandelbrot.html).
+To test Wasm debugging, install the [C/C++ DevTools Support (DWARF) extension](https://goo.gle/wasm-debugging-extension) and step through the code in the [Mandelbrot demo](https://emscripten-dbg-stories.netlify.app/mandelbrot.html).
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/abb3f72ab0c637a1da69fd663c380333e5b6a003 #}
 
