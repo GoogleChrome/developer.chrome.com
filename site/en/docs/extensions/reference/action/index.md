@@ -168,9 +168,9 @@ in the toolbar.
 
 ## Examples
 
-The following examples show some common ways that actions are used in extensions. For a more robust
-demonstration of action capabilities, see the [Action API example][sample-example] in the
-[chrome-extension-samples][repo-samples] repository.
+The following examples show some common ways that actions are used in extensions. To try this API,
+install the [Action API example][sample-example] from the [chrome-extension-samples][repo-samples]
+repository.
 
 ### Show a popup
 
