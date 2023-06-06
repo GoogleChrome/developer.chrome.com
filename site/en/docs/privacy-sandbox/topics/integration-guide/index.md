@@ -16,30 +16,6 @@ We'd love to know how this article could be improved!
 You can [make article suggestions here](https://github.com/GoogleChrome/developer.chrome.com/blob/main/site/en/docs/privacy-sandbox/topics/integration-guide/index.md), and provide API feedback at the bottom of this page.
 {% endAside %}
 
-## Goals
-
-If interest-based advertising is important to your business, we want you to test the Topics API so we can get your feedback and meet your business needs. At this time, the goals of integration planning for the Privacy Sandbox on Chrome include the ability to do the following:
-
-
-### For all ad techs
-
-* Review the [Topics taxonomy](https://github.com/privacysandbox/topics-android) and [give feedback](https://github.com/privacysandbox/topics-android/issues/new) about the structure and content of topics.
-* Experiment with the Topics API [demos](/docs/privacy-sandbox/topics/demo/) and [chrome://topics-internals](/docs/privacy-sandbox/topics/#debug) to see what topics are returned by the classifier used by the browser.
-* Update your site to start calling the Topics API.
-* Update protocols to start sending topics in ad requests.
-
-
-### For sell-side ad techs
-
-* Become an observer to establish a Topics API footprint. The Topics API is a new signal, so you should update your site to start using the Topics API. To consistently retrieve topics for a user, sites must use the API to observe topics for that user at least once per [epoch](/docs/privacy-sandbox/glossary/#epoch) (once each week). It takes up to four epochs to get the maximum number of topics (three topics) to send with your ad requests.
-* Include data from the Topics API in your ad requests. For each ad request, start sharing your Topics data with buy-side partners. The Topics API is designed to supplement other signals (such as contextual signals) to help select an appropriate advertisement for a given site visitor.
-* Collaborate on a mechanism for sharing topics with your buy-side partners. The Topics API needs each ad tech to work with downstream partners to agree on how Topics API data is shared.
-
-### For buy-side ad techs
-
-* Connect with sell-side partners to confirm their plans to observe topics and establish a footprint. To receive topics, sell-side providers must use the Topics API to observe topics for a user at least once per epoch.
-* Collaborate on a mechanism for receiving topics from your sell-side partners. Topics is a new signal that will be shared by sell-side partners as part of an ad request. Buy-side businesses will need to ensure they work with their upstream partners on how topics will be shared.
-* Incorporate topics in bidding and optimization models. The Topics API is expected to supplement other signals such as contextual data, to help select an appropriate advertisement for a site visitor.
 
 ## Before you begin
 
@@ -77,17 +53,19 @@ To enable the Topics API in your own Chrome instance for local testing you have 
 1. Open **chrome://flags/#privacy-sandbox-ads-apis** and enable the Privacy Sandbox APIs.
 1. **(Recommended)** Run Chrome from the command line with [Chromium flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags) using Topics API-specific parameters to configure as needed.
 
-{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/duszVRfyzMTfjQTEmkPb.png", alt="Enable the Privacy Sandbox APIs at chrome://flags/#privacy-sandbox-ads-apis.", width="761", height="167" %}
+{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/uuLMIrAjr2ndeLOqBhmq.png", width="744", height="131", alt="Enable the Privacy Sandbox APIs at chrome://flags/#privacy-sandbox-ads-apis." %}
+<figcaption>Enabling the Privacy Sandbox APIs.</figcaption>
 
 You have more fine-grained control over Topics features by running Chrome from the command line. For example, it's possible to set Topics epochs (the time frame used by the API to calculate user interests) and configure the behavior of the API according to your needs.
 
-It's important to remember that if **chrome://flags/#privacy-sandbox-ads-apis** is enabled, this will override your command line epoch setting, returning it to the default value (currently one week).
+It's important to remember that if **chrome://flags/#privacy-sandbox-ads-apis** is enabled, this will override your command-line epoch setting, returning it to the default value (currently one week).
 
 ### Preview Topics API mechanics
 
 You can get visibility into the underlying Topics API mechanics locally by using the [chrome://topics-internals](/docs/privacy-sandbox/topics/#debug) tools. 
 
 {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/4LysAisUZpkryMHwk18f.png", alt="Take a look inside the Topics API at chrome://topics-internals.", width="768", height="669" %}
+<figcaption>The chrome://topics-internals tools Topics State tab.</figcaption>
 
 Use the Topics API Internals tool to locally test the classifier based on the sites you visit. 
 
@@ -102,12 +80,13 @@ Learn how to [debug Topics with the Internals tool](/docs/privacy-sandbox/topics
 
 ### How the API returns topics
 
-If Chrome lacks a sufficient number of observed topics to create the top five topics for an epoch (one week), then Topics will add random topics to complete the top five. The Topics Internals column headed **Real or Random** indicates whether that particular topic was based on a real observation or additional random 'padding' to complete the top five. Read more about this mechanism in the [explainer](https://github.com/patcg-individual-drafts/topics#specific-details). 
+If Chrome lacks a sufficient number of observed topics to create the top five topics for an epoch (one week), then the Topics API will add random topics to complete the top five. The Topics Internals column headed **Real or Random** indicates whether that particular topic was based on a real observation or additional random "padding" to complete the top five. Read more about this mechanism in the [explainer](https://github.com/patcg-individual-drafts/topics#specific-details). 
 
-The topic selected for each epoch is randomly selected from the user's top five topics for that time period. If not enough topics have been observed during the epoch, then additional topics will be chosen at random to make up the total of five.
+The topic selected for each epoch is randomly selected from the user's top five topics for that time period. If not enough topics have been observed during the epoch, then additional topics will be chosen at random to make up the total of five. These randomly selected topics are subject to filtering.
 
-To further enhance privacy and ensure that all topics may be represented, there is a 5% chance that the topic selected for an epoch is randomly selected from all topics, instead of being chosen from observed topics.
-More on how topics are selected is availble in [Topics classification](/docs/privacy-sandbox/topics/topic-classification/#how-the-users-top-five-topics-are-selected).
+To further enhance privacy and ensure that all topics may be represented, there is a 5% chance that the topic selected for an epoch is randomly selected from all topics, instead of being chosen from observed topics. As in the case above where too few topics had been observed, these randomly selected topics are not subject to filtering. 
+
+More on how topics are selected is available in [Topics classification](/docs/privacy-sandbox/topics/topic-classification/#how-the-users-top-five-topics-are-selected).
 
 
 ### Key recommendations
@@ -123,20 +102,23 @@ More on how topics are selected is availble in [Topics classification](/docs/pri
 
 The Topics API gives access to topics of interest observed for a user, without having to resort to tracking the sites a user visits, or exposing their navigation history. 
 
-The Topics API _caller_ is the entity that calls the[`document.browsingTopics()` JavaScript method](/docs/privacy-sandbox/topics/#access-topics), or observes and accesses topics [using HTTP request headers](/docs/privacy-sandbox/topics/#use-headers-to-access-and-observe-topics). Your code, and the eTLD+1 it's called from, in this instance, is the caller. When you call the Topics API, you're instructing the user's browser to observe the topics of interest when the user visits a website. This visit is then considered in the topics calculation for the next epoch.
+The Topics API _caller_ is the entity that calls the [`document.browsingTopics()` JavaScript method](/docs/privacy-sandbox/topics/#access-topics), or observes and accesses topics [using HTTP request headers](/docs/privacy-sandbox/topics/#use-headers-to-access-and-observe-topics). Your code, and the [eTLD+1](/docs/privacy-sandbox/glossary/#etld) it's called from, in this instance, is the caller. When you call the Topics API, you're instructing the user's browser to observe the topics of interest when the user visits a website. This visit is then considered in the topics calculation for the next epoch.
 
-The Topics API is designed to [filter results](/docs/privacy-sandbox/topics/topic-classification/#how-the-api-decides-which-callers-see-which-topics) per-caller or per-eTLD+1 of the context. In other words, the origin of the iframe (when using the JavaScript API) or the URL of the fetch request (when using headers) is considered the caller, and topics are calculated according to that caller.
+The Topics API is designed to [filter results](/docs/privacy-sandbox/topics/topic-classification/#how-the-api-decides-which-callers-see-which-topics) per-caller or per-eTLD+1 of the calling context. In other words, the origin of the iframe (when using the JavaScript API) or the URL of the fetch request (when using headers) is considered the caller, and topics are calculated according to that caller.
 
 The following diagram illustrates this approach:
 
-{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/XBeHBKS4J9SO1FO4SBDc.png", alt="The steps the Topics API takes as users visit sites that use the API.", width="800", height="386" %}
+{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/VVymEStTvzIonqoYlAUr.png", alt="The steps the Topics API takes as users visit sites that use the API.", width="800", height="382" %}
+<figcaption>
+How the API observes and accesses topics. <a href="https://wd.imgix.net/image/RtQlPaM9wdhEJGVKR8boMPkWf443/VVymEStTvzIonqoYlAUr.png?auto=format&w=650" target="blank">View a larger version</a>
+</figcaption>
 
 **In this diagram**:
 
-1. A user opens Chrome and visits multiple websites (customerA.example, customerB.example.br, etc) which include your ad tech's iframe (source:  iframe.adtech.example) or the fetch call passing headers.
+1. A user opens Chrome and visits multiple websites (customerA.example, customerB.example.br, etc.) which include your ad tech's iframe (source:  iframe.adtech.example) or the fetch call passing headers.
     * Chrome will record topics of interest of this user.
 2. After seven days navigating, with topics of interest being observed by the Topics API, the same user on the same device visits a target website (publisher-e.example). The Topics API returns a list of topics and in this specific example, one topic calculated from the previous week of observations of this user will be returned.
-    * Only browsers of users who visited sites which adtech.example has observed in Step 1 will be returning topics results in Step 2 (we call this observation filtering—you can't see topics of users you never saw before).
+    * Only browsers of users who visited sites that adtech.example has observed in Step 1 will be returning topics results in Step 2 (we call this observation filtering—you can't see topics of users you never saw before).
 3. With this list (of one topic for now) you can call your back-end API (ads.adtech.example/topics-backend) to use topics data as part of your contextual dataset.
 4. Now, depending on your use case, you can create a more personalised experience for this user by accessing the topics of interest you have observed for them during the last weeks.
 
@@ -147,14 +129,11 @@ There are two ways to observe and access the topics for a user. You can use
 * The JavaScript API from within an iframe:
     * Adding an iframe on target websites (publisher's websites) that contains JavaScript code calling the Topics API using `document.browsingTopics()`.
 * Headers option:
-    * Fetch **(which is recommended)** or XHR (which is only available during origin trial and not recommended):
+    * Fetch **(which is recommended)** or XHR (**not recommended** and only available during origin trial):
         * You can access topics from the `Sec-Browsing-Topics` header in requests to the ad tech back end. This is the most performant option (low latency to observe topics of one specific user).
     * Using an iframe tag with the `browsingtopics` attribute:
         * You can add an iframe with a `browsingtopics` attribute and Chrome will include topics (observed for the eTLD+1  of the iframe) in the `Sec-Browsing-Topics` header on the request for the iframe.
 
-{% Aside %}
-If you are planning to use Topics data in a real-time bidding context (such as GAM or Prebid), we strongly recommend the Headers Option since it is the most performant one (lower latency). 
-{% endAside %}
 
 ### Implement with JavaScript and iframes
 
@@ -198,20 +177,24 @@ Here's an example of what the API returns:
 * **modelVersion**: a string identifying the machine-learning classifier used to infer site.
 * **taxonomyVersion**: a string identifying the set of topics currently in use by the browser.
 * **topic**: a number identifying the topic in the taxonomy.
-* **version**: a string combining the configVersion and the modelVersion.
+* **version**: a string combining the `configVersion` and the `modelVersion`.
 
 Read [more about this implementation](/docs/privacy-sandbox/topics/#access-topics).
 
 
 ### Implement with HTTP headers
 
-Topics can be accessed from the `Sec-Browsing-Topics` header of a fetch()/XHR request, or of an iframe request. 
+Topics can be accessed from the `Sec-Browsing-Topics` header of a fetch()/XHR request, or of an `iframe` request. 
 
 {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/8kXFG5e0AnZJvwNEb7yB.png", alt="Request and Response headers for setting and retrieving topics.", width="800", height="382" %}
+<figcaption>
+Headers for iframe and <code>fetch()</code>. 
+<a href="https://wd.imgix.net/image/RtQlPaM9wdhEJGVKR8boMPkWf443/8kXFG5e0AnZJvwNEb7yB.png?auto=format&w=650" target="blank">View a larger version</a>
+</figcaption>
 
 You can mark topics provided by request headers as observed by setting an `Observe-Browsing-Topics: ?1` header on the response to the request. The browser will then use those topics to calculate topics of interest for a user.
 
-If the API returns one or more topics, a fetch request to the origin from which the topics were observed will include a `Sec-Browsing-Topics` header like this: 
+If the API returns one or more topics, a fetch request to the eTLD+1 from which the topics were observed will include a `Sec-Browsing-Topics` header like this: 
 
 ``` text
 t=(299;v=chrome.1:1:1), p=P000000000
@@ -223,37 +206,37 @@ If no topics are returned by the API, the header looks like this:
 t=(), p=P000000000000000000000000000
 ```
 
-`Sec-Browsing-Topics` header values are padded, to mitigate the risk of an attacker learning the number of topics for an origin based on the header length.
+`Sec-Browsing-Topics` header values are padded, to mitigate the risk of an attacker learning the number of topics scoped to a caller based on the header length.
 
 
 #### Implement with `fetch()`
 
-On the publisher page, add your code for the fetch request, being sure to include `{browsingTopics: true}`.
+On the publisher page, add your code for the fetch request, making sure to include `{browsingTopics: true}`.
 
 ```javascript
-fetch('<topics_caller_eTLD+1_URL>', {browsingTopics: true})
+fetch('<topics_caller_eTLD+1>', {browsingTopics: true})
     .then((response) => {
         // Process the response
  })
 ```
 
-In browsers that support the API, the fetch request will include a `Sec-Browsing-Topics` header that lists topics observed for the request URL hostname.
+In browsers that support the API, the `fetch()` request will include a `Sec-Browsing-Topics` header that lists topics observed for the request URL hostname.
 
 #### Implement with an iframe
 
-Similarly to a fetch request, the `Sec-Browsing-Topics` header will be sent when using the `browsingtopics` attribute on an iframe.
+Similarly to a `fetch()` request, the `Sec-Browsing-Topics` header will be sent when using the `browsingtopics` attribute on an iframe.
 
 ```html
-<iframe src="<topics_caller_eTLD+1_URL>" browsingtopics></iframe>
+<iframe src="<topics_caller_eTLD+1>" browsingtopics></iframe>
 ```
 
-In this case, the <code><topics_caller_eTLD+1_URL></code> will be the caller, similar to the fetch call.
+In this case, the <code><topics_caller_eTLD+1></code> will be the caller, similar to the fetch call.
 
 #### Server side—identical for all cases
 
-To have the topics in the `Sec-Browsing-Topics` request header marked by the browser as observed, but also to include the current page visit in the user’s next epoch top topic calculation. the server’s response has to include `Observe-Browsing-Topics: ?1`.
+To have the topics in the `Sec-Browsing-Topics` request header marked by the browser as observed, but also to include the current page visit in the user's next epoch top topic calculation, the server's response has to include `Observe-Browsing-Topics: ?1`.
 
-JavaScript example:
+Here's a JavaScript example using `setHeader()`:
 
 ```javascript
 res.setHeader('Observe-Browsing-Topics', '?1');
@@ -281,51 +264,60 @@ As explained in [Maximize ad relevance after third-party cookies](/docs/privacy-
 
 ### Participate in the origin trial
 
-Now that you've deployed locally, the following section will guide you on how to deploy and test at scale with your users. To achieve this, you must register the origin of your code for the [Privacy Sandbox Relevance and Measurement origin trial](/docs/privacy-sandbox/unified-origin-trial/). The Topics API will be activated on any page that provides a valid trial token: currently for 50% of Chrome Canary, Dev, and Beta users, and 5% of Chrome Stable users. 
+Now that you've deployed locally, the following section will guide you on how to deploy and test at scale with your users. To achieve this, you must register the eTLD+1 of your code for the [Privacy Sandbox Relevance and Measurement origin trial](/docs/privacy-sandbox/unified-origin-trial/). The Topics API will be activated on any page that provides a valid trial token. You can check the [current status of this Origin Trial](/docs/privacy-sandbox/unified-origin-trial/#status) on the status page.
+
 
 [Origin trials](/docs/web-platform/origin-trials/) are a safe way to test new or experimental web platform features in Chrome. Anyone participating in the trial can test these features and provide feedback on usability and effectiveness. Typically these trials are limited in duration.
 
 #### Configure your site or app to participate in the origin trial
 
-The Privacy Sandbox Relevance and Measurement origin trial makes the trial APIs available for both first-party and third-party contexts. This means you can access the trial APIs in code running on your own origin, and also from JavaScript code from your origin that is embedded on a third-party site.
+The Privacy Sandbox Relevance and Measurement origin trial makes the trial APIs available for both first-party and third-party contexts. This means you can access the trial APIs in code running on your own eTLD+1, and also from JavaScript code from your eTLD+1 that is embedded on a third-party site.
 
-To allow usage in a third-party context, you must select **Third-party matching** when you register your origin for the trial. 
+To allow usage in a third-party context, you must select **Third-party matching** when you register your eTLD+1 for the trial. 
+
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/6bRyXMiYLzRfKZ9R3Sxa.png", alt="Registration page for the Privacy Sandbox Relevance and Measurement origin trial.", width="800", height="512" %}
+<figcaption>The origin trial registration page with third-party matching.</figcaption>
 
 {% Aside 'caution' %}
-A third-party token must be provided in an external JavaScript file included via a `script` element: a third-party token won't work in a meta tag, inline script, or HTTP header.
+A third-party token must be provided in an external JavaScript file included via a `script` element; a third-party token won't work in a meta tag, inline script, or HTTP header.
 
-You can register multiple tokens for the same origin if necessary: both first- and third-party. 
+You can register multiple tokens for the same eTLD+1 if necessary—both first- and third-party. 
 {% endAside %}
 
-1. [Register](/docs/privacy-sandbox/unified-origin-trial/#configure) yourself on behalf of your company: Recommended when you are going to implement and integrate the Topics API directly in your application (building the iframe, calling the Topics API). 
+1. **[Register](/docs/privacy-sandbox/unified-origin-trial/#configure) yourself** on behalf of your company. This is recommended when you are going to implement and integrate the Topics API directly in your application (building the iframe, calling the Topics API). 
  
-    In this case you will need to add an origin trial token to your Topics iframe, to help you decide which token you will need in your application. We recommend you to use a First-Party Token with the JavaScript API. 
 
-    {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/6bRyXMiYLzRfKZ9R3Sxa.png", alt="Registration page for the Privacy Sandbox Relevance and Measurement origin trial.", width="800", height="512" %}
+    In this case you will need to add an origin trial token to your Topics iframe, to help you decide which token you will need in your application. We recommend you use a First-Party Token with the JavaScript API.
 
-    This decision tree can help you decide which token you need. 
+    The figure below shows part of the registration page. To register a first-party token, do not check any boxes in this section. 
+
+    {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/mctvCWr97SWNylSRktwW.png", width="715", height="411", alt="Registration page for the Privacy Sandbox Relevance and Measurement origin trial." %}
+    <figcaption>The origin trial registration page for first-party token.</figcaption>
+
+    The following decision tree can help you decide which token you need. 
 
     {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/cgWSN3o9pUqFq8ZtRB3e.png", alt="Decision tree to help you determine the type of token you need.", width="800", height="455" %}
+    <figcaption>Determining which token you need. 
+    <a href="https://wd.imgix.net/image/RtQlPaM9wdhEJGVKR8boMPkWf443/gJbUnelS717NwYGd7zYR.png" target="blank">View a larger version</a>
+    </figcaption>
 
-    Link to a [larger version](https://wd.imgix.net/image/RtQlPaM9wdhEJGVKR8boMPkWf443/gJbUnelS717NwYGd7zYR.png) of this tree.
-
-1. Register as a third party: Recommended when you are not implementing the Topics API directly into your application and are relying on another partner to test it for you. [Learn about third-party origin trials](/docs/web-platform/third-party-origin-trials/).
+1. **Register as a third party**. This is recommended when you are not implementing the Topics API directly into your application and are relying on another partner to test it for you. [Learn about third-party origin trials](/docs/web-platform/third-party-origin-trials/).
 
 
 #### Key recommendations
 
-1. Discuss with your team and with your Google support person to make sure you have selected the correct origin trial option for your specific case.
+1. Discuss with your team to make sure you have selected the correct origin trial option for your specific case.
 1. After registering, [embed the origin trial token](/docs/web-platform/origin-trials/#iframe) in your iframe code, not in the top-level site where the iframe is embedded.
 
 
 #### Provide a first-party origin trial token
 
-A first-party token can be provided in a meta tag, an HTTP header, or [programmatically](/docs/web-platform/origin-trials/#programmatic), for the origin of the Topics caller.
+A first-party token can be provided in a meta tag, an HTTP header, or [programmatically](/docs/web-platform/origin-trials/#programmatic), for the eTLD+1 of the Topics caller.
 
-For example, in a page in an iframe that includes code (from the same origin) that calls `document.browsingTopics()`:
+For example, here's how to do it in a page in an iframe that includes code (from the same eTLD+1) that calls `document.browsingTopics()`:
 
 ```html
-<meta http-equiv="origin-trial" content="OT_FOR_<topics_caller_eTLD+1_URL>">
+<meta http-equiv="origin-trial" content="OT_FOR_<topics_caller_eTLD+1>">
 ```
 
 #### Provide a third-party origin trial token
@@ -337,13 +329,14 @@ To use Topics with fetch headers, a third-party origin trial token must be provi
 {
   // Programmatically inject <meta> tag for
   // Third-party origin trial token
+  
   const otMeta = document.createElement('meta');
   otMeta.httpEquiv = 'origin-trial';
   otMeta.content = 'YOUR TOKEN HERE';
   document.head.append(otMeta);
 }
 
-fetch('<topics_caller_eTLD+1_URL>', {browsingTopics: true})
+fetch('<topics_caller_eTLD+1>', {browsingTopics: true})
     .then((response) => {
         // Process the response
  })
@@ -360,7 +353,7 @@ Given that the origin trial token has to be generated for the same origin as the
 ## Build and deploy
 
 1. Collect topics by observing users in production—not scaled yet (Estimated time: approximately 1 week)
-    1. Understand your options: [iframe & JavaScript](/docs/privacy-sandbox/topics/#access-topics) OR [HTTP headers](/docs/privacy-sandbox/topics/#use-headers-to-access-and-observe-topics)
+    1. Understand your options: [iframe and JavaScript](/docs/privacy-sandbox/topics/#access-topics) or [HTTP headers](/docs/privacy-sandbox/topics/#use-headers-to-access-and-observe-topics)
     1. Define the domain of the iframe.
     1. Build the JavaScript code, using the [demo app](https://topics-demo.glitch.me/) as a code reference — or implement the headers option.
     1. Deploy Topics to your controlled environment (some production sites).
@@ -381,7 +374,7 @@ We recommend that you pick target websites that:
 * **You own and control**: If necessary you can quickly disable the implementation without complex approvals.
 * **Are not business critical**: Since this implementation can disrupt your user's experience, start with low risk target sites.
 * **Total no more than five sites**: You won't need that much traffic or exposure for now.
-* **Represent different themes**: Choose websites that represent different categories (for example, one about sports, another one about news, one more from food and drink, etc.). You can [use the internal topics tool in Chrome](/docs/privacy-sandbox/topics/#view-inferred-topics) to validate domains and how they are classified by the Topics machine-learning classifier. Learn more about [debugging](/docs/privacy-sandbox/topics/#debug).
+* **Represent different themes**: Choose websites that represent different categories (for example, one about sports, another about news, one more from food and drink, etc.). You can [use the internal topics tool in Chrome](/docs/privacy-sandbox/topics/#view-inferred-topics) to validate domains and how they are classified by the Topics machine-learning classifier. Learn more about [debugging](/docs/privacy-sandbox/topics/#debug) in the Topics API developer guide.
 
 
 ## Functional testing and validation
@@ -389,10 +382,10 @@ We recommend that you pick target websites that:
 When calling the Topics API in this limited environment you can expect:
 
 * An empty array of topics [] if this is the first call of this device, for this site and caller in the last seven days.
-* A list from zero to three topics, representing the interests of this user.
+* A list of zero to three topics, representing the interests of this user.
 * After seven days of observation you should receive:
     * One topic representing the interest of that user calculated from the navigation history of that week.
-        * One important detail: if not enough topics have been observed by you for a user for the Topics API to calculate the top five topics of that week, then Topics will add as many random topics as necessary to arrive at the total number of five: [more details](https://github.com/patcg-individual-drafts/topics#specific-details).
+        * One important detail: if not enough topics have been observed by you for a user for the Topics API to calculate the top five topics of that week, then Topics will add as many random topics as necessary to arrive at the total number of five. Find [more details in the API proposal](https://github.com/patcg-individual-drafts/topics#specific-details).
 * A new topic entry replacing one of the three if you are calling it after four weeks of observation.
     * This happens because the Topics API will be stable for the following weeks, not exposing too many of the user's interests. Find [more details in the API proposal](https://github.com/patcg-individual-drafts/topics#specific-details).
 * If you have not observed topics for the user for more than three weeks, then the Topics API will return an empty array `[]` again.
@@ -419,10 +412,10 @@ If you are calling the Topics API within the first week of observing a user, the
 Make sure your origin trial configuration is correct. <a href="/docs/web-platform/origin-trial-troubleshooting/">Troubleshoot Chrome origin trials</a> provides a checklist to help fix origin trial problems.
 
 When using the JavaScript API from an iframe, a common mistake is to add an origin trial token to the target site (top level site). 
+<br>
 
-{% Aside %}
-When using the JavaScript API, the origin trial token must be added to your iframe instead.
-{% endAside %}
+**When using the JavaScript API, the origin trial token must be added to your iframe instead.**
+
 </dd>
 </dl>
 
@@ -437,7 +430,7 @@ When using the JavaScript API, the origin trial token must be added to your ifra
 1. Not all users will have Topics enabled during the origin trial: 
     1. It depends on the device being selected to participate in this origin trial .
     1. Users can explicitly disable the Topics API.
-    1. Publisher's pages can control permissions policy ([opt-out](/docs/privacy-sandbox/topics/#site-opt-out)).
+    1. Publisher's pages can control permissions policy. Refer to ([opt-out](/docs/privacy-sandbox/topics/#site-opt-out)) in the Topics API developer guide.
     1. Check [https://chromestatus.com/](https://chromestatus.com/) for more details.
 1. Add metrics and observability to this environment: you'll need them to analyze the first results. Example metrics include:
     1. Latency of calls;
@@ -446,9 +439,9 @@ When using the JavaScript API, the origin trial token must be added to your ifra
 
 ## Scale to production
 
-Section step-by-step summary:
+Here's a step-by-step summary of how you can scale to production. The steps are explained below.
 
-1. Scale the implementation (production).
+1. Scale the implementation (production) This is described below.
     1. Add the iframe to multiple publisher's websites.
 1. Process and use topics data (Estimated time: around 4 weeks).
     1. Incorporate topics data as an additive signal alongside other data.
@@ -468,7 +461,7 @@ We recommend the following:
 1. Perform load testing for your topics data, according to your expected traffic.
     1. Confirm that your back end can handle a large volume of calls.
     1. Set up metric collection and logs for analysis.
-1. Immediately after deploying the Topics API, check your metrics to detect any severe end user issues. Keep checking your metrics regularly.
+1. Immediately after deploying the Topics API, check your metrics to detect any severe end-user issues. Keep checking your metrics regularly.
 1. In case of disruption or unexpected behavior, roll back the deployment and analyze your logs to understand and fix the issue.
 
 {% Partial 'privacy-sandbox/topics-feedback.njk' %}
