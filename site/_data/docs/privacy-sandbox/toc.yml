@@ -54,8 +54,8 @@
         - url: /docs/privacy-sandbox/topics/topic-classification
         - url: /docs/privacy-sandbox/topics
           title: i18n.docs.privacy-sandbox.developer-guide
-        - url: /docs/privacy-sandbox/topics/integration-guide
-          title: i18n.docs.privacy-sandbox.integration-guide
+        - url: /docs/privacy-sandbox/topics/partner-integration-guide
+          title: i18n.docs.privacy-sandbox.partner-integration-guide
         - url: /docs/privacy-sandbox/topics-experiment
           title: i18n.docs.privacy-sandbox.experiment-participate
         - url: /docs/privacy-sandbox/topics/demo
