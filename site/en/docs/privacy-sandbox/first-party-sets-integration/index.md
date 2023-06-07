@@ -123,6 +123,10 @@ Each new frame will need to request storage access individually and it will auto
 
 Refreshing, reloading, or otherwise recreating the iframe will require requesting access again.
 
+### Cookie requirements
+
+rSA only provides access for cookies that are already specified for cross-site contexts, meaning that they must specify both the `SameSite=None` and `Secure` attributes. Cookies intended for first-party use only, as in those specifying `SameSite=Lax`, `SameSite=Strict`, or without a `SameSite` attribute will **never** be shared in a cross-site context regardless of rSA.
+
 ### Security
 
 For rSAFor, subresource requests require [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS) headers or `crossorigin` attribute on the resources, ensuring explicit opt-in.
