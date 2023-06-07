@@ -58,10 +58,10 @@ for the first time on the same browser instance.
 
 <figure>
   {% Img
-    src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/sWOvcHSCUxcgGS4Wep8O.png",
+    src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/RkWJR4q6SHa8D1xIf2G5.png",
     alt="A dialog the user taps on to create an account or to authenticate.",
-    width="800",
-    height="551"
+    width="796",
+    height="544"
   %}
 <figcaption>A dialog the user taps on to create an account or to authenticate.</figcaption>
 </figure>
