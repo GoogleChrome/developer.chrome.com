@@ -6,7 +6,6 @@ layout: layouts/blog-post.njk
 authors:
   - mathiasbynens
 date: 2023-06-12
-updated: 2023-06-12
 hero: 'image/ZQjEes3OsyYCDLE5837FjNRQ1Gw2/Wn5kQQRVssFAHozIWDX3.svg'
 alt: ''
 tags:
