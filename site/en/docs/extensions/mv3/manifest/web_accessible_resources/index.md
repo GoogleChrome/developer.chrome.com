@@ -59,7 +59,7 @@ Each element must include a `"resources"` element and either a `"matches"` or `"
 Resources are available in a webpage via the URL
 `chrome-extension://[PACKAGE ID]/[PATH]`, which can be generated with the [`runtime.getURL()`][1]
 method. The resources are served with appropriate [CORS][2] headers, so they're available
-via XHR.
+via `fetch()`.
 
 A navigation from a web origin to an extension resource is blocked unless the resource is
 listed as web accessible. Note these corner cases:
