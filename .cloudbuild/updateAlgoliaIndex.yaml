@@ -17,15 +17,9 @@ steps:
     env:
       - 'NODE_OPTIONS="--max_old_space_size=8192"' # https://github.com/GoogleChrome/developer.chrome.com/issues/2439
 
-  - name: 'gcr.io/cloud-builders/gcloud'
-    entrypoint: 'bash'
-    args:
-      - '-c'
-      - |
-        # This snippet lets us pass additional args via the Cloud Build console
-        # in the _EXTRA_GCLOUD_ARGS var.
-        # nb. We don't have to specify --project; it's part of the environment.
-        gcloud app deploy ${_EXTRA_GCLOUD_ARGS}
+  - name: node:16.14.2
+    entrypoint: npm
+    args: ['run', 'algolia']
 
 substitutions:
   _EXTRA_GCLOUD_ARGS: # default empty
