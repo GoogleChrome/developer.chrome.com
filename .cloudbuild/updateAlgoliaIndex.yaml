@@ -1,7 +1,4 @@
-# This deploys the site. Roughly equivalent to
-# https://github.com/GoogleChrome/web.dev/blob/main/.cloudbuild/deploy.yaml
-
-timeout: 2700s # set build timeout to 45 mins
+timeout: 600s # set build timeout to 10 mins
 steps:
   - name: node:16.14.2
     entrypoint: npm
@@ -10,12 +7,6 @@ steps:
   - name: node:16.14.2
     entrypoint: npm
     args: ['run', 'cloud-secrets']
-
-  - name: node:16.14.2
-    entrypoint: npm
-    args: ['run', 'production']
-    env:
-      - 'NODE_OPTIONS="--max_old_space_size=8192"' # https://github.com/GoogleChrome/developer.chrome.com/issues/2439
 
   - name: node:16.14.2
     entrypoint: npm
