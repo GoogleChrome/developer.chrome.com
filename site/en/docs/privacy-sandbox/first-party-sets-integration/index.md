@@ -125,7 +125,9 @@ Refreshing, reloading, or otherwise recreating the iframe will require requestin
 
 ### Cookie requirements
 
-rSA only [provides access for cookies that are already marked for use in cross-site contexts](https://privacycg.github.io/storage-access/#cookies), meaning that they must specify both the `SameSite=None` and `Secure` attributes. Cookies intended for first-party use only, as in those specifying `SameSite=Lax`, `SameSite=Strict`, or without a `SameSite` attribute will **never** be shared in a cross-site context regardless of rSA.
+Cookies must specify both the `SameSite=None` and `Secure` attributes as rSA only [provides access for cookies that are already marked for use in cross-site contexts](https://privacycg.github.io/storage-access/#cookies). 
+
+Cookies with `SameSite=Lax`, `SameSite=Strict`, or without a `SameSite` attribute are for first-party use only and will **never** be shared in a cross-site context regardless of rSA.
 
 ### Security
 
