@@ -180,8 +180,8 @@ chrome.runtime.onConnect.addListener(function(devToolsConnection) {
     var devToolsListener = function(message, sender, sendResponse) {
         // Inject a content script into the identified tab
         chrome.scripting.executeScript({
-          target: {tabID: message.tabId},
-          func: () = > {message.scriptToInject}
+          target: {tabId: message.tabId},
+          files: [message.scriptToInject]
     });
     }
     // add the listener
