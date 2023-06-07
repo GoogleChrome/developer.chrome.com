@@ -6,7 +6,7 @@ subhead: >
 description: >
   Learn how to work with the API, including how to use Chrome flags for testing.
 date: 2022-01-25
-updated: 2023-03-29
+updated: 2023-06-07
 authors:
   - samdutton
 ---
@@ -186,7 +186,7 @@ In the example below, `time_period_per_epoch` has been set to 15 seconds (the de
 The parameters shown in the screenshot correspond to flags that can be set when running Chrome from the command line. For example, the demo at [topics-demo.glitch.me](https://topics-demo.glitch.me/) recommends using the following flags:
 
 ```text
---enable-features=BrowsingTopics:time_period_per_epoch/15s,PrivacySandboxAdsAPIsOverride,PrivacySandboxSettings3,OverridePrivacySandboxSettingsLocalTesting
+--enable-features=BrowsingTopics:time_period_per_epoch/15s,PrivacySandboxAdsAPIsOverride,PrivacySandboxSettings4,OverridePrivacySandboxSettingsLocalTesting
 ```
 
 Each parameter, its default value, and its purpose is explained in the list below.
@@ -205,9 +205,9 @@ Each parameter, its default value, and its purpose is explained in the list belo
       <dd>Enables ads APIs: Attribution Reporting, Protected Audience, Topics, Fenced Frames.</dd>
     </dt><br />
     <dt>
-      <dd><code>PrivacySandboxSettings3</code></dd>
+      <dd><code>PrivacySandboxSettings4</code></dd>
       <dd><strong>Default value:</strong> disabled</dd>
-      <dd>Enables the third release of the Privacy Sandbox UI settings.</dd>
+      <dd>Enables the fourth release of the Privacy Sandbox UI settings.</dd>
     </dt><br />
     <dt>
       <dd><code>OverridePrivacySandboxSettingsLocalTesting</code></dd>
@@ -232,7 +232,7 @@ context. The browser will internally keep up to N+1 epochs.</dd>
       <dd><code>BrowsingTopics:time_period_per_epoch</code></dd>
       <dd><strong>Default value:</strong> 7d-0h-0m-0s</dd>
       <dd>Duration of each epoch.
-      For debugging, it can be useful to set this to (say) 15 seconds, rather than the default 7 days.</dd>
+      For debugging, it can be useful to set this to (say) 15 seconds, rather than the default seven days.</dd>
     </dt><br />
     <dt>
       <dd><code>BrowsingTopics:number_of_top_topics_per_epoch</code></dd>
@@ -256,28 +256,28 @@ filtering the topics for a calling context.</dd>
     <dt>
       <dd><code>BrowsingTopics:max_number_of_api_usage_context_domains_to_keep_per_topic</code></dd>
       <dd><strong>Default value:</strong> 1000</dd>
-      <dd>The max number of observed-by context domains to keep for each top topic. The intent
-is to cap the in-use memory.</dd>
+      <dd>The maximum number of observed-by context domains to keep for each top topic. The intent
+is to cap in-use memory.</dd>
     </dt><br />
     <dt>
       <dd><code>BrowsingTopics:max_number_of_api_usage_context_entries_to_load_per_epoch</code></dd>
       <dd><strong>Default value:</strong> 100000</dd>
-      <dd>The max number of entries allowed to be retrieved from the database for each query
+      <dd>The maximum number of entries allowed to be retrieved from the database for each query
 for the API usage contexts. The query will occur once per epoch at topics calculation
-time. The intent is to cap the peak memory usage.</dd>
+time. The intent is to cap peak memory usage.</dd>
     </dt><br />
     <dt>
       <dd><code>BrowsingTopics:max_number_of_api_usage_context_domains_to_store_per_page_load</code></dd>
       <dd><strong>Default value:</strong> 30</dd>
-      <dd>The max number of API usage context domains allowed to be stored per page load.</dd>
+      <dd>The maximum number of API usage context domains allowed to be stored per page load.</dd>
     </dt><br />
     <dt>
       <dd><code>BrowsingTopics:config_version</code></dd>
       <dd><strong>Default value:</strong> 1</dd>
       <dd>Encodes the Topics API configuration parameters. Each version number should only be
 mapped to one configuration set. Updating the configuration parameters without updating the <code>config_version</code> should
-be usually fine for local testing, but in some situations could leave the browser in an
-inconsistent state and/or could let the browser crash, e.g. updating the
+usually be fine for local testing, but in some situations could leave the browser in an
+inconsistent state and/or could result in a browser crash, e.g. updating the
 <code>number_of_top_topics_per_epoch</code>.</dd>
     </dt><br />
     <dt>
@@ -291,16 +291,12 @@ version used by the API.</dd>
 
 ## Opt out your site {: #site-opt-out}
 
-You can opt out of topic calculation for specific pages on your site by including the `Permissions-Policy: browsing-topics=()` [Permissions-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy) header on a page to prevent topics calculation for all users on that page only. Subsequent visits to other pages on your site will not be affected. If you set a policy to block the Topics API on one page, this won't affect other pages.
+You can opt out of topic calculation for specific pages on your site by including the `Permissions-Policy: browsing-topics=()` [Permissions-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy) header on a page to prevent topics calculation for all users on that page only. Subsequent visits to other pages on your site will not be affected: if you set a policy to block the Topics API on one page, this won't affect other pages.
 
-You can also control which third parties have access to topics on your page by using the Permission Policy header to control third-party access to the Topics API.
-
-Use `self` and any domains you would like to allow access to the API as parameters.
-
-For example, to completely disable use of the Topics API within all browsing contexts except for your own origin and those whose origin is `https://example.com`, set the following HTTP response header: 
+You can also control which third parties have access to topics on your page by using the `Permissions-Policy` header to control third-party access to the Topics API. As parameters to the header, use `self` and any domains you would like to allow access to the API. For example, to completely disable use of the Topics API within all browsing contexts except for your own origin and `https://example.com`, set the following HTTP response header: 
 
 ```text
-Permissions-Policy: geolocation=(self "https://example.com")
+Permissions-Policy: browsing-topics=(self "https://example.com")
 ```
 
 ## Next steps
