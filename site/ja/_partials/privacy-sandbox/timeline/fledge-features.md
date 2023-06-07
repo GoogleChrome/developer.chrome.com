@@ -1,8 +1,8 @@
 <table class="with-heading-tint with-borders width-full">
   <thead>
     <tr>
-      <th>Proposal</th>
-      <th>Status</th>
+      <th>提案</th>
+      <th>スターテス</th>
     </tr>
   </thead>
   <tr>
