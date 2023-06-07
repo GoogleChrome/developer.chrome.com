@@ -13,7 +13,7 @@ authors:
 If you're looking for Privacy Sandbox resources, check out the videos below. Some are recorded Privacy Sandbox office hours. You can find upcoming office hours on the [events page](/docs/privacy-sandbox/events/).
 
 {% Aside 'caution' %}
-Keep in mind that unlike documentation, which can easily be updated, videos can have some content that has become out of date. While the concepts discussed in these videos are still relelvant, some technical details and code will have changed.
+Keep in mind that these videos can have some content that has become out of date. While the concepts discussed in these videos are still relelvant, some technical details and code will have changed.
 
 Refer to the linked documentation for the latest details.
 {% endAside %}
@@ -42,12 +42,41 @@ Chrome is on the path to phasing out third-party cookies. Updates to cookie func
 {% endColumn %}
 {% endColumns %}
 
+{% Details %}
+{% DetailsSummary %}
+### Older Privacy Sandbox videos
+{% endDetailsSummary %}
+{% Columns %}
+{% Column %}
+<iframe width="280" height="158" src="https://www.youtube.com/embed/VVgtGkRtVPU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<br>
+As some details may have changed, refer to the latest docs: <a href="/docs/privacy-sandbox/overview/">What is the Privacy sandbox?</a>
+{% endColumn %}
+{% Column %}
+<strong>May 12, 2022. Run time: 16:16</strong>
 
-{% Partial 'privacy-sandbox/videos/ps-may-22.njk' %} 
-{# May 12, 2022 at Google I/O PS overview #}
+<strong>Latest docs:</strong> [What is the Privacy sandbox?](/docs/privacy-sandbox/overview/)
 
-{% Partial 'privacy-sandbox/videos/ps-feb-23.njk' %}
-{# February 2023 Danny Rojas PS overview #}
+At Google I/O 2022, Rowan Merewood from the Chrome team spoke about the Privacy Sandbox, the pros and cons of third-party content, and how the Privacy Sandbox addresses these issues.
+{% endColumn %}
+{% endColumns %}
+
+
+{% Columns %}
+{% Column %}
+<iframe width="280" height="158" src="https://www.youtube.com/embed/7AQFDm7STmw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<br>
+As some details may have changed, refer to the latest docs:
+<a href="/docs/privacy-sandbox/topics/">Topics API</a>, 
+<a href="/docs/privacy-sandbox/fledge/">Protected Audience API</a>, 
+<a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a>
+{% endColumn %}
+{% Column %}
+<strong>February 2023. Run time: 11:08</strong>
+
+Danny Rojas of the Products Parnerships team provides a high-level view of the Privacy Sandbox ads APIs. He briefly describes the [Topics API](/docs/privacy-sandbox/topics/), the [Protected Audience API](/docs/privacy-sandbox/fledge/) (formerly FLEDGE), and [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/), along with some common use cases.
+{% endColumn %}
+{% endColumns %}
 
 
 {% Columns %}
@@ -60,6 +89,7 @@ Chrome is on the path to phasing out third-party cookies. Updates to cookie func
 In this video, Jeremy Ney explains the new technologies within the Privacy Sandbox that help websites preserve important user-facing functionality and combat fraud. 
 {% endColumn %}
 {% endColumns %}
+{% endDetails %}
 
 ## Attribution reporting
 
@@ -74,8 +104,23 @@ Learn more about the Privacy Sandbox effort, with a deep dive into Attribution R
 {% endColumn %}
 {% endColumns %}
 
-{% Partial 'privacy-sandbox/videos/ara-aug-21.njk' %}
-{# May 2022 Sam Dutton the Attribution Reporting API high level #}
+{% Details %}
+{% DetailsSummary %}
+### Older Attribution Reporting videos
+{% endDetailsSummary %}
+{% Columns %}
+{% Column %}
+<iframe width="280" height="158" src="https://www.youtube.com/embed/UGA74CIcom8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<br>
+As some details may have changed, refer to the latest docs:
+<a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting API</a>
+{% endColumn %}
+{% Column %}
+<strong> Aug 25, 2021. Run time: 6:15</strong> 
+
+Sam Dutton of the Chrome team discusses the Attribution Reporting API at a high level. He covers the two types of reports in the API Event-level reports and Summary reports, what data is reported, and how.
+{% endColumn %}
+{% endColumns %}
 
 
 {% Columns %}
@@ -127,6 +172,7 @@ In part 2 of the August 2022 Privacy Sandbox office hours, Robert Kubis discusse
 The Chrome team presents a high-level overview of the Attribution Reporting API and why it's important with the coming deprecation of third-party cookies.
 {% endColumn %}
 {% endColumns %}
+{% endDetails %}
 
 ## Topics API
 
@@ -216,7 +262,7 @@ Sam Dutton of the Chrome team explains how the Protected Audience API provides a
 <strong>Mar 18, 2022 Run time: 6:15</strong>
 
 
-Sam Dutton of the Chrome team picks up where he left off in the Protected Audience API video to provide a walkthough of the demo available for the API.
+Sam Dutton of the Chrome team provides a walkthough of the demo available for the API.
 {% endColumn %}
 {% endColumns %}
 
