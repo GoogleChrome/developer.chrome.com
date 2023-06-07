@@ -11,11 +11,10 @@ authors:
 tags:
   - privacy
   - identity
-hero: 'image/BrQidfK9jaQyIHwdw91aVpkPiib2/EnMzOm0mBytBA3AzlCG6.png'
+hero: 'image/YLflGBAPWecgtKJLqCJHSzHqe2J2/nxIH9o6I4KLbuhuV5Tht.jpg'
 alt: >
-  An alternative text description of your hero or social image.
+  Glass door with reflections.
 ---
-
 
 [Federated Credential Management API (FedCM)](/docs/privacy-sandbox/fedcm/) is a
 web API for privacy-preserving identity federation. With identity federation, an
@@ -56,7 +55,7 @@ authentication" here means the user creates an account or signs into the RP's
 website by tapping on the **"Continue as..."** button on FedCM's sign-in dialog 
 for the first time on the same browser instance.
 
-<figure>
+<figure style="width: 300px; margin: auto; margin-top: 2em;">
   {% Img
     src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/RkWJR4q6SHa8D1xIf2G5.png",
     alt="A dialog the user taps on to create an account or to authenticate.",
@@ -125,11 +124,14 @@ With this call, auto-reauthn happens under the following conditions:
 When the above conditions are met, an attempt to automatically reauthenticate
 the user starts as soon as the FedCM `navigator.credentials.get()` is invoked.
 
-{% Video
-  src="video/YLflGBAPWecgtKJLqCJHSzHqe2J2/otdINbHb2xhSn5Pwab8W.mp4",
-  width="800",
-  height="1778"
-%}
+<figure style="width: 300px; margin: auto; margin-top: 2em;">
+  {% Video
+    src="video/YLflGBAPWecgtKJLqCJHSzHqe2J2/Q2ARmaZAVx2ShnKpPQNj.mp4",
+    width="486",
+    height="1080"
+  %}
+  <figcaption>A user auto-reauthenticating through FedCM.</figcaption>
+</figure>
 
 ## Enforce mediation with `preventSilentAccess()` {: #prevent-silent-access }
 
@@ -173,3 +175,5 @@ domain](/docs/privacy-sandbox/fedcm/#user-settings).
 
 If you are testing FedCM you can share your feedback or any issues you run into
 at [crbug.com](http://crbug.com/) under a component **"Blink>Identity>FedCM"**.
+
+Photo by <a href="https://unsplash.com/@noach?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Noah Samuel Franz</a> on <a href="https://unsplash.com/photos/xR1igblXCeM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
