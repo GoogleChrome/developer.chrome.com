@@ -14,9 +14,12 @@
  * limitations under the License.
  */
 require('dotenv').config();
+
 const {default: algoliasearch} = require('algoliasearch');
-const fs = require('fs');
+const {default: fetch} = require('node-fetch');
 const {sizeof} = require('sizeof');
+
+const algoliaIndexSource = 'https://developers.chrome.com/algolia.json';
 
 const maxChunkSizeInBytes = 10000000; // 10,000,000
 
@@ -53,8 +56,14 @@ async function index() {
     return;
   }
 
-  const raw = fs.readFileSync('dist/algolia.json', 'utf-8');
-  const algoliaData = JSON.parse(raw);
+  let algoliaData = [];
+  try {
+    const raw = await fetch(algoliaIndexSource);
+    algoliaData = await raw.json();
+  } catch (err) {
+    console.error('Could not load algolia index from prod.', err);
+    return;
+  }
 
   // Set date of when object is being added to algolia
   algoliaData.map(e => {
