@@ -1,0 +1,2 @@
+- [IP 保護の提案](https://github.com/GoogleChrome/ip-protection)の[公開ディスカッション](https://github.com/GoogleChrome/ip-protection/issues)が開始しました。
+- This proposal has not been implemented in any browser.
