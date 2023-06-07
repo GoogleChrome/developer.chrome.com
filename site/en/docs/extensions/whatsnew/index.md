@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-06-05
+updated: 2023-06-07
 tags:
   - extensions-news
 
@@ -14,6 +14,12 @@ tags:
 <!--lint disable first-heading-level-->
 
 Check this page often to learn about changes to Chrome extensions, extensions documentation, or related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about some of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).) The [Chrome schedule](https://chromiumdash.appspot.com/schedule) lists stable and beta release dates.
+
+### Chrome 115: Specify multiple reasons in chrome.offscreen.createDocument() {: #m115-offscreen-multiple-reasons }
+
+<p class="color-secondary-text type--caption">Posted on <time>June 7, 2023</time></p>
+
+You can now specify multiple [`reason`](/docs/extensions/reference/offscreen/#type-Reason) enums when calling [`chrome.offscreen.createDocument()`](/docs/extensions/reference/offscreen/#method-createDocument). Use this when an offscreen document will be used for multiple different purposes. The browser uses the supplied reasons to determine the lifetime of the offscreen document. 
 
 ### New tool: Extension Update Testing Tool {: #update-testing-tool }
 
