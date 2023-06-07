@@ -44,3 +44,53 @@ Otherwise, we will have to ask you to make changes, and that's no fun for anyone
 ## Formatting HTML
 
 To simplify PR reviews, please word-wrap HTML files at 80 characters or fewer.
+
+
+//SPANISH TRANSLATION
+
+#Aportando 💪
+
+## Reportar un error de contenido
+
+¿Tiene comentarios? Nos encantaría escucharlo; abra un
+[problema](https://github.com/GoogleChrome/developer.chrome.com/issues/new?title=Content+feedback).
+
+## Enviar una solicitud de extracción
+
+### Acuerdos de licencia de colaborador
+
+¡Nos encantaría aceptar sus parches de código! Sin embargo, antes de que podamos tomarlos, debemos
+tiene que saltar un par de obstáculos legales.
+
+Complete la Licencia de Colaborador individual o corporativa
+Acuerdo.
+
+* Si es un individuo que escribe el código fuente original y está seguro de que
+poseer la propiedad intelectual, luego firmar un
+[CLA individual](https://developers.google.com/open-source/cla/individual).
+* Si trabajas para una empresa que quiere permitirte aportar tu trabajo,
+luego firme un [CLA corporativo] (https://developers.google.com/open-source/cla/corporate).
+
+Siga cualquiera de los dos enlaces anteriores para acceder al CLA apropiado y
+instrucciones sobre cómo firmarlo y devolverlo.
+
+1. Firme el acuerdo de licencia de contribuyentes anterior.
+2. Decide qué código quieres enviar. Una presentación debe ser un conjunto de cambios.
+que soluciona un problema en el [seguimiento de problemas] (https://github.com/GoogleChrome/developer.chrome.com/issues).
+Por favor, no mezcle más de un cambio lógico por envío, porque hace
+la historia difícil de seguir. Si quieres hacer un cambio
+(por ejemplo, agregar una muestra o característica) que no tiene un problema correspondiente en el
+rastreador de problemas, cree uno.
+3. **Envío**: cuando esté listo para enviar, envíenos una solicitud de extracción. Ser
+asegúrese de incluir el número de problema que ha corregido y el nombre que usó para firmar
+el CLA.
+
+## Escritura de código
+
+Si su contribución contiene código, asegúrese de que sigue
+[la guía de estilo](https://google.github.io/styleguide/jsguide.html).
+De lo contrario, tendremos que pedirle que realice cambios, y eso no es divertido para nadie.
+
+## Formatear HTML
+
+Para simplificar las revisiones de relaciones públicas, ajuste los archivos HTML a 80 caracteres o menos.
