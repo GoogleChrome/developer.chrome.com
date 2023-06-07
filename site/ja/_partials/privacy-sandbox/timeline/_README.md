@@ -1,6 +1,6 @@
 ## タイムラインテーブルとステータスの使用
 
-These partials contain implementation status links and some tables for feature release timelines. If you use these partials, headings are not automatically included.
+これらの部分参照には、実装ステータスのリンクと、機能リリースのタイムラインに関するいくつかの表が含まれています。これらの部分参照を使用する場合、見出しは自動的に含まれません。
 
 ```txt
 ## Implementation status
@@ -8,4 +8,4 @@ These partials contain implementation status links and some tables for feature r
 {% Partial 'privacy-sandbox/timeline/attribution-reporting.njk' %}
 ```
 
-These partials don't have line spacing before the content, thus the line space between the header and the partial reference is necessary, as above.
+これらの部分参照にはコンテンツの前に行スペースがないため、上記のようにヘッダーと部分参照の間に行スペースが必要です。
