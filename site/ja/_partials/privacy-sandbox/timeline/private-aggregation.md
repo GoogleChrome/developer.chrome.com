@@ -16,7 +16,7 @@ Private Aggregation API が今後も Protected Audience API と連携して動�
         - Chrome Canary、Dev、およびベータ版 M107+
         - Chrome 安定版 M112+
     - `reportContributionForEvent()` 関数は次のリリースに含まれます。
-        - Chrome Canary and Dev M113+
+        - Chrome Canary および Dev M113+
     - 共有ストレージ経由でレポート検証用のコンテキスト ID を指定するのは、以下のリリースで行えます。
         - Chrome Canary、Dev、ベータ版、安定版 M114+
     - 最新のトラフィック割り当てを確認するには、[プライバシー サンドボックスのオリジントライアル](/docs/privacy-sandbox/unified-origin-trial/#status)ページをご覧ください。
