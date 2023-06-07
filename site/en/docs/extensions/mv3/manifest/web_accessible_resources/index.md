@@ -11,21 +11,9 @@ Web-accessible resources are files inside an extension that can be accessed by w
 extensions. Extensions typically use this feature to expose images or other assets that need to be
 loaded in web pages, but any asset included in an extension's bundle can be made web accessible.
 
-By default no resources are web accessible; only pages or scripts loaded from an extension's origin
+By default no resources are web accessible, as this allows a malicious website to [fingerprint][6] extensions that a user has installed
+or exploit vulnerabilities (for example [XSS bugs][7]) in installed extensions. Only pages or scripts loaded from an extension's origin
 can access that extension's resources. 
-
-{% Aside %}
-Before Manifest V2 all resources in an extension could be accessed from any page on the
-web. This allowed a malicious website to [fingerprint][6] extensions that a user has installed
-or exploit vulnerabilities (for example [XSS bugs][7]) in installed extensions. 
-
-Beginning with Manifest V2, access to those resources was limited to protect the privacy of users. Manifest V2
-extensions exposed only those resources explicitly designated as web accessible.
-
-Manifest V3 provides finer-grained control, letting you expose individual resources to specified
-pages, domains, or extensions.
-{% endAside %}
-
 
 ## Manifest declaration
 
@@ -56,7 +44,7 @@ Each object in the array contains these elements:
 : An array of strings, each containing a relative path to a given resource from the extension's root directory. Resources may contain asterisks (`*`) for wildcard matches. For example, `"/images/*"` exposes everything in the extension's `images/` directory, recursively, while `"*.png"` exposes all PNG files.
 
 `"matches"`
-: An array of strings, each containing a [match pattern](/docs/extensions/mv3/match_patterns/) that specifies which sites can access this set of resources. Only the origin is used to match URLs. Origins include subdomain matching. Google Chrome emits an "Invalid match pattern" error if the pattern has a path other than '/'.
+: An array of strings, each containing a [match pattern](/docs/extensions/mv3/match_patterns/) that specifies which sites can access this set of resources. Only the origin is used to match URLs. Origins include subdomain matching. Google Chrome emits an "Invalid match pattern" error if the pattern has a path other than '/*'.
 
 `"extension_ids"`
 : An array of strings, each containing the ID of an extension that can access the resources.
@@ -76,7 +64,7 @@ via XHR.
 A navigation from a web origin to an extension resource is blocked unless the resource is
 listed as web accessible. Note these corner cases:
 
-- When an extension uses the [webRequest][3] or [declarativeWebRequest][4] APIs to redirect a public
+- When an extension uses the [webRequest][3] API to redirect a public
   resource request to a resource that is not web accessible, such a request is also blocked.
 - The above holds true even if the resource that is not web accessible is owned by the redirecting
   extension.
