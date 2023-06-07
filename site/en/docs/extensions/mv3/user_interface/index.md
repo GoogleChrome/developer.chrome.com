@@ -377,7 +377,7 @@ triggered, the extension opens a new tab containing a Google search for the user
 ```js
 chrome.omnibox.onInputEntered.addListener((text) => {
   // Encode user input for special characters , / ? : @ & = + $ #
-  const newURL = `https://www.google.com/search?q=${encodeURIComponent(text)`;
+  const newURL = `https://www.google.com/search?q=${encodeURIComponent(text)}`;
   chrome.tabs.create({ url: newURL });
 });
 ```
