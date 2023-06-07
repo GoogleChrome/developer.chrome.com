@@ -37,7 +37,7 @@ pass it messages, let it act upon those messages in some way, and wait for it to
 result. This simple messaging mechanism gives us everything we need to safely include `eval`\-driven
 code in our extension's workflow.
 
-## Creating and using a sandbox. {: #creating_and_using }
+## Creating and using a sandbox {: #creating_and_using }
 
 If you'd like to dive straight into code, please grab the [sandboxing sample extension and take
 off][6]. It's a working example of a tiny messaging API built on top of the [Handlebars][7]
@@ -64,21 +64,39 @@ named "sandbox.html". The manifest entry looks like this:
 ### Load the sandboxed file {: #load_file }
 
 In order to do something interesting with the sandboxed file, we need to load it in a context where
-it can be addressed by the extension's code. Here, [sandbox.html][8] has been loaded into the
-extension's [Event Page][9] ([eventpage.html][10]) via an `iframe`. [eventpage.js][11] contains code
-that sends a message into the sandbox whenever the browser action is clicked by finding the `iframe`
+it can be addressed by the extension's code. Here, sandbox.html has been loaded into
+an extension page via an `iframe`. The page's javascript file contains code that sends a message 
+into the sandbox whenever the browser action is clicked by finding the `iframe`
 on the page, and executing the `postMessage` method on its `contentWindow`. The message is an object
-containing two properties: `context` and `command`. We'll dive into both in a moment.
+containing two properties: `templateName`, and `command`. We'll dive into both in a moment.
+
+{% Label %}service-worker.js:{% endLabel %}
 
 ```js
-chrome.browserAction.onClicked.addListener(function() {
- var iframe = document.getElementById('theFrame');
- var message = {
-   command: 'render',
-   context: {thing: 'world'}
- };
- iframe.contentWindow.postMessage(message, '*');
+chrome.runtime.onInstalled.addListener(() => {
+  chrome.tabs.create({
+    url: 'mainpage.html'
+  });
+  console.log('Opened a tab with a sandboxed page!');
 });
+```
+
+{% Label %}extension-page.js:{% endLabel %}
+
+```js
+document.getElementById('sendMessage').addEventListener('click', function () {
+    let message = {
+      command: 'render',
+      templateName: 'sample-template',
+    };
+  document.getElementById('sandboxFrame').contentWindow.postMessage(message, '*');
+});
+
+  // on result from sandboxed frame:
+  window.addEventListener('message', function () {
+    document.querySelector('#result').innerHTML =
+      event.data.result;
+  });
 ```
 
 <div class="aside aside--note">For general information about the <code>postMessage</code> API, take a look at the <a href="https://developer.mozilla.org/en/DOM/window.postMessage"><code>postMessage</code> documentation on MDN </a>. It's quite complete and worth reading. In particular, note that data can only be passed back and forth if it's serializable. Functions, for instance, are not.</div>
@@ -88,18 +106,39 @@ chrome.browserAction.onClicked.addListener(function() {
 When `sandbox.html` is loaded, it loads the Handlebars library, and creates and compiles an inline
 template in the way Handlebars suggests:
 
+{% Label %}extension-page.html:{% endLabel %}
+
 ```html
-<script src="handlebars-1.0.0.beta.6.js"></script>
-<script id="hello-world-template" type="text/x-handlebars-template">
-  <div class="entry">
-    <h1>Hello, {{thing}}!</h1>
-  </div>
-</script>
-<script>
-  var templates = [];
-  var source = document.getElementById('hello-world-template').innerHTML;
-  templates['hello'] = Handlebars.compile(source);
-</script>
+<html>
+  <head>
+    <script src="mainpage.js"></script>
+  </head>
+  <body>
+      <button id="sendMessage">Click me</button>
+      <div id="result"></div>
+      <iframe id="sandboxFrame" src="sandbox.html" style="display: none"></iframe>
+  </body>
+</html>
+```
+{% Label %}sandbox-page.html:{% endLabel %}
+
+```html
+    <script src="handlebars-1.0.0.beta.6.js"></script>
+  <body>
+    <script id="sample-template" type="text/x-handlebars-template">
+      <div class='entry'>
+        <h1>Hello</h1>
+        <p>This is a Handlebar template compiled inside a hidden sandboxed
+          iframe.</p>
+      </div>
+    </script>
+    <script>
+      Handlebars.compile(document.getElementByID("sandboxFrame").innerHTML;);
+      // Set up message event handler:
+      window.addEventListener('message', function (event) {
+         event.source.postMessage({ result: result }, event.origin);
+      });
+    </script>
 ```
 
 This doesn't fail! Even though `Handlebars.compile` ends up using `new Function`, things work
@@ -108,7 +147,7 @@ exactly as expected, and we end up with a compiled template in `templates['hello
 ### Pass the result back {: #pass_result }
 
 We'll make this template available for use by setting up a message listener that accepts commands
-from the Event Page. We'll use the `command` passed in to determine what ought to be done (you could
+from the extension Page. We'll use the `command` passed in to determine what ought to be done (you could
 imagine doing more than simply rendering; perhaps creating templates? Perhaps managing them in some
 way?), and the `context` will be passed into the template directly for rendering. The rendered HTML
 will be passed back to the Event Page so the extension can do something useful with it later on:
@@ -133,7 +172,7 @@ will be passed back to the Event Page so the extension can do something useful w
 </script>
 ```
 
-Back in the Event Page, we'll receive this message, and do something interesting with the `html`
+Back in the extension page, we'll receive this message, and do something interesting with the `html`
 data we've been passed. In this case, we'll just echo it out via a [Desktop Notification][13], but
 it's entirely possible to use this HTML safely as part of the extension's UI. Inserting it via
 `innerHTML` doesn't pose a significant security risk, as even a complete compromise of the sandboxed
