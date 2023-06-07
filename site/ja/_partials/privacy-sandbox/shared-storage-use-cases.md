@@ -1,19 +1,19 @@
 ## ユースケース
 
-These are only some of the possible use cases for Shared Storage. We'll continue to add examples as we [receive feedback](/docs/privacy-sandbox/shared-storage/#engage-and-share-feedback) and discover new use cases.
+これらは、共有ストレージのユースケースの一部にすぎません。[フィードバックを受け取り](/docs/privacy-sandbox/shared-storage/#engage-and-share-feedback)、新しいユースケースが見つかるたびに、例を追加し続けます。
 
 ### コンテンツの選択
 
-Select and display different content on different websites in [fenced frames](/docs/privacy-sandbox/fenced-frame/) based on information collected in Shared Storage. The output gate for these use cases is URL selection.
+共有ストレージに収集された情報に基づいて、さまざまなウェブサイト上のさまざまなコンテンツを選択し、[Fenced Frame](/docs/privacy-sandbox/fenced-frame/) に表示します。これらのユースケースの出力ゲートは URL の選択です。
 
-- [**Creative rotation**](/docs/privacy-sandbox/shared-storage/creative-rotation): Store data, such as creative ID, view counts, and user interaction, to determine which creative users' see across different sites.
-- [**A/B testing**](/docs/privacy-sandbox/shared-storage/ab-testing): You can assign a user to an experiment group, then store that group in Shared Storage to be accessed cross-site.
-- [**Custom user experiences**](/docs/privacy-sandbox/shared-storage/known-customer): Share custom content and calls-to-action based on a user’s registration status or other user states
+- [**クリエイティブのローテーション**](/docs/privacy-sandbox/shared-storage/creative-rotation): クリエイティブ ID、ビュー数、ユーザー操作などのデータを保存し、さまざまなサイトでユーザーにどのクリエイティブが表示されるかを決定します。
+- [**A/B テスト**](/docs/privacy-sandbox/shared-storage/ab-testing): ユーザーを実験グループに割り当てたら、そのグループを共有ストレージに保存して、サイト間でアクセスできるようにすることができます。
+- [**カスタムユーザーエクスペリエンス**](/docs/privacy-sandbox/shared-storage/known-customer): ユーザーの登録ステータスやユーザーに関するその他の状態に基づいて、カスタムコンテンツと CTA を共有します。
 
-### Generate summary reports
+### 要約レポートの生成
 
-Collect information with Shared Storage and generated a noisy, aggregated summary report. The output gate for these use cases is the [Private Aggregation API](/docs/privacy-sandbox/private-aggregation/).
+共有ストレージで情報を収集し、ノイズの多い集計要約レポートを生成しました。これらのユースケースの出力ゲートは、[Private Aggregation API](/docs/privacy-sandbox/private-aggregation/) です。
 
-- [**Unique reach measurement**](/docs/privacy-sandbox/shared-storage/unique-reach): Many content producers and advertisers want to know how many unique people saw their content. Use Shared Storage to record the first time a user saw your ad, embedded video, or publication, and prevent duplicative counting of that same user on different sites. You can then use the Private Aggregation API to output a summary report for your reach.
-- [**Demographics measurement**](/docs/privacy-sandbox/shared-storage/user-demographics): Content producers often want to understand the demographics of their audience. You can use Shared Storage to record user demographic data in a context where you have it, such as your first-party site, and use aggregated reporting to report on it across many other sites, such as embedded content.
-- [**K+ frequency measurement**](/docs/privacy-sandbox/shared-storage/k-freq-reach): Sometimes described as "effective frequency," there is often a minimum number views before a user will recognize or recall certain content (often in the context of advertisement views). You can use Shared Storage to build reports of unique users that have seen a piece of content at least K number of times.
+- [**ユニークリーチの測定**](/docs/privacy-sandbox/shared-storage/unique-reach): 多くのコンテンツプロデューサーや広告主は、自分のコンテンツを閲覧したユニークユーザー数を知りたいと考えています。共有ストレージを使用して、ユーザーが広告、埋め込みビデオ、出版物を初めて見たときのレポートを作成し、同じユーザーが別のサイトで重複してカウントされるのを防ぎます。そして Private Aggregation API を使用して、リーチに関する要約レポートを出力できます。
+- [**人口統計の測定**](/docs/privacy-sandbox/shared-storage/user-demographics): コンテンツプロデューサーは、多くの場合、オーディエンスの人口統計を理解したいと考えています。共有ストレージを使用して、ファーストパーティサイトなどのコンテキストでユーザーの人口統計データを記録し、集計レポートを使用して、埋め込みコンテンツなどの他の多くのサイトでレポートを作成できます。
+- [**K+ フリークエンシー測定**](/docs/privacy-sandbox/shared-storage/k-freq-reach):「有効フリークエンシー」と呼ばれることもありますが、ユーザーが特定のコンテンツを認識または思い出す前に（多くの場合、広告ビューのコンテキストで）閲覧する最小限のビュー数が存在することがよくあります。共有ストレージを使用して、コンテンツを少なくとも K 回見たユニークユーザーのレポートを作成できます。
