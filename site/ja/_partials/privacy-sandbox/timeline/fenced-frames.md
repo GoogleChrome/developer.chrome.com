@@ -1,4 +1,4 @@
 - [Fenced Frames](https://github.com/shivanigithub/fenced-frame) の提案は現在実験中です。
-- Experiment with fenced frames in the [Privacy Sandbox unified origin trial](/origintrials/#/view_trial/771241436187197441) from M102 to M107. Learn how to [set up the origin trial](/blog/privacy-sandbox-unified-origin-trial/) and [join us for a feedback/discussion](https://github.com/WICG/fenced-frame/issues).
-- This feature is [available behind a Chrome flag](#try-fenced-frames).
+- M102 から M107 までの[プライバシーサンドボックス統合オリジントライアル](/origintrials/#/view_trial/771241436187197441)で、Fenced Frames を実験できます。[オリジントライアルのセットアップ](/blog/privacy-sandbox-unified-origin-trial/)方法を調べ、[フィードバック/ディスカッションに参加](https://github.com/WICG/fenced-frame/issues)しましょう。
+- この機能は [Chrome フラグの設定により利用可能](#try-fenced-frames)です。
 - [Chrome プラットフォームのステータス](https://chromestatus.com/feature/5699388062040064)
