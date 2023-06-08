@@ -2,7 +2,7 @@
 layout: 'layouts/blog-post.njk'
 title: Support auto-reauthentication in FedCM
 description: >
-  In Chrome 115, FedCM supports mediation requirements from Credential Management API which enables users to re-authenticate to the RP in a more streamlined manner after the initial consent.
+  In Chrome 115, FedCM supports mediation requirements from Credential Management API which enables users to reauthenticate to the RP in a more streamlined manner after the initial consent.
 subhead: >
   Chrome supports auto-reauthentication in FedCM
 date: 2023-06-07
@@ -27,7 +27,7 @@ levels being shared and prevents unintended abuse. FedCM has been available in
 Chrome since version 108.
 
 In Chrome 115, FedCM is getting support for auto-reauthentication which improves 
-the user experiences and enables a more streamlined re-authentication to the RP 
+the user experiences and enables a more streamlined reauthentication to the RP 
 after the initial consent.
 
 ## Auto-reauthentication {: #auto-reauthn }
