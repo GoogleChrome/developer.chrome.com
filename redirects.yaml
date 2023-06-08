@@ -21,6 +21,9 @@ redirects:
 
 # Simple redirects
 
+- from: /articles/origin-private-file-system/
+  to: https://web.dev/origin-private-file-system/
+
 - from: /en/articles/multi-screen-window-placement/
   to: /articles/window-management/
 
