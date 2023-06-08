@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Stay secure"
 seoTitle: "Chrome Extensions: Stay secure"
 date: 2018-03-06
-updated: 2019-07-17
+updated: 2023-06-07
 description: How to keep your Chrome Extension secure.
 ---
 
@@ -45,8 +45,8 @@ Limiting an extensions privileges limits what a potential attacker can exploit.
 Use its modern replacement, `fetch()`.
 {% endAside %}
 
-An extension can only use `fetch()` or [XMLHttpRequest][6] to get resources from itself and from domains
-specified in the permissions, as both API's use the same [fetch handler][27] in the service worker.
+An extension service worker can only use `fetch()`, or APIs that use the same [fetch handler][27] to get resources from itself and from domains
+specified in the permissions.
 ```json
 {
   "name": "Very Secure Extension",
@@ -56,7 +56,7 @@ specified in the permissions, as both API's use the same [fetch handler][27] in 
     "https://developer.chrome.com/*",
     "https://*.google.com/*"
   ],
-  "manifest_version": 2
+  "manifest_version": 3
 }
 ```
 
@@ -104,10 +104,11 @@ extension detectable by websites and attackers.
 {
   ...
   "web_accessible_resources": [
-    "images/*.png",
-    "style/secure_extension.css",
-    "script/secure_extension.js"
-  ],
+    {
+      "resources": [ "test1.png", "test2.png" ],
+      "matches": [ "https://web-accessible-resources-1.glitch.me/*" ]
+    }
+  ]
   ...
 }
 ```
@@ -125,20 +126,26 @@ scripting attacks. If the extension only loads resources from itself register th
   "name": "Very Secure Extension",
   "version": "1.0",
   "description": "Example of a Secure Extension",
-  "content_security_policy": "default-src 'self'; frame-ancestors 'none';",
-  "manifest_version": 2
+   "content_security_policy": {
+    "extension_pages": "default-src 'self'"
+  },
+  "manifest_version": 3
 }
 ```
 
-If the extension needs to include scripts from specific hosts, they can be included:
+If the extension needs to make use of web assembly, or increase the restrictions on [sandboxed pages](/docs/extensions/mv3/sandboxingEval/), they can be added:
 
 ```json
 {
   "name": "Very Secure Extension",
   "version": "1.0",
   "description": "Example of a Secure Extension",
-  "content_security_policy": "default-src 'self' https://extension.resource.com; frame-ancestors 'none';",
-  "manifest_version": 2
+   "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';",
+    "sandboxed_pages":"script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+  },
+
+  "manifest_version": 3
 }
 ```
 
@@ -172,8 +179,8 @@ While [content scripts][11] live in an [isolated world][12], they are not immune
   (e.g., [Spectre][14]), and to being taken over by an attacker if a malicious web page compromises
   the renderer process.
 
-Sensitive work should be performed in a dedicated process, such as the extension's [background
-script][15]. Avoid accidentally exposing extension privileges to content scripts:
+Sensitive work should be performed in a dedicated process, such as the extension's service worker. 
+Avoid accidentally exposing extension privileges to content scripts:
 
 - Assume that [messages from a content script][16] might have been crafted by an attacker (e.g.
   [validate and sanitize][17] all input and protect your scripts from [cross-site scripting][18]).
