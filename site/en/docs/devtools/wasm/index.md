@@ -42,7 +42,7 @@ To enable C/C++ WebAssembly debugging in DevTools:
 
 With DevTools set up, debug your code:
 
-1. [Open DevTools](/docs/devtools/open/) to inspect your website. For this tutorial, you can try it on this [demo page](https://emscripten-dbg-stories.netlify.app/mandelbrot.html).
+1. [Open DevTools](/docs/devtools/open/) to inspect your website. For this tutorial, you can try it on this [demo page](https://emscripten-dbg-stories.netlify.app/mandelbrot.html), which was compiled with the required `-g` flag.
 1. Optionally, group the files you authored for easier navigation. In **Sources**, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N7wEDmtW9lnrSxPRupMa.svg", alt="Three-dot menu.", width="24", height="24" %} > **Page** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} > [**Group by Authored/Deployed**](/docs/devtools/javascript/reference/#group-authored-and-deployed) {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XfSWf04g2cwpnFcmp40m.svg", alt="Experimental.", width="20", height="20" %}.
 1. Select your original source file from the file tree. In this case, `mandelbrot.cc`.
 1. To set a [line-of-code breakpoint](/docs/devtools/javascript/breakpoints/#loc), click a line number in the column to the left of the **Editor**, for example, on line 38.
