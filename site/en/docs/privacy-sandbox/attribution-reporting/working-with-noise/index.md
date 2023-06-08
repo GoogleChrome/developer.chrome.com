@@ -22,27 +22,26 @@ Before proceeding, for an in-depth understanding of what noise is, and its impac
 
 We've seen that the [noise applied to the summary value](/docs/privacy-sandbox/attribution-reporting/understanding-noise/#evaluating-noise) for each key is based on the 0-65,536 scale (0-`CONTRIBUTION_BUDGET`).
 
-{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/ODm7VrPRfwRm3hh8lWZg.png", alt="ALT_TEXT_HERE", width="512", height="147" %}
+{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/ODm7VrPRfwRm3hh8lWZg.png", alt="Noise distribution is based on budget.", width="512", height="147" %}
 
 Due to this, to maximize signal relative to noise, you should *scale up* each value before setting it as an aggregatable value—that is, multiply each value by a certain factor (while ensuring it stays within the contribution budget).
 
-{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/P28EJ3mddaen0x7gLA0g.png", alt="ALT_TEXT_HERE", width="512", height="404" %}
+{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/P28EJ3mddaen0x7gLA0g.png", alt="Relative noise with and without scaling.", width="512", height="404" %}
 
 #### Scaling factor
 
 The *scaling factor* represents how much you want to scale a given aggregatable value.
 Its value should be the contribution budget divided by the maximum aggregatable value for a certain key.
 
-{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/8ykXLb19ztwGLFeP1UXY.png", alt="ALT_TEXT_HERE", width="512", height="363" %}
+{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/8ykXLb19ztwGLFeP1UXY.png", alt="Determining the scaling factor based on contribution budget.", width="512", height="363" %}
 
-#### Example
 
-Let's assume advertisers want to know the total purchase value. You know that the maximum expected purchase value of any individual purchase is $2,000, except for a few outliers that you decide to ignore:
+For example, let's assume advertisers want to know the total purchase value. You know that the maximum expected purchase value of any individual purchase is $2,000, except for a few outliers that you decide to ignore:
 
 -   **Calculate the scaling factor**:
     -   To maximize the signal-to-noise ratio, you need to scale this value to 65,536 (the contribution budget).
     -   This results in a 65,536 / 2,000 an approximately **32_x_** scaling factor. In practice, you may round this factor up or down.
--   **Scale up your values before aggregation**. For every **$1** of purchase, increment the tracked metric by **32**. For example, for a purchase of **$120**, set an aggregatable value of *120*32 = 3,840**.
+-   **Scale up your values before aggregation**. For every **$1** of purchase, increment the tracked metric by **32**. For example, for a purchase of **$120**, set an aggregatable value of 120*32 = 3,840.
 -   **Scale down your values after aggregation**. Once you receive the summary report that contains the purchase value summed across multiple users, scale down the summary value using the scaling factor you used before aggregation. In our example, we've used a scaling factor of 32 pre-aggregation, so we need to divide the summary value received in the summary report by 32. Therefore, if the summary purchase value for a given key in the summary report is 76,800, the summary purchase value (with noise) is 76,800/32 = $2,400.
 
 #### Split up your budget
@@ -56,10 +55,7 @@ In this case, your scaling factors will be different for different aggregatable 
 You may decide to allocate the budget equally between two measurement goals, or you can choose to prioritize different measurement goals by allocating more budget to certain goals and less to others.
 {% endAside %}
 
-
-#### Example
-
-Let's assume you're tracking both the purchase count and the purchase value, and that you decide to allocate your budget equally.
+For example, let's assume you're tracking both the purchase count and the purchase value, and that you decide to allocate your budget equally.
 
 65,536 / 2 = 32,768 can be allocated per measurement type and per source.
 
@@ -88,15 +84,14 @@ Similarly, all else held equal, the total purchase value for shoes is lower than
 
 Therefore, the relative noise on the total purchase value for shoes will be higher than the relative noise on the total purchase value for all items.
 
-{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/fEMnK3PlbIxRCWduHsp6.png", alt="ALT_TEXT_HERE", width="800", height="615" %}
+{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/fEMnK3PlbIxRCWduHsp6.png", alt="Noise impact with granular versus coarse keys.", width="800", height="615" %}
 
 ### Summing up summary values (rollups) also sums their noise
 
-By summing up yourself summary values from summary reports to access higher-level data, you also sum the noise from these summary values.
+By summing up your summary values from summary reports to access higher-level data, you also sum the noise from these summary values.
 
-{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/xvdO0HpvwkvppLv1Pv0O.png", alt="ALT_TEXT_HERE", width="800", height="1058" %}
+{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/xvdO0HpvwkvppLv1Pv0O.png", alt="The degree of noise with granular keys with rollups versus coarse keys with no rollups", width="800", height="1058" %}
 
-#### Example
 
 Let's look at two different approaches:
 -   **Approach A**: you include a Geography ID in your keys. Summary reports expose geo-ID-level keys, each associated with the summary purchase value at a specific Geo ID's level.
@@ -118,7 +113,7 @@ As mentioned earlier, the higher the summary value is, the lower the relative no
 
 {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/2VZyQbx2weKGTfA3QdA0.png", alt="Requesting summary reports less frequently leads to a higher signal to noise ratio", width="512", height="315" %}
 
-#### Example
+Here's an example to illustrate:
 
 -   If you're requesting hourly summary reports over 24 hours and then summing the summary value from each hourly report to access day-level data, noise is added 24 times.
 -   In one daily summary report, noise is added in only once.

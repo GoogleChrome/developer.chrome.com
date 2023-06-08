@@ -11,7 +11,7 @@ authors:
   - maudn
 ---
 
-Data in event-level and summary reports is _noised_; in other words, for a small percentage of cases, random data is sent instead of real reports/data. This practice preserves user privacy by preventing the joining of user identity across sites. 
+Data in aggregatable reports is _noised_; in other words, for a small percentage of cases, random data is sent instead of real reports/data. This practice preserves user privacy by preventing the joining of user identity across sites. 
 
 
 ## Understanding noise in general
@@ -57,7 +57,7 @@ All the elements that impact noise rely on two primary concepts.
 
     Therefore, noise is likely to have a lower impact on the $20,000 aggregated purchase value than on the $200 value. Relatively speaking, $20,000 is likely to be less noisy, that is it's likely to have a higher signal-to-noise ratio.
 
-    {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/qSSm2ahrags6PyX0uumm.png", alt="ALT_TEXT_HERE", width="800", height="453" %}
+    {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/qSSm2ahrags6PyX0uumm.png", alt="Higher aggregated values have relatively lower noise impact.", width="800", height="453" %}
 
     This has a few important practical implications that are outlined in the next section. This mechanism is part of the API design, and the practical implications are long-term. They will continue to play an important role when ad techs design and evaluate various aggregation strategies.
 
@@ -78,10 +78,11 @@ Noise is drawn from the [Laplace distribution](https://en.wikipedia.org/wiki/Lap
     -   `CONTRIBUTION_BUDGET` is [defined in the browser](https://docs.google.com/document/d/1BRFl9x21rEI1xmZhomPxbzkYBBoM7TF4aEBVr9p0ZzI/edit#heading=h.pcbjmxqyvd83).
     -   `epsilon` is fixed in the aggregation server.
 
+
+The following diagram shows the probability density function for a Laplace distribution with μ=0, b = 20:
+
 {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/FsWhm3xQ2zrEVZL5AmmN.png", alt="Probability density function for a Laplace distribution with μ=0, b = 20", width="512", height="330" %}
-<figcaption>
-Probability density function for a Laplace distribution with μ=0, b = 20 
-</figcaption>
+
 
 #### Random noise values, one noise distribution
 
@@ -99,19 +100,16 @@ This illustrates that the noise values all come from the same distribution, and 
 
 Noise is applied to every summary value—including empty ones (0).
 
-{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/qKiM3ozD6OZhkr113Sr7.png", alt="ALT_TEXT_HERE", width="256", height="173" %}
+{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/qKiM3ozD6OZhkr113Sr7.png", alt="Even empty summary values are subject to noise.", width="256", height="173" %}
 
-##### Example
-
-Even if the true summary value for a given key is 0, the noisy summary value you'll see in the summary report for this key will (most likely) not be 0.
+For example, even if the true summary value for a given key is 0, the noisy summary value you'll see in the summary report for this key will (most likely) not be 0.
 
 Noise can be either a positive or a negative number.
 
-{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/bKwhviKHyHc6r7u0KIY5.png", alt="ALT_TEXT_HERE", width="512", height="204" %}
+{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/bKwhviKHyHc6r7u0KIY5.png", alt="Examples of positive and negative noise.", width="512", height="204" %}
 
-##### Example
 
-For a pre-noise purchase amount of 327,000, noise may be +6,000 or -6,000 (these are arbitrary example values).
+For example, for a pre-noise purchase amount of 327,000, noise may be +6,000 or -6,000 (these are arbitrary example values).
 
 ### Evaluating noise
 
