@@ -94,7 +94,7 @@ Replay extensions let you run the recordings produced by **Recorder** using a th
 
 [**LambdaTest Debug Extension**](https://chromewebstore.google.com/detail/kofahhnmgobkidipanhejacffiigppcd)
 
-: This extension lets you [replay recordings on the LambdaTest cloud grid](https://www.lambdatest.com/support/docs/record-and-replay-tests/) with over 3000+ real browsers and operating system combinations.
+: This extension lets you [replay recordings on the LambdaTest cloud grid](https://www.lambdatest.com/support/docs/record-and-replay-tests/) with over 3000 real browsers and operating system combinations.
 
 [**WebPageTest Recorder Extension**]([[https://chrome.google.com/webstore/detail/codeceptjs-chrome-recorde/jgdcobhagdbipacidhfnoaccgjooebam](https://chromewebstore.google.com/detail/biancihmofngiimeilfjfbbcbooeppbn](https://chromewebstore.google.com/detail/eklpnjohdjknellndlnepihjnhpaimok)))
 
