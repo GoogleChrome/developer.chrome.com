@@ -40,7 +40,7 @@ To enable C/C++ WebAssembly debugging in DevTools:
 
 ## Debug {: #debug }
 
-With DevTools set up, you can debug C/C++ WebAssembly:
+With DevTools set up, debug your code:
 
 1. [Open DevTools](/docs/devtools/open/) to inspect your website. For this tutorial, you can try it on this [demo page](https://emscripten-dbg-stories.netlify.app/mandelbrot.html).
 1. Optionally, group the files you authored for easier navigation. In **Sources**, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N7wEDmtW9lnrSxPRupMa.svg", alt="Three-dot menu.", width="24", height="24" %} > **Page** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} > [**Group by Authored/Deployed**](/docs/devtools/javascript/reference/#group-authored-and-deployed) {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XfSWf04g2cwpnFcmp40m.svg", alt="Experimental.", width="20", height="20" %}.
