@@ -18,7 +18,7 @@ tags:
 Once you set up DevTools, you can:
 
 - Inspect your original code in **Sources** > **Editor**.
-- Pause execution with line-of-code [breakpoints](/docs/devtools/javascript/breakpoints/#loc) and step through your original source code, not the `.wasm` binary file.
+- Pause execution with line-of-code [breakpoints](/docs/devtools/javascript/breakpoints/#loc) and step through your original C/C++ source code, not the compiled `.wasm` binary file.
 
 And, while paused, you can:
 
