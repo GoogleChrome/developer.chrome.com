@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Discovery on the Chrome Web Store
 date: 2022-03-21
-#updated: 2022-03-21
+updated: 2023-06-08
 description: >
   An overview of how users find items on the Chrome Web Store, and how our editors select items to
   feature.
@@ -24,9 +24,35 @@ Learn more about [crafting a great listing page][best-listing].
 ## Categories {: #categories }
 
 Categories on the Chrome Web Store organize items based on their main function. Users can browse
-category pages, like Shopping, Productivity, or Fun, to find relevant items to install. To determine
-which category an item will appear under, developers can select one on the Developer Dashboard.
-Categories are only available for extensions at this time.
+categories such as Shopping, Education, or Just for Fun, to find relevant items to install. To
+assign a category, open an item in the Developer Dashboard. You'll find the Category list on the
+Store Listing tab under Product Details.
+
+### Fun
+
+* Entertainment
+* Games
+* Just for Fun
+
+### Photos
+
+* Art & Design
+
+### Productivity
+
+* Education
+* Functionality & UI
+* Household
+* Privacy & Security
+* Tools
+* Workflow & Planning
+
+### Social & Communications
+
+* Communication
+* Social Media & Networking
+* Travel
+* Well-being
 
 ## Extensions home page {: #home-page }
 
