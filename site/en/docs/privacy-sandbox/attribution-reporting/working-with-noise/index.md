@@ -5,8 +5,8 @@ subhead: >
   How to work with, account for, and reduce the impact of noise in your aggregatable reports.
 description: >
   How to work with, account for, and reduce the impact of noise in your aggregatable reports.
-date: 2022-03-01
-updated: 2023-03-14
+date: 2022-06-23
+updated: 2022-06-23
 authors:
   - maudn
 ---
