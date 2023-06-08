@@ -78,7 +78,7 @@ While paused, try the following:
 
 ## Profile performance {: #perf }
 
-With DevTools set up and open, the code Chrome runs isn't optimized. It's tiered down to give you better debugging experience.
+With DevTools set up and open, the code Chrome runs isn't optimized. It's [tiered down](https://v8.dev/docs/wasm-compilation-pipeline#debugging) to give you better debugging experience.
 
 In this case, you can't rely on `console.time()` and `performance.now()`  in your code to profile performance. Instead, use the [**Performance**](/docs/devtools/performance/reference/#record) panel to profile.
 
