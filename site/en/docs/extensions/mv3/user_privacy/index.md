@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Protect user privacy"
 seoTitle: "Chrome Extensions: Protect user privacy"
 date: 2018-03-18
-updated: 2018-04-26
+updated: 2023-06-07
 description: Guidelines for ensuring that your Chrome Extension protects user privacy.
 ---
 
@@ -31,7 +31,7 @@ Extensions using host permissions to inject scripts can often substitute [`activ
   "version": "1.0",
   "description": "Example of a Secure Extension",
   "permissions": ["activeTab"],
-  "manifest_version": 2
+  "manifest_version": 3
 }
 ```
 
@@ -57,23 +57,25 @@ features.
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/5hIYQFOiYTl4EwyaYMLx.png",
        alt="A screenshot of a popup asking to enable permissions", height="248", width="258" %}
 
-Clicking **Okay!** will trigger the following event in the background script.
+Clicking **Okay!** will trigger the following event in the service worker.
 
 ```js
-document.querySelector('#button').addEventListener('click', function(event) {
+chrome.action.onClicked.addListener(function (event) {
   // Permissions must be requested from inside a user gesture, like a button's
   // click handler.
-  chrome.permissions.request({
-    permissions: ['tabs'],
-    origins: ['https://www.google.com/']
-  }, function(granted) {
-    // The callback argument will be true if the user granted the permissions.
-    if (granted) {
-      // doSomething();
-    } else {
-      // doSomethingElse();
+  chrome.permissions.request(
+    {
+      permissions: ["tabs", "scripting"],
+    },
+    function (granted) {
+      // The callback argument will be true if the user granted the permissions.
+      if (granted) {
+        // doSomething();
+      } else {
+        // doSomethingElse();
+      }
     }
-  });
+  );
 });
 ```
 
