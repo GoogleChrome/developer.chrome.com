@@ -4,7 +4,7 @@ title: The extension service worker lifecycle
 subhead: 
 description: Extension service workers respond to both standard service worker events and events in extension namespaces. They are presented together because often one type follows another during an extension's use.
 date: 2023-05-02
-updated: 2023-05-03
+updated: 2023-06-09
 ---
 
 Extension service workers respond to both the [standard service worker events](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope#events) and to events in extension namespaces. They are presented together because often one type follows another during an extension's use.
@@ -41,17 +41,15 @@ When a user profile starts, the [`chrome.runtime.onStartup`](/docs/extensions/re
 
 ## Idle and shutdown {: #idle-shutdown }
 
-Extension service workers are dormant unless an event fires. If the service worker has a handler for the fired event, it wakes up, executes it, then goes back to being idle. If the service worker is idle for at least 30 seconds it shuts down. You should design your service worker to be resilient against unexpected termination, since not all activity keeps the service worker alive. For example, this can interrupt a service worker [`fetch()`](https://developer.mozilla.org/docs/Web/API/fetch) call if the response takes more than 30 seconds to arrive.
+Normally, Chrome terminates a service worker after one of the following conditions is met:
 
-Any new events and calls to extension APIs reset the idle timer the moment they're fired. For example, when a service worker receives a [`chrome.bookmarks.onCreated`](/docs/extensions/reference/bookmarks/#event-onCreated) event, the 30 second timeout is reset. The same is true when calling an extension API such as [`chrome.storage.local.get()`](/docs/extensions/reference/storage/#property-local) which also resets the 30 second timeout. As with web service workers, extension service workers have no shutdown or deactivation events.
+-   After 30 seconds of inactivity. Receiving an event or calling an extension API resets this timer.
+-   When a single request, such as an event or API call, takes longer than 5 minutes to process.
+-   When a [fetch()](https://developer.mozilla.org/docs/Web/API/fetch) response takes more than 30 seconds to arrive.
 
-Before Chrome 110, only running event handlers caused the idle time to reset. Any events that were queued, but for which a handler had not been called would not cause a reset. Also, extension service workers had a maximum lifetime of five minutes before Chrome shut them down. These behaviors caused service workers to shut down at unexpected times.
+Events and calls to extension APIs reset these timers, and if the service worker has gone dormant, they will revive them. Nevertheless, you should design your service worker to be resilient against unexpected termination.
 
-Though Chrome 110 changed this you should not keep your service worker alive indefinitely, though you can. (We don't consider this a good programming practice.) You should test your extensions to ensure that they're not doing this unintentionally.
-
-Though it's difficult to catch in a code review, we suggest you guard against it as best you can.
-
-For all of these reasons, you need to guard against unexpected termination of the service worker.
+You should not keep your service worker alive indefinitely, though you can. (We don't consider this a good programming practice.) You should test your extensions to ensure that they're not doing this unintentionally. Though it's difficult to catch in a code review, we suggest you guard against it as best you can.
 
 ### Persist data rather than using global variables {: #persist-data }
 
@@ -66,6 +64,22 @@ Any global variables you set will be lost if the service worker shuts down. Inst
 [CacheStorage API](https://developer.mozilla.org/docs/Web/API/CacheStorage)
 : A persistent storage mechanism for Request and Response object pairs. This API was designed specifically for web service workers and is used to retrieve data from an endpoint. There are a variety of ways to use this API depending on whether and how critical it is that users see up-to-date data. For more information, see [The Offline Cookbook](​​https://web.dev/offline-cookbook). Unless you're specifically proxying network requests via the fetch handler, you should use `chrome.storage`.
 
-## Be careful with timeouts {: #timeouts }
+### Keeping service workers alive
 
-If an operation takes more than 30 seconds to complete, the service worker can shut down. An example is the `fetch()` call described above. The fetch fails if the service worker shuts down before the [`response`](https://developer.mozilla.org/docs/Web/API/Response) is received.
+Since the release of Manifest V3, we've made several improvements to service worker lifetimes. This means that if your Manifest V3 extension supports earlier versions of Chrome, there are conditions you will need to be aware of. If these conditions do not affect your extension, you can move on from this section. If they do, consider specifying a [minimum Chrome version](/docs/extensions/mv3/manifest/minimum_chrome_version/) in your manifest.
+
+#### Chrome 114
+
+Sending a message using [long-lived messaging](/docs/extensions/mv3/messaging/#connect) keeps the service worker alive. Previously, opening a port reset the timers, but sending a message would not. Opening a port no longer resets the timers.
+
+#### Chrome 110
+
+Queued events reset the timers. Before this, only running event handlers would keep a service worker alive. Any events that were queued, but for which a handler had not been called would not cause a reset.
+
+#### Chrome 109
+
+Messages sent from an offscreen document reset the timers.
+
+#### Chrome 105
+
+Connecting to a native messaging host using chrome.runtime.connectNative() will keep a service worker alive. If the host process crashes or is shut down, the port is closed and the service worker will terminate after timers complete. Guard against this by calling chrome.runtime.connectNative() in the port's onDisconnect event handler.
