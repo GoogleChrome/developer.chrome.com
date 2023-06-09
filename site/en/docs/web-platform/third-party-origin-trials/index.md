@@ -65,6 +65,7 @@ on progress with third-party origin trials.
    trials](https://developers.chrome.com/origintrials/#/trials/active).
 1. On the trial's registration page, enable the option to request a third-party token, if
    available.
+1. For third-party tokens, the Web Origin value should be the origin serveing the script that injects the origin trail token.
 1. Select one of the choices for restricting usage for a third-party token:
    1. Standard Limit: This is the usual limit of
       [0.5% of Chrome page loads](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#3-what-happens-if-a-large-site-such-as-a-google-service-starts-depending-on-an-experimental-feature).
