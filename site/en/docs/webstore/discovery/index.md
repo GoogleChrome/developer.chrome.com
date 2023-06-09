@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Discovery on the Chrome Web Store
 date: 2022-03-21
-updated: 2023-06-08
+updated: 2023-06-09
 description: >
   An overview of how users find items on the Chrome Web Store, and how our editors select items to
   feature.

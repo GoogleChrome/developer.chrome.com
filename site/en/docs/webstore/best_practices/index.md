@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Best Practices
 date: 2017-08-30
-updated: 2023-05-10
+updated: 2023-06-09
 description: >
   Best practices on how to implement your extension and list it in the Chrome Web Store.
 ---
