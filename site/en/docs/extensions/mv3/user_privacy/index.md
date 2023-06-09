@@ -45,7 +45,8 @@ Empower users to choose which features and permissions they need from an extensi
 {
   "name": "Very Secure Extension",
   ...
-  "optional_permissions": [ "tabs", "https://www.google.com/" ],
+  "optional_permissions": [ "tabs", ],
+  "optional_host_permissions": ["https://www.google.com/" ],
   ...
 }
 ```
