@@ -86,9 +86,9 @@ Alternatively, you can run your profiling code without opening DevTools, then op
 
 ## Separate the debug information {: #separate-debug }
 
-To speed up compilation and loading times but still have a better debugging experience, you can split out the debug information into a separate `.wasm` file. You can either keep this file locally or host it on a separate server.
+To speed up loading but still have a better debugging experience, you can split out the debug information into a separate `.wasm` file. For more information, see [Debugging WebAssembly Faster](/blog/faster-wasm-debugging/).
 
-To do it with Emscripten, pass the [`-gseparate-dwarf=<filename>`](https://emscripten.org/docs/tools_reference/emcc.html#:~:text=%2Dgseparate%2Ddwarf%5B) flag and specify the path to the file:
+You can either keep this file locally or host it on a separate server. To do it with Emscripten, pass the [`-gseparate-dwarf=<filename>`](https://emscripten.org/docs/tools_reference/emcc.html#:~:text=%2Dgseparate%2Ddwarf%5B) flag and specify the path to the file:
 
 ```bash
 emcc -g source.cc -o app.html \
