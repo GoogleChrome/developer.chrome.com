@@ -12,7 +12,7 @@ updated: 2019-02-21
 
 So. The day has come. You have finally grown bored of long scrolls of text and are looking for a new format. Something elegant. Something compact. Something that takes the long scroll, cuts it into neat little rectangles and binds them together. I call this invention the "book".
 
-With the power of CSS regions ([CanIUse](https://caniuse.com/#feat=css-regions), go to [chrome://flags](chrome://flags) and enable CSS Regions) and CSS 3D transformations, cutting-edge book technology is finally available on modern browsers. All you need is a few lines of JavaScript and a whole lot of CSS.
+With the power of CSS regions ([CanIUse](https://caniuse.com/#feat=css-regions), go to `chrome://flags` and enable CSS Regions) and CSS 3D transformations, cutting-edge book technology is finally available on modern browsers. All you need is a few lines of JavaScript and a whole lot of CSS.
 
 Let's start off by defining our book structure. The book consists of pages and the pages consists of two sides. The sides contain the book content:
 
