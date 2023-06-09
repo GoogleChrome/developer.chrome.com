@@ -108,8 +108,8 @@
           sections:
             - url: /docs/privacy-sandbox/attribution-reporting/understanding-noise/
             - url: /docs/privacy-sandbox/attribution-reporting/working-with-noise/
-        - url: https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/view?usp=sharing
-          title: i18n.docs.privacy-sandbox.attribution-reporting-handbook        
+            - url: https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/view?usp=sharing
+              title: i18n.docs.privacy-sandbox.attribution-reporting-handbook        
         - url: /docs/privacy-sandbox/attribution-reporting-updates
           title: i18n.docs.privacy-sandbox.attribution-reporting-changing
     - title: i18n.docs.privacy-sandbox.measure-cross-site
