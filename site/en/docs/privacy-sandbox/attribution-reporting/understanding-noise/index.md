@@ -90,9 +90,7 @@ Let's assume that an ad tech requests summary reports for two aggregation keys, 
 
 The aggregation service selects two noise values x1 and x2, following the [same noise distribution](#one-noise-distribution). x1 is added to the summary value for key1, and x2 is added to the summary value for key2.
 
-In the diagrams, we'll represent noise values as identical.
-
-This is a simplification; in reality, noise values will vary, as they're drawn randomly from the distribution.
+In the diagrams, we'll represent noise values as identical. This is a simplification; in reality, noise values will vary, as they're drawn randomly from the distribution.
 
 This illustrates that the noise values all come from the same distribution, and are independent from the summary value they're applied to.
 
