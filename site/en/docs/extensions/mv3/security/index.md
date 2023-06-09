@@ -34,16 +34,11 @@ security circumventing most [man-in-the-middle attacks][4].
 
 The Chrome browser limits an extension's access to privileges that have been explicitly requested in
 the [manifest][5]. Extensions should minimize their permissions by only registering APIs and
-websites they depend on. Arbitrary code should be kept to a minimum.
+websites they depend on.
 
 Limiting an extensions privileges limits what a potential attacker can exploit.
 
 ### Cross-origin fetch() {: #xhr }
-
-{% Aside 'warning' %}
-`XMLHttpRequest()` is not supported in Service Workers.
-Use its modern replacement, `fetch()`.
-{% endAside %}
 
 An extension service worker can only use `fetch()`, or APIs that use the same [fetch handler][27] to get resources from itself and from domains
 specified in the permissions.
@@ -52,7 +47,7 @@ specified in the permissions.
   "name": "Very Secure Extension",
   "version": "1.0",
   "description": "Example of a Secure Extension",
-  "permissions": [
+  "host_permissions": [
     "https://developer.chrome.com/*",
     "https://*.google.com/*"
   ],
@@ -149,10 +144,6 @@ If the extension needs to make use of web assembly, or increase the restrictions
 }
 ```
 
-## Avoid executable APIs {: #avoid }
-
-APIs that execute code should be replaced with safer alternatives.
-
 ### document.write() and innerHTML {: #document_write }
 
 While it may be simpler to dynamically create HTML elements with `document.write()` and `innerHTML`,
@@ -197,7 +188,7 @@ Avoid accidentally exposing extension privileges to content scripts:
 Safeguard an extension from malicious scripts by limiting listeners to only what the extension is
 expecting, validating the senders of incoming data, and sanitizing all inputs.
 
-An extension should only register for [`runtime.onRequestExternal`][22], if it is expecting
+An extension should only register for [`runtime.onMessageExternal`][22], if it is expecting
 communication from an external website or extension. Always validate that the sender matches a
 trusted source.
 
@@ -220,15 +211,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   if (request.allowedAction)
     console.log("This is an allowed action.");
 });
-```
-
-Prevent an extension from executing an attacker's script by sanitizing user inputs and incoming
-data, even from the extension itself and approved sources. [Avoid executable APIs][26].
-
-```js
-function sanitizeInput(input) {
-    return input.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
-}
 ```
 
 [1]: https://support.google.com/accounts/answer/185839?hl=en
