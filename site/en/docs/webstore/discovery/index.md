@@ -28,31 +28,16 @@ categories such as Shopping, Education, or Just for Fun, to find relevant items 
 assign a category, open an item in the Developer Dashboard. You'll find the Category list on the
 Store Listing tab under Product Details.
 
-### Fun
+In mid 2023 the categories changed. Most of the new categories match previous ones. Several were
+replaced by multiple categores. If you previously used one of the replaced categories, use the
+table below to decide which new category best suites your extension. 
 
-* Entertainment
-* Games
-* Just for Fun
-
-### Photos
-
-* Art & Design
-
-### Productivity
-
-* Education
-* Functionality & UI
-* Household
-* Privacy & Security
-* Tools
-* Workflow & Planning
-
-### Social & Communications
-
-* Communication
-* Social Media & Networking
-* Travel
-* Well-being
+| Old category            | New categories                                                                |
+|-------------------------|-------------------------------------------------------------------------------|
+| Fun                     | * Entertainment<br/>* Games<br/>* Just for Fun                                |
+| Photos                  | * Art & Design                                                                |
+| Productivity            | * Education<br/>* Functionality & UI<br/>* Household<br/>* Privacy & Security<br/>* Tools<br/>* Workflow & Planning |
+| Social & Communications | * Communication<br/>* Social Media & Networking<br/>* Travel<br/>* Well-being |
 
 ## Extensions home page {: #home-page }
 
