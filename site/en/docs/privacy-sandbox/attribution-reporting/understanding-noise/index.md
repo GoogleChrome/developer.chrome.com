@@ -75,7 +75,7 @@ Noise is drawn from the [Laplace distribution](https://en.wikipedia.org/wiki/Lap
 
 -   A *mean* (`μ`) of 0. This means that the most likely noise value is 0 (no noise added), and that the noisy value is as likely to be smaller than the original as it is to be larger (this is sometimes called *unbiased*).
 -   A *scale parameter* of` b = CONTRIBUTION_BUDGET` / `epsilon`.
-    -   `CONTRIBUTION_BUDGET` is [defined in the browser](https://docs.google.com/document/d/1BRFl9x21rEI1xmZhomPxbzkYBBoM7TF4aEBVr9p0ZzI/edit#heading=h.pcbjmxqyvd83).
+    -   `CONTRIBUTION_BUDGET` is defined in the browser.
     -   `epsilon` is fixed in the aggregation server.
 
 
@@ -131,7 +131,7 @@ b*sqrt(2) = (CONTRIBUTION_BUDGET / epsilon)*sqrt(2) = (65,536/10)*sqrt(2) = 9,26
 
 Because you will know the [standard deviation](#evaluating-noise) of the noise added to each value output by the aggregation service, you can determine appropriate thresholds for comparison to determine whether differences observed could be due to noise. 
 
-For example, if the noise added to a value is approximately +/- 10 (accounting for [scaling](#heading=h.683u7t2q1xk2)) and the difference in the value between two campaigns is over 100, it's likely safe to conclude that the difference in the value measured between each campaign is not due to noise alone.
+For example, if the noise added to a value is approximately +/- 10 (accounting for scaling) and the difference in the value between two campaigns is over 100, it's likely safe to conclude that the difference in the value measured between each campaign is not due to noise alone.
 
 {% Aside 'caution' %}
 Do not rely on report counts or data available only via debug reports as a source of truth in your designs. In the future, the data available in debug reports will change and noisy reports will be generated alongside real reports, so these signals should be used only to validate your implementation and testing strategy.</th>

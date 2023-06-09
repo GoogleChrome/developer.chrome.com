@@ -128,7 +128,6 @@ An important part of allocating budget between different keys is understanding h
 
 <!-- Filtering and Deduplication links needed later -->
 
-
 ### Experimenting with epsilon 
 
 Lower values of epsilon provide greater privacy protection.
