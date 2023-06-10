@@ -35,7 +35,7 @@ Say we have the following HTML:
   <li class="card-container">
     <div class="card">
       ...
-    </div class="card">
+    </div>
   </li>
 </ul>
 ```
