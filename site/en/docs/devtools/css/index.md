@@ -23,7 +23,7 @@ Chrome DevTools.
     <p class="aloha" data-message="wackadoo!">Inspect me!</p>
 
 
-1. Observe the `Inspect me!` element highlighted in blue the **DOM Tree**.
+1. Observe the `Inspect me!` element highlighted blue in the **DOM Tree**.
 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/q2kmu1Pzg7oS9osr2PbU.png", alt="Highlighted element.", width="800", height="526" %}
 
