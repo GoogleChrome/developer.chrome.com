@@ -7,7 +7,7 @@ description: >
 subhead: >
   Find out how your server can send hints to the browser about critical sub-resources.
 date: 2022-06-23
-updated: 2023-06-09
+updated: 2023-06-10
 authors:
   - kenjibaheux
 tags:
@@ -154,7 +154,9 @@ If you are using one of the following CDNs or platforms, you may not need to man
 
 ## Avoiding issues for clients that do not support Early Hints
 
-Informational HTTP responses in the 100 range are part of the HTTP standard, but some older clients or bots may struggle with these because, prior to the launch of 103 Early Hints, they were rarely used for general web browsing. Only emitting 103 Early Hints in response to clients that send a `sec-fetch-mode=navigate` HTTP request header should ensure such hints are only sent for clients that understand to wait for the subsequent response.
+Informational HTTP responses in the 100 range are part of the HTTP standard, but some older clients or bots may struggle with these because, prior to the launch of 103 Early Hints, they were rarely used for general web browsing.
+
+Only emitting 103 Early Hints in response to clients that send a `sec-fetch-mode: navigate` HTTP request header has should ensure such hints are only sent for clients that understand to wait for the subsequent response. Additionally, since Early Hints are only supported on navigation requests anyway (see [Current Limitations](#current-limitations)), this has the added benefit of avoiding needlessly sending these on other requests.
 
 ## Advanced pattern
 
