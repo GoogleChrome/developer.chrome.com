@@ -10,6 +10,7 @@ date: 2022-06-23
 updated: 2023-06-10
 authors:
   - kenjibaheux
+  - tunetheweb
 tags:
   - css
 hero: 'image/kheDArv5csY6rvQUJDbWRscckLr1/GDoM9e3pHadjogCPqB4r.jpg'
@@ -157,6 +158,8 @@ If you are using one of the following CDNs or platforms, you may not need to man
 Informational HTTP responses in the 100 range are part of the HTTP standard, but some older clients or bots may struggle with these because, prior to the launch of 103 Early Hints, they were rarely used for general web browsing.
 
 Only emitting 103 Early Hints in response to clients that send a `sec-fetch-mode: navigate` HTTP request header has should ensure such hints are only sent for newer clients that understand to wait for the subsequent response. Additionally, since Early Hints are only supported on navigation requests (see [Current limitations](#current-limitations)), this has the added benefit of avoiding needlessly sending these on other requests.
+
+In addition [Early Hints are recommended to only be sent over HTTP/2 or HTTP/3 connections](https://www.rfc-editor.org/rfc/rfc8297.html#section-3).
 
 ## Advanced pattern
 
