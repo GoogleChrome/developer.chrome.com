@@ -2,9 +2,9 @@
 layout: 'layouts/doc-post.njk'
 title: 'Custom report windows'
 subhead: >
-  Custom report windows can give you faster event-level reports and selective reporting for aggragatable reports.
+  Custom report windows can give you faster event-level reports and selective reporting for aggregatable reports.
 description: >
-  Custom report windows can give you faster event-level reports and selective reporting for aggragatable reports.
+  Custom report windows can give you faster event-level reports and selective reporting for aggregatable reports.
 date: 2022-03-01
 updated: 2023-03-14
 authors:
