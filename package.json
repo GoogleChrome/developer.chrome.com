@@ -52,7 +52,7 @@
     "@google-cloud/error-reporting": "^2.0.4",
     "@google-cloud/storage": "^6.7.0",
     "@lhci/cli": "^0.7.2",
-    "@mdn/browser-compat-data": "5.2.61",
+    "@mdn/browser-compat-data": "5.2.63",
     "@rollup/plugin-node-resolve": "^8.4.0",
     "algoliasearch": "^4.6.0",
     "async-transforms": "1.0.6",
