@@ -430,7 +430,7 @@ The possible View Timeline ranges that you can target are the following:
 
 To define a range, you must set a range-start and range-end. Each consists of range-name _(see list above)_ and a range-offset to determine the position within that range-name. The range-offset is typically a percentage ranging from `0%` to `100%` but you can also specify a fixed length such as `20em`.
 
-For example, if you want to run an animation from the moment a subject is entering, choose `entry 0%` as the range-start. To have it finished by the time the subject has entered, choose `entry 100%` as a value for the range-end.
+For example, if you want to run an animation from the moment a subject enters, choose `entry 0%` as the range-start. To have it finished by the time the subject has entered, choose `entry 100%` as a value for the range-end.
 
 In CSS, you set this using the `animation-range` property. Example:
 
