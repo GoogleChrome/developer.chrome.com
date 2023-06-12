@@ -18,14 +18,14 @@ authors:
 
 クロスサイトトラッキングのない将来に備えるために、Cookie の使用箇所を監査し、サイトに影響がある場合に必要となる作業を計画してください。
 
-## Overview
+## 概要
 
 1. コード内の[ファーストパーティ Cookie とサードパーティ Cookie を識別](#identify)します。 `SameSite=None` を含む Cookie は更新が必要です。
 2. 完全に包含された埋め込みコンテキストでサードパーティ Cookie を使用している場合は、[パーティション化された Cookie ](#partitioned-cookies)を調べます。
 3. 1 つのまとまったグループを形成する複数のサイトにわたってサードパーティ Cookie が必要な場合は、 [First-Party Sets](#first-party-sets) を調べます。
 4. これらのオプションのいずれも該当しない場合は、クロスサイトトラッキングに依存しない個別のユースケースについて、[他のプライバシー サンドボックス API を調べます](#other-apis)。
 
-## Identify your first-party and third-party cookies {: #identify }
+## ファーストパーティ Cookie とサードパーティ Cookie を識別する {: #identify }
 
 Cookie は、ユーザーのコンテキストに応じてファーストパーティまたはサードパーティになりえます。ユーザーがその時点でどのサイトにアクセスしているかによって異なります。ウェブ上のファーストパーティコンテキストとサードパーティコンテキストの区別は必ずしも明らかではなく、さまざまなリソースに及ぼす影響もさまざまです。
 
@@ -92,7 +92,7 @@ Set-Cookie: cookie-name=value; SameSite=None; Secure
 
 {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/4eKoilhldt8qdmiEvEDo.jpg", alt="パーティション化されていない Cookie を含むサイトとストレージを示す図。", width="800", height="450" %}
 
-If your service and the sites using it have a 1:1 relationship, those cookies are only ever needed on the site where they were set and not used across multiple sites. [Examples](/docs/privacy-sandbox/chips/#use-cases) include saving preferences for a widget or sharing a session cookie for an API.
+サービスとそれを使用するサイトが 1 対 1 の関係にある場合、それらの Cookie は設定されたサイトでのみ必要となり、複数のサイトで使用されることはありません。[例](/docs/privacy-sandbox/chips/#use-cases)には、ウィジェットの設定の保存や API のセッション Cookie の共有などが含まれます。
 
 この場合、Cookie をトップレベル サイトごとにパーティション化すると、複雑さとサイト間のデータ漏洩のリスクが軽減されるため、改善となります。サードパーティ Cookie は引き続きサイト間で使用できますが、ブラウザが異なるトップレベルサイトにある場合は、異なる Cookie が表示されます。
 
@@ -110,7 +110,7 @@ Set-Cookie: __Host-cookie=value; SameSite=None; Secure; Path=/; Partitioned;
 
 First-Party Sets（FPS）は、開発者がサイト間の関係を宣言するためのウェブプラットフォーム メカニズムです。これにより、ブラウザはこの情報を使用して、特定のユーザー向けの目的で制限付きのクロスサイト Cookie アクセスを有効にできます。Chrome は、これらの宣言された関係を使用して、サードパーティのコンテキストで、Cookie へのサイトアクセスをいつ許可または拒否するかを決定します。
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/NIUl4xLnUCe3yYP7TblC.png", alt="Diagram showing three sites accessing each other's cookies.", width="800", height="446" %}
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/NIUl4xLnUCe3yYP7TblC.png", alt="相互の Cookie にアクセスしている 3 つのサイトを示す図。", width="800", height="446" %}
 
 Cookie が複数の関連サイト間で使用されている場合、クロスサイト Cookie をブロックするか、トップレベル サイトごとにパーティション化すると、シングルサインオンや共有ショッピングカートなどの[ユースケース](/blog/first-party-sets-sameparty/#usecases)がブロックされてしまいます。
 
