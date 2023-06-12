@@ -92,7 +92,6 @@ chrome.devtools.inspectedWindow.eval(
 );
 ```
 
-You can find more examples that use Developer Tools APIs in [Samples][8].
 
 [1]: /docs/extensions/mv3/devtools
 [2]: #property-tabId
@@ -100,4 +99,4 @@ You can find more examples that use Developer Tools APIs in [Samples][8].
 [4]: /docs/extensions/reference/tabs#method-executeScript
 [5]: https://developers.google.com/web/tools/chrome-devtools/
 [7]: https://www.ietf.org/rfc/rfc6454.txt
-[8]: /docs/extensions/mv3/samples#search:devtools
+[8]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples

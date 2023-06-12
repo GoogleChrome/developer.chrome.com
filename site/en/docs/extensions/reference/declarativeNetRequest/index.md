@@ -404,6 +404,10 @@ When rules are applied to browsers with pages in the service worker's cached sto
   `h1` was removed by (10), `h2` was set by (10) then appended by (11), and `h3` was appended by
   (10) and (11).
 
+The following example extensions show how to use `declarativeNetRequst`. To try this API,
+install the [declarativeNetRequst samples](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/declarativeNetRequest) from the [chrome-extension-samples](https://github.com/GoogleChrome/chrome-extensions-samples)
+repository.
+
 [1]: /docs/extensions/mv3/manifest
 [2]: /docs/extensions/mv3/declare_permissions
 [3]: #type-Ruleset

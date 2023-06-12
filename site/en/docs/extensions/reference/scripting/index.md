@@ -252,6 +252,10 @@ already been injected.
 
 {% endAside %}
 
+The following example extensions show how to use scripting. To try this API,
+install the [scripting sample](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/scripting) from the [chrome-extension-samples](https://github.com/GoogleChrome/chrome-extensions-samples)
+repository.
+
 [activetab]: /docs/extensions/mv3/manifest/activeTab/
 [contentscripts]: /docs/extensions/mv3/content_scripts
 [manifest]: /docs/extensions/mv3/manifest
