@@ -430,10 +430,25 @@ The possible View Timeline ranges that you can target are the following:
 
 To define a range, you must set a range-start and range-end. Each consists of range-name _(see list above)_ and a range-offset to determine the position within that range-name. The range-offset is typically a percentage ranging from `0%` to `100%` but you can also specify a fixed length such as `20em`.
 
-For example, if you want to run an animation from the moment a subject is entering, choose `entry 0%` as the range-start. To have it finished by the time the subject has entered, choose `entry 100%` as a value for the range-end. In CSS, you set this using the `animation-range` property. Example:
+For example, if you want to run an animation from the moment a subject is entering, choose `entry 0%` as the range-start. To have it finished by the time the subject has entered, choose `entry 100%` as a value for the range-end.
+
+In CSS, you set this using the `animation-range` property. Example:
 
 ```css
 animation-range: entry 0% entry 100%;
+```
+
+In JavaScript, use the `rangeStart` and `rangeEnd` properties.
+
+```js
+$el.animate(
+  keyframes,
+  {
+    timeline: tl,
+    rangeStart: 'entry 0%',
+    rangeEnd: 'entry 100%',
+  }
+);
 ```
 
 Use the tool embedded below to see what each range-name represents and how the percentages affect the start and end positions. Try to set the range-start to `entry 0%` and the range-end to `cover 50%`, and then drag the scrollbar to see the animation result.
@@ -523,17 +538,24 @@ To create a View Timeline in JavaScript, create a new instance of the `ViewTimel
 const tl = new ViewTimeline({
   subject: document.getElementById('subject'),
 });
-````
+```
 
-To attach it to a Web Animation, pass it in as the `timeline` property and omit any `duration` if there was any.
+To attach it to a Web Animation, pass it in as the `timeline` property and omit any `duration` if there was any. Optionally, pass in range information using the `rangeStart` and `rangeEnd` properties.
 
 ```js
 $el.animate({
   opacity: [0, 1],
 }, {
   timeline: tl,
+  rangeStart: 'entry 25%',
+  rangeEnd: 'cover 50%',
 });
 ```
+
+{% Details %}
+{% DetailsSummary %}✨ Try it for yourself{% endDetailsSummary %}
+<iframe src="https://scroll-driven-animations.style/demos/image-reveal/waapi/?embed" frameborder="0" sandbox="allow-scripts allow-forms allow-top-navigation" width="500" height="600" style="height: 600px; width: 100%; border: 1px solid #333;"></iframe>
+{% endDetails %}
 
 {% Aside %} The animated element `$el` and the `subject` do not need to be the same element. This means that you can track an element in its scroller while animating a distant element somewhere else in the DOM tree. {% endAside %}
 
