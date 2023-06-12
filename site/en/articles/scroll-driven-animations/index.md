@@ -163,6 +163,8 @@ Example:
 }
 ```
 
+{% Aside %} The `animation-timeline` longhand property is not part of the `animation` shorthand and must be declared separately. Furthermore, `animation-timeline` must be declared after the `animation` shorthand as the shorthand will reset non-included longhands to their initial value. {% endAside %}
+
 The `scroll()` function accepts a `<scroller>` and an `<axis>` argument.
 
 Accepted values for the `<scroller>` argument are the following:
