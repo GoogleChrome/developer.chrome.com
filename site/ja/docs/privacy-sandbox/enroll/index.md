@@ -1,14 +1,12 @@
 ---
 layout: layouts/doc-post.njk
 title: Enroll with the Privacy Sandbox
-subhead: |2
+subhead: |2-
 
-  A new process for the Privacy Sandbox relevance and measurement APIs,
-  across Chrome and Android.
-description: |2
+  Chrome と Android におけるプライバシーサンドボックスの広告関連 API の新しいプロセス。
+description: |2-
 
-  Verify identity and share configuration details for the Privacy Sandbox
-  relevance and measurement APIs, across Chrome and Android.
+  アイデンティティの検証と、プライバシーサンドボックスの広告関連 API について構成情報の詳細を共有してください。Chrome と Android で共通です。
 date: '2023-04-13'
 authors:
   - georgiafranklin
@@ -30,7 +28,7 @@ API を呼び出すすべてのエンティティを検証し、これらの API
 
 監査可能な透明性を提供するために、会社に関する登録情報は公開されます。この情報の公開アクセスの仕組みについては、今後の更新で詳細をお知らせします。
 
-To limit how much data an API caller can receive, we’ve already incorporated rate limits for each developer into the relevance and measurement APIs. Enrollment allows us to better enforce those rate limits by using an independent, third party verification service. We will use Dun &amp; Bradstreet to verify your corporate identity and any potential corporate linkages.
+API 呼び出し元が受け取ることができるデータの量を制限するために、広告関連 API に各開発者のレート制限をすでに組み込んでいます。登録により、独立したサードパーティの検証サービスを使用して、これらのレート制限をより適切に適用できます。 企業のアイデンティティと潜在的な企業関係の確認には、Dun &amp; Bradstreet を起用します。
 
 この確認プロセスは、ある開発者が別の開発者になりすまして API の使用を制限できないようにするのにも役立ちます。最後に、この取り組みにより、プライバシー サンドボックスの Chrome と Android のエコシステムに共通の登録プロセスが採用されるため、プラットフォーム間で確認作業を繰り返す必要がなくなります。
 
@@ -51,7 +49,7 @@ To limit how much data an API caller can receive, we’ve already incorporated r
 
 すべての API 呼び出し元は、[サイト](https://web.dev/same-site-same-origin/#public-suffix-list-and-etld)を登録する必要があります。サイトは、プライバシーサンドボックス API のプライバシー保護を通知する境界を提供します。
 
-{% Aside %} Enrollment only applies to companies that will call one or more of the Privacy Sandbox relevance and measurement APIs. Publishers and/or other companies that are customers of ad techs do not need to enroll. {% endAside %}
+{% Aside %} この登録は、1 つ以上のプライバシーサンドボックスの広告関連 API を呼び出す企業にのみ適用されます。アドテックの顧客であるサイト運営者やその他の企業は、登録する必要はありません。 {% endAside %}
 
 登録は、独立した事業部門または製品に合わせて行う必要があります。レート制限を共有しないエンティティが複数ある場合は、独立したサイトごとに登録を申し込むことができます。API の呼び出しに使用されるオリジンは、登録のサイト境界内にある必要があります。
 
