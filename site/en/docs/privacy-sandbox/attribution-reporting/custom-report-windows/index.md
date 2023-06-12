@@ -1,0 +1,211 @@
+---
+layout: 'layouts/doc-post.njk'
+title: 'Custom report windows'
+subhead: >
+  Custom report windows can give you faster event-level reports and selective reporting for aggragatable reports.
+description: >
+  Custom report windows can give you faster event-level reports and selective reporting for aggragatable reports.
+date: 2022-03-01
+updated: 2023-03-14
+authors:
+  - maudn
+---
+
+With custom report windows (shipped in Chrome 110), you can instruct the browser to filter out conversions that occur after a certain time window. 
+
+- For event-level reports, report windows allow you to get reports faster, in addition to filtering out conversions that take place after a certain time frame.  Depending on your goal, another way to look at this is as a trade-off: using report windows gives you faster access to reports, but implies that you may lose some conversions. Review the event-level section below for details.
+- For aggregatable reports, report windows allow you to filter conversions that take place after a certain time frame. Review the aggregatable section below for details.
+
+## What is a custom report window?
+
+A custom report window is the period after source registration during which reports of the corresponding type (event or aggregatable) may be created for this source. 
+
+For event-level reports, a report window also acts as the last window in which reports of the corresponding type will be sent. 
+
+Key points about reporting windows:
+
+- If no `report_window` is set, it falls back to `expiry`.
+- If no `expiry` is set, it falls back to the default of 30 days.
+- The minimum custom report window is one day. Even if you set a window of less than a day, the value will be clamped to a day. Find an example below for event-level reports.
+- A report window is defined in seconds.
+
+Note that the way `expiry` works is unchanged; `expiry` changes which impressions or clicks are eligible for attribution. 
+
+### Event-level reports: faster reporting and selective reporting
+
+By default, event-level reports are sent following a [schedule of built-in report windows](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit#heading=h.c5k14yezmbvl): three windows for clicks and one window for views.
+
+For event-level reports, custom report windows enable you to:
+
+- Get reports faster. Among other things, custom report windows enable you to get reports one day after click/impression, instead of the two-day limit that was imposed by built-in expiry windows prior to Chrome 110. 
+- Filter out conversions happening after a certain time frame. 
+
+To use report windows for event-level reports, add the `event_report_window` field to your `Attribution-Reporting-Register-Source` source registration header.
+
+```json
+event_report_window
+```
+
+Event-level reports are scheduled to be sent at the latest shortly after the report window is reached. 
+
+### Schedule examples for event-level reports, clicks
+
+{% Aside %}
+Remember, if the browser isn't running when a report is scheduled to be sent, the report is sent at browser startup. In this case, the browser may also delay some of these reports for a short random time on startup.
+{% endAside %}
+
+<table class="with-heading-tint">
+  <thead>
+    <tr>
+      <th>expiry</th>
+      <th><pre>
+event_report_window
+</pre></th>
+      <th>If a conversion takes place one day after the click, browser sends report:</th>
+      <th>Reports filtered out for conversions taking place:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Default (30 days)</td>
+      <td>(Not set)</td>
+      <td>~2 days + 1 hour after click<br>
+Default reporting behavior — built-in window #1</td>
+      <td>> 30 days after click</td>
+    </tr>
+    <tr>
+      <td>Custom, set to 5 days</td>
+      <td>(Not set)</td>
+      <td>~2 days + 1 hour after click<br>
+Default reporting behavior — built-in window #1</td>
+      <td>> 5 days after click</td>
+    </tr>
+    <tr>
+      <td>Default (30 days)</td>
+      <td>Set to 1 day</td>
+      <td>~1 days + 1 hour after click<br>
+<br>
+Custom behavior due to your custom report window. Note how this gets you this report faster than in the first row, where you need to wait for the first built-in window (2 days)</td>
+      <td>> 1 day after click</td>
+    </tr>
+    <tr>
+      <td>Custom, set to 5 days</td>
+      <td>Set to 1 day</td>
+      <td>~1 day + 1 hour after click<br>
+<br>
+Custom behavior due to your custom report window</td>
+      <td>> 1 day after click</td>
+    </tr>
+    <tr>
+      <td>Default (30 days)</td>
+      <td>Set to 4 hours</td>
+      <td>~1 day + 1 hour after click<br>
+Custom behavior due to your custom report window. This is due to clamping: the minimum report window is one day. Even if you set a report window to less than a day, for example here 4 hours, its value will be clamped to a day.</td>
+      <td>> 1 day after click<br>
+</td>
+    </tr>
+  </tbody>
+</table>
+
+
+### Schedule examples for event-level reports, views
+
+{% Aside %}
+Remember, if the browser isn't running when a report is scheduled to be sent, the report is sent at browser startup. In this case, the browser may also delay some of these reports for a short random time on startup.
+{% endAside %}
+
+<table class="with-heading-tint">
+  <thead>
+    <tr>
+      <th>expiry</th>
+      <th>event_report_window</th>
+      <th>If a conversion takes place one day after the click, the browser sends report:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Default (30 days)</td>
+      <td>(Not set)</td>
+      <td>~30 days + 1 hour after view<br>
+Default reporting behavior</td>
+    </tr>
+    <tr>
+      <td>Custom, set to 5 days</td>
+      <td>(Not set)</td>
+      <td>~5 days + 1 hour after view<br>
+Default reporting behavior</td>
+    </tr>
+    <tr>
+      <td>Default (30 days)</td>
+      <td>Set to 1 day</td>
+      <td>~1 day + 1 hour after view<br>
+Custom behavior due to your custom report window</td>
+    </tr>
+    <tr>
+      <td>Custom, set to 5 days</td>
+      <td>Set to 1 day</td>
+      <td>~1 day + 1 hour after view<br>
+Custom behavior due to your custom report window</td>
+    </tr>
+  </tbody>
+</table>
+
+### Aggregatable reports: selective reporting
+
+For aggregatable reports, the benefit of report windows is only to filter out conversions happening after a certain time frame. There is no benefit in terms of getting reports faster.
+
+To use report windows for aggregatable reports, add the following field to your `Attribution-Reporting-Register-Source` source registration header:
+
+```json
+aggregatable_report_window
+```
+
+This will filter out conversions happening after a certain time frame.
+
+Aggregatable reports are sent within an hour of trigger; they're randomly delayed between 10 minutes and an hour.
+
+{% Aside %}
+Remember, if the browser isn't running when a report is scheduled to be sent, the report is sent at browser startup. In this case, the browser may also delay some of these reports for a short random time on startup.
+{% endAside %}
+
+In the table below, for all cases, if a conversion takes place one day after the click/impression, the browser will send the report approximately an hour after the trigger.
+
+<table class="with-heading-tint">
+  <thead>
+    <tr>
+      <th>expiry</th>
+      <th><pre>
+aggregatable_report_window
+</pre></th>
+<th>Reports filtered out for conversions taking place:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Default (30 days)</td>
+      <td>(Not set)</td>
+      <td>> 30 days after click/view</td>
+    </tr>
+    <tr>
+      <td>Custom, set to 5 days</td>
+      <td>(Not set)</td>
+      <td>> 5 days after click/view</td>
+    </tr>
+    <tr>
+      <td>Default (30 days)</td>
+      <td>Set to 1 day</td>
+      <td>> 1 day after click/view</td>
+    </tr>
+    <tr>
+      <td>Custom, set to 5 days</td>
+      <td>Set to 1 day</td>
+      <td>> 1 day after click/view</td>
+    </tr>
+    <tr>
+      <td>Default (30 days)</td>
+      <td>Set to 4 hours</td>
+      <td>> 1 day after click/view. This is due to clamping: the minimum report window is one day. Even if you set a report window to less than a day, for example here 4 hours here, its value will be clamped to a day.</td>
+    </tr>
+  </tbody>
+</table>
+
