@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc-post.njk
-title: Enroll with the Privacy Sandbox
+title: プライバシー サンドボックスに登録する
 subhead: |2-
 
   Chrome と Android におけるプライバシーサンドボックスの広告関連 API の新しいプロセス。
@@ -63,6 +63,6 @@ Chrome または Android で [Attribution Reporting API](/docs/privacy-sandbox/a
 
 開発者が全プロセスをレビューできるように、統一された登録期間が開始する前に、構成証明に関する詳細を提供します。開発者は、2023 年 8 月までに、登録プロセスの一環として構成証明を完了し、検証できるように公開する必要があります。
 
-## Next steps
+## 次のステップ
 
-We'll update this documentation once enrollment instructions are available.
+登録手順が利用可能になり次第、このドキュメントを更新します。
