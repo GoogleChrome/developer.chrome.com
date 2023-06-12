@@ -2,9 +2,9 @@
 layout: 'layouts/doc-post.njk'
 title: 'Custom report windows'
 subhead: >
-  Custom report windows can give you faster event-level reports and selective reporting for aggregatable reports.
+  Custom report windows can provide faster event-level reports and selective reporting for aggregatable reports.
 description: >
-  Custom report windows can give you faster event-level reports and selective reporting for aggregatable reports.
+  Custom report windows can provide faster event-level reports and selective reporting for aggregatable reports.
 date: 2022-03-01
 updated: 2023-03-14
 authors:
@@ -48,11 +48,11 @@ event_report_window
 
 Event-level reports are scheduled to be sent at the latest shortly after the report window is reached. 
 
-### Schedule examples for event-level reports, clicks
-
 {% Aside %}
-Remember, if the browser isn't running when a report is scheduled to be sent, the report is sent at browser startup. In this case, the browser may also delay some of these reports for a short random time on startup.
+Remember, in all the examples below, if the browser isn't running when a report is scheduled to be sent, the report is sent at browser startup. In this case, the browser may also delay some of these reports for a short random time on startup.
 {% endAside %}
+
+### Schedule examples for event-level reports, clicks
 
 <table class="with-heading-tint">
   <thead>
@@ -62,7 +62,7 @@ Remember, if the browser isn't running when a report is scheduled to be sent, th
 event_report_window
 </pre></th>
       <th>If a conversion takes place one day after the click, browser sends report:</th>
-      <th>Reports filtered out for conversions taking place:</th>
+      <th>Reports filtered out (not sent) for conversions taking place:</th>
     </tr>
   </thead>
   <tbody>
@@ -109,10 +109,6 @@ Custom behavior due to your custom report window. This is due to clamping: the m
 
 
 ### Schedule examples for event-level reports, views
-
-{% Aside %}
-Remember, if the browser isn't running when a report is scheduled to be sent, the report is sent at browser startup. In this case, the browser may also delay some of these reports for a short random time on startup.
-{% endAside %}
 
 <table class="with-heading-tint">
   <thead>
@@ -164,10 +160,6 @@ This will filter out conversions happening after a certain time frame.
 
 Aggregatable reports are sent within an hour of trigger; they're randomly delayed between 10 minutes and an hour.
 
-{% Aside %}
-Remember, if the browser isn't running when a report is scheduled to be sent, the report is sent at browser startup. In this case, the browser may also delay some of these reports for a short random time on startup.
-{% endAside %}
-
 In the table below, for all cases, if a conversion takes place one day after the click/impression, the browser will send the report approximately an hour after the trigger.
 
 <table class="with-heading-tint">
@@ -177,7 +169,7 @@ In the table below, for all cases, if a conversion takes place one day after the
       <th><pre>
 aggregatable_report_window
 </pre></th>
-<th>Reports filtered out for conversions taking place:</th>
+<th>Reports filtered out (not sent) for conversions taking place:</th>
     </tr>
   </thead>
   <tbody>
