@@ -2,55 +2,53 @@
 layout: "layouts/doc-post.njk"
 title: Best Practices
 date: 2017-08-30
-updated: 2023-05-10
+updated: 2023-06-09
 description: >
   Best practices for a high-quality extension and Chrome Web store listing.
 ---
 
-This page has guidelines on how you should implement your extension and Chrome Store listing. As the
-store matures and we learn from developers' experiences, these recommendations will be updated. 
+This page provides guidelines for designing your extension and Chrome Web Store listing. These recommendations may be updated as the store continues to grow and we learn from developers' experiences.
 
-We encourage you to develop [high-quality extensions][hq-guidelines] that conform to standards of
-performance, security, and user experience, as summarized by the following guidelines:
+We strongly encourage you to create [high-quality extensions][hq-guidelines] that meet standards for performance, security, and user experience. To help you with this, we have summarized the guidelines as follows:
 
 ## Compliance {: #compliance }
 
-Extensions hosted in the Chrome Web Store must comply with our [developer program policies][program policies]. Some examples are the single-purpose policy, spam, deceptive instalation,
+Extensions available in the Chrome Web Store are required to adhere to the [developer program policies][program policies], such as the single-purpose policy, example, deceptive installation practices, and more.
 
-To explore common reasons for policy violations and how to rectify them, see [Troubleshooting Chrome Web Store violations][cws-violations].
+If you encounter any policy violations or want to learn about common violations pitfalls, see [Troubleshooting Chrome Web Store violations][cws-violations].
 
 ## Manifest V3 {: #mv3 }
 
-Manifest V3 is the current version of the Chrome extension platform and all high-quality extensions should use it. See the [Manifest V3 overview][mv3-overview] and [Migrate to Manifest V3][mv3-migration] for more details.
+Manifest V3 is the current version of the Chrome extension platform and all high-quality extensions should use it. See the [Manifest V3 overview][mv3-overview] to learn about the platform changes and [Migrate to Manifest V3][mv3-migration] for instructions on how to migrate.
 
 ## Security {: #security }
 
-Is the extension safe for users? Make sure your extension does not pose security threats and does
-not use deceptive installation tactics (see [Stay secure][stay-secure] for a more in-depth
-discussion.)
+Your extension must transmit personal and sensitive user data over a secure connection (e.g. HTTPS,
+WSS) and stored at rest using a strong encryption method such as RSA or AES. Make sure your extension does not pose security threats and does not use [deceptive installation tactics](tbd). See [Stay secure][stay-secure] for a more in-depth discussion.
 
 ## Privacy {: #privacy }
 
-Make sure that your extension handles user data appropriately and conforms to [Chrome Web Store's
-data privacy](/docs/webstore/program-policies/privacy) requirements. (See this [FAQ][user-data-faq]
-for further details.)
+Verify that your extension handles user data appropriately and conforms to [Chrome Web Store's
+data privacy](/docs/webstore/program-policies/privacy) requirements. See the [User Data FAQ][user-data-faq]
+for further details.
 
-[Privacy information][dashboard-privacy] (permissions justifications, the extension's privacy
-policy, data use disclosures, etc.) must be accurate and up to date.
+The permissions justifications and user data disclosures declared in the [Privacy tab][dashboard-privacy] must match the extension's privacy policy, be accurate, and be up-to-date.
 
 ## Performance {: #performance }
-<!-- Make sure you test your extension well before posting -->
-Does the extension function at an outstanding level? High-quality extensions don't
-just perform their intended action, they do so while using as few system resources as possible.
+
+Ensure that your extension provides the intended functionality by including tests and conducting thorough manual testing across different browser versions, OSs and network conditions to ensure smooth functionality. Also, aim to use as few system resources as possible.
 
 ## User experience {: #user-experience }
 
-Is the extension a joy to use? The extension itself should provide a good-looking,
-intuitive, and seamless user experience while also respecting the end user's privacy.
+Design your extension with the user in mind by providing a simple, intuitive, and seamless user experience while also respecting the end user's privacy.
+
+### Provide an onboarding experience {: #onboarding}
+
+Start onboarding your users are soon as they reach your store listing by providing screenshots and a video of how the extension works. To ensure your users are more likely to install your extension, we recommend following the [permission warning guidelines][doc-perm-warn].
 
 ### Persistent UI {: #persistent-ui }
 
-When designing a side panel for your extension, make sure it enhances the user's browsing experience
+When designing a [side panel](tbd) for your extension, make sure it enhances the user's browsing experience
 by providing relevant information and useful functionality. A side panel should help users
 accomplish tasks with as little distraction as possible.
 
@@ -82,14 +80,11 @@ number of queries to the license server, reducing quota usage and traffic.
 
 ## Store listing {: #store-listing } 
 
-The purpose of an extension's [Chrome Web Store store listing][completing-listing] is to set the user's
-expectations. It should be clearly communicate what the extension does. See [Listing Requirements](/docs/webstore/program-policies/listing-requirements/) for store listing polocy violations.
+The purpose of an extension's [Chrome Web Store store listing][completing-listing] is to set the user's expectations. It should explicitly communicate what the extension does. See [Listing Requirements](/docs/webstore/program-policies/listing-requirements/) for a complete list of requirements.
 
 ### Create a compelling store listing {: #great-listing}
 
-The better your extension's listing in the store, the more users will discover and try your extension.
-[Creating a great listing page][great-listing-page] provides in-depth guidelines to design the best
-store listing experience. When choosing your extension's name, writing its description, and
+The better your extension's listing in the store, the more users will discover and try your extension. [Creating a great listing page][great-listing-page] provides guidelines to design the best store listing experience. When choosing your extension's name, writing its description, and
 designing its logo, keep in mind Google's [Branding Guidelines][cws-branding].
 
 ### Provide great images {: #images }
@@ -130,3 +125,5 @@ The developer console lets you specify a category for each extension. Choose the
 [user-data-faq]: /docs/webstore/user_data/
 [hq-guidelines]: /docs/webstore/program-policies/quality-guidelines/
 [mv3-migration]: https://developer.chrome.com/docs/extensions/migrating/
+[doc-perm-warn]: /docs/extensions/mv3/permission_warnings/
+
