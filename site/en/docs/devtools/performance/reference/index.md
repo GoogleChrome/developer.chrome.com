@@ -248,7 +248,7 @@ DevTools assigns scripts random colors to break up the flame chart and make it m
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/zB1QLni239q7xxTYqUhP.png", alt="The Long Task UI", width="800", height="568" %}
 
-In this example, the task is approximately 140 milliseconds so the part representing the last 90 milliseconds is shaded in red, while the initial 50 milliseconds is not.
+In this example, the task is approximately 140 milliseconds, so the part representing the last 90 milliseconds is shaded in red, while the initial 50 milliseconds is not.
 
 Additionally, the **Main** section shows information on CPU profiles started and stopped with [`profile()` and `profileEnd()`](/docs/devtools/console/utilities/#profile-function) console functions.
 
