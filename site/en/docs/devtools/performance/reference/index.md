@@ -242,7 +242,7 @@ A `click` event caused a function call in `script_foot_closure.js` on line 53. B
 `Function Call` you see that an anonymous function was called. That anonymous function then called
 `Me()`, which then called `Se()`, and so on.
 
-DevTools assigns scripts random colors to breakup the flame chart and make it more readable. In the example above, function calls from one script are colored light green. Calls from another script are colored beige. The darker yellow represents scripting activity, and the purple event represents rendering activity. These darker yellow and purple events are consistent across all recordings.
+DevTools assigns scripts random colors to break up the flame chart and make it more readable. In the example above, function calls from one script are colored light green. Calls from another script are colored beige. The darker yellow represents scripting activity, and the purple event represents rendering activity. These darker yellow and purple events are consistent across all recordings.
 
 [Long tasks are also highlighted](/blog/new-in-devtools-83/#long-tasks) with a red triangle, and with the part over 50 milliseconds shaded in red:
 
