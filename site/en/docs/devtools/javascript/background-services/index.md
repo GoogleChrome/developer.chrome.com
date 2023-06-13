@@ -25,12 +25,6 @@ The **Background Services** section lets you debug the following background serv
 
 Chrome DevTools can log fetch, sync, and notification events for three days, even when DevTools is not open. This can help you make sure that events are being sent and received as expected.
 
-You can also inspect the details of each event.
-
-{% Img src="image/admin/ZG5sVS5QkS30tRGieBoo.png", alt="Viewing the details of an event in the Push Messaging pane.", width="800", height="389" %}
-
-Figure 1. Viewing the details of an event in the Push Messaging pane.
-
 In addition to background service events, DevTools can show you [reports](https://web.dev/reporting-api/) that Chrome already sent or is about to send via the [Reporting API][20].
 
 Whenever your site's policies are violated, Chrome generates reports and sends them in batches with a delay even if the user has already left your site. For more information on policies you can set up, see [Use cases and report types](https://web.dev/reporting-api/#use-cases-and-report-types).
@@ -41,26 +35,17 @@ The [Background Fetch][6] API enables a [service worker][7] to reliably download
 like movies or podcasts, as a background service. To log Background Fetch event for three days, even
 when DevTools is not open:
 
-1.  [Open DevTools][8].
-2.  Open the **Application** panel.
-3.  Open the **Background Fetch** pane.
+1.  [Open DevTools][8], for example, on this [demo page](https://background-fetch.glitch.me/).
+1.  Navigate to **Application** > **Background Services** > **Background Fetch**, and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ljri3HPj5aVym9qgMfkx.svg", alt="Record.", width="20", height="20" %} **Record**.
 
-    {% Img src="image/admin/DXdZs4q3sjqAmiQv1O6M.png", alt="The Background Fetch pane.", width="800", height="591" %}
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/yyAOlwrKTFZJc5NZck1K.png", alt="The Background Fetch tab.", width="800", height="399" %}
 
-    Figure 2. The Background Fetch pane.
+1. On the demo page, click **Store assets locally**. This triggers some background fetch activity. DevTools logs the events to the table.
 
-4.  Click **Record** {% Img src="image/admin/jvgbyEZPbYfaxB255rCm.png", alt="Record", width="24", height="24" %}. After
-    triggering some Background Fetch activity, DevTools logs the events to the table.
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/UpNTtCXYBCNIADEeVdg4.png", alt="A log of events in the Background Fetch tab.", width="800", height="426" %}
 
-    {% Img src="image/admin/1rpEuNKslwetMvtD8c6c.png", alt="A log of events in the Background Fetch pane.", width="800", height="478" %}
-
-    Figure 3. A log of events in the Background Fetch pane.
-
-5.  Click an event to view its details in the space below the table.
-
-    {% Img src="image/admin/q192DLorZyny4WEIkyRB.png", alt="Viewing the details of an event in the Background Fetch pane.", width="800", height="478" %}
-
-    Figure 4. Viewing the details of an event in the Background Fetch pane.
+1.  Click an event to view its details in the space below the table.
+1. To stop recording, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/HojbnKGlHbrbJI1VgQW9.svg", alt="Stop.", width="20", height="20" %} **Stop**.
 
 ## Background Sync {: #sync }
 
