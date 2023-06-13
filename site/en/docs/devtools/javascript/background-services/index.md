@@ -35,16 +35,16 @@ The [Background Fetch][6] API enables a [service worker][7] to reliably download
 like movies or podcasts, as a background service. To log Background Fetch event for three days, even
 when DevTools is not open:
 
-1.  [Open DevTools][8], for example, on this [demo page](https://background-fetch.glitch.me/).
-1.  Navigate to **Application** > **Background Services** > **Background Fetch**, and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ljri3HPj5aVym9qgMfkx.svg", alt="Record.", width="20", height="20" %} **Record**.
+1. [Open DevTools][8], for example, on this [demo page](https://background-fetch.glitch.me/).
+1. Navigate to **Application** > **Background Services** > **Background Fetch**, and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ljri3HPj5aVym9qgMfkx.svg", alt="Record.", width="20", height="20" %} **Record**.
 
-    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/yyAOlwrKTFZJc5NZck1K.png", alt="The Background Fetch tab.", width="800", height="399" %}
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/yyAOlwrKTFZJc5NZck1K.png", alt="The Background Fetch tab.", width="800", height="399" %}
 
 1. On the demo page, click **Store assets locally**. This triggers some background fetch activity. DevTools logs the events to the table.
 
-    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/UpNTtCXYBCNIADEeVdg4.png", alt="A log of events in the Background Fetch tab.", width="800", height="426" %}
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/UpNTtCXYBCNIADEeVdg4.png", alt="A log of events in the Background Fetch tab.", width="800", height="426" %}
 
-1.  Click an event to view its details in the space below the table.
+1. Click an event to view its details in the space below the table.
 1. To stop recording, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/HojbnKGlHbrbJI1VgQW9.svg", alt="Stop.", width="20", height="20" %} **Stop**.
 
 ## Background Sync {: #sync }
