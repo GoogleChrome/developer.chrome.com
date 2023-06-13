@@ -52,14 +52,13 @@ Publication date
 
 What's new
 
-We’re seeing a slight decrease again this month for LCP and FCP due to the final roll outs of the [change in LCP to ignore low-entropy images](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/speed/metrics_changelog/2023_04_lcp.md) and [correction in paint timing](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/speed/metrics_changelog/2023_03_lcp_fcp.md) discussed last month. However, despite this, the overall good LCP, FID, and CLS rates are up slightly from last month.
+We're seeing a slight decrease again this month for LCP and FCP due to the final roll outs of the [change in LCP to ignore low-entropy images](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/speed/metrics_changelog/2023_04_lcp.md) and [correction in paint timing](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/speed/metrics_changelog/2023_03_lcp_fcp.md) discussed last month. However, despite this, the overall good LCP, FID, and CLS rates are up slightly from last month.
 
 We are aware that some origins that redirect their root page (for example, https://www.example.com that automatically redirects to https://www.example.com/en/) are not showing origin-level data in CrUX, and so are also not appearing in the BigQuery dataset. We're also aware that this has been going on for some time. Unfortunately, this is proving a difficult issue to resolve and so we still do not have an estimated time of when this will be resolved.
 
 Notable stats
  : - 18,377,791 origins
  : - 43.6% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
-
 
 ## 202304
 
