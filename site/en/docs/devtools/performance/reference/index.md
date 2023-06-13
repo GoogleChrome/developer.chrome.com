@@ -410,7 +410,7 @@ The **Interactions** track also shows [Interaction to Next Paint (INP)](https://
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/wrFaZ26nYCuprtCSNB5C.png", alt="The INP warning.", width="800", height="685" %}
 
-Interactions over 200 milliseconds also have the part of the interaction above 200ms shaded in red—in the same way that [long tasks in the Main thread section](#http://localhost:8080/docs/devtools/performance/reference/#main:~:text=Long%20tasks%20are%20also%20highlighted) also have the part over the 50 millisecond long task threshold shaded in red. In this example 353.77 milliseconds out of the 553.77 milliseconds is shaded in red.
+Interactions over 200 milliseconds also have the part of the interaction above 200 milliseconds shaded in red—in the same way that [long tasks in the Main thread section](/docs/devtools/performance/reference/#main:~:text=Long%20tasks%20are%20also%20highlighted) also have the part over the 50 millisecond long task threshold shaded in red. In this example, 353.77 milliseconds out of the 553.77 milliseconds is shaded in red.
 
 ### View GPU activity {: #gpu }
 
