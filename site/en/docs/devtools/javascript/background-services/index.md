@@ -33,7 +33,7 @@ Whenever your site's policies are violated, Chrome generates reports and sends t
 
 The [Background Fetch][6] API enables a [service worker][7] to reliably download large resources,
 like movies or podcasts, as a background service. To log Background Fetch event for three days, even
-when DevTools is not open:
+when DevTools isn't open:
 
 1. [Open DevTools][8], for example, on this [demo page](https://background-fetch.glitch.me/).
 1. Navigate to **Application** > **Background Services** > **Background Fetch**, and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ljri3HPj5aVym9qgMfkx.svg", alt="Record.", width="20", height="20" %} **Record**.
@@ -51,7 +51,7 @@ when DevTools is not open:
 
 The [Background Sync][9] API enables an offline [service worker][10] to send data to a server once
 it has re-established a reliable internet connection. To log Background Sync events for three days, even
-when DevTools is not open:
+when DevTools isn't open:
 
 1. [Open DevTools][11], for example, on this [demo page](https://jakearchibald.github.io/isserviceworkerready/demos/sync/).
 1. Navigate to **Application** > **Background Services** > **Background Sync** and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ljri3HPj5aVym9qgMfkx.svg", alt="Record.", width="20", height="20" %} **Record**.
@@ -75,35 +75,27 @@ when DevTools is not open:
 
 After a [service worker][12] has received a [Push Message][13] from a server, the service worker
 uses the [Notifications][14] API to display the data to a user. To log Notifications for three days,
-even when DevTools is not open:
+even when DevTools isn't open:
 
-1.  [Open DevTools][15].
-2.  Open the **Application** panel.
-3.  Open the **Notifications** pane.
+1. [Open DevTools][15], for example, on this [demo page](https://notification-triggers.glitch.me/).
+1. Navigate to **Application** > **Background Services** > **Notifications** and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ljri3HPj5aVym9qgMfkx.svg", alt="Record.", width="20", height="20" %} **Record**.
 
-    {% Img src="image/admin/PdFuiQdA7Ky6Fxvi4Bl0.png", alt="The Notifications pane.", width="800", height="424" %}
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/S1DTjVeqwbMxdnEEI8tC.png", alt="The Notifications pane.", width="800", height="398" %}
 
-    Figure 8. The Notifications pane.
+1. On the demo page, click **Schedule Notification** and **Allow** when prompted.
+1. Wait for the notification to appear. DevTools logs the notification events to the table.
 
-4.  Click **Record** {% Img src="image/admin/jvgbyEZPbYfaxB255rCm.png", alt="Record", width="24", height="24" %}. After
-    triggering some Notifications activity, DevTools logs the events to the table.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/OAYWGjZw9e15TIAzytvI.png", alt="A log of events in the Notifications pane.", width="800", height="398" %}
 
-    {% Img src="image/admin/TGjY2BFbfsOWXuGdxvxW.png", alt="A log of events in the Notifications pane.", width="800", height="424" %}
-
-    Figure 9. A log of events in the Notifications pane.
-
-5.  Click an event to view its details in the space below the table.
-
-    {% Img src="image/admin/WeqtSllDCAA8laqB1HXJ.png", alt="Viewing the details of an event in the Notifications pane.", width="800", height="424" %}
-
-    Figure 10. Viewing the details of an event in the Notifications pane.
+1. Click an event to view its details in the space below the table.
+1. You can close DevTools and leave the recording run for up to 3 days. To stop recording, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/HojbnKGlHbrbJI1VgQW9.svg", alt="Stop.", width="20", height="20" %} **Stop**.
 
 ## Push Messages {: #push }
 
 To display a push notification to a user, a [service worker][16] must first use the [Push
 Message][17] API to receive data from a server. When the service worker is ready to display the
 notification, it uses the [Notifications][18] API. To log Push Messages for three days, even when
-DevTools is not open:
+DevTools isn't open:
 
 1.  [Open DevTools][19].
 2.  Open the **Application** panel.
