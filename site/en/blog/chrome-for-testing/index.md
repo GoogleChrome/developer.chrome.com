@@ -6,6 +6,7 @@ layout: layouts/blog-post.njk
 authors:
   - mathiasbynens
 date: 2023-06-12
+updated: 2023-06-13
 hero: 'image/ZQjEes3OsyYCDLE5837FjNRQ1Gw2/Wn5kQQRVssFAHozIWDX3.svg'
 alt: ''
 tags:
@@ -40,7 +41,7 @@ Auto-update aside, you might also have found it hard to find a Chrome binary wit
 
 A more specific example of this problem is when you want to use ChromeDriver for browser automation. Not only do you have to download a Chrome binary somehow, you also need a correspondingly-versioned ChromeDriver binary to ensure the two binaries are compatible.
 
-Due to there being no good way to solve these issues, we know that many developers download to [Chromium (not Chrome) binaries](https://www.chromium.org/getting-involved/download-chromium/) instead, although this approach has some flaws. First, these Chromium binaries are not reliably available across all platforms. Second, they are built and published separately from the Chrome release process, making it impossible to map their versions back to real user-facing Chrome releases. Third, Chromium is different from Chrome.
+Due to there being no good way to solve these issues, we know that many developers download [Chromium (not Chrome) binaries](https://www.chromium.org/getting-involved/download-chromium/) instead, although this approach has some flaws. First, these Chromium binaries are not reliably available across all platforms. Second, they are built and published separately from the Chrome release process, making it impossible to map their versions back to real user-facing Chrome releases. Third, Chromium is different from Chrome.
 
 ## The solution: Chrome for Testing
 
