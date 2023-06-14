@@ -6,7 +6,7 @@ description: >
 authors:
   - beaufortfrancois
 date: 2023-02-02
-updated: 2023-06-09
+updated: 2023-06-14
 hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/l8xW8V85N60e4dmwUwmE.jpg
 alt: Person holding outdoor lounge chairs.
 tags:
@@ -183,7 +183,7 @@ The `copyStyleSheets` option was supported in a previous version of the specific
 
 ### Handle when the Picture-in-Picture window closes
 
-Listen to the window `"unload"` event to know when the Picture-in-Picture window gets closed (either because the website initiated it or the user manually closed it). The event handler is a good place to get the elements back out of the Picture-in-Picture window as shown below.
+Listen to the window `"pagehide"` event to know when the Picture-in-Picture window gets closed (either because the website initiated it or the user manually closed it). The event handler is a good place to get the elements back out of the Picture-in-Picture window as shown below.
 
 ```js
 pipButton.addEventListener("click", async () => {
@@ -196,7 +196,7 @@ pipButton.addEventListener("click", async () => {
   pipWindow.document.body.append(player);
 
   // Move the player back when the Picture-in-Picture window closes.
-  pipWindow.addEventListener("unload", (event) => {
+  pipWindow.addEventListener("pagehide", (event) => {
     const playerContainer = document.querySelector("#playerContainer");
     const pipPlayer = event.target.querySelector("#player");
     playerContainer.append(pipPlayer);
@@ -208,7 +208,7 @@ Close the Picture-in-Picture window programmatically by using the [`close()`] me
 
 ```js
 // Close the Picture-in-Picture window programmatically. 
-// The "unload" event will fire normally.
+// The "pagehide" event will fire normally.
 pipWindow.close();
 ```
 
