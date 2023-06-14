@@ -18,25 +18,19 @@ Data in aggregatable reports is _noised_; in other words, for a small percentage
 
 While adding noise isn’t usually a part of ads measurement today, in many cases the noise added won’t substantially change how you interpret your results. 
 
-
 It may help to think about it in the following way:
 Would you be confident taking a certain decision based on certain data if that data wasn't noisy? 
 
-
 For example, would an advertiser be confident in changing their campaign strategy or budgets, based on the fact that Campaign A had 15 conversions and Campaign B had 16? 
 
-
 If the answer is no, noise is irrelevant. You would design your data collection in a way that enables you to answer yes to the question above. 
-
 
 What you will want to do is configure your API usage in such a way that:
 
 1. The answer to the question above is yes.
 1. Noise is managed in a way that doesn't significantly impact your ability to make a decision based on certain data. You can approach this as follows: for an expected minimum number of conversions, you want to keep the noise in the collected metric below a certain %.
 
-
 In this section and the following, we'll outline strategies for option 2.
-
 
 ## Core concepts
 
@@ -83,7 +77,6 @@ The following diagram shows the probability density function for a Laplace distr
 
 {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/FsWhm3xQ2zrEVZL5AmmN.png", alt="Probability density function for a Laplace distribution with μ=0, b = 20", width="512", height="330" %}
 
-
 #### Random noise values, one noise distribution
 
 Let's assume that an ad tech requests summary reports for two aggregation keys, key1 and key2.
@@ -105,7 +98,6 @@ For example, even if the true summary value for a given key is 0, the noisy summ
 Noise can be either a positive or a negative number.
 
 {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/bKwhviKHyHc6r7u0KIY5.png", alt="Examples of positive and negative noise.", width="512", height="204" %}
-
 
 For example, for a pre-noise purchase amount of 327,000, noise may be +6,000 or -6,000 (these are arbitrary example values).
 

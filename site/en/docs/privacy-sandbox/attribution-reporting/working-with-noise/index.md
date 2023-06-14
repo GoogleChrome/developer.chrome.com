@@ -18,9 +18,11 @@ Before proceeding, for an in-depth understanding of what noise is, and its impac
 
 ## Your controls on noise
 
+While you can't directly control the noise added to your aggregatable reports, there are steps you can take to minimize the effects. The following sections explain these strategies.
+
 ### Scale up to contribution budget
 
-As explained in [Understanding noise](/docs/privacy-sandbox/attribution-reporting/understanding-noise/#evaluating-noise), noise applied to the summary value for each key is based on the 0-65,536 scale (0-`CONTRIBUTION_BUDGET`).
+As explained in Understanding noise, [noise applied to the summary value](/docs/privacy-sandbox/attribution-reporting/understanding-noise/#evaluating-noise) for each key is based on the 0-65,536 scale (0-`CONTRIBUTION_BUDGET`).
 
 {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/ODm7VrPRfwRm3hh8lWZg.png", alt="Noise distribution is based on budget.", width="512", height="147" %}
 
@@ -49,7 +51,6 @@ For example, let's assume advertisers want to know the total purchase value. You
 If you have several measurement goals&mdash;for example, purchase count and purchase value&mdash;you may want to split your budget across these goals.
 
 In this case, your scaling factors will be different for different aggregatable values, depending on the expected maximum of a given aggregatable value.
-
 
 {% Aside %}
 You may decide to allocate the budget equally between two measurement goals, or you can choose to prioritize different measurement goals by allocating more budget to certain goals and less to others.
@@ -91,7 +92,6 @@ Therefore, the relative noise on the total purchase value for shoes will be high
 By summing up your summary values from summary reports to access higher-level data, you also sum the noise from these summary values.
 
 {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/xvdO0HpvwkvppLv1Pv0O.png", alt="The degree of noise with granular keys with rollups versus coarse keys with no rollups", width="800", height="1058" %}
-
 
 Let's look at two different approaches:
 -   **Approach A**: you include a Geography ID in your keys. Summary reports expose geo-ID-level keys, each associated with the summary purchase value at a specific Geo ID's level.
