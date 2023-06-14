@@ -139,6 +139,21 @@ Additionally, the ID of the interaction has been moved from the tooltip to **Sum
 
 Chromium issues: [1432512](https://crbug.com/1432512), [1432509](https://crbug.com/1432509).
 
+### Web Vitals moved to Timings {: #web-vitals }
+
+The **Performance** panel gets rid of the following redundancies:
+
+- Non-interactable **Web Vitals** track. Instead, see the relevant timings in the **Timings** track on hover.
+- The **Long Tasks** subtrack. You can already find such tasks in the [**Main** track](/docs/devtools/performance/reference/#long-tasks) shaded [in red and with a red triangle](/blog/new-in-devtools-83/#long-tasks).
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Wu4ePOcdvtKHyvy0PK96.png", alt="Before and after moving the Web Vitals to the Timings track.", width="800", height="613" %}
+
+Learn more about [Web Vitals](https://web.dev/vitals/).
+
+{# https://chromium-review.googlesource.com/q/Ib6f7a8788298187a70bdb44820ce452c6d8db1f1 #}
+
+Chromium issue: [1430844](https://crbug.com/1430844).
+
 ## JavaScript Profiler deprecation: Phase three {: #js-profiler }
 
 As early as [Chrome 58](/blog/devtools-javascript-cpu-profile-migration-2/), the DevTools team planned to eventually deprecate the **JavaScript Profiler** and have Node.js and Deno developers use the **Performance** panel for profiling JavaScript CPU performance.

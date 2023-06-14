@@ -244,6 +244,8 @@ A `click` event caused a function call in `script_foot_closure.js` on line 53. B
 
 DevTools assigns scripts random colors to break up the flame chart and make it more readable. In the example above, function calls from one script are colored light green. Calls from another script are colored beige. The darker yellow represents scripting activity, and the purple event represents rendering activity. These darker yellow and purple events are consistent across all recordings.
 
+{: #long-tasks }
+
 [Long tasks are also highlighted](/blog/new-in-devtools-83/#long-tasks) with a red triangle, and with the part over 50 milliseconds shaded in red:
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/zB1QLni239q7xxTYqUhP.png", alt="The Long Task UI", width="800", height="568" %}
