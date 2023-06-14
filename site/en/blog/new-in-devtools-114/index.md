@@ -139,7 +139,7 @@ Additionally, the ID of the interaction has been moved from the tooltip to **Sum
 
 Chromium issues: [1432512](https://crbug.com/1432512), [1432509](https://crbug.com/1432509).
 
-### Web Vitals moved to Timings {: #web-vitals }
+### Web Vitals updates {: #web-vitals }
 
 The **Performance** panel has removed the following tracks:
 
