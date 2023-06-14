@@ -141,4 +141,6 @@ Do not rely on report counts or data available only via debug reports as a sourc
 
 ## Next steps
 
-* [Working with noise](/docs/privacy-sandbox/attribution-reporting/working-with-noise/).
+- To see what variables you can control to improve the signal to noise ratio, refer to [Working with noise](/docs/privacy-sandbox/attribution-reporting/working-with-noise/).
+- Review [Experiment with summary report design decisions](/docs/privacy-sandbox/summary-reports/design-decisions/#quick-tour).
+- Try out the [Noise lab](https://noise-lab.uc.r.appspot.com/?mode=simple).

@@ -142,3 +142,8 @@ We recommend the following:
 - Share your feedback about specific inflection points you may find with regards to data usability.
 
 {% Partial 'privacy-sandbox/ar-engage.njk' %}
+
+## Next steps
+
+- Review [Experiment with summary report design decisions](/docs/privacy-sandbox/summary-reports/design-decisions/#quick-tour).
+- Try out the [Noise lab](https://noise-lab.uc.r.appspot.com/?mode=simple).
