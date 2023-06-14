@@ -29,7 +29,7 @@ This feature requires `androidx.browser:browser:1.6.0-alpha01` or higher.
 ```groovy
 dependencies {
    …
-   implementation 'androidx.browser:browser:1.6.0-alpha01'
+   implementation 'androidx.browser:browser:1.6.0-alpha02'
 }
 ```
 {% endAside %}
@@ -37,7 +37,7 @@ dependencies {
 Custom Tabs provide two different callbacks for measuring user engagement: 
 
 * [`CustomTabsCallback`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsCallback) for tracking basic navigation events, such as `"NAVIGATION_STARTED"` or `"NAVIGATION_FINISHED"`.
-* [`EngagementSignalsCallback`](https://developer.android.com/reference/kotlin/androidx/browser/customtabs/EngagementSignalsCallback) for tracking page specific user engagement, such as scroll direction or scroll percentage.
+* [`EngagementSignalsCallback`](https://developer.android.com/reference/androidx/browser/customtabs/EngagementSignalsCallback) for tracking page specific user engagement, such as scroll direction or scroll percentage.
 
 Both require an active [`CustomTabsServiceConnection`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsServiceConnection). See the [previous `CustomTabsService` guide](/docs/android/custom-tabs/guide-warmup-prefetch/) for details on how to connect to a `CustomTabsService`.
 
