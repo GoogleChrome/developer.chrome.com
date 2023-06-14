@@ -145,5 +145,5 @@ We recommend the following:
 
 ## Next steps
 
-- Review [Experiment with summary report design decisions](/docs/privacy-sandbox/summary-reports/design-decisions/#quick-tour).
+- For more information on factors that influence reporting, such as campaign variables, batching frequency, dimension granularity, refer to [Experiment with summary report design decisions](/docs/privacy-sandbox/summary-reports/design-decisions/#quick-tour) .
 - Try out the [Noise lab](https://noise-lab.uc.r.appspot.com/?mode=simple).
