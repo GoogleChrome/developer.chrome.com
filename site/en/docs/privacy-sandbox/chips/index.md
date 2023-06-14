@@ -7,7 +7,7 @@ description: >
   Allow developers to opt-in a cookie to "partitioned" storage, with a separate cookie jar per top-level site.
   Partitioned cookies can be set by a third-party service, but only read within the context of the top-level site where they were initially set.
 date: 2022-02-15
-updated: 2023-01-27
+updated: 2023-06-14
 authors:
   - mihajlija
 tags:
@@ -59,6 +59,7 @@ Example use cases for CHIPS include any scenarios where cross-site subresources 
 
 +   Third-party chat embeds
 +   Third-party map embeds
++   Third-party payment embeds
 +   Subresource CDN load balancing
 +   Headless CMS providers
 +   Sandbox domains for serving untrusted user content (such as googleusercontent.com and githubusercontent.com)
