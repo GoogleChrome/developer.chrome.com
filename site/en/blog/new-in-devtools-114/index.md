@@ -154,6 +154,11 @@ Learn more about [Web Vitals](https://web.dev/vitals/).
 
 Chromium issue: [1430844](https://crbug.com/1430844).
 
+The Experiences track was renamed to Layout Shifts to more accurately reflect it's usage.
+
+{# https://chromium-review.googlesource.com/q/26306da9622791b255b12c9c0deeac0a0d4a07b8 #}
+
+Chromium issue: [4403716](https://crbug.com/1428522).
 ## JavaScript Profiler deprecation: Phase three {: #js-profiler }
 
 As early as [Chrome 58](/blog/devtools-javascript-cpu-profile-migration-2/), the DevTools team planned to eventually deprecate the **JavaScript Profiler** and have Node.js and Deno developers use the **Performance** panel for profiling JavaScript CPU performance.
