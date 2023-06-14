@@ -90,7 +90,7 @@ even when DevTools isn't open:
 1. Click an event to view its details in the space below the table.
 1. You can close DevTools and leave the recording run for up to three days. To stop recording, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/HojbnKGlHbrbJI1VgQW9.svg", alt="Stop.", width="20", height="20" %} **Stop**.
 
-## Push Messages {: #push }
+## Push Messaging {: #push }
 
 To display a push notification to a user, a [service worker][16] must first use the [Push
 Message][17] API to receive data from a server. When the service worker is ready to display the
