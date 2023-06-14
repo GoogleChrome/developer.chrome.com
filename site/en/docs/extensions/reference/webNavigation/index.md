@@ -88,7 +88,7 @@ the lifetime of the frame (across multiple navigations).
 Due to the multi-process nature of Chrome, a tab might use different processes to render the source
 and destination of a web page. Therefore, if a navigation takes place in a new process, you might
 receive events both from the new and the old page until the new navigation is committed (i.e. the
-`onCommitted` event is send for the new main frame). In other words, it is possible to have more
+`onCommitted` event is sent for the new main frame). In other words, it is possible to have more
 than one pending sequence of webNavigation events with the same `frameId`. The sequences can be
 distinguished by the `processId` key.
 
