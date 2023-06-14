@@ -45,7 +45,7 @@ when DevTools isn't open:
   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/UpNTtCXYBCNIADEeVdg4.png", alt="A log of events in the Background Fetch pane.", width="800", height="426" %}
 
 1. Click an event to view its details in the space below the table.
-1. You can close DevTools and leave the recording run for up to 3 days. To stop recording, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/HojbnKGlHbrbJI1VgQW9.svg", alt="Stop.", width="20", height="20" %} **Stop**.
+1. You can close DevTools and leave the recording run for up to three days. To stop recording, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/HojbnKGlHbrbJI1VgQW9.svg", alt="Stop.", width="20", height="20" %} **Stop**.
 
 ## Background Sync {: #sync }
 
@@ -69,7 +69,7 @@ when DevTools isn't open:
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/A79MGx9wiacYxIDjt0lP.png", alt="A log of events in the Background Sync pane.", width="800", height="415" %}
 
 1. Click an event to view its details in the space below the table.
-1. You can close DevTools and leave the recording run for up to 3 days. To stop recording, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/HojbnKGlHbrbJI1VgQW9.svg", alt="Stop.", width="20", height="20" %} **Stop**.
+1. You can close DevTools and leave the recording run for up to three days. To stop recording, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/HojbnKGlHbrbJI1VgQW9.svg", alt="Stop.", width="20", height="20" %} **Stop**.
 
 ## Notifications {: #notifications }
 
@@ -88,7 +88,7 @@ even when DevTools isn't open:
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/OAYWGjZw9e15TIAzytvI.png", alt="A log of events in the Notifications pane.", width="800", height="398" %}
 
 1. Click an event to view its details in the space below the table.
-1. You can close DevTools and leave the recording run for up to 3 days. To stop recording, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/HojbnKGlHbrbJI1VgQW9.svg", alt="Stop.", width="20", height="20" %} **Stop**.
+1. You can close DevTools and leave the recording run for up to three days. To stop recording, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/HojbnKGlHbrbJI1VgQW9.svg", alt="Stop.", width="20", height="20" %} **Stop**.
 
 ## Push Messages {: #push }
 
@@ -97,26 +97,17 @@ Message][17] API to receive data from a server. When the service worker is ready
 notification, it uses the [Notifications][18] API. To log Push Messages for three days, even when
 DevTools isn't open:
 
-1.  [Open DevTools][19].
-2.  Open the **Application** panel.
-3.  Open the **Push Messaging** pane.
+1. [Open DevTools][19], for example, on this [demo page](https://simple-push-demo.vercel.app/).
+1. Navigate to **Application** > **Background Services** > **Push Messaging** and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ljri3HPj5aVym9qgMfkx.svg", alt="Record.", width="20", height="20" %} **Record**.
 
-    {% Img src="image/admin/aovnBdkC3HsGTvJK3dvc.png", alt="The Push Messaging pane.", width="800", height="424" %}
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/pHNGjEaeK0U1pJHL0tbY.png", alt="The Push Messaging pane.", width="800", height="414" %}
 
-    Figure 11. The Push Messaging pane.
+1. On the demo page, toggle **Enable push notifications**, click **Allow** when prompted, type a message, and send it. DevTools logs push notification events to the table.
 
-4.  Click **Record** {% Img src="image/admin/jvgbyEZPbYfaxB255rCm.png", alt="Record", width="24", height="24" %}. After
-    triggering some Push Message activity, DevTools logs the events to the table.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/fkaGXBgWJzsYJ7sCQSUr.png", alt="A log of events in the Push Messaging pane.", width="800", height="414" %}
 
-    {% Img src="image/admin/cpKYRm8ioL77xOpKg7To.png", alt="A log of events in the Push Messaging pane.", width="800", height="389" %}
-
-    Figure 12. A log of events in the Push Messaging pane.
-
-5.  Click an event to view its details in the space below the table.
-
-    {% Img src="image/admin/ZG5sVS5QkS30tRGieBoo.png", alt="Viewing the details of an event in the Push Messaging pane.", width="800", height="389" %}
-
-    Figure 13. Viewing the details of an event in the Push Messaging pane.
+1. Click an event to view its details in the space below the table.
+1. You can close DevTools and leave the recording run for up to three days. To stop recording, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/HojbnKGlHbrbJI1VgQW9.svg", alt="Stop.", width="20", height="20" %} **Stop**.
 
 ## Reporting API {: #reporting-api }
 
