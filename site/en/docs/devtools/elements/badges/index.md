@@ -115,7 +115,7 @@ The overlay shows element positions and snap points.
 An HTML element is a [container](https://developer.mozilla.org/docs/Web/CSS/CSS_Container_Queries) if it has the `container-type` CSS property. Such elements have `container` badges next to them that toggle the corresponding overlays.
 
 {% Aside %}
-CSS container queries is an experimental feature. To enable its support in DevTools, under [`chrome://flags`](chrome://flags), set the `Enable CSS Container Queries` experiment to `Enabled`.
+CSS container queries is an experimental feature. To enable its support in DevTools, under `chrome://flags`, set the `Enable CSS Container Queries` experiment to `Enabled`.
 Otherwise, the preview below doesn't work.
 {% endAside %}
 

@@ -892,6 +892,21 @@
     "github": "photopea",
     "image": "image/8WbTDNrhLsU0El80frMBGE4eMCD3/awfIXN2jciHkQWrA6fqS.png"
   },
+  "ashleygullen": {
+    "twitter": "AshleyGullen",
+    "mastodon": "https://mastodon.gamedev.place/@AshleyGullen",
+    "image": "image/8WbTDNrhLsU0El80frMBGE4eMCD3/rSViMi4C4iRVSinc7edJ.jpg"
+  },
+  "jarekfoksa": {
+    "homepage": "http://foksa.name/",
+    "github": "jarek-foksa",
+    "image": "image/8WbTDNrhLsU0El80frMBGE4eMCD3/JjjLhgB6sR73QAeyKMdK.png"
+  },
+  "nabeelalshamma": {
+    "image": "image/8WbTDNrhLsU0El80frMBGE4eMCD3/gZlM5s1kj09oCG5h2buz.jpeg",
+    "github": "alshamma",
+    "linkedin": "https://www.linkedin.com/in/alshamma/"
+  },
   "ajara": {
     "twitter": "tropicadri",
     "github": "tropicadri",
@@ -1372,6 +1387,11 @@
         "label": "web.dev",
         "type": "rss",
         "url": "https://web.dev/authors/bramus/feed.xml"
+      },
+      {
+        "label": "bram.us",
+        "type": "rss",
+        "url": "https://www.bram.us/category/original-content/feed/"
       }
     ]
   },
@@ -1785,11 +1805,29 @@
     "twitter": "jdj_dk",
     "linkedin": "jakobdamjensen"
   },
+  "thiagodiogo": {
+    "country": "US",
+    "image": "image/RtQlPaM9wdhEJGVKR8boMPkWf443/OQvBPjMM24CK46ItOoqe.jpeg",
+    "linkedin": "thiagodiogo",
+    "github": "thiagodiogo"
+  },
   "oliverdunk": {
     "country": "UK",
     "image": "image/BhuKGJaIeLNPW9ehns59NfwqKxF2/1avBMPwktLOB3GEjuaFc.png",
     "github": "oliverdunk",
     "twitter": "oliverdunk_",
     "homepage": "https://oliverdunk.com"
+  },
+  "shhnjk": {
+    "twitter": "shhnjk",
+    "image": "image/HzA5MYhy4PRx6MYrtoD9tvac4gK2/a2B9A2UfLVVaDtlooFtD.jpg"
+  },
+  "wanderview": {
+    "country": "US",
+    "image": "image/udVScdcCFAdRjZwFdLk2jWAFQyr1/5goMt6sQccLtkJ6ct7j6.jpeg"
+  },
+  "alispivak": {
+    "country": "US",
+    "image": "image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ywSi24f8TTFI21KkKs5V.jpg"
   }
 }

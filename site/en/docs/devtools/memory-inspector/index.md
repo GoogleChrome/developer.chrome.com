@@ -7,6 +7,8 @@ authors:
 date: 2020-08-20
 updated: 2022-10-25
 description: "Use the Memory inspector to inspect an ArrayBuffer, TypedArray, or DataView in JavaScript as well as WebAssembly.Memory of C++ Wasm apps."
+tags:
+  - wasm
 ---
 
 {% Aside %}
@@ -111,8 +113,6 @@ To take full advantage of `WebAssembly.Memory` inspection:
 
 - Use Chrome 107 or later. Check your version at `chrome://version/`.
 - Install the [C/C++ DevTools Support (DWARF)][1] extension. This is a plugin for debugging C/C++ WebAssembly applications using DWARF debug information.
-- Enable DWARF debugging in DevTools > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Experiments** > **WebAssembly Debugging: Enable DWARF support** and reload DevTools.
-  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/56o9cpP8JRtNHLhDbeig.png", alt="Enabling DWARF support in the Experiments tab.", width="800", height="341" %} 
 
 To inspect the `WebAssembly.Memory` of an object:
 
@@ -126,7 +126,7 @@ To inspect the `WebAssembly.Memory` of an object:
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ECgMkcQYWSQY9EsbMicm.png", alt="The x array opened in Memory Inspector.", width="800", height="641" %}
 
-{% Aside 'gotchas' %}
+{% Aside %}
 Starting from Chrome version 107, the **Memory Inspector** highlights all the bytes of a C/C++ memory object. This lets you tell them apart from the surrounding memory.
 {% endAside %}
 

@@ -17,9 +17,10 @@ tags:
 ---
 
 Over the last year, Intel has been collaborating with Google and other parties
-on the Compute Pressure API. In Chrome&nbsp;115, you can register for an origin
-trial to help test this new API, and this post explains the problems the API has
-been designed to solve, and shows how to use it.
+on the Compute Pressure API. In Chrome&nbsp;115, you can register for an
+[origin trial](/origintrials/#/view_trial/1196831600973709313) to help test
+this new API, and this post explains the problems the API has been designed to
+solve, and shows how to use it.
 
 {% Aside %} The Compute Pressure API was in origin trial from Chrome&nbsp;92 to
 Chrome&nbsp;94. Since this first origin trial, many [changes] have been made to
@@ -103,7 +104,7 @@ You can activate it locally by enabling the
 [`enable-experimental-web-platform-features` flag](/docs/web-platform/chrome-flags/#chromeflags).
 
 To enable it for all visitors to your app, an
-[origin trial](/origintrials/#/view_trial/119683160097370931) is currently
+[origin trial](/origintrials/#/view_trial/1196831600973709313) is currently
 underway and set to end in Chrome&nbsp;118 ({% ChromeDate '115' %}). To
 participate in the trial, sign up and include a meta element with the origin
 trial token in either the HTML or HTTP header. For more information, refer to

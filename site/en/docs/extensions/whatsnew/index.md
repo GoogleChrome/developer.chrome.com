@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-05-17
+updated: 2023-06-07
 tags:
   - extensions-news
 
@@ -15,13 +15,38 @@ tags:
 
 Check this page often to learn about changes to Chrome extensions, extensions documentation, or related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about some of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).) The [Chrome schedule](https://chromiumdash.appspot.com/schedule) lists stable and beta release dates.
 
-### New Samples: WASM in extensions
+### Chrome 115: Specify multiple reasons in chrome.offscreen.createDocument() {: #m115-offscreen-multiple-reasons }
+
+<p class="color-secondary-text type--caption">Posted on <time>June 7, 2023</time></p>
+
+You can now specify multiple [`reason`](/docs/extensions/reference/offscreen/#type-Reason) enums when calling [`chrome.offscreen.createDocument()`](/docs/extensions/reference/offscreen/#method-createDocument). Use this when an offscreen document will be used for multiple different purposes. The browser uses the supplied reasons to determine the lifetime of the offscreen document. 
+
+### New tool: Extension Update Testing Tool {: #update-testing-tool }
+
+<p class="color-secondary-text type--caption">Posted on <time>June 5, 2023</time></p>
+
+We've just released the [Extension Update Testing Tool](https://github.com/GoogleChromeLabs/extension-update-testing-tool), a local extension update server that can be used for testing updates to Chrome Extensions during local development, including permission grants. The tool shows the user's update flow, including keeping an extension disabled until a user grants any newly requested permissions. This tool is particularly useful for simulating the permission changes requested when updating an extension from Manifest V2 to Manifest V3.
+
+### Chrome 114: New Side Panel API {: #side-panel-launch }
+
+<p class="color-secondary-text type--caption">Posted on <time>May 30, 2023</time></p>
+
+Introducing the new Side Panel API, a companion surface that allows users to access tools alongside the content they are browsing. To learn more, visit the [Side Panel API reference](/docs/extensions/reference/sidePanel/). Additionally, we've added many side panel samples to our [GitHub sample repository](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples). We also share more about side panels in the new blog post [Designing a Superior User Experience with the New Side Panel API](/blog/extension-side-panel-launch). Our [quality guidelines policy](/docs/webstore/program-policies/quality-guidelines/) and [best practices](/docs/webstore/best_practices/#design-a-high-quality-extension) have also been reviewed to provide further guidance on creating high-quality side panel extensions. 
+
+Your feedback is important in crafting this API; please share your thoughts and feature requests in the [chromium-groups](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/cJmdMLmpbjg/m/zYGc54AaAQAJ). Stay tuned for new updates as we continue to enhance the Side Panel API.
+
+### New Samples: WASM in extensions {: #samples-wasm }
 
 <p class="color-secondary-text type--caption">Posted on <time>May 17, 2023</time></p>
 
-We've release two samples demonstrating how to use WASM in an extension. [Using WASM in Manifest V3](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.wasm-helloworld-print-nomodule) shows the general method for including a WASM module. [Using WASM as a module in Manifest V3](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.wasm-helloworld-print) shows how to use it in a module.
+There are two new samples available that demonstrate how to use WASM in an extension: 
 
-### Updated Manifest V3 migration guidance 
+- [Using WASM in Manifest V3](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.wasm-helloworld-print-nomodule) shows the general method for including a WASM module. 
+- [Using WASM as a module in Manifest V3](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.wasm-helloworld-print) shows how to use it in a module.
+
+Special thanks to GitHub contributor [@daidr](https://github.com/daidr) for these samples.
+
+### Updated Manifest V3 migration guidance {: #doc-mv3-migration }
 
 <p class="color-secondary-text type--caption">Posted on <time>May 10, 2023</time></p>
 
@@ -39,7 +64,7 @@ We've just published a new article called [Audio recording and screen capture](/
 
 We have increased the quota for the [`storage.local`](/docs/extensions/reference/storage/#property-local) property to approximately 10 MB. This was [agreed to in the Web Extensions Community Group](https://github.com/w3c/webextensions/issues/351#issuecomment-1514420881). This brings `storage.local` in line with [`storage.session`](/docs/extensions/reference/storage/#property-session) which was changed in Chrome 112.
 
-### New extension service worker tutorial and help
+### New extension service worker tutorial and help {: #doc-service-worker }
 
 <p class="color-secondary-text type--caption">Posted on <time>May 3, 2023</time></p>
 
