@@ -141,10 +141,12 @@ Chromium issues: [1432512](https://crbug.com/1432512), [1432509](https://crbug.c
 
 ### Web Vitals moved to Timings {: #web-vitals }
 
-The **Performance** panel gets rid of the following redundancies:
+The **Performance** panel has removed the following tracks:
 
-- Non-interactable **Web Vitals** track. Instead, see the relevant timings in the **Timings** track on hover.
+- The **Web Vitals** track. Instead, see the relevant timings in the **Timings** track on hover.
 - The **Long Tasks** subtrack. You can already find such tasks in the [**Main** track](/docs/devtools/performance/reference/#long-tasks) shaded [in red and with a red triangle](/blog/new-in-devtools-83/#long-tasks).
+
+Both the **Web Vitals** and **Long Tasks** tracks included information that was duplicated elsewhere. They were also non-interactive compared to their more fully-featured alternatives which provide more detailed information when clicked on.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Wu4ePOcdvtKHyvy0PK96.png", alt="Before and after moving the Web Vitals to the Timings track.", width="800", height="613" %}
 
