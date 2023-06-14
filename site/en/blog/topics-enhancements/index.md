@@ -32,8 +32,8 @@ industry, without compromising user privacy.
 
 ## Taxonomy
 
-Alongside the initial Topics API announcement, we proposed a taxonomy designed for testing. This is
-the list of available topics that may be returned by the API. We repeatedly received
+Alongside the initial Topics API announcement, we proposed a taxonomy designed for testing. The
+taxonomy is the list of available topics that may be returned by the API. We repeatedly received
 [feedback](https://github.com/patcg-individual-drafts/topics/issues/3) that the testing taxonomy did
 not represent topics the advertising industry cared most about, so today we're announcing an
 [improved taxonomy](https://docs.google.com/spreadsheets/d/1hJ5wDtxFtHADsFKDfKjepN8yOVp13XcMNXm_8bSLqxo/edit?usp=sharing).
@@ -44,13 +44,24 @@ of categories that better match advertiser interests, while maintaining our comm
 potentially sensitive topics. We have added 280 commercially focused categories, like "Athletic
 Apparel", "Mattresses", and "Luxury Travel," while removing 160 categories including topics like
 "Civil Engineering" and "Equestrian" which don't add much commercial value for ad selection on most
-sites. We chose to limit the taxonomy's size, to protect against re-identification risk.
+sites. The new taxonomy has 469 topics, compared to 349 for the previous version. We chose to limit
+the taxonomy's size, to protect against re-identification risk.
 
 We expect the taxonomy to evolve over time, and for governance of the taxonomy to eventually
 transition to an external party representing stakeholders from across the industry. We encourage the
 ecosystem to review the
 [latest taxonomy](https://docs.google.com/spreadsheets/d/1hJ5wDtxFtHADsFKDfKjepN8yOVp13XcMNXm_8bSLqxo/edit?usp=sharing)
 and provide feedback on the changes.
+
+{% Aside %}
+
+_We're delighted to be working with Google Chrome on improving the Topics API and making it even
+more relevant for advertisers and publishers. The new taxonomy should deliver substantial additional
+value to API callers_
+
+- Patrick McCann, SVP Research, Raptive (formerly CafeMedia)
+
+{% endAside %}
 
 ## Per-caller filtering
 
@@ -70,14 +81,6 @@ that topic are recorded as observed as well.
 
 This change increases the likelihood sites will receive topics information, without impacting the
 API's privacy since the topic's ancestors were already known to the caller.
-
-{% Aside %}
-_We're delighted to be working with Google Chrome on improving the Topics API and making it even
-more relevant for advertisers and publishers. The new taxonomy should deliver substantial additional
-value to API callers_
-
-— Patrick McCann, SVP Research, Raptive (formerly CafeMedia)
-{% endAside %}
 
 ## User controls
 
