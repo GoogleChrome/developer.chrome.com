@@ -20,7 +20,7 @@ Before proceeding, for an in-depth understanding of what noise is, and its impac
 
 ### Scale up to contribution budget
 
-We've seen that the [noise applied to the summary value](/docs/privacy-sandbox/attribution-reporting/understanding-noise/#evaluating-noise) for each key is based on the 0-65,536 scale (0-`CONTRIBUTION_BUDGET`).
+As explained in [Understanding noise](/docs/privacy-sandbox/attribution-reporting/understanding-noise/#evaluating-noise), noise applied to the summary value for each key is based on the 0-65,536 scale (0-`CONTRIBUTION_BUDGET`).
 
 {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/ODm7VrPRfwRm3hh8lWZg.png", alt="Noise distribution is based on budget.", width="512", height="147" %}
 
