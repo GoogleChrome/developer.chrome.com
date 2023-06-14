@@ -59,7 +59,7 @@ _We're delighted to be working with Google Chrome on improving the Topics API an
 more relevant for advertisers and publishers. The new taxonomy should deliver substantial additional
 value to API callers_
 
-- Patrick McCann, SVP Research, Raptive (formerly CafeMedia)
+— Patrick McCann, SVP Research, Raptive (formerly CafeMedia)
 
 {% endAside %}
 
