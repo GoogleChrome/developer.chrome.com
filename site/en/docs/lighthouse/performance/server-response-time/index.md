@@ -7,7 +7,7 @@ date: 2019-05-02
 updated: 2023-06-14
 ---
 
-The Opportunities section of your Lighthouse report reports **Server Response Time**—the time that it takes for a user's browser to receive the first byte of page content, after making the request:
+The Opportunities section of your Lighthouse report reports **server response time**—the time that it takes for a user's browser to receive the first byte of page content, after making the request:
 
 <figure>
   {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/Nc4yOYetwgmU6y6Ovcrx.png", alt="A screenshot of the Lighthouse Server response times are low audit", width="800", height="118" %}
@@ -17,17 +17,17 @@ The Opportunities section of your Lighthouse report reports **Server Response Ti
 
 This audit fails when the browser waits more than 600&nbsp;ms for the server to respond to the main document request. Users dislike when pages take a long time to load. Slow server response times are one possible cause for long page loads.
 
+When users navigate to a URL in their web browser, the browser makes a network request to fetch that content. Your server receives the request and returns the page content.
+
 {% Aside 'important' %}
-Server Response Time is only part of the full [Time to First Byte (TTFB)](https://web.dev/ttfb/). As well as including the Server Response Time, TTFB can often include DNS lookups and redirects (for example, if the final slash or the www subdomain or https protocol is omitted then the server might redirect to the correct URL, or for URL shorteners or Ads that redirect via several domains). These are not included in the Lighthouse Server Response Time.
+Server response time is only part of the full [Time to First Byte (TTFB)](https://web.dev/ttfb/). As well as including the server response time, TTFB can often include DNS lookups and redirects (for example, if the final slash or the www subdomain or https protocol is omitted then the server might redirect to the correct URL, or for URL shorteners or Ads that redirect via several domains). Many Lighthouse tests will test the end URL, missing the redirect time, but even when this is not the case, the server response time will exclude these parts.
 
 For this reason, Lighthouse has a smaller limit (600&nbsp;ms) to the [Core Web Vitals TTFB recommended time](https://web.dev/ttfb/#what-is-a-good-ttfb-score) (800&nbsp;ms).
 {% endAside %}
 
-When users navigate to a URL in their web browser, the browser makes a network request to fetch that content. Your server receives the request and returns the page content.
-
 The server may need to do a lot of work in order to return a page with all of the content that users want. For example, if users are looking at their order history, the server needs to fetch each user's history from a database, and then insert that content into the page. Optimizing the server to do work like this as quickly as possible is one way to reduce the time that users spend waiting for pages to load.
 
-Even when the server does not need to do a lot of work, the network latency between the client and the server can result in a slow server response time.
+Even when the server does not need to do a lot of work, the network latency between the client and the server can result in a slow server response times.
 
 ## How to improve server response times
 
