@@ -106,6 +106,10 @@ DevTools isn't open:
 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/fkaGXBgWJzsYJ7sCQSUr.png", alt="A log of events in the Push Messaging pane.", width="800", height="414" %}
 
+   {% Aside %}
+   Additionally, in **Application** > [**Service Workers**](/docs/devtools/progressive-web-apps/#service-workers), you can click **Push** to send test notifications from DevTools.
+   {% endAside %}
+
 1. Click an event to view its details in the space below the table.
 1. You can close DevTools and leave the recording run for up to three days. To stop recording, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/HojbnKGlHbrbJI1VgQW9.svg", alt="Stop.", width="20", height="20" %} **Stop**.
 
