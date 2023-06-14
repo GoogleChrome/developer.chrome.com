@@ -25,9 +25,10 @@ The **Background Services** section lets you debug the following background serv
 
 Chrome DevTools can log fetch, sync, and notification events for three days, even when DevTools is not open. This can help you make sure that events are being sent and received as expected.
 
-In addition to background service events, DevTools can show you [reports](https://web.dev/reporting-api/) that Chrome already sent or is about to send via the [Reporting API][20].
+In addition to background service events, DevTools can:
 
-Whenever your site's policies are violated, Chrome generates reports and sends them in batches with a delay even if the user has already left your site. For more information on policies you can set up, see [Use cases and report types](https://web.dev/reporting-api/#use-cases-and-report-types).
+- Show you [reports](https://web.dev/reporting-api/) that Chrome already sent or is about to send via the [Reporting API][20].
+- Let you debug and [test back/forward cache](/docs/devtools/application/back-forward-cache/) with a click.
 
 ## Background Fetch {: #fetch }
 
