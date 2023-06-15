@@ -88,53 +88,19 @@ See [Supplying Images][cws-images] for guidelines on the images you should suppl
 
 ### Choose your extension's category well {: #choose-category-well }
 
-The developer console lets you specify a category for each extension. Choose the category
-that is most appropriate:
+The developer console lets you specify a category for each extension. Choose the most appropriate category:
 
-* Accessibility
-* Art & Design
-* Communication
-* Developer Tools
-* Education
-* Entertainment
-* Functionality & UI
-* Games
-* Household
-* Just for Fun
-* News & Weather
-* Privacy & Security
-* Shopping
-* Social Media & Networking
-* Tools
-* Travel
-* Well-being
-* Workflow & Planning
-
-In mid 2023 the categories changed. Most of the new categories match previous ones. Several were
-replaced by multiple categores. If you previously used one of the replaced categories, use the
-table below to decide which new category best suites your extension. 
-
-Fun
-: * Entertainment
-  * Games
-  * Just for Fun
-
-Photos
-: * Art & Design
-
-Productivity
-: * Education
-  * Functionality & UI
-  * Household
-  * Privacy & Security
-  * Tools
-  * Workflow & Planning
-
-Social & Communications
-: * Communication
-  * Social Media & Networking
-  * Travel
-  * Well-being
+- Accessibility
+- Blogging
+- Developer Tools
+- Fun
+- News & Weather
+- Photos
+- Productivity
+- Search Tools
+- Shopping
+- Social & Communication
+- Sports
 
 [oauth2-tutorial]: /docs/extensions/mv3/tut_oauth/
 [completing-listing]: /docs/webstore/cws-dashboard-listing/
