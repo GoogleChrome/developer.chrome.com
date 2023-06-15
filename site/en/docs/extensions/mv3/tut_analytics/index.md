@@ -210,7 +210,7 @@ The `popup.js` script needs to be imported in your popup’s html file and shoul
 </html>
 ```
 
-The popup view will be displayed like any other page view in the Google Analytics real-time report:
+The popup view will be displayed like any other page view in the Google Analytics Realtime report:
 
 {% Img src="image/6hHqS5auVgWhN0cQNQztaJx5w4M2/m3yzbQtQ0QRBnxEelfZJ.png", alt="Page view event as it is displayed in the Google Analytics Realtime dashboard.", width="400", height="449" %}
 
