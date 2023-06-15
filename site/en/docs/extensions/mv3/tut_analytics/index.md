@@ -85,7 +85,7 @@ fetch(
 ```
 
 
-This will send a `button_clicked` event which will appear in your [Google Analytics events report](https://support.google.com/analytics/answer/9322688). If you want to see your events in the [Google Analytics Realtime Report](https://support.google.com/analytics/answer/1638635), you need to provide two additional parameters: `session_id` and `engagement_time_msec`. 
+This sends a `button_clicked` event which will appear in your [Google Analytics events report](https://support.google.com/analytics/answer/9322688). If you want to see your events in the [Google Analytics Realtime Report](https://support.google.com/analytics/answer/1638635), you need to provide two additional parameters: `session_id` and `engagement_time_msec`. 
 
 ### Setting `session_id` and `engagement_time_msec` (recommended)
 Both `session_id` and `engagement_time_msec` are [recommended parameters when using the Google Analytics Measurement Protocol](https://developers.google.com/analytics/devguides/collection/protocol/ga4/sending-events?client_type=gtag#recommended_parameters_for_reports) as they are required for user activity to display in standard reports like Realtime.
