@@ -167,7 +167,7 @@ The event will be displayed as follows in the Google Analytics Realtime report.
 
 ## Tracking page views in tabs, popup, and side panel  {: #toc-tracking-pageviews }
 
-The Google Analytics Measurement Protocol supports a special `page_view` event for tracking page views. Use this to track users visiting your popup pages, tab pages or sidepanel. The `page_view` event also requires the `page_title` and `page_location` parameters. The following example fires a page view event at the document [`load`](https://developer.mozilla.org/docs/Web/API/Window/load_event) event for an extension popup.:
+The Google Analytics Measurement Protocol supports a special `page_view` event for tracking page views. Use this to track users visiting your popup pages, tab pages, or side panel. The `page_view` event also requires the `page_title` and `page_location` parameters. The following example fires a page view event at the document [`load`](https://developer.mozilla.org/docs/Web/API/Window/load_event) event for an extension popup.:
 
 {% Label %}popup.js:{% endLabel %}
 
