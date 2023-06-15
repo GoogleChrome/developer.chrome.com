@@ -57,7 +57,7 @@ feedback on the changes.
 
 _We're delighted to be working with Google Chrome on improving the Topics API and making it even
 more relevant for advertisers and publishers. The new taxonomy should deliver substantial additional
-value to API callers_
+value to API callers._
 
 — Patrick McCann, SVP Research, Raptive (formerly CafeMedia)
 
