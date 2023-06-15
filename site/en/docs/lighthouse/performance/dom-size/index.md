@@ -80,11 +80,10 @@ If you're rendering large lists, use [virtual scrolling](https://web.dev/virtual
   [`react-window`](https://web.dev/virtualize-long-lists-react-window/) to minimize the number
   of DOM nodes created if you are rendering many repeated elements on the page.
 - Minimize unnecessary re-renders using
-  [`shouldComponentUpdate`](https://reactjs.org/docs/optimizing-performance.html#shouldcomponentupdate-in-action),
-  [`PureComponent`](https://reactjs.org/docs/react-api.html#reactpurecomponent),
-  or [`React.memo`](https://reactjs.org/docs/react-api.html#reactmemo).
-- [Skip effects](https://reactjs.org/docs/hooks-effect.html#tip-optimizing-performance-by-skipping-effects)
-  only until certain dependencies have changed if you are using the `Effect`
+  [`PureComponent`]([https://reactjs.org/docs/react-api.html#reactpurecomponent](https://react.dev/reference/react/PureComponent)),
+  or [`useMemo`](https://react.dev/reference/react/useMemo) or [`useCallback`](https://react.dev/reference/react/useCallback)
+- [Synchronizing with Effects]([https://reactjs.org/docs/hooks-effect.html#tip-optimizing-performance-by-skipping-effects](https://react.dev/learn/synchronizing-with-effects))
+  only until certain dependencies have changed if you are using the `useEffect`
   hook to improve runtime performance.
 
 ## Resources
