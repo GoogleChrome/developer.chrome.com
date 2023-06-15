@@ -52,7 +52,6 @@ Topics are selected from a [taxonomy](https://github.com/patcg-individual-drafts
 
 {% Partial 'privacy-sandbox/topics-taxonomy-v2.njk' %}
 
-
 {: #sensitive-topics}
 
 To avoid sensitive categories, topics must be public, human-curated, and remain up to date. The initial taxonomy proposed for testing by Chrome has been human-curated [to exclude categories generally considered sensitive](https://github.com/patcg-individual-drafts/topics#meeting-the-privacy-goals:~:text=of%20a%20page.-,The,-topics%20revealed%20by), such as ethnicity or sexual orientation.
