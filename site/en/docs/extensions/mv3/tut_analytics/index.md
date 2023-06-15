@@ -8,7 +8,7 @@ description: >
     Step-by-step instructions on how to track usage of your Extension with Google Analytics 4.
 ---
 
-This tutorial demonstrates using Google Analytics to track the usage of your extension. You can find a [working Google Analytics 4 sample on Github](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.google-analytics), where [google-analytics.js](https://github.com/GoogleChrome/chrome-extensions-samples/blob/main/functional-samples/tutorial.google-analytics/scripts/google-analytics.js) includes all the Google Analytics related code.
+This tutorial demonstrates how to track the usage of your extension using Google Analytics. You can find a [working Google Analytics 4 sample on Github](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.google-analytics), where [google-analytics.js](https://github.com/GoogleChrome/chrome-extensions-samples/blob/main/functional-samples/tutorial.google-analytics/scripts/google-analytics.js) includes all the Google Analytics related code.
 
 ## Requirements {: #toc-requirements }
 This tutorial expects that you are familiar with writing extensions for Google Chrome. If you need information on how to write an extension, please read the [Getting Started  tutorial](/docs/extensions/mv3/getstarted).
