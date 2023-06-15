@@ -26,7 +26,7 @@ Using the Measurement Protocol means that some information, such as geolocation,
 ### Set up API credentials {: #step-1}
 The first step is to obtain an `api_secret` and `measurement_id`. Follow the [Measurement Protocol documentation](https://developers.google.com/analytics/devguides/collection/protocol/ga4) for how to get these for your Analytics Account. 
 
-### Generating a `client_id`
+### Generate a `client_id`
 The second step is to generate a unique identifier for a specific device/user, the `client_id`. The id should stay the same, as long as the extension is installed on a user’s browser. It can be an arbitrary string, but should be unique to the client. You can generate one by calling [`self.crypto.randomUUID()`](https://developer.mozilla.org/docs/Web/API/Crypto/randomUUID). Store the `client_id` in [`chrome.storage.local`](/docs/extensions/reference/storage/#storage-areas) to make sure it stays the same as long as the extension is installed. 
 
 Using `chrome.storage.local` requires the `storage` permission in your manifest file:
