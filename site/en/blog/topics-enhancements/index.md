@@ -36,7 +36,7 @@ Alongside the initial Topics API announcement, we proposed a taxonomy designed f
 taxonomy is the list of available topics that may be returned by the API. We repeatedly received
 [feedback](https://github.com/patcg-individual-drafts/topics/issues/3) that the testing taxonomy did
 not represent topics the advertising industry cared most about, so today we're announcing an
-[improved taxonomy](https://docs.google.com/spreadsheets/d/1hJ5wDtxFtHADsFKDfKjepN8yOVp13XcMNXm_8bSLqxo/edit?usp=sharing).
+[improved taxonomy](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v2.md).
 
 When crafting this new taxonomy, we saw deep engagement from companies across the ecosystem, like
 Raptive (formerly CafeMedia) and Criteo. It removes categories we've heard are less useful, in favor
@@ -49,15 +49,15 @@ the taxonomy's size, to protect against re-identification risk.
 
 We expect the taxonomy to evolve over time, and for governance of the taxonomy to eventually
 transition to an external party representing stakeholders from across the industry. We encourage the
-ecosystem to review the
-[latest taxonomy](https://docs.google.com/spreadsheets/d/1hJ5wDtxFtHADsFKDfKjepN8yOVp13XcMNXm_8bSLqxo/edit?usp=sharing)
-and provide feedback on the changes.
+ecosystem to review the [latest
+taxonomy](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v2.md) and provide
+feedback on the changes.
 
 {% Aside %}
 
 _We're delighted to be working with Google Chrome on improving the Topics API and making it even
 more relevant for advertisers and publishers. The new taxonomy should deliver substantial additional
-value to API callers._
+value to API callers_
 
 — Patrick McCann, SVP Research, Raptive (formerly CafeMedia)
 
@@ -93,7 +93,7 @@ user controls, compared to current third-party cookie controls.
 Today we're announcing our plans to give users even greater control over which topics are associated
 with them. Specifically, users will be able to proactively block topics. This means users will be
 able to curate the set of available topics they are interested in by removing selected topics. This
-change, coming early next year, will give users even more control over their privacy and make the
+change, coming by early next year, will give users even more control over their privacy and make the
 Topics API even more user-friendly.
 
 ## Speed improvements
@@ -116,6 +116,6 @@ limiting potential negative impacts on developers and users.
 We are excited about these updates to the Topics API and believe that they not only will make it
 more effective for advertisers and keep ads relevant for people, but still preserve privacy.
 Per-caller filtering updates and speed improvements are already available in Chrome 114. Taxonomy
-updates will be available in Q3 2023. User controls updates will be available early next year. We
+updates will be available in Q3 2023. User controls updates will be available by early next year. We
 are committed to continuing to listen to ecosystem feedback as we build new, more private
 technologies for the web.
