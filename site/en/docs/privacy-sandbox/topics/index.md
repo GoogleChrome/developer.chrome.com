@@ -6,7 +6,7 @@ subhead: >
 description: >
   Learn how to work with the API, including how to use Chrome flags for testing.
 date: 2022-01-25
-updated: 2023-05-09
+updated: 2023-06-15
 authors:
   - samdutton
 ---
@@ -213,7 +213,12 @@ Use hostnames only (without protocol or path) to view inferred topics from the `
 
 ### View Topics API information {: #view-api-information}
 
-You can find information about the Topics API implementation and settings, such as the [taxonomy](https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md) version and epoch duration, in `chrome://topics-internals`. These values reflect default settings for the API or parameters successfully set [from the command line](#feature-flags). This may be helpful to confirm that command line flags have worked as expected.
+You can find information about the Topics API implementation and settings, such as the [taxonomy](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v2.md) version and epoch duration, in `chrome://topics-internals`. These values reflect default settings for the API or parameters successfully set [from the command line](#feature-flags). This may be helpful to confirm that command line flags have worked as expected.
+
+{% Aside %}
+There is a [new improved taxonomy](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v2.md), updated June 15, 2023 in which we added 280 commercially focused categories, like "Athletic Apparel", "Mattresses", and "Luxury Travel," while removing 160 categories including topics like "Civil Engineering" and "Equestrian" which don't add much commercial value for ad selection on most sites. Previous demos used version 1 of the taxonomy.
+Chrome will begin using the new taxonomy later this year, but you can view it here.
+{% endAside %}
 
 In the example below, `time_period_per_epoch` has been set to 15 seconds (the default is seven days).
 
@@ -286,7 +291,7 @@ context. The browser will internally keep up to N+1 epochs.</dd>
       <dd><strong>Default value:</strong> 5</dd>
       <dd>Probability that an individual topic within an epoch is one returned at random from
 the entire <a
-href="https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md">taxonomy</a>
+href="https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v2.md">taxonomy</a>
 of topics. The randomness is sticky to an epoch and site.</dd>
     </dt><br />
     <dt>
@@ -326,7 +331,7 @@ inconsistent state and/or could let the browser crash, e.g. updating the
       <dd><code>BrowsingTopics:taxonomy_version</code></dd>
       <dd><strong>Default value:</strong> 1</dd>
       <dd>The <a
-href="https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md">taxonomy</a>
+href="https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v2.md">taxonomy</a>
 version used by the API.</dd>
     </dt><br />
 </dl>
