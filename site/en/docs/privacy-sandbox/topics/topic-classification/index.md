@@ -96,7 +96,7 @@ Use [`protoc`](https://grpc.io/docs/protoc-installation/) to inspect it as text:
 protoc --decode_raw < override_list.pb > output.txt
 ```
 
-A full [taxonomy of topics with IDs](https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md) is available on GitHub.
+A full [taxonomy of topics with IDs](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md) is available on GitHub.
 
 
 ### Providing feedback or input on the classifier model
