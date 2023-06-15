@@ -60,7 +60,7 @@ async function getOrCreateClientId() {
 }
 ```
 
-### Sending an analytics event {: #send-analytics-events }
+### Send an analytics event {: #send-analytics-events }
 
 With the API credentials and the `client_id`, you can send an event to Google Analytics via a [`fetch`][9] request:
 
@@ -90,13 +90,13 @@ fetch(
 
 This sends a `button_clicked` event which will appear in your [Google Analytics events report][10]. If you want to see your events in the [Google Analytics Realtime Report][11], you need to provide two additional parameters: `session_id` and `engagement_time_msec`.
 
-### Setting `session_id` and `engagement_time_msec` (recommended) {: # set-session-id }
+### Use recommended parameters `session_id` and `engagement_time_msec` {: # set-session-id }
 
 Both `session_id` and `engagement_time_msec` are [recommended parameters when using the Google Analytics Measurement Protocol][12] as they are required for user activity to display in standard reports like Realtime.
 
 A `session_id` describes a period of time, during which a user continuously interacts with your extension. By default, a session ends after 30 minutes of user inactivity. There is no limit to how long a session can last.
 
-In Chrome Extensions, unlike in normal websites, there is no clear notion of a user session. Hence, you have to define what a user session means in your extension. For example, every new user interaction might be a new session. In that case, you can simply generate a new session id with every event (i.e. using a timestamp).
+In Chrome extensions, unlike in normal websites, there is no clear notion of a user session. Hence, you must define what a user session means in your extension. For example, every new user interaction might be a new session. In that case, you can simply generate a new session id with every event (i.e. using a timestamp).
 
 The following example demonstrates an approach that will timeout a new session after 30 minutes of no events being reported (this time can be customized to better suit your extension’s user behavior). The example uses [`chrome.storage.session`][8] to store the active session while the browser is running. Together with the session we store the last time an event was fired. This way we can tell if the active session has expired:
 
@@ -166,9 +166,9 @@ The event will be displayed as follows in the Google Analytics Realtime report.
 
 {% Img src="image/6hHqS5auVgWhN0cQNQztaJx5w4M2/AQqSJb9VqalWfrQ6xSXM.png", alt="Realtime events in Google Analytics. ", width="396", height="414" %}
 
-## Tracking page views in tabs, popup, and side panel {: #toc-tracking-pageviews }
+## Tracking page views in popup, side panel and extension pages {: #toc-tracking-pageviews }
 
-The Google Analytics Measurement Protocol supports a special `page_view` event for tracking page views. Use this to track users visiting your popup pages, tab pages, or side panel. The `page_view` event also requires the `page_title` and `page_location` parameters. The following example fires a page view event at the document [`load`][13] event for an extension popup.:
+The Google Analytics Measurement Protocol supports a special `page_view` event for tracking page views. Use this to track users visiting your popup pages, side panel or an extension page in a new tab. The `page_view` event also requires the `page_title` and `page_location` parameters. The following example fires a page view event at the document [`load`][13] event for an extension popup.:
 
 {% Label %}popup.js:{% endLabel %}
 
@@ -216,9 +216,9 @@ The popup view will be displayed like any other page view in the Google Analytic
 
 {% Img src="image/6hHqS5auVgWhN0cQNQztaJx5w4M2/m3yzbQtQ0QRBnxEelfZJ.png", alt="Page view event as it is displayed in the Google Analytics Realtime dashboard.", width="400", height="449" %}
 
-## Tracking analytics events in Service Workers {: #toc-tracking-sw-events }
+## Tracking analytics events in service workers {: #toc-tracking-sw-events }
 
-Using the Google Analytics Measurement Protocol has the added benefit of making it possible to track analytics events in Extension Service Workers. For example, by listening to the [`unhandledrejection event`][14] in your service worker, you can log any uncaught exceptions in your service worker to Google Analytics, which can greatly help debugging problems your users might report.
+Using the Google Analytics Measurement Protocol makes it possible to track analytics events in extension service workers. For example, by listening to the [`unhandledrejection event`][14] in your service worker, you can log any uncaught exceptions in your service worker to Google Analytics, which can greatly help to debug problems your users might report.
 
 {% Label %}service-worker.js:{% endLabel %}
 
