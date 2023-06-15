@@ -34,6 +34,11 @@ In the past, third-party cookies and other mechanisms have been used to track us
 
 With the Topics API, the browser observes and records topics that appear to be of interest to the user, based on their browsing activity. This information is recorded on the user's device. The Topics API can then give API callers (such as ad tech platforms) access to a user's topics of interest, but without revealing additional information about the user's browsing activity.
 
+{% Aside 'key-term' %}
+To **observe** a topic, the caller must visit a page with that topic or any of the topic's direct ancestors. This expanded definition is new. Previously, for a caller to observe "Apparel", for example, the caller must have observed that a user visited a page with that topic. Now, if "Boots" is observed, then all ancestors of that topic (such as "Shopping" and "Apparel") are recorded as observed as well, because the full
+taxonomy of "Boots" is "/Shopping/Apparel/Footwear/Boots." 
+{% endAside %}
+
 {: #epoch}
 
 Of course the Topics API must ensure that the topics of interest it provides are kept up to date. The browser infers topics for a user based on their browsing activity during a period of time known as an *epoch*, currently one week. The topic selected for each epoch is randomly selected from the user's top five topics for that time period. To further enhance privacy and ensure that all topics may be represented, there is a 5% chance the topic is randomly selected from all possible topics in a [taxonomy](https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md) of interests.
