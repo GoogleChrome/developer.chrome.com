@@ -55,11 +55,6 @@ The [Topics demo](https://topics-demo.glitch.me/) shows how to use additional fl
 
 [Run Chromium with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags) explains how to set flags when running Chrome and other Chromium-based browsers from the command line, although this demo is specific to Google Chrome.
 
-{% Aside %}
-There is a [new improved taxonomy](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v2.md), updated June 15, 2023 in which we added 280 commercially focused categories, like "Athletic Apparel", "Mattresses", and "Luxury Travel," while removing 160 categories including topics like "Civil Engineering" and "Equestrian" which don't add much commercial value for ad selection on most sites. Previous demos used version 1 of the taxonomy.
-{% endAside %}
-
-
 ## The Topics API headers demo
 
 The demo at [topics-fetch-demo.glitch.me](https://topics-fetch-demo.glitch.me/) shows how to use `fetch()` request and response headers to access topics and mark them as observed.
@@ -89,7 +84,7 @@ The Topics request header looks like this:
 Sec-Browsing-Topics: 186;version="chrome.1:1:2206021246";config_version="chrome.1";model_version="2206021246";taxonomy_version="1", 265;version="chrome.1:1:2206021246";config_version="chrome.1";model_version="2206021246";taxonomy_version="1"
 ```
 
-This example includes two topics from the [Topics taxonomy](https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md), 186 and 265, along with each topic's version information.
+This example includes two topics from the [Topics taxonomy](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md), 186 and 265, along with each topic's version information.
 
 {% Aside 'note' %}
 The [fetch()](https://chromium-review.googlesource.com/c/chromium/src/+/4044267) and [XHR](https://chromium-review.googlesource.com/c/chromium/src/+/4103742) implementations were first made available in Chrome 111. (Refer to these builds for more information.)
