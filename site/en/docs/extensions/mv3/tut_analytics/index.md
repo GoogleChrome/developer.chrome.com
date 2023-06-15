@@ -13,7 +13,7 @@ This tutorial demonstrates how to track the usage of your extension using Google
 ## Requirements {: #toc-requirements }
 This tutorial assumes you are familiar with writing Chrome extensions. If you need information on how to write an extension, please read the [Getting Started tutorial](/docs/extensions/mv3/getstarted).
 
-You will also need a [Google Analytics 4 account](http://www.google.com/analytics) set up to track your extension. Note that when setting up the account, you can use any value in the Website's URL field, as your extension will not have an URL of its own.
+You must also set up a [Google Analytics 4 account](http://www.google.com/analytics) to track your extension. Note that when setting up the account, you can use any value in the Website's URL field, as your extension will not have an URL of its own.
 
 ## Using the Google Analytics Measurement Protocol {: #measurement-protocol }
 
