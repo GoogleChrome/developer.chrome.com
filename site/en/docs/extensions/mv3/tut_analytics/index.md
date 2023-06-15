@@ -23,7 +23,7 @@ Since Manifest V3, Chrome Extensions are [not allowed to execute remote hosted c
 Using the Measurement Protocol means that some information, such as geolocation, will not be included.
 {% endAside %}
 
-### Setup API credentials 
+### Set up API credentials {: #step-1}
 The first step is to obtain an `api_secret` and `measurement_id`. Follow the [Measurement Protocol documentation](https://developers.google.com/analytics/devguides/collection/protocol/ga4) for how to get these for your Analytics Account. 
 
 ### Generating a `client_id`
