@@ -160,7 +160,7 @@ fetch(
 );
 ```
 
-The event will be displayed as follows in the Google Analytics real-time report.
+The event will be displayed as follows in the Google Analytics Realtime report.
 
 {% Img src="image/6hHqS5auVgWhN0cQNQztaJx5w4M2/AQqSJb9VqalWfrQ6xSXM.png", alt="Realtime events in Google Analytics. ", width="396", height="414" %}
 
