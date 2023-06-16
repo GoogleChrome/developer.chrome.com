@@ -1,14 +1,12 @@
 ---
 layout: layouts/doc-post.njk
-title: 関連性と測定の統一オリジントライアル
-subhead: |2
+title: 広告関連 API の統一オリジントライアル
+subhead: |2-
 
-  Run unified experiments across Attribution Reporting, Protected Audience API,
-  Topics, Fenced Frames, and Shared Storage.
-description: |2
+  アトリビューション レポート、Protected Audience API、Topics、Fenced Frames、および共有ストレージの統一実験を実行します。
+description: |2-
 
-  Run unified experiments across Attribution Reporting, Protected Audience API,
-  Topics, Fenced Frames, and Shared Storage.
+  アトリビューション レポート、Protected Audience API、Topics、Fenced Frames、および共有ストレージの統一実験を実行します。
 date: '2022-09-08'
 updated: '2023-06-05'
 authors:
@@ -17,7 +15,7 @@ authors:
   - rowan_m
 ---
 
-The Privacy Sandbox includes a selection of proposals to enable advertising use cases without the need for cross-site tracking. [Origin trials](/blog/origin-trials/) provide an opportunity for developers to evaluate and provide feedback on new web technologies through real-world testing. The [Privacy Sandbox Relevance and Measurement](/origintrials/#/view_trial/771241436187197441) origin trial provides a single trial allowing sites to run unified experiments across Attribution Reporting, Protected Audience API, Topics, Fenced Frames, and Shared Storage.
+プライバシーサンドボックスには、クロスサイトトラッキングを必要とせずに広告のユースケースを有効にするための提案が含まれています。[オリジントライアル](/blog/origin-trials/)は、開発者が実際のテストを通じて新しいウェブテクノロジーを評価し、フィードバックを提供する機会です。[プライバシーサンドボックスの広告関連](/origintrials/#/view_trial/771241436187197441)のオリジントライアルでは、サイトがアトリビューション レポート、Protected Audience API、Topics、Fenced Frames、および共有ストレージを統合した単一のトライアルで実験することが可能です。
 
 開発者は、この単一のオリジントライアルに登録すると、Topics、Protected Audience API、および Attribution Reporting API をテストすることができます。このガイドでは、これらの API にアクセスするための構成手順と構成を検証する方法を説明し、API に対してテストするためのその他のリソースを提供しています。
 
@@ -404,8 +402,7 @@ Chrome の回帰調査の一環として、2023 年 1 月 26 日から、Protect
 </thead>
 <tbody>
   <tr>
-   <td>
-<a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a>    </td>
+   <td><a href="/docs/privacy-sandbox/attribution-reporting/">アトリビューション レポート</a></td>
    <td>安定版で提供中。10 月 26 日から 5% に増加。</td>
   </tr>
   <tr>
