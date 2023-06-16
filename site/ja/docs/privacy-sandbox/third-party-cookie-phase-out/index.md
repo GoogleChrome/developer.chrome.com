@@ -72,7 +72,7 @@ iframe やサブリソースリクエストなど、クロスサイトのコン�
 Set-Cookie: cookie-name=value; SameSite=None; Secure
 ```
 
-{% Aside ' important' %} Cookie を必ず確認し、`SameSite=None` が設定されている Cookie のリストを作成してください。これらは、適切に機能し続けるための対応が必要な Cookie です。{% endAside %}
+{% Aside 'important' %} Cookie を必ず確認し、`SameSite=None` が設定されている Cookie のリストを作成してください。これらは、適切に機能し続けるための対応が必要な Cookie です。{% endAside %}
 
 これらを識別するには、1 つの方法として、コードベースを調べて `SameSite=None` を含む Cookie を検索することができます。
 
