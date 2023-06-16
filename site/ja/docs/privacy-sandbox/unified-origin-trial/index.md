@@ -29,7 +29,7 @@ authors:
 
 [Private Aggregation API](/docs/privacy-sandbox/private-aggregation/) は、2023 年 6 月 6 日火曜日から 7% の Chrome 安定版トラフィックで利用可能になります。この API は、メインの統合オリジントライアルグループ（5%）、Protected Audience の隔離グループ（1%）、および共有ストレージの隔離グループ（1％）で利用可能になります。プライベート集計が既存の隔離実験に追加されるため、プライベート集計と共有ストレージのトラフィックの割り当てに変更はありません。
 
-Traffic allocation as of Tuesday, June 6th:
+6 月 6 日火曜日現在のトラフィック割り当て:
 
 <table>
   <tr>
@@ -37,7 +37,7 @@ Traffic allocation as of Tuesday, June 6th:
 <strong>API</strong>
    </td>
    <td>
-<strong>Traffic allocation</strong>
+<strong>トラフィックの割り当て</strong>
    </td>
    <td>
 <strong>状況</strong>
@@ -45,7 +45,7 @@ Traffic allocation as of Tuesday, June 6th:
   </tr>
   <tr>
    <td rowspan="2">アトリビューション レポート</td>
-   <td>Unified - 5%    </td>
+   <td>統合 - 5%</td>
    <td rowspan="2">2023 年 3 月 13 日時点で 6% の安定版トラフィック</td>
   </tr>
   <tr>
@@ -53,7 +53,7 @@ Traffic allocation as of Tuesday, June 6th:
   </tr>
   <tr>
    <td rowspan="3">Fenced Frames</td>
-   <td>Unified - 5%    </td>
+   <td>統合 - 5%</td>
    <td rowspan="3">2023 年 3 月 13 日時点で 7% の安定版トラフィック</td>
   </tr>
   <tr>
@@ -72,7 +72,7 @@ Traffic allocation as of Tuesday, June 6th:
   </tr>
   <tr>
    <td rowspan="3">プライベート集計</td>
-   <td>Unified - 5%     </td>
+   <td>統合 - 5%</td>
    <td rowspan="3">2023 年 6 月 6 日時点で 7% の安定版トラフィック</td>
   </tr>
   <tr>
@@ -83,7 +83,7 @@ Traffic allocation as of Tuesday, June 6th:
   </tr>
   <tr>
    <td rowspan="2">共有ストレージ</td>
-   <td>Unified - 5%    </td>
+   <td>統合 - 5%</td>
    <td rowspan="2">2023 年 3 月 13 日時点で 6% の安定版トラフィック</td>
   </tr>
   <tr>
@@ -111,7 +111,7 @@ Traffic allocation as of Tuesday, June 6th:
 
 [Private Aggregation API](/docs/privacy-sandbox/private-aggregation/) オリジントライアルは、4 月 17 日月曜日から Chrome 安定版統合実験トラフィックの 1% で利用可能になります。プライベート集計の <code>[sendHistogramReport()](/docs/privacy-sandbox/private-aggregation/#sendhistogramreport)</code> 関数は、[Protected Audience API](/docs/privacy-sandbox/fledge/) および共有ストレージワークレットで使用できます。
 
-The traffic allocation will look like the following starting on Monday, April 17:
+4 月 17 日月曜日から、トラフィックの割り当ては次のようになります。
 
 <table>
   <tr>
@@ -119,15 +119,15 @@ The traffic allocation will look like the following starting on Monday, April 17
 <strong>API</strong>
    </td>
    <td>
-<strong>Traffic allocation</strong>
+<strong>トラフィックの割り当て</strong>
    </td>
    <td>
-<strong>Status</strong>
+<strong>スターテス</strong>
    </td>
   </tr>
   <tr>
    <td rowspan="2">アトリビューション レポート</td>
-   <td>Unified - 5%    </td>
+   <td>統合 - 5%</td>
    <td rowspan="2">2023 年 3 月 13 日以降 6% の安定版トラフィック</td>
   </tr>
   <tr>
@@ -135,7 +135,7 @@ The traffic allocation will look like the following starting on Monday, April 17
   </tr>
   <tr>
    <td rowspan="3">Fenced Frames</td>
-   <td>Unified - 5%    </td>
+   <td>統合 - 5%</td>
    <td rowspan="3">2023 年 3 月 13 日以降 7% の安定版トラフィック</td>
   </tr>
   <tr>
@@ -154,7 +154,7 @@ The traffic allocation will look like the following starting on Monday, April 17
   </tr>
   <tr>
    <td>プライベート集計</td>
-   <td>Unified - 1%     </td>
+   <td>統合 - 1%</td>
    <td>2023 年 4 月 17 日以降 1% の安定版トラフィック</td>
   </tr>
   <tr>
@@ -177,7 +177,7 @@ The traffic allocation will look like the following starting on Monday, April 17
 
 #### 2023 年 3 月
 
-##### Timeline update
+##### タイムラインの更新
 
 当初、隔離実験を 2023 年 3 月 13 日月曜日に開始するとお伝えしていましたが、実験の準備に追加の時間が必要となったため、新しい実験は 2023 年 3 月 16 日木曜日に開始されることになりました。Protected Audience API が 4% から 5% に 1% 増加することについても、2023 年 3 月 16 日木曜日を予定しています。
 
@@ -205,7 +205,7 @@ The traffic allocation will look like the following starting on Monday, April 17
   </tr>
   <tr>
    <td>Protected Audience API + Fenced Frames</td>
-   <td>1%    </td>
+   <td>1%</td>
   </tr>
   <tr>
    <td>共有ストレージ（URL Selection）+ Fenced Frames</td>
@@ -213,14 +213,14 @@ The traffic allocation will look like the following starting on Monday, April 17
   </tr>
   <tr>
    <td>Topics</td>
-   <td>1%    </td>
+   <td>1%</td>
   </tr>
 </tbody>
 </table>
 
 3 月 16 日木曜日より、既存の統合実験から受信している 5% のトラフィックに加えて、上記の API の Chrome 安定版トラフィックの 1% が追加で受信され始めます。各実験には新しいユーザーが割り当てられます。
 
-##### Traffic allocation
+##### トラフィックの割り当て
 
 2 月 28 日火曜日時点での、統合オリジントライアルのトラフィックの割り当ては次のとおりです。
 
@@ -238,7 +238,7 @@ The traffic allocation will look like the following starting on Monday, April 17
   </tr>
   <tr>
    <td>Fenced Frames</td>
-   <td>5%    </td>
+   <td>5%</td>
   </tr>
   <tr>
    <td>Protected Audience API</td>
@@ -262,7 +262,7 @@ Protected Audience API の割り当てが戻され、新しい隔離実験が開
   <tr>
    <th>API</th>
    <th>新しいトラフィックの割り当て</th>
-   <th>Status    </th>
+   <th>スターテス    </th>
   </tr>
 </thead>
 <tbody>
@@ -276,7 +276,7 @@ Protected Audience API の割り当てが戻され、新しい隔離実験が開
   </tr>
   <tr>
    <td rowspan="3">Fenced Frames</td>
-   <td>Unified - 5%    </td>
+   <td>統合 - 5%</td>
    <td rowspan="3">2023 年 3 月 16 日以降 7% の安定版トラフィック</td>
   </tr>
   <tr>
@@ -303,7 +303,7 @@ Protected Audience API の割り当てが戻され、新しい隔離実験が開
   </tr>
   <tr>
    <td rowspan="2">Topics</td>
-   <td>Unified - 5%    </td>
+   <td>統合 - 5%</td>
    <td rowspan="2">2023 年 3 月 16 日以降 6% の安定版トラフィック</td>
   </tr>
   <tr>
@@ -459,8 +459,7 @@ Chrome の回帰調査の一環として、2023 年 1 月 26 日から、Protect
       <td>オリジントライアルの使用方法については、Protected Audience API ガイドをご覧ください。</td>
     </tr>
     <tr>
-      <td> <a href="/docs/privacy-sandbox/shared-storage/">Shared Storage</a>
-</td>
+      <td><a href="/docs/privacy-sandbox/shared-storage/">共有ストレージ</a></td>
       <td>現在、M105+ Canary、Dev、およびベータ版でのみ提供中。</td>
     </tr>
   </tbody>
