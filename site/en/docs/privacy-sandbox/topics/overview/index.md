@@ -34,12 +34,16 @@ In the past, third-party cookies and other mechanisms have been used to track us
 
 With the Topics API, the browser observes and records topics that appear to be of interest to the user, based on their browsing activity. This information is recorded on the user's device. The Topics API can then give API callers (such as ad tech platforms) access to a user's topics of interest, but without revealing additional information about the user's browsing activity.
 
-{% Aside 'key-term' %}
-To **observe** a topic, the caller must visit a page with that topic or any of the topic's direct ancestors. This expanded definition is new. Previously, for a caller to observe "Apparel", for example, the caller must have observed that a user visited a page with that topic. Now, if "Boots" is observed, then all ancestors of that topic (such as "Shopping" and "Apparel") are recorded as observed as well, because the full
-taxonomy of "Boots" is "/Shopping/Apparel/Footwear/Boots." 
-{% endAside %}
+### Observation of ancestor topics
 
-{: #epoch}
+Since Chrome 114, when a caller observes a topic for a user on a page, the browser also regards the caller as having observed all ancestors of the topic. 
+
+For example, if the browser records that a caller observes `Shopping/Apparel/Footwear/Boots` for a user, then the ancestors of that topic are also regarded as having been observed: `Shopping/Apparel/Footwear`, `Shopping/Apparel`, and `Shopping`.
+
+Previously, in order for a caller to be regarded by the browser as having observed (for example) `Shopping/Apparel`, that specific topic would have to have been returned by the API as the topic observed. This means that if `Shopping/Apparel` is observed for a caller for a user on one page, and `Shopping/Apparel/Footwear/Boots` on another, then the API will treat `Shopping/Apparel` as having been observed on both pages.
+
+
+### Epochs {: #epoch}
 
 Of course the Topics API must ensure that the topics of interest it provides are kept up to date. The browser infers topics for a user based on their browsing activity during a period of time known as an *epoch*, currently one week. The topic selected for each epoch is randomly selected from the user's top five topics for that time period. To further enhance privacy and ensure that all topics may be represented, there is a 5% chance the topic is randomly selected from all possible topics in a [taxonomy](https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md) of interests.
 
