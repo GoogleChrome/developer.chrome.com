@@ -42,7 +42,6 @@ For example, if the browser records that a caller observes `Shopping/Apparel/Foo
 
 Previously, in order for a caller to be regarded by the browser as having observed (for example) `Shopping/Apparel`, that specific topic would have to have been returned by the API as the topic observed. This means that if `Shopping/Apparel` is observed for a caller for a user on one page, and `Shopping/Apparel/Footwear/Boots` on another, then the API will treat `Shopping/Apparel` as having been observed on both pages.
 
-
 ### Epochs {: #epoch}
 
 Of course the Topics API must ensure that the topics of interest it provides are kept up to date. The browser infers topics for a user based on their browsing activity during a period of time known as an *epoch*, currently one week. The topic selected for each epoch is randomly selected from the user's top five topics for that time period. To further enhance privacy and ensure that all topics may be represented, there is a 5% chance the topic is randomly selected from all possible topics in a [taxonomy](https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md) of interests.
