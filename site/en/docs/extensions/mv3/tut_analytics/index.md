@@ -152,7 +152,7 @@ fetch(
           name: "button_clicked",
           params: {
             session_id: await this.getOrCreateSessionId(),
-            engagement_time_msec" DEFAULT_ENGAGEMENT_TIME_IN_MSEC,
+            engagement_time_msec: DEFAULT_ENGAGEMENT_TIME_IN_MSEC,
             id: "my-button",
           },
         },
@@ -184,7 +184,7 @@ window.addEventListener("load", () => {
           name: "page_view",
           params: {
             session_id: await this.getOrCreateSessionId(),
-            engagement_time_msec" DEFAULT_ENGAGEMENT_TIME_IN_MSEC,
+            engagement_time_msec: DEFAULT_ENGAGEMENT_TIME_IN_MSEC,
             page_title: document.title,
             page_location: document.location.href
           },
@@ -236,7 +236,7 @@ addEventListener("unhandledrejection", async (event) => {
           name: "extension_error",
           params: {
             session_id: await this.getOrCreateSessionId(),
-            engagement_time_msec" DEFAULT_ENGAGEMENT_TIME_IN_MSEC,
+            engagement_time_msec: DEFAULT_ENGAGEMENT_TIME_IN_MSEC,
             message: error.message,
             stack: error.stack,
           },
