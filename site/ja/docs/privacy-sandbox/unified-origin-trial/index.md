@@ -1,14 +1,10 @@
 ---
 layout: layouts/doc-post.njk
 title: 広告関連 API の統一オリジントライアル
-subhead: |2-
-
-  アトリビューション レポート、Protected Audience API、Topics、Fenced Frames、および共有ストレージの統一実験を実行します。
-description: |2-
-
-  アトリビューション レポート、Protected Audience API、Topics、Fenced Frames、および共有ストレージの統一実験を実行します。
-date: '2022-09-08'
-updated: '2023-06-05'
+subhead: アトリビューション レポート、Protected Audience API、Topics、Fenced Frames、および共有ストレージの統一実験を実行します。
+description: アトリビューション レポート、Protected Audience API、Topics、Fenced Frames、および共有ストレージの統一実験を実行します。
+date: 2022-09-08
+updated: 2023-06-05
 authors:
   - anusmitaray
   - kevinkiklee
