@@ -12,8 +12,8 @@ authors:
 
 If you're looking for Privacy Sandbox resources, check out the videos below. Some are recorded Privacy Sandbox office hours. You can find upcoming office hours on the [events page](/docs/privacy-sandbox/events/).
 
-{% Aside 'caution' %}
-Keep in mind that these videos can have some content that has become out of date. While the concepts discussed in these videos are still relelvant, some technical details and code will have changed.
+{% Aside %}
+Keep in mind that while the concepts discussed in these videos are still relelvant, some technical details and code will have changed.
 
 Refer to the linked documentation for the latest details.
 {% endAside %}
@@ -23,6 +23,7 @@ Refer to the linked documentation for the latest details.
 {% Columns %}
 {% Column %}
 <iframe width="280" src="https://www.youtube.com/embed/NKz5oT6kXI4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<br>Refer to the documentation for the latest details: <a href="/docs/privacy-sandbox/overview/">What is the Privacy Sandbox?</a>
 {% endColumn %}
 {% Column %}
 <strong>May 12, 2023  Run time: 23:43</strong>
@@ -34,6 +35,7 @@ Privacy Sandbox team members provide answers to common questions in this talk. A
 {% Columns %}
 {% Column %}
 <iframe width="280" src="https://www.youtube.com/embed/gm8O8-b2B8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<br>Refer to the documentation for the latest details: <a href="/docs/privacy-sandbox/overview/">What is the Privacy Sandbox?</a>
 {% endColumn %}
 {% Column %}
 <strong>May 10, 2023  Run time: 15:52</strong>
@@ -50,7 +52,7 @@ Chrome is on the path to phasing out third-party cookies. Updates to cookie func
 {% Column %}
 <iframe width="280" height="158" src="https://www.youtube.com/embed/VVgtGkRtVPU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <br>
-As some details may have changed, refer to the latest docs: <a href="/docs/privacy-sandbox/overview/">What is the Privacy sandbox?</a>
+Refer to the documentation for the latest details: <a href="/docs/privacy-sandbox/overview/">What is the Privacy Sandbox?</a>
 {% endColumn %}
 {% Column %}
 <strong>May 12, 2022. Run time: 16:16</strong>
@@ -66,7 +68,7 @@ At Google I/O 2022, Rowan Merewood from the Chrome team spoke about the Privacy 
 {% Column %}
 <iframe width="280" height="158" src="https://www.youtube.com/embed/7AQFDm7STmw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <br>
-As some details may have changed, refer to the latest docs:
+Refer to the documentation for the latest details:
 <a href="/docs/privacy-sandbox/topics/">Topics API</a>, 
 <a href="/docs/privacy-sandbox/fledge/">Protected Audience API</a>, 
 <a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a>
@@ -96,6 +98,7 @@ In this video, Jeremy Ney explains the new technologies within the Privacy Sandb
 {% Columns %}
 {% Column %}
 <iframe width="280" src="https://www.youtube.com/embed/mYVi3yL-GNI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<br>Refer to the documentation for the latest details: <a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a>
 {% endColumn %}
 {% Column %}
 <strong>May 10, 2023 Run time: 19:51</strong>
@@ -112,8 +115,8 @@ Learn more about the Privacy Sandbox effort, with a deep dive into Attribution R
 {% Column %}
 <iframe width="280" height="158" src="https://www.youtube.com/embed/UGA74CIcom8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <br>
-As some details may have changed, refer to the latest docs:
-<a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting API</a>
+Refer to the documentation for the latest details:
+<a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a>
 {% endColumn %}
 {% Column %}
 <strong> Aug 25, 2021. Run time: 6:15</strong> 
@@ -127,7 +130,7 @@ Sam Dutton of the Chrome team discusses the Attribution Reporting API at a high 
 {% Column %}
 <iframe src="https://drive.google.com/file/d/18RGEx_mrhDJuMsLUK1BZ0cK5FSZRAAqh/preview" width="280" height="210" allow="autoplay"></iframe>
 <br>
-As some details may have changed, refer to the latest docs:
+Refer to the documentation for the latest details:
 <a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a>
 <!-- [Open full-size video](https://drive.google.com/file/d/18RGEx_mrhDJuMsLUK1BZ0cK5FSZRAAqh/preview) -->
 
@@ -147,7 +150,7 @@ In the August 2022 Privacy Sandbox office hours, Maud Nalpas of the Chrome team 
 <!-- [Open full-size video](https://drive.google.com/file/d/1hmHoM3xyU4eLTJ1dM7_E8x-u6nZgim1O/preview) -->
 
 <br>
-As some details may have changed, refer to the latest docs:
+Refer to the documentation for the latest details:
 <a href="/docs/privacy-sandbox/attribution-reporting/system-overview/">Attribution Reporting: full system overview</a>
 
 {% endColumn %}
@@ -162,7 +165,9 @@ In part 2 of the August 2022 Privacy Sandbox office hours, Robert Kubis discusse
 {% Columns %}
 {% Column %}
 <iframe src="https://drive.google.com/file/d/1EVCw6MTz3JIdkno2lICN6q7gNrmZBYGf/preview" width="280" height="210" allow="autoplay"></iframe>
-
+<br>
+Refer to the documentation for the latest details:
+<a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a>
 <!-- [Open full-size video](https://drive.google.com/file/d/1EVCw6MTz3JIdkno2lICN6q7gNrmZBYGf/preview) -->
 
 {% endColumn %}
@@ -180,7 +185,9 @@ The Chrome team presents a high-level overview of the Attribution Reporting API 
 {% Column %}
     
 <iframe src="https://drive.google.com/file/d/1831_uKSlTwnSzYNjpp9pkDEniDA_Q9lF/preview?t=1m03s"  width="280" height="210" allow="autoplay"></iframe> 
-
+<br>
+Refer to the documentation for the latest details:
+<a href="/docs/privacy-sandbox/topics/">Topics API overview</a>
 <!-- [Open full-size video](https://drive.google.com/file/d/1831_uKSlTwnSzYNjpp9pkDEniDA_Q9lF/) -->
 
 {% endColumn %}
@@ -192,7 +199,9 @@ September 6, 2022 A lot of words describing this video.Description, date, link t
 {% Columns %}
 {% Column %}
 <iframe src="https://drive.google.com/file/d/1dmpMKLJcGNe56M6ECRdRYhuITTv9YUDV/preview"  width="280" height="210" allow="autoplay"></iframe>
-
+<br>
+Refer to the documentation for the latest details:
+<a href="/docs/privacy-sandbox/topics/">Topics API overview</a>
 <!-- [Open full-size video](https://drive.google.com/file/d/1dmpMKLJcGNe56M6ECRdRYhuITTv9YUDV/preview) -->
 
 {% endColumn %}
