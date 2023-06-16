@@ -271,4 +271,4 @@ form**](https://goo.gle/privacy-sandbox-feedback).
 
 ## Proposals
 
-Check out the status of Privacy Sandbox proposals in [API status and feature releases](/docs/privacy-sandbox/status/).
+Feedback and discussion options for individual Privacy Sandbox proposals can be found in the [API status and feature releases](/docs/privacy-sandbox/status/).
