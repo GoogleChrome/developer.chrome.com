@@ -9,7 +9,7 @@ description: "Step-by-step instructions on how to track usage of your Extension 
 
 ---
 
-This tutorial demonstrates how to track the usage of your extension using Google Analytics. You can find a [working Google Analytics 4 sample on Github][1], where [google-analytics.js][2] includes all the Google Analytics related code.
+This tutorial demonstrates how to track the usage of your extension using Google Analytics. You can find a [working Google Analytics 4 sample on Github][1], where [`google-analytics.js`][2] includes all the Google Analytics related code.
 
 ## Requirements {: #toc-requirements }
 
