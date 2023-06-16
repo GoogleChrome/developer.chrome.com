@@ -27,7 +27,7 @@ Using the Measurement Protocol means that some information, such as geolocation,
 
 ### Set up API credentials {: #setup-credentials }
 
-The first step is to obtain an `api_secret` and `measurement_id`. Follow the [Measurement Protocol documentation][6] for how to get these for your Analytics Account.
+The first step is to obtain an `api_secret` and `measurement_id`. Follow the [Measurement Protocol documentation][16] for how to get these for your Analytics Account.
 
 ### Generate a `client_id` {: #generate-client-id }
 
@@ -277,3 +277,4 @@ Google Analytics provides two helpful features for debugging analytics events in
 [13]: https://developer.mozilla.org/docs/Web/API/Window/load_event
 [14]: https://developer.mozilla.org/docs/Web/API/Window/unhandledrejection_event
 [15]: https://developers.google.com/analytics/devguides/collection/protocol/v1/validating-hits
+[16]: https://developers.google.com/analytics/devguides/collection/protocol/ga4/sending-events?client_type=gtag
