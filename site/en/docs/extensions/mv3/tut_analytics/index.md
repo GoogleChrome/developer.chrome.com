@@ -74,7 +74,7 @@ fetch(
   {
     method: 'POST',
     body: JSON.stringify({
-      client_id: getOrCreateClientId(),
+      client_id: await getOrCreateClientId(),
       events: [
         {
           name: 'button_clicked',
@@ -146,7 +146,7 @@ fetch(
   {
     method: "POST",
     body: JSON.stringify({
-      client_id: getOrCreateClientId(),
+      client_id: await getOrCreateClientId(),
       events: [
         {
           name: "button_clicked",
@@ -178,7 +178,7 @@ window.addEventListener("load", () => {
   {
     method: "POST",
     body: JSON.stringify({
-      client_id: getOrCreateClientId(),
+      client_id: await getOrCreateClientId(),
       events: [
         {
           name: "page_view",
