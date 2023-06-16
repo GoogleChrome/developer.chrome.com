@@ -40,7 +40,7 @@ Traffic allocation as of Tuesday, June 6th:
 <strong>Traffic allocation</strong>
    </td>
    <td>
-<strong>Status</strong>
+<strong>状況</strong>
    </td>
   </tr>
   <tr>
@@ -275,7 +275,7 @@ Protected Audience API の割り当てが戻され、新しい隔離実験が開
    <td>隔離 - 1% - ARA のみ</td>
   </tr>
   <tr>
-   <td rowspan="3">Fenced Frames    </td>
+   <td rowspan="3">Fenced Frames</td>
    <td>Unified - 5%    </td>
    <td rowspan="3">2023 年 3 月 16 日以降 7% の安定版トラフィック</td>
   </tr>
@@ -378,8 +378,7 @@ Chrome の回帰調査の一環として、2023 年 1 月 26 日から、Protect
    <td>安定版で提供中。11 月 9 日から 5% に増加。</td>
   </tr>
   <tr>
-   <td>
-<a href="/docs/privacy-sandbox/fenced-frame/">Fenced Frames</a>    </td>
+   <td><a href="/docs/privacy-sandbox/fenced-frame/">Fenced Frames</a></td>
    <td>安定版で提供中。11 月 9 日から 5% に増加。</td>
   </tr>
   <tr>
@@ -397,7 +396,7 @@ Chrome の回帰調査の一環として、2023 年 1 月 26 日から、Protect
     <thead>
   <tr>
    <th>API</th>
-   <th>Notes</th>
+   <th>備考</th>
   </tr>
 </thead>
 <tbody>
@@ -414,8 +413,7 @@ Chrome の回帰調査の一環として、2023 年 1 月 26 日から、Protect
    <td>安定版で提供中。11 月 9 日から 5% に増加。</td>
   </tr>
   <tr>
-   <td>
-<a href="/docs/privacy-sandbox/fenced-frame/">Fenced Frames</a>    </td>
+   <td><a href="/docs/privacy-sandbox/fenced-frame/">Fenced Frames</a></td>
    <td>安定版で提供中。11 月 9 日から 5% に増加。</td>
   </tr>
   <tr>
@@ -457,8 +455,7 @@ Chrome の回帰調査の一環として、2023 年 1 月 26 日から、Protect
       <td> <a href="/docs/privacy-sandbox/topics-experiment/">オリジントライアル開発者ガイド</a>。</td>
     </tr>
     <tr>
-      <td> <a href="/docs/privacy-sandbox/fenced-frame/">Fenced Frames</a>
-</td>
+      <td><a href="/docs/privacy-sandbox/fenced-frame/">Fenced Frames</a></td>
       <td>オリジントライアルの使用方法については、Protected Audience API ガイドをご覧ください。</td>
     </tr>
     <tr>
@@ -504,8 +501,7 @@ Chrome の回帰調査の一環として、2023 年 1 月 26 日から、Protect
       <td> <a href="/docs/privacy-sandbox/topics-experiment/">オリジントライアル開発者ガイド</a>。<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1321140">ブラウザの安定性に影響を与えるバグ</a>があったため、オリジントライアルで一時的に Topics が無効にされていました。</td>
     </tr>
     <tr>
-      <td> <a href="/docs/privacy-sandbox/fenced-frame/">Fenced Frames</a>
-</td>
+      <td><a href="/docs/privacy-sandbox/fenced-frame/">Fenced Frames</a></td>
       <td>Fenced Frames がオリジントライアルに追加されました。実験の使用方法については、Protected Audience API ガイドをご覧ください。</td>
     </tr>
   </tbody>
@@ -657,7 +653,7 @@ if (window?.sharedStorage?.selectURL instanceof Function) {
 
 権限ポリシーを使用すると、サイトはブラウザに指示を与える小さなコードスニペットをページに追加します。ページが読み込まれると、ブラウザは権限ポリシーの指示を読み取り、権限ポリシーに記載されている機能（または API）を許可またはブロックします。サイトが特定の地域で API を制限する場合、開発者はその地域から要求されたすべてのページに対してポリシーを設定できます。
 
-{% Aside 'warning' %} Users may choose to visit an origin from a region that's different from where they are. In other words, a user in the United States may be able to visit `uk.example.com`. Those users would see features and functions for the United States site that were blocked for the United Kingdom site. {% endAside %}
+{% Aside 'warning' %} ユーザーは、現在地とは異なる地域からオリジンにアクセスすることを選択する場合があります。つまり、米国のユーザーが `uk.example.com` にアクセスできる可能性があるということです。これらのユーザーには、英国のサイトではブロックされていた米国のサイトの機能が表示されます。 {% endAside %}
 
 ## トークンを更新する
 
