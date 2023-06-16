@@ -17,7 +17,7 @@ authors:
 ## 概要
 
 1. コード内の[ファーストパーティ Cookie とサードパーティ Cookie を識別](#identify)します。 `SameSite=None` を含む Cookie は更新が必要です。
-2. 完全に包含された埋め込みコンテキストでサードパーティ Cookie を使用している場合は、[パーティション化された Cookie ](#partitioned-cookies)を調べます。
+2. 完全に包含された埋め込みコンテキストでサードパーティ Cookie を使用している場合は、[パーティション化された Cookie](#partitioned-cookies)を調べます。
 3. 1 つのまとまったグループを形成する複数のサイトにわたってサードパーティ Cookie が必要な場合は、 [First-Party Sets](#first-party-sets) を調べます。
 4. これらのオプションのいずれも該当しない場合は、クロスサイトトラッキングに依存しない個別のユースケースについて、[他のプライバシー サンドボックス API を調べます](#other-apis)。
 
