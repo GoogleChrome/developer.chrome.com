@@ -15,7 +15,7 @@ authors:
 
 ## Implementation status {: #status}
 
-This document outlines a [new proposal for bounce tracking mitigations](https://github.com/wanderview/bounce-tracking-mitigations).
+This document outlines a [new proposal for bounce tracking mitigations](https://github.com/privacycg/nav-tracking-mitigations/blob/main/bounce-tracking-explainer.md).
 
 {% Partial 'privacy-sandbox/timeline/bounce-tracking.njk' %}
 
