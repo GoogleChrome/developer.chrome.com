@@ -90,7 +90,7 @@ fetch(
 
 This sends a `button_clicked` event which will appear in your [Google Analytics events report][10]. If you want to see your events in the [Google Analytics Realtime Report][11], you need to provide two additional parameters: `session_id` and `engagement_time_msec`.
 
-### Use recommended parameters `session_id` and `engagement_time_msec` {: # set-session-id }
+### Use recommended parameters `session_id` and `engagement_time_msec` {: #set-session-id }
 
 Both `session_id` and `engagement_time_msec` are [recommended parameters when using the Google Analytics Measurement Protocol][12] as they are required for user activity to display in standard reports like Realtime.
 
