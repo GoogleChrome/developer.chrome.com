@@ -1,13 +1,9 @@
 ---
 layout: layouts/doc-post.njk
 title: プライバシー サンドボックスに登録する
-subhead: |2-
-
-  Chrome と Android におけるプライバシーサンドボックスの広告関連 API の新しいプロセス。
-description: |2-
-
-  アイデンティティの検証と、プライバシーサンドボックスの広告関連 API について構成情報の詳細を共有してください。Chrome と Android で共通です。
-date: '2023-04-13'
+subhead: Chrome と Android におけるプライバシーサンドボックスの広告関連 API の新しいプロセス。
+description: アイデンティティの検証と、プライバシーサンドボックスの広告関連 API について構成情報の詳細を共有してください。Chrome と Android で共通です。
+date: 2023-04-13
 authors:
   - georgiafranklin
 ---
