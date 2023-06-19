@@ -3,16 +3,15 @@ layout: "layouts/doc-post.njk"
 title: "Manifest - Requirements"
 seoTitle: "Chrome Extensions Manifest: requirements"
 date: 2013-05-12
-updated: 2022-11-15
+updated: 2023-06-19
 description: Reference documentation for the requirements property of manifest.json.
 ---
 
 Technologies required by the extension. Hosting sites such as the Chrome Web Store may use this list
-to dissuade users from installing extensions that will not work on their computer. Supported
-requirements currently include "3D" and "plugins"; additional requirements checks may be added in
+to dissuade users from installing extensions that will not work on their computer. Additional requirements checks may be added in
 the future.
 
-The "3D" requirement denotes GPU hardware acceleration. The "webgl" requirement refers to the [WebGL
+The "3D" requirement denotes GPU hardware acceleration, and takes either "webgl" or "css3d" as valid values. The "webgl" requirement refers to the [WebGL
 API][1]. For more information on Chrome 3D graphics support, see the help article on [WebGL and 3D
 graphics][2]. You can list the 3D-related features your extension requires, as demonstrated in the
 following example:
@@ -25,22 +24,10 @@ following example:
 }
 ```
 
-NPAPI Plugin support for extension has been [discontinued][3]. As part of this, the **"plugins"**
-requirement described below has been deprecated.
+NPAPI Plugin support for extension has been [discontinued][3]as of Chrome version 45. As part of this, the **"plugins"**
+requirement has been deprecated, and can no longer be used in a manifest file.
 
-The "plugins" requirement indicates if an extension requires NPAPI to run. This requirement is
-enabled by default when the manifest includes the ["plugins" field][4]. For extensions that
-still work when plugins aren't available, you can disable this requirement by setting NPAPI to
-false. You can also enable this requirement manually, by setting NPAPI to true, as shown in this
-example:
 
-```json
-"requirements": {
-  "plugins": {
-    "npapi": true
-  }
-}
-```
 
 [1]: https://www.khronos.org/webgl/
 [2]: https://support.google.com/chrome/answer/1220892
