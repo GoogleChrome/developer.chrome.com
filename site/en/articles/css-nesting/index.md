@@ -349,7 +349,7 @@ selectors. Consider the following example:
 ```css
 .demo {
   .lg {
-    .triange,
+    .triangle,
     .circle {
       opacity: .25;
       filter: blur(25px);
