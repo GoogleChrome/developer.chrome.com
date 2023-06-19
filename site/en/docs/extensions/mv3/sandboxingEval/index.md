@@ -84,18 +84,21 @@ chrome.runtime.onInstalled.addListener(() => {
 {% Label %}extension-page.js:{% endLabel %}
 
 ```js
-document.getElementById('sendMessage').addEventListener('click', function () {
+let counter = 0;
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('reset').addEventListener('click', function () {
+    counter = 0;
+    document.querySelector('#result').innerHTML = '';
+  });
+
+  document.getElementById('sendMessage').addEventListener('click', function () {
+    counter++;
     let message = {
       command: 'render',
-      templateName: 'sample-template',
+      templateName: 'sample-template-' + counter,
+      context: { counter: counter }
     };
-  document.getElementById('sandboxFrame').contentWindow.postMessage(message, '*');
-});
-
-  // on result from sandboxed frame:
-  window.addEventListener('message', function () {
-    document.querySelector('#result').innerHTML =
-      event.data.result;
+    document.getElementById('theFrame').contentWindow.postMessage(message, '*');
   });
 ```
 
@@ -109,35 +112,45 @@ template in the way Handlebars suggests:
 {% Label %}extension-page.html:{% endLabel %}
 
 ```html
+<!DOCTYPE html>
 <html>
   <head>
     <script src="mainpage.js"></script>
+    <link href="styles/main.css" rel="stylesheet" />
   </head>
   <body>
+    <div id="buttons">
       <button id="sendMessage">Click me</button>
-      <div id="result"></div>
-      <iframe id="sandboxFrame" src="sandbox.html" style="display: none"></iframe>
+      <button id="reset">Reset counter</button>
+    </div>
+
+    <div id="result"></div>
+
+    <iframe id="theFrame" src="sandbox.html" style="display: none"></iframe>
   </body>
 </html>
 ```
 {% Label %}sandbox-page.html:{% endLabel %}
 
 ```html
-    <script src="handlebars-1.0.0.beta.6.js"></script>
-  <body>
-    <script id="sample-template" type="text/x-handlebars-template">
+   <script id="sample-template-1" type="text/x-handlebars-template">
       <div class='entry'>
         <h1>Hello</h1>
         <p>This is a Handlebar template compiled inside a hidden sandboxed
           iframe.</p>
+        <p>The counter parameter from postMessage() (outer frame) is:
+          {{counter}}</p>
       </div>
     </script>
-    <script>
-      Handlebars.compile(document.getElementByID("sandboxFrame").innerHTML;);
-      // Set up message event handler:
-      window.addEventListener('message', function (event) {
-         event.source.postMessage({ result: result }, event.origin);
-      });
+
+    <script id="sample-template-2" type="text/x-handlebars-template">
+      <div class='entry'>
+        <h1>Welcome back</h1>
+        <p>This is another Handlebar template compiled inside a hidden sandboxed
+          iframe.</p>
+        <p>The counter parameter from postMessage() (outer frame) is:
+          {{counter}}</p>
+      </div>
     </script>
 ```
 
@@ -153,23 +166,46 @@ way?), and the `context` will be passed into the template directly for rendering
 will be passed back to the Event Page so the extension can do something useful with it later on:
 
 ```html
-<script>
-  window.addEventListener('message', function(event) {
-    var command = event.data.command;
-    var name = event.data.name || 'hello';
-    switch(command) {
-      case 'render':
-        event.source.postMessage({
-          name: name,
-          html: templates[name](event.data.context)
-        }, event.origin);
-        break;
+ <script>
+      const templatesElements = document.querySelectorAll(
+        "script[type='text/x-handlebars-template']"
+      );
+      let templates = {},
+        source,
+        name;
 
-      // case 'somethingElse':
-      //   ...
-    }
-  });
-</script>
+      // precompile all templates in this page
+      for (let i = 0; i < templatesElements.length; i++) {
+        source = templatesElements[i].innerHTML;
+        name = templatesElements[i].id;
+        templates[name] = Handlebars.compile(source);
+      }
+
+      // Set up message event handler:
+      window.addEventListener('message', function (event) {
+        const command = event.data.command;
+        let template = templates[event.data.templateName],
+          result = 'invalid request';
+
+        // if we don't know the templateName requested, return an error message
+        if (!template) {
+          result = 'Unknown template: ' + event.data.templateName;
+        } else {
+          switch (command) {
+            case 'render':
+              result = template(event.data.context);
+              break;
+            // you could even do dynamic compilation, by accepting a command
+            // to compile a new template instead of using static ones, for example:
+            // case 'new':
+            //   template = Handlebars.compile(event.data.templateSource);
+            //   result = template(event.data.context);
+            //   break;
+          }
+        }
+        event.source.postMessage({ result: result }, event.origin);
+      });
+    </script>
 ```
 
 Back in the extension page, we'll receive this message, and do something interesting with the `html`
@@ -192,7 +228,7 @@ time.
 [3]: https://angularjs.org/
 [4]: https://crbug.com/107538
 [5]: https://www.whatwg.org/specs/web-apps/current-work/multipage/origin-0.html#sandboxed-origin-browsing-context-flag
-[6]: /docs/extensions/mv3/samples#sandboxed-frame
+[6]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/sandbox/sandbox
 [7]: https://handlebarsjs.com
 [8]: /docs/extensions/examples/howto/sandbox/sandbox.html
 [9]: /docs/extensions/mv3/event_pages
