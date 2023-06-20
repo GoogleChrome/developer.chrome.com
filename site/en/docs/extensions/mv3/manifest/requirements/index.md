@@ -24,7 +24,7 @@ following example:
 }
 ```
 
-NPAPI Plugin support for extension has been [discontinued][3]as of Chrome version 45. As part of this, the **"plugins"**
+NPAPI Plugin support for extensions has been [discontinued][3] as of Chrome version 45. As part of this, the **"plugins"**
 requirement has been deprecated, and can no longer be used in a manifest file.
 
 
