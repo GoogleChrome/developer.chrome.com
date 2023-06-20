@@ -128,7 +128,7 @@ scripting attacks. If the extension only loads resources from itself register th
 }
 ```
 
-If the extension needs to make use of web assembly, or increase the restrictions on [sandboxed pages](/docs/extensions/mv3/sandboxingEval/), they can be added:
+If the extension needs to use web assembly, or increase the restrictions on [sandboxed pages](/docs/extensions/mv3/sandboxingEval/), they can be added:
 
 ```json
 {
