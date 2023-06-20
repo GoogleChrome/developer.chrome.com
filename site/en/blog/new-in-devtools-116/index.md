@@ -60,6 +60,24 @@ To configure linear timings, click the linear picker button. To add a control po
 
 Chromium issue: [1421241](https://crbug.com/1421241).
 
+## Storage buckets support and metadata view {: #storage }
+
+The **Application** > **Storage** section gets [storage buckets](/blog/storage-buckets/) support. Storage buckets are independent from each other, so you can specify eviction prioritization for slices of data and make sure the most valuable data doesn't get deleted. Each storage bucket can store data associated with established storage APIs such as [IndexedDB](/docs/devtools/storage/indexeddb/) and [CacheStorage](/docs/devtools/storage/cache/).
+
+Check out [this fiddle](https://jsfiddle.net/5tmpfuzv/) to test the feature. Open DevTools, navigate to **Application** > **Storage** > **Indexed DB**, and run the code. DevTools now shows you the buckets and their contents. Select a bucket to view its metadata.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/oHC4ZiwP7korWtj7uzVB.png", alt="Viewing the metadata of a bucket.", width="800", height="675" %}
+
+The unified metadata view is now also available for local, session, and cache storage sections.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/v62NRakc7Rg3g0PGqmCH.png", alt="The new unified metadata view.", width="800", height="462" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/18653a84ceedd0db16ad1872c14f412dc7013eab #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/9215bd9a9bdff053660d7ebdd5a8a5bdcb8157e5 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/ca51bbf258c6a314b6435849135b0e020ac35041 #}
+
+Chromium issues: [1448011](https://crbug.com/1448011), [1406017](https://crbug.com/1406017).
+
 ## Miscellaneous highlights {: #misc }
 
 These are some noteworthy fixes and improvements in this release:
