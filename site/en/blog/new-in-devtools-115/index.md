@@ -135,7 +135,7 @@ Additionally, the checkboxes in **Ignore List** got clearer text.
 
 Chromium issues: [1440958](https://crbug.com/1440958), [1364501](https://crbug.com/1364501).
 
-## Network > Response improvements {: #network }
+## Network > Response pretty-printing by default {: #network }
 
 The **Network** > **Response** pane now pretty-prints minified response bodies by default, similar to [the **Sources** panel](/blog/new-in-devtools-110/#pretty-print).
 

@@ -78,6 +78,34 @@ The unified metadata view is now also available for local, session, and cache st
 
 Chromium issues: [1448011](https://crbug.com/1448011), [1406017](https://crbug.com/1406017).
 
+## Lighthouse 10.3.0 {: #lighthouse }
+
+The **Lighthouse** panel now runs Lighthouse 10.3.0. Most notably, this version adds four new audits that capture various accessibility issues with [table headers](https://dequeuniversity.com/rules/axe/4.7/td-headers-attr) and [captions](https://dequeuniversity.com/rules/axe/4.7/table-fake-caption), [input button names](https://dequeuniversity.com/rules/axe/4.7/input-button-name), and [language mismatches](https://dequeuniversity.com/rules/axe/4.7/html-xml-lang-mismatch). For example:
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/tldz79gkMucpYRy9zjVA.png", alt="A passed table headers check.", width="800", height="543" %}
+
+See also the [full list of changes](https://github.com/GoogleChrome/lighthouse/releases/tag/v10.3.0). To learn the basics of using the **Lighthouse** panel in DevTools, see [Lighthouse: Optimize website speed](/docs/devtools/lighthouse/).
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/cd66c0ca786bfff71d9ebcfc258a02edce71cb25 #}
+
+Chromium issue: [772558](https://crbug.com/772558).
+
+## Accessibility improvements {: #accessibility }
+
+DevTools now supports more shortcuts and fixes issues with screen reader announcements:
+
+- You can now open context menu with a keyboard shortcut, for example, <kbd>Shift</kbd>+<kbd>F10</kbd> on Windows and many Linux distributions. For Mac shortcuts, see [Alternate pointer actions](https://support.apple.com/en-gb/guide/mac-help/unac899/13.0/mac/13.0#:~:text=Alternate%20pointer%20actions).
+- Screen reader applications:
+  - Won't unnecessarily announce checkbox labels twice.
+  - Will announce column header names for sortable columns when you press the "Read column header" shortcut.
+
+The DevTools team expresses gratitude to [Yanling Wang](https://chromium.googlesource.com/devtools/devtools-frontend/+/a923c0870a632c4396c2fa11be0b4cd8503a7fc6) and [Elorm Coch](https://chromium.googlesource.com/devtools/devtools-frontend/+/34ad334ed81c46d18844bb13397f007e25bb7d2d) for landing these improvements.
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/a923c0870a632c4396c2fa11be0b4cd8503a7fc6 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/34ad334ed81c46d18844bb13397f007e25bb7d2d #}
+
+Chromium issues: [1446482](https://crbug.com/1446482), [1414952](https://crbug.com/1414952).
+
 ## Miscellaneous highlights {: #misc }
 
 These are some noteworthy fixes and improvements in this release:
