@@ -47,7 +47,7 @@ Normally, Chrome terminates a service worker after one of the following conditio
 -   When a single request, such as an event or API call, takes longer than 5 minutes to process.
 -   When a [fetch()](https://developer.mozilla.org/docs/Web/API/fetch) response takes more than 30 seconds to arrive.
 
-Events and calls to extension APIs reset these timers, and if the service worker has gone dormant, they will revive them. Nevertheless, you should design your service worker to be resilient against unexpected termination.
+Events and calls to extension APIs reset these timers, and if the service worker has gone dormant, an incoming event will revive them. Nevertheless, you should design your service worker to be resilient against unexpected termination.
 
 You should not keep your service worker alive indefinitely, though you can. (We don't consider this a good programming practice.) You should test your extensions to ensure that they're not doing this unintentionally. Though it's difficult to catch in a code review, we suggest you guard against it as best you can.
 
