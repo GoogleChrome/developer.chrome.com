@@ -252,7 +252,7 @@ already been injected.
 
 {% endAside %}
 
-The following example extensions show how to use scripting. To try this API,
+To try the `chrome.scripting` API,
 install the [scripting sample](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/scripting) from the [chrome-extension-samples](https://github.com/GoogleChrome/chrome-extensions-samples)
 repository.
 
