@@ -53,6 +53,27 @@ Only sites that include code that calls the Topics API are included in the brows
 
 In addition, a caller can only receive topics that their code has "seen." So if another caller's code registered a topic, say `/Autos & Vehicles/Motor Vehicles (By Type)/Hatchbacks`, for a user's browser and your code did not cause that topic to be registered for that user's browser, you will not be able to learn of that topic of interest for that user's browser when you call the API from your embedded code.
 
+{: #caller}
+{% Aside 'key-term' %}
+
+A Topics API _caller_ is the entity that observes and requests topics with
+`document.browsingTopics()`. Typically, this caller is a third party (such as an
+ad tech) who uses the topics returned by this method to help select relevant
+ads.
+
+The browser determines the caller from the origin of the request. If Site A
+requests topics from their code in an iframe hosted on Site B, the browser determines the caller is Site A. If you're a third party, make sure you
+call the Topics API from an iframe you own.
+
+To retrieve one or more topics with `document.browsingTopics()`, an API
+caller must observe and request topics from the same origin.
+
+A caller can access topics via the JavaScript API from [within an iframe](/docs/privacy-sandbox/topics/integration-guide/#implement-with-javascript-and-iframes) using `document.browsingTopics()`.
+
+A caller can also access topics from the [`Sec-Browsing-Topics` header](docs/privacy-sandbox/topics/integration-guide/#implement-with-http-headers) of a `fetch()` request, or of an iframe request. XHR requests are also enabled during origin trials (only), but this method is not recommended.
+
+{% endAside %}
+
 ## The classifier model {: #classifier-model}
 
 Topics are manually curated for 10,000 top domains, and this curation is used to train the classifier. This list can be found in `override_list.pb.gz`, which is available at `chrome://topics-internals/` under the current model in the **Classifier** tab. The domain-to-topics associations in the list are used by the API in lieu of the output of the model itself.
@@ -229,6 +250,8 @@ Learn more here:
 
 ## Next steps
 
-If you're an ad tech developer, [experiment and participate](/docs/privacy-sandbox/topics-experiment/) with the Topics API. Read the [developer guide](/docs/privacy-sandbox/topics/) for more in-depth resources.
+- If you're an ad tech developer, [experiment and participate](/docs/privacy-sandbox/topics-experiment/) with the Topics API. 
+- Read the [developer guide](/docs/privacy-sandbox/topics/) for more in-depth resources.
+- Check out the [Topics API integration guide](/docs/privacy-sandbox/topics/integration-guide/) for details on specific ad tech use cases.
 
 {% Partial 'privacy-sandbox/topics-feedback.njk' %}

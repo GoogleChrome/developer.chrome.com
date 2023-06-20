@@ -34,7 +34,7 @@ In the past, third-party cookies and other mechanisms have been used to track us
 
 With the Topics API, the browser observes and records topics that appear to be of interest to the user, based on their browsing activity. This information is recorded on the user's device. The Topics API can then give API callers (such as ad tech platforms) access to a user's topics of interest, but without revealing additional information about the user's browsing activity.
 
-### Observation of ancestor topics
+### Observation of ancestor topics {: #ancestor}
 
 Since Chrome 114, when a caller observes a topic for a user on a page, the browser also regards the caller as having observed all ancestors of the topic. 
 
