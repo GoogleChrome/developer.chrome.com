@@ -90,11 +90,11 @@ See also the [full list of changes](https://github.com/GoogleChrome/lighthouse/r
 
 Chromium issue: [772558](https://crbug.com/772558).
 
-## Accessibility improvements {: #accessibility }
+## Accessibility: Keyboard commands and improved screen reading {: #accessibility }
 
 DevTools now supports more shortcuts and fixes issues with screen reader announcements:
 
-- You can now open context menu with a keyboard shortcut, for example, <kbd>Shift</kbd>+<kbd>F10</kbd> on Windows and many Linux distributions. For Mac shortcuts, see [Alternate pointer actions](https://support.apple.com/en-gb/guide/mac-help/unac899/13.0/mac/13.0#:~:text=Alternate%20pointer%20actions).
+- You can now open the context menu with a keyboard shortcut, for example, <kbd>Shift</kbd>+<kbd>F10</kbd> on Windows and many Linux distributions. For Mac shortcuts, see [Alternate pointer actions](https://support.apple.com/en-gb/guide/mac-help/unac899/13.0/mac/13.0#:~:text=Alternate%20pointer%20actions).
 - Screen reader applications:
   - Won't unnecessarily announce checkbox labels twice.
   - Will announce column header names for sortable columns when you press the "Read column header" shortcut.
