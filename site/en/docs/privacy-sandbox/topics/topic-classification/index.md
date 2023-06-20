@@ -51,9 +51,8 @@ Only sites that include code that calls the Topics API are included in the brows
 
 {: #caller}
 
-In addition, a caller can only receive topics that their code has "seen." So if another caller's code registered a topic, say `/Autos & Vehicles/Motor Vehicles (By Type)/Hatchbacks`, for a user's browser and your code did not cause that topic to be registered for that user's browser, you will not be able to learn of that topic of interest for that user's browser when you call the API from your embedded code.
+In addition, a caller can only receive topics that their code has "seen." So if another caller's code registered a topic, say `/Autos & Vehicles/Motor Vehicles (By Type)/Hatchbacks`, for a user's browser and your code did not cause that topic to be registered for that user's browser, you will not be able to learn of that topic of interest for that user's browser when you call the API from your embedded code. Note that because the API now includes ancestors as having been observed, the example above, `/Autos & Vehicles/Motor Vehicles (By Type)/Hatchbacks`, would also cause `Autos & Vehicles` and `Motor Vehicles` to be observed.
 
-{: #caller}
 {% Aside 'key-term' %}
 
 A Topics API _caller_ is the entity that observes and requests topics with

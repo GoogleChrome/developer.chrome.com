@@ -22,6 +22,16 @@ For a non-technical introduction, see the [Topics overview on privacysandbox.com
 
 {% endAside %}
 
+## Topics ancestors, new taxonomy
+
+**June 15, 2023**
+
+Chrome has updated the definition of "observation" to include all ancestors of a given topic. Now, if a caller observes "/Shopping/Apparel/Footwear/Boots", they will observe Boots, but also Shopping, Apparel, and Footwear. Previously, in order for a caller to observe "Shopping," "Apparel," or "Footwear" a caller must have observed a user visit a page with that topic.
+
+The Topics taxonomy has been [expanded and improved](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v2.md). We've added 280 commercially focused categories, like "Athletic Apparel", "Mattresses", and "Luxury Travel," while removing 160 categories including topics such as "Civil Engineering" and "Equestrian". Chrome will begin using the new taxonomy later this year, but you can take a look and provide feedback.
+
+For more information on these changes and upcoming changes, refer to [Enhancements to the Topics API](/blog/topics-enhancements/).
+
 ## Chrome’s commitment to Topics
 
 **January 24, 2023**
