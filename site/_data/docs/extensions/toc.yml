@@ -72,6 +72,7 @@
     - url: /docs/extensions/mv3/richNotifications
     - url: /docs/extensions/mv3/nativeMessaging
     - url: /docs/extensions/mv3/screen_capture
+    - url: /docs/extensions/mv3/geolocation
 - title: i18n.docs.extensions.quality
   sections:
     - url: /docs/extensions/mv3/user_privacy
