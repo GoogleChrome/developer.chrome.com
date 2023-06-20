@@ -4,7 +4,7 @@ title: "What's New in WebGPU (Chrome&nbsp;115)"
 description: "Supported WGSL language extensions, experimental support for Direct3D 11, and more."
 hero: "image/vvhSqZboQoZZN9wBvoXq72wzGAf1/IOiG6dNWepqrGWtntbBx.png"
 alt: "What's new in WebGPU logo"
-date: 2023-06-21
+date: 2023-06-20
 #updated: YYYY-MM-DD
 authors:
   - beaufortfrancois
