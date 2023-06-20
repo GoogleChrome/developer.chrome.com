@@ -108,7 +108,7 @@ navigator.serviceWorker.ready.then(async (swReg) => {
 
 {% Aside %}
 Many examples in this article use async functions. If you aren't familiar with them, [check
-out the guide](https://web.dev/javascript-async-functions/).
+out the guide](https://web.dev/async-functions/).
 {% endAside %}
 
 `backgroundFetch.fetch` takes three arguments:
