@@ -11,7 +11,7 @@ Technologies required by the extension. Hosting sites such as the Chrome Web Sto
 to dissuade users from installing extensions that will not work on their computer. Additional requirements checks may be added in
 the future.
 
-The "3D" requirement denotes GPU hardware acceleration, and takes either "webgl" or "css3d" as valid values. The "webgl" requirement refers to the [WebGL
+The `"3D"` requirement denotes GPU hardware acceleration and takes either `"webgl"` or `"css3d"` as valid values. The `"webgl"` requirement refers to the [WebGL
 API][1]. For more information on Chrome 3D graphics support, see the help article on [WebGL and 3D
 graphics][2]. You can list the 3D-related features your extension requires, as demonstrated in the
 following example:
