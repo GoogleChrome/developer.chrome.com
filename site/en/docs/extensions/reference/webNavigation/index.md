@@ -19,10 +19,6 @@ in the [extension manifest][1]. For example:
 }
 ```
 
-## Examples
-
-You can find simple examples of using the tabs module in the [examples/api/webNavigation][2]
-directory. For other examples and for help in viewing the source code, see [Samples][3].
 
 ## Event order
 
