@@ -53,7 +53,7 @@ Priorities > 0 are shown for increasing duration and more high priority notifica
 displayed in the system tray.
 
 {% Aside %}
-**Platform difference:** The priority setting does not affect the order of notifications in Chrome version 59+ on macOS.
+**Platform difference:** The `priority` setting does not affect the order of notifications in Chrome 59 or later on macOS.
 {% endAside %}
 
 In addition to displaying information, all notification types can include up to two action items.
