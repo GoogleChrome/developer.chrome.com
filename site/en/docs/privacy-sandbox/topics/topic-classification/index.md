@@ -47,7 +47,7 @@ Analyzing additional information (such as full URLs or page contents) might allo
 
 The classifier model for mapping hostnames to topics is publicly available, and as the [explainer](https://github.com/patcg-individual-drafts/topics) notes, it is possible to view the topics for a site via browser developer tools. The model is expected to evolve and improve over time and be updated periodically; the frequency of this is still under consideration.
 
-Only sites that include code that calls the Topics API are included in the browsing history eligible for topic frequency calculations, and API callers only receive topics they've observed. In other words, sites are not eligible for topic frequency calculations without the site or an embedded service callingß the API.
+Only sites that include code that calls the Topics API are included in the browsing history eligible for topic frequency calculations, and API callers only receive topics they've observed. In other words, sites are not eligible for topic frequency calculations without the site or an embedded service calling the API.
 
 {: #caller}
 
