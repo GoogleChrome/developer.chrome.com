@@ -4,7 +4,7 @@ title: The extension service worker lifecycle
 subhead: 
 description: Extension service workers respond to both standard service worker events and events in extension namespaces. They are presented together because often one type follows another during an extension's use.
 date: 2023-05-02
-updated: 2023-06-09
+updated: 2023-06-22
 ---
 
 Extension service workers respond to both the [standard service worker events](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope#events) and to events in extension namespaces. They are presented together because often one type follows another during an extension's use.
@@ -49,7 +49,7 @@ Normally, Chrome terminates a service worker after one of the following conditio
 
 Events and calls to extension APIs reset these timers, and if the service worker has gone dormant, an incoming event will revive them. Nevertheless, you should design your service worker to be resilient against unexpected termination.
 
-You should not keep your service worker alive indefinitely, though you can. (We don't consider this a good programming practice.) You should test your extensions to ensure that they're not doing this unintentionally. Though it's difficult to catch in a code review, we suggest you guard against it as best you can.
+To optimize the resource consumption of your extension, avoid keeping your service worker alive indefinitely if possible. Test your extensions to ensure that you're not doing this unintentionally.
 
 ### Persist data rather than using global variables {: #persist-data }
 
@@ -64,7 +64,7 @@ Any global variables you set will be lost if the service worker shuts down. Inst
 [CacheStorage API](https://developer.mozilla.org/docs/Web/API/CacheStorage)
 : A persistent storage mechanism for Request and Response object pairs. This API was designed specifically for web service workers and is used to retrieve data from an endpoint. There are a variety of ways to use this API depending on whether and how critical it is that users see up-to-date data. For more information, see [The Offline Cookbook](​​https://web.dev/offline-cookbook). Unless you're specifically proxying network requests via the fetch handler, you should use `chrome.storage`.
 
-### Keeping service workers alive
+### Choosing a minimum Chrome version
 
 Since the release of Manifest V3, we've made several improvements to service worker lifetimes. This means that if your Manifest V3 extension supports earlier versions of Chrome, there are conditions you will need to be aware of. If these conditions do not affect your extension, you can move on from this section. If they do, consider specifying a [minimum Chrome version](/docs/extensions/mv3/manifest/minimum_chrome_version/) in your manifest.
 
@@ -74,7 +74,7 @@ Sending a message using [long-lived messaging](/docs/extensions/mv3/messaging/#c
 
 #### Chrome 110
 
-Queued events reset the timers. Before this, only running event handlers would keep a service worker alive. Any events that were queued, but for which a handler had not been called would not cause a reset.
+Extension API calls reset the timers. Before this, only running event handlers would keep a service worker alive. Any events that were queued, but for which a handler had not been called would not cause a reset.
 
 #### Chrome 109
 
