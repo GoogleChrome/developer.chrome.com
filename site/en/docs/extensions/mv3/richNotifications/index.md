@@ -75,6 +75,16 @@ await chrome.notifications.create(id, options);
 The [notifications.NotificationOptions][4] must include a [notifications.TemplateType][5], which
 defines available notification details and how those details are displayed.
 
+{% Aside %}
+
+**Consider integrating with GCM!**
+
+[Keep your users informed][6] all the time, even
+when your extension isn't opened. The [gcm-notifications sample][7] shows a simple
+integration between GCM and Rich Notifications API.
+
+{% endAside %}
+
 ### Create basic notification {: #basic }
 
 All template types (`basic`, `image`, `list` and `progress`) must include a notification `title` and
@@ -171,7 +181,7 @@ can pop-up even when the extension isn't running.
 [3]: /docs/extensions/reference/notifications#method-create
 [4]: /docs/extensions/reference/notifications#type-NotificationOptions
 [5]: /docs/extensions/reference/notifications#type-TemplateType
-[6]: /docs/extensions/reference/gcm
+[6]: /docs/extensions/reference/gcm/
 [7]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/_archive/apps/samples/gcm-notifications
 [8]: /docs/apps/contentSecurityPolicy
 [9]: /docs/apps/app_external
