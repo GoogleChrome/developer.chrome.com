@@ -371,8 +371,8 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
 );
 ```
 
-The following example extensions show how to use scripting. To try this API,
-install the [webRequest sample](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/webRequest/http-auth) from the [chrome-extension-samples](https://github.com/GoogleChrome/chrome-extensions-samples)
+To try the `chrome.webRequest` API,
+install the [webRequest sample](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/webRequest/) from the [chrome-extension-samples](https://github.com/GoogleChrome/chrome-extensions-samples)
 repository.
 
 [1]: /docs/extensions/mv3/manifest
