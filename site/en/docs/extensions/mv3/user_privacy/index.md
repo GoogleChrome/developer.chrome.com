@@ -67,6 +67,7 @@ chrome.action.onClicked.addListener(function (event) {
   chrome.permissions.request(
     {
       permissions: ["tabs", "scripting"],
+      origins: ['https://www.google.com/']
     },
     function (granted) {
       // The callback argument will be true if the user granted the permissions.
