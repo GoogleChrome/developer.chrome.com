@@ -68,6 +68,15 @@ Any global variables you set will be lost if the service worker shuts down. Inst
 
 Since the release of Manifest V3, we've made several improvements to service worker lifetimes. This means that if your Manifest V3 extension supports earlier versions of Chrome, there are conditions you will need to be aware of. If these conditions do not affect your extension, you can move on from this section. If they do, consider specifying a [minimum Chrome version](/docs/extensions/mv3/manifest/minimum_chrome_version/) in your manifest.
 
+#### Chrome 116
+
+Chrome 116 introduced the following service worker lifetime improvements:
+
+* Active [`WebSocket`](https://developer.mozilla.org/docs/Web/API/WebSockets_API) connections no extend extension service worker lifetimes. Sending or receiving messages across a `WebSocket` in an extension service worker resets the service worker's idle timer.
+
+* Additional extension APIs are allowed to go past the five minute timeout period for extension service workers. These APIs are ones that display a user prompt, and thus may reasonably take longer than five minutes to resolve. These include [`desktopCapture.chooseDesktopMedia()`](/docs/extensions/reference/desktopCapture/#method-chooseDesktopMedia), [`identity.launchWebAuthFlow()`](/docs/extensions/reference/identity/#method-launchWebAuthFlow), [`management.uninstall()`](/docs/extensions/reference/management/#method-uninstall), and [`permissions.request()`](/docs/extensions/reference/permissions/#method-request).
+
+
 #### Chrome 114
 
 Sending a message using [long-lived messaging](/docs/extensions/mv3/messaging/#connect) keeps the service worker alive. Previously, opening a port reset the timers, but sending a message would not. Opening a port no longer resets the timers.
