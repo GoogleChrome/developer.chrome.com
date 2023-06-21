@@ -69,7 +69,7 @@ Noise is drawn from the [Laplace distribution](https://en.wikipedia.org/wiki/Lap
 
 -   A *mean* (`μ`) of 0. This means that the most likely noise value is 0 (no noise added), and that the noisy value is as likely to be smaller than the original as it is to be larger (this is sometimes called *unbiased*).
 -   A *scale parameter* of` b = CONTRIBUTION_BUDGET` / `epsilon`.
-    -   `CONTRIBUTION_BUDGET` is defined in the browser.
+    -   `CONTRIBUTION_BUDGET` is defined in the browser. <!-- liink to contribution budget -->
     -   `epsilon` is fixed in the aggregation server.
 
 
