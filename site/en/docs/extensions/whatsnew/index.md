@@ -19,7 +19,7 @@ Check this page often to learn about changes to Chrome extensions, extensions do
 
 <p class="color-secondary-text type--caption">Posted on <time>June 21, 2023</time></p>
 
-Active [`WebSocket`](https://developer.mozilla.org/docs/Web/API/WebSockets_API) connections no extend extension service worker lifetimes.  Sending or receiving messages across a `WebSocket` in an extension service worker resets the service worker's idle timer.
+Active [`WebSocket`](https://developer.mozilla.org/docs/Web/API/WebSockets_API) connections no extend extension service worker lifetimes. Sending or receiving messages across a `WebSocket` in an extension service worker resets the service worker's idle timer.
 
 ### Chrome 115: Specify multiple reasons in chrome.offscreen.createDocument() {: #m115-offscreen-multiple-reasons }
 
