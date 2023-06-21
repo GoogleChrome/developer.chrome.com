@@ -17,7 +17,7 @@ This guide assumes you're using header bidding via Prebid and need to implement 
 
 We recommend publishers update to Prebid version 7.29 or later to use the [Topics FPD Module](https://docs.prebid.org/dev-docs/modules/topicsFpdModule.html). For full documentation, refer to the official [Prebid API Reference](https://docs.prebid.org/dev-docs/publisher-api-reference.html). 
 
-By default, the module creates a cross-origin iframe on the publisher site, from which the Topics API is called. Then, topics are sent up to the parent window. From there, the topics are inserted into the bid request and sent to bidders. The process is illustrated here:
+By default, the Topics module creates a cross-origin iframe on the publisher site, from which the Topics API is called. Then, topics are sent up to the parent window. From there, the topics are inserted into the bid request and sent to bidders. The process is illustrated here:
 
 {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/xY2OKyTrSboKAJFJHSm4.png", alt="Topics Prebid module using iframe-based integration", width="800", height="386" %}
 
