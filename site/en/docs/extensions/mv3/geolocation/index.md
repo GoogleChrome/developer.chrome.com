@@ -184,7 +184,7 @@ async function closeOffscreenDocument() {
 So now whenever you want to get the geolocation from your service worker, you just need to call
 
 ```js
-await getGeolocation()
+const location = await getGeolocation()
 ```
 
 #### Using geolocation in popup or sidepanel
