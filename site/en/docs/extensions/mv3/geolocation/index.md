@@ -27,7 +27,9 @@ Permissions are not the only difference. As mentioned above, `navigator.geolocat
 
 #### Using geolocation in Service Workers
 
-There is no `navigator` object inside of service workers. It is only available inside of contexts that have access to a page's `document` object. To get access inside of a service worker, use an [`Offscreen Document`](offscreen). This is a feature of extensions that gives you access to an html file you can bundle with our extension. You can read more about Offscreen Documents in the [documentation](offscreen), but to get started add `offscreen` to the `permissions` section of our manifest.
+There is no `navigator` object inside of service workers. It is only available inside of contexts that have access to a page's `document` object. To get access inside of a service worker, use an [`Offscreen Document`](offscreen). This is a feature of extensions that gives you access to an html file you can bundle with our extension. You can read more about Offscreen Documents in the [documentation](offscreen). 
+
+To get started add `offscreen` to the `permissions` section of our manifest.
 
 {% Label %}manifest.json:{% endLabel %}
 ```js
