@@ -29,7 +29,7 @@ Publishers can override the default config maintained in the module to create mu
 
 To enable this module, publishers need to compile Prebid.js with support for the module. They can add the `topicsFpdModule` module to their existing modules:
 
-```
+```text
 gulp build --modules=topicsFpdModule,...
 ```
 More information on building Prebid with modules can be found in the [Prebid GitHub README](https://github.com/prebid/Prebid.js/blob/master/README.md#Build).
