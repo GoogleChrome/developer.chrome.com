@@ -92,9 +92,9 @@ Chromium issue: [772558](https://crbug.com/772558).
 
 ## Accessibility: Keyboard commands and improved screen reading {: #accessibility }
 
-DevTools now supports more shortcuts and fixes issues with screen reader announcements:
+DevTools now supports more shortcuts and fixes issues with screen readers:
 
-- You can now open the context menu with a keyboard shortcut, for example, <kbd>Shift</kbd>+<kbd>F10</kbd> on Windows and many Linux distributions. For Mac shortcuts, see [Alternate pointer actions](https://support.apple.com/en-gb/guide/mac-help/unac899/13.0/mac/13.0#:~:text=Alternate%20pointer%20actions).
+- You can now open the context menu with a keyboard shortcut, for example, <kbd>Shift</kbd>+<kbd>F10</kbd> on Windows and many Linux distributions. For MacOS shortcuts, see [Alternate pointer actions](https://support.apple.com/en-gb/guide/mac-help/unac899/13.0/mac/13.0#:~:text=Alternate%20pointer%20actions).
 - Screen reader applications:
   - Won't unnecessarily announce checkbox labels twice.
   - Will announce column header names for sortable columns when you press the "Read column header" shortcut.
@@ -110,6 +110,12 @@ Chromium issues: [1446482](https://crbug.com/1446482), [1414952](https://crbug.c
 
 These are some noteworthy fixes and improvements in this release:
 
+- The **Network** panel continues recording network activity even after you've interacted with the timeline ([1422552](https://crbug.com/1422552)).
+- The [**Coverage**](/docs/devtools/coverage/) panel now recognizes if there was prerender activation or back/forward cache navigation and prompts you to reload ([1393057](https://crbug.com/1393057)).
+- You can now navigate the [**Sources** > **Breakpoints**](/docs/devtools/javascript/breakpoints/) pane with the keyboard: <kbd>Arrow up</kbd> and <kbd>Arrow down</kbd> to move and <kbd>Space</kbd> to select ([1446150](https://crbug.com/1446150)).
+- Fixed HAR files uploading and filtering in the **Network** panel ([1450622](https://crbug.com/1450622)).
+- Flamechart in the **Performance** panel now puts small gaps between traces to render them better ([1452150](https://crbug.com/1452150)).
+- Fixed automatic mapping for files embedded in source maps ([1446383](https://crbug.com/1446383)).
 
 <!-- $contentEnd -->
 
