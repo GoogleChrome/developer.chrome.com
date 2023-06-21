@@ -189,7 +189,7 @@ const location = await getGeolocation()
 
 #### Using geolocation in popup or sidepanel
 
-If you want to use geolocation within a [popup](popup) or [side panel](sidepanel), it is very straightforward. Popups are just web documents, and therefore have access to the normal DOM APIs. You can access `navigator.geolocation` directly. The only difference from standard web sites would be that you need to use the manifest.json `permission` field to request the `geolocation` permission.  If you do not include the permission, you _will_ still have access to `navigator.geolocation`. However, any attempt to use it will cause an immediate error, the same as if the user rejected the request. You can see a sample of this [here](popup-sample).
+If you want to use geolocation within a [popup](popup) or [side panel](sidepanel), it is very straightforward. Popups and sidepanels are just web documents, and therefore have access to the normal DOM APIs. You can access `navigator.geolocation` directly. The only difference from standard web sites would be that you need to use the manifest.json `permission` field to request the `geolocation` permission.  If you do not include the permission, you _will_ still have access to `navigator.geolocation`. However, any attempt to use it will cause an immediate error, the same as if the user rejected the request. You can see a sample of this [here](popup-sample).
 
 
 #### Using geolocation in a content script
