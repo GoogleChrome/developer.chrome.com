@@ -11,11 +11,9 @@ authors:
   - maudn
 ---
 
-
 To protect user privacy, individual users' contributions must have an upper limit.
 
-In practice, this works as follows: across all aggregatable values associated with a single source (ad click or view), no value can be higher than a certain contribution budget. 
-We refer to this value as the `CONTRIBUTION_BUDGET`.
+In practice, this works as follows: across all aggregatable values associated with a single source (ad click or view), no value can be higher than a certain cap. We refer to this value as the `CONTRIBUTION_BUDGET`.
 
 ## Contribution budget current value
 
@@ -36,7 +34,7 @@ This has a few implications. For example:
 - For a single conversion event (trigger), the adtech company can register an aggregatable value of at most 65,536 (`CONTRIBUTION_BUDGET`). If the aggregatable value for that single conversion exceeds this budget, the aggregatable report is not created.
 - For a single conversion event (trigger), the adtech company can register multiple aggregatable values, and their sum should be at most 65,536 (`CONTRIBUTION_BUDGET`). If the sum of all aggregatable values for that single conversion exceeds this budget, the aggregatable report is not created.
 
-## Tips for working with the contribution budget 
+## Tips for success
 
 These tips will help you work successfully with the contribution budget.
 
