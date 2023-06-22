@@ -11,7 +11,9 @@ authors:
   - maudn
 ---
 
-Data in aggregatable reports is _noised_; in other words, for a small percentage of cases, random data is sent instead of real reports/data. This practice preserves user privacy by preventing the joining of user identity across sites. 
+Summary reports are the result of the aggregation of _aggregatable reports_. 
+When aggregatable reports are batched by a collector and processed by the aggregation service, noise—a random amount of data—is added to the resulting summary reports. 
+Noise is added to protect user privacy. The goal of this mechanism is to have a framework which can support [differentially private](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md#differential-privacy) measurement.
 
 
 ## Understanding noise in general
