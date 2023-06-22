@@ -13,7 +13,10 @@ If you want to get geolocation information in your Chrome extension, use the sam
 On the web, browsers safeguard user's geolocation data by showing a prompt asking them to grant that specific origin access to their location. The same permission model is not always appropriate for extensions.
 
 
-{% Img src="image/DXqUldooyJOUnj3qXSYLHbUgUI93/nYRDFWbb280yEp90XDTI.png", alt="A screenshot of the permission prompt you see when a website requests access to the geolocation api", width="800", height="419" %}
+<figure>
+  {% Img src="image/DXqUldooyJOUnj3qXSYLHbUgUI93/nYRDFWbb280yEp90XDTI.png", alt="A screenshot of the permission prompt you see when a website requests access to the geolocation api", width="800", height="419" %}
+  <figcaption>The geolocation permission prompt</figcaption>
+</figure>
 
 Permissions are not the only difference. As mentioned above, `navigator.geolocation` is a \_\_DOM\_\_ API, that is, something that is a part of the APIs that make up web sites. As a result, it is not accessible inside Worker contexts, like the [extension service worker](sw) that is the backbone of manifest v3 extensions. You can absolutely still use `geolocation`, though. There are just nuances with how and where you use it.
 
