@@ -18,7 +18,7 @@ On the web, browsers safeguard user's geolocation data by showing a prompt askin
   <figcaption>The geolocation permission prompt</figcaption>
 </figure>
 
-Permissions are not the only difference. As mentioned above, `navigator.geolocation` is a \_\_DOM\_\_ API, that is, something that is a part of the APIs that make up web sites. As a result, it is not accessible inside Worker contexts, like the [extension service worker](sw) that is the backbone of manifest v3 extensions. You can absolutely still use `geolocation`, though. There are just nuances with how and where you use it.
+Permissions are not the only difference. As mentioned above, `navigator.geolocation` is a \_\_DOM\_\_ API, that is, something that is a part of the APIs that make up websites. As a result, it is not accessible inside worker contexts, like the [extension service worker](sw) that is the backbone of manifest v3 extensions. You can absolutely still use `geolocation`, though. There are just nuances with how and where you use it.
 
 
 ### Using geolocation in Service Workers
