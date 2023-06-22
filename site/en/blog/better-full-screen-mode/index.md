@@ -31,8 +31,8 @@ API](/articles/keyboard-lock/) comes into play.
 ## Using the Keyboard Lock API
 
 The Keyboard Lock API is available on `navigator.keyboard.` The
-`[lock()](https://developer.mozilla.org/docs/Web/API/Keyboard/lock)` method of
-the `[Keyboard](https://developer.mozilla.org/docs/Web/API/Keyboard)` interface
+[`lock()`](https://developer.mozilla.org/docs/Web/API/Keyboard/lock) method of
+the [`Keyboard`](https://developer.mozilla.org/docs/Web/API/Keyboard) interface
 returns a promise after enabling the capture of keypresses for any or all of the
 keys on the physical keyboard. This method can only capture keys that are
 granted access by the underlying operating system. Luckily the **Escape** key is
@@ -41,7 +41,7 @@ one of them.
 If your app has a full screen mode, use the Keyboard Lock API as a progressive
 enhancement by capturing the **Escape** key when requesting full screen. Unlock
 (that is, no longer capture) the keyboard when leaving full screen mode via the
-`[unlock()](https://developer.mozilla.org/docs/Web/API/Keyboard/unlock)` method
+[`unlock()`](https://developer.mozilla.org/docs/Web/API/Keyboard/unlock) method
 of the `Keyboard` interface.
 
 ```js
@@ -72,12 +72,11 @@ key, they can still exit full screen mode. The best of both worlds.
 ## Demo
 
 You can test both the default and the progressively enhanced variants in the
-[demo](https://fullscreen-keyboard-lock.glitch.me/), which is also embedded
-below. The demo's [source
+[demo](https://fullscreen-keyboard-lock.glitch.me/). The demo's [source
 code](https://glitch.com/edit/#!/fullscreen-keyboard-lock) is less clean than
 the snippet above, because it needs to show both behaviors.
 
-{% Glitch id='fullscreen-keyboard-lock' %}
+<a href="https://fullscreen-keyboard-lock.glitch.me/">{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/Oh0pPRRNq5usfo2KboXM.png", alt="Better full screen mode demo.", width="800", height="931" %}</a>
 
 ## In practice
 
