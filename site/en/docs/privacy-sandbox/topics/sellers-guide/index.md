@@ -9,7 +9,7 @@ authors:
   - darojas
 ---
 
-[Prebid](https://prebid.org/) is an open-source software library that lets publishers use header bidding. [Prebid.js Core](https://docs.prebid.org/prebid/prebidjs.html) is the foundational code that is needed for header bidding, while modules are extensions that provide additional features and functionality. The Topics module calls the Topics API on a publisher's site, then sends topics in bid requests to bidders. 
+[Prebid](https://prebid.org/) is an open-source software library that lets publishers use [header bidding](https://docs.prebid.org/overview/intro-to-header-bidding.html). [Prebid.js Core](https://docs.prebid.org/prebid/prebidjs.html) is the foundational code that is needed for header bidding, while modules are extensions that provide additional features and functionality. The Topics module calls the Topics API on a publisher's site, then sends topics in bid requests to bidders. 
 
 This guide assumes you're using header bidding via Prebid and need to implement the Topics module.
 
@@ -25,9 +25,9 @@ By default, the Topics module creates a cross-origin iframe on the publisher sit
 
 Publishers can override the default config maintained in the module to create multiple topics-invoking iframes on behalf of various bidders. The [Prebid Topics FPD Module documentation](https://docs.prebid.org/dev-docs/modules/topicsFpdModule.html) provides more detail. 
 
-### Publishers integration
+### Publisher integration
 
-To enable this module, publishers need to compile Prebid.js with support for the module. They can add the `topicsFpdModule` module to their existing modules:
+To enable the Topics FPD module, publishers need to compile Prebid.js with support for the module. They can add the `topicsFpdModule` module to their existing modules:
 
 ```text
 gulp build --modules=topicsFpdModule,...
