@@ -110,7 +110,7 @@ For example, for a pre-noise purchase amount of 327,000, noise may be +6,000 or 
 The standard deviation of the noise is:
 
 ```text
-b*sqrt(2) = (`CONTRIBUTION_BUDGET` / epsilon)*sqrt(2)
+b*sqrt(2) = (CONTRIBUTION_BUDGET / epsilon)*sqrt(2)
 ```
 
 ##### Example
