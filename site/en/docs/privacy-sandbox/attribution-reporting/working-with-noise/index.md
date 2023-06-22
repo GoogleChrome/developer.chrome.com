@@ -26,7 +26,7 @@ As explained in Understanding noise, [noise applied to the summary value](/docs/
 
 {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/ODm7VrPRfwRm3hh8lWZg.png", alt="Noise distribution is based on budget.", width="512", height="147" %}
 
-Due to this, to maximize signal relative to noise, you should *scale up* each value before setting it as an aggregatable value—that is, multiply each value by a certain factor (while ensuring it stays within the contribution budget).
+Due to this, to maximize signal relative to noise, you should *scale up* each value before setting it as an aggregatable value—that is, multiply each value by a certain factor, the _scaling factor_, while ensuring it stays within the contribution budget.
 
 {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/P28EJ3mddaen0x7gLA0g.png", alt="Relative noise with and without scaling.", width="512", height="404" %}
 
