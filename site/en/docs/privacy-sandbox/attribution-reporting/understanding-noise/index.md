@@ -21,7 +21,7 @@ Noise is added to protect user privacy. The goal of this mechanism is to have a 
 While adding noise isn’t usually a part of ads measurement today, in many cases the noise added won’t substantially change how you interpret your results. 
 
 It may help to think about it in the following way:
-Would you be confident taking a certain decision based on certain data if that data wasn't noisy? 
+Would you be confident taking a decision based on a certain piece of data if that data wasn't noisy? 
 
 For example, would an advertiser be confident in changing their campaign strategy or budgets, based on the fact that Campaign A had 15 conversions and Campaign B had 16? 
 
