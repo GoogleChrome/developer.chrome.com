@@ -16,7 +16,7 @@ When aggregatable reports are batched by a collector and processed by the aggreg
 Noise is added to protect user privacy. The goal of this mechanism is to have a framework which can support [differentially private](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md#differential-privacy) measurement.
 
 
-## Understanding noise in general
+## Introduction to noise in summary reports
 
 While adding noise isn’t usually a part of ads measurement today, in many cases the noise added won’t substantially change how you interpret your results. 
 
