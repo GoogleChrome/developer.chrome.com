@@ -2,9 +2,9 @@
 layout: 'layouts/doc-post.njk'
 title: 'Working with noise'
 subhead: >
-  How to work with, account for, and reduce the impact of noise in your aggregatable reports.
+  Learn how to work with, account for, and reduce the impact of noise in your aggregatable reports.
 description: >
-  How to work with, account for, and reduce the impact of noise in your aggregatable reports.
+  Learn how to work with, account for, and reduce the impact of noise in your aggregatable reports.
 date: 2022-06-23
 updated: 2022-06-23
 authors:
