@@ -18,14 +18,14 @@ On the web, browsers safeguard user's geolocation data by showing a prompt askin
   <figcaption>The geolocation permission prompt</figcaption>
 </figure>
 
-Permissions are not the only difference. As mentioned above, `navigator.geolocation` is a \_\_DOM\_\_ API, that is, something that is a part of the APIs that make up websites. As a result, it is not accessible inside worker contexts, like the [extension service worker](sw) that is the backbone of manifest v3 extensions. You can absolutely still use `geolocation`, though. There are just nuances with how and where you use it.
+Permissions are not the only difference. As mentioned above, `navigator.geolocation` is a _DOM_ API, that is, something that is a part of the APIs that make up websites. As a result, it is not accessible inside worker contexts, like the [extension service worker](sw) that is the backbone of manifest v3 extensions. You can absolutely still use `geolocation`, though. There are just nuances with how and where you use it.
 
 
-### Using geolocation in Service Workers
+### Use geolocation in service workers
 
-There is no `navigator` object inside of service workers. It is only available inside of contexts that have access to a page's `document` object. To get access inside of a service worker, use an [`Offscreen Document`](offscreen). This is a feature of extensions that gives you access to an html file you can bundle with our extension. You can read more about Offscreen Documents in the [documentation](offscreen). 
+There is no `navigator` object inside of service workers. It is only available inside of contexts that have access to a page's `document` object. To get access inside of a service worker, use an [`Offscreen Document`](offscreen). This is a feature of extensions that gives you access to an html file you can bundle with our extension.
 
-To get started add `offscreen` to the `permissions` section of our manifest.
+To get started add `offscreen` to the `permissions` section of your manifest.
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -41,7 +41,7 @@ To get started add `offscreen` to the `permissions` section of our manifest.
 }
 ```
 
-After adding the `offscreen` permission, add an html file to our extension that will include your offscreen document. In this case, we are not using any of the content of the page, and so this can be a nearly blank file, it just needs to be a smal, html file that loads in our script.
+After adding the `offscreen` permission, add an html file to your extension that includes your offscreen document. This case isn't using any of the content of the page, and so this can be a nearly blank file. It just needs to be a small, html file that loads in your script.
 
 {% Label %}offscreen.html:{% endLabel %}
 
@@ -51,9 +51,9 @@ After adding the `offscreen` permission, add an html file to our extension that 
 <script src="offscreen.js"></script>
 ```
 
-This file can be saved in the root of our project, as `offscreen.html`.
+Save this file in the root of our project, as `offscreen.html`.
 
-As mentioned we are including a script called [offscreen.js`, this will be another file we need to bundle with our extension. It will be where we are actually getting geolocation information, and sending that information back to our service worker. We can send and receive messages between it and our service worker.
+As mentioned you need a script called `offscreen.js`. You'll also need to bundle this with your extension. It will be where you actually get geolocation information, and send that information back to the service worker. You can send and receive messages between it and your service worker.
 
 {% Label %}offscreen.js:{% endLabel %}
 
@@ -70,22 +70,22 @@ function handleMessages(message, sender, sendResponse) {
     return;
   }
 
-  // we can directly respond to the message from out service_worker with the
-  // provided `sendResponse` callback. But in order to be able to send an async
-  // response, we need to explictly return `true` in our onMessage handler
-  // As a result, we can't use async/await here - we'd implictly return a Promise.
+  // You can directly respond to the message from the service worker with the
+  // provided `sendResponse()` callback. But in order to be able to send an async
+  // response, you need to explictly return `true` in the onMessage handler
+  // As a result, you can't use async/await here. You'd implictly return a Promise.
   getLocation().then((loc) => sendResponse(loc));
 
   return true;
 }
 
-// getCurrentPosition returns a prototype based object, so the properties
-// end up being stripped off when sent over to our service worker. To get
-// around this, we deeply clone it
+// getCurrentPosition() returns a prototype based object, so the properties
+// end up being stripped off when sent to the service worker. To get
+// around this, create a deep clone.
 function clone(obj) {
   const copy = {};
   // Return the value of any non true object (typeof(null) is "object") directly.
-  // null will throw an error if you try to for/in it. We can just return
+  // null will throw an error if you try to for/in it. Just return
   // the value early.
   if (obj === null || !(obj instanceof Object)) {
     return obj;
@@ -98,8 +98,8 @@ function clone(obj) {
 }
 
 async function getLocation() {
-  // we use a raw Promise here so we can pass `resolve` and `reject` into the
-  // callbacks for getCurrentPosition
+  // Use a raw Promise here so you can pass `resolve` and `reject` into the
+  // callbacks for getCurrentPosition().
   return new Promise((resolve, reject) => {
     navigator.geolocation.getCurrentPosition(
       (loc) => resolve(clone(loc)),
@@ -111,7 +111,7 @@ async function getLocation() {
 ```
 
 
-With that in place, we are now ready to access the Offscreen Document in our service worker!
+With that in place, you are now ready to access the Offscreen Document in the service worker.
 
 ```js
 chrome.offscreen.createDocument({
@@ -125,7 +125,7 @@ Note that when you access an offscreen document, you need to include a `reason`.
 
 Once you have a reference to the Offscreen Document, you can send it a message to ask for it to give you updated geolocation information.
 
-{% Label %}service\_worker.js:{% endLabel %}
+{% Label %}service_worker.js:{% endLabel %}
 
 ```js
 const OFFSCREEN_DOCUMENT_PATH = '/offscreen.html';
@@ -193,7 +193,7 @@ If you want to use geolocation within a [popup](popup) or [side panel](sidepanel
 
 Just like a popup, a [content script](content) has full access to the DOM API; however you will go through the normal user permission flow. That means that adding `geolocation` to your `permissions` _will not_ automatically give you access to the users' geolocation information. You can see this in the [content script sample](contentscript-sample)
 
-[content]: docs/extensions/mv3/content\_scripts/
+[content]: docs/extensions/mv3/content_scripts/
 [contentscript-sample]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.geolocation-contentscript
 [crbug]: https://bugs.chromium.org/p/chromium/issues/list?q=component%3APlatform%3EExtensions%20geolocation
 [geolocation]: https://developer.mozilla.org/docs/Web/API/Navigator/geolocation
@@ -202,4 +202,4 @@ Just like a popup, a [content script](content) has full access to the DOM API; h
 [popup-sample]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.geolocation-popup
 [popup]: docs/extensions/reference/action/#popup
 [sidepanel]: docs/extensions/reference/sidePanel/
-[sw]: docs/extensions/mv3/service\_workers/
+[sw]: docs/extensions/mv3/service_workers/
