@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Understanding noise'
+title: 'Understanding noise in summary reports'
 subhead: >
   What noise means, where it is added, and how it impacts your measurement efforts.
 description: >
