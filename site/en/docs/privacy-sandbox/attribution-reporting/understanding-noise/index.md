@@ -2,9 +2,9 @@
 layout: 'layouts/doc-post.njk'
 title: 'Understanding noise in summary reports'
 subhead: >
-  What noise means, where it is added, and how it impacts your measurement efforts.
+  Learn what noise means, where it is added, and how it impacts your measurement efforts.
 description: >
-  What noise means, where it is added, and how it impacts your measurement efforts.
+  Learn what noise means, where it is added, and how it impacts your measurement efforts.
 date: 2022-06-23
 updated: 2022-06-23
 authors:
