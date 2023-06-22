@@ -32,7 +32,7 @@ What you will want to do is configure your API usage in such a way that:
 1. The answer to the question above is yes.
 1. Noise is managed in a way that doesn't significantly impact your ability to make a decision based on certain data. You can approach this as follows: for an expected minimum number of conversions, you want to keep the noise in the collected metric below a certain %.
 
-In this section and the following, we'll outline strategies for option 2.
+In this section and the following, we'll outline strategies to achieve 2.
 
 ## Core concepts
 
