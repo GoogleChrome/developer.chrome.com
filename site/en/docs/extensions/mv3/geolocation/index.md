@@ -125,6 +125,11 @@ Note that when you access an offscreen document, you need to include a `reason`.
 
 Once you have a reference to the Offscreen Document, you can send it a message to ask for it to give you updated geolocation information.
 
+
+{% Aside %}
+A Chrome extension can only have one open offscreen document at a time, which screen documents should be closed once no longer needed. To learn more about how to create and close offscreen documents, checkout the [offscreen documentation](offscreen)
+{% endAside %}
+
 {% Label %}service_worker.js:{% endLabel %}
 
 ```js
