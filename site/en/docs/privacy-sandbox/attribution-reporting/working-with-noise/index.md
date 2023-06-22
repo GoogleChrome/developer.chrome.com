@@ -30,7 +30,7 @@ Due to this, to maximize signal relative to noise, you should *scale up* each va
 
 {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/P28EJ3mddaen0x7gLA0g.png", alt="Relative noise with and without scaling.", width="512", height="404" %}
 
-#### Scaling factor
+#### Calculating a scaling factor
 
 The scaling factor represents how much you want to scale a given aggregatable value.
 Its value should be the contribution budget divided by the maximum aggregatable value for a certain key.
