@@ -10,7 +10,7 @@ If you want to get geolocation information in your Chrome extension, use the sam
 
 ## Use geolocation in MV3 extensions
 
-On the web, browsers safeguard user's geolocation data by showing them a prompt, asking the user to grant that specific origin access to their location. The same permission model is not always appropriate for extensions.
+On the web, browsers safeguard user's geolocation data by showing a prompt asking them to grant that specific origin access to their location. The same permission model is not always appropriate for extensions.
 
 
 {% Img src="image/DXqUldooyJOUnj3qXSYLHbUgUI93/nYRDFWbb280yEp90XDTI.png", alt="A screenshot of the permission prompt you see when a website requests access to the geolocation api", width="800", height="419" %}
