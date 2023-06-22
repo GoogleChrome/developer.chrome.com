@@ -77,7 +77,7 @@ below. The demo's [source
 code](https://glitch.com/edit/#!/fullscreen-keyboard-lock) is less clean than
 the snippet above, because it needs to show both behaviors.
 
-{% Glitch 'fullscreen-keyboard-lock' %}
+{% Glitch id='fullscreen-keyboard-lock' %}
 
 ## In practice
 
