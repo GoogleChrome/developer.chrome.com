@@ -24,7 +24,7 @@ The value of the contribution budget is arbitrary. What's important is that you 
 
 The contribution budget applies across all metrics on a single source event (ad click or view event). The sum of all aggregatable values associated with the conversion(s) attributed to a given ad click or view (source) should be under the budget.
 
-## A hard cap
+## Implications of the hard cap
 
 The contribution budget is a hard cap. Once the contribution budget is reached, no additional values are recorded. 
 
@@ -44,3 +44,10 @@ These tips will help you work successfully with the contribution budget.
 - For example,if you're tracking two metrics—for example, the purchase value and the purchase count—you would split the contribution budget across these two metrics. More details in the example.
 
 - Adjust aggregatable values to minimize the impact of noise. Because the contribution budget impacts noise, adjusting the aggregatable values to this budget will allow you to improve signal-to-noise ratio. Read the details in [Scale up to contribution budget](/docs/privacy-sandbox/attribution-reporting/working-with-noise/#scale-up-to-contribution-budget). <!-- working with noise -->
+
+{% Partial 'privacy-sandbox/ar-engage.njk' %}
+
+## Next steps
+
+- For more details on working with the contribution budget, refer to [Scale up to contribution budget](/docs/privacy-sandbox/attribution-reporting/working-with-noise/#scale-up-to-contribution-budget).
+- For a review of other Attribution Reporting concepts, refer to [Attribution Reporting system overview](/docs/privacy-sandbox/attribution-reporting/system-overview/).
