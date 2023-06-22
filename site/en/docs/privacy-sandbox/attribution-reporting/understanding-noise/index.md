@@ -15,6 +15,7 @@ Summary reports are the result of the aggregation of _aggregatable reports_.
 When aggregatable reports are batched by a collector and processed by the aggregation service, noise—a random amount of data—is added to the resulting summary reports. 
 Noise is added to protect user privacy. The goal of this mechanism is to have a framework which can support [differentially private](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md#differential-privacy) measurement.
 
+{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/FclMA9IFcNr3A3dwIG6T.png", alt="Noise is added in the final summary report.", width="800", height="313" %}
 
 ## Introduction to noise in summary reports
 
