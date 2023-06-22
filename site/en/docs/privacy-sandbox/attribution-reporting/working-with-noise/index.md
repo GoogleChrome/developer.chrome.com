@@ -13,7 +13,7 @@ authors:
 
 ## Before you begin
 
-Before proceeding, for an in-depth understanding of what noise is, and its impact, refer to [Understanding noise](/docs/privacy-sandbox/attribution-reporting/understanding-noise/).
+Before proceeding, for an in-depth understanding of what noise is, and its impact, refer to [Understanding noise in summary reports](/docs/privacy-sandbox/attribution-reporting/understanding-noise/).
 
 
 ## Your controls on noise
