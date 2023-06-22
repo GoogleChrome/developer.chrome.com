@@ -25,7 +25,7 @@ Would you be confident taking a decision based on a certain piece of data if tha
 
 For example, would an advertiser be confident in changing their campaign strategy or budgets, based on the fact that Campaign A had 15 conversions and Campaign B had 16? 
 
-If the answer is no, noise is irrelevant. You would design your data collection in a way that enables you to answer yes to the question above. 
+If the answer is no, noise is irrelevant.
 
 What you will want to do is configure your API usage in such a way that:
 
