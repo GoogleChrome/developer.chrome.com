@@ -2,9 +2,9 @@
 layout: 'layouts/doc-post.njk'
 title: 'Contribution budget'
 subhead: >
-  Here's
+  Learn about the role of the contribution budget and how to allocate it to capture the data you need.  
 description: >
-  Here's 
+  Learn about the role of the contribution budget and how to allocate it to capture the data you need.  
 date: 2022-03-01
 updated: 2023-03-14
 authors:
@@ -15,12 +15,11 @@ authors:
 To protect user privacy, individual users' contributions must have an upper limit.
 
 In practice, this works as follows: across all aggregatable values associated with a single source (ad click or view), no value can be higher than a certain contribution budget. 
-We'll refer to it as `CONTRIBUTION_BUDGET`.
+We refer to this value as the `CONTRIBUTION_BUDGET`.
 
-## Current value
+## Contribution budget current value
 
-In the [explainer](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md), this is referred to as the L1 budget.
-L1 budget = `CONTRIBUTION_BUDGET`.
+In the [explainer](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md), the contribution budget is referred to as the L1 budget. L1 budget = `CONTRIBUTION_BUDGET`. 
 
 For the current origin trial (started in Chrome 101), `CONTRIBUTION_BUDGET = 216 = 65,536`.
 The value of the contribution budget is arbitrary. What's important is that you can use this budget to maximize signal-to-noise ratio on the summary values. 
