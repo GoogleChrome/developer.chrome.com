@@ -129,7 +129,7 @@ Attribution Reporting API では、広告主またはサードバーティのア
 
 {% Details %}
 
-{%Detailssummary 'h3' %} Chrome が提案する API と WebKit が提案する API の違い {% endDetailssummary %}
+{%DetailsSummary 'h3' %} Chrome が提案する API と WebKit が提案する API の違い {% endDetailsSummary %}
 
 この 2 つの API は異なるものの、Chrome と WebKit はオープンに連携しながら開発者エクスペリエンスの簡素化を進めています。たとえば、属性名や[レポート用の JSON の構造](https://github.com/privacycg/private-click-measurement/issues/30)を統一しています。
 
