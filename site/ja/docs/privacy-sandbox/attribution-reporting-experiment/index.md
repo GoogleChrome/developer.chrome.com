@@ -1,8 +1,8 @@
 ---
 layout: layouts/doc-post.njk
 title: 'アトリビューション レポート: テストとディスカッション'
-date: '2022-03-31'
-updated: '2022-12-15'
+date: 2022-03-31
+updated: 2022-12-15
 authors:
   - maudn
   - alexandrawhite
