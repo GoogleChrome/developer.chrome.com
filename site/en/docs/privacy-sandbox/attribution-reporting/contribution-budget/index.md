@@ -6,7 +6,7 @@ subhead: >
 description: >
   Learn about the role of the contribution budget for summary reports in Attribution Reporting and how to allocate it to capture the data you need.  
 date: 2022-03-01
-updated: 2023-03-14
+updated: 2023-06-24
 authors:
   - maudn
 ---
