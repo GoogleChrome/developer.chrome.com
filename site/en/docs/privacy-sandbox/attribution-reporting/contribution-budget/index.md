@@ -2,9 +2,9 @@
 layout: 'layouts/doc-post.njk'
 title: 'Contribution budget for summary reports'
 subhead: >
-  Learn about the role of the contribution budget for summary reports in Attribution Reporting and how to allocate it to capture the data you need.  
+  Learn about the role of the contribution budget for Attribution Reporting summary reports and how to allocate it to capture the data you need.  
 description: >
-  Learn about the role of the contribution budget for summary reports in Attribution Reporting and how to allocate it to capture the data you need.  
+  Learn about the role of the contribution budget for Attribution Reportingsummary reports and how to allocate it to capture the data you need.  
 date: 2022-03-01
 updated: 2023-06-24
 authors:
