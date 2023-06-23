@@ -1,8 +1,8 @@
 ---
 layout: layouts/blog-post.njk
 title: 'First-Party Sets: 開発者ガイド'
-date: '2023-01-12'
-updated: '2023-05-10'
+date: 2023-01-12
+updated: 2023-05-10
 thumbnail: image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/SV7SXAQRcVnBZEgjgxYc.png
 alt: requestStorageAccess を呼び出す埋め込みサイトを示す図。
 tags:
