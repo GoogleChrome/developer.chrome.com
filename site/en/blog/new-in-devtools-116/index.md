@@ -3,10 +3,10 @@ layout: 'layouts/blog-post.njk'
 title: "What's New in DevTools (Chrome 116)"
 authors:
   - sofiayem
-date: 2023-06-20
+date: 2023-06-23
 description: ""
-hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/s7ZpM4wjhbRf5K6Vspk3.jpg'
-alt: ''
+hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/AcuNkf8XxCL3z5qSfzBS.png'
+alt: 'Improved debugging of missing stylesheets, linear timing support in the Easing Editor, storage buckets and metadata view, and more.'
 tags:
   - new-in-devtools
   - devtools
