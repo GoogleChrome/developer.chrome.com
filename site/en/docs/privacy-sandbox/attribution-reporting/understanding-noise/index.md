@@ -119,7 +119,7 @@ b*sqrt(2) = (CONTRIBUTION_BUDGET / epsilon)*sqrt(2)
 With epsilon = 10, the standard deviation of the noise is:
 
 ```text
-b*sqrt(2) = (CONTRIBUTION_BUDGET / epsilon)*sqrt(2) = (65,536/10)*sqrt(2) = 9,267.
+b*sqrt(2) = (CONTRIBUTION_BUDGET / epsilon)*sqrt(2) = (65,536/10)*sqrt(2) = 9,267
 ```
 
 #### Evaluating when measurement differences are significant
