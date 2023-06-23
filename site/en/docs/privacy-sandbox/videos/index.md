@@ -46,7 +46,7 @@ Chrome is on the path to phasing out third-party cookies. Updates to cookie func
 
 {% Details %}
 {% DetailsSummary %}
-### Older Privacy Sandbox videos
+### More Privacy Sandbox videos
 {% endDetailsSummary %}
 {% Columns %}
 {% Column %}
@@ -109,7 +109,7 @@ Learn more about the Privacy Sandbox effort, with a deep dive into Attribution R
 
 {% Details %}
 {% DetailsSummary %}
-### Older Attribution Reporting videos
+### More Attribution Reporting videos
 {% endDetailsSummary %}
 {% Columns %}
 {% Column %}
@@ -175,7 +175,7 @@ The Chrome team presents a high-level overview of the Attribution Reporting API 
 {% endColumns %}
 {% endDetails %}
 
-## Protected Audience API (formerly FLEDGE)
+## Protected Audience API
 
 {% Columns %}
 {% Column %}
@@ -186,7 +186,7 @@ Refer to the documentation for the latest details: <a href="/docs/privacy-sandbo
 {% Column %}
 <strong>Sep 8, 2021. Run time: 5:51</strong>
 
-Sam Dutton of the Chrome team explains how the Protected Audience API provides a solution for remarketing use cases, and how it's designed so it cannot be used by third parties to track user browsing behavior across sites.
+Sam Dutton of the Chrome team explains how the Protected Audience API (formerly FLEDGE) provides a solution for remarketing use cases, and how it's designed so it cannot be used by third parties to track user browsing behavior across sites.
 {% endColumn %}
 {% endColumns %}
 
@@ -199,7 +199,7 @@ Refer to the documentation for the latest details: <a href="/docs/privacy-sandbo
 {% endColumn %}
 {% Column %}
 <strong>Mar 18, 2022. Run time: 6:15</strong>
-The Protected Audience API is a Privacy Sandbox API to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites.
+The Protected Audience API (formerly FLEDGE) is a Privacy Sandbox API to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites.
 Sam Dutton of the Chrome team provides a walkthrough of the demo available for the API.
 {% endColumn %}
 {% endColumns %}
