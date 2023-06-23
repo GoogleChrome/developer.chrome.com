@@ -6,7 +6,7 @@ subhead: >
 description: >
   Learn what noise means, where it is added, and how it impacts your measurement efforts.
 date: 2022-06-23
-updated: 2022-06-23
+updated: 2023-06-24
 authors:
   - maudn
 ---
