@@ -19,9 +19,9 @@ Chrome はサード パーティ Cookie を廃止するにおいて、ユーザ�
 
 ## First-Party Set とは
 
-At a high level, a First-Party Set is a collection of domains, for which there is a single "set primary" and potentially multiple "set members".
+大まかに言えば、First-Party Set はドメインの集合であり、単一の「セット プライマリ」と場合によっては複数の「セット メンバー」が存在します。
 
-In the example below, `primary` lists the primary domain, and `associatedSites` lists domains that meet the requirements of the [associated subset](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md#set-formation-requirements).
+以下の例では、`primary` はプライマリドメインをリストし、`associatedSites` は[関連付けられたサブセット](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md#set-formation-requirements)の要件を満たすドメインをリストします。
 
 ```js
 {
@@ -270,15 +270,15 @@ function checkCookie() {
 
 FPS をローカルでテストするには、Chrome 113 以降をコマンドラインで起動して使用します。
 
-To preview upcoming Chrome features before they're released, download the Beta or Canary version of Chrome.
+今後のリリース前の Chrome 機能をプレビューするには、<a>ベータ版</a>または <a>Canary</a> 版の Chrome をダウンロードしてください。
 
 ### Example
 
-{% Aside %} To see a FPS demo in action, visit [https://first-party-sets.glitch.me/](https://first-party-sets.glitch.me/). {% endAside %}
+{% Aside %} 実際の FPS デモを見るには、[https://first-party-sets.glitch.me/](https://first-party-sets.glitch.me/) にアクセスしてください。 {% endAside %}
 
 FPS をローカルで有効にするには、このセクションで説明されているカンマ区切りのフラグリストで Chrome の `--enable-features` オプションを使用する必要があります。
 
-Learn more about how to [run Chromium with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags/).
+[フラグを使用して Chromium を実行する方法](https://www.chromium.org/developers/how-tos/run-chromium-with-flags/)については、こちらをご覧ください。
 
 ```js
 --enable-features="FirstPartySets,StorageAccessAPI,StorageAccessAPIForOriginExtension,PageInfoCookiesSubpage,PrivacySandboxFirstPartySetsUI" \
@@ -302,9 +302,9 @@ https://first-party-sets.glitch.me/
 
 ### サード パーティ Cookie がブロックされていることを検証する
 
-1. In Chrome settings, go to Privacy and Security → Cookies and other site data or chrome://settings/cookies.
-2. Under General settings ensure that "Block third-party cookies" is enabled.
-3. Check that the sub-option "Allow related sites to see your activity in the group" is also enabled.
+1. Chrome の設定で、［プライバシーとセキュリティ］→［Cookie およびその他のサイト データ］または chrome://settings/cookies に移動します。
+2. ［一般設定］で、［サード パーティの Cookie をブロックする］が有効になっていることを確認します。
+3. サブオプションの［関連サイトがグループ内のアクティビティを表示できるようにする］も有効になっていることを確認します。
 
 {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/dPck21yLTAF5cU59DzdZ.png", alt="Screenshot of Chrome settings page", width="800", height="486" %}
 
