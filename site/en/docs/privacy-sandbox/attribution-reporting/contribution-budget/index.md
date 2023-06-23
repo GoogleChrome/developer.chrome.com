@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Contribution budget'
+title: 'Contribution budget for summary reports'
 subhead: >
   Learn about the role of the contribution budget for summary reports in Attribution Reporting and how to allocate it to capture the data you need.  
 description: >
