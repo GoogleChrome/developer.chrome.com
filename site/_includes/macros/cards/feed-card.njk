@@ -1,0 +1,58 @@
+{% from 'macros/card-authors.njk' import cardAuthors with context %}
+
+{% macro feedCard(post) %}
+  {% set pd = post.data %}
+
+  {% if pd.thumbnail %}
+    {% set thumbnail = pd.thumbnail %}
+  {% else %}
+    {% set thumbnail = pd.hero %}
+  {% endif %}
+
+  <div class="feed-card rounded-lg width-full gap-bottom-500">
+    {% if pd.source and author.sources.length > 1 %}
+      <p class="type--caption feed-card__source color-secondary-text pad-left-300 pad-right-300 
+      pad-top-200 pad-bottom-200 md:pad-left-400 md:pad-right-400 gap-bottom-100"> 
+        {{ pd.source }} 
+      </p>
+    {% endif %}
+
+    <div class="feed-card__content pad-300 md:pad-400 md:pad-top-300">
+      <h2 class="type--h4">
+        <a class="surface display-inline-flex color-text" href="{{ post.url }}">
+          {{ pd.title | md | safe }}
+        </a>
+      </h2>
+
+    {% if thumbnail %}
+      <div class="feed-card__thumbnail gap-top-400">
+        <a class="display-block" href="{{ post.url }}" {% if not alt %}aria-hidden="true" tabindex="-1"{% endif %}>
+          {% Img
+            class="rounded-100 object-fit-cover width-full",
+            src=thumbnail,
+            alt=pd.alt,
+            width="278",
+            height="156",
+            sizes="(min-width: 36em) 330px, calc(100vw - 82px)"
+          %}
+        </a>
+      </div>
+    {% endif %}
+
+    {% if pd.description %}
+      <p class="type--caption gap-top-300">
+        {{ pd.description | safe }}
+      </p>
+    {% endif %}
+
+    {% set tags = pd.tags %}
+    {% include 'partials/tags.njk' %}
+
+    {# Always render "authors" even with zero authors, as this renders the date #}
+    <div class="gap-top-300">
+      {{ cardAuthors(pd.authors, pd.date) }}
+    </div>
+
+    </div>
+  </div>
+{% endmacro %}

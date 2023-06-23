@@ -7,7 +7,7 @@ date: 2023-05-02
 
 Extension service workers are installed and updated differently from web service workers. This page explains those differences.
 
-## Registering service workers {: #register }
+## Register service workers {: #register }
 
 To register an extension service worker, specify it in the `"background"` field of the `manifest.json` file. Use the `"service_worker"` key, which specifies a single JavaScript file. Service workers in web pages or web apps register service workers by first feature-detecting for `serviceWorker` in `navigator` then calling `register()` inside feature detection. This does not work for extensions.
 
@@ -23,7 +23,7 @@ To register an extension service worker, specify it in the `"background"` field 
 
 ```
 
-## Importing scripts {: #import-scripts}
+## Import scripts {: #import-scripts}
 
 There are two methods of importing scripts into a service worker: the [`import`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import) statement and the [`importScripts()`](https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/importScripts) method. Note that [`import()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/import), often called a dynamic import, is not supported.
 
@@ -48,6 +48,6 @@ Use `importScripts()` as you would in a web service worker.
 importScripts('locales.js');
 ```
 
-## Updating
+## Update
 
 To update the service worker, [publish a new version](/docs/webstore/publish/) of your extension to the Chrome Web Store. You cannot get around this by loading your extension from a server. For security reasons Manifest V3 [does not support](/docs/extensions/migrating/improve-security/#remove-remote-code) remotely-hosted code. Your service worker must be part of the extension package.

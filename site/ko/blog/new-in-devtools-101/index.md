@@ -45,7 +45,7 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 
 [Cascade 레이어](/blog/cascade-layers/) 를 사용하면 스타일별 충돌을 방지하기 위해 CSS 파일을 보다 명시적으로 제어할 수 있습니다. 이 기능은 대규모 코드베이스, 디자인 시스템, 애플리케이션 내부의 써드 파티 스타일을 관리할 때 특히 유용합니다.
 
-다음 [예제](https://jec.fyi/demo/cascade-layer) 에서는 `page`, `component`, `base` 라는 3가지 cascade 레이어가 정의되어 있습니다. **스타일** 창에서 각 레이어와 스타일을 볼 수 있습니다.
+다음 [예제](https://jec.fish/demo/cascade-layer) 에서는 `page`, `component`, `base` 라는 3가지 cascade 레이어가 정의되어 있습니다. **스타일** 창에서 각 레이어와 스타일을 볼 수 있습니다.
 
 레이어 이름을 클릭하고 레이어 순서를 살펴보세요. `page` 레이어가 가장 높은 특정성을 가지고 있어 `box` 의 배경색은 초록색으로 정의됩니다.
 

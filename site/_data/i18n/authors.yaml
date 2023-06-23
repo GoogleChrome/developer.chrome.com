@@ -332,7 +332,12 @@ paulkinlan:
   title:
     en: 'Paul Kinlan'
   description:
-    en: 'Paul is a Developer Advocate'
+    en: 'DevRel Lead'
+  bio:
+    en:
+      - I lead the Chrome Developer Relations team at Google.
+      - We want people to have the best experience possible on the web without having to install a native app or produce content in a walled garden.
+      - Our team tries to make it easier for developers to build on the web by supporting every Chrome release, creating great content to support developers on web.dev, contributing to MDN, helping to improve browser compatibility, and some of the best developer tools like Lighthouse, Workbox, Squoosh to name just a few.
 jakearchibald:
   title:
     en: 'Jake Archibald'
@@ -571,6 +576,23 @@ reillyg:
     pt: Engenheiro de software no Google Chrome com foco em APIs de hardware
     ru: Инженер-программист в команде Google Chrome, специализирующийся на API для работы с устройствами
     zh: 专注于硬件 API 的 Google Chrome 软件工程师
+nabeelalshamma:
+  title:
+    en: Nabeel Al-Shamma
+    es: Nabeel Al-Shamma
+    ja: Nabeel Al-Shamma
+    ko: Nabeel Al-Shamma
+    pt: Nabeel Al-Shamma
+    ru: Nabeel Al-Shamma
+    zh: Nabeel Al-Shamma
+  description:
+    en: Principal Scientist at Adobe
+    es: Principal Scientist at Adobe
+    ja: Principal Scientist at Adobe
+    ko: Principal Scientist at Adobe
+    pt: Principal Scientist at Adobe
+    ru: Principal Scientist at Adobe
+    zh: Principal Scientist at Adobe
 nattestad:
   title:
     en: Thomas Nattestad
@@ -606,6 +628,16 @@ thomassteiner:
     en: 'Thomas Steiner'
   description:
     en: 'Tom is a Developer Advocate'
+jarekfoksa:
+  title:
+    en: Jarek Foksa
+  description:
+    en: "Boxy SVG developer"
+ashleygullen:
+  title:
+    en: 'Ashley Gullen'
+  description:
+    en: 'Founder of Scirra and lead developer of Construct'
 jannispetersen:
   title:
     en: Jannis Petersen
@@ -1424,3 +1456,33 @@ nmichell:
     en: 'Nancy Michell'
   description:
     en: 'Technical Writer'
+jakobdamjensen:
+  title:
+    en: Jakob Dam Jensen
+  description:
+    en: Software Product Manager at LEGO® Education
+oliverdunk:
+  title:
+    en: 'Oliver Dunk'
+  description:
+    en: 'Developer Relations Engineer for Chrome Extensions'
+shhnjk:
+  title:
+    en: 'Jun Kokatsu'
+  description:
+    en: 'Security Engineer for the Web'
+wanderview:
+  title:
+    en: 'Ben Kelly'
+  description:
+    en: 'Software Engineer'
+alispivak:
+  title:
+    en: 'Ali Spivak'
+  description:
+    en: 'Developer Relations Lead for Chrome Extensions'
+thiagodiogo:
+  title:
+    en: 'Thiago Diogo'
+  description:
+    en:  'Staff Technical Solutions Consultant'

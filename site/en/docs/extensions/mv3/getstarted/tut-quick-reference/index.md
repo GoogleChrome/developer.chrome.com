@@ -202,12 +202,7 @@ The [`"minimum_chrome_version"`][manifest-min-version] explains how this key beh
 
 {% endAside %}
 
-Now let's register the omnibox event listeners at the top level of the script. The
-[`onInputChanged()`][omnibox-input-changed] takes the current user input and a [suggestResult][omnibox-suggest]
-object. The keywords in storage will populate the suggestions. When user enters the omnibox keyword
-(`api`) in the address bar followed by tab or space, Chrome will display a list of suggestions.
-
-Now, let's register the omnibox event listeners at the top level of the script. When the user enters the omnibox keyword `api` in the address bar followed by tab or space, Chrome will display a list of suggestions based on the keywords in storage. The [onInputChanged()][omnibox-input-changed] event, which takes the current user input and a suggestResult object, is responsible for populating these suggestions.
+Now, let's register the omnibox event listeners at the top level of the script. When the user enters the omnibox keyword (`api`) in the address bar followed by tab or space, Chrome will display a list of suggestions based on the keywords in storage. The [`onInputChanged()`][omnibox-input-changed] event, which takes the current user input and a [suggestResult][omnibox-suggest] object, is responsible for populating these suggestions.
 
 {% Label %}sw-omnibox.js:{% endLabel %}
 
@@ -382,7 +377,7 @@ function createDomElement(html) {
 
 The final step is to add a message handler to our service worker that sends a reply to the content script with the daily tip. 
 
-{% Label %}sw-api.js:{% endLabel %}
+{% Label %}sw-tips.js:{% endLabel %}
 
 ```js
 ...

@@ -123,6 +123,12 @@ Each new frame will need to request storage access individually and it will auto
 
 Refreshing, reloading, or otherwise recreating the iframe will require requesting access again.
 
+### Cookie requirements
+
+Cookies must specify both the `SameSite=None` and `Secure` attributes as rSA only [provides access for cookies that are already marked for use in cross-site contexts](https://privacycg.github.io/storage-access/#cookies). 
+
+Cookies with `SameSite=Lax`, `SameSite=Strict`, or without a `SameSite` attribute are for first-party use only and will **never** be shared in a cross-site context regardless of rSA.
+
 ### Security
 
 For rSAFor, subresource requests require [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS) headers or `crossorigin` attribute on the resources, ensuring explicit opt-in.

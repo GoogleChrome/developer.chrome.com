@@ -8,24 +8,22 @@ description: An overview of the valid values for the permissions property in man
 ---
 
 To use most [Chrome APIs][api-ref], your extension must declare its intent in the permissions fields
-of the [manifest][doc-manifest]. Extensions can request four categories of permissions, specified using the
-respective keys in the manifest:
+of the [manifest](#manifest). Extensions can request four categories of permissions, specified using the respective keys in the manifest:
 
-`permissions`
-: Contains items from a list of known strings (such as `"geolocation"`).
+`"permissions"`
+: contain items from a list of known strings (such as `"geolocation"`).
 
-`optional_permissions`
-: Are like regular `permissions`, but are granted by the extension's user at runtime, rather than in advance.
+`"optional_permissions"`
+: are like regular `permissions`, but are granted by the extension's user at runtime, rather than in advance.
 
-`host_permissions`
-: Contains one or more [match patterns][doc-match] that give access to one or more hosts.
+`"host_permissions"`
+: contain one or more [match patterns][doc-match] that give access to one or more hosts.
 
-`optional_host_permissions`
-: Are like regular `host_permissions`, but are granted by the extension's user at runtime, rather than in advance.
+`"optional_host_permissions"`
+: are like regular `host_permissions`, but are granted by the extension's user at runtime, rather than in advance.
 
-Permissions help to limit damage if your extension is compromised by
-malware. Some permissions are displayed to users for their consent before
-installation or at runtime as needed, as detailed in [Permission Warnings][doc-warning].
+Permissions help to limit damage if your extension is compromised by malware. Some permission warning are displayed to users for their consent before
+installation or at runtime, as detailed in [Permission with warnings](#warnings).
 
 {% Aside %}
 You should use [optional permissions][api-perms] wherever the functionality of your extension
@@ -36,34 +34,93 @@ See the [platform vision][vision-optperms] to better understand this recommendat
 If an API requires you to declare a permission in the [manifest][doc-manifest], then its documentation tells you how
 to do so. For example, the [Storage][api-storage] page shows how to declare the `"storage"` permission.
 
-Here's an example of the permissions part of a manifest file:
+## Manifest {: #manifest}
+
+The following is an example of the permissions part of a [manifest][doc-manifest] file:
 
 {% Label %}manifest.json:{% endLabel %}
 
 ```json
 {
+  "name": "Permissions Extension",
   ...
   "permissions": [
-    "tabs",
-    "bookmarks",
-    "unlimitedStorage"
+    "activeTab",
+    "contextMenus",
+    "storage"
   ],
   "optional_permissions": [
-    "unlimitedStorage"
+    "topSites",
   ],
   "host_permissions": [
-    "https://www.blogger.com/",
-    "https://*.google.com/"
+    "https://www.developer.chrome.com/*"
   ],
-  "optional_host_permissions": [
-    "https://*/*",
-    "http://*/*"
+  "optional_host_permissions":[
+    "https://*/*", 
+    "http://*/*" 
   ],
   ...
+  "manifest_version": 3
 }
 ```
 
-The following table lists the currently available permissions:
+## Permissions with warnings {:#warnings }
+
+When an extension requests multiple permissions, and many of them display
+warnings on installation, the user will see a list of warnings, like in the following example:
+
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/VVyazEJTquUP7aa6OZn0.png",
+       alt="Extension permission warnings on installation", height="369", width="486" %}
+
+Users are more likely to trust an extension with limited warnings or when permissions are explained
+to them. Consider implementing optional permissions or a less powerful API to avoid alarming
+warnings. For a complete list of best practices, see [Permission warnings guidelines][doc-warning].
+
+## Allow access {: #allow_access }
+ 
+If your extension needs to run on `file://` URLs or needs to operate in incognito mode, users will have to give the extension access on the extension's details page. 
+
+{% Details %}
+{% DetailsSummary %}
+
+### How to allow access to file URLs and incognito pages
+
+{% endDetailsSummary %}
+
+1. Right-click on the extension icon in Chrome.
+2. Choose **Manage Extension**.
+
+    <figure>
+    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/hZZMDG0SEoCaHWkfwqbY.png", alt="Extension context menu", width="363", height="334", class='screenshot' %}
+    <figcaption>
+    Extension menu
+    </figcaption>
+  </figure>
+
+3. Scroll down to enable access to file URLs or incognito mode.
+
+    <figure>
+      {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/CXSHPxG4giUkzfGR67mY.png",
+          alt="Allow file URLs and incognito mode on the extension detail page", height="137", width="674", class="screenshot" %}
+      <figcaption>
+      Access enabled to file URLs and incognito mode.
+      </figcaption>
+    </figure>
+
+{% endDetails %}
+
+To detect if the user has allowed access, you can use [`extension.isAllowedIncognitoAccess()`][incognito-allow] or 
+[`extension.isAllowedFileSchemeAccess()`][file-scheme-allow].
+
+## Viewing and updating warnings {: #view-update-warnings }
+
+When you [load an extension locally][doc-load-unpacked], you won't see any permission warnings. This
+section explains how to view permission warnings and what users will experience when you add a new
+[permission that triggers a warning][section-warnings].
+
+## Permissions list {: #permissions }
+
+The following table lists the currently available permissions. For a list of permission warnings, see the [Permission warnings][doc-warning-table] table.
 
 <table>
   <tbody>
@@ -315,6 +372,10 @@ The following table lists the currently available permissions:
       <td><code>"sessions"</code></td>
       <td>Gives access to the <a href="/docs/extensions/reference/sessions/">chrome.sessions</a> API.</td>
     </tr>
+    <tr id="sidePanel">
+      <td><code>"sidePanel"</code></td>
+      <td>Gives access to the <a href="/docs/extensions/reference/sidePanel/">chrome.sidePanel</a> API.</td>
+    </tr>
     <tr id="storage">
       <td><code>"storage"</code></td>
       <td>Gives access to the <a href="/docs/extensions/reference/storage/">chrome.storage</a> API.</td>
@@ -380,6 +441,10 @@ The following table lists the currently available permissions:
       <td><code>"wallpaper"</code></td>
       <td>Gives access to the <a href="/docs/extensions/reference/wallpaper/">chrome.wallpaper</a> API.</td>
     </tr>
+    <tr id="webAuthenticationProxy">
+      <td><code>"webAuthenticationProxy"</code></td>
+      <td>Gives access to the <a href="/docs/extensions/reference/webAuthenticationProxy/">chrome.webAuthenticationProxy</a> API.</td>
+    </tr>
     <tr id="webNavigation">
       <td><code>"webNavigation"</code></td>
       <td>Gives access to the <a href="/docs/extensions/reference/webNavigation/">chrome.webNavigation</a> API.</td>
@@ -402,3 +467,6 @@ The following table lists the currently available permissions:
 [doc-match]: /docs/extensions/mv3/match_patterns
 [doc-warning]: /docs/extensions/mv3/permission_warnings
 [vision-optperms]: /docs/extensions/mv3/intro/platform-vision/#improved-user-visibility-and-control
+[doc-warning-table]: /docs/extensions/mv3/permission_warnings/#permissions_with_warnings
+[file-scheme-allow]: /docs/extensions/reference/extension/#method-isAllowedFileSchemeAccess
+[incognito-allow]: /docs/extensions/reference/extension/#method-isAllowedIncognitoAccess

@@ -50,6 +50,7 @@ declare global {
     // The following properties are added dynamically
     locale: string;
     url: string;
+    [key: string]: any;
   }
 }
 

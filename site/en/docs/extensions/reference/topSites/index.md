@@ -19,9 +19,6 @@ You must declare the "topSites" permission in your [extension's manifest][2] to 
 }
 ```
 
-## Examples
-
-You can find samples of this API in [Samples][1].
 
 [1]: /docs/extensions/mv2/samples#search:topsites
 [2]: /docs/extensions/mv3/manifest

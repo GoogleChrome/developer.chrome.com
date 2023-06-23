@@ -2,6 +2,8 @@ attribution-reporting:
   en: 'Attribution Reporting'
 interest-ads:
   en: 'Interest-based advertising'
+integration-guide:
+  en: 'Integration guide'
 ondevice-auctions:
   en: 'On-device auctions for custom audiences'
 cross-site-storage:
@@ -70,6 +72,8 @@ attribution-reporting-debugging-resources:
   en: 'Generate debug reports'
 attribution-reporting-changing:
   en: 'API updates'
+attribution-reporting-developer-guide:
+  en: 'Developer guide'
 attribution-reporting-handbook:
   en: 'Developer handbook'
 attribution-reporting_description:

@@ -161,6 +161,6 @@ select it in the Elements panel.
 
 {% Img src="image/admin/JinOsqhnOBZIf6A2UdWD.png", alt="Highlight the grid", width="800", height="524" %}
 
-[1]: https://jec.fyi/demo/css-grid-fruit
-[2]: https://jec.fyi/demo/css-grid-snack
+[1]: https://jec.fish/demo/css-grid-fruit
+[2]: https://jec.fish/demo/css-grid-snack
 [3]: /docs/devtools/open

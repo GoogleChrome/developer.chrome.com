@@ -47,7 +47,6 @@ This screenshot demonstrates the effect the above examples would have on Develop
 
 ![Extension icon panel on DevTools toolbar](devtools-panels.png)
 
-You can find examples that use this API in [Samples][5].
 
 [1]: /docs/extensions/mv3/devtools
 [2]: /docs/extensions/reference/extension/

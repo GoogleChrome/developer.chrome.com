@@ -4,7 +4,7 @@ title: Migrate to a service worker
 subhead: 'Replacing background or event pages with a service worker'
 description: 'A service worker enables extensions to run only when needed, saving resources.'
 date: 2023-03-09
-updated: 2023-05-01
+updated: 2023-05-19
 ---
 
 {% Partial 'extensions/mv3-support.md' %}
@@ -226,7 +226,9 @@ Instead, use the [Alarms API](/docs/extensions/reference/alarms/). As with other
 
 {% Compare 'better', 'Manifest V3 service worker' %}
 ```js
-setTimeoutForUpdate({minutes:3}); //custom method
+async function startAlarm(name, duration) {
+  await chrome.alarms.create(name, { delayInMinutes: 3 });
+}
 
 chrome.alarms.onAlarm.addListener(() => {
   chrome.action.setIcon({
