@@ -4,7 +4,7 @@ title: 'First-Party Sets: 開発者ガイド'
 date: '2023-01-12'
 updated: '2023-05-10'
 thumbnail: image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/SV7SXAQRcVnBZEgjgxYc.png
-alt: A diagram showing an embedded site calling requestStorageAccess.
+alt: requestStorageAccess を呼び出す埋め込みサイトを示す図。
 tags:
   - privacy
 authors:
@@ -51,7 +51,7 @@ FPS には、以下のようなユースケースが挙げられます。
 - **サインイン**。関連プロパティ間でのサインインをサポートします。ただし、一部のユースケースでは、[FedCM API](/docs/privacy-sandbox/fedcm/) も適している場合があります。
 - **分析**。サービスの質を向上させるために、関連プロパティ全体でユーザージャーニーの分析と測定を展開します。
 
-## FPS integration details
+## FPS 統合の詳細
 
 ### Storage Access API
 
@@ -67,7 +67,7 @@ FPS には、以下のようなユースケースが挙げられます。
 
 現在ストレージ埋め込みサイトにアクセスできるかどうかの確認には、[`Document.hasStorageAccess()`](https://developer.mozilla.org/docs/Web/API/Document/requestStorageAccess) メソッドを使用できます。
 
-The method returns a promise that resolves with a boolean value indicating whether the document already has access to its cookies or not. The promise also returns true if the iframe is same-origin as the top frame.
+このメソッドは、ドキュメントが既に Cookie にアクセスできるかどうかを示すブール値で解決される Promise を返します。この Promise は、iframe が最上位フレームと同じオリジンである場合にも true を返します。
 
 {% BrowserCompat 'api.Document.hasStorageAccess' %}
 
@@ -77,11 +77,11 @@ The method returns a promise that resolves with a boolean value indicating wheth
 
 {% BrowserCompat 'api.Document.requestStorageAccess' %}
 
-### requestStorageAccessFor in Chrome
+### Chrome の requestStorageAccessFor
 
 SAA では、埋め込みサイトによるストレージへのアクセスリクエストは、ユーザー操作を受け取った `<iframe>` 要素内からのみ許可されています。
 
-This poses challenges in adopting SAA for top-level sites that use cross-site images or script tags requiring cookies.
+このため、Cookie を必要とするクロスサイト画像やスクリプト タグを使用するトップレベル サイトに SAA を導入する際に課題が生じます。
 
 これに対処するために、Chrome はトップレベル サイトが [`Document.requestStorageAccessFor()`](https://privacycg.github.io/requestStorageAccessFor/)（rSAFor）を使用して特定のオリジンに代わってストレージ アクセスをリクエストする方法を実装しました。
 
@@ -129,17 +129,17 @@ rSAは、[クロスサイト コンテキストでの使用がすでにマーク
 
 rSAFor の場合、サブリソースリクエストには [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS) ヘッダーまたはリソースの `crossorigin` 属性が必要で、明示的なオプトインが保証されます。
 
-## Implementation examples
+## 導入例
 
-### Requesting access to storage from an embedded cross-origin iframe
+### 埋め込まれたクロスオリジン iframe からストレージへのアクセスをリクエストする
 
 {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/SV7SXAQRcVnBZEgjgxYc.png", alt="", width="800", height="402" %}
 
-#### Check if you have storage access
+#### ストレージにアクセスできるかどうかを確認する
 
 すでにストレージにアクセスできるかどうかを確認するには、`document.hasStorageAccess()` を使用します。
 
-If the promise resolves true, you can access storage in the cross-site context. If it resolves false, you need to request storage access.
+Promise が true に解決されると、クロスサイト コンテキストでストレージにアクセスできます。 false に解決された場合は、ストレージ アクセスをリクエストする必要があります。
 
 ```js
 document.hasStorageAccess().then((hasAccess) => {
@@ -151,7 +151,7 @@ document.hasStorageAccess().then((hasAccess) => {
 });
 ```
 
-#### Request storage access
+#### ストレージへのアクセスをリクエストする
 
 ストレージ アクセスをリクエストする必要がある場合は、まずストレージ アクセス権限 `navigator.permissions.query({name: 'storage-access'})` をチェックして、ユーザー ジェスチャが必要か、自動的に付与されるかを確認します。
 
@@ -264,15 +264,15 @@ function checkCookie() {
   }
 ```
 
-## How to test locally
+## ローカルでテストする方法
 
-### Prerequisites
+### 前提条件
 
 FPS をローカルでテストするには、Chrome 113 以降をコマンドラインで起動して使用します。
 
 今後のリリース前の Chrome 機能をプレビューするには、<a>ベータ版</a>または <a>Canary</a> 版の Chrome をダウンロードしてください。
 
-### Example
+### 例
 
 {% Aside %} 実際の FPS デモを見るには、[https://first-party-sets.glitch.me/](https://first-party-sets.glitch.me/) にアクセスしてください。 {% endAside %}
 
@@ -291,7 +291,7 @@ https://first-party-sets.glitch.me/
 - `PageInfoCookiesSubpage` は、URL バーからアクセス可能な PageInfo セクションに FPS を表示できるようにします。
 - `PrivacySandboxFirstPartySetsUI` は、Chrome 設定の［プライバシーとセキュリティ］→［Cookie およびその他のサイト データ］（chrome://settings/cookies）で、FPS UI の［関連サイトがグループ内のアクティビティを表示できるようにする］オプションを有効にします。
 
-### Declare a set locally
+### ローカルでセットを宣言する
 
 セットをローカルで宣言するには、セットのメンバーである URL を含む JSON オブジェクトを作成し、それを `--use-first-party-set` に渡します。
 
@@ -306,7 +306,7 @@ https://first-party-sets.glitch.me/
 2. ［一般設定］で、［サード パーティの Cookie をブロックする］が有効になっていることを確認します。
 3. サブオプションの［関連サイトがグループ内のアクティビティを表示できるようにする］も有効になっていることを確認します。
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/dPck21yLTAF5cU59DzdZ.png", alt="Screenshot of Chrome settings page", width="800", height="486" %}
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/dPck21yLTAF5cU59DzdZ.png", alt="Chrome 設定ページのスクリーンショット", width="800", height="486" %}
 
 ### クロスサイト Cookie にアクセスできることを検証する
 
@@ -332,14 +332,14 @@ PR が作成されると、一連のチェックが行われ、手順 2 の要�
 - PR が失敗すると、提出が失敗した理由に関する追加情報がエラー メッセージに表示されます（[例](https://github.com/GoogleChrome/first-party-sets/pull/26)）。
 - セットの送信を管理するすべての技術的チェックは GitHub で実施されるため、技術的チェックに起因するすべての送信の失敗は GitHub で表示できます。
 
-## Enterprise policies
+## エンタープライズポリシー
 
-To meet the needs of enterprise users Chrome has a couple of enterprise policies in place:
+エンタープライズ ユーザーのニーズを満たすために、Chrome にはいくつかのエンタープライズ ポリシーが用意されています。
 
 - First-Party Sets と統合できない可能性があるシステムは、[`FirstPartySetsEnabled` ポリシー](https://chromeenterprise.google/policies/#FirstPartySetsEnabled)を使用して Chrome のすべてのエンタープライズ インスタンスで First-Party Sets 機能を無効にすることができます。
 - 一部のエンタープライズ システムには、First-Party Set 内のドメインとは異なる登録可能なドメインを持つ内部限定サイト（イントラネットなど）があります。これらのサイトを（ドメインが機密である可能性があるため）公開せずに First-Party Set の一部として扱う必要がある場合は、[`FirstPartySetsOverrides` ポリシー](https://chromeenterprise.google/policies/#FirstPartySetsOverrides)を使用してパブリックの First-Party Set を拡張または上書きできます。
 
-## Share feedback
+## フィードバックを共有する
 
 GitHub へのセットの提出や Storage Access API と `requestStorageAccessFor` API の使用を通じ、プロセスに関する経験や遭遇したイシューを共有することができます。
 
