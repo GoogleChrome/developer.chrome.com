@@ -19,7 +19,7 @@ In practice, this works as follows: across all aggregatable values associated wi
 
 In the [explainer](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md), the contribution budget is referred to as the L1 budget. L1 budget = `CONTRIBUTION_BUDGET`. 
 
-For the current origin trial (started in Chrome 101), `CONTRIBUTION_BUDGET = 216 = 65,536`.
+At the time of this writing, `CONTRIBUTION_BUDGET = 2^16 = 65,536`.
 The value of the contribution budget is arbitrary. What's important is that you can use this budget to maximize signal-to-noise ratio on the summary values. 
 
 The contribution budget applies across all metrics on a single source event (ad click or view event). The sum of all aggregatable values associated with the conversion(s) attributed to a given ad click or view (source) should be under the budget.
