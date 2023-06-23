@@ -2,12 +2,12 @@
 layout: 'layouts/doc-post.njk'
 title: 'Privacy Sandbox video library'
 subhead: >
-  Privacy Sandbox videos
+  Find overviews, walkthroughs, and conceptual discussions in these Privacy Sandbox videos.
 description: >
   Privacy Sandbox video library
 date: 2023-06-26
 authors:
-  - samdutton
+  - nmichell
 ---
 
 If you're looking for Privacy Sandbox resources, check out the videos below. Some are recorded Privacy Sandbox office hours. You can find upcoming office hours on the [events page](/docs/privacy-sandbox/events/).
