@@ -18,7 +18,7 @@ authors:
 
 ## この記事の対象者
 
-This article covers the basics of Attribution Reporting and explains some underlying concepts, but doesn't go into much technical detail.
+この記事では、アトリビューション レポートの基本を取り上げ、いくつかの基礎的な概念について説明しますが、技術的な詳細についてはあまり触れません。
 
 - **広告またはアドテック**の分野に従事している場合は、サード パーティ Cookie によって現在サポートされている機能をこの API がどのようにサポートするかについて学ぶことができます。[レポートの生成](#use-cases-and-features)方法の詳細については、[API のユースケース](#how-does-the-attribution-reporting-api-work)をご覧ください。
 - **開発者またはソフトウェアエンジニア**の場合は、[システムの完全な概要](/docs/privacy-sandbox/attribution-reporting/system-overview/)にアクセスするか、[実験して API に参加](/docs/privacy-sandbox/attribution-reporting-experiment/)してください。
@@ -27,7 +27,7 @@ This article covers the basics of Attribution Reporting and explains some underl
 
 {% Aside %}
 
-In the future, the Attribution Reporting API may serve use cases that are not related to advertising.
+将来的には、Attribution Reporting API は広告に関連しないユースケースにも対応する可能性があります。
 
 {% endAside %}
 
@@ -133,7 +133,7 @@ Attribution Reporting API では、広告主またはサードバーティのア
 
 {% Details %}
 
-{% DetailsSummary 'h3' %} Differences between the API proposed by Chrome and the API proposed by WebKit {% endDetailsSummary %}
+{%Detailssummary 'h3' %} Chrome が提案する API と WebKit が提案する API の違い {% endDetailssummary %}
 
 この 2 つの API は異なるものの、Chrome と WebKit はオープンに連携しながら開発者エクスペリエンスの簡素化を進めています。たとえば、属性名や[レポート用の JSON の構造](https://github.com/privacycg/private-click-measurement/issues/30)を統一しています。
 
@@ -245,11 +245,11 @@ Attribution Reporting API を使用すると、相互にリンクされている
 
 イベントレベルレポートは、次のプライバシーメカニズムに従って、サイト間でユーザーを追跡することなく、コンバージョンに関するインサイトを提供します。
 
-- No cross-site identifier is used and no detailed cross-site browsing activity leaves the device.
+- クロスサイト識別子は使用されず、詳細なクロスサイト閲覧アクティビティがデバイスから送信されることはありません。
 - イベントレベルレポートは、広告側（`news.example`）の 64 ビットの情報を、コンバージョン側（`shop.example`）の 1 ビットまたは 3 ビットのみに関連付けます。64 ビットは、個々のユーザー ID にマッピングするには十分な情報ですが、これらの 64 ビットは、非常に少ないクロスサイト情報（1 ビットまたは 3 ビット）とのみリンクでき、識別子を保持するには十分ではありません。
     - 広告側 64 ビットは新しい情報ではありません。ユーザー ID は現在、広告側ですでに利用可能です。`news.example` または `adtech.example` は `news.example` の特定のユーザーのアクティビティをすでに認識しています。
 - 悪用やクロスサイトトラッキングを防止するために、追加の保護が適用されています。
-    - The reports are sent with a **delay**.
+    - レポートは**遅れて**送信されます。
     - コンバージョンデータには**ノイズが含まれて**おり、一定の割合で偽のレポートが生成されます。
     - アトリビューション付きコンバージョンレポートの数は、クリックまたはビューごとに制限されています。{% endDetails %}
 
