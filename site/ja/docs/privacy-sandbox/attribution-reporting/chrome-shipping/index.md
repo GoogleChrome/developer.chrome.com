@@ -1,10 +1,8 @@
 ---
 layout: layouts/doc-post.njk
 title: Chrome が Attribution Reporting API の出荷を計画している理由
-description: |2-
-
-  Web Incubator Community Group で開発段階にある API を 2023 年前半に出荷する予定である理由を説明します。
-date: '2022-12-15'
+description: Web Incubator Community Group で開発段階にある API を 2023 年前半に出荷する予定である理由を説明します。
+date: 2022-12-15
 authors:
   - csharrison
   - cilvento
