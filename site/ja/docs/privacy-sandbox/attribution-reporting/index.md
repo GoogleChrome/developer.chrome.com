@@ -1,14 +1,12 @@
 ---
 layout: layouts/doc-post.njk
 title: アトリビューションレポート
-subhead: |2
+subhead: |2-
 
-  Measure when an ad click or view leads to a conversion, such as a
-  purchase on an advertiser site.
-description: |2
+  広告のクリックまたはビューが、広告主サイトでの購入などのようにコンバージョンにつながったタイミングを測定します。
+description: |2-
 
-  Measure when an ad click or view leads to a conversion, such as a
-  purchase on an advertiser site.
+  広告のクリックまたはビューが、広告主サイトでの購入などのようにコンバージョンにつながったタイミングを測定します。
 date: '2021-05-18'
 updated: '2023-03-14'
 authors:
@@ -18,14 +16,14 @@ authors:
 
 {% YouTube id='UGA74CIcom8' %}
 
-## Who is this for?
+## この記事の対象者
 
 This article covers the basics of Attribution Reporting and explains some underlying concepts, but doesn't go into much technical detail.
 
-- If you work in **advertising or ad tech**, you'll learn about how this API to supports functions that are currently supported by third-party cookies. Check out the API [use cases](#use-cases-and-features), with a more details of how [the reports are generated](#how-does-the-attribution-reporting-api-work).
-- If you're a **developer or software engineer**, head over to the [full system overview](/docs/privacy-sandbox/attribution-reporting/system-overview/) or [experiment and participate](/docs/privacy-sandbox/attribution-reporting-experiment/) with the API.
+- **広告またはアドテック**の分野に従事している場合は、サード パーティ Cookie によって現在サポートされている機能をこの API がどのようにサポートするかについて学ぶことができます。[レポートの生成](#use-cases-and-features)方法の詳細については、[API のユースケース](#how-does-the-attribution-reporting-api-work)をご覧ください。
+- **開発者またはソフトウェアエンジニア**の場合は、[システムの完全な概要](/docs/privacy-sandbox/attribution-reporting/system-overview/)にアクセスするか、[実験して API に参加](/docs/privacy-sandbox/attribution-reporting-experiment/)してください。
 
-**Advertisers and publishers that rely on ad tech platforms** for conversion measurement don't need to use the API directly. You may be interested in understanding how Attribution Reporting works if your ad tech plans to integrate with this API.
+**アドテックプラットフォームでコンバージョン測定を行っている広告主とサイト運営者**は、直接 API を使用する必要はありません。ご利用のアドテックがこの API を統合することを計画している場合は、アトリビューション レポートの仕組みを理解しておくことをお勧めします。
 
 {% Aside %}
 
@@ -35,7 +33,7 @@ In the future, the Attribution Reporting API may serve use cases that are not re
 
 ## Attribution Reporting API とは何ですか？
 
-Today, ad conversion measurement often relies on [third-party cookies](https://developer.mozilla.org/docs/Web/HTTP/Cookies#Third-party_cookies). Browsers are restricting access to third-party cookies because these can be used to track users across sites and hinder user privacy.
+現在、広告コンバージョンの測定は多くの場合、[サード パーティ Cookie](https://developer.mozilla.org/docs/Web/HTTP/Cookies#Third-party_cookies) に依存しています。サード パーティ Cookie は、サイト間でユーザーを追跡してユーザーのプライバシーを妨害する目的で使用される可能性があるため、ブラウザはサード パーティ Cookie へのアクセスを制限しています。
 
 Attribution Reporting API は、サードパーティ Cookie を使用することなくプライバシーの保護を担保しながらこういった測定を可能にしています。
 
@@ -45,39 +43,39 @@ Attribution Reporting API は、サードパーティ Cookie を使用するこ�
 - サードパーティのアドテクプロバイダーを使用している広告主のサイト内の広告など、**サードパーティ** iframe 内の広告。
 - SNS や検索エンジンの検索結果ページ上の広告や、広告主が独自に配信する広告などを含む**ファーストパーティ**コンテキストの広告。
 
-If you're unfamiliar with some of these terms or concepts, consult the [Privacy Sandbox glossary](/docs/privacy-sandbox/glossary/).
+これらの用語や概念については、[プライバシー サンドボックス用語集](/docs/privacy-sandbox/glossary/)をご覧ください。
 
-## Try the API
+## API を試す
 
-- The Attribution Reporting API is available for experiments in the [relevance and measurement origin trial](/docs/privacy-sandbox/unified-origin-trial/).
-- Test locally in your browser. [Set a *flag*](/docs/web-platform/chrome-flags/), which tells the Chrome browser to enable specific experimental features.
+- Attribution Reporting API は、実験用に[広告関連のオリジントライアル](/docs/privacy-sandbox/unified-origin-trial/)で提供されています。
+- ブラウザでローカルにテストできます。[*フラグ*を設定](/docs/web-platform/chrome-flags/)して、Chrome ブラウザに特定の実験的機能を有効にするよう指示します。
 
-If you're interested in experimenting with the API, head over to [Attribution Reporting: experiment and participate](/docs/privacy-sandbox/attribution-reporting-experiment/).
+API の実験に興味がある場合は、[アトリビューション レポート: 実験と参加](/docs/privacy-sandbox/attribution-reporting-experiment/)をご覧ください。
 
 {% Partial 'privacy-sandbox/feedback-aside.njk' %}
 
 {: #changes }
 
-### API changes
+### API の変更点
 
 - [API の変更点](/docs/privacy-sandbox/attribution-reporting-updates/) を追跡する。
-- Learn why we plan to [ship the Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/chrome-shipping) in the first half of 2023.
+- [Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/chrome-shipping) を 2023 年前半に出荷する予定としている理由をご覧ください。
 
 {% Aside %}
 
-Attribution Reporting was formerly known as the Event Conversion Measurement API. [The name was changed](/docs/privacy-sandbox/attribution-reporting-introduction/) in 2022, as the original event-level scope expanded to cover additional measurement use cases.
+アトリビューション レポートは以前、Event Conversion Measurement API として知られていました。当時のイベントレベルの範囲が他の測定ユースケースにまで拡大されたことから、[この名前は 2022 年に変更](/docs/privacy-sandbox/attribution-reporting-introduction/)されました。
 
 {% endAside %}
 
 {: #status }
 
-### Availability
+### 提供
 
 {% Partial 'privacy-sandbox/timeline/attribution-reporting-features.njk' %}
 
 {% Aside %}
 
-For an overview of the status of all Privacy Sandbox APIs, see the [Privacy Sandbox timeline](https://privacysandbox.com/timeline).
+すべての Privacy Sandbox API のステータスの概要については、[プライバシーサンドボックスのタイムライン](https://privacysandbox.com/timeline)をご覧ください。
 
 {% endAside %}
 
@@ -85,46 +83,46 @@ For an overview of the status of all Privacy Sandbox APIs, see the [Privacy Sand
 
 Attribution Reporting API では、広告主またはサードバーティのアドテクプロバイダーへと送信可能な 2 種類のレポートを通して、さまざまな種類の統計情報にアクセスできます。 これら 2 種類のレポートは同時使用が可能であり、補完的な関係にあります。
 
-- [**Event-level reports**](#event-level-reports) associate a particular ad click or view (on the ad side) with data on the conversion side. Conversion-side data is very limited, and the data is noised (meaning that for a small percentage of cases, random data is sent instead of real reports). This preserves user privacy by preventing a joining of user identity across sites. As an extra privacy protection, reports are not sent immediately.
+- [**イベントレベルレポート**](#event-level-reports)は、特定の広告のクリックまたはビュー（広告側）をコンバージョン側のデータに関連付けます。コンバージョン側のデータは非常に限られており、データにはノイズが含まれています（つまり、少数のケースでは、実際のレポートの代わりにランダムなデータが送信されます）。これにより、サイト間でのユーザー ID の結合が防止され、ユーザーのプライバシーが保護されます。プライバシーをさらに保護するために、レポートはすぐには送信されません。
 - <strong>集計レポート</strong>は、広告側の特定のイベントには関連付けられていません。 こういったレポートは、イベントレベルレポートよりもリッチで忠実度の高いコンバージョンデータを提供しています。 複数のプライバシー技術を組み合わせることで、サイト間でアイデンティティが結び付けられてしまうリスクを軽減させます。
 
 ### イベントレベルレポート
 
 **イベントレベルレポート**は、広告のクリックや表示を大まかなコンバージョンデータに関連付けます。
 
-<figure class="screenshot">  {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/8PZhfv4UXYxt2vTKRNI2.png",  alt="Event-level report", width="400", height="180" %}  <figcaption>    Example event-level report: Click ID 200400600 on <code>news.example</code> (attached to user ID Bob_Doe on <code>news.example</code>) has led to a purchase on <code>shop.example</code>.  </figcaption> </figure>
+<figure class="screenshot">  {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/8PZhfv4UXYxt2vTKRNI2.png",  alt="Event-level report", width="400", height="180" %}  <figcaption>    イベントレベルレポートの例: <code>news.example</code> のクリック ID 200400600（<code>news.example</code> のユーザー ID Bob_Doe に接続）は <code>shop.example</code> での購入につながっている。</figcaption></figure>
 
 イベントレベルレポートは、以下の用途に適しています。
 
-- **Optimization**. Answer questions like "How can I improve my return on investment?". In particular, these reports can be used to optimize ad placement, as ad-side unique IDs can be made available in the reports. Event-level reports can provide training data for machine learning models.
-- **Coarse reporting**, where very little information is needed about the conversion. The current limit is 3 bits of conversion data for clicks⏤this means a conversion can be assigned one of eight categories⏤and 1 bit for views. Encoding of granular conversion-side data, such as a specific price or conversion time is not supported in event-level reports.
+- **最適化**。「投資回収率を改善するにはどうすればよいか？」などの質問に答えます。広告側の一意の ID をレポートで使用できるようになるため、こういったレポートは特に広告プレースメントの最適化に使用できます。イベントレベルレポートは機械学習モデルのトレーニングデータを提供でます。
+- コンバージョンに関する情報がほとんど必要ない**粗粒レポート**。現在は、クリックに対して 3 ビット（コンバージョンは 8 つのカテゴリの 1 つに割り当てられています）とビューに対して 1 ビットのコンバージョンデータに制限されています。イベントレベルレポートでは、特定の価格やコンバージョン時間などの細かいコンバージョン側データのエンコードはサポートされていません。
 - **不正行為の検出**。 一部のレポートのデータからはスパム行為や不正な操作の特定に使用可能なパターンを読み取ることができるため、広告に関する不正の検出や分析に役立ちます。
 
 ### 要約レポート (これまでの集計レポート)
 
 一方**要約レポート**は、より詳細なコンバージョンデータと、クリック/ビューデータやコンバージョンデータを結び付けるために必要となる柔軟性を提供します。
 
-Learn more about [summary reports](/docs/privacy-sandbox/summary-reports/).
+[要約レポート](/docs/privacy-sandbox/summary-reports/)についての詳細をご覧ください。
 
-<figure>  {% Img    src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/TxgT3W5pNEZhWgDSYIY3.png", alt="Example of insights from summary reports.", width="400", height="180"%}  <figcaption>Here's an example of insights from summary reports: CampaignID 1234567 on <code>news.example</code> has led to 518 conversions on <code>shoes.example</code>, and to a total spend of $38174. Half of the conversions were from users in NYC, USA.</figcaption> </figure>
+<figure>  {% Img    src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/TxgT3W5pNEZhWgDSYIY3.png", alt="Example of insights from summary reports.", width="400", height="180"%}  <figcaption>要約レポートのインサイトの例です。<code>news.example</code> の CampaignID 1234567 は、<code>shoes.example</code> で 518 件のコンバージョンにつながっており、合計支出は $38174 となっています。このコンバージョンの半数は米国ニューヨーク市のユーザーです。</figcaption></figure>
 
-Summary reports are best suited for reporting use cases. These reports help answer questions such as: "What is my return on investment?"
+要約レポートは、ユースケースの報告に最適です。これらのレポートを使って、「投資回収率は？」などの質問に答えられます。
 
-Usage of summary reports for optimization—for example, to optimize for a purchase value, which is not supported by event-level reports (because the conversion data is too coarse)—is an area of active research.
+最適化を目的とした要約レポートの使用方法（コンバージョンデータが粗粒すぎるイベントレポートレポートではサポートされていない購入価格の最適化など）は、活発に調査されている分野です。
 
 ### その他の機能
 
-Other features proposed for this API include:
+この API に提案されているその他の機能には、以下のようなものが含まれています。
 
-- [App-to-web attribution](https://github.com/WICG/conversion-measurement-api/blob/main/app_to_web.md): see or click an ad in an app and convert on the web.
-- [Cross-device attribution](https://github.com/WICG/attribution-reporting-api/blob/main/archive/cross_device.md): see or click an ad on mobile and convert on desktop.
+- [アプリからウェブへのアトリビューション](https://github.com/WICG/conversion-measurement-api/blob/main/app_to_web.md): アプリでの広告閲覧またはクリックをウェブでコンバージョンする。
+- [クロスデバイスのアトリビューション](https://github.com/WICG/attribution-reporting-api/blob/main/archive/cross_device.md): モバイルでの広告閲覧またはクリックをデスクトップでコンバージョンする。
 
 {% Aside %}
 
-In a future without third-party cookies, this API would be combined with other privacy-preserving ads APIs to cover end-to-end use cases:
+サード パーティ Cookie が存在しない将来には、この API は他のプライバシー保護広告 API と組み合わされて、エンドツーエンドのユースケースに対応することになります。
 
-- Remarketing: see [Protected Audience API](/docs/privacy-sandbox/fledge/)
-- Interest-based ad selection: see [Topics](/docs/privacy-sandbox/topics/)
+- リマーケティング: [Protected Audience API](/docs/privacy-sandbox/fledge/) を参照
+- インタレストベース広告の選択: [Topics](/docs/privacy-sandbox/topics/) を参照
 
 {% endAside %}
 
@@ -148,7 +146,7 @@ Chrome が 提案する Attribution Reporting API は、Safari/WebKit が提案�
 
 {% endDetails %}
 
-### Browser configuration {: #browser-configuration }
+### ブラウザ構成 {: #browser-configuration }
 
 - ユーザーは、`chrome://settings/privacySandbox` のユーザー設定から API の利用を停止することができます。
 - **シークレット**モードの使用中は API が無効になります。
@@ -162,27 +160,27 @@ Chrome が 提案する Attribution Reporting API は、Safari/WebKit が提案�
 
 ## サイトではどのようにしてアクセスを制御することができますか？ {: #sites-control }
 
-If the API is available in a given browser, it's available by default in any given site, both in top-level documents and scripts, and in same-origin iframes.
+特定のブラウザで API を使用できる場合、デフォルトで、任意のサイト（トップレベルのドキュメントとスクリプトの両方、および same-origin の iframe）で使用できます。
 
-Arbitrary third-parties—for example, cross-origin ad iframes that were not added to the page via a script that has top-level access—can't use the API without a publisher's or advertiser's knowledge: in these iframes, the Attribution Reporting API needs to be explicitly enabled via [Permissions policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy).
+任意のサード パーティ（トップレベルのアクセス権を持つスクリプトを介してページに追加されていないクロスオリジン広告 iframe など）は、サイト運営者または広告主が認識していない状態で API を使用することはできません。これらの iframe では、[権限ポリシー](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy)を通じて明示的に Attribution Reporting API が有効にされている必要があります。
 
 ```html
 <iframe src="..." allow="attribution-reporting"></iframe>
 ```
 
-Third parties with top-level access that add cross-origin iframes to a page can enable the Attribution Reporting API via [Permissions policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy) as well.
+クロスオリジン iframe をページに追加するサード パーティにトップレベルのアクセス権がある場合も、[権限ポリシー](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy)で Attribution Reporting API を有効にできます。
 
 {% Aside %}
 
-### Security benefits
+### セキュリティ上のメリット
 
-By doing this, a script with top-level access allows the frames it adds itself to use Attribution Reporting. Only a third-party script that is trusted by the site should be given top-level access, so this isn't an issue.
+これにより、トップレベルのアクセス権を持つスクリプトは、スクリプト自体が追加するフレームでアトリビューション レポートを使用できるようになります。トップレベルのアクセス権は、サイトによって信頼されているサード パーティのスクリプトにのみ与えられるため、これは問題ではありません。
 
-The main security advantage of the policy lies somewhere else: frames that were added without a top-level script shouldn't be trusted by default to register sources or triggers (unless their embedder is already trusted). This is why the top-level site is required to explicitly enable the API for these iframes.
+このポリシーのセキュリティに関する主なメリットは他の点にあります。トップレベルのスクリプトを使用せずに追加されたフレームがデフォルトで信頼されて、ソースまたはトリガーを登録してしまっては問題です（埋め込み側がすでに信頼されている場合を除きます）。トップレベル サイトでこれらの iframe の API を明示的に有効にすることが求められているのは、このためです。
 
 {% endAside %}
 
-A site can disable the Attribution Reporting API for all parties—including scripts with top-level access—by sending the HTTP response header:
+サイトは、HTTP レスポンスヘッダーを送信することで、すべてのパーティ（トップレベルのアクセスを持つスクリプトを含む）に対して Attribution Reporting API を無効にすることができます。
 
 ```text
 Permissions-Policy: attribution-reporting=()
@@ -190,15 +188,15 @@ Permissions-Policy: attribution-reporting=()
 
 ## Attribution Reporting API はどのように機能するのですか？
 
-The Attribution Reporting API enables measureing two events that are linked together: an event on a publisher's website, such as a user viewing or clicking an ad, with a subsequent conversion on an advertiser site.
+Attribution Reporting API を使用すると、相互にリンクされている 2 つのイベント、つまりユーザーによる広告のビューやクリックなどのサイト運営者サイト上のイベントと、その後の広告主サイトでのコンバージョンを測定できます。
 
 {: #billing }
 
 {% Aside %}
 
-The Attribution Reporting API may not be suited for cost-per-conversion billing needs, because of the noise added to event-level and [summary reports](/docs/privacy-sandbox/aggregation-service/#noise-scale).
+イベントレベルレポートと[要約レポート](/docs/privacy-sandbox/aggregation-service/#noise-scale)にはノイズが追加されるため、Attribution Reporting API は、コンバージョン単価の請求ニーズには適していない可能性があります。
 
-You can share any feedback regarding the impact on various billing models by the Attribution Reporting API on [GitHub](https://github.com/WICG/attribution-reporting-api/issues).
+[GitHub](https://github.com/WICG/attribution-reporting-api/issues) で Attribution Reporting API によるさまざまな請求モデルへの影響に関するフィードバックをお寄せください。
 
 {% endAside %}
 
@@ -208,63 +206,63 @@ You can share any feedback regarding the impact on various billing models by the
 
 ### 要約レポート
 
-<figure> {% Img   src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/un70ZcJVrWepdWWsnMIY.png", alt="", width="800", height="1024" %}  <figcaption style="text-align:left;">Summary report generation</figcaption> </figure>
+<figure> {% Img   src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/un70ZcJVrWepdWWsnMIY.png", alt="", width="800", height="1024" %}  <figcaption style="text-align:left;">要約レポートの生成</figcaption></figure>
 
-Summary reports are generated as follows:
+要約レポートは以下のように生成されます。
 
-- A user clicks or views a specially configured ad. The browser—on the user's local device—records this event, alongside pre-specified attribution configuration data.
-- Later on, when the user converts, the browser matches this detailed click or view event (known as the *attribution source event*) with detailed conversion data (known as *attribution trigger data*). The dimensions of detail captured are pre-defined by an ad tech company, and the browser follows specific logic that is defined by the ad tech. The browser outputs this data in an *aggregatable report*.
-- Aggregatable reports are encrypted by the browser and sent to an ad tech server. From the ad tech server, the aggregatable reports are sent to the [aggregation service](/docs/privacy-sandbox/aggregation-service/) to produce a summary report.
-- Summary reports are then made available to the ad tech. Note that summary reports are not delayed to the same extent as event-level reports.
+- ユーザーが、特別に構成された広告をクリックまたは表示します。すると、ユーザーのローカルデバイス上のブラウザは、事前に指定されたアトリビューション構成データとともにそのイベントを記録します。
+- 後で、ユーザーがコンバージョンすると、ブラウザはその詳細なクリックまたはビューイベント（*アトリビューション ソース イベント*）を詳細なコンバージョン データ（*アトリビューション トリガー データ*）と照合します。キャプチャされる情報の次元はアドテックによって事前に定義されており、ブラウザはアドテックが定義した特定のロジックに従います。ブラウザはこのデータを*集計可能なレポート*に出力します。
+- 集計可能なレポートはブラウザによって暗号化され、アドテックサーバーに送信されます。集計可能なレポートはアドテックサーバーから[集計サービス](/docs/privacy-sandbox/aggregation-service/)に送信されて、要約レポートが生成されます。
+- 要約レポートはその後でアドテックで利用できるようになります。要約レポートは、イベントレベルレポートほど遅延しないことに注意してください。
 
-Read more about [summary reports](/docs/privacy-sandbox/summary-reports/).
+[要約レポート](/docs/privacy-sandbox/summary-reports/)についての詳細をお読みください。
 
 ## プライバシー
 
-Unlike third-party cookies, the Attribution Reporting API allows advertising companies to gain insights into conversions **without tracking an individual's activity across sites**.
+サード パーティ Cookie とは異なり、Attribution Reporting API を使用すると、**アドテック会社はサイト間での個人のアクティビティを追跡することなく**、コンバージョンに関するインサイトを得ることができます。
 
 ボブという人物を例に挙げましょう。 ボブは、`news.com`でニュースを読んでいるときにある広告を目にしました。 その 1 週間後、ボブは `shoes.example` で靴を購入します。
 
 現時点でこういったコンバージョンは**クロスサイト識別子**として使用されるサードパーティ Cookie によって追跡されています。 サードパーティ Cookie を使用することでアドテク企業は `news.example` と `shoes.example` でボブが行ったアクティビティの詳細な情報にアクセスできるようになり、それらの情報を統合してボブの詳細な人物像を構築することができます。 最終的にアドテク企業は、ボブの所在地、サイトの閲覧習慣、`news.com` での記事の好み、さらには `shoes.com` での購入内容、アクティビティ、クレジットカードなどの情報を手に入れることができます。 こういったクロスサイトでの情報の結び付けは広告のコンバージョン測定においては有効となります。 しかしながら、これはユーザーのプライバシーを侵害します。ボブのアクティビティは、サイト間に渡って高いレベルで追跡されてしまうことになります。
 
-{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/aurePszyAGz9Osu3G0XN.jpg", alt="Side-by-side view of today's web (joined identity) and tomorrow's web (partitioned identity)", width="800", height="314" %}
+{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/aurePszyAGz9Osu3G0XN.jpg", alt="今日のウェブ（結合したアイデンティティ）と未来のウェブ（パーティション化されたアイデンティティ）の対照比較", width="800", height="314" %}
 
-A small amount of information is joined across sites—enough to measure conversions, but not enough to track Bob's activity across sites in detail. Bob's activity on `news.example` and on `shoes.example` remains separate.
+サイト間で結合されるのは少量の情報です。コンバージョンの測定に十分な量であっても、ボブのアクティビティをサイト間で詳細に追跡するには不十分です。`news.example` と `shoes.example` でのボブのアクティビティは分離したままとなります。
 
-### Protections in each report type
+### レポートタイプごとの保護
 
-**Event-level reports** link an ad-side identifier with a small amount of conversion-side data. While they do provide cross-site information about a conversion, but the conversion-side information is too coarse to join user identity across sites.
+**イベントレベルレポート**は、広告側の識別子をコンバージョン側のデータの一部にリンクします。コンバージョンに関連するサイト間の情報は提供されますが、コンバージョン側の情報が大まかすぎるため、サイト間でユーザーのアイデンティティを結び付けることはできません。
 
 **要約レポート**では詳細な分析情報が提供されますが、提供されるのは集計後の情報のみです。こういった集計可能レポートの内容は暗号化された上でアドクノロジー側へと送信されるため、アドテクノロジー側では集計サービスを利用しない限りレポートから情報を得ることができません。 集計サービスでは、ノイズが含まれる集計へのアクセスのみが提供されます。
 
 レート制限などを含む追加のプライバシー保護が、イベントレベルレポートと集計レポートの両方に課せられています。
 
-<figure> {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/mDdo2XLyGLBCAlgH7MPZ.png", alt="", width="800", height="1237" %} </figure>
+<figure> {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/mDdo2XLyGLBCAlgH7MPZ.png", alt="", width="800", height="1237" %}</figure>
 
 {: #event-level-noise }
 
-{% Details %} {% DetailsSummary 'h3' %} In detail: Event-level reports and privacy {% endDetailsSummary %}
+{% Details %} {% DetailsSummary 'h3' %} 詳細: イベントレベルレポートとプライバシー  {% endDetailsSummary %}
 
-Event-level reports provide conversion insights without tracking users across sites, by following the following privacy mechanisms:
+イベントレベルレポートは、次のプライバシーメカニズムに従って、サイト間でユーザーを追跡することなく、コンバージョンに関するインサイトを提供します。
 
 - No cross-site identifier is used and no detailed cross-site browsing activity leaves the device.
-- Event-level reports associate 64 bits of information on the ad side (`news.example`) with only 1 bit or 3 bits on the conversion side (`shop.example`). 64 bits are enough information to be mapped to an individual user identifier, but these 64 bits can only be linked with very little cross-site information: 1 bit or 3 bits, which are not enough to hold an identifier.
-    - The ad-side 64 bits are not new information. A user ID can already be available on the ad side today. `news.example` or `adtech.example` already knows about a certain user's activity on `news.example`.
+- イベントレベルレポートは、広告側（`news.example`）の 64 ビットの情報を、コンバージョン側（`shop.example`）の 1 ビットまたは 3 ビットのみに関連付けます。64 ビットは、個々のユーザー ID にマッピングするには十分な情報ですが、これらの 64 ビットは、非常に少ないクロスサイト情報（1 ビットまたは 3 ビット）とのみリンクでき、識別子を保持するには十分ではありません。
+    - 広告側 64 ビットは新しい情報ではありません。ユーザー ID は現在、広告側ですでに利用可能です。`news.example` または `adtech.example` は `news.example` の特定のユーザーのアクティビティをすでに認識しています。
 - 悪用やクロスサイトトラッキングを防止するために、追加の保護が適用されています。
     - The reports are sent with a **delay**.
-    - The conversion data is **noised**: a certain percentage of the time, fake reports are generated.
-    - The number of attributed conversion reports is limited per click or view. {% endDetails %}
+    - コンバージョンデータには**ノイズが含まれて**おり、一定の割合で偽のレポートが生成されます。
+    - アトリビューション付きコンバージョンレポートの数は、クリックまたはビューごとに制限されています。{% endDetails %}
 
-{% Details %} {% DetailsSummary 'h3' %} In detail: Summary reports and privacy {% endDetailsSummary %}
+{% Details %} {% DetailsSummary 'h3' %} 詳細: 要約レポートとプライバシー  {% endDetailsSummary %}
 
-Summary reports associate a click or view event with detailed conversion data. They provide conversion insights without tracking users across sites, by using the following privacy mechanisms:
+要約レポートは、詳細なクリックまたはビューイベントを詳細なコンバージョンデータに関連付けます。以下のプライバシー保護メカニズムによって、サイト間でユーザーを追跡することなくコンバージョンのインサイトを提供しています。
 
 - クロスサイト識別子を使用しません。
 - 各アトリビューションは、要約レポートの結果に複数のコントリビューションを設定することが可能です。 ユーザーは特定のクリック (またはビュー) やコンバージョンについて複数のアトリビューションをトリガーすることができます。
-- Data is aggregated up to the level of many events (many users) and no individual events can be observed precisely. When looking at the aggregated data, as the level of detail increases so does the relative noise on that data increases as well. Slices of data that aggregate a lot of events and users are more accurate to preserve usefulness.
-- The raw reports that associate a detailed click or view event with detailed conversion data are encrypted and not readable by the ad tech company. This data can only be read by the [aggregation service](/docs/privacy-sandbox/aggregation-service).
+- データは多数のイベント（多数のユーザー）レベルで集計されており、個別のイベントを正確に把握することはできません。集計されたデータを掘り下げていくと、詳細度が上がるにつれてそのデータに関連するノイズも増加していきます。 多数のイベントやユーザーが集計されているデータスライスの方が、有用性を維持するために重要となる精度が高くなります。
+- 詳細なクリックまたはビューイベントと詳細なコンバージョンデータが関連付けられている生レポートは暗号化されており、アドテック企業が解読することはできません。[集計サービス](/docs/privacy-sandbox/aggregation-service)のみがこのデータを読み取ることが可能です。
 - 悪用やクロスサイトトラッキングを防止するために、追加の保護が適用されています。
-    - Reports are sent with random delays.
+    - レポートはランダムに遅れて送信されます。
     - 異なるデータスライスに対するクエリについてはレートが制限されます。
 
 {% endDetails %}
