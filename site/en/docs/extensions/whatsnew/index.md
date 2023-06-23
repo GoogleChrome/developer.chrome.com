@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-06-21
+updated: 2023-06-23
 tags:
   - extensions-news
 
@@ -14,6 +14,15 @@ tags:
 <!--lint disable first-heading-level-->
 
 Check this page often to learn about changes to Chrome extensions, extensions documentation, or related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about some of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).) The [Chrome schedule](https://chromiumdash.appspot.com/schedule) lists stable and beta release dates.
+
+### New guidance and sample: Learn how to use Google Analytics 4 in your Chrome extension {: #guide-ga }
+
+<p class="color-secondary-text type--caption">Posted on <time>June 23, 2023</time></p>
+
+We published new Google Analytics and geolocation guidance and samples:
+
+* An [updated version of our Google Analytics guidance](/docs/extensions/mv3/tut_analytics/) explaining how you can use [Google Analytics 4](https://support.google.com/analytics/answer/10089681) in your Chrome extension. We've also added a working [Google Analytics 4 sample](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.google-analytics) to our Github sample repository. Check out [`google-analytics.js`](https://github.com/GoogleChrome/chrome-extensions-samples/blob/main/functional-samples/tutorial.google-analytics/scripts/google-analytics.js) for the relevant code related to Google Analytics.
+* A new [Geolocation guide](/docs/extensions/mv3/geolocation/) and [three samples](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples) demonstrating how to access geolocation in service workers, content scripts, popups and side panels.
 
 ### Chrome 115: Specify multiple reasons in chrome.offscreen.createDocument() {: #m115-offscreen-multiple-reasons }
 
