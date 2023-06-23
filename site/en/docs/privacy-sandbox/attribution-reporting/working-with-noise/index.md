@@ -128,7 +128,7 @@ The higher the epsilon value, the lower the noise and the lower the privacy prot
 
 An important part of allocating budget between different keys is understanding how many times a given event can occur. For example, an advertiser may only care about one purchase for each click, but might be interested in up to 3 “product page view” conversions. To support these use-cases, you may also want to leverage the following API features that enable you to control how many reports are generated, and which conversions are counted:
 
--   Filtering. [Read more about filtering](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit#bookmark=id.qdq6jtxqf6ia).
+-   Filtering. [Read more about filtering](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit#bookmark=kix.h4a74yd4tm8e).
 -   Deduplication. [Read more about deduplication](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit#heading=h.o45jud4u6whw).
 
 <!-- Filtering and Deduplication links needed later -->
