@@ -3,8 +3,8 @@ layout: 'layouts/blog-post.njk'
 title: Better full screen mode with the Keyboard Lock API
 subhead: >
   Use the Keyboard Lock API to capture the Escape key in full screen mode.
-date: 2023-06-22
-# updated: 2023-06-22
+date: 2023-06-26
+# updated: 2023-06-26
 hero:
 alt:
 authors:
@@ -83,7 +83,7 @@ the snippet above, because it needs to show both behaviors.
 To use this progressive enhancement in practice, just copy the snippet above.
 It's designed to work with no required changes, even with existing full screen
 code. As an example see this
-[PR](https://github.com/Lexxie9952/fcw.org-server/pull/203) for the game
+[PR](https://github.com/Lexxie9952/fcw.org-server/pull/204) for the game
 [Freeciv](https://www.freecivweb.org/). Once the PR is merged, you can cancel
 all in-game dialogs by pressing **Escape**.
 
