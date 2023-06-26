@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "User controls for host permissions: transition guide"
+seoTitle: "MV2 - User controls for host permissions: transition guide [Deprecated]"
 date: 2018-10-01
 updated: 2020-04-27
 description: >

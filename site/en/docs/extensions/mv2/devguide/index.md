@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Extension development overview"
+seoTitle: "MV2 - Extension development overview [Deprecated]"
 date: 2012-09-17
 updated: 2018-06-12
 description: An overview of Chrome Extension capabilities and components.

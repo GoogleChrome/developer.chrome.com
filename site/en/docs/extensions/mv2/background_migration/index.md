@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Migrate to event-driven background scripts"
+seoTitle: "MV2 - Migrate to event-driven background scripts [Deprecated]"
 date: 2018-04-23
 #updated: YYYY-MM-DD
 description: >

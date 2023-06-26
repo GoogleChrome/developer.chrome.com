@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Disabled Web Features"
+seoTitle: "Disabled Web Features"
 #date: TODO
 #updated: TODO
 #description: TODO

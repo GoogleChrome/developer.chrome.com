@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Content scripts"
+seoTitle: "MV2 - Content scripts [Deprecated]"
 date: 2012-09-17
 updated: 2019-03-11
 description: An explanation of content scripts and how to use them in your Chrome Extension.

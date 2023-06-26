@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manifest - Sandbox"
+seoTitle: "Manifest V2- Sandbox [Deprecated]"
 date: 2013-05-12
 updated: 2018-04-26
 description: Reference documentation for the sandbox property of manifest.json.

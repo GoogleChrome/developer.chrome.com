@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Samples"
+seoTitle: "MV2 Samples [Deprecated]"
 #date: TODO
 #updated: TODO
 #description: TODO

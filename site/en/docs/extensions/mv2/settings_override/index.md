@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Overriding Chrome settings"
+seoTitle: "MV2 - Overriding Chrome settings [Deprecated]"
 date: 2014-02-14
 updated: 2016-11-07
 description: How to override Chrome settings from a Chrome Extension.

@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "User Authentication"
+seoTitle: "Chrome Apps - User Authentication [Deprecated]"
 date: 2012-09-17
 updated: 2018-05-14
 description: How to authenticate users in your Chrome App.

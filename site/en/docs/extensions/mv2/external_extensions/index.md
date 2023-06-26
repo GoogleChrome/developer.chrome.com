@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Alternative extension distribution options"
+seoTitle: "MV2 - Alternative extension distribution options [Deprecated]"
 date: 2012-09-17
 updated: 2018-06-12
 description: How to distribute Chrome Extensions outside of the Chrome Web Store.

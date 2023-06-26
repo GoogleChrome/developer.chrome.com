@@ -1,7 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Analytics"
-seoTitle: "Google Analytics for Chrome apps"
+seoTitle: "Google Analytics for Chrome apps [Deprecated]"
 date: 2013-08-01
 #updated: TODO
 description: How to integrate Google Analytics into your Chrome App.

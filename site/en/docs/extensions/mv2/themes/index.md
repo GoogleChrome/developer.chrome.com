@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "What are themes?"
+seoTitle: "MV2 - What are themes? [Deprecated]"
 date: 2012-09-18
 updated: 2022-07-14
 description: Guidelines on how to create a theme.

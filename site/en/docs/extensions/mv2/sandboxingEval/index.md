@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Using eval in Chrome extensions"
+seoTitle: "MV2 - Using eval in Chrome extensions [Deprecated]"
 date: 2012-09-18
 updated: 2014-05-22
 description: How to use eval() in a Chrome Extension.

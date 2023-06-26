@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Installing extensions on Linux"
+seoTitle: "MV2 - Installing extensions on Linux [Deprecated]"
 date: 2017-12-14
 updated: 2018-03-23
 description: How to package, host, and update crx files from a personal server.

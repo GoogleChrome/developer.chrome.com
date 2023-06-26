@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manifest - Default Locale"
+seoTitle: "Manifest V2 - Default Locale [Deprecated]"
 date: 2013-05-12
 updated: 2018-04-26
 description: Reference documentation for the default_locale property of manifest.json.

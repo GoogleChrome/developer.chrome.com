@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Protect user privacy"
+seoTitle: "MV2 - Protect user privacy [Deprecated]"
 date: 2018-03-18
 updated: 2018-04-26
 description: Guidelines for ensuring that your Chrome Extension protects user privacy.
