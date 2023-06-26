@@ -37,8 +37,6 @@ DevTools gets a number of improvements to help you identify and debug issues wit
 
 - The **Network** panel consistently populates the **Initiator** column with links to the exact line that references a stylesheet that failed to load.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/yLxplrnFZTGYMpkdoppC.png", alt="The Initiator column with links in the Network panel.", width="800", height="560" %}
-
 - The **Issues** panel lists all stylesheets loading issues, including broken URLs, failed requests, and misplaced `@import` statements.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JlcKWWo8z99LqXiHFk53.png", alt="The Issues panel with links to to sources and requests.", width="800", height="668" %}
