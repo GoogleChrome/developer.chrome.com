@@ -31,6 +31,7 @@ For a non-technical introduction, see the [Topics overview on privacysandbox.com
 **Request headers** The initial topics proposal required developers to call `document.browsingTopics()` from a cross-origin iframe. We received feedback that this requirement would introduce latency that could pose challenges in digital ad auctions and potentially slow down web pages. Last year, we announced support for Topics via headers, in requests initiated via fetch and (temporarily) XHR. Recently, we announced that we plan to extend support to request headers for iframes that include a `browsingtopics` attribute. These changes will improve the performance of Topics, and limit potential negative impacts on developers and users.
 
 **Observing ancestor topics** Chrome has updated the definition of "observation" to include all ancestors of a given topic. Now, if a caller observes "/Shopping/Apparel/Footwear/Boots," they will observe Boots, but also Shopping, Apparel, and Footwear. Previously, in order for a caller to observe Shopping, Apparel, or Footwear, a caller must have observed a user visit a page with that topic.
+
 For more information on these and upcoming changes, refer to [Enhancements to the Topics API](/blog/topics-enhancements/).
 
 ## Chrome’s commitment to Topics
