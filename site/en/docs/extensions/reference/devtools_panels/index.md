@@ -47,11 +47,8 @@ This screenshot demonstrates the effect the above examples would have on Develop
 
 ![Extension icon panel on DevTools toolbar](devtools-panels.png)
 
-<<<<<<< Updated upstream
-=======
 To try this API, install the [devtools panels API example][5] from the [chrome-extension-samples][6]
 repository.
->>>>>>> Stashed changes
 
 [1]: /docs/extensions/mv3/devtools
 [2]: /docs/extensions/reference/extension/
