@@ -170,7 +170,7 @@ While [content scripts][11] live in an [isolated world][12], they are not immune
   (e.g., [Spectre][14]), and to being taken over by an attacker if a malicious web page compromises
   the renderer process.
 
-Sensitive work should be performed in a dedicated process, such as the extension's service worker. 
+Operations using high permission APIs or sensative data (such as a user's private information), should be performed in a dedicated process, such as the extension's service worker. 
 Avoid accidentally exposing extension privileges to content scripts:
 
 - Assume that [messages from a content script][16] might have been crafted by an attacker (e.g.
