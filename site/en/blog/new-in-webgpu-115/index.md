@@ -5,7 +5,7 @@ description: "Supported WGSL language extensions, experimental support for Direc
 hero: "image/vvhSqZboQoZZN9wBvoXq72wzGAf1/IOiG6dNWepqrGWtntbBx.png"
 alt: "What's new in WebGPU logo"
 date: 2023-06-20
-#updated: YYYY-MM-DD
+updated: 2023-06-26
 authors:
   - beaufortfrancois
 tags:
@@ -33,20 +33,6 @@ myRenderPassEncoder.setVertexBuffer(0, myVertexBuffer);
 
 // Then later, unset vertex buffer in slot 0.
 myRenderPassEncoder.setVertexBuffer(0, null);
-```
-
-## Lost device returned by GPUAdapter requestDevice()
-
-If the [`requestDevice()`](https://developer.mozilla.org/docs/Web/API/GPUAdapter/requestDevice) method on [`GPUAdapter`](https://developer.mozilla.org/docs/Web/API/GPUAdapter) fails because it has been already used to create a [`GPUDevice`](https://developer.mozilla.org/docs/Web/API/GPUDevice), it will now  fulfill with a `GPUDevice` immediately marked as lost, rather than returning a promise that rejects with `null`. See [issue chromium:1234617](https://bugs.chromium.org/p/chromium/issues/detail?id=1234617).
-
-```js
-const adapter = await navigator.gpu.requestAdapter();
-const device1 = await adapter.requestDevice();
-
-// New! The promise is not rejected anymore with null.
-const device2 = await adapter.requestDevice();
-// And the device is immediately marked as lost.
-const info = await device2.lost;
 ```
 
 ## Experimental support for Direct3D 11
