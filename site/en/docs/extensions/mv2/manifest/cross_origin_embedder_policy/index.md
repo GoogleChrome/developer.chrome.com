@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Cross-origin embedder policy"
+seoTitle: "MV2 - Cross-origin embedder policy [Deprecated]"
 date: 2021-08-03
 #updated:
 description: Reference documentation for the cross_origin_embedder_policy property of manifest.json.

@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Run Chrome Apps on Mobile Using Apache Cordova"
+seoTitle: "Run Chrome Apps on Mobile Using Apache Cordova [Deprecated]"
 date: 2014-04-15
 #updated: TODO
 description: A guide on how to use Apache Cordova to set up your Chrome App to run on Android and iOS devices.

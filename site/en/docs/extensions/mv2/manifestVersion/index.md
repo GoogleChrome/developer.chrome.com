@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manifest version"
+seoTitle: "MV2 - Manifest version [Deprecated]"
 date: 2012-09-18
 updated: 2019-08-12
 description: >

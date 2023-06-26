@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manage events with background scripts"
+seoTitle: "MV2 - Manage events with background scripts [Deprecated]"
 date: 2012-09-17
 updated: 2018-05-01
 description: How to respond to browser triggers (events) from a Chrome Extension background script.

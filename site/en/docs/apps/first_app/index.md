@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Create Your First App"
+seoTitle: "Create Your First Chrome App [Deprecated]"
 date: 2012-09-17
 updated: 2015-06-22
 description: A tutorial on how to create a basic Chrome App.

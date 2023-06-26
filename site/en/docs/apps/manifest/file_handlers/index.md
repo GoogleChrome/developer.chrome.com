@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manifest - File Handlers"
+seoTitle: "Chrome Apps Manifest - File Handlers [Deprecated]"
 date: 2013-05-11
 updated: 2016-04-19
 description: Reference documentation for the file_handlers property of manifest.json.

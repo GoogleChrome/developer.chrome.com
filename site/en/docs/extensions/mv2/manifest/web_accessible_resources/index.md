@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manifest - Web Accessible Resources"
+title: "Manifest V2 - Web Accessible Resources [Deprecated]"
 date: 2013-05-12
 updated: 2018-05-14
 description: Reference documentation for the web_accessible_resources property of manifest.json.

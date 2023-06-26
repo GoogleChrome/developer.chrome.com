@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Message passing"
+seoTitle: "MV2 - Message passing [Deprecated]"
 date: 2012-09-18
 updated: 2019-07-17
 description: How to pass messages between extensions and content scripts.

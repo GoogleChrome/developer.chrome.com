@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Frequently asked questions"
+seoTitle: "MV2 - Frequently asked questions [Deprecated]"
 date: 2014-02-28
 updated: 2020-11-20
 description: Frequently asked questions about Chrome Extensions.

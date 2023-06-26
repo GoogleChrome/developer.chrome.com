@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: "Step 5: Add Images From the Web"
+seoTitle: "Step 5: Add Images From the Web [Deprecated]"
 date: 2014-10-17
 updated: 2018-05-14
 description: How to add images to your Chrome App using XHR and ObjectURL.
