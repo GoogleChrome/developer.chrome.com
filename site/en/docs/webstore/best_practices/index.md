@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Best Practices
 date: 2017-08-30
-updated: 2023-05-10
+updated: 2023-06-09
 description: >
   Best practices on how to implement your extension and list it in the Chrome Web Store.
 ---
@@ -86,22 +86,21 @@ To learn more, see [Creating a great listing page][great-listing-page].
 
 See [Supplying Images][cws-images] for guidelines on the images you should supply to the store.
 
-### Choose your extension's category well
+### Choose your extension's category well {: #choose-category-well }
 
-The developer console lets you specify a category for each extension. Choose the category
-that is most appropriate:
+The developer console lets you specify a category for each extension. Choose the most appropriate category:
 
-* Accessibility
-* Blogging
-* Developer Tools
-* Fun
-* News & Weather
-* Photos
-* Productivity
-* Search Tools
-* Shopping
-* Social & Communication
-* Sports
+- Accessibility
+- Blogging
+- Developer Tools
+- Fun
+- News & Weather
+- Photos
+- Productivity
+- Search Tools
+- Shopping
+- Social & Communication
+- Sports
 
 [oauth2-tutorial]: /docs/extensions/mv3/tut_oauth/
 [completing-listing]: /docs/webstore/cws-dashboard-listing/

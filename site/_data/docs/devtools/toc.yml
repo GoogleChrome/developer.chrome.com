@@ -48,6 +48,7 @@
     - url: /docs/devtools/workspaces/
     - url: /docs/devtools/overrides/
     - url: /docs/devtools/javascript/reference/
+    - url: /docs/devtools/wasm/
 - title: i18n.docs.devtools.network
   sections:
     - url: /docs/devtools/network/

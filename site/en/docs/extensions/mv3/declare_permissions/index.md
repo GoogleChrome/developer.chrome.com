@@ -468,3 +468,5 @@ The following table lists the currently available permissions. For a list of per
 [doc-warning]: /docs/extensions/mv3/permission_warnings
 [vision-optperms]: /docs/extensions/mv3/intro/platform-vision/#improved-user-visibility-and-control
 [doc-warning-table]: /docs/extensions/mv3/permission_warnings/#permissions_with_warnings
+[file-scheme-allow]: /docs/extensions/reference/extension/#method-isAllowedFileSchemeAccess
+[incognito-allow]: /docs/extensions/reference/extension/#method-isAllowedIncognitoAccess

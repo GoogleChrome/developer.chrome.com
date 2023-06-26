@@ -10,7 +10,7 @@ updated: 2019-10-04
 
 Lighthouse 보고서의 '기회' 섹션은 사용자 브라우저가 페이지 콘텐츠의 첫 번째 바이트를 수신하는 데 걸리는 시간인 '첫 번째 바이트까지의 시간'을 보고합니다.
 
-<figure>   {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/V0P3MeqXSwGIL7fJbBRj.png", alt="Lighthouse Server 응답 시간이 짧음(TTFB) 감사의 스크린샷", width="800", height="95" %}</figure>
+<figure>   {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/Nc4yOYetwgmU6y6Ovcrx.png", alt="Lighthouse Server 응답 시간이 짧음(TTFB) 감사의 스크린샷", width="800", height="118" %}</figure>
 
 ## 느린 서버 응답 시간이 성능에 영향을 미침
 

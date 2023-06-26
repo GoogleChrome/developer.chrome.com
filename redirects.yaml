@@ -21,6 +21,9 @@ redirects:
 
 # Simple redirects
 
+- from: /articles/origin-private-file-system/
+  to: https://web.dev/origin-private-file-system/
+
 - from: /en/articles/multi-screen-window-placement/
   to: /articles/window-management/
 
@@ -576,6 +579,8 @@ redirects:
 # Lighthouse redirects
 - from: /docs/lighthouse/best-practices/password-inputs-can-be-pasted-into/
   to: /docs/lighthouse/best-practices/paste-preventing-inputs/
+- from: /docs/lighthouse/performance/time-to-first-byte
+  to: /docs/lighthouse/performance/server-response-time
 
 # Fugu redirects
 - from: /blog/fugu-showcase/

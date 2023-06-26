@@ -36,7 +36,6 @@ chrome.devtools.network.onRequestFinished.addListener(
 );
 ```
 
-You can find more examples that use this API in [Samples][3].
 
 [1]: /docs/extensions/mv3/devtools
 [2]: https://www.softwareishard.com/blog/har-12-spec/

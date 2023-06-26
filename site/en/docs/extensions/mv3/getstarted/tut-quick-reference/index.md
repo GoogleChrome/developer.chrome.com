@@ -377,7 +377,7 @@ function createDomElement(html) {
 
 The final step is to add a message handler to our service worker that sends a reply to the content script with the daily tip. 
 
-{% Label %}sw-api.js:{% endLabel %}
+{% Label %}sw-tips.js:{% endLabel %}
 
 ```js
 ...

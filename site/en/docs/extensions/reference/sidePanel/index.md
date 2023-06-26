@@ -2,10 +2,6 @@
 api: sidePanel
 ---
 
-{% Aside 'important' %}
-The Side Panel API is currently available in [Chrome Beta 114](https://www.google.com/chrome/beta/).
-{% endAside %}
-
 ## Overview {: #overview }
 
 Chrome features a built-in side panel that enables users to view more information alongside the main content of a webpage. The Side Panel API allows extensions to display their own UI in the side panel, enabling persistent experiences that complement the user's browsing journey. 
