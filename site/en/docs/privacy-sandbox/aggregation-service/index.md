@@ -141,8 +141,8 @@ reports, refer to the
 
 Summary report generation is dependent on your API usage. Learn more about
 generating summary reports for the
-[Private Aggregation API](/docs/privacy-sandbox/summary-reports#private-aggregation) 
-and the [Attribution Reporting API](/docs/privacy-sandbox/summary-reports#attribution-reporting).
+[Private Aggregation API](/docs/privacy-sandbox/private-aggregation/) 
+and the [Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/).
 
 ## Test the Aggregation Service {: #test}
 
