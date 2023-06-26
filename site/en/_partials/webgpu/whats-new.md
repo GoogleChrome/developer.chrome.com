@@ -2,6 +2,14 @@
 
 A list of everything that has been covered in the [What's New in WebGPU](/tags/new-in-webgpu/) series.
 
+### Chrome 116 {: #chrome116 }
+
+* [WebCodecs integration](/blog/new-in-webgpu-116/#webcodecs-integration)
+* [Lost device returned by GPUAdapter requestDevice()](/blog/new-in-webgpu-116/#lost-device-returned-by-gpuadapter-requestdevice)
+* [Keep video playback smooth if importExternalTexture() is called](/blog/new-in-webgpu-116/#keep-video-playback-smooth-if-importexternaltexture-is-called)
+* [Spec conformance](/blog/new-in-webgpu-116/#spec-conformance)
+* [Improving developer experience](/blog/new-in-webgpu-116/#improving-developer-experience)
+* [Dawn updates](/blog/new-in-webgpu-116/#dawn-updates)
 
 ### Chrome 115 {: #chrome115 }
 
