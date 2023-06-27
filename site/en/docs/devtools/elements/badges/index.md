@@ -49,7 +49,7 @@ To learn how to debug grid layout, see [Inspect CSS grid](/docs/devtools/css/gri
 
 ## Subgrid {: #subgrid }
 
-[Subgrid](https://developer.mozilla.org/docs/Web/CSS/CSS_grid_layout/Subgrid) is a "nested" grid that uses the same tracks as its "parent" grid. An element is a subgrid container if its `grid-template-columns`, `grid-template-rows`, or both are set to `subgrid`. Such elements have `subgrid` badges next to them that toggle the corresponding overlays.
+[Subgrid](https://developer.mozilla.org/docs/Web/CSS/CSS_grid_layout/Subgrid) is a kind of a "nested" grid but one that uses the same tracks as its "parent" grid. An element is a subgrid container if its `grid-template-columns`, `grid-template-rows`, or both properties are set to `subgrid`. Such elements have `subgrid` badges next to them that toggle the corresponding overlays.
 
 Toggle the overlay on the following preview:
 
