@@ -9,6 +9,7 @@ updated: 2023-06-26
 authors:
   - beaufortfrancois
 tags:
+  - new-in-webgpu
   - webgpu
   - chrome-115
 ---
@@ -120,3 +121,5 @@ auto transientTexture = device.CreateTexture(&desc);
 ### Building without `depot_tools`
 
 A new `DAWN_FETCH_DEPENDENCIES` CMake option allows you to fetch Dawn dependencies using a Python script that reads DEPS files instead of requiring the installation of [`depot_tools`](http://commondatastorage.googleapis.com/chrome-infra-docs/flat/depot_tools/docs/html/depot_tools_tutorial.html#_setting_up) by all projects that depend on it. See [change 131750](https://dawn-review.googlesource.com/c/dawn/+/131750).
+
+{% Partial 'webgpu/whats-new.md' %}
