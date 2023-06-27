@@ -292,7 +292,7 @@ Refer to the documentation for the latest details:
 {% Column %}
 <strong>December 15, 2022. Run time: 26:48</strong>
 
-In Privacy Sandbox office hours, Helen Cho explains how the API works, [Rowan Merewood](/authors/rowan_m/) walks through the demo and how to test the API.
+In Privacy Sandbox office hours, [Helen Cho](/authors/helencho/) explains how the API works, [Rowan Merewood](/authors/rowan_m/) walks through the demo and how to test the API.
 {% endColumn %}
 {% endColumns %}
 
