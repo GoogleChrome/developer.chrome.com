@@ -13,11 +13,11 @@ authors:
 
 An **attribution trigger** is the event that tells the browser to capture conversions.
 
-By following the steps in this document, you can register triggers to register conversions, that the browser will then attribute to the relevant source events — namely ad impressions or ad clicks.
+By following the steps in this document, you can register triggers to register conversions that the browser will then attribute to the relevant source events — namely, ad impressions or ad clicks.
 
 ## Registration methods
 
-To register triggers you will use HTML elements or JavaScript calls:
+To register triggers, use HTML elements or JavaScript calls:
 
 -  `<a>` tag
 -  `<img>` tag
@@ -26,7 +26,7 @@ To register triggers you will use HTML elements or JavaScript calls:
 -  `XMLHttpRequest`
 -  `window.open`
 
-These will generate network requests you will then respond to with a trigger registration HTTP response header.
+These will generate network requests that you will then respond to with a trigger registration HTTP response header.
 
 ## Register a trigger to attribute a conversion
 
@@ -229,4 +229,4 @@ The event_trigger_data field value must be nested in square brackets, because th
 
 ## Next steps
 
-Refer to [Register attribution sources](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/).
+Learn how to [Register attribution sources](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/).

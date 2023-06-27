@@ -18,7 +18,7 @@ An **attribution source** is an ad-related event (a click or view), to which an 
 By following the steps in this document, you can register sources  — ad impressions or clicks — the browser will then attribute conversions to.
 ## Registration methods
 
-To register attribution sources you will use HTML elements or JavaScript calls:
+To register attribution sources, use HTML elements or JavaScript calls:
 
 -  `<a>` tag
 -  `<img>` tag
@@ -32,7 +32,7 @@ registration HTTP response header.
 
 ## Register sources for clicks or views
 
- To register an attribution source for either clicks or views, you'll follow the steps outlined here. The [complete steps](#step-1-initiate-source-registration) are below. Here's the summary:
+ To register an attribution source for either clicks or views, follow the steps outlined here. The [complete steps](#step-1-initiate-source-registration) are below. Here's the summary:
 
 1. **Initiate the source registration**. Use an HTML element or a
     JavaScript call to make a request. This step is different for clicks and views, as you'll see below.
@@ -102,7 +102,8 @@ measurement: if `attributionsrc` is present, the browser will send the
 
 Step 1 is different for clicks and views. Open the tabs below for each.
 
-<web-tabs>
+
+<web-tabs id="tabs">
 <web-tab title="Clicks step 1">
     <p>
     </p>
@@ -119,7 +120,7 @@ Add `attributionsrc` to existing &lt;a> tags for which you want to measure impre
   attributionsrc>Click me</a>
 ```
 
-[Example code](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/8f3d874b79ab0c8a15822fbcd09e94042aee7dcd/conversion-measurement/functions/views/adtech/ad-click.pug)
+Review the [example code](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/8f3d874b79ab0c8a15822fbcd09e94042aee7dcd/conversion-measurement/functions/views/adtech/ad-click.pug) for more information.
 
 
 #### Using a script
@@ -180,7 +181,7 @@ requests (requests that include the `Attribution-Reporting-Eligible` header).
 
 #### `attributionsrc` with or without a value
 
-As you saw above, you can specify `attributionsrc` without a URL. you can also specify a
+As you saw above, you can specify `attributionsrc` without a URL. You can also specify a
 single URL. Additionally, for sources only (not applicable to [triggers](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger/)), you can use a space-separated list of URLs.
 
 Using URLs causes the browser to initiate a **separate** keepalive fetch request — one
@@ -196,6 +197,8 @@ a configuration whereby you send the source registration header as a response to
 that is separate from the navigation, and that you can completely control. By
 specifying an explicit value for `attributionsrc`, you're instructing the
 browser to make that extra request and configuring its destination.
+
+Click the tab above for <a href="#tabs">Views step 1</a>
 
   </web-tab>
   <web-tab title="Views step 1">
@@ -269,15 +272,18 @@ const req = new XMLHttpRequest();
   req.send();
 ```
 
+Click the tab above for <a href="#tabs">Clicks step 1</a>
   </web-tab>
 
 </web-tabs>
+
+<hr>
 
 ### Step 2: Respond with header (clicks and views)
 
 The next step for both clicks and views is to respond with the `Attribution-Reporting-Register-Source` header.
 
-[Example code](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/8f3d874b79ab0c8a15822fbcd09e94042aee7dcd/conversion-measurement/functions/apps/adtech.js#L170)
+Review the [example code](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/8f3d874b79ab0c8a15822fbcd09e94042aee7dcd/conversion-measurement/functions/apps/adtech.js#L170) for more information.
 
 Upon receiving the browser request on the server, respond and include in
 your response the `Attribution-Reporting-Register-Source` header.
@@ -300,5 +306,5 @@ your response the `Attribution-Reporting-Register-Source` header.
 
 ## Next steps
 
-Refer to [Register attribution triggers](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger/).
+Learn how to [Register attribution triggers](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger/).
 
