@@ -1,19 +1,19 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Change attribution logic to prioritize attributions'
+title: 'Prioritize specific clicks, views or conversions'
 subhead: >
-  Prioritize sources according to your needs.
+  You can change the API's default behavior to prioritize specific sources or triggers.
 description: >
-  Prioritize sources according to your needs.
+  You can change the API's default behavior to prioritize specific sources or triggers.
 date: 2022-03-01
 updated: 2023-03-14
 authors:
   - maudn
 ---
 
-## Prioritize clicks and views
+## Prioritize specific clicks or views for event-level or aggregatable reports
 
-By default, the attribution model in the Attribution Reporting API is last-touch, meaning that a conversion is attributed to the most recent matching source event. You can tweak this behavior by using source-side priorities.
+Using source-side priorities, you can change the Attribution Reporting API's default behavior. By default, the attribution model  is last-touch, meaning that a conversion is attributed to the most recent matching source event. For both event-level and aggregatable reports you can tweak this behavior.
 
 To change the default priority, add the `priority` key to your source registration header.
 
@@ -38,15 +38,15 @@ const priority = - currentTimestamp;
  );
 ```
 
-## Prioritize conversions
+## Prioritize specific conversions for event-level reports
 
-You can decide which conversions you want reported, because depending on user activity and API limits, conversions you don't care about could be counted while those you want are not.
+Unlike source-side priorities discussed above, setting trigger-side priorities is only available for event-level reports.
 
-For example, assume that a user clicks an ad and converts four times: they visit the advertiser site homepage, then visit a product page, sign up to the newsletter, and finally make a purchase.
+Assume that a user clicks an ad and converts four times: they visit the advertiser site homepage, then visit a product page, sign up to the newsletter, and finally make a purchase.
 
 But due to the three-report limit for clicks, by default all subsequent reports after the signup (third conversion) will be dropped, including the purchase report. 
 
-You can configure the API such that you receive reports for conversions that you consider more important; for example, the purchase report.
+Instead, you can configure the API such that you receive reports for conversions that you consider more important; for example, the purchase report.
 
 To do so, add the `priority` key to your [trigger registration header](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger/) and set a higher priority for conversions you want to prioritize. 
 
