@@ -61,7 +61,7 @@ features.
 Clicking **Okay!** will trigger the following event in the service worker.
 
 ```js
-chrome.action.onClicked.addListener(function (event) {
+chrome.action.onClicked.addListener((event) => {
   // Permissions must be requested from inside a user gesture, like a button's
   // click handler.
   chrome.permissions.request(
