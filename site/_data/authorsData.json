@@ -1800,6 +1800,12 @@
       }
     ]
   },
+  "nmichell": {
+    "country": "US",
+    "image": "image/RtQlPaM9wdhEJGVKR8boMPkWf443/H1htVMDirezFxAwJqA6W.jpeg",
+    "github": "nancymic2",
+    "linkedin": "nancymichell"
+  },
   "jakobdamjensen": {
     "image": "image/8WbTDNrhLsU0El80frMBGE4eMCD3/P4d5Q4zt2CBsLwKUHour.jpg",
     "twitter": "jdj_dk",
@@ -1829,5 +1835,10 @@
   "alispivak": {
     "country": "US",
     "image": "image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ywSi24f8TTFI21KkKs5V.jpg"
+  },
+  "darojas": {
+    "country": "US",
+    "linkedin": "danielalejandrorojas",
+    "image": "image/RtQlPaM9wdhEJGVKR8boMPkWf443/DRQ6mX7gGOj9i6tc8f53.png"
   }
 }

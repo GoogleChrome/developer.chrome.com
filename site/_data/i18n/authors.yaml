@@ -1451,6 +1451,11 @@ patrickkettner:
     en: 'Patrick Kettner'
   description:
     en: 'Developer Advocate for Chrome Extensions'
+nmichell:
+  title:
+    en: 'Nancy Michell'
+  description:
+    en: 'Technical Writer'
 jakobdamjensen:
   title:
     en: Jakob Dam Jensen
@@ -1481,3 +1486,8 @@ thiagodiogo:
     en: 'Thiago Diogo'
   description:
     en:  'Staff Technical Solutions Consultant'
+darojas:
+  title:
+    en: 'Danny Rojas'
+  description:
+    en:  'Product Partnerships, Privacy Sandbox'
