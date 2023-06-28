@@ -304,6 +304,8 @@ your response the `Attribution-Reporting-Register-Source` header.
  );
 ```
 
+{% Partial 'privacy-sandbox/ar-engage.njk' %}
+
 ## Next steps
 
 Learn how to [Register attribution triggers](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger/).

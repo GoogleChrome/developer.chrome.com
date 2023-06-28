@@ -227,6 +227,8 @@ JSON.stringify({event_trigger_data: [{
 The event_trigger_data field value must be nested in square brackets, because the browser expects a JSON array. This is useful for filters.
 {% endAside %}
 
+{% Partial 'privacy-sandbox/ar-engage.njk' %}
+
 ## Next steps
 
 Learn how to [Register attribution sources](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/).

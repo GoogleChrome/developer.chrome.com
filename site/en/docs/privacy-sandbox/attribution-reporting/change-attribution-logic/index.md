@@ -59,3 +59,5 @@ When an attribution is triggered for a given source event, if the maximum number
 If no priorities are set, the browser will fall back to its default behavior: any conversion happening after the third conversion for clicks or the first conversion for views will be dropped.
 
 Review the example code: [prioritize conversions of type checkout](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/8f3d874b79ab0c8a15822fbcd09e94042aee7dcd/conversion-measurement/functions/apps/adtech.js#L215)
+
+{% Partial 'privacy-sandbox/ar-engage.njk' %}
