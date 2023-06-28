@@ -428,6 +428,13 @@ Functions have the following properties:
    - `[[GeneratorReceiver]]`. An object that receives the value.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/aRZ69G9V4cEXeDFK0ia8.png", alt="Iterator object.", width="800", height="532" %}
 
+## Save the contents of the Console {: #save }
+
+You can save the contents of the Console. This will save only messages in the current JavaScript context that are not excluded by filtering. The messages will be saved as text, with any embedded stack traces expanded.
+
+- Right click a message and then select **Save as...**.
+- Choose a file name and location to save the messages.
+
 ## Clear the Console {: #clear }
 
 You can use any of the following workflows to clear the Console:
