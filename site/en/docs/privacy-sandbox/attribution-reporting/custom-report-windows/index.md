@@ -11,7 +11,7 @@ authors:
   - maudn
 ---
 
-With custom report windows (shipped in Chrome 110), you can instruct the browser to filter out conversions that occur after a certain time window. 
+With custom report windows for Attribution Reporting (shipped in Chrome 110), you can instruct the browser to filter out conversions that occur after a certain time window. 
 
 - For event-level reports, report windows allow you to get reports faster, in addition to filtering out conversions that take place after a certain time frame.  Depending on your goal, another way to look at this is as a trade-off: using report windows gives you faster access to reports, but implies that you may lose some conversions. Review the event-level section below for details.
 - For aggregatable reports, report windows allow you to filter conversions that take place after a certain time frame. Review the aggregatable section below for details.
