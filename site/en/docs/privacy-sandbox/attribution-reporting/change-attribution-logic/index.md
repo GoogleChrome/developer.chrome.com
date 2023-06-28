@@ -2,9 +2,9 @@
 layout: 'layouts/doc-post.njk'
 title: 'Prioritize specific clicks, views or conversions'
 subhead: >
-  You can change the API's default behavior to prioritize specific sources or triggers.
+  Configure the API to prioritize specific sources or triggers.
 description: >
-  You can change the API's default behavior to prioritize specific sources or triggers.
+  Configure the API to prioritize specific sources or triggers.
 date: 2022-03-01
 updated: 2023-03-14
 authors:
