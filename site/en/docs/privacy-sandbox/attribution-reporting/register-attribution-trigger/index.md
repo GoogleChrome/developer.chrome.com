@@ -6,7 +6,7 @@ subhead: >
 description: >
   Learn how to register attribution triggers to count your conversions.
 date: 2022-03-01
-updated: 2023-03-14
+updated: 2023-05-15
 authors:
   - maudn
 ---
@@ -62,7 +62,7 @@ Registering a trigger is similar to
 ### Dealing with subdomains
 
 If `destination` is `https://advertiser.example`, conversions on both
-`https://advertiser.example` and its subdomains like `https://shop.advertiser.example` can be attributed. <br>
+`https://advertiser.example` and its subdomains, such as `https://shop.advertiser.example` can be attributed. <br>
 
 If `destination` is `https://shop.advertiser.example`, conversions on both `https://advertiser.example` and
 `https://shop.advertiser.example` can be attributed.
