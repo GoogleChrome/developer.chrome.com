@@ -4,7 +4,7 @@ title: The extension service worker lifecycle
 subhead: 
 description: Extension service workers respond to both standard service worker events and events in extension namespaces. They are presented together because often one type follows another during an extension's use.
 date: 2023-05-02
-updated: 2023-06-22
+updated: 2023-06-27
 ---
 
 Extension service workers respond to both the [standard service worker events](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope#events) and to events in extension namespaces. They are presented together because often one type follows another during an extension's use.
@@ -91,4 +91,4 @@ Messages sent from an offscreen document reset the timers.
 
 #### Chrome 105
 
-Connecting to a native messaging host using chrome.runtime.connectNative() will keep a service worker alive. If the host process crashes or is shut down, the port is closed and the service worker will terminate after timers complete. Guard against this by calling chrome.runtime.connectNative() in the port's onDisconnect event handler.
+Connecting to a native messaging host using [`chrome.runtime.connectNative()`](/docs/extensions/reference/runtime/#method-connectNative) will keep a service worker alive. If the host process crashes or is shut down, the port is closed and the service worker will terminate after timers complete. Guard against this by calling `chrome.runtime.connectNative()` in the port's onDisconnect event handler.
