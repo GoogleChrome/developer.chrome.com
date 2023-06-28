@@ -166,6 +166,10 @@ Topics can be accessed and observed with HTTP Headers in two ways:
   registrable domain for topic observation.
   * For example: `<iframe src="https://example.com" browsingtopics></iframe>`
   * This is available from Chrome M114 and onward.
+ 
+{% Aside 'important' %}
+[CSP](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) directives may disallow execution of third-party code included on a page, such as a `fetch()` call in an ad tech script.
+{% endAside %}
 
 Some additional notes about headers:
 
