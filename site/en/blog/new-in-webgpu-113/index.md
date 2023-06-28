@@ -9,6 +9,7 @@ date: 2023-04-26
 authors:
   - beaufortfrancois
 tags:
+  - new-in-webgpu
   - webgpu
   - chrome-113
   - media
@@ -49,3 +50,5 @@ const texture = device.importExternalTexture({ source: videoFrame });
 ```
 
 Check out the [Video Uploading with WebCodecs](https://webgpu.github.io/webgpu-samples/samples/videoUploadingWebCodecs) experimental sample to play with it.
+
+{% Partial 'webgpu/whats-new.md' %}
