@@ -74,7 +74,7 @@ Chrome 116 introduced the following service worker lifetime improvements:
 
 * Active [`WebSocket`](https://developer.mozilla.org/docs/Web/API/WebSockets_API) connections now extend extension service worker lifetimes. Sending or receiving messages across a `WebSocket` in an extension service worker resets the service worker's idle timer.
 
-* Additional extension APIs are allowed to go past the five minute timeout period for extension service workers. These APIs are ones that display a user prompt, and thus may reasonably take longer than five minutes to resolve. These include [`desktopCapture.chooseDesktopMedia()`](/docs/extensions/reference/desktopCapture/#method-chooseDesktopMedia), [`identity.launchWebAuthFlow()`](/docs/extensions/reference/identity/#method-launchWebAuthFlow), [`management.uninstall()`](/docs/extensions/reference/management/#method-uninstall), and [`permissions.request()`](/docs/extensions/reference/permissions/#method-request).
+* Additional extension APIs are allowed to go past the five-minute timeout period for extension service workers. These APIs display a user prompt and thus may reasonably take longer than five minutes to resolve. These include [`desktopCapture.chooseDesktopMedia()`](/docs/extensions/reference/desktopCapture/#method-chooseDesktopMedia), [`identity.launchWebAuthFlow()`](/docs/extensions/reference/identity/#method-launchWebAuthFlow), [`management.uninstall()`](/docs/extensions/reference/management/#method-uninstall), and [`permissions.request()`](/docs/extensions/reference/permissions/#method-request).
 
 
 #### Chrome 114
