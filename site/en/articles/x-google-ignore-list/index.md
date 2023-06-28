@@ -117,7 +117,7 @@ Starting from [Angular v14.1.0](https://github.com/angular/angular-cli/releases/
 
 This was achieved through [a change in `angular-cli`](https://github.com/angular/angular-cli/commit/b5f6d862b95afd0ec42d9b3968e963f59b1b1658) by [creating a plugin that hooks into the webpack’s `Compiler` module](https://webpack.js.org/api/compiler-hooks/).
 
-The [webpack plugin](https://github.com/angular/angular-cli/blob/main/packages/angular_devkit/build_angular/src/webpack/plugins/devtools-ignore-plugin.ts) that our engineers created hooks into the `PROCESS_ASSETS_STAGE_DEV_TOOLING` stage and populates the `x_google_ignoreList` field in the source maps with the final assets that webpack generates and the browser loads.
+The [webpack plugin](https://github.com/angular/angular-cli/blob/main/packages/angular_devkit/build_angular/src/tools/webpack/plugins/devtools-ignore-plugin.ts) that our engineers created hooks into the `PROCESS_ASSETS_STAGE_DEV_TOOLING` stage and populates the `x_google_ignoreList` field in the source maps with the final assets that webpack generates and the browser loads.
 
 ```js
 const map = JSON.parse(mapContent) as SourceMap;
