@@ -39,7 +39,7 @@ Limiting an extension's privileges limits what a potential attacker can exploit.
 
 ### Cross-origin fetch() {: #xhr }
 
-An extension can only use `fetch()` and [XMLHttpRequest][6] to get resources from the
+An extension can only use `fetch()` and [`XMLHttpRequest()`][6] to get resources from the
 extension and from domains specified in the permissions. Note that calls to both are intercepted by
 the [fetch][27] handler in the service worker.
 
