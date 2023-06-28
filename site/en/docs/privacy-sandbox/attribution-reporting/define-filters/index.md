@@ -11,7 +11,7 @@ authors:
   - maudn
 ---
 
-Filters are custom fields you can create and set in your registration header. Filters are flexible and have more uses than we will cover here, but here are just two ways they can be useful.
+Filters are custom fields you can create and set in your registration header. Filters are flexible and have more uses than we will cover here, but here are just two ways they can be useful:
 
 
 - Only count conversions for a specific product category, and filter out conversions for other categories.
