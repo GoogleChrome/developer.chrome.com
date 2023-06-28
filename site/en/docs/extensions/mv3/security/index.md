@@ -16,15 +16,14 @@ these practices.
 
 Extension code is uploaded and updated through Google accounts. If developers' accounts are
 compromised, an attacker could push malicious code directly to all users. Protect these accounts by
-creating specifically developer accounts and enabling [two-factor authentication][1] , preferably
-with a [security key][2] .
+by enabling [two-factor authentication][1] , preferably with a [security key][2].
 
 ### Keep groups selective {: #group_publishing }
 
 If using [group publishing][3], keep the group confined to trusted developers. Do not accept
 membership requests from unknown persons.
 
-## Never use HTTP, Ever {: #https }
+## Never use HTTP {: #https }
 
 When requesting or sending data, avoid an HTTP connection. Assume that any HTTP connections will
 have eavesdroppers or contain modifications. HTTPS should always be preferred, as it has built-in
@@ -36,7 +35,7 @@ The Chrome browser limits an extension's access to privileges that have been exp
 the [manifest][5]. Extensions should minimize their permissions by only registering APIs and
 websites they depend on.
 
-Limiting an extensions privileges limits what a potential attacker can exploit.
+Limiting an extension's privileges limits what a potential attacker can exploit.
 
 ### Cross-origin fetch() {: #xhr }
 
@@ -55,21 +54,20 @@ specified in the permissions, as both API's use the same [fetch handler][27] in 
 }
 ```
 
-This extension requests access to anything on developer.chrome.com and subdomains of Google by
+This extension in the sample above requests access to anything on developer.chrome.com and subdomains of Google by
 listing `"https://developer.chrome.com/*"` and `"https://*.google.com/*"` in the permissions. If the
 extension were compromised, it would still only have permission to interact with websites that meet
-the [match pattern][7]. The attacker would not be able to access `"https://user_bank_info.com"` or
+the [match pattern][7]. The attacker would only have limited ability to access `"https://user_bank_info.com"`, or
 interact with `"https://malicious_website.com"`.
 
 ## Limit manifest fields {: #manifest_fields }
 
-Including unnecessary registrations in the manifest creates vulnerabilities and makes an extension
-more visible. Limit manifest fields to those the extension relies on and give specific field
-registration.
+Including unnecessary keys and permissions in the manifest creates vulnerabilities and makes an extension
+more visible. Limit manifest fields to those the extension relies on.
 
 ### Externally connectable {: #externally_connectable }
 
-Use the [`externally_connectable`][8] field to declare which external extensions and web pages the
+Use the [`"externally_connectable"`][8] field to declare which external extensions and web pages the
 extension will exchange information with. Restrict who the extension can externally connect with to
 trusted sources.
 
@@ -92,7 +90,7 @@ trusted sources.
 
 ### Web-accessible resources {: #web_accessible_resources }
 
-Making resources accessible by the web, under the [`web_accessible_resources`][9] will make an
+Making resources accessible by the web, under the [`"web_accessible_resources"`][9] will make an
 extension detectable by websites and attackers.
 
 ```json
@@ -144,7 +142,7 @@ If the extension needs to use web assembly, or increase the restrictions on [san
 }
 ```
 
-### document.write() and innerHTML {: #document_write }
+### Avoid document.write() and innerHTML {: #document_write }
 
 While it may be simpler to dynamically create HTML elements with `document.write()` and `innerHTML`,
 it leaves the extension, and web pages the extension depends on, open to attackers inserting
@@ -170,7 +168,7 @@ While [content scripts][11] live in an [isolated world][12], they are not immune
   (e.g., [Spectre][14]), and to being taken over by an attacker if a malicious web page compromises
   the renderer process.
 
-Operations using high permission APIs or sensative data (such as a user's private information), should be performed in a dedicated process, such as the extension's service worker. 
+Operations using sensative data (such as a user's private information) or chrome APIs with access to the borwser's functions, should be performed in the extensions's service worker.
 Avoid accidentally exposing extension privileges to content scripts:
 
 - Assume that [messages from a content script][16] might have been crafted by an attacker (e.g.
@@ -180,8 +178,8 @@ Avoid accidentally exposing extension privileges to content scripts:
   scripts.
 - Limit the scope of privileged actions that can be triggered by content scripts. Do not allow
   content scripts to [trigger requests to arbitrary URLs][19] or pass arbitrary arguments to
-  extension APIs (e.g., do not allow passing arbitrary URLs to [`fetch`][20] or
-  [`chrome.tabs.create`][21] API).
+  extension APIs (e.g., do not allow passing arbitrary URLs to [`fetch()`][20] or
+  [`chrome.tabs.create()`][21] methods).
 
 ## Register and sanitize inputs {: #sanitize }
 
