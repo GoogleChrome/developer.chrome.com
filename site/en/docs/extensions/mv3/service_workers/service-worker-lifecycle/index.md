@@ -41,7 +41,7 @@ When a user profile starts, the [`chrome.runtime.onStartup`](/docs/extensions/re
 
 ## Idle and shutdown {: #idle-shutdown }
 
-Normally, Chrome terminates a service worker after one of the following conditions is met:
+Normally, Chrome terminates a service worker when one of the following conditions is met:
 
 -   After 30 seconds of inactivity. Receiving an event or calling an extension API resets this timer.
 -   When a single request, such as an event or API call, takes longer than 5 minutes to process.
