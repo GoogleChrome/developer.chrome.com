@@ -15,7 +15,7 @@ Filters are custom fields you can create and set in your registration header. Fi
 
 
 - Only count conversions for a specific product category, and filter out conversions for other categories.
-- Choose trigger data based on source event data: because the bit limit for the trigger data is different depending on the source type—ad click (0-7) or view (0 or 1)—it can be convenient to dynamically assign the value of the trigger data depending on the source type.
+- Choose trigger data based on source event data: because for event-level reports, the bit limit for the trigger data is different depending on the source type—ad click (0-7) or view (0 or 1)—it can be convenient to dynamically assign the value of the trigger data depending on the source type.
 
 ## How to declare filters
 
