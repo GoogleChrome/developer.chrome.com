@@ -67,7 +67,7 @@ chrome.bookmarks.create({
 });
 ```
 
-To try this API. Install the [Bookmarks API example][6] from the [chrome-extension-samples][5]
+To try this API, install the [Bookmarks API example][6] from the [chrome-extension-samples][5]
 repository.
 
 [1]: /docs/extensions/mv3/manifest
