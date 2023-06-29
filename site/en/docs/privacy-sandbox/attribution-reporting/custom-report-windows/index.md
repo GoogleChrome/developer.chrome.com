@@ -26,7 +26,7 @@ Key points about reporting windows:
 
 - If no `report_window` is set, it falls back to `expiry`.
 - If no `expiry` is set, it falls back to the default of 30 days.
-- The minimum custom report window is one day. Even if you set a window of less than a day, the value will be clamped to a day. Review [the example for event-level reports](#event-level-schedule).
+- The minimum custom report window is one day. Even if you set a window of less than a day, the value will be clamped to a day. Review [the examples for event-level reports](#event-level-schedule).
 - A report window is defined in seconds.
 
 Note that the way `expiry` works is unchanged; `expiry` changes which impressions or clicks are eligible for attribution. 
@@ -100,7 +100,7 @@ Custom behavior due to your custom report window</td>
       <td>Default (30 days)</td>
       <td>Set to 4 hours</td>
       <td>About 1 day plus 1 hour after click<br>
-Custom behavior due to your custom report window. This is due to clamping: the minimum report window is one day. Even if you set a report window to less than a day, for example here 4 hours, its value will be clamped to a day.</td>
+Custom behavior due to your custom report window. This is due to clamping: the minimum report window is one day. Even if you set a report window to less than a day, for example, 4 hours, its value will be clamped to a day.</td>
       <td>More than 1 day after click<br>
 </td>
     </tr>
@@ -198,7 +198,7 @@ aggregatable_report_window
     <tr>
       <td>Default (30 days)</td>
       <td>Set to 4 hours</td>
-      <td>More than 1 day after click or view. This is due to clamping: the minimum report window is one day. Even if you set a report window to less than a day, for example here 4 hours here, its value will be clamped to a day.</td>
+      <td>More than 1 day after click or view. This is due to clamping: the minimum report window is one day. Even if you set a report window to less than a day, for example, 4 hours, its value will be clamped to a day.</td>
     </tr>
   </tbody>
 </table>
