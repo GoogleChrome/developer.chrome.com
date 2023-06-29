@@ -58,7 +58,7 @@ npm i -g @bubblewrap/cli
 ### Setting up the Environment
 
 When running Bubblewrap for the first time, it will offer to automatically download and install the
-required external dependencies. We recommend allowing the tool do do this, as it guarantees that
+required external dependencies. We recommend allowing the tool to do this, as it guarantees that
 the dependencies are configured correctly. Check the [Bubblewrap documentation][1] to use an
 existing Java Development Kit (JDK) or Android command line tools installation.
 
