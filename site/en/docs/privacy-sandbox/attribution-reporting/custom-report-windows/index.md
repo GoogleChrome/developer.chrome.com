@@ -71,7 +71,7 @@ event_report_window
       <td>(Not set)</td>
       <td>About 2 days plus 1 hour after click<br>
 Default reporting behavior — built-in window #1</td>
-      <td>> 30 days after click</td>
+      <td>About 30 days after click</td>
     </tr>
     <tr>
       <td>Custom, set to 5 days</td>
