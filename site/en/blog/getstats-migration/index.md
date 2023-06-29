@@ -8,7 +8,7 @@ authors:
 date: 2023-06-29
 ---
 
-The legacy getStats() WebRTC API will be removed in Chrome 117, therefore apps using it will need to migrate to the standard API. This article explains how to migrate your code, and what to do if you need more time to make this change. 
+The legacy `getStats()` WebRTC API will be removed in Chrome 117, therefore apps using it will need to migrate to the standard API. This article explains how to migrate your code, and what to do if you need more time to make this change. 
 
 Historically there have been two competing versions of the WebRTC `getStats()` API. The legacy getStats() API, that pre-dates the standardization process and takes a callback argument, and the standardized and widely supported API which returns a promise.  
 
@@ -39,9 +39,9 @@ The legacy API has the following stats types, corresponding to the standard type
   </thead>
   <tbody>
     <tr>
-      <td><p><pre>
+      <td><code>
 ssrc
-</pre></p></td>
+</code></td>
       <td><br>
 Represents an RTP stream and metrics about the associated <code>MediaStreamTrack</code>.<br>
 <br>
@@ -49,44 +49,44 @@ Represents an RTP stream and metrics about the associated <code>MediaStreamTrack
 The standard types for this are <code>inbound-rtp</code> (for receive RTP streams and its associated remote <code>MediaStreamTrack</code>), <code>outbound-rtp</code> (for send RTP streams) and <code>media-source</code> (for local <code>MediaStreamTrack</code> metrics associated with a send RTP stream). RTP stream metrics also contain information about the encoder or decoder used by the RTP stream.</td>
     </tr>
     <tr>
-      <td><p><pre>
+      <td><code>
 VideoBwe
-</pre></p></td>
+</code></td>
       <td><br>
 Bandwidth estimation metrics, target bitrate, encoder bitrate and actual bitrate. These types of metrics are part of the RTP metrics (<code>outbound-rtp</code> and <code>inbound-rtp</code>) and ICE candidate pair metrics (<code>candidate-pair</code>).</td>
     </tr>
     <tr>
-      <td><p><pre>
+      <td><code>
 googComponent
-</pre></p></td>
+</code></td>
       <td><br>
 Represents the transport (ICE and DTLS). The standard version is <code>transport</code>.</td>
     </tr>
     <tr>
-      <td><p><pre>
+      <td><code>
 localcandidate and remotecandidate
-</pre></p></td>
+</code></td>
       <td><br>
 Represents an ICE candidate. The standard version is <code>local-candidate</code> and <code>remote-candidate</code>.</td>
     </tr>
     <tr>
-      <td><p><pre>
+      <td><code>
 googCandidatePair
-</pre></p></td>
+</code></td>
       <td><br>
 Represents an ICE candidate pair, which is a pairing of a local and a remote candidate. The standard version is <code>candidate-pair</code>.</td>
     </tr>
     <tr>
-      <td><p><pre>
+      <td><code>
 googCertificate
-</pre></p></td>
+</code></td>
       <td><br>
 Represents a certificate used by the DTLS transport. The standard version is <code>certificate</code>.</td>
     </tr>
     <tr>
-      <td><p><pre>
+      <td><code>
 googLibjingleSession
-</pre></p></td>
+</code></td>
       <td><br>
 Represents the <code>RTCPeerConnection</code>. While its contents does not map to anything in the standard, the standard does have a type associated with the <code>RTCPeerConnection</code>: <code>peer-connection</code>.</td>
     </tr>
@@ -139,848 +139,874 @@ Having to calculate rates and averages yourself like this may seem like a cumber
 <table>
   <thead>
     <tr>
-      <th><br>
-<strong>Legacy metric</strong></th>
-      <th><br>
-<strong>Standard correspondence</strong></th>
+      <th>Legacy metric
+      <br><code>googCertificate</code></th>
+      <th>Standard correspondence
+      <br><code>certificate</code></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><br>
-<strong>googCertificate</strong></td>
-      <td><br>
-<strong>certificate</strong></td>
+      <td><code>
+.googFingerprint
+</code></td>
+      <td><code>
+.fingerprint
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-googCertificate.googFingerprint
-</pre></p></td>
-      <td><p><pre>
-certificate.fingerprint
-</pre></p></td>
+      <td><code>
+.googFingerprintAlgorithm
+</code></td>
+      <td><code>
+.fingerprintAlgorithm
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-googCertificate.googFingerprintAlgorithm
-</pre></p></td>
-      <td><p><pre>
-certificate.fingerprintAlgorithm
-</pre></p></td>
+      <td><code>
+.googDerBase64
+</code></td>
+      <td><code>
+.base64Certificate
+</code></td>
+    </tr>
+    </tbody>
+</table>
+<table>
+  <thead>
+    <tr>
+      <th>Legacy metric
+      <br><code>googComponent</code></th>
+      <th>Standard correspondence
+      <br><code>transport</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>
+.localCertificateId
+</code></td>
+      <td><code>
+.localCertificateId
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-googCertificate.googDerBase64
-</pre></p></td>
-      <td><p><pre>
-certificate.base64Certificate
-</pre></p></td>
+      <td><code>
+.remoteCertificateId
+</code></td>
+      <td><code>
+.remoteCertificateId
+</code></td>
     </tr>
     <tr>
-      <td><br>
-<strong>googComponent</strong></td>
-      <td><br>
-<strong>transport</strong></td>
+      <td><code>
+.selectedCandidatePairId
+</code></td>
+      <td><code>
+.selectedCandidatePairId
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-googComponent.localCertificateId
-</pre></p></td>
-      <td><p><pre>
-transport.localCertificateId
-</pre></p></td>
+      <td><code>
+.dtlsCipher
+</code></td>
+      <td><code>
+.dtlsCipher
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-googComponent.remoteCertificateId
-</pre></p></td>
-      <td><p><pre>
-transport.remoteCertificateId
-</pre></p></td>
+      <td><code>
+.srtpCipher
+</code></td>
+      <td><code>
+.srtpCipher
+</code></td>
     </tr>
+    </tbody>
+    </table>
+    <table>
+ <thead>
     <tr>
-      <td><p><pre>
-googComponent.selectedCandidatePairId
-</pre></p></td>
-      <td><p><pre>
-transport.selectedCandidatePairId
-</pre></p></td>
+      <th>Legacy metric
+      <br><code>localcandidate</code></th>
+      <th>Standard correspondence
+      <br><code>local-candidate</code> or <code>candidate-pair</code></th>
     </tr>
+  </thead>
+  <tbody>   
     <tr>
-      <td><p><pre>
-googComponent.dtlsCipher
-</pre></p></td>
-      <td><p><pre>
-transport.dtlsCipher
-</pre></p></td>
-    </tr>
-    <tr>
-      <td><p><pre>
-googComponent.srtpCipher
-</pre></p></td>
-      <td><p><pre>
-transport.srtpCipher
-</pre></p></td>
-    </tr>
-    <tr>
-      <td><br>
-<strong>localcandidate</strong></td>
-      <td><br>
-<strong>local-candidate / candidate-pair</strong></td>
-    </tr>
-    <tr>
-      <td><p><pre>
-localcandidate.stunKeepaliveRequestsSent
-</pre></p></td>
-      <td><br>
+      <td><code>
+.stunKeepaliveRequestsSent
+</code></td>
+      <td>
 <code>candidate-pair.requestsSent</code> (reverse lookup <code>candidate-pair</code> via <code>candidate-pair.localCandidateId</code>)</td>
     </tr>
     <tr>
-      <td><p><pre>
-localcandidate.portNumber
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.portNumber
+</code></td>
+      <td><code>
 local-candidate.port
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-localcandidate.networkType
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.networkType
+</code></td>
+      <td><code>
 local-candidate.networkType
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-localcandidate.ipAddress
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.ipAddress
+</code></td>
+      <td><code>
 local-candidate.address
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-localcandidate.stunKeepaliveResponsesReceived
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.stunKeepaliveResponsesReceived
+</code></td>
+      <td><code>
 candidate-pair.responsesReceived
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-localcandidate.stunKeepaliveRttTotal
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.stunKeepaliveRttTotal
+</code></td>
+      <td><code>
 candidate-pair.totalRoundTripTime
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-localcandidate.transport
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.transport
+</code></td>
+      <td><code>
 local-candidate.protocol
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-localcandidate.candidateType
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.candidateType
+</code></td>
+      <td><code>
 local-candidate.candidateType
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-localcandidate.priority
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.priority
+</code></td>
+      <td><code>
 local-candidate.priority
-</pre></p></td>
+</code></td>
     </tr>
+    </tbody>
+</table>
+<table>
+ <thead>
     <tr>
-      <td><br>
-<strong>remotecandidate</strong></td>
-      <td><br>
-<strong>remote-candidate</strong></td>
+      <th>Legacy metric
+      <br><code>remotecandidate</code></th>
+      <th>Standard correspondence
+      <br><code>remote-candidate</code></th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
-      <td><br>
+      <td>
 Same as <code>localcandidate</code> above.</td>
-      <td><br>
+      <td>
 Same as <code>local-candidate</code> above.</td>
     </tr>
+</tbody>
+</table>
+<table>
+ <thead>
     <tr>
-      <td><br>
-<strong>googCandidatePair</strong></td>
-      <td><br>
-<strong>candidate-pair</strong></td>
+      <th>Legacy metric
+      <br><code>googCandidatePair</code></th>
+      <th>Standard correspondence
+      <br><code>candidate-pair</code></th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
-      <td><p><pre>
-googCandidatePair.responsesSent
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.responsesSent
+</code></td>
+      <td><code>
 candidate-pair.responsesSent
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-googCandidatePair.requestsReceived
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.requestsReceived
+</code></td>
+      <td><code>
 candidate-pair.requestsReceived
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-googCandidatePair.googRemoteCandidateType
-</pre></p></td>
-      <td><br>
-<code>remote-candidate.candidateType</code> (lookup <code>remote-candidate</code> via <code>candidate-pair.remoteCandidateId</code>)</td>
+      <td><code>
+.googRemoteCandidateType
+</code></td>
+      <td>
+<code>remote-candidate.candidateType</code> <br>(lookup <code>remote-candidate</code> via <br><code>candidate-pair.remoteCandidateId</code>)</td>
     </tr>
     <tr>
-      <td><p><pre>
-googCandidatePair.googReadable
-</pre></p></td>
-      <td><p><pre>
-googReadable is a boolean reflecting whether or not we've recently incremented candidate-pair.requestsReceived or candidate-pair.responsesReceived
-</pre></p></td>
+      <td><code>
+.googReadable
+</code></td>
+      <td>
+<code>googReadable</code> is a boolean reflecting whether or not we've recently incremented <code>candidate-pair.requestsReceived</code> or <code>candidate-pair.responsesReceived</code>
+</td>
     </tr>
     <tr>
-      <td><p><pre>
-googCandidatePair.googLocalAddress
-</pre></p></td>
-      <td><br>
-<code>local-candidate.address</code> (lookup <code>local-candidate</code> via <code>candidate-pair.localCandidateId</code>)</td>
+      <td><code>
+.googLocalAddress
+</code></td>
+      <td>
+<code>local-candidate.address</code> <br>(lookup <code>local-candidate</code> via <br><code>candidate-pair.localCandidateId</code>)</td>
     </tr>
     <tr>
-      <td><p><pre>
-googCandidatePair.consentRequestsSent
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.consentRequestsSent
+</code></td>
+      <td><code>
 candidate-pair.consentRequestsSent
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-googCandidatePair.googTransportType
-</pre></p></td>
-      <td><br>
+      <td><code>
+.googTransportType
+</code></td>
+      <td>
 Same as <code>local-candidate.protocol</code> and <code>remote-candidate.protocol</code>.</td>
     </tr>
     <tr>
-      <td><p><pre>
-googCandidatePair.googChannelId
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.googChannelId
+</code></td>
+      <td><code>
 candidate-pair.transportId
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-googCandidatePair.googLocalCandidateType
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.googLocalCandidateType
+</code></td>
+      <td><code>
 local-candidate.candidateType
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-googCandidatePair.googWritable
-</pre></p></td>
-      <td><p><pre>
-googWritable is a boolean reflecting whether or not we've recently incremented candidate-pair.responsesReceived
-</pre></p></td>
+      <td><code>
+.googWritable
+</code></td>
+      <td>
+<code>googWritable</code> is a boolean reflecting whether or not we've recently incremented <code>candidate-pair.responsesReceived</code>
+</td>
     </tr>
     <tr>
-      <td><p><pre>
-googCandidatePair.googRemoteAddress
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.googRemoteAddress
+</code></td>
+      <td><code>
 remote-candidate.address
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-googCandidatePair.googRtt
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.googRtt
+</code></td>
+      <td><code>
 candidate-pair.currentRoundTripTime
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-googCandidatePair.googActiveConnection
-</pre></p></td>
-      <td><br>
-The "active connection" refers to the candidate pair that is currently selected by the transport, i.e. where <code>candidate-pair.id == transport.selectedCandidatePairId</code></td>
+      <td><code>
+.googActiveConnection
+</code></td>
+      <td>
+The <em>active connection</em> refers to the candidate pair that is currently selected by the transport, such as where <code>candidate-pair.id == transport.selectedCandidatePairId</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-googCandidatePair.packetsDiscardedOnSend
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.packetsDiscardedOnSend
+</code></td>
+      <td><code>
 candidate-pair.packetsDiscardedOnSend
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-googCandidatePair.bytesReceived
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.bytesReceived
+</code></td>
+      <td><code>
 candidate-pair.bytesReceived
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-googCandidatePair.responsesReceived
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.responsesReceived
+</code></td>
+      <td><code>
 candidate-pair.responsesReceived
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-googCandidatePair.remoteCandidateId
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.remoteCandidateId
+</code></td>
+      <td><code>
 candidate-pair.remoteCandidateId
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-googCandidatePair.localCandidateId
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.localCandidateId
+</code></td>
+      <td><code>
 candidate-pair.localCandidateId
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-googCandidatePair.bytesSent
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.bytesSent
+</code></td>
+      <td><code>
 candidate-pair.bytesSent
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-googCandidatePair.packetsSent
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.packetsSent
+</code></td>
+      <td><code>
 candidate-pair.packetsSent
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-googCandidatePair.bytesReceived
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.bytesReceived
+</code></td>
+      <td><code>
 candidate-pair.bytesReceived
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-googCandidatePair.bytesReceived
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.bytesReceived
+</code></td>
+      <td><code>
 candidate-pair.bytesReceived
-</pre></p></td>
+</code></td>
     </tr>
+</tbody>
+</table>
+<table>
+ <thead>
     <tr>
-      <td><br>
-<strong>ssrc</strong></td>
-      <td><br>
-<strong>inbound-rtp, outbound-rtp, media-source</strong></td>
+      <th>Legacy metric
+      <br><code>ssrc</code></th>
+      <th>Standard correspondence
+      <br><code>inbound-rtp</code>, <code>outbound-rtp</code>, <code>media-source</code></th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
-      <td><p><pre>
-ssrc.audioInputLevel
-</pre></p></td>
-      <td><br>
+      <td><code>
+.audioInputLevel
+</code></td>
+      <td>
 <code>media-source.audioLevel</code>. The legacy metric is in range [0..32768] but the standard metrc is in range [0..1].</td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.audioOutputLevel
-</pre></p></td>
+      <td><code>
+.audioOutputLevel
+</code></td>
       <td><br>
 <code>inbound-rtp.audioLevel</code>. The legacy metric is in range [0..32768] but the standard metrc is in range [0..1].</td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.packetsLost
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.packetsLost
+</code></td>
+      <td><code>
 inbound-rtp.packetsLost
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.googTrackId
-</pre></p></td>
-      <td><br>
+      <td><code>
+.googTrackId
+</code></td>
+      <td>
 <code>media-source.trackIdentifier</code> for local <code>MediaStreamTrack</code>s and <code>inbound-rtp.trackIdentifier</code> for remote <code>MediaStreamTrack</code>s</td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.googRtt
-</pre></p></td>
-      <td><br>
+      <td><code>
+.googRtt
+</code></td>
+      <td>
 <code>remote-inbound-rtp.roundTripTime</code> (see <code>outbound-rtp.remoteId</code>)</td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.googEchoCancellationReturnLossEnhancement
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.googEchoCancellationReturnLossEnhancement
+</code></td>
+      <td><code>
 inbound-rtp.echoReturnLossEnhancement
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.googCodecName
-</pre></p></td>
-      <td><br>
+      <td><code>
+.googCodecName
+</code></td>
+      <td>
 The codec name is the subtype of the "type/subtype" mime type, <code>codec.mimeType</code> (see <code>inbound-rtp.codecId</code> and <code>outbound-rtp.codecId</code>)</td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.transportId
-</pre></p></td>
-      <td><p><pre>
-inbound-rtp.transportId and outbound-rtp.transportId
-</pre></p></td>
+      <td><code>
+.transportId
+</code></td>
+      <td>
+<code>inbound-rtp.transportId</code> and <code>outbound-rtp.transportId</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.mediaType
-</pre></p></td>
-      <td><p><pre>
-inbound-rtp.kind and outbound-rtp.kind or media-source.kind
-</pre></p></td>
+      <td><code>
+.mediaType
+</code></td>
+      <td>
+<code>inbound-rtp.kind</code> and <code>outbound-rtp.kind</code> or <code>media-source.kind</code>
+</td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.googEchoCancellationReturnLoss
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.googEchoCancellationReturnLoss
+</code></td>
+      <td><code>
 inbound-rtp.echoReturnLoss
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.totalAudioEnergy
-</pre></p></td>
-      <td><p><pre>
-inbound-rtp.totalAudioEnergy and media-source.totalAudioEnergy
-</pre></p></td>
+      <td><code>
+.totalAudioEnergy
+</code></td>
+      <td>
+<code>inbound-rtp.totalAudioEnergy</code> and <code>media-source.totalAudioEnergy</code>
+</td>
     </tr>
     <tr>
-      <td><p><pre>
+      <td><code>
 ssrc.totalSamplesDuration
-</pre></p></td>
-      <td><p><pre>
-inbound-rtp.totalSamplesDuration and media-source.totalSamplesDuration
-</pre></p></td>
+</code></td>
+      <td>
+<code>inbound-rtp.totalSamplesDuration</code> and <code>media-source.totalSamplesDuration</code>
+</td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.ssrc
-</pre></p></td>
-      <td><p><pre>
-inbound-rtp.ssrc and outbound-rtp.ssrc
-</pre></p></td>
+      <td><code>
+.ssrc
+</code></td>
+      <td>
+<code>inbound-rtp.ssrc</code> and <code>outbound-rtp.ssrc</code>
+</td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.googJitterReceived
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.googJitterReceived
+</code></td>
+      <td><code>
 inbound-rtp.jitter
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.packetsSent
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.packetsSent
+</code></td>
+      <td><code>
 outbound-rtp.packetsSent
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.bytesSent
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.bytesSent
+</code></td>
+      <td><code>
 outbound-rtp.bytesSent
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.googContentType
-</pre></p></td>
-      <td><p><pre>
-inbound-rtp.contentType and outbound-rtp.contentType
-</pre></p></td>
+      <td><code>
+.googContentType
+</code></td>
+      <td>
+<code>inbound-rtp.contentType</code> and <code>outbound-rtp.contentType</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.googFrameWidthInput
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.googFrameWidthInput
+</code></td>
+      <td><code>
 media-source.width
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.googFrameHeightInput
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.googFrameHeightInput
+</code></td>
+      <td><code>
 media-source.height
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.googFrameRateInput
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.googFrameRateInput
+</code></td>
+      <td><code>
 media-source.framesPerSecond
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.googFrameWidthSent
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.googFrameWidthSent
+</code></td>
+      <td><code>
 outbound-rtp.frameWidth
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.googFrameHeightSent
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.googFrameHeightSent
+</code></td>
+      <td><code>
 outbound-rtp.frameHeight
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.googFrameRateSent
-</pre></p></td>
+      <td><code>
+.googFrameRateSent
+</code></td>
       <td><br>
 While the send FPS is the rate of change of <code>outbound-rtp.framesSent</code>, this is actually implemented as <code>outbound-rtp.framesPerSecond</code> which is encoding FPS.</td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.googFrameWidthReceived
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.googFrameWidthReceived
+</code></td>
+      <td><code>
 inbound-rtp.frameWidth
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.googFrameHeightReceived
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.googFrameHeightReceived
+</code></td>
+      <td><code>
 inbound-rtp.frameHeight
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.googFrameRateDecoded
-</pre></p></td>
+      <td><code>
+.googFrameRateDecoded
+</code></td>
       <td><br>
 The rate of change of <code>inbound-rtp.framesDecoded</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.googFrameRateOutput
-</pre></p></td>
+      <td><code>
+.googFrameRateOutput
+</code></td>
       <td><br>
-The rate of change of <code>inbound-rtp.framesDecoded - inbound-rtp.framesDropped</code></td>
+The rate of change of <code>inbound-rtp.framesDecoded</code> - <code>inbound-rtp.framesDropped</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.hugeFramesSent
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.hugeFramesSent
+</code></td>
+      <td><code>
 outbound-rtp.hugeFramesSent
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.qpSum
-</pre></p></td>
-      <td><p><pre>
-inbound-rtp.qpSum and outbound-rtp.qpSum
-</pre></p></td>
+      <td><code>
+.qpSum
+</code></td>
+      <td><p>
+<code>inbound-rtp.qpSum</code> and <code>outbound-rtp.qpSum</code></p></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.framesEncoded
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.framesEncoded
+</code></td>
+      <td><code>
 outbound-rtp.framesEncoded
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.googAvgEncodeMs
-</pre></p></td>
-      <td><p><pre>
-outbound-rtp.totalEncodeTime / outbound-rtp.framesEncoded
-</pre></p></td>
+      <td><code>
+.googAvgEncodeMs
+</code></td>
+      <td><p>
+<code>outbound-rtp.totalEncodeTime</code> / <code>outbound-rtp.framesEncoded</code>
+</p></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.codecImplementationName
-</pre></p></td>
-      <td><p><pre>
-inbound-rtp.decoderImplementation and outbound-rtp.encoderImplementation
-</pre></p></td>
+      <td><code>
+.codecImplementationName
+</code></td>
+      <td><p>
+<code>inbound-rtp.decoderImplementation</code> and <code>outbound-rtp.encoderImplementation</code>
+</p></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.googCpuLimitedResolution
-</pre></p></td>
+      <td><code>
+.googCpuLimitedResolution
+</code></td>
       <td><br>
 True if <code>outbound-rtp.qualityLimitationReason == "cpu"</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.googBandwidthLimitedResolution
-</pre></p></td>
+      <td><code>
+.googBandwidthLimitedResolution
+</code></td>
       <td><br>
 True if <code>outbound-rtp.qualityLimitationReason == "bandwidth"</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.googAdaptationChanges
-</pre></p></td>
+      <td><code>
+.googAdaptationChanges
+</code></td>
       <td><br>
 The legacy metric counts the number of times resolution or frame rate changed for <code>qualityLimitationReason</code> related reasons. This could be deduced from other metrics (e.g. send resolution or frame rate being different from source resolution or frame rate), but the duration that we have been limited, <code>outbound-rtp.qualityLimitationDurations</code>, may be more useful than how frequently resolution or frame rate changed was reconfigured.</td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.googNacksReceived
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.googNacksReceived
+</code></td>
+      <td><code>
 inbound-rtp.nackCount
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.googNacksSent
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.googNacksSent
+</code></td>
+      <td><code>
 inbound-rtp.nackCount
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.googPlisReceived
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.googPlisReceived
+</code></td>
+      <td><code>
 inbound-rtp.pliCount
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.googPlisSent
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.googPlisSent
+</code></td>
+      <td><code>
 inbound-rtp.pliCount
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.googFirsReceived
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.googFirsReceived
+</code></td>
+      <td><code>
 inbound-rtp.firCount
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.googFirsSent
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.googFirsSent
+</code></td>
+      <td><code>
 inbound-rtp.firCount
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.googSecondaryDecodedRate
-</pre></p></td>
+      <td><code>
+.googSecondaryDecodedRate
+</code></td>
       <td><br>
-The recent ratio of packets containing error correction: <code>inbound-rtp.fecPacketsReceived - inbound-rtp.fecPacketsDiscarded</code></td>
+The recent ratio of packets containing error correction: <code>inbound-rtp.fecPacketsReceived</code> - <code>inbound-rtp.fecPacketsDiscarded</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.packetsReceived
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.packetsReceived
+</code></td>
+      <td><code>
 inbound-rtp.packetsReceived
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.googJitterBufferMs
-</pre></p></td>
-      <td><p><pre>
-inbound-rtp.jitterBufferDelay / inbound-rtp.jitterBufferEmittedCount
-</pre></p></td>
+      <td><code>
+.googJitterBufferMs
+</code></td>
+      <td><code>
+inbound-rtp.jitterBufferDelay</code> / <code>inbound-rtp.jitterBufferEmittedCount
+</code></td>
     </tr>
     <tr>
+      <td>
+<code>.googTargetDelayMs</code> (video)</td>
+      <td><code>
+inbound-rtp.jitterBufferTargetDelay</code> / <code>inbound-rtp.jitterBufferEmittedCount
+</code></td>
+    </tr>
+    <tr>
+      <td>
+<code>.googPreferredJitterBufferMs</code> (audio)</td>
+      <td><code>
+inbound-rtp.jitterBufferTargetDelay</code> / <code>inbound-rtp.jitterBufferEmittedCount
+</code></td>
+    </tr>
+    <tr>
+      <td><code>
+.googExpandRate
+</code></td>
       <td><br>
-<code>ssrc.googTargetDelayMs</code> (video)</td>
-      <td><p><pre>
-inbound-rtp.jitterBufferTargetDelay / inbound-rtp.jitterBufferEmittedCount
-</pre></p></td>
+The recent ratio of concealed samples: <code>inbound-rtp.concealedSamples</code> / <code>inbound-rtp.totalSamplesReceived</code></td>
     </tr>
     <tr>
+      <td><code>
+.googSpeechExpandRate
+</code></td>
+      <td>
+The recent ratio of concealed samples while the stream was not silent: of (<code>inbound-rtp.concealedSamples</code> - <code>inbound-rtp.silentConcealedSamples</code>) / <code>inbound-rtp.concealedSamples</code></td>
+    </tr>
+    <tr>
+      <td><code>
+.googAccelerateRate
+</code></td>
+      <td>
+The recent ratio of samples that were discarded in order to accelerate playout speed: <code>inbound-rtp.removedSamplesForAcceleration</code> / <code>inbound-rtp.totalSamplesReceived</code></td>
+    </tr>
+    <tr>
+      <td><code>
+.googPreemptiveExpandRate
+</code></td>
       <td><br>
-<code>ssrc.googPreferredJitterBufferMs</code> (audio)</td>
-      <td><p><pre>
-inbound-rtp.jitterBufferTargetDelay / inbound-rtp.jitterBufferEmittedCount
-</pre></p></td>
+The recent ratio of samples that were synthesized in order to decelerate playout speed: <code>inbound-rtp.insertedSamplesForDeceleration</code> / <code>inbound-rtp.totalSamplesReceived</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.googExpandRate
-</pre></p></td>
-      <td><br>
-The recent ratio of concealed samples: <code>inbound-rtp.concealedSamples / inbound-rtp.totalSamplesReceived</code></td>
-    </tr>
-    <tr>
-      <td><p><pre>
-ssrc.googSpeechExpandRate
-</pre></p></td>
-      <td><br>
-The recent ratio of concealed samples while the stream was not silent: of <code>(inbound-rtp.concealedSamples - inbound-rtp.silentConcealedSamples) / inbound-rtp.concealedSamples</code></td>
-    </tr>
-    <tr>
-      <td><p><pre>
-ssrc.googAccelerateRate
-</pre></p></td>
-      <td><br>
-The recent ratio of samples that were discarded in order to accelerate playout speed: <code>inbound-rtp.removedSamplesForAcceleration / inbound-rtp.totalSamplesReceived</code></td>
-    </tr>
-    <tr>
-      <td><p><pre>
-ssrc.googPreemptiveExpandRate
-</pre></p></td>
-      <td><br>
-The recent ratio of samples that were synthesized in order to decelerate playout speed: <code>inbound-rtp.insertedSamplesForDeceleration / inbound-rtp.totalSamplesReceived</code></td>
-    </tr>
-    <tr>
-      <td><p><pre>
-ssrc.googSecondaryDiscardedRate
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.googSecondaryDiscardedRate
+</code></td>
+      <td><code>
 inbound-rtp.fecPacketsDiscarded
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.bytesReceived
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.bytesReceived
+</code></td>
+      <td><code>
 inbound-rtp.bytesReceived
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.googCurrentDelayMs
-</pre></p></td>
-      <td><p><pre>
-inbound-rtp.jitterBufferDelay + media-playout.totalPlayoutDelay
-</pre></p></td>
+      <td><code>
+s.googCurrentDelayMs
+</code></td>
+      <td>
+<code>inbound-rtp.jitterBufferDelay</code> + media-playout.totalPlayoutDelay</code>
+</td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.googDecodeMs
-</pre></p></td>
-      <td><p><pre>
-inbound-rtp.totalDecodeTime / inbound-rtp.framesDecoded
-</pre></p></td>
+      <td><code>
+.googDecodeMs
+</code></td>
+      <td>
+<code>inbound-rtp.totalDecodeTime</code> / <code>inbound-rtp.framesDecoded</code>
+</td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.googTimingFrameInfo
-</pre></p></td>
+      <td><code>
+.googTimingFrameInfo
+</code></td>
       <td><br>
-The only remaining goog-metric... <code>inbound-rtp.googTimingFrameInfo</code></td>
+The only remaining goog-metric. <code>inbound-rtp.googTimingFrameInfo</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-ssrc.framesDecoded
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.framesDecoded
+</code></td>
+      <td><code>
 inbound-rtp.framesDecoded
-</pre></p></td>
+</code></td>
+    </tr>
+</tbody>
+</table>
+<table>
+ <thead>
+    <tr>
+      <th>Legacy metric
+      <br><code>VideoBwe</code></th>
+      <th>Standard correspondence
+      <br><code>outbound-rtp</code> and <code>candidate-pair</code></th>
+    </tr>
+  </thead>
+    <tr>
+      <td><code>
+.googTargetEncBitrate
+</code></td>
+      <td><br>
+<code>outbound-rtp.targetBitrate</code> as an instantaneous value or <code>outbound-rtp.totalEncodedBytesTarget</code> / <code>outbound-rtp.framesEncoded</code> as an average</td>
     </tr>
     <tr>
-      <td><br>
-<strong>VideoBwe</strong></td>
-      <td><br>
-<strong>outbound-rtp and candidate-pair</strong></td>
+      <td><code>
+.googActualEncBitrate
+</code></td>
+      <td>
+The bytes produced by the encoder are the payload bytes, excluding retransmissions: the rate of change of <code>outbound-rtp.bytesSent</code> - <code>outbound-rtp.retransmittedBytesSent</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-VideoBwe.googTargetEncBitrate
-</pre></p></td>
-      <td><br>
-<code>outbound-rtp.targetBitrate</code> as an instantaneous value or <code>outbound-rtp.totalEncodedBytesTarget / outbound-rtp.framesEncoded</code> as an average</td>
+      <td><code>
+.googBucketDelay
+</code></td>
+      <td>
+<code>outbound-rtp.totalPacketSendDelay</code> / <code>outbound-rtp.packetsSent
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-VideoBwe.googActualEncBitrate
-</pre></p></td>
-      <td><br>
-The bytes produced by the encoder are the payload bytes, excluding retransmissions: the rate of change of <code>outbound-rtp.bytesSent - outbound-rtp.retransmittedBytesSent</code></td>
+      <td><code>
+.googTransmitBitrate
+</code></td>
+      <td>
+The rate of change of <code>outbound-rtp.headerBytesSent</code> + <code>outbound-rtp.bytesSent</code> for per-RTP stream bitrate, <code>candidate-pair.bytesSent</code> for per-ICE candidate bitrate or <code>transport.bytesSent</code> for per-transport bitrate</td>
     </tr>
     <tr>
-      <td><p><pre>
-VideoBwe.googBucketDelay
-</pre></p></td>
-      <td><p><pre>
-outbound-rtp.totalPacketSendDelay / outbound-rtp.packetsSent
-</pre></p></td>
-    </tr>
-    <tr>
-      <td><p><pre>
-VideoBwe.googTransmitBitrate
-</pre></p></td>
-      <td><br>
-The rate of change of <code>outbound-rtp.headerBytesSent + outbound-rtp.bytesSent</code> for per-RTP stream bitrate, <code>candidate-pair.bytesSent</code> for per-ICE candidate bitrate or <code>transport.bytesSent</code> for per-transport bitrate</td>
-    </tr>
-    <tr>
-      <td><p><pre>
-VideoBwe.googRetransmitBitrate
-</pre></p></td>
-      <td><br>
+      <td><code>
+.googRetransmitBitrate
+</code></td>
+      <td>
 The range of change of <code>outbound-rtp.retransmittedBytesSent</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-VideoBwe.googAvailableSendBandwidth
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.googAvailableSendBandwidth
+</code></td>
+      <td><code>
 candidate-pair.availableOutgoingBitrate
-</pre></p></td>
+</code></td>
     </tr>
     <tr>
-      <td><p><pre>
-VideoBwe.googAvailableReceiveBandwidth
-</pre></p></td>
-      <td><p><pre>
+      <td><code>
+.googAvailableReceiveBandwidth
+</code></td>
+      <td><code>
 candidate-pair.availableIncomingBitrate
-</pre></p></td>
+</code></td>
     </tr>
   </tbody>
 </table>
@@ -988,7 +1014,9 @@ candidate-pair.availableIncomingBitrate
 ## The standard API is simulcast-aware
 
 If you use simulcast you may have noticed that the legacy API only reports a single SSRC even when you're using simulcast to send (for example) three RTP streams over three separate SSRCs.  
+
 The standard API does not share this limitation and will return three `outbound-rtp` stats objects, one for each of the SSRCs. This means that you can analyze each RTP stream individually, but it also means that to obtain the total bitrate of all RTP send streams you'll need to aggregate them yourself.  
+
 SVC streams or RTP streams with multiple spatial layers configured via the `scalabilityMode` API on the other hand still show up as a single `outbound-rtp` because these are sent over a single SSRC.
 
 ## If you need more time for migration
