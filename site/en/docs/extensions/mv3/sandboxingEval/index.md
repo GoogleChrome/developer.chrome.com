@@ -188,7 +188,7 @@ will be passed back to the Event Page so the extension can do something useful w
           let result = 'invalid request';
 
         // if we don't know the templateName requested, return an error message
-        if (!template) {
+        if !(template) {
           result = 'Unknown template: ' + event.data.templateName;
         } else {
           switch (command) {
