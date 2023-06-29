@@ -37,7 +37,7 @@ By default, event-level reports are sent following a [schedule of built-in repor
 
 For event-level reports, custom report windows enable you to:
 
-- Get reports faster. Among other things, custom report windows enable you to get reports one day after click/impression, instead of the two-day limit that was imposed by built-in expiry windows prior to Chrome 110. 
+- Get reports faster. Among other things, custom report windows enable you to get reports one day after the click or impression, instead of the two-day limit that was imposed by built-in expiry windows prior to Chrome 110. 
 - Filter out conversions happening after a certain time frame. 
 
 To use report windows for event-level reports, add the `event_report_window` field to your `Attribution-Reporting-Register-Source` source registration header.
@@ -146,7 +146,7 @@ Custom behavior due to your custom report window</td>
   </tbody>
 </table>
 
-### Aggregatable reports: selective reporting {: aggregatable }
+### Aggregatable reports: selective reporting {: #aggregatable }
 
 For aggregatable reports, the benefit of report windows is only to filter out conversions happening after a certain time frame. There is no benefit in terms of getting reports faster.
 
@@ -161,7 +161,7 @@ This will filter out conversions happening after a certain time frame.
 Aggregatable reports are sent within an hour of trigger; they're randomly delayed between 10 minutes and an hour.
 
 {% Aside %}
-In the table below, for all cases, if a conversion takes place **one day after the click/impression**, the browser will send the report **approximately an hour after the trigger**.
+In the following table, for all cases, if a conversion takes place **one day after the click or impression**, the browser will send the report **approximately an hour after the trigger**.
 {% endAside %}
 
 <table class="with-heading-tint">
