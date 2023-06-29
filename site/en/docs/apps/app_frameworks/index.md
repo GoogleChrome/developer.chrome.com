@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "MVC Architecture"
+seoTitle: "MVC Architecture [Deprecated]"
 date: 2012-09-17
 updated: 2014-05-21
 description: An overview of the model view controller software architecture model.

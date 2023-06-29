@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "event_rules"
+seoTitle: "MV2 - event_rules [Deprecated]"
 date: 2015-06-12
 updated: 2015-06-15
 description: Reference documentation for the event_rules property of manifest.json.

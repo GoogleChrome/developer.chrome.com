@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Stay secure"
+seoTitle: "MV2 - Stay secure [Deprecated]"
 date: 2018-03-06
 updated: 2019-07-17
 description: How to keep your Chrome Extension secure.

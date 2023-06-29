@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Declare permissions and warn users"
+seoTitle: "MV2 - Declare permissions and warn users [Deprecated]"
 date: 2012-09-18
 updated: 2018-10-10
 description: >

@@ -24,12 +24,9 @@ Learn more about [crafting a great listing page][best-listing].
 ## Categories {: #categories }
 
 Categories on the Chrome Web Store organize items based on their main function. Users can browse
-categories such as Shopping, Education, or Just for Fun, to find relevant items to install. To
+categories such as Shopping, Productivity, or Fun, to find relevant items to install. To
 assign a category, open an item in the Developer Dashboard. You'll find the Category list on the
 Store Listing tab under Product Details.
-
-In mid 2023 the categories changed. For information on choosing a new category, see
-[best practices][chose-category]
 
 ## Extensions home page {: #home-page }
 

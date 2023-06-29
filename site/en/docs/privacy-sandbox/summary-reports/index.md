@@ -141,8 +141,7 @@ report. These reports also include a small amount of
 
 {% Aside %}
 Unencrypted conversion data is only available in summary reports—that is,
-after the aggregatable reports have been
-[processed by the aggregation service](#aggregation-service).
+after the aggregatable reports have been processed by the [aggregation service](/docs/privacy-sandbox/aggregation-service/).
 {% endAside %}.
 
 For Attribution Reporting data, aggregatable reports are captured as such:
@@ -182,7 +181,7 @@ third-party websites.
 
 ###  Processing data with the aggregation service
 
-The _[aggregation service](/docs/privacy-sandbox/aggregation-service/)_ decrypts and combines the batched data from the aggregatable reports, [adds noise](/docs/privacy-sandbox/aggregation-service#noise), and returns the final summary report. This service runs in a trusted execution environment (TEE), which is deployed on a cloud service that supports necessary security measures to protect this data.
+The _[aggregation service](/docs/privacy-sandbox/aggregation-service/)_ decrypts and combines the batched data from the aggregatable reports, [adds noise](/docs/privacy-sandbox/private-aggregation-fundamentals/#noise-and-scaling), and returns the final summary report. This service runs in a trusted execution environment (TEE), which is deployed on a cloud service that supports necessary security measures to protect this data.
 
 ## Summary reports with Attribution Reporting
 

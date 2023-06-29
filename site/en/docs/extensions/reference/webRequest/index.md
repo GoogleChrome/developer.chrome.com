@@ -371,7 +371,9 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
 );
 ```
 
-For more example code, see the [web request samples][16].
+To try the `chrome.webRequest` API,
+install the [webRequest sample](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/webRequest/) from the [chrome-extension-samples](https://github.com/GoogleChrome/chrome-extensions-samples)
+repository.
 
 [1]: /docs/extensions/mv3/manifest
 [2]: /docs/extensions/mv2/declare_permissions

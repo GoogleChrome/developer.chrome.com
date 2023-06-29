@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Tutorial: Google analytics"
+seoTitle: "MV2 Tutorial: Google analytics [Deprecated]"
 date: 2012-09-18
 updated: 2016-10-11
 description: >

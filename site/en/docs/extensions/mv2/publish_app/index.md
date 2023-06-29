@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Publish Your App"
+seoTitle: "MV2 - Publish Your App [Deprecated]"
 #date: TODO
 #updated: TODO
 description: TODO

@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manifest - Default Locale"
+seoTitle: "chrome Apps Manifest - Default Locale [Deprecated]"
 #date: TODO
 #updated: TODO
 #description: TODO

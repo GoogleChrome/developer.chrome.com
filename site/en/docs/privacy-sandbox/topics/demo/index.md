@@ -42,7 +42,7 @@ There are two ways to try the Topics API as a single user; you'll need to be run
 - Run Chrome from the command line with the following flags:
 
     ```text
-    --enable-features=BrowsingTopics,PrivacySandboxAdsAPIsOverride,OverridePrivacySandboxSettingsLocalTesting
+    --enable-features=BrowsingTopics,BrowsingTopicsParameters:time_period_per_epoch/15s/browsing_topics_max_epoch_introduction_delay/3s,PrivacySandboxAdsAPIsOverride,PrivacySandboxSettings3,OverridePrivacySandboxSettingsLocalTesting
     ```
 
 {% Aside %}

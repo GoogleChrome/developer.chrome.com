@@ -127,9 +127,7 @@ following kinds of information:
 
 *  Contextual reporting data, such as the ad creative ID, information about the
    campaign, or geography.
-*  A conversion target, as in the site that is the target of the ad where you
-   hope the user will end. This tells the browser what source events correspond
-   to specific conversions.
+*  A conversion destination, as in the site where you expect the user will convert.
 
 Once the data is collected for the attribution source, the browser adds the
 data to local storage, so it can later be matched with an attribution trigger.
@@ -137,7 +135,7 @@ data to local storage, so it can later be matched with an attribution trigger.
 ### Attribution triggers (advertiser's website)
 
 The _[attribution trigger](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATE.md#attribution-trigger-registration)_
-is the event which tells the API to capture conversions. 
+is the event that tells the browser to capture conversions. 
 
 We recommend capturing the conversions that are most important to the
 advertiser, such as purchases. Multiple conversion types and metadata can be

@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Overriding Chrome pages"
+seoTitle: "MV2 - Overriding Chrome pages [Deprecated]"
 date: 2012-09-18
 updated: 2015-05-11
 description: >

@@ -18,10 +18,10 @@ You must declare the "topSites" permission in your [extension's manifest][2] to 
   ...
 }
 ```
-
 ## Examples
 
-You can find samples of this API in [Samples][1].
+To try this API, install the [topSites API example](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/topSites) from the [chrome-extension-samples](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples)
+repository.
 
 [1]: /docs/extensions/mv2/samples#search:topsites
 [2]: /docs/extensions/mv3/manifest

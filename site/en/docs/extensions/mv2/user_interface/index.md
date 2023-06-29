@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Design the user interface"
+seoTitle: "MV2 - Design the user interface [Deprecated]"
 date: 2018-03-16
 updated: 2018-05-16
 description: UI and design guidelines for Chrome Extensions.

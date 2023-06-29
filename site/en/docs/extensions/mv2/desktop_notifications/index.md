@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Rich notifications with webKit"
+seoTitle: "MV2 - Rich notifications with webKit [Deprecated]"
 date: 2012-09-17
 updated: 2017-01-05
 description: How to implement notifications in your Chrome Extension.

@@ -94,7 +94,8 @@ chrome.privacy.services.autofillEnabled.onChange.addListener(
 
 ## Examples
 
-For example code, see the [Privacy API samples][4].
+To try this API, install the [privacy API example](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/privacy) from the [chrome-extension-samples](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples)
+repository.
 
 [1]: https://www.google.com/intl/en/landing/chrome/google-chrome-privacy-whitepaper.pdf
 [2]: /docs/extensions/mv3/manifest

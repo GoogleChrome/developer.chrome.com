@@ -8,7 +8,7 @@ updated: 2023-05-04
 
 Extension service workers support both [standard service worker](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope#events) events and many events in the [extension APIs](/docs/extensions/reference/). This section describes what's available and provides tips for using them.
 
-## Declaring extension events {: #declare-events }
+## Declare extension events {: #declare-events }
 
 Event handlers in service workers need to be declared in the global scope, meaning they should be at the top level of the script and not be nested inside functions. This ensures that they are registered synchronously on initial script execution, which enables Chrome to dispatch events to the service worker as soon as it starts. For example:
 
