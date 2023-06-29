@@ -4,7 +4,7 @@ title: >
 description: >
   Use Application > Local Storage and Session Storage to debug key-value pairs.
 layout: 'layouts/blog-post.njk'
-date: 2023-05-25
+date: 2023-06-29
 authors:
   - sofiayem
 hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JAKMxkkxD5UFEwyYq0po.png'
@@ -15,11 +15,15 @@ tags:
   - devtools-tips
 ---
 
-Intro
+Use the **Application** > **Storage** > **Local Storage** and **Session Storage** panes to debug the local (persistent) and session (temporary) storage respectively. Watch the video, to see storage debugging in action.
 
 {% YouTube id='5o8krh_Qduk' %}
 
-Details
+In the **Local Storage** and **Session Storage** panes, you can:
+
+- View key-value pairs and filter through them.
+- Double-click to edit the keys values and see them applied on the page after a refresh.
+- Double-click the empty area to add new key-value pairs. To remove, right-click a pair. 
 
 To learn more, see:
 
