@@ -2,7 +2,7 @@
 layout: 'layouts/blog-post.njk'
 title: Introducing Privacy Sandbox Demos
 description: >
-  The Privacy Sandbox Demos repository offers cookbook recipes, sample code, and demo applications, based on Privacy Sandbox APIs.
+  Privacy Sandbox Demos offer cookbook recipes, sample code, and demo applications, based on Privacy Sandbox APIs.
 authors:
   - seburan
 date: 2023-06-29
