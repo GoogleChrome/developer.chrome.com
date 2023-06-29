@@ -160,7 +160,7 @@ exactly as expected, and we end up with a compiled template in `templates['hello
 ### Pass the result back {: #pass_result }
 
 We'll make this template available for use by setting up a message listener that accepts commands
-from the extension Page. We'll use the `command` passed in to determine what ought to be done (you could
+from the extension page. We'll use the `command` passed in to determine what ought to be done (you could
 imagine doing more than simply rendering; perhaps creating templates? Perhaps managing them in some
 way?), and the `context` will be passed into the template directly for rendering. The rendered HTML
 will be passed back to the Event Page so the extension can do something useful with it later on:
