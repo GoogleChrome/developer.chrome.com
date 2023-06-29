@@ -49,7 +49,7 @@ event_report_window
 Event-level reports are scheduled to be sent at the latest shortly after the report window is reached. 
 
 {% Aside %}
-Remember, in all the examples below, if the browser isn't running when a report is scheduled to be sent, the report is sent at browser startup. In this case, the browser may also delay some of these reports for a short random time on startup.
+Remember, in all the following examples, if the browser isn't running when a report is scheduled to be sent, the report is sent at browser startup. In this case, the browser may also delay some of these reports for a short random time on startup.
 {% endAside %}
 
 ### Schedule examples for event-level reports, clicks
