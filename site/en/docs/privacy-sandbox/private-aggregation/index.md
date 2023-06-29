@@ -110,7 +110,7 @@ From a Protected Audience API worklet, you can aggregate your data directly usin
 
 ## Available functions
 
-The following functions are available in the `privateAggregation` object available in Shared Storage and Protected Audience API worklets. To learn how to run your code in a worklet, refer to the [Shared Storage code samples](/docs/privacy-sandbox/use-shared-storage/). 
+The following functions are available in the `privateAggregation` object available in Shared Storage and Protected Audience API worklets. To learn how to run your code in a worklet, refer to the [Shared Storage code samples](https://github.com/GoogleChromeLabs/shared-storage-demo/tree/main/sites/content-producer/url-selection). 
 
 ### contributeToHistogram()
 
