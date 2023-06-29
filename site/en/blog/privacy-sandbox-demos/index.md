@@ -8,7 +8,7 @@ authors:
 date: 2023-06-29
 ---
 
-The Privacy Sandbox initiative offers [20+ APIs](/docs/privacy-sandbox/) to protect people's privacy online while giving companies and developers tools to build thriving digital businesses. Publishers, advertisers and ad tech providers have begun to evaluate and plan how they can continue to provide a free and open internet while also protecting people's privacy.
+The Privacy Sandbox initiative offers [over 20 APIs](/docs/privacy-sandbox/) to protect people's privacy online while giving companies and developers tools to build thriving digital businesses. Publishers, advertisers and ad tech providers have begun to evaluate and plan how they can continue to provide a free and open internet while also protecting people's privacy.
 
 We're progressively expanding our developer resources, and you can find the currently available documentation and demos for each API on the [Chrome Developers website](/docs/privacy-sandbox/). We also understand that ad tech companies and web ecosystem developers expect new approaches to typical use cases supported today by third-party cookies. These use cases often require incorporating a combination of new Privacy Sandbox APIs into their products, which requires planning and a clear understanding how these APIs work.
 
