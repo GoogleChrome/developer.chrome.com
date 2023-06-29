@@ -61,40 +61,35 @@ Each file should contain an array of [rules](#rules) as in the [example](#exampl
 Invalid static rules in packed extensions are ignored. It's therefore important to verify that your
 static rulesets are valid by testing with an unpacked version of your extension.
 
-## Limits {: #limits }
+## Limits {: #limits } {: #limits-constants }
 
-There is a performance overhead to loading and evaluating rules in the browser, and so a number of
-limits apply when using the API.
+There is a performance overhead to loading and evaluating rules in the browser,
+and so a number of limits apply when using the API. Limits depend on the type of
+rule you're using.
 
-### Rulesets {: #limits-rulesets }
+### Static rules {: #static-rules } {: #limits-rules } {: #limits-global-static-rule-limit }
 
-An extension can specify up to **50** static [rulesets][3] as part of the `"rule_resources"`
-manifest key. Only **10** of these rulesets can be enabled at a time, assuming static rule limits
-are not exceeded.
+Static rules are those specified in rule files (which are specified in the manifest file). 
 
-### Rules {: #limits-rules }
+An extension can specify up to **50** static [rulesets][3] as part of the
+`"rule_resources"` manifest key, but only **10** of these rulesets can be
+enabled at a time. The later is called the
+[`MAX_NUMBER_OF_ENABLED_STATIC_RULESETS`][14]. Collectively, those rulesets are
+guaranteed at least **30,000** rules. This is called the
+[`GUARANTEED_MINIMUM_STATIC_RULES`][5]. The number of rules available after that
+depend on how many rules are enabled by all the extensions installed on a user's
+browser. You can find this number at runtime by calling
+[`getAvailableStaticRuleCount()`][7]. 
 
-An extension is allowed to enable at least **30,000** static rules. Additional static rules may or
-may not be enabled depending on the available [global static rule limit][6].
+### Dynamic and session rules {: #dynamic-session-rules }
 
-### Global Static Rule Limit {: #limits-global-static-rule-limit }
+Dynamic and session rules are simpler than static rules. The total number of
+both cannot exceed **5000**. This is called the
+[`MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES'][10].
 
-In addition to the [`GUARANTEED_MINIMUM_STATIC_RULES`][5] static rules guaranteed for each extension,
-extensions can enable additional static rulesets depending on the available global static rule
-limit. This global limit is shared between all extensions and can be used by extensions on a
-first-come, first-served basis. Extensions shouldn't depend on the global limit having a specific
-value and should instead use the [`getAvailableStaticRuleCount()`][7] API method to find the additional
-rule limit available to them.
+### Rules that use regex {: #regex-rules }
 
-### Constants {: #limits-constants }
-
-These values are also defined as constants that can be accessed at runtime.
-
-The limits on results are defined by the [`MAX_NUMBER_OF_STATIC_RULESETS`][4] and
-[`MAX_NUMBER_OF_ENABLED_STATIC_RULESETS`][14] constants.
-
-This limits on results are defined by the [`GUARANTEED_MINIMUM_STATIC_RULES`][5] constant.
-
+All types of rules can use regular expressions; however the total number of regex rules, regardless of type cannot exceed **1000**. This is called the [MAX_NUMBER_OF_REGEX_RULES][15].
 
 ## Rules {: #rules }
 
@@ -422,3 +417,4 @@ repository.
 [12]: /docs/extensions/webRequest
 [13]: #method-updateSessionRules
 [14]: #property-MAX_NUMBER_OF_ENABLED_STATIC_RULESETS
+[15]: #property-MAX_NUMBER_OF_REGEX_RULES
