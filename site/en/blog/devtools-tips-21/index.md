@@ -22,8 +22,8 @@ Use the **Application** > **Storage** > **Local Storage** and **Session Storage*
 In the **Local Storage** and **Session Storage** panes, you can:
 
 - View key-value pairs and filter through them.
-- Double-click to edit the keys values and see them applied on the page after a refresh.
-- Double-click the empty area to add new key-value pairs. To remove, right-click a pair. 
+- Double-click to edit keys and values and see the changes applied on the page after a refresh.
+- Double-click the empty area to add new key-value pairs. To remove a pair, right-click it. 
 
 To learn more, see:
 
