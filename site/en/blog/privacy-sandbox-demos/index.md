@@ -2,8 +2,7 @@
 layout: 'layouts/blog-post.njk'
 title: Introducing Privacy Sandbox Demos
 description: >
-  We plan to launch mitigations to limit tracking from a particular technique called "bounce tracking" later this year.
-  We would like to invite developers to test this new feature with feature flags and provide feedback.
+  The Privacy Sandbox Demos repository offers cookbook recipes, sample code, and demo applications, based on Privacy Sandbox APIs.
 authors:
   - seburan
 date: 2023-06-29
