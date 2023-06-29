@@ -69,21 +69,21 @@ event_report_window
     <tr>
       <td>Default (30 days)</td>
       <td>(Not set)</td>
-      <td>~2 days + 1 hour after click<br>
+      <td>About 2 days plus 1 hour after click<br>
 Default reporting behavior — built-in window #1</td>
       <td>> 30 days after click</td>
     </tr>
     <tr>
       <td>Custom, set to 5 days</td>
       <td>(Not set)</td>
-      <td>~2 days + 1 hour after click<br>
+      <td>About 2 days plus 1 hour after click<br>
 Default reporting behavior — built-in window #1</td>
-      <td>> 5 days after click</td>
+      <td>More then 5 days after click</td>
     </tr>
     <tr>
       <td>Default (30 days)</td>
       <td>Set to 1 day</td>
-      <td>~1 days + 1 hour after click<br>
+      <td>About 1 day plus 1 hour after click<br>
 <br>
 Custom behavior due to your custom report window. Note how this gets you this report faster than in the first row, where you need to wait for the first built-in window (2 days)</td>
       <td>> 1 day after click</td>
@@ -91,7 +91,7 @@ Custom behavior due to your custom report window. Note how this gets you this re
     <tr>
       <td>Custom, set to 5 days</td>
       <td>Set to 1 day</td>
-      <td>~1 day + 1 hour after click<br>
+      <td>About 1 day plus 1 hour after click<br>
 <br>
 Custom behavior due to your custom report window</td>
       <td>> 1 day after click</td>
@@ -99,7 +99,7 @@ Custom behavior due to your custom report window</td>
     <tr>
       <td>Default (30 days)</td>
       <td>Set to 4 hours</td>
-      <td>~1 day + 1 hour after click<br>
+      <td>About 1 day plus 1 hour after click<br>
 Custom behavior due to your custom report window. This is due to clamping: the minimum report window is one day. Even if you set a report window to less than a day, for example here 4 hours, its value will be clamped to a day.</td>
       <td>> 1 day after click<br>
 </td>
@@ -122,25 +122,25 @@ Custom behavior due to your custom report window. This is due to clamping: the m
     <tr>
       <td>Default (30 days)</td>
       <td>(Not set)</td>
-      <td>~30 days + 1 hour after view<br>
+      <td>About 30 days plus 1 hour after view<br>
 Default reporting behavior</td>
     </tr>
     <tr>
       <td>Custom, set to 5 days</td>
       <td>(Not set)</td>
-      <td>~5 days + 1 hour after view<br>
+      <td>About 5 days plus 1 hour after view<br>
 Default reporting behavior</td>
     </tr>
     <tr>
       <td>Default (30 days)</td>
       <td>Set to 1 day</td>
-      <td>~1 day + 1 hour after view<br>
+      <td>About 1 day plus 1 hour after view<br>
 Custom behavior due to your custom report window</td>
     </tr>
     <tr>
       <td>Custom, set to 5 days</td>
       <td>Set to 1 day</td>
-      <td>~1 day + 1 hour after view<br>
+      <td>About 1 day plus 1 hour after view<br>
 Custom behavior due to your custom report window</td>
     </tr>
   </tbody>
@@ -178,27 +178,27 @@ aggregatable_report_window
     <tr>
       <td>Default (30 days)</td>
       <td>(Not set)</td>
-      <td>> 30 days after click/view</td>
+      <td>More than 30 days after click or view</td>
     </tr>
     <tr>
       <td>Custom, set to 5 days</td>
       <td>(Not set)</td>
-      <td>> 5 days after click/view</td>
+      <td>More than 5 days after click or view</td>
     </tr>
     <tr>
       <td>Default (30 days)</td>
       <td>Set to 1 day</td>
-      <td>> 1 day after click/view</td>
+      <td>> 1 day after click or view</td>
     </tr>
     <tr>
       <td>Custom, set to 5 days</td>
       <td>Set to 1 day</td>
-      <td>> 1 day after click/view</td>
+      <td>More than 1 day after click or view</td>
     </tr>
     <tr>
       <td>Default (30 days)</td>
       <td>Set to 4 hours</td>
-      <td>> 1 day after click/view. This is due to clamping: the minimum report window is one day. Even if you set a report window to less than a day, for example here 4 hours here, its value will be clamped to a day.</td>
+      <td>More than 1 day after click or view. This is due to clamping: the minimum report window is one day. Even if you set a report window to less than a day, for example here 4 hours here, its value will be clamped to a day.</td>
     </tr>
   </tbody>
 </table>
