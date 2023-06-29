@@ -5,8 +5,8 @@ subhead: >
   Custom report windows can provide faster event-level reports and selective reporting for aggregatable reports.
 description: >
   Custom report windows can provide faster event-level reports and selective reporting for aggregatable reports.
-date: 2022-03-01
-updated: 2023-03-14
+date: 2022-12-15
+updated: 2023-06-29
 authors:
   - maudn
 ---
