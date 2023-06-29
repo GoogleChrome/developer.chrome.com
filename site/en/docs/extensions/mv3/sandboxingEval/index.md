@@ -187,10 +187,8 @@ will be passed back to the Event Page so the extension can do something useful w
         const template = templates[event.data.templateName];
         let result = 'invalid request';
 
-        // if we don't know the templateName requested, return an error message
-        if !(template) {
-          result = 'Unknown template: ' + event.data.templateName;
-        } else {
+       // if we don't know the templateName requested, return an error message
+        if (template) {
           switch (command) {
             case 'render':
               result = template(event.data.context);
@@ -201,7 +199,9 @@ will be passed back to the Event Page so the extension can do something useful w
             //   template = Handlebars.compile(event.data.templateSource);
             //   result = template(event.data.context);
             //   break;
-          }
+              }
+        } else {
+            result = 'Unknown template: ' + event.data.templateName;
         }
         event.source.postMessage({ result: result }, event.origin);
       });
