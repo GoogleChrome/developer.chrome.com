@@ -5,6 +5,8 @@ description: >
   Privacy Sandbox Demos offer cookbook recipes, sample code, and demo applications, based on Privacy Sandbox APIs.
 authors:
   - seburan
+tags:
+  - privacy
 date: 2023-06-29
 ---
 
