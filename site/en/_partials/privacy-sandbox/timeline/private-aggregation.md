@@ -17,7 +17,7 @@ These changes will be possible for testing from the week of Monday, May 22nd in 
     * The `contributeToHistogram()` function is available in Chrome Canary, Dev, Beta, and Stable M115+
     * The `contributeToHistogramOnEvent()` function is available in Chrome Canary, Dev, Beta, and Stable M115+
   * Legacy function names 
-    * The below function names will be deprecated in M115
+    * The following function names will be deprecated in M115
     * The `sendHistogramReport()` function is available in 
       * Chrome Canary, Dev, and Beta M107+
       * Chrome Stable M112+
