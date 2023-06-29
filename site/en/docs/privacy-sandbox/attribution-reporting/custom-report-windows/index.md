@@ -78,7 +78,7 @@ Default reporting behavior — built-in window #1</td>
       <td>(Not set)</td>
       <td>About 2 days plus 1 hour after click<br>
 Default reporting behavior — built-in window #1</td>
-      <td>More then 5 days after click</td>
+      <td>More than 5 days after click</td>
     </tr>
     <tr>
       <td>Default (30 days)</td>
