@@ -63,7 +63,7 @@ Review the example code: [prioritize conversions of type checkout](https://githu
 
 ## Next steps
 
-For information bout setting sources and triggers, refer to:
+For information about setting sources and triggers, refer to:
 
 - [Register attribution sources](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/).
 - [Register attribution triggers](/docs/privacy-sandbox/attribution-reporting/register-attribution-triggers/).
