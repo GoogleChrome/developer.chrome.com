@@ -161,7 +161,7 @@ This will filter out conversions happening after a certain time frame.
 Aggregatable reports are sent within an hour of trigger; they're randomly delayed between 10 minutes and an hour.
 
 {% Aside %}
-In the table below, for all cases, if a conversion takes place **one day after the click/impression**, the browser will send the report **approximately an hour after the trigger**.
+In the table below, for all cases, if a conversion takes place **one day after the click or impression**, the browser will send the report **approximately an hour after the trigger**.
 {% endAside %}
 
 <table class="with-heading-tint">
