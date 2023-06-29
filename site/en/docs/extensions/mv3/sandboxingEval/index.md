@@ -185,7 +185,7 @@ will be passed back to the Event Page so the extension can do something useful w
       window.addEventListener('message', function (event) {
         const command = event.data.command;
         const template = templates[event.data.templateName];
-          result = 'invalid request';
+          let result = 'invalid request';
 
         // if we don't know the templateName requested, return an error message
         if (!template) {
