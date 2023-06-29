@@ -5,8 +5,8 @@ subhead: >
   Learn how to register sources to attribute clicks and views to the appropriate events.
 description: >
   Learn how to register sources to attribute clicks and views to the appropriate events.
-date: 2022-03-01
-updated: 2023-05-15
+date: 2022-12-15
+updated: 2023-06-29
 authors:
   - maudn
 ---
@@ -15,7 +15,7 @@ An **attribution source** is an ad-related event (a click or view), to which an 
   - Contextual reporting data, such as the ad creative ID, information about the campaign, or geography.
   - A conversion destination, as in the site where you expect the user will convert.
 
-By following the steps in this document, you can register sources  — ad impressions or clicks — the browser will then attribute conversions to.
+By following the steps in this document, you can register sources—ad impressions or clicks—to which the browser will then attribute conversions.
 ## Registration methods
 
 To register attribution sources, use HTML elements or JavaScript calls:
@@ -32,10 +32,10 @@ registration HTTP response header.
 
 ## Register sources for clicks or views
 
- To register an attribution source for either clicks or views, follow the steps outlined here. The [complete steps](#step-1-initiate-source-registration) are below. Here's the summary:
+ To register an attribution source for either clicks or views, follow the steps outlined here. The [complete steps](#step-1-initiate-source-registration) follow. Here's the summary:
 
 1. **Initiate the source registration**. Use an HTML element or a
-    JavaScript call to make a request. This step is different for clicks and views, as you'll see below.
+    JavaScript call to make a request. This step is different for clicks and views, as you'll notice in the following sections.
 1. **Complete the source registration** by responding with the source
     registration header. Upon receiving that request, respond with the header
     `Attribution-Reporting-Register-Source`. In that header, specify the
@@ -45,7 +45,7 @@ registration HTTP response header.
 
 As you use HTML elements or make JavaScript calls to register sources, you
 may need to use `attributionsrc`
-or `attributionReporting`. See the table below for details on when these are
+or `attributionReporting`. Refer to the following table for details on when these are
 required.
 
 When `attributionsrc` is **optional**, using it indicates that the request is eligible for Attribution Reporting. If you use
@@ -100,7 +100,7 @@ measurement: if `attributionsrc` is present, the browser will send the
 
 ### Step 1: Initiate source registration
 
-Step 1 is different for clicks and views. Open the tabs below for each.
+Step 1 is different for clicks and views. Open the corresponding tabs for each.
 
 
 <web-tabs id="tabs">
@@ -184,8 +184,8 @@ requests (requests that include the `Attribution-Reporting-Eligible` header).
 As you saw above, you can specify `attributionsrc` without a URL. You can also specify a
 single URL. Additionally, for sources only (not applicable to [triggers](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger/)), you can use a space-separated list of URLs.
 
-Using URLs causes the browser to initiate a **separate** keepalive fetch request — one
-for each URL — which includes the `Attribution-Reporting-Eligible` request
+Using URLs causes the browser to initiate a **separate** keepalive fetch request—one
+for each URL—which includes the `Attribution-Reporting-Eligible` request
 header.
 
 This is useful if you want to make the source registration by responding to a
@@ -303,8 +303,6 @@ your response the `Attribution-Reporting-Register-Source` header.
     })
  );
 ```
-
-{% Partial 'privacy-sandbox/ar-engage.njk' %}
 
 ## Next steps
 

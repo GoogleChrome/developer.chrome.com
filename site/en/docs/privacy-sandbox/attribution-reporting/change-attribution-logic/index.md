@@ -5,8 +5,8 @@ subhead: >
   Configure the API to prioritize specific sources or triggers.
 description: >
   Configure the API to prioritize specific sources or triggers.
-date: 2022-03-01
-updated: 2023-03-14
+date: 2022-12-15
+updated: 2023-06-29
 authors:
   - maudn
 ---
@@ -60,4 +60,10 @@ If no priorities are set, the browser will fall back to its default behavior: an
 
 Review the example code: [prioritize conversions of type checkout](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/8f3d874b79ab0c8a15822fbcd09e94042aee7dcd/conversion-measurement/functions/apps/adtech.js#L215)
 
-{% Partial 'privacy-sandbox/ar-engage.njk' %}
+
+## Next steps
+
+For information bout setting sources and triggers, refer to:
+
+- [Register attribution sources](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/).
+- [Register attribution triggers](/docs/privacy-sandbox/attribution-reporting/register-attribution-triggers/).

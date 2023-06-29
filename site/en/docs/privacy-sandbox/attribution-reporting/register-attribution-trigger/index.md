@@ -5,15 +5,15 @@ subhead: >
   Learn how to register attribution triggers to count your conversions.
 description: >
   Learn how to register attribution triggers to count your conversions.
-date: 2022-03-01
-updated: 2023-05-15
+date: 2022-12-15
+updated: 2023-06-29
 authors:
   - maudn
 ---
 
 An **attribution trigger** is the event that tells the browser to capture conversions.
 
-By following the steps in this document, you can register triggers to register conversions that the browser will then attribute to the relevant source events — namely, ad impressions or ad clicks.
+By following the steps in this document, you can register triggers to register conversions that the browser will then attribute to the relevant source events—namely, ad impressions or ad clicks.
 
 ## Registration methods
 
@@ -31,7 +31,7 @@ These will generate network requests that you will then respond to with a trigge
 ## Register a trigger to attribute a conversion
 
 Registering a trigger is similar to
-[registering an attribution source event](http://localhost:8080/docs/privacy-sandbox/attribution-reporting/register-attribution-source/). The [complete steps](#step-1-initiate-the-trigger-registration) are below. Here's the summary:
+[registering an attribution source event](http://localhost:8080/docs/privacy-sandbox/attribution-reporting/register-attribution-source/). The [complete steps](#step-1-initiate-the-trigger-registration) are described later. Here's the summary:
 
 1. **Initiate the trigger registration.** Use a pixel or a `fetch()` call to make
     a request.
@@ -46,7 +46,7 @@ Registering a trigger is similar to
     a value—respond with the header `Attribution-Reporting-Register-Trigger`.
       <br><br>
 
-    In this header, specify the trigger data you want to see surfaced in
+    In this header, specify the trigger data you want surfaced in
     reports ultimately. Any response can set this header. As long as it's a
     response to a request made from a site that matches the `destination`,
     sources will be matched. When the header is received, the
@@ -72,7 +72,7 @@ If `destination` is `https://shop.advertiser.example`, conversions on both `http
 
 As you use HTML elements or make JavaScript calls to register triggers, you
 may need to use `attributionsrc`
-or `attributionReporting`. See the table below for details on when these are
+or `attributionReporting`. Refer to the following table for details on when these are
 required.
 
 When `attributionsrc` is **optional**, using it indicates that the request is eligible for Attribution Reporting. If you use
@@ -195,8 +195,8 @@ You can add `attributionsrc` either with or without a value.
 
 If you set a value for `attributionsrc`, it should be a single URL. 
 
-Using a URL causes the browser to initiate a **separate** keepalive fetch request — one
-for each URL — which includes the `Attribution-Reporting-Eligible` request
+Using a URL causes the browser to initiate a **separate** keepalive fetch request—one
+for each URL—which includes the `Attribution-Reporting-Eligible` request
 header.
 
 This is useful if you want to make the source registration by responding to a
@@ -226,8 +226,6 @@ JSON.stringify({event_trigger_data: [{
 {% Aside 'caution' %}
 The event_trigger_data field value must be nested in square brackets, because the browser expects a JSON array. This is useful for filters.
 {% endAside %}
-
-{% Partial 'privacy-sandbox/ar-engage.njk' %}
 
 ## Next steps
 
