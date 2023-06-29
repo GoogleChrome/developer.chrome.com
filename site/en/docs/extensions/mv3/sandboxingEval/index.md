@@ -73,7 +73,7 @@ containing two properties: `templateName`, and `command`. We'll dive into both i
 {% Label %}service-worker.js:{% endLabel %}
 
 ```js
-chrome.runtime.onInstalled.addListener(() => {
+chrome.action.onClicked.addListener(() => {
   chrome.tabs.create({
     url: 'mainpage.html'
   });
