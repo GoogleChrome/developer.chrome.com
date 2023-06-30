@@ -211,9 +211,8 @@ will be passed back to the extension page so the extension can do something usef
 Back in the extension page, we'll receive this message, and do something interesting with the `html`
 data we've been passed. In this case, we'll just echo it out via a [Desktop Notification][13], but
 it's entirely possible to use this HTML safely as part of the extension's UI. Inserting it via
-`innerHTML` doesn't pose a significant security risk, as even a complete compromise of the sandboxed
-code through some clever attack would be unable to inject dangerous script or plugin content into
-the high-permission extension context.
+`innerHTML` doesn't pose a significant security risk as we trust the content which has been rendered
+within the sandbox.
 
 This mechanism makes templating straightforward, but it of course isn't limited to templating. Any
 code that doesn't work out of the box under a strict Content Security Policy can be sandboxed; in
