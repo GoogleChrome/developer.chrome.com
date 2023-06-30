@@ -36,7 +36,7 @@ schema.
 
 Chrome will then load these policies from the underlying operating system and from Google Apps for
 signed-in users. The [storage.onChanged][4] event is fired whenever a policy change is detected.
-the policies that Chrome loaded at [chrome://policy][6].
+You can verify the policies that Chrome loaded at [chrome://policy][6].
 
 ## Schema format {: #format }
 
