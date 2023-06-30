@@ -19,7 +19,7 @@ To change the default priority, add the `priority` key to your source registrati
 
 Set a higher priority for sources you wish to prioritize. Larger values denote a higher priority; for example, a source event with a `priority` of 2 takes precedence over a source with a `priority` of 1.
 
-Only the report that matches the source event with the highest priority will be sent.
+Only the report that matches the source event with the highest priority is sent.
 
 ### Example code
 
@@ -44,7 +44,7 @@ Unlike source-side priorities, setting trigger-side priorities is only available
 
 Assume that a user clicks an ad and converts four times: they visit the advertiser site homepage, then visit a product page, sign up to the newsletter, and finally make a purchase.
 
-But due to the three-report limit for clicks, by default all subsequent reports after the signup (third conversion) will be dropped, including the purchase report. 
+But due to the three-report limit for clicks, by default all subsequent reports after the signup (third conversion) are dropped, including the purchase report. 
 
 Instead, you can configure the API such that you receive reports for conversions that you consider more important; for example, the purchase report.
 
@@ -54,9 +54,9 @@ When an attribution is triggered for a given source event, if the maximum number
 
 * Compare the priority of the new report with the priorities of existing scheduled reports for that same source.
 
-* Delete the report with the lowest priority to schedule the new report instead. If the new report is the one with the lowest priority, it will be ignored and you won't receive it.
+* Delete the report with the lowest priority to schedule the new report instead. If the new report is the one with the lowest priority, it is ignored and you won't receive it.
 
-If no priorities are set, the browser will fall back to its default behavior: any conversion happening after the third conversion for clicks or the first conversion for views will be dropped.
+If no priorities are set, the browser falls back to its default behavior: any conversion happening after the third conversion for clicks or the first conversion for views is dropped.
 
 Review the example code: [prioritize conversions of type checkout](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/8f3d874b79ab0c8a15822fbcd09e94042aee7dcd/conversion-measurement/functions/apps/adtech.js#L215)
 
