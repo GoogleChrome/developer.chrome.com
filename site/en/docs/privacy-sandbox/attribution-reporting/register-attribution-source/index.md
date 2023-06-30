@@ -104,7 +104,7 @@ Step 1 is different for clicks and views. Open the corresponding tabs for each.
 
 
 <web-tabs id="tabs">
-<web-tab title="Clicks step 1">
+<web-tab title="Clicks step 1.">
     <p>
     </p>
 
@@ -181,7 +181,7 @@ requests (requests that include the `Attribution-Reporting-Eligible` header).
 
 #### `attributionsrc` with or without a value
 
-As noted earlier, you can specify `attributionsrc` without a URL. You can also specify a
+As you saw previously, you can specify `attributionsrc` without a URL. You can also specify a
 single URL. Additionally, for sources only (not applicable to [triggers](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger/)), you can use a space-separated list of URLs.
 
 Using URLs causes the browser to initiate a **separate** keepalive fetch request—one
@@ -201,7 +201,7 @@ browser to make that extra request and configuring its destination.
 For step 1 of registering views go to <a href="#tabs">the tabs</a> and select Views step 1.
 
   </web-tab>
-  <web-tab title="Views step 1">
+  <web-tab title="Views step 1.">
 <p>
 
 To register an attribution source for a view, you can use an image or script tag to which you'll add the `attributionsrc` attribute.
