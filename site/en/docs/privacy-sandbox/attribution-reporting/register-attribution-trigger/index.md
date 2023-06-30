@@ -142,7 +142,7 @@ You can register a trigger using a pixel (`<img>` tag) or script tag.
 
 #### Using a script tag
 
-You can perform trigger registration with a script tag; it behaves identically to &lt;img>. The following code samples illustrate the use of `fetch()` and `XMLHttpRequest()` (XHR).
+You can perform trigger registration with a script tag; it behaves identically to `<img>`. The following code samples illustrate the use of `fetch()` and `XMLHttpRequest()` (XHR).
 
 This code effectively simulates what an HTML request with `attributionsrc` would do:
 
