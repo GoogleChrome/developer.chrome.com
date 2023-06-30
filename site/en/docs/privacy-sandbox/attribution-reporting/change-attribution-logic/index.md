@@ -40,7 +40,7 @@ const priority = - currentTimestamp;
 
 ## Prioritize specific conversions for event-level reports
 
-Unlike source-side priorities discussed above, setting trigger-side priorities is only available for event-level reports.
+Unlike source-side priorities, setting trigger-side priorities is only available for event-level reports.
 
 Assume that a user clicks an ad and converts four times: they visit the advertiser site homepage, then visit a product page, sign up to the newsletter, and finally make a purchase.
 
