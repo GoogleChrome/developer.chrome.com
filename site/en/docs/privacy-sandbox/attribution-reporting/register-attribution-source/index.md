@@ -198,7 +198,7 @@ that is separate from the navigation, and that you can completely control. By
 specifying an explicit value for `attributionsrc`, you're instructing the
 browser to make that extra request and configuring its destination.
 
-Click the tab above for <a href="#tabs">Views step 1</a>
+For step 1 of registering views go to <a href="#tabs">the tabs</a> and select Views step 1.
 
   </web-tab>
   <web-tab title="Views step 1">
@@ -271,8 +271,8 @@ const req = new XMLHttpRequest();
     attributionReporting);
   req.send();
 ```
+For step 1 of registering clicks go to <a href="#tabs">the tabs</a> and select Clicks step 1.
 
-Click the tab above for <a href="#tabs">Clicks step 1</a>
   </web-tab>
 
 </web-tabs>
