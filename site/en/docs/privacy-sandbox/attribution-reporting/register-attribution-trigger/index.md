@@ -13,7 +13,7 @@ authors:
 
 An **attribution trigger** is the event that tells the browser to capture conversions.
 
-By following the steps in this document, you can register triggers to register conversions that the browser will then attribute to the relevant source events—namely, ad impressions or ad clicks.
+By following the steps in this document, you can register triggers to register conversions that the browser then attributes to the relevant source events—namely, ad impressions or ad clicks.
 
 ## Registration methods
 
@@ -26,7 +26,7 @@ To register triggers, use HTML elements or JavaScript calls:
 -  `XMLHttpRequest`
 -  `window.open`
 
-These will generate network requests that you will then respond to with a trigger registration HTTP response header.
+This generates network requests that you then respond to with a trigger registration HTTP response header.
 
 ## Register a trigger to attribute a conversion
 
@@ -78,7 +78,7 @@ required.
 When `attributionsrc` is **optional**, using it indicates that the request is eligible for Attribution Reporting. If you use
 `attributionsrc`, the browser sends the
 `Attribution-Reporting-Eligible` header. It's also useful for app-to-web
-measurement: if `attributionsrc` is present, the browser will send the 
+measurement: if `attributionsrc` is present, the browser sends the 
 `Attribution-Reporting-Support` header.
 
 <table>
