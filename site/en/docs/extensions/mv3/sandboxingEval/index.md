@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 ```
 
-{% Aside %}For general information about the <code>postMessage</code> API, take a look at the <a href="https://developer.mozilla.org/en/DOM/window.postMessage"><code>postMessage</code> documentation on MDN </a>. It's quite complete and worth reading. In particular, note that data can only be passed back and forth if it's serializable. Functions, for instance, are not.{% endAside %}
+{% Aside %}For general information about <code>postMessage()</code>, look at the <a href="https://developer.mozilla.org/en/DOM/window.postMessage"><code>postMessage()</code> documentation on MDN </a>. It's quite complete and worth reading. In particular, note that data can only be passed back and forth if it's serializable. Functions, for instance, are not serializable.{% endAside %}
 
 ### Do something dangerous {: #do_something }
 
