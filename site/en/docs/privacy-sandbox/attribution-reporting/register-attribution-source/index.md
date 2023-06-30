@@ -13,9 +13,9 @@ authors:
 
 An **attribution source** is an ad-related event (a click or view), to which an ad tech can attach the following kinds of information:
   - Contextual reporting data, such as the ad creative ID, information about the campaign, or geography.
-  - A conversion destination, as in the site where you expect the user will convert.
+  - A conversion destination, as in the site where you expect the user to convert.
 
-By following the steps in this document, you can register sources—ad impressions or clicks—to which the browser will then attribute conversions.
+By following the steps in this document, you can register sources—ad impressions or clicks—to which the browser then attributes conversions.
 ## Registration methods
 
 To register attribution sources, use HTML elements or JavaScript calls:
@@ -27,7 +27,7 @@ To register attribution sources, use HTML elements or JavaScript calls:
 -  `XMLHttpRequest`
 -  `window.open`
 
-These will generate network requests you will then respond to with a source
+This generates network requests you then respond to with a source
 registration HTTP response header.
 
 ## Register sources for clicks or views
@@ -51,7 +51,7 @@ required.
 When `attributionsrc` is **optional**, using it indicates that the request is eligible for Attribution Reporting. If you use
 `attributionsrc`, the browser sends the
 `Attribution-Reporting-Eligible` header. It's also useful for app-to-web
-measurement: if `attributionsrc` is present, the browser will send the 
+measurement: if `attributionsrc` is present, the browser sends the 
 `Attribution-Reporting-Support` header.
 
 <table>
@@ -176,7 +176,7 @@ window.open('...', '_blank', attributionsrc=${encodedUrl1}
   attributionsrc=${encodedUrl2})
 ```
 
-In such cases, both URLs will receive `navigation-source-eligible` `attributionsrc`
+In such cases, both URLs receive `navigation-source-eligible` `attributionsrc`
 requests (requests that include the `Attribution-Reporting-Eligible` header).
 
 #### `attributionsrc` with or without a value
