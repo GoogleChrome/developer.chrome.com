@@ -11,7 +11,7 @@ description: >
 authors:
   - thomassteiner
 date: 2022-08-31
-updated: 2023-05-03
+updated: 2023-06-30
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/yUp8lfaCt4EmxmVei3lj.jpg
 alt: Filing cabinet symbolizing a database.
 tags:
@@ -83,7 +83,7 @@ and outperforms Web SQL in many cases.
 - [🔮 In the future.] A
   [deprecation trial](/docs/web-platform/origin-trials/#deprecation-trials) to
   keep using Web SQL is available from **Chromium&nbsp;118**
-  ({% ChromeDate '118' %}) to **Chromium&nbsp;123** ({% ChromeDate '123' %}).
+  ({% ChromeDate '117' %}) to **Chromium&nbsp;123** ({% ChromeDate '123' %}).
 
 ## Where to go from here
 
