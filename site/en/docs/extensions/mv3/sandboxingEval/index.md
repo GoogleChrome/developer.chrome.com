@@ -68,7 +68,7 @@ it can be addressed by the extension's code. Here, sandbox.html has been loaded 
 an extension page via an `iframe`. The page's javascript file contains code that sends a message 
 into the sandbox whenever the browser action is clicked by finding the `iframe`
 on the page, and executing the `postMessage` method on its `contentWindow`. The message is an object
-containing three properties: `context`, `templateName`, and `command`. We'll dive into both in a moment.
+containing three properties: `context`, `templateName`, and `command`. We'll dive in to `context` and `command` in a moment.
 
 {% Label %}service-worker.js:{% endLabel %}
 
