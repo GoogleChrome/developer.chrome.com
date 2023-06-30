@@ -5,7 +5,7 @@ description: >
   Learn how to use Safari Web Inspector debugging for Chrome on iOS.
 authors:
   - henrikbostrom
-date: 2023-06-29
+date: 2023-06-30
 ---
 
 The legacy `getStats()` WebRTC API will be removed in Chrome 117, therefore apps using it will need to migrate to the standard API. This article explains how to migrate your code, and what to do if you need more time to make this change. 
