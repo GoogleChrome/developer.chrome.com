@@ -85,7 +85,7 @@ browser. You can find this number at runtime by calling
 
 The limits applied to dynamic and session rules are simpler than static rules. The total number of
 both cannot exceed **5000**. This is called the
-[`MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES'][10].
+[`MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES`][10].
 
 ### Rules that use regex {: #regex-rules }
 
