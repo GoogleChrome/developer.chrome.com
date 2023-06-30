@@ -73,7 +73,7 @@ Static rules are those specified in rule files (which are specified in the manif
 
 An extension can specify up to **50** static [rulesets][3] as part of the
 `"rule_resources"` manifest key, but only **10** of these rulesets can be
-enabled at a time. The later is called the
+enabled at a time. The latter is called the
 [`MAX_NUMBER_OF_ENABLED_STATIC_RULESETS`][14]. Collectively, those rulesets are
 guaranteed at least **30,000** rules. This is called the
 [`GUARANTEED_MINIMUM_STATIC_RULES`][5]. The number of rules available after that
