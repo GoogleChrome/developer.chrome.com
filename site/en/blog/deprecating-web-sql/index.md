@@ -83,7 +83,7 @@ and outperforms Web SQL in many cases.
 - [🔮 In the future.] A
   [deprecation trial](/docs/web-platform/origin-trials/#deprecation-trials) to
   keep using Web SQL is available from **Chromium&nbsp;118**
-  ({% ChromeDate '118' %}) to **Chromium&nbsp;123** ({% ChromeDate '123' %}).
+  ({% ChromeDate '117' %}) to **Chromium&nbsp;123** ({% ChromeDate '123' %}).
 
 ## Where to go from here
 
