@@ -68,7 +68,7 @@ it can be addressed by the extension's code. Here, sandbox.html has been loaded 
 an extension page via an `iframe`. The page's javascript file contains code that sends a message 
 into the sandbox whenever the browser action is clicked by finding the `iframe`
 on the page, and executing the `postMessage` method on its `contentWindow`. The message is an object
-containing two properties: `templateName`, and `command`. We'll dive into both in a moment.
+containing three properties: `context`, `templateName`, and `command`. We'll dive into both in a moment.
 
 {% Label %}service-worker.js:{% endLabel %}
 
@@ -130,7 +130,7 @@ template in the way Handlebars suggests:
   </body>
 </html>
 ```
-{% Label %}sandbox-page.html:{% endLabel %}
+{% Label %}sandbox.html:{% endLabel %}
 
 ```html
    <script id="sample-template-1" type="text/x-handlebars-template">
@@ -163,7 +163,7 @@ We'll make this template available for use by setting up a message listener that
 from the extension page. We'll use the `command` passed in to determine what ought to be done (you could
 imagine doing more than simply rendering; perhaps creating templates? Perhaps managing them in some
 way?), and the `context` will be passed into the template directly for rendering. The rendered HTML
-will be passed back to the Event Page so the extension can do something useful with it later on:
+will be passed back to the extension page so the extension can do something useful with it later on:
 
 ```html
  <script>
