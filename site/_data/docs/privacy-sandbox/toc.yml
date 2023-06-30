@@ -108,11 +108,16 @@
             - url: /docs/privacy-sandbox/attribution-reporting-debugging/part-3/
         - title: i18n.docs.privacy-sandbox.attribution-reporting-developer-guide
           sections:
-            - url: /docs/privacy-sandbox/attribution-reporting/contribution-budget/
+            - url: /docs/privacy-sandbox/attribution-reporting/register-attribution-source/
+            - url: /docs/privacy-sandbox/attribution-reporting/register-attribution-trigger/
+            - url: /docs/privacy-sandbox/attribution-reporting/change-attribution-logic/
+            - url: /docs/privacy-sandbox/attribution-reporting/define-filters/
             - url: /docs/privacy-sandbox/attribution-reporting/schedule/
+            - url: /docs/privacy-sandbox/attribution-reporting/custom-report-windows/
+            - url: /docs/privacy-sandbox/attribution-reporting/deduplication-for-aggregatable-reports/
+            - url: /docs/privacy-sandbox/attribution-reporting/contribution-budget/
             - url: /docs/privacy-sandbox/attribution-reporting/understanding-noise/
             - url: /docs/privacy-sandbox/attribution-reporting/working-with-noise/
-            - url: /docs/privacy-sandbox/attribution-reporting/deduplication-for-aggregatable-reports/
             - url: https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/view?usp=sharing
               title: i18n.docs.privacy-sandbox.attribution-reporting-handbook        
         - url: /docs/privacy-sandbox/attribution-reporting-updates
