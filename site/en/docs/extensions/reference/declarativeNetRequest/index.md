@@ -61,13 +61,13 @@ Each file should contain an array of [rules](#rules) as in the [example](#exampl
 Invalid static rules in packed extensions are ignored. It's therefore important to verify that your
 static rulesets are valid by testing with an unpacked version of your extension.
 
-## Limits {: #limits } {: #limits-constants }
+## Limits {: #limits }
 
 There is a performance overhead to loading and evaluating rules in the browser,
 and so a number of limits apply when using the API. Limits depend on the type of
 rule you're using.
 
-### Static rules {: #static-rules } {: #limits-rules } {: #limits-global-static-rule-limit }
+### Static rules {: #static-rules }
 
 Static rules are those specified in rule files (which are specified in the manifest file). 
 
@@ -89,7 +89,7 @@ both cannot exceed **5000**. This is called the
 
 ### Rules that use regex {: #regex-rules }
 
-All types of rules can use regular expressions; however the total number of regex rules, regardless of type cannot exceed **1000**. This is called the [MAX_NUMBER_OF_REGEX_RULES][15].
+All types of rules can use regular expressions; however the total number of regex rules, of each type cannot exceed **1000**. This is called the [MAX_NUMBER_OF_REGEX_RULES][15].
 
 ## Rules {: #rules }
 
