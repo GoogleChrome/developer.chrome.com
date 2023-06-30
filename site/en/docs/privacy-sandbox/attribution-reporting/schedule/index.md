@@ -37,7 +37,7 @@ What's described in this section is the default behavior. If you need to customi
 * Click-through conversion reports are sent following a more complex schedule of attribution windows; they are sent at least two days after conversion.
 
 After the initial ad click or view, a schedule of built-in reporting windows begins. 
-Each reporting window has a deadline. Conversions registered before that deadline will be sent at the end of that window. 
+Each reporting window has a deadline. Conversions registered before that deadline are sent at the end of that window. 
 
 Clicks have three windows (2, 7 and 30 days after conversion). Views have one.
 After expiry⏤the duration of time specified in expiry, starting from the click/view event⏤conversions can no longer be attributed to this event.
@@ -49,7 +49,7 @@ Reports may not be sent exactly at the scheduled dates and times. If the browser
 ### Views (event sources)
 
 In Chrome, reports are sent approximately one hour after the expiry time (one hour after the unique window).
-Because the default expiry is 30 days, if expiry isn't changed explicitly, reports will be sent 30 days +1 hour after the view event.
+Because the default expiry is 30 days, if expiry isn't changed explicitly, reports are sent 30 days plus 1 hour after the view event.
 
 ### Clicks (navigation sources)
 
@@ -57,15 +57,15 @@ The following list shows the time a report is sent based on how long after a cli
 
 <dl>
   <dt>Using the default value of 30 days, or not explicitly set</dt>
-    <dd>Reports will be sent 2 days, 7 days, or 30 days (+1 hour) after the click.<br>
-  For example, if the user converts 1 day after click, the report is sent ~ 2 days after the click. If the user converts 3 or 5 days after click, the report is sent ~ 7 days after the click. If the user converts 9 or 25 days after click, the report is sent ~ 30 days after the click.</dd>
+    <dd>Reports are sent 2 days, 7 days, or 30 days (plus 1 hour) after the click.<br>
+  For example, if the user converts 1 day after click, the report is sent approximately 2 days after the click. If the user converts 3 or 5 days after click, the report is sent approximately 7 days after the click. If the user converts 9 or 25 days after click, the report is sent approximately 30 days after the click.</dd>
   <dt>With an expiry between 7 and 30 days</dt>
-    <dd>The report is sent 2 days, 7 days or expiry (+1 hour) after the click.</dd>
+    <dd>The report is sent 2 days, 7 days or expiry (plus 1 hour) after the click.</dd>
 
   <dt>With an expiry between 2 and 7 days</dt>
-    <dd>The report is sent 2 days or expiry (+1 hour) after the click.</dd>
+    <dd>The report is sent 2 days or expiry (plus 1 hour) after the click.</dd>
   <dt>With an expiry under 2 days</dt>
-    <dd>The report is sent 2 days (+1 hour) after the click</dd>
+    <dd>The report is sent 2 days (plus 1 hour) after the click</dd>
 </dl>
 
 ## Limiting factors
