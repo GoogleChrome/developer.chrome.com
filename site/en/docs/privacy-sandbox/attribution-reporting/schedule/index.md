@@ -5,8 +5,8 @@ subhead: >
   Learn how aggregatable and event-level reports are scheduled.
 description: >
   Learn how aggregatable and event-level reports are scheduled.
-date: 2022-03-01
-updated: 2023-03-14
+date: 2023-03-06
+updated: 2023-07-06
 authors:
   - maudn
 ---
