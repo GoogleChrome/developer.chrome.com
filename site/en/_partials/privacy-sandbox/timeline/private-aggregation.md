@@ -13,11 +13,16 @@ These changes will be possible for testing from the week of Monday, May 22nd in 
 
 * The [Private Aggregation API](https://github.com/patcg-individual-drafts/private-aggregation-api/) has entered [public discussion](https://github.com/patcg-individual-drafts/private-aggregation-api/issues).
 * The Private Aggregation API is available for testing in the [Privacy Sandbox Unified Origin Trial](/docs/privacy-sandbox/unified-origin-trial/).
-  * The `sendHistogramReport()` function is available in 
-    * Chrome Canary, Dev, and Beta M107+
-    * Chrome Stable M112+
-  * The `reportContributionForEvent()` function is available in
-    * Chrome Canary and Dev M113+
+  * New function names
+    * The `contributeToHistogram()` function is available in Chrome Canary, Dev, Beta, and Stable M115+
+    * The `contributeToHistogramOnEvent()` function is available in Chrome Canary, Dev, Beta, and Stable M115+
+  * Legacy function names 
+    * The following function names will be deprecated in M115
+    * The `sendHistogramReport()` function is available in 
+      * Chrome Canary, Dev, and Beta M107+
+      * Chrome Stable M112+
+    * The `reportContributionForEvent()` function is available in
+      * Chrome Canary and Dev M113+
   * Supplying a context ID via Shared Storage for report verification is available in
     * Chrome Canary, Dev, Beta, and Stable M114+
   * See the [Privacy Sandbox origin trial](/docs/privacy-sandbox/unified-origin-trial/#status) page to see the latest traffic allocation

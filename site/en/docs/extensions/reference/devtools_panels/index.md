@@ -47,9 +47,12 @@ This screenshot demonstrates the effect the above examples would have on Develop
 
 ![Extension icon panel on DevTools toolbar](devtools-panels.png)
 
+To try this API, install the [devtools panels API example][5] from the [chrome-extension-samples][6]
+repository.
 
 [1]: /docs/extensions/mv3/devtools
 [2]: /docs/extensions/reference/extension/
 [3]: /docs/extensions/mv3/overview#contentScripts
 [4]: /docs/extensions/reference/devtools_panels#method-setOpenResourceHandler
-[5]: https://github.com/GoogleChrome/chrome-extensions-samples
+[5]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/devtools/panels
+[6]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples

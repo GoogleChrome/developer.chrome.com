@@ -11,6 +11,8 @@
     - url: /docs/privacy-sandbox/events
     - url: /tags/privacy
       title: i18n.docs.privacy-sandbox.blog
+    - url: /docs/privacy-sandbox/videos
+      title: i18n.docs.privacy-sandbox.videos
 - title: i18n.docs.privacy-sandbox.start
   sections:
     - url: /docs/privacy-sandbox/chrome-testing

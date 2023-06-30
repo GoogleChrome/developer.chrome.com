@@ -92,6 +92,9 @@ chrome.devtools.inspectedWindow.eval(
 );
 ```
 
+To try this API, install the [devtools API examples](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/devtools) from the [chrome-extension-samples](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples)
+repository.
+
 
 [1]: /docs/extensions/mv3/devtools
 [2]: #property-tabId

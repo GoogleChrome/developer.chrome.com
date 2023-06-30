@@ -141,6 +141,9 @@ media:
 webgpu:
   en: WebGPU
 
+new-in-webgpu:
+  en: What's New in WebGPU
+
 new-in-chrome:
   en: New in Chrome
   es: Qué hay de nuevo en Chrome

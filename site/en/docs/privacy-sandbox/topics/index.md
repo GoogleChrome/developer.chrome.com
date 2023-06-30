@@ -6,7 +6,7 @@ subhead: >
 description: >
   Learn how to work with the API, including how to use Chrome flags for testing.
 date: 2022-01-25
-updated: 2023-06-07
+updated: 2023-06-26
 authors:
   - samdutton
 ---
@@ -166,6 +166,10 @@ Topics can be accessed and observed with HTTP Headers in two ways:
   registrable domain for topic observation.
   * For example: `<iframe src="https://example.com" browsingtopics></iframe>`
   * This is available from Chrome M114 and onward.
+ 
+{% Aside 'important' %}
+[CSP](https://developer.mozilla.org/docs/Web/HTTP/CSP) directives may disallow execution of third-party code included on a page, such as a `fetch()` call in an ad tech script.
+{% endAside %}
 
 Some additional notes about headers:
 
@@ -214,6 +218,8 @@ Use hostnames only (without protocol or path) to view inferred topics from the `
 ### View Topics API information {: #view-api-information}
 
 You can find information about the Topics API implementation and settings, such as the [taxonomy](https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md) version and epoch duration, in `chrome://topics-internals`. These values reflect default settings for the API or parameters successfully set [from the command line](#feature-flags). This may be helpful to confirm that command line flags have worked as expected.
+
+{% Partial 'privacy-sandbox/topics-taxonomy-v2.njk' %}
 
 In the example below, `time_period_per_epoch` has been set to 15 seconds (the default is seven days).
 
