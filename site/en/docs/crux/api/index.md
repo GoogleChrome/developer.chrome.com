@@ -703,7 +703,7 @@ A bin's start and end values are given in the value type of the metric it repres
 
 #### UrlNormalization {: #api-response-urlnormalization }
 
-Object representing the normalization actions taken to normalize a url to achieve a higher chance of successful lookup. These are simple automated changes that are taken when looking up the provided `url_patten` would be known to fail. Complex actions like following redirects are not handled.
+Object representing the normalization actions taken to normalize a url to achieve a higher chance of successful lookup. These are simple automated changes that are taken when looking up the provided `url_pattern` would be known to fail. Complex actions like following redirects are not handled.
 
 ```json
 {
