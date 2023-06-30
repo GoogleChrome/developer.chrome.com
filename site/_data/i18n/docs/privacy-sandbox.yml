@@ -1,138 +1,135 @@
-# External URLs need an explicit title and description, otherwise
-# the toc won't know what to display.
-- title: i18n.docs.privacy-sandbox.overview
-  sections:
-    - url: /docs/privacy-sandbox/overview
-    - url: /docs/privacy-sandbox/proposal-lifecycle
-    - url: https://privacysandbox.com/timeline
-      title: i18n.docs.privacy-sandbox.timeline
-    - url: /docs/privacy-sandbox/glossary
-      title: i18n.docs.privacy-sandbox.glossary
-    - url: /docs/privacy-sandbox/events
-    - url: /tags/privacy
-      title: i18n.docs.privacy-sandbox.blog
-    - url: /docs/privacy-sandbox/videos
-      title: i18n.docs.privacy-sandbox.videos
-- title: i18n.docs.privacy-sandbox.start
-  sections:
-    - url: /docs/privacy-sandbox/chrome-testing
-    - url: /docs/privacy-sandbox/unified-origin-trial
-    - url: /docs/privacy-sandbox/enroll
-      title: i18n.docs.privacy-sandbox.enroll
-    - url: /docs/privacy-sandbox/status
-    - url: /docs/privacy-sandbox/feedback
-- title: i18n.docs.privacy-sandbox.strengthen-boundaries
-  sections:
-    - url: /docs/privacy-sandbox/third-party-cookie-phase-out
-    - url: /docs/privacy-sandbox/first-party-sets
-    - url: /docs/privacy-sandbox/first-party-sets-integration
-    - url: /docs/privacy-sandbox/first-party-sets-evolution
-    - url: /docs/privacy-sandbox/chips
-    - url: /docs/privacy-sandbox/storage-partitioning/
-    - url: /docs/privacy-sandbox/fenced-frame
-    - title: i18n.docs.privacy-sandbox.cross-site-federation
-      sections:
-        - url: /docs/privacy-sandbox/fedcm
-        - url: /docs/privacy-sandbox/fedcm-updates
-    - title: i18n.docs.privacy-sandbox.control-browser-features
-      sections:
-        - url: /docs/privacy-sandbox/permissions-policy
-          title: i18n.docs.privacy-sandbox.permissions-policy
-    - url: /docs/privacy-sandbox/shared-storage
-- title: i18n.docs.privacy-sandbox.tracking-prevention
-  sections:
-    - url: /docs/privacy-sandbox/ip-protection
-    - url: /docs/privacy-sandbox/privacy-budget
-    - url: /docs/privacy-sandbox/bounce-tracking-mitigations
-    - title: i18n.docs.privacy-sandbox.limit-passive-fingerprint
-      sections:
-        - url: /docs/privacy-sandbox/user-agent
-        - url: /docs/privacy-sandbox/user-agent/snippets
-- title: i18n.docs.privacy-sandbox.relevant
-  sections:
-    - title: i18n.docs.privacy-sandbox.interest-ads
-      sections:
-        - url: /docs/privacy-sandbox/topics/overview
-        - url: /docs/privacy-sandbox/topics/topic-classification
-        - url: /docs/privacy-sandbox/topics
-          title: i18n.docs.privacy-sandbox.developer-guide
-        - url: /docs/privacy-sandbox/topics/integration-guide
-          title: i18n.docs.privacy-sandbox.integration-guide
-        - url: /docs/privacy-sandbox/topics-experiment
-          title: i18n.docs.privacy-sandbox.experiment-participate
-        - url: /docs/privacy-sandbox/topics/demo
-        - url: /docs/privacy-sandbox/topics/colab
-        - url: /docs/privacy-sandbox/topics/latest
-    - title: i18n.docs.privacy-sandbox.ondevice-auctions
-      sections:
-        - url: /docs/privacy-sandbox/fledge
-        - url: /docs/privacy-sandbox/fledge-experiment
-          title: i18n.docs.privacy-sandbox.experiment-participate
-        - title: i18n.docs.privacy-sandbox.fledge-api
-          sections:
-            - url: /docs/privacy-sandbox/fledge-api/
-            - url: /docs/privacy-sandbox/fledge-api/ad-auction
-            - url: /docs/privacy-sandbox/fledge-api/interest-groups
-            - url: /docs/privacy-sandbox/fledge-api/latency
-            - url: /docs/privacy-sandbox/fledge-api/opt-out
-            - url: /docs/privacy-sandbox/fledge-api/reports
-            - url: /docs/privacy-sandbox/fledge-api/troubleshoot
-        - url: /docs/privacy-sandbox/fledge-api/feature-status
-        - url: https://docs.google.com/document/d/16U6nCs5-RTpYDF5nuUVopvUXKzDgH6yDKaYbzY3ouiI/view
-          title: i18n.docs.privacy-sandbox.paapi-walkthrough
-    - title: i18n.docs.privacy-sandbox.content-selection
-      sections:
-        - url: /docs/privacy-sandbox/shared-storage/content-selection
-        - url: /docs/privacy-sandbox/shared-storage/creative-rotation
-        - url: /docs/privacy-sandbox/shared-storage/creative-selection-by-frequency
-        - url: /docs/privacy-sandbox/shared-storage/ab-testing
-        - url: /docs/privacy-sandbox/shared-storage/known-customer
-    - url: https://privacysandbox.com/news/maximize-ad-relevance-after-third-party-cookies
-      title: i18n.docs.privacy-sandbox.maximize-relevence
-- title: i18n.docs.privacy-sandbox.measure
-  sections:
-    - title: i18n.docs.privacy-sandbox.measure-ads
-      sections:
-        - url: /docs/privacy-sandbox/attribution-reporting
-          title: i18n.docs.privacy-sandbox.attribution-reporting-overview
-        - url: /docs/privacy-sandbox/attribution-reporting/system-overview
-          title: i18n.docs.privacy-sandbox.attribution-reporting-system
-        - url: /docs/privacy-sandbox/attribution-reporting-experiment
-          title: i18n.docs.privacy-sandbox.experiment-participate
-        - url: /docs/privacy-sandbox/attribution-reporting/chrome-shipping
-          title: i18n.docs.privacy-sandbox.attribution-reporting-chrome-shipping
-        - title: i18n.docs.privacy-sandbox.attribution-reporting-debugging-resources
-          sections:
-            - url: /docs/privacy-sandbox/attribution-reporting-debugging/part-1/
-            - url: /docs/privacy-sandbox/attribution-reporting-debugging/part-2/
-            - url: /docs/privacy-sandbox/attribution-reporting-debugging/part-3/
-        - title: i18n.docs.privacy-sandbox.attribution-reporting-developer-guide
-          sections:
-            - url: /docs/privacy-sandbox/attribution-reporting/register-attribution-source/
-            - url: /docs/privacy-sandbox/attribution-reporting/register-attribution-trigger/
-            - url: /docs/privacy-sandbox/attribution-reporting/change-attribution-logic/
-            - url: /docs/privacy-sandbox/attribution-reporting/define-filters/
-            - url: /docs/privacy-sandbox/attribution-reporting/schedule/
-            - url: /docs/privacy-sandbox/attribution-reporting/custom-report-windows/
-            - url: /docs/privacy-sandbox/attribution-reporting/deduplication-for-aggregatable-reports/
-            - url: /docs/privacy-sandbox/attribution-reporting/contribution-budget/
-            - url: /docs/privacy-sandbox/attribution-reporting/understanding-noise/
-            - url: /docs/privacy-sandbox/attribution-reporting/working-with-noise/
-            - url: https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/view?usp=sharing
-              title: i18n.docs.privacy-sandbox.attribution-reporting-handbook        
-        - url: /docs/privacy-sandbox/attribution-reporting-updates
-          title: i18n.docs.privacy-sandbox.attribution-reporting-changing
-    - title: i18n.docs.privacy-sandbox.measure-cross-site
-      sections:
-        - url: /docs/privacy-sandbox/private-aggregation
-        - url: /docs/privacy-sandbox/private-aggregation-fundamentals
-        - url: /docs/privacy-sandbox/private-aggregation-experiment
-          title: i18n.docs.privacy-sandbox.experiment-participate
-        - url: /docs/privacy-sandbox/shared-storage/unique-reach
-        - url: /docs/privacy-sandbox/shared-storage/user-demographics
-        - url: /docs/privacy-sandbox/shared-storage/k-freq-reach
-    - url: /docs/privacy-sandbox/aggregation-service
-    - url: /docs/privacy-sandbox/summary-reports
-- title: i18n.docs.privacy-sandbox.fight-spam
-  sections:
-    - url: /docs/privacy-sandbox/trust-tokens
+attribution-reporting:
+  en: 'Attribution Reporting'
+interest-ads:
+  en: 'Interest-based advertising'
+integration-guide:
+  en: 'Integration guide'
+ondevie-auctions:
+  en: 'On-device auctions for custom audiences'
+cross-site-storage:
+  en: 'Secure cross-site storage'
+content-selection:
+  en: 'Cross-site content selection'
+fledge:
+  en: 'FLEDGE'
+fledge-best-practices:
+  en: 'FLEDGE latency best practices'
+topics-api:
+  en: 'The Topics API'
+topics-latest:
+  en: 'Latest updates to the Topics API'
+glossary:
+  en: 'Glossary and key concepts'
+  ja: 'プライバシー サンドボックスの用語集'
+guiding-principles:
+  en: 'Guiding principles'
+videos:
+  en: 'Privacy Sandbox videos'
+overview:
+  en: 'What is the Privacy Sandbox?'
+  ja: 'プライバシー サンドボックスとは何か？'
+overview-article:
+  en: 'Introduction'
+status:
+  en: 'Is it ready yet?'
+storage:
+  en: 'Secure cross-site storage'
+trust-tokens:
+  en: 'Private State Tokens'
+cross-site-federation:
+  en: 'Cross-site federation'
+limit-passive-fingerprint:
+  en: 'Limit passive fingerprinting'
+control-browser-features:
+  en: 'Control access to browser features'
+start:
+  en: 'Get started'
+  ja: 'はじめに'
+timeline:
+  en: 'Timeline'
+  ja: 'タイムライン'
+events:
+  en: 'Events'
+  ja: 'イベント'
+blog:
+  en: 'Blog'
+  ja: 'ブログ'
+developer-guide:
+  en: 'Developer guide'
+measure-ads:
+  en: 'Measure ad conversions with Attribution Reporting'
+measure-cross-site:
+  en: 'Measure cross-site events with Private Aggregation'
+attribution-reporting-overview:
+  en: 'Attribution Reporting overview'
+attribution-reporting-chrome-shipping:
+  en: 'Why Chrome plans to ship the Attribution Reporting API'
+experiment-participate:
+  en: 'Experiment and participate'
+attribution-reporting-debugging:
+  en: 'Debug Attribution Reporting'
+attribution-reporting-debugging-resources:
+  en: 'Generate debug reports'
+attribution-reporting-changing:
+  en: 'API updates'
+attribution-reporting-developer-guide:
+  en: 'Developer guide'
+attribution-reporting-handbook:
+  en: 'Developer handbook'
+attribution-reporting_description:
+  en: 'Measure when user action leads to a conversion, without cross-site identifiers.'
+attribution-reporting-system:
+  en: 'Attribution Reporting end-to-end'
+attribution-reporting-summary:
+  en: 'Summary reports'
+maximize-relevence:
+  en: 'Maximize ad relevance'
+private-aggregation:
+  en: 'Private Aggregation API'
+tracking-prevention:
+  en: 'Prevent covert tracking'
+  ja: '隠されたトラッキングを防ぐ'
+strengthen-boundaries:
+  en: 'Strengthen privacy boundaries'
+  ja: 'プライバシーの境界線を強化する'
+relevant:
+  en: 'Show relevant content'
+  ja: 'コンテンツを最適化する'
+fight-spam:
+  en: 'Fight spam and fraud'
+  ja: 'スパムや詐欺に対抗する'
+measure:
+  en: 'Measure digital ads'
+  ja: 'デジタル広告を計測する'
+chips:
+  en: 'Cookies Having Independent Partitioned State (CHIPS)'
+fedcm:
+  en: 'Federated Credentials Management (FedCM)'
+proposals:
+  en: 'Proposal lifecycle'
+permissions-policy:
+  en: 'Permissions Policy'
+feedback:
+  en: 'Feedback'
+faq:
+  en: 'FAQ'
+enroll:
+  en: 'Enroll your site'
+topics-experiment:
+  en: 'Topics API: Experiment and participate'
+fledge-experiment:
+  en: 'Protected Audience: Experiment and participate'
+fledge-overview:
+  en: 'Protected Audience overview'
+first-party-sets:
+  en: 'First-Party Sets'
+gnatcatcher:
+  en: 'Gnatcatcher'
+privacy-budget:
+  en: 'Privacy Budget'
+fenced-frame:
+  en: 'Fenced Frames'
+fledge-api:
+  en: 'Developer guide'
+paapi-walkthrough:
+  en: 'Protected Audience API walkthrough'
