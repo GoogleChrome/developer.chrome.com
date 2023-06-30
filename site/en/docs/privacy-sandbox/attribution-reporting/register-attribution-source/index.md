@@ -181,7 +181,7 @@ requests (requests that include the `Attribution-Reporting-Eligible` header).
 
 #### `attributionsrc` with or without a value
 
-As you saw above, you can specify `attributionsrc` without a URL. You can also specify a
+As noted earlier, you can specify `attributionsrc` without a URL. You can also specify a
 single URL. Additionally, for sources only (not applicable to [triggers](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger/)), you can use a space-separated list of URLs.
 
 Using URLs causes the browser to initiate a **separate** keepalive fetch request—one
