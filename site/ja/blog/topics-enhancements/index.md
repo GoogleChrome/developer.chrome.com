@@ -1,17 +1,17 @@
 ---
 layout: layouts/blog-post.njk
-title: Enhancements to the Topics API
-description: |2
+title: Topics API の機能強化
+description: |2-
 
-  Updates to the Topics taxonomy and filtering mechanisms, along with speed improvements and enhanced user controls.
-subhead: |2
+  トピック分類とフィルタリング メカニズムが更新され、速度が向上し、ユーザーコントロールが強化されました。
+subhead: |2-
 
-  Updates to the Topics taxonomy and filtering mechanisms, along with speed improvements and enhanced user controls.
+  トピック分類とフィルタリング メカニズムが更新され、速度が向上し、ユーザーコントロールが強化されました。
 date: '2023-06-15'
 thumbnail: image/80mq7dk16vVEg8BBhsVe42n6zn82/s3iDQJUgLZV25YbtYxs1.png
-alt: |2
+alt: |2-
 
-  Topics API enhancements
+  Topics API の機能強化
 authors:
   - leeronisrael
 tags:
@@ -22,35 +22,35 @@ tags:
 
 Topics を初めて提供した当時、明らかに初期の提案であったため、改善に役立つ意見をエコシステムに求めました。発表以来、提供された提案に注意深く耳を傾けてきました。本日、Topics API の最新の改善の一部を共有できることを嬉しく思っています。これらの変更により、ユーザーのプライバシーを損なうことなく、Topics がデジタル広告業界にとってさらに役立つものになると私たちは信じています。
 
-## Taxonomy
+## 分類法
 
-Alongside the initial Topics API announcement, we proposed a taxonomy designed for testing. The taxonomy is the list of available topics that may be returned by the API. We repeatedly received [feedback](https://github.com/patcg-individual-drafts/topics/issues/3) that the testing taxonomy did not represent topics the advertising industry cared most about, so today we're announcing an [improved taxonomy](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v2.md).
+Topics API の最初の発表と並行して、テスト用に設計された分類法を提案しました。分類法は、API によって返される可能性のある利用可能なトピックのリストです。テスト分類法が広告業界が最も重視するトピックを表していないという[フィードバック](https://github.com/patcg-individual-drafts/topics/issues/3)を繰り返し受けたため、本日、[改善された分類法](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v2.md)を公開することになりました。
 
-When crafting this new taxonomy, we saw deep engagement from companies across the ecosystem, like Raptive (formerly CafeMedia) and Criteo. It removes categories we've heard are less useful, in favor of categories that better match advertiser interests, while maintaining our commitment to exclude potentially sensitive topics. We have added 280 commercially focused categories, like "Athletic Apparel", "Mattresses", and "Luxury Travel," while removing 160 categories including topics like "Civil Engineering" and "Equestrian" which don't add much commercial value for ad selection on most sites. The new taxonomy has 469 topics, compared to 349 for the previous version. We chose to limit the taxonomy's size, to protect against re-identification risk.
+この新しい分類法を作成する際、Raptive（旧 CafeMedia）や Criteo などのエコシステム中の企業から多大な協力を得られました。これは、潜在的にデリケートなトピックを除外するという当社の取り組みを維持しながら、あまり有用ではないと聞いたカテゴリを削除し、広告主の関心によりよく一致するカテゴリを優先する分類法です。「スポーツ アパレル」、「マットレス」、「豪華旅行」など、商業的に重点を置いた 280 のカテゴリを追加し、ほとんどのサイトにおいて広告選択にあまり商業的価値をもたらさない「土木工学」や「乗馬」などのトピックを含む 160 のカテゴリを削除しました。新しい分類法には 469 個のトピックがあります（以前のバージョンでは 349 個でした）。分類サイズの制限は、再同定のリスクを防ぐことを根拠とした選択です。
 
-We expect the taxonomy to evolve over time, and for governance of the taxonomy to eventually transition to an external party representing stakeholders from across the industry. We encourage the ecosystem to review the [latest taxonomy](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v2.md) and provide feedback on the changes.
+分類法は時間の経過とともに進化し、最終的には分類法のガバナンスは業界全体の関係者を代表する外部団体に移行されると予想されます。エコシステムが[最新の分類法](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v2.md)をレビューし、変更についてフィードバックを提供することを奨励します。
 
 {% Aside %}
 
-*We're delighted to be working with Google Chrome on improving the Topics API and making it even more relevant for advertisers and publishers. The new taxonomy should deliver substantial additional value to API callers.*
+*Google Chrome と協力して Topics API を改善することで、広告主やサイト運営者にとってさらに関連性の高いものにできることを嬉しく思います。新しい分類法によって、API 呼び出し元に大幅な追加価値が提供されるでしょう。*
 
-— Patrick McCann, SVP Research, Raptive (formerly CafeMedia)
+— Patrick McCann、Raptive（旧 CafeMedia）リサーチ担当副社長
 
 {% endAside %}
 
-## Per-caller filtering
+## 呼び出し元ごとのフィルタリング
 
-One of many privacy-preserving features of Topics is the per-caller filtering requirement. This feature ensures that callers can only receive topics that they've observed the user visit in the past, rather than provide the topics to any caller regardless of their level of interaction with the user. For example, if a caller observes a user visit a site about news, but not shopping, that caller cannot learn that the user is interested in shopping.
+Topics の多くのプライバシー保護機能の 1 つは、呼び出し元ごとのフィルタリング要件です。この機能により、呼び出し元は、ユーザーとの対話のレベルに関係なく呼び出し元にトピックを提供するのではなく、過去にユーザーの訪問を観察したトピックのみを受信できるようになります。たとえば、ユーザーがショッピングではなくニュースに関するサイトにアクセスしているのを呼び出し元が観察した場合、呼び出し元はユーザーがショッピングに興味があることを知ることができません。
 
-Consider the topic "Boots," which is fully expressed as "/Shopping/Apparel/Footwear/Boots." "Shopping" and "Apparel" are ancestors of "Boots." Chrome has [updated](https://github.com/patcg-individual-drafts/topics/pull/143/files) the definition of "observation" to include all ancestors of a given topic. Previously, in order for a caller to observe "Shopping" or  "Apparel" a caller must have observed a user visit a page with that topic. With this change, if "Boots" is observed, then all ancestors (such as "Shopping" and "Apparel") of that topic are recorded as observed as well.
+「/Shopping/Apparel/Footwear/Boots」として完全に表現されるトピック「Boots」について考えてみましょう。「Shopping」と「Apparel」は「Boots」の先祖です。Chrome は、特定のトピックのすべての先祖を含むように「観察」の定義を[更新](https://github.com/patcg-individual-drafts/topics/pull/143/files)しました。以前は、呼び出し元が「Shopping」または「Apparel」を観察するには、ユーザーがそのトピックを含むページにアクセスしていることを観察する必要がありました。この変更により、「Boots」が観察された場合、そのトピックのすべての先祖（「Shopping」や「Apparel」など）も観察されたものとして記録されるようになりました。
 
-This change increases the likelihood sites will receive topics information, without impacting the API's privacy since the topic's ancestors were already known to the caller.
+トピックの先祖が呼び出し元にすでに知られているため、この変更により、API のプライバシーに影響を与えることなく、サイトがトピック情報を受け取る可能性が高められます。
 
 ## User controls
 
 Topics を使用すると、ユーザーは、サード パーティ Cookie などのトラッキングメカニズムと比較して、より直観的かつアクセスしやすい方法で広告をパーソナライズするためにクロスサイト データがどのように使用されるかを表示および制御できます。実際、Google が実施した[ユーザー調査](https://research.google/pubs/pub52194/)の参加者は、Topics のユーザーコントロールを導入すると、現在のサード パーティ Cookie コントロールと比較してプライバシー エクスペリエンスとコントロール感が大幅に向上したと報告しています。
 
-Today we're announcing our plans to give users even greater control over which topics are associated with them. Specifically, users will be able to proactively block topics. This means users will be able to curate the set of available topics they are interested in by removing selected topics. This change, coming by early next year, will give users even more control over their privacy and make the Topics API even more user-friendly.
+本日、どのトピックが自分に関連付けられているかをユーザーがさらに細かく制御できるようにする計画について発表します。具体的には、ユーザーは積極的にトピックをブロックできるようになります。これは、ユーザーが選択したトピックを削除することで、興味のある利用可能なトピックのセットを厳選できることを意味します。来年初めまでに予定されるこの変更により、ユーザーはプライバシーをさらに細かく制御できるようになり、Topics API がさらに使いやすくなります。
 
 ## Speed improvements
 
@@ -58,6 +58,6 @@ Today we're announcing our plans to give users even greater control over which t
 
 昨年、Fetch および（一時的に）XHR 経由で開始されたリクエストにおけるヘッダー経由の Topics のサポートを[発表しました](https://github.com/patcg-individual-drafts/topics/pull/81)。そして最近、iframe のリクエストヘッダーのサポートを拡張する予定であると[発表しました](https://github.com/patcg-individual-drafts/topics/pull/147)。これらの変更により、Topics のパフォーマンスが向上し、開発者とユーザーに対する潜在的な悪影響が制限されます。
 
-## What's next?
+## 今後の予定
 
-We are excited about these updates to the Topics API and believe that they not only will make it more effective for advertisers and keep ads relevant for people, but still preserve privacy. Per-caller filtering updates and speed improvements are already available in Chrome 114. Taxonomy updates will be available in Q3 2023. User controls updates will be available by early next year. We are committed to continuing to listen to ecosystem feedback as we build new, more private technologies for the web.
+Topics API のこれらの更新に意気込みを得ており、広告主にとっては効果を高め、人々にとっては広告の関連性が維持されるということだけなく、プライバシーも保護されると信じています。呼び出し元ごとのフィルタリングの更新と速度の向上は、Chrome 114 ですでに利用可能です。分類法の更新は 2023 年第 3 四半期に提供される予定です。また、ユーザーコントロールの更新は来年初めまでに公開される予定です。ウェブ用の新しい、よりプライベートなテクノロジーを構築する際に、今後もエコシステムのフィードバックに耳を傾け続ける意向です。
