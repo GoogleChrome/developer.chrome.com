@@ -10,9 +10,7 @@ This guide explains different approaches for recording audio and video from a ta
 screen using APIs such as [`chrome.tabCapture`][tabcapture] or
 [`getDisplayMedia()`][get-display-media].
 
-## Common use cases {: #common-use-cases }
-
-### Screen recording {: #screen-recording }
+## Screen recording {: #screen-recording }
 
 For screen recording, call [`getDisplayMedia()`][get-display-media], which triggers the dialog box
 shown below. This provides the user with the ability to select which tab, window or screen they wish
@@ -33,16 +31,14 @@ If called within a content script, recording will automatically end when the use
 page. To record in the background and across navigations, use an
 [offscreen document][offscreen-documents] with the `DISPLAY_MEDIA` reason.
 
-### Tab capture based on user gesture {: #user-gesture }
+## Tab capture based on user gesture {: #user-gesture }
 
 Calling [`getDisplayMedia()`][get-display-media] results in the browser showing a dialog which asks
 the user what they would like to share. However, in some cases the user has just clicked on the
 [action button][action-button] to invoke your extension for a specific tab, and you would like to
 immediately start capturing the tab without this prompt.
 
-#### Audio and video {: #audio-and-video }
-
-##### In an offscreen document {: #audio-and-video-offscreen-doc }
+### Recording audio and video in the background {: #audio-and-video-offscreen-doc }
 
 Starting in Chrome 116, you can call the [`chrome.tabCapture`][tabcapture] API in a service worker
 to obtain a stream ID following user gesture. This can then be passed to an offscreen document to
@@ -116,7 +112,7 @@ chrome.runtime.onMessage.addListener(async (message) => {
 
 For a full example, see the [Tab Capture - Recorder][recorder-sample] sample.
 
-##### In a new tab {: #audio-and-video-new-tab }
+### Recording audio and video in a new tab {: #audio-and-video-new-tab }
 
 Prior to Chrome 116, it was not possible to use the [`chrome.tabCapture`][tabcapture] API in a
 service worker or to consume a stream ID created by that API in an offscreen document. Both of these
@@ -161,7 +157,7 @@ Alternatively, consider using the [screen recording](#screen-recording) approach
 record in the background using an offscreen document, but shows the user a dialog to select a tab,
 window or screen to record from.
 
-#### Audio only {: #audio-only }
+### Recording audio in a popup {: #audio-only }
 
 {% Aside 'caution' %}
 
