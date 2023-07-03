@@ -22,7 +22,7 @@
     <td>This proposal has been archived. There are no current plans for implementation.</td>
   </tr>
   <tr>
-    <td>Preventing invalid aggregatable reports via report verification<br><a href="https://github.com/WICG/attribution-reporting-api/blob/main/trigger_attestation.md">Explainer</a> </td>
+    <td>Preventing invalid aggregatable reports via report verification<br><a href="https://github.com/WICG/attribution-reporting-api/blob/main/report_verification.md">Explainer</a> </td>
     <td>Expected in Chrome for origin trial in H1 2024</td>
   </tr>
   <tr>
