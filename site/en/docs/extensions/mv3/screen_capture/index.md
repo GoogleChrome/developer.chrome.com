@@ -121,7 +121,7 @@ are requirements for the approach above.
 Instead, you can open an extension page in a new tab or window, and directly obtain a stream. Set
 the `targetTabId` property to capture the correct tab.
 
-In your popup:
+Start by opening an extension page (perhaps in your popup or service worker):
 
 ```js
 chrome.windows.create({ url: chrome.runtime.getURL("recorder.html") });
@@ -180,8 +180,8 @@ chrome.tabCapture.capture({ audio: true }, (stream) => {
 });
 ```
 
-If you need the recording to persist across navigations, consider using the approach in the
-[previous section](#audio-and-video).
+If you need the recording to persist across navigations, consider using the approach described
+in the [previous section](#audio-and-video-offscreen-doc).
 
 ## Other considerations {: #other-considerations }
 
