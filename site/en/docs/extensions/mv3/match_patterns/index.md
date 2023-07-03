@@ -27,7 +27,7 @@ Each part can use wildcards `*`,. Below is a detailed description:
 
 - **path**: Must start with `/` and be present. If alone it will always treated as `/*`. For example `/*`, `/foo*`, or `/foo/bar`. Each '`*`' matches 0 or more characters.
 
-### Special use cases {: #special }
+### Special cases {: #special }
 
 `<all_urls>`
 : It matches any URL that starts with a permitted scheme. This is considered a broad host permission. 
@@ -39,30 +39,10 @@ Port URLs
 : Use `http://localhost/*` to match any localhost ports during development. For IP addresses, include the specific address plus a wildcard in the path. For example: `http://127.0.0.1/*`
 
 Top Level domains
-
+: TLDs match patterns like `http://google.*/*` are not supported. You should explicitly list the TLDs that your extension should run on. For example `http://google.es` and `http://google.fr`.
 
 ### Examples {: #match-examples}
 
-
-## Globs patterns
-
-## Top level domains {: #top }
-
-You cannot use wildcard match patterns like `http://google.*/*` to match TLDs (like
-`http://google.es` and `http://google.fr`) due to the complexity of actually restricting such a
-match to only the desired domains.
-
-For the example of `http://google.*/*`, the Google domains would be matched, but so would
-`http://google.someotherdomain.com`. Additionally, many sites do not own all of the TLDs for their
-domain. For an example, assume you want to use `http://example.*/*` to match `http://example.com`
-and `http://example.es`, but `http://example.net` is a hostile site. If your extension has a bug,
-the hostile site could potentially attack your extension in order to get access to your extension's
-increased privileges.
-
-You should explicitly enumerate the TLDs that you wish to run your extension on.
-
-
-Note: `urn` scheme is available since Chrome 91.
 
 
 <table class="fixed-table width-full">
@@ -121,7 +101,7 @@ Note: `urn` scheme is available since Chrome 91.
 </table>
 
 
-### Invalid examples
+### ⛔️ Invalid examples
 
 Here are some examples of *invalid* pattern matches:
 
@@ -162,6 +142,9 @@ Extensions are unable to run on the following URLs:
 - `chrome-extension://`
 - `about:`
 - ``
+
+## Globs patterns {: #globs }
+
 
 ## Others patterns in extensions
 
