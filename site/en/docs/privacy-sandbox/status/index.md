@@ -8,7 +8,7 @@ description: >
   Review Chrome platform status, resources, and feature release
   timelines.
 date: 2021-05-18
-updated: 2023-05-18
+updated: 2023-07-03
 authors:
   - alexandrawhite
 ---
@@ -54,6 +54,8 @@ To review the latest information on any proposal or API, visit the respective ov
 ## Private Aggregation API
 
 {% Partial 'privacy-sandbox/timeline/private-aggregation.njk' %}
+
+{% Partial 'privacy-sandbox/timeline/private-aggregation-features.njk' %}
 
 ## Private State Tokens
 
