@@ -42,17 +42,88 @@ immediately start capturing the tab without this prompt.
 
 #### Audio and video {: #audio-and-video }
 
-{% Aside %}
+##### In an offscreen document {: #audio-and-video-offscreen-doc }
 
-In the future, we may support passing a media stream ID to an
-[offscreen document][offscreen-documents] so recording can happen in the background and more easily
-persist across navigations. We are collecting feedback in the
-[chromium-extensions mailing list][feedback-mailing-list].
+Starting in Chrome 116, you can call the [`chrome.tabCapture`][tabcapture] API in a service worker
+to obtain a stream ID following user gesture. This can then be passed to an offscreen document to
+start recording.
 
-{% endAside %}
+In your service worker:
 
-To record audio and video across navigations, you can open an extension page in a new tab or window,
-and directly obtain a stream. Set the `targetTabId` property to capture the correct tab.
+```js
+chrome.action.onClicked.addListener(async (tab) => {
+  const existingContexts = await chrome.runtime.getContexts({});
+
+  const offscreenDocument = existingContexts.find(
+    (c) => c.contextType === 'OFFSCREEN_DOCUMENT'
+  );
+
+  // If an offscreen document is not already open, create one.
+  if (!offscreenDocument) {
+    // Create an offscreen document.
+    await chrome.offscreen.createDocument({
+      url: 'offscreen.html',
+      reasons: ['USER_MEDIA'],
+      justification: 'Recording from chrome.tabCapture API',
+    });
+  }
+
+  // Get a MediaStream for the active tab.
+  const streamId = await chrome.tabCapture.getMediaStreamId({
+    targetTabId: tab.id
+  });
+
+  // Send the stream ID to the offscreen document to start recording.
+  chrome.runtime.sendMessage({
+    type: 'start-recording',
+    target: 'offscreen',
+    data: streamId
+  });
+});
+```
+
+Then, in your offscreen document:
+
+```js
+chrome.runtime.onMessage.addListener(async (message) => {
+  if (message.target === 'offscreen') {
+    if (message.type === 'start-recording') {
+      const media = await navigator.mediaDevices.getUserMedia({
+        audio: {
+          mandatory: {
+            chromeMediaSource: "tab",
+            chromeMediaSourceId: message.data,
+          },
+        },
+        video: {
+          mandatory: {
+            chromeMediaSource: "tab",
+            chromeMediaSourceId: message.data,
+          },
+        },
+      });
+
+      // Continue to play the captured audio to the user.
+      const output = new AudioContext();
+      const source = output.createMediaStreamSource(media);
+      source.connect(output.destination);
+
+      // TODO: Do something to recording the MediaStream.
+    }
+  }
+});
+```
+
+For a full example, see the [Tab Capture - Recorder][recorder-sample] sample.
+
+##### In a new tab {: #audio-and-video-new-tab }
+
+Prior to Chrome 116, it was not possible to use the [`chrome.tabCapture`][tabcapture] API in a
+service worker or to consume a stream ID created by that API in an offscreen document. Both of these
+are requirements for the approach above.
+
+Instead, you can open an extension page in a new tab or window, and directly obtain a stream. Set
+the `targetTabId` property to capture the correct tab.
 
 In your popup:
 
@@ -113,6 +184,9 @@ chrome.tabCapture.capture({ audio: true }, (stream) => {
 });
 ```
 
+If you need the recording to persist across navigations, consider using the approach in the
+[previous section](#audio-and-video).
+
 ## Other considerations {: #other-considerations }
 
 For more information on how to record a stream, see the [MediaRecorder][media-recorder] API.
@@ -125,3 +199,4 @@ For more information on how to record a stream, see the [MediaRecorder][media-re
 [feedback-mailing-list]: https://groups.google.com/a/chromium.org/g/chromium-extensions/c/Ef08XtOOyoI/m/L5HM7yPsBAAJ
 [media-recorder]: https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder
 [action-button]: /docs/extensions/mv3/user_interface/#action
+[recorder-sample]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.tabcapture-recorder

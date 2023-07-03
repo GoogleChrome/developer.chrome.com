@@ -49,6 +49,20 @@ navigator.mediaDevices.getUserMedia({
 });
 ```
 
+### Usage Restrictions {: #usage-restrictions }
+
+After calling [`getMediaStreamId()`][get-media-stream-id], there are restrictions on where the
+returned stream ID can be used:
+
+- If `consumerTabId` is specified, the ID can be used by a `getUserMedia()` call in any frame in the
+given tab which has the same security origin.
+- When this is not specified, begininning in Chrome 116, the ID can be used in any frame with the
+same security origin in the same render process as the caller. This means that a stream ID obtained
+in a service worker can be used in an [offscreen document][offscreen-document].
+
+Prior to Chrome 116, when a `consumerTabId` was not specified, the stream ID was restricted to both
+the security origin, render process and render frame of the caller.
+
 ## Learn more {: #learn-more }
 
 To learn more about how to use the `chrome.tabCapture` API, see
@@ -62,3 +76,4 @@ To learn more about how to use the `chrome.tabCapture` API, see
 [supress-playback]: https://developer.mozilla.org/docs/Web/API/MediaTrackSupportedConstraints/suppressLocalAudioPlayback
 [audio-recording-screen-capture]: /docs/extensions/mv3/screen_capture/
 [action-button]: /docs/extensions/mv3/user_interface/#action
+[offscreen-document]: /docs/extensions/reference/offscreen/
