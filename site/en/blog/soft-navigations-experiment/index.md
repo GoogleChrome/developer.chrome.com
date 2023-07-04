@@ -3,12 +3,12 @@
 layout: 'layouts/blog-post.njk'
 title: Experimenting with measuring soft navigations
 description: |
- The Chrome team is working on better measuring so-called soft navigations used by Single Page Applications and a new API is now in origin trial to allow sites to experiment with this too.
+ The Chrome team is working on better measuring so-called soft navigations used by Single Page Applications and a new API is now available to allow sites to experiment with this too.
 authors:
  - tunetheweb
  - yoavweiss
 date: 2023-02-01
-updated: 2023-02-11
+updated: 2023-07-04
 hero: image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/ZJLD5QJvoFcWXkqF8m5P.jpg
 alt: A compass on top of some booklets labeled Field Notes
 tags:
@@ -23,7 +23,7 @@ The reality is always a little trickier than the ideal, and the popular Single P
 
 Many JavaScript frameworks use this model, but each in a different way. Since this is outside of what the browser traditionally understands as a “page”, measuring this has always been difficult: where is the line to be drawn between an interaction on the _current_ page, versus considering this as a _new_ page?
 
-The Chrome team has been been considering this challenge for some time now, and is looking to standardize a definition of what is a “soft-navigation”, and how the Core Web Vitals can be measured for this—in a similar way that websites implemented in the traditional multi-page architecture (MPA) is currently measured. While still in early stages, the team is now ready to make what has already been implemented more widely available through the use of an origin trial. This will allow sites that wish to trial this to provide feedback on the approach so far.
+The Chrome team has been been considering this challenge for some time now, and is looking to standardize a definition of what is a “soft-navigation”, and how the Core Web Vitals can be measured for this—in a similar way that websites implemented in the traditional multi-page architecture (MPA) is currently measured. While still in early stages, the team is now ready to make what has already been implemented more widely available for sites to experiment with. This will allow sites to provide feedback on the approach so far.
 
 ## What is a soft navigation?
 
@@ -64,9 +64,13 @@ Soft navigations are not enabled by default in Chrome, but are available for exp
 
 For developers, this can be enabled by turning on the _Experimental Web Platform features_ flag at `chrome://flags/#enable-experimental-web-platform-features` or by using the `--enable-experimental-web-platform-features` command line argument when launching Chrome.
 
-For a website that wishes to enable this for all their visitors to see the impact, there is an origin trial running from Chrome 110 to Chrome 112 which can be enabled by signing up for the trial and including a meta element with the origin trial token in the HTML or HTTP header. See the [Get started with origin trials](/docs/web-platform/origin-trials/) post for more information.
+For a website that wishes to enable this for all their visitors to see the impact, there is an origin trial running from Chrome 110 to Chrome 114 which can be enabled by signing up for the trial and including a meta element with the origin trial token in the HTML or HTTP header. See the [Get started with origin trials](/docs/web-platform/origin-trials/) post for more information.
 
 Site owners can choose to include the origin trial on their pages for all, or for just a subset of users. Be aware of the [implications section](#what-are-the-implications-of-enabling-soft-navigations-in-chrome) above as to how this changes how your metrics may be reported, especially if enabling this origin trial for a large proportion of your users. Note that CrUX will continue to report the metrics in the existing manner regardless of this soft navigation setting so is not impacted by those implications. It should also be noted that origin trials are also limited to enabling experimental features on a maximum of 0.5% of all Chrome page loads as a median over 14 days, but this should only be an issue for very large sites.
+
+{% Aside 'important' %}
+The Soft Navigations origin trial has now ended. The Chrome team are taking onboard the feedback received and will be making some adjustments and are aiming to relaunch a second origin trial in Q3 2023 for further feedback.
+{% endAside %}
 
 ## How can I measure Core Web Vitals per soft navigation?
 
