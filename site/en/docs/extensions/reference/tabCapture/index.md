@@ -49,7 +49,7 @@ navigator.mediaDevices.getUserMedia({
 });
 ```
 
-### Usage Restrictions {: #usage-restrictions }
+### Usage restrictions {: #usage-restrictions }
 
 After calling [`getMediaStreamId()`][get-media-stream-id], there are restrictions on where the
 returned stream ID can be used:
