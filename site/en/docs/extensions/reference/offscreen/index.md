@@ -52,7 +52,17 @@ The following example shows how to ensure that the offscreen document has alread
 
 {% Aside 'gotchas' %}
 [`runtime.getContexts()`][runtime-get-contexts] was added in Chrome 116. In earlier versions of
-Chrome, you can check for the existence of the offscreen document using [`clients.matchAll()`](https://developer.mozilla.org/docs/Web/API/Clients/matchAll).
+Chrome, you can check for the existence of the offscreen document using [`clients.matchAll()`](https://developer.mozilla.org/docs/Web/API/Clients/matchAll):
+
+```js
+const matchedClients = await clients.matchAll();
+
+for (const client of matchedClients) {
+  if (client.url === offscreenUrl) {
+    return;
+  }
+}
+```
 {% endAside %}
 
 ```js
