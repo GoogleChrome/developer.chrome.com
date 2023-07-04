@@ -69,7 +69,7 @@ For a website that wishes to enable this for all their visitors to see the impac
 Site owners can choose to include the origin trial on their pages for all, or for just a subset of users. Be aware of the [implications section](#what-are-the-implications-of-enabling-soft-navigations-in-chrome) above as to how this changes how your metrics may be reported, especially if enabling this origin trial for a large proportion of your users. Note that CrUX will continue to report the metrics in the existing manner regardless of this soft navigation setting so is not impacted by those implications. It should also be noted that origin trials are also limited to enabling experimental features on a maximum of 0.5% of all Chrome page loads as a median over 14 days, but this should only be an issue for very large sites.
 
 {% Aside 'important' %}
-The Soft Navigations origin trial has now ended. The Chrome team are taking onboard the feedback received and will be making some adjustments and are aiming to relaunch a second origin trial in Q3 2023 for further feedback.
+The Soft Navigations origin trial has now ended. The Chrome team are taking onboard the feedback received and will be making some adjustments and are aiming to relaunch a second origin trial from Chrome 117 (due for release in September 2023) for further feedback.
 {% endAside %}
 
 ## How can I measure Core Web Vitals per soft navigation?
