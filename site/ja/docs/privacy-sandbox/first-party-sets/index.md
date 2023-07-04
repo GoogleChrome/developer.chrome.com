@@ -5,6 +5,7 @@ subhead: First-Party Sets（FPS）は、企業がサイト間の関係を宣言�
 description: First-Party Sets（FPS）は、企業がサイト間の関係を宣言し、ブラウザが特定の目的で限定的なサードパーティ Cookie を許可できるようにする方法です。
 hero: image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/OLx3AXkweLjAiDzoDslb.png
 date: 2023-03-07
+updated: 2023-05-16
 authors:
   - mihajlija
 ---
@@ -43,7 +44,7 @@ First-Party Sets は、組織が異なるトップレベルサイト間でなん
 
 ## 詳細
 
-- [First-Party Sets のテスト手順](/blog/first-party-sets-testing-instructions/)
+- [ファースト パーティ開発者ガイド](/docs/first-party-sets-integration/)
 - [First-Party Sets の技術 Explainer](https://github.com/privacycg/first-party-sets)
 - [Chrome プラットフォームのステータス](https://chromestatus.com/feature/5640066519007232)
 - [Chromium プロジェクト](https://www.chromium.org/updates/first-party-sets)
