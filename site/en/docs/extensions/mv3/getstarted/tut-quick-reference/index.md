@@ -137,7 +137,7 @@ An unknown error occurred when fetching the script.
 
 {% Video src="video/BhuKGJaIeLNPW9ehns59NfwqKxF2/AbMNDSbURLKjH1Jm1C9Q.mp4", width="800", height="677", autoplay="true", muted="true", loop="true" %}
 
-See [Debugging extensions][doc-debug-ext] for more ways debug the extension service worker.
+See [Debugging extensions][doc-debug-ext] for more ways to debug the extension service worker.
 
 {% Aside 'caution' %}
 Don't forget to fix the file name before moving on!
