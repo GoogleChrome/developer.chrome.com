@@ -3,7 +3,7 @@
 layout: 'layouts/blog-post.njk'
 title: Experimenting with measuring soft navigations
 description: |
- The Chrome team is working on better measuring so-called soft navigations used by Single Page Applications and a new API is now available to allow sites to experiment with this too.
+ The Chrome team is working on better measuring so-called soft navigations used by Single Page Applications and a new API is now available behind a flag to allow sites to experiment with this too.
 authors:
  - tunetheweb
  - yoavweiss
