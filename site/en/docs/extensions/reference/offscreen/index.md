@@ -48,7 +48,12 @@ chrome.offscreen.createDocument({
 chrome.offscreen.closeDocument()
 ```
 
-The following example shows how to ensure that the offscreen document has already been created. The `setupOffscreenDocument()` function calls [`clients.matchAll()`](https://developer.mozilla.org/docs/Web/API/Clients/matchAll) to find the existing offscreen document or creates it if it doesn't already exist. Note that an extension can only have one offscreen document.
+The following example shows how to ensure that the offscreen document has already been created. The `setupOffscreenDocument()` function calls [`runtime.getContexts()`][runtime-get-contexts] to find the existing offscreen document or creates it if it doesn't already exist. Note that an extension can only have one offscreen document.
+
+{% Aside 'gotchas' %}
+[`runtime.getContexts()`][runtime-get-contexts] was added in Chrome 116. In earlier versions of
+Chrome, you can check for the existence of the offscreen document using [`clients.matchAll()`](https://developer.mozilla.org/docs/Web/API/Clients/matchAll).
+{% endAside %}
 
 ```js
 let creating; // A global promise to avoid concurrency issues
@@ -56,11 +61,13 @@ async function setupOffscreenDocument(path) {
   // Check all windows controlled by the service worker to see if one 
   // of them is the offscreen document with the given path
   const offscreenUrl = chrome.runtime.getURL(path);
-  const matchedClients = await clients.matchAll();
-  for (const client of matchedClients) {
-    if (client.url === offscreenUrl) {
-      return;
-    }
+  const existingContexts = await chrome.runtime.getContexts({
+    contextTypes: ['OFFSCREEN_DOCUMENT'],
+    documentUrls: [offscreenUrl]
+  });
+
+  if (existingContexts.length > 0) {
+    return;
   }
 
   // create offscreen document
@@ -101,3 +108,4 @@ For complete examples, see the [offscreen-clipboard][gh-offscreen-clipboard] and
  [gh-offscreen-clipboard]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.offscreen-clipboard-write
  [gh-offscreen-dom]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.offscreen-dom
  [offscreen-reason]: /docs/extensions/reference/offscreen/#type-Reason
+ [runtime-get-contexts]: /docs/extensions/reference/runtime/#method-getContexts
