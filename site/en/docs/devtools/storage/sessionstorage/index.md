@@ -3,59 +3,48 @@ layout: "layouts/doc-post.njk"
 title: "View and edit session storage"
 authors:
   - kaycebasques
+  - sofiayem
 date: 2019-03-14
-#updated: YYYY-MM-DD
-description: "How to view and edit sessionStorage with the Session Storage pane and the Console."
+updated: 2023-07-04
+description: "How to view and edit `sessionStorage` with the Session Storage pane and the Console."
 tags:
   - storage
 ---
 
 This guide shows you how to use [Chrome DevTools][1] to view, edit, and delete [`sessionStorage`][2]
-key-value pairs.
+key-value pairs. Session storage clears when the page session ends.
 
-## View sessionStorage keys and values {: #view }
+## View `sessionStorage` keys and values {: #view }
 
-1.  Click the **Application** tab to open the **Application** panel.
-    Expand the **Session Storage** menu.
+1. [Open DevTools](/docs/devtools/open/) on the website you want to inspect.
 
-    {% Img src="image/admin/FNTagOn8cnsylvpMAqls.png", alt="The Session Storage Menu", width="800", height="579" %}
+1. Navigate to **Application** > **Storage**  and expand **Session Storage**. Click a domain to view its key-value pairs.
 
-    **Figure 1**. The **Session Storage** menu shows two domains: **https://developers.google.com**
-    and **https://www.youtube.com**
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/HkF7F4kaxpT98LBU44Qb.png", alt="The key-value pairs of youtube.com.", width="800", height="550" %}
 
-2.  Click a domain to view its key-value pairs.
+1. To preview the value below the table, select a pair.
 
-    {% Img src="image/admin/fJijNAIrM9DFmAGxkXAU.png", alt="The sessionStorage key-value pairs for the https://www.youtube.com domain", width="800", height="579" %}
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/uBuibJAcyagvF28e7r7d.png", alt="Viewing the value of the selected key.", width="800", height="550" %}
 
-    **Figure 2**. The `sessionStorage` key-value pairs for the **https://www.youtube.com** domain
+## Create a new `sessionStorage` key-value pair {: #create }
 
-3.  Click a row of the table to view the value in the viewer below the table.
-
-    {% Img src="image/admin/YxEayGVMtIP0yExSuWVk.png", alt="Viewing the value of the yt-remote-cast-available key", width="800", height="579" %}
-
-    **Figure 3**. Viewing the value of the `yt-remote-cast-available` key
-
-## Create a new sessionStorage key-value pair {: #create }
-
-1.  [View a domain's `sessionStorage` key-value pairs][3].
-2.  Double-click the empty part of the table. DevTools creates a new row and focuses your cursor in
+1. [View the domain's `sessionStorage` key-value pairs][3]. For example, on this [demo page](https://jec.fish/demo/storage).
+1. Double-click the empty part of the table. DevTools creates a new row and focuses your cursor in
     the **Key** column.
+1. Enter a new key-value pair.
 
-    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/wHbbYT8MsU3U68Op2yWj.png", alt="The empty part of the table to double-click in order to create a new key-value pair", width="800", height="579" %}
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/lP04T7LxqplyLVWlw1e0.mp4", width="800", height="470", controls="true", class="screenshot", autoplay="false" %}
 
-    **Figure 4**. The empty part of the table to double-click in order to create a new key-value
-    pair
-
-## Edit sessionStorage keys or values {: #edit }
+## Edit `sessionStorage` keys or values {: #edit }
 
 1.  [View a domain's `sessionStorage` key-value pairs][4].
 2.  Double-click a cell in the **Key** or **Value** column to edit that key or value.
 
-    {% Img src="image/admin/tEPwnClhMoj3lQGkIpa8.png", alt="Editing a sessionStorage key", width="800", height="579" %}
+    {% Img src="image/admin/tEPwnClhMoj3lQGkIpa8.png", alt="Editing a `sessionStorage` key", width="800", height="579" %}
 
     **Figure 5**. Editing a `sessionStorage` key
 
-## Delete sessionStorage key-value pairs {: #delete }
+## Delete `sessionStorage` key-value pairs {: #delete }
 
 1.  [View a domain's `sessionStorage` key-value pairs][5].
 2.  Click the key-value pair that you want to delete. DevTools highlights it blue to indicate that
@@ -63,12 +52,12 @@ key-value pairs.
 3.  Press the Delete key or click **Delete Selected**
     {% Img src="image/admin/RZdVGIrpAWpIoQ7yo45u.png", alt="Delete Selected", width="20", height="20" %}.
 
-## Delete all sessionStorage key-value pairs for a domain {: #deleteall }
+## Delete all `sessionStorage` key-value pairs for a domain {: #deleteall }
 
 1.  [View a domain's `sessionStorage` key-value pairs][6].
 2.  Click **Clear All** {% Img src="image/admin/XOrLlc1EDHyM8wRTRhD2.png", alt="Clear All", width="26", height="26" %}.
 
-## Interact with sessionStorage from the Console {: #console }
+## Interact with `sessionStorage` from the Console {: #console }
 
 Since you can run JavaScript in the **Console**, and since the **Console** has access to the page's
 JavaScript contexts, it's possible to interact with `sessionStorage` from the **Console**.
@@ -82,7 +71,7 @@ JavaScript contexts, it's possible to interact with `sessionStorage` from the **
 
 2.  Run your `sessionStorage` expressions in the Console, the same as you would in your JavaScript.
 
-    {% Img src="image/admin/y85mudOFG83xUq9rIUJE.png", alt="Interacting with sessionStorage from the Console", width="800", height="579" %}
+    {% Img src="image/admin/y85mudOFG83xUq9rIUJE.png", alt="Interacting with `sessionStorage` from the Console", width="800", height="579" %}
 
     **Figure 7**. Interacting with `sessionStorage` from the **Console**
 
