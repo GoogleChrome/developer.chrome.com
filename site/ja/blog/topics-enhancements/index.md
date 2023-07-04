@@ -1,17 +1,11 @@
 ---
 layout: layouts/blog-post.njk
 title: Topics API の機能強化
-description: |2-
-
-  トピック分類とフィルタリング メカニズムが更新され、速度が向上し、ユーザーコントロールが強化されました。
-subhead: |2-
-
-  トピック分類とフィルタリング メカニズムが更新され、速度が向上し、ユーザーコントロールが強化されました。
-date: '2023-06-15'
+description: トピック分類とフィルタリング メカニズムが更新され、速度が向上し、ユーザーコントロールが強化されました。
+subhead: トピック分類とフィルタリング メカニズムが更新され、速度が向上し、ユーザーコントロールが強化されました。
+date: 2023-06-15
 thumbnail: image/80mq7dk16vVEg8BBhsVe42n6zn82/s3iDQJUgLZV25YbtYxs1.png
-alt: |2-
-
-  Topics API の機能強化
+alt: Topics API の機能強化
 authors:
   - leeronisrael
 tags:
