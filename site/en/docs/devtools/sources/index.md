@@ -53,7 +53,7 @@ Note that the **Page** pane lists only the loaded and deployed stylesheets.
 
 Use the **Editor** pane to edit CSS and JavaScript. DevTools updates the page to run your new code.
 
-The **Editor** also helps you debug. For example, it underlines and shows inline error tooltips next to syntax errors and other issues, such as failed CSS `@import` and `url()` statements, and HTML `href` attribtues with invalid URLs.
+The **Editor** also helps you debug. For example, it underlines and shows inline error tooltips next to syntax errors and other issues, such as failed CSS `@import` and `url()` statements, and HTML `href` attributes with invalid URLs.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bC8AE6UACgxtXXkNMAkL.png", alt="An inline syntax error tooltip.", width="800", height="550" %}
 
