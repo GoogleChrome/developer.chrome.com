@@ -157,7 +157,7 @@ kenchris:
   title:
     en: 'Kenneth Christiansen'
   description:
-    en: 'Kenneth is an Engineer at Intel'
+    en: 'Kenneth a Principal Engineer at Intel'
 emilystark:
   title:
     en: 'Emily Stark'
@@ -332,7 +332,12 @@ paulkinlan:
   title:
     en: 'Paul Kinlan'
   description:
-    en: 'Paul is a Developer Advocate'
+    en: 'DevRel Lead'
+  bio:
+    en:
+      - I lead the Chrome Developer Relations team at Google.
+      - We want people to have the best experience possible on the web without having to install a native app or produce content in a walled garden.
+      - Our team tries to make it easier for developers to build on the web by supporting every Chrome release, creating great content to support developers on web.dev, contributing to MDN, helping to improve browser compatibility, and some of the best developer tools like Lighthouse, Workbox, Squoosh to name just a few.
 jakearchibald:
   title:
     en: 'Jake Archibald'
@@ -412,7 +417,7 @@ pavoldrotar:
   title:
     en: 'Pavol Drotar'
   description:
-    en: 'I am a Software Engineer Intern wroking on the Web Platform.'
+    en: 'I am a Software Engineer Intern working on the Web Platform.'
 adrianajara:
   title:
     en: 'Adriana Jara'
@@ -571,11 +576,38 @@ reillyg:
     pt: Engenheiro de software no Google Chrome com foco em APIs de hardware
     ru: Инженер-программист в команде Google Chrome, специализирующийся на API для работы с устройствами
     zh: 专注于硬件 API 的 Google Chrome 软件工程师
+nabeelalshamma:
+  title:
+    en: Nabeel Al-Shamma
+    es: Nabeel Al-Shamma
+    ja: Nabeel Al-Shamma
+    ko: Nabeel Al-Shamma
+    pt: Nabeel Al-Shamma
+    ru: Nabeel Al-Shamma
+    zh: Nabeel Al-Shamma
+  description:
+    en: Principal Scientist at Adobe
+    es: Principal Scientist at Adobe
+    ja: Principal Scientist at Adobe
+    ko: Principal Scientist at Adobe
+    pt: Principal Scientist at Adobe
+    ru: Principal Scientist at Adobe
+    zh: Principal Scientist at Adobe
+nattestad:
+  title:
+    en: Thomas Nattestad
+  description:
+    en: Product Manager at Google
 cwallez:
   title:
     en: Corentin Wallez
   description:
     en: Graphics plumber at Google
+toji:
+  title:
+    en: Brandon Jones
+  description:
+    en: WebGPU/WebXR/WebGL Dev at Google
 eladalon:
   title:
     en: 'Elad Alon'
@@ -596,6 +628,26 @@ thomassteiner:
     en: 'Thomas Steiner'
   description:
     en: 'Tom is a Developer Advocate'
+jarekfoksa:
+  title:
+    en: Jarek Foksa
+  description:
+    en: "Boxy SVG developer"
+ashleygullen:
+  title:
+    en: 'Ashley Gullen'
+  description:
+    en: 'Founder of Scirra and lead developer of Construct'
+jannispetersen:
+  title:
+    en: Jannis Petersen
+  description:
+    en: Creator of Blockbench
+ivankutskir:
+  title:
+    en: 'Ivan Kutskir'
+  description:
+    en: 'Computer Programmer, creator of Photopea'
 ajara:
   title:
     en: 'Adriana Jara'
@@ -957,7 +1009,7 @@ karaerickson:
   title:
     en: Kara Erickson
   description:
-    en: Software Engineer on the Aurora team at Chrome.
+    en: Staff Software Engineer on the Aurora team at Chrome.
     es: Ingeniera de software en el equipo de Aurora en Chrome.
     ja: ChromeのAuroraチームのソフトウェアエンジニア。
     ko: Chrome에서 Aurora 팀의 소프트웨어 엔지니어입니다.
@@ -1348,4 +1400,104 @@ georgiafranklin:
   title:
     en: Georgia Franklin
   description:
-    en: Product Manager, Privacy Sandbox	
+    en: Product Manager, Privacy Sandbox
+arskama:
+  title:
+    en: Arnaud (Arno) Mandy
+  description:
+    en: Arno is an Engineer at Intel
+robertyang:
+  title:
+    en: Robert Yang
+  description:
+    en: Robert is a Senior Partner Technology Manager at Google
+vaatika:
+  title:
+    en: Vaatika Dabra Groth
+  description:
+    en: UX Designer at Google
+dmengelt:
+  title:
+    en: Dominik Mengelt
+  description:
+    en: Developer Relations Engineer Payments, Google
+roshanbaliga:
+  title:
+    en: Roshan Baliga
+  description:
+    en: Group Product Manager, Chrome Open Media
+marcopaniconi:
+  title:
+    en: Marco Paniconi
+  description:
+    en: Senior Staff Software Engineer, Chrome Open Media
+yunqingwang:
+  title:
+    en: Yunqing Wang
+  description:
+    en: Senior Staff Software Engineer, Chrome Open Media
+sebastianbenz:
+  title:
+    en: 'Sebastian Benz'
+  description:
+    en: 'Sebastian is a Developer Relations Engineer'
+harleenbatra:
+  title:
+    en: Harleen Batra
+  description:
+    en: 'Developer Marketing for Chrome'
+patrickkettner:
+  title:
+    en: 'Patrick Kettner'
+  description:
+    en: 'Developer Advocate for Chrome Extensions'
+nmichell:
+  title:
+    en: 'Nancy Michell'
+  description:
+    en: 'Technical Writer'
+jakobdamjensen:
+  title:
+    en: Jakob Dam Jensen
+  description:
+    en: Software Product Manager at LEGO® Education
+oliverdunk:
+  title:
+    en: 'Oliver Dunk'
+  description:
+    en: 'Developer Relations Engineer for Chrome Extensions'
+shhnjk:
+  title:
+    en: 'Jun Kokatsu'
+  description:
+    en: 'Security Engineer for the Web'
+wanderview:
+  title:
+    en: 'Ben Kelly'
+  description:
+    en: 'Software Engineer'
+alispivak:
+  title:
+    en: 'Ali Spivak'
+  description:
+    en: 'Developer Relations Lead for Chrome Extensions'
+thiagodiogo:
+  title:
+    en: 'Thiago Diogo'
+  description:
+    en:  'Staff Technical Solutions Consultant'
+henrikbostrom:
+  title:
+    en: 'Henrik Boström'
+  description:
+    en: 'Software engineer working on video performance.'
+darojas:
+  title:
+    en: 'Danny Rojas'
+  description:
+    en:  'Product Partnerships, Privacy Sandbox'
+seburan:
+  title:
+    en: 'Séverin Ferrand'
+  description:
+    en:  'Privacy Engineer, Web Ecosystem Consulting'

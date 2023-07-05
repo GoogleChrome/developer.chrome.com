@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Architecture overview"
 seoTitle: "Chrome Extensions architecture overview"
 date: 2012-09-18
-updated: 2023-01-10
+updated: 2023-05-30
 description: A high-level explanation of the architecture of Chrome Extensions.
 subhead: A high-level explanation of the structure of a Chrome Extension.
 anchorRedirects:
@@ -36,7 +36,7 @@ The manifest (`manifest.json`) is the configuration file of a Chrome extension. 
 - The [Chrome API][api-ref] keys and [permissions][doc-perms] that the extension needs.
 - The files assigned as the extension service worker, the popup HTML file, the options page, the content scripts, etc.
 
-The [Manifest keys][doc-manifest] article contains the complete list of default and optional keys. For copy-paste-ready code samples, check out the [Manifest examples][doc-manifest-examples].
+The [Manifest keys][doc-manifest] article contains the complete list of default and optional keys. For ready to use code samples, check out the [Manifest examples][doc-manifest-examples].
 
 ### The extension service worker {: #background_script }
 
@@ -65,6 +65,9 @@ An extension can have different HTML pages depending on the design. All extensio
 
 [The options page][doc-options]
 : The options page (`options.html`) provides a way for users to customize an extension, such as choosing which sites the extension will run on. Users can access the options page in several ways as described in [Finding the options page][doc-options-view].
+
+[Side panels][api-sidepanel]
+: A side panel (`sidepanel.html`) can be used to assist users throughout their browsing journey. Users can find extension side panels by navigating to Chrome's side panel UI or by clicking the extension toolbar icon. Side panels can be configured to only be displayed on specific sites.
 
 Other extension HTML pages include [Chrome override pages][doc-override], [sandbox pages][doc-sandbox] or any custom page included for a specific purpose like onboarding the user.
 
@@ -106,10 +109,11 @@ Now that you have completed the [Getting Started guides][doc-gs] and understand 
 - Discover best practices for building [secure extensions][doc-secure] that respect [user privacy][doc-privacy]. 
 
 [api-ref]: /docs/extensions/reference
+[api-sidepanel]: /docs/extensions/reference/sidePanel
 [api-storage]: /docs/extensions/reference/storage
 [cs-isolated]: /docs/extensions/mv3/content_scripts/#isolated_world
-[cws]: https://chrome.google.com/webstore/
 [cws-mv3-req]: /docs/webstore/program-policies/mv3-requirements/
+[cws]: https://chrome.google.com/webstore/
 [dev-basics-structure]: /docs/extensions/mv3/getstarted/development-basics/#structure
 [doc-content-scripts]: /docs/extensions/mv3/content_scripts
 [doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics
@@ -117,8 +121,8 @@ Now that you have completed the [Getting Started guides][doc-gs] and understand 
 [doc-ext-101]: /docs/extensions/mv3/getstarted/extensions-101
 [doc-gs]: /docs/extensions/mv3/getstarted
 [doc-manifest-examples]: /docs/extensions/mv3/manifest#manifest-examples
-[doc-match]: /docs/extensions/mv3/match_patterns/
 [doc-manifest]: /docs/extensions/mv3/manifest
+[doc-match]: /docs/extensions/mv3/match_patterns/
 [doc-messages]: /docs/extensions/mv3/messaging
 [doc-options-view]: /docs/extensions/mv3/options#view_page
 [doc-options]: /docs/extensions/mv3/options

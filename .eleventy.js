@@ -28,11 +28,12 @@ const {DetailsSummary} = require('./site/_shortcodes/DetailsSummary');
 const {Empty} = require('./site/_shortcodes/Empty');
 const {IFrame} = require('./site/_shortcodes/IFrame');
 const {Glitch} = require('./site/_shortcodes/Glitch');
+const {AndroidBrowserSupportTable} = require('./site/_shortcodes/AndroidBrowserSupportTable');
 const {Hreflang} = require('./site/_shortcodes/Hreflang');
 const {Img} = require('./site/_shortcodes/Img');
 const {Label} = require('./site/_shortcodes/Label');
 const {Video} = require('./site/_shortcodes/Video');
-const {YouTube} = require('./site/_shortcodes/YouTube');
+const {YouTube} = require('webdev-infra/shortcodes/YouTube');
 const {Columns, Column} = require('./site/_shortcodes/Columns');
 const {Compare, CompareCaption} = require('./site/_shortcodes/Compare');
 const {Aside} = require('./site/_shortcodes/Aside');
@@ -133,6 +134,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addNunjucksAsyncFilter('minifyHtml', minifyHtml);
 
   // Add shortcodes
+  eleventyConfig.addShortcode('AndroidBrowserSupportTable', AndroidBrowserSupportTable);
   eleventyConfig.addShortcode('InlineCss', InlineCss);
   eleventyConfig.addShortcode('Codepen', Codepen);
   eleventyConfig.addShortcode('IFrame', IFrame);

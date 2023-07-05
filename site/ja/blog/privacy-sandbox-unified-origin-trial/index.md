@@ -132,7 +132,7 @@ if ('runAdAuction' in navigator && document.featurePolicy.allowsFeature('run-ad-
 `window` 内の `attributionReporting` オブジェクトと、「attribution-reporting」のアクセス許可ポリシーを確認してください。
 
 ```javascript
-if ('attributionReporting' in window && document.featurePolicy.allowsFeature('attribution-reporting')) {
+if (document.featurePolicy.allowsFeature('attribution-reporting')) {
   // Attribution Reporting API enabled
 }
 ```

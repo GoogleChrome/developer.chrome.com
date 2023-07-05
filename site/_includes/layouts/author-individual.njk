@@ -1,85 +1,172 @@
-{% from 'macros/cards/blog-card.njk' import blogCard with context %}
+{% from 'macros/cards/feed-card.njk' import feedCard with context %}
 {% from 'macros/icon.njk' import icon with context %}
 
 {% extends "layouts/base.njk" %}
+
+{% block css %}
+{% InlineCss '/css/overview.css' %}
+{% endblock %}
 
 {% block title_bar %}
 {% include 'partials/breadcrumbs-author.njk' %}
 {% endblock %}
 
 {% block content %}
-<div class="gap-top-300 lg:gap-top-400 pad-left-400 pad-right-400">
-  <div class="center-margin project-hero text-align-center">
-    {% Img
-      src=paged.image,
-      alt=paged.title | i18n(locale),
-      height="192",
-      width="192",
-      class="rounded-full display-inline-block",
-      sizes="(min-width: 481px) 192px, 128px",
-      options={minWidth: 128},
-      fetchpriority="high"
-    %}
-    <h1 class="lg:gap-top-400 type--h4">{{ paged.title | i18n(locale) }}</h1>
-    <p class="type gap-top-300">{{ paged.description | i18n(locale) }}</p>
+<div class="author gap-top-300 lg:gap-top-400 pad-left-500 pad-right-500">
+  <div class="measure-1280 center-margin switcher gap-top-600 gap-bottom-600">
+    <div class="author-hero">
+      <div class="switcher align-center measure-980">
+        {% if author.image %}
+          {% Img
+            src=author.image,
+            alt=author.title | i18n(locale),
+            height="192",
+            width="192",
+            class="rounded-full display-inline-block avatar",
+            sizes="192px, 128px",
+            fetchpriority="high"
+          %}
+        {% endif %}
+        <div class="flow">
+          <h1 class="type--h4">{{ author.title | i18n(locale) }}</h1>
+          <p class="type gap-top-200">{{ author.description | i18n(locale) | md | safe }}</p>
+        </div>
+      </div>
 
-    <div class="pad-top-300 pad-bottom-600 pad-left-400 pad-right-400 lg:pad-left-0 lg:pad-right-0">
-      <div class="display-flex direction-column align-center">
-        <div class="display-flex color-secondary-text gap-top-300 lg:gap-top-0">
-          {% if paged.homepage %}
-            <a rel="me" href="{{ paged.homepage }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="{{ 'i18n.common.website' | i18n(locale) }}">
+      <div class="lg:pad-top-600 lg:pad-bottom-600 pad-top-300 pad-bottom-300 display-flex direction-column measure-960">
+        <div class="display-flex gap-top-400 md:gap-bottom-200 gap-bottom-500 lg:gap-top-0 author-hero__social">
+          {% if author.webdev  %}
+            <a rel="me" href="https://web.dev/authors/{{ author.webdev }}" target="_blank" class="web color-secondary-text social-icon" aria-label="Webdev" target="_blank">
+              {{ icon('webdev', {hidden: true}) }}
+            </a>
+          {% endif %}
+
+          {% if author.homepage %}
+            <a rel="me" href="{{ author.homepage }}" aria-label="{{ 'i18n.common.website' | i18n(locale) }}" target="_blank" class="color-secondary-text social-icon">
               {{ icon('world', {hidden: true}) }}
             </a>
           {% endif %}
-          {% if paged.twitter %}
-            <a rel="me" href="https://twitter.com/{{ paged.twitter }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="Twitter">
-              {{ icon('twitter', {hidden: true}) }}
-            </a>
-          {% endif %}
-          {% if paged.github %}
-            <a rel="me" href="https://github.com/{{ paged.github }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="GitHub">
-              {{ icon('github', {hidden: true}) }}
-            </a>
-          {% endif %}
-          {% if paged.glitch  %}
-            <a rel="me" href="https://glitch.com/@{{ paged.glitch }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="Glitch">
-              {{ icon('glitch', {hidden: true}) }}
-            </a>
-          {% endif %}
-          {% if paged.mastodon  %}
-            <a rel="me" href="{{ paged.mastodon }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="Mastodon">
-              {{ icon('mastodon', {hidden: true}) }}
-            </a>
-          {% endif %}
-          {% if paged.linkedin  %}
-            <a rel="me" href="https://www.linkedin.com/in/{{ paged.linkedin }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="LinkedIn">
+          {% if author.linkedin  %}
+            <a rel="me" href="https://www.linkedin.com/in/{{ author.linkedin }}" target="_blank" class="color-secondary-text social-icon" aria-label="LinkedIn">
               {{ icon('linkedin', {hidden: true}) }}
             </a>
           {% endif %}
+          {% if author.mastodon  %}
+            <a rel="me" href="{{ author.mastodon }}" target="_blank" class="color-secondary-text social-icon" aria-label="Mastodon">
+              {{ icon('mastodon', {hidden: true}) }}
+            </a>
+          {% endif %}
+          {% if author.github %}
+            <a rel="me" href="https://github.com/{{ author.github }}" target="_blank" class="color-secondary-text social-icon" aria-label="GitHub">
+              {{ icon('github', {hidden: true}) }}
+            </a>
+          {% endif %}
+          {% if author.glitch  %}
+            <a rel="me" href="https://glitch.com/@{{ author.glitch }}" target="_blank" class="color-secondary-text social-icon" aria-label="Glitch">
+              {{ icon('glitch', {hidden: true}) }}
+            </a>
+          {% endif %}
+          {% if author.twitter %}
+            <a rel="me" href="https://twitter.com/{{ author.twitter }}" target="_blank" class="color-secondary-text social-icon" aria-label="Twitter">
+              {{ icon('twitter', {hidden: true}) }}
+            </a>
+          {% endif %}
+          {% if author.rss  %}
+            <a rel="me" href="{{ author.rss }}" class="color-secondary-text social-icon" aria-label="RSS">
+              {{ icon('rss-author', {hidden: true}) }}
+            </a>
+          {% endif %}
         </div>
+
+        {% macro renderBio(bio) %}
+          {% if bio is string %}
+            <p class="gap-top-300 color-secondary-text">{{ bio }}</p>
+          {% else %}
+            {% for paragraph in bio %}
+              <p class="gap-top-500 color-secondary-text">{{ paragraph }}</p>
+            {% endfor %}
+          {% endif %}
+        {% endmacro %}
+
+        {% if author.bio %} 
+          {% set bio = author.bio %}
+          {% if bio %}
+            <div class="author-hero__bio"> {{ renderBio(bio) }} </div>
+
+            {% Details %}
+            {% DetailsSummary %}
+              <p>Bio</p>
+            {% endDetailsSummary %}
+            {{ renderBio(bio) }}
+            {% endDetails %}
+          {% endif %}
+        {% endif %}
       </div>
     </div>
+
+    {% if author.featuredPost %}
+    <div class="author-featured lg:gap-top-0 gap-top-400">
+        {% set featured = author.featuredPost %}
+        {% set post = helpers.findByUrl(collections.all, featured.url, 'en') %}
+
+        {% if post %}
+          {% set eyebrowIcon = featured.eyebrowIcon or 'star' %}
+          {% set eyebrowText = featured.eyebrowText or 'Featured' %}
+          {% set thumbnail = featured.thumbnail or post.data.hero or helpers.randomThumbnail() %}
+          {% set alt = featured.alt or post.data.alt or '' %}
+          {% set theme = featured.theme or 'quaternary' %}
+
+          <a href="{{ featured.url or post.url }}" class="card center-margin bg-{{theme}}">
+            <div class="content">
+              <div class="card__eyebrow flow">
+                {{ icon(eyebrowIcon) }}
+                <span class="color-mid-text">{{ eyebrowText }}</span>
+              </div>
+
+              <div class="card__content flow">
+                <h3 class="type--h4 gap-bottom-300">
+                  {{ featured.title or post.data.title }}
+                </h3>
+                <p class="text-size-1 color-mid-text">{{ featured.summary or post.data.description }}</p>
+              </div>
+            </div>
+
+            {% Img src=thumbnail, alt=alt, width="800", height="450", class="card__hero" %}
+          </a>
+        {% endif %}
+    </div>
+    {% endif %}
   </div>
 
-  <div class="measure-1280 width-full center-margin pad-left-400 pad-right-400">
-    <div class="blog-grid">
-      {% for item in paged.pagination.items %}
-        {% set post = {
-          data: {
-            thumbnail: item.thumbnail,
-            title: item.title,
-            alt: item.title,
-            description: item.description,
-            tags: item.tags,
-            authors: item.authors,
-            date: item.date
-          },
-          url: item.url
-        } %}
-        {{ blogCard(post) }}
-      {% endfor %}
+  <div class="measure-1280 width-full center-margin">
+    {% include 'partials/feeds-filter.njk' %}
+  
+    <div class="feed-grid gap-top-500 gap-bottom-500">
+        {% for post in author.elements %}
+          {% set source = post.source or 'dcc'%}
+          <filtered-element
+            data-filter-source="{{ source }}"
+            data-filter-type="{{ post.type }}"
+            data-filter-credit="author"
+          >
+            {% set postDetails = {
+              data: {
+                thumbnail: post.thumbnail,
+                title: post.title,
+                alt: post.title,
+                description: post.description,
+                tags: post.tags,
+                type: post.type,
+                authors: post.authors,
+                source: post.source,
+                date: post.date
+              },
+              url: post.url
+            } %}
+            {{ feedCard(postDetails) }}
+          </filtered-element>
+        {% endfor %}
     </div>
-    {% include 'partials/pagination.njk' %}
   </div>
 </div>
 {% endblock %}

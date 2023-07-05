@@ -44,8 +44,9 @@ On the top of the **Recorder** panel, there are options for you to:
 1. **Export a recording**{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4dU9UXvsinS4zbgjd8rK.svg", alt="File download.", width="20", height="20" %}. To further customize the script or share it for bug reporting purposes, you can export the user flow in one of the following formats:
 
    - JSON file.
-   - [Puppeteer](https://pptr.dev) script.
    - [@puppeteer/replay](https://github.com/puppeteer/replay) script.
+   - [Puppeteer](/docs/puppeteer/ script.
+   - [Puppeteer](/docs/puppeteer/) (including [Lighthouse](/docs/lighthouse/) analysis).
 
    For more information on the formats, see [Export a user flow](/docs/devtools/recorder/reference/#export-flows).
 
@@ -63,47 +64,35 @@ You can export and import user flows in the Recorder. This is useful for bug rep
 To export a user flow:
 
 1. Open the user flow you want to export.
-2. Click on the **Export**{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4dU9UXvsinS4zbgjd8rK.svg", alt="File download.", width="20", height="20" %}. button at the top of the **Recorder** panel.
-    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/LJJqpZ0vOEdp6rdDLXmP.png", alt="Download format options.", width="800", height="490" %}
- 1. Select one of the following formats from the drop-down list:
-    - **Export as a JSON file**. Download the recording as a JSON file.
-    - **Export as a @puppeteer/replay script**. Download the recording as a [Puppeteer Replay](https://github.com/puppeteer/replay) script.
-    - **Export as a Puppeteer script**. Download the recording as a [Puppeteer](https://pptr.dev/) script.
+1. Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4dU9UXvsinS4zbgjd8rK.svg", alt="File download.", width="20", height="20" %} **Export** at the top of the **Recorder** panel.
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/wLQZMa2kSWySUn4kdU0Y.png", alt="Export format options.", width="800", height="662" %}
+1. Select one of the following formats from the drop-down list:
+    - **JSON file**. Download the recording as a JSON file.
+    - **@puppeteer/replay**. Download the recording as a [Puppeteer Replay](https://github.com/puppeteer/replay) script.
+    - **Puppeteer**. Download the recording as a [Puppeteer](/docs/puppeteer/) script.
+    - **Puppeteer (including Lighthouse analysis)**. Download the recording as a [Puppeteer](/docs/puppeteer/) script with an embedded [Lighthouse](/docs/lighthouse/) analysis.
+    - One or more options provided by the Recorder's [Export extensions](/docs/devtools/recorder/extensions/#export-extensions).
 1. Save the file.
 
-You can do the following with each export option:
+You can do the following with each default export option:
 
-- **JSON:** Edit the human-readable JSON object and [import](#import-flows) the JSON file back to the **Recorder**.
-- **@puppeteer/replay:** Replay the script with the [Puppeteer Replay](https://github.com/puppeteer/replay) library. When exporting as a @puppeteer/replay script, the steps remain a JSON object. This option is perfect if you want to integrate with your CI/CD pipeline but still have the flexibility to edit the steps as JSON, later convert and import them back into the **Recorder**.
-- **Puppeteer script:** Replay the script with [Puppeteer](https://pptr.dev/). Since the steps are converted into JavaScript, you can have more fine-grained customization, for example, looping the steps. One caveat, you can't import this script back into the **Recorder**.
+- **JSON**. Edit the human-readable JSON object and [import](#import-flows) the JSON file back to the **Recorder**.
+- **@puppeteer/replay**. Replay the script with the [Puppeteer Replay](https://github.com/puppeteer/replay) library. When exporting as a @puppeteer/replay script, the steps remain a JSON object. This option is perfect if you want to integrate with your CI/CD pipeline but still have the flexibility to edit the steps as JSON, later convert and import them back into the **Recorder**.
+- **Puppeteer script**. Replay the script with [Puppeteer](/docs/puppeteer/). Because the steps are converted into JavaScript, you can have more fine-grained customization, for example, looping the steps. One caveat, you can't import this script back into the **Recorder**.
+- **Puppeteer (including Lighthouse analysis)**. This export option is the same as the previous one but it includes code that generates a [Lighthouse](/docs/lighthouse/) analysis.
 
-#### Export in a custom format by installing an extension {: #recorder-extension }
+  Run the script and check out the output in a `flow.report.html` file:
 
-{% Aside %}
-**Note**: This feature is available from Chrome version 104.
-{% endAside %}
+  ```sh
+  # npm i puppeteer lighthouse
+  node your_export.js
+  ```
 
-You can install a Chrome extension to export replay scripts in your favorite format. 
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/pfvZ3QX0XhhbDBxpsyBF.png", alt="The Lighthouse report opened in Chrome.", width="800", height="690" %}
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xRO1d79tBe0ILcBoD0oh.png", alt="Custom extension for the Recorder panel.", width="800", height="486" %}
+### Export in a custom format by installing an extension {: #recorder-extension }
 
-For a list of known **Recorder** extensions, see [Extensions](/docs/devtools/recorder/extensions/).
-
-##### Troubleshooting {: #extension-troubleshooting }
-
-If you don't see the export option after installing the extension, do the following:
-
-- The extension only works on web pages. For example, the export option is not available for `chrome://` pages like `chrome://extensions`.
-- Always open a new browser tab after installing the extension.
-- There is an [issue](https://crbug.com/1351416) in Chrome 104 and 105 that prevents the export option showing if you open the **Recorder** as the first DevTools panel. As a workaround, open another panel (for example, **Console**) first before opening the **Recorder**. The issue is fixed in Chrome 106.
-
-{% Aside 'gotchas' %} 
-**Advanced use case: Build an extension**
-
-You can build your own Recorder extension too. See the [Recorder extension API](/docs/extensions/reference/devtools_recorder/) documentation to learn how to build one.
-
-You can also refer to this [extension example](https://github.com/puppeteer/replay/tree/main/examples/chrome-extension) and install it following [the steps](https://github.com/puppeteer/replay#create-a-chrome-extension-for-recorder-available-from-chrome-104-onwards) outlined in the documentation.
-{% endAside %}
+See [Recorder extensions](/docs/devtools/recorder/extensions).
 
 ### Import a user flow {: #import-flows }
 
@@ -117,7 +106,7 @@ To import a user flow:
 
 ### Replay with external libraries
 
-The [Puppeteer Replay](https://github.com/puppeteer/replay) is an open source library maintained by the Chrome DevTools team. It is built on top of [Puppeteer](https://pptr.dev/). It is a command line tool, you can replay JSON files with it.
+The [Puppeteer Replay](https://github.com/puppeteer/replay) is an open source library maintained by the Chrome DevTools team. It is built on top of [Puppeteer](/docs/puppeteer/). It is a command line tool, you can replay JSON files with it.
 
 Apart from that, you can transform and replay JSON files with the following 3rd party libraries.
 
@@ -178,7 +167,7 @@ To inspect the code of a user flow in various formats:
 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/fefVto1d2oXvkmBD9DPQ.png", alt="The format drop-down list.", width="800", height="685" %}
 
-   It can be one of the three default formats (JSON, [@puppeteer/replay](https://github.com/puppeteer/replay), [Puppeteer script](https://pptr.dev/)) or a format provided by an [extension](#recorder-extension).
+   It can be one of the three default formats (JSON, [@puppeteer/replay](https://github.com/puppeteer/replay), [Puppeteer script](/docs/puppeteer/) or a format provided by an [extension](#recorder-extension).
 1. Proceed to debug your recording by [editing step parameters and values](#edit-steps). The code view isn't editable but it updates accordingly as you make changes to steps on the left.
 
 ### Set breakpoints and execute step by step {: #breakpoints-and-step-through }
@@ -193,9 +182,9 @@ To set a breakpoint and execute step by step:
 
 ## Edit steps {: #edit-steps }
 
-You can edit any step in the recording by clicking the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/1UTR0tiSxiKD0YSwAc1g.svg", alt="Expand.", width="24", height="24" %} button next to it.
+You can edit any step in the recording by clicking the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/1UTR0tiSxiKD0YSwAc1g.svg", alt="Expand.", width="24", height="24" %} button next to it, both during the recording and after.
 
-You can also add missing steps and remove accidentally recorded ones as described below.
+You can also [add](#add-steps) missing steps and [remove](#remove-steps) accidentally recorded ones.
 
 ### Add steps {: #add-steps }
 
@@ -203,7 +192,7 @@ Sometimes, you may need to add steps manually. For example, the **Recorder** doe
 
 To manually add a step:
 
-1. Open this [demo page](https://jec.fyi/demo/menu-hover) and start a new recording.
+1. Open this [demo page](https://jec.fish/demo/menu-hover) and start a new recording.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/m1wPaIzCZFOpxF2kViEh.png", alt="Start a recording to capture a hover event.", width="800", height="570" %}
 1. Hover over the element in the viewport. An action menu pops up.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/RP5HSO8LhXBIfWqDMw5Y.png", alt="Hovering over the element.", width="800", height="570" %}
@@ -220,6 +209,31 @@ To manually add a step:
 1. Try replaying the recording again. With the added hover step, the **Recorder** successfully replays the flow.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/P8YGHbff2vGgCKOkEth6.png", alt="Replay success.", width="800", height="567" %}
 
+### Add assertions {: #add-assertions }
+
+During recording, you can assert, for example, HTML attributes and JavaScript properties. To add an assertion:
+
+1. [Start a recording](/docs/devtools/recorder/#record), for example, on this [demo page](https://coffee-cart.app/).
+1. Click **Add assertion**.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/qm3QbX3e4c6pOeGpVoLW.png", alt="The Add assertion button.", width="800", height="773" %}
+
+   The **Recorder** creates a configurable `waitForElement` step.
+
+1. [Specify selectors](/docs/devtools/recorder/#edit-selectors) for this step.
+1. [Configure the step](/docs/devtools/recorder/reference/#configure-steps) but don't change its `waitForElement` type. For example, you can specify:
+
+   - **HTML attribute**. Click **Add attributes** and type the attribute's name and value that elements on this page use. For example, `data-test: <value>`.
+   - **JavaScript property**. Click **Add properties** and type the property's name and value in JSON format. For example, `{".innerText":"<text>"}`.
+   - [Other step properties](#step-properties). For example, `visible: true`.
+
+1. Proceed to record the rest of the user flow and then stop the recording.
+1. Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Replay.", width="20", height="20" %} **Replay**. If an assertion fails, the **Recorder** displays an error after a [timeout](#adjust-timeout).
+
+Watch the following video to see this workflow in action.
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/BNpFsEc4rzFsLVPE5EH2.mp4", controls="true", muted="true", class="screenshot" %}
+
 ### Copy steps {: #copy-steps }
 
 Instead of [exporting the entire user flow](/docs/devtools/recorder/reference/#export-flows), you can copy a single step to the clipboard:
@@ -229,7 +243,7 @@ Instead of [exporting the entire user flow](/docs/devtools/recorder/reference/#e
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/sCSd3cpON80i6n5M3Rir.png", alt="Selecting a copy option from the drop-down menu.", width="800", height="577" %}
 
-You can copy steps in various formats: JSON, [Puppeteer](https://pptr.dev/), [@puppeteer/replay](https://github.com/puppeteer/replay), and those provided by [extensions](#recorder-extension).
+You can copy steps in various formats: JSON, [Puppeteer](/docs/puppeteer/), [@puppeteer/replay](https://github.com/puppeteer/replay), and those provided by [extensions](#recorder-extension).
 
 ### Remove steps {: #remove-steps }
 
@@ -244,7 +258,7 @@ Additionally, the **Recorder** automatically adds two separate steps to the star
 - **Set viewport**. Lets you control the viewport's dimensions, scaling, and [other properties](#step-properties).
 - **Navigate**. Sets the URL and automatically refreshes the page for every replay.
 
-To perform in-page automation without reloading the page, remove the navigation step as described above. 
+To perform in-page automation without reloading the page, remove the navigation step as described above.
 
 ### Configure steps {: #configure-steps }
 
@@ -255,7 +269,7 @@ To configure a step:
    Other properties depend on the `type` value.
 
 1. Specify the required properties below the `type`.
-   <div class="elevation--4" style="margin-top: 20px; margin-bottom: 20px;">{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/GICuzxrYSrsj2zyLdi8X.png", alt="Configuring a step.", width="800", height="388" %}</div>
+   <div class="elevation--4" style="margin-top: 20px; margin-bottom: 20px;">{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XGIyDuvQiK6R18ZQ6dqP.png", alt="Configure a step.", width="800", height="369" %}</div>
 1. Click the corresponding buttons to add optional type-specific properties and specify them.
 
 For a list of available properties, see [Step properties](#step-properties).
@@ -338,6 +352,36 @@ Type-specific properties are:
             <td>Number of elements identified by a selector</td>
         </tr>
         <tr>
+          <td><code>waitForElement</code></td>
+          <td><code>attributes</code></td>
+          <td></td>
+          <td>HTML attribute and its value</td>
+        </tr>
+        <tr>
+          <td><code>waitForElement</code></td>
+          <td><code>properties</code></td>
+          <td></td>
+          <td>JavaScript property and its value in JSON</td>
+        </tr>
+        <tr>
+          <td><code>waitForElement</code></td>
+          <td><a href="https://pptr.dev/api/puppeteer.waitforselectoroptions#properties"><code>visible</code></a></td>
+          <td></td>
+          <td>Boolean. True if the element is in the DOM and visible (doesn't have <code>display: none</code> or <code>visibility: hidden</code>)</td>
+        </tr>
+        <tr>
+          <td><code>waitForElement</code><br><code>waitForExpression</code></td>
+          <td><code>asserted events</code></td>
+          <td></td>
+          <td>Currently, only <code>type: navigation</code> but you can specify the title and URL</td>
+        </tr>
+        <tr>
+          <td><code>waitForElement</code><br><code>waitForExpression</code></td>
+          <td><code>timeout</code></td>
+          <td></td>
+          <td>Maximum time to wait in milliseconds</td>
+        </tr>
+        <tr>
             <td><code>waitForExpression</code></td>
             <td><code>expression</code></td>
             <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
@@ -415,7 +459,7 @@ To remove a timeout overwrite on a step, click the **Delete**{% Img src="image/N
 
 When you start a new recording, you can configure the following:
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/cFxRgfDJpKoznYtlYj2S.png", alt="Configuring a new recording.", width="800", height="546" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/anROVlnWFVhwL6qXXI0p.png", alt="Configuring a new recording.", width="800", height="554" %}
 
 - In the **Selector attribute** textbox, enter a [custom test attribute](#customize-selector). The **Recorder** will use this attribute to detect selectors instead of a list of [common test attributes](common-test-selector).
 - In the **Selector types to record** set of checkboxes, choose the types of selectors to detect automatically:
@@ -424,6 +468,7 @@ When you start a new recording, you can configure the following:
   - {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **ARIA**. Semantic selectors.
   - {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Text**. Selectors with the shortest unique text if available.
   - {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **XPath**. Selectors that use [XML Path Language](https://developer.mozilla.org/docs/Web/XPath).
+  - {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Pierce**. Selectors similar to the CSS ones but that [can pierce shadow DOM](https://pptr.dev/guides/query-selectors#pierce-selectors-pierce).
 
 {% Aside %}
 For more information, see [Syntactic vs. semantic selectors](/blog/puppetaria/#syntactic-vs-semantic-selectors) and [Selector priority](#selector-priority).
@@ -452,7 +497,7 @@ If you have the following common test selectors defined on your website, the **R
 - `data-qa-id`
 - `data-testing`
 
-For example, inspect the "Cappuccino" element on this [demo page](https://coffee-cart.netlify.app/) and see the test attributes:
+For example, inspect the "Cappuccino" element on this [demo page](https://coffee-cart.app/) and see the test attributes:
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/KsR7XKgLgEM0odQZHcKV.png", alt="Defined test selectors.", width="800", height="696" %}
 
@@ -464,7 +509,7 @@ Record a click on "Cappuccino", expand the corresponding step in the recording, 
 
 You can customize the selector of a recording if the common test selectors don't work for you.
 
-For example, this [demo page](https://jec.fyi/demo/recorder) uses the `data-automate` attribute as the selector. [Start a new recording](/docs/devtools/recorder/reference/#record) and enter the `data-automate` as the selector attribute.
+For example, this [demo page](https://jec.fish/demo/recorder) uses the `data-automate` attribute as the selector. [Start a new recording](/docs/devtools/recorder/reference/#record) and enter the `data-automate` as the selector attribute.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/2PPPt9tOC2ZEz1l9F9AK.png", alt="Customize the recording's selector.", width="800", height="524" %}
 
@@ -474,16 +519,16 @@ Fill in an email address and observe the selector value (`[data-automate=email-a
 
 ### Selector priority {: #selector-priority }
 
-The **Recorder** looks for selectors in the following order depending on if you specified a custom CSS selector attribute:
+The **Recorder** looks for selectors in the following order depending on if you specified a [custom CSS selector](#customize-selector) attribute:
 
 - If specified:
   1. CSS selector with your custom CSS attribute.
-  1. XPath selector.
+  1. XPath selectors.
   1. ARIA selector if found.
   1. A selector with the shortest unique text if found.
 - If not specified:
   1. ARIA selector if found.
-  1. One of CSS selectors with the following priority:
+  1. CSS selectors with the following priority:
      1. The most common attributes used for testing: {: #selectors }
          - `data-testid`
          - `data-test`
@@ -494,5 +539,11 @@ The **Recorder** looks for selectors in the following order depending on if you 
          - `data-testing`
      1. ID attributes, for example, `<div id="some_ID">`.
      1. Regular CSS selectors.
-  1. XPath selector.
+  1. XPath selectors.
+  1. Pierce selectors.
   1. A selector with the shortest unique text if found.
+
+There can be multiple regular CSS, XPath, and Pierce selectors. The **Recorder** captures:
+
+- Regular CSS and XPath selectors at every root level, that is, nested [shadow hosts](https://developer.mozilla.org/docs/Web/Web_Components/Using_shadow_DOM#high-level_view), if any.
+- Pierce selectors that are unique among all elements *within* all shadow roots.

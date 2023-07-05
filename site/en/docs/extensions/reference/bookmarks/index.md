@@ -67,12 +67,12 @@ chrome.bookmarks.create({
 });
 ```
 
-For an example of using this API, see the [basic bookmarks sample][5]. For other examples and for
-help in viewing the source code, see [Samples][6].
+To try this API, install the [Bookmarks API example][6] from the [chrome-extension-samples][5]
+repository.
 
 [1]: /docs/extensions/mv3/manifest
 [2]: #type-BookmarkTreeNode
 [3]: #method-create
 [4]: #type-BookmarkTreeNode
-[5]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/_archive/mv2/api/bookmarks/basic/
-[6]: /docs/extensions/mv2/samples
+[5]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples
+[6]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/bookmarks

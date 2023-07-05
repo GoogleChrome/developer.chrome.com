@@ -84,9 +84,9 @@ Chromium issues: [1238818](https://crbug.com/1238818), [1268754](https://crbug.c
 
 Ahora puede ajustar la configuración de **Tiempo de espera** (_timeout_) en el panel [Recorder](/docs/devtools/recorder/) para todos los pasos o para un paso específico. Esto es útil especialmente para páginas con solicitudes de red lentas y animación prolongada.
 
-<!-- For example, I [recorded a user flow](/docs/devtools/recorder/#record) on this [demo page](https://jec.fyi/demo/pup-slow-result) to load and click on the menu item. However, the loading of the menu items is slow (it takes 6 seconds). The [replay](/docs/devtools/recorder/#replay) of this user flow failed because it exceeds 5 seconds  (the default timeout). -->
+<!-- For example, I [recorded a user flow](/docs/devtools/recorder/#record) on this [demo page](https://jec.fish/demo/pup-slow-result) to load and click on the menu item. However, the loading of the menu items is slow (it takes 6 seconds). The [replay](/docs/devtools/recorder/#replay) of this user flow failed because it exceeds 5 seconds  (the default timeout). -->
 
-Por ejemplo, [registré un flujo de usuario](/docs/devtools/recorder/#record) en esta [página de demostración](https://jec.fyi/demo/pup-slow-result) para cargar y hacer clic en la opción del menú. Sin embargo, la carga de los elementos del menú es lenta (esta tarda 6 segundos). La [reproducción](/docs/devtools/recorder/#replay) de este flujo de usuario falló porque supera los 5 segundos (el tiempo de espera predeterminado).
+Por ejemplo, [registré un flujo de usuario](/docs/devtools/recorder/#record) en esta [página de demostración](https://jec.fish/demo/pup-slow-result) para cargar y hacer clic en la opción del menú. Sin embargo, la carga de los elementos del menú es lenta (esta tarda 6 segundos). La [reproducción](/docs/devtools/recorder/#replay) de este flujo de usuario falló porque supera los 5 segundos (el tiempo de espera predeterminado).
 
 <!-- We can use the new **Timeout** settings to fix this. Expand the step which we click on the menu item. [Edit the step](/docs/devtools/recorder/#edit-steps) by  **Add timeout** and set it to **6000** milliseconds (equal to 6s). -->
 

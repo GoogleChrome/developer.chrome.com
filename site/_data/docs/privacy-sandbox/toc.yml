@@ -11,17 +11,24 @@
     - url: /docs/privacy-sandbox/events
     - url: /tags/privacy
       title: i18n.docs.privacy-sandbox.blog
+    - url: /docs/privacy-sandbox/videos
+      title: i18n.docs.privacy-sandbox.videos
 - title: i18n.docs.privacy-sandbox.start
   sections:
+    - url: /docs/privacy-sandbox/chrome-testing
     - url: /docs/privacy-sandbox/unified-origin-trial
+    - url: /docs/privacy-sandbox/enroll
+      title: i18n.docs.privacy-sandbox.enroll
     - url: /docs/privacy-sandbox/status
     - url: /docs/privacy-sandbox/feedback
 - title: i18n.docs.privacy-sandbox.strengthen-boundaries
   sections:
+    - url: /docs/privacy-sandbox/third-party-cookie-phase-out
     - url: /docs/privacy-sandbox/first-party-sets
     - url: /docs/privacy-sandbox/first-party-sets-integration
     - url: /docs/privacy-sandbox/first-party-sets-evolution
     - url: /docs/privacy-sandbox/chips
+    - url: /docs/privacy-sandbox/storage-partitioning/
     - url: /docs/privacy-sandbox/fenced-frame
     - title: i18n.docs.privacy-sandbox.cross-site-federation
       sections:
@@ -31,16 +38,7 @@
       sections:
         - url: /docs/privacy-sandbox/permissions-policy
           title: i18n.docs.privacy-sandbox.permissions-policy
-    - title: i18n.docs.privacy-sandbox.cross-site-storage
-      sections:
-        - url: /docs/privacy-sandbox/shared-storage
-        - url: /docs/privacy-sandbox/shared-storage/unique-reach
-        - url: /docs/privacy-sandbox/shared-storage/user-demographics
-        - url: /docs/privacy-sandbox/shared-storage/k-freq-reach
-        - url: /docs/privacy-sandbox/shared-storage/frequency-control
-        - url: /docs/privacy-sandbox/shared-storage/ab-testing
-        - url: /docs/privacy-sandbox/shared-storage/creative-rotation
-        - url: /docs/privacy-sandbox/shared-storage/known-customer
+    - url: /docs/privacy-sandbox/shared-storage
 - title: i18n.docs.privacy-sandbox.tracking-prevention
   sections:
     - url: /docs/privacy-sandbox/ip-protection
@@ -58,6 +56,8 @@
         - url: /docs/privacy-sandbox/topics/topic-classification
         - url: /docs/privacy-sandbox/topics
           title: i18n.docs.privacy-sandbox.developer-guide
+        - url: /docs/privacy-sandbox/topics/integration-guide
+          title: i18n.docs.privacy-sandbox.integration-guide
         - url: /docs/privacy-sandbox/topics-experiment
           title: i18n.docs.privacy-sandbox.experiment-participate
         - url: /docs/privacy-sandbox/topics/demo
@@ -78,7 +78,17 @@
             - url: /docs/privacy-sandbox/fledge-api/reports
             - url: /docs/privacy-sandbox/fledge-api/troubleshoot
         - url: /docs/privacy-sandbox/fledge-api/feature-status
-    - url: /docs/privacy-sandbox/maximize-ad-relevance
+        - url: https://docs.google.com/document/d/16U6nCs5-RTpYDF5nuUVopvUXKzDgH6yDKaYbzY3ouiI/view
+          title: i18n.docs.privacy-sandbox.paapi-walkthrough
+    - title: i18n.docs.privacy-sandbox.content-selection
+      sections:
+        - url: /docs/privacy-sandbox/shared-storage/content-selection
+        - url: /docs/privacy-sandbox/shared-storage/creative-rotation
+        - url: /docs/privacy-sandbox/shared-storage/creative-selection-by-frequency
+        - url: /docs/privacy-sandbox/shared-storage/ab-testing
+        - url: /docs/privacy-sandbox/shared-storage/known-customer
+    - url: https://privacysandbox.com/news/maximize-ad-relevance-after-third-party-cookies
+      title: i18n.docs.privacy-sandbox.maximize-relevence
 - title: i18n.docs.privacy-sandbox.measure
   sections:
     - title: i18n.docs.privacy-sandbox.measure-ads
@@ -91,10 +101,23 @@
           title: i18n.docs.privacy-sandbox.experiment-participate
         - url: /docs/privacy-sandbox/attribution-reporting/chrome-shipping
           title: i18n.docs.privacy-sandbox.attribution-reporting-chrome-shipping
-        - url: /docs/privacy-sandbox/attribution-reporting-debugging
-          title: i18n.docs.privacy-sandbox.attribution-reporting-debugging
-        - url: https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/view?usp=sharing
-          title: i18n.docs.privacy-sandbox.attribution-reporting-handbook
+        - title: i18n.docs.privacy-sandbox.attribution-reporting-debugging-resources
+          sections:
+            - url: /docs/privacy-sandbox/attribution-reporting-debugging/part-1/
+            - url: /docs/privacy-sandbox/attribution-reporting-debugging/part-2/
+            - url: /docs/privacy-sandbox/attribution-reporting-debugging/part-3/
+        - title: i18n.docs.privacy-sandbox.attribution-reporting-developer-guide
+          sections:
+            - url: /docs/privacy-sandbox/attribution-reporting/register-attribution-source/
+            - url: /docs/privacy-sandbox/attribution-reporting/register-attribution-trigger/
+            - url: /docs/privacy-sandbox/attribution-reporting/change-attribution-logic/
+            - url: /docs/privacy-sandbox/attribution-reporting/define-filters/
+            - url: /docs/privacy-sandbox/attribution-reporting/custom-report-windows/
+            - url: /docs/privacy-sandbox/attribution-reporting/understanding-noise/
+            - url: /docs/privacy-sandbox/attribution-reporting/working-with-noise/
+            - url: /docs/privacy-sandbox/attribution-reporting/contribution-budget/
+            - url: https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/view?usp=sharing
+              title: i18n.docs.privacy-sandbox.attribution-reporting-handbook        
         - url: /docs/privacy-sandbox/attribution-reporting-updates
           title: i18n.docs.privacy-sandbox.attribution-reporting-changing
     - title: i18n.docs.privacy-sandbox.measure-cross-site
@@ -103,6 +126,9 @@
         - url: /docs/privacy-sandbox/private-aggregation-fundamentals
         - url: /docs/privacy-sandbox/private-aggregation-experiment
           title: i18n.docs.privacy-sandbox.experiment-participate
+        - url: /docs/privacy-sandbox/shared-storage/unique-reach
+        - url: /docs/privacy-sandbox/shared-storage/user-demographics
+        - url: /docs/privacy-sandbox/shared-storage/k-freq-reach
     - url: /docs/privacy-sandbox/aggregation-service
     - url: /docs/privacy-sandbox/summary-reports
 - title: i18n.docs.privacy-sandbox.fight-spam

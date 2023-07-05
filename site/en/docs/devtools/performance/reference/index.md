@@ -5,7 +5,7 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2017-05-08
-updated: 2023-01-09
+updated: 2023-06-12
 description: "A reference on all the ways to record and analyze performance in Chrome DevTools."
 tags:
   - performance
@@ -242,10 +242,17 @@ A `click` event caused a function call in `script_foot_closure.js` on line 53. B
 `Function Call` you see that an anonymous function was called. That anonymous function then called
 `Me()`, which then called `Se()`, and so on.
 
-DevTools assigns scripts random colors. In the example above, function calls from one script are colored
-light green. Calls from another script are colored beige. The darker yellow represents scripting
-activity, and the purple event represents rendering activity. These darker yellow and purple events
-are consistent across all recordings.
+DevTools assigns scripts random colors to break up the flame chart and make it more readable. In the example above, function calls from one script are colored light green. Calls from another script are colored beige. The darker yellow represents scripting activity, and the purple event represents rendering activity. These darker yellow and purple events are consistent across all recordings.
+
+{: #long-tasks }
+
+[Long tasks are also highlighted](/blog/new-in-devtools-83/#long-tasks) with a red triangle, and with the part over 50 milliseconds shaded in red:
+
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/zB1QLni239q7xxTYqUhP.png", alt="The Long Task UI", width="800", height="568" %}
+
+In this example, the task is approximately 140 milliseconds, so the part representing the last 90 milliseconds is shaded in red, while the initial 50 milliseconds is not.
+
+Additionally, the **Main** section shows information on CPU profiles started and stopped with [`profile()` and `profileEnd()`](/docs/devtools/console/utilities/#profile-function) console functions.
 
 See [Disable JavaScript samples][11] if you want to hide the detailed flame chart of JavaScript
 calls. When JS samples are disabled, you only see high-level events such as `Event (click)` and
@@ -371,13 +378,28 @@ the **Duration** menu is set to **All**, meaning all activities are shown.
 Disable the **Loading**, **Scripting**, **Rendering**, or **Painting** checkboxes to filter out all
 activities from those categories.
 
+### View timings {: #timings }
+
+On the **Timings** track, view important markers such as:
+
+- [First Paint (FP)](https://developer.mozilla.org/docs/Glossary/First_paint)
+- [First Contentful Paint (FCP)](https://web.dev/fcp/)
+- [Largest Contentful Paint (LCP)](https://web.dev/lcp/)
+- [DOMContentLoaded Event (DCL)](https://developer.mozilla.org/docs/Web/API/Window/DOMContentLoaded_event)
+- [Onload Event (L)](https://developer.mozilla.org/docs/Web/API/Window/load_event)
+- Your custom [`performance.mark()`](https://developer.mozilla.org/docs/Web/API/Performance/mark) calls
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7aTG6FO3T8Tz1kkWgKKy.png", alt="Markers in the Timings track.", width="800", height="578" %}
+
+To see more details in the **Summary** tab, select a marker. To see the marker's timestamp, hover over it on the **Timings** track.
+
 ### View interactions {: #interactions }
 
 View user interactions on the **Interactions** track to track down potential responsiveness issues.
 
 To view interactions:
 
-1. [Open DevTools](/docs/devtools/open/), for example, on this [demo page](https://coffee-cart.netlify.app/?ad=1).
+1. [Open DevTools](/docs/devtools/open/), for example, on this [demo page](https://coffee-cart.app/?ad=1).
 1. Open the **Performance** panel and [start a recording](/docs/devtools/evaluate-performance/#record).
 1. Click an element (coffee) and stop the recording.
 1. Find the **Interactions** track in the timeline.
@@ -385,6 +407,12 @@ To view interactions:
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/QtXDPyOntOBbcFwI5QUY.png", alt="The Interactions track.", width="800", height="459" %}
 
 In the example above, the **Interactions** track shows two interactions. Both have the same IDs, indicating that the interactions are triggered by the same user action.
+
+The **Interactions** track also shows [Interaction to Next Paint (INP)](https://web.dev/inp/) warnings for interactions longer than 200 milliseconds in the **Summary** tab:
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/wrFaZ26nYCuprtCSNB5C.png", alt="The INP warning.", width="800", height="685" %}
+
+Interactions over 200 milliseconds also have the part of the interaction above 200 milliseconds shaded in red—in the same way that [long tasks in the Main thread section](#long-tasks) also have the part over the 50 millisecond long task threshold shaded in red. In this example, 353.77 milliseconds out of the 553.77 milliseconds is shaded in red.
 
 ### View GPU activity {: #gpu }
 

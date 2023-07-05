@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Debugging extensions"
+seoTitle: "MV2 - Debugging extensions [Deprecated]"
 date: 2012-09-18
 updated: 2020-07-21
 description: Step-by-step instructions on how to debug Chrome Extensions.

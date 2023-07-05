@@ -19,10 +19,6 @@ in the [extension manifest][1]. For example:
 }
 ```
 
-## Examples
-
-You can find simple examples of using the tabs module in the [examples/api/webNavigation][2]
-directory. For other examples and for help in viewing the source code, see [Samples][3].
 
 ## Event order
 
@@ -88,7 +84,7 @@ the lifetime of the frame (across multiple navigations).
 Due to the multi-process nature of Chrome, a tab might use different processes to render the source
 and destination of a web page. Therefore, if a navigation takes place in a new process, you might
 receive events both from the new and the old page until the new navigation is committed (i.e. the
-`onCommitted` event is send for the new main frame). In other words, it is possible to have more
+`onCommitted` event is sent for the new main frame). In other words, it is possible to have more
 than one pending sequence of webNavigation events with the same `frameId`. The sequences can be
 distinguished by the `processId` key.
 
@@ -122,6 +118,11 @@ returned that further define the navigation.
 The following transition qualifiers exist:
 
 <table><tbody><tr><th>Transition qualifier</th><th>Description</th></tr><tr><td>"client_redirect"</td><td>One or more redirects caused by JavaScript or meta refresh tags on the page happened during the navigation.</td></tr><tr><td>"server_redirect"</td><td>One or more redirects caused by HTTP headers sent from the server happened during the navigation.</td></tr><tr><td>"forward_back"</td><td>The user used the Forward or Back button to initiate the navigation.</td></tr><tr><td>"from_address_bar"</td><td>The user initiated the navigation from the address bar (aka Omnibox).</td></tr></tbody></table>
+
+## Examples
+
+To try this API, install the [webNavigation API example](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/webNavigation) from the [chrome-extension-samples](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples)
+repository.
 
 [1]: /docs/extensions/mv3/manifest/
 [2]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/_archive/mv2/api/webNavigation/

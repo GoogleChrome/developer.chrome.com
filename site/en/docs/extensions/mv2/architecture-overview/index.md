@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Architecture overview"
+seoTitle: "MV2 - Architecture overview [Deprecated]"
 date: 2012-09-18
 updated: 2018-06-07
 description: A high-level explanation of the software architecture of Chrome Extensions.

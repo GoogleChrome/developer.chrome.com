@@ -53,7 +53,7 @@ Priorities > 0 are shown for increasing duration and more high priority notifica
 displayed in the system tray.
 
 {% Aside %}
-**Platform difference:** The `code` priority does not affect the order of notifications in Chrome version 59+ on macOS.
+**Platform difference:** The `priority` setting does not affect the order of notifications in Chrome 59 or later on macOS.
 {% endAside %}
 
 In addition to displaying information, all notification types can include up to two action items.
@@ -69,7 +69,7 @@ To use this API, call the [notifications.create][3] method, passing in the notif
 the `options` parameter:
 
 ```js
-chrome.notifications.create(id, options, creationCallback);
+await chrome.notifications.create(id, options);
 ```
 
 The [notifications.NotificationOptions][4] must include a [notifications.TemplateType][5], which
@@ -173,7 +173,7 @@ function replyBtnClick {
 }
 ```
 
-Consider including event listeners and handlers within the [event page][12], so that notifications
+Consider including event listeners and handlers within the service worker, so that notifications
 can pop-up even when the extension isn't running.
 
 [1]: https://developers.google.com/web/updates/2017/04/native-mac-os-notifications
@@ -181,7 +181,7 @@ can pop-up even when the extension isn't running.
 [3]: /docs/extensions/reference/notifications#method-create
 [4]: /docs/extensions/reference/notifications#type-NotificationOptions
 [5]: /docs/extensions/reference/notifications#type-TemplateType
-[6]: /docs/extensions/reference/gcm
+[6]: /docs/extensions/reference/gcm/
 [7]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/_archive/apps/samples/gcm-notifications
 [8]: /docs/apps/contentSecurityPolicy
 [9]: /docs/apps/app_external

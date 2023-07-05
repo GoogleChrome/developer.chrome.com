@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manifest Version"
+seoTitle: "Chrome Apps Manifest Version [Deprecated]"
 date: 2012-09-17
 updated: 2019-08-12
 description: Reference documentation for the manifest_version property of manifest.json.

@@ -152,6 +152,18 @@ might impact advertising performance. It's helpful to examine these
 concepts since they underlie several of the Privacy Sandbox APIs.
 {% endAside %}
 
+### Update asides
+
+```md
+{% raw %}{% Aside 'update' %}
+Use the update aside for important updates, such as a name change.
+{% endAside %}{% endraw %}
+```
+
+{% Aside 'update' %}
+The end date has been extended to May 2023.
+{% endAside %}
+
 ## Blockquotes
 Use blockquotes to emphasize a quotation that's important to
 the main idea of a post. (For example, in a case study you might include
@@ -360,6 +372,14 @@ const config = {
 {% endColumn %}
 
 {% endColumns %}
+
+## Comments
+
+If you want comments that are stripped out during rendering, you can place your comment text between {&num; and  &num;}.
+
+```md
+{% raw %}{% your comment here %}{% endraw %}
+```
 
 ## Compare
 

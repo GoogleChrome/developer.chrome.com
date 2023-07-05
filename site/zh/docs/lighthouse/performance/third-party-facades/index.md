@@ -49,11 +49,15 @@ Lighthouse 会寻找可延迟加载的第三方产品，例如社交按钮小部
 
 - [Daugilas/lazyYT](https://github.com/Daugilas/lazyYT)
 
+- [ngx-lite-video](https://github.com/karim-mamdouh/ngx-lite-video)
+
 ### Vimeo 嵌入式播放器
 
 - [luwes/lite-vimeo-embed](https://github.com/luwes/lite-vimeo-embed)
 
 - [slightlyoff/lite-vimeo](https://github.com/slightlyoff/lite-vimeo)
+
+- [ngx-lite-video](https://github.com/karim-mamdouh/ngx-lite-video)
 
 ### 实时聊天（Intercom, Drift, Help Scout, Facebook Messenger）
 

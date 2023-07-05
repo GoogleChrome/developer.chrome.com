@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Stay secure"
 seoTitle: "Chrome Extensions: Stay secure"
 date: 2018-03-06
-updated: 2019-07-17
+updated: 2023-06-07
 description: How to keep your Chrome Extension secure.
 ---
 
@@ -16,15 +16,14 @@ these practices.
 
 Extension code is uploaded and updated through Google accounts. If developers' accounts are
 compromised, an attacker could push malicious code directly to all users. Protect these accounts by
-creating specifically developer accounts and enabling [two-factor authentication][1] , preferably
-with a [security key][2] .
+by enabling [two-factor authentication][1] , preferably with a [security key][2].
 
 ### Keep groups selective {: #group_publishing }
 
 If using [group publishing][3], keep the group confined to trusted developers. Do not accept
 membership requests from unknown persons.
 
-## Never use HTTP, Ever {: #https }
+## Never use HTTP {: #https }
 
 When requesting or sending data, avoid an HTTP connection. Assume that any HTTP connections will
 have eavesdroppers or contain modifications. HTTPS should always be preferred, as it has built-in
@@ -34,43 +33,43 @@ security circumventing most [man-in-the-middle attacks][4].
 
 The Chrome browser limits an extension's access to privileges that have been explicitly requested in
 the [manifest][5]. Extensions should minimize their permissions by only registering APIs and
-websites they depend on. Arbitrary code should be kept to a minimum.
+websites they depend on.
 
-Limiting an extensions privileges limits what a potential attacker can exploit.
+Limiting an extension's privileges limits what a potential attacker can exploit.
 
-### Cross-origin XMLHttpRequest {: #xhr }
+### Cross-origin fetch() {: #xhr }
 
-An extension can only use [XMLHttpRequest][6] to get resources from itself and from domains
-specified in the permissions.
+An extension can only use `fetch()` and [`XMLHttpRequest()`][6] to get resources from the
+extension and from domains specified in the permissions. Note that calls to both are intercepted by
+the [fetch][27] handler in the service worker.
 
 ```json
 {
   "name": "Very Secure Extension",
   "version": "1.0",
   "description": "Example of a Secure Extension",
-  "permissions": [
+  "host_permissions": [
     "https://developer.chrome.com/*",
     "https://*.google.com/*"
   ],
-  "manifest_version": 2
+  "manifest_version": 3
 }
 ```
 
-This extension requests access to anything on developer.chrome.com and subdomains of Google by
+This extension in the sample above requests access to anything on developer.chrome.com and subdomains of Google by
 listing `"https://developer.chrome.com/*"` and `"https://*.google.com/*"` in the permissions. If the
 extension were compromised, it would still only have permission to interact with websites that meet
-the [match pattern][7]. The attacker would not be able to access `"https://user_bank_info.com"` or
+the [match pattern][7]. The attacker would only have limited ability to access `"https://user_bank_info.com"`, or
 interact with `"https://malicious_website.com"`.
 
 ## Limit manifest fields {: #manifest_fields }
 
-Including unnecessary registrations in the manifest creates vulnerabilities and makes an extension
-more visible. Limit manifest fields to those the extension relies on and give specific field
-registration.
+Including unnecessary keys and permissions in the manifest creates vulnerabilities and makes an extension
+more visible. Limit manifest fields to those the extension relies on.
 
 ### Externally connectable {: #externally_connectable }
 
-Use the [`externally_connectable`][8] field to declare which external extensions and web pages the
+Use the [`"externally_connectable"`][8] field to declare which external extensions and web pages the
 extension will exchange information with. Restrict who the extension can externally connect with to
 trusted sources.
 
@@ -93,17 +92,18 @@ trusted sources.
 
 ### Web-accessible resources {: #web_accessible_resources }
 
-Making resources accessible by the web, under the [`web_accessible_resources`][9] will make an
+Making resources accessible by the web, under the [`"web_accessible_resources"`][9] will make an
 extension detectable by websites and attackers.
 
 ```json
 {
   ...
   "web_accessible_resources": [
-    "images/*.png",
-    "style/secure_extension.css",
-    "script/secure_extension.js"
-  ],
+    {
+      "resources": [ "test1.png", "test2.png" ],
+      "matches": [ "https://web-accessible-resources-1.glitch.me/*" ]
+    }
+  ]
   ...
 }
 ```
@@ -121,28 +121,30 @@ scripting attacks. If the extension only loads resources from itself register th
   "name": "Very Secure Extension",
   "version": "1.0",
   "description": "Example of a Secure Extension",
-  "content_security_policy": "default-src 'self'; frame-ancestors 'none';",
-  "manifest_version": 2
+   "content_security_policy": {
+    "extension_pages": "default-src 'self'"
+  },
+  "manifest_version": 3
 }
 ```
 
-If the extension needs to include scripts from specific hosts, they can be included:
+If the extension needs to use web assembly, or increase the restrictions on [sandboxed pages](/docs/extensions/mv3/sandboxingEval/), they can be added:
 
 ```json
 {
   "name": "Very Secure Extension",
   "version": "1.0",
   "description": "Example of a Secure Extension",
-  "content_security_policy": "default-src 'self' https://extension.resource.com; frame-ancestors 'none';",
-  "manifest_version": 2
+   "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';",
+    "sandboxed_pages":"script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+  },
+
+  "manifest_version": 3
 }
 ```
 
-## Avoid executable APIs {: #avoid }
-
-APIs that execute code should be replaced with safer alternatives.
-
-### document.write() and innerHTML {: #document_write }
+### Avoid document.write() and innerHTML {: #document_write }
 
 While it may be simpler to dynamically create HTML elements with `document.write()` and `innerHTML`,
 it leaves the extension, and web pages the extension depends on, open to attackers inserting
@@ -154,38 +156,6 @@ function constructDOM() {
   newTitle.innerText = host;
   document.appendChild(newTitle);
 }
-```
-
-### eval() {: #eval }
-
-Avoid using `eval()` whenever possible to prevent attacks, as `eval()` will execute any code passed
-into it, which may be malicious.
-
-```js
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "https://api.example.com/data.json", true);
-xhr.onreadystatechange = function() {
-  if (xhr.readyState == 4) {
-    // WARNING! Might be evaluating an evil script!
-    var resp = eval("(" + xhr.responseText + ")");
-    ...
-  }
-}
-xhr.send();
-```
-
-Instead, prefer safer, and faster, methods such as `JSON.parse()`
-
-```js
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "https://api.example.com/data.json", true);
-xhr.onreadystatechange = function() {
-  if (xhr.readyState == 4) {
-    // JSON.parse does not evaluate the attacker's scripts.
-    var resp = JSON.parse(xhr.responseText);
-  }
-}
-xhr.send();
 ```
 
 ## Use content scripts carefully {: #content_scripts }
@@ -200,8 +170,8 @@ While [content scripts][11] live in an [isolated world][12], they are not immune
   (e.g., [Spectre][14]), and to being taken over by an attacker if a malicious web page compromises
   the renderer process.
 
-Sensitive work should be performed in a dedicated process, such as the extension's [background
-script][15]. Avoid accidentally exposing extension privileges to content scripts:
+Operations using sensative data (such as a user's private information) or chrome APIs with access to the borwser's functions, should be performed in the extensions's service worker.
+Avoid accidentally exposing extension privileges to content scripts:
 
 - Assume that [messages from a content script][16] might have been crafted by an attacker (e.g.
   [validate and sanitize][17] all input and protect your scripts from [cross-site scripting][18]).
@@ -210,15 +180,15 @@ script][15]. Avoid accidentally exposing extension privileges to content scripts
   scripts.
 - Limit the scope of privileged actions that can be triggered by content scripts. Do not allow
   content scripts to [trigger requests to arbitrary URLs][19] or pass arbitrary arguments to
-  extension APIs (e.g., do not allow passing arbitrary URLs to [`fetch`][20] or
-  [`chrome.tabs.create`][21] API).
+  extension APIs (e.g., do not allow passing arbitrary URLs to [`fetch()`][20] or
+  [`chrome.tabs.create()`][21] methods).
 
 ## Register and sanitize inputs {: #sanitize }
 
 Safeguard an extension from malicious scripts by limiting listeners to only what the extension is
 expecting, validating the senders of incoming data, and sanitizing all inputs.
 
-An extension should only register for [`runtime.onRequestExternal`][22], if it is expecting
+An extension should only register for [`runtime.onMessageExternal`][22], if it is expecting
 communication from an external website or extension. Always validate that the sender matches a
 trusted source.
 
@@ -241,15 +211,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   if (request.allowedAction)
     console.log("This is an allowed action.");
 });
-```
-
-Prevent an extension from executing an attacker's script by sanitizing user inputs and incoming
-data, even from the extension itself and approved sources. [Avoid executable APIs][26].
-
-```js
-function sanitizeInput(input) {
-    return input.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
-}
 ```
 
 [1]: https://support.google.com/accounts/answer/185839?hl=en
@@ -278,4 +239,4 @@ function sanitizeInput(input) {
 [24]: /docs/extensions/reference/runtime#type-MessageSender
 [25]: /docs/extensions/mv3/content_scripts
 [26]: /docs/extensions/mv3/security#avoid
-
+[27]: https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/handled

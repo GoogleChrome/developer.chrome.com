@@ -23,13 +23,15 @@ messages][section-external] section.
 ## Simple one-time requests {: #simple }
 
 If you only need to send a single message to another part of your extension (and optionally get a
-response back), use the simplified [runtime.sendMessage()][runtime-send-msg] method or [tabs.sendMessage()][tabs-send-msg]
+response back), use the simplified [`runtime.sendMessage()`][runtime-send-msg] method or [`tabs.sendMessage()`][tabs-send-msg]
 method. This lets you send a one-time JSON-serializable message from a content script to the
 extension, or vice versa. To handle the response, use the returned Promise. For backward
 compatibility, you can alternatively pass a callback as the last argument. You cannot use both a
 promise and a callback.
 
 Sending a request from a content script looks like this:
+
+{% Label %}content-script.js:{% endLabel %}
 
 ```js
 (async () => {
@@ -43,6 +45,8 @@ Sending a request from the extension to a content script is similar, except that
 specify which tab to send it to. This example demonstrates sending a message to the content script
 in the selected tab.
 
+{% Label %}service-worker.js{% endLabel %}
+
 ```js
 (async () => {
   const [tab] = await chrome.tabs.query({active: true, lastFocusedWindow: true});
@@ -54,6 +58,8 @@ in the selected tab.
 
 On the receiving end, you need to set up an [runtime.onMessage][runtime-on-msg] event listener to handle the
 message. This looks the same from a content script or extension page.
+
+{% Label %}content-script.js or service-worker.js:{% endLabel %}
 
 ```js
 chrome.runtime.onMessage.addListener(
@@ -102,6 +108,8 @@ sending and receiving messages through that connection.
 
 Here is how you open a channel from a content script, and send and listen for messages:
 
+{% Label %}content-script.js:{% endLabel %}
+
 ```js
 var port = chrome.runtime.connect({name: "knockknock"});
 port.postMessage({joke: "Knock knock"});
@@ -122,6 +130,8 @@ listener. This looks the same from a content script or an extension page. When a
 extension calls `connect()`, this event is fired, along with the [runtime.Port][runtime-port] object you can
 use to send and receive messages through the connection. Here's what it looks like to respond to
 incoming connections:
+
+{% Label %}service-worker.js:{% endLabel %}
 
 ```js
 chrome.runtime.onConnect.addListener(function(port) {
@@ -173,6 +183,8 @@ Listening for incoming requests and connections is similar to the internal case,
 [runtime.onMessageExternal][runtime-on-msg-ext] or [runtime.onConnectExternal][runtime-on-connect-ext] methods. Here's an example of
 each:
 
+{% Label %}service-worker.js{% endLabel %}
+
 ```js
 // For simple requests:
 chrome.runtime.onMessageExternal.addListener(
@@ -199,6 +211,8 @@ Likewise, sending a message to another extension is similar to sending one withi
 The only difference is that you must pass the ID of the extension you want to communicate with. For
 example:
 
+{% Label %}service-worker.js{% endLabel %}
+
 ```js
 // The ID of the extension we want to talk to.
 var laserExtensionId = "abcdefghijklmnoabcdefhijklmnoabc";
@@ -222,6 +236,8 @@ As with [cross-extension messaging][section-external], your extension can receiv
 messages from regular web pages. To use this feature, you must first specify in your `manifest.json`
 which websites you want to communicate with using [`"externally_connectable"`][43]. For example:
 
+{% Label %}manifest.json{% endLabel %}
+
 ```json
 "externally_connectable": {
   "matches": ["https://*.example.com/*"]
@@ -233,6 +249,8 @@ pattern must contain at least a [second-level domain][wiki-second-level]; that i
 "\*.com", "\*.co.uk", and "\*.appspot.com" are prohibited. From the web page, use the
 [runtime.sendMessage()][runtime-send-msg] or [runtime.connect()][runtime-connect] APIs to send a message to a specific app or
 extension. For example:
+
+{% Label %}webpage.js{% endLabel %}
 
 ```js
 // The ID of the extension we want to talk to.
@@ -249,6 +267,8 @@ chrome.runtime.sendMessage(editorExtensionId, {openUrlInEditor: url},
 From your extension, you may listen to messages from web pages via the
 [runtime.onMessageExternal][runtime-on-msg-ext] or [runtime.onConnectExternal][runtime-on-connect-ext] APIs, similar to [cross-extension
 messaging][section-external]. Only the web page can initiate a connection. Here is an example:
+
+{% Label %}service-worker.js{% endLabel %}
 
 ```js
 chrome.runtime.onMessageExternal.addListener(
@@ -283,12 +303,16 @@ not to fall victim to [cross-site scripting][wiki-cross-site]. This advice appli
 extension background page as well as to content scripts running inside other web origins.
 Specifically, avoid using dangerous APIs such as the ones below:
 
+{% Label %}content-script.js or service-worker.js{% endLabel %}
+
 ```js
 chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
   // WARNING! Might be evaluating an evil script!
   var resp = eval("(" + response.farewell + ")");
 });
 ```
+
+{% Label %}content-script.js or service-worker.js{% endLabel %}
 
 ```js
 chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
@@ -299,12 +323,16 @@ chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
 
 Instead, prefer safer APIs that do not run scripts:
 
+{% Label %}content-script.js or service-worker.js{% endLabel %}
+
 ```js
 chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
   // JSON.parse does not evaluate the attacker's scripts.
   var resp = JSON.parse(response.farewell);
 });
 ```
+
+{% Label %}content-script.js or service-worker.js{% endLabel %}
 
 ```js
 chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
@@ -313,7 +341,8 @@ chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
 });
 ```
 
-
+[doc-promises]: /docs/extensions/mv3/promises/
+[mdn-promise]: https://developer.mozilla.org/docs/Learn/JavaScript/Asynchronous/Promises
 [native-client]: /docs/extensions/mv3/nativeMessaging/#native-messaging-client
 [native-host]: /docs/extensions/mv3/nativeMessaging/#native-messaging-host
 [native-messaging]: /docs/extensions/mv3/nativeMessaging/

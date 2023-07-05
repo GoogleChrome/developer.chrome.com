@@ -62,15 +62,15 @@ Working with **audio and video on the web**? Hardware media keys support is here
 Picture-in-Picture window is now in origin trial! Check out
 [Audio/Video Updates in Chrome 73](https://developers.google.com/web/updates/2019/02/chrome-73-media-updates) for more.
 
-Speaking of origin trial, [get ready for Priority Hints](https://web.dev/priority-hints) with
-**Priority Hints**, developers can set the importance of a `<script>`, `<img>`, or `<link>` element
+Speaking of origin trial, [get ready for Fetch Priority](https://web.dev/fetch-priority) with
+**Fetch Priority**, developers can set the importance of a `<script>`, `<img>`, or `<link>` element
 to give the browser how to load them. It is still an experimental feature, so please do try out and
 send feedback!
 
 Rendering performance is always on top of our mind. In Chrome 73 `wheel` and `mousewheel` listeners
 registered on root targets (window, document, or body) will be
 [passive listeners by default](https://developers.google.com/web/updates/2019/02/scrolling-intervention), providing fast
-**wheel scrolling by default**.  
+**wheel scrolling by default**.
 
 As we say hello to new features, we also have to say goodbye, so be sure to check
 **[deprecations and removals](https://developers.google.com/web/updates/2019/02/chrome-73-deps-rems) for Chrome 73** as well!

@@ -1,7 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Manifest - Key"
-seoTitle: "Chrome Extensions Manifest: Key"
+title: "Manifest - key"
+seoTitle: "Chrome Extensions manifest: key"
 date: 2013-05-12
 updated: 2022-11-29
 description: Reference documentation for the key property of manifest.json.

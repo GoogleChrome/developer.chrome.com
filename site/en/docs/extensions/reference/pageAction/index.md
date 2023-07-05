@@ -82,10 +82,6 @@ For the best visual impact, follow these guidelines:
   instead.
 - **Don't** constantly animate your icon. That's just annoying.
 
-## Examples
-
-You can find simple examples of using page actions in the [examples/api/pageAction][7] directory.
-For other examples and for help in viewing the source code, see [Samples][8].
 
 [1]: /docs/extensions/browserAction
 [2]: /docs/extensions/mv3/manifest

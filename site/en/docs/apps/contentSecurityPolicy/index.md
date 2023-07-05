@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Content Security Policy"
+seoTitle: "Chrome Apps - Content Security Policy [Deprecated]"
 date: 2012-09-17
 updated: 2018-05-14
 description: An overview of CSP for Chrome Apps and how to comply with it.
@@ -87,6 +88,6 @@ external web pages][6]).
 [1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: https://web.dev/csp/
-[4]: app_external#sandboxing
-[5]: app_external#external
-[6]: app_external#webview
+[4]: /apps/app_external#sandboxing
+[5]: /apps/app_external#external
+[6]: /apps/app_external#webview

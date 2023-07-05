@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "What are extensions?"
+seoTitle: "MV2 - What are extensions? [Deprecated]"
 date: 2013-02-21
 updated: 2018-02-25
 description: An overview of the purpose of Chrome Extensions and how they're developed.

@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Best Practices
 date: 2017-08-30
-updated: 2021-12-06
+updated: 2023-06-09
 description: >
   Best practices on how to implement your extension and list it in the Chrome Web Store.
 ---
@@ -12,36 +12,41 @@ matures and we learn from developers' experiences, these recommendations will be
 
 ## Design a high-quality extension
 
-We encourage you to develop extensions that are of high quality. High-quality extensions conform to
+We encourage you to develop extensions that are of high quality. [High-quality extensions](/docs/webstore/program-policies/quality-guidelines/) conform to
 standards of performance, security, and user experience, as summarized by the following guidelines:
 
-* **Compliance:** Does the extension comply with our [program policies][program policies]?
-  Extensions must not violate any of these policies.
+Compliance 
+: Does the extension comply with our [developer program policies][program policies]? Extensions must not violate any of these policies.
 
-* **Manifest V3:** Is the extension built on Manifest V3? Manifest V3 is the current version of the
-  Chrome extension platform and all High Quality extensions should use it. (See the [Manifest V3
-  overview][mv3-overview].)
+Manifest V3
+: Is the extension built on Manifest V3? Manifest V3 is the current version of the
+Chrome extension platform and all High Quality extensions should use it. (See the [Manifest V3 overview][mv3-overview].)
 
-* **Security:** Is the extension safe for users? Make sure your extension does not pose security
-  threats and does not use deceptive installation tactics (see [Stay secure][stay-secure] for a more
-  in-depth discussion.)
+Security
+: Is the extension safe for users? Make sure your extension does not pose security threats and does not use deceptive installation tactics (see [Stay secure][stay-secure] for a more in-depth
+discussion.)
 
-* **User privacy:** Make sure that your extension handles user data appropriately and conforms to
-  Chrome Web Store's data privacy requirements. (See this [FAQ][user-data-faq] for further details.)
+Privacy
+: Make sure that your extension handles user data appropriately and conforms to [Chrome
+Web Store's data privacy](/docs/webstore/program-policies/privacy) requirements. (See this [FAQ][user-data-faq] for further details.)
 
-* **Performance:** Does the extension function at an outstanding level? High-quality extensions
-  don't just perform their intended action, they do so while using as few system resources as
-  possible.
+Performance
+: Does the extension function at an outstanding level? High-quality extensions don't
+just perform their intended action, they do so while using as few system resources as possible.
 
-* **User experience:** Is the extension a joy to use? The extension itself should provide a
-  good-looking, intuitive, and seamless user experience while also respecting the end user's
-  privacy.
+User experience
+: Is the extension a joy to use? The extension itself should provide a good-looking,
+intuitive, and seamless user experience while also respecting the end user's privacy.
 
-* **Store listing:** The extension's [Chrome Web Store listing][completing-listing] should set the
-  user's expectations and clearly communicate what the extension does. All image assets (icon, tile,
-  marquee, and screenshots) [should be provided][supplying-images]. Images should not be blurry or
-  too busy. [Privacy information][dashboard-privacy] (permissions justifications, the extension's
-  privacy policy, data use disclosures, etc.) must be accurate and up to date.
+Persistent UI
+: When designing a side panel for your extension, make sure it enhances the user's browsing experience by providing relevant information and useful functionality. A side panel should help users accomplish tasks with as little distraction as possible.
+
+Store listing
+: The extension's [Chrome Web Store listing][completing-listing] should set the user's
+expectations and clearly communicate what the extension does. All image assets (icon, tile, marquee,
+and screenshots) [should be provided][supplying-images]. Images should not be blurry or too busy.
+[Privacy information][dashboard-privacy] (permissions justifications, the extension's privacy
+policy, data use disclosures, etc.) must be accurate and up to date.
 
 ## Support Google Accounts
 
@@ -81,22 +86,21 @@ To learn more, see [Creating a great listing page][great-listing-page].
 
 See [Supplying Images][cws-images] for guidelines on the images you should supply to the store.
 
-### Choose your extension's category well
+### Choose your extension's category well {: #choose-category-well }
 
-The developer console lets you specify a category for each extension. Choose the category
-that is most appropriate:
+The developer console lets you specify a category for each extension. Choose the most appropriate category:
 
-* Accessibility
-* Blogging
-* Developer Tools
-* Fun
-* News & Weather
-* Photos
-* Productivity
-* Search Tools
-* Shopping
-* Social & Communication
-* Sports
+- Accessibility
+- Blogging
+- Developer Tools
+- Fun
+- News & Weather
+- Photos
+- Productivity
+- Search Tools
+- Shopping
+- Social & Communication
+- Sports
 
 [oauth2-tutorial]: /docs/extensions/mv3/tut_oauth/
 [completing-listing]: /docs/webstore/cws-dashboard-listing/

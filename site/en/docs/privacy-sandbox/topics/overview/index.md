@@ -2,11 +2,11 @@
 layout: 'layouts/doc-post.njk'
 title: 'Topics API overview'
 subhead: >
-  Learn about this privacy-preserving API to enable interest-based advertising without third-party tracking.
+  The Topics API enables interest-based advertising (IBA) without having to resort to tracking the sites a user visits.
 description: >
-  Learn about this privacy-preserving API to enable interest-based advertising without third-party tracking.
+  The Topics API enables interest-based advertising (IBA) without having to resort to tracking the sites a user visits.
 date: 2022-01-25
-updated: 2023-03-08
+updated: 2023-06-26
 authors:
   - samdutton
 ---
@@ -34,7 +34,15 @@ In the past, third-party cookies and other mechanisms have been used to track us
 
 With the Topics API, the browser observes and records topics that appear to be of interest to the user, based on their browsing activity. This information is recorded on the user's device. The Topics API can then give API callers (such as ad tech platforms) access to a user's topics of interest, but without revealing additional information about the user's browsing activity.
 
-{: #epoch}
+### Observation of ancestor topics {: #ancestor}
+
+Since Chrome 114, when a caller observes a topic for a user on a page, the browser also regards the caller as having observed all ancestors of the topic. 
+
+For example, if the browser records that a caller observes `Shopping/Apparel/Footwear/Boots` for a user, then the ancestors of that topic are also regarded as having been observed: `Shopping/Apparel/Footwear`, `Shopping/Apparel`, and `Shopping`.
+
+Previously, in order for a caller to be regarded by the browser as having observed (for example) `Shopping/Apparel`, that specific topic would have to have been returned by the API as the topic observed. This means that if `Shopping/Apparel` is observed for a caller for a user on one page, and `Shopping/Apparel/Footwear/Boots` on another, then the API will treat `Shopping/Apparel` as having been observed on both pages.
+
+### Epochs {: #epoch}
 
 Of course the Topics API must ensure that the topics of interest it provides are kept up to date. The browser infers topics for a user based on their browsing activity during a period of time known as an *epoch*, currently one week. The topic selected for each epoch is randomly selected from the user's top five topics for that time period. To further enhance privacy and ensure that all topics may be represented, there is a 5% chance the topic is randomly selected from all possible topics in a [taxonomy](https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md) of interests.
 
@@ -49,6 +57,8 @@ The Topics API provides human-readable, easily understandable topics, so it's po
 ### How topics are curated and selected {: #manually-curated}
 
 Topics are selected from a [taxonomy](https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md) consisting of hierarchical categories such as [/Arts & Entertainment/Music & Audio/Soul & R&B](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md#:~:text=/Arts%20%26%20Entertainment/Music%20%26%20Audio/Soul%20%26%20R%26B) and [/Business & Industrial/Agriculture & Forestry](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md#:~:text=106-,/Business%20%26%20Industrial/Agriculture%20%26%20Forestry,-107). These topics have been curated by Chrome for initial testing, but with the goal that the taxonomy becomes a resource maintained by trusted ecosystem contributors. The taxonomy needs to be small enough that many users' browsers will be associated with each topic. Currently the number of topics is 349, but we expect the final number of topics to be between a few hundred and a few thousand.
+
+{% Partial 'privacy-sandbox/topics-taxonomy-v2.njk' %}
 
 {: #sensitive-topics}
 

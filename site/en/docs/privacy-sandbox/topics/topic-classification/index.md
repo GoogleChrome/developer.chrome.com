@@ -7,7 +7,7 @@ description: >
   More in-depth information about the topics themselves and how they are chosen.
   
 date: 2022-01-25
-updated: 2023-03-08
+updated: 2023-06-26
 authors:
   - samdutton
 ---
@@ -37,6 +37,9 @@ This suggests several questions. For example:
 - How could the taxonomy be structured to make it more useful?
 - What specific items should the taxonomy include?
 
+{% Partial 'privacy-sandbox/topics-taxonomy-v2.njk' %}
+
+
 ## How the API infers topics for a site
 
 Topics are derived from a [classifier model](https://github.com/jkarlin/topics#:~:text=classifier) that maps website [hostnames](https://web.dev/same-site-same-origin/#origin) to zero or more topics.
@@ -44,9 +47,12 @@ Analyzing additional information (such as full URLs or page contents) might allo
 
 The classifier model for mapping hostnames to topics is publicly available, and as the [explainer](https://github.com/patcg-individual-drafts/topics) notes, it is possible to view the topics for a site via browser developer tools. The model is expected to evolve and improve over time and be updated periodically; the frequency of this is still under consideration.
 
-Only sites that include code that calls the Topics API are included in the browsing history eligible for topic frequency calculations, and API callers only receive topics they've observed. In other words, sites are not eligible for topic frequency calculations without the site or an embedded service callingß the API.
+Only sites that include code that calls the Topics API are included in the browsing history eligible for topic frequency calculations, and API callers only receive topics they've observed. In other words, sites are not eligible for topic frequency calculations without the site or an embedded service calling the API.
 
 {: #caller}
+
+In addition, a caller can only receive topics that their code has "seen." So if another caller's code registered a topic, say `/Autos & Vehicles/Motor Vehicles (By Type)/Hatchbacks`, for a user's browser and your code did not cause that topic to be registered for that user's browser, you will not be able to learn of that topic of interest for that user's browser when you call the API from your embedded code. Note that because the API now includes ancestors as having been observed, the example above, `/Autos & Vehicles/Motor Vehicles (By Type)/Hatchbacks`, would also cause `Autos & Vehicles` and `Motor Vehicles` to be observed.
+
 {% Aside 'key-term' %}
 
 A Topics API _caller_ is the entity that observes and requests topics with
@@ -61,9 +67,11 @@ call the Topics API from an iframe you own.
 To retrieve one or more topics with `document.browsingTopics()`, an API
 caller must observe and request topics from the same origin.
 
-{% endAside %}
+A caller can access topics via the JavaScript API from [within an iframe](/docs/privacy-sandbox/topics/integration-guide/#implement-with-javascript-and-iframes) using `document.browsingTopics()`.
 
-In addition, a caller can only receive topics that their code has "seen." So if another caller's code registered a topic, say `/Autos & Vehicles/Motor Vehicles (By Type)/Hatchbacks`, for a user's browser and your code did not cause that topic to be registered for that user's browser, you will not be able to learn of that topic of interest for that user's browser when you call the API from your embedded code.
+A caller can also access topics from the [`Sec-Browsing-Topics` header](docs/privacy-sandbox/topics/integration-guide/#implement-with-http-headers) of a `fetch()` request, or of an iframe request. XHR requests are also enabled during origin trials (only), but this method is not recommended.
+
+{% endAside %}
 
 ## The classifier model {: #classifier-model}
 
@@ -230,18 +238,19 @@ In addition to the user's ability to opt out, you can opt out of Topics for your
 ## Using the Topics API on websites with `prebid.js`
 
 As noted in the release of [Prebid 7](https://prebid.org/blog/the-release-of-prebid-7-0/), 
-the community is actively developing an integration with the Topics API via a new module. 
-However, as of November 2022, the Topics Module has not yet been completed. To stay abreast with the 
-development, we recommend the following:
+the community actively developed an integration with the Topics API via a new module. 
+This module was merged in December 2022.
 
-- Follow [Prebid PR #8947: Topics module: Initial Topics iframe implementation](https://github.com/prebid/Prebid.js/pull/8947), which is the PR to create the Prebid Topics Module.
-- Follow [Prebid Issue #8741: Enhancements to Topics module](https://github.com/prebid/Prebid.js/pull/8741), which has an active discussion on the Prebid Topics module's intended workflow.
-- If this is a high dependency, reach out to Prebid.js to check in on status updates and timelines, 
-through whatever standard channel they offer.
+Learn more here:
+
+- Read Prebid's [Topics API module documentation](https://docs.prebid.org/dev-docs/modules/topicsFpdModule.html).
+- For more information, reach out to Prebid.js through whatever standard channel they offer.
 
 
 ## Next steps
 
-If you're an ad tech developer, [experiment and participate](/docs/privacy-sandbox/topics-experiment/) with the Topics API. Read the [developer guide](/docs/privacy-sandbox/topics/) for more in-depth resources.
+- If you're an ad tech developer, [experiment and participate](/docs/privacy-sandbox/topics-experiment/) with the Topics API. 
+- Read the [developer guide](/docs/privacy-sandbox/topics/) for more in-depth resources.
+- Check out the [Topics API integration guide](/docs/privacy-sandbox/topics/integration-guide/) for details on specific ad tech use cases.
 
 {% Partial 'privacy-sandbox/topics-feedback.njk' %}

@@ -43,7 +43,8 @@ example, the [context menus API][2] also uses a 16x16-pixel icon, but it is disp
 
 ## Examples
 
-You can find samples of this API on the [sample page][3].
+To try this API, install the [omnibox API example](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/omnibox) from the [chrome-extension-samples](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples)
+repository.
 
 [1]: /docs/extensions/mv3/manifest
 [2]: /docs/extensions/contextMenus

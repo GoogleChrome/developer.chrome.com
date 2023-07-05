@@ -1,4 +1,3 @@
-*  [Overview of User-Agent reduction](/docs/privacy-sandbox/user-agent/)
 *  [Origin trial](/blog/user-agent-reduction-origin-trial/) Chrome 95 to 103
 *  [Deprecation trial](/blog/user-agent-reduction-deprecation-trial/) Chrome 103 to Chrome 112
 *  [Chrome DevTools integration](/blog/new-in-devtools-89/#ua-ch)

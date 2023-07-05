@@ -22,7 +22,7 @@ date: 2022-06-23
 
 # Optional
 # Include an updated date when you update your post
-updated: 2023-02-27
+updated: 2023-05-10
 
 # Optional
 # How to add a new author
@@ -159,22 +159,16 @@ Note: The values for each percentile are synthetically derived, it does not impl
 </thead>
 <tbody>
 <tr>
-<td><code>first_contentful_paint</code></td>
-<td>int</td>
-<td>milliseconds</td>
-<td><a href="https://web.dev/fcp/">fcp</a></td>
-</tr>
-<tr>
-<td><code>largest_contentful_paint</code></td>
-<td>int</td>
-<td>milliseconds</td>
-<td><a href="https://web.dev/lcp/">lcp</a></td>
-</tr>
-<tr>
 <td><code>cumulative_layout_shift</code></td>
 <td>double encoded as string</td>
 <td>unitless</td>
 <td><a href="https://web.dev/cls/">cls</a></td>
+</tr>
+<tr>
+<td><code>first_contentful_paint</code></td>
+<td>int</td>
+<td>milliseconds</td>
+<td><a href="https://web.dev/fcp/">fcp</a></td>
 </tr>
 <tr>
 <td><code>first_input_delay</code></td>
@@ -183,19 +177,35 @@ Note: The values for each percentile are synthetically derived, it does not impl
 <td><a href="https://web.dev/fid/">fid</a></td>
 </tr>
 <tr>
+<td><code>interaction_to_next_paint</code></td>
+<td>int</td>
+<td>milliseconds</td>
+<td><a href="https://web.dev/inp/">inp</a></td>
+</tr>
+<tr>
+<td><code>largest_contentful_paint</code></td>
+<td>int</td>
+<td>milliseconds</td>
+<td><a href="https://web.dev/lcp/">lcp</a></td>
+</tr>
+<tr>
 <td><code>experimental_time_to_first_byte</code></td>
 <td>int</td>
 <td>milliseconds</td>
 <td><a href="https://web.dev/ttfb/">ttfb</a></td>
 </tr>
 <tr>
-<td><code>experimental_interaction_to_next_paint</code></td>
+<td><code>experimental_interaction_to_next_paint</code> (deprecated)</td>
 <td>int</td>
 <td>milliseconds</td>
 <td><a href="https://web.dev/inp/">inp</a></td>
 </tr>
 </tbody>
 </table></div>
+
+{% Aside 'important' %}
+The `interaction_to_next_paint` metric is available both with and without the experimental prefix. The experimental prefix should now be considered deprecated and will be removed in August 2023. The non-prefixed schema should be used going forward.
+{% endAside %}
 
 #### BigQuery metric name mapping
 
@@ -209,28 +219,32 @@ Note: The values for each percentile are synthetically derived, it does not impl
 </thead>
 <tbody>
 <tr>
-<td><code>first_contentful_paint</code></td>
-<td><code>first_contentful_paint</code></td>
-</tr>
-<tr>
-<td><code>largest_contentful_paint</code></td>
-<td><code>largest_contentful_paint</code></td>
-</tr>
-<tr>
 <td><code>cumulative_layout_shift</code></td>
 <td><code>layout_instability.cumulative_layout_shift</code></td>
+</tr>
+<tr>
+<td><code>first_contentful_paint</code></td>
+<td><code>first_contentful_paint</code></td>
 </tr>
 <tr>
 <td><code>first_input_delay</code></td>
 <td><code>first_input.delay</code></td>
 </tr>
 <tr>
+<td><code>interaction_to_next_paint</code></td>
+<td><code>interaction_to_next_paint</code></td>
+</tr>
+<tr>
+<td><code>largest_contentful_paint</code></td>
+<td><code>largest_contentful_paint</code></td>
+</tr>
+<tr>
 <td><code>experimental_time_to_first_byte</code></td>
 <td><code>experimental.time_to_first_byte</code></td>
 </tr>
 <tr>
-<td><code>experimental_interaction_to_next_paint</code></td>
-<td><code>experimental.interaction_to_next_paint</code></td>
+<td><code>experimental_interaction_to_next_paint</code> (deprecated)</td>
+<td><code>experimental.interaction_to_next_paint</code> (deprecated)</td>
 </tr>
 </tbody>
 </table></div>
@@ -302,12 +316,13 @@ Page-level data is available through the API by passing a `url` property in the 
 
 If the `metrics` property is not set then all available metrics will be returned:
 
-- `largest_contentful_paint`
 - `cumulative_layout_shift`
-- `experimental_interaction_to_next_paint`
-- `experimental_time_to_first_byte`
 - `first_contentful_paint`
 - `first_input_delay`
+- `interaction_to_next_paint`
+- `largest_contentful_paint`
+- `experimental_interaction_to_next_paint`
+- `experimental_time_to_first_byte`
 
 If no `formFactor` value is provided then the values will be aggregated across all form factors.
 
@@ -377,21 +392,25 @@ The request body should contain data with the following structure:
       <td><code translate="no" dir="ltr">effectiveConnectionType</code></td>
       <td>
         <p><strong><code class="apitype" translate="no" dir="ltr">string</code></strong></p>
-        <p>The effective connection type is a query dimension that specifies the effective network class that the record's data should belong to. This field uses the values ["offline", "slow-2G", "2G", "3G", "4G"] as specified in: <a href="https://wicg.github.io/netinfo/#effective-connection-types">https://wicg.github.io/netinfo/#effective-connection-types</a></p><p>Note: If no effective connection type is specified, then a special record with aggregated data over all effective connection types will be returned.</p>
+        <p>The effective connection type is a query dimension that specifies the effective network class that the record's data should belong to.</p>
+        <p>This field uses the values <code>["offline", "slow-2G", "2G", "3G", "4G"]</code> as specified in the <a href="https://wicg.github.io/netinfo/#effective-connection-types">Network Information API specification</a></p>
+        <p>Note: If no effective connection type is specified, then a special record with aggregated data over all effective connection types will be returned.</p>
       </td>
     </tr>
     <tr>
       <td><code translate="no" dir="ltr">formFactor</code></td>
       <td>
         <p><strong><code class="apitype" translate="no" dir="ltr">enum (<a href="#form-factor">FormFactor</a></code>)</code></strong></p>
-        <p>The form factor is a query dimension that specifies the device class that the record's data should belong to.</p><p>Note: If no form factor is specified, then a special record with aggregated data over all form factors will be returned.</p>
+        <p>The form factor is a query dimension that specifies the device class that the record's data should belong to.</p>
+        <p>This field uses the values <code>DESKTOP</code> or <code>PHONE</code>.</p>
+        <p>Note: If no form factor is specified, then a special record with aggregated data over all form factors will be returned.</p>
       </td>
     </tr>
     <tr>
       <td><code translate="no" dir="ltr">metrics[]</code></td>
       <td>
         <p><strong><code class="apitype" translate="no" dir="ltr">string</code></strong></p>
-        <p>The metrics that should be included in the response. If none are specified then any metrics found will be returned.</p><p>Allowed values: ["first_contentful_paint", "first_input_delay", "largest_contentful_paint", "cumulative_layout_shift", "experimental_time_to_first_byte", "experimental_interaction_to_next_paint"]</p>
+        <p>The metrics that should be included in the response. If none are specified then any metrics found will be returned.</p><p>Allowed values: <code>["cumulative_layout_shift", "first_contentful_paint", "first_input_delay", "interaction_to_next_paint", "largest_contentful_paint", "experimental_time_to_first_byte", "experimental_interaction_to_next_paint"]</code></p>
       </td>
     </tr>
     <tr>
@@ -401,14 +420,14 @@ The request body should contain data with the following structure:
       <td><code translate="no" dir="ltr">origin</code></td>
       <td>
         <p><strong><code class="apitype" translate="no" dir="ltr">string</code></strong></p>
-        <p>The url pattern "origin" refers to a url pattern that is the origin of a website.</p><p>Examples: "https://example.com", "https://cloud.google.com"</p>
+        <p>The url pattern "origin" refers to a url pattern that is the origin of a website.</p><p>Examples: <code>"https://example.com"</code>, <code>"https://cloud.google.com"</code></p>
       </td>
     </tr>
     <tr>
       <td><code translate="no" dir="ltr">url</code></td>
       <td>
         <p><strong><code class="apitype" translate="no" dir="ltr">string</code></strong></p>
-        <p>The url pattern "url" refers to a url pattern that is any arbitrary url.</p><p>Examples: "https://example.com/",  "https://cloud.google.com/why-google-cloud/"</p>
+        <p>The url pattern "url" refers to a url pattern that is any arbitrary url.</p><p>Examples: <code>"https://example.com/</code>, <code>https://cloud.google.com/why-google-cloud/"</code></p>
       </td>
     </tr>
   </tbody>

@@ -34,3 +34,11 @@ import './web-components/toc-active';
 
 // This component is only used on the tags page, but we don't split load yet.
 import './web-components/select-loader';
+
+import 'webdev-infra/web-components/YouTube';
+
+import './web-components/filter-modal';
+import './web-components/filtered-element';
+import './web-components/checkbox-group';
+import './web-components/enhanced-select';
+import './web-components/tag-pill-list';

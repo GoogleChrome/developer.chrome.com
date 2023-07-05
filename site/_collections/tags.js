@@ -67,11 +67,23 @@ module.exports = function (collections) {
   allSortedForLoop: for (const item of allSorted) {
     // If there are no tags or the tags isn't a string or array, skip the post.
     /** @type {string[]} */
-    const allTags = [item.data.tags ?? []].flat();
+    let allTags = [item.data.tags ?? []].flat();
     if (!allTags.length) {
       delete item.data.tags;
       continue allSortedForLoop;
     }
+
+    // rewrite chromeX to chrome-X
+    const chromeXRegex = /^chrome(\d+)$/;
+    allTags = allTags.map(tag => {
+      chromeXRegex.lastIndex = 0;
+      const match = tag.match(chromeXRegex);
+      if (match) {
+        return `chrome-${match[1]}`;
+      }
+
+      return tag;
+    });
 
     // Ensure that tags on the front matter is an array.
     item.data.tags = allTags;

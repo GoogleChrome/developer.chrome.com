@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Extending DevTools"
+seoTitle: "MV2 - Extending DevTools [Deprecated]"
 date: 2012-09-17
 updated: 2020-08-25
 description: How to create a Chrome Extension that adds functionality to Chrome DevTools.

@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Build a Todo Chrome App"
+seoTitle: "Build a Todo Chrome App [Deprecated]"
 date: 2014-10-17
 updated: 2014-10-20
 description: An introduction to the codelab.

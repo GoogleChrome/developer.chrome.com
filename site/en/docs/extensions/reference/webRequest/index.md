@@ -25,7 +25,7 @@ events](#event-onAuthRequired) if you use the `"webRequest"` and `"webRequestAut
 permissions.
 
 {% Aside %}
-As of Manifest V3, the `"webRequestBlocking"` permission is no longer available for most extensions. Consider `"declarativeNetRequest"`, which enables use of the [declarativeNetRequest API](/docs/extensions/reference/declarativeNetRequest/). Aside from `"webRequestBlocking"`, the webRequest API will be unchanged and available for normal use. Policy installed extensions can continue to use `"webRequestBlocking"` currently, for a smooth transition period.
+As of Manifest V3, the `"webRequestBlocking"` permission is no longer available for most extensions. Consider `"declarativeNetRequest"`, which enables use of the [declarativeNetRequest API](/docs/extensions/reference/declarativeNetRequest/). Aside from `"webRequestBlocking"`, the webRequest API will be unchanged and available for normal use. Policy installed extensions can continue to use `"webRequestBlocking"`.
 {% endAside %}
 
 ## Life cycle of requests
@@ -371,7 +371,9 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
 );
 ```
 
-For more example code, see the [web request samples][16].
+To try the `chrome.webRequest` API,
+install the [webRequest sample](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/webRequest/) from the [chrome-extension-samples](https://github.com/GoogleChrome/chrome-extensions-samples)
+repository.
 
 [1]: /docs/extensions/mv3/manifest
 [2]: /docs/extensions/mv2/declare_permissions
