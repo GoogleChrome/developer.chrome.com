@@ -45,20 +45,26 @@ of file. For images, you see a preview of the image.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ByErR7HFeQ7zOVjF4Wyp.png", alt="Viewing a file in the Editor pane.", width="800", height="530" %}
 
+{% Aside %}
+Note that the **Page** pane lists only the loaded and deployed stylesheets.
+{% endAside %}
+
 ## Edit CSS and JavaScript {: #edit }
 
 Use the **Editor** pane to edit CSS and JavaScript. DevTools updates the page to run your new code.
-For example, if you edit the `background-color` of an element, you'll see that change take effect
+
+The **Editor** also helps you debug. For example, it underlines and shows inline error tooltips next to syntax errors and other issues, such as failed CSS `@import` and `url()` statements, and HTML `href` attribtues with invalid URLs.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bC8AE6UACgxtXXkNMAkL.png", alt="An inline syntax error tooltip.", width="800", height="550" %}
+
+If you edit the `background-color` of an element, you'll see that the change takes effect
 immediately.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/p0sdJ5tx5yQx1cuOLimO.gif", alt="Editing CSS in the Editor pane", width="800", height="461" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/p0sdJ5tx5yQx1cuOLimO.gif", alt="Editing CSS in the Editor pane.", width="800", height="461", class="screenshot" %}
 
-CSS changes take effect immediately, no save needed. For JavaScript changes to take effect, press
-Command+S (Mac) or Control+S (Windows, Linux). DevTools doesn't re-run a script, so the only
-JavaScript changes that take effect are those that you make inside of functions. For example, note
- how `console.log('A')` doesn't run, whereas `console.log('B')` does.
+For JavaScript changes to take effect, press <kbd>Command</kbd>+<kbd>S</kbd> (Mac) or <kbd>Control</kbd>+<kbd>S</kbd> (Windows, Linux). DevTools doesn't re-run a script, so the only JavaScript changes that take effect are those that you make inside of functions. For example, note how `console.log('A')` doesn't run, whereas `console.log('B')` does.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/vtNDAWnzXAV5H0cjkZdT.gif", alt="Editing JavaScript in the Editor pane.", width="800", height="461" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/vtNDAWnzXAV5H0cjkZdT.gif", alt="Editing JavaScript in the Editor pane.", width="800", height="461", class="screenshot" %}
 
 If DevTools re-ran the entire script after making the change, then the text `A` would have been logged to the
 **Console**.

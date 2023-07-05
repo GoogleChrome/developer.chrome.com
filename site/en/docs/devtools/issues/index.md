@@ -19,7 +19,7 @@ content.
 
 {% Aside %}
 
-Starting from Chrome 92, the **Issues** tab supports the following types of issues:
+Starting from Chrome 116, the **Issues** tab supports the following types of issues:
 
 - [Cookie problems][1]
 - [Mixed content][2]
@@ -28,6 +28,7 @@ Starting from Chrome 92, the **Issues** tab supports the following types of issu
 - [Quirks mode issues][7]
 - (Preview) [Low-contrast issues][8]
 - [Trusted Web Activity issues][9]
+- [Stylesheet loading issues](/blog/new-in-devtools-116/#stylesheets)
 
 Future versions of Chrome will support more issue types.
 
