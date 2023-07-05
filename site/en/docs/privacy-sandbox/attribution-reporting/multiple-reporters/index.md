@@ -12,7 +12,7 @@ authors:
 ---
 
 
-It is possible to register multiple reporters generate and receive attribution reports by registering separate triggers. Below are the two mechanisms available to accomplsh this.
+It is possible to register multiple reporters generate and receive attribution reports by registering separate triggers. What follows are the two mechanisms available to accomplsh this.
 
 
 ## Registering multiple triggers without redirects
