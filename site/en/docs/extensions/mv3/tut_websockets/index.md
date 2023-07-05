@@ -32,7 +32,7 @@ First we need to make sure that our extension only runs in Chrome versions suppo
 
 Then we can keep the service worker active by sending a keepalive message every 20s. The keepalive is started once the service worker connects to the WebSocket. The following sample WebSocket client logs messages and calls `keepAlive()` when the `onopen` event is triggered:
 
-{% Label %}serviceworker.js{% endLabel %}
+{% Label %}service-worker.js{% endLabel %}
 
 ```js
 
