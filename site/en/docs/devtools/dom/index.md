@@ -221,8 +221,6 @@ To edit nodes as HTML with syntax highlighting and autocomplete, select **Edit a
 
 You can duplicate an element using the **Duplicate element** right-click option.
 
-{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/uYxwxYEdEy3p5Jrb8glT.png", alt="Duplicate element highlighted on copy options.", width="800", height="467" %}
-
 1. Right-click **Nana** below and select **Inspect**.
 
     * Bonfire of the Vanities
@@ -232,7 +230,7 @@ You can duplicate an element using the **Duplicate element** right-click option.
 
 1. In the **Elements** panel, right-click `<li>Nana</li>` and select **Duplicate element** from the drop-down menu.
 
-{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/UJUiPt3gSSjVlQ9uyYmZ.png", alt="Duplicate element highlighted in drop-down", width="260", height="474" %}
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/u3iK5J8RvHmLY4G6OfJe.png", alt="The Duplicate element option highlighted in the drop-down.", width="800", height="663" %}
 
 1. Return to the page. The list item has been instantly duplicated.
 
@@ -242,15 +240,15 @@ You can also use the keyboard shortcuts: <kbd>Shift + Alt + Down</kbd> arrow (Wi
 
 You can screenshot any individual node in the DOM Tree using **Capture node screenshot**.
 
-{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/ErWsgrDAV1xYWrj87OQT.png", alt="A node screenshot being captured.", width="800", height="500" %}
-
 1. Right-click any image on this page and select **Inspect**.
 
 1. In the **Elements** panel, right-click the image URL and select **Capture node screenshot** from the drop-down menu.
 
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/HcMn8iVlx1e53ceGST23.png", alt="A node screenshot being captured.", width="800", height="663" %}
+
 1. The screenshot will be saved to your downloads.
 
-{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/uIMeY1flDrlSBhvYqU5b.png", alt="Node screenshot saved to downloads.", width="800", height="296" %}
+   {% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/uIMeY1flDrlSBhvYqU5b.png", alt="Node screenshot saved to downloads.", width="800", height="296", class="screenshot" %}
 
 ### Reorder DOM nodes {: #reorder }
 
