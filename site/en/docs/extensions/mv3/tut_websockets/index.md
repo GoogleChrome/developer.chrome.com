@@ -1,12 +1,12 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: 'Using WebSockets in Service Workers'
-seoTitle: 'How to use WebSockets in Chrome Extension Service Workers'
+seoTitle: 'How to use WebSockets in Chrome extension Service Workers'
 date: 2023-07-04
-description: 'Step-by-step instructions on how to connect to a WebSocket in your Chrome Extension.'
+description: 'Step-by-step instructions on how to connect to a WebSocket in your Chrome extension.'
 ---
 
-This tutorial demonstrates how to connect to a WebSocket in your Chrome Extension's service worker. You can find a [working example on Github](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.websockets).
+This tutorial demonstrates how to connect to a WebSocket in your Chrome extension's service worker. You can find a [working example on Github](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.websockets).
 
 ## Background {: #background }
 
