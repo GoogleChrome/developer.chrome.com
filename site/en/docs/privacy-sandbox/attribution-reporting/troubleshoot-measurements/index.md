@@ -25,7 +25,7 @@ If you notice data reported in summary reports is different from what you expect
         reports to not be sent in the time period; or a source is removed due
         to the pending destination limit.
     -   For event-level reports: the report is subject to randomized
-        response (noise) and is suppressed.
+        response [noise](/docs/privacy-sandbox/attribution-reporting/noise/) and is suppressed.
     -   For event-level reports: the
         [limit](/docs/privacy-sandbox/attribution-reporting/schedule/#event-level-reports-1)
         of three (for clicks) or one (for views) reports has been reached, and
@@ -36,7 +36,7 @@ If you notice data reported in summary reports is different from what you expect
     -   A conversion is filtered out via
         [filters](/docs/privacy-sandbox/attribution-reporting/define-filters/)
         or
-        [priority](/docs/privacy-sandbox/attribution-reporting/prioritize-conversions/)
+        [priority](/docs/privacy-sandbox/attribution-reporting/change-attribution-logic/)
         rules.
 -   User action:
     -   [User-initiated data deletion](/docs/privacy-sandbox/attribution-reporting-data-clearing/).
