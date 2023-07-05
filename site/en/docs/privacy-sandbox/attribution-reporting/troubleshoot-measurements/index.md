@@ -1,10 +1,10 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Differences in attribution-reporting measurement'
+title: 'Troubleshoot differences in Attribution Reporting measurements'
 subhead: >
-  Learn why your measurements may be different than with cookies.
+  Learn why your measurements may be different in Attribution Reporting than they were with cookies.
 description: >
-  Learn why your measurements may be different than with cookies.
+  Learn why your measurements may be different in Attribution Reporting than they were with cookies.
 date: 2022-03-01
 updated: 2023-07-07
 authors:
