@@ -18,7 +18,7 @@ From Chrome 116 on, you can keep a service worker with a WebSocket connection ac
 
 ## Example: WebSocket keepalive
 
-First we need to make sure that our extension only runs in Chrome versions supporting WebSockets in service workers by setting the minimum Chrome to 116 in the manifest:
+First we need to make sure that our extension only runs in Chrome versions supporting WebSockets in service workers by setting the minimum Chrome version to 116 in the manifest:
 
 {% Label %}manifest.json:{% endLabel %}
 
