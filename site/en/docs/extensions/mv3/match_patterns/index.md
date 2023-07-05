@@ -3,17 +3,17 @@ layout: 'layouts/doc-post.njk'
 title: 'Match patterns'
 seoTitle: 'Chrome Extensions match patterns'
 date: 2012-09-18
-updated: 2017-10-28
+updated: 2023-07-10
 description: Understanding URL match patterns and globs in Chrome extensions.
 ---
 
-## Overview
+## Overview {: #overview }
 
-Match patterns are used in Chrome extensions to specify a group of URLs. They are mainly found when choosing which sites to inject content scripts into, but can also be used to specify XYZ in externally-connectable, and XYZ in the webRequest API. These API's accept an array of match patterns.
+Match patterns are used in Chrome extensions to specify a group of URLs. They are mainly used to declare [host permissions][host-permissions] in content scripts, meaning which sites to be injected into. However, they can also be used to specify XYZ in [externally-connectable](TBD), and XYZ in the [webRequest API](TBD). These API's accept an array of match patterns.
 
 ## What is a match pattern? {: #what }
 
-A match pattern is essentially a URL that begins with a permitted scheme separated by a `://`, followed by a host and path. It can contain wildcard (`*`) characters. Most match pattern are composed of three parts:
+A match pattern is essentially a URL that begins with a permitted scheme separated by a `://`, followed by a host and path. It can contain wildcard (`*`) characters. Most match patterns are composed of three parts:
 
 ```text
 &lt;scheme&gt;://&lt;host&gt;/&lt;path&gt;
@@ -27,23 +27,23 @@ Each part can use wildcards `*`,. Below is a detailed description:
 
 - **path**: Must start with `/` and be present. If alone it will always treated as `/*`. For example `/*`, `/foo*`, or `/foo/bar`. Each '`*`' matches 0 or more characters.
 
-### Special cases {: #special }
+## Special cases {: #special }
 
 `<all_urls>`
 : It matches any URL that starts with a permitted scheme. This is considered a broad host permission. 
 
 `file:///` URLs
-: Allows you to run your extension on local files. This scheme has no host and requires the user to allow access. The [Allow Access][doc-perms] section in the Permission article shows how to guide users in granting the extension access to this scheme.
+: Allows you to run your extension on local files. This scheme has no host and requires the user to allow access. The [Allow Access][permissions] section in the Permission article shows how to guide users in granting the extension access to this scheme.
 
 Port URLs
 : Use `http://localhost/*` to match any localhost ports during development. For IP addresses, include the specific address plus a wildcard in the path. For example: `http://127.0.0.1/*`
 
 Top Level domains
-: TLDs match patterns like `http://google.*/*` are not supported. You should explicitly list the TLDs that your extension should run on. For example `http://google.es` and `http://google.fr`.
+: TLDs match patterns like `http://google.*/*` are not supported. You should explicitly list the TLDs, for example: `http://google.es` and `http://google.fr`.
 
-### Examples {: #match-examples}
+## Examples
 
-
+### ✅ Valid pattern examples {: #match-examples }
 
 <table class="fixed-table width-full">
    <tbody>
@@ -134,32 +134,92 @@ Here are some examples of *invalid* pattern matches:
    </tbody>
 </table>
 
-Some schemes are not supported in all contexts.
-
-Extensions are unable to run on the following URLs:
+Extensions are unable to run code on the following URLs:
 
 - `chrome://`
 - `chrome-extension://`
 - `about:`
-- ``
 
-## Globs patterns {: #globs }
+## Globs patterns in Content Scripts {: #globs }
 
+Glob properties follow a different, more flexible syntax than [match patterns][24]. Acceptable glob
+strings are URLs that may contain "wildcard" asterisks and question marks. The asterisk **\***
+matches any string of any length, including the empty string, while the question mark **?** matches
+any single character.
 
-## Others patterns in extensions
+For example, the glob **https://???.example.com/foo/\*** matches any of the following:
 
-You will also encounter other use of patterns in extensions. The following are a few examples:
+- **https://www.example.com/foo/bar**
+- **https://the.example.com/foo/**
 
-Web-accessible resources
-: Define a group of extension resources available to web sites or any content script injected on the tab.
+However, it does _not_ match the following:
 
-Declarative Net Request rules
-:
+- **https://my.example.com/foo/bar**
+- **https://example.com/foo/**
+- **https://www.example.com/foo**
 
-WebRequest URLs
+This extension injects the content script into **https://www.nytimes.com/arts/index.html** and
+**https://www.nytimes.com/jobs/index.html**, but not into
+**https://www.nytimes.com/sports/index.html**:
 
-## Declarative Net Requests rules patterns
+{% Label %}manifest.json{% endLabel %}
 
-[1]: /docs/extensions/mv3/declare_permissions#host-permissions
+```json/6
+{
+  "name": "My extension",
+  ...
+  "content_scripts": [
+    {
+      "matches": ["https://*.nytimes.com/*"],
+      "include_globs": ["*nytimes.com/???s/*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  ...
+}
+```
+
+This extension injects the content script into **https://history.nytimes.com** and
+**https://.nytimes.com/history**, but not into **https://science.nytimes.com** or
+**https://www.nytimes.com/science**:
+
+{% Label %}manifest.json{% endLabel %}
+
+```json/6
+{
+  "name": "My extension",
+  ...
+  "content_scripts": [
+    {
+      "matches": ["https://*.nytimes.com/*"],
+      "exclude_globs": ["*science*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  ...
+}
+```
+
+One, all, or some of these can be included to achieve the correct scope.
+
+{% Label %}manifest.json{% endLabel %}
+
+```json/6-8
+{
+  "name": "My extension",
+  ...
+  "content_scripts": [
+    {
+      "matches": ["https://*.nytimes.com/*"],
+      "exclude_matches": ["*://*/*business*"],
+      "include_globs": ["*nytimes.com/???s/*"],
+      "exclude_globs": ["*science*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  ...
+}
+```
+
 [content-scripts]: /docs/extensions/mv3/content_scripts
 [permissions]: /docs/extensions/mv3/declare_permissions/#allow_access
