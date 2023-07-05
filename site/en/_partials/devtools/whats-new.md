@@ -39,6 +39,7 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 * [performance.mark() shows timing on hover in Performance > Timings](/blog/new-in-devtools-114/#mark)
 * [profile() command populates Performance > Main](/blog/new-in-devtools-114/#profile)
 * [Warning for slow user interactions](/blog/new-in-devtools-114/#slow-interaction-warning)
+* [Web Vitals updates](/blog/new-in-devtools-114/#web-vitals)
 * [JavaScript Profiler deprecation: Phase three](/blog/new-in-devtools-114/#js-profiler)
 * [Miscellaneous highlights](/blog/new-in-devtools-114/#misc)
 
