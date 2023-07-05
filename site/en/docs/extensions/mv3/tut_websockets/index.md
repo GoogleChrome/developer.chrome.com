@@ -74,7 +74,7 @@ function keepAlive() {
         clearInterval(keepAliveIntervalId);
       }
     },
-    // Set interval to 20s to avoid that the service worker becomes inactive.
+    // Set the interval to 20 seconds to prevent the service worker from becoming inactive.
     20 * 1000 
   );
 }
