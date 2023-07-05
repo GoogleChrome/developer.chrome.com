@@ -8,15 +8,13 @@ description: 'Step-by-step instructions on how to connect to a WebSocket in your
 
 This tutorial demonstrates how to connect to a WebSocket in your Chrome Extension's service worker. You can find a [working example on Github](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.websockets).
 
-## Background
+## Background {: #background }
 
-Starting with Chrome 116, extension service workers get improved support for WebSockets. Previously, a service worker could become inactive despite a WebSocket connection being active if no other extension events occurred for 30 seconds. This would terminate the service worker and close the WebSocket connection.
-
-The reason for this is that Chrome terminates an extension service worker after 30s of inactivity. In Chrome versions &lt;116 messages sent or received on a WebSocket do not extend the service worker lifetime, causing Chrome to suspend the service workers with an active WebSocket connection. For more background on the extension service worker lifecycle, read the [extension service worker guide](/docs/extensions/mv3/service_workers/service-worker-lifecycle/#idle-shutdown)).
+Starting with Chrome 116, extension service workers get improved support for [WebSockets[(https://developer.mozilla.org/docs/Web/API/WebSockets_API). Previously, a service worker could become inactive despite a WebSocket connection being active if no other extension events occurred for 30 seconds. This would terminate the service worker and close the WebSocket connection. For more background on the extension service worker lifecycle, read the [extension service worker guide](/docs/extensions/mv3/service_workers/service-worker-lifecycle/#idle-shutdown)).
 
 From Chrome 116 on, you can keep a service worker with a WebSocket connection active by exchanging messages within the 30s service worker activity window. These can either be initiated from your server or from your extension. In the following example, we will send a regular message from the Chrome extension to the server to ensure that the service worker stays alive.
 
-## Example: WebSocket keepalive
+## Example: WebSocket keepalive {: #websocket-keepalive }
 
 First we need to make sure that our extension only runs in Chrome versions supporting WebSockets in service workers by setting the minimum Chrome version to 116 in the manifest:
 
@@ -35,7 +33,6 @@ Then we can keep the service worker active by sending a keepalive message every 
 {% Label %}service-worker.js{% endLabel %}
 
 ```js
-
 let webSocket = null;
 
 function connect() {
@@ -57,8 +54,10 @@ function connect() {
 }
 
 function disconnect() {
+  if (webSocket == null) {
+    return;
+  }
   webSocket.close();
-  webSocket = null;
 }
 ```
 
