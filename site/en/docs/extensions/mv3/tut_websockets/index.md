@@ -51,7 +51,7 @@ function connect() {
   };
 
   webSocket.onclose = (event) => {
-    console.log('websocket close');
+    console.log('websocket connection closed');
     webSocket = null;
   };
 }
