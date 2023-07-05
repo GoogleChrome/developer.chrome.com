@@ -14,6 +14,8 @@ authors:
 <!-- moved limitations section to schedule/index.md -->
 ## Differences between cookie-based and API measurements
 
+If you notice data reported in summary reports is different from what you expected using cookies, review the possible reasons here.
+
 ### A cookie-based conversion is not reported with Attribution Reporting
 
 #### Works as intended
