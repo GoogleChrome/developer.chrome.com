@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Troubleshoot differences in Attribution Reporting measurements'
+title: 'Troubleshoot differences in measurements'
 subhead: >
   Learn why your measurements may be different in Attribution Reporting than they were with cookies.
 description: >
