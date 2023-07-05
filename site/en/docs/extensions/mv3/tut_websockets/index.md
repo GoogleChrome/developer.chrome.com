@@ -10,7 +10,7 @@ This tutorial demonstrates how to connect to a WebSocket in your Chrome Extensio
 
 ## Background
 
-Starting with Chrome 116, extension service workers get improved support for WebSockets. Previously, a service worker could become inactive despite a WebSocket connection being active if no other extension events occurred for 30 seconds, which would result in the service worker being terminated and the WebSocket connection being closed.
+Starting with Chrome 116, extension service workers get improved support for WebSockets. Previously, a service worker could become inactive despite a WebSocket connection being active if no other extension events occurred for 30 seconds. This would terminate the service worker and close the WebSocket connection.
 
 The reason for this is that Chrome terminates an extension service worker after 30s of inactivity. In Chrome versions &lt;116 messages sent or received on a WebSocket do not extend the service worker lifetime, causing Chrome to suspend the service workers with an active WebSocket connection. For more background on the extension service worker lifecycle, read the [extension service worker guide](/docs/extensions/mv3/service_workers/service-worker-lifecycle/#idle-shutdown)).
 
