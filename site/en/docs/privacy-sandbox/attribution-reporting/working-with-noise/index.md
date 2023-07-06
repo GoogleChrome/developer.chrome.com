@@ -93,7 +93,7 @@ Therefore, the relative noise on the total purchase value for shoes will be high
 
 By summing up your summary values from summary reports to access higher-level data, you also sum the noise from these summary values.
 
-{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/l2yrkZLigxjPbjIInlX4.png", alt="ALT_TEXT_HERE", width="800", height="1053" %}
+{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/l2yrkZLigxjPbjIInlX4.png", alt="The degree of noise with granular keys with rollups versus coarse keys with no rollups", width="800", height="1053" %}
 
 Let's look at two different approaches:
 -   **Approach A**: you include a Geography ID in your keys. Summary reports expose geo-ID-level keys, each associated with the summary purchase value at a specific Geo ID's level.
