@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Prioritize specific clicks, views or conversions'
+title: 'Prioritize specific clicks, views, or conversions'
 subhead: >
   Configure the API to prioritize specific sources or triggers.
 description: >
