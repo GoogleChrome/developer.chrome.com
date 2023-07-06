@@ -118,6 +118,7 @@ Known issues:
 
 To further customize the **Recorder** to your needs, you can build your own extension:
 
+1. Check out [Customize and automate user flows beyond Chrome DevTools Recorder](/blog/extend-recorder/).
 1. Explore the [chrome.devtools.recorder](/docs/extensions/reference/devtools_recorder/) API.
 1. Check out [example extensions](https://github.com/puppeteer/replay/tree/main/examples).
 1. [Develop your extension](/docs/extensions/mv3/getstarted/) and publish it at [Chrome Web Store](/docs/webstore/about_webstore/).
