@@ -66,7 +66,7 @@ The default maximum level of detail (`lodMaxClamp`) used when sampling a texture
 
 ## Improving developer experience
 
-A message is displayed in the DevTools JavaScript console to remind developers when they are using WebGPU on an unsupported platform See [change chromium:4589369](
+A message is displayed in the DevTools JavaScript console to remind developers when they are using WebGPU on an unsupported platform. See [change chromium:4589369](
 https://chromium-review.googlesource.com/c/chromium/src/+/4589369).
 
 Buffer validation error messages are instantly shown in DevTools JavaScript console when [`getMappedRange()`](https://developer.mozilla.org/docs/Web/API/GPUBuffer/getMappedRange) fails without forcing developers to send commands to the queue. See [change chromium:4597950](https://chromium-review.googlesource.com/c/chromium/src/+/4597950).
