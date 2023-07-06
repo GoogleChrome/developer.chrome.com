@@ -52,13 +52,13 @@ here. Your suggestions, additions, and questions are welcome!
 There are
 [foundational differences](https://docs.google.com/document/d/1lvrKd5Vv7SYLMGZb0Fz7bpGNEl0LOx9i1waAHw2sUg8/edit#heading=h.ktl1cq7bdlk)
 between how third-party cookies and summary reports operate. One key difference is the
-[noise](docs/privacy-sandbox/attribution-reporting/understanding-noise/) added to measurement data in summary reports.
+[noise](/docs/privacy-sandbox/attribution-reporting/understanding-noise/) added to measurement data in summary reports.
 
 **To access summary report measurement data with higher signal-to-noise
 ratios, demand-side platforms (DSPs) and ad measurement providers will need to
 work with their advertisers to develop noise management strategies.** To develop these strategies, DSPs and measurement providers need to make design decisions. These decisions revolve around one essential concept:
 
-While the distribution _noise values_ are drawn from, absolutely speaking, only depends on two parameters⏤[epsilon and the contribution budget](docs/privacy-sandbox/attribution-reporting/understanding-noise/#how-noise-is-applied)⏤**you have a number of other controls at your disposal that will impact the
+While the distribution _noise values_ are drawn from, absolutely speaking, only depends on two parameters⏤[epsilon and the contribution budget](/docs/privacy-sandbox/attribution-reporting/understanding-noise/#how-noise-is-applied)⏤**you have a number of other controls at your disposal that will impact the
 _signal-to-noise ratios_ of your output measurement data**.
 
 While we expect an iterative process will lead to the best decisions, each variation on these decisions will
@@ -902,7 +902,7 @@ Let's consider a scenario across two advertisers:
 Given the
 [contribution budget requirements](/docs/privacy-sandbox/attribution-reporting/contribution-budget/)
 and the methodology with which
-[noise is applied](docs/privacy-sandbox/attribution-reporting/understanding-noise/#how-noise-is-applied)
+[noise is applied](/docs/privacy-sandbox/attribution-reporting/understanding-noise/#how-noise-is-applied)
 to the end results, Advertiser B will, by default, have a noisier output than
 Advertiser A, as Advertiser B has a higher potential for outliers to impact the
 underlying calculations.
