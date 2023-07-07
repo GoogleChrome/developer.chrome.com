@@ -186,7 +186,7 @@ If you're only interested in event-level reports, this is the last piece of
 infrastructure you need. However, if you want to generate summary reports,
 you'll need to process the aggregatable reports with an additional service.
 
-To learn more about summary report generation, refer to [/docs/privacy-sandbox/attribution-reporting/how-reports-are-generated](How reports are generated).
+To learn more about summary report generation, refer to [How reports are generated](/docs/privacy-sandbox/attribution-reporting/how-reports-are-generated).
 
 ## What's next?
 
