@@ -54,7 +54,7 @@ Topics API は人間が判読可能で理解しやすいトピックを提供す
 
 ### トピックの厳選と選択の方法 {: #manually-curated}
 
-トピックは、[/Arts &amp; Entertainment/Music &amp; Audio/Soul &amp; R&amp;B](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md#:~:text=/Arts%20%26%20Entertainment/Music%20%26%20Audio/Soul%20%26%20R%26B) および [/Business &amp; Industrial/Agriculture &amp; Forestry ](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md#:~:text=106-,/Business%20%26%20Industrial/Agriculture%20%26%20Forestry,-107) などの階層カテゴリで構成される[分類](https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md)から選択されます。これらのトピックは初期テスト用に Chrome によって厳選されていますが、その目的は、分類が信頼できるエコシステム貢献者によって維持されるリソースになることです。多くのユーザーのブラウザが各トピックに関連付けられるように、分類のサイズは十分に小さいことが必要です。現在のトピック数は 349 個ですが、最終的なトピック数は数百から数千になると予想されます。
+トピックは、[/Arts &amp; Entertainment/Music &amp; Audio/Soul &amp; R&amp;B](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md#:~:text=/Arts%20%26%20Entertainment/Music%20%26%20Audio/Soul%20%26%20R%26B) および [/Business &amp; Industrial/Agriculture &amp; Forestry](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md#:~:text=106-,/Business%20%26%20Industrial/Agriculture%20%26%20Forestry,-107) などの階層カテゴリで構成される[分類](https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md)から選択されます。これらのトピックは初期テスト用に Chrome によって厳選されていますが、その目的は、分類が信頼できるエコシステム貢献者によって維持されるリソースになることです。多くのユーザーのブラウザが各トピックに関連付けられるように、分類のサイズは十分に小さいことが必要です。現在のトピック数は 349 個ですが、最終的なトピック数は数百から数千になると予想されます。
 
 {% Partial 'privacy-sandbox/topics-taxonomy-v2.njk' %}
 
