@@ -1,14 +1,10 @@
 ---
 layout: layouts/doc-post.njk
 title: Topics API の概要
-subhead: |2-
-
-  Topics API を使用すると、ユーザーが訪問するサイトをトラッキングすることなく、インタレストベース広告（IBA）が可能になります。
-description: |2-
-
-  Topics API を使用すると、ユーザーが訪問するサイトをトラッキングすることなく、インタレストベース広告（IBA）が可能になります。
-date: '2022-01-25'
-updated: '2023-06-26'
+subhead: Topics API を使用すると、ユーザーが訪問するサイトをトラッキングすることなく、インタレストベース広告（IBA）が可能になります。
+description: Topics API を使用すると、ユーザーが訪問するサイトをトラッキングすることなく、インタレストベース広告（IBA）が可能になります。
+date: 2022-01-25
+updated: 2023-06-26
 authors:
   - samdutton
 ---
