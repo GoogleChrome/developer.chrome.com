@@ -32,7 +32,7 @@ This article  compares the new approach with the classic JavaScript technique to
 
 The following example progress bar is built using class JavaScript techniques.
 
--- @TODO: VIDEO: classic_js.mov --
+{% Video src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/gB3RmjbAlATfn9jANGLL.mp4", width="800", height="484", autoplay="true", loop="true", muted="true" %}
 
 The document responds each time the `scroll` event happens to calculate how much percentage of the `scrollHeight` the user has scrolled to.
 
@@ -45,11 +45,9 @@ document.addEventListener("scroll", () => {
 })
 ```
 
-{% Codepen { user: 'nyb1030', id: 'gOBvZgR' } %}
+The following demo shows the same progress bar using the new API with CSS.
 
-The following demo shows the same progress bar using the new API with CSS. 
-
--- @TODO: VIDEO: new_CSS.mov --
+{% Video src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/hfvdzlpPqZEQUtIAklLx.mp4", width="800", height="484", autoplay="true", loop="true", muted="true" %}
 
 ```css
 @keyframes grow-progress {
@@ -66,8 +64,6 @@ The following demo shows the same progress bar using the new API with CSS.
 	animation-timeline: scroll(block root);
 }
 ```
-
-{% Codepen { user: 'nyb1030', id: 'xxyYmgx' } %}
 
 The new [animation-timeline](/articles/scroll-driven-animations/#animation-timelines) CSS feature, automatically converts a position in a scroll range into a percentage of progress, therefore doing all the heavy-lifting.
 
@@ -90,13 +86,15 @@ As you might have expected, the classic JavaScript version becomes janky and slu
 
 {% Video src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/jEhFBLHvDb9W0VFFupYz.mp4", width="800", height="485", autoplay="true", loop="true", muted="true" %}
 
+{% Codepen { user: 'nyb1030', id: 'gOBvZgR' } %}
+
+{% Codepen { user: 'nyb1030', id: 'xxyYmgx' } %}
+
 The CPU usage is completely different in DevTools, as shown in the following screenshots.
 
+{% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/v6rDNCu6XO8Nh5ujx0yw.png", alt="Main thread comparison", width="800", height="450" %}
 
--- @TODO: NEED SCREENSHOTS --
-
-
-The following demo shows an application of scroll driven animation created by CyberAgent. 
+The following demo shows an application of scroll driven animation created by CyberAgent. You can see that the photo fades in as you scroll.
 
 {% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/xei4to5K1jmr9fCH8QFb.png", alt="CyberAgent Logo", width="800", height="178" %}
 
@@ -122,13 +120,15 @@ const progressbar = document.querySelector('#progress');
 	);
 ```
 
-{% Codepen { user: 'nyb1030', id: 'MWPLgbe' } %}
-
 This enables you to create the same progress bar animation shown in the previous CSS demo using just JavaScript. The underlying technology is the same as the CSS version. The API tries to use as few main thread resources as possible, making the animations far smoother when compared to the classic JavaScript approach. 
 
 Also, this new API works in conjunction with the existing [Web Animations API (WAAPI)](https://drafts.csswg.org/web-animations-1/) and [CSS Animations API](https://drafts.csswg.org/css-animations-1/) to enable declarative scroll-driven animations.
 
 {% Video src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/J8K2V9KcBZ1A2PSGoBZW.mp4", width="800", height="485", autoplay="true", loop="true", muted="true" %}
+
+{% Codepen { user: 'nyb1030', id: 'gOBvZgR' } %}
+
+{% Codepen { user: 'nyb1030', id: 'MWPLgbe' } %}
 
 ## More demos and resources
 
