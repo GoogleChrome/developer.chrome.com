@@ -1,21 +1,30 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Generate summary reports'
+title: 'How summary reports are generated'
 subhead: >
-  Hi.... 
+  Learn how summary reports are generated, and the role of the Aggregation Service. 
 description: >
-  Hi....
+  Learn how summary reports are generated, and the role of the Aggregation Service.
 date: 2022-08-09
 updated: 2023-07-12
 authors:
   - alexandrawhite
 ---
 
-## Summary report generation
 
-To generate summary reports, you'll use the
+For a given event source, it's possible to generate both anevent-level and an aggregatable report. When an attribution trigger is matched to a corresponding source, they are sent as a report by the browser to a reporting endpoint on an ad tech-owned server (sometimes referred to as a collection endpoint or collection service). These reports can be event-level reports or aggregatable reports.
+
+Event-level reports are sent more or less automatically; you don't need to take any steps beyond setting up your triggers and sources.
+
+This document focuses on how summary reports are generated from a high-level point of view.
+
+For the steps you need to follow to generate reports, visit [Getting started with the Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/getting-started/).
+
+## How reports are generated
+
+To generate summary reports, the
 [Aggregation Service](https://github.com/google/trusted-execution-aggregation-service)
-(operated by the ad tech) to process the aggregatable reports. The Aggregation
+(operated by the ad tech) processes the aggregatable reports. The Aggregation
 Service adds noise to protect user privacy and returns the final summary report.
 
 <figure class="screenshot">
@@ -58,15 +67,15 @@ can be changed without needing to change attribution sources or triggers.
 
 ### Aggregation Service
 
-The [Aggregation Service](/docs/privacy-sandbox/aggregation-service/) is responsible for processing aggregatable reports to
-generate a summary report. Aggregatable reports are encrypted and can only be
-read by the Aggregation Service, which runs on a trusted execution environment
+The [Aggregation Service](/docs/privacy-sandbox/aggregation-service/) is responsible for processing aggregatable reports to generate a summary report. Aggregatable reports are encrypted and can only be
+read by the Aggregation Service, which runs in a trusted execution environment
 (TEE).
 
-The Aggregation Service requests decryption keys from the [coordinator](/docs/privacy-sandbox/aggregation-service/#coordinator )
-to decrypt and aggregate the data. Once decrypted and aggregated, the results
+The Aggregation Service requests decryption keys from the [coordinator](/docs/privacy-sandbox/aggregation-service/#coordinator) to decrypt and aggregate the data. Once decrypted and aggregated, the results
 are noised to preserve privacy and returned as a summary report. 
 
 Practitioners can generate aggregatable cleartext reports to
 [test the Aggregation Service locally](https://github.com/google/trusted-execution-aggregation-service#set-up-local-testing).
 Or, you can [test with encrypted reports on AWS with Nitro Enclaves](https://github.com/google/trusted-execution-aggregation-service/#test-on-aws-with-support-for-encrypted-reports).
+
+## Next steps

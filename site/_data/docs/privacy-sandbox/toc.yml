@@ -97,6 +97,8 @@
           title: i18n.docs.privacy-sandbox.attribution-reporting-overview
         - url: /docs/privacy-sandbox/attribution-reporting/system-overview
           title: i18n.docs.privacy-sandbox.attribution-reporting-system
+        - url: /docs/privacy-sandbox/attribution-reporting/how-reports-are-generated/
+          title: i18n.docs.privacy-sandbox.how-reports-are-generated
         - url: /docs/privacy-sandbox/attribution-reporting-experiment
           title: i18n.docs.privacy-sandbox.experiment-participate
         - url: /docs/privacy-sandbox/attribution-reporting/chrome-shipping
@@ -112,7 +114,6 @@
             - url: /docs/privacy-sandbox/attribution-reporting/register-attribution-trigger/
             - url: /docs/privacy-sandbox/attribution-reporting/change-attribution-logic/
             - url: /docs/privacy-sandbox/attribution-reporting/define-filters/
-            - url: /docs/privacy-sandbox/attribution-reporting/generate-reports/
             - url: /docs/privacy-sandbox/attribution-reporting/custom-report-windows/
             - url: /docs/privacy-sandbox/attribution-reporting/understanding-noise/
             - url: /docs/privacy-sandbox/attribution-reporting/working-with-noise/
