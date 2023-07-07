@@ -1,4 +1,5 @@
-ayout: 'layouts/doc-post.njk'
+---
+layout: 'layouts/doc-post.njk'
 title: 'Federated Credential Management API: developer guide'
 subhead: >
   Learn how to use FedCM for for privacy-preserving identity federation.
