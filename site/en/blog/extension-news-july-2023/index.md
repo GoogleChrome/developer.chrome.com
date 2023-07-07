@@ -8,7 +8,7 @@ authors:
  - amysteam
 tags:
  - extensions-news
-hero: 'image/BhuKGJaIeLNPW9ehns59NfwqKxF2/rp0rgFPrFH87EiMlquP6.png'
+hero: 'image/BhuKGJaIeLNPW9ehns59NfwqKxF2/jzaO8VCyWJRXKgeIe68T.png'
 alt: >
  What's happening in Chrome extensions?
 ---
