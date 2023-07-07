@@ -12,7 +12,7 @@ authors:
 ---
 
 
-For a given event source, it's possible to generate both anevent-level and an aggregatable report. When an attribution trigger is matched to a corresponding source, they are sent as a report by the browser to a reporting endpoint on an ad tech-owned server (sometimes referred to as a collection endpoint or collection service). These reports can be event-level reports or aggregatable reports.
+For a given event source, it's possible to generate both an event-level and an aggregatable report. When an attribution trigger is matched to a corresponding source, they are sent as a report by the browser to a reporting endpoint on an ad tech-owned server (sometimes referred to as a collection endpoint or collection service). These reports can be event-level reports or aggregatable reports.
 
 Event-level reports are sent more or less automatically; you don't need to take any steps beyond setting up your triggers and sources.
 
