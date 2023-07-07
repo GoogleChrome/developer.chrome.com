@@ -575,7 +575,13 @@ the user grants permission to allow communication between the RP and the IdP,
 there's no privacy or security benefit for enforcing another explicit user 
 confirmation for something that they have already previously acknowledged. 
 
-With auto-reauthentication, the browser changes its behavior depending on the option you specify for the `mediation` option in `navigator.credentials.get()`.
+{% Aside %}
+
+Auto-reauthentication is available in [FedCM from Chrome 115](/blog/fedcm-auto-reauthn).
+
+{% endAside %}
+
+With auto-reauthentication, the browser changes its behavior depending on the option you specify for the `mediation` when calling `navigator.credentials.get()`.
 
 ```js
 const cred = await navigator.credentials.get({
