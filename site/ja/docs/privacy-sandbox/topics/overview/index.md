@@ -44,17 +44,17 @@ Chrome 114 以降、呼び出し元がページ上のユーザーのトピック
 
 以前は、呼び出し元がブラウザによって（例えば）`Shopping/Apparel` が観察されたと見なされた場合、その特定のトピックが観察されたトピックとして API によって返される必要がありました。つまり、あるページで呼び出し元に対してユーザーの `Shopping/Apparel` が観察され、別のページで `Shopping/Apparel/Footwear/Boots` が観察されると、API は両方のページで `Shopping/Apparel` が観察されたとして処理するようになります。
 
-### Epochs {: #epoch}
+### エポック {: #epoch}
 
 もちろん、Topics API は、それが提供する関心トピックが最新の状態に保たれるようにする必要があります。ブラウザは、*エポック*と呼ばれる期間（現在は 1 週間）におけるユーザーの閲覧アクティビティに基づいてユーザーのトピックを推測します。各エポックに選択されるトピックは、その期間におけるユーザーの上位 5 つのトピックからランダムに選択されます。プライバシーをさらに強化し、すべてのトピックが表現されることを保証するために、トピックは、興味の[分類](https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md)に含まれるすべての可能なトピックから 5% の確率でランダムに選択されます。
 
 Topics API には主に次の 3 つのタスクがあります。
 
 - ブラウザのアクティビティを関心トピックにマッピングします。Topics API の現在の設計では、トピックはユーザーがアクセスするページのホスト名から推測されます。たとえば水族館に関するウェブサイトで推定されるトピックは、[/Pets &amp; Animals/Pets/Fish &amp; Aquaria](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md#:~:text=/Pets%20%26%20Animals/Pets/Fish%20%26%20Aquaria) となるでしょう。
-- Calculate the top topics for a user based on their recent browsing activity.
-- Provide mechanisms to access topics currently of interest to the user, to help select the appropriate ads.
+- ユーザーの最近の閲覧アクティビティに基づいて、ユーザーのトップトピックを計算します。
+- 適切な広告を選択できるように、ユーザーが現在興味のあるトピックにアクセスするメカニズムを提供します。
 
-The Topics API provides human-readable, easily understandable topics, so it's possible to provide meaningful controls to users.
+Topics API は人間が判読可能で理解しやすいトピックを提供するため、ユーザーに意味のあるコントロールを提供できます。
 
 ### トピックの厳選と選択の方法 {: #manually-curated}
 
@@ -95,10 +95,10 @@ Topics API の使用方法とテスト方法の詳細については、[Topics A
 Topics API には、Topics API だけを使用してサイト*間で*多数のユーザーを再同定することを困難にするために役立つ複数のメカニズムが備わっています。
 
 - トピック分類法では大まかなトピックが提供されるため、各トピックには多数のユーザーが含まれることが予想されます。実際、トピックは 5% の確率でランダムに返されるため、トピックごとに最小ユーザー数が保証されています。
-- Topics are returned at random from the user's top five.
+- トピックはユーザーの上位 5 件からランダムに返されます。
 - ユーザーが同じサイトに頻繁に（毎週など）アクセスする場合、そのサイト上で実行されているコードは、最大でも 1 週間に 1 つの新しいトピックを学習できます。
-- Different sites will receive different topics for the same user in the same epoch. There is only a one-in-five chance that the topic returned for a user on one site matches the topic returned for them on another. This makes it more difficult to determine if they're the same user.
-- Topics are updated for a user once each week, which limits the rate at which information can be shared. In other words, the API helps mitigate against fingerprinting by not providing topic updates too frequently.
+- 異なるサイトでは、同じエポック内の同じユーザーに対して異なるトピックが受信されます。あるサイトでユーザーに返されたトピックが別のサイトでユーザーに返されたトピックと一致する確率は 5 分の 1 のみです。これにより、同じユーザーであるかどうかを判断することがさらに困難になります。
+- ユーザーのトピックは毎週 1 回更新されるため、情報を共有できる速度が制限されます。言い換えれば、API はトピック更新をあまり頻繁に提供しないことで、フィンガープリンティングを軽減するのに役立ちます。
 - トピックは、同じユーザーについて<a>最近同じトピックを観察した</a> API 呼び出し元に対してのみ返されます。このアプローチは、エンティティが直接観察していないユーザーの関心に関する情報を知る（または共有する）可能性を制限するのに役立ちます。
 
 {% endDetails %}
@@ -113,7 +113,7 @@ Topics API には、Topics API だけを使用してサイト*間で*多数の�
 
 Topics API は、このフィードバックを念頭に置いて設計されました。透明性の向上、プライバシー保証の強化、デリケートなカテゴリに対する異なるアプローチなど、インタレストベース広告をサポートする別の方法を模索することを目的としています。{% endDetails %}
 
-## Next steps
+## 次のステップ
 
 [トピックとは何か、またトピックの仕組み](/docs/privacy-sandbox/topics/topic-classification/)については、こちらをご覧ください。
 
