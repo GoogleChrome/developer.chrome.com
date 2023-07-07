@@ -129,5 +129,6 @@ const { token } = credential;
 
 ## Resources
 
--   Read the introduction to
-    [Federated Credential Management](/docs/privacy-sandbox/fedcm/).
+-   [Introduction to Federated Credential Management](/docs/privacy-sandbox/fedcm/)
+-   [Federated Credential Management API: developer guide](/docs/privacy-sandbox/fedcm-developer-guide/)
+
