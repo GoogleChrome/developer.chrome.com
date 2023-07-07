@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc-post.njk
-title: Topic classification
+title: トピックの分類
 subhead: |2-
 
   トピックの推論方法、ユーザーのブラウザへのトピックの割り当て方法、ユーザーによるトピックリストの制御方法について説明します。
@@ -27,9 +27,9 @@ Topics API を使用すると、アドテックプラットフォームなどの
 
 Topics API で使用されるトピックのリストは公開されており、人間が厳選し、人間が判読できるものであり、デリケートなカテゴリを避けるように設計されています。これは[現在のリスト](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md)であり、時間の経過とともに拡大されます。リストは*分類法*として構造化されています。トピックは高レベルの場合もあれば、より具体的な場合もあります。たとえば、`Food & Drink` は広いカテゴリであり、`Cooking & Recipes` というサブカテゴリがあります。サブカテゴリはさらに追加のサブカテゴリに分割される場合があります。
 
-Such a taxonomy of topics needs to make a tradeoff between utility and privacy. If topics are too specific, they could be used to identify an individual user. If they are too general, they aren't useful for selecting advertising or other content.
+このようなトピックの分類では、実用性とプライバシーの間でトレードオフを行う必要があります。トピックが具体的すぎる場合、個々のユーザーを特定するために使用される可能性があります。一般的すぎると、広告やその他のコンテンツを選択するのに役に立ちません。
 
-The topics taxonomy is constructed with two underlying requirements in mind:
+トピック分類は、次の 2 つの基本的な要件を念頭に置いて構築されています。
 
 - インタレストベース広告をサポートする
 - ユーザーの安全を確保し、プライバシーを保護する
@@ -42,7 +42,7 @@ The topics taxonomy is constructed with two underlying requirements in mind:
 
 {% Partial 'privacy-sandbox/topics-taxonomy-v2.njk' %}
 
-## How the API infers topics for a site
+## API がサイトのトピックを推測する方法
 
 トピックは、ウェブサイトの[ホスト名](https://web.dev/same-site-same-origin/#origin)を 0 個以上のトピックにマッピングする[分類器モデル](https://github.com/jkarlin/topics#:~:text=classifier)から派生します。追加情報（完全な URL やページ コンテンツなど）を分析すると、より関連性の高い広告が表示される可能性がありますが、プライバシーが低下する可能性もあります。
 
@@ -101,13 +101,13 @@ protoc --decode_raw < override_list.pb > output.txt
 
 API は、エポックごとに 1 つのトピックを最大 3 つまで返します。 3 つが返された場合、これには現在のエポックのトピック 1 つと前のエポックのトピック  2 つが含まれます。
 
-1. At the end of each epoch, the browser compiles a list of pages that meet the following criteria:
+1. 各エポックの終わりに、ブラウザは次の基準を満たすページのリストをコンパイルします。
     - このエポック中にユーザーがページにアクセスした。
     - このページに、`document.browsingTopics()` を呼び出すコードが含まれている。
     - API が有効になっている（ユーザーによってブロックされていない、または[レスポンスヘッダー](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy)によってブロックされていないなど）。
 2. ユーザーのデバイス上のブラウザは、Topics API によって提供される分類器モデルを使用して、各ページのホスト名をトピックのリストにマッピングします。
-3. The browser accumulates the list of topics.
-4. The browser generates a list of the top five topics by frequency.
+3. ブラウザはトピックのリストを蓄積します。
+4. ブラウザは頻度順に上位 5 つのトピックのリストを生成します。
 
 `document.browsingTopics()` メソッドは、各エポックの上位 5 つからランダムなトピックを返します。5% の確率で、トピックの完全な分類からこれらのいずれかがランダムに選択されます。Chrome では、ユーザーが個々のトピックを削除したり、閲覧履歴をクリアして API から返されるトピックの数を減らしたりすこともできます。ユーザーは API を[オプトアウトする](#opt-out)ことも可能です。
 
@@ -122,8 +122,8 @@ API 呼び出し元は最近観察したトピックのみを受け取り、ユ�
 <table class="with-heading-tint">
   <thead>
   <tr>
-  <th>Site</th>
-  <th>Topics</th>
+  <th>サイト</th>
+  <th>トピック</th>
   <th>サイト上の API 呼び出し元</th>
   </tr>
   </thead>
@@ -146,7 +146,7 @@ API 呼び出し元は最近観察したトピックのみを受け取り、ユ�
     <tr>
     <td>diy-clothing.example</td>
     <td>Crafts, Fashion &amp; Style</td>
-    <td>[none]</td>
+    <td>[なし]</td>
     </tr>
   </tbody>
 </table>
@@ -159,13 +159,13 @@ API 呼び出し元は最近観察したトピックのみを受け取り、ユ�
 
 ユーザーは「Fashion &amp; Style」トピックを持つ diy-clothing.example にアクセスしましたが、そのサイトでは Topics API への呼び出しはありませんでした。この時点で、これは、どの呼び出し元に対しても API によって「Fashion &amp; Style」トピックが返されることがないことを意味します。
 
-In week two, the user visits another site:
+2 週目では、ユーザーは別のサイトにアクセスします。
 
 <table class="with-heading-tint">
   <thead>
     <tr>
-    <th>Site</th>
-    <th>Topics</th>
+    <th>サイト</th>
+    <th>トピック</th>
     <th>サイト上の API 呼び出し元</th>
     </tr>
   </thead>
@@ -178,13 +178,13 @@ In week two, the user visits another site:
   </tbody>
 </table>
 
-In addition, code from adtech2.example is added to diy-clothing.example:
+さらに、adtech2.example のコードが diy-clothing.example に追加されます。
 
 <table class="with-heading-tint">
   <thead>
     <tr>
-    <th>Site</th>
-    <th>Topics</th>
+    <th>サイト</th>
+    <th>トピック</th>
     <th>サイト上の API 呼び出し元</th>
     </tr>
   </thead>
@@ -207,7 +207,7 @@ In addition, code from adtech2.example is added to diy-clothing.example:
 
 人間が判読できる API の分類法によって、ユーザーはブラウザが提案するトピックについて学習し、制御することができます。ユーザーは、Topics API で広告主やサイト運営者と共有したくないトピックを削除できます。また、API についてユーザーに通知し、API を有効または無効にする方法を示すコントロールを設けることもできます。Chrome では、`chrome://settings/privacySandbox` で Topics API の情報と設定を提供しています。さらに、シークレットモードの場合は API 呼び出し元はトピックを利用できず、さらに閲覧履歴がクリアされるとトピックもクリアされます。
 
-The list of topics returned will be empty if:
+次の場合、返されるトピックのリストは空になります。
 
 - ユーザーが `chrome://settings/privacySandbox`にあるブラウザ設定を介して Topics API をオプトアウトしている。
 - ユーザーがトピックをクリア（`chrome://settings/privacySandbox` にあるブラウザ設定経由で）、Cookie をクリアした。
@@ -217,7 +217,7 @@ Explainer には、[プライバシーの目標と、API がそれらの目標�
 
 {: #opt-out }
 
-### Site opt out
+### サイトのオプトアウト
 
 ユーザーがオプトアウトできることに加えて、サイトまたはサイト上のページのトピックをオプトアウトすることもできます。方法については、[開発者ガイド](/docs/privacy-sandbox/topics/#site-opt-out)をご覧ください。
 
@@ -230,7 +230,7 @@ Explainer には、[プライバシーの目標と、API がそれらの目標�
 - Prebid の [Topics API モジュールのドキュメント](https://docs.prebid.org/dev-docs/modules/topicsFpdModule.html)をお読みください。
 - 詳細については、Prebid.js が提供する通常のチャ​ン​ネルを通じてお問い合わせください。
 
-## Next steps
+## 次のステップ
 
 - アドテック開発者の方は、Topics API を[試して参加してください](/docs/privacy-sandbox/topics-experiment/)。
 - さらに詳しいリソースは、[開発者ガイド](/docs/privacy-sandbox/topics/)をお読みください。
