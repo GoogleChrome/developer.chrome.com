@@ -42,16 +42,7 @@ You can get started by trying out the steps below, and then adapt you strategy t
 
 This guide is a high-level implemention how-to for developers, not a strategy guide. Strategic planning will likely require a deeper understanding of the internal workings of the API, which is covered in other documentation.
 
-## Minimum concepts for implmentation
-
-At a minimum, the Attribution Reporting elements you will need to review to begin implementing the API are:
-- [attribution sources](/docs/privacy-sandbox/attribution-reporting/register-attribution-source)
-- [attribution triggers](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger)
-- [event-level reports](/docs/privacy-sandbox/attribution-reporting/#event-level-reports)
-- [aggregatable (summary)](/docs/privacy-sandbox/attribution-reporting/#summary-reports) reports
-- request and response headers
-
-## Concepts for planning
+### Concepts for planning
 
 The more complex concepts you should review are below. While you may not need to delve into all of the details, such as fully understanding how [noise](/docs/privacy-sandbox/attribution-reporting/understanding-noise) is generated, a solid understanding of the basics will help you develop a plan. These concepts, as opposed to the ones mentioned above, are not strictly necessary for implementation, but to understand and refine the reports generated, you'll need this information.
 
@@ -61,12 +52,30 @@ These concepts are:
 - [Noise](/docs/privacy-sandbox/attribution-reporting/understanding-noise)
 - epsilon
 
-## Aggregation reporting setup
+## Implementation
 
+### Concepts for implmentation
+
+At a minimum, the Attribution Reporting elements you will need to review to begin implementing the API are:
+- [attribution sources](/docs/privacy-sandbox/attribution-reporting/register-attribution-source)
+- [attribution triggers](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger)
+- [event-level reports](/docs/privacy-sandbox/attribution-reporting/#event-level-reports)
+- [aggregatable (summary)](/docs/privacy-sandbox/attribution-reporting/#summary-reports) reports
+- request and response headers
+
+### Setup for generating aggregatable reports
+
+To generate aggregatable reports, you need to generate contributions as a user clicks or views an ad and later converts. Contributions from many users are then aggregated to produce a summary report. 
+Before you generate aggregatable reports, you need to define your strategy for summary reports. Review [Attribution Reporting: Strategies and tips for summary reports](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#). 
+
+Make sure to check out the [demo](https://arapi-home.web.app/) for a working example and example code.
+
+{% Aside %}
 For a given event source, it's possible to generate both an
-event-level and an aggregatable report. This is what the
+event-level and an aggregatable report. The
 [demo](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit#heading=h.vk0ctjqbpr1g)
-does. 
+walks you through the process. 
+{% endAside %}
 
 Aggregatable reports are generated similarly to event-level reports. To be able to generate reports, follow these high-level steps. Each step points to more detailed information as well.
 
@@ -119,7 +128,8 @@ Before you can register sources and triggers and get reports, your sites need to
 
         `{REPORTING_ENDPOINT}/.well-known/attribution-reporting/report-event-attribution` 
 
- 
+
+<!-- removed from handbook
 {% Details %}
 {% DetailsSummary %}
 About {REPORTING_ENDPOINT} 
@@ -132,10 +142,10 @@ For example, if https://adtech.example responded, then the event-level reports w
 Likewise, aggregatable reports will be sent to this endpoint:
 `https://adtech.example/.well-known/attribution-reporting/report-aggregate-attribution`
 {% endDetails %}
-                                               
+                                          
 
     Note that `aggregation_service_payloads` is encrypted and only later decrypted by the aggregation service to generate summary reports.
-
+-->     
 1. **Set up debug reports:**
     1. Learn how to set up debug reports in the
         [Attribution reporting debugging series](/docs/privacy-sandbox/attribution-reporting-debugging/).
