@@ -37,7 +37,11 @@ If you're new to this API or have not experimented with it yet, read the
 To stay updated on the FedCM API changes, please subscribe to [our
 newsletter](https://groups.google.com/g/fedcm-developer-newsletter).
 
-**Chrome 110 (February 2023)**
+### Chrome 115 (June 2023)
+
+- Added support for auto-reauthentication which let users reauthenticate automatically when they come back after their initial authentication using FedCM. This improves the user experiences and enables a more streamlined reauthentication to the RP after the initial consent. Learn more about [FedCM auto-reauthentication](/blog/fedcm-auto-reauthn/). 
+
+### Chrome 110 (February 2023)
 
 - For the ID assertion endpoint, IdPs need to check the `Origin` header (instead of the `Referer` header) to see if the value matches the origin of the client ID.
 - Cross-origin iframe support for FedCM is now available. The
@@ -49,7 +53,7 @@ newsletter](https://groups.google.com/g/fedcm-developer-newsletter).
 - Added a new Chrome flag `chrome://flags/#fedcm-without-third-party-cookies`. With this flag, you can test FedCM functionality in Chrome
   by blocking third-party cookies. Learn more from [the FedCM documentation](/docs/privacy-sandbox/fedcm/#block-third-party-cookies).
 
-**Chrome 108 (October 2022)**
+### Chrome 108 (October 2022)
 
 -   "top-level manifest" is now called "well-known file" in the document.
     No implementation changes are required.
@@ -61,7 +65,7 @@ newsletter](https://groups.google.com/g/fedcm-developer-newsletter).
     [`Sec-Fetch-Dest: webidentity`](https://fedidcg.github.io/FedCM/#sec-fetch-dest-header)
     header instead of a `Sec-FedCM-CSRF: ?1` header.
 
-**Chrome 105 (August 2022)**
+### Chrome 105 (August 2022)
 
 -   Added important security information to the document. The identity
     provider (IdP) needs to check if the `Referer` header matches the origin
@@ -103,7 +107,7 @@ const credential = await navigator.credentials.get({
 const { token } = credential;
 ```
 
-**Chrome 104 (June 2022)**
+### Chrome 104 (June 2022)
 
 -   `consent_acquired` parameter sent to the ID token endpoint is now
     [`disclosure_text_shown`](https://fedidcg.github.io/FedCM/#dom-id_assertion_endpoint_request-disclosure_text_shown).
@@ -114,7 +118,7 @@ const { token } = credential;
     RP's
     [Content Security Policy](https://developer.mozilla.org/docs/Web/HTTP/CSP).
 
-**Chrome 103 (May 2022)**
+### Chrome 103 (May 2022)
 
 -   Supports desktop environments.
 -   Supports per-RP settings on desktop.
