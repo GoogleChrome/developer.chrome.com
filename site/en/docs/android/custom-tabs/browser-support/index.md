@@ -116,7 +116,7 @@ It is currently not possible to programmatically check on an Android device, if 
 ### addDefaultShareMenuItem()
 
 {% Aside 'warning' %}
-This method is deprecated. Instead, you should use [`setShareState`](#setShareState).
+This method is deprecated. Instead, you should use [`setShareState`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#setShareState(int)).
 {% endAside %}
 
 [addDefaultShareMenuItem()](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#addDefaultShareMenuItem()) adds a default share button to the Custom Tabs toolbar, allowing the user to share the current web page via various apps on their device.
@@ -157,7 +157,7 @@ Adds a menu item.
 ### addToolbarItem()
 
 {% Aside 'warning' %}
-This method is deprecated. Instead, you should use [`setSecondaryToolbarViews`](#setSecondaryToolbarViews).
+This method is deprecated. Instead, you should use [`setSecondaryToolbarViews`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#setSecondaryToolbarViews(android.widget.RemoteViews,int[],android.app.PendingIntent)).
 {% endAside %}
 
 Adds an action button to the custom tab. Multiple buttons can be added via this method.
@@ -178,7 +178,7 @@ Adds an action button to the custom tab. Multiple buttons can be added via this 
 ### enableUrlBarHiding()
 
 {% Aside 'warning' %}
-This method is deprecated. Instead, you should use [`setUrlBarHidingEnabled`](#setUrlBarHidingEnabled).
+This method is deprecated. Instead, you should use [`setUrlBarHidingEnabled`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#setUrlBarHidingEnabled(boolean)).
 {% endAside %}
 
 Enables the url bar to hide as the user scrolls down on the page.
@@ -312,7 +312,7 @@ Sets [`CustomTabColorSchemeParams()`](https://developer.android.com/reference/an
 ### setDefaultShareMenuItemEnabled()
 
 {% Aside 'warning' %}
-This method is deprecated. Instead, you should use [`setShareState`](#setShareState).
+This method is deprecated. Instead, you should use [`setShareState`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#setShareState(int)).
 {% endAside %}
 
 Set whether a default share item is added to the menu.
@@ -367,7 +367,7 @@ Sets the Custom Tab Activity's initial height in pixels with default resize beha
 ### setNavigationBarColor()
 
 {% Aside 'warning' %}
-This method is deprecated. Instead, you should use [`setDefaultColorSchemeParams`](#setDefaultColorSchemeParams).
+This method is deprecated. Instead, you should use [`setDefaultColorSchemeParams`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#setDefaultColorSchemeParams(androidx.browser.customtabs.CustomTabColorSchemeParams)).
 {% endAside %}
 
 Sets the navigation bar color. Has no effect on API versions below L.
@@ -387,7 +387,7 @@ Sets the navigation bar color. Has no effect on API versions below L.
 ### setNavigationBarDividerColor()
 
 {% Aside 'warning' %}
-This method is deprecated. Instead, you should use [`setDefaultColorSchemeParams`](#setDefaultColorSchemeParams).
+This method is deprecated. Instead, you should use [`setDefaultColorSchemeParams`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#setDefaultColorSchemeParams(androidx.browser.customtabs.CustomTabColorSchemeParams)).
 {% endAside %}
 
 {% AndroidBrowserSupportTable
@@ -405,7 +405,7 @@ This method is deprecated. Instead, you should use [`setDefaultColorSchemeParams
 ### setSecondaryToolbarColor()
 
 {% Aside 'warning' %}
-This method is deprecated. Instead, you should use [`setDefaultColorSchemeParams`](#setDefaultColorSchemeParams).
+This method is deprecated. Instead, you should use [`setDefaultColorSchemeParams`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#setDefaultColorSchemeParams(androidx.browser.customtabs.CustomTabColorSchemeParams)).
 {% endAside %}
 
 Sets the color of the secondary toolbar.
@@ -478,7 +478,7 @@ Sets the start animations.
 ### setToolbarColor()
 
 {% Aside 'warning' %}
-This method is deprecated. Instead, you should use [`setDefaultColorSchemeParams`](#setDefaultColorSchemeParams).
+This method is deprecated. Instead, you should use [`setDefaultColorSchemeParams`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#setDefaultColorSchemeParams(androidx.browser.customtabs.CustomTabColorSchemeParams)).
 {% endAside %}
 
 Sets the toolbar color. On Android L and above, this color is also applied to the status bar.
