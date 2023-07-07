@@ -9,32 +9,29 @@ authors:
 tags:
  - extensions-news
 hero: 'image/BhuKGJaIeLNPW9ehns59NfwqKxF2/rp0rgFPrFH87EiMlquP6.png'
-thumbnail: 'image/kheDArv5csY6rvQUJDbWRscckLr1/Hfx3C2heobFhRJJejstK.png'
 alt: >
  What's happening in Chrome extensions?
 ---
 
-So far, 2023 has been a busy year in the world of Chrome extensions. Your valuable feedback has allowed us to improve the extension platform and our documentation. We also continue to collaborate with other browser vendors in the [WebExtensions Community Group][wecg] so that extension APIs work more consistently across browsers. 
+So far, 2023 has been a busy year in the world of Chrome extensions. Your valuable feedback has allowed us to improve the extension platform and our documentation. We also continue collaborating with other browser vendors in the [WebExtensions Community Group][wecg] so that extension APIs work more consistently across browsers. 
 
-Hi, I'm Amy, a technical writer for the Chrome extension team. In this post, I'm excited to highlight a few changes that the Chrome extension team has worked on during the first half of this year and what the future holds in store. Let's get started!
+Hi, I'm Amy, a technical writer for the Chrome extension team. In this post, I'm excited to share with you a few changes that the Chrome extension team has worked on during the first half of this year and what upcoming features will be released later this quarter. Let's get started!
 
 {% Aside %}
 
-But if you're like me (TLDR), feel free to jump to the [Coming soon...][sec-coming-apis] section for new extension features you can start looking forward to 🙂.
+But if you're like me (TL;DR), feel free to jump to the [Coming soon...][sec-coming-apis] section for new extension features you can start looking forward to 🙂.
 
 {% endAside %}
 
 ## New extension APIs and features {: #new-apis}
 
+In this section, I want to highlight some significant API launches, briefly review other API improvements, and share upcoming API releases.
+
 ### Highlights {: #apis-highlights}
 
 #### Offscreen documents {: #offscreen-api }
 
-The [Offscreen API][api-offscreen] was launched in Chrome 109 to enable Manifest V3 extensions to handle use cases that need interaction with the DOM or window that cannot be done in the extension service worker. Also, Chrome 114 launched for two more reasons: 
-
-- WebSQL is being [deprecated][web-sql] across the web. SQLite works in MV3 extensions, and the `'WORKERS'` reason was added for this and for when your document needs to spawn a worker.
-
-- `'LOCAL_STORAGE'` to migrate data from window.localStorage or window.sessionStorage[ to the chrome.storage API][mv3-localstorage]. 
+The [Offscreen API][api-offscreen] was introduced in Chrome 109. It allows Manifest V3 extensions to handle use cases that need interaction with the DOM or window, which cannot be performed in the extension service worker. Also, Chrome 114 introduced two additional reasons: `'WORKERS'` for instances when your document needs to spawn a worker and `'LOCAL_STORAGE'` to help migrate data from window.localStorage or window.sessionStorage to the [to the chrome.storage API][mv3-localstorage]. 
 
 Starting in Chrome 115, you can provide multiple reasons when creating an offscreen document. This allows you to perform two related tasks in the same document.
 
@@ -48,70 +45,76 @@ In the past, the only way to create sidebars in extensions was by injecting a ne
 
 All extension events now restart the extension service worker's idle timer. In Chrome 110, the hard five-minute maximum lifetime was removed for extension service workers. Also, messages to [native applications][doc-native-msg] and [messages within the extension][doc-messages] restart the idle timer. Read more about it in the [Longer extension service worker timelines][blog-sw-lifetimes] blog post.
 
-### More API launches
+### More API launches {: #apis-others }
 
-* **Action API**: You can customize the badge text with [`setBadgeTextColor`()][action-set-color] and [`getBadgeTextColor()`][action-get-color]. Also, [`isEnabled()`][action-isenabled] allows you to check if the action is enabled for the current tab. 
-* **Commands API**: The bug where extension shortcuts, declared in the manifest under [`"commands._execute_action"`][commands-execute-action], would not persist during conversion to MV3, was fixed in [Chrome 111][bug-fix-commands].
-* **Downloads API**: The default downloads UI in Chrome has moved from a shelf at the bottom to the right side of the omnibox. To disable this behavior, use [`chrome.downloads.setUiOptions()`][downloads-setui] which replaces `setShelfEnabled()`. 
-* **Favicon API**: Earlier this year, Chrome 104 launched a way for MV3 extensions to access favicons through a new URL pattern. Check out [Fetching favicons][api-favicon] for details.
-* **History API**: [`chrome.history.getVisits()`][history-get-visits] and [`chrome.history.search()`][history-search] also return data from other devices that have been synced to the local history database. This may result in more history entries and higher visit counts. `isLocal` was added to [`VisitItem`][history-visititem] in Chrome 115 to be able to filter by local visits only.
-* **Identity API**: Authentication windows now appear as pop-ups, instead of app windows. We've also added new options: [`abortOnLoadForNonInteractive`][identity-abort] and [`timeoutMsForNonInteractive`][identity-timeout] to provide more control during JavaScript redirects.
-* **Storage API**: The [`chrome.session`][storage-session] and [`chrome.local`][storage-local] storage size was increased to 10MB.
+- **Action API**: Starting Chrome 110, you can customize the badge text with [`setBadgeTextColor`()][action-set-color] and [`getBadgeTextColor()`][action-get-color]. Also, [`isEnabled()`][action-isenabled] allows you to check if the action is enabled for the current tab. 
+- **Commands API**: The bug where extension shortcuts, declared in the manifest under [`"commands._execute_action"`][commands-execute-action], would not persist during conversion to MV3, was fixed in [Chrome 111][bug-fix-commands].
+- **Downloads API**: The default downloads UI in Chrome has moved from a shelf at the bottom to the right side of the omnibox. To disable this behavior, you can use [`downloads.setUiOptions()`][downloads-setui] which replaces `setShelfEnabled()`.
+- **History API**: [`chrome.history.getVisits()`][history-get-visits] and [`chrome.history.search()`][history-search] also return data from other devices that have been synced to the local history database. This may result in more history entries and higher visit counts. `isLocal` was added to [`VisitItem`][history-visititem] in Chrome 115 to be able to filter by local visits only.
+- **Identity API**: The authentication window now appears as a popup, instead of occupying a full application window. To grant more control during the process of JavaScript redirects, we have incorporated two new options: [`abortOnLoadForNonInteractive`][identity-abort] and [`timeoutMsForNonInteractive`][identity-timeout].
+- **Storage API**: on Chrome 112 the [`chrome.session`][storage-session] storage size was increased to 10MB. Then [`chrome.local`][storage-local] storage size was matched in Chrome 114.
 
 ### Coming soon... {: #coming-soon-apis }
 
 Upcoming Chrome versions will introduce many features to make it easier for extensions to migrate to Manifest V3. For a list of MV3 migration related upcoming changes, check out our [known issues page][mv3-known-issues]. Additionally, we plan to add the following features:
 
-* **DeclarativeNetRequest API:** The default value for the [isUrlFilterCaseSensitive][dnr-url-case] property will change to `false`. See the [WECG][wecg-dnr-url-case] thread.
-* **File Handling API** will allow ChromeOS extensions to open files with specified MIME types and file extensions. You can experiment with it now by enabling the flag described in the [What's new announcement][wn-file-handling].
-* **Runtime API:** `runtime.getContexts()` will launch as a replacement for the deprecated method `extension.getViews()`, allowing extensions to determine if a side panel or offscreen document is open. See the [WECG][wecg-get-contexts] proposal.
-* **Service workers:** We're adding strong keep-alives to APIs that display a user prompt: [`permissions.request`][permission-request], [`desktopCapture.chooseDesktopMedia()`][desktop-capture], [`identity.launchWebAuthFlow()`][identity-launchwebflow], and [`management.uninstall()`][management-uninstall].
-* **Side Panel API:** Adding `sidepanel.open()` to open the extension side panel programmatically in response to a user gesture, such as a context menu click.
-* **TabCapture API:** Adding ability to call `getMediaStreamId()` from the extension service worker and obtain a MediaStream from a stream ID in an offscreen document. See [Audio recording and screen capture][tut-capture] for examples. 
+- **DeclarativeNetRequest API**: The default value for the [isUrlFilterCaseSensitive][dnr-url-case] property will change to `false`. See the [WECG][wecg-dnr-url-case] thread.
+- The **File Handling API** will allow ChromeOS extensions to open files with specified MIME types and file extensions. This feature is currently [behind a flag][wn-file-handling].
+- **Runtime API**: We are releasing [`runtime.getContexts()`][runtime-getcontexts] to replace `extension.getViews()`, which is deprecated. This will allow extensions to determine if an extension page, like the side panel or offscreen document is open. See the [WECG][wecg-get-contexts] proposal.
+- **Service workers**: We're adding strong keep-alives to Chrome APIs that display a user prompt: [`permissions.request`][permission-request], [`desktopCapture.chooseDesktopMedia()`][desktop-capture], [`identity.launchWebAuthFlow()`][identity-launchwebflow], and [`management.uninstall()`][management-uninstall].
+- **Side Panel API**: We're launching [`sidepanel.open()`][sidepanel-open], which will open the extension side panel programmatically in response to a user gesture, such as a context menu click.
+- **TabCapture API**: We're adding the ability to call `getMediaStreamId()` from the extension service worker and obtain a MediaStream from a stream ID in an offscreen document. See [Audio recording and screen capture][tut-capture] for examples. 
 
-## New documentation and more MV3 guidance {: #new-docs }
+Keep an eye on the [What's new in extensions](/docs/extensions/whatsnew/) page for these announcements when these releases become available in [Chrome Beta](https://chromestatus.com/roadmap).
 
-Big thanks to all of you who took the time to ask questions on the [chromium-group][chromium-group] and report documentation issues on developer.chrome.com. Here are a few noteworthy changes:
+## Documentation upgrades and more Manifest V3 guidance {: #new-docs }
+
+We've also been working hard to improve the developer's learning experience. Big thanks to all of
+you who took the time to ask questions on the [chromium-group][chromium-group] and report
+documentation issues on [developer.chrome.com][github-dcc].
 
 ### Highlights {: #doc-highlights }
 
-* The new [MV3 Migration][mv3-migration] section provides practical ways to convert Manifest V2 extensions to Manifest V3.
-* The [Extension service workers][sw-explainer] section breaks down in detail what service workers are and how they work.
-* The [Handle events with service workers][sw-tut] tutorial teaches the basics of extension service workers. It builds an omnibox extension that gives you quick access to extension API reference pages.
+- The new [MV3 Migration][mv3-migration] section provides practical ways to convert Manifest V2 extensions to Manifest V3.
+- The [Extension service workers][sw-explainer] guide provides detailed information on extension service workers topics. These include how they are registered and updated, what the lifecycle look like, how imports work, and more.
+- The [Handle events with service workers][sw-tut] tutorial teaches the basics of extension service workers. It builds an omnibox extension that gives you quick access to extension API reference pages.
 
 ### More updates {: #doc-others }
 
-* [Using Google Analytics 4][tut-ga4] demonstrates how to track the usage of your extension popup and service worker events.
-* [Using geolocation][tut-geo] shows how to obtain the geographical location of the extension using the Offscreen API.
-* [Audio recording and screen capture][tut-capture] teaches how to capture audio and video from tabs, windows, or screens using `chrome.tabCapture` and `navigator.mediaDevices.getDisplayMedia()` APIs.
-* We added new debugging tips to the [Debugging extensions][tut-debug] guide.
-* We've updated the [Permission Warnings Guidelines][guide-perm-warn] to make it easier to understand how permission warnings work and how you can provide a better user experience. Also, there are practical ways to check what warnings the user will see.
-* Our team and contributors have also added new Manifest V3 extension samples: [WASM in extensions][gh-wasm], [Scripting API demo][gh-scripting], [Side Panel API cookbooks][gh-sidepanel], and [DeclarativeNetRequest API samples][gh-dnr]. You can explore other extension samples in our [GitHub samples repo][gh-ext-samples].
+- [Using Google Analytics 4][tut-ga4] demonstrates how to track the usage of your extension popup and service worker events.
+- [Using geolocation][tut-geo] shows how to obtain the geographical location of the extension using the Offscreen API.
+- [Audio recording and screen capture][tut-capture] teaches how to capture audio and video from tabs, windows, or screens using `chrome.tabCapture` and `navigator.mediaDevices.getDisplayMedia()` APIs.
+- We added new debugging tips to the [Debugging extensions][tut-debug] guide.
+- We've updated the [Permission Warnings Guidelines][guide-perm-warn] to make it easier to understand how permission warnings work and how you can provide a better user experience. Also, there are practical ways to check what warnings the user will see.
+- Our team and contributors have also added new Manifest V3 extension samples: [WASM in extensions][gh-wasm], [Scripting API demo][gh-scripting], [Side Panel API cookbooks][gh-sidepanel], and [DeclarativeNetRequest API samples][gh-dnr]. You can explore other extension samples in our [GitHub samples repo][gh-ext-samples].
 
 ### Coming soon... {: #coming-soon-docs }
 
-* How to migrate remote hosted code to Manifest V3.
-* How to run automated tests for Chrome extensions.
-* Declarative Net Request API reference page redesign.
-* Improvements to the content script explainer.
+- How to migrate remote hosted code to Manifest V3.
+- How to run automated tests for Chrome extensions.
+- Declarative Net Request API reference page redesign.
+- Improvements to the content script explainer.
 
 ## 💡 Did you know? {: #tips }
 
-Here are a couple of useful tips and insights:
+Before we wrap up, I wanted to share a couple of useful tools and insights:
 
-* In Chrome 115, you can access devices via [WebHID from your Chrome extension][gh-webhid].
-* [Puppeteer][puppeteer] now supports testing in headless mode with [Chrome's headless "new"][chrome-headless].
-* With the [Extension Update Testing Tool][gh-update-tool], you can check what permission warnings are triggered when permissions change in an extension’s manifest. This way, you can experience the update process as a user would. This is important because some permissions might disable the extension until the user grants access again.
+- In Chrome 115, you can access devices via [WebHID from your Chrome extension][gh-webhid].
+- [Puppeteer][puppeteer] now supports testing in headless mode with [Chrome's headless "new"][chrome-headless].
+- With the [Extension Update Testing Tool][gh-update-tool], you can check what permission warnings are triggered when permissions change in the manifest. This way, you can experience the update process as a user would. This is important because some permissions might disable the extension until the user grants access again.
 
 ## Let's connect! 🙌 {: #connecting }
 
-This year, the extension team was happy to meet extension developers in person during [Google I/O Connect][yt-io-connect] events earlier this year. We are working on creating new spaces to connect with you. We are planning to launch focus groups and other events. In the meantime, please continue to ask questions on the [chromium-groups][chromium-group], consider participating on the [WECG][wecg], and report any documentation issues you find on [developer.chrome.com GitHub repo][github-dcc] to help us improve.
+This year, the extension team was happy to meet extension developers in person during [Google I/O Connect][yt-io-connect] events earlier this year. We are working on creating new spaces to connect with you. We are planning to launch focus groups and other events. 
+
+In the meantime, please continue to ask questions on the [chromium-groups][chromium-group], consider participating on the [WECG][wecg], and report any documentation issues on the [developer.chrome.com GitHub repo][github-dcc].
+
+Thanks again for being a part of the extension developer community! 
 
 [action-get-color]: /docs/extensions/reference/action/#method-getBadgeTextColor
 [action-isenabled]: /docs/extensions/reference/action/#method-isEnabled
 [action-set-color]: /docs/extensions/reference/action/#method-setBadgeTextColor
 [api-action]: /docs/extensions/reference/action/
-[api-favicon]: /docs/extensions/mv3/favicon/
 [api-offscreen]: /docs/extensions/reference/offscreen/
 [api-sidepanel]: /docs/extensions/reference/sidePanel/
 [blog-sidepanel]: /blog/extension-side-panel-launch/
@@ -146,6 +149,7 @@ This year, the extension team was happy to meet extension developers in person d
 [mv3-migration]: /docs/extensions/#migrate-from-manifest-v2-to-manifest-v3
 [permission-request]: /docs/extensions/reference/permissions/#method-request
 [puppeteer]: https://pptr.dev/guides/chrome-extensions
+[runtime-getcontexts]: /docs/extensions/reference/runtime/#method-getContexts
 [sec-coming-apis]: #coming-soon-apis
 [sec-coming-docs]: #coming-soon-docs
 [storage-local]: /docs/extensions/reference/storage/#property-local
@@ -162,3 +166,4 @@ This year, the extension team was happy to meet extension developers in person d
 [wecg]: https://github.com/w3c/webextensions/issues
 [wn-file-handling]: /docs/extensions/whatsnew#the-file-handling-api-comes-to-chromeos
 [yt-io-connect]: https://youtu.be/634qUJ0rJ8I
+[sidepanel-open]:  /docs/extensions/reference/sidepanel/#method-open
