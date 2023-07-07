@@ -38,13 +38,13 @@ You'll need to develop or adapt your ad and reporting strategy to transition to 
 
 Refer to [Design decisions](/docs/privacy-sandbox/summary-reports/design-decisions/) to help you plan your data collection strategy.
 
-You can get started by trying out the steps below, and then adapt you strategy to fit, or you can plan your strategy in advance.
+You can get started by trying out the steps that follow, and then adapt you strategy to fit, or you can plan your strategy in advance.
 
 This guide is a high-level implemention how-to for developers, not a strategy guide. Strategic planning will likely require a deeper understanding of the internal workings of the API, which is covered in other documentation.
 
-### Concepts for planning
+### Background concepts
 
-The more complex concepts you should review are below. While you may not need to delve into all of the details, such as fully understanding how [noise](/docs/privacy-sandbox/attribution-reporting/understanding-noise) is generated, a solid understanding of the basics will help you develop a plan. These concepts, as opposed to the ones mentioned above, are not strictly necessary for implementation, but to understand and refine the reports generated, you'll need this information.
+There are some concepts you should review for a fuller understanding of the API. While you may not need to delve into all of the details, such as exactly how [noise](/docs/privacy-sandbox/attribution-reporting/understanding-noise) is generated, a solid understanding of the basics will help you develop a plan. Knowledge of these concepts is not strictly necessary for implementation, but to understand and refine the reports generated, you'll benefit from this information.
 
 These concepts are:
 
@@ -54,7 +54,7 @@ These concepts are:
 
 ## Implementation
 
-### Concepts for implmentation
+### Important concepts
 
 At a minimum, the Attribution Reporting elements you will need to review to begin implementing the API are:
 - [attribution sources](/docs/privacy-sandbox/attribution-reporting/register-attribution-source)
