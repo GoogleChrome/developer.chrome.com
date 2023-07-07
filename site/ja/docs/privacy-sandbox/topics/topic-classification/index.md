@@ -48,7 +48,7 @@ Topics API で使用されるトピックのリストは公開されており、
 
 ホスト名をトピックにマッピングするための分類器モデルは公開されており、[Explainer](https://github.com/patcg-individual-drafts/topics) で指摘されているように、ブラウザ開発者ツールを介してサイトのトピックを表示することが可能です。モデルは時間の経過とともに進化と改善を繰り返し、定期的に更新されることが期待されます。この頻度についてはまだ検討中です。
 
-Only sites that include code that calls the Topics API are included in the browsing history eligible for topic frequency calculations, and API callers only receive topics they've observed. In other words, sites are not eligible for topic frequency calculations without the site or an embedded service calling the API.
+トピック頻度の計算対象となる閲覧履歴に含まれるのは Topics API を呼び出すコードを含むサイトのみであり、API 呼び出し元は観察したトピックのみを受け取ります。言い換えれば、サイトまたは API を呼び出す埋め込みサービスがなければ、サイトはトピック頻度の計算の対象になりません。
 
 {: #caller}
 
