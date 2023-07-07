@@ -558,6 +558,123 @@ non-problematic.
 Once the token is validated by the RP server, the RP may register the user or
 let them sign-in and start a new session.
 
+### Auto-reauthenticate users after the initial consent {: #auto-reauthn }
+
+[FedCM 
+](https://github.com/fedidcg/FedCM/issues/429)[auto-reauthentication](https://github.com/fedidcg/FedCM/issues/429) 
+("auto-reauthn" in short) can let users reauthenticate automatically, when they 
+come back after their initial authentication using FedCM. "The initial 
+authentication" here means the user creates an account or signs into the RP's 
+website by tapping on the **"Continue as..."** button on FedCM's sign-in dialog 
+for the first time on the same browser instance.
+
+While the explicit user experience makes sense before the user has created the 
+federated account to prevent tracking (which is one of the main goals of FedCM), 
+it is unnecessarily cumbersome after the user has gone through it once: after 
+the user grants permission to allow communication between the RP and the IdP,  
+there's no privacy or security benefit for enforcing another explicit user 
+confirmation for something that they have already previously acknowledged. 
+
+With auto-reauthentication, the browser changes its behavior depending on the option you specify for the `mediation` option in `navigator.credentials.get()`.
+
+```js
+const cred = await navigator.credentials.get({
+  identity: {
+    providers: [{
+      configURL: "https://idp.example/fedcm.json",
+      clientId: "1234",
+    }],
+  },
+  mediation: 'optional', // this is the default
+});
+```
+
+The `mediation` is [a property in the Credential Management 
+API](https://developer.mozilla.org/docs/Web/API/CredentialsContainer/get#:~:text=mediation), 
+it behaves in [the same 
+way](https://web.dev/security-credential-management-retrieve-credentials/) as it 
+does for 
+[PasswordCredential](https://developer.mozilla.org/docs/Web/API/PasswordCredential) 
+and 
+[FederatedCredential](https://developer.mozilla.org/docs/Web/API/FederatedCredential) 
+and it's partially supported by 
+[PublicKeyCredential](https://developer.mozilla.org/docs/Web/API/PublicKeyCredential) 
+as well. The property accepts the following four values:
+
+* `'optional'`(default): Auto-reauthn if possible, requires a mediation if not. We 
+  recommend choosing this option on the sign-in page.
+* `'required'`: Always requires a mediation to proceed, for example, clicking the 
+  "Continue" button on the UI. Choose this option if your users are expected to 
+  grant permission explicitly every time they need to be authenticated.
+* `'silent'`: Auto-reauthn if possible, silently fail without requiring a
+  mediation if not. We recommend choosing this option on the pages other than
+  the dedicated sign-in page but where you want to keep users signed in—for
+  example, an item page on a shipping website or an article page on a news
+  website.
+* `'conditional'`: Used for WebAuthn and not available for FedCM at the moment.
+
+With this call, auto-reauthn happens under the following conditions:
+
+* FedCM is available to use. For example, the user has not [disabled FedCM 
+  either globally](#settings) or for the RP in the settings.
+* The user used only one account with FedCM API to sign into the website on this 
+  browser.
+* The user is signed into the IdP with that account.
+* The auto-reauthn didn't happen within the last 10 minutes.
+* The RP hasn't called
+  [`navigator.credentials.preventSilentAccess()`](#prevent-silent-access) after
+  the previous sign in.
+
+When the above conditions are met, an attempt to automatically reauthenticate
+the user starts as soon as the FedCM `navigator.credentials.get()` is invoked.
+
+<figure style="width: 300px; margin: auto; margin-top: 2em;">
+  {% Video
+    src="video/YLflGBAPWecgtKJLqCJHSzHqe2J2/Q2ARmaZAVx2ShnKpPQNj.mp4",
+    width="486",
+    height="1080"
+  %}
+  <figcaption>A user auto-reauthenticating through FedCM.</figcaption>
+</figure>
+
+#### Enforce mediation with `preventSilentAccess()` {: #prevent-silent-access }
+
+Auto-reauthenticating users immediately after they sign out would not make for a 
+very good user experience. That's why FedCM has a 10-minute quiet period after 
+an auto-reauthn to prevent this behavior. This means that auto-reauthn happens 
+at most once in every 10-minutes unless the user signs back in within 
+10-minutes. The RP should call navigator.credentials.preventSilentAccess() to 
+explicitly request the browser to disable auto-reauthn when a user signs out of 
+the RP explicitly, for example, by clicking a sign-out button.
+
+```js
+function signout() {
+  navigator.credentials.preventSilentAccess();
+  location.href = '/signout';
+}
+```
+
+#### Users can opt-out of auto-reauthn in settings {: #settings }
+
+Users can opt-out from auto-reauth from the settings menu:
+
+* On desktop Chrome, go to `chrome://password-manager/settings` > Sign in
+  automatically.
+* On Android Chrome, open **Settings** > **Password Manager** > Tap on a 
+  cog at the top right corner > Auto sign-in.
+
+By disabling the toggle, the user can opt-out from auto-reauthn behavior all 
+together. This setting is stored and synchronized across devices, if the user is 
+signed into a Google account on the Chrome instance and synchronization is 
+enabled.
+
+{% Aside %}
+
+Users can also [opt-out from FedCM per
+domain](/docs/privacy-sandbox/fedcm/#user-settings).
+
+{% endAside %}
+
 ### Call FedCM from within a cross-origin iframe
 
 FedCM can be invoked from within a cross-origin iframe using an `identity-credentials-get` permissions policy, if the parent frame allows it. To do so, append the `allow="identity-credentials-get"` attribute to the iframe tag as follows:
