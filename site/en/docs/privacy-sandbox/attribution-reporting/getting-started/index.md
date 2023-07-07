@@ -63,9 +63,10 @@ At a minimum, the Attribution Reporting elements you will need to review to begi
 - [aggregatable (summary)](/docs/privacy-sandbox/attribution-reporting/#summary-reports) reports
 - request and response headers
 
-### Setup for generating aggregatable reports
+### Report generation
 
 To generate aggregatable reports, you need to generate contributions as a user clicks or views an ad and later converts. Contributions from many users are then aggregated to produce a summary report. 
+
 Before you generate aggregatable reports, you need to define your strategy for summary reports. Review [Attribution Reporting: Strategies and tips for summary reports](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#). 
 
 Make sure to check out the [demo](https://arapi-home.web.app/) for a working example and example code.
