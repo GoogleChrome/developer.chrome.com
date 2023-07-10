@@ -1,10 +1,10 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Register multiple reporters'
+title: 'Size limitations for aggregatable data'
 subhead: >
-  Understand the limits of data collected for attribution reports. 
+  Understand the limits of destinations, attributions, reporting origins, and the impact on schedules.
 description: >
-  Understand the limits of data collected for attribution reports. 
+  Understand the limits of destinations, attributions, reporting origins, and the impact on schedules.
 date: 2022-03-31
 updated: 2023-07-15
 authors:
