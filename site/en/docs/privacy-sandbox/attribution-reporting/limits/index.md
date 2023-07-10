@@ -13,7 +13,7 @@ authors:
 
 ## Limiting factors
 
-Intro
+To plan your Attribution Reporting strategy, you'll need to know the constraints enforced by the API, including how large the data you can use for reporting can be.
 
 ### Event-level reports
 
