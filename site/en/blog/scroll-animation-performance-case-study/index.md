@@ -8,7 +8,7 @@ tags:
   - css
   - javascript
   - performance
-date: 2023-07-09
+date: 2023-07-10
 ---
 
 ## What’s new with scroll-driven animations?
