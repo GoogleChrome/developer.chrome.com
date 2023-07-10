@@ -65,7 +65,7 @@ Upcoming Chrome versions will introduce many features to make it easier for exte
 - **Side Panel API**: We're launching [`sidepanel.open()`][sidepanel-open], which will open the extension side panel programmatically in response to a user gesture, such as a context menu click.
 - **TabCapture API**: We're adding the ability to call `getMediaStreamId()` from the extension service worker and obtain a MediaStream from a stream ID in an offscreen document. See [Audio recording and screen capture][tut-capture] for examples. 
 
-Keep an eye on the [What's new in extensions](/docs/extensions/whatsnew/) page for these announcements when these releases become available in [Chrome Beta](https://chromestatus.com/roadmap).
+Stay tuned to the [What's new in extensions](/docs/extensions/whatsnew/) page for these announcements as soon as they are made available in [Chrome Beta](https://chromestatus.com/roadmap).
 
 ## Documentation upgrades and more Manifest V3 guidance {: #new-docs }
 
