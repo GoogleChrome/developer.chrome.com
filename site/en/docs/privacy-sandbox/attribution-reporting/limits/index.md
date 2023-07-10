@@ -73,3 +73,7 @@ The following list notes limitations to keep in mind.
 - 100 unique reporting origins (typically ad techs) can register sources per {publisher, advertiser} per 30 days. This counter is incremented for each ad click or view (source event), even those that are not attributed.
 - 10 unique reporting origins (typically ad techs) can send reports per {publisher, advertiser} per 30 days. This counter is incremented for every attributed conversion.
 - Prior to Chrome 108, this limitation was as follows: For a given user, within all unattributed sources—ad clicks or views for which no conversion has been attributed yet—there can be a maximum of 100 different destinations (typically, advertiser sites, or sites where conversions are expected to take place).
+
+## Next steps
+
+For more on report schedules, review [Report schedules](/docs/privacy-sandbox/attribution-reporting/schedule/).
