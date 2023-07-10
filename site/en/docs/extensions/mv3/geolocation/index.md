@@ -53,7 +53,7 @@ After adding the `"offscreen"` permission, add an HTML file to your extension th
 
 Save this file in the root of your project as `offscreen.html`.
 
-As mentioned, you need a script called `offscreen.js`. You'll also need to bundle this with your extension. It will be where you actually get geolocation information and send that information back to the service worker. You can send and receive messages between it and your service worker.
+As mentioned, you need a script called `offscreen.js`. You'll also need to bundle this with your extension. It will be the service worker's source of geolocation information. You can pass messages between it and your service worker.
 
 {% Label %}offscreen.js:{% endLabel %}
 
