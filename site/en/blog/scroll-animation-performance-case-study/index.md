@@ -15,7 +15,7 @@ date: 2023-07-09
 
 [Scroll-driven animations](/articles/scroll-driven-animations/) are a way to add interactivity and visual interest to your website or web application, triggered by the user's scroll position. This can be a great way to keep users engaged and make your website more visually appealing.
 
-{% Video src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/dwjO0rGgwWyVp1Rp8a3K.mp4", width="800", height="800", autoplay="true", loop="true", muted="true" %}
+{% Video src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/dwjO0rGgwWyVp1Rp8a3K.mp4", width="800", height="800", autoplay="true", loop="true", muted="true", controls="true" %}
 
 In the past, the only way to create scroll-driven animations was to respond to the scroll event on the main thread. This caused two major problems:
 
@@ -32,7 +32,7 @@ This article  compares the new approach with the classic JavaScript technique to
 
 The following example progress bar is built using class JavaScript techniques.
 
-{% Video src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/gB3RmjbAlATfn9jANGLL.mp4", width="800", height="484", autoplay="true", loop="true", muted="true" %}
+{% Video src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/gB3RmjbAlATfn9jANGLL.mp4", width="800", height="484", autoplay="true", loop="true", muted="true", controls="true" %}
 
 The document responds each time the `scroll` event happens to calculate how much percentage of the `scrollHeight` the user has scrolled to.
 
@@ -47,7 +47,7 @@ document.addEventListener("scroll", () => {
 
 The following demo shows the same progress bar using the new API with CSS.
 
-{% Video src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/hfvdzlpPqZEQUtIAklLx.mp4", width="800", height="484", autoplay="true", loop="true", muted="true" %}
+{% Video src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/hfvdzlpPqZEQUtIAklLx.mp4", width="800", height="484", autoplay="true", loop="true", muted="true", controls="true" %}
 
 ```css
 @keyframes grow-progress {
@@ -84,7 +84,7 @@ function someHeavyJS(){
 
 As you might have expected, the classic JavaScript version becomes janky and sluggish due to the main thread resources junction. On the other hand, the CSS version is completely unaffected by the heavy JavaScript work and can respond to the user's scroll interactions. 
 
-{% Video src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/jEhFBLHvDb9W0VFFupYz.mp4", width="800", height="485", autoplay="true", loop="true", muted="true" %}
+{% Video src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/jEhFBLHvDb9W0VFFupYz.mp4", width="800", height="485", autoplay="true", loop="true", muted="true", controls="true" %}
 
 {% Codepen { user: 'nyb1030', id: 'gOBvZgR' } %}
 
@@ -92,7 +92,7 @@ As you might have expected, the classic JavaScript version becomes janky and slu
 
 The CPU usage is completely different in DevTools, as shown in the following screenshots.
 
-{% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/v6rDNCu6XO8Nh5ujx0yw.png", alt="Main thread comparison", width="800", height="450" %}
+{% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/v6rDNCu6XO8Nh5ujx0yw.png", alt="Main thread comparison.", width="800", height="450" %}
 
 The following demo shows an application of scroll driven animation created by CyberAgent. You can see that the photo fades in as you scroll.
 
@@ -124,7 +124,7 @@ This enables you to create the same progress bar animation shown in the previous
 
 Also, this new API works in conjunction with the existing [Web Animations API (WAAPI)](https://drafts.csswg.org/web-animations-1/) and [CSS Animations API](https://drafts.csswg.org/css-animations-1/) to enable declarative scroll-driven animations.
 
-{% Video src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/J8K2V9KcBZ1A2PSGoBZW.mp4", width="800", height="485", autoplay="true", loop="true", muted="true" %}
+{% Video src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/J8K2V9KcBZ1A2PSGoBZW.mp4", width="800", height="485", autoplay="true", loop="true", muted="true", controls="true" %}
 
 {% Codepen { user: 'nyb1030', id: 'gOBvZgR' } %}
 
