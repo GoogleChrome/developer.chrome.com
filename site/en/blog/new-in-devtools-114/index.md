@@ -6,7 +6,7 @@ authors:
   - jecelynyeen
 date: 2023-05-05
 description: ""
-hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/fy7JKyzJt0EPZd1g8hwl.jpg'
+hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/WHNGhOa6BbgiUAQU0JnY.png'
 alt: 'WebAssembly debugging, Autofill debugging, better assertions in Recorder, Performance panel enhancements, Lighthouse 10.1.1, and more.'
 tags:
   - new-in-devtools
@@ -35,7 +35,7 @@ This experiment lets you pause execution and debug C and C++ code in Wasm apps, 
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/8COHSVU8nn1m9qjHH15z.png", alt="A Wasm application paused in the Debugger.", width="800", height="762" %}
 
-To test Wasm debugging, install the [C/C++ DevTools Support (DWARF) extension](goo.gle/wasm-debugging-extension) and step through the code in the [Mandelbrot demo](https://emscripten-dbg-stories.netlify.app/mandelbrot.html).
+To test Wasm debugging, install the [C/C++ DevTools Support (DWARF) extension](https://goo.gle/wasm-debugging-extension) and step through the code in the [Mandelbrot demo](https://emscripten-dbg-stories.netlify.app/mandelbrot.html).
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/abb3f72ab0c637a1da69fd663c380333e5b6a003 #}
 
@@ -138,6 +138,24 @@ Additionally, the ID of the interaction has been moved from the tooltip to **Sum
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/7e33a26c738bcd848aacd140248d285b9db31704 #}
 
 Chromium issues: [1432512](https://crbug.com/1432512), [1432509](https://crbug.com/1432509).
+
+### The Web Vitals track moved {: #web-vitals }
+
+The **Performance** panel has removed the following tracks:
+
+- The **Web Vitals** track. Instead, see the relevant timings in the **Timings** track on hover.
+- The **Long Tasks** subtrack. You can already find such tasks in the [**Main** track](/docs/devtools/performance/reference/#long-tasks) shaded [in red and with a red triangle](/blog/new-in-devtools-83/#long-tasks).
+
+Both the **Web Vitals** and **Long Tasks** tracks contained information duplicated elsewhere. They were also non-interactive compared to their more fully featured alternatives which provide more detailed information when clicked.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Wu4ePOcdvtKHyvy0PK96.png", alt="Before and after moving the Web Vitals to the Timings track.", width="800", height="613" %}
+
+Additionally, the **Experiences** track was renamed to **Layout Shifts** to more accurately reflect its usage.
+
+Learn more about [Web Vitals](https://web.dev/vitals/).
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/41b7043de413b2a87f6a8dc8a90ac1a744912400 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/26306da9622791b255b12c9c0deeac0a0d4a07b8 #}
 
 ## JavaScript Profiler deprecation: Phase three {: #js-profiler }
 

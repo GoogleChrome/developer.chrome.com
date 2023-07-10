@@ -70,7 +70,6 @@ export class FilteredElement extends BaseStateElement {
 
     for (const [filterName, filterInput] of Object.entries(activeFilters)) {
       const values = filterInput.map(input => input.value);
-      console.log(filterName, values);
       if (this.filters && !values.includes(this.filters[filterName])) {
         this.hidden = true;
       }

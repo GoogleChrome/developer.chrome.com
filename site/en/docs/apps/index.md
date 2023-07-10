@@ -1,5 +1,6 @@
 ---
 title: Chrome Apps
+seoTitle: Chrome Apps [Deprecated]
 description: >
   Chrome Apps provided Chrome-specific APIs on top of
   standardized web technologies to enable you to create experiences that

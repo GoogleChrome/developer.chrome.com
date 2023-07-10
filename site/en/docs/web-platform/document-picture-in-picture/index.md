@@ -6,7 +6,7 @@ description: >
 authors:
   - beaufortfrancois
 date: 2023-02-02
-updated: 2023-05-11
+updated: 2023-07-07
 hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/l8xW8V85N60e4dmwUwmE.jpg
 alt: Person holding outdoor lounge chairs.
 tags:
@@ -18,7 +18,6 @@ The [Document Picture-in-Picture API][spec] makes it possible to open an always-
 The Picture-in-Picture window in the Document Picture-in-Picture API is similar to a blank same-origin window opened via [`window.open()`], with some differences:
 - The Picture-in-Picture window floats on top of other windows.
 - The Picture-in-Picture window never outlives the opening window.
-- The Picture-in-Picture window cannot open additional windows.
 - The Picture-in-Picture window cannot be navigated.
 - The Picture-in-Picture window position cannot be set by the website.
 
@@ -87,10 +86,6 @@ Research has shown that users need more ways to be productive on the web. Docume
   `height`
   : Sets the initial height of the Picture-in-Picture window.
 
-  `copyStyleSheets`
-  : When `true`, the CSS style sheets of the originated window are copied and applied to the Picture-in-Picture window. This is a one-time copy.
-    The default value is `false`.
-
 ### Events
 
 `documentPictureInPicture.onenter`
@@ -147,16 +142,33 @@ pipButton.addEventListener("click", async () => {
 
 ### Copy style sheets to the Picture-in-Picture window
 
-To copy the CSS style sheets from the originating window set the `copyStyleSheets` option of `documentPictureInPicture.requestWindow()` to `true`. Note that this is a one-time copy.
+To copy all CSS style sheets from the originating window, loop through [`styleSheets`](https://developer.mozilla.org/docs/Web/API/Document/styleSheets) explicitly linked into or embedded in the document and append them to the Picture-in-Picture window. Note that this is a one-time copy.
 
 ```js
 pipButton.addEventListener("click", async () => {
   const player = document.querySelector("#player");
 
-  // Open a Picture-in-Picture window with style sheets copied over
-  // from the initial document so that the player looks the same.
-  const pipWindow = await documentPictureInPicture.requestWindow({
-    copyStyleSheets: true,
+  // Open a Picture-in-Picture window.
+  const pipWindow = await documentPictureInPicture.requestWindow();
+
+  // Copy style sheets over from the initial document
+  // so that the player looks the same.
+  [...document.styleSheets].forEach((styleSheet) => {
+    try {
+      const cssRules = [...styleSheet.cssRules].map((rule) => rule.cssText).join('');
+      const style = document.createElement('style');
+
+      style.textContent = cssRules;
+      pipWindow.document.head.appendChild(style);
+    } catch (e) {
+      const link = document.createElement('link');
+
+      link.rel = 'stylesheet';
+      link.type = styleSheet.type;
+      link.media = styleSheet.media;
+      link.href = styleSheet.href;
+      pipWindow.document.head.appendChild(link);
+    }
   });
 
   // Move the player to the Picture-in-Picture window.
@@ -164,9 +176,13 @@ pipButton.addEventListener("click", async () => {
 });
 ```
 
+{% Aside %}
+The `copyStyleSheets` option was supported in a previous version of the specification. It is [not the case anymore](https://github.com/WICG/document-picture-in-picture/pull/79).
+{% endAside %}
+
 ### Handle when the Picture-in-Picture window closes
 
-Listen to the window `"unload"` event to know when the Picture-in-Picture window gets closed (either because the website initiated it or the user manually closed it). The event handler is a good place to get the elements back out of the Picture-in-Picture window as shown below.
+Listen to the window `"pagehide"` event to know when the Picture-in-Picture window gets closed (either because the website initiated it or the user manually closed it). The event handler is a good place to get the elements back out of the Picture-in-Picture window as shown below.
 
 ```js
 pipButton.addEventListener("click", async () => {
@@ -179,7 +195,7 @@ pipButton.addEventListener("click", async () => {
   pipWindow.document.body.append(player);
 
   // Move the player back when the Picture-in-Picture window closes.
-  pipWindow.addEventListener("unload", (event) => {
+  pipWindow.addEventListener("pagehide", (event) => {
     const playerContainer = document.querySelector("#playerContainer");
     const pipPlayer = event.target.querySelector("#player");
     playerContainer.append(pipPlayer);
@@ -191,7 +207,7 @@ Close the Picture-in-Picture window programmatically by using the [`close()`] me
 
 ```js
 // Close the Picture-in-Picture window programmatically. 
-// The "unload" event will fire normally.
+// The "pagehide" event will fire normally.
 pipWindow.close();
 ```
 

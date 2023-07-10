@@ -43,9 +43,13 @@ const getPostType = url => {
     return 'external';
   }
 
-  const pathnameList = url.split('/');
-  if (pathnameList.includes('articles')) {
-    return 'article';
+  // url might be false in a production environment, if
+  // the post is not yet published.
+  if (url) {
+    const pathnameList = url.split('/');
+    if (pathnameList.includes('articles')) {
+      return 'article';
+    }
   }
 
   return 'blogPost';

@@ -11,6 +11,8 @@
     - url: /docs/privacy-sandbox/events
     - url: /tags/privacy
       title: i18n.docs.privacy-sandbox.blog
+    - url: /docs/privacy-sandbox/videos
+      title: i18n.docs.privacy-sandbox.videos
 - title: i18n.docs.privacy-sandbox.start
   sections:
     - url: /docs/privacy-sandbox/chrome-testing
@@ -54,6 +56,8 @@
         - url: /docs/privacy-sandbox/topics/topic-classification
         - url: /docs/privacy-sandbox/topics
           title: i18n.docs.privacy-sandbox.developer-guide
+        - url: /docs/privacy-sandbox/topics/integration-guide
+          title: i18n.docs.privacy-sandbox.integration-guide
         - url: /docs/privacy-sandbox/topics-experiment
           title: i18n.docs.privacy-sandbox.experiment-participate
         - url: /docs/privacy-sandbox/topics/demo
@@ -102,8 +106,18 @@
             - url: /docs/privacy-sandbox/attribution-reporting-debugging/part-1/
             - url: /docs/privacy-sandbox/attribution-reporting-debugging/part-2/
             - url: /docs/privacy-sandbox/attribution-reporting-debugging/part-3/
-        - url: https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/view?usp=sharing
-          title: i18n.docs.privacy-sandbox.attribution-reporting-handbook
+        - title: i18n.docs.privacy-sandbox.attribution-reporting-developer-guide
+          sections:
+            - url: /docs/privacy-sandbox/attribution-reporting/register-attribution-source/
+            - url: /docs/privacy-sandbox/attribution-reporting/register-attribution-trigger/
+            - url: /docs/privacy-sandbox/attribution-reporting/change-attribution-logic/
+            - url: /docs/privacy-sandbox/attribution-reporting/define-filters/
+            - url: /docs/privacy-sandbox/attribution-reporting/custom-report-windows/
+            - url: /docs/privacy-sandbox/attribution-reporting/understanding-noise/
+            - url: /docs/privacy-sandbox/attribution-reporting/working-with-noise/
+            - url: /docs/privacy-sandbox/attribution-reporting/contribution-budget/
+            - url: https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/view?usp=sharing
+              title: i18n.docs.privacy-sandbox.attribution-reporting-handbook        
         - url: /docs/privacy-sandbox/attribution-reporting-updates
           title: i18n.docs.privacy-sandbox.attribution-reporting-changing
     - title: i18n.docs.privacy-sandbox.measure-cross-site

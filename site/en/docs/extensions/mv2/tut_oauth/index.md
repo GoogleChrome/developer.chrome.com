@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "OAuth2: Authenticate users with Google"
+seoTitle: "MV2 - OAuth2: Authenticate users with Google [Deprecated]"
 date: 2012-09-18
 updated: 2018-05-01
 description: >

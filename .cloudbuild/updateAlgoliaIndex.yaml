@@ -1,0 +1,21 @@
+timeout: 600s # set build timeout to 10 mins
+steps:
+  - name: node:16.14.2
+    entrypoint: npm
+    args: ['ci']
+
+  - name: node:16.14.2
+    entrypoint: npm
+    args: ['run', 'cloud-secrets']
+
+  - name: node:16.14.2
+    entrypoint: npm
+    args: ['run', 'algolia']
+
+substitutions:
+  _EXTRA_GCLOUD_ARGS: # default empty
+
+options:
+  machineType: 'E2_HIGHCPU_32'
+  env:
+    - 'PROJECT_ID=$PROJECT_ID'

@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: "Step 1: Create and Run a Chrome App"
+seoTitle: "Step 1: Create and Run a Chrome App [Deprecated]"
 date: 2014-10-17
 updated: 2014-10-20
 description: How to create, install, run, and debug a basic Chrome App.

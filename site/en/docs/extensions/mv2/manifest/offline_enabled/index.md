@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manifest - Offline Enabled"
+seoTitle: "Manifest V2 - Offline Enabled [Deprecated]"
 date: 2013-05-12
 updated: 2015-01-07
 description: Reference documentation for the offline_enabled property of manifest.json.

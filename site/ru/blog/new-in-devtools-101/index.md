@@ -62,8 +62,8 @@ tags:
 <!-- [Cascade layers](/blog/cascade-layers/) enable more explicit control of your CSS files to prevent style-specificity conflicts. This is particularly useful for large codebases, design systems, and when managing third party styles in applications. -->
 [Каскадные слои](/blog/cascade-layers/) позволяют более точно контролировать файлы CSS для предотвращения конфликтов, связанных со специфичностью стилей. Это особенно полезно для большой кодовой базы, дизайн-систем и для управления стилями сторонних приложений.
 
-<!-- In this [example](https://jec.fyi/demo/cascade-layer), there are 3 cascade layers defined: `page`, `component` and `base`. In the **Styles** pane, you can view each layer and its styles. -->
-В этом [примере](https://jec.fyi/demo/cascade-layer) определено 3 каскадных слоя: `page`, `component` и `base`. В панели **Стили** (Styles) вы можете просмотреть каждый слой и его стили.
+<!-- In this [example](https://jec.fish/demo/cascade-layer), there are 3 cascade layers defined: `page`, `component` and `base`. In the **Styles** pane, you can view each layer and its styles. -->
+В этом [примере](https://jec.fish/demo/cascade-layer) определено 3 каскадных слоя: `page`, `component` и `base`. В панели **Стили** (Styles) вы можете просмотреть каждый слой и его стили.
 
 <!-- Click on the layer name to view the layer order. The `page` layer has the highest specificity, therefore the `box` background is green.  -->
 Кликните на имя слоя, чтобы просмотреть порядок слоёв. Слой `page` имеет наибольшую специфичность, поэтому фон блока `box` зелёный.

@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manifest - Icons"
+seoTitle: "Manifest V2 - Icons [Deprecated]"
 date: 2013-05-12
 updated: 2018-04-26
 description: Reference documentation for the icons property of manifest.json.

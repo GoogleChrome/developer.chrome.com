@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manifest - Homepage Url"
+seoTitle: "Manifest V2 - Homepage Url [Deprecated]"
 date: 2013-05-12
 updated: 2018-04-26
 description: Reference documentation for the homepage_url property of manifest.json.

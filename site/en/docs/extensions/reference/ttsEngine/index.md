@@ -8,7 +8,7 @@ has_warning: This permission <a href="/docs/extensions/mv3/permission_warnings/#
 An extension can register itself as a speech engine. By doing so, it can intercept some or all calls
 to functions such as [`tts.speak`][1] and [`tts.stop`][2] and provide an alternate implementation.
 Extensions are free to use any available web technology to provide speech, including streaming audio
-from a server, HTML5 audio, Native Client, or Flash. An extension could even do something different
+from a server, HTML5 audio. An extension could even do something different
 with the utterances, like display closed captions in a pop-up window or send them as log messages to
 a remote server.
 

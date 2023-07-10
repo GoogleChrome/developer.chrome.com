@@ -8,7 +8,7 @@ description: >
    Run unified experiments across Attribution Reporting, Protected Audience API,
    Topics, Fenced Frames, and Shared Storage.
 date: 2022-09-08
-updated: 2023-03-13
+updated: 2023-06-05
 authors:
   - anusmitaray
   - kevinkiklee
@@ -29,11 +29,119 @@ across the Topics, Protected Audience API, and Attribution Reporting APIs. This 
 through the configuration steps to access the APIs, tells you how to validate
 your configuration, and provides further resources for testing against the APIs.
 
+{% Aside 'key-term' %}
+_Traffic_ refers to the percentage of Chrome browser instances included in the trial, not the percentage of requests made to individual sites.
+{% endAside %}
+
 ## Check the status of the origin trial {: #status}
 
-### April 2023
+### June 2023
 
-#### Private Aggregation 1% ramp-up in Stable
+#### Private Aggregation 7% ramp-up in Stable
+
+[Private Aggregation API](/docs/privacy-sandbox/private-aggregation/) will be available at 7% of Chrome Stable traffic from Tuesday, June 6, 2023. The API will be available in the main unified origin trial group (5%), Protected Audience isolated group (1%), and Shared Storage isolated group (1%). The traffic allocation for Protected Audience and Shared Storage will not change since Private Aggregation is being added to existing isolated experiments. 
+
+Traffic allocation as of Tuesday, June 6th:
+
+<table>
+  <tr>
+   <td><strong>API</strong>
+   </td>
+   <td><strong>Traffic allocation</strong>
+   </td>
+   <td><strong>Status</strong>
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="2">Attribution Reporting 
+   </td>
+   <td>Unified - 5%
+   </td>
+   <td rowspan="2">6% of Stable traffic as of March 13, 2023
+   </td>
+  </tr>
+  <tr>
+   <td>Isolated - 1% - ARA only
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="3">Fenced Frames
+   </td>
+   <td>Unified - 5%
+   </td>
+   <td rowspan="3">7% of Stable traffic as of March 13, 2023
+   </td>
+  </tr>
+  <tr>
+   <td>Isolated - 1% - Shared Storage + Private Aggregation + Fenced Frames only
+   </td>
+  </tr>
+  <tr>
+   <td>Isolated - 1% - Protected Audience + Private Aggregation + Fenced Frames only
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="2">Protected Audience
+   </td>
+   <td>Unified - 5% 
+   </td>
+   <td rowspan="2">6% of Stable traffic as of March 13, 2023
+   </td>
+  </tr>
+  <tr>
+   <td>Isolated - 1% - Protected Audience + Private Aggregation + Fenced Frames only
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="3">Private Aggregation
+   </td>
+   <td>Unified - 5% 
+   </td>
+   <td rowspan="3">7% of Stable traffic as of June 6, 2023
+   </td>
+  </tr>
+  <tr>
+    <td>Isolated - 1% - Protected Audience + Private Aggregation + Fenced Frames only
+    </td>
+    </tr>
+    <tr>
+    <td>Isolated - 1% - Shared Storage + Private Aggregation + Fenced Frames only
+    </td>
+  </tr>
+  <tr>
+   <td rowspan="2">Shared Storage
+   </td>
+   <td>Unified - 5%
+   </td>
+   <td rowspan="2">6% of Stable traffic as of March 13, 2023
+   </td>
+  </tr>
+  <tr>
+   <td>Isolated - 1% - Shared Storage + Private Aggregation + Fenced Frames only
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="2">Topics
+   </td>
+   <td>Unified - 5%
+   </td>
+   <td rowspan="2">6% of Stable traffic as of March 13, 2023
+   </td>
+  </tr>
+  <tr>
+   <td>Isolated - 1% - Topics only
+   </td>
+  </tr>
+</table>
+
+{% Details %} {% DetailsSummary %}
+### Previous updates
+
+Check out previous updates on the origin trial. {% endDetailsSummary %}
+
+#### April 2023
+
+##### Private Aggregation 1% ramp-up in Stable
 
 [Private Aggregation API](/docs/privacy-sandbox/private-aggregation/) origin trial will be available at 1% of Chrome Stable unified experiment traffic from Monday April 17. The <code>[sendHistogramReport()](/docs/privacy-sandbox/private-aggregation/#sendhistogramreport)</code> function of Private Aggregation is available to be used in [Protected Audience API](/docs/privacy-sandbox/fledge/) and [Shared Storage](/docs/privacy-sandbox/shared-storage/) worklets. 
 
@@ -122,19 +230,19 @@ The traffic allocation will look like the following starting on Monday, April 17
   </tr>
 </table>
 
-### March 2023
+#### March 2023
 
-#### Timeline update
+##### Timeline update
 
 We initially communicated that we will begin the isolated experiments on Monday, March 13, 2023, but the new experiments will now begin on Thursday, March 16, 2023 due to the additional time needed for setting up the experiments. The 1% Protected Audience API ramp back up from 4% to 5% will also occur on Thursday, March 16, 2023.
 
-#### Protected Audience API 1% ramp back up
+##### Protected Audience API 1% ramp back up
 
 Last month, we [temporarily reduced Protected Audience API origin trial traffic](/docs/privacy-sandbox/unified-origin-trial/#january-2023) from 5% to 4% of Chrome stable for testing. The initial testing has concluded, and we plan to ramp Protected Audience API back up to 5% from 4% for the unified experiment on Thursday, March 16, 2023.
 
 The ramped-up users will be the same set of users that were ramped down. However, their previous interest groups have expired, since more than 30 days have passed since the ramp-down. 
 
-#### Isolated experiments
+##### Isolated experiments
 
 To improve our testing process and continue observing the metrics of origin trial APIs, we're creating isolated experiments for each API, in addition to the existing unified experiment. New experiments will be created for Attribution Reporting, Topics, a combination of Protected Audience API and Fenced Frames, and a combination of Shared Storage’s URL Selection operation and Fenced Frames. In each isolated experiment, only the assigned APIs will be available for the users in that group.
 
@@ -176,7 +284,7 @@ To improve our testing process and continue observing the metrics of origin tria
 
 Starting Thursday, March 16, you will begin to receive an additional 1% of the Chrome Stable traffic for the APIs listed above, on top of the 5% traffic you are receiving from the existing unified experiment. New users will be allocated to each experiment.
 
-#### Traffic allocation
+##### Traffic allocation
 
 The current unified origin trials traffic allocation as of Tuesday, February 28, is as follows:
 
@@ -304,7 +412,7 @@ The traffic allocation will look like the following starting on Thursday, March 
 
 These changes will not affect your existing origin trial token setup, and you will not have to renew or generate a new origin trial token. 
 
-### January 2023
+#### January 2023
 
 As part of a Chrome regression investigation, we will temporarily reduce Protected Audience API origin trial traffic from 5% to 4% of Chrome Stable, from January 26th 2023. We estimate the investigation will take about a month, and we will notify you when the traffic is ramped back up.  
 
@@ -350,11 +458,6 @@ Also, Shared Storage’s URL Selection API origin trial will be increasing to 5%
    </td>
   </tr></tbody>
 </table>
-
-{% Details %} {% DetailsSummary %}
-### Previous updates
-
-Check out previous updates on the origin trial. {% endDetailsSummary %}
 
 #### November 2022
 
@@ -742,7 +845,7 @@ if (document.featurePolicy.allowsFeature('attribution-reporting')) {
 }
 
 if ('runAdAuction' in navigator) {
-  // FLEDGE enabled
+  // Protected Audience API enabled
 }
 
 if ('browsingTopics' in document) {

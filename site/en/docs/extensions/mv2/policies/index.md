@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: Policies
+seoTitle: MV2 Policies [Deprecated]
 description: Foo bar baz
 ---
 

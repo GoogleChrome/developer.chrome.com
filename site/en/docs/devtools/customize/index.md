@@ -115,6 +115,10 @@ You can enable or disable the DevTools settings sync separately using the {% Img
 
 DevTools syncs most of the settings except those in the **Workspace**, **Experiments**, and **Devices** tabs and a few other general settings. The state of the **Enable settings sync** checkbox is synced across devices as well.
 
+{% Aside %}
+DevTools also doesn't sync [Snippets](/docs/devtools/javascript/snippets/), they are stored as local preferences.
+{% endAside %}
+
 For example, the following **Appearance** settings are synced, so you have a consistent experience across devices and don't need to re-define the same settings again.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/t8SQuZ4mE2xiLVxaZz11.png", alt="The appearance settings.", width="800", height="584" %}

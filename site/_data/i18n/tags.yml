@@ -39,6 +39,10 @@ fugu-case-study:
   en: Fugu case study
 
 # DevTools-related tags
+
+wasm:
+  en: WebAssembly
+
 css:
   en: CSS
 
@@ -136,6 +140,9 @@ media:
 
 webgpu:
   en: WebGPU
+
+new-in-webgpu:
+  en: What's New in WebGPU
 
 new-in-chrome:
   en: New in Chrome

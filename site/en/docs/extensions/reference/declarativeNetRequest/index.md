@@ -21,7 +21,7 @@ return information on declarative rules matched.
 
 To specify static [Rulesets][3], extensions must also declare the `"declarative_net_request"`
 manifest key, which should be a dictionary with a single key called `"rule_resources"`. It should be
-a list containing dictionaries of type [Ruleset][4], as shown below.
+a list containing dictionaries of type [Ruleset][3], as shown below.
 
 ```json
 {
@@ -68,37 +68,37 @@ limits apply when using the API.
 
 ### Rulesets {: #limits-rulesets }
 
-An extension can specify up to **50** static [rulesets][6] as part of the `"rule_resources"`
+An extension can specify up to **50** static [rulesets][3] as part of the `"rule_resources"`
 manifest key. Only **10** of these rulesets can be enabled at a time, assuming static rule limits
 are not exceeded.
 
 ### Rules {: #limits-rules }
 
 An extension is allowed to enable at least **30,000** static rules. Additional static rules may or
-may not be enabled depending on the available [global static rule limit][8].
+may not be enabled depending on the available [global static rule limit][6].
 
 ### Global Static Rule Limit {: #limits-global-static-rule-limit }
 
-In addition to the [`GUARANTEED_MINIMUM_STATIC_RULES`][9] static rules guaranteed for each extension,
+In addition to the [`GUARANTEED_MINIMUM_STATIC_RULES`][5] static rules guaranteed for each extension,
 extensions can enable additional static rulesets depending on the available global static rule
 limit. This global limit is shared between all extensions and can be used by extensions on a
 first-come, first-served basis. Extensions shouldn't depend on the global limit having a specific
-value and should instead use the [`getAvailableStaticRuleCount()`][10] API method to find the additional
+value and should instead use the [`getAvailableStaticRuleCount()`][7] API method to find the additional
 rule limit available to them.
 
 ### Constants {: #limits-constants }
 
 These values are also defined as constants that can be accessed at runtime.
 
-The limits on results are defined by the [`MAX_NUMBER_OF_STATIC_RULESETS`][5] and
-[`MAX_NUMBER_OF_ENABLED_STATIC_RULESETS`][18] constants.
+The limits on results are defined by the [`MAX_NUMBER_OF_STATIC_RULESETS`][4] and
+[`MAX_NUMBER_OF_ENABLED_STATIC_RULESETS`][14] constants.
 
-This limits on results are defined by the [`GUARANTEED_MINIMUM_STATIC_RULES`][7] constant.
+This limits on results are defined by the [`GUARANTEED_MINIMUM_STATIC_RULES`][5] constant.
 
 
 ## Rules {: #rules }
 
-A single declarative [Rule][11] consists of four fields: `id`, `priority`, `condition`, and
+A single declarative [Rule][8] consists of four fields: `id`, `priority`, `condition`, and
 `action`. There are the following kinds of rules:
 
 - Rules that block a network request.
@@ -165,20 +165,20 @@ examples of URL filters:
 
 ## Dynamic and session-scoped rules {: #dynamic-and-session-rules }
 
-An extension can add or remove rules dynamically using the [`updateDynamicRules()`][12] and the [`updateSessionRules()`][17] API methods.
-- Rules added using the [`updateDynamicRules()`][12] API method are persisted across both sessions and extension updates.
-- Rules added using the [`updateSessionRules()`][17] API method are not persisted across Chrome sessions. These rules are backed in memory by Chrome.
-- The number of dynamic and session-scoped rules that an an extension can add is bounded by the [`MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES`][13] constant.
+An extension can add or remove rules dynamically using the [`updateDynamicRules()`][9] and the [`updateSessionRules()`][13] API methods.
+- Rules added using the [`updateDynamicRules()`][9] API method are persisted across both sessions and extension updates.
+- Rules added using the [`updateSessionRules()`][13] API method are not persisted across Chrome sessions. These rules are backed in memory by Chrome.
+- The number of dynamic and session-scoped rules that an an extension can add is bounded by the [`MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES`][10] constant.
 
 ## Updating enabled rulesets {: #update-enabled-rulesets }
 
-An extension can update the set of enabled static rulesets using the [`updateEnabledRulesets()`][14]
+An extension can update the set of enabled static rulesets using the [`updateEnabledRulesets()`][11]
 method.
 
 - The number of static rulesets which are enabled at one time must not exceed
-  [`MAX_NUMBER_OF_ENABLED_STATIC_RULESETS`][18].
+  [`MAX_NUMBER_OF_ENABLED_STATIC_RULESETS`][14].
 - The number of rules across enabled static rulesets across all extensions must not exceed the
-  [global limit][15]. Calling [`getAvailableStaticRuleCount()`][10] is recommended to check the number
+  [global limit][6]. Calling [`getAvailableStaticRuleCount()`][7] is recommended to check the number
   of rules an extension can still enable before the global limit is reached.
 - The set of enabled static rulesets is persisted across sessions but not across extension updates.
   The `"rule_resources"` manifest key will determine the set of enabled static rulesets on initial
@@ -404,21 +404,21 @@ When rules are applied to browsers with pages in the service worker's cached sto
   `h1` was removed by (10), `h2` was set by (10) then appended by (11), and `h3` was appended by
   (10) and (11).
 
+To try the `chrome.declarativeNetRequest` API,
+install the [declarativeNetRequest samples](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/declarativeNetRequest) from the [chrome-extension-samples](https://github.com/GoogleChrome/chrome-extensions-samples)
+repository.
+
 [1]: /docs/extensions/mv3/manifest
 [2]: /docs/extensions/mv3/declare_permissions
 [3]: #type-Ruleset
-[4]: #type-Ruleset
-[5]: #property-MAX_NUMBER_OF_STATIC_RULESETS
-[6]: #type-Ruleset
-[7]: #property-GUARANTEED_MINIMUM_STATIC_RULES
-[8]: #global-static-rule-limit
-[9]: #property-GUARANTEED_MINIMUM_STATIC_RULES
-[10]: #method-getAvailableStaticRuleCount
-[11]: #type-Rule
-[12]: #method-updateDynamicRules
-[13]: #property-MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES
-[14]: #method-updateEnabledRulesets
-[15]: #global-static-rule-limit
-[16]: /docs/extensions/webRequest
-[17]: #method-updateSessionRules
-[18]: #property-MAX_NUMBER_OF_ENABLED_STATIC_RULESETS
+[4]: #property-MAX_NUMBER_OF_STATIC_RULESETS
+[5]: #property-GUARANTEED_MINIMUM_STATIC_RULES
+[6]: #limits-global-static-rule-limit
+[7]: #method-getAvailableStaticRuleCount
+[8]: #type-Rule
+[9]: #method-updateDynamicRules
+[10]: #property-MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES
+[11]: #method-updateEnabledRulesets
+[12]: /docs/extensions/webRequest
+[13]: #method-updateSessionRules
+[14]: #property-MAX_NUMBER_OF_ENABLED_STATIC_RULESETS

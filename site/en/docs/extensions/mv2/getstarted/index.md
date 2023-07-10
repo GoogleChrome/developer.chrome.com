@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Getting started"
+seoTitle: "MV2 - Getting started [Deprecated]"
 date: 2014-02-28
 updated: 2020-11-18
 description: Step-by-step instructions on how to create a Chrome Extension.
