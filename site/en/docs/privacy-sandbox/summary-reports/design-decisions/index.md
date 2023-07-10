@@ -222,7 +222,8 @@ New to [Noise Lab](https://noise-lab.uc.r.appspot.com/)? [Take a quick tour](#qu
 
 Another design decision that will impact the number of attributed conversion
 events within a single bucket is the batching frequency you decide to use. The
-batching frequency is how often you process aggregatable reports.\
+batching frequency is how often you process aggregatable reports.
+
 A report that is scheduled for aggregation more frequently (e.g. each hour) will
 have fewer conversion events included than the same report with a less frequent
 aggregation schedule (e.g. each week). As a result, the hourly report will have
@@ -457,7 +458,8 @@ A measurement goal is a distinct data point collected in conversion events.
 
 To implement scaling, you would typically calculate a scaling factor based on
 the maximum possible value for a given conversion event
-([learn more in this example](/docs/privacy-sandbox/attribution-reporting/working-with-noise/#calculating-a-scaling-factor)).\
+([learn more in this example](/docs/privacy-sandbox/attribution-reporting/working-with-noise/#calculating-a-scaling-factor)).
+
 However, avoid using a literal maximum value to calculate that scaling factor,
 as this would worsen your signal-to-noise ratios. **Instead, remove outliers and
 use a pragmatic maximum value**.
