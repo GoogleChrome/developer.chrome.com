@@ -42,9 +42,41 @@ You can get started by trying out the steps that follow, and then adapt you stra
 
 This guide is a high-level implemention how-to for developers, not a strategy guide. Strategic planning will likely require a deeper understanding of the internal workings of the API, which is covered in other documentation.
 
-### Background concepts
+Part of your decision making will be to decide whether you'll be starting with event-level reports or summary reports.
 
-There are some concepts you should review for a fuller understanding of the API. While you may not need to delve into all of the details, such as exactly how [noise](/docs/privacy-sandbox/attribution-reporting/understanding-noise) is generated, a solid understanding of the basics will help you develop a plan. Knowledge of these concepts is not strictly necessary for implementation, but to understand and refine the reports generated, you'll benefit from this information.
+Event-level reports require less preparation than Aggregatable reports, and can be a good way to dive into the API. Just know that they each serve different use cases.
+
+Event-level reports associate an ad click or view with coarse conversion data. 
+
+They are suited for:
+
+- **Optimization**. Event-level reports help answer questions like "How can I improve my return on investment?". In particular, these reports can be used to optimize for ad placement, since a unique ID for the ad side can be made available in the reports. Event-level reports can provide training data for machine learning models.
+- **Coarse reporting**, where very little information is needed about the conversion. The current limitation is 3 bits of conversion data for clicks⏤this means a conversion can be assigned one of eight categories⏤and 1 bit for views. Encoding of granular conversion-side data, such as a specific price or conversion time is not supported in event-level reports.
+- **Fraud detection**. The data in some reports can be useful for ad fraud detection and analysis, by allowing you to understand patterns that can be used to identify spammy or invalid activity.
+
+Aggregatable reports are used to generate summary reports. An aggregatable report is a combination of data gathered from the ad (on a publisher's site) and conversion data (from the advertiser's site) which is generated and encrypted by the browser on a user's device before it's collected by the ad tech.
+
+Summary reports are not tied to a specific event on the ad side. These reports provide richer, higher-fidelity conversion data than event-level reports. A combination of privacy techniques help reduce the risk of identity joining across sites.
+
+## Important concepts
+
+At a minimum, the Attribution Reporting elements you will need to review to begin implementing the API are listed here.
+
+### Event-level reports
+
+- [attribution sources](/docs/privacy-sandbox/attribution-reporting/register-attribution-source)
+- [attribution triggers](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger)
+- request and response headers
+
+Once you're familiar with the concepts for event-level reports and have defined your sources, triggers, set your headers, and defined your endpoints, you're ready to receive event-level reports.
+
+The remainder of this document discusses implementation for Aggregatable report generation.
+
+### Summary reports
+
+In addition to uderstanding source, triggers, and headers as as noted for event-level reports, for aggregatable reports you'll need few more.
+
+While you may not need to delve into all of the details, such as exactly how [noise](/docs/privacy-sandbox/attribution-reporting/understanding-noise) is generated, a solid understanding of the basics will help you develop a plan. Knowledge of these concepts is not strictly necessary for implementation, but to understand and refine the reports generated, you'll benefit from this information.
 
 These concepts are:
 
@@ -54,14 +86,7 @@ These concepts are:
 
 ## Implementation
 
-### Important concepts
 
-At a minimum, the Attribution Reporting elements you will need to review to begin implementing the API are:
-- [attribution sources](/docs/privacy-sandbox/attribution-reporting/register-attribution-source)
-- [attribution triggers](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger)
-- [event-level reports](/docs/privacy-sandbox/attribution-reporting/#event-level-reports)
-- [aggregatable (summary)](/docs/privacy-sandbox/attribution-reporting/#summary-reports) reports
-- request and response headers
 
 ### Report generation
 
@@ -87,20 +112,22 @@ Before you can register sources and triggers and get reports, your sites need to
 1. **Register a source:**
     1. [Registering a source](/docs/privacy-sandbox/attribution-reporting/register-attribution-source) is the same processs for both event-level and aggregatable reports.
     1. In the `Attribution-Reporting-Register-Source` header add the
-        necessary fields to generate aggregatable reports (refer to the
-        [Example code](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/main/attribution-reporting/functions/apps/adtech.js)):
-        1. Add an `aggregation_keys` field. 
+        necessary fields to generate aggregatable or event-level reports. These fields include:
+        - `source_event_id`
+        - `destination`
+        - `expiry` (optional)
+        - `debug_key`
+        - `aggregation_keys` (for aggregatable reports)
+        - `debug_reporting`
+        - `event_trigger_data` (for event-level reports only)
+         (refer to the
+        [Example code](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/main/attribution-reporting/functions/apps/adtech.js)).
 
-    1. Add the `event_trigger_data` field if you want event-level reports. If you only
-        want aggregatable reports, you can omit
-        `event_trigger_data`. If you do omit it, event-level reports will not be generated.
-    {% Aside %}
-    Attributions can't be recorded after `expiry` but the report may
-        be sent after expiry, given the delays. Refer to the information about
-        [report schedules](/docs/privacy-sandbox/attribution-reporting/schedule/).
-        Note that changing `expiry` has no impact on _when_ aggregatable
-        reports are sent.
-    {% endAside %}
+        {% Aside %}
+        While headers can be used for both event-level and aggregatable reports, the content of the headers will be different for each of these report types. For example, if you omit `event_trigger_data`, event-level reports will not be generated.
+        {% endAside %}
+      
+ 
 1. **Register a trigger:**
     1. [Registering a trigger](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger) is the same process for both event-level reports and aggregatable reports.
     1. In the `Attribution-Reporting-Register-Trigger` header add the
@@ -127,31 +154,12 @@ Before you can register sources and triggers and get reports, your sites need to
     1.  Set up an endpoint for **event-level** reports with
         the following URL:
 
-        `{REPORTING_ENDPOINT}/.well-known/attribution-reporting/report-event-attribution` 
-
-
-<!-- removed from handbook
-{% Details %}
-{% DetailsSummary %}
-About {REPORTING_ENDPOINT} 
-{% endDetailsSummary %}
-{REPORTING_ENDPOINT} is the server that responded to the initial browser request to register a source using the `Attribution-Reporting-Register-Source` header.
-   
-For example, if https://adtech.example responded, then the event-level reports will be sent to: 
-`https://adtech.example/.well-known/attribution-reporting/report-event-attribution` 
-
-Likewise, aggregatable reports will be sent to this endpoint:
-`https://adtech.example/.well-known/attribution-reporting/report-aggregate-attribution`
-{% endDetails %}
-                                          
-
-    Note that `aggregation_service_payloads` is encrypted and only later decrypted by the aggregation service to generate summary reports.
--->     
+        `{REPORTING_ENDPOINT}/.well-known/attribution-reporting/report-event-attribution`      
 1. **Set up debug reports:**
     1. Learn how to set up debug reports in the
         [Attribution reporting debugging series](/docs/privacy-sandbox/attribution-reporting-debugging/).
 
-1. **Batch and send the reports** for further processing with the aggregation service which will produce summary reports.
+1. **Batch and send the reports** for further processing with the aggregation service which will produce summary reports. Refer to [batched aggregatable reports](/docs/privacy-sandbox/attribution-reporting/system-overview/#batched-aggregatable-reports).
 
 ### Don't forget feature detection
 
@@ -170,7 +178,7 @@ Note that this check alone isn't a guarantee that the API is usable on that page
 
 
 ## Next steps
-
+(separate by type)
 If you're ready to begin implementation, check out these docs:
 - [Register an attribution trigger](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger)
 - [Register an attribution source](/docs/privacy-sandbox/attribution-reporting/register-attribution-source)
