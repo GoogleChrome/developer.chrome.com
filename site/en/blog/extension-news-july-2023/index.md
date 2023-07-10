@@ -92,7 +92,7 @@ documentation issues on [developer.chrome.com][github-dcc].
 
 - How to migrate remote hosted code to Manifest V3.
 - How to run automated tests for Chrome extensions.
-- Declarative Net Request API reference page redesign.
+- Improved Declarative Net Request guidance.
 - Improvements to the content script explainer.
 
 ## 💡 Did you know? {: #tips }
@@ -105,7 +105,7 @@ Before we wrap up, I wanted to share a couple of useful tools and insights:
 
 ## Let's connect! 🙌 {: #connecting }
 
-This year, the extension team was happy to meet extension developers in person during [Google I/O Connect][yt-io-connect] events earlier this year. We are working on creating new spaces to connect with you. We are planning to launch focus groups and other events. 
+This year, the extension team was happy to meet extension developers in person during [Google I/O Connect][yt-io-connect] events. We are working on creating new spaces to connect with you, such as launching focus groups and meetup events.
 
 In the meantime, please continue to ask questions on the [chromium-groups][chromium-group], consider participating on the [WECG][wecg], and report any documentation issues on the [developer.chrome.com GitHub repo][github-dcc].
 
