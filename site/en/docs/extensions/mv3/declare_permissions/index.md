@@ -232,6 +232,14 @@ The following table lists the currently available permissions. For a list of per
       <td><code>"downloads"</code></td>
       <td>Gives access to the <a href="/docs/extensions/reference/downloads/">chrome.downloads</a> API.</td>
     </tr>
+    <tr id="downloads-open">
+      <td><code>"downloads.open"</code></td>
+      <td>Permission required to use <a href="/docs/extensions/reference/downloads/#method-open">chrome.downloads.open()</a></td>
+    </tr>
+    <tr id="downloads-ui">
+      <td><code>"downloads.ui"</code></td>
+      <td>Permission required to use <a href="/docs/extensions/reference/downloads/#method-setUiOptions">chrome.downloads.setUiOptions()</a></td>
+    </tr>
     <tr id="enterprise.deviceAttributes">
       <td><code>"enterprise.deviceAttributes"</code></td>
       <td>Gives access to the <a
