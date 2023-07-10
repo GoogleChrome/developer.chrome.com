@@ -21,7 +21,7 @@ date: 2017-10-01
 
 # Optional
 # Include an updated date when you update your post
-updated: 2023-06-09
+updated: 2023-07-11
 
 # Optional
 # How to add a new author
@@ -42,6 +42,23 @@ In the list below, we've curated some release notes for each monthly dataset. Su
 The CrUX dataset on BigQuery is generally updated on the second Tuesday of every month. Each release is numbered according to the year and calendar month of the data collection period, for example 201912 corresponds to the UX data collected during December 2019 and would be released on the second Tuesday of January 2020 after the data collection period has ended.
 
 In the list below, we've curated some release notes for each monthly dataset. Subscribe to our [CrUX Announce](https://groups.google.com/a/chromium.org/forum/#!forum/chrome-ux-report-announce) mailing list or follow [@ChromeUXReport](https://twitter.com/ChromeUXReport) on Twitter for release Announcements.
+
+## 202306
+
+[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/?????)
+
+Publication date
+ : Jul 11, 2023
+
+What's new
+
+We have finally made progress on the long-standing root page redirect issue [mentioned last month](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/13hl37E28RE). Some origins which redirect their root page, and were therefore excluded from CrUX due to our lack of handling this properly, should now start to be included again from this month. Please note that some origins are still affected by a related issue. However, it is great that we have made some good progress on this now and we hope to have the issue fully resolved for next month.
+
+This is the last month that the INP metric is guaranteed to be available in the CrUX BigQuery, API, and History API both with and without the experimental prefix. We encourage users to move to the non-prefixed field as the experimental prefix fields should now be considered deprecated and will be removed in 30 days.
+
+Notable stats
+ : - 18,065,718 origins
+ : - 44.1% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
 
 ## 202305
 
