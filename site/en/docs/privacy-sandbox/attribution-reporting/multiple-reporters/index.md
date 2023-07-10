@@ -2,9 +2,9 @@
 layout: 'layouts/doc-post.njk'
 title: 'Register multiple reporters'
 subhead: >
-  See how separate entities can generate and receive attribution reports. 
+  Discover how separate entities can generate and receive attribution reports. 
 description: >
-  See how separate entities can generate and receive attribution reports.
+  Discover how separate entities can generate and receive attribution reports.
 date: 2022-03-31
 updated: 2023-07-06
 authors:
