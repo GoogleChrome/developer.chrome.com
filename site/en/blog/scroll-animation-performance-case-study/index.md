@@ -94,9 +94,7 @@ The CPU usage is completely different in DevTools, as shown in the following scr
 
 {% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/v6rDNCu6XO8Nh5ujx0yw.png", alt="Main thread comparison.", width="800", height="450" %}
 
-The following demo shows an application of scroll driven animation created by CyberAgent. You can see that the photo fades in as you scroll.
-
-{% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/xei4to5K1jmr9fCH8QFb.png", alt="CyberAgent Logo", width="800", height="178" %}
+The following demo shows an application of scroll driven animation created by [CyberAgent](https://www.cyberagent.co.jp/en/). You can see that the photo fades in as you scroll.
 
 {% Codepen { user: 'herablog', id: 'dygjeQE' } %}
 
