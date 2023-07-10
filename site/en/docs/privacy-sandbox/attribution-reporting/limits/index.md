@@ -31,7 +31,7 @@ The following sections on click and view events list features and limitations to
 #### View (`event` source)
 
 - `source_event_id` (ad-side information) can be up to 64 bits - large enough to be be used as a unique identifier.
-- `trigger_data` (conversion-side information) is up to 3 bits, i.e. it should be either 0 and 1.
+- `trigger_data` (conversion-side information) is up to 3 bits, i.e. it should be either 0 or 1.
 - Up to 1 conversion can be attributed to a given source (ad click or view event).
 - Noise is applied to reports in the form of a randomized response. The correct conversion count can be recovered via a script.
 - Noise is applied with a 0.0000025 probability (0.00025%) in the current Chrome code.
