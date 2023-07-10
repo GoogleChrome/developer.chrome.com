@@ -76,4 +76,6 @@ The following list notes limitations to keep in mind.
 
 ## Next steps
 
-For more on report schedules, review [Report schedules](/docs/privacy-sandbox/attribution-reporting/schedule/).
+For more on the timing of reports, review:
+- [Report schedules](/docs/privacy-sandbox/attribution-reporting/schedule/)
+- [Custom report windows](/docs/privacy-sandbox/attribution-reporting/custom-report-windows/)
