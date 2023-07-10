@@ -23,9 +23,9 @@ Permissions are not the only difference. As mentioned above, `navigator.geolocat
 
 ### Use geolocation in service workers
 
-There is no `navigator` object inside of service workers. It is only available inside contexts that have access to a page's `document` object. To get access inside of a service worker, use an [`Offscreen Document`]offscreen]. This extension API gives you access to an HTML file that you can bundle with your extension.
+There is no `navigator` object inside of service workers. It is only available inside contexts that have access to a page's `document` object. To get access inside of a service worker, use an [`Offscreen Document`][offscreen], which provides access to an HTML file that you can bundle with your extension.
 
-To get started, add `offscreen` to your manifest's `permissions` section.
+To get started, add `"offscreen"` to your manifest's `"permissions"` section.
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -191,11 +191,11 @@ const location = await getGeolocation()
 
 ### Use geolocation in a popup or side panel {: #geo-ext-pages}
 
-If you want to use geolocation within a [popup][popup] or [side panel][sidepanel], it is very straightforward. Popups and side panels are just web documents and therefore have access to the normal DOM APIs. You can access `navigator.geolocation` directly. The only difference from standard websites would be that you need to use the `manifest.json` `"permission"` field to request the `geolocation` permission. If you do not include the permission, you _will_ still have access to `navigator.geolocation`. However, any attempt to use it will cause an immediate error, the same as if the user rejected the request. You can see this in the [popup sample][popup-sample].
+Using geolocation within a [popup][popup] or [side panel][sidepanel] is very straightforward. Popups and side panels are just web documents and therefore have access to the normal DOM APIs. You can access `navigator.geolocation` directly. The only difference from standard websites is that you need to use the `manifest.json` `"permission"` field to request the `"geolocation"` permission. If you do not include the permission, you _will_ still have access to `navigator.geolocation`. However, any attempt to use it will cause an immediate error, the same as if the user rejected the request. You can see this in the [popup sample][popup-sample].
 
 ### Using geolocation in a content script {: #geo-content }
 
-Just like a popup, a [content script][content] has full access to the DOM API; however, you will go through the normal user permission flow. That means that adding `"geolocation"` to your `permissions` _will not_ automatically give you access to the users' geolocation information. You can see this in the [content script sample][contentscript-sample].
+Just like a popup, a [content script][content] has full access to the DOM API; however, users will go through the normal user permission flow. That means that adding `"geolocation"` to your `"permissions"` _will not_ automatically give you access to the users' geolocation information. You can see this in the [content script sample][contentscript-sample].
 
 [content]: docs/extensions/mv3/content_scripts/
 [contentscript-sample]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.geolocation-contentscript
