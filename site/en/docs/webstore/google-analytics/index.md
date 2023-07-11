@@ -1,0 +1,107 @@
+---
+layout: "layouts/doc-post.njk"
+title: "Using your Google Analytics account with the Chrome Web Store"
+seoTitle: "Using your Google Analytics account with the Chrome Web Store"
+date: 2023-07-11
+description: How to use your Google Analytics account with the Chrome Web Store
+---
+
+The Chrome Web Store offers integration with Google Analytics. This allows you to see analytics for
+your Chrome Web Store listing as an alternative to the view offered in the Developer Dashboard.
+
+If you’re instead looking to track usage of your extension, see
+[Using Google Analytics 4][extensions-ga4].
+
+## Opt-in to Google Analytics
+
+When viewing your item in the [Developer Dashboard][developer-dashboard], find the Additional
+metrics section on the Store listing page. Click "Opt in to Google Analytics".
+
+{% Img src="image/wVNVUJS8Z8O04i1tJKSdsp6nkRQ2/AVqhwuRqmI00g7AVkIDc.png", alt="Opt in UI for Google Analytics in Developer Dashboard", width="800", height="161" %}
+
+Then, head to [https://analytics.google.com/][ga]. You should have access to a new property which
+has been named with your extension ID.
+
+## Limits
+
+Some limits are in place which can not be changed. These include:
+
+- Data retention is set to two months.
+- Data de-identification is enabled, which limits access to non aggregated data to prevent tracking
+an individual user. For example, data may be withheld if it does not meet system-defined
+[thresholds][ga-thresholds].
+
+## Page views {: #page-views }
+
+Each time a user visits your extension listing, you will see a page view for the following URL: `/webstore/detail/ext/free/EXTENSION_ID/EXTENSION_NAME`
+
+When a user installs your extension, the web store also generates a page view for a fake
+`/track_install` URL.
+
+## Events
+
+The Chrome Web Store also sends a number of events to your property:
+
+- [`page_view`][ga-pageview], [`session_start`][ga-sessionstart], [`first_visit`][ga-firstvisit] and
+[`user_engagement`][ga-userengagement]
+- `install`: This is a [custom event][ga-custom-events] sent when a user installs your extension, at
+the same time as the `track_install` page view (see [above](#page-views)). It is only sent if the
+user actually installs your extension (not if they dismiss the permission dialog for example).
+
+## Monitoring ad performance
+
+### Connecting to Google Ads or other services
+
+It is not currently possible to link your Google Analytics property to other services like Google
+Ads. We recommend periodically checking the data in Google Analytics to understand ad performance
+and make decisions about how to optimize campaigns.
+
+### Using UTM parameters
+
+A common use case for developers is monitoring advertising performance. In these cases, it is useful
+to know which ads led to views of your item’s store listing or which resulted in conversions.
+
+You can use the `utm_medium`, `utm_source` and `utm_campaign` parameters for this which are all
+forwarded to Google Analytics. For example, an ad could direct users to the following URL:
+
+[https://chrome.google.com/webstore/detail/action-api-demo/ljjhjaakmncibonnjpaoglbhcjeolhkk?utm_source=ad&utm_medium=cpc&utm_campaign=summer-ad-campaign](https://chrome.google.com/webstore/detail/action-api-demo/ljjhjaakmncibonnjpaoglbhcjeolhkk?utm_source=ad&utm_medium=cpc&utm_campaign=summer-ad-campaign)
+
+You will see the following for the corresponding `page_view` and `install` events:
+
+- Session source: `ad`
+- Session medium: `cpc`
+- Session campaign: `summer-ad-campaign`
+
+The corresponding first user medium/first user campaign/first user source fields will also be set if
+this is the first time the user has visited your extension listing.
+
+{% Aside 'warning' %}
+Note: It can take between 24-48 hours for data to be finalized. Before then, you may see events
+reported with a blank entry for these fields. This will be corrected as the data is finalized.
+{% endAside %}
+
+## Tracking conversions
+
+The install event generated when a user installs your extension can be marked as a conversion event.
+Go to "Admin > Conversions" and choose "New Conversion Event". Enter "install" and click save. The
+event will now appear as a Conversion across your Google Analytics dashboard.
+
+## Giving other accounts access to Google Analytics
+
+To give other Google accounts access to your Google Analytics property, set up a
+[Group Publisher][group-publisher]. Members of this group will be automatically granted access to
+the Google Analytics property. Note that granting access to the linked group means those users can
+act on behalf of the publisher account. This means they can access the Developer Dashboard and edit
+and publish updates to your extensions. Consequently, access should be shared sparingly. It is not
+currently possible to grant access to just the Analytics property.
+
+[developer-dashboard]: https://chrome.google.com/webstore/devconsole/
+[ga]: https://analytics.google.com/
+[ga-thresholds]: https://support.google.com/analytics/answer/9383630
+[ga-pageview]: https://support.google.com/analytics/answer/9234069#page_view
+[ga-sessionstart]: https://support.google.com/analytics/answer/9234069#session_start
+[ga-firstvisit]: https://support.google.com/analytics/answer/9234069#first_visit
+[ga-userengagement]: https://support.google.com/analytics/answer/9234069#user_engagement
+[ga-custom-events]: https://support.google.com/analytics/answer/12229021
+[extensions-ga4]: /docs/extensions/mv3/tut_analytics/
+[group-publisher]: /docs/webstore/group-publishers/
