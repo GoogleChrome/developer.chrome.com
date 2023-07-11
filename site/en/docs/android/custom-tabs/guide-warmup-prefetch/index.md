@@ -12,7 +12,7 @@ The third part of this guide focuses on speeding up the browser startup via [`wa
 
 The required steps are:
 
-1. Check via [`CustomTabsClient`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsClient).[`getPackageName()`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsClient#getPackageName(android.content.Context,java.util.List%3Cjava.lang.String%3E)) If the default browser supports Custom Tabs. If yes, bind to the CustomTabsService via [`CustomTabsClient.bindCustomTabsService()`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsClient#bindCustomTabsService(android.content.Context,java.lang.String,androidx.browser.customtabs.CustomTabsServiceConnection)).
+1. Check via [`CustomTabsClient.getPackageName(...)`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsClient#getPackageName(android.content.Context,java.util.List%3Cjava.lang.String%3E)) If the default browser supports Custom Tabs. If yes, bind to the CustomTabsService via [`CustomTabsClient.bindCustomTabsService()`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsClient#bindCustomTabsService(android.content.Context,java.lang.String,androidx.browser.customtabs.CustomTabsServiceConnection)).
 2. Once connected to the CustomTabsService, in the [`CustomTabsServiceConnection.onCustomTabsServiceConnected()`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsServiceConnection#onCustomTabsServiceConnected(android.content.ComponentName,androidx.browser.customtabs.CustomTabsClient)) callback, do:
 
     a. Warmup the browser process via [`CustomTabsClient.warmup()`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsClient#warmup(long)).
@@ -24,7 +24,7 @@ The required steps are:
 Passing a session to a `CustomTabIntent` will force open the link in a Custom Tab, even if the corresponding native app is installed. If you want to keep the default behavior of opening web links in native apps, you need to additionally follow our [guide on how to check if a link can be handled by an installed native app](/docs/android/custom-tabs/howto-custom-tab-native-apps/).
 {% endAside %}
 
-If your app targets **Android API level 30**, [`CustomTabsClient`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsClient).[`getPackageName()`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsClient#getPackageName(android.content.Context,java.util.List%3Cjava.lang.String%3E)) requires you to add a queries section to your Android Manifest, declaring an intent-filter that matches browsers with Custom Tabs support.
+If your app targets **Android API level 30**, [`CustomTabsClient.getPackageName(...)`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsClient#getPackageName(android.content.Context,java.util.List%3Cjava.lang.String%3E)) requires you to add a queries section to your Android Manifest, declaring an intent-filter that matches browsers with Custom Tabs support.
 
 ```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
