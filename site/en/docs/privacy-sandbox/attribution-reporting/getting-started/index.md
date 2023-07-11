@@ -22,7 +22,6 @@ authors:
   - [Noise lab background](/docs/privacy-sandbox/summary-reports/design-decisions/#appendix)
 {% endAside %}
 
-## What you need to get started
 
 The Attribution Reporting API requires a bit of background understanding and planning before you can implement reporting with the API.
 
@@ -30,19 +29,21 @@ Several of the elements involved in implementation can be understood at both a m
 
 In this guide we list the things you need to be familiar with and the things you need to do to get started, along with a quick overview of the steps you'll take to get ready to generate reports.
  
-## Planning
+## Planning and design decisions
 
 You'll need to develop or adapt your ad and reporting strategy to transition to the Attribution Reporting API. Understanding what data the API can report on, the size constraints of the data, the timing of reports, and how you will prioritize data to be reported will be important.
-
-### Design decisions
 
 Refer to [Design decisions](/docs/privacy-sandbox/summary-reports/design-decisions/) to help you plan your data collection strategy.
 
 You can get started by trying out the steps that follow, and then adapt you strategy to fit, or you can plan your strategy in advance.
 
-This guide is a high-level implemention how-to for developers, not a strategy guide. Strategic planning will likely require a deeper understanding of the internal workings of the API, which is covered in other documentation.
+This guide is a high-level implemention overview for developers, not a strategy guide. Strategic planning will likely require a deeper understanding of the internal workings of the API, which is covered in other documentation, such as [Design decisions](/docs/privacy-sandbox/summary-reports/design-decisions/).
+
+## Understanding report types
 
 Part of your decision making will be to decide whether you'll be starting with event-level reports or summary reports.
+
+### Event-level reports
 
 Event-level reports require less preparation than Aggregatable reports, and can be a good way to dive into the API. Just know that they each serve different use cases.
 
@@ -54,15 +55,7 @@ They are suited for:
 - **Coarse reporting**, where very little information is needed about the conversion. The current limitation is 3 bits of conversion data for clicks⏤this means a conversion can be assigned one of eight categories⏤and 1 bit for views. Encoding of granular conversion-side data, such as a specific price or conversion time is not supported in event-level reports.
 - **Fraud detection**. The data in some reports can be useful for ad fraud detection and analysis, by allowing you to understand patterns that can be used to identify spammy or invalid activity.
 
-Aggregatable reports are used to generate summary reports. An aggregatable report is a combination of data gathered from the ad (on a publisher's site) and conversion data (from the advertiser's site) which is generated and encrypted by the browser on a user's device before it's collected by the ad tech.
-
-Summary reports are not tied to a specific event on the ad side. These reports provide richer, higher-fidelity conversion data than event-level reports. A combination of privacy techniques help reduce the risk of identity joining across sites.
-
-## Important concepts
-
-At a minimum, the Attribution Reporting elements you will need to review to begin implementing the API are listed here.
-
-### Event-level reports
+#### Event-level reports - additional concepts
 
 - [attribution sources](/docs/privacy-sandbox/attribution-reporting/register-attribution-source)
 - [attribution triggers](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger)
@@ -70,9 +63,15 @@ At a minimum, the Attribution Reporting elements you will need to review to begi
 
 Once you're familiar with the concepts for event-level reports and have defined your sources, triggers, set your headers, and defined your endpoints, you're ready to receive event-level reports.
 
-The remainder of this document discusses implementation for Aggregatable report generation.
+The remainder of this document discusses implementation for aggregatable report generation.
 
-### Summary reports
+### Aggregatable reports 
+
+Aggregatable reports are used to generate summary reports. An aggregatable report is a combination of data gathered from the ad (on a publisher's site) and conversion data (from the advertiser's site) which is generated and encrypted by the browser on a user's device before it's collected by the ad tech.
+
+Summary reports are not tied to a specific event on the ad side. These reports provide richer, higher-fidelity conversion data than event-level reports. A combination of privacy techniques help reduce the risk of identity joining across sites.
+
+#### Aggregatable reports - additional concepts
 
 In addition to uderstanding source, triggers, and headers as as noted for event-level reports, for aggregatable reports you'll need few more.
 
@@ -84,13 +83,10 @@ These concepts are:
 - [Noise](/docs/privacy-sandbox/attribution-reporting/understanding-noise)
 - epsilon
 
-## Implementation
 
+### Summary report generation via agregatable reports
 
-
-### Report generation
-
-To generate aggregatable reports, you need to generate contributions as a user clicks or views an ad and later converts. Contributions from many users are then aggregated to produce a summary report. 
+To generate aggregatable reports, which are aggregated to create the end goal, summary reports, you need to generate contributions as a user clicks or views an ad and later converts. Contributions from many users are then aggregated to produce a summary report. 
 
 Before you generate aggregatable reports, you need to define your strategy for summary reports. Review [Attribution Reporting: Strategies and tips for summary reports](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#). 
 
