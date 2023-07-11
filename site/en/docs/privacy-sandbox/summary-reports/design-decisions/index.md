@@ -52,13 +52,13 @@ here. Your suggestions, additions, and questions are welcome!
 There are
 [foundational differences](https://docs.google.com/document/d/1lvrKd5Vv7SYLMGZb0Fz7bpGNEl0LOx9i1waAHw2sUg8/edit#heading=h.ktl1cq7bdlk)
 between how third-party cookies and summary reports operate. One key difference is the
-[noise](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.81usg7c4jnsg) added to measurement data in summary reports.
+[noise](/docs/privacy-sandbox/attribution-reporting/understanding-noise/) added to measurement data in summary reports.
 
 **To access summary report measurement data with higher signal-to-noise
 ratios, demand-side platforms (DSPs) and ad measurement providers will need to
 work with their advertisers to develop noise management strategies.** To develop these strategies, DSPs and measurement providers need to make design decisions. These decisions revolve around one essential concept:
 
-While the distribution _noise values_ are drawn from, absolutely speaking, only depends on two parameters⏤[epsilon and the contribution budget](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.2994euq95tlo)⏤**you have a number of other controls at your disposal that will impact the
+While the distribution _noise values_ are drawn from, absolutely speaking, only depends on two parameters⏤[epsilon and the contribution budget](/docs/privacy-sandbox/attribution-reporting/understanding-noise/#how-noise-is-applied)⏤**you have a number of other controls at your disposal that will impact the
 _signal-to-noise ratios_ of your output measurement data**.
 
 While we expect an iterative process will lead to the best decisions, each variation on these decisions will
@@ -222,7 +222,8 @@ New to [Noise Lab](https://noise-lab.uc.r.appspot.com/)? [Take a quick tour](#qu
 
 Another design decision that will impact the number of attributed conversion
 events within a single bucket is the batching frequency you decide to use. The
-batching frequency is how often you process aggregatable reports.\
+batching frequency is how often you process aggregatable reports.
+
 A report that is scheduled for aggregation more frequently (e.g. each hour) will
 have fewer conversion events included than the same report with a less frequent
 aggregation schedule (e.g. each week). As a result, the hourly report will have
@@ -332,7 +333,7 @@ Given the [core design principle](#core), the noise added is
 a function of the contribution budget.
 
 Therefore, to increase signal-to-noise ratios, you can decide to transform
-values collected during a conversion event by [scaling](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.683u7t2q1xk2) them against the
+values collected during a conversion event by [scaling](/docs/privacy-sandbox/attribution-reporting/working-with-noise/#your-controls-on-noise) them against the
 contribution budget (and de-scaling them after aggregation). **Use scaling to increase signal-to-noise ratios**.
 
 ### Decision: Number of measurement goals, and privacy budget split {: #goals-and-budget}
@@ -457,7 +458,8 @@ A measurement goal is a distinct data point collected in conversion events.
 
 To implement scaling, you would typically calculate a scaling factor based on
 the maximum possible value for a given conversion event
-([learn more in this example](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.t7l1v2w2m4a)).\
+([learn more in this example](/docs/privacy-sandbox/attribution-reporting/working-with-noise/#calculating-a-scaling-factor)).
+
 However, avoid using a literal maximum value to calculate that scaling factor,
 as this would worsen your signal-to-noise ratios. **Instead, remove outliers and
 use a pragmatic maximum value**.
@@ -900,9 +902,9 @@ Let's consider a scenario across two advertisers:
     with only 5% of purchases occurring in the $500 - $1,000 range.
 
 Given the
-[contribution budget requirements](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.pcbjmxqyvd83)
+[contribution budget requirements](/docs/privacy-sandbox/attribution-reporting/contribution-budget/)
 and the methodology with which
-[noise is applied](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.u6r748h70ivc)
+[noise is applied](/docs/privacy-sandbox/attribution-reporting/understanding-noise/#how-noise-is-applied)
 to the end results, Advertiser B will, by default, have a noisier output than
 Advertiser A, as Advertiser B has a higher potential for outliers to impact the
 underlying calculations.
