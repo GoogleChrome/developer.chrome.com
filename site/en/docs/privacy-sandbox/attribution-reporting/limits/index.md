@@ -1,10 +1,10 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Size constraints of Aggregation Reporting data'
+title: 'Constraints on Aggregation Reporting data'
 subhead: >
-  Understand the requirements for destinations, attributions, reporting origins, and the impact on schedules.
+  Understand the data constraints, requirements for destinations and origins, and the impact on schedules.
 description: >
-  Understand the requirements for destinations, attributions, reporting origins, and the impact on schedules.
+  Understand the data constraints, requirements for destinations and origins, and the impact on schedules.
 date: 2022-03-31
 updated: 2023-07-15
 authors:
