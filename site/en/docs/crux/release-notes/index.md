@@ -45,14 +45,14 @@ In the list below, we've curated some release notes for each monthly dataset. Su
 
 ## 202306
 
-[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/?????)
+[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/AaW8rohYfHk)
 
 Publication date
  : Jul 11, 2023
 
 What's new
 
-We have finally made progress on the long-standing root page redirect issue [mentioned last month](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/13hl37E28RE). Some origins which redirect their root page, and were therefore excluded from CrUX due to our lack of handling this properly, should now start to be included again from this month. Please note that some origins are still affected by a related issue. However, it is great that we have made some good progress on this now and we hope to have the issue fully resolved for next month.
+I am pleased to say that we have finally made progress on the long-standing root page redirect issue [mentioned last month](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/13hl37E28RE). Some origins which redirect their root page, and were therefore excluded from CrUX due to our lack of handling this properly, should now start to be included again from this month. Please note that some origins are still being resolved so not all origins are in this month's dataset. However, it is great that we have made some good progress on this now and we hope to have the issue fully resolved in the near future.
 
 This is the last month that the INP metric is guaranteed to be available in the CrUX BigQuery, API, and History API both with and without the experimental prefix. We encourage users to move to the non-prefixed field as the experimental prefix fields should now be considered deprecated and will be removed in 30 days.
 
