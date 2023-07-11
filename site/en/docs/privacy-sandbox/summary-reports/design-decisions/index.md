@@ -457,8 +457,7 @@ A measurement goal is a distinct data point collected in conversion events.
 {% endAside %}
 
 To implement scaling, you would typically calculate a scaling factor based on
-the maximum possible value for a given conversion event 
-([learn more in this example](/docs/privacy-sandbox/attribution-reporting/working-with-noise/#calculating-a-scaling-factor)).
+the maximum possible value for a given conversion event ([learn more in this example](/docs/privacy-sandbox/attribution-reporting/working-with-noise/#calculating-a-scaling-factor)).
 
 However, avoid using a literal maximum value to calculate that scaling factor,
 as this would worsen your signal-to-noise ratios. **Instead, remove outliers and
