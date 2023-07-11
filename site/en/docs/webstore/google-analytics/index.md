@@ -12,7 +12,7 @@ your Chrome Web Store listing as an alternative to the view offered in the Devel
 If you’re instead looking to track usage of your extension, see
 [Using Google Analytics 4][extensions-ga4].
 
-## Opt-in to Google Analytics
+## Opt-in to Google Analytics {: #opt-in }
 
 When viewing your item in the [Developer Dashboard][developer-dashboard], find the Additional
 metrics section on the Store listing page. Click "Opt in to Google Analytics".
@@ -22,7 +22,7 @@ metrics section on the Store listing page. Click "Opt in to Google Analytics".
 Then, head to [https://analytics.google.com/][ga]. You should have access to a new property which
 has been named with your extension ID.
 
-## Limits
+## Limits {: #limits }
 
 Some limits are in place which can not be changed. These include:
 
@@ -38,7 +38,7 @@ Each time a user visits your extension listing, you will see a page view for the
 When a user installs your extension, the web store also generates a page view for a fake
 `/track_install` URL.
 
-## Events
+## Events {: #events }
 
 The Chrome Web Store also sends a number of events to your property:
 
@@ -48,15 +48,15 @@ The Chrome Web Store also sends a number of events to your property:
 the same time as the `track_install` page view (see [above](#page-views)). It is only sent if the
 user actually installs your extension (not if they dismiss the permission dialog for example).
 
-## Monitoring ad performance
+## Monitoring ad performance {: #monitor-performance }
 
-### Connecting to Google Ads or other services
+### Connecting to Google Ads or other services {: #connect-other-services }
 
 It is not currently possible to link your Google Analytics property to other services like Google
 Ads. We recommend periodically checking the data in Google Analytics to understand ad performance
 and make decisions about how to optimize campaigns.
 
-### Using UTM parameters
+### Using UTM parameters {: #utm-params }
 
 A common use case for developers is monitoring advertising performance. In these cases, it is useful
 to know which ads led to views of your item’s store listing or which resulted in conversions.
@@ -80,13 +80,13 @@ Note: It can take between 24-48 hours for data to be finalized. Before then, you
 reported with a blank entry for these fields. This will be corrected as the data is finalized.
 {% endAside %}
 
-## Tracking conversions
+## Tracking conversions {: #track-conversions }
 
 The install event generated when a user installs your extension can be marked as a conversion event.
 Go to "Admin > Conversions" and choose "New Conversion Event". Enter "install" and click save. The
 event will now appear as a Conversion across your Google Analytics dashboard.
 
-## Giving other accounts access to Google Analytics
+## Giving other accounts access to Google Analytics {: #grant-access }
 
 To give other Google accounts access to your Google Analytics property, set up a
 [Group Publisher][group-publisher]. Members of this group will be automatically granted access to
