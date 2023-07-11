@@ -243,7 +243,7 @@ self.addEventListener('fetch', (event) => {
         }
 
         // Otherwise, hit the network
-        return fetch(event.request).then((fetchedResponse) => {
+        return fetch(event.request.url).then((fetchedResponse) => {
           // Add the network response to the cache for later visits
           cache.put(event.request, fetchedResponse.clone());
 
