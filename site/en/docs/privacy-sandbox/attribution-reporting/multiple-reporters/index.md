@@ -28,9 +28,12 @@ At source registration time:
 1. `reporter-1.example` receives a request from the browser.
 1. `reporter-1.example` sends a response that contains the Attribution-Reporting-Register-Source header. It could be a regular response but, in this example, it's a redirect to `reporter-2.example` because `reporter-2.example` is another reporter looking to generate and receive attribution reports.
 Note: If `reporter-1` intends to rely completely on `reporter-2` as a measurement service, and does not intend to do any measurement themselves, `reporter-1.example` can omit the `Attribution-Reporting-Register-Source` header.
-1. The browser receives this response. It reads `Attribution-Reporting-Register-Source` and hence stores a source event, using `reporter-1.example` as the reporting origin. Because this request is a redirect, the browser also makes a new request to `reporter-2.example`.
+1. The browser receives this response. It reads `Attribution-Reporting-Register-Source` and hence stores a source event, using `reporter-1.example` as the reporting origin. 
+1. Because this request is a redirect, the browser also makes a new request to `reporter-2.example`.
 1. `reporter-2.example` responds with a regular response that contains the `Attribution-Reporting-Register-Source` header. The destination value in this header must be identical to the destination value of the `Attribution-Reporting-Register-Source` header set by `reporter-1.example`. Otherwise, the source will not be registered.
 1. The browser receives this response; it reads `Attribution-Reporting-Register-Source` and stores a source event, using `reporter-2.example` as the reporting origin.
+
+{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/93ZtppXGK51JShTDvO94.png", alt="ALT_TEXT_HERE", width="800", height="426" %}
 
 
 ## Rely on `attributionsrc` instead of redirects
