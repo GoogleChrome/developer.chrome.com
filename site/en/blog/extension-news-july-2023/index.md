@@ -15,11 +15,11 @@ alt: >
 
 So far, 2023 has been a busy year in the world of Chrome extensions. Your valuable feedback has allowed us to improve the extension platform and our documentation. We also continue collaborating with other browser vendors in the [WebExtensions Community Group][wecg] so that extension APIs work more consistently across browsers. 
 
-Hi, I'm Amy, a technical writer for the Chrome extension team. In this post, I'm excited to share with you a few changes that the Chrome extension team has worked on during the first half of this year and what upcoming features will be released later this quarter. Let's get started!
+In this post, we’ll share with you a few changes that the Chrome extension team has worked on during the first half of this year and what upcoming features will be released later this quarter. Let's get started!
 
 {% Aside %}
 
-But if you're like me (TL;DR), feel free to jump to the [Coming soon...][sec-coming-apis] section for new extension features you can start looking forward to 🙂.
+If you’d like a TL;DR, feel free to jump to the [Coming soon...][sec-coming-apis] section for new extension features you can start looking forward to 🙂.
 
 {% endAside %}
 
@@ -97,7 +97,7 @@ documentation issues on [developer.chrome.com][github-dcc].
 
 ## 💡 Did you know? {: #tips }
 
-Before we wrap up, I wanted to share a couple of useful tools and insights:
+Before we wrap up, we wanted to share a couple of useful tools and insights:
 
 - In Chrome 115, you can access devices via [WebHID from your Chrome extension][gh-webhid].
 - [Puppeteer][puppeteer] now supports testing in headless mode with [Chrome's headless "new"][chrome-headless].
