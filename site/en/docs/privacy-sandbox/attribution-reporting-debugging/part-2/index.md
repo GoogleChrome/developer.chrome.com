@@ -49,7 +49,7 @@ Check that you've applied best practices for API integration
 - (Not required during the testing phase: Check that you've set a [Permissions-Policy](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit#heading=h.ju0kr1sopvhz))
 
 {% Aside 'gotchas' %}
-Permissions-Policy requirements have been [relaxed](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit#bookmark=id.qoybi4lx0dka) for testing, but a publisher or advertiser can still decide to explicitly disable the Attribution Reporting API via Permissions-Policy. In this case, no source nor trigger can be recorded (and hence no report can be generated or sent).
+Permissions-Policy requirements have been [relaxed](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit#bookmark=id.qoybi4lx0dka) for testing, but a publisher or advertiser can still decide to explicitly disable the Attribution Reporting API using the Permissions-Policy. In this case, no source or trigger can be recorded (and therefore, no report can be generated or sent).
 {% endAside %}
 
 {% endDetails %}
