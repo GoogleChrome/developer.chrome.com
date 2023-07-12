@@ -51,17 +51,17 @@ The following demo shows the same progress bar using the new API with CSS.
 
 ```css
 @keyframes grow-progress {
-	from {
-		transform: scaleX(0);
-	}
-	to {
-		transform: scaleX(1);
-	}
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
 }
 
 #progress {
-	animation: grow-progress auto linear forwards;
-	animation-timeline: scroll(block root);
+  animation: grow-progress auto linear forwards;
+  animation-timeline: scroll(block root);
 }
 ```
 
@@ -71,14 +71,14 @@ Now here’s the interesting part—let’s say that you implemented a super-hea
 
 ```js
 function someHeavyJS(){
-	let time = 0;
-	window.setInterval(function () {
-		time++;
-		for (var i = 0; i < 1e9; i++) {
-			result = i;
-		}
-		console.log(time)
-	}, 100);
+  let time = 0;
+  window.setInterval(function () {
+    time++;
+    for (var i = 0; i < 1e9; i++) {
+      result = i;
+    }
+    console.log(time)
+  }, 100);
 }
 ```
 
@@ -104,18 +104,18 @@ The benefit of the new API is not only limited to CSS. You are able to create si
 
 ```js
 const progressbar = document.querySelector('#progress');
-	progressbar.style.transformOrigin = '0% 50%';
-	progressbar.animate(
-		{
-			transform: ['scaleX(0)', 'scaleX(1)'],
-		},
-		{
-			fill: 'forwards',
-			timeline: new ScrollTimeline({
-				source: document.documentElement,
-			}),
-		}
-	);
+progressbar.style.transformOrigin = '0% 50%';
+progressbar.animate(
+  {
+    transform: ['scaleX(0)', 'scaleX(1)'],
+  },
+  {
+    fill: 'forwards',
+    timeline: new ScrollTimeline({
+      source: document.documentElement,
+    }),
+  }
+);
 ```
 
 This enables you to create the same progress bar animation shown in the previous CSS demo using just JavaScript. The underlying technology is the same as the CSS version. The API tries to use as few main thread resources as possible, making the animations far smoother when compared to the classic JavaScript approach. 
