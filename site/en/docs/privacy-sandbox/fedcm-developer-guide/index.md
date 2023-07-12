@@ -649,7 +649,7 @@ Auto-reauthenticating users immediately after they sign out would not make for a
 very good user experience. That's why FedCM has a 10-minute quiet period after 
 an auto-reauthn to prevent this behavior. This means that auto-reauthn happens 
 at most once in every 10-minutes unless the user signs back in within 
-10-minutes. The RP should call navigator.credentials.preventSilentAccess() to 
+10-minutes. The RP should call `navigator.credentials.preventSilentAccess()` to 
 explicitly request the browser to disable auto-reauthn when a user signs out of 
 the RP explicitly, for example, by clicking a sign-out button.
 
