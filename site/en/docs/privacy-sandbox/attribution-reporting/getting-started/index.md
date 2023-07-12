@@ -41,11 +41,11 @@ This guide is a high-level implemention overview for developers, not a strategy 
 
 ## Understanding report types
 
-Part of your decision making will be to decide whether you'll be starting with event-level reports or summary reports.
+The Attribution Reporting API is designed to allow you to generate two types of reports: event-level and summary reports. Part of your decision making will be to decide whether you'll be starting with event-level reports or summary reports.
 
 ### Event-level reports
 
-Event-level reports require less preparation than Aggregatable reports, and can be a good way to dive into the API. Just know that they each serve different use cases.
+Event-level reports require less preparation than aggregatable reports, and can be a good way to dive into the API. Just know that they each serve different use cases.
 
 Event-level reports associate an ad click or view with coarse conversion data. 
 
@@ -105,32 +105,26 @@ Aggregatable reports are generated similarly to event-level reports. To be able 
 Before you can register sources and triggers and get reports, your sites need to have SSL/TLS certificates; in other words, you need to be running over HTTPS.
 {% endAside %}
 
-1. **Register a source:**
-    1. [Registering a source](/docs/privacy-sandbox/attribution-reporting/register-attribution-source) is the same processs for both event-level and aggregatable reports.
-    1. In the `Attribution-Reporting-Register-Source` header add the
-        necessary fields to generate aggregatable or event-level reports. These fields include:
+1. **Register a source.** [Registering a source](/docs/privacy-sandbox/attribution-reporting/register-attribution-source) is the same processs for both event-level and aggregatable reports. 
+    1. In the `Attribution-Reporting-Register-Source` header add the necessary fields to generate aggregatable or event-level reports. These fields include:
+
         - `source_event_id`
         - `destination`
         - `expiry` (optional)
         - `debug_key`
         - `aggregation_keys` (for aggregatable reports)
         - `debug_reporting`
-        - `event_trigger_data` (for event-level reports only)
-         (refer to the
-        [Example code](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/main/attribution-reporting/functions/apps/adtech.js)).
+        - `event_trigger_data` (for event-level reports only)[refer to the
+        Example code](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/main/attribution-reporting/functions/apps/adtech.js).
+    {% Aside %}
+    While headers can be used for both event-level and aggregatable reports, the content of the headers will be different for each of these report types. For example, if you omit `event_trigger_data`, event-level reports will not be generated.
+    {% endAside %}
 
-        {% Aside %}
-        While headers can be used for both event-level and aggregatable reports, the content of the headers will be different for each of these report types. For example, if you omit `event_trigger_data`, event-level reports will not be generated.
-        {% endAside %}
-      
- 
-1. **Register a trigger:**
-    1. [Registering a trigger](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger) is the same process for both event-level reports and aggregatable reports.
+1. **Register a trigger:** [Registering a trigger](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger) is the same process for both event-level reports and aggregatable reports.
     1. In the `Attribution-Reporting-Register-Trigger` header add the
-        necessary fields to generate aggregatable reports (refer to the
-        [Example code](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/main/attribution-reporting/functions/apps/adtech.js)):
-        - `aggregatable_trigger_data`, with `key_piece` and `source_keys
-`       
+  necessary fields to generate aggregatable reports (refer to the
+  [Example code](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/main/attribution-reporting/functions/apps/adtech.js)):
+        - `aggregatable_trigger_data`, with `key_piece` and `source_keys`       
         - `aggregatable_values`
 
 1. **Set up filters (optional)**:
