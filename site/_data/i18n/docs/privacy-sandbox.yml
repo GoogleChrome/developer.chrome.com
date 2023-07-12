@@ -133,3 +133,5 @@ fledge-api:
   en: 'Developer guide'
 paapi-walkthrough:
   en: 'Protected Audience API walkthrough'
+fedcm-developer-guide:
+  en: 'Federated Credential Management API: developer guide'
