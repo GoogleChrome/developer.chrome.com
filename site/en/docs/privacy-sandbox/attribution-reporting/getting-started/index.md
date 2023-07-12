@@ -13,21 +13,20 @@ authors:
 <!-- from Generating aggregatable reports in https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit#heading=h.5nnh1qxxsa01 -->
 
 {% Aside %}
+<strong>Relevance</strong>
+
+- This document applies to both event-level and summary reports.
+
 <strong>Hands-on resources</strong>
 
-- [Attribution Reporting API demo](https://arapi-home.web.app/)
-  - [Demo background]()
-
-- [Noise lab](https://noise-lab.uc.r.appspot.com/?mode=simple)
-  - [Noise lab background](/docs/privacy-sandbox/summary-reports/design-decisions/#appendix)
+- [Attribution Reporting API demo](https://arapi-home.web.app/), [Demo background]()
+- [Noise lab](https://noise-lab.uc.r.appspot.com/?mode=simple), [Noise lab background](/docs/privacy-sandbox/summary-reports/design-decisions/#appendix)
 {% endAside %}
 
 
 The Attribution Reporting API requires a bit of background understanding and planning before you can implement reporting with the API.
 
-Several of the elements involved in implementation can be understood at both a more superficial level and a deeper level.
-
-In this guide we list the things you need to be familiar with and the things you need to do to get started, along with a quick overview of the steps you'll take to get ready to generate reports.
+In this guide we present the ideas you need to be familiar with and the things you need to do to get started, along with a quick overview of the steps you'll take to get ready to generate reports.
  
 ## Planning and design decisions
 
@@ -35,33 +34,33 @@ You'll need to develop or adapt your ad and reporting strategy to transition to 
 
 Refer to [Design decisions](/docs/privacy-sandbox/summary-reports/design-decisions/) to help you plan your data collection strategy.
 
-You can get started by trying out the steps that follow, and then adapt you strategy to fit, or you can plan your strategy in advance.
+You can get started by trying out the steps that follow, and then adapt your strategy to fit, or you can plan your strategy in advance.
 
 This guide is a high-level implemention overview for developers, not a strategy guide. Strategic planning will likely require a deeper understanding of the internal workings of the API, which is covered in other documentation, such as [Design decisions](/docs/privacy-sandbox/summary-reports/design-decisions/).
 
 ## Understanding report types
 
-The Attribution Reporting API is designed to allow you to generate two types of reports: event-level and summary reports. Part of your decision making will be to decide whether you'll be starting with event-level reports or summary reports.
+The Attribution Reporting API is designed to allow you to generate two types of reports: event-level and summary reports. Part of your decision making will be to decide whether you'll be starting with event-level reports or summary reports. 
+
+It's important to note that aggregatable reports represent data that is eventually aggregated and summarized to produce summary reports. They can be thought of as an intermediate step in the generation of summary reports, which are the reports containing data that can be read by advertisers and ad techs.
 
 ### Event-level reports
 
-Event-level reports require less preparation than aggregatable reports, and can be a good way to dive into the API. Just know that they each serve different use cases.
+Event-level reports require less preparation than aggregatable reports, and can be a good way to dive into the API. Just know that each report type serves different use cases.
 
-Event-level reports associate an ad click or view with coarse conversion data. 
-
-They are suited for:
+Event-level reports associate an ad click or view with coarse conversion data. They are suited for:
 
 - **Optimization**. Event-level reports help answer questions like "How can I improve my return on investment?". In particular, these reports can be used to optimize for ad placement, since a unique ID for the ad side can be made available in the reports. Event-level reports can provide training data for machine learning models.
 - **Coarse reporting**, where very little information is needed about the conversion. The current limitation is 3 bits of conversion data for clicks⏤this means a conversion can be assigned one of eight categories⏤and 1 bit for views. Encoding of granular conversion-side data, such as a specific price or conversion time is not supported in event-level reports.
 - **Fraud detection**. The data in some reports can be useful for ad fraud detection and analysis, by allowing you to understand patterns that can be used to identify spammy or invalid activity.
 
-#### Event-level reports - additional concepts
+#### Event-level report concepts
 
 - [attribution sources](/docs/privacy-sandbox/attribution-reporting/register-attribution-source)
 - [attribution triggers](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger)
 - request and response headers
 
-Once you're familiar with the concepts for event-level reports and have defined your sources, triggers, set your headers, and defined your endpoints, you're ready to receive event-level reports.
+Once you're familiar with the concepts for event-level reports and have defined your [sources](#source), [triggers](#trigger), set your headers, and defined your [endpoints](#endpoints), you're ready to receive event-level reports.
 
 The remainder of this document discusses implementation for aggregatable report generation.
 
@@ -105,6 +104,8 @@ Aggregatable reports are generated similarly to event-level reports. To be able 
 Before you can register sources and triggers and get reports, your sites need to have SSL/TLS certificates; in other words, you need to be running over HTTPS.
 {% endAside %}
 
+{: #source}
+
 1. **Register a source.** [Registering a source](/docs/privacy-sandbox/attribution-reporting/register-attribution-source) is the same processs for both event-level and aggregatable reports. 
     1. In the `Attribution-Reporting-Register-Source` header add the necessary fields to generate aggregatable or event-level reports. These fields include:
 
@@ -119,7 +120,7 @@ Before you can register sources and triggers and get reports, your sites need to
     {% Aside %}
     While headers can be used for both event-level and aggregatable reports, the content of the headers will be different for each of these report types. For example, if you omit `event_trigger_data`, event-level reports will not be generated.
     {% endAside %}
-
+{: #trigger}
 1. **Register a trigger:** [Registering a trigger](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger) is the same process for both event-level reports and aggregatable reports.
     1. In the `Attribution-Reporting-Register-Trigger` header add the
   necessary fields to generate aggregatable reports (refer to the
@@ -134,7 +135,7 @@ Before you can register sources and triggers and get reports, your sites need to
         the
         [explainer](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATE.md).
 
-1. **Set up endpoints for the reports:**
+1. **Set up endpoints for the reports:** {: #endpoints}
     1. Set up an endpoint for **aggregatable** reports with
         the following URL:
         `{REPORTING_ENDPOINT}/.well-known/attribution-reporting/report-aggregate-attribution`
@@ -168,6 +169,7 @@ Note that this check alone isn't a guarantee that the API is usable on that page
 
 
 ## Next steps
+
 (separate by type)
 If you're ready to begin implementation, check out these docs:
 - [Register an attribution trigger](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger)
@@ -181,4 +183,5 @@ If you're still in the planning stage, take a look at these docs:
 - [Design decisions](/docs/privacy-sandbox/summary-reports/design-decisions/) 
 - [Contribution budget](/docs/privacy-sandbox/attribution-reporting/contribution-budget/)
 - [Understanding noise](/docs/privacy-sandbox/attribution-reporting/understanding-noise/) 
+
 
