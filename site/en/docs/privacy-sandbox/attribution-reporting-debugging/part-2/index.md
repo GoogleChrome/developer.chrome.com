@@ -37,7 +37,7 @@ Check that you've applied best practices for API integration
 
 {% endDetailsSummary %}
 
-- Check that your code is gated behind feature detection. Before you use the API, detect if it hasn't been disallowed on the page via a Permissions-Policy. To do so, run the following code:
+- Check that your code is gated behind feature detection. To determine if it's allowed, run the following code:
 
   ```javascript
   if (document.featurePolicy.allowsFeature('attribution-reporting')) {
