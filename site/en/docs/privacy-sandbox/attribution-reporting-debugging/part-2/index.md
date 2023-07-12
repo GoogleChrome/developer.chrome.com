@@ -37,7 +37,7 @@ Check that you've applied best practices for API integration
 
 {% endDetailsSummary %}
 
-- Check that your code is gated behind feature detection. To determine if it's allowed, run the following code:
+- Check that your code is gated behind feature detection. To determine if the API is not blocked by Permissions-Policy, run the following code:
 
   ```javascript
   if (document.featurePolicy.allowsFeature('attribution-reporting')) {
