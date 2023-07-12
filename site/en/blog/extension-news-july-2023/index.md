@@ -31,7 +31,7 @@ In this section, I want to highlight some significant API launches, briefly revi
 
 #### Offscreen documents {: #offscreen-api }
 
-The [Offscreen API][api-offscreen] was introduced in Chrome 109. It allows Manifest V3 extensions to handle use cases that need interaction with the DOM or window, which cannot be performed in the extension service worker. Also, Chrome 114 introduced two additional reasons: `'WORKERS'` for instances when your document needs to spawn a worker and `'LOCAL_STORAGE'` to help migrate data from window.localStorage or window.sessionStorage to [chrome.storage API][mv3-localstorage]. 
+The [Offscreen API][api-offscreen] was introduced in Chrome 109. It allows Manifest V3 extensions to handle use cases that need interaction with the DOM or window, which cannot be performed in the extension service worker. Also, Chrome 114 introduced two additional reasons: `'WORKERS'` for instances when your document needs to spawn a worker and `'LOCAL_STORAGE'` to help migrate data from window.localStorage to [chrome.storage API][mv3-localstorage]. 
 
 Starting in Chrome 115, you can provide multiple reasons when creating an offscreen document. This allows you to perform two related tasks in the same document.
 
