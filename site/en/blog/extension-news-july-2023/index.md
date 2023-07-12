@@ -43,7 +43,7 @@ In the past, the only way to create sidebars in extensions was by injecting a ne
 
 #### More robust Service Workers {: #sw }
 
-All extension events now restart the extension service worker's idle timer. In Chrome 110, the hard five-minute maximum lifetime was removed for extension service workers. Also, messages to [native applications][doc-native-msg] and [messages within the extension][doc-messages] restart the idle timer. Read more about it in the [Longer extension service worker timelines][blog-sw-lifetimes] blog post.
+All extension events now restart the extension service worker's idle timer. In Chrome 110, the hard five-minute maximum lifetime was removed for extension service workers. Also, messages to [native applications][doc-native-msg] and [messages within the extension][doc-messages] restart the idle timer. Read more about it in [The extension service worker lifecycle][sw-lifecycle] article.
 
 ### More API launches {: #apis-others }
 
@@ -76,7 +76,7 @@ documentation issues on [developer.chrome.com][github-dcc].
 ### Highlights {: #doc-highlights }
 
 - The new [MV3 Migration][mv3-migration] section provides practical ways to convert Manifest V2 extensions to Manifest V3.
-- The [Extension service workers][sw-explainer] guide provides detailed information on extension service workers topics. These include how they are registered and updated, what the lifecycle look like, how imports work, and more.
+- The [Extension service workers][sw-explainer] guide provides detailed information on extension service workers topics. These include how they are registered and updated, what the lifecycle looks like, how imports work, and more.
 - The [Handle events with service workers][sw-tut] tutorial teaches the basics of extension service workers. It builds an omnibox extension that gives you quick access to extension API reference pages.
 
 ### More updates {: #doc-others }
@@ -155,6 +155,7 @@ Thanks again for being a part of the extension developer community!
 [storage-local]: /docs/extensions/reference/storage/#property-local
 [storage-session]: /docs/extensions/reference/storage/#property-session
 [sw-explainer]: /docs/extensions/#service-workers
+[sw-lifecycle]: /docs/extensions/mv3/service_workers/service-worker-lifecycle/#timeouts
 [sw-tut]: /docs/extensions/mv3/getstarted/tut-quick-reference/
 [tut-capture]: /docs/extensions/mv3/screen_capture/
 [tut-debug]: /docs/extensions/mv3/tut_debugging/
