@@ -142,6 +142,20 @@ chrome.sidePanel
 With `openPanelOnActionClick()` enabled, you can also open the side panel using a keyboard shortcut by specifying an [action command][action-commands] in the manifest as featured in the [Tab-specific side panel][sample-sp-google] sample.
 {% endAside %}
 
+### Open the side panel with a user interaction {: #user-interaction }
+
+Chrome 116 introduces `sidepanel.open()`. This feature allows extensions to invoke the side panel through user interactions, such as an [action.click](TBD), a [keyboard shortcut](TBD), a [context menu][api-menu], or even a button click in an extension page. You can also specify the context in which to open the panel:
+
+- `windowId`: side panel across all tabs within the indicated window.
+- `tabId`: Opens the side panel on a specific tab.
+
+
+The following example shows how to open it in all the tabs of the current window through a context menu:
+
+```js
+// Sample goes here
+```
+
 ### Switch to a different panel {: #multi-panels }
 
 Extensions can use [`sidepanel.getOptions()`][sidepanel-getoptions] to retrieve the current side panel. The following example sets a welcome side panel on [`runtime.onInstalled()`][runtime-oninstalled]. Then when the user navigates to a different tab, it replaces it with the main side panel.
@@ -193,19 +207,22 @@ Using a keyboard shortcut
 
 For more Side Panel API extensions demos, explore any of the following extensions:
 
-- [Site-specific side panel][sample-sp-google].
-- [Multiple side panels][sample-sp-multiple].
-- [Global side panel][sample-sp-global].
 - [Dictionary side panel][sample-sp-dictionary].
+- [Global side panel][sample-sp-global].
+- [Multiple side panels][sample-sp-multiple].
+- [Open side panel with a user interaction][sample-sp-open].
+- [Site-specific side panel][sample-sp-google].
 
 [action-commands]: /docs/extensions/reference/commands/#action-commands
 [api-action]: /docs/extensions/reference/action/
+[api-menu]: /docs/extensions/reference/contextMenus/
 [doc-manifest]: /docs/extensions/mv3/manifest/
 [runtime-oninstalled]: /docs/extensions/reference/runtime/#event-onInstalled
 [sample-sp-dictionary]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.sidepanel-dictionary
 [sample-sp-global]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.sidepanel-global
 [sample-sp-google]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.sidepanel-site-specific
 [sample-sp-multiple]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.sidepanel-multiple
+[sample-sp-open]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.sidepanel-open
 [sidepanel-getoptions]:#method-getOptions
 [sidepanel-set-behavior]: #method-setPanelBehavior
 [sidepanel-setoptions]: #method-setOptions
