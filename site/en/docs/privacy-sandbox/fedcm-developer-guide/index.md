@@ -561,8 +561,7 @@ let them sign-in and start a new session.
 
 ### Auto-reauthenticate users after the initial consent {: #auto-reauthn }
 
-[FedCM 
-](https://github.com/fedidcg/FedCM/issues/429)[auto-reauthentication](https://github.com/fedidcg/FedCM/issues/429) 
+[FedCM auto-reauthentication](https://github.com/fedidcg/FedCM/issues/429) 
 ("auto-reauthn" in short) can let users reauthenticate automatically, when they 
 come back after their initial authentication using FedCM. "The initial 
 authentication" here means the user creates an account or signs into the RP's 
