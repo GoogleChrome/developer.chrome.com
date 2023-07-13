@@ -105,7 +105,7 @@ documentation issues on [developer.chrome.com][github-dcc].
 Before we wrap up, we wanted to share a couple of useful tools and insights:
 
 - In Chrome 115, you can access devices via [WebHID from your Chrome extension][gh-webhid].
-- [Puppeteer][puppeteer] now supports testing in headless mode with [Chrome's headless "new"][chrome-headless].
+- [Puppeteer][puppeteer] now supports testing in headless mode using `--headless=new` . Read more about it on [Chrome's headless mode upgrade][chrome-headless] blog post.
 - With the [Extension Update Testing Tool][gh-update-tool], you can check what warnings are triggered when permissions change in the manifest. This way, you can experience the update process as a user would. This is important because some permissions might disable the extension until the user grants access again.
 
 ## Let's connect! 🙌 {: #connecting }
