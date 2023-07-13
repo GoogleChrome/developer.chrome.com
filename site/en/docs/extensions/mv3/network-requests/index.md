@@ -137,7 +137,7 @@ chrome.runtime.onMessage.addListener(
   }
 );
 ```
- 
+\n
 ```js
 chrome.runtime.sendMessage(
   {
@@ -172,7 +172,8 @@ chrome.runtime.onMessage.addListener(
   }
 );
 ```
- 
+
+
 ```js
 chrome.runtime.sendMessage(
   {contentScriptQuery: 'queryPrice', itemId: 12345},
