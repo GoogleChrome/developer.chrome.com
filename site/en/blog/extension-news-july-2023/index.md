@@ -5,15 +5,15 @@ description: >
  An overview of the changes so far this year in Chrome Extensions, plus exciting upcoming extension features developers can look forward to.
 date: 2023-07-13
 authors:
- - amysteam
+  - amysteam
 tags:
- - extensions-news
+  - extensions-news
 hero: 'image/BhuKGJaIeLNPW9ehns59NfwqKxF2/jzaO8VCyWJRXKgeIe68T.png'
 alt: >
- What's happening in Chrome extensions?
+  What's happening in Chrome extensions?
 ---
 
-So far, 2023 has been a busy year in the world of Chrome extensions. Your valuable feedback has allowed us to improve the extension platform and our documentation. We also continue collaborating with other browser vendors in the [WebExtensions Community Group][wecg] so that extension APIs work more consistently across browsers. 
+So far, 2023 has been a busy year in the world of Chrome extensions. Your valuable feedback has allowed us to improve the extension platform and our documentation. We also continue collaborating with other browser vendors in the [WebExtensions Community Group][wecg] so that extension APIs work more consistently across browsers.
 
 In this post, we’ll share with you a few changes that the Chrome extension team has worked on during the first half of this year and what upcoming features will be released later this quarter. Let's get started!
 
@@ -39,7 +39,12 @@ Starting in Chrome 115, you can provide multiple reasons when creating an offscr
 
 In the past, the only way to create sidebars in extensions was by injecting a new element with content scripts on every page. In Chrome 114, the [Side Panel API][api-sidepanel] was launched. Now you can develop a companion sidebar experience for users in a much more straightforward way. Read more about how the [Side Panel API allows you to design a superior user experience][blog-sidepanel].
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/OU9486fAP8Dqgrs83L39.png", alt="A dictionary extension that shows the definition of a selected word", width="500", height="537", class="screenshot" %}
+<figure>
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/OU9486fAP8Dqgrs83L39.png", alt="A dictionary extension that shows the definition of a selected word", width="500", height="537", class="screenshot" %}
+  <figcaption>
+  Side panel dictionary extension. See the <a href="https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.sidepanel-dictionary">code</a> in the chrome-extensions-samples repository.
+  </figcaption>
+</figure>
 
 #### More robust Service Workers {: #sw }
 
@@ -47,7 +52,7 @@ All extension events now restart the extension service worker's idle timer. In C
 
 ### More API launches {: #apis-others }
 
-- **Action API**: Starting Chrome 110, you can customize the badge text with [`setBadgeTextColor`()][action-set-color] and [`getBadgeTextColor()`][action-get-color]. Also, [`isEnabled()`][action-isenabled] allows you to check if the action is enabled for the current tab. 
+- **Action API**: Starting Chrome 110, you can customize the badge text with [`setBadgeTextColor`()][action-set-color] and [`getBadgeTextColor()`][action-get-color]. Also, [`isEnabled()`][action-isenabled] allows you to check if the action is enabled for the current tab.
 - **Commands API**: The bug where extension shortcuts, declared in the manifest under [`"commands._execute_action"`][commands-execute-action], would not persist during conversion to MV3, was fixed in [Chrome 111][bug-fix-commands].
 - **Downloads API**: The default downloads UI in Chrome has moved from a shelf at the bottom to the right side of the omnibox. To disable this behavior, you can use [`downloads.setUiOptions()`][downloads-setui] which replaces `setShelfEnabled()`.
 - **History API**: [`chrome.history.getVisits()`][history-get-visits] and [`chrome.history.search()`][history-search] also return data from other devices that have been synced to the local history database. This may result in more history entries and higher visit counts. `isLocal` was added to [`VisitItem`][history-visititem] in Chrome 115 to be able to filter by local visits only.
@@ -63,7 +68,7 @@ Upcoming Chrome versions will introduce many features to make it easier for exte
 - **Runtime API**: We are releasing [`runtime.getContexts()`][runtime-getcontexts] to replace `extension.getViews()`, which is deprecated. This will allow extensions to determine if an extension page like the side panel or offscreen document is open. See the [WECG][wecg-get-contexts] proposal.
 - **Service workers**: We're adding strong keep-alives to Chrome APIs that display a user prompt: [`permissions.request()`][permission-request], [`desktopCapture.chooseDesktopMedia()`][desktop-capture], [`identity.launchWebAuthFlow()`][identity-launchwebflow], and [`management.uninstall()`][management-uninstall].
 - **Side Panel API**: We're launching [`sidepanel.open()`][sidepanel-open], which will open the extension side panel programmatically in response to a user gesture, such as a context menu click.
-- **TabCapture API**: We're adding the ability to call `getMediaStreamId()` from the extension service worker and obtain a MediaStream from a stream ID in an offscreen document. See [Audio recording and screen capture][tut-capture] for examples. 
+- **TabCapture API**: We're adding the ability to call `getMediaStreamId()` from the extension service worker and obtain a MediaStream from a stream ID in an offscreen document. See [Audio recording and screen capture][tut-capture] for examples.
 
 Stay tuned to the [What's new in extensions](/docs/extensions/whatsnew/) page for these announcements as soon as they are made available in [Chrome Beta](https://chromestatus.com/roadmap).
 
@@ -109,7 +114,7 @@ This year, the extension team was happy to meet extension developers in person d
 
 In the meantime, please continue to ask questions on the [chromium-groups][chromium-group], consider participating on the [WECG][wecg], and report any documentation issues on the [developer.chrome.com GitHub repo][github-dcc].
 
-Thanks again for being a part of the extension developer community! 
+Thanks again for being a part of the extension developer community!
 
 [action-get-color]: /docs/extensions/reference/action/#method-getBadgeTextColor
 [action-isenabled]: /docs/extensions/reference/action/#method-isEnabled
@@ -167,4 +172,4 @@ Thanks again for being a part of the extension developer community!
 [wecg]: https://github.com/w3c/webextensions/issues
 [wn-file-handling]: /docs/extensions/whatsnew#the-file-handling-api-comes-to-chromeos
 [yt-io-connect]: https://youtu.be/634qUJ0rJ8I
-[sidepanel-open]:  /docs/extensions/reference/sidepanel/#method-open
+[sidepanel-open]: /docs/extensions/reference/sidepanel/#method-open
