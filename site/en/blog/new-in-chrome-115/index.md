@@ -25,7 +25,9 @@ Here's what you need to know:
 * And there’s plenty [more](#more).
 
 I’m Adriana Jara. Let’s dive in and see what’s new for developers in Chrome 115.
-## Scroll driven animations. {: #scroll-driven-animations}
+
+## Scroll driven animations {: #scroll-driven-animations}
+
 Scroll-driven animations are a common UX pattern on the web. A scroll-driven animation is linked to the scroll position of a scroll container.
 This means that as you scroll up or down, the linked animation goes forward or backward in direct response.
 
