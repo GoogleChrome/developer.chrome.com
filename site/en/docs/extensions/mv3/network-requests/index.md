@@ -81,7 +81,7 @@ non-secure HTTP access to a given host or set of hosts, it must declare the perm
 
 When using resources retrieved via `fetch()`, your extension service worker should be careful not to
 fall victim to [cross-site scripting][9]. Specifically, avoid using dangerous APIs such as
-`innerHTML` or `eval()`. For example:
+`innerHTML`. For example:
 
 
 ```js
