@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Cross-origin network requests"
 seoTitle: "Chrome Extensions: cross-origin network requests"
 date: 2012-09-18
-updated: 2023-05-23
+updated: 2023-07-13
 description: How to implement cross-origin network requests in your Chrome Extension.
 ---
 
@@ -123,26 +123,29 @@ the exact resource to be fetched by the background page.
 {% Compare 'worse', 'Not secure' %}
 ```js
 chrome.runtime.onMessage.addListener(
-    function(request, sender, sendResponse) {
-      if (request.contentScriptQuery == 'fetchUrl') {
-        // WARNING: SECURITY PROBLEM - a malicious web page may abuse
-        // the message handler to get access to arbitrary cross-origin
-        // resources.
-        fetch(request.url)
-            .then(response => response.text())
-            .then(text => sendResponse(text))
-            .catch(error => ...)
-        return true;  // Will respond asynchronously.
-      }
-    });
+  function(request, sender, sendResponse) {
+    if (request.contentScriptQuery == 'fetchUrl') {
+      // WARNING: SECURITY PROBLEM - a malicious web page may abuse
+      // the message handler to get access to arbitrary cross-origin
+      // resources.
+      fetch(request.url)
+        .then(response => response.text())
+        .then(text => sendResponse(text))
+        .catch(error => ...)
+      return true;  // Will respond asynchronously.
+    }
+  }
+);
 ```
-
+ 
 ```js
 chrome.runtime.sendMessage(
-    {contentScriptQuery: 'fetchUrl',
-     url: 'https://another-site.com/price-query?itemId=' +
-              encodeURIComponent(request.itemId)},
-    response => parsePrice(response.text()));
+  {
+    contentScriptQuery: 'fetchUrl',
+    url: `https://another-site.com/price-query?itemId=${encodeURIComponent(request.itemId)}`
+  },
+  response => parsePrice(response.text())
+);
 ```
 {% endCompare %}
 
@@ -156,24 +159,25 @@ Instead, design message handlers that limit the resources that can be fetched. B
 {% Compare 'better' %}
 ```js
 chrome.runtime.onMessage.addListener(
-    function(request, sender, sendResponse) {
-      if (request.contentScriptQuery == 'queryPrice') {
-        const url = 'https://another-site.com/price-query?itemId=' +
-            encodeURIComponent(request.itemId);
-        fetch(url)
-            .then(response => response.text())
-            .then(text => parsePrice(text))
-            .then(price => sendResponse(price))
-            .catch(error => ...)
-        return true;  // Will respond asynchronously.
-      }
-    });
+  function(request, sender, sendResponse) {
+    if (request.contentScriptQuery == 'queryPrice') {
+      const url = `https://another-site.com/price-query?itemId=${encodeURIComponent(request.itemId)}`
+      fetch(url)
+        .then(response => response.text())
+        .then(text => parsePrice(text))
+        .then(price => sendResponse(price))
+        .catch(error => ...)
+      return true;  // Will respond asynchronously.
+    }
+  }
+);
 ```
-
+ 
 ```js
 chrome.runtime.sendMessage(
-    {contentScriptQuery: 'queryPrice', itemId: 12345},
-    price => ...);
+  {contentScriptQuery: 'queryPrice', itemId: 12345},
+  price => ...
+);
 ```
 {% endCompare %}
 
