@@ -2,7 +2,7 @@
 layout: 'layouts/blog-post.njk'
 title: What's happening in Chrome Extensions?
 description: >
- An overview of the changes that have happened so far this year in the Chrome Extension Platform. Plus exciting upcoming new extension features developers can look forward to.
+ An overview of the changes so far this year in Chrome Extensions, plus exciting upcoming extension features developers can look forward to.
 date: 2023-07-13
 authors:
  - amysteam
@@ -31,13 +31,13 @@ In this section, I want to highlight some significant API launches, briefly revi
 
 #### Offscreen documents {: #offscreen-api }
 
-The [Offscreen API][api-offscreen] was introduced in Chrome 109. It allows Manifest V3 extensions to handle use cases that need interaction with the DOM or window, which cannot be performed in the extension service worker. Also, Chrome 114 introduced two additional reasons: `'WORKERS'` for instances when your document needs to spawn a worker and `'LOCAL_STORAGE'` to help migrate data from window.localStorage to [chrome.storage API][mv3-localstorage]. 
+The [Offscreen API][api-offscreen] was introduced in Chrome 109. It allows Manifest V3 extensions to handle use cases that need interaction with the DOM or window, which cannot be performed in the extension service worker. Also, Chrome 114 introduced two additional offscreen reasons: `'WORKERS'` for instances when your document needs to spawn a worker and `'LOCAL_STORAGE'` to help migrate data from `window.localStorage` to the [`chrome.storage` API][mv3-localstorage]. 
 
 Starting in Chrome 115, you can provide multiple reasons when creating an offscreen document. This allows you to perform two related tasks in the same document.
 
 #### New Side Panel API 🎉 {: #side-panel-api }
 
-In the past, the only way to create sidebars in extensions was by injecting a new element with content scripts on every page. In Chrome 114, the [Side Panel API][api-sidepanel] was launched! Now you can develop a companion sidebar experience for users in a much more straightforward way. Read more about how the [Side Panel API allows you to design a superior user experience][blog-sidepanel].
+In the past, the only way to create sidebars in extensions was by injecting a new element with content scripts on every page. In Chrome 114, the [Side Panel API][api-sidepanel] was launched. Now you can develop a companion sidebar experience for users in a much more straightforward way. Read more about how the [Side Panel API allows you to design a superior user experience][blog-sidepanel].
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/OU9486fAP8Dqgrs83L39.png", alt="A dictionary extension that shows the definition of a selected word", width="500", height="537", class="screenshot" %}
 
@@ -51,17 +51,17 @@ All extension events now restart the extension service worker's idle timer. In C
 - **Commands API**: The bug where extension shortcuts, declared in the manifest under [`"commands._execute_action"`][commands-execute-action], would not persist during conversion to MV3, was fixed in [Chrome 111][bug-fix-commands].
 - **Downloads API**: The default downloads UI in Chrome has moved from a shelf at the bottom to the right side of the omnibox. To disable this behavior, you can use [`downloads.setUiOptions()`][downloads-setui] which replaces `setShelfEnabled()`.
 - **History API**: [`chrome.history.getVisits()`][history-get-visits] and [`chrome.history.search()`][history-search] also return data from other devices that have been synced to the local history database. This may result in more history entries and higher visit counts. `isLocal` was added to [`VisitItem`][history-visititem] in Chrome 115 to be able to filter by local visits only.
-- **Identity API**: The authentication window now appears as a popup, instead of occupying a full application window. To grant more control during the process of JavaScript redirects, we have incorporated two new options: [`abortOnLoadForNonInteractive`][identity-abort] and [`timeoutMsForNonInteractive`][identity-timeout].
-- **Storage API**: on Chrome 112 the [`chrome.session`][storage-session] storage size was increased to 10MB. Then [`chrome.local`][storage-local] storage size was matched in Chrome 114.
+- **Identity API**: The authentication window now appears as a popup, instead of occupying a full application window. To grant more control during the process of JavaScript redirects, we have added two new options: [`abortOnLoadForNonInteractive`][identity-abort] and [`timeoutMsForNonInteractive`][identity-timeout].
+- **Storage API**: In Chrome 112 the [`chrome.session`][storage-session] storage size was increased to 10MB. Then [`chrome.local`][storage-local] storage size was changed to match in Chrome 114.
 
 ### Coming soon... {: #coming-soon-apis }
 
-Upcoming Chrome versions will introduce many features to make it easier for extensions to migrate to Manifest V3. For a list of MV3 migration related upcoming changes, check out our [known issues page][mv3-known-issues]. Additionally, we plan to add the following features:
+Upcoming Chrome versions will introduce many features to make it easier for extensions to migrate to Manifest V3. For a list of upcoming MV3 migration-related changes, check out our [known issues page][mv3-known-issues]. Additionally, we plan to add the following features:
 
 - **DeclarativeNetRequest API**: The default value for the [isUrlFilterCaseSensitive][dnr-url-case] property will change to `false`. See the [WECG][wecg-dnr-url-case] thread.
 - The **File Handling API** will allow ChromeOS extensions to open files with specified MIME types and file extensions. This feature is currently [behind a flag][wn-file-handling].
-- **Runtime API**: We are releasing [`runtime.getContexts()`][runtime-getcontexts] to replace `extension.getViews()`, which is deprecated. This will allow extensions to determine if an extension page, like the side panel or offscreen document is open. See the [WECG][wecg-get-contexts] proposal.
-- **Service workers**: We're adding strong keep-alives to Chrome APIs that display a user prompt: [`permissions.request`][permission-request], [`desktopCapture.chooseDesktopMedia()`][desktop-capture], [`identity.launchWebAuthFlow()`][identity-launchwebflow], and [`management.uninstall()`][management-uninstall].
+- **Runtime API**: We are releasing [`runtime.getContexts()`][runtime-getcontexts] to replace `extension.getViews()`, which is deprecated. This will allow extensions to determine if an extension page like the side panel or offscreen document is open. See the [WECG][wecg-get-contexts] proposal.
+- **Service workers**: We're adding strong keep-alives to Chrome APIs that display a user prompt: [`permissions.request()`][permission-request], [`desktopCapture.chooseDesktopMedia()`][desktop-capture], [`identity.launchWebAuthFlow()`][identity-launchwebflow], and [`management.uninstall()`][management-uninstall].
 - **Side Panel API**: We're launching [`sidepanel.open()`][sidepanel-open], which will open the extension side panel programmatically in response to a user gesture, such as a context menu click.
 - **TabCapture API**: We're adding the ability to call `getMediaStreamId()` from the extension service worker and obtain a MediaStream from a stream ID in an offscreen document. See [Audio recording and screen capture][tut-capture] for examples. 
 
@@ -84,8 +84,8 @@ documentation issues on [developer.chrome.com][github-dcc].
 - [Using Google Analytics 4][tut-ga4] demonstrates how to track the usage of your extension popup and service worker events.
 - [Using geolocation][tut-geo] shows how to obtain the geographical location of the extension using the Offscreen API.
 - [Audio recording and screen capture][tut-capture] teaches how to capture audio and video from tabs, windows, or screens using `chrome.tabCapture` and `navigator.mediaDevices.getDisplayMedia()` APIs.
-- We added new debugging tips to the [Debugging extensions][tut-debug] guide.
-- We've updated the [Permission Warnings Guidelines][guide-perm-warn] to make it easier to understand how permission warnings work and how you can provide a better user experience. Also, there are practical ways to check what warnings the user will see.
+- We've added new debugging tips to the [Debugging extensions][tut-debug] guide.
+- We've updated the [Permission warnings guidelines][guide-perm-warn] to make it easier to understand how permission warnings work and how you can provide a better user experience. Also, there are practical ways to check what warnings the user will see.
 - Our team and contributors have also added new Manifest V3 extension samples: [WASM in extensions][gh-wasm], [Scripting API demo][gh-scripting], [Side Panel API cookbooks][gh-sidepanel], and [DeclarativeNetRequest API samples][gh-dnr]. You can explore other extension samples in our [GitHub samples repo][gh-ext-samples].
 
 ### Coming soon... {: #coming-soon-docs }
@@ -101,7 +101,7 @@ Before we wrap up, we wanted to share a couple of useful tools and insights:
 
 - In Chrome 115, you can access devices via [WebHID from your Chrome extension][gh-webhid].
 - [Puppeteer][puppeteer] now supports testing in headless mode with [Chrome's headless "new"][chrome-headless].
-- With the [Extension Update Testing Tool][gh-update-tool], you can check what permission warnings are triggered when permissions change in the manifest. This way, you can experience the update process as a user would. This is important because some permissions might disable the extension until the user grants access again.
+- With the [Extension Update Testing Tool][gh-update-tool], you can check what warnings are triggered when permissions change in the manifest. This way, you can experience the update process as a user would. This is important because some permissions might disable the extension until the user grants access again.
 
 ## Let's connect! 🙌 {: #connecting }
 
