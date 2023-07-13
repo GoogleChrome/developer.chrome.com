@@ -82,14 +82,14 @@ Here’s a code sample that uses an anonymous Scroll Progress Timeline to create
 
 Read [scroll-drive animations](/articles/scroll-driven-animations/) for all the details and more examples.
 
-## Fenced Frames. {: #fenced-frames }
+## Fenced Frames {: #fenced-frames }
 
 The [Privacy Sandbox](/docs/privacy-sandbox/overview/) is an initiative that aims to create technologies that both protect people's privacy online and give developers tools to build thriving digital businesses.
 
 Many of its proposals aim to satisfy cross-site use cases without third-party cookies or other tracking mechanisms. For example:
 
-The [Protected Audience API](/docs/privacy-sandbox/fledge-api/): allows for interest-based ad serving in a privacy-preserving manner.
-[Shared Storage](/docs/privacy-sandbox/shared-storage/): allows access to unpartitioned cross-site data in a secure environment.
+* The [Protected Audience API](/docs/privacy-sandbox/fledge-api/): allows for interest-based ad serving in a privacy-preserving manner.
+* [Shared Storage](/docs/privacy-sandbox/shared-storage/): allows access to unpartitioned cross-site data in a secure environment.
 
 In order to preserve privacy some of these APIs require a new way to embed content. The solution is called a fenced frame.
 
