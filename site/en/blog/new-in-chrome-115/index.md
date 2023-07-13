@@ -149,7 +149,7 @@ For example, let's say `news.example` (the embedding context) embeds an ad from 
 
 Check out these articles for documentation about [Fenced Frames](/docs/privacy-sandbox/fenced-frame/), the [Protected Audience API](/docs/privacy-sandbox/fledge-api/), [Shared Storage](docs/privacy-sandbox/shared-storage/) and more
 
-       ## Topics API. {: #topics-api }
+## Topics API. {: #topics-api }
 
 In the past, third-party cookies and other mechanisms have been used to track user browsing behavior across sites to infer topics of interest. These mechanisms are being phased out as part of the Privacy Sandbox initiative.
 
