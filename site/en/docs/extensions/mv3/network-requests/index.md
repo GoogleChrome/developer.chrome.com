@@ -120,7 +120,6 @@ Consider an example where an extension performs a cross-origin request to let a 
 discover the price of an item. One not-so-secure approach would be to have the content script specify
 the exact resource to be fetched by the background page.
 
-{% Compare 'worse', 'Not secure' %}
 ```js
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
@@ -137,7 +136,7 @@ chrome.runtime.onMessage.addListener(
   }
 );
 ```
-\n
+
 ```js
 chrome.runtime.sendMessage(
   {
@@ -147,7 +146,6 @@ chrome.runtime.sendMessage(
   response => parsePrice(response.text())
 );
 ```
-{% endCompare %}
 
 In the approach above, the content script can ask the extension to fetch any URL that the extension
 has access to. A malicious web page may be able to forge such messages and trick the extension into
@@ -156,7 +154,6 @@ giving access to cross-origin resources.
 Instead, design message handlers that limit the resources that can be fetched. Below, only the
 `itemId` is provided by the content script, and not the full URL.
 
-{% Compare 'better' %}
 ```js
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
@@ -173,14 +170,12 @@ chrome.runtime.onMessage.addListener(
 );
 ```
 
-
 ```js
 chrome.runtime.sendMessage(
   {contentScriptQuery: 'queryPrice', itemId: 12345},
   price => ...
 );
 ```
-{% endCompare %}
 
 ### Preferring HTTPS over HTTP {: #http-man-in-the-middle }
 
