@@ -32,7 +32,7 @@ In this guide we present a quick overview of the steps you'll take to get ready 
 
 You'll need to develop or adapt your ad and reporting strategy to transition to the Attribution Reporting API. Understanding what data the API can report on, the size constraints of the data, the timing of reports, and how you will prioritize data to be reported will be important.
 
-This guide is a high-level implemention overview for developers, not a strategy guide. Strategic planning will likely require a deeper understanding of the internal workings of the API, which is covered in other documentation, such as [Design decisions](/docs/privacy-sandbox/summary-reports/design-decisions/).
+This guide is a high-level implementation overview for developers, not a strategy guide. Strategic planning will likely require a deeper understanding of the internal workings of the API, which is covered in other documentation, such as [Design decisions](/docs/privacy-sandbox/summary-reports/design-decisions/).
 
 ### Choose a report type
 
@@ -89,7 +89,7 @@ You can get started by trying out the steps that follow, and then adapt your str
 
 Once you're familiar with the concepts for [event-level reports](/docs/privacy-sandbox/attribution-reporting/report-types) and have defined your [sources](#source), [triggers](#trigger), set your headers, and defined your [endpoints](#endpoints), you're ready to receive event-level reports.
 
-### Summary report generation via agregatable reports
+### Summary report generation via aggregatable reports
 
 To generate aggregatable reports, which are aggregated to create the end goal, summary reports, you need to generate contributions as a user clicks or views an ad and later converts. Contributions from many users are then aggregated to produce a summary report. 
 
@@ -112,7 +112,7 @@ Before you can register sources and triggers and get reports, your sites need to
 
 {: #source}
 
-1. **Register a source.** [Registering a source](/docs/privacy-sandbox/attribution-reporting/register-attribution-source) is the same processs for both event-level and aggregatable reports. 
+1. **Register a source.** [Registering a source](/docs/privacy-sandbox/attribution-reporting/register-attribution-source) is the same process for both event-level and aggregatable reports. 
     1. In the `Attribution-Reporting-Register-Source` header add the necessary fields to generate aggregatable or event-level reports. These fields include:
 
         - `source_event_id`
