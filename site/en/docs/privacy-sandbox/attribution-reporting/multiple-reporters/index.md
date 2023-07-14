@@ -33,8 +33,7 @@ Note: If `reporter-1` intends to rely completely on `reporter-2` as a measuremen
 1. `reporter-2.example` responds with a regular response that contains the `Attribution-Reporting-Register-Source` header. The destination value in this header must be identical to the destination value of the `Attribution-Reporting-Register-Source` header set by `reporter-1.example`. Otherwise, the source will not be registered.
 1. The browser receives this response; it reads `Attribution-Reporting-Register-Source` and stores a source event, using `reporter-2.example` as the reporting origin.
 
-{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/Q5lXWSigBkxoW1uURco1.png", alt="ALT_TEXT_HERE", width="800", height="424" %}
-
+{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/vEjKJUmV3T77ss7gNUQX.png", alt="ALT_TEXT_HERE", width="800", height="460" %}
 
 ## Rely on `attributionsrc` instead of redirects
 
