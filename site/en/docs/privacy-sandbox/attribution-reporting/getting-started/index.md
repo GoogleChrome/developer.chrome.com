@@ -34,8 +34,6 @@ You'll need to develop or adapt your ad and reporting strategy to transition to 
 
 This guide is a high-level implemention overview for developers, not a strategy guide. Strategic planning will likely require a deeper understanding of the internal workings of the API, which is covered in other documentation, such as [Design decisions](/docs/privacy-sandbox/summary-reports/design-decisions/).
 
-
-
 ### Choose a report type
 
 The Attribution Reporting API is designed to allow you to generate two types of reports: event-level and summary reports. Part of your decision making will be to decide whether you'll be starting with event-level reports or summary reports. 
