@@ -327,7 +327,7 @@ Use [`unmonitorEvents(object[, events])`](#unmonitorEvents-function) to stop mon
 completes the profile and displays the results in the **Performance** > **Main** track.
 
 {% Aside %}
-**Note**: The `profile()` and `profileEnd()` are the shortcuts for [`console.profile()`](https://developer.mozilla.org/docs/Web/API/console/profile) and [`console.profileEnd()`](https://developer.mozilla.org/docs/Web/API/console/profileEnd).
+**Note**: The `profile()` and `profileEnd()` are the shorthands for [`console.profile()`](https://developer.mozilla.org/docs/Web/API/console/profile) and [`console.profileEnd()`](https://developer.mozilla.org/docs/Web/API/console/profileEnd).
 {% endAside %}
 
 To start profiling:
