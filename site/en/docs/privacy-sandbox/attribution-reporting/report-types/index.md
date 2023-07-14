@@ -2,9 +2,9 @@
 layout: 'layouts/doc-post.njk'
 title: 'Report types'
 subhead: >
-  The Attribution Reporting API provides two types of reports.
+  Using the Attribution Reporting API you can generate two types of reports, event-level and summary reports. Learn how they differ, and the most common use cases for each.
 description: >
-  The Attribution Reporting API provides two types of reports.
+  Using the Attribution Reporting API you can generate two types of reports, event-level and summary reports. Learn how they differ, and the most common use cases for each.
 date: 2022-03-01
 updated: 2023-03-14
 authors:
@@ -14,7 +14,7 @@ authors:
 
 <!-- content from https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/system-overview/ -->
 
-The Attribution Reporting API allows you to generate two types of reports.
+The Attribution Reporting API allows you to generate two types of reports--event-level reports and summary reports.
 
 _Event-level reports_ associate a particular ad click or view (on the ad side) with data on the conversion side. To preserve user privacy by limiting the joining of user identity across sites, conversion-side data is very limited, and the data is noisy (meaning that for a small percentage of cases, random data is sent instead of real reports).
 
