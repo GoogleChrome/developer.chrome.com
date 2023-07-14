@@ -38,7 +38,7 @@ This guide is a high-level implemention overview for developers, not a strategy 
 
 The Attribution Reporting API is designed to allow you to generate two types of reports: event-level and summary reports. Part of your decision making will be to decide whether you'll be starting with event-level reports or summary reports. 
 
-For definitions of event-level and summery reports, refer to [report types](/docs/privacy-sandbox/report-types/design-decisions/).
+For definitions of event-level and summary reports, refer to [report types](/docs/privacy-sandbox/report-types/design-decisions/).
 
 <!--
 It's important to note that aggregatable reports represent data that is eventually aggregated and summarized to produce summary reports. They can be thought of as an intermediate step in the generation of summary reports, which are the reports containing data that can be read by advertisers and ad techs.
