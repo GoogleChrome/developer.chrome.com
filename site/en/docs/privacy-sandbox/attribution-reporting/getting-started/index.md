@@ -24,25 +24,23 @@ authors:
 {% endAside %}
 
 
-The Attribution Reporting API requires a bit of background understanding and planning before you can implement reporting with the API.
+The Attribution Reporting API requires a bit of background understanding and planning before you can implement reporting.
 
-In this guide we present the ideas you need to be familiar with and the things you need to do to get started, along with a quick overview of the steps you'll take to get ready to generate reports.
+In this guide we present a quick overview of the steps you'll take to get ready to generate reports.
  
 ## Planning and design decisions
 
 You'll need to develop or adapt your ad and reporting strategy to transition to the Attribution Reporting API. Understanding what data the API can report on, the size constraints of the data, the timing of reports, and how you will prioritize data to be reported will be important.
 
-Refer to [Design decisions](/docs/privacy-sandbox/summary-reports/design-decisions/) to help you plan your data collection strategy.
-
-You can get started by trying out the steps that follow, and then adapt your strategy to fit, or you can plan your strategy in advance.
-
 This guide is a high-level implemention overview for developers, not a strategy guide. Strategic planning will likely require a deeper understanding of the internal workings of the API, which is covered in other documentation, such as [Design decisions](/docs/privacy-sandbox/summary-reports/design-decisions/).
 
-## Understanding report types
+
+
+### Choose a report type
 
 The Attribution Reporting API is designed to allow you to generate two types of reports: event-level and summary reports. Part of your decision making will be to decide whether you'll be starting with event-level reports or summary reports. 
 
-For definition of event-level and summery reports, refer to [report types](/docs/privacy-sandbox/report-types/design-decisions/)
+For definitions of event-level and summery reports, refer to [report types](/docs/privacy-sandbox/report-types/design-decisions/).
 
 <!--
 It's important to note that aggregatable reports represent data that is eventually aggregated and summarized to produce summary reports. They can be thought of as an intermediate step in the generation of summary reports, which are the reports containing data that can be read by advertisers and ad techs.
@@ -85,8 +83,11 @@ These concepts are:
 - [Noise](/docs/privacy-sandbox/attribution-reporting/understanding-noise)
 - epsilon
 -->
+## Implementation
 
-## Report generation
+You can get started by trying out the steps that follow, and then adapt your strategy to fit, or you can plan your strategy in advance.
+
+### Event-level report generation
 
 Once you're familiar with the concepts for [event-level reports](/docs/privacy-sandbox/attribution-reporting/report-types) and have defined your [sources](#source), [triggers](#trigger), set your headers, and defined your [endpoints](#endpoints), you're ready to receive event-level reports.
 
@@ -105,7 +106,7 @@ event-level and an aggregatable report. The
 walks you through the process. 
 {% endAside %}
 
-Aggregatable reports are generated similarly to event-level reports. To be able to generate reports, follow these high-level steps. Each step points to more detailed information as well.
+Aggregatable and event-level reports are generated in a su=imilar manner. To be able to generate reports, follow these high-level steps. Each step points to more detailed information as well.
 
 {% Aside 'important' %}
 Before you can register sources and triggers and get reports, your sites need to have SSL/TLS certificates; in other words, you need to be running over HTTPS.
