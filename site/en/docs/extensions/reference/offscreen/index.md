@@ -2,7 +2,7 @@
 api: offscreen
 ---
 
-Service workers do not have DOM access, and many websites have content security policies that limit the functionality of content scripts. This API allows the extension to use DOM APIs in a hidden document without obtrusively opening new windows or tabs that interrupt the user experience. 
+Service workers do not have DOM access, and many websites have content security policies that limit the functionality of content scripts. This API allows the extension to use DOM APIs in a hidden document without obtrusively opening new windows or tabs that interrupt the user experience. Offscreen documents do not support other Chrome APIs.
 
 ## Manifest
 
