@@ -361,3 +361,6 @@ notifications:
 
 sensors:
   en: Sensors
+
+pwa:
+  en: Progressive web apps

@@ -8,7 +8,7 @@ location: Virtual
 date: 2022-10-05
 externalUrl: https://pwasummit.org
 sessions:
-  - speaker: adrianajara
+  - speaker: ajara
     title: >-
       Expanding developer control on PWA installation
     description: >-

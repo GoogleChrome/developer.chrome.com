@@ -562,11 +562,6 @@
     "github": "padr31",
     "image": "image/Vww75TFpThOgTNuASFM6UYfBAp53/DXzBVhVGAn8NTnPqW7Pa.jpg"
   },
-  "adrianajara": {
-    "country": "US",
-    "mastodon": "https://indieweb.social/@tropicadri",
-    "image": "image/Vww75TFpThOgTNuASFM6UYfBAp53/tIuTcnxqlspZFyklJYHG.jpg"
-  },
   "agektmr": {
     "country": "JP",
     "twitter": "agektmr",
@@ -911,6 +906,7 @@
     "twitter": "tropicadri",
     "github": "tropicadri",
     "country": "US",
+    "mastodon": "https://hachyderm.io/@tropicadri",
     "image": "image/SeARmcA1EicLXagFnVOe0ou9cqK2/24pW1yRsYdAJXV7nfgbR.jpg",
     "external": [
       {
@@ -1836,7 +1832,7 @@
     "country": "US",
     "image": "image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ywSi24f8TTFI21KkKs5V.jpg"
   },
-  "henrikbostrom":{
+  "henrikbostrom": {
     "country": "",
     "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/es5lvrnCiRGsPLyndQ9s.jpeg"
   },
@@ -1854,5 +1850,11 @@
   "yurikoh": {
     "country": "JP",
     "image": "image/HodOHWjMnbNw56hvNASHWSgZyAf2/2DM7dQC0YIGR54SlzYo6.jpg"
+  },
+  "elabadysayed": {
+    "country": "UK",
+    "twitter": "SayedElabady",
+    "github": "SayedElabady",
+    "image": "image/SeARmcA1EicLXagFnVOe0ou9cqK2/CjPe3HZR6IhDi83VYQx6.jpg"
   }
 }
