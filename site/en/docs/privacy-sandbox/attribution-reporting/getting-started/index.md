@@ -106,7 +106,7 @@ event-level and an aggregatable report. The
 walks you through the process. 
 {% endAside %}
 
-Aggregatable and event-level reports are generated in a su=imilar manner. To be able to generate reports, follow these high-level steps. Each step points to more detailed information as well.
+Aggregatable and event-level reports are generated in a similar manner. To be able to generate reports, follow these high-level steps. Each step points to more detailed information as well.
 
 {% Aside 'important' %}
 Before you can register sources and triggers and get reports, your sites need to have SSL/TLS certificates; in other words, you need to be running over HTTPS.
