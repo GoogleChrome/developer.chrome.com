@@ -163,7 +163,7 @@ boolean result = mSession.requestPostMessageChannel(SOURCE_ORIGIN, TARGET_ORIGIN
 
 ## Communicating from the web
 
-Now we can send and receive messages from our host app, how do we do the same from the web? Communication has to start from the host app, then the web page needs to get the port from the first message. This port is used to communicate back. Your js file will look something like the following example:
+Now we can send and receive messages from our host app, how do we do the same from the web? Communication has to start from the host app, then the web page needs to get the port from the first message. This port is used to communicate back. Your JavaScript file will look something like the following example:
 
 ```javascript
 window.addEventListener("message", function (event) {
