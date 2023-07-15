@@ -62,7 +62,7 @@ private CustomTabsServiceConnection mConnection = new CustomTabsServiceConnectio
     @Override
     public void onServiceDisconnected(ComponentName name) {
         mClient = null;
-        mSesssion = null;
+        mSession = null;
     }
 };
 
