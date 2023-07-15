@@ -56,7 +56,7 @@ private CustomTabsServiceConnection mConnection = new CustomTabsServiceConnectio
         mSession = mClient.newSession(new CustomTabsCallback());
         // Pre-render pages the user is likely to visit
         // you can do this any time while the service is connected
-        mSession.mayLaunchUrl("https://developers.android.com", null, null);
+        mSession.mayLaunchUrl(Uri.parse("https://developers.android.com"), null, null);
     }
 
     @Override
