@@ -19,7 +19,7 @@ Check this page often to learn about changes to Chrome extensions, extensions do
 
 <p class="color-secondary-text type--caption">Posted on <time>July 17, 2023</time></p>
 
-We've just published an overview of this year's [changes and improvements to extensions](/blog/extension-news-july-2023/). The post discusses the year's big new features, including the Side Panel API, service worker enhancements, and offscreen documents. You'll also get a peek at what we're working on for this quarter. The article lists much more, with links to all.
+We've just published an overview of this year's [changes and improvements to extensions](/blog/extension-news-july-2023/) on our blog. The post discusses the year's big new features, including the Side Panel API, service worker enhancements, and offscreen documents. You'll also get a peek at what we're working on for this quarter. The article lists much more, with links to all.
 
 ### New guidance and sample: Learn how to use Google Analytics 4 in your Chrome extension {: #guide-ga }
 
