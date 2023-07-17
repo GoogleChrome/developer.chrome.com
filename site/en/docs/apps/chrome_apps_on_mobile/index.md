@@ -375,7 +375,7 @@ The Chrome ADT for Android is currently in a pre-alpha release. To try it out, v
 [14]: http://nodejs.org
 [15]: http://nodejs.org
 [16]: https://github.com/creationix/nvm
-[17]: http://www.oracle.com/technetwork/java/javase/downloads/index.html
+[17]: https://www.oracle.com/java/technologies/downloads/
 [18]: http://developer.android.com/sdk/index.html
 [19]: https://www.google.com/search?q=how+to+add+sdktools+to+path
 [20]: http://ant.apache.org/bindownload.cgi
