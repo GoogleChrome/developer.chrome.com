@@ -61,66 +61,6 @@ In this example:
 * If this trigger is matched to a conversion of type `purchase`, then an aggregatable report is generated and has a deduplication key of `789789789789`.
 * If multiple deduplication keys match the filter data, then the first matched one is used.
 
-## Migrating deduplication keys
-
-If you were using a deduplication key for aggregatable reports (`aggregatable_deduplication_key`), before Chrome 112 and you're not using filters for your aggregatable reports, or if you're not interested in basing your aggregatable deduplication keys on filters:
-
-1. Replace `aggregatable_deduplication_key` with `aggregatable_deduplication_keys`.
-
-1. Wrap your existing key between brackets as in the "new" example:
-
-    Old
-
-    ```json
-    "aggregatable_deduplication_key": "123123123"
-    ```
-
-    New
-
-    ```json
-      "aggregatable_deduplication_keys": [
-        {
-           "deduplication_key": "123123123"
-        }
-      ]
-    ```
-
-If you are using filters for your aggregatable reports, and would like to make your deduplication keys vary based on the filters—that is, if you would like to benefit from this new feature, follow these steps:
-
-1. Replace `aggregatable_deduplication_key` with `aggregatable_deduplication_keys`.
-
-1. Define your aggregation keys based on filters, as in the example that follows. Note that if multiple deduplication keys match the filter data, then the first matched one is used.
-
-    ```json
-    aggregatable_trigger_data:
-    [{  
-      "key_piece": "...",
-      "source_keys": ["..."],
-      "filters": {
-        "filter_1": [a, b]
-      }
-    },{  
-      "key_piece": "...",
-      "source_keys": ["..."],
-      "filters": {
-        "filter_1": [c, d]
-      }
-    }]
-
-    aggregatable_deduplication_keys:
-    [{  
-      "deduplication_key": "123123123",
-      "filters": {
-        "filter_1": ["a", "b"]
-      }
-    },{  
-      "deduplication_key": "456456456",
-      "filters": {
-        "filter_1": ["c", "d"]
-      }
-    }]
-    ```
-
 ## Next steps
 
 Read more about filters in [Define custom rules using filters](/docs/privacy-sandbox/attribution-reporting/define-filters/).
