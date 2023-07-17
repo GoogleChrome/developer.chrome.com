@@ -12,8 +12,7 @@ authors:
 ---
 
 
-It's possible for two distinct entities to generate and receive attribution reports for a given set of source or trigger events.
-To register multiple reporters, you can rely on redirects, or choose other options, as discussed here.
+It's possible for two distinct entities to generate and receive attribution reports for a given set of source events, trigger events, or both. To register multiple reporters, you can rely on redirects, or choose other options, as discussed here.
 
 ## Registering several triggers using redirects
 
