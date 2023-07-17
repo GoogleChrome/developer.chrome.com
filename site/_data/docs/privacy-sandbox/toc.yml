@@ -108,8 +108,8 @@
             - url: /docs/privacy-sandbox/attribution-reporting-debugging/part-3/
         - title: i18n.docs.privacy-sandbox.attribution-reporting-developer-guide
           sections:
-            - url: /docs/privacy-sandbox/attribution-reporting/report-types/
             - url: /docs/privacy-sandbox/attribution-reporting/getting-started/
+            - url: /docs/privacy-sandbox/attribution-reporting/report-types/
             - url: /docs/privacy-sandbox/attribution-reporting/register-attribution-source/
             - url: /docs/privacy-sandbox/attribution-reporting/register-attribution-trigger/
             - url: /docs/privacy-sandbox/attribution-reporting/change-attribution-logic/
