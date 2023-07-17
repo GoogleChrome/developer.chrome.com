@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-06-23
+updated: 2023-07-17
 tags:
   - extensions-news
 
@@ -14,6 +14,12 @@ tags:
 <!--lint disable first-heading-level-->
 
 Check this page often to learn about changes to Chrome extensions, extensions documentation, or related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about some of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).) The [Chrome schedule](https://chromiumdash.appspot.com/schedule) lists stable and beta release dates.
+
+### What's happening in Chrome Extensions - July 2023 edition {: #whats-happening-7-23 }
+
+<p class="color-secondary-text type--caption">Posted on <time>July 17, 2023</time></p>
+
+We've just published an overview of this year's [changes and improvements to extensions](/blog/extension-news-july-2023/). The post discusses the year's big new features including the Side Panel API, declarative net requests, and offscreen documents. You'll also get a peek at what we're working on for this quarter The article lists much more, with links to all.
 
 ### New guidance and sample: Learn how to use Google Analytics 4 in your Chrome extension {: #guide-ga }
 
