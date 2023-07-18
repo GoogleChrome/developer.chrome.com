@@ -10,7 +10,9 @@ date: 2023-07-18
 tags:
   - privacy
 ---
-In May we shared our [plans to ship the Privacy Sandbox relevance and measurement APIs](/blog/shipping-privacy-sandbox/) in Chrome 115. That moment is now here, so with Chrome 115 going to Stable, we are beginning the process of gradually enabling the APIs.  
+
+In May we shared our [plans to ship the Privacy Sandbox relevance and measurement APIs](/blog/shipping-privacy-sandbox/) in Chrome 115. That moment is now here, so with Chrome 115 going to Stable, we are beginning the process of gradually enabling the APIs in the next few days.
+
 In this post, we'll cover the multiple components of this launch, including:
 
 -  **What's shipping:**  The launch process for the relevance and measurement APIs: Topics, Protected Audience, Attribution Reporting, Private Aggregation, Shared Storage, and Fenced Frames.
@@ -22,7 +24,7 @@ In this post, we'll cover the multiple components of this launch, including:
 
 ## What's shipping
 
-In [the previous post](/blog/shipping-privacy-sandbox/), we introduced the list of relevance and measurement APIs that are launching in Chrome 115. As part of the [usual process](/docs/privacy-sandbox/proposal-lifecycle/), we've sent an "Intent to Ship" (I2S) message to the blink-dev mailing list for each feature. The I2S messages include details of the specific API functionality for the 115 release, engineering discussions on the proposals, and importantly, the approvals (or LGTMs) from the [Blink API owners](https://www.chromium.org/blink/guidelines/api-owners/#:~:text=The%20Blink%20API%20owners%20oversee,APIs%20to%20Chromium%2Dbased%20browsers.) to ship the feature. 
+In [the previous post](/blog/shipping-privacy-sandbox/), we introduced the list of relevance and measurement APIs that are launching in Chrome 115. As part of the [usual process](/docs/privacy-sandbox/proposal-lifecycle/), we’ve sent an "Intent to Ship" (I2S) message to the blink-dev mailing list for each feature. The I2S messages include details of the specific API functionality for the 115 release, engineering discussions on the proposals, and importantly, the approvals (or LGTMs) from the [Blink API owners](https://www.chromium.org/blink/guidelines/api-owners/#:~:text=The%20Blink%20API%20owners%20oversee,APIs%20to%20Chromium%2Dbased%20browsers.) to ship the feature.
 
 {% Aside %}
 
@@ -38,7 +40,7 @@ As with some previous Privacy Sandbox features, we'll gradually enable the APIs 
 
 {% Aside %}
 
-Users need to relaunch Chrome before version updates or incremental API updates take effect, meaning it always takes additional time for the ramp up to reach the target levels. All percentages shown are approximate and developers should expect fluctuations in this period as we may adjust levels to respond to issues. Overall percentages of Chrome browsers may also not map to the same percentage of an individual site's traffic, so you should only use this as indicative of expected traffic.  
+Users need to relaunch Chrome before version updates or incremental API updates take effect, meaning it always takes additional time for the ramp up to reach the target levels. All percentages shown are approximate and developers should expect fluctuations in this period as we may adjust levels to respond to issues. Overall percentages of Chrome browsers may also not map to the same percentage of an individual site's traffic, so you should only use this as indicative of expected traffic.
 
 {% endAside %}
 
