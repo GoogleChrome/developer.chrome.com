@@ -103,11 +103,11 @@ chrome.tabs.onUpdated.addListener(async (tabId, info, tab) => {
 
 When a user temporarily switches to a tab where the side panel is not enabled, the side panel will be hidden. It will automatically show again when the user switches to a tab where it was previously open.
 
-When the user navigates to a site where the side panel is not enabled, the side panel will close and the extension will not show in the side panel drop-down menu.
+When the user navigates to a site where the side panel is not enabled, the side panel will close, and the extension will not show in the side panel drop-down menu.
 
 For a complete example, see the [Tab-specific side panel][sample-sp-google] sample. 
 
-### Enable the action icon to open the side panel {: #open-action-icon } 
+### Open the side panel on action click {: #open-action-icon } 
 
 Developers can allow users to open the side panel when they click on the action toolbar icon with [`sidePanel.setPanelBehavior()`][sidepanel-set-behavior]. First, declare the `"action"` key in the manifest:
 
@@ -142,19 +142,32 @@ chrome.sidePanel
 With `openPanelOnActionClick()` enabled, you can also open the side panel using a keyboard shortcut by specifying an [action command][action-commands] in the manifest as featured in the [Tab-specific side panel][sample-sp-google] sample.
 {% endAside %}
 
-### Open the side panel with a user interaction {: #user-interaction }
+### Open the side panel with any user interaction {: #user-interaction }
 
-Chrome 116 introduces `sidepanel.open()`. This feature allows extensions to invoke the side panel through user interactions, such as an [action.click](TBD), a [keyboard shortcut](TBD), a [context menu][api-menu], or even a button click in an extension page. You can also specify the context in which to open the panel:
+Chrome 116 introduces [`sidePanel.open()`][sidepanel-open]. It allows extensions to invoke the side panel through a user interaction, such as an [action click][api-action], a [keyboard shortcut][api-commands], a [context menu][api-menu], or a button click on an extension page or [content script][doc-cs]. For a complete demo, see the [Open Side Panel][sample-sp-open] sample extension.
 
-- `windowId`: side panel across all tabs within the indicated window.
-- `tabId`: Opens the side panel on a specific tab.
+This example shows how to open a side panel in all the tabs of the current window when the user clicks on a context menu:
 
+{% Label %}service-worker.js:{% endLabel %}
 
-The following example shows how to open it in all the tabs of the current window through a context menu:
+```js/11
+chrome.runtime.onInstalled.addListener(() => {
+  chrome.contextMenus.create({
+    id: 'openSidePanel',
+    title: 'Open side panel',
+    contexts: ['all']
+  });
+});
 
-```js
-// Sample goes here
+chrome.contextMenus.onClicked.addListener((info, tab) => {
+  if (info.menuItemId === 'openSidePanel') {
+    // This will open the panel in all the pages on the current window.
+    chrome.sidePanel.open({ windowId: tab.windowId });
+  }
+});
 ```
+
+When using [`sidePanel.open()`][sidepanel-open], you must choose the context in which it should open. Use [`windowId`][sidepanel-windowid] to open a global side panel in the specified window. Alternatively, set the [`tabId`][sidepanel-tabid] to open the side panel only on a specific tab.
 
 ### Switch to a different panel {: #multi-panels }
 
@@ -196,12 +209,8 @@ Navigating to the side panel menu
   </figcaption>
 </figure>
 
-Using the action toolbar icon
-: Users can open the side panel by clicking on [the action icon](#open-action-icon) if it's enabled.
-
-Using a keyboard shortcut
-: Users can open the side panel by pressing a keyboard shortcut if the [action command][action-commands] and the [action icon](#open-action-icon) are enabled.
-
+Open through a user gesture
+: Users can also open the side panel through several user interactions, which are set using [`sidePanel.open()`](#user-interaction) or [`sidePanel.setPanelBehavior()`](#open-action-icon).
 
 ## Extension samples {: #examples }
 
@@ -210,11 +219,12 @@ For more Side Panel API extensions demos, explore any of the following extension
 - [Dictionary side panel][sample-sp-dictionary].
 - [Global side panel][sample-sp-global].
 - [Multiple side panels][sample-sp-multiple].
-- [Open side panel with a user interaction][sample-sp-open].
+- [Open Side panel][sample-sp-open].
 - [Site-specific side panel][sample-sp-google].
 
 [action-commands]: /docs/extensions/reference/commands/#action-commands
 [api-action]: /docs/extensions/reference/action/
+[api-commands]: /docs/extensions/reference/commands/
 [api-menu]: /docs/extensions/reference/contextMenus/
 [doc-manifest]: /docs/extensions/mv3/manifest/
 [runtime-oninstalled]: /docs/extensions/reference/runtime/#event-onInstalled
@@ -227,6 +237,9 @@ For more Side Panel API extensions demos, explore any of the following extension
 [sidepanel-set-behavior]: #method-setPanelBehavior
 [sidepanel-setoptions]: #method-setOptions
 [tabs-onupdated]: /docs/extensions/reference/tabs/#event-onUpdated
-
+[sidepanel-open]: #method-open
+[sidepanel-tabid]: #property-OpenOptions-tabId
+[sidepanel-windowid]: #property-OpenOptions-windowId
+[doc-cs]: /docs/extensions/mv3/content_scripts/
 
 
