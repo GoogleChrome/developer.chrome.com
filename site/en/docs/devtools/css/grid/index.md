@@ -23,7 +23,7 @@ box][1] and [Snack box][2].
 ## Discover CSS grids {: #discover }
 
 When an HTML element on your page has `display: grid` or `display: inline-grid` applied to it, you
-can see a `grid` badge next to it in the [**Elements**][3] panel.
+can see a [`grid` badge](/docs/devtools/elements/badges/#grid) next to it in the [**Elements**][3] panel.
 
 {% Img src="image/admin/SbWH3OGFQDiXKV2Eev2j.png", alt="Discover grid", width="800", height="524" %}
 
@@ -31,6 +31,10 @@ Clicking the badge to toggle the display of a grid overlay on the page. The over
 element, laid out like a grid to show the position of its grid lines and tracks:
 
 {% Img src="image/admin/YwKMuoODL6eFMvfJOzlF.png", alt="Toggle grid badge.", width="800", height="524" %}
+
+{% Aside %}
+**Note**: Similarly, you can also toggle the overlay of a [subgrid](https://developer.mozilla.org/docs/Web/CSS/CSS_grid_layout/Subgrid) with the [subgrid badge](/docs/devtools/elements/badges/#subgrid). 
+{% endAside %}
 
 Open the **Layout** pane. When grids are included on a page, the Layout pane includes a **Grid**
 section containing a number of options for viewing those grids.
