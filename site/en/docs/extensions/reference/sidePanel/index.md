@@ -142,7 +142,7 @@ chrome.sidePanel
 With `openPanelOnActionClick()` enabled, you can also open the side panel using a keyboard shortcut by specifying an [action command][action-commands] in the manifest as featured in the [Tab-specific side panel][sample-sp-google] sample.
 {% endAside %}
 
-### Open the side panel with any user interaction {: #user-interaction }
+### Programmatically open the side panel on user interaction {: #user-interaction } 
 
 Chrome 116 introduces [`sidePanel.open()`][sidepanel-open]. It allows extensions to invoke the side panel through a user interaction, such as an [action click][api-action], a [keyboard shortcut][api-commands], a [context menu][api-menu], or a button click on an extension page or [content script][doc-cs]. For a complete demo, see the [Open Side Panel][sample-sp-open] sample extension.
 
@@ -214,7 +214,12 @@ Navigating to the side panel menu
 </figure>
 
 Open through a user gesture
-: Users can also open the side panel through several user interactions, which are set using [`sidePanel.open()`](#user-interaction) or [`sidePanel.setPanelBehavior()`](#open-action-icon).
+: Users can open the side panel through the user interactions using [`sidePanel.open()`](#user-interaction) and [`sidePanel.setPanelBehavior()`](#open-action-icon), such as:
+
+  - An [action click][api-action]
+  - A [keyboard shortcut][api-commands]
+  - A [context menu][api-menu]
+  - Programmatically after a [user interaction](#user-interaction).
 
 ## Extension samples {: #examples }
 
