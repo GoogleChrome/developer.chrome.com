@@ -19,7 +19,7 @@ date: 2023-07-12
 
 In the past, the only way to create scroll-driven animations was to respond to the scroll event on the main thread. This caused two major problems:
 
-- Scrolling is performed on a separate process and therefore delivers scroll events asynchronously.
+- Scrolling is performed on a separate thread and therefore delivers scroll events asynchronously.
 - Main thread animations are [subject to jank](/blog/inside-browser-part3/#updating-rendering-pipeline-is-costly).
 
 This makes creating performant scroll-driven animations that are in-sync with scrolling impossible or very difficult.
