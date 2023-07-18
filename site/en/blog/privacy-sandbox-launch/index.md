@@ -44,7 +44,7 @@ Users need to relaunch Chrome before version updates or incremental API updates 
 
 From there we intend to increase to approximately 60% of browsers at the start of August. This will still include the experimental groups, so you may see different levels of availability for different APIs.  All being well, we will make a final increase to approximately 99% of browsers by mid-August, around the 116 Stable release. At this point we will also merge the individual experiment groups, maintaining only small, isolated groups without every API enabled to aid with any potential issue detection. We will hold at this level to continue monitoring and begin preparation for the Chrome-facilitated testing modes. 
 
-{% Img src="image/udVScdcCFAdRjZwFdLk2jWAFQyr1/cGSfLvLZci1Gq6jwRlHC.png", alt="Approximate availability in Chrome Stable by version", width="800", height="321" %}
+{% Img src="image/udVScdcCFAdRjZwFdLk2jWAFQyr1/oPELU4sAmYTdAsahyFQy.png", alt="Approximate availability in Chrome Stable by version", width="800", height="339" %}
 
 This timeline is subject to alterations depending on the results of monitoring along the way. As always, we will update the documentation here as well as posting updates to the blink-dev threads as we progress through each stage.
 
@@ -53,8 +53,8 @@ This timeline is subject to alterations depending on the results of monitoring a
 To access the Privacy Sandbox relevance and measurement APIs on Chrome and Android, developers will need to complete the [enrollment and attestation process](https://goo.gle/privacy-sandbox-enroll). This will soon become a mandatory requirement for accessing the APIs, so we recommend you start the process as soon as possible.  
 For local testing, we are providing developer overrides from Chrome 116 with a Chrome flag and CLI switch:
 
--  Flag: `chrome://flags/#privacy-sandbox-enrollment-overrides
-`-  CLI: `--privacy-sandbox-enrollment-overrides=https://example.com,https://example.co.uk,...`
+-  Flag: `chrome://flags/#privacy-sandbox-enrollment-overrides`
+-  CLI: `--privacy-sandbox-enrollment-overrides=https://example.com,https://example.co.uk,...`
 
 ## Ending the unified origin trial
 
