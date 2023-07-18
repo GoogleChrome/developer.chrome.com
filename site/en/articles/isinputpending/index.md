@@ -4,6 +4,7 @@ title: Better JS scheduling with isInputPending()
 subhead: A new JavaScript API that may help you avoid the trade-off between load performance and input responsiveness.
 description: A new JavaScript API that may help you avoid the trade-off between load performance and input responsiveness.
 date: 2020-11-19
+updated: 2023-07-17
 hero: image/admin/Jlg1NJbRJnJN4VgubXh4.jpg
 alt: A traffic sign that says 'GIVE WAY'.
 tags:
@@ -33,7 +34,9 @@ API, and are happy to announce that the API is now shipping by default in Chromi
 
 ## Browser compatibility
 
-`isInputPending()` is shipping in Chromium-based browsers starting in version 87.
+{% BrowserCompat 'api.Scheduling.isInputPending' %}
+
+`isInputPending()` shipped in Chromium-based browsers starting in version 87.
 No other browser has signaled an intent to ship the API.
 
 ## Background
