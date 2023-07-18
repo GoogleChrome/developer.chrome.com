@@ -49,11 +49,15 @@ Lighthouseは、ソーシャルボタンウィジェットや動画埋め込み 
 
 - [Daugilas/lazyYT](https://github.com/Daugilas/lazyYT)
 
+- [ngx-lite-video](https://github.com/karim-mamdouh/ngx-lite-video)
+
 ### Vimeo埋め込みプレーヤー
 
 - [luwes/lite-vimeo-embed](https://github.com/luwes/lite-vimeo-embed)
 
 - [slightlyoff/lite-vimeo](https://github.com/slightlyoff/lite-vimeo)
+
+- [ngx-lite-video](https://github.com/karim-mamdouh/ngx-lite-video)
 
 ### ライブチャット (Intercom、Drift、Help Scout、Facebook Messenger)
 

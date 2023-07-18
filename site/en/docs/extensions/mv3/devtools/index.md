@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Extending DevTools"
 seoTitle: "Extending DevTools with Chrome Extensions"
 date: 2012-09-17
-updated: 2023-02-06
+updated: 2023-07-12
 description: How to create a Chrome Extension that adds functionality to Chrome DevTools.
 ---
 
@@ -56,7 +56,6 @@ manifest:
 {
   "name": ...
   "version": "1.0",
-  "minimum_chrome_version": "10.0",
   "devtools_page": "devtools.html",
   ...
 }

@@ -15,7 +15,6 @@
  */
 
 import {store} from '../store';
-import 'wicg-inert';
 
 export const expandSideNav = store.action(() => {
   document.querySelectorAll('[data-side-nav-inert').forEach(item => {

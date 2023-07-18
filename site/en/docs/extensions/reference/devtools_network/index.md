@@ -36,6 +36,9 @@ chrome.devtools.network.onRequestFinished.addListener(
 );
 ```
 
+To try this API, install the [devtools API examples](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/devtools) from the [chrome-extension-samples](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples)
+repository.
+
 
 [1]: /docs/extensions/mv3/devtools
 [2]: https://www.softwareishard.com/blog/har-12-spec/

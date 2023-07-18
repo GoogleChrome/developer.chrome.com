@@ -145,8 +145,7 @@
     "test-listen": "1.1.0",
     "tmp": "^0.2.1",
     "unified-lint-rule": "^1.0.6",
-    "unist-util-visit": "^2.0.3",
-    "wicg-inert": "^3.0.3"
+    "unist-util-visit": "^2.0.3"
   },
   "volta": {
     "node": "16.14.2"

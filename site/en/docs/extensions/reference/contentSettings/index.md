@@ -96,11 +96,13 @@ across plugin updates.
 
 ## Examples
 
-You can find samples of this API on the [sample page][6].
+To try this API, install the [contentSettings API example][6] from the [chrome-extension-samples][7]
+repository.
 
 [1]: /docs/extensions/mv2/match_patterns
 [2]: #property-notifications
 [3]: #property-cookies
 [4]: #property-plugins
 [5]: #method-ContentSetting-getResourceIdentifiers
-[6]: /docs/extensions/mv2/samples#search:contentSettings
+[6]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/contentSettings
+[7]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples

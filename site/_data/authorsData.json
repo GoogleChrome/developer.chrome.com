@@ -1800,6 +1800,12 @@
       }
     ]
   },
+  "nmichell": {
+    "country": "US",
+    "image": "image/RtQlPaM9wdhEJGVKR8boMPkWf443/H1htVMDirezFxAwJqA6W.jpeg",
+    "github": "nancymic2",
+    "linkedin": "nancymichell"
+  },
   "jakobdamjensen": {
     "image": "image/8WbTDNrhLsU0El80frMBGE4eMCD3/P4d5Q4zt2CBsLwKUHour.jpg",
     "twitter": "jdj_dk",
@@ -1833,5 +1839,24 @@
   "mikedougherty": {
     "country": "US",
     "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/4B8f3CX2GqtSfgwIEBiM.jpeg"
+  },
+  "henrikbostrom":{
+    "country": "",
+    "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/es5lvrnCiRGsPLyndQ9s.jpeg"
+  },
+  "darojas": {
+    "country": "US",
+    "linkedin": "danielalejandrorojas",
+    "image": "image/RtQlPaM9wdhEJGVKR8boMPkWf443/DRQ6mX7gGOj9i6tc8f53.png"
+  },
+  "seburan": {
+    "country": "JP",
+    "image": "image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/cXhmmC3yKNEVL68EHWdq.jpg",
+    "github": "Seburan",
+    "linkedin": "severinf"
+  },
+  "yurikoh": {
+    "country": "JP",
+    "image": "image/HodOHWjMnbNw56hvNASHWSgZyAf2/2DM7dQC0YIGR54SlzYo6.jpg"
   }
 }

@@ -33,7 +33,7 @@ There are several choices for `alert()/confirm()/prompt()`. For notifying the
 user of events (e.g. calendaring sites), the
 [Notifications API](https://developer.mozilla.org/docs/Web/API/Notifications_API)
 should be used. For obtaining user input, the
-[HTML <dialog> element](https://developer.mozilla.org/docs/Web/HTML/Element/dialog)
+[HTML `<dialog>` element](https://developer.mozilla.org/docs/Web/HTML/Element/dialog)
 should be used. For XSS proofs-of-concept, devtool’s
 `console.log(document.origin)` can be used.
 

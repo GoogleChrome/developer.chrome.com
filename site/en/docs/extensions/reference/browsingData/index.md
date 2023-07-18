@@ -170,8 +170,10 @@ extension removes data on their behalf.
 
 ## Examples
 
-Samples for the `browsingData` API are available [on the samples page][3].
+To try this API, install the [browsingData API example][4] from the [chrome-extension-samples][3]
+repository.
 
 [1]: /docs/extensions/mv3/manifest
 [2]: https://chrome.google.com/webstore/detail/aknpkdffaafgjchaibgeefbgmgeghloj
-[3]: /docs/extensions/mv2/samples#search:browsingData
+[3]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples
+[4]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/browsingData

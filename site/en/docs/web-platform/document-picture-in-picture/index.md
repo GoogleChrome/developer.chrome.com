@@ -6,7 +6,7 @@ description: >
 authors:
   - beaufortfrancois
 date: 2023-02-02
-updated: 2023-06-14
+updated: 2023-07-07
 hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/l8xW8V85N60e4dmwUwmE.jpg
 alt: Person holding outdoor lounge chairs.
 tags:
@@ -153,24 +153,23 @@ pipButton.addEventListener("click", async () => {
 
   // Copy style sheets over from the initial document
   // so that the player looks the same.
-  const allCSS = [...document.styleSheets]
-    .map((styleSheet) => {
-      try {
-        return [...styleSheet.cssRules].map((r) => r.cssText).join("");
-      } catch (e) {
-        const link = document.createElement("link");
-        link.rel = "stylesheet";
-        link.type = styleSheet.type;
-        link.media = styleSheet.media;
-        link.href = styleSheet.href;
-        pipWindow.document.head.appendChild(link);
-      }
-    })
-    .filter(Boolean)
-    .join("\n");
-  const style = document.createElement("style");
-  style.textContent = allCSS;
-  pipWindow.document.head.appendChild(style);
+  [...document.styleSheets].forEach((styleSheet) => {
+    try {
+      const cssRules = [...styleSheet.cssRules].map((rule) => rule.cssText).join('');
+      const style = document.createElement('style');
+
+      style.textContent = cssRules;
+      pipWindow.document.head.appendChild(style);
+    } catch (e) {
+      const link = document.createElement('link');
+
+      link.rel = 'stylesheet';
+      link.type = styleSheet.type;
+      link.media = styleSheet.media;
+      link.href = styleSheet.href;
+      pipWindow.document.head.appendChild(link);
+    }
+  });
 
   // Move the player to the Picture-in-Picture window.
   pipWindow.document.body.append(player);

@@ -15,7 +15,6 @@
  */
 
 import {store} from '../store';
-import 'wicg-inert';
 
 export const activateSearch = store.action(() => {
   // Scroll the window to the top of the page.
