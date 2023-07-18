@@ -36,7 +36,7 @@ Alongside the web platform APIs, the [Aggregation Service](/docs/privacy-sandbox
 
 ## Gradually enabling APIs
 
-As with some previous Privacy Sandbox features, we'll gradually enable the APIs for an increasing percentage of browser instances to make sure that we can monitor and respond to any potential issues. Our aim is to start this process a few days after the 115 Stable date of July 18, 2023, most likely the week of July 24. Then we intend to ramp up to enabling the APIs for approximately 35% of browsers over about a week. Similar to the [unified origin trial](/docs/privacy-sandbox/unified-origin-trial/#status), this ramp-up will include a main group with all APIs enabled and several smaller isolated groups with a subset of APIs enabled. These isolated groups provide a quicker route for identifying potential issues with the APIs.
+As with some previous Privacy Sandbox features, we'll gradually enable the relevance and measurement APIs for an increasing percentage of browser instances to make sure that we can monitor and respond to any potential issues. Our aim is to start this process a few days after the 115 Stable date of July 18, 2023, most likely the week of July 24. Then we intend to ramp up to enabling the APIs for approximately 35% of browsers over about a week. Similar to the [unified origin trial](/docs/privacy-sandbox/unified-origin-trial/#status), this ramp-up will include a main group with all APIs enabled and several smaller isolated groups with a subset of APIs enabled. These isolated groups provide a quicker route for identifying potential issues with the APIs.
 
 {% Aside %}
 
@@ -126,4 +126,4 @@ The [Competition and Markets Authority](https://www.gov.uk/government/organisati
 
 {% endAside %}
 
-Shipping these APIs is another key milestone in the ongoing [Privacy Sandbox timeline](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline). This marks the beginning of the transition from sites testing in the origin trial to integrating these APIs in production. We will be keeping you updated as we progress through enabling the APIs, to the opt-in testing with labels in Q4 2023, the 1% third-party cookie deprecation in Q1 2024, heading towards the full third-party cookie phaseout in Q3 2024.
+Shipping these APIs is another key milestone in the ongoing [Privacy Sandbox timeline](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline). This marks the beginning of the transition from sites testing in the origin trial to integrating these APIs in production. We will be keeping you updated as we progress through enabling the APIs, to the opt-in testing with labels in Q4 2023, the 1% third-party cookie deprecation in Q1 2024, heading towards the full third-party cookie phaseout in Q3 2024, subject to addressing any remaining competition issues within the CMA’s commitments framework.
