@@ -5,18 +5,18 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2019-09-15
-#updated: YYYY-MM-DD
+updated: 2023-06-13
 description:
-  "How to debug Background Fetch, Background Sync, Notifications, Push Messages, and view reports with Chrome
-  DevTools."
+  "View reports and debug background services, such as Background Fetch, Background Sync, Notifications, Push Messages, and more."
 tags:
   - javascript
 ---
 
 The **Background Services** section of Chrome DevTools is a collection of tools for the JavaScript
 APIs that enables your website to send and receive updates even when a user does not have your
-website open. A background service is functionally similar to a [background process][1]. Chrome
-DevTools considers each of the following APIs to be a background service:
+website open. A background service is functionally similar to a [background process][1].
+
+The **Background Services** section lets you debug the following background services:
 
 - [Background Fetch][2]
 - [Background Sync][3]
@@ -25,146 +25,125 @@ DevTools considers each of the following APIs to be a background service:
 
 Chrome DevTools can log fetch, sync, and notification events for three days, even when DevTools is not open. This can help you make sure that events are being sent and received as expected.
 
-You can also inspect the details of each event.
+In addition to background service events, DevTools can:
 
-{% Img src="image/admin/ZG5sVS5QkS30tRGieBoo.png", alt="Viewing the details of an event in the Push Messaging pane.", width="800", height="389" %}
-
-Figure 1. Viewing the details of an event in the Push Messaging pane.
-
-In addition to background service events, DevTools can show you [reports](https://web.dev/reporting-api/) that Chrome already sent or is about to send via the [Reporting API][20].
-
-Whenever your site's policies are violated, Chrome generates reports and sends them in batches with a delay even if the user has already left your site. For more information on policies you can set up, see [Use cases and report types](https://web.dev/reporting-api/#use-cases-and-report-types).
+- Show you [reports](https://web.dev/reporting-api/) that Chrome already sent or is about to send via the [Reporting API][20].
+- Let you debug and [test back/forward cache](/docs/devtools/application/back-forward-cache/) with a click.
 
 ## Background Fetch {: #fetch }
 
 The [Background Fetch][6] API enables a [service worker][7] to reliably download large resources,
 like movies or podcasts, as a background service. To log Background Fetch event for three days, even
-when DevTools is not open:
+when DevTools isn't open:
 
-1.  [Open DevTools][8].
-2.  Open the **Application** panel.
-3.  Open the **Background Fetch** pane.
+1. [Open DevTools][8], for example, on this [demo page](https://background-fetch.glitch.me/).
+1. Navigate to **Application** > **Background Services** > **Background Fetch**, and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ljri3HPj5aVym9qgMfkx.svg", alt="Record.", width="20", height="20" %} **Record**.
 
-    {% Img src="image/admin/DXdZs4q3sjqAmiQv1O6M.png", alt="The Background Fetch pane.", width="800", height="591" %}
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/yyAOlwrKTFZJc5NZck1K.png", alt="The Background Fetch pane.", width="800", height="399" %}
 
-    Figure 2. The Background Fetch pane.
+1. On the demo page, click **Store assets locally**. This triggers some background fetch activity. DevTools logs the events to the table.
 
-4.  Click **Record** {% Img src="image/admin/jvgbyEZPbYfaxB255rCm.png", alt="Record", width="24", height="24" %}. After
-    triggering some Background Fetch activity, DevTools logs the events to the table.
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/UpNTtCXYBCNIADEeVdg4.png", alt="A log of events in the Background Fetch pane.", width="800", height="426" %}
 
-    {% Img src="image/admin/1rpEuNKslwetMvtD8c6c.png", alt="A log of events in the Background Fetch pane.", width="800", height="478" %}
-
-    Figure 3. A log of events in the Background Fetch pane.
-
-5.  Click an event to view its details in the space below the table.
-
-    {% Img src="image/admin/q192DLorZyny4WEIkyRB.png", alt="Viewing the details of an event in the Background Fetch pane.", width="800", height="478" %}
-
-    Figure 4. Viewing the details of an event in the Background Fetch pane.
+1. Click an event to view its details in the space below the table.
+1. You can close DevTools and leave the recording run for up to three days. To stop recording, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/HojbnKGlHbrbJI1VgQW9.svg", alt="Stop.", width="20", height="20" %} **Stop**.
 
 ## Background Sync {: #sync }
 
 The [Background Sync][9] API enables an offline [service worker][10] to send data to a server once
 it has re-established a reliable internet connection. To log Background Sync events for three days, even
-when DevTools is not open:
+when DevTools isn't open:
 
-1.  [Open DevTools][11].
-2.  Open the **Application** panel.
-3.  Open the **Background Sync** pane.
+1. [Open DevTools][11], for example, on this [demo page](https://jakearchibald.github.io/isserviceworkerready/demos/sync/).
+1. Navigate to **Application** > **Background Services** > **Background Sync** and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ljri3HPj5aVym9qgMfkx.svg", alt="Record.", width="20", height="20" %} **Record**.
 
-    {% Img src="image/admin/IApG84NTEtNfo8cu74HC.png", alt="The Background Sync pane.", width="800", height="591" %}
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lnaDUADXNNb2zTVM7zdR.png", alt="The Background Sync pane.", width="800", height="464" %}
 
-    Figure 5. The Background Sync pane.
+1. On the demo page, click **Register background sync** to register the respective service worker and click **Allow** when prompted.
 
-4.  Click **Record** {% Img src="image/admin/jvgbyEZPbYfaxB255rCm.png", alt="Record", width="24", height="24" %}. After
-    triggering some Background Sync activity, DevTools logs the events to the table.
+   {% Aside %}
+   To learn how to debug service workers in DevTools, see [Service workers](/docs/devtools/progressive-web-apps/#service-workers).
+   {% endAside %}
 
-    {% Img src="image/admin/tdWi9XbJMOiF8FEihe0X.png", alt="A log of events in the Background Sync pane.", width="800", height="424" %}
+   Service worker registration is a background sync activity. DevTools logs the events to the table.
 
-    Figure 6. A log of events in the Background Sync pane.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/A79MGx9wiacYxIDjt0lP.png", alt="A log of events in the Background Sync pane.", width="800", height="415" %}
 
-5.  Click an event to view its details in the space below the table.
+1. Click an event to view its details in the space below the table.
+1. You can close DevTools and leave the recording run for up to three days. To stop recording, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/HojbnKGlHbrbJI1VgQW9.svg", alt="Stop.", width="20", height="20" %} **Stop**.
 
-    {% Img src="image/admin/jmRJkVcRWWI3hdz2NMnK.png", alt="Viewing the details of an event in the Background Sync pane.", width="800", height="424" %}
+## (Experimental) Bounce Tracking Mitigations {: #bounce-tracking }
 
-    Figure 7. Viewing the details of an event in the Background Sync pane.
+{% Aside %}
+This is an experimental feature available from Chrome version 115.
+{% endAside %}
+
+[Bounce Tracking Mitigations](https://privacycg.github.io/nav-tracking-mitigations/#bounce-tracking-mitigations) experiment in Chrome lets you identify and delete the state of sites that appear to perform cross-site tracking using the bounce tracking technique. You can manually force tracking mitigations and see a list of sites whose states were deleted.
+
+To force tracking mitigations:
+
+1. [Block third-party cookies in Chrome](https://support.google.com/chrome/answer/95647?hl=en&co=GENIE.Platform%3DAndroid&sjid=2048967673261319866-EU#zippy=%2Callow-or-block-cookies). Navigate to and enable {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N7wEDmtW9lnrSxPRupMa.svg", alt="Three-dot menu.", width="24", height="24" %} > **Settings** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JbhmMshze0QJJVcmDr30.svg", alt="Security.", width="24", height="24" %} **Privacy and security** > **Cookies and other site data** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gV2vW2PQXfBqvQEJ4sF0.svg", alt="Radio button checked.", width="24", height="24" %} **Block third-party cookies**.
+1. In `chrome://flags`, set the **Bounce Tracking Mitigations** experiment to **Enabled With Deletion**.
+1. [Open DevTools][11], for example, on [demo page](https://bounce-tracking-demo.glitch.me/), and navigate to **Application** > **Background Services** > **Bounce Tracking Mitigations**.
+1. On the demo page, click a bounce link and wait (10 seconds) for Chrome to record the bounce. The **Issues** tab warns you about the upcoming state deletion.
+1. Click **Force run** to delete the state immediately.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/PJ8FUFF64ogdBNyFNPuB.png", alt="Bounce Tracking Mitigations lists a state deletion.", width="800", height="701" %}
 
 ## Notifications {: #notifications }
 
 After a [service worker][12] has received a [Push Message][13] from a server, the service worker
 uses the [Notifications][14] API to display the data to a user. To log Notifications for three days,
-even when DevTools is not open:
+even when DevTools isn't open:
 
-1.  [Open DevTools][15].
-2.  Open the **Application** panel.
-3.  Open the **Notifications** pane.
+1. [Open DevTools][15], for example, on this [demo page](https://notification-triggers.glitch.me/).
+1. Navigate to **Application** > **Background Services** > **Notifications** and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ljri3HPj5aVym9qgMfkx.svg", alt="Record.", width="20", height="20" %} **Record**.
 
-    {% Img src="image/admin/PdFuiQdA7Ky6Fxvi4Bl0.png", alt="The Notifications pane.", width="800", height="424" %}
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/S1DTjVeqwbMxdnEEI8tC.png", alt="The Notifications pane.", width="800", height="398" %}
 
-    Figure 8. The Notifications pane.
+1. On the demo page, click **Schedule Notification** and **Allow** when prompted.
+1. Wait for the notification to appear. DevTools logs the notification events to the table.
 
-4.  Click **Record** {% Img src="image/admin/jvgbyEZPbYfaxB255rCm.png", alt="Record", width="24", height="24" %}. After
-    triggering some Notifications activity, DevTools logs the events to the table.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/OAYWGjZw9e15TIAzytvI.png", alt="A log of events in the Notifications pane.", width="800", height="398" %}
 
-    {% Img src="image/admin/TGjY2BFbfsOWXuGdxvxW.png", alt="A log of events in the Notifications pane.", width="800", height="424" %}
+1. Click an event to view its details in the space below the table.
+1. You can close DevTools and leave the recording run for up to three days. To stop recording, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/HojbnKGlHbrbJI1VgQW9.svg", alt="Stop.", width="20", height="20" %} **Stop**.
 
-    Figure 9. A log of events in the Notifications pane.
-
-5.  Click an event to view its details in the space below the table.
-
-    {% Img src="image/admin/WeqtSllDCAA8laqB1HXJ.png", alt="Viewing the details of an event in the Notifications pane.", width="800", height="424" %}
-
-    Figure 10. Viewing the details of an event in the Notifications pane.
-
-## Push Messages {: #push }
+## Push Messaging {: #push }
 
 To display a push notification to a user, a [service worker][16] must first use the [Push
 Message][17] API to receive data from a server. When the service worker is ready to display the
 notification, it uses the [Notifications][18] API. To log Push Messages for three days, even when
-DevTools is not open:
+DevTools isn't open:
 
-1.  [Open DevTools][19].
-2.  Open the **Application** panel.
-3.  Open the **Push Messaging** pane.
+1. [Open DevTools][19], for example, on this [demo page](https://simple-push-demo.vercel.app/).
+1. Navigate to **Application** > **Background Services** > **Push Messaging** and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ljri3HPj5aVym9qgMfkx.svg", alt="Record.", width="20", height="20" %} **Record**.
 
-    {% Img src="image/admin/aovnBdkC3HsGTvJK3dvc.png", alt="The Push Messaging pane.", width="800", height="424" %}
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/pHNGjEaeK0U1pJHL0tbY.png", alt="The Push Messaging pane.", width="800", height="414" %}
 
-    Figure 11. The Push Messaging pane.
+1. On the demo page, toggle **Enable push notifications**, click **Allow** when prompted, type a message, and send it. DevTools logs push notification events to the table.
 
-4.  Click **Record** {% Img src="image/admin/jvgbyEZPbYfaxB255rCm.png", alt="Record", width="24", height="24" %}. After
-    triggering some Push Message activity, DevTools logs the events to the table.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/fkaGXBgWJzsYJ7sCQSUr.png", alt="A log of events in the Push Messaging pane.", width="800", height="414" %}
 
-    {% Img src="image/admin/cpKYRm8ioL77xOpKg7To.png", alt="A log of events in the Push Messaging pane.", width="800", height="389" %}
+   {% Aside %}
+   Additionally, in **Application** > [**Service Workers**](/docs/devtools/progressive-web-apps/#service-workers), you can click **Push** to send test notifications from DevTools.
+   {% endAside %}
 
-    Figure 12. A log of events in the Push Messaging pane.
+1. Click an event to view its details in the space below the table.
+1. You can close DevTools and leave the recording run for up to three days. To stop recording, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/HojbnKGlHbrbJI1VgQW9.svg", alt="Stop.", width="20", height="20" %} **Stop**.
 
-5.  Click an event to view its details in the space below the table.
-
-    {% Img src="image/admin/ZG5sVS5QkS30tRGieBoo.png", alt="Viewing the details of an event in the Push Messaging pane.", width="800", height="389" %}
-
-    Figure 13. Viewing the details of an event in the Push Messaging pane.
-
-## (Experimental) Reporting API {: #reporting-api }
+## Reporting API {: #reporting-api }
 
 Some errors happen only in production. You never see them locally or during development because real users, networks, and devices change the game.
 
-For example, say your new site relies on third-party software that uses `document.write()` to load critical scripts. New users all over the world open your site but they might have slower connections than you tested with. Unknown to you, your site starts breaking for them because [Chrome intervenes against](https://web.dev/no-document-write/) `document.write()` on slow networks.
-
-Alternatively, you might want to keep an eye on deprecated or soon-to-be-deprecated APIs your code base may be using.
+For example, say your new site relies on third-party software that uses `document.write()` to load critical scripts. New users all over the world open your site but they might have slower connections than you tested with. Unknown to you, your site starts breaking for them because [Chrome intervenes against](https://web.dev/no-document-write/) `document.write()` on slow networks. Alternatively, you might want to keep an eye on deprecated or soon-to-be-deprecated APIs your code base may be using.
 
 The **Reporting API** is designed to help you monitor deprecated API calls, security violations of your page, and more. You can set up reporting as described in [Monitor your web application with the Reporting API](https://web.dev/reporting-api/#using-the-reporting-api).
 
-{% Aside %}
-**Note**: This is an experimental feature available in Chrome 96 and newer.
-{% endAside %}
-
 To view the reports generated by a page:
 
-1. Type or paste `chrome://flags/#enable-experimental-web-platform-features` in Chrome's URL bar.
-1. Next to **Experimental Web Platform features**, click **Enabled** and restart Chrome.
-1. Open **DevTools** > **Settings** > **Experiments**.
-1. Check **Enable Reporting API panel in the Application panel** and reload DevTools.
-1. Open **Application** > **Background Services** > **Reporting API** and reload your page.
+1. Go to `chrome://flags/#enable-experimental-web-platform-features`, set **Experimental Web Platform features** to **Enabled**, and restart Chrome.
+1. [Open DevTools](/docs/devtools/open/) and navigate to **Application** > **Background Services** > **Reporting API**. For example, you can check out reports on this [demo page](https://reporting-api-demo.glitch.me/page).
 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ajygmfGudWXWRIwVgm8M.png", alt="Reports listed in the Reporting API", width="800", height="513" %}
 
@@ -221,7 +200,7 @@ The **Status** column tells you whether Chrome sent the report successfully, is 
 
 Reports are removed after a while, whether or not they're successfully sent.
 
-{% Aside 'gotchas' %} The `Queued` status isn't always informative, because it doesn't precisely indicate whether sending has failed or has not been attempted yet. Using [short reporting delays](https://web.dev/reporting-api/#save-time) helps: a report that remains `Queued` in that case likely indicates that sending is failing. {% endAside %}
+{% Aside 'important' %} The `Queued` status isn't always informative, because it doesn't precisely indicate whether sending has failed or has not been attempted yet. Using [short reporting delays](https://web.dev/reporting-api/#save-time) helps: a report that remains `Queued` in that case likely indicates that sending is failing. {% endAside %}
 
 [1]: https://en.wikipedia.org/wiki/Background_process
 [2]: #fetch
