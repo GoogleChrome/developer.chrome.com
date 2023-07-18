@@ -169,6 +169,10 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
 
 When using [`sidePanel.open()`][sidepanel-open], you must choose the context in which it should open. Use [`windowId`][sidepanel-windowid] to open a global side panel in the specified window. Alternatively, set the [`tabId`][sidepanel-tabid] to open the side panel only on a specific tab.
 
+{% Aside 'important' %}
+Remember to design your side panel as a useful companion tool for users, improving their browsing experience without unnecessary distractions. Check the [Quality Guidelines][cws-quality] in the Program Policies for more info.
+{% endAside %}
+
 ### Switch to a different panel {: #multi-panels }
 
 Extensions can use [`sidepanel.getOptions()`][sidepanel-getoptions] to retrieve the current side panel. The following example sets a welcome side panel on [`runtime.onInstalled()`][runtime-oninstalled]. Then when the user navigates to a different tab, it replaces it with the main side panel.
@@ -226,6 +230,8 @@ For more Side Panel API extensions demos, explore any of the following extension
 [api-action]: /docs/extensions/reference/action/
 [api-commands]: /docs/extensions/reference/commands/
 [api-menu]: /docs/extensions/reference/contextMenus/
+[cws-quality]: /docs/webstore/program-policies/quality-guidelines/
+[doc-cs]: /docs/extensions/mv3/content_scripts/
 [doc-manifest]: /docs/extensions/mv3/manifest/
 [runtime-oninstalled]: /docs/extensions/reference/runtime/#event-onInstalled
 [sample-sp-dictionary]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.sidepanel-dictionary
@@ -234,12 +240,11 @@ For more Side Panel API extensions demos, explore any of the following extension
 [sample-sp-multiple]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.sidepanel-multiple
 [sample-sp-open]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.sidepanel-open
 [sidepanel-getoptions]:#method-getOptions
+[sidepanel-open]: #method-open
 [sidepanel-set-behavior]: #method-setPanelBehavior
 [sidepanel-setoptions]: #method-setOptions
-[tabs-onupdated]: /docs/extensions/reference/tabs/#event-onUpdated
-[sidepanel-open]: #method-open
 [sidepanel-tabid]: #property-OpenOptions-tabId
 [sidepanel-windowid]: #property-OpenOptions-windowId
-[doc-cs]: /docs/extensions/mv3/content_scripts/
+[tabs-onupdated]: /docs/extensions/reference/tabs/#event-onUpdated
 
 
