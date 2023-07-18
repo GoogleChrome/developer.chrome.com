@@ -34,7 +34,7 @@ Alongside the web platform APIs, the [Aggregation Service](/docs/privacy-sandbox
 
 ## Gradually enabling APIs
 
-As with some previous Privacy Sandbox features, we'll gradually enable the APIs for an increasing percentage of browser instances to make sure that we can monitor and respond to any potential issues. Our aim is to start this process a few days after the 115 Stable date of July 18, 2023, most likely the week of July 24. From there we intend to ramp up to enabling the APIs for approximately 35% of browsers over about a week. Similarly to the [unified origin trial](/docs/privacy-sandbox/unified-origin-trial/#status), this will include a main group with all APIs enabled and several smaller isolated groups with a subset of APIs enabled. These isolated groups provide a quicker route for identifying potential issues with the APIs.  
+As with some previous Privacy Sandbox features, we'll gradually enable the APIs for an increasing percentage of browser instances to make sure that we can monitor and respond to any potential issues. Our aim is to start this process a few days after the 115 Stable date of July 18, 2023, most likely the week of July 24. Then we intend to ramp up to enabling the APIs for approximately 35% of browsers over about a week. Similar to the [unified origin trial](/docs/privacy-sandbox/unified-origin-trial/#status), this ramp-up will include a main group with all APIs enabled and several smaller isolated groups with a subset of APIs enabled. These isolated groups provide a quicker route for identifying potential issues with the APIs.
 
 {% Aside %}
 
@@ -42,7 +42,7 @@ Users need to relaunch Chrome before version updates or incremental API updates 
 
 {% endAside %}
 
-From there we intend to increase to approximately 60% of browsers at the start of August. This will still include the experimental groups, so you may see different levels of availability for different APIs.  All being well, we will make a final increase to approximately 99% of browsers by mid-August, around the 116 Stable release. At this point we will also merge the individual experiment groups, maintaining only small, isolated groups without every API enabled to aid with any potential issue detection. We will hold at this level to continue monitoring and begin preparation for the Chrome-facilitated testing modes. 
+We then intend to increase availability to approximately 60% of browsers at the start of August. This will still include the experimental groups, so you may see different levels of availability for different APIs.  All being well, we will make a final increase to approximately 99% of browsers by mid-August, around the 116 Stable release. At this point we will also merge the individual experiment groups, maintaining only small, isolated groups without every API enabled to aid with any potential issue detection. We will hold at this level to continue monitoring and begin preparation for the Chrome-facilitated testing modes. 
 
 {% Img src="image/udVScdcCFAdRjZwFdLk2jWAFQyr1/oPELU4sAmYTdAsahyFQy.png", alt="Approximate availability in Chrome Stable by version", width="800", height="339" %}
 
