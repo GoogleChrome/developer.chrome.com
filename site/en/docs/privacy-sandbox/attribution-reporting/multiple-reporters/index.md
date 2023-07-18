@@ -30,7 +30,7 @@ Note: If `reporter-1` intends to rely completely on `reporter-2` as a measuremen
 
 {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/e4KWsVJR1wCkv4UYYPJj.png", alt="The flow between client and web sites when registering multiple reporters.", width="800", height="460" %}
 
-## Rely on `attributionsrc` instead of redirects as an alternative for source registration 
+## Rely on `attributionsrc` for source registration 
 
 If multiple reporter origins want to register a source on a navigation event, but can't appear in a redirect chain for any reason, you can list multiple sites as attribution sources in `attributionsrc` as an alternative solution. 
 
