@@ -6,7 +6,7 @@ authors:
   - anusmitaray
 description: >
   Join the Google Chrome team in our Privacy Sandbox office Plans and timeline for gradually enabling the Privacy Sandbox relevance and measurement APIs in Chrome 115, enforcing enrollment, and ending the origin trial.
-date: 2023-07-18
+date: 2023-07-20
 tags:
   - privacy
 ---
