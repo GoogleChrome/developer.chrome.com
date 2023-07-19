@@ -7,7 +7,11 @@ updated: 2018-07-30
 description: How to make your Manifest V2 Chrome Extension accessible.
 ---
 
-{% Partial 'extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're looking at the deprecated Manifest V2 version of Accessibility (a11y). For the latest version go to [Manifest V3 - Accessibility (a11y)](docs/extensions/mv3/a11y).
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. See the [Manifest V3 Migration guide](/docs/extensions/migrating) to learn how to migrate to Manifest V3.
+{% endAside %}
 
 Extensions empower users to create their ideal browsing experience, tailored to an individual's
 abilities and preferences. Extensions should include accessibility components that encourage an
