@@ -87,7 +87,7 @@ The `wgpu::ShaderModuleWGSLDescriptor` deprecated `source` attribute is removed 
 
 The missing `wgpu::RenderBundle::SetLabel()` method has been implemented. See [change dawn:134502](https://dawn-review.googlesource.com/c/dawn/+/134502).
 
-A new `WGPUBackendType` `backendType` member has been added to `WGPURequestAdapterOptions` to allow applications to request a particular backend when getting an adapter. See an example below and [issue dawn:1875](https://bugs.chromium.org/p/dawn/issues/detail?id=1875).
+A new `backendType` member has been added to `wgpu::RequestAdapterOptions` to allow applications to request a particular backend when getting an adapter. See an example below and [issue dawn:1875](https://bugs.chromium.org/p/dawn/issues/detail?id=1875).
 
 ```cpp
 wgpu::RequestAdapterOptionsBackendType backendTypeOptions = {};
