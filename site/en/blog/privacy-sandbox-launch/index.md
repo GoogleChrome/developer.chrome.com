@@ -11,7 +11,7 @@ tags:
   - privacy
 ---
 
-In May we shared our [plans to ship the Privacy Sandbox relevance and measurement APIs](/blog/shipping-privacy-sandbox/) in Chrome 115. That moment is now here, so with Chrome 115 going to Stable, we are beginning the process of gradually enabling the APIs in the next few days.
+In May we shared our [plans to ship the Privacy Sandbox relevance and measurement APIs](/blog/shipping-privacy-sandbox/) in Chrome 115. That moment is now here, so with Chrome 115 going to Stable, we are beginning the process of gradually enabling the APIs in the next few days.  
 
 In this post, we'll cover the multiple components of this launch, including:
 
@@ -126,4 +126,4 @@ The [Competition and Markets Authority](https://www.gov.uk/government/organisati
 
 {% endAside %}
 
-Shipping these APIs is another key milestone in the ongoing [Privacy Sandbox timeline](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline). This marks the beginning of the transition from sites testing in the origin trial to integrating these APIs in production. We will be keeping you updated as we progress through enabling the APIs, to the opt-in testing with labels in Q4 2023, the 1% third-party cookie deprecation in Q1 2024, heading towards the full third-party cookie phaseout in Q3 2024. We will continue working closely with the CMA through each of these stages.
+Shipping these APIs is another key milestone in the ongoing [Privacy Sandbox timeline](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline). This marks the beginning of the transition from sites testing in the origin trial to integrating these APIs in production. We will be keeping you updated as we progress through enabling the APIs, to the opt-in testing with labels in Q4 2023, the 1% third-party cookie deprecation in Q1 2024, heading towards the full third-party cookie phaseout in Q3 2024. We will continue working closely with the CMA, as per our commitments, before taking further steps to expand deprecation.
