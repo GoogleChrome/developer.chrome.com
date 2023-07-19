@@ -2,7 +2,7 @@
 layout: 'layouts/blog-post.njk'
 title: 'FedCM updates: IdP Sign-In Status API, Login Hint and more'
 description: >
-  Chrome 116 ships new FedCM capabilities such as Login Hint API, User Info API and RP Context API and starts an origin trial for IdP Sign-In Status API.
+  Chrome 116 ships new FedCM capabilities such as Login Hint API, User Info API, and RP Context API, and starts an origin trial for IdP Sign-In Status API.
 subhead: >
   Chrome 116 ships FedCM capabilities such as Login Hint API, User Info API and RP Context API and starts an origin trial for IdP Sign-In Status API.
 date: 2023-07-19
