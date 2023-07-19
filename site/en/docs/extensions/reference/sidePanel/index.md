@@ -107,7 +107,7 @@ When the user navigates to a site where the side panel is not enabled, the side 
 
 For a complete example, see the [Tab-specific side panel][sample-sp-google] sample. 
 
-### Open the side panel on action click {: #open-action-icon } 
+### Open the side panel by clicking the toolbar icon {: #open-action-icon } 
 
 Developers can allow users to open the side panel when they click on the action toolbar icon with [`sidePanel.setPanelBehavior()`][sidepanel-set-behavior]. First, declare the `"action"` key in the manifest:
 
@@ -144,7 +144,7 @@ With `openPanelOnActionClick()` enabled, you can also open the side panel using 
 
 ### Programmatically open the side panel on user interaction {: #user-interaction } 
 
-Chrome 116 introduces [`sidePanel.open()`][sidepanel-open]. It allows extensions to invoke the side panel through a user interaction, such as an [action click][api-action], a [keyboard shortcut][api-commands], a [context menu][api-menu], or a button click on an extension page or [content script][doc-cs]. For a complete demo, see the [Open Side Panel][sample-sp-open] sample extension.
+Chrome 116 introduces [`sidePanel.open()`][sidepanel-open]. It allows extensions to invoke the side panel through a user interaction, such as an [action toolbar icon click][api-action], a [keyboard shortcut][api-commands], a [context menu][api-menu], or a button click on an extension page or [content script][doc-cs]. For a complete demo, see the [Open Side Panel][sample-sp-open] sample extension.
 
 This example shows how to open a side panel in all the tabs of the current window when the user clicks on a context menu:
 
@@ -219,7 +219,7 @@ Open through a user gesture
   - An [action click][api-action]
   - A [keyboard shortcut][api-commands]
   - A [context menu][api-menu]
-  - Programmatically after a [user interaction](#user-interaction).
+  - A [user gesture](#user-interaction) on an extension page or content script.
 
 ## Extension samples {: #examples }
 
