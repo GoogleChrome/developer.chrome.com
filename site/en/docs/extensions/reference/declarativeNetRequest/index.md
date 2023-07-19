@@ -19,9 +19,9 @@ requires host permissions to the request URL and initiator to act on a request.
 The `declarativeNetRequestFeedback` permission is required to access functions and events which
 return information on declarative rules matched.
 
-To specify static [Rulesets][3], extensions must also declare the `"declarative_net_request"`
+To specify static rulesets, extensions must also declare the `"declarative_net_request"`
 manifest key, which should be a dictionary with a single key called `"rule_resources"`. It should be
-a list containing dictionaries of type [Ruleset][3], as shown below.
+a list containing dictionaries of type [`Ruleset`](#type-Ruleset), as shown below.
 
 ```json
 {
@@ -51,57 +51,61 @@ a list containing dictionaries of type [Ruleset][3], as shown below.
 }
 ```
 
-### Rule Resources {: #manifest-rule-resources }
+### Static rulesets
 
-Rules are specified in JSON files referenced under the `"rule_resources"` manifest key.
+This API supports multiple ruleset types, which will be described below, but only one type, static rulesets, requires keys in the manifest file. To use static rulesets, declare the `"declarative_net_request"` manifest key, which should be a dictionary with a single key called `"rule_resources"`. It should be a list containing dictionaries of type `Ruleset`, as shown below. These structures will be described in more detail elsewhere.
 
-Each file should contain an array of [rules](#rules) as in the [example](#example).
+JSON sample here
 
-**Note:** Errors and warnings about invalid static rules are only displayed for unpacked extensions.
-Invalid static rules in packed extensions are ignored. It's therefore important to verify that your
-static rulesets are valid by testing with an unpacked version of your extension.
+## Concepts and Usage
 
-## Limits {: #limits }
+To use declarative net requests specify one or more rulesets. A ruleset contains an array of rules. A single rule does one of the following:
 
-There is a performance overhead to loading and evaluating rules in the browser,
-and so a number of limits apply when using the API. Limits depend on the type of
-rule you're using.
+-  Block a network request.
+-  Prevent a request from getting blocked by negating any matching blocked rules.
+-  Redirect a network request.
+-  Modify request or response headers.
 
-### Static rules {: #static-rules }
+There are three types of rulesets.
 
-Static rules are those specified in rule files (which are specified in the manifest file). 
+-  Static rules
+-  Dynamic rules
+-  Session rules
 
-An extension can specify up to **50** static [rulesets][3] as part of the
-`"rule_resources"` manifest key, but only **10** of these rulesets can be
-enabled at a time. The latter is called the
-[`MAX_NUMBER_OF_ENABLED_STATIC_RULESETS`][14]. Collectively, those rulesets are
-guaranteed at least **30,000** rules. This is called the
-[`GUARANTEED_MINIMUM_STATIC_RULES`][5]. The number of rules available after that
-depend on how many rules are enabled by all the extensions installed on a user's
-browser. You can find this number at runtime by calling
-[`getAvailableStaticRuleCount()`][7]. 
+### Dynamic and session-scoped rulesets {: #dynamic-and-session-rules }
 
-### Dynamic and session rules {: #dynamic-session-rules }
+Dynamic and session-scoped rulesets are managed using JavaScript while an extension is in use. 
 
-The limits applied to dynamic and session rules are simpler than static rules. The total number of
-both cannot exceed **5000**. This is called the
-[`MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES`][10].
+-  Dynamic rules persist across browser sessions and extension upgrades.
+-  Session rules are destroyed when the browser shuts down and when a new version of the extension is installed.
 
-### Rules that use regex {: #regex-rules }
+There is only one each of these ruleset types. An extension can add or remove rules to them dynamically by calling [`updateDynamicRules()`](/docs/extensions/reference/declarativeNetRequest/#method-updateDynamicRules) and [`updateSessionRules()`](/docs/extensions/reference/declarativeNetRequest/#method-updateSessionRules), provided the rule limits aren't exceeded. For information on rule limits, see [Rule limits](#limits). 
 
-All types of rules can use regular expressions; however the total number of regex rules, of each type cannot exceed **1000**. This is called the [MAX_NUMBER_OF_REGEX_RULES][15].
+_Method examples here._
 
-## Rules {: #rules }
+### Static rulesets
 
-A single declarative [Rule][8] consists of four fields: `id`, `priority`, `condition`, and
-`action`. There are the following kinds of rules:
+Unlike dynamic and session rules, static rules are packaged, installed, and updated with an extension. They're stored in rule files in JSON format, which are indicated to the extension using the `"declarative_net_request"` `"rule_resources"` keys [as described above](#manifest), as well as one or more [`Ruleset`](/docs/extensions/reference/declarativeNetRequest/#type-Ruleset) dictionaries. A `Ruleset` dictionary contains a path to the rule file, an ID for the ruleset contained in the file, and whether the ruleset is enabled or disabled. The last two will be important when you enable or disable a ruleset programmatically.
 
-- Rules that block a network request.
-- Rules that prevent a request from getting blocked by negating any matching blocked rules.
-- Rules that redirect a network request.
-- Rules that modify headers from a network request.
+JSON sample here
 
-An example rule:
+To test rule files, [load your extension unpacked](/docs/extensions/mv3/getstarted/development-basics/#load-unpacked). Errors and warnings about invalid static rules are only displayed for unpacked extensions. Invalid static rules in packed extensions are ignored.
+
+### Enable and disable static rulesets
+
+To enable or disable static rulesets, call [`updateEnabledRulesets()`](#method-updateEnabledRulesets). This method takes an [`UpdateRulesetOptions`](#type-UpdateRulesetOptions) object, which contains arrays of IDs of rules to enable or disable. The IDs are defined using the `"id"` key of the `Ruleset` dictionary.
+
+The set of enabled static rulesets is persisted across browser sessions. Static rules are not persisted across exensin updates, meaning that only rules you chose to leave in your rule files are available after an update.
+
+For performance reasons there are also limits to the number of rules and rulesets that may be enabled at one time. Call [`getAvailableStaticRuleCount()`](#method-getAvailableStaticRuleCount) to check the number of additional rules that may be enabled. For information on rule limits, see [Rule limits](#limits).
+
+The following example shows how to and disable rulesets, while taking into account the number of available rules and the global rule limits.
+
+JS sample here
+
+### Build rules
+
+Regardless of type, a rule starts with four fields as shown below. While the `"id"` and `"number"` keys merely take a number, the `"action"` and `"condition"` provide a multitude of blocking and redirecting conditions. For example, the rule below blocks all script requests originating from "foo.com" to any URL with "abc" as a substring.
 
 ```json
 {
@@ -116,12 +120,9 @@ An example rule:
 }
 ```
 
-The above rule will block all script requests originating from `"foo.com"` to any URL with `"abc"`
-as a substring.
+### urlFilter matching characters
 
-The `urlFilter` field of a rule condition is used to specify the pattern which is matched against
-the request URL. It is documented on the [`RuleCondition`](#type-RuleCondition) type below. Some
-examples of URL filters:
+A rule's `"condition"` key allows a `"urlFilter"` key for acting on URLs under a specified domain. You create patterns using [pattern matching tokens](/docs/extensions/reference/declarativeNetRequest/#type-RuleCondition:~:text=session%2Dscoped%20rules.-,urlFilter,-string%C2%A0optional). A few examples are shown below.
 
 <table>
     <tbody>
@@ -158,102 +159,87 @@ examples of URL filters:
     </tbody>
 </table>
 
-## Dynamic and session-scoped rules {: #dynamic-and-session-rules }
+### Rule prioritization
 
-An extension can add or remove rules dynamically using the [`updateDynamicRules()`][9] and the [`updateSessionRules()`][13] API methods.
-- Rules added using the [`updateDynamicRules()`][9] API method are persisted across both sessions and extension updates.
-- Rules added using the [`updateSessionRules()`][13] API method are not persisted across Chrome sessions. These rules are backed in memory by Chrome.
-- The number of dynamic and session-scoped rules that an an extension can add is bounded by the [`MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES`][10] constant.
+Rules are triggered by requests sent from web pages. If multiple rules match a particular request, then the rules must be prioritized. This section explains how they're prioritized. Prioritization happens in two stages.
 
-## Updating enabled rulesets {: #update-enabled-rulesets }
+1. Priority is determined for rules within an extension.
+1. If more than one extension can apply a rule to a request, priority is determined for all extensions that match a particular request.
 
-An extension can update the set of enabled static rulesets using the [`updateEnabledRulesets()`][11]
-method.
+Thinking of matching this way: whatever rule a particular extension prioritizes will then be prioritized against rules from other extensions.
 
-- The number of static rulesets which are enabled at one time must not exceed
-  [`MAX_NUMBER_OF_ENABLED_STATIC_RULESETS`][14].
-- The number of rules across enabled static rulesets across all extensions must not exceed the
-  [global limit][6]. Calling [`getAvailableStaticRuleCount()`][7] is recommended to check the number
-  of rules an extension can still enable before the global limit is reached.
-- The set of enabled static rulesets is persisted across sessions but not across extension updates.
-  The `"rule_resources"` manifest key will determine the set of enabled static rulesets on initial
-  extension install and on each subsequent extension update.
+{% Aside %}  
+Avoid building rulesets that depend on rules with the same priority running in a particular order. Rules with the same priority in the same set (e.g static rules with priority 1) are executed in an arbitrary order which is not defined and can change between runs or browser versions.  
+{% endAside %}
 
-## Implementation details {: #implementation }
+#### Rule prioritization within an extension
 
-### web_accessible_resources {: #implementation-web-accessible-resources }
+Within a single extension, prioritization is worked out using the following process:
 
-When an extension uses declarativeNetRequest APIs to redirect a public resource request to a resource that is not web accessible, it is blocked and will result in an error. The above holds true even if the resource that is not web accessible is owned by the redirecting extension. To declare resources for use with declarativeNetRequest APIs, populate the [`"web_accessible_resources"`](/docs/extensions/mv3/manifest/web_accessible_resources/) array.
+1. The rule with the highest developer-defined priority (in other words, the `"priority"` field) is returned.
+1. If there is more than one rule with the highest developer-defined priority, rules are prioritized using the `"action"` field, in the following order:
+    -  `allow`
+    -  `allowAllRequests`
+    -  `block`
+    -  `upgradeScheme`
+    -  `redirect`
 
-### Matching algorithm {: #implementation-matching-algorithm }
+1. If the action type is not `block` or `redirect`, any matching `modifyHeaders` rules are evaluated. Be aware that if there are any rules with a developer-defined priority lower than the priority specified for `allow` and `allowAllRequests`, such rules will be ignored.
+1. If multiple rules modify the same header, modification is determined by the developer-defined `"priority"` field and by the specified operations.
+    -  If a rule has appended to a header, then lower priority rules can only append to that header. Set and remove operations are not permitted.
+    -  If a rule has set a header, then lower priority rules cannot further modify the header, except for append rules from the same extension.
+    -  If a rule has removed a header, then lower priority rules cannot further modify the header.
 
-Before the request is sent, each extension is queried for an action to take. The following actions
-are considered at this stage:
+#### Rule prioritization between extensions
 
-- Actions which block requests of type `block`
-- Actions which redirect requests of type `redirect` or `upgradeScheme`
-- Actions which allow requests of type `allow` or `allowAllRequests`
+If only one extension has a rule that matches a request, that rule is applied. But if more than one extension matches a request, the following process is used. 
 
-If more than one extension returns an action, the extension whose action type comes first in the
-list above gets priority. If more than one extension returns an action with the same priority
-(position in the list), the most recently installed extension gets priority.
+1. Rules are prioritized using the `"action"` field, in the following order:
+    -  `block`
+    -  `redirect` or `upgradeScheme`
+    -  `allow` or `allowAllRequests`
 
-When an extension is queried for how to handle a request, the highest priority matching rule is returned. If more than one matching rule has the highest priority, the tie is broken
-based on the action type, in the following order of decreasing precedence:
+1. If more than one rule matches, the most recently installed extension gets priority.
 
-- `allow`
-- `allowAllRequests`
-- `block`
-- `upgradeScheme`
-- `redirect`
+### Rule limits {: #limits }
 
-If the request was not blocked or redirected, the matching `modifyHeaders` rules are evaluated with
-the most recently installed extensions getting priority. Within each extension, all `modifyHeaders`
-rules with a priority lower than matching `allow` or `allowAllRequests` rules are ignored.
+There is a performance overhead to loading and evaluating rules in the browser,
+and so a number of limits apply when using the API. Limits depend on the type of
+rule you're using.
 
-If multiple `modifyHeaders` rules specify the same header, the resulting modification for the header
-is determined based on the priority of each rule and the operations specified.
+#### Static rules {: #static-rules }
 
-- If a rule has appended to a header, then lower priority rules can only append to that header.
-  `set` and `remove` operations are not permitted.
-- If a rule has set a header, then lower priority rules cannot further modify the header, except for
-  `append` rules from the same extension.
-- If a rule has removed a header, then lower priority rules cannot further modify the header.
+Static rules are those specified in rule files (which are specified in the manifest file). 
+
+An extension can specify up to **50** static [rulesets](#type-Ruleset) as part of the `"rule_resources"` manifest key, but only **10** of these rulesets can be enabled at a time. The latter is called the [`MAX_NUMBER_OF_ENABLED_STATIC_RULESETS`](#property-MAX_NUMBER_OF_ENABLED_STATIC_RULESETS). Collectively, those rulesets are guaranteed at least **30,000** rules. This is called the [`GUARANTEED_MINIMUM_STATIC_RULES`](#property-GUARANTEED_MINIMUM_STATIC_RULES). The number of rules available after that depends on how many rules are enabled by all the extensions installed on a user's browser. You can find this number at runtime by calling [`getAvailableStaticRuleCount()`](#method-getAvailableStaticRuleCount). 
+
+#### Dynamic and session rules {: #dynamic-session-rules }
+
+The limits applied to dynamic and session rules are simpler than static rules. The total number of both cannot exceed **5000**. This is called the [`MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES`][#property-MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES].
+
+#### Rules that use regex {: #regex-rules }
+
+All types of rules can use regular expressions; however the total number of regex rules, of each type cannot exceed **1000**. This is called the [MAX_NUMBER_OF_REGEX_RULES](#property-MAX_NUMBER_OF_REGEX_RULES).
 
 ### Interaction with cached pages {: #implementation-cached-pages }
 
-When rules are applied to browsers with pages in the service worker's cached storage, the browser may ignore the set rule for those specific pages until the cached storage is cleared. This is because cached storage is intended to be persistent, and many features like offline use do not expect the cache to be cleared without also clearing a service worker's registration as well. For cases when extensions utilizing declarativeNetRequest must be enabled and disabled repeatedly, the [`chrome.browsingData`](/docs/extensions/reference/browsingData/) API may be used to clear the cache to guarantee proper functionality.
+If a rule matches a resource in the service worker cache, that rule may be ignored until the resource is cleared from the cache. This is because cached storage is intended to be persistent, and many features such as offline use do not expect the cache to be cleared without also clearing a service worker's registration. If your extension must be enabled and disabled repeatedly, use the chrome.browsingData API to clear the cache and guarantee proper functioning.
 
-## Example {: #example }
+### Web accessible resources {: #implementation-web-accessible-resources }
 
-{% Label %}manifest.json:{% endLabel %}
+A declarative net request cannot redirect from a public resource request to a resource that is not web accessible. Doing so will trigger an error. This is true even if the specified web accessible resource is owned by the redirecting extension.   To declare resources for declarative net requests, use the manifest's [`"web_accessible_resources"`](/docs/extensions/mv3/manifest/web_accessible_resources/) array.
 
-```json
-{
-  "name": "declarativeNetRequest extension",
-  "version": "1",
-  "declarative_net_request": {
-    "rule_resources": [{
-      "id": "ruleset_1",
-      "enabled": true,
-      "path": "rules.json"
-    }]
-  },
-  "permissions": [
-    "declarativeNetRequest"
-  ],
-  "host_permissions": [
-    "*://*.google.com/*",
-    "*://*.abcd.com/*",
-    "*://*.example.com/*",
-    "https://*.xyz.com/*",
-    "*://*.headers.com/*",
-  ],
-  "manifest_version": 3
-}
-```
+### Examples {: #example }
 
-{% Label %}rules.json:{% endLabel %}
+The examples below illustrate various aspects of rule file files. You may want to have the prioritization rules handy when reviewing these examples.
+
+#### The "priority" key
+
+To use the example file shown below, your manifest file would need the following host permission:
+
+`*://*.example.com/*`
+
+To work out the priority of a particular URL, look at the (developer-defined) `"priority"` key, the `"action"` key and the `"urlFilter"` key. 
 
 ```json
 [
@@ -281,140 +267,108 @@ When rules are applied to browsers with pages in the service worker's cached sto
     "action": { "type": "redirect", "redirect": { "url": "https://example.com" } },
     "condition": { "urlFilter": "google.com", "resourceTypes": ["main_frame"] }
   },
-  {
-    "id": 5,
-    "priority": 1,
-    "action": { "type": "redirect", "redirect": { "extensionPath": "/a.jpg" } },
-    "condition": { "urlFilter": "abcd.com", "resourceTypes": ["main_frame"] }
-  },
-  {
-    "id": 6,
-    "priority": 1,
-    "action": {
-      "type": "redirect",
-      "redirect": {
-        "transform": { "scheme": "https", "host": "new.example.com" }
-      }
-    },
-    "condition": { "urlFilter": "||example.com", "resourceTypes": ["main_frame"] }
-  },
-  {
-    "id": 7,
-    "priority": 1,
-    "action": {
-      "type": "redirect",
-      "redirect": {
-        "regexSubstitution": "https://\\1.xyz.com/"
-      }
-    },
-    "condition": {
-      "regexFilter": "^https://www\\.(abc|def)\\.xyz\\.com/",
-      "resourceTypes": [
-        "main_frame"
-      ]
-    }
-  },
-  {
-    "id" : 8,
-    "priority": 2,
-    "action" : {
-      "type" : "allowAllRequests"
-    },
-    "condition" : {
-      "urlFilter" : "||b.com/path",
-      "resourceTypes" : ["sub_frame"]
-    }
-  },
-  {
-    "id" : 9,
-    "priority": 1,
-    "action" : {
-      "type" : "block"
-    },
-    "condition" : {
-      "urlFilter" : "script.js",
-      "resourceTypes" : ["script"]
-    }
-  },
-  {
-    "id": 10,
-    "priority": 2,
-    "action": {
-      "type": "modifyHeaders",
-      "responseHeaders": [
-        { "header": "h1", "operation": "remove" },
-        { "header": "h2", "operation": "set", "value": "v2" },
-        { "header": "h3", "operation": "append", "value": "v3" }
-      ]
-    },
-    "condition": { "urlFilter": "headers.com/123", "resourceTypes": ["main_frame"] }
-  },
-  {
-    "id": 11,
-    "priority": 1,
-    "action": {
-      "type": "modifyHeaders",
-      "responseHeaders": [
-        { "header": "h1", "operation": "set", "value": "v4" },
-        { "header": "h2", "operation": "append", "value": "v5" },
-        { "header": "h3", "operation": "append", "value": "v6" }
-      ]
-    },
-    "condition": { "urlFilter": "headers.com/12345", "resourceTypes": ["main_frame"] }
-  },
 ]
 ```
 
-- Consider a navigation to `"https://google.com"`. Rules with id (1) and (4) match. The request will
-  be blocked because blocking rules have higher priority than redirect rules when the `"priority"`
-  is the same.
-- Consider a navigation to `"https://google.com/1234"`. Rules with id (1), (2), and (4) match.
-  Because the request has a matching `allow` rule and no higher priority rules, the request is not
-  blocked nor redirected and continues to `"https://google.com/1234"`.
-- Consider a navigation to `"https://google.com/12345"` Rules with id (1), (2), (3), and (4) match.
-  The request will be blocked because rule (3) has the highest priority, overriding all other
-  matching rules.
-- Consider a navigation to `"https://abcd.com"`. The rule with id (5) matches. Since rule (5)
-  specifies an extension path, the request is redirected to
-  `"chrome-extension://EXTENSION_ID/a.jpg"`.
-- Consider a navigation to `"http://example.com/path"`. The rule with id (6) matches. Since rule (6)
-  specifies a url transform, the request is redirected to `"https://new.example.com/path"`.
-- Consider a navigation to `"https://www.abc.xyz.com/path"`. The rule with id (7) matches. The
-  request will be redirected to `"https://abc.xyz.com/path"`.
-- Consider the following request hierarchy:
-  - https://a.com/path (main-frame request)
-    - https://b.com/path (sub-frame request, matches rule with id (8))
-      - https://c.com/path (sub-frame request, matches rule with id (8))
-        - https://c.com/script.js (script request, matches rules with ids (8, 9) but (8) has higher
-          priority)
-      - https://b.com/script.js (script request, matches rules with ids (8, 9) but (8) has higher
-        priority)
-    - https://d.com/path (sub-frame request)
-      - https://d.com/script.js (script request, matches rule with ids (9))All requests in green
-        will be allow-listed due to rule with id (8) and not be evaluated by the extensions'
-        ruleset. Requests in red will be blocked due to rule with id (9).
-- Consider a navigation to `"https://headers.com/12345"` with response headers
-  `{ "h1": "initial_1", "h2": "initial_2" }`. Rules with id (10) and (11) match. The request will
-  have its response headers modified to `{ "h2": "v2", "h2": "v5", "h3": "v3", "h3": "v6" }`. Header
-  `h1` was removed by (10), `h2` was set by (10) then appended by (11), and `h3` was appended by
-  (10) and (11).
+**Navigation to https://google.com**  
+Two rules cover this URL: the rules with IDs 1 and 4. The rule with ID 1 applies because `"block"` actions have a higher priority than `"redirect"` actions. The remaining rules do not apply because they are for longer URLs.  
+**Navigation to https://google.com/1234**  
+Because of the longer URL, the rule with ID 2 now matches in addition to  the rules with IDs 1 and 4. The rule with ID 2 applies because `"allow"` has a higher priority than `"block"` `"redirect"`.  
+**Navigation to https://google.com/12345**  
+All four rules match this URL. The rule with ID 3 applies because its developer-defined priority is the highest of the group.
 
-To try the `chrome.declarativeNetRequest` API,
-install the [declarativeNetRequest samples](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/declarativeNetRequest) from the [chrome-extension-samples](https://github.com/GoogleChrome/chrome-extensions-samples)
-repository.
+#### Redirects
 
-[1]: /docs/extensions/mv3/manifest
-[2]: /docs/extensions/mv3/declare_permissions
-[3]: #type-Ruleset
-[4]: #property-MAX_NUMBER_OF_STATIC_RULESETS
-[5]: #property-GUARANTEED_MINIMUM_STATIC_RULES
-[6]: #limits-global-static-rule-limit
-[7]: #method-getAvailableStaticRuleCount
-[8]: #type-Rule
-[9]: #method-updateDynamicRules
-[10]: #property-MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES
-[11]: #method-updateEnabledRulesets
-[12]: /docs/extensions/webRequest
-[13]: #method-updateSessionRules
-[14]: #property-MAX_NUMBER_OF_ENABLED_STATIC_RULESETS
-[15]: #property-MAX_NUMBER_OF_REGEX_RULES
+To use the example file shown below, your manifest file would need the following host permission:
+
+`*://*.example.com/*`
+
+The following example shows how to redirect a request from example.com to a page within the extension itself. The extension path `/a.jpg` resolves to `chrome-extension://EXTENSION_ID/a.jpg`, where `EXTENSION_ID` is the ID of your extension.
+
+```json
+{
+  "id": 1,
+  "priority": 1,
+  "action": { "type": "redirect", "redirect": { "extensionPath": "/a.jpg" } },
+  "condition": {
+    "urlFilter": "https://www.example.com", 
+    "resourceTypes": ["main_frame"]
+  }
+}
+```
+
+The following uses the `"transform"` key to redirect to a subdomain of example.com. It uses a domain name anchor ("||") to intercept requests with any scheme from example.com. The `"scheme"` key in `"transform"` specifies that redirects to the subdomain will always use "https".
+
+```json
+{
+  "id": 1,
+  "priority": 1,
+  "action": {
+    "type": "redirect",
+    "redirect": {
+      "transform": { "scheme": "https", "host": "new.example.com" }
+    }
+  },
+  "condition": {
+    "urlFilter": "||example.com",
+    "resourceTypes": ["main_frame"]
+  }
+}
+```
+
+The following example uses regular expressions to redirect from `https://www.abc.xyz.com/path` to `https://abc.xyz.com/path`. In the `"regexFilter"` key notice how periods are escaped and that the capturing group selects either "abc" or "def". The `"regexSubstitution"` key specifies the first returned match of the regular expression using "\\1". In this case "abc" is captured from the redirected URL and placed in the substitution.
+
+```json
+{
+  "id": 1,
+  "priority": 1,
+  "action": {
+    "type": "redirect",
+    "redirect": {
+      "regexSubstitution": "https://\\1.xyz.com/"
+    }
+  },
+  "condition": {
+    "regexFilter": "^https://www\\.(abc|def)\\.xyz\\.com/",
+    "resourceTypes": [
+      "main_frame"
+    ]
+  }
+}
+```
+
+#### Headers
+
+The following example removes all cookies both main and sub frames.
+
+```json
+{
+  "id": 1,
+  "priority": 1,
+  "action": {
+    "type": "modifyHeaders",
+    "requestHeaders": [{ "header": "cookie", "operation": "remove" }]
+  },
+  "condition": { "resourceTypes": ["main_frame", "sub_frame"] }
+}
+```
+
+
+{: #manifest-rule-resources }
+
+{: #rules }
+
+
+
+{: #update-enabled-rulesets }
+
+{: #implementation }
+
+
+
+{: #implementation-matching-algorithm }
+
+
+
+
+
