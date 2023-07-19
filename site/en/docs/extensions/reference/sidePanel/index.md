@@ -138,15 +138,11 @@ chrome.sidePanel
 ...
 ```
 
-{% Aside 'success' %}
-With `openPanelOnActionClick()` enabled, you can also open the side panel using a keyboard shortcut by specifying an [action command][action-commands] in the manifest as featured in the [Tab-specific side panel][sample-sp-google] sample.
-{% endAside %}
-
 ### Programmatically open the side panel on user interaction {: #user-interaction } 
 
-Chrome 116 introduces [`sidePanel.open()`][sidepanel-open]. It allows extensions to invoke the side panel through a user interaction, such as an [action toolbar icon click][api-action], a [keyboard shortcut][api-commands], a [context menu][api-menu], or a button click on an extension page or [content script][doc-cs]. For a complete demo, see the [Open Side Panel][sample-sp-open] sample extension.
+Chrome 116 introduces [`sidePanel.open()`][sidepanel-open]. It allows extensions to open the side panel through an extension user gesture, such as [clicking on the action icon][api-action]. Or a user interaction on an extension page or [content script][doc-cs], such as clicking a button. For a complete demo, see the [Open Side Panel][sample-sp-open] sample extension.
 
-This example shows how to open a side panel in all the tabs of the current window when the user clicks on a context menu:
+The following code shows how to open a global side panel on the current window when the user clicks on a context menu. When using [`sidePanel.open()`][sidepanel-open], you must choose the context in which it should open. Use [`windowId`][sidepanel-windowid] to open a global side panel. Alternatively, set the [`tabId`][sidepanel-tabid] to open the side panel only on a specific tab.
 
 {% Label %}service-worker.js:{% endLabel %}
 
@@ -166,8 +162,6 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
   }
 });
 ```
-
-When using [`sidePanel.open()`][sidepanel-open], you must choose the context in which it should open. Use [`windowId`][sidepanel-windowid] to open a global side panel in the specified window. Alternatively, set the [`tabId`][sidepanel-tabid] to open the side panel only on a specific tab.
 
 {% Aside 'important' %}
 Remember to design your side panel as a useful companion tool for users, improving their browsing experience without unnecessary distractions. Check the [Quality Guidelines][cws-quality] in the Program Policies for more info.
