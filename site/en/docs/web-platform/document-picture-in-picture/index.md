@@ -6,11 +6,12 @@ description: >
 authors:
   - beaufortfrancois
 date: 2023-02-02
-updated: 2023-07-07
+updated: 2023-07-19
 hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/l8xW8V85N60e4dmwUwmE.jpg
 alt: Person holding outdoor lounge chairs.
 tags:
   - chrome-111
+  - chrome-116
 ---
 
 The [Document Picture-in-Picture API][spec] makes it possible to open an always-on-top window that can be populated with arbitrary HTML content. It extends the existing [Picture-in-Picture API for `<video>`] that only allows an HTML `<video>` element to be put into a Picture-in-Picture window.
@@ -35,22 +36,10 @@ The Picture-in-Picture window in the Document Picture-in-Picture API is similar 
 | 1. Create explainer                      | [Complete][explainer]    |
 | 2. Create initial draft of specification | [In progress][spec]      |
 | 3. Gather feedback & iterate on design   | [In progress](#feedback) |
-| 4. **Origin trial**                      | [**Started**][ot]        |
-| 5. Launch                                | Not started              |
+| 4. Origin trial                          | [Complete][ot]           |
+| **5. Launch**                            | **Complete** (Desktop)   |
 
 </div>
-
-## Try out the API on desktop
-
-During the trial phase you can test the API on desktop by one of two methods.
-
-### Local testing
-
-To experiment with the Document Picture-in-Picture API locally, without an origin trial token, enable the `chrome://flags/#document-picture-in-picture-api` flag.
-
-### Register for the origin trial
-
-Starting in Chrome 111, the Document Picture-in-Picture API is available as an [origin trial](/docs/web-platform/origin-trials/). It is expected to end in Chrome 115 (September&nbsp;8, 2023). [Register here][ot].
 
 ## Use cases
 
@@ -283,7 +272,7 @@ You can play with the Document Picture-in-Picture API [VideoJS player demo]. Be 
 
 ## Feedback
 
-Developer feedback is really important at this stage, so please [file issues on GitHub][issues] with suggestions and questions.
+Please [file issues on GitHub][issues] with suggestions and questions.
 
 ## Useful links
 
@@ -293,7 +282,8 @@ Developer feedback is really important at this stage, so please [file issues on 
 - [ChromeStatus.com entry][cr-status]
 - Blink Component: [`Blink>Media>PictureInPicture`][blink-component]
 - [TAG Review][tag]
-- [Intent to Experiment][intent]
+- [Intent to Experiment][intent-experiment]
+- [Intent to Ship][intent-ship]
 
 ## Acknowledgements
 
@@ -317,5 +307,6 @@ Hero image by [Jakob Owens].
 [cr-status]: https://chromestatus.com/feature/5755179560337408
 [blink-component]: https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EMedia%3EPictureInPicture
 [tag]: https://github.com/w3ctag/design-reviews/issues/798
-[intent]: https://groups.google.com/a/chromium.org/g/blink-dev/c/Tz1gUh92dXs
+[intent-experiment]: https://groups.google.com/a/chromium.org/g/blink-dev/c/Tz1gUh92dXs
+[intent-ship]: https://groups.google.com/a/chromium.org/g/blink-dev/c/JTPl7fM64Lc
 [jakob owens]: https://unsplash.com/photos/TqnpKA_elIU
