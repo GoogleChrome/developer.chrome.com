@@ -95,6 +95,14 @@ act on behalf of the publisher account. This means they can access the Developer
 and publish updates to your extensions. Consequently, access should be shared sparingly. It is not
 currently possible to grant access to just the Analytics property.
 
+### With Looker Studio
+
+Alternatively, you can use [Looker Studio][looker-studio] to create a report based on your
+Google Analytics data. This can be easily shared with any Google account.
+
+Simple choose "Create" and choose the type of file you would like to create. Use the Google
+Analytics connector and add your property under the "Chrome Web Store developer properties" account.
+
 [developer-dashboard]: https://chrome.google.com/webstore/devconsole/
 [ga]: https://analytics.google.com/
 [ga-thresholds]: https://support.google.com/analytics/answer/9383630
@@ -105,3 +113,4 @@ currently possible to grant access to just the Analytics property.
 [ga-custom-events]: https://support.google.com/analytics/answer/12229021
 [extensions-ga4]: /docs/extensions/mv3/tut_analytics/
 [group-publisher]: /docs/webstore/group-publishers/
+[looker-studio]: https://lookerstudio.google.com/
