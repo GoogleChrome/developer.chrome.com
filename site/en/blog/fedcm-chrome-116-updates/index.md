@@ -4,7 +4,7 @@ title: 'FedCM updates: IdP Sign-In Status API, Login Hint, and more'
 description: >
   Chrome 116 ships new FedCM capabilities such as Login Hint API, User Info API, and RP Context API, and starts an origin trial for IdP Sign-In Status API.
 subhead: >
-  Chrome 116 ships FedCM capabilities such as Login Hint API, User Info API and RP Context API and starts an origin trial for IdP Sign-In Status API.
+  Chrome 116 ships FedCM capabilities such as Login Hint API, User Info API, and RP Context API, and starts an origin trial for IdP Sign-In Status API.
 date: 2023-07-19
 hero: 'image/YLflGBAPWecgtKJLqCJHSzHqe2J2/n09K1iWRmDWNFzb2A2y7.jpg'
 alt: 'Series of tools'
@@ -32,7 +32,7 @@ features:
 
 Additionally, Chrome is starting an [origin
 trial](/docs/web-platform/origin-trials/) for the **[IdP Sign-In Status
-API](#idp-signin-status)**. The IdP Sign-in Status API is a requirement and a
+API](#idp-signin-status)**. The IdP Sign-in Status API is a requirement and will be a
 breaking change when it's shipped. If you have an existing implementation of
 FedCM, make sure to participate in the origin trial.
 
@@ -47,12 +47,12 @@ lists all signed-in accounts.
    <figcaption>A FedCM dialog showing multiple user accounts</figcaption>
 </figure>
 
-After the user signs in, sometimes the relying party (RP) requests the user to 
+After the user signs in, sometimes the relying party (RP) asks the user to 
 reauthenticate. But the user may not be sure which account they've been using. 
-If the RP could specify which account to sign in with, it will be easier for the 
+If the RP could specify which account to sign in with, it would be easier for the 
 user to pick an account. [Login 
 hint](https://fedidcg.github.io/FedCM/#dom-identityproviderconfig-loginhint) is 
-shipping in Chrome 116 and with that, the RP can narrow the list down to one.
+shipping in Chrome 116 and with it, the RP can narrow the list down to one.
 
 This extension adds an array of `login_hints` in the [accounts list
 endpoint](/docs/privacy-sandbox/fedcm-developer-guide/#accounts-list-endpoint) response from the
@@ -97,10 +97,10 @@ return await navigator.credentials.get({
 
 ## User Info API {: #user-info}
 
-Sign-in buttons decorated with the IdP's logo navigating users to sign in with 
+Sign-in buttons decorated with the IdP's logo allowing users to sign in with 
 identity federation has become a prevalent concept. However, decorating the 
 button using the user's profile icon and their information is even more 
-intuitive to sign in, especially when a user has signed up on this website with 
+intuitive, especially when a user has signed up on this website with 
 the IdP before.
 
 {% Columns %}
@@ -125,15 +125,15 @@ the IdP before.
 {% endColumns %}
 
 The challenge is, since the personalized button depends on the third-party
-cookies on the IdP domain within an iframe to identify the signed in user to
-render the button, it is not available when [third-party cookies are
+cookies on the IdP domain within an iframe to identify the signed-in user to
+render the button, it won't available once [third-party cookies are
 deprecated](/docs/privacy-sandbox/third-party-cookie-phase-out/).
 
 User Info API is shipping in Chrome 116 that provides a way for the IdP to
 obtain the information of the returning user from the server without depending
 on the third-party cookies.
 
-This API is expected to be called by the IdP from within an iframe embedded on
+The API is expected to be called by the IdP from within an iframe embedded on
 the RP website so that it can retrieve the user information and render a
 personalized button as if it's a part of the RP surface. With the API call, the
 browser makes a request to the [accounts list
@@ -177,7 +177,7 @@ You can see it in action at
 
 ## RP Context API {: #rp-context}
 
-RP Context API is shipping in Chrome 116 that allows an RP to modify the string 
+RP Context API, shipping in Chrome 116, allows an RP to modify the string 
 in the FedCM dialog UI so that it can accommodate predefined authentication 
 contexts. See the following screenshots for different options:
 
@@ -222,7 +222,7 @@ contexts. See the following screenshots for different options:
 
 {% endColumns %}
 
-Usage is simple, provide `identity.context` property one of `"signin"`
+Usage is simple; provide `identity.context` property one of `"signin"`
 (default), `"signup"`, `"use"` or `"continue"`.
 
 ```js
@@ -245,7 +245,7 @@ Chrome starts an [IdP Sign-In Status API origin
 trial](/origintrials/#/registration/-7757239251913146367) 
 on desktop from Chrome 116, followed by Android Chrome later. [Origin 
 trials](/docs/web-platform/origin-trials/) give you 
-access to a new or experimental feature, to build functionality your users can 
+access to a new or experimental feature to build functionality your users can 
 try out for a limited time before the feature is made available to everyone.
 
 {% Aside 'important' %}
@@ -257,7 +257,7 @@ when it's shipped.
 
 [IdP Sign-In Status 
 API](https://github.com/fedidcg/FedCM/blob/main/proposals/idp-sign-in-status-api.md) 
-is a mechanism where an IdP informs the browser the user's sign-in status. With 
+is a mechanism where an IdP informs the browser of the user's sign-in status. With 
 this API, the browser can reduce unnecessary requests to the IdP and mitigate 
 potential timing attacks.
 
@@ -266,17 +266,17 @@ potential timing attacks.
 FedCM introduces a credentialed request to the [accounts list 
 endpoint](/docs/privacy-sandbox/fedcm-developer-guide/#accounts-list-endpoint). 
 This request does not send data identifying the requestor and also does not 
-allow passing through data provided by the RP, however, the browser separately 
+allow passing data provided by the RP; however, the browser separately 
 performs an uncredentialed request containing the RP information to the 
 `client_metadata_endpoint`, then the IdP server can correlate the uncredentialed 
 request with the credentialed request (stochastically) using timing, or other 
-fingerprinting data. See [these 
+fingerprinting data. Refer to [these 
 slides](https://github.com/fedidcg/FedCM/blob/main/meetings/2022/FedCM_%20Options%20for%20the%20Timing%20Attack%20Problem%202022-08-31.pdf) 
 for more details.
 
 {% endAside %}
 
-### Inform the browser the user's sign-in status
+### Inform the browser of the user's sign-in status
 
 IdPs can signal the user's sign-in status to the browser by sending an HTTP 
 header or by calling a JavaScript API, when the user is signed in, or when the 
@@ -321,7 +321,7 @@ sign-in status being "sign-out", calling the FedCM silently fails without making
 a request to the IdP's accounts list endpoint.
 
 The IdP sign-in status is "unknown" by default. This status is used before the 
-IdP sends a signal via IdP Sign-In Status API. We introduce this status for 
+IdP sends a signal via the IdP Sign-In Status API. We introduce this status for 
 better transition because a user may have already signed in to the IdP when we 
 ship this API and the IdP may not have a chance to signal this to the browser by 
 the time FedCM is first invoked. In this case, we emit a request to the IdP's 
@@ -335,7 +335,7 @@ accounts list endpoint:
 
 ### What if the user session expires? Let the user sign in through a dynamic sign-in flow!
 
-Even though the IdP keeps informing the user's sign-in status to the browser, it 
+Even though the IdP continues to inform the browser of the user's sign-in status, it 
 could be out of sync. A typical case is when the session expires. The browser 
 tries to send a credentialed request to the accounts list endpoint when the 
 sign-in status is "sign-in", but the server should reject it because the session 
@@ -350,7 +350,7 @@ The FedCM dialog will display a message like this.
 </figure>
 
 By clicking on the **Continue** button, the browser opens a popup window 
-navigating the user to the IdP's sign-in page.
+sending the user to the IdP's sign-in page.
 
 <figure>
   {% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/Lujgpk77nxF81sl8Ca5S.png", alt="A popup window shown after clicking on the sign in to the IdP button.", width="800", height="516" %}
@@ -359,13 +359,13 @@ navigating the user to the IdP's sign-in page.
 
 {% Aside %}
 
-The website can't have control over the size of the popup window before it's 
+The website doesn't have control over the size of the popup window before it's 
 opened and it is set to 500px in width, 600px in height by default. They may 
 change the size after it's opened from within the content area.
 
 {% endAside %}
 
-The sign-in page URL (must be the same origin) can be specified with `signin_url` 
+The sign-in page URL (which must be the same origin) can be specified with `signin_url` 
 as part of the [IdP config 
 file](/docs/privacy-sandbox/fedcm-developer-guide/#idp-config-file).
 
@@ -379,7 +379,7 @@ file](/docs/privacy-sandbox/fedcm-developer-guide/#idp-config-file).
 }
 ```
 
-The popup window is a regular browser window that has first-party cookies. 
+The popup window is a regular browser window that uses first-party cookies. 
 Whatever happens within the content window is up to the IdP, but no window 
 handles are available to make a cross-origin communication request to the RP 
 page. After the user is signed in, the IdP should:
@@ -413,8 +413,8 @@ if (IdentityProvider) {
 {% Aside %}
 
 This dynamic sign-in experience is intended for when an IdP session has expired 
-without an explicit sign-out causing the browser's sign-in state to contradict 
-with the actual state. This will not be triggered for users who haven't signed 
+without an explicit sign-out, causing the browser's sign-in state to contradict 
+the actual state. This will not be triggered for users who haven't signed 
 in to the IdP yet. This new flow is designed to cover the cases where the user's 
 IdP sign-in status on the browser is "sign-in" but the IdP's accounts list 
 endpoint returns no accounts.
@@ -469,12 +469,12 @@ Chrome 119.
 ### Register an origin trial for the IdP
 
 1.  Go to the [origin trial registration page]({{origin_trial.url}}).
-2.  Click the **Register** button and fill out the form to request a token
+2.  Click the **Register** button and fill out the form to request a token.
 3.  Enter the IdP's origin as **Web Origin**.
 4.  Click **Submit**.
 5. Add an `origin-trial` `<meta>` tag to the head of each page. For example,
   this may look something like: <br>
-  `<meta http-equiv="origin-trial" content="TOKEN_GOES_HERE">`
+  `<meta http-equiv="origin-trial" content="TOKEN_GOES_HERE">`.
 
 {% Aside 'warning' %}
 
@@ -485,13 +485,13 @@ Sending an `Origin-Trial` HTTP header won't work for this API.
 ### Register a third-party origin trial for the RP
 
 1.  Go to the [origin trial registration page]({{origin_trial.url}}).
-2.  Click the **Register** button and fill out the form to request a token
+2.  Click the **Register** button and fill out the form to request a token.
 3.  Enter the IdP's origin as **Web Origin**.
 4.  Check **Third-party matching**  to inject the token with JavaScript on other origins.
 5.  Click **Submit**.
 6.  Embed the issued token on a third-party.
 
-To embed the token to a third-party, add the following code to your JavaScript
+To embed the token on a third-party, add the following code to your JavaScript
 library or SDK served from the IdP's origin.
 
 ```javascript
@@ -506,7 +506,7 @@ Replace `TOKEN_GOES_HERE` with your own token.
 {% Aside %}
 
 If FedCM is executed directly by an RP without loading an IdP's scripts, the RP  
-must register their origin by themselves for the origin trial.
+must register their origin themselves for the origin trial.
 
 {% endAside %}
 
