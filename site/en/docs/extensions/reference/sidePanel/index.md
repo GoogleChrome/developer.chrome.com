@@ -214,7 +214,7 @@ Navigating to the side panel menu
 </figure>
 
 Open through a user gesture
-: Users can open the side panel through the user interactions using [`sidePanel.open()`](#user-interaction) and [`sidePanel.setPanelBehavior()`](#open-action-icon), such as:
+: You can open the side panel through user interactions using [`sidePanel.open()`](#user-interaction) and [`sidePanel.setPanelBehavior()`](#open-action-icon), such as:
 
   - An [action click][api-action]
   - A [keyboard shortcut][api-commands]
