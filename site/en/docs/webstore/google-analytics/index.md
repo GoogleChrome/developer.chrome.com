@@ -7,7 +7,7 @@ description: How to use your Google Analytics account with the Chrome Web Store
 ---
 
 The Chrome Web Store offers integration with Google Analytics. This allows you to see analytics for
-your Chrome Web Store listing as an alternative to the view offered in the Developer Dashboard.
+your Chrome Web Store listing in addition to the view offered in the Developer Dashboard.
 
 If you’re instead looking to track usage of your extension, see
 [Using Google Analytics 4][extensions-ga4].
