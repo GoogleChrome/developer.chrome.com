@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Manifest Version"
+title: "[Chrome Apps] Manifest Version"
 seoTitle: "Chrome Apps Manifest Version [Deprecated]"
 date: 2012-09-17
 updated: 2019-08-12

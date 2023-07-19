@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Kiosk Apps"
+title: "[Chrome Apps] Kiosk Apps"
 seoTitle: "Kiosk Chrome Apps [Deprecated]"
 date: 2013-05-11
 updated: 2014-07-18

@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Manifest - USB Printers"
+title: "[Chrome Apps] Manifest - USB Printers"
 seoTitle: "Chrome Apps Manifest - USB Printers [Deprecated]"
 date: 2015-05-07
 #updated: TODO

@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "url_handlers"
+title: "[Chrome Apps] url_handlers"
 seoTitle: "Chrome Apps url_handlers [Deprecated]"
 date: 2013-09-11
 updated: 2014-05-21

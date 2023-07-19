@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Network Communications"
+title: "[Chrome Apps] Network Communications"
 seoTitle: "Chrome Apps - Network Communications [Deprecated]"
 date: 2012-09-17
 updated: 2014-11-13

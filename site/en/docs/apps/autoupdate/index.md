@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Autoupdating"
+title: "[Chrome Apps] Autoupdating"
 seoTitle: "Chrome Apps - Autoupdating"
 date: 2012-09-17
 updated: 2018-03-19

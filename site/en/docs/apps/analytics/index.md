@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Analytics"
+title: "[Chrome Apps] Analytics"
 seoTitle: "Google Analytics for Chrome apps [Deprecated]"
 date: 2013-08-01
 #updated: TODO

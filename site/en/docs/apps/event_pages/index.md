@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Update: Event Pages and Background Pages"
+title: "[Chrome Apps] Update: Event Pages and Background Pages"
 seoTitle: "Chrome Apps - Update: Event Pages and Background Pages [Deprecated]"
 #date: TODO
 #updated: TODO

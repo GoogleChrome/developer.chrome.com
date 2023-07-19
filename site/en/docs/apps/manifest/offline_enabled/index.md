@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Manifest - Offline Enabled"
+title: "[Chrome Apps] Manifest - Offline Enabled"
 seoTitle: "Chrome Apps Manifest - Offline Enabled [Deprecated]"
 #date: TODO
 #updated: TODO

@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Manifest Version"
+title: "[Chrome Apps] Manifest Version"
 seoTitle: "Chrome Apps Manifest Version [Deprecated]"
 #date: TODO
 #updated: TODO

@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Manifest - Nacl Modules"
+title: "[Chrome Apps] Manifest - Nacl Modules"
 seoTitle: "Chrome Apps Manifest - Nacl Modules [Deprecated]"
 #date: TODO
 #updated: TODO

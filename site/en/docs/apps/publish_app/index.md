@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Publish Your App"
+title: "[Chrome Apps] Publish Your App"
 seoTitle: "Publish Your Chrome App [Deprecated]"
 date: 2012-09-17
 updated: 2013-10-21

@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Bluetooth"
+title: "[Chrome Apps] Bluetooth"
 seoTitle: "Chrome Apps Bluetooth [Deprecated]"
 date: 2014-03-11
 updated: 2017-02-18

@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Manifest - Action Handlers"
+title: "[Chrome Apps] Manifest - Action Handlers"
 seoTitle: "Chrome Apps Manifest - Action Handlers [Deprecated]"
 date: 2017-02-03
 #updated: TODO

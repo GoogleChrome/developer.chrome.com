@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Native Messaging"
+title: "[Chrome Apps] Native Messaging"
 seoTitle: "Chrome Apps - Native Messaging Deprecated]"
 date: 2014-12-15
 updated: 2018-05-14

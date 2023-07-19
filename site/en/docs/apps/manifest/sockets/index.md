@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "sockets"
+title: "[Chrome Apps] sockets"
 seoTitle: "Chrome Apps - sockets [Deprecated]"
 date: 2014-01-08
 updated: 2014-10-31

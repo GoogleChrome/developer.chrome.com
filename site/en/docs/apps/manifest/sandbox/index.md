@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Manifest - Sandbox"
+title: "[Chrome Apps] Manifest - Sandbox"
 seoTitle: "Chrome Apps Manifest - Sandbox [Deprecated]"
 #date: TODO
 #updated: TODO
