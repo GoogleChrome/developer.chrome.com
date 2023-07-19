@@ -16,10 +16,7 @@ tags:
 <!--image/dPDCek3EhZgLQPGtEG3y0fTn4v82/gctGASDKBFTUtOQqVq2H.png  -->
 
 {% Partial 'devtools/banner.md' %}
-
-*There is no 'What's new in DevTools' video for this release, but you can watch this quick recap of the recent features.*
-
-{% YouTube id='CrSmjooOEiE' %}
+{% YouTube id='e8tl_yp5BQg' %}
 
 <!-- $contentStart -->
 
