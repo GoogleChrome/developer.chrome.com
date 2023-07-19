@@ -90,11 +90,11 @@ The missing `wgpu::RenderBundle::SetLabel()` method has been implemented. See [c
 A new `WGPUBackendType` `backendType` member has been added to `WGPURequestAdapterOptions` to allow applications to request a particular backend when getting an adapter. See an example below and [issue dawn:1875](https://bugs.chromium.org/p/dawn/issues/detail?id=1875).
 
 ```cpp
-wgpu::RequestAdapterOptions options = {};
-options.nextInChain = &backendTypeOptions;
-
 wgpu::RequestAdapterOptionsBackendType backendTypeOptions = {};
 backendTypeOptions.backendType = wgpu::BackendType::D3D12;
+
+wgpu::RequestAdapterOptions options = {};
+options.nextInChain = &backendTypeOptions;
 
 // Request D3D12 adapter.
 myInstance.RequestAdapter(&options, myCallback, myUserData);
