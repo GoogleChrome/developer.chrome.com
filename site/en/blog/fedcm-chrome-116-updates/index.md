@@ -150,7 +150,7 @@ const user_info = await IdentityProvider.getUserInfo({
     clientId: "client1234"
 });
 
-// `IdentityProvider.getUserInfo` returns an array of user information.
+// IdentityProvider.getUserInfo returns an array of user information.
 if (user_info.length > 0) {
   // Chrome puts returning accounts first, so the first account received is guaranteed to be a returning account.
   const name = user_info[0].name;
@@ -227,7 +227,7 @@ Usage is simple; provide `identity.context` property one of `"signin"`
 ```js
 const credential = await navigator.credentials.get({
   identity: {
-    // "signin” is the default, "signup”, "use” and "continue” 
+    // "signin" is the default, "signup", "use" and "continue" 
     // can also be used
     context: "signup", 
     providers: [{
@@ -301,7 +301,7 @@ sign-in status is set to "sign-in", the PR calling FedCM makes requests to the
 IdP's accounts list endpoint and displays available accounts to the user in the
 FedCM dialog.
 
-To signal that the user is signed out from all their accounts, send
+To signal that the user is signed out from all their accounts, send the
 `IdP-SignIn-Status: action=signout-all` HTTP header in a top-level navigation or
 a same-origin subresource request:
 
@@ -342,7 +342,7 @@ sign-in status is "sign-in", but the server rejects it because the session is no
 longer available. In such a scenario, the browser can dynamically let the user
 sign in to the IdP through a popup window.
 
-The FedCM dialog will display a message as shown in the following image:
+The FedCM dialog will display a message, as shown in the following image:
 
 <figure>
   {% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/hDf8EI5TBAa42umi7kMu.png", alt="A FedCM dialog suggesting to sign in to the IdP.", width="800", height="449" %}
@@ -394,7 +394,7 @@ page. After the user is signed in, the IdP should:
 // User is signed in...
 // Don't forget feature detection.
 if (IdentityProvider) {
-  // Signale the browser that the user has signed in.
+  // Signal to the browser that the user has signed in.
   IdentityProvider.close();
 }
 ```
@@ -439,7 +439,7 @@ separate feature which may be added in the future.
 
 {% endAside %}
 
-You can try the IdP Sign-In Status API behavior on [our
+You can try the IdP Sign-In Status API behavior in [our
 demo](https://fedcm-rp-demo.glitch.me). The session expires in three minutes
 after you sign in to [the demo IdP](https://fedcm-idp-demo.glitch.me). Then you
 can observe the sign-in to the IdP through the popup window behavior. 
