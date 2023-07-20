@@ -24,7 +24,7 @@ What's described in this section is the default behavior. If you need to filter 
 
 ### Report delays
 
-Aggregatable reports are sent by the browser to the ad tech provider or advertiser with a random delay between 0-60 minutes, or with a small delay after the browser next starts up. 
+Aggregatable reports are sent by the browser to the ad tech provider or advertiser with a random delay between zero and 10 minutes, or with a small delay after the browser next starts up. 
 
 ## Event-level reports
 
