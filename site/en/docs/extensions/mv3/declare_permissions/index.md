@@ -130,7 +130,7 @@ The following table lists the currently available permissions. For a list of per
     </tr>
     <tr id="activeTab">
       <td><code>"activeTab"</code></td>
-      <td>Gives temporary access to the active tab through a user gesture. See <a href="/docs/extensions/mv3/manifest/activeTab">activeTab</a>
+      <td>Gives temporary access to the active tab through a user gesture. See <a href="/docs/extensions/mv3/manifest/activeTab"><code>activeTab</code></a>
         for details.</td>
     </tr>
     <tr id="alarms">
@@ -140,7 +140,7 @@ The following table lists the currently available permissions. For a list of per
     <tr id="background">
       <td><code>"background"</code></td>
       <td>
-        <p id="bg">Makes Chrome start-up early (as soon as the user logs into their computer—before the user launches Chrome), and shut down late (even after its last window is closed until the user explicitly quits Chrome).</p>
+        <p id="bg">Makes Chrome start up early (as soon as the user logs into their computer—before the user launches Chrome), and shut down late (even after its last window is closed until the user explicitly quits Chrome).</p>
         <div class="aside aside--note"><b>Note:</b> Disabled extensions are treated as if they aren't
           installed.</div>
     </td>
