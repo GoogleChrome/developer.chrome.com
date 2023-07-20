@@ -77,7 +77,7 @@ To load an unpacked extension in developer mode:
       </figcaption>
     </figure>
 
-Ta-da! The extension has been successfully installed. Because no extension icons were included in
+Ta-da! The extension has been successfully installed. If no extension icons were included in
 the manifest, a generic icon will be created for the extension.
 
 ## Pinning the extension {: #pin }
