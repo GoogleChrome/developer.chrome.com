@@ -51,7 +51,7 @@ Users need to relaunch Chrome before version updates or incremental API updates 
 
 We then intend to increase availability to approximately 60% of browsers at the start of August. This will still include the experimental groups, so you may see different levels of availability for different APIs.  All being well, we will make a final increase to approximately 99% of browsers by mid-August, around the 116 Stable release. At this point we will also merge the individual experiment groups, maintaining only small, isolated groups without every API enabled to aid with any potential issue detection. We will hold at this level to continue monitoring and begin preparation for the Chrome-facilitated testing modes. 
 
-{% Img src="image/udVScdcCFAdRjZwFdLk2jWAFQyr1/oPELU4sAmYTdAsahyFQy.png", alt="Approximate availability in Chrome Stable by version", width="800", height="339" %}
+{% Img src="image/udVScdcCFAdRjZwFdLk2jWAFQyr1/oPELU4sAmYTdAsahyFQy.png", alt="Approximate availability in Chrome Stable by version.", width="800", height="339" %}
 
 This timeline is subject to alterations depending on the results of monitoring along the way. As always, we will update the documentation here as well as posting updates to the blink-dev threads as we progress through each stage.
 
