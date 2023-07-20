@@ -4,7 +4,7 @@ title: "WebGPU: the cross-platform graphics API of tomorrow"
 description: "Learn how to build an app with WebGPU for the web and specific platforms."
 hero: "image/vvhSqZboQoZZN9wBvoXq72wzGAf1/C9CyIqxrytYlH4uqCbgX.jpg"
 alt: "Landscape photography of person's hand in front of sunrise."
-date: 2023-07-19
+date: 2023-07-20
 #updated: YYYY-MM-DD
 authors:
   - beaufortfrancois
