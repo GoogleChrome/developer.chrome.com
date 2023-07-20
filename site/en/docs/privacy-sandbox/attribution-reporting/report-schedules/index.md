@@ -43,7 +43,7 @@ Clicks have three windows (2, 7 and 30 days after conversion). Views have one.
 After expiry⏤the duration of time specified in expiry, starting from the click/view event⏤conversions can no longer be attributed to this event.
 
 {% Aside %}
-Reports may not be sent exactly at the scheduled dates and times. If the browser isn't running when a report is scheduled to be sent, the report is sent at browser startup. In this case, the browser may also decide to delay some of these reports for a randome but short amount of time.
+Reports may not be sent exactly at the scheduled dates and times. If the browser isn't running when a report is scheduled to be sent, the report is sent at browser startup. In this case, the browser may also decide to delay some of these reports for a random, but short, period of time.
 {% endAside %}
 
 ### Views (event sources)
