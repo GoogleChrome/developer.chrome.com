@@ -8,7 +8,7 @@ description: How to make your Manifest V2 Chrome Extension accessible.
 ---
 
 {% Aside 'warning' %}
-You're looking at the deprecated Manifest V2 version of Accessibility (a11y). For the latest version go to [Manifest V3 - Accessibility (a11y)](docs/extensions/mv3/a11y).
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Accessibility (a11y)](docs/extensions/mv3/a11y) for the MV3 equivalent.
 
 The Chrome Web Store no longer accepts Manifest V2 extensions. See the [Manifest V3 Migration guide](/docs/extensions/migrating) to learn how to migrate to Manifest V3.
 {% endAside %}
