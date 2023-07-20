@@ -34,7 +34,7 @@ Reasons, listed [below][offscreen-reason], are set upon document creation to det
 | AUDIO_PLAYBACK    | Closed after 30 seconds without audio playing. |
 | All other reasons | Not currently limited                          |
 
-## Example
+## Example: open and close an offscreen document
 
 Use `chrome.offscreen.createDocument()` and `chrome.offscreen.closeDocument()` for creating and closing an offscreen document. Only a single Document can be open at a time. 
 
@@ -49,21 +49,6 @@ chrome.offscreen.closeDocument()
 ```
 
 The following example shows how to ensure that the offscreen document has already been created. The `setupOffscreenDocument()` function calls [`runtime.getContexts()`][runtime-get-contexts] to find the existing offscreen document or creates it if it doesn't already exist. Note that an extension can only have one offscreen document.
-
-{% Aside 'gotchas' %}
-[`runtime.getContexts()`][runtime-get-contexts] was added in Chrome 116. In earlier versions of
-Chrome, you can check for the existence of the offscreen document using [`clients.matchAll()`](https://developer.mozilla.org/docs/Web/API/Clients/matchAll):
-
-```js
-const matchedClients = await clients.matchAll();
-
-for (const client of matchedClients) {
-  if (client.url === offscreenUrl) {
-    return;
-  }
-}
-```
-{% endAside %}
 
 ```js
 let creating; // A global promise to avoid concurrency issues
@@ -111,6 +96,25 @@ chrome.action.onClicked.addListener(async () => {
 ```
 
 For complete examples, see the [offscreen-clipboard][gh-offscreen-clipboard] and [offscreen-dom][gh-offscreen-dom] demos on GitHub.
+
+### Before Chrome 116: check if an offscreen document is open
+
+[`runtime.getContexts()`][runtime-get-contexts] was added in Chrome 116. In earlier versions of
+Chrome, you can check for the existence of the offscreen document using [`clients.matchAll()`](https://developer.mozilla.org/docs/Web/API/Clients/matchAll):
+
+```js
+async function hasOffscreenDocument(offscreenUrl) {
+    const matchedClients = await clients.matchAll();
+
+    for (const client of matchedClients) {
+      if (client.url === offscreenUrl) {
+        return true;
+      }
+    }
+    return false;
+}
+```
+
 
  [api-runtime]: /docs/extensions/reference/runtime/
  [api-windows]: /docs/extensions/reference/windows/
