@@ -80,15 +80,13 @@ Speaking of service worker lifecycle, another important update has landed: stron
 ## Recording audio and video in the background {: #tab-capture }
 
 Another gap between Manifest V2 and Manifest V3 has been closed: you can record audio and video in the background using `tabCapture` and offscreen documents. Use the [`chrome.tabCapture`][tabcapture] API in a service worker
-to obtain a stream ID following a user gesture. This can then be passed to an [offscreen document](offscreen-document) to start recording.
+to obtain a stream ID following a user gesture. This can then be passed to an [offscreen document][offscreen-document] to start recording.
 
 Check out our updated [`tabCapture` guide][tabcapture-guide] to learn how it works or, for a working example,  see the [Tab Capture - Recorder][recorder-sample] sample.
 
-[video]
-
 ## New API: `runtime.getContexts()` {: #runtime-get-contexts }
 
-The new [`runtime.getContexts()` API](runtime-contexts) lets you fetch information about active contexts associated with your extensions. For example, you can use it to check if there is an active offscreen document:
+The new [`runtime.getContexts()` API][runtime-contexts] lets you fetch information about active contexts associated with your extensions. For example, you can use it to check if there is an active offscreen document:
 
 ```js
 const existingContexts = await chrome.runtime.getContexts({});
@@ -103,7 +101,7 @@ const offscreenDocument = existingContexts.find(
 
 ## `chrome.action.setBadgeText()` {: #action-setbadge }
 
-`action.setBadgeText` has been updated to address an inconsistency between Manifest V2 and Manifest V3. Passing an empty string or `null` to `action.setBadgeText`  will clear the badge text for the specified tab and default to the global badge text instead.
+[`action.setBadgeText`][action-setbadgetext] has been updated to address an inconsistency between Manifest V2 and Manifest V3. Passing an empty string or `null` to `action.setBadgeText`  will clear the badge text for the specified tab and default to the global badge text instead.
 
 ```js
 action.setBadgeText({tabId: tabId, text: ''});
@@ -115,7 +113,7 @@ action.setBadgeText({tabId: tabId, text: ''});
 With improved Service Worker lifetime support and the updated TabCapture API weâ€™ve continued to make progress on our goal to close the feature gap between Manifest V2 and V3. Checkout our [known issues page][known-issues] for the current status. 
 
 
-
+[action-setbadgetext]: /docs/extensions/reference/action/#method-setBadgeText
 [chrome-sidepanel-open]: /docs/extensions/reference/sidePanel/#method-open
 [desktop-capture]: /docs/extensions/reference/desktopCapture/#method-chooseDesktopMedia
 [identity-launchwebflow]: /docs/extensions/reference/identity/#method-launchWebAuthFlow
@@ -131,7 +129,7 @@ With improved Service Worker lifetime support and the updated TabCapture API weâ
 [tabcapture]: /docs/extensions/reference/tabCapture
 [tabcapture-guide]: /docs/extensions/mv3/screen_capture/
 [tut-geo]: /docs/extensions/mv3/geolocation/
-[websocket-guide]: TODO
+[websocket-guide]: /docs/extensions/mv3/tut_websockets/
 [websocket-sample]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.websockets
 
 
