@@ -2,18 +2,18 @@
 layout: 'layouts/doc-post.njk'
 title: 'Report schedules'
 subhead: >
-  Learn how aggregatable and event-level reports are scheduled.
+  Learn when the Attribution Reporting API sends aggregatable and event-level reports.
 description: >
-  Learn how aggregatable and event-level reports are scheduled.
+  Learn when the Attribution Reporting API sends aggregatable and event-level reports.
 date: 2023-03-06
 updated: 2023-07-06
 authors:
   - maudn
 ---
 
-In the Attribution Reporting API, reports are sent based on a set schedule. Schedules are different for aggregatable reports and event-level reports.
+With the Attribution Reporting API, reports are not sent immediately after a user converts; the browser sends them with a delay.
 
-Note that regardless of report type, reports are only sent when the browser is running and online. After the first failure to send, the report is retried after 5 minutes. After the second failure, the report is retried after 15 minutes. After that, it's not sent.
+Note that regardless of report type, reports are only sent when the browser is running and online. After the first failure to send, the report is retried after 5 minutes. After the second failure, the browser tries to send the report again after 15 minutes. After that, it's not sent.
 
 
 ## Aggregatable reports
