@@ -103,11 +103,11 @@ chrome.tabs.onUpdated.addListener(async (tabId, info, tab) => {
 
 When a user temporarily switches to a tab where the side panel is not enabled, the side panel will be hidden. It will automatically show again when the user switches to a tab where it was previously open.
 
-When the user navigates to a site where the side panel is not enabled, the side panel will close and the extension will not show in the side panel drop-down menu.
+When the user navigates to a site where the side panel is not enabled, the side panel will close, and the extension will not show in the side panel drop-down menu.
 
 For a complete example, see the [Tab-specific side panel][sample-sp-google] sample. 
 
-### Enable the action icon to open the side panel {: #open-action-icon } 
+### Open the side panel by clicking the toolbar icon {: #open-action-icon } 
 
 Developers can allow users to open the side panel when they click on the action toolbar icon with [`sidePanel.setPanelBehavior()`][sidepanel-set-behavior]. First, declare the `"action"` key in the manifest:
 
@@ -138,8 +138,33 @@ chrome.sidePanel
 ...
 ```
 
-{% Aside 'success' %}
-With `openPanelOnActionClick()` enabled, you can also open the side panel using a keyboard shortcut by specifying an [action command][action-commands] in the manifest as featured in the [Tab-specific side panel][sample-sp-google] sample.
+### Programmatically open the side panel on user interaction {: #user-interaction } 
+
+Chrome 116 introduces [`sidePanel.open()`][sidepanel-open]. It allows extensions to open the side panel through an extension user gesture, such as [clicking on the action icon][api-action]. Or a user interaction on an extension page or [content script][doc-cs], such as clicking a button. For a complete demo, see the [Open Side Panel][sample-sp-open] sample extension.
+
+The following code shows how to open a global side panel on the current window when the user clicks on a context menu. When using [`sidePanel.open()`][sidepanel-open], you must choose the context in which it should open. Use [`windowId`][sidepanel-windowid] to open a global side panel. Alternatively, set the [`tabId`][sidepanel-tabid] to open the side panel only on a specific tab.
+
+{% Label %}service-worker.js:{% endLabel %}
+
+```js/11
+chrome.runtime.onInstalled.addListener(() => {
+  chrome.contextMenus.create({
+    id: 'openSidePanel',
+    title: 'Open side panel',
+    contexts: ['all']
+  });
+});
+
+chrome.contextMenus.onClicked.addListener((info, tab) => {
+  if (info.menuItemId === 'openSidePanel') {
+    // This will open the panel in all the pages on the current window.
+    chrome.sidePanel.open({ windowId: tab.windowId });
+  }
+});
+```
+
+{% Aside 'important' %}
+Remember to design your side panel as a useful companion tool for users, improving their browsing experience without unnecessary distractions. Check the [Quality Guidelines][cws-quality] in the Program Policies for more info.
 {% endAside %}
 
 ### Switch to a different panel {: #multi-panels }
@@ -182,34 +207,43 @@ Navigating to the side panel menu
   </figcaption>
 </figure>
 
-Using the action toolbar icon
-: Users can open the side panel by clicking on [the action icon](#open-action-icon) if it's enabled.
+Open through a user gesture
+: You can open the side panel through user interactions using [`sidePanel.open()`](#user-interaction) and [`sidePanel.setPanelBehavior()`](#open-action-icon), such as:
 
-Using a keyboard shortcut
-: Users can open the side panel by pressing a keyboard shortcut if the [action command][action-commands] and the [action icon](#open-action-icon) are enabled.
-
+  - An [action click][api-action]
+  - A [keyboard shortcut][api-commands]
+  - A [context menu][api-menu]
+  - A [user gesture](#user-interaction) on an extension page or content script.
 
 ## Extension samples {: #examples }
 
 For more Side Panel API extensions demos, explore any of the following extensions:
 
-- [Site-specific side panel][sample-sp-google].
-- [Multiple side panels][sample-sp-multiple].
-- [Global side panel][sample-sp-global].
 - [Dictionary side panel][sample-sp-dictionary].
+- [Global side panel][sample-sp-global].
+- [Multiple side panels][sample-sp-multiple].
+- [Open Side panel][sample-sp-open].
+- [Site-specific side panel][sample-sp-google].
 
 [action-commands]: /docs/extensions/reference/commands/#action-commands
 [api-action]: /docs/extensions/reference/action/
+[api-commands]: /docs/extensions/reference/commands/
+[api-menu]: /docs/extensions/reference/contextMenus/
+[cws-quality]: /docs/webstore/program-policies/quality-guidelines/
+[doc-cs]: /docs/extensions/mv3/content_scripts/
 [doc-manifest]: /docs/extensions/mv3/manifest/
 [runtime-oninstalled]: /docs/extensions/reference/runtime/#event-onInstalled
 [sample-sp-dictionary]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.sidepanel-dictionary
 [sample-sp-global]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.sidepanel-global
 [sample-sp-google]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.sidepanel-site-specific
 [sample-sp-multiple]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.sidepanel-multiple
+[sample-sp-open]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.sidepanel-open
 [sidepanel-getoptions]:#method-getOptions
+[sidepanel-open]: #method-open
 [sidepanel-set-behavior]: #method-setPanelBehavior
 [sidepanel-setoptions]: #method-setOptions
+[sidepanel-tabid]: #property-OpenOptions-tabId
+[sidepanel-windowid]: #property-OpenOptions-windowId
 [tabs-onupdated]: /docs/extensions/reference/tabs/#event-onUpdated
-
 
 
