@@ -2,9 +2,9 @@
 layout: 'layouts/doc-post.njk'
 title: 'Prevent duplication in reports'
 subhead: >
-  Learn how to remove duplicates from both event-level and aggregatable reports.
+  Learn how to prevent duplicates in both event-level and aggregatable reports.
 description: >
-  Learn how to remove duplicates from both event-level and aggregatable reports.
+  Learn how to prevent duplicates in both event-level and aggregatable reports.
 date: 2023-03-06
 updated: 2023-07-21
 authors:
