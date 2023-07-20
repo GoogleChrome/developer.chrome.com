@@ -25,7 +25,7 @@ Recently, we announced changes to the Manifest V2 deprecation timeline, and whil
 We are committed to closing the following gaps before announcing a new Manifest V2 deprecation timeline:
 
 1. **User Script support:** Allow registering content scripts with arbitrary code by adding new functionality to the scripting API. (See [our proposal](https://github.com/w3c/webextensions/blob/main/proposals/user-scripts-api.md) for details.)
-1. Additional strong Service Worker keepalives for certain operations taking longer than 5 minutes.
+1. Additional strong service worker keepalives for certain operations taking longer than five minutes.
 
     **Work in progress:** Added in Chrome 116 for `permissions.request()`, `desktopCapture.chooseDesktopMedia()`, `identity.launchWebAuthFlow()` and `management.uninstall()`.
 1. **Increase the number of static and enabled rulesets** for Declarative Net Request (DNR).
