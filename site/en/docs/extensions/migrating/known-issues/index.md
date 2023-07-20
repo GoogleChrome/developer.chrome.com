@@ -41,7 +41,7 @@ The following issues have recently been addressed:
 1. Improving **support for the [`chrome.tabCapture`](/docs/extensions/reference/tabCapture/) API** [Chrome 116]:
     * Support calling `getMediaStreamId()` from a service worker.
     * Support obtaining a `MediaStream` from a stream ID in an offscreen document.
-1. **Extending service worker lifetimes** while there are active WebSocket connections [Chrome 116].
+1. **Extending service worker lifetimes** while there are active `WebSocket` connections [Chrome 116].
 
 
 ## Manifest V3 frequently asked questions 
