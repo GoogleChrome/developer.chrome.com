@@ -5,9 +5,9 @@ authors:
   - rowan_m
   - anusmitaray
 description: >
-  Plans and timeline for gradually enabling the Privacy Sandbox relevance and measurement APIs in Chrome 115, enforcing enrollment, and ending the origin trial.
+  Plans and timeline for gradually enabling the Privacy Sandbox relevance and measurement APIs in Chrome 115, ending the origin trial, and enrollment updates.
 subhead: >
-  Plans and timeline for gradually enabling the Privacy Sandbox relevance and measurement APIs in Chrome 115, enforcing enrollment, and ending the origin trial.
+  Plans and timeline for gradually enabling the Privacy Sandbox relevance and measurement APIs in Chrome 115, ending the origin trial, and enrollment updates.
 date: 2023-07-20
 thumbnail: 'image/80mq7dk16vVEg8BBhsVe42n6zn82/s3iDQJUgLZV25YbtYxs1.png'
 alt: >
