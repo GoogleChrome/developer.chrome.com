@@ -10,6 +10,10 @@ subhead: >
 # Required
 date: 2023-07-20
 
+hero: 'image/6hHqS5auVgWhN0cQNQztaJx5w4M2/zADAEYZOjtxhAet6UmP4.jpg'
+
+alt: ''
+
 authors:
   - sebastianbenz
 
