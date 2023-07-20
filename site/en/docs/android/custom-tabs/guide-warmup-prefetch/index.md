@@ -93,7 +93,7 @@ protected void onCreate(Bundle savedInstanceState) {
         @Override
         public void onClick(View view) {
             String url = "https://developers.android.com";
-            CustomTabsIntent intent = new CustomTabsIntent.Builder(session)
+            CustomTabsIntent intent = new CustomTabsIntent.Builder(mSession)
                     .build();
             intent.launchUrl(MainActivity.this, Uri.parse(url));
         }
