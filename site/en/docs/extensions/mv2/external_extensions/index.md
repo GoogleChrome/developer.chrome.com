@@ -7,7 +7,11 @@ updated: 2018-06-12
 description: How to distribute Chrome Extensions outside of the Chrome Web Store.
 ---
 
-{% Partial 'extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Alternative extension installation methods](/docs/extensions/mv3/external_extensions/) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 All Chrome extensions must be distributed either directly from the Chrome Web Store or by using the
 mechanisms described below. Failure to comply with one of these distribution methods constitutes a

@@ -7,7 +7,11 @@ updated: 2018-05-01
 description: How to respond to browser triggers (events) from a Chrome Extension background script.
 ---
 
-{% Partial 'extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - About extension service workers](/docs/extensions/mv3/service_workers/) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 Extensions are event based programs used to modify or enhance the Chrome browsing experience. Events
 are browser triggers, such as navigating to a new page, removing a bookmark, or closing a tab.

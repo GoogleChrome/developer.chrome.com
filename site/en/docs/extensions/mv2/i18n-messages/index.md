@@ -7,7 +7,11 @@ updated: 2014-05-22
 description: Reference documentation about the format of the messages.json file for Chrome Extensions.
 ---
 
-{% Partial 'extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Localization message formats](/docs/extensions/mv3/i18n-messages/) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 Each internationalized extension or app has at least one file named `messages.json` that provides
 locale-specific strings. This page describes the format of `messages.json` files. For information on

@@ -7,7 +7,11 @@ updated: 2014-05-21
 description: An overview of the valid values for the permissions property in manifest.json.
 ---
 
-{% Partial 'extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Declare permissions](/docs/extensions/mv3/declare_permissions/) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 To use most chrome.\* APIs, your extension or app must declare its intent in the "permissions" field
 of the [manifest][1]. Each permission can be either one of a list of known strings (such as

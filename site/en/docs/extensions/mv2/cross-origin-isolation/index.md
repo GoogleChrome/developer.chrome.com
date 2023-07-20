@@ -7,7 +7,12 @@ updated: 2021-11-10
 description: Overview of cross-origin isolation for extensions
 ---
 
-{% Partial 'extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Cross-origin isolation](/docs/extensions/mv3/cross-origin-isolation/) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
+
 
 [Cross-origin isolation][web-coi-guide] enables a web page to use powerful features such as
 [`SharedArrayBuffer`][mdn-sharedarraybuffer]. An extension can opt into cross-origin isolation by

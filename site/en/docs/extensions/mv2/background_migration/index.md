@@ -9,7 +9,11 @@ description: >
   model to improve the performance of your Chrome Extension.
 ---
 
-{% Partial 'extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Migrate to Service Workers](/docs/extensions/migrating/to-service-workers/) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 Implementing non-persistent background scripts will greatly reduce the resource cost of your
 extension. Most extension functionality can be supported by an event based background script. Only
