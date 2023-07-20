@@ -38,11 +38,14 @@ Even though extensions can use the [`Storage`][mdn-storage] interface (accessibl
 The Storage API is divided into the following four buckets ("storage areas"): 
 
 [`storage.local`][prop-local]
-: Data is stored locally, which is cleared when the extension is removed. The quota limitation is approx 5 MB, but can be increased by requesting the `"unlimitedStorage"` permission. Consider using it to store larger amounts of data.
+: Data is stored locally, which is cleared when the extension is removed. The quota limitation is approximately 10 MB, but can be increased by requesting the `"unlimitedStorage"` permission. Consider using it to store larger amounts of data.
+
+{% Aside 'warning' %}
+Before Chrome 114, the quota was approximately 5 MB.
+{% endAside %}
 
 [`storage.sync`][prop-sync]
-: If syncing is enabled, the data is synced to any Chrome browser that the user is logged into. If disabled, it behaves like `storage.local`. When the browser is offline, Chrome stores the data locally and resumes syncing when it's back online. The quota limitation is 100 KB approx, 8 KB per item. Consider using it to preserve user settings across synced browsers. 
-
+: If syncing is enabled, the data is synced to any Chrome browser that the user is logged into. If disabled, it behaves like `storage.local`. Chrome stores the data locally when the browser is offline and resumes syncing when it's back online. The quota limitation is 100 KB approx, 8 KB per item. Consider using it to preserve user settings across synced browsers. 
 
 {% Aside 'warning' %}
 Local and sync storage areas should not store confidential user data because they are not encrypted. When working with sensitive data, consider using the `session` storage area to hold values in memory until the browser is shut down.
@@ -56,7 +59,7 @@ Before Chrome 112, the quota was approximately 1 MB.
 {% endAside %}
 
 [storage.managed][prop-managed]
-: Administrator can use a [schema][manifest-storage] and enterprise policies to configure a supporting extension's settings in a managed environment. This storage area is read-only.
+: Administrators can use a [schema][manifest-storage] and enterprise policies to configure a supporting extension's settings in a managed environment. This storage area is read-only.
 
 ## Manifest {: #manifest}
 
