@@ -81,7 +81,7 @@ Shared Storage API は、サードパーティ Cookie のいくつかの既存�
    <td>
 <strong><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/shared-storage/unique-reach/">Unique reach reporting</a></p></strong>
    </td>
-   <td>Many content producers and advertisers often want to know how many unique people saw their content. You can use Shared Storage to report on the first time a user saw your ad, embedded video, publication, and prevent duplicative counting of that same user on a different site, giving you an aggregated noisy report of your approximate unique reach.     </td>
+   <td>多くのコンテンツプロデューサーや広告主は、自分のコンテンツを閲覧したユニークユーザー数を知りたいと考えています。共有ストレージを使用して、ユーザーが広告、埋め込みビデオ、出版物を初めて見たときのレポートを作成し、同じユーザーが別のサイトで重複してカウントされるのを防ぎ、集計されたノイズの多いおおよそのユニークリーチのレポートを提供できます。</td>
    <td>Private Aggregation API</td>
   </tr>
   <tr>
@@ -100,13 +100,13 @@ Shared Storage API は、サードパーティ Cookie のいくつかの既存�
 
 ## 共有ストレージの仕組み
 
-Shared Storage allows you to make informed decisions based on cross-site data, without sharing user information (such as browser history or other personal details) with an embedding site or exfiltrating data to your own servers.
+共有ストレージを使用すると、ユーザー情報（ブラウザの履歴やその他の個人情報など）を埋め込みサイトと共有したり、独自のサーバーにデータを流出させたりすることなく、クロスサイトデータを以って十分な情報に基づく意思決定を行うことができます。
 
 他の JavaScript ストレージ API（localStorage や indexedDB など）と同様に、いつでも共有ストレージに書き込むことができます。他のストレージ API とは異なり、共有ストレージワークレットと呼ばれる安全な環境でのみ共有ストレージの値を読み取ることができます。
 
 {% Aside 'key-term' %}
 
-A [worklet](https://developer.mozilla.org/docs/Web/API/Worklet) allows you to run specific JavaScript functions and return information back to the requester. Within a worklet, you can execute JavaScript but you cannot interact or communicate with the outside page.
+[ワークレット](https://developer.mozilla.org/docs/Web/API/Worklet)を使用すると、特定の JavaScript 関数を実行して、要求元に情報を返すことができます。ワークレット内では、JavaScript を実行できますが、外部ページと対話したり通信したりすることはできません。
 
 {% endAside %}
 
