@@ -9,6 +9,7 @@ description: >
 subhead: >
   Plans and timeline for gradually enabling the Privacy Sandbox relevance and measurement APIs in Chrome 115, ending the origin trial, and enrollment updates.
 date: 2023-07-20
+updated: 2023-07-21
 thumbnail: 'image/80mq7dk16vVEg8BBhsVe42n6zn82/s3iDQJUgLZV25YbtYxs1.png'
 alt: >
   Shipping the Privacy Sandbox relevance and measurement APIs
