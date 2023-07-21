@@ -72,15 +72,15 @@ Private State Token API を使用すると、ウェブサイトは信頼でき�
 
 {% Aside %} この例の JavaScript 呼び出しの詳細については、[API の使用例](https://web.dev/trust-tokens/#sample-api-usage)をご覧ください。 {% endAside %}
 
-## Is tooling available for Privacy State Tokens?
+## プライバシー状態トークン用のツールはありますか？
 
 Chrome DevTools turns on inspection from the Network and Application tabs. Read more about this [DevTools integration](/blog/new-in-devtools-89/#trust-token) and about [Private State Tokens](/docs/privacy-sandbox/trust-tokens/).
 
-## How do publishers handle tokens from multiple trusted issuers?
+## サイト運営者は、複数の信頼できる発行者からのトークンをどのように処理しますか？
 
-The publisher can check a user's browser for valid tokens with `document.hasTrustToken()` for one issuer at a time. If this returns `true` and a token is available, the publisher can redeem the token and stop looking for other tokens.
+サイト運営者は、一度に 1 つの発行者に対し、`document.hasTrustToken()` を使用してユーザーのブラウザに有効なトークンがあるかを確認できます。これが `true` を返してトークンが利用可能な場合、サイト運営者はそのトークンを引き換えて、他のトークンの検索を停止できます。
 
-The publisher must decide which token issuers to check and in what order.
+サイト運営者は、チェックするトークン発行者とその順序を決定する必要があります。
 
 ---
 
