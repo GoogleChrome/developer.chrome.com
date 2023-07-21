@@ -97,7 +97,7 @@ find a list of the scoped Protected Audience API features and when they'll be su
     <tr>
     <td><a href="https://github.com/WICG/turtledove/issues/299">Per-Buyer Latency Reporting</a></td>
     <td>Later in 2023</td>
-    <td>Available in Chrome for origin trial in Q1 2023</td>
+    <td>Available in Chrome for origin trial in Q1 2023.</td>
   </tr>
   <tr>
     <td><a href="https://github.com/WICG/turtledove/issues/293">Per-buyer wall-time timeout</a></td>
@@ -117,25 +117,25 @@ find a list of the scoped Protected Audience API features and when they'll be su
   <tr>
     <td><a href="https://github.com/WICG/turtledove/issues/356">Accuracy-limited ad cost for cost-per-click billing</a></td>
     <td>Later in 2023</td>
-    <td>Available in Chrome for origin trial in Q2 2023</td>
+    <td>Available in Chrome for origin trial in Q2 2023.</td>
   </tr>
   <tr>
     <td><a href="https://github.com/WICG/turtledove/issues/166">Currency for highest bid and highest other scoring bid</a>
     </td>
     <td>Later in 2023</td>
-    <td>Expected in Chrome for origin trial in Q3 2023</td>
+    <td>Expected in Chrome for origin trial in Q3 2023.</td>
   </tr>
   <tr>
     <td><a href="https://github.com/WICG/turtledove/issues/477">Macro Support for Third-party Ad Trackers (3PAT)</a>
     </td>
     <td>Later in 2023</td>
-    <td>Expected in Chrome in Q3 2023</td>
+    <td>Expected in Chrome in Q3 2023.</td>
   </tr> 
   <tr>
     <td><a href="https://github.com/WICG/turtledove/issues/319">Support for Negative Interest Group Targeting</a>
     </td>
     <td>Later in 2023</td>
-    <td>Expected in Chrome in Q3 2023</td>
+    <td>Expected in Chrome in Q3 2023.</td>
   </tr> 
   </table>
 
