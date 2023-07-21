@@ -15,18 +15,18 @@ authors:
 
 {% Aside %}
 
-For technical resources, see the developer guides:
+技術リソースについては、開発者ガイドを参照してください。
 
-- [Web platform](/docs/privacy-sandbox/topics/)
+- [ウェブプラットフォーム](/docs/privacy-sandbox/topics/)
 - [Android](https://developer.android.com/design-for-safety/privacy-sandbox/guides/topics)
 
 技術的でない概要については、[privacysandbox.com のトピックの概要](https://privacysandbox.com/intl/en_us/proposals/topics/)をご覧ください。
 
 {% endAside %}
 
-## New taxonomy and expanding support for headers
+## 新しい分類法とヘッダーのサポートの拡大
 
-**June 15, 2023**
+**2023 年 6 月 15 日**
 
 **分類** - トピックの分類が[拡大・改善](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v2.md)されました。「Athletic Apparel」、「Mattresses」、「Luxury Travel」など、商業に焦点を当てた 280 個のカテゴリを追加し、「Civil Engineering」や「Equestrian」など、160 個のカテゴリを削除しました。Chrome がこの新しい分類を使用し始めるのは今年後半ですが、確認してフィードバックを送信することができます。
 
@@ -38,7 +38,7 @@ For technical resources, see the developer guides:
 
 ## Chrome’s commitment to Topics
 
-**January 24, 2023**
+**2023 年 1 月 24 日**
 
 Following the W3C Technical Architecture Group’s initial design review of Topics, we’ve received some questions from ecosystem stakeholders about what this means for the Topics API.
 
@@ -48,7 +48,7 @@ Launching Topics in Chrome will provide the web community with the opportunity t
 
 ## Insights from early Topics testers
 
-**January 9, 2023**
+**2023 年 1 月 9 日**
 
 Topics testing in Chrome is still at an early stage, focused on validating the technical stability and core functionality of the API. However, we are encouraged to see some early testers exploring aspects of the business logic behind Topics and sharing their insights publicly. For example, [Xandr](https://medium.com/xandr-tech/on-the-topic-of-topics-298f95e39269) looked at how the Topics classifier compares to Xandr's own method of categorizing websites, and Criteo evaluated the ability of Topics, as a standalone signal, to predict users' future interaction with advertiser websites. While isolated analysis won't meaningfully predict the real-world performance of the Privacy Sandbox technologies, it can prompt constructive dialog and surface areas for improvement. As more holistic utility testing becomes possible in 2023, we look forward to deeper industry engagement to optimize Topics and develop best practices for its use in digital advertising products. If you are testing Topics we encourage you to share your plans and insights on the [Topics API Tester List](https://github.com/patcg-individual-drafts/topics/blob/main/topics-tester-list.md).
 
@@ -66,7 +66,7 @@ Chrome has started to [increase traffic](/blog/privacy-sandbox-origin-trial-incr
 
 ## Topics tester page launched on GitHub
 
-**October 11, 2022**
+**2022 年 10 月 11 日**
 
 To help consolidate information about Topics testing, we've created a [Tester List page on GitHub](https://github.com/patcg-individual-drafts/topics/blob/main/topics-tester-list.md) where Topics testers can identify themselves and link to their learnings. This list is voluntary and self-reported, so we don't expect it will be complete or representative of all testing activity—but we hope it will be a useful hub for testers who are willing to share their insights with the community and inspire others to get involved. If you are testing Topics or making plans to test, please add your organization to the list. You'll find detailed instructions on the page.
 
@@ -74,7 +74,7 @@ To help consolidate information about Topics testing, we've created a [Tester Li
 
 The Privacy Sandbox team welcomes all feedback regarding the design, implementation and effectiveness of the Topics API. You can join the discussion and raise questions in the [issues for the Topics proposal](https://github.com/patcg-individual-drafts/topics/issues) on GitHub. You can also provide feedback via the [Privacy Sandbox feedback form](https://docs.google.com/forms/d/e/1FAIpQLSePSeywmcwuxLFsttajiv7NOhND1WoYtKgNJYxw_AGR8LR1Dg/viewform).
 
-Here are some specific areas where the Chrome team is seeking input from testers and other stakeholders.
+ここでは、Chrome チームがテスターやその他の関係者からの意見を求めている特定の領域をいくつか紹介します。
 
 ### Topics taxonomy
 
@@ -83,7 +83,7 @@ The [initial taxonomy](https://github.com/patcg-individual-drafts/topics/blob/ma
 - [**どの分類を使用する必要があるか？**](https://github.com/patcg-individual-drafts/topics/issues/3)誰がそれを作成し、管理する必要があるか？
 - [**What standard might be used to determine sensitive categories?**](https://github.com/patcg-individual-drafts/topics/issues/4) Further discussion [on the Topics explainer repo](https://github.com/patcg-individual-drafts/topics/issues/78).
 
-### Website classification
+### ウェブサイトの分類
 
 Topics are inferred by Chrome, using a classifier model that maps site hostnames to topics. The public can inspect the classifier—either by downloading it locally, using [the Topics colab](https://colab.sandbox.google.com/drive/1hIVoz8bRCTpllYvads51MV7YS3zi3prn?usp=sharing), or utilizing `chrome://topics-internals`. Some stakeholders have shared individual examples of "miscategorized sites." Others have suggested that categorization at the hostname level does not effectively assign topics for sites with diverse sets of content.
 
