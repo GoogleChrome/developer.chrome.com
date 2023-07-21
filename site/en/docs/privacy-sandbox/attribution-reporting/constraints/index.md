@@ -59,14 +59,15 @@ The second conversion for that same source is:
 ```
 Note that there can be more conversions.
 
-In the example,
+So, in the example,
 
 ```text
 total = 32768 + 1664 + 12323 + 1664
 ```
 
-The total must be under 65536, as mentioned earlier.
+Keep in mind that:
 
+- The total must be under 65536, as mentioned earlier.
 - The maximum number of aggregation keys allowed in the source registration is 50. This is also the maximum number of contributions per aggregatable report.
 - Noise is applied in the aggregation service.
 - Reports are sent with a random delay between 0-1 hours.
