@@ -84,7 +84,7 @@ to obtain a stream ID following a user gesture. This can then be passed to an [o
 
 Check out our updated [`tabCapture` guide][tabcapture-guide] to learn how it works or, for a working example,  see the [Tab Capture - Recorder][recorder-sample] sample.
 
-## New API: `runtime.getContexts()` {: #runtime-get-contexts }
+## New API: runtime.getContexts() {: #runtime-get-contexts }
 
 The new [`runtime.getContexts()` API][runtime-contexts] lets you fetch information about active contexts associated with your extensions. For example, you can use it to check if there is an active offscreen document:
 
@@ -95,11 +95,11 @@ const offscreenDocument = existingContexts.find(
   );
 ``` 
 
-## New offscreen reason: `GEOLOCATION` {: #offscreen-geolocation }
+## New offscreen reason: GEOLOCATION {: #offscreen-geolocation }
 
 `geolocation` has been added as another [valid reason for using an offscreen document][offscreen-document-reasons]. Check out our guide [using geolocation][tut-geo] to learn more about how to obtain the geographical location of the extension using the Offscreen API.
 
-## `chrome.action.setBadgeText()` {: #action-setbadge }
+## chrome.action.setBadgeText() {: #action-setbadge }
 
 [`action.setBadgeText`][action-setbadgetext] has been updated to address an inconsistency between Manifest V2 and Manifest V3. Passing an empty string or `null` to `action.setBadgeText`  will clear the badge text for the specified tab and default to the global badge text instead.
 
