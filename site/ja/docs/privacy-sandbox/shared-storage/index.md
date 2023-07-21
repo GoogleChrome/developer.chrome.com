@@ -30,7 +30,7 @@ Shared Storage API を使用すると、サイトはパーティション化さ�
 
 次の 2 つの方法で、[共有ストレージデータを使用](#how-does-shared-storage-work)できます。
 
-- [Cross-site content selection](/docs/privacy-sandbox/shared-storage/content-selection/).
+- [クロスサイトコンテンツの選択](/docs/privacy-sandbox/shared-storage/content-selection/)。
 - [Private Aggregation API](/docs/privacy-sandbox/private-aggregation/) を使用したクロスサイトデータのノイズ付き集計。
 
 ### 共有ストレージのユースケース
@@ -58,28 +58,28 @@ Shared Storage API は、サードパーティ Cookie のいくつかの既存�
   <tr>
    <td><strong><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/shared-storage/creative-rotation/">クリエイティブ ローテーション</a></p></strong></td>
    <td>クリエイティブ ID、ビュー数、ユーザーインタラクションなどのデータを保存して、さまざまなサイトでどのクリエイティブユーザーが表示するかを決定できます。これにより、ビューのバランスをとり、特定のコンテンツの過飽和を避けることができるため、ユーザーエクスペリエンスの低下を避けることができます。</td>
-   <td>Content selection</td>
+   <td>コンテンツの選択</td>
    </tr>
   <tr>
    <td><strong><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/shared-storage/ab-testing/">A/B テスト</a></p></strong></td>
    <td>ユーザーを実験グループに割り当て、そのグループを共有ストレージに保存して、サイト間でアクセスできるようにすることができます。</td>
-   <td>Content selection</td>
+   <td>コンテンツの選択</td>
   </tr>
   <tr>
-   <td><strong><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/shared-storage/known-customer/">Custom user experiences</a></p></strong></td>
+   <td><strong><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/shared-storage/known-customer/">カスタム ユーザー エクスペリエンス</a></p></strong></td>
    <td>ユーザーの登録ステータスやユーザーに関するその他の状態に基づいて、カスタムコンテンツと CTA を共有します。</td>
-   <td>Content selection</td>
+   <td>コンテンツの選択</td>
   </tr>
   <tr>
    <td>
-<strong>Anti-abuse mitigations</strong>
+<strong>不正行為防止の緩和策</strong>
    </td>
    <td>悪用防止、詐欺防止、およびウェブセキュリティ組織は、独自の技術を使用して、自動化されたボットであれ、危害を加えようとしている実際の人間であれ、悪意のあるユーザーを検出することがよくあります。ここでは、URL の選択出力ゲートを使用してユーザーの信頼性評価をエンコードするか、プライベート集計出力ゲートを使用して異常検出用のデータセットを構築するかにかかわらず、さまざまな戦略をテストできます。</td>
    <td>コンテンツの選択、Private Aggregation API</td>
   </tr>
   <tr>
    <td>
-<strong><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/shared-storage/unique-reach/">Unique reach reporting</a></p></strong>
+<strong><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/shared-storage/unique-reach/">ユニークリーチレポート</a></p></strong>
    </td>
    <td>多くのコンテンツプロデューサーや広告主は、自分のコンテンツを閲覧したユニークユーザー数を知りたいと考えています。共有ストレージを使用して、ユーザーが広告、埋め込みビデオ、出版物を初めて見たときのレポートを作成し、同じユーザーが別のサイトで重複してカウントされるのを防ぎ、集計されたノイズの多いおおよそのユニークリーチのレポートを提供できます。</td>
    <td>Private Aggregation API</td>
