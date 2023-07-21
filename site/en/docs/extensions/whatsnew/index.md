@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-07-17
+updated: 2023-07-20
 tags:
   - extensions-news
 
@@ -14,6 +14,12 @@ tags:
 <!--lint disable first-heading-level-->
 
 Check this page often to learn about changes to Chrome extensions, extensions documentation, or related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about some of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).) The [Chrome schedule](https://chromiumdash.appspot.com/schedule) lists stable and beta release dates.
+
+### Chrome 116: More than we can fit here {: #chrome-116 }
+
+<p class="color-secondary-text type--caption">Posted on <time>July 21, 2023</time></p>
+
+Chrome 116 is a big release for extensions. You can now open side panels programmatically. A new method lets you learn if there's an active offscreen document. Service workers got serveral improvements. There's enough improvements in 116 that we've written [a blog post to cover them](/blog/chrome-116-beta-whats-new-for-extensions/#runtime-get-contexts). Chrome 116 is in beta as of July 19.
 
 ### Blog post: What's happening in Chrome Extensions {: #whats-happening-7-23 }
 
