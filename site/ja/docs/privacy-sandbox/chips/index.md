@@ -1,15 +1,11 @@
 ---
 layout: layouts/doc-post.njk
 title: Cookies Having Independent Partitioned State (CHIPS)
-subhead: |2
-
-  デベロッパーは、トップレベル サイト別の「パーティション化した」Cookie の保存に オプトインできます。
-description: |2
-
-  デベロッパーは、トップレベル サイト別の「パーティション化した」Cookie の保存に オプトインできます。
+subhead: デベロッパーは、トップレベル サイト別の「パーティション化した」Cookie の保存に オプトインできます。
+description:  デベロッパーは、トップレベル サイト別の「パーティション化した」Cookie の保存に オプトインできます。
   パーティション化した Cookie はサードパーティー サービスからセット可能ですが、最初にセットされたトップレベル サイト内からしか読み込むことはできません。
-date: '2022-02-15'
-updated: '2023-06-14'
+date: 2022-02-15
+updated: 2023-06-14
 authors:
   - mihajlija
 tags:
