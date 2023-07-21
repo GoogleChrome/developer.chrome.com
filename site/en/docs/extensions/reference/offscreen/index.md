@@ -40,7 +40,7 @@ chrome.offscreen.createDocument({
 
 ### Reasons
 
-Find all valid reasons listed [below][offscreen-reason]. Reasons are set upon document creation to determine the document's lifespan: 
+Find all valid reasons listed [below][offscreen-reason]. Reasons are set on document creation to determine the document's lifespan: 
 
 
 | Reason            | Offscreen Document Lifetime                    |
