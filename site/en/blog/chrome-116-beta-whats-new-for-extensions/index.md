@@ -32,7 +32,7 @@ video {
 
 ## Programmatically open a Sidepanel {: #sidepanel-open }
 
-Sidepanel has been one of the most requested features in Chrome extensions and has been available in Chrome since version 114. After launching the Side Panel API, one of the first pieces of feedback that we’ve received was that developers want a way to programmatically open a side panel. And here it is: [`chrome.sidePanel.open`](chrome-sidepanel-open) is now in beta. You can use it to open the extension side panel programmatically in response to a user interaction, such as a context menu click:
+Sidepanel has been one of the most requested features in Chrome extensions and has been available in Chrome since version 114. After launching the Side Panel API, one of the first pieces of feedback that we’ve received was that developers want a way to programmatically open a side panel. And here it is: [`chrome.sidePanel.open`][chrome-sidepanel-open] is now in beta. You can use it to open the extension side panel programmatically in response to a user interaction, such as a context menu click:
 
 ```js
 chrome.contextMenus.onClicked.addListener((info, tab) => {
@@ -66,7 +66,7 @@ function keepAlive() {
 }
 ```
 
-Check out our new WebSocket [guide](websocket-guide) and [sample](websocket-sample) for more details.
+Check out our new WebSocket [guide][websocket-guide] and [sample][websocket-sample] for more details.
 
 ## Strong keepalive for Service Workers {: #sw-keepalive }
 
