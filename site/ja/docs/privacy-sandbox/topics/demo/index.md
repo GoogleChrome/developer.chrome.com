@@ -76,7 +76,7 @@ API をサポートするブラウザでは、`fetch()` リクエストに `Sec-
 
 このホスト名とこのユーザーのトピックが観察されていない場合、ヘッダーは含まれますが、値は空です。つまり、`fetch()` リクエストの code0}Sec-Browsing-Topics ヘッダーには、リクエスト URL のホスト名と一致するオリジンの呼び出し元が現在のユーザーのブラウザで観察したトピックのみが含まれます。これは、iframe から `document.browsingTopics()` を呼び出して、現在のユーザーの観察済みトピックを閲覧する場合と同じです。
 
-The request header is sent on a request as long as it has the appropriate permission policy is in play, the context is secure, and user settings permit it. Topics are not provided in headers for navigation requests.
+リクエストヘッダーは、適切な権限ポリシーが有効であり、コンテキストが安全であり、ユーザー設定が許可している限り、リクエストで送信されます。Topics は、ナビゲーションリクエストのヘッダーには提供されません。
 
 Topics リクエストヘッダーは以下のようになります。
 
@@ -84,7 +84,7 @@ Topics リクエストヘッダーは以下のようになります。
 Sec-Browsing-Topics: 186;version="chrome.1:1:2206021246";config_version="chrome.1";model_version="2206021246";taxonomy_version="1", 265;version="chrome.1:1:2206021246";config_version="chrome.1";model_version="2206021246";taxonomy_version="1"
 ```
 
-This example includes two topics from the [Topics taxonomy](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md), 186 and 265, along with each topic's version information.
+この例には、[Topics 分類体系](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md)の 186 と 265 の 2 つのトピックと、各トピックのバージョン情報が含まれています。
 
 {% Aside 'note' %} [fetch()](https://chromium-review.googlesource.com/c/chromium/src/+/4044267) と [XHR](https://chromium-review.googlesource.com/c/chromium/src/+/4103742) の実装は、Chrome 111 で初めて提供されました。（詳細については、これらのビルドを参照してください。） {% endAside %}
 
