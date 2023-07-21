@@ -16,7 +16,7 @@ authors:
 
 {% Partial 'privacy-sandbox/ps-implementation-status.njk' %}
 
-The Topics API demo provides a look at how topics are inferred from hostnames. You can preview what topics are observed when you visit a demo site, which requires very little setup.
+Topics API のデモでは、ホスト名からトピックがどのように推測されるかを確認できます。デモ サイトにアクセスすると、どのようなトピックが観察されるかをプレビューできます。セットアップはほとんど必要ありません。
 
 ユーザーと一緒に API をテストする場合は、[広告関連のオリジントライアル](/docs/privacy-sandbox/unified-origin-trial/)に登録してください。
 
@@ -32,11 +32,11 @@ The Topics API demo provides a look at how topics are inferred from hostnames. Y
 
 Chrome 101 以降を実行する際に、シングルユーザーとして以下の 2 つの方法で Topics API を試すことができます。
 
-- Enable the API in the `chrome://flags/#privacy-sandbox-ads-apis` Chrome page:
+- `chrome://flags/#privacy-sandbox-ads-apis` Chrome ページで API を有効にします。
 
       <figure></figure>
 
-    {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/4kpW1PAuzrMrecSAR3tU.png", alt="Enable the Topics API using the chrome://flags/#privacy-sandbox-ads-apis page", width="800", height="246" %} <figcaption>The chrome://flags/#privacy-sandbox-ads-apis page where you can enable or disable the API. <a href="https://wd.imgix.net/image/RtQlPaM9wdhEJGVKR8boMPkWf443/4kpW1PAuzrMrecSAR3tU.png?auto=format&amp;w=1600">View a larger version</a></figcaption>
+    {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/4kpW1PAuzrMrecSAR3tU.png", alt="chrome://flags/#privacy-sandbox-ads-apis ページを使用してトピック API を有効にする", width="800", height=" 246" %}<figcaption> chrome://flags/#privacy-sandbox-ads-apis ページでは、API を有効または無効にできます。 <a href="https://wd.imgix.net/image/RtQlPaM9wdhEJGVKR8boMPkWf443/4kpW1PAuzrMrecSAR3tU.png?auto=format&amp;w=1600">拡大版を表示</a></figcaption>
 
       
     
@@ -55,7 +55,7 @@ Chrome 101 以降を実行する際に、シングルユーザーとして以下
 
 [Run Chromium with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags) には、コマンドラインから Chrome やその他の Chromium ベースブラウザを実行する際にフラグを設定する方法が説明されています。ただしこのデモは、Google Chrome に特化しています。
 
-## The Topics API headers demo
+## Topics API ヘッダーのデモ
 
 [topics-fetch-demo.glitch.me](https://topics-fetch-demo.glitch.me/) のデモでは、`fetch()` リクエストとレスポンスヘッダーを使用してトピックにアクセスし、観察済みとしてマークする方法を示しています。
 
@@ -94,7 +94,7 @@ This example includes two topics from the [Topics taxonomy](https://github.com/p
 
 リクエストに `Sec-Browsing-Topics` ヘッダーが含まれていて、そのリクエストへのレスポンスに `Observe-Browsing-Topics: ?1` ヘッダーが含まれている場合、ブラウザはリクエストヘッダーのトピックを観察済みとしてマークします。観察されたトピックは、Topics API による計算の対象となります。このメカニズムは、iframe から JavaScript API を使用して提供される機能と一致するように設計されています。
 
-The screenshot below shows the topics recorded from visiting the sites on the API demo page.
+以下のスクリーンショットは、API デモ ページのサイトへのアクセスから記録されたトピックを示しています。
 
 <figure>{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/7GjvLNY86mBzeXPERRam.png", alt="glitch.me の Topics API デモページ", width="656", height="566" %} <figcaption> API を試すための glitch.me デモ。<a href="https://wd.imgix.net/image/RtQlPaM9wdhEJGVKR8boMPkWf443/7GjvLNY86mBzeXPERRam.png?auto=format&amp;w=1600">拡大版を表示</a></figcaption></figure>
 
@@ -109,7 +109,7 @@ The screenshot below shows the topics recorded from visiting the sites on the AP
 
 <figure>{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/Ef9ml82uPg3RdX5PX5QU.png", alt="[Topics State] タブには、観察されたトピックに関する情報が表示されます。", width="474", height="416" %}<figcaption>実際のトピックとランダムなトピックを表示する [Topics State] タブ。 <a href="https://wd.imgix.net/image/RtQlPaM9wdhEJGVKR8boMPkWf443/Ef9ml82uPg3RdX5PX5QU.png?auto=format&amp;w=1600">拡大版を表示</a></figcaption></figure>
 
-## Next steps
+## 次のステップ
 
 アドテック開発者の方は、Topics API を[試して参加してください](/docs/privacy-sandbox/topics-experiment/)。さらに詳しいリソースについては、[開発者ガイド](/docs/privacy-sandbox/topics/)をお読みください。
 
