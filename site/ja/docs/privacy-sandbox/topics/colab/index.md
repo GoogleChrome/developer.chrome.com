@@ -1,14 +1,10 @@
 ---
 layout: layouts/doc-post.njk
 title: colab でのトピック推論のテスト
-subhead: |2-
-
-  colab を試して、Chrome がホスト名からトピックを推測するために使用する TensorFlow Lite モデルを読み込むする方法を学習します。
-description: |2-
-
-  colab を試して、Chrome がホスト名からトピックを推測するために使用する TensorFlow Lite モデルを読み込むする方法を学習します。
-date: '2022-01-25'
-updated: '2023-03-08'
+subhead: colab を試して、Chrome がホスト名からトピックを推測するために使用する TensorFlow Lite モデルを読み込むする方法を学習します。
+description: colab を試して、Chrome がホスト名からトピックを推測するために使用する TensorFlow Lite モデルを読み込むする方法を学習します。
+date: 2022-01-25
+updated: 2023-03-08
 authors:
   - samdutton
 ---
