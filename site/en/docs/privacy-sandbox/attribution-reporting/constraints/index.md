@@ -42,30 +42,30 @@ The following list notes limitations to keep in mind.
 
 ### Click (`navigation` source) and View (`event` source)
 
-- The total values of all the buckets attributed to a source should be at most 65536.
-  - For example:
+The total values of all the buckets attributed to a source should be at most 65536. For example, let's say:
 
-    First conversion for a source:
+The first conversion for a source is:
 
-      ```json
-      "campaignCounts": 32768
-      "geoValues": 1664
-      ```
+```json
+"campaignCounts": 32768
+"geoValues": 1664
+```
 
-    Second conversion for that same source:
+The second conversion for that same source is:
 
-      ```json
-      "campaignCounts": 12323
-      "geoValues": 1664
-      ```
-    Note that there can be more conversions.
-    In this example,
+```json
+"campaignCounts": 12323
+"geoValues": 1664
+```
+Note that there can be more conversions.
+
+In the example,
 
     ```text
     total = 32768 + 1664 + 12323 + 1664
     ```
 
-     The total must be under 65536, as mentioned earlier.
+The total must be under 65536, as mentioned earlier.
 
 - The maximum number of aggregation keys allowed in the source registration is 50. This is also the maximum number of contributions per aggregatable report.
 - Noise is applied in the aggregation service.
@@ -73,7 +73,7 @@ The following list notes limitations to keep in mind.
 
 ## All reports
 
-- For a given user, within all unexpired sources, there can be a maximum of 100 different destinations (typically, advertiser sites, or sites where conversions are expected to take place). Unexpired sources are ad clicks or views to which a conversion can still be attributed; that is, for which `expiry` has not yet been exceeded. Inother words, the unique destination limit for attribution sources is covered by unexpired sources, instead of pending sources.
+- For a given user, within all unexpired sources, there can be a maximum of 100 different destinations (typically, advertiser sites, or sites where conversions are expected to take place). Unexpired sources are ad clicks or views to which a conversion can still be attributed; that is, for which `expiry` has not yet been exceeded. In other words, the unique destination limit for attribution sources is covered by unexpired sources, instead of pending sources.
 - 100 attributions per {source site, destination, reporting origin} (typically {publisher, advertiser, ad tech}) can be [scheduled](/docs/privacy-sandbox/attribution-reporting/schedule/) over 30 days.
 - 100 unique reporting origins (typically ad techs) can register sources per {publisher, advertiser} per 30 days. This counter is incremented for each ad click or view (source event), even those that are not attributed.
 - 10 unique reporting origins (typically ad techs) can send reports per {publisher, advertiser} per 30 days. This counter is incremented for every attributed conversion.
