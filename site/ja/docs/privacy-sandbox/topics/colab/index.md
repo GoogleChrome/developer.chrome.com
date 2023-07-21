@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc-post.njk
-title: Test topic inference in a colab
+title: colab でのトピック推論のテスト
 subhead: |2-
 
   colab を試して、Chrome がホスト名からトピックを推測するために使用する TensorFlow Lite モデルを読み込むする方法を学習します。
@@ -37,11 +37,11 @@ colab（colaboratory）は、コード、出力、説明テキストを 1 つの
 
     {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/gP8GmUH2xiwbEz27LbjO.png", alt="Topics API の colab ページ。Runtime メニューで「Run all」を選択。", width="800", height="605" %}
 
-This does the following:
+これにより次のことが行われます。
 
-1. Installs the Python packages used by the colab.
+1. colab で使用される Python パッケージをインストールします。
 2. `tflite` ライブラリとトピック分類をインストールします。
-3. Defines the taxonomy.
+3. 分類法を定義します。
 4. Model Execution Demo の各ステップを実行して、2 つのサンプルドメインで分類がどのように機能するかを示します。
 
 正常に完了した各ステップの横には、緑色のチェックマークが表示されます。（各ステップは、横にある**再生**ボタンをクリックして、個別に実行することもできます。）
@@ -52,7 +52,7 @@ This does the following:
 
 colab は分類器モデルのみを使用してトピックを推論しますが、`chrome://topics-internals` は Chrome のトピック実装を使用します。Chrome は、上位 10,000 サイトに対して分類器モデルを使用するのではなく、[トピックのリストを手動で作成](/docs/privacy-sandbox/topics/topic-classification/#classifier-model)します。厳選されたリストは、`chrome://topics-internals` で提供されている `override_list.pb.gz` にあります。{% endAside %}
 
-## Next steps
+## 次のステップ
 
 アドテック開発者の方は、Topics API を[試して参加してください](/docs/privacy-sandbox/topics-experiment/)。また、[Topics API のデモ](/docs/privacy-sandbox/topics/demo)をご覧ください。
 
