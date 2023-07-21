@@ -75,7 +75,7 @@ Keep in mind that:
 ## All reports
 
 - For a given user, within all unexpired sources, there can be a maximum of 100 different destinations (typically, advertiser sites, or sites where conversions are expected to take place). Unexpired sources are ad clicks or views to which a conversion can still be attributed; that is, for which `expiry` has not yet been exceeded. In other words, the unique destination limit for attribution sources is covered by unexpired sources, instead of pending sources.
-- 100 attributions per {source site, destination, reporting origin} (typically {publisher, advertiser, ad tech}) can be [scheduled](/docs/privacy-sandbox/attribution-reporting/schedule/) over 30 days.
+- 100 attributions per {source site, destination, reporting origin} (typically {publisher, advertiser, ad tech}) can be scheduled over 30 days.
 - 100 unique reporting origins (typically ad techs) can register sources per {publisher, advertiser} per 30 days. This counter is incremented for each ad click or view (source event), even those that are not attributed.
 - 10 unique reporting origins (typically ad techs) can send reports per {publisher, advertiser} per 30 days. This counter is incremented for every attributed conversion.
 - Prior to Chrome 108, this limitation was as follows: For a given user, within all unattributed sources—ad clicks or views for which no conversion has been attributed yet—there can be a maximum of 100 different destinations (typically, advertiser sites, or sites where conversions are expected to take place).
