@@ -5,18 +5,3 @@
 *  [Topics Chrome platform status](https://chromestatus.com/feature/5680923054964736): Specific to the Topics API on Chrome.
 *  [Ads API Chrome platform status](https://chromestatus.com/feature/5100526168440832): A collection of APIs to facilitate advertising: Protected Audience API, Topics, Fenced Frames and Attribution Reporting.
 - [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/oTwd6VwCwqs) and [Intent to Prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/59uTw_dxM3M/m/vF9lF9BVAgAJ).
-
-<table class="with-heading-tint with-borders width-full">
-  <thead>
-    <tr>
-      <th>Feature</th>
-      <th>Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v2.md">Improved taxonomy for Topics</a> (latest <a href="https://groups.google.com/a/chromium.org/g/topics-api-announce/c/iNYk69wKnJs/m/yrVCBHvXAQAJ">note</a>)</td>
-      <td>Expected in Chrome in Q3 2023.</td>
-    </tr>
-  </tbody>
-</table>
