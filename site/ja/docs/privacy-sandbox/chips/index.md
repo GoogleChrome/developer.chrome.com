@@ -1,29 +1,29 @@
 ---
-layout: 'layouts/doc-post.njk'
-title: 'Cookies Having Independent Partitioned State (CHIPS)'
-subhead: >
+layout: layouts/doc-post.njk
+title: Cookies Having Independent Partitioned State (CHIPS)
+subhead: |2
+
   デベロッパーは、トップレベル サイト別の「パーティション化した」Cookie の保存に オプトインできます。
-description: >
+description: |2
+
   デベロッパーは、トップレベル サイト別の「パーティション化した」Cookie の保存に オプトインできます。
   パーティション化した Cookie はサードパーティー サービスからセット可能ですが、最初にセットされたトップレベル サイト内からしか読み込むことはできません。
-date: 2022-02-15
-updated: 2022-06-10
+date: '2022-02-15'
+updated: '2023-06-14'
 authors:
   - mihajlija
 tags:
   - cookies
-  - privacy  
+  - privacy
 ---
 
 ## Changes
- 
-- **2022 年 6 月**: フィードバックを元に、`Partitioned` 属性を設定するのに `Domain` 属性を省く必要はなくなりました。これにより、サードパーティーサイトのサブドメインがパーティションの Cookie にアクセスすることができます。 
+
+- **2022 年 6 月**: フィードバックを元に、`Partitioned` 属性を設定するのに `Domain` 属性を省く必要はなくなりました。これにより、サードパーティーサイトのサブドメインがパーティションの Cookie にアクセスすることができます。
 
 ## 実装ステータス
 
-- [オリジン トライアル](/origintrials/#/view_trial/1239615797433729025)は Chrome 100～105 で使用できます
-- [テストの目的](https://groups.google.com/a/chromium.org/g/blink-dev/c/_dJFNJpf91U)
-- [Chrome プラットフォームのステータス](https://chromestatus.com/feature/5179189105786880)
+{% Partial 'privacy-sandbox/timeline/chips.njk' %}
 
 ## CHIPS とは
 
@@ -35,11 +35,7 @@ Cookies Having Independent Partitioned State（CHIPS）は、プライバシー�
 
 現在、サードパーティのサービスは Cookie を使用することにより、多くの無関係なトップレベルサイトでユーザーをトラッキングし、それらの情報を結合できます。いわゆる「クロスサイト トラッキング」です。
 
-{% Img
-   src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/jLOlPtLY9Zqte4IOoU6g.png",
-   alt="Without cookie partitioning, a third-party service can set a cookie when embedded in one top-level site and access that same cookie when the service is embedded in other top-level sites.",
-   width="800", height="450"
-%}
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/jLOlPtLY9Zqte4IOoU6g.png", alt="Without cookie partitioning, a third-party service can set a cookie when embedded in one top-level site and access that same cookie when the service is embedded in other top-level sites.", width="800", height="450" %}
 
 たとえば、あるユーザーがサイト A にアクセスすると、サイト C から埋め込まれたコンテンツによって、クロスサイトリクエストに対するレスポンスとしてユーザーのデバイスに Cookie が設定されます。その後、同様に C が埋め込まれたサイト B にユーザーがアクセスした場合、サイト C ではユーザーが先にサイト A にアクセスしたときに設定した同じ Cookie にアクセスできます。これにより、サイト C では、サイト A、サイト B のほか、C が埋め込まれたすべてのサイトでユーザーの閲覧アクティビティを集約できるようになります。
 
@@ -61,11 +57,11 @@ CHIPS のユースケースの例には、以下のような、クロスサイ�
 
 - サードパーティのチャットの埋め込み
 - サードパーティのマップの埋め込み
+- サードパーティの決済の埋め込み
 - サブリソースの CDN 負荷分散
 - ヘッドレス CMS プロバイダ
 - 信頼できないユーザー コンテンツを配信するサンドボックス ドメイン（googleusercontent.com、githubusercontent.com など）
-- Cookie を使用して自社サイトでの認証ステータスに基づきアクセス制御したコンテンツを配信しているサードパーティの
-  CDN（例: サードパーティの CDN でホストされているソーシャル メディア サイト上のプロフィール写真）
+- Cookie を使用して自社サイトでの認証ステータスに基づきアクセス制御したコンテンツを配信しているサードパーティの CDN（例: サードパーティの CDN でホストされているソーシャル メディア サイト上のプロフィール写真）
 - Cookie を使用したリモート API をリクエストに組み込んでいるフロントエンドのフレームワーク
 - パブリッシャーごとにスコープされたステートが必要な埋め込み広告（例えば、そのサイトに対するユーザーの広告設定）
 
@@ -99,11 +95,11 @@ Firefox は、ETP Strict モードとプライベート ブラウジングモー
 
 ### パーティション モデル
 
-現在の Cookie には、設定元のサイトのホスト名またはドメインがキー（_ホストキー_）として設定されています。
+現在の Cookie には、設定元のサイトのホスト名またはドメインがキー（*ホストキー*）として設定されています。
 
 たとえば、`https://support.chat.example` からの Cookie の場合、ホストキーは `("support.chat.example")` となります。
 
-CHIPS では、パーティション化にオプトインしている Cookie には、ホストキーと _パーティション キーの 2_ つが設定されるようになります。
+CHIPS では、パーティション化にオプトインしている Cookie には、ホストキーと *パーティション キーの 2* つが設定されるようになります。
 
 Cookie のパーティション キーは、Cookie を設定したエンドポイントへのリクエストの開始時にブラウザがアクセスしていたトップレベル URL のサイト（[スキームと登録可能なドメイン](https://web.dev/same-site-same-origin/#%22schemeful-same-site%22)）になります。
 
@@ -111,15 +107,11 @@ Cookie のパーティション キーは、Cookie を設定したエンドポ�
 
 この場合のパーティション キーは `("https", "retail.example")` になります。
 
-同様に、_リクエストのパーティション_ キーは、リクエストの開始時にブラウザがアクセスしているトップレベル URL のサイトになります。ブラウザは、`Partitioned` 属性が設定された Cookie を、そのCookie と同じパーティションキーを含むリクエストに対してのみ送信する必要があります。
+同様に、*リクエストのパーティション* キーは、リクエストの開始時にブラウザがアクセスしているトップレベル URL のサイトになります。ブラウザは、`Partitioned` 属性が設定された Cookie を、そのCookie と同じパーティションキーを含むリクエストに対してのみ送信する必要があります。
 
 以下は、CHIPS の適用前と適用後で Cookie のキーがどう変わるかを、上記の例を使って示しています。
 
-{% Img
-   src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/ZZm3G3cCgziUK2eezdiu.png",
-   alt="Site A and the embedded site C share a partitioned cookie. When not embedded, site C cannot access the partitioned cookie.",
-   width="800", height="204"
-%}
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/ZZm3G3cCgziUK2eezdiu.png", alt="Site A and the embedded site C share a partitioned cookie. When not embedded, site C cannot access the partitioned cookie.", width="800", height="204" %}
 
 **CHIPS の適用前**
 
@@ -136,19 +128,17 @@ key={("https", "retail.example"),
 
 #### First-Party Sets と Cookie のパーティション化
 
-[First-Party Sets](/blog/first-party-sets-sameparty/#how-to-define-a-first-party-set)では、Chrome で制限（サードパーティのサブリソースの Cookieへのアクセスなど）が適用されている場合に、同じエンティティにより所有、運営されている複数の関連するドメイン名をトップレベルサイトと同じファーストパーティとして扱うことができます。
+[First-Party Sets (FPS)](/blog/first-party-sets-testing-instructions) is a web platform mechanism for developers to declare relationships among sites, so that browsers can use this information to enable limited cross-site cookie access for specific, user-facing purposes. Chrome will use these declared relationships to decide when to allow or deny a site access to their cookies when in a third-party context.
 
-First-Party Set のメンバーサイトで、埋め込みのサービスにより Cookie が設定されると、その Cookie は、First-Party Set の任意のメンバーサイトに埋め込まれた同サービスからアクセスできるようになります。これにより、埋め込みのサービスでは、すべてのメンバーサイト間で統一されたシームレスなユーザーセッションを提供することが可能になります。
+現在のファーストパーティ セットの設計は Storage Access API に依存しており、CHIPS パーティション化と統合されていません。
 
-同じ First-Party Set に属するサイトでは、同じパーティションキー（First-Party Set のオーナー）が使用されます。
-
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/ho7jqWrZzBxmX3fsIpTt.png", alt="", width="800", height="548" %}
+FPS 内のサイト間で共有 Cookie パーティションを使用するユースケースがある場合は、[GitHub イシューに例とフィードバックを提供](https://github.com/WICG/first-party-sets/issues/94)できます。
 
 ### セキュリティ設計
 
 適切なセキュリティ対策を促進するため、CHIPS では、Cookie の設定と送信は安全なプロトコルを介してのみ行うよう提案しています。
 
-パーティション化された Cookie を設定する際は、`Secure` と `Path=/` を指定します。
+パーティション化された Cookie は、`Secure` で設定する必要があります。
 
 パーティション化された Cookie を設定する際は（登録可能なドメインではなく）ホスト名に紐づけられるように`__Host` プレフィックスを使用することをおすすめします。
 
@@ -160,17 +150,13 @@ Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 
 ## 試してみる
 
-[CHIPS のオリジン トライアル](/blog/chips-origin-trial)は Chrome 100～105 で使用できます。
+[CHIPS オリジントライアルは](/blog/chips-origin-trial) Chrome 100 から 106 まで利用可能です。
 
 CHIPS は、Chrome 99 でフラグを介して使用することもできます。[chromium.org](https://www.chromium.org/updates/chips/) でテスト手順とデモをご確認ください。
 
 ローカルで試す場合は、Chrome Canary チャンネルで `chrome://flags/#partitioned-cookies` フラグを有効にするか、`--partitioned-cookies=true` コマンドラインフラグを使用します。
 
-{% Img
-   src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/Afo08gb3WxuNT77Bi6xc.png",
-   alt="Set the partitioned cookies flag to Enabled.",
-   width="779", height="329"
-%}
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/Afo08gb3WxuNT77Bi6xc.png", alt="Set the partitioned cookies flag to Enabled.", width="779", height="329" %}
 
 ## 意見交換とフィードバックの提供
 
