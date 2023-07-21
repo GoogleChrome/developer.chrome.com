@@ -3,11 +3,11 @@
 layout: 'layouts/blog-post.njk'
 
 # Required
-title: Inside look at modern web browser (part 1)
+title: Inside look at the modern web browser (part 1)
 
 # Required
 description: >
-  Learn how browser turn your code into functional website from high-level architecture to the specifics of the rendering pipeline.
+  Learn how browsers turn your code into functional websites from high-level architecture to the specifics of the rendering pipeline.
 
 # Optional
 # How to add a new author
@@ -66,7 +66,7 @@ computer parts and what they do.
 First is the **C**entral **P**rocessing **U**nit - or **CPU**. The CPU can be considered your 
 computer’s brain. A CPU core, pictured here as an office worker, can handle many different tasks 
 one by one as they come in. It can handle everything from math to art while knowing how to reply 
-to a customer call. In the past most CPUs were a single chip. A core is like another CPU living in 
+to a customer call. In the past, most CPUs were a single chip. A core is like another CPU living on 
 the same chip. In modern hardware, you often get more than one core, giving more computing power 
 to your phones and laptops.
 
@@ -129,7 +129,7 @@ application, the process also goes away and the Operating System frees up the me
 A process can ask the Operating System to spin up another process to run different tasks. When this 
 happens, different parts of the memory are allocated for the new process. If two processes need to 
 talk, they can do so by using **I**nter **P**rocess **C**ommunication (**IPC**). Many applications 
-are designed to work this way so that if a worker process get unresponsive, it can be restarted 
+are designed to work this way so that if a worker process becomes unresponsive, it can be restarted 
 without stopping other processes which are running different parts of the application.
 
 <figure>
@@ -182,7 +182,7 @@ The following table describes each Chrome process and what it controls:
   <tr>
     <td>Browser</td>
     <td>
-      Controls "chrome" part of the application including address bar, bookmarks, back and 
+      Controls the "chrome" part of the application including the address bar, bookmarks, back and 
       forward buttons. <br>Also handles the invisible, privileged parts of a web browser such as 
       network requests and file access.
     </td>
@@ -198,8 +198,8 @@ The following table describes each Chrome process and what it controls:
   <tr>
     <td>GPU</td>
     <td>
-      Handles GPU tasks in isolation from other processes. It is separated into different process 
-      because GPUs handles requests from multiple apps and draw them in the same surface.
+      Handles GPU tasks in isolation from other processes. It is separated into its own process 
+      because the GPU handles requests from multiple apps and draws them on the same surface.
     </td>
   </tr>
 </table>
@@ -219,8 +219,8 @@ and how much CPU/Memory they are using.
 
 ## The benefit of multi-process architecture in Chrome
 
-Earlier, I mentioned Chrome uses multiple renderer process. In the most simple case, you can 
-imagine each tab has its own renderer process. Let’s say you have 3 tabs open and each tab is run 
+Earlier, I mentioned Chrome uses multiple renderer processes. In the simplest case, you can 
+imagine each tab having its own renderer process. So, if you had three tabs open, each tab would be run 
 by an independent renderer process. 
 If one tab becomes unresponsive, then you can close the unresponsive tab and move on while keeping 
 other tabs alive. If all tabs are running on one process, when one tab becomes unresponsive, all 
@@ -239,7 +239,7 @@ can sandbox certain processes from certain features. For example, the Chrome bro
 arbitrary file access for processes that handle arbitrary user input like the renderer process.
 
 Because processes have their own private memory space, they often contain copies of common 
-infrastructure (like V8 which is a Chrome's JavaScript engine). This means more memory usage as 
+infrastructure (like V8 which is Chrome's JavaScript engine). This means more memory usage as 
 they can't be shared the way they would be if they were threads inside the same process. 
 In order to save memory, Chrome puts a limit on how many processes it can spin up. 
 The limit varies depending on how much memory and CPU power your device has, but when Chrome hits 
@@ -248,13 +248,13 @@ the limit, it starts to run multiple tabs from the same site in one process.
 ## Saving more memory - Servicification in Chrome
 
 The same approach is applied to the browser process. Chrome is undergoing architecture changes to 
-run each part of the browser program as a service allowing to easily split into different processes 
+run each part of the browser program as a service allowing it to easily split into different processes 
 or aggregate into one. 
 
-General idea is that when Chrome is running on powerful hardware, it may split each service into 
+The general idea is that when Chrome is running on powerful hardware, it may split each service into 
 different processes giving more stability, but if it is on a resource-constraint device, Chrome 
-consolidates services into one process saving memory footprint. Similar approach of consolidating 
-processes for less memory usage have been used on platform like Android before this change.
+consolidates services into one process saving memory footprint. A similar approach of consolidating 
+processes for less memory usage has been used on platforms like Android before this change.
 
 <figure>
   {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/8zHB7KNXrIKv5yAWvtBy.svg", alt="Chrome servification", width="273", height="150" %}
@@ -292,13 +292,13 @@ Enabling Site Isolation has been a multi-year engineering effort. Site Isolation
 assigning different renderer processes; it fundamentally changes the way iframes talk to each 
 other. Opening devtools on a page with iframes running on different processes means devtools had to 
 implement behind-the-scenes work to make it appear seamless. Even running a simple Ctrl+F to find a 
-word in a page means searching across different renderer processes. You can see the reason why 
+word on a page means searching across different renderer processes. You can see the reason why 
 browser engineers talk about the release of Site Isolation as a major milestone!
 
 
 ## Wrap-up
 In this post, we’ve covered a high-level view of browser architecture and covered the benefits of a 
-multi-process architecture. We also covered Servicification and Site Isolation in Chrome that is 
+multi-process architecture. We also covered Servicification and Site Isolation in Chrome which is 
 deeply related to multi-process architecture. In the next post, we’ll start diving into what 
 happens between these processes and threads in order to display a website.
 
