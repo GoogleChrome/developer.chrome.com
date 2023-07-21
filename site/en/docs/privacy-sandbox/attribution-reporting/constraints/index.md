@@ -29,7 +29,7 @@ The following sections on click and view events list features and limitations to
 ### View (`event` source)
 
 - `source_event_id` (ad-side information) can be up to 64 bits - large enough to be be used as a unique identifier.
-- `trigger_data` (conversion-side information) is up to 3 bits, i.e. it should be either 0 or 1.
+- `trigger_data` (conversion-side information) is up to 3 bits; that is, it should be either 0 or 1.
 - Up to 1 conversion can be attributed to a given source (ad click or view event).
 - Noise is applied to reports in the form of a randomized response. The correct conversion count can be recovered via a [script](https://github.com/WICG/attribution-reporting-api/blob/main/noise_corrector.py).
 - Noise is applied with a 0.0000025 probability (0.00025%) in the current Chrome code.
@@ -73,7 +73,7 @@ The following list notes limitations to keep in mind.
 
 ## All reports
 
-- For a given user, within all unexpired sources, there can be a maximum of 100 different destinations (typically, advertiser sites, or sites where conversions are expected to take place). Unexpired sources are ad clicks or views to which a conversion can still be attributed, i.e. for which `expiry` has not yet been exceeded. I.e., the unique destination limit for attribution sources is covered by unexpired sources, instead of pending sources.
+- For a given user, within all unexpired sources, there can be a maximum of 100 different destinations (typically, advertiser sites, or sites where conversions are expected to take place). Unexpired sources are ad clicks or views to which a conversion can still be attributed; that is, for which `expiry` has not yet been exceeded. Inother words, the unique destination limit for attribution sources is covered by unexpired sources, instead of pending sources.
 - 100 attributions per {source site, destination, reporting origin} (typically {publisher, advertiser, ad tech}) can be [scheduled](/docs/privacy-sandbox/attribution-reporting/schedule/) over 30 days.
 - 100 unique reporting origins (typically ad techs) can register sources per {publisher, advertiser} per 30 days. This counter is incremented for each ad click or view (source event), even those that are not attributed.
 - 10 unique reporting origins (typically ad techs) can send reports per {publisher, advertiser} per 30 days. This counter is incremented for every attributed conversion.
