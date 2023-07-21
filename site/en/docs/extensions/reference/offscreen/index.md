@@ -28,7 +28,7 @@ Pages loaded as offscreen documents are handled differently from other types of 
 * Offscreen documents cannot have their `opener` property set using the [`chrome.windows` API][api-windows] method `windows.setSelfAsOpener()`.
 * An extension can only have one offscreen document open at a time. If the extension is running in split mode with an active incognito profile, both the normal and incognito profiles can each have one offscreen document. 
 
-Use [`chrome.offscreen.createDocument()`](#method-createDocument) and [`chrome.offscreen.closeDocument()`](#method-closeDocument) for creating and closing an offscreen document. Only a single Document can be open at a time. `createDocument` requires besides the document's `url`, reason and justification:
+Use [`chrome.offscreen.createDocument()`](#method-createDocument) and [`chrome.offscreen.closeDocument()`](#method-closeDocument) for creating and closing an offscreen document. Only a single Document can be open at a time. `createDocument()` requires the document's `url`, a reason, and a justification:
 
 ```js
 chrome.offscreen.createDocument({
