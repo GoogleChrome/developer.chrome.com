@@ -61,9 +61,9 @@ Note that there can be more conversions.
 
 In the example,
 
-    ```text
-    total = 32768 + 1664 + 12323 + 1664
-    ```
+```text
+total = 32768 + 1664 + 12323 + 1664
+```
 
 The total must be under 65536, as mentioned earlier.
 
