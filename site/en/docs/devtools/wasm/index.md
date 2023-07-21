@@ -36,6 +36,7 @@ To enable C/C++ WebAssembly debugging in DevTools:
     ```bash
     emcc -g source.cc -o app.html
     ```
+    For more information, see [Building projects with debug information](https://emscripten.org/docs/compiling/Building-Projects.html#building-projects-with-debug-information).
 1. Install the [C/C++ DevTools Support (DWARF) Chrome extension](https://goo.gle/wasm-debugging-extension).
 
 ## Debug {: #debug }
