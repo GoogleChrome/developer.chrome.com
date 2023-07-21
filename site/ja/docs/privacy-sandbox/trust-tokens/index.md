@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc-post.njk
-title: プライベートステートトークン
+title: プライベート ステート トークン
 subhead: |2
 
 
@@ -19,7 +19,7 @@ authors:
 
 {% Aside %} この記事では以前、プライベート ステート トークンを「トラスト トークン」と呼んでいました。 Trust Token API は、Private State Token API に名前が変更され、プライバシーとユーティリティのメリットがよりよく示されています。
 
-Read [Trust Tokens renamed Private State Tokens](/blog/rename-trust-tokens) for more information. {% endAside %}
+詳細については、 [「トラスト トークンの名前がプライベート ステート トークンに変更されました」](/blog/rename-trust-tokens)を参照してください。 {% エンドアサイド %}
 
 ## 実装状況
 
@@ -40,7 +40,7 @@ Read [Trust Tokens renamed Private State Tokens](/blog/rename-trust-tokens) for 
 
 プライベート ステート トークンは、ユーザーの信頼を**確立**する方法ではなく、ユーザーの信頼を**伝える**手法です。{% endAside %}
 
-## プライベートステートトークンが必要な理由
+## プライベート ステート トークンが必要な理由
 
 ウェブには、ユーザーが主張する人物であり、人間になりすましているボットではないこと、また実在の人物やサービスを装った悪質なサードパーティではないことを示す信頼のシグナルを確立し、それを伝達する手段が必要です。 不正防止は、特に広告主、広告プロバイダー、および [CDN](https://www.cloudflare.com/en-gb/learning/cdn/what-is-a-cdn/) にとって重要なことです。
 
