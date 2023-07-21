@@ -1,13 +1,9 @@
 ---
 layout: layouts/doc-post.njk
 title: Topics API の最新アップデート
-subhead: |2-
-
-  API の設計と実装に対する更新と機能強化。
-description: |2-
-
-  API の設計と実装に対する更新と機能強化。
-date: '2023-01-24'
+subhead: API の設計と実装に対する更新と機能強化。
+description: API の設計と実装に対する更新と機能強化。
+date: 2023-01-24
 authors:
   - leeronisrael
   - joeytrotz
