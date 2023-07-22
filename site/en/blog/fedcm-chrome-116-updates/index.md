@@ -43,7 +43,7 @@ specified identity provider (IdP). When the IdP supports multiple accounts, it
 lists all signed-in accounts.
 
 <figure class="float-right">
-  {% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/sNV371fMQRQM0mr8SEl5.png", alt="A FedCM dialog showing multiple user accounts", width="794", height="470" %}
+  {% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/sNV371fMQRQM0mr8SEl5.png", alt="A FedCM dialog showing multiple user accounts.", width="794", height="470" %}
    <figcaption>A FedCM dialog showing multiple user accounts</figcaption>
 </figure>
 
