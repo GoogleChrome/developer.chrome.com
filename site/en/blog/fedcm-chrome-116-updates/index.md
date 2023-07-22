@@ -333,7 +333,7 @@ response from the accounts list endpoint:
 * If the endpoint returns no accounts, update the status to "sign-out" and fail 
   the FedCM call.
 
-### What if the user session expires? Let the user sign in through a dynamic sign-in flow!
+### What if the user session expires? Let the user sign in through a dynamic sign-in flow
 
 Even though the IdP continues to inform the browser of the user's sign-in
 status, it could be out of sync, such as when the session expires. The browser
