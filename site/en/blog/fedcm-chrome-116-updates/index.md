@@ -205,7 +205,7 @@ contexts. See the following screenshots for different options:
 {% Column %}
 
 <figure>
-  {% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/diZHUS6N0nwLB94ofzgs.png", alt="FedCM dialog rendered with \"Continue to ****\"", width="786", height="388" %}
+  {% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/diZHUS6N0nwLB94ofzgs.png", alt="FedCM dialog rendered with \"Continue to ****\".", width="786", height="388" %}
   <figcaption>FedCM dialog rendered with "Continue to ****"</figcaption>
 </figure>
 
