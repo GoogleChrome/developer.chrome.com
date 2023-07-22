@@ -193,7 +193,7 @@ contexts. See the following screenshots for different options:
 {% Column %}
 
 <figure>
-  {% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/C99AAEKSxzbzCIhoAbUA.png", alt="FedCM dialog rendered with \"Sign up to ****\"", width="796", height="400" %}
+  {% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/C99AAEKSxzbzCIhoAbUA.png", alt="FedCM dialog rendered with \"Sign up to ****\".", width="796", height="400" %}
   <figcaption>FedCM dialog rendered with "Sign up to ****"</figcaption>
 </figure>
 
