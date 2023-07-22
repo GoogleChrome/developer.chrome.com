@@ -185,7 +185,7 @@ contexts. See the following screenshots for different options:
 {% Column %}
 
 <figure>
-  {% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/xBPyPacCJ0zPiRuCMnX3.png", alt="FedCM dialog rendered with \"Sign in to ****\". This is the default option if RP Context is not specified.", width="794", height="398" %}
+  {% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/xBPyPacCJ0zPiRuCMnX3.png", alt="FedCM dialog rendered with \"Sign in to ****\".", width="794", height="398" %}
   <figcaption>FedCM dialog rendered with "Sign in to ****". This is the default option if RP Context is not specified.</figcaption>
 </figure>
 
