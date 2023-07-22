@@ -107,7 +107,7 @@ with, especially when a user has signed up on this website with the IdP before.
 {% Column %}
 
 <figure>
-  {% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/LK2JpVpbo7kuh3uq0ZIc.png", alt="Sign-in with Google button", width="414", height="118" %}
+  {% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/LK2JpVpbo7kuh3uq0ZIc.png", alt="Sign-in with Google button.", width="414", height="118" %}
   <figcaption>Sign-in with Google button</figcaption>
 </figure>
 
