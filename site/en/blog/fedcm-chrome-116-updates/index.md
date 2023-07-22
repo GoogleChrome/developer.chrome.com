@@ -7,7 +7,7 @@ subhead: >
   Chrome 116 ships FedCM capabilities such as Login Hint API, User Info API, and RP Context API, and starts an origin trial for IdP Sign-In Status API.
 date: 2023-07-19
 hero: 'image/YLflGBAPWecgtKJLqCJHSzHqe2J2/n09K1iWRmDWNFzb2A2y7.jpg'
-alt: 'Series of tools'
+alt: 'Series of tools.'
 authors:
   - agektmr
 origin_trial:
