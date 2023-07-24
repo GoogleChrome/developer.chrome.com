@@ -7,7 +7,11 @@ updated: 2018-05-16
 description: UI and design guidelines for Chrome Extensions.
 ---
 
-{% Partial 'extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Design the user interface](/docs/extensions/mv3/user_interface/) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 The extension user interface should be purposeful and minimal. Just like extensions themselves, the
 UI should customize or enhance the browsing experience without distracting from it.

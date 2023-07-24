@@ -8,7 +8,11 @@ description: >
     Step-by-step instructions on how to track usage of your Extension with Google Analytics.
 ---
 
-{% Partial 'extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Using Google Analytics 4](/docs/extensions/mv3/tut_analytics/) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 This tutorial demonstrates using Google Analytics to track the usage of your extension. If you are
 developing a platform app, see [Analytics for Apps][1] since apps have different restrictions from

@@ -10,7 +10,11 @@ description: >
   and OAuth2.
 ---
 
-{% Partial 'extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - OAuth2: Authenticate users with Google](/docs/extensions/mv3/tut_oauth/) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 [OAuth2][1] is the industry-standard protocol for authorization. It provides a mechanism for users
 to grant web and desktop applications access to private information without sharing their username,
