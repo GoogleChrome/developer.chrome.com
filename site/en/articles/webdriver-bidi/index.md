@@ -57,7 +57,7 @@ The vision behind WebDriver BiDi is to let you write tests using any of your fav
 The [WebDriver BiDi Working Group](https://www.w3.org/groups/wg/browser-tools-testing) comprises a diverse group of browser vendors, open-source browser automation projects, and companies offering browser automation solutions. This collaboration ensures a promising future for browser automation.
 
 <figure>
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/iamM1Et1tAOnhD9wtVa2.png", alt="The WebDriver BiDi Working Group.", width="800", height="211" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/wCClsI95nuyoI3zVFoP5.png", alt="The WebDriver BiDi Working Group", width="800", height="253" %}
 <figcaption>The WebDriver BiDi Working Group</figcaption>
 </figure>
 
