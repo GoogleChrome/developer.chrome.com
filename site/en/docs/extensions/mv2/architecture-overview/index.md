@@ -8,7 +8,7 @@ description: A high-level explanation of the software architecture of Chrome Ext
 ---
 
 {% Aside 'warning' %}
-You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Architecture overview](docs/extensions/mv3/architecture-overview) for the MV3 equivalent.
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Architecture overview](/docs/extensions/mv3/architecture-overview) for the MV3 equivalent.
 
 The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
 {% endAside %}

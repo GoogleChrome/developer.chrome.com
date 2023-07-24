@@ -7,7 +7,11 @@ updated: 2014-10-31
 description: Reference documentation for the externally_connectable property of manifest.json.
 ---
 
-{% Partial 'extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Manifest externally_connectable](/docs/extensions/mv3/manifest/externally_connectable) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 The `externally_connectable` manifest property declares which extensions, apps, and web pages can
 connect to your extension via [runtime.connect][1] and [runtime.sendMessage][2].

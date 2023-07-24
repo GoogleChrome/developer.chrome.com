@@ -7,7 +7,11 @@ updated: 2018-04-26
 description: Reference documentation for the icons property of manifest.json.
 ---
 
-{% Partial 'extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Manifest icons](/docs/extensions/mv3/manifest/icons) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 One or more icons that represent the extension, app, or theme. You should always provide a 128x128
 icon; it's used during installation and by the Chrome Web Store. Extensions should also provide a

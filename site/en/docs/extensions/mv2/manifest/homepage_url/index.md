@@ -7,7 +7,12 @@ updated: 2018-04-26
 description: Reference documentation for the homepage_url property of manifest.json.
 ---
 
-{% Partial 'extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Manifest homepage Url](/docs/extensions/mv3/manifest/homepage_url/) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+
+{% endAside %}
 
 The URL of the homepage for this extension. The extensions management page (chrome://extensions)
 will contain a link to this URL. This field is particularly useful if you [host the extension on

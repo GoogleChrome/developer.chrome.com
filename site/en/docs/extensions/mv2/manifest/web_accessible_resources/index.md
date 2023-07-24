@@ -7,7 +7,11 @@ updated: 2018-05-14
 description: Reference documentation for the web_accessible_resources property of manifest.json.
 ---
 
-{% Partial 'extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Manifest Web Accessible Resources](/docs/extensions/mv3/manifest/web_accessible_resources) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 An array of strings specifying the paths of packaged resources that are expected to be usable in the
 context of a web page. These paths are relative to the package root, and may contain wildcards. For
