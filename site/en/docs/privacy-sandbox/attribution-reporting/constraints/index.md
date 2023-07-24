@@ -22,7 +22,7 @@ The following sections on click and view events describe features and limitation
 - `source_event_id` (ad-side information) can be up to 64 bits, large enough to be used as a unique identifier.
 - `trigger_data` (conversion-side information) is up to 3 bits; that is, it should be an integer between 0 and 7.
 - Up to 3 conversions can be attributed to a given source (ad click or view event).
-- Noise is applied to reports in the form of a randomized response. The correct conversion count can be recovered via a [script](https://github.com/WICG/attribution-reporting-api/blob/main/noise_corrector.py).
+- Noise is applied to reports in the form of a randomized response. The correct conversion count can be recovered using a [script](https://github.com/WICG/attribution-reporting-api/blob/main/noise_corrector.py).
 - Noise is applied with a 0.0024 (0.24%) probability in the current Chrome code.
 - Reports are sent with a delay of between 2 and 30 days; the exact mechanism for views and clicks varies. See details in [Report scheduling for event-level reports](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit#heading=h.c5k14yezmbvl).
 
