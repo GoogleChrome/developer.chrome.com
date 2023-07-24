@@ -164,6 +164,10 @@ include the unencrypted payload.
 Use aggregatable debug reports to validate the contents of aggregatable reports,
 and to generate summary reports with the local [aggregation tool](https://github.com/privacysandbox/aggregation-service#set-up-local-testing) for testing.
 
+### Reprocessing reports
+
+Another advantage of using debug mode is that it allows you to reprocess reports. Therefore, to process reports more than once, make sure to have debug reports enabled.
+
 ## Up next
 
 [Part 2: Set up debug reports](/docs/privacy-sandbox/attribution-reporting-debugging/part-2/)
