@@ -202,7 +202,7 @@ Here's an example response body from the IdP:
   "id_assertion_endpoint": "/assertion.php",
   "branding": {
     "background_color": "green",
-    "color": "0xFFEEAA",
+    "color": "#FFEEAA",
     "icons": [{
       "url": "https://idp.example/icon.ico",
       "size": 25
