@@ -19,8 +19,18 @@ To mitigate this:
 * Upon receiving a report, check its `report_id`.
 * Ignore the report if you've already received a report with that same `report_id`.
 
+For ad techs, it's a best practice to always check for duplicates of both event-level and aggregatable reports.
 
-## Deduplicate conversions in event-level reports
+##  Instruct the browser to ignore specific conversions
+
+Through an unexpected user flow, a conversion may be counted more than once. Here's how this can happen.
+
+Let's assume a user mistakenly reloads the checkout completion page that includes the conversion pixel. By default, the page reload will trigger a second conversion and you'll get two reports.
+But the user has only made one purchase. You can change this behavior to only see one conversion by deduplicating conversions.
+
+You can read more about attribution logic in [Prioritize specific clicks, views, or conversions](/docs/privacy-sandbox/attribution-reporting/change-attribution-logic/).
+
+### Deduplicate conversions in event-level reports
 
 To deduplicate conversions for event-level reports, set a `deduplication_key` in your `Attribution-Reporting-Register-Trigger` header: 
 
@@ -31,11 +41,11 @@ To deduplicate conversions for event-level reports, set a `deduplication_key` in
 }]
 ```
 
-## Deduplicate conversions in aggregatable reports
+### Deduplicate conversions in aggregatable reports
 
-To deduplicate aggregatable reports, there are two properties you can use: `aggregatable_deduplication_keys` and filters.
+The following sections describe deduplication keys and filters for deduplicating conversions in aggregatable reports.
 
-### Use aggregatable_deduplication_keys
+#### Use aggregatable_deduplication_keys
 
 You can set deduplication keys like so in your header:
 
@@ -49,9 +59,11 @@ You can set deduplication keys like so in your header:
 
 Here, if this attribution trigger is matched to a source, then an aggregatable report is generated and has a deduplication key of `1231232123123`.
 
-### Use filters
+#### Use filters
 
 You can also deduplicate aggregatable reports based on filter data.
+
+You can make your deduplication key for aggregatable reports vary based on your filter configuration. This enables use cases such as deduplicating aggregatable reports based on conversion type, or based on any other information that can be used in filters.
 
 This example illustrates the use of filters along with deduplication keys:
 
@@ -75,4 +87,5 @@ In this example:
 
 ## Next steps
 
-Read more about filters in [Define custom rules using filters](/docs/privacy-sandbox/attribution-reporting/define-filters/).
+* Read more about filters in [Define custom rules using filters](/docs/privacy-sandbox/attribution-reporting/define-filters/).
+* Read about changing the attribution logic in  [Prioritize specific clicks, views, or conversions](/docs/privacy-sandbox/attribution-reporting/change-attribution-logic/).
