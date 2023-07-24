@@ -186,7 +186,7 @@ Read [more about this implementation](/docs/privacy-sandbox/topics/#access-topic
 
 Topics can be accessed from the `Sec-Browsing-Topics` header of a fetch()/XHR request, or of an `iframe` request. 
 
-{% Img src="image/URLGRmk9LjR39BLvmeGDZFZkz3p2/E4DeQ8eH17so11fz83B6.png", alt="Request and Response headers for setting and retrieving topics.", width="800", height="341" %}
+{% Img src="image/URLGRmk9LjR39BLvmeGDZFZkz3p2/jOtLgBaveAAyRUXTe7hQ.png", alt="Request and Response headers for setting and retrieving topics.", width="800", height="347" %}
 <figcaption>
 Headers for iframe and <code>fetch()</code>. 
 </figcaption>
