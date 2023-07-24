@@ -38,7 +38,7 @@ The following sections on click and view events describe features and limitation
 
 ## Aggregatable reports
 
-The following list notes limitations to keep in mind.
+The following list describes limitations to keep in mind.
 
 ### Click (`navigation` source) and View (`event` source)
 
