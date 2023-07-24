@@ -9,39 +9,40 @@ description: Understanding URL match patterns and globs in Chrome extensions.
 
 ## Overview {: #overview }
 
-Match patterns are used in Chrome extensions to specify a group of URLs. They are mainly used to declare [host permissions][host-permissions] in content scripts, meaning which sites to be injected into. However, they can also be used to specify XYZ in [externally-connectable](TBD), and XYZ in the [webRequest API](TBD). These API's accept an array of match patterns.
+Match patterns are used in Chrome extensions to specify a group of URLs. They are mainly used to declare [host permissions][host-permissions] in content scripts. Learn more about other use cases in the [Host permissions][host-permissions] section of Declaring permissions.
+
 
 ## What is a match pattern? {: #what }
 
-A match pattern is essentially a URL that begins with a permitted scheme separated by a `://`, followed by a host and path. It can contain wildcard (`*`) characters. Most match patterns are composed of three parts:
+A match pattern is a URL that begins with a permitted scheme separated by a `://`, followed by a host and path. It can contain wildcard (`*`) characters. Most match patterns are composed of three parts:
 
 ```text
 &lt;scheme&gt;://&lt;host&gt;/&lt;path&gt;
 ```
 
-Each part can use wildcards `*`,. Below is a detailed description:
+Each part can use wildcards `*`. Below is a detailed description:
 
 - **scheme**: Must include a valid scheme: `'http'`, `'https'`, `'file'`, `'ftp'`, or `'urn'`. The wildcard `*` only matches `http` or `https`.
 
-- **host**: A hostname (`www.example.com`), a `*` before the hostname to match subdomains (`*.example.com`), or just a wildcard `*`. 
+- **host**: A hostname (`www.example.com`), a `*` before the hostname to match subdomains (`*.example.com`), or just a wildcard `*`.
 
 - **path**: Must start with `/` and be present. If alone it will always treated as `/*`. For example `/*`, `/foo*`, or `/foo/bar`. Each '`*`' matches 0 or more characters.
 
 ## Special cases {: #special }
 
 `<all_urls>`
-: It matches any URL that starts with a permitted scheme. This is considered a broad host permission. 
+: It matches any URL that starts with a permitted scheme. This is considered a broad host permission.
 
 `file:///` URLs
 : Allows you to run your extension on local files. This scheme has no host and requires the user to allow access. The [Allow Access][permissions] section in the Permission article shows how to guide users in granting the extension access to this scheme.
 
 Port URLs
-: Use `http://localhost/*` to match any localhost ports during development. For IP addresses, include the specific address plus a wildcard in the path. For example: `http://127.0.0.1/*`
+: Use `http://localhost/*` to match any localhost ports during development. Include the specific address plus a wildcard in the path for IP addresses. For example: `http://127.0.0.1/*`
 
 Top Level domains
-: TLDs match patterns like `http://google.*/*` are not supported. You should explicitly list the TLDs, for example: `http://google.es` and `http://google.fr`.
+: [Top Level domain][mdn-tld] match patterns like `http://google.*/*` are not supported. They should be listed individually. For example: `http://google.es` and `http://google.fr`.
 
-## Examples
+## Examples {: #examples }
 
 ### ✅ Valid pattern examples {: #match-examples }
 
@@ -100,10 +101,9 @@ Top Level domains
    </tbody>
 </table>
 
+### ❌ Invalid examples {: #invalid-patterns }
 
-### ⛔️ Invalid examples
-
-Here are some examples of *invalid* pattern matches:
+Here are some examples of _invalid_ match patterns:
 
 <table class="fixed-table width-full">
    <tbody>
@@ -131,32 +131,37 @@ Here are some examples of *invalid* pattern matches:
          <td><code>foo://*</code></td>
          <td>Invalid <em>scheme</em></td>
       </tr>
+      <tr>
+         <td><code>chrome://*</code></td>
+         <td>Unsupported <em>scheme</em></td>
+      </tr>
+      <tr>
+         <td><code>chrome-extension://*</code></td>
+         <td>Unsupported <em>scheme</em></td>
+      </tr>
+      <tr>
+         <td><code>about:*</code></td>
+         <td>Unsupported <em>scheme</em></td>
+      </tr>
    </tbody>
 </table>
 
-Extensions are unable to run code on the following URLs:
+## Globs properties in Content Scripts {: #globs }
 
-- `chrome://`
-- `chrome-extension://`
-- `about:`
-
-## Globs patterns in Content Scripts {: #globs }
-
-Glob properties follow a different, more flexible syntax than [match patterns][24]. Acceptable glob
-strings are URLs that may contain "wildcard" asterisks and question marks. The asterisk **\***
+Glob properties are used to refine the URLs already specified by the [match patterns](#what). Acceptable glob
+strings are URLs that may contain "wildcard" and question marks. The asterisk **\***
 matches any string of any length, including the empty string, while the question mark **?** matches
 any single character.
 
 For example, the glob **https://???.example.com/foo/\*** matches any of the following:
 
-- **https://www.example.com/foo/bar**
-- **https://the.example.com/foo/**
+| ✅ Matches                        | ❌ Doesn't match                 |
+| --------------------------------- | -------------------------------- |
+| `https://www.example.com/foo/bar` | `https://my.example.com/foo/bar` |
+| `https://the.example.com/foo/`    | `https://example.com/foo/`       |
+| `xx`                              | `https://www.example.com/foo`    |
 
-However, it does _not_ match the following:
-
-- **https://my.example.com/foo/bar**
-- **https://example.com/foo/**
-- **https://www.example.com/foo**
+### Include_globs {: #include-globs }
 
 This extension injects the content script into **https://www.nytimes.com/arts/index.html** and
 **https://www.nytimes.com/jobs/index.html**, but not into
@@ -179,6 +184,8 @@ This extension injects the content script into **https://www.nytimes.com/arts/in
 }
 ```
 
+### Exclude_globs {: #exclude-globs }
+
 This extension injects the content script into **https://history.nytimes.com** and
 **https://.nytimes.com/history**, but not into **https://science.nytimes.com** or
 **https://www.nytimes.com/science**:
@@ -199,6 +206,8 @@ This extension injects the content script into **https://history.nytimes.com** a
   ...
 }
 ```
+
+### Narrowing scope {: #narrow }
 
 One, all, or some of these can be included to achieve the correct scope.
 
@@ -222,4 +231,6 @@ One, all, or some of these can be included to achieve the correct scope.
 ```
 
 [content-scripts]: /docs/extensions/mv3/content_scripts
-[permissions]: /docs/extensions/mv3/declare_permissions/#allow_access
+[permissions]: /docs/extensions/mv3/declare_permissions/
+[host-permissions]: /docs/extensions/mv3/declare_permissions/#host-permissions
+[mdn-tld]: https://developer.mozilla.org/docs/Glossary/TLD
