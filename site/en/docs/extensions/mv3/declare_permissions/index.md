@@ -17,7 +17,7 @@ of the [manifest](#manifest). Extensions can request four categories of permissi
 : are like regular `permissions`, but are granted by the extension's user at runtime, rather than in advance.
 
 `"host_permissions"`
-: contain one or more [match patterns][doc-match] that give access to one or more hosts.
+: contain one or more [match patterns][doc-match] that give access to one or more hosts. Read more on [host permissions](#host-permissions)
 
 `"optional_host_permissions"`
 : are like regular `host_permissions`, but are granted by the extension's user at runtime, rather than in advance.
@@ -31,8 +31,8 @@ permits, to provide users with informed control over access to resources and dat
 See the [platform vision][vision-optperms] to better understand this recommendation.
 {% endAside %}
 
-If an API requires you to declare a permission in the [manifest][doc-manifest], then its documentation tells you how
-to do so. For example, the [Storage][api-storage] page shows how to declare the `"storage"` permission.
+If an API requires a permission, then its documentation tells you how
+to do so. For example, the [Storage API][api-storage] page shows how to declare the `"storage"` permission.
 
 ## Manifest {: #manifest}
 
@@ -63,6 +63,10 @@ The following is an example of the permissions part of a [manifest][doc-manifest
   "manifest_version": 3
 }
 ```
+
+## Host permissions {: #host-permissions }
+
+Ho
 
 ## Permissions with warnings {:#warnings }
 
