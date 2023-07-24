@@ -13,7 +13,7 @@ authors:
 
 With the Attribution Reporting API, reports are not sent immediately after a user converts. Instead, the browser sends them with a delay.
 
-Note that regardless of report type, reports are only sent when the browser is running and online. After the first failure to send, the report is retried after 5 minutes. After the second failure, the browser tries to send the report again after 15 minutes. After that, it's not sent.
+Note that regardless of report type, reports are only sent when the browser is running and online. After the first failure to send, the browser tries to send the report again after 5 minutes. After the second failure, the browser tries to send the report again after 15 minutes. After that, it's not sent.
 
 
 ## Aggregatable reports
