@@ -186,7 +186,7 @@ Read [more about this implementation](/docs/privacy-sandbox/topics/#access-topic
 
 Topics can be accessed from the `Sec-Browsing-Topics` header of a fetch()/XHR request, or of an `iframe` request. 
 
-{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/8kXFG5e0AnZJvwNEb7yB.png", alt="Request and Response headers for setting and retrieving topics.", width="800", height="382" %}
+{% Img src="image/URLGRmk9LjR39BLvmeGDZFZkz3p2/E4DeQ8eH17so11fz83B6.png", alt="Request and Response headers for setting and retrieving topics.", width="800", height="341" %}
 <figcaption>
 Headers for iframe and <code>fetch()</code>. 
 </figcaption>
@@ -196,13 +196,13 @@ You can mark topics provided by request headers as observed by setting an `Obser
 If the API returns one or more topics, a fetch request to the eTLD+1 from which the topics were observed will include a `Sec-Browsing-Topics` header like this: 
 
 ``` text
-t=(299;v=chrome.1:1:1), p=P000000000
+(325);v=chrome.1:1:1, ();p=P000000000
 ```
 
 If no topics are returned by the API, the header looks like this:
 
 ``` text
-t=(), p=P000000000000000000000000000
+();p=P0000000000000000000000000000000
 ```
 
 `Sec-Browsing-Topics` header values are padded, to mitigate the risk of an attacker learning the number of topics scoped to a caller based on the header length.
