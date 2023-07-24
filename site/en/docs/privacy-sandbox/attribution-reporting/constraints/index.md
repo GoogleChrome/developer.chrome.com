@@ -15,7 +15,7 @@ To plan your Attribution Reporting strategy, you'll need to know the constraints
 
 ## Event-level reports
 
-The following sections on click and view events list features and limitations to keep in mind.
+The following sections on click and view events describe features and limitations to keep in mind.
 
 ### Click (`navigation` source)
 
