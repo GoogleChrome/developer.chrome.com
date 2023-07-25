@@ -90,7 +90,7 @@ One way to identify third-party cookies in your code base is to search for cooki
 
 Another option is to browse through your site with third-party cookies blocked on your machine and use DevTools to investigate any potential breakage.
 
-You can block third-party cookies from Chrome settings or by [running Chrome from the command line](https://www.chromium.org/developers/how-tos/run-chromium-with-flags/) with the flag `--test-third-party-cookies-phaseout`.
+You can block third-party cookies from Chrome settings or by [running Chrome from the command line](https://www.chromium.org/developers/how-tos/run-chromium-with-flags/), version 115 or higher, with the flag `--test-third-party-cookies-phaseout` or `–-enabled-features=ForceThirdPartyCookieBlocking`.
 
 To learn more about DevTools features you can use to investigate third-party cookies check out [the instructions on chromium.org](https://www.chromium.org/Home/chromium-privacy/privacy-sandbox/third-party-cookie-phaseout/).
 
