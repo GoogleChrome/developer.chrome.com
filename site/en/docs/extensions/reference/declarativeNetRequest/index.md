@@ -9,19 +9,22 @@ has_warning: One or more of these permissions <a href="/docs/extensions/mv3/perm
 
 ## Manifest {: #manifest }
 
-Extensions must declare either the `declarativeNetRequest` or the
-`declarativeNetRequestWithHostAccess` (available since **Chrome 96**) permission in the extension
-[manifest][1] to use this API. The former allows extensions to block and upgrade requests without
-any [host permissions][2]. Host permissions are still required if the extension wants to redirect a
-request or modify headers on it. The `declarativeNetRequestWithHostAccess` permission always
-requires host permissions to the request URL and initiator to act on a request.
+### Permissions {: #permission-definitions }
+ 
+`declarativeNetRequest`
+: Allows extensions to block and upgrade requests.
 
-The `declarativeNetRequestFeedback` permission is required to access functions and events which
-return information on declarative rules matched.
+`declarativeNetRequestWithHostAccess`
+: Allows extensions to redirect requests and modify request and response headers. This permission always requires [host permissions](/docs/extensions/mv3/declare_permissions/) to the request URL and initiator to act on a request.
 
-To specify static rulesets, extensions must also declare the `"declarative_net_request"`
-manifest key, which should be a dictionary with a single key called `"rule_resources"`. It should be
-a list containing dictionaries of type [`Ruleset`](#type-Ruleset), as shown below.
+`declarativeNetRequestFeedback`
+: Allows access functions and events that return information on matched rules during debugging. This permission only works in [unpacked extensions](/docs/extensions/mv3/getstarted/development-basics/#load-unpacked).
+
+Certain rules such as redirect and header modification rules also require host permissions which match the network requests that these rules will be applied towards.
+
+### Static rulesets
+
+This API supports multiple ruleset types, which will be described below, but only one type, static rulesets, requires keys in the manifest file. To use static rulesets, declare the `"declarative_net_request"` manifest key, which should be a dictionary with a single key called `"rule_resources"`. It should be a list containing dictionaries of type `Ruleset`, as shown below. These structures will be described in more detail elsewhere.
 
 ```json
 {
@@ -50,12 +53,6 @@ a list containing dictionaries of type [`Ruleset`](#type-Ruleset), as shown belo
   ...
 }
 ```
-
-### Static rulesets
-
-This API supports multiple ruleset types, which will be described below, but only one type, static rulesets, requires keys in the manifest file. To use static rulesets, declare the `"declarative_net_request"` manifest key, which should be a dictionary with a single key called `"rule_resources"`. It should be a list containing dictionaries of type `Ruleset`, as shown below. These structures will be described in more detail elsewhere.
-
-JSON sample here
 
 ## Concepts and Usage
 
@@ -223,11 +220,11 @@ All types of rules can use regular expressions; however the total number of rege
 
 ### Interaction with cached pages {: #implementation-cached-pages }
 
-If a rule matches a resource in the service worker cache, that rule may be ignored until the resource is cleared from the cache. This is because cached storage is intended to be persistent, and many features such as offline use do not expect the cache to be cleared without also clearing a service worker's registration. If your extension must be enabled and disabled repeatedly, use the chrome.browsingData API to clear the cache and guarantee proper functioning.
+If a rule matches a resource in the service worker cache, that rule may be ignored until the resource is cleared from the cache. This is because cached storage is intended to be persistent, and many features such as offline use do not expect the cache to be cleared without also clearing a service worker's registration. For your rules to work properly, you will need to call [`browsingData.removeCache()`](/docs/extensions/reference/browsingData/#method-removeCache) or [`browsingData.removeCacheStorage()`](/docs/extensions/reference/browsingData/#method-removeCacheStorage) after installation of your extension. You may need to call one of these functions after an extension upgrade, depending on whether you've changed your rules.
 
 ### Web accessible resources {: #implementation-web-accessible-resources }
 
-A declarative net request cannot redirect from a public resource request to a resource that is not web accessible. Doing so will trigger an error. This is true even if the specified web accessible resource is owned by the redirecting extension.   To declare resources for declarative net requests, use the manifest's [`"web_accessible_resources"`](/docs/extensions/mv3/manifest/web_accessible_resources/) array.
+A declarative net request cannot redirect from a public resource request to a resource that is not web accessible. Doing so will trigger an error. This is true even if the specified web accessible resource is owned by the redirecting extension. To declare resources for declarative net requests, use the manifest's [`"web_accessible_resources"`](/docs/extensions/mv3/manifest/web_accessible_resources/) array.
 
 ### Examples {: #example }
 
