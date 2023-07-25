@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-07-20
+updated: 2023-07-25
 tags:
   - extensions-news
 
@@ -19,7 +19,7 @@ Check this page often to learn about changes to Chrome extensions, extensions do
 
 <p class="color-secondary-text type--caption">Posted on <time>July 24, 2023</time></p>
 
-Injected content scripts are now in the DevTools ignore list by default. This doesn't affect breakpoints, but it does mean that content scripts will be stepped over during debugging exceptions will be ignored. When a content script is open in the **Sources** tab, a banner alerts you that if this is on and provides an option to remove your content script from the ignore list. To turn this behavior off, open DevTools, go to **Settings** then **Ignore list**. To learn more, see [What's new in Devtoosl](/blog/new-in-devtools-115/#content-script).
+Injected content scripts are now in the DevTools ignore list by default. This doesn't affect breakpoints, but it does mean that content scripts will be stepped over during debugging and exceptions from these scripts will be ignored. When a content script is open in the **Sources** tab, a banner alerts you that if this is on and provides an option to remove your content script from the ignore list. To turn this behavior off, open DevTools, go to **Settings** then **Ignore list**. To learn more, see [What's new in Devtoosl](/blog/new-in-devtools-115/#content-script).
 
 ### Chrome 116 beta: More than we can fit here {: #chrome-116 }
 
