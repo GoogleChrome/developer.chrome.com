@@ -11,10 +11,10 @@ authors:
   - rowan_m
 ---
 
-As we prepare [general availability](/blog/shipping-privacy-sandbox/) for the
+As we start [general availability](/blog/privacy-sandbox-launch/) for the
 relevance and measurement APIs, we intend to provide Chrome-facilitated testing
 that allows sites to meaningfully preview what it's like to operate in a world
-without third-party cookies. This will allow us to perform more effective API
+without third-party cookies. APIs will be gradually enabled over the course of the 115 milestone while monitoring for issues, aiming for 99% availability by mid-August. This will allow us to perform more effective API
 testing and grow confidence within the ecosystem as to its readiness for
 third-party cookie phase out.
 
@@ -96,5 +96,19 @@ closely with the CMA before taking further steps to expand deprecation.
 ## Engage and share feedback
 
 Feedback from a diverse set of stakeholders across the web ecosystem is critical to the Privacy Sandbox initiative. The dedicated [feedback section](/docs/privacy-sandbox/feedback/) provides an overview of the existing public channels, where you can follow or contribute to discussion, along with a feedback form to ensure you can always reach the Chrome team directly.
+
+You can provide your feedback on the following issues:
+
+-  [Are you planning to test using Mode A, Mode B, or both?](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/issues/112)
+-  [Picking label sizes for Chrome-facilitated testing](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/issues/113)
+-  [Use of Client Hints for Chrome-facilitated testing](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/issues/114)
+
+Or you can also [raise a new issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/issues) for additional questions or discussion.  
+
+{% Aside %}
+
+The [Competition and Markets Authority (CMA)](https://www.gov.uk/government/organisations/competition-and-markets-authority) has published their [guidance on testing Privacy Sandbox APIs](https://assets.publishing.service.gov.uk/media/649d6a5f45b6a2000c3d455f/20230629_CMA_industry_testing_update_B.pdf) with relevant information on timelines, approaches to testing, and next steps.
+
+{% endAside %}
 
 If you're a developer, you can ask questions and join discussions in the [Privacy Sandbox Developer Support repository](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) on GitHub.

@@ -1,4 +1,4 @@
-*   The [Shared Storage proposal](https://github.com/WICG/shared-storage) has entered [public discussion](https://github.com/WICG/shared-storage/issues).
+*   The [Shared Storage proposal](https://github.com/WICG/shared-storage) is now [moving to general availability](/blog/privacy-sandbox-launch/).
 *   A [live demo is available](#try-the-shared-storage-api), as is testing:
     *   URL selection output gate is available for local testing from Chrome M105+. 
     *   Private Aggregation output gate is available for local testing from Chrome M107+.
