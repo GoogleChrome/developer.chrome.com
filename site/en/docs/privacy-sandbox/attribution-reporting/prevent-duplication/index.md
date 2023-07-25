@@ -16,9 +16,7 @@ At times you may notice a specific conversion counted more than once, or a repor
 ## Ignore reports you've already received
 
 When the browser retries sending reports due to network unavailability, it may send the same report multiple times.
-To mitigate this:
-* Upon receiving a report, check its `report_id`.
-* Ignore the report if you've already received a report with that same `report_id`.
+To mitigate this, upon receiving a report, check its `report_id`. If you've already received a report with that same `report_id`, ignore the report.
 
 We recommend you check for duplicates of both event-level and aggregatable reports.
 
