@@ -10,7 +10,7 @@ has_warning: One or more of these permissions <a href="/docs/extensions/mv3/perm
 ## Manifest {: #manifest }
 
 ### Permissions {: #permission-definitions }
- 
+
 `declarativeNetRequest`
 : Allows extensions to block and upgrade requests.
 
@@ -71,12 +71,12 @@ There are three types of rulesets.
 
 ### Dynamic and session-scoped rulesets {: #dynamic-and-session-rules }
 
-Dynamic and session-scoped rulesets are managed using JavaScript while an extension is in use. 
+Dynamic and session-scoped rulesets are managed using JavaScript while an extension is in use.
 
 -  Dynamic rules persist across browser sessions and extension upgrades.
 -  Session rules are destroyed when the browser shuts down and when a new version of the extension is installed.
 
-There is only one each of these ruleset types. An extension can add or remove rules to them dynamically by calling [`updateDynamicRules()`](/docs/extensions/reference/declarativeNetRequest/#method-updateDynamicRules) and [`updateSessionRules()`](/docs/extensions/reference/declarativeNetRequest/#method-updateSessionRules), provided the rule limits aren't exceeded. For information on rule limits, see [Rule limits](#limits). 
+There is only one each of these ruleset types. An extension can add or remove rules to them dynamically by calling [`updateDynamicRules()`](/docs/extensions/reference/declarativeNetRequest/#method-updateDynamicRules) and [`updateSessionRules()`](/docs/extensions/reference/declarativeNetRequest/#method-updateSessionRules), provided the rule limits aren't exceeded. For information on rule limits, see [Rule limits](#limits).
 
 _Method examples here._
 
@@ -156,7 +156,7 @@ A rule's `"condition"` key allows a `"urlFilter"` key for acting on URLs under a
     </tbody>
 </table>
 
-### Rule prioritization
+### Rule prioritization {: #implementation-matching-algorithm }
 
 Rules are triggered by requests sent from web pages. If multiple rules match a particular request, then the rules must be prioritized. This section explains how they're prioritized. Prioritization happens in two stages.
 
@@ -165,8 +165,8 @@ Rules are triggered by requests sent from web pages. If multiple rules match a p
 
 Thinking of matching this way: whatever rule a particular extension prioritizes will then be prioritized against rules from other extensions.
 
-{% Aside %}  
-Avoid building rulesets that depend on rules with the same priority running in a particular order. Rules with the same priority in the same set (e.g static rules with priority 1) are executed in an arbitrary order which is not defined and can change between runs or browser versions.  
+{% Aside %}
+Avoid building rulesets that depend on rules with the same priority running in a particular order. Rules with the same priority in the same set (e.g static rules with priority 1) are executed in an arbitrary order which is not defined and can change between runs or browser versions.
 {% endAside %}
 
 #### Rule prioritization within an extension
@@ -189,7 +189,7 @@ Within a single extension, prioritization is worked out using the following proc
 
 #### Rule prioritization between extensions
 
-If only one extension has a rule that matches a request, that rule is applied. But if more than one extension matches a request, the following process is used. 
+If only one extension has a rule that matches a request, that rule is applied. But if more than one extension matches a request, the following process is used.
 
 1. Rules are prioritized using the `"action"` field, in the following order:
     -  `block`
@@ -206,9 +206,9 @@ rule you're using.
 
 #### Static rules {: #static-rules }
 
-Static rules are those specified in rule files (which are specified in the manifest file). 
+Static rules are those specified in rule files (which are specified in the manifest file).
 
-An extension can specify up to **50** static [rulesets](#type-Ruleset) as part of the `"rule_resources"` manifest key, but only **10** of these rulesets can be enabled at a time. The latter is called the [`MAX_NUMBER_OF_ENABLED_STATIC_RULESETS`](#property-MAX_NUMBER_OF_ENABLED_STATIC_RULESETS). Collectively, those rulesets are guaranteed at least **30,000** rules. This is called the [`GUARANTEED_MINIMUM_STATIC_RULES`](#property-GUARANTEED_MINIMUM_STATIC_RULES). The number of rules available after that depends on how many rules are enabled by all the extensions installed on a user's browser. You can find this number at runtime by calling [`getAvailableStaticRuleCount()`](#method-getAvailableStaticRuleCount). 
+An extension can specify up to **50** static [rulesets](#type-Ruleset) as part of the `"rule_resources"` manifest key, but only **10** of these rulesets can be enabled at a time. The latter is called the [`MAX_NUMBER_OF_ENABLED_STATIC_RULESETS`](#property-MAX_NUMBER_OF_ENABLED_STATIC_RULESETS). Collectively, those rulesets are guaranteed at least **30,000** rules. This is called the [`GUARANTEED_MINIMUM_STATIC_RULES`](#property-GUARANTEED_MINIMUM_STATIC_RULES). The number of rules available after that depends on how many rules are enabled by all the extensions installed on a user's browser. You can find this number at runtime by calling [`getAvailableStaticRuleCount()`](#method-getAvailableStaticRuleCount).
 
 #### Dynamic and session rules {: #dynamic-session-rules }
 
@@ -226,17 +226,17 @@ If a rule matches a resource in the service worker cache, that rule may be ignor
 
 A declarative net request cannot redirect from a public resource request to a resource that is not web accessible. Doing so will trigger an error. This is true even if the specified web accessible resource is owned by the redirecting extension. To declare resources for declarative net requests, use the manifest's [`"web_accessible_resources"`](/docs/extensions/mv3/manifest/web_accessible_resources/) array.
 
-### Examples {: #example }
+## Examples {: #example }
 
-The examples below illustrate various aspects of rule file files. You may want to have the prioritization rules handy when reviewing these examples.
+The examples below illustrate various aspects of rule file files. You may want to open the [prioritization](#implementation-matching-algorithm) rules in a separate window when reviewing them.
 
-#### The "priority" key
+### The "priority" key
 
 To use the example file shown below, your manifest file would need the following host permission:
 
 `*://*.example.com/*`
 
-To work out the priority of a particular URL, look at the (developer-defined) `"priority"` key, the `"action"` key and the `"urlFilter"` key. 
+To work out the priority of a particular URL, look at the (developer-defined) `"priority"` key, the `"action"` key and the `"urlFilter"` key.
 
 ```json
 [
@@ -267,14 +267,16 @@ To work out the priority of a particular URL, look at the (developer-defined) `"
 ]
 ```
 
-**Navigation to https://google.com**  
-Two rules cover this URL: the rules with IDs 1 and 4. The rule with ID 1 applies because `"block"` actions have a higher priority than `"redirect"` actions. The remaining rules do not apply because they are for longer URLs.  
-**Navigation to https://google.com/1234**  
-Because of the longer URL, the rule with ID 2 now matches in addition to  the rules with IDs 1 and 4. The rule with ID 2 applies because `"allow"` has a higher priority than `"block"` `"redirect"`.  
-**Navigation to https://google.com/12345**  
+**Navigation to https://google.com**
+Two rules cover this URL: the rules with IDs 1 and 4. The rule with ID 1 applies because `"block"` actions have a higher priority than `"redirect"` actions. The remaining rules do not apply because they are for longer URLs.
+
+**Navigation to https://google.com/1234**
+Because of the longer URL, the rule with ID 2 now matches in addition to  the rules with IDs 1 and 4. The rule with ID 2 applies because `"allow"` has a higher priority than `"block"` `"redirect"`.
+
+**Navigation to https://google.com/12345**
 All four rules match this URL. The rule with ID 3 applies because its developer-defined priority is the highest of the group.
 
-#### Redirects
+### Redirects
 
 To use the example file shown below, your manifest file would need the following host permission:
 
@@ -288,7 +290,7 @@ The following example shows how to redirect a request from example.com to a page
   "priority": 1,
   "action": { "type": "redirect", "redirect": { "extensionPath": "/a.jpg" } },
   "condition": {
-    "urlFilter": "https://www.example.com", 
+    "urlFilter": "https://www.example.com",
     "resourceTypes": ["main_frame"]
   }
 }
@@ -334,7 +336,7 @@ The following example uses regular expressions to redirect from `https://www.abc
 }
 ```
 
-#### Headers
+### Headers
 
 The following example removes all cookies both main and sub frames.
 
@@ -351,6 +353,9 @@ The following example removes all cookies both main and sub frames.
 ```
 
 
+
+
+
 {: #manifest-rule-resources }
 
 {: #rules }
@@ -363,7 +368,7 @@ The following example removes all cookies both main and sub frames.
 
 
 
-{: #implementation-matching-algorithm }
+
 
 
 
