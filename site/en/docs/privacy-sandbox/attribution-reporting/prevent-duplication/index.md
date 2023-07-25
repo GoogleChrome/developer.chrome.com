@@ -19,7 +19,7 @@ To mitigate this:
 * Upon receiving a report, check its `report_id`.
 * Ignore the report if you've already received a report with that same `report_id`.
 
-For ad techs, it's a best practice to always check for duplicates of both event-level and aggregatable reports.
+We recommend you check for duplicates of both event-level and aggregatable reports.
 
 ##  Instruct the browser to ignore specific conversions
 
