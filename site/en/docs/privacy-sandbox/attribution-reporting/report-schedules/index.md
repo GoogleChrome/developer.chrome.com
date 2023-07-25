@@ -34,9 +34,9 @@ Click-through conversion reports are sent following a more complex schedule of a
 
 After the initial ad click or view, a schedule of built-in reporting windows begins. Each reporting window has a deadline. Conversions registered before that deadline are sent at the end of that window. 
 
-Clicks have three windows: 2, 7, and 30 days after conversion.
+Click reports are sent during one of three windows: 2, 7, or 30 days after conversion.
 
-Views have one window. Ater expiry⏤the duration of time specified in expiry, starting from the click/view event⏤conversions can no longer be attributed to this event.
+Views have one window. After expiry⏤the duration of time specified in expiry, starting from the click/view event⏤conversions can no longer be attributed to this event.
 
 {% Aside %}
 Reports may not be sent exactly at the scheduled dates and times. If the browser isn't running when a report is scheduled to be sent, the report is sent at browser startup. In this case, the browser may also decide to delay some of these reports for a random, but short, period of time.
