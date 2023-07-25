@@ -6,6 +6,7 @@ subhead: >
 description: >
   Learn how to audit your code to look for third-party cookies and what action you can take to ensure you're all set for the end of third-party cookies.
 date: 2023-05-17
+updated: 2023-07-25
 authors:
   - mihajlija
 ---
@@ -83,11 +84,17 @@ Set-Cookie: cookie-name=value; SameSite=None; Secure
 Make sure to review your cookies and have a list of those set with the `SameSite=None`. These are the cookies for which you will need to take action to ensure they keep functioning properly.
 {% endAside %}
 
-One way to identify them is to examine your code base and search for cookies containing `SameSite=None`.
+## Debugging cookies
+
+One way to identify third-party cookies in your code base is to search for cookies containing `SameSite=None`.
 
 Another option is to browse through your site with third-party cookies blocked on your machine and use DevTools to investigate any potential breakage.
 
+You can block third-party cookies from Chrome settings or by [running Chrome from the command line](https://www.chromium.org/developers/how-tos/run-chromium-with-flags/) with the flag `--test-third-party-cookies-phaseout`.
+
 To learn more about DevTools features you can use to investigate third-party cookies check out [the instructions on chromium.org](https://www.chromium.org/Home/chromium-privacy/privacy-sandbox/third-party-cookie-phaseout/).
+
+If your site breaks when third-party cookies are blocked, you can report the issue to [Chrome's cookie breakage tracker](goo.gle/report-3pc-broken).
 
 ## Partitioned cookies
 
