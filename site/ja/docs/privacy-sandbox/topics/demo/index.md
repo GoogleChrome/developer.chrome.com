@@ -34,8 +34,8 @@ Chrome 101 以降を実行する際に、シングルユーザーとして以下
 
     {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/4kpW1PAuzrMrecSAR3tU.png", alt="chrome://flags/#privacy-sandbox-ads-apis ページを使用してトピック API を有効にする", width="800", height=" 246" %}<figcaption> chrome://flags/#privacy-sandbox-ads-apis ページでは、API を有効または無効にできます。 <a href="https://wd.imgix.net/image/RtQlPaM9wdhEJGVKR8boMPkWf443/4kpW1PAuzrMrecSAR3tU.png?auto=format&amp;w=1600">拡大版を表示</a></figcaption>
 
-      
-    
+
+
 
 - コマンドラインから次のフラグを使用して Chrome を実行します。
 

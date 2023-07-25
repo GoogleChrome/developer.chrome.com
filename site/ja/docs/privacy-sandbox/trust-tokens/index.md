@@ -11,7 +11,7 @@ authors:
 
 {% Aside %} この記事では以前、プライベート ステート トークンを「トラスト トークン」と呼んでいました。 Trust Token API は、Private State Token API に名前が変更され、プライバシーとユーティリティのメリットがよりよく示されています。
 
-詳細については、 [「トラスト トークンの名前がプライベート ステート トークンに変更されました」](/blog/rename-trust-tokens)を参照してください。 {% endAside %}
+詳細は、[トラストトークンからプライベートステートトークンへの名前の変更](/blog/rename-trust-tokens)をお読みください。 {% endAside %}
 
 ## 実装状況
 
@@ -66,7 +66,7 @@ Private State Token API を使用すると、ウェブサイトは信頼でき�
 
 ## プライバシー状態トークン用のツールはありますか？
 
-Chrome DevTools turns on inspection from the Network and Application tabs. Read more about this [DevTools integration](/blog/new-in-devtools-89/#trust-token) and about [Private State Tokens](/docs/privacy-sandbox/trust-tokens/).
+Chrome DevTools では、[ネットワーク] タブと [アプリケーション] タブから検査を有効にします。この [DevTools の統合](/blog/new-in-devtools-89/#trust-token) と[プライベートステートトークン](/docs/privacy-sandbox/trust-tokens/)について詳しくは、こちらをご覧ください。
 
 ## サイト運営者は、複数の信頼できる発行者からのトークンをどのように処理しますか？
 
@@ -79,12 +79,12 @@ Chrome DevTools turns on inspection from the Network and Application tabs. Read 
 ## 貢献とフィードバックの共有
 
 - **オリジントライアル**: [終了しました](/origintrials/#/view_trial/2479231594867458049)。
-- **Demo**: The Trust Tokens origin trial has closed, but you can still check out the [demo](https://private-state-token-demo.glitch.me/).
+- **デモ**: トラスト トークンのオリジントライアルは終了しましたが、[デモ](https://private-state-token-demo.glitch.me/)は引き続き確認できます。
 - **GitHub**: [提案](https://github.com/WICG/trust-token-api)を読み、[質問を投稿したり、ディスカッションに参加したり](https://github.com/WICG/trust-token-api/issues)できます。
-- **W3C**: [Improving Web Advertising Business&nbsp;Group](https://www.w3.org/community/web-adv/participants) で、業界ユースケースについて議論できます。
-- **IETF**: IETF の [Privacy&nbsp;Pass ワーキンググループ](https://datatracker.ietf.org/wg/privacypass/about/)では、基盤のプロトコルに関する技術的な意見を投稿できます。
+- **W3C**: [Improving Web Advertising Business{nbsp}Group](https://www.w3.org/community/web-adv/participants) で、業界ユースケースについて議論できます。
+- **IETF**: IETF の [Privacy{nbsp}Pass ワーキンググループ](https://datatracker.ietf.org/wg/privacypass/about/)では、基盤のプロトコルに関する技術的な意見を投稿できます。
 - **開発者サポート**: [Privacy Sandbox Developer Support リポジトリ](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)では、質問したり、ディスカッションに参加したりできます。
-- **Origin trial questions**: [file a Chromium bug](https://bugs.chromium.org/p/chromium/issues/list?q=trust%20tokens) or respond to the feedback form that is sent to you as an origin trial participant.
+- **オリジントライアルの質問**: [Chromium バグを送信](https://bugs.chromium.org/p/chromium/issues/list?q=trust%20tokens)するか、オリジントライアルの参加者に答申されるフィードバックフォームに返信できます。
 
 ## 詳細について
 

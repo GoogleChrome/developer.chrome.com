@@ -2,7 +2,7 @@
 layout: layouts/doc-post.njk
 title: Cookies Having Independent Partitioned State (CHIPS)
 subhead: デベロッパーは、トップレベル サイト別の「パーティション化した」Cookie の保存に オプトインできます。
-description:  デベロッパーは、トップレベル サイト別の「パーティション化した」Cookie の保存に オプトインできます。
+description: デベロッパーは、トップレベル サイト別の「パーティション化した」Cookie の保存に オプトインできます。
   パーティション化した Cookie はサードパーティー サービスからセット可能ですが、最初にセットされたトップレベル サイト内からしか読み込むことはできません。
 date: 2022-02-15
 updated: 2023-06-14
@@ -124,7 +124,7 @@ key={("https", "retail.example"),
 
 #### First-Party Sets と Cookie のパーティション化
 
-[First-Party Sets (FPS)](/blog/first-party-sets-testing-instructions) is a web platform mechanism for developers to declare relationships among sites, so that browsers can use this information to enable limited cross-site cookie access for specific, user-facing purposes. Chrome will use these declared relationships to decide when to allow or deny a site access to their cookies when in a third-party context.
+First-Party Sets（FPS）は、開発者がサイト間の関係を宣言するためのウェブプラットフォーム メカニズムです。これにより、ブラウザはこの情報を使用して、特定のユーザー向けの目的で制限付きのクロスサイト Cookie アクセスを有効にできます。Chrome は、これらの宣言された関係を使用して、サードパーティのコンテキストで、Cookie へのサイトアクセスをいつ許可または拒否するかを決定します。
 
 現在のファーストパーティ セットの設計は Storage Access API に依存しており、CHIPS パーティション化と統合されていません。
 

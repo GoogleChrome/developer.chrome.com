@@ -17,11 +17,11 @@ authors:
 
 個々の Privacy Sandbox API に関する最新情報は、定期的にこのサイトで公開されています。特に、この最新情報では、API 固有の一般的なフィードバック テーマの概要を紹介します。
 
-- [Feedback report for 2023 Q1](/docs/privacy-sandbox/feedback/report-2023-q1/)
-- [Feedback report for 2022 Q4](/docs/privacy-sandbox/feedback/report-2022-q4/)
-- [Feedback report for 2022 Q3](/docs/privacy-sandbox/feedback/report-2022-q3/)
-- [フィードバックレポート - 2022 年第 1 四半 期](/docs/privacy-sandbox/feedback/report-2022-q1/)
-- [Feedback report for 2022 Q1](/docs/privacy-sandbox/feedback/report-2022-q1/)
+- [2023 年第 1 四半期のフィードバック レポート](/docs/privacy-sandbox/feedback/report-2023-q1/)
+- [2022 年第 4 四半期のフィードバック レポート](/docs/privacy-sandbox/feedback/report-2022-q4/)
+- [2022 年第 3 四半期のフィードバック レポート](/docs/privacy-sandbox/feedback/report-2022-q3/)
+- [2022 年第 2 四半期のフィードバック レポート](/docs/privacy-sandbox/feedback/report-2022-q2/)
+- [2022 年第 1 四半期のフィードバック レポート](/docs/privacy-sandbox/feedback/report-2022-q1/)
 
 基本的に公開のフィードバック チャネルを推奨しますが、公開チャネル（GitHub など）とダイレクト チャネル（フィードバック フォームなど）の両方が利用可能です。Chrome チームは、関係者から得られたフィードバックと関心が各 API の設計と開発に反映されるかどうか、またどのように反映されるかを説明します。
 
@@ -120,7 +120,7 @@ W3C と IETF は、ウェブとインターネットのためのオープン標�
 
 {% Details %} {% DetailsSummary %}
 
-### Chrome-facilated testing
+### Chrome を利用したテスト
 
 ***私たちは、最初のサード パーティ廃止から得たイシューのトラッキングに沿った [Chrome でのテスト計画](/docs/privacy-sandbox/chrome-testing/)に関するフィードバックを求めています。***
 
