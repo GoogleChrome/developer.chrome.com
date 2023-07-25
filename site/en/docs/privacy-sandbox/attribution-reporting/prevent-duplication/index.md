@@ -22,7 +22,7 @@ We recommend you check for duplicates of both event-level and aggregatable repor
 
 ##  Instruct the browser to ignore specific conversions
 
-Through an unexpected user flow, a conversion may be counted more than once. Here's how this can happen.
+Through an unexpected user flow, a conversion may be counted more than once. The following example describes how this can happen:
 
 Let's assume a user mistakenly reloads the checkout completion page that includes the conversion pixel. By default, the page reload will trigger a second conversion and you'll get two reports.
 But the user has only made one purchase. You can change this behavior to only see one conversion by deduplicating conversions.
