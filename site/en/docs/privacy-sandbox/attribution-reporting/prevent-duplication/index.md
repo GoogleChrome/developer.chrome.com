@@ -12,7 +12,7 @@ authors:
 ---
 
 
-## Ignore reports you've already received as an ad tech
+## Ignore reports you've already received
 
 When the browser retries sending reports due to network unavailability, it may send the same report multiple times.
 To mitigate this:
