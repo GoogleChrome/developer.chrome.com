@@ -166,7 +166,7 @@ and to generate summary reports with the local [aggregation tool](https://github
 
 ### Reprocessing reports
 
-Another advantage of using debug mode is that it allows you to reprocess reports. Therefore, to process reports more than once, make sure to have debug reports enabled.
+Another advantage of using debug mode is that it allows you to process reports again. Therefore, to process reports more than once, make sure to have debug reports enabled.
 
 ## Up next
 
