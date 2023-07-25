@@ -28,7 +28,7 @@ Aggregatable reports are sent by the browser to the ad tech provider or advertis
 What's described in this section is the default behavior. If you need to customize report scheduling behavior by shortening a report window, or if you need to filter out conversions happening after a certain window, you can use [custom report windows](/docs/privacy-sandbox/attribution-reporting/custom-report-windows/).
 {% endAside %}
 
-View-through conversion reports are sent by the browser to the ad tech approximately one hour after the view event the conversion is attributed to is no longer eligible for attribution.
+View-through conversion reports are sent by the browser to the ad tech approximately one hour after the view event (that the conversion is attributed to) is no longer eligible for attribution.
 
 Click-through conversion reports are sent following a more complex schedule of attribution windows; they are sent at least two days after conversion.
 
