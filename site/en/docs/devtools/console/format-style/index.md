@@ -301,7 +301,7 @@ Here is a list of styling code supported in DevTools.
     </tr>
     <tr>
       <td>9</td>
-      <td>Add <code>line-through</code> to <code>text-decoration</code> propertyh</td>
+      <td>Add <code>line-through</code> to <code>text-decoration</code> property</td>
     </tr>
     <tr>
       <td>22</td>
