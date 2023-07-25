@@ -17,11 +17,4 @@ These changes will be possible for testing from the week of Monday, May 22nd in 
   * The `contributeToHistogramOnEvent()` function is available in Chrome Canary, Dev, Beta, and Stable M115+
 * Legacy function names 
   * The following function names will be deprecated in M115
-  * The `sendHistogramReport()` function is available in 
-    * Chrome Canary, Dev, and Beta M107+
-    * Chrome Stable M112+
-  * The `reportContributionForEvent()` function is available in
-    * Chrome Canary and Dev M113+
-* Supplying a context ID via Shared Storage for report verification is available in
-  * Chrome Canary, Dev, Beta, and Stable M114+
 * See the [Chrome platform status page](https://chromestatus.com/feature/5743412790689792) page to see the API’s current stage.
