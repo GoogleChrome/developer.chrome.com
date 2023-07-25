@@ -15,18 +15,14 @@ With the Attribution Reporting API, reports are not sent immediately after a use
 
 Note that regardless of report type, reports are only sent when the browser is running and online. After the first failure to send, the browser tries to send the report again after 5 minutes. After the second failure, the browser tries to send the report again after 15 minutes. After that, it's not sent.
 
+This page describes default behavior. If you need to customize report scheduling behavior, or if you need to filter out conversions happening after a certain window, you can use [custom report windows](/docs/privacy-sandbox/attribution-reporting/custom-report-windows/).
 
-## Aggregatable reports
 
-{% Aside %}
-What's described in this section is the default behavior. If you need to filter out conversions happening after a certain window, you can use [custom report windows](/docs/privacy-sandbox/attribution-reporting/custom-report-windows/).
-{% endAside %}
-
-### Report delays
+## Aggregatable report schedules
 
 Aggregatable reports are sent by the browser to the ad tech provider or advertiser with a random delay between zero and 10 minutes, or with a small delay after the browser starts again. 
 
-## Event-level reports
+## Event-level report schedules
 
 {% Aside %}
 What's described in this section is the default behavior. If you need to customize report scheduling behavior by shortening a report window, or if you need to filter out conversions happening after a certain window, you can use [custom report windows](/docs/privacy-sandbox/attribution-reporting/custom-report-windows/).
@@ -68,3 +64,9 @@ The following list shows when a report is sent based on how long after a click t
     <dd>The report is sent at the expiry (plus 1 hour) after the click.</dd>
 </dl>
 
+## Next steps
+
+Review the following docs for more information on report schedules and filtering reports.
+
+- [Custom report windows](/docs/privacy-sandbox/attribution-reporting/custom-report-windows/)
+- [Define custom rules using filters](/docs/privacy-sandbox/attribution-reporting/define-filters/)
