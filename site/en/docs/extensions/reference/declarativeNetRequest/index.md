@@ -22,7 +22,7 @@ has_warning: One or more of these permissions <a href="/docs/extensions/mv3/perm
 
 Certain rules such as redirect and header modification rules also require host permissions which match the network requests that these rules will be applied towards.
 
-### Static rulesets
+### Static rulesets {: #manifest-rule-resources }
 
 This API supports multiple ruleset types, which will be described below, but only one type, static rulesets, requires keys in the manifest file. To use static rulesets, declare the `"declarative_net_request"` manifest key, which should be a dictionary with a single key called `"rule_resources"`. It should be a list containing dictionaries of type `Ruleset`, as shown below. These structures will be described in more detail elsewhere.
 
@@ -54,7 +54,7 @@ This API supports multiple ruleset types, which will be described below, but onl
 }
 ```
 
-## Concepts and Usage
+## Concepts and Usage {: #concepts-and-usage }
 
 To use declarative net requests specify one or more rulesets. A ruleset contains an array of rules. A single rule does one of the following:
 
@@ -78,17 +78,29 @@ Dynamic and session-scoped rulesets are managed using JavaScript while an extens
 
 There is only one each of these ruleset types. An extension can add or remove rules to them dynamically by calling [`updateDynamicRules()`](/docs/extensions/reference/declarativeNetRequest/#method-updateDynamicRules) and [`updateSessionRules()`](/docs/extensions/reference/declarativeNetRequest/#method-updateSessionRules), provided the rule limits aren't exceeded. For information on rule limits, see [Rule limits](#limits).
 
-_Method examples here._
-
-### Static rulesets
+### Static rulesets {: #rules }
 
 Unlike dynamic and session rules, static rules are packaged, installed, and updated with an extension. They're stored in rule files in JSON format, which are indicated to the extension using the `"declarative_net_request"` `"rule_resources"` keys [as described above](#manifest), as well as one or more [`Ruleset`](/docs/extensions/reference/declarativeNetRequest/#type-Ruleset) dictionaries. A `Ruleset` dictionary contains a path to the rule file, an ID for the ruleset contained in the file, and whether the ruleset is enabled or disabled. The last two will be important when you enable or disable a ruleset programmatically.
 
-JSON sample here
+```json
+{
+  ...
+  "declarative_net_request" : {
+    "rule_resources" : [{
+      "id": "ruleset_1",
+      "enabled": true,
+      "path": "rules_1.json"
+    },
+    ...
+    ]
+  }
+  ...
+}
+```
 
 To test rule files, [load your extension unpacked](/docs/extensions/mv3/getstarted/development-basics/#load-unpacked). Errors and warnings about invalid static rules are only displayed for unpacked extensions. Invalid static rules in packed extensions are ignored.
 
-### Enable and disable static rulesets
+### Enable and disable static rulesets {: #update-enabled-rulesets }
 
 To enable or disable static rulesets, call [`updateEnabledRulesets()`](#method-updateEnabledRulesets). This method takes an [`UpdateRulesetOptions`](#type-UpdateRulesetOptions) object, which contains arrays of IDs of rules to enable or disable. The IDs are defined using the `"id"` key of the `Ruleset` dictionary.
 
@@ -96,11 +108,7 @@ The set of enabled static rulesets is persisted across browser sessions. Static 
 
 For performance reasons there are also limits to the number of rules and rulesets that may be enabled at one time. Call [`getAvailableStaticRuleCount()`](#method-getAvailableStaticRuleCount) to check the number of additional rules that may be enabled. For information on rule limits, see [Rule limits](#limits).
 
-The following example shows how to and disable rulesets, while taking into account the number of available rules and the global rule limits.
-
-JS sample here
-
-### Build rules
+### Build rules {: #build-rules }
 
 Regardless of type, a rule starts with four fields as shown below. While the `"id"` and `"number"` keys merely take a number, the `"action"` and `"condition"` provide a multitude of blocking and redirecting conditions. For example, the rule below blocks all script requests originating from "foo.com" to any URL with "abc" as a substring.
 
@@ -117,7 +125,7 @@ Regardless of type, a rule starts with four fields as shown below. While the `"i
 }
 ```
 
-### urlFilter matching characters
+### urlFilter matching characters {: #filter-matching-charactgers }
 
 A rule's `"condition"` key allows a `"urlFilter"` key for acting on URLs under a specified domain. You create patterns using [pattern matching tokens](/docs/extensions/reference/declarativeNetRequest/#type-RuleCondition:~:text=session%2Dscoped%20rules.-,urlFilter,-string%C2%A0optional). A few examples are shown below.
 
@@ -169,7 +177,7 @@ Thinking of matching this way: whatever rule a particular extension prioritizes 
 Avoid building rulesets that depend on rules with the same priority running in a particular order. Rules with the same priority in the same set (e.g static rules with priority 1) are executed in an arbitrary order which is not defined and can change between runs or browser versions.
 {% endAside %}
 
-#### Rule prioritization within an extension
+#### Rule prioritization within an extension {: #rule-prioritization-within-an-extension }
 
 Within a single extension, prioritization is worked out using the following process:
 
@@ -187,7 +195,7 @@ Within a single extension, prioritization is worked out using the following proc
     -  If a rule has set a header, then lower priority rules cannot further modify the header, except for append rules from the same extension.
     -  If a rule has removed a header, then lower priority rules cannot further modify the header.
 
-#### Rule prioritization between extensions
+#### Rule prioritization between extensions {: #rule-prioritization-between-extensions }
 
 If only one extension has a rule that matches a request, that rule is applied. But if more than one extension matches a request, the following process is used.
 
@@ -228,9 +236,50 @@ A declarative net request cannot redirect from a public resource request to a re
 
 ## Examples {: #example }
 
+### Code examples {: #code-examples }
+
+#### Update dynamic rules {: update-dynamic-rule-examples }
+
+The following example shows how to call `updateDynamicRules()`. The procedure for `updateSessionRules()` is the same.
+
+```js
+// Get arrays containing new and old rules
+const newRules = getNewRules();
+const oldRules = await chrome.declarativeNetRequest.getDynamicRules();
+const oldRuleIds = oldRules.map(rule => rule.id);
+
+// Use the arrays to update the dynamic rules
+await chrome.declarativeNetRequest.updateDynamicRules({
+  removeRuleIds: oldRuleIds,
+  addRules: newRules
+});
+```
+
+#### Update static rulesets {: #update-static-rulesets }
+
+The following example shows how to enable and disable rulesets, while taking into account the number of available rulesets and the maximum number of enabled static rulesets. You would do this is in situations where the number of static rules you need exceeds the number allowed. For this to work, some of your rulesets would installed with some of your rulesets disabled (setting `"Enabled"` to `false` with in the manifest file).
+
+```js
+function updateStaticRules(enableRulesetIds, disableCandidateIds) {
+  // Create the options structure for the call to updateEnabledRulesets()
+  let options = { enableRulesetIds: enableRulesetIds }
+  // Get the number of enabled static rules
+  const enabledStaticCount = await chrome.declarativeNetRequest.getEnabledRulesets();
+  // Compare rule counts to determine if anything needs to be disabled so that
+  // new rules can be enabled
+  const propsedCount = enableRulesetIds.length;
+  if (enabledStaticCount + proposedCount > chrome.declarativeNetRequest.MAX_NUMBER_OF_ENABLED_STATIC_RULESETS) {
+    options.disableRulesetIds = disableCandidateIds
+  }
+  // Update the enabled static rules
+  await chrome.declarativeNetRequest.updateEnabledRulesets(options);
+}
+```
+
+### Rule examples {: #rule-examples }
 The examples below illustrate various aspects of rule file files. You may want to open the [prioritization](#implementation-matching-algorithm) rules in a separate window when reviewing them.
 
-### The "priority" key
+### The "priority" key {: #priority-key }
 
 To use the example file shown below, your manifest file would need the following host permission:
 
@@ -276,7 +325,7 @@ Because of the longer URL, the rule with ID 2 now matches in addition to  the ru
 **Navigation to https://google.com/12345**
 All four rules match this URL. The rule with ID 3 applies because its developer-defined priority is the highest of the group.
 
-### Redirects
+#### Redirects {: #redirects }
 
 To use the example file shown below, your manifest file would need the following host permission:
 
@@ -336,7 +385,7 @@ The following example uses regular expressions to redirect from `https://www.abc
 }
 ```
 
-### Headers
+#### Headers {: #headers }
 
 The following example removes all cookies both main and sub frames.
 
@@ -352,17 +401,6 @@ The following example removes all cookies both main and sub frames.
 }
 ```
 
-
-
-
-
-{: #manifest-rule-resources }
-
-{: #rules }
-
-
-
-{: #update-enabled-rulesets }
 
 {: #implementation }
 

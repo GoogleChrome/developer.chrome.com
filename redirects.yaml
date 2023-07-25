@@ -465,6 +465,9 @@ redirects:
 - from: /docs/extensions/declarativenetrequest
   to: /docs/extensions/reference/declarativeNetRequest
 
+- from: /docs/extensions/reference/declarativeNetRequest#implementation
+  to: /docs/extensions/reference/declarativeNetRequest#implementation-web-accessible-resources
+
   # MV2 docs that have been removed, but their MV3 version still exists
 
 - from: /docs/extensions/mv2/single_purpose
@@ -748,7 +751,7 @@ redirects:
 
 - from: /docs/extensions/reference/declarativeNetRequest/#limits-global-static-rule-limit
   to:  /docs/extensions/reference/declarativeNetRequest/#static-rules
-  
+
 # DO NOT REMOVE. This seems pointless but we rewrite "." to "_" inside our server's code, so if the
 # URL is fine for all but incorrect syntax, we'll fix it up.
 - from: /...
