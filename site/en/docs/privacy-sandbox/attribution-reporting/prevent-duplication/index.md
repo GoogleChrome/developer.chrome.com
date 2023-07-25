@@ -11,6 +11,7 @@ authors:
   - maudn
 ---
 
+At times you may notice a specific conversion counted more than once, or a report sent multiple times. Here we discuss how you can find duplicate reports, and how you can prevent duplicate conversions from being counted.
 
 ## Ignore reports you've already received
 
