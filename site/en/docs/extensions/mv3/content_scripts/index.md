@@ -698,7 +698,7 @@ window.addEventListener("message", (event) => {
 }, false);
 ```
 
-{% Label %}content-script.js{% endLabel %}
+{% Label %}example.js{% endLabel %}
 
 ```js
 document.getElementById("theButton").addEventListener("click", () => {
