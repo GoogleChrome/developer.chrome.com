@@ -135,3 +135,5 @@ paapi-walkthrough:
   en: 'Protected Audience API walkthrough'
 fedcm-developer-guide:
   en: 'Federated Credential Management API: developer guide'
+shared-storage-walkthrough: 
+  en: 'Shared Storage API walkthrough'
