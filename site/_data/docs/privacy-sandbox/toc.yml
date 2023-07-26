@@ -40,6 +40,8 @@
         - url: /docs/privacy-sandbox/permissions-policy
           title: i18n.docs.privacy-sandbox.permissions-policy
     - url: /docs/privacy-sandbox/shared-storage
+    - url: https://goo.gle/shared-storage-walkthrough
+      title: i18n.docs.privacy-sandbox.shared-storage-walkthrough
 - title: i18n.docs.privacy-sandbox.tracking-prevention
   sections:
     - url: /docs/privacy-sandbox/ip-protection
