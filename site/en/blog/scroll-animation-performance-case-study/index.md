@@ -30,7 +30,7 @@ We are now introducing a [new set of APIs](/articles/scroll-driven-animations/#s
 
 This article compares the new approach with the classic JavaScript technique to show just how easy and silky-smooth scroll-driven animations can be with the new API.
 
-{% Aside %} The performance gains that scroll-driven animations give you are available as of Chrome 116. {% endAside %}
+{% Aside %} The following performance gains from the use of scroll-driven animations are available from Chrome 116. {% endAside %}
 
 ## The scroll-driven animations CSS API versus classic JavaScript
 
