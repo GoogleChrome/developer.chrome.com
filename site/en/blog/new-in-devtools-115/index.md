@@ -5,7 +5,7 @@ authors:
   - sofiayem
 date: 2023-05-30
 description: ""
-hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/s7ZpM4wjhbRf5K6Vspk3.jpg'
+hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/3epzH8UKrCVrMdc7fEpG.png'
 alt: ''
 tags:
   - new-in-devtools
@@ -15,10 +15,7 @@ tags:
 <!--image/dPDCek3EhZgLQPGtEG3y0fTn4v82/gctGASDKBFTUtOQqVq2H.png  -->
 
 {% Partial 'devtools/banner.md' %}
-
-*There is no 'What's new in DevTools' video for this release, but you can watch this quick recap of the recent features.*
-
-{% YouTube id='CrSmjooOEiE' %}
+{% YouTube id='e8tl_yp5BQg' %}
 
 <!-- $contentStart -->
 

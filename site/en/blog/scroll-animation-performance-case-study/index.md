@@ -19,14 +19,18 @@ date: 2023-07-12
 
 In the past, the only way to create scroll-driven animations was to respond to the scroll event on the main thread. This caused two major problems:
 
-- Scrolling is performed on a separate process and therefore delivers scroll events asynchronously.
+- Scrolling is performed on a separate thread and therefore delivers scroll events asynchronously.
 - Main thread animations are [subject to jank](/blog/inside-browser-part3/#updating-rendering-pipeline-is-costly).
 
 This makes creating performant scroll-driven animations that are in-sync with scrolling impossible or very difficult.
 
-We are now introducing a [new set of APIs](/articles/scroll-driven-animations/#scroll-driven-animations) to support scroll-driven animations, which you can use from CSS or JavaScript. The API tries to use as few main thread resources as possible, making scroll-driven animations  far easier to implement, and also much smoother.
+We are now introducing a [new set of APIs](/articles/scroll-driven-animations/#scroll-driven-animations) to support scroll-driven animations, which you can use from CSS or JavaScript. The API tries to use as few main thread resources as possible, making scroll-driven animations  far easier to implement, and also much smoother. The scroll-driven animations API is currently supported in the following browsers:
 
-This article  compares the new approach with the classic JavaScript technique to show just how easy and silky-smooth scroll-driven animations can be with the new API.
+{% BrowserCompat 'css.properties.animation-timeline' %}
+
+This article compares the new approach with the classic JavaScript technique to show just how easy and silky-smooth scroll-driven animations can be with the new API.
+
+{% Aside %} The following performance gains from the use of scroll-driven animations are available from Chrome 116. {% endAside %}
 
 ## The scroll-driven animations CSS API versus classic JavaScript
 

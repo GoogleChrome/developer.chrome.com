@@ -155,11 +155,13 @@ popup. There is no way to keep the popup open after the user has clicked away.
 
 ### Can extensions be notified when they are installed/uninstalled? {: #faq-lifecycle-events }
 
-You can listen to the [runtime.onInstalled][48] event to be notified when your extension is
-installed or updated, or when Chrome itself is updated. While there is no event listener
-for uninstalling an extension, a URL can be set by calling `setUninstallUrl()` to open a URL when
-the extension is uninstalled. This allows for some final functionality, like cleaning up server-side data, doing analytics,
-and implementing surveys without access to any extension APIs.
+You can listen to the [runtime.onInstalled][48] event to be notified when your
+extension is installed or updated, or when Chrome itself is updated. While there
+is no event listener for uninstalling an extension, a URL can be set by calling
+[`runtime.setUninstallUrl()`](/docs/extensions/reference/runtime/#method-setUninstallURL)
+to open a URL when the extension is uninstalled. This allows for some final
+functionality, like cleaning up server-side data, doing analytics, and
+implementing surveys without access to any extension APIs.
 
 
 ## Development {: #development2 }

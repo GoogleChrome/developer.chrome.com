@@ -1486,6 +1486,11 @@ thiagodiogo:
     en: 'Thiago Diogo'
   description:
     en:  'Staff Technical Solutions Consultant'
+mikedougherty:
+  title:
+    en: 'Mike Dougherty'
+  description:
+    en: 'Chrome engineer on iOS'
 henrikbostrom:
   title:
     en: 'Henrik Boström'
