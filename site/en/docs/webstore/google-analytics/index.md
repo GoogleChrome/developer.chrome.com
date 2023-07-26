@@ -22,6 +22,7 @@ metrics section on the Store listing page. Click "Opt in to Google Analytics".
   {% Img src="image/wVNVUJS8Z8O04i1tJKSdsp6nkRQ2/AVqhwuRqmI00g7AVkIDc.png", alt="Opt in UI for Google Analytics in Developer Dashboard", width="800", height="161" %}
   <figcaption>Opt in UI for Google Analytics in Developer Dashboard.</figcaption>
 </figure>
+
 Then, head to [https://analytics.google.com/][ga]. You should have access to a new property which
 has been named with your extension ID.
 
