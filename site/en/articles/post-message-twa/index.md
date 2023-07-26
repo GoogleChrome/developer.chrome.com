@@ -3,7 +3,7 @@ layout: 'layouts/blog-post.njk'
 title: PostMessage for TWA
 description: >
   From Chrome 115 Trusted Web Activities (TWA) can send messages using postMessages. This article walks through the setup needed to communicate between your app and the web.
-date: 2023-07-14
+date: 2023-07-26
 authors:
   - elabadysayed
 tags:
