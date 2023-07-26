@@ -24,7 +24,7 @@ The following sections on click and view events describe features and limitation
 - Up to 3 conversions can be attributed to a given source (ad click or view event).
 - Noise is applied to reports in the form of a randomized response. The correct conversion count can be recovered using a [script](https://github.com/WICG/attribution-reporting-api/blob/main/noise_corrector.py).
 - Noise is applied with a 0.0024 (0.24%) probability in the current Chrome code.
-- Reports are sent with a delay of between 2 and 30 days; the exact mechanism for views and clicks varies. See details in [Report scheduling for event-level reports](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit#heading=h.c5k14yezmbvl).
+- Reports are sent with a delay of between 2 and 30 days; the exact mechanism for views and clicks varies. See details in [Report scheduling for event-level reports](docs/privacy-sandbox/attribution-reporting/report-schedules/#event-level-report-schedules).
 
 ### View (`event` source)
 
@@ -33,7 +33,7 @@ The following sections on click and view events describe features and limitation
 - Up to 1 conversion can be attributed to a given source (ad click or view event).
 - Noise is applied to reports in the form of a randomized response. The correct conversion count can be recovered via a [script](https://github.com/WICG/attribution-reporting-api/blob/main/noise_corrector.py).
 - Noise is applied with a 0.0000025 probability (0.00025%) in the current Chrome code.
-- Reports are sent with a delay of between 2 and 30 days; the exact mechanism for views and clicks varies. See details [Report scheduling for event-level reports](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit#heading=h.c5k14yezmbvl).
+- Reports are sent with a delay of between 2 and 30 days; the exact mechanism for views and clicks varies. See details [Report scheduling for event-level reports](/docs/privacy-sandbox/attribution-reporting/report-schedules/#event-level-report-schedules).
 
 
 ## Aggregatable reports
@@ -83,6 +83,6 @@ Keep in mind that:
 ## Next steps
 
 For more on the timing of reports, review:
-- [Report scheduling for event-level reports](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit#heading=h.c5k14yezmbvl)
 
+- [Report scheduling for event-level reports](/docs/privacy-sandbox/attribution-reporting/report-schedules/#event-level-report-schedules)
 - [Custom report windows](/docs/privacy-sandbox/attribution-reporting/custom-report-windows/)
