@@ -7,7 +7,11 @@ updated: 2016-11-07
 description: How to override Chrome settings from a Chrome Extension.
 ---
 
-{% Partial 'extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Overriding Chrome settings](/docs/extensions/mv3/settings_override/) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 Settings overrides are a way for extensions to override selected Chrome settings. The API is
 available on Windows in all current versions of Chrome and is available on Mac in Chrome 56 and

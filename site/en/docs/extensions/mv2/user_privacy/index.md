@@ -7,7 +7,11 @@ updated: 2018-04-26
 description: Guidelines for ensuring that your Chrome Extension protects user privacy.
 ---
 
-{% Partial 'extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Protect user privacy](/docs/extensions/mv3/user_privacy/) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 Users will not install an extension if it compromises their privacy or asks for more permissions
 that it seems to need. Permission requests should make sense to users and be limited to the critical
