@@ -1,4 +1,4 @@
-*  The [Protected Audience API proposal](https://github.com/WICG/turtledove/blob/master/FLEDGE.md) is now approaching launch for scaled adoption.
+*  The [Protected Audience API proposal](https://github.com/WICG/turtledove/blob/master/FLEDGE.md) is now [moving to general availability](/blog/privacy-sandbox-launch/).
    [Raise questions and follow discussion](https://github.com/WICG/turtledove/issues).
 *  [Protected Audience API status of pending capabilities](/docs/privacy-sandbox/fledge-api/feature-status/) details changes and enhancements to the Protected Audience API API and features.
 *  [Blink status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=fledge)
