@@ -28,7 +28,7 @@ has been named with your extension ID.
 
 ## Limits {: #limits }
 
-Some limits are in place which can not be changed. These include:
+Some limits apply in your Google Analytics property. These include:
 
 - Data retention is set to two months.
 - Data de-identification is enabled, which limits access to non aggregated data to prevent tracking
