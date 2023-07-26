@@ -3,8 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Using your Google Analytics account with the Chrome Web Store"
 seoTitle: "Using your Google Analytics account with the Chrome Web Store"
 date: 2023-07-11
-description: The Chrome Web Store offers integration with Google Analytics, which allows you to see analytics for
-your Chrome Web Store listing in addition to the view offered in the Developer Dashboard.
+description: The Chrome Web Store offers integration with Google Analytics, which allows you to see analytics for your Chrome Web Store listing in addition to the view offered in the Developer Dashboard.
 ---
 
 The Chrome Web Store offers integration with Google Analytics. This allows you to see analytics for
@@ -34,6 +33,8 @@ Some limits apply in your Google Analytics property. These include:
 - Data de-identification is enabled, which limits access to non aggregated data to prevent tracking
 an individual user. For example, data may be withheld if it does not meet system-defined
 [thresholds][ga-thresholds].
+- Additional users can only be added by syncing with a Group Publisher (see
+[below](#group-publisher)).
 
 ## Page views {: #page-views }
 
@@ -53,12 +54,6 @@ The Chrome Web Store also sends a number of events to your property:
 the same time as the `track_install` page view (see [above](#page-views)). 
 
 ## Monitoring ad performance {: #monitor-performance }
-
-### Connecting to Google Ads or other services {: #connect-other-services }
-
-It is not currently possible to link your Google Analytics property to other services like Google
-Ads. We recommend periodically checking the data in Google Analytics to understand ad performance
-and make decisions about how to optimize campaigns.
 
 ### Using UTM parameters {: #utm-params }
 
@@ -84,6 +79,12 @@ It can take between 24 and 48 hours for data to be finalized. Before then, you m
 reported with a blank entry for these fields. This will be corrected as the data is finalized.
 {% endAside %}
 
+### Connecting to Google Ads or other services {: #connect-other-services }
+
+It is not currently possible to link your Google Analytics property to other services like Google
+Ads. We recommend periodically checking the data in Google Analytics to understand ad performance
+and make decisions about how to optimize campaigns.
+
 ## Tracking conversions {: #track-conversions }
 
 The install event generated when a user installs your extension can be marked as a conversion event.
@@ -92,14 +93,15 @@ event will now appear as a Conversion across your Google Analytics dashboard.
 
 ## Giving other accounts access to Google Analytics {: #grant-access }
 
+### Using a Group Publisher {: #group-publisher }
+
 To give other Google accounts access to your Google Analytics property, set up a
 [Group Publisher][group-publisher]. Members of this group will be automatically granted access to
 the Google Analytics property. Note that granting access to the linked group means those users can
 act on behalf of the publisher account. This means they can access the Developer Dashboard and edit
-and publish updates to your extensions. Consequently, access should be shared sparingly. It is not
-currently possible to grant access to just the Analytics property.
+and publish updates to your extensions. Consequently, access should be shared sparingly.
 
-### With Looker Studio
+### With Looker Studio {: #looker-studio }
 
 Alternatively, you can use [Looker Studio][looker-studio] to create a report based on your
 Google Analytics data. This can be easily shared with any Google account.
