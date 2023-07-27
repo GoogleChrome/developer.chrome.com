@@ -150,9 +150,9 @@ Content scripts can be injected into related frames like `about:`, `data:`, etc 
 {% endAside %}
 
 [content-scripts]: /docs/extensions/mv3/content_scripts
-[permissions]: /docs/extensions/mv3/declare_permissions/
+[cs-frames]: /docs/extensions/mv3/content_scripts/#injecting-in-related-frames
+[ext-connect]: /docs/extensions/mv3/manifest/externally_connectable/#manifest
 [host-permissions]: /docs/extensions/mv3/declare_permissions/#host-permissions
 [mdn-tld]: https://developer.mozilla.org/docs/Glossary/TLD
+[permissions]: /docs/extensions/mv3/declare_permissions/
 [war]: /docs/extensions/mv3/manifest/web_accessible_resources/#manifest-declaration
-[ext-connect]: /docs/extensions/mv3/manifest/externally_connectable/#manifest
-[cs-frames]: /docs/extensions/mv3/content_scripts/#injecting-in-related-frames
