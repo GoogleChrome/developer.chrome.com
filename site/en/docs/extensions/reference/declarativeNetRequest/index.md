@@ -74,7 +74,7 @@ There are three types of rulesets.
 Dynamic and session-scoped rulesets are managed using JavaScript while an extension is in use.
 
 -  Dynamic rules persist across browser sessions and extension upgrades.
--  Session rules are destroyed when the browser shuts down and when a new version of the extension is installed.
+-  Session rules are cleared when the browser shuts down and when a new version of the extension is installed.
 
 There is only one each of these ruleset types. An extension can add or remove rules to them dynamically by calling [`updateDynamicRules()`](/docs/extensions/reference/declarativeNetRequest/#method-updateDynamicRules) and [`updateSessionRules()`](/docs/extensions/reference/declarativeNetRequest/#method-updateSessionRules), provided the rule limits aren't exceeded. For information on rule limits, see [Rule limits](#limits). You can see [an example of this](#update-dynamic-rule-examples) under [code examples](#code-examples).
 
