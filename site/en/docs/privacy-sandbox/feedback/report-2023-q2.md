@@ -960,7 +960,7 @@ Further information is available to users in the <a href="https://support.google
     <tr>
       <td style="vertical-align: top;">Fetch Integration</td>
       <td style="vertical-align: top;">The <code>fetch</code> integration is complicated and unnecessary.</td>
-      <td style="vertical-align: top;">There are pros and cons to utilizing `fetch`, and we would like to pursue further standardization within the web ecosystem, but we think it would be too early to make this change until we have a clearer sense of what the standard will look like. If and when a standard emerges, we are also committed to responsibly transitioning web developers to that standard.</td>
+      <td style="vertical-align: top;">There are pros and cons to utilizing <code>fetch</code>, and we would like to pursue further standardization within the web ecosystem, but we think it would be too early to make this change until we have a clearer sense of what the standard will look like. If and when a standard emerges, we are also committed to responsibly transitioning web developers to that standard.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Storage Location</td>
