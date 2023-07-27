@@ -41,9 +41,10 @@ In addition to the permissions described above, certain types of rulesets, stati
 
 ## Concepts and Usage {: #concepts-and-usage }
 
-To use declarative net requests specify one or more rulesets. A ruleset contains an array of rules. A single rule does one of the following:
+To use this API specify one or more rulesets. A ruleset contains an array of rules. A single rule does one of the following:
 
 -  Block a network request.
+-  Upgrade a request.
 -  Prevent a request from getting blocked by negating any matching blocked rules.
 -  Redirect a network request.
 -  Modify request or response headers.
