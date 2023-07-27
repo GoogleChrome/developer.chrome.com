@@ -186,9 +186,9 @@ Within a single extension, prioritization is worked out using the following proc
 If only one extension has a rule that matches a request, that rule is applied. But if more than one extension matches a request, the following process is used.
 
 1. Rules are prioritized using the `"action"` field, in the following order:
-    -  `block`
-    -  `redirect` or `upgradeScheme`
-    -  `allow` or `allowAllRequests`
+    1. `block`
+    1. `redirect` or `upgradeScheme`
+    1. `allow` or `allowAllRequests`
 
 1. If more than one rule matches, the most recently installed extension gets priority.
 
@@ -213,6 +213,10 @@ The limits applied to dynamic and session rules are simpler than static rules. T
 #### Rules that use regex {: #regex-rules }
 
 All types of rules can use regular expressions; however the total number of regex rules, of each type cannot exceed **1000**. This is called the [MAX_NUMBER_OF_REGEX_RULES](#property-MAX_NUMBER_OF_REGEX_RULES).
+
+### Interactions with service workers {: #interact-w-service-workers }
+
+Requests and responses intercepted by a service worker's `onfetch` handler are not affected by declarativeNetRequet. Consequently an installed service worker can make it appear as though your rule doesn't work. To properly test your rules, you may need to disable or remove one or more of the service workers in your installation of Chrome.
 
 ### Interaction with cached pages {: #implementation-cached-pages }
 

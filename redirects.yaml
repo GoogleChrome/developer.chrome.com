@@ -474,6 +474,9 @@ redirects:
 - from: /docs/extensions/reference/declarativeNetRequest#manifest-rule-resources
   to: /docs/extensions/reference/declarativeNetRequest#manifest
 
+- from: /docs/extensions/reference/declarativeNetRequest#implementation-cached-pages
+  to: /docs/extensions/reference/declarativeNetRequest#manifest#interact-w-service-workers
+
   # MV2 docs that have been removed, but their MV3 version still exists
 
 - from: /docs/extensions/mv2/single_purpose
