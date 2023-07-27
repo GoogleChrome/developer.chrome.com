@@ -206,7 +206,7 @@ We encourage the ecosystem to review the latest taxonomy and provide feedback on
     <tr>
       <td style="vertical-align: top;">Publisher control</td>
       <td style="vertical-align: top;">Publishers should have a say in what Topics their sites should be classified as.</td>
-      <td style="vertical-align: top;">Misclassification of sites may make the Topics signal slightly less useful as a signal overall, but the specific sites that are misclassified are no more and no less harmed by this than any other sites. This is because a site's contextual information will always be available for auctions on their site, which would provide comparable information to the correct topic, even in the case of misclassification. We welcome feedback on this subject <a href="https://github.com/patcg-individual-drafts/topics/issues/2">here</a>.<br>
+      <td style="vertical-align: top;">Misclassification of sites may make the Topics signal slightly less useful as a signal overall, but the specific sites that are misclassified are no more and no less harmed by this than any other sites. This is because a site's contextual information will always be available for auctions on their site, which would provide comparable information to the correct topic, even in the case of misclassification. We welcome <a href="https://github.com/patcg-individual-drafts/topics/issues/2">feedback on this subject here</a>.<br>
 <br>
 Allowing publishers to control their classification has risks. Sites may incorrectly classify their sites intentionally, reducing utility for all, or encode sensitive meanings in less common topics, harming user privacy.</td>
     </tr>
@@ -223,22 +223,22 @@ Allowing publishers to control their classification has risks. Sites may incorre
     <tr>
       <td style="vertical-align: top;">Privacy</td>
       <td style="vertical-align: top;">Host Names may contain private information that may be revealed by the Topics API</td>
-      <td style="vertical-align: top;">We have a number of mitigations to ensure privacy, as outlined <a href="https://github.com/patcg-individual-drafts/topics/issues/185">here</a>.</td>
+      <td style="vertical-align: top;">We have a number of mitigations to ensure privacy, <a href="https://github.com/patcg-individual-drafts/topics/issues/185">as outlined here</a>.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Fraud and Abuse</td>
       <td style="vertical-align: top;">How to prevent manipulation of Topics by fraudulent visits</td>
-      <td style="vertical-align: top;">Mitigations are explained <a href="/docs/privacy-sandbox/topics/overview/#how-the-api-reduces-fingerprinting">here</a>.</td>
+      <td style="vertical-align: top;">Mitigations <a href="/docs/privacy-sandbox/topics/overview/#how-the-api-reduces-fingerprinting">are explained here</a>.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Topics classifier</td>
       <td style="vertical-align: top;">Can websites request to alter their Topics classification?</td>
-      <td style="vertical-align: top;">We are interested in hearing from the ecosystem on this topic and welcome feedback <a href="https://github.com/patcg-individual-drafts/topics/issues/2">here</a>.</td>
+      <td style="vertical-align: top;">We are interested in hearing from the ecosystem on this topic and <a href="https://github.com/patcg-individual-drafts/topics/issues/2">welcome feedback here</a>.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Topics provider sites</td>
       <td style="vertical-align: top;">Designate certain websites that host content for many Topics as "Special Topics Provider Sites" and train classifiers based on tags provided on the web pages.</td>
-      <td style="vertical-align: top;">We are discussing the proposal <a href="https://github.com/patcg-individual-drafts/topics/issues/206">here</a>, and welcome additional feedback.</td>
+      <td style="vertical-align: top;">We are <a href="https://github.com/patcg-individual-drafts/topics/issues/206">discussing the proposal here</a>, and welcome additional feedback.</td>
     </tr>
   </tbody>
 </table>
@@ -355,7 +355,7 @@ We discussed a number of scenarios related to this issue during the <a href="htt
     <tr>
       <td style="vertical-align: top;">(Also reported in Q1) Dynamic Remarketing</td>
       <td style="vertical-align: top;">Will Dynamic remarketing still be possible with the Protected Audience API after third-party cookie deprecation?</td>
-      <td style="vertical-align: top;">We believe this use case is possible using Protected Audience, as explained <a href="https://github.com/WICG/turtledove/issues/530#issuecomment-1602623124">here</a>.</td>
+      <td style="vertical-align: top;">We believe this use case is possible using Protected Audience, <a href="https://github.com/WICG/turtledove/issues/530#issuecomment-1602623124">as explained here</a>.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Click related data</td>
@@ -370,7 +370,7 @@ We discussed a number of scenarios related to this issue during the <a href="htt
     <tr>
       <td style="vertical-align: top;">Currency</td>
       <td style="vertical-align: top;">Currency amounts should not be represented using floating points.</td>
-      <td style="vertical-align: top;">We addressed this issue in detail <a href="https://github.com/WICG/turtledove/issues/166">here</a>.</td>
+      <td style="vertical-align: top;">We addressed this issue <a href="https://github.com/WICG/turtledove/issues/166">in detail here</a>.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Non-DSP ad selection capabilities</td>
@@ -380,7 +380,7 @@ We discussed a number of scenarios related to this issue during the <a href="htt
     <tr>
       <td style="vertical-align: top;">GenerateBid</td>
       <td style="vertical-align: top;">Support for Google Ads' proposal to return more than one candidate ad per ad interest group from <code>generateBid</code> and have those candidates scored in `scoreAd`.</td>
-      <td style="vertical-align: top;">This is being currently evaluated. We welcome additional feedback <a href="https://github.com/WICG/turtledove/issues/595">here</a>.</td>
+      <td style="vertical-align: top;">This is being currently evaluated. We welcome <a href="https://github.com/WICG/turtledove/issues/595">additional feedback here</a>.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Auction Order</td>
@@ -390,7 +390,7 @@ We discussed a number of scenarios related to this issue during the <a href="htt
     <tr>
       <td style="vertical-align: top;">Non-user initiated navigation</td>
       <td style="vertical-align: top;">Expose non-user initiated navigation</td>
-      <td style="vertical-align: top;">We are reviewing this request and discussing it <a href="https://github.com/WICG/turtledove/issues/577">here </a>and welcome additional feedback.</td>
+      <td style="vertical-align: top;">We are reviewing this request and <a href="https://github.com/WICG/turtledove/issues/577">discussing it here </a>and welcome additional feedback.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Caching</td>
@@ -400,17 +400,17 @@ We discussed a number of scenarios related to this issue during the <a href="htt
     <tr>
       <td style="vertical-align: top;">Attribution Reporting and Protected Audience</td>
       <td style="vertical-align: top;">How can the Attribution Reporting API and the Protected Audience Audience API work together?</td>
-      <td style="vertical-align: top;">Integrations are currently available for Protected Audience API for both Attribution Reporting API modes (event-level and summary reports). We have shared more information on improved Protected Audience API and Attribution Reporting integration on June 1. You can read about them <a href="/docs/privacy-sandbox/fledge-api/feature-status/#improved-protected-audience-api-and-attribution-reporting-integration">here</a>.</td>
+      <td style="vertical-align: top;">Integrations are currently available for Protected Audience API for both Attribution Reporting API modes (event-level and summary reports). We have shared more information on improved Protected Audience API and Attribution Reporting integration on June 1. You can <a href="/docs/privacy-sandbox/fledge-api/feature-status/#improved-protected-audience-api-and-attribution-reporting-integration">read about them here</a>.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Server Endpoint</td>
       <td style="vertical-align: top;">Will the server endpoint be the Trusted Aggregation Server in the final design?</td>
-      <td style="vertical-align: top;">The server endpoint is an ad tech maintained endpoint that is independent from the Trusted Aggregation Servers used to process the collected and transformed reports. We don't have any changes planned for the reporting endpoint at the moment. The current design aims to ensure that the aggregatable reports themselves (with encrypted payloads) don't leak cross-site data, so a trusted endpoint shouldn't be necessary. An additional complication is that different ad techs will likely have different desired batching strategies. We welcome additional feedback <a href="http://github.com/WICG/turtledove/issues/518">here</a>.</td>
+      <td style="vertical-align: top;">The server endpoint is an ad tech maintained endpoint that is independent from the Trusted Aggregation Servers used to process the collected and transformed reports. We don't have any changes planned for the reporting endpoint at the moment. The current design aims to ensure that the aggregatable reports themselves (with encrypted payloads) don't leak cross-site data, so a trusted endpoint shouldn't be necessary. An additional complication is that different ad techs will likely have different desired batching strategies. We welcome <a href="http://github.com/WICG/turtledove/issues/518">additional feedback here</a>.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">WebIDL</td>
       <td style="vertical-align: top;">The current Protected Audience API spec is not compatible with WebIDL spec.</td>
-      <td style="vertical-align: top;">We are evaluating this feedback and discussing the issue <a href="http://github.com/WICG/turtledove/issues/518">here</a>. </td>
+      <td style="vertical-align: top;">We are evaluating this feedback and <a href="http://github.com/WICG/turtledove/issues/518">discussing the issue here</a>. </td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Consent Management</td>
@@ -523,7 +523,7 @@ return {
     <tr>
       <td style="vertical-align: top;">Attribution Reporting and Protected Audience</td>
       <td style="vertical-align: top;">How can the Attribution Reporting API and the Protected Audience Audience API work together?</td>
-      <td style="vertical-align: top;">Integrations are currently available for Protected Audience API for both Attribution Reporting API modes (event-level and summary reports). We have shared more information on improved Protected Audience API and Attribution Reporting integration on June 1. You can read about them <a href="/docs/privacy-sandbox/fledge-api/feature-status/#improved-protected-audience-api-and-attribution-reporting-integration">here</a>. </td>
+      <td style="vertical-align: top;">Integrations are currently available for Protected Audience API for both Attribution Reporting API modes (event-level and summary reports). We have shared more information on improved Protected Audience API and Attribution Reporting integration on June 1. You can <a href="/docs/privacy-sandbox/fledge-api/feature-status/#improved-protected-audience-api-and-attribution-reporting-integration">read about them here</a>. </td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Flexible event-level configurations</td>
