@@ -90,7 +90,7 @@ One way to identify third-party cookies in your code base is to search for cooki
 
 Another option is to browse through your site with third-party cookies blocked on your machine and use DevTools to investigate any potential breakage.
 
-In Chrome version 115 or higher, you can test the browser behavior after third-party cookie phase out by [running Chrome from the command line](https://www.chromium.org/developers/how-tos/run-chromium-with-flags/) with the flag `--test-third-party-cookies-phaseout` or `–-enabled-features=ForceThirdPartyCookieBlocking`. This will block third-party cookies, and also enable third-party storage partitioning and [First-Party Sets](/docs/privacy-sandbox/first-party-sets).
+In Chrome version 115 or higher, you can test the browser behavior after third-party cookie phase out by [running Chrome from the command line](https://www.chromium.org/developers/how-tos/run-chromium-with-flags/) with the flag `--test-third-party-cookies-phaseout`. This will block third-party cookies, enable [third-party storage partitioning](/docs/privacy-sandbox/storage-partitioning) and [FedCM](/docs/privacy-sandbox/fedcm), and enable Chrome UI settings for [First-Party Sets](docs/privacy-sandbox/first-party-sets-integration) (["Allow related sites to see your activity in the group"](https://support.google.com/chrome/answer/95647?hl=EN#zippy=%2Callow-related-sites-to-access-your-activity)).
 
 To learn more about DevTools features you can use to investigate third-party cookies check out [the instructions on chromium.org](https://www.chromium.org/Home/chromium-privacy/privacy-sandbox/third-party-cookie-phaseout/).
 
