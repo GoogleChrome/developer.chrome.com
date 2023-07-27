@@ -6,7 +6,7 @@ subhead: >
 description: >
   Learn how to audit your code to look for third-party cookies and what action you can take to ensure you're all set for the end of third-party cookies.
 date: 2023-05-17
-updated: 2023-07-25
+updated: 2023-07-27
 authors:
   - mihajlija
 ---
