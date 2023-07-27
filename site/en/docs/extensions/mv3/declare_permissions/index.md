@@ -8,25 +8,28 @@ description: An overview of the valid values for the permissions property in man
 ---
 
 To use most [Chrome APIs][api-ref], your extension must declare its intent in the permissions fields
-of the [manifest](#manifest). Extensions can request four categories of permissions, specified using the respective keys in the manifest:
+of the [manifest](#manifest). Extensions can request the following categories of permissions,specified using the respective manifest keys:
 
-`"permissions"`
-: contain items from a list of known strings (such as `"geolocation"`).
+[`"permissions"`](#permissions)
+: contain items from a list of known strings (such as `"geolocation"`). Changes may trigger a [warning](#warnings).
 
-`"optional_permissions"`
-: are like regular `permissions`, but are granted by the extension's user at runtime, rather than in advance.
+[`"optional_permissions"`][api-perms]
+: are like regular `permissions`, but are granted by the user at runtime, rather than in advance.
 
-`"host_permissions"`
-: contain one or more [match patterns][doc-match] that give access to one or more hosts. Read more on [host permissions](#host-permissions)
+[`"content_scripts.matches"`][doc-cs-static]
+: contain one or more [match patterns][doc-match] that allows content scripts to inject into one or more hosts. Changes may trigger a [warning](#warnings).
+
+[`"host_permissions"`](#host-permissions)
+: contain one or more [match patterns][doc-match] that give access to one or more hosts. Changes may trigger a [warning](#warnings).
 
 `"optional_host_permissions"`
-: are like regular `host_permissions`, but are granted by the extension's user at runtime, rather than in advance.
+: are like regular `host_permissions`, but are granted by the user at runtime, rather than in advance.
 
 Permissions help to limit damage if your extension is compromised by malware. Some permission warning are displayed to users for their consent before
 installation or at runtime, as detailed in [Permission with warnings](#warnings).
 
 {% Aside %}
-You should use [optional permissions][api-perms] wherever the functionality of your extension
+Consider using [optional permissions][api-perms] wherever the functionality of your extension
 permits, to provide users with informed control over access to resources and data.
 See the [platform vision][vision-optperms] to better understand this recommendation.
 {% endAside %}
@@ -34,7 +37,7 @@ See the [platform vision][vision-optperms] to better understand this recommendat
 If an API requires a permission, then its documentation tells you how
 to do so. For example, the [Storage API][api-storage] page shows how to declare the `"storage"` permission.
 
-## Manifest {: #manifest}
+## Manifest {: #manifest }
 
 The following is an example of the permissions part of a [manifest][doc-manifest] file:
 
@@ -59,6 +62,7 @@ The following is an example of the permissions part of a [manifest][doc-manifest
     "https://*/*", 
     "http://*/*" 
   ],
+
   ...
   "manifest_version": 3
 }
@@ -66,7 +70,20 @@ The following is an example of the permissions part of a [manifest][doc-manifest
 
 ## Host permissions {: #host-permissions }
 
-Ho
+Host permissions allow extensions to interact with the URLs matching patterns. Some [Chrome APIs][api-ref] require host permissions in addition to their own API permission. When an extension requests host permissions it can:
+
+- Make [`fetch()`][mdn-fetch] requests from the service worker and extension pages.
+- Read and query the sensitive properties (url, title, and favIconUrl) of [`tabs.Tab`][api-tabs-tab] using the [`chrome.tabs`][api-tabs] API. 
+- Inject a [content script programmatically][cs-prog].
+- Monitor and control the network requests with the [`chrome.webRequest`][api-webrequest] API.
+- Access cookies with the [`chrome.cookies`][api-cookies] API.
+- Redirect and modify requests and response headers using [`chrome.declarativeNetRequest`][api-dnr] API.
+
+{% Aside 'warning' %}
+
+Adding or changing match patterns in the `"host_permissions"` and `"content_scripts.matches"` fields will trigger a [warning](#warnings). To learn more, see [Updating permissions][perm-update].
+
+{% endAside %}
 
 ## Permissions with warnings {:#warnings }
 
@@ -77,7 +94,7 @@ warnings on installation, the user will see a list of warnings, like in the foll
        alt="Extension permission warnings on installation", height="369", width="486" %}
 
 Users are more likely to trust an extension with limited warnings or when permissions are explained
-to them. Consider implementing optional permissions or a less powerful API to avoid alarming
+to them. Consider implementing [optional permissions][api-perms] or a less powerful API to avoid alarming
 warnings. For a complete list of best practices, see [Permission warnings guidelines][doc-warning].
 
 ## Allow access {: #allow_access }
@@ -464,11 +481,21 @@ The following table lists the currently available permissions. For a list of per
   </tbody>
 </table>
 
+[api-cookies]: /docs/extensions/reference/cookies
+[api-dnr]: /docs/extensions/reference/declarativeNetRequest
 [api-perms]: /docs/extensions/reference/permissions
 [api-ref]: /docs/extensions/reference/
 [api-storage]: /docs/extensions/reference/storage
+[api-tabs-tab]: /docs/extensions/reference/tabs/#type-Tab
+[api-tabs]: /docs/extensions/reference/tabs/
+[api-webrequest]: /docs/extensions/reference/webRequest
+[cs-prog]: /docs/extensions/mv3/content_scripts#programmatic
+[doc-cs-static]: /docs/extensions/mv3/content_scripts#static-declarative
+[doc-cs]: /docs/extensions/mv3/content_scripts
 [doc-manifest]: /docs/extensions/mv3/manifest
 [doc-match]: /docs/extensions/mv3/match_patterns
-[doc-warning]: /docs/extensions/mv3/permission_warnings
-[vision-optperms]: /docs/extensions/mv3/intro/platform-vision/#improved-user-visibility-and-control
 [doc-warning-table]: /docs/extensions/mv3/permission_warnings/#permissions_with_warnings
+[doc-warning]: /docs/extensions/mv3/permission_warnings
+[mdn-fetch]: https://developer.mozilla.org/docs/Web/API/Fetch_API/Using_Fetch
+[perm-update]: /docs/extensions/mv3/permission_warnings/#update_permissions
+[vision-optperms]: /docs/extensions/mv3/intro/platform-vision/#improved-user-visibility-and-control
