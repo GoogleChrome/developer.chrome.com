@@ -224,7 +224,7 @@ If a rule matches a resource stored in cache by a host page's web service worker
 
 ### Web accessible resources {: #implementation-web-accessible-resources }
 
-A declarative net request cannot redirect from a public resource request to a resource that is not web accessible. Doing so triggers an error. This is true even if the specified web accessible resource is owned by the redirecting extension. To declare resources for declarative net requests, use the manifest's [`"web_accessible_resources"`](/docs/extensions/mv3/manifest/web_accessible_resources/) array.
+A declarative net request rule cannot redirect from a public resource request to a resource that is not web accessible. Doing so triggers an error. This is true even if the specified web accessible resource is owned by the redirecting extension. To declare resources for declarative net requests, use the manifest's [`"web_accessible_resources"`](/docs/extensions/mv3/manifest/web_accessible_resources/) array.
 
 ## Examples {: #example }
 
