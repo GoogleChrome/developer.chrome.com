@@ -2,29 +2,14 @@
 api: declarativeNetRequest
 extra_permissions_html:
   <code>declarativeNetRequestFeedback</code><br/>
-  <a href="/docs/extensions/mv3/declare_permissions#host-permissions">host permissions</a><br />
-has_warning: One or more of these permissions <a href="/docs/extensions/mv3/permission_warnings/#permissions_with_warnings">triggers a warning</a>.
-
+  <a href="/docs/extensions/mv3/declare_permissions#host-permissions"><code>host_permissions</code></a><br />
+has_warning:
+  <p>One or more of these permissions <a href="/docs/extensions/mv3/permission_warnings/#permissions_with_warnings">triggers a warning</a>. The <code>declarativeNetReques</code> and <code>declarativeNetRequestWithHostAccess</code> permissions provide the same capabilities and both require host permissions; however, the latter prevents host permission warnings.</p>
 ---
 
 ## Manifest {: #manifest }
 
-### Permissions {: #permission-definitions }
-
-`declarativeNetRequest`
-: Allows extensions to block and upgrade requests.
-
-`declarativeNetRequestWithHostAccess`
-: Allows extensions to redirect requests and modify request and response headers. This permission always requires [host permissions](/docs/extensions/mv3/declare_permissions/) to the requestED URL and initiator to act on a request.
-
-`declarativeNetRequestFeedback`
-: Allows access to functions and events that return information on matched rules during debugging. This permission only works in [unpacked extensions](/docs/extensions/mv3/getstarted/development-basics/#load-unpacked).
-
-Certain rules such as redirect and header modification rules also require host permissions that match the network requests that these rules apply to.
-
-### Static rulesets {: #manifest-rule-resources }
-
-This API supports multiple ruleset types, which are described below, but only one type, static rulesets, requires keys in the manifest file. To use static rulesets, declare the `"declarative_net_request"` manifest key, which should be a dictionary with a single key called `"rule_resources"`. This key is an array containing dictionaries of type `Ruleset`, as shown below. These structures are described under [Static rulesets](#static-rulesets).
+In addition to the permissions described above, certain types of rulesets, static rulesets specifically, require declaring the `"declarative_net_request"` manifest key, which should be a dictionary with a single key called `"rule_resources"`. This key is an array containing dictionaries of type `Ruleset`, as shown below. [Static rulesets](#static-rulesets) are explained later in this document.
 
 ```json
 {

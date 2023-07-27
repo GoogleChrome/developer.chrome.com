@@ -468,6 +468,12 @@ redirects:
 - from: /docs/extensions/reference/declarativeNetRequest#implementation
   to: /docs/extensions/reference/declarativeNetRequest#implementation-web-accessible-resources
 
+- from: /docs/extensions/reference/declarativeNetRequest#permission-definitions
+  to: /docs/extensions/reference/declarativeNetRequest
+
+- from: /docs/extensions/reference/declarativeNetRequest#manifest-rule-resources
+  to: /docs/extensions/reference/declarativeNetRequest#manifest
+
   # MV2 docs that have been removed, but their MV3 version still exists
 
 - from: /docs/extensions/mv2/single_purpose
