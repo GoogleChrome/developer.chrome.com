@@ -320,7 +320,7 @@ We discussed a number of scenarios related to this issue during the <a href="htt
     <tr>
       <td style="vertical-align: top;">Custom Audiences</td>
       <td style="vertical-align: top;">Will SSP use cases related to creating Custom Audiences be supported by the Protected Audience API?</td>
-      <td style="vertical-align: top;">The Protected Audience API allows for SSPs and other ad-tech providers to own and manage Custom Audiences. Further guidance on how an SSP can integrate with the PA AP is being developed and will be made available for SSPs and other ad tech providers to support their integration efforts.</td>
+      <td style="vertical-align: top;">The Protected Audience API allows for SSPs and other ad-tech providers to own and manage Custom Audiences. Further guidance on how an SSP can integrate with the PA API is being developed and will be made available for SSPs and other ad tech providers to support their integration efforts.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Formats</td>
