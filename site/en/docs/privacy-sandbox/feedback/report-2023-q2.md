@@ -538,7 +538,7 @@ return {
     <tr>
       <td style="vertical-align: top;">Deduplicate conversions</td>
       <td style="vertical-align: top;">How can independent measurement solutions be reconciled against ARA?</td>
-      <td style="vertical-align: top;">As with current standard practice, advertisers would work with a third-party independent measurement provider to de-duplicate conversion reporting. We have offered resources on how to <a href="https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit#bookmark=kix.6h4owh6303g5">deduplicate conversions for event level reporting here</a>.</td>
+      <td style="vertical-align: top;">As with current standard practice, advertisers would work with a third-party independent measurement provider to de-duplicate conversion reporting. We have offered resources on how to <a href="/docs/privacy-sandbox/attribution-reporting/prevent-duplication/">deduplicate conversions</a> for event level reporting.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Data loss during Attribution Reporting database updates</td>
