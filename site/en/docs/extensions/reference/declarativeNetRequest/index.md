@@ -174,7 +174,7 @@ Rules are triggered by requests sent from web pages. If multiple rules match a p
 Thinking of matching this way: whatever rule a particular extension prioritizes will then be prioritized against rules from other extensions.
 
 {% Aside %}
-Avoid building rulesets that depend on rules with the same priority running in a particular order. Rules with the same priority in the same set (e.g static rules with priority 1) are executed in an arbitrary order which is not defined and can change between runs or browser versions. This guidline applies between browsers as well.
+Avoid building rulesets that depend on rules with the same priority running in a particular order. Rules with the same priority in the same set (e.g static rules with priority 1) are executed in an arbitrary order which is not defined and can change between runs or browser versions. This is the case across browsers.
 {% endAside %}
 
 #### Rule prioritization within an extension {: #rule-prioritization-within-an-extension }
