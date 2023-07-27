@@ -131,8 +131,6 @@ An important part of allocating budget between different keys is understanding h
 -   Filtering. [Read more about filtering](/docs/privacy-sandbox/attribution-reporting/define-filters/).
 -   Deduplication. [Read more about deduplication](/docs/privacy-sandbox/attribution-reporting/prevent-duplication/).
 
-<!-- Filtering and Deduplication links needed later -->
-
 ### Experimenting with epsilon 
 
 Lower values of epsilon provide greater privacy protection.
