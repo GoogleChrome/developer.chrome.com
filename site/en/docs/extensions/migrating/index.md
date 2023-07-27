@@ -17,7 +17,7 @@ This section helps you upgrade an extension from Manifest V2 to Manifest V3, the
 * [Replace blocking web request listeners](/docs/extensions/migrating/blocking-web-requests)&mdash;Blocking or modifying network requests in Manifest V2 could significantly degrade performance and require excessive access to sensitive user data. The Declarative Net Request API allows extensions to block or modify web content with fewer permissions and without hindering performance.
 * [Improve extension security](/docs/extensions/migrating/improve-security)&mdash;Manifest V3 improves extension security in several ways. Besides an enhanced content security policy, support is removed for remotely hosted code and execution of arbitrary strings.
 
-We also have an [Extension Manifest Converter](https://github.com/GoogleChromeLabs/extension-manifest-converter). It does not do everything for you, but it will get you started. The converter's README describes what the tool chanages.
+We also have an [Extension Manifest Converter](https://github.com/GoogleChromeLabs/extension-manifest-converter). It does not do everything for you, but it will get you started. The converter's README describes what the tool changes.
 
 ## New extension features
 
