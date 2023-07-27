@@ -224,8 +224,7 @@ in case of HTTP redirection or HTTP authentication.
 ### Registering event listeners
 
 To register an event listener for a web request, you use a variation on the [usual `addListener()`
-function][10]. In addition to specifying a callback function, you have to specify a filter argument
-, and you may specify an optional extra info argument.
+function][10]. In addition to specifying a callback function, you have to specify a filter argument, and you may specify an optional extra info argument.
 
 The three arguments to the web request API's `addListener()` have the following definitions:
 
