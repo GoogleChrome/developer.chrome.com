@@ -9,12 +9,16 @@ description: Understanding URL match patterns and globs in Chrome extensions.
 
 ## Overview {: #overview }
 
-Match patterns are used in Chrome extensions to specify a group of URLs. They are mainly used to declare [host permissions][host-permissions] in content scripts. Learn more about other use cases in the [Host permissions][host-permissions] section of Declaring permissions.
+Extensions use match patterns to specify a group of URLs. They are mainly used to declare [host permissions][host-permissions] in content scripts. Other match pattern can be found in:
 
+- [`"web_accesible_resources.matches"`][war]
+- [`"externally_connectable.matches"`][ext-connect]
+
+See [host permissions][host-permissions] to explore how they work and what Chrome APIs use them.
 
 ## What is a match pattern? {: #what }
 
-A match pattern is a URL that begins with a permitted scheme separated by a `://`, followed by a host and path. It can contain wildcard (`*`) characters. Most match patterns are composed of three parts:
+A match pattern is a URL that begins with a permitted scheme, separated by a `://`, followed by a host and path. It can contain wildcard (`*`) characters. Most match patterns are composed of three parts:
 
 ```text
 &lt;scheme&gt;://&lt;host&gt;/&lt;path&gt;
@@ -33,18 +37,18 @@ Each part can use wildcards `*`. Below is a detailed description:
 `<all_urls>`
 : It matches any URL that starts with a permitted scheme. This is considered a broad host permission.
 
-`file:///` URLs
-: Allows you to run your extension on local files. This scheme has no host and requires the user to allow access. The [Allow Access][permissions] section in the Permission article shows how to guide users in granting the extension access to this scheme.
+`file:///`
+: Allows your extension to run on local files. It has no host and requires the user to manually [enable access][permissions].
 
 Port URLs
-: Use `http://localhost/*` to match any localhost ports during development. Include the specific address plus a wildcard in the path for IP addresses. For example: `http://127.0.0.1/*`
+: Use `http://localhost/*` to match any localhost ports during development. For IP addresses, include the specific address plus a wildcard in the path. For example: `http://127.0.0.1/*`
 
 Top Level domains
-: [Top Level domain][mdn-tld] match patterns like `http://google.*/*` are not supported. They should be listed individually. For example: `http://google.es` and `http://google.fr`.
+: [Top Level domain][mdn-tld] match patterns like `http://google.*/*` are not supported. They should be listed individually. For example: `http://google.es/*` and `http://google.fr/*`.
 
 ## Examples {: #examples }
 
-### ✅ Valid pattern examples {: #match-examples }
+### ✅ Valid patterns {: #valid-examples }
 
 <table class="fixed-table width-full">
    <tbody>
@@ -56,16 +60,16 @@ Top Level domains
       <tr>
          <td><code>https://*/*</code></td>
          <td>Matches any URL that uses the <code>https</code> scheme</td>
-         <td><code>https://www.google.com/</code> <br><code>https://example.org/foo/bar.html</code></li></ul></td>
+         <td>https://www.google.com/ <br>https://example.org/foo/bar.html</li></ul></td>
       </tr>
       <tr>
          <td><code>https://*/foo*</code></td>
-         <td>Matches any URL that uses the <code>https</code> scheme, on any host, as long as the path starts with <code>/foo</code></td>
+         <td>Matches any URL that uses the <code>https</code> scheme, on any host, and a path that starts with <code>/foo</code></td>
          <td>https://example.com/foo/bar.html https://www.google.com/foo</li></ul></td>
       </tr>
       <tr>
          <td><code>https://*.google.com/foo*bar</code></td>
-         <td>Matches any URL that uses the <code>https</code> scheme, is on a google.com host (such as www.google.com, docs.google.com, or google.com), as long as the path starts with <code>/foo</code> and ends with <code>bar</code></td>
+         <td>Matches any URL that uses the <code>https</code> scheme, is on a google.com host, and the path starts with <code>/foo</code> and ends with <code>bar</code></td>
          <td>https://www.google.com/foo/baz/bar<br>https://docs.google.com/foobar</td>
       </tr>
       <tr>
@@ -80,7 +84,7 @@ Top Level domains
       </tr>
       <tr>
          <td><code>http://localhost/*</code></td>
-         <td>Matches any port</td>
+         <td>Matches any localhost port</td>
          <td>http://localhost:3000<br>http://localhost:8080</td>
       </tr>
       <tr>
@@ -93,23 +97,18 @@ Top Level domains
          <td>Matches any URL that starts with <code>urn:</code>.</td>
          <td>urn:uuid:54723bea-c94e-480e-80c8-a69846c3f582<br>urn:uuid:cfa40aff-07df-45b2-9f95-e023bcf4a6da</td>
       </tr>
-      <tr>
-         <td><code>&lt;all_urls&gt;</code></td>
-         <td>Matches any URL that uses a permitted scheme.</td>
-         <td>http://example.org/foo/bar.html<br>file:///bar/baz.html</td>
-      </tr>
    </tbody>
 </table>
 
-### ❌ Invalid examples {: #invalid-patterns }
+### ❌ Invalid patterns {: #invalid-patterns }
 
 Here are some examples of _invalid_ match patterns:
 
 <table class="fixed-table width-full">
    <tbody>
       <tr>
-         <th style="margin-left:0; padding-left:0">Bad pattern</th>
-         <th style="margin-left:0; padding-left:0">Why it's bad</th>
+         <th style="margin-left:0; padding-left:0">Invalid pattern</th>
+         <th style="margin-left:0; padding-left:0">Why it's invalid</th>
       </tr>
       <tr>
          <td><code>https://www.google.com</code></td>
@@ -141,96 +140,19 @@ Here are some examples of _invalid_ match patterns:
       </tr>
       <tr>
          <td><code>about:*</code></td>
-         <td>Unsupported <em>scheme</em></td>
+         <td>Unsupported <em>scheme</em>.</td>
       </tr>
    </tbody>
 </table>
 
-## Globs properties in Content Scripts {: #globs }
-
-Glob properties are used to refine the URLs already specified by the [match patterns](#what). Acceptable glob
-strings are URLs that may contain "wildcard" and question marks. The asterisk **\***
-matches any string of any length, including the empty string, while the question mark **?** matches
-any single character.
-
-For example, the glob **https://???.example.com/foo/\*** matches any of the following:
-
-| ✅ Matches                        | ❌ Doesn't match                 |
-| --------------------------------- | -------------------------------- |
-| `https://www.example.com/foo/bar` | `https://my.example.com/foo/bar` |
-| `https://the.example.com/foo/`    | `https://example.com/foo/`       |
-| `xx`                              | `https://www.example.com/foo`    |
-
-### Include_globs {: #include-globs }
-
-This extension injects the content script into **https://www.nytimes.com/arts/index.html** and
-**https://www.nytimes.com/jobs/index.html**, but not into
-**https://www.nytimes.com/sports/index.html**:
-
-{% Label %}manifest.json{% endLabel %}
-
-```json/6
-{
-  "name": "My extension",
-  ...
-  "content_scripts": [
-    {
-      "matches": ["https://*.nytimes.com/*"],
-      "include_globs": ["*nytimes.com/???s/*"],
-      "js": ["contentScript.js"]
-    }
-  ],
-  ...
-}
-```
-
-### Exclude_globs {: #exclude-globs }
-
-This extension injects the content script into **https://history.nytimes.com** and
-**https://.nytimes.com/history**, but not into **https://science.nytimes.com** or
-**https://www.nytimes.com/science**:
-
-{% Label %}manifest.json{% endLabel %}
-
-```json/6
-{
-  "name": "My extension",
-  ...
-  "content_scripts": [
-    {
-      "matches": ["https://*.nytimes.com/*"],
-      "exclude_globs": ["*science*"],
-      "js": ["contentScript.js"]
-    }
-  ],
-  ...
-}
-```
-
-### Narrowing scope {: #narrow }
-
-One, all, or some of these can be included to achieve the correct scope.
-
-{% Label %}manifest.json{% endLabel %}
-
-```json/6-8
-{
-  "name": "My extension",
-  ...
-  "content_scripts": [
-    {
-      "matches": ["https://*.nytimes.com/*"],
-      "exclude_matches": ["*://*/*business*"],
-      "include_globs": ["*nytimes.com/???s/*"],
-      "exclude_globs": ["*science*"],
-      "js": ["contentScript.js"]
-    }
-  ],
-  ...
-}
-```
+{% Aside 'success' %}
+Content scripts can be injected into related frames like `about:`, `data:`, etc by setting `"match_origin_as_fallback"` to `true` in the manifest. See [Injecting in related frames][cs-frames] for details.
+{% endAside %}
 
 [content-scripts]: /docs/extensions/mv3/content_scripts
 [permissions]: /docs/extensions/mv3/declare_permissions/
 [host-permissions]: /docs/extensions/mv3/declare_permissions/#host-permissions
 [mdn-tld]: https://developer.mozilla.org/docs/Glossary/TLD
+[war]: /docs/extensions/mv3/manifest/web_accessible_resources/#manifest-declaration
+[ext-connect]: /docs/extensions/mv3/manifest/externally_connectable/#manifest
+[cs-frames]: /docs/extensions/mv3/content_scripts/#injecting-in-related-frames
