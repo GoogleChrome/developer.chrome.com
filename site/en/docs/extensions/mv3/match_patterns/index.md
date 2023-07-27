@@ -3,18 +3,16 @@ layout: 'layouts/doc-post.njk'
 title: 'Match patterns'
 seoTitle: 'Chrome Extensions match patterns'
 date: 2012-09-18
-updated: 2023-07-10
-description: Understanding URL match patterns and globs in Chrome extensions.
+updated: 2023-07-28
+description: Understanding URL match patterns in Chrome extensions.
 ---
 
 ## Overview {: #overview }
 
-Extensions use match patterns to specify a group of URLs. They are mainly used to declare [host permissions][host-permissions] in content scripts. Other match pattern can be found in:
+Extensions use match patterns to specify a group of URLs. They are mainly used to declare [host permissions][host-permissions] along with other permissions to use certain Chrome APIs or when injecting [content scripts][content-scripts]. Extension also use match patterns in:
 
 - [`"web_accesible_resources.matches"`][war]
 - [`"externally_connectable.matches"`][ext-connect]
-
-See [host permissions][host-permissions] to explore how they work and what Chrome APIs use them.
 
 ## What is a match pattern? {: #what }
 
