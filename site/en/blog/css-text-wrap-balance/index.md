@@ -166,7 +166,7 @@ once for any language.
 
 The task of balancing text is not free. The browser needs to loop over
 iterations to discover the best balanced wrapping solution. This performance
-cost is mitigated by a rule, it **only works for 6 wrapped lines and under**.
+cost is mitigated by a rule, it **only works for six wrapped lines and under**.
 
 <figure>
   {% Video
