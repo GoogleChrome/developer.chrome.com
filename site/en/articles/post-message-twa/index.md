@@ -53,7 +53,7 @@ Note that setup on the origin associated with the TWA, it is required to provide
 
 ## Add the PostMessageService to your manifest
 
-To receive `postMessage` communication you need to setup the service, you do so by adding the `[PostMessageService](https://developer.android.com/reference/androidx/browser/customtabs/PostMessageService)` in your Android manifest:
+To receive `postMessage` communication you need to setup the service, you do so by adding the `[PostMessageService]`(https://developer.android.com/reference/androidx/browser/customtabs/PostMessageService) in your Android manifest:
 
 ```xml
 <service android:name="androidx.browser.customtabs.PostMessageService"
