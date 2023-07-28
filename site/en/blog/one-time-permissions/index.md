@@ -11,6 +11,7 @@ hero: image/O2RNUyVSLubjvENAT3e7JSdqSOx1/FRytD8YVBZi9P3hAcOXv.jpeg
 alt: Permission prompt in Chrome, with the Allow this time option
 tags:
   - capabilities
+  - privacy
 ---
 
 
