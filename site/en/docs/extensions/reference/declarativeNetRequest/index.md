@@ -216,11 +216,7 @@ All types of rules can use regular expressions; however the total number of rege
 
 ### Interactions with service workers {: #interact-w-service-workers }
 
-Requests and responses intercepted by a service worker's `onfetch` handler are not affected by declarativeNetRequet. Consequently an installed service worker can make it appear as though your rule doesn't work. To properly test your rules, you may need to disable or remove one or more of the service workers in your installation of Chrome.
-
-### Interaction with cached pages {: #implementation-cached-pages }
-
-If a rule matches a resource stored in cache by a host page's web service worker, that rule may be ignored until the resource is cleared from the cache. This is because cached storage is intended to be persistent, and many features such as offline use do not expect the cache to be cleared without also clearing a service worker's registration. For your rules to work properly, you need to call [`browsingData.removeCache()`](/docs/extensions/reference/browsingData/#method-removeCache) or [`browsingData.removeCacheStorage()`](/docs/extensions/reference/browsingData/#method-removeCacheStorage) after installation of your extension. You may need to call one of these functions after an extension upgrade, depending on whether you've changed your rules.
+Requests and responses intercepted by the `onfetch` handler in a host page's service worker are not affected by declarativeNetRequet. Consequently such service workers can make it appear as though a rule doesn't work. To properly test your rules, you may need to disable or remove one or more of the service workers in your installation of Chrome.
 
 ### Web accessible resources {: #implementation-web-accessible-resources }
 
