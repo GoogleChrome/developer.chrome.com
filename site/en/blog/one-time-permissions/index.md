@@ -127,7 +127,7 @@ Chrome [removes permissions](https://blog.google/products/chrome/5-tips-to-stay-
 
 ### Best practices {: #best-practices }
 
-One-time permissions may increase a users' willingness to grant, or it may reduce the number of persistent grants. It makes it even more important to follow best practices.
+**Allow this time** may make people more likely to grant permissions to try out capabilities, but it may also reduce their willingness to grant permanent access. This makes it even more important to follow best practices.
 
 - Provide the necessary context before requesting permissions. Explain to your users why they'll benefit from a capability.
 - Requests permissions at an appropriate and expected moment. Ideally, let your users express their intention to use a certain capability at their own pace.
