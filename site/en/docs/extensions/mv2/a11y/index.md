@@ -172,8 +172,8 @@ button.
      onkeydown="return optionKeyEvent(event);"
      onkeypress="return optionKeyEvent(event);">
   <img src="buttoncut" role="button" alt="cut" id="button1">
-  <img src="buttoncopy" role="button" alt="copy" id="button1">
-  <img src="buttonpaste" role="button" alt="paste" id="button1">
+  <img src="buttoncopy" role="button" alt="copy" id="button2">
+  <img src="buttonpaste" role="button" alt="paste" id="button3">
 </div>
 ```
 
