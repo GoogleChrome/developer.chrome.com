@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-07-20
+updated: 2023-07-28
 tags:
   - extensions-news
 
@@ -15,7 +15,13 @@ tags:
 
 Check this page often to learn about changes to Chrome extensions, extensions documentation, or related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about some of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).) The [Chrome schedule](https://chromiumdash.appspot.com/schedule) lists stable and beta release dates.
 
-### Chrome 116: More than we can fit here {: #chrome-116 }
+### Chrome 115: DevTools steps over content scripts by default {: #step-over-content-script }
+
+<p class="color-secondary-text type--caption">Posted on <time>July 28, 2023</time></p>
+
+Injected content scripts are now in the DevTools ignore list by default. This doesn't affect breakpoints, but it does mean that content scripts will be stepped over during debugging and exceptions from these scripts will be ignored. When a content script is open in the **Sources** tab, a banner alerts you if this is on and provides an option to remove your content script from the ignore list. To turn this behavior off, open DevTools, go to **Settings** then **Ignore list**. To learn more, see [What's new in DevTools](/blog/new-in-devtools-115/#content-script).
+
+### Chrome 116 beta: More than we can fit here {: #chrome-116 }
 
 <p class="color-secondary-text type--caption">Posted on <time>July 21, 2023</time></p>
 
