@@ -40,7 +40,7 @@ The Attribution Reporting API is designed to allow you to generate two types of 
 
 For definitions of event-level and summary reports, refer to [report types](/docs/privacy-sandbox/attribution-reporting/report-types/).
 
-<!--
+
 It's important to note that aggregatable reports represent data that is eventually aggregated and summarized to produce summary reports. They can be thought of as an intermediate step in the generation of summary reports, which are the reports containing data that can be read by advertisers and ad techs.
 
 ### Event-level reports
@@ -79,8 +79,8 @@ These concepts are:
 
 - [Contribution budget](/docs/privacy-sandbox/attribution-reporting/contribution-budget)
 - [Noise](/docs/privacy-sandbox/attribution-reporting/understanding-noise)
-- epsilon
--->
+
+
 ## Implementation
 
 You can get started by trying out the steps that follow, and then adapt your strategy to fit, or you can plan your strategy in advance.
