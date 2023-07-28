@@ -121,7 +121,7 @@ While this API is in testing, your code must confirm the API is available and se
 
 ### Attribution sources (publisher's website) {: #attribution-sources}
 
-An _[attribution source](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit#heading=h.dmy7iuqnhvby)_
+An _[attribution source](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/)_
 is an ad-related event (a click or view), to which an ad tech can attach the
 following kinds of information:
 

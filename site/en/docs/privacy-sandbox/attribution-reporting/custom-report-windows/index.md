@@ -33,7 +33,7 @@ Note that the way `expiry` works is unchanged; `expiry` changes which impression
 
 ### Event-level reports: faster reporting and selective reporting {: #event-level }
 
-By default, event-level reports are sent following a [schedule of built-in report windows](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit#heading=h.c5k14yezmbvl): three windows for clicks and one window for views.
+By default, event-level reports are sent following a [schedule of built-in report windows](/docs/privacy-sandbox/attribution-reporting/report-schedules/#event-level-report-schedules): three windows for clicks and one window for views.
 
 For event-level reports, custom report windows enable you to:
 
