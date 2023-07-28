@@ -4,6 +4,7 @@ title: PostMessage for TWA
 description: >
   From Chrome 115 Trusted Web Activities (TWA) can send messages using postMessages. This article walks through the setup needed to communicate between your app and the web.
 date: 2023-07-26
+updated: 2023-07-28
 authors:
   - elabadysayed
 tags:
@@ -45,14 +46,14 @@ In order for the postMessage to work it requires a valid relationship between a 
 ```
 
 {% Aside %}
-More info on configuring Digital Asset Links on Trusted Web Activities here.
+More info on configuring Digital Asset Links on Trusted Web Activities [here](/docs/android/trusted-web-activity/quick-start/#creating-your-asset-link-file).
 {% endAside %}
 
 Note that setup on the origin associated with the TWA, it is required to provide an origin for the [MessageEvent.origin](https://developer.mozilla.org/docs/Web/API/MessageEvent/origin) field, but `postMessage` can be used to communicate with other sites that don’t include the Digital Assets Link. For example, if you own `www.example.com` you will have to prove that through DAL but you can communicate with any other websites, `www.wikipedia.org` for example.
 
 ## Add the PostMessageService to your manifest
 
-To receive `postMessage` communication you need to setup the service, you do so by adding the `[PostMessageService](https://developer.android.com/reference/androidx/browser/customtabs/PostMessageService)` in your Android manifest:
+To receive `postMessage` communication you need to setup the service, you do so by adding the `[PostMessageService]`(https://developer.android.com/reference/androidx/browser/customtabs/PostMessageService) in your Android manifest:
 
 ```xml
 <service android:name="androidx.browser.customtabs.PostMessageService"
@@ -184,9 +185,7 @@ window.addEventListener("message", function (event) {
 });
 ```
 
-
-You can find a full complete sample [here](https://github.com/GoogleChrome/android-browser-helper/pull/429)
-
+You can find a full complete sample [here](https://github.com/GoogleChrome/android-browser-helper/tree/main/demos/twa-post-message)
 
 {% Aside 'caution' %}
 If you do expect to receive messages from other sites, always verify the sender's identity using the origin and possibly source properties. Any window (including, for example, http://evil.example.com) can send a message to any other window, and you have no guarantees that an unknown sender will not send malicious messages. Having verified identity, however, you still should always verify the syntax of the received message. [More info](https://developer.mozilla.org/docs/Web/API/Window/postMessage).
