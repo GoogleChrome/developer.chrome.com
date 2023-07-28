@@ -59,9 +59,8 @@ Event-level reports associate an ad click or view with coarse conversion data. T
 - [attribution triggers](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger)
 - request and response headers
 
-Once you're familiar with the concepts for event-level reports and have defined your [sources](#source), [triggers](#trigger), set your headers, and defined your [endpoints](#endpoints), you're ready to receive event-level reports.
+Once you're familiar with the concepts for event-level reports and have defined your [sources](#source), [triggers](#trigger), set your headers, and defined your [endpoints](#endpoints), (all discussed later) you're ready to receive event-level reports.
 
-The remainder of this document discusses implementation for aggregatable report generation.
 
 ### Aggregatable reports 
 
