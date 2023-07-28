@@ -2,7 +2,7 @@
 layout: 'layouts/blog-post.njk'
 title: Page Lifecycle API
 date: 2018-07-24
-updated: 2022-11-18
+updated: 2023-07-28
 authors:
   - philipwalton
 description: The Page Lifecycle API brings app lifecycle features common on mobile operating systems to the web. Browsers are now able to safely freeze and discard background pages to conserve resources, and developers can safely handle these interventions without affecting the user experience.
@@ -83,9 +83,9 @@ Perhaps the easiest way to explain the Page Lifecycle states &mdash; as well as
 the events that signal transitions between them &mdash; is with a diagram:
 
 <figure>
-  <a href="https://wd.imgix.net/image/eqprBhZUGfb8WYnumQ9ljAxRrA72/KCIeOsJ0lCWMthBSSBrn.svg">
+  <a href="https://wd.imgix.net/image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/gtCHLOWSAwYAswQY9Gqv.svg">
     {% Img
-      src="image/eqprBhZUGfb8WYnumQ9ljAxRrA72/KCIeOsJ0lCWMthBSSBrn.svg",
+      src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/gtCHLOWSAwYAswQY9Gqv.svg",
       alt="Page Lifecycle API state and event flow. A visual representation of the state and event flow described throughout this document.",
       width="800",
       height="400"
@@ -116,6 +116,9 @@ use to observe changes.
           <strong>Possible previous states:</strong><br>
           <a href="#state-passive">passive</a>
             <em>(via the <a href="#event-focus"><code>focus</code></a> event)</em><br>
+          <a href="#state-frozen">frozen</a>
+            <em>(via the <a href="#event-resume"><code>resume</code></a> event, then the
+            <a href="#event-pageshow"><code>pageshow</code></a> event)</em>
         </p>
         <p>
           <strong>Possible next states:</strong><br>
@@ -135,7 +138,10 @@ use to observe changes.
             <em>(via the <a href="#event-blur"><code>blur</code></a> event)</em><br>
           <a href="#state-hidden">hidden</a>
             <em>(via the <a href="#event-visibilitychange">
-            <code>visibilitychange</code></a> event)</em>
+            <code>visibilitychange</code></a> event)</em><br>
+          <a href="#state-frozen">frozen</a>
+            <em>(via the <a href="#event-resume"><code>resume</code></a> event, then the
+            <a href="#event-pageshow"><code>pageshow</code></a> event)</em>
         </p>
         <p>
           <strong>Possible next states:</strong><br>
@@ -157,6 +163,9 @@ use to observe changes.
           <a href="#state-passive">passive</a>
             <em>(via the <a href="#event-visibilitychange">
             <code>visibilitychange</code></a> event)</em><br>
+          <a href="#state-frozen">frozen</a>
+            <em>(via the <a href="#event-resume"><code>resume</code></a> event, then the
+            <a href="#event-pageshow"><code>pageshow</code></a> event)</em>
         </p>
         <p>
           <strong>Possible next states:</strong><br>
