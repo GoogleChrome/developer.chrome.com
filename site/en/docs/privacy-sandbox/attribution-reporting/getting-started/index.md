@@ -121,7 +121,7 @@ Before you can register sources and triggers and get reports, your sites need to
         - `debug_key`
         - `aggregation_keys` (for aggregatable reports)
         - `debug_reporting`
-        - `event_trigger_data` (for event-level reports only)[refer to the
+        - `event_trigger_data` (for event-level reports only) [refer to the
         Example code](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/main/attribution-reporting/functions/apps/adtech.js).
     {% Aside %}
     While headers can be used for both event-level and aggregatable reports, the content of the headers will be different for each of these report types. For example, if you omit `event_trigger_data`, event-level reports will not be generated.
