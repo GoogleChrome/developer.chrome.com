@@ -18,9 +18,13 @@ module.exports = (() => {
   };
 
   const availableAPIs = new Set();
+  const availablePermissions = new Set();
   extensionSamples.forEach(sample => {
     sample.apis.forEach(api => {
-      availableAPIs.add(api.namespace);
+      availableAPIs.add(`${api.namespace}_${api.propertyName}`);
+    });
+    sample.permissions.forEach(permission => {
+      availablePermissions.add(permission);
     });
   });
 
@@ -30,6 +34,9 @@ module.exports = (() => {
       a.title.toLowerCase().localeCompare(b.title.toLowerCase())
     ),
     availableAPIs: Array.from(availableAPIs.keys()).sort((a, b) =>
+      a.toLowerCase().localeCompare(b.toLowerCase())
+    ),
+    availablePermissions: Array.from(availablePermissions.keys()).sort((a, b) =>
       a.toLowerCase().localeCompare(b.toLowerCase())
     ),
   };

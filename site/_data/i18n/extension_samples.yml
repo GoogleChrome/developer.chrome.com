@@ -8,10 +8,13 @@ select_api:
   en: Select API
 
 type:
-  en: "Type"
+  en: Type
 
 api:
-  en: "API"
+  en: API
+
+permission:
+  en: Permission
 
 done:
   en: Done

@@ -19,6 +19,7 @@
 
 {% set typeLabel = 'i18n.extension_samples.type' | i18n %}
 {% set apiLabel = 'i18n.extension_samples.api' | i18n %}
+{% set permissionLabel = 'i18n.extension_samples.permission' | i18n %}
 
 {% block content %}
   <div class="display-flex gap-top-300 lg:gap-top-400">
@@ -62,14 +63,24 @@
           </select>
         </enhanced-select>
         <enhanced-select class="gap-right-300 samples-filter"
+                         label="{{ permissionLabel }}"
+                         fixedLabel>
+          <select name="permissions" multiple>
+            {% for permission in extensionSamples.availablePermissions %}
+              <option value="{{ permission }}">{{ permission }}</option>
+            {% endfor %}
+          </select>
+        </enhanced-select>
+        <enhanced-select class="gap-right-300 samples-filter"
                          label="{{ apiLabel }}"
                          fixedLabel>
           <select name="apis" multiple>
             {% for api in extensionSamples.availableAPIs %}
-              <option value="{{ api }}">{{ api }}</option>
+              <option value="{{ api }}">{{ api | replace("_", ".") }}</option>
             {% endfor %}
           </select>
         </enhanced-select>
+
       </div>
 
       <dialog id="mobile-filters" class="scrollbar lg:display-none">
@@ -92,13 +103,26 @@
             </section>
 
             <section class="gap-bottom-500">
+              <p class="type--h5 weight-medium gap-bottom-200">{{ permissionLabel }}</p>
+
+              <checkbox-group show="4" i18n='{{ checkboxGroupI18n|dump|safe }}'>
+                {% for permission in extensionSamples.availablePermissions %}
+                  <label>
+                    <input type="checkbox" name="permissions" value="{{ permission }}"/>
+                    {{ permission }}
+                  </label>
+                {% endfor %}
+              </checkbox-group>
+            </section>
+
+            <section class="gap-bottom-500">
               <p class="type--h5 weight-medium gap-bottom-200">{{ apiLabel }}</p>
 
               <checkbox-group show="4" i18n='{{ checkboxGroupI18n|dump|safe }}'>
                 {% for api in extensionSamples.availableAPIs %}
                   <label>
                     <input type="checkbox" name="apis" value="{{ api }}"/>
-                    {{ api }}
+                    {{ api | replace("_", ".") }}
                   </label>
                 {% endfor %}
               </checkbox-group>
