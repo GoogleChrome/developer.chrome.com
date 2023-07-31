@@ -5,8 +5,8 @@ description: >
   "Allow this time" is a one-time option for permission grants in Chrome. It will initially be available on desktop only for geolocation, camera, and microphone.
 authors:
   - maudn
-date: 2023-07-31
-updated: 2023-07-31
+date: 2023-08-01
+updated: 2023-08-01
 hero: image/O2RNUyVSLubjvENAT3e7JSdqSOx1/FRytD8YVBZi9P3hAcOXv.jpeg
 alt: Permission prompt in Chrome, with the Allow this time option.
 tags:
