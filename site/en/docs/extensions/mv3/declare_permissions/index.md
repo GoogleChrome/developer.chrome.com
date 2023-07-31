@@ -62,7 +62,6 @@ The following is an example of the permissions part of a [manifest][doc-manifest
     "https://*/*", 
     "http://*/*" 
   ],
-
   ...
   "manifest_version": 3
 }
@@ -70,10 +69,10 @@ The following is an example of the permissions part of a [manifest][doc-manifest
 
 ## Host permissions {: #host-permissions }
 
-Host permissions allow extensions to interact with the URLs matching patterns. Some [Chrome APIs][api-ref] require host permissions in addition to their own API permission. When an extension requests host permissions it can:
+Host permissions allow extensions to interact with the URLs [matching patterns][doc-match]. Some [Chrome APIs][api-ref] require host permissions in addition to their own API permission. Host permissions allow extensions to:
 
 - Make [`fetch()`][mdn-fetch] requests from the service worker and extension pages.
-- Read and query the sensitive properties (url, title, and favIconUrl) of [`tabs.Tab`][api-tabs-tab] using the [`chrome.tabs`][api-tabs] API. 
+- Read and query the sensitive [tab properties][api-tabs-tab] (url, title, and favIconUrl) using the [`chrome.tabs`][api-tabs] API. 
 - Inject a [content script programmatically][cs-prog].
 - Monitor and control the network requests with the [`chrome.webRequest`][api-webrequest] API.
 - Access cookies with the [`chrome.cookies`][api-cookies] API.
