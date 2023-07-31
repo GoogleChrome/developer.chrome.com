@@ -1,0 +1,26 @@
+<div class="sample-item">
+  <div class="sample-item__title">
+
+    <a href="{{ sample.repo_link }}"
+               class="decoration-none"
+               target="_blank">
+      {{ sample.title }}
+    </a>
+  </div>
+
+  <p>
+    {{ sample.description }}
+  </p>
+
+  <div class="cluster flow-space-200 gap-top-300">
+    <div>
+      {% for permission in sample.permissions %}
+        <a
+          class="tag-pill surface decoration-none hairline color-secondary-text type--label weight-regular rounded-lg"
+          href="/docs/extensions/mv3/declare_permissions/#{{ permission }}"
+          rel="noopener"
+          target="_blank">{{ permission }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
