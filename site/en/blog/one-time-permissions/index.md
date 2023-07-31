@@ -140,7 +140,7 @@ Review additional guidance in [Permission UX](https://developers.google.com/web/
 
 ### Expiration of one-time permissions {: #expiration }
 
-By default, all web permissions are bound to an [origin](https://web.dev/same-site-same-origin/#origin), which can be thought of as an app of its own. With **Allow this time**, the user gives a one-time permission to an origin. This permission lasts until the user stops actively interacting with that origin. In essence, one-time permissions expire when the user stops actively interacting with that origin for some time. This means the site can continue to use the capability if the user briefly switches to another web page in a different tab but then comes back.
+By default, all web permissions are bound to an [origin](https://web.dev/same-site-same-origin/#origin), which can be thought of as an app of its own. With **Allow this time**, the user gives a one-time permission to an origin. In essence, one-time permissions expire when the user stops actively interacting with that origin for some time. This means the site can continue to use the capability if the user briefly switches to another web page in a different tab but then comes back.
 
 In more detail, one-time permission grants expire as soon as any of the following conditions are met:
 
