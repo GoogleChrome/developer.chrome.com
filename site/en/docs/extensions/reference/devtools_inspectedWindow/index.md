@@ -46,7 +46,7 @@ Here are the main differences between the `eval` and `tabs.executeScript` method
 
 {% Aside 'caution' %}
 
-Due to the security considerations explained above, the [`tabs.executeScript`][4]
+Due to the security considerations explained above, the [`scripting.executeScript`](/docs/extensions/reference/scripting#method-executeScript)
 method is the preferred way for an extension to access DOM data of the inspected page in cases where
 the access to JavaScript state of the inspected page is not required.
 
