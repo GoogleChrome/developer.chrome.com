@@ -2,7 +2,7 @@
 layout: 'layouts/blog-post.njk'
 title: Page Lifecycle API
 date: 2018-07-24
-updated: 2023-07-28
+updated: 2023-07-31
 authors:
   - philipwalton
 description: The Page Lifecycle API brings app lifecycle features common on mobile operating systems to the web. Browsers are now able to safely freeze and discard background pages to conserve resources, and developers can safely handle these interventions without affecting the user experience.
@@ -863,7 +863,7 @@ addEventListener('beforeunload', (event) => {
   // A function that returns `true` if the page has unsaved changes.
   if (pageHasUnsavedChanges()) {
     event.preventDefault();
-    return (event.returnValue = 'Are you sure you want to exit?');
+    return (event.returnValue = '');
   }
 });
 ```
@@ -874,7 +874,7 @@ needed, and removes it when it's not):
 ```js
 const beforeUnloadListener = (event) => {
   event.preventDefault();
-  return (event.returnValue = 'Are you sure you want to exit?');
+  return (event.returnValue = '');
 };
 
 // A function that invokes a callback when the page has unsaved changes.
