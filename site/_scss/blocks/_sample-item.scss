@@ -1,3 +1,16 @@
 .sample-item {
-  display: block;
+  margin-bottom: get-size(200);
+  padding-bottom: get-size(200);
+
+  &__description {
+    color: get-color('grey-700');
+  }
+
+  &__permission-prompt {
+    color: get-color('grey-700');
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid get-color('grey-300');
+  }
 }

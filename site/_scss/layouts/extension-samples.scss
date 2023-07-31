@@ -25,6 +25,8 @@
 @import '../utilities/wrapper';
 
 .extension-samples-container {
+  max-width: calc(1400px);
+
   .search-box {
     align-items: center;
     gap: 1rem;

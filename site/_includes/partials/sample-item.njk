@@ -1,26 +1,34 @@
 <div class="sample-item">
   <div class="sample-item__title">
+    <h2 class="type--h4">
+      <a
+        class="color-text display-inline-flex surface"
+        href="{{ sample.repo_link }}"
+        target="_blank">
+        {{ sample.title }}
+      </a>
+    </h2>
 
-    <a href="{{ sample.repo_link }}"
-               class="decoration-none"
-               target="_blank">
-      {{ sample.title }}
-    </a>
   </div>
 
-  <p>
+  <p class="sample-item__description type--caption">
     {{ sample.description }}
   </p>
 
-  <div class="cluster flow-space-200 gap-top-300">
-    <div>
-      {% for permission in sample.permissions %}
-        <a
+  {% if sample.permissions.length %}
+    <div class="cluster flow-space-200 gap-top-300">
+      <div>
+        {% for permission in sample.permissions %}
+          <a
           class="tag-pill surface decoration-none hairline color-secondary-text type--label weight-regular rounded-lg"
           href="/docs/extensions/mv3/declare_permissions/#{{ permission }}"
           rel="noopener"
           target="_blank">{{ permission }}</a>
-      {% endfor %}
+        {% endfor %}
+      </div>
     </div>
-  </div>
+  {% else %}
+    <p class="sample-item__permission-prompt type--xsmall gap-top-200">No permissions required.</p>
+  {% endif %}
+
 </div>

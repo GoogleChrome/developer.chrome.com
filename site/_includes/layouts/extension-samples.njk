@@ -123,7 +123,7 @@
 
       <div class="selected-filters display-flex flex-flow-row-wrap grid-gap-100 no-js">
         <span id="mobile-filters-opener"
-            class="mobile-filters-btn surface color-blue-medium hairline rounded-lg tag-pill type--label display-inline-flex align-center">
+            class="mobile-filters-btn surface color-blue-medium hairline rounded-lg tag-pill type--small display-inline-flex align-center">
           {{ icon('filters') }}
           {{ 'i18n.extension_samples.filters' | i18n(locale) }}
         </span>
@@ -131,7 +131,7 @@
         <tag-pill-list id="active-filters"></tag-pill-list>
       </div>
 
-      <div class="samples-list">
+      <div class="samples-list gap-top-300">
         {% for sample in extensionSamples.samples %}
           {% include 'partials/sample-item.njk' %}
         {% endfor %}
