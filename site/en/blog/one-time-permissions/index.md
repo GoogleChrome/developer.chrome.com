@@ -8,14 +8,14 @@ authors:
 date: 2023-07-31
 updated: 2023-07-31
 hero: image/O2RNUyVSLubjvENAT3e7JSdqSOx1/FRytD8YVBZi9P3hAcOXv.jpeg
-alt: Permission prompt in Chrome, with the Allow this time option
+alt: Permission prompt in Chrome, with the Allow this time option.
 tags:
   - capabilities
   - privacy
 ---
 
 
-With a gradual rollout from [Chrome 116](https://chromiumdash.appspot.com/schedule), we will be adding the **Allow this time** option to permission prompts. Our goal is to make it easier for people to use powerful web capabilities on their own terms. **Allow this time** will initially be available on desktop for some of the most common permissions: **geolocation**, **camera**, and **microphone**. Permission prompts for other capabilities and on the mobile web are unchanged for now, but may change in the future.
+With a gradual rollout from [Chrome 116](https://chromiumdash.appspot.com/schedule), we will be adding the **Allow this time** option to permission prompts. Our goal is to make it easier for people to use powerful web capabilities on their own terms. **Allow this time** will initially be available on desktop for some of the most common permissions: geolocation, camera, and microphone. Permission prompts for other capabilities and on the mobile web are unchanged for now, but may change in the future.
 
 **If you're a site owner, review [Impact and Recommendations](#impact-and-recommendations), and try the [demo](#demo).**
 
@@ -24,9 +24,9 @@ With a gradual rollout from [Chrome 116](https://chromiumdash.appspot.com/schedu
 ### Permissions UX before Chrome 116
 
 <figure>
-{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/TcL9YukUHlkdn1bLbZTv.png", alt="Permission prompt until now", width="800", height="427" %}
+{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/TcL9YukUHlkdn1bLbZTv.png", alt="Permission prompt showing only block and allow.", width="800", height="427" %}
   <figcaption>
-    Permission prompt until now
+    Permission prompt before Chrome 116.
   </figcaption>
 </figure>
 
@@ -42,9 +42,9 @@ Permissions can be managed via the **Site controls** in the address bar or via t
 *Site controls*: User-facing information and controls for a site, accessible after clicking the icon in the address bar.
 
 <figure>
-{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/UD9Don3Ks7ZYL0cF2c2c.png", alt="Site controls", width="483", height="370" %}
+{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/UD9Don3Ks7ZYL0cF2c2c.png", alt="The site controls menu in Chrome.", width="483", height="370" %}
   <figcaption>
-    Site controls
+    Site controls in Chrome.
   </figcaption>
 </figure>
 {% endAside %}
@@ -56,7 +56,7 @@ Permissions can be managed via the **Site controls** in the address bar or via t
 ### New permissions UX from Chrome 116
 
 <figure>
-{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/7aSSSclHdEj33k5ifeQv.png", alt="Permission prompt with the new one-time option", width="800", height="560" %}
+{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/7aSSSclHdEj33k5ifeQv.png", alt="Permission prompt with the new one-time option.", width="800", height="560" %}
   <figcaption>
     Permission prompt with the new one-time option. This is the new permission prompt on desktop for geolocation, camera, and microphone.
   </figcaption>
@@ -90,7 +90,7 @@ When users select **Allow this time**, the granted permission is temporary, also
 Chrome UX teams tested multiple layout and string variations before settling on the vertical three-button layout. User feedback indicated that a layout similar to mobile UIs provides safer outcomes and better expectation match. We think that this is partly due to users being already familiar with this pattern.
 
 <figure>
-{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/wthfyv9PF4DUz5XnBbgk.jpg", alt="Permission prompt for an Android app", width="336", height="674" %}
+{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/wthfyv9PF4DUz5XnBbgk.jpg", alt="Permission prompt for an Android app.", width="336", height="674" %}
   <figcaption>
   Permission prompt for an Android app, with three options presented in vertically-stacked buttons, including a one-time permission. Source: https://developer.android.com/training/location/permissions.
   </figcaption>
@@ -120,9 +120,9 @@ Impact of one-time permissions:
 
 To accommodate for one-time permissions, we recommend that site owners do the following:
 
-- **Ensure your implementation follows best practices around permissions.** Review [Best practices](#best-practices).
-- **Understand when one-time permissions expire.** See details in [Expiration of one-time permissions](#expiration).
-- **Understand how the [Permissions API](https://developer.mozilla.org/docs/Web/API/Permissions_API) behaves** for one-time permissions, and **how to observe expiration.** Review details in [Permissions API](#permissions-api).
+- Ensure your implementation follows best practices around permissions. Review [Best practices](#best-practices).
+- Understand when one-time permissions expire. See details in [Expiration of one-time permissions](#expiration).
+- Understand how the [Permissions API](https://developer.mozilla.org/docs/Web/API/Permissions_API) behaves for one-time permissions, and **how to observe expiration.** Review details in [Permissions API](#permissions-api).
 
 {% Aside %}
 Chrome [removes permissions](https://blog.google/products/chrome/5-tips-to-stay-safer-online-with-chrome/#:~:text=A%20more%20proactive%20Safety%20Check) from sites users haven't recently visited. This is independent from one-time permissions.
@@ -142,23 +142,23 @@ Review additional guidance in [Permission UX](https://developers.google.com/web/
 
 By default, all web permissions are bound to an [origin](https://web.dev/same-site-same-origin/#origin), which can be thought of as an app of its own. With **Allow this time**, the user gives a one-time permission to an origin. This permission lasts until the user stops actively interacting with that origin. In essence, one-time permissions expire when the user stops actively interacting with that origin for some time. This means the site can continue to use the capability if the user briefly switches to another web page in a different tab but then comes back.
 
-In more detail, one-time permission grants expire as soon as **any** of the following conditions are met:
+In more detail, one-time permission grants expire as soon as any of the following conditions are met:
 
 * The page has been closed, was navigated away from, or was [discarded](/blog/page-lifecycle-api/#states:~:text=next%20states%3A%0ANONE-,Discarded,-A%20page%20is). This includes closing Chrome.
 * 16 hours have passed since granting permission.
-* The user manually revokes the permission (e.g. in **Site controls**), or the permission is overridden through an enterprise policy.
-* The page has been in the [background](#background-tab) for at least 5 minutes — except if the capability is allowed to run in the background, like camera or microphone. In this case, as long as the site uses the capability, Chrome shows a [tab strip indicator](#tab-strip-indicator) and doesn't start the 5-minute timer until the page stops using the capability. Note that the 16-hour timer is still running.
+* The user manually revokes the permission (for example, in **Site controls**), or the permission is overridden through an enterprise policy.
+* The page has been in the [background](#background-tab) for at least 5 minutes—except if the capability is allowed to run in the background, like camera or microphone. In this case, as long as the site uses the capability, Chrome shows a [tab strip indicator](#tab-strip-indicator) and doesn't start the 5-minute timer until the page stops using the capability. Note that the 16-hour timer is still running.
 
 {% Aside %}
-A user may have several tabs of the same origin open simultaneously. In that case, the expiration conditions are unchanged — you only need to replace the term "page" with "all pages from that origin".
+A user may have several tabs of the same origin open simultaneously. In that case, the expiration conditions are unchanged—you only need to replace the term "page" with "all pages from that origin".
 {% endAside %}
 
 #### Background tab {: #background-tab }
-A browser tab is in the *background* when it's not in the foreground. A tab is in the foreground when it's the visible tab in a browser window that is not minimized. 
+A browser tab is in the _background_ when it's not in the foreground. A tab is in the foreground when it's the visible tab in a browser window that is not minimized. 
 
-In Chrome, some capabilities, like **geolocation**, can only run in the **foreground tab**. They're not allowed to run in a background tab. Others, like **camera** and **microphone**, are allowed to run in a **background tab**. 
+In Chrome, some capabilities, like geolocation, can only run in the foreground tab. They're not allowed to run in a background tab. Others, like camera and microphone, are allowed to run in a background tab. 
 
-{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/Cjc8Tj8lnks8eB6Ntx7k.jpg", alt="ALT_TEXT_HERE", width="800", height="579" %}
+{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/Cjc8Tj8lnks8eB6Ntx7k.jpg", alt="A screenshot of the browser window highlight an active foreground tab and inactive background tab.", width="800", height="579" %}
 
 #### Tab strip indicator {: #tab-strip-indicator }
 
@@ -166,7 +166,7 @@ Capabilities that continue to run when the tab is in the background have a *tab 
 For example, camera has a tab strip indicator.
 
 <figure>
-{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/RE7sxBJLNpuvD7wUcOJW.jpg", alt="ALT_TEXT_HERE", width="515", height="111" %}
+{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/RE7sxBJLNpuvD7wUcOJW.jpg", alt="A tab with a red dot.", width="515", height="111" %}
   <figcaption>
   The tab indicator for camera access is a red dot.
   </figcaption>
@@ -197,7 +197,7 @@ At the time of this writing, the [Permissions API](https://developer.mozilla.org
 
 To query the status of API permissions, you can use the [Permissions API](https://developer.mozilla.org/docs/Web/API/Permissions_API):
 
-- If the user picks **Allow this time**, the Permission API status is set to `granted`.  This means that an unexpired **one-time** permission and a **persistent** permission are indistinguishable and have the same status: `granted`.
+- If the user picks **Allow this time**, the Permission API status is set to `granted`.  This means that an unexpired one-time permission and a persistent permission are indistinguishable and have the same status: `granted`.
 - Once the one-time permission expires, the status will be set back to `prompt`.
 - To observe the expiration of a one-time permission, register a [`PermissionStatus.onchange`](https://developer.mozilla.org/docs/Web/API/PermissionStatus) event handler.
 
