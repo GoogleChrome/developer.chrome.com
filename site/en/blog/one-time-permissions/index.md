@@ -202,7 +202,7 @@ To query the status of API permissions, you can use the [Permissions API](https:
 - To observe the expiration of a one-time permission, register a [`PermissionStatus.onchange`](https://developer.mozilla.org/docs/Web/API/PermissionStatus) event handler.
 
 {% Aside 'objective' %}
-Review example code [here](https://github.com/chromium/permission.site/blob/master/one-time.js#L17), and try the [demo](https://permission.site/one-time) to observe these behaviors.
+Review example code [here](https://github.com/chromium/permission.site/blob/master/one-time.js#L103), and try the [demo](https://permission.site/one-time) to observe these behaviors.
 {% endAside %}
 
 {% Aside 'gotchas' %}
