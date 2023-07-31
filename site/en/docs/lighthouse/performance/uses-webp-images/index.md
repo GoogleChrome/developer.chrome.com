@@ -83,6 +83,11 @@ Consider searching the [Magento
 Marketplace](https://marketplace.magento.com/catalogsearch/result/?q=webp) for a
 variety of third-party extensions to leverage newer image formats.
 
+
+### iPhone
+
+Note that webp, avif images and webm videos will not work on iPhones below ios 16.
+
 ### WordPress
 
 Consider using a [plugin](https://wordpress.org/plugins/search/convert+webp/) or
