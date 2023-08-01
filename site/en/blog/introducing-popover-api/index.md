@@ -75,7 +75,7 @@ Using `popovertargetaction="hide"`, you can create a “close” button within a
 
 ```html
 <button popovertarget="my-popover" popovertargetaction="hide">
-    <span aria-hidden=”true”>❌</span>
+    <span aria-hidden="true">❌</span>
     <span class="sr-only">Close</span>
 </button>
 ```
@@ -146,7 +146,7 @@ By default, popovers get a 2px border and are positioned in the center of the UI
 
 ## The difference between a `popover` and a `dialog`
 
-It's important to note that the `popover` attribute does not provide semantics on its own. And while you can now build modal dialog-like experiences using `popover=”auto”`, there are a few key differences between the two:
+It's important to note that the `popover` attribute does not provide semantics on its own. And while you can now build modal dialog-like experiences using `popover="auto"`, there are a few key differences between the two:
 
 A `dialog` element opened with `dialog.showModal` (a modal dialog), is an experience which requires explicit user interaction to close the modal.
 A `popover` supports light-dismiss. A modal `dialog` does not.
