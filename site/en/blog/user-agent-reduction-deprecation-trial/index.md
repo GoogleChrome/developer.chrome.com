@@ -95,7 +95,7 @@ The second, referenced here, is a deprecation trial intended for sites that need
 
 ## How long will the deprecation trial last?
 
-The User-Agent Reduction deprecation trial will run from Chrome 100 to Chrome 112. Chrome 113 will be the first release where only the completely reduced User-Agent string is sent.
+The User-Agent Reduction deprecation trial will run from Chrome 100 to Chrome 115. Chrome 116 will be the first release where only the completely reduced User-Agent string is sent.
 
 ## How do I share feedback for the User-Agent Reduction depreciation trial?
 
