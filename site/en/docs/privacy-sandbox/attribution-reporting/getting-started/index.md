@@ -120,6 +120,7 @@ Before you can register sources and triggers and get reports, your sites need to
         - `debug_key`
         - `aggregation_keys` (for aggregatable reports)
         - `debug_reporting`
+        - `priority`
 
     {% Aside %}
     While headers can be used for both event-level and aggregatable reports, the content of the headers will be different for each of these report types. 
@@ -131,7 +132,7 @@ Before you can register sources and triggers and get reports, your sites need to
   [Example code](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/main/attribution-reporting/functions/apps/adtech.js)):
         - `aggregatable_trigger_data`, with `key_piece` and `source_keys`       
         - `aggregatable_values`
-        - `event_trigger_data` Note that if you omit `event_trigger_data`, event-level reports will not be generated.
+        - `event_trigger_data` Note that if you omit this, event-level reports will not be generated.
 1. **Register a trigger (event-level reports):** refer to [Triggering Attribution](https://github.com/WICG/attribution-reporting-api/blob/main/EVENT.md#triggering-attribution).
 
 1. **Set up filters (optional)**:
