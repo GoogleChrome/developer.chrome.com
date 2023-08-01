@@ -70,7 +70,7 @@ Summary reports are not tied to a specific event on the ad side. These reports p
 
 #### Aggregatable reports - additional concepts
 
-In addition to uderstanding source, triggers, and headers as as noted for event-level reports, for aggregatable reports you'll need few more.
+In addition to understanding source, triggers, and headers as as noted for event-level reports, for aggregatable reports you'll need to review some further concepts.
 
 While you may not need to delve into all of the details, such as exactly how [noise](/docs/privacy-sandbox/attribution-reporting/understanding-noise) is generated, a solid understanding of the basics will help you develop a plan. Knowledge of these concepts is not strictly necessary for implementation, but to understand and refine the reports generated, you'll benefit from this information.
 
@@ -120,18 +120,19 @@ Before you can register sources and triggers and get reports, your sites need to
         - `debug_key`
         - `aggregation_keys` (for aggregatable reports)
         - `debug_reporting`
-        - `event_trigger_data` (for event-level reports only) [refer to the
-        Example code](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/main/attribution-reporting/functions/apps/adtech.js).
+
     {% Aside %}
-    While headers can be used for both event-level and aggregatable reports, the content of the headers will be different for each of these report types. For example, if you omit `event_trigger_data`, event-level reports will not be generated.
+    While headers can be used for both event-level and aggregatable reports, the content of the headers will be different for each of these report types. 
     {% endAside %}
 {: #trigger}
-1. **Register a trigger:** [Registering a trigger](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger) is the same process for both event-level reports and aggregatable reports.
+1. **Register a trigger (aggregatable reports):** [Registering a trigger](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger) aggregatable reports.
     1. In the `Attribution-Reporting-Register-Trigger` header add the
   necessary fields to generate aggregatable reports (refer to the
   [Example code](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/main/attribution-reporting/functions/apps/adtech.js)):
         - `aggregatable_trigger_data`, with `key_piece` and `source_keys`       
         - `aggregatable_values`
+        - `event_trigger_data` Note that if you omit `event_trigger_data`, event-level reports will not be generated.
+1. **Register a trigger (event-level reports):** refer to [Triggering Attribution](https://github.com/WICG/attribution-reporting-api/blob/main/EVENT.md#triggering-attribution).
 
 1. **Set up filters (optional)**:
     1. Follow the instructions in
@@ -184,7 +185,7 @@ If you're ready to begin implementation, check out these docs:
 
 
 If you're still in the planning stage, take a look at these docs:
-- [System overview](/docs/privacy-sandbox/summary-reports/system-overview/) 
+- [System overview](/docs/privacy-sandbox/attribution-reporting/system-overview/) 
 - [Design decisions](/docs/privacy-sandbox/summary-reports/design-decisions/) 
 - [Contribution budget](/docs/privacy-sandbox/attribution-reporting/contribution-budget/)
 - [Understanding noise](/docs/privacy-sandbox/attribution-reporting/understanding-noise/) 
