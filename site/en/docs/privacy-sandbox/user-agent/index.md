@@ -6,7 +6,7 @@ subhead: >
 description: >
   The reduced User-Agent shares a limited set of data to improve user privacy and reduce opportunities for tracking. With User-Agent Client Hints, developers can request more details in a managed and audited process.
 date: 2021-11-09
-updated: 2022-02-11
+updated: 2023-08-01
 authors:
   - alexandrawhite
 ---
@@ -14,7 +14,7 @@ authors:
 ## Implementation status
 
 *  [In origin trial](/blog/user-agent-reduction-origin-trial/) Chrome 95 to 100
-*  [In deprecation trial](/blog/user-agent-deprecation-origin-trial/) Chrome 100 to Chrome 112
+*  [In deprecation trial](/blog/user-agent-deprecation-origin-trial/) Chrome 100 to Chrome 115
 *  [Register for the trial](/origintrials/#/view_trial/-7123568710593282047)
 *  [Chrome DevTools integration](/blog/new-in-devtools-89/#ua-ch)
 *  [UA-CH Chrome platform status](https://chromestatus.com/feature/5995832180473856)
