@@ -167,6 +167,11 @@ and to generate summary reports with the local [aggregation tool](https://github
 ### Reprocessing reports
 
 Another advantage of using debug mode is that it allows you to process reports again. Therefore, to process reports more than once, make sure to have debug reports enabled.
+You may want to reprocess reports when you're:
+
+- attempting to debug the Aggregation Service
+- experimenting with different batching strategies
+- experimenting with different epsilon values
 
 ## Up next
 
