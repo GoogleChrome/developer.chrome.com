@@ -40,7 +40,7 @@ You can now build popovers with all of these features without using JavaScript. 
 <button popovertarget="my-popover"> Open Popover </button>
 
 <div id="my-popover" popover>
-  <p>I am a popover with more information.<p>
+  <p>I am a popover with more information.</p>
 </div>
 ```
 
