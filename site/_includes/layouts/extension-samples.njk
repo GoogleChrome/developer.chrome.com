@@ -166,4 +166,7 @@
 
 {% block scripts %}
   <script type="module" src="{{ helpers.hashForProd('/js/extension-samples.js') }}"></script>
+  <script type="application/json" id="extension-samples-data">
+    {{ extensionSamples.samples | dump | safe }}
+  </script>
 {% endblock %}
