@@ -231,4 +231,4 @@ If you encounter any issues with one-time permissions, [file a new crbug issue f
 
 ### Acknowledgements
 
-Thanks to [Rachel Andrew](/authors/rachelandrew), Balazs Engedy, Marian Harbach, Florian Jacky and [Thomas Steiner](/authors/thomassteiner/) for reviewing this article.
+Thanks to [Rachel Andrew](/authors/rachelandrew), Serena Chen, Balazs Engedy, Marian Harbach, Florian Jacky and [Thomas Steiner](/authors/thomassteiner/) for reviewing this article.
