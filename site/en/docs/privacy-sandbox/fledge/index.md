@@ -471,6 +471,63 @@ To ensure that the ecosystem has sufficient time to test, we don’t expect to r
 
 {% endDetails %}
 
+{% Details %}
+{% DetailsSummary %}
+### How is first-party data used in a Protected Audience auction? 
+{% endDetailsSummary %}
+
+First-party data is data owned by the site on their users. For example, if a user has specified their favorite color on the advertiser’s or publisher’s site, that color is considered first-party data. 
+
+In a Protected Audience auction, the advertiser can use their first-party data to determine the [ad interest group membership](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#11-joining-interest-groups), and can also pass data into the interest group as [`userBiddingSignals`](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#12-interest-group-attributes). The first-party data from the advertiser will be available only for the buyers during the bid generation step, and is not available for the sellers.  
+
+For example, if the advertiser knows the user’s favorite color, the value can be passed in when the user is added to an interest group: 
+
+```js
+const interestGroup = {
+  owner: 'https://example-buyer.com',
+  name: 'running-shoes',
+  userBiddingSignals: {
+    favoriteColor: 'blue' // First-party data
+  },
+  // ...other interest group settings
+};
+
+navigator.joinAdInterestGroup(interestGroup, 3600);
+```
+
+The publisher can also pass in their first-party data in by setting the signals in the [auction config](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#21-initiating-an-on-device-auction) when initiating the auction, and can control who receives the first-party data. When a publisher passes the first-party data in as `auctionSignals`, it is available to both buyers and sellers.  When the data is passed in as `sellerSignals`, it is available only to the seller, and when passed in as `perBuyerSignals`, it is available only to the specified buyers.  The publisher can also pass in first-party data to component auctions. The publisher and the auction participants should agree before on what first-party data needs to be shared, and how the data needs to be formatted.  
+
+The following example describes how the first-party data can be passed in by the publisher to various auction participants: 
+
+```js
+const auctionConfig = {
+  seller: 'https://example-seller.com',
+  auctionSignals: {
+    favoriteColor: 'blue', // Both buyer and seller will receive this signal
+  },
+  sellerSignals: {
+    favoriteIceCreamFlavor: 'chocolate', // Only the seller will receive this signal
+  },
+  perBuyerSignals: {
+    'https://example-buyer.com': {
+      favoriteDrink: 'tea', // Only a specific buyer will receive this signal
+    },
+  },
+  // The same pattern applies to the component auction
+  componentAuctions: [{
+    seller: 'https://example-component-seller.com',
+    auctionSignals: { ... },
+    sellerSignals: { ... },
+    perBuyerSignals { ... }
+  }],
+  // ...other auction settings
+};
+
+navigator.runAdAuction(auctionConfig);
+```
+
+{% endDetails %}
+
 {: #engage}
 
 ## Find out more
