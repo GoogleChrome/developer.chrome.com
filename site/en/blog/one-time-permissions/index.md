@@ -229,6 +229,6 @@ One-time permissions offer users more choice, and Chrome's new permission UI bri
 
 If you encounter any issues with one-time permissions, [file a new crbug issue for permission prompts](https://bugs.chromium.org/p/chromium/issues/entry?components=UI%3EBrowser%3EPermissions%3EPrompts).
 
-### Acknowledgements
+## Acknowledgements
 
 Thanks to [Rachel Andrew](/authors/rachelandrew), Serena Chen, Balazs Engedy, Marian Harbach, Florian Jacky and [Thomas Steiner](/authors/thomassteiner/) for reviewing this article.
