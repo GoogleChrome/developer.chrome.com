@@ -36,12 +36,6 @@ The downloaded file can be hosted on a personal server. This is the most secure 
 extension locally as the contents of the extension will be signed by the Chrome Web Store. This
 helps detect potential attacks and tampering.
 
-{% Aside %}
-
-Read more about the [hosting policy][hosting-changes].
-
-{% endAside %}
-
 ### Create .crx locally {: #create }
 
 Extension directories are converted to `.crx` files at the Extensions Management Page. Navigate to
@@ -274,7 +268,6 @@ This would ensure that users would autoupdate to version 2 only if they are runn
 [chromium-with-flags]: https://www.chromium.org/developers/how-tos/run-chromium-with-flags
 [developer-dashboard]: https://chrome.google.com/webstore/developer/dashboard
 [header-updating]: #update
-[hosting-changes]: /docs/extensions/mv2/hosting_changes/
 [hosting-options]: /docs/extensions/mv3/hosting
 [load-locally]: #create
 [manifest]: /docs/extensions/mv3/manifest/
