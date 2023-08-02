@@ -46,6 +46,14 @@
     <td>Available in Chrome for origin trial in Q2 2023</td>
   </tr>
   <tr>
+    <td>Phase 1 Lite Flexible Event-Level<br><a href="https://github.com/WICG/attribution-reporting-api/blob/main/flexible_event_config.md#phase-1-lite-flexible-event-level">Flexible event-level configurations explainer</a></td>
+    <td>Expected in Chrome in Q4 2023</td>
+  </tr>
+  <tr>
+    <td>Phase 2 Full Flexible Event-Level<br><a href="https://github.com/WICG/attribution-reporting-api/blob/main/flexible_event_config.md#phase-2-full-flexible-event-level">Flexible event-level configurations explainer</a></td>
+    <td>Expected in Chrome in Q1 2024</td>
+  </tr>  
+  <tr>
     <td>Support for Attribution Reporting debugging after third-party cookie deprecation<br><a href="https://github.com/WICG/attribution-reporting-api/issues/705">Seeking feedback on GitHub</a></td>
     <td>Expected in Chrome in H2 2023</td>
   </tr>
