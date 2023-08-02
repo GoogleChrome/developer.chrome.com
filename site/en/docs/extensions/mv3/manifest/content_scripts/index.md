@@ -2,20 +2,17 @@
 layout: 'layouts/doc-post.njk'
 title: 'Manifest - Content Scripts'
 seoTitle: 'Chrome Extensions Manifest: content_scripts'
-date: 2013-05-12
-updated: 2023-07-30
+date: 2023-08-10
 description: Reference documentation for the content_scripts property of manifest.json.
 ---
 
 ## Overview {: #overview}
 
-The `"content_scripts"` field is used to inject scripts or stylesheets at install time on a specific set of pages using [match patterns][doc-match-patterns].
-
-To inject scripts programmatically, see [Injecting Scripts][doc-cs] in the Content Scripts article.
+The `"content_scripts"` field is used to inject JavaScript or CSS files at install time on a specific set of pages that [match a specific pattern][doc-match]. Extensions can also inject content scripts programmatically, see [Injecting Scripts][doc-cs] for details.
 
 ## Manifest {: #manifest }
 
-For example, this extension injects a stylesheet and a JavaScript file into any page in `https://www.example.com/`: 
+These are the supported fields for `"content_scripts"`. Only the `"matches"` key is required.
 
 {% Label %}manifest.json{% endLabel %}
 
@@ -25,180 +22,65 @@ For example, this extension injects a stylesheet and a JavaScript file into any 
  ...
  "content_scripts": [
    {
-     "matches": ["https://www.example.com/*"],
+     "matches": ["https://*.example.com/*"],
      "css": ["my-styles.css"],
-     "js": ["content-script.js"]
+     "js": ["content-script.js"],
+     "exclude_matches": ["*://*/*foo*"],
+     "include_globs": ["*example.com/???s/*"],
+     "exclude_globs": ["*bar*"],     
+     "all_frames": true,
+     "match_origin_as_fallback": true,
+     "match_about_blank": false,
+     "run_at": "document_idle",
+     "world": "ISOLATED",
    }
  ],
  ...
 }
 ```
 
-## Details
-
-The following sections describe what each object in the array can contain:
-
-### Declaring files {: #files }
+## Files {: #files }
 
 Each file must contain a relative path to a resource in the extension's root directory. Leading slashes (`/`) are automatically trimmed. The [`"run_at"`](#world-timings) specifies when each file will be injected.  
 
-<table class="simple">
-  <tbody>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-    <tr id="css">
-      <td><code>css</code></td>
-      <td><code>Array</code></td>
-      <td>
-        <em>Optional.</em> An array of CSS file paths. They are injected in the order of this array, and before any DOM construction or page rendering occurs.
-      </td>
-    </tr>
-    <tr id="js">
-      <td><code>js</code></td>
-      <td><code>Array</code></td>
-      <td>
-        <em>Optional.</em> An array of JavaScript file paths. They are injected in the order they appear in this array, after css files are injected.
-      </td>
-    </tr>
-  </tbody>
-</table>
+`"css"` - Array
+: _Optional_. An array of CSS file paths, injected in the order of this array, and before any DOM construction or page rendering occurs.
+      
+`"js"` - Array,
+: _Optional_. An array of JavaScript file paths, injected in the order they appear in this array, after css files are injected.
 
-### Specifying Matching URLs {: #match-urls }
+## Matching URLs {: #match-urls }
 
-Only the `"matches"` property is required. Then you can use `"exclude_matches"`, `"include_globs"`, and `"exclude_globs"` to customize which pages code to inject code into.
+Only the `"matches"` property is required. Then you can use `"exclude_matches"`, `"include_globs"`, and `"exclude_globs"` to customize which URLs to inject code into. The `"matches"` key is considered a host permission and will [trigger a warning][perm-warn]. 
 
-Glob string URLs can contain "wildcards" **\*** and question marks. The wildcard **\*** matches any string of any length, including an empty string, while the question mark **?** matches any single character.
+`"matches"` - Array
+: _Required_. Specifies which URL patterns to inject the content scripts into. See [Match Patterns][doc-match] for syntax.
 
-<table class="simple">
-  <tbody>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-       <tr id="matches">
-      <td><code>matches</code></td>
-      <td><code>Array</code></td>
-      <td><em>Required.</em> Specifies which URLs to inject the content script into. See <a
-          href="/docs/extensions/mv3/match_patterns/">Match Patterns</a> for syntax details.</td>
-    </tr>
-    <tr id="exclude_matches">
-      <td><code>exclude_matches</code></td>
-      <td><code>Array</code></td>
-      <td><em>Optional.</em> Excludes pages that this content script would otherwise be injected
-        into. See <a href="match_patterns">Match Patterns</a> for syntax details.</td>
-    </tr>
-    <tr id="include_globs">
-      <td><code>include_globs</code></td>
-      <td><code>Array</code></td>
-      <td><em>Optional.</em> Applied after <code>matches</code> to include only those URLs that also
-        match this glob. Intended to emulate the <a
-          href="https://wiki.greasespot.net/Metadata_Block#.40include"><code>@include</code></a>
-        Greasemonkey keyword.</td>
-    </tr>
-    <tr id="exclude_globs">
-      <td><code>exclude_globs</code></td>
-      <td><code>Array</code></td>
-      <td><em>Optional.</em> Applied after <code>matches</code> to exclude URLs that match this
-        glob. Intended to emulate the <a
-          href="https://wiki.greasespot.net/Metadata_Block#.40exclude"><code>@exclude</code></a>
-        Greasemonkey keyword.</td>
-    </tr>
-  </tbody>
-</table>
+`"exclude_matches"` - Array
+: _Optional_. Excludes the URL patterns to inject the content scripts into. See [Match Patterns][doc-match] for syntax.
 
-#### `"exclude_matches"` examples
-#### `"include_globs"` examples
-#### `"exclude_globs"` examples
+`"include_globs"` - Array
+: _Optional_. Applied after matches to include only those URLs that also match this glob. Intended to emulate the [@include][grease-include] Greasemonkey keyword.
+        
+`"exclude_globs"` - Array
+: _Optional_. Applied after matches to exclude URLs that match this glob. Intended to emulate the [@exclude][grease-exclude] Greasemonkey keyword.
 
+Glob string URLs can contain "wildcards" **\*** and question marks. The wildcard **\*** matches any string of any length, including an empty string, while the question mark **?** matches any single character. 
 
+The content script is injected to a page if:
+- Its URL matches any `"matches"` and `"include_globs"` patterns.
+- And the URL doesn't match `"exclude_matches"` or `"exclude_globs"` patterns.
 
+{% Details %}
+{% DetailsSummary %}
+### Globs and URL matching examples {: #matching-samples }
+{% endDetailsSummary %}
 
-### Frames {: #frames }
-
-<table class="simple">
-  <tbody>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-     <tr id="all_frames">
-      <td><code>all_frames</code></td>
-      <td>boolean</td>
-      <td><em>Optional.</em> Defaults to <code>false</code>, meaning that only the top frame is
-        matched.<br><br>If specified <code>true</code>, it will inject into all frames, even if the
-        frame is not the topmost frame in the tab. Each frame is checked independently for URL
-        requirements, it won't inject into child frames if the URL requirements are not met.</td>
-    </tr>
-    <tr id="match_about_blank">
-      <td><code>match_about_blank</code></td>
-      <td>Boolean</td>
-      <td><em>Optional.</em> Whether the script should inject into an <code>about:blank</code> frame
-        where the parent URL matches one of the patterns declared in
-        <code>matches</code>. Defaults to false.</td>
-    </tr>
-    <tr id="match_origin_as_fallback">
-      <td><code>match_origin_as_fallback</code></td>
-      <td>Boolean</td>
-      <td>
-        <em>Optional.</em> Whether the script should inject in frames that were
-        created by a matching origin, but whose URL or origin may not directly
-        match the pattern. These include frames with different schemes, such as
-        <code>about:</code>, <code>data:</code>, <code>blob:</code>, and
-        <code>filesystem:</code>. See also
-        <a href="#injecting-in-related-frames">Injecting in related frames</a>.
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-### World and timings {: #world-timings }
-
-<table class="simple">
-  <tbody>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-    <tr id="run_at">
-      <td><code>run_at</code></td>
-      <td><a href="/docs/extensions/reference/scripting/#type-RunAt">RunAt</a></td>
-      <td><em>Optional.</em> Specifies when the script should be injected into the page. Defaults to
-        <code>document_idle</code>.</td>
-    </tr>
-    <tr id="world">
-      <td><code>world</code></td>
-      <td><a href="/docs/extensions/reference/scripting/#type-ExecutionWorld">ExecutionWorld</a></td>
-      <td>
-        <em>Optional.</em> The JavaScript world for a script to execute within. Defaults to <code>ISOLATED</code>. See also
-        <a href="#isolated_world">Work in isolated worlds</a>.
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-
-## Usage
-
-### Customizing matches
-
-### Globs properties {: #globs }
-
-Glob properties are used to refine the URLs already specified by the [match patterns](#what). Acceptable glob
-strings are URLs that may contain "wildcard" and question marks. The asterisk **\***
-matches any string of any length, including the empty string, while the question mark **?** matches
-any single character.
-
-#### Examples {: #examples }
+#### `"include_globs"` {: #incl-globs }
 
 {% Label %}manifest.json{% endLabel %}
 
-```json/6
+```json/5
 {
   ...
   "content_scripts": [
@@ -212,83 +94,94 @@ any single character.
 }
 ```
 
-
 <div class="switcher">
 {% Compare 'better', 'Matches' %}
-
-- `https://www.example.com/foo/bar`
-- `https://the.example.com/foo/`
-
+```text
+https://www.example.com/foo/bar
+https://the.example.com/foo/
+```
 {% endCompare %}
 
-{% Compare 'worse', 'No matches' %}
-
-- `https://my.example.com/foo/bar`
-- `https://example.com/foo/`
-- `https://www.example.com/foo`
-
+{% Compare "worse", "Does not match" %}
+```text
+https://my.example.com/foo/bar
+https://example.com/foo/
+https://www.example.com/foo
+```
 {% endCompare %}
 </div>
 
-| ✅ Matches                        | ❌ Doesn't match                 |
-| --------------------------------- | -------------------------------- |
-| `https://www.example.com/foo/bar` | `https://my.example.com/foo/bar` |
-| `https://the.example.com/foo/`    | `https://example.com/foo/`       |
-| `xx`                              | `https://www.example.com/foo`    |
-
-### `"Include_globs"` {: #include-globs }
-
 {% Label %}manifest.json{% endLabel %}
 
-```json/6
+```json/5
 {
   ...
   "content_scripts": [
     {
       "matches": ["https://*.nytimes.com/*"],
       "include_globs": ["*nytimes.com/???s/*"],
-      "js": ["contentScript.js"]
+      "js": ["content-script.js"]
     }
   ],
   ...
 }
 ```
 
-| ✅ Matches                                | ❌ Doesn't match                            |
-| ----------------------------------------- | ------------------------------------------- |
-| `https://www.nytimes.com/arts/index.html` | `https://www.nytimes.com/sports/index.html` |
-| `https://www.nytimes.com/jobs/index.html` | `https://www.nytimes.com/music/index.html`  |
+<div class="switcher">
+{% Compare 'better', 'Matches' %}
+```text
+https://www.nytimes.com/arts/index.html
+https://www.nytimes.com/jobs/index.html
+```
+{% endCompare %}
 
-### Exclude_globs {: #exclude-globs }
+{% Compare "worse", "Does not match" %}
+```text
+https://www.nytimes.com/sports/index.html
+https://www.nytimes.com/music/index.html
+```
+{% endCompare %}
+</div>
+
+#### `"exclude_globs"` {: #excl-globs }
 
 {% Label %}manifest.json{% endLabel %}
 
-```json/6
+```json/5
 {
   ...
   "content_scripts": [
     {
       "matches": ["https://*.nytimes.com/*"],
       "exclude_globs": ["*science*"],
-      "js": ["contentScript.js"]
+      "js": ["content-script.js"]
     }
   ],
   ...
 }
 ```
 
-| ✅ Matches                     | ❌ Doesn't match                  |
-| ------------------------------ | --------------------------------- |
-| `https://history.nytimes.com`  | `https://science.nytimes.com`     |
-| `https://.nytimes.com/history` | `https://www.nytimes.com/science` |
+<div class="switcher">
+{% Compare 'better', 'Matches' %}
+```text
+https://history.nytimes.com
+https://.nytimes.com/music
+```
+{% endCompare %}
 
-### Narrowing scope {: #narrow }
+{% Compare "worse", "Does not match" %}
+```text
+https://science.nytimes.com
+https://www.nytimes.com/science
+```
+{% endCompare %}
+</div>
 
-One, all, or some of these can be included to achieve the correct scope.
+#### Advanced customization example {: #all-custom }
 
 {% Label %}manifest.json{% endLabel %}
 
-```json/6-8
+```json/5-7
 {
   ...
   "content_scripts": [
@@ -297,34 +190,6 @@ One, all, or some of these can be included to achieve the correct scope.
       "exclude_matches": ["*://*/*business*"],
       "include_globs": ["*nytimes.com/???s/*"],
       "exclude_globs": ["*science*"],
-      "js": ["contentScript.js"]
-    }
-  ],
-  ...
-}
-```
-
-### Injecting in related frames {: #injecting-in-related-frames }
-
-Sometimes, extensions may want to run scripts in related frames that don't match an content script pattern, such as `about:`, `data:`, `blob:`, and `filesystem:` schemes URLs. However, these frames can still be associated with the URLs of the page that created them.
-
-For example, `about:` and
-`data:`, do not even include the parent URL or origin in the URL
-at all, as in `about:blank` or `data:text/html,<html>Hello, World!</html>`.
-
-To inject into these frames, extensions can set the
-`"match_origin_as_fallback"` property to `true`.
-
-{% Label %}manifest.json{% endLabel %}
-
-```json
-{
-  "name": "My extension",
-  ...
-  "content_scripts": [
-    {
-      "matches": ["https://*.google.com/maps/*"],
-      "match_origin_as_fallback": true,
       "js": ["content-script.js"]
     }
   ],
@@ -332,29 +197,66 @@ To inject into these frames, extensions can set the
 }
 ```
 
-{% Aside 'important' %}
+<div class="switcher">
+{% Compare 'better', 'Matches' %}
+```text
+https://www.nytimes.com/arts/index.html
+https://.nytimes.com/jobs/index.html
+```
+{% endCompare %}
 
-Because this compares the _origin_ of the frame, the frame could be on at any path from that origin.
+{% Compare "worse", "Does not match" %}
+```text
+https://science.nytimes.com
+https://www.nytimes.com/jobs/business
+https://www.nytimes.com/science
+```
+{% endCompare %}
+</div>
 
-So in the example above, the script will also run on any `about:blank`, `data:`, etc frames created with the origin `https://google.com/*`.
+{% endDetails %}
 
+## Frames {: #frames }
+
+The `"all_frames"` field specifies if the content script should be injected into all frames matching the specified URL requirements. If set to `false` it will only inject into the topmost frame. It can be used along with `"match_about_blank"` to inject into an `about:blank` frame. 
+
+To inject into other frames like `data:`, `blob:`, and `filesystem:`, set the `"match_origin_as_fallback"` to `true`. For details, see [Injecting in related frames][cs-inject-frames]
+
+`"all_frames"` Boolean
+: _Optional_. Defaults to `false`, meaning that only the top frame is matched.If specified true, it will inject into all frames, even if the frame is not the topmost frame in the tab. Each frame is checked independently for URL requirements, it won't inject into child frames if the URL requirements are not met.
+
+`"match_about_blank"`- Boolean
+: _Optional_. Defaults to `false`. Whether the script should inject into an `about:blank` frame where the parent URL matches one of the patterns declared in `"matches"`.
+
+`"match_origin_as_fallback"` - Boolean
+: _Optional_. Defaults to `false`. Whether the script should inject in frames that were created by a matching origin, but whose URL or origin may not directly match the pattern. These include frames with different schemes, such as `about:`, `data:`, `blob:`, and `filesystem:`.
+
+## Run time and execution environment {: #world-timings }
+
+By default, content scripts are injected when the DOM is complete (`"document_idle"`), meaning all its resources have finished loading, and live in a private isolated execution environment that isn't accessible to the page or other extensions.
+
+[`"run_at"`][scripting-runat] - `document_start` | `document_end` | `document_idle`
+: _Optional_. Specifies when the script should be injected into the page. It corresponds with the loading stated of [Document.readyState][mdn-ready-state]. Either `"document_start"` (the DOM is still loading), `"document_end"` (other resources are still loading), or `"document_idle"`, which corresponds to complete (the DOM and page resources have finished loading).
+
+[`"world"`][scripting-world] - `ISOLATED` | `MAIN`
+: _Optional_. The JavaScript world for a script to execute within. Defaults to `"ISOLATED"`, which is the execution environment unique to the content script. Choosing `"MAIN"` world, means the script will share the execution environment with the host page's JavaScript.
+
+{% Aside 'warning' %}
+There are risks involved when using `"MAIN"` world. The host page can access and interfere with the injected script. See [Work in isolated worlds][cs-worlds] to learn more.
 {% endAside %}
-
-Chrome will look at the origin of the frame maker to see if it matches, rather than the frame's URL. 
- 
-Note that this might also be different than the
-target frame's _origin_ (e.g., `data:` URLs have a null origin).
-
-The initiator of the frame is the frame that created or navigated the target
-frame. While this is commonly the direct parent or opener, it may not be (as in
-the case of a frame navigating an iframe within an iframe).
-
-When both `"match_origin_as_fallback"` and `"match_about_blank"` are specified,
-`"match_origin_as_fallback"` takes priority.
 
 ## Example
 
-The Focus mode tutorial and Read time tutorial demonstrate how to inject.
+See the [Run on every page][tut-every-page] tutorial to build an extension that injects a content script through the manifest.
 
-[doc-match-patterns]: /docs/extensions/reference/
-[doc-cs]: /docs/extensions/reference/
+[doc-match]: /docs/extensions/mv3/match_patterns
+[doc-cs]: /docs/extensions/mv3/content_scripts
+[tut-every-page]: /docs/extensions/mv3/getstarted/tut-reading-time/
+[mdn-ready-state]: https://developer.mozilla.org/docs/Web/API/Document/readyState
+[cs-inject-frames]: /docs/extensions/mv3/content_scripts#injecting-in-related-frames
+[cs-worlds]: /docs/extensions/mv3/content_scripts#isolated_world
+[scripting-runat]: /docs/extensions/reference/extensionTypes/#type-RunAt
+[scripting-world]: /docs/extensions/reference/scripting/#type-ExecutionWorld
+[perm-warn]: /docs/extensions/mv3/permission_warnings/
+[grease-include]: https://wiki.greasespot.net/Metadata_Block#.40include
+[grease-exclude]: https://wiki.greasespot.net/Metadata_Block#.40exclude
