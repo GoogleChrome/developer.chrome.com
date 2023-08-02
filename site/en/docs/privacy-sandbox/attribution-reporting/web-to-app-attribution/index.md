@@ -16,15 +16,15 @@ The Privacy Sandbox natively supports cross- web and app attribution, and the At
 
 ## What is web-to-app attribution?
 
-Web-to-app attribution means if a user clicks an ad in a Chrome mobile browser, and then goes on to later make a purchase in an Android app, the Attribution Reporting API can directly attribute that conversion performed in the Android app to the ads shown in the Chrome mobile browser.
+If a user clicks an ad in a Chrome mobile browser, and then goes on to later make a purchase in an Android app, the Attribution Reporting API can directly attribute that conversion performed in the Android app to the ads shown in the Chrome mobile browser. That's web-to-app attribution.
 
-The same is true in the reverse. if a user clicks an ad in an Android app, and then goes on to later make a purchase in a Chrome mobile browser, the Attribution Reporting API can directly attribute that conversion.
+Similarly, if a user clicks an ad in an Android app, and then goes on to later make a purchase in a Chrome mobile browser, the Attribution Reporting API can directly attribute that conversion. That's app-to-web attribution.
 
 Note that the API records web-to-app attributions when they occur on the same device.
 
-## How is it implemented?
+## How is web-to-app attribution implemented?
 
-First, you'll want to make sure that cross-web and app measurement is available in your web code base.
+To implement web-to-app attribution, first make sure that cross-web and app measurement is available in your web code base.
 To do this, when you register an event, include the `Attribution-Reporting-Eligible` header
 in your request to the reporting origin.
 
@@ -40,11 +40,12 @@ The response metadata includes both web and app destinations. These destination 
 
 Under the hood, the `Attribution-Reporting-Register-OS-Source` header signals the Android OS to call register web source, which takes the metadata from the header and packages it up to send to the ad-tech URL specified in `Attribution-Reporting-Register-OS-Source`.
 
-The developer does not need to call `registerWebSource()` directly.
+You don't need to call `registerWebSource()` directly.
 
-More information
+## Next steps
 
-[https://github.com/WICG/attribution-reporting-api/blob/main/app_to_web.md](https://github.com/WICG/attribution-reporting-api/blob/main/app_to_web.md)
-For more information on app-to-web attribution, refer to [https://developer.android.com/design-for-safety/privacy-sandbox/attribution-app-to-web](https://developer.android.com/design-for-safety/privacy-sandbox/attribution-app-to-web)
+You can read more about web-to-app attribution in [Cross App and Web Attribution Measurement](https://github.com/WICG/attribution-reporting-api/blob/main/app_to_web.md).
+
+Also check out [Attribution reporting: cross app and web measurement](https://developer.android.com/design-for-safety/privacy-sandbox/attribution-app-to-web).
 
      
