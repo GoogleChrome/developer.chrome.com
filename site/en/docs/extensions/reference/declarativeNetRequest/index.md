@@ -287,13 +287,13 @@ These examples require the following host permission:
 
 To work out the priority of a particular URL, look at the (developer-defined) `"priority"` key, the `"action"` key and the `"urlFilter"` key. These examples refer to the example rule file shown below them.
 
-**Navigation to https://google.com**
+Navigation to https://google.com
 : Two rules cover this URL: the rules with IDs 1 and 4. The rule with ID 1 applies because `"block"` actions have a higher priority than `"redirect"` actions. The remaining rules do not apply because they are for longer URLs.
 
-**Navigation to https://google.com/1234**
+Navigation to https://google.com/1234
 : Because of the longer URL, the rule with ID 2 now matches in addition to  the rules with IDs 1 and 4. The rule with ID 2 applies because `"allow"` has a higher priority than `"block"` and `"redirect"`.
 
-**Navigation to https://google.com/12345**
+Navigation to https://google.com/12345
 : All four rules match this URL. The rule with ID 3 applies because its developer-defined priority is the highest of the group.
 
 ```json
