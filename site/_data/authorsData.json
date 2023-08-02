@@ -1840,7 +1840,7 @@
     "country": "US",
     "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/4B8f3CX2GqtSfgwIEBiM.jpeg"
   },
-  "henrikbostrom":{
+  "henrikbostrom": {
     "country": "",
     "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/es5lvrnCiRGsPLyndQ9s.jpeg"
   },
@@ -1858,5 +1858,11 @@
   "yurikoh": {
     "country": "JP",
     "image": "image/HodOHWjMnbNw56hvNASHWSgZyAf2/2DM7dQC0YIGR54SlzYo6.jpg"
+  },
+  "albertomedina": {
+    "country": "US",
+    "image": "image/WvQmAFP386a04HT2ItuD4b77Aml2/KqeIZ8jWsruIOen5yDor.jpeg",
+    "linkedin": "ialbmedina",
+    "twitter": "ialbmedina"
   }
 }

@@ -632,7 +632,7 @@ jarekfoksa:
   title:
     en: Jarek Foksa
   description:
-    en: "Boxy SVG developer"
+    en: 'Boxy SVG developer'
 ashleygullen:
   title:
     en: 'Ashley Gullen'
@@ -1485,7 +1485,7 @@ thiagodiogo:
   title:
     en: 'Thiago Diogo'
   description:
-    en:  'Staff Technical Solutions Consultant'
+    en: 'Staff Technical Solutions Consultant'
 mikedougherty:
   title:
     en: 'Mike Dougherty'
@@ -1500,14 +1500,19 @@ darojas:
   title:
     en: 'Danny Rojas'
   description:
-    en:  'Product Partnerships, Privacy Sandbox'
+    en: 'Product Partnerships, Privacy Sandbox'
 seburan:
   title:
     en: 'Séverin Ferrand'
   description:
-    en:  'Privacy Engineer, Web Ecosystem Consulting'
+    en: 'Privacy Engineer, Web Ecosystem Consulting'
+albertomedina:
+  title:
+    en: 'Alberto Medina'
+  description:
+    en: 'Developer Relations Engineer'
 yurikoh:
   title:
     en: 'Yuriko Hirota'
   description:
-    en:  'Web Ecosystem Consultant'
+    en: 'Web Ecosystem Consultant'
