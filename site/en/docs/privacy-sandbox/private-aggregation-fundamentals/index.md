@@ -82,7 +82,7 @@ If a dimension has available key space for multiple digits, but the value has fe
 
 The aggregation key can be also generated with a hashing mechanism, such as [SHA-256](https://en.wikipedia.org/wiki/SHA-2). For example, the string `{"WidgetId":3276,"CountryID":67}` can be hashed then converted to a `BigInt` value of  `42943797454801331377966796057547478208888578253058197330928948081739249096287n`. If the hash value has more than 128 bits, you can truncate it to ensure it won’t exceed the maximum allowed bucket value of `2^128−1`.
 
-Within a Shared Storage worklet, you can access the [`crypto`](https://developer.mozilla.org/en-US/docs/Web/API/Crypto) and [`TextEncoder`](https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder) modules that can help you generate a hash. To learn more on generating a hash, see [`SubtleCrypto.digest()` on MDN](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest). 
+Within a Shared Storage worklet, you can access the [`crypto`](https://developer.mozilla.org/docs/Web/API/Crypto) and [`TextEncoder`](https://developer.mozilla.org/docs/Web/API/TextEncoder) modules that can help you generate a hash. To learn more on generating a hash, see [`SubtleCrypto.digest()` on MDN](https://developer.mozilla.org/docs/Web/API/SubtleCrypto/digest). 
 
 The following example describes how you can generate a bucket key from a hashed value: 
 
