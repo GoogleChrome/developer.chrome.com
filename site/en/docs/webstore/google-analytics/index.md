@@ -40,18 +40,14 @@ an individual user. For example, data may be withheld if it does not meet system
 
 Each time a user visits your extension listing, you will see a page view for the following URL: `/webstore/detail/ext/free/EXTENSION_ID/EXTENSION_NAME`
 
-When a user installs your extension, the web store also generates a page view for a fake
-`/track_install` URL. This is only sent if a user accepts the permission prompt to complete the
-install.
-
 ## Events {: #events }
 
 The Chrome Web Store also sends a number of events to your property:
 
 - [`page_view`][ga-pageview], [`session_start`][ga-sessionstart], [`first_visit`][ga-firstvisit] and
 [`user_engagement`][ga-userengagement]
-- `install`: A [custom event][ga-custom-events] sent when a user installs your extension, at
-the same time as the `track_install` page view (see [above](#page-views)). 
+- `install`: A [custom event][ga-custom-events] sent when a user installs your extension. This is
+only sent if a user accepts the permission prompt to complete the install.
 
 ## Monitoring ad performance {: #monitor-performance }
 
