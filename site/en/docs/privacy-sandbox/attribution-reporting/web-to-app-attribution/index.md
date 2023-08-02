@@ -38,14 +38,11 @@ The response is similar to how the reporting origin would respond when performin
 
 The response metadata includes both web and app destinations. These destination fields specify the website and app package where attribution will be triggered for the source.
 
-Under the hood, the `Attribution-Reporting-Register-OS-Source` header signals the Android OS to call register web source, which takes the metadata from the header and packages it up to send to the ad-tech URL specified in `Attribution-Reporting-Register-OS-Source`.
-
-You don't need to call `registerWebSource()` directly.
+Under the hood, the `Attribution-Reporting-Register-OS-Source` header signals the Android OS to call register web source, which takes the metadata from the header and packages it up to send to the ad-tech URL specified in `Attribution-Reporting-Register-OS-Source`. You don't need to call `registerWebSource()` directly.
 
 ## Next steps
 
-You can read more about web-to-app attribution in [Cross App and Web Attribution Measurement](https://github.com/WICG/attribution-reporting-api/blob/main/app_to_web.md).
-
-Also check out [Attribution reporting: cross app and web measurement](https://developer.android.com/design-for-safety/privacy-sandbox/attribution-app-to-web).
+- Read more about web-to-app attribution in [Cross App and Web Attribution Measurement](https://github.com/WICG/attribution-reporting-api/blob/main/app_to_web.md).
+- Also check out [Attribution reporting: cross app and web measurement](https://developer.android.com/design-for-safety/privacy-sandbox/attribution-app-to-web).
 
      
