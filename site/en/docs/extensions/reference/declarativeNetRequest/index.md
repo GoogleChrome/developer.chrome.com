@@ -44,7 +44,7 @@ In addition to the permissions described above, certain types of rulesets, stati
 To use this API specify one or more rulesets. A ruleset contains an array of rules. A single rule does one of the following:
 
 -  Block a network request.
--  Upgrade a request.
+-  Upgrade the schema (http to https).
 -  Prevent a request from getting blocked by negating any matching blocked rules.
 -  Redirect a network request.
 -  Modify request or response headers.
@@ -222,7 +222,8 @@ All types of rules can use regular expressions; however, the total number of reg
 Additionally, each rule must be less than 2KB once compiled. This roughly correlates with the complexity of the rule. If you try to load a rule that exceeds this limit, you will see a warning like the one below and the rule will be ignored.
 
 ```bash
-rules_1.json: Rule with id 1 specified a more complext regex than allowed as part of the "regexFilter" key.
+rules_1.json: Rule with id 1 specified a more complext regex than allowed
+as part of the "regexFilter" key.
 ```
 
 ### Interactions with service workers {: #interact-w-service-workers }
@@ -287,13 +288,13 @@ These examples require the following host permission:
 To work out the priority of a particular URL, look at the (developer-defined) `"priority"` key, the `"action"` key and the `"urlFilter"` key. These examples refer to the example rule file shown below them.
 
 **Navigation to https://google.com**
-Two rules cover this URL: the rules with IDs 1 and 4. The rule with ID 1 applies because `"block"` actions have a higher priority than `"redirect"` actions. The remaining rules do not apply because they are for longer URLs.
+: Two rules cover this URL: the rules with IDs 1 and 4. The rule with ID 1 applies because `"block"` actions have a higher priority than `"redirect"` actions. The remaining rules do not apply because they are for longer URLs.
 
 **Navigation to https://google.com/1234**
-Because of the longer URL, the rule with ID 2 now matches in addition to  the rules with IDs 1 and 4. The rule with ID 2 applies because `"allow"` has a higher priority than `"block"` and `"redirect"`.
+: Because of the longer URL, the rule with ID 2 now matches in addition to  the rules with IDs 1 and 4. The rule with ID 2 applies because `"allow"` has a higher priority than `"block"` and `"redirect"`.
 
 **Navigation to https://google.com/12345**
-All four rules match this URL. The rule with ID 3 applies because its developer-defined priority is the highest of the group.
+: All four rules match this URL. The rule with ID 3 applies because its developer-defined priority is the highest of the group.
 
 ```json
 [
