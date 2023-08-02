@@ -9,7 +9,7 @@ has_warning:
 
 ## Manifest {: #manifest }
 
-In addition to the permissions described above, certain types of rulesets, static rulesets specifically, require declaring the `"declarative_net_request"` manifest key, which should be a dictionary with a single key called `"rule_resources"`. This key is an array containing dictionaries of type `Ruleset`, as shown below. [Static rulesets](#static-rulesets) are explained later in this document.
+In addition to the permissions described above, certain types of rulesets, static rulesets specifically, require declaring the `"declarative_net_request"` manifest key, which should be a dictionary with a single key called `"rule_resources"`. This key is an array containing dictionaries of type `Ruleset`, as shown below. (Note that the name 'Ruleset' does not appear in the manifest's JSON since it is merely an array.) [Static rulesets](#static-rulesets) are explained later in this document.
 
 ```json
 {
@@ -49,15 +49,22 @@ To use this API specify one or more rulesets. A ruleset contains an array of rul
 -  Redirect a network request.
 -  Modify request or response headers.
 
-There are three types of rulesets.
+There are three types of rulesets, managed in slightly different ways.
 
--  Static
--  Dynamic
--  Session
+Dynamic
+: Persist across browser sessions and extension upgrades and are managed using JavaScript while an extension is in use.
+
+Session
+: Cleared when the browser shuts down and when a new version of the extension is installed. Session rules are managed using JavaScript while an extension is in use.
+
+Static
+: Packaged, installed, and updated when an extension is installed or upgraded. Static rules are stored in JSON-formatted rule files and listed in the manifest file.
+
+The next few sections explain ruleset types in detail.
 
 ### Dynamic and session-scoped rulesets {: #dynamic-and-session-rules }
 
-Dynamic and session-scoped rulesets are managed using JavaScript while an extension is in use.
+Dynamic and session rulesets are managed using JavaScript while an extension is in use.
 
 -  Dynamic rules persist across browser sessions and extension upgrades.
 -  Session rules are cleared when the browser shuts down and when a new version of the extension is installed.
@@ -96,7 +103,7 @@ For performance reasons there are also limits to the number of rules and ruleset
 
 ### Build rules {: #build-rules }
 
-Regardless of type, a rule starts with four fields as shown below. While the `"id"` and `"number"` keys merely take a number, the [`"action"`](#property-Rule-action) and [`"condition"`](#property-Rule-condition) provide a multitude of blocking and redirecting conditions. For example, the rule below blocks all script requests originating from "foo.com" to any URL with "abc" as a substring.
+Regardless of type, a rule starts with four fields as shown below. While the `"id"` and `"number"` keys merely take a number, the [`"action"`](#property-Rule-action) and [`"condition"`](#property-Rule-condition) keys provide a multitude of blocking and redirecting conditions. For example, the rule below blocks all script requests originating from "foo.com" to any URL with "abc" as a substring.
 
 ```json
 {
@@ -169,21 +176,21 @@ Within a single extension, prioritization is worked out using the following proc
 
 1. The rule with the highest developer-defined priority (in other words, the `"priority"` field) is returned.
 1. If there is more than one rule with the highest developer-defined priority, rules are prioritized using the `"action"` field, in the following order:
-    -  `allow`
-    -  `allowAllRequests`
-    -  `block`
-    -  `upgradeScheme`
-    -  `redirect`
+    1. `allow`
+    1. `allowAllRequests`
+    1. `block`
+    1. `upgradeScheme`
+    1. `redirect`
 
 1. If the action type is not `block` or `redirect`, any matching `modifyHeaders` rules are evaluated. Be aware that if there are any rules with a developer-defined priority lower than the priority specified for `allow` and `allowAllRequests`, such rules are ignored.
 1. If multiple rules modify the same header, modification is determined by the developer-defined `"priority"` field and by the specified operations.
-    -  If a rule appends to a header, then lower priority rules can only append to that header. Set and remove operations are not permitted.
+    -  If a rule appends to a header, then lower priority rules can only append to that header. Set and remove operations are not allowed.
     -  If a rule sets a header, then lower priority rules can only append to that header. No other modifications are allowed.
     -  If a rule removes a header, then lower priority rules cannot further modify the header.
 
 #### Rule prioritization between extensions {: #rule-prioritization-between-extensions }
 
-If only one extension has a rule that matches a request, that rule is applied. But if more than one extension matches a request, the following process is used.
+If only one extension has a rule that matches a request, that rule is applied. But if more than one extension matches a request, the following process is used:
 
 1. Rules are prioritized using the `"action"` field, in the following order:
     1. `block`
@@ -200,19 +207,17 @@ rule you're using.
 
 #### Static rules {: #static-rules }
 
-Static rules are those specified in rule files (which are specified in the manifest file).
+Static rules are those specified in rule files (which are specified in the manifest file). An extension can specify up to 50 static [rulesets](#type-Ruleset) as part of the `"rule_resources"` manifest key, but only 10 of these rulesets can be enabled at a time. The latter is called the [`MAX_NUMBER_OF_ENABLED_STATIC_RULESETS`](#property-MAX_NUMBER_OF_ENABLED_STATIC_RULESETS). Collectively, those rulesets are guaranteed at least 30,000 rules. This is called the [`GUARANTEED_MINIMUM_STATIC_RULES`](#property-GUARANTEED_MINIMUM_STATIC_RULES).
 
-An extension can specify up to **50** static [rulesets](#type-Ruleset) as part of the `"rule_resources"` manifest key, but only **10** of these rulesets can be enabled at a time. The latter is called the [`MAX_NUMBER_OF_ENABLED_STATIC_RULESETS`](#property-MAX_NUMBER_OF_ENABLED_STATIC_RULESETS). Collectively, those rulesets are guaranteed at least **30,000** rules. This is called the [`GUARANTEED_MINIMUM_STATIC_RULES`](#property-GUARANTEED_MINIMUM_STATIC_RULES). The number of rules available after that depends on how many rules are enabled by all the extensions installed on a user's browser. You can find this number at runtime by calling [`getAvailableStaticRuleCount()`](#method-getAvailableStaticRuleCount). You can see [an example of this](#update-static-rulesets) under [code examples](#code-examples).
-
-#update-static-rulesets
+The number of rules available after that depends on how many rules are enabled by all the extensions installed on a user's browser. You can find this number at runtime by calling [`getAvailableStaticRuleCount()`](#method-getAvailableStaticRuleCount). You can see [an example of this](#update-static-rulesets) under [code examples](#code-examples).
 
 #### Dynamic and session rules {: #dynamic-session-rules }
 
-The limits applied to dynamic and session rules are simpler than static rules. The total number of both cannot exceed **5000**. This is called the [`MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES`][#property-MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES].
+The limits applied to dynamic and session rules are simpler than static rules. The total number of both cannot exceed 5000. This is called the [`MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES`](#property-MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES).
 
 #### Rules that use regex {: #regex-rules }
 
-All types of rules can use regular expressions; however the total number of regex rules, of each type cannot exceed **1000**. This is called the [MAX_NUMBER_OF_REGEX_RULES](#property-MAX_NUMBER_OF_REGEX_RULES).
+All types of rules can use regular expressions; however, the total number of regex rules of each type cannot exceed 1000. This is called the [MAX_NUMBER_OF_REGEX_RULES](#property-MAX_NUMBER_OF_REGEX_RULES).
 
 Additionally, each rule must be less than 2KB once compiled. This roughly correlates with the complexity of the rule. If you try to load a rule that exceeds this limit, you will see a warning like the one below and the rule will be ignored.
 
@@ -226,7 +231,7 @@ declarativeNetRequest only applies to requests that reach the network stack. Thi
 
 ### Web accessible resources {: #implementation-web-accessible-resources }
 
-A declarative net request rule cannot redirect from a public resource request to a resource that is not web accessible. Doing so triggers an error. This is true even if the specified web accessible resource is owned by the redirecting extension. To declare resources for declarative net requests, use the manifest's [`"web_accessible_resources"`](/docs/extensions/mv3/manifest/web_accessible_resources/) array.
+A declarativeNetRequest rule cannot redirect from a public resource request to a resource that is not web accessible. Doing so triggers an error. This is true even if the specified web accessible resource is owned by the redirecting extension. To declare resources for declarativeNetRequests, use the manifest's [`"web_accessible_resources"`](/docs/extensions/mv3/manifest/web_accessible_resources/) array.
 
 ## Examples {: #example }
 
@@ -381,7 +386,7 @@ The following example uses regular expressions to redirect from `https://www.abc
 
 #### Headers {: #headers }
 
-The following example removes all cookies both main and sub frames.
+The following example removes all cookies from both a main frame and any sub frames.
 
 ```json
 {
