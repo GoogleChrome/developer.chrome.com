@@ -480,7 +480,7 @@ First-party data is data owned by the site on their users. For example, if a use
 
 In a Protected Audience auction, the advertiser can use their first-party data to determine the [ad interest group membership](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#11-joining-interest-groups), and can also pass data into the interest group as [`userBiddingSignals`](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#12-interest-group-attributes). The first-party data from the advertiser will be available only for the buyers during the bid generation step, and is not available for the sellers.  
 
-For example, if the advertiser knows the user’s favorite color, the value can be passed in when the user is added to an interest group: 
+For example, if the advertiser knows the user’s favorite color, the value can be set in the interest group config as `userBiddingSignals` when the user is added to an interest group: 
 
 ```js
 const interestGroup = {
@@ -495,7 +495,7 @@ const interestGroup = {
 navigator.joinAdInterestGroup(interestGroup, 3600);
 ```
 
-The publisher can also pass their first-party data in by setting the signals in the [auction config](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#21-initiating-an-on-device-auction) when initiating the auction, and can control who receives the first-party data. When a publisher passes the first-party data in as `auctionSignals`, it is available to both buyers and sellers.  When the data is passed in as `sellerSignals`, it is available only to the seller, and when passed in as `perBuyerSignals`, it is available only to the specified buyers.  The publisher can also pass in first-party data to component auctions. The publisher and the auction participants should agree before on what first-party data needs to be shared, and how the data needs to be formatted.  
+The publisher can also pass in their first-party data by setting the signals in the [auction config](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#21-initiating-an-on-device-auction) when initiating the auction, and can control who receives the first-party data. When a publisher passes the first-party data in as `auctionSignals`, it is available to both buyers and sellers.  When the data is passed in as `sellerSignals`, it is available only to the seller, and when passed in as `perBuyerSignals`, it is available only to the specified buyers.  The publisher can also pass in first-party data to component auctions. The publisher and the auction participants should agree before on what first-party data needs to be shared, and how the data needs to be formatted.  
 
 The following example describes how the first-party data can be passed in by the publisher to various auction participants: 
 
