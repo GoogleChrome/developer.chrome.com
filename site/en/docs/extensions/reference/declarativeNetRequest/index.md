@@ -51,9 +51,9 @@ To use this API specify one or more rulesets. A ruleset contains an array of rul
 
 There are three types of rulesets.
 
--  Static rules
--  Dynamic rules
--  Session rules
+-  Static
+-  Dynamic
+-  Session
 
 ### Dynamic and session-scoped rulesets {: #dynamic-and-session-rules }
 
