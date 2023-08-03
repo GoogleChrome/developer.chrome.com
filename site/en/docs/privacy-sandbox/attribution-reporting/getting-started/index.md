@@ -126,7 +126,7 @@ Before you can register sources and triggers and get reports, your sites need to
     While headers can be used for both event-level and aggregatable reports, the content of the headers will be different for each of these report types. 
     {% endAside %}
 {: #trigger}
-1. **Register a trigger (aggregatable reports):** [Registering a trigger](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger) aggregatable reports.
+1. **Register a trigger (aggregatable reports):** [Registering a trigger](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger)
     1. In the `Attribution-Reporting-Register-Trigger` header add the
   necessary fields to generate aggregatable reports (refer to the
   [Example code](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/main/attribution-reporting/functions/apps/adtech.js)):
