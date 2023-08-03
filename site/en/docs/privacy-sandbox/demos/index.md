@@ -7,13 +7,10 @@ description: >
   Demos and colabs walk you through the Privacy Sandbox APIs.
 date: 2023-05-29
 authors:
-  - alexandrawhite
+  - nmichell
 ---
 
-If you've used any of our demos before and can't quite remember where you found them, here's a list.
-
-Most of them will need background information that's found in the documentation, so if 
-you haven't read it or have questions, take a look at the docs for each API, listed with the demos below.
+There are a number of demos available for the Privacy Sandbox APIs. Most of them will require you to be familiar with the APIs, so if you haven't read the docs, we've listed them along with the demos here.
 
 <p>
 
@@ -272,7 +269,21 @@ https://developer.chrome.com/en/docs/privacy-sandbox/chips/
 
 {% endDetails %}
 -->
+{% Details %}
+{% DetailsSummary %}
+### Private State Token API
+{% endDetailsSummary %}
+{% Columns %}
+{% Column %}
+With the Private State Token API, a website can issue cryptographic tokens to a user it trusts, which can later be used elsewhere. The tokens are stored securely by the user's browser, and can then be redeemed in other contexts to confirm the user's authenticity. Check out the API in this demo.
 
- Private State Token DEMO
-https://private-state-token-demo.glitch.me/
+[Demo](https://private-state-token-demo.glitch.me/)
 
+[Docs](/docs/privacy-sandbox/trust-tokens/)
+{% endColumn %}
+
+{% Column %}
+<a href="https://private-state-token-demo.glitch.me/">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/OVudOoLOz1BKNEmfY1pc.png", alt="ALT_TEXT_HERE", width="620", height="519" %}</a>
+{% endColumn %}
+{% endColumns %}
+{% endDetails %}
