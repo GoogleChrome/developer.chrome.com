@@ -6,7 +6,7 @@ updated: 2020-12-02
 description: Learn about the new features for web applications that use Trusted Web Activity.
 authors:
   - andreban
-  - adrianajara
+  - ajara
 ---
 
 Since [Trusted Web Activity][1] was introduced last year, the Chrome team continues to work on the

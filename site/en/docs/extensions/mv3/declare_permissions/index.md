@@ -150,8 +150,8 @@ The following table lists the currently available permissions. For a list of per
     </tr>
     <tr id="activeTab">
       <td><code>"activeTab"</code></td>
-      <td>Requests that the extension be granted permissions according to the <a href="/docs/extensions/mv3/manifest/activeTab">activeTab</a>
-        specification.</td>
+      <td>Gives temporary access to the active tab through a user gesture. See <a href="/docs/extensions/mv3/manifest/activeTab"><code>activeTab</code></a>
+        for details.</td>
     </tr>
     <tr id="alarms">
       <td><code>"alarms"</code></td>
@@ -160,16 +160,10 @@ The following table lists the currently available permissions. For a list of per
     <tr id="background">
       <td><code>"background"</code></td>
       <td>
-        <p id="bg">Makes Chrome start up early and shut down late, so that extensions can have a longer
-          life.</p>
-        <p>When any installed extension has "background" permission, Chrome runs
-          (invisibly) as soon as the user logs into their computer—before the user launches Chrome. The "background"
-          permission also makes Chrome continue running (even after its last window is closed) until the user explicitly
-          quits Chrome.</p>
+        <p id="bg">Makes Chrome start up early (as soon as the user logs into their computer—before the user launches Chrome), and shut down late (even after its last window is closed until the user explicitly quits Chrome).</p>
         <div class="aside aside--note"><b>Note:</b> Disabled extensions are treated as if they aren't
           installed.</div>
-	<p>You should use the "background" permission with <a
-          href="/docs/extensions/mv3/background_pages/">background scripts</a>.</p></td>
+    </td>
     </tr>
     <tr id="bookmarks">
       <td><code>"bookmarks"</code></td>
@@ -223,12 +217,8 @@ The following table lists the currently available permissions. For a list of per
     <tr id="declarativeNetRequestFeedback">
       <td><code>"declarativeNetRequestFeedback"</code></td>
       <td>Gives access to events and methods within the <a
-          href="/docs/extensions/reference/declarativeNetRequest/">chrome.declarativeNetRequest</a> API which return information on declarative
+          href="/docs/extensions/reference/declarativeNetRequest/">chrome.declarativeNetRequest</a> API which returns information on declarative
         rules matched.</td>
-    </tr>
-    <tr id="declarativeWebRequest">
-      <td><code>"declarativeWebRequest"</code></td>
-      <td>Gives access to the <a href="/docs/extensions/reference/declarativeWebRequest/">chrome.declarativeWebRequest</a> API.</td>
     </tr>
     <!-- No corresponding reference entry
     <tr id="displaySource">
@@ -251,6 +241,14 @@ The following table lists the currently available permissions. For a list of per
     <tr id="downloads">
       <td><code>"downloads"</code></td>
       <td>Gives access to the <a href="/docs/extensions/reference/downloads/">chrome.downloads</a> API.</td>
+    </tr>
+    <tr id="downloads-open">
+      <td><code>"downloads.open"</code></td>
+      <td>Permission required to use <a href="/docs/extensions/reference/downloads/#method-open">chrome.downloads.open()</a></td>
+    </tr>
+    <tr id="downloads-ui">
+      <td><code>"downloads.ui"</code></td>
+      <td>Permission required to use <a href="/docs/extensions/reference/downloads/#method-setUiOptions">chrome.downloads.setUiOptions()</a></td>
     </tr>
     <tr id="enterprise.deviceAttributes">
       <td><code>"enterprise.deviceAttributes"</code></td>
@@ -498,3 +496,5 @@ The following table lists the currently available permissions. For a list of per
 [mdn-fetch]: https://developer.mozilla.org/docs/Web/API/Fetch_API/Using_Fetch
 [perm-update]: /docs/extensions/mv3/permission_warnings/#update_permissions
 [vision-optperms]: /docs/extensions/mv3/intro/platform-vision/#improved-user-visibility-and-control
+[file-scheme-allow]: /docs/extensions/reference/extension/#method-isAllowedFileSchemeAccess
+[incognito-allow]: /docs/extensions/reference/extension/#method-isAllowedIncognitoAccess

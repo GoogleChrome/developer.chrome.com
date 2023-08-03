@@ -845,7 +845,7 @@ if (document.featurePolicy.allowsFeature('attribution-reporting')) {
 }
 
 if ('runAdAuction' in navigator) {
-  // FLEDGE enabled
+  // Protected Audience API enabled
 }
 
 if ('browsingTopics' in document) {

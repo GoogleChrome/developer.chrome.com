@@ -9,6 +9,7 @@ date: 2023-05-31
 authors:
   - beaufortfrancois
 tags:
+  - new-in-webgpu
   - webgpu
   - chrome-114
 ---
@@ -52,3 +53,5 @@ Descriptor labels for invalid objects are not being dropped anymore so that you 
 ### Add missing APIs for Node.js
 
 The `GPUAdapter::requestAdapterInfo()` and `GPUBuffer::getMapState()` methods are now implemented for Node.js. See [issue dawn:1761](https://bugs.chromium.org/p/dawn/issues/detail?id=1761).
+
+{% Partial 'webgpu/whats-new.md' %}

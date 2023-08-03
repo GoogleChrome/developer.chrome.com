@@ -16,10 +16,7 @@ tags:
 <!--image/dPDCek3EhZgLQPGtEG3y0fTn4v82/gctGASDKBFTUtOQqVq2H.png  -->
 
 {% Partial 'devtools/banner.md' %}
-
-*There is no 'What's new in DevTools' video for this release, but you can watch this quick recap of the recent features.*
-
-{% YouTube id='CrSmjooOEiE' %}
+{% YouTube id='e8tl_yp5BQg' %}
 
 <!-- $contentStart -->
 
@@ -139,7 +136,7 @@ Additionally, the ID of the interaction has been moved from the tooltip to **Sum
 
 Chromium issues: [1432512](https://crbug.com/1432512), [1432509](https://crbug.com/1432509).
 
-### Web Vitals updates {: #web-vitals }
+### The Web Vitals track moved {: #web-vitals }
 
 The **Performance** panel has removed the following tracks:
 

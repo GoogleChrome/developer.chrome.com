@@ -1,12 +1,17 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Stay secure"
+seoTitle: "MV2 - Stay secure [Deprecated]"
 date: 2018-03-06
 updated: 2019-07-17
 description: How to keep your Chrome Extension secure.
 ---
 
-{% Partial 'extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Stay secure](/docs/extensions/mv3/security/) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 Extensions have access to special privileges within the browser, making them an appealing target for
 attackers. If an extension is compromised, _every_ user of that extension becomes vulnerable to

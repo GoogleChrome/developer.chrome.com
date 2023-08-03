@@ -740,6 +740,15 @@ redirects:
 - from: /docs/android/custom-tabs/integration-guide/
   to: /docs/android/custom-tabs/guide-get-started/
 
+- from: /docs/extensions/reference/declarativeNetRequest/#limits-constants
+  to:  /docs/extensions/reference/declarativeNetRequest/#limits
+
+- from: /docs/extensions/reference/declarativeNetRequest/#limits-rules
+  to:  /docs/extensions/reference/declarativeNetRequest/#static-rules
+
+- from: /docs/extensions/reference/declarativeNetRequest/#limits-global-static-rule-limit
+  to:  /docs/extensions/reference/declarativeNetRequest/#static-rules
+  
 # DO NOT REMOVE. This seems pointless but we rewrite "." to "_" inside our server's code, so if the
 # URL is fine for all but incorrect syntax, we'll fix it up.
 - from: /...

@@ -4,6 +4,15 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 
 {# $content #}
 
+### Chrome 116 {: #chrome116 }
+
+* [Improved debugging of missing stylesheets](/blog/new-in-devtools-116/#stylesheets)
+* [Linear timing support in Elements > Styles > Easing Editor](/blog/new-in-devtools-116/#linear)
+* [Storage buckets support and metadata view](/blog/new-in-devtools-116/#storage)
+* [Lighthouse 10.3.0](/blog/new-in-devtools-116/#lighthouse)
+* [Accessibility: Keyboard commands and improved screen reading](/blog/new-in-devtools-116/#accessibility)
+* [Miscellaneous highlights](/blog/new-in-devtools-116/#misc)
+
 ### Chrome 115 {: #chrome115 }
 
 * [Elements improvements](/blog/new-in-devtools-115/#elements)
@@ -30,6 +39,7 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 * [performance.mark() shows timing on hover in Performance > Timings](/blog/new-in-devtools-114/#mark)
 * [profile() command populates Performance > Main](/blog/new-in-devtools-114/#profile)
 * [Warning for slow user interactions](/blog/new-in-devtools-114/#slow-interaction-warning)
+* [Web Vitals updates](/blog/new-in-devtools-114/#web-vitals)
 * [JavaScript Profiler deprecation: Phase three](/blog/new-in-devtools-114/#js-profiler)
 * [Miscellaneous highlights](/blog/new-in-devtools-114/#misc)
 

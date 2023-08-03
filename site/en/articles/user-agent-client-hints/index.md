@@ -167,7 +167,7 @@ Sec-CH-UA-Platform: "macOS"
 
 {% Aside 'caution' %}
 These properties are more complex than just a single value, so [Structured
-Headers](https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html)
+Headers](https://httpwg.org/specs/rfc8941.html)
 are used for representing lists and booleans.
 {% endAside %}
 

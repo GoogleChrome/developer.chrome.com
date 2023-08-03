@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manifest for storage areas"
+seoTitle: "Chrome Apps Manifest for storage areas [Deprecated]"
 #date: TODO
 #updated: TODO
 #description: TODO

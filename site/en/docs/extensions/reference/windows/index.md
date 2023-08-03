@@ -35,9 +35,8 @@ window. Under some circumstances, there may be no current window for background 
 
 ![Two windows, each with one tab](windows.png)
 
-You can find simple examples of using the windows module in the [examples/api/windows][11]
-directory. Another example is in the [tabs_api.html][12] file of the [inspector][13] example. For
-other examples and for help in viewing the source code, see [Samples][14].
+To try this API, install the [windows API example](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/windows) from the [chrome-extension-samples](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples)
+repository.
 
 [1]: #type-Window
 [2]: /docs/extensions/reference/tabs#type-Tab

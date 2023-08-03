@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: "Step 4: Open External Links With a Webview"
+seoTitle: "Step 4: Open External Links With a Webview [Deprecated]"
 date: 2014-10-17
 updated: 2014-10-20
 description: How to show external web content in your Chrome App.

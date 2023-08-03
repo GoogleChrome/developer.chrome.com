@@ -5,7 +5,7 @@ authors:
   - sofiayem
 date: 2023-05-30
 description: ""
-hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/s7ZpM4wjhbRf5K6Vspk3.jpg'
+hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/3epzH8UKrCVrMdc7fEpG.png'
 alt: ''
 tags:
   - new-in-devtools
@@ -15,10 +15,7 @@ tags:
 <!--image/dPDCek3EhZgLQPGtEG3y0fTn4v82/gctGASDKBFTUtOQqVq2H.png  -->
 
 {% Partial 'devtools/banner.md' %}
-
-*There is no 'What's new in DevTools' video for this release, but you can watch this quick recap of the recent features.*
-
-{% YouTube id='CrSmjooOEiE' %}
+{% YouTube id='e8tl_yp5BQg' %}
 
 <!-- $contentStart -->
 
@@ -135,7 +132,7 @@ Additionally, the checkboxes in **Ignore List** got clearer text.
 
 Chromium issues: [1440958](https://crbug.com/1440958), [1364501](https://crbug.com/1364501).
 
-## Network > Response improvements {: #network }
+## Network > Response pretty-printing by default {: #network }
 
 The **Network** > **Response** pane now pretty-prints minified response bodies by default, similar to [the **Sources** panel](/blog/new-in-devtools-110/#pretty-print).
 

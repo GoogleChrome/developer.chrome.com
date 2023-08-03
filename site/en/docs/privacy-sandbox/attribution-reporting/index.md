@@ -21,9 +21,9 @@ authors:
 This article covers the basics of Attribution Reporting and explains some
 underlying concepts, but doesn't go into much technical detail.
 
-- If you work in **advertising or ad tech**, you'll learn about how this API to
-  supports functions that are currently supported by third-party cookies. Check
-  out the API [use cases](#use-cases-and-features), with a more details of how
+- If you work in **advertising or ad tech**, you'll learn about how this API
+  provides functionality that is currently enabled by third-party cookies. Check
+  out the API [use cases](#use-cases-and-features), which have more detail of how
   [the reports are generated](#how-does-the-attribution-reporting-api-work).
 - If you're a **developer or software engineer**, head over to the
   [full system overview](/docs/privacy-sandbox/attribution-reporting/system-overview/) or
@@ -268,7 +268,7 @@ Permissions-Policy: attribution-reporting=()
 
 ## How does the Attribution Reporting API work?
 
-The Attribution Reporting API enables measureing two events that are linked
+The Attribution Reporting API enables measuring two events that are linked
 together: an event on a publisher's website, such as a user viewing or clicking
 an ad, with a subsequent conversion on an advertiser site.
 
@@ -352,7 +352,7 @@ separate.
 
 **Event-level reports** link an ad-side identifier with a small amount of
 conversion-side data. While they do provide cross-site information about a
-conversion, but the conversion-side information is too coarse to join user
+conversion, the conversion-side information is too coarse to join user
 identity across sites.
 
 **Summary reports** provide detailed insights, but only at an aggregated level; because the contents

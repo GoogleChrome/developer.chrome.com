@@ -1,12 +1,17 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Installing extensions on Linux"
+seoTitle: "MV2 - Installing extensions on Linux [Deprecated]"
 date: 2017-12-14
 updated: 2018-03-23
 description: How to package, host, and update crx files from a personal server.
 ---
 
-{% Partial 'extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Installing extensions on Linux](/docs/extensions/mv3/linux_hosting/) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 Extensions hosted outside of the [Chrome Web Store][1] can only be installed by Linux users. This
 article describes how to package, host, and update `.crx` files from a personal server. If

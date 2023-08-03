@@ -51,11 +51,15 @@ En general, las incrustaciones de video, los widgets de botones sociales y los w
 
 - [Daugilas/lazyYT](https://github.com/Daugilas/lazyYT)
 
+- [ngx-lite-video](https://github.com/karim-mamdouh/ngx-lite-video)
+
 ### Reproductor incrustado de Vimeo
 
 - [luwes/lite-vimeo-embed](https://github.com/luwes/lite-vimeo-embed)
 
 - [slightlyoff/lite-vimeo](https://github.com/slightlyoff/lite-vimeo)
+
+- [ngx-lite-video](https://github.com/karim-mamdouh/ngx-lite-video)
 
 ### Chat en vivo (Intercom, Drift, Help Scout, Facebook Messenger)
 

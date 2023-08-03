@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Managing HTML5 Offline Storage"
+seoTitle: "Chrome Apps - Managing HTML5 Offline Storage [Deprecated]"
 date: 2015-03-10
 updated: 2018-04-26
 description: How to store data client-side in your Chrome App so that it works offline.
