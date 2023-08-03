@@ -2,9 +2,9 @@
 layout: 'layouts/doc-post.njk'
 title: 'Shared Storage'
 subhead: >
-  Allow access to unpartitioned cross-site data in a secure environment.
+  Allow unlimited, cross-site storage write access with privacy-preserving read access.
 description: >
-  Allow access to unpartitioned cross-site data in a secure environment.
+  Allow unlimited, cross-site storage write access with privacy-preserving read access.
 date: 2022-04-25
 updated: 2023-04-14
 authors:

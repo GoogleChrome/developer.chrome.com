@@ -43,7 +43,8 @@ const domainRedirectHandler = (req, res, next) => {
   // Don't forward POST or anything odd.
   if (!['GET', 'HEAD'].includes(req.method)) {
     res.sendStatus(405);
-    return res.end();
+    res.end();
+    return;
   }
 
   let url = req.url;

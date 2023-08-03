@@ -26,7 +26,7 @@ tags:
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/qsleBCUrr2twMujW0R94.png", alt="Recorder 패널에서 더블 클릭 & 우 클릭 이벤트 캡쳐하기", width="800", height="572" %}
 
-다음 [예제](https://jec.fyi/demo/dbl-right-click) 에서, [recording](/docs/devtools/recorder/#record) 을 시작하고 아래 스텝을 따라해보세요:
+다음 [예제](https://jec.fish/demo/dbl-right-click) 에서, [recording](/docs/devtools/recorder/#record) 을 시작하고 아래 스텝을 따라해보세요:
 
 - 카드를 더블 클릭하면 확대됩니다.
 - 카드를 우클릭하고 컨텍스트 메뉴에서 동작을 선택하세요.

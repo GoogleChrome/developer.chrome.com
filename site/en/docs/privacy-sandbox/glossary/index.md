@@ -18,7 +18,7 @@ authors:
 if something is missing!
 {% endAside %}
 
-## Ad auction (FLEDGE) {: #ad-auction }
+## Ad auction (Protected Audience API) {: #ad-auction }
 
 {% Partial 'privacy-sandbox/glossary-entries/ad-auction.njk' %}
 

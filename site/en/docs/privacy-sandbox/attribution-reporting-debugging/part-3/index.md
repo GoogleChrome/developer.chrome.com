@@ -163,7 +163,7 @@ The source registration success verbose debug report is sent even if the unattri
 : [Details and report body](https://github.com/WICG/attribution-reporting-api/blob/main/verbose_debugging_reports.md#trigger-event-noise)
 
 `trigger-event-excessive-reports`
-: This is generated if the report count is over limit; you can register at most one conversion for views, and three for clicks. Note that you can configure what reports to receive by setting [priorities](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit#heading=h.4ju6u3z5bons).
+: This is generated if the report count is over limit; you can register at most one conversion for views, and three for clicks. Note that you can configure what reports to receive by setting [priorities](/docs/privacy-sandbox/attribution-reporting/change-attribution-logic/).
 [Details and report body](https://github.com/WICG/attribution-reporting-api/blob/main/verbose_debugging_reports.md)
 
 ### Storage limitations reports

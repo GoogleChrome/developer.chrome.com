@@ -10,7 +10,7 @@ externalUrl: https://jsconf.cl/
 sessions:
   - participants:
       - jakearchibald
-      - adrianajara
+      - ajara
       - petelepage
       - unakravets
       - kosamari

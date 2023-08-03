@@ -163,7 +163,7 @@ Selectors and style queries aren’t the only places that we can embed logic wit
   </figcaption>
 </figure>
 
-This feature uses [Knuth’s Tex algorithm](https://en.wikipedia.org/wiki/TeX) to identify the most visually balanced position for the text in a headline, creating a more even effect. It works for any language too!
+To balance the text, the browser effectively performs a binary search for the smallest width which doesn't cause any additional lines, stopping at one CSS pixel (not display pixel). To further minimize steps in the binary search the browser starts with 80% of the average line width.
 
 <figure>
   {% Video
@@ -213,7 +213,7 @@ The letter’s block-offset, or “sink”, for where the letter will sit.
   }
 %}
 
-Learn more about using `intial-letter` [here](](/blog/control-your-drop-caps-with-css-initial-letter/)).
+Learn more about using `intial-letter` [here](](/blog/control-your-drop-caps-with-css-initial-letter/).
 
 ### Dynamic viewport units 
 
@@ -595,13 +595,13 @@ In order for all of this to transition popovers in and out smoothly, the web nee
 
 As a part of the work to enable nice transitions for popovers, selectmenus, and even existing elements like dialogs or custom components, browsers are enabling new plumbing to support these animations.
 
-The following popover demo, animates popovers in and out using `:popover-open` for the open state, `@initial` for the before-open state, and applies a transform value to the element directly for the after-open-is-closed state. To make this all work with display, it needs adding to the `transition` property, like so:
+The following popover demo, animates popovers in and out using `:popover-open` for the open state, `@starting-style` for the before-open state, and applies a transform value to the element directly for the after-open-is-closed state. To make this all work with display, it needs adding to the `transition` property, like so:
 
 ```css
 .settings-popover {
   &:popover-open {
     /*   0. before-change   */
-    @initial {
+    @starting-style {
       transform: translateY(20px);
       opacity: 0;
     }
@@ -630,10 +630,6 @@ The following popover demo, animates popovers in and out using `:popover-open` f
   height: 500,
   tab: 'result'
 } %}
-
-{% Aside 'caution' %}
-This is currently an experimental API, and the syntax for `@initial` might change before going stable.
-{% endAside %}
 
 ## Interactions
 

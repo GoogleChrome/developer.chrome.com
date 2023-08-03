@@ -2,7 +2,7 @@
 layout: 'layouts/blog-post.njk'
 title: "First-Party Sets: developer guide"
 date: 2023-01-12
-updated: 2023-12-05
+updated: 2023-05-10
 thumbnail: 'image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/SV7SXAQRcVnBZEgjgxYc.png'
 alt: A diagram showing an embedded site calling requestStorageAccess.
 tags: 
@@ -122,6 +122,12 @@ rSA grants apply per [frame](https://www.w3.org/TR/html401/present/frames.html).
 Each new frame will need to request storage access individually and it will automatically be granted access.  Only the first request requires user gesture, any subsequent requests initiated by the iframe, such as navigation or subresources will not need to wait for a user gesture as that will be granted for the browsing session by the initial request.
 
 Refreshing, reloading, or otherwise recreating the iframe will require requesting access again.
+
+### Cookie requirements
+
+Cookies must specify both the `SameSite=None` and `Secure` attributes as rSA only [provides access for cookies that are already marked for use in cross-site contexts](https://privacycg.github.io/storage-access/#cookies). 
+
+Cookies with `SameSite=Lax`, `SameSite=Strict`, or without a `SameSite` attribute are for first-party use only and will **never** be shared in a cross-site context regardless of rSA.
 
 ### Security
 

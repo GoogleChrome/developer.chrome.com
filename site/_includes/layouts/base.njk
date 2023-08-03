@@ -17,12 +17,12 @@
     <link rel="preload" as="font" crossorigin href="/fonts/google-sans-v2003/regular/latin.woff2">
     <link rel="preload" as="font" crossorigin href="/fonts/google-sans-v2003/medium/latin.woff2">
 
-    
+
     {% block css %}{% endblock %}
 
     <script type="module" src="{{ helpers.hashForProd('/js/main.js') }}"></script>
     {% if process.env.NODE_ENV === 'production' %}
-      <script async src="https://www.google-analytics.com/analytics.js"></script>
+      <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5QF3RT2"></script>
     {% endif %}
 
     {# Private Aggregation API testing script #}
@@ -46,7 +46,7 @@
     {# Exclude the /articles/ section as a control #}
     <script type="speculationrules">
     {
-      "prefetch": [
+      "prerender": [
         {
           "source": "document",
           "where": {
@@ -61,7 +61,8 @@
                 }
               }
             ]
-          }
+          },
+          "eagerness": "moderate"
         }
       ]
     }

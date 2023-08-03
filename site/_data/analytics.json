@@ -1,9 +1,4 @@
 {
-  "id": "UA-41980257-1",
-  "dimensions": {
-    "TRACKING_VERSION": "dimension1",
-    "NAVIGATION_TYPE": "dimension2",
-    "WEB_VITALS_DEBUG": "dimension3"
-  },
-  "version": 4
+  "id": "GTM-5QF3RT2",
+  "version": 5
 }

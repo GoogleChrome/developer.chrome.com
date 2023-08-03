@@ -14,7 +14,7 @@ video {
 }
 </style>
 
-This guide explains how to measure engagement signals for Chrome Custom tabs. If your app regularly surfaces links to web content to its users, for example in a news feed, it can be important to know which links users find valuable and which not. In Custom Tabs, you can measure session specific user engagement via the number of navigations, scroll direction changes and scroll depth.
+This guide explains how to measure engagement signals for Chrome Custom tabs. If your app regularly surfaces links to web content to its users, for example in a news feed, it can be important to know which links users find valuable and which not. In Custom Tabs, you can measure session specific user engagement via the number of navigations, scroll direction changes and scroll depth. To see engagement signals in action, checkout the [Custom Tabs demo app on GitHub](https://github.com/GoogleChrome/android-browser-helper/blob/main/demos/custom-tabs-example-app/src/main/java/org/chromium/customtabsdemos/EngagementSignalsActivity.java).
 
 <figure>
   {% Video src="video/6hHqS5auVgWhN0cQNQztaJx5w4M2/m3WWGlZ2fFVZLgYjX9QV.mp4", controls="true", width="400", height="866", class="screenshot" %}
@@ -29,7 +29,7 @@ This feature requires `androidx.browser:browser:1.6.0-alpha01` or higher.
 ```groovy
 dependencies {
    …
-   implementation 'androidx.browser:browser:1.6.0-alpha01'
+   implementation 'androidx.browser:browser:1.6.0-alpha02'
 }
 ```
 {% endAside %}
@@ -37,7 +37,7 @@ dependencies {
 Custom Tabs provide two different callbacks for measuring user engagement: 
 
 * [`CustomTabsCallback`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsCallback) for tracking basic navigation events, such as `"NAVIGATION_STARTED"` or `"NAVIGATION_FINISHED"`.
-* [`EngagementSignalsCallback`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsCallback) for tracking page specific user engagement, such as scroll direction or scroll percentage.
+* [`EngagementSignalsCallback`](https://developer.android.com/reference/androidx/browser/customtabs/EngagementSignalsCallback) for tracking page specific user engagement, such as scroll direction or scroll percentage.
 
 Both require an active [`CustomTabsServiceConnection`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsServiceConnection). See the [previous `CustomTabsService` guide](/docs/android/custom-tabs/guide-warmup-prefetch/) for details on how to connect to a `CustomTabsService`.
 

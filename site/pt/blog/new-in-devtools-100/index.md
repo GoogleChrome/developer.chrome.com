@@ -42,8 +42,8 @@ Como de costume, você pode assistir ao último [vídeo What's New in DevTools](
 ## Visualize e edite @supports em rules no painel Estilos {: #supports }
 <!-- You can now view and edit the CSS `@supports` at-rules in the **Styles** pane. These changes make it easier to experiment with the at-rules in real time. -->
 Agora você pode visualizar e editar as at-rules do CSS `@supports` no painel **Estilos**. Essas alterações facilitam a experiência com as rules em tempo real.
-<!-- Open this [demo page](https://jec.fyi/demo/at-support), [inspect](/docs/devtools/dom/#inspect) the `<div class=”box”>` element, view the `@supports` at-rules in the **Styles** pane. Click on the rule’s declaration to edit it.  -->
-Abra esta [página de demonstração](https://jec.fyi/demo/at-support), [inspecione](/docs/devtools/dom/#inspect) o elemento `<div class=”box”>`, visualize as rules do `@supports` no painel **Estilos**. Clique na declaração da rule para editá-la.
+<!-- Open this [demo page](https://jec.fish/demo/at-support), [inspect](/docs/devtools/dom/#inspect) the `<div class=”box”>` element, view the `@supports` at-rules in the **Styles** pane. Click on the rule’s declaration to edit it.  -->
+Abra esta [página de demonstração](https://jec.fish/demo/at-support), [inspecione](/docs/devtools/dom/#inspect) o elemento `<div class=”box”>`, visualize as rules do `@supports` no painel **Estilos**. Clique na declaração da rule para editá-la.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/vnokX5Hswmbvlb5weusO.png", alt="Visualize e edite @supports em rules", width="800", height="502" %}
 
@@ -69,8 +69,8 @@ Ao determinar um seletor exclusivo durante a gravação, o painel [Gravação](/
 
 <!-- The attributes above are common selectors used in test automation.  -->
 Os atributos acima são seletores comuns usados na automação de teste.
-<!-- For example, [start a new recording](/docs/devtools/recorder/#record) with this [demo page](https://jec.fyi/demo/recorder). Fill in an email address and observe the selector value. -->
-Por exemplo, [inicie uma nova gravação](/docs/devtools/recorder/#record) com esta [página de demonstração](https://jec.fyi/demo/recorder). Preencha um endereço de e-mail e observe o valor do seletor.
+<!-- For example, [start a new recording](/docs/devtools/recorder/#record) with this [demo page](https://jec.fish/demo/recorder). Fill in an email address and observe the selector value. -->
+Por exemplo, [inicie uma nova gravação](/docs/devtools/recorder/#record) com esta [página de demonstração](https://jec.fish/demo/recorder). Preencha um endereço de e-mail e observe o valor do seletor.
 <!-- Since the email element has `data-testid` defined, it’s used as the selector automatically instead of the `id` or `class` attributes. -->
 Como o elemento email tem `data-testid` definido, ele é usado como seletor automaticamente em vez dos atributos `id` ou `class`.
 
@@ -81,8 +81,8 @@ Como o elemento email tem `data-testid` definido, ele é usado como seletor auto
 ### Personalize o seletor de gravação {: #customize-selector }
 <!-- You can customize the selector of a recording if you are not using the [common selectors](/docs/devtools/recorder/#selector). -->
 Você pode personalizar o seletor de uma gravação se não estiver usando os [seletores comuns](/docs/devtools/recorder/#selector).
-<!-- For example, this [demo page](https://jec.fyi/demo/recorder) uses the `data-automate` attribute as the selector. [start a new recording](/docs/devtools/recorder/#record) and enter the `data-automate` as the selector attribute. Fill in an email address and observe the selector value (`[data-automate=email-address]`). -->
-Por exemplo, esta [página de demonstração](https://jec.fyi/demo/recorder) usa o atributo `data-automate` como seletor. [iniciar uma nova gravação](/docs/devtools/recorder/#record) e digite `data-automate` como atributo seletor. Preencha um endereço de e-mail e observe o valor do seletor (`[data-automate=email-address]`).
+<!-- For example, this [demo page](https://jec.fish/demo/recorder) uses the `data-automate` attribute as the selector. [start a new recording](/docs/devtools/recorder/#record) and enter the `data-automate` as the selector attribute. Fill in an email address and observe the selector value (`[data-automate=email-address]`). -->
+Por exemplo, esta [página de demonstração](https://jec.fish/demo/recorder) usa o atributo `data-automate` como seletor. [iniciar uma nova gravação](/docs/devtools/recorder/#record) e digite `data-automate` como atributo seletor. Preencha um endereço de e-mail e observe o valor do seletor (`[data-automate=email-address]`).
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/2PPPt9tOC2ZEz1l9F9AK.png", alt="Personalização do seletor de gravação", width="800", height="524" %}
 

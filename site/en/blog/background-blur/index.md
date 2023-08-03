@@ -123,7 +123,7 @@ We’d love to hear your thoughts on whether exposing background blur as a boole
 - [Explainer](https://github.com/riju/backgroundBlur/blob/main/explainer.md)
 - [Specification](https://w3c.github.io/mediacapture-extensions/#exposing-mediastreamtrack-source-background-blur-support)
 - [Chromium tracking bug](https://crbug.com/1338665)
-- [ChromeStatus.com entry](https://chromestatus.com/feature/5147589575442432)
+- [ChromeStatus.com entry](https://chromestatus.com/feature/5077577782263808)
 - [TAG Review](https://github.com/w3ctag/design-reviews/issues/826)
 - [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/Jr9vE8mSS-8/m/ycIHIDZnCgAJ)
 

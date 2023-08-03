@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Extending DevTools"
 seoTitle: "Extending DevTools with Chrome Extensions"
 date: 2012-09-17
-updated: 2023-02-06
+updated: 2023-07-12
 description: How to create a Chrome Extension that adds functionality to Chrome DevTools.
 ---
 
@@ -56,7 +56,6 @@ manifest:
 {
   "name": ...
   "version": "1.0",
-  "minimum_chrome_version": "10.0",
   "devtools_page": "devtools.html",
   ...
 }
@@ -179,8 +178,10 @@ chrome.runtime.onConnect.addListener(function(devToolsConnection) {
     // assign the listener function to a variable so we can remove it later
     var devToolsListener = function(message, sender, sendResponse) {
         // Inject a content script into the identified tab
-        chrome.scripting.executeScript(message.tabId,
-            { file: message.scriptToInject });
+        chrome.scripting.executeScript({
+          target: {tabId: message.tabId},
+          files: [message.scriptToInject]
+    });
     }
     // add the listener
     devToolsConnection.onMessage.addListener(devToolsListener);

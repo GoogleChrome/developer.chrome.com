@@ -31,7 +31,7 @@ demo, or about the documentation:
 
 * [Open a new issue on the privacy-sandbox-dev-support
   repository](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/issues/new/choose).
-*  Join the [Shared Storage API group](https://groups.google.com/a/chromium.org/g/shared-storage-api-announcements) and the [FLEDGE API group](https://groups.google.com/a/chromium.org/g/fledge-api-announce/) for the latest announcements related to Private Aggregation. 
+*  Join the [Shared Storage API group](https://groups.google.com/a/chromium.org/g/shared-storage-api-announcements) and the [Protected Audience API group](https://groups.google.com/a/chromium.org/g/fledge-api-announce/) for the latest announcements related to Private Aggregation. 
 
 If you notice any unexpected behavior: 
 

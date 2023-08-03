@@ -1,10 +1,10 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Report on FLEDGE auction results'
+title: 'Report on Protected Audience API auction results'
 subhead: >
-  Seller and buyer guide to generate FLEDGE auction reports.
+  Seller and buyer guide to generate Protected Audience API auction reports.
 description: >
-  Seller and buyer guide to generate FLEDGE auction reports.
+  Seller and buyer guide to generate Protected Audience API auction reports.
 date: 2022-10-29
 authors:
   - samdutton
@@ -13,19 +13,19 @@ authors:
 
 {% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
 
-In this article, you'll find a technical reference for generating reports for
-FLEDGE auction wins, as used in the current iteration of the experimental
-FLEDGE API.
+This article is a technical reference for generating reports for
+Protected Audience API auction wins, as used in the current iteration of the experimental
+Protected Audience API.
 
 Read the [developer guide](/docs/privacy-sandbox/fledge-api) for the full life
-cycle of FLEDGE, and refer to the FLEDGE explainer for an in-depth proposal of
+cycle of the Protected Audience API, and refer to the Protected Audience API explainer for an in-depth proposal of
 [event-level reporting (temporary)](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#5-event-level-reporting-for-now).
 
-Not a developer? Refer to the [FLEDGE API overview](/docs/privacy-sandbox/fledge).
+Not a developer? Refer to the [Protected Audience API API overview](/docs/privacy-sandbox/fledge).
 
-## What does FLEDGE report?
+## What does the Protected Audience API report?
 
-There are two available FLEDGE reports:
+There are two available Protected Audience API reports:
 
 * **Seller report**: Informs the seller of the ad auction winner.
 * **Buyer report**: Available to winning buyers only, to learn that they've won an auction.
@@ -43,7 +43,7 @@ event-level information to be reported.
 ### Seller: `reportResult()` 
 
 {% Aside %}
-**Read the FLEDGE explainer**:  [Seller reporting on Render](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#51-seller-reporting-on-render).
+**Read the Protected Audience API explainer**:  [Seller reporting on Render](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#51-seller-reporting-on-render).
 {% endAside %}
 
 The seller's JavaScript provided in `decisionLogicUrl` (which also provides
@@ -84,7 +84,7 @@ the winning bidder's `reportWin()` function.
 ### Buyer: `reportWin()`
 
 {% Aside %}
- **Read the FLEDGE explainer**: [Buyer reporting on render and ad events](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#52-buyer-reporting-on-render-and-ad-events).
+ **Read the Protected Audience API explainer**: [Buyer reporting on render and ad events](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#52-buyer-reporting-on-render-and-ad-events).
 {% endAside %}
 
 The winning bidder's JavaScript (which also provided `generateBid()`) can
@@ -98,7 +98,7 @@ reportWin(auctionSignals, perBuyerSignals, sellerSignals, browserSignals) {
 
 {% Aside %}
 
-The current implementation of FLEDGE in Chrome will warn if `reportWin()` is
+The current implementation of the Protected Audience API in Chrome will warn if `reportWin()` is
 not defined.
 
 {% endAside %}
@@ -148,12 +148,12 @@ be generated.
 
 These methods are available by default in Chrome if
 `chrome://flags/#privacy-sandbox-ads-apis` is enabled. But, if you're running
-Chrome with command line flags to enable FLEDGE, you'll need to
+Chrome with command line flags to enable the Protected Audience API, you'll need to
 explicitly enable the methods by including the
 `BiddingAndScoringDebugReportingAPI` flag. If the flag is not enabled, the
 methods will still be available but do nothing.
 
-## All FLEDGE API references
+## All Protected Audience API API references
 
 {% Partial 'privacy-sandbox/fledge-api-reference.njk' %}
 

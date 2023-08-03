@@ -46,8 +46,8 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 ## Recorder 패널에서 마우스 오버 이벤트 기능 지원 {: #recorder-hover }
 <!-- The **Recorder** now supports adding a mouse over (hover) step manually in a recording.  -->
 **Recorder** 기능에서 레코딩 시에 마우스 오버 (호버) 단계를 수동으로 추가하는 것이 가능해졌습니다.
-<!-- [This demo](https://jec.fyi/demo/menu-hover) shows a pop up menu on hover. Try to record a user flow and click a menu item. -->
-[데모](https://jec.fyi/demo/menu-hover)에서 볼 수 있듯이, 마우스 호버 시에 팝업 메뉴가 표출됩니다. 유저 플로우의 녹화 및 메뉴 아이템 클릭을 시도해 보세요.
+<!-- [This demo](https://jec.fish/demo/menu-hover) shows a pop up menu on hover. Try to record a user flow and click a menu item. -->
+[데모](https://jec.fish/demo/menu-hover)에서 볼 수 있듯이, 마우스 호버 시에 팝업 메뉴가 표출됩니다. 유저 플로우의 녹화 및 메뉴 아이템 클릭을 시도해 보세요.
 <!-- If you replay the user flow now, it will fail because the **Recorder** doesn’t capture mouse over events automatically during recording. To resolve this, [add a step manually](/docs/devtools/recorder/reference/#add-and-remove-steps) to hover over the selector before clicking the menu item.  -->
 녹화 중에 **Recorder** 가 마우스 오버 이벤트를 자동적으로 감지하기 않기 때문에 지금 당신이 유저 플로우를 재생한다고 할지라도 재생이 실패할 것입니다. 이 문제를 해결하기 위해서, 메뉴 항목을 클릭하기 전에 [이 단계를 수동으로 추가](/docs/devtools/recorder/reference/#add-and-remove-steps)하여 셀렉터 위로 마우스를 올릴 수 있습니다.
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GY1ZkqEU3zbGmhEKoblN.png", alt="Recorder 에서 마우스오버 기능 지원", width="800", height="488" %}
@@ -113,8 +113,8 @@ Chromium issues: [1300613](https://crbug.com/1300613)
 <!-- The [`<dialog>` element](https://web.dev/building-a-dialog-component/) has recently become stable across browsers. When you open a dialog, it is put into a [top layer](/blog/top-layer-devtools/). Top level content renders on top of all the other content.  -->
 [`<dialog>` 요소](https://web.dev/building-a-dialog-component/) 가 최근에 웹 브라우저들에 대해 안정화되었습니다. 여러분이 다이얼로그를 열 때, 이는 [top layer](/blog/top-layer-devtools/)에 위치하게 됩니다. 최상위 레벨 컨텐츠는 기타 다른 컨텐츠 위에 렌더링됩니다.
 
-<!-- In this [demo](https://jec.fyi/demo/dialog), click **Open dialog**.  -->
-주어진 [데모](https://jec.fyi/demo/dialog) 페이지에서 **Open dialog**를 클릭합니다.
+<!-- In this [demo](https://jec.fish/demo/dialog), click **Open dialog**.  -->
+주어진 [데모](https://jec.fish/demo/dialog) 페이지에서 **Open dialog**를 클릭합니다.
 
 <!-- To help visualize the top layer elements, DevTools adds a top layer container (`#top-layer`) to the DOM tree. It resides after the closing `</html>` tag.   -->
 top layer 요소를 시각화하기 위해, DevTools는 top layer 컨테이너 (`#top-layer`) 를 DOM 트리에 추가하며, 이는 `</html>` 태그 다음에 위치합니다.

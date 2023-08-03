@@ -2,28 +2,31 @@
 layout: "layouts/blog-post.njk"
 title: "Storage Partitioning"
 subhead: >
-  Separate storage from communication APIs in third-party contexts to
-  prevent certain types of side-channel cross-site tracking.
+  To prevent certain types of side-channel cross-site tracking, Chrome is partitioning storage and communications APIs in third-party contexts.
 description: >
-  Separate storage from communication APIs in third-party contexts to
-  prevent certain types of side-channel cross-site tracking.
+  To prevent certain types of side-channel cross-site tracking, Chrome is partitioning storage and communications APIs in third-party contexts.
 authors:
  - kevinkiklee
+ - mihajlija
 date: 2022-08-24
+updated: 2023-05-16
 tags:
  - privacy
 ---
  
 ## Implementation status
 
+- Full implementation is available for testing in Chrome Beta 113 and later.
+- The initial implementation has been [available behind a flag since Chrome 105](/blog/storage-partitioning-dev-trial/).
 - [Storage Partitioning proposal](https://github.com/privacycg/storage-partitioning) is open for discussion.
 - [Chrome Platform Status](https://chromestatus.com/feature/5723617717387264)
-- Available for testing in Chrome Beta version 105.0.5195.17 and later.
 
-The feature launch is planned for early 2023, depending on the stability and
-compatibility. Testing third-party storage partitioning now in an Origin Trial
+
+The feature is rolling out to a small percentage of users starting in Chrome 113. 
+Depending on the stability and compatibility, it will be made fully available in
+Chrome Stable mid-year 2023. Testing third-party storage partitioning now
 and filing bugs will help uncover any potential issues and resolve them before
-the General Availability rollout.
+the full rollout.
  
 ## What is storage partitioning?
  
@@ -82,15 +85,14 @@ the same origin and same top-level site.
  
 To try it out:
  
-1.  Use Chrome Canary version 105 or higher.
+1.  Use Chrome Canary version 113 or higher.
 1.  Visit `chrome://flags/#third-party-storage-partitioning`.
 1.  Enable the "Experimental Third-party Storage Partitioning" flag.
  
-Participate in early testing and
+Participate in testing and
 [report bugs](https://bugs.chromium.org/p/chromium/issues/entry?labels=StoragePartitioning-trial-bugs&components=Blink%3EStorage)
 to help the Chrome team identify and fix any unexpected behavior before the
-stable launch. Blob URL and Clear-Site-Data header APIs are under active
-development and are not available for testing yet.
+stable launch. 
  
 ## Updated APIs
 
@@ -143,7 +145,7 @@ development and are not available for testing yet.
        be generated to access the resource.  To support a use case for
        navigating in a top-level context to any blob URL
        ([discussion](https://github.com/w3c/FileAPI/issues/153)), the blob URL
-       store will be partitioned by the agent cluster instead of the top-level
+       store might be partitioned by the agent cluster instead of the top-level
        site. This feature will not be available for testing yet, and the
        partitioning mechanism may change in the future.
  
@@ -196,10 +198,12 @@ that have the extension's origin, but can embed iframes with web content's
 origins.
 
 Because partitioning the storage will break some use cases, a
-mitigation will be provided. If the extension has
+couple of mitigations will be provided. If the extension has
 [host_permissions](/docs/extensions/mv2/runtime_host_permissions/)
 for the iframe origin, then the iframe will be treated as the top-level frame
-and not the extension page.
+and not the extension page. If an extension embeds an iframe with an extension
+URL into a top-level site with host permissions, the iframe will be treated as
+first-party with the extension rather than partitioned by the top-level site.
 
 {% Aside %} 
 Manifest V2 has been

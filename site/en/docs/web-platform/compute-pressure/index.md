@@ -10,7 +10,7 @@ description: >
 subhead: >
   Get informed about your system compute pressure.
 date: 2021-06-07
-updated: 2023-04-06
+updated: 2023-05-17
 authors:
   - jeffposnick
   - kenchris
@@ -36,7 +36,7 @@ tags:
 | 1. Create explainer                      | [Complete][explainer]               |
 | 2. Create initial draft of specification | [Complete][specs]                   |
 | 3. Gather feedback & iterate on design   | [In progress](#feedback)            |
-| 4. Origin trial                          | Not Started                         |
+| 4. Origin trial                          | [**Started**][ot]                   |
 | 5. Launch                                | Not started                         |
 
 </div>
@@ -44,6 +44,11 @@ tags:
 ### Try out the Compute Pressure API
 
 To experiment with the Compute Pressure API locally, read this [page][how-to].
+
+### Register for the origin trial
+
+Starting in Chrome 115, the Compute Pressure API is available as an [origin trial](/docs/web-platform/origin-trials/).
+It is expected to end in Chrome 118 (January&nbsp;5, 2024). [Register here][ot].
 
 ## Use-Cases
 
@@ -282,6 +287,7 @@ for reproducing, and enter [Blink>PerformanceAPIs>ComputePressure][blink-compone
 - [TAG Review](https://github.com/w3ctag/design-reviews/issues/795)
 - [Ready For Trial][dev-trial]
 - [HOWTO page][how-to]
+- [Intent to Experiment][intent]
 
 [specs]: https://w3c.github.io/compute-pressure/
 [issues]: https://github.com/w3c/compute-pressure/issues
@@ -292,4 +298,6 @@ for reproducing, and enter [Blink>PerformanceAPIs>ComputePressure][blink-compone
 [cr-status]: https://chromestatus.com/feature/5597608644968448
 [blink-component]: https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EPerformanceAPIs%3EComputePressure
 [dev-trial]: https://groups.google.com/a/chromium.org/g/blink-dev/c/-1ciwdn23J4/m/CuCT52x3DgAJ
+[intent]: https://groups.google.com/a/chromium.org/g/blink-dev/c/QfJ4pngu3gc
 [how-to]: https://github.com/w3c/compute-pressure/blob/main/HOWTO.md
+[ot]: https://developer.chrome.com/origintrials/#/view_trial/1196831600973709313

@@ -76,7 +76,7 @@ In the next sections, we will walk you through how to record, replay and audit t
 1. Click on *Americano* to add it to the cart. Notice that the **Recorder** shows the steps that you have performed so far.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/UGb19uKQ7X9bkVIhTcwt.png", alt="Steps in the Recorder panel.", width="800", height="519" %}
 1. Go to the cart page and remove *Americano* from the cart.
-   {% Aside 'gotchas' %}
+   {% Aside %}
    Optionally, you can remove *Americano* on the menu page by hovering over the **Total** button and clicking **-** next to *Americano* in the pop-up menu.
 
    However, you'll have to [add the hover step manually](/docs/devtools/recorder/reference/#add-steps) after you finish the recording because the **Recorder** doesn't automatically capture hover events.
@@ -85,8 +85,8 @@ In the next sections, we will walk you through how to record, replay and audit t
 1. In the payment details form, fill in the *Name* and *Email* textboxes, and check the *I would like to receive order updates and promotional messages.* checkbox.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/UOewwKwP99GldzuTtIL7.png", alt="Payment details form.", width="800", height="519" %}
 1. Click on the *Submit* button to complete the checkout process.
-   {% Aside 'gotchas' %}
-   You can manually [edit steps](#edit-steps) even before you end the recording.
+   {% Aside %}
+   You can manually [edit steps](#edit-steps) and [add assertions](/docs/devtools/recorder/reference/#add-assertions) even before you end the recording.
    {% endAside %}
 1. In the **Recorder** panel, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/atK0ZIkmafgOnagKckde.svg", alt="End recording.", width="20", height="20" %} **End recording** button to end the recording.
 

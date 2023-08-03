@@ -10,7 +10,7 @@ install extensions that register themselves as alternative speech engines.
 
 ## Generating speech
 
-Call `speak()` from your extension or Chrome App to speak. For example:
+Call `speak()` from your extension to speak. For example:
 
 ```js
 chrome.tts.speak('Hello, world.');

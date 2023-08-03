@@ -51,6 +51,7 @@
     - url: /docs/extensions/mv3/service_workers/basics
     - url: /docs/extensions/mv3/service_workers/service-worker-lifecycle
     - url: /docs/extensions/mv3/service_workers/events
+    - url: /docs/extensions/mv3/tut_websockets
 - title: i18n.docs.extensions.indepth-core
   sections:
     - url: /docs/extensions/mv3/messaging
@@ -72,6 +73,7 @@
     - url: /docs/extensions/mv3/richNotifications
     - url: /docs/extensions/mv3/nativeMessaging
     - url: /docs/extensions/mv3/screen_capture
+    - url: /docs/extensions/mv3/geolocation
 - title: i18n.docs.extensions.quality
   sections:
     - url: /docs/extensions/mv3/user_privacy

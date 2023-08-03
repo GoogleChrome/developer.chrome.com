@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Bluetooth"
+seoTitle: "Chrome Apps Bluetooth [Deprecated]"
 date: 2014-03-11
 updated: 2017-02-18
 description: How to communicate with Bluetooth devices from your Chrome App.

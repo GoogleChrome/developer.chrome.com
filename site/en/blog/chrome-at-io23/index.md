@@ -52,7 +52,7 @@ What's truly raising the bar for quality web apps is the [progress we've made in
 
 ## 9. Chrome DevTools improves debugging of framework code
 
-We're improving how you can [debug your web apps in Chrome DevTools](https://io.google/2023/program/58079bc3-b0bd-44e1-94ff-08589997014a/) in collaboration with various JavaScript frameworks. You'll find [cleaner stack traces](/articles/x-google-ignore-list/), a new []"show your code"](/blog/devtools-modern-web-debugging/#authored-versus-deployed-code) option, and more [breakpoint reliability](/blog/breakpoint-ux-redesign/). Our goal is to help you focus on the code you write and not the code that shows up because of your stack choices. Our work doesn't stop here and we're continuing to find ways to bring our tools deeper into your workflows and really focus on reducing development friction on the web, so [watch this space](/blog/devtools-modern-web-debugging/).
+We're improving how you can [debug your web apps in Chrome DevTools](https://io.google/2023/program/58079bc3-b0bd-44e1-94ff-08589997014a/) in collaboration with various JavaScript frameworks. You'll find [cleaner stack traces](/articles/x-google-ignore-list/), a new ["show your code"](/blog/devtools-modern-web-debugging/#authored-versus-deployed-code) option, and more [breakpoint reliability](/blog/breakpoint-ux-redesign/). Our goal is to help you focus on the code you write and not the code that shows up because of your stack choices. Our work doesn't stop here and we're continuing to find ways to bring our tools deeper into your workflows and really focus on reducing development friction on the web, so [watch this space](/blog/devtools-modern-web-debugging/).
 
 ## 10. 100s of API updates at this year's I/O
 

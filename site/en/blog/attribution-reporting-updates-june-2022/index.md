@@ -44,8 +44,7 @@ Sandbox.
 
 ## Attribution Reporting API updates
 
-The [API handbook](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit)
-and [Attribution Reporting demo](https://github.com/GoogleChromeLabs/trust-safety-demo/pull/27/files)
+The [Attribution Reporting demo](https://github.com/GoogleChromeLabs/trust-safety-demo/pull/27/files)
 have been updated to reflect the latest changes to the Attribution Reporting
 client-side API.
 
@@ -140,7 +139,6 @@ There are a number of insights, including:
 
 ## Read more about the updates
 
-*  Read the [API handbook](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit).
 *  Read [What you should know about the API](https://docs.google.com/document/d/1lvrKd5Vv7SYLMGZb0Fz7bpGNEl0LOx9i1waAHw2sUg8/edit).
 *  Read [Experiment with Attribution Reporting: Strategy and tips for summary reports](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit?usp=sharing).
 

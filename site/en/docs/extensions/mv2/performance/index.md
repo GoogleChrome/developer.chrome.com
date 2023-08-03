@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Reach peak performance"
+seoTitle: "MV2 - Reach peak performance [Deprecated]"
 date: 2018-04-16
 updated: 2020-05-07
 description: Guidelines on how to build a high-performance Chrome Extension.

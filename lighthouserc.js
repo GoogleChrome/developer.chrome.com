@@ -30,6 +30,12 @@ module.exports = {
         'tap-targets': 'off',
 
         /**
+         * Gtag and GTM cause the unused-javascript audit to fail, but out of our control.
+         * So only error if over 2 resources cause this audit to fail
+         */
+        'unused-javascript': ['error', {maxLength: 2}],
+
+        /**
          * We don't care about preconnect to Analytics and friends.
          */
         'uses-rel-preconnect': 'off',

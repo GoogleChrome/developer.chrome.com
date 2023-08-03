@@ -48,8 +48,8 @@ tags:
 <!-- The **Recorder** now supports adding a mouse over (hover) step manually in a recording.  -->
 **Recorder** теперь поддерживает добавление в запись шага mouse over (hover).
 
-<!-- [This demo](https://jec.fyi/demo/menu-hover) shows a pop up menu on hover. Try to record a user flow and click a menu item. -->
-В [демо](https://jec.fyi/demo/menu-hover) появляется всплывающее меню при наведении. Попробуйте записать пользовательский сценарий и во время записи кликните на пункт меню.
+<!-- [This demo](https://jec.fish/demo/menu-hover) shows a pop up menu on hover. Try to record a user flow and click a menu item. -->
+В [демо](https://jec.fish/demo/menu-hover) появляется всплывающее меню при наведении. Попробуйте записать пользовательский сценарий и во время записи кликните на пункт меню.
 
 <!-- If you replay the user flow now, it will fail because the **Recorder** doesn’t capture mouse over events automatically during recording. To resolve this, [add a step manually](/docs/devtools/recorder/reference/#add-and-remove-steps) to hover over the selector before clicking the menu item.  -->
 Если вы воспроизведёте запись сейчас, она проиграется с ошибкой, потому что **Recorder** не ловит событие наведения мыши автоматически во время записи. Чтобы решить эту проблему, [вручную добавьте шаг](/docs/devtools/recorder/reference/#add-and-remove-steps), чтобы имитировать наведение курсора на пункт меню перед кликом.
@@ -125,8 +125,8 @@ LCP – это важная, ориентированная на пользов�
 <!-- The [`<dialog>` element](https://web.dev/building-a-dialog-component/) has recently become stable across browsers. When you open a dialog, it is put into a [top layer](/blog/top-layer-devtools/). Top level content renders on top of all the other content.  -->
 Элемент [`<dialog>`](https://web.dev/building-a-dialog-component/) недавно стал стабилен во всех браузерах. Когда вы открываете диалог, он помещается в [верхний слой](/blog/top-layer-devtools/). Контент верхнего уровня отображается поверх всего остального контента.
 
-<!-- In this [demo](https://jec.fyi/demo/dialog), click **Open dialog**.  -->
-В этом [демо](https://jec.fyi/demo/dialog) кликните на **Open dialog**.
+<!-- In this [demo](https://jec.fish/demo/dialog), click **Open dialog**.  -->
+В этом [демо](https://jec.fish/demo/dialog) кликните на **Open dialog**.
 
 <!-- To help visualize the top layer elements, DevTools adds a top layer container (`#top-layer`) to the DOM tree. It resides after the closing `</html>` tag.   -->
 Чтобы помочь визуализировать элементы верхнего слоя, DevTools добавляет контейнер верхнего слоя (`#top-layer`) в DOM-дерево. Он размещен после закрывающего тега `</html>`.

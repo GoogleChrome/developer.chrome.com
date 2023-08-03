@@ -2,6 +2,8 @@ attribution-reporting:
   en: 'Attribution Reporting'
 interest-ads:
   en: 'Interest-based advertising'
+integration-guide:
+  en: 'Integration guide'
 ondevice-auctions:
   en: 'On-device auctions for custom audiences'
 cross-site-storage:
@@ -21,6 +23,8 @@ glossary:
   ja: 'プライバシー サンドボックスの用語集'
 guiding-principles:
   en: 'Guiding principles'
+videos:
+  en: 'Privacy Sandbox videos'
 overview:
   en: 'What is the Privacy Sandbox?'
   ja: 'プライバシー サンドボックスとは何か？'
@@ -63,11 +67,13 @@ attribution-reporting-chrome-shipping:
 experiment-participate:
   en: 'Experiment and participate'
 attribution-reporting-debugging:
-  en: 'Debugging Attribution Reporting'
+  en: 'Debug Attribution Reporting'
 attribution-reporting-debugging-resources:
   en: 'Generate debug reports'
 attribution-reporting-changing:
   en: 'API updates'
+attribution-reporting-developer-guide:
+  en: 'Developer guide'
 attribution-reporting-handbook:
   en: 'Developer handbook'
 attribution-reporting_description:
@@ -110,11 +116,11 @@ faq:
 enroll:
   en: 'Enroll your site'
 topics-experiment:
-  en: 'Topics API: experiment and participate'
+  en: 'Topics API: Experiment and participate'
 fledge-experiment:
-  en: 'FLEDGE: experiment and participate'
+  en: 'Protected Audience: Experiment and participate'
 fledge-overview:
-  en: 'FLEDGE overview'
+  en: 'Protected Audience overview'
 first-party-sets:
   en: 'First-Party Sets'
 gnatcatcher:
@@ -125,3 +131,9 @@ fenced-frame:
   en: 'Fenced Frames'
 fledge-api:
   en: 'Developer guide'
+paapi-walkthrough:
+  en: 'Protected Audience API walkthrough'
+fedcm-developer-guide:
+  en: 'Federated Credential Management API: developer guide'
+shared-storage-walkthrough: 
+  en: 'Shared Storage API walkthrough'

@@ -45,8 +45,8 @@ tags:
 <!-- You can now view and edit the CSS `@supports` at-rules in the **Styles** pane. These changes make it easier to experiment with the at-rules in real time. -->
 **스타일** 창에서 CSS `@supports` 규칙을 확인하고 편집할 수 있게 되었습니다. 이 기능은 개발자들이 실시간으로 at-rules 규칙을 더 쉽게 실험할 수 있도록 합니다.
 
-<!-- Open this [demo page](https://jec.fyi/demo/at-support), [inspect](/docs/devtools/dom/#inspect) the `<div class=”box”>` element, view the `@supports` at-rules in the **Styles** pane. Click on the rule’s declaration to edit it.  -->
-[데모 페이지](https://jec.fyi/demo/at-support)를 열고 `<div class=”box”>` 요소를 [검사](/docs/devtools/dom/#inspect)하고, **스타일** 창에서 `@supports` at-rules를 확인해 보세요. 그리고 이를 편집하기 위해서는 규칙의 선언 부분을 클릭하면 됩니다.
+<!-- Open this [demo page](https://jec.fish/demo/at-support), [inspect](/docs/devtools/dom/#inspect) the `<div class=”box”>` element, view the `@supports` at-rules in the **Styles** pane. Click on the rule’s declaration to edit it.  -->
+[데모 페이지](https://jec.fish/demo/at-support)를 열고 `<div class=”box”>` 요소를 [검사](/docs/devtools/dom/#inspect)하고, **스타일** 창에서 `@supports` at-rules를 확인해 보세요. 그리고 이를 편집하기 위해서는 규칙의 선언 부분을 클릭하면 됩니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/vnokX5Hswmbvlb5weusO.png", alt="View and edit @supports at rules", width="800", height="502" %}
 
@@ -76,8 +76,8 @@ Chromium issues: [1222574](https://crbug.com/1222574), [1222573](https://crbug.c
 <!-- The attributes above are common selectors used in test automation.  -->
 위 속성들은 자동화 테스트에서 사용되는 공통 셀렉터들입니다.
 
-<!-- For example, [start a new recording](/docs/devtools/recorder/#record) with this [demo page](https://jec.fyi/demo/recorder). Fill in an email address and observe the selector value. -->
-예를 들어, [데모 페이지](https://jec.fyi/demo/recorder)에서 [start a new recording](/docs/devtools/recorder/#record)을 클릭합니다. 이메일 주소를 기입하고 셀렉터 값을 관찰해 보세요.
+<!-- For example, [start a new recording](/docs/devtools/recorder/#record) with this [demo page](https://jec.fish/demo/recorder). Fill in an email address and observe the selector value. -->
+예를 들어, [데모 페이지](https://jec.fish/demo/recorder)에서 [start a new recording](/docs/devtools/recorder/#record)을 클릭합니다. 이메일 주소를 기입하고 셀렉터 값을 관찰해 보세요.
 
 <!-- Since the email element has `data-testid` defined, it’s used as the selector automatically instead of the `id` or `class` attributes. -->
 이메일 요소가 `data-testid` 를 정의하도록 했으므로, 이것이 자동적으로 `id` 나 `class` 속성 대신에 셀렉터로써 사용됩니다.
@@ -92,9 +92,9 @@ Chromium issues: [1222574](https://crbug.com/1222574), [1222573](https://crbug.c
 
 만일 [공통 셀렉터](/docs/devtools/recorder/#selector)를 사용하고 있지 않다면, recording의 셀렉터를 커스터마이징할 수 있습니다.
 
-<!-- For example, this [demo page](https://jec.fyi/demo/recorder) uses the `data-automate` attribute as the selector. [start a new recording](/docs/devtools/recorder/#record) and enter the `data-automate` as the selector attribute. Fill in an email address and observe the selector value (`[data-automate=email-address]`). -->
+<!-- For example, this [demo page](https://jec.fish/demo/recorder) uses the `data-automate` attribute as the selector. [start a new recording](/docs/devtools/recorder/#record) and enter the `data-automate` as the selector attribute. Fill in an email address and observe the selector value (`[data-automate=email-address]`). -->
 
-예를 들어, [데모 페이지](https://jec.fyi/demo/recorder)는 `data-automate` 속성을 셀렉터로서 사용하고 있습니다. [start a new recording](/docs/devtools/recorder/#record) 을 클릭하고 `data-automate` 를 셀렉터 속성으로 넣습니다. 이메일 주소를 채우고, 셀렉터 값(`[data-automate=email-address]`)을 관찰해 보세요.
+예를 들어, [데모 페이지](https://jec.fish/demo/recorder)는 `data-automate` 속성을 셀렉터로서 사용하고 있습니다. [start a new recording](/docs/devtools/recorder/#record) 을 클릭하고 `data-automate` 를 셀렉터 속성으로 넣습니다. 이메일 주소를 채우고, 셀렉터 값(`[data-automate=email-address]`)을 관찰해 보세요.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/2PPPt9tOC2ZEz1l9F9AK.png", alt="Customize the recording’s selector", width="800", height="524" %}
 

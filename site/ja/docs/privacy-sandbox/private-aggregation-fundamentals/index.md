@@ -138,7 +138,7 @@ Private Aggregation API に対する各呼び出しは*コントリビューシ�
 ブラウザーは、リスト化された well-known パスを使用して Private Aggregation API への呼び出しを含むワークレットのオリジンへと集計可能なレポートを送信します。
 
 - 共有ストレージの場合: `/.well-known/private-aggregation/report-shared-storage`
-- FLEDGE の場合: `/.well-known/private-aggregation/report-fledge`
+- Protected Audience の場合: `/.well-known/private-aggregation/report-protected-audience`
 
 これらのエンドポイントでは、クライアントから送信された集計可能なレポートを受信する (コレクターとして機能する) サーバーを運用する必要があります。
 

@@ -28,8 +28,8 @@ El panel **Grabación** puede capturar ahora eventos de doble-click y clic derec
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/qsleBCUrr2twMujW0R94.png", alt="Captura de eventos de doble-click y clic derecho en el panel Grabación", width="800", height="572" %}
 
-<!-- In this [example](https://jec.fyi/demo/dbl-right-click), start a [recording](/docs/devtools/recorder/#record) and try to perform the following steps:  -->
-En este [ejemplo](https://jec.fyi/demo/dbl-right-click), comience una grabación e intente realizar los siguientes pasos:
+<!-- In this [example](https://jec.fish/demo/dbl-right-click), start a [recording](/docs/devtools/recorder/#record) and try to perform the following steps:  -->
+En este [ejemplo](https://jec.fish/demo/dbl-right-click), comience una grabación e intente realizar los siguientes pasos:
 
 <!-- - Double-click the card to enlarge it
 - Right-click the card and select an action from the context menu -->

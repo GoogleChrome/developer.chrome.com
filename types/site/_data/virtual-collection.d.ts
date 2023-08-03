@@ -21,6 +21,7 @@ declare global {
     key: string;
     title: string;
     url: string;
+    [key: string]: any;
   }
 }
 

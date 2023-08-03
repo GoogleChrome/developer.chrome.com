@@ -10,6 +10,8 @@ authors:
   - mihajlija
 tags:
   - privacy
+  - identity
+  - origin-trials
 ---
 
 [Federated Credential Management API (FedCM)](/docs/privacy-sandbox/fedcm/)

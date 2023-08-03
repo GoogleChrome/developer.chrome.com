@@ -1,15 +1,15 @@
 ---
 title: 'Author'
 description: ''
-permalink: '{{paged.permalink}}'
+permalink: '{{ author.url }}'
 layout: 'layouts/author-individual.njk'
 eleventyComputed:
-  title: '{{ paged.title | i18n(locale) or title }}'
-  description: '{{ paged.description | i18n(locale) or description }}'
-  hero: '{{ paged.image }}'
+  title: '{{ author.title | i18n(locale) or title }}'
+  description: '{{ author.description | i18n(locale) or description }}'
+  hero: '{{ author.image }}'
 pagination:
   data: collections.authors
   size: 1
-  alias: paged
+  alias: author
   resolve: values
 ---

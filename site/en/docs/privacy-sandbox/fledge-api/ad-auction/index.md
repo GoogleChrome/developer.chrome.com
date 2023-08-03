@@ -2,9 +2,9 @@
 layout: 'layouts/doc-post.njk'
 title: 'Seller guide: run ad auctions'
 subhead: >
-  Seller API guide and references for the FLEDGE ad auction.
+  Seller API guide and references for the Protected Audience API ad auction.
 description: >
-  Seller API guide and references for the FLEDGE ad auction.
+  Seller API guide and references for the Protected Audience API ad auction.
 date: 2022-11-01
 authors:
   - samdutton
@@ -13,17 +13,17 @@ authors:
 
 {% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
 
-In this article, you'll find a technical reference for the ad auction, as used in the current iteration of the experimental FLEDGE API.
+In this article, you'll find a technical reference for the ad auction, as used in the current iteration of the experimental Protected Audience API.
 
 Read the [developer guide](/docs/privacy-sandbox/fledge-api) for the full life
-cycle of FLEDGE, and refer to the FLEDGE explainer for an in-depth proposal of
+cycle of Protected Audience API, and refer to the Protected Audience API explainer for an in-depth proposal of
 how [sellers run on-device auctions](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#2-sellers-run-on-device-auctions).
 
-Not a developer? Refer to the [FLEDGE API overview](/docs/privacy-sandbox/fledge).
+Not a developer? Refer to the [Protected Audience API overview](/docs/privacy-sandbox/fledge).
 
-## What is the FLEDGE ad auction?
+## What is the Protected Audience API ad auction?
 
-A FLEDGE ad auction is a collection of small JavaScript programs the
+A Protected Audience API ad auction is a collection of small JavaScript programs the
 browser runs on the user's device to choose an ad. To preserve privacy, all ad
 auction code from the seller and buyers is run in isolated JavaScript
 [worklets](/docs/privacy-sandbox/glossary/#worklet) that can't talk to the
@@ -34,14 +34,14 @@ outside world.
 <figure class="w-figure">
   {% Img
     src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/M8lyXt6JbwFncB16mTb0.png",
-    alt="Six stages in a FLEDGE ad auction",
+    alt="Six stages in a Protected Audience API ad auction",
     width="800", height="481"
     %}
-    <figcaption>This diagram outlines each stage of a FLEDGE ad auction: <a href="https://wd.imgix.net/image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/M8lyXt6JbwFncB16mTb0.png?auto=format&w=1600"
+    <figcaption>This diagram outlines each stage of a Protected Audience API ad auction: <a href="https://wd.imgix.net/image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/M8lyXt6JbwFncB16mTb0.png?auto=format&w=1600"
 title="View a larger version of image." target="_blank">view a larger version</a>.</figcaption>
 </figure>
 
-1. A user visits a site which displays ads. While FLEDGE is in an origin trial,
+1. A user visits a site which displays ads. While the Protected Audience API is in an origin trial,
    the site must have an available and valid origin trial token. The user must
    be in an experimental group (such as Finch).
 2. The seller's code executes `navigator.runAdAuction()`. This specifies which
@@ -73,17 +73,17 @@ title="View a larger version of image." target="_blank">view a larger version</a
    
 ### When does the auction take place?
 
-FLEDGE can be run on its own or with programmatic auctions. In a multi-seller,
+The Protected Audience API can be run on its own or with programmatic auctions. In a multi-seller,
 programmatic auction:
 
 1. The user visits a participating site.
 2. A programmatic auction is run by another seller to find a contextual ad for an available ad slot.
-3. The FLEDGE auction is run.
+3. The Protected Audience API auction is run.
 4. `scoreAd()`compares the buyer's bids with the results of the first auction.
 
 Bids which cannot beat the contextual winner are rejected.
 
-### Who runs the FLEDGE ad auction?
+### Who runs the Protected Audience API ad auction?
 
 There are multiple parties that might run an auction to sell ad space.
 
@@ -93,7 +93,7 @@ For example:
 * **[Supply-side platform (SSP)](/docs/privacy-sandbox/glossary/#ssp)**: working with the publisher and providing other services.
 * **Third-party script**: acting for a publisher, to enable participation in ad auctions.
 
-With FLEDGE, a seller has three jobs:
+With the Protected Audience API, a seller has three jobs:
 
 * Enforce publisher rules: which buyers and which bids are eligible.
 * Run auction logic: JavaScript run in
@@ -169,9 +169,9 @@ desirability score.
 #### `auctionConfig` properties
 
 {% Aside %}
-`additionalBids` is not supported in the current implementation of FLEDGE. Read the [Auction
+`additionalBids` is not supported in the current implementation of the Protected Audience API. Read the [Auction
       Participants](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#22-auction-participants) section in the
-      FLEDGE explainer for more information.
+      Protected Audience API explainer for more information.
 {% endAside %}
 
 
@@ -303,7 +303,7 @@ The seller provides the scoring logic to determine the desirability score of eac
 The seller includes logic in the `scoreAd()` function, and the browser executes the function in a worklet that has limited communication with code outside of it. The browser itself does not score the ads. The browser is exclusively responsible to execute the scoring logic and select the bid with the highest score.
 {% endDetails %}
 
-## All FLEDGE API references
+## All Protected Audience API references
 
 {% Partial 'privacy-sandbox/fledge-api-reference.njk' %}
 

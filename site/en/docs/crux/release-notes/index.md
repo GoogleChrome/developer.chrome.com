@@ -21,7 +21,7 @@ date: 2017-10-01
 
 # Optional
 # Include an updated date when you update your post
-updated: 2023-05-10
+updated: 2023-07-11
 
 # Optional
 # How to add a new author
@@ -42,6 +42,40 @@ In the list below, we've curated some release notes for each monthly dataset. Su
 The CrUX dataset on BigQuery is generally updated on the second Tuesday of every month. Each release is numbered according to the year and calendar month of the data collection period, for example 201912 corresponds to the UX data collected during December 2019 and would be released on the second Tuesday of January 2020 after the data collection period has ended.
 
 In the list below, we've curated some release notes for each monthly dataset. Subscribe to our [CrUX Announce](https://groups.google.com/a/chromium.org/forum/#!forum/chrome-ux-report-announce) mailing list or follow [@ChromeUXReport](https://twitter.com/ChromeUXReport) on Twitter for release Announcements.
+
+## 202306
+
+[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/AaW8rohYfHk)
+
+Publication date
+ : Jul 11, 2023
+
+What's new
+
+I am pleased to say that we have finally made progress on the long-standing root page redirect issue [mentioned last month](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/13hl37E28RE). Some origins which redirect their root page, and were therefore excluded from CrUX due to our lack of handling this properly, should now start to be included again from this month. Please note that some origins are still being resolved so not all origins are in this month's dataset. However, it is great that we have made some good progress on this now and we hope to have the issue fully resolved in the near future.
+
+This is the last month that the INP metric is guaranteed to be available in the CrUX BigQuery, API, and History API both with and without the experimental prefix. We encourage users to move to the non-prefixed field as the experimental prefix fields should now be considered deprecated and will be removed in 30 days.
+
+Notable stats
+ : - 18,065,718 origins
+ : - 44.1% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+
+## 202305
+
+[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/13hl37E28RE)
+
+Publication date
+ : Jun 13, 2023
+
+What's new
+
+We're seeing a slight decrease again this month for LCP and FCP due to the final roll outs of the [change in LCP to ignore low-entropy images](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/speed/metrics_changelog/2023_04_lcp.md) and [correction in paint timing](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/speed/metrics_changelog/2023_03_lcp_fcp.md) discussed last month. However, despite this, the overall good LCP, FID, and CLS rates are up slightly from last month.
+
+We are aware that some origins that redirect their root page (for example, https://www.example.com that automatically redirects to https://www.example.com/en/) are not showing origin-level data in CrUX, and so are also not appearing in the BigQuery dataset. We're also aware that this has been going on for some time. Unfortunately, this is proving a difficult issue to resolve and so we still do not have an estimated time of when this will be resolved.
+
+Notable stats
+ : - 18,377,791 origins
+ : - 43.6% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
 
 ## 202304
 

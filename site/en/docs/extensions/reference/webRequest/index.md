@@ -6,15 +6,17 @@ api: webRequest
 
 You must declare the `"webRequest"` permission in the [extension manifest][1] to use the web request
 API, along with the necessary [host permissions][2]. To intercept a sub-resource request, the
-extension needs to have access to both the requested URL and its initiator. For example:
+extension must have access to both the requested URL and its initiator. For example:
 
 ```json
 {
   "name": "My extension",
   ...
   "permissions": [
-    "webRequest",
-    "*://*.google.com/"
+    "webRequest"
+  ],
+  "host_permissions": [
+    "*://*.google.com/*"
   ],
   ...
 }
@@ -82,7 +84,7 @@ The event life cycle for successful requests is illustrated here, followed by ev
 
 : Fires when the first byte of the response body is received. For HTTP requests, this means that the
   status line and response headers are available. This event is informational and handled
-  asynchronously. It does not allow modifying or cancelling the request.
+  asynchronously. It does not allow modifying or canceling the request.
 
 `onCompleted`
 
@@ -92,19 +94,19 @@ The event life cycle for successful requests is illustrated here, followed by ev
 
 : Fires when a request could not be processed successfully.
 
-The web request API guarantees that for each request either `onCompleted` or `onErrorOccurred` is
+The web request API guarantees that for each request, either `onCompleted` or `onErrorOccurred` is
 fired as the final event with one exception: If a request is redirected to a `data://` URL,
 `onBeforeRedirect` is the last reported event.
 
 <a id="#life_cycle_footnote">*</a>
 Note that the web request API presents an abstraction of the network stack to the extension.
-Internally, one URL request can be split into several HTTP requests (for example to fetch individual
+Internally, one URL request can be split into several HTTP requests (for example, to fetch individual
 byte ranges from a large file) or can be handled by the network stack without communicating with the
 network. For this reason, the API does not provide the final HTTP headers that are sent to the
 network. For example, all headers that are related to caching are invisible to the extension.
 
 The following headers are currently **not provided** to the `onBeforeSendHeaders` event. This list
-is not guaranteed to be complete nor stable.
+is not guaranteed to be complete or stable.
 
 - Authorization
 - Cache-Control
@@ -146,7 +148,7 @@ modify the [Origin][7] request header, they can't change the `request origin` or
 a concept defined in the Fetch spec to represent who initiates the request. In such a scenario, the
 server may allow the CORS access for the modified request and put the header's `Origin` into the
 `Access-Control-Allow-Origin` header in the response. But it won't match the immutable
-`request origin` and result in a CORS failure.
+`request origin` and will result in a CORS failure.
 
 {% endAside %}
 
@@ -215,15 +217,14 @@ optionally specify filters and extra information when you register event listene
 ### Request IDs
 
 Each request is identified by a request ID. This ID is unique within a browser session and the
-context of an extension. It remains constant during the the life cycle of a request and can be used
+context of an extension. It remains constant during the life cycle of a request and can be used
 to match events for the same request. Note that several HTTP requests are mapped to one web request
 in case of HTTP redirection or HTTP authentication.
 
 ### Registering event listeners
 
 To register an event listener for a web request, you use a variation on the [usual `addListener()`
-function][10]. In addition to specifying a callback function, you have to specify a filter argument
-and you may specify an optional extra info argument.
+function][10]. In addition to specifying a callback function, you have to specify a filter argument, and you may specify an optional extra info argument.
 
 The three arguments to the web request API's `addListener()` have the following definitions:
 
@@ -249,9 +250,9 @@ If the optional `opt_extraInfoSpec` array contains the string `'blocking'` (only
 specific events), the callback function is handled synchronously. That means that the request is
 blocked until the callback function returns. In this case, the callback can return a
 [`webRequest.BlockingResponse`][11] that determines the further life cycle of the request. Depending
-on the context, this response allows cancelling or redirecting a request (`onBeforeRequest`),
-cancelling a request or modifying headers (`onBeforeSendHeaders`, `onHeadersReceived`), and
-cancelling a request or providing authentication credentials (`onAuthRequired`).
+on the context, this response allows canceling or redirecting a request (`onBeforeRequest`),
+canceling a request or modifying headers (`onBeforeSendHeaders`, `onHeadersReceived`), and
+canceling a request or providing authentication credentials (`onAuthRequired`).
 
 If the optional `opt_extraInfoSpec` array contains the string `'asyncBlocking'` instead (only
 allowed for `onAuthRequired`), the extension can generate the [`webRequest.BlockingResponse`][12]
@@ -293,11 +294,11 @@ When an extension uses webRequest APIs to redirect a public resource request to 
 
 ### Conflict resolution
 
-In the current implementation of the web request API, a request is considered as cancelled if at
+In the current implementation of the web request API, a request is considered canceled if at
 least one extension instructs to cancel the request. If an extension cancels a request, all
-extensions are notified by an `onErrorOccurred` event. Only one extension is allowed to redirect a
+extensions are notified by an `onErrorOccurred` event. Only one extension can redirect a
 request or modify a header at a time. If more than one extension attempts to modify the request, the
-most recently installed extension wins and all others are ignored. An extension is not notified if
+most recently installed extension wins, and all others are ignored. An extension is not notified if
 its instruction to modify or redirect has been ignored.
 
 ### Caching
@@ -306,7 +307,7 @@ Chrome employs two caches—an on-disk cache and a very fast in-memory cache. Th
 in-memory cache is attached to the lifetime of a render process, which roughly corresponds to a tab.
 Requests that are answered from the in-memory cache are invisible to the web request API. If a
 request handler changes its behavior (for example, the behavior according to which requests are
-blocked), a simple page refresh might not respect this changed behavior. To make sure the behavior
+blocked), a simple page refresh might not respect this changed behavior. To ensure the behavior
 change goes through, call `handlerBehaviorChanged()` to flush the in-memory cache. But don't do it
 often; flushing the cache is a very expensive operation. You don't need to call
 `handlerBehaviorChanged()` after registering or unregistering an event listener.
@@ -321,9 +322,9 @@ give unexpected results.
 ### Error handling
 
 If you try to register an event with invalid arguments, then a JavaScript error will be thrown, and
-the event handler will not be registered. If an error is thrown while an event is handled, or if an
+the event handler will not be registered. If an error is thrown while an event is handled or if an
 event handler returns an invalid blocking response, an error message is logged to your extension's
-console and the handler is ignored for that request.
+console, and the handler is ignored for that request.
 
 ## Examples
 
@@ -371,10 +372,12 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
 );
 ```
 
-For more example code, see the [web request samples][16].
+To try the `chrome.webRequest` API,
+install the [webRequest sample](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/webRequest/) from the [chrome-extension-samples](https://github.com/GoogleChrome/chrome-extensions-samples)
+repository.
 
 [1]: /docs/extensions/mv3/manifest
-[2]: /docs/extensions/mv2/declare_permissions
+[2]: /docs/extensions/mv3/declare_permissions
 [3]: #life_cycle_footnote
 [4]: #implementation-details
 [5]: #life_cycle_footnote

@@ -24,7 +24,7 @@ tags:
 
 **frame 재시작** 기능이 돌아왔습니다! 함수 어딘가에서 중단된 경우 이전 코드를 다시 실행할 수 있습니다. 이 기능은 안정성 문제가 있어 Chrome 92에서 더 이상 사용되지 않고 제거되었습니다.
 
-다음 [예제](https://jec.fyi/)에서 디버거는 `toggleColorScheme` 함수의 끝 부분에 있는 브레이크 포인트 (343 라인) 에서 멈춥니다. `toggleColorScheme` 함수부터 다시 디버깅을 시작하기 위해서, **Debugger** 창에 있는 **Call stack** 섹션을 열고, `toggleColorScheme` 을 우클릭한 뒤 **Restart frame** 을 클릭하세요.
+다음 [예제](https://jec.fish/)에서 디버거는 `toggleColorScheme` 함수의 끝 부분에 있는 브레이크 포인트 (343 라인) 에서 멈춥니다. `toggleColorScheme` 함수부터 다시 디버깅을 시작하기 위해서, **Debugger** 창에 있는 **Call stack** 섹션을 열고, `toggleColorScheme` 을 우클릭한 뒤 **Restart frame** 을 클릭하세요.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/uBcTkuIaoHHTgJCiGNED.png", alt="디버깅 중에 frame 재시작하기", width="800", height="499" %}
 
@@ -78,7 +78,7 @@ Chromium issue: [960909](https://crbug.com/960909)
 
 **Performance insights** 패널 안에서 새로운 **User Timings** 트랙을 사용하여 녹화본 내의 `performance.measure()` 마크를 시각화할 수 있습니다.
 
-예를 들어, 다음 [웹 페이지](https://jec.fyi/demo/perf-measure) 에서 [`performance.measure()`](https://web.dev/usertiming/#calculating-measurements-with-measure()) 메서드를 텍스트 로딩 경과 시간을 계산하기 위해 사용하고 있습니다.
+예를 들어, 다음 [웹 페이지](https://jec.fish/demo/perf-measure) 에서 [`performance.measure()`](https://web.dev/usertiming/#calculating-measurements-with-measure()) 메서드를 텍스트 로딩 경과 시간을 계산하기 위해 사용하고 있습니다.
 
 [measuring the page load](/docs/devtools/performance-insights/#record) 를 시작하면, 녹화본에서 **User Timings** 트랙이 보일 것입니다. 타이밍 아이템을 클릭하면 사이드 영역에서 상세한 내용을 볼 수 있습니다.
 
