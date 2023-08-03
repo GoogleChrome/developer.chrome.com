@@ -38,7 +38,7 @@ and then initiates an on-device auction to select an ad for display on a publish
 {% endColumn %}
 {% Column %}
 
-<a href="https://fledge-demo.glitch.me/"><img src="https://wd.imgix.net/image/RtQlPaM9wdhEJGVKR8boMPkWf443/Tejkps8XvgWoobfGLMVO.png?auto=format&w=439"  alt="ALT_TEXT_HERE" width="230"></a>
+<a href="https://fledge-demo.glitch.me/">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/Tejkps8XvgWoobfGLMVO.png", alt="ALT_TEXT_HERE", width="484", height="418" %}</a>
 
 {% endColumn %}
 {% endColumns %}
@@ -65,7 +65,7 @@ This demo shows a simple example of the Topics API in action.
 {% endColumn %}
 {% Column %}
 
-<a href="https://topics-demo.glitch.me/"><img src="https://wd.imgix.net/image/RtQlPaM9wdhEJGVKR8boMPkWf443/3YDJBguZVeVorWT4BdkA.png?auto=format&w=571"  alt="ALT_TEXT_HERE" width="230"></a>
+<a href="https://topics-demo.glitch.me/">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/3YDJBguZVeVorWT4BdkA.png", alt="ALT_TEXT_HERE", width="469", height="386" %}</a>
 
 {% endColumn %}
 {% endColumns %}
@@ -85,7 +85,7 @@ This colab makes it easy to load the TensorFlow Lite model used by Chrome to inf
 {% endColumn %}
 {% Column %}
 
-<a href="https://colab.research.google.com/drive/1hIVoz8bRCTpllYvads51MV7YS3zi3prn"><img src="https://wd.imgix.net/image/RtQlPaM9wdhEJGVKR8boMPkWf443/Au0wqVDHINuCmWxN0lOR.png?auto=format&w=439"  alt="ALT_TEXT_HERE" width="230"></a>
+<a href="https://colab.research.google.com/drive/1hIVoz8bRCTpllYvads51MV7YS3zi3prn">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/Au0wqVDHINuCmWxN0lOR.png", alt="ALT_TEXT_HERE", width="503", height="269" %}</a>
 
 {% endColumn %}
 {% endColumns %}
@@ -111,7 +111,7 @@ In this demo an advertiser uses an ad tech provider to run their ads on a publis
 {% endColumn %}
 {% Column %}
 
-<a href="https://arapi-home.web.app/"><img src="https://wd.imgix.net/image/RtQlPaM9wdhEJGVKR8boMPkWf443/cQABHch0L68I92idOgcN.png?auto=format&w=571"  alt="ALT_TEXT_HERE" width="230"></a>
+<a href="https://arapi-home.web.app/">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/cQABHch0L68I92idOgcN.png", alt="ALT_TEXT_HERE", width="707", height="512" %}</a>
 
 {% endColumn %}
 {% endColumns %}
@@ -131,7 +131,7 @@ In this demo an advertiser uses an ad tech provider to run their ads on a publis
 {% endColumn %}
 {% Column %}
 
-<a href="https://noise-lab.uc.r.appspot.com/?mode=simple"><img src="https://wd.imgix.net/image/RtQlPaM9wdhEJGVKR8boMPkWf443/9pln3PilOb2Hh5zrLdhz.png?auto=format&w=571"  alt="ALT_TEXT_HERE" width="230"></a>
+<a href="https://noise-lab.uc.r.appspot.com/?mode=simple">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/9pln3PilOb2Hh5zrLdhz.png", alt="ALT_TEXT_HERE", width="686", height="448" %}</a>
 
 {% endColumn %}
 {% endColumns %}
@@ -146,15 +146,14 @@ In this demo an advertiser uses an ad tech provider to run their ads on a publis
 {% Column %}
 Shared Storage API is a storage that can be used cross-site, meaning you store a value at a.com, then read a value from b.com at a later point in time. With Shared Storage, you can set data freely, but you are restricted in how you get that data out of the storage. This demo illustrates how it works.
 
-[Demo](https://shared-storage-demo.web.app/")
+[Demo](https://shared-storage-demo.web.app/)
 
 [Docs](/docs/privacy-sandbox/attribution-reporting/shared-storage/)
-
 
 {% endColumn %}
 {% Column %}
 
-<a href="https://shared-storage-demo.web.app/"><img src="https://wd.imgix.net/image/RtQlPaM9wdhEJGVKR8boMPkWf443/dOFtwOaI8ldFfwgmG5El.png?auto=format&w=571"  alt="ALT_TEXT_HERE" width="230"></a>
+<a href="https://shared-storage-demo.web.app/">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/dOFtwOaI8ldFfwgmG5El.png", alt="ALT_TEXT_HERE", width="751", height="521" %}</a>
 
 {% endColumn %}
 {% endColumns %}
@@ -164,36 +163,58 @@ Shared Storage API is a storage that can be used cross-site, meaning you store a
 {% DetailsSummary %}
 ### First-party Sets
 {% endDetailsSummary %}
+{% Columns %}
+{% Column %}
+First-Party Sets (FPS) is a way for a company to declare relationships among sites, so that browsers allow limited third-party cookie access for specific purposes. Chrome will use these declared relationships to decide when to allow or deny a site access to their cookies when in a third-party context.
 
+[Demo](https://first-party-sets.glitch.me/)
 
-https://first-party-sets.glitch.me/ 
+[Docs](/docs/privacy-sandbox/first-party-sets/)
 
-{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/xQbEZnwQ7Fjw8MOYuddS.png", alt="ALT_TEXT_HERE", width="600", height="400" %}
-
+{% endColumn %}
+{% Column %}
+<a href="https://first-party-sets.glitch.me/">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/xQbEZnwQ7Fjw8MOYuddS.png", alt="ALT_TEXT_HERE", width="600", height="400" %}</a>
+{% endColumn %}
+{% endColumns %}
 {% endDetails %}
 
 {% Details %}
 {% DetailsSummary %}
 ### FedCM
 {% endDetailsSummary %}
+{% Columns %}
+{% Column %}
+FedCM is a privacy-preserving approach to federated identity services (such as "Sign in with...") where users can log into sites without sharing their personal information with the identity service or the site. This demo illustrates how it works.
 
+[Demo](https://fedcm-rp-demo.glitch.me)
 
-https://fedcm-rp-demo.glitch.me 
+[Docs](/docs/privacy-sandbox/fedcm/)
 
-{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/r9RNu995n1Toyp9ysI5d.png", alt="ALT_TEXT_HERE", width="514", height="380" %}
-
+{% endColumn %}
+{% Column %}
+<a href="https://fedcm-rp-demo.glitch.me">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/r9RNu995n1Toyp9ysI5d.png", alt="ALT_TEXT_HERE", width="514", height="380" %}</a>
+{% endColumn %}
+{% endColumns %}
 {% endDetails %}
 
 {% Details %}
 {% DetailsSummary %}
 ### Permissions Policy
 {% endDetailsSummary %}
+{% Columns %}
+{% Column %}
+Permissions Policy allows the developer to control the browser features available to a page, its iframes, and subresources, by declaring a set of policies for the browser to enforce. This demo lets you try out the available policies.
 
+[Demo](https://permissions-policy-demo.glitch.me/demo/)
 
+[Docs](/docs/privacy-sandbox/permissions-policy/)
 
-{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/qaZFVmYVbQmEGhl004VT.png", alt="ALT_TEXT_HERE", width="676", height="458" %}
+{% endColumn %}
+{% Column %}
+<a href="https://permissions-policy-demo.glitch.me/demo/">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/qaZFVmYVbQmEGhl004VT.png", alt="ALT_TEXT_HERE", width="676", height="458" %}</a>
+{% endColumn %}
+{% endColumns %}
 
-https://permissions-policy-demo.glitch.me/demo/ 
 {% endDetails %}
 
 
@@ -201,31 +222,57 @@ https://permissions-policy-demo.glitch.me/demo/
 {% DetailsSummary %}
 ### User Agent Reduction
 {% endDetailsSummary %}
+{% Columns %}
+{% Column %}
+User-Agent reduction minimizes the identifying information shared in the User-Agent string, which may be used for passive fingerprinting. Resource requests have a reduced User-Agent header now and the return values from certain Navigator interfaces are reduced. This demo lets you experiment with the new UA string values.
 
+[Demo](https://uar-ot.glitch.me/)
 
-https://uar-ot.glitch.me/
-{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/V2ej15YhrmcD63KZe9UA.png", alt="ALT_TEXT_HERE", width="608", height="462" %}
+[Docs](/docs/privacy-sandbox/user-agent/)
 
-https://reduced-ua.glitch.me/javascript.html
-{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/rQpRviM9Xv2tYAxDg0Bc.png", alt="ALT_TEXT_HERE", width="694", height="396" %}
+{% endColumn %}
+{% Column %}
+<a href="https://uar-ot.glitch.me/">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/S5ALrfmMdD2xDkIpsnS0.png", alt="ALT_TEXT_HERE", width="800", height="627" %}</a>
+{% endColumn %}
+{% endColumns %}
+{% Columns %}
+{% Column %}
+JavaScript reduced user-agent
 
-https://reduced-ua.glitch.me/server-side
-{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/pon9P8soEiUNb4gTfluf.png", alt="ALT_TEXT_HERE", width="592", height="544" %}
+[Demo](https://reduced-ua.glitch.me/javascript.html)
 
+[Docs](/docs/privacy-sandbox/user-agent/)
+{% endColumn %}
+{% Column %}
+<a href="https://reduced-ua.glitch.me/javascript.html">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/rQpRviM9Xv2tYAxDg0Bc.png", alt="ALT_TEXT_HERE", width="694", height="396" %}</a>
+{% endColumn %}
+{% endColumns %}
+{% Columns %}
+{% Column %}
+Server-side reduced user-agent
+
+[Demo](https://reduced-ua.glitch.me/server-side)
+
+[Docs](/docs/privacy-sandbox/user-agent/)
+{% endColumn %}
+{% Column %}
+<a href="https://reduced-ua.glitch.me/server-side">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/pon9P8soEiUNb4gTfluf.png", alt="ALT_TEXT_HERE", width="592", height="544" %}</a>
+{% endColumn %}
+{% endColumns %}
 {% endDetails %}
 
+<!--
 {% Details %}
 {% DetailsSummary %}
 ### CHIPS
 {% endDetailsSummary %}
+https://developer.chrome.com/en/docs/privacy-sandbox/chips/
 
-https://www.chromium.org/updates/chips/ 
 {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/BHTwEZIn1orxMaPl6zjn.png", alt="ALT_TEXT_HERE", width="437", height="258" %}
 
 {% endDetails %}
-
-<!--
- Trust Tokens
-
-https://trust-token-demo.glitch.me/ 
 -->
+
+ Private State Token DEMO
+https://private-state-token-demo.glitch.me/
+

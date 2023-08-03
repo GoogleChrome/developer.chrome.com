@@ -9,6 +9,7 @@
     - url: /docs/privacy-sandbox/glossary
       title: i18n.docs.privacy-sandbox.glossary
     - url: /docs/privacy-sandbox/events
+    - url: /docs/privacy-sandbox/demos
     - url: /tags/privacy
       title: i18n.docs.privacy-sandbox.blog
 - title: i18n.docs.privacy-sandbox.start
