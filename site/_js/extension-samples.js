@@ -182,8 +182,7 @@ function addMobileListeners() {
   const done = document.getElementById('mobile-filters-done');
   const reset = document.getElementById('mobile-filters-reset');
 
-  // @ts-ignore
-  opener?.addEventListener('click', () => filters.showModal());
+  opener?.addEventListener('click', () => filters?.showModal());
 
   filters?.addEventListener('click', e => {
     if (/** @type { HTMLElement } */ (e.target).nodeName === 'DIALOG')
