@@ -1,129 +1,133 @@
 ---
 layout: "layouts/doc-post.njk"
 title: Best Practices
+seoTitle: Best Practices for Chrome extensions
 date: 2017-08-30
-updated: 2023-06-09
+updated: 2023-08-07
 description: >
-  Best practices for a high-quality extension and Chrome Web store listing.
+  How to create a high-quality extension and Chrome Web store listing.
 ---
 
-This page provides guidelines for designing your extension and Chrome Web Store listing. These recommendations may be updated as the store continues to grow and we learn from developers' experiences.
+## Overview {: #design-a-high-quality-extension}
 
-We strongly encourage you to create [high-quality extensions][hq-guidelines] that meet standards for performance, security, and user experience. To help you with this, we have summarized the guidelines as follows:
+This page provides guidelines for designing a [high-quality extension][hq-guidelines] and Chrome Web Store listing. These recommendations may be updated as the store continues to grow and we learn from developers' experiences. We strongly encourage you to create extensions that meet standards for compliance, performance, security, and user experience, as described in the following sections.
 
-## Compliance {: #compliance }
+## Compliance {: #compliance}
 
-Extensions available in the Chrome Web Store are required to adhere to the [developer program policies][program policies], such as the single-purpose policy, example, deceptive installation practices, and more.
+Extensions that are available in the Chrome Web Store are required to adhere to the [developer program policies][program-policies].
 
-If you encounter any policy violations or want to learn about common violations pitfalls, see [Troubleshooting Chrome Web Store violations][cws-violations].
+If you've received a policy violation warning or want to learn about common violations pitfalls, see [Troubleshooting Chrome Web Store violations][cws-violations].
 
-## Manifest V3 {: #mv3 }
+## Manifest Version 3
 
-Manifest V3 is the current version of the Chrome extension platform and all high-quality extensions should use it. See the [Manifest V3 overview][mv3-overview] to learn about the platform changes and [Migrate to Manifest V3][mv3-migration] for instructions on how to migrate.
+Manifest V3 is the most recent version of the Chrome extension platform and is the required version for submitting new items to the Chrome Web Store. See the [Manifest V3 overview][mv3-overview] to learn about the platform changes. Existing extensions should consider migrating to Manifest V3, see [Migrate to Manifest V3][mv3-migration]for instructions on how to migrate.
 
-## Security {: #security }
+## Security
 
-Your extension must transmit personal and sensitive user data over a secure connection (e.g. HTTPS,
-WSS) and stored at rest using a strong encryption method such as RSA or AES. Make sure your extension does not pose security threats and does not use [deceptive installation tactics](tbd). See [Stay secure][stay-secure] for a more in-depth discussion.
+Your extension should be safe for your users. For example, transmit user data securely via HTTPS or WSS. Stored user data must be strongly encrypted using RSA or AES. Check that your extension does not pose security threats and does not use [deceptive installation tactics][deceptive-install] See [Stay secure][stay-secure] for a more in-depth discussion.
 
-## Privacy {: #privacy }
+## Privacy
 
-Verify that your extension handles user data appropriately and conforms to [Chrome Web Store's
-data privacy](/docs/webstore/program-policies/privacy) requirements. See the [User Data FAQ][user-data-faq]
-for further details.
+Extensions are required to disclose what user data it will collect and how it will handle user data in the [Privacy tab][privacy-tab]. This information must be accurate, up-to-date, and match the extension's [privacy policy][privacy-policy]. For more guidance on privacy, see [Protecting User Privacy policies][user-privacy] and the [User Data FAQs][user-data]. 
 
-The permissions justifications and user data disclosures declared in the [Privacy tab][dashboard-privacy] must match the extension's privacy policy, be accurate, and be up-to-date.
+## Performance and functionality {: #performance}
 
-## Performance {: #performance }
-
-Ensure that your extension provides the intended functionality by including tests and conducting thorough manual testing across different browser versions, OSs and network conditions to ensure smooth functionality. Also, aim to use as few system resources as possible.
+Add end-to-end tests using testing libraries like [Puppeteer][puppeteer] to make sure your extension is performing as intended from start to finish. In addition, consider conducting thorough manual testing across different browser versions, OSs, and network conditions to ensure smooth functionality.
 
 ## User experience {: #user-experience }
 
-Design your extension with the user in mind by providing a simple, intuitive, and seamless user experience while also respecting the end user's privacy.
+Design your extension with the user in mind by providing a simple, intuitive, and seamless user interface while also respecting user privacy.
 
-### Provide an onboarding experience {: #onboarding}
+### Onboarding experience
 
-Start onboarding your users are soon as they reach your store listing by providing screenshots and a video of how the extension works. To ensure your users are more likely to install your extension, we recommend following the [permission warning guidelines][doc-perm-warn].
+Start onboarding your users as soon as they reach your store listing by providing screenshots and a video of how the extension works. We recommend following the [permission warning guidelines][doc-perm-warn] to increase the chances of users installing your extension.
 
-### Persistent UI {: #persistent-ui }
+### Designing a persistent UI
 
-When designing a [side panel](tbd) for your extension, make sure it enhances the user's browsing experience
-by providing relevant information and useful functionality. A side panel should help users
-accomplish tasks with as little distraction as possible.
+When designing a [side panel][api-sidepanel] for your extension, make sure it enhances the user's browsing experience by providing relevant information and useful functionality. A side panel should help users accomplish tasks with as little distraction as possible.
 
-### Support Google Accounts {: #support-google-accounts }
+### Sign in with Google {: #support-google-accounts }
 
-If your extension requires user login, we recommend that you support Google Accounts. Google
-Accounts can help you provide a better user experience; since Chrome Web Store users are
-likely to be logged in already, they won't have to set up and remember yet another username and
-password. Reducing the number of logins improves the user's experience.
+If your extension requires user login, we recommend that you support [Sign in with Google][google-signin], which provides a good user experience for Chrome Web Store users as they are likely to be logged in already. If you already have a login system, consider correlating the Google Account ID to the user account in your system. You can use the [Chrome Identity API][identity-api] to support Google accounts in the following ways:
 
-If you already have a login system, consider correlating the Google Account ID to the user account
-in your system. You can use the [Chrome Identity API][identity-api] to support Google accounts in
-the following ways:
 
 - Google OAuth2/OpenID: See [Identifying the User][identify-user].
 - OAuth2: See [Authenticate users with Google][oauth2-tutorial].
 
-### Keep ex-users' data for 30 days or more
+## Store listing
 
-You should keep users' data for at least 30 days after they cancel their subscription or uninstall
-your extension. Users might be unsubscribed for reasons beyond their control, and even if they do
-intentionally unsubscribe or uninstall the extension, they might come back.
+The purpose of an extension's [Chrome Web Store store listing][completing-listing] is to set the user's expectations. It should explicitly communicate what the extension does. See [Listing Requirements][cws-listing] for a complete list of requirements.
 
-### Cache license data
+### Create a compelling store listing {: #create-a-compelling-store-listing }
 
-If you use a payment processor or other licensing manager, you may also want to cache the results so
-that **(a)** your user can still use the extension when they are offline, and **(b)** you reduce the
-number of queries to the license server, reducing quota usage and traffic.
+The better your extension's store listing, the more users will discover and try your extension. [Creating a great listing page][great-listing-page] provides guidelines for designing the best store listing experience. When choosing your extension's name, writing its description, and designing its logo, keep in mind Google's [Branding Guidelines][cws-branding].
 
-## Store listing {: #store-listing } 
+### Provide great images {: #provide-great-images}
 
-The purpose of an extension's [Chrome Web Store store listing][completing-listing] is to set the user's expectations. It should explicitly communicate what the extension does. See [Listing Requirements](/docs/webstore/program-policies/listing-requirements/) for a complete list of requirements.
+All image assets (icon, tile, marquee, and screenshots) [should be provided][cws-images]. Images should not be blurry or too busy, as described in [Images of a high-quality listing][hq-listing-images].
 
-### Create a compelling store listing {: #great-listing}
-
-The better your extension's listing in the store, the more users will discover and try your extension. [Creating a great listing page][great-listing-page] provides guidelines to design the best store listing experience. When choosing your extension's name, writing its description, and
-designing its logo, keep in mind Google's [Branding Guidelines][cws-branding].
-
-### Provide great images {: #images }
-
-All image assets (icon, tile, marquee, and screenshots) [should be provided][supplying-images].
-Images should not be blurry or too busy, as described in [Images of a high-quality listing](/docs/webstore/best_listing/#images). 
-
-### Choose your extension's category well {: #categories }
+### Choose your extension's category well {: #choose-category-well}
 
 The developer console lets you specify a category for each extension. Choose the most appropriate category:
 
-- Accessibility
-- Blogging
-- Developer Tools
-- Fun
-- News & Weather
-- Photos
-- Productivity
-- Search Tools
-- Shopping
-- Social & Communication
-- Sports
+Accessibility
+: Extensions designed to enhance the browsing experience for individuals with visual impairments, hearing loss, limited dexterity, and other disabilities. This may include tools like screen readers, dark mode extensions, or utilities that help with navigation, using keyboard shortcuts, voice commands, among others.
 
+Blogging
+: Tools to assist bloggers with a variety of tasks, such as composing, editing, and publishing posts. They can also provide easy integration with popular blogging platforms.
 
-[oauth2-tutorial]: /docs/extensions/mv3/tut_oauth/
+Developer Tools
+: Extensions that help web developers perform tasks like debugging, performance analysis, code linting, and tools that enhance the browser's Dev Tools. For example, real-time HTML/CSS/JavaScript editing, API testing, and CSS inspection.
+
+Fun
+: These extensions are designed for entertainment. They can include games, interesting new tab backgrounds, quirky widgets, jokes, trivia, and more.
+
+News & Weather
+: These extensions keep users informed about current events and weather conditions. They can collect news from multiple sources, present real-time weather updates, notify breaking news, and more.
+
+Photos
+: These extensions provide tools for viewing, editing, organizing, and sharing photos. They may also offer features for capturing screenshots, image searching, and integrating with popular image hosting or editing services.
+
+Productivity
+: This is the most popular category. It provides tools to help users perform their tasks more efficiently. They could range from time trackers, tools to stay focused, to-do list managers, email organizers, document editors, and calendar utilities, among others.
+
+Search Tools
+: These extensions enhance the browser's search capabilities. For example, custom search engines, quick search shortcuts, automatic highlighters, etc.
+
+Shopping
+: These extensions aim to enhance the online shopping experience. They might offer features like price comparison, coupon finders, reviews and ratings, wish list management, and more.
+
+Social & Communication
+: These extensions are designed to enhance social media platforms. They can integrate with services and offer features like easy sharing, notifications, status updates, and more.
+
+Sports
+: These extensions are designed for sports fans. They can provide live score updates, sports news, game reminders, manage sports fantasy leagues, and integrate with various sports platforms.
+
+[api-sidepanel]: /docs/extensions/reference/sidePanel/
 [completing-listing]: /docs/webstore/cws-dashboard-listing/
 [cws-branding]: /docs/webstore/branding
 [cws-images]: /docs/webstore/images
+[cws-listing]: /docs/webstore/program-policies/listing-requirements/
 [cws-violations]: /docs/webstore/troubleshooting/
 [dashboard-privacy]: /docs/webstore/cws-dashboard-privacy/
+[deceptive-install]: /docs/webstore/program-policies/deceptive-installation-tactics/
+[doc-perm-warn]: /docs/extensions/mv3/permission_warnings/
+[google-signin]: https://developers.google.com/identity/gsi/web/guides/overview
 [great-listing-page]: /docs/webstore/best_listing/
-[identity-api]: /docs/extensions/reference/identity/
+[hq-guidelines]: /docs/webstore/program-policies/quality-guidelines/
+[hq-listing-images]: /docs/webstore/best_listing/#images
 [identify-user]: /docs/webstore/identify_user
+[identity-api]: /docs/extensions/reference/identity/
+[mv3-migration]: https://developer.chrome.com/docs/extensions/migrating/
 [mv3-overview]: /docs/extensions/mv3/intro/mv3-overview/
-[program policies]: /docs/webstore/program-policies/
+[oauth2-tutorial]: /docs/extensions/mv3/tut_oauth/
+[privacy-policy]: /docs/webstore/publish/#setup-a-developer-account
+[privacy-tab]: /docs/webstore/cws-dashboard-privacy/#certify-your-data-use-practices
+[program-policies]: /docs/webstore/program-policies/
+[puppeteer]: https://pptr.dev/guides/chrome-extensions
+[single-purpose]: /docs/extensions/mv3/single_purpose/
 [stay-secure]: /docs/extensions/mv3/security/
 [supplying-images]: /docs/webstore/images/
 [user-data-faq]: /docs/webstore/user_data/
-[hq-guidelines]: /docs/webstore/program-policies/quality-guidelines/
-[mv3-migration]: https://developer.chrome.com/docs/extensions/migrating/
-[doc-perm-warn]: /docs/extensions/mv3/permission_warnings/
-
+[user-data]: /docs/webstore/user_data/
+[user-privacy]: /docs/webstore/program-policies/#protecting-user-privacy
