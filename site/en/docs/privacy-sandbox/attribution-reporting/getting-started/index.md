@@ -88,6 +88,41 @@ You can get started by trying out the steps that follow, and then adapt your str
 
 Once you're familiar with the concepts for [event-level reports](/docs/privacy-sandbox/attribution-reporting/report-types) and have defined your [sources](#source), [triggers](#trigger), set your headers, and defined your [endpoints](#endpoints), you're ready to receive event-level reports.
 
+1. **Register a source.** Refer to [Registering a source](/docs/privacy-sandbox/attribution-reporting/register-attribution-source).
+   
+   In the `Attribution-Reporting-Register-Source` header, add the necessary fields to generate event-level reports. These fields include:
+
+   - `source_event_id`
+   - `destination`
+   - `expiry` (optional)
+   - `debug_key`
+   - `debug_reporting`
+   - `priority`
+
+1. **Register a trigger** refer to [Triggering Attribution](https://github.com/WICG/attribution-reporting-api/blob/main/EVENT.md#triggering-attribution).
+    
+   In your `Attribution-Reporting-Register-Trigger`  header, include
+
+   - `event_trigger_data` Note that if you omit this, event-level reports will not be generated.
+    
+   Here's an example header:
+
+    ```javascript
+    {
+      "event_trigger_data": [{
+      "trigger_data": "[unsigned 64-bit integer]",
+      "priority": "[signed 64-bit integer]",
+      "deduplication_key": "[unsigned 64-bit integer]"
+      }]
+    }
+    ```
+
+    Note that `deduplication_key`, `priority`, and `trigger_data` are optional fields.
+
+1.  **Set up an endpoint** with the following URL:
+
+    `{REPORTING_ENDPOINT}/.well-known/attribution-reporting/report-event-attribution`  
+
 ### Summary report generation via aggregatable reports
 
 To generate aggregatable reports, which are aggregated to create the end goal, summary reports, you need to generate contributions as a user clicks or views an ad and later converts. Contributions from many users are then aggregated to produce a summary report. 
@@ -118,7 +153,7 @@ Before you can register sources and triggers and get reports, your sites need to
         - `destination`
         - `expiry` (optional)
         - `debug_key`
-        - `aggregation_keys` (for aggregatable reports)
+        - `aggregation_keys`
         - `debug_reporting`
         - `priority`
 
@@ -132,15 +167,6 @@ Before you can register sources and triggers and get reports, your sites need to
   [Example code](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/main/attribution-reporting/functions/apps/adtech.js)):
         - `aggregatable_trigger_data`, with `key_piece` and `source_keys`       
         - `aggregatable_values`
-1. **Register a trigger (event-level reports):** refer to [Triggering Attribution](https://github.com/WICG/attribution-reporting-api/blob/main/EVENT.md#triggering-attribution).
-        - `event_trigger_data` Note that if you omit this, event-level reports will not be generated.
-
-1. **Set up filters (optional)**:
-    1. Follow the instructions in
-        [Define filters](/docs/privacy-sandbox/attribution-reporting/define-filters/).
-    1. Review details specific to filters for aggregatable reports in
-        the
-        [explainer](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATE.md).
 
 1. **Set up endpoints for the reports:** {: #endpoints}
     1. Set up an endpoint for **aggregatable** reports with
@@ -149,15 +175,21 @@ Before you can register sources and triggers and get reports, your sites need to
 
         Refer to the [example code](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/8f3d874b79ab0c8a15822fbcd09e94042aee7dcd/conversion-measurement/functions/apps/adtech.js#L334). More on [.well-known](https://en.wikipedia.org/wiki/Well-known_URI).
 
-    1.  Set up an endpoint for **event-level** reports with
-        the following URL:
-
-        `{REPORTING_ENDPOINT}/.well-known/attribution-reporting/report-event-attribution`      
+    
 1. **Set up debug reports:**
     1. Learn how to set up debug reports in the
         [Attribution reporting debugging series](/docs/privacy-sandbox/attribution-reporting-debugging/).
 
 1. **Batch and send the reports** for further processing with the aggregation service which will produce summary reports. Refer to [batched aggregatable reports](/docs/privacy-sandbox/attribution-reporting/system-overview/#batched-aggregatable-reports).
+
+### Optional steps
+
+1. **Set up filters (optional)**:
+    1. Follow the instructions in
+        [Define filters](/docs/privacy-sandbox/attribution-reporting/define-filters/).
+    1. Review details specific to filters for aggregatable reports in
+        the
+        [explainer](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATE.md).
 
 ### Don't forget feature detection
 
