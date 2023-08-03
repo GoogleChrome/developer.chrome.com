@@ -10,4 +10,4 @@ authors:
   - albertomedina
 ---
 
-Demo Comanion folder.
+Demo Companion folder.
