@@ -11,7 +11,7 @@ description: Understanding URL match patterns in Chrome extensions.
 
 Extensions use match patterns to specify a group of URLs. They are mainly used to declare [host permissions][host-permissions] along with other permissions to use certain Chrome APIs or when injecting [content scripts][content-scripts]. Extension also use match patterns in:
 
-- [`"web_accesible_resources.matches"`][war]
+- [`"web_accessible_resources.matches"`][war]
 - [`"externally_connectable.matches"`][ext-connect]
 
 ## What is a match pattern? {: #what }
@@ -41,7 +41,7 @@ Each part can use wildcards `*`. Below is a detailed description:
 Port URLs
 : Use `http://localhost/*` to match any localhost ports during development. For IP addresses, include the specific address plus a wildcard in the path. For example: `http://127.0.0.1/*`
 
-Top Level domains
+Top Level domain match patterns
 : [Top Level domain][mdn-tld] match patterns like `http://google.*/*` are not supported. They should be listed individually. For example: `http://google.es/*` and `http://google.fr/*`.
 
 ## Examples {: #examples }

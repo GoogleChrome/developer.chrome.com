@@ -8,7 +8,7 @@ description: An overview of the valid values for the permissions property in man
 ---
 
 To use most [Chrome APIs][api-ref], your extension must declare its intent in the permissions fields
-of the [manifest](#manifest). Extensions can request the following categories of permissions,specified using the respective manifest keys:
+of the [manifest](#manifest). Extensions can request the following categories of permissions, specified using the respective manifest keys:
 
 [`"permissions"`](#permissions)
 : contain items from a list of known strings (such as `"geolocation"`). Changes may trigger a [warning](#warnings).
@@ -23,7 +23,7 @@ of the [manifest](#manifest). Extensions can request the following categories of
 : contain one or more [match patterns][doc-match] that give access to one or more hosts. Changes may trigger a [warning](#warnings).
 
 `"optional_host_permissions"`
-: are like regular `host_permissions`, but are granted by the user at runtime, rather than in advance.
+: are like regular `host_permissions`, but are granted by the user at runtime, rather than at install time.
 
 Permissions help to limit damage if your extension is compromised by malware. Some permission warning are displayed to users for their consent before
 installation or at runtime, as detailed in [Permission with warnings](#warnings).
