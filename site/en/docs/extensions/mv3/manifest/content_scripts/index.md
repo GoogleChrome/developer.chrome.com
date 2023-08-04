@@ -6,7 +6,7 @@ date: 2023-08-10
 description: Reference documentation for the content_scripts property of manifest.json.
 ---
 
-## Overview {: #overview}
+## Overview {: #overview }
 
 The `"content_scripts"` field is used to inject JavaScript or CSS files at install time on a specific set of pages that [match a specific pattern][doc-match]. Extensions can also inject content scripts programmatically, see [Injecting Scripts][doc-cs] for details.
 
@@ -51,7 +51,7 @@ Each file must contain a relative path to a resource in the extension's root dir
 
 ## Matching URLs {: #match-urls }
 
-Only the `"matches"` property is required. Then you can use `"exclude_matches"`, `"include_globs"`, and `"exclude_globs"` to customize which URLs to inject code into. The `"matches"` key is considered a host permission and will [trigger a warning][perm-warn]. 
+Only the `"matches"` property is required. Then you can use `"exclude_matches"`, `"include_globs"`, and `"exclude_globs"` to customize which URLs to inject code into. The `"matches"` key will [trigger a warning][perm-warn]. 
 
 `"matches"` - Array
 : _Required_. Specifies which URL patterns to inject the content scripts into. See [Match Patterns][doc-match] for syntax.
@@ -223,7 +223,7 @@ The `"all_frames"` field specifies if the content script should be injected into
 To inject into other frames like `data:`, `blob:`, and `filesystem:`, set the `"match_origin_as_fallback"` to `true`. For details, see [Injecting in related frames][cs-inject-frames]
 
 `"all_frames"` Boolean
-: _Optional_. Defaults to `false`, meaning that only the top frame is matched.If specified true, it will inject into all frames, even if the frame is not the topmost frame in the tab. Each frame is checked independently for URL requirements, it won't inject into child frames if the URL requirements are not met.
+: _Optional_. Defaults to `false`, meaning that only the top frame is matched. If set to true, it will inject into all frames, even if the frame is not the topmost frame in the tab. Each frame is checked independently for URL requirements, it won't inject into child frames if the URL requirements are not met.
 
 `"match_about_blank"`- Boolean
 : _Optional_. Defaults to `false`. Whether the script should inject into an `about:blank` frame where the parent URL matches one of the patterns declared in `"matches"`.
