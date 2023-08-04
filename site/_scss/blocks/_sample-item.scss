@@ -1,12 +1,27 @@
+.no-js {
+  .sample-item__collapse-button {
+    display: none;
+  }
+
+  .load-more-button {
+    display: none;
+  }
+}
+
 .sample-item {
   margin-bottom: get-size(200);
   padding-bottom: get-size(200);
+
+  &__button {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
 
   &__description {
     color: get-color('grey-700');
   }
 
-  &__permission-prompt {
+  &__prompt {
     color: get-color('grey-700');
   }
 
