@@ -2,7 +2,7 @@
 layout: layouts/doc-post.njk
 title: What are Cookies?
 subhead: >
-  What are cookies, why were they invented, and what role do they play in the web ecosystem
+  What are cookies and what role do they play in the web ecosystem
 description: ''
 date: 2023-07-26
 updated: 2023-07-26

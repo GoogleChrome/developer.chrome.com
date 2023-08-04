@@ -10,9 +10,15 @@ authors:
   - albertomedina
 ---
 
-Eventually 3P cookies will be removed while ensuring that the ecosystem has the technical capabilities for embracing new non-cookie-based solutions (e.g. separating first- and third-party cookies, creating first-party sets, and finally removing third-party cookies).
+Eventually 3P cookies will be removed and we will need to rely on other technologies as building blocka for implementing the kind of features users have come to expect on the web, and which greatly improve their experience. The following table provides a concise mapping from available or proposed web platform APIs to the scenario they can be used to replace the use of cookies.
 
-Some features of the web that people have come to expect, and which greatly improve user experience, currently depend on third-party cookies, and continuing to support these use cases is important.
-We strive to replace existing functionality with privacy-preserving techniques. Ideally, from a user's point of view, there should be no noticeable difference between how the web operates today and how it functions in a world after the implementation of the Privacy Sandbox.
+| API                                                                     | Scenario                                                                                                                                                |
+| :---------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| FPS                                                                     |                                                                                                                                                         |
+| CHIPS                                                                   |
+| [Federated Credential Management (FedCM)](/docs/privacy-sandbox/fedcm/) | Federated identity services enabling users to log into sites without sharing their personal information with a third-party service or website.          |
+| [Private State Tokens](/docs/privacy-sandbox/trust-tokens/)             | Convey a limited amount of information from one browsing context to another to help combat fraud, without passive tracking.                             |
+| [Ad relevance](/docs/privacy-sandbox/#show-relevant-content)            | A suite of APIs to enable [ad relevance](/docs/privacy-sandbox/#show-relevant-content)                                                                  |
+| [Measurement](/docs/privacy-sandbox/#measure-digital-ads)               | Interest-based advertising, on-device auctions for custom audiences, cross-site content selection, ad conversion measurement and attribution, and more. |
 
-As the ability of doing cross-site tracking via 3P cookies is removed, we will ensure developers have a well-lit path to the new capabilities of the platform, and avoid pursuing tracking via other means.
+Learn more about how leverage the capabilities of the web platform to replace 3P cookies from your use case by reviewing the components of this section, and the [Privacy Sandbox documentation](/docs/privacy-sandbox/).
