@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Troubleshooting Chrome Web Store violations"
 date: 2020-11-16
-updated: 2023-04-21
+updated: 2023-08-04
 description: >
   Guidelines for understanding why an item was rejected or removed from the Chrome Web Store
   and how to fix the problem.
@@ -16,6 +16,38 @@ violation. In order to make it easier to reference specific violations, the Chro
 each violation a human-readable ID. These IDs are composed of two words: a color and an element. For
 example, Yellow Magnesium corresponds to the general class of errors where the extension does not
 behave as expected.
+
+## Additional requirements for Manifest V3 {: #additional-requirements-for-manifest-v3 }
+
+Corresponds to notification ID: `Blue Argon`
+
+The intent of this policy is to ensure that Manifest V3 extensions are not including remotely hosted code.
+
+### Common reasons for rejection
+
+* Including a `<script>` tag that points to a resource that is not within the extension's package.
+
+* Using JavaScript's `eval()`` method or other mechanisms to execute a string fetched from a remote source.
+
+* Building an interpreter to run complex commands fetched from a remote source, even if those commands are fetched as data.
+
+### How can you rectify this? {: #how-can-you-rectify-this_23 }
+
+* Double check all code for references to external JavaScript files, which should be replaced with internal extension files.
+
+* Review the Manifest V3 migration guide [Improve extension security](/docs/extensions/migrating/improve-security/) for a walkthrough on alternatives to execution of arbitrary strings and remotely hosted code.
+
+### Relevant policy
+
+This section addresses extensions that are in violation of the following section of the Chrome Web Store [developer program policies](/docs/webstore/program-policies/mv3-requirements/):
+
+{% Aside %}
+
+**Additional Requirements for Manifest V3**
+
+Extensions using Manifest V3 must meet additional requirements related to the extension's code. Specifically, the full functionality of an extension must be easily discernible from its submitted code. This means that the logic of how each extension operates should be self contained. The extension may reference and load data and other information sources that are external to the extension, but these external resources must not contain any logic.
+
+{% endAside %}
 
 ## Functionality not working {: #does-not-work }
 
@@ -1195,7 +1227,7 @@ catalog of the Chrome Web Store. Some examples of common violations include:
 - Extensions with functionality that is not directly provided by the extension (e.g. file
   converters which only link to other file conversion services).
 - Click-baity template extensions that only vary slightly in functionality with negligible
-  utility (e.g. a "Word of the Day" extension and a "Daily Inspirational Quotes" extension, 
+  utility (e.g. a "Word of the Day" extension and a "Daily Inspirational Quotes" extension,
   which use the same general extension template).
 {% endAside %}
 
