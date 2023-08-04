@@ -120,7 +120,7 @@ Regardless of type, a rule starts with four fields as shown below. While the `"i
 
 ### urlFilter matching characters {: #filter-matching-charactgers }
 
-A rule's `"condition"` key allows a `"urlFilter"` key for acting on URLs under a specified domain. You create patterns using [pattern matching tokens](/docs/extensions/reference/declarativeNetRequest/#type-RuleCondition:~:text=session%2Dscoped%20rules.-,urlFilter,-string%C2%A0optional). A few examples are shown below.
+A rule's `"condition"` key allows a `"urlFilter"` key for acting on URLs under a specified domain. You create patterns using [pattern matching tokens](/docs/extensions/reference/declarativeNetRequest/#property-RuleCondition-urlFilter). A few examples are shown below.
 
 <table>
     <tbody>
