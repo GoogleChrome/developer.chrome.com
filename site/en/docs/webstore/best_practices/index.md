@@ -128,6 +128,5 @@ Sports
 [single-purpose]: /docs/extensions/mv3/single_purpose/
 [stay-secure]: /docs/extensions/mv3/security/
 [supplying-images]: /docs/webstore/images/
-[user-data-faq]: /docs/webstore/user_data/
 [user-data]: /docs/webstore/user_data/
 [user-privacy]: /docs/webstore/program-policies/#protecting-user-privacy
