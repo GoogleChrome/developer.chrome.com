@@ -8,11 +8,11 @@ description: Reference documentation for the content_scripts property of manifes
 
 ## Overview {: #overview }
 
-The `"content_scripts"` field is used to inject JavaScript or CSS files at install time on a specific set of pages that [match a specific pattern][doc-match]. Extensions can also inject content scripts programmatically, see [Injecting Scripts][doc-cs] for details.
+The `"content_scripts"` field is used to statically load a JavaScript or CSS file every time Chrome opens a page that matches a certain [URL pattern][doc-match]. Extensions can also inject content scripts programmatically, see [Injecting Scripts][doc-cs] for details.
 
 ## Manifest {: #manifest }
 
-These are the supported fields for `"content_scripts"`. Only the `"matches"` key is required.
+These are the supported fields for `"content_scripts"`. Only the `"matches"` key and either `"js"` or `"css"` are required.
 
 {% Label %}manifest.json{% endLabel %}
 
@@ -28,8 +28,8 @@ These are the supported fields for `"content_scripts"`. Only the `"matches"` key
      "exclude_matches": ["*://*/*foo*"],
      "include_globs": ["*example.com/???s/*"],
      "exclude_globs": ["*bar*"],     
-     "all_frames": true,
-     "match_origin_as_fallback": true,
+     "all_frames": false,
+     "match_origin_as_fallback": false,
      "match_about_blank": false,
      "run_at": "document_idle",
      "world": "ISOLATED",
@@ -233,13 +233,13 @@ To inject into other frames like `data:`, `blob:`, and `filesystem:`, set the `"
 
 ## Run time and execution environment {: #world-timings }
 
-By default, content scripts are injected when the DOM is complete (`"document_idle"`), meaning all its resources have finished loading, and live in a private isolated execution environment that isn't accessible to the page or other extensions.
+By default, content scripts are injected when the document and all resources are finished loading (`"document_idle"`), and live in a private isolated execution environment that isn't accessible to the page or other extensions.
 
 [`"run_at"`][scripting-runat] - `document_start` | `document_end` | `document_idle`
-: _Optional_. Specifies when the script should be injected into the page. It corresponds with the loading stated of [Document.readyState][mdn-ready-state]. Either `"document_start"` (the DOM is still loading), `"document_end"` (other resources are still loading), or `"document_idle"`, which corresponds to complete (the DOM and page resources have finished loading).
+: _Optional_. Specifies when the script should be injected into the page. It corresponds with the loading stated of [Document.readyState][mdn-ready-state]. Either `"document_start"` (the DOM is still loading), `"document_end"` (other resources are still loading), or `"document_idle"`, when the DOM and resources have finished loading.
 
 [`"world"`][scripting-world] - `ISOLATED` | `MAIN`
-: _Optional_. The JavaScript world for a script to execute within. Defaults to `"ISOLATED"`, which is the execution environment unique to the content script. Choosing `"MAIN"` world, means the script will share the execution environment with the host page's JavaScript.
+: _Optional_. The JavaScript world for a script to execute within. Defaults to `"ISOLATED"`, which is the execution environment unique to the content script. Choosing `"MAIN"` world, means the script will share the execution environment with the host page's JavaScript. See [Work in isolated worlds][cs-worlds] to learn more.
 
 {% Aside 'warning' %}
 There are risks involved when using `"MAIN"` world. The host page can access and interfere with the injected script. See [Work in isolated worlds][cs-worlds] to learn more.
