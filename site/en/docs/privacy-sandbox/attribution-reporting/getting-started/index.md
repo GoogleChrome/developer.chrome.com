@@ -84,6 +84,10 @@ These concepts are:
 
 You can get started by trying out the steps that follow, and then adapt your strategy to fit, or you can plan your strategy in advance.
 
+{% Aside 'important' %}
+Before you can register sources and triggers and get reports, your sites need to have SSL/TLS certificates; in other words, you need to be running over HTTPS.
+{% endAside %}
+
 ### Event-level report generation
 
 Once you're familiar with the concepts for [event-level reports](/docs/privacy-sandbox/attribution-reporting/report-types) and have defined your [sources](#source), [triggers](#trigger), set your headers, and defined your [endpoints](#endpoints), you're ready to receive event-level reports.
@@ -139,10 +143,6 @@ walks you through the process.
 {% endAside %}
 
 Aggregatable and event-level reports are generated in a similar manner. To be able to generate reports, follow these high-level steps. Each step points to more detailed information as well.
-
-{% Aside 'important' %}
-Before you can register sources and triggers and get reports, your sites need to have SSL/TLS certificates; in other words, you need to be running over HTTPS.
-{% endAside %}
 
 {: #source}
 
