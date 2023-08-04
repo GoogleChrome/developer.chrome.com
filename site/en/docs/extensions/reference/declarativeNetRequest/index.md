@@ -267,7 +267,7 @@ function updateStaticRules(enableRulesetIds, disableCandidateIds) {
   const enabledStaticCount = await chrome.declarativeNetRequest.getEnabledRulesets();
   // Compare rule counts to determine if anything needs to be disabled so that
   // new rules can be enabled
-  const propsedCount = enableRulesetIds.length;
+  const proposedCount = enableRulesetIds.length;
   if (enabledStaticCount + proposedCount > chrome.declarativeNetRequest.MAX_NUMBER_OF_ENABLED_STATIC_RULESETS) {
     options.disableRulesetIds = disableCandidateIds
   }
