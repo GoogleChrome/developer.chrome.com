@@ -20,15 +20,15 @@ If you've received a policy violation warning or want to learn about common viol
 
 ## Manifest Version 3
 
-Manifest V3 is the most recent version of the Chrome extension platform and is the required version for submitting new items to the Chrome Web Store. See the [Manifest V3 overview][mv3-overview] to learn about the platform changes. Existing extensions should consider migrating to Manifest V3, see [Migrate to Manifest V3][mv3-migration]for instructions on how to migrate.
+Manifest V3 is the most recent version of the Chrome extension platform and is the required version for submitting new items to the Chrome Web Store. See the [Manifest V3 overview][mv3-overview] to learn about the platform changes. Existing extensions should consider migrating to Manifest V3, see [Migrate to Manifest V3][mv3-migration] for instructions on how to migrate.
 
 ## Security
 
-Your extension should be safe for your users. For example, transmit user data securely via HTTPS or WSS. Stored user data must be strongly encrypted using RSA or AES. Check that your extension does not pose security threats and does not use [deceptive installation tactics][deceptive-install] See [Stay secure][stay-secure] for a more in-depth discussion.
+Your extension should be safe for your users. For example, transmit user data securely via HTTPS or WSS. Stored user data must be strongly encrypted using RSA or AES. Check that your extension does not pose security threats and does not use [deceptive installation tactics][deceptive-install]. See [Stay secure][stay-secure] for a more in-depth discussion.
 
 ## Privacy
 
-Extensions are required to disclose what user data it will collect and how it will handle user data in the [Privacy tab][privacy-tab]. This information must be accurate, up-to-date, and match the extension's [privacy policy][privacy-policy]. For more guidance on privacy, see [Protecting User Privacy policies][user-privacy] and the [User Data FAQs][user-data]. 
+An Extension is required to disclose in the [Privacy tab][privacy-tab] what user data it will collect and how it will handle user data. This information must be accurate, up-to-date, and match the extension's [privacy policy][privacy-policy]. For more guidance on privacy, see [Protecting User Privacy policies][user-privacy] and the [User Data FAQs][user-data]. 
 
 ## Performance and functionality {: #performance}
 
