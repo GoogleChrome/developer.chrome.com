@@ -231,7 +231,7 @@ Through these enhancements, we can address different issues that lead to poor re
 
 ## Conclusion
 
-We expect the INP score to provide a better compass for websites to improve responsiveness and performance in the future. We will take steps to provide more actionable guidance on the metric in 2022-23. We hope to achieve this by:
+We expect the INP score to provide a better compass for websites to improve responsiveness and performance in the future. We will build on our [existing INP guide](https://web.dev/optimize-inp/) to provide more actionable tips for framework developers in 2023. We hope to achieve this by:
 
 * Creating channels for easy access to field data on INP for frameworks and web developers.
 * Work with frameworks to build features that will improve INP by default.
