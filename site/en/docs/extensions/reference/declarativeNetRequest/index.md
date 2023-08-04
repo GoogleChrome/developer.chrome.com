@@ -202,7 +202,7 @@ If only one extension has a rule that matches a request, that rule is applied. B
 ### Rule limits {: #limits }
 
 There is a performance overhead to loading and evaluating rules in the browser,
-and so a number of limits apply when using the API. Limits depend on the type of
+so some limits apply when using the API. Limits depend on the type of
 rule you're using.
 
 #### Static rules {: #static-rules }
