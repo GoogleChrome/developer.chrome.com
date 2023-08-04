@@ -257,7 +257,7 @@ await chrome.declarativeNetRequest.updateDynamicRules({
 
 #### Update static rulesets {: #update-static-rulesets }
 
-The following example shows how to enable and disable rulesets, while taking into account the number of available rulesets and the maximum number of enabled static rulesets. You would do this is in situations where the number of static rules you need exceeds the number allowed. For this to work, some of your rulesets should be installed with some of your rulesets disabled (setting `"Enabled"` to `false` with in the manifest file).
+The following example shows how to enable and disable rulesets while considering the number of available and the maximum number of enabled static rulesets. You would do this when the number of static rules you need exceeds the number allowed. For this to work, some of your rulesets should be installed with some of your rulesets disabled (setting `"Enabled"` to `false` within the manifest file).
 
 ```js
 async function updateStaticRules(enableRulesetIds, disableCandidateIds) {
