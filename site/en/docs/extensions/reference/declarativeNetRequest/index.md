@@ -364,7 +364,7 @@ The following uses the `"transform"` key to redirect to a subdomain of example.c
 }
 ```
 
-The following example uses regular expressions to redirect from `https://www.abc.xyz.com/path` to `https://abc.xyz.com/path`. In the `"regexFilter"` key notice how periods are escaped and that the capturing group selects either "abc" or "def". The `"regexSubstitution"` key specifies the first returned match of the regular expression using "\\1". In this case "abc" is captured from the redirected URL and placed in the substitution.
+The following example uses regular expressions to redirect from `https://www.abc.xyz.com/path` to `https://abc.xyz.com/path`. In the `"regexFilter"` key, notice how periods are escaped and that the capturing group selects either "abc" or "def". The `"regexSubstitution"` key specifies the first returned match of the regular expression using "\\1". In this case, "abc" is captured from the redirected URL and placed in the substitution.
 
 ```json
 {
