@@ -14,9 +14,7 @@ This page provides guidelines for designing a [high-quality extension][hq-guidel
 
 ## Compliance {: #compliance}
 
-Extensions that are available in the Chrome Web Store are required to adhere to the [developer program policies][program-policies].
-
-If you've received a policy violation warning or want to learn about common violations pitfalls, see [Troubleshooting Chrome Web Store violations][cws-violations].
+Extensions that are available in the Chrome Web Store are required to adhere to the [developer program policies][program-policies]. If you've received a policy violation warning or want to learn about common violations pitfalls, see [Troubleshooting Chrome Web Store violations][cws-violations].
 
 ## Manifest Version 3
 
