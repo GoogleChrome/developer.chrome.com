@@ -16,6 +16,10 @@ The Launch Handler API lets you control how your app is launched, for example, w
 existing or a new window and whether the chosen window is navigated to the launch URL. As with
 the File Handing API, this also enqueues a `LaunchParams` object in the launched page's `window.launchQueue`.
 
+{% Aside 'important' %}
+Launch handling and link capturing are often confused, but they are actually two different things. Link capturing is the decision of the operating system on how in-scope links open, either in a browser tab or in an installed PWA. [Declarative link capturing](/docs/web-platform/declarative-link-capturing/) was a proposed API to let developers control that behavior but it will not launch, so it's currently up to the operating system to decide how to implement this.
+{% endAside %}
+
 ## Current status
 
 <div class="table-wrapper scrollbar">
@@ -110,11 +114,12 @@ You can see a demo of the Launch Handler API in action in the
 Launch Handler API.
 
 1. Install the _Musicr 2.0_ app on a ChromeOS device.
+1. Open the app.
 1. Send yourself a link in a chat application of the form
    `https://launch-handler.glitch.me?track=https://example.com/music.mp3`. (You can customize
    `https://example.com/music.mp3` for any URL pointing to an audio file, for example,
    `https://launch-handler.glitch.me?track=https://cdn.glitch.me/3e952c9c-4d6d-4de4-9873-23cf976b422e%2Ffile_example_MP3_700KB.mp3?v=1638795977190`).
-1. Click the link in your chat app and notice how _Musicr 2.0_ opens and plays the track.
+1. Click the link in your chat app and notice how the link is handled by the existing instance of _Musicr 2.0_ and plays the track.
 1. Click the link in your chat app again and notice that you will not get a second instance of
    _Musicr 2.0_.
 
