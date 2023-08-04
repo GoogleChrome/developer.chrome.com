@@ -87,7 +87,7 @@ The [Aurora](/blog/introducing-aurora/) team in Chrome works with open-source we
 
 ## Experimental responsiveness metric data
 
-An INP below or equal to 200 milliseconds indicates good responsiveness. The CrUX report data and the [CWV Technology Report](https://lookerstudio.google.com/s/jYWr7CI2M1I) for February 2023 give us the following information about responsiveness for popular JavaScript frameworks.
+An INP below or equal to 200 milliseconds indicates good responsiveness. The CrUX report data and the [CWV Technology Report](https://lookerstudio.google.com/s/uwsf2UWxr6k) for February 2023 give us the following information about responsiveness for popular JavaScript frameworks.
 
 {% Aside %}
 This measurement includes data from all versions of the frameworks listed. For more mature frameworks, this can include data from versions many years out-of-date.
@@ -113,53 +113,53 @@ This measurement includes data from all versions of the frameworks listed. For m
   <tr>
    <td>Angular (v2.0.0+)
    </td>
-   <td>27.9
+   <td>28.6
    </td>
-   <td>82.7
+   <td>83.6
    </td>
   </tr>
   <tr>
    <td>Next.js
    </td>
-   <td>26.0
+   <td>28.5
    </td>
-   <td>84.5
+   <td>87.3
    </td>
   </tr>
   <tr>
    <td>Nuxt.js
    </td>
-   <td>31.4
+   <td>32.0
    </td>
-   <td>91.6
+   <td>91.2
    </td>
   </tr>
   <tr>
    <td>Preact
    </td>
-   <td>46.5
+   <td>48.6
    </td>
-   <td>92.7
+   <td>92.8
    </td>
   </tr>
   <tr>
    <td>Vue (v2.0.0+)
    </td>
-   <td>49.8
+   <td>50.3
    </td>
-   <td>94.3
+   <td>94.1
    </td>
   </tr>
   <tr>
    <td>Lit
    </td>
-   <td>47.9
+   <td>50.0
    </td>
-   <td>87.1
+   <td>88.3
    </td>
   </tr>
   </tbody>
-   <caption>CWV technology report - INP data for February 2023</caption>
+   <caption>CWV technology report - INP data for June 2023</caption>
 </table>
 </div>
 
