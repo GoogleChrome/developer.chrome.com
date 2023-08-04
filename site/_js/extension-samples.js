@@ -25,17 +25,55 @@ const searchInput = document.querySelector('#search-extension-samples');
 })();
 
 function removeNoJsClass() {
-  if (!filterContainer) {
-    throw new Error('Missing filter container');
-  }
-  filterContainer.classList.remove('no-js');
-  if (!selectedFilterContainer) {
-    throw new Error('Missing selected filter container');
-  }
-  selectedFilterContainer.classList.remove('no-js');
+  filterContainer?.classList.remove('no-js');
+  selectedFilterContainer?.classList.remove('no-js');
+  wrapper?.classList.remove('no-js');
 }
 
 function addListeners() {
+  document.querySelectorAll('.sample-item').forEach(sampleElement => {
+    const showMoreButton = sampleElement.querySelector('.show-more-button');
+    if (!showMoreButton) {
+      return;
+    }
+    const showMoreText = showMoreButton.getAttribute('data-more');
+    const showLessText = showMoreButton.getAttribute('data-less');
+    showMoreButton.addEventListener('click', () => {
+      const isHidden = showMoreButton.textContent === showMoreText;
+      if (isHidden) {
+        const usedApis = /** @type {SampleElement} */ (
+          sampleElement
+        ).data.apis.slice(3);
+        const fragment = document.createDocumentFragment();
+        for (const api of usedApis) {
+          const apiDocUrl = `/docs/extensions/mv3/reference/${api.namespace}/#${api.type}-${api.propertyName}`;
+          const pillElement = document.createElement('a');
+          pillElement.classList.add(
+            'more-api-pill',
+            'tag-pill',
+            'surface',
+            'hairline',
+            'color-secondary-text',
+            'type--label',
+            'weight-regular',
+            'rounded-lg'
+          );
+          pillElement.setAttribute('href', apiDocUrl);
+          pillElement.setAttribute('target', '_blank');
+          pillElement.setAttribute('rel', 'noopener');
+          pillElement.textContent = `${api.namespace}.${api.propertyName}`;
+          fragment.appendChild(pillElement);
+        }
+        showMoreButton.parentNode?.insertBefore(fragment, showMoreButton);
+        showMoreButton.textContent = showLessText;
+      } else {
+        const moreApiPills = sampleElement.querySelectorAll('.more-api-pill');
+        moreApiPills.forEach(pill => pill.remove());
+        showMoreButton.textContent = showMoreText;
+      }
+    });
+  });
+
   selectFields.forEach(ele => {
     ele.addEventListener('change', e => {
       const t = e.target;
@@ -109,8 +147,7 @@ function initItemData() {
     if (!sample) {
       throw new Error(`Missing sample data for ${name}`);
     }
-    // @ts-ignore
-    item.data = sample;
+    /** @type {SampleElement} */ (item).data = sample;
   });
 }
 
@@ -243,8 +280,7 @@ function restart() {
     return;
   }
   wrapper?.querySelectorAll('.sample-item').forEach(item => {
-    // @ts-ignore
-    const hide = !shouldSampleShown(item.data);
+    const hide = !shouldSampleShown(/** @type { SampleElement } */ (item).data);
     /** @type { HTMLDivElement } */ (item).style.display = hide
       ? 'none'
       : 'block';

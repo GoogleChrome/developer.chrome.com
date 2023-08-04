@@ -1,3 +1,9 @@
+{% from 'macros/icon.njk' import icon with context %}
+
+{% set MAX_APIS_COUNT = 3 %}
+{% set showMoreLabel = 'i18n.extension_samples.show_more' | i18n %}
+{% set showLessLabel = 'i18n.extension_samples.show_less' | i18n %}
+
 <div class="sample-item" data-sample-name="{{ sample.name }}">
   <div class="sample-item__title">
     <h2 class="type--h4">
@@ -14,21 +20,47 @@
   <p class="sample-item__description type--caption">
     {{ sample.description }}
   </p>
-
-  {% if sample.permissions.length %}
-    <div class="cluster flow-space-200 gap-top-300">
-      <div>
-        {% for permission in sample.permissions %}
-          <a
-          class="tag-pill surface decoration-none hairline color-secondary-text type--label weight-regular rounded-lg"
+  <div class="gap-top-300">
+    <div class="cluster flow-space-100">
+      <div class="sample-item__permissions-detail">
+        <span class="type--small color-secondary-text pad-top-50">{{ 'i18n.extension_samples.permissions' | i18n }}: </span>
+        {% if sample.permissions.length %}
+          {% for permission in sample.permissions %}
+            <a
+          class="tag-pill surface hairline color-secondary-text type--label weight-regular rounded-lg"
           href="/docs/extensions/mv3/declare_permissions/#{{ permission }}"
           rel="noopener"
           target="_blank">{{ permission }}</a>
-        {% endfor %}
+          {% endfor %}
+        {% else %}
+          <p class="sample-item__prompt type--xsmall pad-top-50">{{ 'i18n.extension_samples.no_permissions_required' | i18n }}</p>
+        {% endif %}
+      </div>
+      <div class="sample__apis-detail">
+        <span class="type--small color-secondary-text pad-top-50">{{ 'i18n.extension_samples.apis' | i18n }}: </span>
+        {% if sample.apis.length %}
+          {% for api in sample
+            .apis
+            .slice(0, MAX_APIS_COUNT) %}
+            <a
+            class="tag-pill surface hairline color-secondary-text type--label weight-regular rounded-lg"
+            href="/docs/extensions/mv3/reference/{{ api.namespace }}/#{{ api.type }}-{{ api.propertyName }}"
+            rel="noopener"
+            target="_blank">{{ api.namespace }}.{{ api.propertyName }}</a>
+          {% endfor %}
+          {% if sample.apis.length > MAX_APIS_COUNT %}
+            <a
+              class="show-more-button tag-pill surface hairline color-blue-medium type--label weight-regular rounded-lg" data-more="{{showMoreLabel}}" data-less="{{showLessLabel}}">{{ showMoreLabel }}</a>
+            <noscript>
+              <p
+              class="type--xsmall pad-top-50 color-secondary-text">{{ 'i18n.extension_samples.and_more' | i18n }}</p>
+            </noscript>
+          {% endif %}
+        {% else %}
+          <p class="sample-item__prompt type--xsmall pad-top-50">{{ 'i18n.extension_samples.no_apis_found' | i18n }}</p>
+        {% endif %}
       </div>
     </div>
-  {% else %}
-    <p class="sample-item__permission-prompt type--xsmall gap-top-200">No permissions required.</p>
-  {% endif %}
 
+  </div>
 </div>
