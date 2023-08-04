@@ -21,6 +21,7 @@ authors:
 
 - [Attribution Reporting API demo](https://arapi-home.web.app/), [Demo background]()
 - [Noise lab](https://noise-lab.uc.r.appspot.com/?mode=simple), [Noise lab background](/docs/privacy-sandbox/summary-reports/design-decisions/#appendix)
+- [Attribution Reporting Header Validator](https://wicg.github.io/attribution-reporting-api/validate-headers)
 {% endAside %}
 
 
