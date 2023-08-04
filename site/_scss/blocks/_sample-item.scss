@@ -3,7 +3,7 @@
     display: none;
   }
 
-  .load-more-button {
+  .show-more-button {
     display: none;
   }
 }
@@ -27,5 +27,9 @@
 
   &:not(:last-child) {
     border-bottom: 1px solid get-color('grey-300');
+  }
+
+  .show-more-button {
+    cursor: pointer;
   }
 }
