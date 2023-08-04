@@ -42,7 +42,7 @@ Start onboarding your users as soon as they reach your store listing by providin
 
 ### Designing a persistent UI
 
-When designing a [side panel][api-sidepanel] for your extension, make sure it enhances the user's browsing experience by providing relevant information and useful functionality. A side panel should help users accomplish tasks with as little distraction as possible.
+Avoid distracting users when implementing a persistent UI. For example, when designing a [side panel][api-sidepanel] for your extension, make sure it enhances the user's browsing experience by providing relevant information and useful functionality. A side panel should help users accomplish tasks with as little distraction as possible.
 
 ### Sign in with Google {: #support-google-accounts }
 
