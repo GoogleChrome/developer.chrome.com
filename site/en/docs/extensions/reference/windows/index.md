@@ -28,7 +28,7 @@ For example, say an extension creates a few tabs or windows from a single HTML f
 HTML file contains a call to [tabs.query][9]. The current window is the window that contains the
 page that made the call, no matter what the topmost window is.
 
-In the case of the [event page][10], the value of the current window falls back to the last active
+In the case of [service workers][10], the value of the current window falls back to the last active
 window. Under some circumstances, there may be no current window for background pages.
 
 ## Examples
@@ -47,7 +47,7 @@ repository.
 [7]: /docs/extensions/reference/tabs#property-Tab-favIconUrl
 [8]: /docs/extensions/reference/tabs#type-Tab
 [9]: /docs/extensions/reference/tabs#method-query
-[10]: /docs/extensions/mv2/event_pages
+[10]: /docs/extensions/mv3/service_workers/
 [11]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/_archive/mv2/api/windows/
 [12]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/_archive/mv2/api/tabs/inspector/tabs_api.html
 [13]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/_archive/mv2/api/tabs/inspector/
