@@ -4,7 +4,7 @@ extra_permissions_html:
   <code>declarativeNetRequestFeedback</code><br/>
   <a href="/docs/extensions/mv3/declare_permissions#host-permissions"><code>host_permissions</code></a><br />
 has_warning:
-  <p>One or more of these permissions <a href="/docs/extensions/mv3/permission_warnings/#permissions_with_warnings">triggers a warning</a>. The <code>declarativeNetReques</code> and <code>declarativeNetRequestWithHostAccess</code> permissions provide the same capabilities and both require host permissions; however, the latter prevents host permission warnings.</p>
+  <p>One or more of these permissions <a href="/docs/extensions/mv3/permission_warnings/#permissions_with_warnings">triggers a warning</a>. The <code>declarativeNetRequest</code> and <code>declarativeNetRequestWithHostAccess</code> permissions provide the same capabilities, and both require host permissions; however, the latter prevents host permission warnings.</p>
 ---
 
 ## Manifest {: #manifest }
