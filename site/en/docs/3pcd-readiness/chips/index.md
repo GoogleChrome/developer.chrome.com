@@ -1,13 +1,14 @@
 ---
 layout: layouts/doc-post.njk
-title: Cookies Having Independent Partitioned State
+title: CHIPS
 subhead: >
-  A Privacy Sandbox proposal that will allow developers to opt a cookie into "partitioned" storage, with separate cookie jars per top-level site.
+  Cookies Having Independent Partitioned State.
 description: ''
 date: 2023-07-26
-updated: 2023-07-26
+updated: 2023-08-04
 authors:
   - mihajlija
+  - nmichell
   - albertomedina
 ---
 
