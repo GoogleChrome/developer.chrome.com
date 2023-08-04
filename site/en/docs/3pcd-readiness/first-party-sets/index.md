@@ -8,8 +8,6 @@ date: 2023-07-26
 updated: 2023-07-26
 authors:
   - mihajlija
-  - nmichell
-  - albertomedina
 ---
 
 Blocking cross-site cookies or partitioning by top-level site would prevent [use cases](/blog/first-party-sets-sameparty/#usecases) such as single sign-on or a shared shopping cart.

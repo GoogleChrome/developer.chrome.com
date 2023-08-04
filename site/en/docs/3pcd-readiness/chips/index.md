@@ -8,8 +8,6 @@ date: 2023-07-26
 updated: 2023-08-04
 authors:
   - mihajlija
-  - nmichell
-  - albertomedina
 ---
 
 [CHIPS (Cookies Having Independent Partitioned State)](/docs/privacy-sandbox/chips/) is a web platform mechanism that enables opting-in to having third-party cookies partitioned by top-level site using a new cookie attribute `Partitioned`.
