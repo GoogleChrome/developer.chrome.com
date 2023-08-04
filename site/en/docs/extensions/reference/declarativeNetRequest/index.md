@@ -277,7 +277,7 @@ function updateStaticRules(enableRulesetIds, disableCandidateIds) {
 ```
 
 ### Rule examples {: #rule-examples }
-The examples below illustrate how Chrome prioritizes rules in an extension. You may want to open the [prioritization](#implementation-matching-algorithm) rules in a separate window when reviewing them.
+The examples below illustrate how Chrome prioritizes rules in an extension. When reviewing them, you may want to open the [prioritization](#implementation-matching-algorithm) rules in a separate window.
 
 #### The "priority" key {: #priority-key }
 
