@@ -28,6 +28,7 @@
     - url: /docs/extensions/migrating/to-service-workers
     - url: /docs/extensions/migrating/api-calls
     - url: /docs/extensions/migrating/blocking-web-requests
+    - url: /docs/extensions/migrating/remote-hosted-code
     - url: /docs/extensions/migrating/improve-security
     - url: /docs/extensions/migrating/mv2-sunset
     - url: /docs/extensions/migrating/known-issues
