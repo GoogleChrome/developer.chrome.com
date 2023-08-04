@@ -103,7 +103,7 @@ For performance reasons there are also limits to the number of rules and ruleset
 
 ### Build rules {: #build-rules }
 
-Regardless of type, a rule starts with four fields as shown below. While the `"id"` and `"number"` keys merely take a number, the [`"action"`](#property-Rule-action) and [`"condition"`](#property-Rule-condition) keys provide a multitude of blocking and redirecting conditions. For example, the rule below blocks all script requests originating from "foo.com" to any URL with "abc" as a substring.
+Regardless of type, a rule starts with four fields as shown below. While the `"id"` and `"number"` keys take a number, the [`"action"`](#property-Rule-action) and [`"condition"`](#property-Rule-condition) keys may provide several blocking and redirecting conditions. The following rule blocks all script requests originating from `"foo.com"` to any URL with `"abc"` as a substring.
 
 ```json
 {
