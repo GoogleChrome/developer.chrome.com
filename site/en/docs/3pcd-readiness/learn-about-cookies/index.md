@@ -17,6 +17,6 @@ Start with the Section [Cookies in a Nutshell](/3pcd-readiness/#cookies-in-a-nut
 
 And keep these points in mind as you get ready:
 
-- Cookies are tiny pieces of code that websites place in a visitor's browser to remember their activity or preferences. They can be used to implement a variety of legitimate use case which are important for the user experience.
+- Cookies are tiny pieces of code that websites place in a visitor's browser to remember their activity or preferences. They can be used to implement a variety of legitimate use cases that are important for the user experience.
 - There are two main types of cookies, which differ by how are they set and accessed. First-party cookies are created by the website that the user is currently visiting. They enable core functionalities such as remembering login details, products added to the cart, and providing a personalized user experience. Third-party cookies are created by websites other than the one the user is currently visiting, mainly for tracking and online advertising purposes.
 - The deprecation of 3P cookies won't eliminate all cookies—just those set by third parties. Your own website's first-party cookies won't be affected.

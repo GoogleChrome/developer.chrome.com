@@ -2,7 +2,7 @@
 layout: layouts/doc-post.njk
 title: How do cookies work?
 subhead: >
-  How are cookies set, retrieved, modified, and shared.
+  Learn how cookies are set, retrieved, modified, and shared.
 description: ''
 date: 2023-07-26
 updated: 2023-07-26
@@ -32,7 +32,7 @@ An HTTP cookie is a mechanism for an origin server to send state information/sta
   </tr>
   <tr>
     <td><b>Domain</b>=value</td>
-    <td>Specifies which domain sets and can retrieve the cookie</td>
+    <td>Specifies which domain sets and can retrieve the cookie.</td>
   </tr>
   <tr>
     <td><b>Path</b>=value</td>
@@ -106,7 +106,7 @@ Cookies are vulnerable to security attacks. [Learn more]().
 
 ## First-party vs. third-party cookies
 
-The 1P vs. 3P classification of a cookie is not about the cookie itself; it is a contextual classification determined by how a cookie is used. A cookie is always created and intended to be accessed by a given site/domain. When a cookie is used to store and retrieve information in the context of the site that set the cookie, then such a cookie is considered a 1P cookie. If the information that is placed in a cookie in the context of a given site (1P) and is accessed in the context of a different site (3P), then the cookie is considered a 3P cookie.
+The 1P vs. 3P classification of a cookie is not about the cookie itself; it is a contextual classification determined by how a cookie is used. A cookie is always created and intended to be accessed by a given site/domain. When a cookie is used to store and retrieve information in the context of the site that set the cookie, then such a cookie is considered a 1P cookie. If the information is placed in a cookie in the context of a given site (1P) and is accessed in the context of a different site (3P), then the cookie is considered a 3P cookie.
 
 {% Aside 'important' %}
 The 1P vs. 3P classification of cookies is about how the information stored in them is accessed across site boundaries.

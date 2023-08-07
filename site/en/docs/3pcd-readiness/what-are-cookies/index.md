@@ -31,7 +31,7 @@ Web cookies emerged as a transformative element, revolutionizing how websites in
 
 As a state management mechanism, cookies enable a wide range of applications in many areas that are at the core of the usefulness and success of the web.
 
-<table class="with-borders">
+<table class="with-borders with-heading-tint">
   <thead>
     <tr>
       <th>Scenario</th>
@@ -58,7 +58,7 @@ Cookies can be classified in different ways. It is important to note that cookie
 
 The Information Commissioner's Office (ICO) in the UK defined a set of categories for web cookies based on their purpose:
 
-<table class="with-borders">
+<table class="with-borders with-heading-tint">
   <thead>
     <tr>
       <th>Category</th>
@@ -104,7 +104,7 @@ The Information Commissioner's Office (ICO) in the UK defined a set of categorie
 
 And there are other ways to classify cookies, according to their specific configuration:
 
-<table class="with-borders">
+<table class="with-borders with-heading-tint">
   <thead>
     <tr>
       <th>Category</th>

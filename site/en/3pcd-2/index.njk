@@ -1,0 +1,148 @@
+---
+layout: 'layouts/landing.njk'
+title: '3PCD readiness'
+description: 'A series of proposals to satisfy cross-site use cases without third-party cookies or other tracking mechanisms.'
+sections:
+  prepare_for_3pcd:
+    - url: /docs/3pcd-readiness/3pcd-changes
+      title: Learn what's changing
+      description: What will happen with application scenarios using 3P cookies today.
+    - url: /docs/3pcd-readiness/learn-about-cookies
+      title: Refresh your knowledge
+      description: Review what cookies are and how they work.
+    - url: /docs/3pcd-readiness/review-scenarios
+      title: Review your scenarios
+      description: Review and understand how cookies are being used on your site.
+    - url: /docs/3pcd-readiness/leverage-tools
+      title: Leverage Chrome and ecosystem tools
+      description: Leverage Chrome capabilities and ecosystem tools to help you transition to a world without 3P Cookies.
+    - url: /docs/3pcd-readiness/call-to-action
+      title: Call to action
+      description: Let's make it happen!
+  cookies:
+    - url: /docs/3pcd-readiness/what-are-cookies
+      title: What are cookies?
+      description: What are cookies, why were they invented, and what role do they play in the web ecosystem?
+    - url: /docs/3pcd-readiness/how-cookies-work
+      title: How do cookies work?
+      description: How are cookies set, retrieved, modified, and shared.
+    - url: /docs/3pcd-readiness/cookie-vulnerabilities
+      title: Cookie vulnerabilities
+      description: What are the privacy and security issues with cookies.
+    - url: /docs/3pcd-readiness/3pcd-changes
+      title: What exactly is changing with third-party cookie deprecation?
+      description: What will happen with application scenarios using 3P cookies today.
+  3pc_alternatives:
+    - url: /docs/3pcd-readiness/building-blocks
+    - url: /docs/3pcd-readiness/web-storage
+    - url: /docs/3pcd-readiness/first-party-sets
+    - url: /docs/3pcd-readiness/chips	  
+    - url: /docs/3pcd-readiness/storage-access
+    - url: /docs/3pcd-readiness/fenced-frames
+    - url: /docs/3pcd-readiness/fed-cm
+    - url: /docs/3pcd-readiness/private-tokens 
+  dev_tools:
+    - url: /docs/3pcd-readiness/chrome-facilitated-testing
+      title: Learn about Chrome-facilitated testing
+      description: 
+    - url: /docs/3pcd-readiness/dev-tools
+    - url: /docs/3pcd-readiness/psa-extension
+---
+
+{% from 'macros/cards/hero-card-wide.njk' import heroCardWide with context %}
+{% from 'macros/cards/blog-card.njk' import blogCard with context %}
+{% from 'macros/icon.njk' import icon with context %}
+{% from 'macros/landing-section.njk' import landingSection with context %}
+{% from 'macros/landing-deco.njk' import landingDeco with context %}
+{% from 'macros/landing-section-expanded.njk' import landingSectionExpanded with context %}
+{% from 'macros/landing-section-usecases.njk' import landingSectionUseCases with context %}
+
+{# landing-page-expanded has unique styles, added for Privacy Sandbox and expanded landing section. #}
+
+{{ heroCardWide(
+  "Getting ready for third&#8209;party cookie deprecation",
+  "As part of the Privacy Sandbox project, Chrome is phasing out support for unrestricted 
+  third-party cookies and proposing new privacy-preserving APIs to continue supporting 
+  legitimate use cases. Read through to get ready for the future without cross-site tracking.",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/i1wLexi7cwRpdfIkBYAX.svg"
+  ) }}
+
+  {{ landingSectionExpanded(
+    "Prepare for the deprecation of 3P cookies",
+    "Take action to get ready for a more private web without unrestricted 3P cookies.",
+    sections.prepare_for_3pcd,
+    "green",
+    "top-4",
+    true,
+    "image/VbsHyyQopiec0718rMq2kTE1hke2/cT27jgN3G7aYl9ftM0lt.svg",
+    "Analytics icon.",
+    250,
+    124,
+    "image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kdPhkPXy7R0mmcJaKyoi.svg",
+    "",
+    ""
+    )}}
+
+{{ landingSectionExpanded(
+  "Cookies in a nutshell",
+  "",
+  sections.cookies,
+  "blue",
+  "right",
+  true,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/QDyL1Otpv6Id7sDTconF.svg",
+  "Graduation cap icon.",
+  200,
+  129,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/QDyL1Otpv6Id7sDTconF.svg",
+  "",
+  sections.intro_related
+  )
+}}
+
+{{ landingSectionUseCases(
+  "Alternatives to 3P cookies",
+  "Third-party cookies have historically powered web features that greatly improve user experience.
+   Continuing to support these use cases with viable alternatives is critical.",
+  "",
+  sections.3pc_alternatives,
+  "",
+  "",
+  "",
+  "green",
+  "right",
+  true,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/yrsJmUfAnqDIDxjVYhXq.svg",
+  "Click icon.",
+  429,
+  278,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/yrsJmUfAnqDIDxjVYhXq.svg"
+  )
+}}
+
+{{ landingSectionUseCases(
+  "Developer tools",
+  "Leverage developer tools to analyze and understand your cookie-related scenarios.",
+  "",
+  sections.dev_tools,
+  "",
+  "",
+  "",
+  "blue",
+  "right",
+  true,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/pfYmfQtnte4ZKFE7r9nE.svg",
+  "People icon.",
+  284,
+  193,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/pfYmfQtnte4ZKFE7r9nE.svg"
+  )
+}}
+
+
+
