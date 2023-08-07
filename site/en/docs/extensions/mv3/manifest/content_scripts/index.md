@@ -118,8 +118,8 @@ https://www.example.com/foo
   ...
   "content_scripts": [
     {
-      "matches": ["https://*.nytimes.com/*"],
-      "include_globs": ["*nytimes.com/???s/*"],
+      "matches": ["https://*.example.com/*"],
+      "include_globs": ["*example.com/???s/*"],
       "js": ["content-script.js"]
     }
   ],
@@ -130,15 +130,15 @@ https://www.example.com/foo
 <div class="switcher">
 {% Compare 'better', 'Matches' %}
 ```text
-https://www.nytimes.com/arts/index.html
-https://www.nytimes.com/jobs/index.html
+https://www.example.com/arts/index.html
+https://www.example.com/jobs/index.html
 ```
 {% endCompare %}
 
 {% Compare "worse", "Does not match" %}
 ```text
-https://www.nytimes.com/sports/index.html
-https://www.nytimes.com/music/index.html
+https://www.example.com/sports/index.html
+https://www.example.com/music/index.html
 ```
 {% endCompare %}
 </div>
@@ -152,7 +152,7 @@ https://www.nytimes.com/music/index.html
   ...
   "content_scripts": [
     {
-      "matches": ["https://*.nytimes.com/*"],
+      "matches": ["https://*.example.com/*"],
       "exclude_globs": ["*science*"],
       "js": ["content-script.js"]
     }
@@ -164,15 +164,15 @@ https://www.nytimes.com/music/index.html
 <div class="switcher">
 {% Compare 'better', 'Matches' %}
 ```text
-https://history.nytimes.com
-https://.nytimes.com/music
+https://history.example.com
+https://.example.com/music
 ```
 {% endCompare %}
 
 {% Compare "worse", "Does not match" %}
 ```text
-https://science.nytimes.com
-https://www.nytimes.com/science
+https://science.example.com
+https://www.example.com/science
 ```
 {% endCompare %}
 </div>
@@ -186,9 +186,9 @@ https://www.nytimes.com/science
   ...
   "content_scripts": [
     {
-      "matches": ["https://*.nytimes.com/*"],
+      "matches": ["https://*.example.com/*"],
       "exclude_matches": ["*://*/*business*"],
-      "include_globs": ["*nytimes.com/???s/*"],
+      "include_globs": ["*example.com/???s/*"],
       "exclude_globs": ["*science*"],
       "js": ["content-script.js"]
     }
@@ -200,16 +200,16 @@ https://www.nytimes.com/science
 <div class="switcher">
 {% Compare 'better', 'Matches' %}
 ```text
-https://www.nytimes.com/arts/index.html
-https://.nytimes.com/jobs/index.html
+https://www.example.com/arts/index.html
+https://.example.com/jobs/index.html
 ```
 {% endCompare %}
 
 {% Compare "worse", "Does not match" %}
 ```text
-https://science.nytimes.com
-https://www.nytimes.com/jobs/business
-https://www.nytimes.com/science
+https://science.example.com
+https://www.example.com/jobs/business
+https://www.example.com/science
 ```
 {% endCompare %}
 </div>
