@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc-post.njk
-title: How Cookies Work?
+title: How do cookies work?
 subhead: >
   How are cookies, set, retrieved, modified and shared.
 description: ''
@@ -11,11 +11,11 @@ authors:
   - albertomedina
 ---
 
-## Cookies = State Management
+## Cookies = state management
 
 An HTTP Cookie is a mechanism for an origin server to send state information/state to a user agent and for the user agent to return the state information to the origin server. This means that Web cookies serve as a state management mechanism for HTTP, enabling websites to maintain information and remember user preferences across multiple interactions. When a user visits a website, the server sends a small piece of data known as a cookie to the user's web browser. This cookie is stored on the user's device, allowing the website to access and update it during subsequent visits.
 
-## Anatomy of a Cookie
+## Anatomy of a cookie
 
 {% Img src="image/WvQmAFP386a04HT2ItuD4b77Aml2/o4iiysR068tL9CGH09aZ.jpeg", alt="cookie anatomy", width="800", height="576" %}
 
@@ -60,7 +60,7 @@ An HTTP Cookie is a mechanism for an origin server to send state information/sta
   </tr>    
 </table>
 
-## Setting and Retrieving Cookies
+## Setting and retrieving cookies
 
 {% Img src="image/WvQmAFP386a04HT2ItuD4b77Aml2/5ZKTfVsJIuk0xHnX7Lh2.jpeg", alt="ALT_TEXT_HERE", width="800", height="283" %}
 
@@ -76,7 +76,7 @@ Each cookie-pair represents a cookie stored by the user agent. The cookie-pair c
 
 Notice that the cookie attributes are not returned. In particular, the server cannot determine from the Cookie header alone when a cookie will expire, for which hosts the cookie is valid, for which paths the cookie is valid, or whether the cookie was set with the Secure or HttpOnly attributes.
 
-## The Scope of Cookies
+## The scope of cookies
 
 As a State Management mechanism, Cookies encompass the notion of Scope for the state that can be collected through them. To understand the scope of cookies, we need to understand the difference between **web origins** and **websites**. Here we describe the Origin and Site concepts of in a nutshell, and for a more in-depth explanation make sure to check [this article](https://web.dev/same-site-same-origin/).
 
@@ -94,7 +94,7 @@ A "site-specific" cookie is intended to be accessible only to the website that c
 
 An "origin" cookie has a broader scope and can be accessed by multiple websites within the same originm, and they are typically used for scenarios where multiple related sites need to share certain data, streamlining user experiences across interconnected web services.
 
-## Securing Cookies
+## Securing cookies
 
 The **Secure attribute** limits the scope of a cookie to secure channels (i.e. HTTPS). However, although seemingly useful for protecting cookies from active network attackers, the Secure attribute protects only the cookie's confidentiality. An active network attacker can overwrite Secure cookies from an insecure channel, disrupting their integrity.
 
@@ -104,7 +104,7 @@ The **HttpOnly attribute** instructs the user agent to omit the cookie when prov
 Cookies are vulnerable to security attacks. [Learn more]().
 {% endAside %}
 
-## First-party vs. Third-party Cookies
+## First-party vs. third-party cookies
 
 The 1P vs. 3P classification of a cookie is not about the cookie itself; it is a contextual classification determined by a cookie is used. A cookie is always created and intended to be accessed by a given site/domain. When a cookie is used to store and retrieve information in the context of the site that set the cookie, then such a cookie is considered a 1P cookie. If the information that is placed on a cookie in the context of a given site (1P), is accessed in the context of a different site (3P), then the cookie is considered a 3P cookie.
 

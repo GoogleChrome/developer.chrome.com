@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc-post.njk
-title: Upcoming Changes to 3P Cookies
+title: Upcoming changes to 3P cookies
 subhead: >
   What exactly is changing with cookies after the deprecation?
 description: ''
@@ -11,7 +11,7 @@ authors:
   - albertomedina
 ---
 
-## Today's Identity Model on the Web
+## Today's identity model on the web
 
 The existing identity model of the web is the result of two interacting browser capabilities:
 
@@ -21,7 +21,7 @@ The existing identity model of the web is the result of two interacting browser 
 
 On one hand, this global identity enables important aspects of the web ecosystem such as quality advertisements and experience personalization, both essential for maintaining a healthy vibrant web ecosystem with a sustainable community of content creators and global user reach. On the other hand, this global identity raises serious privacy concerns, and a break of the trust from users.
 
-## A Nee Identity Model for the Web
+## A new identity model for the web
 
 This [explainer document](https://github.com/michaelkleber/privacy-model) describes a proposal for a new identity model for the web that does not require cross-site tracking, but still allows key web ecosystem use cases, such as publishers to support themselves via effective advertising.
 

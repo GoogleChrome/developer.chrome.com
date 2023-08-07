@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc-post.njk
-title: First Party Sets
+title: First-Party Sets
 subhead: >
   A new web platform mechanism to declare a collection of related domains as being in a First-Party Set.
 description: ''
