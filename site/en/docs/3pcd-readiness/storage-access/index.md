@@ -12,7 +12,7 @@ authors:
 
 ## Storage Access API
 
-[Explainer](https://github.com/privacycg/storage-access#readme) Browsers may block third-party resources from accessing cookies and other storage for privacy and security reasons. The most popular reason is cross-site tracking prevention. Such blocking breaks authenticated cross-site embeds such as commenting widgets, embedded payment providers, and subscribed video services.
+Browsers may block third-party resources from accessing cookies and other storage for privacy and security reasons. The most popular reason is cross-site tracking prevention. Such blocking breaks authenticated cross-site embeds such as commenting widgets, embedded payment providers, and subscribed video services. The [explainer](https://github.com/privacycg/storage-access#readme) provides more information.
 
 The Storage Access API provides a way for cross-site content loaded in a third-party context (i.e. embedded in an _iframe_) to gain access to unpartitioned cookies, which would normally be accessible in a first-party context (i.e. when loaded directly in a browser tab).
 

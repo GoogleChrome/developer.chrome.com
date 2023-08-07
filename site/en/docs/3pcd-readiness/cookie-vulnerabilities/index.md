@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc-post.njk
-title: Cookie Vulnerabilities
+title: Cookie vulnerabilities
 subhead: >
   What are the privacy and security issues with cookies.
 description: ''
@@ -23,7 +23,7 @@ Cookies set by embedded content can collect user information across site boundar
 Cookies facilitate tracking because they are persistent across user agent sessions and can be shared across site boundaries.
 {% endAside %}
 
-## Ambient Authority
+## Ambient authority
 
 Cookies encourage developers to to rely on ambient authority for authentication, that is, to separate designation (in the form of URLs) from authorization (in the form of cookies). Consequently, the user agent might supply the authorization for a resource designated by the attacker, possibly causing the server or its clients to undertake actions designated by the attacker as though they were authorized by the user.
 
@@ -31,7 +31,7 @@ Cookies encourage developers to to rely on ambient authority for authentication,
 Cookie access is “authenticated” via ambient authority often becoming vulnerable to attacks such as cross-site request forgery
 {% endAside %}
 
-## Clear Text
+## Clear text
 
 Unless transmitted over a secure channel like TLS (Transport Layer Security), the data contained in the Cookie and Set-Cookie headers is sent without encryption, potentially making it vulnerable to interception. This makes the cookie vulnerable:
 
@@ -47,7 +47,7 @@ It is important to always encrypt and sign cookie contents while transmitting th
 
 Furthermore, it is recommended to set and retrieve cookies exclusively over secure channels; that is, the Secure attribute for each cookie must be set properly. Neglecting to set the Secure attribute would render the protection offered by the secure channel largely ineffective.
 
-## Weak Confidentiality
+## Weak confidentiality
 
 Cookies provide weak confidentiality, primarily stemming from the lack of isolation by port, scheme, and path.
 
@@ -61,7 +61,7 @@ Cookies provide weak confidentiality, primarily stemming from the lack of isolat
 Cookies provide weak confidentiality: , there is no isolation neither by port, nor by scheme.
 {% endAside %}
 
-## Weak Integrity
+## Weak integrity
 
 Cookies do not provide integrity guarantees for sibling domains (and their subdomains).
 

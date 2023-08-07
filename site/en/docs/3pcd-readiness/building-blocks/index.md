@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc-post.njk
-title: Privacy Preserving Building Blocks
+title: Privacy-preserving building blocks
 subhead: >
   Strive to replace existing functionality with privacy-preserving techniques.
 description: ''

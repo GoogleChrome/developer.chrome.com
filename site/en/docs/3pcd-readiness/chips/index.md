@@ -10,7 +10,7 @@ authors:
   - mihajlija
 ---
 
-[CHIPS (Cookies Having Independent Partitioned State)](/docs/privacy-sandbox/chips/) is a web platform mechanism that enables opting-in to having third-party cookies partitioned by top-level site using a new cookie attribute `Partitioned`.
+[Cookies Having Independent Partitioned State (CHIPS)](/docs/privacy-sandbox/chips/) is a web platform mechanism that enables opting-in to having third-party cookies partitioned by top-level site using a new cookie attribute `Partitioned`.
 
 If you have a service that is used as a component on another site, any cookies it sets are in a cross-site context. The way cookies currently work, the same cookie that service C sets on site A, can be read when service C is embedded on site B.
 

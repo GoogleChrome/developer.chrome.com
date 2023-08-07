@@ -31,7 +31,7 @@ First-party sets are declared in JSON format. In the following example, the prim
 }
 ```
 
-## Storage Access
+## Storage access
 
 Top-level sites can request storage access on behalf of specific origins with [`Document.requestStorageAccessFor()`](https://privacycg.github.io/requestStorageAccessFor/) (rSAFor).
 

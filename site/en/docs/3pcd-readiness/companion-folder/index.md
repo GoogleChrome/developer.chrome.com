@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc-post.njk
-title: Demo Companion folder
+title: Demo companion folder
 subhead: >
   Demo Comanion folder.
 description: ''

@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc-post.njk
-title: Chrome Facilitated Testing
+title: Chrome-facilitated testing
 subhead: >
   .
 description: ''

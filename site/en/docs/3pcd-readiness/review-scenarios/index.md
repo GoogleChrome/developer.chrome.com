@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc-post.njk
-title: Review your Scenarios
+title: Review your scenarios
 subhead: >
   .
 description: ''

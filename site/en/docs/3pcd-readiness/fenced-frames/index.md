@@ -23,7 +23,7 @@ Note: contrast Fenced Frames Proposal as an API meeting the needs and requiremen
 - DevTools’ network tab will include the beacons sent from a fenced frame as part of [fenced frames ads reporting](https://github.com/WICG/turtledove/blob/main/Fenced_Frames_Ads_Reporting.md).
 - We also support a developers testing mode behind a non-web-exposed flag where a `FencedFrameConfig` can be created with a plain url, to enable testing fenced frames without invoking the above mentioned consumer APIs. At the moment, this is at _chrome://flags/#enable-fenced-frames-developer-mode_, but we will likely move it to DevTools in the future.
 
-## Non-ads Use Cases
+## Non-ads use cases
 
 The currently supported use cases (interest based ads and the more generic selectURL API) are definitely not the only ones that fenced frames are anticipated to support. For instance, posssibilities include a non-ads use case for ([personalized payment provider buttons](https://github.com/WICG/fenced-frame/issues/15) which have received ecosystem support.
 

@@ -54,7 +54,7 @@ Third-party cookies in particular are a key technology supporting tracking netwo
 
 Privacy Sandbox is a multi-year initiative by Google (Chromium project) for achieving a more private web by implementing privacy-centric building blocks in alignment with a new privacy model for the web. Such building blocks map to a set of proposed API, which enable the implementation of privacy-preserving solutions for relevant use cases by partitioning user identity at the level of first-party sites.
 
-The Privacy Sandbox Initiative encompasses three main areas:
+The Privacy Sandbox initiative encompasses three main areas:
 
 1. Replace existing functionality with privacy-preserving techniques. Ideally, from a user's point of view, there should be no noticeable difference between how the web operates today and how it functions in a world after the implementation of the Privacy Sandbox.
 2. Eventually 3P cookies will be removed while ensuring that the ecosystem has the technical capabilities for embracing new non-cookie-based solutions (e.g. separating first- and third-party cookies, creating first-party sets, and finally removing third-party cookies).
