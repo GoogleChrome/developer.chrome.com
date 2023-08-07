@@ -33,7 +33,7 @@ Each part can use wildcards `*`. Below is a detailed description:
 ## Special cases {: #special }
 
 `<all_urls>`
-: It matches any URL that starts with a permitted scheme. This is considered a broad host permission.
+: It matches any URL that starts with a permitted scheme. Includes any pattern listed in the [valid patterns](#valid-examples). This is considered a broad host permission, which means the review process will take longer.
 
 `file:///`
 : Allows your extension to run on local files. It has no host and requires the user to manually [enable access][permissions].
