@@ -190,27 +190,20 @@ partitioned.
  
 ### Extension APIs
  
-[Extensions](/docs/extensions/mv3/) are programs
-that customize the browsing experience for the user. With Manifest V2,
-extensions can create
-[background pages](/docs/extensions/mv2/background_pages/)
-that have the extension's origin, but can embed iframes with web content's
-origins.
+[Extensions](/docs/extensions/mv3/) are programs that allow users to customize their browsing
+experience.
 
-Because partitioning the storage will break some use cases, a
-couple of mitigations will be provided. If the extension has
-[host_permissions](/docs/extensions/mv2/runtime_host_permissions/)
-for the iframe origin, then the iframe will be treated as the top-level frame
-and not the extension page. If an extension embeds an iframe with an extension
-URL into a top-level site with host permissions, the iframe will be treated as
-first-party with the extension rather than partitioned by the top-level site.
+Extension pages (pages with a `chrome-extension://` scheme) can be embedded on sites
+across the web, and in these cases, they will continue to have access to their top-level partition.
+These pages can also embed other sites, in which case those sites will have access to their top-level
+partition as long as the extension has [host permissions](/docs/extensions/mv3/declare_permissions)
+for that site.
 
-{% Aside %} 
-Manifest V2 has been
-[deprecated](/docs/extensions/mv3/mv2-sunset/) and
-will be removed. It is recommended to
-[migrate to Manifest V3](/docs/extensions/mv3/intro/mv3-migration/).
-{% endAside %} 
+In addition, extensions can use the [`chrome.cookies`](/docs/extensions/reference/cookies) API to
+interact with the cookies for a given site. This currently operates on cookies from all partitions
+in a way which can be surprising.
+
+For more information, see the [extension docs](/docs/extensions/mv3/storage-and-cookies).
  
 ## Engage and share feedback
  
