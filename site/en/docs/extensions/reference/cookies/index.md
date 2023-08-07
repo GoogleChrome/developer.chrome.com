@@ -25,17 +25,17 @@ to access. For example:
 ## Partitioning {: #partitioning }
 
 {% Aside %}
-We are currently working on changes to the API to support partitioned cookies. For more information,
-see the [API proposal][partitioning-api-proposal].
+We recently published an [API proposal][partitioning-api-proposal] for changes to the
+`chrome.cookies` API that would improve support for partitioning.
 {% endAside %}
 
 [Partitioned cookies][chips] allow a site to mark that certain cookies should be keyed against the
 origin of the top level frame. This means that if site A is embedded using an iframe in site B
 and site C, a partitioned cookie can have a different value in each.
 
-This API does not currently have support for partitioning, which means that all methods consider
-cookies from all partitions. The [`cookies.set()`](#method-set) method stores cookies in the default
-partition.
+`chrome.cookies` does not currently have support for partitioning, which means that all methods
+consider cookies from all partitions. The [`cookies.set()`](#method-set) method stores cookies in
+the default partition.
 
 For more details on the general impact of partitioning for extensions, see the
 [Storage and Cookies][cookie-partitioning] page.
