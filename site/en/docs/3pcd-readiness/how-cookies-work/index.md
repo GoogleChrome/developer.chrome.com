@@ -11,9 +11,9 @@ authors:
   - albertomedina
 ---
 
-## Cookies = state management
+## Cookies are for state management
 
-An HTTP Cookie is a mechanism for an origin server to send state information/state to a user agent and for the user agent to return the state information to the origin server. This means that Web cookies serve as a state management mechanism for HTTP, enabling websites to maintain information and remember user preferences across multiple interactions. When a user visits a website, the server sends a small piece of data known as a cookie to the user's web browser. This cookie is stored on the user's device, allowing the website to access and update it during subsequent visits.
+An HTTP cookie is a mechanism for an origin server to send state information/state to a user agent and for the user agent to return the state information to the origin server. This means that Web cookies serve as a state management mechanism for HTTP, enabling websites to maintain information and remember user preferences across multiple interactions. When a user visits a website, the server sends a small piece of data known as a cookie to the user's web browser. This cookie is stored on the user's device, allowing the website to access and update it during subsequent visits.
 
 ## Anatomy of a cookie
 
@@ -36,7 +36,7 @@ An HTTP Cookie is a mechanism for an origin server to send state information/sta
   </tr>
   <tr>
     <td><b>Path</b>=value</td>
-    <td>The path that must exist in the requested URL for the browser to send the Cookie header.</td>
+    <td>The path that must exist in the requested URL for the browser to send the cookie header.</td>
   </tr>  
   <tr>
     <td><b>Max-Age</b>=number</td>
@@ -70,15 +70,15 @@ To store state, the origin server includes a [Set-Cookie HTTP response header](h
 The Set-Cookie response header contains the header name "Set-Cookie" followed by a ":" and a cookie. Each cookie begins with a name-value-pair, followed by zero or more attribute-value pairs.
 {% endAside %}
 
-In subsequent requests, the user agent returns a [Cookie HTTP header](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cookie) to the origin server, containing cookies received in previous Set-Cookie headers. The origin server is free to ignore the Cookie header or use its contents for an application-defined purpose.
+In subsequent requests, the user agent returns a [Cookie HTTP header](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cookie) to the origin server, containing cookies received in previous Set-Cookie headers. The origin server is free to ignore the cookie header or use its contents for an application-defined purpose.
 
 Each cookie-pair represents a cookie stored by the user agent. The cookie-pair contains the cookie-name and cookie-value the user agent received in the Set-Cookie header.
 
-Notice that the cookie attributes are not returned. In particular, the server cannot determine from the Cookie header alone when a cookie will expire, for which hosts the cookie is valid, for which paths the cookie is valid, or whether the cookie was set with the Secure or HttpOnly attributes.
+Notice that the cookie attributes are not returned. In particular, the server cannot determine from the cookie header alone when a cookie will expire, for which hosts the cookie is valid, for which paths the cookie is valid, or whether the cookie was set with the Secure or HttpOnly attributes.
 
 ## The scope of cookies
 
-As a State Management mechanism, Cookies encompass the notion of Scope for the state that can be collected through them. To understand the scope of cookies, we need to understand the difference between **web origins** and **websites**. Here we describe the Origin and Site concepts of in a nutshell, and for a more in-depth explanation make sure to check [this article](https://web.dev/same-site-same-origin/).
+As a State Management mechanism, cookies encompass the notion of Scope for the state that can be collected through them. To understand the scope of cookies, we need to understand the difference between **web origins** and **websites**. Here we describe the Origin and Site concepts of in a nutshell, and for a more in-depth explanation make sure to check [this article](https://web.dev/same-site-same-origin/).
 
 A **web "Origin"** is a combination of a scheme (also known as the protocol -- e.g. HTTP, HTTPS), hostname, and port (if specified). Websites that have the combination of the same scheme, hostname, and port are considered "same-origin". Everything else is considered "cross-origin".
 
@@ -88,7 +88,7 @@ A **web site** is the combination of the scheme, the [top-level domain (TLD)](ht
 The Domain and Path attributes define the scope of a cookie. The Path attribute limits the scope of a cookie to a set of paths.
 {% endAside %}
 
-The Domain attribute specifies those hosts to which the cookie will be sent. For example, if the value of the Domain attribute is "example.com", the user agent will include the cookie in the Cookie header when making HTTP requests to example.com, www.example.com, and www.corp.example.com. If the server omits the Domain attribute, the user agent will return the cookie only to the origin server. If the server omits the Path attribute, the user agent will use the "directory" of the request-uri's path component as the default value.
+The Domain attribute specifies those hosts to which the cookie will be sent. For example, if the value of the Domain attribute is "example.com", the user agent will include the cookie in the cookie header when making HTTP requests to example.com, www.example.com, and www.corp.example.com. If the server omits the Domain attribute, the user agent will return the cookie only to the origin server. If the server omits the Path attribute, the user agent will use the "directory" of the request-uri's path component as the default value.
 
 A "site-specific" cookie is intended to be accessible only to the website that created it, and it is used to power features such as remembering user preferences, login details, and other functionality relevant to that particular domain.
 
@@ -106,7 +106,7 @@ Cookies are vulnerable to security attacks. [Learn more]().
 
 ## First-party vs. third-party cookies
 
-The 1P vs. 3P classification of a cookie is not about the cookie itself; it is a contextual classification determined by a cookie is used. A cookie is always created and intended to be accessed by a given site/domain. When a cookie is used to store and retrieve information in the context of the site that set the cookie, then such a cookie is considered a 1P cookie. If the information that is placed on a cookie in the context of a given site (1P), is accessed in the context of a different site (3P), then the cookie is considered a 3P cookie.
+The 1P vs. 3P classification of a cookie is not about the cookie itself; it is a contextual classification determined by how a cookie is used. A cookie is always created and intended to be accessed by a given site/domain. When a cookie is used to store and retrieve information in the context of the site that set the cookie, then such a cookie is considered a 1P cookie. If the information that is placed in a cookie in the context of a given site (1P) and is accessed in the context of a different site (3P), then the cookie is considered a 3P cookie.
 
 {% Aside 'important' %}
 The 1P vs. 3P classification of cookies is about how the information stored in them is accessed across site boundaries.

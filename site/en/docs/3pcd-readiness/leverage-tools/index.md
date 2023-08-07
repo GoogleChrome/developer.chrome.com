@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc-post.njk
-title: Leverage Chrome and Ecosystem Tools
+title: Leverage Chrome and ecosystem tools
 subhead: >
   .
 description: ''
@@ -13,7 +13,7 @@ authors:
 
 .
 
-## Chrome Facilitated Testing
+## Chrome-facilitated testing
 
 ## Chrome DevTools
 
