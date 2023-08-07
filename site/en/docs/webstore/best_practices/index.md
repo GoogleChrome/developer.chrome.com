@@ -22,7 +22,7 @@ Manifest V3 is the most recent version of the Chrome extension platform and is t
 
 ## Security
 
-Your extension should be safe for your users. For example, transmit user data securely via HTTPS or WSS. Stored user data must be strongly encrypted using RSA or AES. Check that your extension does not pose security threats and does not use [deceptive installation tactics][deceptive-install]. See [Stay secure][stay-secure] for a more in-depth discussion.
+Your extension should be safe for your users. For example, send user data securely via HTTPS or WSS. Check that your extension does not pose security threats and does not use [deceptive installation tactics][deceptive-install]. See [Stay secure][stay-secure] for a more in-depth discussion.
 
 ## Privacy
 
