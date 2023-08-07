@@ -10,7 +10,7 @@ date: 2023-08-04
 
 This section provides an overview of different strategies for migrating MV2 extensions relying on remote hosted code to Manifest V3.
 
-Manifest V3 removes the ability for an extension to use [remotely hosted code][1], which presents security risks by allowing unreviewed code to be executed in extensions. With this change, an extension can only execute JavaScript that is included within its package and subject to review by the Chrome Web Store.
+Manifest V3 removes the ability for an extension to use [remotely hosted code][1], as remotely hosted code presented a security risks by allowing unreviewed code to be executed in extensions. With this change, an extension can only execute JavaScript that is included within its package and subject to review by the Chrome Web Store.
 
 ## What is still possible? {: what-is-possible }
 
@@ -18,9 +18,8 @@ There are still a few special cases in which executing remote hosted code and us
 
 -   [Evaluate JavaScript in a sandboxed iframe][3].
 -   [Inject remote hosted stylesheets into a web page using insertCSS][4]
--   For DevTool extensions:
-    -   [inspectWindow.eval][5] allows executing JavaScript in the context of the inspected page.
-    -   [chrome.debugger.sendCommand][6] allows JavaScript execution in a debug target.
+-   For extensions using `chrome.devtools`: [inspectWindow.eval][5] allows executing JavaScript in the context of the inspected page.
+-   Debugger extensions can use [chrome.debugger.sendCommand][6] to execute JavaScript in a debug target.
 
 In these cases, moving your remote hosted code to Manifest V3 requires no additional steps.
 
@@ -46,24 +45,24 @@ This is no longer supported in Manifest V3 extensions and requires additional mi
 -   **Move functionality to your server:** communicating with remote servers is allowed. If functionality needs to change often, moving client-side functionality to your server can be a feasible workaround.
 -   **Look for other workarounds.** If the previous approaches don’t help with your use case you might have to either find an alternative solution (i.e. migrate to a different library) or find other ways to use the library's functionality. For example, in the case of Google Analytics, you can switch to the Google measurement protocol instead of using the official remote hosted JavaScript version as described in our [Google Analytics 4 guide][8].
 
-{aside warning}
-If our reviewers are unable to determine the full functionality of your extension during the review process, the WebStore team may reject your submission or remove it from the store.
-{end aside}
+{% Aside 'warning' %}
+If our reviewers are unable to determine the full functionality of your extension during the review process, the Chrome Web Store team may reject your submission or remove it from the store.
+{% endAside %}
 
 ## Add/modify extension functionality at runtime without a new store submission {: dynamic-functionality }
 
-One of the design goals of Manifest V3 is to reduce security risks for users by being able to review all the functionality provided by an extension. The WebStore’s review team must be able to easily discern the full functionality of an extension from its submitted code. For more details see the [WebStore policy for Manifest V3][9].
+One of the design goals of Manifest V3 is to reduce security risks for users by being able to review all the functionality provided by an extension. The Chrome Web Store’s review team must be able to easily discern the full functionality of an extension from its submitted code. For more details see the [Chrome Web Store policy for Manifest V3][9].
 
-As a consequence, some things that were possible in Manifest V2 will no longer be possible in Manifest V3. For example, launching a new UI feature in a popup without WebStore submission is no longer possible.
+As a consequence, some things that were possible in Manifest V2 will no longer be possible in Manifest V3. For example, launching a new UI feature in a popup without Chrome Web Store submission is no longer possible.
 
-However, this does **not** mean that you can no longer dynamically change your extension's behavior. The key is: any potential behavior changes must be discernible from your extensions code. For example, A/B testing via remote configuration is still possible – as long as feature A and feature B are already present in the WebStore submitted code.
+However, this does **not** mean that you can no longer dynamically change your extension's behavior. The key is: any potential behavior changes must be discernible from your extensions code. For example, A/B testing via remote configuration is still possible – as long as feature A and feature B are already present in the Chrome Web Store submitted code.
 
 There are a few options available for modifying extension behavior at runtime:
 
 -   **Remote configuration:** by downloading a static config file (e.g. a JSON file) and caching the configuration locally. The extension then uses this cached configuration to decide if specific features should be enabled.
 -   **Moving logic to a remote server:** application logic which needs to change frequently can alternatively be moved to a remote web service that your extension can call. This provides the ability to keep code private and change the code on demand while avoiding the extra overhead of resubmitting to the Chrome Web Store. Cloud based computing services such as [Cloud Functions for Firebase][10] or [AWS Lambda][11] are good ways to do this.
 
-A general rule of thumb is: the easier you make it for Web Store reviewers to understand what your code is doing the more likely it is that valid use cases will not be accidentally flagged.
+A general rule of thumb is: the easier you make it for Chrome Web Store reviewers to understand what your code is doing the more likely it is that valid use cases will not be accidentally flagged.
 
 [1]: /docs/extensions/migrating/improve-security/#remove-remote-code
 
