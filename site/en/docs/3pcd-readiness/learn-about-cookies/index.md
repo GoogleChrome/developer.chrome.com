@@ -13,7 +13,7 @@ authors:
 
 The first step in getting ready for the deprecation of 3P cookies is to ensure we have a firm grasp of the fundamental concepts and technical details surrounding cookies. What are they exactly? How do they work? What's the difference between first-party and third-party cookies? What exactly will change after 3P cookies are deprecated?
 
-Start with the Section [Cookies in a Nutshell](/3pcd-readiness/#cookies-in-a-nutshell), where you can get the fundamentals of cookies; you can check further the myriad of content avaiable online to learn everything about cookies, but just knowing the fundamentals will go a long way on making it easier for you to get ready for the deprecation of 3P cookies.
+Start with the Section [Cookies in a Nutshell](/3pcd-readiness/#cookies-in-a-nutshell), where you can get the fundamentals of cookies; you can take a look at the myriad of content avaiable online to learn everything about cookies, but just knowing the fundamentals will go a long way to get ready for the deprecation of 3P cookies.
 
 And keep these points in mind as you get ready:
 

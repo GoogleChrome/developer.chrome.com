@@ -2,7 +2,7 @@
 layout: layouts/doc-post.njk
 title: How do cookies work?
 subhead: >
-  How are cookies, set, retrieved, modified and shared.
+  How are cookies set, retrieved, modified, and shared.
 description: ''
 date: 2023-07-26
 updated: 2023-07-26
@@ -52,7 +52,7 @@ An HTTP cookie is a mechanism for an origin server to send state information/sta
   </tr>
   <tr>
     <td><b>Partitioned</b></td>
-    <td>Indicates that the cookie should be stored using partitioned storage</td>
+    <td>Indicates that the cookie should be stored using partitioned storage.</td>
   </tr>
   <tr>
     <td><b>SameSite</b>=value</td>
