@@ -8,7 +8,7 @@ description: Reference documentation for the content_scripts property of manifes
 
 ## Overview {: #overview }
 
-The `"content_scripts"` field is used to statically load a JavaScript or CSS file every time Chrome opens a page that matches a certain [URL pattern][doc-match]. Extensions can also inject content scripts programmatically, see [Injecting Scripts][doc-cs] for details.
+The `"content_scripts"` field is used to statically load a JavaScript or CSS file every time a page is opened that matches a certain [URL pattern][doc-match]. Extensions can also inject content scripts programmatically, see [Injecting Scripts][doc-cs] for details.
 
 ## Manifest {: #manifest }
 
