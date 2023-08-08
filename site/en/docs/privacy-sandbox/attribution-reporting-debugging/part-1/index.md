@@ -171,7 +171,7 @@ You may want to reprocess reports when you're:
 
 - attempting to debug the Aggregation Service.
 - experimenting with different batching strategies.
-- experimenting with different epsilon values
+- experimenting with different epsilon values.
 
 ## Up next
 
