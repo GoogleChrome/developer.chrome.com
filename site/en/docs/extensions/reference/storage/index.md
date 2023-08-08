@@ -24,6 +24,14 @@ Even though extensions can use the [`Storage`][mdn-storage] interface (accessibl
 - Content scripts share storage with the host page.
 - Data saved using the `Storage` interface is lost when the user clears their browsing history.
 
+To move data from web storage APIs to extension storage APIs from a service worker:
+
+1. Create an offscreen document with a conversion routine and an [`onMessage`][on-message] handler.
+1. Add a conversion routine to an offscreen document.
+1. In the extension service worker check `chrome.storage` for your data.
+1. If your data isn't found, [create][create-offscreen] an offscreen document and call [`sendMessage()`][send-message] to start the conversion routine.
+1. Inside the offscreen document's `onMessage` handler, call the conversion routine.
+
 There are also some nuances with how web storage APIs work in extensions. Learn more in the
 [Storage and Cookies][storage-and-cookies] article.
 

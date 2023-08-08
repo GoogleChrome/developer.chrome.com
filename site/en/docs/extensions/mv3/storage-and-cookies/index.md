@@ -10,14 +10,19 @@ Extensions can store cookies and access web storage APIs similar to a normal web
 some cases these behave differently in extensions.
 
 This article does not cover extension specific APIs. For more on these, see
-[chrome.storage][chrome-storage-api].
+[`chrome.storage`][chrome-storage-api].
 
 ## Storage {: #storage }
 
+It is often desirable to use existing web storage APIs in extensions. This section explores the
+behavior of these APIs in an extension context, which can sometimes differ to how they behave on the
+web.
+
 ### Persistence {: #storage-persistence }
 
-Extension storage is not cleared when a user uses the "Clear Browsing Data" feature. This includes
-any data stored using web storage APIs (such as Local Storage and IndexedDB).
+Extension storage is not cleared when a user uses the ["Clear Browsing Data"][clear-browsing-data]
+feature. This includes any data stored using web storage APIs (such as
+[Local Storage][local-storage] and [IndexedDB][indexeddb]).
 
 By default, extensions are subject to the normal quota restrictions on storage, which can be checked
 using the `navigator.storage.estimate()` method. Storage can also be evicted under heavy memory
@@ -34,19 +39,21 @@ and not the extension.
 
 ### Access in service workers {: #storage-in-service-workers }
 
-Some web storage APIs like IndexedDB are accessible in service workers. However, Local Storage and
-Session Storage are not.
+Some web storage APIs like [IndexedDB][indexeddb] are accessible in service workers. However,
+[Local Storage][local-storage] and [Session Storage][session-storage] are not.
 
 Instead, use an [offscreen document][offscreen]. For example, you could use the following to migrate
 data when updating from Manifest V2 to Manifest V3:
 
-1. In the extension service worker check `chrome.storage` for your data.
+1. In the extension service worker check [`chrome.storage`][chrome-storage-api] for your data.
 1. If your data isn't found, [create][create-offscreen] an offscreen document and call
 [`sendMessage()`][send-message] to start a conversion routine. Read the data from the web storage
 APIs and use message passing to return it to the service worker.
 1. In the service worker, write the data to a new location.
 
 ### Partitioning {: #storage-partitioning }
+
+Partitioning is where keys are introduced for stored data to limit where it can be accessed.
 
 To prevent certain types of cross-site tracking, [storage partitioning][storage-partitioning]
 introduces changes to how partitioning keys are defined. In practice, this means that if site A
@@ -61,10 +68,11 @@ not apply, and the extension will have access to its top-level partition.
 [host permissions][declare-permissions] for the site it is embedding, that site will also have
 access to its top-level partition.
 
-Combined, these mean that storage partitioning is not usually something which extension developers
-should need to consider.
-
 ## Cookies {: #cookies }
+
+Cookies provide a way to store key/value pairs associated with a specific domain and path. They have
+limited value in extensions but understanding their behavior can be useful if you have a specific
+use case or have bundled a third-party script which uses them in its implementation.
 
 ### Secure cookies {: #secure-cookies }
 
@@ -92,6 +100,10 @@ cookies associated with other partitions.
 The [`chrome.cookies`][chrome-cookies] API currently operates on cookies from all partitions. For
 more information, see the [API reference][chrome-cookies-partitioning].
 
+[clear-browsing-data]: https://support.google.com/chrome/answer/2392709
+[indexeddb]: https://developer.mozilla.org/docs/Web/API/IndexedDB_API
+[local-storage]: https://developer.mozilla.org/docs/Web/API/Window/localStorage
+[session-storage]: https://developer.mozilla.org/docs/Web/API/Window/sessionStorage
 [chrome-storage-api]: /extensions/reference/storage
 [offscreen]: /extensions/reference/offscreen
 [on-message]: /docs/extensions/reference/runtime/#event-onMessage
