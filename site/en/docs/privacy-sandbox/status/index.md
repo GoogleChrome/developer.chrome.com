@@ -80,6 +80,8 @@ named FLEDGE.
 
 {% Partial 'privacy-sandbox/timeline/topics.njk' %}
 
+{% Partial 'privacy-sandbox/timeline/topics-features.njk' %}
+
 ## User-Agent reduction and Client Hints (UA-CH)
 
 Limit passively shared browser data to reduce the volume of sensitive

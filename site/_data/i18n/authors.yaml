@@ -1486,6 +1486,11 @@ thiagodiogo:
     en: 'Thiago Diogo'
   description:
     en:  'Staff Technical Solutions Consultant'
+mikedougherty:
+  title:
+    en: 'Mike Dougherty'
+  description:
+    en: 'Chrome engineer on iOS'
 henrikbostrom:
   title:
     en: 'Henrik Boström'
@@ -1501,3 +1506,13 @@ seburan:
     en: 'Séverin Ferrand'
   description:
     en:  'Privacy Engineer, Web Ecosystem Consulting'
+yurikoh:
+  title:
+    en: 'Yuriko Hirota'
+  description:
+    en:  'Web Ecosystem Consultant'
+elabadysayed:
+  title:
+    en: 'Sayed El-Abady'
+  description:
+    en: 'Software Engineer, Google'

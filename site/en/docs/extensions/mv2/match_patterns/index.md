@@ -7,7 +7,11 @@ updated: 2017-10-28
 description: How host permission and content script pattern matching works, with examples.
 ---
 
-{% Partial 'extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Match patterns](/docs/extensions/mv3/match_patterns/) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 [Host permissions][1] and [content script][2] matching are based on a set of URLs defined by match
 patterns. A match pattern is essentially a URL that begins with a permitted scheme (`http`, `https`,

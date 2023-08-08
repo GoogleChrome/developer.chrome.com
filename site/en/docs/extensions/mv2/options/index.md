@@ -7,7 +7,11 @@ updated: 2018-04-29
 description: How to let users customize your Extension.
 ---
 
-{% Partial 'extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Give users options](/docs/extensions/mv3/options/) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 Allow users to customise the behavior of an extension by providing an options page. A user can view
 an extension's options by right-clicking the extension icon in the toolbar then selecting options or

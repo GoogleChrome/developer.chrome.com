@@ -45,7 +45,7 @@ In Manifest V3, background pages are replaced by a *service worker*. The manifes
 - Replace `"background.scripts"` with `"background.service_worker"` in the `manifest.json`. Note that the `"service_worker"` field takes a string, not an array of strings.
 - Remove `"background.persistent"` from the `manifest.json`.
 
-Replacing items in `"background.page"` will be dealt with in a later section.
+Migrating to a service worker (in other words, replacing the `"background.page"`) will be dealt with in the [next section](/docs/extensions/migrating/to-service-workers/).
 
 <div class="switcher">
 {% Compare 'worse', 'Manifest V2' %}

@@ -1,16 +1,16 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Use geolocation"
-seoTitle: "Use geolocation in Chrome Extensions"
+title: "Using geolocation"
+seoTitle: "Using geolocation in Chrome Extensions"
 date: 2023-06-20
-description: How to use geolocation in Chrome Extension service workers, popups, side panels or content scripts.
+description: How to use geolocation in Chrome extension service workers, popups, side panels, or content scripts.
 ---
 
-If you want to get geolocation information in your Chrome extension, use the same [`navigator.geolocation`](geolocation) DOM API that any website normally would. This article exists because Chrome extensions handle permission to sensitive data differently than websites. Geolocation is very sensitive data, and as such browsers ensure that users are fully aware and in control of when and where their exact location is shared.
+If you want to get geolocation information in your Chrome extension, use the same [`navigator.geolocation`][geolocation] DOM API that any website normally would. This article exists because Chrome extensions handle permission to access sensitive data differently than websites. Geolocation is very sensitive data, so browsers ensure that users are fully aware and in control of when and where their exact location is shared.
 
 ## Use geolocation in MV3 extensions
 
-On the web, browsers safeguard user's geolocation data by showing a prompt asking them to grant that specific origin access to their location. The same permission model is not always appropriate for extensions.
+On the web, browsers safeguard users' geolocation data by showing a prompt asking them to grant that specific origin access to their location. The same permission model is not always appropriate for extensions.
 
 
 <figure>
@@ -18,14 +18,14 @@ On the web, browsers safeguard user's geolocation data by showing a prompt askin
   <figcaption>The geolocation permission prompt</figcaption>
 </figure>
 
-Permissions are not the only difference. As mentioned above, `navigator.geolocation` is a _DOM_ API, that is, something that is a part of the APIs that make up websites. As a result, it is not accessible inside worker contexts, like the [extension service worker](sw) that is the backbone of manifest v3 extensions. You can absolutely still use `geolocation`, though. There are just nuances with how and where you use it.
+Permissions are not the only difference. As mentioned above, `navigator.geolocation` is a _DOM_ API, that is, something that is a part of the APIs that make up websites. As a result, it is not accessible inside worker contexts, like the [extension service worker][sw] that is the backbone of manifest v3 extensions. You can absolutely still use `geolocation`, though. There are just nuances with how and where you use it.
 
 
 ### Use geolocation in service workers
 
-There is no `navigator` object inside of service workers. It is only available inside of contexts that have access to a page's `document` object. To get access inside of a service worker, use an [`Offscreen Document`](offscreen). This is a feature of extensions that gives you access to an html file you can bundle with our extension.
+There is no `navigator` object inside of service workers. It is only available inside contexts that have access to a page's `document` object. To get access inside of a service worker, use an [`Offscreen Document`][offscreen], which provides access to an HTML file that you can bundle with your extension.
 
-To get started add `offscreen` to the `permissions` section of your manifest.
+To get started, add `"offscreen"` to your manifest's `"permissions"` section.
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -41,7 +41,7 @@ To get started add `offscreen` to the `permissions` section of your manifest.
 }
 ```
 
-After adding the `offscreen` permission, add an html file to your extension that includes your offscreen document. This case isn't using any of the content of the page, and so this can be a nearly blank file. It just needs to be a small, html file that loads in your script.
+After adding the `"offscreen"` permission, add an HTML file to your extension that includes your offscreen document. This case isn't using any of the content of the page, so this can be a nearly blank file. It just needs to be a small HTML file that loads in your script.
 
 {% Label %}offscreen.html:{% endLabel %}
 
@@ -51,9 +51,9 @@ After adding the `offscreen` permission, add an html file to your extension that
 <script src="offscreen.js"></script>
 ```
 
-Save this file in the root of our project, as `offscreen.html`.
+Save this file in the root of your project as `offscreen.html`.
 
-As mentioned you need a script called `offscreen.js`. You'll also need to bundle this with your extension. It will be where you actually get geolocation information, and send that information back to the service worker. You can send and receive messages between it and your service worker.
+As mentioned, you need a script called `offscreen.js`. You'll also need to bundle this with your extension. It will be the service worker's source of geolocation information. You can pass messages between it and your service worker.
 
 {% Label %}offscreen.js:{% endLabel %}
 
@@ -72,14 +72,14 @@ function handleMessages(message, sender, sendResponse) {
 
   // You can directly respond to the message from the service worker with the
   // provided `sendResponse()` callback. But in order to be able to send an async
-  // response, you need to explictly return `true` in the onMessage handler
-  // As a result, you can't use async/await here. You'd implictly return a Promise.
+  // response, you need to explicitly return `true` in the onMessage handler
+  // As a result, you can't use async/await here. You'd implicitly return a Promise.
   getLocation().then((loc) => sendResponse(loc));
 
   return true;
 }
 
-// getCurrentPosition() returns a prototype based object, so the properties
+// getCurrentPosition() returns a prototype-based object, so the properties
 // end up being stripped off when sent to the service worker. To get
 // around this, create a deep clone.
 function clone(obj) {
@@ -110,7 +110,6 @@ async function getLocation() {
 }
 ```
 
-
 With that in place, you are now ready to access the Offscreen Document in the service worker.
 
 ```js
@@ -127,7 +126,7 @@ Once you have a reference to the Offscreen Document, you can send it a message t
 
 
 {% Aside %}
-A Chrome extension can only have one open offscreen document at a time, which screen documents should be closed once no longer needed. To learn more about how to create and close offscreen documents, checkout the [offscreen documentation](offscreen)
+A Chrome extension can only have one open offscreen document at a time, which screen documents should be closed once no longer needed. To learn more about how to create and close offscreen documents, check out the [offscreen documentation][offscreen]
 {% endAside %}
 
 {% Label %}service_worker.js:{% endLabel %}
@@ -190,13 +189,13 @@ So now whenever you want to get the geolocation from your service worker, you ju
 const location = await getGeolocation()
 ```
 
-### Use geolocation in popup or side panel
+### Use geolocation in a popup or side panel {: #geo-ext-pages}
 
-If you want to use geolocation within a [popup](popup) or [side panel](sidepanel), it is very straightforward. Popups and side panels are just web documents, and therefore have access to the normal DOM APIs. You can access `navigator.geolocation` directly. The only difference from standard web sites would be that you need to use the `manifest.json` `"permission"` field to request the `geolocation` permission. If you do not include the permission, you _will_ still have access to `navigator.geolocation`. However, any attempt to use it will cause an immediate error, the same as if the user rejected the request. You can see this in the [popup sample](popup-sample).
+Using geolocation within a [popup][popup] or [side panel][sidepanel] is very straightforward. Popups and side panels are just web documents and therefore have access to the normal DOM APIs. You can access `navigator.geolocation` directly. The only difference from standard websites is that you need to use the `manifest.json` `"permission"` field to request the `"geolocation"` permission. If you do not include the permission, you _will_ still have access to `navigator.geolocation`. However, any attempt to use it will cause an immediate error, the same as if the user rejected the request. You can see this in the [popup sample][popup-sample].
 
-### Using geolocation in a content script
+### Using geolocation in a content script {: #geo-content }
 
-Just like a popup, a [content script](content) has full access to the DOM API; however you will go through the normal user permission flow. That means that adding `geolocation` to your `permissions` _will not_ automatically give you access to the users' geolocation information. You can see this in the [content script sample](contentscript-sample)
+Just like a popup, a [content script][content] has full access to the DOM API; however, users will go through the normal user permission flow. That means that adding `"geolocation"` to your `"permissions"` _will not_ automatically give you access to the users' geolocation information. You can see this in the [content script sample][contentscript-sample].
 
 [content]: docs/extensions/mv3/content_scripts/
 [contentscript-sample]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.geolocation-contentscript

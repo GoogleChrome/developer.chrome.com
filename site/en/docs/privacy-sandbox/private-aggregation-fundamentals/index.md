@@ -80,9 +80,37 @@ Let's say the key represents the count of users from France (country ID `061`) w
 If a dimension has available key space for multiple digits, but the value has fewer, add leading zeros. For example, if country ID allows 3 digits, the country ID for Algeria is `003`.
 {% endAside %}
 
-The aggregation key can also be generated with a hashing mechanism, such as SHA-256. For example, the string `“WidgetID=3276;CountryID=67”` can be converted to a hex string `c002f0033c108abf3ae0ec654fe38a1792186bfd582380b24ea93ebdeb6395be` which is equivalent to the BigInt `86849257128445315549261263548129498923703362729078813106545648910309959898558n`. 
+The aggregation key can be also generated with a hashing mechanism, such as [SHA-256](https://en.wikipedia.org/wiki/SHA-2). For example, the string `{"WidgetId":3276,"CountryID":67}` can be hashed and then converted to a `BigInt` value of  `42943797454801331377966796057547478208888578253058197330928948081739249096287n`. If the hash value has more than 128 bits, you can truncate it to ensure it won’t exceed the maximum allowed bucket value of `2^128−1`.
 
-Some important web APIs that are required to generate a hash, like [`crypto`](https://developer.mozilla.org/docs/Web/API/Web_Crypto_API), are not currently available within Shared Storage worklets or Protected Audience API worklets. As these worklets cannot communicate outside of itself, if you want to create hashes, you need to pre-generate one or more hashes outside the worklet then pass it in.
+Within a Shared Storage worklet, you can access the [`crypto`](https://developer.mozilla.org/docs/Web/API/Crypto) and [`TextEncoder`](https://developer.mozilla.org/docs/Web/API/TextEncoder) modules that can help you generate a hash. To learn more on generating a hash, check out [`SubtleCrypto.digest()` on MDN](https://developer.mozilla.org/docs/Web/API/SubtleCrypto/digest). 
+
+The following example describes how you can generate a bucket key from a hashed value: 
+
+```js
+async function convertToBucket(data) {
+  // Encode as UTF-8 Uint8Array
+  const encodedData = new TextEncoder().encode(data); 
+
+  // Generate SHA-256 hash
+  const hashBuffer = await crypto.subtle.digest('SHA-256', encodedData); 
+
+  // Truncate the hash
+  const truncatedHash = Array.from(new Uint8Array(hashBuffer, 0, 16)); 
+
+  // Convert the byte sequence to a decimal
+  return truncatedHash.reduce((acc, curr) => acc * 256n + BigInt(curr), 0n); 
+}
+
+const data = {
+  WidgetId: 3276,
+  CountryID: 67
+};
+
+const dataString = JSON.stringify(data);
+const bucket = await convertToBucket(dataString);
+
+console.log(bucket); // 126200478277438733997751102134640640264n
+```
 
 {% Aside %}
 Although the concepts are similar, the key is constructed differently for the Private Aggregation API than the Attribution Reporting API. For Private Aggregation, the complete key is specified at the one time, in the JavaScript call.

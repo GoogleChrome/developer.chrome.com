@@ -43,4 +43,4 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 ```
 
 [repo-samples]: https://github.com/GoogleChrome/chrome-extensions-samples
-[sample-example]; https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/alarms
+[sample-example]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/alarms

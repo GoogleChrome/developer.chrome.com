@@ -7,7 +7,11 @@ updated: 2018-11-01
 description: How to use the activeTab permission in your Chrome Extension.
 ---
 
-{% Partial 'extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - The activeTab permission](/docs/extensions/mv3/manifest/activeTab/) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 The `activeTab` permission gives an extension temporary access to the currently active tab when the
 user _invokes_ the extension - for example by clicking its [browser action][1]. Access to the tab
