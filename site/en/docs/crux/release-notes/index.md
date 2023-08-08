@@ -21,7 +21,7 @@ date: 2017-10-01
 
 # Optional
 # Include an updated date when you update your post
-updated: 2023-07-11
+updated: 2023-08-03
 
 # Optional
 # How to add a new author
@@ -43,12 +43,30 @@ The CrUX dataset on BigQuery is generally updated on the second Tuesday of every
 
 In the list below, we've curated some release notes for each monthly dataset. Subscribe to our [CrUX Announce](https://groups.google.com/a/chromium.org/forum/#!forum/chrome-ux-report-announce) mailing list or follow [@ChromeUXReport](https://twitter.com/ChromeUXReport) on Twitter for release Announcements.
 
+## 202307
+
+[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/TBC)
+
+Publication date
+ : August 8, 2023
+
+What's new
+
+As noted last month, we made progress on origins with redirects on their root page not showing in CrUX and since then we resolved the last of the known issues and this month no origins should be excluded for this reason.
+
+As warned in the last few releases, we have now removed the experimental prefixed Interaction to Next Paint metric from CrUX BigQuery, API, and History API. Users need to use the non-prefixed field to access this metric.
+
+Notable stats
+ : - 17,976,663 origins
+ : - 44.6% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+
+
 ## 202306
 
 [Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/AaW8rohYfHk)
 
 Publication date
- : Jul 11, 2023
+ : July 11, 2023
 
 What's new
 
@@ -65,7 +83,7 @@ Notable stats
 [Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/13hl37E28RE)
 
 Publication date
- : Jun 13, 2023
+ : June 13, 2023
 
 What's new
 
@@ -101,7 +119,7 @@ Notable stats
 [Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/1hHxnk9ZOCk)
 
 Publication date
- : Apri 11, 2023
+ : April 11, 2023
 
 Notable stats
  : - 18,495,210 origins
@@ -223,7 +241,7 @@ Notable stats
 [Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/N5B3F9QVOmY)
 
 Publication date
- : August 09, 2022
+ : August 9, 2022
 
 What's new
  : - This release includes a change which records the CLS metric when the tab is backgrounded in addition to tab close. See the [CLS changelog](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/speed/metrics_changelog/2021_11_cls.md) for details.

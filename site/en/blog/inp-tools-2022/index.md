@@ -79,12 +79,12 @@ The same series of interactions can be automated by using [Lighthouse user flows
 ### Tool availability details
 
 - **Chrome User Experience Report (CrUX)**
-  - _BigQuery_: INP available as `experimental.interaction_to_next_paint` 
-  - _CrUX API_: INP available as `experimental_interaction_to_next_paint`
+  - _BigQuery_: INP available as `interaction_to_next_paint`
+  - _CrUX API_: INP available as `interaction_to_next_paint`
   - _CrUX Dashboard_: Includes INP data
 - **PageSpeed Insights**
   - _pagespeed.web.dev_: Page-level and origin-level INP field data from the CrUX API surfaced as 'Interaction to Next Paint'
-  - _PSI API_: INP available as `EXPERIMENTAL_INTERACTION_TO_NEXT_PAINT_MS`
+  - _PSI API_: INP available as `INTERACTION_TO_NEXT_PAINT_MS`
 - **`web-vitals` JS library**
   - _`web-vitals@next`_ includes INP support
 - **Web Vitals Chrome extension**

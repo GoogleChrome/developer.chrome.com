@@ -42,9 +42,9 @@ In the real-user experiences section, metrics are grouped by [Core Web Vitals](h
 
 ### Other notable metrics
 
+- **INP** is an pending Core Web Vital metric that measures the latency of all interactions a user has made with the page, and reports a single value which all (or nearly all) interactions were below.
 - **FCP** measures the time until the page displays something in the
  foreground, like some text or a logo.
-- **INP** is an experimental metric that measures the latency of all interactions a user has made with the page, and reports a single value which all (or nearly all) interactions were below.
 - **TTFB** is an experimental metric that measures the time between the request for a resource and when the first byte of a response begins to arrive.
 
 ### Metric thresholds
@@ -57,8 +57,8 @@ Metric | "Good" | "Needs Improvement" | "Poor"
 LCP | 0–2500ms | 2500–4000ms | 4000ms+
 FID | 0–100ms | 100–300ms | 300ms+
 CLS | 0.00-0.10 | 0.10–0.25 | 0.25+
-FCP | 0–1800ms | 1800ms–3000ms | 3000ms+
 INP | 0–200ms | 200ms–500ms | 500ms+
+FCP | 0–1800ms | 1800ms–3000ms | 3000ms+
 TTFB | 0–800ms | 800ms–1800ms | 1800ms+
 
 The three Core Web Vitals metrics are the most important metrics, and are directly experienced by real users. The other metrics may be used as diagnostics, but they're not necessarily perceptible by real users. Thus, these metrics are not factored into the Core Web Vitals assessment, and failing to meet the "good" thresholds only matters if they're adversely affecting the Core Web Vitals.

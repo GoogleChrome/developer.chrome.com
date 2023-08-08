@@ -270,7 +270,6 @@ If the `metrics` property is not set then all available metrics will be returned
 - `first_input_delay`
 - `interaction_to_next_paint`
 - `largest_contentful_paint`
-- `experimental_interaction_to_next_paint`
 - `experimental_time_to_first_byte`
 
 {% Aside 'important' %}
