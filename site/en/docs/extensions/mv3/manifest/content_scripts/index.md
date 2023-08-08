@@ -8,11 +8,11 @@ description: Reference documentation for the "content_scripts" property of manif
 
 ## Overview {: #overview }
 
-The `"content_scripts"` field specifies a statically loaded JavaScript or CSS file to be used every time a page is opened that matches a certain [URL pattern][doc-match]. Extensions can also inject content scripts programmatically, see [Injecting Scripts][doc-cs] for details.
+The `"content_scripts"` key specifies a statically loaded JavaScript or CSS file to be used every time a page is opened that matches a certain [URL pattern][doc-match]. Extensions can also inject content scripts programmatically, see [Injecting Scripts][doc-cs] for details.
 
 ## Manifest {: #manifest }
 
-These are the supported fields for `"content_scripts"`. Only the `"matches"` key and either `"js"` or `"css"` are required.
+These are the supported keys for `"content_scripts"`. Only the `"matches"` key and either `"js"` or `"css"` are required.
 
 {% Label %}manifest.json{% endLabel %}
 
@@ -218,7 +218,7 @@ https://www.example.com/science
 
 ## Frames {: #frames }
 
-The `"all_frames"` field specifies if the content script should be injected into all frames matching the specified URL requirements. If set to `"false"` it will only inject into the topmost frame. It can be used along with `"match_about_blank"` to inject into an `about:blank` frame. 
+The `"all_frames"` key specifies if the content script should be injected into all frames matching the specified URL requirements. If set to `"false"` it will only inject into the topmost frame. It can be used along with `"match_about_blank"` to inject into an `about:blank` frame. 
 
 To inject into other frames like `data:`, `blob:`, and `filesystem:`, set the `"match_origin_as_fallback"` to `true`. For details, see [Injecting in related frames][cs-inject-frames]
 
