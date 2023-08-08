@@ -218,25 +218,28 @@ https://www.example.com/science
 
 ## Frames {: #frames }
 
-The `"all_frames"` key specifies if the content script should be injected into all frames matching the specified URL requirements. If set to `false` it will only inject into the topmost frame. It can be used along with `"match_about_blank"` to inject into an `about:blank` frame. 
+The `"all_frames"` field specifies if the content script should be injected into all frames matching the specified URL requirements. If set to `"false"` it will only inject into the topmost frame. It can be used along with `"match_about_blank"` to inject into an `about:blank` frame. 
 
 To inject into other frames like `data:`, `blob:`, and `filesystem:`, set the `"match_origin_as_fallback"` to `true`. For details, see [Injecting in related frames][cs-inject-frames]
 
-`"all_frames"` - Boolean
-: _Optional_. Defaults to `false`, meaning that only the top frame is matched. If set to true, it will inject into all frames, even if the frame is not the topmost frame in the tab. Each frame is checked independently for URL requirements. It won't inject into child frames if the URL requirements are not met.
+`"all_frames"` Boolean
+: _Optional_. Defaults to `"false"`, meaning that only the top frame is matched. If set to true, it will inject into all frames, even if the frame is not the topmost frame in the tab. Each frame is checked independently for URL requirements, it won't inject into child frames if the URL requirements are not met.
 
 `"match_about_blank"`- Boolean
-: _Optional_. Defaults to `false`. Specifies whether the script should inject into an `about:blank` frame when the parent URL matches one of the patterns declared in `"matches"`.
+: _Optional_. Defaults to `"false"`. Whether the script should inject into an `about:blank` frame where the parent URL matches one of the patterns declared in `"matches"`.
 
 `"match_origin_as_fallback"` - Boolean
-: _Optional_. Defaults to `false`. Specifies whether the script should inject in frames that were created by a matching origin, but whose URL or origin may not directly match the pattern. These include frames with different schemes, such as `about:`, `data:`, `blob:`, and `filesystem:`.
+: _Optional_. Defaults to `"false"`. Whether the script should inject in frames that were created by a matching origin, but whose URL or origin may not directly match the pattern. These include frames with different schemes, such as `about:`, `data:`, `blob:`, and `filesystem:`.
 
 ## Run time and execution environment {: #world-timings }
 
-By default, content scripts are injected when the document and all resources are finished loading (`"document_idle"`), and live in a private isolated execution environment that isn't accessible to the page or other extensions.
+By default, content scripts are injected when the document and all resources are finished loading, and live in a private isolated execution environment that isn't accessible to the page or other extensions. You can change these defaults in the following keys:
 
 [`"run_at"`][scripting-runat] - `document_start` | `document_end` | `document_idle`
-: _Optional_. Specifies when the script should be injected into the page. It corresponds with the loading stated of [Document.readyState][mdn-ready-state]. Must be one of `"document_start"` (the DOM is still loading), `"document_end"` (other resources are still loading), or `"document_idle"`, when the DOM and resources have finished loading.
+: _Optional_. Specifies when the script should be injected into the page. It corresponds with the loading states of [Document.readyState][mdn-ready-state]:
+    - `"document_start"`: the DOM is still loading.
+    - `"document_end"`: the page's resources are still loading
+    - `"document_idle"`: the DOM and resources have finished loading.
 
 [`"world"`][scripting-world] - `ISOLATED` | `MAIN`
 : _Optional_. The JavaScript world for a script to execute within. Defaults to `"ISOLATED"`, which is the execution environment unique to the content script. Choosing the `"MAIN"` world means the script will share the execution environment with the host page's JavaScript. See [Work in isolated worlds][cs-worlds] to learn more.
@@ -247,7 +250,7 @@ There are risks involved when using the `"MAIN"` world. The host page can access
 
 ## Example
 
-See the [Run on every page][tut-every-page] tutorial to build an extension that injects a content script through the manifest.
+See the [Run on every page][tut-every-page] tutorial to build an extension that injects a content script in the manifest.
 
 [doc-match]: /docs/extensions/mv3/match_patterns
 [doc-cs]: /docs/extensions/mv3/content_scripts
