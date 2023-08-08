@@ -9,7 +9,7 @@ description: Understanding URL match patterns in Chrome extensions.
 
 ## Overview {: #overview }
 
-Extensions use match patterns to specify a group of URLs. They are mainly used to declare [host permissions][host-permissions] along with other permissions to use certain Chrome APIs or when injecting [content scripts][content-scripts]. Extension also use match patterns in:
+Extensions use match patterns to specify a group of URLs. They are mainly used to declare [host permissions][host-permissions] along with other permissions to use certain Chrome APIs or when injecting [content scripts][content-scripts]. Extensions also use match patterns in:
 
 - [`"web_accessible_resources.matches"`][war]
 - [`"externally_connectable.matches"`][ext-connect]
@@ -28,18 +28,18 @@ Each part can use wildcards `*`. Below is a detailed description:
 
 - **host**: A hostname (`www.example.com`), a `*` before the hostname to match subdomains (`*.example.com`), or just a wildcard `*`.
 
-- **path**: Must start with `/` and be present. If alone it will always treated as `/*`. For example `/*`, `/foo*`, or `/foo/bar`. Each '`*`' matches 0 or more characters.
+- **path**: Must start with `/` and be present. If alone, it is treated as `/*`. For example: `/*`, `/foo*`, or `/foo/bar`. Each '`*`' matches 0 or more characters.
 
 ## Special cases {: #special }
 
 `<all_urls>`
-: It matches any URL that starts with a permitted scheme. Includes any pattern listed in the [valid patterns](#valid-examples). This is considered a broad host permission, which means the review process will take longer.
+: It matches any URL that starts with a permitted scheme, including any pattern listed under [valid patterns](#valid-examples). This is a broad host permission, meaning the Chrome web store [review may take longer](/docs/webstore/review-process/#review-time-factors).
 
 `file:///`
-: Allows your extension to run on local files. It has no host and requires the user to manually [enable access][permissions].
+: Allows your extension to run on local files. It has no host and requires the user to manually [grant access][permissions-allow-access].
 
 Port URLs
-: Use `http://localhost/*` to match any localhost ports during development. For IP addresses, include the specific address plus a wildcard in the path. For example: `http://127.0.0.1/*`
+: Yuu can use `http://localhost/*` to match any localhost ports during development. For IP addresses, you can specify the address plus a wildcard in the path. For example: `http://127.0.0.1/*`
 
 Top Level domain match patterns
 : [Top Level domain][mdn-tld] match patterns like `http://google.*/*` are not supported. They should be listed individually. For example: `http://google.es/*` and `http://google.fr/*`.
@@ -53,7 +53,7 @@ Top Level domain match patterns
       <tr>
          <th style="margin-left:0; padding-left:0">Pattern</th>
          <th style="margin-left:0; padding-left:0">What it does</th>
-         <th style="margin-left:0; padding-left:0">Examples of matching URLs</th>
+         <th style="margin-left:0; padding-left:0">Examples</th>
       </tr>
       <tr>
          <td><code>https://*/*</code></td>
@@ -144,7 +144,7 @@ Here are some examples of _invalid_ match patterns:
 </table>
 
 {% Aside 'success' %}
-Content scripts can be injected into related frames like `about:`, `data:`, etc by setting `"match_origin_as_fallback"` to `true` in the manifest. See [Injecting in related frames][cs-frames] for details.
+Content scripts can be injected into related frames like `about:`, `data:`, etc by setting `"match_origin_as_fallback"` to `"true"` in the manifest. See [Injecting in related frames][cs-frames] for details.
 {% endAside %}
 
 [content-scripts]: /docs/extensions/mv3/content_scripts
