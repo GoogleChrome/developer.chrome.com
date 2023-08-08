@@ -7,6 +7,10 @@ Have feedback? We'd love to hear it - please open an
 
 ## Submitting a pull request
 
+### Authoring content ✍️
+
+See the [developer.chrome.com handbook](https://developer.chrome.com/docs/handbook).
+
 ### Contributor License Agreements
 
 We'd love to accept your code patches! However, before we can take them, we
