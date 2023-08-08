@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-07-28
+updated: 2023-08-08
 tags:
   - extensions-news
 
@@ -14,6 +14,12 @@ tags:
 <!--lint disable first-heading-level-->
 
 Check this page often to learn about changes to Chrome extensions, extensions documentation, or related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about some of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).) The [Chrome schedule](https://chromiumdash.appspot.com/schedule) lists stable and beta release dates.
+
+### Using your Google Analytics account with the Chrome Web Store {: #ga-with-cws }
+
+<p class="color-secondary-text type--caption">Posted on <time>August 7, 2023</time></p>
+
+The Chrome Web Store offers integration with Google Analytics, which allows you to see analytics for your Chrome Web Store listing in addition to the view offered in the Developer Dashboard. For more information, read [Using your Google Analytics account with the Chrome Web Store](/docs/webstore/google-analytics/).
 
 ### Chrome 115: DevTools steps over content scripts by default {: #step-over-content-script }
 
@@ -46,7 +52,7 @@ We published new Google Analytics and geolocation guidance and samples:
 
 <p class="color-secondary-text type--caption">Posted on <time>June 7, 2023</time></p>
 
-You can now specify multiple [`reason`](/docs/extensions/reference/offscreen/#type-Reason) enums when calling [`chrome.offscreen.createDocument()`](/docs/extensions/reference/offscreen/#method-createDocument). Use this when an offscreen document will be used for multiple different purposes. The browser uses the supplied reasons to determine the lifetime of the offscreen document. 
+You can now specify multiple [`reason`](/docs/extensions/reference/offscreen/#type-Reason) enums when calling [`chrome.offscreen.createDocument()`](/docs/extensions/reference/offscreen/#method-createDocument). Use this when an offscreen document will be used for multiple different purposes. The browser uses the supplied reasons to determine the lifetime of the offscreen document.
 
 ### New tool: Extension Update Testing Tool {: #update-testing-tool }
 
@@ -58,7 +64,7 @@ We've just released the [Extension Update Testing Tool](https://github.com/Googl
 
 <p class="color-secondary-text type--caption">Posted on <time>May 30, 2023</time></p>
 
-Introducing the new Side Panel API, a companion surface that allows users to access tools alongside the content they are browsing. To learn more, visit the [Side Panel API reference](/docs/extensions/reference/sidePanel/). Additionally, we've added many side panel samples to our [GitHub sample repository](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples). We also share more about side panels in the new blog post [Designing a Superior User Experience with the New Side Panel API](/blog/extension-side-panel-launch). Our [quality guidelines policy](/docs/webstore/program-policies/quality-guidelines/) and [best practices](/docs/webstore/best_practices/#design-a-high-quality-extension) have also been reviewed to provide further guidance on creating high-quality side panel extensions. 
+Introducing the new Side Panel API, a companion surface that allows users to access tools alongside the content they are browsing. To learn more, visit the [Side Panel API reference](/docs/extensions/reference/sidePanel/). Additionally, we've added many side panel samples to our [GitHub sample repository](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples). We also share more about side panels in the new blog post [Designing a Superior User Experience with the New Side Panel API](/blog/extension-side-panel-launch). Our [quality guidelines policy](/docs/webstore/program-policies/quality-guidelines/) and [best practices](/docs/webstore/best_practices/#design-a-high-quality-extension) have also been reviewed to provide further guidance on creating high-quality side panel extensions.
 
 Your feedback is important in crafting this API; please share your thoughts and feature requests in the [chromium-groups](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/cJmdMLmpbjg/m/zYGc54AaAQAJ). Stay tuned for new updates as we continue to enhance the Side Panel API.
 
@@ -66,9 +72,9 @@ Your feedback is important in crafting this API; please share your thoughts and 
 
 <p class="color-secondary-text type--caption">Posted on <time>May 17, 2023</time></p>
 
-There are two new samples available that demonstrate how to use WASM in an extension: 
+There are two new samples available that demonstrate how to use WASM in an extension:
 
-- [Using WASM in Manifest V3](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.wasm-helloworld-print-nomodule) shows the general method for including a WASM module. 
+- [Using WASM in Manifest V3](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.wasm-helloworld-print-nomodule) shows the general method for including a WASM module.
 - [Using WASM as a module in Manifest V3](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.wasm-helloworld-print) shows how to use it in a module.
 
 Special thanks to GitHub contributor [@daidr](https://github.com/daidr) for these samples.
@@ -107,13 +113,13 @@ To help with Chrome Web Store publishing, we added new guidance in two areas. Gu
 
 <p class="color-secondary-text type--caption">Posted on <time>April 14, 2023</time></p>
 
-We've rewritten the README for the [Extension Manifest Converter](https://github.com/GoogleChromeLabs/extension-manifest-converter) to make it easier to see what you need to do after running the tool. The converter helps helps migrate extensions built on Manifest V2 to Manifest V3. The new README describes what the tool does using words that closely match those in the [migration guide's checklist](/docs/extensions/migrating/checklist/). The converter doesn't do everything, but it does eliminate many tasks that don't require a human judgement call. 
+We've rewritten the README for the [Extension Manifest Converter](https://github.com/GoogleChromeLabs/extension-manifest-converter) to make it easier to see what you need to do after running the tool. The converter helps helps migrate extensions built on Manifest V2 to Manifest V3. The new README describes what the tool does using words that closely match those in the [migration guide's checklist](/docs/extensions/migrating/checklist/). The converter doesn't do everything, but it does eliminate many tasks that don't require a human judgement call.
 
 ### Chrome 113: New reasons for offscreen documents
 
 <p class="color-secondary-text type--caption">Posted on <time>April 7, 2023</time></p>
 
-We have added two new [reason types](/docs/extensions/reference/offscreen/#type-Reason) to the Offscreen Documents API. Use `LOCAL_STORAGE` to access the web platform's [localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) API. Use `WORKER` when creating web workers. 
+We have added two new [reason types](/docs/extensions/reference/offscreen/#type-Reason) to the Offscreen Documents API. Use `LOCAL_STORAGE` to access the web platform's [localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) API. Use `WORKER` when creating web workers.
 
 ### Google Analytics 4 now in the Developer Dashboard
 
@@ -129,8 +135,8 @@ The File Handler API is available for experimentation on ChromeOS in Canary for 
 
 To enable file handling:
 
-* Starting in 112, launch Chrome using the `--enable-features=ExtensionWebFileHandlers` flag, starting in 112 
-* Starting in 113, paste `os://flags/#extension-web-file-handlers` into the Chrome omnibox and select 'Enabled' from the dropdown menu. 
+* Starting in 112, launch Chrome using the `--enable-features=ExtensionWebFileHandlers` flag, starting in 112
+* Starting in 113, paste `os://flags/#extension-web-file-handlers` into the Chrome omnibox and select 'Enabled' from the dropdown menu.
 
 We hope to launch this feature in Chrome 115, in late June. Watch this space for updates.
 
