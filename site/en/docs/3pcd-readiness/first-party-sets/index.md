@@ -2,7 +2,7 @@
 layout: layouts/doc-post.njk
 title: First-Party Sets
 subhead: >
-  A new web platform mechanism to declare a collection of related domains as being in a First-Party Set.
+  A new web platform mechanism allows developers to declare domains that can share cookies.
 description: ''
 date: 2023-07-26
 updated: 2023-07-26
@@ -10,15 +10,22 @@ authors:
   - mihajlija
 ---
 
-Blocking cross-site cookies or partitioning by top-level site would prevent [use cases](/blog/first-party-sets-sameparty/#usecases) such as single sign-on or a shared shopping cart.
+With the upcoming deprecation of third-party cookies, and the current desire among some sites to limit their use of unrestricted third-party cookies, there is a mechanism to allow sites to use "third-party" cookies in a validated, safe manner.
 
+[First-Party Sets (FPS)](/docs/privacy-sandbox/first-party-sets/) allows websites to specify a set of sites that can share cookies, much like third-party cookie usage, but on a restricted scale.
+
+Using First-party sets, multi-domain sites can declare relationships between domains so the browser understands the relationships and handles cookie access appropriately.
+
+This facilitates proper functioning of features such as single sign-on and shared shopping carts on multi-domain sites now, and once third-party cookies are deprecated.
+
+<!--
 {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/NIUl4xLnUCe3yYP7TblC.png", alt="Diagram showing three sites accessing each other's cookies.", width="800", height="446" %}
+-->
 
-[First-Party Sets (FPS)](/docs/privacy-sandbox/first-party-sets/) is a web platform mechanism for developers to declare relationships among sites, so that browsers can use this information to enable limited cross-site cookie access for specific, user-facing purposes. Chrome will use these declared relationships to decide when to allow or deny a site access to their cookies when in a third-party context.
+Chrome uses these declared relationships to decide when to allow or deny a site access to their cookies when in a third-party context.
 
 Declaring your sites as part of a First-Party Set will allow you to use [Storage Access API (SAA)](/docs/privacy-sandbox/first-party-sets-integration/#storage-access-api) and the [requestStorageAccessFor API](/docs/privacy-sandbox/first-party-sets-integration/#requeststorageaccessfor-in-chrome) to request access to those cookies.
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/zbeLi9FbtJVhLXiCiRig.png", alt="Diagram showing only sites within the same First-Party Set accessing each other's cookies, while the third site is denied access.", width="800", height="452" %}
 
 ## Declaring First Party Sets
 
@@ -30,10 +37,13 @@ First-party sets are declared in JSON format. In the following example, the prim
   "associatedSites": ["https://air-travel.site"]
 }
 ```
+Note how sites not in the First-party Set are outside the boundaries of sites that can share cookies:
+
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/zbeLi9FbtJVhLXiCiRig.png", alt="Diagram showing only sites within the same First-Party Set accessing each other's cookies, while the third site is denied access.", width="800", height="452" %}
 
 ## Storage access
 
-Top-level sites can request storage access on behalf of specific origins with [`Document.requestStorageAccessFor()`](https://privacycg.github.io/requestStorageAccessFor/) (rSAFor).
+Top-level sites can request storage access on behalf of specific origins with [`Document.requestStorageAccessFor()`](https://privacycg.github.io/requestStorageAccessFor/).
 
 ```js
 document.requestStorageAccessFor('https://target.site');

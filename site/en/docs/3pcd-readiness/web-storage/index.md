@@ -15,7 +15,7 @@ authors:
 
 Both cookies and the Web Storage API are data storage mechanisms. The [Web Storage API](https://developer.mozilla.org/docs/Web/API/Web_Storage_API) is a set of capabilities of that enable websites to store persistent data on a user's device. Cookies do the same, and are often used to store a user's data and preferences.
 
-Because these mechanisms are similar to cookies, without the same privacy concerns, you may find them to be useful replacements for some of your third-party cookie use cases.
+Because the Web Storage API features are similar to cookies, without the same privacy concerns, you may find them to be useful replacements for some of your third-party cookie use cases.
 
 ## Web storage vs. cookies
 
@@ -25,7 +25,7 @@ There are a number of differences between web storage and cookies.
 
 - Web Storage does not suffer from the confidentiality and weak integrity that cookies do, because local and session storage can only be read on the client.
 
-- Web Storage provides a better programmatic model because it allows you to store data as key/value pairs. This means you can parse and use the data more easily and more intuitively. For example, you can get the key/vlaue pairs using `JSON.parse` in JavaScript.
+- Web Storage provides a better programmatic model because it allows you to store data as key/value pairs. This means you can parse and use the data more easily and more intuitively. For example, you can get the key/vlaue pairs using `JSON.parse` in JavaScript in a more human readable format.
 
 ## Web Storage APIs
 
