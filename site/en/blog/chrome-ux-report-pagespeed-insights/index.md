@@ -7,7 +7,7 @@ authors:
 description: |
   PageSpeed Insights (PSI) is a tool for web developers to understand what a page's performance is and how to improve it. In this guide, learn how to use PSI to extract insights from CrUX and better understand the user experience.
 date: 2020-05-28
-updated: 2023-02-04
+updated: 2023-08-03
 tags:
   - performance
   - crux
@@ -42,7 +42,7 @@ In the real-user experiences section, metrics are grouped by [Core Web Vitals](h
 
 ### Other notable metrics
 
-- **INP** is an pending Core Web Vital metric that measures the latency of all interactions a user has made with the page, and reports a single value which all (or nearly all) interactions were below.
+- **INP** is an [pending Core Web Vital](https://web.dev/vitals/#pending) metric that measures the latency of all interactions a user has made with the page, and reports a single value which all (or nearly all) interactions were below.
 - **FCP** measures the time until the page displays something in the
  foreground, like some text or a logo.
 - **TTFB** is an experimental metric that measures the time between the request for a resource and when the first byte of a response begins to arrive.
@@ -61,7 +61,7 @@ INP | 0–200ms | 200ms–500ms | 500ms+
 FCP | 0–1800ms | 1800ms–3000ms | 3000ms+
 TTFB | 0–800ms | 800ms–1800ms | 1800ms+
 
-The three Core Web Vitals metrics are the most important metrics, and are directly experienced by real users. The other metrics may be used as diagnostics, but they're not necessarily perceptible by real users. Thus, these metrics are not factored into the Core Web Vitals assessment, and failing to meet the "good" thresholds only matters if they're adversely affecting the Core Web Vitals.
+The Core Web Vitals metrics are the most important metrics, and are directly experienced by real users. The other metrics may be used as diagnostics, but they're not necessarily perceptible by real users. Thus, these metrics are not factored into the Core Web Vitals assessment, and failing to meet the "good" thresholds only matters if they're adversely affecting the Core Web Vitals.
 
 There are three ways that the user experience is displayed in PSI:
 
