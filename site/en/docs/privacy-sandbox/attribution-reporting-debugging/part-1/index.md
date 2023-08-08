@@ -170,7 +170,7 @@ Another advantage of using debug mode is that it allows you to process reports a
 You may want to reprocess reports when you're:
 
 - attempting to debug the Aggregation Service.
-- experimenting with different batching strategies
+- experimenting with different batching strategies.
 - experimenting with different epsilon values
 
 ## Up next
