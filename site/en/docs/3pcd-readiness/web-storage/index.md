@@ -31,7 +31,7 @@ There are a number of differences between web storage and cookies.
 
 [Session storage](https://www.w3schools.com/jsref/prop_win_sessionstorage.asp): The data stored in session storage (the `Window.sessionStorage` object) is cleared when the page session ends. A page session lasts for as long as the browser is open and persists over page reloads and restores.
 
-[IndexedDB](https://web.dev/indexeddb/): This is a low-level API for client-side storage of significant amounts of structured data. This API uses indexes to enable high-performance searches of the data. async doesnt' block main thread
+[IndexedDB](https://web.dev/indexeddb/): This is a low-level API for client-side storage of significant amounts of structured data. This API uses indexes to enable high-performance searches of the data.
 
 [Cache Storage API](https://web.dev/learn/pwa/caching/): This API allows you to cache network requests and responses; it's often used with [Service Workers](https://developer.mozilla.org/docs/Web/API/Service_Worker_API) to create offline-first web applications.
 
