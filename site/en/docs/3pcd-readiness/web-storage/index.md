@@ -29,10 +29,12 @@ There are a number of differences between web storage and cookies.
 
 ## Web Storage APIs
 
-[Local storage](https://www.w3schools.com/jsref/prop_win_localstorage.asp): The data stored in local storage (the `Window.localStorage` object) has no expiration time, and it persists across browsing sessions. Local storage is limited to 5-10MB, depending on the browser.
-
 [Session storage](https://www.w3schools.com/jsref/prop_win_sessionstorage.asp): The data stored in session storage (the `Window.sessionStorage` object) is cleared when the page session ends. A page session lasts for as long as the browser is open and persists over page reloads and restores.
 
-[IndexedDB](https://web.dev/indexeddb/): This is a low-level API for client-side storage of significant amounts of structured data. This API uses indexes to enable high-performance searches of the data.
+[IndexedDB](https://web.dev/indexeddb/): This is a low-level API for client-side storage of significant amounts of structured data. This API uses indexes to enable high-performance searches of the data. async doesnt' block main thread
 
 [Cache Storage API](https://web.dev/learn/pwa/caching/): This API allows you to cache network requests and responses; it's often used with [Service Workers](https://developer.mozilla.org/docs/Web/API/Service_Worker_API) to create offline-first web applications.
+
+[Local storage](https://www.w3schools.com/jsref/prop_win_localstorage.asp): The data stored in local storage (the `Window.localStorage` object) has no expiration time, and it persists across browsing sessions. Local storage is limited to 5-10MB, depending on the browser. 
+
+It's good to remember that reading and writing to localStorage is not asynchronous, blocks the main thread, and is not accessible to web workers or service workers, unlike IndexedDB and the Cache Storage API.
