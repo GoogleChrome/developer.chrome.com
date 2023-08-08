@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-08-08
+updated: 2023-08-09
 tags:
   - extensions-news
 
@@ -14,6 +14,12 @@ tags:
 <!--lint disable first-heading-level-->
 
 Check this page often to learn about changes to Chrome extensions, extensions documentation, or related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about some of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).) The [Chrome schedule](https://chromiumdash.appspot.com/schedule) lists stable and beta release dates.
+
+### Improved guidance for the declarativeNetRequest API {: #new-dnr-guidance }
+
+<p class="color-secondary-text type--caption">Posted on <time>August 8, 2023</time></p>
+
+The [`chrome.declarativeNetRequest`](/docs/extensions/reference/declarativeNetRequest/)` API blocks or modifies network requests by specifying declarative rules. This lets extensions modify network requests without intercepting them and viewing their content, thus providing more privacy to users. It's also tricky to use. With that in mind, we've rewritten the guidance in a way that we think paints a clearer picture for how to implement declarative rulesets. Read the new section at the link above.
 
 ### Using your Google Analytics account with the Chrome Web Store {: #ga-with-cws }
 
