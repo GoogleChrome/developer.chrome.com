@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-08-03
+updated: 2023-08-07
 tags:
   - extensions-news
 
@@ -17,9 +17,9 @@ Check this page often to learn about changes to Chrome extensions, extensions do
 
 ### Using your Google Analytics account with the Chrome Web Store {: # ga-with-cws }
 
-<p class="color-secondary-text type--caption">Posted on <time>August 3, 2023</time></p>
+<p class="color-secondary-text type--caption">Posted on <time>August 7, 2023</time></p>
 
-The Chrome Web Store offers integration with Google Analytics, which allows you to see analytics for your Chrome Web Store listing in addition to the view offered in the Developer Dashboard.
+The Chrome Web Store offers integration with Google Analytics, which allows you to see analytics for your Chrome Web Store listing in addition to the view offered in the Developer Dashboard. For more information, read [Using your Google Analytics account with the Chrome Web Store](/docs/webstore/google-analytics/).
 
 ### Chrome 115: DevTools steps over content scripts by default {: #step-over-content-script }
 
