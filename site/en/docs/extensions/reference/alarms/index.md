@@ -4,7 +4,7 @@ api: alarms
 
 ## Manifest {: #manifest }
 
-To use `chrome.alarms` API, declare the `"alarms"` permission in the [manifest][doc-manifest]:
+To use the `chrome.alarms` API, declare the `"alarms"` permission in the [manifest][doc-manifest]:
 
 ```json
 {
@@ -25,7 +25,7 @@ repository.
 
 ### Set an alarm {: #set-alarm }
 
-The following example sets an alarm in the service worker when the extension is installed, but not when it, Chrome, or any shared module is updated.
+The following example sets an alarm in the service worker when the extension is installed:
 
 {% Label %}service-worker.js:{% endLabel %}
 
@@ -45,7 +45,7 @@ chrome.runtime.onInstalled.addListener(async ({ reason }) => {
 
 {% Aside %}
 
-Starting Chrome 117, the number of active alarms is limited to 500. Once this limitation is reached `chrome.alarms.create()` will fail, and [`chrome.runtime.lastError()`][last-error] will be set if using a callback or reject if using promises.
+Starting in Chrome 117, the number of active alarms is limited to 500. Once this limit is reached, `chrome.alarms.create()` will fail. When using a callback, [`chrome.runtime.lastError`][last-error] will be set. When using promises, the promise will be rejected.
 
 {% endAside %}
 
