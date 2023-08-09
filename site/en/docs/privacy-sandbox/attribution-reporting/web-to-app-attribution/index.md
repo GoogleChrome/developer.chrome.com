@@ -12,8 +12,6 @@ authors:
 
 The Privacy Sandbox natively supports cross- web and app attribution, and the Attribution Reporting API allows measurement across mobile browsers and Android apps.
 
-
-
 ## What is web-to-app attribution?
 
 If a user clicks an ad in a Chrome mobile browser, and then goes on to later make a purchase in an Android app, the Attribution Reporting API can directly attribute that conversion performed in the Android app to the ads shown in the Chrome mobile browser. That's web-to-app attribution.
@@ -44,5 +42,3 @@ Under the hood, the `Attribution-Reporting-Register-OS-Source` header signals th
 
 - Read more about web-to-app attribution in [Cross App and Web Attribution Measurement](https://github.com/WICG/attribution-reporting-api/blob/main/app_to_web.md).
 - Also check out [Attribution reporting: cross app and web measurement](https://developer.android.com/design-for-safety/privacy-sandbox/attribution-app-to-web).
-
-     
