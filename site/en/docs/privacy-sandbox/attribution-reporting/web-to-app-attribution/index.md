@@ -10,7 +10,7 @@ authors:
   - maudn
 ---
 
-The Privacy Sandbox natively supports cross- web and app attribution, and the Attribution Reporting API allows measurement across mobile browsers and Android apps.
+The Privacy Sandbox natively supports web-to-app and app-to-web attribution, and the Attribution Reporting API allows measurement across mobile browsers and Android apps.
 
 ## What is web-to-app attribution?
 
@@ -22,7 +22,7 @@ Note that the API records web-to-app attributions when they occur on the same de
 
 ## How is web-to-app attribution implemented?
 
-To implement web-to-app attribution, first make sure that cross-web and app measurement is available in your web code base.
+To implement web-to-app attribution, first make sure that web-to-app and app-to-web measurement is available in your web code base.
 To do this, when you register an event, include the `Attribution-Reporting-Eligible` header
 in your request to the reporting origin.
 
