@@ -10,7 +10,7 @@ authors:
   - alexandrawhite
 ---
 
-There are a number of demos available for the Privacy Sandbox APIs. Most of them will require you to be familiar with the APIs, so if you haven't read the docs, we've listed them along with the demos here.
+There are a number of demos available for the Privacy Sandbox APIs. Most of them will require you to be familiar with the APIs, so if you haven't read the docs, check out the links we've listed along with the demos here.
 
 <p>
 
