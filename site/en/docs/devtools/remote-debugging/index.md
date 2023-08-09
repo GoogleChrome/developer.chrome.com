@@ -5,7 +5,7 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2015-04-13
-updated: 2023-03-08
+updated: 2023-08-09
 description:
   "Remote debug live content on an Android device from a Windows, Mac, or Linux computer."
 ---
@@ -138,6 +138,23 @@ Some notes on screencasts:
   animations to get a more accurate picture of your page's performance.
 - If your Android device screen locks, the content of your screencast disappears. Unlock your
   Android device screen to automatically resume the screencast.
+
+## Manual ADB method  {: #adb }
+
+In some rare usecases, an alternative method may be useful. For example, you may need connect directly to the [Chrome DevTools Protocol](https://chromedevtools.github.io/devtools-protocol/) (CDP) for your Chrome on Android.
+
+1. Your device should have Developer Settings enabled and USB debugging enabled.
+1. Connect to the device with adb. 
+   - USB connection is most straightforward, but an [adb Wi-Fi connection](https://developer.android.com/tools/adb#wireless-android11-command-line) will also work.
+2. Verify you see your device in `adb devices -l`.
+3. Run `adb forward tcp:9222 localabstract:chrome_devtools_remote`
+   - This command will forward the CDP socket on the device to your machine's local port `9222`.
+   - FWIW, the `chrome_devtools_remote` is a socket name, discoverable from `adb shell cat /proc/net/unix | grep devtools`
+4. You should be connected:
+    - http://localhost:9222/json should list your `page`  targets and http://localhost:9222/json/version exposes the `browser` target endpoint, as the [CDP docs](https://chromedevtools.github.io/devtools-protocol/) indicate.
+    - `chrome://inspect/#devices` should be populated, as well, even without the _Discover USB devices_ setting checked.
+
+For troubleshooting, the [`adb` docs](https://developer.android.com/tools/adb) and potentially these older guides: [remote-debugging-legacy](https://web.archive.org/web/20140909210640/https://developer.chrome.com/devtools/docs/remote-debugging-legacy), [remote-debugging](https://web.archive.org/web/20140913083903/https://developer.chrome.com/devtools/docs/remote-debugging),  [girish.in/…how](https://www.girish.in/how-remote-debugging-works-in-chrome/) may help.
 
 [1]: #troubleshooting
 [2]: https://developer.android.com/studio/debug/dev-options.html
