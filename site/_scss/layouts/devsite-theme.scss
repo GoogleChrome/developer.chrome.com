@@ -1,0 +1,9 @@
+/* stylelint-disable */
+
+$CHROME_PRIMARY: green;
+
+[theme=web-theme]{
+  --devsite-button-primary-background: #{$CHROME_PRIMARY};
+}
+
+/* stylelint-enable */
