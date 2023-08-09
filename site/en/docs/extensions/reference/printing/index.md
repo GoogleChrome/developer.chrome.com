@@ -104,10 +104,10 @@ This example shows how to build a printer ticket for continuous (or roll) printi
 If you need to change the default value for paper cutting, use the `vendor_ticket_item` key. (The default varies from printer to printer.) When included, this key needs to be an array with one member: an object whose `id` is `'finishings'`. The value can either be `'trim'` for printers that cut the roll at the end of printing or `'none'` for printers that require the print job to be torn off.
 
 ```json/3
-var ticket = {
+const ticket = {
   version: '1.0',
   print: {
-    vendor_ticket_item = [{id: 'finishings', value: 'trim'}],
+    vendor_ticket_item: [{id: 'finishings', value: 'trim'}],
     color: {type: 'STANDARD_MONOCHROME'},
     duplex: {type: 'NO_DUPLEX'},
     page_orientation: {type: 'PORTRAIT'},
