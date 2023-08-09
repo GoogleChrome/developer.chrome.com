@@ -98,9 +98,10 @@ chrome.printing.submitJob(submitJobRequest, (response) => {
 ```
 
 ### Roll printing {: #roll-printing }
-This example shows how to build a printer ticket for continuous (or roll) printing, which is often used with receipt printing. The `submitJobRequest` object for roll printing is the same as shown for the [`submitJob()`](#submitjob) example.
 
-If you need to change the default value for paper cutting, use the `vendor_ticket_item` key. (The default varies from printer to printer.) When included, this key needs to be an array with one member: an object whose `id` is `"finishings"`. The value can either be `"trim"` for printers that cut the roll at the end of printing or `"none"` for printers that require the print job to be torn off.
+This example shows how to build a printer ticket for continuous (or roll) printing, which is often used with receipt printing. The `submitJobRequest` object for roll printing is the same as that shown for the [`submitJob()`](#submitjob) example.
+
+If you need to change the default value for paper cutting, use the `vendor_ticket_item` key. (The default varies from printer to printer.) When included, this key needs to be an array with one member: an object whose `id` is `'finishings'`. The value can either be `'trim'` for printers that cut the roll at the end of printing or `'none'` for printers that require the print job to be torn off.
 
 ```json/3
 var ticket = {
@@ -121,7 +122,6 @@ var ticket = {
 };
 ```
 
-
 Some printers do not support the `"finishings"` option. To determine if your printer does, call [`getPrinterInfo()`](#method-getPrinterInfo) and look for a `"display_name"` of `"finishings/11"`.
 
 ```json/2
@@ -138,7 +138,7 @@ Some printers do not support the `"finishings"` option. To determine if your pri
 ]
       ```
 
-The values in `media_size` are specific to each printer. To select an appropriate size call [`getPrinterInfo()`](#method-getPrinterInfo). The returned [`GetPrinterResponse`](#type-GetPrinterInfoResponse) contains an array of supported media sizes at `"media_size"."option"`. Choose an option whose `"is_continuous_feed"` value is true. Use its height and width values for the ticket.
+The values in a ticket's `media_size` key are specific to each printer. To select an appropriate size call [`getPrinterInfo()`](#method-getPrinterInfo). The returned [`GetPrinterResponse`](#type-GetPrinterInfoResponse) contains an array of supported media sizes at `"media_size"."option"`. Choose an option whose `"is_continuous_feed"` value is true. Use its height and width values for the ticket.
 
 ```json/4
 "media_size": {
