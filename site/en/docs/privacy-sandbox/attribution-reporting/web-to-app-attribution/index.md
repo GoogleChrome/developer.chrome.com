@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'App-to-web and web-to-app measurement'
+title: 'Web-to-app and app-to-web measurement'
 subhead: >
   Learn how your Chrome web app can pass attributions to your Android app.  
 description: >
