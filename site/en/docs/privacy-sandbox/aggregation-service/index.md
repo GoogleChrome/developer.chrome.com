@@ -21,7 +21,7 @@ create a [summary report](/docs/privacy-sandbox/summary-report/).
 ## Implementation status
 
 * The [Aggregation Service proposal](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md)
-  is available for discussion.
+  is [now moving to general availability](/blog/privacy-sandbox-launch/).
 * The [Aggregation Service can be tested](#test) with the
   Attribution Reporting API and the Private Aggegration API for Protected Audience API and Shared Storage.
 
