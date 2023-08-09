@@ -26,7 +26,8 @@ For a non-technical introduction, see the [Topics overview on privacysandbox.com
 
 **August 9, 2023**
 
-We have begun the [ramp up for the Ads Measurement and Relevance APIs, and testers can expect to see traffic levels increase over the next few days.](https://groups.google.com/a/chromium.org/g/topics-api-announce/c/6G8SVRWijy4/m/MndCUVf4AgAJ).
+We have begun the [ramp up for the Ads Measurement and Relevance APIs, and testers can expect to see traffic levels increase over the next few days](https://groups.google.com/a/chromium.org/g/topics-api-announce/c/6G8SVRWijy4/m/MndCUVf4AgAJ).
+For more information, see [Shipping the Privacy Sandbox relevance and measurement APIs](/blog/privacy-sandbox-launch/).
 
 ## New taxonomy and expanding support for headers
 
