@@ -26,7 +26,7 @@ To implement web-to-app attribution, first make sure that cross-web and app meas
 To do this, when you register an event, include the `Attribution-Reporting-Eligible` header
 in your request to the reporting origin.
 
-The browser will broadcast if OS-level support is available to the reporting origin server with a dictionary structured request header.
+The browser will broadcast if OS-level support is available to the reporting origin server with a dictionary-structured request header.
 
 Then continue to register that the ad was clicked by [registering a source](/docs/privacy-sandbox-attribution-reporting/register-source/).
 
