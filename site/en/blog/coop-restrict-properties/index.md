@@ -27,9 +27,8 @@ it easier to adopt [cross-origin isolation](https://web.dev/coop-coep/) while
 allowing your site to interact with third-party popups for payments,
 authentication, or other use cases.
 
-You can experiment with `restrict-properties` starting in [Chrome
-116](https://chromiumdash.appspot.com/schedule), by participating in the [origin
-trial](#origin-trial).
+To start experimenting with `restrict-properties` participate in the [origin
+trial](#origin-trial) starting in [Chrome 116](https://chromiumdash.appspot.com/schedule).
 
 ## Why use `restrict-properties`
 
