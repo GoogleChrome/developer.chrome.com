@@ -2,9 +2,9 @@
 layout: 'layouts/blog-post.njk'
 title: "Secure popup interactions with `restrict-properties`"
 subhead: >
-  Get cross-origin isolation and XS-Leaks protection while interacting with popups.
+  Get cross-origin isolation and cross-site leaks protection while interacting with popups.
 description: >
-  Get cross-origin isolation and XS-Leaks protection while interacting with popups. 
+  Get cross-origin isolation and cross-site leaks protection while interacting with popups. 
 date: 2023-08-08
 origin_trial:
   url: /origintrials/#/view_trial/1827335548805578753
@@ -33,15 +33,18 @@ trial](#origin-trial).
 
 ## Why use `restrict-properties`
 
-`restrict-properties` has two main use cases: prevent [XS-Leaks](https://xsleaks.dev/) without breakage, and [cross-origin isolate](https://web.dev/why-coop-coep/) your site.
+`restrict-properties` has two main use cases: 
 
-### Prevent XS-Leaks without breakage
+- Preventing [cross-site leaks](https://xsleaks.dev/) without breakage.
+- Making your sire [cross-origin isolated](https://web.dev/why-coop-coep/)).
+
+### Prevent cross-site leaks without breakage
 
 By default, any website can open your application in a popup and get a
 reference to it.
 
 A malicious website can use this to their advantage to perform attacks such as
-[XS-Leaks](https://xsleaks.dev/).
+[cross-site leaks](https://xsleaks.dev/).
 To mitigate this risk, you can use the `Cross-Origin-Opener-Policy` (COOP) header.
 
 Up until now, your options for `Cross-Origin-Opener-Policy` were limited. You
@@ -53,17 +56,17 @@ that open your site in a popup.
 
 This made it impossible for websites that need to be opened in a popup and to
 interact with their opener to enforce COOP. This left key use cases like single
-sign-on and payments unprotected from XS-Leaks.
+sign-on and payments unprotected from cross-site leaks.
 
 `Cross-Origin-Opener-Policy: restrict-properties` solves this.
 
 With `restrict-properties`, properties that can be used for frame counting and
-other XS-Leak attacks are not available — but basic communication between
+other cross-site leaks attacks are not available—but basic communication between
 windows via `postMessage` and `closed` is allowed.
 
 This improves a site's security while maintaining key use cases. For example:
 * If you provide a service in a popup, setting `Cross-Origin-Opener-Policy:
-restrict-properties` will protect yourself against a range of XS-Leak attacks.
+restrict-properties` will protect yourself against a range of cross-site leaks attacks.
 You can still open all pages that you could previously open.
 * If you need to access a cross-origin popup, setting
 `Cross-Origin-Opener-Policy: restrict-properties` will similarly protect
@@ -73,7 +76,7 @@ popups that you can open today.
 to one of them having set the header. If they are same-origin, full access is
 granted.
 
-### Cross-origin isolate your site
+### Make your site cross-origin isolated
 
 #### Why we need cross-origin isolation
 
@@ -114,12 +117,12 @@ Cross-Origin-Embedder-Policy: credentialless
 ```
 
 Learn more about `credentialless` at
-[Load cross-origin resources without CORP headers using `COEP: credentialless`](/blog/coep-credentialless-origin-trial/)
+[Load cross-origin resources without CORP headers using `COEP: credentialless`](/blog/coep-credentialless-origin-trial/).
 
 ## Demo
 
-Try various header options in this demo:
-[https://cross-origin-isolation.glitch.me](https://cross-origin-isolation.glitch.me)
+Try various header options in this
+[cross-origin isolation demo](https://cross-origin-isolation.glitch.me).
 
 ## Experiment with the origin trial {: #origin-trial}
 
@@ -141,19 +144,19 @@ in Chrome. Other browsers are
 
 ## FAQ
 
-### My website needs to communicate with same-origin popups, should I use COOP: restrict-properties to enable cross-origin isolation?
+### My website needs to communicate with same-origin popups, should I use `COOP: restrict-properties` to enable cross-origin isolation?
 
 Setting `COOP: restrict-properties` on both the popup and your main page will
 not cause restrictions. Setting it either only on the popup or only on the main
 page will prevent any access to properties other than `postMessage` and `closed`
 across the opener, even if they are same-origin.
 
-### Is the set of allowed properties fixed?`
-`window.postMessage` and `window.closed` are suspected (via feedback and
-metrics) to be sufficient for the majority of workflows, but we're still
+### Is the set of allowed properties fixed?
+Based on the feedback so far, `window.postMessage` and `window.closed` are suspected 
+to be enough for the majority of workflows, but we're still
 considering opening it to other properties. If you have a use case that cannot
-be solved using only `postMessage` and `closed`, please reach out here:
-[https://groups.google.com/a/chromium.org/g/blink-dev/c/JBTWXSHE8M0/m/fP4eXvFzAAAJ](https://groups.google.com/a/chromium.org/g/blink-dev/c/JBTWXSHE8M0/m/fP4eXvFzAAAJ)
+be solved using only `postMessage` and `closed` leave your feedback
+[on the Intent to Experiment thread](https://groups.google.com/a/chromium.org/g/blink-dev/c/JBTWXSHE8M0/m/fP4eXvFzAAAJ).
 
 ## Resources
 
