@@ -5,7 +5,7 @@ subhead: >
   Get cross-origin isolation and cross-site leaks protection while interacting with popups.
 description: >
   Get cross-origin isolation and cross-site leaks protection while interacting with popups. 
-date: 2023-08-08
+date: 2023-08-09
 origin_trial:
   url: /origintrials/#/view_trial/1827335548805578753
 hero:
