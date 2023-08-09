@@ -149,7 +149,7 @@ The values in a ticket's `media_size` key are specific to each printer. To selec
     "min_height_microns": 25400,
     "width_microns": 50800
   },
-  …
+  ...
   ]
 }
 ```
