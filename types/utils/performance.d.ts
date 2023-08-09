@@ -15,20 +15,22 @@
  */
 
 declare global {
-  export interface PerformanceEntry extends PerformanceEntry {
+  export interface PerformanceEntry {
     deliveryType: string;
     activationStart: number;
     type: string;
   }
-  export interface PerformanceNavigationTiming extends PerformanceNavigationTiming {
+  export interface PerformanceNavigationTiming {
     deliveryType: string;
     activationStart: number;
   }
-  interface Navigator extends Navigator {
+  export interface Navigator {
     connection: NetworkInformation;
+    deviceMemory: number;
   }
-  export interface NetworkInformation extends NetworkInformation {
+  export interface NetworkInformation {
     saveData: boolean;
+    effectiveType: string;
   }
 }
 
