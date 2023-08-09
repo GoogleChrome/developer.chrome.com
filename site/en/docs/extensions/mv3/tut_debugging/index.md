@@ -79,7 +79,7 @@ Permission 'activetab' is unknown or URL pattern is malformed.
 <figure>
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/Kpp5AWbtXMmTj8AOpMMe.gif", alt="Error button is clicked and displays an error", width="700", height="360" %}
   <figcaption>
-    Finding an error message by clicking  the Errors button.
+    Finding an error message by clicking the Errors button.
   </figcaption>
 </figure>
 
