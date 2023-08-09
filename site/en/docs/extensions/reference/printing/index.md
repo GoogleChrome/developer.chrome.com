@@ -136,6 +136,7 @@ Some printers do not support the `"finishings"` option. To determine if your pri
   },
   ...
 ]
+```
 
 The values in a ticket's `media_size` key are specific to each printer. To select an appropriate size call [`getPrinterInfo()`](#method-getPrinterInfo). The returned [`GetPrinterResponse`](#type-GetPrinterInfoResponse) contains an array of supported media sizes at `"media_size"."option"`. Choose an option whose `"is_continuous_feed"` value is true. Use its height and width values for the ticket.
 
