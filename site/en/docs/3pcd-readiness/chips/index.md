@@ -25,7 +25,17 @@ In this case, having cookies partitioned by top-level site is an improvement as 
 ```text
 Set-Cookie: __Host-cookie=value; SameSite=None; Secure; Path=/; Partitioned;
 ```
+## Use cases 
 
+- Third-party chat embeds
+- Third-party map embeds
+- Third-party payment embeds
+- Subresource CDN load balancing
+- Headless CMS providers
+- Sandbox domains for serving untrusted user content (such as googleusercontent.com and githubusercontent.com)
+- Third-party CDNs that use cookies to serve content that's access-controlled by the authentication status on the first-party site (for example, profile pictures on social media sites hosted on third-party CDNs)
+- Front-end frameworks that rely on remote APIs using cookies on their requests
+- Embedded ads that need state scoped per publisher (for example, capturing users' ads preferences for that website)
 ## Learn more
 
 For more details about technical design, use cases, and testing, check out [CHIPS documentation](/docs/privacy-sandbox/chips/).

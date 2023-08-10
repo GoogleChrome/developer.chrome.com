@@ -29,15 +29,7 @@ First-Party Sets facilitates proper functioning of features such as:
 - Single sign-on
 - Shared shopping carts on multi-domain sites 
 - All cross-site contexts you control 
-- Third-party chat embeds
-- Third-party map embeds
-- Third-party payment embeds
-- Subresource CDN load balancing
-- Headless CMS providers
-- Sandbox domains for serving untrusted user content (such as googleusercontent.com and githubusercontent.com)
-- Third-party CDNs that use cookies to serve content that's access-controlled by the authentication status on the first-party site (for example, profile pictures on social media sites hosted on third-party CDNs)
-- Front-end frameworks that rely on remote APIs using cookies on their requests
-- Embedded ads that need state scoped per publisher (for example, capturing users' ads preferences for that website)
+
 
 <!--
 {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/NIUl4xLnUCe3yYP7TblC.png", alt="Diagram showing three sites accessing each other's cookies.", width="800", height="446" %}
