@@ -39,7 +39,7 @@ Each part can use wildcards `*`. Below is a detailed description:
 : Allows your extension to run on local files. It has no host and requires the user to manually [grant access][permissions-allow-access].
 
 Localhost URLs and IP addresses
-: To match any localhost port during development, use `http://localhost/*`. For example, it will match any paths under `http://localhost:8080` or `http://localhost:3000`. Another approach is to use `http://*:*/*` which will match any port. For IP addresses, you can use a broad host permissions `http://*/*"` or specify the address plus a wildcard in the path. For example: `http://127.0.0.1/*`. 
+: To match any localhost port during development, use `http://localhost:*/*`. For example, it will match any paths under `http://localhost:8080` or `http://localhost:3000`. Another approach is to use `http://*:*/*` which will match any port. For IP addresses, specify the address plus a wildcard in the path. For example: `http://127.0.0.1/*`. 
 
 Top Level domain match patterns
 : [Top Level domain][mdn-tld] match patterns like `http://google.*/*` are not supported. They should be listed individually. For example: `http://google.es/*` and `http://google.fr/*`.
