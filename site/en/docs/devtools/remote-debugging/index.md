@@ -146,6 +146,7 @@ In some rare cases, an alternative method of remote debugging may be useful. For
 To do this, you can use the [Android Debug Bridge (adb)](https://developer.android.com/tools/adb):
 
 1. Make sure to enable [Developer options](https://developer.android.com/studio/debug/dev-options#enable) and [USB debugging](https://developer.android.com/studio/debug/dev-options#Enable-debugging) on your Android device.
+1. Open up Chrome on your Android Device.
 1. Connect the Android device to your development machine through:
 
    - A USB cable (straightforward).
@@ -157,14 +158,8 @@ To do this, you can use the [Android Debug Bridge (adb)](https://developer.andro
    ```bash
    adb forward tcp:9222 localabstract:chrome_devtools_remote
    ```
-
-   The `chrome_devtools_remote` is a socket name. You can discover it with:
    
-   ```bash
-   adb shell cat /proc/net/unix | grep devtools
-   ```
-   
-1. Once successfully connected, check that:
+1. Once successfully connected, see that:
 
     - `http://localhost:9222/json` lists your `page` targets.
     - `http://localhost:9222/json/version` exposes the `browser` target endpoint, as the [CDP documentation](https://chromedevtools.github.io/devtools-protocol/) indicates.
