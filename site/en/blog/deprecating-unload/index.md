@@ -49,9 +49,9 @@ There are different tools to help you find appearances of the `unload` event on 
 
 ### Lighthouse
 
-[Lighthouse](/docs/lighthouse/) has a [`no-unload-listeners`` audit](https://github.com/GoogleChrome/lighthouse/pull/11085), which warns developers if any JavaScript on their pages (including that from third-party libraries) adds an unload event listener.
+[Lighthouse](/docs/lighthouse/) has a [`no-unload-listeners` audit](https://github.com/GoogleChrome/lighthouse/pull/11085), which warns developers if any JavaScript on their pages (including that from third-party libraries) adds an `unload` event listener.
 
-{% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/Pa6Ag3MTIeFuUdieJaqW.png", alt="Lighthouse audit showing unload handlers in use", width="800", height="262" %}
+{% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/0IbgnaeYF2zHOfhwdVcc.png", alt="Lighthouse audit showing unload handlers in use", width="800", height="304" %}
 
 ### Chrome DevTools
 
@@ -65,7 +65,7 @@ To test back/forward cache, follow these steps:
 
 If your page isn't eligible for back/forward caching, the Back/forward cache tab shows you a list of issues. Under **Actionable** you can see if you are using `unload`:
 
-{% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/fY1MHKVLYCr5wcRcnyw3.png", alt="Chrome DevTools Back/forward cache testing tool showing an unload handler was used", width="800", height="411" %}
+{% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/fY1MHKVLYCr5wcRcnyw3.png", alt="Chrome DevTools Back/forward cache testing tool showing an unload handler was used", width="800", height="422" %}
 
 ### Bfcache `notRestoredReasons` API
 
