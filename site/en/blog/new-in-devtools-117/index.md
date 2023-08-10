@@ -24,24 +24,21 @@ tags:
 
 ## Network panel improvements {: #network }
 
-### Enhanced local overrides of web content and network request headers {: #overrides }
+### Override web content locally {: #overrides }
 
-The [local overrides](/docs/devtools/overrides/) feature gets an enhanced UX, so you can locally mock both web content and network response headers faster and easier.
+The [local overrides](/docs/devtools/overrides/) feature now lets you locally override web content in addition to network response headers, so you can easily mock remote resources without access to them.
 
-To override web content or response headers, open the **Network** panel, right-click a request, and select **Override headers** or **Override content**.
+To override web content, open the **Network** panel, right-click a request, and select **Override content**.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/d5GbGiXuVdTCqsMbENL4.png", alt="The override options in the drop-down menu of a request.", width="800", height="700" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/BRExqF6iUJioa9YkiUeV.png", alt="The override options in the drop-down menu of a request.", width="800", height="685" %}
 
 If you have local overrides set up but disabled, DevTools enables them. If you haven't set them up yet, DevTools prompts you in the action bar at the top. Select a folder to store the overrides in and allow DevTools access to it.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/cuNvCVUAVtICozqgThQi.png", alt="Select a folder and allow access to it in the action bar at the top.", width="800", height="507" %}
 
-Depending on what you are overriding, DevTools then takes you to:
+Once the overrides are set up, DevTools then takes you to **Sources** > **Overrides** > **Editor** to let you [override web content](/docs/devtools/overrides/#make-changes).
 
-- **Sources** > **Overrides** > **Editor** to let you [override web content](/docs/devtools/overrides/#make-changes).
-- **Network** > **Headers** > **Response Headers** to let you [override headers](/docs/devtools/overrides/#override-headers).
-
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/3O7qVeRllJdq7usBfZ7I.png", alt="Overriding web content in Sources or response headers in Network.", width="800", height="481" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/jkXb9Wznaob6tutUTjeJ.png", alt="Overriding web content in Sources.", width="800", height="484" %}
 
 Note that the overridden resources are indicated with {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/s81rU6SgdmbseeBDGbPl.png", alt="Saved.", width="17", height="20" %} in the **Network** panel. Hover over the icon to see what's overridden.
 
@@ -55,13 +52,11 @@ Chromium issues: [1465785](https://crbug.com/1465785), [1470532](https://crbug.c
 
 ### Override the content of XHR and fetch requests {: #xhr-fetch }
 
-You can now override the content of XHR and fetch requests in addition to their response headers.
+You can now override the content of XHR and fetch requests in addition to their response headers. With such overrides, you can mock the API responses to debug your web page even if your backend and API aren't ready yet.
 
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/VNWoow5lA0HgGq9Zc5Od.mp4", autoplay="false", loop="true", muted="true", controls="true", width="800", height="704", class="screenshot" %}
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/TNcd8DCxoK6OmHQqJjKT.mp4", autoplay="false", loop="true", muted="true", controls="true", width="800", height="704", class="screenshot" %}
 
-DevTools currently supports content overrides for the following request types: images (for example, avif, png), fonts, fetch and XHR, scripts (css and js), and documents (html). DevTools now greys out the **Override content** option for unsupported types.
-
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/s2SjYkIiDyjzzR8vxORA.png", alt="The override content option unavailable for the media request type.", width="800", height="651" %}
+DevTools currently supports content overrides for the following request types: images (for example, avif, png), fonts, fetch and XHR, scripts (css and js), and documents (html). DevTools now grays out the **Override content** option for unsupported types.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/67b8ebb822a32dd187c3963d108645e25015c0e8 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/4465f5220d3a58242c8ed6f697a8d575448d9553 #}
