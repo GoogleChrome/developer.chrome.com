@@ -268,21 +268,26 @@ function addMobileListeners() {
 }
 
 function updateUi() {
+  if (!wrapper) {
+    throw new Error('Missing wrapper');
+  }
+
   if (
     !activeFilters.types?.length &&
     !activeFilters.permissions?.length &&
     !activeFilters.apis?.length &&
     !searchKeyword
   ) {
-    wrapper?.querySelectorAll('.sample-item').forEach(item => {
-      /** @type { HTMLDivElement } */ (item).style.display = 'block';
+    /** @type { NodeListOf<SampleElement> } */
+    (wrapper.querySelectorAll('.sample-item')).forEach(item => {
+      item.style.display = 'block';
     });
     return;
   }
-  wrapper?.querySelectorAll('.sample-item').forEach(item => {
-    const hide = !shouldSampleShown(/** @type { SampleElement } */ (item).data);
-    /** @type { HTMLDivElement } */ (item).style.display = hide
-      ? 'none'
-      : 'block';
+
+  /** @type { NodeListOf<SampleElement> } */
+  (wrapper.querySelectorAll('.sample-item')).forEach(item => {
+    const hide = !shouldSampleShown(item.data);
+    item.style.display = hide ? 'none' : 'block';
   });
 }
