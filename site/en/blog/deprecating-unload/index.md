@@ -89,8 +89,8 @@ Chrome will deprecate the `unload` event gradually. In the meantime you can use 
 
 The following options allow you to enable or disable `unload` handlers to test how your site would work without them so you can prepare for the upcoming deprecation. There are different types of policies:
 
-- [Permissions Policy](https://github.com/w3c/webappsec-permissions-policy/blob/main/permissions-policy-explainer.md): Are platform APIs for site owners to control access to features, at a site or an individual page level, via the usage of HTTP headers.
-- [Enterprise Policies](https://chromeenterprise.google/policies/): Tools for IT admins to configure Chrome for their organization or business. They can be configured via an admin panel, like the [Google Admin Console](https://support.google.com/a/answer/182076?hl=en).
+- [Permissions-Policy](https://github.com/w3c/webappsec-permissions-policy/blob/main/permissions-policy-explainer.md): This is a platform API for site owners to control access to features, at a site or an individual page level, via the usage of HTTP headers.
+- [Enterprise policies](https://chromeenterprise.google/policies/): Tools for IT admins to configure Chrome for their organization or business. They can be configured via an admin panel, like the [Google Admin Console](https://support.google.com/a/answer/182076?hl=en).
 - [Chrome flags](/docs/web-platform/chrome-flags/): This allows an individual developer to change the unload deprecation setting to test impact on various sites.
 
 ### Permission-Policy
@@ -115,30 +115,34 @@ As well as Chrome flags, these settings [can be controlled by command line optio
 The following table summarizes the different uses of the options discussed previously:
 
 <table>
-  <tr>
-    <th></td>
-    <th>Bring deprecation forward by blocking unload handlers.</th>
-    <th>Bring deprecation forward by blocking unload handlers.<br>(with exceptions)</th>
-    <th>Prevent deprecation (to secure time for a migration)</th>
-  </tr>
-  <tr>
-    <td>Permission Policy<br>(applies to sites)</td>
-    <td>Yes</td>
-    <td>Yes</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>Enterprise Policy<br>(applies to devices)</td>
-    <td>No</td>
-    <td>No</td>
-    <td>Yes</td>
+  <thead>
+    <tr>
+      <td style="min-width: 250px;"></td>
+      <th>Bring deprecation forward</th>
+      <th>Bring deprecation forward (with exceptions)</th>
+      <th>Prevent deprecation to secure time for a migration</th>
     </tr>
-  <tr>
-    <td>Chrome Flags<p>(applies to individual users)</td>
-    <td>Yes</td>
-    <td>No</td>
-    <td>Yes</td>
-  </tr>
+  <thead>
+  <tbody>
+    <tr>
+      <td>Permission-Policy<br><em>(applies to sites)</em></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Enterprise policy<br><em>(applies to devices)</em></td>
+      <td>No</td>
+      <td>No</td>
+      <td>Yes</td>
+      </tr>
+    <tr>
+      <td>Chrome flags<br><em>(applies to individual users)</em></td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
 ## Conclusion
