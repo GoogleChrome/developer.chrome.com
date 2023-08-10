@@ -22,7 +22,7 @@ Manifest V3 is the most recent version of the Chrome extension platform and is t
 
 ## Security
 
-Your extension should be safe for your users. For example, send user data securely via HTTPS or WSS. Check that your extension does not pose security threats and does not use [deceptive installation tactics][deceptive-install]. See [Stay secure][stay-secure] for a more in-depth discussion.
+Your extension should be safe for your users. For example, send user data securely via HTTPS or web services security. Check that your extension does not pose security threats and does not use [deceptive installation tactics][deceptive-install]. See [Stay secure][stay-secure] for a more information.
 
 ## Privacy
 
@@ -54,15 +54,15 @@ If your extension requires user login, we recommend that you support [Sign in wi
 
 ## Store listing
 
-The purpose of an extension's [Chrome Web Store store listing][completing-listing] is to set the user's expectations. It should explicitly communicate what the extension does. See [Listing Requirements][cws-listing] for a complete list of requirements.
+The purpose of an extension's [Chrome Web Store store listing][completing-listing] is to set the user's expectations. It should explicitly communicate what the extension does. See [Listing requirements][cws-listing] for a complete list of requirements.
 
 ### Create a compelling store listing {: #create-a-compelling-store-listing }
 
-The better your extension's store listing, the more users will discover and try your extension. [Creating a great listing page][great-listing-page] provides guidelines for designing the best store listing experience. When choosing your extension's name, writing its description, and designing its logo, keep in mind Google's [Branding Guidelines][cws-branding].
+The better your extension's store listing, the more users will discover and try your extension. [Creating a great listing page][great-listing-page] provides guidelines for designing the best store listing experience. When choosing your extension's name, writing its description, and designing its logo, keep in mind Google's [Branding guidelines][cws-branding].
 
 ### Provide great images {: #provide-great-images}
 
-All image assets (icon, tile, marquee, and screenshots) [should be provided][cws-images]. Images should not be blurry or too busy, as described in [Images of a high-quality listing][hq-listing-images].
+Include all the [required images][cws-images] (icon, tile, marquee, and screenshots). Images should not be blurry or too busy, as described in [Images of a high-quality listing][hq-listing-images].
 
 ### Choose your extension's category well {: #choose-category-well}
 
