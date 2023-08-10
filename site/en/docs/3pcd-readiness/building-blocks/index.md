@@ -23,11 +23,11 @@ Eventually 3P cookies will be removed and we will need to rely on other technolo
   <tbody>
     <tr>
       <td>First-Party Sets</td>
-      <td>Set a group of your sites as belonging to a set, which can share cookies. A shared shopping cart is a great use for First-Party Sets, as is single sign-on.</td>
+      <td>Indicate a group of your sites as belonging to a set that can be treated by the browser as first-party sites and share cookies. A shared shopping cart is a great use for First-Party Sets, as is single sign-on.</td>
     </tr>
     <tr>
       <td>CHIPS</td>
-      <td>Partition cookies by top-level site. </td>
+      <td>Partition cookies by top-level site. Map widget to show store locations, chat widget. You want the user's preferred store location to be stored, but not share that cookie with other sites using that component.</td>
     </tr>
     <tr>
       <td><a href="http://localhost:8080/docs/privacy-sandbox/fedcm/">Federated Credential Management (FedCM)</a></td>
