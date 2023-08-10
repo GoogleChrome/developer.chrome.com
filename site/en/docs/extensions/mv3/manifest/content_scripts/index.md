@@ -218,18 +218,18 @@ https://www.example.com/science
 
 ## Frames {: #frames }
 
-The `"all_frames"` key specifies if the content script should be injected into all frames matching the specified URL requirements. If set to `"false"` it will only inject into the topmost frame. It can be used along with `"match_about_blank"` to inject into an `about:blank` frame. 
+The `"all_frames"` key specifies if the content script should be injected into all frames matching the specified URL requirements. If set to `false` it will only inject into the topmost frame. It can be used along with `"match_about_blank"` to inject into an `about:blank` frame. 
 
 To inject into other frames like `data:`, `blob:`, and `filesystem:`, set the `"match_origin_as_fallback"` to `true`. For details, see [Injecting in related frames][cs-inject-frames]
 
 `"all_frames"` Boolean
-: _Optional_. Defaults to `"false"`, meaning that only the top frame is matched. If set to true, it will inject into all frames, even if the frame is not the topmost frame in the tab. Each frame is checked independently for URL requirements, it won't inject into child frames if the URL requirements are not met.
+: _Optional_. Defaults to `false`, meaning that only the top frame is matched. If set to true, it will inject into all frames, even if the frame is not the topmost frame in the tab. Each frame is checked independently for URL requirements, it won't inject into child frames if the URL requirements are not met.
 
 `"match_about_blank"`- Boolean
-: _Optional_. Defaults to `"false"`. Whether the script should inject into an `about:blank` frame where the parent URL matches one of the patterns declared in `"matches"`.
+: _Optional_. Defaults to `false`. Whether the script should inject into an `about:blank` frame where the parent URL matches one of the patterns declared in `"matches"`.
 
 `"match_origin_as_fallback"` - Boolean
-: _Optional_. Defaults to `"false"`. Whether the script should inject in frames that were created by a matching origin, but whose URL or origin may not directly match the pattern. These include frames with different schemes, such as `about:`, `data:`, `blob:`, and `filesystem:`.
+: _Optional_. Defaults to `false`. Whether the script should inject in frames that were created by a matching origin, but whose URL or origin may not directly match the pattern. These include frames with different schemes, such as `about:`, `data:`, `blob:`, and `filesystem:`.
 
 ## Run time and execution environment {: #world-timings }
 
