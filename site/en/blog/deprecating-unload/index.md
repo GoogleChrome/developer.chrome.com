@@ -153,4 +153,6 @@ Sites that currently make use of `unload` handlers should prepare for this upcom
 
 ## Acknowledgements
 
+_Thanks to Kenji Baheux, Fergal Daly, Adriana Jara, and Jeremy Wagner for help reviewing this article._
+
 _Hero image by [Anja Bauermann](https://unsplash.com/@anja_hb) on [Unsplash](https://unsplash.com/photos/D1LnfycCHks)_
