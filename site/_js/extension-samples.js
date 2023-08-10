@@ -84,7 +84,7 @@ function addListeners() {
 
       activeFilters[t.name] = t.value;
 
-      restart();
+      updateUi();
       updateTagPills();
     });
   });
@@ -94,7 +94,7 @@ function addListeners() {
 
     if (e.isComposing) return;
     searchKeyword = /** @type { HTMLInputElement } */ (e.target).value.trim();
-    restart();
+    updateUi();
   });
 
   document
@@ -102,7 +102,7 @@ function addListeners() {
     ?.addEventListener('click', () => {
       /** @type { HTMLInputElement } */ (searchInput).value = '';
       searchKeyword = '';
-      restart();
+      updateUi();
     });
 
   activeFiltersList?.addEventListener('removed-pill', e => {
@@ -112,7 +112,7 @@ function addListeners() {
 
     activeFilters[e.detail.key].splice(index, 1);
 
-    restart();
+    updateUi();
 
     selectFields.forEach(field => {
       /** @type { EnhancedSelect } */ (field).setValue(
@@ -249,7 +249,7 @@ function addMobileListeners() {
       return payload;
     }, {});
 
-    restart();
+    updateUi();
     updateTagPills();
     closeFiltersModal();
   });
@@ -267,7 +267,7 @@ function addMobileListeners() {
   }
 }
 
-function restart() {
+function updateUi() {
   if (
     !activeFilters.types?.length &&
     !activeFilters.permissions?.length &&
