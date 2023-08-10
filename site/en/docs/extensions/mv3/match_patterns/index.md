@@ -38,8 +38,8 @@ Each part can use wildcards `*`. Below is a detailed description:
 `file:///`
 : Allows your extension to run on local files. It has no host and requires the user to manually [grant access][permissions-allow-access].
 
-Port URLs
-: Yuu can use `http://localhost/*` to match any localhost ports during development. For IP addresses, you can specify the address plus a wildcard in the path. For example: `http://127.0.0.1/*`
+Localhost URLs and IP addresses
+: To match any localhost port during development, use `http://localhost/*`. For example, it will match any paths under `http://localhost:8080` or `http://localhost:3000`. Another approach is to use `http://*:*/*` which will match `http://localhost:8080` and `https://example.com:my-path`. For IP addresses, you can use a broad host permissions `http://*/*"` or specify the address plus a wildcard in the path. For example: `http://127.0.0.1/*`. 
 
 Top Level domain match patterns
 : [Top Level domain][mdn-tld] match patterns like `http://google.*/*` are not supported. They should be listed individually. For example: `http://google.es/*` and `http://google.fr/*`.
@@ -59,6 +59,11 @@ Top Level domain match patterns
          <td><code>https://*/*</code></td>
          <td>Matches any URL that uses the <code>https</code> scheme</td>
          <td>https://www.google.com/ <br>https://example.org/foo/bar.html</li></ul></td>
+      </tr>
+      <tr>
+         <td><code>http://*/*</code></td>
+         <td>Matches any URL that uses the <code>https</code> scheme</td>
+         <td>http://74.125.127.100/search <br>http://example.com/</li></ul></td>
       </tr>
       <tr>
          <td><code>https://*/foo*</code></td>
