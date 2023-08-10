@@ -9,8 +9,13 @@
 }
 
 .sample-item {
-  margin-bottom: get-size(200);
-  padding-bottom: get-size(200);
+  margin-bottom: get-size(300);
+  padding-bottom: get-size(300);
+
+  @include media-query('lg') {
+    margin-bottom: get-size(400);
+    padding-bottom: get-size(400);
+  }
 
   &__button {
     flex-grow: 0;
