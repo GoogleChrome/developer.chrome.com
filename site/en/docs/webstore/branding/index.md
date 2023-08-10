@@ -2,13 +2,14 @@
 layout: "layouts/doc-post.njk"
 title: Branding Guidelines
 date: 2018-06-11
-updated: 2021-11-17
+updated: 2023-08-11
 description: Guidelines for use of Google trademarks.
 ---
 
-This page sets forth the guidelines for use of [Google trademarks][google-trademarks] you should
-consider when naming and describing your extension. Your use of any Google trademarks is always
-subject to the [Google Permissions][google-permissions].
+This page sets forth the guidelines for use of [Google
+trademarks][google-trademarks] that you should follow when naming and describing
+your extension. Your use of any Google trademarks is always subject to the
+[Google Permissions][google-permissions].
 
 ## Using the Chrome Web Store badge {: #using-the-chrome-web-store-badge}
 
@@ -56,13 +57,13 @@ follow these rules and restrictions:
 Don't use any Google trademarks or any confusingly similar marks as the name of your extension or
 company without [written permission from Google.][brand-request-form]
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/qn7cPDkh9kYbUmlRiJWO.png", 
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/qn7cPDkh9kYbUmlRiJWO.png",
 alt="Trademark violation", height="146", width="146" %}
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/2C4YaKrZ3xqIocu0glTV.png", 
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/2C4YaKrZ3xqIocu0glTV.png",
 alt="Trademark violation", height="146", width="146" %}
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/TXSCGhobjl0bfUdt8DJK.png", 
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/TXSCGhobjl0bfUdt8DJK.png",
 alt="Trademark violation", height="146", width="146" %}
 
 ## Using Google logos {: #using-google-logos}
@@ -70,10 +71,10 @@ alt="Trademark violation", height="146", width="146" %}
 Don't use Google trademarks or a modified version of a Google trademark as the logo for your
 extension without [written permission from Google][brand-request-form].
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/l1QxerNZuBZBa6dUFOIT.png", 
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/l1QxerNZuBZBa6dUFOIT.png",
 alt="Google logo violation", height="146", width="146" %}
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/e5R2FGF0ZlqmT7Nxg6Ew.png", 
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/e5R2FGF0ZlqmT7Nxg6Ew.png",
 alt="Google logo violation", height="146", width="146" %}
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/rPqMdiBSYbH6lj1Na2E1.png",
@@ -85,19 +86,19 @@ If your product is compatible with a Google product, make reference to that Goog
 the text "for", "for use with", or "compatible with", and be sure to include the ™ symbol with the
 Google trademark. Example: "for Google Chrome™"
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/KZSasHWcKsgBbhYvXc9H.png", 
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/KZSasHWcKsgBbhYvXc9H.png",
 alt="Google compatible product logo", height="152", width="392" %}
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/l0a4lhaR5uN28BOtnnKN.png", 
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/l0a4lhaR5uN28BOtnnKN.png",
 alt="Google compatible product logo", height="150", width="590" %}
 
 If you are making reference to a Google trademark in combination with your logo, the referencing
 text should be smaller in size than your logo.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/MEkrcGvgRMGi9dnyB1qI.png", 
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/MEkrcGvgRMGi9dnyB1qI.png",
 alt="Acceptable Google trademark in logo", height="164", width="320" %}
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/xt1E8oSP6BCexzpaEknR.png", 
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/xt1E8oSP6BCexzpaEknR.png",
 alt="Unacceptable Google trademark in logo", height="164", width="250" %}
 
 ## Using screenshots {: #using-screenshots}
@@ -107,18 +108,23 @@ services. For further details, check out the [Google Permissions][google-permiss
 
 ## Giving proper attribution {: #giving-proper-attribution}
 
-Do give proper attribution to Google for any use of their [trademarks][google-trademark-list] in
-your extension title or in your description. Example:
+Give proper attribution for the use of any Google trademarks in your extension
+title or in your description. (We publish a [list of Google
+trademarks][google-trademark-list].)
+
+For example, if your item uses the extension title “Highlight local shops for
+Google Maps™”, then you should include the attribution shown below in the item
+description.  Note that the ™ symbol is not needed in the attribution since the
+text itself specifies that the mark (e.g. Google Maps) is a trademark owned by
+Google.
 
 ```text
-Highlight local shops for Google Maps™
-Google Maps™ is a trademark of Google Inc.
-Use of this trademark is subject to Google Permissions.
+Google Maps is a trademark of Google Inc. Use of this trademark is subject to Google Permissions.
 ```
 
 [border-ai]: https://storage.googleapis.com/web-dev-uploads/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/YK7JoBOelVIK05uwEAEE.ai
-[border-lg-png]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/HRs9MPufa1J1h5glNhut.png 
-[border-md-png]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/iNEddTyWiMfLSwFD6qGq.png 
+[border-lg-png]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/HRs9MPufa1J1h5glNhut.png
+[border-md-png]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/iNEddTyWiMfLSwFD6qGq.png
 [border-sm-png]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/UV4C4ybeBTsZt43U4xis.png
 [brand-request-form]: https://support.google.com/contact/brand_request_form
 [google-permissions]: https://about.google/brand-resource-center/guidance/
