@@ -8,7 +8,7 @@ date: 2023-08-04
 
 {% Partial 'extensions/mv3-support.md' %}
 
-This section provides an overview of different strategies for migrating MV2 extensions relying on remote hosted code to Manifest V3.
+This section provides an overview of different strategies for migrating MV2 extensions relying on remotely hosted code to Manifest V3.
 
 Manifest V3 removes the ability for an extension to use [remotely hosted code][1], as remotely hosted code presented a security risk by allowing unreviewed code to be executed in extensions. With this change, an extension can only execute JavaScript that is included within its package and subject to review by the Chrome Web Store.
 
