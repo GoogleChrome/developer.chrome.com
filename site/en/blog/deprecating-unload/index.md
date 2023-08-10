@@ -105,7 +105,7 @@ This [will be extended in Chrome 117](https://chromestatus.com/feature/557955630
 
 ### Enterprise policy
 
-Enterprises that have software that depends on the `unload` event to function correctly can use the [`ForcePermissionPolicyUnloadDefaultEnabled` policy](https://chromium-review.googlesource.com/c/chromium/src/+/4730081) to prevent the gradual deprecation for devices under their control. By enabling this policy, the Permissions Policy for `unload` will continue to default to enabled for all origins. A page may still set a stricter policy if it wants. Like the Permissions Policy opt-out, this is a tool to mitigate potential breaking changes, but it should not be used indefinitely.
+Enterprises that have software that depends on the `unload` event to function correctly can use the [`ForcePermissionPolicyUnloadDefaultEnabled` policy](https://chromium-review.googlesource.com/c/chromium/src/+/4730081) to prevent the gradual deprecation for devices under their control. By enabling this policy, `unload` will continue to default to enabled for all origins. A page may still set a stricter policy if it wants. Like the Permissions Policy opt-out, this is a tool to mitigate potential breaking changes, but it should not be used indefinitely.
 
 ### Chrome flags
 
