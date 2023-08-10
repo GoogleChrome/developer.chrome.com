@@ -13,7 +13,7 @@ authors:
 
 Eventually 3P cookies will be removed and we will need to rely on other technologies as building blocka for implementing the kind of features users have come to expect on the web, and which greatly improve their experience. The following table provides a concise mapping from available or proposed web platform APIs to the scenario they can be used to replace the use of cookies.
 
-<table>
+<table class="with-borders with-heading-tint">
   <thead>
     <tr>
       <th>API</th>
