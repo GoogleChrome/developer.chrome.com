@@ -43,7 +43,7 @@ Instead of `unload` it is recommended to use:
 
 For more details, see [this advice on never using the `unload` handler](https://web.dev/bfcache/#never-use-the-unload-event).
 
-## Detect usage of unload
+## Detect usage of `unload`
 
 There are different tools to help you find appearances of the `unload` event on pages. This allows sites to discover if they are using this event—either in their own code, or via libraries—and so may be affected by the upcoming deprecation.
 
