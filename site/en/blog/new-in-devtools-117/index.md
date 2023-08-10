@@ -26,7 +26,7 @@ tags:
 
 ### Override web content locally {: #overrides }
 
-The [local overrides](/docs/devtools/overrides/) feature now lets you locally override web content, in addition to [network response headers](/docs/devtools/overrides/#override-headers), so you can easily mock remote resources without access to them.
+The [local overrides](/docs/devtools/overrides/) feature now lets you locally override web content, in addition to [network response headers](/docs/devtools/overrides/#override-headers) and has a better UX, so you can easily mock remote resources without access to them.
 
 To override web content, open the **Network** panel, right-click a request, and select **Override content**.
 
@@ -47,7 +47,6 @@ Note that the overridden resources are indicated with {% Img src="image/NJdAV9Ug
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/5cc23747aef9bf9380fc09e45897f49295026801 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/3755eef346c32ef537e66a7ee13efe9a0c4ab84a #}
 
-
 Chromium issues: [1465785](https://crbug.com/1465785), [1470532](https://crbug.com/1470532), [1469359](https://crbug.com/1469359).
 
 ### Override the content of XHR and fetch requests {: #xhr-fetch }
@@ -63,7 +62,7 @@ DevTools currently supports content overrides for the following request types: i
 
 Chromium issues: [792101](https://crbug.com/792101), [1469776](https://crbug.com/1469776).
 
-### Filter out Chrome extension requests {: #hide-extension-requests }
+### Hide Chrome extension requests {: #hide-extension-requests }
 
 To help you focus on the code you author and filter out irrelevant requests sent by extensions you might have installed in Chrome, the **Network** panel gets a new filter. This filter is disabled by default.
 
@@ -77,6 +76,45 @@ Moreover, to stop seeing confusing and irrelevant error messages from extensions
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/dffee77bf9253cfb926ea96ff07c09d9649f4b14 #}
 
 Chromium issues: [1257885](https://crbug.com/1257885), [1458803](https://crbug.com/1458803).
+
+### Human-readable HTTP status codes {: #status-codes }
+
+The **Status Code** in the request's header now shows human-readable text next to the HTTP status codes, so you can figure out what happened to the request quicker.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ZaKyHIWya3xO6jFqyFlB.png", alt="The before and after displaying human-readable HTTP status codes.", width="800", height="437" %}
+
+You can also hover over the status code in the request table to see the same text.
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/39e9d691bf22c254bdecb9d735d3725d1d3c50b4 #}
+
+Chromium issue: [1153956](https://crbug.com/1153956).
+
+### Pretty-print responses with JSON subtypes {: #pretty-json-response }
+
+The **Response** tab of for a request with a `application/[subtype]+json` [MIME subtype](https://www.iana.org/assignments/media-types/media-types.xhtml#application) (for example, `ld+json`, `hal+json`, and others) now parses the response correctly and lets you prettify it.
+ 
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Na2g2Ba9ihx4P5BH9ZYW.png", alt="The before and after parsing an application/json subtype in a network response preview.", width="800", height="446" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/2d0a199d6b50cc3cb6b8ca6539859045b52fb5e1 #}
+
+Chromium issue: [406900](https://crbug.com/406900).
+
+## Performance panel improvements {: #performance }
+
+### See the changes in fetch priority for network events {: #fetch-priority }
+
+The **Performance** panel now shows two priority fields in the **Summary** of an event in the **Network** track: **Initial Priority** and (final) **Priority**, instead of just the singe **Priority**. With this additional field you can now see if the event's fetch priority changes and tweak the order of downloads. For more information, see [Optimizing resource loading with the Fetch Priority API](https://web.dev/fetch-priority/).
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/IzdOpZvv0KSQNdtGLfhL.png", alt="Before and after displaying changes in fetch priority.", width="800", height="521" %}
+
+Additionally, you can find the same information in the **Priority** column of the **Network** panel, with the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Big request rows** setting enabled.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XDOh7qRquDu5joKZ9srg.png", alt="The Priority column in the Network panel.", width="800", height="610" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/9b0b36187f7bb3b74497fcb6bfec20394cc6c0c6 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/c56ddbbaaf87a3136bcca7191e7012aba8de7931 #}
+
+Chromium issues: [1463901](https://crbug.com/1463901), [1380964](https://crbug.com/1380964).
 
 ## Miscellaneous highlights {: #misc }
 
