@@ -10,13 +10,34 @@ authors:
   - mihajlija
 ---
 
-With the upcoming deprecation of third-party cookies, and the current desire among some sites to limit their use of unrestricted third-party cookies, there is a mechanism to allow sites to use "third-party" cookies in a validated, safe manner.
+With the upcoming deprecation of third-party cookies, there is a mechanism to allow sites to use shared cookies in a validated, safe manner.
 
 [First-Party Sets (FPS)](/docs/privacy-sandbox/first-party-sets/) allows websites to specify a set of sites that can share cookies, much like third-party cookie usage, but on a restricted scale.
 
+Today, if you want to share cookies among your different sites, you need to set sameSite='none', but that means all other sites, even those not belonging to you, will get your cookies on every request.
+
+Once third-party cookies are deprecated, you won't have that option, and these "third-party" sites will not be sent the cookies.
+
+A Privacy Sandbox solution to this problem, and the use cases discussed next, is to indicate a list of related sites you own that the browser should treat as first-party sites. That's what First-Party Sets lets you accomplish.
+
+## Use cases
+
 Using First-party sets, multi-domain sites can declare relationships between domains so the browser understands the relationships and handles cookie access appropriately.
 
-This facilitates proper functioning of features such as single sign-on and shared shopping carts on multi-domain sites now, and once third-party cookies are deprecated.
+First-Party Sets facilitates proper functioning of features such as:
+
+- Single sign-on
+- Shared shopping carts on multi-domain sites 
+- All cross-site contexts you control 
+- Third-party chat embeds
+- Third-party map embeds
+- Third-party payment embeds
+- Subresource CDN load balancing
+- Headless CMS providers
+- Sandbox domains for serving untrusted user content (such as googleusercontent.com and githubusercontent.com)
+- Third-party CDNs that use cookies to serve content that's access-controlled by the authentication status on the first-party site (for example, profile pictures on social media sites hosted on third-party CDNs)
+- Front-end frameworks that rely on remote APIs using cookies on their requests
+- Embedded ads that need state scoped per publisher (for example, capturing users' ads preferences for that website)
 
 <!--
 {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/NIUl4xLnUCe3yYP7TblC.png", alt="Diagram showing three sites accessing each other's cookies.", width="800", height="446" %}
