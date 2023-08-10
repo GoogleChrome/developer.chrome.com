@@ -14,7 +14,7 @@ Manifest V3 removes the ability for an extension to use [remotely hosted code][1
 
 ## What is still possible? {: what-is-possible }
 
-There are still a few special cases in which executing remote hosted code and using <code>[eval][2]</code> is still possible:
+There are still a few special cases in which executing remotely hosted code and using <code>[eval()][2]</code> is still possible:
 
 -   [Evaluate JavaScript in a sandboxed iframe][3].
 -   [Inject remote hosted stylesheets into a web page using insertCSS][4]
