@@ -17,12 +17,14 @@ const selectFields = document.querySelectorAll('.samples-filter');
 const wrapper = document.querySelector('.samples-list');
 const searchInput = document.querySelector('#search-extension-samples');
 
-(() => {
+function init() {
   removeNoJsClass();
   initItemData();
   addListeners();
   addMobileListeners();
-})();
+}
+
+init();
 
 function removeNoJsClass() {
   filterContainer?.classList.remove('no-js');
