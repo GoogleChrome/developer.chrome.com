@@ -14,7 +14,7 @@ tags:
   - chrome-116
 ---
 
-{% ID de YouTube='JHwWUsMKYdk' %}
+{% YouTube id='JHwWUsMKYdk' %}
 
 Esto es lo que necesita saber:
 
