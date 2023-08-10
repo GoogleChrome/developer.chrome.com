@@ -32,7 +32,7 @@ Scenarios where this event was most commonly used include:
 
 However the `unload` event [is extremely unreliable](/blog/page-lifecycle-api/#the-unload-event). In most browsers the code often won't run and when it does it has a negative impact on a site's performance, by preventing the usage of [bfcache (back/forward cache)](https://web.dev/bfcache/#never-use-the-unload-event).
 
-This is a historical legacy and the `unload` handler [should not prevent use of the bfcache according to specification](https://github.com/fergald/docs/blob/master/explainers/permissions-policy-deprecate-unload.md#unload-as-specced). Chrome aims to move to conform more to spec (as Safari already does), and with the aim of being able to fully deprecate the legacy unload handler at some point in the future.
+This is a historical legacy and the `unload` handler [should not prevent use of the bfcache according to specification](https://github.com/fergald/docs/blob/master/explainers/permissions-policy-deprecate-unload.md#unload-as-specced). Chrome aims to move to conform more to spec (as Safari already does), and with the aim of being able to fully deprecate the legacy `unload` handler at some point in the future.
 
 ## Alternatives to `unload` events
 
@@ -129,21 +129,21 @@ The following table summarizes the different uses of the options discussed previ
   <tbody>
     <tr>
       <td>Permissions Policy<br><em>(applies to sites)</em></td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>Yes</td>
+      <td style="text-align: center;">Yes</td>
+      <td style="text-align: center;">Yes</td>
+      <td style="text-align: center;">Yes</td>
     </tr>
     <tr>
       <td>Enterprise policy<br><em>(applies to devices)</em></td>
-      <td>No</td>
-      <td>No</td>
-      <td>Yes</td>
+      <td style="text-align: center;">No</td>
+      <td style="text-align: center;">No</td>
+      <td style="text-align: center;">Yes</td>
       </tr>
     <tr>
       <td>Chrome flags<br><em>(applies to individual users)</em></td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>Yes</td>
+      <td style="text-align: center;">Yes</td>
+      <td style="text-align: center;">No</td>
+      <td style="text-align: center;">Yes</td>
     </tr>
   </tbody>
 </table>
