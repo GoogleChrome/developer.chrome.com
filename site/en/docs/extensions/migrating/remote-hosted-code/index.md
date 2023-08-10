@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: Replace remote hosted code
+title: Replace remotely hosted code
 subhead: 'Alternatives to remotely hosted code in Manifest V3'
 description: 'Different ways to migrate remote hosted code to MV3.'
 date: 2023-08-04
