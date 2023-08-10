@@ -116,6 +116,25 @@ Additionally, you can find the same information in the **Priority** column of th
 
 Chromium issues: [1463901](https://crbug.com/1463901), [1380964](https://crbug.com/1380964).
 
+### Find the total blocking time (TBT) in Lighthouse instead of the Performance panel {: #tbt }
+
+The **Total blocking time** status bar has been removed from the **Performance** panel to maximize space. You can still find this metric in a [Lighthouse report](/docs/lighthouse/performance/lighthouse-total-blocking-time/). For more information on the importance of this performance metric, see [Total Blocking Time (TBT)](https://web.dev/tbt/).
+
+For the same reason of maximizing space, the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Capture Settings**](/docs/devtools/performance/reference/#settings) now hides when you start the recording because they set up the recording and aren't useful once it's started.
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/1061a013745d1f638b1f989204886232fd5a835a #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/92972cb03ef67a87fa803017b118cdaa596e975e #}
+
+Chromium issues: [1455498](https://crbug.com/1455498), [1455498](https://crbug.com/1455498).
+
+## New colors {: #colors }
+
+You might have already noticed that DevTools now has a refreshed look that better aligns with Chrome. One contributing factor is the new color scheme.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/jYcGH36O81Qb7GvuJhd6.png", alt="The before and after applying new colors.", width="800", height="382" %}
+
+This version (117) brings more UX improvements to DevTools, both already mentioned and listed further, including a number of improved UI texts.
+
 ## Miscellaneous highlights {: #misc }
 
 These are some noteworthy fixes and improvements in this release:
