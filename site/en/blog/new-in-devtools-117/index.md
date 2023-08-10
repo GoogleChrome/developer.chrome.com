@@ -26,7 +26,7 @@ tags:
 
 ### Override web content locally {: #overrides }
 
-The [local overrides](/docs/devtools/overrides/) feature now lets you locally override web content in addition to network response headers, so you can easily mock remote resources without access to them.
+The [local overrides](/docs/devtools/overrides/) feature now lets you locally override web content, in addition to [network response headers](/docs/devtools/overrides/#override-headers), so you can easily mock remote resources without access to them.
 
 To override web content, open the **Network** panel, right-click a request, and select **Override content**.
 
@@ -63,7 +63,7 @@ DevTools currently supports content overrides for the following request types: i
 
 Chromium issues: [792101](https://crbug.com/792101), [1469776](https://crbug.com/1469776).
 
-### Hide Chrome extension requests {: #hide-extension-requests }
+### Filter out Chrome extension requests {: #hide-extension-requests }
 
 To help you focus on the code you author and filter out irrelevant requests sent by extensions you might have installed in Chrome, the **Network** panel gets a new filter. This filter is disabled by default.
 
@@ -71,9 +71,12 @@ To filter out all the requests sent to `chrome-extension://` URLs, check {% Img 
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/07CwNEuofVPa8jp3LFfm.png", alt="Extension URLs hidden from the requests table.", width="800", height="478" %}
 
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/45b4415d1599864a73cab4138ecd3135d8ee79ba #}
+Moreover, to stop seeing confusing and irrelevant error messages from extensions in the **Console**, for example, about failing to load [source maps](https://web.dev/source-maps/), check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Enable Ignore Listing**](/docs/devtools/settings/ignore-list/#skip-extensions) > **General exclusion rules** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Content scripts injected by extensions**.
 
-Chromium issue: [1257885](https://crbug.com/1257885).
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/45b4415d1599864a73cab4138ecd3135d8ee79ba #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/dffee77bf9253cfb926ea96ff07c09d9649f4b14 #}
+
+Chromium issues: [1257885](https://crbug.com/1257885), [1458803](https://crbug.com/1458803).
 
 ## Miscellaneous highlights {: #misc }
 
