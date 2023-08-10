@@ -128,7 +128,7 @@ The following table summarizes the different uses of the options discussed previ
   </thead>
   <tbody>
     <tr>
-      <td>Permissions Policy<br><em>(applies to sites)</em></td>
+      <td>Permissions Policy<br><em>(applies to pages/sites)</em></td>
       <td style="text-align: center;">Yes</td>
       <td style="text-align: center;">Yes</td>
       <td style="text-align: center;">Yes</td>
