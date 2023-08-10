@@ -60,7 +60,7 @@ The key point is this: any potential behavior changes must be discernible from y
 There are a few options available for modifying extension behavior at runtime:
 
 -   **Remote configuration:** An extension can download a static config file (e.g. a JSON file) and cache the configuration locally. The extension then uses this cached configuration to decide if specific features should be enabled.
--   **Moving logic to a remote server:** application logic which needs to change frequently can alternatively be moved to a remote web service that your extension can call. This provides the ability to keep code private and change the code on demand while avoiding the extra overhead of resubmitting to the Chrome Web Store. Cloud based computing services such as [Cloud Functions for Firebase][10] or [AWS Lambda][11] are good ways to do this.
+-   **Moving logic to a remote server:** Application logic which needs to change frequently can alternatively be moved to a remote web service that your extension calls. This provides the ability to keep code private and change the code on demand while avoiding the extra overhead of resubmitting to the Chrome Web Store. Cloud based computing services such as [Cloud Functions for Firebase][10] or [AWS Lambda][11] are a good way to do this.
 
 A general rule of thumb is: the easier you make it for Chrome Web Store reviewers to understand what your code is doing the more likely it is that valid use cases will not be accidentally flagged.
 
