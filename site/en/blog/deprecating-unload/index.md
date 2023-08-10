@@ -93,17 +93,17 @@ The following options allow you to enable or disable `unload` handlers to test h
 - [Enterprise Policies](https://chromeenterprise.google/policies/): Tools for IT admins to configure Chrome for their organization or business. They can be configured via an admin panel, like the [Google Admin Console](https://support.google.com/a/answer/182076?hl=en).
 - [Chrome flags](/docs/web-platform/chrome-flags/): This allows an individual developer to change the unload deprecation setting to test impact on various sites.
 
-### Permission policy
+### Permission-Policy
 
 A Permission-Policy [has been added from Chrome 115](https://chromestatus.com/feature/5760325231050752) to allow sites to opt-out of using unload handlers and immediately benefit from bfcache usage to improve site performance. See [these examples on how to set this for your site](https://github.com/fergald/docs/blob/master/explainers/permissions-policy-unload.md#examples). This allows sites to get ahead of the unload deprecation.
 
 This [will be extended in Chrome 117](https://chromestatus.com/feature/5579556305502208) to allow sites to do the reverse, and to opt-in to continuing to try to fire unload handlers, as Chrome changes the default for these not to fire in future. See [these examples on how to continue to allow unload handlers to fire for your site](https://github.com/fergald/docs/blob/master/explainers/permissions-policy-deprecate-unload.md#reenabling-unload-for-a-frame). This opt-in will not remain forever and should be used to allow time for sites to migrate away from unload handlers.
 
-### Enterprise Policy
+### Enterprise policy
 
 Enterprises that have software that depends on the `unload` event to function correctly can use the [`ForcePermissionPolicyUnloadDefaultEnabled` policy](https://chromium-review.googlesource.com/c/chromium/src/+/4730081) to prevent the gradual deprecation for devices under their control. By enabling this policy, the Permissions-Policy for unload will continue to default to enabled for all origins. A page may still set a stricter policy if it wants. Like the Permission Policy opt-out, this is a tool to mitigate potential breaking changes but should not be used indefinitely.
 
-### Chrome Flags
+### Chrome flags
 
 As well as the enterprise policy, you can disable the deprecation for individual users via the flag: `chrome://flags/#deprecate-unload`. Setting this to `disabled` will prevent Chrome from switching the default on `unload` handlers and allow them to continue to fire. They can still be overridden on a site by site basis via Permissions-Policy, but will continue to fire by default.
 
@@ -112,7 +112,7 @@ As well as Chrome flags, these settings [can be controlled by command line optio
 
 ### Options comparison
 
-The following table summarizes the different uses of the policies discussed previously:
+The following table summarizes the different uses of the options discussed previously:
 
 <table>
   <tr>
