@@ -35,7 +35,11 @@ async function run() {
     throw new Error('No artifacts found.');
   }
 
-  const latestArtifactId = artifacts[0].id;
+  const sortedArtifacts = artifacts.sort((a, b) => {
+    return new Date(b.created_at).getTime() - new Date(a.created_at).getTime();
+  });
+
+  const latestArtifactId = sortedArtifacts[0].id;
 
   const artifactResponse = await client.request(
     `GET /repos/${REPO_OWNER}/${REPO_NAME}/actions/artifacts/${latestArtifactId}/zip`
