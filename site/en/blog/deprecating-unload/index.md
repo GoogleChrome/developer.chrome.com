@@ -19,7 +19,7 @@ tags:
   - chrome-117
 ---
 
-The [`unload` event](https://developer.mozilla.org/docs/Web/API/Window/unload_event) will be gradually [deprecated](https://chromestatus.com/feature/5579556305502208) starting from Chrome 117. The deprecation will occur by gradually changing the default so that `unload` handlers stop firing on pages unless page explicitly opts in to re-enable them.
+The [`unload` event](https://developer.mozilla.org/docs/Web/API/Window/unload_event) will be gradually [deprecated](https://chromestatus.com/feature/5579556305502208) starting from Chrome 117. The deprecation will occur by gradually changing the default so that `unload` handlers stop firing on pages unless a page explicitly opts in to re-enable them.
 
 ## Background
 
@@ -31,9 +31,9 @@ Scenarios where this event was most commonly used include:
 - **Performing cleanup tasks**: Closing open resources before abandoning the page.
 - **Sending analytics**: Sending data related to user interactions at the end of the session.
 
-However the `unload` event [is extremely unreliable](/blog/page-lifecycle-api/#the-unload-event). In most browsers the code often won't run and when it does it has a negative impact on a site's performance, by preventing the usage of [bfcache (back/forward cache)](https://web.dev/bfcache/#never-use-the-unload-event).
+However the `unload` event [is extremely unreliable](/blog/page-lifecycle-api/#the-unload-event). In most browsers the code often won't run and it has a negative impact on a site's performance, by preventing the usage of [bfcache (back/forward cache)](https://web.dev/bfcache/#never-use-the-unload-event).
 
-This is a historical legacy and the `unload` handler [should not prevent use of the bfcache according to specification](https://github.com/fergald/docs/blob/master/explainers/permissions-policy-deprecate-unload.md#unload-as-specced). Chrome aims to move to conform more to spec (as Safari already does), and with the aim of being able to fully deprecate the legacy `unload` handler at some point in the future.
+This is a historical legacy and the `unload` handler [should not prevent use of the bfcache according to specification](https://github.com/fergald/docs/blob/master/explainers/permissions-policy-deprecate-unload.md#unload-as-specced). Chrome aims to move to conform more to specification (as Safari already does), and with the aim of being able to fully deprecate the legacy `unload` handler at some point in the future.
 
 ## Alternatives to `unload` events
 
