@@ -99,7 +99,7 @@ The following options allow you to enable or disable `unload` handlers to test h
 
 ### Permissions Policy
 
-A Permissions Policy [has been added from Chrome 115](https://chromestatus.com/feature/5760325231050752) to allow sites to opt-out of using unload handlers and immediately benefit from bfcache usage to improve site performance. See [these examples on how to set this for your site](https://github.com/fergald/docs/blob/master/explainers/permissions-policy-unload.md#examples). This allows sites to get ahead of the unload deprecation.
+A Permissions Policy [has been added from Chrome 115](https://chromestatus.com/feature/5760325231050752) to allow sites to opt-out of using `unload` handlers and immediately benefit from the bfcache to improve site performance. See [these examples on how to set this for your site](https://github.com/fergald/docs/blob/master/explainers/permissions-policy-unload.md#examples). This allows sites to get ahead of the `unload` deprecation.
 
 This [will be extended in Chrome 117](https://chromestatus.com/feature/5579556305502208) to allow sites to do the reverse, and to opt-in to continuing to try to fire `unload` handlers, as Chrome changes the default for these to not fire in future. See [these examples on how to continue to allow unload handlers to fire for your site](https://github.com/fergald/docs/blob/master/explainers/permissions-policy-deprecate-unload.md#reenabling-unload-for-a-frame). This opt-in will not remain forever and should be used to allow time for sites to migrate away from `unload` handlers.
 
