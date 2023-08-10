@@ -55,7 +55,7 @@ One of the design goals of Manifest V3 is to reduce security risks for users by 
 
 As a consequence, some things that were possible in Manifest V2 are no longer possible in Manifest V3. For example, launching a new UI feature in a popup without a Chrome Web Store submission is no longer possible. However, you can disable the new UI feature, but include it in your Chrome Web Store submission. Then you can dynamically enable the new UI using a remote configuration file and a feature toggle. 
 
-The key is: any potential behavior changes must be discernible from your extensions code. For example, A/B testing via remote configuration is still possible – as long as feature A and feature B are already present in the Chrome Web Store submitted code.
+The key point is this: any potential behavior changes must be discernible from your extensions code. For example, A/B testing via remote configuration is still possible as long as feature A and feature B are already present in the code submitted to the Chrome Web Store.
 
 There are a few options available for modifying extension behavior at runtime:
 
