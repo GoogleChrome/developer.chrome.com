@@ -2,6 +2,7 @@
 # Required
 layout: 'layouts/blog-post.njk'
 title: Deprecating the `unload` event
+seoTitle: Deprecating the unload event
 description: |
   The unload event will be gradually deprecated starting from Chrome 117. Learn what this means and how sites and enterprises can prepare for this
 authors:
