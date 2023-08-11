@@ -24,7 +24,7 @@ event to set a state or for one-time initialization, such as a [context menu](/d
 
 ```js
 chrome.runtime.onInstalled.addListener((details) => {
-  if(details.reason !== "install"){ return: }
+  if(details.reason !== "install") return;
   chrome.contextMenus.create({
     "id": "sampleContextMenu",
     "title": "Sample Context Menu",
