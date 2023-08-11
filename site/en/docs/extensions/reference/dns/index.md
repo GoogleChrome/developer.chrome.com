@@ -18,7 +18,7 @@ To use this API, you must declare the `"dns"` permission in the [manifest][manif
 ```
 
 {% Aside %}
-This API is only available in [Chrome Dev](https://www.google.com/chrome/dev/).
+This API is only available in [Chrome Dev](https://www.google.com/chrome/dev/). There are no foreseeable plans to move this API from the dev channel into Chrome stable.
 {% endAside %}
 
 ### Usage {: #usage }
