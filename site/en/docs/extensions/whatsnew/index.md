@@ -19,7 +19,7 @@ Check this page often to learn about changes to Chrome extensions, extensions do
 
 <p class="color-secondary-text type--caption">Posted on <time>August 8, 2023</time></p>
 
-The [`chrome.declarativeNetRequest`](/docs/extensions/reference/declarativeNetRequest/)` API blocks or modifies network requests by specifying declarative rules. This lets extensions modify network requests without intercepting them and viewing their content, thus providing more privacy to users. It's also tricky to use. With that in mind, we've rewritten the guidance in a way that we think paints a clearer picture of how to implement declarative rulesets. Read the new section at the link above.
+The [`chrome.declarativeNetRequest`](/docs/extensions/reference/declarativeNetRequest/) API blocks or modifies network requests by specifying declarative rules. This lets extensions modify network requests without intercepting them and viewing their content, thus providing more privacy to users. It's also tricky to use. With that in mind, we've rewritten the guidance in a way that we think paints a clearer picture of how to implement declarative rulesets. Read the new section at the link above.
 
 ### Using your Google Analytics account with the Chrome Web Store {: #ga-with-cws }
 
