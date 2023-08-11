@@ -141,7 +141,7 @@ Experiment with different values to see the impact of noise.
 
 {% Columns %}
 {% Column %}
-Shared Storage API is a storage that can be used cross-site, meaning you store a value at a.com, then read a value from b.com at a later point in time. With Shared Storage, you can set data freely, but you are restricted in how you get that data out of the storage. This demo illustrates how it works.
+The Shared Storage API provides storage that can be used cross-site, meaning you store a value at a.com, then read a value from b.com at a later point in time. With Shared Storage, you can set data freely, but you are restricted in how you get that data out of the storage. This demo illustrates how it works.
 
 [Demo](https://shared-storage-demo.web.app/)
 
