@@ -180,7 +180,7 @@ The **Lighthouse** panel now runs Lighthouse 10.4.0. Most notably, this version 
 - [`link-in-text-block`](https://dequeuniversity.com/rules/axe/4.7/link-in-text-block)
 - [`select-name`](https://dequeuniversity.com/rules/axe/4.7/select-name)
 
-For example: 
+For example:
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/b8rrvtXSXeGL1YxnHHLz.png", alt="Failed check on the color of links that makes them indistinguishable.", width="800", height="738" %}
 
@@ -189,6 +189,12 @@ See also the [full list of changes](https://github.com/GoogleChrome/lighthouse/r
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/c09ba04a1333f99d02cb042d99c84844587466d2 #}
 
 Chromium issue: [772558](https://crbug.com/772558).
+
+## The C/C++ WebAssembly debugging extension for DevTools is now open source {: #debug-cpp }
+
+The [C/C++ WebAssembly debugging extension for DevTools](https://goo.gle/wasm-debugging-extension) is now open source and resides in the [DevTools frontend repository](https://chromium.googlesource.com/devtools/devtools-frontend/+/refs/heads/main/extensions/cxx_debugging/). This extension enables debugging capabilities in DevTools for C++ programs compiled to WebAssembly. For more information, see [Debug C/C++ WebAssembly](/docs/devtools/wasm/).
+
+Learn how to [build, run, and test the extension](https://chromium.googlesource.com/devtools/devtools-frontend/+/refs/heads/main/extensions/cxx_debugging/README.md) and feel free to [contribute](https://chromium.googlesource.com/devtools/devtools-frontend/+/main/docs/workflows.md).
 
 ## Miscellaneous highlights {: #misc }
 
