@@ -22,6 +22,11 @@ API. For example:
 [`management.getPermissionWarningsByManifest`][2], [`management.uninstallSelf`][3], and
 [`management.getSelf`][4] do not require the management permission.
 
+## Notes
+
+The management API is intended to create new tab page replacement extensions. It is not
+intended to fire install and uninstall events for an extension.
+
 [1]: /docs/extensions/mv3/manifest
 [2]: #method-getPermissionWarningsByManifest
 [3]: #method-uninstallSelf
