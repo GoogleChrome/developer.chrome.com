@@ -160,7 +160,9 @@ Chromium issues: [1459193](https://crbug.com/1459193), [1336599](https://crbug.c
 
 ## New rendering simulation: `prefers-reduced-transparency` {: #reduced-transparency }
 
-Your website users may start enabling the new experimental [`prefers-reduced-transparency` CSS media feature](https://developer.mozilla.org/docs/Web/CSS/@media/prefers-reduced-transparency) on their devices to indicate their preference for the reduction of transparent effects. You might consider adapting your website to increase your website's accessibility. The **Rendering** drawer tab can now simulate the `prefers-reduced-transparency: reduce` setting, so you can prototype a solution and test how your website behaves in this case.
+Your website users may start enabling the new experimental [`prefers-reduced-transparency` CSS media feature](https://developer.mozilla.org/docs/Web/CSS/@media/prefers-reduced-transparency) on their devices to indicate their preference to reduce transparent effects. You might consider taking this preference into account to increase your website's accessibility. To help you, the **Rendering** drawer tab can now simulate the `prefers-reduced-transparency: reduce` setting, so you can prototype a solution and test how your website behaves in this case.
+
+To test [this feature](https://chromestatus.com/feature/5191066147356672) in Chrome, enable **Experimental Web Platform features** in `chrome://flags`.
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/Xh60t9y0KnAIdwoUnbX5.mp4", autoplay="false", loop="true", muted="true", controls="true", class="screenshot", width="800", height="533" %}
 
@@ -171,6 +173,21 @@ The DevTools team expresses gratitude to [Luke Warlow](https://chromium.googleso
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/8f2118f91bab0707949706421727ca423d53e111 #}
 
 Chromium issue: [1424879](https://crbug.com/1424879).
+
+## Lighthouse 10.4.0 {: #lighthouse }
+
+The **Lighthouse** panel now runs Lighthouse 10.4.0. Most notably, this version adds new audits for the following:
+
+- [`aria-dialog-name`](https://dequeuniversity.com/rules/axe/4.7/aria-dialog-name)
+- [`aria-text`](https://dequeuniversity.com/rules/axe/4.7/aria-text)
+- [`link-in-text-block`](https://dequeuniversity.com/rules/axe/4.7/link-in-text-block)
+- [`select-name`](https://dequeuniversity.com/rules/axe/4.7/select-name)
+
+See also the [full list of changes](https://github.com/GoogleChrome/lighthouse/releases/tag/v10.4.0). To learn the basics of using the **Lighthouse** panel in DevTools, see [Lighthouse: Optimize website speed](/docs/devtools/lighthouse/).
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/c09ba04a1333f99d02cb042d99c84844587466d2 #}
+
+Chromium issue: [772558](https://crbug.com/772558).
 
 ## Miscellaneous highlights {: #misc }
 
