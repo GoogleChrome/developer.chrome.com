@@ -4,6 +4,7 @@ title: Replace blocking web request listeners
 subhead: 'Modifying network requests in Manifest V3'
 description: 'The second of three sections describing changes needed for code that is not part of the extension service worker.'
 date: 2023-03-09
+updated: 2023-08-11
 ---
 
 {% Partial 'extensions/mv3-support.md' %}
@@ -30,7 +31,7 @@ You will need to add other permissions, depending on your use case. Those permis
 Creating declarative net request rules requires adding a `"declarative_net_request"` object to your `manifest.json`. The `"declarative_net_request"` block contains an array of `"rule_resource"` objects that point to a rule file. The rule file contains an array of objects specifying an action and the conditions in which those actions are invoked.
 
 {% Aside %}
-The examples in the rest of this section only show the contents of the rule file since the contents of the `"rule_resources"` object are the same for each.
+A full explanation of the declarativeNetRequest API longer than we can provide here. A few example use case are shown below, but are truncated for bervity. For description of how to use the declarativeNetRequest API, visit [its reference page](/docs/extensions/reference/declarativeNetRequest/).
 {% endAside %}
 
 ## Common use cases {: #common-use-cases }
