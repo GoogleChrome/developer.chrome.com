@@ -119,7 +119,7 @@ ads in a third-party iframe, and ads in a first-party context. In this demo an a
 
 {% Columns %}
 {% Column %}
-Summary reports are the result of the aggregation of aggregatable reports. When aggregatable reports are batched by a collector and processed by the aggregation service, a random amount of data is added to the resulting summary reports in order to protect user privacy. Use Noiselab to experiment with different values to see the impact of noise.
+When aggregatable reports are batched by a collector and processed by the aggregation service, random data is added to the resulting summary reports in order to protect user privacy. Use Noiselab to experiment with different values to see the impact of noise.
 
 [Noise Lab](https://noise-lab.uc.r.appspot.com/?mode=simple)
 
@@ -142,7 +142,7 @@ Summary reports are the result of the aggregation of aggregatable reports. When 
 
 {% Columns %}
 {% Column %}
-The Shared Storage API provides storage that can be used cross-site, meaning you store a value at a.com, then read a value from b.com at a later point in time. With Shared Storage, you can set data freely, but you are restricted in how you get that data out of the storage. This demo illustrates how it works.
+The Shared Storage API provides storage that can be used cross-site, meaning you store a value at a.com, then read a value from b.com. You can set data freely, but are restricted in how you get data out of storage. This demo illustrates how it works.
 
 [Demo](https://shared-storage-demo.web.app/)
 
@@ -182,7 +182,7 @@ First-Party Sets (FPS) is a way for a company to declare relationships among sit
 {% endDetailsSummary %}
 {% Columns %}
 {% Column %}
-FedCM is a privacy-preserving approach to federated identity services (such as "Sign in with...") where users can log into sites without sharing their personal information with the identity service or the site. This demo illustrates how it works.
+FedCM is a privacy-preserving approach to federated identity services where users can log into sites without sharing their personal information with the identity service or the site. This demo illustrates how it works.
 
 [Demo](https://fedcm-rp-demo.glitch.me)
 
