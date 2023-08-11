@@ -23,8 +23,10 @@ Here's what you need to know:
 * It is now easier to [debug missing stylesheets](#missing-stylesheets-debug) in DevTools
 * And there’s plenty [more](#more).
 
-I’m Adriana Jara. Let’s dive in and see what’s new for developers in Chrome 116..
+I’m Adriana Jara. Let’s dive in and see what’s new for developers in Chrome 116.
+
 ## Document Picture-in-Picture API. {: #document-picture-in-picture}
+
 The Document Picture-in-Picture API makes it possible to open an always-on-top window that can be populated with arbitrary HTML content.
 
 <figure>
@@ -82,9 +84,7 @@ To enable monitoring in the field, the `PerformanceNavigationTiming` class has b
 This returns an object containing related information on all frames present in the document:
 
 * Details such as frame ID and name, to help identify them in the HTML.
-
 * Whether they were blocked from using the bfcache.
-
 * Reasons why they were blocked from using the bfcache.
 
 This allows developers to take action to make those pages bfcache-compatible, thereby improving site performance.
