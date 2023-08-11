@@ -196,6 +196,10 @@ The [C/C++ WebAssembly debugging extension for DevTools](https://goo.gle/wasm-de
 
 Learn how to [build, run, and test the extension](https://chromium.googlesource.com/devtools/devtools-frontend/+/refs/heads/main/extensions/cxx_debugging/README.md) and feel free to [contribute](https://chromium.googlesource.com/devtools/devtools-frontend/+/main/docs/workflows.md).
 
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/32770f2f66f01f8bd7239af447dfd8b9030eda29 #}
+
+Chromium issue: [1454724](https://crbug.com/1454724).
+
 ## Miscellaneous highlights {: #misc }
 
 These are some noteworthy fixes and improvements in this release:
