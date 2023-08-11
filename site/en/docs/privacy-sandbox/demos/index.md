@@ -142,7 +142,7 @@ When aggregatable reports are batched by a collector and processed by the aggreg
 
 {% Columns %}
 {% Column %}
-The Shared Storage API provides storage that can be used cross-site, meaning you store a value at a.com, then read a value from b.com. You can set data freely, but are restricted in how you get data out of storage. This demo illustrates how it works.
+The Shared Storage API provides storage that can be used cross-site, meaning you store a value at one domain, then read the value from another domain. You can set data freely, but are restricted in how you get data out of storage. This demo illustrates how it works.
 
 [Demo](https://shared-storage-demo.web.app/)
 
