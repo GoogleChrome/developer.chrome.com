@@ -11,16 +11,16 @@ To use most [Chrome APIs][api-ref], your extension must declare its intent in th
 of the [manifest](#manifest). Extensions can request the following categories of permissions, specified using the respective manifest keys:
 
 [`"permissions"`](#permissions)
-: contain items from a list of known strings (such as `"geolocation"`). Changes may trigger a [warning](#warnings).
+: contains items from a list of known strings (such as `"geolocation"`). Changes may trigger a [warning](#warnings).
 
 [`"optional_permissions"`][api-perms]
 : are like regular `permissions`, but are granted by the user at runtime, rather than in advance.
 
 [`"content_scripts.matches"`][doc-cs-static]
-: contain one or more [match patterns][doc-match] that allows content scripts to inject into one or more hosts. Changes may trigger a [warning](#warnings).
+: contains one or more [match patterns][doc-match] that allows content scripts to inject into one or more hosts. Changes may trigger a [warning](#warnings).
 
 [`"host_permissions"`](#host-permissions)
-: contain one or more [match patterns][doc-match] that give access to one or more hosts. Changes may trigger a [warning](#warnings).
+: contains one or more [match patterns][doc-match] that give access to one or more hosts. Changes may trigger a [warning](#warnings).
 
 `"optional_host_permissions"`
 : are like regular `host_permissions`, but are granted by the user at runtime, rather than at install time.
@@ -69,7 +69,7 @@ The following is an example of the permissions part of a [manifest][doc-manifest
 
 ## Host permissions {: #host-permissions }
 
-Host permissions allow extensions to interact with the URLs [matching patterns][doc-match]. Some [Chrome APIs][api-ref] require host permissions in addition to their own API permission. Host permissions allow extensions to:
+Host permissions allow extensions to interact with the URL's [matching patterns][doc-match]. Some [Chrome APIs][api-ref] require host permissions in addition to their own API permission, which are documented on each reference page. The following are a few examples of what host permissions allow extensions to do:
 
 - Make [`fetch()`][mdn-fetch] requests from the service worker and extension pages.
 - Read and query the sensitive [tab properties][api-tabs-tab] (url, title, and favIconUrl) using the [`chrome.tabs`][api-tabs] API. 
