@@ -71,7 +71,7 @@ The following is an example of the permissions part of a [manifest][doc-manifest
 
 Host permissions allow extensions to interact with the URL's [matching patterns][doc-match]. Some [Chrome APIs][api-ref] require host permissions in addition to their own API permission, which are documented on each reference page. The following are a few examples of what host permissions allow extensions to do:
 
-- Make [`fetch()`][mdn-fetch] requests from the service worker and extension pages.
+- Make [`fetch()`][mdn-fetch] requests from the extension service worker and extension pages.
 - Read and query the sensitive [tab properties][api-tabs-tab] (url, title, and favIconUrl) using the [`chrome.tabs`][api-tabs] API. 
 - Inject a [content script programmatically][cs-prog].
 - Monitor and control the network requests with the [`chrome.webRequest`][api-webrequest] API.
