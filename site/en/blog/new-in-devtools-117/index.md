@@ -204,7 +204,16 @@ Chromium issue: [1454724](https://crbug.com/1454724).
 
 These are some noteworthy fixes and improvements in this release:
 
-
+- [CSS Nesting](/articles/css-nesting/): The **Elements** panel now shows the entire selector chain for nested children ([1172985](https://crbug.com/1172985)).
+- **Application** > **Manifest** now has a **Window Controls Overlay** section that checks if a `display_override` value is present in the Manifest and provides links to relevant documentation.
+- The **Sources** > **Page** tree now does the following, including but not limited to ([1442863](https://crbug.com/1442863)):
+  - Greys out folders if all their content is ignore-listed.
+  - Colors folders in orange if all their content is from a source map.
+- [**Search**](/docs/devtools/search/) now centers on matching results making it possible to find strings in minified code ([1468875](https://crbug.com/1468875)).
+- **Sources** > **Editor** restored the <kbd>Ctrl</kbd> + <kbd>Arrow</kbd> behavior (Win) and <kbd>Opt</kbd> + <kbd>Arrow</kbd> (MacOs) ([1468208](https://crbug.com/1468208)).
+- **Animations** > **Pause all** toggle now keeps its state across page loads ([1446046](https://crbug.com/1446046)).
+- **Application** > **Storage** > **Cache storage** moved to the **Application** > **Storage** > **Cache section** ([1462622](https://crbug.com/1462622)).
+- Some UI texts and tooltips are improved: [Hardware concurrency tooltip](https://crbug.com/1456479), [Network filter texts and a main menu option](https://chromium.googlesource.com/devtools/devtools-frontend/+/25f464282874c208ca533c56f9396eaa17891a2c), capitalization in the [Application tree view](https://crbug.com/1464866), [Network > Headers texts](https://crbug.com/1463173), [Sources > Overrides and Filesystem texts](https://crbug.com/1469415).
 
 <!-- $contentEnd -->
 
