@@ -124,11 +124,13 @@ This [will be extended in Chrome 117](https://chromestatus.com/feature/557955630
 
 Enterprises that have software that depends on the `unload` event to function correctly can use the [`ForcePermissionPolicyUnloadDefaultEnabled` policy](https://chromium-review.googlesource.com/c/chromium/src/+/4730081) to prevent the gradual deprecation for devices under their control. By enabling this policy, `unload` will continue to default to enabled for all origins. A page may still set a stricter policy if it wants. Like the Permissions Policy opt-out, this is a tool to mitigate potential breaking changes, but it should not be used indefinitely.
 
-### Chrome flags and command line options
+### Chrome flags and command line switches
 
-As well as the enterprise policy, you can disable the deprecation for individual users via the flag: `chrome://flags/#deprecate-unload`. Setting this to `disabled` will prevent Chrome from switching the default on `unload` handlers and allow them to continue to fire. They can still be overridden on a site-by-site basis via Permissions Policy, but will continue to fire by default.
+As well as the enterprise policy, you can disable the deprecation for individual users via the Chrome flags and command lines swtiches:
 
-As well as Chrome flags, these settings [can be controlled by command line options](https://github.com/fergald/docs/blob/master/explainers/permissions-policy-deprecate-unload.md#testing-with-chrome).
+Setting `chrome://flags/#deprecate-unload` this to `enabled` will bring forward the deprecation default and prevent `unload` handlers from firing. They can still be overridden on a site-by-site basis via Permissions Policy, but will continue to fire by default.
+
+These settings can be also be controlled by [command line switches](https://github.com/fergald/docs/blob/master/explainers/permissions-policy-deprecate-unload.md#testing-with-chrome).
 
 ### Options comparison
 
@@ -155,9 +157,15 @@ The following table summarizes the different uses of the options discussed previ
       <td style="text-align: center;">No</td>
       <td style="text-align: center;">No</td>
       <td style="text-align: center;">Yes</td>
-      </tr>
+    </tr>
     <tr>
-      <td>Chrome flags/Command line options<br><em>(applies to individual users)</em></td>
+      <td>Chrome flags<br><em>(applies to individual users)</em></td>
+      <td style="text-align: center;">Yes</td>
+      <td style="text-align: center;">No</td>
+      <td style="text-align: center;">No</td>
+    </tr>
+    <tr>
+      <td>Chrome command line switches<br><em>(applies to individual users)</em></td>
       <td style="text-align: center;">Yes</td>
       <td style="text-align: center;">No</td>
       <td style="text-align: center;">Yes</td>
