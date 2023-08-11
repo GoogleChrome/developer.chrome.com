@@ -43,7 +43,7 @@ Deprecating `unload` is a key step in a much bigger recognition of the web we li
 
 Mobile operating systems frequently freeze or unload web pages to conserve memory and desktop browsers are doing this more and more now too for the same reasons. Even without operating system interventions, users themselves frequently tab switch and kill old tabs without formally "leaving pages".
 
-Removing the `unload` event as obselete is a recognition that we as web developers need to ensure our paradigm matches that of the real world and not depend on an outdated concepts that no longer hold true—if they ever did.
+Removing the `unload` event as obselete is a recognition that we as web developers need to ensure our paradigm matches that of the real world and not depend on outdated concepts that no longer hold true—if they ever did.
 
 ## Alternatives to `unload` events
 
