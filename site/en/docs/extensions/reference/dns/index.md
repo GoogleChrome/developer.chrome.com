@@ -23,7 +23,7 @@ This API is only available in [Chrome Dev](https://www.google.com/chrome/dev/). 
 
 ### Usage {: #usage }
 
-The following code uses the [`resolve()`](#method-resolve) method to retrieve the IP address of `example.com`.
+The following code calls [`resolve()`](#method-resolve) to retrieve the IP address of `example.com`.
 
 {% Label %}service-worker.js:{% endLabel %}
 
@@ -37,7 +37,7 @@ resolveDNS();
 ```
 
 {% Aside 'important' %}
-Do not include the scheme or trailing slash in the hostname. For example, https://example.com/ is invalid.
+Do not include the scheme or trailing slash in the hostname. For example, `https://example.com/` is invalid.
 {% endAside %}
 
 [manifest]: /docs/extensions/mv3/manifest/
