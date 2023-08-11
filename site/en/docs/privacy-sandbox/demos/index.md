@@ -118,7 +118,7 @@ In this demo an advertiser uses an ad tech provider to run their ads on a publis
 
 {% Columns %}
 {% Column %}
-In this demo an advertiser uses an ad tech provider to run their ads on a publisher site.
+Experiment with different values to see the impact of noise.
 
 [Noise Lab](https://noise-lab.uc.r.appspot.com/?mode=simple)
 
