@@ -1,0 +1,34 @@
+;;
+;; Domain:     emiratesnbd.sa.com.
+;; Exported:   2023-08-05 23:51:41
+;;
+;; This file is intended for use for informational and archival
+;; purposes ONLY and MUST be edited before use on a production
+;; DNS server.  In particular, you must:
+;;   -- update the SOA record with the correct authoritative name server
+;;   -- update the SOA record with the contact e-mail address information
+;;   -- update the NS record(s) with the authoritative name servers for this domain.
+;;
+;; For further information, please consult the BIND documentation
+;; located on the following website:
+;;
+;; http://www.isc.org/
+;;
+;; And RFC 1035:
+;;
+;; http://www.ietf.org/rfc/rfc1035.txt
+;;
+;; Please note that we do NOT offer technical support for any use
+;; of this zone data, the BIND name server, or any other third-party
+;; DNS software.
+;;
+;; Use at your own risk.
+;; SOA Record
+emiratesnbd.sa.com	3600	IN	SOA	jasmine.ns.cloudflare.com dns.cloudflare.com 2044294610 10000 2400 604800 3600
+
+;; NS Records
+emiratesnbd.sa.com.	86400	IN	NS	jasmine.ns.cloudflare.com.
+emiratesnbd.sa.com.	86400	IN	NS	jobs.ns.cloudflare.com.
+
+;; TXT Records
+emiratesnbd.sa.com.	1	IN	TXT	"v=spf1 -all"
