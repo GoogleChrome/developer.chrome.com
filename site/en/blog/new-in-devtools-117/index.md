@@ -116,16 +116,13 @@ Additionally, you can find the same information in the **Priority** column of th
 
 Chromium issues: [1463901](https://crbug.com/1463901), [1380964](https://crbug.com/1380964).
 
-### Find the total blocking time (TBT) in Lighthouse {: #tbt }
+### Performance settings automatically hide when you start the recording {: #tbt }
 
-The **Total blocking time** status bar has been removed from the **Performance** panel to maximize space. You can still find this metric in a [Lighthouse report](/docs/lighthouse/performance/lighthouse-total-blocking-time/). For more information on the importance of this performance metric, see [Total Blocking Time (TBT)](https://web.dev/tbt/).
+To maximize space, the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Capture Settings**](/docs/devtools/performance/reference/#settings) pane now hides when you start the recording because these settings configure the recording and aren't useful once it's started.
 
-For the same reason of maximizing space, {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Capture Settings**](/docs/devtools/performance/reference/#settings) now hides when you start the recording because these settings configure the recording and aren't useful once it's started.
-
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/1061a013745d1f638b1f989204886232fd5a835a #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/92972cb03ef67a87fa803017b118cdaa596e975e #}
 
-Chromium issues: [1455498](https://crbug.com/1455498), [1455498](https://crbug.com/1455498).
+Chromium issue: [1455498](https://crbug.com/1455498).
 
 ## New colors {: #colors }
 
