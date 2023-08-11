@@ -173,12 +173,16 @@ Chromium issue: [1424879](https://crbug.com/1424879).
 
 ## Lighthouse 10.4.0 {: #lighthouse }
 
-The **Lighthouse** panel now runs Lighthouse 10.4.0. Most notably, this version adds new audits for the following:
+The **Lighthouse** panel now runs Lighthouse 10.4.0. Most notably, this version adds new accessibility audits for the following:
 
 - [`aria-dialog-name`](https://dequeuniversity.com/rules/axe/4.7/aria-dialog-name)
 - [`aria-text`](https://dequeuniversity.com/rules/axe/4.7/aria-text)
 - [`link-in-text-block`](https://dequeuniversity.com/rules/axe/4.7/link-in-text-block)
 - [`select-name`](https://dequeuniversity.com/rules/axe/4.7/select-name)
+
+For example: 
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/b8rrvtXSXeGL1YxnHHLz.png", alt="Failed check on the color of links that makes them indistinguishable.", width="800", height="738" %}
 
 See also the [full list of changes](https://github.com/GoogleChrome/lighthouse/releases/tag/v10.4.0). To learn the basics of using the **Lighthouse** panel in DevTools, see [Lighthouse: Optimize website speed](/docs/devtools/lighthouse/).
 
