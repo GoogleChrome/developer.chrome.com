@@ -51,7 +51,7 @@ and then initiates an on-device auction to select an ad for display on a publish
 
 {% Columns %}
 {% Column %}
-This demo shows a simple example of the Topics API in action.
+The Topics API allows a browser to share information about a user's interests with third parties without the use of third-party cookies. It enables interest-based advertising (IBA) without tracking the sites a user visits. This demo shows an example of the API in action.
 
 [Demo](https://topics-demo.glitch.me/)
 
@@ -97,7 +97,8 @@ This colab makes it easy to load the TensorFlow Lite model used by Chrome to inf
 
 {% Columns %}
 {% Column %}
-In this demo an advertiser uses an ad tech provider to run their ads on a publisher site.
+The Attribution Reporting API enables advertisers and ad tech providers to measure conversions for ad clicks and views, 
+ads in a third-party iframe, and ads in a first-party context. In this demo an advertiser uses an ad tech provider to run their ads on a publisher site.
 
 [Demo](https://arapi-home.web.app/)
 
@@ -118,7 +119,7 @@ In this demo an advertiser uses an ad tech provider to run their ads on a publis
 
 {% Columns %}
 {% Column %}
-Experiment with different values to see the impact of noise.
+Summary reports are the result of the aggregation of aggregatable reports. When aggregatable reports are batched by a collector and processed by the aggregation service, a random amount of data is added to the resulting summary reports in order to protect user privacy. Use Noiselab to experiment with different values to see the impact of noise.
 
 [Noise Lab](https://noise-lab.uc.r.appspot.com/?mode=simple)
 
