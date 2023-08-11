@@ -89,7 +89,7 @@ You can also hover over the status code in the request table to see the same tex
 
 Chromium issue: [1153956](https://crbug.com/1153956).
 
-### Pretty-print responses with JSON subtypes {: #pretty-json-response }
+### Pretty-print responses for JSON subtypes {: #pretty-json-response }
 
 The **Response** tab of for a request with a `application/[subtype]+json` [MIME subtype](https://www.iana.org/assignments/media-types/media-types.xhtml#application) (for example, `ld+json`, `hal+json`, and others) now parses the response correctly and lets you prettify it.
  
@@ -116,11 +116,11 @@ Additionally, you can find the same information in the **Priority** column of th
 
 Chromium issues: [1463901](https://crbug.com/1463901), [1380964](https://crbug.com/1380964).
 
-### Find the total blocking time (TBT) in Lighthouse instead of the Performance panel {: #tbt }
+### Find the total blocking time (TBT) in Lighthouse {: #tbt }
 
 The **Total blocking time** status bar has been removed from the **Performance** panel to maximize space. You can still find this metric in a [Lighthouse report](/docs/lighthouse/performance/lighthouse-total-blocking-time/). For more information on the importance of this performance metric, see [Total Blocking Time (TBT)](https://web.dev/tbt/).
 
-For the same reason of maximizing space, the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Capture Settings**](/docs/devtools/performance/reference/#settings) now hides when you start the recording because they set up the recording and aren't useful once it's started.
+For the same reason of maximizing space, {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Capture Settings**](/docs/devtools/performance/reference/#settings) now hides when you start the recording because these settings configure the recording and aren't useful once it's started.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/1061a013745d1f638b1f989204886232fd5a835a #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/92972cb03ef67a87fa803017b118cdaa596e975e #}
@@ -134,6 +134,32 @@ You might have already noticed that DevTools now has a refreshed look that bette
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/jYcGH36O81Qb7GvuJhd6.png", alt="The before and after applying new colors.", width="800", height="382" %}
 
 This version (117) brings more UX improvements to DevTools, both already mentioned and listed further, including a number of improved UI texts.
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/bde284efe828595e6ecc42b55dd582b8ba2ab0ed #}
+
+Chromium issue: [1456677](https://crbug.com/1456677).
+
+## Sources settings enabled by default: Code folding and automatic file reveal  {: #sources }
+
+The {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Preferences** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Code folding**](http://localhost:8080/docs/devtools/settings/preferences/#code-folding) option is now enabled by default. This option lets you fold code block.
+
+To fold a code block, hover over the line number next to the start of the block and click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/996xap2zAEHX564M0MBF.svg", alt="Collapse.", width="24", height="24" %} collapse icon. Click `{...}` to expand the block again.
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/5j5X3jaQVphrPSfvazk1.mp4", autoplay="false", loop="true", muted="true", controls="true", class="screenshot", width="800", height="498" %}
+
+Moreover, the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Preferences** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Automatically reveal files in the sidebar**](http://localhost:8080/docs/devtools/settings/preferences/#reveal-files) is now also enabled by default.
+
+This setting makes the file tree in the **Sources** > **Page** select the current file open in the **Editor** when you switch tabs.
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/Bgimcr4eWCyOjxePsXo7.mp4", autoplay="false", loop="true", muted="true", controls="true", class="screenshot", width="800", height="498" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/8a61b70fdf40d352a06520d1704b0ee08dc5cea5 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/0fb0a115b9fc00a6af1be58db426674dd7411c84 #}
+
+Chromium issue: [1459193](https://crbug.com/1459193), [1336599](https://crbug.com/1336599).
+
+
+
 
 ## Miscellaneous highlights {: #misc }
 
