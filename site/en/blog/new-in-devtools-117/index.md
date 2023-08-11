@@ -116,7 +116,7 @@ Additionally, you can find the same information in the **Priority** column of th
 
 Chromium issues: [1463901](https://crbug.com/1463901), [1380964](https://crbug.com/1380964).
 
-### Performance settings automatically hide when you start the recording {: #tbt }
+### Performance settings automatically hide when you start the recording {: #perf-settings }
 
 To maximize space, the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Capture Settings**](/docs/devtools/performance/reference/#settings) pane now hides when you start the recording because these settings configure the recording and aren't useful once it's started.
 
