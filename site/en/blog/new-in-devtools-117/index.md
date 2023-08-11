@@ -156,10 +156,21 @@ This setting makes the file tree in the **Sources** > **Page** select the curren
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/8a61b70fdf40d352a06520d1704b0ee08dc5cea5 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/0fb0a115b9fc00a6af1be58db426674dd7411c84 #}
 
-Chromium issue: [1459193](https://crbug.com/1459193), [1336599](https://crbug.com/1336599).
+Chromium issues: [1459193](https://crbug.com/1459193), [1336599](https://crbug.com/1336599).
 
+## New rendering simulation: `prefers-reduced-transparency` {: #reduced-transparency }
 
+Your website users may start enabling the new experimental [`prefers-reduced-transparency` CSS media feature](https://developer.mozilla.org/docs/Web/CSS/@media/prefers-reduced-transparency) on their devices to indicate their preference for the reduction of transparent effects. You might consider adapting your website to increase your website's accessibility. The **Rendering** drawer tab can now simulate the `prefers-reduced-transparency: reduce` setting, so you can prototype a solution and test how your website behaves in this case.
 
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/Xh60t9y0KnAIdwoUnbX5.mp4", autoplay="false", loop="true", muted="true", controls="true", class="screenshot", width="800", height="533" %}
+
+{% Aside %}
+The DevTools team expresses gratitude to [Luke Warlow](https://chromium.googlesource.com/devtools/devtools-frontend/+/8f2118f91bab0707949706421727ca423d53e111) for landing this feature.
+{% endAside %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/8f2118f91bab0707949706421727ca423d53e111 #}
+
+Chromium issue: [1424879](https://crbug.com/1424879).
 
 ## Miscellaneous highlights {: #misc }
 
