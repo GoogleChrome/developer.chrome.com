@@ -10,6 +10,7 @@ module.exports = (() => {
     __dirname,
     '../../external/data/extension-samples.json'
   );
+  /** @type {extensionSample[]} */
   const extensionSamples = JSON.parse(fs.readFileSync(dataFile, 'utf-8'));
 
   const sampleTypes = {
@@ -28,11 +29,17 @@ module.exports = (() => {
     });
   });
 
+  const samplesKeyedByName = {};
+  extensionSamples.forEach(sample => {
+    samplesKeyedByName[sample.name] = sample;
+  });
+
   return {
     sampleTypes,
     samples: extensionSamples.sort((a, b) =>
       a.title.toLowerCase().localeCompare(b.title.toLowerCase())
     ),
+    samplesKeyedByName,
     availableAPIs: Array.from(availableAPIs.keys()).sort((a, b) =>
       a.toLowerCase().localeCompare(b.toLowerCase())
     ),

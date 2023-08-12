@@ -138,6 +138,7 @@ function initItemData() {
   if (!dataWrapper) {
     throw new Error('Missing data wrapper');
   }
+  /** @type {Record<string,extensionSample>} */
   const data = JSON.parse(dataWrapper.innerText);
   const items = document.querySelectorAll('.sample-item');
   items.forEach(item => {
@@ -145,7 +146,7 @@ function initItemData() {
     if (!name) {
       throw new Error('Missing sample name');
     }
-    const sample = data.find(i => i.name === name);
+    const sample = data[name];
     if (!sample) {
       throw new Error(`Missing sample data for ${name}`);
     }
