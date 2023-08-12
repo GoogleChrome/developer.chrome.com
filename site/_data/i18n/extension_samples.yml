@@ -37,5 +37,5 @@ and_more:
 no_permissions_required:
   en: No permissions required.
 
-no_apis_found:
-  en: No APIs found.
+no_apis_used:
+  en: No APIs used.
