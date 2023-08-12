@@ -27,6 +27,28 @@
 .extension-samples-container {
   max-width: calc(1400px);
 
+  @media screen and (min-width: 860px) {
+    .hero-card {
+      padding-bottom: 1.75rem;
+      padding-top: 1.75rem;
+    }
+  }
+
+  .hero-card__inner {
+    display: block;
+  }
+
+  @media (min-width: 1231px) {
+    .hero-card__inner {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+    }
+  }
+
+  .hero-card h1 {
+    font-size: 2em;
+  }
+
   .search-box {
     align-items: center;
     gap: 1rem;

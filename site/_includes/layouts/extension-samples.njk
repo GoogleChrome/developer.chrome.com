@@ -2,30 +2,6 @@
 
 {% block css %}
   {% InlineCss '/css/extension-samples.css' %}
-  {# unique styles, needed only for extension samples hero card. #}
-  <style>
-    @media screen and (min-width: 860px) {
-      .hero-card {
-        padding-top: 1.75rem;
-        padding-bottom: 1.75rem;
-      }
-    }
-
-    .hero-card__inner {
-      display: block;
-    }
-
-    @media (min-width: 1231px) {
-      .hero-card__inner {
-        display: grid;
-        grid-template-columns: 2fr 3fr;
-      }
-    }
-
-    .hero-card h1 {
-      font-size: 2em;
-    }
-  </style>
 {% endblock %}
 
 {% block title_bar %}
