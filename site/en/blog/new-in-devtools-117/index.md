@@ -194,11 +194,9 @@ Chromium issue: [772558](https://crbug.com/772558).
 
 ### Debug preloading in the Application panel {: #preloading }
 
-The Chrome team is [bringing back full prerendering](/blog/prerender-pages/) of future pages that a user is likely to navigate to. To let you debug this, DevTools adds the **Preloading** section to the **Application** panel.
+The Chrome team is [bringing back full prerendering](/blog/prerender-pages/) of future pages that a user is likely to navigate to. To let you debug this, DevTools adds the **Preloading** section to the **Application** panel. The new prefetching and prerendering (collectively known as preloading) uses Speculation Rules is unrelated to the [legacy link-based resource hint versions](/blog/prerender-pages/#a-brief-history-of-prerender).
 
 {% Aside 'important' %}
-The new prefetching and prerendering (collectively known as preloading) are unrelated to the [legacy ones](/blog/prerender-pages/#a-brief-history-of-prerender).
-
 To enable this feature, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Experiments** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable Preloading Status Panel in Application panel**.
 {% endAside %}
 
