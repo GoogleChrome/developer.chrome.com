@@ -55,7 +55,7 @@ Use Magento's [Varnish integration](https://devdocs.magento.com/guides/v2.3/conf
 
 ### React
 
-If you are server-side rendering any React components, consider using [`renderToNodeStream()`](https://reactjs.org/docs/react-dom-server.html#rendertonodestream) or `renderToStaticNodeStream()` to allow the client to receive and hydrate different parts of the markup instead of all at once.
+If you are server-side rendering any React components, consider using [`renderToPipeableStream()`](https://react.dev/reference/react-dom/server/renderToPipeableStream) or [`renderToStaticNodeStream()`](https://react.dev/reference/react-dom/server/renderToStaticNodeStream) to allow the client to receive and hydrate different parts of the markup instead of all at once.
 
 ### WordPress
 
