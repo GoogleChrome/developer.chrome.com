@@ -111,3 +111,9 @@ The 1P vs. 3P classification of a cookie is not about the cookie itself; it is a
 {% Aside 'important' %}
 The 1P vs. 3P classification of cookies is about how the information stored in them is accessed across site boundaries.
 {% endAside %}
+
+## Cookies in iframes
+
+{% Aside 'warning' %}
+Today, if you embed an iframe from another origin into your website, and that iframe sets a cookie, that cookie is stored along with your own cookies in the user's browser--basically in the same cookie jar. In this case that cookie is a third-party cookie. This will not work once third-party cookies are deprecated; that cookie will not be set as it will not be from the same origin.
+{% endAside %}
