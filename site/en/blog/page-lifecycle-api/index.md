@@ -611,7 +611,7 @@ const opts = {capture: true};
 // These lifecycle events can all use the same listener to observe state
 // changes (they call the `getState()` function to determine the next state).
 ['pageshow', 'focus', 'blur', 'visibilitychange', 'resume'].forEach((type) => {
-  window.addEventListener(type, () => logStateChange(getState(), opts);
+  window.addEventListener(type, () => logStateChange(getState(), opts));
 });
 
 // The next two listeners, on the other hand, can determine the next
