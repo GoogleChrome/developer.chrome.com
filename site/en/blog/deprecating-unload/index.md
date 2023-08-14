@@ -9,7 +9,7 @@ authors:
   - demianrenzulli
   - tunetheweb
 date: 2023-08-10
-updated: 2023-08-11
+updated: 2023-08-14
 hero: image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/Mxh3dDENwFYXpkwD1z9X.jpg
 alt: Shipping container being unloaded by a large crane
 tags:
@@ -31,11 +31,13 @@ Scenarios where this event was most commonly used include:
 - **Performing cleanup tasks**: Closing open resources before abandoning the page.
 - **Sending analytics**: Sending data related to user interactions at the end of the session.
 
-However the `unload` event [is extremely unreliable](/articles/page-lifecycle-api/#the-unload-event). In most browsers the code often won't run and it has a negative impact on a site's performance, by preventing the usage of [bfcache (back/forward cache)](https://web.dev/bfcache/#never-use-the-unload-event).
+However the `unload` event [is extremely unreliable](/articles/page-lifecycle-api/#the-unload-event).
 
-This is a historical legacy and the `unload` handler [should not prevent use of the bfcache according to specification](https://github.com/fergald/docs/blob/master/explainers/permissions-policy-deprecate-unload.md#unload-as-specced). Chrome aims to move to conform more to specification (as Safari already does).
+On desktop Chrome and Firefox, `unload` is reasonably reliable but it has a negative impact on a site's performance by preventing the usage of [bfcache (back/forward cache)](https://web.dev/bfcache/#never-use-the-unload-event).
 
-However, firing the unload event only when something else blocks the page from entering bfcache makes `unload` even more unpredictable and unreliable. Chrome is therefore aiming to fully remove the event, rather than just remove it when bfcache is used.
+On mobile browsers `unload` often doesn't run as tabs are frequently backgrounded and then killed. For this reason browsers choose to prioritize the bfcache on mobile over `unload`, making them even more unreliable. Safari also uses this behaviour on desktop.
+
+The Chrome team believe using the mobile model of prioritizing bfcache over `unload` on desktop [would be disruptive](https://github.com/fergald/docs/blob/master/explainers/permissions-policy-deprecate-unload.md#unload-as-specced-is-a-footgun) by making it more unreliable there too, when previously this has been reasonably reliable in Chrome (and Firefox). Instead, Chrome's aim is to remove the `unload` event completely. Until then it will remain reliable on desktop for those who have explicitly opted-out of the deprecation.
 
 ## Why deprecate the `unload` event?
 
