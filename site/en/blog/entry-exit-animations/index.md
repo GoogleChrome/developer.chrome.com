@@ -288,7 +288,7 @@ dialog {
   %}
 </figure>
 
-In this example, the entry and exit effects are different. Enter by animating up from the bottom of the viewport, exit the effect to the top of the viewport. It is also written with nested CSS for more visual encapsulation.
+In the next example, the entry and exit effects are different. Enter by animating up from the bottom of the viewport, exit the effect to the top of the viewport. It is also written with nested CSS for more visual encapsulation.
 
 When animating a popover, use the `:popover-open` pseudo class instead of the `open` attribute used previously.
 
