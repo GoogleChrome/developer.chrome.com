@@ -232,7 +232,7 @@ To enable this feature, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gz
 
 In the bottom right corner of the **Protocol monitor** drawer tab, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/H4duJWlMkdd1903sC0Bw.svg", alt="Left panel open.", width="20", height="20" %} **Show CDP command editor**, select a target, start typing a command, select one of the suggested, if required, specify parameter values, and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/M6ltzywbLiI5cMJ1jrEg.svg", alt="Send.", width="24", height="24" %} **Send command** (<kbd>Ctrl/Cmd</kbd> + <kbd>Enter</kbd>).
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hhm7n8z8NJgffzkCvu1J.png", alt="Specifying and sending a CDP command.", width="800", height="298" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lQv810MXafmVjuj70RP6.png", alt="Specifying and sending a CDP command.", width="800", height="298" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/ecbc68611ae1d9db1292b6e7afeda6c481975d8e #}
 
