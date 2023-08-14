@@ -190,6 +190,36 @@ See also the [full list of changes](https://github.com/GoogleChrome/lighthouse/r
 
 Chromium issue: [772558](https://crbug.com/772558).
 
+## New experimental features {: #experimental }
+
+### Debug preloading {: #preloading }
+
+The Chrome team is [bringing back full prerendering](/blog/prerender-pages/) of future pages that a user is likely to navigate to. To let you debug this, DevTools adds the **Preloading** section to the **Application** panel.
+
+{% Aside 'important' %}
+The new prefetching and prerendering (collectively known as preloading) are unrelated to the [legacy ones](/blog/prerender-pages/#a-brief-history-of-prerender).
+
+To enable this feature, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Experiments** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable Preloading Status Panel in Application panel**.
+{% endAside %}
+
+On [this demo page](https://prerender-demos.glitch.me/), in the **Application** > **Preloading** section, you can inspect:
+
+- **Speculation Rules** that lists all the rule sets found on the current page.
+
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/A1NnuJ0wk75Ci5C5wWL4.png", alt="The Speculation Rules section.", width="800", height="328" %}
+
+- **Preloads** that lists all the prefetched and prerendered URLs from the rule sets.
+
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ni2ohduNAgJJXVPtZJOm.png", alt="The Preloads section.", width="800", height="309" %}
+
+- **This Page** that lists the prerendered status of the current page.
+
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/DKF9flhhMm8wVV9gPkwv.png", alt="The This Page section.", width="800", height="437" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/4e07e2023f0c99a2c2b31c87024d94dc820193de #}
+
+Chromium issue: [1454724](https://crbug.com/1454724).
+
 ## The C/C++ WebAssembly debugging extension for DevTools is now open source {: #debug-cpp }
 
 The [C/C++ WebAssembly debugging extension for DevTools](https://goo.gle/wasm-debugging-extension) is now open source and resides in the [DevTools frontend repository](https://chromium.googlesource.com/devtools/devtools-frontend/+/refs/heads/main/extensions/cxx_debugging/). This extension enables debugging capabilities in DevTools for C++ programs compiled to WebAssembly. For more information, see [Debug C/C++ WebAssembly](/docs/devtools/wasm/).
@@ -198,7 +228,7 @@ Learn how to [build, run, and test the extension](https://chromium.googlesource.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/32770f2f66f01f8bd7239af447dfd8b9030eda29 #}
 
-Chromium issue: [1454724](https://crbug.com/1454724).
+Chromium issue: [1410709](https://crbug.com/1410709).
 
 ## Miscellaneous highlights {: #misc }
 
