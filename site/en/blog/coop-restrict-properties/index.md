@@ -12,7 +12,6 @@ hero:
     image/O2RNUyVSLubjvENAT3e7JSdqSOx1/QC14LcaYBMQfE48YGQBk.webp
 alt: A soap bubble.
 authors:
-  - agektmr
   - hemeryar
   - maudn
 tags:
@@ -35,7 +34,7 @@ trial](#origin-trial) starting in [Chrome 116](https://chromiumdash.appspot.com/
 `restrict-properties` has two main use cases: 
 
 - Preventing [cross-site leaks](https://xsleaks.dev/) without breakage.
-- Making your sire [cross-origin isolated](https://web.dev/why-coop-coep/)).
+- Making your site [cross-origin isolated](https://web.dev/why-coop-coep/).
 
 ### Prevent cross-site leaks without breakage
 
