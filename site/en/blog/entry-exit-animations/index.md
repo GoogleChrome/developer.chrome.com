@@ -1,6 +1,6 @@
 ---
 layout: "layouts/blog-post.njk"
-title: "Four new CSS features to enable smooth entry and exit animations"
+title: "Four new CSS features for smooth entry and exit animations"
 description: "Learn about new capabilities that enable smooth transitioning of discrete animations and between the top layer"
 authors:
   - unakravets
