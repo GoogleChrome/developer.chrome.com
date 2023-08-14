@@ -46,7 +46,7 @@ From Chrome 116, you can use `display` and `content-visibility` in keyframe rule
 
 <figure>
   {% Video
-    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/obFN6Pkd7Ty0dX6P9DmU.mp4",
+    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/nR8AB8giViUZoVP1MPbW.mp4",
     autoplay="true",
     loop="true",
     muted="true",
@@ -60,7 +60,7 @@ Other discrete properties switch states at the 50% mark of the transition’s ea
 
 The preceding example animates the opacity to 0 over the 0.5s duration and then set display to none. Additionally, the `forwards` keyword  ensures that the animation remains at its end state, so that the element it is applied to remains `display: none` and `opacity: 0`.
 
-This is a simple example that mimics what you can do with a transition. Transitions, however, are unable to create more complex animations, such as the following example:
+This is a simple example that mimics what you can do with a transition (see demo in [transition section](#transitioning-discrete-animations)). Transitions, however, are unable to create more complex animations, such as the following example:
 
 ```css
 .card {
@@ -150,7 +150,7 @@ If you are using the transition shorthand, make sure to use `transition-behavior
 
 <figure>
   {% Video
-    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/obFN6Pkd7Ty0dX6P9DmU.mp4",
+    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/nR8AB8giViUZoVP1MPbW.mp4",
     autoplay="true",
     loop="true",
     muted="true",
@@ -237,7 +237,7 @@ Now you have both an entry and exit state for these TODO list items:
 
 <figure>
   {% Video
-    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/wNHNtQ1EzOZViFFHQUvG.mp4",
+    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/QnF619KxDkLxSxMhSkD4.mp4",
     autoplay="true",
     loop="true",
     muted="true",
@@ -246,6 +246,7 @@ Now you have both an entry and exit state for these TODO list items:
 </figure>
 
 ## Animating elements to and from the top-layer 
+
 To animate elements to and from the top-layer, specify the `@starting-style` on the “open” state to tell the browser where to animate in from. For a dialog, the open state is defined with the `[open]` attribute. For a popover, use the `:popover-open` pseudo class.
 
  A simple example of a dialog could look like this:
@@ -278,7 +279,7 @@ dialog {
 
 <figure>
   {% Video
-    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/5SEKhWe8XTTRvNkjbZrM.mp4",
+    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/H9CgEK0A0Czus3OCgaTF.mp4",
     autoplay="true",
     loop="true",
     muted="true",
@@ -286,9 +287,10 @@ dialog {
   %}
 </figure>
 
-With a more complex example, it is neater to write this in a nested style. When animating a popover, use the `:popover-open` pseudo class instead of the `open` attribute used previously.
+In this example, the entry and exit effects are different. Enter by animating up from the bottom of the viewport, exit the effect to the top of the viewport. It is also written with nested CSS for more visual encapsulation.
 
-In this example, the entry and exit effects are different. Enter by animating up from the bottom of the viewport, exit the effect to the top of the viewport.
+When animating a popover, use the `:popover-open` pseudo class instead of the `open` attribute used previously.
+
 
 ```css
 .settings-popover {
@@ -324,13 +326,13 @@ In this example, the entry and exit effects are different. Enter by animating up
 {% Codepen {
   user: 'web-dot-dev',
   id: 'RwqXMZd',
-  height: 500,
+  height: 650,
   tab: 'result'
 } %}
 
 <figure>
   {% Video
-    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/5lJvfe7ViBRFS5TDH242.mp4",
+    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/6IkoC57l8SL6whYJmt19.mp4",
     autoplay="true",
     loop="true",
     muted="true",
@@ -350,7 +352,7 @@ Finally, to fade out a `popover` or `dialog` from the top layer, add the `overla
 
 <figure>
   {% Video
-    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/MQjhaebAGteFkYfJryII.mp4",
+    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/6kjtLdvlpz8ObkcbG2jV.mp4",
     autoplay="true",
     loop="true",
     muted="true",
@@ -368,7 +370,7 @@ Instead, include `overlay` in the transition or animation to animate `overlay` a
 
 <figure>
   {% Video
-    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/EdV4yeOX9mfbwpDQrfkz.mp4",
+    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/kPZ5Ds1LJQ72ZAiMcaJX.mp4",
     autoplay="true",
     loop="true",
     muted="true",
