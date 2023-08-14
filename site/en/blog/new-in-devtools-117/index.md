@@ -220,6 +220,24 @@ On [this demo page](https://prerender-demos.glitch.me/), in the **Application** 
 
 Chromium issue: [1454724](https://crbug.com/1454724).
 
+### Enhanced Protocol monitor {: #protocol-monitor }
+
+Chrome DevTools uses the [Chrome DevTools Protocol (CDP)](https://chromedevtools.github.io/devtools-protocol/) to instrument, inspect, debug, and profile Chrome browsers. If you are a Chromium or DevTools developer, the **Protocol monitor** provides you with a way to view all the CDP requests and responses made by DevTools and send CDP commands.
+
+The **Protocol monitor** gets a new interface to let you construct and send CDP commands easier. Now you don't have to look up commands and their parameters in documentation, DevTools will suggest them to you.
+
+{% Aside 'important' %}
+To enable this feature, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Experiments** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Protocol Monitor**.
+{% endAside %}
+
+In the bottom right corner of the **Protocol monitor** drawer tab, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/H4duJWlMkdd1903sC0Bw.svg", alt="Left panel open.", width="20", height="20" %} **Show CDP command editor**, select a target, start typing a command, select one of the suggested, if required, specify parameter values, and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/M6ltzywbLiI5cMJ1jrEg.svg", alt="Send.", width="24", height="24" %} **Send command** (<kbd>Ctrl/Cmd</kbd> + <kbd>Enter</kbd>).
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hhm7n8z8NJgffzkCvu1J.png", alt="Specifying and sending a CDP command.", width="800", height="298" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/ecbc68611ae1d9db1292b6e7afeda6c481975d8e #}
+
+Chromium issue: [1469345](https://crbug.com/1469345).
+
 ## The C/C++ WebAssembly debugging extension for DevTools is now open source {: #debug-cpp }
 
 The [C/C++ WebAssembly debugging extension for DevTools](https://goo.gle/wasm-debugging-extension) is now open source and resides in the [DevTools frontend repository](https://chromium.googlesource.com/devtools/devtools-frontend/+/refs/heads/main/extensions/cxx_debugging/). This extension enables debugging capabilities in DevTools for C++ programs compiled to WebAssembly. For more information, see [Debug C/C++ WebAssembly](/docs/devtools/wasm/).
