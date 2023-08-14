@@ -480,6 +480,20 @@ owners. These limits are meant as guard rails, not to be hit in regular operatio
 
 {% endDetails %}
 
+{% Details %}
+{% DetailsSummary %}
+### How can I maximize interest group ads that meet k&#8209;anon thresholds?
+{% endDetailsSummary %}
+
+As the [public explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#12-interest-group-attributes) notes, since a single interest group can carry multiple possible ads that it might show, the group will have an opportunity to re-bid another one of its ads to act as a "fallback ad" any time its most-preferred choice is below threshold. This means that a small, specialized ad that is still below the k-anonymity threshold could still choose to participate in auctions, and its interest group has a way to fall back to a more generic ad until the more specialized one has a large enough audience.
+
+From a tactical perspective, you may consider the following:
+
+- To get a new ad to start showing, just start bidding with it in cases where you want it to show. There is nothing additional that you need to do.
+
+- You can have a fallback ad that you use when new ads are not k-anon. There is some risk of your fallback ad itself not being k-anon, so you could consider sometimes just bidding with the fallback ad in the first place. Perhaps do this 1% of the time, for example, if that is a good level to ensure that you expect the fallback to stay over threshold. 
+{% endDetails %}
+
 ## All Protected Audience API references
 
 {% Partial 'privacy-sandbox/fledge-api-reference.njk' %}
