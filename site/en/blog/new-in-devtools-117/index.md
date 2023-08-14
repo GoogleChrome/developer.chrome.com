@@ -192,7 +192,7 @@ Chromium issue: [772558](https://crbug.com/772558).
 
 ## New experimental features {: #experimental }
 
-### Debug preloading {: #preloading }
+### Debug preloading in the Application panel {: #preloading }
 
 The Chrome team is [bringing back full prerendering](/blog/prerender-pages/) of future pages that a user is likely to navigate to. To let you debug this, DevTools adds the **Preloading** section to the **Application** panel.
 
