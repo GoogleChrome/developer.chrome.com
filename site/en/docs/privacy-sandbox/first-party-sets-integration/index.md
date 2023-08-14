@@ -322,6 +322,13 @@ https://first-party-sets.glitch.me/
 
 Call the APIs (rSA or rSAFor) from the sites that are being tested and validate access to the cross-site cookies.
 
+### Reseting permissions to the default
+
+If you want to remove all FPS-mediated permissions and reset to the default state, there are currently two ways to do so:
+
+- Restart the browser, for example by visiting `chrome://restart`. (Any recent Chrome version.)
+- Visit `chrome://settings/cookies`, set the default behavior toggle to "Block third-party cookies", and toggle the "Allow related sites to see your activity in the group" option off and then on again. Be sure to refresh the page you're testing on as well. (Chrome 116.0.5845.42 or later.)
+
 ## FPS submission process
 
 To declare the relationship amongst the domains and specify which subset they are part of, follow the steps below:
