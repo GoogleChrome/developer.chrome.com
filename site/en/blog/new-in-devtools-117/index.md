@@ -26,7 +26,7 @@ tags:
 
 ### Override web content locally {: #overrides }
 
-The [local overrides](/docs/devtools/overrides/) feature has been streamlined, so you can easily mock response headers and web content of remote resources from the **Network** panel without access to them.
+The [local overrides](/docs/devtools/overrides/) feature is now streamlined, so you can easily mock response headers and web content of remote resources from the **Network** panel without access to them.
 
 To override web content, open the **Network** panel, right-click a request, and select **Override content**.
 
@@ -165,7 +165,7 @@ You can already test how Chrome behaves *after* the third-party cookie phaseout.
 
 To test this, inspect cookies on [this demo page](https://samesite-sandbox.glitch.me/).
 
-The {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Blocked response cookies** filter in the **Network** panel has been rephrased to make it clear that it shows only the blocked *response* cookies.
+The {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Blocked response cookies** filter in the **Network** panel is rephrased to make it clear that it shows only the blocked *response* cookies.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/anskbEwDVG6vvXKqW5TA.png", alt="The checkbox is enabled and shows only the requests with blocked response cookies.", width="800", height="576" %}
 
@@ -220,7 +220,7 @@ Chromium issue: [772558](https://crbug.com/772558).
 
 The Chrome team is [bringing back full prerendering](/blog/prerender-pages/) of future pages that a user is likely to navigate to. To let you debug this, DevTools adds the **Preloading** section to the **Application** panel. The new prefetching and prerendering (collectively known as preloading) uses Speculation Rules is unrelated to the [legacy link-based resource hint versions](/blog/prerender-pages/#a-brief-history-of-prerender).
 
-{% Aside 'important' %}
+{% Aside %}
 To enable this feature, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Experiments** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable Preloading Status Panel in Application panel**.
 {% endAside %}
 
@@ -242,7 +242,7 @@ Chrome DevTools uses the [Chrome DevTools Protocol (CDP)](https://chromedevtools
 
 The **Protocol monitor** gets a new interface to let you construct and send CDP commands easier. Now you don't have to look up commands and their parameters in documentation, DevTools will suggest them to you.
 
-{% Aside 'important' %}
+{% Aside %}
 To enable this feature, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Experiments** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Protocol Monitor**.
 {% endAside %}
 
