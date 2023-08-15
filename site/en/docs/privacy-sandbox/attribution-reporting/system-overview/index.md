@@ -119,18 +119,45 @@ While this API is in testing, your code must confirm the API is available and se
 <figcaption><strong>Figure 1</strong>.</figcaption>
 </figure>
 
-### Attribution sources (publisher's website) {: #attribution-sources}
 
-An _[attribution source](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/)_
-is an ad-related event (a click or view), to which an ad tech can attach the
-following kinds of information:
 
-*  Contextual reporting data, such as the ad creative ID, information about the
-   campaign, or geography.
-*  A conversion destination, as in the site where you expect the user will convert.
+### Attribution events flow
 
-Once the data is collected for the attribution source, the browser adds the
-data to local storage, so it can later be matched with an attribution trigger.
+Imagine a publisher site that displays ads. Each advertiser or ad tech provider wants to learn about interactions with their ads, and attribute conversions. Reports—both event-level and aggregatable—would be generated as follows:
+
+1.  On the publisher site, an ad element (`<a>` or `<img>` tag) is configured with a special attribute `attributionsrc`. Its value is a URL, for example `https://adtech.example/register-source/ad_id=...`
+
+    For a click:
+
+    ```javascript
+    <a href="https://shoes.example/landing" 
+      attributionsrc="http://adtech.example/register-source?..."
+      target="_blank">
+    Click me</a>
+    ```
+
+    For a view:
+
+    ```javascript
+    <img href="https://advertiser.example/landing" attributionsrc="https://adtech.example/register-source?..."/>
+    ```
+    Alternatively, instead of HTML elements, JavaScript calls can be used.
+
+1.  When the user clicks or views the ad, the browser sends a `GET` request to `attributionsrc`—typically, an advertiser or ad tech provider endpoint.
+1.  Upon receiving this request, the advertiser or ad tech provider decides to instruct the browser to register source events for interactions with the ad, so that conversions can later be attributed to this ad. To do so, the advertiser or ad tech provider includes in its response a special HTTP header. It attaches to this header custom data that provides information about the source event (the ad click or view)—if a conversion ends up taking place for this ad, this custom data will ultimately be surfaced in the attribution report.
+
+    {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/BDzoPro5EisV1FeJiNYZ.png", alt="View or clock an ad.", width="512", height="302" %}
+1.  Later on, the user visits the advertiser's site.
+1.  On each relevant page of the advertiser's site—for example, a purchase confirmation page, or a product page—a conversion pixel (`<img>` element) or JavaScript call makes a request to `https://adtech.example/conversion?param1=...&param2=...`
+1.  The service at this URL—typically, the advertiser or ad tech provider—receives this request. It decides to categorize this as a conversion, so it needs to instruct the browser to record a conversion—that is to *trigger an attribution*. To do so, the advertiser or ad tech provider includes in its response to the pixel request a special HTTP header that includes custom data about the conversion.
+1.  The browser—on the user's local device—receives this response, and matches the conversion data with the original source event (ad click or view). Learn more in [How does the browser match source events (ad engagements) with trigger events (conversions)?](#heading=h.z3eyiewn6zcw)
+1.  The browser schedules a report to be sent to `attributionsrc`. This report includes:
+    1.  The custom attribution configuration data that the ad tech provider or advertiser attached to the source event in Step 3.
+    1.  The custom conversion data set at Step 6.
+
+    {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/AceEr2qZx2ri5HePhx96.png", alt="A conversion.", width="512", height="369" %}
+1.  Later, the browser sends the reports to the endpoint defined in `attributionsrc`, with some delay and noise. Aggregatable reports are encrypted, while event-level reports are not.
+
 
 ### Attribution triggers (advertiser's website)
 
