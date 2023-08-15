@@ -26,7 +26,7 @@ tags:
 
 ### Override web content locally {: #overrides }
 
-The [local overrides](/docs/devtools/overrides/) feature now lets you locally override web content, in addition to [network response headers](/docs/devtools/overrides/#override-headers) and has a better UX, so you can easily mock remote resources without access to them.
+The [local overrides](/docs/devtools/overrides/) feature has been streamlined, so you can easily mock response headers and web content of remote resources from the **Network** panel without access to them.
 
 To override web content, open the **Network** panel, right-click a request, and select **Override content**.
 
@@ -70,7 +70,9 @@ To filter out all the requests sent to `chrome-extension://` URLs, check {% Img 
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/07CwNEuofVPa8jp3LFfm.png", alt="Extension URLs hidden from the requests table.", width="800", height="478" %}
 
-Moreover, to stop seeing confusing and irrelevant error messages from extensions in the **Console**, for example, about failing to load [source maps](https://web.dev/source-maps/), check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Enable Ignore Listing**](/docs/devtools/settings/ignore-list/#skip-extensions) > **General exclusion rules** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Content scripts injected by extensions**.
+{% Aside %}
+You can also make the **Debugger** skip extension code. See {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [Settings > Ignore List](/docs/devtools/settings/ignore-list/).
+{% endAside %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/45b4415d1599864a73cab4138ecd3135d8ee79ba #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/dffee77bf9253cfb926ea96ff07c09d9649f4b14 #}
@@ -128,7 +130,7 @@ Chromium issue: [1455498](https://crbug.com/1455498).
 
 You might have already noticed that DevTools now has a refreshed look that better aligns with Chrome. One contributing factor is the new color scheme.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/jYcGH36O81Qb7GvuJhd6.png", alt="The before and after applying new colors.", width="800", height="382" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/dhvFP34kcqgGfHseGGWL.png", alt="The before and after applying new colors.", width="800", height="440" %}
 
 This version (117) brings more UX improvements to DevTools, both already mentioned and listed further, including a number of improved UI texts.
 
@@ -154,6 +156,28 @@ This setting makes the file tree in the **Sources** > **Page** select the curren
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/0fb0a115b9fc00a6af1be58db426674dd7411c84 #}
 
 Chromium issues: [1459193](https://crbug.com/1459193), [1336599](https://crbug.com/1336599).
+
+## Improved debugging of third-party cookie issues {: #third-party-cookies }
+
+In an effort to help build a more private web and in parallel with [updates by other browsers](/docs/privacy-sandbox/chips/#why-its-important-to-opt-into-cookie-partitioning), Chrome [introduced an initiative](https://blog.google/products/chrome/building-a-more-private-web/) called [Privacy Sandbox](https://privacysandbox.com/). This initiative fundamentally enhances privacy on the web and can sustain a healthy, ad-supported web in a way that will render third-party cookies obsolete. Privacy Sandbox has a [gradual phaseout timeline](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline) to let you adapt to changes comfortably.
+
+You can already test how Chrome behaves *after* the third-party cookie phaseout. To do this, run [Chrome from the command line](https://www.chromium.org/developers/how-tos/run-chromium-with-flags/) with the `--test-third-party-cookies-phaseout` flag.
+
+To test this, inspect cookies on [this demo page](https://samesite-sandbox.glitch.me/).
+
+The {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Blocked response cookies** filter in the **Network** panel has been rephrased to make it clear that it shows only the blocked *response* cookies.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/anskbEwDVG6vvXKqW5TA.png", alt="The checkbox is enabled and shows only the requests with blocked response cookies.", width="800", height="576" %}
+
+To surface relevant issues, the **Issues** panel now has the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Include third-party cookie issues** checkbox enabled by default and reports a breaking change warning about the upcoming phaseout.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/b0NY6UuztBi6HV1mGXNP.png", alt="The breaking change warning in the Issues tab.", width="800", height="704" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/b9391367907b720b3d270141815b1f49ec39bc6a #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/295a09a976fa964f1618d00c0721912286aa0b75 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/28558f4af329940651fed72b317b9a4b5b5523c5 #}
+
+Chromium issues: [1458839](https://crbug.com/1458839), [1462693](https://crbug.com/1462693), [1466310](https://crbug.com/1466310).
 
 ## New rendering simulation: `prefers-reduced-transparency` {: #reduced-transparency }
 
