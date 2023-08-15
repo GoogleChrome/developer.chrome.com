@@ -24,9 +24,7 @@ The Long Tasks API allows you to monitor for **long tasks**, or tasks that occup
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  list.getEntries().forEach((entry) => {
-    console.log(entry);
-  });
+   console.log(list.getEntries());
 });
 
 observer.observe({ type: "longtask", buffered: true });
@@ -81,9 +79,7 @@ It can be called in the similar way as long tasks with a `PerformanceObserver` l
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  list.getEntries().forEach((entry) => {
-    console.log(entry);
-  });
+   console.log(list.getEntries());
 });
 observer.observe({ type: "long-animation-frame", buffered: true });
 ```
@@ -178,9 +174,9 @@ As shown, the LoAF performance entry includes valuable information. One (perhaps
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  list.getEntries().forEach((entry) => {
+  for (const entry of list.getEntries()) {
     sendtoAnalytics(entry);
-  });
+  }
 });
 observer.observe({ type: "long-animation-frame", buffered: true });
 ```
@@ -193,38 +189,26 @@ This strategy may however make more sense on a sample subset of users, or on pag
 
 Sites may wish to collect data on the longest animation frame (or frames) and send this data back, in order to reduce the volume of data that needs to be beaconed. So no matter how many long animation frames a page experiences, only data for the worst one, five, or however many long animation frames is beaconed back.
 
-This would require some simple JavaScript object array to hold a list of the worst LoAF entries, replacing the slowest entry each time a longer LoAF entry occurs.
 
 ```js
-let longestLoAFList = [];
 MAX_LOAFS_TO_CONSIDER = 10;
 
-const observer = new PerformanceObserver((list) => {
-  list.getEntries().forEach((entry) => {
-    const minLongestLoAF = longestLoAFList[longestLoAFList.length - 1];
-    // Only process the entry if it's possibly one of the longest
-    if (
-      longestLoAFList.length < MAX_LOAFS_TO_CONSIDER ||
-      entry.duration > minLongestLoAF
-    ) {
-      longestLoAFList.push(entry);
+const observer = new PerformanceObserver(() => {
+    const sortedByBlockingDuration =
+      performance.getEntriesByType("long-animation-frame").sort(
+        (a, b) => b.blockingDuration - a.blockingDuration
+      );
 
-      // Sort the entries by duration (descending) and keep only the
-      // top ones.
-      longestLoAFList.sort((a, b) => b.duration - a.duration);
-      longestLoAFList.splice(MAX_LOAFS_TO_CONSIDER);
-    }
-  });
-  // Example here logs to console,
-  // but could also report back to analytics
-  console.table(Object.values(longestLoAFList));
+  // Example here logs to console, but could also report back to analytics
+  console.table(sortedByBlockingDuration.slice(0, MAX_LOAFS_TO_CONSIDER));
 });
+
 observer.observe({ type: "long-animation-frame", buffered: true });
 ```
 
 ### Correlating with INP
 
-As an extension of the above, the LoAF frame corresponding to the INP entry could be used as attribution data to to give further details on how to improve this INP.
+As an extension of the above, the LoAF frame corresponding to the INP entry could be used as attribution data to give further details on how to improve this INP.
 
 As there is no direct link between INP entries and LoAF entries, this requires correlating both performance entries using the start and end times (see [this example script](https://gist.github.com/noamr/2d4e2bdd48661fa39e32283efecaf418)).
 
@@ -268,8 +252,7 @@ const observer = new PerformanceObserver((list) => {
     });
   });
   loafScripts.sort((a, b) => b.duration - a.duration);
-  // Example here logs to console,
-  // but could also report back to analytics
+  // Example here logs to console, but could also report back to analytics
   console.table(Object.values(loafScripts));
 });
 observer.observe({ type: "long-animation-frame", buffered: true });
@@ -286,6 +269,19 @@ The [Web Vitals extension has shown the value in logging summary debug informati
 ### Surfacing long animation frames data in DevTools
 
 You can surface long animation frame in DevTools using the <code>[performance.measure()](https://developer.mozilla.org/docs/Web/API/Performance/measure)</code> API which are then displayed [in DevTools user timings track](/docs/devtools/performance-insights/#timings) for performance traces to show where to concentrate on for performance improvements:
+
+```js
+const observer = new PerformanceObserver((list) => {
+  for (const entry of list.getEntries()) {
+    performance.measure("LoAF", {
+      start: entry.startTime,
+      end: entry.startTime + entry.duration,
+    });
+  }
+});
+
+observer.observe({ type: "long-animation-frame", buffered: true });
+```
 
 ### Using long animation frames data in automated testing tools
 
