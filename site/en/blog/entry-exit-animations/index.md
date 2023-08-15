@@ -389,7 +389,7 @@ Instead, include `overlay` in the transition or animation to animate `overlay` a
 
 Additionally, when you have multiple elements open in the top-layer, overlay helps you control the smooth transition in and out of the top layer. You can see the difference in [this simple example](https://jsfiddle.net/jarhar/r6a5bvnt/). If you are not applying `overlay` to the second popover when transitioning it out, it will first move out of the top layer, jumping behind the other popover, before starting the transition. This isn’t a very smooth effect.
 
-## A Note on View Transitions
+## A note on view transitions
 
 If you are making DOM changes, such as adding and removing elements from the DOM, another great solution for smooth animations is [view transitions](/docs/web-platform/view-transitions/). Here are two of the above examples built using view transitions.
 
