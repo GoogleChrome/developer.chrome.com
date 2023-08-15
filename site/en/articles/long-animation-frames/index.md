@@ -225,37 +225,24 @@ This may work particularly well for customizable platforms where themes, or plug
 The execution time of common scripts, or third-party origins, in long animation frames could be summed up and reported back to identify common contributors to long animation frames across the site or a collection of sites.
 
 ```js
-let loafScripts = []
-
-const observer = new PerformanceObserver((list) => {
-  list.getEntries().forEach((entry) => {
-    entry.scripts.forEach((loafScript) => {
-      const scriptEntry = loafScripts.filter(function(loafScriptEntry) {
-        return loafScriptEntry.name === loafScript.name;
-      })[0];
-      if (scriptEntry) {
-        scriptEntry.duration += loafScript.duration;
-        scriptEntry.forcedStyleAndLayoutDuration +=
-            loafScript.forcedStyleAndLayoutDuration;
-        scriptEntry.pauseDuration += loafScript.pauseDuration;
-      } else {
-        loafScripts.push({
-          name: loafScript.name,
-          windowAttribution: loafScript.windowAttribution,
-          type: loafScript.type,
-          duration: loafScript.duration,
-          forcedStyleAndLayoutDuration:
-                loafScript.forcedStyleAndLayoutDuration,
-          pauseDuration: loafScript.pauseDuration,
-        });
-      }
-    });
-  });
-  loafScripts.sort((a, b) => b.duration - a.duration);
+const observer = new PerformanceObserver(list => {
+  const allScripts = list.getEntries().flatMap(entry => entry.scripts);
+  const scriptNames = [...new Set(allScripts.map(script => script.name))];
+  const scriptsByName = scriptNames.map(name => ([name,
+      allScripts.filter(script => script.name === name)
+  ]));
+  const processedScripts = scriptsByName.map(([name, scripts]) => ({
+    name,
+    count: scripts.length,
+    totalDuration: scripts.reduce((subtotal, script) => subtotal + script.duration, 0)
+  }));
+  processedScripts.sort((a, b) => b.totalDuration - a.totalDuration);
   // Example here logs to console, but could also report back to analytics
-  console.table(Object.values(loafScripts));
+  console.table(processedScripts);
 });
-observer.observe({ type: "long-animation-frame", buffered: true });
+
+observer.observe({type: "long-animation-frame", buffered: true});
+
 ```
 
 ## Using Long Animation Frames API in tooling
