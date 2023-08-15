@@ -12,9 +12,18 @@ authors:
   - albertomedina
 ---
 
-
 ## Chrome-facilitated testing
+
+TODO: fill.
 
 ## Chrome DevTools
 
+TODO: fill.
+
 ## Privacy Sandbox Analysis Extension
+
+TODO: fill.
+
+## Analysis/Testing Scenarios
+
+TODO: fill.

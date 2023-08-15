@@ -11,53 +11,34 @@ authors:
   - albertomedina
 ---
 
-As a site owner, getting ready for a web without unresticted third-party cookies requires that you audit your sites to review and understand which of your features rely on state provided by cookies, and assess if any of these could be impacted. Here's an overview of the steps involved:
+## Cookie Scenarios
 
-1. [Identify the use of first-party and third-party cookies](#identify) on your site.
-1. Review how the identified cookies are configured and accessed.
-1. [Investigate how to leverage Web Platform and Privacy Sandbox APIs](#other-apis) to implement specific use cases without relying on third-party cookies.
+An HTTP Cookie is a mechanism for an origin server to send state information/state to a user agent and for the user agent to return the state information to the origin server, enabling the stateless HTTP Protocol to “remember” stateful information. Thus, Cookies are a state management mechanism, and the state/information collected via Cookies enable a wide range of applications in many areas that are at the core of the usefulness and success of the web. Although there are many such application areas, we can group most of the major cookie scenarios into the following categories:
 
-## Identify first-party and third-party cookies {: #identify }
+- **Enterprise authentication** solutions (e.g. SSO), allowing users to authenticate once and gain access to multiple applications and services within the organization without being prompted to log in repeatedly.
+- **Federated identity** solutions, allowing users from one organization to be recognized and authenticated by another organization's systems. It's about trust between different domains or organizations.
+- **Embedded Content** in \<iframes\>, enabling content sharing from other sites, such as videos, maps, code samples, and social posts.
+- **Session Management**, including shopping carts, game scores, etc.
+- **Personalization**, including user preferences (e.g. themes, settings), Ad targeting, and others.
+- **User Behavior Tracking**, including tracking users on single site/device and across sites/devices, Ad measurement and attribution, Analytics, and others.
+- **E-commerce**, including shoping flows, payment solutions, etc.
 
-{% Aside 'update' %}
-Improve/complete this section.
-{% endAside %}
+As Chrome changes the handling of 3P cookies to adjust to a new identity model for the web where state is partitioned at the level of first-party sites, implementations in the aforementioned application categories will have to change accordingly.
 
-The classification of a cookie as first-party or third-party is not about the cookie itself. Instead, it is a contextual classification. A cookie is always created and intended to be accessed by a given site/domain. But the information that is placed on a cookie in the context of a site (first party), could be accessed in the context of a different site (third party). So, whether a cookie is first-party or third-party is about how the information stored in it is accessed across site boundaries.
+To get ready for the phasing out of 3P cookies, you must review all cookie scenarios that may be powering features of your site, providing good value/experiences to your users, and assess if any of them could be impacted.
 
-### First-party cookies
+## Reviewing your Scenarios
 
-The following are use cases for first-party cookies. Because first-party cookies are not going away, you likely won't have to change anything in these scenarios.
+For each scenario identified in our sites, we need to ask the following questions:
 
-- User logged in. You may set a cookie to indicate that the user is logged into your site. However, if logging into your site means the user is logged into another site as well, this may be a third-party cookie.
-- Items in cart. You may set a cookie or cookies to persist a user's shopping cart additions. If you share shopping carts with another site, you might be using third-party cookies. If the other sites you share the cart with are actually owned by you but have a different domain, you should be able to use First-Party Sets. First-Party Sets lets you indicate a list of sites of different origins that belong to you.
-- Favorite movies, games, etc. If you have a site that allows users to favorite an item but do not require them to have an account with you, the favorited items are likely set using cookies with a very long expiry.
-
-
-{% Aside 'update' %}
-Complete this section.
-{% endAside %}
-
-{% Aside 'important' %}
-1P cookies will not be affected by third-party cookie phase out.
-{% endAside %}
-
-### Third-party cookies
-
-The following are common use cases for third-party cookies. Because third-party cookies will be deprecated, you'll need to use other means to achieve the same goals.
-
-- Embedded apps. You may have, say, a weather app in an iframe on your site. To set location preferences for the user so they can always see the weather for their location, the iframe sets a cookie. This is a third-party cookie because the origin of the iframe (where the weather app lives) is not owned by you.
-- Ads. Most sites display ads from ad networks by placing iframes from the ad network on their site. Right now, cookies are set for actions such as a user clicking an ad. That cookie is set while the user is on your site by the iframe because it happens in the iframe and that makes it a third-party cookie. For measurement purposes, the Privacy Sandbox has an API, the Attribution Reporting API, that can help you continue to measure ad performance without the use of third-party cookies.
-- Shared shopping carts.
-
-
-{% Aside 'update' %}
-Complete this section.
-{% endAside %}
+1. Is my scenario implemented using cookies? If the answer is not, then nothing to do here!
+1. Is my scenario implemented using state/information collected by 3P cookies (i.e. cross-site)? If the answer is no, then we just need to focus on ensuring we follow best practices for the use of 1P cookies.
+1. Does my scenario require state at a first-party site only? If the answer is yes, then you can consider leveraging Partitioned Cookies (todo: add link to CHIPS).
+1. Does my scenario require state sharing across different domains owned by my organization? If the answer is yes, then you can consider leverating First Party Sets (todo: add link to FPS).
+1. Does my scenario require state sharing across different sites belonging to different organizations? If the answer is yes the you can consider use some of the other state storage/management mechanisms avialble in the Web Platform. (todo: add link to Web Storage APIs)
 
 ## Replacing third-party cookies
 
-{% Aside 'update' %}
-Complete this section.
-Point to mapping section.
-{% endAside %}
+The application areas described above are key to the health and vibrancy of the web ecosystem. Many of them currently depend on the use of 3P cookies, and we want for them to continue being supported, by enabling their implementation using privacy-preserving bulding blocks.
+
+Once we have identified the scenarios in our sites that require changes, we can then focus on understanding alternatives to 3P cookies and how to apply them. [This section](/docs/building-blocks/) provides you with guidance to achieve this.

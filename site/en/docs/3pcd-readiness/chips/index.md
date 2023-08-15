@@ -8,9 +8,10 @@ date: 2023-07-26
 updated: 2023-08-04
 authors:
   - mihajlija
+  - albertomedina
 ---
 
-[Cookies Having Independent Partitioned State (CHIPS)](/docs/privacy-sandbox/chips/) is a web platform mechanism that enables opting-in to having third-party cookies partitioned by top-level site using a new cookie attribute `Partitioned`.
+[Cookies Having Independent Partitioned State (CHIPS)](/docs/privacy-sandbox/chips/) is a new mechanism to enable third-party developers to access cookies on sites where their services are embedded on a per-site basis (meaning a different cookie on each site), restricting the ability to track users across sites. This is achieved via the use of a new cookie attribute: `Partitioned`.
 
 If you have a service that is used as a component on another site, any cookies it sets are in a cross-site context. The way cookies currently work, the same cookie that service C sets on site A, can be read when service C is embedded on site B.
 
@@ -25,7 +26,8 @@ In this case, having cookies partitioned by top-level site is an improvement as 
 ```text
 Set-Cookie: __Host-cookie=value; SameSite=None; Secure; Path=/; Partitioned;
 ```
-## Use cases 
+
+## Use cases
 
 - Third-party chat embeds
 - Third-party map embeds
@@ -36,6 +38,11 @@ Set-Cookie: __Host-cookie=value; SameSite=None; Secure; Path=/; Partitioned;
 - Third-party CDNs that use cookies to serve content that's access-controlled by the authentication status on the first-party site (for example, profile pictures on social media sites hosted on third-party CDNs)
 - Front-end frameworks that rely on remote APIs using cookies on their requests
 - Embedded ads that need state scoped per publisher (for example, capturing users' ads preferences for that website)
+
 ## Learn more
 
-For more details about technical design, use cases, and testing, check out [CHIPS documentation](/docs/privacy-sandbox/chips/).
+For more details about technical design, use cases, and testing, check out the following references:
+
+- [CHIPS documentation](/docs/privacy-sandbox/chips/).
+- [Proposal](https://github.com/WICG/CHIPS): Public explanation for the proposed solution
+- [Public discussion](https://github.com/pythagoraskitty/shared-storage/issues): Public questions and feedback about the proposal
