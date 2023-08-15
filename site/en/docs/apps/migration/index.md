@@ -100,12 +100,12 @@ Regardless of the technology you have chosen to migrate from Chrome Apps, you ne
 We recommend updating your app to include a message indicating that it has been discontinued, and that users should visit your website or the Chrome Web Store going forward (see example below). You can also include an "uninstall" button that calls the [`uninstallSelf()`][32] method.
 Starting with Chrome 75, the [`installReplacementWebApp()`][33] method can be used inside of a Chrome App, in response to a button click or other user gesture, to automatically trigger the installation flow for your replacement web application.
 
-{% Img src="image/26V1DWN36MZr3mUo8ChSBlCpzp43/xeIV2iUiXMbfcbrv5GH3.png", alt="Google Photos Chrome App replacement", width="598", height="468" %}
+{% Img src="image/26V1DWN36MZr3mUo8ChSBlCpzp43/Ci5PDjsTJmh0hp1E5DBr.png",  alt="Google Photos Chrome App replacement", width="598", height="468" %}
 
 An additional consideration is to inform Chrome Enterprise browser and ChromeOS Enterprise admins to update their app policies for their organizations. It is common for Enterprise and Education managed users to have their apps and extensions [force-installed via management policy][34].
 Developers should inform admins to update their [ExtensionInstallForcelist policy][35] (used to install Chrome Apps) and replace it with the [WebAppInstallForceList policy][36] with your web app’s URL:
 
-{% Img src="image/26V1DWN36MZr3mUo8ChSBlCpzp43/vTWEWNxK7zwB3jcGgyVD.png", alt="Admin Console Extension and Web App force install policy", width="800", height="503" %}
+{% Img src="image/26V1DWN36MZr3mUo8ChSBlCpzp43/Dw3v8JgKRxeEQwy9HikV.png", alt="Admin Console Extension and Web App force install policy", width="598", height="468" %}
 
 ## Support
 
