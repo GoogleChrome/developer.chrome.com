@@ -79,7 +79,7 @@ use case or have bundled a third-party script which uses them in its implementat
 The [`Secure`][cookies-restrict-access] cookie attribute is only supported for the `https://`
 scheme. Consequently, `chrome-extension://` pages are not able to set cookies with this attribute.
 
-This also means that extensions cannot use other cookie attributes where the Secure attribute is
+This also means that extension pages cannot use other cookie attributes where the Secure attribute is
 required:
 
 - [`SameSite=None`][same-site]
