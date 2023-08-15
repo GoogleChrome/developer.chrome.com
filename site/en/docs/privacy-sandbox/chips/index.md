@@ -7,7 +7,7 @@ description: >
   Allow developers to opt-in a cookie to "partitioned" storage, with a separate cookie jar per top-level site.
   Partitioned cookies can be set by a third-party service, but only read within the context of the top-level site where they were initially set.
 date: 2022-02-15
-updated: 2023-08-14
+updated: 2023-08-15
 authors:
   - mihajlija
 tags:
@@ -175,11 +175,11 @@ Adding `SameSite=None` will allow your cookie to be sent in third-party contexts
 
 ## Demo
 
-A demo on Glitch will walk you through how Partitioned cookies work and how you can inspect them in DevTools.
+A demo on Glitch will walk you through how partitioned cookies work and how you can inspect them in DevTools.
 
 Site A embeds an iframe from Site B which uses JavaScript to set two cookies: a partitioned and unpartitioned cookie. Site B displays all cookies accessible from that location using [`document.cookie`](https://developer.mozilla.org/docs/Web/API/Document/cookie).
 
-When third-party cookies are blocked, site B will only be able to set and access the cookie with the Partitioned attribute in cross-site context.
+When third-party cookies are blocked, site B will only be able to set and access the cookie with the `Partitioned` attribute in cross-site context.
 
 When third-party cookies are allowed, site B is able to also set and access the unpartitioned cookie.
 
@@ -231,21 +231,21 @@ This view shows all cookies for that partition and any unparitioned cookies, eve
 {% endAside %}
 
 1.  Click **Go to Site B**.
-1.  In DevTools, navigate to **Application > Storage > Cookies
+1.  In DevTools, navigate to **Application > Storage > Cookies**.
 1.  Click on `https://chips-site-B.glitch.me`.
 
 <figure>
 {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/WXqkkGCjROCcDSEKXew5.png", alt="Site B", width="400", height="1129" %}
 </figure>
 
-In this scenario, because you are on site B in a top level context, it can set and access both cookies:
+In this scenario, because you are on site B in top-level context, it can set and access both cookies:
 
 -   `unpartitioned-cookie` has an empty partition key.
 -   `__Host-partitioned-cookie` cookie has the partition key `https://chips-site-B.glitch.me`.
 
 <figure>
 {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/vl4ouXXVqQ1bB5dEP4iK.png", alt="", width="800", height="245" %}
-  <figcaption>Cookies from site B in the DevTools Application tab when visiting B as a top-level site. __Host-partitioned-cookie cookie has the partition key https://chips-site-B.glitch.me.</figcaption>
+  <figcaption>Cookies from site B in the DevTools Application tab when visiting B as a top-level site. __Host-partitioned-cookie has the partition key https://chips-site-B.glitch.me.</figcaption>
 </figure>
 
 If you navigate back to site A, `unpartitioned-cookie` is now stored in the browser, but it will not be accessible from site A.
@@ -288,7 +288,7 @@ will show:
 
 To reset the demo, clear all cookies for the site:
 
--   Open DevTools.
+-    Press `Control+Shift+J` (or `Command+Option+J` on Mac) to open DevTools.
 -   Click the **Application** tab.
 -   Navigate to **Application > Storage > Cookies**.
 -   Right click on `https://chips-site-B.glitch.me`.
