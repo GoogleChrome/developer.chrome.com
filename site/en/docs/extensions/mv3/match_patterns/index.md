@@ -46,7 +46,7 @@ Top Level domain match patterns
 
 ## Examples {: #examples }
 
-### ✅ Valid patterns {: #valid-examples }
+### Valid patterns {: #valid-examples }
 
 <table class="fixed-table width-full">
    <tbody>
@@ -103,7 +103,7 @@ Top Level domain match patterns
    </tbody>
 </table>
 
-### ❌ Invalid patterns {: #invalid-patterns }
+### Invalid patterns {: #invalid-patterns }
 
 Here are some examples of _invalid_ match patterns:
 
