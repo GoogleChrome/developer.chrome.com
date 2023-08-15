@@ -144,12 +144,6 @@ $CARD_BORDER: 2px solid #EEF4FF;
   }
 
   .devsite-landing-row-3-up {
-
-    &[background="pale-blue"] img {
-      max-width: 176px;
-      margin: 40px auto 0;
-    }
-  
     &:not([background="pale-blue"]) {
       .devsite-landing-row-item-media {
         padding: 30px 35px 0;
@@ -279,6 +273,24 @@ $CARD_BORDER: 2px solid #EEF4FF;
         &-description-content {
           color: #{$TEXT_SECONDARY};
         }
+      }
+    }
+
+    &.devsite-landing-row-3-up {
+      .devsite-landing-row-item {
+        &-description {
+          padding: 1.5rem 2.5rem 2.5rem;
+        }
+
+        &-buttons .button {
+          padding: 0;
+          margin-top: 0.125rem;
+        }
+      }
+
+      img {
+        max-width: 176px;
+        margin: 1.5rem auto 0;
       }
     }
   }
