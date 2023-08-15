@@ -1,9 +1,287 @@
 /* stylelint-disable */
 
-$CHROME_PRIMARY: green;
+$CHROME_BLUE: #3982F7;
+$CHROME_GREEN: #4DA949;
+$CHROME_RED: #EA3323;
+$CHROME_YELLOW: #F5B840;
 
-[theme=web-theme]{
-  --devsite-button-primary-background: #{$CHROME_PRIMARY};
+$BG_PRIMARY: #F6F9FF;
+
+$TEXT_PRIMARY_FONT_FAMILY: "'Open Sans', sans-serif;";
+$TEXT_PRIMARY: #000;
+$TEXT_PRIMARY_PALEBLUE: #3A3A3A;
+$TEXT_SECONDARY: #606367;
+$TEXT_LINK: #3982F7;
+$TEXT_BOLD_WEIGHT: 600;
+$TEXT_WEIGHT: 500;
+$TEXT_LETTER_SPACING: -0.03125rem;
+
+$H1_FONT_SIZE: 2.5rem;
+$H2_FONT_SIZE: 2rem;
+$H3_FONT_SIZE: 2rem;
+
+$BUTTON_BG: transparent;
+$BUTTON_BORDER: 2px solid #{$TEXT_LINK};
+$BUTTON_FONT_SIZE: 1rem;
+
+$CARD_BORDER_RADIUS: 1.5rem;
+$CARD_GAP: 1.5rem;
+$CARD_BORDER: 2px solid #EEF4FF;
+
+[theme=web-theme] {
+  --devsite-background-color: #{$BG_PRIMARY};
+  --devsite-button-background: #{$BUTTON_BG};
+  --devsite-button-background-hover: #{$BUTTON_BG};
+  --devsite-button-border: #{$BUTTON_BORDER};
+  --devsite-button-border-hover: #{$BUTTON_BORDER};
+  --devsite-button-border-radius: 2.75rem;
+  --devsite-button-color: #{$TEXT_LINK};
+  --devsite-button-font: #{$BUTTON_FONT_SIZE};
+  --devsite-button-primary-background: #{$CHROME_BLUE};
+  --devsite-button-text-transform: none;
+  --devsite-card-background: #{$BG_PRIMARY};
+  --devsite-card-border: none;
+  --devsite-card-border-radius: #{$CARD_BORDER_RADIUS};
+  --devsite-h1-font: #{$TEXT_BOLD_WEIGHT} #{$H1_FONT_SIZE} #{$TEXT_PRIMARY_FONT_FAMILY};
+  --devsite-h1-letter-spacing: #{$TEXT_LETTER_SPACING};
+  --devsite-h2-font: #{$TEXT_BOLD_WEIGHT} #{$H2_FONT_SIZE} #{$TEXT_PRIMARY_FONT_FAMILY};
+  --devsite-h2-margin: 0 0 1.875rem 0;
+  --devsite-h3-font: #{$TEXT_BOLD_WEIGHT} #{$H3_FONT_SIZE} #{$TEXT_PRIMARY_FONT_FAMILY};
+  --devsite-heading-color: #{$TEXT_PRIMARY};
+  --devsite-item-gap: #{$CARD_GAP};
+  --devsite-landing-row-group-margin: 0;
+  --devsite-landing-row-header-text-margin: 0 auto;
+  --devsite-landing-row-header-text-max-width: 57.8125rem;
+  --devsite-primary-font-family: #{$TEXT_PRIMARY_FONT_FAMILY};
+  --devsite-primary-text-color: #{$TEXT_PRIMARY};
+  --devsite-text-color: #{$TEXT_PRIMARY};
+  --link-color: #{$TEXT_PRIMARY};
+  --link-rgb-background: #{$BUTTON_BG};
+
+
+  .devsite-landing-row-item {
+    gap: 0;
+
+    &-buttons {
+      .button {
+        font-weight: #{$TEXT_BOLD_WEIGHT};
+        height: auto;
+        line-height: 1.3125rem;
+        margin: 1rem 0 0 0;
+        padding: 0.8125rem 2.5rem;
+      }
+
+      .button-white {
+        font-weight: #{$TEXT_WEIGHT};
+        padding-left: 0;
+      }
+    }
+
+    &-description {
+      padding: 2.125rem;
+    }
+
+    &-description-content {
+      line-height: 1.3125rem;
+    }
+
+    &-labels {
+      span {
+        font-size: 0.875rem;
+        font-weight: 700;
+        letter-spacing: 0.1rem;
+        line-height: 1.719rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .devsite-landing-row-cards {
+    .devsite-landing-row-item-media {
+      padding: 30px 35px 0;
+    }
+  }
+
+  .devsite-landing-row-1-up .devsite-landing-row-item {
+    h3 {
+      font-size: 4rem;
+    }
+
+    &-description {
+      text-align: center;
+      padding: 1rem 0 0;
+      margin-bottom: 0;
+        
+      &-content {
+        font-size: 1.125rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    &-buttons {
+      display: block;
+      z-index: 1;
+    }
+
+    &-media {
+      width: 1330px;
+      margin: -1rem auto 2rem;
+    }
+  }
+
+  .devsite-landing-row-4-up {
+    position: relative;
+
+    &::before {
+      content: '';
+      height: 3px;
+      background: linear-gradient(92deg, #FB0301 0%, #FB0301 10.94%, #FBBB06 19.79%, #FBBB06 37.50%, #34A653 60.42%, #34A653 76.56%, #206ACE 100%);
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .devsite-landing-row-3-up {
+
+    &[background="pale-blue"] img {
+      max-width: 176px;
+      margin: 40px auto 0;
+    }
+  
+    &:not([background="pale-blue"]) {
+      .devsite-landing-row-item-media {
+        padding: 30px 35px 0;
+      }
+    }
+
+    .devsite-landing-row-inner {
+      background-color: #{$BG_PRIMARY};
+      border-radius: #{$CARD_BORDER_RADIUS};
+      max-width: 90rem;
+      padding: 0;
+    }
+  }
+
+  .devsite-landing-row[header-position=left] {
+    padding: 3.125rem 0 !important;
+
+    .devsite-landing-row-item {
+      max-width: 24.75rem;
+
+      &-image {
+        border-radius: 1.5rem;
+      }
+
+      &-description {
+        padding: 0;
+      }
+
+      &-buttons .button {
+        margin-top: 1.875rem;
+      }
+    }
+
+    .devsite-landing-row {
+      &-group {
+        grid-gap: 3rem 1.5rem;
+      }
+
+      &-header-text {
+        margin-left: 0;
+        max-width: 17.5625rem;
+        
+        h2 {
+          font-size: 2.5rem;
+          font-weight: #{$TEXT_BOLD_WEIGHT};
+          line-height: 2.9688rem;
+        }
+      }
+    }
+  }
+
+  .devsite-landing-row-4-up[header-position=left] {
+    .devsite-landing-row-item {
+      border: #{$CARD_BORDER};
+      border-radius: 1.5rem;
+      padding: 2.125rem;
+    }
+  }
+
+  [background=pale-blue] {
+    --devsite-background-color: #{$BG_PRIMARY};
+    --devsite-button-border: none;
+    --devsite-button-border-hover: none;
+    --devsite-card-background: white;
+    --devsite-landing-row-group-margin: 0;
+    --devsite-landing-row-header-text-margin: 0 auto;
+    --devsite-h1-font: 500 3rem #{$TEXT_PRIMARY_FONT_FAMILY};
+    --devsite-heading-color: #{$TEXT_PRIMARY_PALEBLUE};
+
+    margin: 2.75rem 0;
+
+    .devsite-landing-row-header-text {
+      font-size: 3rem;
+      line-height: 3.5rem;
+      margin-bottom: 3.75rem;
+      max-width: 57.8125rem;
+      text-align: center;
+    }
+
+    .devsite-landing-row-item {
+      &-body h3 {
+        font-size: 2.25rem;
+        line-height: 2.5625rem;
+        text-align: center;
+      }
+
+      &-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin-top: 0;
+
+        .button {
+          font-weight: #{$TEXT_WEIGHT};
+          line-height: 2rem;
+          padding: 0.6875rem 2.5rem;
+        }
+      }
+    }
+
+    &.devsite-landing-row-2-up {
+      margin-bottom: -4.5rem;
+
+      .devsite-landing-row-group {
+        grid-gap: 3.125rem;
+      }
+
+      .devsite-landing-row-header-text {
+        margin-bottom: 2.875rem;
+        max-width: 100%;
+        text-align: left;
+      }
+
+      .devsite-landing-row-item {
+        &-body h3 {
+          font-size: 2rem;
+          text-align: left;
+        }
+
+        &-buttons {
+          .button {
+            line-height: 1.5625rem;
+            padding-left: 0;
+          }
+        }
+
+        &-description-content {
+          color: #{$TEXT_SECONDARY};
+        }
+      }
+    }
+  }
 }
 
 /* stylelint-enable */
