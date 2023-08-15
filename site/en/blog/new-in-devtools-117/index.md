@@ -3,7 +3,7 @@ layout: 'layouts/blog-post.njk'
 title: "What's New in DevTools (Chrome 117)"
 authors:
   - sofiayem
-date: 2023-08-10
+date: 2023-08-15
 description: ""
 hero: ''
 alt: ''
