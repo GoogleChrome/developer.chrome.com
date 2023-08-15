@@ -78,8 +78,12 @@ use case or have bundled a third-party script which uses them in its implementat
 
 The [`Secure`][cookies-restrict-access] cookie attribute is only supported for the `https://`
 scheme. Consequently, `chrome-extension://` pages are not able to set cookies with this attribute.
-This also means that extensions cannot use the [`Partitioned`][chips] attribute, which requires that
-the `Secure` attribute is also set.
+
+This also means that extensions cannot use other cookie attributes where the Secure attribute is
+required:
+
+- [`SameSite=None`][same-site]
+- [`Partitioned`][chips]
 
 ### Partitioning {: #cookies-partitioning }
 
@@ -113,6 +117,7 @@ more information, see the [API reference][chrome-cookies-partitioning].
 [declare-permissions]: /docs/extensions/mv3/declare_permissions/
 [cookies-restrict-access]: https://developer.mozilla.org/docs/Web/HTTP/Cookies#restrict_access_to_cookies
 [chips]: /docs/privacy-sandbox/chips
+[same-site]: https://web.dev/samesite-cookies-explained
 [privacy-sandbox-timeline]: https://privacysandbox.com/open-web/#open-web-timeline-3pc
 [chrome-cookies]: /extensions/reference/cookies
 [chrome-cookies-partitioning]: /extensions/reference/cookies#partitioning
