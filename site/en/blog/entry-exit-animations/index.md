@@ -389,9 +389,83 @@ Instead, include `overlay` in the transition or animation to animate `overlay` a
 
 Additionally, when you have multiple elements open in the top-layer, overlay helps you control the smooth transition in and out of the top layer. You can see the difference in [this simple example](https://jsfiddle.net/jarhar/r6a5bvnt/). If you are not applying `overlay` to the second popover when transitioning it out, it will first move out of the top layer, jumping behind the other popover, before starting the transition. This isn’t a very smooth effect.
 
+## A Note on View Transitions
+
+If you are making DOM changes, such as adding and removing elements from the DOM, another great solution for smooth animations is [view transitions](/docs/web-platform/view-transitions/). Here are two of the above examples built using view transitions.
+
+In this first demo, instead of setting up `@starting-style` and other CSS transforms, view transitions will handle the transition. The view transition is set up like so: 
+
+First, in CSS, give each card an individual `view-transition-name`.
+
+```css
+.card-1 {
+  view-transition-name: card-1;
+}
+
+.card-2 {
+  view-transition-name: card-2;
+}
+
+/* etc. */
+```
+
+Then, in JavaScript, wrap the DOM mutation (in this case, removing the card), in a view transition.
+
+```js
+deleteBtn.addEventListener('click', () => {
+  // Check for browser support
+  if (document.startViewTransition) {
+    document.startViewTransition(() => {
+      // DOM mutation
+      card.remove();
+    });
+  } 
+  // Alternative if no browser support
+  else {
+    card.remove();
+  }
+})
+```
+
+Now, the browser can handle the fade out and morph of each card to its new position.
+
+{% Codepen {
+  user: 'web-dot-dev',
+  id: 'JjwPPgy',
+  tab: 'result'
+} %}
+
+<figure>
+  {% Video
+    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/wMW49SOG7oU7eHknuTTV.mp4",
+    autoplay="true",
+    loop="true",
+    muted="true",
+    controls="true"
+  %}
+</figure>
+
+Another example of where this can be handy is with the add/remove list items demo. In this case, you'll need to remember to add a unique `view-transition-name` for each card created.
+
+{% Codepen {
+  user: 'web-dot-dev',
+  id: 'qBLWBOV',
+  tab: 'result'
+} %}
+
+<figure>
+  {% Video
+    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/u6bAD6CY3jwR9oq0VeJ1.mp4",
+    autoplay="true",
+    loop="true",
+    muted="true",
+    controls="true"
+  %}
+</figure>
+
 ## Conclusion
 
-These four features bring us one step closer to smooth entry and exit animations on the web platform. To learn more, check out these links:
+These new platform features bring us one step closer to smooth entry and exit animations on the web platform. To learn more, check out these links:
 
 - [Introducing the popover API](/introducing-popover-api/)
 - [css-transitions-2 spec](https://drafts.csswg.org/css-transitions-2/#defining-before-change-style-the-starting-style-rule)
