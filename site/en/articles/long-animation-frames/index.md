@@ -21,7 +21,7 @@ The [Long Animation Frames API](https://github.com/w3c/longtasks/blob/main/loaf-
 
 ## The Long Tasks API
 
-The Long Tasks API allows you to monitor for **long tasks**, or tasks that occupy the main thread for 50ms. This can be monitored using the [`PerformanceLongTaskTiming`](https://developer.mozilla.org/docs/Web/API/PerformanceLongTaskTiming) interface, with a `PeformanceObserver`:
+Before we get into the Long Animation Frames API, let’s look at the existing Long Tasks API which has been available in Chrome for some time now. It allows you to monitor for **long tasks**, or tasks that occupy the main thread for 50ms. This can be monitored using the [`PerformanceLongTaskTiming`](https://developer.mozilla.org/docs/Web/API/PerformanceLongTaskTiming) interface, with a `PeformanceObserver`:
 
 ```js
 const observer = new PerformanceObserver((list) => {
@@ -74,6 +74,8 @@ The final issue is that measuring long tasks only reports on individual tasks th
 
 The [Long Animation Frames API](https://github.com/w3c/longtasks/blob/main/loaf-explainer.md) (LoAF) is a new API that seeks to address some of the shortcomings of the Long Tasks API to enable developers to get more actionable insights to help address responsiveness problems and improve INP.
 
+Good responsiveness means that a page responds quickly to interactions made with it. That involves being able to paint any updates needed by the user in a timely manner and avoiding blocking these updates from happening. For INP it is recommended to respond in 200 milliseconds or less, but for other updates (for example, animations) even that may be too long.
+
 The Long Animation Frames API is an alternative approach to measuring blocking work. Rather than measuring the individual **tasks**, the Long Animation Frames API—as its name suggests—instead measures **long animation frames**. A long animation frame is when a rendering update is delayed beyond 50 milliseconds (the same as the Long Tasks API's threshold).
 
 It can be called in the similar way as long tasks with a `PerformanceObserver` looking at `long-animation-frame` types:
@@ -93,10 +95,10 @@ A further advantage of this alternative view on long tasks, is the ability to pr
 
 - `startTime`: the start time of the long animation frame relative to the navigation start time.
 - `duration`: the duration of the long animation frame.
-- `renderStart`: the rendering start time including requestAnimationFrame callbacks, style and layout calculation, resize observer and intersection observer callbacks.
+- `renderStart`: the rendering start time, which includes requestAnimationFrame callbacks, style and layout calculation, resize observer and intersection observer callbacks.
 - `styleAndLayoutStart`: beginning of the time period spent in style and layout calculations.
 - `desiredRenderStart`: the time the animation frame was queued.
-- `presentationTime`:  the implementation-specific time when the frame was actually presented.
+- `presentationTime`:  the implementation-specific time when the frame was actually presented. (Note: not implemented yet).
 - `firstUIEventTimestamp`:  time of the first UI event (mouse/keyboard etc.) to be handled during the course of this frame.
 - `blockingDuration`:  the duration in milliseconds that the animation frame was being blocked in practice.
 
@@ -106,7 +108,7 @@ For more details on these individual timings, [refer to the explainer](https://g
 
 The `long-animation-frame` entry type includes better attribution data of each script that contributed to a long animation frame. Similar to the Long Tasks API, this will be provided in an array of attribution entries, each of which details:
 
-- A meaningful `name`, indicating how the script was called.
+- A meaningful `name`, indicating how the script was called (for example, "`IMG#id.onload`", "`Window.requestAnimationFrame`", or "`Response.json.then`").
 - The `type` (`user-callback`, `event-listener`, `classic-script`…)
 - Separate timing data for that script:
     - `startTime`:  when the function was invoked.
@@ -118,7 +120,7 @@ The `long-animation-frame` entry type includes better attribution data of each s
 - `windowAttribution`:  similar information to Long Tasks API as to which container (the main frame, or an iframe) this happens in.
 - `window`:  a reference to the same origin window.
 
-This allows developers to know exactly how each script in the long animation frame was called, down to the character position in the calling script giving the exact location in a JavaScript resource that resulted in the extended frame.
+This allows developers to know exactly how each script in the long animation frame was called, down to the character position in the calling script giving the exact location in a JavaScript resource that resulted in the extended frame. Note that this will be the script _entry point_, rather than necessarily the part of the script that took up the most time
 
 ### Example of a Long Animation Frame performance entry
 
@@ -255,7 +257,11 @@ const observer = new PerformanceObserver(list => {
 observer.observe({type: "long-animation-frame", buffered: true});
 ```
 
-## Using Long Animation Frames API in tooling
+And example of this output is shown below:
+
+{% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/wBGFND4u3dgkt2HyEZP2.png", alt="Example DevTools output of scripts order by duration", width="800", height="149" %}
+
+## Using the Long Animation Frames API in tooling
 
 The API could also allow additional developer tooling for local debugging. While some tooling like Lighthouse, and Chrome DevTools have been able to gather much of this data using lower-level tracing details, having this higher level API could allow other tools to get access to this data.
 
