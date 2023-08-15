@@ -227,16 +227,10 @@ To enable this feature, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gz
 On [this demo page](https://prerender-demos.glitch.me/), in the **Application** > **Preloading** section, you can inspect:
 
 - **Speculation Rules** that lists all the rule sets found on the current page.
-
-  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/A1NnuJ0wk75Ci5C5wWL4.png", alt="The Speculation Rules section.", width="800", height="328" %}
-
 - **Preloads** that lists all the prefetched and prerendered URLs from the rule sets.
-
-  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ni2ohduNAgJJXVPtZJOm.png", alt="The Preloads section.", width="800", height="309" %}
-
 - **This Page** that lists the prerendered status of the current page.
 
-  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/DKF9flhhMm8wVV9gPkwv.png", alt="The This Page section.", width="800", height="437" %}
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/YyxptgchqoTk8BQmXKO3.mp4", autoplay="false", loop="true", muted="true", controls="true", class="screenshot", width="800", height="592" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/4e07e2023f0c99a2c2b31c87024d94dc820193de #}
 
