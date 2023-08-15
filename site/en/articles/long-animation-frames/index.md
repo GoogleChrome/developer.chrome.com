@@ -16,7 +16,7 @@ tags:
   - chrome-116
 ---
 
-The [Long Animation Frames API](https://github.com/w3c/longtasks/blob/main/loaf-explainer.md) (or LoAF) is a new proposal from the Chrome team to update the [Long Tasks API](https://w3c.github.io/longtasks/) to provide better understanding of slow user interface (UI) updates. This can be useful to identify slow animation frame updates which are likely to affect the pending [Interaction to Next Paint (INP)](https://web.dev/inp/) Core Web Vital metric which measures responsiveness, or to identify other UI jank which affects [smoothness](https://web.dev/smoothness/). The API is available as an origin trail from Chrome 116 for developers to provide feedback on.
+The [Long Animation Frames API](https://github.com/w3c/longtasks/blob/main/loaf-explainer.md) (or LoAF) is a new proposal from the Chrome team to update the [Long Tasks API](https://w3c.github.io/longtasks/) to provide better understanding of slow user interface (UI) updates. This can be useful to identify slow animation frame updates which are likely to affect the pending [Interaction to Next Paint (INP)](https://web.dev/inp/) Core Web Vital metric which measures responsiveness, or to identify other UI jank which affects [smoothness](https://web.dev/smoothness/). The API is available as an origin trial from Chrome 116 for developers to provide feedback on.
 
 ## The Long Tasks API
 
@@ -121,7 +121,7 @@ This allows developers to know exactly how each script in the long animation fra
 
 ### Example of a Long Animation Frame performance entry
 
-A complete LoAF performance entry example, containing two scripts, is shown below:
+A complete LoAF performance entry example, containing a single script, is shown below:
 
 ```js
 {
@@ -170,7 +170,7 @@ Some suggested strategies are listed next, but the Chrome team is keen to hear f
 
 ### Returning all data back to an analytics endpoint
 
-As shown, the LoAF performance entry includes valuable information. One (perhaps naïve) strategy would be to log all LoAFs and beacon them back to an analytics end point for later analysis:
+As shown, the LoAF performance entry includes valuable information. One, perhaps naïve, strategy would be to log all LoAFs and beacon them back to an analytics end point for later analysis:
 
 ```js
 const observer = new PerformanceObserver((list) => {
@@ -242,7 +242,6 @@ const observer = new PerformanceObserver(list => {
 });
 
 observer.observe({type: "long-animation-frame", buffered: true});
-
 ```
 
 ## Using Long Animation Frames API in tooling
@@ -296,7 +295,7 @@ The Long Animation Frames API proposal is at the experimentation stage where we 
 
 The Chrome team is seeking feedback on the API shape to ensure it’s easy to use and meets developers needs, before we aim to release this for general use, and also standardize this.
 
-Feedback can be provided at the [Long Task GitHub Issues list](https://github.com/w3c/longtasks/issues), or bugs in Chrome’s implementation of the API can be filed in [Chrome’s issue tracker](https://crbug.com/new).
+Feedback can be provided at the [Long Task GitHub Issues list](https://github.com/w3c/longtasks/issues), or bugs in Chrome’s implementation of the API can be filed in [Chrome’s issue tracker](https://bugs.chromium.org/p/chromium/issues/entry?template=Defect&components=Blink%3EPerformanceAPIs).
 
 ## Conclusion
 
