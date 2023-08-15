@@ -352,8 +352,8 @@ Finally, to fade out a `popover` or `dialog` from the top layer, add the `overla
 ```
 
 <figure>
-  {% Video
-    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/6kjtLdvlpz8ObkcbG2jV.mp4",
+  {% Video 
+    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/kPZ5Ds1LJQ72ZAiMcaJX.mp4",
     autoplay="true",
     loop="true",
     muted="true",
@@ -371,7 +371,7 @@ Instead, include `overlay` in the transition or animation to animate `overlay` a
 
 <figure>
   {% Video
-    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/kPZ5Ds1LJQ72ZAiMcaJX.mp4",
+    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/6kjtLdvlpz8ObkcbG2jV.mp4",
     autoplay="true",
     loop="true",
     muted="true",
