@@ -42,7 +42,7 @@ aren't included in the table because they don't affect your score.
         <td>10</td>
       </tr>
       <tr>
-        <td><a href="https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role">Values assigned to <code>role=""</code> are valid ARIA roles.</a></td>
+        <td><a href="https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role">Values assigned to <code>role=""</code> are valid ARIA roles</a></td>
         <td>1</td>
       </tr>
       <tr>
@@ -50,7 +50,7 @@ aren't included in the table because they don't affect your score.
         <td>7</td>
       </tr>
       <tr>
-        <td><a href="https://dequeuniversity.com/rules/axe/4.7/aria-dialog-name">Elements with <code>role="dialog"</code> or <code>role="alertdialog"</code> have accessible names.</a></td>
+        <td><a href="https://dequeuniversity.com/rules/axe/4.7/aria-dialog-name">Elements with <code>role="dialog"</code> or <code>role="alertdialog"</code> have accessible names</a></td>
         <td>7</td>
       </tr>
       <tr>
@@ -78,7 +78,7 @@ aren't included in the table because they don't affect your score.
         <td>10</td>
       </tr>
       <tr>
-        <td><a href="https://dequeuniversity.com/rules/axe/4.7/aria-required-children">Elements with an ARIA <code>[role]</code> that require children to contain a specific <code>[role]</code> have all required children.</a></td>
+        <td><a href="https://dequeuniversity.com/rules/axe/4.7/aria-required-children">Elements with an ARIA <code>[role]</code> that require children to contain a specific <code>[role]</code> have all required children</a></td>
         <td>10</td>
       </tr>
       <tr>
@@ -90,7 +90,7 @@ aren't included in the table because they don't affect your score.
         <td>7</td>
       </tr>
       <tr>
-        <td><a href="https://dequeuniversity.com/rules/axe/4.7/aria-text">Elements with the <code>role=text</code> attribute do not have focusable descendents.</a></td>
+        <td><a href="https://dequeuniversity.com/rules/axe/4.7/aria-text">Elements with the <code>role=text</code> attribute do not have focusable descendents</a></td>
         <td>7</td>
       </tr>
       <tr>
@@ -126,7 +126,7 @@ aren't included in the table because they don't affect your score.
         <td>7</td>
       </tr>
       <tr>
-        <td><a href="https://dequeuniversity.com/rules/axe/4.7/definition-list"><code>&#60;dl&#62;</code>'s contain only properly-ordered <code>&#60;dt&#62;</code> and <code>&#60;dd&#62;</code> groups, <code>&#60;script&#62;</code>, <code>&#60;template&#62;</code> or <code>&#60;div&#62;</code> elements.</a></td>
+        <td><a href="https://dequeuniversity.com/rules/axe/4.7/definition-list"><code>&#60;dl&#62;</code>'s contain only properly-ordered <code>&#60;dt&#62;</code> and <code>&#60;dd&#62;</code> groups, <code>&#60;script&#62;</code>, <code>&#60;template&#62;</code> or <code>&#60;div&#62;</code> elements</a></td>
         <td>7</td>
       </tr>
       <tr>
@@ -166,7 +166,7 @@ aren't included in the table because they don't affect your score.
         <td>7</td>
       </tr>
       <tr>
-        <td><a href="https://dequeuniversity.com/rules/axe/4.7/html-xml-lang-mismatch"><code>&#60;html&#62;</code> element has an <code>[xml:lang]</code> attribute with the same base languge as the <code>[lang]</code> attribute.</a></td>
+        <td><a href="https://dequeuniversity.com/rules/axe/4.7/html-xml-lang-mismatch"><code>&#60;html&#62;</code> element has an <code>[xml:lang]</code> attribute with the same base languge as the <code>[lang]</code> attribute</a></td>
         <td>3</td>
       </tr>
       <tr>
@@ -178,15 +178,15 @@ aren't included in the table because they don't affect your score.
         <td>1</td>
       </tr>
       <tr>
-        <td><a href="https://dequeuniversity.com/rules/axe/4.7/input-button-name">Input buttons have discernable text</a></td>
+        <td><a href="https://dequeuniversity.com/rules/axe/4.7/input-button-name">Input buttons have discernible text</a></td>
         <td>10</td>
       </tr>
       <tr>
-        <td><a href="https://dequeuniversity.com/rules/axe/4.7/input-image-alt"><code>&#60;input type="image"&#62;</code> elements have <code>[alt]</code> text.</a></td>
+        <td><a href="https://dequeuniversity.com/rules/axe/4.7/input-image-alt"><code>&#60;input type="image"&#62;</code> elements have <code>[alt]</code> text</a></td>
         <td>10</td>
       </tr>
       <tr>
-        <td><a href="https://dequeuniversity.com/rules/axe/4.7/label-content-name-mismatch">Elements with visible text labels have matching accessible names.</a></td>
+        <td><a href="https://dequeuniversity.com/rules/axe/4.7/label-content-name-mismatch">Elements with visible text labels have matching accessible names</a></td>
         <td>7</td>
       </tr>
       <tr>
@@ -194,7 +194,7 @@ aren't included in the table because they don't affect your score.
         <td>7</td>
       </tr>
       <tr>
-        <td><a href="https://dequeuniversity.com/rules/axe/4.7/link-in-text-block">Links are distinguishable without relying on color.</a></td>
+        <td><a href="https://dequeuniversity.com/rules/axe/4.7/link-in-text-block">Links are distinguishable without relying on color</a></td>
         <td>7</td>
       </tr>
       <tr>
@@ -202,7 +202,7 @@ aren't included in the table because they don't affect your score.
         <td>7</td>
       </tr>
       <tr>
-        <td><a href="https://dequeuniversity.com/rules/axe/4.7/list">Lists contain only <code>&#60;li&#62;</code> elements and script supporting elements (<code>&#60;script&#62;</code> and <code>&#60;template&#62;</code>).</a></td>
+        <td><a href="https://dequeuniversity.com/rules/axe/4.7/list">Lists contain only <code>&#60;li&#62;</code> elements and script supporting elements (<code>&#60;script&#62;</code> and <code>&#60;template&#62;</code>)</a></td>
         <td>7</td>
       </tr>
       <tr>
@@ -214,7 +214,7 @@ aren't included in the table because they don't affect your score.
         <td>10</td>
       </tr>
       <tr>
-        <td><a href="https://dequeuniversity.com/rules/axe/4.7/meta-viewport"><code>[user-scalable="no"]</code> is not used in the <code>&#60;meta name="viewport"&#62;</code> element and the <code>[maximum-scale]</code> attribute is not less than 5.</a></td>
+        <td><a href="https://dequeuniversity.com/rules/axe/4.7/meta-viewport"><code>[user-scalable="no"]</code> is not used in the <code>&#60;meta name="viewport"&#62;</code> element and the <code>[maximum-scale]</code> attribute is not less than 5</a></td>
         <td>10</td>
       </tr>
       <tr>
@@ -222,7 +222,7 @@ aren't included in the table because they don't affect your score.
         <td>7</td>
       </tr>
       <tr>
-        <td><a href="https://dequeuniversity.com/rules/axe/4.7/select-name">Select elements have associated label elements.</a></td>
+        <td><a href="https://dequeuniversity.com/rules/axe/4.7/select-name">Select elements have associated label elements</a></td>
         <td>7</td>
       </tr>
       <tr>
@@ -234,23 +234,23 @@ aren't included in the table because they don't affect your score.
         <td>7</td>
       </tr>
       <tr>
-        <td><a href="https://dequeuniversity.com/rules/axe/4.7/table-duplicate-name">Tables have different content in the summary attribute and <code>&#60;caption&#62;</code>.</a></td>
+        <td><a href="https://dequeuniversity.com/rules/axe/4.7/table-duplicate-name">Tables have different content in the summary attribute and <code>&#60;caption&#62;</code></a></td>
         <td>1</td>
       </tr>
       <tr>
-        <td><a href="https://dequeuniversity.com/rules/axe/4.7/table-fake-caption">Tables use <code>&#60;caption&#62;</code> instead of cells with the <code>[colspan]</code> attribute to indicate a caption.</a></td>
+        <td><a href="https://dequeuniversity.com/rules/axe/4.7/table-fake-caption">Tables use <code>&#60;caption&#62;</code> instead of cells with the <code>[colspan]</code> attribute to indicate a caption</a></td>
         <td>7</td>
       </tr>
       <tr>
-        <td><a href="https://dequeuniversity.com/rules/axe/4.7/td-has-header"><code>&#60;td&#62;</code> elements in a large <code>&#60;table&#62;</code> have one or more table headers.</a></td>
+        <td><a href="https://dequeuniversity.com/rules/axe/4.7/td-has-header"><code>&#60;td&#62;</code> elements in a large <code>&#60;table&#62;</code> have one or more table headers</a></td>
         <td>10</td>
       </tr>
       <tr>
-        <td><a href="https://dequeuniversity.com/rules/axe/4.7/td-headers-attr">Cells in a <code>&#60;table&#62;</code> element that use the <code>[headers]</code> attribute refer to table cells within the same table.</a></td>
+        <td><a href="https://dequeuniversity.com/rules/axe/4.7/td-headers-attr">Cells in a <code>&#60;table&#62;</code> element that use the <code>[headers]</code> attribute refer to table cells within the same table</a></td>
         <td>7</td>
       </tr>
       <tr>
-        <td><a href="https://dequeuniversity.com/rules/axe/4.7/th-has-data-cells"><code>&#60;th&#62;</code> elements and elements with <code>[role="columnheader"/"rowheader"]</code> have data cells they describe.</a></td>
+        <td><a href="https://dequeuniversity.com/rules/axe/4.7/th-has-data-cells"><code>&#60;th&#62;</code> elements and elements with <code>[role="columnheader"/"rowheader"]</code> have data cells they describe</a></td>
         <td>7</td>
       </tr>
       <tr>
