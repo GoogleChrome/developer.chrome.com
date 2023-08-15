@@ -24,7 +24,7 @@ tags:
 
 ## Network panel improvements {: #network }
 
-### Override web content locally {: #overrides }
+### Override web content locally even faster {: #overrides }
 
 The [local overrides](/docs/devtools/overrides/) feature is now streamlined, so you can easily mock response headers and web content of remote resources from the **Network** panel without access to them.
 
@@ -179,9 +179,9 @@ To surface relevant issues, the **Issues** panel now has the {% Img src="image/N
 
 Chromium issues: [1458839](https://crbug.com/1458839), [1462693](https://crbug.com/1462693), [1466310](https://crbug.com/1466310).
 
-## New rendering simulation: `prefers-reduced-transparency` {: #reduced-transparency }
+## New rendering emulation: `prefers-reduced-transparency` {: #reduced-transparency }
 
-Your website users may start enabling the new experimental [`prefers-reduced-transparency` CSS media feature](https://developer.mozilla.org/docs/Web/CSS/@media/prefers-reduced-transparency) on their devices to indicate their preference to reduce transparent effects. You might consider taking this preference into account to increase your website's accessibility. To help you, the **Rendering** drawer tab can now simulate the `prefers-reduced-transparency: reduce` setting, so you can prototype a solution and test how your website behaves in this case.
+Your website users may start enabling the new experimental [`prefers-reduced-transparency` CSS media feature](https://developer.mozilla.org/docs/Web/CSS/@media/prefers-reduced-transparency) on their devices to indicate their preference to reduce transparent effects. You might consider taking this preference into account to increase your website's accessibility. To help you, the **Rendering** drawer tab can now emulate the `prefers-reduced-transparency: reduce` setting, so you can prototype a solution and test how your website behaves in this case.
 
 To test [this feature](https://chromestatus.com/feature/5191066147356672) in Chrome, enable **Experimental Web Platform features** in `chrome://flags`.
 

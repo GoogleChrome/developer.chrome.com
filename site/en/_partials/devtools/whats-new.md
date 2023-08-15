@@ -4,6 +4,28 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 
 {# $content #}
 
+### Chrome 117 {: #chrome117 }
+
+* [Network panel improvements](/blog/new-in-devtools-117/#network)
+* [Override web content locally even faster](/blog/new-in-devtools-117/#overrides)
+* [Override the content of XHR and fetch requests](/blog/new-in-devtools-117/#xhr-fetch)
+* [Hide Chrome extension requests](/blog/new-in-devtools-117/#hide-extension-requests)
+* [Human-readable HTTP status codes](/blog/new-in-devtools-117/#status-codes)
+* [Pretty-print responses for JSON subtypes](/blog/new-in-devtools-117/#pretty-json-response)
+* [Performance panel improvements](/blog/new-in-devtools-117/#performance)
+* [See the changes in fetch priority for network events](/blog/new-in-devtools-117/#fetch-priority)
+* [Performance settings automatically hide when you start the recording](/blog/new-in-devtools-117/#perf-settings)
+* [New colors](/blog/new-in-devtools-117/#colors)
+* [Sources settings enabled by default: Code folding and automatic file reveal](/blog/new-in-devtools-117/#sources)
+* [Improved debugging of third-party cookie issues](/blog/new-in-devtools-117/#third-party-cookies)
+* [New rendering emulation: prefers-reduced-transparency](/blog/new-in-devtools-117/#reduced-transparency)
+* [Lighthouse 10.4.0](/blog/new-in-devtools-117/#lighthouse)
+* [New experimental features](/blog/new-in-devtools-117/#experimental)
+* [Debug preloading in the Application panel](/blog/new-in-devtools-117/#preloading)
+* [Enhanced Protocol monitor](/blog/new-in-devtools-117/#protocol-monitor)
+* [The C/C++ WebAssembly debugging extension for DevTools is now open source](/blog/new-in-devtools-117/#debug-cpp)
+* [Miscellaneous highlights](/blog/new-in-devtools-117/#misc)
+
 ### Chrome 116 {: #chrome116 }
 
 * [Improved debugging of missing stylesheets](/blog/new-in-devtools-116/#stylesheets)
