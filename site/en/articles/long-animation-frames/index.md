@@ -6,6 +6,7 @@ description: |
   Learn about the Long Animation Frames API (LoAF) proposal which is the next iteration of the Long Tasks API and allows measuring frame update delays with attribution
 authors:
   - tunetheweb
+  - nrosenthal
 date: 2023-08-15
 ##updated: 2023-08-??
 hero: image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/uYTX08MvUTagNuuo4rrn.jpg
@@ -161,6 +162,16 @@ As can be seen, this gives an unprecedented amount of data for websites to be ab
 The Long Animation Frames API is available in Chrome behind the Experimental Web Platform Features flag and can be enabled at: `chrome://flags/#enable-experimental-web-platform-features` for developers wishing to experiment with this API.
 
 This feature is also [entering an origin trial from Chrome 116](/origintrials/#/view_trial/3935020174414970881), which allows developers to enable the feature for visitors to their sites to collect data from real users. See [Get started with origin trials](/en/docs/web-platform/origin-trials/) for more information on origin trials.
+
+## Testing for Long Animation Frame Support
+
+You can use the following code to test if the API is supported:
+
+```js
+if (PerformanceObserver.supportedEntryTypes.includes('long-animation-frame')) {
+  // Monitor LoAFs
+}
+```
 
 ## Using the Long Animation Frames API in the field
 

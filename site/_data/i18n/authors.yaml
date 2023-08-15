@@ -1521,3 +1521,8 @@ hemeryar:
     en: 'Arthur Hemery'
   description:
     en: 'Software Engineer, Google'
+nrosenthal:
+  title:
+    en: 'Noam Rosenthal'
+  description:
+    en: 'Software engineer at Google working on web performance.'
