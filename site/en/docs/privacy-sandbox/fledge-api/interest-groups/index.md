@@ -491,7 +491,7 @@ From a tactical perspective, you may consider the following:
 
 - To get a new ad to start showing, just start bidding with it in cases where you want it to show. There is nothing additional that you need to do.
 
-- You can have a fallback ad that you use when new ads are not k-anon. There is some risk of your fallback ad itself not being k-anon, so you could consider sometimes just bidding with the fallback ad in the first place. Perhaps do this 1% of the time, for example, if that is a good level to ensure that you expect the fallback to stay over threshold.
+- You can have a fallback ad that you use when new ads are not 𝑘-anon. There is some risk of your fallback ad itself not being 𝑘-anon, so you could consider sometimes just bidding with the fallback ad in the first place. Perhaps do this 1% of the time, for example, if that is a good level to ensure that you expect the fallback to stay over threshold.
 
 There has been some recent discussion of other ways things could work, so if you have some use case for which this mechanism would pose a problem, please continue engaging in the public conversation about ways in which the API could improve.
 {% endDetails %}
