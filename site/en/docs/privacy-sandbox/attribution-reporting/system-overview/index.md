@@ -139,7 +139,8 @@ Imagine a publisher site that displays ads. Each advertiser or ad tech provider 
     For a view:
 
     ```javascript
-    <img href="https://advertiser.example/landing" attributionsrc="https://adtech.example/register-source?..."/>
+    <img href="https://advertiser.example/landing" 
+      attributionsrc="https://adtech.example/register-source?..."/>
     ```
     Alternatively, instead of HTML elements, JavaScript calls can be used.
 
