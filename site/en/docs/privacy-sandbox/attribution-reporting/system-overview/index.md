@@ -125,7 +125,7 @@ While this API is in testing, your code must confirm the API is available and se
 
 Imagine a publisher site that displays ads. Each advertiser or ad tech provider wants to learn about interactions with their ads, and attribute conversions. Reports—both event-level and aggregatable—would be generated as follows:
 
-1.  On the publisher site, an ad element (`<a>` or `<img>` tag) is configured with a special attribute `attributionsrc`. Its value is a URL, for example `https://adtech.example/register-source/ad_id=...`
+1.  On the publisher's site, an ad element (`<a>` or `<img>` tag) is configured with a special attribute `attributionsrc`. Its value is a URL, for example `https://adtech.example/register-source/ad_id=...`
 
     For a click:
 
