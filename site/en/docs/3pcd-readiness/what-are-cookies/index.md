@@ -7,11 +7,10 @@ description: ''
 date: 2023-07-26
 updated: 2023-07-26
 authors:
-  - nmichell
   - albertomedina
 ---
 
-## HTTP is stateless 
+## HTTP is stateless
 
 HTTP is a stateless protocol. That means that no information, or state, is saved anywhere between individual requests; each request from a client to a server is treated in isolation. This property of HTTP has played a crucial role in the design and functioning of web applications in terms of simplicity, scalability, and efficient resource utilization.
 

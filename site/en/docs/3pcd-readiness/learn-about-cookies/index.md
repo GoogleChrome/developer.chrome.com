@@ -1,13 +1,12 @@
 ---
 layout: layouts/doc-post.njk
-title: Learn about cookies
+title: Learn about Privacy Sandbox and Cookies
 subhead: >
-  What are cookies? How do they work?
+  What are cookies? How do they work? What will change?
 description: ''
 date: 2023-07-26
 updated: 2023-07-26
 authors:
-  - nmichell
   - albertomedina
 ---
 

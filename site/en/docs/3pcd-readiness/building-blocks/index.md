@@ -7,7 +7,6 @@ description: ''
 date: 2023-07-26
 updated: 2023-07-26
 authors:
-  - nmichell
   - albertomedina
 ---
 
