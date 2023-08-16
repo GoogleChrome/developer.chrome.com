@@ -51,7 +51,7 @@ Javascript:
 Document.cookie="__Host-name=value; Secure; Path=/; SameSite=None; Partitioned;"
 ```
 
-A partitioned third-party cookie is tied to the top-level site where it's initially set and cannot be accessed from elsewhere. This way cookies set by a third-party service can only be read within the context of the top-level site where they were initially set.
+A partitioned third-party cookie is tied to the top-level site where it's initially set and cannot be accessed from elsewhere. This way cookies set by a third-party service can only be read within the same embedded context of the top-level site where they were initially set.
 
 {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/PODInBIXZrgGeUoFhipj.png", alt="With cookie partitioning, a third-party service that sets a cookie when embedded in one top-level site cannot access that same cookie when the service is embedded in other top-level sites.", width="800", height="443" %}
 
