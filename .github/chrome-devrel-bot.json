@@ -26,18 +26,19 @@
         "users" : [
           "PaulKinlan",
           "matthiasrohmer",
-          "devnook"
+          "devnook",
+          "tunetheweb"
         ],
         "paths" : [
-          "*.js",
-          "*.json",
-          "*.css",
-          "*.scss",
-          "*.html",
-          "*.htm",
-          "*.njk",
-          "*.toml",
-          "*.sh"
+          "**/*.js",
+          "**/*.json",
+          "**/*.css",
+          "**/*.scss",
+          "**/*.html",
+          "**/*.htm",
+          "**/*.njk",
+          "**/*.toml",
+          "**/*.sh"
         ]
       },
       {
