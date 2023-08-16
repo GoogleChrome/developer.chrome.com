@@ -38,8 +38,6 @@ If you have local overrides set up but disabled, DevTools enables them. If you h
 
 Once the overrides are set up, DevTools then takes you to **Sources** > **Overrides** > **Editor** to let you [override web content](/docs/devtools/overrides/#make-changes).
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/jkXb9Wznaob6tutUTjeJ.png", alt="Overriding web content in Sources.", width="800", height="484" %}
-
 Note that the overridden resources are indicated with {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/s81rU6SgdmbseeBDGbPl.png", alt="Saved.", width="17", height="20" %} in the **Network** panel. Hover over the icon to see what's overridden.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hekOD6lUKKXipZ6qFT3D.png", alt="An override icon next to a request in the Network panel.", width="800", height="493" %}
@@ -64,7 +62,7 @@ Chromium issues: [792101](https://crbug.com/792101), [1469776](https://crbug.com
 
 ### Hide Chrome extension requests {: #hide-extension-requests }
 
-To help you focus on the code you author and filter out irrelevant requests sent by extensions you might have installed in Chrome, the **Network** panel gets a new filter. This filter is disabled by default.
+To help you focus on the code you author and filter out irrelevant requests sent by extensions you might have installed in Chrome, the **Network** panel gets a new filter.
 
 To filter out all the requests sent to `chrome-extension://` URLs, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Hide extension URLs**.
 
@@ -118,29 +116,9 @@ Additionally, you can find the same information in the **Priority** column of th
 
 Chromium issues: [1463901](https://crbug.com/1463901), [1380964](https://crbug.com/1380964).
 
-### Performance settings automatically hide when you start the recording {: #perf-settings }
-
-To maximize space, the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Capture Settings**](/docs/devtools/performance/reference/#settings) pane now hides when you start the recording because these settings configure the recording and aren't useful once it's started.
-
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/92972cb03ef67a87fa803017b118cdaa596e975e #}
-
-Chromium issue: [1455498](https://crbug.com/1455498).
-
-## New colors {: #colors }
-
-You might have already noticed that DevTools now has a refreshed look that better aligns with Chrome. One contributing factor is the new color scheme.
-
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/dhvFP34kcqgGfHseGGWL.png", alt="The before and after applying new colors.", width="800", height="440" %}
-
-This version (117) brings more UX improvements to DevTools, both already mentioned and listed further, including a number of improved UI texts.
-
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/bde284efe828595e6ecc42b55dd582b8ba2ab0ed #}
-
-Chromium issue: [1456677](https://crbug.com/1456677).
-
 ## Sources settings enabled by default: Code folding and automatic file reveal  {: #sources }
 
-The {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Preferences** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Code folding**](http://localhost:8080/docs/devtools/settings/preferences/#code-folding) option is now enabled by default. This option lets you fold code block.
+The {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Preferences** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Code folding**](http://localhost:8080/docs/devtools/settings/preferences/#code-folding) option is now enabled by default. This option lets you fold code blocks.
 
 To fold a code block, hover over the line number next to the start of the block and click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/996xap2zAEHX564M0MBF.svg", alt="Collapse.", width="24", height="24" %} collapse icon. Click `{...}` to expand the block again.
 
@@ -159,7 +137,7 @@ Chromium issues: [1459193](https://crbug.com/1459193), [1336599](https://crbug.c
 
 ## Improved debugging of third-party cookie issues {: #third-party-cookies }
 
-In an effort to help build a more private web and in parallel with [updates by other browsers](/docs/privacy-sandbox/chips/#why-its-important-to-opt-into-cookie-partitioning), Chrome [introduced an initiative](https://blog.google/products/chrome/building-a-more-private-web/) called [Privacy Sandbox](https://privacysandbox.com/). This initiative fundamentally enhances privacy on the web and can sustain a healthy, ad-supported web in a way that will render third-party cookies obsolete. Privacy Sandbox has a [gradual phaseout timeline](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline) to let you adapt to changes comfortably.
+In an effort to help build a [more private web](https://blog.google/products/chrome/building-a-more-private-web/) and in parallel with [updates by other browsers](/docs/privacy-sandbox/chips/#why-its-important-to-opt-into-cookie-partitioning), Chrome introduced the [Privacy Sandbox](https://privacysandbox.com/) initiative. This initiative fundamentally enhances privacy on the web and can sustain a healthy, ad-supported web in a way that will render third-party cookies obsolete. Privacy Sandbox has a [gradual phaseout timeline](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline) to let you adapt to changes comfortably.
 
 You can already test how Chrome behaves *after* the third-party cookie phaseout. To do this, run [Chrome from the command line](https://www.chromium.org/developers/how-tos/run-chromium-with-flags/) with the `--test-third-party-cookies-phaseout` flag.
 
@@ -167,9 +145,9 @@ To test this, inspect cookies on [this demo page](https://samesite-sandbox.glitc
 
 The {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Blocked response cookies** filter in the **Network** panel is rephrased to make it clear that it shows only the blocked *response* cookies.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/anskbEwDVG6vvXKqW5TA.png", alt="The checkbox is enabled and shows only the requests with blocked response cookies.", width="800", height="576" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Q22c0w5K1d7D6W1S1CXO.png", alt="The checkbox is enabled and shows only the requests with blocked response cookies.", width="800", height="535" %}
 
-To surface relevant issues, the **Issues** panel now has the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Include third-party cookie issues** checkbox enabled by default and reports a breaking change warning about the upcoming phaseout.
+To surface relevant issues, the **Issues** tab now has the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Include third-party cookie issues** checkbox enabled by default and reports a breaking change warning about the upcoming phaseout.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/b0NY6UuztBi6HV1mGXNP.png", alt="The breaking change warning in the Issues tab.", width="800", height="704" %}
 
@@ -179,21 +157,33 @@ To surface relevant issues, the **Issues** panel now has the {% Img src="image/N
 
 Chromium issues: [1458839](https://crbug.com/1458839), [1462693](https://crbug.com/1462693), [1466310](https://crbug.com/1466310).
 
-## New rendering emulation: `prefers-reduced-transparency` {: #reduced-transparency }
+## Debug preloading in the Application panel {: #preloading }
 
-Your website users may start enabling the new experimental [`prefers-reduced-transparency` CSS media feature](https://developer.mozilla.org/docs/Web/CSS/@media/prefers-reduced-transparency) on their devices to indicate their preference to reduce transparent effects. You might consider taking this preference into account to increase your website's accessibility. To help you, the **Rendering** drawer tab can now emulate the `prefers-reduced-transparency: reduce` setting, so you can prototype a solution and test how your website behaves in this case.
+The Chrome team is [bringing back full prerendering](/blog/prerender-pages/) of future pages that a user is likely to navigate to. To let you debug this, DevTools adds the **Preloading** section to the **Application** panel. The new prefetching and prerendering (collectively known as preloading) uses Speculation Rules is unrelated to the [legacy link-based resource hint versions](/blog/prerender-pages/#a-brief-history-of-prerender).
 
-To test [this feature](https://chromestatus.com/feature/5191066147356672) in Chrome, enable **Experimental Web Platform features** in `chrome://flags`.
+On [this demo page](https://prerender-demos.glitch.me/), in the **Application** > **Preloading** section, you can inspect:
 
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/Xh60t9y0KnAIdwoUnbX5.mp4", autoplay="false", loop="true", muted="true", controls="true", class="screenshot", width="800", height="533" %}
+- **Speculation Rules** that lists all the rule sets found on the current page.
+- **Preloads** that lists all the prefetched and prerendered URLs from the rule sets.
+- **This Page** that lists the prerendered status of the current page.
 
-{% Aside %}
-The DevTools team expresses gratitude to [Luke Warlow](https://chromium.googlesource.com/devtools/devtools-frontend/+/8f2118f91bab0707949706421727ca423d53e111) for landing this feature.
-{% endAside %}
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/YyxptgchqoTk8BQmXKO3.mp4", autoplay="false", loop="true", muted="true", controls="true", class="screenshot", width="800", height="592" %}
 
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/8f2118f91bab0707949706421727ca423d53e111 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/4e07e2023f0c99a2c2b31c87024d94dc820193de #}
 
-Chromium issue: [1424879](https://crbug.com/1424879).
+Chromium issue: [1454724](https://crbug.com/1454724).
+
+## New colors {: #colors }
+
+You might have already noticed that DevTools now has a refreshed look that better aligns with Chrome. One contributing factor is the new color scheme.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/dhvFP34kcqgGfHseGGWL.png", alt="The before and after applying new colors.", width="800", height="440" %}
+
+This version (117) brings more UX improvements to DevTools, both already mentioned and listed further, including a number of improved UI texts.
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/bde284efe828595e6ecc42b55dd582b8ba2ab0ed #}
+
+Chromium issue: [1456677](https://crbug.com/1456677).
 
 ## Lighthouse 10.4.0 {: #lighthouse }
 
@@ -216,26 +206,6 @@ Chromium issue: [772558](https://crbug.com/772558).
 
 ## New experimental features {: #experimental }
 
-### Debug preloading in the Application panel {: #preloading }
-
-The Chrome team is [bringing back full prerendering](/blog/prerender-pages/) of future pages that a user is likely to navigate to. To let you debug this, DevTools adds the **Preloading** section to the **Application** panel. The new prefetching and prerendering (collectively known as preloading) uses Speculation Rules is unrelated to the [legacy link-based resource hint versions](/blog/prerender-pages/#a-brief-history-of-prerender).
-
-{% Aside %}
-To enable this feature, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Experiments** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable Preloading Status Panel in Application panel**.
-{% endAside %}
-
-On [this demo page](https://prerender-demos.glitch.me/), in the **Application** > **Preloading** section, you can inspect:
-
-- **Speculation Rules** that lists all the rule sets found on the current page.
-- **Preloads** that lists all the prefetched and prerendered URLs from the rule sets.
-- **This Page** that lists the prerendered status of the current page.
-
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/YyxptgchqoTk8BQmXKO3.mp4", autoplay="false", loop="true", muted="true", controls="true", class="screenshot", width="800", height="592" %}
-
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/4e07e2023f0c99a2c2b31c87024d94dc820193de #}
-
-Chromium issue: [1454724](https://crbug.com/1454724).
-
 ### Enhanced Protocol monitor {: #protocol-monitor }
 
 Chrome DevTools uses the [Chrome DevTools Protocol (CDP)](https://chromedevtools.github.io/devtools-protocol/) to instrument, inspect, debug, and profile Chrome browsers. If you are a Chromium or DevTools developer, the **Protocol monitor** provides you with a way to view all the CDP requests and responses made by DevTools and send CDP commands.
@@ -253,6 +223,22 @@ In the bottom right corner of the **Protocol monitor** drawer tab, click {% Img 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/ecbc68611ae1d9db1292b6e7afeda6c481975d8e #}
 
 Chromium issue: [1469345](https://crbug.com/1469345).
+
+### New rendering emulation: `prefers-reduced-transparency` {: #reduced-transparency }
+
+Your website users may start enabling the new experimental [`prefers-reduced-transparency` CSS media feature](https://developer.mozilla.org/docs/Web/CSS/@media/prefers-reduced-transparency) on their devices to indicate their preference to reduce transparent effects. You might consider taking this preference into account to increase your website's accessibility. To help you, the **Rendering** drawer tab can now emulate the `prefers-reduced-transparency: reduce` setting, so you can prototype a solution and test how your website behaves in this case.
+
+To test [this feature](https://chromestatus.com/feature/5191066147356672) in Chrome, enable **Experimental Web Platform features** in `chrome://flags`.
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/Xh60t9y0KnAIdwoUnbX5.mp4", autoplay="false", loop="true", muted="true", controls="true", class="screenshot", width="800", height="533" %}
+
+{% Aside %}
+The DevTools team expresses gratitude to [Luke Warlow](https://chromium.googlesource.com/devtools/devtools-frontend/+/8f2118f91bab0707949706421727ca423d53e111) for landing this feature.
+{% endAside %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/8f2118f91bab0707949706421727ca423d53e111 #}
+
+Chromium issue: [1424879](https://crbug.com/1424879).
 
 ## The C/C++ WebAssembly debugging extension for DevTools is now open source {: #debug-cpp }
 
@@ -273,7 +259,7 @@ These are some noteworthy fixes and improvements in this release:
 - The **Sources** > **Page** tree now does the following, including but not limited to ([1442863](https://crbug.com/1442863)):
   - Greys out folders if all their content is ignore-listed.
   - Colors folders in orange if all their content is from a source map.
-- [**Search**](/docs/devtools/search/) now centers on matching results making it possible to find strings in minified code ([1468875](https://crbug.com/1468875)).
+- **Performance**: [**Capture Settings**](/docs/devtools/performance/reference/#settings) now automatically hide when you start the recording ([1455498](https://crbug.com/1455498)).
 - **Sources** > **Editor** restored the <kbd>Ctrl</kbd> + <kbd>Arrow</kbd> behavior (Win) and <kbd>Opt</kbd> + <kbd>Arrow</kbd> (MacOs) ([1468208](https://crbug.com/1468208)).
 - **Animations** > **Pause all** toggle now keeps its state across page loads ([1446046](https://crbug.com/1446046)).
 - **Application** > **Storage** > **Cache storage** moved to the **Application** > **Storage** > **Cache section** ([1462622](https://crbug.com/1462622)).
