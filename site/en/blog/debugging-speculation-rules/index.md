@@ -275,6 +275,13 @@ Additionally once a prerendered page is activated, by the user navigating to it,
   {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/qb4W4spJ1k7sahsxU8aH.png", alt="Chrome DevTools Preloading This Page pane showing both a successful and failed prerendered page", width="800", height="472" %}
 </figure>
 
+Additionally, [like for prefetches](#unmatched-preloads), when navigating from a page with speculation rules that did not match the current page, the This Page pane, will attempt to show you why the URLs did not match those covered on the previous page’s speculation rules:
+
+<figure>
+  {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/ZfJXbAYqt2BMvmDyvlmy.png", alt="Chrome DevTools This Page pane showing the URL mismatch of the current URL and those covered by the previous page", width="800", height="400" %}
+</figure>
+
+
 ## Conclusion
 
 In this post we have shown the various ways developers can debug prefetch and prerender speculation rules. The team is continuing to work on tooling for speculation rules, and we would love to hear suggestions from the developers as to what other ways would be helpful for debugging this exciting new API. We encourage developers to raise an issue on the [Chrome issue tracker](https://bugs.chromium.org/p/chromium/issues/entry?template=Defect&components=Internals-Preload) for any feature requests or bugs spotted.
