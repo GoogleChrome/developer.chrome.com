@@ -19,7 +19,7 @@ Check this page often to learn about changes to Chrome extensions, extensions do
 
 <p class="color-secondary-text type--caption">Posted on <time>August 11, 2023</time></p>
 
-A requirement for Manifest V3 is that extensions may no longer use remotely-hosted code. Although this has been [part of our migration guide](/docs/extensions/migrating/improve-security/#remove-remote-code) from the beginning, we thought it was worth improving the guidance around this issue. An [addition to the migration gude]() provides more information, describing what's still possible in Manifest V3 and provide more inforamtion on strategies for upgrading.
+A requirement for Manifest V3 is that extensions may no longer use remotely-hosted code. We want to improve the guidance around this issue, and have made [additions to the migration guide](docs/extensions/migrating/improve-security/) to provide more information, describing what's still possible in Manifest V3 and more information on strategies for upgrading.
 
 There is a related addition to the [Troubleshooting Chrome Web Store violations](/docs/webstore/troubleshooting/). A new section describes common reasons that extensions with remotely-hosted code are rejected.
 
