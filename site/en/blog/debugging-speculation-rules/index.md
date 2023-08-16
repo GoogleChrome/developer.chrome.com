@@ -121,7 +121,7 @@ When a navigation happens from a page with speculation rules, that does not resu
 For example, here we navigated to next4.html, but only next.html, next2.html, or next3.html are prefetches so we can see this doesn't quite match any of those three rules.
 
 {% Aside 'warning' %}
-  As this feedback is primarily intended for debugging speculation rules, this URL matching can look a little confusing, when navigating to a completely different page that is not included in speculation rules and is expected to be preloaded:
+  As this feedback is primarily intended for debugging speculation rules, this URL matching can look a little confusing when navigating to a completely different page that is not included in speculation rules and is expected not to be preloaded:
   <figure>
     {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/u8qawIQeCNv8KFsoDxaO.png", alt="Chrome DevTools showing an unmatched URL in the This Page Preloading pane", width="800", height="364" %}
   </figure>
