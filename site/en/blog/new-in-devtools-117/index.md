@@ -143,9 +143,10 @@ In an effort to help build a [more private web](https://blog.google/products/chr
 
 You can already test how Chrome behaves *after* the third-party cookie phaseout. To do this, run [Chrome from the command line](https://www.chromium.org/developers/how-tos/run-chromium-with-flags/) with the `--test-third-party-cookies-phaseout` flag. To learn what this flag does, see [Debugging cookies](/docs/privacy-sandbox/third-party-cookie-phase-out/#debugging-cookies).
 
-Regardless of the way you run Chrome (with or without the flat), the **Issues** tab now does has the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Include third-party cookie issues** checkbox enabled by default and, as a result, reports:
-A breaking change warning about the upcoming phaseout.
-Issues related to third-party cookies. 
+Regardless of the way you run Chrome (with or without the flat), the **Issues** tab now has the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Include third-party cookie issues** checkbox enabled by default and, as a result, reports:
+
+- A breaking change warning about the upcoming phaseout.
+- Issues related to third-party cookies. 
 
 To test this, inspect cookies at [this demo page](https://samesite-sandbox.glitch.me/). 
 
