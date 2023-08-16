@@ -133,7 +133,7 @@ Speculation rules can be added in either the `<head>` or the `<body>` of in the 
 
 ### Debugging speculation rules
 
-Please see the [dedicated post](/blog/debugging-speculation-rules/) on Chrome DevTools features to view and debug speculation rules.
+Please see the [dedicated post on debugging speculation rules](/blog/debugging-speculation-rules/), for new Chrome DevTools features to assist with viewing and debugging this new API.
 
 ### Multiple speculation rules
 
