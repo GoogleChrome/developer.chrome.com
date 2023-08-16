@@ -17,12 +17,12 @@ Starting in Chrome 117, Chrome will proactively flag to users when an extension 
 
 If an issue has been resolved, the notification will be automatically cleared. The notification will not be displayed for an extension which has been [notified of a possible violation][violation-notification] and has been given time to address the issue or appeal.
 
-For most users, they are most likely to encounter this feature in the "Privacy and security" section of the settings page.
+Users are most likely to encounter this feature in the "Privacy and security" section of the settings page.
 
 <figure>
   {% Img src="image/wVNVUJS8Z8O04i1tJKSdsp6nkRQ2/QgVuPAOzxISY05yD7cND.png", alt="Chrome will highlight these extensions in the Privacy and security settings", width="800", height="537", class="screenshot" %}
   <figcaption>
-  Chrome will highlight these extensions in the Privacy and security settings
+  Chrome will highlight these extensions in the "Privacy and security" settings.
   </figcaption>
 </figure>
 
@@ -31,7 +31,7 @@ When clicking "Review", they will be taken to their extensions and given the cho
 <figure>
   {% Img src="image/wVNVUJS8Z8O04i1tJKSdsp6nkRQ2/gd6k7qB6YZNSiU6Bdc4l.png", alt="Two extensions that are no longer present in the Chrome Web Store show on the chrome://extensions page", width="800", height="537", class="screenshot" %}
   <figcaption>
-  Two extensions that are no longer present in the Chrome Web Store show on the chrome://extensions page
+  Two extensions that are no longer present in the Chrome Web Store show on the chrome://extensions page.
   </figcaption>
 </figure>
 
