@@ -12,6 +12,7 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 * [Hide Chrome extension requests](/blog/new-in-devtools-117/#hide-extension-requests)
 * [Human-readable HTTP status codes](/blog/new-in-devtools-117/#status-codes)
 * [Pretty-print responses for JSON subtypes](/blog/new-in-devtools-117/#pretty-json-response)
+
 * [Performance: See the changes in fetch priority for network events](/blog/new-in-devtools-117/#performance)
 * [Sources settings enabled by default: Code folding and automatic file reveal](/blog/new-in-devtools-117/#sources)
 * [Improved debugging of third-party cookie issues](/blog/new-in-devtools-117/#third-party-cookies)
