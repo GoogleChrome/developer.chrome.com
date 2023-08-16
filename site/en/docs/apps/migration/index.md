@@ -11,7 +11,7 @@ authors:
 
 {% Aside 'caution' %}
 
-**Important:** As [previously announced on Chromium Blog][1], we are phasing out support for Chrome Apps in favor of Web Applications. Starting with Chrome 112, Chrome Apps on Windows, Mac and Linux no longer work. Based on feedback from ChromeOS Enterprise and Education customers and developers, Chrome App support for those users on ChromeOS is extended until at least January 2025.
+**Important:** As [previously announced on the Chromium Blog][1], we are phasing out support for Chrome Apps in favor of web applications. From Chrome 112, Chrome Apps on Windows, Mac, and Linux no longer work. Based on feedback from ChromeOS Enterprise and Education customers and developers, Chrome App support for those users on ChromeOS is extended until at least January 2025.
 
 {% endAside %}
 
@@ -23,16 +23,16 @@ There are two primary options to migrate from Chrome Apps: web applications and 
 
 Web applications are the preferred path in most cases. Chrome Extensions can be used in some scenarios for use cases that the web doesn’t support, like running in the background without a user interface.
 
-### Web Applications {: #web-applications }
+### Web applications {: #web-applications }
 
-The preferred alternative for migrating from Chrome Apps is to build a web application. By doing so you can use advanced features, like those of the [web capabilities project][2], which covers most of the use cases that were previously achievable with Chrome App APIs. However, it is not mandatory to use any of these features: the flexibility of the web allows developers to choose the level of complexity that best suits their needs.
+The preferred alternative for migrating from Chrome Apps is to build a web application. By doing so you can use advanced features, like those of the [web capabilities project][2]. The APIs that are part of the Capabilities project now cover most of the use cases that were previously achievable with Chrome App APIs. However, it is not mandatory to use any of these features: the flexibility of the web allows developers to choose the level of complexity that best suits their needs.
 
-#### Advantages of Web Applications {: #advantages-web-applications }
+#### Advantages of web applications {: #advantages-web-applications }
 
 Web applications have some advantages over Chrome Apps:
 
 - **Portability:** Chrome Apps only run in Chrome. Web applications run on most browsers and operating systems, although support for different APIs varies among them.
-Developer experience: Chrome Apps use the same technologies as web applications (HTML, JS, CSS), but some of Chrome Apps advanced capabilities (e..g background pages) are not standard, which require additional knowledge.
+- **Developer experience:** Chrome Apps use the same technologies as web applications (HTML, JavaScript, and CSS), but some of Chrome Apps advanced capabilities (for example, background pages) are not standard, therefore requiring additional knowledge.
 - **Feature set:** Chrome Apps rely on APIs that are no longer maintained or updated with new features. Web applications rely on the open web, which evolves continuously and has access to all the up-to-date APIs.
 - **Installation and updates:** Chrome Apps require manual installation and updating, and sometimes require store reviews. Web applications can be accessed directly from a browser and can optionally be installed. Updates for web applications are instant upon deployment, as soon as the browser fetches the new files.
 - **Support:** While both Chrome Apps and web applications have sizable communities, the web platform has a much larger presence and offers a broader range of development tools, such as frameworks and libraries, to support developers.
@@ -61,26 +61,26 @@ The [Web Capabilities project][8] enables web applications to achieve many use c
 - **Background processing:** Alternatives to the `background` permission include the [Background Sync API][19] and the [Periodic Background Sync API][20].
 - **Copy to clipboard:** The [Async Clipboard API][21] allows you to copy and paste both text and images programmatically.
 
-### Chrome Extensions {: #chrome-extensions }
+### Chrome extensions {: #chrome-extensions }
 
-Web applications are the best alternative to migrate from Chrome Apps, but Chrome Extensions can be an option in some cases. They are also built with web technologies (HTML, CSS, JS) and can be used to add or modify the browser's functionality and customize other web applications for better user experience.
+Web applications are the best alternative to migrate from Chrome Apps, but Chrome extensions can be an option in some cases. Extensions are also built with web technologies (HTML, CSS, and JavaScript) and can be used to add or modify the browser's functionality and customize other web applications for better user experience.
 
 #### Build a standalone extension {: #build-standalone-extension }
 
 Depending on the user experience you want to provide, it might make sense to convert your Chrome App into an extension. For example, you could provide a [browser action][22] button which shows a small popup window for your user interface, or navigates to a page your extension provides. This UI model may be more suitable for apps that do most of their work in the background.
 
-#### Connect an Extension from a web application {: #connect-extension-web-application }
+#### Connect a Chrome extension from a web application {: #connect-extension-web-application }
 
-If your Chrome App offers capabilities that are not available on the web platform, it may be possible to [connect a Chrome Extension with a web application][23] and give it access to [extension APIs][24].The disadvantage of this approach is that users / IT admins have to manage two different parts (web application and companion extensions). It’s important to note that Chrome extensions can't be run on some browsers, you should detect when required functionality isn't available and provide explanatory text for users on these other browsers.
+If your Chrome App offers capabilities that are not available on the web platform, it may be possible to [connect a Chrome extension with a web application][23] and give it access to [extension APIs][24].The disadvantage of this approach is that users / IT admins have to manage two different parts (web application and companion extensions). It’s important to note that Chrome extensions can't be run on some browsers, you should detect when required functionality isn't available and provide explanatory text for users on these other browsers.
 
-### Should I create a Web Application or a Chrome Extension? {: #web-application-or-chrome-extension }
+### Should I create a web application or a Chrome extension? {: #web-application-or-chrome-extension }
 
-A web application is the preferred technology to migrate to from Chrome Apps. There are a few use cases where Chrome Extensions might be a better choice. Before deciding, analyze which option is better according to different factors:
+A web application is the preferred technology to migrate to from Chrome Apps. There are a few use cases where Chrome extensions might be a better choice. Before deciding, analyze which option is better according to different factors:
 
-- **Purpose:** Chrome extensions are primarily used to extend the functionality of the browser. Common use cases include: productivity tools, web page content enrichment, information aggregation, etc. Web applications can have a much wider range of use cases by leveraging the full power of the web.
+- **Purpose:** Chrome extensions are primarily used to extend the functionality of the browser. Common use cases include: productivity tools, web page content enrichment, and information aggregation. Web applications can have a much wider range of use cases by using the full power of the web.
 - **User Experience:** Chrome extensions typically have a more limited user interface and are designed to integrate with the browser. Web applications can have a rich user interface that looks and feels like a native app and it’s highly customizable.
-- **Portability:** Chrome Extensions are Chrome-specific. Some browsers (e.g. [Firefox][25], [Edge][26]) support the same extension APIs as Chrome, but this support is not universal. Web applications are supported by all the browsers (although not all the APIs might be).
-- **Discoverability:** Chrome Extensions need to be installed (e.g. from the Chrome Web Store or via self hosting) and accessed via the browser toolbar. Web applications can be instantly loaded via a URL and accessed from all the browsers. They can optionally be installed but this is not mandatory. 
+- **Portability:** Chrome Extensions are Chrome-specific. Some browsers (for example, [Firefox][25] and [Edge][26]) support the same extension APIs as Chrome, but this support is not universal. Web applications are supported by all the browsers (although not all the APIs might be).
+- **Discoverability:** Chrome Extensions need to be installed (for example, from the Chrome Web Store or via self hosting) and accessed via the browser toolbar. Web applications can be instantly loaded via a URL and accessed from all the browsers. They can optionally be installed but this is not mandatory. 
 - **Feature set:** Chrome Extensions have a deep integration with Chrome, through Chrome APIs. Web applications might be more limited in low-level or system-level tasks. As discussed, it's possible to [call an extension from a web application][27] to have access to extension-only APIs.
 - **Background work:** Chrome extensions can perform background work and run even when the browser window is closed. Web applications, on the other hand, are typically designed to run in the foreground and have more limited background capabilities, mostly used for performance and reliability.
 
@@ -88,24 +88,24 @@ A web application is the preferred technology to migrate to from Chrome Apps. Th
 
 ### Migrating your Chrome Apps
 
-Follow these steps to migrate from a Chrome App to web applications or Chrome Extensions:
+Follow these steps to migrate from a Chrome App to web applications or Chrome extensions:
 
 1. **Scope your app functionality:** In some cases your app will dictate if you must go for a web application or if your only choice is to build a Chrome Extension. In cases where both can suit your needs you have a choice. Check out the [Web Capabilities site][28] and [Chrome Extension API reference][29] to learn more about what each technology has to offer.
-1. **Learn & Build:** Follow the learning resources to know about technologies and get your app up and running. The [PWA training][30] and the [Getting Started Chrome Extension][31] guides are great resources to get started on each of these technologies.
-1. **Test and distribute:** Offer your new app to a smaller percentage of users before a broader rollout to make sure it works well. To distribute them more widely, Web Applications can be accessed and installed from the browser. Chrome Extensions are usually distributed via the Chrome Web Store or self-hosted. Both can be forced installed by admins in managed scenarios.
+1. **Learn and build:** Follow the learning resources to know about technologies and get your app up and running. The [PWA training][30] and the [Getting Started Chrome Extension][31] guides are great resources to get started on each of these technologies.
+1. **Test and distribute:** Offer your new app to a smaller percentage of users before a broader rollout to make sure it works well. To distribute them more widely, web applications can be accessed and installed from the browser. Chrome extensions are usually distributed via the Chrome Web Store or self-hosted. Both can be forced installed by admins in managed scenarios.
 
 ### Migrating your users
 
 Regardless of the technology you have chosen to migrate from Chrome Apps, you need to tell your users to uninstall the current app and guide them to the new experience.
-We recommend updating your app to include a message indicating that it has been discontinued, and that users should visit your website or the Chrome Web Store going forward (see example below). You can also include an "uninstall" button that calls the [`uninstallSelf()`][32] method.
-Starting with Chrome 75, the [`installReplacementWebApp()`][33] method can be used inside of a Chrome App, in response to a button click or other user gesture, to automatically trigger the installation flow for your replacement web application.
+We recommend updating your app to include a message indicating that it has been discontinued, and that users should visit your website or the Chrome Web Store going forward (see the following example). You can also include an "uninstall" button that calls the [`uninstallSelf()`][32] method.
+From Chrome 75, the [`installReplacementWebApp()`][33] method can be used inside of a Chrome App, in response to a button click or other user gesture, to automatically trigger the installation flow for your replacement web application.
 
-{% Img src="image/26V1DWN36MZr3mUo8ChSBlCpzp43/Ci5PDjsTJmh0hp1E5DBr.png",  alt="Google Photos Chrome App replacement", width="598", height="468" %}
+{% Img src="image/26V1DWN36MZr3mUo8ChSBlCpzp43/Ci5PDjsTJmh0hp1E5DBr.png",  alt="Google Photos Chrome App replacement.", width="598", height="468" %}
 
 An additional consideration is to inform Chrome Enterprise browser and ChromeOS Enterprise admins to update their app policies for their organizations. It is common for Enterprise and Education managed users to have their apps and extensions [force-installed via management policy][34].
 Developers should inform admins to update their [ExtensionInstallForcelist policy][35] (used to install Chrome Apps) and replace it with the [WebAppInstallForceList policy][36] with your web app’s URL:
 
-{% Img src="image/26V1DWN36MZr3mUo8ChSBlCpzp43/Dw3v8JgKRxeEQwy9HikV.png", alt="Admin Console Extension and Web App force install policy", width="598", height="468" %}
+{% Img src="image/26V1DWN36MZr3mUo8ChSBlCpzp43/Dw3v8JgKRxeEQwy9HikV.png", alt="Admin Console Extension and Web App force install policy.", width="598", height="468" %}
 
 ## Support
 
