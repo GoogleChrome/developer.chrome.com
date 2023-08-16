@@ -175,7 +175,7 @@ Adding `SameSite=None` will allow your cookie to be sent in third-party contexts
 
 ## Demo
 
-A demo on Glitch will walk you through how partitioned cookies work and how you can inspect them in DevTools.
+This demo will walk you through how partitioned cookies work and how you can inspect them in DevTools.
 
 Site A embeds an iframe from Site B which uses JavaScript to set two cookies: a partitioned and unpartitioned cookie. Site B displays all cookies accessible from that location using [`document.cookie`](https://developer.mozilla.org/docs/Web/API/Document/cookie).
 
