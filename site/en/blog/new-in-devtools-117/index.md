@@ -69,7 +69,9 @@ To filter out all the requests sent to `chrome-extension://` URLs, check {% Img 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/07CwNEuofVPa8jp3LFfm.png", alt="Extension URLs hidden from the requests table.", width="800", height="478" %}
 
 {% Aside 'important' %}
-Additionally, with [ignore-listing enabled by default for extensions](/blog/new-in-devtools-115/#content-script), DevTools now won't attempt to load source maps for extensions, so you won't see the "Failed to load source maps" warnings that aren't related to your code. Moreover, similar warnings caused by *your* code are now shown in an infobar at the bottom of the **Sources** panel instead of the **Console**.
+Additionally, DevTools now won't attempt to load source maps for extensions, so you won't see the "Failed to load source maps" warnings that aren't related to your code.
+
+Moreover, similar warnings caused by *your* code are now shown in an infobar at the bottom of the **Sources** panel instead of the **Console**.
 {% endAside %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/45b4415d1599864a73cab4138ecd3135d8ee79ba #}
@@ -139,21 +141,19 @@ Chromium issues: [1459193](https://crbug.com/1459193), [1336599](https://crbug.c
 
 In an effort to help build a [more private web](https://blog.google/products/chrome/building-a-more-private-web/) and in parallel with [updates by other browsers](/docs/privacy-sandbox/chips/#why-its-important-to-opt-into-cookie-partitioning), Chrome introduced the [Privacy Sandbox](https://privacysandbox.com/) initiative. This initiative fundamentally enhances privacy on the web and can sustain a healthy, ad-supported web in a way that will render third-party cookies obsolete. Privacy Sandbox has a [gradual phaseout timeline](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline) to let you adapt to changes comfortably.
 
-You can already test how Chrome behaves *after* the third-party cookie phaseout. To do this, run [Chrome from the command line](https://www.chromium.org/developers/how-tos/run-chromium-with-flags/) with the `--test-third-party-cookies-phaseout` flag.
+You can already test how Chrome behaves *after* the third-party cookie phaseout. To do this, run [Chrome from the command line](https://www.chromium.org/developers/how-tos/run-chromium-with-flags/) with the `--test-third-party-cookies-phaseout` flag. To learn what this flag does, see [Debugging cookies](/docs/privacy-sandbox/third-party-cookie-phase-out/#debugging-cookies).
 
-To test this, inspect cookies on [this demo page](https://samesite-sandbox.glitch.me/).
+Regardless of the way you run Chrome (with or without the flat), the **Issues** tab now does has the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Include third-party cookie issues** checkbox enabled by default and, as a result, reports:
+A breaking change warning about the upcoming phaseout.
+Issues related to third-party cookies. 
 
-The {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Blocked response cookies** filter in the **Network** panel is rephrased to make it clear that it shows only the blocked *response* cookies.
+To test this, inspect cookies at [this demo page](https://samesite-sandbox.glitch.me/). 
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Q22c0w5K1d7D6W1S1CXO.png", alt="The checkbox is enabled and shows only the requests with blocked response cookies.", width="800", height="535" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/WlT6ntQm5iEGujg8P32c.png", alt="Third-party cookie issues reported in the Issues tab.", width="800", height="439" %}
 
-To surface relevant issues, the **Issues** tab now has the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Include third-party cookie issues** checkbox enabled by default and reports a breaking change warning about the upcoming phaseout.
+Additionally, the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Blocked response cookies** filter in the **Network** panel has been rephrased to make it clear that it shows only the blocked *response* cookies.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/b0NY6UuztBi6HV1mGXNP.png", alt="The breaking change warning in the Issues tab.", width="800", height="704" %}
-
-Even if you run Chrome in a regular way (without the `--test-third-party-cookies-phaseout` flag), the **Issues** tab will now show issues related to third-party cookies.
-
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/fg3gdtiMii4N9mRoZgfU.png", alt="Third-party cookie issue in the Issues tab.", width="800", height="460" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/anskbEwDVG6vvXKqW5TA.png", alt="The checkbox is enabled and shows only the requests with blocked response cookies.", width="800", height="576" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/b9391367907b720b3d270141815b1f49ec39bc6a #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/295a09a976fa964f1618d00c0721912286aa0b75 #}
@@ -235,6 +235,22 @@ These are some noteworthy fixes and improvements in this release:
 
 ## New experimental features {: #experimental }
 
+### New rendering emulation: `prefers-reduced-transparency` {: #reduced-transparency }
+
+Your website users may start enabling the new experimental [`prefers-reduced-transparency` CSS media feature](https://developer.mozilla.org/docs/Web/CSS/@media/prefers-reduced-transparency) on their devices to indicate their preference to reduce transparent effects. You might consider taking this preference into account to increase your website's accessibility. To help you, the **Rendering** drawer tab can now emulate the `prefers-reduced-transparency: reduce` setting, so you can prototype a solution and test how your website behaves in this case.
+
+To test [this feature](https://chromestatus.com/feature/5191066147356672) in Chrome, enable **Experimental Web Platform features** in `chrome://flags`.
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/Xh60t9y0KnAIdwoUnbX5.mp4", autoplay="false", loop="true", muted="true", controls="true", class="screenshot", width="800", height="533" %}
+
+{% Aside %}
+The DevTools team expresses gratitude to [Luke Warlow](https://chromium.googlesource.com/devtools/devtools-frontend/+/8f2118f91bab0707949706421727ca423d53e111) for landing this feature.
+{% endAside %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/8f2118f91bab0707949706421727ca423d53e111 #}
+
+Chromium issue: [1424879](https://crbug.com/1424879).
+
 ### Enhanced Protocol monitor {: #protocol-monitor }
 
 Chrome DevTools uses the [Chrome DevTools Protocol (CDP)](https://chromedevtools.github.io/devtools-protocol/) to instrument, inspect, debug, and profile Chrome browsers. If you are a Chromium or DevTools developer, the **Protocol monitor** provides you with a way to view all the CDP requests and responses made by DevTools and send CDP commands.
@@ -252,22 +268,6 @@ In the bottom right corner of the **Protocol monitor** drawer tab, click {% Img 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/ecbc68611ae1d9db1292b6e7afeda6c481975d8e #}
 
 Chromium issue: [1469345](https://crbug.com/1469345).
-
-### New rendering emulation: `prefers-reduced-transparency` {: #reduced-transparency }
-
-Your website users may start enabling the new experimental [`prefers-reduced-transparency` CSS media feature](https://developer.mozilla.org/docs/Web/CSS/@media/prefers-reduced-transparency) on their devices to indicate their preference to reduce transparent effects. You might consider taking this preference into account to increase your website's accessibility. To help you, the **Rendering** drawer tab can now emulate the `prefers-reduced-transparency: reduce` setting, so you can prototype a solution and test how your website behaves in this case.
-
-To test [this feature](https://chromestatus.com/feature/5191066147356672) in Chrome, enable **Experimental Web Platform features** in `chrome://flags`.
-
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/Xh60t9y0KnAIdwoUnbX5.mp4", autoplay="false", loop="true", muted="true", controls="true", class="screenshot", width="800", height="533" %}
-
-{% Aside %}
-The DevTools team expresses gratitude to [Luke Warlow](https://chromium.googlesource.com/devtools/devtools-frontend/+/8f2118f91bab0707949706421727ca423d53e111) for landing this feature.
-{% endAside %}
-
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/8f2118f91bab0707949706421727ca423d53e111 #}
-
-Chromium issue: [1424879](https://crbug.com/1424879).
 
 <!-- $contentEnd -->
 
