@@ -15,16 +15,15 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 * [Performance panel improvements](/blog/new-in-devtools-117/#performance)
 * [See the changes in fetch priority for network events](/blog/new-in-devtools-117/#fetch-priority)
 * [Performance settings automatically hide when you start the recording](/blog/new-in-devtools-117/#perf-settings)
-* [New colors](/blog/new-in-devtools-117/#colors)
 * [Sources settings enabled by default: Code folding and automatic file reveal](/blog/new-in-devtools-117/#sources)
 * [Improved debugging of third-party cookie issues](/blog/new-in-devtools-117/#third-party-cookies)
-* [New rendering emulation: prefers-reduced-transparency](/blog/new-in-devtools-117/#reduced-transparency)
+* [New colors](/blog/new-in-devtools-117/#colors)
 * [Lighthouse 10.4.0](/blog/new-in-devtools-117/#lighthouse)
-* [New experimental features](/blog/new-in-devtools-117/#experimental)
 * [Debug preloading in the Application panel](/blog/new-in-devtools-117/#preloading)
-* [Enhanced Protocol monitor](/blog/new-in-devtools-117/#protocol-monitor)
 * [The C/C++ WebAssembly debugging extension for DevTools is now open source](/blog/new-in-devtools-117/#debug-cpp)
 * [Miscellaneous highlights](/blog/new-in-devtools-117/#misc)
+* [(Experimental) New rendering emulation: prefers-reduced-transparency](/blog/new-in-devtools-117/#reduced-transparency)
+* [(Experimental) Enhanced Protocol monitor](/blog/new-in-devtools-117/#protocol-monitor)
 
 ### Chrome 116 {: #chrome116 }
 
