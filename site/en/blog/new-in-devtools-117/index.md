@@ -68,8 +68,8 @@ To filter out all the requests sent to `chrome-extension://` URLs, check {% Img 
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/07CwNEuofVPa8jp3LFfm.png", alt="Extension URLs hidden from the requests table.", width="800", height="478" %}
 
-{% Aside %}
-You can also make the **Debugger** skip extension code. See {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [Settings > Ignore List](/docs/devtools/settings/ignore-list/).
+{% Aside 'important' %}
+Additionally, with [ignore-listing enabled by default for extensions](/blog/new-in-devtools-115/#content-script), DevTools now won't attempt to load source maps for extensions, so you won't see the "Failed to load source maps" warnings that aren't related to your code. Moreover, similar warnings caused by *your* code are now shown in an infobar at the bottom of the **Sources** panel instead of the **Console**.
 {% endAside %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/45b4415d1599864a73cab4138ecd3135d8ee79ba #}
@@ -151,6 +151,10 @@ To surface relevant issues, the **Issues** tab now has the {% Img src="image/NJd
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/b0NY6UuztBi6HV1mGXNP.png", alt="The breaking change warning in the Issues tab.", width="800", height="704" %}
 
+Even if you run Chrome in a regular way (without the `--test-third-party-cookies-phaseout` flag), the **Issues** tab will now show issues related to third-party cookies.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/fg3gdtiMii4N9mRoZgfU.png", alt="Third-party cookie issue in the Issues tab.", width="800", height="460" %}
+
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/b9391367907b720b3d270141815b1f49ec39bc6a #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/295a09a976fa964f1618d00c0721912286aa0b75 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/28558f4af329940651fed72b317b9a4b5b5523c5 #}
@@ -171,7 +175,7 @@ On [this demo page](https://prerender-demos.glitch.me/), in the **Application** 
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/4e07e2023f0c99a2c2b31c87024d94dc820193de #}
 
-Chromium issue: [1454724](https://crbug.com/1454724).
+Chromium issue: [1410709](https://crbug.com/1410709).
 
 ## New colors {: #colors }
 
@@ -203,6 +207,31 @@ See also the [full list of changes](https://github.com/GoogleChrome/lighthouse/r
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/c09ba04a1333f99d02cb042d99c84844587466d2 #}
 
 Chromium issue: [772558](https://crbug.com/772558).
+
+## The C/C++ WebAssembly debugging extension for DevTools is now open source {: #debug-cpp }
+
+The [C/C++ WebAssembly debugging extension for DevTools](https://goo.gle/wasm-debugging-extension) is now open source and resides in the [DevTools frontend repository](https://chromium.googlesource.com/devtools/devtools-frontend/+/refs/heads/main/extensions/cxx_debugging/). This extension enables debugging capabilities in DevTools for C++ programs compiled to WebAssembly. For more information, see [Debug C/C++ WebAssembly](/docs/devtools/wasm/).
+
+Learn how to [build, run, and test the extension](https://chromium.googlesource.com/devtools/devtools-frontend/+/refs/heads/main/extensions/cxx_debugging/README.md) and feel free to [contribute](https://chromium.googlesource.com/devtools/devtools-frontend/+/main/docs/workflows.md).
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/32770f2f66f01f8bd7239af447dfd8b9030eda29 #}
+
+Chromium issue: [1410709](https://crbug.com/1410709).
+
+## Miscellaneous highlights {: #misc }
+
+These are some noteworthy fixes and improvements in this release:
+
+- [CSS Nesting](/articles/css-nesting/): The **Elements** panel now shows the entire selector chain for nested children ([1172985](https://crbug.com/1172985)).
+- **Application** > **Manifest** now has a **Window Controls Overlay** section that checks if a `display_override` value is present in the Manifest and provides links to relevant documentation.
+- The **Sources** > **Page** tree now does the following, including but not limited to ([1442863](https://crbug.com/1442863)):
+  - Greys out folders if all their content is ignore-listed.
+  - Colors folders in orange if all their content is from a source map.
+- **Performance**: [**Capture Settings**](/docs/devtools/performance/reference/#settings) now automatically hide when you start the recording ([1455498](https://crbug.com/1455498)).
+- **Sources** > **Editor** restored the <kbd>Ctrl</kbd> + <kbd>Arrow</kbd> behavior (Win) and <kbd>Opt</kbd> + <kbd>Arrow</kbd> (MacOs) ([1468208](https://crbug.com/1468208)).
+- **Animations** > **Pause all** toggle now keeps its state across page loads ([1446046](https://crbug.com/1446046)).
+- **Application** > **Storage** > **Cache storage** moved to the **Application** > **Storage** > **Cache section** ([1462622](https://crbug.com/1462622)).
+- Some UI texts and tooltips are improved: [Hardware concurrency tooltip](https://crbug.com/1456479), [Network filter texts and a main menu option](https://chromium.googlesource.com/devtools/devtools-frontend/+/25f464282874c208ca533c56f9396eaa17891a2c), capitalization in the [Application tree view](https://crbug.com/1464866), [Network > Headers texts](https://crbug.com/1463173), [Sources > Overrides and Filesystem texts](https://crbug.com/1469415).
 
 ## New experimental features {: #experimental }
 
@@ -239,31 +268,6 @@ The DevTools team expresses gratitude to [Luke Warlow](https://chromium.googleso
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/8f2118f91bab0707949706421727ca423d53e111 #}
 
 Chromium issue: [1424879](https://crbug.com/1424879).
-
-## The C/C++ WebAssembly debugging extension for DevTools is now open source {: #debug-cpp }
-
-The [C/C++ WebAssembly debugging extension for DevTools](https://goo.gle/wasm-debugging-extension) is now open source and resides in the [DevTools frontend repository](https://chromium.googlesource.com/devtools/devtools-frontend/+/refs/heads/main/extensions/cxx_debugging/). This extension enables debugging capabilities in DevTools for C++ programs compiled to WebAssembly. For more information, see [Debug C/C++ WebAssembly](/docs/devtools/wasm/).
-
-Learn how to [build, run, and test the extension](https://chromium.googlesource.com/devtools/devtools-frontend/+/refs/heads/main/extensions/cxx_debugging/README.md) and feel free to [contribute](https://chromium.googlesource.com/devtools/devtools-frontend/+/main/docs/workflows.md).
-
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/32770f2f66f01f8bd7239af447dfd8b9030eda29 #}
-
-Chromium issue: [1410709](https://crbug.com/1410709).
-
-## Miscellaneous highlights {: #misc }
-
-These are some noteworthy fixes and improvements in this release:
-
-- [CSS Nesting](/articles/css-nesting/): The **Elements** panel now shows the entire selector chain for nested children ([1172985](https://crbug.com/1172985)).
-- **Application** > **Manifest** now has a **Window Controls Overlay** section that checks if a `display_override` value is present in the Manifest and provides links to relevant documentation.
-- The **Sources** > **Page** tree now does the following, including but not limited to ([1442863](https://crbug.com/1442863)):
-  - Greys out folders if all their content is ignore-listed.
-  - Colors folders in orange if all their content is from a source map.
-- **Performance**: [**Capture Settings**](/docs/devtools/performance/reference/#settings) now automatically hide when you start the recording ([1455498](https://crbug.com/1455498)).
-- **Sources** > **Editor** restored the <kbd>Ctrl</kbd> + <kbd>Arrow</kbd> behavior (Win) and <kbd>Opt</kbd> + <kbd>Arrow</kbd> (MacOs) ([1468208](https://crbug.com/1468208)).
-- **Animations** > **Pause all** toggle now keeps its state across page loads ([1446046](https://crbug.com/1446046)).
-- **Application** > **Storage** > **Cache storage** moved to the **Application** > **Storage** > **Cache section** ([1462622](https://crbug.com/1462622)).
-- Some UI texts and tooltips are improved: [Hardware concurrency tooltip](https://crbug.com/1456479), [Network filter texts and a main menu option](https://chromium.googlesource.com/devtools/devtools-frontend/+/25f464282874c208ca533c56f9396eaa17891a2c), capitalization in the [Application tree view](https://crbug.com/1464866), [Network > Headers texts](https://crbug.com/1463173), [Sources > Overrides and Filesystem texts](https://crbug.com/1469415).
 
 <!-- $contentEnd -->
 
