@@ -5,6 +5,8 @@ layout: "layouts/blog-post.njk"
 authors:
   - oliverdunk
 date: 2023-08-16
+hero: 'image/wVNVUJS8Z8O04i1tJKSdsp6nkRQ2/329ywsqucWkau6asTLR4.jpg'
+alt: Padlocks on a railing.
 tags:
   - extensions-news
 ---
@@ -41,9 +43,9 @@ If you have any feedback, we'd love to hear. Consider posting in the [chromium-e
 
 ---
 
-_Photo by [Vardan Papikyan][unsplash-vardan] on [Unsplash][unsplash]_
+_Photo by [Nicolás Flor][unsplash-credit] on [Unsplash][unsplash]_
   
 [violation-notification]: https://developer.chrome.com/docs/webstore/review-process/#warning
 [mailing-list]: https://groups.google.com/a/chromium.org/g/chromium-extensions
-[unsplash-vardan]: https://unsplash.com/@timberfoster?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
-[unsplash]: https://unsplash.com/photos/lSegRSDBMLw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+[unsplash-credit]: https://unsplash.com/@nicolassflorr?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+[unsplash]: https://unsplash.com/photos/hOWxbQAuC00?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
