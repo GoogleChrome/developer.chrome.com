@@ -29,7 +29,9 @@ There's a lot of "pre-" terms that are easily confused, so let's start with an e
 - **Prefetch**: fetching a resource or document in advance to improve performance for when that is needed. In this post we'll be talking about prefetching documents using the Speculation Rules API, rather than the, similar, but older `<link rel="prefetch"...>` option often used for prefetching subresources.
 - **Prerender**: this goes a step beyond prefetching and actually renders the whole page as if the user had navigated to it, but keeps it in a hidden background renderer process ready to be used when the user actually navigates there. Again, this document is concerned with the newer Speculation Rules API version of this, than the older `<link rel="prerender"...>` option, which no longer does a full prerender.
 - **Preloading**: the collective term for the new prefetch and prerender options triggered by speculation rules.
-- **Preload**: an overloaded term that can refer to a number of technologies and processes including `<link rel="preload"...>` , the [Preload Scanner](https://web.dev/preload-scanner/), and [Service Worker navigation preloads](https://web.dev/navigation-preload/). These items will not be covered here, but the term is included to clearly differentiate those from the "preloading" term above.
+- **Preload**: an overloaded term that can refer to a number of technologies and processes including `<link rel="preload"...>`, the [Preload Scanner](https://web.dev/preload-scanner/), and [Service Worker navigation preloads](https://web.dev/navigation-preload/). These items will not be covered here, but the term is included to clearly differentiate those from the "preloading" term above.
+
+For more details see [this preloading tech landscape](https://docs.google.com/document/d/1FNLyXW0Q5Fi5-kEOtjfOdmtoDxRtUR_wX4dl5Fz9c7o/edit) document.
 
 ## Speculation rules for `prefetch`
 
@@ -49,9 +51,7 @@ Speculation rules can be used to prefetch the next navigation document. For exam
 ```
 
 {% Aside 'important' %}
-
-Prefetch speculation rules only prefetch the document, and not the subresources. This uses fewer resources than a full prerender of a potential next navigation, but also means the subresources need to be fetched and rendered upon navigation.
-
+  Prefetch speculation rules only prefetch the document, and not the subresources. This uses fewer resources than a full prerender of a potential next navigation, but also means the subresources need to be fetched and rendered upon navigation.
 {% endAside %}
 
 Speculation rules are used for navigation prefetches and have some advantages over the older `<link rel="prefetch" href="next.html" as="document">` syntax such as a more expressive API and the results being stored in memory cache rather than the HTTP disk cache.
@@ -81,9 +81,7 @@ A new  **Preloading** section has been added in the **Application** panel of Chr
 </figure>
 
 {% Aside 'important' %}
-
-The **Preloading** section is for working with speculation rules prefetching and prerendering (collectively known as "preloading"). It is unrelated to resource _preloading_ using `<link rel=preload ...>` and resource _prefetching_ using `<link rel=prefetch ...>`.
-
+  The **Preloading** panes are for working with speculation rules prefetching and prerendering (collectively known as "preloading"). These panes cannot be used to debug resource _preloading_ using `<link rel=preload ...>` and resource _prefetching_ using `<link rel=prefetch ...>`.
 {% endAside %}
 
 There are three panes available in this section:
@@ -94,21 +92,17 @@ There are three panes available in this section:
 
 The **Speculation Rules** pane is shown above and we can see this example page has one set of speculation rules for prefetching 3 pages. Two of those prefetches succeeded and one failed. The icon besides the **Rule set** can be clicked to take you to the source of the rule set in the **Elements** panel. Alternatively, the **Status** link can be clicked to take you to the **Preloads** pane filtered to that ruleset.
 
-The **Preloads** pane, which can also be accessed by clicking on the link in the **Status** column, lists all the URLs:
+The **Preloads** pane lists all the target URLs, along with the action (prefetch or prerender), which rule set they came from (as there may be multiple on a page) and the status of each preload:
 
 <figure>
-  {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/Ol6CMxUi4jQ1UN7QYTlS.png", alt="Chrome DevTools Preloads pane showing prefetched URLs", width="800", height="593" %}
+  {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/m5cy4LilaIbGF7vthZl5.png", alt="Chrome DevTools Preloads pane showing prefetched URLs along with their status", width="800", height="593" %}
 </figure>
 
 Above the URLs a drop down can be used to show URLs from all the rule sets or only URLs from a particular rule set. Below that are listed all the URLs. Clicking on a URL gives you more detailed information.
 
 In this screenshot we can see the failure reason for the `next3.html `page (which does not exist and so is returning a 404 which is a non-2xx HTTP status code).
 
-The final pane shows a **Preloading status** to show whether a prefetch or prerender was used for this page or not:
-
-<figure>
-  {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/yVtfNhOiYuJRoLoiILDX.png", alt="Chrome DevTools This Page pane in the Preloading section showing the page was not preloaded", width="800", height="488" %}
-</figure>
+The final pane, **This Page**, shows a **Preloading status** to show whether a prefetch or prerender was used for this page or not.
 
 For a prefetched page, when that page is navigated to, you should see a successful message:
 
@@ -116,12 +110,28 @@ For a prefetched page, when that page is navigated to, you should see a successf
   {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/z54tJ1S5O64GYsJghGBe.png", alt="Chrome DevTools This Page pane showing a successful prefetch", width="800", height="309" %}
 </figure>
 
+#### Unmatched preloads
+
+When a navigation happens from a page with speculation rules, that does not result in a preload, an additional section of the pane will show more details of why the URL did not match any of the preloaded URLs, which is useful for spotting typos in your speculation rules.
+
+<figure>
+  {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/suepp8Pn5xNr9oNYeEkX.png", alt="Chrome DevTools This Page pane, showing how the current URL did not match any of the URLs in the previous page's speculation rules", width="800", height="364" %}
+</figure>
+
+For example, here we navigated to next4.html, but only next.html, next2.html, or next3.html are prefetches so we can see this doesn't quite match any of those three rules.
+
+{% Aside 'warning' %}
+  As this feedback is primarily intended for debugging speculation rules, this URL matching can look a little confusing, when navigating to a completely different page that is not included in speculation rules and is expected to be preloaded:
+  <figure>
+    {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/u8qawIQeCNv8KFsoDxaO.png", alt="Chrome DevTools showing an unmatched URL in the This Page Preloading pane", width="800", height="364" %}
+  </figure>
+{% endAside %}
+
 The **Preloading** panes are very useful for debugging the speculation rules themselves, and finding any syntax errors in the JSON.
 
 As for the prefetches themselves, the **Network** panel is likely a more familiar place and will get more details. For the prefetch failure example, you can see the 404 for the prefetch in the **Network** panel:
 
 However, the **Preloading** panes become much more useful for prerendering speculation rules, which we'll dive into next.
-
 
 ## Speculation rules for `prerender`
 
@@ -144,7 +154,6 @@ These trigger a full load and render of the page (subject to certain restriction
 
 Unlike prefetches however, these are not available to be seen in the network tab as these are fetched and rendered in a separate rendering process in Chrome. This makes the **Preloading** panes more important to debug prerender speculation rules.
 
-
 ### Debugging `prerender` with the Preloading panes
 
 The same **Preloading** section introduced above, can be used for prerender speculation rules. We'll use a similar demo page, that attempts to prerender, instead of prefetching the three pages:
@@ -157,7 +166,7 @@ Here we see again, one of the 3 preloads failed to prerender and developers can 
 
 We are currently experimenting with [document speculation rules](https://github.com/WICG/nav-speculation/blob/main/chrome-2023q1-experiment-overview.md#automatic-link-finding) (available as [an origin trial](/origintrials/#/view_trial/705939241590325249)), which, rather than listing a specific set of URLs, allows the browser to pick these up from same origin links on the page:
 
-```js
+```html
 <script type="speculationrules">
 {
   "prerender": [
@@ -206,7 +215,6 @@ Chrome currently [limits a page to 10 prerenders](https://bugs.chromium.org/p/ch
   {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/hNWZE6yNtYWtjfkffUjL.png", alt="Chrome DevTools Preloads pane with failed preloads showing", width="800", height="465" %}
 </figure>
 
-
 ### Debugging `prerender` with the other DevTools panels
 
 Unlike prefetches, pages that have been prerendered will not show up in the current rendering processes in DevTools panels like the **Network** panel, because they are rendered in their own behind-the-scenes renderer.
@@ -214,7 +222,7 @@ Unlike prefetches, pages that have been prerendered will not show up in the curr
 However, it is now possible to switch the renderer used by the DevTools panels with the drop down menu in the top right drop down, or by selecting a URL in the top part of the panel and selecting **Inspect**:
 
 <figure>
-  {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/JIt7fcBNfQLZnMd8se99.png", alt="Chrome DevTools now allows you to switch renderers that information is displayed for", width="800", height="585" %}
+  {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/Pxu2F91J3FTk7090DrvD.png", alt="Chrome DevTools now allows you to switch renderers that information is displayed for", width="800", height="599" %}
 </figure>
 
 This drop down (and the value selected) is shared across all the other panels too, such as the **Networks** panel, where you can see the page being requested is the prerendered one:
@@ -224,6 +232,10 @@ This drop down (and the value selected) is shared across all the other panels to
 </figure>
 
 Looking at the HTTP headers for these resources we can see they will all be set with the `Sec-Purpose: prefetch;prerender` header:
+
+<figure>
+  {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/sChO1hRSxqB8o4n2v7Ya.png", alt="Chrome DevTools Network panel showing Sec-Purpose header for a prerendered page", width="800", height="487" %}
+</figure>
 
 Or the **Elements** panel, where you can see the page contents, like in below screenshot where we see the H1 is for the prerendered page:
 
@@ -248,9 +260,10 @@ Note that speculation rules themselves are not actioned until the prerendered pa
 The render frame drop down is available for all the frames but is less useful for the Performance panel and the Lighthouse panels as any traces in those will still be based on the current page, rather than the hidden background page.
 
 {% Aside 'warning' %}
-Trying to do a performance trace between renderers by clicking on a prerendered link in the middle of a performance trace will not succeed and the performance trace will hang in the "Loading profile.." state.
-{% endAside %}
 
+  Cross-renderer performance tracing by clicking on a prerendered link in the middle of a performance trace is not currently supported and will not succeed leaving the trace in a "Loading profile..." state.
+
+{% endAside %}
 
 ### Debugging speculation rules on the prerendered page
 
@@ -259,6 +272,7 @@ The previous sections discuss how to debug prerendered pages on the page which i
 Additionally once a prerendered page is activated, by the user navigating to it, the **This Page** pane will show this status, and whether it was successfully prerendered or not. With an explanation as to why it could not be prerendered if that was the case:
 
 <figure>
+  {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/qb4W4spJ1k7sahsxU8aH.png", alt="Chrome DevTools Preloading This Page pane showing both a successful and failed prerendered page", width="800", height="472" %}
 </figure>
 
 ## Conclusion
