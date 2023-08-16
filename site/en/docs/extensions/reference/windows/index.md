@@ -3,8 +3,8 @@ api: windows
 ---
 ## Manifest
 
-When requested, a [`windows.Window`][1] will contain an array of [`tabs.Tab`][2] objects. You must
-declare the `"tabs"` permission in your [manifest][3] if you require access to the [`url`][4],
+When requested, a [`windows.Window`][1] contains an array of [`tabs.Tab`][2] objects. You must
+declare the `"tabs"` permission in your [manifest][3] if you need access to the [`url`][4],
 [`pendingUrl`][5], [`title`][6], or [`favIconUrl`][7] properties of [`tabs.Tab`][8]. For example:
 
 ```json
@@ -18,14 +18,14 @@ declare the `"tabs"` permission in your [manifest][3] if you require access to t
 
 ## The current window
 
-Many functions in the extension system take an optional windowId parameter, which defaults to the
+Many functions in the extension system take an optional `windowId` argument, which defaults to the
 current window.
 
 The _current window_ is the window that contains the code that is currently executing. It's
 important to realize that this can be different from the topmost or focused window.
 
 For example, say an extension creates a few tabs or windows from a single HTML file, and that the
-HTML file contains a call to [tabs.query][9]. The current window is the window that contains the
+HTML file contains a call to [`tabs.query()`][9]. The current window is the window that contains the
 page that made the call, no matter what the topmost window is.
 
 In the case of [service workers][10], the value of the current window falls back to the last active
