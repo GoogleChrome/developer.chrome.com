@@ -18,7 +18,7 @@ Unless otherwise noted, changes described below apply to the newest Chrome beta 
 
 ## CSS
 
-This release adds five new CSS features. The first three properties are part of work to enable transitions on discrete properties, [which enable entry and exit animations](/blog/entry-exit-animations/). 
+This release adds six new CSS features. The first three properties are part of work to enable transitions on discrete properties, [which enable entry and exit animations](/blog/entry-exit-animations/). 
 
 ### The @starting-style rule
 
