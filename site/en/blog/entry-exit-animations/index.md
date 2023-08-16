@@ -9,7 +9,7 @@ tags:
   - css
   - chrome-116
   - chrome-117
-date: 2023-08-15
+date: 2023-08-16
 ---
 
 Motion is a core part of any digital experience, guiding your user from one interaction to the next. But there are a few gaps in smooth animations on the web platform. These include the ability to to easily animate entry and exit animations, and smoothly animate to and from the top layer for dismissible elements such as dialogs and popovers.
