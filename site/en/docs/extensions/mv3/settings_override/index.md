@@ -82,122 +82,120 @@ Values in the manifest can be customized in the following ways:
 
 An extension can override one or more of the following properties in the manifest:
 
-- **`homepage` (string)** - optional
+`homepage` (string, optional)
+: New value for the homepage.
 
-  New value for the homepage.
+`search_provider` (object, optional)
+: A search engine
 
-- **`search_provider` (object)** - optional
 
-  A search engine
+<table>
+  <tbody>
+    <tr>
+      <th>Type</th>
+      <th>Attribute</th>
+      <th>Description</th>
+    </tr>
+    <tr id="property-search_provider-name">
+      <td>string</td>
+      <td><span class="optional">(optional)</span> name</td>
+      <td>
+        <p>Name of the search engine displayed to user. This may only be omitted if
+          <em>prepopulated_id</em> is set.</p>
+      </td>
+    </tr>
+    <tr id="property-search_provider-keyword">
+      <td>string</td>
+      <td><span class="optional">(optional)</span> keyword</td>
+      <td>
+        <p>Omnibox keyword for the search engine. This may only be omitted if
+          <em>prepopulated_id</em> is set.</p>
+      </td>
+    </tr>
+    <tr id="property-search_provider-favicon_url">
+      <td>string</td>
+      <td><span class="optional">(optional)</span> favicon_url</td>
+      <td>
+        <p>An icon URL for the search engine. This may only be omitted if <em>prepopulated_id</em>
+          is set.</p>
+      </td>
+    </tr>
+    <tr id="property-search_provider-search_url">
+      <td>string</td>
+      <td>search_url</td>
+      <td>
+        <p>A search URL used by the search engine.</p>
+      </td>
+    </tr>
+    <tr id="property-search_provider-encoding">
+      <td>string</td>
+      <td><span class="optional">(optional)</span> encoding</td>
+      <td>
+        <p>Encoding of the search term. This may only be omitted if <em>prepopulated_id</em> is
+          set.</p>
+      </td>
+    </tr>
+    <tr id="property-search_provider-suggest_url">
+      <td>string</td>
+      <td><span class="optional">(optional)</span> suggest_url</td>
+      <td>
+        <p>If omitted, this engine does not support suggestions.</p>
+      </td>
+    </tr>
+    <tr id="property-search_provider-image_url">
+      <td>string</td>
+      <td><span class="optional">(optional)</span> image_url</td>
+      <td>
+        <p>If omitted, this engine does not support image search.</p>
+      </td>
+    </tr>
+    <tr id="property-search_provider-search_url_post_params">
+      <td>string</td>
+      <td><span class="optional">(optional)</span> search_url_post_params</td>
+      <td>
+        <p>The string of post parameters to search_url</p>
+      </td>
+    </tr>
+    <tr id="property-search_provider-suggest_url_post_params">
+      <td>string</td>
+      <td><span class="optional">(optional)</span> suggest_url_post_params</td>
+      <td>
+        <p>The string of post parameters to suggest_url</p>
+      </td>
+    </tr>
+    <tr id="property-search_provider-image_url_post_params">
+      <td>string</td>
+      <td><span class="optional">(optional)</span> image_url_post_params</td>
+      <td>
+        <p>The string of post parameters to image_url</p>
+      </td>
+    </tr>
+    <tr id="property-search_provider-alternate_urls">
+      <td>array of string</td>
+      <td><span class="optional">(optional)</span> alternate_urls</td>
+      <td>
+        <p>A list of URL patterns that can be used, in addition to <em>search_url</em>.</p>
+      </td>
+    </tr>
+    <tr id="property-search_provider-prepopulated_id">
+      <td>integer</td>
+      <td><span class="optional">(optional)</span> prepopulated_id</td>
+      <td>
+        <p>An ID of the built-in search engine in Chrome.</p>
+      </td>
+    </tr>
+    <tr id="property-search_provider-is_default">
+      <td>boolean</td>
+      <td>is_default</td>
+      <td>
+        <p>Specifies if the search provider should be default.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-  <table>
-    <tbody>
-      <tr>
-        <th>Type</th>
-        <th>Attribute</th>
-        <th>Description</th>
-      </tr>
-      <tr id="property-search_provider-name">
-        <td>string</td>
-        <td><span class="optional">(optional)</span> name</td>
-        <td>
-          <p>Name of the search engine displayed to user. This may only be omitted if
-            <em>prepopulated_id</em> is set.</p>
-        </td>
-      </tr>
-      <tr id="property-search_provider-keyword">
-        <td>string</td>
-        <td><span class="optional">(optional)</span> keyword</td>
-        <td>
-          <p>Omnibox keyword for the search engine. This may only be omitted if
-            <em>prepopulated_id</em> is set.</p>
-        </td>
-      </tr>
-      <tr id="property-search_provider-favicon_url">
-        <td>string</td>
-        <td><span class="optional">(optional)</span> favicon_url</td>
-        <td>
-          <p>An icon URL for the search engine. This may only be omitted if <em>prepopulated_id</em>
-            is set.</p>
-        </td>
-      </tr>
-      <tr id="property-search_provider-search_url">
-        <td>string</td>
-        <td>search_url</td>
-        <td>
-          <p>A search URL used by the search engine.</p>
-        </td>
-      </tr>
-      <tr id="property-search_provider-encoding">
-        <td>string</td>
-        <td><span class="optional">(optional)</span> encoding</td>
-        <td>
-          <p>Encoding of the search term. This may only be omitted if <em>prepopulated_id</em> is
-            set.</p>
-        </td>
-      </tr>
-      <tr id="property-search_provider-suggest_url">
-        <td>string</td>
-        <td><span class="optional">(optional)</span> suggest_url</td>
-        <td>
-          <p>If omitted, this engine does not support suggestions.</p>
-        </td>
-      </tr>
-      <tr id="property-search_provider-image_url">
-        <td>string</td>
-        <td><span class="optional">(optional)</span> image_url</td>
-        <td>
-          <p>If omitted, this engine does not support image search.</p>
-        </td>
-      </tr>
-      <tr id="property-search_provider-search_url_post_params">
-        <td>string</td>
-        <td><span class="optional">(optional)</span> search_url_post_params</td>
-        <td>
-          <p>The string of post parameters to search_url</p>
-        </td>
-      </tr>
-      <tr id="property-search_provider-suggest_url_post_params">
-        <td>string</td>
-        <td><span class="optional">(optional)</span> suggest_url_post_params</td>
-        <td>
-          <p>The string of post parameters to suggest_url</p>
-        </td>
-      </tr>
-      <tr id="property-search_provider-image_url_post_params">
-        <td>string</td>
-        <td><span class="optional">(optional)</span> image_url_post_params</td>
-        <td>
-          <p>The string of post parameters to image_url</p>
-        </td>
-      </tr>
-      <tr id="property-search_provider-alternate_urls">
-        <td>array of string</td>
-        <td><span class="optional">(optional)</span> alternate_urls</td>
-        <td>
-          <p>A list of URL patterns that can be used, in addition to <em>search_url</em>.</p>
-        </td>
-      </tr>
-      <tr id="property-search_provider-prepopulated_id">
-        <td>integer</td>
-        <td><span class="optional">(optional)</span> prepopulated_id</td>
-        <td>
-          <p>An ID of the built-in search engine in Chrome.</p>
-        </td>
-      </tr>
-      <tr id="property-search_provider-is_default">
-        <td>boolean</td>
-        <td>is_default</td>
-        <td>
-          <p>Specifies if the search provider should be default.</p>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-
-- **`startup_pages` (array of string)** - optional
-
-An array of length one containing a URL to be used as the startup page.
+`startup_pages` (array of string, optional)
+: An array of length one containing a URL to be used as the startup page.
 
 [1]: #homepage
 [2]: #search_provider
