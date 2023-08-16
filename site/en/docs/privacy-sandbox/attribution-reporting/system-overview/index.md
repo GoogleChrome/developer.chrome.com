@@ -147,7 +147,7 @@ Imagine a publisher site that displays ads. Each advertiser or ad tech provider 
 1.  When the user clicks or views the ad, the browser sends a `GET` request to `attributionsrc`—typically, an advertiser or ad tech provider endpoint.
 1.  Upon receiving this request, the advertiser or ad tech provider decides to instruct the browser to register source events for interactions with the ad, so that conversions can later be attributed to this ad. To do so, the advertiser or ad tech provider includes in its response a special HTTP header. It attaches to this header custom data that provides information about the source event (the ad click or view)—if a conversion ends up taking place for this ad, this custom data will ultimately be surfaced in the attribution report.
 
-    {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/BDzoPro5EisV1FeJiNYZ.png", alt="View or clock an ad.", width="512", height="302" %}
+    {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/BDzoPro5EisV1FeJiNYZ.png", alt="View or click an ad.", width="512", height="302" %}
 1.  Later on, the user visits the advertiser's site.
 1.  On each relevant page of the advertiser's site—for example, a purchase confirmation page, or a product page—a conversion pixel (`<img>` element) or JavaScript call makes a request to `https://adtech.example/conversion?param1=...&param2=...`
 1.  The service at this URL—typically, the advertiser or ad tech provider—receives this request. It decides to categorize this as a conversion, so it needs to instruct the browser to record a conversion—that is to *trigger an attribution*. To do so, the advertiser or ad tech provider includes in its response to the pixel request a special HTTP header that includes custom data about the conversion.
