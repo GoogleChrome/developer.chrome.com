@@ -25,7 +25,7 @@ There are a number of demos available for the Privacy Sandbox APIs. Most of them
 
 {% Columns %}
 {% Column %}
-This demo uses FLEDGE to join ad interest groups on two advertiser sites,
+The demo uses FLEDGE to join ad interest groups on two advertiser sites,
 and then initiates an on-device auction to select an ad for display on a publisher site.
 
 [Demo](https://fledge-demo.glitch.me/)
