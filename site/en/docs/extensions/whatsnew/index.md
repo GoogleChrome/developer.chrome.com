@@ -21,7 +21,7 @@ Check this page often to learn about changes to Chrome extensions, extensions do
 
 A requirement for Manifest V3 is that extensions may no longer use remotely-hosted code. We want to improve the guidance around this issue, and have made [additions to the migration guide](docs/extensions/migrating/improve-security/) to provide more information, describing what's still possible in Manifest V3 and more information on strategies for upgrading.
 
-There is a related addition to the [Troubleshooting Chrome Web Store violations](/docs/webstore/troubleshooting/). A new section describes common reasons that extensions with remotely-hosted code are rejected.
+There is a related addition to [Troubleshooting Chrome Web Store violations](/docs/webstore/troubleshooting/). A new section describes common reasons that extensions with remotely-hosted code are rejected.
 
 ### Improved guidance for the declarativeNetRequest API {: #new-dnr-guidance }
 
