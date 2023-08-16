@@ -75,7 +75,7 @@ Websites will now be able to clear the client hints cache using `Clear-Site-Data
 
 Websites will now be able to clear all storage targets ("cookies", "cache", and "storage") by sending `Clear-Site-Data: "*"`. Note that Chrome does not support clearing "executionContexts" at the moment, but if we added it in the future any header targeting "*" would then clear them too. 
 
-### `customElements.getName`
+### customElements.getName
 
 The [`customElements.getName()`](https://developer.mozilla.org/docs/Web/API/CustomElementRegistry/getName) method returns the tag name of the given custom element definition. 
 
@@ -83,7 +83,7 @@ The [`customElements.getName()`](https://developer.mozilla.org/docs/Web/API/Cust
 
 [Iterator helpers](https://github.com/tc39/proposal-iterator-helpers) are new methods on iterator prototype to allow general usage and consumption of iterators. 
 
-### Make `CaptureController` derive from the `EventTarget` interface
+### Make CaptureController derive from the EventTarget interface
 
 The [CaptureController](https://developer.mozilla.org/docs/Web/API/CaptureController) interface enables further manipulation of a screen capture session. In the future, it is expected that the events related to a capture session are dispatched on that controller. To be able to manage listeners for such events, the `EventTarget` methods are made available on `CaptureController`. 
 
@@ -153,7 +153,7 @@ Register for the WebSQL deprecation trial](/origintrials/#/register_trial/494270
 
 ### Tabbed web apps
 
-Allow web app windows to have a tab strip. This adds a new display mode "tabbed" and a new manifest field to allow customizations to the tab strip. 
+Allow web app windows to have a  [tab strip](https://web.dev/tabbed-application-mode), for example, to edit multiple documents in the same app. This adds a new display mode "tabbed" and a new manifest field to allow customizations to the tab strip. 
 
 [Register for the Tabbed Web Apps origin trial](/origintrials/#/register_trial/3547710606461108225).
 
