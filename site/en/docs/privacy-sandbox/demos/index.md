@@ -20,22 +20,22 @@ There are a number of demos available for the Privacy Sandbox APIs. Most of them
 
 {% Details %}
 {% DetailsSummary %}
-### Protected Audience API (FLEDGE)
+### Protected Audience API
 {% endDetailsSummary %}
 
 {% Columns %}
 {% Column %}
-The demo uses FLEDGE to join ad interest groups on two advertiser sites,
+The demo uses the Protected Audience API to join ad interest groups on two advertiser sites,
 and then initiates an on-device auction to select an ad for display on a publisher site.
 
-[Demo](https://fledge-demo.glitch.me/)
+[Demo](https://protected-audience-demo.web.app/)
 
 [Docs](/docs/privacy-sandbox/fledge-api/)
 
 {% endColumn %}
 {% Column %}
 
-<a href="https://fledge-demo.glitch.me/">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/Tejkps8XvgWoobfGLMVO.png", alt="ALT_TEXT_HERE", width="484", height="418" %}</a>
+<a href="https://protected-audience-demo.web.app/">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/Tejkps8XvgWoobfGLMVO.png", alt="Protected Audience API demo.", width="484", height="418" %}</a>
 
 {% endColumn %}
 {% endColumns %}
@@ -62,7 +62,7 @@ The Topics API allows a browser to share information about a user's interests wi
 {% endColumn %}
 {% Column %}
 
-<a href="https://topics-demo.glitch.me/">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/3YDJBguZVeVorWT4BdkA.png", alt="ALT_TEXT_HERE", width="469", height="386" %}</a>
+<a href="https://topics-demo.glitch.me/">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/3YDJBguZVeVorWT4BdkA.png", alt="The Topics API demo.", width="469", height="386" %}</a>
 
 {% endColumn %}
 {% endColumns %}
@@ -82,7 +82,7 @@ This colab makes it easy to load the TensorFlow Lite model used by Chrome to inf
 {% endColumn %}
 {% Column %}
 
-<a href="https://colab.research.google.com/drive/1hIVoz8bRCTpllYvads51MV7YS3zi3prn">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/Au0wqVDHINuCmWxN0lOR.png", alt="ALT_TEXT_HERE", width="503", height="269" %}</a>
+<a href="https://colab.research.google.com/drive/1hIVoz8bRCTpllYvads51MV7YS3zi3prn">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/Au0wqVDHINuCmWxN0lOR.png", alt="Topics API colab.", width="503", height="269" %}</a>
 
 {% endColumn %}
 {% endColumns %}
@@ -109,7 +109,7 @@ ads in a third-party iframe, and ads in a first-party context. In this demo an a
 {% endColumn %}
 {% Column %}
 
-<a href="https://arapi-home.web.app/">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/cQABHch0L68I92idOgcN.png", alt="ALT_TEXT_HERE", width="707", height="512" %}</a>
+<a href="https://arapi-home.web.app/">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/cQABHch0L68I92idOgcN.png", alt="Attribution Reporting API demo.", width="707", height="512" %}</a>
 
 {% endColumn %}
 {% endColumns %}
@@ -129,7 +129,7 @@ When aggregatable reports are batched by a collector and processed by the aggreg
 {% endColumn %}
 {% Column %}
 
-<a href="https://noise-lab.uc.r.appspot.com/?mode=simple">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/9pln3PilOb2Hh5zrLdhz.png", alt="ALT_TEXT_HERE", width="686", height="448" %}</a>
+<a href="https://noise-lab.uc.r.appspot.com/?mode=simple">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/9pln3PilOb2Hh5zrLdhz.png", alt="Noise Lab.", width="686", height="448" %}</a>
 
 {% endColumn %}
 {% endColumns %}
@@ -151,7 +151,8 @@ The Shared Storage API provides storage that can be used cross-site, meaning you
 {% endColumn %}
 {% Column %}
 
-<a href="https://shared-storage-demo.web.app/">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/dOFtwOaI8ldFfwgmG5El.png", alt="ALT_TEXT_HERE", width="751", height="521" %}</a>
+<a href="https://shared-storage-demo.web.app/">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/dOFtwOaI8ldFfwgmG5El.png", alt="Shared Storage API 
+ demo.", width="751", height="521" %}</a>
 
 {% endColumn %}
 {% endColumns %}
@@ -171,7 +172,7 @@ First-Party Sets (FPS) is a way for a company to declare relationships among sit
 
 {% endColumn %}
 {% Column %}
-<a href="https://first-party-sets.glitch.me/">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/xQbEZnwQ7Fjw8MOYuddS.png", alt="ALT_TEXT_HERE", width="600", height="400" %}</a>
+<a href="https://first-party-sets.glitch.me/">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/xQbEZnwQ7Fjw8MOYuddS.png", alt="First-Party Sets demo.", width="600", height="400" %}</a>
 {% endColumn %}
 {% endColumns %}
 {% endDetails %}
@@ -190,7 +191,7 @@ FedCM is a privacy-preserving approach to federated identity services where user
 
 {% endColumn %}
 {% Column %}
-<a href="https://fedcm-rp-demo.glitch.me">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/r9RNu995n1Toyp9ysI5d.png", alt="ALT_TEXT_HERE", width="514", height="380" %}</a>
+<a href="https://fedcm-rp-demo.glitch.me">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/r9RNu995n1Toyp9ysI5d.png", alt="FedCM demo.", width="514", height="380" %}</a>
 {% endColumn %}
 {% endColumns %}
 {% endDetails %}
@@ -209,7 +210,7 @@ Permissions Policy allows the developer to control the browser features availabl
 
 {% endColumn %}
 {% Column %}
-<a href="https://permissions-policy-demo.glitch.me/demo/">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/qaZFVmYVbQmEGhl004VT.png", alt="ALT_TEXT_HERE", width="676", height="458" %}</a>
+<a href="https://permissions-policy-demo.glitch.me/demo/">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/qaZFVmYVbQmEGhl004VT.png", alt="Permissions Policy demo.", width="676", height="458" %}</a>
 {% endColumn %}
 {% endColumns %}
 
@@ -230,7 +231,7 @@ User-Agent reduction minimizes the identifying information shared in the User-Ag
 
 {% endColumn %}
 {% Column %}
-<a href="https://uar-ot.glitch.me/">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/S5ALrfmMdD2xDkIpsnS0.png", alt="ALT_TEXT_HERE", width="800", height="627" %}</a>
+<a href="https://uar-ot.glitch.me/">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/S5ALrfmMdD2xDkIpsnS0.png", alt="User Agent Reduction demo.", width="800", height="627" %}</a>
 {% endColumn %}
 {% endColumns %}
 {% Columns %}
@@ -242,7 +243,7 @@ JavaScript reduced user-agent
 [Docs](/docs/privacy-sandbox/user-agent/)
 {% endColumn %}
 {% Column %}
-<a href="https://reduced-ua.glitch.me/javascript.html">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/rQpRviM9Xv2tYAxDg0Bc.png", alt="ALT_TEXT_HERE", width="694", height="396" %}</a>
+<a href="https://reduced-ua.glitch.me/javascript.html">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/rQpRviM9Xv2tYAxDg0Bc.png", alt="JavaScript reduced user-agent demo.", width="694", height="396" %}</a>
 {% endColumn %}
 {% endColumns %}
 {% Columns %}
@@ -254,7 +255,7 @@ Server-side reduced user-agent
 [Docs](/docs/privacy-sandbox/user-agent/)
 {% endColumn %}
 {% Column %}
-<a href="https://reduced-ua.glitch.me/server-side">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/pon9P8soEiUNb4gTfluf.png", alt="ALT_TEXT_HERE", width="592", height="544" %}</a>
+<a href="https://reduced-ua.glitch.me/server-side">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/pon9P8soEiUNb4gTfluf.png", alt="Server-side reduced user-agent demo.", width="592", height="544" %}</a>
 {% endColumn %}
 {% endColumns %}
 {% endDetails %}
@@ -284,7 +285,7 @@ With the Private State Token API, a website can issue cryptographic tokens to a 
 {% endColumn %}
 
 {% Column %}
-<a href="https://private-state-token-demo.glitch.me/">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/OVudOoLOz1BKNEmfY1pc.png", alt="ALT_TEXT_HERE", width="620", height="519" %}</a>
+<a href="https://private-state-token-demo.glitch.me/">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/OVudOoLOz1BKNEmfY1pc.png", alt="Private State Token API demo.", width="620", height="519" %}</a>
 {% endColumn %}
 {% endColumns %}
 {% endDetails %}
