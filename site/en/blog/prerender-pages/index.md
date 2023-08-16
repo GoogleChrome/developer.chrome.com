@@ -7,7 +7,7 @@ description: |
 authors:
  - tunetheweb
 date: 2022-12-02
-updated: 2023-04-18
+updated: 2023-08-20
 hero: image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/eohdiqaZlxnWen7TT66M.jpg
 alt: City road at dusk with a long exposure of car lights giving impression of speed
 tags:
@@ -130,6 +130,10 @@ Speculation rules can be:
 * Dynamically inserted into the page by JavaScript. This could be based on application logic, personalized to the user, or on certain user actions such as hovering over, or clicking down on a link—as many libraries have done in the past with `preconnect`, `prefetch`, or the older NoState Prefetch `prerender`. Those favoring dynamic insertion, are recommended to keep an eye on speculation rules support, as the document rules may make allow the browser to handle many of your use cases as this is introduced in the future.
 
 Speculation rules can be added in either the `<head>` or the `<body>` of in the main frame. Speculation rules in subframes are not acted upon, and speculation rules in prerendered pages are only acted upon once that page is activated.
+
+### Debugging speculation rules
+
+Please see the [dedicated post](/blog/debugging-speculation-rules/) on Chrome DevTools features to view and debug speculation rules.
 
 ### Multiple speculation rules
 
@@ -302,6 +306,10 @@ The easiest way to see if a page was prerendered is to open DevTools after the p
 {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/C3pNnuCo3i4zHgbLWEo0.png", alt="Console in Chrome DevTools showing a positive activationStart indicating the page was prerendered", width="400", height="98.5" %}
 </figure>
 
+{% Aside 'update' %}
+From Chrome 117, additional Chrome DevTools debugging features are available for debugging prerendered pages. Please see the [Debugging speculation rules post](/blog/debugging-speculation-rules/) for more details.
+{% endAside %}
+
 When the page is activated by the user viewing the page, the `prerenderingchange` event will be dispatched on the `document`, which can then be used to enable activities that previously would be started by default on page load but which you wish to delay until the page is actually viewed by the user.
 
 Using these APIs, front-end JavaScript can detect and act upon prerendered pages appropriately.
@@ -388,6 +396,7 @@ Prerendering is in active development by the Chrome team, and there are plenty o
 
 ## Related links
 
+- [Debugging speculation rules](/blog/debugging-speculation-rules/)
 - [Introducing NoState Prefetch](/blog/nostate-prefetch/)
 - [Speculation Rules API](https://github.com/jeremyroman/alternate-loading-modes/blob/main/triggers.md#speculation-rules)
 - [The Navigational speculation GitHub repo](https://github.com/WICG/nav-speculation/)
