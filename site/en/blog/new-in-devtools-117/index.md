@@ -71,7 +71,7 @@ To filter out all the requests sent to `chrome-extension://` URLs, check {% Img 
 {% Aside 'important' %}
 Additionally, DevTools now won't attempt to load source maps for extensions, so you won't see the "Failed to load source maps" warnings that aren't related to your code.
 
-Moreover, similar warnings caused by *your* code are now shown in an infobar at the bottom of the **Sources** panel instead of the **Console**.
+Moreover, similar warnings caused by *your* code are now shown in an information bar at the bottom of the **Sources** panel instead of the **Console**.
 {% endAside %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/45b4415d1599864a73cab4138ecd3135d8ee79ba #}
