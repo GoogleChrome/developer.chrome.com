@@ -56,11 +56,11 @@ Event-level reports associate an ad click or view with coarse conversion data. T
 
 #### Event-level report concepts
 
-- [attribution sources](/docs/privacy-sandbox/attribution-reporting/register-attribution-source)
-- [attribution triggers](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger)
-- request and response headers
+Once you're familiar with the concepts for event-level reports and have defined your [sources](#source), [triggers](#trigger), set your headers, and defined your [endpoints](#endpoints), (all discussed later) you're ready to receive event-level reports. Here are relevant resources:
 
-Once you're familiar with the concepts for event-level reports and have defined your [sources](#source), [triggers](#trigger), set your headers, and defined your [endpoints](#endpoints), (all discussed later) you're ready to receive event-level reports.
+- [attribution sources](/docs/privacy-sandbox/attribution-reporting/register-attribution-source).
+- [attribution triggers](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger).
+- request and [response](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/#step-2-respond-with-header-clicks-and-views) headers.
 
 
 ### Aggregatable reports 
@@ -91,9 +91,9 @@ Before you can register sources and triggers and get reports, your sites need to
 
 ### Event-level report generation
 
-Once you're familiar with the concepts for [event-level reports](/docs/privacy-sandbox/attribution-reporting/report-types) and have defined your [sources](#source), [triggers](#trigger), set your headers, and defined your [endpoints](#endpoints), you're ready to receive event-level reports.
+Once you're familiar with the concepts for [event-level reports](/docs/privacy-sandbox/attribution-reporting/report-types) and have defined your [sources](#source), [triggers](#trigger), set your headers, and defined your [endpoints](#endpoints), you're ready to receive event-level reports. Event-level reports require less setup than aggregatable reports. Here are the steps:
 
-1. **Register a source.** Refer to [Registering a source](/docs/privacy-sandbox/attribution-reporting/register-attribution-source).
+1. **Register a source.** Refer to [Registering a source](/docs/privacy-sandbox/attribution-reporting/register-attribution-source) for more information.
    
    In the `Attribution-Reporting-Register-Source` header, add the necessary fields to generate event-level reports. These fields include:
 
@@ -104,7 +104,7 @@ Once you're familiar with the concepts for [event-level reports](/docs/privacy-s
    - `debug_reporting`
    - `priority`
 
-1. **Register a trigger** refer to [Triggering Attribution](https://github.com/WICG/attribution-reporting-api/blob/main/EVENT.md#triggering-attribution).
+1. **Register a trigger** Refer to [Triggering Attribution](https://github.com/WICG/attribution-reporting-api/blob/main/EVENT.md#triggering-attribution) for more information.
     
    In your `Attribution-Reporting-Register-Trigger`  header, include
 
@@ -128,6 +128,8 @@ Once you're familiar with the concepts for [event-level reports](/docs/privacy-s
 
     `{REPORTING_ENDPOINT}/.well-known/attribution-reporting/report-event-attribution`  
 
+1. **Complete the source registration** Respond with the source registration header. Upon receiving that request, respond with the header `Attribution-Reporting-Register-Source`. In that header, specify the desired Attribution Reporting configuration. This step is the same for both clicks and views.
+
 ### Summary report generation via aggregatable reports
 
 To generate aggregatable reports, which are aggregated to create the end goal, summary reports, you need to generate contributions as a user clicks or views an ad and later converts. Contributions from many users are then aggregated to produce a summary report. 
@@ -147,7 +149,7 @@ Aggregatable and event-level reports are generated in a similar manner. To be ab
 
 {: #source}
 
-1. **Register a source.** [Registering a source](/docs/privacy-sandbox/attribution-reporting/register-attribution-source) is the same process for both event-level and aggregatable reports. 
+1. **Register a source.** Refer to [Registering a source](/docs/privacy-sandbox/attribution-reporting/register-attribution-source) for more details. 
     1. In the `Attribution-Reporting-Register-Source` header add the necessary fields to generate aggregatable or event-level reports. These fields include:
 
         - `source_event_id`
@@ -159,7 +161,9 @@ Aggregatable and event-level reports are generated in a similar manner. To be ab
         - `priority`
 
     {% Aside %}
-    While headers can be used for both event-level and aggregatable reports, the content of the headers will be different for each of these report types. 
+    While headers can be used for both event-level and aggregatable reports, the content of the headers will be different for each of these report types.
+
+    You can check your headers using the [Attribution Reporting Header Validator](https://wicg.github.io/attribution-reporting-api/validate-headers). 
     {% endAside %}
 {: #trigger}
 1. **Register a trigger (aggregatable reports):** [Registering a trigger](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger)
@@ -176,6 +180,7 @@ Aggregatable and event-level reports are generated in a similar manner. To be ab
 
         Refer to the [example code](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/8f3d874b79ab0c8a15822fbcd09e94042aee7dcd/conversion-measurement/functions/apps/adtech.js#L334). More on [.well-known](https://en.wikipedia.org/wiki/Well-known_URI).
 
+1. **Complete the source registration** Respond with the source registration header. Upon receiving that request, respond with the header `Attribution-Reporting-Register-Source`. In that header, specify the desired Attribution Reporting configuration. This step is the same for both clicks and views.
     
 1. **Set up debug reports:**
     1. Learn how to set up debug reports in the
