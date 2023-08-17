@@ -24,7 +24,8 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "types": []
   },
   "include": [
     "server/**/*",
@@ -42,5 +43,5 @@
     "node_modules",
     "test",
     "site/_js/prettify.js",
-  ],
+  ]
 }
