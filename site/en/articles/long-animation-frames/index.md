@@ -189,11 +189,12 @@ As shown, the LoAF performance entry includes valuable information. One strategy
 const REPORTING_THRESHOLD_MS = 200;
 
 const observer = new PerformanceObserver(list => {
-    for (const entry of list.getEntries()) {
-      if (entry.duration > REPORTING_THRESHOLD_MS) {
-        sendToAnalytics(entry);
-      }
+  for (const entry of list.getEntries()) {
+    if (entry.duration > REPORTING_THRESHOLD_MS) {
+      // Example here logs to console, but could also report back to analytics
+      console.log(entry);
     }
+  }
 });
 
 observer.observe({ type: "long-animation-frame", buffered: true });
@@ -229,6 +230,25 @@ As an extension of the above, the LoAF frame(s) corresponding to the INP entry c
 As there is no direct link between INP entries and LoAF entries, this requires correlating both performance entries using the start and end times (see [this example script](https://gist.github.com/noamr/2d4e2bdd48661fa39e32283efecaf418)).
 
 This does however risk only getting actionable insights on the worst interaction, when there may be many more interactions that are only slightly better. Perhaps with enough visitors, all interactions that need to be optimized will be surfaced, but other strategies may allow that to happen more easily.
+
+Alternatively, you could include any long animation frames close to the 200 millisecond good INP limit with a `firstUIEventTimestamp` (indicating a user interaction happened), which should include the INP entry and others close to this limit:
+
+```js
+const REPORTING_THRESHOLD_MS = 150;
+
+const observer = new PerformanceObserver(list => {
+    for (const entry of list.getEntries()) {
+      if (entry.duration > REPORTING_THRESHOLD_MS &&
+        entry.firstUIEventTimestamp > 0
+      ) {
+        // Example here logs to console, but could also report back to analytics
+        console.log(entry);
+      }
+    }
+});
+observer.observe({ type: "long-animation-frame", buffered: true });
+```
+
 
 INP is often non-deterministic in nature as an interaction's performance is heavily influenced by what else is going on at the time of the interaction. A more holistic approach of looking at the worst long animation frames overall and tackling them, rather than only the long animation frame associated with the INP, may be a better way to tackle responsiveness issues. This should ultimately lead to a better INP metric, and a more stable one going forward.
 
@@ -303,7 +323,7 @@ Below are some of the frequently asked questions on this API:
 
 ### Why not just measure the INP interaction?
 
-As [detailed above, this is one potential strategy](#linking-to-the-longest-inp-interaction). However, using the API to gather a more holistic view of all the responsive issues on your site may make addressing INP issues quicker rather than trying to tackle only the worst issue at a time.
+As [detailed above, this is one potential strategy](#linking-to-the-longest-inp-interaction), this is one potential strategy, and could allow much better attribution for this INP interaction. However, using the API to gather a more holistic view of all the responsive issues on your site may make addressing INP issues quicker rather than trying to tackle only the worst issue at a time.
 
 ### Why not just extend or iterate the Long Tasks API?
 
