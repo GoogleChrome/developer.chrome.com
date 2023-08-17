@@ -119,7 +119,7 @@ text itself specifies that the mark (e.g. Google Maps) is a trademark owned by
 Google.
 
 ```text
-Google Maps is a trademark of Google Inc. Use of this trademark is subject to Google Permissions.
+Google Maps is a trademark of Google LLC. Use of this trademark is subject to Google Permissions.
 ```
 
 [border-ai]: https://storage.googleapis.com/web-dev-uploads/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/YK7JoBOelVIK05uwEAEE.ai

@@ -203,11 +203,6 @@ increased privileges.
 
 You should explicitly enumerate the TLDs that you wish to run your extension on.
 
-### Why does the management API not fire events when my extension is installed/uninstalled? {: #faq-management }
-
-The [management API][52] was intended to help create new tab page replacement extensions. It was not
-intended to fire install/uninstall events for the current extension.
-
 ### How can an extension determine whether it is running for the first time? {: #faq-firstrun }
 
 You can listen to the [runtime.onInstalled][53] event. See [this FAQ entry][54].
@@ -328,7 +323,6 @@ The steps you should follow to ensure this are:
 [49]: #faq-dev-05
 [50]: /docs/extensions/mv3/options
 [51]: /docs/extensions/mv3/tut_debugging
-[52]: /docs/extensions/reference/management
 [53]: /docs/extensions/reference/runtime#event-onInstalled
 [54]: #faq-lifecycle-events
 [55]: https://crbug.com
