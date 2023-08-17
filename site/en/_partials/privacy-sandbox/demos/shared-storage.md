@@ -9,7 +9,7 @@ The Shared Storage API provides storage that can be used cross-site, meaning you
 
 [Demo](https://shared-storage-demo.web.app/)
 
-[Docs](/docs/privacy-sandbox/attribution-reporting/shared-storage/)
+[Docs](/docs/privacy-sandbox/shared-storage/)
 
 {% endColumn %}
 {% Column %}
