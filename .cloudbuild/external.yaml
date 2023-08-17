@@ -44,7 +44,7 @@ options:
   env:
     - 'PROJECT_ID=$PROJECT_ID'
     - 'NODE_OPTIONS=--unhandled-rejections=strict'
-  secretEnv: ['GITHUB_APP_ID', 'GITHUB_APP_KEY', 'GITHUB_APP_INSTALLATION_ID', 'TWITTER_BEARER', 'YOUTUBE_API_KEY']
+  secretEnv: ['GITHUB_APP_ID', 'GITHUB_APP_KEY', 'GITHUB_APP_INSTALLATION_ID', 'YOUTUBE_API_KEY']
 
 availableSecrets:
   secretManager:
