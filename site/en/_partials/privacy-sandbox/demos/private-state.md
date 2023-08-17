@@ -1,6 +1,6 @@
 {% Details %}
 {% DetailsSummary %}
-### Private State Token API
+**Private State Token API**
 {% endDetailsSummary %}
 {% Columns %}
 {% Column %}

@@ -1,6 +1,6 @@
 {% Details %}
 {% DetailsSummary %}
-### Shared Storage
+**Shared Storage**
 {% endDetailsSummary %}
 
 {% Columns %}

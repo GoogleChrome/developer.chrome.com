@@ -1,9 +1,9 @@
 {% Details %}
 {% DetailsSummary %}
-### Attribution Reporting
+**Attribution Reporting**
 {% endDetailsSummary %}
 
-#### Demo
+**Demo**
 
 {% Columns %}
 {% Column %}
@@ -25,7 +25,7 @@ ads in a third-party iframe, and ads in a first-party context. In this demo an a
 {% endColumns %}
 
 
-#### Noiselab
+**Noiselab**
 
 {% Columns %}
 {% Column %}
@@ -34,7 +34,6 @@ When aggregatable reports are batched by a collector and processed by the aggreg
 [Noise Lab](https://noise-lab.uc.r.appspot.com/?mode=simple)
 
 [Docs](/docs/privacy-sandbox/attribution-reporting/system-overview/)
-
 
 {% endColumn %}
 {% Column %}

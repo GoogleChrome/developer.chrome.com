@@ -1,6 +1,6 @@
 {% Details %}
 {% DetailsSummary %}
-### Protected Audience API
+**Protected Audience API**
 {% endDetailsSummary %}
 {% Columns %}
 {% Column %}

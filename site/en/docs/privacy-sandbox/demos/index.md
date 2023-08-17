@@ -13,7 +13,6 @@ authors:
 There are a number of demos available for the Privacy Sandbox APIs. Most of them will require you to be familiar with the APIs, so if you haven't read the docs, check out the links we've listed along with the demos.
 
 <p>
-
 </p>
 
 ## Demos and colabs
@@ -41,8 +40,6 @@ There are a number of demos available for the Privacy Sandbox APIs. Most of them
 ### CHIPS
 {% endDetailsSummary %}
 https://developer.chrome.com/en/docs/privacy-sandbox/chips/
-
 {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/BHTwEZIn1orxMaPl6zjn.png", alt="ALT_TEXT_HERE", width="437", height="258" %}
-
 {% endDetails %}
 -->
