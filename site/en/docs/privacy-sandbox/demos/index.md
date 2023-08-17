@@ -34,12 +34,4 @@ There are a number of demos available for the Privacy Sandbox APIs. Most of them
 {% Partial 'privacy-sandbox/demos/ua-reduction.njk' %}
 
 {% Partial 'privacy-sandbox/demos/private-state.njk' %}
-<!--
-{% Details %}
-{% DetailsSummary %}
-### CHIPS
-{% endDetailsSummary %}
-https://developer.chrome.com/en/docs/privacy-sandbox/chips/
-{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/BHTwEZIn1orxMaPl6zjn.png", alt="ALT_TEXT_HERE", width="437", height="258" %}
-{% endDetails %}
--->
+
