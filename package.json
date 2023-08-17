@@ -54,6 +54,7 @@
     "@lhci/cli": "^0.7.2",
     "@mdn/browser-compat-data": "5.3.6",
     "@rollup/plugin-node-resolve": "^8.4.0",
+    "adm-zip": "0.5.10",
     "algoliasearch": "^4.6.0",
     "async-transforms": "1.0.6",
     "cheerio": "1.0.0-rc.3",
@@ -97,6 +98,7 @@
     "xss": "^1.0.14"
   },
   "optionalDependencies": {
+    "@types/adm-zip": "0.5.0",
     "@types/cheerio": "^0.22.22",
     "@types/express": "^4.17.13",
     "@types/gtag.js": "^0.0.12",

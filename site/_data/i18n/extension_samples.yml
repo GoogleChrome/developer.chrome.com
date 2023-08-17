@@ -1,0 +1,41 @@
+search_samples:
+  en: Search samples
+
+select_api:
+  en: Select API
+
+type:
+  en: Type
+
+api:
+  en: API
+
+permission:
+  en: Permission
+
+done:
+  en: Done
+
+filters:
+  en: Filters
+
+permissions:
+  en: Permissions
+
+apis:
+  en: APIs
+
+show_more:
+  en: Show more
+
+show_less:
+  en: Show less
+
+and_more:
+  en: and more...
+
+no_permissions_required:
+  en: No permissions required.
+
+no_apis_used:
+  en: No APIs used.
