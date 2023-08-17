@@ -27,8 +27,6 @@ There are a number of demos available for the Privacy Sandbox APIs. Most of them
 
 {% Partial 'privacy-sandbox/demos/fps.njk' %}
 
-{% Partial 'privacy-sandbox/demos/fedcm.njk' %}
-
 {% Partial 'privacy-sandbox/demos/permissions-policy.njk' %}
 
 {% Partial 'privacy-sandbox/demos/ua-reduction.njk' %}
