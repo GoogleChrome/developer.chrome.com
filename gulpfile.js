@@ -12,7 +12,6 @@ const writeVersionTask = require('./gulp-tasks/write-version.js');
 const watcher = () => {
   watch('./site/_scss/**/*.scss', {ignoreInitial: true}, sassTask);
   watch('./site/_static/**/*', {ignoreInitial: true}, staticTask);
-  watch('./site/static/dcc/*', {ignoreInitial: true}, staticTask);
 };
 
 // The default (if someone just runs `gulp`) is to run each task in parrallel

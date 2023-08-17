@@ -4,13 +4,9 @@
  */
 
 const {dest, src} = require('gulp');
-const merge = require('merge-stream');
 
 const misc = () => {
-  const task = src('./site/_static/**/*').pipe(dest('dist/'));
-  const dccTask = src('./site/static/**/*').pipe(dest('dist/static/'));
-
-  return merge([task, dccTask]);
+  return src('./site/_static/**/*').pipe(dest('dist/'));
 };
 
 module.exports = misc;
