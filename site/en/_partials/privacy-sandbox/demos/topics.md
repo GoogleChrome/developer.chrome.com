@@ -23,7 +23,7 @@ The Topics API allows a browser to share information about a user's interests wi
 {% endColumn %}
 {% endColumns %}
 
-#### Colab
+**Colab**
 
 {% Columns %}
 {% Column %}
