@@ -12,7 +12,7 @@ ads in a third-party iframe, and ads in a first-party context. In this demo an a
 
 [Demo](https://arapi-home.web.app/)
 
-[Docs](/docs/privacy-sandbox/attribution-reporting-experiment/)
+[Docs](/docs/privacy-sandbox/attribution-reporting/)
 
 [Summary reports walkthrough video](https://drive.google.com/file/d/18RGEx_mrhDJuMsLUK1BZ0cK5FSZRAAqh/view)
 
@@ -33,7 +33,7 @@ When aggregatable reports are batched by a collector and processed by the aggreg
 
 [Noise Lab](https://noise-lab.uc.r.appspot.com/?mode=simple)
 
-[Docs](/docs/privacy-sandbox/attribution-reporting/system-overview/)
+[Docs](/docs/privacy-sandbox/attribution-reporting/understanding-noise/)
 
 {% endColumn %}
 {% Column %}
