@@ -9,7 +9,7 @@ authors:
   - demianrenzulli
   - tunetheweb
 date: 2023-08-10
-updated: 2023-08-14
+updated: 2023-08-17
 hero: image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/Mxh3dDENwFYXpkwD1z9X.jpg
 alt: Shipping container being unloaded by a large crane
 tags:
@@ -53,6 +53,8 @@ Instead of `unload` it is recommended to use:
 
 - [`visibilitychange`](/articles/page-lifecycle-api/#event-visibilitychange): To determine when the visibility of a page changes. This event happens when the user switches tabs, minimizes the browser window, or opens a new page. Consider the [`hidden` state](/articles/page-lifecycle-api/#advice-hidden) the last reliable time to save app and user data.
 - [`pagehide`](/articles/page-lifecycle-api/#event-pagehide): To determine when the user has navigated away from the page. This event happens when the user navigates away from the page, reloads the page, or closes the browser window. The `pagehide` event is not fired when the page is simply minimized or switched to another tab. Note that, as `pagehide` does not make a page ineligible for the back/forward cache, it is possible a page can be restored after this event fires. If you're cleaning up any resources in this event, then they may have to be restored on page restore.
+
+The `beforeunload` event has a slightly different use case to `unload` in that it is a cancellable event. It is often use to warn users of unsaved data when navigating away. This event is also unrealiable as it will not fire if a background tab is killed. It is recommended to limit use of `beforeunload` and [only add this conditionally](/blog/page-lifecycle-api/#the-beforeunload-event), and instead use the above events for most `unload` replacements.
 
 For more details, see [this advice on never using the `unload` handler](/articles/page-lifecycle-api/#the-unload-event).
 
