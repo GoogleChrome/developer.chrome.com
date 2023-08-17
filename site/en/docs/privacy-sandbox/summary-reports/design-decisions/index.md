@@ -22,7 +22,14 @@ tags:
 When you read this article, you will:
 
 - Understand what strategies to create before generating summary reports in the origin trial.
-- Be introduced to [Noise Lab](#quick-tour), a tool that helps grasp the effects of various noise parameters, and that enables quick exploration and assessment of various noise management strategies.
+- Be introduced to [Noise Lab](https://goo.gle/noise-lab), a tool that helps grasp the effects of various noise parameters, and that enables quick exploration and assessment of various noise management strategies.
+
+<figure>
+{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/0vow72qj9OD9NBZuQ0ej.png", alt="Screenshot of Noise Lab", width="800", height="561" %}
+  <figcaption>
+    Noise Lab
+  </figcaption>
+</figure>
 
 ### Share your feedback
 

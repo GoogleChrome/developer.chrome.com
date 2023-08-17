@@ -7,7 +7,11 @@ updated: 2017-04-27
 description: How to show notifications to your Chrome Extension users.
 ---
 
-{% Partial 'extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Rich notifications](/docs/extensions/mv3/richNotifications/) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 <div class="aside aside--note"><strong>Platform difference:</strong> In Chrome version 59, notifications appear differently for Mac OS X users. Instead of Chrome's own notifications, users see native Mac OS X notifications. <a href="https://developers.google.com/web/updates/2017/04/native-mac-os-notifications">Learn more in this article</a>.</div>
 

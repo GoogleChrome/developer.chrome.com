@@ -3,7 +3,7 @@ layout: 'layouts/blog-post.njk'
 title: How do modern frameworks perform on the new INP metric
 subhead: Understand how the new INP metric affects the experience of sites built using JavaScript frameworks and libraries.
 date: 2022-05-16
-updated: 2022-07-18
+updated: 2023-03-31
 authors:
   - leenasohoni
   - addyosmani
@@ -14,6 +14,7 @@ hero: image/1L2RBhCLSnXjCnSlevaDjy3vba73/EK3nTunaRZbP96S2zwM2.jpeg
 alt: Person about to touch the calm water.
 tags:
   - aurora-project
+  - performance
 ---
 
 Chrome recently introduced a new [experimental responsiveness metric](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/F7S4_emZkcw) in the [Chrome UX Report](/docs/crux/) report. This metric, which we now know as [Interaction to Next Paint (INP)](https://web.dev/inp/) measures overall responsiveness to user interactions on the page. Today we want to share insights on where websites built using modern JavaScript frameworks stand in relation to this metric. We want to discuss why INP is relevant to frameworks and how [Aurora](/blog/introducing-aurora/) and frameworks are working to optimize responsiveness.
@@ -86,7 +87,7 @@ The [Aurora](/blog/introducing-aurora/) team in Chrome works with open-source we
 
 ## Experimental responsiveness metric data
 
-An INP below or equal to 200 milliseconds indicates good responsiveness. The CrUX report data and the [CWV Technology Report](https://www.google.com/url?q=https://datastudio.google.com/s/gPxRJmoivLA&sa=D&source=docs&ust=1652475737927418&usg=AOvVaw3ZQ0WOZu2ZGjCuJb23dQYg) for April 2022 give us the following information about responsiveness for popular JavaScript frameworks.
+An INP below or equal to 200 milliseconds indicates good responsiveness. The CrUX report data and the [CWV Technology Report](https://lookerstudio.google.com/s/uwsf2UWxr6k) for February 2023 give us the following information about responsiveness for popular JavaScript frameworks.
 
 {% Aside %}
 This measurement includes data from all versions of the frameworks listed. For more mature frameworks, this can include data from versions many years out-of-date.
@@ -112,53 +113,53 @@ This measurement includes data from all versions of the frameworks listed. For m
   <tr>
    <td>Angular (v2.0.0+)
    </td>
-   <td>19.0
+   <td>28.6
    </td>
-   <td>65.5
+   <td>83.6
    </td>
   </tr>
   <tr>
    <td>Next.js
    </td>
-   <td>20.2
+   <td>28.5
    </td>
-   <td>73.4
+   <td>87.3
    </td>
   </tr>
   <tr>
    <td>Nuxt.js
    </td>
-   <td>25.4
+   <td>32.0
    </td>
-   <td>84.5
+   <td>91.2
    </td>
   </tr>
   <tr>
    <td>Preact
    </td>
-   <td>36.6
+   <td>48.6
    </td>
-   <td>90.6
+   <td>92.8
    </td>
   </tr>
   <tr>
    <td>Vue (v2.0.0+)
    </td>
-   <td>41.7
+   <td>50.3
    </td>
-   <td>90.0
+   <td>94.1
    </td>
   </tr>
   <tr>
    <td>Lit
    </td>
-   <td>36.4
+   <td>50.0
    </td>
-   <td>75.7
+   <td>88.3
    </td>
   </tr>
   </tbody>
-   <caption>CWV technology report - INP data for April 2022</caption>
+   <caption>CWV technology report - INP data for June 2023</caption>
 </table>
 </div>
 
@@ -230,7 +231,7 @@ Through these enhancements, we can address different issues that lead to poor re
 
 ## Conclusion
 
-We expect the INP score to provide a better compass for websites to improve responsiveness and performance in the future. We will take steps to provide more actionable guidance on the metric in 2022-23. We hope to achieve this by:
+We expect the INP score to provide a better compass for websites to improve responsiveness and performance in the future. We will build on our [existing INP guide](https://web.dev/optimize-inp/) to provide more actionable tips for framework developers in 2023. We hope to achieve this by:
 
 * Creating channels for easy access to field data on INP for frameworks and web developers.
 * Work with frameworks to build features that will improve INP by default.

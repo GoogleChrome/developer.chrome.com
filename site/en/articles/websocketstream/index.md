@@ -130,7 +130,7 @@ Examples of sites that can use this API include:
 The WebSocketStream API is promise-based, which makes dealing with it feel natural
 in a modern JavaScript world.
 You start by constructing a new `WebSocketStream` and passing it the URL of the WebSocket server.
-Next, you wait for the `connection` to be established,
+Next, you wait for the connection to be `opened`,
 which results in a
 [`ReadableStream`](https://developer.mozilla.org/docs/Web/API/ReadableStream/ReadableStream)
 and/or a
@@ -153,7 +153,7 @@ data to.
 
 ```js
   const wss = new WebSocketStream(WSS_URL);
-  const {readable, writable} = await wss.connection;
+  const {readable, writable} = await wss.opened;
   const reader = readable.getReader();
   const writer = writable.getWriter();
 
@@ -184,17 +184,21 @@ which behaves the same as the
 
 ```js
 const chatWSS = new WebSocketStream(CHAT_URL, {protocols: ['chat', 'chatv2']});
-const {protocol} = await chatWSS.connection;
+const {protocol} = await chatWSS.opened;
 ```
 
 The selected `protocol` as well as potential `extensions` are part of the dictionary
-available via the `WebSocketStream.connection` promise.
+available via the `WebSocketStream.opened` promise.
 All the information about the live connection is provided by this promise,
 since it is not relevant if the connection fails.
 
 ```js
-const {readable, writable, protocol, extensions} = await chatWSS.connection;
+const {readable, writable, protocol, extensions} = await chatWSS.opened;
 ```
+
+{% Aside %}
+In an earlier version of the API, `WebSocketStream.opened` was called `WebSocketStream.connection`.
+{% endAside %}
 
 ### Information about closed WebSocketStream connection
 

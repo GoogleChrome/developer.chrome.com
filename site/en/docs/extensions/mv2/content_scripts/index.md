@@ -7,7 +7,11 @@ updated: 2019-03-11
 description: An explanation of content scripts and how to use them in your Chrome Extension.
 ---
 
-{% Partial 'extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Content scripts](/docs/extensions/mv3/content_scripts/) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 Content scripts are files that run in the context of web pages. By using the standard [Document
 Object Model][1] (DOM), they are able to read details of the web pages the browser visits, make

@@ -23,7 +23,8 @@ Next is the extension's [`onInstalled`](/docs/extensions/reference/runtime/#even
 event to set a state or for one-time initialization, such as a [context menu](/docs/extensions/reference/contextMenus/).
 
 ```js
-chrome.runtime.onInstalled.addListener(() => {
+chrome.runtime.onInstalled.addListener((details) => {
+  if(details.reason !== "install" && details.reason !== "update") return;
   chrome.contextMenus.create({
     "id": "sampleContextMenu",
     "title": "Sample Context Menu",

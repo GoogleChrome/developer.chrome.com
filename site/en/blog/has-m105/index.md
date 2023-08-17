@@ -253,7 +253,7 @@ How about forms? They're known for being tricky to style. One such example of th
     title="Enter valid email address"
     placeholder="Enter valid email address"
   />   
-</div
+</div>
 ```
 ```css
 label {

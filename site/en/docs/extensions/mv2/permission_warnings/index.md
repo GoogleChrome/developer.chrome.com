@@ -8,7 +8,11 @@ description: >
   How to implement permissions to protect your users and your Extension.
 ---
 
-{% Partial 'extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Permission Warning guidelines](/docs/extensions/mv3/permission_warnings/) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 An extension's ability to access websites and most Chrome APIs is determined by its declared
 [permissions][1]. Permissions should be restricted to only what is needed for its functionality.

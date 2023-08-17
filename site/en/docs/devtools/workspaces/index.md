@@ -14,6 +14,8 @@ tags:
   - javascript
 ---
 
+{% YouTube id='Zu9CdbnS5ps' %}
+
 **Goal**: This tutorial provides hands-on practice in setting up and using Workspaces so that you
 can use Workspaces in your own projects. Workspaces enable you to save changes that you make within
 DevTools to source code that's stored on your computer.

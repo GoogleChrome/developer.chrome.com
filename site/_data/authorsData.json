@@ -248,6 +248,7 @@
     ]
   },
   "rviscomi": {
+    "homepage": "https:/rviscomi.dev/",
     "github": "rviscomi",
     "twitter": "rick_viscomi",
     "image": "image/STd8eW8CSiNp5B1bX0R6Dww2eH32/03cRovenlDpm0uyoUUkX.jpeg",
@@ -561,11 +562,6 @@
     "twitter": "DrotarPavol",
     "github": "padr31",
     "image": "image/Vww75TFpThOgTNuASFM6UYfBAp53/DXzBVhVGAn8NTnPqW7Pa.jpg"
-  },
-  "adrianajara": {
-    "country": "US",
-    "mastodon": "https://indieweb.social/@tropicadri",
-    "image": "image/Vww75TFpThOgTNuASFM6UYfBAp53/tIuTcnxqlspZFyklJYHG.jpg"
   },
   "agektmr": {
     "country": "JP",
@@ -911,6 +907,7 @@
     "twitter": "tropicadri",
     "github": "tropicadri",
     "country": "US",
+    "mastodon": "https://hachyderm.io/@tropicadri",
     "image": "image/SeARmcA1EicLXagFnVOe0ou9cqK2/24pW1yRsYdAJXV7nfgbR.jpg",
     "external": [
       {
@@ -1840,7 +1837,7 @@
     "country": "US",
     "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/4B8f3CX2GqtSfgwIEBiM.jpeg"
   },
-  "henrikbostrom":{
+  "henrikbostrom": {
     "country": "",
     "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/es5lvrnCiRGsPLyndQ9s.jpeg"
   },
@@ -1858,5 +1855,23 @@
   "yurikoh": {
     "country": "JP",
     "image": "image/HodOHWjMnbNw56hvNASHWSgZyAf2/2DM7dQC0YIGR54SlzYo6.jpg"
+  },
+  "elabadysayed": {
+    "country": "UK",
+    "twitter": "SayedElabady",
+    "github": "SayedElabady",
+    "image": "image/SeARmcA1EicLXagFnVOe0ou9cqK2/CjPe3HZR6IhDi83VYQx6.jpg"
+  },
+  "hemeryar": {
+    "country": "FR",
+    "github": "hemeryar"
+  },
+  "samrichard": {
+    "country": "US",
+    "twitter": "snugug",
+    "github": "snugug",
+    "glitch": "snugug",
+    "homepage": "https://snugug.com",
+    "image": "image/admin/5kuER6QRWs54zbYIJ4zS.jpg"
   }
 }

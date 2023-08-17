@@ -6,7 +6,7 @@ subhead: >
 description: >
   Limit passively shared browser data to reduce the volume of sensitive information which leads to fingerprinting.
 date: 2021-11-09
-updated: 2023-03-14
+updated: 2023-08-01
 authors:
   - alexandrawhite
 ---

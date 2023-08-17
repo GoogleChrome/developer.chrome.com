@@ -6,7 +6,7 @@ date: 2023-06-20
 description: How to use geolocation in Chrome extension service workers, popups, side panels, or content scripts.
 ---
 
-If you want to get geolocation information in your Chrome extension, use the same [`navigator.geolocation`][geolocation] DOM API that any website normally would. This article exists because Chrome extensions handle permission to access sensitive data differently than websites. Geolocation is very sensitive data, so browsers ensure that users are fully aware and in control of when and where their exact location is shared.
+If you want to get geolocation information in your Chrome extension, use the same [`navigator.geolocation`][geolocation] Web platform API that any website normally would. This article exists because Chrome extensions handle permission to access sensitive data differently than websites. Geolocation is very sensitive data, so browsers ensure that users are fully aware and in control of when and where their exact location is shared.
 
 ## Use geolocation in MV3 extensions
 

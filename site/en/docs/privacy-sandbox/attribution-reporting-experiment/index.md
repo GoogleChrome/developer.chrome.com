@@ -26,8 +26,6 @@ in the first half of 2023.
    * To experiment with the API, follow these guides:
      * [What you should know about the Attribution Reporting
        API](https://docs.google.com/document/d/1lvrKd5Vv7SYLMGZb0Fz7bpGNEl0LOx9i1waAHw2sUg8/)
-     * [Handbook](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/):
-       Demo, detailed code examples and (local) debugging tips.
 4. Experiment with [summary
    reports](/docs/privacy-sandbox/summary-reports).
    *  Ad techs can generate summary reports with the [aggregation service](/docs/privacy-sandbox/aggregation-service). Set up

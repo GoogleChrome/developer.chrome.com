@@ -7,7 +7,11 @@ updated: 2020-07-21
 description: Step-by-step instructions on how to debug Chrome Extensions.
 ---
 
-{% Partial 'extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Debugging extensions](/docs/extensions/mv3/tut_debugging/) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 Extensions are able to leverage the same debugging benefits [Chrome DevTools][1] provides for web
 pages, but they carry unique behavior properties. Becoming a master extension debugger requires an

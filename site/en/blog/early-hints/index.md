@@ -7,7 +7,7 @@ description: >
 subhead: >
   Find out how your server can send hints to the browser about critical sub-resources.
 date: 2022-06-23
-updated: 2023-06-10
+updated: 2023-08-02
 authors:
   - kenjibaheux
   - tunetheweb
@@ -50,7 +50,9 @@ In some cases, the performance improvement to the [Largest Contentful Paint](htt
 
 ## Implementing Early Hints
 
-Early Hints is available from Chrome version 103, as a response to navigation requests, or user interactions that change the url in the status bar, with support for both preconnect and preload hints.
+{% BrowserCompat 'http.status.103' %}
+
+Early Hints is available from Chrome version 103, as a response to navigation requests, or user interactions that change the url in the status bar, with support for both preconnect and preload hints. Other browsers are adding support for preconnect.
 
 Before going deep into the topic, please note that Early Hints are not useful if your server can send a 200 (or other final responses) right away. Instead, consider using the regular `link rel=preload` or `link rel=preconnect` on the main response ([Link rel HTTP header](https://developer.mozilla.org/docs/Web/HTTP/Headers/Link)), or in the main response (`<link>` elements), in such situations. For the cases where your server needs a little time to generate the main response, read on!
 
