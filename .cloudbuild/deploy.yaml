@@ -9,10 +9,6 @@ steps:
 
   - name: node:16.14.2
     entrypoint: npm
-    args: ['run', 'cloud-secrets']
-
-  - name: node:16.14.2
-    entrypoint: npm
     args: ['run', 'production']
     env:
       - 'NODE_OPTIONS="--max_old_space_size=8192"' # https://github.com/GoogleChrome/developer.chrome.com/issues/2439

@@ -10,7 +10,6 @@
     "algolia": "node ./algolia.js",
     "setup": "npm-run-all clean ignore maybe-sync-external gulp rollup",
     "clean": "rimraf dist",
-    "cloud-secrets": "node ./cloud-secrets.js",
     "dev": "npm-run-all setup eleventy --parallel start watch",
     "watch": "npm-run-all --parallel --race gulp:watch rollup:watch eleventy:watch",
     "eleventy:debug": "node --inspect ./node_modules/.bin/eleventy",
@@ -111,7 +110,6 @@
   },
   "devDependencies": {
     "@ava/babel": "^1.0.1",
-    "@google-cloud/secret-manager": "^3.2.2",
     "@percy/cli": "^1.16.0",
     "@rollup/plugin-commonjs": "^15.1.0",
     "@rollup/plugin-json": "^4.1.0",

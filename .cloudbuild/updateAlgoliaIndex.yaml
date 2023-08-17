@@ -6,10 +6,6 @@ steps:
 
   - name: node:16.14.2
     entrypoint: npm
-    args: ['run', 'cloud-secrets']
-
-  - name: node:16.14.2
-    entrypoint: npm
     args: ['run', 'algolia']
 
 substitutions:
@@ -19,3 +15,11 @@ options:
   machineType: 'E2_HIGHCPU_32'
   env:
     - 'PROJECT_ID=$PROJECT_ID'
+  secretEnv: ['ALGOLIA_APP_ID', 'ALGOLIA_API_KEY']
+
+availableSecrets:
+  secretManager:
+    - versionName: projects/dcc-staging/secrets/ALGOLIA_APP_ID/versions/1
+      env: 'ALGOLIA_APP_ID'
+    - versionName: projects/dcc-staging/secrets/ALGOLIA_API_KEY/versions/1
+      env: 'ALGOLIA_API_KEY'
