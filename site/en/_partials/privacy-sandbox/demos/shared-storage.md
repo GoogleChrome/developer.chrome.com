@@ -14,8 +14,7 @@ The Shared Storage API provides storage that can be used cross-site, meaning you
 {% endColumn %}
 {% Column %}
 
-<a href="https://shared-storage-demo.web.app/">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/dOFtwOaI8ldFfwgmG5El.png", alt="Shared Storage API 
- demo.", width="751", height="521" %}</a>
+<a href="https://shared-storage-demo.web.app/">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/dOFtwOaI8ldFfwgmG5El.png", alt="Shared Storage API demo.", width="751", height="521" %}</a>
 
 {% endColumn %}
 {% endColumns %}
