@@ -17,8 +17,6 @@
  * @fileoverview Fetches the most recent playlists by specified channels from YouTube
  */
 
-require('dotenv').config();
-
 const fs = require('fs').promises;
 const path = require('path');
 const ms = require('ms');
@@ -189,7 +187,7 @@ async function checkDataTimestamp() {
  * specified in the config.
  */
 async function run() {
-  if (!process.env.YOUTUBE_API_KEY) {
+  if (!API_KEY) {
     throw new Error('No `YOUTUBE_API_KEY` environment var for production');
   }
 
