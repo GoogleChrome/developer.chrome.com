@@ -48,11 +48,11 @@ options:
 
 availableSecrets:
   secretManager:
-    - versionName: projects/dcc-staging/secrets/GITHUB_APP_ID/versions/1
+    - versionName: projects/chrome-apps-doc/secrets/GITHUB_APP_ID/versions/1
       env: 'GITHUB_APP_ID'
-    - versionName: projects/dcc-staging/secrets/GITHUB_APP_KEY/versions/4
+    - versionName: projects/chrome-apps-doc/secrets/GITHUB_APP_KEY/versions/4
       env: 'GITHUB_APP_KEY'
-    - versionName: projects/dcc-staging/secrets/GITHUB_APP_INSTALLATION_ID/versions/1
+    - versionName: projects/chrome-apps-doc/secrets/GITHUB_APP_INSTALLATION_ID/versions/1
       env: 'GITHUB_APP_INSTALLATION_ID'
-    - versionName: projects/dcc-staging/secrets/YOUTUBE_API_KEY/versions/1
+    - versionName: projects/chrome-apps-doc/secrets/YOUTUBE_API_KEY/versions/1
       env: 'YOUTUBE_API_KEY'
