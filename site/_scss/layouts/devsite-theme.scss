@@ -330,6 +330,52 @@ $CARD_BORDER: 2px solid #EEF4FF;
       }
     }
   }
+
+}
+
+
+.dcc-top-menu{
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;
+  margin-top: 0.5rem;
+
+  a{
+    color: #5F6368;
+    font-family: 'Google Sans';
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    letter-spacing: 0.25px;
+  }
+}
+
+search-box{
+  min-width:20rem;
+
+  .search-box__btn{
+    color:#5F6368;
+
+    &:hover{
+      border:none;
+      color:#5F6368;
+    }
+
+    &:active{
+      background-color:transparent;
+      box-shadow:none;
+      border:none;
+    }
+  }
+  
+
+  input[type=text]{
+    background-color: #F1F3F4;
+    color: #5F6368;
+    font-size: 1rem;
+    font-weight:400;
+    padding-left:3rem;
+  }
 }
 
 /* stylelint-enable */

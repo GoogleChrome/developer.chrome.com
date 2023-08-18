@@ -105,7 +105,8 @@
   <body class="" template="landing" theme="web-theme" type="article" layout="full" ready="" style="--devsite-js-header-height: 49px; --devsite-panel-height: 0px;">
     <div class="scaffold">
       {% block header %}
-        {% include 'partials/top-nav.njk' %}
+        {# {% include 'partials/top-nav.njk' %} #}
+        {% include 'partials/devsite-header.njk' %}
       {% endblock %}
 
       {% block navigation_rail %}
