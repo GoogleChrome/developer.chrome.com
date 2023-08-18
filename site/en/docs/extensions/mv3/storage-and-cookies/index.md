@@ -42,24 +42,16 @@ and not the extension.
 Some web storage APIs like [IndexedDB][indexeddb] are accessible in service workers. However,
 [Local Storage][local-storage] and [Session Storage][session-storage] are not.
 
-You can call these APIs in an [offscreen document][offscreen]. For example, you could use the following to migrate
-data when updating from Manifest V2 to Manifest V3:
-
-1. In the extension service worker check [`chrome.storage`][chrome-storage-api] for your data.
-1. If your data isn't found, [create][create-offscreen] an offscreen document and call
-[`sendMessage()`][send-message] to start a conversion routine. 
-1. In the offscreen document read the data from the web storage
-APIs and use message passing to return it to the service worker.
-1. In the service worker, write the data to a new location.
+If you have a specific use case, use an [offscreen document][offscreen] to access these.
 
 ### Partitioning {: #storage-partitioning }
 
 Partitioning is where keys are introduced for stored data to limit where it can be accessed.
 
-To prevent certain types of cross-site tracking, [storage partitioning][storage-partitioning]
-introduces changes to how partitioning keys are defined. In practice, this means that if site A
-embeds an iframe containing site B, site B will not be able to access the same storage it would
-usually have when navigated to directly.
+When enabled, [storage partitioning][storage-partitioning] introduces changes to how partitioning
+keys are defined to prevent certain types of cross-site tracking. In practice, this means that if
+site A embeds an iframe containing site B, site B will not be able to access the same storage it
+would usually have when navigated to directly.
 
 To mitigate the impact of this in extensions, two key exemptions apply:
 
