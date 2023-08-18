@@ -69,7 +69,7 @@ Users are presented with four options:
 - **Don't allow**: Persistent block.
 - Clicking the **x** button: Temporary block.
 
-When users select **Allow this time**, the granted permission is temporary, also referred to as _one-time permission_. Its duration is limited to the current ongoing interaction with a web application. 
+When users select **Allow this time**, the granted permission is temporary, also referred to as _one-time permission_. Its duration is limited to the current ongoing interaction with a web application.
 
 <figure>
 {% Video src="video/O2RNUyVSLubjvENAT3e7JSdqSOx1/EqRZdDpv30X1x7FdOGFP.mov", width="800", height="547", autoplay=true, muted=true, playsinline=true, loop=true%}
@@ -114,9 +114,9 @@ One-time permissions are also built into several mobile operating systems.
 ## Impact and recommendations
 
 Impact of one-time permissions:
-- The introduction of one-time permissions does not impact permissions that users have previously granted persistently. 
-- Once a user makes a decision on a permission prompt, then for the duration of their visit, the permission state is either granted or denied. One-time permissions make no difference in this regard. 
-- However, if the user selects **Allow this time**, they will see a permission prompt again on their next visit. 
+- The introduction of one-time permissions does not impact permissions that users have previously granted persistently.
+- Once a user makes a decision on a permission prompt, then for the duration of their visit, the permission state is either granted or denied. One-time permissions make no difference in this regard.
+- However, if the user selects **Allow this time**, they will see a permission prompt again on their next visit.
 
 To accommodate for one-time permissions, we recommend that site owners do the following:
 
@@ -144,7 +144,7 @@ By default, all web permissions are bound to an [origin](https://web.dev/same-si
 
 In more detail, one-time permission grants expire as soon as any of the following conditions are met:
 
-* The page has been closed, was navigated away from, or was [discarded](/blog/page-lifecycle-api/#states:~:text=next%20states%3A%0ANONE-,Discarded,-A%20page%20is). This includes closing Chrome.
+* The page has been closed, was navigated away from, or was [discarded](/articles/page-lifecycle-api/#states:~:text=next%20states%3A%0ANONE-,Discarded,-A%20page%20is). This includes closing Chrome.
 * 16 hours have passed since granting permission.
 * The user manually revokes the permission (for example, in **Site controls**), or the permission is overridden through an enterprise policy.
 * The page has been in the [background](#background-tab) for at least 5 minutes—except if the capability is allowed to run in the background, like camera or microphone. In this case, as long as the site uses the capability, Chrome shows a [tab strip indicator](#tab-strip-indicator) and doesn't start the 5-minute timer until the page stops using the capability. Note that the 16-hour timer is still running.
@@ -154,15 +154,15 @@ A user may have several tabs of the same origin open simultaneously. In that cas
 {% endAside %}
 
 #### Background tab {: #background-tab }
-A browser tab is in the _background_ when it's not in the foreground. A tab is in the foreground when it's the visible tab in a browser window that is not minimized. 
+A browser tab is in the _background_ when it's not in the foreground. A tab is in the foreground when it's the visible tab in a browser window that is not minimized.
 
-In Chrome, some capabilities, like geolocation, can only run in the foreground tab. They're not allowed to run in a background tab. Others, like camera and microphone, are allowed to run in a background tab. 
+In Chrome, some capabilities, like geolocation, can only run in the foreground tab. They're not allowed to run in a background tab. Others, like camera and microphone, are allowed to run in a background tab.
 
 {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/Cjc8Tj8lnks8eB6Ntx7k.jpg", alt="A screenshot of the browser window highlight an active foreground tab and inactive background tab.", width="800", height="579" %}
 
 #### Tab strip indicator {: #tab-strip-indicator }
 
-Capabilities that continue to run when the tab is in the background have a *tab strip indicator*. 
+Capabilities that continue to run when the tab is in the background have a *tab strip indicator*.
 For example, camera has a tab strip indicator.
 
 <figure>
@@ -182,7 +182,7 @@ Geolocation has an address bar indicator, but no tab strip indicator.
 
 #### Examples
 
-* **Geolocation**: The user is on `example.com` and grants one-time geolocation access. The user switches to another tab. This makes `example.com` a background tab. Geolocation access is paused immediately because Chrome doesn't allow background geolocation access, but the one-time permission grant is still valid. If the user comes back to `example.com` within five minutes, the page can resume geolocation access (and the 5-minute expiry timer is reset). If they don't, the one-time permission expires. 
+* **Geolocation**: The user is on `example.com` and grants one-time geolocation access. The user switches to another tab. This makes `example.com` a background tab. Geolocation access is paused immediately because Chrome doesn't allow background geolocation access, but the one-time permission grant is still valid. If the user comes back to `example.com` within five minutes, the page can resume geolocation access (and the 5-minute expiry timer is reset). If they don't, the one-time permission expires.
 * **Camera/Microphone**: The user is on `example.com` and grants one-time camera access. The user switches to another tab. This makes `example.com` a background tab. Camera access can continue because Chrome allows camera access to continue in the background. Chrome keeps displaying the tab strip indicator for camera as long as it's in use to keep the user informed. At some point, the site may decide to stop camera access, in which case the 5-minute expiry timer starts. After 5 minutes without camera access, the one-time permission expires.
 
 
