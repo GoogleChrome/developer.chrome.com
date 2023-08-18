@@ -57,23 +57,20 @@ You will need to think of what questions you are looking to answer before data i
 
 #### Dimensions
 
-To answer the questions outlined above, you want to track the following *dimensions*:
+To answer the questions outlined above, you want to track the following dimensions:
 
 -   Ad campaign ID
 -   Geography ID: the geographic region where the ad was served
 -   Product category
 
-While the Campaign ID and the Geography ID dimensions are known when the ad is served at *ad-serving time*, the Product category will be known from a trigger event, when the user completes a conversion, that is, at *conversion time*.
+While the Campaign ID and the Geography ID dimensions are known when the ad is served at ad-serving time, the Product category will be known from a trigger event, when the user completes a conversion, that is, at conversion time.
 
 {% Aside %}
 For this example and in the rest of this document, we'll display dimensions as follows:
-
 - Dimensions known at ad-serving time on a green background.
-- Dimensions known at conversion time on a <u>yellow background and underlined.
-{% endAside %}
+- Dimensions known at conversion time on a <u>yellow background and underlined.{% endAside %}
 
 With this, the dimensions you want to track for this example look as follows:
-
 {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/7H0FNCjZM9zr3VE48Q2G.png", alt="ALT_TEXT_HERE", width="498", height="55" %}
 
 #### Aggregation keys (buckets): definition
@@ -82,24 +79,24 @@ Aggregation key and bucket refer to the same thing.<br>
 The term _aggregation key_ is used in the browser APIs used to configure reports.<br>
 The term _bucket_ is used in the aggregatable and summary reports, and in the aggregation service APIs.
 
-An *aggregation key* (*key* for short) is a piece of data that represents the values of the dimensions being tracked. Data is later aggregated along each aggregation key.
+An aggregation key (key for short) is a piece of data that represents the values of the dimensions being tracked. Data is later aggregated along each aggregation key.
 
 For example, let's assume you're tracking the dimensions Product category, Geography ID and Campaign ID.
 
-When a user located in Geography ID 7 sees an ad for Campaign ID 12, and later converts by purchasing a product of Product category 25, you may set an aggregation key that looks as follows:
+When a user located in Geography ID 7 sees an ad for Campaign ID 12, and later converts by purchasing a product of Product category 25, you may set an aggregation key that looks like this:
 
 {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/dmpyjw7KIcunQemDqs8i.png", alt="ALT_TEXT_HERE", width="495", height="125" %}
 
-You'll see later that an aggregation key does not look *exactly* like this in practice, but for now let's focus on the information contained in the key.
+You'll see later that an aggregation key does not look exactly like this in practice, but for now let's focus on the information contained in the key.
 
 #### Aggregatable values: definition
 
 To answer your questions with the dimensions we've outlined, you want to know, across many users and many keys:
 
--   The number of purchases (the purchase count). Once aggregated and made available in a summary report, this will be the total purchase count (*summary value*).
--   The revenue for each purchase (the purchase value). Once aggregated and made available in a summary report, this will be the total revenue (*summary value*).
+-   The number of purchases (the purchase count). Once aggregated and made available in a summary report, this will be the total purchase count (summary value).
+-   The revenue for each purchase (the purchase value). Once aggregated and made available in a summary report, this will be the total revenue (summary value).
 
-Each of these—the purchase count for one conversion and the purchase value for one conversion—is an *aggregatable value*. You can think of aggregatable values as the values of your measurement goals.
+Each of these—the purchase count for one conversion and the purchase value for one conversion—is an aggregatable value. You can think of aggregatable values as the values of your measurement goals.
 
 <table class="with-heading-tint">
 	<thead>
@@ -121,13 +118,13 @@ Each of these—the purchase count for one conversion and the purchase value for
 		</tbody>
 	</table>
 
-When a user located in Geography ID 7 sees an ad for Campaign ID 12, and later converts by purchasing a product of Product category 25 for $120, you may set an aggregation key and aggregatable values that look as follows:
+When a user located in Geography ID 7 sees an ad for Campaign ID 12, and later converts by purchasing a product of Product category 25 for $120, you may set an aggregation key and aggregatable values that look like these:
 
 {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/b5Mu1k7bH5wg3aAFrAGs.png", alt="ALT_TEXT_HERE", width="658", height="251" %}
 
 Aggregatable values are summed per key across many users to generate aggregated insights, in the form of summary values in summary reports.
 
-![image](insert_image_url_here)
+{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/H6qwvsRbrEDaxsKyV7Vz.png", alt="ALT_TEXT_HERE", width="800", height="446" %}
 
 Aggregatable values are summed to generate aggregated insights for your measurement goals.
 
@@ -139,21 +136,16 @@ Aggregatable values are summed to generate aggregated insights for your measurem
 
 When a user clicks or views an ad and later converts, you instruct the browser to store an {aggregation key, aggregatable value} pair.
 
-<table class="with-heading-tint">
-  <thead>
-    <tr>
-      <th>In the <a href="https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md">explainer</a>, an {aggregation key, aggregatable value} pair is also called a <em>histogram contribution</em>: it represents how this conversion—and the dimensions and values associated with it—<em>contributes</em> to the summary report.</th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
+
+{% Aside %}
+In the <a href="https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md">explainer</a>, an {aggregation key, aggregatable value} pair is also called a <em>histogram contribution</em>: it represents how this conversion—and the dimensions and values associated with it—<em>contributes</em> to the summary report.
+{% endAside %}
 
 In our example, when a user clicks or views an ad and later converts, you would instruct the browser to generate two contributions (one per measurement goal).
 
-![image](insert_image_url_here)
+{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/rTwVxMnjMAexdZEXkX1P.png", alt="ALT_TEXT_HERE", width="800", height="422" %}
 
-You'll see later in this document that an {aggregation key, aggregatable value} aggregatable report does not look *exactly* like this—but for now let's focus on the information contained in the report.
+You'll see later in this document that an {aggregation key, aggregatable value} aggregatable report does not look exactly like this—but for now let's focus on the information contained in the report.
 
 When you instruct the browser to generate two contributions, the browser generates an aggregatable report (if it can [match](https://docs.google.com/document/d/1lvrKd5Vv7SYLMGZb0Fz7bpGNEl0LOx9i1waAHw2sUg8/edit#heading=h.z3eyiewn6zcw) the conversion with a previous view or click).
 
@@ -162,14 +154,14 @@ An aggregatable report contains:
 -   The contribution(s) you've configured.
 -   Metadata about the click/view event and the conversion event: the site where the conversion occurred, and more. [See all the fields in an aggregatable report](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md#aggregatable-reports).
 
-![image](insert_image_url_here)
+{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/hpzcYwEDbnTlwLYJLiJJ.png", alt="ALT_TEXT_HERE", width="800", height="693" %}
 
-Aggregatable reports are JSON-formatted and include among others a *payload* field that will be used as a data input for the final summary report.
+Aggregatable reports are JSON-formatted and include among others a payload field that will be used as a data input for the final summary report.
 
 The payload contains a list of contributions, each one being an {aggregation key, aggregatable value} pair:
 
--   *bucket*: the aggregation key, encoded as a bytestring.
--   *value*: the aggregatable value for that measurement goal, encoded as a bytestring.
+-   bucket: the aggregation key, encoded as a bytestring.
+-   value: the aggregatable value for that measurement goal, encoded as a bytestring.
 
 {% Aside %}
 Aggregation key and bucketrefer to the same thing.
@@ -204,18 +196,24 @@ Aggregatable reports are aggregated across many browsers/devices (users) as foll
 -   For each key, the aggregatable values from the aggregatable reports are summed.
 -   Noise is added to the summary value.
 
-![image](insert_image_url_here)
+{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/LRQV3b1jgEYdYO49FMyz.png", alt="ALT_TEXT_HERE", width="800", height="536" %}
 
 The result is a summary report that contains a set of {aggregation key, summary value} pairs.
 
 A summary report contains a JSON dictionary-style set of key-value pairs. Each pair contains:
 
--   *bucket*: the aggregation key, encoded as a bytestring.
--   *value*: the summary value in decimal for a given measurement goal, summed up from all available aggregatable reports, with an added level of noise.
+-   bucket: the aggregation key, encoded as a bytestring.
+-   value: the summary value in decimal for a given measurement goal, summed up from all available aggregatable reports, with an added level of noise.
 
 Example:
 
-ADD CODE BACK IN
+```json
+[
+{"bucket": "111001001", "value": "2558500"}, 
+{"bucket": "111101001", "value": "3256211"}, 
+{...}
+]
+```
 
 In practice, summary reports are encoded in a way that will make buckets and values look different than stated above (that is, a bucket may look like `\u0000\u0000\x80\u0000`). <em>Bucket</em> and <em>value</em> are both bytestrings. 
 
@@ -227,9 +225,9 @@ Aggregation keys are defined by an adtech company, typically in two steps: when 
 Bucket and aggregation key refer to the same thing.
 {% endAside %}
 
-#### Key structure
+#### Key structure {: #key-structure}
 
-We'll use the term *key structure* to designate the set of dimensions encoded into a key.
+We'll use the term key structure to designate the set of dimensions encoded into a key.
 
 Example:
 
@@ -249,14 +247,14 @@ To do so, within each key, encode a piece of data that tells you what the summar
 
 One way to do that is  to create an additional dimension for your key that represents the measurement goal type.
 
-Using our earlier example above, this *measurement goal type* would have two different possible values:
+Using our earlier example above, this measurement goal type would have two different possible values:
 
 -   **Purchase count** is the first type of measurement goal.
 -   **Purchase value** is the second type of measurement goal.
 
-![image](insert_image_url_here)
+{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/zQd4wqRbOHItpONWUzR2.png", alt="ALT_TEXT_HERE", width="800", height="700" %}
 
-If you had *n* measurement goals, the measurement goal type would have *n* different types of values.
+If you had _n_ measurement goals, the measurement goal type would have _n_ different types of values.
 
 With this, you can think of a key's dimensions as a metric. For example, "the number of **purchases** of a certain product per campaign per geography".
 
@@ -282,7 +280,7 @@ A Country dimension may have a cardinality of 200, as there are about 200 countr
 
 When you set keys in the browser, they should be encoded in hexadecimal. 
 
-In summary reports, keys will appear in binary (and be named *buckets*).
+In summary reports, keys will appear in binary (and be named buckets).
 
 <table class="with-heading-tint">
   <thead>
@@ -298,7 +296,7 @@ Example: 0b11001 means "11001 in binary", that is 25 in decimal (not 11,001).</t
   </tbody>
 </table>
 
-#### Set two keys pieces for a full key
+#### Set two keys pieces for a full key 
 
 Let's assume you use a key to track the following dimensions:
 
@@ -306,7 +304,7 @@ Let's assume you use a key to track the following dimensions:
 -   Geography ID
 -   Product category
 
-While the Campaign ID and the Geography ID dimensions are known when the ad is served—at *ad-serving time*—, the product category will be known from a trigger event, when the user completes a conversion—at *conversion time*. 
+While the Campaign ID and the Geography ID dimensions are known when the ad is served—at ad-serving time—, the product category will be known from a trigger event, when the user completes a conversion—at conversion time. 
 
 In practice, this means you will set a key in two steps:
 
@@ -317,7 +315,7 @@ These different parts of the keys are called key pieces.
 
 A key is calculated by taking the XOR (|) of its key pieces.
 
-![image](insert_image_url_here)
+{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/CVeB1l6DHo0TZzxlueMn.png", alt="ALT_TEXT_HERE", width="800", height="161" %}
 
 Example:
 
@@ -363,13 +361,13 @@ To encode dimensions into keys, you can create and maintain a key structure map 
 
 A key structure map represents each of your dimensions and their position in the key.
 
-In practice, creating and maintaining key structure maps means you have to implement and maintain decoder logic. If you're looking for a method that doesn't require you to do that, consider using a [hash-based approach](#heading=h.6q2omygul77r) instead.
+In practice, creating and maintaining key structure maps means you have to implement and maintain decoder logic. If you're looking for a method that doesn't require you to do that, consider using a [hash-based approach](#encoding) instead.
 
 Example:
 
 Let's assume that you plan on tracking both purchases and purchase values for specific campaigns, geographic regions, and products.
 
-The product category, geography ID, and campaign ID need to be dimensions in your keys. Additionally, because you want to track two different measurement goals—purchase count and purchase value—you need to add one dimension within your key that keeps track of the [key type](#heading=h.ezh88ewhh5h4). This will allow you to define what the aggregatable value actually represents upon receiving {key, aggregatable value} pairs in summary reports.
+The product category, geography ID, and campaign ID need to be dimensions in your keys. Additionally, because you want to track two different measurement goals—purchase count and purchase value—you need to add one dimension within your key that keeps track of the [key type](#key-structure). This will allow you to define what the aggregatable value actually represents upon receiving {key, aggregatable value} pairs in summary reports.
 
 With this, your key has the following dimensions:
 
@@ -392,59 +390,41 @@ Let's look at how many bits you would need to encode each dimension within your 
 <table class="with-heading-tint">
   <thead>
     <tr>
-      <th></th>
       <th>Binary value in the key</th>
       <th>Geography</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-     <td>8 values in total</td>
-      <td><p><pre>
-000
-</pre></p></td>
+      <td>000</td>
       <td>North America</td>
     </tr>
-    <tr>
-      <td><p><pre>
-001
-</pre></p></td>
+    <tr> 
+      <td>001</td>
       <td>Central America</td>
     </tr>
     <tr>
-      <td><p><pre>
-010
-</pre></p></td>
+      <td>010</td>
       <td>South America</td>
     </tr>
     <tr>
-      <td><p><pre>
-011
-</pre></p></td>
+      <td>011</td>
       <td>Europe</td>
     </tr>
     <tr>
-      <td><p><pre>
-100
-</pre></p></td>
+      <td>100</td>
       <td>Africa</td>
     </tr>
     <tr>
-      <td><p><pre>
-101
-</pre></p></td>
+      <td>101</td>
       <td>Asia</td>
     </tr>
     <tr>
-      <td><p><pre>
-110
-</pre></p></td>
+      <td>110</td>
       <td>Caribbean</td>
     </tr>
     <tr>
-      <td><p><pre>
-111
-</pre></p></td>
+      <td>111</td>
       <td>Oceania</td>
     </tr>
   </tbody>
@@ -460,9 +440,9 @@ With this, the key structure map for these keys would look as follows:
 
 The order of the dimensions within the key is up to you.
 
-To illustrate how dimensions make up a key structure, we'll be using a binary representation, which is why the Campaign ID (first bits) is the rightmost one, and the product category (last bits) is the leftmost one.
+To illustrate how dimensions make up a key structure, we'll be using a binary representation, which is why the Campaign ID (first bits) is the right-most one, and the product category (last bits) is the left-most one.
 
-Within each dimension, the most significant bit—the one that carries the greatest numerical value—is the leftmost bit. The least significant bit—the one that carries the smallest numerical value—is the rightmost bit.
+Within each dimension, the most significant bit—the one that carries the greatest numerical value—is the left-most bit. The least significant bit—the one that carries the smallest numerical value—is the right-most bit.
 
 Let's see how you would use a key structure map to decode a key.
 
@@ -478,23 +458,20 @@ Namely:
 
 -   Product category = Bits 8-12 = `0b11001` (binary) = 25 (decimal)
 
-> ⇒ Product category = 25
+Product category = 25
 
--   Measurement goal type = Bit 7 = `0b0` (binary)
+- Measurement goal type = Bit 7 = `0b0` (binary)
+  Measurement goal type = Purchase count (if as per your dimension map, 0 means "purchase count" and 1 means "purchase value".)
 
-> ⇒ Measurement goal type = Purchase count (if as per your dimension map, 0 means "purchase count" and 1 means "purchase value".)
+- Geo ID = Bits 4-6 = `0b011` (binary)
+  Geo ID = Europe (as per the dimension map above))
 
--   Geo ID = Bits 4-6 = `0b011` (binary)
-
-> ⇒ Geo ID = Europe (as per the dimension map above))
-
--   Campaign ID = Bits 0-3 = `0b1100` (binary) = 12 (decimal)
-
-> ⇒ Campaign ID = 12
+- Campaign ID = Bits 0-3 = `0b1100` (binary) = 12 (decimal)
+  Campaign ID = 12
 
 So the key 0b1100100111100 represents the number of purchases of Product category 25, for the Campaign ID 12 launched in Europe.
 
-#### Encoding dimensions into keys, approach 2: hash function
+#### Encoding dimensions into keys, approach 2: hash function {: #encoding}
 
 With this technique, you rely on a hashing function to dynamically generate keys in a consistent and reliable way.
 
@@ -503,7 +480,7 @@ There's no need to create or maintain key structure maps.
 This works as follows:
 <ol>
 <li>Select a hashing algorithm.</li>
-<li>At ad-serving time, generate a string that includes all the dimensions you want to track, and their values. To generate the source-side key piece, hash this string and consider adding a 64-bit suffix of zeros (to [align](#heading=h.2xob5s4sb398) it with the trigger-side key piece and make XOR easier to reason about).<br>
+<li>At ad-serving time, generate a string that includes all the dimensions you want to track, and their values. To generate the source-side key piece, hash this string and consider adding a 64-bit suffix of zeros to <a href="#set-two-keys-pieces-for-a-full-key">align</a> it with the trigger-side key piece and make XOR easier to reason about).<br>
 Source-side key piece:
 
 <pre><64-bit hex hash("COUNT, campaignID=12, geoID=7"))>
@@ -569,7 +546,7 @@ The adtech company sets aggregatable values when a user converts.
 
 To protect user privacy, individual users' contributions must have an upper limit.
 
-In practice, this works as follows: across all aggregatable values associated with a single source (ad click or view), no value can be higher than a certain *contribution budget*. 
+In practice, this works as follows: across all aggregatable values associated with a single source (ad click or view), no value can be higher than a certain contribution budget. 
 
 We'll refer to it as `CONTRIBUTION_BUDGET`.
 
@@ -631,7 +608,8 @@ dimensions you need:
 
 {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/L0ToNPnSf4W1hR2jQDpq.png", alt="ALT_TEXT_HERE", width="674", height="65" %}
 
-All your keys use this structure. \
+All your keys use this structure. 
+
 You split this key structure into two key types to support two measurement
 goals.
 
@@ -642,7 +620,7 @@ goals.
 
 Summary reports look as follows:
 
-![image](untitleddocume--cns7y67lqht.png)
+{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/WiOW8rwdJOEWJDmh9R22.png", alt="ALT_TEXT_HERE", width="800", height="1379" %}
 
 You can think of strategy A as a "one deep tree" strategy:
 
@@ -689,7 +667,8 @@ campaigns.</td>
   </tbody>
 </table>
 
-With strategy A, you can also directly answer this third question:\
+With strategy A, you can also directly answer this third question:
+
 "How much revenue for each product did each of my campaigns in each geographic
 region generate?".
 
@@ -722,7 +701,7 @@ You end up with four key types:
 
 Summary reports look as follows:
 
-![image](untitleddocume--xly3b64r6r.png)
+{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/fRtRU43Udj1ZIq2Gkl8p.png", alt="ALT_TEXT_HERE", width="800", height="680" %}
 
 You can think of strategy B as a "two shallow trees" strategy:
 
@@ -810,7 +789,7 @@ affect your ability to make decisions, you decide to go with strategy A.
 ### Select a hashing algorithm
 
 You decide to adopt a
-[hash-based approach](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.6q2omygul77r)
+[hash-based approach](#encoding)
 to generate your keys. To do so, you need to select a hashing algorithm to
 support that approach.
 
@@ -826,14 +805,14 @@ convert.
 Below is an overview of the headers you will set to register keys and values in
 the browser:
 
-![image](untitleddocume--z2365jmh08.png)
+{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/hBdxStaGCFnzLKc2CDlh.png", alt="ALT_TEXT_HERE", width="512", height="302" %}
 
-![image](untitleddocume--jtezejkfxp.png)
+{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/jhcNyq6FRUD1SpO7iUoP.png", alt="ALT_TEXT_HERE", width="512", height="369" %}
 
 #### Set source-side key pieces
 
 When a user clicks or views an ad, set the aggregation keys in the
-`Attribution-Reporting-Register-Aggregatable-Source` header.\
+`Attribution-Reporting-Register-Aggregatable-Source` header.
 At this stage, for each key, you can only set the part of the key— the
 [key piece](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.2xob5s4sb398)—that
 is known at ad-serving time.
@@ -843,111 +822,50 @@ Let's generate the key pieces:
 <table class="with-heading-tint">
   <thead>
     <tr>
-      <th><br>
-Source-side key piece for the key ID…</th>
-      <th><br>
-String containing the dimension values you want to se</th>
-      <th><br>
-Hash of this string as hexa, trimmed to the first 64 bits (64/4*
+      <th>Source-side key piece for the key ID…</th>
+      <th>String containing the dimension values you want to set</th>
+      <th>Hash of this string as hex, trimmed to the first 64 bits (64/4*
 = 16 characters)</th>
-      <th><br>
-Hexa hash with appended zeros to <a
+      <th>Hex hash with appended zeros to <a
 href="https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.6q2omygul77r">simplify
-XOR'ing</a>.<br>
-This is the source-side key piece.</th>
+</a> XOR-ing. This is the source-side key piece.</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><p><pre>
-key_purchaseCount
-</pre></p></td>
-      <td><p><pre>
-COUNT, CampaignID=12, GeoID=7
-</pre></p></td>
-      <td><p><pre>
-0x3cf867903fbb73ec
-</pre></p></td>
-      <td><p><pre>
-0x3cf867903fbb73ec0000000000000000
-</pre></p></td>
+      <td>key_purchaseCount</td>
+      <td>COUNT, CampaignID=12, GeoID=7</td>
+      <td>0x3cf867903fbb73ec</td>
+      <td>0x3cf867903fbb73ec0000000000000000</td>
     </tr>
     <tr>
-      <td><p><pre>
-key_purchaseValue
-</pre></p></td>
-      <td><p><pre>
-VALUE, CampaignID=12, GeoID=7
-</pre></p></td>
-      <td><p><pre>
-0x245265f432f16e73
-</pre></p></td>
-      <td><p><pre>
-0x245265f432f16e730000000000000000
-</pre></p></td>
+      <td>key_purchaseValue</td>
+      <td>VALUE, CampaignID=12, GeoID=7</td>
+      <td>0x245265f432f16e73</td>
+      <td>0x245265f432f16e730000000000000000</td>
     </tr>
   </tbody>
 </table>
+
 
 Each hexadecimal digit represents four bits (binary digits).
 
 Let's now set the key pieces:
 
-<table class="with-heading-tint">
-  <thead>
-    <tr>
-      <th><p><pre>
+```javascript
 // Upon receiving the request from the publisher site
-</pre></p>
-
-<p><pre>
 res.set(
-</pre></p>
-
-<p><pre>
   "Attribution-Reporting-Register-Aggregatable-Source",
-</pre></p>
-
-<p><pre>
   JSON.stringify(
-</pre></p>
-
-<p><pre>
 [{
-</pre></p>
-
-<p><pre>
-  "id": "key_purchaseCount",
-</pre></p>
-
-<p><pre>
+  "id": "key_purchaseCount", 
   "key_piece": "0x3cf867903fbb73ec0000000000000000"
-</pre></p>
-
-<p><pre>
 }, {
-</pre></p>
-
-<p><pre>
-  "id": "key_purchaseValue",
-</pre></p>
-
-<p><pre>
+  "id": "key_purchaseValue", 
   "key_piece": "0x245265f432f16e730000000000000000"
-</pre></p>
-
-<p><pre>
 }]
-</pre></p>
-
-<p><pre>
 ))
-</pre></p></th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
+```
 
 Note that key IDs will **not** appear in the final reports. They're only used
 when setting keys in the browser, so that source-side and trigger-side key
@@ -972,114 +890,59 @@ Upon receiving this request:
 -   Set the aggregatable value for that conversion, via the header
     `Attribution-Reporting-Register-Aggregatable-Values`.
 
-#### Set trigger-side key pieces to complete the key
+#### Set trigger-side key pieces to complete the key {: #trigger-side}
 
 Let's generate the key pieces:
 
 <table class="with-heading-tint">
   <thead>
     <tr>
-      <th><br>
-Trigger-side key piece for the key ID…</th>
-      <th><br>
-String containing the dimension values you want to set</th>
-      <th><br>
-Hash of this string as hexa, trimmed to the first 64 bits (64/4*
+      <th>Trigger-side key piece for the key ID…</th>
+      <th>String containing the dimension values you want to set</th>
+      <th>Hash of this string as hex, trimmed to the first 64 bits (64/4*
 = 16 characters)</th>
-      <th><br>
-Hexa hash with appended zeros to <a
-href="https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.6q2omygul77r">simplify
-XOR'ing</a>.<br>
+      <th>Hex hash with appended zeros to <a
+href="https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.6q2omygul77r">simplify</a> XOR-ing.
 This is the source-side key piece.</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><p><pre>
-key_purchaseCount
-</pre></p></td>
-      <td><p><pre>
-ProductCategory=25
-</pre></p></td>
-      <td><p><pre>
-0x1c7ce88c4904bbe2
-</pre></p></td>
-      <td><p><pre>
-0x0000000000000000f9e491fe37e55a0c
-</pre></p></td>
+      <td>key_purchaseCount</td>
+      <td>ProductCategory=25</td>
+      <td>0x1c7ce88c4904bbe2</td>
+      <td>0x0000000000000000f9e491fe37e55a0c</td>
     </tr>
     <tr>
-      <td><p><pre>
-key_purchaseValue
-</pre></p></td>
-      <td><p><pre>
-(same)
-</pre></p></td>
-      <td><p><pre>
-(same)
-</pre></p></td>
-      <td><p><pre>
-(same)
-</pre></p></td>
+      <td>key_purchaseValue</td>
+      <td>(same)</td>
+      <td>(same)</td>
+      <td>(same)</td>
     </tr>
   </tbody>
 </table>
+
 
 *Each hexadecimal digit represents four bits (binary digits).
 
 Let's now set the key pieces:
 
-<table class="with-heading-tint">
-  <thead>
-    <tr>
-      <th><p><pre>
+```javascript
 // Upon receiving the pixel request from the advertiser site
-</pre></p>
-
-<p><pre>
 res.set(
-</pre></p>
-
-<p><pre>
     "Attribution-Reporting-Register-Aggregatable-Trigger-Data",
-</pre></p>
-
-<p><pre>
     JSON.stringify(
-</pre></p>
-
-<p><pre>
 [
-</pre></p>
-
-<p><pre>
 // Each dictionary independently adds pieces to multiple source keys
-</pre></p>
-
-<p><pre>
 { "key_piece": "0x0000000000000000f9e491fe37e55a0c",
-</pre></p>
-
-<p><pre>
-  "source_keys": ["key_purchaseCount", "key_purchaseValue"]},
-</pre></p>
-
-<p><pre>
+  "source_keys": ["key_purchaseCount", "key_purchaseValue"]}, 
 ]
-</pre></p>
 
-<br>
-<p><pre>
 ))
-</pre></p></th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
+```
 
 Note how you're adding the same key piece to several keys, by listing several
-key IDs in `source_keys`—the key piece will be added to both keys.\
+key IDs in `source_keys`—the key piece will be added to both keys.
 
 #### Set aggregatable values
 
@@ -1098,15 +961,18 @@ Instead, before you register these aggregatable values, you need to
 them in order to minimize noise.
 
 You have two goals to spend your contribution budget against, so you might
-decide to split the contribution budget by two.\
+decide to split the contribution budget by two.
+
 With this, each goal is allocated a maximum of` CONTRIBUTION_BUDGET`/2
 (=65,536/2=32,768).
 
 Let's assume the maximum purchase value for a single user, based on purchase
 history across all users of the site, is **$1,500**. There may be outliers, for
 example very few users who spent over that sum, but you may decide to ignore
-these outliers).\
-Your scaling factor for the purchase value should be:\
+these outliers).
+
+Your scaling factor for the purchase value should be:
+
 ((`CONTRIBUTION_BUDGET`/2) / 1,500) = 32,768/1,500 = **21.8**~ 22
 
 Your scaling factor for purchase count is 32,768/1 = **32,768**, since you
@@ -1171,43 +1037,17 @@ aggregatable report, which includes the encrypted payload next to report
 metadata.
 
 Below is an example of the data that could be found within the payload of the
-aggregatable report, if it was readable in clear:
+aggregatable report, if it was readable in the clear:
 
-<table class="with-heading-tint">
-  <thead>
-    <tr>
-      <th><p><pre>
+```javascript
 [ {
-</pre></p>
-
-<p><pre>
-  key: 0x3cf867903fbb73ecf9e491fe37e55a0c, // = source-side key piece XOR conversion-side key piece for the key key_purchaseCount
-</pre></p>
-
-<p><pre>
+  key: 0x3cf867903fbb73ecf9e491fe37e55a0c, // = source-side key piece XOR conversion-side key piece for the key key_purchaseCount 
   value: 32768 // the scaled value for 1 conversion, in the context of [CONTRIBUTION_BUDGET/2]
-</pre></p>
-
-<p><pre>
 }, {
-</pre></p>
-
-<p><pre>
-  key: 0x245265f432f16e73f9e491fe37e55a0c, // source-side key piece XOR conversion-side key piece for the key key_purchaseValue
-</pre></p>
-
-<p><pre>
-  value: 1144 // the scaled value for $52, in the context of [CONTRIBUTION_BUDGET/2]
-</pre></p>
-
-<p><pre>
+  key: 0x245265f432f16e73f9e491fe37e55a0c, // source-side key piece XOR conversion-side key piece for the key key_purchaseValue 
+  value: 1144 // the scaled value for $52, in the context of [CONTRIBUTION_BUDGET/2] 
 }]
-</pre></p></th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
+```
 
 Here, you can see two separate contributions within one single aggregatable
 report.
@@ -1220,69 +1060,38 @@ report.
     data for COUNT (total number of purchases) and VALUE (total purchase value)
     for the Campaign ID 12 x Geography ID 7 x Product category 25:
     -   Generate the source-side key piece, as you did when [setting it
-        in the browser](#heading=h.e8vaqt4q0qqn).
-    -   Generate the trigger-side key piece, as you did when [setting it
-        in the browser](#heading=h.pfgfpg3jwaqn).
+        in the browser](#set-source-side-key-pieces).
+    -   Generate the trigger-side key piece, as you did when [setting it in the browser](#trigger-side).
 
-    <table class="with-heading-tint">
+<table class="with-heading-tint">
   <thead>
     <tr>
-      <th>Metric you're looking to request (for Campaign ID 12 x Geography ID 7
-x Product category 25)<br>
-    </th>
-      <th>Source-side key piece<br>
-    </th>
-      <th>Trigger-side key piece<br>
-    </th>
-      <th>Key to request to the aggregation service<br>
-= <br>
-Source-side key piece<br>
-XOR <br>
-Trigger-side key piece<br>
-    </th>
+      <th>Campaign ID 12 x Geography ID 7<br>
+x Product category 25*</th>
+      <th>Source-side key piece</th>
+      <th>Trigger-side key piece</th>
+      <th>Key to request to the aggregation service*</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Total purchase count (COUNT)<br>
-    </td>
-      <td><p><pre>
-0x3cf867903fbb73ec0000000000000000
-</pre></p>
-
-    </td>
-      <td><p><pre>
-0x0000000000000000f9e491fe37e55a0c
-</pre></p>
-
-    </td>
-      <td><p><pre>
-0x3cf867903fbb73ecf9e491fe37e55a0c
-</pre></p>
-
-    </td>
+      <td>Total purchase count (COUNT)</td>
+      <td>0x3cf867903fbb73ec<br>0000000000000000</td>
+      <td>0x00000000000000<br>00f9e491fe37e55a0c</td>
+      <td>0x3cf867903fbb73<br>ecf9e491fe37e55a0c</td>
     </tr>
     <tr>
-      <td>Total purchase value (VALUE)<br>
-    </td>
-      <td><p><pre>
-0x245265f432f16e730000000000000000
-</pre></p>
-
-    </td>
-      <td><p><pre>
-0x0000000000000000f9e491fe37e55a0c
-</pre></p>
-
-    </td>
-      <td><p><pre>
-0x245265f432f16e73f9e491fe37e55a0c
-</pre></p>
-
-    </td>
+      <td>Total purchase value (VALUE)</td>
+      <td>0x245265f432f16e73<br>0000000000000000</td>
+      <td>0x0000000000000000<br>f9e491fe37e55a0c</td>
+      <td>0x245265f432f16e73<br>f9e491fe37e55a0c</td>
     </tr>
   </tbody>
-    </table>
+</table>
+
+*Metric you're looking to request for these keys.
+
+*Key to request to the aggregation service = Source-side key piece XOR Trigger-side key piece.
 
 -   Request summary data to the aggregation service for these keys.
 
@@ -1290,36 +1099,17 @@ Trigger-side key piece<br>
 
 Ultimately, you receive a summary report that may look as follows:
 
-<table class="with-heading-tint">
-  <thead>
-    <tr>
-      <th><p><pre>
+```json
 [
-</pre></p>
-
-<p><pre>
-{"bucket": "00111100111110000110011110010000001111111011101101110011111011001111100111100100100100011111111000110111111001010101101000001100", "value": "2558500"},
-</pre></p>
-
-<p><pre>
-{"bucket": "00100100010100100110010111110100001100101111000101101110011100111111100111100100100100011111111000110111111001010101101000001100", "value": "687060"},
-</pre></p>
-
-<p><pre>
-…
-</pre></p>
-
-<p><pre>
+{"bucket": "00111100111110000110011110010000001111111011101101110011111011001111100111100100100100011111111000110111111001010101101000001100", "value": "2558500"}, 
+{"bucket": "00100100010100100110010111110100001100101111000101101110011100111111100111100100100100011111111000110111111001010101101000001100", "value": "687060"}, 
+… 
 ]
-</pre></p></th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
+```
+
 
 The first bucket is the COUNT key in binary. The second bucket is the VALUE key
-in binary.\
+in binary.
 Note that while the keys are heterogeneous (COUNT vs VALUE), they're contained
 in the same report.
 
@@ -1348,26 +1138,11 @@ example can be found here</a>.</th>
 
 As a result, the summary reports gives you the following insights:
 
-<table class="with-heading-tint">
-  <thead>
-    <tr>
-      <th><p><pre>
+<pre>
 Within the reporting time period, campaign #12 run in Europe drove about 156 purchases (± noise) for the product category #25.
-</pre></p></th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
+</pre>
 
-<table class="with-heading-tint">
-  <thead>
-    <tr>
-      <th><p><pre>
+<pre>
 Within the reporting time period, campaign #12 run in Europe drove $31,230 of purchases (± noise) for the product category #25.
-</pre></p></th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
+</pre>
+
