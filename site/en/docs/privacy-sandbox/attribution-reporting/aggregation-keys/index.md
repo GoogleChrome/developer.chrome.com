@@ -215,13 +215,12 @@ A summary report contains a JSON dictionary-style set of key-value pairs. Each p
 
 Example:
 
-```text
+<pre>
 [
   {"bucket": "111001001", "value": "2558500"}, 
-  {"bucket": "111101001", "value": "3256211"}, 
-  {...}
+  {"bucket": "111101001", "value": "3256211"}, ...
 ]
-```
+</pre>
 
 In practice, summary reports are encoded in a way that will make buckets and values look different than stated above (that is, a bucket may look like `\u0000\u0000\x80\u0000`). <em>Bucket</em> and <em>value</em> are both bytestrings. 
 
@@ -608,12 +607,12 @@ This has a few practical implications, for example:
 
 This has a few practical implications:
 
--   **Ensure your values are strictly within the contribution budget  to not lose any information**, since the budget is a hard cap.
--   **Allocate the contribution budget across metrics**. Because the budget is common to all metrics for a given source, if more than one metric is tracked, you should share the budget across these metrics.
+- **Ensure your values are strictly within the contribution budget to not lose any information**, since the budget is a hard cap.
+- **Allocate the contribution budget across metrics**. Because the budget is common to all metrics for a given source, if more than one metric is tracked, you should share the budget across these metrics.
 
 Example: If you're tracking two metrics—for example, the purchase value and the purchase count—you would split the contribution budget across these two metrics. More details in the [example](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.i6ovl4dm1npa).
 
--   **Adjust aggregatable values to minimize the impact of noise.** Because the contribution budget impacts noise, adjusting the aggregatable values to this budget will allow you to improve signal-to-noise ratio. Read the details in [Scale up to contribution budget](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.683u7t2q1xk2).
+- **Adjust aggregatable values to minimize the impact of noise.** Because the contribution budget impacts noise, adjusting the aggregatable values to this budget will allow you to improve signal-to-noise ratio. Read the details in [Scale up to contribution budget](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.683u7t2q1xk2).
 
 
 
