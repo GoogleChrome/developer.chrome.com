@@ -4,7 +4,7 @@ description: >
   Chrome 116 is rolling out now! Use the document picture in picture API to increase user productivity, it is now easier to debug missing stylesheets in DevTools, and there’s plenty more.
 layout: 'layouts/blog-post.njk'
 date: 2023-08-15
-updated: 2023-08-17
+updated: 2023-08-18
 authors:
   - ajara
 hero: 'image/SeARmcA1EicLXagFnVOe0ou9cqK2/D40mYqd8kvfXSy2IxbVv.png'
@@ -96,6 +96,10 @@ Of course there’s plenty more.
 * [Motion path](https://developer.mozilla.org/docs/Web/CSS/CSS_motion_path) allows authors to position any graphical object and animate it along a path specified by the developer.
 * The `display` and `content-visibility` properties are now supported in keyframe animations, which allows exit animations to be added purely in CSS.
 * The fetch API can now be used with [Bring Your Own Buffer readers](https://developer.mozilla.org/docs/Web/API/ReadableStreamBYOBReader), reducing garbage collection overhead and copies, and improving responsiveness for users.
+
+{% Aside 'update' %}
+A previous version of this post stated that the [Back/forward cache `notRestoredReasons` API](/docs/web-platform/bfcache-notrestoredreasons/) was included in Chrome 116 but this feature has been delayed until a future release.
+{% endAside %}
 
 ## Further reading
 
