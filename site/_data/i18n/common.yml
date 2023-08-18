@@ -310,3 +310,15 @@ filter_by:
 
 rss_feed:
   en: RSS feed
+
+deco_thumbnail_alt:
+  en: Decorative dark blue bubbles on a light blue background
+
+blog_post:
+  en: Blog post
+
+article:
+  en: Article
+
+external_post:
+  en: External post

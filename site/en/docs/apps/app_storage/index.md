@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Storage APIs"
+seoTitle: "Chrome Apps - Storage APIs [Deprecated]"
 date: 2012-09-17
 updated: 2014-09-10
 description: How to handle storage in your Chrome App.

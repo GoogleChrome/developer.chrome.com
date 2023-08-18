@@ -100,7 +100,7 @@ source of the message when multiple extensions are specified in the `allowed_ori
 On Windows, the native messaging host is also passed a command line argument with a handle to the
 calling Chrome native window: `--parent-window=<decimal handle value>`. This lets the native
 messaging host create native UI windows that are correctly parented. Note that this value will be
-0 if the calling context is a background script page.
+0 if the calling context is a service worker.
 
 When a messaging port is created using [`runtime.connectNative`][connect-native] Chrome starts native messaging
 host process and keeps it running until the port is destroyed. On the other hand, when a message is
@@ -121,8 +121,7 @@ To use these methods, the "nativeMessaging" permission must be [declared][declar
 extensions's manifest file.
 
 These methods are not available inside content scripts, only inside your extension's pages and service worker. If you
-wish to communicate from a content script to the native application, send the message to your background context
-or service worker, and have it pass it along to the native application.
+wish to communicate from a content script to the native application, send the message to your service worker to pass it along to the native application.
 
 The following example creates a [`runtime.Port`][port] object that's connected to native messaging host
 `com.my_company.my_application`, starts listening for messages from that port and sends one outgoing

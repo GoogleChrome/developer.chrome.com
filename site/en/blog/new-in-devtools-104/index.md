@@ -22,7 +22,7 @@ tags:
 
 The **Restart frame** feature is back! You can re-run the preceding code when paused somewhere in a function. Previously, this feature was deprecated and removed in Chrome 92 due to stability issues.
 
-In this [example](https://jec.fyi/), the debugger initially paused at the breakpoint (line 343) near the end of the `toggleColorScheme` function. To restart the debugging from the beginning of the `toggleColorScheme` function, expand the **Call stack** section in the **Debugger** pane, right click on `toggleColorScheme` and select **Restart frame**.
+In this [example](https://jec.fish/), the debugger initially paused at the breakpoint (line 343) near the end of the `toggleColorScheme` function. To restart the debugging from the beginning of the `toggleColorScheme` function, expand the **Call stack** section in the **Debugger** pane, right click on `toggleColorScheme` and select **Restart frame**.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/uBcTkuIaoHHTgJCiGNED.png", alt="Restart frame during debugging", width="800", height="499" %}
 
@@ -75,7 +75,7 @@ Chromium issue: [960909](https://crbug.com/960909)
 
 Visualize `performance.measure()` marks in your recording with the new **User Timings** track in the **Performance insights** panel.
 
-For example, this [web page](https://jec.fyi/demo/perf-measure) uses the [`performance.measure()`](https://web.dev/usertiming/#calculating-measurements-with-measure()) method to calculate the elapsed time of text loading.
+For example, this [web page](https://jec.fish/demo/perf-measure) uses the [`performance.measure()`](https://web.dev/usertiming/#calculating-measurements-with-measure()) method to calculate the elapsed time of text loading.
 
 When you start [measuring the page load](/docs/devtools/performance-insights/#record), the **User Timings** track shows in the recording. Click on the timings item to view its details on the side pane.
 

@@ -37,7 +37,7 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 
 The **Recorder** now supports adding a mouse over (hover) step manually in a recording.
 
-[This demo](https://jec.fyi/demo/menu-hover) shows a pop up menu on hover. Try to record a user flow and click a menu item.
+[This demo](https://jec.fish/demo/menu-hover) shows a pop up menu on hover. Try to record a user flow and click a menu item.
 
 If you replay the user flow now, it will fail because the **Recorder** doesn’t capture mouse over events automatically during recording. To resolve this, [add a step manually](/docs/devtools/recorder/reference/#add-and-remove-steps) to hover over the selector before clicking the menu item.
 
@@ -96,7 +96,7 @@ Use the [top layer badge](/blog/top-layer-devtools/#top-layer-support-design-in-
 
 The [`<dialog>` element](https://web.dev/building-a-dialog-component/) has recently become stable across browsers. When you open a dialog, it is put into a [top layer](/blog/top-layer-devtools/). Top level content renders on top of all the other content.
 
-In this [demo](https://jec.fyi/demo/dialog), click **Open dialog**.
+In this [demo](https://jec.fish/demo/dialog), click **Open dialog**.
 
 To help visualize the top layer elements, DevTools adds a top layer container (`#top-layer`) to the DOM tree. It resides after the closing `</html>` tag.
 

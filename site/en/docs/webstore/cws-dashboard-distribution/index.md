@@ -32,7 +32,8 @@ All visibility settings have the same policy requirements and will go through th
 ### Private visibility: Trusted testers {: #private-visibility-trusted-testers }
 
 Private allows your trusted testers to install the item. You designate trusted testers by listing
-them on your Chrome Web Store account home page.
+them in your account settings in the developer dashboard. Each email should be associated with a
+Google account which will be able to view and install your item on the Chrome Web Store.
 
 {% Aside %}
 

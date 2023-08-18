@@ -23,7 +23,7 @@ class Banner extends HTMLElement {
     } else {
       const hrefCta = this.querySelector('a[href]');
       if (hrefCta) {
-        const ctaUrl = cta.getAttribute('href') || '';
+        const ctaUrl = hrefCta.getAttribute('href') || '';
         localStorage.setItem(storageKey, ctaUrl);
       }
     }

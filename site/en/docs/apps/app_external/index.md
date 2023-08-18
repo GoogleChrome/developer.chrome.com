@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "External Content"
+seoTitle: "External Content [Deprecated]"
 date: 2012-09-17
 updated: 2018-05-14
 description: How to present external content in your Chrome App.

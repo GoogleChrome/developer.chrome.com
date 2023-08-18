@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "externally_connectable"
+seoTitle: "Chrome Apps externally_connectable [Deprecated]"
 #date: TODO
 #updated: TODO
 #description: TODO

@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "sockets"
+seoTitle: "Chrome Apps - sockets [Deprecated]"
 date: 2014-01-08
 updated: 2014-10-31
 description: Reference documentation for the sockets property of manifest.json.

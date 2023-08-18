@@ -6,8 +6,6 @@ authors:
   - chriswilson
 date: 2018-06-14
 updated: 2019-06-14
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/59E79cYprjy3EuTSq0u6.jpg'
-alt: 'Webar chacmool'
 description: >
   Chacmool, an educational web demo, shows how easily web based AR can build an engaging experience.
 ---

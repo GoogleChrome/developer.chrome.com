@@ -78,8 +78,8 @@ Chromium issues: [1238818](https://crbug.com/1238818), [1268754](https://crbug.c
 <!-- You can now adjust the **Timeout** settings in the [Recorder](/docs/devtools/recorder/) for all steps or a specific step. This is useful especially for pages with slow network requests and lengthy animation. -->
 [Recorder](/docs/devtools/recorder/) で、全ステップまたは特定のステップの**タイムアウト**の設定を調整できるようになりました。これは、遅いネットワークリクエストや長いアニメーションがあるページで特に便利です。
 
-<!-- For example, I [recorded a user flow](/docs/devtools/recorder/#record) on this [demo page](https://jec.fyi/demo/pup-slow-result) to load and click on the menu item. However, the loading of the menu items is slow (it takes 6 seconds). The [replay](/docs/devtools/recorder/#replay) of this user flow failed because it exceeds 5 seconds  (the default timeout). -->
-例えば、この[デモページ](https://jec.fyi/demo/pup-slow-result)で、メニュー項目をロードしてクリックするまでの[ユーザーフローを記録](/docs/devtools/recorder/#record)してみました。しかし、メニュー項目の読み込みに時間がかかり(6秒)、このユーザーフローの[リプレイ](/docs/devtools/recorder/#replay)は5秒（デフォルトのタイムアウト）を超えているので失敗しています。
+<!-- For example, I [recorded a user flow](/docs/devtools/recorder/#record) on this [demo page](https://jec.fish/demo/pup-slow-result) to load and click on the menu item. However, the loading of the menu items is slow (it takes 6 seconds). The [replay](/docs/devtools/recorder/#replay) of this user flow failed because it exceeds 5 seconds  (the default timeout). -->
+例えば、この[デモページ](https://jec.fish/demo/pup-slow-result)で、メニュー項目をロードしてクリックするまでの[ユーザーフローを記録](/docs/devtools/recorder/#record)してみました。しかし、メニュー項目の読み込みに時間がかかり(6秒)、このユーザーフローの[リプレイ](/docs/devtools/recorder/#replay)は5秒（デフォルトのタイムアウト）を超えているので失敗しています。
 
 <!-- We can use the new **Timeout** settings to fix this. Expand the step which we click on the menu item. [Edit the step](/docs/devtools/recorder/#edit-steps) by  **Add timeout** and set it to **6000** milliseconds (equal to 6s). -->
 これを解決するために、新しい **Timeout** 設定を使用することができます。メニュー項目をクリックしたステップを展開します。 **Add timeout** で[ステップを編集](/docs/devtools/recorder/#edit-steps)し、**6000** ミリ秒 (6秒と等しい) に設定します。

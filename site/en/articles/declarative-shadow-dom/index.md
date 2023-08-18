@@ -148,7 +148,7 @@ Declarative Shadow DOM to continue working, since declarative roots are preserve
 
 For newly-created Custom Elements, a new [`ElementInternals.shadowRoot`](https://github.com/WICG/webcomponents/issues/871)
 property provides an explicit way to get a reference to an element's existing Declarative Shadow Root, both open and closed. This
-can be used to check for and use any Declarative Shadow Root, while still falling back `toattachShadow()` in cases where one was
+can be used to check for and use any Declarative Shadow Root, while still falling back to `attachShadow()` in cases where one was
 not provided.
 
 ```javascript

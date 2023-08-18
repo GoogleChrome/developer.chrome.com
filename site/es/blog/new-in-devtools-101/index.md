@@ -54,8 +54,8 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 <!-- [Cascade layers](/blog/cascade-layers/) enable more explicit control of your CSS files to prevent style-specificity conflicts. This is particularly useful for large codebases, design systems, and when managing third party styles in applications. -->
 Las [Capas de Cascada](/blog/cascade-layers/) permiten un control más explícito de sus archivos CSS para evitar conflictos de especificidad en sus estilos. Esto es particularmente útil para grandes bases de código, sistemas de diseño y al gestionar estilos de terceros en aplicaciones.
 
-<!-- In this [example](https://jec.fyi/demo/cascade-layer), there are 3 cascade layers defined: `page`, `component` and `base`. In the **Styles** pane, you can view each layer and its styles. -->
-En este [ejemplo](https://jec.fyi/demo/cascade-layer), hay 3 capas de cascada definidas: `page`, `component` y `base`. En el panel de **Estilos**, puede ver cada capa y sus estilos.
+<!-- In this [example](https://jec.fish/demo/cascade-layer), there are 3 cascade layers defined: `page`, `component` and `base`. In the **Styles** pane, you can view each layer and its styles. -->
+En este [ejemplo](https://jec.fish/demo/cascade-layer), hay 3 capas de cascada definidas: `page`, `component` y `base`. En el panel de **Estilos**, puede ver cada capa y sus estilos.
 
 <!-- Click on the layer name to view the layer order. The `page` layer has the highest specificity, therefore the `box` background is green.  -->
 Haga clic en el nombre de la capa para ver el orden de la capa. La capa `page` tiene la más alta especificidad, por lo que el fondo `box` es verde.

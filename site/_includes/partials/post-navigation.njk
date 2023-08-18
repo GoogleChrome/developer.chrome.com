@@ -17,7 +17,7 @@
       {% if previousPost %}
         <a href="{{ previousPost.url }}" class="post-navigation__link">
           <span class="post-navigation__label">{{ 'i18n.common.back' | i18n(locale) }}</span>
-          <p class="post-navigation__title">{{previousPost.data.title}}</p>
+          <p class="post-navigation__title">{{ previousPost.data.title | safe }}</p>
         </a>
       {% endif %}
     </div>
@@ -26,7 +26,7 @@
       {% if nextPost %}
        <a href="{{ nextPost.url }}" class="post-navigation__link">
         <span class="post-navigation__label">{{ 'i18n.common.next' | i18n(locale) }}</span>
-        <p class="post-navigation__title">{{nextPost.data.title}}</p>
+        <p class="post-navigation__title">{{ nextPost.data.title | safe }}</p>
           </a>
       {% endif %}
     </div>

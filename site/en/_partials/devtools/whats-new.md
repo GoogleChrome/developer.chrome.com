@@ -4,6 +4,50 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 
 {# $content #}
 
+### Chrome 117 {: #chrome117 }
+
+* [Network panel improvements](/blog/new-in-devtools-117/#network)
+* [Override web content locally even faster](/blog/new-in-devtools-117/#overrides)
+* [Override the content of XHR and fetch requests](/blog/new-in-devtools-117/#xhr-fetch)
+* [Hide Chrome extension requests](/blog/new-in-devtools-117/#hide-extension-requests)
+* [Human-readable HTTP status codes](/blog/new-in-devtools-117/#status-codes)
+* [Pretty-print responses for JSON subtypes](/blog/new-in-devtools-117/#pretty-json-response)
+
+* [Performance: See the changes in fetch priority for network events](/blog/new-in-devtools-117/#performance)
+* [Sources settings enabled by default: Code folding and automatic file reveal](/blog/new-in-devtools-117/#sources)
+* [Improved debugging of third-party cookie issues](/blog/new-in-devtools-117/#third-party-cookies)
+* [New colors](/blog/new-in-devtools-117/#colors)
+* [Lighthouse 10.4.0](/blog/new-in-devtools-117/#lighthouse)
+* [Debug preloading in the Application panel](/blog/new-in-devtools-117/#preloading)
+* [The C/C++ WebAssembly debugging extension for DevTools is now open source](/blog/new-in-devtools-117/#debug-cpp)
+* [Miscellaneous highlights](/blog/new-in-devtools-117/#misc)
+* [(Experimental) New rendering emulation: prefers-reduced-transparency](/blog/new-in-devtools-117/#reduced-transparency)
+* [(Experimental) Enhanced Protocol monitor](/blog/new-in-devtools-117/#protocol-monitor)
+
+### Chrome 116 {: #chrome116 }
+
+* [Improved debugging of missing stylesheets](/blog/new-in-devtools-116/#stylesheets)
+* [Linear timing support in Elements > Styles > Easing Editor](/blog/new-in-devtools-116/#linear)
+* [Storage buckets support and metadata view](/blog/new-in-devtools-116/#storage)
+* [Lighthouse 10.3.0](/blog/new-in-devtools-116/#lighthouse)
+* [Accessibility: Keyboard commands and improved screen reading](/blog/new-in-devtools-116/#accessibility)
+* [Miscellaneous highlights](/blog/new-in-devtools-116/#misc)
+
+### Chrome 115 {: #chrome115 }
+
+* [Elements improvements](/blog/new-in-devtools-115/#elements)
+* [New CSS subgrid badge](/blog/new-in-devtools-115/#subgrid)
+* [Selector specificity in tooltips](/blog/new-in-devtools-115/#specificity)
+* [Values of custom CSS properties in tooltips](/blog/new-in-devtools-115/#css-variable-values)
+* [Sources improvements](/blog/new-in-devtools-115/#sources)
+* [CSS syntax highlighting](/blog/new-in-devtools-115/#css)
+* [Shortcut to set conditional breakpoints](/blog/new-in-devtools-115/#breakpoint)
+* [Application > Bounce Tracking Mitigations](/blog/new-in-devtools-115/#bounce-tracking)
+* [Lighthouse 10.2.0](/blog/new-in-devtools-115/#lighthouse)
+* [Ignore content scripts by default](/blog/new-in-devtools-115/#content-script)
+* [Network > Response improvements](/blog/new-in-devtools-115/#network)
+* [Miscellaneous highlights](/blog/new-in-devtools-115/#misc)
+
 ### Chrome 114 {: #chrome114 }
 
 * [WebAssembly debugging support](/blog/new-in-devtools-114/#wasm)
@@ -15,6 +59,7 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 * [performance.mark() shows timing on hover in Performance > Timings](/blog/new-in-devtools-114/#mark)
 * [profile() command populates Performance > Main](/blog/new-in-devtools-114/#profile)
 * [Warning for slow user interactions](/blog/new-in-devtools-114/#slow-interaction-warning)
+* [Web Vitals updates](/blog/new-in-devtools-114/#web-vitals)
 * [JavaScript Profiler deprecation: Phase three](/blog/new-in-devtools-114/#js-profiler)
 * [Miscellaneous highlights](/blog/new-in-devtools-114/#misc)
 

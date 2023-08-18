@@ -62,3 +62,7 @@ video {
 video[width][height] {
   height: auto;
 }
+
+[hidden] {
+  display: none !important;
+}

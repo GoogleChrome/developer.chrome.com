@@ -32,8 +32,8 @@ _Gracias  por la traducción [Carlos Caballero](https://carloscaballero.io) y  p
 <!-- The **Restart frame** feature is back! You can re-run the preceding code when paused somewhere in a function. Previously, this feature was deprecated and removed in Chrome 92 due to stability issues.  -->
 ¡Vuelve la función **Reiniciar marco**! Puede volver a ejecutar el código anterior cuando esté en pausa en cualquier lugar de una función. Anteriormente, esta función quedó obsoleta y se eliminó en Chrome 92 debido a problemas de estabilidad.
 
-<!-- In this [example](https://jec.fyi/), the debugger initially paused at the breakpoint (line 343) near the end of the `toggleColorScheme` function. To restart the debugging from the beginning of the `toggleColorScheme` function, expand the **Call stack** section in the **Debugger** pane, right click on `toggleColorScheme` and select **Restart frame**.  -->
-En este [ejemplo](https://jec.fyi/), el depurador inicialmente se detuvo en el punto de interrupción (línea 343) cerca del final de la función `toggleColorScheme`. Para reiniciar la depuración desde el principio de la función `toggleColorScheme`, expanda la sección **Pila de llamadas** en el panel **Depurador**, haga clic derecho en `toggleColorScheme` y seleccione **Reiniciar marco**
+<!-- In this [example](https://jec.fish/), the debugger initially paused at the breakpoint (line 343) near the end of the `toggleColorScheme` function. To restart the debugging from the beginning of the `toggleColorScheme` function, expand the **Call stack** section in the **Debugger** pane, right click on `toggleColorScheme` and select **Restart frame**.  -->
+En este [ejemplo](https://jec.fish/), el depurador inicialmente se detuvo en el punto de interrupción (línea 343) cerca del final de la función `toggleColorScheme`. Para reiniciar la depuración desde el principio de la función `toggleColorScheme`, expanda la sección **Pila de llamadas** en el panel **Depurador**, haga clic derecho en `toggleColorScheme` y seleccione **Reiniciar marco**
 
 
 
@@ -106,8 +106,8 @@ Chromium issue: [960909](https://crbug.com/960909)
 <!-- Visualize `performance.measure()` marks in your recording with the new **User Timings** track in the **Performance insights** panel. -->
 Visualice las marcas `performance.measure()` en su grabación con la nueva pista **User Timings** en el panel **Performance insights**.
 
-<!-- For example, this [web page](https://jec.fyi/demo/perf-measure) uses the [`performance.measure()`](https://web.dev/usertiming/#calculating-measurements-with-measure()) method to calculate the elapsed time of text loading. -->
-Por ejemplo, esta [página web](https://jec.fyi/demo/perf-measure) utiliza [`performance.measure()`](https://web.dev/usertiming/#calculating-measurements- with-measure()) método para calcular el tiempo transcurrido de carga de texto.
+<!-- For example, this [web page](https://jec.fish/demo/perf-measure) uses the [`performance.measure()`](https://web.dev/usertiming/#calculating-measurements-with-measure()) method to calculate the elapsed time of text loading. -->
+Por ejemplo, esta [página web](https://jec.fish/demo/perf-measure) utiliza [`performance.measure()`](https://web.dev/usertiming/#calculating-measurements- with-measure()) método para calcular el tiempo transcurrido de carga de texto.
 
 <!-- When you start [measuring the page load](/docs/devtools/performance-insights/#record), the **User Timings** track shows in the recording. Click on the timings item to view its details on the side pane. -->
 Cuando comienzas a [medir la carga de la página](/docs/devtools/performance-insights/#record), la pista **Tiempos de usuario** se muestra en la grabación. Haga clic en el elemento de tiempos para ver sus detalles en el panel lateral.

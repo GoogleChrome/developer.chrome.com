@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "USB Devices"
+seoTitle: "Chrome Apps - USB Devices [Deprecated]"
 date: 2012-09-17
 updated: 2017-01-12
 description: How to communicate with USB devices from your Chrome App.

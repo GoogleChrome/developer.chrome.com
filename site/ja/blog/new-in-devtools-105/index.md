@@ -55,8 +55,8 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 <!-- The **Recorder** now supports adding a mouse over (hover) step manually in a recording.  -->
 **Recorder** パネルがレコーディング中の手動でのマウスオーバー（ホバー）ステップの追加をサポートするようになりました。
 
-<!-- [This demo](https://jec.fyi/demo/menu-hover) shows a pop up menu on hover. Try to record a user flow and click a menu item. -->
-[このデモ](https://jec.fyi/demo/menu-hover)はホバーするとポップアップメニューを表示します。ユーザーフローを記録しながらメニューアイテムをクリックしてみてください。
+<!-- [This demo](https://jec.fish/demo/menu-hover) shows a pop up menu on hover. Try to record a user flow and click a menu item. -->
+[このデモ](https://jec.fish/demo/menu-hover)はホバーするとポップアップメニューを表示します。ユーザーフローを記録しながらメニューアイテムをクリックしてみてください。
 
 <!-- If you replay the user flow now, it will fail because the **Recorder** doesn’t capture mouse over events automatically during recording. To resolve this, [add a step manually](/docs/devtools/recorder/reference/#add-and-remove-steps) to hover over the selector before clicking the menu item.  -->
 このままユーザーフローを再生しようとすると、**Recorder** は記録中にマウスオーバーイベントを自動でキャプチャしないので失敗します。この問題を解決するには、メニューアイテムをクリックする前にそのセレクタのホバーオーバーのための[ステップを手動で追加](/docs/devtools/recorder/reference/#add-and-remove-steps)してください。
@@ -137,8 +137,8 @@ Chromium issues: [1300613](https://crbug.com/1300613)
 <!-- The [`<dialog>` element](https://web.dev/building-a-dialog-component/) has recently become stable across browsers. When you open a dialog, it is put into a [top layer](/blog/top-layer-devtools/). Top level content renders on top of all the other content.  -->
 [`<dialog>` 要素](https://web.dev/building-a-dialog-component/)は最近ブラウザで安定版になりました。ダイアログを開くと、その内容が [top layer](/blog/top-layer-devtools/) に配置されます。トップレベルコンテンツはその他すべてのコンテンツの上に描画されます。
 
-<!-- In this [demo](https://jec.fyi/demo/dialog), click **Open dialog**.  -->
-この[デモ](https://jec.fyi/demo/dialog)で、**Open dialog** をクリックしてください。
+<!-- In this [demo](https://jec.fish/demo/dialog), click **Open dialog**.  -->
+この[デモ](https://jec.fish/demo/dialog)で、**Open dialog** をクリックしてください。
 
 <!-- To help visualize the top layer elements, DevTools adds a top layer container (`#top-layer`) to the DOM tree. It resides after the closing `</html>` tag.   -->
 トップレイヤ要素の可視化を補助するために、DevTools は DOM ツリーにトップレイヤコンテナ（`#top-layer`）を追加します。

@@ -47,7 +47,7 @@ Lighthouse lists the results in a table with three columns:
         <td>The current cache duration of the resource</td>
       </tr>
       <tr>
-        <td><strong>Size</strong></td>
+        <td><strong>Transfer Size</strong></td>
         <td>An estimate of the data your users would save if the flagged resource had been cached</td>
       </tr>
     </tbody>

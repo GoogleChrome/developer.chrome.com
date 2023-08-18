@@ -4,7 +4,7 @@ title: Migrate to a service worker
 subhead: 'Replacing background or event pages with a service worker'
 description: 'A service worker enables extensions to run only when needed, saving resources.'
 date: 2023-03-09
-updated: 2023-05-01
+updated: 2023-05-19
 ---
 
 {% Partial 'extensions/mv3-support.md' %}
@@ -45,7 +45,7 @@ In Manifest V3, background pages are replaced by a *service worker*. The manifes
 - Replace `"background.scripts"` with `"background.service_worker"` in the `manifest.json`. Note that the `"service_worker"` field takes a string, not an array of strings.
 - Remove `"background.persistent"` from the `manifest.json`.
 
-Replacing items in `"background.page"` will be dealt with in a later section.
+Migrating to a service worker (in other words, replacing the `"background.page"`) will be dealt with in the [next section](/docs/extensions/migrating/to-service-workers/).
 
 <div class="switcher">
 {% Compare 'worse', 'Manifest V2' %}
@@ -226,7 +226,9 @@ Instead, use the [Alarms API](/docs/extensions/reference/alarms/). As with other
 
 {% Compare 'better', 'Manifest V3 service worker' %}
 ```js
-setTimeoutForUpdate({minutes:3}); //custom method
+async function startAlarm(name, duration) {
+  await chrome.alarms.create(name, { delayInMinutes: 3 });
+}
 
 chrome.alarms.onAlarm.addListener(() => {
   chrome.action.setIcon({

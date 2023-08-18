@@ -182,9 +182,9 @@ To set a breakpoint and execute step by step:
 
 ## Edit steps {: #edit-steps }
 
-You can edit any step in the recording by clicking the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/1UTR0tiSxiKD0YSwAc1g.svg", alt="Expand.", width="24", height="24" %} button next to it.
+You can edit any step in the recording by clicking the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/1UTR0tiSxiKD0YSwAc1g.svg", alt="Expand.", width="24", height="24" %} button next to it, both during the recording and after.
 
-You can also add missing steps and remove accidentally recorded ones as described below.
+You can also [add](#add-steps) missing steps and [remove](#remove-steps) accidentally recorded ones.
 
 ### Add steps {: #add-steps }
 
@@ -192,7 +192,7 @@ Sometimes, you may need to add steps manually. For example, the **Recorder** doe
 
 To manually add a step:
 
-1. Open this [demo page](https://jec.fyi/demo/menu-hover) and start a new recording.
+1. Open this [demo page](https://jec.fish/demo/menu-hover) and start a new recording.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/m1wPaIzCZFOpxF2kViEh.png", alt="Start a recording to capture a hover event.", width="800", height="570" %}
 1. Hover over the element in the viewport. An action menu pops up.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/RP5HSO8LhXBIfWqDMw5Y.png", alt="Hovering over the element.", width="800", height="570" %}
@@ -208,6 +208,31 @@ To manually add a step:
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/X2E6JPm7A5qbJzaR2U58.png", alt="Setting the selector.", width="800", height="616" %}
 1. Try replaying the recording again. With the added hover step, the **Recorder** successfully replays the flow.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/P8YGHbff2vGgCKOkEth6.png", alt="Replay success.", width="800", height="567" %}
+
+### Add assertions {: #add-assertions }
+
+During recording, you can assert, for example, HTML attributes and JavaScript properties. To add an assertion:
+
+1. [Start a recording](/docs/devtools/recorder/#record), for example, on this [demo page](https://coffee-cart.app/).
+1. Click **Add assertion**.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/qm3QbX3e4c6pOeGpVoLW.png", alt="The Add assertion button.", width="800", height="773" %}
+
+   The **Recorder** creates a configurable `waitForElement` step.
+
+1. [Specify selectors](/docs/devtools/recorder/#edit-selectors) for this step.
+1. [Configure the step](/docs/devtools/recorder/reference/#configure-steps) but don't change its `waitForElement` type. For example, you can specify:
+
+   - **HTML attribute**. Click **Add attributes** and type the attribute's name and value that elements on this page use. For example, `data-test: <value>`.
+   - **JavaScript property**. Click **Add properties** and type the property's name and value in JSON format. For example, `{".innerText":"<text>"}`.
+   - [Other step properties](#step-properties). For example, `visible: true`.
+
+1. Proceed to record the rest of the user flow and then stop the recording.
+1. Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Replay.", width="20", height="20" %} **Replay**. If an assertion fails, the **Recorder** displays an error after a [timeout](#adjust-timeout).
+
+Watch the following video to see this workflow in action.
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/BNpFsEc4rzFsLVPE5EH2.mp4", controls="true", muted="true", class="screenshot" %}
 
 ### Copy steps {: #copy-steps }
 
@@ -233,7 +258,7 @@ Additionally, the **Recorder** automatically adds two separate steps to the star
 - **Set viewport**. Lets you control the viewport's dimensions, scaling, and [other properties](#step-properties).
 - **Navigate**. Sets the URL and automatically refreshes the page for every replay.
 
-To perform in-page automation without reloading the page, remove the navigation step as described above. 
+To perform in-page automation without reloading the page, remove the navigation step as described above.
 
 ### Configure steps {: #configure-steps }
 
@@ -244,7 +269,7 @@ To configure a step:
    Other properties depend on the `type` value.
 
 1. Specify the required properties below the `type`.
-   <div class="elevation--4" style="margin-top: 20px; margin-bottom: 20px;">{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/GICuzxrYSrsj2zyLdi8X.png", alt="Configuring a step.", width="800", height="388" %}</div>
+   <div class="elevation--4" style="margin-top: 20px; margin-bottom: 20px;">{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XGIyDuvQiK6R18ZQ6dqP.png", alt="Configure a step.", width="800", height="369" %}</div>
 1. Click the corresponding buttons to add optional type-specific properties and specify them.
 
 For a list of available properties, see [Step properties](#step-properties).
@@ -325,6 +350,36 @@ Type-specific properties are:
             <td><code>count</code></td>
             <td></td>
             <td>Number of elements identified by a selector</td>
+        </tr>
+        <tr>
+          <td><code>waitForElement</code></td>
+          <td><code>attributes</code></td>
+          <td></td>
+          <td>HTML attribute and its value</td>
+        </tr>
+        <tr>
+          <td><code>waitForElement</code></td>
+          <td><code>properties</code></td>
+          <td></td>
+          <td>JavaScript property and its value in JSON</td>
+        </tr>
+        <tr>
+          <td><code>waitForElement</code></td>
+          <td><a href="https://pptr.dev/api/puppeteer.waitforselectoroptions#properties"><code>visible</code></a></td>
+          <td></td>
+          <td>Boolean. True if the element is in the DOM and visible (doesn't have <code>display: none</code> or <code>visibility: hidden</code>)</td>
+        </tr>
+        <tr>
+          <td><code>waitForElement</code><br><code>waitForExpression</code></td>
+          <td><code>asserted events</code></td>
+          <td></td>
+          <td>Currently, only <code>type: navigation</code> but you can specify the title and URL</td>
+        </tr>
+        <tr>
+          <td><code>waitForElement</code><br><code>waitForExpression</code></td>
+          <td><code>timeout</code></td>
+          <td></td>
+          <td>Maximum time to wait in milliseconds</td>
         </tr>
         <tr>
             <td><code>waitForExpression</code></td>
@@ -454,7 +509,7 @@ Record a click on "Cappuccino", expand the corresponding step in the recording, 
 
 You can customize the selector of a recording if the common test selectors don't work for you.
 
-For example, this [demo page](https://jec.fyi/demo/recorder) uses the `data-automate` attribute as the selector. [Start a new recording](/docs/devtools/recorder/reference/#record) and enter the `data-automate` as the selector attribute.
+For example, this [demo page](https://jec.fish/demo/recorder) uses the `data-automate` attribute as the selector. [Start a new recording](/docs/devtools/recorder/reference/#record) and enter the `data-automate` as the selector attribute.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/2PPPt9tOC2ZEz1l9F9AK.png", alt="Customize the recording's selector.", width="800", height="524" %}
 

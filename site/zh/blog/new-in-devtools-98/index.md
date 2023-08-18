@@ -77,8 +77,8 @@ Chromium 议题：[1238818](https://crbug.com/1238818)，[1268754](https://crbug
 <!-- You can now adjust the **Timeout** settings in the [Recorder](/docs/devtools/recorder/) for all steps or a specific step. This is useful especially for pages with slow network requests and lengthy animation. -->
 您现在可以在[录制器](/docs/devtools/recorder/)中为所有步骤或特定步骤调整**超时**设置。这对于网络请求缓慢且动画冗长的页面尤其有用。
 
-<!-- For example, I [recorded a user flow](/docs/devtools/recorder/#record) on this [demo page](https://jec.fyi/demo/pup-slow-result) to load and click on the menu item. However, the loading of the menu items is slow (it takes 6 seconds). The [replay](/docs/devtools/recorder/#replay) of this user flow failed because it exceeds 5 seconds  (the default timeout). -->
-例如，我在这个[演示页](https://jec.fyi/demo/pup-slow-result)上[录制](/docs/devtools/recorder/#record)用户加载并点击菜单项的操作。但是，菜单项的加载速度很慢（需要6秒）。这次用户操作的[重放](/docs/devtools/recorder/#replay)会因此失败，因为它超过了默认的5秒超时。
+<!-- For example, I [recorded a user flow](/docs/devtools/recorder/#record) on this [demo page](https://jec.fish/demo/pup-slow-result) to load and click on the menu item. However, the loading of the menu items is slow (it takes 6 seconds). The [replay](/docs/devtools/recorder/#replay) of this user flow failed because it exceeds 5 seconds  (the default timeout). -->
+例如，我在这个[演示页](https://jec.fish/demo/pup-slow-result)上[录制](/docs/devtools/recorder/#record)用户加载并点击菜单项的操作。但是，菜单项的加载速度很慢（需要6秒）。这次用户操作的[重放](/docs/devtools/recorder/#replay)会因此失败，因为它超过了默认的5秒超时。
 
 <!-- We can use the new **Timeout** settings to fix this. Expand the step which we click on the menu item. [Edit the step](/docs/devtools/recorder/#edit-steps) by  **Add timeout** and set it to **6000** milliseconds (equal to 6s). -->
 我们可以使用新的**超时**设置来解决这个问题。展开我们点击菜单项的步骤。[编辑步骤](/docs/devtools/recorder/#edit-steps)以**添加超时**，并将其设置为**6000**毫秒（等于6秒）。

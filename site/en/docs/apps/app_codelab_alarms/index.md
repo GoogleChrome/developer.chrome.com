@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: "Step 3: Add Alarms and Notifications"
+seoTitle: "Step 3: Add Alarms and Notifications [Deprecated]"
 date: 2014-10-17
 updated: 2015-01-06
 description: How to wake your Chrome App at specified intervals and use notifications.

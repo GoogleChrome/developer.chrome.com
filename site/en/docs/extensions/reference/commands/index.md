@@ -2,10 +2,6 @@
 api: commands
 ---
 
-## Manifest
-
-You must have a `"manifest_version"` of at least `2` to use this API.
-
 ## Usage
 
 The Commands API allows extension developers to define specific commands, and bind them to a default
@@ -98,6 +94,8 @@ Key combinations that involve `Ctrl+Alt` are not permitted in order to avoid con
 
 ### Handling command events
 
+{% Label %}manifest.json:{% endLabel %}
+
 ```json
 {
   "name": "My extension",
@@ -123,8 +121,10 @@ Key combinations that involve `Ctrl+Alt` are not permitted in order to avoid con
 }
 ```
 
-In your background page, you can bind a handler to each of the commands defined in the manifest
+In your service worker, you can bind a handler to each of the commands defined in the manifest
 using `onCommand.addListener`. For example:
+
+{% Label %}service-worker.js:{% endLabel %}
 
 ```js
 chrome.commands.onCommand.addListener((command) => {
@@ -164,6 +164,8 @@ at `chrome://extensions/shortcuts`.
 
 Example:
 
+{% Label %}manifest.json:{% endLabel %}
+
 ```json
 {
   "name": "My extension",
@@ -191,14 +193,15 @@ Commands allow extensions to map logic to keyboard shortcuts that can be invoked
 most basic, a command only requires a command declaration in the extension's manifest and a listener
 registration as shown in the following example.
 
+{% Label %}manifest.json:{% endLabel %}
+
 ```json
-// manifest.json
 {
   "name": "Command demo - basic",
   "version": "1.0",
   "manifest_version": 3,
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "service-worker.js"
   },
   "commands": {
     "inject-script": {
@@ -209,8 +212,9 @@ registration as shown in the following example.
 }
 ```
 
+{% Label %}service-worker.js:{% endLabel %}
+
 ```js
-// background.js
 chrome.commands.onCommand.addListener((command) => {
   console.log(`Command "${command}" triggered`);
 });
@@ -219,18 +223,19 @@ chrome.commands.onCommand.addListener((command) => {
 ### Action command
 
 As described in the [Usage][header-usage] section, you can also map a command to an extension's
-action, browser action, or page action. The following example injects a content script that shows an
+action. The following example injects a content script that shows an
 alert on the current page when the user either clicks the extension's action or triggers the
 keyboard shortcut.
 
+{% Label %}manifest.json:{% endLabel %}
+
 ```json
-// manifest.json
 {
   "name": "Commands demo - action invocation",
   "version": "1.0",
   "manifest_version": 3,
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "service-worker.js"
   },
   "permissions": ["activeTab", "scripting"],
   "action": {},
@@ -244,9 +249,9 @@ keyboard shortcut.
   }
 }
 ```
+{% Label %}service-worker.js:{% endLabel %}
 
 ```js
-// background.js
 chrome.action.onClicked.addListener((tab) => {
   chrome.scripting.executeScript({
     target: {tabId: tab.id},
@@ -278,8 +283,9 @@ of commands returned by `commands.getAll()`.
 
 {% endAside %}
 
+{% Label %}service-worker.js:{% endLabel %}
+
 ```js
-// background.js
 chrome.runtime.onInstalled.addListener((reason) => {
   if (reason === chrome.runtime.OnInstalledReason.INSTALL) {
     checkCommandShortcuts();

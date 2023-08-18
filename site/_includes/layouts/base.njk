@@ -46,22 +46,23 @@
     {# Exclude the /articles/ section as a control #}
     <script type="speculationrules">
     {
-      "prefetch": [
+      "prerender": [
         {
           "source": "document",
           "where": {
             "and": [
               {
-                "href_matches": "/*\\?*", "relative_to": "document"
+                "href_matches": "/*\\?*#*", "relative_to": "document"
               },
               {
                 "not": {
-                  "href_matches": "/articles/*\\?*",
+                  "href_matches": "/articles/*\\?*#*",
                   "relative_to": "document"
                 }
               }
             ]
-          }
+          },
+          "eagerness": "moderate"
         }
       ]
     }

@@ -698,7 +698,7 @@ window.addEventListener("message", (event) => {
 }, false);
 ```
 
-{% Label %}content-script.js{% endLabel %}
+{% Label %}example.js{% endLabel %}
 
 ```js
 document.getElementById("theButton").addEventListener("click", () => {
@@ -765,7 +765,7 @@ All assets must be declared as [Web Accessible Resources][manifest-war] in the `
 
 While isolated worlds provide a layer of protection, using content scripts can create
 vulnerabilities in an extension and the web page. If the content script receives content from a
-separate website, such as making an [`XMLHttpRequest`][28], be careful to filter content
+separate website, such as making a fetch() request, be careful to filter content
 [cross-site scripting][29] attacks before injecting it. Only communicate over HTTPS in order to
 avoid ["man-in-the-middle"][30] attacks.
 

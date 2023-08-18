@@ -51,11 +51,15 @@ HTML에 직접 타사 임베드를 추가하는 대신 실제 포함된 타사�
 
 - [Daugilas/lazyYT](https://github.com/Daugilas/lazyYT)
 
+- [ngx-lite-video](https://github.com/karim-mamdouh/ngx-lite-video)
+
 ### Vimeo 내장 플레이어
 
 - [luwes/lite-vimeo-embed](https://github.com/luwes/lite-vimeo-embed)
 
 - [slightlyoff/lite-vimeo](https://github.com/slightlyoff/lite-vimeo)
+
+- [ngx-lite-video](https://github.com/karim-mamdouh/ngx-lite-video)
 
 ### 실시간 채팅(Intercom, Drift, Help Scout, Facebook Messenger)
 

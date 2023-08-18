@@ -6,7 +6,7 @@ description: >
 subhead: >
   The current target version to remove Web SQL is Chromium 119.
 date: 2023-05-15
-# updated: 2023-05-15
+updated: 2023-06-30
 authors:
   - thomassteiner
 tags:
@@ -43,7 +43,7 @@ removal in insecure contexts and eventually all contexts is planned for Chromium
   in **Chromium&nbsp;119** ({% ChromeDate '119' %})
 - [🔮 In the future.] A
   [deprecation trial](/docs/web-platform/origin-trials/#deprecation-trials) to
-  keep using Web SQL is available from **Chromium&nbsp;118**
-  ({% ChromeDate '118' %}) to **Chromium&nbsp;123** ({% ChromeDate '123' %}).
+  keep using Web SQL is available from **Chromium&nbsp;117**
+  ({% ChromeDate '117' %}) to **Chromium&nbsp;123** ({% ChromeDate '123' %}).
 
 See the post [Deprecating and removing Web SQL](/blog/deprecating-web-sql/) for all details on this deprecation.

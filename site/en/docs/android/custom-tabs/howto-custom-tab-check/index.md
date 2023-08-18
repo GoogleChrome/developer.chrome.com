@@ -18,13 +18,17 @@ if (packageName == null) {
 }
 ```
 
-You can also check if any browser on the device suports Custom Tabs:
+You can also check if any browser on the device supports Custom Tabs:
 
 ```java
-
+// Get all apps that can handle VIEW intents and Custom Tab service connections.
+Intent activityIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.example.com"));
+PackageManager packageManager = context.getPackageManager();
+List<ResolveInfo> viewIntentHandlers = packageManager.queryIntentActivities(activityIntent, 0);
+// Get a package that supports Custom Tabs
 String packageName = CustomTabsClient.getPackageName(
         context, 
-        Collections.emptyList(), 
+        viewIntentHandlers,
         true /* ignore default */
 );
 if (packageName == null) {

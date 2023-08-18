@@ -36,8 +36,8 @@ tags:
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/qsleBCUrr2twMujW0R94.png", alt="Recorder 面板捕获双击和右击事件", width="800", height="572" %}
 
-<!-- In this [example](https://jec.fyi/demo/dbl-right-click), start a [recording](/docs/devtools/recorder/#record) and try to perform the following steps:  -->
-在这个[例子](https://jec.fyi/demo/dbl-right-click)里面，可以开始 [recording](/docs/devtools/recorder/#record) 并尝试执行以下步骤：
+<!-- In this [example](https://jec.fish/demo/dbl-right-click), start a [recording](/docs/devtools/recorder/#record) and try to perform the following steps:  -->
+在这个[例子](https://jec.fish/demo/dbl-right-click)里面，可以开始 [recording](/docs/devtools/recorder/#record) 并尝试执行以下步骤：
 
 <!-- - Double-click the card to enlarge it
 - Right-click the card and select an action from the context menu -->

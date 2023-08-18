@@ -33,7 +33,9 @@ You must declare the "debugger" permission in your extension's manifest to use t
 
 ## Examples
 
-You can find samples of this API in [Samples][debugger-samples].
+To try this API, install the [debugger API example](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/debugger) from the [chrome-extension-samples](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples)
+repository.
+
 
 [audits]: https://chromedevtools.github.io/devtools-protocol/tot/Audits
 [dom]: https://chromedevtools.github.io/devtools-protocol/tot/DOM

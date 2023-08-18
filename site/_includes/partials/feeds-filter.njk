@@ -1,0 +1,84 @@
+{% from 'macros/icon.njk' import icon with context %}
+
+<div class="filters align-center">
+  <span class="label color-secondary-text">
+    {{ 'i18n.filter_sheet.filter_by' | i18n(locale) }}:
+  </span>
+  {% if author.sources.length > 1 %}
+  <enhanced-select id="feed-source" class="deprecations-filter gap-right-300" label="Source" fixedLabel multiple>
+    <select name="source" >
+      {% for source in author.sources %}
+        <option value="{{ source }}">{{ source }}</option>
+      {% endfor %}
+    </select>
+  </enhanced-select>
+  {% endif %}
+  <enhanced-select id="feed-type" class="deprecations-filter gap-right-300" label="Type" fixedLabel multiple>
+    <select name="type">
+      <option value="blogPost">{{ 'i18n.common.blog_post' | i18n(locale) }}</option>
+      <option value="article">{{ 'i18n.common.article' | i18n(locale) }}</option>
+      {% if author.sources.length > 1 %}
+      <option value="external">{{ 'i18n.common.external_post' | i18n(locale) }}</option>
+      {% endif %}
+    </select>
+  </enhanced-select>
+</div>
+
+<filter-modal>
+  <div class="filter-modal align-center">
+    <dialog id="filter-modal" class="scrollbar lg:display-none filter-modal__dialog">
+      <div class="filter-sheet display-flex direction-column">
+        <p class="filter-sheet__title type--xsmall weight-medium case-upper">
+          {{ 'i18n.filter_sheet.filter_by' | i18n(locale) }}:
+        </p>
+        <div class="filter-sheet__filters">
+          {% if author.sources.length > 1 %}
+          <section class="gap-bottom-500">
+            <p class="type--h5 weight-medium gap-bottom-200">Source</p>
+            <checkbox-group show="5" i18n='{"select_all":"{{ "i18n.filter_sheet.select_all" | i18n(locale) }}", "reset":"{{ "i18n.filter_sheet.reset" | i18n(locale) }}"}'>
+              {% for source in author.sources %}
+                <label>
+                  <input type="checkbox" name="source" value="{{ source }}"/>
+                  {{ source }}
+                </label>
+              {% endfor %}
+            </checkbox-group>
+          </section>
+          {% endif %}
+          <section class="gap-bottom-500">
+            <p class="type--h5 weight-medium gap-bottom-200">Type</p>
+           <checkbox-group show="5" i18n='{"select_all":"{{ "i18n.filter_sheet.select_all" | i18n(locale) }}", "reset":"{{ "i18n.filter_sheet.reset" | i18n(locale) }}"}'>
+              <label>
+                <input type="checkbox" name="type" value="blogPost"/> {{ 'i18n.common.blog_post' | i18n(locale) }}
+              </label>
+              <label>
+                <input type="checkbox" name="type" value="article"/> {{ 'i18n.common.article' | i18n(locale) }}
+              </label>
+              {% if author.sources.length > 1 %}
+              <label>
+                <input type="checkbox" name="type" value="external"/> {{ 'i18n.common.external_post' | i18n(locale) }}
+              </label>
+              {% endif %}
+            </checkbox-group>
+          </section>
+        </div>
+        <div class="filter-sheet__buttons display-flex align-center justify-content-end">
+          <button id="filter-modal__reset" class="material-button button-filled color-primary bg-white">
+            {{ 'i18n.filter_sheet.reset_filters' | i18n(locale) }}
+          </button>
+          <button id="filter-modal__done" class="material-button button-filled color-bg bg-primary">
+            {{ 'i18n.filter_sheet.done' | i18n(locale) }}
+          </button>
+        </div>
+      </div>
+    </dialog>
+  </div>
+
+  <div class="filter-modal__selected display-flex flex-flow-row-wrap grid-gap-100">
+    <span
+      class="filter-modal__opener surface color-blue-medium hairline rounded-lg tag-pill">
+      {{ icon('filters') }}{{ 'i18n.filter_sheet.filters' | i18n(locale) }}
+    </span>
+    <tag-pill-list id="active-filters"></tag-pill-list>
+  </div>
+</filter-modal>

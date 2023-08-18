@@ -234,7 +234,7 @@ The CrUX API returns more quickly than the [PageSpeed Insights API](#tool-psi-ap
 
 ### CrUX History API {: #tool-crux-history-api}
 
-The [CrUX History API](/docs/crux/historical-api/) provides programmatic access to CrUX historical data by page or origin, and can be further filtered by form factor, effective connection type and metrics.
+The [CrUX History API](/docs/crux/history-api/) provides programmatic access to CrUX historical data by page or origin, and can be further filtered by form factor, effective connection type and metrics.
 
 The API provides [Web Vitals](https://web.dev/vitals/) metrics both by origin and at page-level and the data is updated weekly. The only values provided for metrics are calculated from the past 25 weekly collection periods of 28 days as a rolling window.
 
