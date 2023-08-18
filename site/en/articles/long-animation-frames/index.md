@@ -7,21 +7,21 @@ description: |
 authors:
   - tunetheweb
   - nrosenthal
-date: 2023-08-20
-#updated: 2023-08-20
-hero: image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/uYTX08MvUTagNuuo4rrn.jpg
-alt: A loaf of bread
+date: 2023-08-21
+#updated: 2023-08-21
 tags:
   - performance
   - origin-trials
   - chrome-116
 ---
 
-The [Long Animation Frames API](https://github.com/w3c/longtasks/blob/main/loaf-explainer.md) (or LoAF) is a new proposal from the Chrome team to update the [Long Tasks API](https://w3c.github.io/longtasks/) to provide better understanding of slow user interface (UI) updates. This can be useful to identify slow animation frame updates which are likely to affect the pending [Interaction to Next Paint (INP)](https://web.dev/inp/) Core Web Vital metric which measures responsiveness, or to identify other UI jank which affects [smoothness](https://web.dev/smoothness/). The API is available as an origin trial from Chrome 116 for developers to provide feedback on.
+The [Long Animation Frames API](https://github.com/w3c/longtasks/blob/main/loaf-explainer.md) (or LoAF) is a new proposal from the Chrome team to update the [Long Tasks API](https://w3c.github.io/longtasks/) to provide better understanding of slow user interface (UI) updates. This can be useful to identify slow animation frame updates which are likely to affect the pending [Interaction to Next Paint (INP)](https://web.dev/inp/) Core Web Vital metric which measures responsiveness, or to identify other UI jank which affects [smoothness](https://web.dev/smoothness/).
+
+The API is available as an origin trial from Chrome 116 for developers to provide feedback on.
 
 ## The Long Tasks API
 
-Before we get into the Long Animation Frames API, let's look at the existing Long Tasks API which has been available in Chrome for some time now. It allows you to monitor for **long tasks**, or tasks that occupy the main thread for 50ms. This can be monitored using the [`PerformanceLongTaskTiming`](https://developer.mozilla.org/docs/Web/API/PerformanceLongTaskTiming) interface, with a `PeformanceObserver`:
+The Long Animation Frames API is an alternative to the existing Long Tasks API which has been available in Chrome for some time now. As its name suggests, the Long Task API allows you to monitor for **long tasks**, or tasks that occupy the main thread for 50ms. This can be monitored using the [`PerformanceLongTaskTiming`](https://developer.mozilla.org/docs/Web/API/PerformanceLongTaskTiming) interface, with a `PeformanceObserver`:
 
 ```js
 const observer = new PerformanceObserver((list) => {
@@ -37,13 +37,13 @@ To improve responsiveness, it is often advised to [break up long tasks](https://
 
 So when trying to improve responsiveness, the first effort is often to run a performance trace and look at long tasks. This could be through a lab-based auditing tool like Lighthouse (which has an **Avoid long main-thread tasks** audit), or by [looking at long tasks in Chrome DevTools](https://web.dev/long-tasks-devtools/).
 
-Lab-based testing is [often a poor starting place for identifying responsiveness issues](https://web.dev/diagnose-slow-interactions-in-the-lab/), as these tools typically do not include interactions—when they do, they are a small subset of likely interactions. Ideally you would track causes of slow interactions in the field.
+Lab-based testing is [often a poor starting place for identifying responsiveness issues](https://web.dev/diagnose-slow-interactions-in-the-lab/), as these tools typically do not include interactions—when they do, they are a small subset of likely interactions. Ideally you would measure causes of slow interactions in the field.
 
 ### Shortcomings of the Long Tasks API
 
 Measuring long tasks in the field using the Performance Observer above is only somewhat useful. In reality, it doesn't give that much information beyond the fact that a long task happened and how long it took.
 
-Real User Monitoring (RUM) tools often track this, and can be used to trend the number or duration of long tasks or identifying which pages these happen on—but without the underlying details of what caused the long task, this is only of limited use. The Long Tasks API only has a [basic attribution model](https://developer.mozilla.org/docs/Web/API/TaskAttributionTiming), which at best only tells you the container the long task happened in (the main frame, or an iframe), but not the script or function which called it, as shown by a typical entry below:
+Real User Monitoring (RUM) tools often use this to trend the number or duration of long tasks or identifying which pages these happen on—but without the underlying details of what caused the long task, this is only of limited use. The Long Tasks API only has a [basic attribution model](https://developer.mozilla.org/docs/Web/API/TaskAttributionTiming), which at best only tells you the container the long task happened in (the main frame, or an iframe), but not the script or function which called it, as shown by a typical entry below:
 
 ```js
 {
@@ -66,7 +66,7 @@ Real User Monitoring (RUM) tools often track this, and can be used to trend the 
 }
 ```
 
-The Long Tasks API is also an incomplete view, since it may exclude some important tasks. Some updates—like rendering—happen in separate tasks that ideally should be included together with the preceding execution that caused that update to accurately measure the "total work" for that interaction. For more details of the limitations of relying on tasks, see [the "Where long tasks fall short" section of the new API's explainer](https://github.com/w3c/longtasks/blob/main/loaf-explainer.md#where-long-tasks-fall-short).
+The Long Tasks API is also an incomplete view, since it may exclude some important tasks. Some updates—like rendering—happen in separate tasks that ideally should be included together with the preceding execution that caused that update to accurately measure the "total work" for that interaction. For more details of the limitations of relying on tasks, see [the "Where long tasks fall short" section of the API's explainer](https://github.com/w3c/longtasks/blob/main/loaf-explainer.md#where-long-tasks-fall-short).
 
 The final issue is that measuring long tasks only reports on individual tasks that take longer than the 50 millisecond limit. An animation frame could be made up of several tasks below this 50 millisecond limit, yet collectively still block the browser's ability to render.
 
@@ -76,7 +76,7 @@ The [Long Animation Frames API](https://github.com/w3c/longtasks/blob/main/loaf-
 
 Good responsiveness means that a page responds quickly to interactions made with it. That involves being able to paint any updates needed by the user in a timely manner and avoiding blocking these updates from happening. For [INP it is recommended to respond in 200 milliseconds or less](https://web.dev/inp/#what-is-a-good-inp-score), but for other updates (for example, animations) even that may be too long.
 
-The Long Animation Frames API is an alternative approach to measuring blocking work. Rather than measuring the individual **tasks**, the Long Animation Frames API—as its name suggests—instead measures **long animation frames**. A long animation frame is when a rendering update is delayed beyond 50 milliseconds (the same as the Long Tasks API's threshold).
+The Long Animation Frames API is an alternative approach to measuring blocking work. Rather than measuring the individual **tasks**, the Long Animation Frames API—as its name suggests—measures **long animation frames**. A long animation frame is when a rendering update is delayed beyond 50 milliseconds (the same as the Long Tasks API's threshold).
 
 It can be called in the similar way as long tasks with a `PerformanceObserver` looking at `long-animation-frame` types:
 
@@ -84,6 +84,7 @@ It can be called in the similar way as long tasks with a `PerformanceObserver` l
 const observer = new PerformanceObserver((list) => {
   console.log(list.getEntries());
 });
+
 observer.observe({ type: "long-animation-frame", buffered: true });
 ```
 
@@ -96,11 +97,11 @@ A further advantage of this alternative view on long tasks, is the ability to pr
 - `startTime`: the start time of the long animation frame relative to the navigation start time.
 - `duration`: the duration of the long animation frame.
 - `renderStart`: the start time of the rendering cycle, which includes requestAnimationFrame callbacks, style and layout calculation, resize observer and intersection observer callbacks.
-- `styleAndLayoutStart`: beginning of the time period spent in style and layout calculations.
+- `styleAndLayoutStart`: the beginning of the time period spent in style and layout calculations.
 - `desiredRenderStart`: the time the animation frame was queued.
 - `presentationTime`:  the implementation-specific time when the frame was actually presented. (Note: not implemented yet).
-- `firstUIEventTimestamp`:  time of the first UI event (mouse/keyboard etc.) to be handled during the course of this frame.
-- `blockingDuration`:  the duration in milliseconds that the animation frame was being blocked in practice.
+- `firstUIEventTimestamp`: the time of the first UI event (mouse/keyboard etc.) to be handled during the course of this frame.
+- `blockingDuration`: the duration in milliseconds that the animation frame was being blocked in practice.
 
 For more details on these individual timings, [refer to the explainer](https://github.com/w3c/longtasks/blob/main/loaf-explainer.md#how-a-loaf-entry-might-look-like), which provides fine grained detail as to which each activity is contributing to the resulting long animation frame.
 
@@ -109,12 +110,12 @@ For more details on these individual timings, [refer to the explainer](https://g
 The `long-animation-frame` entry type includes better attribution data of each script that contributed to a long animation frame. Similar to the Long Tasks API, this will be provided in an array of attribution entries, each of which details:
 
 - A meaningful `name`, indicating how the script was called (for example, "`IMG#id.onload`", "`Window.requestAnimationFrame`", or "`Response.json.then`").
-- The `type` (`user-callback`, `event-listener`, `classic-script`…etc.)
+- The `type` (`user-callback`, `event-listener`, `resolve-promise`, `reject-promise`, `classic-script`, or `module-script`.)
 - Separate timing data for that script:
-    - `startTime`:  when the function was invoked.
+    - `startTime`:  time the entry function was invoked.
     - `executionStart`: the time after compilation.
     - `duration`: the duration between startTime and when the subsequent microtask queue has finished processing.
-    - `forcedStyleAndLayoutDuration`: total time spent in forced layout/style inside this function.
+    - `forcedStyleAndLayoutDuration`: the total time spent in forced layout/style inside this function.
     - `desiredExecutionStart`: the time when the callback was queued.
 - `sourceLocation`:  the script resource name and character position.
 - `windowAttribution`:  similar information to Long Tasks API as to which container (the main frame, or an iframe) this happens in.
@@ -161,7 +162,7 @@ As can be seen, this gives an unprecedented amount of data for websites to be ab
 
 ## Enabling the Long Animation Frames API
 
-The Long Animation Frames API is available in Chrome behind the Experimental Web Platform Features flag and can be enabled at: `chrome://flags/#enable-experimental-web-platform-features` for developers wishing to experiment with this API.
+The Long Animation Frames API is available in Chrome behind the Experimental Web Platform Features flag and can be enabled at: `chrome://flags/#enable-experimental-web-platform-features`.
 
 This feature is also [entering an origin trial from Chrome 116](/origintrials/#/view_trial/3935020174414970881), which allows developers to enable the feature for visitors to their sites to collect data from real users. See [Get started with origin trials](/en/docs/web-platform/origin-trials/) for more information on origin trials.
 
@@ -171,7 +172,7 @@ Tools like Lighthouse—while useful for discovering and reproducing issues—ar
 
 Some suggested strategies are listed next, but the Chrome team is keen to hear feedback on this API and how developers and RUM providers would see themselves using the information the API provides.
 
-### Testing for Long Animation Frame Support
+### Feature detecting Long Animation Frame support
 
 You can use the following code to test if the API is supported:
 
@@ -181,12 +182,12 @@ if (PerformanceObserver.supportedEntryTypes.includes('long-animation-frame')) {
 }
 ```
 
-### Returning LoAF data back to an analytics endpoint
+### Sending LoAF data back to an analytics endpoint
 
 As shown, the LoAF performance entry includes valuable information. One strategy would be to monitor all LoAFs and beacon the ones above a certain threshold back to an analytics endpoint for later analysis:
 
 ```js
-const REPORTING_THRESHOLD_MS = 200;
+const REPORTING_THRESHOLD_MS = 150;
 
 const observer = new PerformanceObserver(list => {
   for (const entry of list.getEntries()) {
@@ -196,13 +197,12 @@ const observer = new PerformanceObserver(list => {
     }
   }
 });
-
 observer.observe({ type: "long-animation-frame", buffered: true });
 ```
 
-As the long animation frame entries can be quite large, developers should decide what data from the entry should be returned from analytics. For example, the summary times of the entry and perhaps the script names.
+As the long animation frame entries can be quite large, developers should decide what data from the entry should be sent to analytics. For example, the summary times of the entry and perhaps the script names.
 
-### Returning the worst long animation frames
+### Observing the worst long animation frames
 
 Sites may wish to collect data on the longest animation frame (or frames) and send this data back, in order to reduce the volume of data that needs to be beaconed. So no matter how many long animation frames a page experiences, only data for the worst one, five, or however many long animation frames is beaconed back.
 
@@ -215,11 +215,9 @@ const observer = new PerformanceObserver(() => {
         (a, b) => b.blockingDuration - a.blockingDuration
       );
 
-
   // Example here logs to console, but could also report back to analytics
   console.table(sortedByBlockingDuration.slice(0, MAX_LOAFS_TO_CONSIDER));
 });
-
 observer.observe({ type: "long-animation-frame", buffered: true });
 ```
 
@@ -231,7 +229,7 @@ As there is no direct link between INP entries and LoAF entries, this requires c
 
 This does however risk only getting actionable insights on the worst interaction, when there may be many more interactions that are only slightly better. Perhaps with enough visitors, all interactions that need to be optimized will be surfaced, but other strategies may allow that to happen more easily.
 
-Alternatively, you could include any long animation frames close to the 200 millisecond good INP limit with a `firstUIEventTimestamp` (indicating a user interaction happened), which should include the INP entry and others close to this limit:
+Alternatively, you could include any long animation frames close to the 200 millisecond good INP limit with a `firstUIEventTimestamp` (indicating a user interaction happened during that frame), which should include the INP entry and others close to this limit:
 
 ```js
 const REPORTING_THRESHOLD_MS = 150;
@@ -241,7 +239,6 @@ const observer = new PerformanceObserver(list => {
       if (entry.duration > REPORTING_THRESHOLD_MS &&
         entry.firstUIEventTimestamp > 0
       ) {
-        // Example here logs to console, but could also report back to analytics
         console.log(entry);
       }
     }
@@ -249,14 +246,13 @@ const observer = new PerformanceObserver(list => {
 observer.observe({ type: "long-animation-frame", buffered: true });
 ```
 
-
-INP is often non-deterministic in nature as an interaction's performance is heavily influenced by what else is going on at the time of the interaction. A more holistic approach of looking at the worst long animation frames overall and tackling them, rather than only the long animation frame associated with the INP, may be a better way to tackle responsiveness issues. This should ultimately lead to a better INP metric, and a more stable one going forward.
+INP is often non-deterministic in nature as an interaction's performance is heavily influenced by what else is going on at the time of the interaction. A more holistic approach of looking at the worst long animation frames overall (or perhaps just the worse long animation frames with interactions initially) and tackling them, rather than only the long animation frame associated with the INP, may be a better way to tackle responsiveness issues. This should ultimately lead to better INP scores.
 
 ### Identifying common patterns in LoAFs
 
-An alternative strategy would be to look at common root causes and try to do some client side processing to identify common causes, in either timings, or the scripts. Data could be reported back at a script and/or character-position level to identify repeat offenders.
+An alternative strategy would be to look at common root causes and try to do some client side processing to identify those common causes, in either timings, or the scripts. Data could be reported back at a script and/or character-position level to identify repeat offenders.
 
-This may work particularly well for customizable platforms where themes, or plugins causing performance issues could be more easily identified across a number of sites.
+This may work particularly well for customizable platforms where themes or plugins causing performance issues could be more easily identified across a number of sites.
 
 The execution time of common scripts, or third-party origins, in long animation frames could be summed up and reported back to identify common contributors to long animation frames across the site or a collection of sites.
 
@@ -272,13 +268,11 @@ const observer = new PerformanceObserver(list => {
     count: scripts.length,
     totalDuration: scripts.reduce((subtotal, script) => subtotal + script.duration, 0)
   }));
-
   processedScripts.sort((a, b) => b.totalDuration - a.totalDuration);
-
   // Example here logs to console, but could also report back to analytics
   console.table(processedScripts);
-
 });
+
 observer.observe({type: "long-animation-frame", buffered: true});
 ```
 
@@ -291,10 +285,6 @@ And example of this output is shown below:
 ## Using the Long Animation Frames API in tooling
 
 The API could also allow additional developer tooling for local debugging. While some tooling like Lighthouse, and Chrome DevTools have been able to gather much of this data using lower-level tracing details, having this higher level API could allow other tools to get access to this data.
-
-### Using long animation frames data in extensions
-
-The [Web Vitals extension has shown the value in logging summary debug information](https://web.dev/debug-cwvs-with-web-vitals-extension/) to diagnose performance issues. Should this proposal prove useful and the API is launched, tools like that could more easily surface data to help make developers aware of where to concentrate their efforts.
 
 ### Surfacing long animation frames data in DevTools
 
@@ -313,6 +303,12 @@ const observer = new PerformanceObserver((list) => {
 observer.observe({ type: "long-animation-frame", buffered: true });
 ```
 
+Longer term, if this API proves useful, it will likely be incorporated into DevTools itself, but above allows it to be surface there in the meantime.
+
+### Using long animation frames data in other developer tooling
+
+The [Web Vitals extension has shown the value in logging summary debug information](https://web.dev/debug-cwvs-with-web-vitals-extension/) to diagnose performance issues. Should this proposal prove useful and the API is launched, tools like that could more easily surface data to help make developers aware of where to concentrate their efforts. Si
+
 ### Using long animation frames data in automated testing tools
 
 Similarly automated testing tools, perhaps in CI/CD pipelines, could surface details on potential performance issues by measuring Long Animation frames while running various test suites.
@@ -323,7 +319,7 @@ Below are some of the frequently asked questions on this API:
 
 ### Why not just measure the INP interaction?
 
-As [detailed above, this is one potential strategy](#linking-to-the-longest-inp-interaction), this is one potential strategy, and could allow much better attribution for this INP interaction. However, using the API to gather a more holistic view of all the responsive issues on your site may make addressing INP issues quicker rather than trying to tackle only the worst issue at a time.
+As [detailed above, this is one potential strategy](#linking-to-the-longest-inp-interaction), and could allow much better attribution for this INP interaction. However, using the API to gather a more holistic view of all the responsiveness issues on your site may make addressing INP issues quicker rather than trying to tackle only the worst issue at a time.
 
 ### Why not just extend or iterate the Long Tasks API?
 
@@ -345,7 +341,7 @@ Feedback can be provided at the [Long Task GitHub Issues list](https://github.co
 
 The Long Animation Frames API is an exciting proposal with many potential advantages over the existing Long Tasks API.
 
-It could prove to be a key tool in our belt for addressing responsiveness issues as measured by the INP pending Core Web Vital. INP is a challenging metric to optimize and this API is one way the Chrome team is seeking to make identifying, and addressing issues easier for developers.
+It could prove to be a key tool in our belt for addressing responsiveness issues as measured by INP. INP is a challenging metric to optimize and this API is one way the Chrome team is seeking to make identifying and addressing issues easier for developers.
 
 The scope of the Long Animation Frames API extends beyond just INP though, and it can help identify other causes of slow updates, which can affect the overall smoothness of a website's experience.
 
