@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Internationalize your extension
 date: 2017-08-30
-updated: 2023-08-17
+updated: 2023-08-18
 description: How to internationalize your Chrome Web Store extension.
 ---
 
@@ -43,7 +43,7 @@ localizing the name, description, and detailed description.
 
 ## Choose locales to support {: #choosing-locales-to-support }
 
-You can localize your extension to any of the following locales.
+You can localize your extension to any of the following locales. Note that Chrome Web Store does not support all of the locals supported by Chrome. If your locale is not listed here, choose the closest alternative. For example, if the default locale of your extension is "de_CH", choose "de" in the Chrome Web Store.
 
 | Locale code | Language (region)                     |
 | :---------- | :------------------------------------ |
