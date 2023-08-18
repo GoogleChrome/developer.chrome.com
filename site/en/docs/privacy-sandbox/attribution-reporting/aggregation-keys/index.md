@@ -223,7 +223,7 @@ In practice, summary reports are encoded in a way that will make buckets and val
 
 Aggregation keys are defined by an adtech company, typically in two steps: when an ad is clicked or viewed, and when a user converts.
 
-{% Aside }
+{% Aside %}
 Bucket and aggregation key refer to the same thing.
 {% endAside %}
 
