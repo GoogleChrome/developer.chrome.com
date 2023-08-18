@@ -157,7 +157,8 @@ using `chrome://flags/#disallow-doc-written-script-loads`.
 {% Aside %}
 One of the heuristics for this intervention to detect if the file is not already in the user's
 Cache. DevTools allows you to disable the Cache, however you will not see the `onerror` event
-on the script element being triggered, but you will see it when not using DevTools. This was fixed in Chrome 56.
+on the script element being triggered, but you will see it when not using
+DevTools. This is fixed in Chrome 56.
 {% endAside %}
 
 ### Check your HTTP headers on the script resource
