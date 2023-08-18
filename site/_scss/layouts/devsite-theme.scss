@@ -56,11 +56,71 @@ $CARD_BORDER: 2px solid #EEF4FF;
   --devsite-primary-text-color: #{$TEXT_PRIMARY};
   --devsite-text-color: #{$TEXT_PRIMARY};
   --link-color: #{$TEXT_PRIMARY};
+  --link-visited-color: #{$TEXT_PRIMARY};
   --link-rgb-background: #{$BUTTON_BG};
 
 
+  .button{
+    cursor: pointer;
+    font-weight: 500;
+    height: auto;
+    line-height: 1.5rem;
+    letter-spacing: 0.5px;
+    margin-left: 0;
+    padding: 1rem 2.5rem;
+  }
+
+  
+
+  .devsite-landing-row-100 .devsite-landing-row-item{
+
+    h3 {
+      font-size: 4rem;
+
+      em {
+        color: #{$TEXT_LINK};
+        font-style: normal;
+      }
+    }
+
+    &-description {
+      margin-bottom: 0;
+      padding: 1rem 0 0;
+      text-align: center;
+        
+      &-content {
+        font-size: 1.125rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    &-buttons {
+      display: block;
+      z-index: 1;
+
+      .button {
+        background-color: #{$TEXT_LINK};
+        color: #fff;
+        padding: 12px 24px;
+      }
+    }
+
+    &-media {
+      margin: -1rem auto 2rem;
+      width: 100%;
+    }
+
+  }
+
+
+  // Cards
   .devsite-landing-row-item {
     gap: 0;
+    padding: 33px;
+
+    &-image{
+      background-color: inherit;
+    }
 
     &-buttons {
       .button {
@@ -78,7 +138,7 @@ $CARD_BORDER: 2px solid #EEF4FF;
     }
 
     &-description {
-      padding: 2.125rem;
+      padding: 0;
     }
 
     &-description-content {
@@ -96,80 +156,85 @@ $CARD_BORDER: 2px solid #EEF4FF;
     }
   }
 
-  .devsite-landing-row-cards {
-    .devsite-landing-row-item-media {
-      padding: 30px 35px 0;
-    }
-  }
-
-  .devsite-landing-row-1-up .devsite-landing-row-item {
+  .dcc-services-card{
+    padding: 54px;
+    
     h3 {
-      font-size: 4rem;
-    }
-
-    &-description {
+      font-size: 2.25rem;
+      font-weight: 500;
+      letter-spacing: -0.5px;
+      line-height: 2.75rem;
+      max-width: 90%;
+      margin: 1.6875rem auto auto;
+      min-height: 8.375rem;
       text-align: center;
-      padding: 1rem 0 0;
-      margin-bottom: 0;
-        
-      &-content {
-        font-size: 1.125rem;
-        margin-bottom: 1.5rem;
+    }
+
+    .devsite-landing-row-item-buttons {
+      align-items: start;
+      display: flex;
+      flex:1; 
+      flex-direction: column;
+      margin-top: 0;
+
+      .button {
+        font-weight: #{$TEXT_WEIGHT};
+        padding: 0.6875rem 2.5rem;
       }
     }
-
-    &-buttons {
-      display: block;
-      z-index: 1;
-    }
-
-    &-media {
-      width: 1330px;
-      margin: -1rem auto 2rem;
-    }
   }
 
-  .devsite-landing-row-4-up {
-    position: relative;
-
-    &::before {
-      content: '';
-      height: 3px;
-      background: linear-gradient(92deg, #FB0301 0%, #FB0301 10.94%, #FBBB06 19.79%, #FBBB06 37.50%, #34A653 60.42%, #34A653 76.56%, #206ACE 100%);
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-  }
-
-  .devsite-landing-row-3-up {
-    &:not([background="pale-blue"]) {
-      .devsite-landing-row-item-media {
-        padding: 30px 35px 0;
-      }
-    }
-
-    .devsite-landing-row-inner {
-      background-color: #{$BG_PRIMARY};
-      border-radius: #{$CARD_BORDER_RADIUS};
-      max-width: 90rem;
-      padding: 0;
-    }
-  }
-
-  .devsite-landing-row[header-position=left] {
-    padding: 3.125rem 0 !important;
-
-    .devsite-landing-row-item {
+   .dcc-docs-card{
+      border: #{$CARD_BORDER};
+      border-radius: 1.5rem;
+      padding: 2.125rem;
       max-width: 24.75rem;
 
-      &-image {
+      h3{
+        font-weight: 500;
+      }
+
+      img {
         border-radius: 1.5rem;
       }
 
-      &-description {
+      &-buttons .button {
+        margin-top: 1.875rem;
+      }
+   }
+
+   .dcc-social-card {
+      h3 {
+        font-size: 2rem;
+        font-weight: 500;
+        text-align: left;
+      }
+      
+      .devsite-landing-row-item-description-content {
+        color: #{$TEXT_SECONDARY};
+      }
+
+      .button {
+        margin-top: 0.125rem;
         padding: 0;
+      }
+    }
+
+
+
+  .devsite-landing-row[header-position=left] {
+    padding: 3.125rem 0 !important;
+    position: relative;
+
+    .dcc-blog-card {
+      max-width: 24.75rem;
+
+      h3{
+        font-weight: 500;
+      }
+
+      img {
+        border-radius: 1.5rem;
       }
 
       &-buttons .button {
@@ -195,13 +260,41 @@ $CARD_BORDER: 2px solid #EEF4FF;
     }
   }
 
-  .devsite-landing-row-4-up[header-position=left] {
-    .devsite-landing-row-item {
-      border: #{$CARD_BORDER};
-      border-radius: 1.5rem;
+
+  .devsite-landing-row-3-up {
+
+    .devsite-landing-row-inner {
+      background-color: #{$BG_PRIMARY};
+      border-radius: #{$CARD_BORDER_RADIUS};
+      max-width: 90rem;
+      padding: 0;
+    }
+
+    .devsite-landing-row-item{
       padding: 2.125rem;
     }
   }
+
+ 
+   .devsite-landing-row-4-up[header-position=left]{
+    position: relative;
+
+    &::before {  
+      background: linear-gradient(92deg, #FB0301 0%, #FB0301 10.94%, #FBBB06 19.79%, #FBBB06 37.50%, #34A653 60.42%, #34A653 76.56%, #206ACE 100%);
+      content: '';
+      height: 3px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+
+
+
+
+  
 
   [background=pale-blue] {
     --devsite-background-color: #{$BG_PRIMARY};
@@ -223,27 +316,6 @@ $CARD_BORDER: 2px solid #EEF4FF;
       text-align: center;
     }
 
-    .devsite-landing-row-item {
-      &-body h3 {
-        font-size: 2.25rem;
-        line-height: 2.5625rem;
-        text-align: center;
-      }
-
-      &-buttons {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        margin-top: 0;
-
-        .button {
-          font-weight: #{$TEXT_WEIGHT};
-          line-height: 2rem;
-          padding: 0.6875rem 2.5rem;
-        }
-      }
-    }
-
     &.devsite-landing-row-2-up {
       margin-bottom: -4.5rem;
 
@@ -255,42 +327,6 @@ $CARD_BORDER: 2px solid #EEF4FF;
         margin-bottom: 2.875rem;
         max-width: 100%;
         text-align: left;
-      }
-
-      .devsite-landing-row-item {
-        &-body h3 {
-          font-size: 2rem;
-          text-align: left;
-        }
-
-        &-buttons {
-          .button {
-            line-height: 1.5625rem;
-            padding-left: 0;
-          }
-        }
-
-        &-description-content {
-          color: #{$TEXT_SECONDARY};
-        }
-      }
-    }
-
-    &.devsite-landing-row-3-up {
-      .devsite-landing-row-item {
-        &-description {
-          padding: 1.5rem 2.5rem 2.5rem;
-        }
-
-        &-buttons .button {
-          padding: 0;
-          margin-top: 0.125rem;
-        }
-      }
-
-      img {
-        max-width: 176px;
-        margin: 1.5rem auto 0;
       }
     }
   }
