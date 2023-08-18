@@ -1,0 +1,1383 @@
+[
+  {
+    "type": "API_SAMPLE",
+    "name": "action",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/action",
+    "apis": [
+      {
+        "type": "event",
+        "namespace": "runtime",
+        "propertyName": "onInstalled"
+      },
+      {
+        "type": "method",
+        "namespace": "tabs",
+        "propertyName": "create"
+      },
+      {
+        "type": "method",
+        "namespace": "action",
+        "propertyName": "isEnabled"
+      },
+      {
+        "type": "method",
+        "namespace": "action",
+        "propertyName": "disable"
+      },
+      {
+        "type": "method",
+        "namespace": "action",
+        "propertyName": "enable"
+      },
+      {
+        "type": "method",
+        "namespace": "action",
+        "propertyName": "setPopup"
+      },
+      {
+        "type": "method",
+        "namespace": "action",
+        "propertyName": "getPopup"
+      },
+      {
+        "type": "event",
+        "namespace": "action",
+        "propertyName": "onClicked"
+      },
+      {
+        "type": "method",
+        "namespace": "action",
+        "propertyName": "getBadgeText"
+      },
+      {
+        "type": "method",
+        "namespace": "action",
+        "propertyName": "setBadgeText"
+      },
+      {
+        "type": "method",
+        "namespace": "action",
+        "propertyName": "getBadgeTextColor"
+      },
+      {
+        "type": "method",
+        "namespace": "action",
+        "propertyName": "setBadgeTextColor"
+      },
+      {
+        "type": "method",
+        "namespace": "action",
+        "propertyName": "getBadgeBackgroundColor"
+      },
+      {
+        "type": "method",
+        "namespace": "action",
+        "propertyName": "setBadgeBackgroundColor"
+      },
+      {
+        "type": "method",
+        "namespace": "runtime",
+        "propertyName": "getURL"
+      },
+      {
+        "type": "method",
+        "namespace": "action",
+        "propertyName": "setIcon"
+      },
+      {
+        "type": "method",
+        "namespace": "runtime",
+        "propertyName": "getManifest"
+      },
+      {
+        "type": "method",
+        "namespace": "action",
+        "propertyName": "setTitle"
+      },
+      {
+        "type": "method",
+        "namespace": "action",
+        "propertyName": "getTitle"
+      }
+    ],
+    "title": "Action API Demo",
+    "description": "",
+    "permissions": []
+  },
+  {
+    "type": "API_SAMPLE",
+    "name": "alarms",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/alarms",
+    "apis": [
+      {
+        "type": "event",
+        "namespace": "alarms",
+        "propertyName": "onAlarm"
+      },
+      {
+        "type": "method",
+        "namespace": "alarms",
+        "propertyName": "clear"
+      },
+      {
+        "type": "method",
+        "namespace": "alarms",
+        "propertyName": "create"
+      },
+      {
+        "type": "method",
+        "namespace": "alarms",
+        "propertyName": "clearAll"
+      },
+      {
+        "type": "method",
+        "namespace": "alarms",
+        "propertyName": "getAll"
+      },
+      {
+        "type": "event",
+        "namespace": "runtime",
+        "propertyName": "onInstalled"
+      },
+      {
+        "type": "type",
+        "namespace": "runtime",
+        "propertyName": "OnInstalledReason"
+      },
+      {
+        "type": "event",
+        "namespace": "action",
+        "propertyName": "onClicked"
+      },
+      {
+        "type": "method",
+        "namespace": "tabs",
+        "propertyName": "create"
+      }
+    ],
+    "title": "Alarms API Demo",
+    "description": "",
+    "permissions": [
+      "alarms"
+    ]
+  },
+  {
+    "type": "API_SAMPLE",
+    "name": "contentSettings",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/contentSettings",
+    "apis": [
+      {
+        "type": "method",
+        "namespace": "tabs",
+        "propertyName": "query"
+      }
+    ],
+    "title": "Content settings",
+    "description": "Shows the content settings for the current site.",
+    "permissions": [
+      "contentSettings",
+      "activeTab"
+    ]
+  },
+  {
+    "type": "API_SAMPLE",
+    "name": "basic",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/contextMenus/basic",
+    "apis": [
+      {
+        "type": "event",
+        "namespace": "contextMenus",
+        "propertyName": "onClicked"
+      },
+      {
+        "type": "event",
+        "namespace": "runtime",
+        "propertyName": "onInstalled"
+      },
+      {
+        "type": "method",
+        "namespace": "contextMenus",
+        "propertyName": "create"
+      },
+      {
+        "type": "property",
+        "namespace": "runtime",
+        "propertyName": "lastError"
+      }
+    ],
+    "title": "Context Menus Sample",
+    "description": "Shows some of the features of the Context Menus API",
+    "permissions": [
+      "contextMenus"
+    ]
+  },
+  {
+    "type": "API_SAMPLE",
+    "name": "global_context_search",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/contextMenus/global_context_search",
+    "apis": [
+      {
+        "type": "event",
+        "namespace": "runtime",
+        "propertyName": "onInstalled"
+      },
+      {
+        "type": "method",
+        "namespace": "contextMenus",
+        "propertyName": "create"
+      },
+      {
+        "type": "event",
+        "namespace": "contextMenus",
+        "propertyName": "onClicked"
+      },
+      {
+        "type": "method",
+        "namespace": "tabs",
+        "propertyName": "create"
+      },
+      {
+        "type": "event",
+        "namespace": "storage",
+        "propertyName": "onChanged"
+      },
+      {
+        "type": "method",
+        "namespace": "contextMenus",
+        "propertyName": "remove"
+      },
+      {
+        "type": "property",
+        "namespace": "storage",
+        "propertyName": "sync"
+      }
+    ],
+    "title": "Global Google Search",
+    "description": "Use the context menu to search a different country's Google",
+    "permissions": [
+      "contextMenus",
+      "storage"
+    ]
+  },
+  {
+    "type": "API_SAMPLE",
+    "name": "cookie-clearer",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/cookies/cookie-clearer",
+    "apis": [
+      {
+        "type": "method",
+        "namespace": "tabs",
+        "propertyName": "query"
+      },
+      {
+        "type": "method",
+        "namespace": "cookies",
+        "propertyName": "getAll"
+      },
+      {
+        "type": "method",
+        "namespace": "cookies",
+        "propertyName": "remove"
+      }
+    ],
+    "title": "Cookie Clearer",
+    "description": "",
+    "permissions": [
+      "cookies"
+    ]
+  },
+  {
+    "type": "API_SAMPLE",
+    "name": "no-cookies",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/declarativeNetRequest/no-cookies",
+    "apis": [
+      {
+        "type": "event",
+        "namespace": "declarativeNetRequest",
+        "propertyName": "onRuleMatchedDebug"
+      }
+    ],
+    "title": "No Cookies",
+    "description": "Removes 'Cookie' headers.",
+    "permissions": [
+      "declarativeNetRequest",
+      "declarativeNetRequestFeedback"
+    ]
+  },
+  {
+    "type": "API_SAMPLE",
+    "name": "url-blocker",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/declarativeNetRequest/url-blocker",
+    "apis": [
+      {
+        "type": "event",
+        "namespace": "declarativeNetRequest",
+        "propertyName": "onRuleMatchedDebug"
+      }
+    ],
+    "title": "URL Blocker",
+    "description": "Blocks all main frame requests to example.com.",
+    "permissions": [
+      "declarativeNetRequest",
+      "declarativeNetRequestFeedback"
+    ]
+  },
+  {
+    "type": "API_SAMPLE",
+    "name": "url-redirect",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/declarativeNetRequest/url-redirect",
+    "apis": [
+      {
+        "type": "event",
+        "namespace": "declarativeNetRequest",
+        "propertyName": "onRuleMatchedDebug"
+      }
+    ],
+    "title": "URL Redirect",
+    "description": "Redirects MV2 documents to equivalent MV3 documents on developer.chrome.com.",
+    "permissions": [
+      "declarativeNetRequest",
+      "declarativeNetRequestFeedback",
+      "declarativeNetRequestWithHostAccess"
+    ]
+  },
+  {
+    "type": "API_SAMPLE",
+    "name": "default_command_override",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/default_command_override",
+    "apis": [
+      {
+        "type": "event",
+        "namespace": "commands",
+        "propertyName": "onCommand"
+      },
+      {
+        "type": "method",
+        "namespace": "tabs",
+        "propertyName": "query"
+      },
+      {
+        "type": "method",
+        "namespace": "tabs",
+        "propertyName": "update"
+      }
+    ],
+    "title": "Tab Flipper",
+    "description": "Press Ctrl+Shift+Right or Ctrl+Shift+Left (Command+Shift+Right or Command+Shift+Left on a Mac) to flip through window tabs",
+    "permissions": []
+  },
+  {
+    "type": "API_SAMPLE",
+    "name": "favicon",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/favicon",
+    "apis": [
+      {
+        "type": "method",
+        "namespace": "runtime",
+        "propertyName": "getURL"
+      }
+    ],
+    "title": "Favicon API in a popup",
+    "description": "",
+    "permissions": [
+      "favicon"
+    ]
+  },
+  {
+    "type": "API_SAMPLE",
+    "name": "showHistory",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/history/showHistory",
+    "apis": [
+      {
+        "type": "method",
+        "namespace": "tabs",
+        "propertyName": "create"
+      },
+      {
+        "type": "method",
+        "namespace": "history",
+        "propertyName": "search"
+      },
+      {
+        "type": "method",
+        "namespace": "history",
+        "propertyName": "getVisits"
+      }
+    ],
+    "title": "Typed URL History",
+    "description": "Reads your history and uses the transition type of each history item to filter out a list of the top ten pages you go to specifically by typing the URL.",
+    "permissions": [
+      "history"
+    ]
+  },
+  {
+    "type": "API_SAMPLE",
+    "name": "il8n",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/il8n",
+    "apis": [
+      {
+        "type": "method",
+        "namespace": "i18n",
+        "propertyName": "getMessage"
+      }
+    ],
+    "title": "il8n API Example",
+    "description": "",
+    "permissions": [
+      "activeTab"
+    ]
+  },
+  {
+    "type": "API_SAMPLE",
+    "name": "new-tab-search",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/omnibox/new-tab-search",
+    "apis": [
+      {
+        "type": "event",
+        "namespace": "omnibox",
+        "propertyName": "onInputEntered"
+      },
+      {
+        "type": "method",
+        "namespace": "tabs",
+        "propertyName": "create"
+      }
+    ],
+    "title": "Omnibox - New Tab Search",
+    "description": "Type 'nt' plus a search term into the Omnibox to open search in new tab.",
+    "permissions": []
+  },
+  {
+    "type": "API_SAMPLE",
+    "name": "blank_ntp",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/override/blank_ntp",
+    "apis": [],
+    "title": "Blank new tab page",
+    "description": "Override the new tab page with a blank one",
+    "permissions": []
+  },
+  {
+    "type": "API_SAMPLE",
+    "name": "printing",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/printing",
+    "apis": [
+      {
+        "type": "method",
+        "namespace": "printing",
+        "propertyName": "submitJob"
+      },
+      {
+        "type": "property",
+        "namespace": "runtime",
+        "propertyName": "lastError"
+      },
+      {
+        "type": "method",
+        "namespace": "printing",
+        "propertyName": "cancelJob"
+      },
+      {
+        "type": "method",
+        "namespace": "printing",
+        "propertyName": "getPrinters"
+      },
+      {
+        "type": "method",
+        "namespace": "printing",
+        "propertyName": "getPrinterInfo"
+      },
+      {
+        "type": "event",
+        "namespace": "printing",
+        "propertyName": "onJobStatusChanged"
+      }
+    ],
+    "title": "Print Extension",
+    "description": "Sends print job directly to the printers installed on the Chromebook",
+    "permissions": [
+      "printing"
+    ]
+  },
+  {
+    "type": "API_SAMPLE",
+    "name": "sandbox",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/sandbox/sandbox",
+    "apis": [
+      {
+        "type": "event",
+        "namespace": "runtime",
+        "propertyName": "onInstalled"
+      },
+      {
+        "type": "method",
+        "namespace": "tabs",
+        "propertyName": "create"
+      }
+    ],
+    "title": "Sandboxed Frame Sample",
+    "description": "",
+    "permissions": []
+  },
+  {
+    "type": "API_SAMPLE",
+    "name": "sandboxed-content",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/sandbox/sandboxed-content",
+    "apis": [
+      {
+        "type": "event",
+        "namespace": "runtime",
+        "propertyName": "onInstalled"
+      },
+      {
+        "type": "method",
+        "namespace": "tabs",
+        "propertyName": "create"
+      }
+    ],
+    "title": "Sandboxed Content Sample",
+    "description": "",
+    "permissions": []
+  },
+  {
+    "type": "API_SAMPLE",
+    "name": "scripting",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/scripting",
+    "apis": [
+      {
+        "type": "event",
+        "namespace": "action",
+        "propertyName": "onClicked"
+      },
+      {
+        "type": "method",
+        "namespace": "tabs",
+        "propertyName": "create"
+      },
+      {
+        "type": "event",
+        "namespace": "webNavigation",
+        "propertyName": "onDOMContentLoaded"
+      },
+      {
+        "type": "property",
+        "namespace": "storage",
+        "propertyName": "local"
+      },
+      {
+        "type": "method",
+        "namespace": "scripting",
+        "propertyName": "executeScript"
+      },
+      {
+        "type": "event",
+        "namespace": "runtime",
+        "propertyName": "onMessage"
+      },
+      {
+        "type": "method",
+        "namespace": "scripting",
+        "propertyName": "getRegisteredContentScripts"
+      },
+      {
+        "type": "method",
+        "namespace": "scripting",
+        "propertyName": "unregisterContentScripts"
+      },
+      {
+        "type": "method",
+        "namespace": "runtime",
+        "propertyName": "sendMessage"
+      },
+      {
+        "type": "method",
+        "namespace": "scripting",
+        "propertyName": "registerContentScripts"
+      }
+    ],
+    "title": "Scripting API Demo",
+    "description": "",
+    "permissions": [
+      "scripting",
+      "webNavigation",
+      "storage"
+    ]
+  },
+  {
+    "type": "API_SAMPLE",
+    "name": "tabCapture",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/tabCapture",
+    "apis": [
+      {
+        "type": "property",
+        "namespace": "runtime",
+        "propertyName": "lastError"
+      },
+      {
+        "type": "method",
+        "namespace": "tabCapture",
+        "propertyName": "getMediaStreamId"
+      },
+      {
+        "type": "event",
+        "namespace": "runtime",
+        "propertyName": "onMessage"
+      },
+      {
+        "type": "method",
+        "namespace": "tabs",
+        "propertyName": "query"
+      },
+      {
+        "type": "method",
+        "namespace": "runtime",
+        "propertyName": "getURL"
+      },
+      {
+        "type": "method",
+        "namespace": "tabs",
+        "propertyName": "remove"
+      },
+      {
+        "type": "event",
+        "namespace": "action",
+        "propertyName": "onClicked"
+      },
+      {
+        "type": "method",
+        "namespace": "windows",
+        "propertyName": "create"
+      },
+      {
+        "type": "event",
+        "namespace": "tabs",
+        "propertyName": "onUpdated"
+      },
+      {
+        "type": "method",
+        "namespace": "tabs",
+        "propertyName": "sendMessage"
+      }
+    ],
+    "title": "Tab Capture Example",
+    "description": "Capture a tab and play in a <video> element in a separate window.",
+    "permissions": [
+      "tabs",
+      "tabCapture"
+    ]
+  },
+  {
+    "type": "API_SAMPLE",
+    "name": "web-accessible-resources",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/web-accessible-resources",
+    "apis": [
+      {
+        "type": "method",
+        "namespace": "runtime",
+        "propertyName": "getURL"
+      },
+      {
+        "type": "event",
+        "namespace": "runtime",
+        "propertyName": "onInstalled"
+      },
+      {
+        "type": "type",
+        "namespace": "runtime",
+        "propertyName": "OnInstalledReason"
+      },
+      {
+        "type": "event",
+        "namespace": "action",
+        "propertyName": "onClicked"
+      },
+      {
+        "type": "method",
+        "namespace": "tabs",
+        "propertyName": "create"
+      }
+    ],
+    "title": "Web Accessible Resources Demo",
+    "description": "",
+    "permissions": []
+  },
+  {
+    "type": "API_SAMPLE",
+    "name": "http-auth",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/webRequest/http-auth",
+    "apis": [
+      {
+        "type": "event",
+        "namespace": "webRequest",
+        "propertyName": "onAuthRequired"
+      }
+    ],
+    "title": "webRequest.onAuthRequired Demo",
+    "description": "",
+    "permissions": [
+      "webRequest",
+      "webRequestAuthProvider"
+    ]
+  },
+  {
+    "type": "FUNCTIONAL_SAMPLE",
+    "name": "cookbook.offscreen-clipboard-write",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.offscreen-clipboard-write",
+    "apis": [
+      {
+        "type": "event",
+        "namespace": "runtime",
+        "propertyName": "onMessage"
+      },
+      {
+        "type": "event",
+        "namespace": "action",
+        "propertyName": "onClicked"
+      },
+      {
+        "type": "method",
+        "namespace": "offscreen",
+        "propertyName": "createDocument"
+      },
+      {
+        "type": "type",
+        "namespace": "offscreen",
+        "propertyName": "Reason"
+      },
+      {
+        "type": "method",
+        "namespace": "runtime",
+        "propertyName": "sendMessage"
+      }
+    ],
+    "title": "Offscreen API - Clipboard",
+    "description": "",
+    "permissions": [
+      "offscreen",
+      "clipboardWrite"
+    ]
+  },
+  {
+    "type": "FUNCTIONAL_SAMPLE",
+    "name": "cookbook.offscreen-dom",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.offscreen-dom",
+    "apis": [
+      {
+        "type": "event",
+        "namespace": "action",
+        "propertyName": "onClicked"
+      },
+      {
+        "type": "method",
+        "namespace": "offscreen",
+        "propertyName": "createDocument"
+      },
+      {
+        "type": "type",
+        "namespace": "offscreen",
+        "propertyName": "Reason"
+      },
+      {
+        "type": "method",
+        "namespace": "runtime",
+        "propertyName": "sendMessage"
+      },
+      {
+        "type": "event",
+        "namespace": "runtime",
+        "propertyName": "onMessage"
+      },
+      {
+        "type": "method",
+        "namespace": "offscreen",
+        "propertyName": "closeDocument"
+      }
+    ],
+    "title": "Offscreen API - DOM Parsing",
+    "description": "",
+    "permissions": [
+      "offscreen"
+    ]
+  },
+  {
+    "type": "FUNCTIONAL_SAMPLE",
+    "name": "cookbook.sidepanel-global",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.sidepanel-global",
+    "apis": [],
+    "title": "Global side panel",
+    "description": "Sidepanel declared only in the manifest visible to all sites",
+    "permissions": [
+      "sidePanel"
+    ]
+  },
+  {
+    "type": "FUNCTIONAL_SAMPLE",
+    "name": "cookbook.sidepanel-multiple",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.sidepanel-multiple",
+    "apis": [
+      {
+        "type": "event",
+        "namespace": "runtime",
+        "propertyName": "onInstalled"
+      },
+      {
+        "type": "method",
+        "namespace": "sidePanel",
+        "propertyName": "setOptions"
+      },
+      {
+        "type": "event",
+        "namespace": "tabs",
+        "propertyName": "onActivated"
+      },
+      {
+        "type": "method",
+        "namespace": "sidePanel",
+        "propertyName": "getOptions"
+      }
+    ],
+    "title": "Multiple side panels",
+    "description": "Displays welcome side panel on installation, then shows the main panel",
+    "permissions": [
+      "sidePanel"
+    ]
+  },
+  {
+    "type": "FUNCTIONAL_SAMPLE",
+    "name": "cookbook.sidepanel-site-specific",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.sidepanel-site-specific",
+    "apis": [
+      {
+        "type": "method",
+        "namespace": "sidePanel",
+        "propertyName": "setPanelBehavior"
+      },
+      {
+        "type": "event",
+        "namespace": "tabs",
+        "propertyName": "onUpdated"
+      },
+      {
+        "type": "method",
+        "namespace": "sidePanel",
+        "propertyName": "setOptions"
+      }
+    ],
+    "title": "Site-specific side panel",
+    "description": "Use the action icon or keyboard shortcut to open the side panel on google.com",
+    "permissions": [
+      "sidePanel",
+      "tabs"
+    ]
+  },
+  {
+    "type": "FUNCTIONAL_SAMPLE",
+    "name": "cookbook.wasm-helloworld-print",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.wasm-helloworld-print",
+    "apis": [
+      {
+        "type": "event",
+        "namespace": "runtime",
+        "propertyName": "onInstalled"
+      }
+    ],
+    "title": "WASM Load Example - Helloworld",
+    "description": "Inspect background service worker console for output",
+    "permissions": []
+  },
+  {
+    "type": "FUNCTIONAL_SAMPLE",
+    "name": "cookbook.wasm-helloworld-print-nomodule",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.wasm-helloworld-print-nomodule",
+    "apis": [
+      {
+        "type": "event",
+        "namespace": "runtime",
+        "propertyName": "onInstalled"
+      }
+    ],
+    "title": "WASM Load Example - Helloworld (no-modules)",
+    "description": "Inspect background service worker console for output",
+    "permissions": []
+  },
+  {
+    "type": "FUNCTIONAL_SAMPLE",
+    "name": "reference.mv3-content-scripts",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/reference.mv3-content-scripts",
+    "apis": [
+      {
+        "type": "method",
+        "namespace": "tabs",
+        "propertyName": "query"
+      },
+      {
+        "type": "method",
+        "namespace": "scripting",
+        "propertyName": "executeScript"
+      }
+    ],
+    "title": "MV3 Migration - content script example",
+    "description": "",
+    "permissions": [
+      "scripting",
+      "activeTab"
+    ]
+  },
+  {
+    "type": "FUNCTIONAL_SAMPLE",
+    "name": "sample.bookmarks",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.bookmarks",
+    "apis": [
+      {
+        "type": "method",
+        "namespace": "bookmarks",
+        "propertyName": "getTree"
+      },
+      {
+        "type": "method",
+        "namespace": "tabs",
+        "propertyName": "create"
+      },
+      {
+        "type": "method",
+        "namespace": "bookmarks",
+        "propertyName": "remove"
+      },
+      {
+        "type": "method",
+        "namespace": "bookmarks",
+        "propertyName": "create"
+      },
+      {
+        "type": "method",
+        "namespace": "bookmarks",
+        "propertyName": "update"
+      }
+    ],
+    "title": "My Bookmarks",
+    "description": "A browser action with a popup dump of all bookmarks, including search, add, edit and delete.",
+    "permissions": [
+      "bookmarks"
+    ]
+  },
+  {
+    "type": "FUNCTIONAL_SAMPLE",
+    "name": "sample.catifier",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.catifier",
+    "apis": [],
+    "title": "Catifier",
+    "description": "Replace every image by a cat's image in a website you visit",
+    "permissions": [
+      "declarativeNetRequest"
+    ]
+  },
+  {
+    "type": "FUNCTIONAL_SAMPLE",
+    "name": "sample.favicon-cs",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.favicon-cs",
+    "apis": [
+      {
+        "type": "method",
+        "namespace": "runtime",
+        "propertyName": "getURL"
+      }
+    ],
+    "title": "Favicon API in content scripts",
+    "description": "",
+    "permissions": [
+      "favicon"
+    ]
+  },
+  {
+    "type": "FUNCTIONAL_SAMPLE",
+    "name": "sample.milestones",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.milestones",
+    "apis": [
+      {
+        "type": "method",
+        "namespace": "tabs",
+        "propertyName": "query"
+      }
+    ],
+    "title": "Chromium Milestones",
+    "description": "Shows the Chromium release milestone a given code review was merged into.",
+    "permissions": [
+      "activeTab"
+    ]
+  },
+  {
+    "type": "FUNCTIONAL_SAMPLE",
+    "name": "sample.optional_permissions",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.optional_permissions",
+    "apis": [
+      {
+        "type": "method",
+        "namespace": "topSites",
+        "propertyName": "get"
+      },
+      {
+        "type": "method",
+        "namespace": "permissions",
+        "propertyName": "contains"
+      },
+      {
+        "type": "method",
+        "namespace": "permissions",
+        "propertyName": "request"
+      },
+      {
+        "type": "property",
+        "namespace": "storage",
+        "propertyName": "sync"
+      }
+    ],
+    "title": "Optional Permissions New Tab",
+    "description": "Demonstrates optional permissions in extensions",
+    "permissions": [
+      "storage"
+    ]
+  },
+  {
+    "type": "FUNCTIONAL_SAMPLE",
+    "name": "sample.page-redder",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.page-redder",
+    "apis": [
+      {
+        "type": "event",
+        "namespace": "action",
+        "propertyName": "onClicked"
+      },
+      {
+        "type": "method",
+        "namespace": "scripting",
+        "propertyName": "executeScript"
+      }
+    ],
+    "title": "Page Redder",
+    "description": "Turns the page red when you click the icon",
+    "permissions": [
+      "activeTab",
+      "scripting"
+    ]
+  },
+  {
+    "type": "FUNCTIONAL_SAMPLE",
+    "name": "sample.sidepanel-dictionary",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.sidepanel-dictionary",
+    "apis": [
+      {
+        "type": "method",
+        "namespace": "contextMenus",
+        "propertyName": "create"
+      },
+      {
+        "type": "event",
+        "namespace": "runtime",
+        "propertyName": "onInstalled"
+      },
+      {
+        "type": "event",
+        "namespace": "contextMenus",
+        "propertyName": "onClicked"
+      },
+      {
+        "type": "method",
+        "namespace": "runtime",
+        "propertyName": "sendMessage"
+      },
+      {
+        "type": "event",
+        "namespace": "runtime",
+        "propertyName": "onMessage"
+      }
+    ],
+    "title": "Dictionary side panel",
+    "description": "Provides definitions in the side panel.",
+    "permissions": [
+      "sidePanel",
+      "contextMenus"
+    ]
+  },
+  {
+    "type": "FUNCTIONAL_SAMPLE",
+    "name": "sample.water_alarm_notification",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.water_alarm_notification",
+    "apis": [
+      {
+        "type": "event",
+        "namespace": "alarms",
+        "propertyName": "onAlarm"
+      },
+      {
+        "type": "method",
+        "namespace": "action",
+        "propertyName": "setBadgeText"
+      },
+      {
+        "type": "method",
+        "namespace": "notifications",
+        "propertyName": "create"
+      },
+      {
+        "type": "event",
+        "namespace": "notifications",
+        "propertyName": "onButtonClicked"
+      },
+      {
+        "type": "property",
+        "namespace": "storage",
+        "propertyName": "sync"
+      },
+      {
+        "type": "method",
+        "namespace": "alarms",
+        "propertyName": "create"
+      },
+      {
+        "type": "method",
+        "namespace": "alarms",
+        "propertyName": "clearAll"
+      }
+    ],
+    "title": "Drink Water Event Popup",
+    "description": "Demonstrates usage and features of the event page by reminding user to drink water",
+    "permissions": [
+      "alarms",
+      "notifications",
+      "storage"
+    ]
+  },
+  {
+    "type": "FUNCTIONAL_SAMPLE",
+    "name": "tutorial.broken-color",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.broken-color",
+    "apis": [
+      {
+        "type": "event",
+        "namespace": "runtime",
+        "propertyName": "onInstalled"
+      },
+      {
+        "type": "property",
+        "namespace": "storage",
+        "propertyName": "sync"
+      },
+      {
+        "type": "method",
+        "namespace": "tabs",
+        "propertyName": "query"
+      },
+      {
+        "type": "method",
+        "namespace": "scripting",
+        "propertyName": "executeScript"
+      }
+    ],
+    "title": "Broken Background Color",
+    "description": "Fix an Extension!",
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "storage"
+    ]
+  },
+  {
+    "type": "FUNCTIONAL_SAMPLE",
+    "name": "tutorial.focus-mode",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.focus-mode",
+    "apis": [
+      {
+        "type": "event",
+        "namespace": "runtime",
+        "propertyName": "onInstalled"
+      },
+      {
+        "type": "method",
+        "namespace": "action",
+        "propertyName": "setBadgeText"
+      },
+      {
+        "type": "event",
+        "namespace": "action",
+        "propertyName": "onClicked"
+      },
+      {
+        "type": "method",
+        "namespace": "action",
+        "propertyName": "getBadgeText"
+      },
+      {
+        "type": "method",
+        "namespace": "scripting",
+        "propertyName": "insertCSS"
+      },
+      {
+        "type": "method",
+        "namespace": "scripting",
+        "propertyName": "removeCSS"
+      }
+    ],
+    "title": "Focus Mode",
+    "description": "Enable focus mode on Chrome's official Extensions and Chrome Web Store documentation.",
+    "permissions": [
+      "scripting",
+      "activeTab"
+    ]
+  },
+  {
+    "type": "FUNCTIONAL_SAMPLE",
+    "name": "tutorial.getting-started",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.getting-started",
+    "apis": [
+      {
+        "type": "event",
+        "namespace": "runtime",
+        "propertyName": "onInstalled"
+      },
+      {
+        "type": "property",
+        "namespace": "storage",
+        "propertyName": "sync"
+      },
+      {
+        "type": "method",
+        "namespace": "tabs",
+        "propertyName": "query"
+      },
+      {
+        "type": "method",
+        "namespace": "scripting",
+        "propertyName": "executeScript"
+      }
+    ],
+    "title": "Getting Started Example",
+    "description": "Build an Extension!",
+    "permissions": [
+      "storage",
+      "activeTab",
+      "scripting"
+    ]
+  },
+  {
+    "type": "FUNCTIONAL_SAMPLE",
+    "name": "tutorial.hello-world",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.hello-world",
+    "apis": [],
+    "title": "Hello Extensions",
+    "description": "Base Level Extension",
+    "permissions": []
+  },
+  {
+    "type": "FUNCTIONAL_SAMPLE",
+    "name": "tutorial.quick-api-reference",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.quick-api-reference",
+    "apis": [
+      {
+        "type": "property",
+        "namespace": "storage",
+        "propertyName": "local"
+      },
+      {
+        "type": "method",
+        "namespace": "alarms",
+        "propertyName": "get"
+      },
+      {
+        "type": "method",
+        "namespace": "alarms",
+        "propertyName": "create"
+      },
+      {
+        "type": "event",
+        "namespace": "alarms",
+        "propertyName": "onAlarm"
+      },
+      {
+        "type": "event",
+        "namespace": "runtime",
+        "propertyName": "onMessage"
+      },
+      {
+        "type": "method",
+        "namespace": "runtime",
+        "propertyName": "sendMessage"
+      },
+      {
+        "type": "event",
+        "namespace": "runtime",
+        "propertyName": "onInstalled"
+      },
+      {
+        "type": "event",
+        "namespace": "omnibox",
+        "propertyName": "onInputChanged"
+      },
+      {
+        "type": "method",
+        "namespace": "omnibox",
+        "propertyName": "setDefaultSuggestion"
+      },
+      {
+        "type": "event",
+        "namespace": "omnibox",
+        "propertyName": "onInputEntered"
+      },
+      {
+        "type": "method",
+        "namespace": "tabs",
+        "propertyName": "create"
+      }
+    ],
+    "title": "Quick API Reference",
+    "description": "Quick API can speed up the building of Chrome extensions.",
+    "permissions": [
+      "alarms",
+      "storage"
+    ]
+  },
+  {
+    "type": "FUNCTIONAL_SAMPLE",
+    "name": "tutorial.reading-time",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.reading-time",
+    "apis": [],
+    "title": "Reading time",
+    "description": "Add the reading time to Chrome Extension documentation articles",
+    "permissions": []
+  },
+  {
+    "type": "FUNCTIONAL_SAMPLE",
+    "name": "tutorial.tabs-manager",
+    "repo_link": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.tabs-manager",
+    "apis": [
+      {
+        "type": "method",
+        "namespace": "tabs",
+        "propertyName": "query"
+      },
+      {
+        "type": "method",
+        "namespace": "tabs",
+        "propertyName": "update"
+      },
+      {
+        "type": "method",
+        "namespace": "windows",
+        "propertyName": "update"
+      },
+      {
+        "type": "method",
+        "namespace": "tabs",
+        "propertyName": "group"
+      },
+      {
+        "type": "method",
+        "namespace": "tabGroups",
+        "propertyName": "update"
+      }
+    ],
+    "title": "Tab Manager for Chrome Dev Docs",
+    "description": "",
+    "permissions": [
+      "tabGroups"
+    ]
+  }
+]
