@@ -5,7 +5,7 @@ description: >
 layout: layouts/blog-post.njk
 authors:
   - samrichard
-date: 2023-08-23
+date: 2023-08-21
 hero: 'image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/8ayEOa5luIniBq7RxKkC.png'
 alt: ''
 tags:
