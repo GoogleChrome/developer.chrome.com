@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Internationalize your extension
 date: 2017-08-30
-updated: 2023-05-01
+updated: 2023-08-17
 description: How to internationalize your Chrome Web Store extension.
 ---
 
@@ -57,6 +57,7 @@ You can localize your extension to any of the following locales.
 | de          | German                                |
 | el          | Greek                                 |
 | en          | English                               |
+| en_AU       | English (Australia)                   |
 | en_GB       | English (Great Britain)               |
 | en_US       | English (USA)                         |
 | es          | Spanish                               |
