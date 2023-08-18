@@ -133,7 +133,7 @@ gates available, but more may be added in the future.
 
 The available Shared Storage API output gates are:
 
-* **[Cross-site content selection](/docs/privacy-sandbox/shared-storage/url-selection/)**: You can run a worklet script to select a URL from a provided list, based on the stored data, and then render that content in a fenced frame.
+* **[Cross-site content selection](/docs/privacy-sandbox/shared-storage/content-selection/)**: You can run a worklet script to select a URL from a provided list, based on the stored data, and then render that content in a fenced frame.
 * **Noisy aggregation with the [Private Aggregation API](/docs/privacy-sandbox/private-aggregation/)**: You can run a worklet to send cross-site data through the Private Aggregation API and return a [summary report](/docs/privacy-sandbox/attribution-reporting/summary-reports/). 
 
 ## Try the Shared Storage API
