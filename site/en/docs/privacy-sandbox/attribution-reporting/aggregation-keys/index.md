@@ -32,7 +32,7 @@ With the Attribution Reporting API's aggregatable/summary reports, in order to p
 
 ### Account for noise
 
-Noise added to metrics can impact the accuracy of your measurement data in minimal or significant ways, and should be taken into account as you prepare to use the API.** **
+Noise added to metrics can impact the accuracy of your measurement data in minimal or significant ways, and should be taken into account as you prepare to use the API.
 
 See details in [Understand noise](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.kj4nmyyptm5).
 
@@ -46,8 +46,8 @@ To introduce these essential notions, we'll use the following example:
 
 As an adtech company running campaigns in multiple locations for various product categories, you're looking to help advertisers answer the following questions:
 
-1.  How many ***purchases*** of each *product category* did each of my *campaigns* in each *geographic region* generate?
-1.  How much ***revenue*** for each *product category* did each of my *campaigns* in each *geographic region* generate?
+1.  How many **purchases** of each product category did each of my campaigns in each geographic region generate?
+1.  How much **revenue** for each product category did each of my campaigns in each geographic region generate?
 
 While many adtech companies encourage advertisers to configure a variety of conversion types, focusing on the most important conversions such as purchases is a good way to ensure that summary results are detailed and accurate for these important events.
 
@@ -253,7 +253,7 @@ You want to ensure that the aggregation service will sum aggregatable values of 
 
 To do so, within each key, encode a piece of data that tells you what the summary value represents— the measurement goal this key is referring to.
 
-One way to do that is  to create an additional dimension for your key that represents the *measurement goal type*.
+One way to do that is  to create an additional dimension for your key that represents the measurement goal type.
 
 Using our earlier example above, this *measurement goal type* would have two different possible values:
 
@@ -274,7 +274,7 @@ This size allows for very granular keys, but more granular keys are more likely 
 
 As introduced earlier, dimensions are encoded into the aggregation key.
 
-Each dimension has a certain *cardinality*—that is, the number of distinct values the dimension can take. Depending on its cardinality, each dimension needs to be represented by a certain number of bits. With n bits, it is possible to express **2n** distinct options.
+Each dimension has a certain cardinality—that is, the number of distinct values the dimension can take. Depending on its cardinality, each dimension needs to be represented by a certain number of bits. With n bits, it is possible to express **2n** distinct options.
 
 Example: 
 
@@ -296,7 +296,7 @@ In summary reports, keys will appear in binary (and be named *buckets*).
       <th>Hexadecimal data is typically prefixed with 0x ("x" for hexadecimal).<br>
 Example: 0x19 means "19 in hexadecimal", that is 25 in decimal (not 19).<br>
 <br>
-Binary numbers are typically prefixed with 0b<em> </em>("b" for binary), to differentiate them from decimal numbers.<br>
+Binary numbers are typically prefixed with 0b ("b" for binary), to differentiate them from decimal numbers.<br>
 Example: 0b11001 means "11001 in binary", that is 25 in decimal (not 11,001).</th>
     </tr>
   </thead>
@@ -319,9 +319,9 @@ In practice, this means you will set a key in two steps:
 1.  You set one part of the key—Campaign ID x Geography ID—at click/view time.
 1.  You set the second part of the key—Product category—at conversion time.
 
-These different parts of the keys are called*** **key pieces*.
+These different parts of the keys are called key pieces.
 
-A key is calculated by taking the **XOR (|)** of its key pieces.
+A key is calculated by taking the XOR (|) of its key pieces.
 
 ![image](insert_image_url_here)
 
@@ -329,17 +329,17 @@ Example:
 
 -   Source-side key piece = `0x159`
 -   Trigger-side key piece = `0x400`
--   Key = `0x159`** | `**0x400` = `0x559`
+-   Key = `0x159` | `0x400` = `0x559`
 
 #### Aligning key pieces
 
 With two 64-bit key pieces extended to 128 bits using carefully placed 64-bits fillers/offsets (the sixteen zeros), XOR-ing key pieces is equivalent to concatenating them, which is easier to reason with and verify:
 
--   Source-side key piece = `0x**a7e297e7c8c8d054**0000000000000000`
--   Trigger-side key piece = `0x0000000000000000**674fbe308a597271`**
+-   Source-side key piece = `0xa7e297e7c8c8d0540000000000000000`
+-   Trigger-side key piece = `0x0000000000000000674fbe308a597271`
 -   Key =
-    -   `0x**a7e297e7c8c8d054**0000000000000000`** | `**0x0000000000000000**674fbe308a597271`** =
-    -   `0x**a7e297e7c8c8d054674fbe308a597271`**
+    -   0xa7e297e7c8c8d0540000000000000000 | 0x0000000000000000674fbe308a597271 =
+    -   0xa7e297e7c8c8d054674fbe308a597271
 
 #### Multiple keys per ad click or view
 
@@ -365,9 +365,9 @@ This means that:
 
 #### Encoding dimensions into keys, approach 1: key structure maps
 
-To encode dimensions into keys, you can create and maintain a *key structure map *ahead of time, upon defining your keys (before ad-serving time). 
+To encode dimensions into keys, you can create and maintain a key structure map ahead of time, upon defining your keys (before ad-serving time). 
 
-A *key structure map* represents each of your dimensions and their position in the key.
+A key structure map represents each of your dimensions and their position in the key.
 
 In practice, creating and maintaining key structure maps means you have to implement and maintain decoder logic. If you're looking for a method that doesn't require you to do that, consider using a [hash-based approach](#heading=h.6q2omygul77r) instead.
 
@@ -458,7 +458,7 @@ Let's look at how many bits you would need to encode each dimension within your 
 
 -   Campaign ID: 4 bits (2**4** = 16)
 
-Keys following this structure would be **13-bit long **(5 + 1 + 3 + 4).
+Keys following this structure would be 13-bit long (5 + 1 + 3 + 4).
 
 With this, the key structure map for these keys would look as follows:
 
@@ -476,7 +476,7 @@ Let's take 0b1100100111100 as an arbitrary example key, and let's assume you hav
 
 According to the key structure map, this key would decode into:
 
-```
+```text
 11001 0 011 1100
 ```
 
@@ -592,7 +592,7 @@ L1 budget = <code>CONTRIBUTION_BUDGET</code>.</th>
 
 For the current origin trial (started in Chrome 101), `CONTRIBUTION_BUDGET` = 216 = 65,536.
 
-The value of the contribution budget is arbitrary. What's important is that **you can** **use this budget to maximize signal-to-noise ratio on the summary values**.
+The value of the contribution budget is arbitrary. What's important is that **you can**  use this budget to maximize signal-to-noise ratio on the summary values**.
 
 The contribution budget applies across all metrics on a single source event (ad click or view event). The sum of all aggregatable values associated with the conversion(s) attributed to a given ad click or view (source) should be under the budget.
 
@@ -894,7 +894,7 @@ VALUE, CampaignID=12, GeoID=7
   </tbody>
 </table>
 
-*Each hexadecimal digit represents four bits (binary digits).
+Each hexadecimal digit represents four bits (binary digits).
 
 Let's now set the key pieces:
 
