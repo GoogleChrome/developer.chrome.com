@@ -1,9 +1,10 @@
 ---
 title: New in Chrome 116
 description: >
-  Chrome 116 is rolling out now! Use the document picture in picture API to increase user productivity, improve performance by checking the notRestoredReasons property to optimize bfcache use, it is now easier to debug missing stylesheets in DevTools, and there’s plenty more.
+  Chrome 116 is rolling out now! Use the document picture in picture API to increase user productivity, it is now easier to debug missing stylesheets in DevTools, and there’s plenty more.
 layout: 'layouts/blog-post.njk'
 date: 2023-08-15
+updated: 2023-08-18
 authors:
   - ajara
 hero: 'image/SeARmcA1EicLXagFnVOe0ou9cqK2/D40mYqd8kvfXSy2IxbVv.png'
@@ -19,7 +20,6 @@ tags:
 Here's what you need to know:
 
 * Use the [Document Picture in Picture API](#document-picture-in-picture) to increase user productivity.
-* Improve performance by checking the [notRestoredReasons](#not-restored-reasons) property to optimize bfcache use.
 * It is now easier to [debug missing stylesheets](#missing-stylesheets-debug) in DevTools
 * And there’s plenty [more](#more).
 
@@ -67,30 +67,6 @@ pipButton.addEventListener('click', async () => {
 
 Check out [Picture-in-picture for any element](/docs/web-platform/document-picture-in-picture/)  for more details and examples.
 
-## `notRestoredReasons` property. {: #not-restored-reasons }
-
-Modern browsers provide an optimization feature for history navigation called the [back/forward cache](https://web.dev/bfcache/), or bfcache. It enables an instant loading experience when users go back to a page they have already visited.
-
-Check out this video of bfcache in action to understand the speed up it can bring to navigations:
-
-{% YouTube 'cuPsdRckkF0' %}
-
-Pages can be blocked from entering the bfcache or be evicted while in bfcache for different reasons, some required by a specification and some specific to browser implementations.
-
-Previously, there was no way for developers to find out why their pages were blocked from using the bfcache in the field, though there was a test in Chrome DevTools.
-
-To enable monitoring in the field, the `PerformanceNavigationTiming` class has been extended to include a `notRestoredReasons` property.
-
-This returns an object containing related information on all frames present in the document:
-
-* Details such as frame ID and name, to help identify them in the HTML.
-* Whether they were blocked from using the bfcache.
-* Reasons why they were blocked from using the bfcache.
-
-This allows developers to take action to make those pages bfcache-compatible, thereby improving site performance.
-
-Check out [not restored reasons API](/docs/web-platform/bfcache-notrestoredreasons/) for the code sample to find out the reasons your site might not be using bfcache, so you don’t miss out on a performance boost.
-
 ## DevTools missing stylesheets debugging improvements. {: #missing-stylesheets-debug }
 
 DevTools got a number of improvements to identify and debug issues with missing stylesheets.
@@ -120,6 +96,10 @@ Of course there’s plenty more.
 * [Motion path](https://developer.mozilla.org/docs/Web/CSS/CSS_motion_path) allows authors to position any graphical object and animate it along a path specified by the developer.
 * The `display` and `content-visibility` properties are now supported in keyframe animations, which allows exit animations to be added purely in CSS.
 * The fetch API can now be used with [Bring Your Own Buffer readers](https://developer.mozilla.org/docs/Web/API/ReadableStreamBYOBReader), reducing garbage collection overhead and copies, and improving responsiveness for users.
+
+{% Aside 'update' %}
+A previous version of this post stated that the [Back/forward cache `notRestoredReasons` API](/docs/web-platform/bfcache-notrestoredreasons/) was included in Chrome 116 but this feature has been delayed until a future release.
+{% endAside %}
 
 ## Further reading
 
