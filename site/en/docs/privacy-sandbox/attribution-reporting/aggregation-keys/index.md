@@ -215,11 +215,11 @@ A summary report contains a JSON dictionary-style set of key-value pairs. Each p
 
 Example:
 
-```json
+```text
 [
-{"bucket": "111001001", "value": "2558500"}, 
-{"bucket": "111101001", "value": "3256211"}, 
-{...}
+  {"bucket": "111001001", "value": "2558500"}, 
+  {"bucket": "111101001", "value": "3256211"}, 
+  {...}
 ]
 ```
 
@@ -562,8 +562,8 @@ Just like the browser, XOR these key pieces to generate the same key the browser
 A few practical tips if you're using this hash-based approach:
 
 -   **Ensure you're always using the same ordering of the dimensions**. This ensures that your hashes can be reliably regenerated. ("COUNT, CampaignID=12, GeoID=7" will not generate the same hash as "COUNT, GeoID=7, CampaignID=12"). One straightforward way to achieve this is to sort dimensions alphanumerically. This is what we'll be doing in the [example](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.i6ovl4dm1npa), except for the fact that we'll always make COUNT or VALUE the first item in the dimension—this is a choice for readability, as COUNT or VALUE encodes information that's slightly different conceptually than all other dimensions.
--   **Keep track of the set of dimensions you're using in keys. **You want to avoid generating keys based on a set of dimensions that you've never used.
--   **Hash collisions are rare** if a suitable hash function is used, but checking against previously used hashes (which should be stored to interpret the results from the aggregation service) can avoid introducing new keys that collide with older keys.
+-   Keep track of the set of dimensions you're using in keys. You want to avoid generating keys based on a set of dimensions that you've never used.
+-   Hash collisions are rare if a suitable hash function is used, but checking against previously used hashes (which should be stored to interpret the results from the aggregation service) can avoid introducing new keys that collide with older keys.
 
 See how to use hash-based keys in practice in the [example](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.i6ovl4dm1npa).
 
@@ -1112,7 +1112,7 @@ history across all users of the site, is **$1,500**. There may be outliers, for
 example very few users who spent over that sum, but you may decide to ignore
 these outliers).\
 Your scaling factor for the purchase value should be:\
-((`CONTRIBUTION_BUDGET`/2) / 1,500) = 32,768/1,500 = **21.8 **~ 22
+((`CONTRIBUTION_BUDGET`/2) / 1,500) = 32,768/1,500 = **21.8**~ 22
 
 Your scaling factor for purchase count is 32,768/1 = **32,768**, since you
 decided to track at most one purchase per ad click or view (source event).
