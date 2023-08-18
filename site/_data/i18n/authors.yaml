@@ -542,9 +542,9 @@ bmeurer:
     en: 'Googler working on Chrome DevTools.'
 demianrenzulli:
   title:
-    en: 'Demian Renzulli'
+    en: 'Demián Renzulli'
   description:
-    en: 'Demián is a Web Ecosystems Consultant working at Google New York.'
+    en: 'Demián is a Partner Engineer working at Google New York.'
 samdutton:
   title:
     en: 'Sam Dutton'
@@ -1516,3 +1516,13 @@ elabadysayed:
     en: 'Sayed El-Abady'
   description:
     en: 'Software Engineer, Google'
+hemeryar:
+  title:
+    en: 'Arthur Hemery'
+  description:
+    en: 'Software Engineer, Google'
+samrichard:
+  title:
+    en: 'Sam Richard'
+  description:
+    en: 'Developer Advocate, Google ChromeOS'

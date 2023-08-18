@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Using your Google Analytics account with the Chrome Web Store"
 seoTitle: "Using your Google Analytics account with the Chrome Web Store"
-date: 2023-07-11
+date: 2023-08-02
 description: The Chrome Web Store offers integration with Google Analytics, which allows you to see analytics for your Chrome Web Store listing in addition to the view offered in the Developer Dashboard.
 ---
 

@@ -5,7 +5,7 @@ import {
   onLCP,
   onTTFB,
   onINP,
-} from 'web-vitals/dist/web-vitals.attribution';
+} from 'web-vitals/attribution';
 import {version} from '../_data/analytics.json';
 
 // A function that should be called once all all analytics code has been
@@ -74,6 +74,9 @@ function sendToGoogleAnalytics({
   };
 
   let overrides;
+  let debug_input_delay;
+  let debug_processing_time;
+  let debug_presentation_delay;
 
   switch (name) {
     case 'CLS':
@@ -92,12 +95,41 @@ function sendToGoogleAnalytics({
       };
       break;
     case 'FID':
-    case 'INP':
       overrides = {
         debug_event: attribution.eventType,
         debug_time: attribution.eventTime,
         debug_load_state: attribution.loadState,
         debug_target: attribution.eventTarget || '(not set)',
+      };
+      break;
+    case 'INP':
+      if (attribution.eventEntry) {
+        debug_input_delay = Math.round(
+          attribution.eventEntry.processingStart -
+            attribution.eventEntry.startTime
+        );
+        debug_processing_time = Math.round(
+          attribution.eventEntry.processingEnd -
+            attribution.eventEntry.processingStart
+        );
+        debug_presentation_delay = Math.round(
+          // RenderTime is an estimate, because duration is rounded, and may get rounded down.
+          // In rare cases it can be less than processingEnd and that breaks performance.measure().
+          // Lets make sure its at least 4ms in those cases so you can just barely see it.
+          Math.max(
+            attribution.eventEntry.processingEnd + 4,
+            attribution.eventEntry.startTime + attribution.eventEntry.duration
+          ) - attribution.eventEntry.processingEnd
+        );
+      }
+      overrides = {
+        debug_event: attribution.eventType,
+        debug_time: attribution.eventTime,
+        debug_load_state: attribution.loadState,
+        debug_target: attribution.eventTarget || '(not set)',
+        debug_input_delay: debug_input_delay,
+        debug_processing_time: debug_processing_time,
+        debug_presentation_delay: debug_presentation_delay,
       };
       break;
     case 'LCP':
@@ -227,6 +259,27 @@ function getNavigationType() {
 }
 
 /**
+ * Gets the type of navigation for this page. In most cases this is the
+ * value returned by the Navigation Timing API (normalized to use kebab case),
+ * but in addition to this it also captures pages that were prerendered
+ * as well as page that were restored after a discard.
+ * @returns {string|undefined}
+ */
+function getBackForwardNotRestoreReasons() {
+  const navEntry =
+    self.performance &&
+    performance.getEntriesByType &&
+    performance.getEntriesByType('navigation')[0];
+
+  if (navEntry) {
+    if (navEntry.notRestoredReasons) {
+      return navEntry.notRestoredReasons.reasons.toString();
+    }
+  }
+  return;
+}
+
+/**
  * Returns a list of any `prerender` speculation rules defined by any
  * `script[type=speculationrules]` elements on the page.
  * @returns {Object}
@@ -304,7 +357,12 @@ export function setConfig() {
     window.dataLayer.push(arguments);
   };
   window.dataLayer.push({measurement_version: version});
-  window.dataLayer.push({navigation_type: getNavigationType()});
+  const navigationType = getNavigationType();
+  window.dataLayer.push({navigation_type: navigationType});
+  if (navigationType === 'back-forward') {
+    const reasons = getBackForwardNotRestoreReasons();
+    window.dataLayer.push({back_forward_not_restore_reasons: reasons});
+  }
   window.dataLayer.push({page_path: location.pathname});
   window.dataLayer.push({page_authors: getMeta('authors')});
   window.dataLayer.push({page_tags: getMeta('tags')});
@@ -315,6 +373,14 @@ export function setConfig() {
       ? 'dark'
       : 'light',
   });
+  if (navigator.deviceMemory) {
+    window.dataLayer.push({device_memory: navigator.deviceMemory});
+  }
+  if (navigator.connection && navigator.connection.effectiveType) {
+    window.dataLayer.push({
+      effective_connection_type: navigator.connection.effectiveType,
+    });
+  }
   if (location.hostname === 'localhost') {
     window.dataLayer.push({debug_mode: true});
   }

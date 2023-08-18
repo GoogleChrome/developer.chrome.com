@@ -1837,7 +1837,7 @@
     "country": "US",
     "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/4B8f3CX2GqtSfgwIEBiM.jpeg"
   },
-  "henrikbostrom":{
+  "henrikbostrom": {
     "country": "",
     "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/es5lvrnCiRGsPLyndQ9s.jpeg"
   },
@@ -1861,5 +1861,17 @@
     "twitter": "SayedElabady",
     "github": "SayedElabady",
     "image": "image/SeARmcA1EicLXagFnVOe0ou9cqK2/CjPe3HZR6IhDi83VYQx6.jpg"
+  },
+  "hemeryar": {
+    "country": "FR",
+    "github": "hemeryar"
+  },
+  "samrichard": {
+    "country": "US",
+    "twitter": "snugug",
+    "github": "snugug",
+    "glitch": "snugug",
+    "homepage": "https://snugug.com",
+    "image": "image/admin/5kuER6QRWs54zbYIJ4zS.jpg"
   }
 }

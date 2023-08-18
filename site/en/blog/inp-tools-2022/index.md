@@ -5,6 +5,7 @@ authors:
   - brendankenny
   - egsweeny
 date: 2022-05-17
+updated: 2023-08-03
 description: >
   Support for Interaction to Next Paint across Chrome performance tools.
 tags:
@@ -15,7 +16,7 @@ tags:
   - devtools
 ---
 
-We are thrilled to have the first round of tooling support for the new experimental responsiveness metric, Interaction to Next Paint (INP). To learn about the metric itself, check out [the official INP metric guide](https://web.dev/inp/).
+We are thrilled to have the first round of tooling support for the new [pending responsiveness metric](https://web.dev/vitals/#pending), Interaction to Next Paint (INP). To learn about the metric itself, check out [the official INP metric guide](https://web.dev/inp/).
 
 ## Suggested measurement
 
@@ -79,14 +80,14 @@ The same series of interactions can be automated by using [Lighthouse user flows
 ### Tool availability details
 
 - **Chrome User Experience Report (CrUX)**
-  - _BigQuery_: INP available as `experimental.interaction_to_next_paint` 
-  - _CrUX API_: INP available as `experimental_interaction_to_next_paint`
+  - _BigQuery_: INP available as `interaction_to_next_paint`
+  - _CrUX API_: INP available as `interaction_to_next_paint`
   - _CrUX Dashboard_: Includes INP data
 - **PageSpeed Insights**
   - _pagespeed.web.dev_: Page-level and origin-level INP field data from the CrUX API surfaced as 'Interaction to Next Paint'
-  - _PSI API_: INP available as `EXPERIMENTAL_INTERACTION_TO_NEXT_PAINT_MS`
+  - _PSI API_: INP available as `INTERACTION_TO_NEXT_PAINT_MS`
 - **`web-vitals` JS library**
-  - _`web-vitals@next`_ includes INP support
+  - _`web-vitals`_ includes INP support
 - **Web Vitals Chrome extension**
   - Includes local INP measurement and INP field data when available from the CrUX API
 - **Lighthouse**
@@ -97,4 +98,4 @@ The same series of interactions can be automated by using [Lighthouse user flows
 
 Moving forward, Chrome tooling teams will continue to invest in debugging capabilities and optimization recommendations for INP.
 
-INP itself is still experimental. If you have feedback on anything from the metric's usefulness, to ease of measurement, to its name, please bring it to the [web-vitals-feedback Google group](https://groups.google.com/g/web-vitals-feedback).
+ If you have feedback on anything from the metric's usefulness, to ease of measurement, please bring it to the [web-vitals-feedback Google group](https://groups.google.com/g/web-vitals-feedback).
