@@ -33,8 +33,8 @@ We recently published an [API proposal][partitioning-api-proposal] for changes t
 origin of the top level frame. This means that if site A is embedded using an iframe in site B
 and site C, a partitioned cookie can have a different value in each.
 
-`chrome.cookies` does not currently have support for partitioning, which means that all methods
-consider cookies from all partitions. The [`cookies.set()`](#method-set) method stores cookies in
+`chrome.cookies` does not currently support partitioning, which means that all methods
+read and write cookies from all partitions. The [`cookies.set()`](#method-set) method stores cookies in
 the default partition.
 
 For more details on the general impact of partitioning for extensions, see the

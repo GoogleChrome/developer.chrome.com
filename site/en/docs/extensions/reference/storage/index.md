@@ -15,7 +15,7 @@ The Storage API provides an extension-specific way to persist user data and stat
 
 {% Details %}
 {% DetailsSummary %}
-💡 Can extensions use web storage APIs?
+Can extensions use web storage APIs?
 {% endDetailsSummary %}
 
 Even though extensions can use the [`Storage`][mdn-storage] interface (accessible from `window.localStorage`) in some contexts (popup and other HTML pages), it is not recommended for the following reasons:
