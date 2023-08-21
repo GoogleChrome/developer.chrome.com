@@ -94,7 +94,7 @@ To learn more about DevTools features you can use to investigate third-party coo
 
 In Chrome version 115 or higher, you can test the browser behavior after third-party cookie phase out by [running Chrome from the command line](https://www.chromium.org/developers/how-tos/run-chromium-with-flags/) with the flag `--test-third-party-cookies-phaseout`. This will block third-party cookies, enable [third-party storage partitioning](/docs/privacy-sandbox/storage-partitioning) and [FedCM](/docs/privacy-sandbox/fedcm), and enable Chrome UI settings for [First-Party Sets](docs/privacy-sandbox/first-party-sets-integration) (["Allow related sites to see your activity in the group"](https://support.google.com/chrome/answer/95647?hl=EN#zippy=%2Callow-related-sites-to-access-your-activity)).
 
-If your site breaks when third-party cookies are blocked, you can report the issue to [Chrome's cookie breakage tracker](goo.gle/report-3pc-broken).
+If your site breaks when third-party cookies are blocked, you can report the issue to [Chrome's cookie breakage tracker](https://goo.gle/report-3pc-broken).
 
 ## Partitioned cookies
 
