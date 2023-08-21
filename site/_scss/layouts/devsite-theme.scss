@@ -70,7 +70,15 @@ $CARD_BORDER: 2px solid #EEF4FF;
     padding: 1rem 2.5rem;
   }
 
-  
+
+  .devsite-landing-row-header-icon{
+    font-size: 32px;
+    color: white;
+    background-color: #3982F7;
+    border-radius: 100%;
+    padding: 8px;
+    display: inline;
+  }
 
   .devsite-landing-row-100 .devsite-landing-row-item{
 
@@ -210,6 +218,71 @@ $CARD_BORDER: 2px solid #EEF4FF;
         font-weight: #{$TEXT_WEIGHT};
         padding: 0.6875rem 2.5rem;
       }
+    }
+
+     .button::before{
+      font-family: 'Material Icons';
+      font-family: "Material Icons";
+      padding-right: 0.5rem;
+      vertical-align: middle;
+    }
+
+    .dcc-web-app-features-link::before{
+      //content: "widget";
+      content: "link";
+    }
+    .dcc-web-on-android-link::before{
+      content: "android";
+    }
+
+    .dcc-chrome-extensions-link::before{
+      content: "extension";
+    }
+
+    .dcc-cwv-link::before{
+      content: "display_settings";
+    }
+
+    .dcc-design-link::before{
+      content: "toggle_on";
+    }
+
+    .dcc-privacy-link::before{
+      content: "lock";
+    }
+
+    .dcc-identity-link::before{
+      content: "badge";
+    }
+
+    .dcc-dev-tools-link::before{
+      content: "build";
+    }
+
+    .dcc-performance-link::before{
+      content: "construction";
+    }
+
+    .dcc-puppeteer-link::before{
+      content: "data_object";
+    }
+
+    .dcc-chrome-testing-link::before{
+      content: "science";
+    }
+    
+    .dcc-baseline-link::before{
+      content: "link";
+    }
+
+    .dcc-aurora-link::before{
+      //content: "offline-bolt";
+      content: "link";
+    }
+
+    .dcc-webdev-link::before{
+      //content: "terminal";
+       content: "link";
     }
   }
 
