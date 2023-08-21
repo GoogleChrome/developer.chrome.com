@@ -90,6 +90,14 @@ const observer = new PerformanceObserver((list) => {
 observer.observe({ type: 'long-animation-frame', buffered: true });
 ```
 
+Previous long animation frames can also be queried from the [Performance Timeline](https://www.w3.org/TR/performance-timeline/#performance-timeline) like so:
+
+```js
+let loafs = performance.getEntriesByType('long-animation-frame');
+```
+
+However, not that [there is a `maxBufferSize` for performance entries](https://w3c.github.io/timing-entrytypes-registry/#registry) after which older entries are dropped. The `long-animation-frame` buffer size is currently set to 200, the same as for `long-tasks`.
+
 ### Advantages of looking at frames instead of tasks
 
 The key advantage of looking at this from a frame perspective rather than a tasks perspective, is that a long animation can be made up of any number of tasks that cumulatively resulted in a long animation frame. This addresses the final point above, where the sum of many smaller, render-blocking tasks before an animation frame may not be surfaced by the  Long Tasks API.
