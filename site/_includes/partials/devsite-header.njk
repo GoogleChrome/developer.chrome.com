@@ -4,7 +4,10 @@
   <a href="#main-content" class="color-primary visually-hidden skip-link">{{ 'i18n.common.skip_to_content' | i18n(locale) }}</a>
 
   <nav class="display-flex align-center" aria-label="{{ 'i18n.common.chrome_developers' | i18n(locale) }}" role="search">
-
+    {# Hamburger button #}
+    <button class="ddc-hamburger button display-flex align-center justify-content-center width-700 height-700" aria-label="{{ 'i18n.common.menu' | i18n(locale) }}">
+      {{ icon('hamburger') }}
+    </button>
 
     {# Logo #}
     {# This is referenced by the sidebar in 'navigation-rail.njk', don't change these IDs or SVGs
