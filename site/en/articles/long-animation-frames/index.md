@@ -93,7 +93,7 @@ observer.observe({ type: 'long-animation-frame', buffered: true });
 Previous long animation frames can also be queried from the [Performance Timeline](https://www.w3.org/TR/performance-timeline/#performance-timeline) like so:
 
 ```js
-let loafs = performance.getEntriesByType('long-animation-frame');
+const loafs = performance.getEntriesByType('long-animation-frame');
 ```
 
 However, not that [there is a `maxBufferSize` for performance entries](https://w3c.github.io/timing-entrytypes-registry/#registry) after which older entries are dropped. The `long-animation-frame` buffer size is currently set to 200, the same as for `long-tasks`.
