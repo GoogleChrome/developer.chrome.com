@@ -23,7 +23,7 @@ The LoAF API is available as [an origin trial from Chrome 116](/origintrials/#/v
 
 ## The Long Tasks API
 
-The Long Animation Frames API is an alternative to the Long Tasks API which has been available in Chrome for some time now (since Chrome 58). As its name suggests, the Long Task API allows you to monitor for long tasks, which are tasks that occupy the main thread for 50 milliseconds or longer. Long tasks can be monitored using the [`PerformanceLongTaskTiming`](https://developer.mozilla.org/docs/Web/API/PerformanceLongTaskTiming) interface, with a `PeformanceObserver`:
+The Long Animation Frames API is an alternative to the Long Tasks API which has been available in Chrome for some time now (since Chrome 58). As its name suggests, the Long Task API allows you to monitor for long tasks, which are tasks that occupy the main thread for 50 milliseconds or longer. Long tasks can be monitored using the [`PerformanceLongTaskTiming`](https://developer.mozilla.org/docs/Web/API/PerformanceLongTaskTiming) interface, with a [`PeformanceObserver`](https://developer.mozilla.org/docs/Web/API/PerformanceObserver):
 
 ```js
 const observer = new PerformanceObserver((list) => {
