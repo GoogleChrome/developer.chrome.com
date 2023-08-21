@@ -6,8 +6,8 @@ description: |
  Learn all about the Chrome DevTools features to debug speculation rules used to prefetch and prerender future page navigations.
 authors:
   - tunetheweb
-date: 2023-08-20
-#updated: 2023-08-20
+date: 2023-08-22
+#updated: 2023-08-22
 hero: image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/ALZTuy3IA4jUdOpjjm2j.jpg
 alt: A picture of developer hunched over a computer screen with code on it
 tags:
@@ -28,7 +28,7 @@ There's a lot of "pre-" terms that are easily confused, so let's start with an e
 
 - **Prefetch**: fetching a resource or document in advance to improve performance for when that is needed. In this post we'll be talking about prefetching documents using the Speculation Rules API, rather than the, similar, but older `<link rel="prefetch"...>` option often used for prefetching subresources.
 - **Prerender**: this goes a step beyond prefetching and actually renders the whole page as if the user had navigated to it, but keeps it in a hidden background renderer process ready to be used when the user actually navigates there. Again, this document is concerned with the newer Speculation Rules API version of this, than the older `<link rel="prerender"...>` option, which no longer does a full prerender.
-- **Preloading**: the collective term for the new prefetch and prerender options triggered by speculation rules.
+- **Navigational preloading**: the collective term for the new prefetch and prerender options triggered by speculation rules.
 - **Preload**: an overloaded term that can refer to a number of technologies and processes including `<link rel="preload"...>`, the [Preload Scanner](https://web.dev/preload-scanner/), and [Service Worker navigation preloads](https://web.dev/navigation-preload/). These items will not be covered here, but the term is included to clearly differentiate those from the "preloading" term above.
 
 For more details see [this preloading tech landscape](https://docs.google.com/document/d/1FNLyXW0Q5Fi5-kEOtjfOdmtoDxRtUR_wX4dl5Fz9c7o/edit) document.
@@ -121,15 +121,22 @@ When a navigation happens from a page with speculation rules, that does not resu
 For example, here we navigated to next4.html, but only next.html, next2.html, or next3.html are prefetches so we can see this doesn't quite match any of those three rules.
 
 {% Aside 'warning' %}
-  As this feedback is primarily intended for debugging speculation rules, this URL matching can look a little confusing when navigating to a completely different page that is not included in speculation rules and is expected not to be preloaded:
+  As this feedback is primarily intended for debugging speculation rules, this URL matching can look a little confusing when navigating to a completely different page that is not included in speculation rules and is not expected to be preloaded:
+
   <figure>
     {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/u8qawIQeCNv8KFsoDxaO.png", alt="Chrome DevTools showing an unmatched URL in the This Page Preloading pane", width="800", height="364" %}
   </figure>
+
+  The Chrome team is [continuing to iterate on this feature](https://bugs.chromium.org/p/chromium/issues/detail?id=1473861) to look to improve the user interface in these cases.
 {% endAside %}
 
 The **Preloading** panes are very useful for debugging the speculation rules themselves, and finding any syntax errors in the JSON.
 
 As for the prefetches themselves, the **Network** panel is likely a more familiar place and will get more details. For the prefetch failure example, you can see the 404 for the prefetch in the **Network** panel:
+
+<figure>
+  {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/kHIghY1mr64PNnvowgrR.png", alt="Chrome DevTools Network panel showing a failed prefetch", width="800", height="296" %}
+</figure>
 
 However, the **Preloading** panes become much more useful for prerendering speculation rules, which we'll dive into next.
 
@@ -197,7 +204,7 @@ The above example selects all same origin links (including those with URL params
 
 It also sets the prerender `eagerness` to `moderate` which means the navigations are prerendered when the link is hovered, or clicked.
 
-There are similar rules like this on [develeper.chrome.com](http://develeper.chrome.com) itself, and using the new **Preloading** section on this site shows the usefulness of the **Preloading** section as all the eligible URLs the browser found on the page are listed:
+There are similar rules like this on [developer.chrome.com](/) itself, and using the new **Preloading** section on this site shows the usefulness of the **Preloading** section as all the eligible URLs the browser found on the page are listed:
 
 <figure>
   {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/w9iL4IYKM1gXL1S5lIap.png", alt="Chrome DevTools Preloads pane with a number of Not triggered URLs", width="800", height="528" %}
@@ -260,9 +267,7 @@ Note that speculation rules themselves are not actioned until the prerendered pa
 The render frame drop down is available for all the frames but is less useful for the Performance panel and the Lighthouse panels as any traces in those will still be based on the current page, rather than the hidden background page.
 
 {% Aside 'warning' %}
-
   Cross-renderer performance tracing by clicking on a prerendered link in the middle of a performance trace is not currently supported and will not succeed leaving the trace in a "Loading profile..." state.
-
 {% endAside %}
 
 ### Debugging speculation rules on the prerendered page
@@ -275,12 +280,11 @@ Additionally once a prerendered page is activated, by the user navigating to it,
   {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/qb4W4spJ1k7sahsxU8aH.png", alt="Chrome DevTools Preloading This Page pane showing both a successful and failed prerendered page", width="800", height="472" %}
 </figure>
 
-Additionally, [like for prefetches](#unmatched-preloads), when navigating from a page with speculation rules that did not match the current page, the This Page pane, will attempt to show you why the URLs did not match those covered on the previous page’s speculation rules:
+Additionally, [like for prefetches](#unmatched-preloads), when navigating from a page with speculation rules that did not match the current page, the This Page pane, will attempt to show you why the URLs did not match those covered on the previous page's speculation rules:
 
 <figure>
   {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/ZfJXbAYqt2BMvmDyvlmy.png", alt="Chrome DevTools This Page pane showing the URL mismatch of the current URL and those covered by the previous page", width="800", height="400" %}
 </figure>
-
 
 ## Conclusion
 
