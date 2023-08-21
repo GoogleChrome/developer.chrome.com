@@ -26,35 +26,31 @@ authors:
 This article covers the basics of the Protected Audience API and explains some underlying
 concepts, but doesn't go into much technical detail.
 
-* If you work in **advertising or ad tech**, you'll get an overview of [how the Protected Audience API works](#overview).
-* If you're a **developer or software engineer**, the [Protected Audience API Developer Guide](/docs/privacy-sandbox/fledge-api) provides more in-depth technical detail about the proposal and the [Intent to prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI)
-  offers the latest conversation about Protected Audience API status in the browser.
-* [The Protected Audience API demo](/docs/privacy-sandbox/fledge-api#demo) provides a walkthrough of a basic Protected Audience API deployment.
+* If you work in **advertising or ad tech**, you'll get an overview of
+  [how Protected Audience works](#overview).
+* If you're a **developer or software engineer**, the
+  [Protected Audience API Developer Guide](/docs/privacy-sandbox/fledge-api) provides more
+  in-depth technical detail about the proposal. Read the
+  [latest status of pending Protected Audience capabilities](/docs/privacy-sandbox/fledge-api/feature-status/).
 
-{% Aside %}
-Refer to the [glossary](/docs/privacy-sandbox/glossary/) for terms used across Protected Audience API documentation.
-{% endAside %}
-
-At the end of this article is a link to [engage and share feedback](#engage).
+Refer to the [glossary](/docs/privacy-sandbox/glossary/) for terms used across
+Protected Audience documentation. At the end of this article, you can learn how to
+[engage and share feedback](#engage).
 
 ## What is the Protected Audience API? {: #what}
 
-The Protected Audience API is a [Privacy Sandbox](/docs/privacy-sandbox/overview) proposal to serve
-[remarketing](/docs/privacy-sandbox/glossary/#remarketing) and custom audience
-use cases, designed so third parties cannot track user browsing behavior across sites.
+The Protected Audience API is a [Privacy Sandbox](/docs/privacy-sandbox/overview)
+technology to serve remarketing and custom audience use cases, designed so
+third parties cannot track user browsing behavior across sites.
 
-The API enables on-device auctions by the browser, to choose relevant ads from
+FLEDGE enables on-device auctions by the browser, to choose relevant ads from
 websites the user has previously visited.
 
 The Protected Audience API is the first experiment to be implemented in Chromium within the
 [TURTLEDOVE](https://github.com/WICG/turtledove) family of proposals. The
-[Privacy Sandbox timeline](https://privacysandbox.com/timeline) provides implementation timing
-information for the Protected Audience API and other Privacy Sandbox proposals.
-
-### How does the Protected Audience API differ from Turtledove?
-
-The differences between the Protected Audience API and Turtledove pertain mostly to separation of the on-device role
-of the ad buyer and seller. The sections below explain how the Protected Audience API works.
+difference between Protected Audience and TURTLEDOVE primarily pertain to separation of
+the on-device role of the ad buyer and seller. The sections below explain how
+FLEDGE works.
 
 ### Protected Audience API in one minute {: #overview}
 
@@ -72,19 +68,15 @@ For a more in-depth overview of the Protected Audience API, read the
 The Protected Audience API uses [interest groups](#interest-group-detail) to enable sites to
 display ads that are relevant to their users.
 
-For example, when a user visits a website that wants to advertise its products,
+For example, when a user visits a site that wants to advertise its products,
 an interest group [owner](#interest-group-detail) (such as a
-[demand side platform or DSP](/docs/privacy-sandbox/glossary/#dsp) working for the site) can ask the user's
-browser to add membership for the interest group. The group owner (in this example, the DSP) does
-this by calling the JavaScript function `navigator.joinAdInterestGroup()`. If the call is
-successful, the browser records:
+[demand-side platform (DSP)](/docs/privacy-sandbox/glossary/#dsp)) can ask the user's browser to add membership for the interest group. If the request is successful, the browser records:
 
 * The **name** of the interest group: for example, 'custom-bikes'.
 * The **owner** of the interest group: for example, 'https://dsp.example'.
-* Interest group **configuration information** to enable the browser to access
+* Interest group **configuration information** to allow the browser to access
   bidding code, ad code, and real-time data, if the group's owner is invited to
-  bid in an online ad auction. This information can be updated later by the
-  interest group owner.
+  bid in an ad auction.
 
 {% Aside %}
 
@@ -92,78 +84,74 @@ There are other use cases for interest groups; see the [examples of owners and t
 
 {% endAside %}
 
-Later, when the user visits a site that sells ad space, the ad space seller
-(most likely the site's 
-[SSP](/docs/privacy-sandbox/glossary/#ssp), or the site itself) can use
-the Protected Audience API to run an ad auction to select the most appropriate ads to display to the user. The seller
-calls the `navigator.runAdAuction()` function, which provides a list of interest group owners who are invited to bid.
+Later, when the user visits a site with available ad space, the ad space seller
+(a [sell-side provider (SSP)](/docs/privacy-sandbox/glossary/#ssp), or the site
+itself) can use Protected Audience to run an ad auction to select the most appropriate ads
+to display to the user. The seller calls the `navigator.runAdAuction()`
+function, which provides a list of interest group owners who are invited to bid.
 
-Bidding code is only run for interest groups that the browser is a member of,
-and whose owners have been invited to bid.
+Bids can only be provided by interest groups that the browser is a member of, whose owners have been invited to bid.
 
-Bidding code is retrieved from the URL provided in the configuration
-information for the interest group. This code is passed data about the interest
-group and information from the seller, along with contextual data about the
-page and from the browser.
+Bidding code is retrieved from a URL provided in the interest group's
+configuration. This code provides data about the interest group and
+information from the seller, along with contextual data about the
+page and from the browser. 
 
-Each bidder is also known as a buyer.
+Each interest group providing a bid is known as a buyer.
 
-When the browser calls the function to run the ad auction, each buyer's code generates
-a bid with the help of real-time data provided by their
-[Protected Audience API Key/Value service](#key-value-service-detail). Then, the seller receives these
-bids as well as seller-owned real-time data, and scores each bid. The bid with the
-highest score wins the auction.
+When the browser calls the function to run the ad auction, each buyer's code
+generates a bid with the help of real-time data provided by their
+[Protected Audience Key/Value service](#key-value-service-detail). Then, the seller
+receives these bids as well as seller-owned real-time data and scores each
+bid. The bid with the highest score wins the auction.
 
-The winning ad is displayed in a [fenced frame](/docs/privacy-sandbox/fenced-frame).
+The winning ad is displayed in a
+[fenced frame](/docs/privacy-sandbox/fenced-frame).
 The ad creative's URL is specified in the bid, and the origin must match one in
 the list provided by the interest group's configuration.
 
 The seller can report the auction outcome (`reportResult()`), and buyers can
 report their wins (`reportWin()`).
 
-Learn how to [generate reports of the Protected Audience API auction results](/docs/privacy-sandbox/fledge-api/reports/).
+Learn about [Protected Audience auction reports](/docs/privacy-sandbox/fledge-api/reports/).
 
 ## Why do we need the Protected Audience API? {: #why}
 
-Understanding user interests can enable more relevant ads than simply choosing
-ads based on site content (contextual targeting) or by using information that
-the user provided to the site on which the ad appears (first-party data targeting).
+Understanding user interests can enable more relevant ads than just choosing
+ads based on site content (contextual targeting) or by using information
+provided by a user to the site on which the ad appears (first-party data targeting).
 
 Traditionally, ad platforms have learned about user interests by tracking their
 behavior across sites. Browsers need a way to enable ad platforms to select
 relevant ads, so content publishers can get ad revenue without cross-site
 tracking.
 
-The Protected Audience API experiment aims to move the web platform closer to a state where the
-user's browser, on their device, not the advertiser or ad tech platforms, holds
+The Protected Audience API aims to move the web platform closer to a state where the
+user's browser on their device—not the advertiser or ad tech platforms—holds
 information about what that person is interested in.
 
-{% Aside 'warning' %}
+{% Aside 'caution' %}
 
-Not all features described here have been implemented (in part or in full) in
-the version of the Protected Audience API currently being tested in Chrome. The
-[Protected Audience API developer guide](/docs/privacy-sandbox/fledge-api#try-fledge) explains which Protected Audience API
-features are currently available for testing in Chrome run from the command line
-using [feature flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags).
+Read the [developer guide](/docs/privacy-sandbox/fledge-api/) and
+[status of pending Protected Audience capabilities](/docs/privacy-sandbox/fledge-api/feature-status/)
+to understand what features are currently available for testing in Chrome.
 
-Features of the Protected Audience API will be added over time. While the [origin trial](/docs/privacy-sandbox/unified-origin-trial/)
-is active, we'll regularly update a list of which features are already
-implemented and what's still in progress.
+Protected Audience features will be added over time, and we'll regularly update a list of
+which features are already implemented and what's still in progress. The Protected Audience API is
+currently in an [origin trial](/docs/privacy-sandbox/unified-origin-trial/).
 
 {% endAside %}
 
 ## How can I try the Protected Audience API? {: #try-fledge}
 
-* The [Protected Audience API developer guide](/docs/privacy-sandbox/fledge-api#try-fledge) describes how to
-  take part in the Privacy Sandbox Relevance and Measurement origin trial and
-  how to try out the Protected Audience API for a single user by setting Chrome flags.
+* The [Protected Audience API developer guide](/docs/privacy-sandbox/fledge-api) describes
+  how to use the API, how to test locally and how to participate in the
+  [relevence and measurement origin trial](/docs/privacy-sandbox/unified-origin-trial/).
 
 * [fledge-demo.glitch.me](https://fledge-demo.glitch.me/) provides a
-  walkthrough of a basic Protected Audience API deployment across advertiser and publisher
-  sites.
-   * [Watch the Protected Audience API demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv)
-     to understand how the demo code works. The video also previews how to use
-     Chrome DevTools for Protected Audience API debugging.
+  walkthrough of a basic Protected Audience deployment across advertiser and publisher
+  sites. The Protected Audience demo video explains how this code works and previews
+  how to use Chrome DevTools for debugging.
 
 {% YouTube
   id='znDD0gkdJyM'
@@ -181,9 +169,9 @@ they've been added to across the sites they've visited. As with the Privacy
 Sandbox technologies, user settings may evolve with feedback from users,
 regulators, and others.
 
-We'll update the available settings in Chrome as the Protected Audience API proposal
-progresses, [based on tests and feedback](/docs/privacy-sandbox/proposal-lifecycle/#testing).
-In the future, we'll offer more granular settings to manage the Protected Audience API and
+We'll update the available settings in Chrome as the Protected Audience API progresses,
+[based on tests and feedback](/docs/privacy-sandbox/proposal-lifecycle/#testing).
+In the future, we'll offer more granular settings to manage Protected Audience and
 associated data.
 
 API callers can't access group membership when users browse in Incognito mode,
@@ -196,21 +184,10 @@ and membership is removed when users clear their site data.
 Learn how you can [block access to the Protected Audience API](/docs/privacy-sandbox/fledge-api/opt-out),
 either as a site owner or as an individual user.
 
-### Can users block an ad shown as the result of a Protected Audience API auction? {: #ad-block }
-
-Users can [opt out of the Privacy Sandbox API](/docs/privacy-sandbox/fledge-api/opt-out/#opt-out-user).
-To opt out of a specific ad or ad selection technique, the appropriate party to
-provide those controls is the ad tech serving the ad.
-
-Developers can use multiple approaches to control which ads are eligible for
-bidding and serving and record a user's ad preferences. One
-technique is to call `leaveAdInterestGroup()` when a user asks to block a specific ad, for the winning interest group that provided the ad. This removes the user's browser from membership in the interest group and makes the group ineligible to bid in the future.
-
 ## Key concepts
 
-{: #glossary}
-
-Looking for more information on Protected Audience API terminology? Refer to the [Privacy Sandbox glossary](/docs/privacy-sandbox/glossary/).
+Looking for more information on Protected Audience terminology? Refer to the
+[Privacy Sandbox glossary](/docs/privacy-sandbox/glossary/).
 
 {: #interest-group-detail}
 
@@ -220,16 +197,17 @@ Looking for more information on Protected Audience API terminology? Refer to the
 ### What is an interest group?
 {% endDetailsSummary %}
 
-A Protected Audience API interest group represents a group of people with a common interest, corresponding to a
-[remarketing](/docs/privacy-sandbox/glossary/#remarketing) list.
+A Protected Audience API interest group represents a group of people with a common interest,
+corresponding to a [remarketing](/docs/privacy-sandbox/glossary/#remarketing) list.
 
-Every Protected Audience API interest group has an owner. Different types of owners will create different types of
-interest groups with different use cases.
+Every Protected Audience API interest group has an owner. Different types of owners will create
+different types of interest groups with different use cases.
 
-The owner asks the user's browser to add membership of their interest group by calling the
-JavaScript function `navigator.joinAdInterestGroup()`, providing information such as data about ads
-relevant to the interest group, and a URL for JavaScript used in bidding. Interest group data
-(such as the ads) can be updated, and an interest group can be enabled for up to 30 days.
+The owner asks the user's browser to add membership of their interest group by
+calling the JavaScript function `navigator.joinAdInterestGroup()`, providing
+information such as data about ads relevant to the interest group, and a URL
+for JavaScript used in bidding. Interest group data (such as the ads) can be
+updated, and an interest group can be enabled for up to 30 days.
 
 {% Aside %}
 
@@ -269,18 +247,23 @@ The table below provides examples of different types of Protected Audience API i
         <td style="vertical-align: top;">News website</td>
         <td style="vertical-align: top;">Content</td>
         <td style="vertical-align: top;">People who read about cycling.</td>
-        <td style="vertical-align: top;">Publishers can use first-party data to enable advertisers
-          to buy ads that are relevant to readers on their site. A publisher-owned interest group
-          could let publishers do the same even when those people are browsing other sites.
-          Publishers may be able to charge for the ability to show ads to specific segments of their
+        <td style="vertical-align: top;">
+          Publishers can use first-party data to enable advertisers
+          to buy ads that are relevant to readers on their site. A
+          publisher-owned interest group could let publishers do the same even
+          when those people are browsing other sites. Publishers may be able to
+          charge for the ability to show ads to specific segments of their
           audience.</td>
       </tr>
       <tr>
         <td style="vertical-align: top;">Ad tech</td>
         <td style="vertical-align: top;">DSP</td>
         <td style="vertical-align: top;">Category of products</td>
-        <td style="vertical-align: top;">People who showed an interest in cycling gear.</td>
-        <td style="vertical-align: top;">An ad tech company might create and manage an interest group
+        <td style="vertical-align: top;">
+          People who showed an interest in cycling gear.
+        </td>
+        <td style="vertical-align: top;">
+          An ad tech company might create and manage an interest group
           of people they believe are in the market for some category of item. This interest group
           could then be used to advertise products on sites that sell things in that category (and
           who work with the ad tech company).</td>
@@ -311,7 +294,7 @@ In the Protected Audience API, a buyer is a party that owns an [interest group](
 For example:
 
 * **[Advertiser](/docs/privacy-sandbox/glossary/#advertiser)**: acting for itself.
-* **[Demand-Side Platform](/docs/privacy-sandbox/glossary/#dsp)** (DSP): acting for advertisers.
+* **[Demand-side platform](/docs/privacy-sandbox/glossary/#dsp)** (DSP): acting for advertisers.
 * **Interest group owner**: working for multiple advertisers.
 
 Buyers have three jobs:
@@ -402,7 +385,7 @@ The seller provides the browser with code to score bids, which includes each bid
 code from buyers and bid-scoring code from the seller can receive data from their
 [Key/Value services](#key-value-service-detail). Once an ad is chosen and
 displayed (in a [fenced frame](/docs/privacy-sandbox/fenced-frame/) to preserve
-privacy), the seller and the winning bidder can report the auction result.
+privacy) the seller and the winning buyer can report the auction result.
 
 1. A user visits a site which displays ads.
 2. The seller's code starts an auction. The seller specifies which ad space is
@@ -459,8 +442,8 @@ and the [trust model explainer](https://github.com/privacysandbox/fledge-docs/bl
 ### How is real-time data incorporated into auctions?
 {% endDetailsSummary %}
 
-The [buyers](#buyer-detail) or [seller](#seller-detail) in an ad auction may need access to real-time
-data. For example, bidders may want to calculate the remaining budget in an ad campaign, or the
+The [buyers](#buyer-detail) or [seller](#seller-detail) in an ad auction may need access to realtime
+data. For example, buyers may want to calculate the remaining budget in an ad campaign, or the
 seller may be required to check ad creatives against publisher policies.
 
 To meet the privacy requirements of the Protected Audience API, real-time data required during an ad auction is provided by the [Key/Value service](#key-value-service-detail). When each buyer calls `navigator.joinAdInterestGroup()`, the buyer specifies a Key/Value service URL and specifies the keys to be queried to the service during an auction. Likewise, when the seller runs an ad auction by calling `navigator.runAdAuction()`, the seller provides a URL for its Key/Value service. The seller's Key/Value service will be queried with the render URL of the creative.

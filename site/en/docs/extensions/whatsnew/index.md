@@ -37,7 +37,7 @@ Injected content scripts are now in the DevTools ignore list by default. This do
 
 <p class="color-secondary-text type--caption">Posted on <time>July 21, 2023</time></p>
 
-Chrome 116 is a big release for extensions. You can now open side panels programmatically. A new method lets you learn if there's an active offscreen document. Service workers got serveral improvements. There's enough improvements in 116 that we've written [a blog post to cover them](/blog/chrome-116-beta-whats-new-for-extensions/#runtime-get-contexts). Chrome 116 is in beta as of July 19.
+Chrome 116 is a big release for extensions. You can now open side panels programmatically. A new method lets you learn if there's an active offscreen document. Service workers got serveral improvements. There's enough improvements in 116 that we've written [a blog post to cover them](/blog/chrome-116-beta-whats-new-for-extensions/). Chrome 116 is in beta as of July 19.
 
 ### Blog post: What's happening in Chrome Extensions {: #whats-happening-7-23 }
 

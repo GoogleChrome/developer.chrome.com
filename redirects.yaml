@@ -568,12 +568,15 @@ redirects:
 
 - from: /blog/inside-oct-2022/...
   to: /blog/insider-oct-2022/...
-  
+
 - from: /blog/inp-in-frameworks/...
   to: /articles/inp-in-frameworks/...
 
 - from: /blog/webdriver-bidi/
   to: /articles/webdriver-bidi/
+
+- from: /blog/page-lifecycle-api/
+  to: /articles/page-lifecycle-api/
 
 # Redirecting the intersection observer post from d.c.c. to web.dev
 - from: /intersectionobserver/
@@ -751,7 +754,7 @@ redirects:
 
 - from: /docs/extensions/reference/declarativeNetRequest/#limits-global-static-rule-limit
   to:  /docs/extensions/reference/declarativeNetRequest/#static-rules
-  
+
 # DO NOT REMOVE. This seems pointless but we rewrite "." to "_" inside our server's code, so if the
 # URL is fine for all but incorrect syntax, we'll fix it up.
 - from: /...
