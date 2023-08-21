@@ -162,7 +162,7 @@ Chromium issues: [1458839](https://crbug.com/1458839), [1462693](https://crbug.c
 
 ## Debug preloading in the Application panel {: #preloading }
 
-The Chrome team is [bringing back full prerendering](/blog/prerender-pages/) of future pages that a user is likely to navigate to. To let you debug this, DevTools adds the **Preloading** section to the **Application** panel. The new prefetching and prerendering (collectively known as "Navigational preloading") uses the Speculation Rules API rather than to the [link-based resource hints](/blog/prerender-pages/#a-brief-history-of-prerender).
+The Chrome team is [bringing back full prerendering](/blog/prerender-pages/) of future pages that a user is likely to navigate to. To let you debug this, DevTools adds the **Preloading** section to the **Application** panel. The new prefetching and prerendering (collectively known as "navigational preloading") uses the Speculation Rules API rather than to the [link-based resource hints](/blog/prerender-pages/#a-brief-history-of-prerender).
 
 On [this demo page](https://prerender-demos.glitch.me/), in the **Application** > **Preloading** section, you can inspect:
 

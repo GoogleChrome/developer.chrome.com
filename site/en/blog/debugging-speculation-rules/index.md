@@ -27,7 +27,7 @@ The Chrome team has been working hard on enhancing DevTools support for speculat
 There's a lot of "pre-" terms that are easily confused, so let's start with an explanation of these:
 
 - **Prefetch**: fetching a resource or document in advance to improve performance for when that is needed. In this post we'll be talking about prefetching documents using the Speculation Rules API, rather than the, similar, but older `<link rel="prefetch"...>` option often used for prefetching subresources.
-- **Prerender**: this goes a step beyond prefetching and actually renders the whole page as if the user had navigated to it, but keeps it in a hidden background renderer process ready to be used when the user actually navigates there. Again, this document is concerned with the newer Speculation Rules API version of this, than the older `<link rel="prerender"...>` option, which no longer does a full prerender.
+- **Prerender**: this goes a step beyond prefetching and actually renders the whole page as if the user had navigated to it, but keeps it in a hidden background renderer process ready to be used when the user actually navigates there. Again, this document is concerned with the newer Speculation Rules API version of this, than the older `<link rel="prerender"...>` option, which [no longer does a full prerender](/blog/nostate-prefetch/).
 - **Navigational preloading**: the collective term for the new prefetch and prerender options triggered by speculation rules.
 - **Preload**: an overloaded term that can refer to a number of technologies and processes including `<link rel="preload"...>`, the [Preload Scanner](https://web.dev/preload-scanner/), and [Service Worker navigation preloads](https://web.dev/navigation-preload/). These items will not be covered here, but the term is included to clearly differentiate those from the "navigational preloading" term above.
 
@@ -58,7 +58,7 @@ Speculation rules are used for navigation prefetches and have some advantages ov
 
 ### Debugging `prefetch` speculation rules
 
-Prefetches triggered by speculation rules can be seen in the network tab in the same way as other fetches:
+Prefetches triggered by speculation rules can be seen in the **Network** panel in the same way as other fetches:
 
 <figure>
   {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/k0SqZ4VcyVAnUq4y5lvC.png", alt="Network panel in Chrome DevTools showing prefetched documents", width="800", height="571" %}
@@ -159,7 +159,7 @@ Prerender speculation rules, follow the same syntax as prefetch speculation rule
 
 These trigger a full load and render of the page (subject to certain restrictions), which can provide an instant loading experience, but with extra resource costs.
 
-Unlike prefetches however, these are not available to be seen in the network tab as these are fetched and rendered in a separate rendering process in Chrome. This makes the **Preloading** panes more important to debug prerender speculation rules.
+Unlike prefetches however, these are not available to be seen in the **Network** panel as these are fetched and rendered in a separate rendering process in Chrome. This makes the **Preloading** panes more important to debug prerender speculation rules.
 
 ### Debugging `prerender` with the Preloading panes
 
