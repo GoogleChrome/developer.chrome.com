@@ -286,7 +286,7 @@ observer.observe({ type: 'long-animation-frame', buffered: true });
 
 As an extension of the above, the LoAF frame(s) corresponding to the INP entry could be used as attribution data to give further details on how to improve INP.
 
-There is currently no direct API to link an INP entry with its related LoAF entry, though it is possible to do so in code by comparing the start and end times of each (see [this example script](https://gist.github.com/noamr/316bd48157ab35e4f632a8c2583281b7)).
+There is [currently no direct API to link an INP entry with its related LoAF entry or entries](https://github.com/w3c/longtasks/issues/115), though it is possible to do so in code by comparing the start and end times of each (see [this example script](https://gist.github.com/noamr/316bd48157ab35e4f632a8c2583281b7)).
 
 ### Reporting longest animation frames with interactions
 
