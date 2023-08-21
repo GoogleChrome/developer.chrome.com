@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-08-09
+updated: 2023-08-22
 tags:
   - extensions-news
 
@@ -14,6 +14,12 @@ tags:
 <!--lint disable first-heading-level-->
 
 Check this page often to learn about changes to Chrome extensions, extensions documentation, or related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about some of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).) The [Chrome schedule](https://chromiumdash.appspot.com/schedule) lists stable and beta release dates.
+
+### Chrome 117: Expanded kill-URL protections on extension API navigations {: #expanded-kill-url }
+
+<p class="color-secondary-text type--caption">Posted on <time>August 22, 2023</time></p>
+
+Previously navigation triggered from extension API calls for [`tabs.update()`](/docs/extensions/reference/tabs/#method-update), [`tabs.create()`](/docs/extensions/reference/tabs/#method-create), and [`windows.create()`](/docs/extensions/reference/windows/#method-create) emitted an error for some chrome:// URLs causing the browser to hang, or crash. Additionally, `tabs.update()` did not block JavaScript URLs. In 117, many errors caused by chrome:// URLs are eliminated and `tabs.update()` now blocks JavaScript URLs.
 
 ### Improved guidance for the declarativeNetRequest API {: #new-dnr-guidance }
 
