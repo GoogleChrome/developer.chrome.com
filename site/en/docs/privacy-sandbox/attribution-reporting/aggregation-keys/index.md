@@ -2,47 +2,15 @@
 layout: 'layouts/doc-post.njk'
 title: 'All about aggregation keys'
 subhead: >
-  What aggregation keys are and how they're used.
+  What aggregation keys are, how they're used, and how you can translate goals into keys.
 description: >
-  What aggregation keys are and how they're used.
+  What aggregation keys are, how they're used, and how you can translate goals into keys.
 date: 2022-12-15
 updated: 2023-08-25
 authors:
   - maudn
 ---
 
-
-Output
-![image](insert_image_url_here)
-
-## How does using summary reports differ from using cookie-based measurement techniques?
-
-The Attribution Reporting API differs from cookie-based measurement techniques in [several ways](https://docs.google.com/document/d/1lvrKd5Vv7SYLMGZb0Fz7bpGNEl0LOx9i1waAHw2sUg8/edit#heading=h.ktl1cq7bdlk). This will impact your approach to measurement for all types of reports (event-level reports and aggregatable/summary reports). 
-
-Additionally, aggregatable/summary reports have a few specificities that have two concrete implications for you:
-
--   Define metrics up front
--   Account for noise
-
-### Define metrics up front
-
-With today's cookie-based measurement systems, ad view or click and conversion data are captured in real time, stored at a user level, and merged and analyzed later. Metrics can be defined after data has been collected.
-
-With the Attribution Reporting API's aggregatable/summary reports, in order to preserve user privacy, not every single data point of an ad engagement and subsequent conversion can be measured. Therefore, the API user—typically, an adtech company—must define up-front before ad-serving time what information to measure.
-
-### Account for noise
-
-Noise added to metrics can impact the accuracy of your measurement data in minimal or significant ways, and should be taken into account as you prepare to use the API.
-
-See details in [Understand noise](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.kj4nmyyptm5).
-
-## Essential notions
-
-Now that we've introduced summary reports and how they compare to cookie-based techniques, we can dive into the specifics—but before we do so, you need to become familiar with a few essential notions for this API.
-
-### Context
-
-To introduce these essential notions, we'll use the following example:
 
 As an adtech company running campaigns in multiple locations for various product categories, you're looking to help advertisers answer the following questions:
 
@@ -53,11 +21,13 @@ While many adtech companies encourage advertisers to configure a variety of conv
 
 You will need to think of what questions you are looking to answer before data is collected.
 
-### Dimensions, keys and values
+## Dimensions, keys, and values
 
-#### Dimensions
+To answer these questions, let's take a look at dimensions, keys, and values.
 
-To answer the questions outlined above, you want to track the following dimensions:
+### Dimensions
+
+You'll want to track the following dimensions:
 
 -   Ad campaign ID
 -   Geography ID: the geographic region where the ad was served
@@ -73,10 +43,12 @@ For this example and in the rest of this document, we'll display dimensions as f
 With this, the dimensions you want to track for this example look as follows:
 {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/7H0FNCjZM9zr3VE48Q2G.png", alt="ALT_TEXT_HERE", width="498", height="55" %}
 
-#### Aggregation keys (buckets): definition
+### Aggregation keys (buckets): definition
 
-Aggregation key and bucket refer to the same thing.<br>
-The term _aggregation key_ is used in the browser APIs used to configure reports.<br>
+Aggregation key and bucket refer to the same thing.
+
+The term _aggregation key_ is used in the browser APIs used to configure reports.
+
 The term _bucket_ is used in the aggregatable and summary reports, and in the aggregation service APIs.
 
 An aggregation key (key for short) is a piece of data that represents the values of the dimensions being tracked. Data is later aggregated along each aggregation key.
@@ -89,7 +61,7 @@ When a user located in Geography ID 7 sees an ad for Campaign ID 12, and later c
 
 You'll see later that an aggregation key does not look exactly like this in practice, but for now let's focus on the information contained in the key.
 
-#### Aggregatable values: definition
+### Aggregatable values: definition
 
 To answer your questions with the dimensions we've outlined, you want to know, across many users and many keys:
 
@@ -130,9 +102,9 @@ Aggregatable values are summed to generate aggregated insights for your measurem
 
 *This diagram omits decryption and represents a simplified example without noise applied. In the next section, we will outline this example with noise.
 
-### From {aggregation key, aggregatable value} pairs to reports
+## From {aggregation key, aggregatable value} pairs to reports
 
-#### Aggregatable reports
+### Aggregatable reports
 
 When a user clicks or views an ad and later converts, you instruct the browser to store an {aggregation key, aggregatable value} pair.
 
@@ -147,7 +119,7 @@ In our example, when a user clicks or views an ad and later converts, you would 
 
 You'll see later in this document that an {aggregation key, aggregatable value} aggregatable report does not look exactly like this—but for now let's focus on the information contained in the report.
 
-When you instruct the browser to generate two contributions, the browser generates an aggregatable report (if it can [match](https://docs.google.com/document/d/1lvrKd5Vv7SYLMGZb0Fz7bpGNEl0LOx9i1waAHw2sUg8/edit#heading=h.z3eyiewn6zcw) the conversion with a previous view or click).
+When you instruct the browser to generate two contributions, the browser generates an aggregatable report (if it can [match](/docs/privacy-sandbox/attribution-reporting/system-overview/#match-sources-to-triggers) the conversion with a previous view or click).
 
 An aggregatable report contains:
 
@@ -187,7 +159,7 @@ Example:
 
 In practice, aggregatable reports are encoded in a way that will make buckets and values look different than stated above (that is, a bucket may look like `\u0000\u0000\x80\u0000`). <em>Bucket</em> and <em>value</em> are both bytestrings.
 
-#### Summary reports
+### Summary reports
 
 Aggregatable reports are aggregated across many browsers/devices (users) as follows:
 
@@ -209,15 +181,15 @@ Example:
 
 ```json
 [
-{"bucket": "111001001", "value": "2558500"}, 
-{"bucket": "111101001", "value": "3256211"}, 
-{...}
+  {"bucket": "111001001", "value": "2558500"}, 
+  {"bucket": "111101001", "value": "3256211"}, 
+  {...}
 ]
 ```
 
 In practice, summary reports are encoded in a way that will make buckets and values look different than stated above (that is, a bucket may look like `\u0000\u0000\x80\u0000`). <em>Bucket</em> and <em>value</em> are both bytestrings. 
 
-### Aggregation keys in practice
+## Aggregation keys in practice
 
 Aggregation keys are defined by an adtech company, typically in two steps: when an ad is clicked or viewed, and when a user converts.
 
@@ -225,7 +197,7 @@ Aggregation keys are defined by an adtech company, typically in two steps: when 
 Bucket and aggregation key refer to the same thing.
 {% endAside %}
 
-#### Key structure {: #key-structure}
+### Key structure {: #key-structure}
 
 We'll use the term key structure to designate the set of dimensions encoded into a key.
 
@@ -235,7 +207,7 @@ Campaign ID x GeoID x Product category is a key structure.
 
 {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/6xi8Qd9BrECKS4eGBTxI.png", alt="Key structure.", width="539", height="57" %}
 
-#### Key types
+### Key types
 
 Aggregatable values are summed for a given key across multiple users/browsers.
 
@@ -243,7 +215,7 @@ But we've seen that aggregatable values can track different measurement goals, s
 
 You want to ensure that the aggregation service will sum aggregatable values of the same type.
 
-To do so, within each key, encode a piece of data that tells you what the summary value represents— the measurement goal this key is referring to.
+To do so, within each key, encode a piece of data that tells you what the summary value represents—the measurement goal this key is referring to.
 
 One way to do that is  to create an additional dimension for your key that represents the measurement goal type.
 
@@ -258,7 +230,7 @@ If you had _n_ measurement goals, the measurement goal type would have _n_ diffe
 
 With this, you can think of a key's dimensions as a metric. For example, "the number of **purchases** of a certain product per campaign per geography".
 
-#### Key size, dimension size
+### Key size, dimension size
 
 The maximum key size is defined in bits—the number of zeros and ones in binary to create the full key. The API allows for a key length of **128 bits**. 
 
@@ -276,27 +248,23 @@ A Country dimension may have a cardinality of 200, as there are about 200 countr
 
 8 bits would store **28** =256 distinct options > 200. This is enough, so you can pick n=8 bits to encode this dimension.
 
-#### Key encoding
+### Key encoding
 
 When you set keys in the browser, they should be encoded in hexadecimal. 
 
 In summary reports, keys will appear in binary (and be named buckets).
 
-<table class="with-heading-tint">
-  <thead>
-    <tr>
-      <th>Hexadecimal data is typically prefixed with 0x ("x" for hexadecimal).<br>
-Example: 0x19 means "19 in hexadecimal", that is 25 in decimal (not 19).<br>
-<br>
-Binary numbers are typically prefixed with 0b ("b" for binary), to differentiate them from decimal numbers.<br>
-Example: 0b11001 means "11001 in binary", that is 25 in decimal (not 11,001).</th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
+{% Aside %}
+Hexadecimal data is typically prefixed with 0x ("x" for hexadecimal).
 
-#### Set two keys pieces for a full key 
+For example: 0x19 is 19 in hexadecimal; that's 25 in decimal, not 19.
+
+Binary numbers are typically prefixed with 0b ("b" for binary), to differentiate them from decimal numbers.
+
+For example: 0b11001 is 11001 in binary; that's 25 in decimal, not 11,001.
+{% endAside %}
+
+### Set two keys pieces for a full key {: #full-key}
 
 Let's assume you use a key to track the following dimensions:
 
@@ -304,7 +272,7 @@ Let's assume you use a key to track the following dimensions:
 -   Geography ID
 -   Product category
 
-While the Campaign ID and the Geography ID dimensions are known when the ad is served—at ad-serving time—, the product category will be known from a trigger event, when the user completes a conversion—at conversion time. 
+While the Campaign ID and the Geography ID dimensions are known when the ad is served—at ad-serving time—the product category will be known from a trigger event, when the user completes a conversion—at conversion time. 
 
 In practice, this means you will set a key in two steps:
 
@@ -323,7 +291,7 @@ Example:
 -   Trigger-side key piece = `0x400`
 -   Key = `0x159` | `0x400` = `0x559`
 
-#### Aligning key pieces
+### Aligning key pieces
 
 With two 64-bit key pieces extended to 128 bits using carefully placed 64-bits fillers/offsets (the sixteen zeros), XOR-ing key pieces is equivalent to concatenating them, which is easier to reason with and verify:
 
@@ -333,7 +301,7 @@ With two 64-bit key pieces extended to 128 bits using carefully placed 64-bits f
     -   0xa7e297e7c8c8d0540000000000000000 | 0x0000000000000000674fbe308a597271 =
     -   0xa7e297e7c8c8d054674fbe308a597271
 
-#### Multiple keys per ad click or view
+### Multiple keys per ad click or view
 
 In practice, you may set multiple keys per attribution source event (ad click or view). 
 
@@ -342,9 +310,9 @@ For example, you may set:
 -   A key that tracks Geography ID x Campaign ID.
 -   Another key that tracks Creative Type x Campaign ID.
 
-Take a look at [Strategy B](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.ks4scs8lgie2) for another example.
+Take a look at [Strategy B](#strategy-b) for another example.
 
-#### Encoding dimensions into keys
+### Encoding dimensions into keys
 
 When requesting summary reports, you need to tell the aggregation service what metrics you want to access, by requesting summary reports for a certain set of aggregation keys.
 
@@ -355,7 +323,7 @@ This means that:
 -   When setting keys as the user views/clicks an ad and later converts, you need to reliably set keys based on the values of the dimensions they represent.
 -   When defining the keys you want to request summary reports for, you need to reliably generate or access on the fly the same keys as the keys set when the user viewed/clicked an ad and converted, based on the values of the dimensions you want to see aggregated data for.
 
-#### Encoding dimensions into keys, approach 1: key structure maps
+### Encoding dimensions into keys, approach 1: key structure maps
 
 To encode dimensions into keys, you can create and maintain a key structure map ahead of time, upon defining your keys (before ad-serving time). 
 
@@ -471,7 +439,7 @@ Product category = 25
 
 So the key 0b1100100111100 represents the number of purchases of Product category 25, for the Campaign ID 12 launched in Europe.
 
-#### Encoding dimensions into keys, approach 2: hash function {: #encoding}
+### Encoding dimensions into keys, approach 2: hash function {: #encoding-2}
 
 With this technique, you rely on a hashing function to dynamically generate keys in a consistent and reliable way.
 
@@ -532,66 +500,61 @@ Just like the browser, XOR these key pieces to generate the same key the browser
 
 A few practical tips if you're using this hash-based approach:
 
--   **Ensure you're always using the same ordering of the dimensions**. This ensures that your hashes can be reliably regenerated. ("COUNT, CampaignID=12, GeoID=7" will not generate the same hash as "COUNT, GeoID=7, CampaignID=12"). One straightforward way to achieve this is to sort dimensions alphanumerically. This is what we'll be doing in the [example](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.i6ovl4dm1npa), except for the fact that we'll always make COUNT or VALUE the first item in the dimension—this is a choice for readability, as COUNT or VALUE encodes information that's slightly different conceptually than all other dimensions.
+-   **Ensure you're always using the same ordering of the dimensions**. This ensures that your hashes can be reliably regenerated. ("COUNT, CampaignID=12, GeoID=7" will not generate the same hash as "COUNT, GeoID=7, CampaignID=12"). One straightforward way to achieve this is to sort dimensions alphanumerically. This is what we'll be doing in the [example](#main-example), except for the fact that we'll always make COUNT or VALUE the first item in the dimension—this is a choice for readability, as COUNT or VALUE encodes information that's slightly different conceptually than all other dimensions.
 -   Keep track of the set of dimensions you're using in keys. You want to avoid generating keys based on a set of dimensions that you've never used.
 -   Hash collisions are rare if a suitable hash function is used, but checking against previously used hashes (which should be stored to interpret the results from the aggregation service) can avoid introducing new keys that collide with older keys.
 
-See how to use hash-based keys in practice in the [example](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.i6ovl4dm1npa).
+See how to use hash-based keys in practice in the [example](#main-example).
 
-### Aggregatable values in practice
+## Aggregatable values in practice
 
 The adtech company sets aggregatable values when a user converts.
 
-#### Contribution budget
+### Contribution budget
 
-To protect user privacy, individual users' contributions must have an upper limit.
+To protect user privacy, contributions from each user has an upper limit. 
 
-In practice, this works as follows: across all aggregatable values associated with a single source (ad click or view), no value can be higher than a certain contribution budget. 
+Across all aggregatable values associated with a single source (ad click or view), no value can be higher than a certain contribution limit. 
 
-We'll refer to it as `CONTRIBUTION_BUDGET`.
+We'll refer to it as `CONTRIBUTION_BUDGET`. In the <a href="https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md">explainer</a>, this is referred to as the <em>L1 budget</em>. L1 budget is the same as `CONTRIBUTION_BUDGET`.
 
-<table class="with-heading-tint">
-  <thead>
-    <tr>
-      <th>In the <a href="https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md">explainer</a>, this is referred to as the <em>L1 budget</em>.<br>
-L1 budget = <code>CONTRIBUTION_BUDGET</code>.</th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
+For an in-depth discussion of the contribution budget, refer to [Contribution budget for summary reports](/docs/privacy-sandbox/attribution-reporting/contribution-budget/).
 
-For the current origin trial (started in Chrome 101), `CONTRIBUTION_BUDGET` = 216 = 65,536.
+## Example: one conversion per click/view {: #main-example}
 
-The value of the contribution budget is arbitrary. What's important is that **you can**  use this budget to maximize signal-to-noise ratio on the summary values**.
+For this example, let's assume that you're looking to answer the following questions:
 
-The contribution budget applies across all metrics on a single source event (ad click or view event). The sum of all aggregatable values associated with the conversion(s) attributed to a given ad click or view (source) should be under the budget.
+- Which product categories are the most valuable in each region?
+- Which campaign strategies are the most effective in each region?   
 
-The contribution budget is a hard cap. Once the contribution budget is reached, no additional values are recorded.
+Let's also assume that for your use case, you need weekly insights.
 
-This has a few practical implications, for example:
+You also need to track the following:
 
--   For the same ad click or view (source), the sum of all aggregatable values across all conversions should be at most 65,536 (`CONTRIBUTION_BUDGET`). If, for a given ad click or view, all the contribution budget is spent on the first five conversions, and a sixth conversion happens, that one won't generate a report.
--   For a single conversion event (trigger), the adtech company can register an aggregatable value of at most 65,536 (`CONTRIBUTION_BUDGET`). If the aggregatable value for that single conversion exceeds this budget, the aggregatable report is not created.
--   For a single conversion event (trigger), the adtech company can register multiple aggregatable values, and their sum should be at most 65,536 (`CONTRIBUTION_BUDGET`). If the sum of all aggregatable values for that single conversion exceeds this budget, the aggregatable report is not created.
+- 16 different campaigns.
+- 8 different geographic regions: North America, Central America, South America, Europe, Africa, Asia, Caribbean, and Oceania.
+- 29 different product categories.
 
-#### Practical implications of the contribution budget
+### What to measure
 
-This has a few practical implications:
+While many adtech companies encourage advertisers to configure a variety of conversion types, focusing on the most important conversions such as purchases is a good way to ensure that aggregate results are detailed and accurate for these important events. 
+Indeed, the more metrics you measure, the smaller your contribution budget per metric gets, and hence the more noisy each value is likely to be. Therefore, you need to carefully select what to measure.
 
-- **Ensure your values are strictly within the contribution budget to not lose any information**, since the budget is a hard cap.
-- **Allocate the contribution budget across metrics**. Because the budget is common to all metrics for a given source, if more than one metric is tracked, you should share the budget across these metrics.
+In this example, we'll focus on campaign setups that measure only one conversion per click or view: a purchase. 
 
+You will still measure both the purchase count and the purchase value, and access a variety of important aggregate statistics such as total purchase value and geographic breakdowns.
+This keeps noise reasonable and ensures a simple scaling approach for your contribution budget.
 
-Example: If you're tracking two metrics—for example, the purchase value and the purchase count—you would split the contribution budget across these two metrics. More details in the [example](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.i6ovl4dm1npa).
+### What about currencies?
 
-- **Adjust aggregatable values to minimize the impact of noise.** Because the contribution budget impacts noise, adjusting the aggregatable values to this budget will allow you to improve signal-to-noise ratio. Read the details in [Scale up to contribution budget](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.683u7t2q1xk2).
+Running campaigns in different regions implies that currencies should be taken into account. 
+You could:
 
+- Make currency a dedicated dimension in the aggregation keys
+- Or infer the currency from a campaign ID, and convert all currencies to a reference currencies. 
 
-
-
-
-
+In this example, we'll assume that you can infer the currency from a campaign ID. This allows you to convert any given purchase value from the user's local currency to a reference currency of your choice. You can also perform that conversion on the fly, when the user purchases an item. 
+With this technique, all aggregatable values are in the same reference currency, and can therefore be summed to generate a total aggregated purchase value—a summary purchase value.
 
 ### Translate goals into keys
 
@@ -601,7 +564,7 @@ key strategy. Let's focus on two of these strategies:
 -   Strategy A: one granular key structure
 -   Strategy B: two coarse key structures
 
-#### Strategy A: one deep tree (one granular key structure)
+#### Strategy A: one deep tree (one granular key structure) {: #strategy-a}
 
 In strategy A, you use one granular key structure, that includes all the
 dimensions you need:
@@ -640,9 +603,9 @@ With strategy A, you would answer your questions as follows:
   </thead>
   <tbody>
     <tr>
-      <td><ol>
-<li>Which product categories are the most valuable in each region?</li>
-</ol>
+      <td>
+Which product categories are the most valuable in each region?
+
 </td>
       <td>Sum the summary purchase counts and values that are in the summary
 reports, across all campaigns.<br>
@@ -652,10 +615,8 @@ For each region, compare the purchase value and count of different
 product categories.</td>
     </tr>
     <tr>
-      <td><ol>
-<li>Which campaign strategies are the most effective in each region?
-</li>
-</ol>
+      <td>
+Which campaign strategies are the most effective in each region?
 </td>
       <td>Sum the summary purchase counts and values that are in the summary
 reports, across all product categories.<br>
@@ -675,9 +636,9 @@ region generate?".
 Note: even though the summary values will be noisy, you can evaluate when
 differences in the value measured between each campaign are not due to noise
 alone.
-[See how](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.clgo7qot9chl).
+[See how](/docs/privacy-sandbox/attribution-reporting/understanding-noise/#evaluating-noise).
 
-#### Strategy B: two shallow trees (two coarse key structures)
+#### Strategy B: two shallow trees (two coarse key structures) {: #strategy-b}
 
 In strategy B, you use two coarse key structures, each including a subset of
 the dimensions you need:
@@ -741,7 +702,7 @@ the summary reports.</td>
   </tbody>
 </table>
 
-#### Decision: Strategy A
+#### Decision: Strategy A 
 
 Strategy A is simpler: all data follows the same key structure, which also
 means you only have one key structure to maintain.
@@ -749,7 +710,7 @@ means you only have one key structure to maintain.
 However, with strategy A, you need to sum the summary values you receive in
 summary reports to answer some of your questions. Each of these summary values
 is noisy. By summing up that data, you're also
-[summing the noise](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.ppa32mheejb).
+[summing the noise](/docs/privacy-sandbox/attribution-reporting/working-with-noise/#summing-up-summary-values-rollups-also-sums-their-noise).
 This isn't the case with strategy B, where summary values exposed in the summary
 reports already give you the information you need. This means that strategy B
 will likely lead to less impactful noise than strategy A.
@@ -765,19 +726,13 @@ advertisers or campaigns, you may decide to:
 -   Assess with reasonable accuracy the **weekly** conversion count and
     purchase value.
 
-<table class="with-heading-tint">
-  <thead>
-    <tr>
-      <th>Do not rely on report counts or data available only via debug reports
+{% Aside %}
+Do not rely on report counts or data available only via debug reports
 as a source of truth in your designs. In the future, the data
 available in debug reports will change and noisy reports will be
 generated alongside real reports, so these signals should be used
-only to validate your implementation and testing strategy.</th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
+only to validate your implementation and testing strategy.
+{% endAside %}
 
 In this example, let's assume that the weekly purchase count and purchase value
 are high enough that strategy A would lead to a noise percentage that you deem
@@ -789,7 +744,7 @@ affect your ability to make decisions, you decide to go with strategy A.
 ### Select a hashing algorithm
 
 You decide to adopt a
-[hash-based approach](#encoding)
+[hash-based approach](#encoding-2)
 to generate your keys. To do so, you need to select a hashing algorithm to
 support that approach.
 
@@ -813,8 +768,8 @@ the browser:
 
 When a user clicks or views an ad, set the aggregation keys in the
 `Attribution-Reporting-Register-Aggregatable-Source` header.
-At this stage, for each key, you can only set the part of the key— the
-[key piece](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.2xob5s4sb398)—that
+At this stage, for each key, you can only set the part of the key—the
+[key piece](#full-key)—that
 is known at ad-serving time.
 
 Let's generate the key pieces:
@@ -827,7 +782,7 @@ Let's generate the key pieces:
       <th>Hash of this string as hex, trimmed to the first 64 bits (64/4*
 = 16 characters)</th>
       <th>Hex hash with appended zeros to <a
-href="https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.6q2omygul77r">simplify
+href="#encoding-2">simplify
 </a> XOR-ing. This is the source-side key piece.</th>
     </tr>
   </thead>
@@ -902,7 +857,7 @@ Let's generate the key pieces:
       <th>Hash of this string as hex, trimmed to the first 64 bits (64/4*
 = 16 characters)</th>
       <th>Hex hash with appended zeros to <a
-href="https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.6q2omygul77r">simplify</a> XOR-ing.
+href="#encoding-2">simplify</a> XOR-ing.
 This is the source-side key piece.</th>
     </tr>
   </thead>
@@ -932,12 +887,11 @@ Let's now set the key pieces:
 res.set(
     "Attribution-Reporting-Register-Aggregatable-Trigger-Data",
     JSON.stringify(
-[
-// Each dictionary independently adds pieces to multiple source keys
-{ "key_piece": "0x0000000000000000f9e491fe37e55a0c",
-  "source_keys": ["key_purchaseCount", "key_purchaseValue"]}, 
-]
-
+      [
+      // Each dictionary independently adds pieces to multiple source keys
+      { "key_piece": "0x0000000000000000f9e491fe37e55a0c",
+        "source_keys": ["key_purchaseCount", "key_purchaseValue"]}, 
+      ]
 ))
 ```
 
@@ -957,7 +911,7 @@ You will **not** set these directly as aggregatable values:
 -   ~~`key_purchaseValue`: $52~~
 
 Instead, before you register these aggregatable values, you need to
-[scale](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.683u7t2q1xk2)
+[scale](/docs/privacy-sandbox/attribution-reporting/working-with-noise/#scale-up-to-contribution-budget)
 them in order to minimize noise.
 
 You have two goals to spend your contribution budget against, so you might
@@ -986,49 +940,17 @@ With these, you can know set these values:
 In practice, you'd set them as follows, using the dedicated header
 Attribution-Reporting-Register-Aggregatable-Values:
 
-<table class="with-heading-tint">
-  <thead>
-    <tr>
-      <th><p><pre>
+```javascript
 // Instruct the browser to schedule-send a report
-</pre></p>
-
-<p><pre>
 res.set(
-</pre></p>
-
-<p><pre>
     "Attribution-Reporting-Register-Aggregatable-Values",
-</pre></p>
-
-<p><pre>
     JSON.stringify(
-</pre></p>
-
-<p><pre>
 {
-</pre></p>
-
-<p><pre>
     "key_purchaseCount": 32768,
-</pre></p>
-
-<p><pre>
     "key_purchaseValue": 1144,
-</pre></p>
-
-<p><pre>
       }
-</pre></p>
-
-<p><pre>
 ))
-</pre></p></th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
+```
 
 ### The aggregatable report is generated
 
@@ -1055,7 +977,7 @@ report.
 ### Request a summary report
 
 -   Batch aggregatable reports. Follow the advice offered in
-    [Batching](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.7j8g6q2v8b22).
+    [Batching](/docs/privacy-sandbox/attribution-reporting/system-overview/#batched-aggregatable-reports).
 -   Generate the keys you want to see data for. For example, to see summary
     data for COUNT (total number of purchases) and VALUE (total purchase value)
     for the Campaign ID 12 x Geography ID 7 x Product category 25:
@@ -1113,20 +1035,14 @@ in binary.
 Note that while the keys are heterogeneous (COUNT vs VALUE), they're contained
 in the same report.
 
-<table class="with-heading-tint">
-  <thead>
-    <tr>
-      <th>In practice, summary reports are encoded in a way that will make
+{% Aside %}
+In practice, summary reports are encoded in a way that will make
 buckets and values look different than stated above (e.g. a bucket
 may look like \u0000\u0000\x80\u0000). <em>Bucket</em> and
 <em>value</em> are both bytestrings. <a
 href="https://github.com/google/trusted-execution-aggregation-service/blob/main/COLLECTING.md#produce-a-summary-report-locally">An
-example can be found here</a>.</th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
+example can be found here</a>.
+{% endAside %}
 
 #### Scale down the values
 
@@ -1139,10 +1055,14 @@ example can be found here</a>.</th>
 As a result, the summary reports gives you the following insights:
 
 <pre>
-Within the reporting time period, campaign #12 run in Europe drove about 156 purchases (± noise) for the product category #25.
+Within the reporting time period, campaign #12
+run in Europe drove about 156 purchases (± noise)
+for the product category #25.
 </pre>
 
 <pre>
-Within the reporting time period, campaign #12 run in Europe drove $31,230 of purchases (± noise) for the product category #25.
+Within the reporting time period, campaign #12
+run in Europe drove $31,230 of purchases (± noise)
+for the product category #25.
 </pre>
 
