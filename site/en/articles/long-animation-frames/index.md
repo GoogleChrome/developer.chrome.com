@@ -96,7 +96,7 @@ Previous long animation frames can also be queried from the [Performance Timelin
 const loafs = performance.getEntriesByType('long-animation-frame');
 ```
 
-However, not that [there is a `maxBufferSize` for performance entries](https://w3c.github.io/timing-entrytypes-registry/#registry) after which older entries are dropped. The `long-animation-frame` buffer size is currently set to 200, the same as for `long-tasks`.
+However, there is [a `maxBufferSize` for performance entries](https://w3c.github.io/timing-entrytypes-registry/#registry) after which older entries are dropped. The `long-animation-frame` buffer size is currently set to 200, the same as for `long-tasks`.
 
 ### Advantages of looking at frames instead of tasks
 
@@ -181,7 +181,7 @@ The `long-animation-frame` entry type includes better attribution data of each s
 This allows developers to know exactly how each script in the long animation frame was called, down to the character position in the calling script giving the exact location in a JavaScript resource that resulted in the long animation frame.
 
 {% Aside 'important' %}
-  Note the script this will be the script _entry point_, rather than necessarily the precise location in the script that took up the most time. For example, if an event handler calls a library, which calls a function which is slow, the event handler will be remoted in the LoAF entry, not the library nor the function.
+  Note the script this will be the script _entry point_, rather than necessarily the precise location in the script that took up the most time. For example, if an event handler calls a library, which calls a function which is slow, the event handler will be reported in the LoAF entry, not the library nor the function.
 {% endAside %}
 
 ### Example of a `long-animation-frame` performance entry
@@ -261,7 +261,7 @@ const observer = new PerformanceObserver(list => {
 observer.observe({ type: 'long-animation-frame', buffered: true });
 ```
 
-As the long animation frame entries can be quite large, developers should decide what data from the entry should be sent to analytics. For example, the summary times of the entry and perhaps the script names, and a minimum set of other contextual data that may be deemed necessary.
+As the long animation frame entries can be quite large, developers should decide what data from the entry should be sent to analytics. For example, the summary times of the entry and perhaps the script names, or some other minimum set of other contextual data that may be deemed necessary.
 
 ### Observing the worst long animation frames
 
@@ -269,17 +269,18 @@ Sites may wish to collect data on the longest animation frame (or frames), to re
 
 ```js
 MAX_LOAFS_TO_CONSIDER = 10;
+let longestLoAFs = [];
 
-const observer = new PerformanceObserver(() => {
-    const sortedByBlockingDuration =
-      performance.getEntriesByType('long-animation-frame').sort(
-        (a, b) => b.blockingDuration - a.blockingDuration
-      );
-
-  // Example here logs to console, but could also report back to analytics
-  console.table(sortedByBlockingDuration.slice(0, MAX_LOAFS_TO_CONSIDER));
+const observer = new PerformanceObserver(list => {
+  longestLoAFs = longestLoAFs.concat(list.getEntries()).sort(
+    (a, b) => b.blockingDuration - a.blockingDuration
+  ).slice(0, MAX_LOAFS_TO_CONSIDER);
 });
 observer.observe({ type: 'long-animation-frame', buffered: true });
+
+// At the appropriate time, beacon back to analytics.
+// Example here logs to console
+console.table(longestLoAFs);
 ```
 
 ### Linking to the longest INP interaction
@@ -288,7 +289,7 @@ As an extension of the above, the LoAF frame(s) corresponding to the INP entry c
 
 There is [currently no direct API to link an INP entry with its related LoAF entry or entries](https://github.com/w3c/longtasks/issues/115), though it is possible to do so in code by comparing the start and end times of each (see [this example script](https://gist.github.com/noamr/316bd48157ab35e4f632a8c2583281b7)).
 
-### Reporting longest animation frames with interactions
+### Reporting long animation frames with interactions
 
 An alternative approach that requires less code would be to always send the largest (or top X largest) LoAF entries where an interaction occurred during the frame (which can be detected by the presence of a `firstUIEventTimestamp` value). In most cases this will include the INP interaction for a given visit, and in rare cases when it doesn't it still surfaces long interactions that are important to fix, as they may be the INP interaction for other users.
 
@@ -302,6 +303,7 @@ const observer = new PerformanceObserver(list => {
       if (entry.duration > REPORTING_THRESHOLD_MS &&
         entry.firstUIEventTimestamp > 0
       ) {
+      // Example here logs to console, but could also report back to analytics
         console.log(entry);
       }
     }
