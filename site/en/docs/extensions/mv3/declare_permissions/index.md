@@ -445,7 +445,7 @@ The following table lists the currently available permissions. For a list of per
     <tr id="unlimitedStorage">
       <td><code>"unlimitedStorage"</code></td>
       <td>Provides an unlimited quota for storing client-side data, such as databases and local storage files.
-        Without this permission, the extension is limited to 5 MB of local storage.<div
+        Without this permission, the extension is limited to 10 MB of local storage.<div
           class="aside aside--note"><b>Note:</b> This permission applies only to Web SQL Database and application cache
           (see issue <a href="http://crbug.com/58985">58985</a>). Also, it doesn't currently work with wildcard
           subdomains such as <code>http://*.example.com</code>.</div>
