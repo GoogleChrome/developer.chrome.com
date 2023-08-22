@@ -3,7 +3,7 @@ layout: 'layouts/blog-post.njk'
 title: "What's New in DevTools (Chrome 117)"
 authors:
   - sofiayem
-date: 2023-08-15
+date: 2023-08-22
 description: "Override XHR/fetch requests and hide extension requests from the Network panel, see changes in fetch priority in the Performance panel, experience multiple UI improvements, check out new colors and experimental features, and more."
 hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/oM7ywmnxgVDuegxueVbK.png'
 alt: 'Override XHR/fetch requests and hide extension requests from the Network panel, see changes in fetch priority in the Performance panel, experience multiple UI improvements, check out new colors and experimental features, and more.'
