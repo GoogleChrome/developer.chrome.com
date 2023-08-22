@@ -2,7 +2,7 @@
 layout: 'layouts/doc-post.njk'
 title: 'Manifest file format'
 date: 2012-09-18
-updated: 2023-03-24
+updated: 2023-08-23
 description: An overview of the manifest.json properties of a Chrome Extension.
 ---
 
@@ -27,7 +27,7 @@ The following code shows the supported manifest keys. For additional usage infor
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/description">description</a>"</span><span class="token operator">:</span> <span class="token string">"A plain text description"</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/icons">icons</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">,</span>
 
-  <span class="token comment">// Optional</span>
+  <span class="token comment">// Required for Chrome Web Store. Optional for unpacked extensions.</span>
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/author">author</a>"</span><span class="token operator">:</span> <span class="token string">"developer@example.com"</span><span class="token punctuation">,</span>  
   
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/background">background</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">,</span>
