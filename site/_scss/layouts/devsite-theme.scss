@@ -58,6 +58,8 @@ $CARD_BORDER: 2px solid #EEF4FF;
   --link-color: #{$TEXT_PRIMARY};
   --link-visited-color: #{$TEXT_PRIMARY};
   --link-rgb-background: #{$BUTTON_BG};
+  --devsite-h2-margin: 0 0 1.3rem 0;
+  --devsite-item-description-margin: 1.325rem 0 0 0;
 
 
   .button{
@@ -97,7 +99,7 @@ $CARD_BORDER: 2px solid #EEF4FF;
 
     &-description {
       margin-bottom: 0;
-      padding: 1rem 0 0;
+      padding: 1.5rem 0 0;
       text-align: center;
         
       &-content {
@@ -311,7 +313,7 @@ $CARD_BORDER: 2px solid #EEF4FF;
 
     h3{
       font-weight: #{$TEXT_WEIGHT};
-      margin: 1.5rem 0;
+      margin-top: 1.75rem;
     }
 
     img {
