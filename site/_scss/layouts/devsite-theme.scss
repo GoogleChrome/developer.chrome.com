@@ -234,20 +234,22 @@ $CARD_BORDER: 2px solid #EEF4FF;
 
       .button {
         font-weight: #{$TEXT_WEIGHT};
-        padding: 0 2.5rem;
+        padding: 0.6875rem 2.5rem;
+        display: flex;
+        align-items: center;
       }
     }
 
-     .button::before{
-      font-family: 'Material Icons';
-      font-family: "Material Icons";
+    .button::before{
+      font-family: 'Material Icons Outlined';
       padding-right: 0.5rem;
       vertical-align: middle;
+      font-size: 1.3rem;
+      margin-top: -0.325rem;
     }
 
     .dcc-web-app-features-link::before{
-      //content: "widget";
-      content: "link";
+      content: "widgets";
     }
     .dcc-web-on-android-link::before{
       content: "android";
@@ -294,8 +296,7 @@ $CARD_BORDER: 2px solid #EEF4FF;
     }
 
     .dcc-aurora-link::before{
-      //content: "offline-bolt";
-      content: "link";
+      content: "offline_bolt";
     }
 
     .dcc-webdev-link::before{
