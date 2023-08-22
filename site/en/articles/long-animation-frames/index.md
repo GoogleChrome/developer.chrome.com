@@ -269,10 +269,10 @@ Sites may wish to collect data on the longest animation frame (or frames), to re
 
 ```js
 MAX_LOAFS_TO_CONSIDER = 10;
-let longestLoAFs = [];
+let longestBlockingLoAFs = [];
 
 const observer = new PerformanceObserver(list => {
-  longestLoAFs = longestLoAFs.concat(list.getEntries()).sort(
+  longestBlockingLoAFs = longestBlockingLoAFs.concat(list.getEntries()).sort(
     (a, b) => b.blockingDuration - a.blockingDuration
   ).slice(0, MAX_LOAFS_TO_CONSIDER);
 });
@@ -280,7 +280,7 @@ observer.observe({ type: 'long-animation-frame', buffered: true });
 
 // At the appropriate time, beacon back to analytics.
 // Example here logs to console
-console.table(longestLoAFs);
+console.table(longestBlockingLoAFs);
 ```
 
 ### Linking to the longest INP interaction
