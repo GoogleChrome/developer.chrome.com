@@ -71,19 +71,17 @@ $CARD_BORDER: 2px solid #EEF4FF;
   }
 
 
-  .devsite-landing-row-header-icon {
-    font-size: 32px;
-    color: white;
-    background-color: $CHROME_BLUE;
-    border-radius: 100%;
-    padding: 8px;
-    display: inline-block;
-  }
-
   .material-icons {
       border-radius: 100%;
       color: #fff;
       display: inline;
+  }
+
+  .devsite-landing-row-header-icon {
+    font-size: 32px;
+    background-color: $CHROME_BLUE;
+    padding: 8px;
+    display: inline-block;
   }
 
   .devsite-landing-row-100 .devsite-landing-row-item{
@@ -410,6 +408,7 @@ $CARD_BORDER: 2px solid #EEF4FF;
 
     .dcc-blog-card {
       max-width: 24.75rem;
+      padding: 0;
 
       h3{
         font-weight: #{$TEXT_WEIGHT};
