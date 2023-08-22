@@ -134,7 +134,7 @@ For example, here we navigated to `next4.html`, but only `next.html`, `next2.htm
 
 The **Preloading** panes are very useful for debugging the speculation rules themselves, and finding any syntax errors in the JSON.
 
-As for the prefetches themselves, the **Network** panel is likely a more familiar place. For the prefetch failure example, you can see the 404 for the prefetch in the **Network** panel:
+As for the prefetches themselves, the **Network** panel is likely a more familiar place. For the prefetch failure example, you can see the 404 for the prefetch here:
 
 <figure>
   {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/kHIghY1mr64PNnvowgrR.png", alt="Chrome DevTools Network panel showing a failed prefetch", width="800", height="296" %}
@@ -244,7 +244,7 @@ Or the **Elements** panel, where you can see the page contents, like in below sc
   {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/wTF5aocvUFFnnZnMRomH.png", alt="Chrome DevTools Elements panel for the prerendered page", width="800", height="465" %}
 </figure>
 
-Or the Console pane, where you can see console logs emitted by the prerendered page:
+Or the **Console panel**, where you can see console logs emitted by the prerendered page:
 
 <figure>
   {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/u1QnilcFwOmbjmgQWQEe.png", alt="Chrome DevTools Console panel showing the console output from a prerendered page", width="800", height="226" %}
