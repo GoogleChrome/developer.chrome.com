@@ -29,7 +29,7 @@ There's a lot of "pre-" terms that are easily confused, so let's start with an e
 - **Prefetch**: fetching a resource or document in advance to improve performance for when that is needed. In this post we'll be talking about prefetching documents using the Speculation Rules API, rather than the, similar, but older `<link rel="prefetch">` option often used for prefetching subresources.
 - **Prerender**: this goes a step beyond prefetching and actually renders the whole page as if the user had navigated to it, but keeps it in a hidden background renderer process ready to be used when the user actually navigates there. Again, this document is concerned with the newer Speculation Rules API version of this, than the older `<link rel="prerender">` option, which [no longer does a full prerender](/blog/nostate-prefetch/).
 - **Navigational preloading**: the collective term for the new prefetch and prerender options triggered by speculation rules.
-- **Preload**: an overloaded term that can refer to a number of technologies and processes including `<link rel="preload">`, the [Preload Scanner](https://web.dev/preload-scanner/), and [Service Worker navigation preloads](https://web.dev/navigation-preload/). These items will not be covered here, but the term is included to clearly differentiate those from the "navigational preloading" term above.
+- **Preloading**: an overloaded term that can refer to a number of technologies and processes including `<link rel="preload">`, the [Preload Scanner](https://web.dev/preload-scanner/), and [Service Worker navigation preloads](https://web.dev/navigation-preload/). These items will not be covered here, but the term is included to clearly differentiate those from the "navigational preloading" term above.
 
 For more details see [this preloading tech landscape](https://docs.google.com/document/d/1FNLyXW0Q5Fi5-kEOtjfOdmtoDxRtUR_wX4dl5Fz9c7o/edit) document.
 
@@ -81,7 +81,7 @@ A new **Preloading** section has been added in the **Application** panel of Chro
 </figure>
 
 {% Aside 'important' %}
-  The **Preloading** panes are for working with speculation rules prefetching and prerendering (collectively known as "preloading"). These panes cannot be used to debug resource _preloading_ using `<link rel="preload">` and resource _prefetching_ using `<link rel="prefetch">`.
+  The **Preloading** panes are for working with speculation rules prefetching and prerendering (collectively known as "preloading"). These panes cannot be used to debug subresource _preloading_ using `<link rel="preload">` and subresource _prefetching_ using `<link rel="prefetch">`.
 {% endAside %}
 
 There are three panes available in this section:
@@ -127,12 +127,12 @@ For example, here we navigated to next4.html, but only next.html, next2.html, or
     {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/u8qawIQeCNv8KFsoDxaO.png", alt="Chrome DevTools showing an unmatched URL in the This Page Preloading pane", width="800", height="364" %}
   </figure>
 
-  The Chrome team is [continuing to iterate on this feature](https://bugs.chromium.org/p/chromium/issues/detail?id=1473861) to look to improve the user interface in these cases.
+  The Chrome team is [continuing to iterate on this feature](https://bugs.chromium.org/p/chromium/issues/detail?id=1473861) to improve the user interface in these cases.
 {% endAside %}
 
 The **Preloading** panes are very useful for debugging the speculation rules themselves, and finding any syntax errors in the JSON.
 
-As for the prefetches themselves, the **Network** panel is likely a more familiar place and will get more details. For the prefetch failure example, you can see the 404 for the prefetch in the **Network** panel:
+As for the prefetches themselves, the **Network** panel is likely a more familiar place. For the prefetch failure example, you can see the 404 for the prefetch in the **Network** panel:
 
 <figure>
   {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/kHIghY1mr64PNnvowgrR.png", alt="Chrome DevTools Network panel showing a failed prefetch", width="800", height="296" %}
@@ -181,16 +181,8 @@ We are currently experimenting with [document speculation rules](https://github.
       "source": "document",
       "where": {
         "and": [
-          {
-            "href_matches": "/*\\?*#*",
-            "relative_to": "document"
-          },
-          {
-            "not": {
-              "href_matches": "/not-safe-to-prerender/*\\?*#*",
-              "relative_to": "document"
-            }
-          }
+          {"href_matches": "/*\\?*#*"},
+          {"not": { "href_matches": "/not-safe-to-prerender/*\\?*#*"}}
         ]
       },
       "eagerness": "moderate"
