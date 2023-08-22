@@ -20,13 +20,13 @@ Speculation rules can be used to prefetch and prerender next page navigations as
 
 Debugging speculation rules can be tricky. This is particularly true for prerendered pages, as these pages are rendered in a separate renderer—kind of like a hidden background tab that replaces the current tab when activated. Therefore the usual DevTools options cannot always be used to debug issues.
 
-The Chrome team has been working hard to enhance DevTools support for speculation rules debugging. In this post, we'll show all the various ways of using these tools to understand a page's speculation rules, why they may not be working, and when developers can use the more familiar DevTools options (and when not).
+The Chrome team has been working hard to enhance DevTools support for speculation rules debugging. In this post, you'll see all the various ways of using these tools to understand a page's speculation rules, why they may not be working, and when developers can use the more familiar DevTools options (and when not).
 
 ## Explanation of "pre-" terms
 
 There's a lot of "pre-" terms that are easily confused, so let's start with an explanation of these:
 
-- **Prefetch**: fetching a resource or document in advance to improve performance for when that is needed. In this post we'll be talking about prefetching documents using the Speculation Rules API, rather than the, similar, but older `<link rel="prefetch">` option often used for prefetching subresources.
+- **Prefetch**: fetching a resource or document in advance to improve performance for when that is needed. This post covers prefetching documents using the Speculation Rules API, rather than the, similar, but older `<link rel="prefetch">` option often used for prefetching subresources.
 - **Prerender**: this goes a step beyond prefetching and actually renders the whole page as if the user had navigated to it, but keeps it in a hidden background renderer process ready to be used when the user actually navigates there. Again, this document is concerned with the newer Speculation Rules API version of this, than the older `<link rel="prerender">` option, which [no longer does a full prerender](/blog/nostate-prefetch/).
 - **Navigational preloading**: the collective term for the new prefetch and prerender options triggered by speculation rules.
 - **Preloading**: an overloaded term that can refer to a number of technologies and processes including `<link rel="preload">`, the [Preload Scanner](https://web.dev/preload-scanner/), and [Service Worker navigation preloads](https://web.dev/navigation-preload/). These items will not be covered here, but the term is included to clearly differentiate those from the "navigational preloading" term above.
@@ -120,7 +120,7 @@ When a navigation happens from a page with speculation rules, that does not resu
 
 For example, here we navigated to next4.html, but only next.html, next2.html, or next3.html are prefetches so we can see this doesn't quite match any of those three rules.
 
-{% Aside 'warning' %}
+{% Aside %}
   As this feedback is primarily intended for debugging speculation rules, this URL matching can look a little confusing when navigating to a completely different page that is not included in speculation rules and is not expected to be preloaded:
 
   <figure>
@@ -132,13 +132,13 @@ For example, here we navigated to next4.html, but only next.html, next2.html, or
 
 The **Preloading** panes are very useful for debugging the speculation rules themselves, and finding any syntax errors in the JSON.
 
-As for the prefetches themselves, the **Network** panel is likely a more familiar place. For the prefetch failure example, you can see the 404 for the prefetch in the **Network** panel:
+As for the prefetches themselves, the **Network** panel is likely a more familiar place for many developers. For the prefetch failure example, you can see the 404 for the prefetch in the **Network** panel:
 
 <figure>
   {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/kHIghY1mr64PNnvowgrR.png", alt="Chrome DevTools Network panel showing a failed prefetch", width="800", height="296" %}
 </figure>
 
-However, the **Preloading** panes become much more useful for prerendering speculation rules, which we'll dive into next.
+However, the **Preloading** panes become much more useful for prerendering speculation rules, which are covered next.
 
 ## Speculation rules for `prerender`
 
@@ -163,7 +163,7 @@ Unlike prefetches however, these are not available to be seen in the **Network**
 
 ### Debugging `prerender` with the Preloading panes
 
-The same **Preloading** section introduced above, can be used for prerender speculation rules. We'll use a similar demo page, that attempts to prerender, instead of prefetching the three pages:
+The same **Preloading** section introduced above, can be used for prerender speculation rules as demonstrated with a similar demo page, that attempts to prerender, instead of prefetching the three pages:
 
 <figure>
   {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/9mlMrC7ekXP67BWozsaD.png", alt="Chrome DevTools Preloading panes for a page with prerender speculation rules", width="800", height="436" %}
