@@ -97,7 +97,7 @@ To test rule files, [load your extension unpacked](/docs/extensions/mv3/getstart
 
 Both individual static rules and complete static rulesets may be enabled or disabled at runtime. {: #update-enabled-rulesets }
 
-The set of enabled static rulesets is persisted across browser sessions. Static rules are not persisted across exension updates, meaning that only rules you chose to leave in your rule files are available after an update.
+The set of enabled static rules and rulesets is persisted across browser sessions. Neither are persisted across extension updates, meaning that only rules you chose to leave in your rule files are available after an update.
 
 For performance reasons there are also limits to the number of rules and rulesets that may be enabled at one time. Call [`getAvailableStaticRuleCount()`](#method-getAvailableStaticRuleCount) to check the number of additional rules that may be enabled. For information on rule limits, see [Rule limits](#limits).
 
