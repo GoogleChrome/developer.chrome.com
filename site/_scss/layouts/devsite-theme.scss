@@ -80,6 +80,12 @@ $CARD_BORDER: 2px solid #EEF4FF;
     display: inline-block;
   }
 
+  .material-icons {
+      border-radius: 100%;
+      color: #fff;
+      display: inline;
+  }
+
   .devsite-landing-row-100 .devsite-landing-row-item{
 
     h3 {
@@ -296,19 +302,44 @@ $CARD_BORDER: 2px solid #EEF4FF;
   .dcc-docs-card {
     border: #{$CARD_BORDER};
     border-radius: 1.5rem;
-    padding: 2.125rem;
+    padding: 4.125rem 2.125rem 2.125rem 2.125rem;
     max-width: 24.75rem;
 
     h3{
       font-weight: #{$TEXT_WEIGHT};
-      margin-bottom: 1.5rem;
+      margin: 1.5rem 0;
     }
 
     img {
       border-radius: 1.5rem;
     }
 
+    .material-icons {
+      font-size: 4rem;
+      line-height: 2rem; 
+      margin-top: 2rem;
+      padding: 1.5rem;
+    }
+
+    &:nth-child(1) .material-icons{
+      background-color: #{$CHROME_BLUE};
+    }
+
+    &:nth-child(2) .material-icons{
+      background-color: #{$CHROME_GREEN};
+    }
+
+    &:nth-child(3) .material-icons{
+      background-color: #{$CHROME_RED};
+    }
+
+    &:nth-child(4) .material-icons{
+      background-color: #{$CHROME_YELLOW};
+    }
+
     .devsite-landing-row-item {
+      
+
       &-description-content {
         line-height: 1.7rem;
       }
@@ -338,6 +369,19 @@ $CARD_BORDER: 2px solid #EEF4FF;
     .button {
       margin-top: 0.125rem;
       padding: 0;
+    }
+
+    .material-icons {
+      font-size: 2rem;
+      padding: 0.5rem;
+    }
+
+    &:nth-child(1) .material-icons{
+      background-color: #2095F2;
+    }
+
+    &:nth-child(2) .material-icons{
+      background-color: #FB0301;
     }
   }
 
