@@ -10,7 +10,7 @@ $BG_PRIMARY: #F6F9FF;
 $TEXT_PRIMARY_FONT_FAMILY: '"Google Sans", sans-serif';
 $TEXT_PRIMARY: #000;
 $TEXT_PRIMARY_PALEBLUE: #3A3A3A;
-$TEXT_SECONDARY: #606367;
+$TEXT_SECONDARY: #5F6368;
 $TEXT_LINK: #3982F7;
 $TEXT_BOLD_WEIGHT: 600;
 $TEXT_WEIGHT: 500;
@@ -62,7 +62,7 @@ $CARD_BORDER: 2px solid #EEF4FF;
 
   .button{
     cursor: pointer;
-    font-weight: 500;
+    font-weight: #{$TEXT_WEIGHT};
     height: auto;
     line-height: 1.5rem;
     letter-spacing: 0.5px;
@@ -71,13 +71,13 @@ $CARD_BORDER: 2px solid #EEF4FF;
   }
 
 
-  .devsite-landing-row-header-icon{
+  .devsite-landing-row-header-icon {
     font-size: 32px;
     color: white;
-    background-color: #3982F7;
+    background-color: $CHROME_BLUE;
     border-radius: 100%;
     padding: 8px;
-    display: inline;
+    display: inline-block;
   }
 
   .devsite-landing-row-100 .devsite-landing-row-item{
@@ -97,7 +97,7 @@ $CARD_BORDER: 2px solid #EEF4FF;
       text-align: center;
         
       &-content {
-        font-size: 1.125rem;
+        font-size: 1.3rem;
         margin-bottom: 1.5rem;
       }
     }
@@ -110,6 +110,7 @@ $CARD_BORDER: 2px solid #EEF4FF;
         background-color: #{$TEXT_LINK};
         color: #fff;
         padding: 12px 24px;
+        margin-top: 0.5rem;
       }
     }
 
@@ -151,6 +152,12 @@ $CARD_BORDER: 2px solid #EEF4FF;
 
   }
 
+  .devsite-landing-row-cards {
+    .devsite-landing-row-item-body {
+      display: block;
+    }
+  }
+
   .devsite-landing-row-item {
     gap: 0;
     padding: 33px;
@@ -170,7 +177,7 @@ $CARD_BORDER: 2px solid #EEF4FF;
 
       .button-white {
         font-weight: #{$TEXT_WEIGHT};
-        padding-left: 0;
+        padding: 0;
       }
     }
 
@@ -198,7 +205,7 @@ $CARD_BORDER: 2px solid #EEF4FF;
     
     h3 {
       font-size: 2.25rem;
-      font-weight: 500;
+      font-weight: #{$TEXT_WEIGHT};
       letter-spacing: -0.5px;
       line-height: 2.75rem;
       max-width: 90%;
@@ -286,45 +293,53 @@ $CARD_BORDER: 2px solid #EEF4FF;
     }
   }
 
-   .dcc-docs-card{
-      border: #{$CARD_BORDER};
+  .dcc-docs-card {
+    border: #{$CARD_BORDER};
+    border-radius: 1.5rem;
+    padding: 2.125rem;
+    max-width: 24.75rem;
+
+    h3{
+      font-weight: #{$TEXT_WEIGHT};
+      margin-bottom: 1.5rem;
+    }
+
+    img {
       border-radius: 1.5rem;
-      padding: 2.125rem;
-      max-width: 24.75rem;
+    }
 
-      h3{
-        font-weight: 500;
-      }
-
-      img {
-        border-radius: 1.5rem;
+    .devsite-landing-row-item {
+      &-description-content {
+        line-height: 1.7rem;
       }
 
       &-buttons .button {
-        margin-top: 1.875rem;
+        margin-top: 1.5rem;
       }
 
       @media (max-width: 591px) {
         max-width: 100%;
       }
-   }
-
-   .dcc-social-card {
-      h3 {
-        font-size: 2rem;
-        font-weight: 500;
-        text-align: left;
-      }
-      
-      .devsite-landing-row-item-description-content {
-        color: #{$TEXT_SECONDARY};
-      }
-
-      .button {
-        margin-top: 0.125rem;
-        padding: 0;
-      }
     }
+  }
+
+  .dcc-social-card {
+    h3 {
+      font-size: 2rem;
+      font-weight: #{$TEXT_WEIGHT};
+      text-align: left;
+    }
+    
+    .devsite-landing-row-item-description-content {
+      color: #{$TEXT_SECONDARY};
+      min-height: 50px;
+    }
+
+    .button {
+      margin-top: 0.125rem;
+      padding: 0;
+    }
+  }
 
   .devsite-landing-row-2-up[header-position=top]:not([background=pale-blue]){
 
@@ -337,11 +352,7 @@ $CARD_BORDER: 2px solid #EEF4FF;
         margin-bottom: 1rem;
       }
     }
-
-    
   }
-  
-
 
   .devsite-landing-row[header-position=left] {
     padding: 3.125rem 0 !important;
@@ -351,7 +362,7 @@ $CARD_BORDER: 2px solid #EEF4FF;
       max-width: 24.75rem;
 
       h3{
-        font-weight: 500;
+        font-weight: #{$TEXT_WEIGHT};
       }
 
       img {
@@ -453,11 +464,6 @@ $CARD_BORDER: 2px solid #EEF4FF;
   }
 
 
-
-
-
-  
-
   [background=pale-blue] {
     --devsite-background-color: #{$BG_PRIMARY};
     --devsite-button-border: none;
@@ -509,9 +515,6 @@ $CARD_BORDER: 2px solid #EEF4FF;
         }
     }
   }
-
-  
-
 }
 
 
@@ -533,10 +536,10 @@ $CARD_BORDER: 2px solid #EEF4FF;
   margin-top: 0.5rem;
 
   a{
-    color: #5F6368;
+    color: #{$TEXT_SECONDARY};
     font-family: 'Google Sans';
     font-size: 0.875rem;
-    font-weight: 500;
+    font-weight: #{$TEXT_WEIGHT};
     line-height: 1.25rem;
     letter-spacing: 0.25px;
   }
@@ -550,11 +553,11 @@ search-box{
   min-width:20rem;
 
   .search-box__btn{
-    color:#5F6368;
+    color: #{$TEXT_SECONDARY};
 
     &:hover{
       border:none;
-      color:#5F6368;
+      color: #{$TEXT_SECONDARY};
     }
 
     &:active{
@@ -563,16 +566,14 @@ search-box{
       border:none;
     }
   }
-  
 
   input[type=text]{
     background-color: #F1F3F4;
-    color: #5F6368;
+    color: #{$TEXT_SECONDARY};
     font-size: 1rem;
     font-weight:400;
     padding-left:3rem;
   }
-
 
   @media (max-width: 991px) {
     font-size: 18px;
