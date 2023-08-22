@@ -107,7 +107,7 @@ The final pane, **This Page**, shows a **Preloading status** to show whether a p
 For a prefetched page, when that page is navigated to, you should see a successful message:
 
 <figure>
-  {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/z54tJ1S5O64GYsJghGBe.png", alt="Chrome DevTools This Page pane showing a successful prefetch", width="800", height="309" %}
+  {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/5q9aRZuYclNB8jG7VB1h.png", alt="Chrome DevTools This Page pane showing a successful prefetch", width="800", height="326" %}
 </figure>
 
 #### Unmatched preloads
@@ -269,7 +269,7 @@ The previous sections discuss how to debug prerendered pages on the page which i
 Additionally once a prerendered page is activated, by the user navigating to it, the **This Page** pane will show this status, and whether it was successfully prerendered or not. With an explanation as to why it could not be prerendered if that was the case:
 
 <figure>
-  {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/qb4W4spJ1k7sahsxU8aH.png", alt="Chrome DevTools Preloading This Page pane showing both a successful and failed prerendered page", width="800", height="472" %}
+  {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/7ksJhB9WgTxSn4y0qBdX.png", alt="Chrome DevTools Preloading This Page pane showing both a successful and failed prerendered page", width="800", height="413" %}
 </figure>
 
 Additionally, [like for prefetches](#unmatched-preloads), when navigating from a page with speculation rules that did not match the current page, the This Page pane, will attempt to show you why the URLs did not match those covered on the previous page's speculation rules:
