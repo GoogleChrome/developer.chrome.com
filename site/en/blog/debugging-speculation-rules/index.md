@@ -258,12 +258,6 @@ It's even possible to see the **Preload** pane for a prerendered frame to see if
 
 Note that speculation rules themselves are not actioned until the prerendered page is activated. These pages will always be in the `Not triggered` status.
 
-The render frame drop down is available for all the frames, but is less useful for the Performance and Lighthouse panels, as any traces in those will still be based on the current page rather than the hidden background page.
-
-{% Aside 'warning' %}
-  Cross-renderer performance tracing by clicking on a prerendered link in the middle of a performance trace is not currently supported and will not succeed leaving the trace in a "Loading profile..." state.
-{% endAside %}
-
 ### Debugging speculation rules on the prerendered page
 
 The previous sections discuss how to debug prerendered pages on the page which initiates the prerendering. However, it's also possible for the prerendered pages themselves to provide debugging information, either by making analytics calls or logging to the console (which is viewable as described above).
