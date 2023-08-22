@@ -3,7 +3,7 @@ layout: 'layouts/blog-post.njk'
 title: "What's New in DevTools (Chrome 117)"
 authors:
   - sofiayem
-date: 2023-08-15
+date: 2023-08-22
 description: "Override XHR/fetch requests and hide extension requests from the Network panel, see changes in fetch priority in the Performance panel, experience multiple UI improvements, check out new colors and experimental features, and more."
 hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/oM7ywmnxgVDuegxueVbK.png'
 alt: 'Override XHR/fetch requests and hide extension requests from the Network panel, see changes in fetch priority in the Performance panel, experience multiple UI improvements, check out new colors and experimental features, and more.'
@@ -94,7 +94,7 @@ Chromium issue: [1153956](https://crbug.com/1153956).
 ### Pretty-print responses for JSON subtypes {: #pretty-json-response }
 
 The **Response** tab of for a request with a `application/[subtype]+json` [MIME subtype](https://www.iana.org/assignments/media-types/media-types.xhtml#application) (for example, `ld+json`, `hal+json`, and others) now parses the response correctly and lets you prettify it.
- 
+
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Na2g2Ba9ihx4P5BH9ZYW.png", alt="The before and after parsing an application/json subtype in a network response preview.", width="800", height="446" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/2d0a199d6b50cc3cb6b8ca6539859045b52fb5e1 #}
@@ -144,9 +144,9 @@ You can already test how Chrome behaves *after* the third-party cookie phaseout.
 Regardless of the way you run Chrome (with or without the flag), the **Issues** tab now has the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Include third-party cookie issues** checkbox enabled by default and, as a result, reports:
 
 - A breaking change warning about the upcoming phaseout.
-- Issues related to third-party cookies. 
+- Issues related to third-party cookies.
 
-To test this, inspect cookies at [this demo page](https://samesite-sandbox.glitch.me/). 
+To test this, inspect cookies at [this demo page](https://samesite-sandbox.glitch.me/).
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/WlT6ntQm5iEGujg8P32c.png", alt="Third-party cookie issues reported in the Issues tab.", width="800", height="439" %}
 
@@ -162,7 +162,7 @@ Chromium issues: [1458839](https://crbug.com/1458839), [1462693](https://crbug.c
 
 ## Debug preloading in the Application panel {: #preloading }
 
-The Chrome team is [bringing back full prerendering](/blog/prerender-pages/) of future pages that a user is likely to navigate to. To let you debug this, DevTools adds the **Preloading** section to the **Application** panel. The new prefetching and prerendering (collectively known as preloading) uses Speculation Rules is unrelated to the [legacy link-based resource hint versions](/blog/prerender-pages/#a-brief-history-of-prerender).
+The Chrome team is [bringing back full prerendering](/blog/prerender-pages/) of future pages that a user is likely to navigate to. To let you debug this, DevTools adds the **Preloading** section to the **Application** panel. The new prefetching and prerendering (collectively known as "navigational preloading") uses the Speculation Rules API rather than to the [link-based resource hints](/blog/prerender-pages/#a-brief-history-of-prerender).
 
 On [this demo page](https://prerender-demos.glitch.me/), in the **Application** > **Preloading** section, you can inspect:
 
@@ -171,6 +171,8 @@ On [this demo page](https://prerender-demos.glitch.me/), in the **Application** 
 - **This Page** that lists the prerendered status of the current page.
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/YyxptgchqoTk8BQmXKO3.mp4", autoplay="false", loop="true", muted="true", controls="true", class="screenshot", width="800", height="592" %}
+
+For more information, refer to the [dedicated post on debugging speculation rules](/blog/debugging-speculation-rules/).
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/4e07e2023f0c99a2c2b31c87024d94dc820193de #}
 
