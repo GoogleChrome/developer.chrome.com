@@ -220,6 +220,11 @@ $CARD_BORDER: 2px solid #EEF4FF;
       text-align: center;
     }
 
+    .devsite-landing-row-item-image{
+      max-width: 11rem;
+      margin: 0 auto;
+    }
+
     .devsite-landing-row-item-buttons {
       align-items: start;
       display: flex;
@@ -229,7 +234,7 @@ $CARD_BORDER: 2px solid #EEF4FF;
 
       .button {
         font-weight: #{$TEXT_WEIGHT};
-        padding: 0.6875rem 2.5rem;
+        padding: 0 2.5rem;
       }
     }
 
