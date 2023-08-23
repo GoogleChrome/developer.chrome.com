@@ -12,14 +12,14 @@ authors:
 ---
 
 
-As an ad tech company running campaigns in multiple locations for various product categories, you're looking to help advertisers answer the following questions:
+As an ad tech company running campaigns in multiple locations for various product categories, you want to help advertisers answer the following questions:
 
 1.  How many **purchases** of each product category did each of my campaigns in each geographic region generate?
 1.  How much **revenue** for each product category did each of my campaigns in each geographic region generate?
 
 While many ad tech companies encourage advertisers to configure a variety of conversion types, focusing on the most important conversions such as purchases is a good way to ensure that summary results are detailed and accurate for these important events.
 
-To do so, you'll need to think of what questions you're looking to answer before data is collected.
+To do so, you'll need to think of what questions you want to answer before data is collected.
 
 ## Dimensions, keys, and values
 
@@ -100,7 +100,7 @@ Aggregatable values are summed to generate aggregated insights for your measurem
 
 Note that this diagram omits decryption and represents a simplified example without noise applied. In the next section, we will outline this example with noise.
 
-## From {aggregation key, aggregatable value} pairs to reports
+## From keys and values to reports
 
 Now let's discuss how aggregatable keys and values relate to reports.
 
@@ -748,13 +748,13 @@ Let's now set the key pieces:
 res.set(
   "Attribution-Reporting-Register-Aggregatable-Source",
   JSON.stringify(
-[{
-  "id": "key_purchaseCount", 
-  "key_piece": "0x3cf867903fbb73ec0000000000000000"
-}, {
-  "id": "key_purchaseValue", 
-  "key_piece": "0x245265f432f16e730000000000000000"
-}]
+   [{
+    "id": "key_purchaseCount", 
+    "key_piece": "0x3cf867903fbb73ec0000000000000000"
+    }, {
+    "id": "key_purchaseValue", 
+    "key_piece": "0x245265f432f16e730000000000000000"
+    }]
 ))
 ```
 
@@ -820,13 +820,13 @@ Let's now set the key pieces:
 ```javascript
 // Upon receiving the pixel request from the advertiser site
 res.set(
-    "Attribution-Reporting-Register-Aggregatable-Trigger-Data",
-    JSON.stringify(
-      [
+  "Attribution-Reporting-Register-Aggregatable-Trigger-Data",
+  JSON.stringify(
+    [
       // Each dictionary independently adds pieces to multiple source keys
       { "key_piece": "0x0000000000000000f9e491fe37e55a0c",
         "source_keys": ["key_purchaseCount", "key_purchaseValue"]}, 
-      ]
+    ]
 ))
 ```
 
@@ -878,12 +878,12 @@ In practice, you would set them as follows, using the dedicated header
 ```javascript
 // Instruct the browser to schedule-send a report
 res.set(
-    "Attribution-Reporting-Register-Aggregatable-Values",
-    JSON.stringify(
-{
-    "key_purchaseCount": 32768,
-    "key_purchaseValue": 1144,
-      }
+  "Attribution-Reporting-Register-Aggregatable-Values",
+  JSON.stringify(
+    {
+  "key_purchaseCount": 32768,
+  "key_purchaseValue": 1144,
+    }
 ))
 ```
 
