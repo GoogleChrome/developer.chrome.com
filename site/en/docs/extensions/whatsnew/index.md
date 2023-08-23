@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-08-22
+updated: 2023-08-23
 tags:
   - extensions-news
 
