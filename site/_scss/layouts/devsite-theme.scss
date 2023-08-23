@@ -95,7 +95,7 @@ $CARD_BORDER: 2px solid #eef4ff;
   .devsite-landing-row-header-icon {
     font-size: 2rem;
     background-color: $CHROME_BLUE;
-    padding: 0.5px;
+    padding: 7.5px;
     display: inline-block;
   }
 
@@ -321,7 +321,7 @@ $CARD_BORDER: 2px solid #eef4ff;
   .dcc-docs-card {
     border: #{$CARD_BORDER};
     border-radius: 1.5rem;
-    padding: 4rem 2.125rem 2.125rem;
+    padding: 2.125rem;
     max-width: 24.75rem;
 
     h3 {
@@ -347,10 +347,10 @@ $CARD_BORDER: 2px solid #eef4ff;
       }
 
       img {
-        width: 5rem;
+        width: 4.5rem;
         height: 5rem;
         object-fit: contain;
-        margin: 1.5rem auto;
+        margin: 1.4rem auto;
         border-radius: 0;
       }
     }
