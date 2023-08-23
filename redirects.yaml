@@ -120,10 +120,10 @@ redirects:
   to: /blog/wasm-debugging/
 
 - from: /docs/privacy-sandbox/fledge-best-practices/
-  to: /docs/privacy-sandbox/fledge-api/latency/
+  to: /docs/privacy-sandbox/protected-audience-api/latency/
 
 - from: /blog/fledge-api/
-  to: /docs/privacy-sandbox/fledge-api/
+  to: /docs/privacy-sandbox/protected-audience-api/
 
 - from: /docs/privacy-sandbox/attribution-reporting-introduction/
   to: /docs/privacy-sandbox/attribution-reporting/

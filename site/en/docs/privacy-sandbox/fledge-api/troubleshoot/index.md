@@ -18,7 +18,7 @@ worklets in Chrome DevTools.
 
 Read the [developer guide](/blog/fledge-api) for the full life cycle of the Protected Audience API. 
 Not a developer? Refer to the
-[Protected Audience API overview](/docs/privacy-sandbox/fledge).
+[Protected Audience API overview](/docs/privacy-sandbox/protected-audience).
 
 ## Protected Audience API worklets {: #debugging }
 

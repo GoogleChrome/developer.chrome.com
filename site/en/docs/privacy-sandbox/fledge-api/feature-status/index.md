@@ -16,7 +16,7 @@ authors:
 
 {% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
 
-As we move [Protected Audience API](/docs/privacy-sandbox/fledge/) closer to general
+As we move [Protected Audience API](/docs/privacy-sandbox/protected-audience/) closer to general
 availability and approach third-party cookie deprecation in Chrome, you may be
 wondering about the availability of Protected Audience API services and features. Here you'll
 find a list of the scoped Protected Audience API features and when they'll be supported. 

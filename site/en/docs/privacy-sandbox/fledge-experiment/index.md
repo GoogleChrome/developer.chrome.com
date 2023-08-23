@@ -16,9 +16,9 @@ authors:
 ## Learn the essentials
 
 * If you're a developer or software engineer, the
-  [Protected Audience API Developer Guide](/docs/privacy-sandbox/fledge-api/) provides an
+  [Protected Audience API Developer Guide](/docs/privacy-sandbox/protected-audience-api/) provides an
   in-depth technical reference for the proposal.
-* The [Protected Audience API overview](/docs/privacy-sandbox/fledge) offers a higher level
+* The [Protected Audience API overview](/docs/privacy-sandbox/protected-audience) offers a higher level
   explanation for those who work in advertiser and ad tech, who are new to the Privacy
   Sandbox.
 
@@ -36,7 +36,7 @@ to learn how to determine if a feature is available before attempting to use it.
 {% endAside %}
 
 1. Learn how to use the Protected Audience API.
-   * Review the [Protected Audience API Developer Guide](/docs/privacy-sandbox/fledge-api/).
+   * Review the [Protected Audience API Developer Guide](/docs/privacy-sandbox/protected-audience-api/).
      This guide offers a reference for API methods and parameters.
    * Read about [Protected Audience services](/blog/fledge-service-overview/). For example,
      the Key/Value service offers real-time information to buyers and sellers
@@ -45,14 +45,14 @@ to learn how to determine if a feature is available before attempting to use it.
    * Review the [source code](https://github.com/JackJey/fledge-demo).
    * Watch the [Protected Audience demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv) to learn how the demo code works and how to use Chrome DevTools for FLEDGE debugging.
 3. Experiment with the API.
-   * Sign up for the [origin trial](/docs/privacy-sandbox/fledge-api/#origin-trial)
+   * Sign up for the [origin trial](/docs/privacy-sandbox/protected-audience-api/#origin-trial)
    * Try out FLEDGE for a single user by enabling
      `chrome://flags/#privacy-sandbox-ads-apis` or by running Chrome from the
-     command line with [Protected Audience feature flags](/docs/privacy-sandbox/fledge-api/#flags).
-   * [Troubleshoot Protected Audience worklets](/docs/privacy-sandbox/fledge-api/troubleshoot/) with Chrome DevTools. Learn how to debug FLEDGE bidding and auction code.
+     command line with [Protected Audience feature flags](/docs/privacy-sandbox/protected-audience-api/#flags).
+   * [Troubleshoot Protected Audience worklets](/docs/privacy-sandbox/protected-audience-api/troubleshoot/) with Chrome DevTools. Learn how to debug FLEDGE bidding and auction code.
 4. Review the [Protected Audience status](/docs/privacy-sandbox/status/#fledge) for updates
    on the implementation of the FLEDGE API. Review the
-   [pending Protected Audience capabilities](/docs/privacy-sandbox/fledge-api/feature-status/)
+   [pending Protected Audience capabilities](/docs/privacy-sandbox/protected-audience-api/feature-status/)
    for more details.
 
 The [Protected Audience API explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#summary)
