@@ -84,7 +84,7 @@ before it receives the badge, paying special attention to the following:
 
 <figure data-size="full">
   {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/iyXfCsc4vSX0BeDNBwu2.png", alt="Screenshot of an extension listing that has an established publisher badge.", width="800", height="180" %}
-  <figcaption>Screenshot of an extension listing that has a featured badge.</figcaption>
+  <figcaption>Screenshot of an extension listing that has an established publisher badge.</figcaption>
 </figure>
 
 The Established Publisher badge showcases developers who have verified their identity and
