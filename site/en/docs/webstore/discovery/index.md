@@ -43,7 +43,7 @@ pay to be featured on the home page. The best thing a developer can do to increa
 being featured on the home page is to build a useful, high-quality extension that is a joy to use.
 
 <figure data-size="full">
-  {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/7OhQYDOcEIFAcjG0QVDc.png", alt="Screenshot of the Chrome Web Store home page.", width="800", height="544" %}
+  {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/zWM4TUpPY94bGxffeXH5.png", alt="Screenshot of the Chrome Web Store home page.", width="800", height="544" %}
   <figcaption>Screenshot of the Chrome Web Store home page.</figcaption>
 </figure>
 
@@ -66,7 +66,7 @@ and off Chrome Web Store. Learn more about badges below.
 ### Featured badge {: #featured-badge }
 
 <figure data-size="full">
-  {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/TicgeLawYpcvWXvTThia.png", alt="Screenshot of an extension listing that has a featured badge.", width="800", height="678" %}
+  {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/4C4d7JFnLhi0TFNH372V.png", alt="Screenshot of an extension listing that has a featured badge.", width="800", height="678" %}
   <figcaption>Screenshot of an extension listing that has a featured badge.</figcaption>
 </figure>
 
@@ -82,9 +82,10 @@ before it receives the badge, paying special attention to the following:
 
 ### Established Publisher badge {: #publisher-badge }
 
-{% Img src="image/WlD8wC6g8khYWPJUsQceQkhXSlv1/vZQXBcGDZaWBWQLPCM95.png", width="800", height="400",
-   alt="Screenshot of an extension listing that has an established publisher badge.",
-   class="screenshot" %}
+<figure data-size="full">
+  {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/iyXfCsc4vSX0BeDNBwu2.png", alt="Screenshot of an extension listing that has an established publisher badge.", width="800", height="180" %}
+  <figcaption>Screenshot of an extension listing that has a featured badge.</figcaption>
+</figure>
 
 The Established Publisher badge showcases developers who have verified their identity and
 demonstrated compliance with the developer program policies. This badge is granted automatically to
