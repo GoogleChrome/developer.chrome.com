@@ -17,7 +17,7 @@ Check this page often to learn about changes to Chrome extensions, extensions do
 
 ### Chrome 117: Expanded URL protections on extension API navigations {: #expanded-kill-url }
 
-<p class="color-secondary-text type--caption">Posted on <time>August 22, 2023</time></p>
+<p class="color-secondary-text type--caption">Posted on <time>August 23, 2023</time></p>
 
 Previously navigation triggered from extension API calls for [`tabs.update()`](/docs/extensions/reference/tabs/#method-update), [`tabs.create()`](/docs/extensions/reference/tabs/#method-create), and [`windows.create()`](/docs/extensions/reference/windows/#method-create) emitted an error for some chrome:// URLs. Additionally, calling `tabs.update()` with a JavaScript URL was forbidden. In 117, these protections on JavaScript URLs have been expanded to the `tabs.create()` method and a number of additional chrome:// URLs have been added to the list of forbidden URLs that applies to all of the previously mentioned methods.
 
