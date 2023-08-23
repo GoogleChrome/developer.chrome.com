@@ -26,7 +26,7 @@ Your extension should be safe for your users. For example, send user data secure
 
 ## Privacy
 
-An Extension is required to disclose in the [Privacy tab][privacy-tab] what user data it will collect and how it will handle user data. This information must be accurate, up-to-date, and match the extension's [privacy policy][privacy-policy]. For more guidance on privacy, see [Protecting User Privacy policies][user-privacy] and the [User Data FAQs][user-data].
+An extension is required to disclose in the [Privacy tab][privacy-tab] what user data it will collect and how it will handle user data. This information must be accurate, up-to-date, and match the extension's [privacy policy][privacy-policy]. For more guidance on privacy, see [Protecting User Privacy policies][user-privacy] and the [User Data FAQs][user-data].
 
 ## Performance and functionality {: #performance}
 
