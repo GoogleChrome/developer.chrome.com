@@ -21,6 +21,9 @@ redirects:
 
 # Simple redirects
 
+- from: /docs/privacy-sandbox/trust-tokens/
+  to: /docs/privacy-sandbox/private-state-tokens/
+
 - from: /articles/origin-private-file-system/
   to: https://web.dev/origin-private-file-system/
 

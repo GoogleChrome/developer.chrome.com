@@ -323,7 +323,7 @@ Origin trials are a way to test a new or experimental web platform feature. A th
   id='bXB1Iwq6Eq4' 
 %}
 Refer to the documentation for the latest details:
-<a href="/docs/privacy-sandbox/trust-tokens/">Private State Tokens</a>
+<a href="/docs/privacy-sandbox/private-state-tokens/">Private State Tokens</a>
 {% endColumn %}
 {% Column %}
 <strong>Jul 28, 2021. Run time: 8:17</strong>
