@@ -80,8 +80,8 @@ $CARD_BORDER: 2px solid #eef4ff;
     cursor: pointer;
     font-weight: #{$TEXT_WEIGHT};
     height: auto;
-    line-height: 1.5rem;
     letter-spacing: 0.5px;
+    line-height: 1.5rem;
     margin-left: 0;
     padding: 1rem 2.5rem;
   }
@@ -93,10 +93,10 @@ $CARD_BORDER: 2px solid #eef4ff;
   }
 
   .devsite-landing-row-header-icon {
-    font-size: 2rem;
     background-color: $CHROME_BLUE;
-    padding: 7.5px;
     display: inline-block;
+    font-size: 2rem;
+    padding: 0.46875rem;
   }
 
   .devsite-landing-row-100 .devsite-landing-row-item {
@@ -128,8 +128,8 @@ $CARD_BORDER: 2px solid #eef4ff;
       .button {
         background-color: #{$TEXT_LINK};
         color: #fff;
-        padding: 12px 24px;
         margin-top: 0;
+        padding: 0.75rem 1.5rem;
       }
     }
 
@@ -153,10 +153,10 @@ $CARD_BORDER: 2px solid #eef4ff;
       flex-direction: column-reverse;
 
       &-description {
+        font-size: 1.75rem;
         margin-top: 0;
         padding-top: 0;
-        font-size: 28px;
-
+        
         em {
           display: block;
         }
@@ -217,23 +217,23 @@ $CARD_BORDER: 2px solid #eef4ff;
   }
 
   .dcc-services-card {
-    padding: 3.5rem 2.5rem;
     margin-bottom: 2rem;
+    padding: 3.5rem 2.5rem;
 
     h3 {
       font-size: 2.25rem;
       font-weight: #{$TEXT_WEIGHT};
       letter-spacing: -0.5px;
       line-height: 2.75rem;
-      max-width: 90%;
       margin: 1.6875rem auto auto;
+      max-width: 90%;
       min-height: 8.375rem;
       text-align: center;
     }
 
     .devsite-landing-row-item-image {
-      max-width: 11rem;
       margin: 0 auto;
+      max-width: 11rem;
     }
 
     .devsite-landing-row-item-buttons {
@@ -244,20 +244,20 @@ $CARD_BORDER: 2px solid #eef4ff;
       margin-top: 0;
 
       .button {
+        align-items: center;
+        display: flex;
         font-weight: #{$TEXT_WEIGHT};
         padding: 0 2.5rem;
-        display: flex;
-        align-items: center;
         overflow: visible;
       }
     }
 
     .button::before {
       font-family: "Material Icons Outlined";
-      padding-right: 0.5rem;
-      vertical-align: middle;
       font-size: 1.3rem;
       margin-top: -0.325rem;
+      padding-right: 0.5rem;
+      vertical-align: middle;
     }
 
     .dcc-web-app-features-link::before {
@@ -305,7 +305,7 @@ $CARD_BORDER: 2px solid #eef4ff;
 
     .dcc-baseline-link::before {
       content: url("data:image/svg+xml, %3Csvg width='20' height='11' viewBox='0 0 20 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Layer_1' clip-path='url(%23clip0_399_7980)'%3E%3Cpath id='Vector' d='M14.3855 11L11.258 7.93623L12.4894 6.72949L14.3855 8.587L17.5368 5.5L14.3855 2.413L10.3634 6.35315H10.358L5.61448 11L0 5.5L5.61448 0L8.72363 3.04576L7.49226 4.25203L5.61448 2.413L2.46323 5.5L5.61448 8.587L9.63664 4.64685H9.64196L14.3855 0L20 5.5L14.3855 11Z' fill='%233982F7'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_399_7980'%3E%3Crect width='20' height='11' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
-      margin-top: -8px;
+      margin-top: -0.5rem;
     }
 
     .dcc-aurora-link::before {
@@ -321,8 +321,8 @@ $CARD_BORDER: 2px solid #eef4ff;
   .dcc-docs-card {
     border: #{$CARD_BORDER};
     border-radius: 1.5rem;
-    padding: 2.125rem;
     max-width: 24.75rem;
+    padding: 2.125rem;
 
     h3 {
       font-weight: #{$TEXT_WEIGHT};
@@ -338,20 +338,20 @@ $CARD_BORDER: 2px solid #eef4ff;
     }
 
     .devsite-landing-row-item-media {
-      width: 8rem;
-      height: 8rem;
       border-radius: 100%;
+      height: 8rem;
+      width: 8rem;
 
       .devsite-landing-row-item-image {
         background-color: transparent;
       }
 
       img {
-        width: 4.5rem;
-        height: 5rem;
-        object-fit: contain;
-        margin: 1.4rem auto;
         border-radius: 0;
+        height: 5rem;
+        margin: 1.4rem auto;
+        object-fit: contain;
+        width: 4.5rem;
       }
     }
 
@@ -367,9 +367,9 @@ $CARD_BORDER: 2px solid #eef4ff;
       background-color: #{$CHROME_RED};
 
       img {
-        width: 6rem;
         height: 6rem;
         margin: 1.3rem auto;
+        width: 6rem;
       }
     }
 
@@ -411,7 +411,7 @@ $CARD_BORDER: 2px solid #eef4ff;
 
     .devsite-landing-row-item-description-content {
       color: #{$TEXT_SECONDARY};
-      min-height: 50px;
+      min-height: 3.125rem;
     }
 
     .button {
@@ -420,16 +420,16 @@ $CARD_BORDER: 2px solid #eef4ff;
     }
 
     .devsite-landing-row-item-media {
-      width: 3rem;
+      border-radius: 100%;
       height: 3rem;
       margin-bottom: 1.5rem;
-      border-radius: 100%;
+      width: 3rem;
 
       img {
-        width: 32px;
-        margin: 11px auto;
-        min-height: 28px;
+        margin: 0.6875rem auto;
+        min-height: 1.75rem;
         object-fit: contain;
+        width: 2rem;
       }
     }
 
@@ -540,18 +540,18 @@ $CARD_BORDER: 2px solid #eef4ff;
 
     .devsite-landing-row-item:first-child {
       .devsite-landing-row-item-media {
-        width: 40px;
         background-color: #{$CHROME_BLUE};
-        padding: 8px;
-        display: inline-block;
         border-radius: 100%;
-        margin-bottom: 20px;
+        display: inline-block;
+        margin-bottom: 1.25rem;
+        padding: 0.5rem;
+        width: 2.5rem;
       }
 
       .devsite-landing-row-item-body {
-        text-wrap: wrap;
-        text-align: left;
         font-weight: 400;
+        text-align: left;
+        text-wrap: wrap;
       }
     }
 
@@ -653,8 +653,8 @@ $CARD_BORDER: 2px solid #eef4ff;
 }
 
 .ddc-hamburger.button {
-  display: none;
   color: #525458;
+  display: none;
   border: none;
   padding: 0;
 
@@ -696,8 +696,8 @@ search-box {
 
     &:active {
       background-color: transparent;
-      box-shadow: none;
       border: none;
+      box-shadow: none;
     }
   }
 
@@ -710,9 +710,9 @@ search-box {
   }
 
   @media (max-width: 991px) {
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 1.125rem;
     font-weight: 400;
+    line-height: 1.875rem;
   }
 }
 
