@@ -122,6 +122,8 @@ Well-being
 Workflow & Planning
 : Extensions to help users perform their tasks more efficiently. They could range from time trackers, tools to stay focused, to-do list managers, email organizers, document editors, and calendar utilities, among others.
 
+### Category revisions {: #category-revisions }
+
 In mid 2023 the categories changed. Most of the new categories match previous ones. Several were
 replaced by multiple categores. If you previously used one of the replaced categories, use the
 table below to decide which new category best suites your extension.
