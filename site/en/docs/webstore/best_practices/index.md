@@ -117,7 +117,7 @@ Travel
 : Extensions for planning trips.
 
 Well-being
-: Extensions for self-help and personal improvement.
+: Extensions for self-help, mindfulness, and personal development.
 
 Workflow & Planning
 : Extensions to help users perform their tasks more efficiently. They could range from time trackers, tools to stay focused, to-do list managers, email organizers, document editors, and calendar utilities, among others.
