@@ -90,7 +90,7 @@ Functionality & UI
 : Extensions that enhance the Chrome user interface, such as tab managers, shortcut managers, and app launchers.
 
 Games
-: Extensions providing a wide array of desktop and archade style games.
+: Extensions providing a wide array of desktop and arcade-style games.
 
 Household
 : Extenions for helping you around the house. This category includes, recipe savers and managers, budgeting, product research, and more.
