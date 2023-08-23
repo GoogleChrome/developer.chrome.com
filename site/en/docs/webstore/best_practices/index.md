@@ -93,7 +93,7 @@ Games
 : Extensions providing a wide array of desktop and arcade-style games.
 
 Household
-: Extenions for helping you around the house. This category includes, recipe savers and managers, budgeting, product research, and more.
+: Extensions for helping you around the house. This category includes recipe savers and managers, budgeting, product research, and more.
 
 Just for Fun
 : These extensions are designed for entertainment. They can include games, interesting new tab backgrounds, quirky widgets, jokes, trivia, and more.
