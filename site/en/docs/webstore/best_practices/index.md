@@ -102,7 +102,7 @@ News & Weather
 : These extensions keep users informed about current events and weather conditions. They can collect news from multiple sources, present real-time weather updates, notify breaking news, and more.
 
 Privacy & Security
-: Extensions such as VPNs, passwords safes, and phishing deterance.
+: Extensions such as VPNs, password safes, and phishing deterrence.
 
 Shopping
 : These extensions aim to enhance the online shopping experience. They might offer features like price comparison, coupon finders, reviews and ratings, wish list management, and more.
