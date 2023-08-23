@@ -81,7 +81,7 @@ Developer Tools
 : Extensions that help web developers perform tasks like debugging, performance analysis, code linting, and tools that enhance the browser's Dev Tools. For example, real-time HTML/CSS/JavaScript editing, API testing, and CSS inspection.
 
 Education
-: Extensions that teach or aid in teaching, including language learning, note taking, teaching aids, sign-language instruction among others.
+: Extensions that teach or aid in teaching, including language learning, note-taking, teaching aids, and sign-language instruction, among others.
 
 Entertainment
 : These extensions are designed for fans of sports, music television, and cinema.
