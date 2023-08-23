@@ -80,9 +80,9 @@ $CARD_BORDER: 2px solid #EEF4FF;
   }
 
   .devsite-landing-row-header-icon {
-    font-size: 32px;
+    font-size: 2rem;
     background-color: $CHROME_BLUE;
-    padding: 8px;
+    padding: 0.5px;
     display: inline-block;
   }
 
@@ -237,6 +237,7 @@ $CARD_BORDER: 2px solid #EEF4FF;
         padding: 0 2.5rem;
         display: flex;
         align-items: center;
+        overflow: visible;
       }
     }
 
@@ -292,23 +293,24 @@ $CARD_BORDER: 2px solid #EEF4FF;
     }
     
     .dcc-baseline-link::before{
-      content: "link";
+      content: url("data:image/svg+xml, %3Csvg width='20' height='11' viewBox='0 0 20 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Layer_1' clip-path='url(%23clip0_399_7980)'%3E%3Cpath id='Vector' d='M14.3855 11L11.258 7.93623L12.4894 6.72949L14.3855 8.587L17.5368 5.5L14.3855 2.413L10.3634 6.35315H10.358L5.61448 11L0 5.5L5.61448 0L8.72363 3.04576L7.49226 4.25203L5.61448 2.413L2.46323 5.5L5.61448 8.587L9.63664 4.64685H9.64196L14.3855 0L20 5.5L14.3855 11Z' fill='%233982F7'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_399_7980'%3E%3Crect width='20' height='11' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+       margin-top: -8px;
     }
 
     .dcc-aurora-link::before{
       content: "offline_bolt";
     }
 
-    .dcc-web-dev-link::before{
-      //content: "terminal";
-       content: "link";
+    .dcc-webdev-link::before{
+      content: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' height='20' viewBox='0 -960 960 960' fill='%233982F7' width='22'%3E%3Cpath d='M146.666-160q-27 0-46.833-19.833T80-226.666v-506.668q0-27 19.833-46.833T146.666-800h666.668q27 0 46.833 19.833T880-733.334v506.668q0 27-19.833 46.833T813.334-160H146.666Zm0-66.666h666.668v-424.001H146.666v424.001ZM300-288l-46.666-46.667 103-104-104-104L300-589.333l150.666 150.666L300-288Zm186.667 2.667V-352h226.666v66.667H486.667Z'/%3E%3C/svg%3E");
+      margin-top: 0;
     }
   }
 
   .dcc-docs-card {
     border: #{$CARD_BORDER};
     border-radius: 1.5rem;
-    padding: 4.125rem 2.125rem 2.125rem 2.125rem;
+    padding: 2.125rem;
     max-width: 24.75rem;
 
     h3{
@@ -320,28 +322,54 @@ $CARD_BORDER: 2px solid #EEF4FF;
       border-radius: 1.5rem;
     }
 
-    .material-icons {
-      font-size: 4rem;
-      line-height: 2rem; 
-      margin-top: 2rem;
-      padding: 1.5rem;
+    .devsite-landing-row-item-description{
+      margin: 0;
     }
 
-    &:nth-child(1) .material-icons{
+    .devsite-landing-row-item-media {
+      width: 8rem;
+      height: 8rem;
+      border-radius: 100%;
+
+      .devsite-landing-row-item-image{
+        background-color: transparent;
+      }
+
+      img {
+        width: 5rem;
+        height: 5rem;
+        object-fit: contain;
+        margin: 1.5rem auto;
+        border-radius:0;
+      }
+    }
+
+    &:nth-child(1) .devsite-landing-row-item-media{
       background-color: #{$CHROME_BLUE};
     }
 
-    &:nth-child(2) .material-icons{
+    &:nth-child(2) .devsite-landing-row-item-media{
       background-color: #{$CHROME_GREEN};
     }
 
-    &:nth-child(3) .material-icons{
+    &:nth-child(3) .devsite-landing-row-item-media{
       background-color: #{$CHROME_RED};
+
+      img{
+        width: 6rem;
+        height: 6rem;
+        margin: 1.3rem auto;
+      }
     }
 
-    &:nth-child(4) .material-icons{
+    &:nth-child(4) .devsite-landing-row-item-media{
       background-color: #{$CHROME_YELLOW};
+      
+      img{
+        padding-left:0.3rem;
+      }
     }
+
 
     .devsite-landing-row-item {
       
@@ -377,16 +405,26 @@ $CARD_BORDER: 2px solid #EEF4FF;
       padding: 0;
     }
 
-    .material-icons {
-      font-size: 2rem;
-      padding: 0.5rem;
+    .devsite-landing-row-item-media {
+      width: 3rem;
+      height: 3rem;
+      margin-bottom: 1.5rem;
+      border-radius: 100%;
+
+      img {
+        width: 32px;
+        margin: 11px auto;
+        min-height: 28px;
+        object-fit: contain;
+      }
     }
 
-    &:nth-child(1) .material-icons{
+
+    &:nth-child(1) .devsite-landing-row-item-media{
       background-color: #2095F2;
     }
 
-    &:nth-child(2) .material-icons{
+    &:nth-child(2) .devsite-landing-row-item-media{
       background-color: #FB0301;
     }
   }
@@ -479,11 +517,30 @@ $CARD_BORDER: 2px solid #EEF4FF;
       padding: 2.125rem;
     }
 
+    .devsite-landing-row-item:first-child{
+      .devsite-landing-row-item-media{
+          width: 40px;
+          background-color: #{$CHROME_BLUE};
+          padding: 8px;
+          display: inline-block;  
+          border-radius: 100%;
+          margin-bottom: 20px;
+      }
+
+      .devsite-landing-row-item-body {
+        text-wrap: wrap;
+        text-align: left;
+        font-weight: 400;
+      }
+    }
+
     @media (max-width: 991px) {
       padding: 0 1.5rem;
 
       .devsite-landing-row-item:first-child{
         grid-column: 1 / span 3;
+
+        
       }
 
       .devsite-landing-row-item:last-child{
