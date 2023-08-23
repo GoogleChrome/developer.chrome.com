@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Discovery on the Chrome Web Store
 date: 2022-03-21
-updated: 2023-06-09
+updated: 2023-08-24
 description: >
   An overview of how users find items on the Chrome Web Store, and how our editors select items to
   feature.
@@ -24,9 +24,12 @@ Learn more about [crafting a great listing page][best-listing].
 ## Categories {: #categories }
 
 Categories on the Chrome Web Store organize items based on their main function. Users can browse
-categories such as Shopping, Productivity, or Fun, to find relevant items to install. To
+categories such as Shopping, Education, or Just for Fun, to find relevant items to install. To
 assign a category, open an item in the Developer Dashboard. You'll find the Category list on the
 Store Listing tab under Product Details.
+
+In mid 2023 the categories changed. For information on choosing a new category, see
+[best practices][chose-category]
 
 ## Extensions home page {: #home-page }
 
@@ -39,8 +42,10 @@ but there is no set checklist developers can follow to guarantee being featured.
 pay to be featured on the home page. The best thing a developer can do to increase their chances of
 being featured on the home page is to build a useful, high-quality extension that is a joy to use.
 
-{% Img src="image/WlD8wC6g8khYWPJUsQceQkhXSlv1/O4HjVbAcyIvYCxmCRB9H.png", width="800", height="571",
-   class="screenshot", alt="Screenshot of the Chrome Web Store home page." %}
+<figure data-size="full">
+  {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/7OhQYDOcEIFAcjG0QVDc.png", alt="Screenshot of the Chrome Web Store home page.", width="800", height="544" %}
+  <figcaption>Screenshot of the Chrome Web Store home page.</figcaption>
+</figure>
 
 ## Editors' Picks {: #editors-picks }
 
@@ -60,8 +65,10 @@ and off Chrome Web Store. Learn more about badges below.
 
 ### Featured badge {: #featured-badge }
 
-{% Img src="image/WlD8wC6g8khYWPJUsQceQkhXSlv1/FL4P4tqG0jrhTdLuQ4Jp.png", width="800", height="400",
-   alt="Screenshot of an extension listing that has a featured badge.", class="screenshot" %}
+<figure data-size="full">
+  {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/TicgeLawYpcvWXvTThia.png", alt="Screenshot of an extension listing that has a featured badge.", width="800", height="678" %}
+  <figcaption>Screenshot of an extension listing that has a featured badge.</figcaption>
+</figure>
 
 The Featured badge is assigned to extensions that follow our technical best practices and meet a
 high standard of user experience and design. Chrome team members manually evaluate each extension
