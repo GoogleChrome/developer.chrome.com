@@ -84,7 +84,7 @@ Education
 : Extensions that teach or aid in teaching, including language learning, note-taking, teaching aids, and sign-language instruction, among others.
 
 Entertainment
-: These extensions are designed for fans of sports, music television, and cinema.
+: These extensions are designed for fans of sports, music, television, and cinema.
 
 Functionality & UI
 : Extensions that enhance the Chrome user interface, such as tab managers, shortcut managers, and app launchers.
