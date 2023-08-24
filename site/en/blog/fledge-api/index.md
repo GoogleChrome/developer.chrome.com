@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: Protected Audience API developer guide
+title: FLEDGE API developer guide
 authors:
   - samdutton
   - kevinkiklee
