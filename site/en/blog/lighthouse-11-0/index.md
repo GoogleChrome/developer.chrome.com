@@ -43,7 +43,7 @@ Since Lighthouse 10.0, 13 new accessibility audits have been added:
 - `table-fake-caption`
 - `td-has-header`
 
-In addition to the new audits, the weights of all the audits have been updated to better match the corresponding [aXe rule impact levels](https://docs.deque.com/devtools-mobile/2023.4.19/en/impact). See the [Lighthouse accessibility scoring](https://developer.chrome.com/docs/lighthouse/accessibility/scoring/) documentation for exact details about the new audits and weights.
+In addition to the new audits, the weights of all the audits have been updated to better match the corresponding [aXe rule impact levels](https://docs.deque.com/devtools-mobile/2023.4.19/en/impact). See the [Lighthouse accessibility scoring](/docs/lighthouse/accessibility/scoring/) documentation for exact details about the new audits and weights.
 
 ### Manual audit visibility
 
