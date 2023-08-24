@@ -17,7 +17,7 @@ tags:
 
 [Lighthouse is a website auditing tool](/docs/lighthouse/overview/) that helps developers with opportunities and diagnostics to improve the user experience of their sites.
 
-Lighthouse 11 is available immediately on the [command line through npm](https://www.npmjs.com/package/lighthouse) and in [Chrome Canary](https://www.google.com/chrome/canary/). It will land in Chrome stable in Chrome 118 and in [PageSpeed Insights](https://pagespeed.web.dev/) in the coming weeks.
+Lighthouse 11 is available immediately on the [command line through npm](https://www.npmjs.com/package/lighthouse), in [Chrome Canary](https://www.google.com/chrome/canary/), and in [PageSpeed Insights](https://pagespeed.web.dev/). It will land in Chrome stable in Chrome 118.
 
 See the full list of changes in the [11.0 changelog](https://github.com/GoogleChrome/lighthouse/releases/tag/v11.0.0).
 
