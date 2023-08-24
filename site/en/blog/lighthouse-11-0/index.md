@@ -21,9 +21,9 @@ Lighthouse 11 is available immediately on the [command line through npm](https:/
 
 See the full list of changes in the [11.0 changelog](https://github.com/GoogleChrome/lighthouse/releases/tag/v11.0.0).
 
-## Accessibility Category Updates
+## Accessibility category updates
 
-Category updates include increased automated audit coverage, improved weighting, and prioritized manual audits to help developers make their sites more accessible.
+Category updates include new automated audits, improved weighting, and prioritized manual audits to help developers make their sites more accessible.
 
 ### New audits and weighting
 
@@ -53,17 +53,17 @@ Lighthouse has always included some manual audits that cannot be tested automati
 
 This emphasizes that passing all the automated audits and scoring a 100 in accessibility does not guarantee that the audited page is accessible; manual testing is still important. The manual audits have also been reordered to start with the most approachable checks.
 
-## Existing Audit Changes
+## Changes to existing audits
 
 ### Interaction to Next Paint (INP)
 
 INP is [no longer experimental](https://web.dev/inp-cwv/), so the metric has been moved from `experimental-interaction-to-next-paint` to `interaction-to-next-paint`.
 
-### Service Workers
+### Service workers
 
 A service worker is no longer required for a page to be installable as a  PWA in Chrome, so the `service-worker` check has been removed from the Lighthouse PWA category.
 
-### Resource Summary
+### Resource summary
 
 The `resource-summary` audit has been removed from the Lighthouse report. Network request stats can still be compiled using the hidden `network-requests` audit:
 
@@ -81,7 +81,7 @@ for (const request of networkRequests) {
 console.log(resourceSummary);
 ```
 
-## Legacy Navigation
+## Legacy navigation
 
 The `--legacy-navigation` flag for the CLI, the `legacyNavigation()` function in the Node API, and the "Legacy navigation" checkbox in the DevTools panel have all been removed. This completes a years-long transition in Lighthouse’s infrastructure to support [user flows](https://github.com/GoogleChrome/lighthouse/blob/main/docs/user-flows.md).
 
