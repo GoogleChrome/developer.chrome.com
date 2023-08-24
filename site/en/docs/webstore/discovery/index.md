@@ -29,7 +29,7 @@ assign a category, open an item in the Developer Dashboard. You'll find the Cate
 Store Listing tab under Product Details.
 
 In mid 2023 the categories changed. For information on choosing a new category, see
-[best practices][chose-category]
+[best practices][chose-category].
 
 ## Extensions home page {: #home-page }
 
