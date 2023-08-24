@@ -19,6 +19,7 @@ tags:
   id='HkvmYKqnytw'
 %}
 
+{% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
 
 ## Who is this article for? {: #who}
 
@@ -62,7 +63,7 @@ The diagram below provides an overview of the FLEDGE lifecycle:
 ### Protected Audience demo {: #demo}
 
 A walkthrough of a basic Protected Audience deployment across advertiser and publisher sites is  available at
-[fledge-demo.glitch.me](https://fledge-demo.glitch.me/).
+[fledge-demo.glitch.me](https://protected-audience-demo.web.app/).
  
 The [demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv)
 explains how the demo code works, and shows how to use Chrome DevTools for Protected Audience debugging.
@@ -306,14 +307,14 @@ appropriate.
 From the Application panel in Chrome DevTools, you can observe Protected Audience interest group and auction
 events.
 
-If you visit the [Protected Audience demo shopping site](https://shopping-fledge-demo.glitch.me/advertiser/shopping.html)
+If you visit the [Protected Audience demo shopping site](https://protected-audience-demo-advertiser.web.app/)
 in a browser with Protected Audience enabled, DevTools will display information about the `join` event.
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/3jI5bJh8XKiZP5WHMBYl.png", alt="The
    DevTools Application panel in Chrome Canary, showing information about a Protected Audience interest group
    join event.", width="800", height="402" %}
 
-Now, if you visit the [Protected Audience demo publisher site](https://publisher-fledge-demo.glitch.me/publisher/index.html?fencedframe)
+Now, if you visit the [Protected Audience demo publisher site](https://protected-audience-demo-publisher.web.app/)
    in a browser with Protected Audience enabled, DevTools displays information about the `bid` and `win` events.
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/wMvNrY9GrcD2p3Q6wTsw.png", alt="The

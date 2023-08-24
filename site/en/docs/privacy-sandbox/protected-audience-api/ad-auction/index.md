@@ -15,11 +15,11 @@ authors:
 
 In this article, you'll find a technical reference for the ad auction, as used in the current iteration of the experimental Protected Audience API.
 
-Read the [developer guide](/docs/privacy-sandbox/fledge-api) for the full life
+Read the [developer guide](/docs/privacy-sandbox/protected-audience-api) for the full life
 cycle of Protected Audience API, and refer to the Protected Audience API explainer for an in-depth proposal of
 how [sellers run on-device auctions](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#2-sellers-run-on-device-auctions).
 
-Not a developer? Refer to the [Protected Audience API overview](/docs/privacy-sandbox/fledge).
+Not a developer? Refer to the [Protected Audience API overview](/docs/privacy-sandbox/protected-audience).
 
 ## What is the Protected Audience API ad auction?
 
@@ -54,11 +54,11 @@ title="View a larger version of image." target="_blank">view a larger version</a
 3. The invited buyer's code executes to generate a bid, URL for a relevant ad
    creative, and other data. The bidding script can query for real-time data,
    such as the remaining ad campaign budget, from the buyer's
-   [Key/Value service](/docs/privacy-sandbox/fledge#key-value-service-detail).
+   [Key/Value service](/docs/privacy-sandbox/protected-audience#key-value-service-detail).
 4. The seller's code scores each bid and selects a winner. This logic uses the
    bid value and other data return a bid's desirability. Ads which cannot beat
    the contextual winner are rejected. The seller can use their own
-   [Key/Value service](/docs/privacy-sandbox/fledge#key-value-service-detail) for real-time data.
+   [Key/Value service](/docs/privacy-sandbox/protected-audience#key-value-service-detail) for real-time data.
 5. The winning ad is returned as an opaque value, which displays in a
    [fenced frame](/docs/privacy-sandbox/fenced-frame/). Both the seller and
    publisher will be unable to view this value.

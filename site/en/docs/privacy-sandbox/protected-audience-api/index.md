@@ -58,7 +58,7 @@ You can also read [Protected Audience API ad auction latency best practices](/do
 ### Protected Audience API demo {: #demo}
 
 A walk-through of a basic Protected Audience API deployment across advertiser and publisher
-sites is available at [fledge-demo.glitch.me](https://fledge-demo.glitch.me/).
+sites is available at [protected-audience-demo.web.app/](https://protected-audience-demo.web.app/).
 
 <figure>
 {% YouTube

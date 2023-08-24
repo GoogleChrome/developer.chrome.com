@@ -164,7 +164,7 @@ Running the Key/Value service in a TEE will not be required until sometime after
 
 [Fenced frames](/docs/privacy-sandbox/fenced-frame/) are a new HTML element that limits communication between the content and the embedder, and is used for rendering content based on cross-site data. The Protected Audience API will render content into a fenced frame.
 
-After working closely with various stakeholders and examining the significant effort to accommodate this change, Chrome will not mandate fenced frames until at least 2026 to maintain ecosystem inclusivity,and Chrome will provide significant advanced notice. Until then, if fenced frames are not used, you will need to use an iframe to render the [opaque URN](https://github.com/WICG/fenced-frame/blob/master/explainer/opaque_src.md). Also, it should be noted that sellers could still require the use of Fenced Frames.
+After working closely with various stakeholders and examining the significant effort to accommodate this change, Chrome will not mandate fenced frames until at least 2026 to maintain ecosystem inclusivity,and Chrome will provide significant advanced notice. Until then, if fenced frames are not used, you will need to use an iframe to render the [opaque URN](https://github.com/search?q=org%3AWICG%20opaque%20URN&type=code). Also, it should be noted that sellers could still require the use of Fenced Frames.
 
 {% Aside %}
 The temporary `navigator.deprecatedURNToURL()` will be removed by third-party cookie deprecation.

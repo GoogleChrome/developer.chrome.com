@@ -148,7 +148,7 @@ currently in an [origin trial](/docs/privacy-sandbox/unified-origin-trial/).
   how to use the API, how to test locally and how to participate in the
   [relevence and measurement origin trial](/docs/privacy-sandbox/unified-origin-trial/).
 
-* [fledge-demo.glitch.me](https://fledge-demo.glitch.me/) provides a
+* [protected-audience-demo.web.app](https://protected-audience-demo.web.app/) provides a
   walkthrough of a basic Protected Audience deployment across advertiser and publisher
   sites. The Protected Audience demo video explains how this code works and previews
   how to use Chrome DevTools for debugging.
