@@ -84,6 +84,11 @@ $CARD_BORDER: 2px solid #eef4ff;
     line-height: 1.5rem;
     margin-left: 0;
     padding: 1rem 2.5rem;
+
+    @media (max-width: 991px) {
+        padding: 0.8123rem 1rem;
+        font-weight: 500;
+    }
   }
 
   .material-icons {
@@ -212,6 +217,15 @@ $CARD_BORDER: 2px solid #eef4ff;
         letter-spacing: 0.1rem;
         line-height: 1.719rem;
         margin-bottom: 1rem;
+      }
+    }
+
+    @media (max-width: 991px) {
+      &-buttons {
+        .button {
+          padding: 0.8123rem 1rem;
+          font-weight: 500;
+        }
       }
     }
   }
@@ -391,6 +405,12 @@ $CARD_BORDER: 2px solid #eef4ff;
       }
     }
 
+    @media (max-width: 991px) {
+      h3{
+        font-size: 1.5rem;
+      }
+    }
+
     @media (max-width: 591px) {
       max-width: 100%;
     }
@@ -440,6 +460,12 @@ $CARD_BORDER: 2px solid #eef4ff;
 
     &:nth-child(2) .devsite-landing-row-item-media {
       background-color: #fb0301;
+    }
+
+    @media (max-width: 991px) {
+      h3{
+        font-size: 1.5rem;
+      }
     }
   }
 
