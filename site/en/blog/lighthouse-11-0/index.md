@@ -61,7 +61,7 @@ INP is [no longer experimental](https://web.dev/inp-cwv/), so the metric has bee
 
 ### Service Workers
 
-A service worker is no longer required for a page to be installable as a  PWA in Chrome, so the service-worker check has been removed from the Lighthouse PWA category.
+A service worker is no longer required for a page to be installable as a  PWA in Chrome, so the `service-worker` check has been removed from the Lighthouse PWA category.
 
 ### Resource Summary
 
