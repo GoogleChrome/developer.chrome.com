@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Declare permissions"
 seoTitle: "Chrome Extensions Declare permissions"
 date: 2012-10-08
-updated: 2023-01-31
+updated: 2023-08-24
 description: An overview of the valid values for the permissions property in manifest.json.
 ---
 
@@ -132,15 +132,9 @@ If your extension needs to run on `file://` URLs or needs to operate in incognit
 To detect if the user has allowed access, you can use [`extension.isAllowedIncognitoAccess()`][incognito-allow] or 
 [`extension.isAllowedFileSchemeAccess()`][file-scheme-allow].
 
-## Viewing and updating warnings {: #view-update-warnings }
-
-When you [load an extension locally][doc-load-unpacked], you won't see any permission warnings. This
-section explains how to view permission warnings and what users will experience when you add a new
-[permission that triggers a warning][section-warnings].
-
 ## Permissions list {: #permissions }
 
-The following table lists the currently available permissions. For a list of permission warnings, see the [Permission warnings][doc-warning-table] table.
+The following table lists the currently available permissions. See the [Permission warnings][doc-warning-table] table for a list of permission warnings.
 
 <table>
   <tbody>
