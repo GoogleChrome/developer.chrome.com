@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Declare permissions"
 seoTitle: "Chrome Extensions Declare permissions"
 date: 2012-10-08
-updated: 2023-01-31
+updated: 2023-08-24
 description: An overview of the valid values for the permissions property in manifest.json.
 ---
 
@@ -132,15 +132,9 @@ If your extension needs to run on `file://` URLs or needs to operate in incognit
 To detect if the user has allowed access, you can use [`extension.isAllowedIncognitoAccess()`][incognito-allow] or 
 [`extension.isAllowedFileSchemeAccess()`][file-scheme-allow].
 
-## Viewing and updating warnings {: #view-update-warnings }
-
-When you [load an extension locally][doc-load-unpacked], you won't see any permission warnings. This
-section explains how to view permission warnings and what users will experience when you add a new
-[permission that triggers a warning][section-warnings].
-
 ## Permissions list {: #permissions }
 
-The following table lists the currently available permissions. For a list of permission warnings, see the [Permission warnings][doc-warning-table] table.
+The following table lists the currently available permissions. See the [Permission warnings][doc-warning-table] table for a list of permission warnings.
 
 <table>
   <tbody>
@@ -445,7 +439,7 @@ The following table lists the currently available permissions. For a list of per
     <tr id="unlimitedStorage">
       <td><code>"unlimitedStorage"</code></td>
       <td>Provides an unlimited quota for storing client-side data, such as databases and local storage files.
-        Without this permission, the extension is limited to 5 MB of local storage.<div
+        Without this permission, the extension is limited to 10 MB of local storage.<div
           class="aside aside--note"><b>Note:</b> This permission applies only to Web SQL Database and application cache
           (see issue <a href="http://crbug.com/58985">58985</a>). Also, it doesn't currently work with wildcard
           subdomains such as <code>http://*.example.com</code>.</div>

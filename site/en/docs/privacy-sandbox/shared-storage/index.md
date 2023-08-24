@@ -65,7 +65,7 @@ existing uses for third-party cookies. This includes:
   </thead>
   <tr>
    <td><strong><a href="/docs/privacy-sandbox/shared-storage/creative-rotation/">Creative rotation</a></strong></td>
-   <td>You can store data, such as creative ID, view counts, and user interaction, to determine which creative users' see across different sites. This allows you to balance views and avoid oversaturation of ceratin content, which can help you avoid a negative user experience.</td>
+   <td>You can store data, such as creative ID, view counts, and user interaction, to determine which creative users' see across different sites. This allows you to balance views and avoid oversaturation of certain content, which can help you avoid a negative user experience.</td>
    <td>Content selection</td>
    </tr>  
   <tr>
@@ -114,7 +114,7 @@ Shared Storage allows you to make informed decisions based on cross-site data,
 without sharing user information (such as browser history or other personal
 details) with an embedding site or exfiltrating data to your own servers.
 
-You can write to shared storage at any time, like other JavaScript storage APIs (like localStorage or indexedDB). Unlike the other storage APIs, you can only read the shared storage values in a secure environment, known as a shared storage worklet. 
+You can write to shared storage at any time, like other JavaScript storage APIs such as localStorage or indexedDB. Unlike the other storage APIs, you can only read the shared storage values in a secure environment, known as a shared storage worklet. 
 
 {% Aside 'key-term' %}
 
@@ -133,7 +133,7 @@ gates available, but more may be added in the future.
 
 The available Shared Storage API output gates are:
 
-* **[Cross-site content selection](/docs/privacy-sandbox/shared-storage/url-selection/)**: You can run a worklet script to select a URL from a provided list, based on the stored data, and then render that content in a fenced frame.
+* **[Cross-site content selection](/docs/privacy-sandbox/shared-storage/content-selection/)**: You can run a worklet script to select a URL from a provided list, based on the stored data, and then render that content in a fenced frame.
 * **Noisy aggregation with the [Private Aggregation API](/docs/privacy-sandbox/private-aggregation/)**: You can run a worklet to send cross-site data through the Private Aggregation API and return a [summary report](/docs/privacy-sandbox/attribution-reporting/summary-reports/). 
 
 ## Try the Shared Storage API

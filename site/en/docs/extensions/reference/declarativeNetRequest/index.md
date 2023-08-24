@@ -93,17 +93,21 @@ Unlike dynamic and session rules, static rules are packaged, installed, and upda
 
 To test rule files, [load your extension unpacked](/docs/extensions/mv3/getstarted/development-basics/#load-unpacked). Errors and warnings about invalid static rules are only displayed for unpacked extensions. Invalid static rules in packed extensions are ignored.
 
-### Enable and disable static rulesets {: #update-enabled-rulesets }
+### Enable and disable static rules and rulesets {: #update-rules-rulesets }
 
-To enable or disable static rulesets, call [`updateEnabledRulesets()`](#method-updateEnabledRulesets). This method takes an [`UpdateRulesetOptions`](#type-UpdateRulesetOptions) object, which contains arrays of IDs of rules to enable or disable. The IDs are defined using the `"id"` key of the `Ruleset` dictionary.
+Both individual static rules and complete static rulesets may be enabled or disabled at runtime. {: #update-enabled-rulesets }
 
-The set of enabled static rulesets is persisted across browser sessions. Static rules are not persisted across exension updates, meaning that only rules you chose to leave in your rule files are available after an update.
+The set of enabled static rules and rulesets is persisted across browser sessions. Neither are persisted across extension updates, meaning that only rules you chose to leave in your rule files are available after an update.
 
 For performance reasons there are also limits to the number of rules and rulesets that may be enabled at one time. Call [`getAvailableStaticRuleCount()`](#method-getAvailableStaticRuleCount) to check the number of additional rules that may be enabled. For information on rule limits, see [Rule limits](#limits).
 
+To enable or disable static _rules_, call [`updateStaticRules()`](#method-updateStaticRules). This method takes an [`UpdateStaticRulesOptions`](#type-UpdateStaticRulesOptions) object, which contains arrays of IDs of rules to enable or disable. The IDs are defined using the `"id"` key of the `Ruleset` dictionary.
+
+To enable or disable static _rulesets_, call [`updateEnabledRulesets()`](#method-updateEnabledRulesets). This method takes an [`UpdateRulesetOptions`](#type-UpdateRulesetOptions) object, which contains arrays of IDs of rulesets to enable or disable. The IDs are defined using the `"id"` key of the `Ruleset` dictionary.
+
 ### Build rules {: #build-rules }
 
-Regardless of type, a rule starts with four fields as shown below. While the `"id"` and `"number"` keys take a number, the [`"action"`](#property-Rule-action) and [`"condition"`](#property-Rule-condition) keys may provide several blocking and redirecting conditions. The following rule blocks all script requests originating from `"foo.com"` to any URL with `"abc"` as a substring.
+Regardless of type, a rule starts with four fields as shown below. While the `"id"` and `"priority"` keys take a number, the [`"action"`](#property-Rule-action) and [`"condition"`](#property-Rule-condition) keys may provide several blocking and redirecting conditions. The following rule blocks all script requests originating from `"foo.com"` to any URL with `"abc"` as a substring.
 
 ```json
 {
