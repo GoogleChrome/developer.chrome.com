@@ -389,10 +389,10 @@ $CARD_BORDER: 2px solid #eef4ff;
       &-buttons .button {
         margin-top: 1.5rem;
       }
+    }
 
-      @media (max-width: 591px) {
-        max-width: 100%;
-      }
+    @media (max-width: 591px) {
+      max-width: 100%;
     }
   }
 
@@ -421,6 +421,7 @@ $CARD_BORDER: 2px solid #eef4ff;
 
     .devsite-landing-row-item-media {
       border-radius: 100%;
+      display: inline-block;
       height: 3rem;
       margin-bottom: 1.5rem;
       width: 3rem;
@@ -500,18 +501,23 @@ $CARD_BORDER: 2px solid #eef4ff;
     @media (max-width: 991px) {
       .devsite-landing-row-inner > * {
         grid-column: 1 / span 3;
-      }
-
-      .devsite-landing-row-header {
-        margin: 0 1.5rem;
+        width: 100%;
       }
 
       .devsite-landing-row-header-text {
         max-width: 100%;
+
+        h2{
+          font-size: 1.75rem;
+        }
       }
 
       .dcc-blog-card {
         padding: 0;
+
+        .devsite-landing-row-item-buttons{
+          display:none;
+        }
       }
     }
   }
@@ -634,6 +640,10 @@ $CARD_BORDER: 2px solid #eef4ff;
       .devsite-landing-row-group {
         grid-template-columns: 1fr 1fr;
       }
+
+      &.devsite-landing-row-2-up h2{
+        font-size: 2.5rem;
+      }
     }
 
     @media (max-width: 591px) {
@@ -715,5 +725,13 @@ search-box {
     line-height: 1.875rem;
   }
 }
+
+
+@media (max-width: 591px) {
+  .scaffold{
+    display:block;
+  }
+}
+
 
 /* stylelint-enable */
