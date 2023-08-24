@@ -69,6 +69,12 @@ $CARD_BORDER: 2px solid #eef4ff;
     margin-top: 1.5rem;
   }
 
+  .devsite-landing-row[header-position] .devsite-landing-row-inner {
+    @media (max-width: 591px) {
+      padding: 0 1.875rem;
+    }
+  }
+
   .devsite-landing-row {
     padding: 3.5rem 0;
 
@@ -718,7 +724,7 @@ $CARD_BORDER: 2px solid #eef4ff;
       .devsite-landing-row-item-media {
         background-color: #{$CHROME_BLUE};
         border-radius: 100%;
-        display: inline-block;
+        display: block;
         margin-bottom: 1.25rem;
         padding: 0.5rem;
         width: 2.5rem;
@@ -753,7 +759,7 @@ $CARD_BORDER: 2px solid #eef4ff;
 
     .devsite-landing-row-inner {
       @media (max-width: 591px) {
-        padding: 0;
+        padding: 0 !important;
         margin-bottom: 2rem;
       }
     }
@@ -836,7 +842,6 @@ $CARD_BORDER: 2px solid #eef4ff;
 
       .devsite-landing-row-group {
         grid-template-columns: 1fr;
-        padding: 0 0.75rem;
       }
     }
   }
@@ -885,7 +890,7 @@ search-box {
 
     @media (max-width: 991px) {
       position: absolute;
-      right: 0;
+      right: 1em;
     }
 
     &:hover {
