@@ -162,7 +162,6 @@ This method is deprecated. Instead, you should use [`setSecondaryToolbarViews`](
 
 Adds an action button to the custom tab. Multiple buttons can be added via this method.
 
-
 {% AndroidBrowserSupportTable
  _method="addToolbarItem",
  chrome="y@113.0.5672.76",
