@@ -15,11 +15,16 @@ tags:
   - security
 ---
 
+{% Aside 'warning' %}
+The content in this page is outdated. Please refer to the current [developer guide](/docs/privacy-sandbox/protected-audience-api/).
+
+Note that FLEDGE was renamed to Protected Audience API. To learn more about the name change, see the [blog post](https://privacysandbox.com/intl/en_us/news/protected-audience-api-our-new-name-for-fledge).
+{% endAside %}
+
 {% YouTube
   id='HkvmYKqnytw'
 %}
 
-{% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
 
 ## Who is this article for? {: #who}
 
