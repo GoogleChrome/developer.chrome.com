@@ -43,7 +43,7 @@ pay to be featured on the home page. The best thing a developer can do to increa
 being featured on the home page is to build a useful, high-quality extension that is a joy to use.
 
 <figure data-size="full">
-  {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/zWM4TUpPY94bGxffeXH5.png", alt="Screenshot of the Chrome Web Store home page.", width="800", height="544" %}
+   {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/Hl9EIC00L5beXdmY1t07.png", alt="Screenshot of the Chrome Web Store home page.", width="800", height="536" %}
   <figcaption>Screenshot of the Chrome Web Store home page.</figcaption>
 </figure>
 
