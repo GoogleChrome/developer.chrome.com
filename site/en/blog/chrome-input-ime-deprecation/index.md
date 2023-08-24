@@ -12,7 +12,7 @@ tags:
   - extensions-news
 ---
 
-On July 18, we [announced](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/0ybWrEVaE-I/m/8QOeRmxrBQAJ) we were ending support for [`chrome.input.ime⁠`](/docs/extensions/reference/input_ime/) on ChromeOS as of ChromeOS 117, scheduled for September. After conversations with the developer community, we’ve pushed back the removal of `chrome.input.ime` to ChromeOS 119 at the earliest. We hope that this lengthier timeline will give you adequate time to notify your users and clients of the upcoming change.
+On July 18, we [announced](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/0ybWrEVaE-I/m/8QOeRmxrBQAJ) we were ending support for the [`chrome.input.ime⁠`](/docs/extensions/reference/input_ime/) extension API on ChromeOS as of ChromeOS 117, scheduled for September. After conversations with the developer community, we’ve pushed back the removal of `chrome.input.ime` to ChromeOS 119 at the earliest. We hope that this lengthier timeline will give you adequate time to notify your users and clients of the upcoming change.
 
 Many of you reported that you’re using this API for a wide variety of interesting use cases. During the extra time before we remove this API, we want to hear from you. Fill out our [developer interest form](https://forms.gle/wPUjwhLgLnqvsqDG6)⁠ and tell us what you use the `chrome.input.ime` API for, including IME in your feedback. We’ll use your feedback to help us design future APIs for ChromeOS and determine how to proceed with this API.
 
