@@ -28,7 +28,7 @@ This post is a technical reference to the current iteration of the experimental 
 * [The Protected Audience API](/docs/privacy-sandbox/protected-audience) is a less technical overview of the proposal,
 and also has a [glossary](/docs/privacy-sandbox/protected-audience#glossary).
 
-* [The Protected Audience demo](https://fledge-demo.glitch.me) provides a walkthrough of a basic FLEDGE
+* [The Protected Audience demo](https://protected-audience-demo.web.app/) provides a walkthrough of a basic FLEDGE
 deployment.
 
 * [The Protected Audience demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv)
@@ -63,7 +63,7 @@ The diagram below provides an overview of the FLEDGE lifecycle:
 ### Protected Audience demo {: #demo}
 
 A walkthrough of a basic Protected Audience deployment across advertiser and publisher sites is  available at
-[fledge-demo.glitch.me](https://protected-audience-demo.web.app/).
+[protected-audience-demo.web.app](https://protected-audience-demo.web.app/).
  
 The [demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv)
 explains how the demo code works, and shows how to use Chrome DevTools for Protected Audience debugging.
@@ -1291,7 +1291,7 @@ reported for the API.
 ## Find out more
 
 -  [The Protected Audience API](/docs/privacy-sandbox/protected-audience): less technical overview of the proposal.
--  [Protected Audience demo](https://fledge-demo.glitch.me): walkthrough of a basic Protected Audience deployment.
+-  [Protected Audience demo](https://protected-audience-demo.web.app/): walkthrough of a basic Protected Audience deployment.
 -  [The Protected Audience demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv):
 explains the demo code, and shows how to use Chrome DevTools for Protected Audience debugging.
 -  [Protected Audience API technical explainer](https://github.com/WICG/turtledove/blob/master/FLEDGE.md)

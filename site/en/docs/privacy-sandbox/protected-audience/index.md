@@ -523,7 +523,7 @@ For a more in-depth overview of the Protected Audience API, read the
 If you're ready to start working with the Protected Audience API, read
 [experiment and participate](/docs/privacy-sandbox/protected-audience-experiment/).
 
-We've written an  [API developer guide](/docs/privacy-sandbox/protected-audience-api) and built a [Protected Audience API demo](https://fledge-demo.glitch.me), which offers a walkthrough of a basic Protected Audience API deployment. The [Protected Audience API demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv) explains how the demo code works, and shows how to use Chrome DevTools for Protected Audience API debugging.
+We've written an  [API developer guide](/docs/privacy-sandbox/protected-audience-api) and built a [Protected Audience API demo](https://protected-audience-demo.web.app/), which offers a walkthrough of a basic Protected Audience API deployment. The [Protected Audience API demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv) explains how the demo code works, and shows how to use Chrome DevTools for Protected Audience API debugging.
 
 ## Engage and share feedback
 
