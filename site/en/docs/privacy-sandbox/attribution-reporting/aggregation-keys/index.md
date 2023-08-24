@@ -397,12 +397,11 @@ Rather than using a key structure map, you can use a hashing function to dynamic
 
 This works as follows:
 
-
 <ol>
 <li>Select a hashing algorithm.</li>
 <li>At ad-serving time, generate a string that includes all the dimensions you want to track, and their values. To generate the source-side key piece, 
-hash this string and consider adding a 64-bit suffix of zeros (to <a href="https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.2xob5s4sb398">align</a> 
-it with the trigger-side key piece and make XOR easier to reason about). 
+hash this string and consider adding a 64-bit suffix of zeros to <a href="#full-key">align</a> 
+it with the trigger-side key piece and make XOR easier to reason about. 
     <ul>
     <li>Source-side key piece <br>
     = &lt;64-bit hex hash("COUNT, campaignID=12, geoID=7"))&gt;&lt;64-bit 00000000…&gt;
