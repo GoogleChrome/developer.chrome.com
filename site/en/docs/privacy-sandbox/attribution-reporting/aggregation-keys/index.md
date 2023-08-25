@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Create aggregation keys'
+title: 'Understanding aggregation keys'
 subhead: >
   What aggregation keys are, how they're used, and how you can translate goals into keys.
 description: >
