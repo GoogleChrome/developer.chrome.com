@@ -86,7 +86,7 @@ Each of these—the purchase count for one conversion and the purchase value for
 	</tbody>
 </table>
 
-When a user located in Geography ID 7 sees an ad for Campaign ID 12, and later converts by purchasing a product of Product category 25 for $120, you may set an aggregation key and aggregatable values that look like these:
+When a user located in Geography ID 7 sees an ad for Campaign ID 12, and later converts by purchasing a product of Product category 25 for $120 (assuming your currency is USD), you may set an aggregation key and aggregatable values that look like these:
 
 {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/b5Mu1k7bH5wg3aAFrAGs.png", alt="Aggregation keys and values.", width="658", height="251" %}
 <figcaption>Aggregation key and aggregatable values. Note, aggregatable values are bold on a blue background.</figcaption>
