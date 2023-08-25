@@ -19,7 +19,9 @@ tags:
 Building websites that respond quickly to user input has been one of the most challenging aspects of web performance—one that the Chrome Team has been working hard to help web developers meet. Just this year, [it was announced](https://web.dev/inp-cwv/) that the [Interaction to Next Paint (INP) metric](https://web.dev/inp/) would graduate from experimental to pending status. It is now poised to replace [First Input Delay (FID)](https://web.dev/fid/) as a Core Web Vital in March of 2024.
 
 In a continued effort to deliver new APIs that help web developers make their websites as snappy as they can be, the Chrome Team is currently running an [origin trial for `scheduler.yield`](/origintrials/#/view_trial/836543630784069633) starting in version 115 of Chrome. `scheduler.yield` is a proposed new addition to the scheduler API that allows for both an easier and better way to yield control back to the main thread than [the methods that have been traditionally relied upon](https://web.dev/optimize-long-tasks/#manually-defer-code-execution).
+
 ## On yielding
+
 JavaScript uses the run-to-completion model to deal with tasks. This means that, when a task runs on the main thread, that task runs as long as necessary in order to complete. Upon a task's completion, control is _yielded_ back to the main thread, which allows the main thread to process the next task in the queue.
 
 Aside from extreme cases when a task never finishes—such as an infinite loop, for example—yielding is an inevitable aspect of JavaScript's task scheduling logic. It _will_ happen, it's just a matter of _when_, and sooner is better than later. When tasks take too long to run—greater than 50 milliseconds, to be exact—they are considered to be [long tasks](https://web.dev/long-tasks-devtools/#what-are-long-tasks).
