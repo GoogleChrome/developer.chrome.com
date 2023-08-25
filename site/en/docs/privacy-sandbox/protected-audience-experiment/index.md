@@ -42,7 +42,7 @@ to learn how to determine if a feature is available before attempting to use it.
      the Key/Value service offers real-time information to buyers and sellers
      during the ad auction.
 2. Try the [demo](https://protected-audience-demo.web.app/).
-   * Review the [source code](https://github.com/JackJey/fledge-demo).
+   * Review the [source code](https://github.com/GoogleChromeLabs/protected-audience-demo).
    * Watch the [Protected Audience demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv) to learn how the demo code works and how to use Chrome DevTools for FLEDGE debugging.
 3. Experiment with the API.
    * Sign up for the [origin trial](/docs/privacy-sandbox/protected-audience-api/#origin-trial)
