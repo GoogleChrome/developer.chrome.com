@@ -16,7 +16,7 @@ authors:
 From Chrome Canary 98.0.4718.0, it's possible to debug the Protected Audience API and Protected Audience API
 worklets in Chrome DevTools.
 
-Read the [developer guide](/blog/fledge-api) for the full life cycle of the Protected Audience API. 
+Read the [developer guide](/docs/privacy-sandbox/protected-audience-api/) for the full life cycle of the Protected Audience API. 
 Not a developer? Refer to the
 [Protected Audience API overview](/docs/privacy-sandbox/protected-audience).
 
