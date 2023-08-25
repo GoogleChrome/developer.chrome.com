@@ -65,8 +65,8 @@ $CARD_BORDER: 2px solid #eef4ff;
   /* Override devsite.scss */
   section.devsite-landing-row[header-position=left]:not(.devsite-landing-row-cards):not(.devsite-landing-row-no-image-background) +
   section.devsite-landing-row[header-position=left]:not(.devsite-landing-row-cards):not([class^="devsite-landing-row-padding-"]) {
-    padding-top: 4.25rem;
     margin-top: 1.5rem;
+    padding-top: 4.25rem;
   }
 
   .devsite-landing-row[header-position] .devsite-landing-row-inner {
@@ -105,14 +105,14 @@ $CARD_BORDER: 2px solid #eef4ff;
     padding: 1rem 2.5rem;
 
     &-white {
+      border-radius: 0;
       font-weight: #{$TEXT_WEIGHT};
       padding: 0;
-      border-radius: 0;
     }
 
     @media (max-width: 991px) {
-        padding: 0.8123rem 1rem;
-        font-weight: 500;
+      font-weight: 500;
+      padding: 0.8123rem 1rem;
     }
   }
 
@@ -231,9 +231,9 @@ $CARD_BORDER: 2px solid #eef4ff;
       }
 
       .button-white {
+        border-radius: 0;
         font-weight: #{$TEXT_WEIGHT};
         padding: 0;
-        border-radius: 0;
       }
     }
 
@@ -266,10 +266,10 @@ $CARD_BORDER: 2px solid #eef4ff;
   }
 
   .dcc-services-card {
+    border-radius: var(--devsite-card-border-radius);
     margin-bottom: 2rem;
     padding: 3.5rem 2.5rem;
-    border-radius: var(--devsite-card-border-radius);
-
+    
     @media (max-width: 991px) {
       margin-bottom: 0;
     }
@@ -587,9 +587,9 @@ $CARD_BORDER: 2px solid #eef4ff;
       flex-direction: column-reverse;
 
       &-description {
+        font-size: 1.75rem;
         margin-top: 0;
         padding-top: 0;
-        font-size: 28px;
 
         em {
           display: block;
@@ -675,7 +675,7 @@ $CARD_BORDER: 2px solid #eef4ff;
       .devsite-landing-row-header-text {
         max-width: 100%;
 
-        h2{
+        h2 {
           font-size: 1.75rem;
         }
       }
@@ -683,7 +683,7 @@ $CARD_BORDER: 2px solid #eef4ff;
       .dcc-blog-card {
         padding: 0;
 
-        .devsite-landing-row-item-buttons{
+        .devsite-landing-row-item-buttons {
           display:none;
         }
       }
@@ -826,7 +826,7 @@ $CARD_BORDER: 2px solid #eef4ff;
         grid-template-columns: 1fr 1fr;
       }
 
-      &.devsite-landing-row-2-up h2{
+      &.devsite-landing-row-2-up h2 {
         font-size: 2.5rem;
       }
       
@@ -921,8 +921,8 @@ search-box {
 }
 
 @media (max-width: 991px) {
-  .scaffold{
-    display:block;
+  .scaffold {
+    display: block;
   }
 }
 
