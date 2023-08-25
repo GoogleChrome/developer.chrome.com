@@ -11,7 +11,6 @@ authors:
   - maudn
 ---
 
-
 As an ad tech company running campaigns in multiple locations for various product categories, you want to help advertisers answer the following questions:
 
 1.  How many **purchases** of each product category did each of my campaigns in each geographic region generate?
