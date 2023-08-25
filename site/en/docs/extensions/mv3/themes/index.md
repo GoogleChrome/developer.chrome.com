@@ -3,12 +3,14 @@ layout: "layouts/doc-post.njk"
 title: "What are themes?"
 seoTitle: "Chrome Extensions: What are themes?"
 date: 2012-09-18
-updated: 2022-07-14
+updated: 2023-08-28
 description: Guidelines on how to create a theme.
 ---
 
 A _theme_ is a special kind of extension that changes the way the browser looks. Themes are
 [packaged][1] like regular extensions, but they don't contain JavaScript or HTML code.
+
+Themes are uploaded to the Chrome Web Store using the [same procedure as an extension](/docs/webstore/). During upload, you'll be asked to select a category. You'll find a list of theme categories in Chrome Web Store documentation [under Best practices](/docs/webstore/best_practices/#choose-theme-category-well).
 
 You can find and try a bunch of themes at the [Chrome Web Store][2].
 
