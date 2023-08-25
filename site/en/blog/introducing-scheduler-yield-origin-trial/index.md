@@ -42,7 +42,7 @@ When you explicitly yield, you're telling the browser "hey, I understand that th
 ## The problem with current yielding strategies
 
 {% Aside 'important' %}
-If you're already familiar with current yielding methods—such as using `setTimeout`—you can jump [straight to the section about `scheduler.yield`](TODO).
+If you're already familiar with current yielding methods—such as using `setTimeout`—you can jump [straight to the section about `scheduler.yield`](#enter-scheduleryield).
 {% endAside %}
 
 A common method of yielding [uses `setTimeout` with a timeout value of `0`](https://web.dev/optimize-long-tasks/#use-asyncawait-to-create-yield-points). This works because the callback passed to `setTimeout` will move the remaining work to a separate task that will be queued for subsequent execution. Rather than waiting for the browser to yield on its own, you're saying "let's break this big chunk of work up into smaller bits".
