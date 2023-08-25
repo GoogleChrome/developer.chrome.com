@@ -62,7 +62,6 @@ The diagram below provides an overview of the FLEDGE lifecycle:
 
 <br>
 
-
 ## How can I try Protected Audience? {: #try-fledge}
 
 ### Protected Audience demo {: #demo}
