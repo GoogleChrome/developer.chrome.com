@@ -473,6 +473,10 @@ $CARD_BORDER: 2px solid #eef4ff;
         font-size: 1.3rem;
         margin-bottom: 1.5rem;
         line-height: 1.875rem;
+
+        @media (max-width: 591px) {
+          font-size: 1.125rem;
+        }
       }
     }
 
@@ -538,6 +542,10 @@ $CARD_BORDER: 2px solid #eef4ff;
 
       .dcc-blog-card:first-child {
         margin-bottom: 2rem;
+      }
+
+      .dcc-blog-card h3 {
+        font-size: 1.5rem;
       }
     }
   }
@@ -630,6 +638,10 @@ $CARD_BORDER: 2px solid #eef4ff;
 
       @media (max-width: 591px) {
         padding: 1.125rem;
+
+        &.devsite-landing-row-item-no-media h3 {
+          font-size: 1.5rem;
+        }
       }
 
       &:nth-child(3) {
