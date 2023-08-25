@@ -411,44 +411,6 @@ $CARD_BORDER: 2px solid #eef4ff;
       border-radius: 100%;
       height: 8rem;
       width: 8rem;
-
-      .devsite-landing-row-item-image {
-        background-color: transparent;
-      }
-
-      img {
-        border-radius: 0;
-        height: 5rem;
-        margin: 1.4rem auto;
-        object-fit: contain;
-        width: 4.5rem;
-      }
-    }
-
-    &:nth-child(1) .devsite-landing-row-item-media {
-      background-color: #{$CHROME_BLUE};
-    }
-
-    &:nth-child(2) .devsite-landing-row-item-media {
-      background-color: #{$CHROME_GREEN};
-    }
-
-    &:nth-child(3) .devsite-landing-row-item-media {
-      background-color: #{$CHROME_RED};
-
-      img {
-        height: 6rem;
-        margin: 1.3rem auto;
-        width: 6rem;
-      }
-    }
-
-    &:nth-child(4) .devsite-landing-row-item-media {
-      background-color: #{$CHROME_YELLOW};
-
-      img {
-        padding-left: 0.3rem;
-      }
     }
 
     .devsite-landing-row-item {
@@ -502,26 +464,10 @@ $CARD_BORDER: 2px solid #eef4ff;
     }
 
     .devsite-landing-row-item-media {
-      border-radius: 100%;
       display: inline-block;
-      height: 3rem;
       margin-bottom: 1.5rem;
       width: 3rem;
 
-      img {
-        margin: 0.6875rem auto;
-        min-height: 1.75rem;
-        object-fit: contain;
-        width: 2rem;
-      }
-    }
-
-    &:nth-child(1) .devsite-landing-row-item-media {
-      background-color: #2095f2;
-    }
-
-    &:nth-child(2) .devsite-landing-row-item-media {
-      background-color: #fb0301;
     }
 
     @media (max-width: 991px) {
@@ -722,11 +668,8 @@ $CARD_BORDER: 2px solid #eef4ff;
 
     .devsite-landing-row-item:first-child {
       .devsite-landing-row-item-media {
-        background-color: #{$CHROME_BLUE};
-        border-radius: 100%;
         display: block;
         margin-bottom: 1.25rem;
-        padding: 0.5rem;
         width: 2.5rem;
       }
 
